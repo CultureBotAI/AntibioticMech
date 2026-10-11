@@ -1,0 +1,394 @@
+{
+  "attribution": "Mehrabi et al. 2006, DOI:10.1094/mpmi-19-1262; PHI-base adopted export; UniProt Consortium release 2026_03, CC BY 4.0.",
+  "before_corpus_sha256": "2b012e0174e22e7a062f8808462c679eb6030e71da03f7a0ef7691fe496f0719",
+  "before_review_sha256": "e3ece4149836081184dd03dffacd1ada5947e63cf1ed04cf40ad56f0642dc0b9",
+  "changes": {
+    "byte_identical_records": 2918,
+    "changed_records": 21,
+    "checksum_only_claims": 178,
+    "new_scoped_claims": 2
+  },
+  "corpus_phi_scope": {
+    "identifier_scoped": 180,
+    "pending_associations": 37,
+    "pending_papers": 17,
+    "retained": 217
+  },
+  "limitations": [
+    "IPO323 remains parent background, not a unique tested derivative.",
+    "The grouped primary comparison does not assign an individual clone to either source row.",
+    "Q1KTF2 and TaxID 336722 remain reference-only; Mycgr3T76502 is a retained reference locus.",
+    "DQ432031 / ABD92790.2 is reference-deposit metadata, not an experimental allele assignment.",
+    "The source Not assayed flag remains unchanged and unresolved against the grouped primary comparison.",
+    "Primary PDF text was reviewed through the web tool, not from a locally cached or visually inspected PDF.",
+    "Source allele wording, phenotype, assay and all other-source claims remain unchanged.",
+    "No new variant, sequence, construct, protocol, numeric measurement or MIC was curated.",
+    "No NCBI endpoints, outreach, terms reassessment, source adoption or GitHub mutations.",
+    "Corpus-wide investigation remains incomplete; full QC is not claimed."
+  ],
+  "primary_access": {
+    "citation_request": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-mehrabi-2006-citation.json",
+      "cache_sha256": "93e307f11878f57679c7c5c43994d967053cb6c532c362c49aa1b00345439ed8",
+      "release": null,
+      "retrieved_at": "2026-10-08T11:18:37.513090+00:00",
+      "sha256": "5aaa202566425725107d1943d1f7adabf94bf0621d80777f354dc4969db749ad",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fmpmi-19-1262&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+    },
+    "direct_download_http_status": 403,
+    "edition": "AUTHOR_UPLOADED_PUBLISHED_PAPER_PAGES_1262_1269",
+    "local_pdf_cached": false,
+    "locations": [
+      "p. 1262: reference deposit DQ432031",
+      "p. 1266 Table 2 and footnotes: grouped subjects distinct from controls",
+      "p. 1267: IPO323 is the wild-type recipient background"
+    ],
+    "offline_primary_text_replay": false,
+    "reference": "DOI:10.1094/mpmi-19-1262",
+    "review_method": "WEB_EXTRACTED_PRIMARY_PDF_TEXT",
+    "scope": "IDENTIFIER_CONTEXT_NOT_COMPLETE_PHENOTYPE_VALIDATION",
+    "screenshot_tool_result": "REFERENCE_ONLY_NO_INSPECTABLE_IMAGE_RETURNED",
+    "url": "https://www.researchgate.net/profile/Gert-Kema/publication/6723668_MgHog1_Regulates_Dimorphism_and_Pathogenicity_in_the_Fungal_Wheat_Pathogen_Mycosphaerella_graminicola/links/5724f92a08aee491cb3a9d74/MgHog1-Regulates-Dimorphism-and-Pathogenicity-in-the-Fungal-Wheat-Pathogen-Mycosphaerella-graminicola.pdf",
+    "visually_inspected_pages": []
+  },
+  "protein": {
+    "entryAudit": {
+      "entryVersion": 108,
+      "firstPublicDate": "2007-05-29",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2006-06-27",
+      "sequenceVersion": 2
+    },
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "genes": [
+      {
+        "geneName": {
+          "value": "Hog1"
+        },
+        "orfNames": [
+          {
+            "value": "MYCGRDRAFT_76502"
+          }
+        ]
+      }
+    ],
+    "organism": {
+      "commonName": "Speckled leaf blotch fungus",
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Ascomycota",
+        "Pezizomycotina",
+        "Dothideomycetes",
+        "Dothideomycetidae",
+        "Mycosphaerellales",
+        "Mycosphaerellaceae",
+        "Zymoseptoria"
+      ],
+      "scientificName": "Zymoseptoria tritici (strain CBS 115943 / IPO323)",
+      "synonyms": [
+        "Septoria tritici"
+      ],
+      "taxonId": 336722
+    },
+    "primaryAccession": "Q1KTF2",
+    "reference_cross_references": [
+      {
+        "database": "EMBL",
+        "id": "DQ432031",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "ABD92790.2"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "EMBL",
+        "id": "CM001205",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "EGP84044.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "EnsemblFungi",
+        "id": "Mycgr3T76502",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "Mycgr3P76502"
+          },
+          {
+            "key": "GeneId",
+            "value": "Mycgr3G76502"
+          }
+        ]
+      },
+      {
+        "database": "Proteomes",
+        "id": "UP000008062",
+        "properties": [
+          {
+            "key": "Component",
+            "value": "Chromosome 10"
+          }
+        ]
+      }
+    ],
+    "source_paper_reference": {
+      "citation": {
+        "authors": [
+          "Mehrabi R.",
+          "Zwiers L.H.",
+          "de Waard M.A.",
+          "Kema G.H."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "17073308"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1094/mpmi-19-1262"
+          }
+        ],
+        "citationType": "journal article",
+        "firstPage": "1262",
+        "id": "17073308",
+        "journal": "Mol. Plant Microbe Interact.",
+        "lastPage": "1269",
+        "publicationDate": "2006",
+        "title": "MgHog1 regulates dimorphism and pathogenicity in the fungal wheat pathogen Mycosphaerella graminicola.",
+        "volume": "19"
+      },
+      "referenceComments": [
+        {
+          "type": "STRAIN",
+          "value": "CBS 115943 / IPO323"
+        }
+      ],
+      "referenceNumber": 1,
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION"
+      ]
+    }
+  },
+  "records": [
+    {
+      "after_sha256": "d9c5e630d629947be14a1c36811e1b0c474808b03cc6de3560f27f2f5eec9961",
+      "before_sha256": "822ae123623ae4d9ea46953ae6c431f077cc18d0c970dd4703b9918ea3958bc5",
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml"
+    },
+    {
+      "after_sha256": "b2760971dbce0c0168c40147967180751b93ae47795075af594e56ef73041fd4",
+      "before_sha256": "bb150fb119e5841dc7ad9fb2e653c92af72dee049e0f5eea947bf4762ee5e762",
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml"
+    },
+    {
+      "after_sha256": "7e37a3b246380268e38493fabcc5bdad0129c48b7ddb3b38a1d85abf6020a30f",
+      "before_sha256": "0fee59788b3010d67c23877c5e34a647e276ceca56219b01a46057b56284c632",
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml"
+    },
+    {
+      "after_sha256": "95eb0bb793ddba22b212120e7cec7e1987bfe680eefe76a6ea19a36220c50690",
+      "before_sha256": "c3c3157125c2b902156de2c7f9d23ab19f9963d86b69b96cc68261ec6182df53",
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml"
+    },
+    {
+      "after_sha256": "639585f8917e46ee857c3459a83ea97726354ab86008dcc03c58409794e4bdfe",
+      "before_sha256": "51215111b95016061ef3bf124cb31dee12750c5b4e9d0ffb2fa11e66e4037818",
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml"
+    },
+    {
+      "after_sha256": "afee073a7fd2c13f2352884b466860f72010e1b27f06cb45fb6360b4166d563d",
+      "before_sha256": "91ab7220b57a007d6426511caa6bf35e5b47b91200298ea4f64e44a77d77da97",
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml"
+    },
+    {
+      "after_sha256": "594a1374714395a505dcb7c4fb0d450089037ff35162ec1ceba5133895f92a1f",
+      "before_sha256": "3c12c14df88c88d21719b377cf912c6c0c148faea2248ba9f1ddea34280833c8",
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml"
+    },
+    {
+      "after_sha256": "43a41b59dec37d39dd61a59e85b53baabe2437e743966a25743b647e9d2a1aac",
+      "before_sha256": "add3fa8c6f95e667cecf6f64927cf38752f2a8643a40f8be95fcb8711ebb1050",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml"
+    },
+    {
+      "after_sha256": "ab7ebb8271e2489b15ae15dfa7bb2ff7130865ac7e34b69b0660bf46bdc418c0",
+      "before_sha256": "80699d76206c2b07bc1276c95869c28702c00d1573e4690391da8c6f49d36452",
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml"
+    },
+    {
+      "after_sha256": "8181cc7b15e4392c206561ea9ed4b2314b69068d4092245a28136fd59deaf0e5",
+      "before_sha256": "eef59810150009c04e05a24c73dc8ba1ab8b87ada4179288b0ddb4554f93fcc6",
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml"
+    },
+    {
+      "after_sha256": "4a8aaf3e630da75192e6202b898f8ac6f4870bcf0a324a25dcdb39d911118bca",
+      "before_sha256": "adff38e3b9f4a76d63b6ec936b44108cd1740584f48057f68d65928f4f9b3991",
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml"
+    },
+    {
+      "after_sha256": "eccbcdafd53210c31ffb1801467c84385960772b5c4439b2e5bad3902794594c",
+      "before_sha256": "666db8aab3ff7706e685e650f9f15fb106d3ff5becb70bfd52acd29d6b4c5f50",
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml"
+    },
+    {
+      "after_sha256": "29b5ef240c5141b13a99417cfbea9708bb6f96c456fde69eceb2205cc4c59486",
+      "before_sha256": "cc36f07db7039265725682704262aec6187d8ba87e58da2b5ad69b8d206eb65f",
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml"
+    },
+    {
+      "after_sha256": "b49f41cd090d4a6c3c7760982671a45254ee07911554a8d8971714f515a5f041",
+      "before_sha256": "5bd27bae45c2abc09e67638ecb5ddaf998cec5fdf7d0556b3761690dcd585f44",
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml"
+    },
+    {
+      "after_sha256": "6c0afef7a45f68fa5d98f8c222437546d1fb48a4d144f6fcc7ca7789f0a13a27",
+      "before_sha256": "1631783418855928223d5dbd442fef447b015768eb9db4fb20983e8a19a7c3bc",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml"
+    },
+    {
+      "after_sha256": "e53f24788a885145e27d27dceb04fd23b243ae16659d127bc56dd23a6f7c3b7c",
+      "before_sha256": "8e3385023bcd268b8cae42239883f2b92a700e24b7bd975753b94a89ae1fe224",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml"
+    },
+    {
+      "after_sha256": "baf93a69e7156491130f2469cba46877460e39e782ac989cca28869e6f8f0151",
+      "before_sha256": "01555fb00337055a21a9f6fe939ab0eba26b8fdfe7c2dc64873020332638e350",
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml"
+    },
+    {
+      "after_sha256": "761f6a802c451583a531800fc5eb7eb24286a507e4c52cf21d29ac4f02f6e11d",
+      "before_sha256": "61c69fdf29247f12249f20f8566793e5e1ace6c178c842d8fbe26d7d36db0fb4",
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml"
+    },
+    {
+      "after_sha256": "3a965fc39375a00ac0ec26be363cbf288bd545b67755dc622c282c73727bda6b",
+      "before_sha256": "0776f7d910993296686aab765bac1b09d9c2ebaed95144cc81975a87468d19f8",
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml"
+    },
+    {
+      "after_sha256": "c1ac08b975096fac211b19ec3a14a6934ac5993b57b3330e59e648d5f4ba50c3",
+      "before_sha256": "3c702bd4d5175a6dbf80e33ac3561ab0557b1e07c8c7ab631336939016125d91",
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml"
+    },
+    {
+      "after_sha256": "aef629e21d7bf3f512f4bbc27fab45c53142ec1e356467513394192fc62fd838",
+      "before_sha256": "06a45016cafaeb7203c44a18d94816155864a4a22e418c783ab57e447fe11c0c",
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml"
+    }
+  ],
+  "review_sha256": "e62b9f74500e8e57d35fad35073fbaff1129080d84e38a041f259b1e10ef48e4",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_rows": [
+    {
+      "identifier": "CHEBI:28909",
+      "row_sha256": "e9970c191a147615d701d638225912add989160001a184e5dd5c3b0c1295c822"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "row_sha256": "9b6ad9dcd0279f1321fd5897f1969474f46a65b84e4d7e773ec7d1ffcb690948"
+    }
+  ],
+  "status": "PARENT_REFERENCE_SCOPE_CURATED_EXPERIMENTAL_ACCESSIONS_UNRESOLVED",
+  "taxonomy": {
+    "1047171": {
+      "parent": {
+        "scientificName": "Zymoseptoria",
+        "taxonId": 1047167
+      },
+      "rank": "species",
+      "scientificName": "Zymoseptoria tritici",
+      "taxonId": 1047171
+    },
+    "336722": {
+      "parent": {
+        "commonName": "Speckled leaf blotch fungus",
+        "scientificName": "Zymoseptoria tritici",
+        "synonyms": [
+          "Septoria tritici"
+        ],
+        "taxonId": 1047171
+      },
+      "rank": "strain",
+      "scientificName": "Zymoseptoria tritici (strain CBS 115943 / IPO323)",
+      "taxonId": 336722
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+      "cache_sha256": "4f6570ffbec8320c440a8276ecfea03ab836993b75c2f92b7272d6de85a2ba59",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+      "sha256": "3c0624fde2890f6c12bacc34268d4a4f52164ef2a329cf969c095d48deb06ef1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-6c22873281799d9f97526a1cd6008e78714a45a5efb9ffc76e1c4b8b9538f10f.json",
+      "cache_sha256": "05f434748b5dfd77186d5826f1e29615648747d97da95867fc9437eb8d20ca1e",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:58.022755+00:00",
+      "sha256": "5a2b0f3e25986c5e5d440bbdf1cdc9c33584b73825cdf4de4c26f82c8627910d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1047171"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-7c0f89c783fd1d8d06bf21ffd27d4ff39c0a3042b0cea190279b147c9b2c99c0.json",
+      "cache_sha256": "7f08978d7c0c575b1115050c484bf4f25af19cb9ad77a00a3f7e862f9d3c5407",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:50.433032+00:00",
+      "sha256": "76bfd38c26cbf8078817cb3764b48a7a0dcf0cacf7f9bd7bd43de2c7410064d2",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/336722"
+    }
+  ]
+}

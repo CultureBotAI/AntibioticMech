@@ -1,0 +1,530 @@
+{
+  "attribution": "UniProt Consortium release 2026_03 (CC BY 4.0); RCSB PDB; Symersky et al. 2012 and cited yeast studies. Metadata and bounded interpretation only.",
+  "compound_records": [
+    {
+      "identifier": "CHEBI:28285",
+      "label": "oligomycin A",
+      "path": "data/antibiotics/antifungal/oligomycin-a.yaml",
+      "sha256": "6aa3063293998315a8397e4599cbb0b28dcb3f59dccb0a15ccaadb91473ff97b",
+      "standard_inchi_key": "MNULEGDCPYONBU-AWJDAWNUSA-N"
+    },
+    {
+      "identifier": "CHEBI:7751",
+      "label": "oligomycin B",
+      "path": "data/antibiotics/unspecified/oligomycin-b.yaml",
+      "sha256": "6b082f4d48cd4884495bf9be4024f1917f1086daf8b7803fdd3422600f55908a",
+      "standard_inchi_key": "QPRQJOHKNJIMGN-WVUAJZTGSA-N"
+    },
+    {
+      "identifier": "CHEBI:7752",
+      "label": "oligomycin C",
+      "path": "data/antibiotics/unspecified/oligomycin-c.yaml",
+      "sha256": "545a1a275a3d03ae279fed5f418c9027eca4fd0db63c6b2e01a60e919fe8a674",
+      "standard_inchi_key": "CMMLZMMKTYEOKV-RDKHTNMBSA-N"
+    },
+    {
+      "identifier": "CHEBI:7753",
+      "label": "oligomycin D",
+      "path": "data/antibiotics/antifungal/oligomycin-d.yaml",
+      "sha256": "57f7c68816632f7f3108fc0ece44500390bb1958c88b909e3eafbddec0f3c084",
+      "standard_inchi_key": "LVWVMRBMGDJZLM-BONFEJLISA-N"
+    }
+  ],
+  "compound_scope_decision": {
+    "bound_ligand_record": "CHEBI:28285",
+    "interpretation": "The deposited ligand is modeled as oligomycin A, but the preparation was an A/B/C mixture. This supports a structural model, not pure-congener resistance.",
+    "locations": [
+      "Results and Discussion",
+      "Figure 2 caption",
+      "Materials and Methods"
+    ],
+    "reagent_scope": "OLIGOMYCIN_A_B_C_MIXTURE",
+    "reference": "DOI:10.1073/pnas.1207912109",
+    "resistance_claim_curated": false,
+    "source_url": "https://www.pnas.org/doi/10.1073/pnas.1207912109",
+    "transfer_to_related_records": false
+  },
+  "corpus_sha256": "f7fb3568844f173b848ee23f1c8a5c51caee0b1bafc2022395b4c3b0d6007bfa",
+  "failed_metadata_query": {
+    "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-4f4s-metadata.json",
+    "cache_sha256": "8aabfca4f096dc8b592fb2ecd07c3a2098ae3bd6cc2b8f7adb7c2d686ab3c1ca",
+    "retrieved_at": "2026-10-08T20:14:39.583136+00:00",
+    "sha256": "ca4e664ce975592b0076fb7d10c79d3b98950525f6c0d872047183c1fdc5f214",
+    "status": 200,
+    "url": "https://data.rcsb.org/graphql?query=%7B%0A++entry%28entry_id%3A+%224F4S%22%29+%7B%0A++++rcsb_id%0A++++rcsb_primary_citation+%7B+pdbx_database_id_PubMed+doi+title+%7D%0A++++rcsb_accession_info+%7B+initial_release_date+revision_date+%7D%0A++++polymer_entities+%7B%0A++++++rcsb_id%0A++++++entity_poly+%7B+rcsb_mutation_count+%7D%0A++++++rcsb_polymer_entity+%7B+pdbx_description+%7D%0A++++++rcsb_entity_source_organism+%7B+ncbi_taxonomy_id+%7D%0A++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++reference_sequence_identifiers+%7B+database_name+database_accession+%7D%0A++++++%7D%0A++++%7D%0A++++nonpolymer_entities+%7B+pdbx_entity_nonpoly+%7B+comp_id+%7D+%7D%0A++%7D%0A++chem_comp%28comp_id%3A+%22EFO%22%29+%7B%0A++++chem_comp+%7B+id+name+formula+%7D%0A++++rcsb_chem_comp_descriptor+%7B+InChIKey+%7D%0A++%7D%0A%7D"
+  },
+  "limitations": [
+    "PDB reports species 4932; UniProt reference strain 559292 is not an experimental-strain assignment.",
+    "No allele, variant, sequence, construct, protocol, assay value or clinical category exported.",
+    "Old primary Results and exact reagent/subject crosswalks remain unresolved.",
+    "The 2018 full-complex primary text was unavailable; no new interpretation is assigned to it.",
+    "No NCBI endpoint access, source adoption, genome pipeline or GitHub mutation.",
+    "All-record primary review remains incomplete."
+  ],
+  "preservation": {
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "discovery_exports_unchanged": true,
+    "new_measurements": 0,
+    "records_verified": 2939,
+    "source_reviews_unchanged": true
+  },
+  "protein_scope": "S288C_REFERENCE_PROTEINS_NOT_EXPERIMENTAL_RESISTANCE_ALLELES",
+  "proteins": {
+    "P00854": {
+      "entryAudit": {
+        "entryVersion": 196,
+        "sequenceVersion": 2
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "ATP6"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "Q0085"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "OLI2"
+            },
+            {
+              "value": "OLI4"
+            },
+            {
+              "value": "PHO1"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Baker's yeast",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Saccharomycetes",
+          "Saccharomycetales",
+          "Saccharomycetaceae",
+          "Saccharomyces"
+        ],
+        "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "taxonId": 559292
+      },
+      "primaryAccession": "P00854",
+      "proteinDescription": {
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "F-ATPase protein 6"
+            }
+          }
+        ],
+        "flag": "Precursor",
+        "recommendedName": {
+          "fullName": {
+            "value": "ATP synthase subunit a"
+          }
+        }
+      },
+      "pubmed_ids": [
+        "24374639",
+        "2894987",
+        "2950378",
+        "6446405",
+        "9872396"
+      ],
+      "sgd_cross_references": [
+        {
+          "database": "SGD",
+          "id": "S000007268",
+          "properties": [
+            {
+              "key": "GeneName",
+              "value": "ATP6"
+            }
+          ]
+        }
+      ]
+    },
+    "P61829": {
+      "entryAudit": {
+        "entryVersion": 171,
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "OLI1"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "Q0130"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "ATP9"
+            },
+            {
+              "value": "OLI3"
+            },
+            {
+              "value": "PHO2"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Baker's yeast",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Saccharomycetes",
+          "Saccharomycetales",
+          "Saccharomycetaceae",
+          "Saccharomyces"
+        ],
+        "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "taxonId": 559292
+      },
+      "primaryAccession": "P61829",
+      "proteinDescription": {
+        "alternativeNames": [
+          {
+            "fullName": {
+              "value": "Lipid-binding protein"
+            }
+          },
+          {
+            "fullName": {
+              "value": "Oligomycin resistance protein 1"
+            }
+          }
+        ],
+        "recommendedName": {
+          "fullName": {
+            "value": "ATP synthase subunit 9, mitochondrial"
+          }
+        }
+      },
+      "pubmed_ids": [
+        "10576729",
+        "155696",
+        "156363",
+        "24374639",
+        "2860638",
+        "2894987",
+        "9872396"
+      ],
+      "sgd_cross_references": [
+        {
+          "database": "SGD",
+          "id": "S000007274",
+          "properties": [
+            {
+              "key": "GeneName",
+              "value": "OLI1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "record_scope": "Oligomycin A is the focal record; related congeners are retained separately.",
+  "resistance_papers": [
+    {
+      "access_status": "PRIMARY_ABSTRACT_INSPECTED_FULL_RESULTS_PENDING",
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-resistance-16-citation.json",
+        "cache_sha256": "3e137e6aaefb589e6685ab395e14733d29dca5ed4a8736eea00a7bbfd0e2d393",
+        "retrieved_at": "2026-10-08T20:17:13.776353+00:00",
+        "sha256": "80d734048eeb675f798a3263d63a37899d4c701de3670a9700b2c87d2aed452e",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1432-1033.1985.tb09251.x%22+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "compound_scope": "GENERIC_OLIGOMYCIN_EXACT_CONGENER_UNRESOLVED",
+      "discovered_in_2012_reference_number": 16,
+      "doi": "10.1111/j.1432-1033.1985.tb09251.x",
+      "experimental_allele_accession": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_strain_taxon_id": null,
+      "reference": "PMID:2932333",
+      "reference_candidate": "UniProtKB:P61829",
+      "reference_link_scope": "GENE_COMPONENT_CONTEXT_NOT_EXPERIMENTAL_ALLELE_ACCESSION",
+      "source_gene_context": "OLI1",
+      "source_paper_in_uniprot_reference_list": false
+    },
+    {
+      "access_status": "PRIMARY_ABSTRACT_INSPECTED_FULL_RESULTS_PENDING",
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-resistance-18-citation.json",
+        "cache_sha256": "918af3b017c82432f42265382d59c58f4b3fc2b6c919ff63f071fb0b7967b9dd",
+        "retrieved_at": "2026-10-08T20:18:21.055810+00:00",
+        "sha256": "8b24f1d7fe17a0fe02dfd0f4afdaec00ba2ef98749b17a157df57118ebd87e66",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2F0014-5793%2886%2980152-1%22+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "compound_scope": "GENERIC_OLIGOMYCIN_EXACT_CONGENER_UNRESOLVED",
+      "discovered_in_2012_reference_number": 18,
+      "doi": "10.1016/0014-5793(86)80152-1",
+      "experimental_allele_accession": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_strain_taxon_id": null,
+      "reference": "PMID:2867935",
+      "reference_candidate": "UniProtKB:P61829",
+      "reference_link_scope": "GENE_COMPONENT_CONTEXT_NOT_EXPERIMENTAL_ALLELE_ACCESSION",
+      "source_gene_context": "OLI1",
+      "source_paper_in_uniprot_reference_list": false
+    },
+    {
+      "access_status": "CITATION_ONLY_NO_ABSTRACT_IN_CACHED_RESPONSE",
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-resistance-19-citation.json",
+        "cache_sha256": "ff50262033f9be163bdc4d006b44f341fe6917227f0f8c2594bd03f19fd655c4",
+        "retrieved_at": "2026-10-08T20:18:21.721029+00:00",
+        "sha256": "abfcfbfa18a0f0ec72dd6d65fb9f7d4424009daa05052af6e8f3d557523a650a",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1111%2Fj.1432-1033.1979.tb04207.x%22+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "compound_scope": "GENERIC_OLIGOMYCIN_EXACT_CONGENER_UNRESOLVED",
+      "discovered_in_2012_reference_number": 19,
+      "doi": "10.1111/j.1432-1033.1979.tb04207.x",
+      "experimental_allele_accession": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_strain_taxon_id": null,
+      "reference": "PMID:159820",
+      "reference_candidate": "UniProtKB:P61829",
+      "reference_link_scope": "GENE_COMPONENT_CONTEXT_NOT_EXPERIMENTAL_ALLELE_ACCESSION",
+      "source_gene_context": "OLI1",
+      "source_paper_in_uniprot_reference_list": false
+    },
+    {
+      "access_status": "PRIMARY_ABSTRACT_INSPECTED_FULL_RESULTS_PENDING",
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-resistance-24-citation.json",
+        "cache_sha256": "5e308b896f40a62cde4c2bf4e5e373caf5cb2da91e2d405f969c6d389de2112e",
+        "retrieved_at": "2026-10-08T20:18:22.340345+00:00",
+        "sha256": "d0e375e49068a2d3572eea9fec6940079356706cbb34f83e4383bd9e01a99388",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2F0014-5793%2886%2980016-3%22+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "compound_scope": "GENERIC_OLIGOMYCIN_EXACT_CONGENER_UNRESOLVED",
+      "discovered_in_2012_reference_number": 24,
+      "doi": "10.1016/0014-5793(86)80016-3",
+      "experimental_allele_accession": null,
+      "experimental_genome_accession": null,
+      "experimental_protein_accession": null,
+      "experimental_strain_taxon_id": null,
+      "reference": "PMID:2876917",
+      "reference_candidate": "UniProtKB:P00854",
+      "reference_link_scope": "GENE_COMPONENT_CONTEXT_NOT_EXPERIMENTAL_ALLELE_ACCESSION",
+      "source_gene_context": "ATP6",
+      "source_paper_in_uniprot_reference_list": false
+    }
+  ],
+  "reviewed_on": "2026-10-08",
+  "status": "REFERENCE_GROUNDING_VERIFIED_RESISTANCE_CURATION_PENDING",
+  "structural_crosswalk": {
+    "ligand": {
+      "chem_comp": {
+        "formula": "C45 H74 O11",
+        "id": "EFO",
+        "name": "Oligomycin A"
+      },
+      "rcsb_chem_comp_descriptor": {
+        "InChIKey": "MNULEGDCPYONBU-AWJDAWNUSA-N"
+      }
+    },
+    "request": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-4f4s-metadata-v2.json",
+      "cache_sha256": "c7a8e78e4e307711bfe8384bcd469e9acf22ce43b1144473e103a220daf8fce9",
+      "retrieved_at": "2026-10-08T20:15:27.258107+00:00",
+      "sha256": "1484d6ebd43a21b18184ebc616bf7858aaf24c0d5ec1a99db0aad9a927f7fbe2",
+      "status": 200,
+      "url": "https://data.rcsb.org/graphql?query=%7B%0A++entry%28entry_id%3A+%224F4S%22%29+%7B%0A++++rcsb_id%0A++++rcsb_primary_citation+%7B+pdbx_database_id_PubMed+pdbx_database_id_DOI+title+%7D%0A++++rcsb_accession_info+%7B+initial_release_date+revision_date+%7D%0A++++polymer_entities+%7B%0A++++++rcsb_id%0A++++++entity_poly+%7B+rcsb_mutation_count+%7D%0A++++++rcsb_polymer_entity+%7B+pdbx_description+%7D%0A++++++rcsb_entity_source_organism+%7B+ncbi_taxonomy_id+%7D%0A++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++reference_sequence_identifiers+%7B+database_name+database_accession+%7D%0A++++++%7D%0A++++%7D%0A++++nonpolymer_entities+%7B+pdbx_entity_nonpoly+%7B+comp_id+%7D+%7D%0A++%7D%0A++chem_comp%28comp_id%3A+%22EFO%22%29+%7B%0A++++chem_comp+%7B+id+name+formula+%7D%0A++++rcsb_chem_comp_descriptor+%7B+InChIKey+%7D%0A++%7D%0A%7D"
+    },
+    "structure": {
+      "nonpolymer_entities": [
+        {
+          "pdbx_entity_nonpoly": {
+            "comp_id": "EFO"
+          }
+        }
+      ],
+      "polymer_entities": [
+        {
+          "entity_poly": {
+            "rcsb_mutation_count": 0
+          },
+          "rcsb_entity_source_organism": [
+            {
+              "ncbi_taxonomy_id": 4932
+            }
+          ],
+          "rcsb_id": "4F4S_1",
+          "rcsb_polymer_entity": {
+            "pdbx_description": "ATP synthase subunit 9, mitochondrial"
+          },
+          "rcsb_polymer_entity_container_identifiers": {
+            "reference_sequence_identifiers": [
+              {
+                "database_accession": "P61829",
+                "database_name": "UniProt"
+              }
+            ]
+          }
+        }
+      ],
+      "rcsb_accession_info": {
+        "initial_release_date": "2012-08-15T00:00:00Z",
+        "revision_date": "2024-10-30T00:00:00Z"
+      },
+      "rcsb_id": "4F4S",
+      "rcsb_primary_citation": {
+        "pdbx_database_id_DOI": "10.1073/pnas.1207912109",
+        "pdbx_database_id_PubMed": 22869738,
+        "title": "Oligomycin frames a common drug-binding site in the ATP synthase."
+      }
+    },
+    "uniprot_backlink": {
+      "database": "PDB",
+      "id": "4F4S",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "1.90 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B/C/D/E/K/L/M/N/O=1-76"
+        }
+      ]
+    }
+  },
+  "structural_papers": [
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-22869738-citation.json",
+        "cache_sha256": "e52973397ffbe8f6b7ddf39b0a16080c990e098ad5c1445b421ec007df2117d4",
+        "retrieved_at": "2026-10-08T20:14:11.691083+00:00",
+        "sha256": "46a3a16badbebb63836dfbf3da492b95a24e5c84a23278dc036785c6bc79b39b",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22869738+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1073/pnas.1207912109",
+      "failed_fulltext_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-22869738-xml.json",
+        "cache_sha256": "3b49e3556c11293d8af0aa4d07a73e3e1e5ee20654615dc1293919cad5bbde79",
+        "retrieved_at": "2026-10-08T20:14:38.708671+00:00",
+        "sha256": "9fa6d8bcbe453af54326f8ca17b756d85ca188108b4c8741ea45f62097e966b3",
+        "status": 500,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3435195/fullTextXML"
+      },
+      "offline_verification_limit": "Bibliographic cache does not replay primary-text interpretation.",
+      "pmcid": "PMC3435195",
+      "primary_access": "MANUAL_PUBLISHER_FULL_TEXT_INSPECTED_WITH_WEB_TOOL_NOT_CACHED",
+      "reference": "PMID:22869738"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-29650704-citation.json",
+        "cache_sha256": "d1bd3a4923ad132e1c2ee8ab05669e5bcee2edbdf87120fbb3f24f603519a996",
+        "retrieved_at": "2026-10-08T20:14:14.394486+00:00",
+        "sha256": "7f31ab896bd7ed13f6ba4f91105a0cd2fe482bd5d088af684931a309148d7c27",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29650704+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1126/science.aas9699",
+      "failed_fulltext_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/oligomycin-29650704-xml.json",
+        "cache_sha256": "6a89da9c5b679fe5471ebf4a50f2e7da9d8130720267c10d21fcc0d404dd070a",
+        "retrieved_at": "2026-10-08T20:14:39.495467+00:00",
+        "sha256": "2a085e4ca7782f196a1ec48f5fe8cb48d8f9faf3bc9cab4b9dcd0f3f6eda60dd",
+        "status": 500,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5948177/fullTextXML"
+      },
+      "offline_verification_limit": "Bibliographic cache does not replay primary-text interpretation.",
+      "pmcid": "PMC5948177",
+      "primary_access": "PRIMARY_TEXT_UNAVAILABLE_CITATION_ONLY",
+      "reference": "PMID:29650704"
+    }
+  ],
+  "taxonomy": {
+    "4932": {
+      "active": true,
+      "parent": {
+        "scientificName": "Saccharomyces",
+        "taxonId": 4930
+      },
+      "rank": "species",
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    },
+    "559292": {
+      "active": true,
+      "parent": {
+        "commonName": "Baker's yeast",
+        "scientificName": "Saccharomyces cerevisiae",
+        "taxonId": 4932
+      },
+      "rank": "strain",
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-bb51760dbe5b9b287b207caf2746e952625554c0db0c8fe9b14a89d8b2e96b47.json",
+      "cache_sha256": "ea01ccf768a2141638866cd28bee83686c37757decab6e1d84fd8089bff949fa",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T20:13:41.219614+00:00",
+      "sha256": "96eea66997a8c487ccab976933936bb4d0f2c43b71fd5bac16652b9971ee0912",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP61829&format=json&size=2&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-79d28b254358d71edbef593643337699501d22fc8ffd46b672c8be7a5ddcf011.json",
+      "cache_sha256": "359dac3d95e62ff90be87ea8518f4af254ce76b8b13048b98040b978073b44ac",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T20:18:23.023678+00:00",
+      "sha256": "80a42c6eab363f1ea839341cf7cd86b88379c59f2d6c3b336729dd49f3cbb149",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AATP6+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+      "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+      "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+      "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932"
+    }
+  ]
+}

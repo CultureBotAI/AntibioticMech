@@ -532,6 +532,31 @@ resistance_mechanisms:
   - reference: ARO:3009647
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000158 (azithromycin);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: mef(F)/msr(G)-associated reduced azithromycin susceptibility in native isolate
+    Epi0082
+  gene_families:
+  - mef(F)
+  - msr(G)
+  taxon_id: NCBITaxon:1855823
+  taxon_label: Macrococcoides canis
+  strain: Epi0082
+  phenotype_label: source-reported reduced azithromycin susceptibility
+  assay: Source-reported broth microdilution phenotype
+  note: Same-isolate gene-family/phenotype co-occurrence, not individual-gene or allele-specific
+    causation. The source name Macrococcus canis matches otherNames in the cached
+    UniProt taxonomy entry. The separate type-strain comparator KM45013 and expression
+    host are not this isolate. No exact protein, allele, strain TaxID or numerical
+    AST is assigned; the UniProt mef(F) reference belongs to another species and strain.
+    Source-reported genome components CP046363.1, CP046364.1, CP046365.1, CP046366.1
+    and CP046367.1 share BioSample SAMN13342681 and BioProject PRJNA590936 in ENA
+    metadata; these are not assembly accessions or new gene calls. Compound scope
+    follows named azithromycin; the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:33118027
+    notes: Native Epi0082 row in Table 1 and selected Results/accession statement
+      inspected as publisher-indexed text. Both gene families co-occur; the separate
+      expression-host experiment is not assigned to the native isolate.
 molecular_targets:
 - target_id: ARO:3000757
   target_label: 50S ribosomal subunit P-site
@@ -590,3 +615,12 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
     retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-10T06:38:30Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added one native Epi0082 mef(F)/msr(G) and azithromycin co-occurrence claim
+    with verified species-name and source-reported genome-component context. Kept
+    the different-species UniProt reference and expression-host experiment separate;
+    preserved every source-owned claim and membership. Whole-record review remains
+    open.
+  llm_assisted: true

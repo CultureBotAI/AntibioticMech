@@ -1,0 +1,63 @@
+{
+  "reviewed_on": "2026-10-08",
+  "status": "PRIMARY_RESULTS_NOT_RETRIEVED_REFERENCE_SCOPE_UNRESOLVED",
+  "record": {
+    "identifier": "CHEBI:40909",
+    "path": "data/antibiotics/antifungal/azoxystrobin.yaml",
+    "record_sha256": "df37a75a870eb64f66e098db1ad4e40b2b2e66d63f65eff8027f96dd229071c8",
+    "standard_inchi_key": "WFDXOXNFNRHQEC-GHRIWEEISA-N"
+  },
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_row_sha256": [
+    "6b0cda8a58e1e41d0759e4fe2bae76f77190b5ef2b722844f8b6ba1644beb0ef",
+    "69ea8ca2bb4393baa2290f5402f322c11d5217ea18d3dac94cd8738ea5bd942b"
+  ],
+  "primary_reference": "PMID:12612806",
+  "doi": "10.1007/s00294-002-0356-1",
+  "access_checks": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s00294-002-0356-1",
+      "result": "Primary publisher abstract inspected; Results behind subscription preview."
+    },
+    {
+      "url": "https://link.springer.com/content/pdf/10.1007/s00294-002-0356-1.pdf",
+      "result": "PDF not accessible through the browsing tool; no primary Results retrieved."
+    },
+    {
+      "url": "https://link.springer.com/content/pdf/10.1007/s00294-002-0356-1.pdf",
+      "method": "HEAD",
+      "response_date": "2026-10-08T07:45:35Z",
+      "status": 303,
+      "redirect_origin_path": "https://idp.springer.com/authorize",
+      "result": "Direct publisher request redirects to its authorization route. Redirect not followed; this is not proof of full-text availability or its absence."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/10877185_Characterization_of_spontaneous_mutants_of_Magnaporthe_grisea_expressing_stable_resistance_to_the_QoI_inhibiting_fungicide_azoxystrobin",
+      "result": "Search result offers a full-text request, not available full text. No request sent."
+    }
+  ],
+  "reference_protein": {
+    "accession": "UniProtKB:A0A089QDC9",
+    "entry_version": 33,
+    "sequence_version": 1,
+    "release": "2026_03",
+    "is_fragment": true,
+    "taxon_id": "NCBITaxon:318829",
+    "gene": "cytb",
+    "entry_object_sha256": "a231b8c62cd23e60834baa1ace68db979fb207d092c48be5b546cca72a564a5f",
+    "cached_response_body_sha256": "3c6cd700fbf6ba3771e6100a026b9b081b94b25a3363b0bd46ed182805113169",
+    "cache_path": "reports/resistance-grounding-2026-10-07/request-f43b8b1499392d9b768377aa959918742e738b6706023857dac21b3b31a1f840.json",
+    "citation": "PMID:25226525",
+    "citation_doi": "10.1094/PHYTO-06-14-0184-R",
+    "reference_scope": "A different, 2015 population study; not an independently established experimental-allele crosswalk to the 2003 paper."
+  },
+  "decision": "No record or source-review mutation. Preserve the existing coordinate flags until primary Results and the experimental/reference relationship can be checked.",
+  "limitations": [
+    "The abstract does not establish the source strain label's role or an exact protein accession.",
+    "Fragment coordinates are not full-length coordinates; no numerical offset or replacement sequence inferred.",
+    "Absence of the older paper in this UniProt entry is not absence of resistance evidence.",
+    "No MIC, clinical interpretation, genome or strain TaxID inferred.",
+    "No acquisition, engineering or selection protocol exported; no NCBI requests or outreach."
+  ],
+  "attribution": "PHI-base pinned AMR export, CC BY 4.0; UniProt Consortium release 2026_03, CC BY 4.0."
+}

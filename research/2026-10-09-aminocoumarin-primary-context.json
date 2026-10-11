@@ -1,0 +1,315 @@
+{
+  "archive_bridge": {
+    "current_accession": "AF235050.4",
+    "current_protein_sequence_versions": {
+      "Q83WB8": 2,
+      "Q83WB9": 2
+    },
+    "experimental_allele_equivalence_established": false,
+    "forward_link_field": "newAccession",
+    "paper_accession": "AF205853.1",
+    "paper_accession_status": "suppressed",
+    "reference_proteins": [
+      "UniProtKB:Q83WB9",
+      "UniProtKB:Q83WB8"
+    ],
+    "reverse_link_field": "secondaryAccession",
+    "scope": "EXPLICIT_ARCHIVE_SUCCESSION_NOT_EXACT_EXPERIMENTAL_ALLELE_IDENTITY"
+  },
+  "attribution": "Primary study PMID:12604514; UniProt Consortium release 2026_03; existing ChEBI structure records. Identifiers and concise qualitative context only; no figure or article redistribution.",
+  "chemical_identity": {
+    "coumermycin_amide_diagnostic": {
+      "amide_representation_formula": "C55H59N5O20",
+      "amide_representation_is_different_representation": true,
+      "amide_representation_key_matches_stored_key": true,
+      "chemical_record_modified": false,
+      "identifier": "CHEBI:3907",
+      "rdkit_version": "2026.03.5",
+      "record_sha256": "2e77f06884f8afb05a79df534bd16df1fbd741a91f482091b4d4d5862cde0fbd",
+      "scope": "LOCAL_DIAGNOSTIC_NOT_PHYSICAL_SAMPLE_OR_ALLELE_IDENTIFICATION",
+      "standard_inchi_key": "WTIJXIZOODAMJT-DHFGXMAYSA-N",
+      "standard_inchi_tautomer_scope_reference": "https://www.inchi-trust.org/technical-faq/",
+      "tetrahedral_centers": 8,
+      "transformation_scope": "TWO_IMIDIC_ACID_TO_AMIDE_LINKAGES_ONLY",
+      "unassigned_centers": 0,
+      "unrestricted_enumerator_accepted": false
+    },
+    "physical_tested_material_reidentified": false,
+    "record_diagnostics": {
+      "rdkit_version": "2026.03.5",
+      "records": [
+        {
+          "complete_record_read_through_collection_loader": true,
+          "diagnostic_representation": "SMILES",
+          "direct_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+          "identifier": "CHEBI:28368",
+          "inchi_parses_strictly": true,
+          "inchi_recomputed_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+          "label": "novobiocin",
+          "path": "data/antibiotics/antibacterial/novobiocin.yaml",
+          "sha256": "9ae7d270c772405bad59e0f394e797bc2d0c9550bd1e9dbd71f29e882e2081d3",
+          "smiles_parses_strictly": true,
+          "smiles_recomputed_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+          "standard_inchi_key": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+          "tetrahedral_centers": 4,
+          "unassigned_centers": 0
+        },
+        {
+          "complete_record_read_through_collection_loader": true,
+          "diagnostic_representation": "InChI",
+          "direct_inchi_key": "WTIJXIZOODAMJT-DHFGXMAYSA-N",
+          "identifier": "CHEBI:3907",
+          "inchi_parses_strictly": true,
+          "inchi_recomputed_key": "WTIJXIZOODAMJT-DHFGXMAYSA-N",
+          "label": "coumermycin A1",
+          "path": "data/antibiotics/antibacterial/coumermycin-a1.yaml",
+          "sha256": "2e77f06884f8afb05a79df534bd16df1fbd741a91f482091b4d4d5862cde0fbd",
+          "smiles_parses_strictly": false,
+          "smiles_recomputed_key": null,
+          "standard_inchi_key": "WTIJXIZOODAMJT-DHFGXMAYSA-N",
+          "tetrahedral_centers": 8,
+          "unassigned_centers": 0
+        },
+        {
+          "complete_record_read_through_collection_loader": true,
+          "diagnostic_representation": "SMILES",
+          "direct_inchi_key": "FJAQNRBDVKIIKK-LFLQOBSNSA-N",
+          "identifier": "antibioticmech:aro-e44e701df2",
+          "inchi_parses_strictly": true,
+          "inchi_recomputed_key": "FJAQNRBDVKIIKK-LFLQOBSNSA-N",
+          "label": "clorobiocin",
+          "path": "data/antibiotics/antibacterial/clorobiocin.yaml",
+          "sha256": "4e73efdaeff849a22524531769f50afc1392ca20336c536ca8b2ae9e222228cc",
+          "smiles_parses_strictly": true,
+          "smiles_recomputed_key": "FJAQNRBDVKIIKK-LFLQOBSNSA-N",
+          "standard_inchi_key": "FJAQNRBDVKIIKK-LFLQOBSNSA-N",
+          "tetrahedral_centers": 4,
+          "unassigned_centers": 0
+        }
+      ],
+      "scope": "LOCAL_REPRESENTATION_CHECK_NOT_PHYSICAL_SAMPLE_REIDENTIFICATION"
+    },
+    "source_structure_repaired": false,
+    "standard_inchi_reference": "https://www.inchi-trust.org/technical-faq/",
+    "tautomer_inference": "The imidic/amide drawing difference is compatible with Standard InChI mobile-hydrogen normalization, not evidence of a different record identity.",
+    "unresolved": "Coumermycin source SMILES fails strict RDKit parsing; the valid InChI supports this limited record join. No structure-source correction or independent tested-preparation identification is claimed.",
+    "visual_comparison": "Named neutral structures in Figure 1A agree with local depictions; the limited coumermycin amide representation retains its Standard InChIKey and assigned tetrahedral centers."
+  },
+  "date": "2026-10-09",
+  "exact_experimental_protein_assignments": 0,
+  "experimental_genome_assignments": 0,
+  "figure_redistributed": false,
+  "github_mutations": 0,
+  "limits": [
+    "No native-donor phenotype is inferred from a heterologous host.",
+    "No induced point mutant or exact experimental protein is assigned.",
+    "The 2004 biochemical abstract is not promoted to inspected primary Results.",
+    "The clorobiocin record and existing CARD assertions remain unchanged.",
+    "No source-owned chemical fields are changed; the SMILES parsing defect remains open."
+  ],
+  "ncbi_endpoint_requests": 0,
+  "numerical_ast_added": 0,
+  "primary_paper": {
+    "access_limit": "Article HTTP 403; stopped without retry or alternate access route. Earlier inspected Results remain the text evidence.",
+    "clorobiocin_focal_susceptibility_result_verified": false,
+    "doi": "10.1128/AAC.47.3.869-877.2003",
+    "interpretation": "ParYR-associated reduced susceptibility in the laboratory host; donor, host and reference allele remain separate.",
+    "native_figures_visually_inspected": [
+      "1A"
+    ],
+    "native_table2_visually_inspected": false,
+    "raw_fulltext_cache_available": false,
+    "reference": "PMID:12604514",
+    "relevant_results_text_inspected": true,
+    "results_inspected_before_article_denial": true,
+    "review_medium": "PREVIOUSLY_INSPECTED_PUBLISHER_INDEXED_RESULTS_AND_NATIVE_CHEMICAL_FIGURE",
+    "source_compounds": [
+      "novobiocin",
+      "coumermycin A1"
+    ],
+    "source_url": "https://journals.asm.org/doi/10.1128/aac.47.3.869-877.2003",
+    "whole_paper_review_complete": false
+  },
+  "prior_reference_dossier": {
+    "path": "research/2026-10-09-aminocoumarin-reference-followup.json",
+    "sha256": "e3fb4342cf8565dd9c46c886493f20e573544afec562a72acaa1b9ad3726017b"
+  },
+  "reference_protein": {
+    "archive_references": [
+      {
+        "database": "EMBL",
+        "id": "AF235050",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AAO47226.2"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      {
+        "database": "RefSeq",
+        "id": "WP_109005051.1",
+        "properties": [
+          {
+            "key": "NucleotideSequenceId",
+            "value": "NZ_BEWA01000022.1"
+          }
+        ]
+      }
+    ],
+    "citation_contexts": [
+      {
+        "citation_id": "CI-2QIPV6UFA93HS",
+        "citation_type": "submission",
+        "strain_annotations": [
+          "DSM 40489"
+        ]
+      },
+      {
+        "citation_id": "11036020",
+        "citation_type": "journal article",
+        "strain_annotations": [
+          "DSM 40489"
+        ]
+      },
+      {
+        "citation_id": "CI-7ODJPNNQAT4FT",
+        "citation_type": "submission",
+        "strain_annotations": [
+          "DSM 40489"
+        ]
+      },
+      {
+        "citation_id": "12604514",
+        "citation_type": "journal article",
+        "strain_annotations": [
+          "DSM 40489"
+        ]
+      },
+      {
+        "citation_id": "CI-9C1KEA7090B7S",
+        "citation_type": "submission",
+        "strain_annotations": [
+          "DSM 40489"
+        ]
+      }
+    ],
+    "entry_audit": {
+      "entryVersion": 120,
+      "sequenceVersion": 2
+    },
+    "entry_type": "UniProtKB unreviewed (TrEMBL)",
+    "experimental_assignment": false,
+    "gene_annotations": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "id": "AAO47226.2",
+              "source": "EMBL"
+            }
+          ],
+          "value": "parYR"
+        }
+      }
+    ],
+    "organism": {
+      "scientificName": "Streptomyces rishiriensis",
+      "taxonId": 68264
+    },
+    "protein_accession": "UniProtKB:Q83WB8",
+    "request_key": "uniprot-74ce67279637b286",
+    "scope": "REFERENCE_IDENTITY_NOT_EXPERIMENTAL_ALLELE"
+  },
+  "reference_request_reused": {
+    "bytes": 145583,
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-followup/uniprot-74ce67279637b286-response.bin",
+      "sha256": "1d919cf5f6ade4e4ef28c0a403b9cde43473e45f527839809e3b0aba6e0dcca3"
+    },
+    "complete_for_query": true,
+    "establishes_biological_absence": false,
+    "query": "(lit_pubmed:12604514 OR lit_pubmed:14993313 OR lit_pubmed:8392138)",
+    "release": "2026_03",
+    "result_count": 39,
+    "retrieved_at": "2026-10-10T02:06:25.677453+00:00",
+    "sha256": "1d919cf5f6ade4e4ef28c0a403b9cde43473e45f527839809e3b0aba6e0dcca3",
+    "status": 200,
+    "url": "https://rest.uniprot.org/uniprotkb/search?query=%28lit_pubmed%3A12604514+OR+lit_pubmed%3A14993313+OR+lit_pubmed%3A8392138%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+  },
+  "requests": {
+    "article": {
+      "bytes": 5591,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/article.html",
+        "sha256": "23ec61abb6f7155f385efd8ea272fa8b2da111ede11a1935f03d0e193ab8c189"
+      },
+      "retrieved_at": "2026-10-10T02:13:49.243612+00:00",
+      "sha256": "23ec61abb6f7155f385efd8ea272fa8b2da111ede11a1935f03d0e193ab8c189",
+      "status": 403,
+      "url": "https://journals.asm.org/doi/10.1128/aac.47.3.869-877.2003"
+    },
+    "figure1": {
+      "bytes": 278796,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-aminocoumarin-primary/figure1.jpeg",
+        "sha256": "f2b68d585701981b4f792530935cd4c73134b2c0688e5460709164c55ab84793"
+      },
+      "retrieved_at": "2026-10-10T02:13:35.266707+00:00",
+      "sha256": "f2b68d585701981b4f792530935cd4c73134b2c0688e5460709164c55ab84793",
+      "status": 200,
+      "url": "https://journals.asm.org/cms/10.1128/aac.47.3.869-877.2003/asset/6d79995e-a6db-4e90-9585-a6eecbd875eb/assets/graphic/ac0330890001.jpeg"
+    }
+  },
+  "scope": {
+    "corpus_records": 2939,
+    "curated_records": 2,
+    "reviewed_records": 3,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "source_adoptions": 0,
+  "taxonomy": {
+    "1916": {
+      "active": true,
+      "rank": "species",
+      "scientificName": "Streptomyces lividans",
+      "scope": "TESTED_HOST_SPECIES_NOT_SPECIES_WIDE_RESISTANCE",
+      "taxonId": 1916
+    },
+    "457428": {
+      "active": true,
+      "rank": "strain",
+      "scientificName": "Streptomyces lividans TK24",
+      "scope": "BACKGROUND_ONLY_NOT_EXPERIMENTAL_DERIVATIVE",
+      "taxonId": 457428
+    }
+  },
+  "taxonomy_context": {
+    "path": "research/2026-10-09-duramycin-reference-context.json",
+    "sha256": "647e52a1f3bc6428bce802173f1c95b2a2ef7fea5a47f6e379c7f63edb74de9c"
+  },
+  "taxonomy_request_reused": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-09-duramycin/taxonomy-search-e3d22310383c3a03-response.bin",
+      "sha256": "83d0ad1095fb173dad8258322042376ebe34a5115333842dc4f0c2afa718630d"
+    },
+    "complete_for_query": true,
+    "establishes_biological_absence": false,
+    "release": "2026_03",
+    "result_count": 3,
+    "retrieved_at": "2026-10-09T21:37:53.522115+00:00",
+    "sha256": "83d0ad1095fb173dad8258322042376ebe34a5115333842dc4f0c2afa718630d",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/search?query=Streptomyces+lividans&format=json&size=500"
+  }
+}

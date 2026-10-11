@@ -164,6 +164,8 @@ NUMERIC_CLAIMS = [
     ("docs/HARMONIZATION.md", "{} records carry one from the MIBiG import",
      "mibig_producer_records"),
     ("NEXT_TASKS.md", "the {} minted records", "minted_records"),
+    ("NEXT_TASKS.md", "Start with the {} records that already have target or resistance evidence",
+     "target_or_resistance_records"),
     ("NEXT_TASKS.md", "{} antiviral records still carry an empty `resistance_mechanisms`",
      "antiviral_without_resistance"),
     ("curation/source_queue.tsv", "supplies {} product-level APPROVED assertions",
@@ -210,6 +212,8 @@ def _derived(repo_root):
             "host_shared_target": scopes["HOST_SHARED_TARGET"],
             "minted_records": sum(
                 1 for r in records if r.get("grounding_status") == "MINTED"),
+            "target_or_resistance_records": sum(
+                1 for r in records if r.get("molecular_targets") or r.get("resistance_mechanisms")),
             "antiviral_without_resistance": sum(
                 1 for r in records
                 if r.get("antimicrobial_class") == "ANTIVIRAL"

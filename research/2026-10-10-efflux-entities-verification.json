@@ -1,0 +1,92 @@
+{
+  "adversarial_review": {
+    "path": "reports/resistance-grounding-2026-10-10-efflux-entities/adversarial-review.json",
+    "sha256": "f6890d573fbc88f70e348927926fbd04db96b0401982d1e6906effd827a7e00c"
+  },
+  "artifacts": [
+    {
+      "path": "research/2026-10-10-efflux-entities-context.json",
+      "sha256": "c5f06dde21eb2824c4d17db144fb52c7162ca5a11024ec8221de193d68b8cf3a"
+    },
+    {
+      "path": "tests/test_efflux_entity_references.py",
+      "sha256": "3cb2bc490cc888c60efb0f8a081a4f88aa437da5ad863aa0acbc13d67606be2f"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "a7d5eccacca30437ba096c28af38614132a82cd28d01a56fc34bdfcff7530c51"
+    }
+  ],
+  "biological_records_changed": 0,
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "a7d5eccacca30437ba096c28af38614132a82cd28d01a56fc34bdfcff7530c51",
+      "before_sha256": "f7dd8b93a5d65b7dd04adcc97fae723ad0f0e089796788e7c3f1a65eb48eb304"
+    }
+  },
+  "checks": [
+    {
+      "path": "reports/resistance-grounding-2026-10-10-efflux-entities/reproduce-exit.json",
+      "sha256": "14bfc5277f14ef74cf1085e994226bae2cfb236f598bc882f58968bd6be83e33"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-10-efflux-entities/lint-exit.json",
+      "sha256": "9adbc58992760db25e4d8f4f7d4dcd46fc520db79c8f30760170a630dc9bdaad"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-10-efflux-entities/focused-exit.json",
+      "sha256": "88ddbb0eff854927339f588f06e48a749178e14a53f4d80e535e20540a0d01d4"
+    }
+  ],
+  "curation_events_added": 0,
+  "embedding_artifacts_changed": 0,
+  "exact_experimental_assignments": 0,
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-10-efflux-entities/focused-tests.xml",
+    "sha256": "b888f17f70d0d3f3bf53a474810257613cc6dc118b136f6c0c7be2fe92ea059a"
+  },
+  "focused_tests_passed": 219,
+  "full_qc_rerun": false,
+  "generated_pages_changed": 0,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "last_authoritative_biological_qc": {
+    "path": "research/2026-10-10-card-parent-primary-verification.json",
+    "sha256": "d86f8e8751977640264f4624c2887ea7f889e03ab6be2770ca006a4d0c028cc8"
+  },
+  "limits": [
+    "All 2939 records remain in the overall investigation; this is a seven-term follow-up, not whole-record completion.",
+    "The four selected primary reviews do not establish a complete phenotype or exact allele crosswalk.",
+    "Reviewed-only Mex and ini searches are reference queries, not exhaustive unreviewed-protein searches.",
+    "Reference-strain taxids are not automatically experimental-isolate identifiers.",
+    "The fungal MDR1 family remains without a single selected organism or protein; its descendants are not propagated.",
+    "Source assertions and all earlier curated findings remain unchanged. No exact experimental protein, allele, genome or new AST is assigned.",
+    "No sequences, exact variants, constructs, primers, protocols, coordinates or numerical AST are exported.",
+    "No NCBI endpoint requests, outreach, source adoption or GitHub mutations occurred; #1040 remains deferred."
+  ],
+  "metadata_requests": 11,
+  "ncbi_requests": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-10-card-parent-primary-verification.json",
+    "sha256": "d86f8e8751977640264f4624c2887ea7f889e03ab6be2770ca006a4d0c028cc8"
+  },
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6909,
+  "protected_files_unchanged": 6908,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-10-efflux-entities/protected-before.json",
+    "sha256": "a9d1bb32a89267b47bbdae52d9daaff130b803cd579d434656b3587017f1c2f7"
+  },
+  "record_hashes_verified": 2939,
+  "record_term_memberships": 13,
+  "reference_proteins": 10,
+  "reference_taxa": 7,
+  "selected_records": 10,
+  "selected_terms": 7,
+  "source_adoptions": 0,
+  "source_inputs_changed": 0,
+  "status": "METADATA_AUDIT_AND_PRESERVATION_CHECKS_PASSED",
+  "verified_at": "2026-10-10T23:46:43.407327+00:00",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_reviews_completed": 0
+}

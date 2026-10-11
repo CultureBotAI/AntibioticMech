@@ -1,0 +1,124 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "artifacts": [
+    {
+      "path": "scripts/audit_card_definition_citations.py",
+      "sha256": "a9c7512ba1a6d6bb563f207e7eee18e56032e8287c01b4be32e04656cbd2ebd4"
+    },
+    {
+      "path": "tests/test_card_definition_citations.py",
+      "sha256": "c8722bb26fcf68d18f19a3073a38736fbcc25bae39df13499a6be1f7cc86bd9b"
+    },
+    {
+      "path": "tests/test_salmonella_source_scope.py",
+      "sha256": "1c68cec2ac94a76d23e462746760e6e3b61fc58acd7c81cdcd49f40ae23c64ee"
+    },
+    {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    {
+      "path": "research/2026-10-09-salmonella-source-scope.json",
+      "sha256": "e276aaf5dc5452300ad4d670f1049a54e064d4443919b85439f06589182a913f"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "5a85ff4583d0d51a806411512b8e4d58c09ac1d070aa29afd0dedbcf054d634c"
+    }
+  ],
+  "biological_records_byte_identical": 2939,
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/citation-canary.json",
+    "sha256": "73909cd47b9a786415639dbfd4701dca7a565e747d6cbe7cc6803f0a3cd350ed"
+  },
+  "canary_terms_reproduce_in_full_audit": true,
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "5a85ff4583d0d51a806411512b8e4d58c09ac1d070aa29afd0dedbcf054d634c",
+      "before_sha256": "6680c2842bf49af8fc4db31383aed68c46f6e2a76a8c4121095cf163b01f02d9"
+    }
+  },
+  "checks_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/portable-final-checks/checks.json",
+    "sha256": "a8776a461d4893bd258583276e9acfaf7ab5377c7738c98f9da86e04b89a3270"
+  },
+  "date": "2026-10-09",
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/portable-final-checks/focused-tests.xml",
+    "sha256": "8e2ec6acdc8072cb805f27333a317fd7024c2ff80ea4682cb3e467806525fe98"
+  },
+  "focused_tests_passed": 242,
+  "full_authoritative_qc_rerun": false,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "ncbi_endpoint_requests": 0,
+  "new_tests_passed": 30,
+  "outreach": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-topoisomerase-unreviewed-verification.json",
+    "sha256": "04069c824ff072b655c963061df5388f8eb79d53e6a8212764b3c612b69e0822"
+  },
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6836,
+  "protected_files_unchanged": 6835,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-salmonella-scope/protected-before.json",
+    "sha256": "5d72a9ceeb60e601dbd572037f500f8fb45f10cf7242dd0b6f550dccbb32181b"
+  },
+  "remaining_limits": [
+    "Bibliography membership does not verify a causal effect, allele, organism or assay.",
+    "Missing definition citations in this snapshot is not absence of biological evidence.",
+    "Class, synonym and other annotation xrefs are not definition citations.",
+    "No sequences, variants, protocols or numerical AST are exported.",
+    "No network requests, NCBI endpoint use, source adoption or GitHub mutation.",
+    "Whole-corpus primary review remains OPEN; source labels and definitions are hashed only.",
+    "Historical strain otherNames are retained as ambiguity, not selected as isolate matches.",
+    "The 13 source-derived compound memberships are not 13 independently verified experimental effects.",
+    "Source-owned records are unchanged: this scoped review does not establish a replacement claim for every inherited compound edge.",
+    "No sequences, exact variants, constructs, primers, protocols, coordinates or numerical AST exported.",
+    "NCBI endpoints, outreach and reuse-term review remain deferred under #1040; no GitHub mutations or source adoption."
+  ],
+  "review_findings_addressed": [
+    "OWL axiom citations require exact asserted triple identity, not text-only target matching.",
+    "Definition, synonym, ancestor and class xrefs remain separate; unknown xrefs are hashed.",
+    "All current records are hashed and collection-aware loaded, with source-owned claim filtering.",
+    "otherNames, genus context and no-rank serovar context are not species synonyms or isolate assignments.",
+    "The parE negative result and its background limitation are retained without broad source deletions.",
+    "Publisher HTTP 429 remains an explicit access limitation; no retry or bypass."
+  ],
+  "salmonella_summary": {
+    "bibliography_records_verified": 2,
+    "biological_records_changed": 0,
+    "compound_records": 13,
+    "exact_allele_assignments": 0,
+    "experimental_taxon_assignments": 0,
+    "new_protein_assignments": 0,
+    "selected_terms": 4,
+    "source_assertion_memberships": 30,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "source_adoptions": 0,
+  "sources_pages_embeddings_unchanged": true,
+  "status": "SCOPED_RESEARCH_CHECKS_PASSED",
+  "summary": {
+    "assertion_memberships_with_definition_citations": 4031,
+    "biological_records_changed": 0,
+    "compound_records": 273,
+    "corpus_records_checked": 2939,
+    "definition_axioms": 1594,
+    "definition_identifier_namespaces": {
+      "DOI": 1,
+      "PMID": 1780
+    },
+    "other_axioms": 1615,
+    "source_assertion_memberships": 4538,
+    "terms": 2002,
+    "terms_with_definition_citations": 1580,
+    "terms_without_allowlisted_definition_citations": 422,
+    "unique_definition_citation_ids": 1781,
+    "whole_record_reviews_completed": 0
+  },
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

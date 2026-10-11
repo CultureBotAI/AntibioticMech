@@ -176,10 +176,8 @@ resistance_mechanisms:
     to micafungin
   taxon_id: NCBITaxon:4932
   taxon_label: Saccharomyces cerevisiae
-  strain: BY4742
-  strain_taxon_id: NCBITaxon:559292
+  strain: BY4742-P649A
   alteration: FKS1(P647A) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:P38631
   gene_id: YLR342W_mRNA
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
@@ -187,180 +185,264 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review garcia-effron-2008-subject-context:
+    BY4742-P649A is the derivative label printed in Table 1, whereas Results and the
+    imported alteration use P647A. This discrepancy is preserved, not normalized.
+    UniProtKB:P38631 / AAC48981.1 and the retained gene_id ground the reference FKS1
+    locus, not a verified derivative sequence. Reference strain identity, native Candida
+    observations, whole-cell MICs and enzyme inhibition remain distinct. Original
+    source background label: BY4742. Reference-only source identifiers: strain_taxon_id=NCBITaxon:559292;
+    protein_accession=UniProtKB:P38631.'
   evidence:
   - reference: PMID:18443110
     notes: PHI-base primary-literature antimicrobial interaction PHIG:2386; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00262-08
+    notes: 'Identifier-scope review: Table 1: parent and derivative rows, Results:
+      Saccharomyces comparison, Figure 1: AAC48981 reference, UniProtKB release 2026_03:
+      P38631 entry 209, sequence version 2; EnsemblFungi cross-reference. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(F641S) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: M70
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(F641S) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(L644F S645C) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: M70
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(L644F S645C) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(S645F) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: M70
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(S645F) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(S645F) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(S645F) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(S645P) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: M70
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(S645P) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(S645P) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(S645P) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(S645Y) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: M70
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(S645Y) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: FKS1(S645Y) (amino acid mutation) [Not assayed] associated with resistance
     to micafungin
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: FKS1(S645Y) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A1D8PCT0
   phenotype_id: PHIPO:0000575
   phenotype_label: resistance to micafungin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review balashov-2006-reference-context:
+    The strain label denotes a parent background, not an individually resolved resistant
+    derivative. Imported protein/strain identifiers are reference-only. AF027295 /
+    AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an
+    experimental allele. Source notation remains unnormalized; aggregated zygosity
+    and grouped MICs must not be assigned to individual isolates. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PCT0.'
   evidence:
   - reference: PMID:16723566
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1428; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01653-05
+    notes: 'Identifier-scope review: Results: resistant derivatives and cross-resistance,
+      Table 3, Declared FKS1 reference accessions, UniProtKB release 2026_03: O13383
+      entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -394,3 +476,159 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T07:56:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_IDENTIFIER_SCOPE
+  changes: Scoped eight PHI-base FKS1 associations to parent-background context, withheld
+    reference protein/strain IDs as experimental-subject identifiers, and retained
+    the explicit AF027295-to-UniProtKB:O13383 reference crosswalk. Alleles, phenotypes,
+    species, and mechanism unchanged; no isolate MIC inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T08:33:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Applied 1 pinned subject-context reviews, retaining reference-locus grounding
+    while withholding unverified experimental protein/strain identifiers. Source alterations,
+    phenotypes, species, genes, and existing activities unchanged. Refreshed provenance
+    checksums on any previously reviewed claims. Resolved the FKS1 table's derivative
+    label with its explicit numbering discrepancy.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:10:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after Eddouzi subject
+    reviews; all biological fields and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:45:07Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after Rybak reference-context
+    reviews; all biological fields and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:12:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after carboxin reference-context
+    reviews; all biological fields, activities and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:52:13Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after two additional
+    carboxin identifier-scope corrections; all biological fields, activities and previous
+    decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T11:28:54Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after eleven additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:09:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after seventeen additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:49:26Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after one yeast identity-scope
+    correction; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T13:24:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after twelve reference-scope
+    corrections; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:30Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after nine identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:42Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:07:00Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:57Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:07Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:48Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:24Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

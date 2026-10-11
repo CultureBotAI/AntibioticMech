@@ -1,0 +1,97 @@
+{
+  "artifacts": [
+    {
+      "path": "data/embeddings/vectors.f16.npy",
+      "sha256": "4765efe71df1b17ea716fe495b901319837568dbb3a776535602c45db9e2f585"
+    },
+    {
+      "path": "data/embeddings/meta.json",
+      "sha256": "927d446ab677b7d98f12e74d698b4b9bb8e7853d87b2f699a5ca4bf075b91982"
+    },
+    {
+      "path": "data/embeddings/corpus_map.json",
+      "sha256": "dac6935acf0b5c6ce29a5c1847076e40aaed61377bfeb92a3f54c48c02aec8b8"
+    }
+  ],
+  "baseline_manifest": {
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/publication-before.json",
+    "sha256": "17009c1802b617518400ca5b9598ad34114180171a68e8971b4fcf1ac1ff4ddd"
+  },
+  "biological_records_unchanged": 2939,
+  "cached_vector_reuse_proof": {
+    "path": "reports/resistance-grounding-2026-10-07/glucan-inhibitors-20261009/embedding-stage/reuse-proof.json",
+    "sha256": "7d232415df8f54b147d6c43415231f40adc075df11bb2f335f1e968cd42ab358"
+  },
+  "changed_documents_encoded": 2,
+  "changed_files": {
+    "NEXT_TASKS.md": {
+      "after_sha256": "861301fb15a34181533a321f2ded2233c33c6d9810e535e58550fb66665e3bc6",
+      "before_sha256": "26538a90c691e39631c35c522efae04091cc8f3167102d24257df5a8e51193d6"
+    },
+    "README.md": {
+      "after_sha256": "07ca21d126915ead393099444236a094dc36c039bdb1cf60623ac63f523e3580",
+      "before_sha256": "4570e9aedcfa15489d4c8ecf332a0f09611f2375c8b55ddaf751469f998c9f1d"
+    },
+    "data/embeddings/corpus_map.json": {
+      "after_sha256": "dac6935acf0b5c6ce29a5c1847076e40aaed61377bfeb92a3f54c48c02aec8b8",
+      "before_sha256": "d4dfe3f0364523344fededc27dccd6a906f5416588a53e98a5efc1b171297f11"
+    },
+    "data/embeddings/meta.json": {
+      "after_sha256": "927d446ab677b7d98f12e74d698b4b9bb8e7853d87b2f699a5ca4bf075b91982",
+      "before_sha256": "cdc88396e6eb9c7a5d13d1bbe79dd0d595ba5b5c34d6d319d84c414040007746"
+    },
+    "data/embeddings/vectors.f16.npy": {
+      "after_sha256": "4765efe71df1b17ea716fe495b901319837568dbb3a776535602c45db9e2f585",
+      "before_sha256": "986408d66d2b28b88612b5409b5c2ccc4d226ea8b01831fb973778d7b025ec39"
+    },
+    "pages/antifungal/papulacandin-b.html": {
+      "after_sha256": "3a287afea2731001c459a51a02a8cd3e09255320ee8dacd0e6dab9ad1598b813",
+      "before_sha256": "e11bf0bc65d002c6746730e531c4002bee032a0cb0a457a8a19256d0892418bd"
+    },
+    "pages/antifungal/papulacandin-d.html": {
+      "after_sha256": "eb7ad2a74b084949ab4b0fe1e8902acdda4b599fc6ac77737a1294870cf6fd9a",
+      "before_sha256": "85acf7bccc1f19ed06a0df51b7f0bd783976517c76965d754edf474ed67e7e8e"
+    },
+    "pages/index.html": {
+      "after_sha256": "08e630394dbba37e0c322eb1fe1f1c80aabbcd3c4a704ed17cb846919cdf5a6a",
+      "before_sha256": "e20176a4e862bcfb4a5b97707f58d639d6305461b2e586ebb48082645bab5c30"
+    },
+    "pages/map.html": {
+      "after_sha256": "dbfb0471723eb237a0a1ebce921fd2a2a5625890ec922ba6dfadafeb72964dcd",
+      "before_sha256": "3e189c6d773c1094ebdac7b89a0e0996536623d4f030cc3437ccbcb959634fc3"
+    }
+  },
+  "chemical_map_unchanged": true,
+  "control_max_abs_delta": 3.0517578125e-05,
+  "curation_inputs_unchanged": true,
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-papulacandins/corpus.json",
+    "sha256": "07afc1e49a810be5cadbdd66b87488bac27e51682117e135a897c0da6bafe3b2"
+  },
+  "date": "2026-10-09",
+  "embedding_runtime": "Same isolated Python 3.12 runtime and fixed Annoy build as prior checkpoint",
+  "embedding_scripts_unchanged": true,
+  "ignored_files_included": true,
+  "live_browser_verified": false,
+  "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+  "network_used_for_embedding": false,
+  "previous_publication": {
+    "path": "research/2026-10-09-gm193663-publication.json",
+    "sha256": "2de5af3757a4eb186de73ae91beb759f69647436c7657f944d0289f43485646a"
+  },
+  "protected_existing_files": 6479,
+  "protected_files_unchanged": 6470,
+  "record_links_verified": 2939,
+  "rendered_map_payload_matches_artifact": true,
+  "scope": "Publication verification, not allele validation or completed corpus research",
+  "semantic_map": {
+    "fingerprint": "0c15de9fbfd527d9",
+    "method": "pacmap",
+    "neighbors": 15,
+    "points": 2939,
+    "seed": 42
+  },
+  "status": "VERIFIED_OFFLINE_PUBLICATION_REFRESH",
+  "unchanged_control_documents_encoded": 16,
+  "unchanged_vector_rows_reused": 2937
+}

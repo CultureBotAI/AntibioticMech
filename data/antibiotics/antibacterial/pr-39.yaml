@@ -89,10 +89,20 @@ resistance_mechanisms:
   note: Salmonella enterica serovar Typhimurium mutants with SbmA alterations were
     about fourfold less susceptible and showed slower killing without an obvious measured
     fitness cost. The study called SbmA a putative transport protein but did not directly
-    measure uptake, so the specific resistance route remains unresolved.
+    measure uptake, so the specific resistance route remains unresolved. Aggregate
+    of LT2-derived mutants, not one experimental allele. The LT2 reference-protein
+    crosswalk is retained separately; no reference strain TaxID, protein accession
+    or genome is assigned to the mutants. The source gene symbol sbmA is retained
+    without variant-coordinate normalization.
   evidence:
   - reference: PMID:18519732
     notes: Primary PR-39 resistance selection, genetic analysis, and fitness study.
+  - reference: https://rest.uniprot.org/taxonomy/28901
+    notes: 'Taxonomic identity only: active species, UniProt release 2026_03; retrieved
+      2026-10-08 UTC.'
+  taxon_id: NCBITaxon:28901
+  taxon_label: Salmonella enterica
+  gene_id: sbmA
 xrefs:
 - cas:139637-11-9
 source_concepts:
@@ -132,4 +142,11 @@ curation_history:
     and class; added membrane disruption with the non-lysis boundary and SbmA as an
     evidence-backed susceptibility/resistance determinant while preserving the unresolved
     uptake-mechanism gap.
+  llm_assisted: true
+- timestamp: '2026-10-08T05:47:31Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_CONTEXT
+  changes: Grounded the existing aggregate claim to a verified species and clarified
+    experimental versus reference context. No exact mutant protein, strain TaxID,
+    genome, variant normalization or quantitative endpoint added.
   llm_assisted: true

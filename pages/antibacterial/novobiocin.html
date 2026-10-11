@@ -167,9 +167,8 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">14 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">15 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">7</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
@@ -325,6 +324,26 @@ type — expand a group to see its determinants.</p>
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003840">ARO:3003840</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000111 (novobiocin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>UNKNOWN <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>ParYR-associated reduced susceptibility to novobiocin<br><span class="meta">The comparison concerns laboratory derivatives of the TK24 background, not native-donor susceptibility or species-wide resistance. NCBITaxon:457428 denotes the TK24 background, not the experimental derivative. The reported donor is Streptomyces rishiriensis DSM 40489. UniProtKB:Q83WB8 is reference-only (entry version 120, sequence version 2); the archive succession does not establish the exact experimental allele. The 2003 study leaves ParY enzymatic function unresolved. No induced point mutant, clinical category, numerical AST, derivative TaxID or experimental genome is assigned. Compound scope follows the source&#39;s named structure in Figure 1A, not independent re-identification of the tested preparation.</span></td>
+      <td>—</td>
+      <td><em>Streptomyces lividans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1916"><code class="curie">NCBITaxon:1916</code></a></td>
+      <td class="meta">parYR</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12604514">PMID:12604514</a></span> <span class="meta">(Relevant publisher-indexed Results text was inspected before the later article request returned 403; native Figure 1A was visually inspected separately. Native Table 2 and complete paper review remain open.)</span></li>
+</ul>
+<span class="meta">Qualitative source-reported laboratory-host growth comparison</span></td>
     </tr>
   </table>
 
@@ -486,6 +505,11 @@ or death.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added one qualitative primary-backed ParYR-associated host susceptibility finding; preserved donor/host/reference distinctions and all existing source slices. No exact allele, numerical AST or genome assigned. Whole-record review remains open.</p>
   </li>
 </ol>
 

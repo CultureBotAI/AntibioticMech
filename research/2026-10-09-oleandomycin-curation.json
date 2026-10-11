@@ -1,0 +1,621 @@
+{
+  "before_record_sha256": "6c823de3739d928112615c8a4b2557d0be876a6d262184fad2c85a7f192cfb15",
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-oleandomycin/canary.yaml",
+    "sha256": "54f3cef2361e85c145287aef108d9af84cfc1334353b8ca3c51a1c8bef6c5ae0"
+  },
+  "claims": [
+    {
+      "evidence": [
+        {
+          "notes": "Results, expression/activity sections and Figure 4A/6 legends: qualitative glycosylation evidence with a negative expression-host control. Results on in vitro protein synthesis support reduced activity of the glycosylated product. Publisher-indexed text inspected; figures not visually inspected.",
+          "reference": "PMID:9680207"
+        },
+        {
+          "notes": "Table 1, wild-type row; biochemical activity with oleandomycin, not an MIC. Author-hosted paper, Figure 2 and cited table visually inspected. Correction DOI:10.1073/pnas.0704090104 changes author-contribution credit. Supplementary material was not inspected; no claim depends on it.",
+          "reference": "PMID:17376874"
+        },
+        {
+          "notes": "Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 77, sequence version 1. Separate deposits are not collapsed into one experimental allele.",
+          "reference": "UniProtKB:O68841"
+        },
+        {
+          "notes": "Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 79, sequence version 2. Separate deposits are not collapsed into one experimental allele.",
+          "reference": "UniProtKB:Q3HTL7"
+        }
+      ],
+      "gene_families": [
+        "oleI"
+      ],
+      "label": "oleI biochemical glycosylation of oleandomycin",
+      "mechanism_type": "ANTIBIOTIC_INACTIVATION",
+      "note": "Biochemical inactivation route, not a measured whole-cell resistance or clinical susceptibility call. The donor species Streptomyces antibioticus (reference NCBITaxon:1890, species rank) is distinct from the heterologous expression host Streptomyces lividans. Donor and reference taxonomy do not identify an organism tested for resistance here. No experimental allele, protein accession, strain TaxID or genome is assigned. Reference-only protein entries: UniProtKB:O68841, UniProtKB:Q3HTL7. OleR-mediated reactivation is a different direction, not another inactivation determinant. No class-wide substrate claim is inferred."
+    },
+    {
+      "evidence": [
+        {
+          "notes": "Results, expression/activity sections and Figure 4A/6 legends: qualitative glycosylation evidence with a negative expression-host control. Results on in vitro protein synthesis support reduced activity of the glycosylated product. Publisher-indexed text inspected; figures not visually inspected.",
+          "reference": "PMID:9680207"
+        },
+        {
+          "notes": "Table 3, wild-type oleandomycin row; biochemical activity with oleandomycin, not an MIC. Author-hosted paper, Figure 2 and cited table visually inspected. Correction DOI:10.1073/pnas.0704090104 changes author-contribution credit. Supplementary material was not inspected; no claim depends on it.",
+          "reference": "PMID:17376874"
+        },
+        {
+          "notes": "Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 100, sequence version 1. Separate deposits are not collapsed into one experimental allele.",
+          "reference": "UniProtKB:Q53685"
+        },
+        {
+          "notes": "Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 69, sequence version 2. Separate deposits are not collapsed into one experimental allele.",
+          "reference": "UniProtKB:Q3HTL6"
+        }
+      ],
+      "gene_families": [
+        "oleD"
+      ],
+      "label": "oleD biochemical glycosylation of oleandomycin",
+      "mechanism_type": "ANTIBIOTIC_INACTIVATION",
+      "note": "Biochemical inactivation route, not a measured whole-cell resistance or clinical susceptibility call. The donor species Streptomyces antibioticus (reference NCBITaxon:1890, species rank) is distinct from the heterologous expression host Streptomyces lividans. Donor and reference taxonomy do not identify an organism tested for resistance here. No experimental allele, protein accession, strain TaxID or genome is assigned. Reference-only protein entries: UniProtKB:Q53685, UniProtKB:Q3HTL6. OleR-mediated reactivation is a different direction, not another inactivation determinant. No class-wide substrate claim is inferred."
+    }
+  ],
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added two qualitative primary-paper biochemical inactivation assertions for oleI and oleD, retaining separate UniProt references and donor/host context. Preserved all 30 CARD assertions. No experimental allele, protein or organism identifier, whole-cell phenotype, or quantitative AST assigned.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-09T14:24:57Z"
+  },
+  "date": "2026-10-09",
+  "experimental_alleles_validated": false,
+  "history_events_added": 1,
+  "identifier": "CHEBI:16869",
+  "label": "oleandomycin",
+  "limitations": [
+    "No NCBI request, outreach, #1040 work or source adoption occurred.",
+    "No exact experimental allele, resistant-organism TaxID, strain TaxID, assembly or BioSample assigned.",
+    "No sequences, variant specifications, engineering methods or numerical AST exported.",
+    "Reference deposits and biochemical observations are not genome-backed resistance phenotypes.",
+    "Unreviewed supplements and other substrate identities remain outside these narrow claims.",
+    "No OleB or OleC source route was reinterpreted from historical discussion.",
+    "A biochemical assertion is not a completed record review or an independent clinical study."
+  ],
+  "parent_structural_audit": {
+    "path": "research/2026-10-09-card-structure-links.json",
+    "sha256": "c4ccbd533f5cc328cd015f9b95eaa0ff6044f13b62c46f1ddfb7bce17bea0183"
+  },
+  "primary_access_receipts": [
+    {
+      "bytes": 5525,
+      "cache_path": "reports/resistance-grounding-2026-10-09-oleandomycin/bolam-correction-europe-response.bin",
+      "retrieved_at": "2026-10-09T14:16:18.393787+00:00",
+      "sha256": "ed40d61cb634dc456399212c50e35a03bb5bba52e10bbc8dc6aa3afb435a4d7c",
+      "status": 403,
+      "url": "https://europepmc.org/articles/PMC1887569"
+    },
+    {
+      "bytes": 2207,
+      "cache_path": "reports/resistance-grounding-2026-10-09-oleandomycin/bolam-correction-metadata-response.bin",
+      "retrieved_at": "2026-10-09T14:15:23.612580+00:00",
+      "sha256": "c2f993394fd1f87cf29e2dadc17beb5c42fe2f98468828a5f9f8a9658fd1c7be",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1073%2Fpnas.0704090104&format=json&resultType=core"
+    },
+    {
+      "bytes": 4229561,
+      "cache_path": "reports/resistance-grounding-2026-10-09-oleandomycin/bolam-correction-unh-response.bin",
+      "retrieved_at": "2026-10-09T14:20:56.991393+00:00",
+      "sha256": "860696df1af2992e04fa8cee9914254d0aa980759b18be4cd588b5e6e5552f08",
+      "status": 200,
+      "url": "https://ftp.forest.sr.unh.edu/Ollinger/PapersforFranklin/Bala%20et%20al.%202007%20PNAS_Albedo.pdf"
+    },
+    {
+      "bytes": 1740135,
+      "cache_path": "reports/resistance-grounding-2026-10-09-oleandomycin/bolam2007-oxford-response.bin",
+      "retrieved_at": "2026-10-09T14:21:37.695711+00:00",
+      "sha256": "cefcb823fd715744cb0e4c60de8ec7e9d772aa56d527faa311b353fdacc87cec",
+      "status": 200,
+      "url": "https://users.ox.ac.uk/~dplb0149/publication/pub83.pdf"
+    },
+    {
+      "bytes": 5644,
+      "cache_path": "reports/resistance-grounding-2026-10-09-oleandomycin/quiros1998-response.bin",
+      "retrieved_at": "2026-10-09T14:15:10.090983+00:00",
+      "sha256": "7abc200ad88c8b38a03d70ef7464b30d474f39bc9aa90644cb23a3291804adbd",
+      "status": 403,
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-2958.1998.00880.x"
+    }
+  ],
+  "primary_contexts": [
+    {
+      "access_mode": "PUBLISHER_INDEXED_TEXT",
+      "date_note": "Publisher online migration date is not the study year.",
+      "deposit_reference": "UniProtKB:O68841",
+      "doi": "10.1046/j.1365-2958.1998.00880.x",
+      "donor": "Streptomyces antibioticus ATCC 11891",
+      "figures_visually_inspected": false,
+      "host_context": "Streptomyces lividans, distinct from the native donor",
+      "interpretation": "Biochemical inactivation evidence. Native self-protection model is not a same-isolate clinical susceptibility measurement.",
+      "locations": [
+        "Results: expression and activity",
+        "Figure 4A/4B and 6 legends",
+        "Results: in vitro protein synthesis",
+        "Discussion",
+        "donor/host context"
+      ],
+      "negative_context": "Negative expression-host comparison; OleR reactivates the drug; oleN2 has biosynthetic annotation context, not a demonstrated resistance effect.",
+      "paper_reported_deposit": "AF055579",
+      "primary_url": "https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-2958.1998.00880.x",
+      "reference": "PMID:9680207",
+      "results_text_inspected": true,
+      "supplements_inspected": false,
+      "year": 1998
+    },
+    {
+      "access_mode": "AUTHOR_UNIVERSITY_PDF",
+      "correction": {
+        "content_inspected": true,
+        "disposition": "AUTHOR_CONTRIBUTION_CREDIT; no biochemical result correction in this notice",
+        "doi": "10.1073/pnas.0704090104",
+        "journal_page": "9911",
+        "pdf_page": 7,
+        "section": "BIOCHEMISTRY",
+        "url": "https://ftp.forest.sr.unh.edu/Ollinger/PapersforFranklin/Bala%20et%20al.%202007%20PNAS_Albedo.pdf"
+      },
+      "doi": "10.1073/pnas.0607897104",
+      "figures_visually_inspected": [
+        "Figure 1",
+        "Figure 2",
+        "Table 1",
+        "Table 3"
+      ],
+      "interpretation": "Purified-enzyme activity supports a biochemical route; no whole-cell AST inferred.",
+      "pdf_pages_visually_inspected": [
+        2,
+        3,
+        5
+      ],
+      "primary_url": "https://users.ox.ac.uk/~dplb0149/publication/pub83.pdf",
+      "reference": "PMID:17376874",
+      "relevant_rows": "Wild-type OleI and wild-type OleD with oleandomycin only",
+      "results_text_inspected": true,
+      "supplements_inspected": false,
+      "year": 2007
+    }
+  ],
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-oleandomycin/protected-before.json",
+    "sha256": "dbd7441de8c41d54262255b7676664f7679e8be75db21427e8ec936ff78434ca"
+  },
+  "record": {
+    "path": "data/antibiotics/antibacterial/oleandomycin.yaml",
+    "sha256": "54f3cef2361e85c145287aef108d9af84cfc1334353b8ca3c51a1c8bef6c5ae0"
+  },
+  "reference_decisions": {
+    "oleD": {
+      "collapse_deposits": false,
+      "earlier_reference": "UniProtKB:Q53685",
+      "later_reference": "UniProtKB:Q3HTL6",
+      "same_experimental_allele_established": false
+    },
+    "oleI": {
+      "collapse_deposits": false,
+      "later_reference": "UniProtKB:Q3HTL7",
+      "original_reference": "UniProtKB:O68841",
+      "same_experimental_allele_established": false
+    },
+    "oleN2": {
+      "positive_resistance_assertion": false,
+      "reason": "Biosynthetic annotation is not demonstrated resistance.",
+      "reference": "UniProtKB:O68842"
+    },
+    "oleR": {
+      "positive_resistance_assertion": false,
+      "reason": "Reactivation direction is not antibiotic inactivation.",
+      "reference": "UniProtKB:O68843"
+    }
+  },
+  "reference_proteins": {
+    "O68841": {
+      "accession": "UniProtKB:O68841",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "AF055579",
+          "protein_id": "AAC12648.1"
+        }
+      ],
+      "citations": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9680207"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1998.00880.x"
+            }
+          ],
+          "reference_strain_labels": [
+            "ATCC 11891"
+          ]
+        },
+        {
+          "identifiers": [],
+          "reference_strain_labels": [
+            "ATCC 11891"
+          ]
+        }
+      ],
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 77,
+      "gene_symbols": [
+        "oleI"
+      ],
+      "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+      "sequence_version": 1,
+      "taxon_id": "NCBITaxon:1890",
+      "taxon_label": "Streptomyces antibioticus"
+    },
+    "O68842": {
+      "accession": "UniProtKB:O68842",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "AF055579",
+          "protein_id": "AAD55458.1"
+        }
+      ],
+      "citations": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9680207"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1998.00880.x"
+            }
+          ],
+          "reference_strain_labels": [
+            "ATCC 11891"
+          ]
+        },
+        {
+          "identifiers": [],
+          "reference_strain_labels": [
+            "ATCC 11891"
+          ]
+        }
+      ],
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 81,
+      "gene_symbols": [
+        "oleN2"
+      ],
+      "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+      "sequence_version": 2,
+      "taxon_id": "NCBITaxon:1890",
+      "taxon_label": "Streptomyces antibioticus"
+    },
+    "O68843": {
+      "accession": "UniProtKB:O68843",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "AF055579",
+          "protein_id": "AAC12650.1"
+        }
+      ],
+      "citations": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9680207"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.1998.00880.x"
+            }
+          ],
+          "reference_strain_labels": [
+            "ATCC 11891"
+          ]
+        },
+        {
+          "identifiers": [],
+          "reference_strain_labels": [
+            "ATCC 11891"
+          ]
+        }
+      ],
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 86,
+      "gene_symbols": [
+        "oleR"
+      ],
+      "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+      "sequence_version": 1,
+      "taxon_id": "NCBITaxon:1890",
+      "taxon_label": "Streptomyces antibioticus"
+    },
+    "Q3HTL6": {
+      "accession": "UniProtKB:Q3HTL6",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "DQ195536",
+          "protein_id": "ABA42119.2"
+        }
+      ],
+      "citations": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15984838"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/ja051482n"
+            }
+          ],
+          "reference_strain_labels": [
+            "DSM 40868"
+          ]
+        },
+        {
+          "identifiers": [],
+          "reference_strain_labels": [
+            "DSM 40868"
+          ]
+        },
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "37606280"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1111/1751-7915.14332"
+            }
+          ],
+          "reference_strain_labels": []
+        }
+      ],
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 69,
+      "gene_symbols": [
+        "oleD"
+      ],
+      "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+      "sequence_version": 2,
+      "taxon_id": "NCBITaxon:1890",
+      "taxon_label": "Streptomyces antibioticus"
+    },
+    "Q3HTL7": {
+      "accession": "UniProtKB:Q3HTL7",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "DQ195535",
+          "protein_id": "ABA42118.2"
+        }
+      ],
+      "citations": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15984838"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/ja051482n"
+            }
+          ],
+          "reference_strain_labels": [
+            "DSM 40868"
+          ]
+        },
+        {
+          "identifiers": [],
+          "reference_strain_labels": [
+            "DSM 40868"
+          ]
+        },
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "17376874"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0607897104"
+            }
+          ],
+          "reference_strain_labels": []
+        }
+      ],
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 79,
+      "gene_symbols": [
+        "oleI"
+      ],
+      "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+      "sequence_version": 2,
+      "taxon_id": "NCBITaxon:1890",
+      "taxon_label": "Streptomyces antibioticus"
+    },
+    "Q53685": {
+      "accession": "UniProtKB:Q53685",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "Z22577",
+          "protein_id": "CAA80301.1"
+        }
+      ],
+      "citations": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8244027"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/0378-1119(93)90189-a"
+            }
+          ],
+          "reference_strain_labels": [
+            "ATCC 11891 / DSM 40868 / BCRC 11580 / NCIMB 11506 / PSA 205"
+          ]
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 100,
+      "gene_symbols": [
+        "oleD"
+      ],
+      "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+      "sequence_version": 1,
+      "taxon_id": "NCBITaxon:1890",
+      "taxon_label": "Streptomyces antibioticus"
+    }
+  },
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "new_biochemical_assertions": 2,
+    "selected_records": 1,
+    "whole_records_completed_by_this_review": 0
+  },
+  "source_assertions_preserved": 30,
+  "source_assertions_sha256": "37b37b01ec9ce30a06e4ecdf9bd0a1322fc88de19a3521a5b88d3be0ebb95599",
+  "source_ownership": "CURATOR; preserved by merge_with_existing; CARD slice unchanged",
+  "standard_inchi_key": "RZPAKFUAFGMUPI-QESOVKLGSA-N",
+  "status": "CURATED_QUALITATIVE_BIOCHEMICAL_ROUTES",
+  "taxonomy": {
+    "1890": {
+      "active": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "commonName": "actinobacteria",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "synonyms": [
+            "Actinobacteria"
+          ],
+          "taxonId": 201174
+        },
+        {
+          "commonName": "high G+C Gram-positive bacteria",
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Kitasatosporales",
+          "taxonId": 85011
+        },
+        {
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Streptomycetaceae",
+          "taxonId": 2062
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Streptomyces",
+          "taxonId": 1883
+        }
+      ],
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces antibioticus",
+      "taxonId": 1890
+    }
+  },
+  "taxonomy_scope": "REFERENCE_SPECIES_NOT_EXPERIMENTAL_RESISTANT_ORGANISM",
+  "uniprot_release": "2026_03",
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-oleandomycin/request-409a2a463285385b713d20eb328078f944df50ed87781d16a7a0f289ef1ed871.json",
+        "sha256": "08d39a915bb5a53d9cf45cb62976dcaa36c00bd5ce448371cd319de4410aacda"
+      },
+      "complete_for_query": true,
+      "query": "accession:Q3HTL7",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T14:21:07.890422+00:00",
+      "sha256": "8b574f2dbd29739e68c61e4f7aae488665bdd41f419e4bb2c348bb91d6706a20",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ3HTL7&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-oleandomycin/request-dd3cfeb89e6a128d1c9f0a7b515e36bc6a357a756dc1a3d2b0cfb69729e5e7b3.json",
+        "sha256": "84c1a6078180b0211a7ce73d4ccf1acf5950b9b57df8e603f8aa8f6178da439c"
+      },
+      "complete_for_query": true,
+      "query": "gene_exact:oleD AND taxonomy_id:1890",
+      "release": "2026_03",
+      "result_count": 2,
+      "retrieved_at": "2026-10-09T14:15:45.096613+00:00",
+      "sha256": "b3212742ae23b3854522c3bd54a9097db8148fb1ce3b10aa3c2501a5cbcedc99",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AoleD+AND+taxonomy_id%3A1890&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-oleandomycin/request-e5506afecac1eb715fdd569703d551f91df5288ddac1170964d12d71f57253b1.json",
+        "sha256": "ed9ccdd38cca262a49a92a06fc8ed82774f5e8a856b847947ca72773b08bac2b"
+      },
+      "complete_for_query": true,
+      "query": "lit_pubmed:9680207",
+      "release": "2026_03",
+      "result_count": 3,
+      "retrieved_at": "2026-10-09T14:15:28.700741+00:00",
+      "sha256": "a2f9cd02568f69588b3a5491b95c0af47a915f7acaaac7bdbd1208255a4afbc0",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A9680207&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    }
+  ],
+  "whole_record_review_complete": false
+}

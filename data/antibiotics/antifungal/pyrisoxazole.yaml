@@ -71,15 +71,40 @@ evidence:
   notes: Primary compound-specific target-associated resistance study.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
-  label: Botrytis cinerea CYP51 G476S and M231T substitutions
+  label: Botrytis cinerea CYP51 substitutions associated with pyrisoxazole resistance
+    in RU-mutants
   gene_families:
   - CYP51 sterol 14-alpha-demethylase
-  note: The substitutions occurred in resistant mutants; docking suggested loss of
-    electrostatic interactions, while direct compound binding was not experimentally
-    measured.
+  note: 'Same-isolate association, not independent causal validation. Source numbering
+    uses Zymoseptoria tritici CYP51 (AY253234), not a Botrytis UniProt sequence. No
+    single-isolate protein assigned: Results names RU11-1, whereas Tables 1-3 name
+    RU11-3.'
   evidence:
   - reference: PMID:32714305
-    notes: Primary mutant-selection and sequencing study.
+    notes: Results, Tables 1-3, and Figure 5.
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  alteration: G476S and K104E
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: Botrytis cinerea RS10-1 CYP51 substitution associated with pyrisoxazole resistance
+  gene_families:
+  - CYP51 sterol 14-alpha-demethylase
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
+  strain: RS10-1
+  alteration: M231T
+  protein_accession: UniProtKB:A0A7G4P320
+  note: Same-isolate association, not independent causal validation. M231T uses the
+    paper's Zymoseptoria tritici CYP51 reference (AY253234), not UniProt sequence
+    coordinates. UniProt cross-references the study's MT430876/QMT30302.1 and RS10-1;
+    sequence version 1, unreviewed TrEMBL, release 2026_03, retrieved 2026-10-08 UTC.
+    No strain TaxID or genome accession established.
+  evidence:
+  - reference: PMID:32714305
+    notes: Table 1 and Figure 5; molecular-analysis Results identify MT430876.
+  - reference: UniProtKB:A0A7G4P320
+    notes: Identifier crosswalk only; EMBL cross-reference and citation-specific strain
+      annotation.
 - mechanism_type: OTHER
   label: induced CYP51 expression in pyrisoxazole-resistant isolates
   gene_families:
@@ -88,7 +113,9 @@ resistance_mechanisms:
     isolates.
   evidence:
   - reference: PMID:32714305
-    notes: Primary target-gene expression comparison.
+    notes: Figure 6; expression association, not proof of independent causation.
+  taxon_id: NCBITaxon:40559
+  taxon_label: Botrytis cinerea
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -112,4 +139,11 @@ curation_history:
   changes: Verified the exact ChEBI mixture identity, structure representation, and
     antifungal class; curator-confirmed the demethylase-pathway mode and added CYP51
     resistance-determinant, mutation, and expression evidence.
+  llm_assisted: true
+- timestamp: '2026-10-08T02:38:04Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_CONTEXT
+  changes: Separated curator-owned study groups; grounded the supported protein/taxon
+    crosswalk and preserved unresolved numbering and isolate-name limitations. No
+    activity measurements or source-owned assertions changed.
   llm_assisted: true

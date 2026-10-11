@@ -1,0 +1,98 @@
+{
+  "adversarial_self_review": [
+    "A matching current ChEBI key is not independent resolution of a chemical-graph conflict.",
+    "The B17 SMILES parse failure is disclosed; the InChI fallback is explicit, not a silent repair.",
+    "Reviewed and unreviewed UniProt metadata retain their entry types and donor context; none is promoted to an experimental allele.",
+    "EpiFEG donor and S. carnosus experimental host remain distinct; component references do not prove individual sufficiency.",
+    "The GdmH abstract's gallidermin endpoint does not establish epidermin resistance.",
+    "NisI proposed Lipid II shielding is not reported as a verified direct-binding route.",
+    "Commercial nisin, other congeners, intact microcin C, processed material and analogues remain separate.",
+    "False-positive query hits and the earlier nisin cap do not overwrite complete expanded-query provenance.",
+    "No independent external review is claimed; every whole-record primary review remains open."
+  ],
+  "all_current_record_hashes_verified": 2939,
+  "artifacts": [
+    {
+      "path": "research/2026-10-09-bacteriocin-primary-context.json",
+      "sha256": "7dc20958426f7b008e16accf565e12eaba554f2c8451cc3cc04de9eebb66ff2f"
+    },
+    {
+      "path": "tests/test_bacteriocin_primary_context.py",
+      "sha256": "cd54fd401cf15548ffd136742991a4b2a2c92346f27427a7c7edf8d201056248"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "10322da3992969f96d4467c05577f7529b00eb918f0d0a0f34f901f0d653ea8f"
+    }
+  ],
+  "changed_protected_files": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "chemical_identity_holds": 2,
+  "corpus_research_complete": false,
+  "current_progress_reproduction": {
+    "artifact": {
+      "path": "research/2026-10-09-platen-resistance-progress.json",
+      "sha256": "bdcc316af2cba7273a2c08a8c9f39fbe325fd287aff77c00612b59633004f472"
+    },
+    "command": "env PYTHONPATH=src .venv/bin/python scripts/summarize_resistance_progress.py --check",
+    "exit_code": 0,
+    "scope": "Collection-aware reproduction of existing all-record index; not primary review."
+  },
+  "date": "2026-10-09",
+  "exact_experimental_assignments_added": 0,
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-bacteriocins/final-focused-tests.xml",
+      "sha256": "3f8695b190714fa2583a351974d010fd40bec7d88d54da06ddcbc6d30e911e83"
+    },
+    "skipped": 0,
+    "tests": 14
+  },
+  "full_authoritative_qc": "NOT_RERUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_GENERATED_SITE_CHANGE",
+  "git_diff_check_exit_code": 0,
+  "github_mutations": 0,
+  "history_events_added": 0,
+  "ignored_files_included": true,
+  "last_biological_qc_receipt": {
+    "path": "research/2026-10-09-platen-verification.json",
+    "sha256": "cb9b845c6bb6b6a2de8b1c4746d9a5402fa2cba137e935c8fd93d732fa9b7d55"
+  },
+  "live_browser_verification": false,
+  "ncbi_endpoint_requests": 0,
+  "new_files_before_verification": [
+    "research/2026-10-09-bacteriocin-primary-context.json",
+    "tests/test_bacteriocin_primary_context.py"
+  ],
+  "protected_files": 6755,
+  "protected_files_unchanged": 6754,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-bacteriocins/protected-before.json",
+    "sha256": "70cf48569f7a1212acce88627b2523367a4f600ec0c9f6db89558cb259cc74c8"
+  },
+  "records_changed": 0,
+  "reference_candidates": 10,
+  "related_regression_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-bacteriocins/regression-tests.xml",
+      "sha256": "2a6c2d96bfe801c2bb266bb035694711b20ef0142576dc4517aef3c323835b07"
+    },
+    "skipped": 0,
+    "tests": 103
+  },
+  "root_documents_unchanged": [
+    "NEXT_TASKS.md",
+    "README.md"
+  ],
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "record_memberships": 5,
+    "whole_records_completed_by_this_review": 0
+  },
+  "status": "RESEARCH_ONLY_CHECKPOINT_VERIFIED"
+}

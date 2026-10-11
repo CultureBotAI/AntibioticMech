@@ -156,6 +156,101 @@ resistance_mechanisms:
   - reference: ARO:3007019
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000461 (florfenicol);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with florfenicol resistance in avian isolate 5334
+  gene_families:
+  - flo
+  strain: '5334'
+  phenotype_label: source-reported florfenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with florfenicol resistance in avian isolate 5790
+  gene_families:
+  - flo
+  strain: '5790'
+  phenotype_label: source-reported florfenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with florfenicol resistance in avian isolate 5840
+  gene_families:
+  - flo
+  strain: '5840'
+  phenotype_label: source-reported florfenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with florfenicol resistance in avian isolate 6468
+  gene_families:
+  - flo
+  - cmlA
+  strain: '6468'
+  phenotype_label: source-reported florfenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo/cmlA-positive bovine subgroup associated with florfenicol resistance
+  gene_families:
+  - flo
+  - cmlA
+  phenotype_label: source-reported florfenicol resistance in the flo/cmlA-positive
+    subgroup
+  assay: NCCLS broth microdilution
+  note: Subgroup co-occurrence, not sole-gene causation or an assertion about every
+    study isolate. Discordant source subgroups are not merged. Florfenicol categories
+    borrow bovine-respiratory criteria; no E. coli clinical breakpoint is inferred.
+    UniProtKB:Q9F0D9/AF252855.1 is study-linked reference context, not a subgroup-wide
+    allele or genome assignment. EC56 belongs to a later submission and is not substituted
+    for this subgroup. No exact experimental protein, allele, strain TaxID or genome
+    is assigned. Named compound identity is retained; the tested preparation was not
+    independently re-identified.
+  evidence:
+  - reference: PMID:11101601
+    notes: Table 2 flo/cmlA-positive row and adjacent cohort results; assay and accession
+      statements. Qualitative subgroup association only.
 molecular_targets:
 - target_id: ARO:3000754
   target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
@@ -193,3 +288,12 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-10T22:31:13Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added four named native flo co-occurrences and one separate flo/cmlA-positive
+    subgroup association from primary results. Kept mechanism UNKNOWN and UniProt/archive
+    context reference-only; did not assign exact alleles, genomes, a subgroup strain
+    or new clinical breakpoints. Preserved all prior claims, observations, history
+    and other fields; whole-record review remains open.
+  llm_assisted: true

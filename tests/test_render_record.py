@@ -142,3 +142,39 @@ def test_record_page_renders_activity_sample_accessions():
         assert accession in html
     assert "1 measurement(s); 2 source export rows" in html
     assert "Source created 2026-02-01" in html
+
+
+def test_resistance_summary_counts_claims_without_asserting_distinct_known_routes():
+    env = Environment(
+        loader=FileSystemLoader(TEMPLATES_DIR),
+        autoescape=select_autoescape(["html", "xml"]),
+    )
+    claims = [{
+        "mechanism_type": "UNKNOWN",
+        "label": "Author-reported gene association",
+        "note": "Reference-only identity; experimental allele unresolved.",
+        "evidence": [{"reference": "DOI:10.1000/widget"}],
+    }, {
+        "mechanism_type": "UNKNOWN",
+        "label": "Second association in the same pathway",
+        "evidence": [{"reference": "DOI:10.1000/widget"}],
+    }]
+    html = env.get_template("record.html").render(
+        r={
+            "identifier": "antibioticmech:curator-widget",
+            "label": "widgetmycin",
+            "class_slug": "antifungal",
+            "antimicrobial_class": "ANTIFUNGAL",
+            "grounding_status": "MINTED",
+            "curation_status": "PROPOSED",
+            "source_concepts": [],
+            "resistance_mechanisms": claims,
+            "resistance_groups": [{"mechanism_type": "UNKNOWN", "rows": claims}],
+        },
+        root="../",
+        stats={},
+    )
+    assert "2 source-backed resistance determinants or associations" in html
+    assert "known routes" not in html
+    assert "Reference-only identity; experimental allele unresolved." in html
+    assert all(claim["label"] in html for claim in claims)

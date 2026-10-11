@@ -1,0 +1,81 @@
+{
+  "added_claims": [
+    {
+      "assay": "Source-reported broth microdilution phenotype",
+      "evidence": [
+        {
+          "notes": "Native Epi0082 row in Table 1 and selected Results/accession statement inspected as publisher-indexed text. Both gene families co-occur; the separate expression-host experiment is not assigned to the native isolate.",
+          "reference": "PMID:33118027"
+        }
+      ],
+      "gene_families": [
+        "mef(F)",
+        "msr(G)"
+      ],
+      "label": "mef(F)/msr(G)-associated reduced azithromycin susceptibility in native isolate Epi0082",
+      "mechanism_type": "UNKNOWN",
+      "note": "Same-isolate gene-family/phenotype co-occurrence, not individual-gene or allele-specific causation. The source name Macrococcus canis matches otherNames in the cached UniProt taxonomy entry. The separate type-strain comparator KM45013 and expression host are not this isolate. No exact protein, allele, strain TaxID or numerical AST is assigned; the UniProt mef(F) reference belongs to another species and strain. Source-reported genome components CP046363.1, CP046364.1, CP046365.1, CP046366.1 and CP046367.1 share BioSample SAMN13342681 and BioProject PRJNA590936 in ENA metadata; these are not assembly accessions or new gene calls. Compound scope follows named azithromycin; the tested preparation was not independently re-identified.",
+      "phenotype_label": "source-reported reduced azithromycin susceptibility",
+      "strain": "Epi0082",
+      "taxon_id": "NCBITaxon:1855823",
+      "taxon_label": "Macrococcoides canis"
+    }
+  ],
+  "all_other_fields_preserved": true,
+  "assembly_accessions_assigned": 0,
+  "batch_started_on": "2026-10-09",
+  "before_record_sha256": "4b52c1720423a2814b1b59cf2eb0364c8326e8137cde5cf772189957954c28a1",
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-literature-hosts/azithromycin-canary.yaml",
+    "sha256": "3b6f8f139da665be8e33d6db6500c3fd019d12510b99fe586b28567bc2450d51"
+  },
+  "claims_added": 1,
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added one native Epi0082 mef(F)/msr(G) and azithromycin co-occurrence claim with verified species-name and source-reported genome-component context. Kept the different-species UniProt reference and expression-host experiment separate; preserved every source-owned claim and membership. Whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-10T06:38:30Z"
+  },
+  "curation_status": "SEEDED",
+  "embedding_documents_changed": 0,
+  "embedding_fingerprint": "18ff581531b8bd9d",
+  "embedding_preservation": {
+    "path": "reports/resistance-grounding-2026-10-09-literature-hosts/embedding-preservation.json",
+    "sha256": "746ebedafd8f18aefcc0527c229d5c14d8a8e99a6b320c38ba060a520ba68b0a"
+  },
+  "exact_alleles_assigned": 0,
+  "existing_claims_preserved": 54,
+  "experimental_proteins_assigned": 0,
+  "fresh_seed": {
+    "path": "reports/resistance-grounding-2026-10-09-literature-hosts/azithromycin-seed.json",
+    "sha256": "3a141a2ae15053be3b10ca7f8f591743efabb1e83db782ed8f0d79c6cb2854d1"
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "identifier": "CHEBI:2955",
+  "ncbi_endpoint_requests": 0,
+  "numerical_ast_added": 0,
+  "original": {
+    "path": "reports/resistance-grounding-2026-10-09-literature-hosts/azithromycin-original.yaml",
+    "sha256": "4b52c1720423a2814b1b59cf2eb0364c8326e8137cde5cf772189957954c28a1"
+  },
+  "preserved_fields_sha256": "df682210e4b0efcffa7acd63a8508b1306594a185c8e0057002b7302ac3d4478",
+  "preserved_history_sha256": "243e30e1c14ef25b1ee78facbc6da7188577bd5554b1e00e1a3b56fbbde3379f",
+  "preserved_resistance_claims_sha256": "b0831c9078524c4966b6a7e6eb22039222339ba217f50dc20abd0be369747207",
+  "primary_context": {
+    "path": "research/2026-10-09-literature-hosts-context.json",
+    "sha256": "0d700d483ad4dc6e6bd115e278ffeacc27b51c6c1002a5920205b2a10094cd7f"
+  },
+  "record": {
+    "path": "data/antibiotics/antibacterial/azithromycin.yaml",
+    "sha256": "3b6f8f139da665be8e33d6db6500c3fd019d12510b99fe586b28567bc2450d51"
+  },
+  "records_changed": 1,
+  "source_adoptions": 0,
+  "source_owned_slices_preserved": true,
+  "standard_inchi_key": "MQTOSJVFKKJCRP-BICOPXKESA-N",
+  "status": "CURATED_QUALITATIVE_NATIVE_ASSOCIATION",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_review_complete": false
+}

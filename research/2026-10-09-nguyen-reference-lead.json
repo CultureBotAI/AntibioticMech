@@ -1,0 +1,293 @@
+{
+  "attribution": "Thuat Van Nguyen, University of Hamburg dissertation, 2013; PHI-base adopted export; UniProt Consortium release 2026_03, CC BY 4.0.",
+  "corpus_phi_scope": {
+    "identifier_scoped": 182,
+    "pending_associations": 35,
+    "pending_papers": 15,
+    "retained": 217
+  },
+  "journal_citation": {
+    "access_limit": "One direct PDF request returned 403; this is not evidence that the article or subject mapping does not exist.",
+    "doi": "10.1094/MPMI-02-12-0047-R",
+    "full_text_inspected": false,
+    "metadata_request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fg-os2-2012-citation.json",
+        "sha256": "8804896773ec545104e8ba1245530ddf61e813141d7aaccade5a696d76e699ba"
+      },
+      "release": null,
+      "retrieved_at": "2026-10-08T11:18:44.435705+00:00",
+      "sha256": "d64aa5f9f4b7e5b0718138cf242c853acda3d806b74bc79b5393ec311143674c",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fmpmi-02-12-0047-r&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+    },
+    "publisher_access": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/nguyen-2012-publisher-access.json",
+        "sha256": "52aaa5bdd84713c3658b62394e585f05949b9825d6fbfd146f9becfb3e869c44"
+      },
+      "release": null,
+      "retrieved_at": "2026-10-09T01:22:30.461475+00:00",
+      "sha256": "45365b44ebc35f1b339d40a349600e410b2a32d484e5de72b59aefd490d9ae61",
+      "status": 403,
+      "url": "https://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI-02-12-0047-R"
+    },
+    "reference": "PMID:22591226"
+  },
+  "limitations": [
+    "The two journal associations remain pending; the thesis is not treated as its final published Results.",
+    "The explicit UniProt locus cross-reference supports reference identity, not an experimental allele or genome assignment.",
+    "The EnsemblFungi cross-reference ID and its GeneId property remain distinct; no source identifier replacement was inferred.",
+    "No new variants, sequences, constructs, protocols, resistance measurements or causal claims were exported.",
+    "No NCBI request, outreach, source adoption, paid research or GitHub mutation occurred.",
+    "Whole-corpus literature review is unfinished; full QC still has the previously reported stale semantic map."
+  ],
+  "preservation": {
+    "biological_record_changes": 0,
+    "census": {
+      "path": "reports/resistance-grounding-2026-10-07/corpus.json",
+      "sha256": "ba828f06017d67183a8335e2933656b9970ac13ce57e764f518a92faccac8610"
+    },
+    "curation_events_added": 0,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-07/nguyen-reference-protected-files.json",
+      "sha256": "607bc7be34e8c8f28b52a105ff65fb56288fbaf14d96a2fb67d1140e8ce38034"
+    },
+    "record_hashes_verified": 2939,
+    "record_path_search_includes_ignored": true,
+    "review_decisions": {
+      "path": "curation/phibase_grounding_reviews.json",
+      "sha256": "bee5200cd616ceabd55021ed5c43e9ad650ea545707f1207592c806b9878afb8"
+    },
+    "source_inventory": {
+      "path": "data/raw/phibase_amr.tsv",
+      "sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "8fc66ddb95a0defc607bb27f15daccebfdef0c817bfa9f5bbd323f7930f586bc"
+    }
+  },
+  "reference_protein": {
+    "ensembl_fungi_cross_reference": {
+      "database": "EnsemblFungi",
+      "id": "FGRAMPH1_01T26671",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "FGRAMPH1_01T26671-p1"
+        },
+        {
+          "key": "GeneId",
+          "value": "FGRAMPH1_01G26671"
+        }
+      ]
+    },
+    "gene_id_property": "FGRAMPH1_01G26671",
+    "metadata": {
+      "entryAudit": {
+        "entryVersion": 110,
+        "firstPublicDate": "2007-05-29",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2007-05-29",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "HOG1"
+          },
+          "orfNames": [
+            {
+              "value": "FGRRES_09612"
+            },
+            {
+              "value": "FGSG_09612"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Wheat head blight fungus",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Hypocreales",
+          "Nectriaceae",
+          "Fusarium"
+        ],
+        "scientificName": "Gibberella zeae (strain ATCC MYA-4620 / CBS 123657 / FGSC 9075 / NRRL 31084 / PH-1)",
+        "synonyms": [
+          "Fusarium graminearum"
+        ],
+        "taxonId": 229533
+      },
+      "primaryAccession": "P0C431",
+      "uniProtkbId": "HOG1_GIBZE"
+    },
+    "new_subject_accessions_assigned": false,
+    "scope": "PH1_REFERENCE_CONTEXT_ONLY_NOT_EXPERIMENTAL_SUBJECT_GROUNDING",
+    "source_gene_field": "FGRAMPH1_01T26671",
+    "source_gene_field_rewritten": false
+  },
+  "reviewed_on": "2026-10-09",
+  "source_associations": [
+    {
+      "identifier": "CHEBI:16240",
+      "phig_id": "PHIG:7590",
+      "record_path": "data/antibiotics/biocide/hydrogen-peroxide.yaml",
+      "record_sha256": "94de2141eb504d35266c242c01f36390ffb55b57776c15c680542d11372e213d",
+      "source_row_sha256": "eeee294d942ac7a63143980086deeaceb80622490d503cc6d9331afd39dc1020",
+      "standard_inchi_key": "MHAJPDPJQMAIIY-UHFFFAOYSA-N",
+      "status": "PENDING_JOURNAL_SUBJECT_IDENTITY_REVIEW"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "phig_id": "PHIG:7590",
+      "record_path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "record_sha256": "b5d082498c720e165d6beeb502b7c3371a8499a5948ddd183bc0193b215a843d",
+      "source_row_sha256": "db3586159399f0df98f90dced097ad2d1f7cf2d3766c99cd0246e3f3e9bae26c",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "status": "PENDING_JOURNAL_SUBJECT_IDENTITY_REVIEW"
+    }
+  ],
+  "status": "REFERENCE_LEAD_ONLY_NO_CORPUS_CURATION",
+  "taxonomy": {
+    "229533": {
+      "parent": {
+        "commonName": "Wheat head blight fungus",
+        "scientificName": "Gibberella zeae",
+        "synonyms": [
+          "Fusarium graminearum"
+        ],
+        "taxonId": 5518
+      },
+      "rank": "strain",
+      "scientificName": "Gibberella zeae (strain ATCC MYA-4620 / CBS 123657 / FGSC 9075 / NRRL 31084 / PH-1)",
+      "synonyms": [
+        "Fusarium graminearum"
+      ],
+      "taxonId": 229533
+    },
+    "5518": {
+      "parent": {
+        "scientificName": "Fusarium sambucinum species complex",
+        "taxonId": 569360
+      },
+      "rank": "species",
+      "scientificName": "Gibberella zeae",
+      "synonyms": [
+        "Fusarium graminearum"
+      ],
+      "taxonId": 5518
+    }
+  },
+  "thesis": {
+    "journal_subject_crosswalk": "NOT_ESTABLISHED",
+    "landing": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/nguyen-2013-thesis-landing.json",
+        "sha256": "4c744c881d2e8f9dd7324a5287b6832d998466fb4437a091850256a599af27f3"
+      },
+      "release": null,
+      "retrieved_at": "2026-10-09T01:22:30.382638+00:00",
+      "sha256": "ef5f81cdc355afc92e1f89bce70ea650edb9f8b5c46ae84a74917db12a6de5a7",
+      "status": 200,
+      "url": "https://ediss.sub.uni-hamburg.de/handle/ediss/4850"
+    },
+    "observed_context": "The thesis names PH1 as the wild-type background and FGSG_09612 as the locus; its bibliography cites the 2012 article.",
+    "pdf": {
+      "bytes": 8167472,
+      "headers": {
+        "Content-Type": "application/pdf",
+        "Last-Modified": "Mon, 22 Sep 2025 10:17:37 GMT"
+      },
+      "repository_md5": "1b569d5c55a9d354c17e54baf37decfe",
+      "retrieved_at": "2026-10-09T01:20:40.812681+00:00",
+      "sha256": "0734561ff7e07d6325dfa4a65e96aa6b4a8a70d83a5549391411f15b7156193a",
+      "status": 200,
+      "url": "https://ediss.sub.uni-hamburg.de/bitstream/ediss/4850/1/Dissertation.pdf"
+    },
+    "pdf_metadata_cache": {
+      "path": "reports/resistance-grounding-2026-10-07/nguyen-2013-thesis.metadata.json",
+      "sha256": "e1092d08c1703b9fac5c2ced92ba19dca1c3e3feb17aaefbd99978b30dc246bd"
+    },
+    "reference": "https://ediss.sub.uni-hamburg.de/handle/ediss/4850",
+    "reuse": "Readable institutional copy with no additional reuse rights granted; no bulk text, figures or experimental data exported.",
+    "review_scope": "Identity statements and bibliography only; no phenotype or assay validation.",
+    "text_cache": {
+      "path": "reports/resistance-grounding-2026-10-07/nguyen-thesis-review/text.txt",
+      "sha256": "f8bf243220d1222403bd115d96880c2ec25f734d668664bc19e6118fbc02f95b"
+    },
+    "urn": "urn:nbn:de:gbv:18-61100",
+    "version": "DISSERTATION_NOT_FINAL_2012_JOURNAL_ARTICLE",
+    "visually_inspected_pages": [
+      {
+        "pdf_page": 31,
+        "printed_page": 15,
+        "render": {
+          "path": "reports/resistance-grounding-2026-10-07/nguyen-thesis-review/page-31.png",
+          "sha256": "4cc80d20db746a2cf3ef52456f8363cdab17b16e1d4f6b1ce27dfe78b1142db7"
+        }
+      },
+      {
+        "pdf_page": 69,
+        "printed_page": 53,
+        "render": {
+          "path": "reports/resistance-grounding-2026-10-07/nguyen-thesis-review/page-69.png",
+          "sha256": "fa9414efdaa817e6555897477a35ceb583b34e0b12c5919e8330aba87a482f18"
+        }
+      },
+      {
+        "pdf_page": 159,
+        "printed_page": 143,
+        "render": {
+          "path": "reports/resistance-grounding-2026-10-07/nguyen-thesis-review/page-159.png",
+          "sha256": "2eafbed1b1fcb5c7635ed4368b6d4d86490b3e39addeea380f3c398e80f5b291"
+        }
+      }
+    ],
+    "year": 2013
+  },
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+        "sha256": "4f6570ffbec8320c440a8276ecfea03ab836993b75c2f92b7272d6de85a2ba59"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+      "sha256": "3c0624fde2890f6c12bacc34268d4a4f52164ef2a329cf969c095d48deb06ef1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/request-3f789375d311f00135899d5556b7203c0fa994132446e131c6e3e215a77bab7e.json",
+        "sha256": "40a7a92b13b4df4f8169304a3bdf9bf182ffd9554975d575188cb967a5c5c75e"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:36.127446+00:00",
+      "sha256": "d7ea97d17d6a045ea7da87df4a94add330bd993ade96117c71b5dca0c973cb9d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5518"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/request-6bd68ecae369102087f2743c12dbe4acfb922c193e8ddbc19f817fe68b2550f5.json",
+        "sha256": "c348b59f45381322ca362da40e09cf51d0204fe4ab9cc8e7fd3b6f8498b07673"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:43.052441+00:00",
+      "sha256": "d93023fefb154eb9e10d4518e70460198b5fb75dec06e7dd2a674d3615073def",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/229533"
+    }
+  ]
+}

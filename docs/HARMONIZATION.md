@@ -356,18 +356,14 @@ useful for curation: an outlier is usually a record whose annotation is thin or
 inconsistent with its neighbours, and a cluster spanning two classes is worth
 looking at.
 
-It separates the classes without being told them: in the raw 1024-d embedding
-**83%** of a compound's ten nearest neighbours share its class, against a **23%**
-baseline for these class sizes. That is the encoder's number, and it is the one
-this section is entitled to — the 2-D map scores higher (86%) only because
-PaCMAP tightens neighbourhoods by construction, so that figure belongs on the
-map page describing what a reader of it sees, not here describing the
-embedding.
-
-The exception is instructive. In the raw embedding `ANTIMYCOBACTERIAL` scores
-51%, with a further 28% of its neighbours in `ANTIBACTERIAL`. The encoder
-recovers, from text alone, the subclass relationship the schema declares —
-mycobacteria are bacteria.
+Class labels are among the embedded annotations. Class separation is therefore
+descriptive, not independent validation of the encoder or the biological
+classification. The projection can also change local neighborhoods. Any
+neighborhood statistic must identify its artifact fingerprint, distance metric,
+neighbor count and self-exclusion rule; a fixed percentage must not be carried
+forward as a claim about a refreshed map. Similarity between a class and its
+subclass may reflect the supplied annotation rather than a recovered biological
+relationship.
 
 Field order and length both mattered. 94 documents once exceeded the model's
 512-token window, and the tail of those was silently dropped — with synonyms

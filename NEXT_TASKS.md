@@ -18,7 +18,7 @@ prose below are the reasoning, the queue is the list.
 ## Now
 
 - **Curate the next mechanism graphs.** 16 of 2,939 records carry a
-  `causal_graph`; that number is the point of the repository. Start with the 399
+  `causal_graph`; that number is the point of the repository. Start with the 411
   records that already have target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.
   No data source will close this column: a mechanism graph is authored from
@@ -91,9 +91,10 @@ prose below are the reasoning, the queue is the list.
   disk-diffusion measurements on BioSample/BioProject-backed rows. It can
   exclude curated BioSample/BioProject contexts already represented by CRyPTIC
   or another source before writing an exact report, and the seeder can consume
-  that report as an NCBI_AST-owned source slice. Next, fill a real NCBI AST
-  drug crosswalk and project-dedup map, then commit a deduplicated exact report
-  once licensing is resolved.
+  that report as an NCBI_AST-owned source slice. **NCBI AST / #1040 is deferred.**
+  Do not contact NCBI, make new requests to NCBI endpoints, or resume reuse-terms
+  work without new explicit maintainer authorization. The source remains
+  `BLOCKED`, `REFERENCE`, `UNVERIFIED`; the dormant evaluator is not adoption.
 - **A `research/` path.** Sibling repos run model-assisted deep research per
   entity with a manifest of what was actually paid for. The `research` extra in
   `pyproject.toml` is declared and unused; wire it up when there is a question

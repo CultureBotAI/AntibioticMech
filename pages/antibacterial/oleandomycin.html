@@ -92,9 +92,8 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">30 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">32 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">23</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
@@ -336,7 +335,7 @@ type — expand a group to see its determinants.</p>
 </div>
 </details>
 <details class="details-group">
-  <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">5</span></summary>
+  <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">7</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
 <table>
     <caption>ANTIBIOTIC_INACTIVATION</caption>
@@ -382,12 +381,38 @@ type — expand a group to see its determinants.</p>
 </td>
     </tr>
     <tr>
+      <td>oleD biochemical glycosylation of oleandomycin<br><span class="meta">Biochemical inactivation route, not a measured whole-cell resistance or clinical susceptibility call. The donor species Streptomyces antibioticus (reference NCBITaxon:1890, species rank) is distinct from the heterologous expression host Streptomyces lividans. Donor and reference taxonomy do not identify an organism tested for resistance here. No experimental allele, protein accession, strain TaxID or genome is assigned. Reference-only protein entries: UniProtKB:Q53685, UniProtKB:Q3HTL6. OleR-mediated reactivation is a different direction, not another inactivation determinant. No class-wide substrate claim is inferred.</span></td>
+      <td>—</td>
+      <td><span class="meta">not organism-specific</span></td>
+      <td class="meta">oleD</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9680207">PMID:9680207</a></span> <span class="meta">(Results, expression/activity sections and Figure 4A/6 legends: qualitative glycosylation evidence with a negative expression-host control. Results on in vitro protein synthesis support reduced activity of the glycosylated product. Publisher-indexed text inspected; figures not visually inspected.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17376874">PMID:17376874</a></span> <span class="meta">(Table 3, wild-type oleandomycin row; biochemical activity with oleandomycin, not an MIC. Author-hosted paper, Figure 2 and cited table visually inspected. Correction DOI:10.1073/pnas.0704090104 changes author-contribution credit. Supplementary material was not inspected; no claim depends on it.)</span></li>
+  <li><span class="meta">UniProtKB:Q53685</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 100, sequence version 1. Separate deposits are not collapsed into one experimental allele.)</span></li>
+  <li><span class="meta">UniProtKB:Q3HTL6</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 69, sequence version 2. Separate deposits are not collapsed into one experimental allele.)</span></li>
+</ul>
+</td>
+    </tr>
+    <tr>
       <td>oleI</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3000866">ARO:3000866</a></td>
       <td><span class="meta">not organism-specific</span></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000866">ARO:3000866</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000867 (oleandomycin); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
+    </tr>
+    <tr>
+      <td>oleI biochemical glycosylation of oleandomycin<br><span class="meta">Biochemical inactivation route, not a measured whole-cell resistance or clinical susceptibility call. The donor species Streptomyces antibioticus (reference NCBITaxon:1890, species rank) is distinct from the heterologous expression host Streptomyces lividans. Donor and reference taxonomy do not identify an organism tested for resistance here. No experimental allele, protein accession, strain TaxID or genome is assigned. Reference-only protein entries: UniProtKB:O68841, UniProtKB:Q3HTL7. OleR-mediated reactivation is a different direction, not another inactivation determinant. No class-wide substrate claim is inferred.</span></td>
+      <td>—</td>
+      <td><span class="meta">not organism-specific</span></td>
+      <td class="meta">oleI</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9680207">PMID:9680207</a></span> <span class="meta">(Results, expression/activity sections and Figure 4A/6 legends: qualitative glycosylation evidence with a negative expression-host control. Results on in vitro protein synthesis support reduced activity of the glycosylated product. Publisher-indexed text inspected; figures not visually inspected.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17376874">PMID:17376874</a></span> <span class="meta">(Table 1, wild-type row; biochemical activity with oleandomycin, not an MIC. Author-hosted paper, Figure 2 and cited table visually inspected. Correction DOI:10.1073/pnas.0704090104 changes author-contribution credit. Supplementary material was not inspected; no claim depends on it.)</span></li>
+  <li><span class="meta">UniProtKB:O68841</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 77, sequence version 1. Separate deposits are not collapsed into one experimental allele.)</span></li>
+  <li><span class="meta">UniProtKB:Q3HTL7</span> <span class="meta">(Reference identity only; UniProtKB release 2026_03, retrieved 2026-10-09, entry version 79, sequence version 2. Separate deposits are not collapsed into one experimental allele.)</span></li>
 </ul>
 </td>
     </tr>
@@ -457,6 +482,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-08-30 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Added two qualitative primary-paper biochemical inactivation assertions for oleI and oleD, retaining separate UniProt references and donor/host context. Preserved all 30 CARD assertions. No experimental allele, protein or organism identifier, whole-cell phenotype, or quantitative AST assigned.</p>
   </li>
 </ol>
 

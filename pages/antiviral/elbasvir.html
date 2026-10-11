@@ -124,9 +124,8 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">1 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">1 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
@@ -134,12 +133,13 @@ type — expand a group to see its determinants.</p>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>HCV NS5A substitutions at positions 30, 31, and 93<br><span class="meta">Genotype replicons and sequencing after elbasvir exposure identified substitutions at NS5A positions 30, 31, and 93 that produced substantial losses of susceptibility, with genotype-dependent effects.</span></td>
+      <td>HCV NS5A substitutions at positions 30, 31, and 93<br><span class="meta">Genotype replicons and sequencing after elbasvir exposure identified substitutions at NS5A positions 30, 31, and 93 that produced substantial losses of susceptibility, with genotype-dependent effects. Taxon grounding only: the source calls the virus HCV. Its genotype-specific replicon results and clinical sequencing observations are distinct evidence contexts. The aggregate claim does not identify one patient, experimental allele or reference polyprotein. No protein accession, strain TaxID, genome or quantitative resistance endpoint is assigned by this curation.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Orthohepacivirus hominis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_3052230"><code class="curie">NCBITaxon:3052230</code></a></td>
       <td class="meta">HCV NS5A</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/26303801">PMID:26303801</a></span> <span class="meta">(Primary elbasvir resistance-selection, replicon, and sequencing study.)</span></li>
+  <li><span class="meta"><a href="https://rest.uniprot.org/taxonomy/3052230">https://rest.uniprot.org/taxonomy/3052230</a></span> <span class="meta">(Taxonomic identity only: active species with Hepatitis C virus as an explicit alias. Retrieved 2026-10-08 UTC.)</span></li>
 </ul>
 </td>
     </tr>
@@ -185,6 +185,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_TAXON</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Grounded the existing aggregate HCV claim to an active species TaxID. Kept study reference crosswalks in a separate dossier; did not assign patient or mutant proteins, strain TaxIDs, genomes or measurements.</p>
   </li>
 </ol>
 

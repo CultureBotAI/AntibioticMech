@@ -59,6 +59,30 @@ extract-phibase *args:
 extract-phibase-dry *args:
     uv run python scripts/extract_phibase_amr.py --dry-run {{args}}
 
+# Census the corpus and audit PHI-base references; offline unless explicitly enabled.
+audit-resistance-grounding *args:
+    uv run python scripts/audit_resistance_grounding.py {{args}}
+
+# Audit CARD assertions against explicit UniProt reference links (offline by default).
+audit-card-grounding *args:
+    uv run python scripts/audit_card_grounding.py {{args}}
+
+# Verify HIVDB source-region context without assigning experimental alleles.
+audit-hivdb-grounding *args:
+    uv run python scripts/audit_hivdb_grounding.py {{args}}
+
+# Bounded citation discovery for ungrounded resistance records; offline by default.
+discover-resistance-literature *args:
+    uv run python scripts/discover_resistance_literature.py {{args}}
+
+# Expand citation discovery to every record's provenance-bearing names.
+discover-resistance-aliases *args:
+    uv run python scripts/discover_resistance_aliases.py {{args}}
+
+# Resume citation-only cursor expansion of truncated name searches; offline by default.
+expand-resistance-discovery *args:
+    uv run python scripts/expand_resistance_discovery.py {{args}}
+
 # Evaluate CRyPTIC phenotypes without attaching name-only drug codes to records.
 evaluate-cryptic *args:
     uv run --extra source-ingest python scripts/evaluate_cryptic_activity.py {{args}}

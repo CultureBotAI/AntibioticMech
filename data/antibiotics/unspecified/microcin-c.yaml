@@ -47,3 +47,48 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-09T18:55:26Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added qualitative primary-backed resistance evidence with donor, host and
+    substrate distinctions. Reference proteins are not assigned as exact experimental
+    alleles. Existing chemical and source evidence preserved; whole-record review
+    remains open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  label: MccF-associated enzymatic inactivation of microcin C
+  gene_families:
+  - mccF
+  assay: Source-reported biochemical inactivation and product analysis; qualitative
+    result only
+  note: Primary product analysis supports cleavage of intact microcin C. Deformylated
+    material was also present and separately discussed; this is not a pure-compound
+    organismal AST claim. The paper distinguishes intact, processed and analogue substrates.
+    Reference candidates remain separate from the experimental proteins. NCBITaxon:562
+    denotes the E. coli reference species, not a strain or genome. BL21(DE3) is a
+    reported host background, not an exact derivative assignment. No clinical category
+    or numerical AST is inferred.
+  evidence:
+  - reference: PMID:20876530
+    notes: 'Author-uploaded primary text: Results on in vitro rescue, loss of activity
+      and product analysis; Figures 3-5 captions. Figures and supplements were not
+      visually inspected.'
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  label: MccE-associated inactivation after microcin C processing
+  gene_families:
+  - mccE
+  assay: Source-reported biochemical and laboratory-cell comparisons; qualitative
+    result only
+  note: The mechanism concerns processed intracellular material, not direct acetylation
+    of intact microcin C. Native material and synthetic analogues are distinct. The
+    paper corrects the gene-start annotation; a gene-name match does not resolve the
+    experimental protein. Reference candidates remain separate from the experimental
+    proteins. NCBITaxon:562 denotes the E. coli reference species, not a strain or
+    genome. BL21(DE3) is a reported host background, not an exact derivative assignment.
+    No clinical category or numerical AST is inferred.
+  evidence:
+  - reference: PMID:20159968
+    notes: 'Author-uploaded primary text: Results, Table 1 and Discussion. The route
+      follows the authors'' interpretation. Figures and supplement were not visually
+      inspected.'

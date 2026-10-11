@@ -141,7 +141,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">3 observations &middot; <a href="vancomycin/activity-1.html">Browse all observations</a> &middot; <a href="vancomycin/record-7f72a0ec5b3594f7adbac640595dc51e2b02c9daaeafcec9e8ba99a13cb8249a.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">3 observations &middot; <a href="vancomycin/activity-1.html">Browse all observations</a> &middot; <a href="vancomycin/record-e61d42b82aa2b259c7c9b5f54843a8490b46cd08366e1f40979fa91c77093b0b.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -199,11 +199,10 @@ BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN15040082">SAMN1504
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">20 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">27 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
-  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">18</span></summary>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">23</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
 <table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
@@ -237,6 +236,26 @@ type — expand a group to see its determinants.</p>
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3003970">ARO:3003970</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
+    </tr>
+    <tr>
+      <td>DSY3690-associated vancomycin resistance in native Desulfitobacterium hafniense Y51<br><span class="meta">Native resistance and separate recombinant-ligase biochemistry support the proposed target-alteration route, not isolated DSY3690 necessity or sufficiency. UniProtKB:Q24R63 is locus-matched reference context only; DSY1579/UniProtKB:Q24X74 is the distinct biochemical comparator. No exact experimental protein, allele or genome is assigned. AP008230.1 and its sample are reference context, not an assay-genome assignment.</span></td>
+      <td>—</td>
+      <td><em>Desulfitobacterium hafniense</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_49338"><code class="curie">NCBITaxon:49338</code></a><br><span class="meta">strain Y51</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_138119"><code class="curie">NCBITaxon:138119</code></a> <span class="meta">DSY3690</span></td>
+      <td class="meta">VanA-like ligase</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/19414574">PMID:19414574</a></span> <span class="meta">(Publisher native susceptibility Results, locus identification and separate biochemical Results/Table 2; qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Disk diffusion and Etest</span></td>
+    </tr>
+    <tr>
+      <td>VanM-cluster-associated vancomycin resistance in native Efm-HS0661<br><span class="meta">Native-isolate phenotype and precursor analysis support a cluster-associated target-alteration route, not isolated VanM sufficiency. UniProtKB:B8XGS3 and FJ349556.1 are source-bound ligase references only; CP039730.1 belongs to a different isolate. No exact experimental protein, allele or genome is assigned. Laboratory-recipient findings are not assigned here.</span></td>
+      <td><a href="http://purl.obolibrary.org/obo/ARO_3000256">ARO:3000256</a></td>
+      <td><em>Enterococcus faecium</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1352"><code class="curie">NCBITaxon:1352</code></a><br><span class="meta">strain Efm-HS0661</span></td>
+      <td class="meta">vanM</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20733041">PMID:20733041</a></span> <span class="meta">(Publisher Table 1, native-isolate Results, precursor analysis and accession statement; qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Etest</span></td>
     </tr>
     <tr>
       <td>cfr(D)</td>
@@ -388,6 +407,36 @@ type — expand a group to see its determinants.</p>
 </ul>
 </td>
     </tr>
+    <tr>
+      <td>vanD cluster-associated vancomycin resistance in 10/96A<br><span class="meta">Native phenotype and precursor evidence support a cluster-associated route, not isolated VanD sufficiency. UniProtKB:Q9EZQ9/AY082011 is source-bound reference context. Other native strains and laboratory-host findings are not merged with 10/96A. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecium</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1352"><code class="curie">NCBITaxon:1352</code></a><br><span class="meta">strain 10/96A</span></td>
+      <td class="meta">vanD</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12499162">PMID:12499162</a></span> <span class="meta">(Native Table 2, Results and AY082011 accession statement; Table 2 assay footnote. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">MIC determination (Steers et al. method)</span></td>
+    </tr>
+    <tr>
+      <td>vanE cluster-associated vancomycin resistance in BM4405<br><span class="meta">Native precursor evidence supports a cluster-associated route, not isolated ligase sufficiency. UniProtKB:Q9S4K1 is a fragment reference, not a complete experimental protein. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1351"><code class="curie">NCBITaxon:1351</code></a><br><span class="meta">strain BM4405</span></td>
+      <td class="meta">vanE</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10471558">PMID:10471558</a></span> <span class="meta">(Native Results and precursor Table 2; susceptibility assay and accession statement. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Agar dilution</span></td>
+    </tr>
+    <tr>
+      <td>vanN cluster-associated vancomycin resistance in UCN71<br><span class="meta">Native precursor evidence supports a cluster-associated route, not isolated ligase sufficiency. Further characterization used UCN71 only; it is not assigned to UCN72. UniProtKB:G4XFK8/JF802084 is reference context; its AB701345 link belongs to isolate 121.1, not UCN71. Laboratory recipients remain separate. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecium</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1352"><code class="curie">NCBITaxon:1352</code></a><br><span class="meta">strain UCN71</span></td>
+      <td class="meta">vanN</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/21807981">PMID:21807981</a></span> <span class="meta">(Native Results, precursor Table 4 and accession statement; susceptibility assay. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Broth microdilution</span></td>
+    </tr>
   </table>
 
 </div>
@@ -417,6 +466,36 @@ type — expand a group to see its determinants.</p>
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3005058">ARO:3005058</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin); database assertion, not a primary citation.)</span></li>
 </ul>
 </td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>UNKNOWN <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>vanE co-occurrence with source-reported vancomycin resistance in N00-410<br><span class="meta">Same-isolate co-occurrence is retained without transferring BM4405 precursor findings. ENA replaces AF430807 with FJ872411, supporting reference context for UniProtKB:Q93A46. Source N00-410 and reference N00-0410 labels are preserved separately; archive succession does not prove allele equality. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1351"><code class="curie">NCBITaxon:1351</code></a><br><span class="meta">strain N00-410</span></td>
+      <td class="meta">vanE</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12019119">PMID:12019119</a></span> <span class="meta">(Native susceptibility and locus findings; accession statement; induction data not shown. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Etest</span></td>
+    </tr>
+    <tr>
+      <td>vanL co-occurrence with source-reported vancomycin resistance in N06-0364<br><span class="meta">The source reports low-level resistance with vanL but explicitly leaves functionality unproven. This is co-occurrence, not a demonstrated biochemical route or a new clinical category. UniProtKB:A9LN35 is reference context only. No exact experimental protein, allele or genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Enterococcus faecalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1351"><code class="curie">NCBITaxon:1351</code></a><br><span class="meta">strain N06-0364</span></td>
+      <td class="meta">vanL</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18458129">PMID:18458129</a></span> <span class="meta">(Native susceptibility, locus findings and final functionality caveat; induction data not shown. Qualitative finding only.)</span></li>
+</ul>
+<span class="meta">Broth microdilution and Etest</span></td>
     </tr>
   </table>
 
@@ -527,6 +606,16 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="pill">STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS</span>
     <span class="meta">2026-09-26 · codex · LLM-assisted</span>
     <p>Structured BioSample accessions on 3 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added two primary-supported native vancomycin resistance claims with species/strain taxonomy and explicitly reference-only UniProt context. Kept VanM cluster evidence, Y51 native phenotype, recombinant biochemistry and comparator identity distinct. Preserved prior assertions and all other fields; whole-record review remains open.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added five qualitative native vancomycin findings with species taxonomy and reference-only UniProt context. Distinguished three precursor-supported cluster routes from two gene/phenotype co-occurrences; preserved explicit functional uncertainty and archive succession without exact allele assignments. Preserved all previous claims, observations and other fields; whole-record review remains open.</p>
   </li>
 </ol>
 

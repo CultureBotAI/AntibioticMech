@@ -100,3 +100,62 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-09T17:18:00Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two qualitative primary-paper resistance claims, preserving donor/background/derivative
+    identity and the compound-specific response. Coarse routes retain author-interpretation
+    limits. Donor reference grounding does not assign exact experimental alleles.
+    Existing MIBiG producer and chemical evidence preserved; whole-record review remains
+    open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
+  label: ptmP3-associated reported resistance to platencin in a laboratory Streptomyces
+    albus derivative
+  gene_families:
+  - ptmP3
+  taxon_label: Streptomyces albus
+  strain: SB12011
+  phenotype_label: reported resistance to platencin
+  assay: Source-reported growth susceptibility assays; qualitative result only
+  note: Primary functional evidence in a laboratory S. albus derivative; S. albus
+    J1074 is the host background, not the derivative. Streptomyces platensis MA7327
+    is the native donor, not the tested host. The coarse route follows the authors'
+    interpretation; it is not an independent kinetic or exact-allele validation. Donor
+    reference UniProtKB:D8L2W8 (entry version 45, sequence version 1; EMBL:FJ655920
+    / ACS13710.1) matches the paper's PtmP3 archive accession. This is not an experimental
+    construct or allele assignment. PtnP3 is not substituted for the tested PtmP3.
+    NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name
+    reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID,
+    genome, numerical AST or clinical category is assigned.
+  evidence:
+  - reference: PMID:24560608
+    notes: Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure
+      2 and Table 1. Donor, host background and derivative are distinct; the coarse
+      route is the authors' interpretation. Supplements were not inspected.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: fabF-associated partial resistance / reduced susceptibility to platencin
+    in a laboratory Streptomyces albus derivative
+  gene_families:
+  - fabF
+  taxon_label: Streptomyces albus
+  strain: SB12013
+  phenotype_label: partial resistance / reduced susceptibility to platencin
+  assay: Source-reported growth susceptibility assays; qualitative result only
+  note: Primary functional evidence in a laboratory S. albus derivative; S. albus
+    J1074 is the host background, not the derivative. Streptomyces platensis MA7327
+    is the native donor, not the tested host. The coarse route follows the authors'
+    interpretation; it is not an independent kinetic or exact-allele validation. The
+    paper reports donor gene archive KF543053; no matching UniProt protein was resolved.
+    Same-species DSM 40041 proteins are not MA7327 assignments. The precise basis
+    of the reported intrinsic insensitivity is unresolved. The partial platencin response
+    is not equivalent to full resistance. NCBITaxon:58346 is a donor species reference;
+    NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is
+    ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category
+    is assigned.
+  evidence:
+  - reference: PMID:24560608
+    notes: Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure
+      2 and Table 1. Donor, host background and derivative are distinct; the coarse
+      route is the authors' interpretation. Supplements were not inspected.

@@ -145,9 +145,7 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: ATCC 13073
-  strain_taxon_id: NCBITaxon:330879
   alteration: ErgA(F389L) (amino acid mutation) [Ectopic]
-  protein_accession: UniProtKB:E9R5G2
   gene_id: Afu5g07780-T
   phenotype_id: PHIPO:0000387
   phenotype_label: resistance to terbinafine
@@ -155,20 +153,30 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review terbinafine-2006-reference-context:
+    The source ATCC 13073 label denotes the parent background, not either separately
+    named tested derivative. UniProtKB:E9R5G2, the retained gene_id and TaxID 330879
+    identify the Af293 reference locus and strain. Multiple subjects must not be collapsed
+    to an exact allele or strain identifier. Source alterations, phenotypes and assays
+    are unchanged; exact subject protein, strain TaxID and genome remain unresolved.
+    Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:E9R5G2.'
   evidence:
   - reference: PMID:16801438
     notes: PHI-base primary-literature antimicrobial interaction PHIG:6409; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00187-06
+    notes: 'Identifier-scope review: Results and Figure 2: parent distinguished from
+      multiple tested derivatives, Table 1: strain identities only, UniProtKB release
+      2026_03: E9R5G2 entry 72, sequence version 1; reference locus and taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: erg1+ (wild type) [Overexpression] associated with resistance to terbinafine
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: AF293.1
-  strain_taxon_id: NCBITaxon:330879
   alteration: erg1+ (wild type) [Overexpression]
-  protein_accession: UniProtKB:E9R5G2
   gene_id: Afu5g07780-T
   phenotype_id: PHIPO:0000387
   phenotype_label: resistance to terbinafine
@@ -176,33 +184,59 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review terbinafine-2004-reference-context:
+    The source AF293.1 label denotes a parent background, not one uniquely identified
+    tested derivative. UniProtKB:E9R5G2, the retained gene_id and TaxID 330879 describe
+    Af293 reference context. Parent lineage does not establish an exact experimental
+    protein or subject TaxID, and disk-diffusion and MIC endpoints remain distinct.
+    Source alterations, phenotypes and assays are unchanged; exact subject protein,
+    strain TaxID and genome remain unresolved. Reference-only source identifiers:
+    strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:E9R5G2.'
   evidence:
   - reference: PMID:15215099
     notes: PHI-base primary-literature antimicrobial interaction PHIG:6409; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.48.7.2490-2496.2004
+    notes: 'Identifier-scope review: Results: parent, tested derivatives and control
+      groups are distinct, Tables 1-2: strain labels and endpoint context only, UniProtKB
+      release 2026_03: E9R5G2 entry 72, sequence version 1; reference locus and taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cox10 transformant(W004-cox10(R243Q)) (transformant) [Not assayed] associated
     with resistance to terbinafine
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: A1160C
-  strain_taxon_id: NCBITaxon:451804
   alteration: cox10 transformant(W004-cox10(R243Q)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:B0Y628
   phenotype_id: PHIPO:0000387
   phenotype_label: resistance to terbinafine
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review wei-2016-reference-context-followup:
+    The source strain label denotes a parent background, not an individual tested
+    derivative. Af293 and A1163/CEA10 UniProt entries and strain TaxIDs describe reference
+    context. The retained gene_id is a reference-locus identifier, not an experimental
+    allele. Increased frequency of later colonies is distinct from baseline susceptibility,
+    and plate growth is not a broth MIC or a clinical resistance category. These endpoint
+    distinctions remain review limitations, not new activity observations. Source
+    alterations, phenotypes and assays are unchanged; exact subject protein, strain
+    TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:451804;
+    protein_accession=UniProtKB:B0Y628.'
   evidence:
   - reference: PMID:27799210
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8689; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.02101-16
+    notes: 'Identifier-scope review: Results and Figures 1-4: baseline parent versus
+      separate tested groups, Tables 1-2: subject identity and distinct assay endpoints,
+      UniProtKB release 2026_03: Q4WNT5 entry 146; B0XYD8 entry 86; B0Y628 entry 66;
+      all sequence version 1; reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -288,3 +322,100 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T13:23:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped imported reference protein and strain TaxID to provenance, not tested-subject
+    identity. Source parent labels, alterations, phenotypes and assays preserved;
+    no experimental allele, genome or activity measurement inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:30Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after nine identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:08Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:41Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:57Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:49Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:24Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:08Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

@@ -62,3 +62,116 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-09T07:36:54Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added five primary author-reported GM193663 gene-level growth associations;
+    grounded species and reference-only UniProt identities. Kept allele, strain, genome
+    and quantitative AST assignments absent; figure review remains pending.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: OTHER
+  label: DPH1-associated GM193663 growth resistance in experimental yeast
+  gene_families:
+  - DPH1
+  gene_id: DPH1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Author-reported GM193663 growth resistance
+  assay: Relative growth comparisons in liquid culture and plate-spot tests
+  note: 'Gene-perturbation study in BY4741-derived laboratory subjects, not resistance
+    inferred from gene presence or assigned to the parental strain. Figures and supplements
+    were not independently reanalyzed. Reference-only S288c mapping: UniProtKB:P40487
+    (DPH1, YIL103W; NCBITaxon:559292), not an experimental allele or protein assignment.
+    No MIC or clinical category inferred.'
+  evidence:
+  - reference: PMID:18285480
+    notes: 'Primary Results: diphthamide synthesis; Methods identify GM193663 and
+      the laboratory background. Qualitative text-level review.'
+  - reference: UniProtKB:P40487
+    notes: Reference identity only; UniProtKB 2026_03, entry version 181, sequence
+      version 1.
+- mechanism_type: OTHER
+  label: DPH2-associated GM193663 growth resistance in experimental yeast
+  gene_families:
+  - DPH2
+  gene_id: DPH2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Author-reported GM193663 growth resistance
+  assay: Relative growth comparisons in liquid culture and plate-spot tests
+  note: 'Gene-perturbation study in BY4741-derived laboratory subjects, not resistance
+    inferred from gene presence or assigned to the parental strain. Figures and supplements
+    were not independently reanalyzed. Reference-only S288c mapping: UniProtKB:P32461
+    (DPH2, YKL191W; NCBITaxon:559292), not an experimental allele or protein assignment.
+    No MIC or clinical category inferred.'
+  evidence:
+  - reference: PMID:18285480
+    notes: 'Primary Results: diphthamide synthesis; Methods identify GM193663 and
+      the laboratory background. Qualitative text-level review.'
+  - reference: UniProtKB:P32461
+    notes: Reference identity only; UniProtKB 2026_03, entry version 182, sequence
+      version 1.
+- mechanism_type: OTHER
+  label: DPH3-associated GM193663 growth resistance in experimental yeast
+  gene_families:
+  - DPH3
+  gene_id: DPH3
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Author-reported GM193663 growth resistance
+  assay: Relative growth comparisons in liquid culture and plate-spot tests
+  note: 'Gene-perturbation study in BY4741-derived laboratory subjects, not resistance
+    inferred from gene presence or assigned to the parental strain. Figures and supplements
+    were not independently reanalyzed. Reference-only S288c mapping: UniProtKB:Q3E840
+    (KTI11, YBL071W-A; NCBITaxon:559292), not an experimental allele or protein assignment.
+    No MIC or clinical category inferred.'
+  evidence:
+  - reference: PMID:18285480
+    notes: 'Primary Results: diphthamide synthesis; Methods identify GM193663 and
+      the laboratory background. Qualitative text-level review.'
+  - reference: UniProtKB:Q3E840
+    notes: Reference identity only; UniProtKB 2026_03, entry version 147, sequence
+      version 1.
+- mechanism_type: OTHER
+  label: DPH4-associated GM193663 growth resistance in experimental yeast
+  gene_families:
+  - DPH4
+  gene_id: DPH4
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Author-reported GM193663 growth resistance
+  assay: Relative growth comparisons in liquid culture and plate-spot tests
+  note: 'Gene-perturbation study in BY4741-derived laboratory subjects, not resistance
+    inferred from gene presence or assigned to the parental strain. Figures and supplements
+    were not independently reanalyzed. Reference-only S288c mapping: UniProtKB:P47138
+    (JJJ3, YJR097W; NCBITaxon:559292), not an experimental allele or protein assignment.
+    No MIC or clinical category inferred.'
+  evidence:
+  - reference: PMID:18285480
+    notes: 'Primary Results: diphthamide synthesis; Methods identify GM193663 and
+      the laboratory background. Qualitative text-level review.'
+  - reference: UniProtKB:P47138
+    notes: Reference identity only; UniProtKB 2026_03, entry version 179, sequence
+      version 1.
+- mechanism_type: OTHER
+  label: DPH5-associated GM193663 growth resistance in experimental yeast
+  gene_families:
+  - DPH5
+  gene_id: DPH5
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Author-reported GM193663 growth resistance
+  assay: Relative growth comparisons in liquid culture and plate-spot tests
+  note: 'Gene-perturbation study in BY4741-derived laboratory subjects, not resistance
+    inferred from gene presence or assigned to the parental strain. Figures and supplements
+    were not independently reanalyzed. Reference-only S288c mapping: UniProtKB:P32469
+    (DPH5, YLR172C; NCBITaxon:559292), not an experimental allele or protein assignment.
+    No MIC or clinical category inferred.'
+  evidence:
+  - reference: PMID:18285480
+    notes: 'Primary Results: diphthamide synthesis; Methods identify GM193663 and
+      the laboratory background. Qualitative text-level review.'
+  - reference: UniProtKB:P32469
+    notes: Reference identity only; UniProtKB 2026_03, entry version 193, sequence
+      version 1.

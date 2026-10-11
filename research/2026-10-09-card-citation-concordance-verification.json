@@ -1,0 +1,129 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "artifacts": [
+    {
+      "path": "scripts/audit_card_citation_concordance.py",
+      "sha256": "66781c029061ae06e327764044849a688d723e5e15d0458e2cd73f425a4cdb63"
+    },
+    {
+      "path": "tests/test_card_citation_concordance.py",
+      "sha256": "12ba56e4a1ddd1d23c993cf7c9a6499256521a637a6bedf40dff57b6fac1a3c9"
+    },
+    {
+      "path": "research/2026-10-09-card-citation-concordance.json",
+      "sha256": "d798b0f7abc76bfed7b6ee77d6fb3ff94429d1da432d143193f93e1da441189e"
+    },
+    {
+      "path": "research/2026-10-09-tlrb-primary-context.json",
+      "sha256": "c2d7668a64fcb86ebb7a97cf0a44f45fe6f978f2ae7c1b18bc174c8fb1cf3633"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "9ece3f0e908e6bac31b1c7fafa4935b98998ccc0459bb4e71059544cd71025f4"
+    }
+  ],
+  "biological_records_byte_identical": 2939,
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/canary.json",
+    "sha256": "2bbdf4fc6aa23f987736136754c0812046c06d17e7dcae2007454c48f89c0526"
+  },
+  "canary_terms_reproduce_in_full_audit": true,
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "9ece3f0e908e6bac31b1c7fafa4935b98998ccc0459bb4e71059544cd71025f4",
+      "before_sha256": "5a85ff4583d0d51a806411512b8e4d58c09ac1d070aa29afd0dedbcf054d634c"
+    }
+  },
+  "checks_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/final-checks/checks.json",
+    "sha256": "26cd1d0c348d0ba82bf0005bce727b3ad8de40bf390fec7254a8b0e1333bce0e"
+  },
+  "date": "2026-10-09",
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/final-checks/focused-tests.xml",
+    "sha256": "4c4894b9e739fa9ae374a9816e941b086e77e9ec27db9e705a93b867b7b38eaf"
+  },
+  "focused_tests_passed": 275,
+  "full_authoritative_qc_rerun": false,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "ncbi_endpoint_requests": 0,
+  "new_tests_passed": 33,
+  "outreach": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-card-definition-citations-verification.json",
+    "sha256": "e3c020f6cf8b2667abdb82487092ccbebc4621413d7bd7f6e27f3093ea44a81f"
+  },
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6842,
+  "protected_files_unchanged": 6841,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/protected-before.json",
+    "sha256": "8367061bf8069ffce503a8223642d4d71a508bc1cca4efdefab3ea940ff02000"
+  },
+  "remaining_limits": [
+    "The search covers the pinned CARD-cross-referenced UniProt snapshot, not all of UniProt.",
+    "A paper can concern many different genes, taxa or alleles; overlap never establishes identity.",
+    "A literal gene-name match may identify a family shared by several organisms, not one allele.",
+    "Absent overlap does not invalidate an explicit reference or imply absence of evidence.",
+    "TaxIDs are reference contexts, including mixed or uncultured names, not experimental isolates.",
+    "DOI case is normalized for comparison; reference numbers retain citation-to-entry provenance.",
+    "Malformed bibliography IDs are hashed and excluded from matching, not repaired by assumption.",
+    "No sequences, exact variants, protocols, coordinates or numerical AST are exported.",
+    "No source adoption, NCBI requests or GitHub mutation; whole-corpus primary review remains OPEN.",
+    "The exact experimental protein form and tested compound preparation remain unresolved.",
+    "Citation-specific strain annotations are not an entry-wide strain assignment.",
+    "No source term merge, biological record edit, exact variants, sequences, constructs, protocols or numerical AST.",
+    "No NCBI endpoint requests, outreach, source adoption or GitHub mutation; #1040 remains deferred."
+  ],
+  "review_findings_addressed": [
+    "The full pinned 4182-entry snapshot is searched, not just the 979 previously linked proteins.",
+    "Existing explicit reference projections are reproduced without treating shared citations as new assignments.",
+    "Eighteen malformed DOI annotations are quarantined and hashed rather than guessed or silently dropped.",
+    "Different-gene and multi-organism family overlaps remain distinct, even for unique shared-paper hits.",
+    "Active TaxIDs retain rank and mixed/uncultured names; they do not establish experimental subject identity.",
+    "TlrB source and host species, citation-specific strains, negative findings and causal limits are retained.",
+    "Portable tests do not require ignored response caches; local full-source reproduction is explicit."
+  ],
+  "source_adoptions": 0,
+  "sources_pages_embeddings_unchanged": true,
+  "status": "SCOPED_RESEARCH_CHECKS_PASSED",
+  "summary": {
+    "additional_taxonomy_requests": 6,
+    "biological_records_changed": 0,
+    "cached_uniprot_entries_searched": 4182,
+    "citation_overlap_links": 1109,
+    "compound_records": 273,
+    "corpus_records_checked": 2939,
+    "exact_allele_assignments": 0,
+    "explicit_links_with_citation_overlap": 415,
+    "explicit_reference_links_reproduced": 980,
+    "reference_entry_types": {
+      "UniProtKB reviewed (Swiss-Prot)": 225,
+      "UniProtKB unreviewed (TrEMBL)": 874
+    },
+    "retained_reference_entries": 1099,
+    "retained_reference_taxa": 366,
+    "snapshot_malformed_identifiers_not_joined": 18,
+    "source_assertion_memberships": 4538,
+    "terms": 2002,
+    "terms_with_citation_overlap": 554,
+    "unlinked_literal_gene_match_links": 9,
+    "unlinked_terms_with_citation_overlap": 59,
+    "unlinked_terms_with_literal_gene_match": 2,
+    "unlinked_terms_without_overlap_in_this_snapshot": 965,
+    "whole_records_completed": 0
+  },
+  "tlrb_summary": {
+    "bibliography_identities_verified": 2,
+    "biological_records_changed": 0,
+    "exact_experimental_protein_assignments": 0,
+    "genome_assignments": 0,
+    "named_species_contexts": 2,
+    "reference_synonym_leads": 1,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

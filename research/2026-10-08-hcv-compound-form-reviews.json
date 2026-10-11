@@ -1,0 +1,98 @@
+{
+  "records": {
+    "dasabuvir": {
+      "after_record_sha256": "367120ff65cc002649525ff2db1b21c77b7cb6e5d33ebad97cc6fe0aa8710629",
+      "before_record_sha256": "2f8487c4c61b6ee6126c8a3d6a3f6d9dd7704486bbde08cdedfb3f1ef3b9020c",
+      "claim_note_suffix": " Compound-form review pending: PMID:25534735 names a sodium form in its Compound section, whereas this record is neutral dasabuvir. This existing claim has not been revalidated for exact-form placement; no additional organism, protein or allele grounding is assigned pending resolution.",
+      "discussion": {
+        "attaches_to": [
+          "chemical_structure",
+          "resistance_mechanisms",
+          "molecular_targets",
+          "mode_of_action"
+        ],
+        "discussion_id": "resistance-compound-form-dasabuvir",
+        "evidence": [
+          {
+            "evidence_source": "full_text",
+            "explanation": "Materials and Methods, Compound, page 1506; publisher PDF text inspected 2026-10-08 UTC.",
+            "reference": "PMID:25534735"
+          }
+        ],
+        "kind": "CURATION_TODO",
+        "notes": "The pre-existing REVIEWED status is retained, not renewed by this limited audit. Resolve material identity before expanding resistance grounding; do not infer form equivalence from a shared drug name.",
+        "posed_by": "codex",
+        "posed_date": "2026-10-08",
+        "prompt": "Resolve the placement of PMID:25534735 evidence on neutral dasabuvir: the paper's Compound section names a sodium form. Does the evidence belong on a different structure record or require an explicit active-moiety interpretation?",
+        "rationale": "Neutral dasabuvir (CHEBI:85182), dasabuvir sodium (CHEBI:85179), and dasabuvir sodium hydrate (CHEBI:85178) have distinct InChIKeys. The inspected text does not establish hydration state or justify copying this study to all three records.",
+        "status": "OPEN"
+      },
+      "identifier": "CHEBI:85182",
+      "limitations": [
+        "Publisher PDF text inspected; Figure 1 was not visually inspected.",
+        "The earlier dasabuvir identity dossier retains its pre-warning record hashes."
+      ],
+      "original_claim_sha256": "813857e1534a212f9d5b43ad914341b4ab42012bfabcf10b245ed0f1e4d2fbab",
+      "original_discussions": [],
+      "original_history_sha256": "344bce5d5149112d5b7895a95731555391ed37f66154a93583de7a081ec29f42",
+      "path": "data/antibiotics/antiviral/dasabuvir.yaml",
+      "primary_reference": "PMID:25534735",
+      "publisher_pdf": "https://journals.asm.org/doi/pdf/10.1128/aac.04619-14",
+      "related_record_ids": [
+        "CHEBI:85179",
+        "CHEBI:85178"
+      ],
+      "source_location": "Materials and Methods, Compound, page 1506",
+      "standard_inchi_key": "NBRBXGKOEOGLOI-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "47ee49b40f4665b85a9a04cad811038860c873740c3616a7be5bae19974eb222"
+    },
+    "paritaprevir": {
+      "after_record_sha256": "2e089bd121c42d0e98921909d958e69259f141f5cdf09f653d258a365dfab73c",
+      "before_record_sha256": "094f6574f4386ecc1b62fbd19b7d57238f5a831505f18327379acf560aa6ee5c",
+      "claim_note_suffix": " Compound-form review pending: PMID:25451053 names a hydrate in its Compound section, whereas this record's formula contains no water. This existing claim has not been revalidated for exact-form placement; no additional organism, protein or allele grounding is assigned pending resolution.",
+      "discussion": {
+        "attaches_to": [
+          "chemical_structure",
+          "resistance_mechanisms",
+          "molecular_targets",
+          "mode_of_action"
+        ],
+        "discussion_id": "resistance-compound-form-paritaprevir",
+        "evidence": [
+          {
+            "evidence_source": "full_text",
+            "explanation": "Materials and Methods, Compound, page 989; publisher PDF text inspected 2026-10-08 UTC.",
+            "reference": "PMID:25451053"
+          }
+        ],
+        "kind": "CURATION_TODO",
+        "notes": "The pre-existing REVIEWED status is retained, not renewed by this limited audit. Resolve material identity before expanding resistance grounding; do not infer form equivalence from a shared drug name.",
+        "posed_by": "codex",
+        "posed_date": "2026-10-08",
+        "prompt": "Resolve the placement of PMID:25451053 evidence on the paritaprevir structure recorded here: the paper's Compound section names a hydrate. Does the evidence require a different structure record or an explicit active-moiety interpretation?",
+        "rationale": "This record's formula C40H43N7O7S does not include water. The inspected compound text does not establish hydrate stoichiometry or an exact-structure crosswalk, so neither a new hydrate record nor transfer of the existing evidence is justified by this review alone.",
+        "status": "OPEN"
+      },
+      "identifier": "CHEBI:85188",
+      "limitations": [
+        "Publisher PDF text inspected; Figure 1 was not visually inspected.",
+        "Clinical ABT-450/r context includes ritonavir; it must not be collapsed into a single-compound clinical measurement.",
+        "Source reference labels vary by location (NC_004102 in Methods, AF011751 in table footnotes); no accession equivalence inferred.",
+        "The source's chemical name and the record synonym use different 13a stereodescriptors. No stereochemical correction inferred from names alone."
+      ],
+      "original_claim_sha256": "5a19d44614ff6976395df992f827c9f67daff5245aede484be7c0d54f1852d16",
+      "original_discussions": [],
+      "original_history_sha256": "218c9a40ad8e6258bf46fb17ee90760c1c2612f279cbc7746740069cf46dcefd",
+      "path": "data/antibiotics/antiviral/paritaprevir.yaml",
+      "primary_reference": "PMID:25451053",
+      "publisher_pdf": "https://journals.asm.org/doi/pdf/10.1128/aac.04227-14",
+      "related_record_ids": [],
+      "source_location": "Materials and Methods, Compound, page 989",
+      "standard_inchi_key": "UAUIUKWPKRJZJV-MDJGTQRPSA-N",
+      "unchanged_fields_sha256": "d360d284648ad833ac34590de2037bf1b12503df6a69cd428f545cddabd0c2d8"
+    }
+  },
+  "reviewed_on": "2026-10-08",
+  "scope": "Warnings only; no new resistance assertions or exact-structure equivalences.",
+  "status": "OPEN_COMPOUND_FORM_REVIEW"
+}

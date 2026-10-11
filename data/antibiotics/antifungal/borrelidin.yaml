@@ -93,3 +93,41 @@ curation_history:
     class; added threonyl-tRNA-synthetase inhibition and direct target evidence from
     the P. sojae mechanism study.
   llm_assisted: true
+- timestamp: '2026-10-09T16:08:46Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added one qualified primary-paper borO-associated resistance report in
+    a heterologous S. albus background, explicitly retaining data-not-shown and proposed-mechanism
+    limits. Kept donor UniProt/taxonomy references separate from experimental identity.
+    Preserved existing chemical and molecular-target curation; no exact allele, strain
+    ID, genome or quantitative AST assigned.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  label: Reported borO-associated borrelidin resistance in a Streptomyces albus laboratory
+    background
+  gene_families:
+  - borO
+  taxon_label: Streptomyces albus
+  phenotype_label: reported resistance to borrelidin
+  note: The primary paper reports a functional result in a heterologous host derived
+    from S. albus J1074, explicitly with data not shown. The proposed resistant threonyl-tRNA
+    synthetase route is not directly demonstrated in this report, so mechanism_type
+    remains UNKNOWN. Native donor Streptomyces parvulus Tu4055 is not the tested host.
+    Donor reference UniProtKB:Q70HZ0 (EMBL:AJ580915 / CAE45679.1; entry version 112,
+    sequence version 1) and NCBITaxon:146923 identify source/reference context, not
+    the exact experimental allele. NCBITaxon:1888 is a species-name reference for
+    S. albus; the J1074 taxonomy search returned multiple candidates, and no strain
+    identifier was selected. Background, donor and derivative are not interchangeable.
+    No exact allele, protein accession, strain TaxID, genome, quantitative AST or
+    clinical category is assigned.
+  evidence:
+  - reference: PMID:15112998
+    notes: 'Borrelidin Resistance, journal page 92: reported host resistance with
+      data not shown; native self-resistance and target replacement are proposed.
+      Figure 1, Table 1 and the Results page were visually inspected in the University
+      of Oviedo copy. Table 1 similarity hits are not BorO accession assignments.'
+  - reference: UniProtKB:Q70HZ0
+    notes: Donor reference only; exact AJ580915 plus borO query, UniProtKB release
+      2026_03, retrieved 2026-10-09. Entry cites PMID:15112998 and source strain Tu4055.
+      No experimental allele or host protein assignment is inferred.

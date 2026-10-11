@@ -7,7 +7,7 @@
 <meta name="description" content="fluconazole (CHEBI:46081): A member of the class of triazoles that is propan-2-ol substituted at position 1 and 3 by 1H-1,2,4-triazol-1-yl groups and at position 2 by a 2,4-difluorophenyl group. It is an antifungal drug used for the treatment of mucosal candidiasis and for systemic infections including systemic candidiasis, coccidioidomycosis, and cryptococcosis.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -133,13 +133,56 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <dt>Mode of action</dt><dd>ERGOSTEROL_PATHWAY_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:75282 (ergosterol biosynthesis inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">2 observations &middot; <a href="fluconazole/activity-1.html">Browse all observations</a> &middot; <a href="fluconazole/record-d1df2ae983868280d3e34a4e8ca3e9a48173d52a9a9531b9356e56bf8260b777.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Candida albicans</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5476">NCBITaxon:5476</a></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">8.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">EUCAST broth microdilution, source RPMI 1640 condition</td>
+    <td class="meta">JEY355</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="2" data-identifier="CHEBI:46081" data-key="RFHAOTPXVQNOHP-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="fluconazole/activity-1-83028264701c53d92a37dc52cff6892c4877433b8b69c08ed2204aa7f0910909.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Candida tropicalis</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=5482">NCBITaxon:5482</a></td>
+    <td><span class="pill warn">RESISTANT</span></td>
+    <td class="num">&gt;128.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">EUCAST broth microdilution, source RPMI 1640 condition</td>
+    <td class="meta">JEY162</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="2" data-identifier="CHEBI:46081" data-key="RFHAOTPXVQNOHP-UHFFFAOYSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="fluconazole/activity-1-83028264701c53d92a37dc52cff6892c4877433b8b69c08ed2204aa7f0910909.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">76 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">77 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
-  <summary>UNKNOWN <span class="pill plain">34</span></summary>
+  <summary>UNKNOWN <span class="pill plain">35</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
 <table>
     <caption>UNKNOWN</caption>
@@ -165,12 +208,24 @@ type — expand a group to see its determinants.</p>
 </td>
     </tr>
     <tr>
-      <td>CnAFR1 (unknown) [Overexpression] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Clinical ERG3 association with fluconazole resistance<br><span class="meta">Same-isolate genotype-phenotype co-occurrence, not independent causality for this component of the reported combined ERG3/ERG11 genotype. Source alteration notation retained; no reference-coordinate equivalence or laboratory-derivative identity inferred.</span></td>
       <td>—</td>
-      <td><em>Cryptococcus neoformans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5207"><code class="curie">NCBITaxon:5207</code></a><br><span class="meta">strain BYP22</span><br> <a href="https://www.uniprot.org/uniprotkb/Q8X0Z3"><code class="curie">UniProtKB:Q8X0Z3</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida tropicalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5482"><code class="curie">NCBITaxon:5482</code></a><br><span class="meta">strain JEY162</span><br> <a href="https://www.uniprot.org/uniprotkb/N0A5G3"><code class="curie">UniProtKB:N0A5G3</code></a></td>
+      <td class="meta">ERG3</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23629718">PMID:23629718</a></span> <span class="meta">(Results: clinical susceptibility and CtERG3 sequence analysis; Table 3. The genotype and measured phenotype share the named clinical isolate. Laboratory functional evidence remains separate.)</span></li>
+  <li><span class="meta">UniProtKB:N0A5G3</span> <span class="meta">(Release 2026_03, entry version 42, sequence version 1, inspected 2026-10-08. Paper-declared deposit KC676662 / AGK44786.1 has protein-specific JEY162 strain evidence in citation CI-DK7KGAGGARC54. That citation has no indexed PMID; linkage uses the declared accession and strain, not bibliography alone. A different reference&#39;s ATCC strain label is not transferred.)</span></li>
+</ul>
+</td>
+    </tr>
+    <tr>
+      <td>CnAFR1 (unknown) [Overexpression] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review posteraro-2003-subject-reference-context: Primary Results identify BPY22.17, distinct from susceptible parent BPY22; source spelling BYP22 is preserved, not treated as a verified synonym. UniProt Q8X0Z3 (AFR1; AJ318062/CAC59691.2) cites this paper but names CR 22.17; its equivalence to the tested subject is unresolved. The paper names genomic deposit AJ428201 and identifies serotype D. Protein and NCBITaxon:5207 remain reference context while the modern species crosswalk is unresolved. No exact experimental protein, allele or genome is assigned. Source alteration, phenotype and assay are unchanged. Original source background label: BYP22. Reference-only source identifiers: taxon_id=NCBITaxon:5207; protein_accession=UniProtKB:Q8X0Z3.</span></td>
+      <td>—</td>
+      <td><em>Cryptococcus neoformans</em><br><span class="meta">strain BPY22.17</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/12519188">PMID:12519188</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8831; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1046/j.1365-2958.2003.03281.x">DOI:10.1046/j.1365-2958.2003.03281.x</a></span> <span class="meta">(Identifier-scope review: Publisher-indexed primary full text: Results distinguishes BPY22.17 from parent BPY22; Figure 1 caption identifies their comparison; CnAFR1 identity section names AJ428201; Strains and media specifies serotype D; no visual figure inspection, UniProtKB release 2026_03: Q8X0Z3 entry 116, sequence version 1; AFR1, AJ318062/CAC59691.2, TaxID 5207; citation PMID:12519188 has strain comment CR 22.17, UniProt Taxonomy release 2026_03: 5207 is Cryptococcus neoformans; a separate exact Cryptococcus deneoformans query resolves 40410, whose serotype-D label is in otherNames, not an accepted exact-name subject crosswalk. Reviewed 2026-10-09 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
@@ -185,292 +240,321 @@ type — expand a group to see its determinants.</p>
 </td>
     </tr>
     <tr>
-      <td>DOX::ERG11+(DOX repressible promoter) (other) [Knockdown] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>DOX::ERG11+(DOX repressible promoter) (other) [Knockdown] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review nakayama-2001-reference-subject-context: ATCC 2001 is the retained source background/comparator label, not an exact tested-derivative identity. P50859 and taxonomy 284593 identify reference context. Source biology is unchanged; no individual derivative, allele accession or MIC is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:284593; protein_accession=UniProtKB:P50859.</span></td>
       <td>—</td>
-      <td><em>Candida glabrata</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5478"><code class="curie">NCBITaxon:5478</code></a><br><span class="meta">strain ATCC 2001</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_284593"><code class="curie">NCBITaxon:284593</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P50859"><code class="curie">UniProtKB:P50859</code></a> <span class="meta">CAGL0E04334g-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida glabrata</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5478"><code class="curie">NCBITaxon:5478</code></a><br><span class="meta">strain ATCC 2001</span> <span class="meta">CAGL0E04334g-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11600353">PMID:11600353</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:3694; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.45.11.3037-3045.2001">DOI:10.1128/aac.45.11.3037-3045.2001</a></span> <span class="meta">(Identifier-scope review: Publisher-indexed primary Results and Figure 5 caption inspected with web tool; direct HTML/PDF unavailable and EBI fullTextXML HTTP 500, UniProtKB release 2026_03: P50859 entry 162, sequence version 1; ERG11 locus CAGL0E04334g and reference taxonomy 284593. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11 transformant(Darlington-ERG11(Y132H, I471T)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11 transformant(Darlington-ERG11(Y132H, I471T)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review kakeya-2000-darlington-subject-context: CAI4 is recipient background, not transformant 12. SC5314 identifiers are reference-only; donor and heterologous-host comparisons remain separate. Source biological fields and Not assayed qualifier are unchanged. Original source background label: CAI4. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain CAI4</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain transformant 12</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11036010">PMID:11036010</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.44.11.2985-2990.2000">DOI:10.1128/aac.44.11.2985-2990.2000</a></span> <span class="meta">(Identifier-scope review: Primary Results and Figure 3 caption: publisher full text inspected with web tool; direct fetch HTTP 403, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; SC5314 reference taxonomy 237561. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11 transformant(JEY162-ERG11(824-955bpdelta + D275V) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11 transformant(JEY162-ERG11(824-955bpdelta + D275V) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review eddouzi-2013-erg11-reference-context: UniProtKB:P14263 and the retained gene_id identify a reference ERG11 locus, not the deposited clinical allele or tested derivative. The imported subject label remains unresolved. Source notation, compound-specific phenotype and species are retained without coordinate normalization, subject reassignment or independent attribution of combined-genotype effects. Reference-only source identifiers: protein_accession=UniProtKB:P14263.</span></td>
       <td>—</td>
-      <td><em>Candida tropicalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5482"><code class="curie">NCBITaxon:5482</code></a><br><span class="meta">strain 1909</span><br> <a href="https://www.uniprot.org/uniprotkb/P14263"><code class="curie">UniProtKB:P14263</code></a> <span class="meta">CTRG_05283-t43_1</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida tropicalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5482"><code class="curie">NCBITaxon:5482</code></a><br><span class="meta">strain 1909</span> <span class="meta">CTRG_05283-t43_1</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23629718">PMID:23629718</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8774; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.00555-13">DOI:10.1128/aac.00555-13</a></span> <span class="meta">(Identifier-scope review: Results, Tables 1 and 3, UniProtKB release 2026_03: P14263 entry 126, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11 transformant(MRL862-ERG11(Y145F)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11 transformant(MRL862-ERG11(Y145F)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review sionov-2012-parent-and-deposit-context: H99 is the parent/reference background, distinct from the clinical isolate and tested derivatives. Q870D1 has species-level taxonomy and a deposit cross-reference different from those reported in this paper; it does not resolve an exact subject allele. Source biological fields remain unchanged. No replacement protein, strain TaxID, genome or measurement is inferred. Reference-only source identifiers: protein_accession=UniProtKB:Q870D1.</span></td>
       <td>—</td>
-      <td><em>Cryptococcus neoformans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5207"><code class="curie">NCBITaxon:5207</code></a><br><span class="meta">strain H99</span><br> <a href="https://www.uniprot.org/uniprotkb/Q870D1"><code class="curie">UniProtKB:Q870D1</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Cryptococcus neoformans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5207"><code class="curie">NCBITaxon:5207</code></a><br><span class="meta">strain H99</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22155829">PMID:22155829</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1668; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.05502-11">DOI:10.1128/aac.05502-11</a></span> <span class="meta">(Identifier-scope review: Results and Discussion, Table 1: reference parent, clinical isolate and tested derivatives, Nucleotide accession statement: paper deposits differ from the imported entry cross-reference, UniProtKB release 2026_03: Q870D1 entry 121, sequence version 1; species taxonomy and EMBL cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(D278N G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(D278N G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(D446E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(D446E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(E266D G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(E266D G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(F145L E266D) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(F145L E266D) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(F145L) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(F145L) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(F449V) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(F449V) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(G307S G450E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(G307S G450E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(G448E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(G448E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(G450E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(G450E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(I483V G450E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(I483V G450E) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(K143R E266D) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(K143R E266D) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(K143R) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(K143R) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(M258L G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(M258L G464S) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(S405F) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(S405F) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(Y132F F145L) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(Y132F F145L) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(Y132F K143R) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(Y132F K143R) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG11(Y132F) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG11(Y132F) (amino acid mutation) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context: The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype&#39;s effect to each component is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C5_00660C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25385095">PMID:25385095</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1132; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.03470-14">DOI:10.1128/aac.03470-14</a></span> <span class="meta">(Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG3 transformant(JEY162-ERG3(S258F)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG3 transformant(JEY162-ERG3(S258F)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review eddouzi-2013-erg3-donor-context: UniProtKB:N0A5G3 explicitly links the clinical donor JEY162 deposit KC676662 / AGK44786.1, not the imported subject label, which remains unresolved. Clinical, heterologous-host and native-derivative observations remain distinct; combined-genotype effects are not attributed independently to this component. Reference-only source identifiers: protein_accession=UniProtKB:N0A5G3.</span></td>
       <td>—</td>
-      <td><em>Candida tropicalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5482"><code class="curie">NCBITaxon:5482</code></a><br><span class="meta">strain 1909</span><br> <a href="https://www.uniprot.org/uniprotkb/N0A5G3"><code class="curie">UniProtKB:N0A5G3</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida tropicalis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5482"><code class="curie">NCBITaxon:5482</code></a><br><span class="meta">strain 1909</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23629718">PMID:23629718</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8773; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.00555-13">DOI:10.1128/aac.00555-13</a></span> <span class="meta">(Identifier-scope review: Results: clinical and laboratory subjects, Tables 1 and 3, Declared deposits, UniProtKB release 2026_03: N0A5G3 entry 42, sequence version 1; KC676662 / AGK44786.1 strain evidence. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG3delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG3delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review rybak-2017-albicans-reference-context: The retained strain label is parent background, not the tested deletion derivative. UniProtKB:Q59VG6 and the retained gene_id ground the reference ERG3 locus. Reference protein and strain TaxID are not derivative identifiers. Native clinical-isolate and laboratory observations remain separate; no MIC or exact derivative identifier is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:Q59VG6.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/Q59VG6"><code class="curie">UniProtKB:Q59VG6</code></a> <span class="meta">C1_04770C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C1_04770C_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/28630186">PMID:28630186</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:1133; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.00651-17">DOI:10.1128/aac.00651-17</a></span> <span class="meta">(Identifier-scope review: Results: ERG3 disruption comparisons, Strain table: parent and derivative rows, UniProtKB release 2026_03: Q59VG6 entry 109, sequence version 1; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>ERG3delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ERG3delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review rybak-2017-parapsilosis-reference-context: UniProtKB:G8B7T4 / CPAR2_105550 and strain TaxID 578454 identify CDC 317 reference context, not a clinical isolate or tested derivative. The source row does not uniquely resolve either tested background. Its deletion claim is not the native clinical variant; no individual isolate, clinical protein, genome or MIC is assigned. Reference-only source identifiers: strain_taxon_id=NCBITaxon:578454; protein_accession=UniProtKB:G8B7T4.</span></td>
       <td>—</td>
-      <td><em>Candida parapsilosis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5480"><code class="curie">NCBITaxon:5480</code></a><br><span class="meta">strain Unknown strain</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_578454"><code class="curie">NCBITaxon:578454</code></a><br> <a href="https://www.uniprot.org/uniprotkb/G8B7T4"><code class="curie">UniProtKB:G8B7T4</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida parapsilosis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5480"><code class="curie">NCBITaxon:5480</code></a><br><span class="meta">strain Unknown strain</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/28630186">PMID:28630186</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8772; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.00651-17">DOI:10.1128/aac.00651-17</a></span> <span class="meta">(Identifier-scope review: Results: clinical isolates and ERG3 disruption comparisons, Strain table: two clinical backgrounds and their derivatives, UniProtKB release 2026_03: G8B7T4 entry 50, sequence version 1; EMBL and CGD cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>Efg1delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Efg1delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review sla1-2024-candida-reference-context: The source SN152 label denotes the parent background, not either separately tested derivative. UniProtKB:Q5ALV2, UniProtKB:Q59X67, the retained gene_ids and TaxID 237561 identify SC5314 reference loci and strain, not exact subject alleles. The reported plate-growth observations are not converted into MICs or clinical categories. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:Q59X67.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SN152</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/Q59X67"><code class="curie">UniProtKB:Q59X67</code></a> <span class="meta">CR_07890W_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SN152</span> <span class="meta">CR_07890W_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/39464835">PMID:39464835</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:5984; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.2147/idr.s483623">DOI:10.2147/idr.s483623</a></span> <span class="meta">(Identifier-scope review: Results sections s0003-s2004 and s0003-s2005: separately tested derivatives, Figures 4A and 5C: parent comparisons; source SN152 background context, UniProtKB release 2026_03: Q5ALV2 entry 130, sequence version 1; Q59X67 entry 115, sequence version 2; reference loci and taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Microscopy</span></td>
     </tr>
     <tr>
-      <td>MRR1 transformant(JEY355-MRR1(V877F)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>MRR1 transformant(JEY355-MRR1(V877F)) (transformant) [Not assayed] associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review eddouzi-2013-mrr1-reference-context: The strain label denotes reference background, not the clinical donor JEY355 or a uniquely resolved tested derivative. UniProtKB:Q5A4G2 and the retained gene_id ground the reference MRR1 locus. Source rows do not resolve allele dosage or individual derivative; drug-specific assays and clinical MICs remain separate. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:Q5A4G2.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/Q5A4G2"><code class="curie">UniProtKB:Q5A4G2</code></a> <span class="meta">C3_05920W_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <span class="meta">C3_05920W_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23629718">PMID:23629718</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8769; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.00555-13">DOI:10.1128/aac.00555-13</a></span> <span class="meta">(Identifier-scope review: Results, Tables 1, 3 and 4, Figure 3, UniProtKB release 2026_03: Q5A4G2 entry 131, sequence version 1. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>Sdh8delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Sdh8delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review huang-2024-parent-reference-context: SC5314 is retained as parent background, not the separately tested derivative. A0A1D8PGP5 and TaxID 237561 identify SC5314 reference context. CGD version A22-s08-m01-r37 explicitly lists the paper&#39;s orf19.1588 and UniProt&#39;s orf19.9161 as aliases of SDH8 reference locus C2_02620W_A, primary CGDID CAL0000192813, which exactly matches the UniProt CGD cross-reference. This resolves reference-locus nomenclature, not an experimental allele. Clinical and laboratory subjects remain separate. Source alteration, phenotype and assay are unchanged; no exact experimental accession, gene identifier, genome or numeric measurement is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:A0A1D8PGP5.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/A0A1D8PGP5"><code class="curie">UniProtKB:A0A1D8PGP5</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SC5314</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/39403939">PMID:39403939</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:10398; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1080/21505594.2024.2405000">DOI:10.1080/21505594.2024.2405000</a></span> <span class="meta">(Identifier-scope review: Cached primary XML: Table 1 t0001 identifies SC5314 as wild type and parent of the separately listed derivative; Table 2 t0002 and Results s0003-s2005 distinguish tested subjects; Results s0003-s2001 names orf19.1588, UniProtKB release 2026_03: A0A1D8PGP5 entry 35, sequence version 1; SDH8 / orf19.9161 / CAALFM_C202620WA; reference TaxID 237561 under species 5476; GO annotations cite the paper, not an exact experimental allele, CGD reference-only alias follow-up: https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/ORF19_Assembly22_mapping.tab (retrieved 2026-10-09, body SHA-256 722e0ec75f44c1c32ec3e222952015d2ed96cebd52c16fba25665dba84a2bfe1) maps both names to C2_02620W_A / SDH8, CGD https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/C_albicans_SC5314_version_A22-s08-m01-r37_chromosomal_feature.tab (retrieved 2026-10-09, body SHA-256 087a09f0bbefba9ca94743c19fee18f56e3ce9cddab33bc9b3eba40089abd983): feature C2_02620W_A, primary CGDID CAL0000192813, both aliases; exact CGD cross-reference on UniProt A0A1D8PGP5, not an inferred name-normalization or sequence match. Reviewed 2026-10-09 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Macroscopic observation (qualitative observation)</span></td>
     </tr>
     <tr>
-      <td>Sla1delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Sla1delta (deletion) associated with resistance to fluconazole<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review sla1-2024-candida-reference-context: The source SN152 label denotes the parent background, not either separately tested derivative. UniProtKB:Q5ALV2, UniProtKB:Q59X67, the retained gene_ids and TaxID 237561 identify SC5314 reference loci and strain, not exact subject alleles. The reported plate-growth observations are not converted into MICs or clinical categories. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:Q5ALV2.</span></td>
       <td>—</td>
-      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SN152</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a><br> <a href="https://www.uniprot.org/uniprotkb/Q5ALV2"><code class="curie">UniProtKB:Q5ALV2</code></a> <span class="meta">C2_01640W_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
+      <td><em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a><br><span class="meta">strain SN152</span> <span class="meta">C2_01640W_A-T</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000653"><code class="curie">PHIPO:0000653</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/39464835">PMID:39464835</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:10399; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.2147/idr.s483623">DOI:10.2147/idr.s483623</a></span> <span class="meta">(Identifier-scope review: Results sections s0003-s2004 and s0003-s2005: separately tested derivatives, Figures 4A and 5C: parent comparisons; source SN152 background context, UniProtKB release 2026_03: Q5ALV2 entry 130, sequence version 1; Q59X67 entry 115, sequence version 2; reference loci and taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Microscopy</span></td>
     </tr>
@@ -990,6 +1074,126 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Applied 18 pinned subject-context reviews, retaining reference-locus grounding while withholding unverified experimental protein/strain identifiers. Source alterations, phenotypes, species, genes, and existing activities unchanged. Refreshed provenance checksums on any previously reviewed claims. ERG11 parent, replicate and clinical-donor contexts remain separate.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Scoped 3 imported associations without conflating reference, donor and unresolved tested-subject identities. Preserved source alterations and phenotypes; refreshed older review checksums without biological changes. Added two independently reported clinical MICs in mg/L, preserving qualifiers and historical interpretation, and one deposit-grounded ERG3 same-isolate association without independent component causality.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Scoped two imported ERG3 associations: reference proteins and strain TaxIDs are not experimental-subject identifiers. Retained source species, background labels, alterations and phenotypes; clinical isolates remain separate. Existing activities and curator claims unchanged; refreshed older review checksums.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the whole-file PHI-base review checksum after carboxin reference-context reviews; all biological fields, activities and previous decisions unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the whole-file PHI-base review checksum after two additional carboxin identifier-scope corrections; all biological fields, activities and previous decisions unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the whole-file PHI-base review checksum after eleven additional identifier-scope corrections; biological fields, activities and decisions unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the whole-file PHI-base review checksum after seventeen additional identifier-scope corrections; biological fields, activities and decisions unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the whole-file PHI-base review checksum after one yeast identity-scope correction; biological fields, activities and prior decisions unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Scoped imported reference protein and strain TaxID to provenance, not tested-subject identity. Source parent labels, alterations, phenotypes and assays preserved; no experimental allele, genome or activity measurement inferred.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Scoped source protein and reference-strain identifiers to provenance, not exact experimental subjects, after primary-paper review. Parent labels and source biological fields preserved; no new allele, measurement or genome inferred.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after six identifier-scope corrections; previous decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after eight subject-identity corrections; previous decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Corrected CAI4 background label to the primary-study subject transformant 12; moved SC5314 reference identifiers into provenance. Source alteration, phenotype, Not assayed qualifier and activities unchanged; no experimental accession inferred.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Separated ATCC 2001 reference identifiers from the experimental derivative context. Source gene, background label, alteration, phenotype and activities unchanged; no experimental accession or measurement inferred.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Duan reference-scope review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Piotrowska parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Xu subject and species corrections; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Shima parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Mehrabi parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Scoped SC5314 reference protein and strain TaxID to provenance after primary identity review. Parent label, source alteration, phenotype, assay and activities preserved; historical locus alias unresolved, no experimental accession inferred.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the HDF1 subject-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Fouche parent-cohort review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_REFERENCE_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Resolved the SDH8 reference-locus alias through versioned CGD identifier metadata and the exact UniProt CGD cross-reference. Experimental identifiers remain withheld; source biology and activities are unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Resolved the Posteraro primary-paper subject as BPY22.17, retaining source spelling BYP22 in provenance. Withheld unverified protein and taxonomy assignments; source resistance assertion, alteration, phenotype, assay and other evidence unchanged.</p>
   </li>
 </ol>
 

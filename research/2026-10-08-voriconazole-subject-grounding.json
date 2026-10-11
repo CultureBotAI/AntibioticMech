@@ -1,0 +1,567 @@
+{
+  "snapshot_scope": "Historical checkpoint before the FKS1 reference-context review; original pins retained.",
+  "follow_up_review": "2026-10-08-echinocandin-reference-context.json",
+  "access": "Publisher full primary Results and Tables 2-3 inspected.",
+  "attribution": "PHI-base pinned AMR export, CC BY 4.0; UniProt Consortium release 2026_03, CC BY 4.0.",
+  "before_snapshot_sha256": "20d6f4355b750568614c9ffbbde4036f529408387b61cdd856040bb084263f97",
+  "citation_specific_reference_feature": {
+    "alternativeSequence": {
+      "alternativeSequences": [
+        "A"
+      ],
+      "originalSequence": "S"
+    },
+    "evidences": [
+      {
+        "evidenceCode": "ECO:0000269",
+        "id": "22314539",
+        "source": "PubMed"
+      }
+    ],
+    "location": {
+      "end": {
+        "modifier": "EXACT",
+        "value": 240
+      },
+      "start": {
+        "modifier": "EXACT",
+        "value": 240
+      }
+    },
+    "type": "Mutagenesis"
+  },
+  "clinical_observation": {
+    "activity": "RESISTANT",
+    "assay": "CLSI M38-A2 broth microdilution",
+    "evidence": [
+      {
+        "notes": "Table 3, clinical-isolate row: original MIC 8 ug/mL, equivalent to 8 mg/L. RESISTANT retains the paper's historical proposed interpretation, not a current breakpoint assessment. The clinical isolate is distinct from the tested derivatives. The unreported Etest result is not an additional numeric observation.",
+        "reference": "PMID:22314539"
+      }
+    ],
+    "mic_units": "mg/L",
+    "mic_value": 8.0,
+    "strain": "BMU29791",
+    "taxon_id": "NCBITaxon:5059",
+    "taxon_label": "Aspergillus flavus"
+  },
+  "compound_identity": {
+    "basis": "Existing exact PHI-base chemical join for this paper; no class or salt transfer.",
+    "identifier": "CHEBI:10023",
+    "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N"
+  },
+  "doi": "10.1128/aac.05477-11",
+  "limitations": [
+    "Reference-protein grounding is not an exact sequenced experimental allele or genome mapping.",
+    "B8NFL5 sequence version 3 changed in 2026; no historical sequence equivalence is asserted.",
+    "Source allele notation and UNKNOWN mechanism retained; no coordinate normalization.",
+    "The clinical isolate has a multi-variant genotype; it is not collapsed into a single-variant derivative.",
+    "Historical source resistance interpretation is not current clinical guidance.",
+    "No experimental protocols, constructs, patient details or additional engineered-strain MICs exported.",
+    "No clinical strain TaxID, sample/genome identifier or UniProt accession inferred.",
+    "All 217 PHI-base associations retained; other reviewed records change only review checksums.",
+    "NCBI requests and source-terms work remain deferred; whole-record review remains incomplete."
+  ],
+  "primary_reference": "PMID:22314539",
+  "primary_source_url": "https://journals.asm.org/doi/10.1128/aac.05477-11",
+  "proteins": {
+    "B8N2C8": {
+      "claim_role": "REFERENCE_LOCUS_NOT_EXACT_SUBJECT_ACCESSION",
+      "entryAudit": {
+        "entryVersion": 90,
+        "firstPublicDate": "2020-02-26",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2009-03-03",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "18775650",
+                "source": "PubMed"
+              }
+            ],
+            "value": "cyp51A"
+          },
+          "orfNames": [
+            {
+              "value": "AFLA_036130"
+            },
+            {
+              "value": "F9C07_2988"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Aspergillus",
+          "Circumdati"
+        ],
+        "scientificName": "Aspergillus flavus (strain ATCC 200026 / FGSC A1120 / IAM 13836 / NRRL 3357 / JCM 12722 / SRRC 167)",
+        "taxonId": 332952
+      },
+      "primaryAccession": "B8N2C8",
+      "primary_citation_crossreferences": [],
+      "reference_locus_crosswalk": {
+        "database": "EnsemblFungi",
+        "id": "AFLA_001488_t1",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "KAF7619869.1"
+          },
+          {
+            "key": "GeneId",
+            "value": "AFLA_001488"
+          }
+        ]
+      }
+    },
+    "B8NFL5": {
+      "claim_role": "REFERENCE_LOCUS_NOT_EXACT_SUBJECT_ACCESSION",
+      "entryAudit": {
+        "entryVersion": 92,
+        "firstPublicDate": "2020-02-26",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2026-06-10",
+        "sequenceVersion": 3
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "18775650",
+                "source": "PubMed"
+              }
+            ],
+            "value": "cyp51B"
+          },
+          "orfNames": [
+            {
+              "value": "AFLA_131060"
+            },
+            {
+              "value": "F9C07_1428495"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Aspergillus",
+          "Circumdati"
+        ],
+        "scientificName": "Aspergillus flavus (strain ATCC 200026 / FGSC A1120 / IAM 13836 / NRRL 3357 / JCM 12722 / SRRC 167)",
+        "taxonId": 332952
+      },
+      "primaryAccession": "B8NFL5",
+      "primary_citation_crossreferences": [],
+      "reference_locus_crosswalk": {
+        "database": "EnsemblFungi",
+        "id": "AFLA_005443_t1",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "KAF7620129.1"
+          },
+          {
+            "key": "GeneId",
+            "value": "AFLA_005443"
+          }
+        ]
+      }
+    },
+    "B8NUK6": {
+      "claim_role": "REFERENCE_LOCUS_NOT_EXACT_SUBJECT_ACCESSION",
+      "entryAudit": {
+        "entryVersion": 87,
+        "firstPublicDate": "2020-02-26",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2009-03-03",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "22314539",
+                "source": "PubMed"
+              }
+            ],
+            "value": "cyp51c"
+          },
+          "orfNames": [
+            {
+              "value": "AFLA_100590"
+            },
+            {
+              "value": "F9C07_11796"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Aspergillus",
+          "Circumdati"
+        ],
+        "scientificName": "Aspergillus flavus (strain ATCC 200026 / FGSC A1120 / IAM 13836 / NRRL 3357 / JCM 12722 / SRRC 167)",
+        "taxonId": 332952
+      },
+      "primaryAccession": "B8NUK6",
+      "primary_citation_crossreferences": [
+        [
+          {
+            "database": "PubMed",
+            "id": "22314539"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1128/aac.05477-11"
+          }
+        ]
+      ],
+      "reference_locus_crosswalk": {
+        "database": "EnsemblFungi",
+        "id": "AFLA_010303_t1",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "KAF7622990.1"
+          },
+          {
+            "key": "GeneId",
+            "value": "AFLA_010303"
+          }
+        ]
+      }
+    }
+  },
+  "records": [
+    {
+      "after_record_sha256": "2b790bd231eafe919206d124eef451302acd8d68f056ca7bc7cc9f0d0159cb5b",
+      "before_record_sha256": "31ef95de73ba8de79b618ef51b63f88647c8735ffecf044235cfb25d42ce2384",
+      "change_scope": "THREE_SUBJECT_REVIEWS_ONE_CLINICAL_MIC_FIVE_CHECKSUM_REFRESHES",
+      "changed_claims": [
+        {
+          "after_sha256": "2a5b0267f71d7cb366e040b2e6a49adbfda5c1b9f64a374c60fada5e47e79968",
+          "before_sha256": "7e250bce9adcb0d6735aedb556957bad776181892aadf2643caa393a53b05bea",
+          "claim_index": 39
+        },
+        {
+          "after_sha256": "7d25f16258d25324db9c8e85388b09a6ff068ced6818c6deebfd18e8512a8583",
+          "before_sha256": "281061b47a38d9d7ca5c0a66d2a19742a6607071c2ca7b78cb03325db55551d1",
+          "claim_index": 40
+        },
+        {
+          "after_sha256": "8cdb383d55a35b9b576e9e10972ea88ada3ef7fd14e4f0b98132749fa7149fda",
+          "before_sha256": "6add63d5d9b457979b0e621aac24e5764df1f1df0ea7b8ef9cd6a6dad47ea4b3",
+          "claim_index": 41
+        },
+        {
+          "after_sha256": "cc40ae10dea73ab245d92a9b5856ec47f0f0c521b4254f0fcca42302d1d3f0e9",
+          "before_sha256": "add483b3b7fe056314043a62f7c21f97805f88088bce83b6f42b7308373857d8",
+          "claim_index": 42
+        },
+        {
+          "after_sha256": "723e7f0356b4aac0b066bc4787491f591fd16c3f22e7d34b969d4d0e43f68319",
+          "before_sha256": "f5885c434166c964893db979c94e2f3707056c121ae67c5d79a9e7db5f6b0035",
+          "claim_index": 43
+        },
+        {
+          "after_sha256": "3ef04f9ce89148d0b81a4ef2aadb357c4d7cd870ee8eda2ba2dc636f6c6ae1e2",
+          "before_sha256": "73d1ed604002f8d52023558268a2bc9c3e71e42d36bec83d12b6c87c25b28115",
+          "claim_index": 44
+        },
+        {
+          "after_sha256": "d7619cec6710aa313246f132bc71bf1843878fbfe62fdd336bca44268ecd09d1",
+          "before_sha256": "a29fcbb43b51068cf05402e8943dab1230fcb15d4d4c6ab9360b2c5e52836b09",
+          "claim_index": 45
+        },
+        {
+          "after_sha256": "252160b65381ef9c6b863afada37c0257643c16dd3b6508c638bcaa83a5a602f",
+          "before_sha256": "45d270ba5cc18dd1f94eb40c8ba765a40d9741f31ee444290735190ac8ba4b72",
+          "claim_index": 46
+        }
+      ],
+      "identifier": "CHEBI:10023",
+      "original_history_sha256": "b5403de1695b0e65b66a92940cb08abfe75f55c8825980170ba31540db0951a8",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "unchanged_fields_sha256": "7c156d034c46968be1fcd7591d05735918cf44cc1588d0b4f6f9840fe4363fa0"
+    },
+    {
+      "after_record_sha256": "3e29d4c354aa2b83d1a49a9fb03e17a5369f3fe3027c00bf46fa029a502e4865",
+      "before_record_sha256": "36bb661f84aa555f39a9f6b3c996ae40da168d16ce805bb38cf261ca8c1f6df6",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "6972d96e5b51a2f1b31432884e965b0f9c1a08d0158b73bb91b0b40b22de683a",
+          "before_sha256": "6545f7007e6999adeea6fef8855500d48dcfca0d6cfb4b3ac728e974d8a9697f",
+          "claim_index": 2
+        }
+      ],
+      "identifier": "CHEBI:27641",
+      "original_history_sha256": "a7cfc318ac4ad38e6dbb85a38b7d4c954cb4c7014a862778f0f3e07219556837",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "unchanged_fields_sha256": "f78d8b7e0fbc7e9733fe3c284ba8b72ee2a9c419c6f263a74a693df00a8124ea"
+    },
+    {
+      "after_record_sha256": "21f1a18e6bd52fe4cbea06ee84d92aa9f66dc452dc370acf15360197f7c8ca45",
+      "before_record_sha256": "fc6f0908a396897ecad48a0dd6e8f9bbcfe199d5b2311a141706058053a47411",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "c129bee75e15205311436e72995bec946eb2c3c15b82b0173c29772e50028413",
+          "before_sha256": "39735e7bf32e247e27fad04571e6e2c3fc8c2f1610812e9d516c6f044c448dd4",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:81760",
+      "original_history_sha256": "22d08bcc5d2135f3edd13d18954687d0ec3d0e94cb9e45557699ca4212475c32",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml",
+      "unchanged_fields_sha256": "cb2bdf1a75d128bdba8df48c79bcf293132298d782fd7137e335b7e2e887d81d"
+    },
+    {
+      "after_record_sha256": "0b30f11264b4aea50b6cfeb18f5b7317130378cf5a7a7a6f90bc712b72ad6d51",
+      "before_record_sha256": "7901d6f83f0d35026f36b3e92d99b6ba575d60b0a5dc6636866c5e379f54f522",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "ad89f181e0509d1bb95474d39590ffd598c55fa5c059b5b423d8a155e7fa55d5",
+          "before_sha256": "7195aab0122025853da1a2c1185b56927a410953b77eea56e9f840f833ef5c67",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:8434",
+      "original_history_sha256": "0a3c2bcdc3d1e79e95c4ebeb784dd115ea36c54dce5fcdc73e0e9bbb22b5c582",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml",
+      "unchanged_fields_sha256": "0a0c06f9d9b341c2ba282b7fc25ac37b9e833bbd31db5806a7dd2e18b9b328e0"
+    },
+    {
+      "after_record_sha256": "29c9cdb57c74de70bcf60999b60fcfebbfb5734ec58d65c2a7a5b1a26832388c",
+      "before_record_sha256": "21aec337ee806e2fa0b83364307b4d00f844312c38752e643df3f41c6b125202",
+      "change_scope": "REVIEW_FILE_CHECKSUM_ONLY",
+      "changed_claims": [
+        {
+          "after_sha256": "3704e3393a19e3bf80217d584a239d41e4fdc388470e0628e4aca015374c4046",
+          "before_sha256": "3d3ecadb49a16a2c3b2a6912d9cd35fd850bb42fab1396504622e0e36a1a6379",
+          "claim_index": 5
+        }
+      ],
+      "identifier": "CHEBI:8489",
+      "original_history_sha256": "e7dfb906ded752863687bc03ab0b8038573987c9cd92de494d826761a4e79d91",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml",
+      "unchanged_fields_sha256": "8b58ffacf69aab5d67bd2cb6754d05723b02bc0f962b21dcb89a40a2f44d50c9"
+    }
+  ],
+  "requests": [
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:04:31 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "15",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:04:32.351224+00:00",
+      "sha256": "3c6cd700fbf6ba3771e6100a026b9b081b94b25a3363b0bd46ed182805113169",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AA0A089QDC9+OR+accession%3AA0A1D8PCT0+OR+accession%3AA0A1D8PGP5+OR+accession%3AA0A1S6KZ79+OR+accession%3AA0A1S6KZ87+OR+accession%3AA0A384J5Y1+OR+accession%3AA0A8E5ME34+OR+accession%3AA7EGE3+OR+accession%3AA7EQI8+OR+accession%3AA7F519+OR+accession%3AB0XYD8+OR+accession%3AB0Y628+OR+accession%3AB8N2C8+OR+accession%3AB8NFL5+OR+accession%3AB8NUK6&format=json&size=500"
+    },
+    {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "700",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:48 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:48.337670+00:00",
+      "sha256": "ab9b6fb4aa74e6474a1bf9072c1271ed3db3f956b41656c63a2045d69eef3448",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/332952"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:27 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:27.660911+00:00",
+      "sha256": "f6c7e0b374b30017173fa669945c9b1ff56ab8e36e7a8b91d1d6a304aae1d436",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5059"
+    }
+  ],
+  "review_sha256": "baf8974033191a3a1ef54f712c5d5f5b76db7d27a5d1c094a5044fb603f045b2",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_rows": [
+    {
+      "evidence_code": "Cell growth assay",
+      "gene_id": "AFLA_005443_t1",
+      "identifier": "CHEBI:10023",
+      "interaction_type": "antimicrobial_interaction",
+      "modification": "cyp51B+ (wild type) [Overexpression]",
+      "phenotype_id": "PHIPO:0000590",
+      "phenotype_label": "resistance to voriconazole",
+      "phig_id": "PHIG:336",
+      "pmid": "22314539",
+      "protein_accession": "B8NFL5",
+      "source_commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+      "source_retrieved_on": "2026-09-01",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "strain_label": "NRRL 3357",
+      "strain_taxon_id": "332952",
+      "taxon_id": "5059",
+      "taxon_label": "Aspergillus flavus"
+    },
+    {
+      "evidence_code": "Cell growth assay",
+      "gene_id": "AFLA_010303_t1",
+      "identifier": "CHEBI:10023",
+      "interaction_type": "antimicrobial_interaction",
+      "modification": "cyp51C-T788G(S240A) (amino acid mutation) [Wild type product level]",
+      "phenotype_id": "PHIPO:0000590",
+      "phenotype_label": "resistance to voriconazole",
+      "phig_id": "PHIG:337",
+      "pmid": "22314539",
+      "protein_accession": "B8NUK6",
+      "source_commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+      "source_retrieved_on": "2026-09-01",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "strain_label": "NRRL 3357",
+      "strain_taxon_id": "332952",
+      "taxon_id": "5059",
+      "taxon_label": "Aspergillus flavus"
+    },
+    {
+      "evidence_code": "Cell growth assay",
+      "gene_id": "AFLA_001488_t1",
+      "identifier": "CHEBI:10023",
+      "interaction_type": "antimicrobial_interaction",
+      "modification": "cyp51A+ (wild type) [Overexpression]",
+      "phenotype_id": "PHIPO:0000590",
+      "phenotype_label": "resistance to voriconazole",
+      "phig_id": "PHIG:338",
+      "pmid": "22314539",
+      "protein_accession": "B8N2C8",
+      "source_commit": "62e6a87a49397cba6ceb211b254d7ac8e5d09ff8",
+      "source_retrieved_on": "2026-09-01",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "strain_label": "NRRL 3357",
+      "strain_taxon_id": "332952",
+      "taxon_id": "5059",
+      "taxon_label": "Aspergillus flavus"
+    }
+  ],
+  "status": "SUBJECT_LABELS_RESOLVED_REFERENCE_PROTEINS_SCOPED_CLINICAL_MIC_CURATED",
+  "taxonomy": {
+    "332952": {
+      "active": true,
+      "parent": {
+        "scientificName": "Aspergillus flavus",
+        "taxonId": 5059
+      },
+      "rank": "strain",
+      "scientificName": "Aspergillus flavus (strain ATCC 200026 / FGSC A1120 / IAM 13836 / NRRL 3357 / JCM 12722 / SRRC 167)",
+      "taxonId": 332952
+    },
+    "5059": {
+      "active": true,
+      "parent": {
+        "scientificName": "Circumdati",
+        "taxonId": 2720871
+      },
+      "rank": "species",
+      "scientificName": "Aspergillus flavus",
+      "taxonId": 5059
+    }
+  },
+  "tested_subject_labels": {
+    "B8N2C8": "AF-A",
+    "B8NFL5": "AF-B",
+    "B8NUK6": "AflavC-788"
+  }
+}

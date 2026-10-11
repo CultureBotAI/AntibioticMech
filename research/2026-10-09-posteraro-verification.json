@@ -1,0 +1,175 @@
+{
+  "all_current_record_hashes_verified": 2939,
+  "artifacts": [
+    {
+      "path": "curation/phibase_grounding_reviews.json",
+      "sha256": "5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702"
+    },
+    {
+      "path": "data/raw/phibase_amr.tsv",
+      "sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85"
+    },
+    {
+      "path": "tests/test_posteraro_grounding.py",
+      "sha256": "42c0aa6fb0fff275a8209d247ec756984e98c27fdc7ef6407614d724fbbee857"
+    },
+    {
+      "path": "tests/test_phibase_grounding_reviews.py",
+      "sha256": "973bd7f79dc602e63a692eeea6a07c17856259871a9eba38ec8a13648612a9c7"
+    },
+    {
+      "path": "tests/test_organismal_context.py",
+      "sha256": "ffb8c0aa164b70a32be142153066af2cbbaca3cb823f863585b49afdd5ca4626"
+    },
+    {
+      "path": "scripts/run_qc.py",
+      "sha256": "3cb24b1e8b2912dee394e6c53cdd87ab30502952bd567fba1b5f9348800a0965"
+    },
+    {
+      "path": "README.md",
+      "sha256": "07ca21d126915ead393099444236a094dc36c039bdb1cf60623ac63f523e3580"
+    },
+    {
+      "path": "data/embeddings/corpus_map.json",
+      "sha256": "dac6935acf0b5c6ce29a5c1847076e40aaed61377bfeb92a3f54c48c02aec8b8"
+    },
+    {
+      "path": "data/embeddings/meta.json",
+      "sha256": "927d446ab677b7d98f12e74d698b4b9bb8e7853d87b2f699a5ca4bf075b91982"
+    },
+    {
+      "path": "pages/map.html",
+      "sha256": "7dd4d549ba2144d9ca90a2230fef5218eee92e3a95490435c50e53588a47e615"
+    }
+  ],
+  "browser_limitation": "No browser rendering or screenshot verification was performed.",
+  "byte_identical_records": 2917,
+  "changed_records": 22,
+  "checksum_only_claims": 184,
+  "corpus_research_complete": false,
+  "coverage_retry_suite": {
+    "errors": 0,
+    "failures": 0,
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/coverage-retry-tests.xml",
+    "seconds": 3.482,
+    "sha256": "f5f63ca5d47a4e7b5740eca43d616411286034cc2c8686ac2ac84641cc19dc50",
+    "skipped": 0,
+    "tests": 44
+  },
+  "curation_dossier": {
+    "path": "research/2026-10-09-posteraro-subject-reference-grounding.json",
+    "sha256": "028f6ccda054e1089a857af6f5dc8eb66abbffc768c7aef6b2536f52d07dd648"
+  },
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/corpus.json",
+    "sha256": "98c1197508fd138d700979ad19184a62da8f209c0cc6281e2c6bdd5b893a320c"
+  },
+  "current_counts": {
+    "pending_discovery": 2626,
+    "records": 2939,
+    "resistance_assertions": 4788,
+    "score_rules": 467,
+    "with_resistance_mechanisms": 300,
+    "with_score_rules": 16
+  },
+  "current_ledger": {
+    "path": "research/2026-10-09-posteraro-resistance-grounding.tsv",
+    "sha256": "912e612ea24459847895f733311bf48d162c0968329bd2c58957a3ab3cc9b300"
+  },
+  "date": "2026-10-09",
+  "embedding_documents_changed": false,
+  "experimental_alleles_validated": false,
+  "failure_resolution": "Historical coverage counts, a prior-checksum update count and the no-TaxID exception were updated to the new association. Five additional live-corpus expectations were updated after full QC exposed them; historical dossier counts remain unchanged. Exact source/subject/provenance assertions remain; no production gate, evidence mapping or schema rule was relaxed.",
+  "final_full_qc": {
+    "PYTHONPATH": "/private/tmp/antibioticmech-qc-science-20261009.GtY47E:src:.venv/lib/python3.13/site-packages",
+    "collected_tests": 2206,
+    "command": [
+      "/private/tmp/npmech-rdkit-2026.03.5/bin/python",
+      "-u",
+      "scripts/run_qc.py"
+    ],
+    "elapsed_seconds": 2171.21,
+    "exit_code": 0,
+    "passed": 2203,
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/authoritative-qc-final.log",
+    "sha256": "720e83eec3895da76871f9ad13df1715defee6ba2f2371797fcb7b59d8a1dba0",
+    "skip_reason": "Three empty command-frontmatter parameter sets, not biological tests.",
+    "skipped": 3,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_seconds": 1886.94,
+    "warning": "Existing sssom_schema LinkML dataclass-extension deprecation.",
+    "warnings": 1
+  },
+  "first_authoritative_qc": {
+    "exit_code": 1,
+    "failed": 5,
+    "passed": 2198,
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/authoritative-qc.log",
+    "sha256": "f3d64baabb9b13870cc80f3fecc44acdc496ca24842eb31297f415984a6427b2",
+    "skipped": 3
+  },
+  "first_retry_suite": {
+    "errors": 0,
+    "failures": 1,
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/retry-tests.xml",
+    "seconds": 43.97,
+    "sha256": "bf747d8c941df08d895b0219243113629b12cf6e9978c2a892d6050f5610d9e7",
+    "skipped": 0,
+    "tests": 128
+  },
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "initial_focused_suite": {
+    "errors": 0,
+    "failures": 13,
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/focused-tests.xml",
+    "seconds": 422.558,
+    "sha256": "a601233283f53c09b231088b2d0fa95e4fbeca6c75b28126025e85432fa04520",
+    "skipped": 0,
+    "tests": 217
+  },
+  "last_retry_suite": {
+    "errors": 0,
+    "failures": 0,
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/final-retry-tests.xml",
+    "seconds": 1.959,
+    "sha256": "680ce0ffedbc2a3837c7fc99e4b5d5f86535c8c07842acbc7206c1570da80d32",
+    "skipped": 0,
+    "tests": 1
+  },
+  "live_browser_verification": false,
+  "ncbi_endpoint_requests": 0,
+  "new_scoped_claims": 1,
+  "phi_identifier_scoped": 185,
+  "phi_pending_associations": 32,
+  "phi_pending_papers": 13,
+  "reconciliation": {
+    "path": "research/2026-10-09-posteraro-final-reconciliation.json",
+    "sha256": "3b0cc087c300916dae4f2b9a23373b0a100dce70c17cb46f2e617eb9146bd5bd"
+  },
+  "scope": "IDENTIFIER_SCOPE_AND_PUBLICATION_VERIFICATION_NOT_COMPLETED_CORPUS_RESEARCH",
+  "skip_reason_check": {
+    "errors": 0,
+    "failures": 0,
+    "path": "reports/resistance-grounding-2026-10-09-posteraro/skip-reasons.xml",
+    "seconds": 0.251,
+    "sha256": "0360dee94fd9a528ea60ee15047157815ba671cd6a3977fce55ebcc67b6453d8",
+    "skipped": 3,
+    "tests": 41
+  },
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "subject_corrected_record": "CHEBI:46081",
+  "whole_record_primary_review_complete": false
+}

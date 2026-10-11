@@ -1,0 +1,1215 @@
+{
+  "attribution": "Nakayama et al. 2001, Antimicrobial Agents and Chemotherapy; UniProt Consortium release 2026_03, CC BY 4.0.",
+  "before_corpus_sha256": "280ef14900d0beee156c30c15fc5ce0d753d0e6d27bb4595802bf378b9fa8f9a",
+  "changes": {
+    "checksum_only_claims": 165,
+    "new_scoped_claims": 1
+  },
+  "corpus_phi_scope": {
+    "identifier_scoped": 166,
+    "pending_associations": 51,
+    "pending_papers": 22,
+    "retained": 217
+  },
+  "limitations": [
+    "No exact experimental derivative or allele assigned from reference metadata.",
+    "No new sequence, construct, protocol, MIC or clinical category exported.",
+    "NCBI access and issue 1040 remain deferred; no NCBI endpoint requested.",
+    "Corpus-wide primary review remains incomplete."
+  ],
+  "preservation": {
+    "new_measurements": 0,
+    "record_files_byte_identical": 2918,
+    "record_files_changed": 21,
+    "source_owned_claims_retained": 217
+  },
+  "previous_review_sha256": "f4e40afc3e50a3680a1b4a6fb1556385b8a235bdbe3041ef0aa54dbac74ffc5c",
+  "primary_access": {
+    "citation_request": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-11600353-citation.json",
+      "cache_sha256": "6793a5a75e18f2b70cf7ef05518bf185989c275fdf808ca0621846e287e11cd4",
+      "retrieved_at": "2026-10-08T13:14:53.471337+00:00",
+      "sha256": "5a0d1509ec33d0718135850078b33366f9ac34fac9659175db17fb0c09e01cb7",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11600353+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+    },
+    "failed_fulltext_request": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/nakayama-2001-ebi-xml.json",
+      "cache_sha256": "70b2c78c06ee5d95eb8d742905921497f70b1ee5e1311991f503b91a1a6a5b6b",
+      "retrieved_at": "2026-10-08T19:40:16.796582+00:00",
+      "sha256": "7b04b80b85abe40d4f01387d70d5a4d200faca7578fbcfcd07e37256759424f6",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC90779/fullTextXML"
+    },
+    "locations": [
+      "Results",
+      "Figure 5 caption",
+      "Table 4"
+    ],
+    "offline_verification_limit": "Cached metadata verifies citation and reference identities, not the manual reading of publisher-indexed primary text. Direct HTML/PDF access failed.",
+    "reference": "DOI:10.1128/aac.45.11.3037-3045.2001",
+    "review_scope": "PUBLISHER_INDEXED_PRIMARY_RESULTS_INSPECTED_WITH_WEB_TOOL_NOT_CACHED",
+    "source_url": "https://journals.asm.org/doi/10.1128/aac.45.11.3037-3045.2001"
+  },
+  "protein": {
+    "entryAudit": {
+      "entryVersion": 162,
+      "firstPublicDate": "1996-10-01",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "1996-10-01",
+      "sequenceVersion": 1
+    },
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "genes": [
+      {
+        "geneName": {
+          "value": "ERG11"
+        },
+        "orderedLocusNames": [
+          {
+            "value": "CAGL0E04334g"
+          }
+        ],
+        "synonyms": [
+          {
+            "value": "CYP51"
+          }
+        ]
+      }
+    ],
+    "organism": {
+      "commonName": "Yeast",
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Ascomycota",
+        "Saccharomycotina",
+        "Saccharomycetes",
+        "Saccharomycetales",
+        "Saccharomycetaceae",
+        "Nakaseomyces"
+      ],
+      "scientificName": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+      "synonyms": [
+        "Nakaseomyces glabratus"
+      ],
+      "taxonId": 284593
+    },
+    "primaryAccession": "P50859",
+    "source_gene_cross_reference": {
+      "database": "EnsemblFungi",
+      "id": "CAGL0E04334g-T",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAGL0E04334g-T-p1"
+        },
+        {
+          "key": "GeneId",
+          "value": "CAGL0E04334g"
+        }
+      ]
+    }
+  },
+  "protein_scope": "ATCC_2001_REFERENCE_NOT_EXPERIMENTAL_DERIVATIVE",
+  "record": {
+    "identifier": "CHEBI:46081",
+    "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N"
+  },
+  "records": [
+    {
+      "after_sha256": "39b7717b4f0df8752e7ce9757b5a143ff433bbd5c88b73af1e8c699a8bb02a5e",
+      "before_sha256": "6b68cdacd1d583bb698b657a00c63a12fa41c97f26a5befcec41e3bc4e6afb07",
+      "changed_claims": [
+        {
+          "after_sha256": "512e1f764b45abbf29e9a1f6ce8bc2cba1ebc6041b8b2fb95e804c5295cbef56",
+          "before_sha256": "f1099ab0452171be8ef771ba54fdc5b3ca8106cd136c4e85051205788be29ff7",
+          "claim_index": 0
+        }
+      ],
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml",
+      "unchanged_fields_sha256": "8fd100a30a8aef7b8dfed2198c6f166cbbaf609cb85ec981b1d57441fbf7eb76"
+    },
+    {
+      "after_sha256": "1012e909353b29a719facaafa3ff999ece51ce53dead058842dfe5ee49fd6fba",
+      "before_sha256": "e70412d1db58f6cacf75d7266ed504937d32518a139f8d5c4865a6ecddbdee8f",
+      "changed_claims": [
+        {
+          "after_sha256": "7424c0712d4c921f85163ecf3b94be9104853663547160dc7382f902bcf849bd",
+          "before_sha256": "762c85fd6c4c6d33bd64cd704cf103fde7b56c9fadffc40efc30c504f13e3703",
+          "claim_index": 12
+        },
+        {
+          "after_sha256": "dc06fedf92c6b53acf4fbeba71a145c8c8e84d8d948c1a0198b2183057a94c69",
+          "before_sha256": "a88393ed4bedd417e75abd17e5de61e508aa431746fd1a7d075ebb841c0c30d9",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "babcd4bce58cfd9a939ac6a68eace1c5f60f72800149f64808ee867452e357a3",
+          "before_sha256": "d5755ec02c5f3011bfe28520f6ac48b9440513f394bd34f844e898c6621a6a6f",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "e660a0aea57d4bf2a3e0c7b2922b67514555887c2b8915d9da52074056680b9f",
+          "before_sha256": "7f602a3f1a6a29491d2cbf2e306520c31d04126eb693040306b06529b70a6694",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "a78d58de75c460df80eb88691c1436f879114ee921312ae4e162b0e78c2a6d90",
+          "before_sha256": "b395c97c0559678c28cdbb56a69f33a3a5661bf2117b8ef5174ef1934df66b33",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "73c2c40de4d32f4d7d4f3aa1206aa1f04e3bda950e9e04653209e6a1ce0bacc8",
+          "before_sha256": "dcbf6be6776d749c37212fff02b8b189237007f31111ef6cc3cd1e108955a135",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "16ce595e40298c0d7d3f9daae71bd7d1dd0ad70131f369c7d8c476303fafba39",
+          "before_sha256": "1d0eb8959eeefd2b8a0fbc77a0b11036054049b75024af1a7c597f361bb1b164",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "323306ca7f77b731254cca409708bbe9d5cd26509244a7c640f6da1aa0d1156d",
+          "before_sha256": "d96b9dc282ed62bc7ad8fdd69628e465e2d5fdf1af82763a76d42cf186edad95",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "a8593474a6adf824a246654ca164c7c0fc9daba2e3720b8d10f101aaa958ea9b",
+          "before_sha256": "3cd4e497cddb1ac7775f7f751751cf09381a8144fecd8b9429679f31429fbc4f",
+          "claim_index": 20
+        }
+      ],
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml",
+      "unchanged_fields_sha256": "519983a9ed72285e8969c834af012f0f3ac770b1ea17e126a430d7071ee3ce27"
+    },
+    {
+      "after_sha256": "ca7cbc4adab0fcdf2cd46bf9a4a96d409b80a0ba872bf56d40ea1c31fac6ace0",
+      "before_sha256": "5be9cceb75b26b8aef672c04b2fe6b703412a47c7ca484337fdb9eb1f27a3cc5",
+      "changed_claims": [
+        {
+          "after_sha256": "25b6b81c8cd429bfd6b5137a07c6ce29ef8e2d6293108a4691046146cbceb9c7",
+          "before_sha256": "4344b7c67d3572c6db86e128293eb4d98e79b6c7b0eecd0cde8abddd70db2cc9",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "dfb72b7c421fcb3b2f83cc0330f02c09efeeccbbfebce737b75a2e3156896b72",
+          "before_sha256": "83f2a972e21edffb2841a0ccd6abdb40561f9df591661d4d13b856a80609a902",
+          "claim_index": 7
+        },
+        {
+          "after_sha256": "6a64ab85732fe87f84ebbc3235c71449e5847b480c4ab4ee3987132d757dc961",
+          "before_sha256": "a7dc9bad964dc1dfcf0be5b842fd156ae0273421b8cf9de1df03cc9d286ea93c",
+          "claim_index": 10
+        }
+      ],
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml",
+      "unchanged_fields_sha256": "fb3f0420d0466ae62c075d4f434c6f9dfab7638dc84a05ed427c9ef18e0784ae"
+    },
+    {
+      "after_sha256": "1d04b3bd3ba81258b5b057632a7aa122a54e74583c584a7264962c1129aa54d9",
+      "before_sha256": "499f8a614a457870050d05d3b8a7edc506c49938cec229a74d44824d3f17b1b8",
+      "changed_claims": [
+        {
+          "after_sha256": "e9becc2705327934891f09f77cbfa2e17cc2e8510e563858c2a698c239e2f8c5",
+          "before_sha256": "ded396e7f6ee471048b385fcfd1894edd32625c4411759185d8d5e13f14351a5",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "c3573f0b376f839778bb294bc939bf3c7a2543686fcf57250deb9623f9aeca10",
+          "before_sha256": "e983088b8bbf27bcd257f315c40a16f82e7a5f2b2be16554f05b692894f19af1",
+          "claim_index": 9
+        }
+      ],
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "unchanged_fields_sha256": "780cdaaaf9cc86f7a5882fbe6f1b80431774d6d696db42056ae73e5b0269aab4"
+    },
+    {
+      "after_sha256": "8bd555868ab955c126666aee1e8db6eb8b6304fcd6c503f32bfa545fdfa075e2",
+      "before_sha256": "8033542db0f8fa09db1a4ab5ff83aaa979401f208564b81ace3766c408d02dde",
+      "changed_claims": [
+        {
+          "after_sha256": "6badede63ca64e6b95466fb9579a9dfa17c15cf902a40f772974489352fe9758",
+          "before_sha256": "5a5a4f3483b96bb9cdb1cda8b1ccfa432d44dd80370794536d00cb8039b135f8",
+          "claim_index": 1
+        },
+        {
+          "after_sha256": "7f7b322c962a07f922d293b39fabb5bd7d663972eaa345d92273afa461218502",
+          "before_sha256": "b7961c2d3cb6176f5a8bc0b2f1149752dce005c4de878f29ec12cd301a178166",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "af78e6114e07c28a18db40b2e1f9927fe73d4ac543203001b50e60366bcee3a7",
+          "before_sha256": "f7c7a563b0964d76e7f980b6d919bd09492fca84217081e1a455f996aace8e81",
+          "claim_index": 3
+        },
+        {
+          "after_sha256": "6c56a8ca3e7ebeac38c17555ec98795d3b43711c2c34b16b55a4fc981611fad7",
+          "before_sha256": "8155addacd8686a4ac79c0a6b3e8052abf565b678bcb52692d52c7d9cedbd840",
+          "claim_index": 4
+        },
+        {
+          "after_sha256": "ed081378cb55751d0d14fa5a9b62de6e5a73f929ccbbac40853098f66b06c3db",
+          "before_sha256": "85315c8ee2ae9c18fd12d3cb9ba0f60c0848c26a902d0c12b972f62cef1b0a41",
+          "claim_index": 5
+        },
+        {
+          "after_sha256": "1947976535fd32a83cc089cbd8871944514eb5d67bde63f2f63490521d7289c0",
+          "before_sha256": "1e0533798fbf32d4765ce263b1411a4fbb40a14c8d74164e01c97eb9c32f0dc3",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "8401f6b9f0a91c4b09720b8729f19818bd5999e729263c2cea45adb21c88d1b6",
+          "before_sha256": "e01b6194fc5a9beb1bc1e916d4c6154fb465554869bea2932d3c4eaecd449093",
+          "claim_index": 7
+        },
+        {
+          "after_sha256": "7b45cafbe5cb1747ce7d52207b24ef39672526fcdfdc50f9a2dc205be43d08c0",
+          "before_sha256": "27bbd808b0949c506c02ed7b6c7133a1c36ead1c6803d2e31aa0d8d60a170c92",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "977ea7118ba25e43e73ad39967dcd85588b8d447e9e11585f1d578e931b451cb",
+          "before_sha256": "f48b7db936c51de634993475fa455b4ede251a7f919cb1cad4be48ea0bca536a",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "5550fa055776e7e2cef46477668523283ca5c0a5cbf215cbc130c8568adb49ec",
+          "before_sha256": "6bfa070d3f9fe936b863d4d22dd564fdb7e819f5ccc766c348b88242197ba9e6",
+          "claim_index": 10
+        },
+        {
+          "after_sha256": "0a837fc62a86feab6d5262a8f7aca0783160cf392139f6e98f3da511cf342abf",
+          "before_sha256": "76fdf80786d1110b3f742822f09938627c0fa5a3cf346c17aa263aa52acc0346",
+          "claim_index": 11
+        },
+        {
+          "after_sha256": "bab70523990cce33cae93a58d3e43a5c45516b005b57961ddf9d50bcbeafb088",
+          "before_sha256": "ed1bf5e1bd376d7750a05e5c1c8b49712c4aecc723fa27f87852ec0cad739b09",
+          "claim_index": 12
+        },
+        {
+          "after_sha256": "13152a02c972a0a74fb409b82755f4f79b03c0ed18f9d4f2d403ed11dbff8c7f",
+          "before_sha256": "673fd5fdf1cbe76fe9a064e0df726bd2bd9a75dee63fc1dcc5067a653bf0ff0e",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "1260dc5c28371e64ffc6d8e1851b3abd0a461eb2a15f40d4e02c13a8e9187dfc",
+          "before_sha256": "f0cd3348f7186fb12524ed42522c0e89e1811cc280d2bfb70ca146bf938e1551",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "699d02b76c7e4c6e26b184812ab320ebf6844ec877391b53268c862131a586b5",
+          "before_sha256": "9344a520ee8719e8b648b2ab38ee6230aaa14bf6116980612249ec25b34c987d",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "b2982656d2b450090daeae7c6e859a68fe65f97fbccf3acf51810e416c4e3ec6",
+          "before_sha256": "29430cf5d12dd3a66123110cbf168e9e5c6f13ee0b5d934f7b5374a636625053",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "0500f0900e314a45a38768d5701902d7eb4ef818be5b365fe3b2f9d360355829",
+          "before_sha256": "5cb4261331910b35cfc6ce36c783863206985d98f4a88c788ec612ae738cfc59",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "9479fc3eae74cab52c3d57f4089eef6776d2a29ef2fbc6cbbe335cb3db9b4383",
+          "before_sha256": "05ed9aae45376ac581fb45e7e94844ae77deded82acde31eaefa674481e00a90",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "2b35c8f1f884d55d906975518f2bb0c8ea81b8d46bd517c22aef31fb72f5224c",
+          "before_sha256": "eae5c2c9b6d720f4c8f97d706b1dfd45b2195eb97f49c79614d008d6f48d346c",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "8b26d462c500d23798e2d219d44d4b46a533df3f67e41f63c379dcff0a4b3294",
+          "before_sha256": "0f440f7f38fb9815cd21668df4f780ae0da89a07e2c56c73efe47ec831cf7772",
+          "claim_index": 20
+        },
+        {
+          "after_sha256": "3456c7b10fb6f17629bc3b179a0411fcfa99f171675baf0c4cf5bfb92e8b1af6",
+          "before_sha256": "0e887ec1d4a9e5fd6f261c49ac025583e31fefb9ae308b127c41af06743a3386",
+          "claim_index": 21
+        },
+        {
+          "after_sha256": "48830c909bf806f2edc0ba40a14e75e22cad2e172b11336d3f63121f5b1161b4",
+          "before_sha256": "ec0626b429a00a1921065a17f7f08ed61b65f2f610930a2e4dd8086031091d2e",
+          "claim_index": 22
+        },
+        {
+          "after_sha256": "1bda468245c9ff14a4c0a7177d834f9a7e97926694f6603bee9810f0679bd15f",
+          "before_sha256": "5cdb5fb6e293ca2ed1e6c16c4779262e84b342c3184ba5101cda9ad67971e1f1",
+          "claim_index": 23
+        },
+        {
+          "after_sha256": "36eee4a3ac28f13bd97da444a4d62ba8d0a01ac254c5c245e84cac34be1ec589",
+          "before_sha256": "d1a02d671bc69b37aa8c8a3279840469ea681af8ff2a1e632ba730707deeb5f2",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "2c29e60c90bd17eeafddf55bbbfadebe15f3526fbeccf62fdfe95a89e956dabf",
+          "before_sha256": "9a600ada7e288518acec6239d0b27ef39e10d85166282eecd1b282edf946c6ff",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "e3e8bb62aacef80693ba795e5b2c02c490a17a56a1bca9857e988a83368072db",
+          "before_sha256": "c1249bfaafa1883a120cdf6074475e09e463140f35934bb024d3571c4684848d",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "384e4a874578292e208c4c7bfd3daab9056b2a4ce8a60934b22c6c0f915b1ba4",
+          "before_sha256": "9a17fb404506f0d73d88b185542210d6882e650f7007b552522933aecf1499e0",
+          "claim_index": 27
+        },
+        {
+          "after_sha256": "30e0f3eb67afefa122dd6673e255cfb2b167c39a7874fbb5a1b796e72ab31c63",
+          "before_sha256": "9673cf9658a1d92967dcaf287dbfd89b5d0dce148e31458cc39c2cd52cc73bd1",
+          "claim_index": 31
+        },
+        {
+          "after_sha256": "d4bb720dcc9d970437d7aba09fd79e008e9bbf6b321b2bf9dcd9648d791cb1ce",
+          "before_sha256": "f5daae57b29718d8b48811b09719e57c893f2b739b2fd1c350def9013d7f6017",
+          "claim_index": 34
+        }
+      ],
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml",
+      "unchanged_fields_sha256": "c0482f3a3f184b09fac2b2bec803d68cf6e7e5e46c6a4baff4aa37625645e81c"
+    },
+    {
+      "after_sha256": "53da99440d9427b6098d7add83b0863b1e161ced9be00c2627f260ffbef4b35e",
+      "before_sha256": "b5700c18b6c04fc64716e9714d4d90b615a624051f2f03c39ede3f5b1a1c6aeb",
+      "changed_claims": [
+        {
+          "after_sha256": "b44727c4397616c02581ba88fddf28a1ff1737019b80c05ddc6a701c00adf4de",
+          "before_sha256": "0a62b93b445aa844524065aa68057c80884f6c05492c943e216a719f14dbf0d6",
+          "claim_index": 22
+        },
+        {
+          "after_sha256": "49f816ef86ba2be26310b2241d386c97e2d7b72df09c544f4ef36c41a7e71da5",
+          "before_sha256": "e9e10bfe1e106b5bfd023fa29996f93b2ba8af843bc963ac2501a659fabd1804",
+          "claim_index": 23
+        },
+        {
+          "after_sha256": "a75dd6f35e8bf1b0e2b8f63d1cb4322e3a8f62d8a862f6b5468dee04a5de57b2",
+          "before_sha256": "fb4ea39ccf6e0e14dfbe28b6cdea78fda8740fcf3ba38d3574fbe8e77a12d302",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "7de4fa90dfbd8a275434d0d388f39d80df9f2506f5259ae68274324328c75d04",
+          "before_sha256": "e24dd3a55d07fac604de4ad9e817c16ad6206eaf8e22b3c1c60be22b91130325",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "c0e50967be241f73709c2774511a0e2af5c2b9dc6f4a8b59cf7c87bce0d1f95e",
+          "before_sha256": "ccb3a0a63b36bbbdc69f7137a119d9eac2866eb0aacdb346e6aca257d3384540",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "222c0f7aa7cb46c09fcc3c4fee82f808e858312b4d1884149a961fb5ab4b71e4",
+          "before_sha256": "b22cc4b86966e32c625f0fc80dd04a1385c3fbf76812e7dab8634c13e1b6e50d",
+          "claim_index": 27
+        },
+        {
+          "after_sha256": "61dfa929bf1a86d479133e923d9e94c04a0ab963b516eca039e2caa520b21957",
+          "before_sha256": "e6273a8d0327bcea161a28d8d9ab0e307342e5aa0d6b8be2e698cbc3666eb640",
+          "claim_index": 28
+        },
+        {
+          "after_sha256": "38445602503cdefae7a368b71ee7b44eb3ec0792b138a426eb1efd685006f8f3",
+          "before_sha256": "c43454fb8962137427621fe9ef1dafe509683ed25c96ee5ddef37bf523152c5e",
+          "claim_index": 29
+        },
+        {
+          "after_sha256": "7e70fe59410b218ba93a30191751765e34b2bb94e90746707cf095b8ef3b2f99",
+          "before_sha256": "9c41315a7ffb0f7bdab0f04aac9eed122c3308a3f7ec65d9254ce0dd40a2de96",
+          "claim_index": 30
+        },
+        {
+          "after_sha256": "841d33349a117aba69802e20a7c96deead8eb137d8ac008f10404c28e7986426",
+          "before_sha256": "b084e8076af47632b3c74fbf4e2ac92d4cdb1a643cddaf66fde136c50d83d103",
+          "claim_index": 31
+        },
+        {
+          "after_sha256": "dddc10149a48a913d6445e5e39f2008c491904020f9ed16b429a30d4b12d188e",
+          "before_sha256": "a7d1f5639179ef1869e82bf34d0bfdbc40b6b06cc94632215cf0a8b7b08f5dfe",
+          "claim_index": 32
+        }
+      ],
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "unchanged_fields_sha256": "ef086d0dcd43e29e4faec73af510b03d6f8f9b27653bce544e8a79149d50e998"
+    },
+    {
+      "after_sha256": "560a4a425613940948ada03c349b3702107249128158f10e65a111542b6fb1fb",
+      "before_sha256": "1a685e0321284adeb896bac9c437f8c7b6573ceef23553de49ca862425b1480e",
+      "changed_claims": [
+        {
+          "after_sha256": "a50d1d11f39340e4768b41d99443f83cca65ae21a04370f61beed0f2962f8fbe",
+          "before_sha256": "d978ee372eb8b13e8f31d319c1d3063c79576b2623cb22e9cde0e0032552393e",
+          "claim_index": 2
+        }
+      ],
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "unchanged_fields_sha256": "f78d8b7e0fbc7e9733fe3c284ba8b72ee2a9c419c6f263a74a693df00a8124ea"
+    },
+    {
+      "after_sha256": "30c7e3f3c1436b88d2b22a2de08383949560868825d391ca3808ac24218fc608",
+      "before_sha256": "33704e4a38f185375940212b90229093d4c4dc3d3ee2f112672e9340b0c7e381",
+      "changed_claims": [
+        {
+          "after_sha256": "dd51809d93d932ff2e8102c93605166ab52b193673776705c2939e9251b4ea51",
+          "before_sha256": "cdee14209cab5bf4563009d341ca40ddf592f260e65c320403a526c499c120ed",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml",
+      "unchanged_fields_sha256": "cb2bdf1a75d128bdba8df48c79bcf293132298d782fd7137e335b7e2e887d81d"
+    },
+    {
+      "after_sha256": "102fadd09a76af6f628d77fb32e7997b9cf205373a49b6a6d4f7f3edbfc91191",
+      "before_sha256": "95565f20cd8ef6f7757a6834d0b8af0a71afa6b100fcb453bed8dba490f75311",
+      "changed_claims": [
+        {
+          "after_sha256": "69bb67b411d75dfdb74162ff43c0ba9e07e91332b503c79caee60f9ac341b84f",
+          "before_sha256": "c6816e727deb3de059217d8bd0c308d14fc3eb7988102b8e92e12c29141b57dd",
+          "claim_index": 46
+        },
+        {
+          "after_sha256": "8870e7145a555af7ee6e18a463826d3186e94a070b15297c15b01688cc43818a",
+          "before_sha256": "07af571ce0842710b1a164e18b9d57051a2ce249afe8b2591e59bd69e1935154",
+          "claim_index": 49
+        },
+        {
+          "after_sha256": "c3bde96aae7b265a04b9fe0a1dbf3881c91ff2532235be7563cc7a50dc3756e4",
+          "before_sha256": "13bc101c5d49e74e8c6598c35f23a748a813cc412a35ea683938053513ad60c7",
+          "claim_index": 50
+        },
+        {
+          "after_sha256": "196a05f8d1a905e040b1069f5ea8318367c5ef4b732d13810fd5dbb23bb88675",
+          "before_sha256": "a6eedb91f51c4fc41524abfde31828225b9b9c9a28795204fe94677b093671ed",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "668971031398abca2e5d1cddf0e2bdab0fee303305ea8dc804eba0c42ca69f0c",
+          "before_sha256": "77b3011f83fa3b6f6aebba37d4c57ec37327f6c7fdcd579a7849951fcf452105",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "1e66065c7077ae4359f3b7c430accb057d39028469023ce10febbd76ce09a05b",
+          "before_sha256": "68db859a04dd38d7976524b480280c41d6c32f6e7317059e95968f6a422ae41a",
+          "claim_index": 53
+        },
+        {
+          "after_sha256": "3607db71b40b0554155cb4e550ca5276f453224bb0ad1e5e3b19b72fec8d9b1e",
+          "before_sha256": "420187c371476409a94c1ef904c2589fca2a09404dd35aae6b4ecb169c0ac944",
+          "claim_index": 54
+        },
+        {
+          "after_sha256": "dc98c7c7d87402766455d495011c421588c372510ce83918b35d74322507fa13",
+          "before_sha256": "280c1306c52ffe237fc36b88d077a118802a0beeeb394059bae4e351ec5b4a89",
+          "claim_index": 55
+        },
+        {
+          "after_sha256": "9ceaae5afb92c420d16dd7c188ab14dd62ac0b93fb1db137b21a888f818c57eb",
+          "before_sha256": "9b2872749e185b4e8a66658e1582768ede76ca27583807555bb08bb243390e3d",
+          "claim_index": 56
+        },
+        {
+          "after_sha256": "1d0eb6124951d4c605710f9f8f539399665c4dc71d3d49aec57a8930599c2ed0",
+          "before_sha256": "9c6ed7c7af9f7e4cbc45ded982bfc1448b044062ea7f5cab7e70583f9046fb9e",
+          "claim_index": 57
+        },
+        {
+          "after_sha256": "3dd158da65d3aa75b1b72df236c7ff3fdb8dcbbaec04a20eaa4af04e8e79b7aa",
+          "before_sha256": "3c934b07a8ba44a8b13e02f8926e70199df1cbc9ac3490c3c38c9598277b5163",
+          "claim_index": 58
+        },
+        {
+          "after_sha256": "2164df910198f2b131b375f2d88ce17b7f516711673d05238b2f31bb62f87433",
+          "before_sha256": "e7e4bbd22e0857d44c2ef82ca00ed9b34080cc64ab2621755f6c2f44b30af2e4",
+          "claim_index": 59
+        },
+        {
+          "after_sha256": "1e642208c30ddcde35fbcb435c1fca8c7000ba46ada9e6e5cc34cc9caf580c73",
+          "before_sha256": "1d192263b9bd7bb19ffce9fb97f92a9f364771e40436f257cf76e74a960bdf79",
+          "claim_index": 60
+        },
+        {
+          "after_sha256": "797950e85806c89140985e01e31cdd1ea3d0400a503253deab1fb56ad1c24752",
+          "before_sha256": "3f552c793e409122b3b39f1bd1abf16e20d9277ec8c129db930da04d8bf9e79d",
+          "claim_index": 61
+        },
+        {
+          "after_sha256": "d8d554aab4bc6c4269c77df3a15c65df0561771f283702d1a9f52dd9df1d342a",
+          "before_sha256": "6ca9c0de5a0744d3e3e60a5b1ca35533de1ff1d271da213d49bf00641910782c",
+          "claim_index": 62
+        },
+        {
+          "after_sha256": "fd927f30477fa1ffe84cd3f4ab04a640697404f543225d692a64450dde64217d",
+          "before_sha256": "29b6c423286774c96bc616fabec79249b699113494d9342e7f6dbfc5b916e47b",
+          "claim_index": 63
+        },
+        {
+          "after_sha256": "1b9366e687bfbda58e65bcc49d7279cb1766f65966c48e6fbbb9719a24789583",
+          "before_sha256": "091b67d9bec3a4456ce5b30d0c0c282bad35d10450379270979ced152b9d7f29",
+          "claim_index": 64
+        },
+        {
+          "after_sha256": "5fc837969ffa647abd6c6eb80991767521286fe4cd0935c9dd4182d7ab965bfe",
+          "before_sha256": "ae9b3347585b2ed75d0c79f7a66c72c0a73c2a9e2c3abb0ea738668345ddb513",
+          "claim_index": 65
+        },
+        {
+          "after_sha256": "1ab234dc6577dea103ed0ca73c327fbc29e2b28d7ca769c7082531492ded565f",
+          "before_sha256": "2d988a47ac9fb3ab3a6480fd2b8a92d6be4a193546a05bbd7a15fabfb920b39b",
+          "claim_index": 66
+        },
+        {
+          "after_sha256": "35d3b2977549b6a6fedc9e95ee2b5a122d4ddbb35f839990427c75b931f856c1",
+          "before_sha256": "b0127bf30e53a43bd4467386d5a5ab034e94ab1c9fb327276572be0ce9ab235a",
+          "claim_index": 67
+        },
+        {
+          "after_sha256": "cd0a848a93816d1fbcea92d034591da4007366ffc1d06512910e4948d3a2bff8",
+          "before_sha256": "d07a96735aaf8a2f3b5862f485a1f0f600749472bdefa1370f14336e77a11360",
+          "claim_index": 68
+        },
+        {
+          "after_sha256": "8e5938bd6a1445c72160573dc90ed360435d00a8ad2a8599cc9a458faca9c2d0",
+          "before_sha256": "4d4c7730e98159bb585a4c94da863a4ee0b559ffa98d0695dda1eec75c77952a",
+          "claim_index": 69
+        },
+        {
+          "after_sha256": "1c973641382ba7dd7516735d8f75300cf68b1add24467751ba38d19359b68878",
+          "before_sha256": "7155b08ff33564b31199cbae41ee861a1435629dd4ccc86d8aa126e18e7b91de",
+          "claim_index": 70
+        },
+        {
+          "after_sha256": "17e9c19698e00ea973c04a5482e2e96ee8d03922a49f6d113ff848abf5ddc091",
+          "before_sha256": "eb4b2e20249f33942460742a0dcea1cf5af2dc43da963d74eec87461e88ba3c8",
+          "claim_index": 71
+        },
+        {
+          "after_sha256": "31f3720a8ffdc2050c1a786e5fc934ed29abb89dbffdd17410849a2549e85a0a",
+          "before_sha256": "914cd28144d5f48802d9e4a12801072195d3945a83503a2ae74d8e1142c71b7f",
+          "claim_index": 72
+        },
+        {
+          "after_sha256": "765691f9a9b2da0ff7e23b55c2f58ba11f2bea045aa3d0133f9dc409016b2aed",
+          "before_sha256": "188d1fb94dc567f03e3f0b40ca608d460679d767c39ae699f41b448d61db42ca",
+          "claim_index": 73
+        },
+        {
+          "after_sha256": "838942087bb20b9473481ffb261a6e1d66b131ca91427b418dd5d11281f808c3",
+          "before_sha256": "c3c66d16926941341fd39d86adbe2c06783a0278a644e06f73f4b67659b030a8",
+          "claim_index": 74
+        },
+        {
+          "after_sha256": "22274a429e6f84dae87945185b340bc1e4313439980a82e7aec8fcb701238d2b",
+          "before_sha256": "650be0715b286baf7e7e1fd80aee3b36a2de39805d53d878d20068172520e9b5",
+          "claim_index": 75
+        }
+      ],
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "unchanged_fields_sha256": "4395373f5ed5e670ab499bf1245795e7b834fa413a98df7f21705ea6d67ed5d0"
+    },
+    {
+      "after_sha256": "682a2c6a6622839036f9f2ea411d9e932ff43299b990167dcdd455389fc9f23a",
+      "before_sha256": "b71c03218eef6f8513ad564ff5e3bf837168f14700f0b3fe2ca0708a493807b2",
+      "changed_claims": [
+        {
+          "after_sha256": "184f0aa2648f30536dd923700ecc37567433bc76527e8f2f43ebfea44e541ded",
+          "before_sha256": "ce7321796e28e7788dce4be4e47c20990e37d0ea08606647e07f695c0409ce84",
+          "claim_index": 1
+        },
+        {
+          "after_sha256": "4cfdb73cd241581016bedbef696af9e530688393e1c2bc278596210a7d33e61d",
+          "before_sha256": "04739ed58987921480f556a9066b50dca8144d5e5a0f30015edf7c9edd058568",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "138f79443a1ab0412302e036433a14381b8ee4bee32b263bc2b14ea1c26ba756",
+          "before_sha256": "9bceddf77dfd2c659b646a7d39995658f35d1b59ac378f4d93e148add859a455",
+          "claim_index": 3
+        },
+        {
+          "after_sha256": "03c138f3d7b01833bf1aef677f69c4151ba61fdf309cce8ad34045ae97a4b243",
+          "before_sha256": "8f304035ab644f000b666c53f789f8fb3686703950c6d3c0de56729de39a2cff",
+          "claim_index": 4
+        },
+        {
+          "after_sha256": "21ae4711d6a8060fa487f737f61ff4beab505e4952635e5842d872bc8b9b4335",
+          "before_sha256": "f44a2d44ed342a98ac522f3e01486f168e4bc0d985501d799e6c457fc42c82ba",
+          "claim_index": 5
+        },
+        {
+          "after_sha256": "5fa9157959c251292a7fd4e8ddeace043b6cbccb8454ff01c79d3d1791b68fa9",
+          "before_sha256": "22565fc6885f1b4609e0be77dbb18eb306a5a497ca8751204c2d0c365fc232b8",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "1a3ddee7bf664573210da84ab4b50c711ddde105c666b95c62aa69316975b291",
+          "before_sha256": "685b00eed5efb0e265afd58e6e5d45eed6b5b383e3c9c11fc6cca62cf83fe2ef",
+          "claim_index": 7
+        }
+      ],
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "unchanged_fields_sha256": "b68bf07441b6cb40371c28845b8054654e30de3957fcd80837c36b0c7f700812"
+    },
+    {
+      "after_sha256": "ad35b0965614977d2bf55c68cf24ea8125ee5252c3de6cfdeb2d6aa874106889",
+      "before_sha256": "d4bbe3c44bcc3065a68799c0f18d327b5e8d847a6140bee4267c368d02feea5d",
+      "changed_claims": [
+        {
+          "after_sha256": "ea896ffbf67212b1e2cbf257d9e6ce585c1d129f4ee0ad78e88f32e37a9538bc",
+          "before_sha256": "bb8f22809c65c2e598651d9300e0fb633df703abff1f6365405d5fd31c366cbf",
+          "claim_index": 1
+        },
+        {
+          "after_sha256": "56d3671eeff5a92652ef2604e8f09dc3efc570c456ddcd300a9fb9c6fb82ec74",
+          "before_sha256": "f22cf2b7bcd8e2ff89b363d597598f6be12aa0349ac84ca9ac747a6e2699141e",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "d5df52640ba504f0f544ab2c54d750caa5aa539ba91528e0a88cc2c9db27c097",
+          "before_sha256": "c89efdc2d6721348e5cddfd165ea6c054981fc628f7c85bbdbe902f5276be6f3",
+          "claim_index": 3
+        },
+        {
+          "after_sha256": "bc0810fb56a1e782d8c6ab1ba7846755b75b9bc8bb3d25518b89eeba76ff05b9",
+          "before_sha256": "eb95d4e173ffe0d17868caebdcc46c35edfe5193644cd5fdb9423dd2063d6dac",
+          "claim_index": 4
+        },
+        {
+          "after_sha256": "ca09799bf95eaf7ef01769aa5bebcd27412b59ef3caebb0b6f7f7cc2b719543d",
+          "before_sha256": "58d7a97ce4cc78336eae45a6db0df738200ed22ece97ef3f979309564447ebd1",
+          "claim_index": 5
+        },
+        {
+          "after_sha256": "66f2ac798d84403b0a90d42e8cf1c0c4257b9c93ca1bf9944fd7341d5a6dffed",
+          "before_sha256": "a9621c34313de3496a231dac57c36066035755fc661e9fce5d3ca229923afa34",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "aeebb171433ef0fad6323d310cff1fe072221f3f1e606fe852b438a86d5abe2f",
+          "before_sha256": "eab71208746c18b6d41ba65402d22d9427c163fc595961fca37711b60b0f9ee2",
+          "claim_index": 7
+        },
+        {
+          "after_sha256": "425ee46f893c54ee0b186b37c919abc83357e77c54e7704eb8d19da5c90db58d",
+          "before_sha256": "8d2cfe4372fd218d25b37d007f1bc8b12a76eb79b3d189249f60216968efe225",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "e8c534a2d8aa56c737c29a1095b539af39aa283c3230c81d641222a4ebb26887",
+          "before_sha256": "c703d56b1fb34056a5811e67d5bd311e85fa5289274149388ef94cac12fea4c3",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "d3091c3d2fd9abe0ea7e625a6ec720a5935cba1e979218b0e5021f40258d2492",
+          "before_sha256": "c982fdeb2e20204724348241d96ad71b088a4f056fbeb77cf9a47aff870d7487",
+          "claim_index": 10
+        },
+        {
+          "after_sha256": "5c2f4f4a58e3403b4588ac008a5b4fd90d770e03465160d64f88c4d02c05593f",
+          "before_sha256": "a329472680bf499f050251de7237d89c3f6b01a5637cbbb80e65054914b824f2",
+          "claim_index": 11
+        },
+        {
+          "after_sha256": "cacf451f47b5f4863d6ffb1204ff38236b63f44382a47de12a8b5bd8f82e5441",
+          "before_sha256": "f6499a60d926432eddb91929398c6afb8a7a12d59580cbd1eeecb4a47273caba",
+          "claim_index": 12
+        }
+      ],
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml",
+      "unchanged_fields_sha256": "64cf04cc417a43041af5befc3f433d8697aea28f3b0e4601f71f1f64590c307f"
+    },
+    {
+      "after_sha256": "3f19b3a271826cdb6a460a3f40e06fa28f00c0f1ec2fee0f6914ffbc2e87f100",
+      "before_sha256": "358e7a11a52ef4c079836d1dcbf205860932ebf3b3fa240c6ee26be4689ef9ad",
+      "changed_claims": [
+        {
+          "after_sha256": "ab1cb0c6fc971369d6c79a5917ea1f3818ff75228eca8480234231310c5cd7b7",
+          "before_sha256": "bc022f75f9406c1817ee9ce63fc4ac011ddef0db9db40d0f83eaa120b0e82be8",
+          "claim_index": 35
+        },
+        {
+          "after_sha256": "722665d1388eb4a73e9e78ac5de6ad4ead64c4f3a535cddb4e61202c7b61029c",
+          "before_sha256": "2907c695902ceb2e82eaf29b9a7c10349087869fe42daf51aa3d1cfee28dd3f0",
+          "claim_index": 36
+        },
+        {
+          "after_sha256": "4a277e4cdbad96135ecbcd35cde7282d5643e5590daa922aedca71280f2967e3",
+          "before_sha256": "c4234ad2445a0be235dfe1f6a77949fd1cff28a5b20900b1089a1c311be38c08",
+          "claim_index": 37
+        },
+        {
+          "after_sha256": "90e6b8a85d0a514cdc6ac9cb801bc7eb493446dd35cb8a41c3460e876788faad",
+          "before_sha256": "ec0de70de2185bb03d0ad11c92e398daf8ced11ae6fce9b7c73303c78de5d18a",
+          "claim_index": 38
+        },
+        {
+          "after_sha256": "d4f59c7b4595e3b7ccbde9b5e1c7dec591d0cb1c348413e39c0e3837e2e66b83",
+          "before_sha256": "637cff03e947fd3edc83f0a78b9f27097e711c757567f91f39e41aae3dbcace2",
+          "claim_index": 39
+        },
+        {
+          "after_sha256": "e0bb041d87780e471042af9fdc784d281e70b08f8a59162dce3071fe5ba46bf1",
+          "before_sha256": "996f35151c8e38f00bd5866d6c3b5852681e3006333e5949c023251ca2681308",
+          "claim_index": 40
+        },
+        {
+          "after_sha256": "d1484e044ed259a465c73b6734dc5869dc8f4828e1c46fcbcceac3984aaae9d6",
+          "before_sha256": "babe150036cbffa2dd549c09d3e4865adc87185e3a07b1864169ee79a8dd94fe",
+          "claim_index": 41
+        },
+        {
+          "after_sha256": "e86d05b97e5de9c210bf39113b1aaf59ee896e3127126f7f2baa9d74c835ffbc",
+          "before_sha256": "a38f90034c40b1d85b3e1149a23e471bcba92dc4a7ff15da9d94040d22c81d0b",
+          "claim_index": 42
+        },
+        {
+          "after_sha256": "4c127054b1d08a1646421ad41722159c993e1e3ae68bad974a86e0a343622a4a",
+          "before_sha256": "bb1401865b44dcddbe4f6bc757d668f27e98e865f539c6f4bf44c17a45765419",
+          "claim_index": 43
+        },
+        {
+          "after_sha256": "907c8568f9f44178d6f3b5e8da78adb103b938900979f77db27c762a8781e1b0",
+          "before_sha256": "13e1374608b12bc151b47e2bebc62bad8748c1e0b784c7ee8c7d737757888d0e",
+          "claim_index": 44
+        },
+        {
+          "after_sha256": "964bf68b317c80cf00a38b92f91332226b9d6016a9079945dcba16ed4dc897af",
+          "before_sha256": "5e6d24d3777b587de98887e25612349568439efc1511ae30102de9af7c526366",
+          "claim_index": 45
+        },
+        {
+          "after_sha256": "b8e17fd723a0cd6271270935728d27bf3e92e9ca491298dd496cdb38f3584c44",
+          "before_sha256": "0003c5aa7981a6b3fbe8e49404a725aee5d4c4727500ba51b2c961c3df0d9fc2",
+          "claim_index": 46
+        },
+        {
+          "after_sha256": "12d6c0627fe977956c65c02a56e7545fe4bb24b640501ecd061098583bb3fb10",
+          "before_sha256": "36e954fbd325a126a00fac6b36f727b5d895c614b84f08550a86dc771b479569",
+          "claim_index": 47
+        },
+        {
+          "after_sha256": "2183e94ced8b603c3283441a4b91d0bd5f4f36390980552f565fd1c8360bf5e8",
+          "before_sha256": "109e3020a8e476e5f0352ffda7b20391c84409b06a06ecb097da8338a5a267ec",
+          "claim_index": 48
+        },
+        {
+          "after_sha256": "60d25237727cfe4dc432b2f5329ca21ea3ae5a173bad2154fc88391d72200660",
+          "before_sha256": "528a62a0dea25070be4d23253c32bb3d02c77ca020dd5614c398bded62448c7a",
+          "claim_index": 49
+        },
+        {
+          "after_sha256": "76a426b52b4d229e92a9b891c8ca743bccfd6fabcdc6c67c5a17e76f7f12f116",
+          "before_sha256": "3f7ecc66ff97cb9597bf89e1d60d62552813f6a00b83482465dee0b2ed9bbe19",
+          "claim_index": 50
+        },
+        {
+          "after_sha256": "c527cd66ff56c87870679b71edd94342bd41931ba7237aa159dd12fdae99d7fd",
+          "before_sha256": "ef1ae4695aaaab05c4b6dfeb419e5d2d0663618c36d8ccf8d8523aaad2952e51",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "e5485727955b56f9123e1c3af520f6701e8229ab7eb33efb5053f90df1047b4d",
+          "before_sha256": "d31aa1ddd44dd77ea5a33c9bd2e2c1be167a68e400598bd0625b24b7b525f17b",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "d22707cb63e214fe785c0242313aeaad7de81cef9e76e49784ea994575da5b26",
+          "before_sha256": "8841e3adab827e413ab31b3489387a18b14f7e5ce4a6e4192949b2bb29fc9bd4",
+          "claim_index": 53
+        }
+      ],
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "unchanged_fields_sha256": "e72dfea6d40de2bb1b43843cf50c2ead8a86556167ad2f51681a2ad02a9bc510"
+    },
+    {
+      "after_sha256": "d13d5268c122d7c7fb5f58dc7f2d314008bd93bf9851ef3fef3a8674284505c4",
+      "before_sha256": "ef34e06a596a2d1fa05ac35140c6550efe661241d945b810807883bfc366f3cc",
+      "changed_claims": [
+        {
+          "after_sha256": "0bcadc2f34eb67120916bbb32d2be9976c2b67dad7919ebeb6fdde3bc11faccc",
+          "before_sha256": "de656282cb394ee0e959550ac460a5ab43c627aaf9556688c61a0e6564c9a9da",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "f5f90b0949317471237936c5efd2845c52534db0315a88db12451880eaf7ffc1",
+          "before_sha256": "f55ff9fe6d7c372f7c76d5fecfd55b9a5ae22fcab1c7206ed02d20d4e2b5f30f",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "de2378e85ba15e836fdf96261a2f8a4db5589003f6903e809896ce1ee27b52aa",
+          "before_sha256": "04c251e825ad511de766645b3290ad4c6e75db1e983787732827d7beb3858563",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "c76ead66e8053e2440f7ab779247406258116dcb2163f98b30631bf4f962cdff",
+          "before_sha256": "db6b245eadd820bfd6a106374d0505c92df41ee4729e90b60a074b2f80880ac6",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "1b8bdbc393205f6bf8c8aada5b3ce8463075315b66414fea121759280a2326ef",
+          "before_sha256": "bfe1628901236ff5d89e14670a1c9043290d5a3bf34424dd1a944bc5a7ad57bc",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "e7637630f522bcb283e0b408e065c63d43cfc39e68d7673db4b4e5c88c0cf032",
+          "before_sha256": "bc1e8a649d864ffb0d137e10fb3d925863d412215fbff1891ec6c64adcfc94ba",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "f86ee6d46d82b3d06aa89131b1ddcb29628be1fd74df3050121992111e8f8a70",
+          "before_sha256": "a1f97c703db0837feda3f93a6449441fd8a658d914a34e551ff4229a0b121f4c",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "3c3425e3a515acb1a5c64e578af802553ef8620fedd9f8c45f1a7f7a839648fe",
+          "before_sha256": "136bd5768df55f2a8d5df95898026c3250f24f98b68743512adb33083aa9e3f2",
+          "claim_index": 20
+        },
+        {
+          "after_sha256": "93886589c3a973f6cc486d4f1a4f457dd890342faada9dff705bb68d943357a3",
+          "before_sha256": "72d8634278875cd00c750b021abb28eaca315e2e8c47d367b0080038f448784d",
+          "claim_index": 21
+        }
+      ],
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml",
+      "unchanged_fields_sha256": "fa9f88e278ba497dbd512994248a004eb486cf894ce25ba9ef0e32237361c2d3"
+    },
+    {
+      "after_sha256": "98e2aa0224ce65c9dd5f78645c32e029332c0cfdea8c0fa48090a1a5f4b1e78e",
+      "before_sha256": "57af9abaf50cdbadee809dc07dc8135676aca344f4638cf00befa03de78c608e",
+      "changed_claims": [
+        {
+          "after_sha256": "2574b9e1b42932d312859c9ed7640b3b587bc9391c83eb2c454c0eddf5b94ef5",
+          "before_sha256": "e80ed4f73baf0bf8984e29b68a4177e185b14e8e33458a90397bdbdad5782390",
+          "claim_index": 23
+        },
+        {
+          "after_sha256": "dd180120ba17bde99881c8285d5864c2a41e6766cba31f296d57fd9e52d213e5",
+          "before_sha256": "bcb0a2ad1118e5ef7bb57edebdec208727808f58651cba202c423156994f115a",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "91eafff27670eebb0efa62321ec8708adaa93fe9c92bff0433e1b40b9c711ff8",
+          "before_sha256": "ae6503022f766e5e8b3ef6375f375a1b6c2754598af38bb5347628c714a6f74c",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "bf36731f7d3bc6e5ff872371f7cebe673094e510e667c39bc246f1edbfb4d74a",
+          "before_sha256": "188de41e7c2d3ceb6c8ebb08fb8c20f2f7e13f02f82869bea101b4239dd58389",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "75925653a23bdd6e8a0417c55bbba8971af6d2dfe0919fcc94a09d4c160d30c5",
+          "before_sha256": "077f0bf713546f186425b1dd91dea5e7a450780c8300f2346028b3bc90fa5809",
+          "claim_index": 27
+        }
+      ],
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml",
+      "unchanged_fields_sha256": "d543a872714265b2e07e206fb73fe9a9dda39f3ee5d2731dfc278a28afbd913c"
+    },
+    {
+      "after_sha256": "aa6b6159e47e60fbe055324549f2c57018498a396c54db1f3fc6fbba337061ea",
+      "before_sha256": "27da13ab6d62e1a05f3252893910a61ce0b18cf24598845a589c8898accd4e8d",
+      "changed_claims": [
+        {
+          "after_sha256": "e789223623cf13c489966869bdf654a20ac5bf296d30818418368ffc81e72e41",
+          "before_sha256": "e176ce16b144f0fc102149244cb140d12ff0e8aa5c352c63e9ddf13f8ac8b710",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml",
+      "unchanged_fields_sha256": "0a0c06f9d9b341c2ba282b7fc25ac37b9e833bbd31db5806a7dd2e18b9b328e0"
+    },
+    {
+      "after_sha256": "a7358f15fb39df70c4be98056d272225d7988cc8b0f5958b0970b5e5ee268df6",
+      "before_sha256": "f89cd54b82b77f629ece1525da0e3e674255f04d13b5d9b3d87bba9277718d7e",
+      "changed_claims": [
+        {
+          "after_sha256": "e79b78f510c3e3c9878db2d976851098ddf781c02e25e70f6ab834744262b6b8",
+          "before_sha256": "9d5b11767a30e363a7776d370f5c660a6ed13275d9952563506160053ae2c943",
+          "claim_index": 5
+        }
+      ],
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml",
+      "unchanged_fields_sha256": "8b58ffacf69aab5d67bd2cb6754d05723b02bc0f962b21dcb89a40a2f44d50c9"
+    },
+    {
+      "after_sha256": "1a0cb11acca0052388a53828441481301b2049c89fdc78954d6bd05b3b6c93f2",
+      "before_sha256": "ada72e03b52ac8d9eec79cf655a61ceef1a44444e4868178380fcb348aa07224",
+      "changed_claims": [
+        {
+          "after_sha256": "27c71e74c9f37e4f7bc02d7090b4a0e2eb0be0300a1c21a9c87d5cd24b299344",
+          "before_sha256": "f017d699a5b99666a696e94b5a80a165ba0e62be192f227e54d0bbaea64c4b75",
+          "claim_index": 0
+        },
+        {
+          "after_sha256": "40d20ba03080cddf45075e40fc448ef52caf9ebce156158b628cffeaaffdcfa9",
+          "before_sha256": "0981716b49eddddeabdd9f2a3b036bada9f5bd70a27b6a4156fc2d2cdf6b4d72",
+          "claim_index": 1
+        }
+      ],
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml",
+      "unchanged_fields_sha256": "54d53354f35d0f63c78a09a104472a9e8f02d8d32f8c7d56243a3368f37c521b"
+    },
+    {
+      "after_sha256": "e1e18d7fb69666e47faf7ddcd2c2cecc38ab8c2548ef9b94fa9086107dd14248",
+      "before_sha256": "e298b7bfb2bbeb42c81467581bd28bab11bebe9d62f36060030ece0e12f4ea73",
+      "changed_claims": [
+        {
+          "after_sha256": "fec70a40db5c3cb98d2665a81503312e61a3b3acb38b0b23d8157b1697a0112f",
+          "before_sha256": "17f2da96f2fd81fffc2eee90ecfb531122c4d21ef7c948b0ec213e3e3f89b327",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "47d9c8c12e64dca0f4b9b98e40cde07761fefd4835ea97363b364820b2bf8d8a",
+          "before_sha256": "90131f4985108f70e53ab77255c131f610a0f1df37abc5d9f95734e44227fc3b",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "530eb83a57de3e2c8b5919653ebcc0804151fd4a48033d90ed7572d9f9d2805e",
+          "before_sha256": "1efee289e809f50c8ad54f762af17c3bde52d6c62b878cf2a3e75dc4312d59d2",
+          "claim_index": 10
+        }
+      ],
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml",
+      "unchanged_fields_sha256": "81b8180f42bb2a3d788118ae88a0f392b594b9f9a643c205d0ec2bdc1209952b"
+    },
+    {
+      "after_sha256": "ed0b3161481537275ac14c4d7af04766b316ab4063f3a11cd4ab3f968886991a",
+      "before_sha256": "b94087a3511c02e3644fe89bb121b739e05e8ab29c94843385906cda557411cd",
+      "changed_claims": [
+        {
+          "after_sha256": "8894d3f6855de9a8a90e4c4d1c8887f82ede96f4513bfdf743cedba458f5fd05",
+          "before_sha256": "387d883d006c75ca09783afb07ca56e1ab98b5b0ccc2e621a30658ca9dd6ab2b",
+          "claim_index": 0
+        },
+        {
+          "after_sha256": "b731e3939c7188db4dfa3e8ed1476677304e229b61a16b27bf640a944034b46e",
+          "before_sha256": "ac1c8a498abffab2b6e3e81bd1dbb46ddbc0eedd6df546bea646e96b132a2b5b",
+          "claim_index": 1
+        }
+      ],
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml",
+      "unchanged_fields_sha256": "348f4037daa731897348a87f43e4d2ef3b0aa1da56140a6381bc30baa430fd84"
+    },
+    {
+      "after_sha256": "3285fbff40f58587c13a8a1d142e29101882d45462db290a83a01dc840d03018",
+      "before_sha256": "c992a834b16cc23941d49a6917a522dda7c2849f764b3dc15c3380e941cff278",
+      "changed_claims": [
+        {
+          "after_sha256": "2fa314a89b9c169aafea7a58fac56f5678eb3c75ea10b5fbcecfb8483f62ce9a",
+          "before_sha256": "c7e757609f94914ac3cf9d11191fff0b677d19addfe7e8b8d7f688ff1c6d1fd0",
+          "claim_index": 39
+        },
+        {
+          "after_sha256": "e972adeea41c752ca9114ba3fee825aa416451342ad2102352c9cd5f4c8d74d6",
+          "before_sha256": "52c7dfacd6d7afd7046a8fcd96865ee26385850d6e8e3c5389d5d308914d5e81",
+          "claim_index": 40
+        },
+        {
+          "after_sha256": "3b0c7e8a768c792bb2cbff2d17e336399165ab9a334a6b4c053bed800838898e",
+          "before_sha256": "8ab35bff1ba1dbfbb07f88a231407939e5371e69fd6adea7d724c6cef6657a36",
+          "claim_index": 41
+        },
+        {
+          "after_sha256": "e3fcff55a3946f2dcfbb392ea2b4898e814651ee38fd642218762539565fa676",
+          "before_sha256": "8a9c2d81b7ef8e2dece0d220cbcacbc0c4d308fc1494685b82352290e1bb8015",
+          "claim_index": 42
+        },
+        {
+          "after_sha256": "fb48c90b0630d000c42a0022398f210e0cd4436c382b556f4332515c8548da0a",
+          "before_sha256": "f3ef3efb84a167608e581e63b223986e75c36c1953b85c2172be17d3ef7ae6c9",
+          "claim_index": 43
+        },
+        {
+          "after_sha256": "13d1b7c5b36358ca71ebde1f433a769fea2d8d3c0b7b77090db83f68fd6bd577",
+          "before_sha256": "e55d8545fb1f0592709f3313d3abafccf92a5578d466e6af51fcef5b1fcf5142",
+          "claim_index": 44
+        },
+        {
+          "after_sha256": "c40892cbd37647aa97eb72ebce9181a2d55ca62ebab185417c2c8cebff729506",
+          "before_sha256": "a20b1afa3c006e5e2de481d73e5d6878d60a5019532aa81b34cc21afeae07570",
+          "claim_index": 45
+        },
+        {
+          "after_sha256": "dadb46cd9d158845a2c1a06c38e45c738295b70c6ba4e1060446023590723325",
+          "before_sha256": "206f7accd38d7f879d85c5c8f281704da4452171a9cee0c835390acfb94a31b4",
+          "claim_index": 46
+        },
+        {
+          "after_sha256": "8a045e69da61b16773d0dac55f0208fb62acf4301650c614ad94e6d36615e3d8",
+          "before_sha256": "d257e895be181244976e40825c8276f20de4c88435f7651d701081c8e27ede1b",
+          "claim_index": 47
+        },
+        {
+          "after_sha256": "e6ac9dcb8c25b63306fa2e591aba7ce43947eae78473f4c3776f3a1982cd3938",
+          "before_sha256": "f6a7d2394f50e16ff94825396625186d0e2fb6d9921b9ba0c5c00896dfc3938f",
+          "claim_index": 48
+        },
+        {
+          "after_sha256": "d234360355166b6eb5aa14821cfdb39f8247240a622e246f511a1eb44439da75",
+          "before_sha256": "ae0a14dc5adbf8cefd91012563fe431f4a7f5433b804edf4a193ddf19680f600",
+          "claim_index": 49
+        },
+        {
+          "after_sha256": "89eb0c29a8a7d04a1b5a1e2f1e23cb9bdad2a517c2b6fca741b9c6f4cf827799",
+          "before_sha256": "32956a6a7819221affa42daddec7648dfecb3c8935e979476b6c9a8406ba557a",
+          "claim_index": 50
+        },
+        {
+          "after_sha256": "0134beb757ad531d6e2b6a8c2d4779e66978149092aa9e9b8226cf2e2e21e947",
+          "before_sha256": "093bad894ab6ae447e64c4fcf7b06877377ff81e2ece80fde5d057426498936a",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "d7f51f191c5979f6733319c6d67044e30039c5f2c32ff4699f7bac7c4283e86a",
+          "before_sha256": "20bae1c2eb83f6a87ac627dcff15606e66c985464355d5f2292d30dd5f2c0227",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "82a45dfdbcef47be6811d9fb505a4eeb199e57c501044a1427ae8f45f73e2553",
+          "before_sha256": "115ee2a0ead4fa8726c2e1a9a41556f035aa84cb459bd16d800eb74c48de3eb8",
+          "claim_index": 53
+        },
+        {
+          "after_sha256": "b92fb5ff06780079463e94807a15dcb2738c3c3365bb18698ca932579ad02799",
+          "before_sha256": "750feb5edaaa31b37c3ef7cb0e686572cec9baa7eec226db16ead2c71e3dc32c",
+          "claim_index": 54
+        },
+        {
+          "after_sha256": "a1818990b746e1d3564962e50b721dfb395a963b41121c0ce44f60a3e11c4585",
+          "before_sha256": "5dbbe73df90e287be32921181fc17cf7ad7783b3bdf5386a5894a7f253332fa7",
+          "claim_index": 59
+        },
+        {
+          "after_sha256": "8fd6b63b4eaa7ccbf31ba47755da3ac8d2e50d85086e550b3e2db54a89bcc871",
+          "before_sha256": "fd936d250fb0fcd5d582c4c40722fb98910aa8bd9898fc93c543ab3ed73d89d4",
+          "claim_index": 60
+        }
+      ],
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "unchanged_fields_sha256": "e18a231b9e228852d94d27b017a845d52c36d88424f5a24cef571ef6266f8964"
+    },
+    {
+      "after_sha256": "476c788ff187856b5cab97d97f73285db74ef6183dba0363ea45e1c668e870bd",
+      "before_sha256": "c8bc92de55de2edc6b9a8fba836d9447edde26153d43cd9ba3b0de5f54b0aeb9",
+      "changed_claims": [
+        {
+          "after_sha256": "4e593d5250d5b7c72bb2a9f5f542f61d97979e0c11fd52ec966b9bb0ce352de7",
+          "before_sha256": "2cc2191db8cea8ec37a2c6a27c3724215bdeb69523afe0231c922fe840a21f22",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "b64a8ea76fd704a193c54e5ce2690b312a0706c5d3d1c934fc5143ae546f922b",
+          "before_sha256": "515eb8e1f23c3d6fd68409f4bc8effd88c3a2d8a3b1f969c2c8ebc638a53f11e",
+          "claim_index": 3
+        }
+      ],
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml",
+      "unchanged_fields_sha256": "ec5f5d8c4dd76a2d1037f418c70952135aa31650ee035d287d17e30006b049b7"
+    }
+  ],
+  "review_id": "nakayama-2001-reference-subject-context",
+  "review_sha256": "8781582a88034ecbc06e8ad5dcadae09fbcacd2576f91bfceb9e0383487dc016",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_row_sha256": "a451e066b9b8c2bedc7648c7faf18b6b083d3f2cd94e281f6be33adfad2dda53",
+  "status": "IDENTIFIER_SCOPE_CURATED_NOT_FULL_PHENOTYPE_REVIEW",
+  "subject": {
+    "experimental_allele_accession": null,
+    "experimental_genome_accession": null,
+    "experimental_protein_accession": null,
+    "experimental_strain_taxon_id": null,
+    "source_background": "ATCC 2001",
+    "species_taxon_id": "NCBITaxon:5478"
+  },
+  "taxonomy": {
+    "284593": {
+      "active": true,
+      "parent": {
+        "commonName": "Yeast",
+        "scientificName": "Candida glabrata",
+        "synonyms": [
+          "Torulopsis glabrata"
+        ],
+        "taxonId": 5478
+      },
+      "rank": "strain",
+      "scientificName": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+      "taxonId": 284593
+    },
+    "5478": {
+      "active": true,
+      "parent": {
+        "scientificName": "Nakaseomyces",
+        "taxonId": 374468
+      },
+      "rank": "species",
+      "scientificName": "Candida glabrata",
+      "taxonId": 5478
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+      "cache_sha256": "4f6570ffbec8320c440a8276ecfea03ab836993b75c2f92b7272d6de85a2ba59",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+      "sha256": "3c0624fde2890f6c12bacc34268d4a4f52164ef2a329cf969c095d48deb06ef1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-6680d98d4897b4b8241658744e31fe09913eabf3981b3b510fe88d40ec7bebba.json",
+      "cache_sha256": "63ed7aa91c431604195a329022fc5b3267865d19b0f0be3086abff3f86b43939",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:33.748362+00:00",
+      "sha256": "7c5fa5f8ea017fa0637d4ed5e8c88051c8ec48cfcc169c3a5f2328b839d01648",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5478"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-e6b6b80db984a936e72dd6aec4428784294b201ece82c35fc945c8217d9067d8.json",
+      "cache_sha256": "f45e35a8f67500a1a6bf1445bcec377879aa874e6602a1f4c89b20e0e7876d72",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:45.328349+00:00",
+      "sha256": "d8802917d21477ba28a3dfc6a3ba34385878ec1b439d931894f708ee04e3b42c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/284593"
+    }
+  ],
+  "unresolved_table_discrepancy": {
+    "location": "Publisher-indexed Table 4 versus Results and table footnote",
+    "scope": "Condition labels in the indexed table conflict with nearby prose. No values imported; IC50 is not MIC and no condition labels are silently reversed.",
+    "status": "CONDITION_LABEL_CONFLICT_ORIGINAL_LAYOUT_CHECK_REQUIRED"
+  }
+}

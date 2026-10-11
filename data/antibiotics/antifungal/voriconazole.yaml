@@ -384,9 +384,7 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
   strain: X26728
-  strain_taxon_id: NCBITaxon:332952
   alteration: cyp51B(H399P, D411N) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:B8NFL5
   gene_id: AFLA_005443_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -394,21 +392,25 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review krishnan-natesan-2008-reference-context:
+    The strain label denotes the susceptible parent, not the resistant isolate. NRRL
+    3357 identifiers are reference-only; source coordinates remain unnormalized. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:332952; protein_accession=UniProtKB:B8NFL5.'
   evidence:
   - reference: PMID:18775650
     notes: PHI-base primary-literature antimicrobial interaction PHIG:336; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1016/j.ijantimicag.2008.06.018
+    notes: 'Identifier-scope review: Table 1, Section 3.1, Discussion. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51B(T454P, T486P) (amino acid mutation) [Not assayed] associated with
     resistance to voriconazole
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
   strain: X26728
-  strain_taxon_id: NCBITaxon:332952
   alteration: cyp51B(T454P, T486P) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:B8NFL5
   gene_id: AFLA_005443_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -416,20 +418,24 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review krishnan-natesan-2008-reference-context:
+    The strain label denotes the susceptible parent, not the resistant isolate. NRRL
+    3357 identifiers are reference-only; source coordinates remain unnormalized. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:332952; protein_accession=UniProtKB:B8NFL5.'
   evidence:
   - reference: PMID:18775650
     notes: PHI-base primary-literature antimicrobial interaction PHIG:336; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1016/j.ijantimicag.2008.06.018
+    notes: 'Identifier-scope review: Table 1, Section 3.1, Discussion. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51B+ (wild type) [Overexpression] associated with resistance to voriconazole
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
-  strain: NRRL 3357
-  strain_taxon_id: NCBITaxon:332952
+  strain: AF-B
   alteration: cyp51B+ (wild type) [Overexpression]
-  protein_accession: UniProtKB:B8NFL5
   gene_id: AFLA_005443_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -437,21 +443,28 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review liu-2012-cyp51b-subject-context:
+    AF-B is the tested derivative, not clinical isolate BMU29791. NRRL 3357 is reference/donor
+    context. UniProtKB:B8NFL5 and the retained gene_id ground a reference locus, not
+    a verified historical experimental protein sequence. Original source background
+    label: NRRL 3357. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332952;
+    protein_accession=UniProtKB:B8NFL5.'
   evidence:
   - reference: PMID:22314539
     notes: PHI-base primary-literature antimicrobial interaction PHIG:336; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.05477-11
+    notes: 'Identifier-scope review: Table 2, Results: expression-level comparison,
+      UniProtKB release 2026_03: B8NFL5 entry 92, sequence version 3. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51C-T788G(S240A) (amino acid mutation) [Wild type product level] associated
     with resistance to voriconazole
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
-  strain: NRRL 3357
-  strain_taxon_id: NCBITaxon:332952
+  strain: AflavC-788
   alteration: cyp51C-T788G(S240A) (amino acid mutation) [Wild type product level]
-  protein_accession: UniProtKB:B8NUK6
   gene_id: AFLA_010303_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -459,21 +472,29 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review liu-2012-cyp51c-subject-context:
+    AflavC-788 is the tested derivative, not clinical isolate BMU29791. UniProtKB:B8NUK6
+    supports the cited reference-protein feature, not an isolate-specific accession.
+    The retained gene_id denotes the reference locus; source coordinates remain unnormalized.
+    Original source background label: NRRL 3357. Reference-only source identifiers:
+    strain_taxon_id=NCBITaxon:332952; protein_accession=UniProtKB:B8NUK6.'
   evidence:
   - reference: PMID:22314539
     notes: PHI-base primary-literature antimicrobial interaction PHIG:337; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.05477-11
+    notes: 'Identifier-scope review: Table 2, Results: cyp51C variant comparison,
+      UniProtKB release 2026_03: B8NUK6 entry 87, sequence version 1; PMID 22314539
+      feature. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(K197N) (amino acid mutation) [Not assayed] associated with resistance
     to voriconazole
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
   strain: X26728
-  strain_taxon_id: NCBITaxon:332952
   alteration: cyp51A(K197N) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:B8N2C8
   gene_id: AFLA_001488_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -481,21 +502,25 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review krishnan-natesan-2008-reference-context:
+    The strain label denotes the susceptible parent, not the resistant isolate. NRRL
+    3357 identifiers are reference-only; source coordinates remain unnormalized. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:332952; protein_accession=UniProtKB:B8N2C8.'
   evidence:
   - reference: PMID:18775650
     notes: PHI-base primary-literature antimicrobial interaction PHIG:338; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1016/j.ijantimicag.2008.06.018
+    notes: 'Identifier-scope review: Table 1, Section 3.1, Discussion. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(K197N, D282E, M288L) (amino acid mutation) [Not assayed] associated
     with resistance to voriconazole
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
   strain: X26728
-  strain_taxon_id: NCBITaxon:332952
   alteration: cyp51A(K197N, D282E, M288L) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:B8N2C8
   gene_id: AFLA_001488_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -503,21 +528,25 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review krishnan-natesan-2008-reference-context:
+    The strain label denotes the susceptible parent, not the resistant isolate. NRRL
+    3357 identifiers are reference-only; source coordinates remain unnormalized. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:332952; protein_accession=UniProtKB:B8N2C8.'
   evidence:
   - reference: PMID:18775650
     notes: PHI-base primary-literature antimicrobial interaction PHIG:338; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1016/j.ijantimicag.2008.06.018
+    notes: 'Identifier-scope review: Table 1, Section 3.1, Discussion. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(Y132N, T469S) (amino acid mutation) [Not assayed] associated with
     resistance to voriconazole
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
   strain: X26728
-  strain_taxon_id: NCBITaxon:332952
   alteration: cyp51A(Y132N, T469S) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:B8N2C8
   gene_id: AFLA_001488_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -525,20 +554,24 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review krishnan-natesan-2008-reference-context:
+    The strain label denotes the susceptible parent, not the resistant isolate. NRRL
+    3357 identifiers are reference-only; source coordinates remain unnormalized. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:332952; protein_accession=UniProtKB:B8N2C8.'
   evidence:
   - reference: PMID:18775650
     notes: PHI-base primary-literature antimicrobial interaction PHIG:338; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1016/j.ijantimicag.2008.06.018
+    notes: 'Identifier-scope review: Table 1, Section 3.1, Discussion. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A+ (wild type) [Overexpression] associated with resistance to voriconazole
   taxon_id: NCBITaxon:5059
   taxon_label: Aspergillus flavus
-  strain: NRRL 3357
-  strain_taxon_id: NCBITaxon:332952
+  strain: AF-A
   alteration: cyp51A+ (wild type) [Overexpression]
-  protein_accession: UniProtKB:B8N2C8
   gene_id: AFLA_001488_t1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -546,12 +579,21 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review liu-2012-cyp51a-subject-context:
+    AF-A is the tested derivative, not clinical isolate BMU29791. NRRL 3357 is reference/donor
+    context. UniProtKB:B8N2C8 and the retained gene_id ground a reference locus, not
+    an independently resolved experimental protein accession. Original source background
+    label: NRRL 3357. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332952;
+    protein_accession=UniProtKB:B8N2C8.'
   evidence:
   - reference: PMID:22314539
     notes: PHI-base primary-literature antimicrobial interaction PHIG:338; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.05477-11
+    notes: 'Identifier-scope review: Table 2, Results: expression-level comparison,
+      UniProtKB release 2026_03: B8N2C8 entry 90, sequence version 1. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG11 transformant(MRL862-ERG11(Y145F)) (transformant) [Not assayed] associated
     with resistance to voriconazole
@@ -559,28 +601,37 @@ resistance_mechanisms:
   taxon_label: Cryptococcus neoformans
   strain: H99
   alteration: ERG11 transformant(MRL862-ERG11(Y145F)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:Q870D1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review sionov-2012-parent-and-deposit-context:
+    H99 is the parent/reference background, distinct from the clinical isolate and
+    tested derivatives. Q870D1 has species-level taxonomy and a deposit cross-reference
+    different from those reported in this paper; it does not resolve an exact subject
+    allele. Source biological fields remain unchanged. No replacement protein, strain
+    TaxID, genome or measurement is inferred. Reference-only source identifiers: protein_accession=UniProtKB:Q870D1.'
   evidence:
   - reference: PMID:22155829
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1668; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.05502-11
+    notes: 'Identifier-scope review: Results and Discussion, Table 1: reference parent,
+      clinical isolate and tested derivatives, Nucleotide accession statement: paper
+      deposits differ from the imported entry cross-reference, UniProtKB release 2026_03:
+      Q870D1 entry 121, sequence version 1; species taxonomy and EMBL cross-reference.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG11(Y132F F145L) (amino acid mutation) [Not assayed] associated with resistance
     to voriconazole
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: ERG11(Y132F F145L) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:P10613
   gene_id: C5_00660C_A-T
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -588,21 +639,30 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context:
+    The strain label denotes the susceptible parent background, not either tested
+    replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify
+    the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source
+    proteins are separate evidence; no isolate join, coordinate normalization or attribution
+    of a combined genotype''s effect to each component is inferred. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.'
   evidence:
   - reference: PMID:25385095
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1132; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.03470-14
+    notes: 'Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate
+      clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version
+      2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG11(Y132F K143R) (amino acid mutation) [Not assayed] associated with resistance
     to voriconazole
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: ERG11(Y132F K143R) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:P10613
   gene_id: C5_00660C_A-T
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -610,20 +670,29 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context:
+    The strain label denotes the susceptible parent background, not either tested
+    replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify
+    the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source
+    proteins are separate evidence; no isolate join, coordinate normalization or attribution
+    of a combined genotype''s effect to each component is inferred. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.'
   evidence:
   - reference: PMID:25385095
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1132; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.03470-14
+    notes: 'Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate
+      clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version
+      2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG3delta (deletion) associated with resistance to voriconazole
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: ERG3delta (deletion)
-  protein_accession: UniProtKB:Q59VG6
   gene_id: C1_04770C_A-T
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -631,32 +700,52 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review rybak-2017-albicans-reference-context:
+    The retained strain label is parent background, not the tested deletion derivative.
+    UniProtKB:Q59VG6 and the retained gene_id ground the reference ERG3 locus. Reference
+    protein and strain TaxID are not derivative identifiers. Native clinical-isolate
+    and laboratory observations remain separate; no MIC or exact derivative identifier
+    is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561;
+    protein_accession=UniProtKB:Q59VG6.'
   evidence:
   - reference: PMID:28630186
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1133; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00651-17
+    notes: 'Identifier-scope review: Results: ERG3 disruption comparisons, Strain
+      table: parent and derivative rows, UniProtKB release 2026_03: Q59VG6 entry 109,
+      sequence version 1; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG3delta (deletion) associated with resistance to voriconazole
   taxon_id: NCBITaxon:5480
   taxon_label: Candida parapsilosis
   strain: Unknown strain
-  strain_taxon_id: NCBITaxon:578454
   alteration: ERG3delta (deletion)
-  protein_accession: UniProtKB:G8B7T4
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review rybak-2017-parapsilosis-reference-context:
+    UniProtKB:G8B7T4 / CPAR2_105550 and strain TaxID 578454 identify CDC 317 reference
+    context, not a clinical isolate or tested derivative. The source row does not
+    uniquely resolve either tested background. Its deletion claim is not the native
+    clinical variant; no individual isolate, clinical protein, genome or MIC is assigned.
+    Reference-only source identifiers: strain_taxon_id=NCBITaxon:578454; protein_accession=UniProtKB:G8B7T4.'
   evidence:
   - reference: PMID:28630186
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8772; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00651-17
+    notes: 'Identifier-scope review: Results: clinical isolates and ERG3 disruption
+      comparisons, Strain table: two clinical backgrounds and their derivatives, UniProtKB
+      release 2026_03: G8B7T4 entry 50, sequence version 1; EMBL and CGD cross-references.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG3 transformant(JEY162-ERG3(S258F)) (transformant) [Not assayed] associated
     with resistance to voriconazole
@@ -664,19 +753,28 @@ resistance_mechanisms:
   taxon_label: Candida tropicalis
   strain: '1909'
   alteration: ERG3 transformant(JEY162-ERG3(S258F)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:N0A5G3
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review eddouzi-2013-erg3-donor-context:
+    UniProtKB:N0A5G3 explicitly links the clinical donor JEY162 deposit KC676662 /
+    AGK44786.1, not the imported subject label, which remains unresolved. Clinical,
+    heterologous-host and native-derivative observations remain distinct; combined-genotype
+    effects are not attributed independently to this component. Reference-only source
+    identifiers: protein_accession=UniProtKB:N0A5G3.'
   evidence:
   - reference: PMID:23629718
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8773; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00555-13
+    notes: 'Identifier-scope review: Results: clinical and laboratory subjects, Tables
+      1 and 3, Declared deposits, UniProtKB release 2026_03: N0A5G3 entry 42, sequence
+      version 1; KC676662 / AGK44786.1 strain evidence. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG11 transformant(JEY162-ERG11(824-955bpdelta + D275V) (transformant) [Not
     assayed] associated with resistance to voriconazole
@@ -685,7 +783,6 @@ resistance_mechanisms:
   strain: '1909'
   alteration: ERG11 transformant(JEY162-ERG11(824-955bpdelta + D275V) (transformant)
     [Not assayed]
-  protein_accession: UniProtKB:P14263
   gene_id: CTRG_05283-t43_1
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -693,22 +790,29 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review eddouzi-2013-erg11-reference-context:
+    UniProtKB:P14263 and the retained gene_id identify a reference ERG11 locus, not
+    the deposited clinical allele or tested derivative. The imported subject label
+    remains unresolved. Source notation, compound-specific phenotype and species are
+    retained without coordinate normalization, subject reassignment or independent
+    attribution of combined-genotype effects. Reference-only source identifiers: protein_accession=UniProtKB:P14263.'
   evidence:
   - reference: PMID:23629718
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8774; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00555-13
+    notes: 'Identifier-scope review: Results, Tables 1 and 3, UniProtKB release 2026_03:
+      P14263 entry 126, sequence version 2; EnsemblFungi cross-reference. Reviewed
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: CYP51A transformant(CM2627-CYP51Apromoter(2x34bp tandem repeat) and CM2627-CYP51A(L98H))
     (transformant) [Overexpression] associated with resistance to voriconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CM237
-  strain_taxon_id: NCBITaxon:330879
   alteration: CYP51A transformant(CM2627-CYP51Apromoter(2x34bp tandem repeat) and
     CM2627-CYP51A(L98H)) (transformant) [Overexpression]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
@@ -716,12 +820,24 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mellado-2007-fumigatus-reference-context:
+    The strain label denotes a parent background, not an individual tested derivative
+    or clinical donor. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293
+    reference locus; TaxID 330879 is reference-only. The combined source alteration
+    remains intact, without assigning its effect to each component. Source phenotypes
+    are unchanged; exact subject protein, strain TaxID and genome remain unresolved.
+    Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:17371828
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01092-06
+    notes: 'Identifier-scope review: Results: clinical isolates and separate recipient
+      backgrounds, Table 4 and its subject-identity footnote, UniProtKB release 2026_03:
+      Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference and reference
+      taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A transformant(F33-cyp51A (G448S)) (transformant) [Not assayed] associated
     with resistance to voriconazole
@@ -816,42 +932,89 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: A1160C
-  strain_taxon_id: NCBITaxon:451804
   alteration: cox10 transformant(W004-cox10(R243Q)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:B0Y628
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review wei-2016-reference-context-followup:
+    The source strain label denotes a parent background, not an individual tested
+    derivative. Af293 and A1163/CEA10 UniProt entries and strain TaxIDs describe reference
+    context. The retained gene_id is a reference-locus identifier, not an experimental
+    allele. Increased frequency of later colonies is distinct from baseline susceptibility,
+    and plate growth is not a broth MIC or a clinical resistance category. These endpoint
+    distinctions remain review limitations, not new activity observations. Source
+    alterations, phenotypes and assays are unchanged; exact subject protein, strain
+    TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:451804;
+    protein_accession=UniProtKB:B0Y628.'
   evidence:
   - reference: PMID:27799210
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8689; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.02101-16
+    notes: 'Identifier-scope review: Results and Figures 1-4: baseline parent versus
+      separate tested groups, Tables 1-2: subject identity and distinct assay endpoints,
+      UniProtKB release 2026_03: Q4WNT5 entry 146; B0XYD8 entry 86; B0Y628 entry 66;
+      all sequence version 1; reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: HapE transformant(Isolate3-HapE(P88L)) (transformant) [Not assayed] associated
     with resistance to voriconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: akuBKU80
-  strain_taxon_id: NCBITaxon:330879
   alteration: HapE transformant(Isolate3-HapE(P88L)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:Q4WDM9
   phenotype_id: PHIPO:0000590
   phenotype_label: resistance to voriconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review camps-2012-fumigatus-reference-context:
+    The strain label denotes a parent background, not either later tested replicate
+    or the native clinical isolate. UniProtKB:Q4WDM9 / AFUA_6G05300 and TaxID 330879
+    denote Af293 reference context. Reference-guided sequence analysis does not identify
+    a clinical or experimental subject as Af293. Source alterations and phenotypes
+    are unchanged; exact subject protein, strain TaxID and genome remain unresolved.
+    Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WDM9.'
   evidence:
   - reference: PMID:23226235
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8691; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0050034
+    notes: 'Identifier-scope review: Results sections s3a-s3b: clinical series and
+      reference genomes, Results section s3d and Table 7: later experimental groups,
+      UniProtKB release 2026_03: Q4WDM9 entry 125, sequence version 1; AFUA_6G05300
+      reference crosswalk and taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
+- mechanism_type: UNKNOWN
+  label: Clinical ERG3 association with voriconazole resistance
+  gene_families:
+  - ERG3
+  alteration: S258F
+  protein_accession: UniProtKB:N0A5G3
+  taxon_id: NCBITaxon:5482
+  taxon_label: Candida tropicalis
+  strain: JEY162
+  note: Same-isolate genotype-phenotype co-occurrence, not independent causality for
+    this component of the reported combined ERG3/ERG11 genotype. Source alteration
+    notation retained; no reference-coordinate equivalence or laboratory-derivative
+    identity inferred.
+  evidence:
+  - reference: PMID:23629718
+    notes: 'Results: clinical susceptibility and CtERG3 sequence analysis; Table 3.
+      The genotype and measured phenotype share the named clinical isolate. Laboratory
+      functional evidence remains separate.'
+  - reference: UniProtKB:N0A5G3
+    notes: Release 2026_03, entry version 42, sequence version 1, inspected 2026-10-08.
+      Paper-declared deposit KC676662 / AGK44786.1 has protein-specific JEY162 strain
+      evidence in citation CI-DK7KGAGGARC54. That citation has no indexed PMID; linkage
+      uses the declared accession and strain, not bibliography alone. A different
+      reference's ATCC strain label is not transferred.
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -1925,6 +2088,45 @@ clinical_status_assertions:
   identity_retrieved_on: '2026-08-31'
   identity_record_version: '58'
   reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=220078
+activity_spectrum:
+- taxon_id: NCBITaxon:5059
+  taxon_label: Aspergillus flavus
+  strain: BMU29791
+  activity: RESISTANT
+  mic_value: 8.0
+  mic_units: mg/L
+  assay: CLSI M38-A2 broth microdilution
+  evidence:
+  - reference: PMID:22314539
+    notes: 'Table 3, clinical-isolate row: original MIC 8 ug/mL, equivalent to 8 mg/L.
+      RESISTANT retains the paper''s historical proposed interpretation, not a current
+      breakpoint assessment. The clinical isolate is distinct from the tested derivatives.
+      The unreported Etest result is not an additional numeric observation.'
+- taxon_id: NCBITaxon:5476
+  taxon_label: Candida albicans
+  strain: JEY355
+  mic_value: 0.0078
+  mic_units: mg/L
+  assay: EUCAST broth microdilution, source RPMI 1640 condition
+  evidence:
+  - reference: PMID:23629718
+    notes: Table 3, clinical-isolate row, RPMI 1640 voriconazole column; Results.
+      Original MIC <0.0078 ug/mL, numerically equivalent in mg/L. Source says not
+      resistant; no categorical S call inferred from the MIC.
+  mic_qualifier: <
+- taxon_id: NCBITaxon:5482
+  taxon_label: Candida tropicalis
+  strain: JEY162
+  mic_value: 16.0
+  mic_units: mg/L
+  assay: EUCAST broth microdilution, source RPMI 1640 condition
+  evidence:
+  - reference: PMID:23629718
+    notes: Table 3, clinical-isolate row, RPMI 1640 voriconazole column; Results.
+      Original MIC >16 ug/mL, numerically equivalent in mg/L. RESISTANT retains the
+      source's historical interpretation, not current breakpoints.
+  mic_qualifier: '>'
+  activity: RESISTANT
 curation_history:
 - timestamp: '2026-08-30T00:54:36Z'
   curator: seed_from_sources
@@ -1970,3 +2172,187 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T06:11:24Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_IDENTIFIER_SCOPE
+  changes: Applied pinned PHI-base identifier-scope review to five associations; withheld
+    reference-only protein and strain identifiers without replacing source claims.
+  llm_assisted: true
+- timestamp: '2026-10-08T06:48:50Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_IDENTIFIER_SCOPE
+  changes: Refreshed the whole-file PHI-base review checksum after an additional review;
+    all biological fields and previous identifier-scope decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T07:20:51Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Resolved three PHI-base tested-derivative labels, retained reference-only
+    UniProt grounding, withheld parent strain/protein identity, and added one independently
+    reported clinical-isolate MIC with its historical source interpretation. Refreshed
+    review checksums without changing prior decisions.
+  llm_assisted: true
+- timestamp: '2026-10-08T07:56:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_IDENTIFIER_SCOPE
+  changes: Refreshed the whole-file PHI-base review checksum after the FKS1 review;
+    all biological fields and previous identifier-scope decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T08:33:33Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Applied 2 pinned subject-context reviews, retaining reference-locus grounding
+    while withholding unverified experimental protein/strain identifiers. Source alterations,
+    phenotypes, species, genes, and existing activities unchanged. Refreshed provenance
+    checksums on any previously reviewed claims. ERG11 parent, replicate and clinical-donor
+    contexts remain separate.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:07:30Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped 2 imported associations without conflating reference, donor and
+    unresolved tested-subject identities. Preserved source alterations and phenotypes;
+    refreshed older review checksums without biological changes. Added two independently
+    reported clinical MICs in mg/L, preserving qualifiers and historical interpretation,
+    and one deposit-grounded ERG3 same-isolate association without independent component
+    causality.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:45:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: 'Scoped two imported ERG3 associations: reference proteins and strain TaxIDs
+    are not experimental-subject identifiers. Retained source species, background
+    labels, alterations and phenotypes; clinical isolates remain separate. Existing
+    activities and curator claims unchanged; refreshed older review checksums.'
+  llm_assisted: true
+- timestamp: '2026-10-08T10:12:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after carboxin reference-context
+    reviews; all biological fields, activities and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:52:13Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after two additional
+    carboxin identifier-scope corrections; all biological fields, activities and previous
+    decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T11:28:52Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after eleven additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:09:14Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: 'Scoped imported associations to the reported parent background: Af293
+    reference protein and strain TaxID are not tested-subject identities. Source alterations,
+    phenotypes, assays and clinical activities unchanged; no exact allele or genome
+    inferred.'
+  llm_assisted: true
+- timestamp: '2026-10-08T12:49:25Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after one yeast identity-scope
+    correction; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T13:24:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped imported reference protein and strain TaxID to provenance, not tested-subject
+    identity. Source parent labels, alterations, phenotypes and assays preserved;
+    no experimental allele, genome or activity measurement inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:30Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped source protein and reference-strain identifiers to provenance, not
+    exact experimental subjects, after primary-paper review. Parent labels and source
+    biological fields preserved; no new allele, measurement or genome inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:43Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:04Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:47Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:23Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:08Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

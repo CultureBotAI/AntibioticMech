@@ -79,38 +79,58 @@ resistance_mechanisms:
   strain: PD5
   alteration: CYP51 transformant(LC2-CYP51promoter(5x126bp tandem repeat)::CYP51)
     (transformant) [Overexpression]
-  protein_accession: UniProtKB:Q9P340
   phenotype_id: PHIPO:0001348
   phenotype_label: resistance to pyrifenox
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review hamamoto-2000-source-protein-context:
+    PD5 is the parent background, not one uniquely identified tested derivative. Q9P340
+    links deposits from two source isolates and does not identify an exact experimental
+    allele. Source labels and biological fields are retained; subject protein and
+    genome remain unresolved. EC50 and MIC are distinct endpoints; no measurement
+    is added. Reference-only source identifiers: protein_accession=UniProtKB:Q9P340.'
   evidence:
   - reference: PMID:10919801
     notes: PHI-base primary-literature antimicrobial interaction PHIG:9164; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aem.66.8.3421-3426.2000
+    notes: 'Identifier-scope review: Results, Figure 4 and Table 2: separate parent,
+      donor and tested derivatives, Nucleotide accession statement: distinct source-isolate
+      deposits, UniProtKB release 2026_03: Q9P340 entry 120, sequence version 1; two
+      EMBL deposit cross-references and species taxonomy. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: CYP51+ (wild type) [Overexpression] associated with resistance to pyrifenox
   taxon_id: NCBITaxon:36651
   taxon_label: Penicillium digitatum
   strain: PD5
   alteration: CYP51+ (wild type) [Overexpression]
-  protein_accession: UniProtKB:Q9P340
   phenotype_id: PHIPO:0001348
   phenotype_label: resistance to pyrifenox
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review hamamoto-2000-source-protein-context:
+    PD5 is the parent background, not one uniquely identified tested derivative. Q9P340
+    links deposits from two source isolates and does not identify an exact experimental
+    allele. Source labels and biological fields are retained; subject protein and
+    genome remain unresolved. EC50 and MIC are distinct endpoints; no measurement
+    is added. Reference-only source identifiers: protein_accession=UniProtKB:Q9P340.'
   evidence:
   - reference: PMID:10919801
     notes: PHI-base primary-literature antimicrobial interaction PHIG:9164; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aem.66.8.3421-3426.2000
+    notes: 'Identifier-scope review: Results, Figure 4 and Table 2: separate parent,
+      donor and tested derivatives, Nucleotide accession statement: distinct source-isolate
+      deposits, UniProtKB release 2026_03: Q9P340 entry 120, sequence version 1; two
+      EMBL deposit cross-references and species taxonomy. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -144,3 +164,94 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T13:58:42Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped source protein and reference-strain identifiers to provenance, not
+    exact experimental subjects, after primary-paper review. Parent labels and source
+    biological fields preserved; no new allele, measurement or genome inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:41Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:07:00Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:57Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:07Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:49Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:24Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

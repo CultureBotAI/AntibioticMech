@@ -1,0 +1,160 @@
+{
+  "adversarial_self_review": {
+    "checks": [
+      "No negative comparison promoted to a positive determinant",
+      "No reference protein or reference TaxID promoted to experimental identity",
+      "No locus-label discordance promoted to a new alias",
+      "No assay values, allele specifications or direct-target claims introduced",
+      "Two qualitative associations retain one shared study and distinct backgrounds",
+      "Curator ownership, no-op reseeding and preexisting fields preserved"
+    ],
+    "independent_review": false,
+    "remaining_scope": "Exact experimental identity and broader primary coverage remain open"
+  },
+  "all_current_record_hashes_verified": 2939,
+  "changed_documents_encoded": 1,
+  "changed_files_excluding_report": {
+    "data/antibiotics/antimycobacterial/canthin-6-one.yaml": {
+      "after_sha256": "52208d3cd68878a512dc579026094a0125f2dac3125bc9fa5b4f7e795ee2dbe9",
+      "before_sha256": "00dec16503cd665baf5ed6bc40efaa4d782f56c720d4f6262a141a4f69ac8dbc"
+    },
+    "data/embeddings/corpus_map.json": {
+      "after_sha256": "c814c43f378a4fa7524b1765d35ff49d9be4d8a9f591481a9f6d397eec1472be",
+      "before_sha256": "dac6935acf0b5c6ce29a5c1847076e40aaed61377bfeb92a3f54c48c02aec8b8"
+    },
+    "data/embeddings/meta.json": {
+      "after_sha256": "ed6a3a0984da32f20c320434718f4d3b541e77e92890eea68cb3b2ef61d0f871",
+      "before_sha256": "927d446ab677b7d98f12e74d698b4b9bb8e7853d87b2f699a5ca4bf075b91982"
+    },
+    "data/embeddings/vectors.f16.npy": {
+      "after_sha256": "b3f7e847a26ee741e20a870684fca0868d3b1ce5b809da51748fda2a86773989",
+      "before_sha256": "4765efe71df1b17ea716fe495b901319837568dbb3a776535602c45db9e2f585"
+    },
+    "pages/antimycobacterial/canthin-6-one.html": {
+      "after_sha256": "d810e04554e82bafb5232f9cf45ef61829f08154242801fa3e3087680126b5ce",
+      "before_sha256": "4a0d3ad529b5345e98ff694712628c43c60acb911773f35badbb4b483d837777"
+    },
+    "pages/index.html": {
+      "after_sha256": "9fabe631efcfffdfb7c9ce9c0362e7be42d10f6ca94ba3e0855b370d70b9d4c3",
+      "before_sha256": "08e630394dbba37e0c322eb1fe1f1c80aabbcd3c4a704ed17cb846919cdf5a6a"
+    },
+    "pages/map.html": {
+      "after_sha256": "b766012015f82fe56a4c727f81d5811a6b5101568f3294606324c0eb9895f524",
+      "before_sha256": "7dd4d549ba2144d9ca90a2230fef5218eee92e3a95490435c50e53588a47e615"
+    },
+    "scripts/summarize_resistance_progress.py": {
+      "after_sha256": "7a16333c8c04312eea4300095080c9147a6968ca70f2a57f046f8cbeda46e838",
+      "before_sha256": "3f34720dac0e4be89cacdfbde4543ddecd26a620ddf1a94feefd064db931c06e"
+    }
+  },
+  "chemical_map_unchanged": true,
+  "control_max_abs_delta": 3.0517578125e-05,
+  "control_rows": 16,
+  "corpus_research_complete": false,
+  "curation_dossier": {
+    "path": "research/2026-10-09-canthin-curation.json",
+    "sha256": "c6fc2bf024620f668a37e539a026f8bc27650db3accb8404edda5d5796bb7e76"
+  },
+  "curation_inputs_unchanged": true,
+  "current_ledger": {
+    "path": "research/2026-10-09-canthin-resistance-grounding.tsv",
+    "sha256": "0ca15b8dac7b4cb77a67d60337e2cdc8a86d8a0061fc7199af0a3116d0ffe08c"
+  },
+  "date": "2026-10-09",
+  "embedding_reuse_proof": {
+    "path": "reports/resistance-grounding-2026-10-09-canthin/embedding-stage/reuse-proof.json",
+    "sha256": "2b00f0f5a6d1aefa96275b4d3961d53330840b157da8a3996d52464777432f40"
+  },
+  "embedding_scripts_unchanged": true,
+  "experimental_alleles_validated": false,
+  "focused_tests": {
+    "passed": 63,
+    "seconds": 59.09
+  },
+  "full_qc": {
+    "command": "env PYTHONPATH=/private/tmp/antibioticmech-qc-science-20261009.GtY47E:src:.venv/lib/python3.13/site-packages PYTEST_ADDOPTS='-rs --junitxml=reports/resistance-grounding-2026-10-09-canthin/full-tests.xml' /private/tmp/npmech-rdkit-2026.03.5/bin/python -u scripts/run_qc.py",
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-09-canthin/full-tests.xml",
+      "sha256": "0d945047333f386e618963726a7c23ac32d487bfc7eb45e4dd19190e97a01ca0"
+    },
+    "passed": 2299,
+    "path": "reports/resistance-grounding-2026-10-09-canthin/full-qc.log",
+    "sha256": "df5e35b17c6d5b78b783c21fa27cb04cbef5d81e0a1ff6e24ad8ecac7022b69c",
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)",
+      "got empty parameter set for (path)"
+    ],
+    "skipped": 3,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_seconds": 1601.75,
+    "warnings": 1
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "live_browser_verification": false,
+  "mechanism_queue_records": 2848,
+  "mechanism_queue_with_existing_evidence": 314,
+  "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+  "ncbi_endpoint_requests": 0,
+  "network_used_for_embedding": false,
+  "progress_descriptor": {
+    "path": "research/2026-10-09-canthin-resistance-progress.json",
+    "sha256": "5fddd456950d9f5de1f480e5a6edf76aaca9b5bbadb0fe7db6ee21aaaf0617ea"
+  },
+  "protected_files": 6669,
+  "protected_files_unchanged_excluding_report": 6660,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-canthin/protected-before.json",
+    "sha256": "c681babbc103e783d7e4102d53f56c6aaa7bf6485ee6afd203b42e3a9297f65b"
+  },
+  "reconciliation": {
+    "path": "research/2026-10-09-canthin-checkpoint-reconciliation.json",
+    "sha256": "901b18182d67fc704952346f51cb0822c2ef21347f284200d96b22ff1c30789d"
+  },
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "records_with_target_or_resistance": 405,
+  "rendered_claims_and_caveats_checked": true,
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "root_documents": [
+    {
+      "path": "README.md",
+      "sha256": "04d9fc1dad950669cc76efb5d362a07f993e20dce7870d07940e7a71576e726c"
+    },
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "de77e4952bc300d6227071441e136ed6b3e66de6150431d88e89e870112ae2df"
+    }
+  ],
+  "scope": "QUALITATIVE_CURATION_AND_PUBLICATION_NOT_COMPLETED_CORPUS_RESEARCH",
+  "semantic_map": {
+    "fingerprint": "6ef789f99f7de573",
+    "method": "pacmap",
+    "neighbors": 15,
+    "points": 2939,
+    "seed": 42
+  },
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "unchanged_vector_rows_reused": 2938,
+  "whole_record_primary_review_complete": false,
+  "worklist": {
+    "path": "reports/resistance-grounding-2026-10-09-canthin/worklist.tsv",
+    "sha256": "e54a2258ba0c8208ed84652215bd10959b46c4d87617b984b7c81e054b7255d4"
+  }
+}

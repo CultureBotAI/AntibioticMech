@@ -1,0 +1,517 @@
+{
+  "attribution": "RCSB PDB entry and component metadata; UniProt Consortium release 2026_03, CC BY 4.0; Coughlin et al. (2014), primary publisher-indexed text, qualitative paraphrase only.",
+  "limitations": [
+    "A PDB component match does not equate a metal-complex assay with the neutral record.",
+    "PDB-to-UniProt structural mapping is verified; the 2015 full Results remain inaccessible.",
+    "Gene-symbol searches and broad annotation hits are not experimental-identity crosswalks.",
+    "The TlmB experimental accession remains unresolved; the Salinispora symbol match is not adopted.",
+    "Only four focal candidates are exported; unrelated query hits remain private metadata receipts.",
+    "No NCBI request, source adoption, outreach, new genome analysis or GitHub mutation occurred.",
+    "No new sequences, variants, constructs, protocols, coordinates or numerical resistance data exported.",
+    "All 2939 records remain in scope; this checkpoint does not finish any record's primary review."
+  ],
+  "preservation": {
+    "allowed_existing_edit": "research/2026-10-07-resistance-gene-grounding.md",
+    "before_corpus": {
+      "path": "reports/resistance-grounding-2026-10-09-producer-primary/before-corpus.json",
+      "sha256": "98c1197508fd138d700979ad19184a62da8f209c0cc6281e2c6bdd5b893a320c"
+    },
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "ignored_files_included": true,
+    "protected_files_unchanged": 6706,
+    "protected_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-09-producer-primary/protected-before.json",
+      "sha256": "0b104ffa5aea11a2e87efc5cc7610c7ffc75926dfda8aea0a40a5ad088d4a507"
+    },
+    "record_hashes_verified": 2939
+  },
+  "primary_context": {
+    "curation_hold": "Resolve exact tested forms, donor identifiers and figure/supplement context.",
+    "doi": "10.1021/bi501121e",
+    "donor_label_caveat": "The materials section also prints ATCC31154; the discrepancy is unresolved.",
+    "donor_labels": {
+      "BlmB": "Streptomyces verticillus ATCC15003",
+      "TlmB": "Streptoalloteichus hindustanus E465-94 ATCC31158"
+    },
+    "figures_visually_inspected": false,
+    "locations": [
+      "Figure 1 caption",
+      "Results: substrate-form comparison",
+      "Results: producer-background comparison",
+      "Disk-diffusion assay description"
+    ],
+    "medium": "PUBLISHER_INDEXED_PRIMARY_RESULTS_TEXT",
+    "named_compounds": [
+      "bleomycin B2",
+      "tallysomycin A",
+      "phleomycin D1",
+      "zorbamycin"
+    ],
+    "native_primary_file_cached": false,
+    "qualitative_findings": [
+      "BlmB and TlmB were assessed against metal-free substrates; metal-bound forms are distinct.",
+      "The whole-cell endpoint used copper-bound zorbamycin, not a neutral-compound MIC.",
+      "SB9001 is producer-derived; it is not the ancestral ATCC21892 material itself.",
+      "The cluster-scale comparison does not isolate the contribution of zbmA alone."
+    ],
+    "reference": "PMID:25299801",
+    "relevant_results_text_inspected": true,
+    "reuse": "ACS AuthorChoice is non-commercial; no article text or figures redistributed.",
+    "supplement_inspected": false,
+    "url": "https://pubs.acs.org/doi/10.1021/bi501121e"
+  },
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-producer-gene-reference-grounding.json",
+    "sha256": "c85e6e3296a8c6f30277429aaf3159241c1f35f603ed4a7982a7602ee9a8e7d7"
+  },
+  "records": [
+    {
+      "identifier": "antibioticmech:aro-e05426a76f",
+      "label": "bleomycin B2",
+      "path": "data/antibiotics/antibacterial/bleomycin-b2.yaml",
+      "sha256": "185323f2c34804324d93369a2ec9b7eb2f9ce6d803c34ae1344d46650798eda1",
+      "standard_inchi_key": "NBLHOLNNKJBEDC-XOGQCRKLSA-N"
+    },
+    {
+      "identifier": "CHEBI:75046",
+      "label": "phleomycin D1",
+      "path": "data/antibiotics/antibacterial/phleomycin-d1.yaml",
+      "sha256": "5d7bb7bcdb8eee0e758697939e5b20ba36246a3b188a736267d086efd719df65",
+      "standard_inchi_key": "CWCMIVBLVUHDHK-ZSNHEYEWSA-N"
+    },
+    {
+      "identifier": "CHEBI:67811",
+      "label": "zorbamycin",
+      "path": "data/antibiotics/unspecified/zorbamycin.yaml",
+      "sha256": "257083ae607cf542b02ca48b2576e9b87ed89499e6f28575768473274755e51a",
+      "standard_inchi_key": "UJKRUPHWCPAJIL-CPLCKGKLSA-N"
+    }
+  ],
+  "reference_candidates": [
+    {
+      "accession": "UniProtKB:Q53796",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "L26955",
+          "protein_id": "AAB00461.1"
+        }
+      ],
+      "citation_ids": [
+        "19889644",
+        "7530225"
+      ],
+      "decision": "DONOR_MATCHED_OLDER_REFERENCE_LEAD",
+      "entry_audit": {
+        "entryVersion": 113,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [],
+      "organism": {
+        "scientificName": "Streptomyces verticillus",
+        "taxonId": 29309
+      },
+      "query": "bleomycin AND acetyltransferase",
+      "reference_strain_labels": [
+        "ATCC 15003"
+      ],
+      "submitted_names": [
+        "Bleomycin acetyltransferase"
+      ]
+    },
+    {
+      "accession": "UniProtKB:A0A5N5VYK2",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "VOKX01000122",
+          "protein_id": "KAB7833931.1"
+        }
+      ],
+      "citation_ids": [
+        "31615513"
+      ],
+      "decision": "GENE_SYMBOL_MATCH_DONOR_CONTEXT_UNRESOLVED",
+      "entry_audit": {
+        "entryVersion": 21,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "blmB"
+      ],
+      "organism": {
+        "scientificName": "Streptomyces mobaraensis",
+        "taxonId": 35621
+      },
+      "query": "gene_exact:blmB",
+      "reference_strain_labels": [
+        "US-43"
+      ],
+      "submitted_names": [
+        "Bleomycin family antibiotic N-acetyltransferase BlmB"
+      ]
+    },
+    {
+      "accession": "UniProtKB:A0A0P0FBH4",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "KT282100",
+          "protein_id": "ALJ49916.1"
+        }
+      ],
+      "citation_ids": [
+        "26458099"
+      ],
+      "decision": "REJECTED_FOCAL_MAPPING_DIFFERENT_DONOR_AND_CITATION",
+      "entry_audit": {
+        "entryVersion": 30,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "tlmB"
+      ],
+      "organism": {
+        "scientificName": "Salinispora pacifica DSM 45543 = CNS-863",
+        "taxonId": 999542
+      },
+      "query": "gene_exact:tlmB",
+      "reference_strain_labels": [
+        "CNS-863"
+      ],
+      "submitted_names": [
+        "TlmB"
+      ]
+    },
+    {
+      "accession": "UniProtKB:A4KUD4",
+      "archive_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "FQVN01000005",
+          "protein_id": "SHF86459.1"
+        }
+      ],
+      "citation_ids": [],
+      "decision": "GENERIC_ENZYME_DIFFERENT_REFERENCE_STRAIN",
+      "entry_audit": {
+        "entryVersion": 62,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "gene_symbols": [],
+      "organism": {
+        "scientificName": "Streptoalloteichus hindustanus",
+        "taxonId": 2017
+      },
+      "query": "bleomycin AND acetyltransferase",
+      "reference_strain_labels": [
+        "DSM 44523"
+      ],
+      "submitted_names": [
+        "Protein N-acetyltransferase, RimJ/RimL family"
+      ]
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/zorbamycin-receipt.json",
+        "sha256": "cd74092edefdac16f22bf7359ef362671351a9bc89d129a6353ed5208d2cb1d7"
+      },
+      "pdf_obtained": false,
+      "retrieved_at": "2026-10-09T12:18:37.377624+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": 202,
+      "url": "https://repository.rice.edu/bitstreams/4dfb3df6-c5bb-4786-b853-5e189e2dba61/download"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/valanimycin-receipt.json",
+        "sha256": "49bb3875fdf17beda48e7b7f348d46fb6c7453857127ba1b74ff5911e152106e"
+      },
+      "pdf_obtained": false,
+      "retrieved_at": "2026-10-09T12:18:51.982954+00:00",
+      "sha256": "8c9200d0dce387d42c9157d5653f6c85d50760c3206f4073d2d771c6b3851bb4",
+      "status": 301,
+      "url": "https://citeseerx.ist.psu.edu/document?doi=5ec6667a2d831fe2ae66d4c4dec2a4b62317ab68&repid=rep1&type=pdf"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/valanimycin-archive-receipt.json",
+        "sha256": "b3029a584dd5b4d48c20d2555e6f5609e0178aece1f05c0617d1b4bcf195de17"
+      },
+      "pdf_obtained": false,
+      "retrieved_at": "2026-10-09T12:20:16.318761+00:00",
+      "sha256": "5a4ad677d782eb79d84fe6e2981b2304b79ca7517cb877785255f03f8ca16ed1",
+      "status": 404,
+      "url": "https://web.archive.org/web/20251230112235/https://citeseerx.ist.psu.edu//document?doi=5ec6667a2d831fe2ae66d4c4dec2a4b62317ab68&repid=rep1&type=pdf"
+    }
+  ],
+  "reviewed_on": "2026-10-09",
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "record_memberships": 3,
+    "whole_records_completed_by_this_review": 0
+  },
+  "status": "STRUCTURAL_REFERENCE_JOIN_VERIFIED_PRIMARY_SCOPE_REVIEW_NO_RECORD_CURATION",
+  "structural_identity": {
+    "component_id": "52G",
+    "component_inchi_key": "UJKRUPHWCPAJIL-CPLCKGKLSA-N",
+    "current_uniprot_name": "Streptomyces pilosus",
+    "identifier": "CHEBI:67811",
+    "note": "PDB retains the source name with the same reference TaxID; preserve both name contexts.",
+    "pdb_entries": {
+      "4IAG": {
+        "nonpolymer_entities": [
+          {
+            "pdbx_entity_nonpoly": {
+              "comp_id": "GOL",
+              "name": "GLYCEROL"
+            }
+          },
+          {
+            "pdbx_entity_nonpoly": {
+              "comp_id": "EDO",
+              "name": "1,2-ETHANEDIOL"
+            }
+          }
+        ],
+        "polymer_entities": [
+          {
+            "rcsb_entity_source_organism": [
+              {
+                "ncbi_taxonomy_id": 28893,
+                "scientific_name": "Streptomyces flavoviridis"
+              }
+            ],
+            "rcsb_id": "4IAG_1",
+            "rcsb_polymer_entity_container_identifiers": {
+              "reference_sequence_identifiers": [
+                {
+                  "database_accession": "B9UIZ4",
+                  "database_name": "UniProt"
+                }
+              ]
+            }
+          }
+        ],
+        "rcsb_accession_info": {
+          "major_revision": 1,
+          "minor_revision": 5,
+          "revision_date": "2025-03-26T00:00:00Z"
+        },
+        "rcsb_id": "4IAG",
+        "rcsb_primary_citation": {
+          "pdbx_database_id_DOI": "10.1021/acs.biochem.5b01008",
+          "pdbx_database_id_PubMed": 26512730,
+          "year": 2015
+        }
+      },
+      "5CJ3": {
+        "nonpolymer_entities": [
+          {
+            "pdbx_entity_nonpoly": {
+              "comp_id": "52G",
+              "name": "Zorbamycin"
+            }
+          },
+          {
+            "pdbx_entity_nonpoly": {
+              "comp_id": "CL",
+              "name": "CHLORIDE ION"
+            }
+          },
+          {
+            "pdbx_entity_nonpoly": {
+              "comp_id": "CU",
+              "name": "COPPER (II) ION"
+            }
+          }
+        ],
+        "polymer_entities": [
+          {
+            "rcsb_entity_source_organism": [
+              {
+                "ncbi_taxonomy_id": 28893,
+                "scientific_name": "Streptomyces flavoviridis"
+              }
+            ],
+            "rcsb_id": "5CJ3_1",
+            "rcsb_polymer_entity_container_identifiers": {
+              "reference_sequence_identifiers": [
+                {
+                  "database_accession": "B9UIZ4",
+                  "database_name": "UniProt"
+                }
+              ]
+            }
+          }
+        ],
+        "rcsb_accession_info": {
+          "major_revision": 1,
+          "minor_revision": 4,
+          "revision_date": "2025-10-22T00:00:00Z"
+        },
+        "rcsb_id": "5CJ3",
+        "rcsb_primary_citation": {
+          "pdbx_database_id_DOI": "10.1021/acs.biochem.5b01008",
+          "pdbx_database_id_PubMed": 26512730,
+          "year": 2015
+        }
+      }
+    },
+    "protein_reference": "UniProtKB:B9UIZ4",
+    "request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/rcsb-reference-metadata.json",
+        "sha256": "41c4fe42b19f3a667a52438f1f6bb1f95a0a6fdf1a1af112a787a17ebdcf08b7"
+      },
+      "retrieved_at": "2026-10-09T12:20:31.332464+00:00",
+      "sha256": "044e4eebd3e6d26f86f62f1e25f4baa27e1929c9f318a322fa01892385439480",
+      "status": 200,
+      "url": "https://data.rcsb.org/graphql?query=%7B%0A++++++entries%28entry_ids%3A+%5B%224IAG%22%2C+%225CJ3%22%5D%29+%7B%0A++++++++rcsb_id%0A++++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++++polymer_entities+%7B%0A++++++++++rcsb_id%0A++++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++++reference_sequence_identifiers+%7Bdatabase_accession+database_name%7D%0A++++++++++%7D%0A++++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++++%7D%0A++++++++nonpolymer_entities+%7Bpdbx_entity_nonpoly+%7Bcomp_id+name%7D%7D%0A++++++%7D%0A++++++chem_comp%28comp_id%3A+%2252G%22%29+%7B%0A++++++++rcsb_id%0A++++++++chem_comp+%7Bname%7D%0A++++++++rcsb_chem_comp_descriptor+%7BInChIKey%7D%0A++++++%7D%0A++++%7D"
+    },
+    "scope": "STRUCTURAL_ENTITY_REFERENCE_NOT_WHOLE_CELL_RESISTANCE_OR_EXACT_ALLELE",
+    "source_name": "Streptomyces flavoviridis",
+    "source_taxon_id": "NCBITaxon:28893",
+    "status": "EXPLICIT_PDB_REFERENCE_AND_COMPONENT_JOIN"
+  },
+  "tallysomycin_lookup": {
+    "ignored_files_included": true,
+    "literal_matches": 0,
+    "scope": "ALL_DATA_ANTIBIOTICS_YAML_TEXT_NOT_EXHAUSTIVE_CHEMICAL_SYNONYMY",
+    "term": "tallysomycin",
+    "yaml_files_checked": 2939
+  },
+  "taxonomy": {
+    "2017": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptoalloteichus",
+        "taxonId": 2016
+      },
+      "rank": "species",
+      "scientificName": "Streptoalloteichus hindustanus",
+      "taxonId": 2017
+    },
+    "29309": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces verticillus",
+      "taxonId": 29309
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/request-4555803f0a435e0d8dfdc6b6914ac0d29ba18d21edcca8998dc4a643d989673a.json",
+        "sha256": "d13af82d640a6acbee25ad6247b3843d0678f6c5fae7061b58f36abfadd60836"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "gene_exact:tlmB",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T12:22:04.204909+00:00",
+      "sha256": "131e16cfbb9ede2e19e72223ae96ee77c9b117c4eb3a5cb442b72d87a8feb475",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AtlmB&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/request-538874ee1073de4eef33902a14a47af61f0a35eed570fe818a9e05e982819689.json",
+        "sha256": "330de6e7e5b2aac63dfff40ba3c755d4629cc496e6d710b3635821f830fda6f6"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:24:20.825184+00:00",
+      "sha256": "e01165d14ac3c261f4e6345f473f33d3007cf023210773352c8650e88ea78227",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/29309"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/request-6244c36a25d00912cf29118407fdd0e2a9754d656f011f1875e5bcf6701a47df.json",
+        "sha256": "245a2d4d367e432a83dd582cd67392779dc9a32fd218914d34c8bd9dd72ed635"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:23:53.100889+00:00",
+      "sha256": "aa1953deeabc6e2e2dd1fa862a3e8d854807a07f81bb69e690b706bd5572d115",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/2017"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/request-af2ac9e1e0ac9b4e3bb5346a215be874a529f9bd0cf69b7da43c1cfd702c354b.json",
+        "sha256": "b45a45f6b600e7baaf1adc715badf5f10b9c156474203d5c172af75d9997c3b4"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "bleomycin AND acetyltransferase",
+      "release": "2026_03",
+      "result_count": 382,
+      "retrieved_at": "2026-10-09T12:23:15.804169+00:00",
+      "sha256": "5083fe33824f4e781c42743e04f7ec22326ed0378d731a9af841b19d9922e4fc",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=bleomycin+AND+acetyltransferase&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/request-bf0f44c94d7c13b0a0962fc261814e91614998a3170226f1ff50c0b026984cbb.json",
+        "sha256": "9d13a9cf36f714e156b949ac93deb7249e8c6df91da81fd1d11c9008f67090ad"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "lit_pubmed:25299801",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T12:23:06.867935+00:00",
+      "sha256": "a26fd5a0d999e11f985f6c7a1ab97ac4f2f3adfe04ce722f4bd6bc445aa47002",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A25299801&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/request-e4f8fd329de5691c10512a2c4b15ec5b7d246e17681b33cace6742d577a1028e.json",
+        "sha256": "33ca876d153385698d257e53ca82b5d565cfcc6d022cae6bde93442d27d10547"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "tallysomycin AND acetyltransferase",
+      "release": "2026_03",
+      "result_count": 7,
+      "retrieved_at": "2026-10-09T12:23:10.138372+00:00",
+      "sha256": "d80e3ab42526bfce1c5e10907d1aed22efa6d2eb1ce91b43a622a851ae2e39fa",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=tallysomycin+AND+acetyltransferase&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-primary/request-eed267b5ee7b1b15f7c82fe2837589c67ecc2f19dd194e210e8608febcd49ef2.json",
+        "sha256": "aaef208ce553253644b4613993afab5ec16bb858e96406ffc679b6fc59c5693e"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "gene_exact:blmB",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T12:22:01.509016+00:00",
+      "sha256": "1db916cd799e503e54b6451afa6487a02d37fddd25d7283247e934f5a947fa03",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AblmB&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ]
+}

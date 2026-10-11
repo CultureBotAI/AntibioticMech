@@ -1,0 +1,196 @@
+{
+  "bibliography": {
+    "PMID:10348045": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/pmid-10348045-response.bin",
+        "sha256": "15a070cf04957002f682ceb448d949c0b5ddd0f75de932301228b659f40b350f"
+      },
+      "doi": "DOI:10.7164/antibiotics.52.288",
+      "provider": "EMBL-EBI Europe PMC",
+      "publication_year": "1999",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/pmid-10348045-receipt.json",
+        "sha256": "944688b4c0ea9e99874ae4a4877aadd50ffbfd5758a8d86dab4b1106de6071fb"
+      },
+      "retrieved_at": "2026-10-10T04:49:41.661866+00:00",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10348045+AND+SRC%3AMED&format=json&resultType=core&pageSize=10"
+    },
+    "PMID:10972803": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/pmid-10972803-response.bin",
+        "sha256": "69ff0caad630fbcf7b236ba211b8bb5da1d3b43850758f6dffd00486c55a8be2"
+      },
+      "doi": "DOI:10.1046/j.1365-2958.2000.02046.x",
+      "provider": "EMBL-EBI Europe PMC",
+      "publication_year": "2000",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-card-citation-concordance/pmid-10972803-receipt.json",
+        "sha256": "505a1f8fc8fd5f9aebb91cd4de097bce3017838f9a4a7e4d0af5c44a96811589"
+      },
+      "retrieved_at": "2026-10-10T04:50:57.522044+00:00",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10972803+AND+SRC%3AMED&format=json&resultType=core&pageSize=10"
+    }
+  },
+  "citation_scoped_strains": [
+    {
+      "pmid": "PMID:10348045",
+      "reference_number": 1,
+      "strain_annotations": [
+        "C373.1"
+      ]
+    },
+    {
+      "pmid": "PMID:10972803",
+      "reference_number": 3,
+      "strain_annotations": [
+        "ATCC 19609"
+      ]
+    }
+  ],
+  "compound": {
+    "complete_collection_aware_record_read": true,
+    "identifier": "CHEBI:17658",
+    "label": "tylosin",
+    "path": "data/antibiotics/antibacterial/tylosin.yaml",
+    "sha256": "2e55e30b4cb9dbff7da053610ade1066fa06b8da75fe5a6a142703625bbcac11",
+    "source_resistance_assertions": 40,
+    "standard_inchi_key": "WBPYTXDJUQJLPQ-VMXQISHHSA-N",
+    "tested_preparation_exact_structure_independently_established": false
+  },
+  "cross_reference_caution": {
+    "disposition": "The synonym/bibliography lead does not itself establish an ontology equivalence or an erroneous xref.",
+    "merge_aro_terms": false,
+    "source_label": "erm(32)",
+    "tlrb_is_explicit_card_xref": false,
+    "uniprot_explicit_card_id": "ARO:3004592"
+  },
+  "curation_disposition": "QUALIFIED_RESEARCH_CONTEXT_ONLY",
+  "inputs": {
+    "concordance": {
+      "path": "research/2026-10-09-card-citation-concordance.json",
+      "sha256": "d798b0f7abc76bfed7b6ee77d6fb3ff94429d1da432d143193f93e1da441189e"
+    },
+    "proteins": {
+      "path": "reports/resistance-grounding-2026-10-07/card-proteins.json",
+      "sha256": "be858b4818e8f74e99f13adb0485851c438adbeca0081b7eb5e01d6296e6d5eb"
+    },
+    "taxonomy": {
+      "path": "reports/resistance-grounding-2026-10-07/card-taxonomy.json",
+      "sha256": "d75a09d19145527c20d59928f4e3a44b0e827e7fae1e3220b8a6546ce5be6e6a"
+    }
+  },
+  "limits": [
+    "The exact experimental protein form and tested compound preparation remain unresolved.",
+    "Citation-specific strain annotations are not an entry-wide strain assignment.",
+    "No source term merge, biological record edit, exact variants, sequences, constructs, protocols or numerical AST.",
+    "No NCBI endpoint requests, outreach, source adoption or GitHub mutation; #1040 remains deferred."
+  ],
+  "organism_contexts": [
+    {
+      "rank": "species",
+      "role": "GENE_DONOR_SPECIES",
+      "source_name": "Streptomyces fradiae",
+      "source_strain_label": "ATCC 19609",
+      "strain_taxon_id": null,
+      "taxon_id": "NCBITaxon:1906"
+    },
+    {
+      "rank": "species",
+      "role": "ASSAY_HOST_SPECIES",
+      "source_name": "Streptomyces lividans",
+      "source_strain_label": "1326",
+      "strain_taxon_id": null,
+      "taxon_id": "NCBITaxon:1916"
+    }
+  ],
+  "primary_review": {
+    "PMID:10348045": {
+      "context": "Earlier drug-inactivation interpretation; product identity was unresolved.",
+      "primary_results_reviewed": false,
+      "scope": "PUBLISHER_ABSTRACT_ONLY",
+      "url": "https://www.jstage.jst.go.jp/article/antibiotics1968/52/3/52_3_288/_article/-char/en"
+    },
+    "PMID:10972803": {
+      "donor_and_host_contexts_distinct": true,
+      "figures_visually_reviewed": false,
+      "findings": [
+        "The host phenotype and RNA methylation were observed, but their causal connection was not unequivocally established.",
+        "No drug modification or inactivation was detected in the reported follow-up; the authors left possible loss of a separate activity unresolved."
+      ],
+      "locations": [
+        "Results: TlrB confers tylosin resistance in Streptomyces lividans",
+        "Results: Analyses for tylosin modification",
+        "Discussion: final mechanistic interpretation",
+        "Table 1"
+      ],
+      "native_reference_is_exact_experimental_protein": false,
+      "scope": "SELECTED_RESULTS_DISCUSSION_AND_TABLE_1_TEXT",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-2958.2000.02046.x",
+      "whole_paper_review_complete": false
+    }
+  },
+  "reference_protein": {
+    "accession": "UniProtKB:Q9S1M6",
+    "bibliography": [
+      {
+        "identifiers": [
+          "DOI:10.7164/antibiotics.52.288",
+          "PMID:10348045"
+        ],
+        "reference_number": 1,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1099/13500872-145-4-855",
+          "PMID:10220165"
+        ],
+        "reference_number": 2,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1046/j.1365-2958.2000.02046.x",
+          "PMID:10972803"
+        ],
+        "reference_number": 3,
+        "unresolved_identifiers": []
+      },
+      {
+        "identifiers": [
+          "DOI:10.1016/j.jmb.2004.02.030",
+          "PMID:15046978"
+        ],
+        "reference_number": 4,
+        "unresolved_identifiers": []
+      }
+    ],
+    "description_flag": null,
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "entry_version": 71,
+    "exact_allele_assignment": false,
+    "experimental_subject_assignment": false,
+    "gene_names_and_synonyms": [
+      "rlmAII",
+      "tlrB"
+    ],
+    "reference_organism_name": "Streptomyces fradiae",
+    "reference_taxon_id": "NCBITaxon:1906",
+    "sequence_version": 1,
+    "taxonomy_identity_verified": true,
+    "taxonomy_rank": "species",
+    "taxonomy_scientific_name": "Streptomyces fradiae"
+  },
+  "scope": "TLRB_REFERENCE_SYNONYM_AND_QUALIFIED_PRIMARY_CONTEXT_NOT_EXACT_ALLELE_CURATED",
+  "source_term": "ARO:3001299",
+  "summary": {
+    "bibliography_identities_verified": 2,
+    "biological_records_changed": 0,
+    "exact_experimental_protein_assignments": 0,
+    "genome_assignments": 0,
+    "named_species_contexts": 2,
+    "reference_synonym_leads": 1,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  }
+}

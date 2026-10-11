@@ -1,0 +1,271 @@
+{
+  "citation": {
+    "authors": "Gomez Londono, Oliveira Souza et al.",
+    "reference": "DOI:10.1093/jac/dkag124",
+    "url": "https://academic.oup.com/jac/article/81/5/dkag124/8659590",
+    "year": 2026
+  },
+  "cohort": {
+    "bioproject_counts": {
+      "PRJNA1301956": 52,
+      "PRJNA985736": 35
+    },
+    "clinical_isolates": 87,
+    "exact_experimental_alleles": "NOT_ASSIGNED",
+    "per_isolate_assembly_mapping": "NOT_ESTABLISHED",
+    "selection_scope": "Decreased susceptibility to at least one triazole, not every isolate resistant to every drug.",
+    "source_organism": "Aspergillus fumigatus",
+    "species_taxon_id": "NCBITaxon:746128",
+    "taxonomy_scope": "Source-name grounding via UniProt Taxonomy, not independent re-identification of isolates.",
+    "unique_biosample_accessions": 87,
+    "unique_source_isolate_labels": 87
+  },
+  "compound_leads": [
+    {
+      "identifier": "CHEBI:10023",
+      "record_label": "voriconazole",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "f1134e9a45eea95544499787f68dfa0a097b08b7bf2e8bf600301fca7821a95f",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "status": "NAME_LEVEL_LEAD_TESTED_CHEMICAL_FORM_UNRESOLVED"
+    },
+    {
+      "identifier": "CHEBI:6076",
+      "record_label": "itraconazole",
+      "record_path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "record_sha256": "d655532051a88e0ee8a9cb5ed41d5b3cd0879b9139eb8590fdc2a8bfd17dc3d0",
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "status": "NAME_LEVEL_LEAD_TESTED_CHEMICAL_FORM_UNRESOLVED"
+    },
+    {
+      "identifier": "CHEBI:64355",
+      "record_label": "posaconazole",
+      "record_path": "data/antibiotics/antifungal/posaconazole.yaml",
+      "record_sha256": "79cf801dcee95e16dad1477d57d1374e4e42500d9c5c251bbc60e8216ae4ec21",
+      "standard_inchi_key": "RAGOYPUPXAKGKH-XAKZXMRKSA-N",
+      "status": "NAME_LEVEL_LEAD_TESTED_CHEMICAL_FORM_UNRESOLVED"
+    },
+    {
+      "identifier": "CHEBI:85979",
+      "record_label": "isavuconazole",
+      "record_path": "data/antibiotics/antifungal/isavuconazole.yaml",
+      "record_sha256": "08fa39a3216a656630f4b21f671b75f8406e1d6189d766327156dcf7b52c680a",
+      "standard_inchi_key": "DDFOUSQFMYRUQK-RCDICMHDSA-N",
+      "status": "NAME_LEVEL_LEAD_TESTED_CHEMICAL_FORM_UNRESOLVED"
+    }
+  ],
+  "corpus_phi_scope": {
+    "identifier_scoped": 181,
+    "pending_associations": 36,
+    "pending_papers": 16,
+    "retained": 217
+  },
+  "laboratory_context": {
+    "background_label": "PyrG+",
+    "joined_to_clinical_isolates": false,
+    "joined_to_reference_assembly_or_protein": false
+  },
+  "limitations": [
+    "BioSample and BioProject identifiers are not genome assembly or exact allele accessions.",
+    "No allele, variant, sequence, construct, primer, protocol or numeric resistance measurement is exported.",
+    "Cyp51A modelling reference is not the separate Cyp51B structural template or an experimental isolate protein.",
+    "Compound names identify research leads, not proof of the tested exact structures or assay-level resistance.",
+    "No NCBI request, outreach, reuse clarification, source adoption or GitHub mutation was performed.",
+    "This checkpoint does not complete whole-record review, the corpus-wide investigation, or full QC."
+  ],
+  "overlap_check": {
+    "exact_biosample_matches": 0,
+    "ignored_files_included": true,
+    "interpretation": "No exact sample ID match in the stated corpus scope; no broader biological non-overlap is inferred.",
+    "membership_collections_checked": 26,
+    "natesan_2012_subject_label_matches": 0,
+    "natesan_scope": "Publisher HTML and S1 identifier cells only; four pending claims remain pending.",
+    "records_loaded": 2939,
+    "scope": "Current expanded records and membership registries, not every raw dataset or untracked research file."
+  },
+  "preservation": {
+    "biological_record_changes": 0,
+    "corpus_sha256": "f9c3484231d5d98874ced45e0c7b129084ac7c9f15e9f6e796a58503dbf63aac",
+    "curation_events_added": 0,
+    "discovery_exports_unchanged": 18,
+    "protected_file_count": 2989,
+    "protected_file_manifest_sha256": "9291e6e8b585d71145a1a472c877bb1b9cc4d8d9850a94f1c2bf6a9896826e7e",
+    "record_hashes_verified": 2939,
+    "review_sha256": "90bd6809de6f23d2bcf158fa04575816aa12ac2207c01bae405250bcf8151a70",
+    "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+    "source_queue_unchanged": true
+  },
+  "primary_access": {
+    "cache": {
+      "cache_file_sha256": "c07554f39b0436b1915b3a3e357f3b8c4e9546a532e052ae0933f66daec16303",
+      "cache_path": "reports/resistance-grounding-2026-10-07/dkag124-publisher-primary.json",
+      "retrieved_at": "2026-10-08T23:51:17.850477+00:00",
+      "sha256": "323cab5e258a447d371b917ff30f9c23f1c6fa6c6bc832cf06fc61cd00a1b2ca",
+      "status": 200,
+      "url": "https://oup.silverchair-cdn.com/article-minimal/8659590"
+    },
+    "decoding": "Reverse cached Latin-1 decoding to bytes, then honor HTML UTF-8 metadata.",
+    "locations": {
+      "clinical_cohort": "dkag124-s2.1 / 561233148",
+      "data_availability": "561233205",
+      "mapping_reference": "dkag124-s2.3 / 561233152",
+      "protein_reference": "dkag124-s2.7 / 561233161 and reference dkag124-B15"
+    },
+    "review_method": "CACHED_HTML_AND_NATIVE_EMBEDDED_WORKSHEET_XML",
+    "visual_review": false
+  },
+  "reference_assembly": {
+    "accession": "GCA_000150145.1",
+    "assigned_to_clinical_isolates": false,
+    "role": "READ_MAPPING_REFERENCE_ONLY",
+    "source_label": "GCA_000150145.1_ASM15014v1",
+    "strain_crosswalk": "NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "reference_protein": {
+    "assigned_to_clinical_isolates": false,
+    "metadata": {
+      "entryAudit": {
+        "entryVersion": 146,
+        "firstPublicDate": "2020-02-26",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2005-07-05",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "11427550",
+                "source": "PubMed"
+              }
+            ],
+            "value": "cyp51A"
+          },
+          "orfNames": [
+            {
+              "value": "AFUA_4G06890"
+            }
+          ],
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000303",
+                  "id": "16622700",
+                  "source": "PubMed"
+                }
+              ],
+              "value": "erg11A"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Neosartorya fumigata",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Aspergillus",
+          "Fumigati"
+        ],
+        "scientificName": "Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)",
+        "taxonId": 330879
+      },
+      "primaryAccession": "Q4WNT5"
+    },
+    "role": "MODELLING_REFERENCE_ONLY"
+  },
+  "reuse": {
+    "decision": "NO_SOURCE_ADOPTION_OR_BULK_TABLE_REDISTRIBUTION",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "observed_article_license": "CC-BY-NC-4.0",
+    "scope": "Attributed metadata summary only; table rows and raw primary text remain in ignored local caches.",
+    "uniprot_attribution": "UniProt Consortium, release 2026_03, CC BY 4.0."
+  },
+  "reviewed_on": "2026-10-09",
+  "status": "METADATA_RESEARCH_ONLY_NO_CORPUS_CURATION",
+  "supplement": {
+    "bytes": 3090971,
+    "docx_relationship_id": "rId14",
+    "embedded_part": "word/embeddings/Microsoft_Excel_Worksheet.xlsx",
+    "embedded_workbook_sha256": "3998861dc2b9dceb0db88fbffba395dac3ae9c39a496302e725724c150613be9",
+    "header_range": "A2:C2",
+    "metadata_cache_sha256": "a55d0b89a9bd0ab525aafe18a621c2f422bac518ef1265f5cafe491c123bdfd8",
+    "numeric_looking_labels_preserved_as_strings": true,
+    "private_tuple_sha256": "484e56cef7b29dfe3a1c8db9b0b187e9078057a37a1288059e57af0110adebf5",
+    "public_row_export": false,
+    "retrieved_at": "2026-10-08T23:53:57.219145+00:00",
+    "reviewed_identifier_cells": "A3:C89",
+    "sha256": "3be11dcb1fe2a40fe621f537c5af61b06fe498fdc3e4c024590ce2dbc4d8b54b",
+    "sheet": "PAPER - Figure 1",
+    "sheet_part": "xl/worksheets/sheet1.xml",
+    "sheet_xml_sha256": "518c6bdf2dbf4a524ffb353e9bf51e0e6d561eca5840794638a50eb596a681ce",
+    "status": 200,
+    "table": "S1",
+    "url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jac/81/5/10.1093_jac_dkag124/1/dkag124_supplementary_data.docx"
+  },
+  "taxonomy": {
+    "330879": {
+      "active": true,
+      "parent": {
+        "scientificName": "Aspergillus fumigatus",
+        "synonyms": [
+          "Neosartorya fumigata"
+        ],
+        "taxonId": 746128
+      },
+      "rank": "strain",
+      "scientificName": "Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)",
+      "taxonId": 330879
+    },
+    "746128": {
+      "active": true,
+      "parent": {
+        "scientificName": "Fumigati",
+        "taxonId": 2720872
+      },
+      "rank": "species",
+      "scientificName": "Aspergillus fumigatus",
+      "taxonId": 746128
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_file_sha256": "8f1b082963d4affedfcd273f50da8831e7e6de55763dd5fa960872bb4f38729b",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:18.453523+00:00",
+      "sha256": "69894dd64e4e62361f8bb211b064f7807d0aed93f1b93602ef2621c7796186b5",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ2TWM0+OR+accession%3AQ2U3V9+OR+accession%3AQ4HZS8+OR+accession%3AQ4WDM9+OR+accession%3AQ4WNT5+OR+accession%3AQ59VG6+OR+accession%3AQ59X67+OR+accession%3AQ5A4G2+OR+accession%3AQ5ALV2+OR+accession%3AQ6X9S4+OR+accession%3AQ870D1+OR+accession%3AQ8X0Z3+OR+accession%3AQ9P340+OR+accession%3AW7LTW3+OR+accession%3AW7LX41&format=json&size=500"
+    },
+    {
+      "cache_file_sha256": "d88fee2b9e355efb3fe3efa0a9d22130d189cab6f9957a6719965029406e875b",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-82e6d6d5607f9791cd3fcfcc2b34f722fb8a90a5fae76b37107735d592a60f43.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:46.843661+00:00",
+      "sha256": "b58312a1c0f236fdf4712dc4022733a88c482c38a14547ced3bf88e3cd204718",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/330879"
+    },
+    {
+      "cache_file_sha256": "39a14195d5f92fb50471fe28d006a98c7988eaa03a8534ccdc4e99206511a896",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-cdf078af3e6e89bba7f8a11825b3d32b3d626185b6898c6e33e903e6eb2d6087.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:57.279412+00:00",
+      "sha256": "b79837e96faec2c9aa0e1224d2f3237e58be315ed54b6921936134423238c14f",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/746128"
+    }
+  ]
+}

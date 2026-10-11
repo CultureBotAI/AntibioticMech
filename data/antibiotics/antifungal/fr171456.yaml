@@ -68,3 +68,29 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-11T02:42:47Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added primary-supported qualitative ERG26 resistance evidence in laboratory
+    yeast. Grounded species taxonomy while retaining UniProt as reference-only context.
+    Preserved source fields and prior history; no exact alleles, genomes or numerical
+    AST assigned. Whole-record review remains open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: ERG26-associated FR171456 resistance in laboratory yeast
+  gene_families:
+  - ERG26
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: source-reported experimental FR171456 resistance
+  assay: Comparative growth dose-response assay
+  note: Gene-level functional evidence in laboratory derivatives, not a clinical or
+    species-wide phenotype. Some resistant isolates lacked ERG26 changes and remain
+    unexplained. UniProtKB:P53199 (S288c) is reference context, not an experimental
+    allele. No exact allele, protein accession, derivative TaxID or genome is assigned.
+    Named-compound scope does not independently re-identify the tested preparation.
+  evidence:
+  - reference: PMID:26456460
+    notes: Results, Figure 3a, Supplementary Figure 6 and Table 3; qualitative gene-level
+      evidence.

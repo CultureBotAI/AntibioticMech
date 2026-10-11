@@ -108,6 +108,49 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
+<h2>Resistance mechanisms</h2>
+<p class="meta">2 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>fabF-associated partial resistance / reduced susceptibility to platencin in a laboratory Streptomyces albus derivative<br><span class="meta">Primary functional evidence in a laboratory S. albus derivative; S. albus J1074 is the host background, not the derivative. Streptomyces platensis MA7327 is the native donor, not the tested host. The coarse route follows the authors&#39; interpretation; it is not an independent kinetic or exact-allele validation. The paper reports donor gene archive KF543053; no matching UniProt protein was resolved. Same-species DSM 40041 proteins are not MA7327 assignments. The precise basis of the reported intrinsic insensitivity is unresolved. The partial platencin response is not equivalent to full resistance. NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category is assigned.</span></td>
+      <td>—</td>
+      <td><em>Streptomyces albus</em><br><span class="meta">strain SB12013</span></td>
+      <td class="meta">fabF</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/24560608">PMID:24560608</a></span> <span class="meta">(Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure 2 and Table 1. Donor, host background and derivative are distinct; the coarse route is the authors&#39; interpretation. Supplements were not inspected.)</span></li>
+</ul>
+<span class="meta">Source-reported growth susceptibility assays; qualitative result only</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>ANTIBIOTIC_TARGET_REPLACEMENT <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_REPLACEMENT" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_TARGET_REPLACEMENT</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>ptmP3-associated reported resistance to platencin in a laboratory Streptomyces albus derivative<br><span class="meta">Primary functional evidence in a laboratory S. albus derivative; S. albus J1074 is the host background, not the derivative. Streptomyces platensis MA7327 is the native donor, not the tested host. The coarse route follows the authors&#39; interpretation; it is not an independent kinetic or exact-allele validation. Donor reference UniProtKB:D8L2W8 (entry version 45, sequence version 1; EMBL:FJ655920 / ACS13710.1) matches the paper&#39;s PtmP3 archive accession. This is not an experimental construct or allele assignment. PtnP3 is not substituted for the tested PtmP3. NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category is assigned.</span></td>
+      <td>—</td>
+      <td><em>Streptomyces albus</em><br><span class="meta">strain SB12011</span></td>
+      <td class="meta">ptmP3</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/24560608">PMID:24560608</a></span> <span class="meta">(Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure 2 and Table 1. Donor, host background and derivative are distinct; the coarse route is the authors&#39; interpretation. Supplements were not inspected.)</span></li>
+</ul>
+<span class="meta">Source-reported growth susceptibility assays; qualitative result only</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 <h2>Producer organisms</h2>
 <p class="meta">Organisms that biosynthesize this compound. Cluster link evidence
@@ -178,6 +221,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Added two qualitative primary-paper resistance claims, preserving donor/background/derivative identity and the compound-specific response. Coarse routes retain author-interpretation limits. Donor reference grounding does not assign exact experimental alleles. Existing MIBiG producer and chemical evidence preserved; whole-record review remains open.</p>
   </li>
 </ol>
 

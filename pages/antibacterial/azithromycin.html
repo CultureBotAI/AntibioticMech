@@ -140,7 +140,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">2 observations &middot; <a href="azithromycin/activity-1.html">Browse all observations</a> &middot; <a href="azithromycin/record-52cb0dc3b9b123689bb1310b183cfaf44c875757593fff313ed7f916eaa56efd.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">2 observations &middot; <a href="azithromycin/activity-1.html">Browse all observations</a> &middot; <a href="azithromycin/record-80fde070a61d4de745611e160830333cdc7a4052714fc0ac24f061e4ecd7509a.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -183,9 +183,8 @@ BioSample <a href="https://www.ncbi.nlm.nih.gov/biosample/SAMN35332251">SAMN3533
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">54 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">55 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">32</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
@@ -766,6 +765,26 @@ type — expand a group to see its determinants.</p>
 
 </div>
 </details>
+<details class="details-group">
+  <summary>UNKNOWN <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>mef(F)/msr(G)-associated reduced azithromycin susceptibility in native isolate Epi0082<br><span class="meta">Same-isolate gene-family/phenotype co-occurrence, not individual-gene or allele-specific causation. The source name Macrococcus canis matches otherNames in the cached UniProt taxonomy entry. The separate type-strain comparator KM45013 and expression host are not this isolate. No exact protein, allele, strain TaxID or numerical AST is assigned; the UniProt mef(F) reference belongs to another species and strain. Source-reported genome components CP046363.1, CP046364.1, CP046365.1, CP046366.1 and CP046367.1 share BioSample SAMN13342681 and BioProject PRJNA590936 in ENA metadata; these are not assembly accessions or new gene calls. Compound scope follows named azithromycin; the tested preparation was not independently re-identified.</span></td>
+      <td>—</td>
+      <td><em>Macrococcoides canis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1855823"><code class="curie">NCBITaxon:1855823</code></a><br><span class="meta">strain Epi0082</span></td>
+      <td class="meta">mef(F), msr(G)</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/33118027">PMID:33118027</a></span> <span class="meta">(Native Epi0082 row in Table 1 and selected Results/accession statement inspected as publisher-indexed text. Both gene families co-occur; the separate expression-host experiment is not assigned to the native isolate.)</span></li>
+</ul>
+<span class="meta">Source-reported broth microdilution phenotype</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 
 
@@ -818,6 +837,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-10-05 · seed_from_sources</span>
     <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-10 · codex · LLM-assisted</span>
+    <p>Added one native Epi0082 mef(F)/msr(G) and azithromycin co-occurrence claim with verified species-name and source-reported genome-component context. Kept the different-species UniProt reference and expression-host experiment separate; preserved every source-owned claim and membership. Whole-record review remains open.</p>
   </li>
 </ol>
 

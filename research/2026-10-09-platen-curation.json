@@ -1,0 +1,158 @@
+{
+  "claims_added": 4,
+  "date": "2026-10-09",
+  "experimental_alleles_validated": false,
+  "github_mutations": 0,
+  "history_events_added": 2,
+  "ncbi_endpoint_requests": 0,
+  "primary_document_version": "ACCEPTED_AUTHOR_MANUSCRIPT",
+  "primary_reference": "PMID:24560608",
+  "primary_sha256": "c970162577780a7f73a11def17ab2ed7480a8f0a198b5144f7e077bbb3be8da4",
+  "records": [
+    {
+      "all_other_fields_preserved": true,
+      "before_record_sha256": "f85dd2de00b370021d0ff2a6b875c51421e8b699135c89048bcc0a2056281358",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/platencin-canary.yaml",
+        "sha256": "5bdf0cc6feda78dd54eee8f5a7bbf37b7c8515344790fc01cb833c20953580b7"
+      },
+      "claims": [
+        {
+          "assay": "Source-reported growth susceptibility assays; qualitative result only",
+          "evidence": [
+            {
+              "notes": "Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure 2 and Table 1. Donor, host background and derivative are distinct; the coarse route is the authors' interpretation. Supplements were not inspected.",
+              "reference": "PMID:24560608"
+            }
+          ],
+          "gene_families": [
+            "ptmP3"
+          ],
+          "label": "ptmP3-associated reported resistance to platencin in a laboratory Streptomyces albus derivative",
+          "mechanism_type": "ANTIBIOTIC_TARGET_REPLACEMENT",
+          "note": "Primary functional evidence in a laboratory S. albus derivative; S. albus J1074 is the host background, not the derivative. Streptomyces platensis MA7327 is the native donor, not the tested host. The coarse route follows the authors' interpretation; it is not an independent kinetic or exact-allele validation. Donor reference UniProtKB:D8L2W8 (entry version 45, sequence version 1; EMBL:FJ655920 / ACS13710.1) matches the paper's PtmP3 archive accession. This is not an experimental construct or allele assignment. PtnP3 is not substituted for the tested PtmP3. NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category is assigned.",
+          "phenotype_label": "reported resistance to platencin",
+          "strain": "SB12011",
+          "taxon_label": "Streptomyces albus"
+        },
+        {
+          "assay": "Source-reported growth susceptibility assays; qualitative result only",
+          "evidence": [
+            {
+              "notes": "Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure 2 and Table 1. Donor, host background and derivative are distinct; the coarse route is the authors' interpretation. Supplements were not inspected.",
+              "reference": "PMID:24560608"
+            }
+          ],
+          "gene_families": [
+            "fabF"
+          ],
+          "label": "fabF-associated partial resistance / reduced susceptibility to platencin in a laboratory Streptomyces albus derivative",
+          "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+          "note": "Primary functional evidence in a laboratory S. albus derivative; S. albus J1074 is the host background, not the derivative. Streptomyces platensis MA7327 is the native donor, not the tested host. The coarse route follows the authors' interpretation; it is not an independent kinetic or exact-allele validation. The paper reports donor gene archive KF543053; no matching UniProt protein was resolved. Same-species DSM 40041 proteins are not MA7327 assignments. The precise basis of the reported intrinsic insensitivity is unresolved. The partial platencin response is not equivalent to full resistance. NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category is assigned.",
+          "phenotype_label": "partial resistance / reduced susceptibility to platencin",
+          "strain": "SB12013",
+          "taxon_label": "Streptomyces albus"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added two qualitative primary-paper resistance claims, preserving donor/background/derivative identity and the compound-specific response. Coarse routes retain author-interpretation limits. Donor reference grounding does not assign exact experimental alleles. Existing MIBiG producer and chemical evidence preserved; whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-09T17:18:00Z"
+      },
+      "curation_status": "SEEDED",
+      "fresh_seed": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/platencin-fresh-seed.json",
+        "sha256": "827d789ccb960d490caebde6b2d041a68bf98ce19d3b1a91b331e703aafa134d"
+      },
+      "history_events_added": 1,
+      "identifier": "CHEBI:68241",
+      "label": "platencin",
+      "original": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/platencin-original.yaml",
+        "sha256": "f85dd2de00b370021d0ff2a6b875c51421e8b699135c89048bcc0a2056281358"
+      },
+      "original_bytes_preserved_as_prefix": true,
+      "record": {
+        "path": "data/antibiotics/antibacterial/platencin.yaml",
+        "sha256": "5bdf0cc6feda78dd54eee8f5a7bbf37b7c8515344790fc01cb833c20953580b7"
+      },
+      "standard_inchi_key": "DWUHGPPFFABTIY-RLWZQHMASA-N"
+    },
+    {
+      "all_other_fields_preserved": true,
+      "before_record_sha256": "028eb0e48c8783213fc18a7212a032f47db16cef28e94b227c94b93e7470481a",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/platensimycin-canary.yaml",
+        "sha256": "f75a55971c4629c13895681a48dc43f5b43143e380431503d6a28c1e16576a84"
+      },
+      "claims": [
+        {
+          "assay": "Source-reported growth susceptibility assays; qualitative result only",
+          "evidence": [
+            {
+              "notes": "Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure 2 and Table 1. Donor, host background and derivative are distinct; the coarse route is the authors' interpretation. Supplements were not inspected.",
+              "reference": "PMID:24560608"
+            }
+          ],
+          "gene_families": [
+            "ptmP3"
+          ],
+          "label": "ptmP3-associated reported resistance to platensimycin in a laboratory Streptomyces albus derivative",
+          "mechanism_type": "ANTIBIOTIC_TARGET_REPLACEMENT",
+          "note": "Primary functional evidence in a laboratory S. albus derivative; S. albus J1074 is the host background, not the derivative. Streptomyces platensis MA7327 is the native donor, not the tested host. The coarse route follows the authors' interpretation; it is not an independent kinetic or exact-allele validation. Donor reference UniProtKB:D8L2W8 (entry version 45, sequence version 1; EMBL:FJ655920 / ACS13710.1) matches the paper's PtmP3 archive accession. This is not an experimental construct or allele assignment. PtnP3 is not substituted for the tested PtmP3. NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category is assigned.",
+          "phenotype_label": "reported resistance to platensimycin",
+          "strain": "SB12011",
+          "taxon_label": "Streptomyces albus"
+        },
+        {
+          "assay": "Source-reported growth susceptibility assays; qualitative result only",
+          "evidence": [
+            {
+              "notes": "Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure 2 and Table 1. Donor, host background and derivative are distinct; the coarse route is the authors' interpretation. Supplements were not inspected.",
+              "reference": "PMID:24560608"
+            }
+          ],
+          "gene_families": [
+            "fabF"
+          ],
+          "label": "fabF-associated reported resistance to platensimycin in a laboratory Streptomyces albus derivative",
+          "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+          "note": "Primary functional evidence in a laboratory S. albus derivative; S. albus J1074 is the host background, not the derivative. Streptomyces platensis MA7327 is the native donor, not the tested host. The coarse route follows the authors' interpretation; it is not an independent kinetic or exact-allele validation. The paper reports donor gene archive KF543053; no matching UniProt protein was resolved. Same-species DSM 40041 proteins are not MA7327 assignments. The precise basis of the reported intrinsic insensitivity is unresolved. NCBITaxon:58346 is a donor species reference; NCBITaxon:1888 is a host species-name reference. The J1074 taxonomy search is ambiguous. No exact allele, strain TaxID, genome, numerical AST or clinical category is assigned.",
+          "phenotype_label": "reported resistance to platensimycin",
+          "strain": "SB12013",
+          "taxon_label": "Streptomyces albus"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added two qualitative primary-paper resistance claims, preserving donor/background/derivative identity and the compound-specific response. Coarse routes retain author-interpretation limits. Donor reference grounding does not assign exact experimental alleles. Existing MIBiG producer and chemical evidence preserved; whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-09T17:18:01Z"
+      },
+      "curation_status": "SEEDED",
+      "fresh_seed": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/platensimycin-fresh-seed.json",
+        "sha256": "602502b9bdcebe2fe7109d8853f2bd79aa80608b20fbc6cface033b0c839378e"
+      },
+      "history_events_added": 1,
+      "identifier": "CHEBI:68236",
+      "label": "platensimycin",
+      "original": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/platensimycin-original.yaml",
+        "sha256": "028eb0e48c8783213fc18a7212a032f47db16cef28e94b227c94b93e7470481a"
+      },
+      "original_bytes_preserved_as_prefix": true,
+      "record": {
+        "path": "data/antibiotics/antibacterial/platensimycin.yaml",
+        "sha256": "f75a55971c4629c13895681a48dc43f5b43143e380431503d6a28c1e16576a84"
+      },
+      "standard_inchi_key": "CSOMAHTTWTVBFL-OFBLZTNGSA-N"
+    }
+  ],
+  "source_ownership": "CURATOR; reproducible source slices unchanged",
+  "status": "CURATED_QUALITATIVE_PRIMARY_EVIDENCE",
+  "whole_record_review_complete": false
+}

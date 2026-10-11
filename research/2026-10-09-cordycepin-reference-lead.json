@@ -1,0 +1,160 @@
+{
+  "access_limitations": [
+    {
+      "direct_http_status": 403,
+      "indexed_text_available": true,
+      "url": "https://rnajournal.cshlp.org/content/15/5/837.full.pdf"
+    },
+    {
+      "direct_http_status": 403,
+      "indexed_text_available": false,
+      "url": "https://europepmc.org/articles/PMC2673080?pdf=render"
+    }
+  ],
+  "compound": {
+    "identifier": "CHEBI:29014",
+    "label": "cordycepin",
+    "path": "data/antibiotics/antibacterial/cordycepin.yaml",
+    "sha256": "721122b233eea1341feb863c2a7c82c555dbf5a6f8a5b576d71ec3b4014c6c73",
+    "standard_inchi_key": "OFEZSBMBBKLLBJ-BAJZRUMYSA-N",
+    "unchanged": true
+  },
+  "curated": false,
+  "curation_decision": "HOLD_FOR_PRIMARY_FIGURES_AND_SUBJECT_CONTEXT",
+  "date": "2026-10-09",
+  "distinct_metabolite": {
+    "identifier": "CHEBI:52316",
+    "label": "cordycepin triphosphate",
+    "path": "data/antibiotics/antifungal/cordycepin-triphosphate.yaml",
+    "sha256": "806180b58cfcfa939b66b8af923952b61fdfd12a6985792b66dee9ff8010cebc",
+    "standard_inchi_key": "NLIHPCYXRYQPSD-BAJZRUMYSA-N",
+    "unchanged": true
+  },
+  "limitations": [
+    "Reference S288c proteins and its TaxID are not assignments to a tested strain or allele.",
+    "No MIC, clinical category, genome, BioSample, allele, or variant assigned.",
+    "Parent-drug exposure evidence was not transferred to cordycepin triphosphate.",
+    "No new NCBI request, source adoption, source-terms review, or GitHub mutation.",
+    "The 2001 ADO1 paper and the 2003 S. pombe paper remain separate follow-up leads."
+  ],
+  "preservation": {
+    "corpus": {
+      "path": "reports/resistance-grounding-2026-10-09-sdh8/corpus.json",
+      "sha256": "659b758cba122d3b571f55fb26ad4f61473ce4a4ba81fbceb015c89fd65fdcaf"
+    },
+    "ignored_files_included": true,
+    "manifest": {
+      "path": "reports/resistance-grounding-2026-10-07/cordycepin-20261009/protected-before.json",
+      "sha256": "442edea83c2840055f8a39c8ac455c66d3985a219778ddc5771a7c2ac9b9a9ca"
+    },
+    "protected_files": 6322,
+    "records_unchanged": 2939
+  },
+  "primary_lead": {
+    "authors": "Holbein et al.",
+    "doi": "10.1261/rna.1458909",
+    "evidence_type": "FUNCTIONAL_EXPERIMENT_TEXT_LEAD",
+    "experimental_identifiers_assigned": false,
+    "figures_visually_inspected": false,
+    "finding": "The Results implicate ADO1 and ADK1 in cordycepin-responsive yeast growth and interpret activation of the administered parent compound as relevant to toxicity.",
+    "genes": [
+      "ADO1",
+      "ADK1"
+    ],
+    "limits": "Figure panels and strain provenance were not visually verified; this is a qualitative gene-level lead, not a complete experimental review.",
+    "locations_inspected": [
+      "Indexed publisher PDF, printed page 838, Results and Figure 1 caption"
+    ],
+    "native_primary_file_cached": false,
+    "organism": "Saccharomyces cerevisiae",
+    "reference": "PMID:19324962",
+    "species_taxon_id": "NCBITaxon:4932",
+    "strain_provenance_verified": false,
+    "title": "Cordycepin interferes with 3' end formation in yeast independently of its potential to terminate RNA chain elongation.",
+    "url": "https://rnajournal.cshlp.org/content/15/5/837.full.pdf",
+    "year": 2009
+  },
+  "primary_review_complete": false,
+  "reference_proteins": [
+    {
+      "database_cites_holbein_2009": false,
+      "entry_version": 237,
+      "experimental_assignment": false,
+      "gene": "ADK1",
+      "protein_accession": "UniProtKB:P07170",
+      "protein_name": "Adenylate kinase",
+      "reference_locus": "YDR226W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 2,
+      "sgd_id": "SGD:S000002634"
+    },
+    {
+      "database_cites_holbein_2009": false,
+      "entry_version": 200,
+      "experimental_assignment": false,
+      "gene": "ADO1",
+      "protein_accession": "UniProtKB:P47143",
+      "protein_name": "Adenosine kinase",
+      "reference_locus": "YJR105W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000003866"
+    }
+  ],
+  "status": "REFERENCE_GROUNDED_PRIMARY_REVIEW_INCOMPLETE",
+  "taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:4930",
+      "rank": "species",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientific_name": "Saccharomyces cerevisiae",
+      "scope": "EXPERIMENTAL_SPECIES",
+      "taxon_id": "NCBITaxon:4932"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:4932",
+      "rank": "strain",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559292"
+    }
+  ],
+  "taxonomy_cache_parent": {
+    "path": "research/2026-10-08-hygromycin-yeast-figure-followup.json",
+    "sha256": "ae84c2b65f383008dc7b2377df370ab0c0497816ce87e9e29ed7732a9d5c4d39"
+  },
+  "uniprot": {
+    "attribution": "UniProt Consortium, CC BY 4.0",
+    "release": "2026_03",
+    "request": {
+      "body_sha256": "4e89939b7b4e4315d58168af0031417e73612d3b7ca6b3344ac78655ef620872",
+      "path": "reports/resistance-grounding-2026-10-07/cordycepin-20261009/request-d188ec4bb671b3024e742ec3f7f38e2fcf70d0afb89f4121f207084ec4178568.json",
+      "retrieved_at": "2026-10-09T07:19:19.257616+00:00",
+      "sha256": "c65e09d50e63f5f67b29af0f66225d694c32c13d6004ef2e21c5ed858f7d68e0",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AADO1+OR+gene_exact%3AADK1%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "sequence_or_variant_data_exported": false
+  }
+}

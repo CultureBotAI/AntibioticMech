@@ -93,13 +93,21 @@ resistance_mechanisms:
   label: HCV NS5A substitutions at M28, Q30, L31, and Y93
   gene_families:
   - HCV NS5A
-  note: Replicon selection and sequencing after 14-day monotherapy identified genotype-dependent
-    NS5A resistance variants; variants at positions 28, 30, 31, and 93 persisted for
-    up to six months in the studied populations.
+  note: 'Clinical sequencing after 14-day monotherapy identified genotype-dependent
+    NS5A variants; phenotypes were assessed separately in H77c and Con1 reference
+    replicons. Variant populations, not every individual substitution, persisted for
+    up to six months. Taxon grounding only: no patient-specific protein, strain TaxID,
+    genome, normalized allele or new quantitative endpoint assigned. This review does
+    not establish the administered compound form.'
   evidence:
   - reference: PMID:23403428
     notes: Primary daclatasvir monotherapy sequencing and resistance-persistence study
       (DOI:10.1128/AAC.02494-12).
+  - reference: https://rest.uniprot.org/taxonomy/3052230
+    notes: 'Taxonomic identity only: active species, UniProt release 2026_03; retrieved
+      2026-10-08 UTC.'
+  taxon_id: NCBITaxon:3052230
+  taxon_label: Orthohepacivirus hominis
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -125,3 +133,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T05:47:47Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_CONTEXT
+  changes: Grounded the existing aggregate claim to a verified species and clarified
+    experimental versus reference context. No exact mutant protein, strain TaxID,
+    genome, variant normalization or quantitative endpoint added.
+  llm_assisted: true

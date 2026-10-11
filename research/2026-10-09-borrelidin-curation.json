@@ -1,0 +1,67 @@
+{
+  "before_record_sha256": "f98c4cba9c9a9e8fb74c1c156176c0ff939c8d8db1a236dfb6b0a2fb0b1ab414",
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-borrelidin/canary.yaml",
+    "sha256": "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58"
+  },
+  "claims": [
+    {
+      "evidence": [
+        {
+          "notes": "Borrelidin Resistance, journal page 92: reported host resistance with data not shown; native self-resistance and target replacement are proposed. Figure 1, Table 1 and the Results page were visually inspected in the University of Oviedo copy. Table 1 similarity hits are not BorO accession assignments.",
+          "reference": "PMID:15112998"
+        },
+        {
+          "notes": "Donor reference only; exact AJ580915 plus borO query, UniProtKB release 2026_03, retrieved 2026-10-09. Entry cites PMID:15112998 and source strain Tu4055. No experimental allele or host protein assignment is inferred.",
+          "reference": "UniProtKB:Q70HZ0"
+        }
+      ],
+      "gene_families": [
+        "borO"
+      ],
+      "label": "Reported borO-associated borrelidin resistance in a Streptomyces albus laboratory background",
+      "mechanism_type": "UNKNOWN",
+      "note": "The primary paper reports a functional result in a heterologous host derived from S. albus J1074, explicitly with data not shown. The proposed resistant threonyl-tRNA synthetase route is not directly demonstrated in this report, so mechanism_type remains UNKNOWN. Native donor Streptomyces parvulus Tu4055 is not the tested host. Donor reference UniProtKB:Q70HZ0 (EMBL:AJ580915 / CAE45679.1; entry version 112, sequence version 1) and NCBITaxon:146923 identify source/reference context, not the exact experimental allele. NCBITaxon:1888 is a species-name reference for S. albus; the J1074 taxonomy search returned multiple candidates, and no strain identifier was selected. Background, donor and derivative are not interchangeable. No exact allele, protein accession, strain TaxID, genome, quantitative AST or clinical category is assigned.",
+      "phenotype_label": "reported resistance to borrelidin",
+      "taxon_label": "Streptomyces albus"
+    }
+  ],
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added one qualified primary-paper borO-associated resistance report in a heterologous S. albus background, explicitly retaining data-not-shown and proposed-mechanism limits. Kept donor UniProt/taxonomy references separate from experimental identity. Preserved existing chemical and molecular-target curation; no exact allele, strain ID, genome or quantitative AST assigned.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-09T16:08:46Z"
+  },
+  "date": "2026-10-09",
+  "existing_molecular_targets_preserved": 1,
+  "experimental_alleles_validated": false,
+  "fresh_seed": {
+    "path": "reports/resistance-grounding-2026-10-09-borrelidin/fresh-seed.json",
+    "sha256": "1433450a8ef1c9a5b683bb0930a82cd57e0b1dfc9a58a19ecf8715862858f297"
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "identifier": "CHEBI:78661",
+  "label": "borrelidin",
+  "mechanism_scope": "UNKNOWN; target replacement is a proposed interpretation, not a measured result",
+  "ncbi_endpoint_requests": 0,
+  "organism_scope": "SOURCE_HOST_NAME_ONLY; donor/reference IDs and J1074 background remain in notes",
+  "primary_source": {
+    "doi": "10.1016/j.chembiol.2003.12.018",
+    "location": "Borrelidin Resistance, journal page 92",
+    "reference": "PMID:15112998",
+    "sha256": "a8d8deefe732afed972862811650388fa9eedcde1d23fe019bd072135b4c3116",
+    "supporting_experimental_data_shown": false,
+    "url": "https://digibuo.uniovi.es/dspace/bitstream/handle/10651/41688/1-s2.0-S1074552103002977-main.pdf?sequence=1"
+  },
+  "record": {
+    "path": "data/antibiotics/antifungal/borrelidin.yaml",
+    "sha256": "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58"
+  },
+  "source_ownership": "CURATOR; merge_with_existing preservation checked",
+  "source_resistance_assertions_preserved": 0,
+  "standard_inchi_key": "OJCKRNPLOZHAOU-JTHVHBRGSA-N",
+  "status": "CURATED_QUALIFIED_PRIMARY_REPORT_NOT_INDEPENDENT_EXPERIMENTAL_VALIDATION",
+  "whole_record_review_complete": false
+}

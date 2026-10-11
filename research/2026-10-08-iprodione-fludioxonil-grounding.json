@@ -1,0 +1,4056 @@
+{
+  "snapshot_scope": "Historical checkpoint; original record and review pins retained and verified through the fumigatus reference follow-up before-images.",
+  "follow_up_review": "2026-10-08-fumigatus-reference-grounding.json",
+  "attribution": "PHI-base pinned AMR export and UniProt Consortium release 2026_03, CC BY 4.0; primary citation metadata via EMBL-EBI Europe PMC.",
+  "before_snapshot_sha256": "01029d7b96759c2f3fe479483088e405b5bc1661ee982a7d0915b1ec349848c6",
+  "changes": {
+    "checksum_only_claims": 100,
+    "new_scoped_claims": 11
+  },
+  "limitations": [
+    "28 source associations retained across iprodione and fludioxonil: 11 identifier-scoped, 17 pending.",
+    "All 217 PHI-base associations retained: 111 identifier-scoped, 106 pending at this scope.",
+    "Reference proteins and original-isolate deposits are not later experimental subject accessions.",
+    "Preserve all one-to-many reference cross-references; no experimental isoform selected.",
+    "Three primary subject labels resolved; individual clones and experimental parent lineage remain unresolved.",
+    "Fragment flags are retained; absence of a flag is not independent completeness proof.",
+    "No new MICs, endpoint conversions, breakpoints, allele sequences, strain TaxIDs or genomes inferred.",
+    "Five other studies lack a completed primary-results review; publisher errors/access restrictions not bypassed.",
+    "Metadata-only export: no protocols, sequences, primers, constructs, new variants, toxin-production or resistance-enhancement designs.",
+    "No NCBI endpoint requests, outreach, terms review, source adoption or GitHub mutations.",
+    "Whole-record and corpus-wide primary reviews remain pending."
+  ],
+  "literature_access": [
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fillinger-2012-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:17:47.014998+00:00",
+        "sha256": "5525ebd7576a285b6bf99af70b6f23606cbe884dbd7e5b7f6ae1223e78d5f113",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pone.0042520&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1371/journal.pone.0042520",
+      "fulltext_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fillinger-2012-fulltext.json",
+        "headers": {
+          "content-type": "application/xml"
+        },
+        "retrieved_at": "2026-10-08T11:17:54.085485+00:00",
+        "sha256": "181868b854fd3be46a9ad9f05e94a746281ac2fe9d5ae6ba0322f9b914c2d421",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3418262/fullTextXML"
+      },
+      "locations": [
+        "s2e",
+        "s3d",
+        "pone-0042520-t001",
+        "pone-0042520-t003"
+      ],
+      "pmcid": "PMC3418262",
+      "reference": "PMID:22912706",
+      "review_scope": "PRIMARY_IDENTIFIER_CONTEXT",
+      "study": "fillinger-2012"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-ren-2016-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:36.834007+00:00",
+        "sha256": "eae74d32737ee983dd2c5e7bbc210ef26d518fb1c9ed03ac44612ba67356c1c7",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fpdis-11-15-1290-re&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/pdis-11-15-1290-re",
+      "reference": "PMID:30686204",
+      "review_scope": "PRIMARY_RESULTS_INCOMPLETE_NO_SOURCE_CHANGE",
+      "study": "ren-2016"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-mehrabi-2006-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:37.513090+00:00",
+        "sha256": "5aaa202566425725107d1943d1f7adabf94bf0621d80777f354dc4969db749ad",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fmpmi-19-1262&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/mpmi-19-1262",
+      "reference": "PMID:17073308",
+      "review_scope": "PRIMARY_RESULTS_INCOMPLETE_NO_SOURCE_CHANGE",
+      "study": "mehrabi-2006"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-ss-hog1-shk1-2024-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:38.125568+00:00",
+        "sha256": "31171c06004df44fd33bbc173e9964ca22f80e17d55c994f54c8b79f2ffd1608",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1021%2Facs.jafc.3c08093&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1021/acs.jafc.3c08093",
+      "reference": "PMID:38374637",
+      "review_scope": "PRIMARY_RESULTS_INCOMPLETE_NO_SOURCE_CHANGE",
+      "study": "ss-hog1-shk1-2024"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fv-hog1-2025-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:38.767567+00:00",
+        "sha256": "e19ea48510ad4d1ba6ea7d8f3c71d6a7b4205d5cfbfe0d68682a67f51a730ead",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1007%2Fs44297-025-00052-5&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1007/s44297-025-00052-5",
+      "fulltext_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fv-hog1-2025-fulltext.json",
+        "headers": {
+          "content-type": "application/xml"
+        },
+        "retrieved_at": "2026-10-08T11:18:43.157186+00:00",
+        "sha256": "5463c351b6910ac73eea732585784cef6f61fdba68d56cd2f7c956aad17e75ba",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12825977/fullTextXML"
+      },
+      "locations": [
+        "Sec3",
+        "Sec8",
+        "Fig5"
+      ],
+      "pmcid": "PMC12825977",
+      "reference": "PMID:41649761",
+      "review_scope": "PRIMARY_IDENTIFIER_CONTEXT",
+      "study": "fv-hog1-2025"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fg-sch9-2015-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:43.814145+00:00",
+        "sha256": "049a1c0572f2898b6d34de9f901a5010dbd1226e3490e2484dcf7fc55f1794cd",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1111%2F1462-2920.12522&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1111/1462-2920.12522",
+      "reference": "PMID:24903410",
+      "review_scope": "PRIMARY_RESULTS_INCOMPLETE_NO_SOURCE_CHANGE",
+      "study": "fg-sch9-2015"
+    },
+    {
+      "citation_request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/iprodione-fludioxonil-fg-os2-2012-citation.json",
+        "headers": {
+          "content-type": "application/json;charset=UTF-8"
+        },
+        "retrieved_at": "2026-10-08T11:18:44.435705+00:00",
+        "sha256": "d64aa5f9f4b7e5b0718138cf242c853acda3d806b74bc79b5393ec311143674c",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1094%2Fmpmi-02-12-0047-r&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      },
+      "doi": "10.1094/mpmi-02-12-0047-r",
+      "reference": "PMID:22591226",
+      "review_scope": "PRIMARY_RESULTS_INCOMPLETE_NO_SOURCE_CHANGE",
+      "study": "fg-os2-2012"
+    }
+  ],
+  "original_deposit_crosswalks": [
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192607",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90096.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90096.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC1G0"
+      },
+      "uniprot_accession": "J7K6F7"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192608",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90097.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90097.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC1G20I1"
+      },
+      "uniprot_accession": "J7K4G4"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192609",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90098.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90098.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC1G20I2"
+      },
+      "uniprot_accession": "J7K0Z6"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192610",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90099.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90099.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC1G20I3"
+      },
+      "uniprot_accession": "J7K753"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192611",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90100.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90100.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC21G0"
+      },
+      "uniprot_accession": "J7JZQ6"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192612",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90101.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90101.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC21G20I1"
+      },
+      "uniprot_accession": "J7K6G2"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192613",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90102.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90102.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC21G20I2"
+      },
+      "uniprot_accession": "J7K4G9"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192614",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90103.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90103.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC21G20I3"
+      },
+      "uniprot_accession": "J7K100"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192615",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90104.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90104.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC25G0"
+      },
+      "uniprot_accession": "J7K758"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192616",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90105.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90105.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC25G20I1"
+      },
+      "uniprot_accession": "J7JZR2"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192617",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90106.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90106.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC25G20I2"
+      },
+      "uniprot_accession": "J7K6G7"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192618",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90107.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90107.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC25G20I3"
+      },
+      "uniprot_accession": "J7K6G7"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192619",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90108.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90108.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC25G20P1"
+      },
+      "uniprot_accession": "J7K105"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192620",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90109.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90109.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC26G0"
+      },
+      "uniprot_accession": "J7K763"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192621",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90110.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90110.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC26G20I1"
+      },
+      "uniprot_accession": "J7JZR8"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192622",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90111.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90111.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC26G20I2"
+      },
+      "uniprot_accession": "J7K6H0"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192623",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90112.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90112.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC26G20I3"
+      },
+      "uniprot_accession": "J7JZR8"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192624",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90113.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90113.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC26G20P1"
+      },
+      "uniprot_accession": "J7K110"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192625",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90114.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90114.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "BC26G20P2"
+      },
+      "uniprot_accession": "J7K768"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192626",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90115.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90115.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "H6G0"
+      },
+      "uniprot_accession": "J7JZS4"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192627",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90116.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90116.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "H6G20I2"
+      },
+      "uniprot_accession": "J7K6H4"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192628",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90117.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": "Fragment",
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90117.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "H6G20I3"
+      },
+      "uniprot_accession": "J7K4I1"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192629",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90118.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": null,
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90118.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "H6G20P1"
+      },
+      "uniprot_accession": "J7JZS9"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192630",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90119.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": null,
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90119.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "H6G20P2"
+      },
+      "uniprot_accession": "J7JZS9"
+    },
+    {
+      "embl_cross_reference": {
+        "database": "EMBL",
+        "id": "JX192631",
+        "properties": [
+          {
+            "key": "ProteinId",
+            "value": "AFQ90120.1"
+          },
+          {
+            "key": "Status",
+            "value": "-"
+          },
+          {
+            "key": "MoleculeType",
+            "value": "Genomic_DNA"
+          }
+        ]
+      },
+      "fragment_flag": null,
+      "scope": "ORIGINAL_ISOLATE_NOT_LATER_B05_10_SUBJECT",
+      "strain_evidence": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90120.1",
+            "source": "EMBL"
+          }
+        ],
+        "type": "STRAIN",
+        "value": "H6G20P3"
+      },
+      "uniprot_accession": "J7JZS9"
+    }
+  ],
+  "pending_associations": [
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "17073308",
+      "row_sha256": "e9970c191a147615d701d638225912add989160001a184e5dd5c3b0c1295c822"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "12d3479af3b72c58ffe819b4feaff550d3275d6bd64019778db6fe330390eb14"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "16560e038f9b572c69ec95fd757288ee17dd1ddbde47e4a738c303e116d28124"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "a4bd4db6a345833b668ccb40c7a4dca41c5ee63aed723c40d6465638332ad73c"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "30686204",
+      "row_sha256": "a0df7865d44f7ef7cd35204e9fbbe937a8b1c4ab3df46e947c87579474560193"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "38374637",
+      "row_sha256": "6a547a0c6c6ea614cd7c62b24211763a0ff5f1b5f83204586e112c67a2846c7c"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "pmid": "38374637",
+      "row_sha256": "af434560aa89a613a0b3cfd3651e1ba2a1fa2f440ce61d4b24f02bf0c8c7c73c"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "17073308",
+      "row_sha256": "9b6ad9dcd0279f1321fd5897f1969474f46a65b84e4d7e773ec7d1ffcb690948"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "ccb25cd155ad2678e397f26413d13ef8a6a11c0f365e4795bba9cfab165e8af9"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "7e517057ccb4b3d576da2aca08528227857b4d937d32f44e2f749b367447ebb3"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "ee7c92d51308f55fb8c6c2e966b7437047148619fab93fcd63935b02d8da0337"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "30686204",
+      "row_sha256": "78bfd787b439a0c34169e5a846543694de58aea646c6b2dcf96f7046413b6075"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "38374637",
+      "row_sha256": "f177428e52f4619cd334e023e642c1d6ab12911646a153824c1d90dd9e6f5c2f"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "38374637",
+      "row_sha256": "ae814e8587fbd05c1051d3da866cb17ecb9474102bbff8b6c8d94239022d79ad"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "24903410",
+      "row_sha256": "7aeeeb95c55881dacc634131c410392afbc5a2561d79ae81162b433a9245e262"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "24903410",
+      "row_sha256": "a1a1bc2ef20255470d46f95ce69a59ff5538973733e29f516d2c39e60f841d71"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "pmid": "22591226",
+      "row_sha256": "db3586159399f0df98f90dced097ad2d1f7cf2d3766c99cd0246e3f3e9bae26c"
+    }
+  ],
+  "previous_review_sha256": "4908a62f264d6ab3966826ba0e3c6537933fb66b45ee16901603d69fd23132f4",
+  "primary_reviews": [
+    {
+      "curator": "codex",
+      "locations": [
+        "Results section s3d and Table 3: B05.10-derived subjects distinct from original isolates in Table 1",
+        "UniProtKB release 2026_03: A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein cross-references"
+      ],
+      "note": "B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1 / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental allele. The original-isolate deposits JX192607-JX192631 are not subject accessions for the later Table 3 comparisons. Preserve source alteration, phenotype and assay flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones, proteins and genomes remain unresolved.",
+      "pmid": "22912706",
+      "reference": "DOI:10.1371/journal.pone.0042520",
+      "review_id": "fillinger-2012-reference-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "d370abe02966e45cfb3be47491c544d06967c2ee7a1976e84820499e18691f27"
+        },
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "4cef7b630c8ed8a1c50c8771f37036aeb838847e197b862699d22f3fcd7990b7"
+        },
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "1c03badc0e6e3e497403d2270ee6610e3dbe8ae3a3d40d09a7d5a2ee90c3d7ef"
+        },
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "dff88215da6bfc117ee83a5f9c32427e1a000874ce9e58ce6adf2d36d2980c2b"
+        },
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "182c6a307cb2f952485871644ee8efbe98841b1434a7941a809fb8dc0fc45c06"
+        },
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "af107f4a199834d8f074f7b9ca061fe7db3c8cd6bac472120bed9ae5d3fa7700"
+        },
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "68569e8ec80e382ece5a50a990878f5818d960c951a76df42078bde79bdd7d81"
+        },
+        {
+          "identifier": "CHEBI:28909",
+          "row_sha256": "358f723e73dd3ea38d701d6b8593467cfc1cd9336a59038faac005ac16da9622"
+        }
+      ],
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0042520",
+      "withhold": [
+        "strain_taxon_id",
+        "protein_accession"
+      ]
+    },
+    {
+      "curator": "codex",
+      "locations": [
+        "Results section Sec3: reference gene identities",
+        "Results section Sec8 and Figure 5: reported experimental subject labels",
+        "UniProtKB release 2026_03: W7LTW3 entry 45, sequence version 1; reference strain and taxonomy"
+      ],
+      "note": "The subject label is reported in the primary comparison; it does not resolve an individual clone or parent lineage. UniProtKB:W7LTW3 / FVEG_01970 and TaxID 334819 identify reference strain M3125 / FGSC 7600, not the tested derivative. The inspected primary text does not establish 7600 as the experimental parent. Reference gene identity is not an experimental protein accession. Source alteration and phenotype remain unchanged; growth-inhibition rates are not MICs. Exact subject protein, TaxID and genome remain unresolved.",
+      "pmid": "41649761",
+      "reference": "DOI:10.1007/s44297-025-00052-5",
+      "review_id": "xia-2025-pbs2-subject-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:81763",
+          "row_sha256": "2213e6daada0f867f4344682d281073888a42fb0e66370bc66ec46a0413537a5"
+        }
+      ],
+      "source_url": "https://link.springer.com/article/10.1007/s44297-025-00052-5",
+      "subject_strain": "\u0394FvPbs2",
+      "withhold": [
+        "strain_taxon_id",
+        "protein_accession"
+      ]
+    },
+    {
+      "curator": "codex",
+      "locations": [
+        "Results section Sec3: reference gene identities",
+        "Results section Sec8 and Figure 5: reported experimental subject labels",
+        "UniProtKB release 2026_03: W7LX41 entry 57, sequence version 1; reference strain and taxonomy"
+      ],
+      "note": "The subject label is reported in the primary comparison; it does not resolve an individual clone or parent lineage. UniProtKB:W7LX41 / FVEG_00869 and TaxID 334819 identify reference strain M3125 / FGSC 7600, not the tested derivative. The inspected primary text does not establish 7600 as the experimental parent. Reference gene identity is not an experimental protein accession. Source alteration and phenotype remain unchanged; growth-inhibition rates are not MICs. Exact subject protein, TaxID and genome remain unresolved.",
+      "pmid": "41649761",
+      "reference": "DOI:10.1007/s44297-025-00052-5",
+      "review_id": "xia-2025-ssk2-subject-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:81763",
+          "row_sha256": "24615fa5b44f9b350037c3c722151b4416c2ca5e149b820532457f06ca8302da"
+        }
+      ],
+      "source_url": "https://link.springer.com/article/10.1007/s44297-025-00052-5",
+      "subject_strain": "\u0394FvSsk2",
+      "withhold": [
+        "strain_taxon_id",
+        "protein_accession"
+      ]
+    },
+    {
+      "curator": "codex",
+      "locations": [
+        "Results section Sec3: reference gene identities",
+        "Results section Sec8 and Figure 5: reported experimental subject labels",
+        "UniProtKB release 2026_03: W7M468 entry 57, sequence version 1; reference strain and taxonomy"
+      ],
+      "note": "The subject label is reported in the primary comparison; it does not resolve an individual clone or parent lineage. UniProtKB:W7M468 / FVEG_04168 and TaxID 334819 identify reference strain M3125 / FGSC 7600, not the tested derivative. The inspected primary text does not establish 7600 as the experimental parent. Reference gene identity is not an experimental protein accession. Source alteration and phenotype remain unchanged; growth-inhibition rates are not MICs. Exact subject protein, TaxID and genome remain unresolved.",
+      "pmid": "41649761",
+      "reference": "DOI:10.1007/s44297-025-00052-5",
+      "review_id": "xia-2025-hog1-subject-context",
+      "reviewed_on": "2026-10-08",
+      "source_rows": [
+        {
+          "identifier": "CHEBI:81763",
+          "row_sha256": "f5f56beb20defd89f09f98183d000a539d73a3b1b8762a3c6b84dbcdcd1e4580"
+        }
+      ],
+      "source_url": "https://link.springer.com/article/10.1007/s44297-025-00052-5",
+      "subject_strain": "\u0394FvHog1",
+      "withhold": [
+        "strain_taxon_id",
+        "protein_accession"
+      ]
+    }
+  ],
+  "proteins": {
+    "A0A384J5Y1": {
+      "entryAudit": {
+        "entryVersion": 36,
+        "firstPublicDate": "2018-11-07",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2018-11-07",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "f42cf92c5dede48edbdd477830be34e18af3792c964ececcbab32522e63e20c6",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "ATZ45933.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "Bos1"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ATZ45933.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BCIN_01g06260"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "ATZ45933.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000001798",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea (strain B05.10)",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 332648
+      },
+      "primaryAccession": "A0A384J5Y1"
+    },
+    "J7JZQ6": {
+      "entryAudit": {
+        "entryVersion": 48,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "84b79bedd86a126ff1ce342c3ae91b5af5856f8267681a051b0709fc10dc45b0",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90100.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90100.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7JZQ6"
+    },
+    "J7JZR2": {
+      "entryAudit": {
+        "entryVersion": 55,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "1e3129feb6027619a94ead2c82a9138437495a0379e731c25331501fa57ca3e6",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90105.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90105.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7JZR2"
+    },
+    "J7JZR8": {
+      "entryAudit": {
+        "entryVersion": 47,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "e93f39b06837f398f60ed553875695bce4871e36edba64af7d36f0c58a3ec224",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90110.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90110.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7JZR8"
+    },
+    "J7JZS4": {
+      "entryAudit": {
+        "entryVersion": 55,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "c52b357ab4ce348449661d4fc86e63be3b89ff2610915a982d5d26d741eb9a66",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90115.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90115.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7JZS4"
+    },
+    "J7JZS9": {
+      "entryAudit": {
+        "entryVersion": 23,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "5416b2967a77047316fea0a84e6939aa424b4a4fab38ed3e7bd524c1976a95c1",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90120.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90120.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7JZS9"
+    },
+    "J7K0Z6": {
+      "entryAudit": {
+        "entryVersion": 45,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "cda1dc1a8a3b9066e63fdaa79d7f6bc0f15127b373007eeb17c6b705a0927d2a",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90098.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90098.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K0Z6"
+    },
+    "J7K100": {
+      "entryAudit": {
+        "entryVersion": 57,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "dba97e1933a099b97fe76dac865de0b420af9092eef05b90b09b85a78f85151b",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90103.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90103.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K100"
+    },
+    "J7K105": {
+      "entryAudit": {
+        "entryVersion": 46,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "87dcebe6ddd03285b92741eea9262df19fae054c60ebfc8b815e7a0528129e95",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90108.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90108.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K105"
+    },
+    "J7K110": {
+      "entryAudit": {
+        "entryVersion": 55,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "be973e81be0ae97221cc3bd276fee639c8c20ea8dfd0bb335f8b5c36ae0aba2a",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90113.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90113.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K110"
+    },
+    "J7K4G4": {
+      "entryAudit": {
+        "entryVersion": 45,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "cb2a9f68b8750adc7563ba07659120a1975df87162cfcb42480e1bef3e1fdd89",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90097.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90097.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K4G4"
+    },
+    "J7K4G9": {
+      "entryAudit": {
+        "entryVersion": 47,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "52f1d9097d0bd4233e58e9f49a87c43a6dcefd21fa677425a1e8d215decfb39a",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90102.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90102.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K4G9"
+    },
+    "J7K4I1": {
+      "entryAudit": {
+        "entryVersion": 44,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "3f6b27a6c929f473b60d8c508ea0253574b37225fe652d593e08b919d57e527c",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90117.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90117.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K4I1"
+    },
+    "J7K6F7": {
+      "entryAudit": {
+        "entryVersion": 46,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "e7dd636751f0e9ea4d41a13342eded698bbf8cacb68a6b5606e4438fa5649702",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90096.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90096.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K6F7"
+    },
+    "J7K6G2": {
+      "entryAudit": {
+        "entryVersion": 48,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "dbde76de59f6db3cfd80aa7d1ad12507db4a3c56ba1b534b3a2c755fb02a674c",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90101.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90101.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K6G2"
+    },
+    "J7K6G7": {
+      "entryAudit": {
+        "entryVersion": 47,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "96ea21291ab749bc1b7a0e34d7d669c619e3ca4c10243bc4c50092b412035c78",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90106.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90106.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K6G7"
+    },
+    "J7K6H0": {
+      "entryAudit": {
+        "entryVersion": 55,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "25f8bc5ce791aaf3309db1b55aee14254109ea61f2cb628c32668de9f5af9e02",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90111.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90111.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K6H0"
+    },
+    "J7K6H4": {
+      "entryAudit": {
+        "entryVersion": 46,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "fe0ab852aa0d4b73121275978018e6966eabfa73831aed484cc98a4697d5d5ca",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90116.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90116.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K6H4"
+    },
+    "J7K753": {
+      "entryAudit": {
+        "entryVersion": 46,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-06-10",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "550d9028d92e56702bce3431551d95c71095e190b90a01487869c24d93f0be99",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90099.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90099.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K753"
+    },
+    "J7K758": {
+      "entryAudit": {
+        "entryVersion": 55,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "ba4e2d0f14c7c72e2acca738ad3f6a164248926c0647f2c85e6f1b70584e8e3a",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90104.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90104.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K758"
+    },
+    "J7K763": {
+      "entryAudit": {
+        "entryVersion": 56,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "b7d00e830b427974f289515199eb49c48dae373fe044193ac41b31c0fbf3c6a8",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90109.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90109.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K763"
+    },
+    "J7K768": {
+      "entryAudit": {
+        "entryVersion": 55,
+        "firstPublicDate": "2012-10-31",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2012-10-31",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "b949e87b25aae085f85eed801dbb5ae65dddeb673fc4f389b40d2b73b0c611cd",
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AFQ90114.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "bos1"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Noble rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFQ90114.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Leotiomycetes",
+          "Helotiales",
+          "Sclerotiniaceae",
+          "Botrytis"
+        ],
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "primaryAccession": "J7K768"
+    },
+    "W7LTW3": {
+      "entryAudit": {
+        "entryVersion": 45,
+        "firstPublicDate": "2014-04-16",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2014-04-16",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "edc2d635fad6ec8acfa268cf9810ef816e861a080a77abf5c949292b9a882f39",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "EWG38885.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "FVEG_01970"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Maize ear and stalk rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "EWG38885.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000009096",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Hypocreales",
+          "Nectriaceae",
+          "Fusarium",
+          "Fusarium fujikuroi species complex"
+        ],
+        "scientificName": "Gibberella moniliformis (strain M3125 / FGSC 7600)",
+        "synonyms": [
+          "Fusarium verticillioides"
+        ],
+        "taxonId": 334819
+      },
+      "primaryAccession": "W7LTW3"
+    },
+    "W7LX41": {
+      "entryAudit": {
+        "entryVersion": 57,
+        "firstPublicDate": "2014-04-16",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2014-04-16",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "7de01b6cb44bb9322d652c8bb59d1298e2d12b94cc29cfa131143965900ef930",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "EWG37117.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "FVEG_00869"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Maize ear and stalk rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "EWG37117.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000009096",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Hypocreales",
+          "Nectriaceae",
+          "Fusarium",
+          "Fusarium fujikuroi species complex"
+        ],
+        "scientificName": "Gibberella moniliformis (strain M3125 / FGSC 7600)",
+        "synonyms": [
+          "Fusarium verticillioides"
+        ],
+        "taxonId": 334819
+      },
+      "primaryAccession": "W7LX41"
+    },
+    "W7M468": {
+      "entryAudit": {
+        "entryVersion": 57,
+        "firstPublicDate": "2014-04-16",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2014-04-16",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "entry_object_sha256": "9c9a2783712da127672e56c07568d7144491c75b90dc11a16f84b84965611426",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "EWG42324.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "FVEG_04168"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Maize ear and stalk rot fungus",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "EWG42324.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000009096",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Sordariomycetes",
+          "Hypocreomycetidae",
+          "Hypocreales",
+          "Nectriaceae",
+          "Fusarium",
+          "Fusarium fujikuroi species complex"
+        ],
+        "scientificName": "Gibberella moniliformis (strain M3125 / FGSC 7600)",
+        "synonyms": [
+          "Fusarium verticillioides"
+        ],
+        "taxonId": 334819
+      },
+      "primaryAccession": "W7M468"
+    }
+  },
+  "records": [
+    {
+      "after_record_sha256": "c920e83a50c7ae3fc41b422c232a3bbfc3f642c0bd404a7b53689b9aee7ac91a",
+      "before_record_sha256": "639b87107e5c349b6aa9c8038e063ba86870fcba022e9396b96a7d7ad383c2f5",
+      "changed_claims": [
+        {
+          "after_sha256": "7829708b7497d15340e5f24830898f5e567a9039f1b1e1220ecfd93e6c3ce176",
+          "before_sha256": "4cb5cdc4f026979f9e25a599a92d927c6de2b205be0a35147fa794be22814d9a",
+          "claim_index": 39
+        },
+        {
+          "after_sha256": "1ad97221f2754fb891e52bbe26ab995421c3bdd849f782a1ae7a87d220b8a8d7",
+          "before_sha256": "bab86358389e479d1de6b7382625c011c57743a0260bf5c47711d24cdd5da4f1",
+          "claim_index": 40
+        },
+        {
+          "after_sha256": "7827acbbf13722b598a774b15b7c0f6012b709b2e89ad4419ca0ee09ffdbb945",
+          "before_sha256": "c488d5c4e0de5eefec5f5dbe79425e36cf5a1031d925784bf7b605c74dffb1d1",
+          "claim_index": 41
+        },
+        {
+          "after_sha256": "229a12dbb9dbe897460a15cb5d6c7a6a35b057b3f0e38648f986a124d6025a16",
+          "before_sha256": "60049eaa33311ba714a29191927686978e73c103ff298f8242b2fa3d144c78ff",
+          "claim_index": 42
+        },
+        {
+          "after_sha256": "09fa6209c455484d05b939a74774ec879f1dc72dd810de0be3785537407ffaad",
+          "before_sha256": "d46f5c9805d63511bc72a0ac5a79403f7adaf528fb2eb5536fd11e57c274ca99",
+          "claim_index": 43
+        },
+        {
+          "after_sha256": "95714d6febb22019d7c774f8f2b77ca64c03c00a9212f765552393e4fbab0dd5",
+          "before_sha256": "a6e9bd4b7750eb10abc27e7ac8f895847d0b52d2f2d93e66f1e09b7dc73e5b2e",
+          "claim_index": 44
+        },
+        {
+          "after_sha256": "99935cfb85e6c1935e9a9797367290af9b4f57eb335350f01806757912a5e5e4",
+          "before_sha256": "4355fea2e633509ba978652dbbc6ddb3f4af202795d03fd12837f1b89dd17d11",
+          "claim_index": 45
+        },
+        {
+          "after_sha256": "a11ac17dcb43cdb6ca175af70f2d15db8766bfc3e1c68a22820b1bec49c39d77",
+          "before_sha256": "90614bb816d98b6cb6800b9364b0ca53a2b35e677bd787b8664a798bb5808237",
+          "claim_index": 46
+        },
+        {
+          "after_sha256": "efc3c23b987e8569cefc9bd162515cb306400d9904496253d6c3066c05c7fa38",
+          "before_sha256": "02ab44b8abc38f2b2e66c2cad1152eacf39956ef8b3ed0256996a83239549bc4",
+          "claim_index": 48
+        },
+        {
+          "after_sha256": "acfbdfa5e7c5d39b440feb1965c09e1115550febc800e2ae5d3468befaacd76e",
+          "before_sha256": "37c78135eaada0606316e2f0fff289c742bb572bbd32231c5d02c34c687e12c1",
+          "claim_index": 49
+        },
+        {
+          "after_sha256": "b98a81690be198459eb42d7e6d94a51dc6c797a86cdd770ae82f979dd94b9bf6",
+          "before_sha256": "56e81fd7f3456f986dfc14a6bb59c3d848b3deac9e5aa3bb8c9d085803fab107",
+          "claim_index": 50
+        },
+        {
+          "after_sha256": "fa2eeeb9bb057c1c28570b71d24de2848cbd8e84187227439ff38614167297c3",
+          "before_sha256": "e4206bdf6b26b5f054d904fbd8bf84dab206e8254cb85327537755eb9cdd5dcb",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "5634d444af170960deb7a1550b7028878f53eebae482d71bd88f1b01cb816a16",
+          "before_sha256": "c3406e6c4ada2d1717ac6a78dc4697959d8e40c260a9d09437e57933038ee4fb",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "6a6b31fb54cfd22f33b7838a380c508b7df7f0ef2564b7f7df63427b5377b4a0",
+          "before_sha256": "3bfa9433410e6125c272a6a8943f0a83830108ed8576315e79eaab7b4f58d8f7",
+          "claim_index": 53
+        }
+      ],
+      "identifier": "CHEBI:10023",
+      "original_history_sha256": "f119d09b344b15d2544f78e831e7ee9cbe9217ebcbf84766531a2d9f8d25ce6c",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "unchanged_fields_sha256": "e18a231b9e228852d94d27b017a845d52c36d88424f5a24cef571ef6266f8964"
+    },
+    {
+      "after_record_sha256": "fe5f0e1b83a6c1ddd1b1a60c73dde93e97f6f3cbf89c73e16d750dbbdedb0b6d",
+      "before_record_sha256": "03e37a7dead11563dccb12149d74d6be19d85715bf05aca4aebad6e436e4b392",
+      "changed_claims": [
+        {
+          "after_sha256": "e1ae94cbd6bb11a02c39740f2591548df5c849510d55d367ac20c941e60d3359",
+          "before_sha256": "15a242e6a88df79924c6c319680ef775ea34926477b67efb230d828b2114b9ad",
+          "claim_index": 2
+        }
+      ],
+      "identifier": "CHEBI:27641",
+      "original_history_sha256": "c57603596ad038f3c2e1441b3f88e752da1bad59d9d1aee966938fa732cc3387",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "standard_inchi_key": "YPHMISFOHDHNIV-FSZOTQKASA-N",
+      "unchanged_fields_sha256": "f78d8b7e0fbc7e9733fe3c284ba8b72ee2a9c419c6f263a74a693df00a8124ea"
+    },
+    {
+      "after_record_sha256": "72c2dc05b2df1117e3b5079c26f0b51c56fa474b77288437807920c246d6c7a3",
+      "before_record_sha256": "f098ae0c46a33cb76bbb78a3a4403acdb49fd8d34c21e65a1177038448dc1b08",
+      "changed_claims": [
+        {
+          "after_sha256": "71f70ccf381965275a369fbfd3c423856ee54b89ee37e88e4d88c85ae71d6e30",
+          "before_sha256": "be630dccc052aba60ebc5cde240b51420758b3676cf4f9cbb627ca79b58dc62c",
+          "claim_index": 5
+        },
+        {
+          "after_sha256": "bc88d00b38a694d9a6960a8ab5f62e43953b03550c7380ffbe7eced48c4e10a5",
+          "before_sha256": "ca882bb6a81ebb2f237f5d7c4a9ecf2e19d66710a8740ea11b9db3f9f1bba220",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "73d0943eaae377bd8199b182ea1b6a85ad9b86d1858c9618c8b02989d5a01808",
+          "before_sha256": "0037ad544810091f17c22dbfcce7e83be191c179ced065ab5908fbe5115a31d9",
+          "claim_index": 7
+        },
+        {
+          "after_sha256": "898ab6bb5e332b2c018ba56c8f9ffe001b187ab00b489e8d6ffe223e5344bbb4",
+          "before_sha256": "b33eddd1631ecfa2e54d1302ed3032426fa2ededbabd246424e8ae63ec8621a3",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "32d74046fd0e01f2e7b4210071dfba64464ae7f9fbe92d0453ccf55ff863dad7",
+          "before_sha256": "59c568f894b4ae4976a9d76b6db84096e2311367de02a9eab960456c2b2fae19",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "1c7f9d39cd19b90a5616156af352067f84f48f8d234341f2b2ef7c70c0cbe894",
+          "before_sha256": "013b2a0e53933d819432f3c1322bbca65a0a0981dbb4f159b6383f0bd077304b",
+          "claim_index": 10
+        },
+        {
+          "after_sha256": "411c11e79922e054cf97f0157e810508322f390675a4b9447e56171f0e70a99d",
+          "before_sha256": "4965861ae5cc7a6b264004bf6f520dca2e2c4284763e6f58d1a65789114e9dec",
+          "claim_index": 11
+        },
+        {
+          "after_sha256": "1e90ee316f31e83f92f2a06284465809858211ac52e5510cded27c981f029d6b",
+          "before_sha256": "ce583ec0ed0d76677068e485668adffa8d538d9781138cfbab09a053566564ef",
+          "claim_index": 12
+        }
+      ],
+      "identifier": "CHEBI:28909",
+      "original_history_sha256": "9a35ab63d4eaecec891b44e5448d2dcbae283cb3b43a55e2a47281e230b5745f",
+      "path": "data/antibiotics/antifungal/iprodione.yaml",
+      "standard_inchi_key": "ONUFESLQCSAYKA-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "64cf04cc417a43041af5befc3f433d8697aea28f3b0e4601f71f1f64590c307f"
+    },
+    {
+      "after_record_sha256": "d5b74b5b662b6172763747973dc64006eece3468703688b6d908f0df02e25e34",
+      "before_record_sha256": "84bffa93f5fea0ba42565085b68f0b37f000cfa15c8453c19fbc307ce59b1e3e",
+      "changed_claims": [
+        {
+          "after_sha256": "04df61f3ac576bbf02bbee892055f53f30d25311e42a0a7b433f7f5f77a38cec",
+          "before_sha256": "03ff417a5c2f10fda856461b66349f15a0074e95d7cf61f2b2e011fb2dcfff5c",
+          "claim_index": 1
+        },
+        {
+          "after_sha256": "d1a603f9381442eb5a5b7eef697fbae1ff6a2b0fb275e9b5cac350fa5706b039",
+          "before_sha256": "8ef8e13d3732556c8061630f5252ccc363bbf0f0ef6c7c90860301b178227d36",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "1f83c55bbd4056d94812577954d626365a931d8a2de77c8d7c646f41030f9bf0",
+          "before_sha256": "5a88d4041d62b5fc28986dd5672d8ecf1e00b16bdcb5d83289b75797a1ae0ce8",
+          "claim_index": 3
+        },
+        {
+          "after_sha256": "6024290b80f69c6fac1729a0bd55fc6e743d111c71460b050345e548abedc6b3",
+          "before_sha256": "f2aa198b4611af2c466af7126a552ce90031c25a6ff5d6bf5cd5cb14ac469f10",
+          "claim_index": 4
+        },
+        {
+          "after_sha256": "5c64cbd39e6c627c58c3b2a61ab74401b9c2f83d75655caa0a48c557175adcd7",
+          "before_sha256": "5fa543fd956c9222b036aa98acce167dc01990cef967c628e5554161759a9185",
+          "claim_index": 5
+        },
+        {
+          "after_sha256": "8e24396698a546c092452dce422e9614d53e660ea251dafb7c9c0bf70f8095a9",
+          "before_sha256": "2751275f491f9766e41086114b57a6a32298900632a3f9d0d13a41ab67a84bab",
+          "claim_index": 6
+        },
+        {
+          "after_sha256": "2470324e134529ac136276b91061b33473ccf539e121d912e244cd5654b523c1",
+          "before_sha256": "d2916ef4e0795a34b269d6a0616b039e79ad521d69b5aecb4a344411e0830b19",
+          "claim_index": 7
+        },
+        {
+          "after_sha256": "1bb0ba420552253ad1d065305b88794caaf7026c9c1f63ae7c7c49475496a91d",
+          "before_sha256": "b67ac049404c7a7b280f30f8c4ecc718c477efa6652e8c5d0efd63cc4acfd3b6",
+          "claim_index": 8
+        },
+        {
+          "after_sha256": "f8686c4d4db9543b5fecb6e41e790811128c2a8998b8e5d0113cc9d568503ae5",
+          "before_sha256": "a8d66af07563bca221240f1b1824d876824d3519e0d18929f0f5b66a1c0c7a1b",
+          "claim_index": 9
+        },
+        {
+          "after_sha256": "0017c04dbe1e90c31050ddaf2f14ee9468e3a509a6e102acd5a327a1f847ada9",
+          "before_sha256": "57c13140072285a495e7cf0c5595c3ea426af7a4c27c09a23e392170b202b6f0",
+          "claim_index": 10
+        },
+        {
+          "after_sha256": "a6e664b433067d19478d8d079fde8ae165b6f9e185eb42a3209bfaf69ae9d2c0",
+          "before_sha256": "1d467c20104c83914f13fcad7155d7f6a9e220eaeeed24fe8b4656a28f2a5802",
+          "claim_index": 11
+        },
+        {
+          "after_sha256": "7b0f481b19827c4c350138eab3302718133b3c837b2d1859d6dedd74158d7d3e",
+          "before_sha256": "8e27c28628fb973e2728aac91c6957ad835d66e4bbc3b97cfe7d1722b97ab731",
+          "claim_index": 12
+        },
+        {
+          "after_sha256": "831316ea883d224d7eed3a729ad70346a8ce82427a6b5ba3594332b1f6cde2a5",
+          "before_sha256": "ce24102d85eefdfad4f5bf5e0d8277a6f4ec4a6d4226e183a1c67c007ee59799",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "f5cd1086d913db9f595b2821522f46a9049d42fa39dc1955fa76fccf1bc0d670",
+          "before_sha256": "400a5734b10210c143595542c412ca50d2b7fc3408c028a7e174c5cf7c2518ab",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "cd3740a6e39488696f248245ec484cfc9d43b65bd593e7d97ad8bba265552c46",
+          "before_sha256": "5adbd6766923627dabeaa1dcc75689eb15b0c435f33f11e0a7e99bfa8cdb8c9c",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "d18050f1931b31a5b8094831dfee270fa115b5d75acf3ed6edd8ac6d16e2ba84",
+          "before_sha256": "048e075ad92de4f20461717ac516818881a953fc05a3f6f8996d3fc0fe77e31c",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "373b5695cff08606190f26aa6ff247de81a3fbfada05742ff5e535578d65cc19",
+          "before_sha256": "26c5aafe683424cbbbda8f5d8074dbe7461beaf20642fc9705f004653f4d340f",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "0b0cba5261b71228aa271e48c25116282b601c58cb0f628ca789f9e5fd04de3b",
+          "before_sha256": "2a7b3a498abe9f13c23172a74c92639fd33982c1bff97c25c05783c42212c449",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "53e085958f838ee1386bb08eb164d3ac3003a554d670beb1b55a92e56a089ffa",
+          "before_sha256": "9f6035553f7e169e2426a07d3f753fb7ead423fa6ac66b7750c8f671fd4f7dac",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "c0058287f533fdd09a3d09117fdeea25b43cf727f7f9629e4ba4d571033f5598",
+          "before_sha256": "028a9c53b02359dd3b8e8839867ff02cc8dd4a165acd9929a4d08b66444c2298",
+          "claim_index": 20
+        },
+        {
+          "after_sha256": "e5256d67d9c7756d6e59ef1ba5632576837df45ea50fc7adf7c0b83cdbbacc0c",
+          "before_sha256": "91f05298c44838b116fb01b311be9490f51bfe43cbb0f34fa35baa1bd3f6e8a9",
+          "claim_index": 21
+        },
+        {
+          "after_sha256": "b424e92f38e52885b9bbc839120a4f2431c3de2c3ce67d3b62b421c75f212d9a",
+          "before_sha256": "6873388e4dc00ed6b16c809a36ef29e89d75dc27757d71c6c8c2b4af753a28f0",
+          "claim_index": 22
+        },
+        {
+          "after_sha256": "b2ec87cb03b885d0b63fcdcebfb265d76488b1a73e633bd216214cb7ccb65e09",
+          "before_sha256": "907630a9169c0a5873824af223b370affe0ae5617616f8ff3ded78bfb0ecd4a8",
+          "claim_index": 23
+        },
+        {
+          "after_sha256": "04f0153ef2da6e81760855129788ac4e9aebdf861b90033ac1eea9990927fea0",
+          "before_sha256": "02dcabaf11b504054b71d122cc9bbc88375dfdac366ef2740d70a1571aa092b8",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "dd90636fe407a93b48e662fc6655b7697d7e4bc62a4c8a5655d79e0b347b44a3",
+          "before_sha256": "dcc15e14484e5c5c0dcda1abb0612509021b1e2e4bcb9a01a010265ddfde985f",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "f2858824f1f09c88ba8ad30d3a6b3558e262e82b5be1404d80a80735c3ac1443",
+          "before_sha256": "2fa64bde570a7a7da683f110e7cccef20112a5825ff341b55eeeee617e70af53",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "078cd9b51b82c1235082ce2e45d1866f84d9af00723da7f0df6b4adcbaf71f72",
+          "before_sha256": "479c59af275093afb46ed23a64029c5e1a9f29309b3778d39ddaf5d751410f99",
+          "claim_index": 27
+        },
+        {
+          "after_sha256": "f361b51c22c83db85a38eff4b518787da398c163218f04cb72562622436d3217",
+          "before_sha256": "49d7470c324dd47c0a6bd8b926e0005fe89d7b466973b59dd9faa59d3aff331c",
+          "claim_index": 31
+        }
+      ],
+      "identifier": "CHEBI:3405",
+      "original_history_sha256": "62ee0bbc5e546ffa330328d18bf3e4a9d776a2d23a7ef774e1cc3b7b631c6478",
+      "path": "data/antibiotics/antifungal/carboxin.yaml",
+      "standard_inchi_key": "GYSSRZJIHXQEHQ-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "c0482f3a3f184b09fac2b2bec803d68cf6e7e5e46c6a4baff4aa37625645e81c"
+    },
+    {
+      "after_record_sha256": "40552d9f008d53ec02a8af274e987a1c61dc7edd4395aa0e911a402aefab4e26",
+      "before_record_sha256": "c14332722090eb7ec3821ee1e0d1dde129412d7e871c65dc7553d8fb7c80471f",
+      "changed_claims": [
+        {
+          "after_sha256": "a9f9d29210f94ad648ff5adc2b91d1e055495a0324fde5bf634e89fa005c84a2",
+          "before_sha256": "7502a8863172801bff0934f66d1c8c620c24a1140d80c5b49870ec08eda483ff",
+          "claim_index": 51
+        },
+        {
+          "after_sha256": "c742b2b20b83fddf09e95c4885e6a98729375a10bd2b3dd63719a6b6f35765a0",
+          "before_sha256": "a3830753d219fbebe16bcabd742b52d7167cb097adf47fca8e1d79d55626e43f",
+          "claim_index": 52
+        },
+        {
+          "after_sha256": "040fcb5116a86ef77598eb07fe38cb81d1291416c564fa1ce16c6cc7382757f4",
+          "before_sha256": "ce951021b263ce480a6d936564c6ec81f8893d1462c52af93b156496ebd83114",
+          "claim_index": 53
+        },
+        {
+          "after_sha256": "747c6eb65b65dde3e0804e149157d8524ae5c83c5773005aea866153528a9e66",
+          "before_sha256": "3daf9ee6bab5d9f859fd2bf7d8f42a172832ea962883e74c7bcd362f24109ce0",
+          "claim_index": 54
+        },
+        {
+          "after_sha256": "c9c8e0cd13c9346b839ea86f4eb57e52e3e12ded1a6eb1d879fa19f55015b519",
+          "before_sha256": "07d6881544eec0963d6e48431e183038ef3909a94eef99c1aa8548eb01b6a7d6",
+          "claim_index": 55
+        },
+        {
+          "after_sha256": "b0eb105c6210a6808e5ed47c93c430063eece6867494b78022723e303baa2e28",
+          "before_sha256": "4736b8030eafcd899692d910d5694980aebe263cc18681751d8270c723189974",
+          "claim_index": 56
+        },
+        {
+          "after_sha256": "c222eea0bca21bb2e69de68045b08113967ebae5db5764ae1122709213a666c5",
+          "before_sha256": "64368e3a8de4315a400c0748c5222aaaaa4d7e06bf605e293eb5807335df3550",
+          "claim_index": 57
+        },
+        {
+          "after_sha256": "aa2be190bbc11b9cf7be36c4166aa4f1cc8e122b373c2310e9b0dfda83ec7049",
+          "before_sha256": "f336ab4eae3b6d41c0509f6c0269b8c3de81a971a54cd0e87e9f3f10f809abcc",
+          "claim_index": 58
+        },
+        {
+          "after_sha256": "34cff41e3b7a223a419a69d735c263d24a4bc1ee54d50566dd6df508cbc354d4",
+          "before_sha256": "722d089cc12e8b9366baa78cb773b3f4276e64511c9981f2a5218693e3c09123",
+          "claim_index": 59
+        },
+        {
+          "after_sha256": "60cc8767ca47267da65ef1bb367c95a22e78e3f7c55683ef2c25b91d7fcbaabf",
+          "before_sha256": "b35b0769e691043f6685b2993de0dfd63b9f79b68849de6f264b1dabd4b79ba7",
+          "claim_index": 60
+        },
+        {
+          "after_sha256": "f96d277e7b2bab6e28a5fcb1942ec60dac9adc51fa108ba05c148fb09f006f8f",
+          "before_sha256": "47b42331a48cf32e1c34c46a073ea61ee2a2ef7925181453597e36a0b508d8bb",
+          "claim_index": 61
+        },
+        {
+          "after_sha256": "400d947741e88d637963cd1a5893428bc2e89bf9620994de16fdd14a9e64c78f",
+          "before_sha256": "158fa1afda61fefc12c76050276e47165c521042848ebd5eb8b8b88ad2c3eb13",
+          "claim_index": 62
+        },
+        {
+          "after_sha256": "f7f50e5f989da2b50baf69d629fa533d9785d3c29c0a25070befbdf182adce52",
+          "before_sha256": "e48adabedbd5c648a9860c4653cf682398293776e32dd10f37e80f02fa441c7c",
+          "claim_index": 63
+        },
+        {
+          "after_sha256": "08f08ab144c3d55ed0b4902849335c7d814f88cec839c988dffaf7a6bf62484e",
+          "before_sha256": "8af3d7791c918d4b40e414a7ecf5791c24ca75d1612392a7d55a3544d58d07c4",
+          "claim_index": 64
+        },
+        {
+          "after_sha256": "2323a1bc4c1a8ac686916e048110546878689c179c422fc4a0ae75c3903bbb22",
+          "before_sha256": "cdd3d71c8987e74245be5147d91608e519142c96fcf977483839060776b20eaf",
+          "claim_index": 65
+        },
+        {
+          "after_sha256": "cedecb82f1379ee1e98db8b730af650f8b00681d114964e1410ab424672749ae",
+          "before_sha256": "59339720d0343e99c530275c362d9998339e6cc9a297faccc9970e36c49b77d4",
+          "claim_index": 66
+        },
+        {
+          "after_sha256": "547a659fba5d5a5d1605db4cd6ac493780dc19d30ddfbf4c50bb4fa3484a1183",
+          "before_sha256": "9880153b509c290b815d91ca0c74fbdc610630552b0188527e48688c0ff57068",
+          "claim_index": 67
+        },
+        {
+          "after_sha256": "e6a3ed500be79735aae7aeca2367588cee9557c8d3184b781e2284515d0425ab",
+          "before_sha256": "e378acb8219fe7ff65858f8ac25b9d285eb193311adb791bdc243576da1da37a",
+          "claim_index": 68
+        },
+        {
+          "after_sha256": "b964935a071267a544dd6cf818ac3281544a518bed2b4be23bcde35315a7a9a2",
+          "before_sha256": "da994129b4d119f9d4ff2d2c64ed5a95d984d80c1050b49e13a2e36e02176712",
+          "claim_index": 69
+        },
+        {
+          "after_sha256": "c856b82ef68c2372502e805f6536dca7d33e1e74d659c343311dd4cd5763494e",
+          "before_sha256": "b8b74ba48d65f5cb55553fd9de6d146f64ca11e2eb2746ba081d157871b0acc3",
+          "claim_index": 71
+        },
+        {
+          "after_sha256": "bf541c02d1b354f572389639480065b03be89b55faa9775286cb7d79c047978f",
+          "before_sha256": "7d4fae612a39b0df785cf34c9ab77ec3be7631254eb9ba540949aefe059311bd",
+          "claim_index": 73
+        },
+        {
+          "after_sha256": "f1f29f31300cc81145f8215d8cc83c49f861ea45c28af8d48c1d0bbc01b705e1",
+          "before_sha256": "e1af884108413b2b33b4a40841e4f163fdd114b179f20bcf7f50a2a8e7d084df",
+          "claim_index": 74
+        },
+        {
+          "after_sha256": "d0035191a6347bae7ff3dc7f379feda40c546fa1997c818b933f42317669932d",
+          "before_sha256": "cc601ca70f3689cc0463e3b26b801e9aa03b9da3503fae850698e368ad18a8f7",
+          "claim_index": 75
+        }
+      ],
+      "identifier": "CHEBI:46081",
+      "original_history_sha256": "fc543445ce7729efae7ec3c6fdb245fa233ca2535914f08429c184a5fbbf52c7",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "4395373f5ed5e670ab499bf1245795e7b834fa413a98df7f21705ea6d67ed5d0"
+    },
+    {
+      "after_record_sha256": "c673c4f476d3746535527e73805b15adb016308fce9dc4c7969f3c69121bde6d",
+      "before_record_sha256": "57d6c09499e40163ae93cf7b44fb1b4e2212cf7dbf932d5537837e15ec3285d3",
+      "changed_claims": [
+        {
+          "after_sha256": "05eb34288bb52e11adb6114fce8420cbbd4eaf658144eebabbb4f67f6b0c04d3",
+          "before_sha256": "0ca2b6c0b66c8647177d1b35dbf68bb7913dfba9e6ea8e7eccc05efc884ce9bd",
+          "claim_index": 22
+        },
+        {
+          "after_sha256": "b71df8c2fc50bc4bf0d0bddd3d2f03b44e1bedec28725c0da0dc957705a8df78",
+          "before_sha256": "b8a9acd6daabdc0e95e701479d3479b734ece74e27bd534d6d8f1c15b825e8b6",
+          "claim_index": 24
+        },
+        {
+          "after_sha256": "85982a7f51c41eff83f1ba52343809ba197a426ec61fad980e2b4f4eeec9bed5",
+          "before_sha256": "2010cf1ad1586e7d2ac38c71e075f9a5e63e390250a2712c78398bbc19fcf227",
+          "claim_index": 25
+        },
+        {
+          "after_sha256": "858948e15463a8610641bdb2b09ed85e045c11a47509dc4ac3d9bdf36fd9af9d",
+          "before_sha256": "1cbc6597f667492b1b7db8b4ed20a8ecf54616ebd1705bd9d6e56cea4b2d7803",
+          "claim_index": 26
+        },
+        {
+          "after_sha256": "478b5428330fdf09fd0674ba976a11a0f8154a653673d42274e47b645aa810f9",
+          "before_sha256": "610e8ad640438fedd76d6b2ff2215d30354cd15383b6bd76aeed77a8171dc41a",
+          "claim_index": 27
+        },
+        {
+          "after_sha256": "f094fa60f633b54fe0b99a1787f35092ee591fcf3d433afd8986d1ab955b2fa7",
+          "before_sha256": "2821c12cadcdddada5e34a5f6af8b9cfffba4c27c19e254d06922fc5ac0ea70f",
+          "claim_index": 28
+        },
+        {
+          "after_sha256": "efb6ef4531eaf42498d1b4157c2e10c2b043f687ef51482880f66752ac59d5a0",
+          "before_sha256": "9f02ea6f762897e143e666fc28ec47512cc44ea0595def65e13171280bc46e83",
+          "claim_index": 29
+        },
+        {
+          "after_sha256": "7c3d905845aa5ffc26e2b3dd3da710effd2b2c8bcc19e22387e604982732657d",
+          "before_sha256": "df0134d6188cf5f341b67fe7b2e97808138ada4aae34c8a7dd7fc040258900fe",
+          "claim_index": 30
+        },
+        {
+          "after_sha256": "f75c1ba1c2678a3c53cb622f19cbea2b4acc1c0c30a281e2657415eca4367843",
+          "before_sha256": "4d671fb114d412c254973a533630fc7b1fab975fa01b1f099c5c3b6581a0c662",
+          "claim_index": 31
+        }
+      ],
+      "identifier": "CHEBI:474180",
+      "original_history_sha256": "7ec46c2bd554864c5f84fa5ed28a5d9f3384a559d4ad38b354f4796bcfa406eb",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N",
+      "unchanged_fields_sha256": "ef086d0dcd43e29e4faec73af510b03d6f8f9b27653bce544e8a79149d50e998"
+    },
+    {
+      "after_record_sha256": "63783186a77d1023bfabbd204bbb1be3cb7aab3f044ae9c804b3f0976e01b584",
+      "before_record_sha256": "71b9c6a67fe167b32026c40fc090a3602f20b4f456572c4d55f650f89fbef687",
+      "changed_claims": [
+        {
+          "after_sha256": "339cdad5fd2558e2500f6775c9d8fc34e7b6de7f6fc94b778d5b57c504b083cf",
+          "before_sha256": "e5eb30a9da842f9f132dd52d80da8e7dc628a7b9202c73f2cead70843c3c350f",
+          "claim_index": 0
+        }
+      ],
+      "identifier": "CHEBI:48080",
+      "original_history_sha256": "52804b5b7be6552f23d880591293e71e9b244fa4816bfa6a7593366cd9ba0bce",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml",
+      "standard_inchi_key": "KQNZDYYTLMIZCT-KQPMLPITSA-N",
+      "unchanged_fields_sha256": "8fd100a30a8aef7b8dfed2198c6f166cbbaf609cb85ec981b1d57441fbf7eb76"
+    },
+    {
+      "after_record_sha256": "6b9e73576e1ce53126a5b008b9a748af058a8cc43120b846902ea7c5878c3d68",
+      "before_record_sha256": "9d32180576ea9648902ea291828bac1d0494898313d0623ab7e1dcad782194e3",
+      "changed_claims": [
+        {
+          "after_sha256": "db337abbe84f331df97f6311a2ecf8b5b4d1f84691fd7000c8241bc64c072ad4",
+          "before_sha256": "dc1462dd62f08ea20b98b8502ccbe1d0fad0e2e0683385033be8a4e0549264b6",
+          "claim_index": 12
+        },
+        {
+          "after_sha256": "70ee45ec9aa5da9900257ca84043c03112a2f57ed649257e97fa054f48bc012c",
+          "before_sha256": "12e28d7bcd21eaddac8b013782f80c4a31580a22e062eaac42493c3df4a1d87c",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "09db0a543ae9bd295062f709e05362c31da6f1d31dc3cfe000f4ac9817a80ff0",
+          "before_sha256": "a31edfe7eb6945b18eb61ce159e400e21cc63c534ed752863fc16394cea75b19",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "9b0521d99ddf54453324cf778a79259951f9ae0bf42a3064ab98e6570a7c48fd",
+          "before_sha256": "e955d1a9ba4446475be561a49cf6844a40252231620b6efe8cea16487e481139",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "1ee6b7adbeea3deaf0e1e40d6833f59df56bd14acdc59413f5471aac75dba294",
+          "before_sha256": "6373594b2e679745937f72f307a23e405271b03a4e0f08cdebad5f380bb3f701",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "58a1fcc1e01d341295dcbcb8a36bf86f0141b222488e7aefe9e5470f583ea6d3",
+          "before_sha256": "387d0cf1806e233eb0744b750d7ae1aca309dd95e3c5237c1a5420c2b9660136",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "52984d13648ac432b2916fc1604d191e5b816b491f22fa3e00e2a53c7175652f",
+          "before_sha256": "2be7cf583fa704542e8f9f2585a07c0b109375bf2d7a872aeb1f4146f0b98c08",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "3a65e34eadbe29ecf82aeb2db5ec42c4960fb72e37e97f58b9100b86c2f276c1",
+          "before_sha256": "2dc1346c6d4fd8fad7f6f65b07d1347366fe008b39ec27981366e652b0a3f944",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "4861a1e57b917c259242a93656888879ee544e447987403d6867e90808cdb661",
+          "before_sha256": "21d2f0f0d5a770c356cdfe2feeea0eeb2c1afc854eb3cc033be5568b39c40d20",
+          "claim_index": 20
+        }
+      ],
+      "identifier": "CHEBI:55346",
+      "original_history_sha256": "9f10e510b9ad2fc4e3e5cbbb8c6ee6266c452b4935208f5886b2535ddca05746",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml",
+      "standard_inchi_key": "JHVAMHSQVVQIOT-MFAJLEFUSA-N",
+      "unchanged_fields_sha256": "519983a9ed72285e8969c834af012f0f3ac770b1ea17e126a430d7071ee3ce27"
+    },
+    {
+      "after_record_sha256": "2af3097e03c58f752a0afabb561845a146e35f586f55817498b07eb57d1f6915",
+      "before_record_sha256": "1ec9408ed13625fd4c500f40fce099efc033921c8408b903005a341730a63950",
+      "changed_claims": [
+        {
+          "after_sha256": "9c4d07dc0373dfbc50f95aca502bc8a44b3f9afca97e1b7733df26f540aa726f",
+          "before_sha256": "88d9f89fc74c3576d0c7da383fc29c8a02ca8f1a7f358bd1f7bd7345febac5af",
+          "claim_index": 13
+        },
+        {
+          "after_sha256": "685c66532e2f2e194d391a5773dd74f22a1166764481dab571ed3e670ac58cd5",
+          "before_sha256": "e1c1cd35e95da51049717e0c1bb06e33e4612c334ec358a5f4ea9180c149dcb3",
+          "claim_index": 14
+        },
+        {
+          "after_sha256": "fec98dea4c449d81515ce4bd7a8d53f4c18d21cf8d2053f6a458f817596530dc",
+          "before_sha256": "5324efbb63735b012f8dc413a85c927c4507332845fb7fadab93d072d94ff00c",
+          "claim_index": 15
+        },
+        {
+          "after_sha256": "0e0c278aa9ac3e13bc049db3a600858dabc151722cb41820f5af6344aecc9d51",
+          "before_sha256": "94dfd0fe9cff97c84dfad1cb47cbc7c310f7aed193fb30d4c7da3baacddabd64",
+          "claim_index": 16
+        },
+        {
+          "after_sha256": "64502d0b8765635403081a02efa891cf0cb4a9df1642b12bce05bd9632065864",
+          "before_sha256": "93bfa8a62e36bab25b49058efb0797adda0fe6b5a3f574c5cf7b3905a0bf78e9",
+          "claim_index": 17
+        },
+        {
+          "after_sha256": "7ef68e32403492a008924b9a1004f4204b9ecd7ce59c5d84b260a2ceafb32ce0",
+          "before_sha256": "6b2c1905822f5f055f64f0d63558385c92c0044c12bf360cb6e848194763e366",
+          "claim_index": 18
+        },
+        {
+          "after_sha256": "a57c75491989c719283f07ca38736c314e5534f32828cfdfdcc30d1d3f55efdd",
+          "before_sha256": "c2a334ccbcc33822177c76e6f31604d63e22ddedbd9daf32901e120950c047b7",
+          "claim_index": 19
+        },
+        {
+          "after_sha256": "d5e68784b990d0c8f6035e9ae48dd3f79a951e3e477a0c2f3dd074a9ffbedf74",
+          "before_sha256": "a402d8899ce1a85b5fcf764fbc9ca258e4d249314837ee0392a0048c59ae2594",
+          "claim_index": 20
+        },
+        {
+          "after_sha256": "ce4be190463942681e667885b4bb1c55d77316e7fe45592fe09d3528f7a70201",
+          "before_sha256": "a36efb5cc045876f43fb4baa73bd46d8df50dda33e9c76812c36fd237a35915c",
+          "claim_index": 21
+        }
+      ],
+      "identifier": "CHEBI:600520",
+      "original_history_sha256": "4aaccd90de08d9301d5f884e27f6628b192b4acc184c90e73ebe5d353c9fb628",
+      "path": "data/antibiotics/antifungal/micafungin.yaml",
+      "standard_inchi_key": "PIEUQSKUWLMALL-YABMTYFHSA-N",
+      "unchanged_fields_sha256": "fa9f88e278ba497dbd512994248a004eb486cf894ce25ba9ef0e32237361c2d3"
+    },
+    {
+      "after_record_sha256": "d509e4376387944b7f12135324332c30d212a0115b44a40d9f2228c226ff9dbe",
+      "before_record_sha256": "4cd9663a526340355fdcd92e3b27543c99b49aec06b39e23a5226c1b3f8aa355",
+      "changed_claims": [
+        {
+          "after_sha256": "5da8e1f880e64cd18235c4c634229d9fbb6916a1d093ba9cf50cd3ce707ee287",
+          "before_sha256": "4cbcc00b0410651666222fe9e527f5e8326d4cbede486ea7c376d8e3215bc305",
+          "claim_index": 35
+        },
+        {
+          "after_sha256": "8d120989653f09d90e3cbc419627d571b0e13122abedcfb668703ade01c6c240",
+          "before_sha256": "0b56e39dcf3a35d392dcee347c415da745ae1f9153572f45bbba69c9fd693b13",
+          "claim_index": 36
+        },
+        {
+          "after_sha256": "aa76f001a20bf45dfed179f948c23d20b3a14b374ef46352a87a99ccacfd152b",
+          "before_sha256": "8205b7a27de227566bd4995d126042382a4286e971b03560405cffe59cccd875",
+          "claim_index": 37
+        }
+      ],
+      "identifier": "CHEBI:6076",
+      "original_history_sha256": "a9a6551c74015175f45c477c47feeeb7f1b03dc5d57fa7ddd32d07d2664cf717",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "unchanged_fields_sha256": "e72dfea6d40de2bb1b43843cf50c2ead8a86556167ad2f51681a2ad02a9bc510"
+    },
+    {
+      "after_record_sha256": "35ce666679102adf7d292f0aacefc91b659d2d11a6b2803ce04b64d318dd82fc",
+      "before_record_sha256": "09168b0bfbfc9c0483cb4c856997d4b8bc97c9403f32e5e4a223b29da6951c8a",
+      "changed_claims": [
+        {
+          "after_sha256": "599b57817c2bfee4aaa61d20893c6c9fd6734d986384e29b454e9c725a9dfdb6",
+          "before_sha256": "af2a94b1ceeecb6a33349bdacabcbc88789e65f60661a55e44e6cabc56a2f794",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:81760",
+      "original_history_sha256": "5ecb32b9c87b501ebeccf226f578b102e8b0b2a4499199cfbb7f59ade0f8f624",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml",
+      "standard_inchi_key": "BQYJATMQXGBDHF-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "cb2bdf1a75d128bdba8df48c79bcf293132298d782fd7137e335b7e2e887d81d"
+    },
+    {
+      "after_record_sha256": "4d761c48ad5e8a9ddb81df75f01aa9a72521ebe356b5b46304d0d21b75ae4ab6",
+      "before_record_sha256": "d33e6999e9f8f9ecab92e4688fda11dbaaf4d987a79591ad07fbe07a2b9d666a",
+      "changed_claims": [
+        {
+          "after_sha256": "380d17617e89af95eeec095e0dad13b080e9e8819424e48016557a458494abdc",
+          "before_sha256": "0ef5aef38aeec4019bb0ab06b13d46e9873bcc73ede4d78ec5c3c3699996b4dc",
+          "claim_index": 1
+        },
+        {
+          "after_sha256": "c9fb891e3a175f97e0b32524a25bacb6714c2d203df6abb3c0542c0b828363e3",
+          "before_sha256": "d311d713d2ab50d9e35499f65e78b413ffe24066e11a2b50cacb28e2a261f1b0",
+          "claim_index": 2
+        },
+        {
+          "after_sha256": "c6dfaadfe643896ec1df0eb3e55db43ccbb2e9b5360f242e770996f79e287b96",
+          "before_sha256": "fb64eb32667342120025fdd57ef5782b293bed3660423d67a79fb8ed8f818a76",
+          "claim_index": 3
+        }
+      ],
+      "identifier": "CHEBI:81763",
+      "original_history_sha256": "0db22feb1af88ec5c9ead1ce6639e6f0b981788d0b5c36281dca2e974dfaa20b",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "b68bf07441b6cb40371c28845b8054654e30de3957fcd80837c36b0c7f700812"
+    },
+    {
+      "after_record_sha256": "fef01120ef60463cf24eb42eefcffcad7e7184e5e181d39fbea07456c373e99b",
+      "before_record_sha256": "9d1a97944c9d24887b23b140b5dfad9e222c7345b528573d16b11057cdccaee8",
+      "changed_claims": [
+        {
+          "after_sha256": "3e7f49986a10f9cff3cc61f94b4f38abd2b34f3c1fc668bd25d4d08279c2a438",
+          "before_sha256": "db6acdaf25057a1a22ed21a9e3707abecf33dc73d3f309286529e33d7d13fd71",
+          "claim_index": 6
+        }
+      ],
+      "identifier": "CHEBI:8434",
+      "original_history_sha256": "95c995d23cfb9530bdfb6ae4ade608b33d78679b6224a02a23a4a52d006a4766",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml",
+      "standard_inchi_key": "TVLSRXXIMLFWEO-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "0a0c06f9d9b341c2ba282b7fc25ac37b9e833bbd31db5806a7dd2e18b9b328e0"
+    },
+    {
+      "after_record_sha256": "0dcb7c33edecb1adb1084f7bdaf4ce1c036dffec307f1a6189a35924d79a0166",
+      "before_record_sha256": "471f3ef43f2f874f2473a966e710337bf9d37e6b7c5acc750e074870c003962b",
+      "changed_claims": [
+        {
+          "after_sha256": "65d75b698418c351f176b99b90f803261694f7a6b25daf85864ea0070109e322",
+          "before_sha256": "4ff981cb1a2057333cec15bc8382897fae3bc8b1c0ab6892d9b000cc55d991cd",
+          "claim_index": 5
+        }
+      ],
+      "identifier": "CHEBI:8489",
+      "original_history_sha256": "e03e37388aaed80a0af8bb3674a4442b876dafcb4bdadade1774fa4a46c73a4a",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml",
+      "standard_inchi_key": "STJLVHWMYQXCPB-UHFFFAOYSA-N",
+      "unchanged_fields_sha256": "8b58ffacf69aab5d67bd2cb6754d05723b02bc0f962b21dcb89a40a2f44d50c9"
+    }
+  ],
+  "reference_crosswalks": [
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "CP009805",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ATZ45931.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CP009805",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ATZ45933.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CP009805",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ATZ45935.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_024546373.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_024690605.1"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_024546375.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_024690608.1"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_024546377.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_024690607.1"
+            }
+          ]
+        },
+        {
+          "database": "Proteomes",
+          "id": "UP000001798",
+          "properties": [
+            {
+              "key": "Component",
+              "value": "Chromosome 1"
+            }
+          ]
+        }
+      ],
+      "scope": "REFERENCE_ONLY_NOT_TESTED_DERIVATIVE",
+      "strain_evidence": [
+        {
+          "citation": "21876677",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "ATZ45933.1",
+                "source": "EMBL"
+              },
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "UP000001798",
+                "source": "Proteomes"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "B05.10"
+          }
+        },
+        {
+          "citation": "23104368",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "ATZ45933.1",
+                "source": "EMBL"
+              },
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "UP000001798",
+                "source": "Proteomes"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "B05.10"
+          }
+        },
+        {
+          "citation": "26913498",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "ATZ45933.1",
+                "source": "EMBL"
+              },
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "UP000001798",
+                "source": "Proteomes"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "B05.10"
+          }
+        },
+        {
+          "citation": "CI-EHJOK0LVD1DJR",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "ATZ45933.1",
+                "source": "EMBL"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "B05.10"
+          }
+        }
+      ],
+      "uniprot_accession": "A0A384J5Y1"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "CM000583",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG38885.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "DS022243",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG38885.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CM000583",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG38886.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "DS022243",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG38886.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_018745076.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_018889013.1"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_018745077.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_018889014.1"
+            }
+          ]
+        },
+        {
+          "database": "Proteomes",
+          "id": "UP000009096",
+          "properties": [
+            {
+              "key": "Component",
+              "value": "Chromosome 6"
+            }
+          ]
+        }
+      ],
+      "scope": "REFERENCE_ONLY_NOT_TESTED_DERIVATIVE",
+      "strain_evidence": [
+        {
+          "citation": "CI-8BHPSNVEBQ5VM",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "EWG38885.1",
+                "source": "EMBL"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "7600"
+          }
+        },
+        {
+          "citation": "20237561",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "EWG38885.1",
+                "source": "EMBL"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "7600"
+          }
+        },
+        {
+          "citation": "20237561",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "UP000009096",
+                "source": "Proteomes"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "M3125 / FGSC 7600"
+          }
+        },
+        {
+          "citation": "CI-3L6TTFBO4616V",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "EWG38885.1",
+                "source": "EMBL"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "7600"
+          }
+        }
+      ],
+      "uniprot_accession": "W7LTW3"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "CM000578",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG37117.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "DS022242",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG37117.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_018743308.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_018887537.1"
+            }
+          ]
+        },
+        {
+          "database": "Proteomes",
+          "id": "UP000009096",
+          "properties": [
+            {
+              "key": "Component",
+              "value": "Chromosome 1"
+            }
+          ]
+        }
+      ],
+      "scope": "REFERENCE_ONLY_NOT_TESTED_DERIVATIVE",
+      "strain_evidence": [
+        {
+          "citation": "20237561",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "UP000009096",
+                "source": "Proteomes"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "M3125 / FGSC 7600"
+          }
+        }
+      ],
+      "uniprot_accession": "W7LX41"
+    },
+    {
+      "cross_references": [
+        {
+          "database": "EMBL",
+          "id": "CM000579",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG42323.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "DS022245",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG42323.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CM000579",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG42324.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "DS022245",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EWG42324.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_018748514.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_018891916.1"
+            }
+          ]
+        },
+        {
+          "database": "RefSeq",
+          "id": "XP_018748515.1",
+          "properties": [
+            {
+              "key": "NucleotideSequenceId",
+              "value": "XM_018891917.1"
+            }
+          ]
+        },
+        {
+          "database": "Proteomes",
+          "id": "UP000009096",
+          "properties": [
+            {
+              "key": "Component",
+              "value": "Chromosome 2"
+            }
+          ]
+        }
+      ],
+      "scope": "REFERENCE_ONLY_NOT_TESTED_DERIVATIVE",
+      "strain_evidence": [
+        {
+          "citation": "CI-8BHPSNVEBQ5VM",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "EWG42324.1",
+                "source": "EMBL"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "7600"
+          }
+        },
+        {
+          "citation": "20237561",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "EWG42324.1",
+                "source": "EMBL"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "7600"
+          }
+        },
+        {
+          "citation": "20237561",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "UP000009096",
+                "source": "Proteomes"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "M3125 / FGSC 7600"
+          }
+        },
+        {
+          "citation": "CI-3L6TTFBO4616V",
+          "comment": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "EWG42324.1",
+                "source": "EMBL"
+              }
+            ],
+            "type": "STRAIN",
+            "value": "7600"
+          }
+        }
+      ],
+      "uniprot_accession": "W7M468"
+    }
+  ],
+  "requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-e5593c19fb79dd547531eba6d8f50639b06ec562d96978e29ad12dbd026a03a2.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:40.706688+00:00",
+      "sha256": "e9e7c1cd22f9a20612023358e64061bc68a47d8eef83d837b51cb8adb0ca0cf1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/117187"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-b670d3cdf7c9ab97e9b2e3ad15ad3d3f7cfc0ecdc01f6d912c231860a248f8ef.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:47.593352+00:00",
+      "sha256": "c807c258e7e01609ee171d09ee80f1fc9320973f66bcc45513062d8ad60a2332",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/332648"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-01f1e22ea1fa2d84c3ffe2745fd621630fb73773d0ecb48ad76ee257f01f4b57.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:49.661361+00:00",
+      "sha256": "efdc06cc141128534084f301f050c6025ef43e0fcb63734b423409d7bbcd4f96",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/334819"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-e695a969b35214dc2487b081aca7e8d7fb4777a5b7ac75935b803339eb9f491b.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:38.427863+00:00",
+      "sha256": "cbec565b1c572ca18724c68a4a1eee548fc15af2b3cbf22be8a542a8d3c7315f",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/40559"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f43b8b1499392d9b768377aa959918742e738b6706023857dac21b3b31a1f840.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "15",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:04:32.351224+00:00",
+      "sha256": "3c6cd700fbf6ba3771e6100a026b9b081b94b25a3363b0bd46ed182805113169",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AA0A089QDC9+OR+accession%3AA0A1D8PCT0+OR+accession%3AA0A1D8PGP5+OR+accession%3AA0A1S6KZ79+OR+accession%3AA0A1S6KZ87+OR+accession%3AA0A384J5Y1+OR+accession%3AA0A8E5ME34+OR+accession%3AA7EGE3+OR+accession%3AA7EQI8+OR+accession%3AA7F519+OR+accession%3AB0XYD8+OR+accession%3AB0Y628+OR+accession%3AB8N2C8+OR+accession%3AB8NFL5+OR+accession%3AB8NUK6&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "15",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:18.453523+00:00",
+      "sha256": "69894dd64e4e62361f8bb211b064f7807d0aed93f1b93602ef2621c7796186b5",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ2TWM0+OR+accession%3AQ2U3V9+OR+accession%3AQ4HZS8+OR+accession%3AQ4WDM9+OR+accession%3AQ4WNT5+OR+accession%3AQ59VG6+OR+accession%3AQ59X67+OR+accession%3AQ5A4G2+OR+accession%3AQ5ALV2+OR+accession%3AQ6X9S4+OR+accession%3AQ870D1+OR+accession%3AQ8X0Z3+OR+accession%3AQ9P340+OR+accession%3AW7LTW3+OR+accession%3AW7LX41&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-1739d35a91197f4d72829d36075d01e74d223301abe67ebee7660f1ae794980a.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "3",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:05:25.425166+00:00",
+      "sha256": "ae2c678afe4203e87cd735af817d7df85835656bbda701a6718d78ff296266b2",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AW7M0I3+OR+accession%3AW7M468+OR+accession%3AW7MZ22&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-3d4f8faa33c071e6335b6ac115c8a1114fd1e3e5ad980ffb9dde9b330573e259.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "34",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T02:23:13.836678+00:00",
+      "sha256": "8fb2b97ef1fd3dc228296d2cdeda13cec4075bbc82a7abea17e103818af3e915",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A21030679+OR+lit_pubmed%3A21077124+OR+lit_pubmed%3A21138346+OR+lit_pubmed%3A21933337+OR+lit_pubmed%3A22155829+OR+lit_pubmed%3A22205735+OR+lit_pubmed%3A22314539+OR+lit_pubmed%3A22536383+OR+lit_pubmed%3A22591226+OR+lit_pubmed%3A22897872+OR+lit_pubmed%3A22912706+OR+lit_pubmed%3A23226235+OR+lit_pubmed%3A23403428+OR+lit_pubmed%3A23629718+OR+lit_pubmed%3A23747481&format=json&size=500"
+    }
+  ],
+  "review_sha256": "e9bfcf5246266475c23c35b246cffc4c7d85423574f62851e351c28807c110bd",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "status": "ELEVEN_IDENTIFIER_SCOPE_CORRECTIONS_CURATED",
+  "taxonomy": {
+    "117187": {
+      "active": true,
+      "parent": {
+        "scientificName": "Fusarium fujikuroi species complex",
+        "taxonId": 171627
+      },
+      "rank": "species",
+      "scientificName": "Gibberella moniliformis",
+      "taxonId": 117187
+    },
+    "332648": {
+      "active": true,
+      "parent": {
+        "commonName": "Noble rot fungus",
+        "scientificName": "Botrytis cinerea",
+        "synonyms": [
+          "Botryotinia fuckeliana"
+        ],
+        "taxonId": 40559
+      },
+      "rank": "strain",
+      "scientificName": "Botrytis cinerea (strain B05.10)",
+      "taxonId": 332648
+    },
+    "334819": {
+      "active": true,
+      "parent": {
+        "commonName": "Maize ear and stalk rot fungus",
+        "scientificName": "Gibberella moniliformis",
+        "synonyms": [
+          "Fusarium verticillioides"
+        ],
+        "taxonId": 117187
+      },
+      "rank": "strain",
+      "scientificName": "Gibberella moniliformis (strain M3125 / FGSC 7600)",
+      "taxonId": 334819
+    },
+    "40559": {
+      "active": true,
+      "parent": {
+        "scientificName": "Botrytis",
+        "taxonId": 33196
+      },
+      "rank": "species",
+      "scientificName": "Botrytis cinerea",
+      "taxonId": 40559
+    }
+  },
+  "unresolved_historical_reference": {
+    "limitation": "Versioned protein-ID query need not match nucleotide-indexed EMBL links; no equivalence to A0A384J5Y1 or experimental subjects inferred.",
+    "paper_accession": "BAB69486",
+    "paper_version_scope": "UNVERSIONED",
+    "query_scope": "EXACT_VERSIONED_EMBL_XREF_QUERY_ONLY",
+    "request": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-e527c714aa48eb27aa8ef4042326314b96484218c1ea141caeec634aeac09ea2.json",
+      "headers": {
+        "content-type": "application/json",
+        "x-total-results": "0",
+        "x-uniprot-release": "2026_03",
+        "x-uniprot-release-date": "02-September-2026"
+      },
+      "retrieved_at": "2026-10-08T11:20:25.432311+00:00",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-BAB69486.1&format=json&size=25"
+    },
+    "result": "NO_HITS_IN_THIS_QUERY_NOT_PROTEIN_ABSENCE"
+  }
+}

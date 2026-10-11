@@ -1,0 +1,365 @@
+{
+  "claims": [
+    {
+      "assay": "Relative colony-growth area under the curve",
+      "evidence": [
+        {
+          "notes": "Direct 5-FC results: sec003/sec005; Figures 2 and 4C. Cohort association.",
+          "reference": "PMID:37856537"
+        },
+        {
+          "notes": "FUR1 reference identity only; release 2026_03.",
+          "reference": "UniProtKB:P18562"
+        }
+      ],
+      "gene_families": [
+        "FUR1"
+      ],
+      "gene_id": "FUR1",
+      "label": "FUR1-associated flucytosine resistance in LL13-040-derived cohort",
+      "mechanism_type": "OTHER",
+      "note": "Gene-level cohort association; not allele-specific causality or resistance of the parental strain. Not all screened derivatives carried FUR1 changes. UniProtKB:P18562 (entry 192, sequence 2; S288c, NCBITaxon:559292; locus YHR128W) is reference-only. No tested-allele protein, strain TaxID, sample/genome ID, MIC or clinical category assigned.",
+      "phenotype_label": "Source-reported flucytosine resistance-associated growth",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    },
+    {
+      "assay": "Relative colony-growth area under the curve",
+      "evidence": [
+        {
+          "notes": "Direct 5-FC results: sec003/sec005; Figures 2 and 4C. Cohort association.",
+          "reference": "PMID:37856537"
+        },
+        {
+          "notes": "FUR1 reference identity only; release 2026_03.",
+          "reference": "UniProtKB:P18562"
+        }
+      ],
+      "gene_families": [
+        "FUR1"
+      ],
+      "gene_id": "FUR1",
+      "label": "FUR1-associated flucytosine resistance in NC-02-derived cohort",
+      "mechanism_type": "OTHER",
+      "note": "Gene-level cohort association; not allele-specific causality or resistance of the parental strain. Not all screened derivatives carried FUR1 changes. UniProtKB:P18562 (entry 192, sequence 2; S288c, NCBITaxon:559292; locus YHR128W) is reference-only. No tested-allele protein, strain TaxID, sample/genome ID, MIC or clinical category assigned.",
+      "phenotype_label": "Source-reported flucytosine resistance-associated growth",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    }
+  ],
+  "compound_scope": "DIRECT_FLUCYTOSINE_EVIDENCE_NOT_TRANSFERRED_FROM_FLUOROURACIL",
+  "curation_applied": true,
+  "doi": "10.1371/journal.pgen.1011002",
+  "evidence_scope": "GENE_LEVEL_COHORT_ASSOCIATION_NOT_ALLELE_CAUSALITY",
+  "limitations": [
+    "Cohort association does not imply that every screened derivative carries FUR1 changes.",
+    "OTHER does not reclassify the eight preserved CARD-owned assertions.",
+    "Reference P18562, locus YHR128W and S288c TaxID 559292 are not tested-allele identifiers.",
+    "No individual variants, sequences, constructs, selection conditions or protocols exported.",
+    "No conversion of growth to MIC, clinical category, sample/genome ID or exact-allele call.",
+    "No new NCBI requests or source adoption; whole-record primary review remains incomplete."
+  ],
+  "preserved_card_assertions": [
+    {
+      "aro_id": "ARO:3007557",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3007557"
+        }
+      ],
+      "label": "Candida spp. FUR1 with mutations conferring resistance to 5-flucytosine",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION"
+    },
+    {
+      "aro_id": "ARO:3007559",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3007559"
+        }
+      ],
+      "label": "Saccharomyces spp. FUR1 with mutations conferring resistance to 5-flucytosine",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION"
+    },
+    {
+      "aro_id": "ARO:3007568",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3007568"
+        }
+      ],
+      "label": "Cryptococcus spp. UXS1 conferring resistance to 5-flucytosine via absence",
+      "mechanism_type": "UNKNOWN"
+    },
+    {
+      "aro_id": "ARO:3007642",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3007642"
+        }
+      ],
+      "label": "Aspergillus spp. fcyB conferring resistance to 5-flucytosine via reduced permeability",
+      "mechanism_type": "REDUCED_PERMEABILITY"
+    },
+    {
+      "aro_id": "ARO:3007665",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3007665"
+        }
+      ],
+      "label": "Candida spp. FCY2 conferring resistance to 5-flucytosine via reduced permeability",
+      "mechanism_type": "REDUCED_PERMEABILITY"
+    },
+    {
+      "aro_id": "ARO:3009286",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009160 (5-fluorocytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3009286"
+        }
+      ],
+      "label": "Nakaseomyces glabratus Fur1 with mutations associated with resistance to 5-fluorocytosine",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION"
+    },
+    {
+      "aro_id": "ARO:3009629",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3009629"
+        }
+      ],
+      "label": "Cryptococcus neoformans USX1 UDP-xylose synthase with mutations conferring resistance to 5-fluorocytosine",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION"
+    },
+    {
+      "aro_id": "ARO:3009633",
+      "evidence": [
+        {
+          "notes": "CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009160 (5-fluorocytosine); database assertion, not a primary citation.",
+          "reference": "ARO:3009633"
+        }
+      ],
+      "label": "Cryptococcus neoformans Ura6 uridylate kinase with mutations conferring resistance to 5-fluorocytosine",
+      "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION"
+    }
+  ],
+  "primary_access": "CACHED_EMBL_EBI_FULLTEXT_RESULTS_INSPECTED",
+  "primary_cache": "fur1-durand-primary-37856537.json",
+  "primary_locations": [
+    "Results sec003",
+    "Results sec005",
+    "Figures 2 and 4C"
+  ],
+  "primary_reference": "PMID:37856537",
+  "primary_section_sha256": {
+    "sec003": "ad9ffdfc595fc3f684e012a452512bd2de063e436012b37cbd3d00452a880096",
+    "sec005": "f25d3f90186104a75312f30df95ac5bac4e821e29e72c4f84af41ba86f47ea88"
+  },
+  "primary_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011002",
+  "record": {
+    "after_sha256": "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3ed7ada",
+    "before_sha256": "c0c5a901e00788ec66a870c02e82e8af70a8813621670f658900f26f290e3384",
+    "identifier": "CHEBI:5100",
+    "path": "data/antibiotics/antifungal/flucytosine.yaml",
+    "standard_inchi_key": "XRECTZIEBJDKEO-UHFFFAOYSA-N"
+  },
+  "reference_protein": {
+    "entryAudit": {
+      "entryVersion": 192,
+      "firstPublicDate": "1990-11-01",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2006-09-05",
+      "sequenceVersion": 2
+    },
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "genes": [
+      {
+        "geneName": {
+          "value": "FUR1"
+        },
+        "orderedLocusNames": [
+          {
+            "value": "YHR128W"
+          }
+        ]
+      }
+    ],
+    "organism": {
+      "commonName": "Baker's yeast",
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Ascomycota",
+        "Saccharomycotina",
+        "Saccharomycetes",
+        "Saccharomycetales",
+        "Saccharomycetaceae",
+        "Saccharomyces"
+      ],
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    },
+    "primaryAccession": "P18562"
+  },
+  "requests": {
+    "primary": {
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Type": "application/xml",
+        "Date": "Thu, 08 Oct 2026 15:59:39 GMT",
+        "Set-Cookie": "JSESSIONID=BB9F287CCF3DBA503332E0E22F12BC20; Path=/europepmc/webservices/rest; Secure; HttpOnly",
+        "Transfer-Encoding": "chunked",
+        "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "retrieved_at": "2026-10-08T15:59:40.722152+00:00",
+      "sha256": "692f020f44c6fdb3f591d7f51c25daac0ff87bc7ef92422d3bf46dd6f97b5de3",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10617708/fullTextXML"
+    },
+    "reference": {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:57:23 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:57:23.987201+00:00",
+      "sha256": "899c34ee88d068a896c036721fa916109c3fd5bc311a1e7d139b96eb4f7935be",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/P18562.json"
+    },
+    "reference_strain": {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "Keep-Alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:01:35 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    },
+    "species": {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "2686",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:26 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+      "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932"
+    },
+    "subject_query": {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 15:59:41 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "0",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T15:59:41.694331+00:00",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AFUR1%29+AND+%28organism_id%3A4932%29+AND+%28organism_name%3A%22NC-02%22+OR+organism_name%3A%22LL13-040%22%29&format=json&size=100&fields=accession%2Cid%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cversion%2Csequence_version"
+    }
+  },
+  "serialization_review": {
+    "change": "RESTORE_ORIGINAL_KEY_ORDER_NO_BIOLOGICAL_CHANGE",
+    "previous_record_sha256": "6b5d0f455f7f041e30738a9765be3d5131016be596e3edc6361b158148f30e33",
+    "snapshot": "flucytosine-fur1-before-order-fix.json"
+  },
+  "shared_identity_dossier": "research/2026-10-08-fur1-cohort-grounding.json",
+  "shared_identity_dossier_sha256": "e878b1ca0824c064e304d495c152856c9e78e6dcef29b955ce7d13296772c182",
+  "subject_query": {
+    "limitation": "No match in this literal strain-name query is not proof of absent entries.",
+    "params": {
+      "fields": "accession,id,protein_name,gene_names,organism_id,organism_name,version,sequence_version",
+      "format": "json",
+      "query": "(gene_exact:FUR1) AND (organism_id:4932) AND (organism_name:\"NC-02\" OR organism_name:\"LL13-040\")",
+      "size": 100
+    },
+    "retained_results": 0
+  },
+  "taxonomy": {
+    "reference_strain": {
+      "active": true,
+      "rank": "strain",
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    },
+    "species": {
+      "active": true,
+      "rank": "species",
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    }
+  }
+}

@@ -1,0 +1,2226 @@
+{
+  "access_limitations": {
+    "author_copy_discovery": [
+      {
+        "result": "BIBLIOGRAPHY_WITH_NCBI_LINKS_NOT_FOLLOWED",
+        "url": "https://www.mcgill.ca/berghuis-lab/publications/antibioticresistance"
+      },
+      {
+        "result": "BIBLIOGRAPHY_ONLY",
+        "url": "https://www.berghuis.lab.mcgill.ca/publications.html"
+      },
+      {
+        "result": "BIBLIOGRAPHY_ONLY",
+        "url": "https://smb.slac.stanford.edu/research/staff_publications/"
+      }
+    ],
+    "emrd_correction_lookup": "The bounded 2007-title metadata query returned no correction entry; this is not evidence that the reported erratum is absent or biologically irrelevant.",
+    "europe_pmc_canary": {
+      "bytes": 5525,
+      "retrieved_at": "2026-10-09T15:17:27.416077+00:00",
+      "sha256": "e9f3052460e3fa9cc942471e3e0c6197956edb6a24ebb1dec310874bd3f26e65",
+      "status": 403,
+      "url": "https://europepmc.org/articles/PMC2923509"
+    },
+    "europe_pmc_followup": "HTTP_403_CHALLENGE_STOPPED_NO_BATCH_OR_BYPASS",
+    "oa_xml_api_used": false,
+    "oa_xml_reason": "All six bibliographic records have isOpenAccess=N; free HTML links do not establish eligibility for the OA fullTextXML slice.",
+    "publisher_web_results": [
+      {
+        "result": "403",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.0701809104"
+      },
+      {
+        "result": "403",
+        "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/pro.437"
+      },
+      {
+        "result": "403",
+        "url": "https://pubs.acs.org/doi/10.1021/bi800664x"
+      },
+      {
+        "result": "403",
+        "url": "https://www.science.org/doi/10.1126/science.1125629"
+      },
+      {
+        "result": "INACCESSIBLE",
+        "url": "https://doi.org/10.1016/j.str.2005.11.015"
+      }
+    ]
+  },
+  "attribution": "UniProt Consortium, UniProtKB release 2026_03, CC BY 4.0; CARD/ARO ontology CC BY 4.0; RCSB/wwPDB reference metadata CC0; EMBL-EBI Europe PMC bibliographic metadata and cited primary publications. No article text or figures redistributed.",
+  "bibliographic_requests": [
+    {
+      "bytes": 35716,
+      "retrieved_at": "2026-10-09T15:12:24.692705+00:00",
+      "sha256": "a365a6dce89233558f7b4c14df89abc4befc0590caf17dc24149843777ddfd96",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28EXT_ID%3A16675700+OR+EXT_ID%3A17563376+OR+EXT_ID%3A18710261+OR+EXT_ID%3A20556826+OR+EXT_ID%3A16531241%29&format=json&resultType=core&pageSize=100"
+    },
+    {
+      "bytes": 8129,
+      "retrieved_at": "2026-10-09T15:18:30.620351+00:00",
+      "sha256": "5741d827d80d9e5384cd26139783ee6f03da2afcf22dc8a0cc93c203cd0447d4",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28DOI%3A10.1074%2Fjbc.M808148200+OR+%28TITLE%3A%22Structure+of+the+multidrug+transporter+EmrD%22+AND+FIRST_PDATE%3A%5B2007-01-01+TO+2007-12-31%5D%29%29&format=json&resultType=core&pageSize=100"
+    }
+  ],
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-09-oleandomycin-resistance-grounding.tsv",
+      "sha256": "e2ac349a1a893263fd2bfd26ad4602bc7f2b319ee202391944d4407efc5004fe"
+    },
+    "latest_curation": {
+      "path": "research/2026-10-09-oleandomycin-curation.json",
+      "sha256": "c5ad639efa80bb7609d48a17dc68e6ca834479d7ef2d0253dbee97f21c7bd934"
+    },
+    "structural_audit": {
+      "path": "research/2026-10-09-card-structure-links.json",
+      "sha256": "c4ccbd533f5cc328cd015f9b95eaa0ff6044f13b62c46f1ddfb7bce17bea0183"
+    }
+  },
+  "limitations": [
+    "No NCBI request, outreach, #1040 work, source adoption, card.json retrieval or new genome-analysis pipeline occurred.",
+    "An exact accession query is complete only for that query, not for a protein family, allele catalogue or resistance phenotype.",
+    "Entry-level organisms, reference strains, natural carrier metadata and assay subjects are not interchangeable.",
+    "The APH name relation is verified; the structural paper and exact compound/subject assays remain pending.",
+    "Q6SJ71 retains all archive cross-references including multiple proteins on one archive accession; no representative was selected.",
+    "UniProt reference comments may be contributed by later deposits; they are not automatically facts about the original paper's tested material.",
+    "An erratum listing alone establishes neither a retraction nor the nature or significance of the correction.",
+    "No sequences, variant specifications, constructs, primers, protocols, coordinates or numerical AST are exported.",
+    "All source assertions, record histories, generated pages, embeddings, taxonomy coverage counts and prior checkpoints are preserved.",
+    "This dossier is not yet indexed in the combined stage-progress ledger; it does not close any whole-record primary review."
+  ],
+  "nomenclature_review": {
+    "assay_curation": "HELD_FOR_EXACT_COMPOUND_AND_EXPERIMENTAL_SUBJECT_REVIEW",
+    "decision": "EXPLICIT_REFERENCE_NOMENCLATURE_RELATION_VERIFIED",
+    "doi": "10.1074/jbc.M808148200",
+    "figures_visually_inspected": false,
+    "interpretation": "The authors explicitly rename Id to IVa; the differing UniProt and ARO labels alone do not indicate different proteins.",
+    "location": "Discussion, final nomenclature paragraph referring to Table 5",
+    "native_primary_file_cached": false,
+    "primary_url": "https://www.sciencedirect.com/science/article/pii/S0021925820325497",
+    "reference": "PMID:19158087",
+    "review_medium": "PUBLISHER_INDEXED_PRIMARY_DISCUSSION_TEXT",
+    "revised_name": "APH(2'')-IVa",
+    "scope": "NAME_RELATION_ONLY_NOT_SEQUENCE_EQUIVALENCE_OR_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+    "source_name": "APH(2'')-Id",
+    "supplements_inspected": false,
+    "table_5_visually_inspected": false,
+    "title": "Source of phosphate in the enzymic reaction as a point of distinction among aminoglycoside 2''-phosphotransferases.",
+    "whole_paper_review_complete": false
+  },
+  "preservation": {
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "ignored_files_included": true,
+    "protected_baseline_files": 6733,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-09-structure-primary/protected-before.json",
+      "sha256": "854f3ec1646723ae4bffb816d8c7ce1273d4e98d0c83f51da9500a3a7cd0811d"
+    },
+    "record_hashes_verified": 2939
+  },
+  "primary_papers": {
+    "16531241": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "commentCorrectionList": null,
+      "doi": "10.1016/j.str.2005.11.015",
+      "figures_visually_inspected": false,
+      "id": "16531241",
+      "isOpenAccess": "N",
+      "note": "Metadata and abstracts do not establish the exact compound/subject resistance claim.",
+      "pmcid": "PMC1997295",
+      "relevant_primary_results_review": "PENDING",
+      "supplements_inspected": false,
+      "title": "Conformational flexibility in the multidrug efflux system protein AcrA."
+    },
+    "16675700": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "commentCorrectionList": {
+        "commentCorrection": [
+          {
+            "orderIn": 1,
+            "reference": "Science. 2007 Sep 21;317(5845):1682",
+            "source": "MED",
+            "type": "Erratum in"
+          }
+        ]
+      },
+      "doi": "10.1126/science.1125629",
+      "figures_visually_inspected": false,
+      "id": "16675700",
+      "isOpenAccess": "N",
+      "note": "Metadata and abstracts do not establish the exact compound/subject resistance claim.",
+      "pmcid": "PMC3152482",
+      "relevant_primary_results_review": "PENDING",
+      "supplements_inspected": false,
+      "title": "Structure of the multidrug transporter EmrD from Escherichia coli."
+    },
+    "17563376": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "commentCorrectionList": null,
+      "doi": "10.1073/pnas.0701809104",
+      "figures_visually_inspected": false,
+      "id": "17563376",
+      "isOpenAccess": "N",
+      "note": "Metadata and abstracts do not establish the exact compound/subject resistance claim.",
+      "pmcid": "PMC1965523",
+      "relevant_primary_results_review": "PENDING",
+      "supplements_inspected": false,
+      "title": "Structural basis for streptogramin B resistance in Staphylococcus aureus by virginiamycin B lyase."
+    },
+    "18710261": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "commentCorrectionList": null,
+      "doi": "10.1021/bi800664x",
+      "figures_visually_inspected": false,
+      "id": "18710261",
+      "isOpenAccess": "N",
+      "note": "Metadata and abstracts do not establish the exact compound/subject resistance claim.",
+      "pmcid": "PMC2855648",
+      "relevant_primary_results_review": "PENDING",
+      "supplements_inspected": false,
+      "title": "Mechanistic and structural analysis of aminoglycoside N-acetyltransferase AAC(6')-Ib and its bifunctional, fluoroquinolone-active AAC(6')-Ib-cr variant."
+    },
+    "20556826": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "commentCorrectionList": null,
+      "doi": "10.1002/pro.437",
+      "figures_visually_inspected": false,
+      "id": "20556826",
+      "isOpenAccess": "N",
+      "note": "Metadata and abstracts do not establish the exact compound/subject resistance claim.",
+      "pmcid": "PMC2923509",
+      "relevant_primary_results_review": "PENDING",
+      "supplements_inspected": false,
+      "title": "Crystal structure and kinetic mechanism of aminoglycoside phosphotransferase-2''-IVa."
+    }
+  },
+  "proteins": {
+    "O68183": {
+      "accession": "UniProtKB:O68183",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AF016483",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAC14693.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 113,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "focal_citation_present": true,
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AAC14693.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "aph(2'')-Id"
+          }
+        }
+      ],
+      "organism": {
+        "commonName": "Enterococcus flavescens",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AAC14693.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Bacillota",
+          "Bacilli",
+          "Lactobacillales",
+          "Enterococcaceae",
+          "Enterococcus"
+        ],
+        "scientificName": "Enterococcus casseliflavus",
+        "taxonId": 37734
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM",
+      "selected_citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AAC14693.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "NC95"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9593155"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        },
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "20556826"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1002/pro.437"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        }
+      ]
+    },
+    "P0AE06": {
+      "accession": "UniProtKB:P0AE06",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "U00734",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA67134.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "M94248",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA23410.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "U82664",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB40217.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "U00096",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAC73565.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "AP009048",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "BAE76242.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 154,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_present": true,
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "value": "acrA"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "b0463"
+            },
+            {
+              "value": "JW0452"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "lir"
+            },
+            {
+              "value": "mtcA"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Bacteria",
+          "Pseudomonadati",
+          "Pseudomonadota",
+          "Gammaproteobacteria",
+          "Enterobacterales",
+          "Enterobacteriaceae",
+          "Escherichia"
+        ],
+        "scientificName": "Escherichia coli (strain K12)",
+        "taxonId": 83333
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM",
+      "selected_citation_contexts": [
+        {
+          "context": [
+            {
+              "type": "STRAIN",
+              "value": "K12 / JM101 / ATCC 33876 / DSM 3948 / NCIMB 11926"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "16531241"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.str.2005.11.015"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        }
+      ]
+    },
+    "P17978": {
+      "accession": "UniProtKB:P17978",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "M36022",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA98259.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "M20129",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA98349.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "AF117258",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAF24088.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 97,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_present": true,
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "value": "vgb"
+          },
+          "synonyms": [
+            {
+              "value": "vgh"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Bacillota",
+          "Bacilli",
+          "Caryophanales",
+          "Staphylococcaceae",
+          "Staphylococcus"
+        ],
+        "scientificName": "Staphylococcus aureus",
+        "taxonId": 1280
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM",
+      "selected_citation_contexts": [
+        {
+          "context": [
+            {
+              "type": "PLASMID",
+              "value": "pIP630"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "3149758"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/0147-619x(88)90034-0"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        },
+        {
+          "context": [
+            {
+              "type": "STRAIN",
+              "value": "BM3093"
+            },
+            {
+              "type": "PLASMID",
+              "value": "pIP630"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "10489330"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1006/plas.1999.1412"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        },
+        {
+          "context": [
+            {
+              "type": "STRAIN",
+              "value": "BM3002"
+            },
+            {
+              "type": "PLASMID",
+              "value": "pIP524"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11467949"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/bi0106787"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        },
+        {
+          "context": [
+            {
+              "type": "STRAIN",
+              "value": "BM3002"
+            },
+            {
+              "type": "PLASMID",
+              "value": "pIP524"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "17563376"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0701809104"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        }
+      ]
+    },
+    "P31442": {
+      "accession": "UniProtKB:P31442",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "L10328",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA62025.1"
+            },
+            {
+              "key": "Status",
+              "value": "ALT_INIT"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "U00096",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAC76696.2"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "AP009048",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "BAE77620.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 174,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_present": false,
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "value": "emrD"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "b3673"
+            },
+            {
+              "value": "JW5634"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "yicQ"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Bacteria",
+          "Pseudomonadati",
+          "Pseudomonadota",
+          "Gammaproteobacteria",
+          "Enterobacterales",
+          "Enterobacteriaceae",
+          "Escherichia"
+        ],
+        "scientificName": "Escherichia coli (strain K12)",
+        "taxonId": 83333
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM",
+      "selected_citation_contexts": []
+    },
+    "Q6SJ71": {
+      "accession": "UniProtKB:Q6SJ71",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AY458016",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAR25030.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "DQ303918",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ABC17627.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "FJ594767",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ACM24788.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "JF806489",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AEP16466.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "EU418922",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AER36609.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "JF729197",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AEU10750.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "JF729198",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AEU10754.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "JQ364967",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AFI72862.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "JX469383",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AGO88784.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "JX515587",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AGO88873.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "KC960485",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AGW00946.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CP009231",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AKD26503.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CP009232",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AKD26676.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "KP789020",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AKJ21505.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "KR822247",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ALF35431.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "KY887590",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ASF79901.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LO017736",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CRH08425.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LO017737",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CRH08571.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LO017738",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CRH08795.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LN850163",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CRK62769.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LT985213",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "SPD90666.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LT985221",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "SPD95471.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LT985271",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "SPE00920.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LT985276",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "SPE01475.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LR595879",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "VUD38711.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "LR595879",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "VUD38792.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "CACRYR010000412",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "VZR52958.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 156,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "focal_citation_present": true,
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AAR25030.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "AAC(6')-Ib"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ALF35431.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "AZ95_0017"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AGO88784.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "B634_00009"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "VZR52958.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "IDONEFKE_05364"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AKJ21505.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "pCTXM15_EC8_00014"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AGO88873.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "pEcNDM0_00009"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AGW00946.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "pHKU1_04"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "SPD90666.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "RCS102_P0137"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CRH08571.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "RCS105_pI0073"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "SPD95471.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "RCS22_P0007"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CRH08425.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "RCS52_p0080"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CRH08795.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "RCS57_p0092"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "SPE00920.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "RCS59_P0123"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "SPE01475.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "RCS67_P0023"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "VUD38711.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "SAMEA4370365_00001"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "VUD38792.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "SAMEA4370365_00042"
+            }
+          ],
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ACM24788.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aac(6')-Ib-cr"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ABC17627.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aac(6`)-Ib-cr"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CRH08425.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aacA"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CRK62769.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aacA-aphD"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "VUD38711.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aacA-aphD_1"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "VUD38792.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aacA-aphD_2"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AFI72862.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aacA4"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "SPD90666.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aacA4-cr"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "VZR52958.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "aacA4_2"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AAR25030.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Pseudomonadati",
+          "Pseudomonadota",
+          "Gammaproteobacteria",
+          "Enterobacterales",
+          "Enterobacteriaceae",
+          "Escherichia"
+        ],
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE_OR_TESTED_ORGANISM",
+      "selected_citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "VUD38711.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "1"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "SPE00920.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "RCS59_p"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "SPE01475.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "PLASMID",
+              "value": "RCS67_p"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "18710261"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1021/bi800664x"
+            }
+          ],
+          "scope": "UNIPROT_CITATION_METADATA_NOT_VERIFIED_EXPERIMENTAL_SUBJECT"
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "aro_ids": [
+        "ARO:3002547",
+        "ARO:3002637"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3002547",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "WILD_TYPE_REFERENCE_NOT_CR1_ALLELE_ASSIGNMENT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:Q6SJ71"
+        },
+        {
+          "aro_id": "ARO:3002637",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "NOMENCLATURE_RESOLVED_REFERENCE_ONLY",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:O68183"
+        }
+      ],
+      "identifier": "CHEBI:2637",
+      "label": "amikacin",
+      "path": "data/antibiotics/antibacterial/amikacin.yaml",
+      "sha256": "8391a6c8efb2240012e1800d45ca715f729218336c3f5c976c5e8747ee3be930",
+      "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3000309"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3000309",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "HOLD_PRIMARY_RESULTS_AND_ERRATUM_REVIEW",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P31442"
+        }
+      ],
+      "identifier": "CHEBI:17698",
+      "label": "chloramphenicol",
+      "path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+      "sha256": "b8acca553963ce724506af3e6001e8aacc882f0a8c4af63fe29638c154ff7162",
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002547"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3002547",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "WILD_TYPE_REFERENCE_NOT_CR1_ALLELE_ASSIGNMENT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:Q6SJ71"
+        }
+      ],
+      "identifier": "CHEBI:100241",
+      "label": "ciprofloxacin",
+      "path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002637"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3002637",
+          "compound_scope": "GENERIC_GENTAMICIN_NOT_EXACT_GENTAMYCIN_A",
+          "decision": "NOMENCLATURE_RESOLVED_REFERENCE_ONLY",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:O68183"
+        }
+      ],
+      "identifier": "CHEBI:28418",
+      "label": "gentamycin A",
+      "path": "data/antibiotics/antibacterial/gentamycin-a.yaml",
+      "sha256": "30ac6f1f487c2b3a9a3d038d50c6bc86d8cd091ccb903b2b49c0fddae9771441",
+      "standard_inchi_key": "LKKVGKXCMYHKSL-LLZRLKDCSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002547",
+        "ARO:3002637"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3002547",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "WILD_TYPE_REFERENCE_NOT_CR1_ALLELE_ASSIGNMENT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:Q6SJ71"
+        },
+        {
+          "aro_id": "ARO:3002637",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "NOMENCLATURE_RESOLVED_REFERENCE_ONLY",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:O68183"
+        }
+      ],
+      "identifier": "CHEBI:17630",
+      "label": "kanamycin A",
+      "path": "data/antibiotics/antibacterial/kanamycin-a.yaml",
+      "sha256": "ae1f4597070b1e1878d7e4454a53bcbcf0e5187bfa8b39940e73cd76f1bbcc38",
+      "standard_inchi_key": "SBUJHOSQTJFQJX-NOAMYHISSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "CLASS_OR_RELATED_CONGENER_NOT_EXACT_COMPOUND_EVIDENCE",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "antibioticmech:aro-f4906250fc",
+      "label": "ostreogrycin B3",
+      "path": "data/antibiotics/antibacterial/ostreogrycin-b3.yaml",
+      "sha256": "7a5b88673741d8c01a885013c188d17f154fd1f98cd6c1a979d3d6deb0a8f575",
+      "standard_inchi_key": "YGXCETJZBDTKRY-FULBRLTBSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "EXISTING_STRUCTURE_COLLISION_TODO_REMAINS_OPEN",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "antibioticmech:aro-2ea67cad76",
+      "label": "patricin A",
+      "path": "data/antibiotics/antibacterial/patricin-a.yaml",
+      "sha256": "fb765cce6bb171e6be11769b37d270d7046864f095a34499fecc7654a987b177",
+      "standard_inchi_key": "HASLPZZCXDUQET-OTXZUHDPSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "EXISTING_STRUCTURE_COLLISION_TODO_REMAINS_OPEN",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "antibioticmech:aro-0aefa62f74",
+      "label": "patricin B",
+      "path": "data/antibiotics/antibacterial/patricin-b.yaml",
+      "sha256": "24fe977fbb934235e1bba3cf6a7c794b6db738d23ebcfbc148ba60f12a31f3c1",
+      "standard_inchi_key": "HASLPZZCXDUQET-OTXZUHDPSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "CLASS_OR_RELATED_CONGENER_NOT_EXACT_COMPOUND_EVIDENCE",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "CHEBI:8417",
+      "label": "pristinamycin IA",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ia.yaml",
+      "sha256": "48ce58e40c27acd5d72dc044ad9d8ec4ebe4815f68e9a2796d725693b9ca66ad",
+      "standard_inchi_key": "YGXCETJZBDTKRY-DZCVGBHJSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "CLASS_OR_RELATED_CONGENER_NOT_EXACT_COMPOUND_EVIDENCE",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "CHEBI:8418",
+      "label": "pristinamycin IB",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ib.yaml",
+      "sha256": "2658e30a7c30bda500edae25353957a15a096084773ff589e5316ca8e833d925",
+      "standard_inchi_key": "PCOXSOQWQVRJCH-UHFFFAOYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "CLASS_OR_RELATED_CONGENER_NOT_EXACT_COMPOUND_EVIDENCE",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "antibioticmech:aro-a324312fa2",
+      "label": "pristinamycin IC",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ic.yaml",
+      "sha256": "a751ebbe87e52622bfe10cb1f322309e1c5bfd1a3685a343c406dc29792541b4",
+      "standard_inchi_key": "BYRKDHSWMQLYJB-UHFFFAOYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "NAMED_COMPOUND_IN_PRIMARY_ABSTRACT_RESULTS_PENDING",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "CHEBI:8732",
+      "label": "quinupristin",
+      "path": "data/antibiotics/antibacterial/quinupristin.yaml",
+      "sha256": "967ba62d716c63cbfbaae4ef73bcb94c3932d6b96177ade545bed3d47e0f83b6",
+      "standard_inchi_key": "WTHRRGMBUAHGNI-MJWHERSYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3004042"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3004042",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "REJECTED_FOCAL_MAPPING_DIFFERENT_SPECIES",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P0AE06"
+        }
+      ],
+      "identifier": "CHEBI:149836",
+      "label": "tigecycline",
+      "path": "data/antibiotics/antibacterial/tigecycline.yaml",
+      "sha256": "ae6e16a2a47b26efd26dd8a6f0b215fcda1a04e79a09414c333fbd0e40b21c31",
+      "standard_inchi_key": "FPZLLRFZJZRHSY-HJYUBDRYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002547",
+        "ARO:3002637"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3002547",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "WILD_TYPE_REFERENCE_NOT_CR1_ALLELE_ASSIGNMENT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:Q6SJ71"
+        },
+        {
+          "aro_id": "ARO:3002637",
+          "compound_scope": "EXACT_COMPOUND_PRIMARY_ASSAY_REVIEW_PENDING",
+          "decision": "NOMENCLATURE_RESOLVED_REFERENCE_ONLY",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:O68183"
+        }
+      ],
+      "identifier": "CHEBI:28864",
+      "label": "tobramycin",
+      "path": "data/antibiotics/antibacterial/tobramycin.yaml",
+      "sha256": "c5345d9b0ca08f480c6fe8df7c58431f300ef6782e464ee4f266e399f8ce178a",
+      "standard_inchi_key": "NLVFBUXFDBBNBW-PBSUHMDJSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "CLASS_OR_RELATED_CONGENER_NOT_EXACT_COMPOUND_EVIDENCE",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "antibioticmech:aro-6536d0e3bb",
+      "label": "vernamycin C",
+      "path": "data/antibiotics/antibacterial/vernamycin-c.yaml",
+      "sha256": "87f33ad5b707a4aa96ab151bb77cef1d3d8dfc004fe71a782fefb2b542b0c4a3",
+      "standard_inchi_key": "PCRZFPGJPKPMQB-LNQSXZRDSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "assertion_reviews": [
+        {
+          "aro_id": "ARO:3001307",
+          "compound_scope": "CLASS_OR_RELATED_CONGENER_NOT_EXACT_COMPOUND_EVIDENCE",
+          "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+          "exact_experimental_assignment": false,
+          "record_action": "PRESERVE_SOURCE_ASSERTION_NO_NEW_BIOLOGICAL_CLAIM",
+          "uniprot_reference": "UniProtKB:P17978"
+        }
+      ],
+      "identifier": "antibioticmech:aro-2a1d8b8631",
+      "label": "virginiamycin S2",
+      "path": "data/antibiotics/antibacterial/virginiamycin-s2.yaml",
+      "sha256": "6104bdf05c531995cf11c2cf82a160674760160ca1fee0cb706692ea243f5f86",
+      "standard_inchi_key": "LRSRCZBNIGNEHL-NTXCPLLSSA-N",
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "reference_path_decisions": {
+    "ARO:3000309": {
+      "accession": "P31442",
+      "decision": "HOLD_PRIMARY_RESULTS_AND_ERRATUM_REVIEW",
+      "experimental_assignment": false,
+      "note": "EmrD reference metadata identifies E. coli K12, not a tested chloramphenicol-resistant isolate. Europe PMC lists an erratum whose content remains unreviewed.",
+      "parent_decision": "REFERENCE_CONTEXT_ONLY",
+      "primary_citation": {
+        "pdbx_database_id_DOI": "10.1126/science.1125629",
+        "pdbx_database_id_PubMed": 16675700,
+        "year": 2006
+      },
+      "source_label": "emrD",
+      "source_xrefs": [
+        "PDB:2GFP"
+      ],
+      "structural_entities": [
+        {
+          "entity_id": "2GFP_1",
+          "other_reference_identifiers": [],
+          "reference_accessions": [
+            "UniProtKB:P31442"
+          ],
+          "source_organisms": [
+            {
+              "ncbi_taxonomy_id": 562,
+              "scientific_name": "Escherichia coli"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "Primary Results and supplements",
+        "Erratum content and relevance",
+        "Exact experimental allele and tested subject"
+      ]
+    },
+    "ARO:3001307": {
+      "accession": "P17978",
+      "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+      "experimental_assignment": false,
+      "note": "The linked inactive structural entity is not evidence of an active resistance phenotype. UniProt citation context is reference metadata; the second polymer entity cannot provide the enzyme taxon.",
+      "parent_decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+      "primary_citation": {
+        "pdbx_database_id_DOI": "10.1073/PNAS.0701809104",
+        "pdbx_database_id_PubMed": 17563376,
+        "year": 2007
+      },
+      "source_label": "vgbA",
+      "source_xrefs": [
+        "PDB:2Z2P"
+      ],
+      "structural_entities": [
+        {
+          "entity_id": "2Z2P_1",
+          "other_reference_identifiers": [],
+          "reference_accessions": [
+            "UniProtKB:P17978"
+          ],
+          "source_organisms": [
+            {
+              "ncbi_taxonomy_id": 1280,
+              "scientific_name": "Staphylococcus aureus"
+            }
+          ]
+        },
+        {
+          "entity_id": "2Z2P_2",
+          "other_reference_identifiers": [],
+          "reference_accessions": [],
+          "source_organisms": [
+            {
+              "ncbi_taxonomy_id": 68212,
+              "scientific_name": "STREPTOMYCES GRAMINOFACIEN"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "Wild-type biochemical evidence separately from inactive structural entity",
+        "Exact compound for each source assertion",
+        "Exact experimental allele and tested subject"
+      ]
+    },
+    "ARO:3002547": {
+      "accession": "Q6SJ71",
+      "decision": "WILD_TYPE_REFERENCE_NOT_CR1_ALLELE_ASSIGNMENT",
+      "experimental_assignment": false,
+      "note": "The reference entry aggregates names and archive deposits; the linked wild-type structure does not identify the focal cr1 allele. Later-deposit citation comments do not identify the original study subjects.",
+      "parent_decision": "EXACT_ALLELE_NOT_RESOLVED_BY_STRUCTURE",
+      "primary_citation": {
+        "pdbx_database_id_DOI": "10.1021/BI800664X",
+        "pdbx_database_id_PubMed": 18710261,
+        "year": 2008
+      },
+      "source_label": "AAC(6')-Ib-cr1",
+      "source_xrefs": [
+        "PDB:1V0C"
+      ],
+      "structural_entities": [
+        {
+          "entity_id": "1V0C_1",
+          "other_reference_identifiers": [],
+          "reference_accessions": [
+            "UniProtKB:Q6SJ71"
+          ],
+          "source_organisms": [
+            {
+              "ncbi_taxonomy_id": 562,
+              "scientific_name": "ESCHERICHIA COLI"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "Primary Results and compound scope",
+        "Experimental identity separate from aggregated citation metadata",
+        "Exact cr1 allele grounding"
+      ]
+    },
+    "ARO:3002637": {
+      "accession": "O68183",
+      "decision": "NOMENCLATURE_RESOLVED_REFERENCE_ONLY",
+      "experimental_assignment": false,
+      "note": "Primary Discussion explicitly relates historical Id to revised IVa. O68183/AF016483/AAC14693.1 and citation strain NC95 remain reference context, not exact experimental or phenotype assignments.",
+      "parent_decision": "NOMENCLATURE_REVIEW_REQUIRED",
+      "primary_citation": {
+        "pdbx_database_id_DOI": "10.1002/pro.437",
+        "pdbx_database_id_PubMed": 20556826,
+        "year": 2010
+      },
+      "source_label": "APH(2'')-IVa",
+      "source_xrefs": [
+        "PDB:3N4T"
+      ],
+      "structural_entities": [
+        {
+          "entity_id": "3N4T_1",
+          "other_reference_identifiers": [],
+          "reference_accessions": [
+            "UniProtKB:O68183"
+          ],
+          "source_organisms": [
+            {
+              "ncbi_taxonomy_id": 37734,
+              "scientific_name": "Enterococcus casseliflavus"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "Primary structural paper Results and supplements",
+        "Compound-specific assays and tested backgrounds",
+        "Exact experimental allele grounding"
+      ]
+    },
+    "ARO:3004042": {
+      "accession": "P0AE06",
+      "decision": "REJECTED_FOCAL_MAPPING_DIFFERENT_SPECIES",
+      "experimental_assignment": false,
+      "note": "The structural/UniProt reference is E. coli AcrA, while the focal CARD term names Enterobacter cloacae. A shared symbol and PDB link do not justify that cross-species assignment.",
+      "parent_decision": "REJECT_FOCAL_ORGANISM_ASSIGNMENT",
+      "primary_citation": {
+        "pdbx_database_id_DOI": "10.1016/j.str.2005.11.015",
+        "pdbx_database_id_PubMed": 16531241,
+        "year": 2006
+      },
+      "source_label": "Enterobacter cloacae acrA",
+      "source_xrefs": [
+        "PDB:2F1M"
+      ],
+      "structural_entities": [
+        {
+          "entity_id": "2F1M_1",
+          "other_reference_identifiers": [],
+          "reference_accessions": [
+            "UniProtKB:P0AE06"
+          ],
+          "source_organisms": [
+            {
+              "ncbi_taxonomy_id": 562,
+              "scientific_name": "Escherichia coli"
+            }
+          ]
+        }
+      ],
+      "unresolved": [
+        "Correct E. cloacae accession supported by an explicit source link",
+        "Primary resistance evidence for exact tigecycline record"
+      ]
+    }
+  },
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "record_memberships": 16,
+    "reference_paths": 5,
+    "source_assertions_reviewed_for_identity": 19,
+    "whole_records_completed_by_this_review": 0
+  },
+  "taxonomy": {
+    "1280": {
+      "active": true,
+      "parent": {
+        "scientificName": "Staphylococcus",
+        "taxonId": 1279
+      },
+      "rank": "species",
+      "scientificName": "Staphylococcus aureus",
+      "taxonId": 1280
+    },
+    "37734": {
+      "active": true,
+      "parent": {
+        "scientificName": "Enterococcus",
+        "taxonId": 1350
+      },
+      "rank": "species",
+      "scientificName": "Enterococcus casseliflavus",
+      "taxonId": 37734
+    },
+    "562": {
+      "active": true,
+      "parent": {
+        "scientificName": "Escherichia",
+        "taxonId": 561
+      },
+      "rank": "species",
+      "scientificName": "Escherichia coli",
+      "taxonId": 562
+    },
+    "68212": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces halstedii subgroup",
+        "taxonId": 1482599
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces graminofaciens",
+      "taxonId": 68212
+    },
+    "83333": {
+      "active": true,
+      "parent": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "rank": "strain",
+      "scientificName": "Escherichia coli (strain K12)",
+      "taxonId": 83333
+    }
+  },
+  "taxonomy_scope": "REUSED_PINNED_UNIPROT_TAXONOMY_METADATA_NOT_NEW_NCBI_REQUEST_OR_TESTED_ISOLATE_ASSIGNMENT",
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-structure-primary/request-04f28e12e2f95ca870bed0390d4f00e961f846f93ef4a4c1cbfaa048f449975a.json",
+        "sha256": "77d89aa31fab5bda595490b8630bf3efaf07c47d5666af4a45e4f473043ad2ed"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "(accession:P31442 OR accession:Q6SJ71 OR accession:O68183 OR accession:P0AE06)",
+      "release": "2026_03",
+      "result_count": 4,
+      "retrieved_at": "2026-10-09T15:13:07.685240+00:00",
+      "sha256": "a9b0f528a830368bb7c33317ebdcc64066fa49336f74a3bcc6616c8efd49a2f9",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28accession%3AP31442+OR+accession%3AQ6SJ71+OR+accession%3AO68183+OR+accession%3AP0AE06%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-structure-primary/request-400b829c701bb0a6c15b75a8c8ac23b91a8dd3e0f1a5936dfefe46100407c787.json",
+        "sha256": "ed8742c3ec556299b29ba46b99b23e2e2b0532e10f1a4b1b31a85f52ff11af78"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "accession:P17978",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T15:12:41.852301+00:00",
+      "sha256": "1d99310fe114e3f0391592a6c899e7f6a2aeecdb40f821ca2046aef1e4b5d48d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP17978&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_pdb%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ]
+}

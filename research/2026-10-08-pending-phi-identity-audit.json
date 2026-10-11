@@ -1,0 +1,1214 @@
+{
+  "attribution": "PHI-base pinned AMR export and UniProt Consortium release 2026_03; UniProt metadata CC BY 4.0. Citation metadata from EMBL-EBI Europe PMC.",
+  "citations": {
+    "PMID:1423663": {
+      "doi": "10.1002/cm.970220304",
+      "request": {
+        "cache_file_sha256": "3cc3199a13f64ab8b27800a5b00beda4c013a99c74ea340c066a69103d1e0276",
+        "cache_path": "reports/resistance-grounding-2026-10-07/fungal-reference-1423663-citation.json",
+        "release": null,
+        "retrieved_at": "2026-10-08T12:32:44.484254+00:00",
+        "sha256": "c7a516340fddb63a90cb098045273e8fae1b8211129baf7c453929576b969265",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A1423663+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      }
+    },
+    "PMID:34490974": {
+      "doi": "10.1111/1462-2920.15760",
+      "request": {
+        "cache_file_sha256": "dae2b03bc8be88b664903cdd2c5187c8ad7459e752d0782747b3d547f1650cee",
+        "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-34490974-citation.json",
+        "release": null,
+        "retrieved_at": "2026-10-08T13:15:10.987168+00:00",
+        "sha256": "fb5e7525893a8eeea5d29fc2e5540063df90b69eacaa0f138ff8a75a9e88ab02",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A34490974+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+      }
+    }
+  },
+  "corpus_sha256": "352a410277d13b6333b58703601b9ca7c2003ca1db008c495345ff56325b9ea7",
+  "focused_reviews": [
+    {
+      "associations": 6,
+      "decision": "KEEP_PENDING_NO_BIOLOGICAL_EDIT",
+      "finding": "The paper title mentions benomyl, but all six pinned source associations map to thiabendazole. P10653 identifies reference benA/AN1182 in FGSC A4; its EMBL cross-reference includes source identifier CBF87981.1. This is reference-locus metadata, not a G191 experimental-allele crosswalk.",
+      "identifier": "CHEBI:45979",
+      "primary_access": "ABSTRACT_ONLY_FULL_SUBJECT_CROSSWALK_UNAVAILABLE",
+      "primary_url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/cm.970220304",
+      "record_label": "thiabendazole",
+      "reference": "PMID:1423663",
+      "search_scope": "Title/DOI and author/institutional searches including Ohio State and Kansas did not yield accessible primary Results in this pass; not proof that no manuscript exists."
+    },
+    {
+      "access_observation": "HAL returned an access-denied HTML page, not a PDF. The publisher full-text link redirected to its abstract. Bibliographic existence of an open manuscript is not successful retrieval.",
+      "associations": 2,
+      "decision": "KEEP_PENDING_NO_BIOLOGICAL_EDIT",
+      "finding": "Q6X9S4 is reference cob/cytB with a sequence-submission strain comment ST1/MBC. The source labels IPO323 and 37-16 are not established as accession-specific experimental subjects by those metadata.",
+      "identifier": "CHEBI:136340",
+      "manuscript_url": "https://hal.inrae.fr/hal-03357067v1/file/accepted.pdf",
+      "primary_access": "ABSTRACT_ONLY_MANUSCRIPT_ACCESS_BLOCKED",
+      "primary_url": "https://enviromicro-journals.onlinelibrary.wiley.com/doi/10.1111/1462-2920.15760",
+      "record_label": "fenpicoxamid",
+      "reference": "PMID:34490974"
+    }
+  ],
+  "limitations": [
+    "The pending queue retains source identifiers as unverified mappings, not experimentally validated resistance determinants.",
+    "Primary-access observations were made with the web tool; no locally cached full text or replayable primary review is asserted.",
+    "Database entry and sequence versions identify reference metadata, not experimental allele versions.",
+    "No new allele, sequence, construct, assay, numeric resistance measurement, genome or experimental TaxID was curated.",
+    "No NCBI endpoint requests, outreach, terms reassessment, source adoption or GitHub mutations.",
+    "Whole-corpus investigation remains incomplete; full QC remains blocked by the unchanged RDKit environment limitation."
+  ],
+  "paper_compound_groups": [
+    {
+      "associations": 6,
+      "identifier": "CHEBI:45979",
+      "record_label": "thiabendazole",
+      "reference": "PMID:1423663"
+    },
+    {
+      "associations": 5,
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "reference": "PMID:21077124"
+    },
+    {
+      "associations": 4,
+      "identifier": "CHEBI:10023",
+      "record_label": "voriconazole",
+      "reference": "PMID:22897872"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:40909",
+      "record_label": "azoxystrobin",
+      "reference": "PMID:12612806"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:3405",
+      "record_label": "carboxin",
+      "reference": "PMID:18992352"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "reference": "PMID:19900007"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "reference": "PMID:24903410"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "reference": "PMID:30732567"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:136340",
+      "record_label": "fenpicoxamid",
+      "reference": "PMID:34490974"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:28909",
+      "record_label": "iprodione",
+      "reference": "PMID:38374637"
+    },
+    {
+      "associations": 2,
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "reference": "PMID:38374637"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:46081",
+      "record_label": "fluconazole",
+      "reference": "PMID:12519188"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "reference": "PMID:1388107"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:3405",
+      "record_label": "carboxin",
+      "reference": "PMID:1423716"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:28909",
+      "record_label": "iprodione",
+      "reference": "PMID:17073308"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "reference": "PMID:17073308"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "reference": "PMID:21138346"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "reference": "PMID:22591226"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "reference": "PMID:22591226"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "reference": "PMID:28743081"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "reference": "PMID:38056173"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:46081",
+      "record_label": "fluconazole",
+      "reference": "PMID:39403939"
+    },
+    {
+      "associations": 1,
+      "identifier": "CHEBI:3405",
+      "record_label": "carboxin",
+      "reference": "PMID:9871122"
+    }
+  ],
+  "pending_associations": [
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:1388107",
+      "row_sha256": "7ace37c6427c588526fb1cc75a5b8d5ac8325c9a71230497df9e8cf18f319626",
+      "source_gene_id": "EAA28433",
+      "source_phig_id": "PHIG:2858",
+      "source_protein_accession": "P05220",
+      "source_strain_label": "74-OR31-14a",
+      "source_strain_taxon_id": "367110",
+      "source_taxon_id": "5141",
+      "source_taxon_label": "Neurospora crassa",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "record_label": "thiabendazole",
+      "record_path": "data/antibiotics/antifungal/thiabendazole.yaml",
+      "record_sha256": "fd0b03ccd7afa700ed14171197ac6f6156d4df756a4f2ab7833f92a34b7a1d21",
+      "reference": "PMID:1423663",
+      "row_sha256": "475c8124458e97a7d7b785ae9334e3e63fd40d1a659aa0df7f4336b1c76a74f0",
+      "source_gene_id": "CBF87981",
+      "source_phig_id": "PHIG:833",
+      "source_protein_accession": "P10653",
+      "source_strain_label": "G191",
+      "source_strain_taxon_id": "227321",
+      "source_taxon_id": "162425",
+      "source_taxon_label": "Aspergillus nidulans",
+      "standard_inchi_key": "WJCNZQLZVWNLKY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "record_label": "thiabendazole",
+      "record_path": "data/antibiotics/antifungal/thiabendazole.yaml",
+      "record_sha256": "fd0b03ccd7afa700ed14171197ac6f6156d4df756a4f2ab7833f92a34b7a1d21",
+      "reference": "PMID:1423663",
+      "row_sha256": "4f00e3a6ded3613d3a630c1dc3e137ddff88c7ab222263f237235f2459fd7422",
+      "source_gene_id": "CBF87981",
+      "source_phig_id": "PHIG:833",
+      "source_protein_accession": "P10653",
+      "source_strain_label": "G191",
+      "source_strain_taxon_id": "227321",
+      "source_taxon_id": "162425",
+      "source_taxon_label": "Aspergillus nidulans",
+      "standard_inchi_key": "WJCNZQLZVWNLKY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "record_label": "thiabendazole",
+      "record_path": "data/antibiotics/antifungal/thiabendazole.yaml",
+      "record_sha256": "fd0b03ccd7afa700ed14171197ac6f6156d4df756a4f2ab7833f92a34b7a1d21",
+      "reference": "PMID:1423663",
+      "row_sha256": "83698774ec3629d80020df2e499f131d60103c31207ee43da6f6211845772abd",
+      "source_gene_id": "CBF87981",
+      "source_phig_id": "PHIG:833",
+      "source_protein_accession": "P10653",
+      "source_strain_label": "G191",
+      "source_strain_taxon_id": "227321",
+      "source_taxon_id": "162425",
+      "source_taxon_label": "Aspergillus nidulans",
+      "standard_inchi_key": "WJCNZQLZVWNLKY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "record_label": "thiabendazole",
+      "record_path": "data/antibiotics/antifungal/thiabendazole.yaml",
+      "record_sha256": "fd0b03ccd7afa700ed14171197ac6f6156d4df756a4f2ab7833f92a34b7a1d21",
+      "reference": "PMID:1423663",
+      "row_sha256": "d16cbf8eaae75082d48c11ae7744cc0f17975a68bc6bf1505c6165146245d311",
+      "source_gene_id": "CBF87981",
+      "source_phig_id": "PHIG:833",
+      "source_protein_accession": "P10653",
+      "source_strain_label": "G191",
+      "source_strain_taxon_id": "227321",
+      "source_taxon_id": "162425",
+      "source_taxon_label": "Aspergillus nidulans",
+      "standard_inchi_key": "WJCNZQLZVWNLKY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "record_label": "thiabendazole",
+      "record_path": "data/antibiotics/antifungal/thiabendazole.yaml",
+      "record_sha256": "fd0b03ccd7afa700ed14171197ac6f6156d4df756a4f2ab7833f92a34b7a1d21",
+      "reference": "PMID:1423663",
+      "row_sha256": "f1c3931ece36caca5d600577facdf495b3984038e91984ce34b3c8b607308508",
+      "source_gene_id": "CBF87981",
+      "source_phig_id": "PHIG:833",
+      "source_protein_accession": "P10653",
+      "source_strain_label": "G191",
+      "source_strain_taxon_id": "227321",
+      "source_taxon_id": "162425",
+      "source_taxon_label": "Aspergillus nidulans",
+      "standard_inchi_key": "WJCNZQLZVWNLKY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:45979",
+      "record_label": "thiabendazole",
+      "record_path": "data/antibiotics/antifungal/thiabendazole.yaml",
+      "record_sha256": "fd0b03ccd7afa700ed14171197ac6f6156d4df756a4f2ab7833f92a34b7a1d21",
+      "reference": "PMID:1423663",
+      "row_sha256": "f8cbeca910e5f7b0a865df243969e808fa6ecfca100d7373661d1dcc228dde37",
+      "source_gene_id": "CBF87981",
+      "source_phig_id": "PHIG:833",
+      "source_protein_accession": "P10653",
+      "source_strain_label": "G191",
+      "source_strain_taxon_id": "227321",
+      "source_taxon_id": "162425",
+      "source_taxon_label": "Aspergillus nidulans",
+      "standard_inchi_key": "WJCNZQLZVWNLKY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "record_label": "carboxin",
+      "record_path": "data/antibiotics/antifungal/carboxin.yaml",
+      "record_sha256": "d85704427ab006db7dfaef4086e4daeffd18a438c41dec77394c5cec7c4f5498",
+      "reference": "PMID:1423716",
+      "row_sha256": "6cd5e5fd14b9960870ab78fdcab70513796b317391d58999fb8d3b61bdbbafdb",
+      "source_gene_id": "KIS70918",
+      "source_phig_id": "PHIG:9367",
+      "source_protein_accession": "P32420",
+      "source_strain_label": "IMI103761",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "5270",
+      "source_taxon_label": "Ustilago maydis",
+      "standard_inchi_key": "GYSSRZJIHXQEHQ-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "record_label": "carboxin",
+      "record_path": "data/antibiotics/antifungal/carboxin.yaml",
+      "record_sha256": "d85704427ab006db7dfaef4086e4daeffd18a438c41dec77394c5cec7c4f5498",
+      "reference": "PMID:9871122",
+      "row_sha256": "634af1b980eaa9b4d28dd5e75534fe26e9f557354fbf2eb370568641c6bdc37b",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:4137",
+      "source_protein_accession": "O42772",
+      "source_strain_label": "Unknown strain",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "1047171",
+      "source_taxon_label": "Zymoseptoria tritici",
+      "standard_inchi_key": "GYSSRZJIHXQEHQ-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:46081",
+      "record_label": "fluconazole",
+      "record_path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "record_sha256": "ac03c41458296b240c8fcfa8e31c891b01058ad618cecb2d960434f32fd6be78",
+      "reference": "PMID:12519188",
+      "row_sha256": "4fabfdb6e0e4b06bde7d76adfebeaab8694aa3e503a69eda76131560ece33e89",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:8831",
+      "source_protein_accession": "Q8X0Z3",
+      "source_strain_label": "BYP22",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "5207",
+      "source_taxon_label": "Cryptococcus neoformans",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:40909",
+      "record_label": "azoxystrobin",
+      "record_path": "data/antibiotics/antifungal/azoxystrobin.yaml",
+      "record_sha256": "eedcadb7008976039f3138e1f6e3787857034c05a612cfb983a75ca010b2fc13",
+      "reference": "PMID:12612806",
+      "row_sha256": "69ea8ca2bb4393baa2290f5402f322c11d5217ea18d3dac94cd8738ea5bd942b",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:9043",
+      "source_protein_accession": "A0A089QDC9",
+      "source_strain_label": "4091-5-8",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "318829",
+      "source_taxon_label": "Magnaporthe oryzae",
+      "standard_inchi_key": "WFDXOXNFNRHQEC-GHRIWEEISA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:40909",
+      "record_label": "azoxystrobin",
+      "record_path": "data/antibiotics/antifungal/azoxystrobin.yaml",
+      "record_sha256": "eedcadb7008976039f3138e1f6e3787857034c05a612cfb983a75ca010b2fc13",
+      "reference": "PMID:12612806",
+      "row_sha256": "6b0cda8a58e1e41d0759e4fe2bae76f77190b5ef2b722844f8b6ba1644beb0ef",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:9043",
+      "source_protein_accession": "A0A089QDC9",
+      "source_strain_label": "4091-5-8",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "318829",
+      "source_taxon_label": "Magnaporthe oryzae",
+      "standard_inchi_key": "WFDXOXNFNRHQEC-GHRIWEEISA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "record_label": "iprodione",
+      "record_path": "data/antibiotics/antifungal/iprodione.yaml",
+      "record_sha256": "ee511529f07c836ca1593632026f6bc01f734d5fdce5b7565fc3970ee4cc5d6e",
+      "reference": "PMID:17073308",
+      "row_sha256": "e9970c191a147615d701d638225912add989160001a184e5dd5c3b0c1295c822",
+      "source_gene_id": "Mycgr3T76502",
+      "source_phig_id": "PHIG:9481",
+      "source_protein_accession": "Q1KTF2",
+      "source_strain_label": "IPO323",
+      "source_strain_taxon_id": "336722",
+      "source_taxon_id": "1047171",
+      "source_taxon_label": "Zymoseptoria tritici",
+      "standard_inchi_key": "ONUFESLQCSAYKA-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "record_path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "record_sha256": "5a4e493e62ed67094fd0dcc89d4553a3df3bec8aff6ae8f211c0c59890328864",
+      "reference": "PMID:17073308",
+      "row_sha256": "9b6ad9dcd0279f1321fd5897f1969474f46a65b84e4d7e773ec7d1ffcb690948",
+      "source_gene_id": "Mycgr3T76502",
+      "source_phig_id": "PHIG:9481",
+      "source_protein_accession": "Q1KTF2",
+      "source_strain_label": "IPO323",
+      "source_strain_taxon_id": "336722",
+      "source_taxon_id": "1047171",
+      "source_taxon_label": "Zymoseptoria tritici",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "record_label": "carboxin",
+      "record_path": "data/antibiotics/antifungal/carboxin.yaml",
+      "record_sha256": "d85704427ab006db7dfaef4086e4daeffd18a438c41dec77394c5cec7c4f5498",
+      "reference": "PMID:18992352",
+      "row_sha256": "216a2748f12ee432ae9c8b2b1f8183d8c7ac14559999c1bd24a37729928e1ea1",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:8701",
+      "source_protein_accession": "Q2U3V9",
+      "source_strain_label": "RIB40",
+      "source_strain_taxon_id": "510516",
+      "source_taxon_id": "5062",
+      "source_taxon_label": "Aspergillus oryzae",
+      "standard_inchi_key": "GYSSRZJIHXQEHQ-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "record_label": "carboxin",
+      "record_path": "data/antibiotics/antifungal/carboxin.yaml",
+      "record_sha256": "d85704427ab006db7dfaef4086e4daeffd18a438c41dec77394c5cec7c4f5498",
+      "reference": "PMID:18992352",
+      "row_sha256": "6920ff524a58c4452527cc9a3f932c2fef7a30e477b813dbad9d0ef265ce26c0",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:8700",
+      "source_protein_accession": "Q2TWM0",
+      "source_strain_label": "RIB40",
+      "source_strain_taxon_id": "510516",
+      "source_taxon_id": "5062",
+      "source_taxon_label": "Aspergillus oryzae",
+      "standard_inchi_key": "GYSSRZJIHXQEHQ-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:19900007",
+      "row_sha256": "0c7e48c5c6ee8bf0fc585a5ed5708d11a1129121844607012e2f7f5d629c60c8",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_phig_id": "PHIG:612",
+      "source_protein_accession": "Q4HZS8",
+      "source_strain_label": "2021",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:19900007",
+      "row_sha256": "1d8916c059b96bc65131bdd692cb8027f57eb53c5e69a07abccd9d2bee577bd9",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_phig_id": "PHIG:612",
+      "source_protein_accession": "Q4HZS8",
+      "source_strain_label": "2021",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:21077124",
+      "row_sha256": "12898536c16060cc524e80db9486f43c008c87faf4db42a3e879acaa5425d144",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_phig_id": "PHIG:612",
+      "source_protein_accession": "Q4HZS8",
+      "source_strain_label": "2021",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:21077124",
+      "row_sha256": "4af21522c270dd57d695d4942aa8ad6e105b72e4130ad9c5789009351d4164f3",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_phig_id": "PHIG:612",
+      "source_protein_accession": "Q4HZS8",
+      "source_strain_label": "2021",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:21077124",
+      "row_sha256": "6541832d4da4b70eb4e318f01993e01707d60780560ef3bae1cbe32f79959ad4",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_phig_id": "PHIG:612",
+      "source_protein_accession": "Q4HZS8",
+      "source_strain_label": "2021",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:21077124",
+      "row_sha256": "809a90c390dc6e1ea9c84ab09475aa973967e58ef7ea75a345b45c5b9124cfe5",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_phig_id": "PHIG:612",
+      "source_protein_accession": "Q4HZS8",
+      "source_strain_label": "2021",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:21077124",
+      "row_sha256": "8c9b75dc37f89c9830f84d36b09d733aa287e6b7346ba8498a448e82599c48cc",
+      "source_gene_id": "FGRAMPH1_01T26865",
+      "source_phig_id": "PHIG:612",
+      "source_protein_accession": "Q4HZS8",
+      "source_strain_label": "2021",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "record_path": "data/antibiotics/biocide/hydrogen-peroxide.yaml",
+      "record_sha256": "df1f39b6ac6bfe5e078555752aaef5695fa586f7fb3256d8000dc181ac29bf5c",
+      "reference": "PMID:21138346",
+      "row_sha256": "a591c301ebb65b88b35145347e1d65c34234d6c9220d309bdb9bc2cbd1aef8a9",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:8901",
+      "source_protein_accession": "I1RCN2",
+      "source_strain_label": "PH-1",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "MHAJPDPJQMAIIY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "record_path": "data/antibiotics/biocide/hydrogen-peroxide.yaml",
+      "record_sha256": "df1f39b6ac6bfe5e078555752aaef5695fa586f7fb3256d8000dc181ac29bf5c",
+      "reference": "PMID:22591226",
+      "row_sha256": "eeee294d942ac7a63143980086deeaceb80622490d503cc6d9331afd39dc1020",
+      "source_gene_id": "FGRAMPH1_01T26671",
+      "source_phig_id": "PHIG:7590",
+      "source_protein_accession": "P0C431",
+      "source_strain_label": "PH-1",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "MHAJPDPJQMAIIY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "record_path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "record_sha256": "5a4e493e62ed67094fd0dcc89d4553a3df3bec8aff6ae8f211c0c59890328864",
+      "reference": "PMID:22591226",
+      "row_sha256": "db3586159399f0df98f90dced097ad2d1f7cf2d3766c99cd0246e3f3e9bae26c",
+      "source_gene_id": "FGRAMPH1_01T26671",
+      "source_phig_id": "PHIG:7590",
+      "source_protein_accession": "P0C431",
+      "source_strain_label": "PH-1",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "record_label": "voriconazole",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "917bc614345019bc1083f1c4bd7b54dce0c49dedff90349395f91fb538cdcbbf",
+      "reference": "PMID:22897872",
+      "row_sha256": "01690c1e90aecca6b33301ede8565b86185e7b59ee9022e9312f2bb1ee8909ad",
+      "source_gene_id": "Afu4g06890-T",
+      "source_phig_id": "PHIG:1837",
+      "source_protein_accession": "Q4WNT5",
+      "source_strain_label": "W73355",
+      "source_strain_taxon_id": "330879",
+      "source_taxon_id": "746128",
+      "source_taxon_label": "Aspergillus fumigatus",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "record_label": "voriconazole",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "917bc614345019bc1083f1c4bd7b54dce0c49dedff90349395f91fb538cdcbbf",
+      "reference": "PMID:22897872",
+      "row_sha256": "2a8f7937bee39b0a600e82cbd915ebf8cca429731ece623cac08c6ab6faa9bac",
+      "source_gene_id": "Afu4g06890-T",
+      "source_phig_id": "PHIG:1837",
+      "source_protein_accession": "Q4WNT5",
+      "source_strain_label": "F55064",
+      "source_strain_taxon_id": "330879",
+      "source_taxon_id": "746128",
+      "source_taxon_label": "Aspergillus fumigatus",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "record_label": "voriconazole",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "917bc614345019bc1083f1c4bd7b54dce0c49dedff90349395f91fb538cdcbbf",
+      "reference": "PMID:22897872",
+      "row_sha256": "458ef05507951358d184841bd01e91e98f6fb5abf943cbffc856f645190c5939",
+      "source_gene_id": "Afu4g06890-T",
+      "source_phig_id": "PHIG:1837",
+      "source_protein_accession": "Q4WNT5",
+      "source_strain_label": "F55064",
+      "source_strain_taxon_id": "330879",
+      "source_taxon_id": "746128",
+      "source_taxon_label": "Aspergillus fumigatus",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:10023",
+      "record_label": "voriconazole",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "917bc614345019bc1083f1c4bd7b54dce0c49dedff90349395f91fb538cdcbbf",
+      "reference": "PMID:22897872",
+      "row_sha256": "7f5ac6464af1e2de3025434685d35a4ffb72b2da7669c636d8a75eef84386fbc",
+      "source_gene_id": "Afu4g06890-T",
+      "source_phig_id": "PHIG:1837",
+      "source_protein_accession": "Q4WNT5",
+      "source_strain_label": "H27023",
+      "source_strain_taxon_id": "330879",
+      "source_taxon_id": "746128",
+      "source_taxon_label": "Aspergillus fumigatus",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "record_path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "record_sha256": "5a4e493e62ed67094fd0dcc89d4553a3df3bec8aff6ae8f211c0c59890328864",
+      "reference": "PMID:24903410",
+      "row_sha256": "7aeeeb95c55881dacc634131c410392afbc5a2561d79ae81162b433a9245e262",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:11",
+      "source_protein_accession": "I1RAE5",
+      "source_strain_label": "PH-1",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "record_path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "record_sha256": "5a4e493e62ed67094fd0dcc89d4553a3df3bec8aff6ae8f211c0c59890328864",
+      "reference": "PMID:24903410",
+      "row_sha256": "a1a1bc2ef20255470d46f95ce69a59ff5538973733e29f516d2c39e60f841d71",
+      "source_gene_id": "FGRAMPH1_01T26671",
+      "source_phig_id": "PHIG:7590",
+      "source_protein_accession": "P0C431",
+      "source_strain_label": "PH-1",
+      "source_strain_taxon_id": "229533",
+      "source_taxon_id": "5518",
+      "source_taxon_label": "Fusarium graminearum",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "record_path": "data/antibiotics/biocide/hydrogen-peroxide.yaml",
+      "record_sha256": "df1f39b6ac6bfe5e078555752aaef5695fa586f7fb3256d8000dc181ac29bf5c",
+      "reference": "PMID:28743081",
+      "row_sha256": "40bcb3f89eb4c68dedb1590d149ae227e26cd024a1b7ba711308d7f41af33f38",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:11310",
+      "source_protein_accession": "P9WHZ3",
+      "source_strain_label": "H37Rv",
+      "source_strain_taxon_id": "83332",
+      "source_taxon_id": "1773",
+      "source_taxon_label": "Mycobacterium tuberculosis",
+      "standard_inchi_key": "MHAJPDPJQMAIIY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:30732567",
+      "row_sha256": "0b57476b39d6710277cfcc0f139609734c31a2e14d439eac1092c1acef62c321",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:9015",
+      "source_protein_accession": "W7M0I3",
+      "source_strain_label": "SJ51",
+      "source_strain_taxon_id": "334819",
+      "source_taxon_id": "117187",
+      "source_taxon_label": "Fusarium verticillioides",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:3392",
+      "record_label": "carbendazim",
+      "record_path": "data/antibiotics/antifungal/carbendazim.yaml",
+      "record_sha256": "072d6a081385e3b412cc6ea2ea4260250bfd2f2093555c988814c72a1b76d010",
+      "reference": "PMID:30732567",
+      "row_sha256": "c822e7609cbf2bee565065d025214200f7685c3407207da35f9f75d8adfc4284",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:2162",
+      "source_protein_accession": "P53374",
+      "source_strain_label": "HC30",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "5127",
+      "source_taxon_label": "Fusarium fujikuroi",
+      "standard_inchi_key": "TWFZGCMQGLPBSX-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:136340",
+      "record_label": "fenpicoxamid",
+      "record_path": "data/antibiotics/antifungal/fenpicoxamid.yaml",
+      "record_sha256": "5450b57aa0c034b12d0f5fbe1b3f638e69b4159f33e2d1cfc14a769d64d4e1b9",
+      "reference": "PMID:34490974",
+      "row_sha256": "33aee8150ea264cc2eb50df3722ca4aa90b94800c97ed9ea96c2f12075a74ae7",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:954",
+      "source_protein_accession": "Q6X9S4",
+      "source_strain_label": "IPO323",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "1047171",
+      "source_taxon_label": "Zymoseptoria tritici",
+      "standard_inchi_key": "QGTOTYJSCYHYFK-RBODFLQRSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:136340",
+      "record_label": "fenpicoxamid",
+      "record_path": "data/antibiotics/antifungal/fenpicoxamid.yaml",
+      "record_sha256": "5450b57aa0c034b12d0f5fbe1b3f638e69b4159f33e2d1cfc14a769d64d4e1b9",
+      "reference": "PMID:34490974",
+      "row_sha256": "36f4aa112c3d9b1d8efe85da82d2365dd17084bed1930b4ff469d02d7bfe75fc",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:954",
+      "source_protein_accession": "Q6X9S4",
+      "source_strain_label": "37-16",
+      "source_strain_taxon_id": null,
+      "source_taxon_id": "1047171",
+      "source_taxon_label": "Zymoseptoria tritici",
+      "standard_inchi_key": "QGTOTYJSCYHYFK-RBODFLQRSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:16240",
+      "record_label": "hydrogen peroxide",
+      "record_path": "data/antibiotics/biocide/hydrogen-peroxide.yaml",
+      "record_sha256": "df1f39b6ac6bfe5e078555752aaef5695fa586f7fb3256d8000dc181ac29bf5c",
+      "reference": "PMID:38056173",
+      "row_sha256": "e4941d5b2177b1078abb959c35d0c3329fa377b3f7365e137310aa53650c4602",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:10915",
+      "source_protein_accession": "G4N021",
+      "source_strain_label": "Guy11",
+      "source_strain_taxon_id": "242507",
+      "source_taxon_id": "318829",
+      "source_taxon_label": "Magnaporthe oryzae",
+      "standard_inchi_key": "MHAJPDPJQMAIIY-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "record_label": "iprodione",
+      "record_path": "data/antibiotics/antifungal/iprodione.yaml",
+      "record_sha256": "ee511529f07c836ca1593632026f6bc01f734d5fdce5b7565fc3970ee4cc5d6e",
+      "reference": "PMID:38374637",
+      "row_sha256": "6a547a0c6c6ea614cd7c62b24211763a0ff5f1b5f83204586e112c67a2846c7c",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:10483",
+      "source_protein_accession": "A7EQI8",
+      "source_strain_label": "Scl02-05",
+      "source_strain_taxon_id": "665079",
+      "source_taxon_id": "5180",
+      "source_taxon_label": "Sclerotinia sclerotiorum",
+      "standard_inchi_key": "ONUFESLQCSAYKA-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:28909",
+      "record_label": "iprodione",
+      "record_path": "data/antibiotics/antifungal/iprodione.yaml",
+      "record_sha256": "ee511529f07c836ca1593632026f6bc01f734d5fdce5b7565fc3970ee4cc5d6e",
+      "reference": "PMID:38374637",
+      "row_sha256": "af434560aa89a613a0b3cfd3651e1ba2a1fa2f440ce61d4b24f02bf0c8c7c73c",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:7818",
+      "source_protein_accession": "A7F519",
+      "source_strain_label": "Scl02-05",
+      "source_strain_taxon_id": "665079",
+      "source_taxon_id": "5180",
+      "source_taxon_label": "Sclerotinia sclerotiorum",
+      "standard_inchi_key": "ONUFESLQCSAYKA-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "record_path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "record_sha256": "5a4e493e62ed67094fd0dcc89d4553a3df3bec8aff6ae8f211c0c59890328864",
+      "reference": "PMID:38374637",
+      "row_sha256": "ae814e8587fbd05c1051d3da866cb17ecb9474102bbff8b6c8d94239022d79ad",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:7818",
+      "source_protein_accession": "A7F519",
+      "source_strain_label": "Scl02-05",
+      "source_strain_taxon_id": "665079",
+      "source_taxon_id": "5180",
+      "source_taxon_label": "Sclerotinia sclerotiorum",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:81763",
+      "record_label": "fludioxonil",
+      "record_path": "data/antibiotics/antifungal/fludioxonil.yaml",
+      "record_sha256": "5a4e493e62ed67094fd0dcc89d4553a3df3bec8aff6ae8f211c0c59890328864",
+      "reference": "PMID:38374637",
+      "row_sha256": "f177428e52f4619cd334e023e642c1d6ab12911646a153824c1d90dd9e6f5c2f",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:10483",
+      "source_protein_accession": "A7EQI8",
+      "source_strain_label": "Scl02-05",
+      "source_strain_taxon_id": "665079",
+      "source_taxon_id": "5180",
+      "source_taxon_label": "Sclerotinia sclerotiorum",
+      "standard_inchi_key": "MUJOIMFVNIBMKC-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    },
+    {
+      "identifier": "CHEBI:46081",
+      "record_label": "fluconazole",
+      "record_path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "record_sha256": "ac03c41458296b240c8fcfa8e31c891b01058ad618cecb2d960434f32fd6be78",
+      "reference": "PMID:39403939",
+      "row_sha256": "c6aebb57526938ad3ff75835d58bf1a33b1056fd17dc349ad144c3ea16613a39",
+      "source_gene_id": null,
+      "source_phig_id": "PHIG:10398",
+      "source_protein_accession": "A0A1D8PGP5",
+      "source_strain_label": "SC5314",
+      "source_strain_taxon_id": "237561",
+      "source_taxon_id": "5476",
+      "source_taxon_label": "Candida albicans",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "status": "PENDING_IDENTIFIER_SCOPE_REVIEW_NOT_VERIFIED_EXPERIMENTAL_MAPPING"
+    }
+  ],
+  "preservation": {
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "record_hashes_verified": 2939,
+    "source_reviews_unchanged": true
+  },
+  "proteins": {
+    "P10653": {
+      "embl_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "M17519",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA33328.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "AACD01000016",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "EAA66300.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "BN001308",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CBF87981.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "entryAudit": {
+        "entryVersion": 157,
+        "firstPublicDate": "1990-11-01",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "1990-11-01",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "benA"
+          },
+          "orfNames": [
+            {
+              "value": "AN1182"
+            }
+          ],
+          "synonyms": [
+            {
+              "value": "rhiA"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Aspergillus nidulans",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Aspergillus",
+          "Nidulantes"
+        ],
+        "scientificName": "Emericella nidulans (strain FGSC A4 / ATCC 38163 / CBS 112.46 / NRRL 194 / M139)",
+        "taxonId": 227321
+      },
+      "primaryAccession": "P10653",
+      "reference_strain_comments": [
+        "FGSC A4 / ATCC 38163 / CBS 112.46 / NRRL 194 / M139"
+      ],
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json"
+    },
+    "Q6X9S4": {
+      "embl_cross_references": [
+        {
+          "database": "EMBL",
+          "id": "AY247413",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAP81933.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "entryAudit": {
+        "entryVersion": 84,
+        "firstPublicDate": "2005-12-06",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2004-07-05",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB reviewed (Swiss-Prot)",
+      "genes": [
+        {
+          "geneName": {
+            "value": "cob"
+          },
+          "synonyms": [
+            {
+              "value": "cytB"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Speckled leaf blotch fungus",
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Dothideomycetes",
+          "Dothideomycetidae",
+          "Mycosphaerellales",
+          "Mycosphaerellaceae",
+          "Zymoseptoria"
+        ],
+        "scientificName": "Zymoseptoria tritici",
+        "synonyms": [
+          "Septoria tritici"
+        ],
+        "taxonId": 1047171
+      },
+      "primaryAccession": "Q6X9S4",
+      "reference_strain_comments": [
+        "ST1/MBC"
+      ],
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json"
+    }
+  },
+  "reviewed_on": "2026-10-08",
+  "snapshot_scope": "Historical pending queue after Piotrowska curation; not a completed primary review.",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_review_sha256": "27ef01db1628e4a4deefd3aa1c488b4c5969721f53d83c2cc166daf3402d9a6e",
+  "status": "REFERENCE_METADATA_VERIFIED_PRIMARY_SUBJECT_MAPPING_PENDING",
+  "summary": {
+    "identifier_scoped": 174,
+    "pending_associations": 43,
+    "pending_papers": 20,
+    "pending_records": 10,
+    "source_associations": 217
+  },
+  "taxonomy": {
+    "1047171": {
+      "active": true,
+      "parent": {
+        "scientificName": "Zymoseptoria",
+        "taxonId": 1047167
+      },
+      "rank": "species",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-6c22873281799d9f97526a1cd6008e78714a45a5efb9ffc76e1c4b8b9538f10f.json",
+      "scientificName": "Zymoseptoria tritici",
+      "taxonId": 1047171
+    },
+    "162425": {
+      "active": true,
+      "parent": {
+        "scientificName": "Nidulantes",
+        "taxonId": 2720870
+      },
+      "rank": "species",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-35d4d40d4ff7efa8942c667599f59283dfccc4700df7cbbd72d15ce5cee8aab5.json",
+      "scientificName": "Emericella nidulans",
+      "taxonId": 162425
+    },
+    "227321": {
+      "active": true,
+      "parent": {
+        "scientificName": "Emericella nidulans",
+        "synonyms": [
+          "Aspergillus nidulans"
+        ],
+        "taxonId": 162425
+      },
+      "rank": "strain",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-04beefb91db49d903f6fa3eaf98755b20957c8f5e1e78e97288c55567c9aa1dd.json",
+      "scientificName": "Emericella nidulans (strain FGSC A4 / ATCC 38163 / CBS 112.46 / NRRL 194 / M139)",
+      "taxonId": 227321
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_file_sha256": "4f6570ffbec8320c440a8276ecfea03ab836993b75c2f92b7272d6de85a2ba59",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+      "sha256": "3c0624fde2890f6c12bacc34268d4a4f52164ef2a329cf969c095d48deb06ef1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500"
+    },
+    {
+      "cache_file_sha256": "8f1b082963d4affedfcd273f50da8831e7e6de55763dd5fa960872bb4f38729b",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:18.453523+00:00",
+      "sha256": "69894dd64e4e62361f8bb211b064f7807d0aed93f1b93602ef2621c7796186b5",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ2TWM0+OR+accession%3AQ2U3V9+OR+accession%3AQ4HZS8+OR+accession%3AQ4WDM9+OR+accession%3AQ4WNT5+OR+accession%3AQ59VG6+OR+accession%3AQ59X67+OR+accession%3AQ5A4G2+OR+accession%3AQ5ALV2+OR+accession%3AQ6X9S4+OR+accession%3AQ870D1+OR+accession%3AQ8X0Z3+OR+accession%3AQ9P340+OR+accession%3AW7LTW3+OR+accession%3AW7LX41&format=json&size=500"
+    },
+    {
+      "cache_file_sha256": "00534ebc05bb3d7467d0ccb4d36e606ca0da9b1f0e7f415d71dd790f7a5295db",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-35d4d40d4ff7efa8942c667599f59283dfccc4700df7cbbd72d15ce5cee8aab5.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:41.501219+00:00",
+      "sha256": "e7110d39fe48715804af70d9dc0f4240c1a5d12b55a23a2209d4e93872a9376c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/162425"
+    },
+    {
+      "cache_file_sha256": "fee00d5afdd0392c4e51be565799d2372dc5dcc0784f1c22a35a0142c7cdd0b3",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-04beefb91db49d903f6fa3eaf98755b20957c8f5e1e78e97288c55567c9aa1dd.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:42.250928+00:00",
+      "sha256": "3135a3946e5ea61cc69aedd8edbaa38120e7af34356f0a34d9457e4845920d21",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/227321"
+    },
+    {
+      "cache_file_sha256": "05f434748b5dfd77186d5826f1e29615648747d97da95867fc9437eb8d20ca1e",
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-6c22873281799d9f97526a1cd6008e78714a45a5efb9ffc76e1c4b8b9538f10f.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:58.022755+00:00",
+      "sha256": "5a2b0f3e25986c5e5d440bbdf1cdc9c33584b73825cdf4de4c26f82c8627910d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1047171"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "artifacts": [
+    {
+      "path": "research/2026-10-09-literature-primary-context.json",
+      "sha256": "0e6aedfba43e7fcec77823eb11a111a0b75b37e25a648561341b8d6dc310beca"
+    },
+    {
+      "path": "tests/test_literature_primary_context.py",
+      "sha256": "0ec02ab11e986b491594a97d248561ff01c0a5ded450b27f3db2d9406d684efe"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "023b20ba73f42b60891e2bbcaad8914b7fc3f2b05bbf86448dca90d7ec179566"
+    }
+  ],
+  "biological_records_byte_identical": 2939,
+  "canaries": {
+    "bibliography": {
+      "path": "reports/resistance-grounding-2026-10-09-literature-primary-context/pmid-15761062-receipt.json",
+      "sha256": "e6d64f443b59c2f1c503da40efcf8ed64fc608867b78a33b46213b5aa82c8257"
+    },
+    "ena": {
+      "path": "reports/resistance-grounding-2026-10-09-literature-primary-context/ena-FN594949-receipt.json",
+      "sha256": "03e6ea6d491f853c00290c9f487cfd740cff3ebde4de7d4b690639413578ec2c"
+    },
+    "uniprot": {
+      "path": "reports/resistance-grounding-2026-10-09-literature-primary-context/protein-Q6A150-receipt.json",
+      "sha256": "4d6b291cab945e30b0804afa50fe018d3d6a005b2800ffaae0dca725c93a4301"
+    }
+  },
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "023b20ba73f42b60891e2bbcaad8914b7fc3f2b05bbf86448dca90d7ec179566",
+      "before_sha256": "4937fac0ae5dbc77014579aa20bc672edc9149ca5e579d41f89c9877d2b69ae4"
+    }
+  },
+  "checks_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-literature-primary-context/final-checks/checks.json",
+    "sha256": "0d9ad7e7040592a14b9fd5c9676a4bd6fcaecfd1aa903e2652174818535b57b1"
+  },
+  "date": "2026-10-09",
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-literature-primary-context/final-checks/focused-tests.xml",
+    "sha256": "0591df1d424ef1d3fb97999487139d672dc3e15e60b30e3f076030157067375f"
+  },
+  "focused_tests_passed": 315,
+  "full_authoritative_qc_rerun": false,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "metadata_and_repository_response_pairs_verified": 11,
+  "ncbi_endpoint_requests": 0,
+  "new_tests_passed": 12,
+  "outreach": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-card-literature-proteins-verification.json",
+    "sha256": "213f5300bbe706ae19ed50f068f8cee17d966f5a633802cea3edec3190244197"
+  },
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6851,
+  "protected_files_unchanged": 6850,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-literature-primary-context/protected-before.json",
+    "sha256": "f57de7dc91544685a844b9c67f36f0dbabc67d9ca78818b21ab9d907286e63e9"
+  },
+  "publisher_inspection_method": "MANUAL_WEB_REVIEW_AT_REPORTED_SCOPE_NOT_AUTOMATIC_FACT_VERIFICATION",
+  "remaining_limits": [
+    "All 2939 records remain in scope; this follow-up does not complete any whole-record review.",
+    "Abstracts, cited conclusions and phylogenetic contexts are not independent phenotype experiments.",
+    "The two source donor-label forms are not silently merged into a verified strain identifier.",
+    "No exact experimental allele, tested preparation, or genome assignment is made.",
+    "Reference archive accessions are sequence records, not automatically assembly accessions.",
+    "No sequences, coordinates, constructs, protocols or numerical AST are exported.",
+    "No NCBI endpoint requests, source adoption, outreach or GitHub mutation; #1040 remains deferred."
+  ],
+  "review_findings_addressed": [
+    "Successful network canary was reused after fixing the local expected-query validation; no duplicate fetch.",
+    "A shared paper does not assign different genes to the same isolate.",
+    "Reference strain annotations stay citation-specific; discrepant donor labels are retained.",
+    "Functional phenotype evidence is distinguished from homology-based biochemical classification.",
+    "Reference sequence, sample and project identifiers do not become an assembly or tested-genome assignment.",
+    "The HelD paper's cited resistance study is not counted as independent phenotypic evidence.",
+    "Publisher 403s remain recorded; the licensed repository copy is a separate successful source.",
+    "Portable tests do not require private response caches; offline cached-data reproduction was also run."
+  ],
+  "source_adoptions": 0,
+  "sources_pages_embeddings_unchanged": true,
+  "status": "SCOPED_RESEARCH_CHECKS_PASSED",
+  "summary": {
+    "bibliography_identities_verified": 4,
+    "biological_records_changed": 0,
+    "compound_records": 5,
+    "exact_experimental_allele_assignments": 0,
+    "experimental_genome_assignments": 0,
+    "independent_primary_resistance_result_reviews": 1,
+    "reference_genome_sequence_contexts": 1,
+    "reference_proteins": 3,
+    "reference_taxa": 3,
+    "selected_primary_result_reviews": 2,
+    "source_assertion_memberships": 6,
+    "source_terms": 3,
+    "verified_reference_archive_links": 3,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

@@ -86,3 +86,48 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T03:28:28Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two primary-supported strain-specific fabF claims; grounded species
+    and the GS77 reference protein. Preserved numbering caveats; no AST, genome or
+    strain TaxID inferred.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  gene_families: &id001
+  - fabF
+  gene_id: fabF
+  taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  phenotype_label: cerulenin resistance
+  label: Bacillus subtilis GS77 fabF1 resistance to cerulenin
+  strain: GS77
+  alteration: FabF[I108F]
+  protein_accession: UniProtKB:O34340
+  assay: Biochemical inhibition and structural analysis
+  note: JH642 derivative. Reference protein O34340, sequence version 1, not a mutant-specific
+    accession. Source I108F is retained; UniProt's GS77 annotation uses I109F. No
+    coordinate conversion, strain TaxID or genome assignment. Expression regulation
+    also contributes in this background.
+  evidence:
+  - reference: PMID:24641521
+    notes: Results; Table 2; Figure 2.
+  - reference: UniProtKB:O34340
+    notes: 'Reference crosswalk only: GS77 variant cites PMID:11325930; PDB 4LS6.'
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  gene_families: *id001
+  gene_id: fabF
+  taxon_id: NCBITaxon:1423
+  taxon_label: Bacillus subtilis
+  phenotype_label: cerulenin resistance
+  label: Bacillus subtilis GS76 fabF3 resistance to cerulenin
+  strain: GS76
+  alteration: FabF[I108M]
+  assay: Cell-free enzyme assay and genetic complementation
+  note: JH642 derivative. Source protein notation retained; nucleotide and protein
+    numbering are not normalized. No strain-specific protein, strain TaxID or genome
+    accession verified.
+  evidence:
+  - reference: PMID:24641521
+    notes: Characterization of bsFabF[I108M]; Tables 2, 4 and 5.

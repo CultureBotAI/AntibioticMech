@@ -124,9 +124,8 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">1 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">1 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
@@ -134,12 +133,13 @@ type — expand a group to see its determinants.</p>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>HCV NS5A substitutions at M28, Q30, L31, and Y93<br><span class="meta">Replicon selection and sequencing after 14-day monotherapy identified genotype-dependent NS5A resistance variants; variants at positions 28, 30, 31, and 93 persisted for up to six months in the studied populations.</span></td>
+      <td>HCV NS5A substitutions at M28, Q30, L31, and Y93<br><span class="meta">Clinical sequencing after 14-day monotherapy identified genotype-dependent NS5A variants; phenotypes were assessed separately in H77c and Con1 reference replicons. Variant populations, not every individual substitution, persisted for up to six months. Taxon grounding only: no patient-specific protein, strain TaxID, genome, normalized allele or new quantitative endpoint assigned. This review does not establish the administered compound form.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Orthohepacivirus hominis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_3052230"><code class="curie">NCBITaxon:3052230</code></a></td>
       <td class="meta">HCV NS5A</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23403428">PMID:23403428</a></span> <span class="meta">(Primary daclatasvir monotherapy sequencing and resistance-persistence study (DOI:10.1128/AAC.02494-12).)</span></li>
+  <li><span class="meta"><a href="https://rest.uniprot.org/taxonomy/3052230">https://rest.uniprot.org/taxonomy/3052230</a></span> <span class="meta">(Taxonomic identity only: active species, UniProt release 2026_03; retrieved 2026-10-08 UTC.)</span></li>
 </ul>
 </td>
     </tr>
@@ -186,6 +186,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Grounded the existing aggregate claim to a verified species and clarified experimental versus reference context. No exact mutant protein, strain TaxID, genome, variant normalization or quantitative endpoint added.</p>
   </li>
 </ol>
 

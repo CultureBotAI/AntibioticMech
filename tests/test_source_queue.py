@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import csv
 import sys
 from pathlib import Path
 
@@ -128,3 +129,21 @@ def test_source_queue_does_not_ignore_dangling_gzip_link(tmp_path, status):
     present = present_optional_inventories(tmp_path)
     assert present == {"ncbi-ast": (path.relative_to(tmp_path),)}
     assert optional_inventory_problems({"ncbi-ast": {"status": status}}, present)
+
+
+def test_ncbi_ast_current_deferral_precedes_historical_review():
+    root = Path(__file__).resolve().parents[1]
+    with (root / "curation/source_queue.tsv").open(newline="", encoding="utf-8") as handle:
+        row = next(r for r in csv.DictReader(handle, delimiter="\t") if r["source_id"] == "ncbi-ast")
+    assert (row["status"], row["use"], row["redistribution"]) == ("BLOCKED", "REFERENCE", "UNVERIFIED")
+    current, separator, historical = row["rationale"].partition("Historical review: ")
+    assert current.startswith("Current maintainer direction: #1040 and NCBI source-terms work are deferred.")
+    assert "Do not contact NCBI, make new requests to NCBI endpoints" in current
+    assert "without new explicit authorization" in current
+    assert separator
+    assert historical.startswith("The maintainer resumed source-terms review for #1040 on 2026-10-04.")
+    assert row["verified_on"] == "2026-10-04"
+    backlog = " ".join((root / "NEXT_TASKS.md").read_text().split())
+    assert "NCBI AST / #1040 is deferred." in backlog
+    assert "Do not contact NCBI, make new requests to NCBI endpoints" in backlog
+    assert "or resume reuse-terms work without new explicit maintainer authorization" in backlog

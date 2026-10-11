@@ -86,9 +86,7 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:1047171
   taxon_label: Zymoseptoria tritici
   strain: IPO323
-  strain_taxon_id: NCBITaxon:336722
   alteration: Hog1::Hyg (disruption) [Not assayed]
-  protein_accession: UniProtKB:Q1KTF2
   gene_id: Mycgr3T76502
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
@@ -96,265 +94,397 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mehrabi-2006-parent-reference-context:
+    IPO323 is retained as parent background, not a unique tested derivative. The primary
+    table separates a grouped set of three derivatives from wild-type and ectopic
+    controls. Q1KTF2 and TaxID 336722 identify IPO323 reference context; Mycgr3T76502
+    is retained as a reference locus, not an experimental allele identifier. The source
+    Not assayed flag remains unchanged and unresolved against the grouped primary
+    comparison. No individual clone, experimental accession, genome or numeric measurement
+    is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:336722;
+    protein_accession=UniProtKB:Q1KTF2.'
   evidence:
   - reference: PMID:17073308
     notes: PHI-base primary-literature antimicrobial interaction PHIG:9481; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1094/mpmi-19-1262
+    notes: 'Identifier-scope review: Author-uploaded published paper, web-extracted
+      PDF text: p. 1262 source deposit; p. 1266 Table 2 and footnotes distinguish
+      grouped subjects from controls; p. 1267 identifies IPO323 as parent; direct
+      download HTTP 403, no local PDF or visual page review, UniProtKB release 2026_03:
+      Q1KTF2 entry 108, sequence version 2; source-paper reference and DQ432031 cross-reference;
+      Mycgr3T76502 reference locus; TaxID 336722 under species 1047171. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: Bos1(18.3 (55bp) duplication 835 + 838stop) (amino acid insertion and mutation)
     [Not assayed] associated with resistance to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
-  strain: Bt6-4
-  strain_taxon_id: NCBITaxon:332648
+  strain: Bt6-4R1
   alteration: Bos1(18.3 (55bp) duplication 835 + 838stop) (amino acid insertion and
     mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review ren-2016-bt6-4-subject-context:
+    Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only.
+    Association is not causation; source biology retained. EC50 is not MIC. Original
+    source background label: Bt6-4. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:30686204
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1094/pdis-11-15-1290-re
+    notes: 'Identifier-scope review: Tables 2, 3 and 5: publisher-indexed primary
+      text; direct fetch unavailable, UniProtKB release 2026_03: A0A384J5Y1 entry
+      36, sequence version 1; B05.10 reference taxonomy. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: Bos1(E253D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
-  strain: Bt3-4
-  strain_taxon_id: NCBITaxon:332648
+  strain: Bt3-4R
   alteration: Bos1(E253D) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review ren-2016-bt3-4-subject-context:
+    Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only.
+    Association is not causation; source biology retained. EC50 is not MIC. Original
+    source background label: Bt3-4. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:30686204
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1094/pdis-11-15-1290-re
+    notes: 'Identifier-scope review: Tables 2, 3 and 5: publisher-indexed primary
+      text; direct fetch unavailable, UniProtKB release 2026_03: A0A384J5Y1 entry
+      36, sequence version 1; B05.10 reference taxonomy. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: Bos1(G415D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
-  strain: Yc-6
-  strain_taxon_id: NCBITaxon:332648
+  strain: Yc-6R1
   alteration: Bos1(G415D) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review ren-2016-yc-6-subject-context:
+    Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only.
+    Association is not causation; source biology retained. EC50 is not MIC. Original
+    source background label: Yc-6. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:30686204
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1094/pdis-11-15-1290-re
+    notes: 'Identifier-scope review: Tables 2, 3 and 5: publisher-indexed primary
+      text; direct fetch unavailable, UniProtKB release 2026_03: A0A384J5Y1 entry
+      36, sequence version 1; B05.10 reference taxonomy. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: Bos1(Q846stop) (nonsense mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
-  strain: Nj5-10
-  strain_taxon_id: NCBITaxon:332648
+  strain: Nj5-10R
   alteration: Bos1(Q846stop) (nonsense mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review ren-2016-nj5-10-subject-context:
+    Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only.
+    Association is not causation; source biology retained. EC50 is not MIC. Original
+    source background label: Nj5-10. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:30686204
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1094/pdis-11-15-1290-re
+    notes: 'Identifier-scope review: Tables 2, 3 and 5: publisher-indexed primary
+      text; direct fetch unavailable, UniProtKB release 2026_03: A0A384J5Y1 entry
+      36, sequence version 1; B05.10 reference taxonomy. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(A493T) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(A493T) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(G278D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(G278D) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(G415D) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(G415D) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(I365S E529A) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(I365S E529A) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(I365S M427T) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(I365S M427T) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(I365S T581P) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(I365S T581P) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(I365S V239F) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(I365S V239F) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: bos1(I365S) (amino acid mutation) [Not assayed] associated with resistance
     to iprodione
   taxon_id: NCBITaxon:40559
   taxon_label: Botrytis cinerea
   strain: B05.10
-  strain_taxon_id: NCBITaxon:332648
   alteration: bos1(I365S) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:A0A384J5Y1
   phenotype_id: PHIPO:0000389
   phenotype_label: resistance to iprodione
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fillinger-2012-reference-context:
+    B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1
+    / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental
+    allele. The original-isolate deposits JX192607-JX192631 are not subject accessions
+    for the later Table 3 comparisons. Preserve source alteration, phenotype and assay
+    flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones,
+    proteins and genomes remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:332648;
+    protein_accession=UniProtKB:A0A384J5Y1.'
   evidence:
   - reference: PMID:22912706
     notes: PHI-base primary-literature antimicrobial interaction PHIG:4721; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0042520
+    notes: 'Identifier-scope review: Results section s3d and Table 3: B05.10-derived
+      subjects distinct from original isolates in Table 1, UniProtKB release 2026_03:
+      A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein
+      cross-references. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: Hog1delta (deletion) associated with resistance to iprodione
   taxon_id: NCBITaxon:5180
@@ -424,3 +554,120 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T11:28:31Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: 'Scoped imported iprodione associations to parent background: reference
+    Bos1 protein and B05.10 TaxID are not tested derivative identities. Original deposits
+    remain separate from later subjects; alterations and phenotypes unchanged.'
+  llm_assisted: true
+- timestamp: '2026-10-08T12:09:14Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after seventeen additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:49:26Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after one yeast identity-scope
+    correction; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T13:24:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after twelve reference-scope
+    corrections; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:29Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after nine identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:06:12Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Corrected parental labels to primary-table tested-subject labels; moved
+    B05.10 reference identifiers into provenance. Source biological fields and activities
+    unchanged. No exact experimental allele, genome or measurement inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:04Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:56Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:53:36Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped IPO323 reference protein and strain TaxID to provenance after primary
+    identity review. Parent label, reference locus, source flags, phenotype and activities
+    preserved; grouped subjects not assigned individual accessions.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:45Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:23Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

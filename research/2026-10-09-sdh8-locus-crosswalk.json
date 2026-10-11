@@ -1,0 +1,460 @@
+{
+  "attribution": "Candida Genome Database reference identifier metadata; UniProt Consortium release 2026_03, CC BY 4.0; Huang et al. primary identity context.",
+  "changes": {
+    "byte_identical_records": 2917,
+    "changed_records": 22,
+    "checksum_only_claims": 183,
+    "new_identifier_scope_reviews": 0,
+    "reference_alias_notes_updated": 1
+  },
+  "compound": {
+    "identifier": "CHEBI:46081",
+    "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N"
+  },
+  "corpus_phi_scope": {
+    "identifier_scoped": 184,
+    "pending_associations": 33,
+    "pending_papers": 14,
+    "retained": 217
+  },
+  "historical_dossier": {
+    "path": "research/2026-10-08-huang-parent-reference-grounding.json",
+    "sha256": "16a1c9652528a29aba690d0b2f076c54801f43d468a898a244739ef1987d59f7"
+  },
+  "limitations": [
+    "Reference aliases do not identify the experimental allele, tested derivative or a genome accession.",
+    "UniProt remains unreviewed; the CGD feature-type label does not validate an antimicrobial phenotype.",
+    "The earlier Huang dossier remains a historical record of the then-unresolved alias.",
+    "Only identifier metadata is exported from CGD; no bulk source was adopted or imported.",
+    "The versioned feature file is pinned explicitly, not substituted with the directory's current link.",
+    "No sequences, new variants, constructs, protocols, coordinates or quantitative measurements exported.",
+    "No NCBI request, outreach, reuse-terms review, paid research or GitHub mutation occurred.",
+    "Whole-corpus investigation is incomplete; identifier-scope review is not phenotype validation."
+  ],
+  "preservation": {
+    "before_census": {
+      "path": "reports/resistance-grounding-2026-10-07/sdh8-before-corpus.json",
+      "sha256": "aff98c4a67039e03422f2bb17f114b45f6928df8b291bea53ad554a13b85ce3e"
+    },
+    "prepublication_protected_files_checked": 6436,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-07/sdh8-protected-files.json",
+      "sha256": "4b606a42b0c308eb1747c9637ec2e6ce5670fe0778f82afcf2c520aa8bffc3fa"
+    },
+    "record_path_search_includes_ignored": true,
+    "source_inventory": {
+      "path": "data/raw/phibase_amr.tsv",
+      "sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "8fc66ddb95a0defc607bb27f15daccebfdef0c817bfa9f5bbd323f7930f586bc"
+    }
+  },
+  "primary_scope": {
+    "doi": "10.1080/21505594.2024.2405000",
+    "interpretation": "Paper locus and parent/reference context, not new resistance validation.",
+    "locations": [
+      "Results s0003-s2001",
+      "Table 1 t0001"
+    ],
+    "reference": "PMID:39403939"
+  },
+  "records": [
+    {
+      "after_sha256": "b1ccc7ea86216c777011221a650baf2ba94dc72e204578f4f328848bcb6cebb6",
+      "before_sha256": "d1804293263176b9d0021ff98e761b6453183bca369248899660698591e49007",
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml"
+    },
+    {
+      "after_sha256": "05b1f78afde7a7b0801b1415f4aac401e6d19df746ba9084eedb79608930a138",
+      "before_sha256": "340f1c06445fe6c5b8de17fb568c9a0c365b8c158decb2b85387163110647abf",
+      "identifier": "CHEBI:136340",
+      "path": "data/antibiotics/antifungal/fenpicoxamid.yaml"
+    },
+    {
+      "after_sha256": "7a6584192efbc94b6d8ea115def3d1d030d7d12f3536f116b717954a2079aabf",
+      "before_sha256": "8476e1426d39887d9610e5e2a73fb8662fa60e9c6a38ba74d619c01327344e0d",
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml"
+    },
+    {
+      "after_sha256": "c0bd089334e4e4784d210db60eb23ba467105b3444fb2e208baf0785036eeed5",
+      "before_sha256": "587db67f1f0a5754af657eb75a2af3bec4bb4e732f0a111280bb9800176a8b29",
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml"
+    },
+    {
+      "after_sha256": "7706ddcf65013b426429358312b42c656e1263ec0d653e63b9da3d7c33ad81db",
+      "before_sha256": "35784dc6bbd0b79bc2ee550235e6942b65d5bb62104e792a8c274ccdd59c5922",
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml"
+    },
+    {
+      "after_sha256": "c1c6109894a850ba4456425e17b8fbc7cd7bc203c2211c32f489f384478d3f5a",
+      "before_sha256": "cc6d41c7155daceacd31aad7c35bb95cfa983c80469f477f9098e1327a555058",
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml"
+    },
+    {
+      "after_sha256": "d5b8f4bb6dd611862df842c04f4a9e7208e5a17e3fd4120eaec7baa7b7e5b338",
+      "before_sha256": "d8304e92698ba2493188475fd4291a66666ffd5d5bb1abe29e7cd4c6cb297eb1",
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml"
+    },
+    {
+      "after_sha256": "50a3c1d3c755bf4b1014dc50c40d0b70f6887e7f2b6af5ea668645939e4ca7e8",
+      "before_sha256": "f8430f2784b1a941b5e56b7fa263ac09d00ebd8c9786361329cc02bf5b6ac73b",
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml"
+    },
+    {
+      "after_sha256": "bd5894aec023b96096dbdf0c728d0d30365b1b783262a6a81573512aaffb8502",
+      "before_sha256": "4fee288b1ffea6cb11e5aad91667b3fc3ceeb659172282231775856f0e70b61d",
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml"
+    },
+    {
+      "after_sha256": "ca08a24af1aaea18c481f7578b746f8bca8073d0e8ca6ad58a86e3eb95011350",
+      "before_sha256": "1cf67718e716d28c024ede693bc8dd5c7e3e2881c5dc890b7ccba0af80d7cba9",
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml"
+    },
+    {
+      "after_sha256": "605be22088cef40f66483f94945b901e08ff20f9c283f6abb30c8c843722b391",
+      "before_sha256": "c13fe3fd1f5f67ac0abd05176b0b556f0e4e6b78f88e046b1570f751898125d3",
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml"
+    },
+    {
+      "after_sha256": "2e775cef5bf92ea2774c260ddc41796c8f19b2bc35e67a221f0493028198f2e3",
+      "before_sha256": "d8ddd95b20f48ecb350d3af32ab4f378a64f5929c85c067e467bd98e1a8a59fe",
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml"
+    },
+    {
+      "after_sha256": "aff8895eb080fe8a13a9995af66331a8187e557c111ac9b7b8e8b4df7173961c",
+      "before_sha256": "668b593f01e9d89cfc4458102d4dffb25befd801cf47a4e79d5d45e43e8be45d",
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml"
+    },
+    {
+      "after_sha256": "66f98a79711d9b12aa43faeba68e1804200502c749ed164ed77aabf3e5ed2fd4",
+      "before_sha256": "c7d1f8ce25a593ccc5a934e8a0d88f649f8fdff68ee76bed43cb29304456f48f",
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml"
+    },
+    {
+      "after_sha256": "ae8fb13d1ad6390a48e145e470249b9692ab2e2b9f346ef2f1ba6891e0bf3e31",
+      "before_sha256": "31f70a2ae080739029069c798b60eb26800109012aa331cc6a4ca9000cf1046c",
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml"
+    },
+    {
+      "after_sha256": "38bbbd758183aa4c158690d3338cd0b0482c55754b5288ac230d14683929bf50",
+      "before_sha256": "23bfe7f8ad22ecf36e3a3569ebe4913e37e3acb7c793b52e9e70193b300291c5",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml"
+    },
+    {
+      "after_sha256": "684e4971ff38b5bc2f47f24321b6ff89ea2c1e1cce22c6ddff1c47f4d2555d19",
+      "before_sha256": "eb84a747b62e7d619bfcb6d41c3e53827a5931257a3cf1bdca01361081b7af3d",
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml"
+    },
+    {
+      "after_sha256": "6615354c4022529bf6b59a178f45e81c72e16e0229e9cc060135069fafc0c5ae",
+      "before_sha256": "6143ba408d111f6f3e37e89a00d3621a1f1fd899a5d2f6265bc9ab326f6dba96",
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml"
+    },
+    {
+      "after_sha256": "d6f8e34b70c638f3b24b63350ddcf4ef24020464fbaa942c907a1ac32961eaa0",
+      "before_sha256": "fc5a2b4c7710ed5071ed04fb4990b5a202aa031b8bb6077904c938f8d6500356",
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml"
+    },
+    {
+      "after_sha256": "c93e829fbb87cddc3840fa9f47b51a0f15a5ea8cfbbd58c2e18af88b62c4cc43",
+      "before_sha256": "16cdc56b303e490b05e7db9a49f40b6bb78cde6fb5aa3df4aa6f139c8625526f",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml"
+    },
+    {
+      "after_sha256": "f462ee623e00bbe07faa3482184ed63a3e910bf75c32b8800448df37ce99347b",
+      "before_sha256": "07d254a519ef1e91f4ef029ef11ea560707eda7b2bfa3b18f784501881dd8e9f",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml"
+    },
+    {
+      "after_sha256": "aab25ee2ca5756c78a8ee21afae480a8d6ab4e6b204984eb545056dbb0346a98",
+      "before_sha256": "9ed8b4d3049ae42949014c2754b73a88b8e1a5f82ccf885a6665f3326d4d3e55",
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml"
+    }
+  ],
+  "reference_crosswalk": {
+    "cgd_version": "A22-s08-m01-r37",
+    "experimental_identifiers_assigned": false,
+    "feature": {
+      "feature_name": "C2_02620W_A",
+      "feature_type": "ORF|Verified",
+      "gene_name": "SDH8",
+      "matched_aliases": [
+        "orf19.1588",
+        "orf19.9161"
+      ],
+      "primary_cgd_id": "CAL0000192813"
+    },
+    "join_basis": "EXACT_STABLE_CGD_IDENTIFIER_AND_EXPLICIT_ALIAS_ROWS",
+    "mapping_rows": [
+      {
+        "ASSEMBLY22_ID": "C2_02620W_A",
+        "GENE_NAME": "SDH8",
+        "ORF19_ID": "orf19.1588"
+      },
+      {
+        "ASSEMBLY22_ID": "C2_02620W_A",
+        "GENE_NAME": "SDH8",
+        "ORF19_ID": "orf19.9161"
+      }
+    ],
+    "name_normalization_inferred": false,
+    "sequence_comparison_performed": false,
+    "uniprot_cgd_cross_reference": {
+      "database": "CGD",
+      "id": "CAL0000192813",
+      "properties": [
+        {
+          "key": "GeneName",
+          "value": "SDH8"
+        }
+      ]
+    }
+  },
+  "reference_protein": {
+    "entryAudit": {
+      "entryVersion": 35,
+      "firstPublicDate": "2017-01-18",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2017-01-18",
+      "sequenceVersion": 1
+    },
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "id": "CAL0000192813",
+              "source": "CGD"
+            }
+          ],
+          "value": "SDH8"
+        },
+        "orderedLocusNames": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AOW27300.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "CAALFM_C202620WA"
+          },
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "CAL0000192813",
+                "source": "CGD"
+              }
+            ],
+            "value": "orf19.9161"
+          }
+        ]
+      }
+    ],
+    "organism": {
+      "commonName": "Yeast",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "AOW27300.1",
+          "source": "EMBL"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "UP000000559",
+          "source": "Proteomes"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Ascomycota",
+        "Saccharomycotina",
+        "Pichiomycetes",
+        "Debaryomycetaceae",
+        "Candida/Lodderomyces clade",
+        "Candida"
+      ],
+      "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "taxonId": 237561
+    },
+    "primaryAccession": "A0A1D8PGP5"
+  },
+  "requests": {
+    "directory": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/cgd-albicans-feature-index-2026-10-09.json",
+        "sha256": "7ac3fe28444ce98c1814ce186b7f0c4f79334d27d281a5700956a6ce16f21624"
+      },
+      "last_modified": null,
+      "release": null,
+      "retrieved_at": "2026-10-09T05:39:14.337531+00:00",
+      "sha256": "0c7ea847e93120a5c10f6a3e0ef4fcbd8043b2c62eae9a14e3eb1e6893e58d1a",
+      "status": 200,
+      "url": "https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/"
+    },
+    "features": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/cgd-albicans-a22-r37-features-2026-10-09.json",
+        "sha256": "6b87732ed7e8103beb73fefc45d1a73f69f3577a8490ffaf13241ab056fa69f9"
+      },
+      "last_modified": "Sun, 04 Oct 2026 04:01:12 GMT",
+      "release": null,
+      "retrieved_at": "2026-10-09T05:40:45.118399+00:00",
+      "sha256": "087a09f0bbefba9ca94743c19fee18f56e3ce9cddab33bc9b3eba40089abd983",
+      "status": 200,
+      "url": "https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/C_albicans_SC5314_version_A22-s08-m01-r37_chromosomal_feature.tab"
+    },
+    "legacy_locus": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/cgd-sdh8-locus-2026-10-09.json",
+        "sha256": "9eb0c292398940746948b41c5bd868d2f75d69745f9f58e37c04a476e9a74a95"
+      },
+      "last_modified": null,
+      "release": null,
+      "retrieved_at": "2026-10-09T05:38:45.299880+00:00",
+      "sha256": "9e17cb15dd75bbbd5dbb984eda674863c3b10ab72613cf8a39a00c3e11a8492a",
+      "status": 301,
+      "url": "https://www.candidagenome.org/cgi-bin/locus.pl?dbid=CAL0000192813"
+    },
+    "mapping": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/cgd-orf19-a22-mapping-2026-10-09.json",
+        "sha256": "ac4f7dd5978386d5ee6ec6e6b62ddbfefaef1cc43d88fe8a1e66f1d3cba9b3a3"
+      },
+      "last_modified": "Sun, 04 Oct 2026 04:01:12 GMT",
+      "release": null,
+      "retrieved_at": "2026-10-09T05:39:50.665575+00:00",
+      "sha256": "722e0ec75f44c1c32ec3e222952015d2ed96cebd52c16fba25665dba84a2bfe1",
+      "status": 200,
+      "url": "https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/ORF19_Assembly22_mapping.tab"
+    },
+    "primary_identity": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/remaining-phi-39403939-fulltext.json",
+        "sha256": "e003a7c8e012e2bfbe76422fe89a58ab85ea2ef37d9089f7cfd1c1f575ff10a1"
+      },
+      "last_modified": null,
+      "release": null,
+      "retrieved_at": "2026-10-08T13:16:54.296679+00:00",
+      "sha256": "350caea7b9e8e9e599f6e670628674f21c975e2b7ba6769fd7fe53ac993dbaac",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11485852/fullTextXML"
+    },
+    "readme": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/cgd-albicans-feature-readme-2026-10-09.json",
+        "sha256": "a42c41bd961cfd5edcb70de580687b616a1cdb13bfeb154afcabecf26ae2a8da"
+      },
+      "last_modified": "Sun, 04 Oct 2026 04:01:12 GMT",
+      "release": null,
+      "retrieved_at": "2026-10-09T05:39:50.449007+00:00",
+      "sha256": "bb433989d9a36b51807664d8a02ebc11153fcefed636a6cce8ad405b85350554",
+      "status": 200,
+      "url": "https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/README"
+    },
+    "taxonomy": [
+      {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/request-7c397babddc1327428ebb5b06370508431e61493117fd6e5b58de7eda0804577.json",
+          "sha256": "9f6188cbdd981bf38e6e6ef64ec60f44d0000dcd77c65d46d14aee8304d0e9a0"
+        },
+        "last_modified": null,
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:32.998940+00:00",
+        "sha256": "f8497b30125f28bfe598a321aad98d24c008d56f2e8ce9c6db8ef6ffcda76f7e",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/5476"
+      },
+      {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/request-ac4b1724ccccec8ef27ec669d7755fe12398cdb72853f39023db7b09f727315f.json",
+          "sha256": "f0563c7f3c2b4d17a741ebe86416924c49c1b78aa2f60e2db4a52d8dc04f2ff4"
+        },
+        "last_modified": null,
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:43.807271+00:00",
+        "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/237561"
+      }
+    ],
+    "uniprot": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/request-940ca884d40a1a6228729ee29437921fa9124e5ecb445f8e29e337be8a5b9bde.json",
+        "sha256": "60b4c0021ad9f3fd58ff2ab8eced67ea9ec744aa7264131b33c083d40ce3dd62"
+      },
+      "last_modified": null,
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T13:18:53.532983+00:00",
+      "sha256": "4e416bf458cc9c0a79d9fa10687dc77b8fa61bb998b1748861d3618527ccb4fc",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene%3Aorf19.1588+OR+gene%3Aorf19.9161+OR+gene%3ASDH8%29+AND+organism_id%3A237561&format=json&size=100"
+    }
+  },
+  "review_after": {
+    "path": "curation/phibase_grounding_reviews.json",
+    "sha256": "47e4c1aba10bd711a318ffbc0ff5a66cd94acedb9e9967194688f66a421f08c9"
+  },
+  "review_before": {
+    "path": "reports/resistance-grounding-2026-10-07/sdh8-before-reviews.json",
+    "sha256": "97ccea2b6202dd6029c2257d15b44f3701ed358fd1c1a565c6fa4b45f9a04b94"
+  },
+  "reviewed_on": "2026-10-09",
+  "source_rows": [
+    {
+      "identifier": "CHEBI:46081",
+      "row_sha256": "c6aebb57526938ad3ff75835d58bf1a33b1056fd17dc349ad144c3ea16613a39"
+    }
+  ],
+  "status": "REFERENCE_ALIAS_VERIFIED_NOT_EXPERIMENTAL_ALLELE",
+  "taxonomy": {
+    "237561": {
+      "parent": {
+        "commonName": "Yeast",
+        "scientificName": "Candida albicans",
+        "taxonId": 5476
+      },
+      "rank": "strain",
+      "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "taxonId": 237561
+    },
+    "5476": {
+      "parent": {
+        "scientificName": "Candida",
+        "taxonId": 5475
+      },
+      "rank": "species",
+      "scientificName": "Candida albicans",
+      "taxonId": 5476
+    }
+  }
+}
