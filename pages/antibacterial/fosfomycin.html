@@ -112,6 +112,10 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 </div>
 
+<h2>Related pathway records</h2>
+<p class="meta">Evidence-qualified relationships to a pinned corpus revision.</p>
+<p><a href="https://culturebotai.github.io/PathwayMech/pages/records/WikiPathways_WP5060.html">PathwayMech: WikiPathways:WP5060</a><span class="pill plain">TARGETS_PATHWAY_COMPONENT</span><br>PMID:8994972 establishes the E. coli MurA–fosfomycin complex. The linked E. coli pathway contains MurA (UniProtKB:P0A749); this links the target to its pathway, not the drug to every step.<br>
+<span class="meta">Source revision: <code>aa305727458c44ab05614901334540e2c87a9f3a</code></span></p>
 <h2>Molecular targets</h2>
 <p class="meta">The molecular entity or process this compound acts on. Each target
 carries evidence — this is a mechanistic claim, not a classification.</p>
@@ -123,7 +127,20 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 <h3>UDP-N-acetylglucosamine enolpyruvyl transferase (MurA) <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">A 1.8-angstrom E. coli MurA cocrystal directly showed fosfomycin covalently bound to active-site Cys115 alongside UDP-GlcNAc. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 1996-12 (retrieved 2026-09-02).</p>
-<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><ul class="plain evidence">
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><div class="table-scroll" role="region" aria-label="UDP-N-acetylglucosamine enolpyruvyl transferase (MurA) organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>UDP-N-acetylglucosamine 1-carboxyvinyltransferase <code class="curie">UniProtKB:P0A749</code></td>
+    <td>murA</td>
+    <td><em>Escherichia coli (strain K12)</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/8994972">PMID:8994972</a></span> <span class="meta">(Primary fosfomycin-MurA cocrystal (DOI:10.1016/S0969-2126(96)00153-0).)</span></li>
 </ul>
 
@@ -754,6 +771,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">ADD_PATHWAY_LINKS</span>
+    <span class="meta">2026-10-05 · codex · LLM-assisted</span>
+    <p>Added reviewed PathwayMech relationships and any supported protein example from curation/pathway_links.yaml; organism and evidence limits are recorded in each basis.</p>
   </li>
 </ol>
 

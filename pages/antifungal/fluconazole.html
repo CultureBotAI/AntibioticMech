@@ -127,6 +127,10 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 </div>
 
+<h2>Related pathway records</h2>
+<p class="meta">Evidence-qualified relationships to a pinned corpus revision.</p>
+<p><a href="https://culturebotai.github.io/PathwayMech/pages/records/gomodel_YeastPathways_PWY-6074-1.html">PathwayMech: gomodel:YeastPathways_PWY-6074-1</a><span class="pill plain">RELATED_PATHWAY_ACTIVITY</span><br>PMID:10991846 studies Candida ERG responses to fluconazole and identifies Erg11/lanosterol demethylase as its target. The linked S. cerevisiae zymosterol pathway contains Erg11. Cross-organism enzyme/pathway context, not identity of the Candida and S288C experiments.<br>
+<span class="meta">Source revision: <code>aa305727458c44ab05614901334540e2c87a9f3a</code></span></p>
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
@@ -136,7 +140,7 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">2 observations &middot; <a href="fluconazole/activity-1.html">Browse all observations</a> &middot; <a href="fluconazole/record-d1df2ae983868280d3e34a4e8ca3e9a48173d52a9a9531b9356e56bf8260b777.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">2 observations &middot; <a href="fluconazole/activity-1.html">Browse all observations</a> &middot; <a href="fluconazole/record-563b80ee66b3789e19e5b2d3e5240384bf02559f00bf18f299ed65667171df88.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -1076,6 +1080,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
   <li>
+    <span class="pill">ADD_PATHWAY_LINKS</span>
+    <span class="meta">2026-10-05 · codex · LLM-assisted</span>
+    <p>Added reviewed PathwayMech relationships and any supported protein example from curation/pathway_links.yaml; organism and evidence limits are recorded in each basis.</p>
+  </li>
+  <li>
     <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
     <span class="meta">2026-10-08 · codex · LLM-assisted</span>
     <p>Applied 18 pinned subject-context reviews, retaining reference-locus grounding while withholding unverified experimental protein/strain identifiers. Source alterations, phenotypes, species, genes, and existing activities unchanged. Refreshed provenance checksums on any previously reviewed claims. ERG11 parent, replicate and clinical-donor contexts remain separate.</p>
@@ -1194,6 +1203,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
     <span class="meta">2026-10-09 · codex · LLM-assisted</span>
     <p>Resolved the Posteraro primary-paper subject as BPY22.17, retaining source spelling BYP22 in provenance. Withheld unverified protein and taxonomy assignments; source resistance assertion, alteration, phenotype, assay and other evidence unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">RECONCILED_BRANCH_CURATION</span>
+    <span class="meta">2026-10-11 · codex · LLM-assisted</span>
+    <p>Integrated main&#39;s reviewed PathwayMech links with the resistance-grounding checkpoint; retained both committed event histories and all resistance and activity evidence.</p>
   </li>
 </ol>
 

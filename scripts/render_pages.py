@@ -320,6 +320,13 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         for event in (doc.get("curation_history") or [])
     ]
 
+    related_records = []
+    for link in doc.get("related_records") or []:
+        row = dict(link)
+        if row.get("corpus") == "PathwayMech":
+            slug = row["identifier"].replace(":", "_").replace("/", "_")
+            row["url"] = f"https://culturebotai.github.io/PathwayMech/pages/records/{slug}.html"
+        related_records.append(row)
     identifier = doc["identifier"]
     return {
         "identifier": identifier,
@@ -350,6 +357,7 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
         ],
         "source_concepts": doc.get("source_concepts") or [],
         "molecular_targets": molecular_targets,
+        "related_records": related_records,
         "mode_of_action": doc.get("mode_of_action"),
         "mode_of_action_notes": doc.get("mode_of_action_notes"),
         "mode_of_action_target_scope": doc.get("mode_of_action_target_scope"),

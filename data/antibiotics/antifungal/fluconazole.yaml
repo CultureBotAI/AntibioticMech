@@ -3927,6 +3927,13 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-05T17:40:27Z'
+  curator: codex
+  action: ADD_PATHWAY_LINKS
+  changes: Added reviewed PathwayMech relationships and any supported protein example
+    from curation/pathway_links.yaml; organism and evidence limits are recorded in
+    each basis.
+  llm_assisted: true
 - timestamp: '2026-10-08T08:26:35Z'
   curator: codex
   action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
@@ -4088,6 +4095,13 @@ curation_history:
     spelling BYP22 in provenance. Withheld unverified protein and taxonomy assignments;
     source resistance assertion, alteration, phenotype, assay and other evidence unchanged.
   llm_assisted: true
+- timestamp: '2026-10-11T04:02:38Z'
+  curator: codex
+  action: RECONCILED_BRANCH_CURATION
+  changes: Integrated main's reviewed PathwayMech links with the resistance-grounding
+    checkpoint; retained both committed event histories and all resistance and activity
+    evidence.
+  llm_assisted: true
 activity_spectrum:
 - taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
@@ -4114,3 +4128,12 @@ activity_spectrum:
       historical interpretation, not current breakpoints.
   mic_qualifier: '>'
   activity: RESISTANT
+related_records:
+- corpus: PathwayMech
+  identifier: gomodel:YeastPathways_PWY-6074-1
+  relation: RELATED_PATHWAY_ACTIVITY
+  basis: PMID:10991846 studies Candida ERG responses to fluconazole and identifies
+    Erg11/lanosterol demethylase as its target. The linked S. cerevisiae zymosterol
+    pathway contains Erg11. Cross-organism enzyme/pathway context, not identity of
+    the Candida and S288C experiments.
+  source_version: aa305727458c44ab05614901334540e2c87a9f3a

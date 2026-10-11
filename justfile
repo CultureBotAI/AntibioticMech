@@ -307,3 +307,16 @@ embed-map *args:
 # The authoritative quality gate used both locally and in CI.
 qc:
     uv run --extra chemical-map python scripts/run_qc.py
+
+# Validate retained structured review bundles and their route/profile contract.
+review-check:
+    uv run python scripts/record_review.py check
+    uv run pytest -q tests/test_record_review_contract.py
+
+# Validate an assessed review before immutable persistence.
+review-validate +paths:
+    uv run python scripts/record_review.py validate {{paths}}
+
+# Save authoritative YAML and derived Markdown without staging or committing.
+review-save content:
+    uv run python scripts/record_review.py save --content {{content}}

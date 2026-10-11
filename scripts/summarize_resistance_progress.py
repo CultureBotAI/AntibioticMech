@@ -23,7 +23,7 @@ from seed_from_sources import (
 from antibioticmech.activity_collections import load_record
 
 INPUTS = {
-    "census": "research/2026-10-11-fr171456-resistance-grounding.tsv",
+    "census": "research/2026-10-11-pr-integration-resistance-grounding.tsv",
     "name_plan": "research/2026-10-08-resistance-alias-discovery-plan.json",
     "initial_searches": "research/2026-10-08-resistance-alias-discovery-candidates.json",
     "expansion": "research/2026-10-09-resistance-discovery-date-sort.json",
@@ -37,7 +37,7 @@ INPUTS = {
     "hivdb": "research/2026-10-07-hivdb-reference-grounding.json",
     "hivdb_inventory": "data/raw/hivdb_algorithm_terms.tsv",
 }
-PREFIX = "research/2026-10-11-fr171456-resistance-progress"
+PREFIX = "research/2026-10-11-pr-integration-resistance-progress"
 SCOPE = "PROGRESS_INDEX_NOT_PRIMARY_REVIEW_OR_EXPERIMENTAL_GROUNDING"
 IDENTITY = ("identifier", "label", "path", "standard_inchi_key", "class")
 

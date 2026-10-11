@@ -15,6 +15,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 COMMANDS = [
     (
+        "PathwayMech links",
+        [sys.executable, "scripts/check_pathway_links.py"],
+        "Cross-corpus links must resolve against the pinned PathwayMech index.",
+    ),
+    (
         "lint",
         [sys.executable, "-m", "ruff", "check", "."],
         "Fail fast on syntax, import, and style defects before expensive corpus checks.",

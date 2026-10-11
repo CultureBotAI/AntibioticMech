@@ -1,5 +1,35 @@
 # Curation
 
+## Cross-corpus pathway context
+
+`related_records` uses the governed `CrossCorpusLink` class. It is curator-owned
+and survives re-seeding. Each PathwayMech link records the exact record ID,
+the full commit in `conf/pathwaymech_pin.json`, and an evidence basis including
+organism limits. `TARGETS_PATHWAY_COMPONENT` connects a supported target to
+the pathway containing it. `RELATED_PATHWAY_ACTIVITY` is qualified biochemical
+context; it does not assert exact pathway identity, drug susceptibility of the
+linked organism, or inhibition of every reaction. Do not put either in `xrefs`.
+
+`conf/pathwaymech_index.json` is the byte-identical published index at the
+pinned commit; its SHA-256 is checked offline. `scripts/check_pathway_links.py`
+runs in QC and refuses unknown records, unsupported relations, empty bases,
+and mismatched source revisions. When refreshing, review the complete index
+and all existing link bases before updating the pin and record versions.
+
+The first reviewed plan is `curation/pathway_links.yaml`. Apply it with
+`python scripts/curate_pathway_links.py` (dry run), then `--apply --only
+CHEBI:28915` for the canary, inspect that record, and run `--apply`. The script
+uses `write_validated_antibiotic`, appends curation history only when changed,
+and refuses to overwrite a differing link or mutate source-owned targets.
+Fosfomycin's MurA example is grounded in UniProtKB:P0A749's organism and its
+PMID:8994972 / PDB:1UAE structure mapping, retrieved 2026-10-05. The parent
+target retains the primary compound-binding citation.
+
+The added cross-organism sterol links cite the primary Candida experiments
+in [PMID:10991846](https://pubmed.ncbi.nlm.nih.gov/10991846/); the carboxin
+activity link cites [PMID:4336692](https://pubmed.ncbi.nlm.nih.gov/4336692/).
+Their bases distinguish those experiments from the linked yeast record.
+
 ## The decision file
 
 `curation/decisions.tsv` is the curator's half of seeding. One row per source

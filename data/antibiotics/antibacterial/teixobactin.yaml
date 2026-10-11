@@ -135,3 +135,19 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-05T17:40:25Z'
+  curator: codex
+  action: ADD_PATHWAY_LINKS
+  changes: Added reviewed PathwayMech relationships and any supported protein example
+    from curation/pathway_links.yaml; organism and evidence limits are recorded in
+    each basis.
+  llm_assisted: true
+related_records:
+- corpus: PathwayMech
+  identifier: WikiPathways:WP5060
+  relation: RELATED_PATHWAY_ACTIVITY
+  basis: PMID:25561178 supports binding to lipid II/lipid III precursors. The linked
+    E. coli peptidoglycan pathway provides lipid-II process context. This does not
+    assert teixobactin activity against E. coli, a protein target, or equivalence
+    of lipid-III and peptidoglycan routes.
+  source_version: aa305727458c44ab05614901334540e2c87a9f3a
