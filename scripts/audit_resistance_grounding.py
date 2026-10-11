@@ -14,7 +14,7 @@ import time
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 import requests
 
@@ -35,14 +35,26 @@ def write(name, value):
     temporary.replace(target)
 
 
+def validate_cached_response(cached, url, params):
+    expected = urlparse(requests.Request("GET", url, params=params).prepare().url)
+    actual = urlparse(cached["url"])
+    if (cached["status"] != 200 or actual.fragment
+            or (actual.scheme, actual.netloc, actual.path) !=
+            (expected.scheme, expected.netloc, expected.path)
+            or parse_qs(actual.query, keep_blank_values=True) !=
+            parse_qs(expected.query, keep_blank_values=True)):
+        raise ValueError("cache response does not match the requested UniProt identity")
+    if digest(cached["body"].encode()) != cached["sha256"]:
+        raise ValueError("cache checksum mismatch")
+
+
 def fetch(path, params=None):
     url = "https://rest.uniprot.org/" + path
     key = digest(json.dumps([url, params], sort_keys=True).encode())
     target = OUT / ("request-" + key + ".json")
     if target.exists():
         cached = json.loads(target.read_text())
-        if digest(cached["body"].encode()) != cached["sha256"]:
-            raise ValueError("cache checksum mismatch")
+        validate_cached_response(cached, url, params)
         return cached
     if not ALLOW_NETWORK:
         raise ValueError("missing cached UniProt response; network is disabled")
@@ -69,6 +81,7 @@ def fetch(path, params=None):
     if digest(result["body"].encode()) != result["sha256"]:
         raise ValueError("response is not UTF-8")
     if response.status_code == 200:
+        validate_cached_response(result, url, params)
         write(target.name, result)
     time.sleep(0.15)
     return result

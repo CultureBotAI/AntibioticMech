@@ -225,6 +225,25 @@ def test_source_rows_cannot_change_after_inventory_read(inputs):
         review.load_reviews(inventory, rows, path)
 
 
+@pytest.mark.parametrize("reference", ["PMID:1", "PMID:", "DOI:", "DOI:garbage"])
+def test_review_reference_must_identify_a_paper_and_match_its_pmid(inputs, reference):
+    inventory, rows, path = inputs
+    document = json.loads(path.read_bytes())
+    document["reviews"][0]["reference"] = reference
+    path.write_text(json.dumps(document))
+    with pytest.raises(ValueError, match="reference"):
+        review.load_reviews(inventory, rows, path)
+
+
+def test_review_accepts_matching_source_pmid(inputs):
+    inventory, rows, path = inputs
+    document = json.loads(path.read_bytes())
+    decision = document["reviews"][0]
+    decision["reference"] = "PMID:" + decision["pmid"]
+    path.write_text(json.dumps(document))
+    assert review.load_reviews(inventory, rows, path)
+
+
 @pytest.mark.parametrize("values", [
     [], "gene_id", [None], ["gene_id", "gene_id"], ["taxon_id"],
     ["strain_taxon_id"], ["alteration"], ["protein_accession"],

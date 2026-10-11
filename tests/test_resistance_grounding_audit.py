@@ -5,6 +5,7 @@ import json
 import sys
 from pathlib import Path
 from types import SimpleNamespace
+from urllib.parse import urlencode
 
 import pytest
 
@@ -141,6 +142,62 @@ def test_missing_cache_does_not_enable_network(tmp_path, monkeypatch):
     monkeypatch.setattr(audit, "ALLOW_NETWORK", False)
     with pytest.raises(ValueError, match="network is disabled"):
         audit.fetch("taxonomy/1")
+
+
+@pytest.mark.parametrize("change", ["endpoint", "query", "duplicate", "origin", "fragment", "status", "body"])
+def test_cached_response_must_match_the_requested_identity(tmp_path, monkeypatch, change):
+    monkeypatch.setattr(audit, "OUT", tmp_path)
+    monkeypatch.setattr(audit, "ALLOW_NETWORK", False)
+    url = "https://rest.uniprot.org/uniprotkb/search"
+    parameters = {"query": "accession:PTEST", "format": "json"}
+    receipt = {"url": url + "?" + urlencode(parameters), "status": 200,
+               "body": "{}", "sha256": audit.digest(b"{}"), "headers": {}}
+    if change == "endpoint":
+        receipt["url"] = receipt["url"].replace("uniprotkb/search", "taxonomy/search")
+    elif change == "query":
+        receipt["url"] = receipt["url"].replace("PTEST", "OTHER")
+    elif change == "duplicate":
+        receipt["url"] += "&format=json"
+    elif change == "origin":
+        receipt["url"] = receipt["url"].replace("rest.uniprot.org", "example.org")
+    elif change == "fragment":
+        receipt["url"] += "#unverified"
+    elif change == "status":
+        receipt["status"] = 404
+    else:
+        receipt["body"] = '{"changed":true}'
+    key = audit.digest(json.dumps([url, parameters], sort_keys=True).encode())
+    audit.write("request-" + key + ".json", receipt)
+    with pytest.raises(ValueError, match="cache"):
+        audit.fetch("uniprotkb/search", parameters)
+
+
+def test_cache_accepts_equivalent_query_encoding_and_order(tmp_path, monkeypatch):
+    monkeypatch.setattr(audit, "OUT", tmp_path)
+    monkeypatch.setattr(audit, "ALLOW_NETWORK", False)
+    url = "https://rest.uniprot.org/uniprotkb/search"
+    parameters = {"query": "gene name", "format": "json"}
+    receipt = {"url": url + "?format=json&query=gene%20name", "status": 200,
+               "body": "{}", "sha256": audit.digest(b"{}"), "headers": {}}
+    key = audit.digest(json.dumps([url, parameters], sort_keys=True).encode())
+    audit.write("request-" + key + ".json", receipt)
+    assert audit.fetch("uniprotkb/search", parameters) == receipt
+
+
+def test_mismatched_successful_response_is_not_cached(tmp_path, monkeypatch):
+    monkeypatch.setattr(audit, "OUT", tmp_path)
+    monkeypatch.setattr(audit, "ALLOW_NETWORK", True)
+
+    def get(url, **kwargs):
+        assert url == "https://rest.uniprot.org/taxonomy/1"
+        assert kwargs["allow_redirects"] is False
+        return SimpleNamespace(url="https://rest.uniprot.org/taxonomy/2", status_code=200,
+                               text="{}", content=b"{}", headers={})
+
+    monkeypatch.setattr(audit.requests, "get", get)
+    with pytest.raises(ValueError, match="cache response"):
+        audit.fetch("taxonomy/1")
+    assert not list(tmp_path.iterdir())
 
 
 @pytest.mark.parametrize("failure", [audit.requests.Timeout, audit.requests.ConnectionError])

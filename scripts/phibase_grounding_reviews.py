@@ -6,6 +6,7 @@ import csv
 import hashlib
 import io
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -57,6 +58,11 @@ def load_reviews(inventory: Path, rows: list[dict], path: Path | None = DEFAULT_
                 or not review["reference"].startswith(("PMID:", "DOI:"))
                 or not review["source_url"].startswith("https://")):
             raise ValueError("invalid PHI-base review provenance")
+        reference = review["reference"]
+        if (not re.fullmatch(r"[1-9][0-9]*", review["pmid"])
+                or (reference.startswith("PMID:") and reference != "PMID:" + review["pmid"])
+                or (reference.startswith("DOI:") and not re.fullmatch(r"DOI:10\.[0-9]{4,9}/\S+", reference))):
+            raise ValueError("invalid or mismatched PHI-base review reference")
         review_ids.add(review["review_id"])
         for key in ("withhold", "locations"):
             values = review[key]
