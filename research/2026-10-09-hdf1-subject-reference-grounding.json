@@ -1,0 +1,370 @@
+{
+  "attribution": "Li et al. 2011, DOI:10.1094/MPMI-10-10-0233, author-affiliated USDA archive; PHI-base adopted export; UniProt Consortium release 2026_03, CC BY 4.0.",
+  "before_corpus_sha256": "f9c3484231d5d98874ced45e0c7b129084ac7c9f15e9f6e796a58503dbf63aac",
+  "before_review_sha256": "90bd6809de6f23d2bcf158fa04575816aa12ac2207c01bae405250bcf8151a70",
+  "changes": {
+    "byte_identical_records": 2918,
+    "changed_records": 21,
+    "checksum_only_claims": 181,
+    "new_scoped_claims": 1
+  },
+  "compound": {
+    "identifier": "CHEBI:16240",
+    "standard_inchi_key": "MHAJPDPJQMAIIY-UHFFFAOYSA-N"
+  },
+  "corpus_phi_scope": {
+    "identifier_scoped": 182,
+    "pending_associations": 35,
+    "pending_papers": 15,
+    "retained": 217
+  },
+  "limitations": [
+    "PH-1 is retained as original background provenance, not the tested-subject label.",
+    "I1RCN2 is an unreviewed PH-1 reference protein, not a YM1-specific accession.",
+    "The historical and current locus names are not asserted equivalent; gene_id remains empty.",
+    "The reported growth comparison is not normalized to MIC or clinical resistance.",
+    "Source alteration, phenotype, assay and other-source claims remain unchanged.",
+    "No new variant, sequence, construct, protocol, numeric measurement or genome was curated.",
+    "No NCBI endpoint, outreach, reuse clarification, source adoption or GitHub mutation.",
+    "Corpus-wide investigation and whole-record review remain incomplete; full QC is not claimed."
+  ],
+  "locus_crosswalk": {
+    "bounded_search": {
+      "exact_results": 0,
+      "interpretation": "No result for this query, not proof of gene absence.",
+      "query": "gene:FGSG_01353",
+      "spelling_suggestions_adopted": false
+    },
+    "paper_locus": "FGSG_01353",
+    "sequence_identity_inferred": false,
+    "status": "UNRESOLVED_AUTHORITATIVE_ALIAS_CROSSWALK",
+    "uniprot_locus": "FGRAMPH1_01T03337"
+  },
+  "primary_access": {
+    "citation_cache": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/remaining-phi-21138346-citation.json",
+      "cache_sha256": "577e43093ef0f390845d6da430f777c2b4008604accb9a5c25607c692a28f7ae",
+      "release": null,
+      "retrieved_at": "2026-10-08T13:14:58.184747+00:00",
+      "sha256": "adb80d9d37a02d5fac0fac337fdbf2af4ff6f53277445ccd8a79e71ce3f8bd85",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21138346+AND+SRC%3AMED&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+    },
+    "locations": [
+      "p. 488 Results: historical locus and designated subject",
+      "p. 489 Table 1: distinct parent, subject and comparator",
+      "p. 492 Figure 9C labels and caption: tested subject identity"
+    ],
+    "pdf": {
+      "bytes": 1047295,
+      "cache_path": "reports/resistance-grounding-2026-10-07/hdf1-2011-primary.pdf",
+      "headers": {
+        "Content-Type": "application/pdf",
+        "ETag": "\"803016ab59cacc1:0\"",
+        "Last-Modified": "Tue, 03 Jan 2012 20:52:55 GMT"
+      },
+      "metadata_sha256": "9ecbf9263e3a18be66b640495bad81a0d46834d3ef10d2dbe6822e378221547e",
+      "retrieved_at": "2026-10-09T00:11:29.994236+00:00",
+      "sha256": "5b3da878e874d79f8e47ef4d42895087c14b526e04edc59a9446b2504e1daed5",
+      "status": 200,
+      "url": "https://www.ars.usda.gov/ARSUserFiles/3041/2011%20Li%20mpmi-10-10-0233.pdf"
+    },
+    "reference": "DOI:10.1094/MPMI-10-10-0233",
+    "rendered_page_pins": [
+      {
+        "pdf_page": 2,
+        "printed_page": 488,
+        "sha256": "bc4207bacbcf1f18dd404f2bfa4c4e15c24f1190f30c2a2537a7f3bb4d5cb637"
+      },
+      {
+        "pdf_page": 3,
+        "printed_page": 489,
+        "sha256": "65acadd18526a065bc01a6788885a716600d104ca1b16a1b3692e00c16258053"
+      },
+      {
+        "pdf_page": 6,
+        "printed_page": 492,
+        "sha256": "64730dc2f7b44a0be2f0cab83de544ec7801173059e014e6063357640528e460"
+      }
+    ],
+    "review_method": "CACHED_PUBLISHED_PDF_TEXT_AND_VISUAL_IDENTITY_REVIEW",
+    "scope": "IDENTIFIER_CONTEXT_NOT_COMPLETE_PHENOTYPE_VALIDATION",
+    "text_sha256": "19e9c9fad9101bdd6180ac7b0cb5d41c9e76ae4698cbe11c137cadcf657f9540",
+    "visually_inspected_pages": [
+      488,
+      489,
+      492
+    ]
+  },
+  "protein": {
+    "entryAudit": {
+      "entryVersion": 85,
+      "firstPublicDate": "2012-06-13",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2012-06-13",
+      "sequenceVersion": 1
+    },
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "genes": [
+      {
+        "orfNames": [
+          {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "CEF73473.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "FGRAMPH1_01T03337"
+          }
+        ]
+      }
+    ],
+    "organism": {
+      "commonName": "Wheat head blight fungus",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "CEF73473.1",
+          "source": "EMBL"
+        },
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "UP000070720",
+          "source": "Proteomes"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Ascomycota",
+        "Pezizomycotina",
+        "Sordariomycetes",
+        "Hypocreomycetidae",
+        "Hypocreales",
+        "Nectriaceae",
+        "Fusarium"
+      ],
+      "scientificName": "Gibberella zeae (strain ATCC MYA-4620 / CBS 123657 / FGSC 9075 / NRRL 31084 / PH-1)",
+      "synonyms": [
+        "Fusarium graminearum"
+      ],
+      "taxonId": 229533
+    },
+    "primaryAccession": "I1RCN2"
+  },
+  "records": [
+    {
+      "after_sha256": "59d26dfb30b40d952d2bc99af5b189c9d2f4acb16c1a8e27f866a75338d668e6",
+      "before_sha256": "ce679a9e2034ab88fea88bb5020125e002a7d1d75f88c7bacab3055ced8bc3c1",
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml"
+    },
+    {
+      "after_sha256": "3216cf8f7b091894c75fc00c9617f03116a05c658603376ecd2458d009961f11",
+      "before_sha256": "d6135637c0879faa87132aae820e20d28be3c291bc009d940e0c0b81687f88af",
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml"
+    },
+    {
+      "after_sha256": "8b74325acd5f7377944ec81e4d1a3175e551963eb501deec47cf596265814bbf",
+      "before_sha256": "e6a7c03d5a800213342c1d5b7dc7ac2c50624987832fd93d03619de431b68c48",
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml"
+    },
+    {
+      "after_sha256": "7baef7469ed4ca333b2068356e578e4dd94cca2a486db7ecd9bc537f472a8899",
+      "before_sha256": "abf2fc62ded784a4219c9afb8c9f15fb37415f05ccf9c11f4ff2b9a6514190be",
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml"
+    },
+    {
+      "after_sha256": "4741016523441e1347ec9c7fde89fed342cc2a7e5404583bbc040e4e1a378bcc",
+      "before_sha256": "2eb7035b04594a5345b0ce9d08c5e6f294056125cba68cee6b0111fabac4a029",
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml"
+    },
+    {
+      "after_sha256": "aaef61d52fdfbc0c2c80d6dde4130b87571b3e92e347e0351b2de488ffad075a",
+      "before_sha256": "36e74b26a7b62d5c45c188915bba5bb0f2c9c40874595affc4c2109acdd72f6f",
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml"
+    },
+    {
+      "after_sha256": "b697d6d6f31740b120674aebb75fee3f9cfc17f742b2f1f57c857c6bb0f2d7d1",
+      "before_sha256": "a6ddf03605524eefb5e2c8d52a489c097c58807d47f51b7efc835fe0818ebf11",
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml"
+    },
+    {
+      "after_sha256": "2ea5801f5b7af007f24d7f800dbfc408f302f228aa8231d7a6d87faae43658c6",
+      "before_sha256": "751d7beb88d2fc0113eb0872ef1667658fa78ff88fe9a0e9ec1bbfe5d9e011c8",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml"
+    },
+    {
+      "after_sha256": "c7f13853d2e16f695800e9a4374064d4c14870f43e875dead9b22782cbdff43e",
+      "before_sha256": "83ec9df91a581b48956b0dcb9ca2343efd7f8fc98c2fbadd2b6dbb4f9ab1dbc9",
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml"
+    },
+    {
+      "after_sha256": "b5d082498c720e165d6beeb502b7c3371a8499a5948ddd183bc0193b215a843d",
+      "before_sha256": "c2ddac60b1aa83cf1dae95e2e82a0bc0ab643e94527ec4e2378016f76e1f994b",
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml"
+    },
+    {
+      "after_sha256": "824a9ece19665d794beabc3c8b13d60906ea705607f604658d75d06e42385589",
+      "before_sha256": "2940f3e5139465954d1781f2321370fcaeda6bfc8f18011b8d4896605dc023be",
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml"
+    },
+    {
+      "after_sha256": "5e4431a70ca9d9f034b0a3e9ecc96cec7b13f1bf2d105f40b79f2f0a64a4579a",
+      "before_sha256": "d655532051a88e0ee8a9cb5ed41d5b3cd0879b9139eb8590fdc2a8bfd17dc3d0",
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml"
+    },
+    {
+      "after_sha256": "7089cf1d4a6b5bf78c781afb9637238a7e74adfaebc6df656644009f4f225d80",
+      "before_sha256": "321b8cbd47fb49033a4b74ad663dac593ee6d2fc302ead73df5bddaa0b5279f2",
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml"
+    },
+    {
+      "after_sha256": "545829385b6c12cb9469cdc60d69871ccb53390eefd6ebd4bf582377d2a7452b",
+      "before_sha256": "79cf801dcee95e16dad1477d57d1374e4e42500d9c5c251bbc60e8216ae4ec21",
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml"
+    },
+    {
+      "after_sha256": "9ab8d2496077ba941357503167afa0b82c24c0dae829ecb5f1c5bcb9414aaefe",
+      "before_sha256": "15937252c91509619114dc43d94e215a301a928959464a4605a189e41ba7a366",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml"
+    },
+    {
+      "after_sha256": "1899882ee12541213d4b201744b4970e65d6b50eea4627a4aa09b3ac26f79fa6",
+      "before_sha256": "8e96b07e9ab872c8c64b71b2f120584c5f5845b58dbac7049aed30c3fd2268fb",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml"
+    },
+    {
+      "after_sha256": "49c2be6cbfaa0ca98686526955594d599ece391a7a1ca9be78f32511edc2656e",
+      "before_sha256": "b34634902bd6c484cee3d55e8fc3f62fe8ee23596ace78eeb58644998658991b",
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml"
+    },
+    {
+      "after_sha256": "01610eb6d318af8deec3026482e234c0748e92faf1e09ed5d2d51f6fa59f71d9",
+      "before_sha256": "db9e8bfd2dc380ef2ff8e2e5a64bff9a6a82484935e17aa3638a84289b583258",
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml"
+    },
+    {
+      "after_sha256": "00202aa61ad3a4f29714679930891c85e6624dff1beaefe80103194064e721b8",
+      "before_sha256": "38b448556384d588c6dc87ef102c21d1ffe20afda0f5040bcca0f9d4fc4b7abf",
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml"
+    },
+    {
+      "after_sha256": "4d2f6b943011c857e0dd7bebd1087c52da311128084d180c3a27229d98e3a31a",
+      "before_sha256": "f1134e9a45eea95544499787f68dfa0a097b08b7bf2e8bf600301fca7821a95f",
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml"
+    },
+    {
+      "after_sha256": "94de2141eb504d35266c242c01f36390ffb55b57776c15c680542d11372e213d",
+      "before_sha256": "4e6d415a04c1efab11cb935ede2ad2ed33e789ed671af082ceccd2bd35f8746e",
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml"
+    }
+  ],
+  "review_sha256": "bee5200cd616ceabd55021ed5c43e9ad650ea545707f1207592c806b9878afb8",
+  "reviewed_on": "2026-10-09",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_rows": [
+    {
+      "identifier": "CHEBI:16240",
+      "row_sha256": "a591c301ebb65b88b35145347e1d65c34234d6c9220d309bdb9bc2cbd1aef8a9"
+    }
+  ],
+  "status": "SUBJECT_LABEL_CURATED_REFERENCE_LOCUS_ALIAS_AND_EXPERIMENTAL_ACCESSIONS_UNRESOLVED",
+  "subject_context": {
+    "comparator_subject": "YM11",
+    "experimental_accessions_assigned": false,
+    "source_background_label": "PH-1",
+    "tested_subject": "YM1"
+  },
+  "taxonomy": {
+    "229533": {
+      "parent": {
+        "commonName": "Wheat head blight fungus",
+        "scientificName": "Gibberella zeae",
+        "synonyms": [
+          "Fusarium graminearum"
+        ],
+        "taxonId": 5518
+      },
+      "rank": "strain",
+      "scientificName": "Gibberella zeae (strain ATCC MYA-4620 / CBS 123657 / FGSC 9075 / NRRL 31084 / PH-1)",
+      "synonyms": [
+        "Fusarium graminearum"
+      ],
+      "taxonId": 229533
+    },
+    "5518": {
+      "parent": {
+        "scientificName": "Fusarium sambucinum species complex",
+        "taxonId": 569360
+      },
+      "rank": "species",
+      "scientificName": "Gibberella zeae",
+      "synonyms": [
+        "Fusarium graminearum"
+      ],
+      "taxonId": 5518
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-e0adae475d496d535b213a40df5906deab73f9163010084b203ca1ccfbf83b54.json",
+      "cache_sha256": "99ec75628cb6d7241af7850e770ac5c5ffae00875115cc8c6a7925f5eeaeb840",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:04:47.436600+00:00",
+      "sha256": "ca8e94a43d1062b986cf6b6711139733dd1948d40d506d8f1032cca0929585e1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AE9R5G2+OR+accession%3AF9X9V6+OR+accession%3AF9XH52+OR+accession%3AG2XFG4+OR+accession%3AG4N021+OR+accession%3AG4NE45+OR+accession%3AG8B7T4+OR+accession%3AI1RAE5+OR+accession%3AI1RCN2+OR+accession%3AI1RJR2+OR+accession%3AI1RPK0+OR+accession%3AI1S9X9+OR+accession%3AL2FD62+OR+accession%3AL2FQR9+OR+accession%3AN0A5G3&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-3f789375d311f00135899d5556b7203c0fa994132446e131c6e3e215a77bab7e.json",
+      "cache_sha256": "40a7a92b13b4df4f8169304a3bdf9bf182ffd9554975d575188cb967a5c5c75e",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:36.127446+00:00",
+      "sha256": "d7ea97d17d6a045ea7da87df4a94add330bd993ade96117c71b5dca0c973cb9d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5518"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-6bd68ecae369102087f2743c12dbe4acfb922c193e8ddbc19f817fe68b2550f5.json",
+      "cache_sha256": "c348b59f45381322ca362da40e09cf51d0204fe4ab9cc8e7fd3b6f8498b07673",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:43.052441+00:00",
+      "sha256": "d93023fefb154eb9e10d4518e70460198b5fb75dec06e7dd2a674d3615073def",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/229533"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/hdf1-historical-locus-uniprot.json",
+      "cache_sha256": "b5a84d703ec36e457a02bb318fe0dab0eb4891be92800f2f84cc4fa8befb0969",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T00:11:41.279277+00:00",
+      "sha256": "0f4fe67436681e55583eebbbea6d762e6904a0182e97abf07cc7d7ae4311209c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene%3AFGSG_01353&format=json&size=25&fields=accession%2Cid%2Cgene_names%2Corganism_id%2Corganism_name%2Creviewed"
+    }
+  ]
+}

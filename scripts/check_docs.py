@@ -143,8 +143,8 @@ def render_block(stats: dict) -> str:
     graphs = stats["mechanism"].get("causal_graphs", 0)
     moa = stats["mechanism"].get("mode_of_action", 0)
     lines.append(f"Mechanism layer: **{targets}** records carry a molecular target and "
-                 f"**{resistance}** carry resistance determinants or associations seeded "
-                 "from CARD and PHI-base; "
+                 f"**{resistance}** carry source-imported or curated resistance determinants "
+                 "or associations; "
                  f"**{moa}** carry a mode of action; "
                  f"**{graphs}** carry a curated causal graph. That last number is the work.")
     lines.append("")

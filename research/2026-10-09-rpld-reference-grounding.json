@@ -1,0 +1,403 @@
+{
+  "attribution": "CARD/ARO CC BY 4.0 ontology; UniProt Consortium release 2026_03, CC BY 4.0; Mauffrey et al., PLOS ONE (2024), CC BY.",
+  "candidate_interpretation": {
+    "exact_organism_empty_is_gene_absence": false,
+    "experimental_accessions_assigned": false,
+    "representative_selected": false,
+    "selection_basis": "Reviewed exact-gene query within the named species taxonomy, not an explicit CARD cross-reference.",
+    "shared_uniparc_is_experimental_identity": false
+  },
+  "limitations": [
+    "Reference gene symbols and loci do not identify experimental resistance alleles or genomes.",
+    "Reviewed status and HAMAP annotations do not independently establish measured resistance.",
+    "Shared species or UniParc metadata does not join these references to a clinical activity or tested subject.",
+    "Two results complete this reviewed-gene query, not all proteins, alleles, or literature.",
+    "Historical CARD-linked candidate totals and primary-review statuses are unchanged.",
+    "No new sequences, variants, constructs, protocols or quantitative resistance observations exported.",
+    "No NCBI request, source adoption, outreach, paid research or GitHub mutation occurred.",
+    "The corpus-wide investigation remains incomplete; no biological record curation is justified by this identity-only pass."
+  ],
+  "ontology_conflict": {
+    "definition_product": "50S ribosomal protein L4",
+    "definition_sha256": "ff6e9187adee9735256e2f3c112e0f36c4aec711bfcb92ac9f4385f5e17503df",
+    "historical_audits": [
+      {
+        "path": "research/2026-10-09-card-term-scope.json",
+        "sha256": "4de3f3c046e5f6822d0ed738906baf20089c712edaf493e32fff5551af040acd"
+      },
+      {
+        "path": "research/2026-10-09-card-named-taxa.json",
+        "sha256": "9aec094dbd14d5e6b913477e1bee57acec8c5b5fd672c16dde5a513a282e2b91"
+      }
+    ],
+    "historical_entity_scope": "RNA_TERM_NOT_A_PROTEIN_PRODUCT",
+    "interpretation": "Named ancestry conflicts with protein identity; it is not evidence that rplD encodes RNA.",
+    "named_parent_ids": [
+      "ARO:3005001"
+    ],
+    "ontology_request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/aro-term-scope-aro.owl-0225daaf01b1336fc6e866989b4835b89afa40d8.json",
+        "sha256": "bc6f97f0667de538177bae19f6369248065624c226c9e9e87dead18b1f5cd64e"
+      },
+      "release": null,
+      "retrieved_at": "2026-10-09T03:46:12.617393+00:00",
+      "sha256": "0207b9156898d011cff6397a1cf5b0e178ce7806222c73de875b57a0d0e6b6fc",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/arpcard/aro/0225daaf01b1336fc6e866989b4835b89afa40d8/aro.owl"
+    },
+    "rna_ancestor_path": [
+      "ARO:3004956",
+      "ARO:3005001",
+      "ARO:3005003",
+      "ARO:3000328"
+    ],
+    "upstream_ontology_changed": false
+  },
+  "preservation": {
+    "biological_record_changes": 0,
+    "census": {
+      "path": "reports/resistance-grounding-2026-10-09-fouche/corpus.json",
+      "sha256": "aff98c4a67039e03422f2bb17f114b45f6928df8b291bea53ad554a13b85ce3e"
+    },
+    "curation_events_added": 0,
+    "protected_files_verified": 6458,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-07/rpld-reference-protected-files.json",
+      "sha256": "2c316818b26378b2746767083f12cd443ee9bfc147ab3bb76ae1662957ccf659"
+    },
+    "record_hashes_verified": 2939,
+    "record_path_search_includes_ignored": true
+  },
+  "primary_identity_context": {
+    "doi": "10.1371/journal.pone.0306695",
+    "finding": "The introduction distinguishes rplD-encoded L4 protein from rrl-encoded ribosomal RNA.",
+    "normalized_paragraph_sha256": "420726b4d49a150d8a5ce0ab957804ac50ede52d4de20cce01c42c59254daf4a",
+    "paragraph_anchor": "article1.body1.sec1.p2",
+    "phenotype_or_allele_validation": false,
+    "publication_date": "2024-07-16",
+    "publisher_request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/rpld-mauffrey-2024-publisher.json",
+        "sha256": "6b121cda864a0bdeb1c712e4a89deeccc4359fb4e02698220b122ae3ddf2cf5b"
+      },
+      "release": null,
+      "retrieved_at": "2026-10-09T05:23:41.887686+00:00",
+      "sha256": "850dff545ec6559c78bf608b57a1fcedf515fa4480b89cea2a79f17e71ca939c",
+      "status": 200,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0306695"
+    },
+    "review_scope": "GENE_PRODUCT_IDENTITY_PROSE_ONLY",
+    "section": "Introduction",
+    "tables_or_supplements_reviewed": false,
+    "title": "Impact of mutations in the mtrR, rpdlVD and rrl genes on azithromycin resistance in Neisseria gonorrhoeae"
+  },
+  "reference_candidates": [
+    {
+      "card_cross_references": [],
+      "citation_context": {
+        "citation": {
+          "citationCrossReferences": [
+            {
+              "database": "PubMed",
+              "id": "18586945"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1128/jb.00566-08"
+            }
+          ],
+          "citationType": "journal article",
+          "id": "18586945",
+          "publicationDate": "2008",
+          "title": "Complete genome sequence of Neisseria gonorrhoeae NCCP11945."
+        },
+        "primary_reference_reviewed": false,
+        "reference_comments": [
+          {
+            "type": "STRAIN",
+            "value": "NCCP11945"
+          }
+        ]
+      },
+      "metadata": {
+        "entryAudit": {
+          "entryVersion": 89,
+          "sequenceVersion": 1
+        },
+        "entryType": "UniProtKB reviewed (Swiss-Prot)",
+        "genes": [
+          {
+            "geneName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000255",
+                  "id": "MF_01328",
+                  "source": "HAMAP-Rule"
+                }
+              ],
+              "value": "rplD"
+            },
+            "orderedLocusNames": [
+              {
+                "value": "NGK_2437"
+              }
+            ]
+          }
+        ],
+        "organism": {
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati",
+            "Pseudomonadota",
+            "Betaproteobacteria",
+            "Neisseriales",
+            "Neisseriaceae",
+            "Neisseria"
+          ],
+          "scientificName": "Neisseria gonorrhoeae (strain NCCP11945)",
+          "taxonId": 521006
+        },
+        "primaryAccession": "B4RQX9",
+        "proteinDescription": {
+          "alternativeNames": [
+            {
+              "fullName": {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000305"
+                  }
+                ],
+                "value": "50S ribosomal protein L4"
+              }
+            }
+          ],
+          "recommendedName": {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000255",
+                  "id": "MF_01328",
+                  "source": "HAMAP-Rule"
+                }
+              ],
+              "value": "Large ribosomal subunit protein uL4"
+            }
+          }
+        }
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXPERIMENTAL_ALLELE",
+      "taxonomy": {
+        "active": true,
+        "parent": {
+          "scientificName": "Neisseria gonorrhoeae",
+          "taxonId": 485
+        },
+        "rank": "strain",
+        "scientificName": "Neisseria gonorrhoeae (strain NCCP11945)",
+        "taxonId": 521006
+      },
+      "taxonomy_request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/request-2cc87c0f575c6cbb1e86fad72a2c9f154263518abff89f9930b2964cef3ebc0b.json",
+          "sha256": "ae04442da619224f115ecfae7e26ec14cf247a39414f0b0f17c96e857b8dff41"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T05:23:38.372649+00:00",
+        "sha256": "23fe7344addad5f505866236354d63cfb1911be798ddc745c5cb1251522b2f90",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/521006"
+      },
+      "uniparc_id": "UPI00004CE837"
+    },
+    {
+      "card_cross_references": [],
+      "citation_context": {
+        "citation": {
+          "citationType": "submission",
+          "id": "CI-92V2JQAJ25B4S",
+          "publicationDate": "MAR-2003",
+          "submissionDatabase": "EMBL/GenBank/DDBJ databases",
+          "title": "The complete genome sequence of Neisseria gonorrhoeae."
+        },
+        "primary_reference_reviewed": false,
+        "reference_comments": [
+          {
+            "type": "STRAIN",
+            "value": "ATCC 700825 / FA 1090"
+          }
+        ]
+      },
+      "metadata": {
+        "entryAudit": {
+          "entryVersion": 104,
+          "sequenceVersion": 1
+        },
+        "entryType": "UniProtKB reviewed (Swiss-Prot)",
+        "genes": [
+          {
+            "geneName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000255",
+                  "id": "MF_01328",
+                  "source": "HAMAP-Rule"
+                }
+              ],
+              "value": "rplD"
+            },
+            "orderedLocusNames": [
+              {
+                "value": "NGO_1837"
+              }
+            ]
+          }
+        ],
+        "organism": {
+          "lineage": [
+            "Bacteria",
+            "Pseudomonadati",
+            "Pseudomonadota",
+            "Betaproteobacteria",
+            "Neisseriales",
+            "Neisseriaceae",
+            "Neisseria"
+          ],
+          "scientificName": "Neisseria gonorrhoeae (strain ATCC 700825 / FA 1090)",
+          "taxonId": 242231
+        },
+        "primaryAccession": "Q5F5S8",
+        "proteinDescription": {
+          "alternativeNames": [
+            {
+              "fullName": {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000305"
+                  }
+                ],
+                "value": "50S ribosomal protein L4"
+              }
+            }
+          ],
+          "recommendedName": {
+            "fullName": {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000255",
+                  "id": "MF_01328",
+                  "source": "HAMAP-Rule"
+                }
+              ],
+              "value": "Large ribosomal subunit protein uL4"
+            }
+          }
+        }
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXPERIMENTAL_ALLELE",
+      "taxonomy": {
+        "active": true,
+        "parent": {
+          "scientificName": "Neisseria gonorrhoeae",
+          "taxonId": 485
+        },
+        "rank": "strain",
+        "scientificName": "Neisseria gonorrhoeae (strain ATCC 700825 / FA 1090)",
+        "taxonId": 242231
+      },
+      "taxonomy_request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/request-9b322643d8d3ae1ed259217179f5e5b7a238ad39c91c70efb09cbb89bdb1dbe1.json",
+          "sha256": "fcad9c2ed345c7bf318d2881fd137bd9637594a58538fa45bd9e01c3680a37eb"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T05:23:37.458854+00:00",
+        "sha256": "e35baf1594d44bb0e32d85f6b27b19084c68251838b6e3d32e71e5aa61f85543",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/242231"
+      },
+      "uniparc_id": "UPI00004CE837"
+    }
+  ],
+  "reviewed_on": "2026-10-09",
+  "searches": [
+    {
+      "accessions": [],
+      "complete_for_query": true,
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "gene_exact:rplD AND organism_id:485 AND reviewed:true",
+        "size": "100",
+        "sort": "accession asc"
+      },
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/request-acfd55723203a0a503ff2c5cbfbd51196e8189fc7f32119503cadcb573e1ae4a.json",
+          "sha256": "4daa061c1889043b5cf325ec75bc2bb4c92c7755c2564265cc29303333a0e0f5"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T05:20:17.943379+00:00",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ArplD+AND+organism_id%3A485+AND+reviewed%3Atrue&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 0
+    },
+    {
+      "accessions": [
+        "B4RQX9",
+        "Q5F5S8"
+      ],
+      "complete_for_query": true,
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "gene_exact:rplD AND taxonomy_id:485 AND reviewed:true",
+        "size": "100",
+        "sort": "accession asc"
+      },
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-07/request-efc250b460f554dfe72772dc260e6abae71ba4456db8cc7d02790e47ab5ebf5c.json",
+          "sha256": "1406be3cce0f2578f5af3baace2e1880e31bb6f416ec4e4dc69a705808fe8737"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T05:22:14.081679+00:00",
+        "sha256": "ba992e48fd9a05b67c208779afd293f5ee5db89ddc135fc5b26e4c0e78bef64d",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ArplD+AND+taxonomy_id%3A485+AND+reviewed%3Atrue&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 2
+    }
+  ],
+  "source_claim": {
+    "aro_id": "ARO:3004956",
+    "assertion_count": 1,
+    "clinical_activity_join": "NOT_ESTABLISHED",
+    "experimental_subject_join": "NOT_ESTABLISHED",
+    "identifier": "CHEBI:2955",
+    "named_organism_taxon_id": "NCBITaxon:485",
+    "primary_resistance_review": "PENDING",
+    "record": {
+      "path": "data/antibiotics/antibacterial/azithromycin.yaml",
+      "sha256": "4b52c1720423a2814b1b59cf2eb0364c8326e8137cde5cf772189957954c28a1"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_row": {
+      "antibiotic_id": "ARO:3000158",
+      "antibiotic_name": "azithromycin",
+      "determinant_id": "ARO:3004956",
+      "determinant_name": "Neisseria gonorrhoeae rpld",
+      "mechanism": "ANTIBIOTIC_TARGET_ALTERATION",
+      "mechanism_source_id": "ARO:0001001",
+      "relation": "confers_resistance_to_antibiotic"
+    },
+    "source_row_sha256": "ffe935dd6e4ab4959d884e84f12c7cff3cc60996b151c10561071bb538e8c295",
+    "standard_inchi_key": "MQTOSJVFKKJCRP-BICOPXKESA-N"
+  },
+  "status": "PROTEIN_PRODUCT_IDENTITY_SUPPORTED_EXPERIMENTAL_GROUNDING_PENDING"
+}

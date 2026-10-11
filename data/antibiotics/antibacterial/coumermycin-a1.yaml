@@ -124,6 +124,28 @@ resistance_mechanisms:
   - reference: ARO:3003318
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000150 (coumermycin
       A1); database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: ParYR-associated reduced susceptibility to coumermycin A1
+  gene_families:
+  - parYR
+  taxon_id: NCBITaxon:1916
+  taxon_label: Streptomyces lividans
+  phenotype_label: reduced coumermycin A1 susceptibility in a laboratory host
+  assay: Qualitative source-reported laboratory-host growth comparison
+  note: The comparison concerns laboratory derivatives of the TK24 background, not
+    native-donor susceptibility or species-wide resistance. NCBITaxon:457428 denotes
+    the TK24 background, not the experimental derivative. The reported donor is Streptomyces
+    rishiriensis DSM 40489. UniProtKB:Q83WB8 is reference-only (entry version 120,
+    sequence version 2); the archive succession does not establish the exact experimental
+    allele. The 2003 study leaves ParY enzymatic function unresolved. No induced point
+    mutant, clinical category, numerical AST, derivative TaxID or experimental genome
+    is assigned. Compound scope follows the source's named structure in Figure 1A,
+    not independent re-identification of the tested preparation.
+  evidence:
+  - reference: PMID:12604514
+    notes: Relevant publisher-indexed Results text was inspected before the later
+      article request returned 403; native Figure 1A was visually inspected separately.
+      Native Table 2 and complete paper review remain open.
 molecular_targets:
 - target_id: ARO:3000023
   target_label: aminocoumarin sensitive parE
@@ -231,3 +253,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-10T02:21:00Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added one qualitative primary-backed ParYR-associated host susceptibility
+    finding; preserved donor/host/reference distinctions and all existing source slices.
+    No exact allele, numerical AST or genome assigned. Whole-record review remains
+    open.
+  llm_assisted: true

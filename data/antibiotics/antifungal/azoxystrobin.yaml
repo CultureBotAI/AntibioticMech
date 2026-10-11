@@ -137,39 +137,59 @@ resistance_mechanisms:
   taxon_label: Ustilaginoidea virens
   strain: P1
   alteration: Pks1delta (deletion)
-  protein_accession: UniProtKB:A0A8E5ME34
   phenotype_id: PHIPO:0000388
   phenotype_label: resistance to azoxystrobin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fungal-2026-p1-reference-context:
+    P1 is the parental background, not a unique tested derivative. A0A8E5ME34 carries
+    species-level taxonomy and a reference locus, not an independently established
+    P1-derived experimental allele. The paper''s IC50 endpoint is not converted to
+    MIC. Source labels and biological fields remain unchanged; no new protein, TaxID,
+    genome or activity measurement is assigned. Reference-only source identifiers:
+    protein_accession=UniProtKB:A0A8E5ME34.'
   evidence:
   - reference: PMID:41745253
     notes: PHI-base primary-literature antimicrobial interaction PHIG:11363; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.3390/jof12020111
+    notes: 'Identifier-scope review: Results section sec3dot5dot5-jof-12-00111: separate
+      parental and derivative comparisons; Table 1, Parent identity in sec2dot1-jof-12-00111,
+      UniProtKB release 2026_03: A0A8E5ME34 entry 17, sequence version 1; species-level
+      taxonomy and reference locus. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: Mdm10delta (deletion) associated with resistance to azoxystrobin
   taxon_id: NCBITaxon:117187
   taxon_label: Fusarium verticillioides
   strain: M3125
-  strain_taxon_id: NCBITaxon:334819
   alteration: Mdm10delta (deletion)
-  protein_accession: UniProtKB:W7MZ22
   phenotype_id: PHIPO:0000388
   phenotype_label: resistance to azoxystrobin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fungal-2025-azoxystrobin-parent-context:
+    M3125 is the parent background, distinct from the tested derivatives. W7MZ22 and
+    TaxID 334819 identify M3125 / FGSC 7600 reference context, not an exact experimental
+    allele or derivative. Table 1 reports EC50, not MIC; no clinical interpretation
+    or activity measurement is inferred. Source labels and biological fields are retained.
+    Exact subject protein, strain TaxID and genome remain unresolved. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:334819; protein_accession=UniProtKB:W7MZ22.'
   evidence:
   - reference: PMID:40934067
     notes: PHI-base primary-literature antimicrobial interaction PHIG:10867; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1080/21505594.2025.2555419
+    notes: 'Identifier-scope review: Results section s0003-s2006: separate parental
+      and derivative comparisons; Table 1, UniProtKB release 2026_03: W7MZ22 entry
+      46, sequence version 1; M3125 / FGSC 7600 reference taxonomy. Reviewed 2026-10-08
+      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cytb(G143A) (amino acid mutation) [Not assayed] associated with resistance
     to azoxystrobin
@@ -217,19 +237,31 @@ resistance_mechanisms:
   taxon_label: Botrytis cinerea
   strain: NJ11
   alteration: tubA(M233I) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:P53373
   phenotype_id: PHIPO:0000388
   phenotype_label: resistance to azoxystrobin
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fungal-2015-azoxystrobin-cooccurrence-context:
+    NJ11 is the parent background, distinct from the separately tested derivatives.
+    The paper reports azoxystrobin-resistant isolates in all tested phenotype groups,
+    including the parent; this co-occurrence does not establish an allele-specific
+    azoxystrobin effect. P53373 is source-reference context, not an exact subject
+    allele. Source biological fields are retained but not independently validated
+    by this identity review. EC50 is not MIC; no activity measurement or genome is
+    assigned. Reference-only source identifiers: protein_accession=UniProtKB:P53373.'
   evidence:
   - reference: PMID:26596626
     notes: PHI-base primary-literature antimicrobial interaction PHIG:2781; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1038/srep16881
+    notes: 'Identifier-scope review: Results: Cross resistance; Table 5, Results:
+      parent versus separately tested derivatives, UniProtKB release 2026_03: P53373
+      entry 113, sequence version 1; species-level taxonomy and reference deposits.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -259,3 +291,88 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T14:40:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped source protein and reference-strain identifiers to provenance after
+    primary-paper review; parent labels, source biological claims and gene IDs retained.
+    No experimental allele, genome or activity measurement inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:42Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:48Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:23Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

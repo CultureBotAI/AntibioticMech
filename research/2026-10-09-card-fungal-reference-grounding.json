@@ -1,0 +1,535 @@
+{
+  "attribution": "CARD curation team, ARO CC BY 4.0; UniProt Consortium, release 2026_03, CC BY 4.0; primary evidence: Yamada et al. (2017), MacPherson et al. (2005).",
+  "curated": false,
+  "limitations": [
+    "Neither reference is promoted to an exact CARD mapping or tested resistant allele.",
+    "No source assertion is deleted solely for missing ancestry, a source spelling, or a susceptible label.",
+    "No new numeric resistance measurements, sequences, variant specifications, constructs or protocols are exported.",
+    "No NCBI request, source adoption, outreach, paid research, GitHub mutation or biological curation occurred.",
+    "All 2939 records remain in scope; this does not complete any whole-record primary review."
+  ],
+  "name_resolutions": {
+    "Arthroderma vanbreuseghemii": {
+      "candidates": [
+        {
+          "active": true,
+          "exact_name_fields": [],
+          "other_name_match_only": true,
+          "rank": "species",
+          "scientific_name": "Trichophyton mentagrophytes",
+          "taxon_id": "NCBITaxon:523103"
+        }
+      ],
+      "named_organism_taxon_id": null,
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-4eca5bc791db37a8f4436fcf17cbf1865b307274b52b044b36cf2fff27dcab9a.json",
+          "sha256": "d55c382f4f1bbe27535ebaae8f502766fef5a15d3db2757de235055ad1767eb7"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:24:51.650560+00:00",
+        "sha256": "10a083f3a7edcbc6f0e839a7789bd5e8ae7b0413b24eea5a413b71175bd716bb",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Arthroderma+vanbreuseghemii%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "status": "NO_EXACT_ACTIVE_SPECIES_NAME"
+    },
+    "Candida albicans": {
+      "candidates": [
+        {
+          "active": true,
+          "exact_name_fields": [
+            "scientificName"
+          ],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Candida albicans",
+          "taxon_id": "NCBITaxon:5476"
+        },
+        {
+          "active": true,
+          "exact_name_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Candida tropicalis",
+          "taxon_id": "NCBITaxon:5482"
+        },
+        {
+          "active": true,
+          "exact_name_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Candida albicans x Candida dubliniensis",
+          "taxon_id": "NCBITaxon:888834"
+        }
+      ],
+      "named_organism_taxon_id": "NCBITaxon:5476",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-47d9299fe36ce9577c04c798d538cabe8da5a26b684e426ff2e0512b177329fc.json",
+          "sha256": "3cc4bf475151504d0de7eece9dd526727fcab8ff333e4bb66460bfaae66a1e16"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:06.232015+00:00",
+        "sha256": "2d32ea8fadc9e294a93d529ea95a0b32294095dc084e95e6045d95b12ed7469a",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Candida+albicans%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "status": "EXACT_SPECIES_NAME_RESOLVED"
+    },
+    "Trichophyton interdigitale": {
+      "candidates": [
+        {
+          "active": true,
+          "exact_name_fields": [
+            "scientificName"
+          ],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Trichophyton interdigitale",
+          "taxon_id": "NCBITaxon:101480"
+        }
+      ],
+      "named_organism_taxon_id": "NCBITaxon:101480",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-331ab22694b83504bf3f6f551dc040aff2aab849f17d9bcbd6b74448f58248f7.json",
+          "sha256": "bb1c8a79fd6a09af787b0219e6b963459cfa001af77daab99653476f6f6177b2"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:05.468330+00:00",
+        "sha256": "88ae9294cdf3012e0df6b8a104fcf00bb46b112d42d303ae5d9b731376173fcb",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Trichophyton+interdigitale%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "status": "EXACT_SPECIES_NAME_RESOLVED"
+    },
+    "Trichophyton rubrum": {
+      "candidates": [
+        {
+          "active": true,
+          "exact_name_fields": [
+            "scientificName"
+          ],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Trichophyton rubrum",
+          "taxon_id": "NCBITaxon:5551"
+        },
+        {
+          "active": true,
+          "exact_name_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Trichophyton sp. 'rubrum var. granulare'",
+          "taxon_id": "NCBITaxon:278712"
+        }
+      ],
+      "named_organism_taxon_id": "NCBITaxon:5551",
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-96c5b502bf6b726af3eecfbecce35f42c8fd5040ed58400414b4263f501c4e5f.json",
+          "sha256": "4bcdf8ad1c482669e09398f1aa43347db2ea33c2cdc0f38abc8731fb4a3b9284"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:04.666850+00:00",
+        "sha256": "aca2ead0996841cb3546bf93109a833db0b2874184a2e3b817bb92b59a3a72df",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Trichophyton+rubrum%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "status": "EXACT_SPECIES_NAME_RESOLVED"
+    },
+    "Trychophyton rubrum": {
+      "candidates": [],
+      "named_organism_taxon_id": null,
+      "release": "2026_03",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-dcf2cae98ddf822927ff2fcef696b8d5d9f7c3a7d1b932cc8f6a5859bdd4f6ff.json",
+          "sha256": "1d1f34bf813e201892df71b811176aab9c4df1323edc7ca469539ecbb77fa408"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:03.927245+00:00",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Trychophyton+rubrum%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "status": "NO_EXACT_ACTIVE_SPECIES_NAME"
+    }
+  },
+  "ontology": {
+    "bytes": 12743305,
+    "retrieved_at": "2026-10-09T03:46:12.617393+00:00",
+    "sha256": "0207b9156898d011cff6397a1cf5b0e178ce7806222c73de875b57a0d0e6b6fc",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/arpcard/aro/0225daaf01b1336fc6e866989b4835b89afa40d8/aro.owl"
+  },
+  "ontology_cache": {
+    "path": "reports/resistance-grounding-2026-10-07/aro-term-scope-aro.owl-0225daaf01b1336fc6e866989b4835b89afa40d8.json",
+    "sha256": "bc6f97f0667de538177bae19f6369248065624c226c9e9e87dead18b1f5cd64e"
+  },
+  "preservation": {
+    "biological_record_changes": 0,
+    "census": {
+      "path": "reports/resistance-grounding-2026-10-09-papulacandins/corpus.json",
+      "sha256": "07afc1e49a810be5cadbdd66b87488bac27e51682117e135a897c0da6bafe3b2"
+    },
+    "curation_events_added": 0,
+    "existing_protected_files_unchanged": 6550,
+    "ignored_files_included": true,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-09-card-fungal/protected-before.json",
+      "sha256": "49c1c142bbca944adb771f9e76fca4f304d55cb13fd736af94de5f2fd7a57d56"
+    },
+    "record_hashes_verified": 2939
+  },
+  "primary_context": [
+    {
+      "clinical_species": [
+        "Trichophyton rubrum",
+        "Trichophyton interdigitale"
+      ],
+      "doi": "10.1128/AAC.00115-17",
+      "experimental_host_source_name": "Arthroderma vanbreuseghemii",
+      "figures_visually_inspected": false,
+      "finding": "Clinical associations and experiments in a separate host are distinct evidence. A donor/reference protein name does not identify the tested host or an experimental allele.",
+      "limitations": [
+        "The paper's private draft genome is not a public assembly assignment.",
+        "Some phenotypes were not determined; similar reported genotypes need not have identical outcomes.",
+        "Exact tested chemical form and figure-level verification remain unresolved in this follow-up."
+      ],
+      "native_primary_file_cached": false,
+      "paper_reference_locus": "TERG_05717",
+      "reference": "PMID:28416557",
+      "reference_protein_ids_in_paper": [
+        "EGD89476",
+        "EZF33561"
+      ],
+      "review_medium": "PUBLISHER_INDEXED_PRIMARY_TEXT",
+      "reviewed_on": "2026-10-09",
+      "source_locations": [
+        "Results: clinical-isolate and SQLE analyses",
+        "Table 1",
+        "Methods: strain context"
+      ],
+      "url": "https://journals.asm.org/doi/full/10.1128/aac.00115-17"
+    },
+    {
+      "doi": "10.1128/AAC.49.5.1745-1752.2005",
+      "experimental_background_label": "SGY-243",
+      "figures_visually_inspected": false,
+      "finding": "Experiments concern SGY-243 derivatives, not automatic SC5314 assignments. Drug susceptibility is context-dependent; gene presence alone does not establish resistance.",
+      "limitations": [
+        "The source background has multiple alleles; no single tested allele is identified here.",
+        "The organism-unspecified CARD term cannot be resolved uniquely to this Candida reference.",
+        "A citation and similar locus labels are reference context, not an exact experimental crosswalk."
+      ],
+      "native_primary_file_cached": false,
+      "paper_locus": "orf19.391",
+      "reference": "PMID:15855491",
+      "review_medium": "PUBLISHER_INDEXED_PRIMARY_TEXT",
+      "reviewed_on": "2026-10-09",
+      "source_gene": "UPC2",
+      "source_locations": [
+        "Methods: strains",
+        "Results: UPC2 identity and drug susceptibility"
+      ],
+      "species": "Candida albicans",
+      "species_taxon_id": "NCBITaxon:5476",
+      "uniprot_locus_label": "CaO19.391",
+      "url": "https://journals.asm.org/doi/10.1128/aac.49.5.1745-1752.2005"
+    }
+  ],
+  "primary_review_complete": false,
+  "protein_searches": [
+    {
+      "complete_for_query": true,
+      "query": "EGD89476",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-9e372900ab68543b6893e2ce4102d3a8f38ffc3e7c7d84d3f68217a7ed49b6ab.json",
+          "sha256": "60380e38c30570005782a24d8ab2fa84db5e578282c01f2df9088ad13f36d637"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:25:08.444655+00:00",
+        "sha256": "5a751003f6d2587c559cebf62ffc5639d279d80dccfa9d2da2d6af1d00aaac7c",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=EGD89476&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_cgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 1,
+      "zero_results_establish_absence": false
+    },
+    {
+      "complete_for_query": true,
+      "query": "EZF33561",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-dc73c3a2853550abd256e32971a1a24c0135a24bbb1ea5ac787d70eca258e89e.json",
+          "sha256": "80f83e902ad4e403a147be2ef11d86a892609666774a319f9cfd84e2d9b487bd"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:16.172287+00:00",
+        "sha256": "92322da41c198b59f23ab9b0d2b74df76baabd4f049074e337b95a0488a932e8",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=EZF33561&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_cgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 0,
+      "zero_results_establish_absence": false
+    },
+    {
+      "complete_for_query": true,
+      "query": "gene_exact:orf19.391",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-dc6e8ba44026316daeae325b74e8d950edad89893fabf7a1f04aa3f599ad1ea1.json",
+          "sha256": "025f8be78eb50f5c0ec935495aa59cb0b9ef4a572e912e0e8ad42531342a7b6c"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:16.951568+00:00",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aorf19.391&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_cgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 0,
+      "zero_results_establish_absence": false
+    },
+    {
+      "complete_for_query": true,
+      "query": "gene_exact:UPC2 AND taxonomy_id:5476 AND reviewed:true",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-6ea5c464849d545719d4c54934390377a75c76f6fe3759f24b479b813b78ec29.json",
+          "sha256": "c868a501a6e7c7758ec1f26d7aadbf1d9352aefa4727f95b885f6152c66b7778"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:42.512622+00:00",
+        "sha256": "90ebd67c8d552e50937c1de6a84e02ce325ba0aab595bd42fc989e9908c5a16f",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AUPC2+AND+taxonomy_id%3A5476+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_cgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 1,
+      "zero_results_establish_absence": false
+    }
+  ],
+  "records": [
+    {
+      "identifier": "CHEBI:46081",
+      "label": "fluconazole",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "sha256": "bd5894aec023b96096dbdf0c728d0d30365b1b783262a6a81573512aaffb8502",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N"
+    },
+    {
+      "identifier": "CHEBI:9448",
+      "label": "terbinafine",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml",
+      "sha256": "aab25ee2ca5756c78a8ee21afae480a8d6ab4e6b204984eb545056dbb0346a98",
+      "standard_inchi_key": "DOMXUEMWDBAQBQ-WEVVVXLNSA-N"
+    }
+  ],
+  "reference_proteins": [
+    {
+      "archive_protein_ids": [
+        "EGD89476.1"
+      ],
+      "cgd_ids": [],
+      "cites_macpherson_2005": false,
+      "cites_yamada_2017": false,
+      "entry_version": 56,
+      "exact_card_term_mapping": false,
+      "experimental_assignment": false,
+      "gene_symbols": [],
+      "protein_accession": "UniProtKB:F2STB6",
+      "reference_loci": [
+        "TERG_05717"
+      ],
+      "reference_organism": "Trichophyton rubrum (strain ATCC MYA-4607 / CBS 118892)",
+      "reference_taxon_id": "NCBITaxon:559305",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-9e372900ab68543b6893e2ce4102d3a8f38ffc3e7c7d84d3f68217a7ed49b6ab.json",
+          "sha256": "60380e38c30570005782a24d8ab2fa84db5e578282c01f2df9088ad13f36d637"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:25:08.444655+00:00",
+        "sha256": "5a751003f6d2587c559cebf62ffc5639d279d80dccfa9d2da2d6af1d00aaac7c",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=EGD89476&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_cgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": false,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "selection_basis": "EXPLICIT_ARCHIVE_PROTEIN_CROSS_REFERENCE_AND_PAPER_LOCUS",
+      "sequence_version": 1
+    },
+    {
+      "archive_protein_ids": [
+        "AOW26484.1"
+      ],
+      "cgd_ids": [
+        "CAL0000191743"
+      ],
+      "cites_macpherson_2005": true,
+      "cites_yamada_2017": false,
+      "entry_version": 123,
+      "exact_card_term_mapping": false,
+      "experimental_assignment": false,
+      "gene_symbols": [
+        "UPC2"
+      ],
+      "protein_accession": "UniProtKB:Q59QC7",
+      "reference_loci": [
+        "CAALFM_C108460CA",
+        "CaO19.391",
+        "CaO19.8021"
+      ],
+      "reference_organism": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-6ea5c464849d545719d4c54934390377a75c76f6fe3759f24b479b813b78ec29.json",
+          "sha256": "c868a501a6e7c7758ec1f26d7aadbf1d9352aefa4727f95b885f6152c66b7778"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:42.512622+00:00",
+        "sha256": "90ebd67c8d552e50937c1de6a84e02ce325ba0aab595bd42fc989e9908c5a16f",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AUPC2+AND+taxonomy_id%3A5476+AND+reviewed%3Atrue&format=json&size=100&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_cgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "selection_basis": "SPECIES_GENE_AND_CITATION_REFERENCE_CANDIDATE_NOT_EXPERIMENTAL_IDENTITY",
+      "sequence_version": 1
+    }
+  ],
+  "reference_taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:5551",
+      "rank": "strain",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-4c7fad1b665f3addbab679dd3e9a7f7c1855a4ab81a3633af092d4c0255eac9e.json",
+          "sha256": "01af2609b03f8aceec60a761a291474e9c8ef17cacf817d6906cf9885a316072"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:26:46.101976+00:00",
+        "sha256": "58db28ebc807c2c5c5c0b7b7bf4902eb9c47758457a4923690fbcffb8cd8cd3f",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559305"
+      },
+      "scientific_name": "Trichophyton rubrum (strain ATCC MYA-4607 / CBS 118892)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559305"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:5476",
+      "rank": "strain",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-card-fungal/request-ac4b1724ccccec8ef27ec669d7755fe12398cdb72853f39023db7b09f727315f.json",
+          "sha256": "eac1de43523d81eb312d42192dc4c6a3f341b2732c17a1022c9b57bb887870d6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:27:13.502660+00:00",
+        "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/237561"
+      },
+      "scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:237561"
+    }
+  ],
+  "review_findings": [
+    {
+      "disposition": "ADDRESSED: ontology restrictions and source inventory agree; all three assertions retained.",
+      "finding": "Missing determinant ancestry does not negate explicit source resistance edges.",
+      "id": "F1"
+    },
+    {
+      "disposition": "ADDRESSED: literal queries remain unresolved; paper names are separately queried.",
+      "finding": "The source Trychophyton spelling and an otherNames-only match cannot pass exact-name gates.",
+      "id": "F2"
+    },
+    {
+      "disposition": "OPEN_SOURCE_AMBIGUITY: retain the source edge; do not infer a resistant or susceptible allele.",
+      "finding": "The antifungal susceptible Upc2 label does not identify a species or susceptibility context.",
+      "id": "F3"
+    },
+    {
+      "disposition": "ADDRESSED: both UniProt entries and strain TaxIDs remain reference-only.",
+      "finding": "Reference strains, clinical species and laboratory hosts are not interchangeable.",
+      "id": "F4"
+    },
+    {
+      "disposition": "ADDRESSED: EZF33561 remains unresolved; UPC2 was found by a separately recorded query.",
+      "finding": "A zero-hit identifier query is not evidence that a protein or gene is absent.",
+      "id": "F5"
+    }
+  ],
+  "scope": "THREE_EXISTING_CARD_ANCESTRY_FLAGS_NOT_COMPLETE_RECORD_REVIEW",
+  "sequences_or_variant_specifications_exported": false,
+  "source_inventory": {
+    "path": "data/raw/aro_resistance_edges.tsv",
+    "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+  },
+  "source_term_scope": {
+    "path": "research/2026-10-09-card-term-scope.json",
+    "sha256": "4de3f3c046e5f6822d0ed738906baf20089c712edaf493e32fff5551af040acd"
+  },
+  "status": "REFERENCE_GROUNDED_SOURCE_AMBIGUITIES_RETAINED",
+  "terms": {
+    "ARO:3009269": {
+      "decision": "HOLD_SOURCE_REPLACEMENT_AND_EXPERIMENTAL_ASSIGNMENTS",
+      "determinant_ancestor_path": null,
+      "exact_protein_assignment": null,
+      "named_parent_ids": [
+        "ARO:3009268"
+      ],
+      "primary_review_complete": false,
+      "record_id": "CHEBI:9448",
+      "source_antibiotic_id": "ARO:3007507",
+      "source_assertion_retained": true,
+      "source_definition_sha256": "8453a07ccc130a7999c04b169529fcd931e772a0abe3824f6a43c3d1ee8c0d83",
+      "source_label": "Arthroderma vanbreuseghemii squalene epoxidase enzyme with mutations associated with resistance to terbinafine",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "source_row_sha256": "9d8c0fbaa9f858b67c67c5bf3a2e70bdd1cf32011f6d685660ba1cab76c42cef"
+    },
+    "ARO:3009270": {
+      "decision": "HOLD_SOURCE_REPLACEMENT_AND_EXPERIMENTAL_ASSIGNMENTS",
+      "determinant_ancestor_path": null,
+      "exact_protein_assignment": null,
+      "named_parent_ids": [
+        "ARO:3009268"
+      ],
+      "primary_review_complete": false,
+      "record_id": "CHEBI:9448",
+      "source_antibiotic_id": "ARO:3007507",
+      "source_assertion_retained": true,
+      "source_definition_sha256": "8453a07ccc130a7999c04b169529fcd931e772a0abe3824f6a43c3d1ee8c0d83",
+      "source_label": "Trychophyton rubrum squalene epoxidase enzyme with mutations associated with resistance to terbinafine",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "source_row_sha256": "025eebf0cc7158a6dcf56cedada1ea1b42d7c78f67c3bbe588b4ba7a76665761"
+    },
+    "ARO:3009638": {
+      "decision": "HOLD_SOURCE_REPLACEMENT_AND_EXPERIMENTAL_ASSIGNMENTS",
+      "determinant_ancestor_path": null,
+      "exact_protein_assignment": null,
+      "named_parent_ids": [
+        "ARO:3009363"
+      ],
+      "primary_review_complete": false,
+      "record_id": "CHEBI:46081",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_assertion_retained": true,
+      "source_definition_sha256": "d0f65f13c003696cebf7d5384c529b293265101e0b56c4ab319ee700f72f19bf",
+      "source_label": "antifungal susceptible Upc2",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "source_row_sha256": "facf1bd09bab134e607bcbf1341a008d45c17512c4a7fb5ec4a52393e2f152fa"
+    }
+  },
+  "uniprot_release": "2026_03"
+}

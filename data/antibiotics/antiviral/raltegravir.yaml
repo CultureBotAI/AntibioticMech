@@ -798,16 +798,51 @@ evidence:
   notes: Primary short-course randomized clinical antiviral-activity study of MK-0518.
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
-  label: HIV-1 integrase Q148H/G140S and N155H resistance pathways
+  label: PFV integrase S217H biochemical raltegravir resistance model
   gene_families:
-  - HIV-1 integrase
-  note: Homologous substitutions in the prototype foamy virus structural model reduced
-    raltegravir sensitivity in vitro; mutant structures showed the active-site rearrangements
-    required to accommodate the inhibitor.
+  - retroviral integrase
+  taxon_id: NCBITaxon:11963
+  taxon_label: Human spumaretrovirus
+  alteration: S217H
+  protein_accession: UniProtKB:P14350
+  phenotype_label: reduced biochemical sensitivity to raltegravir
+  assay: Biochemical integrase inhibition assay
+  note: PFV model; HIV-1 Q148H/G140S is comparative context, not this allele. P14350
+    is the reference Pro-Pol polyprotein containing integrase, not a mutant-specific
+    accession. Source integrase numbering retained without conversion to polyprotein
+    coordinates. No whole-virus phenotype, clinical resistance call, strain TaxID
+    or genome inferred.
   evidence:
   - reference: PMID:21030679
-    notes: Primary cocrystal and mutant-sensitivity study with explicit homologous-model
-      scope.
+    notes: Results and Discussion; Figure 3. PFV biochemical model.
+  - reference: UniProtKB:P14350
+    notes: Reference identity via PDB:3OYK; sequence version 2, release 2026_03.
+  - reference: https://rest.uniprot.org/taxonomy/11963
+    notes: Active identifier, rank no rank, not a species-level assignment. Retrieved
+      2026-10-08 UTC.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: PFV integrase N224H biochemical raltegravir resistance model
+  gene_families:
+  - retroviral integrase
+  taxon_id: NCBITaxon:11963
+  taxon_label: Human spumaretrovirus
+  alteration: N224H
+  protein_accession: UniProtKB:P14350
+  phenotype_label: reduced biochemical sensitivity to raltegravir
+  assay: Biochemical integrase inhibition assay
+  note: PFV model; HIV-1 N155H is comparative context, not this allele. P14350 is
+    the reference Pro-Pol polyprotein containing integrase, not a mutant-specific
+    accession. Source integrase numbering retained without conversion to polyprotein
+    coordinates. No whole-virus phenotype, clinical resistance call, strain TaxID
+    or genome inferred.
+  evidence:
+  - reference: PMID:21030679
+    notes: Results and Discussion; Figure 3. PFV biochemical model.
+  - reference: UniProtKB:P14350
+    notes: Reference identity via PDB:3OYM; sequence version 2, release 2026_03.
+  - reference: https://rest.uniprot.org/taxonomy/11963
+    notes: Active identifier, rank no rank, not a species-level assignment. Retrieved
+      2026-10-08 UTC.
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -837,3 +872,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
     Upstream retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-08T04:43:17Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_MODEL
+  changes: Separated the existing PFV biochemical-model observations; grounded reference
+    protein and taxonomy without assigning the model to HIV-1 subjects. Preserved
+    all HIVDB score rules.
+  llm_assisted: true

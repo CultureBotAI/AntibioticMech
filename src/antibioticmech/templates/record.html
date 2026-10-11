@@ -236,9 +236,8 @@ without a method is not an observation — every row here carries an assay.</p>
 
 {% if r.resistance_groups %}
 <h2>Resistance mechanisms</h2>
-<p class="meta">{{ r.resistance_mechanisms|length }} known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">{{ r.resistance_mechanisms|length }} source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 {% for g in r.resistance_groups %}
 <details class="details-group"{% if loop.index0 == 0 %} open{% endif %}>
   <summary>{{ g.mechanism_type }} <span class="pill plain">{{ g.rows|length }}</span></summary>

@@ -234,6 +234,43 @@ exists in one protein in one lineage, so on `ResistanceMechanism` the accession
 is the most precise honest identifier available. Same identifier type, opposite
 rule, for a reason.
 
+PHI-base identifier reviews live in `curation/phibase_grounding_reviews.json`.
+They pin both the complete adopted inventory and each reviewed row. The seeder
+can withhold `taxon_id`, `strain_taxon_id`, and `protein_accession` when
+primary evidence identifies them as reference context rather than experimental
+subject identity. It retains the original IDs as explicitly reference-only
+provenance, the source organism/strain labels, alteration, phenotype and citation.
+An optional `misassigned` list distinguishes a wrong `taxon_id`, `protein_accession` or
+`gene_id` from a valid reference identifier. Its entries must also be in
+`withhold`; withholding `gene_id` requires this explicit rejection. Rejected
+identifiers remain in labeled provenance, never as reference proteins for the
+claim. Supported reference crosswalks belong in the review note unless the
+exact experimental subject is independently resolved. An optional `subject_strain`
+can replace a source background label with the tested derivative's name explicitly
+established in primary evidence. It requires withholding any nonempty source
+`strain_taxon_id`; an absent source ID stays absent. The original background
+label remains in provenance. When primary evidence establishes that the label
+is only a background for multiple subjects and does not support one replacement,
+`withhold_strain: true` removes it from the subject slot while retaining the
+original label in provenance. This is mutually exclusive with `subject_strain`,
+requires a nonempty source label, and requires withholding any nonempty source
+`strain_taxon_id`; an unexpected seeded strain ID is rejected. It does not
+choose a representative derivative, merge source rows, or assert strain absence.
+An optional `subject_taxon` object supplies a
+verified replacement `taxon_id` (numeric string) and `taxon_label` when primary
+evidence establishes a different species. It must explicitly reject the source
+`taxon_id` as misassigned and withhold every nonempty source identifier, including
+protein, gene and strain IDs; the original organism label remains in provenance.
+This prevents reference identifiers from following a claim across species. Each
+decision still pins the exact source row and citation. It does not mint a strain
+identifier, replace a protein accession, or alter the source phenotype or allele.
+No replacement identifier or biological claim is inferred by the review loader.
+Unknown fields, stale pins, ambiguous rows and unsupported removals fail closed.
+The raw source inventory is unchanged; normal seeding and corpus reproduction
+apply the review. Missing subject IDs remain unresolved, not inferred from a
+reference organism. This does not constitute whole-record review or a new AST
+observation.
+
 **An activity claim** is the strictest of the three: an `ActivityObservation`
 requires evidence, and a reported MIC or disk-diffusion diameter requires its
 units and the assay that produced it. A definition sentence supplies none of

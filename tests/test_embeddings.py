@@ -53,6 +53,7 @@ def test_the_document_omits_every_field_the_audit_says_it_omits():
 
     assert "widgetmycin" in doc
     assert "A widget antibiotic" in doc
+    assert "antibacterial agent" in doc
     assert "protein synthesis inhibition" in doc          # the VALUE is in
     assert "host shared target" in doc
 
@@ -62,6 +63,22 @@ def test_the_document_omits_every_field_the_audit_says_it_omits():
     # The boilerplate specifically, not merely the note field's absence.
     assert "Not a curator's mechanistic review" not in doc
     assert "Assigned from ChEBI role" not in doc
+
+
+def test_map_text_avoids_unbound_class_quality_claims():
+    import re
+
+    template = REPO_ROOT / "src/antibioticmech/templates/map.html"
+    page = REPO_ROOT / "pages/map.html"
+    for path in (template, page):
+        text = path.read_text(encoding="utf-8")
+        assert "without the projection being told them" not in text
+        assert not re.search(r"<strong>\s*\d+(?:\.\d+)?%\s*</strong>", text)
+        assert "Proximity means" in text
+    documentation = (REPO_ROOT / "docs/HARMONIZATION.md").read_text(encoding="utf-8")
+    assert "Class labels are among the embedded annotations" in documentation
+    assert "not independent validation" in documentation
+    assert "without being told them" not in documentation
 
 
 def test_a_document_never_collapses_to_nothing():

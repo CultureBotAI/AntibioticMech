@@ -1,0 +1,446 @@
+{
+  "attribution": "PMID 33106269 authors and supplementary Table S1, CC BY 4.0; UniProt Consortium release 2026_03, CC BY 4.0; EMBL-EBI Europe PMC and ENA.",
+  "biological_record_changes": 0,
+  "curation_events_added": 0,
+  "date": "2026-10-09",
+  "github_mutations": 0,
+  "limitations": [
+    "The five selected transporter-associated identifiers are not five independently established resistance determinants.",
+    "UniProt names and taxon annotations remain database assertions, not experimental evidence.",
+    "No-hit queries do not establish protein, gene or biological absence.",
+    "No reference accession is promoted to the study's tested allele or genome.",
+    "The earlier chemical-representation hold is unchanged; no exact-compound resistance claim is added.",
+    "No sequences, variants, constructs, primers, coordinates, protocols or numerical susceptibility results are exported."
+  ],
+  "network": {
+    "hosts": [
+      "www.ebi.ac.uk",
+      "rest.uniprot.org"
+    ],
+    "ncbi_endpoint_requests": 0,
+    "new_requests": 4,
+    "outreach": 0
+  },
+  "previous_checkpoint": {
+    "path": "research/2026-10-09-peptide-reference-followup.json",
+    "sha256": "2ba117b0a53249a7adca62327d70e93a80f710ca310fefcb22a55d96d42a185b"
+  },
+  "primary_source": {
+    "doi": "10.1128/aac.01734-20",
+    "label_discrepancy": "Results section s2.1 refers to Table S3; the accession table is labelled Table S1 on page 1 of the retrieved supplement. Neither label is silently corrected.",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "native_main_figures_visually_reviewed": false,
+    "other_supplement_pages_visually_reviewed": false,
+    "page_visually_inspected": 1,
+    "pdf": {
+      "path": "reports/resistance-grounding-2026-10-09-lugdunin-followup/AAC.01734-20-s0001.pdf",
+      "sha256": "f75a93f6716311e8c616e0ba3ea2d29f96254bbfbaf124620b4bdb4ace31f037"
+    },
+    "pmcid": "PMC7927808",
+    "primary_request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-peptide-followup/primary-33106269-response.bin",
+        "sha256": "d98051e8180fa2885c8957448e2932386e2e86300a4796df13b59a7d3777bbbb"
+      },
+      "retrieved_at": "2026-10-09T19:49:12.804518+00:00",
+      "sha256": "d98051e8180fa2885c8957448e2932386e2e86300a4796df13b59a7d3777bbbb",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7927808/fullTextXML"
+    },
+    "reference": "PMID:33106269",
+    "rendered_page": {
+      "path": "reports/resistance-grounding-2026-10-09-lugdunin-followup/supplement-page1.png",
+      "sha256": "1221c439ce08a2f5d32322f212546dd744b998ece85dd9bccd694cf996817d27"
+    },
+    "supplement_request": {
+      "bytes": 985472,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-lugdunin-followup/supplement-33106269-response.bin",
+        "sha256": "b081db7a2a460a60ab62d22ecee7fe461526fd8729ef68a669d35ce2e0859072"
+      },
+      "retrieved_at": "2026-10-09T22:51:45.303635+00:00",
+      "sha256": "b081db7a2a460a60ab62d22ecee7fe461526fd8729ef68a669d35ce2e0859072",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7927808/supplementaryFiles"
+    },
+    "whole_paper_review_complete": false
+  },
+  "record": {
+    "decision": "HOLD_REPRESENTATION_AND_EXPERIMENTAL_REFERENCE_MAPPING",
+    "identifier": "CHEBI:133127",
+    "label": "lugdunin",
+    "note": "Three supplement identifiers now have UniProt cross-references, all with SL13 strain annotations. Compound representation and IVK28 experimental assignments remain unresolved.",
+    "path": "data/antibiotics/antibacterial/lugdunin.yaml",
+    "record_action": "PRESERVE_NO_NEW_BIOLOGICAL_CLAIM",
+    "record_sha256": "54604e007195af17e30caad7c9bc117060f1347e9c782fcb802da4567d2c412d",
+    "reference_candidates": [
+      "A0A133Q4M0",
+      "A0A133Q4M2",
+      "A0ABX6BXJ1"
+    ],
+    "standard_inchi_key": "QZNGYMKAHFFKCJ-ZBQZSICZSA-N",
+    "whole_record_review": "OPEN"
+  },
+  "reference_mapping": [
+    {
+      "reference_matches": [
+        {
+          "entry_type": "UniProtKB unreviewed (TrEMBL)",
+          "entry_version": 38,
+          "experimental_allele_assignment": false,
+          "experimental_genome_assignment": false,
+          "gene_annotations": [
+            {
+              "orfNames": [
+                {
+                  "evidences": [
+                    {
+                      "evidenceCode": "ECO:0000313",
+                      "id": "QEX39727.1",
+                      "source": "EMBL"
+                    }
+                  ],
+                  "value": "FO454_12735"
+                }
+              ]
+            }
+          ],
+          "limitation": "Entry strain SL13 differs from the study's IVK28 background. The source protein identifier does not identify an experimental allele or unique genome.",
+          "link_basis": "EXACT_VERSIONED_REFSEQ_CROSS_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+          "protein_accession": "UniProtKB:A0A133Q4M0",
+          "protein_name_annotations": {
+            "submissionNames": [
+              {
+                "fullName": {
+                  "evidences": [
+                    {
+                      "evidenceCode": "ECO:0000313",
+                      "id": "QEX39727.1",
+                      "source": "EMBL"
+                    }
+                  ],
+                  "value": "PLDc_N domain-containing protein"
+                }
+              }
+            ]
+          },
+          "sequence_version": 1,
+          "source_cross_references": [
+            {
+              "database": "EMBL",
+              "id": "CP041722",
+              "properties": [
+                {
+                  "key": "ProteinId",
+                  "value": "QEX39727.1"
+                },
+                {
+                  "key": "Status",
+                  "value": "-"
+                },
+                {
+                  "key": "MoleculeType",
+                  "value": "Genomic_DNA"
+                }
+              ]
+            },
+            {
+              "database": "RefSeq",
+              "id": "WP_002460038.1",
+              "properties": [
+                {
+                  "key": "NucleotideSequenceId",
+                  "value": "NZ_AP021848.1"
+                }
+              ]
+            }
+          ],
+          "source_strain_annotations": [
+            "SL13"
+          ],
+          "taxon_id": "NCBITaxon:28035",
+          "taxon_label": "Staphylococcus lugdunensis",
+          "uniprot_request_key": "uniprot-299abffa0301c74b"
+        }
+      ],
+      "source_location": "Supplement PDF page 1, Table S1",
+      "source_protein_label": "LugI",
+      "source_reported_refseq": "WP_002460038.1",
+      "status": "REFERENCE_ONLY_STRAIN_CONTEXT_DIFFERS"
+    },
+    {
+      "reference_matches": [],
+      "source_location": "Supplement PDF page 1, Table S1",
+      "source_protein_label": "LugE",
+      "source_reported_refseq": "WP_002478838.1",
+      "status": "NO_MATCH_IN_EXACT_OR_ACCESSION_BASE_QUERIES_NOT_ABSENCE"
+    },
+    {
+      "reference_matches": [
+        {
+          "entry_type": "UniProtKB unreviewed (TrEMBL)",
+          "entry_version": 4,
+          "experimental_allele_assignment": false,
+          "experimental_genome_assignment": false,
+          "gene_annotations": [
+            {
+              "orfNames": [
+                {
+                  "evidences": [
+                    {
+                      "evidenceCode": "ECO:0000313",
+                      "id": "QEX39725.1",
+                      "source": "EMBL"
+                    }
+                  ],
+                  "value": "FO454_12725"
+                }
+              ]
+            }
+          ],
+          "limitation": "Entry strain SL13 differs from the study's IVK28 background. The source protein identifier does not identify an experimental allele or unique genome.",
+          "link_basis": "EXACT_VERSIONED_REFSEQ_CROSS_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+          "protein_accession": "UniProtKB:A0ABX6BXJ1",
+          "protein_name_annotations": {
+            "recommendedName": {
+              "fullName": {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0008006",
+                    "id": "ProtNLM",
+                    "source": "Google"
+                  }
+                ],
+                "value": "ABC transporter permease"
+              }
+            }
+          },
+          "sequence_version": 1,
+          "source_cross_references": [
+            {
+              "database": "EMBL",
+              "id": "CP041722",
+              "properties": [
+                {
+                  "key": "ProteinId",
+                  "value": "QEX39725.1"
+                },
+                {
+                  "key": "Status",
+                  "value": "-"
+                },
+                {
+                  "key": "MoleculeType",
+                  "value": "Genomic_DNA"
+                }
+              ]
+            },
+            {
+              "database": "RefSeq",
+              "id": "WP_002478839.1",
+              "properties": [
+                {
+                  "key": "NucleotideSequenceId",
+                  "value": "NZ_CP020735.1"
+                }
+              ]
+            }
+          ],
+          "source_strain_annotations": [
+            "SL13"
+          ],
+          "taxon_id": "NCBITaxon:28035",
+          "taxon_label": "Staphylococcus lugdunensis",
+          "uniprot_request_key": "uniprot-10b672cd6392d96c"
+        }
+      ],
+      "source_location": "Supplement PDF page 1, Table S1",
+      "source_protein_label": "LugF",
+      "source_reported_refseq": "WP_002478839.1",
+      "status": "REFERENCE_ONLY_STRAIN_CONTEXT_DIFFERS"
+    },
+    {
+      "reference_matches": [
+        {
+          "entry_type": "UniProtKB unreviewed (TrEMBL)",
+          "entry_version": 42,
+          "experimental_allele_assignment": false,
+          "experimental_genome_assignment": false,
+          "gene_annotations": [
+            {
+              "orfNames": [
+                {
+                  "evidences": [
+                    {
+                      "evidenceCode": "ECO:0000313",
+                      "id": "QEX39724.1",
+                      "source": "EMBL"
+                    }
+                  ],
+                  "value": "FO454_12720"
+                }
+              ]
+            }
+          ],
+          "limitation": "Entry strain SL13 differs from the study's IVK28 background. The source protein identifier does not identify an experimental allele or unique genome.",
+          "link_basis": "EXACT_VERSIONED_REFSEQ_CROSS_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+          "protein_accession": "UniProtKB:A0A133Q4M2",
+          "protein_name_annotations": {
+            "submissionNames": [
+              {
+                "fullName": {
+                  "evidences": [
+                    {
+                      "evidenceCode": "ECO:0000313",
+                      "id": "QEX39724.1",
+                      "source": "EMBL"
+                    }
+                  ],
+                  "value": "ABC transporter ATP-binding protein"
+                }
+              }
+            ]
+          },
+          "sequence_version": 1,
+          "source_cross_references": [
+            {
+              "database": "EMBL",
+              "id": "CP041722",
+              "properties": [
+                {
+                  "key": "ProteinId",
+                  "value": "QEX39724.1"
+                },
+                {
+                  "key": "Status",
+                  "value": "-"
+                },
+                {
+                  "key": "MoleculeType",
+                  "value": "Genomic_DNA"
+                }
+              ]
+            },
+            {
+              "database": "RefSeq",
+              "id": "WP_002460034.1",
+              "properties": [
+                {
+                  "key": "NucleotideSequenceId",
+                  "value": "NZ_AP021848.1"
+                }
+              ]
+            }
+          ],
+          "source_strain_annotations": [
+            "SL13"
+          ],
+          "taxon_id": "NCBITaxon:28035",
+          "taxon_label": "Staphylococcus lugdunensis",
+          "uniprot_request_key": "uniprot-10b672cd6392d96c"
+        }
+      ],
+      "source_location": "Supplement PDF page 1, Table S1",
+      "source_protein_label": "LugG",
+      "source_reported_refseq": "WP_002460034.1",
+      "status": "REFERENCE_ONLY_STRAIN_CONTEXT_DIFFERS"
+    },
+    {
+      "reference_matches": [],
+      "source_location": "Supplement PDF page 1, Table S1",
+      "source_protein_label": "LugH",
+      "source_reported_refseq": "WP_002460033.1",
+      "status": "NO_MATCH_IN_EXACT_OR_ACCESSION_BASE_QUERIES_NOT_ABSENCE"
+    }
+  ],
+  "scope": "REFERENCE_IDENTIFIER_FOLLOWUP_NOT_EXPERIMENTAL_ALLELE_CURATION",
+  "source_adoptions": 0,
+  "study_background": {
+    "archive_context": {
+      "experimental_genome_assignment": false,
+      "reference": {
+        "accession": "CP063143",
+        "firstPublic": "30-OCT-2020",
+        "lastUpdated": "11-MAR-2021",
+        "project": "PRJNA669000",
+        "publications": [
+          {
+            "pId": "27466123",
+            "source": "PUBMED"
+          }
+        ],
+        "sample": "SAMN16428309",
+        "statusDescription": "public",
+        "taxon": 28035,
+        "version": 1
+      },
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-09-peptide-followup/ena-CP063143-response.bin",
+          "sha256": "4eda99e389490c504f90b9183b53c7e5adf972bc68b06602a7b385cd07eeac64"
+        },
+        "retrieved_at": "2026-10-09T19:50:26.343364+00:00",
+        "sha256": "4eda99e389490c504f90b9183b53c7e5adf972bc68b06602a7b385cd07eeac64",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/browser/api/summary/CP063143"
+      },
+      "scope": "BACKGROUND_CHROMOSOME_NOT_EXPERIMENTAL_DERIVATIVE"
+    },
+    "interpretation": "Background chromosome context only; not tested derivatives, an exact experimental protein, or a species-wide resistance assertion.",
+    "rank": "species",
+    "source_label": "Staphylococcus lugdunensis IVK28",
+    "taxon_id": "NCBITaxon:28035"
+  },
+  "uniprot_requests": [
+    {
+      "bytes": 2061,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-lugdunin-followup/uniprot-299abffa0301c74b-response.bin",
+        "sha256": "9bd8b1af7d232df918f6a30952d8e4418b0a56a184c31a22f6faa4350d627c39"
+      },
+      "complete_for_query": true,
+      "count": 1,
+      "establishes_biological_absence": false,
+      "query": "xref:refseq-WP_002460038.1",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T22:54:47.479016+00:00",
+      "sha256": "9bd8b1af7d232df918f6a30952d8e4418b0a56a184c31a22f6faa4350d627c39",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-WP_002460038.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "bytes": 4101,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-lugdunin-followup/uniprot-10b672cd6392d96c-response.bin",
+        "sha256": "bfed0cf850924acd6520d91abf14079d481374999c6038f989bf9570287825bc"
+      },
+      "complete_for_query": true,
+      "count": 2,
+      "establishes_biological_absence": false,
+      "query": "(xref:refseq-WP_002478838.1 OR xref:refseq-WP_002478839.1 OR xref:refseq-WP_002460034.1 OR xref:refseq-WP_002460033.1)",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T22:55:00.241109+00:00",
+      "sha256": "bfed0cf850924acd6520d91abf14079d481374999c6038f989bf9570287825bc",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Arefseq-WP_002478838.1+OR+xref%3Arefseq-WP_002478839.1+OR+xref%3Arefseq-WP_002460034.1+OR+xref%3Arefseq-WP_002460033.1%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "bytes": 14,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-lugdunin-followup/uniprot-62b4ede5f07bf5a3-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "complete_for_query": true,
+      "count": 0,
+      "establishes_biological_absence": false,
+      "query": "(xref:refseq-WP_002478838 OR xref:refseq-WP_002460033)",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T22:55:14.338924+00:00",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28xref%3Arefseq-WP_002478838+OR+xref%3Arefseq-WP_002460033%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ],
+  "whole_record_primary_reviews_completed": 0
+}

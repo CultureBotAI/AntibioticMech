@@ -1,0 +1,51 @@
+{
+  "before": {
+    "path": "reports/resistance-grounding-2026-10-11-fr171456/original.yaml",
+    "sha256": "33143ba30833e56efdfe27d692ee59becb1353e7a7ba0350b62276b6d8e9e580"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-11-fr171456/canary.yaml",
+    "sha256": "7de4f1bce437efa786a58a5c1304029a70a9e9a6c570f120aa909593de9986df"
+  },
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-11-fr171456/canary-review.json",
+    "sha256": "a41abbe037a32ede532c904b3e137bb84e40c1a8e5cf8bd16c3d82397886b1ab"
+  },
+  "claim": {
+    "assay": "Comparative growth dose-response assay",
+    "evidence": [
+      {
+        "notes": "Results, Figure 3a, Supplementary Figure 6 and Table 3; qualitative gene-level evidence.",
+        "reference": "PMID:26456460"
+      }
+    ],
+    "gene_families": [
+      "ERG26"
+    ],
+    "label": "ERG26-associated FR171456 resistance in laboratory yeast",
+    "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+    "note": "Gene-level functional evidence in laboratory derivatives, not a clinical or species-wide phenotype. Some resistant isolates lacked ERG26 changes and remain unexplained. UniProtKB:P53199 (S288c) is reference context, not an experimental allele. No exact allele, protein accession, derivative TaxID or genome is assigned. Named-compound scope does not independently re-identify the tested preparation.",
+    "phenotype_label": "source-reported experimental FR171456 resistance",
+    "taxon_id": "NCBITaxon:4932",
+    "taxon_label": "Saccharomyces cerevisiae"
+  },
+  "context": {
+    "path": "research/2026-10-11-fr171456-context.json",
+    "sha256": "1452269ff2eb365365b9cbbf53a79931cc77f679720abc8d184b145504837ba6"
+  },
+  "experimental_alleles_assigned": 0,
+  "experimental_genomes_assigned": 0,
+  "fresh_seed": {
+    "path": "reports/resistance-grounding-2026-10-11-fr171456/fresh-seed.json",
+    "sha256": "8ca1c77b05c252efa38aed764c4aca3482fc9154be81a56d040d9bc35a7a6fdc"
+  },
+  "history_events_added": 1,
+  "numerical_ast_added": 0,
+  "record": {
+    "path": "data/antibiotics/antifungal/fr171456.yaml",
+    "sha256": "7de4f1bce437efa786a58a5c1304029a70a9e9a6c570f120aa909593de9986df"
+  },
+  "records_changed": 1,
+  "status": "CURATED_QUALITATIVE_GENE_LEVEL_RESISTANCE_PENDING_FULL_QC",
+  "whole_record_review_complete": false
+}

@@ -800,6 +800,124 @@ resistance_mechanisms:
   - reference: ARO:3005043
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000385 (chloramphenicol);
       database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  label: CMLA6-associated chloramphenicol resistance in native isolate SOF-1
+  gene_families:
+  - cmlA-like
+  taxon_id: NCBITaxon:287
+  taxon_label: Pseudomonas aeruginosa
+  strain: SOF-1
+  phenotype_label: source-reported chloramphenicol resistance
+  assay: Source-reported disk diffusion
+  note: 'Same-isolate gene/phenotype co-occurrence, not proof that CMLA6 alone caused
+    resistance. The paper names CMLA6 and reports the native isolate phenotype as
+    data not shown; no zone diameter or clinical breakpoint interpretation is inferred.
+    Its beta-lactam experiments in other hosts are not chloramphenicol evidence for
+    this isolate. UniProtKB:Q933G9 is retained as reference context only: it combines
+    CmlA6 and cmlA1 annotations from separate source contexts. The source-reported
+    deposit AF294653.1 is not a genome assembly. No exact experimental protein, allele,
+    strain TaxID or genome is assigned. Compound scope follows named chloramphenicol;
+    the tested preparation was not independently re-identified.'
+  evidence:
+  - reference: PMID:11353602
+    notes: 'Selected publisher Results and Discussion: native SOF-1 disk-diffusion
+      resistance statement and CMLA6 identification; accession statement AF294653.
+      The beta-lactam MIC table does not supply a chloramphenicol measurement.'
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with chloramphenicol resistance in avian isolate 5334
+  gene_families:
+  - flo
+  strain: '5334'
+  phenotype_label: source-reported chloramphenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with chloramphenicol resistance in avian isolate 5790
+  gene_families:
+  - flo
+  strain: '5790'
+  phenotype_label: source-reported chloramphenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with chloramphenicol resistance in avian isolate 5840
+  gene_families:
+  - flo
+  strain: '5840'
+  phenotype_label: source-reported chloramphenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo co-occurrence with chloramphenicol resistance in avian isolate 6468
+  gene_families:
+  - flo
+  - cmlA
+  strain: '6468'
+  phenotype_label: source-reported chloramphenicol resistance
+  assay: Source-reported disk diffusion
+  note: Same-isolate co-occurrence, not isolated-gene causation or a new clinical
+    breakpoint interpretation. Other determinants were not excluded. No exact experimental
+    protein, allele, strain TaxID or genome is assigned. Bovine UniProtKB:Q9F0D9/AF252855
+    is not assigned to these avian isolates. Named compound identity is retained;
+    the tested preparation was not independently re-identified.
+  evidence:
+  - reference: PMID:10639375
+    notes: Table 1 and adjacent native-isolate phenotype and hybridization results.
+      Qualitative co-occurrence only.
+- mechanism_type: UNKNOWN
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  label: flo/cmlA-positive bovine subgroup associated with chloramphenicol resistance
+  gene_families:
+  - flo
+  - cmlA
+  phenotype_label: source-reported chloramphenicol resistance in the flo/cmlA-positive
+    subgroup
+  assay: NCCLS broth microdilution
+  note: Subgroup co-occurrence, not sole-gene causation or an assertion about every
+    study isolate. Discordant source subgroups are not merged. Florfenicol categories
+    borrow bovine-respiratory criteria; no E. coli clinical breakpoint is inferred.
+    UniProtKB:Q9F0D9/AF252855.1 is study-linked reference context, not a subgroup-wide
+    allele or genome assignment. EC56 belongs to a later submission and is not substituted
+    for this subgroup. No exact experimental protein, allele, strain TaxID or genome
+    is assigned. Named compound identity is retained; the tested preparation was not
+    independently re-identified.
+  evidence:
+  - reference: PMID:11101601
+    notes: Table 2 flo/cmlA-positive row and adjacent cohort results; assay and accession
+      statements. Qualitative subgroup association only.
 molecular_targets:
 - target_id: ARO:3000754
   target_label: antibiotic sensitive peptidyl transferase (23S rRNA)
@@ -1258,4 +1376,21 @@ curation_history:
   action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
   changes: Structured BioSample accessions on 1 activity_spectrum observation(s) where
     evidence notes already named exactly one accession.
+  llm_assisted: true
+- timestamp: '2026-10-10T07:41:05Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added native SOF-1 CMLA6/chloramphenicol co-occurrence from primary results,
+    without assigning individual causation, an exact experimental UniProt protein,
+    allele or genome. Preserved source-owned assertions and all other fields; whole-record
+    review remains open.
+  llm_assisted: true
+- timestamp: '2026-10-10T22:31:13Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added four named native flo co-occurrences and one separate flo/cmlA-positive
+    subgroup association from primary results. Kept mechanism UNKNOWN and UniProt/archive
+    context reference-only; did not assign exact alleles, genomes, a subgroup strain
+    or new clinical breakpoints. Preserved all prior claims, observations, history
+    and other fields; whole-record review remains open.
   llm_assisted: true

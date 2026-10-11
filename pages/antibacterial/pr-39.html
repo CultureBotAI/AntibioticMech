@@ -112,9 +112,8 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">1 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">1 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>OTHER <span class="pill plain">1</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: OTHER" tabindex="0">
@@ -122,12 +121,13 @@ type — expand a group to see its determinants.</p>
     <caption>OTHER</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>SbmA alterations reduce PR-39 susceptibility<br><span class="meta">Salmonella enterica serovar Typhimurium mutants with SbmA alterations were about fourfold less susceptible and showed slower killing without an obvious measured fitness cost. The study called SbmA a putative transport protein but did not directly measure uptake, so the specific resistance route remains unresolved.</span></td>
+      <td>SbmA alterations reduce PR-39 susceptibility<br><span class="meta">Salmonella enterica serovar Typhimurium mutants with SbmA alterations were about fourfold less susceptible and showed slower killing without an obvious measured fitness cost. The study called SbmA a putative transport protein but did not directly measure uptake, so the specific resistance route remains unresolved. Aggregate of LT2-derived mutants, not one experimental allele. The LT2 reference-protein crosswalk is retained separately; no reference strain TaxID, protein accession or genome is assigned to the mutants. The source gene symbol sbmA is retained without variant-coordinate normalization.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Salmonella enterica</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_28901"><code class="curie">NCBITaxon:28901</code></a> <span class="meta">sbmA</span></td>
       <td class="meta">sbmA</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18519732">PMID:18519732</a></span> <span class="meta">(Primary PR-39 resistance selection, genetic analysis, and fitness study.)</span></li>
+  <li><span class="meta"><a href="https://rest.uniprot.org/taxonomy/28901">https://rest.uniprot.org/taxonomy/28901</a></span> <span class="meta">(Taxonomic identity only: active species, UniProt release 2026_03; retrieved 2026-10-08 UTC.)</span></li>
 </ul>
 </td>
     </tr>
@@ -168,6 +168,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">REVIEWED</span>
     <span class="meta">2026-09-03 · codex · LLM-assisted</span>
     <p>Verified exact ChEBI peptide identity, structure, antimicrobial roles, and class; added membrane disruption with the non-lysis boundary and SbmA as an evidence-backed susceptibility/resistance determinant while preserving the unresolved uptake-mechanism gap.</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Grounded the existing aggregate claim to a verified species and clarified experimental versus reference context. No exact mutant protein, strain TaxID, genome, variant normalization or quantitative endpoint added.</p>
   </li>
 </ol>
 

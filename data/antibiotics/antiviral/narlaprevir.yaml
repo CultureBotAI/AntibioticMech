@@ -106,12 +106,20 @@ resistance_mechanisms:
   label: HCV NS3 V36, T54, R155, and A156 resistance-associated substitutions
   gene_families:
   - HCV NS3 serine protease
-  note: Longitudinal clonal sequencing detected substitutions at these NS3 positions
+  note: 'Longitudinal clonal sequencing detected substitutions at these NS3 positions
     during narlaprevir exposure; participants with detected substitutions had a smaller
-    viral-load decline, and R155K persisted in two participants for 3.1 years.
+    viral-load decline, and R155K persisted in two participants for 3.1 years. Taxon
+    grounding only: the source calls the virus HCV. The clinical association does
+    not establish an individual patient''s UniProt accession, strain TaxID or genome.
+    No allele coordinates or resistance measurements were added.'
   evidence:
   - reference: PMID:24168257
     notes: Primary treatment-exposure, clonal-sequencing, and viral-load study.
+  - reference: https://rest.uniprot.org/taxonomy/3052230
+    notes: 'Taxonomic identity only: active species; Hepatitis C virus is an explicit
+      name alias. Retrieved 2026-10-08 UTC.'
+  taxon_id: NCBITaxon:3052230
+  taxon_label: Orthohepacivirus hominis
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -136,3 +144,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T04:06:43Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_TAXON
+  changes: Grounded the existing HCV clinical association to an active species TaxID;
+    retained the original claim without assigning patient-specific proteins, strains,
+    genomes or allele coordinates.
+  llm_assisted: true

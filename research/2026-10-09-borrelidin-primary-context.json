@@ -1,0 +1,1236 @@
+{
+  "access_limits": [
+    "Publisher pages for the 2004 and 2005 papers returned 403 through the web tool; legitimate institution/author copies were used.",
+    "The 2005 author PDF download was unavailable; no visual inspection of that paper's figures or tables is claimed.",
+    "The 2024 Nature route had a non-retryable redirect failure; the licensed EBI OA copy was used.",
+    "OA fullTextXML was used only for metadata-isOpenAccess=Y records, never for the other seventeen papers.",
+    "Search results included NCBI pages incidentally; none was opened and no NCBI endpoint request was made."
+  ],
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0; EMBL-EBI Europe PMC metadata and licensed OA text; cited primary authors/publishers. Article text, figures and supplements are not redistributed.",
+  "bibliographic_request": {
+    "bytes": 132592,
+    "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/metadata-response.bin",
+    "retrieved_at": "2026-10-09T15:55:11.826036+00:00",
+    "sha256": "ad61e2d17b49e1f1208ac4ef28564d2779c6126dee4ef65afafc9f13ead6eeb5",
+    "status": 200,
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28EXT_ID%3A15112998+OR+EXT_ID%3A15507440+OR+EXT_ID%3A22967236+OR+EXT_ID%3A23425968+OR+EXT_ID%3A24794971+OR+EXT_ID%3A26617965+OR+EXT_ID%3A26946375+OR+EXT_ID%3A2747635+OR+EXT_ID%3A29897900+OR+EXT_ID%3A330505+OR+EXT_ID%3A368026+OR+EXT_ID%3A39014102+OR+EXT_ID%3A41773311+OR+EXT_ID%3A4368395+OR+EXT_ID%3A4577856+OR+EXT_ID%3A6269513+OR+EXT_ID%3A6746646+OR+EXT_ID%3A6997265+OR+EXT_ID%3A785224%29&format=json&resultType=core&pageSize=100"
+  },
+  "host_taxonomy_search": {
+    "candidates": [
+      {
+        "active": true,
+        "otherNames": [
+          "Streptomyces albus str. J1074",
+          "Streptomyces albus strain J1074"
+        ],
+        "parent": {
+          "scientificName": "Streptomyces albus",
+          "taxonId": 1888
+        },
+        "rank": "strain",
+        "scientificName": "Streptomyces albus J1074",
+        "strains": null,
+        "taxonId": 457425
+      },
+      {
+        "active": true,
+        "otherNames": null,
+        "parent": {
+          "scientificName": "unclassified Kitasatosporales",
+          "taxonId": 3106765
+        },
+        "rank": "species",
+        "scientificName": "Kitasatosporales bacterium J1074",
+        "strains": null,
+        "taxonId": 3466461
+      },
+      {
+        "active": true,
+        "otherNames": [
+          "Streptomyces albus (strain G)"
+        ],
+        "parent": {
+          "scientificName": "Streptomyces albus",
+          "taxonId": 1888
+        },
+        "rank": "strain",
+        "scientificName": "Streptomyces albus G",
+        "strains": [
+          {
+            "name": "J1074"
+          }
+        ],
+        "taxonId": 1962
+      }
+    ],
+    "complete_for_query": true,
+    "decision": "MULTIPLE_NAME_CANDIDATES_NO_EXPERIMENTAL_STRAIN_ASSIGNMENT",
+    "query": "J1074",
+    "request": {
+      "bytes": 3595,
+      "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-search-4efabffb8850-response.bin",
+      "retrieved_at": "2026-10-09T15:57:40.413908+00:00",
+      "sha256": "369c9083ba4013e41713f4bfa92c82cf95a538fa843c301215904bcfe16dc1c4",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=J1074&format=json&size=100"
+    },
+    "result_count": 3,
+    "selected_strain_taxon": null,
+    "source_label": "Streptomyces albus J1074",
+    "species_name_reference": "NCBITaxon:1888"
+  },
+  "inputs": {
+    "curation": {
+      "path": "research/2026-10-09-borrelidin-curation.json",
+      "sha256": "35d53e12c78b8cfd1450a8a44f3c59b7d64a8548be6615c50a06047adf130950"
+    },
+    "discovery": {
+      "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+      "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+    },
+    "prior_census": {
+      "path": "research/2026-10-09-oleandomycin-resistance-grounding.tsv",
+      "sha256": "e2ac349a1a893263fd2bfd26ad4602bc7f2b319ee202391944d4407efc5004fe"
+    }
+  },
+  "limitations": [
+    "No NCBI endpoint request, outreach, #1040 work, source adoption, card.json retrieval, reuse-terms reassessment or new genome-analysis pipeline occurred.",
+    "No sequences, variant specifications, constructs, primers, protocols, coordinates, numerical AST or combination designs are exported.",
+    "The BorO source reports data not shown; the curation preserves that qualitative report rather than claiming independent experimental validation.",
+    "Reference proteins, archive accessions and taxon names do not establish tested alleles or phenotype-bearing isolate genomes.",
+    "Q58597 and Q9HP27 retain ALT_INIT archive flags; historical archive proteins are not silently asserted identical to current reference versions.",
+    "NCBITaxon:64091 has no rank and a strain-ranked immediate parent; the species ancestor is 2242, not the immediate parent.",
+    "J1074 has multiple taxonomy-name candidates; no representative strain accession or genome was selected.",
+    "Other fourteen discovery candidates still need primary review; metadata and titles do not reject or validate their biological relevance.",
+    "Bounded sections and captions are not complete paper, supplement or whole-record review.",
+    "Individual dossiers remain outside the combined progress ledger's coverage counts; curation counts do not imply completed research."
+  ],
+  "primary_papers": {
+    "15112998": {
+      "commentCorrectionList": {
+        "commentCorrection": [
+          {
+            "id": "15112984",
+            "orderIn": 1,
+            "reference": "Chem Biol. 2004 Jan;11(1):4-6. doi: 10.1016/j.chembiol.2004.01.005",
+            "source": "MED",
+            "type": "Comment in"
+          }
+        ]
+      },
+      "comment_scope": "Comment in listing, not labelled erratum or retraction; comment content not inspected.",
+      "doi": "10.1016/j.chembiol.2003.12.018",
+      "donor_label": "Streptomyces parvulus Tu4055",
+      "figures_visually_inspected": [
+        "Figure 1",
+        "Table 1",
+        "Results page 92"
+      ],
+      "gene": "borO",
+      "homology_limit": "CAB08628 and NP_625810 are comparison proteins, not BorO or tested-host accessions.",
+      "host_background": "Streptomyces albus J1074",
+      "id": "15112998",
+      "isOpenAccess": "N",
+      "locations": [
+        "Borrelidin Resistance, page 92",
+        "Figure 1, page 88",
+        "Table 1, page 90",
+        "Accession Numbers, page 97"
+      ],
+      "medium": "AUTHOR_INSTITUTION_PDF",
+      "pmcid": null,
+      "primary_request": {
+        "bytes": 208276,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/olano2004-response.bin",
+        "retrieved_at": "2026-10-09T15:55:21.689666+00:00",
+        "sha256": "a8d8deefe732afed972862811650388fa9eedcde1d23fe019bd072135b4c3116",
+        "status": 200,
+        "url": "https://digibuo.uniovi.es/dspace/bitstream/handle/10651/41688/1-s2.0-S1074552103002977-main.pdf?sequence=1"
+      },
+      "reference_accession": "UniProtKB:Q70HZ0",
+      "route_status": "PROPOSED_TARGET_REPLACEMENT_NOT_DIRECT_BIOCHEMICAL_DEMONSTRATION",
+      "source_archive": "EMBL:AJ580915",
+      "status": "QUALIFIED_PRIMARY_FUNCTIONAL_REPORT_CURATED",
+      "supplements_inspected": false,
+      "supporting_experimental_data_shown": false,
+      "title": "Biosynthesis of the angiogenesis inhibitor borrelidin by Streptomyces parvulus T\u00fc4055: cluster analysis and assignment of functions.",
+      "whole_paper_review_complete": false
+    },
+    "15507440": {
+      "commentCorrectionList": null,
+      "doi": "10.1074/jbc.m411039200",
+      "enzyme_contexts": [
+        {
+          "reference": "UniProtKB:Q58597",
+          "result": "RELATIVE_BIOCHEMICAL_INSENSITIVITY_UNDER_REPORTED_CONDITIONS",
+          "source_name": "Methanocaldococcus jannaschii"
+        },
+        {
+          "reference": "UniProtKB:O29703",
+          "result": "RELATIVE_BIOCHEMICAL_INSENSITIVITY_UNDER_REPORTED_CONDITIONS",
+          "source_name": "Archaeoglobus fulgidus"
+        },
+        {
+          "reference": "UniProtKB:Q97VW8",
+          "result": "BIOCHEMICAL_INHIBITION",
+          "source_name": "Sulfolobus solfataricus"
+        },
+        {
+          "reference": "UniProtKB:Q9HP27",
+          "result": "BIOCHEMICAL_INHIBITION",
+          "source_name": "Halobacterium sp. NRC-1"
+        },
+        {
+          "reference": "UniProtKB:P0A8M3",
+          "result": "WILD_TYPE_REFERENCE_BIOCHEMICAL_INHIBITION_NOT_RESISTANT_ALLELE",
+          "source_name": "Escherichia coli"
+        }
+      ],
+      "figures_visually_inspected": [],
+      "id": "15507440",
+      "isOpenAccess": "N",
+      "limits": "Enzyme activity is not whole-cell MIC or a domain-wide resistance phenotype. The native donor and protein-expression host differ; reference entries do not specify every tested allele.",
+      "location": "Results and Discussion, initial archaeal/bacterial comparison referring to Figure 2 and Table I",
+      "medium": "AUTHOR_UPLOADED_PRIMARY_TEXT_TRANSCRIPTION",
+      "native_primary_file_cached": false,
+      "paralog_scope": "The S. solfataricus comparison concerns the catalytic ThrRS reference, not every thrS-related protein.",
+      "pmcid": null,
+      "primary_url": "https://www.researchgate.net/publication/8210679_A_Unique_Hydrophobic_Cluster_Near_the_Active_Site_Contributes_to_Differences_in_Borrelidin_Inhibition_among_Threonyl-tRNA_Synthetases",
+      "status": "PRIMARY_BIOCHEMICAL_COMPARISON_REVIEWED_REFERENCE_ONLY",
+      "supplements_inspected": false,
+      "title": "A unique hydrophobic cluster near the active site contributes to differences in borrelidin inhibition among threonyl-tRNA synthetases.",
+      "whole_paper_review_complete": false
+    },
+    "22967236": {
+      "commentCorrectionList": null,
+      "doi": "10.1021/jf302857x",
+      "figures_visually_inspected": [],
+      "id": "22967236",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "EXISTING_TARGET_CURATION_PRESERVED_NOT_NEW_RESISTANCE_EVIDENCE",
+      "title": "Borrelidin, a potent antifungal agent: insight into the antifungal mechanism against Phytophthora sojae.",
+      "whole_paper_review_complete": false
+    },
+    "23425968": {
+      "commentCorrectionList": null,
+      "doi": "10.1038/srep01317",
+      "figures_visually_inspected": [],
+      "id": "23425968",
+      "isOpenAccess": "Y",
+      "pmcid": "PMC3578223",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Secreted Threonyl-tRNA synthetase stimulates endothelial cell migration and angiogenesis.",
+      "whole_paper_review_complete": false
+    },
+    "24794971": {
+      "commentCorrectionList": null,
+      "doi": "10.1099/mic.0.078295-0",
+      "figures_visually_inspected": [],
+      "id": "24794971",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Eliciting antibiotics active against the ESKAPE pathogens in a collection of actinomycetes isolated from mountain soils.",
+      "whole_paper_review_complete": false
+    },
+    "26617965": {
+      "commentCorrectionList": null,
+      "doi": "10.1021/acsmedchemlett.5b00133",
+      "figures_visually_inspected": [],
+      "id": "26617965",
+      "isOpenAccess": "N",
+      "pmcid": "PMC4645248",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Borrelidin Induces the Unfolded Protein Response in Oral Cancer Cells and Chop-Dependent Apoptosis.",
+      "whole_paper_review_complete": false
+    },
+    "26946375": {
+      "commentCorrectionList": null,
+      "doi": "10.1016/j.micres.2016.01.003",
+      "figures_visually_inspected": [],
+      "id": "26946375",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Rare actinomycetes Nocardia caishijiensis and Pseudonocardia carboxydivorans as endophytes, their bioactivity and metabolites evaluation.",
+      "whole_paper_review_complete": false
+    },
+    "2747635": {
+      "commentCorrectionList": null,
+      "doi": "10.1128/mcb.9.5.1832-1838.1989",
+      "figures_visually_inspected": [],
+      "id": "2747635",
+      "isOpenAccess": "N",
+      "pmcid": "PMC362973",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Isolation of a cDNA clone for human threonyl-tRNA synthetase: amplification of the structural gene in borrelidin-resistant cell lines.",
+      "whole_paper_review_complete": false
+    },
+    "29897900": {
+      "commentCorrectionList": null,
+      "doi": "10.1371/journal.pntd.0006575",
+      "figures_visually_inspected": [],
+      "id": "29897900",
+      "isOpenAccess": "Y",
+      "pmcid": "PMC6025875",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Genetic manipulation of Leishmania donovani threonyl tRNA synthetase facilitates its exploration as a potential therapeutic target.",
+      "whole_paper_review_complete": false
+    },
+    "330505": {
+      "commentCorrectionList": null,
+      "doi": "10.1128/jb.131.3.943-950.1977",
+      "figures_visually_inspected": [],
+      "id": "330505",
+      "isOpenAccess": "N",
+      "pmcid": "PMC235552",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Threonyl-transfer ribonucleic acid synthetase from Escherichia coli: subunit structure and genetic analysis of the structural gene by means of a mutated enzyme and of a specialized transducing lambda bacteriophage.",
+      "whole_paper_review_complete": false
+    },
+    "368026": {
+      "commentCorrectionList": null,
+      "doi": "10.1128/jb.137.1.480-489.1979",
+      "figures_visually_inspected": [],
+      "id": "368026",
+      "isOpenAccess": "N",
+      "pmcid": "PMC218474",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Escherichia coli mutants overproducing phenylalanyl- and threonyl-tRNA synthetase.",
+      "whole_paper_review_complete": false
+    },
+    "39014102": {
+      "commentCorrectionList": null,
+      "compound_limit": "Obafluorin and borrelidin remain distinct; ObaO is not the Streptomyces BorO gene.",
+      "doi": "10.1038/s42003-024-06559-x",
+      "figures_visually_inspected": [],
+      "finding": "Borrelidin is directly tested in biochemical comparisons, despite the obafluorin-focused Introduction. Altered enzyme susceptibility is not a whole-cell or clinical resistance observation.",
+      "id": "39014102",
+      "isOpenAccess": "Y",
+      "location": "Final Results subsection and Figure 7 caption; Discussion",
+      "medium": "LICENSED_OA_XML",
+      "pmcid": "PMC11252418",
+      "primary_request": {
+        "bytes": 125656,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/primary-39014102-response.bin",
+        "retrieved_at": "2026-10-09T15:55:41.190274+00:00",
+        "sha256": "2b4602b193e768b93f125efe307aa949daf2790ea00d69d8a4289b54ebfec2d1",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11252418/fullTextXML"
+      },
+      "reference_limit": "The 2005 P0A8M3 reference is not automatically an exact 2024 experimental allele assignment.",
+      "status": "BORRELIDIN_SPECIFIC_BIOCHEMICAL_SECTION_REVIEWED",
+      "supplements_inspected": false,
+      "title": "Specific glycine-dependent enzyme motion determines the potency of conformation selective inhibitors of threonyl-tRNA synthetase.",
+      "whole_paper_review_complete": false
+    },
+    "41773311": {
+      "commentCorrectionList": null,
+      "doi": "10.1093/g3journal/jkag046",
+      "figures_visually_inspected": [],
+      "finding": "The listed MIC panel covers seven other antibiotics, not borrelidin. A proposed borrelidin association must not be promoted to an independently isolated causal effect or a borrelidin MIC.",
+      "id": "41773311",
+      "isOpenAccess": "Y",
+      "locations": [
+        "Abstract",
+        "Bacterial strains and growth conditions: identity only",
+        "MIC assays: drug-panel scope",
+        "Reference-genome context",
+        "Data availability"
+      ],
+      "medium": "LICENSED_OA_XML",
+      "pmcid": "PMC13148393",
+      "primary_request": {
+        "bytes": 141893,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/primary-41773311-response.bin",
+        "retrieved_at": "2026-10-09T16:01:31.022637+00:00",
+        "sha256": "cd615d6096fdaeb4b88b2287ba218db72bc43b15ca478b98f12afd8882bac4e1",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13148393/fullTextXML"
+      },
+      "source_reported_identifiers": [
+        {
+          "identifier": "NC_000913.3",
+          "scope": "REFERENCE_CHROMOSOME_NOT_EACH_EXPERIMENTAL_GENOME",
+          "source_namespace_label": "GenBank accession"
+        },
+        {
+          "identifier": "ENA:PRJEB94349",
+          "scope": "STUDY_PROJECT_NOT_AN_ISOLATE_ASSEMBLY"
+        },
+        {
+          "identifier": "DOI:10.25387/g3.29630732",
+          "scope": "SOURCE_REPORTED_DATA_PORTAL_NOT_RETRIEVED"
+        }
+      ],
+      "status": "PRIMARY_SUBJECT_AND_ASSAY_SCOPE_REVIEW_NOT_COMPLETE_ASSOCIATION_ADJUDICATION",
+      "subject_background": "Escherichia coli K-12 MG1655; derivatives are distinct subjects",
+      "supplements_inspected": false,
+      "title": "Mutational basis of ceftazidime-borrelidin A collateral sensitivity in Escherichia coli.",
+      "whole_paper_review_complete": false
+    },
+    "4368395": {
+      "commentCorrectionList": null,
+      "doi": "10.1016/0014-5793(74)80046-3",
+      "figures_visually_inspected": [],
+      "id": "4368395",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Alteration of structure of level of threonyl-tRNA-synthetase in Borrelidin resistant mutants of E. coli.",
+      "whole_paper_review_complete": false
+    },
+    "4577856": {
+      "commentCorrectionList": null,
+      "doi": "10.1111/j.1432-1033.1973.tb02843.x",
+      "figures_visually_inspected": [],
+      "id": "4577856",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Biochemical and immunological characterization of threonyl-tRNA synthetase of two borrelidin-resistant mutants of Escherichia coli K12.",
+      "whole_paper_review_complete": false
+    },
+    "6269513": {
+      "commentCorrectionList": null,
+      "doi": "10.1007/bf00406464",
+      "figures_visually_inspected": [],
+      "id": "6269513",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Homoserine and threonine pools of borrelidin resistant Saccharomyces cerevisiae mutants with an altered aspartokinase.",
+      "whole_paper_review_complete": false
+    },
+    "6746646": {
+      "commentCorrectionList": null,
+      "doi": "10.1016/s0021-9258(17)47285-1",
+      "figures_visually_inspected": [],
+      "id": "6746646",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Chinese hamster ovary cells resistant to borrelidin overproduce threonyl-tRNA synthetase.",
+      "whole_paper_review_complete": false
+    },
+    "6997265": {
+      "commentCorrectionList": null,
+      "doi": "10.1128/jb.143.3.1135-1141.1980",
+      "figures_visually_inspected": [],
+      "id": "6997265",
+      "isOpenAccess": "N",
+      "pmcid": "PMC294463",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Genetic analysis of mutations causing borrelidin resistance by overproduction of threonyl-transfer ribonucleic acid synthetase.",
+      "whole_paper_review_complete": false
+    },
+    "785224": {
+      "commentCorrectionList": null,
+      "doi": "10.1007/bf00337933",
+      "figures_visually_inspected": [],
+      "id": "785224",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Genetics of borrelidin resistant mutants of Saccharomyces cerivisiae and properties of their threonyl-tRNA-synthetase.",
+      "whole_paper_review_complete": false
+    }
+  },
+  "proteins": {
+    "O29703": {
+      "accession": "UniProtKB:O29703",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AE000782",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB90685.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "basis": "EXPLICIT_UNIPROT_PUBLICATION_REFERENCE",
+      "entry_audit": {
+        "entryVersion": 152,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_allele_assignment": false,
+      "focal_citation_contexts": [
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15507440"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m411039200"
+            }
+          ]
+        }
+      ],
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "id": "MF_00184",
+                "source": "HAMAP-Rule"
+              }
+            ],
+            "value": "thrS"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "AF_0548"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Archaea",
+          "Methanobacteriati",
+          "Methanobacteriota",
+          "Archaeoglobi",
+          "Archaeoglobales",
+          "Archaeoglobaceae",
+          "Archaeoglobus"
+        ],
+        "scientificName": "Archaeoglobus fulgidus (strain ATCC 49558 / DSM 4304 / JCM 9628 / NBRC 100126 / VC-16)",
+        "taxonId": 224325
+      },
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_RESISTANT_ISOLATE"
+    },
+    "P0A8M3": {
+      "accession": "UniProtKB:P0A8M3",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "V00291",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAA23560.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "U00096",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAC74789.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "AP009048",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "BAA15498.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        },
+        {
+          "database": "EMBL",
+          "id": "M13549",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAA24674.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "basis": "EXPLICIT_UNIPROT_PUBLICATION_REFERENCE",
+      "entry_audit": {
+        "entryVersion": 169,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_allele_assignment": false,
+      "focal_citation_contexts": [
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15507440"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m411039200"
+            }
+          ]
+        }
+      ],
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "id": "MF_00184",
+                "source": "HAMAP-Rule"
+              }
+            ],
+            "value": "thrS"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "b1719"
+            },
+            {
+              "value": "JW1709"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "lineage": [
+          "Bacteria",
+          "Pseudomonadati",
+          "Pseudomonadota",
+          "Gammaproteobacteria",
+          "Enterobacterales",
+          "Enterobacteriaceae",
+          "Escherichia"
+        ],
+        "scientificName": "Escherichia coli (strain K12)",
+        "taxonId": 83333
+      },
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_RESISTANT_ISOLATE"
+    },
+    "Q58597": {
+      "accession": "UniProtKB:Q58597",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "L77117",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAB99201.1"
+            },
+            {
+              "key": "Status",
+              "value": "ALT_INIT"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "basis": "EXPLICIT_UNIPROT_PUBLICATION_REFERENCE",
+      "entry_audit": {
+        "entryVersion": 151,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_allele_assignment": false,
+      "focal_citation_contexts": [
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15507440"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m411039200"
+            }
+          ]
+        }
+      ],
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "id": "MF_00184",
+                "source": "HAMAP-Rule"
+              },
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "15240874",
+                "source": "PubMed"
+              }
+            ],
+            "value": "thrS"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "MJ1197"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Methanococcus jannaschii",
+        "lineage": [
+          "Archaea",
+          "Methanobacteriati",
+          "Methanobacteriota",
+          "Methanomada group",
+          "Methanococci",
+          "Methanococcales",
+          "Methanocaldococcaceae",
+          "Methanocaldococcus"
+        ],
+        "scientificName": "Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)",
+        "taxonId": 243232
+      },
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_RESISTANT_ISOLATE"
+    },
+    "Q70HZ0": {
+      "accession": "UniProtKB:Q70HZ0",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AJ580915",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "CAE45679.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "basis": "PRIMARY_ARCHIVE_AND_GENE_REFERENCE",
+      "entry_audit": {
+        "entryVersion": 112,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "focal_citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CAE45679.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "Tu4055"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15112998"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/S1074-5521(03)00297-7"
+            }
+          ]
+        }
+      ],
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "CAE45679.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "borO"
+          },
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "id": "MF_00184",
+                  "source": "HAMAP-Rule"
+                }
+              ],
+              "value": "thrS"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "CAE45679.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces parvulus",
+        "taxonId": 146923
+      },
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_RESISTANT_ISOLATE"
+    },
+    "Q97VW8": {
+      "accession": "UniProtKB:Q97VW8",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AE006641",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAK42622.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "basis": "EXPLICIT_UNIPROT_PUBLICATION_REFERENCE",
+      "entry_audit": {
+        "entryVersion": 130,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_allele_assignment": false,
+      "focal_citation_contexts": [
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15507440"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m411039200"
+            }
+          ]
+        }
+      ],
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000303",
+                "id": "15240874",
+                "source": "PubMed"
+              }
+            ],
+            "value": "thrS-cat"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "SSO2486"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Sulfolobus solfataricus",
+        "lineage": [
+          "Archaea",
+          "Thermoproteota",
+          "Thermoprotei",
+          "Sulfolobales",
+          "Sulfolobaceae",
+          "Saccharolobus"
+        ],
+        "scientificName": "Saccharolobus solfataricus (strain ATCC 35092 / DSM 1617 / JCM 11322 / P2)",
+        "taxonId": 273057
+      },
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_RESISTANT_ISOLATE"
+    },
+    "Q9HP27": {
+      "accession": "UniProtKB:Q9HP27",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "AE004437",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AAG20043.1"
+            },
+            {
+              "key": "Status",
+              "value": "ALT_INIT"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "basis": "EXPLICIT_UNIPROT_PUBLICATION_REFERENCE",
+      "entry_audit": {
+        "entryVersion": 139,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_allele_assignment": false,
+      "focal_citation_contexts": [
+        {
+          "context": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15507440"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m411039200"
+            }
+          ]
+        }
+      ],
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "id": "MF_00184",
+                "source": "HAMAP-Rule"
+              }
+            ],
+            "value": "thrS"
+          },
+          "orderedLocusNames": [
+            {
+              "value": "VNG_1835G"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Halobacterium halobium",
+        "lineage": [
+          "Archaea",
+          "Methanobacteriati",
+          "Methanobacteriota",
+          "Stenosarchaea group",
+          "Halobacteria",
+          "Halobacteriales",
+          "Halobacteriaceae",
+          "Halobacterium",
+          "Halobacterium salinarum NRC-34001"
+        ],
+        "scientificName": "Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)",
+        "taxonId": 64091
+      },
+      "scope": "REFERENCE_METADATA_NOT_TESTED_ALLELE_OR_RESISTANT_ISOLATE"
+    }
+  },
+  "record": {
+    "after_sha256": "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58",
+    "before_sha256": "f98c4cba9c9a9e8fb74c1c156176c0ff939c8d8db1a236dfb6b0a2fb0b1ab414",
+    "identifier": "CHEBI:78661",
+    "label": "borrelidin",
+    "path": "data/antibiotics/antifungal/borrelidin.yaml",
+    "standard_inchi_key": "OJCKRNPLOZHAOU-JTHVHBRGSA-N",
+    "whole_record_review": "OPEN"
+  },
+  "reviewed_on": "2026-10-09",
+  "schema_version": 1,
+  "scope": {
+    "corpus_records": 2939,
+    "discovery_candidate_papers": 18,
+    "existing_target_paper": 1,
+    "full_corpus_primary_review": "OPEN",
+    "papers_with_bounded_primary_review": 4,
+    "records": 1,
+    "reference_proteins": 6,
+    "whole_records_completed": 0
+  },
+  "taxonomy": {
+    "146923": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "request": {
+        "bytes": 1649,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-146923-response.bin",
+        "retrieved_at": "2026-10-09T15:59:09.414620+00:00",
+        "sha256": "86d362e3749d48537d5e854ad67c5647e3510c3afecfc5f884f8f5bbdece826f",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/146923.json"
+      },
+      "scientificName": "Streptomyces parvulus",
+      "species_ancestors": [],
+      "taxonId": 146923
+    },
+    "1888": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "request": {
+        "bytes": 6145,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-1888-response.bin",
+        "retrieved_at": "2026-10-09T15:59:13.092918+00:00",
+        "sha256": "378b4d8ad0230061893703162b71d5b54babbf4fe86838d001de87fd2f853a63",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/1888.json"
+      },
+      "scientificName": "Streptomyces albus",
+      "species_ancestors": [],
+      "taxonId": 1888
+    },
+    "224325": {
+      "active": true,
+      "parent": {
+        "scientificName": "Archaeoglobus fulgidus",
+        "taxonId": 2234
+      },
+      "rank": "strain",
+      "request": {
+        "bytes": 1681,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-224325-response.bin",
+        "retrieved_at": "2026-10-09T15:59:20.289687+00:00",
+        "sha256": "641c80aaaf9298b2b48275b156aad591b644a0fa6c8a88d70d95c3fe6e9cae6b",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/224325.json"
+      },
+      "scientificName": "Archaeoglobus fulgidus (strain ATCC 49558 / DSM 4304 / JCM 9628 / NBRC 100126 / VC-16)",
+      "species_ancestors": [
+        {
+          "hidden": true,
+          "rank": "species",
+          "scientificName": "Archaeoglobus fulgidus",
+          "taxonId": 2234
+        }
+      ],
+      "taxonId": 224325
+    },
+    "243232": {
+      "active": true,
+      "parent": {
+        "scientificName": "Methanocaldococcus jannaschii",
+        "taxonId": 2190
+      },
+      "rank": "strain",
+      "request": {
+        "bytes": 1547,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-243232-response.bin",
+        "retrieved_at": "2026-10-09T15:59:16.341205+00:00",
+        "sha256": "853ac3783d5ec7d9fa7147320b5373a346d0495d0c88d0d0d7890260777e5fcb",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/243232.json"
+      },
+      "scientificName": "Methanocaldococcus jannaschii (strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440)",
+      "species_ancestors": [
+        {
+          "hidden": true,
+          "rank": "species",
+          "scientificName": "Methanocaldococcus jannaschii",
+          "taxonId": 2190
+        }
+      ],
+      "taxonId": 243232
+    },
+    "273057": {
+      "active": true,
+      "parent": {
+        "scientificName": "Saccharolobus solfataricus",
+        "synonyms": [
+          "Sulfolobus solfataricus"
+        ],
+        "taxonId": 2287
+      },
+      "rank": "strain",
+      "request": {
+        "bytes": 1531,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-273057-response.bin",
+        "retrieved_at": "2026-10-09T15:59:27.672905+00:00",
+        "sha256": "a91261e09ed7539c4897f525c6aeb870cd2f486c79f617c0f62894efafef3954",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/273057.json"
+      },
+      "scientificName": "Saccharolobus solfataricus (strain ATCC 35092 / DSM 1617 / JCM 11322 / P2)",
+      "species_ancestors": [
+        {
+          "hidden": true,
+          "rank": "species",
+          "scientificName": "Saccharolobus solfataricus",
+          "synonyms": [
+            "Sulfolobus solfataricus"
+          ],
+          "taxonId": 2287
+        }
+      ],
+      "taxonId": 273057
+    },
+    "64091": {
+      "active": true,
+      "parent": {
+        "scientificName": "Halobacterium salinarum NRC-34001",
+        "taxonId": 2886895
+      },
+      "rank": "no rank",
+      "request": {
+        "bytes": 1787,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-64091-response.bin",
+        "retrieved_at": "2026-10-09T15:59:31.078921+00:00",
+        "sha256": "7c99360efbf3f14bafec8d4ebd9a2bfe8dc16296cab7cdd206e6aad31f229886",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/64091.json"
+      },
+      "scientificName": "Halobacterium salinarum (strain ATCC 700922 / JCM 11081 / NRC-1)",
+      "species_ancestors": [
+        {
+          "hidden": true,
+          "rank": "species",
+          "scientificName": "Halobacterium salinarum",
+          "synonyms": [
+            "Halobacterium halobium"
+          ],
+          "taxonId": 2242
+        }
+      ],
+      "taxonId": 64091
+    },
+    "83333": {
+      "active": true,
+      "parent": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "rank": "strain",
+      "request": {
+        "bytes": 5090,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-83333-response.bin",
+        "retrieved_at": "2026-10-09T15:59:34.493426+00:00",
+        "sha256": "83c59ae9694d1874b8a175d7ce7608f77f5688d35adf307a0859dbb20f9e1c17",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/83333.json"
+      },
+      "scientificName": "Escherichia coli (strain K12)",
+      "species_ancestors": [
+        {
+          "hidden": true,
+          "rank": "species",
+          "scientificName": "Escherichia coli",
+          "taxonId": 562
+        }
+      ],
+      "taxonId": 83333
+    }
+  },
+  "taxonomy_scope": "REFERENCE_TAXONOMY_NOT_EXACT_EXPERIMENTAL_ASSIGNMENT_OR_NCBI_REQUEST",
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-borrelidin/request-0686d8758d1c09e37c900c3e890e0375499159cc2adbd32a199082d60b77011c.json",
+        "sha256": "8bbd96e9b6fd12bc752ac4237b48f19964dfae79e6aaa5b4aa0f22132d5817e5"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "AJ580915 AND gene_exact:borO",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T15:56:55.653715+00:00",
+      "sha256": "e83bb008c2bae8b33c0b7a2d0e2cc39cf8d53939851a243415945943fed8e929",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=AJ580915+AND+gene_exact%3AborO&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-borrelidin/request-7a55271c3b42a990fa94e6678b11e0e7be9e289dfaa409f02c0f43864145dc3a.json",
+        "sha256": "4b0544bf1f48561f7da444b081a81ec3828b7c7d5dfebd9e863bbabfc6ff3b78"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "lit_pubmed:15507440",
+      "release": "2026_03",
+      "result_count": 5,
+      "retrieved_at": "2026-10-09T15:57:47.824688+00:00",
+      "sha256": "05ff4715d1db90d4bf4a3881f3e523cbb2b6a4fe8cd473456f358324139752c2",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A15507440&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ]
+}

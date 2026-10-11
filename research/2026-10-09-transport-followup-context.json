@@ -1,0 +1,897 @@
+{
+  "access_limitations": {
+    "cervimycin2022_native_supplement": {
+      "bytes": 5757,
+      "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/cervimycin2022-supplement-response.bin",
+      "retrieved_at": "2026-10-09T15:35:35.172154+00:00",
+      "sha256": "02bd470aff1bc1aaac54ed6875d2652aa157bcf4ae1980c3e23da52ae809fc70",
+      "status": 403,
+      "url": "https://journals.asm.org/doi/suppl/10.1128/spectrum.02567-22/suppl_file/spectrum.02567-22-s0001.pdf"
+    },
+    "cervimycin2022_native_supplement_result": "HTTP_403_HTML_CHALLENGE_NOT_PDF",
+    "cervimycin2022_web_supplement": "INDEXED_TEXT_PREVIOUSLY_READ_LATER_REOPEN_AND_SCREENSHOT_FAILED_NO_VISUAL_CLAIM",
+    "cervimycin_figures": "NOT_VISUALLY_INSPECTED",
+    "rta1_publisher": "HTTP_429_NO_RETRY_OR_BYPASS_LICENSED_OA_COPY_USED",
+    "rta2_oa_xml_requested": false
+  },
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0; EMBL-EBI Europe PMC bibliographic metadata and licensed OA full text; cited primary publishers. Article text, figures and supplements are not redistributed.",
+  "bibliographic_request": {
+    "bytes": 41382,
+    "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/metadata-response.bin",
+    "retrieved_at": "2026-10-09T15:28:37.600827+00:00",
+    "sha256": "80d82123523c3ec21c6efe34ff366d0b0c770a86eab291a53b91e99ed4786166",
+    "status": 200,
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28EXT_ID%3A36364991+OR+EXT_ID%3A26518191+OR+EXT_ID%3A38722162+OR+EXT_ID%3A36173303%29&format=json&resultType=core&pageSize=100"
+  },
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-09-oleandomycin-resistance-grounding.tsv",
+      "sha256": "e2ac349a1a893263fd2bfd26ad4602bc7f2b319ee202391944d4407efc5004fe"
+    },
+    "inherited_species_taxonomy": {
+      "path": "research/2026-10-09-structure-primary-context.json",
+      "sha256": "3e9095a99185b877b8df78b5dcef4e09c3a590b72f84574ccd75c64ba76dca14"
+    },
+    "pending_leads": {
+      "path": "research/2026-10-09-transport-primary-context.json",
+      "sha256": "12d0c181f15cf8dc12bed88e8d488937038cbfd8861d78ef5d335e6f754175d4"
+    }
+  },
+  "limitations": [
+    "No NCBI request, outreach, #1040 work, reuse-terms reassessment, source adoption, card.json retrieval, new genome-analysis pipeline or GitHub mutation occurred.",
+    "No sequences, variant specifications, constructs, primers, protocols, coordinates or numerical AST are exported.",
+    "Reference UniProt proteins and taxonomy do not establish exact tested alleles or phenotype-bearing isolate identities.",
+    "Source-reported NCBI identifiers are retained without contacting their endpoints; a BioProject is not an assembly or BioSample.",
+    "A complete query is not a complete biological family search; zero hits do not prove protein absence.",
+    "No correction entries were returned for these four bibliographic records; this bounded metadata result does not establish that no correction exists.",
+    "No clinical resistant/susceptible categories or species-wide resistance are inferred from these laboratory comparisons.",
+    "All 19 memberships have bounded dispositions, not whole-record completion or exhaustive literature review.",
+    "These four pending leads now have primary context; the historical discovery dossier and combined stage ledger are not rewritten.",
+    "PMID41108078 was reviewed separately in the canthin checkpoint; its access restriction is not reassessed here."
+  ],
+  "preservation": {
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "ignored_files_included": true,
+    "protected_baseline_files": 6736,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/protected-before.json",
+      "sha256": "f57bf1c699dd44df8731617a953c7a89a2e1bdce622dc5a7c5016364a5cb535c"
+    },
+    "record_hashes_verified": 2939
+  },
+  "primary_papers": {
+    "26518191": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "chemical_limits": "Commercial tunicamycin is not congener-resolved. The generic record describes a mixture but encodes one structure; the tested lot composition is not established. Exact 7AC stereochemistry remains unresolved.",
+      "commentCorrectionList": null,
+      "curation_decision": "HOLD_COMPOUND_IDENTITY_AND_CONFLICTING_STRAIN_LABELS",
+      "doi": "10.1093/femsyr/fov095",
+      "figure_request": {
+        "bytes": 22854,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/rta2-figure-2-response.bin",
+        "retrieved_at": "2026-10-09T15:40:41.457126+00:00",
+        "sha256": "ecab73259309c769e618e3f4ed1836d873837b11efe40fc51515661f8c5dc60b",
+        "signed_url_exported": false,
+        "source": "PUBLISHER_ARTICLE_FIGURE_2_LINK",
+        "status": 200
+      },
+      "figures_visually_inspected": [
+        "Figure 2"
+      ],
+      "finding": "Both 7-aminocholesterol and tunicamycin are tested; the ER-stress title is not grounds to reject the 7AC lead. Expression responses to other drugs do not establish their resistance phenotypes.",
+      "gene": "RTA2",
+      "id": "26518191",
+      "isOpenAccess": "N",
+      "locations": [
+        "Table 1",
+        "Drug susceptibility assays",
+        "Results, tolerance to ER stressors and 7AC",
+        "Figure 2",
+        "Discussion"
+      ],
+      "measurement_scope": {
+        "endpoint": "MIC80",
+        "growth_images_are_mic_values": false,
+        "note": "Growth rescue does not mean identical MIC80; no numerical values or resistance categories are inferred.",
+        "original_unit": "micromolar",
+        "standard_mass_unit_conversion": "NOT_PERFORMED_UNSPECIFIED_MIXTURE"
+      },
+      "numerical_ast_exported": false,
+      "pmcid": null,
+      "primary_request": {
+        "bytes": 315595,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/rta2-publisher-response.bin",
+        "retrieved_at": "2026-10-09T15:35:59.601387+00:00",
+        "sha256": "0f94df5d58247f430f48f2dfc6d5928f849da277817599477769d1f6b4e3e280",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/article-minimal/2467771"
+      },
+      "primary_url": "https://academic.oup.com/femsyr/article/15/8/fov095/2467771",
+      "reference_accession": "UniProtKB:Q59Q40",
+      "relevant_primary_text_reviewed": true,
+      "review_medium": "PUBLISHER_FREE_ARTICLE_HTML_NOT_OA_XML_SLICE",
+      "subject_conflict": {
+        "decision": "CONFLICT_RETAINED_NO_EXPERIMENTAL_STRAIN_ASSIGNMENT",
+        "methods_reconstituted_strain": "SLP15",
+        "table_1_reconstituted_strain": "SLP5"
+      },
+      "title": "The activity of RTA2, a downstream effector of the calcineurin pathway, is required during tunicamycin-induced ER stress response in Candida albicans.",
+      "whole_paper_review_complete": false
+    },
+    "36173303": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "chemical_limit": "The Figure 1 caption specifies relative configuration, not an independently verified absolute stereochemical match to every record.",
+      "commentCorrectionList": null,
+      "curation_decision": "HOLD_EXACT_COMPOUND_AND_SUBJECT_IDENTITY_NO_VARIANT_EXPORT",
+      "doi": "10.1128/spectrum.02567-22",
+      "exact_uniprot_assignment": null,
+      "figures_visually_inspected": [],
+      "finding": "Cervimycin C and D remain distinct. Reported resistance associations do not prove a direct drug target; background dependence and negative findings must be retained.",
+      "id": "36173303",
+      "isOpenAccess": "Y",
+      "locations": [
+        "Results and Discussion",
+        "Figure 1 caption",
+        "Supplement Table S2, indexed text only",
+        "RNA sequencing reference context",
+        "Data availability"
+      ],
+      "locus_prefix": "KQU62_",
+      "negative_comparison_gene": "dnaK",
+      "numerical_ast_exported": false,
+      "pmcid": "PMC9603734",
+      "primary_request": {
+        "bytes": 237342,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/primary-36173303-response.bin",
+        "retrieved_at": "2026-10-09T15:29:26.228381+00:00",
+        "sha256": "571563deb53e4ecdf391db262053dd2c022534737f7d43a45cd131a90b397d35",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9603734/fullTextXML"
+      },
+      "primary_url": "https://journals.asm.org/doi/10.1128/spectrum.02567-22",
+      "reference_search_limit": "Two bounded SG511/archive queries returned zero hits; protein absence is not established and no other strain was substituted.",
+      "relevant_primary_text_reviewed": true,
+      "reported_gene_associations": [
+        "clpP",
+        "clpC",
+        "walK"
+      ],
+      "review_medium": "LICENSED_OA_XML_PRIMARY_TEXT",
+      "source_reported_identifiers": [
+        {
+          "identifier": "RefSeq:NZ_CP076660.1",
+          "location": "RNA sequencing reference context",
+          "scope": "SG511_BERLIN_REFERENCE_GENOME_NOT_EVERY_TESTED_ISOLATE"
+        },
+        {
+          "identifier": "GenBank:CP076660",
+          "location": "Supplement Table S2, indexed text",
+          "scope": "SG511_BERLIN_REFERENCE_CHROMOSOME"
+        },
+        {
+          "identifier": "BioProject:PRJNA852436",
+          "location": "Data availability",
+          "scope": "STUDY_PROJECT_NOT_AN_ISOLATE_ASSEMBLY"
+        },
+        {
+          "identifier": "GEO:GSE206309",
+          "location": "Data availability",
+          "scope": "STUDY_TRANSCRIPTOMICS_NOT_A_GENOME"
+        },
+        {
+          "identifier": "ProteomeXchange:PXD034970",
+          "location": "Data availability",
+          "scope": "STUDY_PROTEOMICS_NOT_A_GENOME"
+        }
+      ],
+      "subject_limit": "SG511 Berlin is described as methicillin-susceptible, not as an MRSA parent. Activity panels against other resistant organisms do not establish cervimycin resistance in those organisms.",
+      "supplement_pdf_visually_inspected": false,
+      "title": "Cervimycin-Resistant Staphylococcus aureus Strains Display Vancomycin-Intermediate Resistant Phenotypes.",
+      "whole_paper_review_complete": false
+    },
+    "36364991": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "chemical_limits": "Active material, inactive alpha control, fluorescent derivative and crystallized imine are distinct. Their results cannot be pooled as one exact chemical assay.",
+      "commentCorrectionList": null,
+      "crystal_context": {
+        "cif_formula_moiety_verbatim": "C30 H57 N1 O1",
+        "cif_formula_sum_verbatim": "C30 H51 N1 O1",
+        "cif_review": "FORMULA_HEADERS_ONLY_NO_COORDINATE_EXPORT",
+        "discrepancy": "SUPPLEMENT_FORMULAS_DISAGREE_NOT_SILENTLY_CORRECTED",
+        "entity": "IMINE_DERIVATIVE_NOT_UNMODIFIED_7_AMINOCHOLESTEROL",
+        "table_s2_formula_verbatim": "C30H57NO"
+      },
+      "curation_decision": "HOLD_EXACT_COMPOUND_STEREOCHEMISTRY_AND_EXPERIMENTAL_ALLELE",
+      "doi": "10.3390/pathogens11111239",
+      "explicit_locus": "CNAG_03091",
+      "figures_visually_inspected": [
+        "Figure 3",
+        "Figure 4",
+        "Figure S8 (supplement page 8)",
+        "Table S2 (supplement page 10)"
+      ],
+      "finding": "Laboratory RTA1-associated tolerance is reported; proposed export models are not demonstrated transport mechanisms or clinical resistance calls.",
+      "gene": "RTA1",
+      "id": "36364991",
+      "isOpenAccess": "Y",
+      "locations": [
+        "Introduction locus identification",
+        "Results 3.1-3.9 and Discussion",
+        "Figures 3 and 4",
+        "Methods 2.15",
+        "Supplement Figure S8 and Table S2"
+      ],
+      "numerical_ast_exported": false,
+      "pmcid": "PMC9697666",
+      "primary_request": {
+        "bytes": 136088,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/primary-36364991-response.bin",
+        "retrieved_at": "2026-10-09T15:28:52.630757+00:00",
+        "sha256": "0722655b9747317dd885c942842c756e2de8e57cec212bc1b73679be4d54dbaf",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9697666/fullTextXML"
+      },
+      "primary_url": "https://www.mdpi.com/2076-0817/11/11/1239",
+      "reference_accession": "UniProtKB:J9VUL5",
+      "relevant_primary_text_reviewed": true,
+      "review_medium": "LICENSED_OA_XML_PRIMARY_TEXT",
+      "subject_limit": "H99 and the separate HK background are not interchangeable. Figure 4 notes unequal cell abundance in a comparison.",
+      "supplement_request": {
+        "bytes": 2321809,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/supplements-36364991-response.bin",
+        "retrieved_at": "2026-10-09T15:32:35.285917+00:00",
+        "sha256": "e4f4508945a63c223d8cbee7b83744ab2135222ebf9e1bb6ec0b9067ae12581a",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9697666/supplementaryFiles"
+      },
+      "title": "<i>RTA1</i> Is Involved in Resistance to 7-Aminocholesterol and Secretion of Fungal Proteins in <i>Cryptococcus neoformans</i>.",
+      "whole_paper_review_complete": false
+    },
+    "38722162": {
+      "bibliographic_source": "EMBL_EBI_EUROPE_PMC",
+      "commentCorrectionList": null,
+      "curation_decision": "HOLD_EXACT_COMPOUND_SUBJECT_AND_REFERENCE_GROUNDING",
+      "doi": "10.1128/msphere.00764-23",
+      "duplicate_context": "Table 1 reuses 2022 C/D data; references to that study are not independent experimental replication.",
+      "figures_visually_inspected": [],
+      "finding": "Cervimycin C susceptibility modifiers, biochemical inhibition and direct in-vivo target evidence are different claims. Phenotype similarity and transcriptional responses do not alone establish resistance causation.",
+      "id": "38722162",
+      "isOpenAccess": "Y",
+      "locations": [
+        "Relevant Results",
+        "Discussion",
+        "Table 1 attribution",
+        "Figure 1 caption"
+      ],
+      "negative_context": "The recU comparison does not reproduce a susceptibility effect. Previously resistant backgrounds do not establish cervimycin cross-resistance.",
+      "numerical_ast_exported": false,
+      "pmcid": "PMC11237698",
+      "primary_request": {
+        "bytes": 176293,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/primary-38722162-response.bin",
+        "retrieved_at": "2026-10-09T15:29:22.271355+00:00",
+        "sha256": "11d631592adff08922e27b8f95da1f03af5fd500e7941b381162f942ca8030a9",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11237698/fullTextXML"
+      },
+      "primary_url": "https://journals.asm.org/doi/10.1128/msphere.00764-23",
+      "relevant_primary_text_reviewed": true,
+      "review_medium": "LICENSED_OA_XML_PRIMARY_TEXT",
+      "subject_limit": "Bacillus subtilis 168 and the distinct S. aureus backgrounds must remain separate.",
+      "title": "The unusual mode of action of the polyketide glycoside antibiotic cervimycin C.",
+      "whole_paper_review_complete": false
+    }
+  },
+  "proteins": {
+    "J9VUL5": {
+      "accession": "UniProtKB:J9VUL5",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "CP003827",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AFR96314.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_pmids": [
+        "24743168"
+      ],
+      "entry_audit": {
+        "entryVersion": 40,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "focal_citation_present": false,
+      "gene_names_with_provenance": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AFR96314.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "CNAG_03091"
+            }
+          ]
+        }
+      ],
+      "grounding_basis": "PRIMARY_EXPLICIT_LOCUS_TO_UNIPROT_REFERENCE",
+      "organism": {
+        "commonName": "Cryptococcus neoformans var. grubii serotype A",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AFR96314.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000010091",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Basidiomycota",
+          "Agaricomycotina",
+          "Tremellomycetes",
+          "Tremellales",
+          "Cryptococcaceae",
+          "Cryptococcus",
+          "Cryptococcus neoformans species complex"
+        ],
+        "scientificName": "Cryptococcus neoformans (strain H99 / ATCC 208821 / CBS 10515 / FGSC 9487)",
+        "taxonId": 235443
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE"
+    },
+    "Q59Q40": {
+      "accession": "UniProtKB:Q59Q40",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "CP017624",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "AOW27651.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_pmids": [
+        "15123810",
+        "17419877",
+        "24025428"
+      ],
+      "entry_audit": {
+        "entryVersion": 90,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_assignment": false,
+      "focal_citation_present": false,
+      "gene_names_with_provenance": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "CAL0000175352",
+                "source": "CGD"
+              },
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "AOW27651.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "RTA2"
+          },
+          "orderedLocusNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "AOW27651.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "CAALFM_C206470WA"
+            },
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "CAL0000175352",
+                  "source": "CGD"
+                }
+              ],
+              "value": "orf19.7695"
+            }
+          ]
+        }
+      ],
+      "grounding_basis": "GENE_NAME_AND_REFERENCE_STRAIN_NOT_EXPLICIT_PRIMARY_LOCUS_CROSSWALK",
+      "organism": {
+        "commonName": "Yeast",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "AOW27651.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000000559",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Saccharomycotina",
+          "Pichiomycetes",
+          "Debaryomycetaceae",
+          "Candida/Lodderomyces clade",
+          "Candida"
+        ],
+        "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "taxonId": 237561
+      },
+      "scope": "REFERENCE_METADATA_NOT_EXACT_EXPERIMENTAL_ALLELE"
+    }
+  },
+  "records": [
+    {
+      "chemical_scope": "C7_UNSPECIFIED_IN_CURRENT_RECORD",
+      "decision": "HOLD_ACTIVE_MATERIAL_STEREOCHEMISTRY_NOT_DERIVATIVE_IDENTITY",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:77845",
+      "label": "7-aminocholesterol",
+      "paper_contexts": [
+        "PMID:36364991",
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/antibacterial/7-aminocholesterol.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "fc08d67dc41965726f624cc5c1c0db11aaabf0881fd9a786e4944559e4ee96a5",
+      "standard_inchi_key": "WLHQSAYHIOPMMJ-UOQFGJKXSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "RELATED_CONGENER_NOT_DIRECT_FOCAL_GENE_EVIDENCE",
+      "decision": "NO_C_D_GENE_ASSOCIATION_PROPAGATION_TO_OTHER_CONGENERS",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-da12e2d9fe",
+      "label": "cervimycin A",
+      "paper_contexts": [
+        "PMID:36173303",
+        "PMID:38722162"
+      ],
+      "path": "data/antibiotics/antibacterial/cervimycin-a.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "60eb8fb5349acf7ae4f9853f26f3e8efb33dee67ff2d921396f6c456b2cbe289",
+      "standard_inchi_key": "DTTQURMKQUWCNN-ZVSUTAIVSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "RELATED_CONGENER_NOT_DIRECT_FOCAL_GENE_EVIDENCE",
+      "decision": "NO_C_D_GENE_ASSOCIATION_PROPAGATION_TO_OTHER_CONGENERS",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-ec60046a85",
+      "label": "cervimycin B",
+      "paper_contexts": [
+        "PMID:36173303",
+        "PMID:38722162"
+      ],
+      "path": "data/antibiotics/antibacterial/cervimycin-b.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "2223033d806b5c15e2b6e771eb4634887f6772d54f192e5c5f469ce47e5595bf",
+      "standard_inchi_key": "BWIAPPHQSUHPDB-IWCGXAMISA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "NAMED_C_PRIMARY_CONTEXT",
+      "decision": "HOLD_EXACT_COMPOUND_AND_EXPERIMENTAL_REFERENCE_ASSIGNMENT",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-72f1180eb7",
+      "label": "cervimycin C",
+      "paper_contexts": [
+        "PMID:36173303",
+        "PMID:38722162"
+      ],
+      "path": "data/antibiotics/antibacterial/cervimycin-c.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "123c0f78fa0a130dd0c252054cb978939a3ecbad29c4e07563e50efaf21a8b33",
+      "standard_inchi_key": "CYKZTBKVWQAQLU-KSQSWLAPSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "D_COMPARISON_NOT_ALL_C_MECHANISTIC_EXPERIMENTS",
+      "decision": "HOLD_EXACT_COMPOUND_AND_EXPERIMENTAL_REFERENCE_ASSIGNMENT",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-5c527c4696",
+      "label": "cervimycin D",
+      "paper_contexts": [
+        "PMID:36173303",
+        "PMID:38722162"
+      ],
+      "path": "data/antibiotics/antibacterial/cervimycin-d.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "88ea51f4f11e8b2343d2e3f841d4503c4f5591f16b4b02db44a71dbc74dc8b79",
+      "standard_inchi_key": "YQSUNUWAYVGFKR-DIMVSIEISA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "RELATED_CONGENER_NOT_DIRECT_FOCAL_GENE_EVIDENCE",
+      "decision": "NO_C_D_GENE_ASSOCIATION_PROPAGATION_TO_OTHER_CONGENERS",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-eeb30db614",
+      "label": "cervimycin K1",
+      "paper_contexts": [
+        "PMID:36173303",
+        "PMID:38722162"
+      ],
+      "path": "data/antibiotics/antibacterial/cervimycin-k1.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "c5c7fc30f48d335fcf16f0c1e8d1b046a0fe3e44694e5d5d15663a80be5510c6",
+      "standard_inchi_key": "JHZMFWWPPNBNOE-BTYMIDDJSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "RELATED_CONGENER_NOT_DIRECT_FOCAL_GENE_EVIDENCE",
+      "decision": "NO_C_D_GENE_ASSOCIATION_PROPAGATION_TO_OTHER_CONGENERS",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-819aa3adea",
+      "label": "cervimycin K2",
+      "paper_contexts": [
+        "PMID:36173303",
+        "PMID:38722162"
+      ],
+      "path": "data/antibiotics/antibacterial/cervimycin-k2.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "702866bf4c5b07aba746332fc3825738c282b4787338443557a4519d6f429574",
+      "standard_inchi_key": "DEVSOSMRMRYYLQ-GCAGLVGWSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "RELATED_CONGENER_NOT_DIRECT_FOCAL_GENE_EVIDENCE",
+      "decision": "NO_C_D_GENE_ASSOCIATION_PROPAGATION_TO_OTHER_CONGENERS",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-6feb53f4d2",
+      "label": "cervimycin N",
+      "paper_contexts": [
+        "PMID:36173303",
+        "PMID:38722162"
+      ],
+      "path": "data/antibiotics/antibacterial/cervimycin-n.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "268546f09396cd856c6ddf729634712eac018e6f86b581ccf6dbd5067dd621e1",
+      "standard_inchi_key": "XBFFTJHNDMUQCQ-IVQVPZFMSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "GENERIC_NAME_RECORD_STILL_HAS_ONE_STRUCTURE",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "antibioticmech:aro-be005cca98",
+      "label": "tunicamycin",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/antibacterial/tunicamycin.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "44fe9a0f90d401d43e58ff9c272a178cec9b68e6c8bf33daebfa901516d18584",
+      "standard_inchi_key": "YJQCOFNZVFGCAF-ACCUITESSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64228",
+      "label": "tunicamycin A0",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-a0.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "c71b97c1300101a7dc62fa12082a41eeb48e2238abf8632d0c5a312167c40196",
+      "standard_inchi_key": "FIIRBPHYBLFBSD-MZPZZZQLSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64245",
+      "label": "tunicamycin A1",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-a1.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "56a63302b4ca6af82dbc703d4bc1e99a8a9c6bd01ec48f3df5ad9ad1151fa37b",
+      "standard_inchi_key": "YJQCOFNZVFGCAF-LLXUUZRASA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64246",
+      "label": "tunicamycin A2",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-a2.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "2fef7502ddd41ecb74df45e447dc6b1efa4ecbb7dfed29fda600bf3075aa39a0",
+      "standard_inchi_key": "MMDMXWRRAOLMDC-ZNZAGFTISA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64248",
+      "label": "tunicamycin B1",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-b1.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "62b4151afe7c630f630294f01b2e0280f11d3b18e5b74061f9689cca98d27c45",
+      "standard_inchi_key": "QYVMTFXNKNWWFX-YGTZKZKGSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64250",
+      "label": "tunicamycin B2",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-b2.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "f6835c611fe8c2b2d14f8c31315fd0513c35509ac617c3f088bd1c1bf4b6dcae",
+      "standard_inchi_key": "MEYZYGMYMLNUHJ-DIRMKAHISA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64255",
+      "label": "tunicamycin B3",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-b3.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "fe50003cedd6b1b6a300fc214223e30cbb13bc8f9e46e95cf51230852e39f433",
+      "standard_inchi_key": "XAFNQFHOQPRGAK-KTVOANSYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64256",
+      "label": "tunicamycin C1",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-c1.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "86e06c8aff084999918c6e67c1fefcc8c2db3a5e157988a4ef44a03d27bd1cec",
+      "standard_inchi_key": "ZOCXUHJGZXXIGQ-NPXWYGMKSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64257",
+      "label": "tunicamycin C2",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-c2.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "1314c0f2f5c21a39a9bd864cc5dba3da48ab1223cfc18d851eb69247e8568c35",
+      "standard_inchi_key": "NKDRZEIENXWUCE-VDIUWDQWSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64271",
+      "label": "tunicamycin D1",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-d1.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "2400af9acc2fa03042bb03c4b44328d504401ffd546b5d28a44c83f778159df0",
+      "standard_inchi_key": "DYGXSHBNTGWENQ-YTXMDVFISA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "chemical_scope": "EXACT_CONGENER_NOT_IDENTIFIED_IN_PAPER",
+      "decision": "NO_MIXTURE_TO_SINGLE_STRUCTURE_OR_CONGENER_PROPAGATION",
+      "exact_experimental_assignment": false,
+      "identifier": "CHEBI:64272",
+      "label": "tunicamycin D2",
+      "paper_contexts": [
+        "PMID:26518191"
+      ],
+      "path": "data/antibiotics/unspecified/tunicamycin-d2.yaml",
+      "record_action": "PRESERVE_RECORD_NO_NEW_BIOLOGICAL_CLAIM",
+      "sha256": "987b00917332b9d3edc928c6a1677d167a4a4da2f20f435bd69bb37d879da62b",
+      "standard_inchi_key": "XCEPHNBEHQJSSB-LGJGITPNSA-N",
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "reviewed_on": "2026-10-09",
+  "schema_version": 1,
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "primary_papers": 4,
+    "record_memberships": 19,
+    "reference_proteins": 2,
+    "whole_records_completed": 0
+  },
+  "status": "BOUNDED_PRIMARY_CONTEXT_WITH_CURATION_HOLDS",
+  "taxonomy": {
+    "1280": {
+      "active": true,
+      "parent": {
+        "scientificName": "Staphylococcus",
+        "taxonId": 1279
+      },
+      "rank": "species",
+      "scientificName": "Staphylococcus aureus",
+      "taxonId": 1280
+    },
+    "235443": {
+      "active": true,
+      "parent": {
+        "scientificName": "Cryptococcus neoformans",
+        "synonyms": [
+          "Filobasidiella neoformans"
+        ],
+        "taxonId": 5207
+      },
+      "parent_rank_from_lineage": "species",
+      "rank": "strain",
+      "request": {
+        "bytes": 2146,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-235443-response.bin",
+        "retrieved_at": "2026-10-09T15:40:28.581538+00:00",
+        "sha256": "76c0b459c2da93b9d45665468e88057feeb6c50b2fe9f5a53a44a3cfb77e0197",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/235443.json"
+      },
+      "scientificName": "Cryptococcus neoformans (strain H99 / ATCC 208821 / CBS 10515 / FGSC 9487)",
+      "taxonId": 235443
+    },
+    "237561": {
+      "active": true,
+      "parent": {
+        "commonName": "Yeast",
+        "scientificName": "Candida albicans",
+        "taxonId": 5476
+      },
+      "parent_rank_from_lineage": "species",
+      "rank": "strain",
+      "request": {
+        "bytes": 1907,
+        "cache_path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-response.bin",
+        "retrieved_at": "2026-10-09T15:40:37.883821+00:00",
+        "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/237561.json"
+      },
+      "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "taxonId": 237561
+    }
+  },
+  "taxonomy_scope": "UNIPROT_REFERENCE_TAXONOMY_NOT_NCBI_REQUEST_OR_TESTED_ALLELE_ASSIGNMENT",
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/request-01321362af79b4e159b3491b9bcd3a60b7a10d004863666874fb2baaaab89195.json",
+        "sha256": "1cb76444b34ff74667ff1cca8374aba58d30cfdc92ebe6443153e26497c144ac"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "(SG511 OR gene:KQU62*) AND (gene_exact:clpP OR gene_exact:clpC OR gene_exact:walK OR gene_exact:yycG OR gene_exact:dnaK)",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T15:36:34.539138+00:00",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28SG511+OR+gene%3AKQU62%2A%29+AND+%28gene_exact%3AclpP+OR+gene_exact%3AclpC+OR+gene_exact%3AwalK+OR+gene_exact%3AyycG+OR+gene_exact%3AdnaK%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/request-2b1eab448c5b11c02097ac4d784f29a7da48e50c5d5a3f2ccceb42f1cd769ad9.json",
+        "sha256": "adc0c864fbb22978bd4998f67657c425e015a2417cf4db211e54293c53364a67"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "CNAG_03091",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T15:29:57.568286+00:00",
+      "sha256": "df7c473a092d6f095efe4979fd6fee1ddb8634a1b208a5c5c2bce67632d92a25",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=CNAG_03091&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/request-6a1cbd48b8b59eed9135e93ef738500080b1086364a6b2b0579f30725cb09f96.json",
+        "sha256": "d3071b7c3429f618c46aac1d46d957dbab644ad4a1d1fb95bf8b647d6c189bcc"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "(organism_id:5476 OR organism_id:237561) AND gene_exact:RTA2",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T15:35:02.797632+00:00",
+      "sha256": "8e38c5477a812dcb64ab6dcd398e0f9708ebc2ed7b4ec5faefc038b3c94e204a",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28organism_id%3A5476+OR+organism_id%3A237561%29+AND+gene_exact%3ARTA2&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/request-6cb2e82b08a8231b53d7d73a406505c524b5ccda4b32d071f0751cdf6b85e859.json",
+        "sha256": "fc0534f81c2c03dde3d5227b43c5d39f9e582feaf60d2b462e2e9f76ee51672f"
+      },
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "query": "(CP076660) AND (gene_exact:clpP OR gene_exact:clpC OR gene_exact:walK OR gene_exact:dnaK)",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T15:34:54.852875+00:00",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28CP076660%29+AND+%28gene_exact%3AclpP+OR+gene_exact%3AclpC+OR+gene_exact%3AwalK+OR+gene_exact%3AdnaK%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ]
+}

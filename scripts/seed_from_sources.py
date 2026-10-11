@@ -51,6 +51,9 @@ from ncbi_ast_assays import (
 from ncbi_ast_biosamples import activity_observations as ncbi_ast_observations
 from ncbi_ast_inventory import open_activity_text, resolve_inventory
 from ncbi_ast_isolates import ISOLATE_REFERENCE, require_isolate_provenance
+from phibase_grounding_reviews import DEFAULT_REVIEW as PHIBASE_GROUNDING_REVIEW
+from phibase_grounding_reviews import apply_review as apply_phibase_grounding_review
+from phibase_grounding_reviews import load_reviews as load_phibase_grounding_reviews
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
@@ -1837,7 +1840,9 @@ def phibase_sourced_resistance_view(record: dict) -> list[dict]:
     ]
 
 
-def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
+def attach_phibase_resistance(
+    records: dict[str, dict], *, grounding_review: Path | None = PHIBASE_GROUNDING_REVIEW,
+) -> Counter:
     """Attach ChEBI-grounded PHI-base resistance associations.
 
     The source supports an alteration--chemical resistance phenotype but does
@@ -1846,6 +1851,7 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
     target alteration, efflux, or another mechanism category.
     """
     rows = load_tsv(RAW_DIR / "phibase_amr.tsv")
+    reviews = load_phibase_grounding_reviews(RAW_DIR / "phibase_amr.tsv", rows, grounding_review)
     counts: Counter = Counter()
     grouped: dict[str, list[dict]] = defaultdict(list)
     for row in rows:
@@ -1913,6 +1919,8 @@ def attach_phibase_resistance(records: dict[str, dict]) -> Counter:
                     ),
                 }],
             }
+            if apply_phibase_grounding_review(item, row, reviews):
+                counts["reviewed_identifier_context"] += 1
             items.append({k: v for k, v in item.items() if v is not None})
             counts["matched_associations"] += 1
         if not items:

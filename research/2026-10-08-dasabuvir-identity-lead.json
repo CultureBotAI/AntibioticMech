@@ -1,0 +1,73 @@
+{
+  "doi": "10.1128/AAC.04619-14",
+  "follow_up_review": "2026-10-08-hcv-compound-form-reviews.json",
+  "finding": "The paper names a sodium form, while the existing claim is on the distinct neutral-form record. Compound-specific placement needs review before additional grounding.",
+  "inspected_full_text": "https://www.researchgate.net/publication/269999528_In_Vitro_Activity_and_Resistance_Profile_of_Dasabuvir_a_Non-nucleoside_HCV_Polymerase_Inhibitor",
+  "inspected_version": "Publisher-provided full-text preview from American Society for Microbiology",
+  "limitations": [
+    "Figure 1 was not visually inspected. The web image request returned 404; direct image and PDF downloads returned 403. Publisher PDF text was accessible.",
+    "Hydration state is not established by the inspected compound sentence.",
+    "No active-moiety equivalence, identifier correction, allele crosswalk or numeric endpoint inferred.",
+    "The neutral-form claim remains unchanged pending identity review; this report is not its validation.",
+    "No new requests to NCBI endpoints were made."
+  ],
+  "locations": [
+    "Materials and Methods, Compound",
+    "Activity in HCV replicons"
+  ],
+  "next_action": "Resolve material identity and claim placement; do not copy one study into all three structures or normalize source reference accessions silently.",
+  "primary_reference": "PMID:25534735",
+  "publisher_pdf": "https://journals.asm.org/doi/pdf/10.1128/aac.04619-14",
+  "publisher_pdf_page_inspected_as_text": 1506,
+  "records": [
+    {
+      "existing_resistance_references": [
+        "PMID:25534735"
+      ],
+      "identifier": "CHEBI:85182",
+      "label": "dasabuvir",
+      "molecular_formula": "C26H27N3O5S",
+      "path": "data/antibiotics/antiviral/dasabuvir.yaml",
+      "record_sha256": "2f8487c4c61b6ee6126c8a3d6a3f6d9dd7704486bbde08cdedfb3f1ef3b9020c",
+      "resistance_claim_count": 1,
+      "standard_inchi_key": "NBRBXGKOEOGLOI-UHFFFAOYSA-N"
+    },
+    {
+      "existing_resistance_references": [],
+      "identifier": "CHEBI:85179",
+      "label": "dasabuvir sodium",
+      "molecular_formula": "C26H26N3O5S.Na",
+      "path": "data/antibiotics/antiviral/dasabuvir-sodium.yaml",
+      "record_sha256": "0bcdd98cd8e3a938a395a233dd9d49793656f34a0d03bf94fa3f8da3466ab378",
+      "resistance_claim_count": 0,
+      "standard_inchi_key": "VZCGKKLFRJCTFM-UHFFFAOYSA-N"
+    },
+    {
+      "existing_resistance_references": [],
+      "identifier": "CHEBI:85178",
+      "label": "dasabuvir sodium hydrate",
+      "molecular_formula": "C26H26N3O5S.H2O.Na",
+      "path": "data/antibiotics/antiviral/dasabuvir-sodium-hydrate.yaml",
+      "record_sha256": "6b58c1915ef9460ef584c99bd5a388fb2a3ffcaff83c2669c04cf6192db130a8",
+      "resistance_claim_count": 0,
+      "standard_inchi_key": "OGXIDVVYYFRBGF-UHFFFAOYSA-N"
+    }
+  ],
+  "reference_context": {
+    "backbones": [
+      "H77",
+      "Con1"
+    ],
+    "gene_region": "NS5B",
+    "organism_label": "Hepatitis C virus",
+    "source_accessions_verbatim": [
+      "NC004102",
+      "AJ238799"
+    ],
+    "status": "REFERENCE_BACKBONES_NOT_EXACT_EXPERIMENTAL_ALLELES"
+  },
+  "reviewed_on": "2026-10-08",
+  "snapshot_scope": "Historical pre-warning snapshot. Subsequent curation added a claim-level warning and open discussion to the neutral record; the two related salt/hydrate records remain unchanged. Use the follow-up review for current record hashes.",
+  "source_url": "https://journals.asm.org/doi/full/10.1128/aac.04619-14",
+  "status": "COMPOUND_FORM_REVIEW_REQUIRED"
+}

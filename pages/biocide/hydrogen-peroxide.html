@@ -121,9 +121,8 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">6 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">6 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>UNKNOWN <span class="pill plain">6</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
@@ -131,12 +130,13 @@ type — expand a group to see its determinants.</p>
     <caption>UNKNOWN</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>ATG9delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>ATG9delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review fungal-2018-parent-reference-context: PH-1 is the parental background, not a unique tested derivative. I1S9X9, the retained source gene_id and TaxID 229533 describe PH-1 reference context. The paper locus and current reference-locus names are not an independently established exact allele crosswalk. The EMBL ALT_SEQ flag in UniProt does not identify the experimental alteration. Source biological fields are unchanged; growth-inhibition comparisons are not MIC or clinical resistance categories. Exact subject protein, strain TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533; protein_accession=UniProtKB:I1S9X9.</span></td>
       <td>—</td>
-      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_229533"><code class="curie">NCBITaxon:229533</code></a><br> <a href="https://www.uniprot.org/uniprotkb/I1S9X9"><code class="curie">UniProtKB:I1S9X9</code></a> <span class="meta">FGRAMPH1_01T26133</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
+      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <span class="meta">FGRAMPH1_01T26133</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/30044782">PMID:30044782</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:264; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pgen.1007546">DOI:10.1371/journal.pgen.1007546</a></span> <span class="meta">(Identifier-scope review: Results sections sec005 and sec011: parent versus tested derivatives; Figure 8, UniProtKB release 2026_03: I1S9X9 entry 57, sequence version 1; PH-1 reference locus and taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
@@ -151,22 +151,24 @@ type — expand a group to see its determinants.</p>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>Hdf1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Hdf1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review li-2011-hdf1-subject-context: Primary evidence identifies YM1 as the tested subject, distinct from parent PH-1 and comparator YM11. I1RCN2 and TaxID 229533 describe PH-1 reference context, not YM1. The paper&#39;s FGSG_01353 and UniProt&#39;s FGRAMPH1_01T03337 are not asserted equivalent without an authoritative alias crosswalk. The empty source gene_id remains empty. Source alteration, phenotype and assay are unchanged; the growth comparison is not an MIC or clinical resistance category. No exact experimental accession, genome or numeric measurement is inferred. Original source background label: PH-1. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533; protein_accession=UniProtKB:I1RCN2.</span></td>
       <td>—</td>
-      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_229533"><code class="curie">NCBITaxon:229533</code></a><br> <a href="https://www.uniprot.org/uniprotkb/I1RCN2"><code class="curie">UniProtKB:I1RCN2</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
+      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain YM1</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/21138346">PMID:21138346</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:8901; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1094/MPMI-10-10-0233">DOI:10.1094/MPMI-10-10-0233</a></span> <span class="meta">(Identifier-scope review: Author-affiliated USDA archived published PDF: p. 488 Results distinguishes YM1 from parent PH-1; p. 489 Table 1 lists subjects; p. 492 Figure 9C and caption identify YM1, parent PH-1 and separate complemented comparator YM11; pages visually inspected, UniProtKB release 2026_03: I1RCN2 entry 85, sequence version 1; PH-1 reference locus FGRAMPH1_01T03337; TaxID 229533 under species 5518; paper locus FGSG_01353 alias remains unresolved. Reviewed 2026-10-09 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
     <tr>
-      <td>Ndk1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism.</span></td>
+      <td>Ndk1delta (deletion) associated with resistance to hydrogen peroxide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review fungal-2025-peroxide-parent-context: PH-1 is the parental background, not a unique tested derivative. I1RPK0 and TaxID 229533 describe PH-1 reference context; that lineage does not establish exact experimental subject identity. The reported growth-inhibition comparison is not an MIC or clinical resistance classification. Source biological fields remain unchanged; no new measurement, allele or genome is assigned, and exact subject protein and strain TaxID remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533; protein_accession=UniProtKB:I1RPK0.</span></td>
       <td>—</td>
-      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span> <a href="http://purl.obolibrary.org/obo/NCBITaxon_229533"><code class="curie">NCBITaxon:229533</code></a><br> <a href="https://www.uniprot.org/uniprotkb/I1RPK0"><code class="curie">UniProtKB:I1RPK0</code></a><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
+      <td><em>Fusarium graminearum</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5518"><code class="curie">NCBITaxon:5518</code></a><br><span class="meta">strain PH-1</span><br> <a href="http://purl.obolibrary.org/obo/PHIPO_0000632"><code class="curie">PHIPO:0000632</code></a></td>
       <td class="meta">—</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/41277790">PMID:41277790</a></span> <span class="meta">(PHI-base primary-literature antimicrobial interaction PHIG:10429; joined to this record by exact ChEBI identifier.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1111/mpp.70174">DOI:10.1111/mpp.70174</a></span> <span class="meta">(Identifier-scope review: Results section mpp70174-sec-0009: parent and separate derivative comparisons; Figure 5a-b, Strain identity in mpp70174-sec-0014, UniProtKB release 2026_03: I1RPK0 entry 74, sequence version 1; PH-1 reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
     </tr>
@@ -246,6 +248,76 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Scoped source protein and reference-strain identifiers to provenance after primary-paper review; parent labels, source biological claims and gene IDs retained. No experimental allele, genome or activity measurement inferred.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after eight subject-identity corrections; previous decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Darlington subject correction; prior review decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Nakayama reference-scope review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Duan reference-scope review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Piotrowska parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Xu subject and species corrections; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Shima parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Mehrabi parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Huang parent-reference review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Corrected the tested subject from PH-1 parent to YM1 after primary identity review. Reference protein and strain TaxID moved to provenance; source biology preserved, historical locus alias and experimental accessions unresolved.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the Fouche parent-cohort review; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_REFERENCE_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed shared PHI-base review checksum after the SDH8 reference-alias correction; prior decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">REVIEWED_RESISTANCE_SUBJECT_CONTEXT</span>
+    <span class="meta">2026-10-09 · codex · LLM-assisted</span>
+    <p>Refreshed the shared PHI-base review checksum after the Posteraro subject-context review; previous decisions, biological fields and activities unchanged.</p>
   </li>
 </ol>
 

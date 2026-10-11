@@ -1,0 +1,1334 @@
+{
+  "bibliographic_request": {
+    "bytes": 86882,
+    "cache_path": "reports/resistance-grounding-2026-10-09-platen/metadata-response.bin",
+    "retrieved_at": "2026-10-09T17:03:45.093090+00:00",
+    "sha256": "c1cb74f636303179394f765ca8417b55ca6968deb2b15229a10880fb04b4e648",
+    "status": 200,
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28EXT_ID%3A18336284+OR+EXT_ID%3A20158476+OR+EXT_ID%3A20232845+OR+EXT_ID%3A23157615+OR+EXT_ID%3A24560608+OR+EXT_ID%3A25403676+OR+EXT_ID%3A26249693+OR+EXT_ID%3A27126098+OR+EXT_ID%3A27865713+OR+EXT_ID%3A36074093+OR+EXT_ID%3A36798081%29&format=json&resultType=core&pageSize=100"
+  },
+  "candidate_ids": [
+    "CBA:662853",
+    "MED:18336284",
+    "MED:20158476",
+    "MED:20232845",
+    "MED:23157615",
+    "MED:24560608",
+    "MED:25403676",
+    "MED:26249693",
+    "MED:27126098",
+    "MED:27865713",
+    "MED:36074093",
+    "MED:36798081"
+  ],
+  "candidate_memberships": [
+    {
+      "candidate_ids": [
+        "MED:20232845",
+        "MED:23157615",
+        "MED:24560608",
+        "MED:25403676",
+        "MED:27126098",
+        "MED:27865713"
+      ],
+      "identifier": "CHEBI:68241"
+    },
+    {
+      "candidate_ids": [
+        "CBA:662853",
+        "MED:18336284",
+        "MED:20158476",
+        "MED:20232845",
+        "MED:23157615",
+        "MED:24560608",
+        "MED:25403676",
+        "MED:26249693",
+        "MED:27126098",
+        "MED:27865713",
+        "MED:36074093",
+        "MED:36798081"
+      ],
+      "identifier": "CHEBI:68236"
+    }
+  ],
+  "cerulenin_context": {
+    "identifier": "CHEBI:171741",
+    "record": {
+      "path": "data/antibiotics/antifungal/cerulenin.yaml",
+      "sha256": "b7044c3753d7b4e7f96357592b449e9967616b889056c43bf837b87e9ccb96b1"
+    },
+    "record_changed": false,
+    "scope": "Bounded negative comparison only; prior curated organism-specific evidence preserved"
+  },
+  "date": "2026-10-09",
+  "github_mutations": 0,
+  "host_taxonomy_search": {
+    "candidates": [
+      {
+        "active": true,
+        "otherNames": [
+          "Streptomyces albus str. J1074",
+          "Streptomyces albus strain J1074"
+        ],
+        "parent": {
+          "scientificName": "Streptomyces albus",
+          "taxonId": 1888
+        },
+        "rank": "strain",
+        "scientificName": "Streptomyces albus J1074",
+        "strains": null,
+        "taxonId": 457425
+      },
+      {
+        "active": true,
+        "otherNames": null,
+        "parent": {
+          "scientificName": "unclassified Kitasatosporales",
+          "taxonId": 3106765
+        },
+        "rank": "species",
+        "scientificName": "Kitasatosporales bacterium J1074",
+        "strains": null,
+        "taxonId": 3466461
+      },
+      {
+        "active": true,
+        "otherNames": [
+          "Streptomyces albus (strain G)"
+        ],
+        "parent": {
+          "scientificName": "Streptomyces albus",
+          "taxonId": 1888
+        },
+        "rank": "strain",
+        "scientificName": "Streptomyces albus G",
+        "strains": [
+          {
+            "name": "J1074"
+          }
+        ],
+        "taxonId": 1962
+      }
+    ],
+    "complete_for_query": true,
+    "decision": "MULTIPLE_NAME_CANDIDATES_NO_EXPERIMENTAL_STRAIN_ASSIGNMENT",
+    "query": "J1074",
+    "request": {
+      "bytes": 3595,
+      "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-search-4efabffb8850-response.bin",
+      "retrieved_at": "2026-10-09T15:57:40.413908+00:00",
+      "sha256": "369c9083ba4013e41713f4bfa92c82cf95a538fa843c301215904bcfe16dc1c4",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=J1074&format=json&size=100"
+    },
+    "result_count": 3,
+    "selected_strain_taxon": null,
+    "source_label": "Streptomyces albus J1074",
+    "species_name_reference": "NCBITaxon:1888"
+  },
+  "inputs": {
+    "discovery": {
+      "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+      "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+    },
+    "host_taxonomy_context_reused": {
+      "path": "research/2026-10-09-borrelidin-primary-context.json",
+      "sha256": "ff6824c3ec68aef5162eb0b6776faf5a520186d75b006989d44e18b78278453b"
+    }
+  },
+  "limitations": [
+    "All whole-record primary reviews remain open; nine MED candidates and one CBA candidate remain primary-review pending.",
+    "No exact experimental allele, derivative TaxID, genome, sequence, engineering specification or numerical AST is exported.",
+    "Gene and cluster archives are not whole-genome assemblies; same species does not identify the source strain.",
+    "No NCBI endpoint request, NCBI outreach, CARD data import, source adoption or GitHub mutation.",
+    "Publisher 2014 endpoint returned 403; accepted manuscript was read from the public mirror instead. No EBI OA full-text request for either OA=N focal record; supplements were not inspected.",
+    "2015 text-label discrepancy is unadjudicated, not a confirmed figure error."
+  ],
+  "ncbi_endpoint_requests": 0,
+  "negative_query_limit": "Zero exact archive hits for KF543053/KF543054 are scoped to these queries, not proof that the proteins do not exist in UniProt.",
+  "non_MED_candidates": [
+    {
+      "identifier": "CBA:662853",
+      "status": "PRIMARY_REVIEW_PENDING_NOT_QUERIED_AS_MED"
+    }
+  ],
+  "out_of_corpus_compound": {
+    "matching_records": 0,
+    "name": "thiolactomycin",
+    "record_added": false,
+    "search_scope": "data/antibiotics filenames and complete content, hidden and ignored files included"
+  },
+  "primary_papers": {
+    "18336284": {
+      "commentCorrectionList": null,
+      "doi": "10.2174/092986708783885255",
+      "firstPublicationDate": "2008-01-01",
+      "id": "18336284",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Platensimycin: a promising antimicrobial targeting fatty acid synthesis.",
+      "whole_paper_review_complete": false
+    },
+    "20158476": {
+      "commentCorrectionList": null,
+      "doi": "10.2174/092986710790827852",
+      "firstPublicationDate": "2010-01-01",
+      "id": "20158476",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Recent advances on platensimycin: a potential antimicrobial agent.",
+      "whole_paper_review_complete": false
+    },
+    "20232845": {
+      "commentCorrectionList": null,
+      "doi": "10.1021/ol100342m",
+      "firstPublicationDate": "2010-04-01",
+      "id": "20232845",
+      "isOpenAccess": "N",
+      "pmcid": "PMC2855538",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Engineering of Streptomyces platensis MA7339 for overproduction of platencin and congeners.",
+      "whole_paper_review_complete": false
+    },
+    "23157615": {
+      "commentCorrectionList": null,
+      "doi": "10.1021/np3005985",
+      "firstPublicationDate": "2012-11-16",
+      "id": "23157615",
+      "isOpenAccess": "N",
+      "pmcid": "PMC3532557",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Expression of the platencin biosynthetic gene cluster in heterologous hosts yielding new platencin congeners.",
+      "whole_paper_review_complete": false
+    },
+    "24560608": {
+      "clinical_categories_assigned": false,
+      "commentCorrectionList": null,
+      "compound_identity": "Named neutral-acid structures inspected in Figure 1; not a new InChI computation",
+      "document_version": "ACCEPTED_AUTHOR_MANUSCRIPT_NOT_FINAL_PUBLISHER_VERSION",
+      "doi": "10.1016/j.chembiol.2014.01.005",
+      "figures_visually_inspected": [
+        "Figure 1",
+        "Figure 2",
+        "Table 1"
+      ],
+      "finding": "The reported ptmP3 response covers both compounds; fabF has a partial platencin response. Coarse replacement/modification routes are author interpretations, not exact-allele assignments.",
+      "firstPublicationDate": "2014-02-20",
+      "host_background": "Streptomyces albus J1074",
+      "id": "24560608",
+      "identity_page_visually_inspected": true,
+      "isOpenAccess": "N",
+      "native_donor": "Streptomyces platensis MA7327",
+      "necessity_limit": "A multi-gene native deletion is not independent proof of single-gene necessity.",
+      "negative_context": "The tested native fabH and ptmP1/ptmP2/ptmP4 comparisons were not positive resistance claims.",
+      "other_producer": "Streptomyces platensis MA7339",
+      "pmcid": "PMC3966621",
+      "primary_request": {
+        "bytes": 586599,
+        "cache_path": "reports/resistance-grounding-2026-10-09-platen/peterson2014-response.bin",
+        "retrieved_at": "2026-10-09T17:04:59.138235+00:00",
+        "sha256": "c970162577780a7f73a11def17ab2ed7480a8f0a198b5144f7e077bbb3be8da4",
+        "status": 200,
+        "url": "https://artefacts-discovery.researcher.life/full_text/DA-2/3f/3ff1fecd75a737289fc93d1193afee9f/full_text/2d1c5caefbe881a219fe0969de0b5e10.pdf"
+      },
+      "ptnP3_limit": "Named homolog, not automatically the independently tested ptmP3 allele.",
+      "quantitative_export": false,
+      "reviewed_locations": [
+        "Results pages 3-5",
+        "Discussion pages 6-7",
+        "accession statement page 1",
+        "Figure 1",
+        "Figure 2",
+        "Table 1"
+      ],
+      "rights": "Copyright 2014 Elsevier; private source cache, no article text or figures redistributed",
+      "source_archives": [
+        {
+          "accession": "ACS13710",
+          "gene": "ptmP3",
+          "scope": "SOURCE_REPORTED_UNVERSIONED_PROTEIN_REFERENCE"
+        },
+        {
+          "accession": "KF543053",
+          "gene": "fabF",
+          "scope": "DONOR_GENE_ARCHIVE_NOT_GENOME"
+        },
+        {
+          "accession": "KF543054",
+          "gene": "fabH",
+          "scope": "DONOR_GENE_ARCHIVE_NOT_GENOME"
+        }
+      ],
+      "status": "BOUNDED_PRIMARY_CONTEXT_REVIEWED",
+      "supplements_inspected": false,
+      "title": "Mechanisms of self-resistance in the platensimycin- and platencin-producing Streptomyces platensis MA7327 and MA7339 strains.",
+      "whole_paper_review_complete": false
+    },
+    "25403676": {
+      "commentCorrectionList": null,
+      "doi": "10.1128/aac.04179-14",
+      "drug_scope": [
+        "platensimycin",
+        "platencin",
+        "thiolactomycin",
+        "cerulenin"
+      ],
+      "figures_visually_inspected": [],
+      "finding": "The FabH context is not interchangeable with the 2014 native FabH comparison in a different host.",
+      "firstPublicationDate": "2014-11-17",
+      "id": "25403676",
+      "isOpenAccess": "N",
+      "native_primary_file_cached": false,
+      "negative_limit": "The cerulenin selection outcome is limited to the reported conditions, not universal absence and not a contradiction of the existing Bacillus subtilis record.",
+      "pmcid": "PMC4335864",
+      "primary_access": "PUBLISHER_HTML_READ_VIA_WEB_TOOL; no native HTML cache",
+      "primary_url": "https://journals.asm.org/doi/10.1128/aac.04179-14",
+      "record_mutations": 0,
+      "retrieved_on": "2026-10-09",
+      "reviewed_locations": [
+        "Abstract",
+        "Introduction",
+        "initial Results drug scope and negative comparison",
+        "Table 1 background labels"
+      ],
+      "status": "BOUNDED_PRIMARY_CONTEXT_REVIEWED",
+      "subject_background": "Staphylococcus aureus RN4220; laboratory derivatives are not clinical isolates",
+      "subject_mapping_status": "PENDING_PRIMARY_IDENTITY_ADJUDICATION; no allele or protein assignment curated",
+      "supplements_inspected": false,
+      "text_only_mapping_concern": "Indexed Table 1 and Figure 3 caption subject-to-alteration labels differ; visual adjudication remains pending. No alteration specifications exported.",
+      "title": "FabH mutations confer resistance to FabF-directed antibiotics in Staphylococcus aureus.",
+      "whole_paper_review_complete": false
+    },
+    "26249693": {
+      "commentCorrectionList": null,
+      "doi": "10.1107/s2053230x15010614",
+      "firstPublicationDate": "2015-07-28",
+      "id": "26249693",
+      "isOpenAccess": "Y",
+      "pmcid": "PMC4528935",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Structures of Pseudomonas aeruginosa \u03b2-ketoacyl-(acyl-carrier-protein) synthase II (FabF) and a C164Q mutant provide templates for antibacterial drug discovery and identify a buried potassium ion and a ligand-binding site that is an artefact of the crystal form.",
+      "whole_paper_review_complete": false
+    },
+    "27126098": {
+      "commentCorrectionList": null,
+      "doi": "10.1007/s10295-016-1769-z",
+      "firstPublicationDate": "2016-04-28",
+      "id": "27126098",
+      "isOpenAccess": "N",
+      "pmcid": "PMC5056013",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Titer improvement and pilot-scale production of platensimycin from Streptomyces platensis SB12026.",
+      "whole_paper_review_complete": false
+    },
+    "27865713": {
+      "commentCorrectionList": null,
+      "doi": "10.1016/j.bcp.2016.11.013",
+      "firstPublicationDate": "2016-11-16",
+      "id": "27865713",
+      "isOpenAccess": "N",
+      "pmcid": "PMC5410400",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Platensimycin and platencin: Inspirations for chemistry, biology, enzymology, and medicine.",
+      "whole_paper_review_complete": false
+    },
+    "36074093": {
+      "commentCorrectionList": null,
+      "doi": "10.1021/acschembio.2c00585",
+      "firstPublicationDate": "2022-09-08",
+      "id": "36074093",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Comparative Metabolomics Reveals a Bifunctional Antibacterial Conjugate from Combined-Culture of <i>Streptomyces hygroscopicus</i> HOK021 and <i>Tsukamurella pulmonis</i> TP-B0596.",
+      "whole_paper_review_complete": false
+    },
+    "36798081": {
+      "commentCorrectionList": null,
+      "doi": "10.1177/11779322231152980",
+      "firstPublicationDate": "2023-02-12",
+      "id": "36798081",
+      "isOpenAccess": "Y",
+      "pmcid": "PMC9926382",
+      "status": "METADATA_ONLY_PRIMARY_REVIEW_PENDING",
+      "title": "Identification of Putative Drug Targets in Highly Resistant Gram-Negative Bacteria; and Drug Discovery Against Glycyl-tRNA Synthetase as a New Target.",
+      "whole_paper_review_complete": false
+    }
+  },
+  "proteins": {
+    "A0AAE6NG62": {
+      "accession": "UniProtKB:A0AAE6NG62",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "MIGA01000032",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "OSY43374.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY43374.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000194225",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "DSM 40041"
+            }
+          ],
+          "identifiers": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 11,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "OSY43374.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "fabH_2"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY43374.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BG653_04517"
+            }
+          ],
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "id": "MF_01815",
+                  "source": "HAMAP-Rule"
+                }
+              ],
+              "value": "fabH"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "OSY43374.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000194225",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "WRONG_STRAIN_NOT_SELECTED",
+      "source_strain": "DSM 40041"
+    },
+    "A0AAE6NIV7": {
+      "accession": "UniProtKB:A0AAE6NIV7",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "MIGA01000055",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "OSY38813.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY38813.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000194225",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "DSM 40041"
+            }
+          ],
+          "identifiers": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 9,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "OSY38813.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "fabF_5"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY38813.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BG653_05919"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "OSY38813.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000194225",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "WRONG_STRAIN_NOT_SELECTED",
+      "source_strain": "DSM 40041"
+    },
+    "A0AAE6NQX4": {
+      "accession": "UniProtKB:A0AAE6NQX4",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "MIGA01000030",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "OSY43856.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY43856.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000194225",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "DSM 40041"
+            }
+          ],
+          "identifiers": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 11,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "OSY43856.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "fabF_3"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY43856.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BG653_04379"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "OSY43856.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000194225",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "WRONG_STRAIN_NOT_SELECTED",
+      "source_strain": "DSM 40041"
+    },
+    "A0AAE6NR08": {
+      "accession": "UniProtKB:A0AAE6NR08",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "MIGA01000001",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "OSY48267.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY48267.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000194225",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "DSM 40041"
+            }
+          ],
+          "identifiers": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 11,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "OSY48267.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "fabF_1"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY48267.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BG653_00144"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "OSY48267.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000194225",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "WRONG_STRAIN_NOT_SELECTED",
+      "source_strain": "DSM 40041"
+    },
+    "A0AAE6TM11": {
+      "accession": "UniProtKB:A0AAE6TM11",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "MIGA01000032",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "OSY43372.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY43372.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000194225",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "DSM 40041"
+            }
+          ],
+          "identifiers": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 11,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "OSY43372.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "fabF_4"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY43372.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BG653_04515"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "OSY43372.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000194225",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "WRONG_STRAIN_NOT_SELECTED",
+      "source_strain": "DSM 40041"
+    },
+    "A0AAE6TP68": {
+      "accession": "UniProtKB:A0AAE6TP68",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "MIGA01000003",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "OSY47586.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY47586.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000194225",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "DSM 40041"
+            }
+          ],
+          "identifiers": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 11,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "OSY47586.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "fabH_1"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY47586.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BG653_00841"
+            }
+          ],
+          "synonyms": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000256",
+                  "id": "MF_01815",
+                  "source": "HAMAP-Rule"
+                }
+              ],
+              "value": "fabH"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "OSY47586.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000194225",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "WRONG_STRAIN_NOT_SELECTED",
+      "source_strain": "DSM 40041"
+    },
+    "A0ABX3XZN7": {
+      "accession": "UniProtKB:A0ABX3XZN7",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "MIGA01000011",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "OSY46309.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY46309.1",
+                  "source": "EMBL"
+                },
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "UP000194225",
+                  "source": "Proteomes"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "DSM 40041"
+            }
+          ],
+          "identifiers": []
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 4,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [
+        {
+          "geneName": {
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000313",
+                "id": "OSY46309.1",
+                "source": "EMBL"
+              }
+            ],
+            "value": "fabF_2"
+          },
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "OSY46309.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "BG653_02277"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "OSY46309.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000194225",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "WRONG_STRAIN_NOT_SELECTED",
+      "source_strain": "DSM 40041"
+    },
+    "D8L2W8": {
+      "accession": "UniProtKB:D8L2W8",
+      "archive_references": [
+        {
+          "database": "EMBL",
+          "id": "FJ655920",
+          "properties": [
+            {
+              "key": "ProteinId",
+              "value": "ACS13710.1"
+            },
+            {
+              "key": "Status",
+              "value": "-"
+            },
+            {
+              "key": "MoleculeType",
+              "value": "Genomic_DNA"
+            }
+          ]
+        }
+      ],
+      "citation_contexts": [
+        {
+          "context": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "ACS13710.1",
+                  "source": "EMBL"
+                }
+              ],
+              "type": "STRAIN",
+              "value": "MA7327"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "21825154"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.1106919108"
+            }
+          ]
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 45,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "experimental_allele_assignment": false,
+      "genes": [],
+      "organism": {
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "ACS13710.1",
+            "source": "EMBL"
+          }
+        ],
+        "lineage": [
+          "Bacteria",
+          "Bacillati",
+          "Actinomycetota",
+          "Actinomycetes",
+          "Kitasatosporales",
+          "Streptomycetaceae",
+          "Streptomyces"
+        ],
+        "scientificName": "Streptomyces platensis",
+        "taxonId": 58346
+      },
+      "scope": "DONOR_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+      "source_strain": "MA7327"
+    }
+  },
+  "reference_grounding": {
+    "archive_protein": "ACS13710.1",
+    "archive_record": "FJ655920",
+    "basis": "Explicit primary archive accession matches current UniProt archive cross-reference; older UniProt citation reports MA7327. Empty gene-name and focal-publication queries do not establish protein absence.",
+    "donor_taxon_reference": "NCBITaxon:58346",
+    "earlier_citation": "PMID:21825154",
+    "earlier_primary_reviewed": false,
+    "experimental_allele_assignment": false,
+    "genome_assignment": null,
+    "paper_accession": "ACS13710",
+    "uniprot_accession": "UniProtKB:D8L2W8"
+  },
+  "scope": {
+    "MED_metadata_records": 11,
+    "corpus_records": 2939,
+    "curated_records": 2,
+    "discovery_candidate_papers": 12,
+    "full_corpus_primary_review": "OPEN",
+    "papers_with_bounded_primary_review": 2,
+    "reference_proteins": 1,
+    "whole_records_completed": 0,
+    "wrong_strain_candidates_not_selected": 7
+  },
+  "taxonomy": {
+    "1888": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "request": {
+        "bytes": 6145,
+        "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-1888-response.bin",
+        "retrieved_at": "2026-10-09T15:59:13.092918+00:00",
+        "sha256": "378b4d8ad0230061893703162b71d5b54babbf4fe86838d001de87fd2f853a63",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/1888.json"
+      },
+      "scientificName": "Streptomyces albus",
+      "species_ancestors": [],
+      "taxonId": 1888
+    },
+    "58346": {
+      "active": true,
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "request": {
+        "bytes": 1585,
+        "cache_path": "reports/resistance-grounding-2026-10-09-platen/taxonomy-58346-response.bin",
+        "retrieved_at": "2026-10-09T17:07:39.803671+00:00",
+        "sha256": "ab7abb38ffb50e87d620121334288ca12ee51dc76b1f29df56a62f13c38b5b36",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/58346.json"
+      },
+      "scientificName": "Streptomyces platensis",
+      "taxonId": 58346
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/request-27cd79677424246f85602c5051e0daa6273bd0e4a8c441968bb5c3a729a4464b.json",
+        "sha256": "f2bdc30bf082e3016b019a8e989c63ac9a8a16271cb3cad24e7890461a53069f"
+      },
+      "complete_for_query": true,
+      "query": "(taxonomy_id:58346 AND (gene:fabF OR gene:fabH))",
+      "release": "2026_03",
+      "result_count": 7,
+      "retrieved_at": "2026-10-09T17:10:41.851794+00:00",
+      "sha256": "acdcce7501027aa6abc005c6029aa4e6cec3c177924777b7d2c930ca0344c200",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28taxonomy_id%3A58346+AND+%28gene%3AfabF+OR+gene%3AfabH%29%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/request-486b376770887b841558e1b1a9971950a887bd9ced1969f61322caf65ba68186.json",
+        "sha256": "640f647f69ccc12b74f8874efb06b60610eae9f91d2455ba612c1a97bb52b3a0"
+      },
+      "complete_for_query": true,
+      "query": "lit_pubmed:24560608",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T17:05:09.973337+00:00",
+      "sha256": "a75842eed64069ff0c4a6286a3f342ef9c3548b09ec3aaa9c2f51587d615f9fd",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A24560608&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/request-4cefa247693e4860f92a137f56581bb9b01144086fb0576d0ab7e1f1c176b532.json",
+        "sha256": "d1db193c08d3fbe6c3deca86319f028c3dc8f9be22a9901bc1675305a063eb2f"
+      },
+      "complete_for_query": true,
+      "query": "(KF543053 OR KF543054)",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T17:08:49.582604+00:00",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28KF543053+OR+KF543054%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/request-b9521424e447557f94af8a22ce3467e7dc0e3f348f031df0191f9e69a35f9c8d.json",
+        "sha256": "4fc19c71f414df439c0726ba4b1c5767a02b1c394784864a2f80aecf3a96e1fe"
+      },
+      "complete_for_query": true,
+      "query": "(gene_exact:ptmP3 OR gene_exact:ptnP3)",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T17:06:22.985029+00:00",
+      "sha256": "ab4656a7d1ce9e20afc074b877f14e06711188fde50804dcf9ea8fcb1d506ce9",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AptmP3+OR+gene_exact%3AptnP3%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/request-d576425df2ddfe74d281b2abfbbfe0bb3dbb5c38464cb3ef9b04506bc8a61cea.json",
+        "sha256": "c6b80219df4a98b3119d01886b37ce6d25dda3409f0d1914cf093752b2de8e5a"
+      },
+      "complete_for_query": true,
+      "query": "(KF543053 OR KF543054 OR ACS13710)",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T17:06:37.345897+00:00",
+      "sha256": "4d1c27846a1de31cbed238e6fd12a2daf589edefce7064b82d6e5c1b09283517",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28KF543053+OR+KF543054+OR+ACS13710%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ]
+}

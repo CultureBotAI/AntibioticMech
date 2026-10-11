@@ -67,9 +67,7 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: MRR1 transformant(JEY355-MRR1(V877F)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:Q5A4G2
   gene_id: C3_05920W_A-T
   phenotype_id: PHIPO:0000584
   phenotype_label: resistance to brefeldin A
@@ -77,12 +75,21 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review eddouzi-2013-mrr1-reference-context:
+    The strain label denotes reference background, not the clinical donor JEY355 or
+    a uniquely resolved tested derivative. UniProtKB:Q5A4G2 and the retained gene_id
+    ground the reference MRR1 locus. Source rows do not resolve allele dosage or individual
+    derivative; drug-specific assays and clinical MICs remain separate. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:Q5A4G2.'
   evidence:
   - reference: PMID:23629718
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8769; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00555-13
+    notes: 'Identifier-scope review: Results, Tables 1, 3 and 4, Figure 3, UniProtKB
+      release 2026_03: Q5A4G2 entry 131, sequence version 1. Reviewed 2026-10-08 by
+      codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -108,3 +115,143 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T09:10:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped 1 imported associations without conflating reference, donor and
+    unresolved tested-subject identities. Preserved source alterations and phenotypes;
+    refreshed older review checksums without biological changes.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:45:07Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after Rybak reference-context
+    reviews; all biological fields and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:12:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after carboxin reference-context
+    reviews; all biological fields, activities and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:52:13Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after two additional
+    carboxin identifier-scope corrections; all biological fields, activities and previous
+    decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T11:28:53Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after eleven additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:09:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after seventeen additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:49:26Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after one yeast identity-scope
+    correction; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T13:24:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after twelve reference-scope
+    corrections; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:30Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after nine identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:41Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:12:00Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:58Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:14Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:48Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:23Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:08Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

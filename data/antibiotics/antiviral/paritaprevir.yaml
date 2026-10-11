@@ -84,9 +84,13 @@ resistance_mechanisms:
   label: HCV NS3 R155, A156, and D168 resistance-associated substitutions
   gene_families:
   - HCV NS3 serine protease
-  note: Resistance selection and mutant replicon testing identified substitutions
+  note: 'Resistance selection and mutant replicon testing identified substitutions
     at NS3 positions R155, A156, and D168 with reduced paritaprevir susceptibility;
-    the magnitude was substitution- and genotype-dependent.
+    the magnitude was substitution- and genotype-dependent. Compound-form review pending:
+    PMID:25451053 names a hydrate in its Compound section, whereas this record''s
+    formula contains no water. This existing claim has not been revalidated for exact-form
+    placement; no additional organism, protein or allele grounding is assigned pending
+    resolution.'
   evidence:
   - reference: PMID:25451053
     notes: Primary paritaprevir resistance-selection and mutant-replicon study.
@@ -114,3 +118,36 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T05:01:30Z'
+  curator: codex
+  action: FLAGGED_COMPOUND_FORM_REVIEW
+  changes: Flagged primary-paper material-form ambiguity in an open discussion and
+    the existing resistance note. Preserved chemical identity, claim evidence and
+    prior review status; did not transfer or expand the claim.
+  llm_assisted: true
+discussions:
+- discussion_id: resistance-compound-form-paritaprevir
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: 'Resolve the placement of PMID:25451053 evidence on the paritaprevir structure
+    recorded here: the paper''s Compound section names a hydrate. Does the evidence
+    require a different structure record or an explicit active-moiety interpretation?'
+  rationale: This record's formula C40H43N7O7S does not include water. The inspected
+    compound text does not establish hydrate stoichiometry or an exact-structure crosswalk,
+    so neither a new hydrate record nor transfer of the existing evidence is justified
+    by this review alone.
+  attaches_to:
+  - chemical_structure
+  - resistance_mechanisms
+  - molecular_targets
+  - mode_of_action
+  evidence:
+  - reference: PMID:25451053
+    evidence_source: full_text
+    explanation: Materials and Methods, Compound, page 989; publisher PDF text inspected
+      2026-10-08 UTC.
+  posed_by: codex
+  posed_date: '2026-10-08'
+  notes: The pre-existing REVIEWED status is retained, not renewed by this limited
+    audit. Resolve material identity before expanding resistance grounding; do not
+    infer form equivalence from a shared drug name.

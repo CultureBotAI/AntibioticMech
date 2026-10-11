@@ -1,0 +1,356 @@
+{
+  "archive_search": {
+    "complete_for_query": true,
+    "query": "AJ428201",
+    "request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-posteraro/request-f866d1c266d3ee36d148323aa0d067d859e5b55be6866a2148bc7ce031acecf7.json",
+        "sha256": "492444186fa19acbda96fa5991bd573c50f796472031220c8ac8cecc9c1cd83b"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T10:37:19.513167+00:00",
+      "sha256": "cba232678d11b40405ee35106d39fdeee91683232f816affaff2c00402aea591",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=AJ428201&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "result_count": 0,
+    "suggestions_adopted": false,
+    "zero_results_establish_absence": false
+  },
+  "attribution": "PHI-base adopted AMR export and UniProt Consortium release 2026_03, CC BY 4.0; Posteraro et al. (2003), primary publisher text.",
+  "changes": {
+    "byte_identical_records": 2917,
+    "changed_records": 22,
+    "checksum_only_claims": 184,
+    "new_scoped_claims": 1
+  },
+  "coverage": {
+    "identifier_scoped": 185,
+    "pending_associations": 32,
+    "pending_papers": 13,
+    "phi_associations": 217,
+    "whole_records_completed_by_this_review": 0
+  },
+  "embedding_scope": {
+    "artifacts_changed": false,
+    "changed_records_with_identical_documents": 22,
+    "map": {
+      "path": "data/embeddings/corpus_map.json",
+      "sha256": "dac6935acf0b5c6ce29a5c1847076e40aaed61377bfeb92a3f54c48c02aec8b8"
+    },
+    "metadata": {
+      "path": "data/embeddings/meta.json",
+      "sha256": "927d446ab677b7d98f12e74d698b4b9bb8e7853d87b2f699a5ca4bf075b91982"
+    },
+    "stored_fingerprint": "0c15de9fbfd527d9",
+    "unchanged_other_record_files": 2917
+  },
+  "identifier": "CHEBI:46081",
+  "limitations": [
+    "Corrected subject spelling is grounded in primary Results, not a silent normalization of BYP22.",
+    "Citation agreement does not equate CR 22.17 with BPY22.17 or AJ318062 with AJ428201.",
+    "The qualified serotype name is not promoted through an otherNames-only taxonomy match.",
+    "Source alteration, phenotype, assay and mechanism type are retained without new experimental specifications.",
+    "No new numerical measurements, sequences, variants, constructs, protocols or experimental genomes exported.",
+    "No NCBI request, source adoption, outreach or GitHub mutation occurred; the full-corpus review remains open."
+  ],
+  "phig_id": "PHIG:8831",
+  "preservation": {
+    "before_census": {
+      "path": "reports/resistance-grounding-2026-10-09-posteraro/before-corpus.json",
+      "sha256": "07afc1e49a810be5cadbdd66b87488bac27e51682117e135a897c0da6bafe3b2"
+    },
+    "curation_events_added": 22,
+    "ignored_files_included": true,
+    "protected_non_page_non_edit_files_verified": 3321,
+    "protected_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-09-posteraro/protected-before.json",
+      "sha256": "407a5d652a507314729dda6effd147154ad16af94c7386e6557bbcff6f6b785c"
+    },
+    "publication_audit_separate": true
+  },
+  "primary_evidence": {
+    "doi": "10.1046/j.1365-2958.2003.03281.x",
+    "figures_visually_inspected": false,
+    "full_phenotype_validation": false,
+    "locations": [
+      "Results: subject and parent comparison",
+      "Figure 1 caption",
+      "CnAFR1 identity section",
+      "Strains and media"
+    ],
+    "medium": "PUBLISHER_INDEXED_PRIMARY_FULL_TEXT",
+    "native_primary_file_cached": false,
+    "paper_genomic_deposit": "AJ428201",
+    "reviewed_on": "2026-10-09",
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-2958.2003.03281.x"
+  },
+  "records": [
+    {
+      "after_sha256": "8aef32b0a72d4f901dac6c4d105e7ae069f3c811839a5074472855f00ad16bb0",
+      "before_sha256": "605be22088cef40f66483f94945b901e08ff20f9c283f6abb30c8c843722b391",
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml"
+    },
+    {
+      "after_sha256": "9316b3899b889427a6a5849c6eef2a2e54f869cd3c9b573655a81037605313ed",
+      "before_sha256": "2e775cef5bf92ea2774c260ddc41796c8f19b2bc35e67a221f0493028198f2e3",
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml"
+    },
+    {
+      "after_sha256": "09a62059ec49ec2451f1796ac3d0b1f1df8b7a2d916b2860d21a97c2450fb10a",
+      "before_sha256": "50a3c1d3c755bf4b1014dc50c40d0b70f6887e7f2b6af5ea668645939e4ca7e8",
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml"
+    },
+    {
+      "after_sha256": "ec3877f836c2ae83311b6e2e0d3432d4019b18fbdebf17a2b19cedfd06c2672c",
+      "before_sha256": "c1c6109894a850ba4456425e17b8fbc7cd7bc203c2211c32f489f384478d3f5a",
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml"
+    },
+    {
+      "after_sha256": "e124daf7d195c913f0e77fa51561a066916e49ff1a3963ef5540207efe8923d7",
+      "before_sha256": "d5b8f4bb6dd611862df842c04f4a9e7208e5a17e3fd4120eaec7baa7b7e5b338",
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml"
+    },
+    {
+      "after_sha256": "a4f783f645b5dc8718f4b1cf0643b9dca1d864113821f04d5d492d13f13dbd62",
+      "before_sha256": "ca08a24af1aaea18c481f7578b746f8bca8073d0e8ca6ad58a86e3eb95011350",
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml"
+    },
+    {
+      "after_sha256": "fa31a9debef833431a13b4c5fec590cee8e21b7bc6819c34a09dc99add377524",
+      "before_sha256": "c0bd089334e4e4784d210db60eb23ba467105b3444fb2e208baf0785036eeed5",
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml"
+    },
+    {
+      "after_sha256": "9fa1e8686f5bc2fc2aac7492af414f3c3ce1e11e7e0d480851b2d0641cea4ab8",
+      "before_sha256": "38bbbd758183aa4c158690d3338cd0b0482c55754b5288ac230d14683929bf50",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml"
+    },
+    {
+      "after_sha256": "c3d7dc14d3885ded1d0cfd6cb02c2fb79556385fc4b3b2a3e742879929b586c0",
+      "before_sha256": "05b1f78afde7a7b0801b1415f4aac401e6d19df746ba9084eedb79608930a138",
+      "identifier": "CHEBI:136340",
+      "path": "data/antibiotics/antifungal/fenpicoxamid.yaml"
+    },
+    {
+      "after_sha256": "8e99a6672effa7533da2ab8298e2b232de907e84687c4f5f4dfe1096e9e2ddda",
+      "before_sha256": "bd5894aec023b96096dbdf0c728d0d30365b1b783262a6a81573512aaffb8502",
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml"
+    },
+    {
+      "after_sha256": "56142e12c1841028397d683d421f3f995eaaa8f081f962b5593c120d43f39b79",
+      "before_sha256": "684e4971ff38b5bc2f47f24321b6ff89ea2c1e1cce22c6ddff1c47f4d2555d19",
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml"
+    },
+    {
+      "after_sha256": "57c6d3b06cd44cad644c2556e8758f7bcef19f6194aaaca20acaa9409a2df58f",
+      "before_sha256": "7706ddcf65013b426429358312b42c656e1263ec0d653e63b9da3d7c33ad81db",
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml"
+    },
+    {
+      "after_sha256": "970ff9d085b16919b3e0fde32e1374f4833a90999dfd93daf8432de67d2edda7",
+      "before_sha256": "66f98a79711d9b12aa43faeba68e1804200502c749ed164ed77aabf3e5ed2fd4",
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml"
+    },
+    {
+      "after_sha256": "0eac9035ac1a3115fa792860a26aa4281032aceea18d58d1901e76295b6ebf35",
+      "before_sha256": "aff8895eb080fe8a13a9995af66331a8187e557c111ac9b7b8e8b4df7173961c",
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml"
+    },
+    {
+      "after_sha256": "75b7c391c26cbbf7a7167f0968df21b8338b85000a4ad83c9836ca9c3512ff02",
+      "before_sha256": "ae8fb13d1ad6390a48e145e470249b9692ab2e2b9f346ef2f1ba6891e0bf3e31",
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml"
+    },
+    {
+      "after_sha256": "1c317b0e9d1aaeafbe3cfc23f0a88dd98aeafbdeffb38a41327402e87f7ea4d2",
+      "before_sha256": "c93e829fbb87cddc3840fa9f47b51a0f15a5ea8cfbbd58c2e18af88b62c4cc43",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml"
+    },
+    {
+      "after_sha256": "cd8831ee145625a5367f68b379c6fcc9d75d7fa03155d1df017d9d756108d4c2",
+      "before_sha256": "f462ee623e00bbe07faa3482184ed63a3e910bf75c32b8800448df37ce99347b",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml"
+    },
+    {
+      "after_sha256": "f834e3ba8de6082e6bd1bba8027240239ad17c9d39461a1c4f509254d870482f",
+      "before_sha256": "d6f8e34b70c638f3b24b63350ddcf4ef24020464fbaa942c907a1ac32961eaa0",
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml"
+    },
+    {
+      "after_sha256": "d483410a916c9bf4f742b01be99b5413ce1b310cc0474271064515e06a2512a9",
+      "before_sha256": "aab25ee2ca5756c78a8ee21afae480a8d6ab4e6b204984eb545056dbb0346a98",
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml"
+    },
+    {
+      "after_sha256": "099ce4c68ee2128f3a662aef29433edf2b2c95d9ec4bb8687f366427afb95e9e",
+      "before_sha256": "6615354c4022529bf6b59a178f45e81c72e16e0229e9cc060135069fafc0c5ae",
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml"
+    },
+    {
+      "after_sha256": "678abcf3255bfb768da7d2db313e25561c5b352d4bb71b259559900cdc1c8f83",
+      "before_sha256": "b1ccc7ea86216c777011221a650baf2ba94dc72e204578f4f328848bcb6cebb6",
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml"
+    },
+    {
+      "after_sha256": "d05267ec191f0e5cd0001fa0c53cc20557fc71b8fa327acd861edd8fd82b3189",
+      "before_sha256": "7a6584192efbc94b6d8ea115def3d1d030d7d12f3536f116b717954a2079aabf",
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml"
+    }
+  ],
+  "reference": "PMID:12519188",
+  "reference_protein": {
+    "archive_cross_reference": {
+      "database": "EMBL",
+      "id": "AJ318062",
+      "properties": [
+        {
+          "key": "ProteinId",
+          "value": "CAC59691.2"
+        },
+        {
+          "key": "Status",
+          "value": "-"
+        },
+        {
+          "key": "MoleculeType",
+          "value": "mRNA"
+        }
+      ]
+    },
+    "citation": "PMID:12519188",
+    "entryAudit": {
+      "entryVersion": 116,
+      "sequenceVersion": 1
+    },
+    "entryType": "UniProtKB unreviewed (TrEMBL)",
+    "experimental_assignment": false,
+    "genes": [
+      {
+        "geneName": {
+          "evidences": [
+            {
+              "evidenceCode": "ECO:0000313",
+              "id": "CAC59691.2",
+              "source": "EMBL"
+            }
+          ],
+          "value": "AFR1"
+        }
+      }
+    ],
+    "organism": {
+      "commonName": "Filobasidiella neoformans",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000313",
+          "id": "CAC59691.2",
+          "source": "EMBL"
+        }
+      ],
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Basidiomycota",
+        "Agaricomycotina",
+        "Tremellomycetes",
+        "Tremellales",
+        "Cryptococcaceae",
+        "Cryptococcus",
+        "Cryptococcus neoformans species complex"
+      ],
+      "scientificName": "Cryptococcus neoformans",
+      "taxonId": 5207
+    },
+    "primaryAccession": "Q8X0Z3",
+    "reference_strain": "CR 22.17",
+    "request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-posteraro/request-5ebd7c61f8576dd734626cd565ca72d9667cda9acc59f7741742f9a1554c3429.json",
+        "sha256": "50203a8952b5f513dd19b871ce778cb2c4ff2f9ae107f85c7e06d86a3897bc62"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T10:36:53.394330+00:00",
+      "sha256": "17e8cbfb82b547b05089919861ef1469072268071d2b3bb71ea96c2ec78d81dd",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ8X0Z3&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "reference_taxonomy": {
+    "experimental_assignment": false,
+    "rank": "species",
+    "request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-posteraro/request-443359d3070c321040125a1a24511fd9e811fc9a8b56a742052e640db394bae6.json",
+        "sha256": "fecfdfc2d20c49ca24c6671635d134355d444af3cfbea22806d9d9be40a1f3c7"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T10:40:01.169392+00:00",
+      "sha256": "d04cbf719db74542f6e5daa8fbb3834e8155d68451a9e9ef9c41d718c1e0df3d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5207"
+    },
+    "scientific_name": "Cryptococcus neoformans",
+    "taxon_id": "NCBITaxon:5207"
+  },
+  "review_file": {
+    "path": "curation/phibase_grounding_reviews.json",
+    "sha256": "5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702"
+  },
+  "review_id": "posteraro-2003-subject-reference-context",
+  "source_inventory": {
+    "path": "data/raw/phibase_amr.tsv",
+    "sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85"
+  },
+  "source_row_sha256": "4fabfdb6e0e4b06bde7d76adfebeaab8694aa3e503a69eda76131560ece33e89",
+  "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+  "status": "CURATED_IDENTIFIER_SCOPE_NOT_FULL_PHENOTYPE_VALIDATION",
+  "subject": {
+    "exact_experimental_protein_assigned": false,
+    "modern_species_assignment": null,
+    "paper_serotype": "D",
+    "primary_parent": "BPY22",
+    "primary_subject": "BPY22.17",
+    "source_strain_spelling": "BYP22",
+    "source_taxon_label_retained": "Cryptococcus neoformans"
+  },
+  "unresolved_taxonomy_lead": {
+    "experimental_assignment": false,
+    "paper_qualified_name_field": "otherNames",
+    "request": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-posteraro/request-598ce6427046b13c23788cf3ab4cab0599a45ba454fb0752549a303398c369b9.json",
+        "sha256": "3c000ffd0f5f59e51bfff572a97f82370eaa8be79a3a5e96e92f800a878ad3ce"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T10:37:20.244300+00:00",
+      "sha256": "070387c86cfb4f4fc4c787eabdaf1cb5830f113ba5b6ba3e1350309148f539af",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Cryptococcus+deneoformans%22+AND+rank%3Aspecies&format=json&size=500"
+    },
+    "scientific_name": "Cryptococcus deneoformans",
+    "taxon_id": "NCBITaxon:40410"
+  }
+}

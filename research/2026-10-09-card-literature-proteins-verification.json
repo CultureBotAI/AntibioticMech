@@ -1,0 +1,108 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "artifacts": [
+    {
+      "path": "scripts/audit_card_literature_proteins.py",
+      "sha256": "41d23657d70653ce3d4bdca7d5a856065f7d5af4cd41d90aff0d059e4b6b293c"
+    },
+    {
+      "path": "tests/test_card_literature_proteins.py",
+      "sha256": "090f70e42acd12ecfd8446ab3f011829acd579eb770b3a53fd25cd3c21e2e9a0"
+    },
+    {
+      "path": "research/2026-10-09-card-literature-proteins.json",
+      "sha256": "be1301bfa40cf1679510d5b08653305a450adbad9f742c9008c28ffb0e58a6b7"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "4937fac0ae5dbc77014579aa20bc672edc9149ca5e579d41f89c9877d2b69ae4"
+    }
+  ],
+  "biological_records_byte_identical": 2939,
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-09-card-literature-proteins/canary.json",
+    "sha256": "bf1659b714098415c55046cdcdd9234bd2c64c5fd94672ab6e378439cf86d466"
+  },
+  "canary_terms_and_proteins_reproduce_in_full_audit": true,
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "4937fac0ae5dbc77014579aa20bc672edc9149ca5e579d41f89c9877d2b69ae4",
+      "before_sha256": "9ece3f0e908e6bac31b1c7fafa4935b98998ccc0459bb4e71059544cd71025f4"
+    }
+  },
+  "checks_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-card-literature-proteins/final-checks/checks.json",
+    "sha256": "46b66a8ff2898b46e051f2ee4b32bc8f7f5a84bb4518f9b70044b5cb78b83ec9"
+  },
+  "date": "2026-10-09",
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-card-literature-proteins/final-checks/focused-tests.xml",
+    "sha256": "9aa02e2a8c712ccbc102309e3445dc35c57f403812b5cd90469fbd39c401bd58"
+  },
+  "focused_tests_passed": 303,
+  "full_authoritative_qc_rerun": false,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "ncbi_endpoint_requests": 0,
+  "new_tests_passed": 28,
+  "outreach": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-card-citation-concordance-verification.json",
+    "sha256": "b73f53eca0c7d3aad8fc736305d5130a81a856052e8ffd4a9bb8d57d18af2050"
+  },
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6847,
+  "protected_files_unchanged": 6846,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-card-literature-proteins/protected-before.json",
+    "sha256": "f0fc2d9a3e7d448eac2da8494e49188593f50b703762f67f3bc30d9c05a5085e"
+  },
+  "remaining_limits": [
+    "This is the 59-term follow-up cohort, not completion of the whole 2939-record objective.",
+    "All source citations in this cohort were queried without a CARD-database filter.",
+    "Complete queries and matching names do not verify an experimental allele, isolate or phenotype.",
+    "No hit is not evidence of absence: missing synonyms or unindexed literature may explain it.",
+    "A reference TaxID and a paper containing several genes do not establish a same-isolate join.",
+    "No sequences, exact variants, coordinates, protocols or numerical AST are exported.",
+    "Biological records and prior source-link status remain unchanged; primary review remains OPEN."
+  ],
+  "review_findings_addressed": [
+    "All 111 source PMIDs are queried, not just those shared with the old CARD-filtered snapshot.",
+    "All 134 query-bound pages pass release, count, cursor and accession-order checks.",
+    "Repeated or missing cursors and orphaned ignored response pages fail closed.",
+    "Shared citations without a matching gene name or explicit source cross-reference do not become candidates.",
+    "Gene-name and synonym fields remain separate; locus names are not promoted to aliases.",
+    "Family-level matches retain multiple reference entries without an exact allele assignment.",
+    "Reference TaxIDs retain their verified rank without becoming experimental subject assignments.",
+    "Portable tests use fixtures and the public dossier; full cached-input reproduction is a separate check."
+  ],
+  "source_adoptions": 0,
+  "sources_pages_embeddings_unchanged": true,
+  "status": "SCOPED_RESEARCH_CHECKS_PASSED",
+  "summary": {
+    "biological_records_changed": 0,
+    "completed_queries": 111,
+    "corpus_records_checked": 2939,
+    "entry_types": {
+      "UniProtKB reviewed (Swiss-Prot)": 15,
+      "UniProtKB unreviewed (TrEMBL)": 17
+    },
+    "exact_allele_assignments": 0,
+    "new_taxonomy_requests": 4,
+    "paginated_queries_completed": 4,
+    "queries_with_zero_results": 24,
+    "reference_candidate_links": 32,
+    "reference_proteins": 32,
+    "reference_taxa": 27,
+    "references_outside_prior_card_snapshot": 23,
+    "response_pages": 134,
+    "selected_assertion_memberships": 152,
+    "selected_records": 64,
+    "selected_terms": 59,
+    "terms_with_reference_candidates": 12,
+    "unique_literature_entries_inspected": 13412,
+    "whole_records_completed": 0
+  },
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

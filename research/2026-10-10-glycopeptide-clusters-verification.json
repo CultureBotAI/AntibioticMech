@@ -1,0 +1,108 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "adversarial_review_receipt": {
+    "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/adversarial-review.json",
+    "sha256": "b5fd071f6f0d257a74be4ed645ff2bd3df7b2009f746f472f2fba36e6e97fa04"
+  },
+  "archive_lookups": 27,
+  "artifacts": [
+    {
+      "path": "research/2026-10-10-glycopeptide-clusters-context.json",
+      "sha256": "28c0c66d1cdd2265ea411317ad97451fdbc06e6049b261c2918f208d75ec2a2b"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "894908ec2e6c0859279fcd4c05821064b3db7e601be59dbffe312b04257a8cdc"
+    },
+    {
+      "path": "tests/test_glycopeptide_cluster_followup.py",
+      "sha256": "95edab06c908f868c32f15cc2bc6447c6f939554d668832cba9902b82e2d0eb7"
+    }
+  ],
+  "bibliography_records": 26,
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "894908ec2e6c0859279fcd4c05821064b3db7e601be59dbffe312b04257a8cdc",
+      "before_sha256": "172a927fa51a44acdaac0f3bfc5efd99d2ad342e038a135395cd80646f82aeda"
+    }
+  },
+  "claims_added": 0,
+  "curator_claims": 66,
+  "curator_records": 36,
+  "current_ledger": {
+    "path": "research/2026-10-10-chloramphenicol-references-resistance-grounding.tsv",
+    "sha256": "7812d4baf573d49306b352d96351f8b52c18b6ec146032aeb68f27719b7c37d6"
+  },
+  "diff_check_receipt": {
+    "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/diff-check-exit.json",
+    "sha256": "2e59ff2693f6b7f29dc5b103e1e310ad61744343b6ec39d8af85a5df57bb5fb1"
+  },
+  "existing_resistance_assertions": 4821,
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/focused-tests.xml",
+    "sha256": "1af06b94f09d89c1fdb94a4053fbb6743998b9048129fe18f077d539f91dc6ef"
+  },
+  "focused_tests_passed": 193,
+  "focused_tests_skipped": 0,
+  "full_authoritative_qc_rerun": false,
+  "github_mutations": 0,
+  "history_events_added": 0,
+  "ignored_files_included": true,
+  "last_biological_qc_checkpoint": {
+    "path": "research/2026-10-10-chloramphenicol-references-verification.json",
+    "sha256": "e3f22fe81fc807be25a6a9aaaaf409813d83e5863b9f38d21272c2f128adb02e"
+  },
+  "lint_receipt": {
+    "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/lint-exit.json",
+    "sha256": "ee554bddaf78e287b0bc5c26203aca7a89d400b056b94ba67cb25bb60bdb3393"
+  },
+  "metadata_response_receipt_pairs": 82,
+  "native_curation_pending": [
+    "PMID:20733041/Efm-HS0661",
+    "PMID:19414574/Y51"
+  ],
+  "ncbi_endpoint_requests": 0,
+  "new_files_before_verification": [
+    "research/2026-10-10-glycopeptide-clusters-context.json",
+    "tests/test_glycopeptide_cluster_followup.py"
+  ],
+  "new_tests_passed": 18,
+  "outreach": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-10-chloramphenicol-references-verification.json",
+    "sha256": "e3f22fe81fc807be25a6a9aaaaf409813d83e5863b9f38d21272c2f128adb02e"
+  },
+  "prior_report_bytes_preserved": true,
+  "projection_reproduction": "EXACT_FROM_FROZEN_SEQUENCE_FREE_RESPONSES",
+  "protected_files": 6878,
+  "protected_files_unchanged": 6877,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-10-glycopeptide-clusters/protected-before.json",
+    "sha256": "7d8c39ee9c598cdc58b27f1c68e2e753329c61d394a314bb526c4358a624b494"
+  },
+  "record_hashes_verified": 2939,
+  "records_byte_identical": 2939,
+  "records_changed": 0,
+  "reference_proteins": 17,
+  "remaining_limits": [
+    "Whole clusters are not individual proteins; candidate edges are not exact experimental assignments.",
+    "Gene symbol filters miss unnamed entries and produce unrelated homonyms.",
+    "Three references are fragments; O52073 and Q06893 have sequence version 2, not an assumed original experimental sequence.",
+    "VanB Q06893 is a V583-associated reference, not the BM4281 subject of PMID:8654967.",
+    "O52073 retains a vanE annotation in Paenibacillus; it is not silently merged with enterococcal VanE.",
+    "VanM reference CP039730 and its sample belong to separate ZY2 context, not Efm-HS0661.",
+    "VanO source Rhodococcus equi appears in taxonomy otherNames with authority text; the current reference name is Rhodococcus hoagii.",
+    "Archive contig-set, nucleotide, sample and project identifiers are not assembly assignments.",
+    "No-hit citation searches and excluded homonyms do not establish biological absence.",
+    "N00-410 in the publication title and N00-0410 in UniProt strain comments remain unreconciled source strings.",
+    "VanO source RE-S7B and UniProt S7B are not silently treated as an exact strain identifier crosswalk.",
+    "Whole-record review and primary review of the remaining papers are still open."
+  ],
+  "reused_literature_queries": 20,
+  "source_adoptions": 0,
+  "status": "RESEARCH_CHECKPOINT_VERIFIED_NO_BIOLOGICAL_WRITES",
+  "taxonomy_entries": 9,
+  "verified_at": "2026-10-10T20:02:49.790296+00:00",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

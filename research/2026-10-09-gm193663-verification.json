@@ -1,0 +1,94 @@
+{
+  "all_current_record_hashes_verified": 2939,
+  "browser_limitation": "No enabled browser connector; the active Python and Node environments could not resolve Playwright.",
+  "corpus_research_complete": false,
+  "curated_record_identifier": "CHEBI:77908",
+  "curation_dossier": {
+    "path": "research/2026-10-09-gm193663-curation.json",
+    "sha256": "af443f0ef23f28ccaa5fca284f57b22cfb6c4989f091852a3110fff73ef14ce3"
+  },
+  "current_census": {
+    "path": "reports/resistance-grounding-2026-10-09-gm193663/corpus.json",
+    "sha256": "5eca9b187baeb613ab354ae09ccb4633942a9629d5a857f8559bbb3506432c15"
+  },
+  "current_counts": {
+    "pending_discovery": 2628,
+    "records": 2939,
+    "resistance_assertions": 4785,
+    "score_rules": 467,
+    "with_resistance_mechanisms": 298,
+    "with_score_rules": 16
+  },
+  "current_ledger": {
+    "path": "research/2026-10-09-gm193663-resistance-grounding.tsv",
+    "sha256": "24ed1d91c1e66808be1dbfb6a46d964c6301d522bd04a4e67e1a344ad3a88e79"
+  },
+  "date": "2026-10-09",
+  "experimental_alleles_validated": false,
+  "final_full_qc": {
+    "command": "PYTHONPATH=/private/tmp/antibioticmech-qc-science-20261009.GtY47E:src:.venv/lib/python3.13/site-packages /private/tmp/npmech-rdkit-2026.03.5/bin/python -u scripts/run_qc.py",
+    "exit_code": 0,
+    "passed": 2170,
+    "path": "reports/resistance-grounding-2026-10-07/gm193663-20261009/full-qc-final.log",
+    "sha256": "a6fff7784846be20699ab8e3f75b20274afc3535fb49093c3b87ac018a0b890a",
+    "skip_reason": "Empty command-frontmatter parameter sets; confirmed separately with tests/test_skill_frontmatter.py -q -rs.",
+    "skipped": 3,
+    "stages": [
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "test_seconds": 1759.19,
+    "warnings": 1
+  },
+  "focused_suites": [
+    {
+      "passed": 99,
+      "path": "reports/resistance-grounding-2026-10-07/gm193663-20261009/focused-tests-publication.xml",
+      "seconds": 183.561,
+      "sha256": "5253e551e4f4da0da4be228e36912916b619144ae5ac0d4f8cbfe037d788f5ff",
+      "tests": 99
+    },
+    {
+      "passed": 2,
+      "path": "reports/resistance-grounding-2026-10-07/gm193663-20261009/docs-count-fixes.xml",
+      "seconds": 127.172,
+      "sha256": "d35ebb5dc943d2c2bf525fca76777c347dce2ce22eff4c8e40b2c081f9033921",
+      "tests": 2
+    }
+  ],
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "initial_full_qc": {
+    "failed": 3,
+    "failures": [
+      "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+      "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+      "tests/test_embeddings.py::test_the_committed_map_is_not_stale_against_the_corpus"
+    ],
+    "passed": 2164,
+    "path": "reports/resistance-grounding-2026-10-07/gm193663-20261009/full-qc.log",
+    "resolution": "Corrected backlog count and rebuilt the semantic map from verified vectors.",
+    "sha256": "522ee1ed71779fad67bd5a1ee5e9f222b2c0426cb4d788b6a8d982bcb2389630",
+    "skipped": 3
+  },
+  "live_browser_verification": false,
+  "ncbi_endpoint_requests": 0,
+  "publication_audit": {
+    "path": "research/2026-10-09-gm193663-publication.json",
+    "sha256": "2de5af3757a4eb186de73ae91beb759f69647436c7657f944d0289f43485646a"
+  },
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "scope": "CURATION_AND_PUBLICATION_VERIFICATION_NOT_COMPLETED_CORPUS_RESEARCH",
+  "status": "ALL_AUTHORITATIVE_QC_GATES_PASSED",
+  "whole_record_primary_review_complete": false
+}

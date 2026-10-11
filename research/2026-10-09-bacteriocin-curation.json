@@ -1,0 +1,141 @@
+{
+  "claims_added": 3,
+  "date": "2026-10-09",
+  "experimental_alleles_validated": false,
+  "figures_visually_inspected": false,
+  "github_mutations": 0,
+  "history_events_added": 2,
+  "native_primary_files_obtained": false,
+  "ncbi_endpoint_requests": 0,
+  "primary_references": [
+    "PMID:8550476",
+    "PMID:20876530",
+    "PMID:20159968"
+  ],
+  "primary_review_medium": "PUBLIC_AUTHOR_UPLOADED_PRIMARY_TEXT_TRANSCRIPTION",
+  "records": [
+    {
+      "all_other_fields_preserved": true,
+      "before_record_sha256": "8b20237219539ae5141380fea6c78c2d38c37aea0b99316e8af0d05361d33f10",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocin-followup/epidermin-canary.yaml",
+        "sha256": "77304621867a2f20d51f7c5e504447ee7f6fd3d9b320e9d95514dff1a241e4c5"
+      },
+      "claims": [
+        {
+          "assay": "Source-reported growth susceptibility comparisons; qualitative result only",
+          "evidence": [
+            {
+              "notes": "Author-uploaded primary text: Results, Table 1 and Discussion. Purified epidermin is named in the assay section. Figures and supplements were not visually inspected.",
+              "reference": "PMID:8550476"
+            }
+          ],
+          "gene_families": [
+            "epiF",
+            "epiE",
+            "epiG"
+          ],
+          "label": "EpiFEG-associated reduced susceptibility to epidermin",
+          "mechanism_type": "UNKNOWN",
+          "note": "The tested subjects are TM300-derived laboratory strains, not the unmodified background. Staphylococcus epidermidis Tue3298 is the donor. The three-component result does not establish individual sufficiency; transport remains a hypothesis. Donor references UniProtKB:Q54002 (EpiF), UniProtKB:Q54003 (EpiE) and UniProtKB:Q54004 (EpiG) are not experimental allele assignments. ENA lists the paper's U29130 as a secondary accession of U77778. No derivative TaxID, genome, numerical AST or clinical category is assigned.",
+          "phenotype_label": "reduced susceptibility to epidermin in laboratory derivatives",
+          "taxon_id": "NCBITaxon:1281",
+          "taxon_label": "Staphylococcus carnosus"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added qualitative primary-backed resistance evidence with donor, host and substrate distinctions. Reference proteins are not assigned as exact experimental alleles. Existing chemical and source evidence preserved; whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-09T18:55:26Z"
+      },
+      "curation_status": "SEEDED",
+      "fresh_seed": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocin-followup/epidermin-fresh-seed.json",
+        "sha256": "60ce7eedec57978fbc08026df6774517d31e6498f6d368721947e342597c7060"
+      },
+      "history_events_added": 1,
+      "identifier": "CHEBI:71659",
+      "label": "epidermin",
+      "original": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocin-followup/epidermin-original.yaml",
+        "sha256": "8b20237219539ae5141380fea6c78c2d38c37aea0b99316e8af0d05361d33f10"
+      },
+      "original_bytes_preserved_as_prefix": true,
+      "record": {
+        "path": "data/antibiotics/antibacterial/epidermin.yaml",
+        "sha256": "77304621867a2f20d51f7c5e504447ee7f6fd3d9b320e9d95514dff1a241e4c5"
+      },
+      "standard_inchi_key": "CXTXHTVXPMOOSW-JUEJINBGSA-N"
+    },
+    {
+      "all_other_fields_preserved": true,
+      "before_record_sha256": "3b6ccce461fb0ba619bdb8d4c9e95b9b46d5f50b68650cd2554abbae89664057",
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocin-followup/microcin-c-canary.yaml",
+        "sha256": "83a05df72e4ee39a92e045f037720b2aa9cf97dc267808b390daa8dfb97eb795"
+      },
+      "claims": [
+        {
+          "assay": "Source-reported biochemical inactivation and product analysis; qualitative result only",
+          "evidence": [
+            {
+              "notes": "Author-uploaded primary text: Results on in vitro rescue, loss of activity and product analysis; Figures 3-5 captions. Figures and supplements were not visually inspected.",
+              "reference": "PMID:20876530"
+            }
+          ],
+          "gene_families": [
+            "mccF"
+          ],
+          "label": "MccF-associated enzymatic inactivation of microcin C",
+          "mechanism_type": "ANTIBIOTIC_INACTIVATION",
+          "note": "Primary product analysis supports cleavage of intact microcin C. Deformylated material was also present and separately discussed; this is not a pure-compound organismal AST claim. The paper distinguishes intact, processed and analogue substrates. Reference candidates remain separate from the experimental proteins. NCBITaxon:562 denotes the E. coli reference species, not a strain or genome. BL21(DE3) is a reported host background, not an exact derivative assignment. No clinical category or numerical AST is inferred."
+        },
+        {
+          "assay": "Source-reported biochemical and laboratory-cell comparisons; qualitative result only",
+          "evidence": [
+            {
+              "notes": "Author-uploaded primary text: Results, Table 1 and Discussion. The route follows the authors' interpretation. Figures and supplement were not visually inspected.",
+              "reference": "PMID:20159968"
+            }
+          ],
+          "gene_families": [
+            "mccE"
+          ],
+          "label": "MccE-associated inactivation after microcin C processing",
+          "mechanism_type": "ANTIBIOTIC_INACTIVATION",
+          "note": "The mechanism concerns processed intracellular material, not direct acetylation of intact microcin C. Native material and synthetic analogues are distinct. The paper corrects the gene-start annotation; a gene-name match does not resolve the experimental protein. Reference candidates remain separate from the experimental proteins. NCBITaxon:562 denotes the E. coli reference species, not a strain or genome. BL21(DE3) is a reported host background, not an exact derivative assignment. No clinical category or numerical AST is inferred."
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added qualitative primary-backed resistance evidence with donor, host and substrate distinctions. Reference proteins are not assigned as exact experimental alleles. Existing chemical and source evidence preserved; whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-09T18:55:26Z"
+      },
+      "curation_status": "SEEDED",
+      "fresh_seed": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocin-followup/microcin-c-fresh-seed.json",
+        "sha256": "60cdb9e764b6f8236f87646b39582d6c97bca92d26c5d42baccfd5008522552c"
+      },
+      "history_events_added": 1,
+      "identifier": "CHEBI:82754",
+      "label": "microcin c",
+      "original": {
+        "path": "reports/resistance-grounding-2026-10-09-bacteriocin-followup/microcin-c-original.yaml",
+        "sha256": "3b6ccce461fb0ba619bdb8d4c9e95b9b46d5f50b68650cd2554abbae89664057"
+      },
+      "original_bytes_preserved_as_prefix": true,
+      "record": {
+        "path": "data/antibiotics/unspecified/microcin-c.yaml",
+        "sha256": "83a05df72e4ee39a92e045f037720b2aa9cf97dc267808b390daa8dfb97eb795"
+      },
+      "standard_inchi_key": "PQZVLCSYKIYYRQ-CRNXWWIHSA-N"
+    }
+  ],
+  "source_ownership": "CURATOR; reproducible source slices unchanged",
+  "status": "CURATED_QUALITATIVE_PRIMARY_EVIDENCE",
+  "whole_record_review_complete": false
+}

@@ -1,0 +1,1027 @@
+{
+  "schema_version": 1,
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "reviews": [
+    {
+      "review_id": "wang-2020-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "32569396",
+      "reference": "DOI:10.1002/ps.5964",
+      "source_url": "https://www.researchgate.net/publication/342367490_Mutations_at_sterol_14a-demethylases_CYP51AB_confer_the_DMI_resistance_in_Colletotrichum_gloeosporioides_from_grape",
+      "locations": ["Table 1", "Section 2.5", "Section 3.6"],
+      "note": "Experimental background differs from the cited reference strain; unverified subject identifiers are withheld, not replaced.",
+      "withhold": ["taxon_id", "strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:81760", "row_sha256": "3a72efaf2ac116d7398a477e62ca8c1f905edb49b5995e4bef6d9e73c97fdfbf"},
+        {"identifier": "CHEBI:8434", "row_sha256": "ca113a423af4adf483abe166fbebf93f85bf32fed5b20b78ffb02cbd49a0220b"},
+        {"identifier": "CHEBI:8489", "row_sha256": "d9a9937a215b3546fb89d6920b279280e8fa2d746a2d85e94e6baa0dd38ff5bd"}
+      ]
+    },
+    {
+      "review_id": "krishnan-natesan-2008-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "18775650",
+      "reference": "DOI:10.1016/j.ijantimicag.2008.06.018",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0924857908002823",
+      "locations": ["Table 1", "Section 3.1", "Discussion"],
+      "note": "The strain label denotes the susceptible parent, not the resistant isolate. NRRL 3357 identifiers are reference-only; source coordinates remain unnormalized.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "bd8c64b95f026fb10208759c17768091c6cfe6a586ab7127878847f88b5fefff"},
+        {"identifier": "CHEBI:10023", "row_sha256": "e69179a09b6a43e0419c062721b2f7442461129c287f68e2d82de2425666bea9"},
+        {"identifier": "CHEBI:10023", "row_sha256": "e1e1c9a47660386d287dc7cf0b9df9eb955cb84920c4da37f451524ba40c043d"},
+        {"identifier": "CHEBI:10023", "row_sha256": "8fba48adda77a72c058099046eec7a66c1dd41765c95ab028d2741b02ebd51b9"},
+        {"identifier": "CHEBI:10023", "row_sha256": "2b889bcb24f08b4f8215ab0606f72366f37e4ba5ba2a0d4bbfaed8bd4cb67477"}
+      ]
+    },
+    {
+      "review_id": "bissinger-kuchler-1994-sts1-name-collision",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "8307980",
+      "reference": "DOI:10.1016/S0021-9258(17)41760-1",
+      "source_url": "https://www.researchgate.net/publication/14891280_Molecular_cloning_and_expression_of_the_Saccharomyces_cerevisiae_STS1_gene_product_A_yeast_ABC_transporter_conferring_mycotoxin_resistance",
+      "locations": ["pp. 4180-4181: gene identity and strain context", "Results and Table I", "p. 4185: STS1/PDR5 allelism", "UniProtKB release 2026_03: P33302 entry 235, P38637 entry 160, sequence versions 1"],
+      "note": "Historical STS1 denotes PDR5, not the modern STS1 proteasome-tether gene. UniProtKB:P33302 / YOR153W supports the PDR5 reference crosswalk, not an exact experimental allele. The strain label is parent-background context; S288c is a reference, not a resolved experimental subject.",
+      "withhold": ["strain_taxon_id", "protein_accession", "gene_id"],
+      "misassigned": ["protein_accession", "gene_id"],
+      "source_rows": [
+        {"identifier": "CHEBI:27641", "row_sha256": "bff7ab8539de8d71c20a48a073b38e80f52a150b3dd321b5697b9ef3b73487ca"}
+      ]
+    },
+    {
+      "review_id": "liu-2012-cyp51b-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "22314539",
+      "reference": "DOI:10.1128/aac.05477-11",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.05477-11",
+      "locations": ["Table 2", "Results: expression-level comparison", "UniProtKB release 2026_03: B8NFL5 entry 92, sequence version 3"],
+      "note": "AF-B is the tested derivative, not clinical isolate BMU29791. NRRL 3357 is reference/donor context. UniProtKB:B8NFL5 and the retained gene_id ground a reference locus, not a verified historical experimental protein sequence.",
+      "subject_strain": "AF-B",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "03378a1ee766aaa8f9ce7cf0b9806383259402e8342704aa954b4254a6b227b3"}
+      ]
+    },
+    {
+      "review_id": "liu-2012-cyp51c-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "22314539",
+      "reference": "DOI:10.1128/aac.05477-11",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.05477-11",
+      "locations": ["Table 2", "Results: cyp51C variant comparison", "UniProtKB release 2026_03: B8NUK6 entry 87, sequence version 1; PMID 22314539 feature"],
+      "note": "AflavC-788 is the tested derivative, not clinical isolate BMU29791. UniProtKB:B8NUK6 supports the cited reference-protein feature, not an isolate-specific accession. The retained gene_id denotes the reference locus; source coordinates remain unnormalized.",
+      "subject_strain": "AflavC-788",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "d5095234347e36dbddb15fe326b058011dac75b0c0bcf7e43affa3520135ee30"}
+      ]
+    },
+    {
+      "review_id": "liu-2012-cyp51a-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "22314539",
+      "reference": "DOI:10.1128/aac.05477-11",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.05477-11",
+      "locations": ["Table 2", "Results: expression-level comparison", "UniProtKB release 2026_03: B8N2C8 entry 90, sequence version 1"],
+      "note": "AF-A is the tested derivative, not clinical isolate BMU29791. NRRL 3357 is reference/donor context. UniProtKB:B8N2C8 and the retained gene_id ground a reference locus, not an independently resolved experimental protein accession.",
+      "subject_strain": "AF-A",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "b7ee8d6778a5809ee7c642ee35a9b12bb7fb680fea47869333682d400802ed79"}
+      ]
+    },
+    {
+      "review_id": "balashov-2006-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "16723566",
+      "reference": "DOI:10.1128/aac.01653-05",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.01653-05",
+      "locations": ["Results: resistant derivatives and cross-resistance", "Table 3", "Declared FKS1 reference accessions", "UniProtKB release 2026_03: O13383 entry 50, sequence version 1; A0A1D8PCT0 entry 36, sequence version 1"],
+      "note": "The strain label denotes a parent background, not an individually resolved resistant derivative. Imported protein/strain identifiers are reference-only. AF027295 / AAC49870.1 maps explicitly to UniProtKB:O13383 (CaFKS1; CAI4 reference), not an experimental allele. Source notation remains unnormalized; aggregated zygosity and grouped MICs must not be assigned to individual isolates.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:474180", "row_sha256": "30f4c99690cfebf82b4632a3ab1391f140bb9712bc1d4de1c39f4c6a0f081522"},
+        {"identifier": "CHEBI:474180", "row_sha256": "39d4a7bf84136940e87471bdb2cd38f2700873d903a2698a84ad3d2db1aa20a6"},
+        {"identifier": "CHEBI:474180", "row_sha256": "37b18afe4735c8b4ce26fdb2019c9f52e345957f2e2f6ecba3808a5fd852d2ca"},
+        {"identifier": "CHEBI:474180", "row_sha256": "3f146f6fdd41b79f98a99e7c16979ffa42cf413fb2c842f41560a1974147a8c0"},
+        {"identifier": "CHEBI:474180", "row_sha256": "0b8e5990cce0912368eeacfec948922b6cc70530c81a2c19b261fb976682732e"},
+        {"identifier": "CHEBI:474180", "row_sha256": "6e631006aca3605043c9d8ba1576ba145da3b80505bd7b3ce845b5fec8d90328"},
+        {"identifier": "CHEBI:474180", "row_sha256": "81967550be23f48e2fdb516c2bc0afc5121f3e413eddabfd1fee4165a9dc64b3"},
+        {"identifier": "CHEBI:474180", "row_sha256": "f4ec44886e7bbbe93a4946fde3e77e6296a36d81e83d15b55b02bc8ef9a0099d"},
+        {"identifier": "CHEBI:55346", "row_sha256": "8940033306a2144fd4f99b712aff6cb89b07b7dd928f2a939228d75dcc66e26c"},
+        {"identifier": "CHEBI:55346", "row_sha256": "59469d41ef3e5661df7887b5e7994c9daea5088f9249abc22bb8b892dc76cbc2"},
+        {"identifier": "CHEBI:55346", "row_sha256": "24f52bcfaaf6af968fdc9821f6d4b0d94cbe887694257458d685556ce432e0e0"},
+        {"identifier": "CHEBI:55346", "row_sha256": "cf0289a74050610d47ddefb81c48962010561a8b5290ac915add097645a32d1b"},
+        {"identifier": "CHEBI:55346", "row_sha256": "0f076d59a9529de9f333e270dd4a485246a30fb53e698e524bf1de758d8a8266"},
+        {"identifier": "CHEBI:55346", "row_sha256": "dbeef64178d9341ef52a72eafb7c7f5706f3bc8753aeccc55208246904b2a050"},
+        {"identifier": "CHEBI:55346", "row_sha256": "af0776bc1340d639813bc9914635ef279270afa4471b32b326036afa84988a31"},
+        {"identifier": "CHEBI:55346", "row_sha256": "ee7b543d43dffa54a2f794aa7c14fe6d91091023c9172847590df28865351da0"},
+        {"identifier": "CHEBI:600520", "row_sha256": "6c0e376c791fe7072989f2e8c85b464d99092e40b1703722f438e5c75061a902"},
+        {"identifier": "CHEBI:600520", "row_sha256": "d33e5e6624d4fbe200aeba9274bb5a9850939c82e6f0b57cb89e7d5b6ad2037f"},
+        {"identifier": "CHEBI:600520", "row_sha256": "26d9e866847bc109baa1e6e187a4a51fc6bb9a4117f82707b4029b60e015e462"},
+        {"identifier": "CHEBI:600520", "row_sha256": "ccaed6380d17516a143f069cb733a885fced6f03c9d55adda6fbea4385c90c27"},
+        {"identifier": "CHEBI:600520", "row_sha256": "a3985f7aab0152b8a4855c7e071534fd058cb66f7ec1b7db614b64cb836761aa"},
+        {"identifier": "CHEBI:600520", "row_sha256": "0bc9c18893a765f4d5614ef6decbe5d01bf078053a2429ca08cade971615ccfb"},
+        {"identifier": "CHEBI:600520", "row_sha256": "ce3d9ab94432e2df6c673162894c53a2b1a8cfa9c09d95e78130b99f96134ffd"},
+        {"identifier": "CHEBI:600520", "row_sha256": "6134026a7e5008ca9b929cd5d711010ba2d18f18b8187bfc855c74b04e07e831"}
+      ]
+    },
+    {
+      "review_id": "flowers-2015-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "25385095",
+      "reference": "DOI:10.1128/aac.03470-14",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.03470-14",
+      "locations": ["Table 1", "Results and Figure 2", "Table 3: separate clinical cohort", "UniProtKB release 2026_03: P10613 entry 179, sequence version 2; EnsemblFungi cross-reference"],
+      "note": "The strain label denotes the susceptible parent background, not either tested replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source proteins are separate evidence; no isolate join, coordinate normalization or attribution of a combined genotype's effect to each component is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "e9896962f0f11b22a5ea31d9218f293a84c869c7a5d8485bd7fd70a369c2cbed"},
+        {"identifier": "CHEBI:10023", "row_sha256": "a6c071a79e8f16f9e24ada7116e182d66cebbfa50ca735ba2d0083135d3bf0c0"},
+        {"identifier": "CHEBI:46081", "row_sha256": "115835e69e1eec336cc72878d41f8b5571960457e3591a2305411a66b1168992"},
+        {"identifier": "CHEBI:46081", "row_sha256": "dae671e67c43eea23c6f1a89a32e01f02de42ce30c5806ac8e0cfce1b8990b65"},
+        {"identifier": "CHEBI:46081", "row_sha256": "c89bb090b7fc73c8a090c16c53a28ab31103ee8e12baead059fffb02e113192f"},
+        {"identifier": "CHEBI:46081", "row_sha256": "719c814b1cddf24a1262c238508f9a5084462a43c867e325e290c76fe2ca3f6f"},
+        {"identifier": "CHEBI:46081", "row_sha256": "1e1158a378c8e871bdc6af48366104f79d2fadff1e24bb67ca9c6eb2e47bf85a"},
+        {"identifier": "CHEBI:46081", "row_sha256": "0ac4318128c748f468934e56dd5d1d1620e822e5b641bd508de8bcdaf40346d3"},
+        {"identifier": "CHEBI:46081", "row_sha256": "35c6b09ecbdf5e296e062b0e4203803a5560f20973095a52c42ae1cae66f7efd"},
+        {"identifier": "CHEBI:46081", "row_sha256": "82086758ea6eeae40bd3325d364a2b7a1d65075dcbbb0ec2ba745f32ac0fa570"},
+        {"identifier": "CHEBI:46081", "row_sha256": "710126cc04eb0e6cf5112b0dafaed58c91b0c96f72c7b26ea2ed7569dde52a4d"},
+        {"identifier": "CHEBI:46081", "row_sha256": "ef4ec0fe10dfc5547262006190510f9c7c84d892d63f66c371b5962f427073a9"},
+        {"identifier": "CHEBI:46081", "row_sha256": "38f585d8c4b1ba05813dc818871fc332abeaeac0a250dd9c65f8b5bb373aaf53"},
+        {"identifier": "CHEBI:46081", "row_sha256": "7af07477c889f15c0749f935c65c7fc187e8548112666f81e707ea6f35d237e0"},
+        {"identifier": "CHEBI:46081", "row_sha256": "957d06e3366343ae8eee7066fcbfc34ef9ef12586af3c203baced4a1bcb0d274"},
+        {"identifier": "CHEBI:46081", "row_sha256": "9b6cf7016eea40e8421fb40c143cb7a07e36edcd840d1b38659cd4babb6f309d"},
+        {"identifier": "CHEBI:46081", "row_sha256": "5c420b8d88bffc80a306394631d144a70b3d8f881ebe32e8b0b14796ca3f8bfc"},
+        {"identifier": "CHEBI:46081", "row_sha256": "2b233b1f5651047ea127eca51a0eda45ff78cce6961868b2a927218abbdffe82"},
+        {"identifier": "CHEBI:46081", "row_sha256": "d7af62f399df667de4cfb88a5c4afd62ef1c77b871d65e754c0c601adf282076"},
+        {"identifier": "CHEBI:46081", "row_sha256": "e80b5ebaafe58d3889cec184203353f981e9c8f21712e5662d4701c8a1281ee9"},
+        {"identifier": "CHEBI:6076", "row_sha256": "f463cd017bb42a43710013598d275b3112ecd9b1489aa9df1c89dea82c3798f6"}
+      ]
+    },
+    {
+      "review_id": "garcia-effron-2008-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "18443110",
+      "reference": "DOI:10.1128/aac.00262-08",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.00262-08",
+      "locations": ["Table 1: parent and derivative rows", "Results: Saccharomyces comparison", "Figure 1: AAC48981 reference", "UniProtKB release 2026_03: P38631 entry 209, sequence version 2; EnsemblFungi cross-reference"],
+      "note": "BY4742-P649A is the derivative label printed in Table 1, whereas Results and the imported alteration use P647A. This discrepancy is preserved, not normalized. UniProtKB:P38631 / AAC48981.1 and the retained gene_id ground the reference FKS1 locus, not a verified derivative sequence. Reference strain identity, native Candida observations, whole-cell MICs and enzyme inhibition remain distinct.",
+      "subject_strain": "BY4742-P649A",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:474180", "row_sha256": "5690bee568133fb582a4fd090c934036d3e0290cda2ee739690549211ced3fca"},
+        {"identifier": "CHEBI:55346", "row_sha256": "114769721c7e74990a74a4bda84ebbc8cf0b05573e54fe6298c1217b0bc1339c"},
+        {"identifier": "CHEBI:600520", "row_sha256": "fbe92d5bf4ea01f50c568ede76cbbb43c43411d74eb88834041268d3c35e9953"}
+      ]
+    },
+    {
+      "review_id": "eddouzi-2013-mrr1-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "23629718",
+      "reference": "DOI:10.1128/aac.00555-13",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.00555-13",
+      "locations": ["Results", "Tables 1, 3 and 4", "Figure 3", "UniProtKB release 2026_03: Q5A4G2 entry 131, sequence version 1"],
+      "note": "The strain label denotes reference background, not the clinical donor JEY355 or a uniquely resolved tested derivative. UniProtKB:Q5A4G2 and the retained gene_id ground the reference MRR1 locus. Source rows do not resolve allele dosage or individual derivative; drug-specific assays and clinical MICs remain separate.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:46081", "row_sha256": "67743488d82e3f0395ab4b402682e87c49ccb8b19f13b5e42c3d7bdfd809fa25"},
+        {"identifier": "CHEBI:48080", "row_sha256": "f455b9799cdbedfd22ced7747738e9311638fbcc3223672cda7c65e3fc14caa3"}
+      ]
+    },
+    {
+      "review_id": "eddouzi-2013-erg3-donor-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "23629718",
+      "reference": "DOI:10.1128/aac.00555-13",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.00555-13",
+      "locations": ["Results: clinical and laboratory subjects", "Tables 1 and 3", "Declared deposits", "UniProtKB release 2026_03: N0A5G3 entry 42, sequence version 1; KC676662 / AGK44786.1 strain evidence"],
+      "note": "UniProtKB:N0A5G3 explicitly links the clinical donor JEY162 deposit KC676662 / AGK44786.1, not the imported subject label, which remains unresolved. Clinical, heterologous-host and native-derivative observations remain distinct; combined-genotype effects are not attributed independently to this component.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "fb8b7f68837587ef29730fdca7de01470ae13e8fd6e2c94e40fa5e597c88eeae"},
+        {"identifier": "CHEBI:46081", "row_sha256": "a40120bc3fea249c00e31684bddfc035b5a9400b3caf8022e6085564e4094677"}
+      ]
+    },
+    {
+      "review_id": "eddouzi-2013-erg11-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "23629718",
+      "reference": "DOI:10.1128/aac.00555-13",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.00555-13",
+      "locations": ["Results", "Tables 1 and 3", "UniProtKB release 2026_03: P14263 entry 126, sequence version 2; EnsemblFungi cross-reference"],
+      "note": "UniProtKB:P14263 and the retained gene_id identify a reference ERG11 locus, not the deposited clinical allele or tested derivative. The imported subject label remains unresolved. Source notation, compound-specific phenotype and species are retained without coordinate normalization, subject reassignment or independent attribution of combined-genotype effects.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "670146aa88bb77cd8f3ffe961208e09aa93f9c4bbe948e60ffb7432bb575230e"},
+        {"identifier": "CHEBI:46081", "row_sha256": "4020805150e3faebd4a6b66b953c595fa79bf78c9185d0650187c8da4ee40735"}
+      ]
+    },
+    {
+      "review_id": "rybak-2017-albicans-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "28630186",
+      "reference": "DOI:10.1128/aac.00651-17",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.00651-17",
+      "locations": ["Results: ERG3 disruption comparisons", "Strain table: parent and derivative rows", "UniProtKB release 2026_03: Q59VG6 entry 109, sequence version 1; EnsemblFungi cross-reference"],
+      "note": "The retained strain label is parent background, not the tested deletion derivative. UniProtKB:Q59VG6 and the retained gene_id ground the reference ERG3 locus. Reference protein and strain TaxID are not derivative identifiers. Native clinical-isolate and laboratory observations remain separate; no MIC or exact derivative identifier is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "f0a72acbbc4f481032fd146b688219388cc5012e0693f1aeed4f690871eac3ef"},
+        {"identifier": "CHEBI:46081", "row_sha256": "c0aa204884b61d42e2fda2ae65239e228e939edb291de51bfca4d9cb6ad49293"},
+        {"identifier": "CHEBI:6076", "row_sha256": "4494127a2a0df45526c4e87a35e322c31b49380960d8ca38240cf0aa2fde6f9d"}
+      ]
+    },
+    {
+      "review_id": "rybak-2017-parapsilosis-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "28630186",
+      "reference": "DOI:10.1128/aac.00651-17",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.00651-17",
+      "locations": ["Results: clinical isolates and ERG3 disruption comparisons", "Strain table: two clinical backgrounds and their derivatives", "UniProtKB release 2026_03: G8B7T4 entry 50, sequence version 1; EMBL and CGD cross-references"],
+      "note": "UniProtKB:G8B7T4 / CPAR2_105550 and strain TaxID 578454 identify CDC 317 reference context, not a clinical isolate or tested derivative. The source row does not uniquely resolve either tested background. Its deletion claim is not the native clinical variant; no individual isolate, clinical protein, genome or MIC is assigned.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "d5fd674f44d26730cd1a0dd72d431fb37af066ceaf063c924233f442efe6d056"},
+        {"identifier": "CHEBI:46081", "row_sha256": "790bf28289a320703de2cdda65336c5eda7a38127b6b0087917596ff2748d738"},
+        {"identifier": "CHEBI:6076", "row_sha256": "5e99a53e2e04833341f00d2eeea85c946e377aa6e210671b08dfff7390053fee"}
+      ]
+    },
+    {
+      "review_id": "fraaije-2012-sdhb-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "21933337",
+      "reference": "DOI:10.1111/j.1364-3703.2011.00746.x",
+      "source_url": "https://bsppjournals.onlinelibrary.wiley.com/doi/10.1111/j.1364-3703.2011.00746.x",
+      "locations": ["Results and Tables 1, 3 and 4: field strains, parents and derivative groups", "Declared deposits", "UniProtKB release 2026_03: O42772 entry 134, sequence version 1; AF042062 / AAB97419.1"],
+      "note": "The retained strain label is parent background, not a uniquely identified tested derivative. UniProtKB:O42772 grounds a reference SDH2/SdhB protein; its strain scope is unresolved. Field-strain deposits do not identify the resistant derivatives. Grouped EC50 evidence is not an individual MIC; source alterations and assay wording remain unnormalized.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "a741ffc3ca60fa6514287a33922e24b4fd34ec70572afcce14439610a5d232dd"},
+        {"identifier": "CHEBI:3405", "row_sha256": "4a6c33b645ab6bcd166b78fd138d3382bd80626411aedf99d25d304df6a90208"},
+        {"identifier": "CHEBI:3405", "row_sha256": "e4e69bafe26bb5ddf7a7c09e845db4b7f0387bec603914c76ecfbfd732690a7f"},
+        {"identifier": "CHEBI:3405", "row_sha256": "6a7e85ef14a814a056b03217771ef6b047d40d8cf2800175a5ac6c84615057b3"},
+        {"identifier": "CHEBI:3405", "row_sha256": "b4e8f51567852d30159f6592c674cf31a5ed66aa54ae7a80cd99e54d8e139696"},
+        {"identifier": "CHEBI:3405", "row_sha256": "3a3fa5a4da0e484dbf5ab5cd807f704b2ac57ad572175bfaee0ed7eaf6ad3ff4"},
+        {"identifier": "CHEBI:3405", "row_sha256": "f6c529140ed26bbb098b5444eb4f0d88a0a834bd171b1e6f930c33118afd4a89"},
+        {"identifier": "CHEBI:3405", "row_sha256": "070a40b2f299dfd7fdb7275885a4d2d34ba627f8521e29b1135a29af59dfb6eb"},
+        {"identifier": "CHEBI:3405", "row_sha256": "c78edc0c9984b97453a2efa9f27c789264996fa62f664a4807d627ef4b4bf2ce"},
+        {"identifier": "CHEBI:3405", "row_sha256": "9fc8b409221d09e07f84f8f4b8b3d5f764ab860961f09d442a4e623e22ef8221"},
+        {"identifier": "CHEBI:3405", "row_sha256": "23c948e702594d9c4aff4d165434eba91acd7fcc8557dcc470378a8834822952"},
+        {"identifier": "CHEBI:3405", "row_sha256": "e82e8b587224635c0c0fa847105d4ecc64ee4914d66de991535bfe9b1381447e"},
+        {"identifier": "CHEBI:3405", "row_sha256": "64f5befffe794636bfc3302a94422145f037e5845ceeca80a3e6ec9e16ad2c49"}
+      ]
+    },
+    {
+      "review_id": "fraaije-2012-sdhcd-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "21933337",
+      "reference": "DOI:10.1111/j.1364-3703.2011.00746.x",
+      "source_url": "https://bsppjournals.onlinelibrary.wiley.com/doi/10.1111/j.1364-3703.2011.00746.x",
+      "locations": ["Results and Tables 1, 3 and 4: separate backgrounds and derivative groups", "UniProtKB release 2026_03: F9X9V6 entry 53 and F9XH52 entry 57, sequence versions 1; strain evidence and taxonomy"],
+      "note": "The retained strain label is parent background. UniProtKB:F9X9V6 (SDH4/SdhD), UniProtKB:F9XH52 (SDH3/SdhC) and TaxID 336722 identify IPO323 reference context, not a tested derivative or IRE30. Grouped phenotypes cannot resolve an individual allele sequence; field-strain proteins and experimental subjects remain separate.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "ac5c63eae67e645795965e8f5b6886b4d2b1fb09d7188f9e91154e326d8a7cdd"},
+        {"identifier": "CHEBI:3405", "row_sha256": "4e703584b9b561a6a9e062e849662c685b2f3241ef3ebd8876b3ba7d8f06dcaa"},
+        {"identifier": "CHEBI:3405", "row_sha256": "002a7f779d3ec06e3ab7d5d5b7187a720f1b24a2e82f077486a6067bca9372a2"},
+        {"identifier": "CHEBI:3405", "row_sha256": "afbdfc430119e1996530779801e65a26b3e1c33182fe26557850d854cc3a5905"},
+        {"identifier": "CHEBI:3405", "row_sha256": "7c4e3e69f01537fbbee3f42f4a6c2fd3f988b2ea5fd33971100b45c94752877b"},
+        {"identifier": "CHEBI:3405", "row_sha256": "04bae48c2c29acedaea931de5085dc4fdb140db8b9bbdbd9d16ca18b6aaa9fac"}
+      ]
+    },
+    {
+      "review_id": "scalliet-2012-sdhb-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "22536383",
+      "reference": "DOI:10.1371/journal.pone.0035429",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0035429",
+      "locations": ["Results and Figure 5: parents and laboratory comparisons", "Table 3: distinct whole-cell and mitochondrial measurements", "UniProtKB release 2026_03: O42772 entry 134, sequence version 1; AF042062 / AAB97419.1"],
+      "note": "IPO323 is retained as parent background, not an exact tested-subject identity. UniProtKB:O42772 grounds a reference SDH2/SdhB protein with unresolved strain scope, not the imported allele. Original and subsequent laboratory subjects remain distinct. Whole-cell and biochemical IC50 values and resistance factors are not MICs; source notation is preserved.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "f5e822d4f27b62486e54f90c4c4f08835e64d8b24f9006150121716b02fc18fc"},
+        {"identifier": "CHEBI:3405", "row_sha256": "217f55a7290add67a6420d71ed3684cee87a15edeec22f5e9943c70de12f2d01"},
+        {"identifier": "CHEBI:3405", "row_sha256": "424e2715b4674092a19d60a80baf36ae475da131ffcaecebd1e3ae6fb8fb8709"},
+        {"identifier": "CHEBI:3405", "row_sha256": "3782980b368046a49f6804ed5383948a8a2d2dfb96751de35bed9fe16e95667b"}
+      ]
+    },
+    {
+      "review_id": "scalliet-2012-sdhcd-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "22536383",
+      "reference": "DOI:10.1371/journal.pone.0035429",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0035429",
+      "locations": ["Results and Figure 5: separate laboratory subjects and parent", "Table 3: assay scope", "UniProtKB release 2026_03: F9X9V6 entry 53 and F9XH52 entry 57, sequence versions 1; strain evidence and taxonomy"],
+      "note": "The strain label denotes parent background. UniProtKB:F9X9V6 (SDH4/SdhD), UniProtKB:F9XH52 (SDH3/SdhC) and TaxID 336722 ground IPO323 reference context, not an exact experimental allele or derivative. Source alteration and phenotype remain unchanged without assigning an individual subject or converting assay endpoints.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "d6fbe41b84d593062b7d092b062a3bf759187e498ab034cee3fc280c2428f835"},
+        {"identifier": "CHEBI:3405", "row_sha256": "da8dee7607947aa04af3d977c0e427f50739560d21de0c30c4226d84398d4fb6"},
+        {"identifier": "CHEBI:3405", "row_sha256": "4857fb54ce19f4a619316fc98da18ac8233c3a68037c1581b2fbbbdde3044a6f"}
+      ]
+    },
+    {
+      "review_id": "kilaru-2015-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "26092798",
+      "reference": "DOI:10.1016/j.fgb.2015.03.018",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1087184515000614",
+      "locations": ["Results and discussion sections 3.1, 3.3 and 3.4: reference accession, parent and separate derivatives", "UniProtKB release 2026_03: O42772 entry 134 and F9XG45 entry 75, sequence versions 1; reference cross-references and strain evidence"],
+      "note": "IPO323 is retained as parent background, not a uniquely identified tested derivative. UniProtKB:O42772 is reference-only with unresolved strain scope. The paper's reference XP_003850753.1 / protein ID 74146 maps to UniProtKB:F9XG45 / MYCGRDRAFT_74146 in IPO323, not to an experimental allele. It is not a replacement subject accession. Source alteration and phenotype remain unchanged; no MIC or derivative identity is inferred.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "b0893df44c9e1d871ac682943a0e96f2ae453f8ef2fd8b33521295b0bea064e9"}
+      ]
+    },
+    {
+      "review_id": "guo-2016-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "27558019",
+      "reference": "DOI:10.1186/s13568-016-0232-x",
+      "source_url": "https://link.springer.com/article/10.1186/s13568-016-0232-x",
+      "locations": ["Results and Figure 2: parent and distinct laboratory subjects", "2019 correction DOI:10.1186/s13568-019-0814-5: Figure 4b image replacement", "UniProtKB release 2026_03: G4NE45 entry 73, sequence version 1; reference strain and XP_003718958.1 cross-reference"],
+      "note": "Guy11 is retained as parent background, not a uniquely identified tested derivative. UniProtKB:G4NE45 / MGG_00167 and TaxID 242507 identify reference strain 70-15, not Guy11 or a tested derivative. The paper cites XP_003718958 without a version; UniProt links XP_003718958.1. Original and subsequent laboratory groups remain distinct. The 2019 Figure 4b correction is acknowledged; source alteration and phenotype remain unchanged without an inferred MIC, sequence or genome.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "6bd25ea5eefe5fab62cbad9316e04dd0f25ad11f4567ee19897b9b5bfea283ed"}
+      ]
+    },
+    {
+      "review_id": "fillinger-2012-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "22912706",
+      "reference": "DOI:10.1371/journal.pone.0042520",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0042520",
+      "locations": ["Results section s3d and Table 3: B05.10-derived subjects distinct from original isolates in Table 1", "UniProtKB release 2026_03: A0A384J5Y1 entry 36, sequence version 1; reference strain and one-to-many protein cross-references"],
+      "note": "B05.10 is retained as parent background, not a unique tested derivative. UniProtKB:A0A384J5Y1 / BCIN_01g06260 and TaxID 332648 identify B05.10 reference context, not an experimental allele. The original-isolate deposits JX192607-JX192631 are not subject accessions for the later Table 3 comparisons. Preserve source alteration, phenotype and assay flags; EC50 and categorical growth endpoints are not MICs. Exact tested clones, proteins and genomes remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:28909", "row_sha256": "d370abe02966e45cfb3be47491c544d06967c2ee7a1976e84820499e18691f27"},
+        {"identifier": "CHEBI:28909", "row_sha256": "4cef7b630c8ed8a1c50c8771f37036aeb838847e197b862699d22f3fcd7990b7"},
+        {"identifier": "CHEBI:28909", "row_sha256": "1c03badc0e6e3e497403d2270ee6610e3dbe8ae3a3d40d09a7d5a2ee90c3d7ef"},
+        {"identifier": "CHEBI:28909", "row_sha256": "dff88215da6bfc117ee83a5f9c32427e1a000874ce9e58ce6adf2d36d2980c2b"},
+        {"identifier": "CHEBI:28909", "row_sha256": "182c6a307cb2f952485871644ee8efbe98841b1434a7941a809fb8dc0fc45c06"},
+        {"identifier": "CHEBI:28909", "row_sha256": "af107f4a199834d8f074f7b9ca061fe7db3c8cd6bac472120bed9ae5d3fa7700"},
+        {"identifier": "CHEBI:28909", "row_sha256": "68569e8ec80e382ece5a50a990878f5818d960c951a76df42078bde79bdd7d81"},
+        {"identifier": "CHEBI:28909", "row_sha256": "358f723e73dd3ea38d701d6b8593467cfc1cd9336a59038faac005ac16da9622"}
+      ]
+    },
+    {
+      "review_id": "xia-2025-pbs2-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "41649761",
+      "reference": "DOI:10.1007/s44297-025-00052-5",
+      "source_url": "https://link.springer.com/article/10.1007/s44297-025-00052-5",
+      "locations": ["Results section Sec3: reference gene identities", "Results section Sec8 and Figure 5: reported experimental subject labels", "UniProtKB release 2026_03: W7LTW3 entry 45, sequence version 1; reference strain and taxonomy"],
+      "note": "The subject label is reported in the primary comparison; it does not resolve an individual clone or parent lineage. UniProtKB:W7LTW3 / FVEG_01970 and TaxID 334819 identify reference strain M3125 / FGSC 7600, not the tested derivative. The inspected primary text does not establish 7600 as the experimental parent. Reference gene identity is not an experimental protein accession. Source alteration and phenotype remain unchanged; growth-inhibition rates are not MICs. Exact subject protein, TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "\u0394FvPbs2",
+      "source_rows": [
+        {"identifier": "CHEBI:81763", "row_sha256": "2213e6daada0f867f4344682d281073888a42fb0e66370bc66ec46a0413537a5"}
+      ]
+    },
+    {
+      "review_id": "xia-2025-ssk2-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "41649761",
+      "reference": "DOI:10.1007/s44297-025-00052-5",
+      "source_url": "https://link.springer.com/article/10.1007/s44297-025-00052-5",
+      "locations": ["Results section Sec3: reference gene identities", "Results section Sec8 and Figure 5: reported experimental subject labels", "UniProtKB release 2026_03: W7LX41 entry 57, sequence version 1; reference strain and taxonomy"],
+      "note": "The subject label is reported in the primary comparison; it does not resolve an individual clone or parent lineage. UniProtKB:W7LX41 / FVEG_00869 and TaxID 334819 identify reference strain M3125 / FGSC 7600, not the tested derivative. The inspected primary text does not establish 7600 as the experimental parent. Reference gene identity is not an experimental protein accession. Source alteration and phenotype remain unchanged; growth-inhibition rates are not MICs. Exact subject protein, TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "\u0394FvSsk2",
+      "source_rows": [
+        {"identifier": "CHEBI:81763", "row_sha256": "24615fa5b44f9b350037c3c722151b4416c2ca5e149b820532457f06ca8302da"}
+      ]
+    },
+    {
+      "review_id": "xia-2025-hog1-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "41649761",
+      "reference": "DOI:10.1007/s44297-025-00052-5",
+      "source_url": "https://link.springer.com/article/10.1007/s44297-025-00052-5",
+      "locations": ["Results section Sec3: reference gene identities", "Results section Sec8 and Figure 5: reported experimental subject labels", "UniProtKB release 2026_03: W7M468 entry 57, sequence version 1; reference strain and taxonomy"],
+      "note": "The subject label is reported in the primary comparison; it does not resolve an individual clone or parent lineage. UniProtKB:W7M468 / FVEG_04168 and TaxID 334819 identify reference strain M3125 / FGSC 7600, not the tested derivative. The inspected primary text does not establish 7600 as the experimental parent. Reference gene identity is not an experimental protein accession. Source alteration and phenotype remain unchanged; growth-inhibition rates are not MICs. Exact subject protein, TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "\u0394FvHog1",
+      "source_rows": [
+        {"identifier": "CHEBI:81763", "row_sha256": "f5f56beb20defd89f09f98183d000a539d73a3b1b8762a3c6b84dbcdcd1e4580"}
+      ]
+    },
+    {
+      "review_id": "mann-2003-fumigatus-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "12543662",
+      "reference": "DOI:10.1128/aac.47.2.577-581.2003",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.47.2.577-581.2003",
+      "locations": ["Strains and plasmids: background identity", "Results and Tables 1-2: distinct subject groups", "UniProtKB release 2026_03: Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy"],
+      "note": "The strain label denotes a parent background, not a uniquely resolved tested derivative or clinical isolate. The later recipient background is distinct from the original parent. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293 reference locus; TaxID 330879 is reference-only. Source alterations and phenotypes are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:6076", "row_sha256": "ee415298b14c133bcad48af461600236f9cd123144b2553c86ce376fe04fca64"},
+        {"identifier": "CHEBI:6076", "row_sha256": "ca6c2ffc916008640f65d3e84d19b8d8e51b399ea769643150b729661936ded2"},
+        {"identifier": "CHEBI:64355", "row_sha256": "341654a5febc118071de2a86a3bf161c315fa2307aebf178d896c4af1ba86911"},
+        {"identifier": "CHEBI:64355", "row_sha256": "78c4d687525e70ae84d45501727f42f843998a4f63ed342e4d770e37c392193f"},
+        {"identifier": "CHEBI:64355", "row_sha256": "cc5c1a8ac1590137803900536ae95e1df5675d834eac0e53c1fdc70f49b88929"},
+        {"identifier": "CHEBI:64355", "row_sha256": "394ef320e24258ea92ec7193dcbbba12ac60b24468a5d3b3cd1bbe5c29a5fb7c"}
+      ]
+    },
+    {
+      "review_id": "nascimento-2003-fumigatus-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "12709346",
+      "reference": "DOI:10.1128/aac.47.5.1719-1726.2003",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.47.5.1719-1726.2003",
+      "locations": ["Strains and culture conditions: parent identity", "Results and Table 1: parent and separately labeled derivatives", "UniProtKB release 2026_03: Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy"],
+      "note": "The strain label denotes a parent background, not one of the separately labeled tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293 reference locus; TaxID 330879 is reference-only. A shared alteration does not uniquely identify an experimental subject. Source alterations and phenotypes are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:6076", "row_sha256": "4248ed189d2be9d68f1a0d28e63f1f738b7f19f49f685ce6d5998772c3f99260"},
+        {"identifier": "CHEBI:6076", "row_sha256": "4d6dc03fc9ada968d73ee312884eaefd87bfe8fdfc22219e2b5b5659e861b398"},
+        {"identifier": "CHEBI:6076", "row_sha256": "a2ad0ee80f9fd403bc632f00cec8d84af8d9dae6fbaf578ade8b667933d621a8"}
+      ]
+    },
+    {
+      "review_id": "mellado-2004-fumigatus-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "15215142",
+      "reference": "DOI:10.1128/aac.48.7.2747-2750.2004",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.48.7.2747-2750.2004",
+      "locations": ["Fungal strains and antifungal susceptibility testing: parent and clinical isolates", "Results and Table 1: distinct parent, donor and tested-subject identities", "UniProtKB release 2026_03: Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy"],
+      "note": "The strain label denotes a parent background, distinct from clinical donors and later tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293 reference locus; TaxID 330879 is reference-only. Donor identity is not recipient identity. Source alterations and phenotypes are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:6076", "row_sha256": "e6c1b6c3e02bbf46b37b6b36ba165952d7af86614b0cc71d08a63ce21815429f"},
+        {"identifier": "CHEBI:6076", "row_sha256": "762d9866407de1a27b2dcd8d1a4428e94c7ee440ff302566c2009d87491df177"},
+        {"identifier": "CHEBI:6076", "row_sha256": "8e725338a2d44f83737203affb66d09044e5dd3174901933556bb206d4f1d9c5"}
+      ]
+    },
+    {
+      "review_id": "mellado-2007-fumigatus-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "17371828",
+      "reference": "DOI:10.1128/aac.01092-06",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.01092-06",
+      "locations": ["Results: clinical isolates and separate recipient backgrounds", "Table 4 and its subject-identity footnote", "UniProtKB release 2026_03: Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy"],
+      "note": "The strain label denotes a parent background, not an individual tested derivative or clinical donor. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293 reference locus; TaxID 330879 is reference-only. The combined source alteration remains intact, without assigning its effect to each component. Source phenotypes are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "638c79400e5fd24b23930ac51f9c94c7b274e5e76ad5a949d62c7a3d5cecf572"},
+        {"identifier": "CHEBI:6076", "row_sha256": "c7a17535c1b1116fd45ad3fe4042b0adf56fd26241c6b28287d315f4b4cf2810"}
+      ]
+    },
+    {
+      "review_id": "camps-2012-fumigatus-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "23226235",
+      "reference": "DOI:10.1371/journal.pone.0050034",
+      "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050034",
+      "locations": ["Results sections s3a-s3b: clinical series and reference genomes", "Results section s3d and Table 7: later experimental groups", "UniProtKB release 2026_03: Q4WDM9 entry 125, sequence version 1; AFUA_6G05300 reference crosswalk and taxonomy"],
+      "note": "The strain label denotes a parent background, not either later tested replicate or the native clinical isolate. UniProtKB:Q4WDM9 / AFUA_6G05300 and TaxID 330879 denote Af293 reference context. Reference-guided sequence analysis does not identify a clinical or experimental subject as Af293. Source alterations and phenotypes are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "1b7e1958d2c68e62c483de45414b43e9b637f7890debcaa0f742436235e7ea28"},
+        {"identifier": "CHEBI:6076", "row_sha256": "f575edc86018a2be3df80cc2f77c3d790c461065e78ed5ab3d7ce2ae60eb6bd4"},
+        {"identifier": "CHEBI:64355", "row_sha256": "edce50f8c5a72f2433dbe7c3242c2c2b739dc9976242b1688b846c1690c6bbd9"}
+      ]
+    },
+    {
+      "review_id": "li-1996-yeast-subject-group-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "8641470",
+      "reference": "DOI:10.1016/0014-5793(96)00334-1",
+      "source_url": "https://febs.onlinelibrary.wiley.com/doi/pdf/10.1016/0014-5793(96)00334-1",
+      "locations": ["Results 3.1-3.2, page 8: parent and tested-group identity", "Table 1, page 9: separate parent and group columns", "UniProtKB release 2026_03: P02557 entry 224, sequence version 2; reference locus and taxonomy"],
+      "note": "The source W303-1A label denotes the parent background. Primary Results designate the tested group WL167Y; that designation covers two isolates and does not resolve a unique clone. UniProtKB:P02557 and TaxID 559292 identify the S288c reference, not the tested group. The retained YFL037W_mRNA is a reference-locus identifier, not an exact experimental allele. Species TaxID 4932 is retained. The paper reports IC50, not MIC; no activity measurement is added. Source alteration, phenotype and assay wording are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "WL167Y",
+      "source_rows": [
+        {"identifier": "CHEBI:3392", "row_sha256": "124ed968f52f38ebec48c1344be2465ffb25113d14cda61411d717e73c1d7812"}
+      ]
+    },
+    {
+      "review_id": "wei-2016-reference-context-followup",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "27799210",
+      "reference": "DOI:10.1128/aac.02101-16",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.02101-16",
+      "locations": ["Results and Figures 1-4: baseline parent versus separate tested groups", "Tables 1-2: subject identity and distinct assay endpoints", "UniProtKB release 2026_03: Q4WNT5 entry 146; B0XYD8 entry 86; B0Y628 entry 66; all sequence version 1; reference taxonomy"],
+      "note": "The source strain label denotes a parent background, not an individual tested derivative. Af293 and A1163/CEA10 UniProt entries and strain TaxIDs describe reference context. The retained gene_id is a reference-locus identifier, not an experimental allele. Increased frequency of later colonies is distinct from baseline susceptibility, and plate growth is not a broth MIC or a clinical resistance category. These endpoint distinctions remain review limitations, not new activity observations. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "c6e977909450625109675a176301f2b8b2ef1cf4f6c00c2e69630b93b11f8f10"},
+        {"identifier": "CHEBI:6076", "row_sha256": "0b45cd4cfedca0529221f704cb28d84016507d0a6b3d0ef8b09911bb4d07cc31"},
+        {"identifier": "CHEBI:6076", "row_sha256": "4a16d813e54f899d0e5344b0c51dcf10021e269a7c140dfc23f50961eb7ba81f"},
+        {"identifier": "CHEBI:6076", "row_sha256": "066a6cf862ccd84e049d52e39734d34022238e61b39aa56fade1df3d1337bc4d"},
+        {"identifier": "CHEBI:9448", "row_sha256": "6a4c5c4f9e2026953b18ae527f665ba829ea1d51acedf58f3b5aa38344b805ad"}
+      ]
+    },
+    {
+      "review_id": "ferreira-2004-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "15504870",
+      "reference": "DOI:10.1128/aac.48.11.4405-4413.2004",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.48.11.4405-4413.2004",
+      "locations": ["Results and Discussion: separately named descendant groups and parent comparison", "Results: distinction between source isolates and subsequent experimental recipients", "UniProtKB release 2026_03: Q4WNT5 entry 146, sequence version 1; reference locus and taxonomy"],
+      "note": "The source CEA17 label denotes the parent background, not an individual descendant or later tested derivative. UniProtKB:Q4WNT5, the retained gene_id and TaxID 330879 describe the Af293 reference locus and strain. A shared source alteration does not uniquely identify one experimental subject. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:6076", "row_sha256": "5b7aa359ff8018f0839232bddbd620890e57ba144c95a1e9abf4ba5f3237abed"},
+        {"identifier": "CHEBI:6076", "row_sha256": "20b51458b8db6dacf901a9d15b9f69af168a9dc9e317c7e79baf5c85cde9952a"}
+      ]
+    },
+    {
+      "review_id": "diaz-guerra-2003-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "12604551",
+      "reference": "DOI:10.1128/aac.47.3.1120-1124.2003",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.47.3.1120-1124.2003",
+      "locations": ["Results: control, clinical donor and two separate tested recipients", "Table 1: clinical-series context is distinct from the later experimental groups", "UniProtKB release 2026_03: Q4WNT5 entry 146, sequence version 1; reference locus and taxonomy"],
+      "note": "The source CM237 label denotes a parent background, distinct from the clinical donor and the two later tested recipients. UniProtKB:Q4WNT5, the retained gene_id and TaxID 330879 identify Af293 reference context, not those subjects. Donor identity is not recipient identity. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:6076", "row_sha256": "219775f180619be721184b593e3eded9de52414a837e59f920180aa899bd9f01"}
+      ]
+    },
+    {
+      "review_id": "terbinafine-2006-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "16801438",
+      "reference": "DOI:10.1128/aac.00187-06",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.00187-06",
+      "locations": ["Results and Figure 2: parent distinguished from multiple tested derivatives", "Table 1: strain identities only", "UniProtKB release 2026_03: E9R5G2 entry 72, sequence version 1; reference locus and taxonomy"],
+      "note": "The source ATCC 13073 label denotes the parent background, not either separately named tested derivative. UniProtKB:E9R5G2, the retained gene_id and TaxID 330879 identify the Af293 reference locus and strain. Multiple subjects must not be collapsed to an exact allele or strain identifier. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:9448", "row_sha256": "16161cfc729e6b1fb8d48b0b9a20f52b5c33be87feb5a1e309c630859e451a1f"}
+      ]
+    },
+    {
+      "review_id": "terbinafine-2004-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "15215099",
+      "reference": "DOI:10.1128/aac.48.7.2490-2496.2004",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.48.7.2490-2496.2004",
+      "locations": ["Results: parent, tested derivatives and control groups are distinct", "Tables 1-2: strain labels and endpoint context only", "UniProtKB release 2026_03: E9R5G2 entry 72, sequence version 1; reference locus and taxonomy"],
+      "note": "The source AF293.1 label denotes a parent background, not one uniquely identified tested derivative. UniProtKB:E9R5G2, the retained gene_id and TaxID 330879 describe Af293 reference context. Parent lineage does not establish an exact experimental protein or subject TaxID, and disk-diffusion and MIC endpoints remain distinct. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:9448", "row_sha256": "6c92e2e4c161827c8df8f810c30a0361358c43844183295b1f9f5349185ad9a0"}
+      ]
+    },
+    {
+      "review_id": "sla1-2024-candida-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "39464835",
+      "reference": "DOI:10.2147/idr.s483623",
+      "source_url": "https://doi.org/10.2147/IDR.S483623",
+      "locations": ["Results sections s0003-s2004 and s0003-s2005: separately tested derivatives", "Figures 4A and 5C: parent comparisons; source SN152 background context", "UniProtKB release 2026_03: Q5ALV2 entry 130, sequence version 1; Q59X67 entry 115, sequence version 2; reference loci and taxonomy"],
+      "note": "The source SN152 label denotes the parent background, not either separately tested derivative. UniProtKB:Q5ALV2, UniProtKB:Q59X67, the retained gene_ids and TaxID 237561 identify SC5314 reference loci and strain, not exact subject alleles. The reported plate-growth observations are not converted into MICs or clinical categories. Source alterations, phenotypes and assays are unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:46081", "row_sha256": "9e7bbb216e9251c97ee2b6e0c30f8f72398fb2118366ab7ba5cc09db771ce5e4"},
+        {"identifier": "CHEBI:46081", "row_sha256": "48e342b6dcbf4915e346b7429f72232375ecb83fdf1976c2839880762fc2cca3"}
+      ]
+    },
+    {
+      "review_id": "hamamoto-2000-source-protein-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "10919801",
+      "reference": "DOI:10.1128/aem.66.8.3421-3426.2000",
+      "source_url": "https://journals.asm.org/doi/10.1128/aem.66.8.3421-3426.2000",
+      "locations": ["Results, Figure 4 and Table 2: separate parent, donor and tested derivatives", "Nucleotide accession statement: distinct source-isolate deposits", "UniProtKB release 2026_03: Q9P340 entry 120, sequence version 1; two EMBL deposit cross-references and species taxonomy"],
+      "note": "PD5 is the parent background, not one uniquely identified tested derivative. Q9P340 links deposits from two source isolates and does not identify an exact experimental allele. Source labels and biological fields are retained; subject protein and genome remain unresolved. EC50 and MIC are distinct endpoints; no measurement is added.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:81784", "row_sha256": "c6e0ebe856db76a293064177865c092b3441a23c13570bf0b3e23dc66ae0083b"},
+        {"identifier": "CHEBI:81784", "row_sha256": "186a65919a2c248db6f58a09c0ce7b4a4cbc6d2c84000bc63a28c4378f7d6d8b"},
+        {"identifier": "CHEBI:81972", "row_sha256": "79fcfbefc04f219bf60727ec3f62d9cb20eec12e2d3f4f6d739369341153977b"},
+        {"identifier": "CHEBI:81972", "row_sha256": "1ad4a3923ff44ada7d7b1950207539f30ede1371fa53f796f07902285145f44d"}
+      ]
+    },
+    {
+      "review_id": "park-2005-parent-and-compound-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "16048935",
+      "reference": "DOI:10.1128/aac.49.8.3264-3273.2005",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.49.8.3264-3273.2005",
+      "locations": ["Results and Tables 1, 3 and 4: parental backgrounds versus separately tested derivatives", "Table 4 footnote a: L-733560 is distinct from the caspofungin endpoint in Table 3", "UniProtKB release 2026_03: A0A1D8PCT0 entry 36, sequence version 1; SC5314 reference taxonomy"],
+      "note": "CAI4 and T1FOA are parent or recipient backgrounds, not unique later tested derivatives. A0A1D8PCT0 and TaxID 237561 identify SC5314 reference context. Table 4 reports L-733560, not caspofungin; the T1FOA-associated compound interpretation remains unresolved. This identity review does not validate that source phenotype. Biological fields remain unchanged; no new measurement or experimental allele is assigned.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:474180", "row_sha256": "b4e8b42a68500e5f255eda39e295760c4dbaf50789025b86bd939ca9327f5e1e"},
+        {"identifier": "CHEBI:474180", "row_sha256": "dfe301aef21adfbff0093ab696d4de7b397e9c1d5d67589fe29ccb8cbeeaacbb"}
+      ]
+    },
+    {
+      "review_id": "sionov-2012-parent-and-deposit-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "22155829",
+      "reference": "DOI:10.1128/aac.05502-11",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.05502-11",
+      "locations": ["Results and Discussion, Table 1: reference parent, clinical isolate and tested derivatives", "Nucleotide accession statement: paper deposits differ from the imported entry cross-reference", "UniProtKB release 2026_03: Q870D1 entry 121, sequence version 1; species taxonomy and EMBL cross-reference"],
+      "note": "H99 is the parent/reference background, distinct from the clinical isolate and tested derivatives. Q870D1 has species-level taxonomy and a deposit cross-reference different from those reported in this paper; it does not resolve an exact subject allele. Source biological fields remain unchanged. No replacement protein, strain TaxID, genome or measurement is inferred.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:10023", "row_sha256": "8e3d90f900638c22e6b0633433aadbd67df24c88a0604e6ddd92dc4a8faba912"},
+        {"identifier": "CHEBI:46081", "row_sha256": "49ba3ea8d7911b548fc260a6570c0a80db0b6d282da3c042543637451ac9cf1c"}
+      ]
+    },
+    {
+      "review_id": "wang-2015-parent-and-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "25441450",
+      "reference": "DOI:10.1111/mpp.12222",
+      "source_url": "https://bsppjournals.onlinelibrary.wiley.com/doi/10.1111/mpp.12222",
+      "locations": ["Results, Fungicide sensitivity and Table 2: parent and distinct tested groups", "Fungal strain identity paragraph: JK19 parental context", "UniProtKB release 2026_03: A7EGE3 entry 112, sequence version 1; ATCC 18683 / 1980 / Ss-1 reference taxonomy"],
+      "note": "JK19 is the parent background, not one uniquely identified tested derivative. A7EGE3 and TaxID 665079 describe the ATCC 18683 / 1980 / Ss-1 reference, not that experimental subject. Table 2 reports EC50, not MIC. Source biological fields remain unchanged; exact subject protein, strain TaxID and genome remain unresolved. No activity measurement is added.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "2e2e5cd8f0b56bd8265a0b93020007ed18aafab0fdebf821a699c8496d91e243"}
+      ]
+    },
+    {
+      "review_id": "fungal-2015-azoxystrobin-cooccurrence-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "26596626",
+      "reference": "DOI:10.1038/srep16881",
+      "source_url": "https://doi.org/10.1038/srep16881",
+      "locations": ["Results: Cross resistance; Table 5", "Results: parent versus separately tested derivatives", "UniProtKB release 2026_03: P53373 entry 113, sequence version 1; species-level taxonomy and reference deposits"],
+      "note": "NJ11 is the parent background, distinct from the separately tested derivatives. The paper reports azoxystrobin-resistant isolates in all tested phenotype groups, including the parent; this co-occurrence does not establish an allele-specific azoxystrobin effect. P53373 is source-reference context, not an exact subject allele. Source biological fields are retained but not independently validated by this identity review. EC50 is not MIC; no activity measurement or genome is assigned.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:40909", "row_sha256": "043b211a3e5459b43815781c93a278e0ff9587d2d5ebac0049965ea49b95bb96"}
+      ]
+    },
+    {
+      "review_id": "fungal-2018-parent-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30044782",
+      "reference": "DOI:10.1371/journal.pgen.1007546",
+      "source_url": "https://doi.org/10.1371/journal.pgen.1007546",
+      "locations": ["Results sections sec005 and sec011: parent versus tested derivatives; Figure 8", "UniProtKB release 2026_03: I1S9X9 entry 57, sequence version 1; PH-1 reference locus and taxonomy"],
+      "note": "PH-1 is the parental background, not a unique tested derivative. I1S9X9, the retained source gene_id and TaxID 229533 describe PH-1 reference context. The paper locus and current reference-locus names are not an independently established exact allele crosswalk. The EMBL ALT_SEQ flag in UniProt does not identify the experimental alteration. Source biological fields are unchanged; growth-inhibition comparisons are not MIC or clinical resistance categories. Exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:16240", "row_sha256": "f6437026791c1c7093da45791cb7b557f97cd725daac5d416e99239ec4cd8b1a"}
+      ]
+    },
+    {
+      "review_id": "fungal-2025-azoxystrobin-parent-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "40934067",
+      "reference": "DOI:10.1080/21505594.2025.2555419",
+      "source_url": "https://doi.org/10.1080/21505594.2025.2555419",
+      "locations": ["Results section s0003-s2006: separate parental and derivative comparisons; Table 1", "UniProtKB release 2026_03: W7MZ22 entry 46, sequence version 1; M3125 / FGSC 7600 reference taxonomy"],
+      "note": "M3125 is the parent background, distinct from the tested derivatives. W7MZ22 and TaxID 334819 identify M3125 / FGSC 7600 reference context, not an exact experimental allele or derivative. Table 1 reports EC50, not MIC; no clinical interpretation or activity measurement is inferred. Source labels and biological fields are retained. Exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:40909", "row_sha256": "0699d6a693747486681c5979dc056b1e5190566e8388bdbecc71e73f6a7e86a3"}
+      ]
+    },
+    {
+      "review_id": "fungal-2025-peroxide-parent-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "41277790",
+      "reference": "DOI:10.1111/mpp.70174",
+      "source_url": "https://doi.org/10.1111/mpp.70174",
+      "locations": ["Results section mpp70174-sec-0009: parent and separate derivative comparisons; Figure 5a-b", "Strain identity in mpp70174-sec-0014", "UniProtKB release 2026_03: I1RPK0 entry 74, sequence version 1; PH-1 reference taxonomy"],
+      "note": "PH-1 is the parental background, not a unique tested derivative. I1RPK0 and TaxID 229533 describe PH-1 reference context; that lineage does not establish exact experimental subject identity. The reported growth-inhibition comparison is not an MIC or clinical resistance classification. Source biological fields remain unchanged; no new measurement, allele or genome is assigned, and exact subject protein and strain TaxID remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:16240", "row_sha256": "ee72d0ca2628c7773c1c8db9de77a642e1ea8a44878db1955147638676b17cf4"}
+      ]
+    },
+    {
+      "review_id": "fungal-2026-p1-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "41745253",
+      "reference": "DOI:10.3390/jof12020111",
+      "source_url": "https://doi.org/10.3390/jof12020111",
+      "locations": ["Results section sec3dot5dot5-jof-12-00111: separate parental and derivative comparisons; Table 1", "Parent identity in sec2dot1-jof-12-00111", "UniProtKB release 2026_03: A0A8E5ME34 entry 17, sequence version 1; species-level taxonomy and reference locus"],
+      "note": "P1 is the parental background, not a unique tested derivative. A0A8E5ME34 carries species-level taxonomy and a reference locus, not an independently established P1-derived experimental allele. The paper's IC50 endpoint is not converted to MIC. Source labels and biological fields remain unchanged; no new protein, TaxID, genome or activity measurement is assigned.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:40909", "row_sha256": "42cd2b92d7dbf247bba29ae4760d636c3ac3110fe15b35e84f5732cc35e13f00"}
+      ]
+    },
+    {
+      "review_id": "fungal-2026-carbendazim-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "42112916",
+      "reference": "DOI:10.1128/spectrum.02761-25",
+      "source_url": "https://doi.org/10.1128/spectrum.02761-25",
+      "locations": ["Results sections s3-1 and s3-7: reference locus and separate tested groups; Figure 8", "Parental identity in s2-1", "UniProtKB release 2026_03: G2XFG4 entry 50, sequence version 1; VdLs.17 / ATCC MYA-4575 / FGSC 10137 reference taxonomy"],
+      "note": "The source V592 label is retained; the paper names the parent Vd592 and separately compares derivatives. G2XFG4 and TaxID 498257 describe VdLs.17 / ATCC MYA-4575 / FGSC 10137 reference context, not that parent or an exact tested derivative. Growth-inhibition and zone observations are not converted to MIC. Source biological fields remain unchanged; exact subject protein, strain TaxID and genome remain unresolved.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3392", "row_sha256": "d6d7e25e1e88fb670048a1e3278b52ffd08ef9f171416ff8027e9ccd16b5e83a"}
+      ]
+    },
+    {
+      "review_id": "ren-2016-bt6-4-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30686204",
+      "reference": "DOI:10.1094/pdis-11-15-1290-re",
+      "source_url": "https://apsjournals.apsnet.org/doi/10.1094/PDIS-11-15-1290-RE",
+      "locations": ["Tables 2, 3 and 5: publisher-indexed primary text; direct fetch unavailable", "UniProtKB release 2026_03: A0A384J5Y1 entry 36, sequence version 1; B05.10 reference taxonomy"],
+      "note": "Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only. Association is not causation; source biology retained. EC50 is not MIC.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "Bt6-4R1",
+      "source_rows": [
+        {"identifier": "CHEBI:28909", "row_sha256": "12d3479af3b72c58ffe819b4feaff550d3275d6bd64019778db6fe330390eb14"},
+        {"identifier": "CHEBI:81763", "row_sha256": "ccb25cd155ad2678e397f26413d13ef8a6a11c0f365e4795bba9cfab165e8af9"}
+      ]
+    },
+    {
+      "review_id": "ren-2016-bt3-4-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30686204",
+      "reference": "DOI:10.1094/pdis-11-15-1290-re",
+      "source_url": "https://apsjournals.apsnet.org/doi/10.1094/PDIS-11-15-1290-RE",
+      "locations": ["Tables 2, 3 and 5: publisher-indexed primary text; direct fetch unavailable", "UniProtKB release 2026_03: A0A384J5Y1 entry 36, sequence version 1; B05.10 reference taxonomy"],
+      "note": "Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only. Association is not causation; source biology retained. EC50 is not MIC.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "Bt3-4R",
+      "source_rows": [
+        {"identifier": "CHEBI:28909", "row_sha256": "16560e038f9b572c69ec95fd757288ee17dd1ddbde47e4a738c303e116d28124"},
+        {"identifier": "CHEBI:81763", "row_sha256": "7e517057ccb4b3d576da2aca08528227857b4d937d32f44e2f749b367447ebb3"}
+      ]
+    },
+    {
+      "review_id": "ren-2016-yc-6-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30686204",
+      "reference": "DOI:10.1094/pdis-11-15-1290-re",
+      "source_url": "https://apsjournals.apsnet.org/doi/10.1094/PDIS-11-15-1290-RE",
+      "locations": ["Tables 2, 3 and 5: publisher-indexed primary text; direct fetch unavailable", "UniProtKB release 2026_03: A0A384J5Y1 entry 36, sequence version 1; B05.10 reference taxonomy"],
+      "note": "Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only. Association is not causation; source biology retained. EC50 is not MIC.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "Yc-6R1",
+      "source_rows": [
+        {"identifier": "CHEBI:28909", "row_sha256": "a4bd4db6a345833b668ccb40c7a4dca41c5ee63aed723c40d6465638332ad73c"},
+        {"identifier": "CHEBI:81763", "row_sha256": "ee7c92d51308f55fb8c6c2e966b7437047148619fab93fcd63935b02d8da0337"}
+      ]
+    },
+    {
+      "review_id": "ren-2016-nj5-10-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30686204",
+      "reference": "DOI:10.1094/pdis-11-15-1290-re",
+      "source_url": "https://apsjournals.apsnet.org/doi/10.1094/PDIS-11-15-1290-RE",
+      "locations": ["Tables 2, 3 and 5: publisher-indexed primary text; direct fetch unavailable", "UniProtKB release 2026_03: A0A384J5Y1 entry 36, sequence version 1; B05.10 reference taxonomy"],
+      "note": "Parent replaced with documented tested descendant; B05.10 identifiers remain reference-only. Association is not causation; source biology retained. EC50 is not MIC.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "Nj5-10R",
+      "source_rows": [
+        {"identifier": "CHEBI:28909", "row_sha256": "a0df7865d44f7ef7cd35204e9fbbe937a8b1c4ab3df46e947c87579474560193"},
+        {"identifier": "CHEBI:81763", "row_sha256": "78bfd787b439a0c34169e5a846543694de58aea646c6b2dcf96f7046413b6075"}
+      ]
+    },
+    {
+      "review_id": "kakeya-2000-darlington-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "11036010",
+      "reference": "DOI:10.1128/aac.44.11.2985-2990.2000",
+      "source_url": "https://journals.asm.org/doi/full/10.1128/aac.44.11.2985-2990.2000",
+      "locations": ["Primary Results and Figure 3 caption: publisher full text inspected with web tool; direct fetch HTTP 403", "UniProtKB release 2026_03: P10613 entry 179, sequence version 2; SC5314 reference taxonomy 237561"],
+      "note": "CAI4 is recipient background, not transformant 12. SC5314 identifiers are reference-only; donor and heterologous-host comparisons remain separate. Source biological fields and Not assayed qualifier are unchanged.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "transformant 12",
+      "source_rows": [
+        {"identifier": "CHEBI:46081", "row_sha256": "c71d9939d9ef63717ea9fb61a15521064b7fb1525a7ae2a15ecf3caa83c3f046"}
+      ]
+    },
+    {
+      "review_id": "nakayama-2001-reference-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "11600353",
+      "reference": "DOI:10.1128/aac.45.11.3037-3045.2001",
+      "source_url": "https://journals.asm.org/doi/10.1128/aac.45.11.3037-3045.2001",
+      "locations": ["Publisher-indexed primary Results and Figure 5 caption inspected with web tool; direct HTML/PDF unavailable and EBI fullTextXML HTTP 500", "UniProtKB release 2026_03: P50859 entry 162, sequence version 1; ERG11 locus CAGL0E04334g and reference taxonomy 284593"],
+      "note": "ATCC 2001 is the retained source background/comparator label, not an exact tested-derivative identity. P50859 and taxonomy 284593 identify reference context. Source biology is unchanged; no individual derivative, allele accession or MIC is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:46081", "row_sha256": "a451e066b9b8c2bedc7648c7faf18b6b083d3f2cd94e281f6be33adfad2dda53"}
+      ]
+    },
+    {
+      "review_id": "duan-2018-reference-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30497711",
+      "reference": "DOI:10.1016/j.pestbp.2018.08.011",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0048357518303225",
+      "locations": ["Publisher-indexed primary section snippets distinguish parental strains and derived subjects; direct fetch HTTP 403 and complete Results unavailable", "UniProtKB release 2026_03: I1RJR2 entry 82, sequence version 1; CYP51A locus FGRAMPH1_01T14465 and PH-1 reference taxonomy 229533"],
+      "note": "Source strain labels denote parental backgrounds, not exact resistant derivatives. PH-1 protein, strain TaxID and retained gene locus are reference context. Source biological fields are unchanged; no experimental accession, additional allele or MIC is inferred. Complete phenotype and compound-form review remains open.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:81760", "row_sha256": "ae8fb2dd0560572b63b08cc8e75876dfc6cf2a18ba0f63298fd7420f14822fa2"},
+        {"identifier": "CHEBI:81760", "row_sha256": "56658c358ef1d150e881418e42dbdab1cbf8db6dfce7e2c707925c606c3629cb"},
+        {"identifier": "CHEBI:81760", "row_sha256": "e7f97258b540d01a85caf0d2dd1e58996e07f98b7756efa91b5c09570ab32df9"},
+        {"identifier": "CHEBI:8434", "row_sha256": "21853d9f769e8205cb98183d12734d71204621e2b16b133553e9d7328f5a28c7"},
+        {"identifier": "CHEBI:8434", "row_sha256": "e578169af19530a5aa83ed93d20465416d9a530d9d6f2d6670c41edc8a44405f"}
+      ]
+    },
+    {
+      "review_id": "piotrowska-2017-parent-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "27644008",
+      "reference": "DOI:10.1002/ps.4442",
+      "source_url": "https://www.pure.ed.ac.uk/ws/portalfiles/portal/29148098/Characterisation_of_Ramularia_collo_cygni_laboratory_mutants_resistant_to_Succinate_Dehydrogenase_Inhibitors.pdf",
+      "locations": ["Accepted manuscript p. 9: DK05 parent identity; pp. 16-17 and Table 3: separate descendants and EC50-based resistance factors", "UniProtKB release 2026_03: A0A1S6KZ79 entry 35 and A0A1S6KZ87 entry 22, sequence versions 1; DK 05 Rcc 001 ss2 strain comments, KU758973 / AQT27052.1 and KU758974 / AQT27053.1"],
+      "note": "DK05 denotes parent background, not the tested descendants. UniProt proteins ground the parent SdhB/SdhC references, not experimental alleles. EC50-based resistance factors are not MICs. Source biological fields are retained; no exact descendant accession, genome or measurement is inferred.",
+      "withhold": ["protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "b2d31c0d1d586328e8a9a47df94e4e9646e5bc4af64318b8e7d002d624e98662"},
+        {"identifier": "CHEBI:3405", "row_sha256": "0aa2d26b23d8f83121b1d935b98f5e92409b6171959c40046784d5b17c7a1f41"},
+        {"identifier": "CHEBI:3405", "row_sha256": "e7ed266727bd07b8b7bd50a0ce9a182a1db14bac0bdf6af8a68cef328a0d13dc"}
+      ]
+    },
+    {
+      "review_id": "xu-2019-sj51-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30732567",
+      "reference": "DOI:10.1186/s12864-019-5479-6",
+      "source_url": "https://link.springer.com/article/10.1186/s12864-019-5479-6",
+      "locations": ["Results Sec5 and Sec7; Figure 2 and Table 1 distinguish SJ51M from parent SJ51", "UniProtKB release 2026_03: W7M0I3 entry 62, sequence version 1; FVEG_05512 in M3125 / FGSC 7600, TaxID 334819"],
+      "note": "The tested subject is SJ51M, not parent SJ51. W7M0I3 and TaxID 334819 identify a different reference strain. The paper's FVER_09254 locus is not crosswalked to FVEG_05512 or an experimental accession. Source alteration and phenotype remain unchanged; EC50 is not MIC. No experimental protein, strain TaxID or genome is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "SJ51M",
+      "source_rows": [
+        {"identifier": "CHEBI:3392", "row_sha256": "0b57476b39d6710277cfcc0f139609734c31a2e14d439eac1092c1acef62c321"}
+      ]
+    },
+    {
+      "review_id": "xu-2019-hc30-subject-species-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "30732567",
+      "reference": "DOI:10.1186/s12864-019-5479-6",
+      "source_url": "https://link.springer.com/article/10.1186/s12864-019-5479-6",
+      "locations": ["Abstract identifies HC30M as Fusarium proliferatum; Results Sec5 and Figure 2 distinguish it from parent HC30", "UniProt Taxonomy 948311, active species Gibberella intermedia with synonym Fusarium proliferatum; response SHA-256 8c5698dda6b5f2f63be203d30cfec6c411cd7e206e46ee871a9c4870a4fef1f8", "UniProtKB release 2026_03: P53374 entry 110, sequence version 1, F. fujikuroi TaxID 5127, strain comment A 102; not the reported species or subject"],
+      "note": "Primary evidence identifies HC30M in F. proliferatum, not the source F. fujikuroi assignment or parent HC30. P53374 belongs to the conflicting source species and is rejected for this subject. Species identity is grounded through UniProt Taxonomy; no exact experimental protein or genome is assigned. Source alteration and phenotype remain unchanged; EC50 is not MIC.",
+      "withhold": ["taxon_id", "protein_accession"],
+      "misassigned": ["taxon_id", "protein_accession"],
+      "subject_strain": "HC30M",
+      "subject_taxon": {"taxon_id": "948311", "taxon_label": "Fusarium proliferatum"},
+      "source_rows": [
+        {"identifier": "CHEBI:3392", "row_sha256": "c822e7609cbf2bee565065d025214200f7685c3407207da35f9f75d8adfc4284"}
+      ]
+    },
+    {
+      "review_id": "shima-2009-parent-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "18992352",
+      "reference": "DOI:10.1271/bbb.100687",
+      "source_url": "https://www.jstage.jst.go.jp/article/bbb/75/1/75_100687/_pdf/-char/en",
+      "locations": ["Shima 2011 final published follow-up p. 181: wild-type RIB40; p. 182 Table 1: previous-study subjects distinct from RIB40; p. 184 reference 15: Shima 2009", "UniProtKB release 2026_03: Q2TWM0 entry 127 and Q2U3V9 entry 98, sequence versions 1; RIB40 reference genome loci AO090010000505 and AO090020000596, TaxID 510516 under species 5062"],
+      "note": "RIB40 is retained as parent background, not a unique tested transformant. The authors' primary follow-up distinguishes the earlier donor subjects from wild-type RIB40; donor deposits do not identify later transformants. Q2TWM0, Q2U3V9 and TaxID 510516 describe the RIB40 reference genome, not experimental alleles. The 2009 full text remains unavailable; this is a follow-up-supported identity review, not complete phenotype validation. Source alteration and phenotype remain unchanged; no experimental accession, genome or measurement is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:3405", "row_sha256": "6920ff524a58c4452527cc9a3f932c2fef7a30e477b813dbad9d0ef265ce26c0"},
+        {"identifier": "CHEBI:3405", "row_sha256": "216a2748f12ee432ae9c8b2b1f8183d8c7ac14559999c1bd24a37729928e1ea1"}
+      ]
+    },
+    {
+      "review_id": "mehrabi-2006-parent-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-08",
+      "pmid": "17073308",
+      "reference": "DOI:10.1094/mpmi-19-1262",
+      "source_url": "https://www.researchgate.net/profile/Gert-Kema/publication/6723668_MgHog1_Regulates_Dimorphism_and_Pathogenicity_in_the_Fungal_Wheat_Pathogen_Mycosphaerella_graminicola/links/5724f92a08aee491cb3a9d74/MgHog1-Regulates-Dimorphism-and-Pathogenicity-in-the-Fungal-Wheat-Pathogen-Mycosphaerella-graminicola.pdf",
+      "locations": ["Author-uploaded published paper, web-extracted PDF text: p. 1262 source deposit; p. 1266 Table 2 and footnotes distinguish grouped subjects from controls; p. 1267 identifies IPO323 as parent; direct download HTTP 403, no local PDF or visual page review", "UniProtKB release 2026_03: Q1KTF2 entry 108, sequence version 2; source-paper reference and DQ432031 cross-reference; Mycgr3T76502 reference locus; TaxID 336722 under species 1047171"],
+      "note": "IPO323 is retained as parent background, not a unique tested derivative. The primary table separates a grouped set of three derivatives from wild-type and ectopic controls. Q1KTF2 and TaxID 336722 identify IPO323 reference context; Mycgr3T76502 is retained as a reference locus, not an experimental allele identifier. The source Not assayed flag remains unchanged and unresolved against the grouped primary comparison. No individual clone, experimental accession, genome or numeric measurement is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:28909", "row_sha256": "e9970c191a147615d701d638225912add989160001a184e5dd5c3b0c1295c822"},
+        {"identifier": "CHEBI:81763", "row_sha256": "9b6ad9dcd0279f1321fd5897f1969474f46a65b84e4d7e773ec7d1ffcb690948"}
+      ]
+    },
+    {
+      "review_id": "huang-2024-parent-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-09",
+      "pmid": "39403939",
+      "reference": "DOI:10.1080/21505594.2024.2405000",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11485852/fullTextXML",
+      "locations": [
+        "Cached primary XML: Table 1 t0001 identifies SC5314 as wild type and parent of the separately listed derivative; Table 2 t0002 and Results s0003-s2005 distinguish tested subjects; Results s0003-s2001 names orf19.1588",
+        "UniProtKB release 2026_03: A0A1D8PGP5 entry 35, sequence version 1; SDH8 / orf19.9161 / CAALFM_C202620WA; reference TaxID 237561 under species 5476; GO annotations cite the paper, not an exact experimental allele",
+        "CGD reference-only alias follow-up: https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/ORF19_Assembly22_mapping.tab (retrieved 2026-10-09, body SHA-256 722e0ec75f44c1c32ec3e222952015d2ed96cebd52c16fba25665dba84a2bfe1) maps both names to C2_02620W_A / SDH8",
+        "CGD https://www.candidagenome.org/download/chromosomal_feature_files/C_albicans_SC5314/C_albicans_SC5314_version_A22-s08-m01-r37_chromosomal_feature.tab (retrieved 2026-10-09, body SHA-256 087a09f0bbefba9ca94743c19fee18f56e3ce9cddab33bc9b3eba40089abd983): feature C2_02620W_A, primary CGDID CAL0000192813, both aliases; exact CGD cross-reference on UniProt A0A1D8PGP5, not an inferred name-normalization or sequence match"
+      ],
+      "note": "SC5314 is retained as parent background, not the separately tested derivative. A0A1D8PGP5 and TaxID 237561 identify SC5314 reference context. CGD version A22-s08-m01-r37 explicitly lists the paper's orf19.1588 and UniProt's orf19.9161 as aliases of SDH8 reference locus C2_02620W_A, primary CGDID CAL0000192813, which exactly matches the UniProt CGD cross-reference. This resolves reference-locus nomenclature, not an experimental allele. Clinical and laboratory subjects remain separate. Source alteration, phenotype and assay are unchanged; no exact experimental accession, gene identifier, genome or numeric measurement is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:46081", "row_sha256": "c6aebb57526938ad3ff75835d58bf1a33b1056fd17dc349ad144c3ea16613a39"}
+      ]
+    },
+    {
+      "review_id": "li-2011-hdf1-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-09",
+      "pmid": "21138346",
+      "reference": "DOI:10.1094/MPMI-10-10-0233",
+      "source_url": "https://www.ars.usda.gov/ARSUserFiles/3041/2011%20Li%20mpmi-10-10-0233.pdf",
+      "locations": ["Author-affiliated USDA archived published PDF: p. 488 Results distinguishes YM1 from parent PH-1; p. 489 Table 1 lists subjects; p. 492 Figure 9C and caption identify YM1, parent PH-1 and separate complemented comparator YM11; pages visually inspected", "UniProtKB release 2026_03: I1RCN2 entry 85, sequence version 1; PH-1 reference locus FGRAMPH1_01T03337; TaxID 229533 under species 5518; paper locus FGSG_01353 alias remains unresolved"],
+      "note": "Primary evidence identifies YM1 as the tested subject, distinct from parent PH-1 and comparator YM11. I1RCN2 and TaxID 229533 describe PH-1 reference context, not YM1. The paper's FGSG_01353 and UniProt's FGRAMPH1_01T03337 are not asserted equivalent without an authoritative alias crosswalk. The empty source gene_id remains empty. Source alteration, phenotype and assay are unchanged; the growth comparison is not an MIC or clinical resistance category. No exact experimental accession, genome or numeric measurement is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "YM1",
+      "source_rows": [
+        {"identifier": "CHEBI:16240", "row_sha256": "a591c301ebb65b88b35145347e1d65c34234d6c9220d309bdb9bc2cbd1aef8a9"}
+      ]
+    },
+    {
+      "review_id": "fouche-2022-parent-cohort-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-09",
+      "pmid": "34490974",
+      "reference": "DOI:10.1111/1462-2920.15760",
+      "source_url": "https://hal.inrae.fr/hal-03357067/file/accepted.pdf",
+      "locations": ["HAL accepted manuscript: PDF p. 2 identifies the journal DOI and accepted status; Results pp. 9-10 distinguish ancestral backgrounds from derived subjects; Table 4 p. 36, Figure 3 caption p. 39 and figure p. 43 identify distinct subjects; identity pages visually inspected", "UniProtKB release 2026_03: Q6X9S4 entry 84, sequence version 1; cob/cytB reference entry with citation-specific strain ST1/MBC; UniProt Taxonomy 1047171 is active at species rank"],
+      "note": "IPO323 and 37-16 are ancestral backgrounds, not individual resistant derivatives. The paper describes multiple derived subjects; a one-to-one source-row assignment is unresolved, including an individual-label discrepancy between Figure 3 and Table 4. No representative derivative is selected. Q6X9S4 is a cob/cytB reference entry whose sequence citation names ST1/MBC, not either experimental cohort. Species NCBITaxon:1047171 is retained. Original background labels and the protein accession remain provenance only. Source alteration, phenotype and assay are preserved without interpreting the source assay qualifier, adding variant specifications, inferring a genome or converting measurements.",
+      "withhold": ["protein_accession"],
+      "withhold_strain": true,
+      "source_rows": [
+        {"identifier": "CHEBI:136340", "row_sha256": "33aee8150ea264cc2eb50df3722ca4aa90b94800c97ed9ea96c2f12075a74ae7"},
+        {"identifier": "CHEBI:136340", "row_sha256": "36f4aa112c3d9b1d8efe85da82d2365dd17084bed1930b4ff469d02d7bfe75fc"}
+      ]
+    },
+    {
+      "review_id": "posteraro-2003-subject-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-09",
+      "pmid": "12519188",
+      "reference": "DOI:10.1046/j.1365-2958.2003.03281.x",
+      "source_url": "https://onlinelibrary.wiley.com/doi/full/10.1046/j.1365-2958.2003.03281.x",
+      "locations": [
+        "Publisher-indexed primary full text: Results distinguishes BPY22.17 from parent BPY22; Figure 1 caption identifies their comparison; CnAFR1 identity section names AJ428201; Strains and media specifies serotype D; no visual figure inspection",
+        "UniProtKB release 2026_03: Q8X0Z3 entry 116, sequence version 1; AFR1, AJ318062/CAC59691.2, TaxID 5207; citation PMID:12519188 has strain comment CR 22.17",
+        "UniProt Taxonomy release 2026_03: 5207 is Cryptococcus neoformans; a separate exact Cryptococcus deneoformans query resolves 40410, whose serotype-D label is in otherNames, not an accepted exact-name subject crosswalk"
+      ],
+      "note": "Primary Results identify BPY22.17, distinct from susceptible parent BPY22; source spelling BYP22 is preserved, not treated as a verified synonym. UniProt Q8X0Z3 (AFR1; AJ318062/CAC59691.2) cites this paper but names CR 22.17; its equivalence to the tested subject is unresolved. The paper names genomic deposit AJ428201 and identifies serotype D. Protein and NCBITaxon:5207 remain reference context while the modern species crosswalk is unresolved. No exact experimental protein, allele or genome is assigned. Source alteration, phenotype and assay are unchanged.",
+      "withhold": ["taxon_id", "protein_accession"],
+      "subject_strain": "BPY22.17",
+      "source_rows": [
+        {"identifier": "CHEBI:46081", "row_sha256": "4fabfdb6e0e4b06bde7d76adfebeaab8694aa3e503a69eda76131560ece33e89"}
+      ]
+    }
+  ]
+}

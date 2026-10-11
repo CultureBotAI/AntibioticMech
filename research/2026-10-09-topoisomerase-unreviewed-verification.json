@@ -1,0 +1,119 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "artifacts": [
+    {
+      "path": "scripts/audit_unreviewed_topoisomerase.py",
+      "sha256": "b60fe4386b8bc84875d70340cf5e5946ecae7f43cd14c69c94ba1854e65d8d0f"
+    },
+    {
+      "path": "tests/test_unreviewed_topoisomerase.py",
+      "sha256": "714949b60cc28c08cc616f8bd4d76391b63af4dc22122b9329c5cfb98255f433"
+    },
+    {
+      "path": "research/2026-10-09-topoisomerase-unreviewed-followup.json",
+      "sha256": "51b8e6cba1af3b77361f6bf6fbedc8f945553af41507cf3515f7398e8b8a45c9"
+    },
+    {
+      "path": "scripts/audit_topoisomerase_references.py",
+      "sha256": "440bc495fbc08e9e02b4365a61a41b50893638ac7a222cd3990dceb44676442a"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "6680c2842bf49af8fc4db31383aed68c46f6e2a76a8c4121095cf163b01f02d9"
+    }
+  ],
+  "before_wording_dossier": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-unreviewed/before-wording-dossier.json",
+    "sha256": "3adc1d0674707f3f580f6c14cc3f5857a5fbc2bb82686fe7a2373dd05c58ea26"
+  },
+  "biological_records_byte_identical": 2939,
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "6680c2842bf49af8fc4db31383aed68c46f6e2a76a8c4121095cf163b01f02d9",
+      "before_sha256": "d01f0ca7f9eff876efa952c191440075c8d4e2a529498cbbd0025522ed6c99a3"
+    },
+    "scripts/audit_topoisomerase_references.py": {
+      "after_sha256": "440bc495fbc08e9e02b4365a61a41b50893638ac7a222cd3990dceb44676442a",
+      "before_sha256": "783690b77c977fd988184b964ed80cfd189ab334f6f206ad8c0ad39bc7f574b9"
+    }
+  },
+  "checks_receipt": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-unreviewed/final-checks/checks.json",
+    "sha256": "54171e99ecc4ca9985efa18ae697f520becaffdd9df18ba1927b0150e4f3624a"
+  },
+  "date": "2026-10-09",
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-unreviewed/final-checks/focused-tests.xml",
+    "sha256": "9e7531c820ac950dcb0357063402e809c6fc94ea74ec540768dfcef7db26599f"
+  },
+  "focused_tests_passed": 212,
+  "full_authoritative_qc_rerun": false,
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "ncbi_endpoint_requests": 0,
+  "new_tests_passed": 24,
+  "outreach": 0,
+  "prior_checkpoint": {
+    "path": "research/2026-10-09-topoisomerase-followup-verification.json",
+    "sha256": "59eba922797ae985bbf646fe5c5b1f85993b76671c0a0e72c9470ef0baebc414"
+  },
+  "prior_exporter_snapshot": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-unreviewed/prior-reviewed-exporter.txt",
+    "sha256": "783690b77c977fd988184b964ed80cfd189ab334f6f206ad8c0ad39bc7f574b9"
+  },
+  "prior_report_bytes_preserved": true,
+  "prior_reviewed_dossier_unchanged_and_reproduced": true,
+  "protected_files": 6832,
+  "protected_files_unchanged": 6830,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-topoisomerase-unreviewed/protected-before.json",
+    "sha256": "bf151c5c074f4deccbddbff3f01d4ac4dcb1a096e4fdfbb221818502f1684b0f"
+  },
+  "remaining_limits": [
+    "This audit retains unreviewed annotations as candidates; it does not establish experimental gene or allele identity.",
+    "Fragment flags are preserved; absence of a fragment flag does not prove completeness.",
+    "Multiple names and loci remain separate; no representative resistant allele is selected.",
+    "Reference assembly identifiers describe database proteome context, not a tested resistant isolate.",
+    "No primary resistance results were reviewed and no new phenotype is inferred in this pass.",
+    "The four prior source terms without species grounding remain unresolved.",
+    "No sequences, variants, constructs, reference positions, coordinates or numerical AST are exported."
+  ],
+  "review_findings_addressed": [
+    "Unreviewed mode requires explicit Boolean opt-in; default reviewed behavior is unchanged.",
+    "Unreviewed status does not imply an absence of experimental evidence; validation is explicitly scoped to this audit.",
+    "Submission names, fragment flags and distinct ORF names are retained without choosing one representative.",
+    "Proteome taxonomy and component identities are checked before reference assembly links are emitted.",
+    "The prior reviewed dossier is reproduced over all current records before extending its no-hit cohort."
+  ],
+  "scope": "UNREVIEWED_IDENTIFIER_CANDIDATES_NOT_RESISTANCE_ALLELES_OR_EXPERIMENTAL_GENOMES",
+  "source_adoptions": 0,
+  "sources_pages_embeddings_unchanged": true,
+  "status": "SCOPED_RESEARCH_CHECKS_PASSED",
+  "summary": {
+    "biological_records_changed": 0,
+    "combined_topoisomerase_reference_candidates": 150,
+    "combined_topoisomerase_terms_with_candidates": 53,
+    "completed_unreviewed_queries": 16,
+    "corpus_records": 2939,
+    "exact_allele_assignments": 0,
+    "experimental_genome_assignments": 0,
+    "multiple_entry_same_symbol_proteome_groups": 1,
+    "proteins_with_proteome_links": 26,
+    "queries_with_candidates": 16,
+    "reference_assemblies": 18,
+    "reference_proteomes": 18,
+    "reference_taxa": 34,
+    "selected_terms": 16,
+    "source_assertion_memberships": 112,
+    "source_flagged_fragments": 42,
+    "source_records": 15,
+    "uniprot_release": "2026_03",
+    "unresolved_proteome_joins": 0,
+    "unreviewed_proteins": 82,
+    "verified_reference_assembly_links": 26,
+    "whole_record_reviews_completed": 0
+  },
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0,
+  "wording_refinement_only_verified": true
+}

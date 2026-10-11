@@ -276,6 +276,133 @@ resistance_mechanisms:
   - reference: ARO:3007843
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000028 (vancomycin);
       database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3000256
+  label: VanM-cluster-associated vancomycin resistance in native Efm-HS0661
+  gene_families:
+  - vanM
+  taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  strain: Efm-HS0661
+  phenotype_label: source-reported vancomycin resistance
+  assay: Etest
+  note: Native-isolate phenotype and precursor analysis support a cluster-associated
+    target-alteration route, not isolated VanM sufficiency. UniProtKB:B8XGS3 and FJ349556.1
+    are source-bound ligase references only; CP039730.1 belongs to a different isolate.
+    No exact experimental protein, allele or genome is assigned. Laboratory-recipient
+    findings are not assigned here.
+  evidence:
+  - reference: PMID:20733041
+    notes: Publisher Table 1, native-isolate Results, precursor analysis and accession
+      statement; qualitative finding only.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: DSY3690-associated vancomycin resistance in native Desulfitobacterium hafniense
+    Y51
+  gene_families:
+  - VanA-like ligase
+  gene_id: DSY3690
+  taxon_id: NCBITaxon:49338
+  taxon_label: Desulfitobacterium hafniense
+  strain: Y51
+  strain_taxon_id: NCBITaxon:138119
+  phenotype_label: source-reported vancomycin resistance
+  assay: Disk diffusion and Etest
+  note: Native resistance and separate recombinant-ligase biochemistry support the
+    proposed target-alteration route, not isolated DSY3690 necessity or sufficiency.
+    UniProtKB:Q24R63 is locus-matched reference context only; DSY1579/UniProtKB:Q24X74
+    is the distinct biochemical comparator. No exact experimental protein, allele
+    or genome is assigned. AP008230.1 and its sample are reference context, not an
+    assay-genome assignment.
+  evidence:
+  - reference: PMID:19414574
+    notes: Publisher native susceptibility Results, locus identification and separate
+      biochemical Results/Table 2; qualitative finding only.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: vanE cluster-associated vancomycin resistance in BM4405
+  gene_families:
+  - vanE
+  taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  strain: BM4405
+  phenotype_label: source-reported vancomycin resistance
+  assay: Agar dilution
+  note: Native precursor evidence supports a cluster-associated route, not isolated
+    ligase sufficiency. UniProtKB:Q9S4K1 is a fragment reference, not a complete experimental
+    protein. No exact experimental protein, allele or genome is assigned.
+  evidence:
+  - reference: PMID:10471558
+    notes: Native Results and precursor Table 2; susceptibility assay and accession
+      statement. Qualitative finding only.
+- mechanism_type: UNKNOWN
+  label: vanE co-occurrence with source-reported vancomycin resistance in N00-410
+  gene_families:
+  - vanE
+  taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  strain: N00-410
+  phenotype_label: source-reported vancomycin resistance
+  assay: Etest
+  note: Same-isolate co-occurrence is retained without transferring BM4405 precursor
+    findings. ENA replaces AF430807 with FJ872411, supporting reference context for
+    UniProtKB:Q93A46. Source N00-410 and reference N00-0410 labels are preserved separately;
+    archive succession does not prove allele equality. No exact experimental protein,
+    allele or genome is assigned.
+  evidence:
+  - reference: PMID:12019119
+    notes: Native susceptibility and locus findings; accession statement; induction
+      data not shown. Qualitative finding only.
+- mechanism_type: UNKNOWN
+  label: vanL co-occurrence with source-reported vancomycin resistance in N06-0364
+  gene_families:
+  - vanL
+  taxon_id: NCBITaxon:1351
+  taxon_label: Enterococcus faecalis
+  strain: N06-0364
+  phenotype_label: source-reported vancomycin resistance
+  assay: Broth microdilution and Etest
+  note: The source reports low-level resistance with vanL but explicitly leaves functionality
+    unproven. This is co-occurrence, not a demonstrated biochemical route or a new
+    clinical category. UniProtKB:A9LN35 is reference context only. No exact experimental
+    protein, allele or genome is assigned.
+  evidence:
+  - reference: PMID:18458129
+    notes: Native susceptibility, locus findings and final functionality caveat; induction
+      data not shown. Qualitative finding only.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: vanN cluster-associated vancomycin resistance in UCN71
+  gene_families:
+  - vanN
+  taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  strain: UCN71
+  phenotype_label: source-reported vancomycin resistance
+  assay: Broth microdilution
+  note: Native precursor evidence supports a cluster-associated route, not isolated
+    ligase sufficiency. Further characterization used UCN71 only; it is not assigned
+    to UCN72. UniProtKB:G4XFK8/JF802084 is reference context; its AB701345 link belongs
+    to isolate 121.1, not UCN71. Laboratory recipients remain separate. No exact experimental
+    protein, allele or genome is assigned.
+  evidence:
+  - reference: PMID:21807981
+    notes: Native Results, precursor Table 4 and accession statement; susceptibility
+      assay. Qualitative finding only.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: vanD cluster-associated vancomycin resistance in 10/96A
+  gene_families:
+  - vanD
+  taxon_id: NCBITaxon:1352
+  taxon_label: Enterococcus faecium
+  strain: 10/96A
+  phenotype_label: source-reported vancomycin resistance
+  assay: MIC determination (Steers et al. method)
+  note: Native phenotype and precursor evidence support a cluster-associated route,
+    not isolated VanD sufficiency. UniProtKB:Q9EZQ9/AY082011 is source-bound reference
+    context. Other native strains and laboratory-host findings are not merged with
+    10/96A. No exact experimental protein, allele or genome is assigned.
+  evidence:
+  - reference: PMID:12499162
+    notes: Native Table 2, Results and AY082011 accession statement; Table 2 assay
+      footnote. Qualitative finding only.
 molecular_targets:
 - target_id: ARO:3000720
   target_label: acyl-D-alanyl-D-alanine
@@ -396,4 +523,21 @@ curation_history:
   action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
   changes: Structured BioSample accessions on 3 activity_spectrum observation(s) where
     evidence notes already named exactly one accession.
+  llm_assisted: true
+- timestamp: '2026-10-10T20:06:52Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two primary-supported native vancomycin resistance claims with species/strain
+    taxonomy and explicitly reference-only UniProt context. Kept VanM cluster evidence,
+    Y51 native phenotype, recombinant biochemistry and comparator identity distinct.
+    Preserved prior assertions and all other fields; whole-record review remains open.
+  llm_assisted: true
+- timestamp: '2026-10-10T21:12:03Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added five qualitative native vancomycin findings with species taxonomy
+    and reference-only UniProt context. Distinguished three precursor-supported cluster
+    routes from two gene/phenotype co-occurrences; preserved explicit functional uncertainty
+    and archive succession without exact allele assignments. Preserved all previous
+    claims, observations and other fields; whole-record review remains open.
   llm_assisted: true

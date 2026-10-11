@@ -129,29 +129,38 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:5518
   taxon_label: Fusarium graminearum
   strain: PH-1
-  strain_taxon_id: NCBITaxon:229533
   alteration: Ndk1delta (deletion)
-  protein_accession: UniProtKB:I1RPK0
   phenotype_id: PHIPO:0000632
   phenotype_label: resistance to hydrogen peroxide
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fungal-2025-peroxide-parent-context:
+    PH-1 is the parental background, not a unique tested derivative. I1RPK0 and TaxID
+    229533 describe PH-1 reference context; that lineage does not establish exact
+    experimental subject identity. The reported growth-inhibition comparison is not
+    an MIC or clinical resistance classification. Source biological fields remain
+    unchanged; no new measurement, allele or genome is assigned, and exact subject
+    protein and strain TaxID remain unresolved. Reference-only source identifiers:
+    strain_taxon_id=NCBITaxon:229533; protein_accession=UniProtKB:I1RPK0.'
   evidence:
   - reference: PMID:41277790
     notes: PHI-base primary-literature antimicrobial interaction PHIG:10429; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1111/mpp.70174
+    notes: 'Identifier-scope review: Results section mpp70174-sec-0009: parent and
+      separate derivative comparisons; Figure 5a-b, Strain identity in mpp70174-sec-0014,
+      UniProtKB release 2026_03: I1RPK0 entry 74, sequence version 1; PH-1 reference
+      taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ATG9delta (deletion) associated with resistance to hydrogen peroxide
   taxon_id: NCBITaxon:5518
   taxon_label: Fusarium graminearum
   strain: PH-1
-  strain_taxon_id: NCBITaxon:229533
   alteration: ATG9delta (deletion)
-  protein_accession: UniProtKB:I1S9X9
   gene_id: FGRAMPH1_01T26133
   phenotype_id: PHIPO:0000632
   phenotype_label: resistance to hydrogen peroxide
@@ -159,12 +168,25 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fungal-2018-parent-reference-context:
+    PH-1 is the parental background, not a unique tested derivative. I1S9X9, the retained
+    source gene_id and TaxID 229533 describe PH-1 reference context. The paper locus
+    and current reference-locus names are not an independently established exact allele
+    crosswalk. The EMBL ALT_SEQ flag in UniProt does not identify the experimental
+    alteration. Source biological fields are unchanged; growth-inhibition comparisons
+    are not MIC or clinical resistance categories. Exact subject protein, strain TaxID
+    and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533;
+    protein_accession=UniProtKB:I1S9X9.'
   evidence:
   - reference: PMID:30044782
     notes: PHI-base primary-literature antimicrobial interaction PHIG:264; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pgen.1007546
+    notes: 'Identifier-scope review: Results sections sec005 and sec011: parent versus
+      tested derivatives; Figure 8, UniProtKB release 2026_03: I1S9X9 entry 57, sequence
+      version 1; PH-1 reference locus and taxonomy. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: OS-2delta (deletion) associated with resistance to hydrogen peroxide
   taxon_id: NCBITaxon:5518
@@ -190,22 +212,38 @@ resistance_mechanisms:
   label: Hdf1delta (deletion) associated with resistance to hydrogen peroxide
   taxon_id: NCBITaxon:5518
   taxon_label: Fusarium graminearum
-  strain: PH-1
-  strain_taxon_id: NCBITaxon:229533
+  strain: YM1
   alteration: Hdf1delta (deletion)
-  protein_accession: UniProtKB:I1RCN2
   phenotype_id: PHIPO:0000632
   phenotype_label: resistance to hydrogen peroxide
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review li-2011-hdf1-subject-context:
+    Primary evidence identifies YM1 as the tested subject, distinct from parent PH-1
+    and comparator YM11. I1RCN2 and TaxID 229533 describe PH-1 reference context,
+    not YM1. The paper''s FGSG_01353 and UniProt''s FGRAMPH1_01T03337 are not asserted
+    equivalent without an authoritative alias crosswalk. The empty source gene_id
+    remains empty. Source alteration, phenotype and assay are unchanged; the growth
+    comparison is not an MIC or clinical resistance category. No exact experimental
+    accession, genome or numeric measurement is inferred. Original source background
+    label: PH-1. Reference-only source identifiers: strain_taxon_id=NCBITaxon:229533;
+    protein_accession=UniProtKB:I1RCN2.'
   evidence:
   - reference: PMID:21138346
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8901; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1094/MPMI-10-10-0233
+    notes: 'Identifier-scope review: Author-affiliated USDA archived published PDF:
+      p. 488 Results distinguishes YM1 from parent PH-1; p. 489 Table 1 lists subjects;
+      p. 492 Figure 9C and caption identify YM1, parent PH-1 and separate complemented
+      comparator YM11; pages visually inspected, UniProtKB release 2026_03: I1RCN2
+      entry 85, sequence version 1; PH-1 reference locus FGRAMPH1_01T03337; TaxID
+      229533 under species 5518; paper locus FGSG_01353 alias remains unresolved.
+      Reviewed 2026-10-09 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -266,3 +304,89 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T14:37:47Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped source protein and reference-strain identifiers to provenance after
+    primary-paper review; parent labels, source biological claims and gene IDs retained.
+    No experimental allele, genome or activity measurement inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:41Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:57Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:14:49Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Corrected the tested subject from PH-1 parent to YM1 after primary identity
+    review. Reference protein and strain TaxID moved to provenance; source biology
+    preserved, historical locus alias and experimental accessions unresolved.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:46Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:23Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:08Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

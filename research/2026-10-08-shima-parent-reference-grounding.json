@@ -1,0 +1,379 @@
+{
+  "attribution": "Shima et al. 2011, DOI:10.1271/bbb.100687; PHI-base adopted export; UniProt Consortium release 2026_03, CC BY 4.0.",
+  "before_corpus_sha256": "2fc65c9c5d27cacc921ac6c670c3c9a62db94c1f7425c8cd1de21540beb901d7",
+  "before_review_sha256": "095bc6e5c50ce2a103eebe33fea3849c7ad9164ecc91aa380d7b471032d25fb5",
+  "changes": {
+    "byte_identical_records": 2918,
+    "changed_records": 21,
+    "checksum_only_claims": 176,
+    "new_scoped_claims": 2
+  },
+  "corpus_phi_scope": {
+    "identifier_scoped": 178,
+    "pending_associations": 39,
+    "pending_papers": 18,
+    "retained": 217
+  },
+  "limitations": [
+    "RIB40 is retained as parent background, not a unique tested transformant.",
+    "Earlier donor deposits do not identify later transformants; no donor TaxID is assigned.",
+    "Reference proteins and TaxID 510516 are provenance only, not exact experimental identifiers.",
+    "The original 2009 full text remains unavailable; its phenotype is not independently validated.",
+    "Source allele wording, phenotype, assay and all other-source claims remain unchanged.",
+    "Whole-cell growth and biochemical activity are distinct endpoints; neither is converted to MIC.",
+    "No new variant, sequence, construct, protocol, numeric measurement or MIC was curated.",
+    "No NCBI endpoints, outreach, terms reassessment, source adoption or GitHub mutations.",
+    "Corpus-wide investigation remains incomplete; full QC is not claimed."
+  ],
+  "original_study": {
+    "citation_request": {
+      "cache_path": "reports/resistance-grounding-2026-10-07/carboxin-followup-shima-2009-citation.json",
+      "cache_sha256": "76fbc3fe611d56540bbf8d7453739f8ec16eed0c698d4da5e8779a66ad220497",
+      "release": null,
+      "retrieved_at": "2026-10-08T10:43:28.213414+00:00",
+      "sha256": "9dc4440ad805eecb1bc6b868d945b0cd750f65e8493754ec9db7459e513999db",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.fgb.2008.10.005&format=json&resultType=core&pageSize=2&synonym=false&cursorMark=%2A"
+    },
+    "doi": "10.1016/j.fgb.2008.10.005",
+    "fulltext_reviewed": false,
+    "reference": "PMID:18992352"
+  },
+  "primary_followup": {
+    "bytes": 180874,
+    "cache_path": "reports/resistance-grounding-2026-10-07/shima-2011-followup.pdf",
+    "edition": "FINAL_PUBLISHED_2011_PAGES_181_184",
+    "locations": [
+      "p. 181: wild-type RIB40",
+      "p. 182 Table 1: earlier-study subjects",
+      "p. 184 reference 15: original Shima 2009 paper"
+    ],
+    "metadata_sha256": "adf38e2ff3849e80958e2ea48fda841d0a0df7fdd89765d56d4aa5c5e0f013a0",
+    "reference": "DOI:10.1271/bbb.100687",
+    "retrieved_at": "2026-10-08T22:23:01.299648+00:00",
+    "scope": "FOLLOWUP_SUPPORTED_SUBJECT_IDENTITY_ONLY_NOT_COMPLETE_ORIGINAL_STUDY_VALIDATION",
+    "sha256": "58802bdf088173a50d1d02319068380caab5609c8ce933e1f5bb8e578fc282b0",
+    "url": "https://www.jstage.jst.go.jp/article/bbb/75/1/75_100687/_pdf/-char/en",
+    "visually_inspected_pages": [
+      181,
+      182,
+      184
+    ]
+  },
+  "proteins": {
+    "Q2TWM0": {
+      "entryAudit": {
+        "entryVersion": 127,
+        "firstPublicDate": "2006-01-24",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2006-01-24",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "BAE66353.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "AO090010000505"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Yellow koji mold",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "BAE66353.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000006564",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Aspergillus",
+          "Circumdati"
+        ],
+        "scientificName": "Aspergillus oryzae (strain ATCC 42149 / RIB 40)",
+        "taxonId": 510516
+      },
+      "primaryAccession": "Q2TWM0",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json",
+      "strain_comments": [
+        "ATCC 42149 / RIB 40"
+      ]
+    },
+    "Q2U3V9": {
+      "entryAudit": {
+        "entryVersion": 98,
+        "firstPublicDate": "2006-01-24",
+        "lastAnnotationUpdateDate": "2026-09-02",
+        "lastSequenceUpdateDate": "2006-01-24",
+        "sequenceVersion": 1
+      },
+      "entryType": "UniProtKB unreviewed (TrEMBL)",
+      "genes": [
+        {
+          "orfNames": [
+            {
+              "evidences": [
+                {
+                  "evidenceCode": "ECO:0000313",
+                  "id": "BAE63756.1",
+                  "source": "EMBL"
+                }
+              ],
+              "value": "AO090020000596"
+            }
+          ]
+        }
+      ],
+      "organism": {
+        "commonName": "Yellow koji mold",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "BAE63756.1",
+            "source": "EMBL"
+          },
+          {
+            "evidenceCode": "ECO:0000313",
+            "id": "UP000006564",
+            "source": "Proteomes"
+          }
+        ],
+        "lineage": [
+          "Eukaryota",
+          "Fungi",
+          "Dikarya",
+          "Ascomycota",
+          "Pezizomycotina",
+          "Eurotiomycetes",
+          "Eurotiomycetidae",
+          "Eurotiales",
+          "Aspergillaceae",
+          "Aspergillus",
+          "Circumdati"
+        ],
+        "scientificName": "Aspergillus oryzae (strain ATCC 42149 / RIB 40)",
+        "taxonId": 510516
+      },
+      "primaryAccession": "Q2U3V9",
+      "request_cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json",
+      "strain_comments": [
+        "ATCC 42149 / RIB 40"
+      ]
+    }
+  },
+  "records": [
+    {
+      "after_sha256": "822ae123623ae4d9ea46953ae6c431f077cc18d0c970dd4703b9918ea3958bc5",
+      "before_sha256": "8158341259c3913e788c0831e2782bb6ffb3a413e41fa3a4cfaa2a561e4768dd",
+      "identifier": "CHEBI:48080",
+      "path": "data/antibiotics/antibacterial/brefeldin-a.yaml"
+    },
+    {
+      "after_sha256": "bb150fb119e5841dc7ad9fb2e653c92af72dee049e0f5eea947bf4762ee5e762",
+      "before_sha256": "9669cc7d5eed9c80aa3a7f5e9b9ed582571bb0fb3899fe0f7b46e30d3ab3281e",
+      "identifier": "CHEBI:55346",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml"
+    },
+    {
+      "after_sha256": "0fee59788b3010d67c23877c5e34a647e276ceca56219b01a46057b56284c632",
+      "before_sha256": "d2c83332e2395f249ac4226d82ca21cf117b1b3b8bb244c243037e41686bbc74",
+      "identifier": "CHEBI:40909",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml"
+    },
+    {
+      "after_sha256": "c3c3157125c2b902156de2c7f9d23ab19f9963d86b69b96cc68261ec6182df53",
+      "before_sha256": "727b10380d1d60602516e0ca49c572e36446573f13ed225574048e55b8a89494",
+      "identifier": "CHEBI:3392",
+      "path": "data/antibiotics/antifungal/carbendazim.yaml"
+    },
+    {
+      "after_sha256": "51215111b95016061ef3bf124cb31dee12750c5b4e9d0ffb2fa11e66e4037818",
+      "before_sha256": "fcf8bfffe69b98ae031407ce791ea913be087aff3da85c26ff70dfffa8d69f5e",
+      "identifier": "CHEBI:3405",
+      "path": "data/antibiotics/antifungal/carboxin.yaml"
+    },
+    {
+      "after_sha256": "91ab7220b57a007d6426511caa6bf35e5b47b91200298ea4f64e44a77d77da97",
+      "before_sha256": "379e171af290b19983517bf6ef6cff7a8e966ed6cf7e7b11d23bb38819b5c6b2",
+      "identifier": "CHEBI:474180",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml"
+    },
+    {
+      "after_sha256": "3c12c14df88c88d21719b377cf912c6c0c148faea2248ba9f1ddea34280833c8",
+      "before_sha256": "ade7a92e7d564bf1a87dd73135431c2c5f023352eb76b21b174640b0882d1733",
+      "identifier": "CHEBI:27641",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml"
+    },
+    {
+      "after_sha256": "add3fa8c6f95e667cecf6f64927cf38752f2a8643a40f8be95fcb8711ebb1050",
+      "before_sha256": "c35eed2fecb7428908d5e0f6e56185c39721fedd8d1803fdf0f24daccb142cde",
+      "identifier": "CHEBI:81760",
+      "path": "data/antibiotics/antifungal/difenoconazole.yaml"
+    },
+    {
+      "after_sha256": "80699d76206c2b07bc1276c95869c28702c00d1573e4690391da8c6f49d36452",
+      "before_sha256": "cf75aad60399feda6d3ca04b7b60f14f39bb2111c2502afc3500705c8b76e107",
+      "identifier": "CHEBI:46081",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml"
+    },
+    {
+      "after_sha256": "eef59810150009c04e05a24c73dc8ba1ab8b87ada4179288b0ddb4554f93fcc6",
+      "before_sha256": "345efd8eca72dddcb420f951b3d503c94f3be0a8089b0268b5a68b837a1be07d",
+      "identifier": "CHEBI:81763",
+      "path": "data/antibiotics/antifungal/fludioxonil.yaml"
+    },
+    {
+      "after_sha256": "adff38e3b9f4a76d63b6ec936b44108cd1740584f48057f68d65928f4f9b3991",
+      "before_sha256": "883f24e72ced6fda067af4baef704374048424bf218da67b21628377dbceba76",
+      "identifier": "CHEBI:28909",
+      "path": "data/antibiotics/antifungal/iprodione.yaml"
+    },
+    {
+      "after_sha256": "666db8aab3ff7706e685e650f9f15fb106d3ff5becb70bfd52acd29d6b4c5f50",
+      "before_sha256": "6d138c5abe431f25453738e028226ce2bd751cc9f124770a01a3565bc3c14e09",
+      "identifier": "CHEBI:6076",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml"
+    },
+    {
+      "after_sha256": "cc36f07db7039265725682704262aec6187d8ba87e58da2b5ad69b8d206eb65f",
+      "before_sha256": "8d2c644c4b371c1a592fb93f86142033383158a2274884de23d823b27c0eeabf",
+      "identifier": "CHEBI:600520",
+      "path": "data/antibiotics/antifungal/micafungin.yaml"
+    },
+    {
+      "after_sha256": "5bd27bae45c2abc09e67638ecb5ddaf998cec5fdf7d0556b3761690dcd585f44",
+      "before_sha256": "e1d84fc4f3522673106f81f1f5db18eb74aab828a01f5137ba50737ac36f7e8b",
+      "identifier": "CHEBI:64355",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml"
+    },
+    {
+      "after_sha256": "1631783418855928223d5dbd442fef447b015768eb9db4fb20983e8a19a7c3bc",
+      "before_sha256": "104eecca55d143495f38fece8fe6b2399215fada4b9da408bf3a89297b34979d",
+      "identifier": "CHEBI:8434",
+      "path": "data/antibiotics/antifungal/prochloraz.yaml"
+    },
+    {
+      "after_sha256": "8e3385023bcd268b8cae42239883f2b92a700e24b7bd975753b94a89ae1fe224",
+      "before_sha256": "c96b48f77d6d15f56440b9ace4cc9bcaae46dc4dbefbc6a2631b4a7d4d7685c1",
+      "identifier": "CHEBI:8489",
+      "path": "data/antibiotics/antifungal/propiconazole.yaml"
+    },
+    {
+      "after_sha256": "01555fb00337055a21a9f6fe939ab0eba26b8fdfe7c2dc64873020332638e350",
+      "before_sha256": "689510a8dc8efde863b26438b5a0d868ec4daf91a78b5d3c387cd2db46eaed7f",
+      "identifier": "CHEBI:81972",
+      "path": "data/antibiotics/antifungal/pyrifenox.yaml"
+    },
+    {
+      "after_sha256": "61c69fdf29247f12249f20f8566793e5e1ace6c178c842d8fbe26d7d36db0fb4",
+      "before_sha256": "68631826dfcde7920b6057b4da6104abbab645278bfd80ec589d453d0e03ea38",
+      "identifier": "CHEBI:9448",
+      "path": "data/antibiotics/antifungal/terbinafine.yaml"
+    },
+    {
+      "after_sha256": "0776f7d910993296686aab765bac1b09d9c2ebaed95144cc81975a87468d19f8",
+      "before_sha256": "ee263d7d316f7a245be8ec172e3f419b89b18d695c7329f3a46816e3252c4541",
+      "identifier": "CHEBI:81784",
+      "path": "data/antibiotics/antifungal/triflumizole.yaml"
+    },
+    {
+      "after_sha256": "3c702bd4d5175a6dbf80e33ac3561ab0557b1e07c8c7ab631336939016125d91",
+      "before_sha256": "890343391b864bf541521144a62290a2ab6a17a3dd585c006c61b4576c5618f6",
+      "identifier": "CHEBI:10023",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml"
+    },
+    {
+      "after_sha256": "06a45016cafaeb7203c44a18d94816155864a4a22e418c783ab57e447fe11c0c",
+      "before_sha256": "5ae6a7d7f70561eb2e6832fb33eb24e64653be0b5fbb72568d85534e58bc26eb",
+      "identifier": "CHEBI:16240",
+      "path": "data/antibiotics/biocide/hydrogen-peroxide.yaml"
+    }
+  ],
+  "review_sha256": "e3ece4149836081184dd03dffacd1ada5947e63cf1ed04cf40ad56f0642dc0b9",
+  "reviewed_on": "2026-10-08",
+  "source_inventory_sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85",
+  "source_rows": [
+    {
+      "identifier": "CHEBI:3405",
+      "row_sha256": "6920ff524a58c4452527cc9a3f932c2fef7a30e477b813dbad9d0ef265ce26c0"
+    },
+    {
+      "identifier": "CHEBI:3405",
+      "row_sha256": "216a2748f12ee432ae9c8b2b1f8183d8c7ac14559999c1bd24a37729928e1ea1"
+    }
+  ],
+  "status": "PARENT_REFERENCE_SCOPE_CURATED_EXPERIMENTAL_ACCESSIONS_UNRESOLVED",
+  "taxonomy": {
+    "5062": {
+      "parent": {
+        "scientificName": "Circumdati",
+        "taxonId": 2720871
+      },
+      "rank": "species",
+      "scientificName": "Aspergillus oryzae",
+      "taxonId": 5062
+    },
+    "510516": {
+      "parent": {
+        "commonName": "Yellow koji mold",
+        "scientificName": "Aspergillus oryzae",
+        "taxonId": 5062
+      },
+      "rank": "strain",
+      "scientificName": "Aspergillus oryzae (strain ATCC 42149 / RIB 40)",
+      "taxonId": 510516
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-f15fc8114757fa2e03d5ebd3aebdfb5133c54758aa34ca2ec0c5d4224791f50c.json",
+      "cache_sha256": "8f1b082963d4affedfcd273f50da8831e7e6de55763dd5fa960872bb4f38729b",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:18.453523+00:00",
+      "sha256": "69894dd64e4e62361f8bb211b064f7807d0aed93f1b93602ef2621c7796186b5",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ2TWM0+OR+accession%3AQ2U3V9+OR+accession%3AQ4HZS8+OR+accession%3AQ4WDM9+OR+accession%3AQ4WNT5+OR+accession%3AQ59VG6+OR+accession%3AQ59X67+OR+accession%3AQ5A4G2+OR+accession%3AQ5ALV2+OR+accession%3AQ6X9S4+OR+accession%3AQ870D1+OR+accession%3AQ8X0Z3+OR+accession%3AQ9P340+OR+accession%3AW7LTW3+OR+accession%3AW7LX41&format=json&size=500"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-3bb8d92ff02e847a51353139ca4a4f3309060c6e3588f1bba752b75d41800722.json",
+      "cache_sha256": "b01afb0cfc2e76a0593e92724574d614a7c7d99793336f1ffa79c7780986555f",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:28.435284+00:00",
+      "sha256": "dfe4278161a9bb74f7ab159b9f860c48156492be157cde211254470b24c8eb6e",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5062"
+    },
+    {
+      "cache_path": "reports/resistance-grounding-2026-10-07/request-db6c28a40e5610fc94752e428820d5da10622a33b7cd55dcca3c324d6ee59b09.json",
+      "cache_sha256": "00c458451be3f83cd428a3873dd8f12d9623f236e73c27de6b2ca500866ebc1d",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:53.512331+00:00",
+      "sha256": "2e4ec582f6634d1ef43b44168d1f105f0af1861ba0eece711deac8bccaddb6c2",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/510516"
+    }
+  ]
+}

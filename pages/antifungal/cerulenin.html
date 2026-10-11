@@ -118,6 +118,40 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
+<h2>Resistance mechanisms</h2>
+<p class="meta">2 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Bacillus subtilis GS76 fabF3 resistance to cerulenin<br><span class="meta">JH642 derivative. Source protein notation retained; nucleotide and protein numbering are not normalized. No strain-specific protein, strain TaxID or genome accession verified.</span></td>
+      <td>—</td>
+      <td><em>Bacillus subtilis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code class="curie">NCBITaxon:1423</code></a><br><span class="meta">strain GS76</span> <span class="meta">fabF</span></td>
+      <td class="meta">fabF</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/24641521">PMID:24641521</a></span> <span class="meta">(Characterization of bsFabF[I108M]; Tables 2, 4 and 5.)</span></li>
+</ul>
+<span class="meta">Cell-free enzyme assay and genetic complementation</span></td>
+    </tr>
+    <tr>
+      <td>Bacillus subtilis GS77 fabF1 resistance to cerulenin<br><span class="meta">JH642 derivative. Reference protein O34340, sequence version 1, not a mutant-specific accession. Source I108F is retained; UniProt&#39;s GS77 annotation uses I109F. No coordinate conversion, strain TaxID or genome assignment. Expression regulation also contributes in this background.</span></td>
+      <td>—</td>
+      <td><em>Bacillus subtilis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1423"><code class="curie">NCBITaxon:1423</code></a><br><span class="meta">strain GS77</span><br> <a href="https://www.uniprot.org/uniprotkb/O34340"><code class="curie">UniProtKB:O34340</code></a> <span class="meta">fabF</span></td>
+      <td class="meta">fabF</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/24641521">PMID:24641521</a></span> <span class="meta">(Results; Table 2; Figure 2.)</span></li>
+  <li><span class="meta">UniProtKB:O34340</span> <span class="meta">(Reference crosswalk only: GS77 variant cites PMID:11325930; PDB 4LS6.)</span></li>
+</ul>
+<span class="meta">Biochemical inhibition and structural analysis</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 
 
@@ -145,6 +179,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Added two primary-supported strain-specific fabF claims; grounded species and the GS77 reference protein. Preserved numbering caveats; no AST, genome or strain TaxID inferred.</p>
   </li>
 </ol>
 

@@ -127,9 +127,8 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">1 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">1 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
   <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
@@ -137,12 +136,13 @@ type — expand a group to see its determinants.</p>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>HCV NS3 V36, T54, R155, and A156 resistance-associated substitutions<br><span class="meta">Longitudinal clonal sequencing detected substitutions at these NS3 positions during narlaprevir exposure; participants with detected substitutions had a smaller viral-load decline, and R155K persisted in two participants for 3.1 years.</span></td>
+      <td>HCV NS3 V36, T54, R155, and A156 resistance-associated substitutions<br><span class="meta">Longitudinal clonal sequencing detected substitutions at these NS3 positions during narlaprevir exposure; participants with detected substitutions had a smaller viral-load decline, and R155K persisted in two participants for 3.1 years. Taxon grounding only: the source calls the virus HCV. The clinical association does not establish an individual patient&#39;s UniProt accession, strain TaxID or genome. No allele coordinates or resistance measurements were added.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Orthohepacivirus hominis</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_3052230"><code class="curie">NCBITaxon:3052230</code></a></td>
       <td class="meta">HCV NS3 serine protease</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/24168257">PMID:24168257</a></span> <span class="meta">(Primary treatment-exposure, clonal-sequencing, and viral-load study.)</span></li>
+  <li><span class="meta"><a href="https://rest.uniprot.org/taxonomy/3052230">https://rest.uniprot.org/taxonomy/3052230</a></span> <span class="meta">(Taxonomic identity only: active species; Hepatitis C virus is an explicit name alias. Retrieved 2026-10-08 UTC.)</span></li>
 </ul>
 </td>
     </tr>
@@ -188,6 +188,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_TAXON</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Grounded the existing HCV clinical association to an active species TaxID; retained the original claim without assigning patient-specific proteins, strains, genomes or allele coordinates.</p>
   </li>
 </ol>
 

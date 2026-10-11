@@ -107,22 +107,32 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">2 known routes by which microbes
-resist this compound, grounded in ARO where CARD models them. Grouped by mechanism
-type — expand a group to see its determinants.</p>
+<p class="meta">3 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
-  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">2</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
 <table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>Botrytis cinerea CYP51 G476S and M231T substitutions<br><span class="meta">The substitutions occurred in resistant mutants; docking suggested loss of electrostatic interactions, while direct compound binding was not experimentally measured.</span></td>
+      <td>Botrytis cinerea CYP51 substitutions associated with pyrisoxazole resistance in RU-mutants<br><span class="meta">Same-isolate association, not independent causal validation. Source numbering uses Zymoseptoria tritici CYP51 (AY253234), not a Botrytis UniProt sequence. No single-isolate protein assigned: Results names RU11-1, whereas Tables 1-3 name RU11-3.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Botrytis cinerea</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_40559"><code class="curie">NCBITaxon:40559</code></a></td>
       <td class="meta">CYP51 sterol 14-alpha-demethylase</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(Primary mutant-selection and sequencing study.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(Results, Tables 1-3, and Figure 5.)</span></li>
+</ul>
+</td>
+    </tr>
+    <tr>
+      <td>Botrytis cinerea RS10-1 CYP51 substitution associated with pyrisoxazole resistance<br><span class="meta">Same-isolate association, not independent causal validation. M231T uses the paper&#39;s Zymoseptoria tritici CYP51 reference (AY253234), not UniProt sequence coordinates. UniProt cross-references the study&#39;s MT430876/QMT30302.1 and RS10-1; sequence version 1, unreviewed TrEMBL, release 2026_03, retrieved 2026-10-08 UTC. No strain TaxID or genome accession established.</span></td>
+      <td>—</td>
+      <td><em>Botrytis cinerea</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_40559"><code class="curie">NCBITaxon:40559</code></a><br><span class="meta">strain RS10-1</span><br> <a href="https://www.uniprot.org/uniprotkb/A0A7G4P320"><code class="curie">UniProtKB:A0A7G4P320</code></a></td>
+      <td class="meta">CYP51 sterol 14-alpha-demethylase</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(Table 1 and Figure 5; molecular-analysis Results identify MT430876.)</span></li>
+  <li><span class="meta">UniProtKB:A0A7G4P320</span> <span class="meta">(Identifier crosswalk only; EMBL cross-reference and citation-specific strain annotation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -139,10 +149,10 @@ type — expand a group to see its determinants.</p>
     <tr>
       <td>induced CYP51 expression in pyrisoxazole-resistant isolates<br><span class="meta">Pyrisoxazole exposure induced higher CYP51 expression in resistant than sensitive isolates.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Botrytis cinerea</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_40559"><code class="curie">NCBITaxon:40559</code></a></td>
       <td class="meta">CYP51 sterol 14-alpha-demethylase</td>
       <td class="meta"><ul class="plain evidence">
-  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(Primary target-gene expression comparison.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(Figure 6; expression association, not proof of independent causation.)</span></li>
 </ul>
 </td>
     </tr>
@@ -187,6 +197,11 @@ type — expand a group to see its determinants.</p>
     <span class="pill">REVIEWED</span>
     <span class="meta">2026-09-02 · codex · LLM-assisted</span>
     <p>Verified the exact ChEBI mixture identity, structure representation, and antifungal class; curator-confirmed the demethylase-pathway mode and added CYP51 resistance-determinant, mutation, and expression evidence.</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_CONTEXT</span>
+    <span class="meta">2026-10-08 · codex · LLM-assisted</span>
+    <p>Separated curator-owned study groups; grounded the supported protein/taxon crosswalk and preserved unresolved numbering and isolate-name limitations. No activity measurements or source-owned assertions changed.</p>
   </li>
 </ol>
 

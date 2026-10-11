@@ -1,0 +1,390 @@
+{
+  "attribution": "UniProt Consortium release 2026_03, CC BY 4.0; primary publisher bibliographic and abstract context, paraphrased without full-text redistribution.",
+  "limitations": [
+    "Exact-gene and compound searches have different recall; no-hit queries are not absence evidence.",
+    "All returned query rows were retained in private receipts; only two focal reference candidates are exported, not a catalogue of unrelated keyword hits.",
+    "No primary full Results or figures were obtained for this batch; access failures do not disprove a claim.",
+    "Species-level reference metadata is not an experimental strain, genome, allele or susceptibility assignment.",
+    "No new sequences, variants, constructs, protocols, coordinates or numerical resistance measurements exported.",
+    "No NCBI request, reuse-terms review, source adoption, outreach or GitHub mutation occurred.",
+    "The latest full QC remains the earlier Posteraro checkpoint; this research-only batch needs its focused checks and preservation audit, not a new claim that full QC was rerun."
+  ],
+  "preservation": {
+    "allowed_existing_edit": "research/2026-10-07-resistance-gene-grounding.md",
+    "before_corpus": {
+      "path": "reports/resistance-grounding-2026-10-09-producer-genes/before-corpus.json",
+      "sha256": "98c1197508fd138d700979ad19184a62da8f209c0cc6281e2c6bdd5b893a320c"
+    },
+    "biological_record_changes": 0,
+    "curation_events_added": 0,
+    "ignored_files_included": true,
+    "protected_files_unchanged": 6704,
+    "protected_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-09-producer-genes/protected-before.json",
+      "sha256": "b8c0be7f21a7db0f6e585f045baf86da6f12e7f25e0cbf5d853de47c79fc4b46"
+    },
+    "record_hashes_verified": 2939
+  },
+  "primary_access_receipts": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/primary-64e2f65b48f05a17783626b3540d8607456485c16cfa216f73d66973fc5dc64d.json",
+        "sha256": "e8aa5cdefe2c8a1ae9b4a5641e1f5a1aa1509b92a533552885a128725a9d569e"
+      },
+      "full_text_obtained": false,
+      "retrieved_at": "2026-10-09T12:12:51.705465+00:00",
+      "sha256": "51040cc39ab151bea67e670473e4a2449bf36fd0170c77d34bbe5e227eb0b47a",
+      "status": 403,
+      "url": "https://www.microbiologyresearch.org/deliver/fulltext/micro/146/2/1460345a.html?itemId=/content/journal/micro/10.1099/00221287-146-2-345&mimeType=html&fmt=ahah"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/primary-b739eb1f52291afe79b5b87127bb1e6091aacb3a168e89b1ef69b00bfb999d6e.json",
+        "sha256": "b0eabb6a39bdbbc8c6db6a9a6bd14e39bc042e7795542895a6a64efc095b8f63"
+      },
+      "full_text_obtained": false,
+      "retrieved_at": "2026-10-09T12:12:36.499899+00:00",
+      "sha256": "92ff5b1ee7adbc93d3e219dfb7c70181e0afac7a69fe235d386cc0fbdc670295",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4809751/fullTextXML"
+    }
+  ],
+  "records": [
+    {
+      "context": "The abstract distinguishes the producer from laboratory hosts; the proposed efflux route is inferred, not directly established by the inspected text.",
+      "gene_lead": "vlmF",
+      "hold": "UniProt cites the focal paper and a related strain label but exposes AY116644/AAN10244.1, not AF148322. The exact deposit and experimental-allele crosswalk remains unresolved; an empty gene field is not evidence that vlmF is absent.",
+      "identifier": "CHEBI:133621",
+      "label": "valanimycin",
+      "laboratory_hosts": [
+        "Escherichia coli",
+        "Streptomyces lividans"
+      ],
+      "new_experimental_identifiers_assigned": false,
+      "path": "data/antibiotics/unspecified/valanimycin.yaml",
+      "primary": {
+        "doi": "10.1099/00221287-146-2-345",
+        "figures_inspected": false,
+        "full_results_inspected": false,
+        "locations_inspected": [
+          "Publisher title, accession note and abstract"
+        ],
+        "paper_reported_deposit": "AF148322",
+        "reference": "PMID:10708373",
+        "url": "https://www.microbiologyresearch.org/content/journal/micro/10.1099/00221287-146-2-345"
+      },
+      "reference_protein": {
+        "accession": "UniProtKB:Q9LA76",
+        "archive_cross_references": [
+          {
+            "database": "EMBL",
+            "id": "AY116644",
+            "protein_id": "AAN10244.1"
+          }
+        ],
+        "citation_ids": [
+          "10708373",
+          "12406225",
+          "8990292",
+          "9056232"
+        ],
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 81,
+        "gene_symbols": [],
+        "organism": {
+          "scientificName": "Streptomyces viridifaciens",
+          "taxonId": 48665
+        },
+        "query": "valanimycin",
+        "reference_strain_labels": [
+          "MG456-hf10"
+        ],
+        "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+        "sequence_version": 1,
+        "submitted_names": [
+          "Valanimycin resistance"
+        ]
+      },
+      "sha256": "7475e3086e45c36727cde6c8faca62fca0b13a081c8151691fc9b2e7f77add4e",
+      "source_organism": "Streptomyces viridifaciens MG456-hF10",
+      "standard_inchi_key": "DTXMRELKPKEPSO-HJWRWDBZSA-N",
+      "status": "REFERENCE_CITATION_LINK_EXACT_ARCHIVE_JOIN_UNRESOLVED"
+    },
+    {
+      "context": "The reference entry explicitly cites the focal paper and preserves an EMBL protein cross-reference; this supports a bibliographic reference link, not a verified experimental allele.",
+      "gene_lead": "zbmA",
+      "hold": "The current reference taxon is Streptomyces pilosus, species 28893. The paper's species appears under otherNames, not synonyms; this alone does not assign the tested strain or establish a taxonomic correction.",
+      "identifier": "CHEBI:67811",
+      "label": "zorbamycin",
+      "new_experimental_identifiers_assigned": false,
+      "path": "data/antibiotics/unspecified/zorbamycin.yaml",
+      "primary": {
+        "doi": "10.1021/acs.biochem.5b01008",
+        "figures_inspected": false,
+        "full_results_inspected": false,
+        "locations_inspected": [
+          "Primary publisher bibliography and UniProt citation cross-reference"
+        ],
+        "pmcid": "PMC4809751",
+        "reference": "PMID:26512730",
+        "url": "https://pubs.acs.org/doi/10.1021/acs.biochem.5b01008"
+      },
+      "reference_protein": {
+        "accession": "UniProtKB:B9UIZ4",
+        "archive_cross_references": [
+          {
+            "database": "EMBL",
+            "id": "EU670723",
+            "protein_id": "ACG60763.1"
+          }
+        ],
+        "citation_ids": [
+          "19081934",
+          "26512730"
+        ],
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 41,
+        "gene_symbols": [
+          "zbmA"
+        ],
+        "organism": {
+          "scientificName": "Streptomyces pilosus",
+          "taxonId": 28893
+        },
+        "query": "gene_exact:zbmA",
+        "reference_strain_labels": [],
+        "scope": "DATABASE_REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+        "sequence_version": 1,
+        "submitted_names": [
+          "Zbm binding protein"
+        ]
+      },
+      "sha256": "257083ae607cf542b02ca48b2576e9b87ed89499e6f28575768473274755e51a",
+      "source_organism": "Streptomyces flavoviridis ATCC21892",
+      "standard_inchi_key": "UJKRUPHWCPAJIL-CPLCKGKLSA-N",
+      "status": "REFERENCE_CITATION_LINK_SUBJECT_TAXON_AND_PRIMARY_RESULTS_PENDING"
+    },
+    {
+      "context": "The abstract calls efrT putative and concerns distinct congeners. A reported production effect does not establish measured resistance to the existing efrotomycin structure.",
+      "exact_record_compound_join": "NOT_ESTABLISHED",
+      "gene_lead": "efrT",
+      "hold": "Neither exact-gene nor compound-keyword search resolved a UniProt candidate; these query results do not establish biological absence.",
+      "identifier": "antibioticmech:aro-5d5ecfee72",
+      "label": "efrotomycin",
+      "laboratory_hosts": [
+        "Streptomyces lividans SBT18"
+      ],
+      "new_experimental_identifiers_assigned": false,
+      "paper_compound_scope": [
+        "efrotomycin A1",
+        "efrotomycin A2",
+        "efrotomycin A3",
+        "efrotomycin A4",
+        "efrotomycin B1"
+      ],
+      "path": "data/antibiotics/antibacterial/efrotomycin.yaml",
+      "primary": {
+        "doi": "10.1021/acs.jnatprod.2c00986",
+        "figures_inspected": false,
+        "full_results_inspected": false,
+        "locations_inspected": [
+          "Publisher-indexed abstract and supporting-information contents"
+        ],
+        "reference": "PMID:36445346",
+        "url": "https://pubs.acs.org/doi/10.1021/acs.jnatprod.2c00986"
+      },
+      "sha256": "14ca62f268b3c49fff1e5e83e4bcf7baa516c589284cf9600811c27bb1309768",
+      "source_organism": "Amycolatopsis cihanbeyliensis DSM 45679",
+      "standard_inchi_key": "ASOJLQIBBYOFDE-OUYMVFBDSA-N",
+      "status": "CONGENER_SCOPE_AND_PUTATIVE_DETERMINANT_HOLD"
+    }
+  ],
+  "reviewed_on": "2026-10-09",
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "reference_candidates": 2,
+    "selected_records": 3,
+    "whole_records_completed_by_this_review": 0
+  },
+  "status": "REFERENCE_LEADS_ONLY_NO_BIOLOGICAL_CURATION",
+  "taxonomy": {
+    "28893": {
+      "active": true,
+      "otherNames": [
+        "Streptomyces pilosus Ettlinger et al. 1958 (Approved Lists 1980)",
+        "Streptomyces flaviviridis",
+        "Streptomyces flavoviridis",
+        "Streptomyces flavoviridis (ex Preobrazhenskaya et al.) Preobrazhenskaya 1986",
+        "\"Actinomyces flavoviridis\" Preobrazhenskaya et al. 1957",
+        "ATCC 19759 [[Streptomyces flavoviridis]]",
+        "ATCC 19797",
+        "ATCC 19903 [[Streptomyces flavoviridis]]",
+        "BCRC 11474 [[Streptomyces flavoviridis]]",
+        "BCRC 12091",
+        "CBS 497.68 [[Streptomyces flavoviridis]]",
+        "CCRC 11474 [[Streptomyces flavoviridis]]",
+        "CCRC 12091",
+        "CCRC:11474 [[Streptomyces flavoviridis]]",
+        "CCRC:12091",
+        "DSM 40097",
+        "DSM 40153 [[Streptomyces flavoviridis]]",
+        "IFO 12807",
+        "IMET 42058 [[Streptomyces flavoviridis]]",
+        "INA 2314/53 [[Streptomyces flavoviridis]]",
+        "ISP 5097",
+        "ISP 5153 [[Streptomyces flavoviridis]]",
+        "JCM 4372 [[Streptomyces flavoviridis]]",
+        "JCM 4403",
+        "NBRC 12772 [[Streptomyces flavoviridis]]",
+        "NBRC 12807",
+        "NRRL 2721",
+        "NRRL-ISP 5097",
+        "NRRL-ISP 5153 [[Streptomyces flavoviridis]]",
+        "RIA 1076",
+        "UNIQEM 145 [[Streptomyces flavoviridis]]",
+        "UNIQEM 183",
+        "VKM Ac-1765",
+        "VKM Ac-754 [[Streptomyces flavoviridis]]",
+        "Actinomyces flavoviridis",
+        "RIA 1039 [[Streptomyces flavoviridis]]",
+        "IFO 12772 [[Streptomyces flavoviridis]]",
+        "CBS 549.68"
+      ],
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces pilosus",
+      "taxonId": 28893
+    },
+    "48665": {
+      "active": true,
+      "otherNames": [
+        "\"Streptomyces viridifaciens\" Gourevitch and Lein 1955"
+      ],
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces viridifaciens",
+      "taxonId": 48665
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-114ad30d6b841c5f2a79ad24222e3f35c7cdcfcc19a36fb9e6a5e35b0a379153.json",
+        "sha256": "092a92c0d6685b735693dcb93091549d952253cc29eba70dd046f2ac227d06f6"
+      },
+      "complete_for_query": true,
+      "query": "AF148322",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T12:12:26.433125+00:00",
+      "sha256": "389f0add34c123a843264ac3dfb9afe1574a6f4993467a7287da67f10346d348",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=AF148322&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-8bfaecd153fb4564038671bb211e035f29eae8257515c094a26adbc9dcb931ef.json",
+        "sha256": "49befd0aa2b0a9d3f4a0b94a484596542a0d50b51a715a73deb9855edffce4bb"
+      },
+      "complete_for_query": true,
+      "query": "gene_exact:zbmA",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T12:12:11.506663+00:00",
+      "sha256": "3d677bf350034b8ffc9569990f22c33bd9c67eb428011a165b17b37ec43552a8",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AzbmA&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-a4c4f7750f424d22dd4226532e05fd5e996a5388a8fbaae4e888a8e7f86881cb.json",
+        "sha256": "5092e1fe26756e0e57434f3e0dd9510d4d340f0a9385d1615c8d986eabe7e65e"
+      },
+      "complete_for_query": true,
+      "query": "gene_exact:efrT",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T12:12:22.815442+00:00",
+      "sha256": "2674eed0e1d2a04dc8f0c81c390e72a63eaa8c2442fa978746c7d1337fc4922f",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AefrT&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-b923895aae86c7af246008a388bd427a3aa8f52027060aeb20f4de652b080fff.json",
+        "sha256": "355b9a21c00efefd3ab03d3c41c9313ff340f03767f26abd12732712c90f25bf"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:13:33.045793+00:00",
+      "sha256": "78b0b694ff35e87d8ddd2bf7296074c32f2af7a7d3271223db876bcebdd6be8e",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/48665"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-cc4757f7a3aad90f67df166a8d2745b5347fbcbc3f71acb34c15b6a05c2c9085.json",
+        "sha256": "a8c10f9d995195085dd82d3f5340d5aebb69bce05e4e927a25f87ef8dbe82de3"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:12:40.014119+00:00",
+      "sha256": "cba58cb4db516cfdf851482ee4569ba2483b98b1d599b11a875736918e33aa4c",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/28893"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-d6a9a866ad38e1b1d35567514c1ee6465963b82a2309e450cd0611656288ffc7.json",
+        "sha256": "ae54b3175d1589f5b4cf0ad7c663ad9d39dfddf37b5098d9f23edd68a848950c"
+      },
+      "complete_for_query": true,
+      "query": "valanimycin",
+      "release": "2026_03",
+      "result_count": 25,
+      "retrieved_at": "2026-10-09T12:13:12.460499+00:00",
+      "sha256": "573c1461f3dd659004f11ac73f73db572833020be4472ed56464ddf55356e675",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=valanimycin&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-da06cb8d60164706e75e4b4c9214d24468b959f633c1001d30a2825e01157a22.json",
+        "sha256": "fb2dcb1a842b8b488121895fe35952a35c3a1700e06ded1914803a05c7a8d922"
+      },
+      "complete_for_query": true,
+      "query": "efrotomycin",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T12:13:36.461520+00:00",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=efrotomycin&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-producer-genes/request-e3e8950c02152661f7767b322ee46ae9881655626a16b25eb2538aaf4c493792.json",
+        "sha256": "bb1c06f1f0630bdadec710ed84f9a2e336e498473a4481619ef2dfe7802b7316"
+      },
+      "complete_for_query": true,
+      "query": "gene_exact:vlmF",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-09T12:11:57.388567+00:00",
+      "sha256": "17d5413ac3dc6a7672935800dbcb08fb2d81b418199afa5f45b9894204f1aee4",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AvlmF&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion",
+      "zero_results_establish_absence": false
+    }
+  ]
+}

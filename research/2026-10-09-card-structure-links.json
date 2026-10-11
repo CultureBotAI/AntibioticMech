@@ -1,0 +1,1391 @@
+{
+  "attribution": {
+    "documentation": "https://data.rcsb.org/",
+    "ontology": {
+      "ontology_license": "CC-BY-4.0",
+      "ontology_license_url": "https://github.com/arpcard/aro/blob/0225daaf01b1336fc6e866989b4835b89afa40d8/LICENSE",
+      "source": "CARD curation team, Antibiotic Resistance Ontology; UniProt Consortium"
+    },
+    "protein_metadata": "UniProt Consortium, CC BY 4.0",
+    "structure_metadata": "RCSB PDB / wwPDB, CC0"
+  },
+  "coverage": {
+    "direct_xref_namespace_counts": {
+      "PDB": 6
+    },
+    "scan_scope": "DIRECT_HAS_DB_XREF_ON_UNLINKED_NAMED_CLASSES_ONLY_NO_ANCESTOR_INHERITANCE",
+    "terms_without_direct_xrefs": 1018,
+    "unlinked_terms_scanned": 1024
+  },
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-09-canthin-resistance-grounding.tsv",
+      "sha256": "0ca15b8dac7b4cb77a67d60337e2cdc8a86d8a0061fc7199af0a3116d0ffe08c"
+    },
+    "reference_audit": {
+      "path": "research/2026-10-07-card-reference-grounding.json",
+      "sha256": "bf01b0fef65240d2d1daf8298398ae171194420c0093a7aad2c9ba318b9b5961"
+    },
+    "reference_ledger": {
+      "path": "research/2026-10-07-card-reference-ledger.tsv",
+      "sha256": "5b0e0fb215fd4113e3ceb5507d008b792c63c9e4eaf28cec1be2148919491356"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "term_scope": {
+      "path": "research/2026-10-09-card-term-scope.json",
+      "sha256": "4de3f3c046e5f6822d0ed738906baf20089c712edaf493e32fff5551af040acd"
+    }
+  },
+  "limitations": [
+    "An explicit ontology structure link and reciprocal UniProt reference identify database context, not an exact allele.",
+    "Source organisms remain entity-specific; a peptide's source is not the enzyme's organism.",
+    "Reference taxonomy is not the tested isolate, host, strain, genome or clinical susceptibility.",
+    "PDB primary citations are discovery leads; their Results and supplements have not been reviewed in this audit.",
+    "No ancestor, child, name-only or homology join is used, and no source assertion is replaced.",
+    "Missing direct xrefs in this pinned snapshot do not establish absence from other resources or absence of resistance.",
+    "No NCBI request, source adoption, card.json request, sequence comparison or biological curation occurred.",
+    "The public export contains no sequences, variant specifications, protocols, coordinates or quantitative AST.",
+    "This audit does not change the original direct UniProt CARD-cross-reference coverage counts."
+  ],
+  "links": {
+    "ARO:3000309": {
+      "context_review": {
+        "decision": "REFERENCE_CONTEXT_ONLY",
+        "evidence_scope": "DATABASE_METADATA_AND_DEPOSITION_PAGE_NOT_PRIMARY_RESULTS",
+        "note": "The linked structure is an EmrD reference. The UniProt entry denotes K12, whereas the PDB entity source denotes the species; neither identifies a tested resistance isolate.",
+        "source_url": "https://www.rcsb.org/structure/2GFP"
+      },
+      "experimental_assignment": false,
+      "primary_review_status": "PENDING",
+      "scope": "DATABASE_STRUCTURE_REFERENCE_PATH_NOT_EXPERIMENTAL_ALLELE_OR_RESISTANCE_ASSIGNMENT",
+      "source_label": "emrD",
+      "source_xrefs": [
+        "PDB:2GFP"
+      ],
+      "structures": [
+        {
+          "entities": [
+            {
+              "entity_id": "2GFP_1",
+              "other_reference_identifiers": [],
+              "reference_accessions": [
+                "UniProtKB:P31442"
+              ],
+              "source_organisms": [
+                {
+                  "ncbi_taxonomy_id": 562,
+                  "scientific_name": "Escherichia coli"
+                }
+              ]
+            }
+          ],
+          "pdb_id": "2GFP",
+          "primary_citation": {
+            "pdbx_database_id_DOI": "10.1126/science.1125629",
+            "pdbx_database_id_PubMed": 16675700,
+            "year": 2006
+          },
+          "request": {
+            "cache": {
+              "path": "reports/resistance-grounding-2026-10-09-card-structures/pdb-2GFP.json",
+              "sha256": "eadf8c9a7c40a8461e4a3a5b6ce423280daa821f7fabda546a899daa61d449c9"
+            },
+            "retrieved_at": "2026-10-09T13:55:06.220878+00:00",
+            "sha256": "ea7f765d5bfa8c12a3a5bad6e43398227750abad20ec9dd256f90af43e4d2ef7",
+            "status": 200,
+            "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%222GFP%22%5D%29+%7B%0A++++++rcsb_id%0A++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++polymer_entities+%7B%0A++++++++rcsb_id%0A++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++++++%7D%0A++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++%7D%0A++++%7D%7D"
+          },
+          "revision": {
+            "major_revision": 1,
+            "minor_revision": 3,
+            "revision_date": "2024-02-14T00:00:00Z"
+          }
+        }
+      ]
+    },
+    "ARO:3000866": {
+      "context_review": {
+        "decision": "REFERENCE_CONTEXT_ONLY",
+        "evidence_scope": "DATABASE_METADATA_AND_DEPOSITION_PAGE_NOT_PRIMARY_RESULTS",
+        "note": "The explicit structural reference and UniProt gene annotation agree on oleI. This does not establish an exact experimental allele or whole-cell phenotype.",
+        "source_url": "https://www.rcsb.org/structure/2IYA"
+      },
+      "experimental_assignment": false,
+      "primary_review_status": "PENDING",
+      "scope": "DATABASE_STRUCTURE_REFERENCE_PATH_NOT_EXPERIMENTAL_ALLELE_OR_RESISTANCE_ASSIGNMENT",
+      "source_label": "oleI",
+      "source_xrefs": [
+        "PDB:2IYA"
+      ],
+      "structures": [
+        {
+          "entities": [
+            {
+              "entity_id": "2IYA_1",
+              "other_reference_identifiers": [],
+              "reference_accessions": [
+                "UniProtKB:Q3HTL7"
+              ],
+              "source_organisms": [
+                {
+                  "ncbi_taxonomy_id": 1890,
+                  "scientific_name": "STREPTOMYCES ANTIBIOTICUS"
+                }
+              ]
+            }
+          ],
+          "pdb_id": "2IYA",
+          "primary_citation": {
+            "pdbx_database_id_DOI": "10.1073/PNAS.0607897104",
+            "pdbx_database_id_PubMed": 17376874,
+            "year": 2007
+          },
+          "request": {
+            "cache": {
+              "path": "reports/resistance-grounding-2026-10-09-card-structures/pdb-2IYA.json",
+              "sha256": "669672921a13cc65d934214a70da368b4546857ec16d9fc5c25ced73f23470e5"
+            },
+            "retrieved_at": "2026-10-09T13:55:16.660070+00:00",
+            "sha256": "18da7aaf883df5073ea825401f0ed98a12d3882b1ffbd4c4ad576a9eac6d9287",
+            "status": 200,
+            "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%222IYA%22%5D%29+%7B%0A++++++rcsb_id%0A++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++polymer_entities+%7B%0A++++++++rcsb_id%0A++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++++++%7D%0A++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++%7D%0A++++%7D%7D"
+          },
+          "revision": {
+            "major_revision": 1,
+            "minor_revision": 4,
+            "revision_date": "2024-05-08T00:00:00Z"
+          }
+        }
+      ]
+    },
+    "ARO:3001307": {
+      "context_review": {
+        "decision": "INACTIVE_STRUCTURAL_REFERENCE_NOT_RESISTANCE_SUBJECT",
+        "evidence_scope": "DATABASE_METADATA_AND_DEPOSITION_PAGE_NOT_PRIMARY_RESULTS",
+        "note": "The deposition page identifies an inactive enzyme structure. Its UniProt reference uses vgb, not the ARO label vgbA. A second polymer entity has no UniProt reference and has a different source organism; it must not supply the enzyme's taxon.",
+        "source_url": "https://www.rcsb.org/structure/2Z2P"
+      },
+      "experimental_assignment": false,
+      "primary_review_status": "PENDING",
+      "scope": "DATABASE_STRUCTURE_REFERENCE_PATH_NOT_EXPERIMENTAL_ALLELE_OR_RESISTANCE_ASSIGNMENT",
+      "source_label": "vgbA",
+      "source_xrefs": [
+        "PDB:2Z2P"
+      ],
+      "structures": [
+        {
+          "entities": [
+            {
+              "entity_id": "2Z2P_1",
+              "other_reference_identifiers": [],
+              "reference_accessions": [
+                "UniProtKB:P17978"
+              ],
+              "source_organisms": [
+                {
+                  "ncbi_taxonomy_id": 1280,
+                  "scientific_name": "Staphylococcus aureus"
+                }
+              ]
+            },
+            {
+              "entity_id": "2Z2P_2",
+              "other_reference_identifiers": [],
+              "reference_accessions": [],
+              "source_organisms": [
+                {
+                  "ncbi_taxonomy_id": 68212,
+                  "scientific_name": "STREPTOMYCES GRAMINOFACIEN"
+                }
+              ]
+            }
+          ],
+          "pdb_id": "2Z2P",
+          "primary_citation": {
+            "pdbx_database_id_DOI": "10.1073/PNAS.0701809104",
+            "pdbx_database_id_PubMed": 17563376,
+            "year": 2007
+          },
+          "request": {
+            "cache": {
+              "path": "reports/resistance-grounding-2026-10-09-card-structures/pdb-2Z2P.json",
+              "sha256": "49a5324fdd33c348421b6e4a709c9e91a90f24d4aa0927449f22ffc310be9360"
+            },
+            "retrieved_at": "2026-10-09T13:55:19.213237+00:00",
+            "sha256": "826b9952e8fc10a67f1b776475541d329c5a832b7d387156d6e69cc5a1a7fcb6",
+            "status": 200,
+            "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%222Z2P%22%5D%29+%7B%0A++++++rcsb_id%0A++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++polymer_entities+%7B%0A++++++++rcsb_id%0A++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++++++%7D%0A++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++%7D%0A++++%7D%7D"
+          },
+          "revision": {
+            "major_revision": 3,
+            "minor_revision": 0,
+            "revision_date": "2024-07-10T00:00:00Z"
+          }
+        }
+      ]
+    },
+    "ARO:3002547": {
+      "context_review": {
+        "decision": "EXACT_ALLELE_NOT_RESOLVED_BY_STRUCTURE",
+        "evidence_scope": "DATABASE_METADATA_AND_DEPOSITION_PAGE_NOT_PRIMARY_RESULTS",
+        "note": "The PDB literature abstract distinguishes the wild-type structures from the bifunctional variant model. The UniProt entry aggregates several source gene names. Neither the structural link nor those synonyms establishes the exact ARO allele.",
+        "source_url": "https://www.rcsb.org/structure/1V0C"
+      },
+      "experimental_assignment": false,
+      "primary_review_status": "PENDING",
+      "scope": "DATABASE_STRUCTURE_REFERENCE_PATH_NOT_EXPERIMENTAL_ALLELE_OR_RESISTANCE_ASSIGNMENT",
+      "source_label": "AAC(6')-Ib-cr1",
+      "source_xrefs": [
+        "PDB:1V0C"
+      ],
+      "structures": [
+        {
+          "entities": [
+            {
+              "entity_id": "1V0C_1",
+              "other_reference_identifiers": [],
+              "reference_accessions": [
+                "UniProtKB:Q6SJ71"
+              ],
+              "source_organisms": [
+                {
+                  "ncbi_taxonomy_id": 562,
+                  "scientific_name": "ESCHERICHIA COLI"
+                }
+              ]
+            }
+          ],
+          "pdb_id": "1V0C",
+          "primary_citation": {
+            "pdbx_database_id_DOI": "10.1021/BI800664X",
+            "pdbx_database_id_PubMed": 18710261,
+            "year": 2008
+          },
+          "request": {
+            "cache": {
+              "path": "reports/resistance-grounding-2026-10-09-card-structures/pdb-1V0C.json",
+              "sha256": "0b28fd7c69276d5bfbffba21fff780d429dad1363cb26f04f1e3575120371c41"
+            },
+            "retrieved_at": "2026-10-09T13:55:21.992041+00:00",
+            "sha256": "6d1bdbd7476121fc272cd7958dc2c5da219a9d792aeccf41e9566ecf8cc73342",
+            "status": 200,
+            "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%221V0C%22%5D%29+%7B%0A++++++rcsb_id%0A++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++polymer_entities+%7B%0A++++++++rcsb_id%0A++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++++++%7D%0A++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++%7D%0A++++%7D%7D"
+          },
+          "revision": {
+            "major_revision": 1,
+            "minor_revision": 4,
+            "revision_date": "2024-05-08T00:00:00Z"
+          }
+        }
+      ]
+    },
+    "ARO:3002637": {
+      "context_review": {
+        "decision": "NOMENCLATURE_REVIEW_REQUIRED",
+        "evidence_scope": "DATABASE_METADATA_AND_DEPOSITION_PAGE_NOT_PRIMARY_RESULTS",
+        "note": "The ARO and PDB labels use IVa, while the current UniProt gene annotation uses Id. The reciprocal accession link is verified, but this audit does not establish a nomenclature equivalence or an experimental allele.",
+        "source_url": "https://www.rcsb.org/structure/3N4T"
+      },
+      "experimental_assignment": false,
+      "primary_review_status": "PENDING",
+      "scope": "DATABASE_STRUCTURE_REFERENCE_PATH_NOT_EXPERIMENTAL_ALLELE_OR_RESISTANCE_ASSIGNMENT",
+      "source_label": "APH(2'')-IVa",
+      "source_xrefs": [
+        "PDB:3N4T"
+      ],
+      "structures": [
+        {
+          "entities": [
+            {
+              "entity_id": "3N4T_1",
+              "other_reference_identifiers": [],
+              "reference_accessions": [
+                "UniProtKB:O68183"
+              ],
+              "source_organisms": [
+                {
+                  "ncbi_taxonomy_id": 37734,
+                  "scientific_name": "Enterococcus casseliflavus"
+                }
+              ]
+            }
+          ],
+          "pdb_id": "3N4T",
+          "primary_citation": {
+            "pdbx_database_id_DOI": "10.1002/pro.437",
+            "pdbx_database_id_PubMed": 20556826,
+            "year": 2010
+          },
+          "request": {
+            "cache": {
+              "path": "reports/resistance-grounding-2026-10-09-card-structures/pdb-3N4T.json",
+              "sha256": "5560cce7be5e88fb271a2098260ae23a393e2f7677ed14e01cbf6cfdf12a21ae"
+            },
+            "retrieved_at": "2026-10-09T13:55:24.938571+00:00",
+            "sha256": "b4863bcc3349425c3361b237f9d45e6b7257eb81cb2dc8525ef26b6315ea2a43",
+            "status": 200,
+            "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%223N4T%22%5D%29+%7B%0A++++++rcsb_id%0A++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++polymer_entities+%7B%0A++++++++rcsb_id%0A++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++++++%7D%0A++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++%7D%0A++++%7D%7D"
+          },
+          "revision": {
+            "major_revision": 1,
+            "minor_revision": 3,
+            "revision_date": "2024-02-21T00:00:00Z"
+          }
+        }
+      ]
+    },
+    "ARO:3004042": {
+      "context_review": {
+        "decision": "REJECT_FOCAL_ORGANISM_ASSIGNMENT",
+        "evidence_scope": "DATABASE_METADATA_AND_DEPOSITION_PAGE_NOT_PRIMARY_RESULTS",
+        "note": "The ARO label denotes Enterobacter cloacae acrA, but the PDB entity is Escherichia coli and UniProt denotes E. coli K12. UniProt explicitly links a different CARD term, ARO:3004043. Keep the ontology structure cross-reference, but reject its use as the focal organism's protein or an exact resistance allele.",
+        "source_url": "https://www.rcsb.org/structure/2F1M"
+      },
+      "experimental_assignment": false,
+      "primary_review_status": "PENDING",
+      "scope": "DATABASE_STRUCTURE_REFERENCE_PATH_NOT_EXPERIMENTAL_ALLELE_OR_RESISTANCE_ASSIGNMENT",
+      "source_label": "Enterobacter cloacae acrA",
+      "source_xrefs": [
+        "PDB:2F1M"
+      ],
+      "structures": [
+        {
+          "entities": [
+            {
+              "entity_id": "2F1M_1",
+              "other_reference_identifiers": [],
+              "reference_accessions": [
+                "UniProtKB:P0AE06"
+              ],
+              "source_organisms": [
+                {
+                  "ncbi_taxonomy_id": 562,
+                  "scientific_name": "Escherichia coli"
+                }
+              ]
+            }
+          ],
+          "pdb_id": "2F1M",
+          "primary_citation": {
+            "pdbx_database_id_DOI": "10.1016/j.str.2005.11.015",
+            "pdbx_database_id_PubMed": 16531241,
+            "year": 2006
+          },
+          "request": {
+            "cache": {
+              "path": "reports/resistance-grounding-2026-10-09-card-structures/pdb-2F1M.json",
+              "sha256": "b5f61234beb1ecbd13875fe65f943da406fb0fde17722e98d1a8cef8db22433c"
+            },
+            "retrieved_at": "2026-10-09T13:55:30.385229+00:00",
+            "sha256": "d719b8af67abf4d20782d96e0528be8234e161d153ea31f430db087bf2fbcefc",
+            "status": 200,
+            "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%222F1M%22%5D%29+%7B%0A++++++rcsb_id%0A++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++polymer_entities+%7B%0A++++++++rcsb_id%0A++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++++++%7D%0A++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++%7D%0A++++%7D%7D"
+          },
+          "revision": {
+            "major_revision": 1,
+            "minor_revision": 5,
+            "revision_date": "2024-11-20T00:00:00Z"
+          }
+        }
+      ]
+    }
+  },
+  "ontology": {
+    "bytes": 12743305,
+    "retrieved_at": "2026-10-09T03:46:12.617393+00:00",
+    "sha256": "0207b9156898d011cff6397a1cf5b0e178ce7806222c73de875b57a0d0e6b6fc",
+    "status": 200,
+    "url": "https://raw.githubusercontent.com/arpcard/aro/0225daaf01b1336fc6e866989b4835b89afa40d8/aro.owl"
+  },
+  "ontology_cache": {
+    "path": "reports/resistance-grounding-2026-10-07/aro-term-scope-aro.owl-0225daaf01b1336fc6e866989b4835b89afa40d8.json",
+    "sha256": "bc6f97f0667de538177bae19f6369248065624c226c9e9e87dead18b1f5cd64e"
+  },
+  "proteins": {
+    "UniProtKB:O68183": {
+      "accession": "UniProtKB:O68183",
+      "card_cross_reference_ids": [],
+      "citation_ids": [
+        "PMID:20556826",
+        "PMID:21678960",
+        "PMID:22195561",
+        "PMID:22371504",
+        "PMID:26802312",
+        "PMID:29634241",
+        "PMID:39801466",
+        "PMID:41310159",
+        "PMID:41345223",
+        "PMID:9593155"
+      ],
+      "entry_audit": {
+        "entryVersion": 113,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "gene_symbols": [
+        "aph(2'')-Id"
+      ],
+      "pdb_cross_reference_ids": [
+        "3N4T",
+        "3N4U",
+        "3N4V",
+        "3SG8",
+        "3SG9",
+        "3SGC",
+        "4DBX",
+        "4DE4",
+        "4DFB",
+        "4DFU",
+        "4DT8",
+        "4DT9",
+        "4DTA",
+        "4DTB",
+        "4N57",
+        "5C4K",
+        "5C4L",
+        "6CD7",
+        "9H2Z",
+        "9QMR",
+        "9QN6",
+        "9QNN",
+        "9QNQ",
+        "9QNS",
+        "9QNW",
+        "9QNX",
+        "9QNY",
+        "9QOC",
+        "9QOD",
+        "9QOE",
+        "9QOI",
+        "9QOK",
+        "9QOL",
+        "9QOM",
+        "9QOR",
+        "9QOT",
+        "9QOU",
+        "9QOW",
+        "9QOX",
+        "9QOZ",
+        "9QP0",
+        "9QP1",
+        "9QP2",
+        "9QP3",
+        "9QP5",
+        "9QP6",
+        "9QP7",
+        "9QP9",
+        "9QPA",
+        "9QPB",
+        "9QPD",
+        "9QPL",
+        "9RL1"
+      ],
+      "reference_taxon_id": "NCBITaxon:37734",
+      "reference_taxon_label": "Enterococcus casseliflavus"
+    },
+    "UniProtKB:P0AE06": {
+      "accession": "UniProtKB:P0AE06",
+      "card_cross_reference_ids": [
+        "ARO:3004043"
+      ],
+      "citation_ids": [
+        "PMID:10920254",
+        "PMID:15228545",
+        "PMID:16079137",
+        "PMID:16531241",
+        "PMID:16738553",
+        "PMID:22308040",
+        "PMID:23010927",
+        "PMID:28355133",
+        "PMID:31201302",
+        "PMID:36070489",
+        "PMID:39809273",
+        "PMID:7651136",
+        "PMID:8407802",
+        "PMID:9278503",
+        "PMID:9878415"
+      ],
+      "entry_audit": {
+        "entryVersion": 154,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene_symbols": [
+        "acrA"
+      ],
+      "pdb_cross_reference_ids": [
+        "2F1M",
+        "5NG5",
+        "5O66",
+        "5V5S",
+        "9TG4",
+        "9V53",
+        "9V55"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "reference_taxon_label": "Escherichia coli (strain K12)"
+    },
+    "UniProtKB:P17978": {
+      "accession": "UniProtKB:P17978",
+      "card_cross_reference_ids": [],
+      "citation_ids": [
+        "PMID:10489330",
+        "PMID:11467949",
+        "PMID:17563376",
+        "PMID:3149758"
+      ],
+      "entry_audit": {
+        "entryVersion": 97,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene_symbols": [
+        "vgb"
+      ],
+      "pdb_cross_reference_ids": [
+        "2Z2N",
+        "2Z2O",
+        "2Z2P"
+      ],
+      "reference_taxon_id": "NCBITaxon:1280",
+      "reference_taxon_label": "Staphylococcus aureus"
+    },
+    "UniProtKB:P31442": {
+      "accession": "UniProtKB:P31442",
+      "card_cross_reference_ids": [],
+      "citation_ids": [
+        "PMID:15919996",
+        "PMID:16738553",
+        "PMID:7686882",
+        "PMID:8240355",
+        "PMID:9278503"
+      ],
+      "entry_audit": {
+        "entryVersion": 174,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "gene_symbols": [
+        "emrD"
+      ],
+      "pdb_cross_reference_ids": [
+        "2GFP"
+      ],
+      "reference_taxon_id": "NCBITaxon:83333",
+      "reference_taxon_label": "Escherichia coli (strain K12)"
+    },
+    "UniProtKB:Q3HTL7": {
+      "accession": "UniProtKB:Q3HTL7",
+      "card_cross_reference_ids": [],
+      "citation_ids": [
+        "PMID:15984838",
+        "PMID:17376874"
+      ],
+      "entry_audit": {
+        "entryVersion": 79,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "gene_symbols": [
+        "oleI"
+      ],
+      "pdb_cross_reference_ids": [
+        "2IYA"
+      ],
+      "reference_taxon_id": "NCBITaxon:1890",
+      "reference_taxon_label": "Streptomyces antibioticus"
+    },
+    "UniProtKB:Q6SJ71": {
+      "accession": "UniProtKB:Q6SJ71",
+      "card_cross_reference_ids": [],
+      "citation_ids": [
+        "PMID:15388431",
+        "PMID:16369542",
+        "PMID:18710261",
+        "PMID:21859935",
+        "PMID:22223228",
+        "PMID:22511964",
+        "PMID:23988630",
+        "PMID:24594606",
+        "PMID:25753630",
+        "PMID:26392506"
+      ],
+      "entry_audit": {
+        "entryVersion": 156,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "gene_symbols": [
+        "AAC(6')-Ib"
+      ],
+      "pdb_cross_reference_ids": [
+        "1V0C",
+        "2BUE",
+        "2VQY"
+      ],
+      "reference_taxon_id": "NCBITaxon:562",
+      "reference_taxon_label": "Escherichia coli"
+    }
+  },
+  "records": [
+    {
+      "aro_ids": [
+        "ARO:3002547",
+        "ARO:3002637"
+      ],
+      "identifier": "CHEBI:2637",
+      "label": "amikacin",
+      "path": "data/antibiotics/antibacterial/amikacin.yaml",
+      "sha256": "8391a6c8efb2240012e1800d45ca715f729218336c3f5c976c5e8747ee3be930",
+      "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3000309"
+      ],
+      "identifier": "CHEBI:17698",
+      "label": "chloramphenicol",
+      "path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+      "sha256": "b8acca553963ce724506af3e6001e8aacc882f0a8c4af63fe29638c154ff7162",
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002547"
+      ],
+      "identifier": "CHEBI:100241",
+      "label": "ciprofloxacin",
+      "path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002637"
+      ],
+      "identifier": "CHEBI:28418",
+      "label": "gentamycin A",
+      "path": "data/antibiotics/antibacterial/gentamycin-a.yaml",
+      "sha256": "30ac6f1f487c2b3a9a3d038d50c6bc86d8cd091ccb903b2b49c0fddae9771441",
+      "standard_inchi_key": "LKKVGKXCMYHKSL-LLZRLKDCSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002547",
+        "ARO:3002637"
+      ],
+      "identifier": "CHEBI:17630",
+      "label": "kanamycin A",
+      "path": "data/antibiotics/antibacterial/kanamycin-a.yaml",
+      "sha256": "ae1f4597070b1e1878d7e4454a53bcbcf0e5187bfa8b39940e73cd76f1bbcc38",
+      "standard_inchi_key": "SBUJHOSQTJFQJX-NOAMYHISSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3000866"
+      ],
+      "identifier": "CHEBI:16869",
+      "label": "oleandomycin",
+      "path": "data/antibiotics/antibacterial/oleandomycin.yaml",
+      "sha256": "6c823de3739d928112615c8a4b2557d0be876a6d262184fad2c85a7f192cfb15",
+      "standard_inchi_key": "RZPAKFUAFGMUPI-QESOVKLGSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "antibioticmech:aro-f4906250fc",
+      "label": "ostreogrycin B3",
+      "path": "data/antibiotics/antibacterial/ostreogrycin-b3.yaml",
+      "sha256": "7a5b88673741d8c01a885013c188d17f154fd1f98cd6c1a979d3d6deb0a8f575",
+      "standard_inchi_key": "YGXCETJZBDTKRY-FULBRLTBSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "antibioticmech:aro-2ea67cad76",
+      "label": "patricin A",
+      "path": "data/antibiotics/antibacterial/patricin-a.yaml",
+      "sha256": "fb765cce6bb171e6be11769b37d270d7046864f095a34499fecc7654a987b177",
+      "standard_inchi_key": "HASLPZZCXDUQET-OTXZUHDPSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "antibioticmech:aro-0aefa62f74",
+      "label": "patricin B",
+      "path": "data/antibiotics/antibacterial/patricin-b.yaml",
+      "sha256": "24fe977fbb934235e1bba3cf6a7c794b6db738d23ebcfbc148ba60f12a31f3c1",
+      "standard_inchi_key": "HASLPZZCXDUQET-OTXZUHDPSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "CHEBI:8417",
+      "label": "pristinamycin IA",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ia.yaml",
+      "sha256": "48ce58e40c27acd5d72dc044ad9d8ec4ebe4815f68e9a2796d725693b9ca66ad",
+      "standard_inchi_key": "YGXCETJZBDTKRY-DZCVGBHJSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "CHEBI:8418",
+      "label": "pristinamycin IB",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ib.yaml",
+      "sha256": "2658e30a7c30bda500edae25353957a15a096084773ff589e5316ca8e833d925",
+      "standard_inchi_key": "PCOXSOQWQVRJCH-UHFFFAOYSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "antibioticmech:aro-a324312fa2",
+      "label": "pristinamycin IC",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ic.yaml",
+      "sha256": "a751ebbe87e52622bfe10cb1f322309e1c5bfd1a3685a343c406dc29792541b4",
+      "standard_inchi_key": "BYRKDHSWMQLYJB-UHFFFAOYSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "CHEBI:8732",
+      "label": "quinupristin",
+      "path": "data/antibiotics/antibacterial/quinupristin.yaml",
+      "sha256": "967ba62d716c63cbfbaae4ef73bcb94c3932d6b96177ade545bed3d47e0f83b6",
+      "standard_inchi_key": "WTHRRGMBUAHGNI-MJWHERSYSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3004042"
+      ],
+      "identifier": "CHEBI:149836",
+      "label": "tigecycline",
+      "path": "data/antibiotics/antibacterial/tigecycline.yaml",
+      "sha256": "ae6e16a2a47b26efd26dd8a6f0b215fcda1a04e79a09414c333fbd0e40b21c31",
+      "standard_inchi_key": "FPZLLRFZJZRHSY-HJYUBDRYSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3002547",
+        "ARO:3002637"
+      ],
+      "identifier": "CHEBI:28864",
+      "label": "tobramycin",
+      "path": "data/antibiotics/antibacterial/tobramycin.yaml",
+      "sha256": "c5345d9b0ca08f480c6fe8df7c58431f300ef6782e464ee4f266e399f8ce178a",
+      "standard_inchi_key": "NLVFBUXFDBBNBW-PBSUHMDJSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "antibioticmech:aro-6536d0e3bb",
+      "label": "vernamycin C",
+      "path": "data/antibiotics/antibacterial/vernamycin-c.yaml",
+      "sha256": "87f33ad5b707a4aa96ab151bb77cef1d3d8dfc004fe71a782fefb2b542b0c4a3",
+      "standard_inchi_key": "PCRZFPGJPKPMQB-LNQSXZRDSA-N"
+    },
+    {
+      "aro_ids": [
+        "ARO:3001307"
+      ],
+      "identifier": "antibioticmech:aro-2a1d8b8631",
+      "label": "virginiamycin S2",
+      "path": "data/antibiotics/antibacterial/virginiamycin-s2.yaml",
+      "sha256": "6104bdf05c531995cf11c2cf82a160674760160ca1fee0cb706692ea243f5f86",
+      "standard_inchi_key": "LRSRCZBNIGNEHL-NTXCPLLSSA-N"
+    }
+  ],
+  "scope": "DATABASE_STRUCTURE_REFERENCE_PATH_NOT_EXPERIMENTAL_ALLELE_OR_RESISTANCE_ASSIGNMENT",
+  "selection": "ALL_DIRECT_PDB_LINKS",
+  "summary": {
+    "biological_record_changes": 0,
+    "corpus_records_verified": 2939,
+    "curation_events_added": 0,
+    "full_corpus_primary_review": "OPEN",
+    "ignored_files_included": true,
+    "record_memberships": 20,
+    "reference_proteins": 6,
+    "selected_records_loaded": 17,
+    "selected_terms": 6,
+    "whole_records_completed": 0
+  },
+  "taxonomy": {
+    "1280": {
+      "active": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "commonName": "firmicutes",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "synonyms": [
+            "Firmicutes"
+          ],
+          "taxonId": 1239
+        },
+        {
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Bacilli",
+          "taxonId": 91061
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Caryophanales",
+          "taxonId": 1385
+        },
+        {
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Staphylococcaceae",
+          "taxonId": 90964
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Staphylococcus",
+          "taxonId": 1279
+        }
+      ],
+      "parent": {
+        "scientificName": "Staphylococcus",
+        "taxonId": 1279
+      },
+      "rank": "species",
+      "scientificName": "Staphylococcus aureus",
+      "taxonId": 1280
+    },
+    "1890": {
+      "active": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "commonName": "actinobacteria",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "synonyms": [
+            "Actinobacteria"
+          ],
+          "taxonId": 201174
+        },
+        {
+          "commonName": "high G+C Gram-positive bacteria",
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Kitasatosporales",
+          "taxonId": 85011
+        },
+        {
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Streptomycetaceae",
+          "taxonId": 2062
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Streptomyces",
+          "taxonId": 1883
+        }
+      ],
+      "parent": {
+        "scientificName": "Streptomyces",
+        "taxonId": 1883
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces antibioticus",
+      "taxonId": 1890
+    },
+    "37734": {
+      "active": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "commonName": "firmicutes",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "synonyms": [
+            "Firmicutes"
+          ],
+          "taxonId": 1239
+        },
+        {
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Bacilli",
+          "taxonId": 91061
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Lactobacillales",
+          "taxonId": 186826
+        },
+        {
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Enterococcaceae",
+          "taxonId": 81852
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Enterococcus",
+          "taxonId": 1350
+        }
+      ],
+      "parent": {
+        "scientificName": "Enterococcus",
+        "taxonId": 1350
+      },
+      "rank": "species",
+      "scientificName": "Enterococcus casseliflavus",
+      "taxonId": 37734
+    },
+    "562": {
+      "active": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "commonName": "proteobacteria",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "commonName": "g-proteobacteria",
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Enterobacterales",
+          "taxonId": 91347
+        },
+        {
+          "commonName": "enterobacteria",
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Enterobacteriaceae",
+          "taxonId": 543
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Escherichia",
+          "taxonId": 561
+        }
+      ],
+      "parent": {
+        "scientificName": "Escherichia",
+        "taxonId": 561
+      },
+      "rank": "species",
+      "scientificName": "Escherichia coli",
+      "taxonId": 562
+    },
+    "68212": {
+      "active": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "commonName": "actinobacteria",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "synonyms": [
+            "Actinobacteria"
+          ],
+          "taxonId": 201174
+        },
+        {
+          "commonName": "high G+C Gram-positive bacteria",
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Kitasatosporales",
+          "taxonId": 85011
+        },
+        {
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Streptomycetaceae",
+          "taxonId": 2062
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Streptomyces",
+          "taxonId": 1883
+        },
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "Streptomyces griseus group",
+          "taxonId": 629295
+        },
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "Streptomyces halstedii subgroup",
+          "taxonId": 1482599
+        }
+      ],
+      "parent": {
+        "scientificName": "Streptomyces halstedii subgroup",
+        "taxonId": 1482599
+      },
+      "rank": "species",
+      "scientificName": "Streptomyces graminofaciens",
+      "taxonId": 68212
+    },
+    "83333": {
+      "active": true,
+      "lineage": [
+        {
+          "hidden": true,
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "commonName": "bacteria",
+          "hidden": false,
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "hidden": false,
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "commonName": "proteobacteria",
+          "hidden": false,
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "commonName": "g-proteobacteria",
+          "hidden": false,
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "hidden": false,
+          "rank": "order",
+          "scientificName": "Enterobacterales",
+          "taxonId": 91347
+        },
+        {
+          "commonName": "enterobacteria",
+          "hidden": false,
+          "rank": "family",
+          "scientificName": "Enterobacteriaceae",
+          "taxonId": 543
+        },
+        {
+          "hidden": false,
+          "rank": "genus",
+          "scientificName": "Escherichia",
+          "taxonId": 561
+        },
+        {
+          "hidden": true,
+          "rank": "species",
+          "scientificName": "Escherichia coli",
+          "taxonId": 562
+        }
+      ],
+      "parent": {
+        "scientificName": "Escherichia coli",
+        "taxonId": 562
+      },
+      "rank": "strain",
+      "scientificName": "Escherichia coli (strain K12)",
+      "taxonId": 83333
+    }
+  },
+  "uniprot_release": "2026_03",
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-1ca6ef9df4c44eab8a91e1717ed25c7bfdb107ee809f24f04316cf5dffe04e7a.json",
+        "sha256": "fb9c050d740e41de78f641101133bec3a293074b7f6e61243cca911d53c87d98"
+      },
+      "complete_for_query": true,
+      "kind": "EXACT_ACCESSION_METADATA",
+      "query": "accession:Q6SJ71",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T13:56:19.947370+00:00",
+      "sha256": "90f98904ce51f4297d2adc8d1c2e90ec0153beaf2c72e905e1850c5def448585",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ6SJ71&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-3d9bd351104d4ce48bcac7ef09807fba5ccef12bd0651fd4fe34670656ece53e.json",
+        "sha256": "d119828fabd1c0eda7d97a05f4de73e4e373a15f54ae6ce196f4cab3cd7a6181"
+      },
+      "complete_for_query": true,
+      "kind": "EXACT_ACCESSION_METADATA",
+      "query": "accession:P31442",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T13:55:49.427046+00:00",
+      "sha256": "5b5397253e0070549efbceab6d3d636bbf53654caa65604118e3ab3802d62f0b",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP31442&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-5bb14d6f1fb091d5ec596c51990d122b059d006670135e99c308ef0bb1eb7734.json",
+        "sha256": "998f5afc0faeca3b42f6a8e2269d3a8058185743c308acfce410c15942b496f1"
+      },
+      "kind": "REFERENCE_TAXONOMY",
+      "retrieved_at": "2026-10-09T13:56:46.469947+00:00",
+      "sha256": "83c59ae9694d1874b8a175d7ce7608f77f5688d35adf307a0859dbb20f9e1c17",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/83333"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-6b6dc1aedebe915f5253b6121f26cf47def70642fbc6e6582930b31c43b5c0ae.json",
+        "sha256": "2e4d0790e015316e001e8bf3ad06ce9f243c27787915c652580daaff89d79945"
+      },
+      "kind": "REFERENCE_TAXONOMY",
+      "retrieved_at": "2026-10-09T13:57:20.423645+00:00",
+      "sha256": "faf940b385a99d02c1929991a8dd5cd3ba875441b30daf7d6b6504e8daef8cee",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1280"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-729d2af63cb4af2191ff213f2e1e35ccf96821b7e58db9167b7cab1b9fa144de.json",
+        "sha256": "22c5b600ff79e0f5391759afc81d1d6fa9a48f3ff0b474d0f6c8a6c27371c294"
+      },
+      "complete_for_query": true,
+      "kind": "EXACT_ACCESSION_METADATA",
+      "query": "accession:P17978",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T13:56:16.114834+00:00",
+      "sha256": "22e0439687e9a81e3c72b5016933bc46b957e7dc9eb1449bc1ad0a9526f73d3f",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP17978&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-a1ce6d74168d0e88fcbbb8541ca0432f85540b8b9adff9786c7db7980697a2a1.json",
+        "sha256": "b817ba7f027bfe493930944fe2a2ed255cb6794a632d0c0d0a41003f1a3781f7"
+      },
+      "complete_for_query": true,
+      "kind": "EXACT_ACCESSION_METADATA",
+      "query": "accession:O68183",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T13:56:23.548106+00:00",
+      "sha256": "a395d5a252ca10a651a3dc46f5faca28d8be4d70bed70fc26e183e9baea736c3",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO68183&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-b37438d139cabeff14d8fff73da60ff02883c14f8607f400fe790db4799cc9ac.json",
+        "sha256": "8a80b65679e07e473b1414c72c7be75caf40c17c58133f867dd5a3e47c4d704f"
+      },
+      "kind": "REFERENCE_TAXONOMY",
+      "retrieved_at": "2026-10-09T13:57:09.883742+00:00",
+      "sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/562"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-b75f765368882503b2e583e5493671c4ac85ac04a3d0f5b4410bb45822902e5a.json",
+        "sha256": "474b4d9952a7edb0c795d1905141ca4dabddac2865d0ec6a6517a1dd48d2a9b2"
+      },
+      "complete_for_query": true,
+      "kind": "EXACT_ACCESSION_METADATA",
+      "query": "accession:Q3HTL7",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T13:56:11.697892+00:00",
+      "sha256": "36a064b90410ce3f4586668662d207f892585abc65a310e0187a8aa897e1511d",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ3HTL7&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-bd423acef5e794e6085d04edf725a4b0d87bc647f498f66c5c625d4f2c987f3a.json",
+        "sha256": "de1c1cdc4cc1117c9d8250fe069230675768c30a866f6b4969ec829d893fca29"
+      },
+      "complete_for_query": true,
+      "kind": "EXACT_ACCESSION_METADATA",
+      "query": "accession:P0AE06",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-09T13:56:27.191085+00:00",
+      "sha256": "17c69df5d52437e56133a9e56023bfd9cbd614b5a5c4122371d88c95b8289064",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP0AE06&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-e373b4bb45695b8aa4a648809349b3e819ba9c0b1951ce3eeb6f675654732563.json",
+        "sha256": "94304227a3f21f7802562eed215fad76d85b4f7a7be6af41c7219af2b131e441"
+      },
+      "kind": "REFERENCE_TAXONOMY",
+      "retrieved_at": "2026-10-09T13:57:25.300941+00:00",
+      "sha256": "c4f1d071aaa0c20de735f2f252cd66016877f754c472688ffc2f751255a773e9",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/37734"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-ef29682803ad5e82727405929c1c773b92cc32cdd6411a1589475e94d79f8b00.json",
+        "sha256": "e4d09d086225fd6978a7930a83655e4f5f51671ef57367aed474e8deeaa54215"
+      },
+      "kind": "REFERENCE_TAXONOMY",
+      "retrieved_at": "2026-10-09T13:57:15.641717+00:00",
+      "sha256": "63b26ab6548b79dd19006ff1185294b91ca72704fd96ca41ca06d897b67eedec",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1890"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-card-structures/request-f21053ccf8c5efe2773b70bf66e2fc7aead3883d6231eaee50548249c0103ad9.json",
+        "sha256": "42eef8c38fa4c8b0118ef214e49bcd342b0c3dd8448c844a078da26ec727e2fd"
+      },
+      "kind": "REFERENCE_TAXONOMY",
+      "retrieved_at": "2026-10-09T13:57:31.522752+00:00",
+      "sha256": "af8988c76dcfaa9e158c590c64e98ad0741ea480ee983d9101a982d9a464c900",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/68212"
+    }
+  ]
+}

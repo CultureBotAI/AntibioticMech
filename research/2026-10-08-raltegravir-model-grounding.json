@@ -1,0 +1,344 @@
+{
+  "after_record_sha256": "3ce790333486ab41006febeb577ad2da813e3c86bc2a0cde10d1dea2ef99c7a7",
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0; RCSB PDB structure metadata.",
+  "before_record_sha256": "a9e8084b0c8298eb7b39cfc0cbfbc38a78d2a0506608ba3b2772e6900c499ac6",
+  "doi": "10.1073/pnas.1010246107",
+  "identifier": "CHEBI:82960",
+  "inspected_full_text": "https://www.researchgate.net/publication/47621681_Molecular_mechanisms_of_retroviral_integrase_inhibition_and_the_evolution_of_viral_resistance",
+  "inspected_version": "Author-provided PNAS article uploaded by Peter Cherepanov on 2015-09-09",
+  "limitations": [
+    "Protein accession is reference context, not an exact mutant sequence or HIV-1 protein.",
+    "No inferred polyprotein coordinate conversion, strain, genome or new HIV-1 allele.",
+    "Biochemical inhibition is not MIC, whole-virus susceptibility or a clinical resistance category.",
+    "Source narrative and RCSB report 3OYA resolution differently from the UniProt cross-reference; no resolution claim curated.",
+    "This scoped correction does not complete all raltegravir primary-evidence review."
+  ],
+  "locations": [
+    "Results and Discussion",
+    "Figure 3",
+    "Data deposition"
+  ],
+  "original_claim": {
+    "evidence": [
+      {
+        "notes": "Primary cocrystal and mutant-sensitivity study with explicit homologous-model scope.",
+        "reference": "PMID:21030679"
+      }
+    ],
+    "gene_families": [
+      "HIV-1 integrase"
+    ],
+    "label": "HIV-1 integrase Q148H/G140S and N155H resistance pathways",
+    "mechanism_type": "ANTIBIOTIC_TARGET_ALTERATION",
+    "note": "Homologous substitutions in the prototype foamy virus structural model reduced raltegravir sensitivity in vitro; mutant structures showed the active-site rearrangements required to accommodate the inhibitor."
+  },
+  "path": "data/antibiotics/antiviral/raltegravir.yaml",
+  "pdb_reference_links": [
+    {
+      "database": "PDB",
+      "id": "3OYA",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.85 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=752-1143"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3OYK",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.72 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=752-1143"
+        }
+      ]
+    },
+    {
+      "database": "PDB",
+      "id": "3OYM",
+      "properties": [
+        {
+          "key": "Method",
+          "value": "X-ray"
+        },
+        {
+          "key": "Resolution",
+          "value": "2.02 A"
+        },
+        {
+          "key": "Chains",
+          "value": "A/B=752-1143"
+        }
+      ]
+    }
+  ],
+  "primary_reference": "PMID:21030679",
+  "protein": {
+    "entryAudit": {
+      "entryVersion": 180,
+      "sequenceVersion": 2
+    },
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "genes": [
+      {
+        "geneName": {
+          "value": "pol"
+        }
+      }
+    ],
+    "organism": {
+      "commonName": "SFVcpz(hu)",
+      "lineage": [
+        "Viruses",
+        "Riboviria",
+        "Pararnavirae",
+        "Artverviricota",
+        "Revtraviricetes",
+        "Ortervirales",
+        "Retroviridae",
+        "Spumaretrovirinae",
+        "Simian foamy virus"
+      ],
+      "scientificName": "Human spumaretrovirus",
+      "synonyms": [
+        "Human foamy virus"
+      ],
+      "taxonId": 11963
+    },
+    "primaryAccession": "P14350",
+    "proteinDescription": {
+      "alternativeNames": [
+        {
+          "fullName": {
+            "value": "Pr125Pol"
+          }
+        }
+      ],
+      "contains": [
+        {
+          "alternativeNames": [
+            {
+              "fullName": {
+                "value": "p87Pro-RT-RNaseH"
+              }
+            }
+          ],
+          "recommendedName": {
+            "ecNumbers": [
+              {
+                "value": "2.7.7.49"
+              },
+              {
+                "value": "2.7.7.7"
+              },
+              {
+                "value": "3.1.26.4"
+              },
+              {
+                "value": "3.4.23.-"
+              }
+            ],
+            "fullName": {
+              "value": "Protease/Reverse transcriptase/ribonuclease H"
+            }
+          }
+        },
+        {
+          "alternativeNames": [
+            {
+              "fullName": {
+                "value": "p65Pro-RT"
+              }
+            }
+          ],
+          "recommendedName": {
+            "ecNumbers": [
+              {
+                "value": "2.7.7.49"
+              },
+              {
+                "value": "2.7.7.7"
+              },
+              {
+                "value": "3.4.23.-"
+              }
+            ],
+            "fullName": {
+              "value": "Protease/Reverse transcriptase"
+            }
+          }
+        },
+        {
+          "recommendedName": {
+            "ecNumbers": [
+              {
+                "value": "3.1.26.4"
+              }
+            ],
+            "fullName": {
+              "value": "Ribonuclease H"
+            },
+            "shortNames": [
+              {
+                "value": "RNase H"
+              }
+            ]
+          }
+        },
+        {
+          "alternativeNames": [
+            {
+              "fullName": {
+                "value": "p42In"
+              }
+            }
+          ],
+          "recommendedName": {
+            "ecNumbers": [
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000305",
+                    "id": "23872492",
+                    "source": "PubMed"
+                  }
+                ],
+                "value": "2.7.7.-"
+              },
+              {
+                "evidences": [
+                  {
+                    "evidenceCode": "ECO:0000305",
+                    "id": "23872492",
+                    "source": "PubMed"
+                  }
+                ],
+                "value": "3.1.-.-"
+              }
+            ],
+            "fullName": {
+              "value": "Integrase"
+            },
+            "shortNames": [
+              {
+                "value": "IN"
+              }
+            ]
+          }
+        }
+      ],
+      "recommendedName": {
+        "fullName": {
+          "value": "Pro-Pol polyprotein"
+        }
+      }
+    }
+  },
+  "requests": [
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 04:40:14 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-Total-Results": "1",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T04:40:14.741992+00:00",
+      "sha256": "c7c8eaa9a218f6579d3fa2ce4b6c006122d13ce211375791e5ed7b2b4fab1be5",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP14350&format=json&size=5&fields=accession%2Cid%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cversion%2Csequence_version%2Cxref_pdb"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 04:40:48 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T04:40:48.129151+00:00",
+      "sha256": "5e730a76cdb59dd386c721aa687db977aaf1db2c19079697fa4ec959073bfe8f",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/11963"
+    }
+  ],
+  "standard_inchi_key": "CZFFBEXEKNGXKS-UHFFFAOYSA-N",
+  "structure_checks": [
+    {
+      "ligand": "RLT",
+      "pdb": "3OYA",
+      "source": "https://www.rcsb.org/structure/3OYA",
+      "standard_inchi_key": "CZFFBEXEKNGXKS-UHFFFAOYSA-N"
+    },
+    {
+      "alteration": "S217H",
+      "pdb": "3OYK",
+      "source": "https://www.rcsb.org/structure/3OYK"
+    },
+    {
+      "alteration": "N224H",
+      "pdb": "3OYM",
+      "source": "https://www.rcsb.org/structure/3OYM"
+    }
+  ],
+  "taxonomy": {
+    "active": true,
+    "hidden": true,
+    "parent": {
+      "scientificName": "Simian foamy virus",
+      "taxonId": 11642
+    },
+    "rank": "no rank",
+    "scientificName": "Human spumaretrovirus",
+    "synonyms": [
+      "Human foamy virus"
+    ],
+    "taxonId": 11963
+  },
+  "unchanged_hivdb_rule_count": 35,
+  "unchanged_hivdb_rules_sha256": "fe90834c9eb87fc37350a17df4c162746cb341f5af6b4f1f6c1f698aad9e122b"
+}

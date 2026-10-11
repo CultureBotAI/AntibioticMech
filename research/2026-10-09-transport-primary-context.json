@@ -1,0 +1,687 @@
+{
+  "attribution": "UniProt Consortium, UniProtKB and Taxonomy release 2026_03, CC BY 4.0; primary publications cited below. No article text or figures redistributed.",
+  "discovery_source": {
+    "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+    "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+  },
+  "limitations": [
+    "Reference proteins and reference-strain TaxIDs are not exact experimental alleles or tested-strain IDs.",
+    "Gene-name filtering selects references, not a complete protein-family or strain survey.",
+    "Negative comparisons and unresolved source labels are retained; no species-wide resistance inferred.",
+    "No sequences, variant specifications, constructs, protocols, primers or quantitative AST are exported.",
+    "No NCBI request, outreach, #1040 work, source adoption or new genome-analysis pipeline occurred.",
+    "No whole-record review is complete; the five other discovered citations still require relevance and primary review.",
+    "Canthin gene-level curation is ready but not applied in this research checkpoint."
+  ],
+  "pending_discovery_candidates": [
+    {
+      "citation": {
+        "doi": "10.1016/j.ymthe.2025.10.036",
+        "id": "41108078",
+        "pmid": "41108078",
+        "pubType": "journal article",
+        "pubYear": "2026",
+        "source": "MED",
+        "title": "Discovery of a new selective ERAP1 inhibitor for Hedgehog-dependent cancer treatment."
+      },
+      "identifier": "CHEBI:3363",
+      "primary_review_status": "PENDING_NOT_REJECTED_BY_TITLE"
+    },
+    {
+      "citation": {
+        "doi": "10.3390/pathogens11111239",
+        "id": "36364991",
+        "pmcid": "PMC9697666",
+        "pmid": "36364991",
+        "pubType": "research-article; journal article",
+        "pubYear": "2022",
+        "source": "MED",
+        "title": "<i>RTA1</i> Is Involved in Resistance to 7-Aminocholesterol and Secretion of Fungal Proteins in <i>Cryptococcus neoformans</i>."
+      },
+      "identifier": "CHEBI:77845",
+      "primary_review_status": "PENDING_NOT_REJECTED_BY_TITLE"
+    },
+    {
+      "citation": {
+        "doi": "10.1093/femsyr/fov095",
+        "id": "26518191",
+        "pmid": "26518191",
+        "pubType": "research support, non-u.s. gov't; journal article",
+        "pubYear": "2015",
+        "source": "MED",
+        "title": "The activity of RTA2, a downstream effector of the calcineurin pathway, is required during tunicamycin-induced ER stress response in Candida albicans."
+      },
+      "identifier": "CHEBI:77845",
+      "primary_review_status": "PENDING_NOT_REJECTED_BY_TITLE"
+    },
+    {
+      "citation": {
+        "doi": "10.1128/msphere.00764-23",
+        "id": "38722162",
+        "pmcid": "PMC11237698",
+        "pmid": "38722162",
+        "pubType": "research support, non-u.s. gov't; research-article; journal article",
+        "pubYear": "2024",
+        "source": "MED",
+        "title": "The unusual mode of action of the polyketide glycoside antibiotic cervimycin C."
+      },
+      "identifier": "antibioticmech:aro-72f1180eb7",
+      "primary_review_status": "PENDING_NOT_REJECTED_BY_TITLE"
+    },
+    {
+      "citation": {
+        "doi": "10.1128/spectrum.02567-22",
+        "id": "36173303",
+        "pmcid": "PMC9603734",
+        "pmid": "36173303",
+        "pubType": "research support, non-u.s. gov't; research-article; journal article",
+        "pubYear": "2022",
+        "source": "MED",
+        "title": "Cervimycin-Resistant Staphylococcus aureus Strains Display Vancomycin-Intermediate Resistant Phenotypes."
+      },
+      "identifier": "antibioticmech:aro-72f1180eb7",
+      "primary_review_status": "PENDING_NOT_REJECTED_BY_TITLE"
+    }
+  ],
+  "preservation": {
+    "biological_record_changes": 0,
+    "census": {
+      "path": "research/2026-10-09-posteraro-resistance-grounding.tsv",
+      "sha256": "912e612ea24459847895f733311bf48d162c0968329bd2c58957a3ab3cc9b300"
+    },
+    "curation_events_added": 0,
+    "ignored_files_included": true,
+    "preexisting_files_unchanged_excluding_report": 6712,
+    "protected_manifest": {
+      "path": "reports/resistance-grounding-2026-10-09-transport-context/protected-before.json",
+      "sha256": "3d76238006d98d65423934c92fcfc0d6232e2fbb4281edd30f7e0325ba87a63c"
+    },
+    "record_hashes_verified": 2939
+  },
+  "primary_contexts": [
+    {
+      "background_labels": [
+        "G175-W303",
+        "BY4742 / EUROSCARF Y10000",
+        "YPH250"
+      ],
+      "curation_disposition": "READY_FOR_QUALITATIVE_GENE_ASSOCIATION_CURATION",
+      "doi": "10.1016/j.febslet.2013.07.040",
+      "exact_experimental_allele": "UNRESOLVED",
+      "figures_visually_inspected": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "findings": [
+        "YAP1 and FLR1 affect canthin-6-one tolerance in laboratory yeast.",
+        "YCF1 does not explain the tested effect; basal FLR1 comparison was negative.",
+        "Baseline growth complicates the YAP1-loss comparison.",
+        "The tested backgrounds are distinct, not interchangeable with the S288c reference entry."
+      ],
+      "identifier": "CHEBI:3363",
+      "locations": [
+        "Table 1",
+        "Methods 2.2",
+        "Results 3.1 and 3.3",
+        "Figures 1, 3, 4 and 5"
+      ],
+      "locus_label_caveat": {
+        "alias_created": false,
+        "gene": "FLR1",
+        "table_1": "YBR008C",
+        "table_2": "YRR008C",
+        "uniprot_reference_locus": "YBR008C"
+      },
+      "medium": "PRIMARY_PAPER_REPRINT_IN_AUTHOR_UNIVERSITY_THESIS",
+      "numeric_ast_curated": false,
+      "paper_pdf_pages_one_based": [
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      "primary_url": "https://www.sciencedirect.com/science/article/pii/S0014579313005693",
+      "reference": "PMID:23912082",
+      "rendered_pages": [
+        {
+          "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-69.png",
+          "sha256": "26787053413be2bf3f772eed29391f0b70e9a85ea9efcf124929337c32c4adf2"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-70.png",
+          "sha256": "ee410fde8639b9fa50e11d76edaaa2c8f0f952dcc4498479d2386fd5fcb6e530"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-72.png",
+          "sha256": "019cd58f109a840492967484a91be18052418af5f1a96e94313d58c2c18fe0b9"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-page-73.png",
+          "sha256": "a3da043c6769f638c02ce407b88e4ec809f5dc466c102693434c2aa2c07f5896"
+        }
+      ],
+      "source_species_taxon": "NCBITaxon:4932"
+    },
+    {
+      "citation_strain_context": "ATCC 28383 / FL100 / VTT C-80102",
+      "curation_disposition": "PRIMARY_RESULTS_PENDING_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+      "doi": "10.1007/s002940050110",
+      "figures_visually_inspected": [],
+      "identifier": "CHEBI:77845",
+      "interpretation": "Explicit historical deposit/reference link; entry-level S288c is not the citation's FL100.",
+      "medium": "PUBLISHER_ABSTRACT_ONLY",
+      "original_deposit": {
+        "accession": "X84736",
+        "database": "EMBL",
+        "protein_id": "CAA59227.1",
+        "uniprot_reference": "UniProtKB:P53047"
+      },
+      "primary_url": "https://link.springer.com/article/10.1007/s002940050110",
+      "reference": "PMID:8660468",
+      "reference_strain_taxon": "NCBITaxon:559292"
+    },
+    {
+      "compound_scope": "Source-named 7-aminocholesterol; stereospecific material identity not independently verified.",
+      "curation_disposition": "RETAIN_SUBJECT_AND_COMPOUND_SCOPE_QUESTIONS_BEFORE_CURATION",
+      "doi": "10.1111/j.1567-1364.2011.00768.x",
+      "figures_visually_inspected": [
+        {
+          "figure": 2,
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-09-transport-context/rta1-figure-2.jpg",
+            "sha256": "0119c8ceaa8a5bfe3da89e675d945760bb612834d7db16faf2667dfbb7669a83"
+          },
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-09-transport-context/rta1-figure-2-receipt.json",
+            "sha256": "8239b86e40007e02760421d9c2b3dba3c2238aa91d3ba6841b1ea40523655141"
+          },
+          "visually_inspected": true
+        },
+        {
+          "figure": 7,
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-09-transport-context/rta1-figure-7.jpg",
+            "sha256": "1b59865de1a3279c1a896c59af5ed4ec842899530e356e9852897db8c8a583a0"
+          },
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-09-transport-context/rta1-figure-7-receipt.json",
+            "sha256": "53f0d7ff263bc76c332eed559e0b8a523e2bf2d2d9f99bd1c94cec2ee0ca06ca"
+          },
+          "visually_inspected": true
+        }
+      ],
+      "findings": [
+        "RTA1-associated tolerance is condition-dependent; the mechanism is not established as drug efflux.",
+        "The RSB1 comparison does not support functional interchangeability.",
+        "Protein-localization text uses JD52, while the linked Figure 2 caption names FY wild type.",
+        "Do not combine those assay subjects or transfer the hypoxia comparison across conditions."
+      ],
+      "identifier": "CHEBI:77845",
+      "locations": [
+        "Table 1",
+        "Figures 2 and 7",
+        "Discussion"
+      ],
+      "medium": "PUBLISHER_FULL_RESULTS_HTML_AND_FIGURES",
+      "primary_url": "https://academic.oup.com/femsyr/article/12/3/279/592505",
+      "reference": "PMID:22129104",
+      "source_species_taxon": "NCBITaxon:4932"
+    },
+    {
+      "curation_disposition": "FIGURE_SUPPLEMENT_AND_EXPERIMENTAL_IDENTITY_REVIEW_PENDING",
+      "doi": "10.1111/j.1574-6968.2010.02143.x",
+      "experimental_genome_accessions": [],
+      "figures_visually_inspected": [],
+      "findings": [
+        "Regulatory changes associated with bmrA explain the reported laboratory resistance.",
+        "The reference genome is not an accession for either experimental derivative.",
+        "The producer self-resistance aside is explicitly unpublished and is not curated."
+      ],
+      "identifier": "antibioticmech:aro-72f1180eb7",
+      "locations": [
+        "Results and discussion, pages 156-157"
+      ],
+      "medium": "INDEXED_PRIMARY_RESULTS_TEXT_DIRECT_PDF_ACCESS_FAILED",
+      "paper_reference_genome": "AL009126.3",
+      "primary_url": "https://genome.imb-jena.de/publications/download/free/Kruegel_2010.pdf",
+      "reference": "PMID:21077936",
+      "source_parent": "Bacillus subtilis 168",
+      "source_species_taxon": "NCBITaxon:1423",
+      "source_subject_labels": [
+        "8R",
+        "IR"
+      ],
+      "supplement_inspected": false
+    }
+  ],
+  "records": [
+    {
+      "identifier": "CHEBI:77845",
+      "label": "7-aminocholesterol",
+      "path": "data/antibiotics/antibacterial/7-aminocholesterol.yaml",
+      "record_sha256": "fc08d67dc41965726f624cc5c1c0db11aaabf0881fd9a786e4944559e4ee96a5",
+      "standard_inchi_key": "WLHQSAYHIOPMMJ-UOQFGJKXSA-N"
+    },
+    {
+      "identifier": "antibioticmech:aro-72f1180eb7",
+      "label": "cervimycin C",
+      "path": "data/antibiotics/antibacterial/cervimycin-c.yaml",
+      "record_sha256": "123c0f78fa0a130dd0c252054cb978939a3ecbad29c4e07563e50efaf21a8b33",
+      "standard_inchi_key": "CYKZTBKVWQAQLU-KSQSWLAPSA-N"
+    },
+    {
+      "identifier": "CHEBI:3363",
+      "label": "canthin-6-one",
+      "path": "data/antibiotics/antimycobacterial/canthin-6-one.yaml",
+      "record_sha256": "00dec16503cd665baf5ed6bc40efaa4d782f56c720d4f6262a141a4f69ac8dbc",
+      "standard_inchi_key": "ZERVJPYNQLONEK-UHFFFAOYSA-N"
+    }
+  ],
+  "reference_proteins": [
+    {
+      "accession": "UniProtKB:P38124",
+      "entry_audit": {
+        "entryVersion": 171,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [],
+      "focal_papers_not_in_entry_references": [
+        "PMID:23912082"
+      ],
+      "gene_symbol": "FLR1",
+      "identifier": "CHEBI:3363",
+      "reference_loci": [
+        "YBR008C"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "role": "GENE_ASSOCIATION_REFERENCE",
+      "sgd_ids": [
+        "S000000212"
+      ]
+    },
+    {
+      "accession": "UniProtKB:P19880",
+      "entry_audit": {
+        "entryVersion": 230,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [],
+      "focal_papers_not_in_entry_references": [
+        "PMID:23912082"
+      ],
+      "gene_symbol": "YAP1",
+      "identifier": "CHEBI:3363",
+      "reference_loci": [
+        "YML007W"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "role": "GENE_ASSOCIATION_REFERENCE",
+      "sgd_ids": [
+        "S000004466"
+      ]
+    },
+    {
+      "accession": "UniProtKB:P39109",
+      "entry_audit": {
+        "entryVersion": 236,
+        "sequenceVersion": 2
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [],
+      "focal_papers_not_in_entry_references": [
+        "PMID:23912082"
+      ],
+      "gene_symbol": "YCF1",
+      "identifier": "CHEBI:3363",
+      "reference_loci": [
+        "YDR135C"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "role": "NEGATIVE_COMPARISON_REFERENCE",
+      "sgd_ids": [
+        "S000002542"
+      ]
+    },
+    {
+      "accession": "UniProtKB:P53047",
+      "entry_audit": {
+        "entryVersion": 148,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [
+        {
+          "reference": "PMID:8660468",
+          "strain_comments": [
+            "ATCC 28383 / FL100 / VTT C-80102"
+          ]
+        }
+      ],
+      "focal_papers_not_in_entry_references": [
+        "PMID:22129104"
+      ],
+      "gene_symbol": "RTA1",
+      "identifier": "CHEBI:77845",
+      "reference_loci": [
+        "YGR213C"
+      ],
+      "reference_organism": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "role": "GENE_ASSOCIATION_REFERENCE",
+      "sgd_ids": [
+        "S000003445"
+      ]
+    },
+    {
+      "accession": "UniProtKB:O06967",
+      "entry_audit": {
+        "entryVersion": 169,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "experimental_assignment": false,
+      "focal_citation_context": [],
+      "focal_papers_not_in_entry_references": [
+        "PMID:21077936"
+      ],
+      "gene_symbol": "bmrA",
+      "identifier": "antibioticmech:aro-72f1180eb7",
+      "reference_loci": [
+        "BSU34820"
+      ],
+      "reference_organism": "Bacillus subtilis (strain 168)",
+      "reference_taxon_id": "NCBITaxon:224308",
+      "role": "GENE_ASSOCIATION_REFERENCE",
+      "sgd_ids": []
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/cervimycin-response.bin",
+        "sha256": "32f2fa940d4b4fe19aca1e53a24e5aac29c57b7c5ee78588325b87f1b649c864"
+      },
+      "is_pdf": false,
+      "name": "cervimycin",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/cervimycin-receipt.json",
+        "sha256": "8d24c8cefa4376be8f0414e8607de64f61e1c2dd34a9f93fdf81212f8e0761f8"
+      },
+      "retrieved_at": "2026-10-09T12:46:53.448572+00:00",
+      "status": 403,
+      "url": "https://genome.imb-jena.de/publications/download/free/Kruegel_2010.pdf"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-thesis-response.bin",
+        "sha256": "d0b34873f46c190b219bfddbcb807f4904c272bf2932a2329955109fdeac7089"
+      },
+      "is_pdf": false,
+      "name": "canthin-thesis",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-thesis-receipt.json",
+        "sha256": "2929210637c779730d565c18bb13b67a30cda0cac6d78bb34267d2171f5ec0d4"
+      },
+      "retrieved_at": "2026-10-09T12:46:57.058240+00:00",
+      "status": 301,
+      "url": "https://nuxeo.edel.univ-poitiers.fr/nuxeo/site/esupversions/5d4825fd-27c4-459a-bb0b-0e96c3a37f29"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-thesis-http.pdf",
+        "sha256": "1f0ca6a8e12c73f5d928ce5f46d0184cafd49e8d24d7f1fe30473557537739af"
+      },
+      "is_pdf": true,
+      "name": "canthin-thesis-http",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-thesis-http-receipt.json",
+        "sha256": "045ad68654638041818dd405ebf3957d77b01f1bd427c43ebcd5ce7f40c0c51c"
+      },
+      "retrieved_at": "2026-10-09T12:49:15.151888+00:00",
+      "status": 200,
+      "url": "http://nuxeo.edel.univ-poitiers.fr/nuxeo/site/esupversions/5d4825fd-27c4-459a-bb0b-0e96c3a37f29"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-publisher-response.bin",
+        "sha256": "d4c52764b39e302f6e48f2cb1b15f7724b9dd5992595a6d6eba5d02125986352"
+      },
+      "is_pdf": false,
+      "name": "canthin-publisher",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/canthin-publisher-receipt.json",
+        "sha256": "d200889a3f48409ee917087054eb0c2103ca8b6b9c9e846e157c35e0f4221554"
+      },
+      "retrieved_at": "2026-10-09T12:47:55.250286+00:00",
+      "status": 403,
+      "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1016/j.febslet.2013.07.040"
+    },
+    {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/rta1-2012-response.bin",
+        "sha256": "fae11edbd081fe419f6999e10a1cef98418495bf7896cc7e8d01d6a8abb1e34d"
+      },
+      "is_pdf": false,
+      "name": "rta1-2012",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/rta1-2012-receipt.json",
+        "sha256": "8c7016f969a54ba765651172a37db59732c1313a7b237869d8b2749ccdcb5571"
+      },
+      "retrieved_at": "2026-10-09T12:47:20.654845+00:00",
+      "status": 200,
+      "url": "https://oup.silverchair-cdn.com/article-minimal/592505"
+    }
+  ],
+  "reviewed_on": "2026-10-09",
+  "schema_version": 1,
+  "scope": {
+    "corpus_records": 2939,
+    "full_corpus_primary_review": "OPEN",
+    "primary_publications_considered": 4,
+    "record_memberships": 3,
+    "reference_proteins": 5,
+    "whole_records_completed": 0
+  },
+  "status": "PRIMARY_CONTEXT_AND_REFERENCE_GROUNDING_NOT_WHOLE_RECORD_SIGNOFF",
+  "taxonomy": {
+    "1423": {
+      "active": true,
+      "lineage_taxids": [
+        131567,
+        2,
+        1783272,
+        1239,
+        91061,
+        1385,
+        186817,
+        1386,
+        653685
+      ],
+      "parent": {
+        "scientificName": "Bacillus subtilis group",
+        "taxonId": 653685
+      },
+      "rank": "species",
+      "scientificName": "Bacillus subtilis",
+      "taxonId": 1423
+    },
+    "224308": {
+      "active": true,
+      "lineage_taxids": [
+        131567,
+        2,
+        1783272,
+        1239,
+        91061,
+        1385,
+        186817,
+        1386,
+        653685,
+        1423,
+        135461
+      ],
+      "parent": {
+        "scientificName": "Bacillus subtilis subsp. subtilis",
+        "taxonId": 135461
+      },
+      "rank": "strain",
+      "scientificName": "Bacillus subtilis (strain 168)",
+      "taxonId": 224308
+    },
+    "4932": {
+      "active": true,
+      "lineage_taxids": [
+        131567,
+        2759,
+        33154,
+        4751,
+        451864,
+        4890,
+        716545,
+        147537,
+        4891,
+        4892,
+        4893,
+        4930
+      ],
+      "parent": {
+        "scientificName": "Saccharomyces",
+        "taxonId": 4930
+      },
+      "rank": "species",
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    },
+    "559292": {
+      "active": true,
+      "lineage_taxids": [
+        131567,
+        2759,
+        33154,
+        4751,
+        451864,
+        4890,
+        716545,
+        147537,
+        4891,
+        4892,
+        4893,
+        4930,
+        4932
+      ],
+      "parent": {
+        "commonName": "Baker's yeast",
+        "scientificName": "Saccharomyces cerevisiae",
+        "taxonId": 4932
+      },
+      "rank": "strain",
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    }
+  },
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "sha256": "b96112ff9825aaf10349c594252b25f652531361913171aeb25b912182ebaa89"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:48:25.024295+00:00",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    },
+    {
+      "biological_absence_inferred": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/request-7bed769445e3f62f09ae9eba80863e1b4aeeb0f0a6d9d66998de36e7bbd81ff1.json",
+        "sha256": "f1f520b83a16510073282fa0e478379e65272c937733065e3c133ce8f967b3e8"
+      },
+      "complete_for_query": true,
+      "query": "(gene_exact:YAP1 OR gene_exact:YCF1 OR gene_exact:RTA1) AND taxonomy_id:4932 AND reviewed:true",
+      "release": "2026_03",
+      "results": 3,
+      "retrieved_at": "2026-10-09T12:47:13.202995+00:00",
+      "sha256": "594471f4f3995ecde619847e90f36991bbd08045b9701fa0c93c5903ea77916b",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AYAP1+OR+gene_exact%3AYCF1+OR+gene_exact%3ARTA1%29+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "biological_absence_inferred": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/request-816013bb0b33c458b4e51a665cbc3263c1f62da99881badedc4f769b174d43c7.json",
+        "sha256": "0d939f77742e1fa8e30cbe23eab75d1d4041d48ea73e6f0ad27bbeed92c2bfd3"
+      },
+      "complete_for_query": true,
+      "query": "gene_exact:bmrA AND taxonomy_id:1423 AND reviewed:true",
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-09T12:47:16.362858+00:00",
+      "sha256": "c6f2db111a6d9edb9e4d233ce8b1d4a6e290dd5657cd4eed650906a305433156",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AbmrA+AND+taxonomy_id%3A1423+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/request-84c3e9c0aa01e2963476ab52ce883c8fec641faac7191a1fb03f29138ef8652c.json",
+        "sha256": "03225dcffd1af6608e78b43b309801f3e1ab602e0aa39fcc84d8ad544fdb93bb"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:48:32.256703+00:00",
+      "sha256": "67c51a9882fd6b4b39580518be53faece835e0c31b0e347a0345bd248a70c9fa",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/224308"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/request-ef94328991320cf38ad432ff577c6462027538dddb5edf02182f3dc348c5bfe3.json",
+        "sha256": "e09a688b6aa327fc5b48c47196f2b3ab0dcd54796faadee0821df53f6a3afdc8"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:48:28.633132+00:00",
+      "sha256": "fe370b94f1ed89c853e6b8f1584e037dc8a7ba4892fddcb3df9190164eaacecc",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/1423"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "sha256": "a5ccd6582704c3fe1acbdead1300386d9cc239b6c413698323b9e8343e68ffc7"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T12:48:21.608137+00:00",
+      "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932"
+    },
+    {
+      "biological_absence_inferred": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-context/request-f160a8939bb8ce92bf968c113f3d2a5becdca0b287f70a59a604396d17f323e3.json",
+        "sha256": "7e330f74099fff2a942a1ca2c6676f2013550155e0bf895f92becd019ab0a810"
+      },
+      "complete_for_query": true,
+      "query": "gene_exact:FLR1 AND taxonomy_id:4932 AND reviewed:true",
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-09T12:46:33.700886+00:00",
+      "sha256": "8019ee08ce77eafcde53529e6fa859d28724610e68879773715d6cbbdbde6a8a",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFLR1+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  ]
+}

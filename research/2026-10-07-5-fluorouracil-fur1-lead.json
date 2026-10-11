@@ -1,0 +1,401 @@
+{
+  "attribution": "UniProt Consortium, UniProtKB release 2026_03, CC BY 4.0",
+  "curation_applied": false,
+  "follow_up_review": "2026-10-08-fur1-cohort-grounding.json",
+  "snapshot_scope": "HISTORICAL_DATABASE_LEAD_BEFORE_PRIMARY_COHORT_REVIEW",
+  "entry": {
+    "entryAudit": {
+      "entryVersion": 192,
+      "firstPublicDate": "1990-11-01",
+      "lastAnnotationUpdateDate": "2026-09-02",
+      "lastSequenceUpdateDate": "2006-09-05",
+      "sequenceVersion": 2
+    },
+    "entryType": "UniProtKB reviewed (Swiss-Prot)",
+    "genes": [
+      {
+        "geneName": {
+          "value": "FUR1"
+        },
+        "orderedLocusNames": [
+          {
+            "value": "YHR128W"
+          }
+        ]
+      }
+    ],
+    "organism": {
+      "commonName": "Baker's yeast",
+      "lineage": [
+        "Eukaryota",
+        "Fungi",
+        "Dikarya",
+        "Ascomycota",
+        "Saccharomycotina",
+        "Saccharomycetes",
+        "Saccharomycetales",
+        "Saccharomycetaceae",
+        "Saccharomyces"
+      ],
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "taxonId": 559292
+    },
+    "primaryAccession": "P18562"
+  },
+  "limitations": [
+    "1991 publisher summary numbers fur1-5 at residue 134; UniProt uses residue 99. No coordinate conversion verified.",
+    "1990 and 1991 primary full Results were not accessible; UniProt annotations are not an independent primary review.",
+    "The 1990 citation-specific FL100 annotation does not make S288c TaxID 559292 an experimental-strain identifier.",
+    "No isolate, assembly, mutant-specific accession, linked quantitative AST, or clinical resistance category established."
+  ],
+  "record": {
+    "identifier": "CHEBI:46345",
+    "label": "5-Fluorouracil",
+    "path": "data/antibiotics/antifungal/5-fluorouracil.yaml",
+    "sha256": "8e272d5ab3e3b65518b73e2f91aa3086a367aa7c67c502b9dbdbe79433374367",
+    "standard_inchi_key": "GHASVSINZRGABV-UHFFFAOYSA-N"
+  },
+  "references": [
+    {
+      "citation": {
+        "authors": [
+          "Kern L.",
+          "de Montigny J.",
+          "Jund R.",
+          "Lacroute F."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "2189783"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1016/0378-1119(90)90026-n"
+          }
+        ],
+        "citationType": "journal article",
+        "firstPage": "149",
+        "id": "2189783",
+        "journal": "Gene",
+        "lastPage": "157",
+        "publicationDate": "1990",
+        "title": "The FUR1 gene of Saccharomyces cerevisiae: cloning, structure and expression of wild-type and mutant alleles.",
+        "volume": "88"
+      },
+      "referenceComments": [
+        {
+          "type": "STRAIN",
+          "value": "ATCC 28383 / FL100 / VTT C-80102"
+        }
+      ],
+      "referenceNumber": 1,
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "CATALYTIC ACTIVITY",
+        "MUTAGENESIS OF ARG-26; ILE-106 AND GLU-173"
+      ]
+    },
+    {
+      "citation": {
+        "authors": [
+          "Kern L.",
+          "de Montigny J.",
+          "Lacroute F.",
+          "Jund R."
+        ],
+        "citationCrossReferences": [
+          {
+            "database": "PubMed",
+            "id": "1913872"
+          },
+          {
+            "database": "DOI",
+            "id": "10.1007/bf00309592"
+          }
+        ],
+        "citationType": "journal article",
+        "firstPage": "333",
+        "id": "1913872",
+        "journal": "Curr. Genet.",
+        "lastPage": "337",
+        "publicationDate": "1991",
+        "title": "Regulation of the pyrimidine salvage pathway by the FUR1 gene product of Saccharomyces cerevisiae.",
+        "volume": "19"
+      },
+      "referenceNumber": 2,
+      "referencePositions": [
+        "NUCLEOTIDE SEQUENCE [GENOMIC DNA]",
+        "FUNCTION",
+        "MUTAGENESIS OF ARG-99",
+        "INDUCTION"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:57:23 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "07-October-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:57:23.987201+00:00",
+      "sha256": "899c34ee88d068a896c036721fa916109c3fd5bc311a1e7d139b96eb4f7935be",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/P18562.json"
+    },
+    {
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Length": "2686",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:05:26 GMT",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "hit cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+      "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932"
+    },
+    {
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+        "Access-Control-Max-Age": "1728000",
+        "Cache-Control": "public, max-age=43200",
+        "Connection": "Keep-Alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "application/json",
+        "Date": "Thu, 08 Oct 2026 02:01:35 GMT",
+        "Transfer-Encoding": "chunked",
+        "Vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+        "X-API-Deployment-Date": "23-September-2026",
+        "X-UniProt-Release": "2026_03",
+        "X-UniProt-Release-Date": "02-September-2026",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "x-cache": "miss cached"
+      },
+      "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    }
+  ],
+  "scope": "Reference protein and database annotations; not independently reviewed experimental alleles.",
+  "sequence_cautions": [
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "note": "Extended N-terminus.",
+      "sequence": "AAA34611.1",
+      "sequenceCautionType": "Erroneous initiation"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "note": "Extended N-terminus.",
+      "sequence": "AAB19947.2",
+      "sequenceCautionType": "Erroneous initiation"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "note": "Extended N-terminus.",
+      "sequence": "AAB68405.1",
+      "sequenceCautionType": "Erroneous initiation"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "note": "Extended N-terminus.",
+      "sequence": "AAT93101.1",
+      "sequenceCautionType": "Erroneous initiation"
+    },
+    {
+      "commentType": "SEQUENCE CAUTION",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000305"
+        }
+      ],
+      "note": "Extended N-terminus.",
+      "sequence": "CAA56207.1",
+      "sequenceCautionType": "Erroneous initiation"
+    }
+  ],
+  "status": "DATABASE_LEAD_PRIMARY_RESULTS_PENDING",
+  "taxonomy": {
+    "4932": {
+      "active": true,
+      "rank": "species",
+      "scientificName": "Saccharomyces cerevisiae",
+      "taxonId": 4932
+    },
+    "559292": {
+      "active": true,
+      "rank": "strain",
+      "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "species_ancestor": 4932,
+      "taxonId": 559292
+    }
+  },
+  "uniprot_feature_annotations": [
+    {
+      "alternativeSequence": {
+        "alternativeSequences": [
+          "S"
+        ],
+        "originalSequence": "R"
+      },
+      "description": "In FUR1-8; causes resistance to 5-fluorouracil (5FU).",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "id": "2189783",
+          "source": "PubMed"
+        }
+      ],
+      "location": {
+        "end": {
+          "modifier": "EXACT",
+          "value": 26
+        },
+        "start": {
+          "modifier": "EXACT",
+          "value": 26
+        }
+      },
+      "type": "Mutagenesis"
+    },
+    {
+      "alternativeSequence": {
+        "alternativeSequences": [
+          "S"
+        ],
+        "originalSequence": "R"
+      },
+      "description": "In FUR1-5; causes resistance to 5-fluorouracil (5FU).",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "id": "1913872",
+          "source": "PubMed"
+        }
+      ],
+      "location": {
+        "end": {
+          "modifier": "EXACT",
+          "value": 99
+        },
+        "start": {
+          "modifier": "EXACT",
+          "value": 99
+        }
+      },
+      "type": "Mutagenesis"
+    },
+    {
+      "alternativeSequence": {
+        "alternativeSequences": [
+          "N"
+        ],
+        "originalSequence": "I"
+      },
+      "description": "In FUR1-7; causes resistance to 5-fluorouracil (5FU).",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "id": "2189783",
+          "source": "PubMed"
+        }
+      ],
+      "location": {
+        "end": {
+          "modifier": "EXACT",
+          "value": 106
+        },
+        "start": {
+          "modifier": "EXACT",
+          "value": 106
+        }
+      },
+      "type": "Mutagenesis"
+    },
+    {
+      "alternativeSequence": {
+        "alternativeSequences": [
+          "G"
+        ],
+        "originalSequence": "E"
+      },
+      "description": "In FUR1-9; causes resistance to 5-fluorouracil (5FU).",
+      "evidences": [
+        {
+          "evidenceCode": "ECO:0000269",
+          "id": "2189783",
+          "source": "PubMed"
+        }
+      ],
+      "location": {
+        "end": {
+          "modifier": "EXACT",
+          "value": 173
+        },
+        "start": {
+          "modifier": "EXACT",
+          "value": 173
+        }
+      },
+      "type": "Mutagenesis"
+    }
+  ]
+}

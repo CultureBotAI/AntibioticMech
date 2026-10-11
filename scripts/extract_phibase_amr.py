@@ -58,6 +58,13 @@ def normalized_label(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
 
 
+def species_label(value: str) -> str:
+    """Keep a reference-strain suffix out of the source's species-level label."""
+    label = value.strip()
+    match = re.fullmatch(r"(.+) \(strain [^()]+\)", label)
+    return match.group(1) if match else label
+
+
 def corpus_index() -> dict[str, dict[str, str]]:
     index = {}
     for path in sorted((REPO_ROOT / "data" / "antibiotics").rglob("*.yaml")):
@@ -117,7 +124,7 @@ def extract(amr_path: Path, phenotype_path: Path, source_commit: str, retrieved_
                 "protein_accession": source["interactor_A_molecular_id"].strip(),
                 "gene_id": source["ensembl_a"].strip(),
                 "taxon_id": taxon_id,
-                "taxon_label": source["organism_a"].strip(),
+                "taxon_label": species_label(source["organism_a"]),
                 "strain_taxon_id": source["taxid_strain_a"].strip(),
                 "strain_label": source["strain_a"].strip(),
                 "modification": modification,

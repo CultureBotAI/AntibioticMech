@@ -16,6 +16,7 @@ checked on the exact source strings that motivated it.
 
 from __future__ import annotations
 
+import csv
 import glob
 import sys
 from pathlib import Path
@@ -29,6 +30,7 @@ sys.path.insert(0, str(REPO_ROOT / "src"))
 
 import seed_from_sources  # noqa: E402
 from curation_worklist import activity_candidate_queue  # noqa: E402
+from phibase_grounding_reviews import load_reviews, row_digest  # noqa: E402
 from seed_from_sources import (  # noqa: E402
     PHIBASE_NOTE_MARKER,
     PHIBASE_RESISTANCE_SOURCE,
@@ -83,17 +85,71 @@ def _mechanism(**fields):
 def test_every_phibase_association_names_its_organism_in_a_field():
     """The claim IS the organism, so it cannot live only in prose."""
     missing = []
+    withheld = set()
     seen = 0
     for record in _records():
         for item in record.get("resistance_mechanisms") or []:
             if item.get("source") != PHIBASE_RESISTANCE_SOURCE:
                 continue
             seen += 1
-            for slot in ("taxon_id", "taxon_label", "alteration", "phenotype_label", "assay"):
+            if not item.get("taxon_id"):
+                withheld.add(record["identifier"])
+                if record["identifier"] == "CHEBI:46081":
+                    assert item["strain"] == "BPY22.17"
+                    assert item["taxon_label"] == "Cryptococcus neoformans"
+                    assert item["evidence"][0]["reference"] == "PMID:12519188"
+                    assert (
+                        "Grounding review posteraro-2003-subject-reference-context:"
+                        in item["note"]
+                    )
+                    assert "UniProtKB:Q8X0Z3" in item["note"]
+                else:
+                    assert item["strain"] == "JS67"
+                    assert "Grounding review wang-2020-reference-context:" in item["note"]
+                    assert item["evidence"][0]["reference"] == "PMID:32569396"
+                assert all(k not in item for k in ("strain_taxon_id", "protein_accession"))
+            for slot in ("taxon_label", "alteration", "phenotype_label", "assay"):
                 if not item.get(slot):
                     missing.append(f"{record['identifier']}: {item['label']!r} lacks {slot}")
     assert seen == 217, f"expected 217 PHI-base associations, found {seen}"
+    assert withheld == {"CHEBI:46081", "CHEBI:81760", "CHEBI:8434", "CHEBI:8489"}
     assert missing == [], missing[:10]
+
+
+def _without_pinned_strain_explanation(note, identifier, item, contexts):
+    for compound, reference, strain, alteration, phenotype, text in contexts:
+        if (identifier == compound and item["evidence"][0]["reference"] == reference
+                and item.get("strain") == strain and item.get("alteration") == alteration
+                and item.get("phenotype_id") == phenotype):
+            note = note.replace(text, "", 1)
+    return note
+
+
+@pytest.mark.parametrize("mismatch", [
+    "compound", "reference", "strain", "alteration", "phenotype", "text", "unreviewed_suffix",
+])
+def test_strain_explanation_exception_does_not_hide_unpinned_prose(mismatch):
+    text = " Grounding review pinned: Parent background IPO323 is not a derivative."
+    contexts = [("CHEBI:3405", "PMID:21933337", "IPO323", "source allele", "PHIPO:0000377", text)]
+    item = {"strain": "IPO323", "alteration": "source allele", "phenotype_id": "PHIPO:0000377",
+            "evidence": [{"reference": "PMID:21933337"}]}
+    identifier, note = "CHEBI:3405", text
+    assert _without_pinned_strain_explanation(note, identifier, item, contexts) == ""
+    if mismatch == "compound":
+        identifier = "CHEBI:1"
+    elif mismatch == "reference":
+        item["evidence"][0]["reference"] = "PMID:1"
+    elif mismatch == "strain":
+        contexts[0] = ("CHEBI:3405", "PMID:21933337", "IRE30", "source allele", "PHIPO:0000377", text)
+    elif mismatch == "alteration":
+        item["alteration"] = "different allele"
+    elif mismatch == "phenotype":
+        item["phenotype_id"] = "PHIPO:0000001"
+    elif mismatch == "text":
+        note = text.replace("not a derivative", "the tested subject")
+    else:
+        note += " IPO323 is the tested subject."
+    assert "IPO323" in _without_pinned_strain_explanation(note, identifier, item, contexts)
 
 
 def test_the_note_no_longer_restates_what_the_slots_hold():
@@ -102,7 +158,21 @@ def test_the_note_no_longer_restates_what_the_slots_hold():
     Re-inlining the taxon, the accession or the PHIG id into the note — the
     shape the corpus had before #94 — fails here even though every other gate
     would stay green, because a note is a valid string whatever it contains.
+    Explicit scope-review explanations may name their structured background or
+    subject, but only in exact pinned text with matching row identity and citation.
     """
+    inventory = REPO_ROOT / "data/raw/phibase_amr.tsv"
+    with inventory.open() as handle:
+        rows = list(csv.DictReader(handle, delimiter="\t"))
+    decisions = load_reviews(inventory, rows)
+    contexts = set()
+    for row in rows:
+        decision = decisions.get(row_digest(row))
+        if decision:
+            contexts.add((row["identifier"], "PMID:" + row["pmid"],
+                          decision.get("subject_strain", row["strain_label"]),
+                          row["modification"], row["phenotype_id"],
+                          f" Grounding review {decision['review_id']}: {decision['note']}"))
     offenders = []
     for record in _records():
         for item in record.get("resistance_mechanisms") or []:
@@ -111,7 +181,12 @@ def test_the_note_no_longer_restates_what_the_slots_hold():
             note = str(item.get("note") or "")
             for slot in ("taxon_label", "strain", "protein_accession", "phenotype_id"):
                 value = item.get(slot)
-                if value and str(value) in note:
+                checked_note = note
+                if slot == "strain":
+                    checked_note = _without_pinned_strain_explanation(
+                        note, record["identifier"], item, contexts,
+                    )
+                if value and str(value) in checked_note:
                     offenders.append(
                         f"{record['identifier']}: note restates {slot}={value!r}")
             if PHIBASE_NOTE_MARKER in note:
@@ -356,7 +431,7 @@ def test_the_phibase_lane_emits_structure_rather_than_prose(tmp_path, monkeypatc
     monkeypatch.setattr(seed_from_sources, "RAW_DIR", tmp_path)
 
     records = _seed_one(row["standard_inchi_key"], row["identifier"])
-    attach_phibase_resistance(records)
+    attach_phibase_resistance(records, grounding_review=None)
     items = records[row["identifier"]]["resistance_mechanisms"]
     assert items, "the lane matched nothing; the fixture is wrong, not the code"
     item = items[0]

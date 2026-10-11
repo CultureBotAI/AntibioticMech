@@ -350,9 +350,7 @@ resistance_mechanisms:
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: ERG11(Y132F F145L) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:P10613
   gene_id: C5_00660C_A-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -360,20 +358,29 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review flowers-2015-reference-context:
+    The strain label denotes the susceptible parent background, not either tested
+    replicate or a clinical donor. UniProtKB:P10613 and the retained gene_id identify
+    the reference ERG11 locus, not an exact experimental allele. Deposited clinical-source
+    proteins are separate evidence; no isolate join, coordinate normalization or attribution
+    of a combined genotype''s effect to each component is inferred. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:237561; protein_accession=UniProtKB:P10613.'
   evidence:
   - reference: PMID:25385095
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1132; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.03470-14
+    notes: 'Identifier-scope review: Table 1, Results and Figure 2, Table 3: separate
+      clinical cohort, UniProtKB release 2026_03: P10613 entry 179, sequence version
+      2; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG3delta (deletion) associated with resistance to itraconazole
   taxon_id: NCBITaxon:5476
   taxon_label: Candida albicans
   strain: SC5314
-  strain_taxon_id: NCBITaxon:237561
   alteration: ERG3delta (deletion)
-  protein_accession: UniProtKB:Q59VG6
   gene_id: C1_04770C_A-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -381,42 +388,60 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review rybak-2017-albicans-reference-context:
+    The retained strain label is parent background, not the tested deletion derivative.
+    UniProtKB:Q59VG6 and the retained gene_id ground the reference ERG3 locus. Reference
+    protein and strain TaxID are not derivative identifiers. Native clinical-isolate
+    and laboratory observations remain separate; no MIC or exact derivative identifier
+    is inferred. Reference-only source identifiers: strain_taxon_id=NCBITaxon:237561;
+    protein_accession=UniProtKB:Q59VG6.'
   evidence:
   - reference: PMID:28630186
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1133; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00651-17
+    notes: 'Identifier-scope review: Results: ERG3 disruption comparisons, Strain
+      table: parent and derivative rows, UniProtKB release 2026_03: Q59VG6 entry 109,
+      sequence version 1; EnsemblFungi cross-reference. Reviewed 2026-10-08 by codex;
+      curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: ERG3delta (deletion) associated with resistance to itraconazole
   taxon_id: NCBITaxon:5480
   taxon_label: Candida parapsilosis
   strain: Unknown strain
-  strain_taxon_id: NCBITaxon:578454
   alteration: ERG3delta (deletion)
-  protein_accession: UniProtKB:G8B7T4
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review rybak-2017-parapsilosis-reference-context:
+    UniProtKB:G8B7T4 / CPAR2_105550 and strain TaxID 578454 identify CDC 317 reference
+    context, not a clinical isolate or tested derivative. The source row does not
+    uniquely resolve either tested background. Its deletion claim is not the native
+    clinical variant; no individual isolate, clinical protein, genome or MIC is assigned.
+    Reference-only source identifiers: strain_taxon_id=NCBITaxon:578454; protein_accession=UniProtKB:G8B7T4.'
   evidence:
   - reference: PMID:28630186
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8772; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.00651-17
+    notes: 'Identifier-scope review: Results: clinical isolates and ERG3 disruption
+      comparisons, Strain table: two clinical backgrounds and their derivatives, UniProtKB
+      release 2026_03: G8B7T4 entry 50, sequence version 1; EMBL and CGD cross-references.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: CYP51A transformant(CM2627-CYP51Apromoter(2x34bp tandem repeat) and CM2627-CYP51A(L98H))
     (transformant) [Overexpression] associated with resistance to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CM237
-  strain_taxon_id: NCBITaxon:330879
   alteration: CYP51A transformant(CM2627-CYP51Apromoter(2x34bp tandem repeat) and
     CM2627-CYP51A(L98H)) (transformant) [Overexpression]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -424,21 +449,31 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mellado-2007-fumigatus-reference-context:
+    The strain label denotes a parent background, not an individual tested derivative
+    or clinical donor. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293
+    reference locus; TaxID 330879 is reference-only. The combined source alteration
+    remains intact, without assigning its effect to each component. Source phenotypes
+    are unchanged; exact subject protein, strain TaxID and genome remain unresolved.
+    Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:17371828
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.01092-06
+    notes: 'Identifier-scope review: Results: clinical isolates and separate recipient
+      backgrounds, Table 4 and its subject-identity footnote, UniProtKB release 2026_03:
+      Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference and reference
+      taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A transformant(H10-1-50A-cyp51A(N22D)) (transformant) [Not assayed]
     associated with resistance to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CEA17
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A transformant(H10-1-50A-cyp51A(N22D)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -446,21 +481,32 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review ferreira-2004-reference-context:
+    The source CEA17 label denotes the parent background, not an individual descendant
+    or later tested derivative. UniProtKB:Q4WNT5, the retained gene_id and TaxID 330879
+    describe the Af293 reference locus and strain. A shared source alteration does
+    not uniquely identify one experimental subject. Source alterations, phenotypes
+    and assays are unchanged; exact subject protein, strain TaxID and genome remain
+    unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879;
+    protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:15504870
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.48.11.4405-4413.2004
+    notes: 'Identifier-scope review: Results and Discussion: separately named descendant
+      groups and parent comparison, Results: distinction between source isolates and
+      subsequent experimental recipients, UniProtKB release 2026_03: Q4WNT5 entry
+      146, sequence version 1; reference locus and taxonomy. Reviewed 2026-10-08 by
+      codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A transformant(H10-2-50A-cyp51A(M220I)) (transformant) [Not assayed]
     associated with resistance to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CEA17
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A transformant(H10-2-50A-cyp51A(M220I)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -468,21 +514,32 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review ferreira-2004-reference-context:
+    The source CEA17 label denotes the parent background, not an individual descendant
+    or later tested derivative. UniProtKB:Q4WNT5, the retained gene_id and TaxID 330879
+    describe the Af293 reference locus and strain. A shared source alteration does
+    not uniquely identify one experimental subject. Source alterations, phenotypes
+    and assays are unchanged; exact subject protein, strain TaxID and genome remain
+    unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879;
+    protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:15504870
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.48.11.4405-4413.2004
+    notes: 'Identifier-scope review: Results and Discussion: separately named descendant
+      groups and parent comparison, Results: distinction between source isolates and
+      subsequent experimental recipients, UniProtKB release 2026_03: Q4WNT5 entry
+      146, sequence version 1; reference locus and taxonomy. Reviewed 2026-10-08 by
+      codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A transformant(W601-cyp51A(F219L)) (transformant) [Not assayed] associated
     with resistance to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: A1160C
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A transformant(W601-cyp51A(F219L)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -490,21 +547,34 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review wei-2016-reference-context-followup:
+    The source strain label denotes a parent background, not an individual tested
+    derivative. Af293 and A1163/CEA10 UniProt entries and strain TaxIDs describe reference
+    context. The retained gene_id is a reference-locus identifier, not an experimental
+    allele. Increased frequency of later colonies is distinct from baseline susceptibility,
+    and plate growth is not a broth MIC or a clinical resistance category. These endpoint
+    distinctions remain review limitations, not new activity observations. Source
+    alterations, phenotypes and assays are unchanged; exact subject protein, strain
+    TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879;
+    protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:27799210
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.02101-16
+    notes: 'Identifier-scope review: Results and Figures 1-4: baseline parent versus
+      separate tested groups, Tables 1-2: subject identity and distinct assay endpoints,
+      UniProtKB release 2026_03: Q4WNT5 entry 146; B0XYD8 entry 86; B0Y628 entry 66;
+      all sequence version 1; reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(G54E) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CM237
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(G54E) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -512,21 +582,31 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review diaz-guerra-2003-reference-context:
+    The source CM237 label denotes a parent background, distinct from the clinical
+    donor and the two later tested recipients. UniProtKB:Q4WNT5, the retained gene_id
+    and TaxID 330879 identify Af293 reference context, not those subjects. Donor identity
+    is not recipient identity. Source alterations, phenotypes and assays are unchanged;
+    exact subject protein, strain TaxID and genome remain unresolved. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:12604551
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.47.3.1120-1124.2003
+    notes: 'Identifier-scope review: Results: control, clinical donor and two separate
+      tested recipients, Table 1: clinical-series context is distinct from the later
+      experimental groups, UniProtKB release 2026_03: Q4WNT5 entry 146, sequence version
+      1; reference locus and taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(G54E) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: H11-20
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(G54E) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -534,21 +614,31 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review nascimento-2003-fumigatus-reference-context:
+    The strain label denotes a parent background, not one of the separately labeled
+    tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293
+    reference locus; TaxID 330879 is reference-only. A shared alteration does not
+    uniquely identify an experimental subject. Source alterations and phenotypes are
+    unchanged; exact subject protein, strain TaxID and genome remain unresolved. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:12709346
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.47.5.1719-1726.2003
+    notes: 'Identifier-scope review: Strains and culture conditions: parent identity,
+      Results and Table 1: parent and separately labeled derivatives, UniProtKB release
+      2026_03: Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference
+      and reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(G54K) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: H11-20
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(G54K) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -556,21 +646,31 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review nascimento-2003-fumigatus-reference-context:
+    The strain label denotes a parent background, not one of the separately labeled
+    tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293
+    reference locus; TaxID 330879 is reference-only. A shared alteration does not
+    uniquely identify an experimental subject. Source alterations and phenotypes are
+    unchanged; exact subject protein, strain TaxID and genome remain unresolved. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:12709346
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.47.5.1719-1726.2003
+    notes: 'Identifier-scope review: Strains and culture conditions: parent identity,
+      Results and Table 1: parent and separately labeled derivatives, UniProtKB release
+      2026_03: Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference
+      and reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(G54R) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: ND158
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(G54R) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -578,21 +678,31 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mann-2003-fumigatus-reference-context:
+    The strain label denotes a parent background, not a uniquely resolved tested derivative
+    or clinical isolate. The later recipient background is distinct from the original
+    parent. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293 reference locus;
+    TaxID 330879 is reference-only. Source alterations and phenotypes are unchanged;
+    exact subject protein, strain TaxID and genome remain unresolved. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:12543662
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.47.2.577-581.2003
+    notes: 'Identifier-scope review: Strains and plasmids: background identity, Results
+      and Tables 1-2: distinct subject groups, UniProtKB release 2026_03: Q4WNT5 entry
+      146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(G54R) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: H11-20
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(G54R) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -600,21 +710,31 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review nascimento-2003-fumigatus-reference-context:
+    The strain label denotes a parent background, not one of the separately labeled
+    tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293
+    reference locus; TaxID 330879 is reference-only. A shared alteration does not
+    uniquely identify an experimental subject. Source alterations and phenotypes are
+    unchanged; exact subject protein, strain TaxID and genome remain unresolved. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:12709346
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.47.5.1719-1726.2003
+    notes: 'Identifier-scope review: Strains and culture conditions: parent identity,
+      Results and Table 1: parent and separately labeled derivatives, UniProtKB release
+      2026_03: Q4WNT5 entry 146, sequence version 1; EnsemblFungi cross-reference
+      and reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(G54W) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: ND158
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(G54W) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -622,21 +742,31 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mann-2003-fumigatus-reference-context:
+    The strain label denotes a parent background, not a uniquely resolved tested derivative
+    or clinical isolate. The later recipient background is distinct from the original
+    parent. UniProtKB:Q4WNT5 and the retained gene_id denote the Af293 reference locus;
+    TaxID 330879 is reference-only. Source alterations and phenotypes are unchanged;
+    exact subject protein, strain TaxID and genome remain unresolved. Reference-only
+    source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:12543662
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.47.2.577-581.2003
+    notes: 'Identifier-scope review: Strains and plasmids: background identity, Results
+      and Tables 1-2: distinct subject groups, UniProtKB release 2026_03: Q4WNT5 entry
+      146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(M220K) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CM237
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(M220K) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -644,21 +774,32 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mellado-2004-fumigatus-reference-context:
+    The strain label denotes a parent background, distinct from clinical donors and
+    later tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the
+    Af293 reference locus; TaxID 330879 is reference-only. Donor identity is not recipient
+    identity. Source alterations and phenotypes are unchanged; exact subject protein,
+    strain TaxID and genome remain unresolved. Reference-only source identifiers:
+    strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:15215142
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.48.7.2747-2750.2004
+    notes: 'Identifier-scope review: Fungal strains and antifungal susceptibility
+      testing: parent and clinical isolates, Results and Table 1: distinct parent,
+      donor and tested-subject identities, UniProtKB release 2026_03: Q4WNT5 entry
+      146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(M220T) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CM237
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(M220T) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -666,21 +807,32 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mellado-2004-fumigatus-reference-context:
+    The strain label denotes a parent background, distinct from clinical donors and
+    later tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the
+    Af293 reference locus; TaxID 330879 is reference-only. Donor identity is not recipient
+    identity. Source alterations and phenotypes are unchanged; exact subject protein,
+    strain TaxID and genome remain unresolved. Reference-only source identifiers:
+    strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:15215142
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.48.7.2747-2750.2004
+    notes: 'Identifier-scope review: Fungal strains and antifungal susceptibility
+      testing: parent and clinical isolates, Results and Table 1: distinct parent,
+      donor and tested-subject identities, UniProtKB release 2026_03: Q4WNT5 entry
+      146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cyp51A(M220V) (amino acid mutation) [Not assayed] associated with resistance
     to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: CM237
-  strain_taxon_id: NCBITaxon:330879
   alteration: cyp51A(M220V) (amino acid mutation) [Not assayed]
-  protein_accession: UniProtKB:Q4WNT5
   gene_id: Afu4g06890-T
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
@@ -688,74 +840,123 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review mellado-2004-fumigatus-reference-context:
+    The strain label denotes a parent background, distinct from clinical donors and
+    later tested derivatives. UniProtKB:Q4WNT5 and the retained gene_id denote the
+    Af293 reference locus; TaxID 330879 is reference-only. Donor identity is not recipient
+    identity. Source alterations and phenotypes are unchanged; exact subject protein,
+    strain TaxID and genome remain unresolved. Reference-only source identifiers:
+    strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WNT5.'
   evidence:
   - reference: PMID:15215142
     notes: PHI-base primary-literature antimicrobial interaction PHIG:1837; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.48.7.2747-2750.2004
+    notes: 'Identifier-scope review: Fungal strains and antifungal susceptibility
+      testing: parent and clinical isolates, Results and Table 1: distinct parent,
+      donor and tested-subject identities, UniProtKB release 2026_03: Q4WNT5 entry
+      146, sequence version 1; EnsemblFungi cross-reference and reference taxonomy.
+      Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
+      5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: algAdelta (deletion) associated with resistance to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: A1160C
-  strain_taxon_id: NCBITaxon:451804
   alteration: algAdelta (deletion)
-  protein_accession: UniProtKB:B0XYD8
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review wei-2016-reference-context-followup:
+    The source strain label denotes a parent background, not an individual tested
+    derivative. Af293 and A1163/CEA10 UniProt entries and strain TaxIDs describe reference
+    context. The retained gene_id is a reference-locus identifier, not an experimental
+    allele. Increased frequency of later colonies is distinct from baseline susceptibility,
+    and plate growth is not a broth MIC or a clinical resistance category. These endpoint
+    distinctions remain review limitations, not new activity observations. Source
+    alterations, phenotypes and assays are unchanged; exact subject protein, strain
+    TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:451804;
+    protein_accession=UniProtKB:B0XYD8.'
   evidence:
   - reference: PMID:27799210
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8688; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.02101-16
+    notes: 'Identifier-scope review: Results and Figures 1-4: baseline parent versus
+      separate tested groups, Tables 1-2: subject identity and distinct assay endpoints,
+      UniProtKB release 2026_03: Q4WNT5 entry 146; B0XYD8 entry 86; B0Y628 entry 66;
+      all sequence version 1; reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: cox10 transformant(W004-cox10(R243Q)) (transformant) [Not assayed] associated
     with resistance to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: A1160C
-  strain_taxon_id: NCBITaxon:451804
   alteration: cox10 transformant(W004-cox10(R243Q)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:B0Y628
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review wei-2016-reference-context-followup:
+    The source strain label denotes a parent background, not an individual tested
+    derivative. Af293 and A1163/CEA10 UniProt entries and strain TaxIDs describe reference
+    context. The retained gene_id is a reference-locus identifier, not an experimental
+    allele. Increased frequency of later colonies is distinct from baseline susceptibility,
+    and plate growth is not a broth MIC or a clinical resistance category. These endpoint
+    distinctions remain review limitations, not new activity observations. Source
+    alterations, phenotypes and assays are unchanged; exact subject protein, strain
+    TaxID and genome remain unresolved. Reference-only source identifiers: strain_taxon_id=NCBITaxon:451804;
+    protein_accession=UniProtKB:B0Y628.'
   evidence:
   - reference: PMID:27799210
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8689; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1128/aac.02101-16
+    notes: 'Identifier-scope review: Results and Figures 1-4: baseline parent versus
+      separate tested groups, Tables 1-2: subject identity and distinct assay endpoints,
+      UniProtKB release 2026_03: Q4WNT5 entry 146; B0XYD8 entry 86; B0Y628 entry 66;
+      all sequence version 1; reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 - mechanism_type: UNKNOWN
   label: HapE transformant(Isolate3-HapE(P88L)) (transformant) [Not assayed] associated
     with resistance to itraconazole
   taxon_id: NCBITaxon:746128
   taxon_label: Aspergillus fumigatus
   strain: akuBKU80
-  strain_taxon_id: NCBITaxon:330879
   alteration: HapE transformant(Isolate3-HapE(P88L)) (transformant) [Not assayed]
-  protein_accession: UniProtKB:Q4WDM9
   phenotype_id: PHIPO:0000675
   phenotype_label: resistance to itraconazole
   assay: Cell growth assay
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review camps-2012-fumigatus-reference-context:
+    The strain label denotes a parent background, not either later tested replicate
+    or the native clinical isolate. UniProtKB:Q4WDM9 / AFUA_6G05300 and TaxID 330879
+    denote Af293 reference context. Reference-guided sequence analysis does not identify
+    a clinical or experimental subject as Af293. Source alterations and phenotypes
+    are unchanged; exact subject protein, strain TaxID and genome remain unresolved.
+    Reference-only source identifiers: strain_taxon_id=NCBITaxon:330879; protein_accession=UniProtKB:Q4WDM9.'
   evidence:
   - reference: PMID:23226235
     notes: PHI-base primary-literature antimicrobial interaction PHIG:8691; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1371/journal.pone.0050034
+    notes: 'Identifier-scope review: Results sections s3a-s3b: clinical series and
+      reference genomes, Results section s3d and Table 7: later experimental groups,
+      UniProtKB release 2026_03: Q4WDM9 entry 125, sequence version 1; AFUA_6G05300
+      reference crosswalk and taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
+      SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -1219,3 +1420,156 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T08:33:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Applied 1 pinned subject-context reviews, retaining reference-locus grounding
+    while withholding unverified experimental protein/strain identifiers. Source alterations,
+    phenotypes, species, genes, and existing activities unchanged. Refreshed provenance
+    checksums on any previously reviewed claims. ERG11 parent, replicate and clinical-donor
+    contexts remain separate.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:10:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after Eddouzi subject
+    reviews; all biological fields and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T09:44:17Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: 'Scoped two imported ERG3 associations: reference proteins and strain TaxIDs
+    are not experimental-subject identifiers. Retained source species, background
+    labels, alterations and phenotypes; clinical isolates remain separate. Existing
+    activities and curator claims unchanged; refreshed older review checksums.'
+  llm_assisted: true
+- timestamp: '2026-10-08T10:12:34Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after carboxin reference-context
+    reviews; all biological fields, activities and previous decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T10:52:13Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after two additional
+    carboxin identifier-scope corrections; all biological fields, activities and previous
+    decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T11:28:54Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after eleven additional
+    identifier-scope corrections; biological fields, activities and decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T12:09:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: 'Scoped imported associations to the reported parent background: Af293
+    reference protein and strain TaxID are not tested-subject identities. Source alterations,
+    phenotypes, assays and clinical activities unchanged; no exact allele or genome
+    inferred.'
+  llm_assisted: true
+- timestamp: '2026-10-08T12:49:25Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the whole-file PHI-base review checksum after one yeast identity-scope
+    correction; biological fields, activities and prior decisions unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T13:24:16Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Scoped imported reference protein and strain TaxID to provenance, not tested-subject
+    identity. Source parent labels, alterations, phenotypes and assays preserved;
+    no experimental allele, genome or activity measurement inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:01:29Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after nine identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T14:40:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after six identifier-scope
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T15:08:41Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after eight subject-identity
+    corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:11:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Darlington subject
+    correction; prior review decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T19:44:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Nakayama reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T20:35:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Duan reference-scope
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:06:59Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Piotrowska parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T21:55:56Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Xu subject and species
+    corrections; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:27:15Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Shima parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T22:54:06Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Mehrabi parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-08T23:22:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Huang parent-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T00:15:05Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the HDF1 subject-reference
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T04:34:47Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the Fouche parent-cohort
+    review; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T05:46:24Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed shared PHI-base review checksum after the SDH8 reference-alias
+    correction; prior decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-09T10:41:09Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
+    review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true

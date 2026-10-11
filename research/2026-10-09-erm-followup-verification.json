@@ -1,0 +1,124 @@
+{
+  "adversarial_review": "SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "all_current_record_hashes_verified": 2939,
+  "artifacts": [
+    {
+      "path": "research/2026-10-09-erm-reference-followup.json",
+      "sha256": "3cb107b7c4699e98c642a4d40f74dfa162cc12ea6336c5c09c4e9f01a88c054c"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "1aaa8ce4826683f83b0ed2273835ee1fd731354408ceac11dc0de2dfb4dc188e"
+    },
+    {
+      "path": "tests/test_erm_reference_followup.py",
+      "sha256": "cab0047ebcc3136878521ef061a33f8b2644e6714b604126c8dc82991546aae0"
+    }
+  ],
+  "authoritative_qc": "NOT_RERUN_FOR_RESEARCH_ONLY_CHECKPOINT",
+  "changed_protected_files": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "1aaa8ce4826683f83b0ed2273835ee1fd731354408ceac11dc0de2dfb4dc188e",
+      "before_sha256": "a36a4f8b15bed3b40dc062bfa33a4843e2892c66c123c83daf3c4d1fd3678267"
+    }
+  },
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-erm-followup/check-0.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-erm-followup/check-1.log",
+        "sha256": "4e35248929325fef11134949b3f16dc729df9c28d017e999898555d14bcb0afd"
+      }
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-erm-followup/check-2.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_erm_reference_followup.py",
+        "tests/test_aminocoumarin_reference_followup.py",
+        "tests/test_card_named_taxa.py",
+        "-q",
+        "--junitxml=reports/resistance-grounding-2026-10-09-erm-followup/focused-tests-final.xml"
+      ],
+      "exit_code": 0,
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-09-erm-followup/check-3.log",
+        "sha256": "708c12b7dfa2c13cef774b02f3fa254b47290eae46ca2d7945af695e4b646a26"
+      }
+    }
+  ],
+  "date": "2026-10-09",
+  "ena_summary_projections_verified": 14,
+  "focused_test_report": {
+    "path": "reports/resistance-grounding-2026-10-09-erm-followup/focused-tests-final.xml",
+    "sha256": "06912b690b1a5b6b2671fca31cad7b40a4e0960604203c143d1c7f23917adaf7"
+  },
+  "focused_tests_passed": 72,
+  "github_mutations": 0,
+  "history_events_added": 0,
+  "ignored_files_included": true,
+  "last_biological_qc_checkpoint": {
+    "path": "research/2026-10-09-aminocoumarin-primary-verification.json",
+    "sha256": "691d9e2184f446f8061eb7a525725a2cfb86559220c22c5f58db37ac06912dcb"
+  },
+  "metadata_request_inventory_scope": "Sequence-free REST metadata only; publisher text inspection and tool access limits are separately described in the dossier.",
+  "metadata_response_pins_verified": 31,
+  "ncbi_endpoint_requests": 0,
+  "new_files_before_verification_receipt": [
+    {
+      "path": "research/2026-10-09-erm-reference-followup.json",
+      "sha256": "3cb107b7c4699e98c642a4d40f74dfa162cc12ea6336c5c09c4e9f01a88c054c"
+    },
+    {
+      "path": "tests/test_erm_reference_followup.py",
+      "sha256": "cab0047ebcc3136878521ef061a33f8b2644e6714b604126c8dc82991546aae0"
+    }
+  ],
+  "new_regression_cases": 14,
+  "outreach": 0,
+  "prior_report_bytes_preserved": true,
+  "protected_files": 6817,
+  "protected_files_unchanged": 6816,
+  "protected_manifest": {
+    "path": "reports/resistance-grounding-2026-10-09-erm-followup/protected-before.json",
+    "sha256": "f21f9c51166a0bcde2a88691ae1f0d70fef67fbb2fa29c15c1fcd02d1d5447de"
+  },
+  "records_changed": 0,
+  "source_adoptions": 0,
+  "source_inputs_pages_embeddings_preserved": true,
+  "status": "REFERENCE_CHECKPOINT_VERIFIED_PRIMARY_REVIEW_OPEN",
+  "taxonomy_projections_verified": 8,
+  "uniprot_projection_entries_verified": 8,
+  "whole_corpus_primary_review": "OPEN",
+  "whole_records_completed": 0
+}

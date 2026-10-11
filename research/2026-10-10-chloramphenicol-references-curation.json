@@ -1,0 +1,77 @@
+{
+  "added_claims": [
+    {
+      "assay": "Source-reported disk diffusion",
+      "evidence": [
+        {
+          "notes": "Selected publisher Results and Discussion: native SOF-1 disk-diffusion resistance statement and CMLA6 identification; accession statement AF294653. The beta-lactam MIC table does not supply a chloramphenicol measurement.",
+          "reference": "PMID:11353602"
+        }
+      ],
+      "gene_families": [
+        "cmlA-like"
+      ],
+      "label": "CMLA6-associated chloramphenicol resistance in native isolate SOF-1",
+      "mechanism_type": "UNKNOWN",
+      "note": "Same-isolate gene/phenotype co-occurrence, not proof that CMLA6 alone caused resistance. The paper names CMLA6 and reports the native isolate phenotype as data not shown; no zone diameter or clinical breakpoint interpretation is inferred. Its beta-lactam experiments in other hosts are not chloramphenicol evidence for this isolate. UniProtKB:Q933G9 is retained as reference context only: it combines CmlA6 and cmlA1 annotations from separate source contexts. The source-reported deposit AF294653.1 is not a genome assembly. No exact experimental protein, allele, strain TaxID or genome is assigned. Compound scope follows named chloramphenicol; the tested preparation was not independently re-identified.",
+      "phenotype_label": "source-reported chloramphenicol resistance",
+      "strain": "SOF-1",
+      "taxon_id": "NCBITaxon:287",
+      "taxon_label": "Pseudomonas aeruginosa"
+    }
+  ],
+  "assembly_accessions_assigned": 0,
+  "batch_started_on": "2026-10-10",
+  "before_record_sha256": "b8acca553963ce724506af3e6001e8aacc882f0a8c4af63fe29638c154ff7162",
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-10-chloramphenicol-references/chloramphenicol-canary.yaml",
+    "sha256": "6a287fcdf4483193762f276cb880d2cb29800a8d0bb9fd1468e80c949d3ec928"
+  },
+  "claims_added": 1,
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added native SOF-1 CMLA6/chloramphenicol co-occurrence from primary results, without assigning individual causation, an exact experimental UniProt protein, allele or genome. Preserved source-owned assertions and all other fields; whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-10T07:41:05Z"
+  },
+  "curation_status": "REVIEWED",
+  "embedding_documents_changed": 0,
+  "embedding_fingerprint": "18ff581531b8bd9d",
+  "embedding_preservation": {
+    "path": "reports/resistance-grounding-2026-10-10-chloramphenicol-references/embedding-preservation.json",
+    "sha256": "7b60127d50e905760e7753cf25a669268da0afde7a616fd5713644c4ffd5a6b6"
+  },
+  "exact_alleles_assigned": 0,
+  "existing_claims_preserved": 87,
+  "experimental_proteins_assigned": 0,
+  "fresh_seed": {
+    "path": "reports/resistance-grounding-2026-10-10-chloramphenicol-references/chloramphenicol-seed.json",
+    "sha256": "50c44215146b63ee882764b519d888b9750fb65a714ed5710d82993c9c3a2fee"
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "identifier": "CHEBI:17698",
+  "ncbi_endpoint_requests": 0,
+  "numerical_ast_added": 0,
+  "original": {
+    "path": "reports/resistance-grounding-2026-10-10-chloramphenicol-references/chloramphenicol-original.yaml",
+    "sha256": "b8acca553963ce724506af3e6001e8aacc882f0a8c4af63fe29638c154ff7162"
+  },
+  "preserved_fields_sha256": "94a20a2b7abe74e535c883c309811f5665cce5b6e7f7bc6a56b8c7aa83f59d5a",
+  "preserved_history_sha256": "e44fa2f21d0dcbbd3d209e577d3e191a563f36c78e858b82383dcbaa396406c7",
+  "preserved_resistance_claims_sha256": "fa9feecd46f67994c0294e1cbf3b4008d0647eaec193359898d90efbb25d92e2",
+  "primary_context": {
+    "path": "research/2026-10-10-chloramphenicol-references-context.json",
+    "sha256": "fb627f91643474944857e5bbe7deb2b61d73acbb8ee6d9268eaeb16b4aec6ce9"
+  },
+  "record": {
+    "path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+    "sha256": "6a287fcdf4483193762f276cb880d2cb29800a8d0bb9fd1468e80c949d3ec928"
+  },
+  "records_changed": 1,
+  "source_adoptions": 0,
+  "status": "CURATED_QUALITATIVE_NATIVE_ASSOCIATION",
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_review_complete": false
+}

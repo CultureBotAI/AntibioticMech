@@ -63,3 +63,38 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-09T09:24:19Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added primary author-reported qualitative gene associations with species
+    grounding and reference-only UniProt provenance. Kept experimental allele, strain
+    and genome assignments unresolved; no quantitative AST added; figure review remains
+    pending.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: OTHER
+  label: pbr1-associated papulacandin D resistance in Schizosaccharomyces pombe
+  gene_id: pbr1
+  gene_families:
+  - bgs4
+  taxon_id: NCBITaxon:4896
+  taxon_label: Schizosaccharomyces pombe
+  phenotype_label: Author-reported papulacandin D resistance
+  assay: Growth susceptibility comparisons
+  note: 'Laboratory derivatives in the 972 background, not resistance inferred from
+    gene presence or assigned to the parent or species. Reference-only mapping: UniProtKB:O74475
+    (bgs4, SPCC1840.02c; NCBITaxon:284812), not a tested allele or protein assignment.
+    Figures were not independently reanalyzed; no numeric AST or clinical category
+    is inferred. PomBase explicitly aliases pbr1 to bgs4; the inspected UniProt synonym
+    list omits pbr1. The budding-yeast comparison is not assigned to this fission-yeast
+    determinant.'
+  evidence:
+  - reference: PMID:7592316
+    notes: Primary Results, physiological characterization; Methods identify the tested
+      compounds. Qualitative PDF-text review, not independent image or numeric reanalysis.
+  - reference: UniProtKB:O74475
+    notes: Reference locus only; UniProtKB 2026_03, entry version 158, sequence version
+      1.
+  - reference: https://www.pombase.org/gene/SPCC1840.02c
+    notes: Reference-name alias and UniProt cross-reference only; official gene page
+      inspected 2026-10-09, release date 2026-09-15.

@@ -1,0 +1,109 @@
+{
+  "card_reference_releases": [
+    "2026_03"
+  ],
+  "generator": {
+    "path": "scripts/summarize_resistance_progress.py",
+    "sha256": "7a16333c8c04312eea4300095080c9147a6968ca70f2a57f046f8cbeda46e838"
+  },
+  "inputs": {
+    "card": {
+      "path": "research/2026-10-07-card-reference-grounding.json",
+      "sha256": "bf01b0fef65240d2d1daf8298398ae171194420c0093a7aad2c9ba318b9b5961"
+    },
+    "card_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "card_ledger": {
+      "path": "research/2026-10-07-card-reference-ledger.tsv",
+      "sha256": "5b0e0fb215fd4113e3ceb5507d008b792c63c9e4eaf28cec1be2148919491356"
+    },
+    "census": {
+      "path": "research/2026-10-09-canthin-resistance-grounding.tsv",
+      "sha256": "0ca15b8dac7b4cb77a67d60337e2cdc8a86d8a0061fc7199af0a3116d0ffe08c"
+    },
+    "expanded_queries": {
+      "path": "research/2026-10-09-resistance-discovery-date-sort-ledger.tsv",
+      "sha256": "2401eaa200e8f03c9d06a86561dc0a8e455b5027bf19114ec34f8cc388bb9651"
+    },
+    "expansion": {
+      "path": "research/2026-10-09-resistance-discovery-date-sort.json",
+      "sha256": "e3e545520420d8109c8b0bd2ac07ea8c3c248ab5c829b29ba1eb2a2112436846"
+    },
+    "expansion_plan": {
+      "path": "research/2026-10-08-resistance-discovery-expansion-plan.json",
+      "sha256": "f80305760a82f31e7f6b3e2be8ea6e2074df4b77ea9597ed0bee98ce0bdca62f"
+    },
+    "hivdb": {
+      "path": "research/2026-10-07-hivdb-reference-grounding.json",
+      "sha256": "b2ea18881e93d2e2555b333ccaf80a8cb05c8cfa385f5b32f7a2de7097bdf7f4"
+    },
+    "hivdb_inventory": {
+      "path": "data/raw/hivdb_algorithm_terms.tsv",
+      "sha256": "fdecfc0f3f98c09ac8b8255495e7eb6598b0af13db80c6f74c3aab46d4f62dad"
+    },
+    "initial_searches": {
+      "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+      "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+    },
+    "name_plan": {
+      "path": "research/2026-10-08-resistance-alias-discovery-plan.json",
+      "sha256": "674d96cf7c5b6d2a8577edf326b963e956b8ac5d7645cc02cd676291a0ce41fa"
+    },
+    "phi_inventory": {
+      "path": "data/raw/phibase_amr.tsv",
+      "sha256": "2ca07918630e701a99753e2654409c8b55b580421cc9f236f93b5d1d39771b85"
+    },
+    "phi_reviews": {
+      "path": "curation/phibase_grounding_reviews.json",
+      "sha256": "5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702"
+    }
+  },
+  "ledger": {
+    "path": "research/2026-10-09-canthin-resistance-progress.tsv",
+    "sha256": "bfd891c1232d3c3286e49984f76c4e0ebfb08096c124176f7ac7cd83e49a8292"
+  },
+  "limitations": [
+    "This offline index summarizes existing exports, not a new primary-evidence review.",
+    "Names and query provenance are checked against every current collection-loaded record.",
+    "Completed traversals cover recorded query names only; no biological absence is inferred.",
+    "Historical record hashes remain intact; current hashes are separately reported.",
+    "CARD accessions and taxids are reference candidates, never experimental subject or allele assignments.",
+    "Per-record CARD term counts overlap; use the global distinct-term count for corpus totals.",
+    "PHI-base counts are source-row identifier decisions, not full phenotype review or independent experiments.",
+    "HIVDB source rules and reference taxonomy are not measured resistance or allele assignments.",
+    "Existing claim counts do not certify the claims, and no whole-record review is complete.",
+    "Individual paper dossiers and other curator/reference mappings are not indexed here; consult the main report.",
+    "No sequences, variant specifications, assay values or new biological claims are exported.",
+    "No network requests, NCBI contact, source adoption, record edits or curation events occur."
+  ],
+  "reference_attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "slice": "Explicit CARD cross-references in UniProt; card.json was not requested or imported.",
+    "source": "UniProt Consortium, UniProtKB and UniProt Taxonomy"
+  },
+  "schema_version": 1,
+  "scope": "PROGRESS_INDEX_NOT_PRIMARY_REVIEW_OR_EXPERIMENTAL_GROUNDING",
+  "summary": {
+    "card_distinct_terms": 2002,
+    "card_records_with_reference_candidates": 169,
+    "card_source_assertions": 4538,
+    "card_terms_with_reference_candidates": 978,
+    "card_terms_without_explicit_reference_link": 1024,
+    "corpus_records": 2939,
+    "existing_genotype_rules": 467,
+    "existing_resistance_assertions": 4790,
+    "expanded_distinct_queries": 611,
+    "expanded_query_memberships": 612,
+    "hivdb_source_rules": 467,
+    "initial_query_memberships": 7469,
+    "phi_identifier_review_pending": 32,
+    "phi_identifier_scoped_associations": 185,
+    "phi_source_associations": 217,
+    "record_changed_since_name_search": 26,
+    "recorded_names_searched": 16030,
+    "whole_record_primary_reviews_completed": 0
+  }
+}

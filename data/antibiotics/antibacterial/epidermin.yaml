@@ -61,3 +61,34 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-09T18:55:26Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added qualitative primary-backed resistance evidence with donor, host and
+    substrate distinctions. Reference proteins are not assigned as exact experimental
+    alleles. Existing chemical and source evidence preserved; whole-record review
+    remains open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: UNKNOWN
+  label: EpiFEG-associated reduced susceptibility to epidermin
+  gene_families:
+  - epiF
+  - epiE
+  - epiG
+  taxon_id: NCBITaxon:1281
+  taxon_label: Staphylococcus carnosus
+  phenotype_label: reduced susceptibility to epidermin in laboratory derivatives
+  assay: Source-reported growth susceptibility comparisons; qualitative result only
+  note: The tested subjects are TM300-derived laboratory strains, not the unmodified
+    background. Staphylococcus epidermidis Tue3298 is the donor. The three-component
+    result does not establish individual sufficiency; transport remains a hypothesis.
+    Donor references UniProtKB:Q54002 (EpiF), UniProtKB:Q54003 (EpiE) and UniProtKB:Q54004
+    (EpiG) are not experimental allele assignments. ENA lists the paper's U29130 as
+    a secondary accession of U77778. No derivative TaxID, genome, numerical AST or
+    clinical category is assigned.
+  evidence:
+  - reference: PMID:8550476
+    notes: 'Author-uploaded primary text: Results, Table 1 and Discussion. Purified
+      epidermin is named in the assay section. Figures and supplements were not visually
+      inspected.'

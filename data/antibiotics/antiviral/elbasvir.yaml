@@ -88,12 +88,21 @@ resistance_mechanisms:
   label: HCV NS5A substitutions at positions 30, 31, and 93
   gene_families:
   - HCV NS5A
-  note: Genotype replicons and sequencing after elbasvir exposure identified substitutions
+  note: 'Genotype replicons and sequencing after elbasvir exposure identified substitutions
     at NS5A positions 30, 31, and 93 that produced substantial losses of susceptibility,
-    with genotype-dependent effects.
+    with genotype-dependent effects. Taxon grounding only: the source calls the virus
+    HCV. Its genotype-specific replicon results and clinical sequencing observations
+    are distinct evidence contexts. The aggregate claim does not identify one patient,
+    experimental allele or reference polyprotein. No protein accession, strain TaxID,
+    genome or quantitative resistance endpoint is assigned by this curation.'
   evidence:
   - reference: PMID:26303801
     notes: Primary elbasvir resistance-selection, replicon, and sequencing study.
+  - reference: https://rest.uniprot.org/taxonomy/3052230
+    notes: 'Taxonomic identity only: active species with Hepatitis C virus as an explicit
+      alias. Retrieved 2026-10-08 UTC.'
+  taxon_id: NCBITaxon:3052230
+  taxon_label: Orthohepacivirus hominis
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -118,3 +127,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T05:01:38Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_TAXON
+  changes: Grounded the existing aggregate HCV claim to an active species TaxID. Kept
+    study reference crosswalks in a separate dossier; did not assign patient or mutant
+    proteins, strain TaxIDs, genomes or measurements.
+  llm_assisted: true
