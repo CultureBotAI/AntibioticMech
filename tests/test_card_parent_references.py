@@ -7,8 +7,10 @@ import sys
 from pathlib import Path
 
 import pytest
+import yaml
 
 from antibioticmech.activity_collections import load_record
+from antibioticmech.pathway_links import load_index
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -216,6 +218,31 @@ def test_linked_parent_is_not_selected_as_unlinked():
     assert audit.select_terms(*values) == {}
 
 
+def assert_pre_pathway_record(row, path, transition, restored):
+    assert transition["path"] == row["path"]
+    assert transition["identifier"] == row["identifier"]
+    assert transition["before_sha256"] == row["sha256"]
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == transition["after_sha256"]
+    historical = load_record(path)
+    plans = yaml.safe_load((ROOT / "curation/pathway_links.yaml").read_text())["records"]
+    plan, = [plan for plan in plans if plan["identifier"] == row["identifier"]]
+    commit, _ = load_index(ROOT)
+    assert historical.pop("related_records") == [
+        {"corpus": "PathwayMech", **link, "source_version": commit} for link in plan["links"]
+    ]
+    removed_actions = {"ADD_PATHWAY_LINKS", "RECONCILED_BRANCH_CURATION"}
+    removed = [event["action"] for event in historical["curation_history"]
+               if event["action"] in removed_actions]
+    expected = ["ADD_PATHWAY_LINKS"]
+    if row["identifier"] != "CHEBI:45924":
+        expected.append("RECONCILED_BRANCH_CURATION")
+    assert removed == expected
+    historical["curation_history"] = [event for event in historical["curation_history"]
+                                      if event["action"] not in removed_actions]
+    write_validated_antibiotic(historical, restored)
+    assert hashlib.sha256(restored.read_bytes()).hexdigest() == row["sha256"]
+
+
 def test_saved_dossier_scope_and_record_pins(tmp_path):
     doc = json.loads(OUTPUT.read_bytes())
     summary = doc["summary"]
@@ -234,8 +261,16 @@ def test_saved_dossier_scope_and_record_pins(tmp_path):
     )
     assert len(doc["terms"]) == 43 and len(doc["records"]) == 50
     followup = json.loads((ROOT / "research/2026-10-10-card-parent-primary-curation.json").read_bytes())
+    integration = json.loads((ROOT / "research/2026-10-11-pr-integration-reconciliation.json").read_bytes())
+    transitions = {row["identifier"]: row for row in integration["changes"]}
+    assert set(transitions) & {row["identifier"] for row in doc["records"]} == {
+        "CHEBI:45924", "CHEBI:46081", "CHEBI:9448",
+    }
     for row in doc["records"]:
         path = ROOT / row["path"]
+        if row["identifier"] in transitions:
+            assert_pre_pathway_record(row, path, transitions[row["identifier"]], tmp_path / path.name)
+            continue
         if row["identifier"] not in followup["records"]:
             assert hashlib.sha256(path.read_bytes()).hexdigest() == row["sha256"]
             continue
@@ -254,6 +289,30 @@ def test_saved_dossier_scope_and_record_pins(tmp_path):
     assert all(
         q["complete_for_query"] and not q["establishes_biological_absence"] for q in doc["queries"].values()
     )
+
+
+@pytest.mark.parametrize("mutation", ["label", "link", "history", "resistance"])
+@pytest.mark.parametrize("repin", [False, True])
+def test_pathway_reconciliation_cannot_hide_other_drift(tmp_path, mutation, repin):
+    dossier = json.loads(OUTPUT.read_bytes())
+    row, = [row for row in dossier["records"] if row["identifier"] == "CHEBI:45924"]
+    integration = json.loads((ROOT / "research/2026-10-11-pr-integration-reconciliation.json").read_bytes())
+    transition, = [item for item in integration["changes"] if item["identifier"] == row["identifier"]]
+    current = load_record(ROOT / row["path"])
+    if mutation == "label":
+        current["label"] += " unexpected change"
+    elif mutation == "link":
+        current["related_records"][0]["basis"] += " unexpected change"
+    elif mutation == "history":
+        current["curation_history"][0]["changes"] += " unexpected change"
+    else:
+        current["resistance_mechanisms"][0]["note"] = "unexpected change"
+    changed = tmp_path / "changed.yaml"
+    write_validated_antibiotic(current, changed)
+    if repin:
+        transition["after_sha256"] = hashlib.sha256(changed.read_bytes()).hexdigest()
+    with pytest.raises(AssertionError):
+        assert_pre_pathway_record(row, changed, transition, tmp_path / "historical.yaml")
 
 
 def test_saved_reference_projection_has_no_orphan_or_experimental_assignment():
