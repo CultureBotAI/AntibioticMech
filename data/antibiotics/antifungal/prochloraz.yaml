@@ -128,7 +128,7 @@ resistance_mechanisms:
       parental strains and derived subjects; direct fetch HTTP 403 and complete Results
       unavailable, UniProtKB release 2026_03: I1RJR2 entry 82, sequence version 1;
       CYP51A locus FGRAMPH1_01T14465 and PH-1 reference taxonomy 229533. Reviewed
-      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
 - mechanism_type: UNKNOWN
   label: FgCYP51A(E103Q, V157L) (amino acid mutation) [Overexpression] associated
     with resistance to prochloraz
@@ -159,7 +159,7 @@ resistance_mechanisms:
       parental strains and derived subjects; direct fetch HTTP 403 and complete Results
       unavailable, UniProtKB release 2026_03: I1RJR2 entry 82, sequence version 1;
       CYP51A locus FGRAMPH1_01T14465 and PH-1 reference taxonomy 229533. Reviewed
-      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
 - mechanism_type: UNKNOWN
   label: CYP51Adelta (deletion) associated with resistance to prochloraz
   taxon_label: Colletotrichum gloeosporioides
@@ -182,7 +182,7 @@ resistance_mechanisms:
       to this record by exact ChEBI identifier.
   - reference: DOI:10.1002/ps.5964
     notes: 'Identifier-scope review: Table 1, Section 2.5, Section 3.6. Reviewed 2026-10-08
-      by codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
+      by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -387,4 +387,10 @@ curation_history:
   action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
   changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
     review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-12T20:12:19Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after four reference-identifier
+    scope corrections; previous decisions, biological fields and activities unchanged.
   llm_assisted: true

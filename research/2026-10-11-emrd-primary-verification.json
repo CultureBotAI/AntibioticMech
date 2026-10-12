@@ -1,0 +1,67 @@
+{
+  "verified_on": "2026-10-11",
+  "scope": "RESEARCH_ONLY_NO_BIOLOGICAL_CURATION",
+  "baseline_commit": "0611c4ed87a1d089aea7b1a1f60d3b32b9f57d32",
+  "artifacts": [
+    {
+      "path": "research/2026-10-11-emrd-primary-context.json",
+      "sha256": "9e409daa5325b85f57127dd0be17527535ced3621130e0a4e0eb0abe8a5e0d71"
+    },
+    {
+      "path": "tests/test_emrd_primary_context.py",
+      "sha256": "f113d9f39b30edda0a23b31bac7c6df2bb2c48db75b0e57e45a4a783ec4f54e6"
+    }
+  ],
+  "checks": [
+    {
+      "command": ".venv/bin/python -m pytest -q tests/test_emrd_primary_context.py tests/test_structure_primary_context.py tests/test_resistance_grounding_audit.py",
+      "exit_code": 0,
+      "passed": 48,
+      "duration_seconds": 3.62
+    },
+    {
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "check": "Offline comparison of PDF size/hash, cached UniProt request identity and body hashes, release headers, query completeness, reference identifiers and taxonomy",
+      "exit_code": 0
+    }
+  ],
+  "preservation": {
+    "baseline_census": "research/2026-10-11-pr-integration-resistance-grounding.tsv",
+    "baseline_census_sha256": "554a58d517d915c013a5139501a557d15a47b09ef0bd113b003d3fb4dabf5591",
+    "enumeration": "Path.rglob under data/antibiotics, including ignored and hidden paths",
+    "expected_records": 2939,
+    "actual_records": 2939,
+    "changed_records": 0,
+    "missing_records": 0,
+    "unexpected_records": 0,
+    "curation_events_added": 0,
+    "tracked_protected_paths": ["data", "curation", "pages", "conf", "src", "schema", "scripts"],
+    "tracked_protected_paths_diff_against_baseline": [],
+    "raw_article_and_uniprot_responses_gitignored": true
+  },
+  "adversarial_self_review": {
+    "independent_review": false,
+    "checked": [
+      "A homolog's phenotype is not an EmrD assay",
+      "A proposed model is not a demonstrated transport cycle",
+      "Reference protein and strain metadata are not experimental identity",
+      "Page-level correction metadata is not inspected erratum content",
+      "Original article and neighboring article page boundaries remain distinct"
+    ],
+    "unresolved_evidence_preserved": true
+  },
+  "full_authoritative_qc_rerun": false,
+  "limitations": [
+    "Focused checks validate this research checkpoint, not the biological truth of every inherited assertion.",
+    "No biological record, runtime code, source inventory or generated site changed.",
+    "Whole-record and corpus-wide primary review remain incomplete.",
+    "No NCBI endpoint request, outreach, source adoption or GitHub mutation occurred."
+  ]
+}

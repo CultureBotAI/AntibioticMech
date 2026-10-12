@@ -1,6 +1,6 @@
 # Corpus-wide resistance gene and allele investigation
 
-Date: 2026-10-07. Latest checkpoint: 2026-10-09 UTC.
+Date: 2026-10-07. Latest checkpoint: 2026-10-12 UTC.
 Status: **in progress, not a completed corpus review**.
 The maintainer requested investigation of every record, UniProtKB and NCBITaxon
 grounding where possible, and curation of verified findings. NCBI contact and
@@ -31,17 +31,23 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,800 resistance assertions across 306
-records**, including **45 curator-authored claims across 29 records**. There
-are still 2,620 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,847 resistance assertions across 309
+records**, including **92 curator-authored claims across 41 records**. There
+are still 2,617 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-09-bacteriocin-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-12-ma-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-09-bacteriocin-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-12-ma-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
+
+The latest [kasugamycin CARD follow-up](2026-10-12-kasugamycin-card-context.json)
+reviews three inherited citations. It retains RNA/protein boundaries, a
+paper-linked UniProt reference, a salt mismatch and a supplementary-table
+discrepancy. These research findings do not change corpus counts or complete
+a whole-record review.
 
 The latest [CARD structural-reference audit](2026-10-09-card-structure-links.json)
 checks direct ontology cross-references for all 1,024 terms without an explicit
@@ -85,11 +91,16 @@ from one primary study, retaining negative comparisons and distinct experimental
 backgrounds. Species grounding uses NCBITaxon:4932; YAP1/P19880 and FLR1/P38124
 remain reference-only protein mappings, not tested-allele assignments.
 
-The latest PHI-base checkpoint has **185 of 217 associations reviewed for
-identifier scope**, with **32 associations across 13 papers pending**. This
+The latest PHI-base checkpoint has **189 of 217 associations reviewed for
+identifier scope**, with **28 associations across 12 papers pending**. This
 is not full phenotype validation or whole-record signoff.
 
-The latest PHI-base curation identifies **BPY22.17** as the subject of the
+The latest [PHI-base reference review](2026-10-12-ma-reference-context.json)
+moves reference protein/strain identifiers out of four experimental-subject
+claims across iprodione and fludioxonil. The main text and exact tested-subject
+crosswalk remain unresolved; source biological assertions are not newly validated.
+
+The preceding PHI-base curation identifies **BPY22.17** as the subject of the
 Posteraro study, preserving the source spelling and separating the UniProt
 reference from the experiment. Exact experimental protein and modern species
 identity remain unresolved; no new allele or phenotype interpretation was added.
@@ -2529,7 +2540,7 @@ Verification sections below are dated historical checkpoints unless explicitly
 identified as the current checkpoint. Later runtime findings supersede earlier
 environment limitations, not the historical evidence or preservation results.
 
-### Posteraro Subject Context (Current Curation Checkpoint)
+### Posteraro Subject Context (Historical Curation Checkpoint)
 
 The [identifier-scope dossier](2026-10-09-posteraro-subject-reference-grounding.json)
 reviews the single `PHIG:8831` association on fluconazole, `CHEBI:46081`.
@@ -7063,6 +7074,298 @@ Artifacts: [reference dossier](2026-10-11-fr171456-context.json),
 [regression tests](../tests/test_fr171456_curation.py),
 [verification](2026-10-11-fr171456-verification.json).
 
+## EmrD Primary-Text Follow-Up (2026-10-11)
+
+The [successor dossier](2026-10-11-emrd-primary-context.json) reviews the original
+article's journal pages 741-744 and Figures 1-3 from an
+[LBNL-hosted journal copy](https://bl831.als.lbl.gov/~mcfuser/2006%20publications/Yin_06.pdf).
+The chloramphenicol passage concerns MdfA, not an EmrD assay; the transport
+diagram is a proposed model. Neither is promoted to an EmrD resistance allele.
+The supplement and listed erratum remain unreviewed. Crossref's page-level
+correction metadata does not resolve the notice's content or consequences.
+
+Fresh identifier-only UniProt requests confirm **P31442**, entry version 174,
+sequence version 2, gene `emrD` (alias `yicQ`), loci `b3673`/`JW5634`, and
+reference-strain TaxID 83333 with parent species 562 in release `2026_03`.
+These remain reference context, not experimental allele, strain or genome
+assignments. The CARD assertion and every biological record are unchanged;
+no measurement or curation event was added. Historical dossiers remain intact.
+NCBI work and #1040 remain deferred; the corpus-wide investigation remains open.
+
+Verification: **48 focused tests passed**, repository lint and whitespace checks
+passed, and all **2,939 record hashes** match the merged census, including an
+ignored/hidden-file enumeration. PDF and UniProt response pins were checked
+offline. The [verification receipt](2026-10-11-emrd-primary-verification.json)
+records the scoped self-review; no independent review or full QC rerun is claimed.
+
+## Aureobasidin A Identity Hold (2026-10-12)
+
+The [new dossier](2026-10-12-aureobasidin-identity-context.json) records selected
+primary-text, native-figure and supplement review for
+[Wu et al. (2025)](https://doi.org/10.1038/s41467-025-60423-y).
+The biochemical AUR1 evidence is not an MIC or a clinical resistance call.
+No evidence was attached to `CHEBI:61739`: the paper depicts a hydroxyl group,
+but the stored structure has none. RDKit independently reproduces its formula
+`C60H92N8O10` and key `YHSKJPXGXIYLHB-OTNPUQRPSA-N`.
+The pinned inventory and current official ChEBI response agree with the record;
+this is an unresolved source-identity conflict, not local drift. A matching name
+or CAS identifier cannot resolve it, and no replacement structure is inferred.
+
+Identifier-only UniProt lookup confirms reference **P36107 / AUR1 / YKL004W**,
+entry 184, sequence version 1, release `2026_03`, with a `9IVC` cross-reference.
+Reference-strain TaxID **559292** has parent species **4932**. These are not
+resistant-allele or experimental-genome assignments. The openly accessible
+article's **CC BY-NC-ND 4.0** license is retained: raw papers, figures and
+supplements stay in ignored local caches, not the distributed corpus.
+All biological records remain unchanged; the corpus-wide investigation and
+this record's broader evidence review remain open. NCBI and #1040 remain deferred.
+
+Verification: **55 focused tests passed**, with the RDKit check skipped in the
+normal environment; all **8 new tests passed** in an isolated RDKit environment.
+Lint, whitespace, six cached-source checks and all **2,939 record hashes** passed.
+The [verification receipt](2026-10-12-aureobasidin-identity-verification.json)
+records a scoped adversarial self-review, not an independent review or full QC run.
+
+## Blasticidin S Laboratory Evidence (2026-10-12)
+
+Two single-gene laboratory findings from
+[Shiver et al. (2016)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006124)
+were curated into the existing neutral
+[blasticidin S record](../data/antibiotics/antifungal/blasticidin-s.yaml),
+`CHEBI:15353`, key `CXNPLSGKWMLZPZ-ZNIXKSQXSA-N`. The source's
+[2017 correction](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006902)
+was inspected: corrected Figure 3 replaces screening results, but the follow-up
+MIC table and strain supplement are unchanged. Native Figures 3 and 4 and
+Table 2 were visually reviewed; Table S2 was read as structured Word XML rows.
+The depicted neutral compound agrees with this record; `CHEBI:57289` (1+)
+remains separate. The physical preparation was not independently reidentified.
+
+Table 2's single-gene rows match the Table S2 MG1655 derivatives **CAG67774**
+(`oppA::FRT`) and **CAG67775** (`oppB::FRT`). Each source MIC is **60 ug/mL**,
+stored as **60 mg/L** with the reported assay endpoint. The control's **3-4
+ug/mL range** remains in notes, not a fabricated point measurement. No clinical
+breakpoint or categorical susceptibility call is inferred. Reduced uptake is
+an operon-level interpretation supported by a translation-inhibition proxy,
+not direct transport measured in either single-gene derivative. BW25113
+screening and MG1655 follow-up subjects are not conflated; other genotypes and
+the separate kasugamycin experiment are not imported.
+
+UniProt release **2026_03** confirms reviewed reference proteins **P23843 / oppA**
+and **P0AFH2 / oppB**, with entries for OppC, OppD and OppF retained as additional
+reference context. Their entry/sequence versions and loci are saved in the
+dossier. Reference taxon **83333**, MG1655 taxon **511145** (reported rank
+`no rank`) and source-reported reference genome **U00096.3** are not assigned
+to the altered experimental derivatives. Only species taxon **562** is attached
+to the claims; no exact experimental protein or genome accession is assigned.
+
+A validated canary and separate adversarial self-review preceded the write.
+Two claims, two MIC observations and one history event were added; all other
+fields and all **2,938 other records** are unchanged. The successor census has
+**4,841 resistance assertions**; this is a coverage count, not a count of
+verified primary findings. Historical censuses remain immutable. All **2,939
+whole-record primary reviews remain open**. No NCBI requests, source adoption
+or GitHub mutations occurred; #1040 remains deferred.
+
+Verification passed **72 focused tests** and all **12 authoritative runner
+gates**: **2,946 tests passed, 4 skipped**. The skips are one superseded
+historical-checkpoint cache test and three empty skill-frontmatter parameter
+sets; their public invariants remain tested. Strict validation found no errors
+in 2,939 records, corpus reproduction found no drift, and generated pages are
+current. The isolated environment used RDKit **2025.03.6**, not the
+project-pinned **2026.3.5**: this is a disclosed dependency deviation, not a
+claim to reproduce the pinned environment. No structure or chemical-map
+regeneration was performed, and project dependency pins were unchanged.
+
+The semantic embedding refresh genuinely re-encoded the changed document,
+reused **2,938 unaffected vectors byte-for-byte** and rebuilt the complete
+projection, fingerprint `cbcb7d5798a488fb`. Four UniProt response caches and six
+primary-source artifacts match their pins; the progress index reproduces
+byte-for-byte. Rendered evidence, activity/full-record downloads and all 2,939
+map links were checked structurally. No live-browser or independent review is
+claimed. The apply-time receipt remains immutable; the final verification
+records its subsequent QC outcome.
+
+Artifacts: [primary/reference dossier](2026-10-12-blasticidin-context.json),
+[apply-time curation receipt](2026-10-12-blasticidin-curation.json),
+[census](2026-10-12-blasticidin-resistance-grounding.tsv),
+[reconciliation](2026-10-12-blasticidin-reconciliation.json),
+[progress index](2026-10-12-blasticidin-resistance-progress.json),
+[regression tests](../tests/test_blasticidin_curation.py),
+[final verification](2026-10-12-blasticidin-verification.json).
+
+## Kasugamycin Laboratory Evidence (2026-10-12)
+
+The neutral [kasugamycin record](../data/antibiotics/antifungal/kasugamycin.yaml),
+`CHEBI:81419`, retains key `PVTHJAPFENJVNC-MHRBZPPQSA-N` and formula
+`C14H25N3O9`. Its structure agrees with corrected Figure 3A of
+[Shiver et al. (2016)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006124);
+the physical preparation was not independently reidentified. The
+[2017 correction](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006902)
+does not replace Table 2 or Table S2. Figures 3-5 and Table 2 were visually
+reviewed; Table S2 strain rows were read as structured Word XML.
+
+All **seven kasugamycin MIC rows** are now observations in **mg/L**, normalized
+from ug/mL by factor 1: the MG1655 comparator and six named laboratory
+derivatives. Six associated resistance claims retain their source genotypes.
+Operon deletions are not relabeled as single genes, and combined genotypes
+are not split into single-component effects. The comparator has no resistance
+claim; no clinical S/R category is inferred. The assay's endpoint is retained.
+No exact standalone `dpp` MIC is invented from the paper's bounded prose.
+Translation inhibition remains an uptake proxy. Figure 5B supports competitive
+binding but explicitly allows an indirect effect on OppA peptide affinity;
+no unqualified direct-binding claim is added. No phenotype is transferred to
+pathogens discussed only by homology.
+
+Five additional reviewed UniProt reference components were retrieved after a
+successful DppA canary, all from release **2026_03**, sequence version **1**:
+
+| Gene | UniProtKB reference | Entry version | Reference locus |
+|---|---|---:|---|
+| dppA | P23847 | 195 | b3544 / JW3513 |
+| dppB | P0AEF8 | 136 | b3543 / JW3512 |
+| dppC | P0AEG1 | 133 | b3542 / JW3511 |
+| dppD | P0AAG0 | 147 | b3541 / JW3510 |
+| dppF | P37313 | 182 | b3540 / JW3509 |
+
+UniProt's `dppE` synonym for DppF is retained. The five prior Opp references
+and two taxonomy responses are reused with checksum verification, not silently
+counted as new requests. All ten proteins have reference taxon **83333**;
+species **562** is used on the observations and claims. MG1655 taxon **511145**
+and source-reported reference genome **U00096.3** are not assigned to laboratory
+derivatives. No exact experimental protein accession or genome is invented.
+
+A validated canary and separate adversarial self-review preceded the guarded
+write. All three inherited CARD assertions, other fields and prior history are
+preserved. One history event records the addition. The other **2,938 records**
+remain unchanged relative to the blasticidin checkpoint. The successor census
+has **4,847 resistance assertions** and **4,504 activity observations**; these
+are coverage counts, not verified-claim or independent-experiment counts.
+The existing CARD assertions and broader kasugamycin evidence remain in scope.
+All **2,939 whole-record primary reviews remain open**. NCBI requests, #1040,
+source adoption and outbound GitHub actions remain deferred or unauthorized.
+
+Verification passed **84 focused tests** and all **12 authoritative runner
+gates**: **2,958 tests passed, 4 skipped**. The skips are one historical-cache
+checkpoint and three empty skill-frontmatter parameter sets; the relevant
+public invariants still run. All 2,939 records validate without errors and
+reproduce exactly; generated pages and the chemical-map check are current.
+The isolated environment used RDKit **2025.03.6**, not the project-pinned
+**2026.3.5**. This disclosed dependency deviation is not a claim to reproduce
+the pinned environment; dependency pins and the chemical map remain unchanged.
+
+The changed document was genuinely re-encoded, with **2,938 unaffected vectors
+reused byte-for-byte** and the full semantic projection rebuilt, fingerprint
+`b3db5e80cdb6d7c9`. Six UniProt response caches and seven primary-source artifacts
+match their pins. The progress index reproduces byte-for-byte. Activity and
+complete-record downloads match the record, and all 2,939 map links resolve
+locally. No live-browser or independent-review claim is made. The final
+verification records the QC outcome without modifying the apply-time receipt.
+
+Artifacts: [primary/reference dossier](2026-10-12-kasugamycin-context.json),
+[apply-time receipt](2026-10-12-kasugamycin-curation.json),
+[census](2026-10-12-kasugamycin-resistance-grounding.tsv),
+[reconciliation](2026-10-12-kasugamycin-reconciliation.json),
+[progress index](2026-10-12-kasugamycin-resistance-progress.json),
+[regression tests](../tests/test_kasugamycin_curation.py),
+[final verification](2026-10-12-kasugamycin-verification.json).
+
+## Kasugamycin CARD Follow-up (2026-10-12)
+
+The three inherited CARD citations now have a separate
+[bounded evidence dossier](2026-10-12-kasugamycin-card-context.json).
+The existing source assertions and seven recently curated MIC observations
+are unchanged.
+
+- **ARO:3003333, rrsC:** the [1999 paper](https://doi.org/10.1006/jmbi.1999.3160)
+  concerns ribosomal RNA in a laboratory background, not a protein. KsgA is
+  not its gene product. Abstract and indexed publisher excerpts were available;
+  direct publisher access returned 403. Full-primary and nucleotide-reference
+  review remain open; no UniProt accession is substituted.
+- **ARO:3004628, AAC(2')-IIa:** the [2012 paper](https://journals.asm.org/doi/10.1128/aem.01155-12)
+  links strain 5091 to archive fragment `AB669090`. UniProt links it through
+  `BAM16262.1` to **I4DEC2**, entry 26, sequence 1, species **337**.
+  This is an unreviewed, paper-linked reference, not independently verified
+  experimental sequence identity. The paper used **kasugamycin hydrochloride**;
+  its measurements are not imported into neutral `CHEBI:81419`.
+- **ARO:3003988, AAC(2')-IIb:** the [2016 paper](https://www.nature.com/articles/ncomms13803)
+  distinguishes LC231 observations, E. coli expression and purified enzyme
+  results. Native supplement pages 6-9 were visually reviewed. Table S1 labels
+  the determinant **IIa**, unlike **IIb** elsewhere, and reports no detected
+  native kasugamycin inactivation. The biochemical result does not erase that
+  negative observation or establish the determinant's contribution in LC231.
+  The censored native MIC comparison does not establish an eightfold difference
+  for kasugamycin; no clinical category is inferred.
+
+UniProt Taxonomy resolves **LC231 to 1120679**, with returned rank **species**,
+despite the strain wording in its label. The exact-taxon UniProtKB query
+returned zero proteins in release **2026_03**. The name-based query returned
+24 proteins from other taxa; none is assigned to LC231. This is query-scoped,
+not a claim of global protein absence. Source-reported `JFOM00000000` is an
+unversioned WGS project, not a versioned assembly. The deposited determinant
+range is not narrowed to an invented AAC accession.
+
+All 2,939 record hashes still match the kasugamycin census. No source-owned
+row, record, history event, generated page or embedding changes in this
+follow-up. The progress index remains current and all whole-record reviews
+remain open. NCBI endpoints, #1040, source adoption and GitHub mutations remain
+deferred or unauthorized. See the [regression tests](../tests/test_kasugamycin_card_context.py)
+and [verification receipt](2026-10-12-kasugamycin-card-verification.json).
+
+## Ma Reference-Scope Correction (2026-10-12)
+
+The [limited identity dossier](2026-10-12-ma-reference-context.json) addresses
+four PHI-base associations from PMID:38374637 across iprodione and fludioxonil.
+UniProtKB release 2026_03 assigns both imported protein accessions to reference
+strain ATCC 18683 / 1980 / Ss-1; UniProt Taxonomy identifies its TaxID 665079
+as a strain under species 5180. These are not independently established
+experimental-subject identifiers for source background Scl02-05.
+
+The publisher's publicly released supplement, DOI:10.1021/acs.jafc.3c08093.s001,
+was retrieved from ACS Figshare version 1. Opening subject-label lines in the
+Figure S4 caption on PDF page 5 distinguish the backgrounds and derived
+subjects. Only that limited identity evidence was visually inspected; the
+main article remains access-limited, and its assay results were not reviewed.
+No exact subject crosswalk, protein allele, genome or quantitative measurement
+was inferred. The PDF is CC BY-NC 4.0 and remains in the ignored local cache;
+no figure, sequence, primer or procedure is redistributed or adopted.
+
+The source-owned review withholds `strain_taxon_id` and `protein_accession`
+from these four subject claims and retains the original identifiers explicitly
+as reference provenance. Species 5180 and the source strain label are retained
+with an unresolved-subject caveat. Source alterations, phenotypes, assays,
+mechanism types and primary citations remain unchanged. This correction is
+not a new primary validation of the source resistance assertions.
+
+The shared review checksum is refreshed on the preceding 185 decisions.
+Consequently, 22 record files change, but only two contain new scope decisions;
+the other 20 receive checksum and curation-history updates only. All other
+2,917 record files and all semantic embedding inputs remain unchanged.
+The four new identifier reviews bring the PHI-base scope count to 189/217,
+leaving 28 associations across 12 papers without an identifier review.
+This identifier tally does not establish full phenotype validation of the 217
+associations or complete scientific review of any record.
+
+The canary and preservation checks retain claim ordering, non-PHI assertions,
+all measurements, earlier history and curation statuses. The successor census
+and progress ledger preserve historical receipts. Adversarial regression exposed
+unnecessary root-field reordering in three records, which was removed before
+final verification. The historical CARD test now reconstructs only the later
+checksum/history refresh and proves the original byte hashes; eight negative
+cases reject unrelated drift even when the current hash is repinned. No earlier
+scientific receipt was rewritten. The initial QC run was interrupted after this
+failure; its log is retained separately from the final rerun.
+The final 12-stage authoritative QC run passed: **2,986 tests passed and four
+skipped**, all 2,939 records passed strict validation and reproduced without
+drift, and the chemical map and generated site were current. The focused
+regressions passed 202 tests; the historical CARD regressions passed 45.
+The available runtime uses RDKit 2025.03.6 instead of the project pin 2026.3.5;
+this is not a claim to have reproduced the pinned environment. No dependency
+pin, chemistry or embedding artifact was changed for this checkpoint.
+See the [curation receipt](2026-10-12-ma-reference-curation.json) and
+[final verification receipt](2026-10-12-ma-reference-verification.json).
+NCBI requests, #1040, source adoption and GitHub mutations remain deferred or
+unauthorized. Corpus-wide primary research remains open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
@@ -7077,6 +7380,8 @@ Artifacts: [reference dossier](2026-10-11-fr171456-context.json),
    CGD; its exact experimental allele remains unresolved.
    Check Ren's indexed Sg-28 discrepancy against the original tables before
    importing measurements; the subject-label review does not resolve that discrepancy.
+   The Ma reference-ID correction does not resolve the access-limited main-text
+   assessment or the source-row/experimental-subject crosswalk.
 2. Finish curator-claim review beyond the taxon and reference assignments already
    documented, including unresolved exact alleles. Review the 978 CARD
    determinants with reference candidates and investigate the 1,024 without
@@ -7098,8 +7403,9 @@ Artifacts: [reference dossier](2026-10-11-fr171456-context.json),
    The structural-reference audit now adds six explicitly scoped PDB-to-UniProt
    paths, including a rejected cross-species assignment and unresolved allele
    and experimental contexts. The APH Id-to-IVa nomenclature relation is now
-   verified; this does not resolve its compound-specific assays. EmrD's listed
-   erratum still needs inspection. Review their primary papers before promoting
+   verified; this does not resolve its compound-specific assays. EmrD's main
+   text and figures now have a scoped review, but its listed erratum and
+   supplement still need inspection. Review the remaining primary evidence before promoting
    any structural reference to an experimental resistance claim. Oleandomycin
    now has two primary-backed biochemical routes, but exact experimental allele,
    whole-cell phenotype and broader source-assertion review remain open.
@@ -7148,12 +7454,15 @@ Artifacts: [reference dossier](2026-10-11-fr171456-context.json),
    review and exact experimental identifiers remain unresolved. Papulacandin A
    and arborcandin C remain uncurated from the latest follow-up. Resolve the
    latter's conflicting subject labels before importing a genotype-phenotype join.
+   Resolve aureobasidin A's source-owned chemical identity discrepancy before
+   transferring AUR1 evidence to its exact-structure record. The reference
+   protein mapping does not resolve the chemical discrepancy or assign an allele.
 5. Curate supported findings through source-owned inputs; normalize MICs to
    mg/L where reported, keep EC50 and disk-diffusion measurements distinct, and
    never infer clinical resistance from a number without its source interpretation.
 6. Verify full-corpus coverage and all curation/publication gates before calling
    the requested investigation complete. The BGE/PaCMAP refresh is now published
-   with an exact baseline-reuse proof for the current epidermin/microcin C
+   with an exact baseline-reuse proof for the historical epidermin/microcin C
    checkpoint. All authoritative QC gates passed after genuine encoding of both
    changed documents and a full projection refresh; all other 2,937 vector rows
    remain byte-identical. Earlier verification receipts remain historical and

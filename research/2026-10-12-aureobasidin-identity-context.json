@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-12",
+  "scope": "SELECTED_PRIMARY_EVIDENCE_WITH_CHEMICAL_IDENTITY_HOLD",
+  "baseline_commit": "0611c4ed87a1d089aea7b1a1f60d3b32b9f57d32",
+  "record": {
+    "identifier": "CHEBI:61739",
+    "label": "aureobasidin A",
+    "path": "data/antibiotics/unspecified/aureobasidin-a.yaml",
+    "review_time_sha256": "f0fddda36b21db7225e27f8aa236cc6e1bd6539649da69c4a6358caeadee5a94",
+    "review_time_resistance_assertions": 0,
+    "whole_record_review": "OPEN",
+    "record_action": "UNCHANGED_PENDING_SOURCE_OWNED_IDENTITY_RECONCILIATION"
+  },
+  "baseline_census": {
+    "path": "research/2026-10-11-pr-integration-resistance-grounding.tsv",
+    "sha256": "554a58d517d915c013a5139501a557d15a47b09ef0bd113b003d3fb4dabf5591"
+  },
+  "chemical_identity": {
+    "review_time_structure": {
+      "smiles": "CC[C@@H](C)[C@@H]1OC(=O)[C@H](C(C)C)N(C)C(=O)[C@H](CC(C)C)NC(=O)[C@H](C(C)C)N(C)C(=O)[C@@H]([C@H](C)C(C)C)NC(=O)[C@@H]2CCCN2C(=O)[C@H](Cc2ccccc2)N(C)C(=O)[C@H](Cc2ccccc2)NC(=O)C(C(C)C)NC1=O",
+      "standard_inchi_key": "YHSKJPXGXIYLHB-OTNPUQRPSA-N",
+      "molecular_formula": "C60H92N8O10",
+      "source_version": "2026-08-30"
+    },
+    "source_owner": {
+      "path": "data/raw/chebi_antimicrobials.tsv",
+      "review_time_inventory_sha256": "4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004",
+      "row_key": "CHEBI:61739",
+      "review_time_row_sha256": "2a9ac37af7fc1a8ae83e250cd78ac3ba6a78bcd58a799a2fe19400203a62e829",
+      "row_digest_encoding": "UTF-8 JSON, sorted keys, compact separators, ensure_ascii=True",
+      "record_matches_inventory_structure": true
+    },
+    "live_chebi": {
+      "url": "https://www.ebi.ac.uk/chebi/backend/api/public/compound/61739/",
+      "retrieved_on": "2026-10-12",
+      "status": 200,
+      "local_cache": "reports/resistance-grounding-2026-10-12-aureobasidin/chebi.json",
+      "sha256": "14df069305e94bedbf0f26cddfee8c12c74d5e2a0b47775fcb6a618081acd1cd",
+      "size_bytes": 5261,
+      "source_modified_on": "2011-04-04T14:30:11Z",
+      "matches_inventory_smiles_inchi_key_and_formula": true,
+      "attribution": "ChEBI, EMBL-EBI, CC BY 4.0; existing adopted source, no source refresh performed"
+    },
+    "graph_check": {
+      "software": "RDKit",
+      "version": "2025.03.6",
+      "smiles_sha256": "d8c743ae7cbe967e26b381659dbfaaf0c0370e7ca290b6b38d105394f47ca1a5",
+      "computed_formula": "C60H92N8O10",
+      "computed_inchi_key": "YHSKJPXGXIYLHB-OTNPUQRPSA-N",
+      "oxygen_atom_count": 10,
+      "hydroxyl_smarts": "[OX2H]",
+      "hydroxyl_count": 0,
+      "environment_note": "Isolated temporary RDKit 2025.3.6; the previous 2026.3.5 environment lacked RDPaths and its PyPI wheel was unavailable for this interpreter/platform. Repository dependencies were not changed."
+    },
+    "conflict": {
+      "decision": "HOLD_EXACT_STRUCTURE_CLAIM_TRANSFER",
+      "primary_location": "Figure 1B and Results, AbA binding site",
+      "observation": "The primary diagram includes a hydroxyl-bearing HOMeVal unit, and the binding discussion explicitly describes its hydroxyl group. The stored structure has no hydroxyl group.",
+      "interpretation": "Matching name and CAS identifier do not reconcile this constitutional discrepancy. The live ChEBI response reproduces it; local record drift is not the explanation.",
+      "replacement_structure_assigned": false,
+      "cause_established": false,
+      "resolution_needed": "Reconcile primary chemical identity and stereochemistry in the reproducible source owner before transferring the biological evidence. Do not repair by adding one oxygen to the existing SMILES."
+    }
+  },
+  "primary_review": {
+    "reference": "PMID:40442105",
+    "doi": "10.1038/s41467-025-60423-y",
+    "authors": ["Xinyue Wu", "Xin Gong", "Tian Xie"],
+    "title": "Mechanisms of aureobasidin A inhibition and drug resistance in a fungal IPC synthase complex",
+    "published_on": "2025-05-30",
+    "url": "https://www.nature.com/articles/s41467-025-60423-y",
+    "main_pdf": {
+      "url": "https://www.nature.com/articles/s41467-025-60423-y.pdf?error=cookies_not_supported",
+      "local_cache": "reports/resistance-grounding-2026-10-12-aureobasidin/primary-cookie-error.pdf",
+      "sha256": "011b0166477438ad925a3d47bde7527b4a399edab2cecbbbc71ff5c31326bbc9",
+      "size_bytes": 7544991,
+      "pdf_pages": 11,
+      "visually_inspected_pages_one_based": [2, 8],
+      "figures_visually_inspected": [1, 6]
+    },
+    "primary_xml": {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12122681/fullTextXML",
+      "local_cache": "reports/resistance-grounding-2026-10-12-aureobasidin/primary.xml",
+      "sha256": "7e6228acbe869134204c273893020ab2d940ecfef09172ace4cad13b3e39574b",
+      "size_bytes": 127510
+    },
+    "supplement": {
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-025-60423-y/MediaObjects/41467_2025_60423_MOESM1_ESM.pdf",
+      "local_cache": "reports/resistance-grounding-2026-10-12-aureobasidin/supplement-media.pdf",
+      "sha256": "28ef1bc78252055fc444908ee2ba4895d1ffc850f3f9b5919659dd70956854a1",
+      "size_bytes": 2787320,
+      "pdf_pages": 15,
+      "visually_inspected_pages_one_based": [12],
+      "figures_visually_inspected": ["S11"]
+    },
+    "retrieved_on": "2026-10-12",
+    "read_sections": ["Results", "Discussion", "Methods: subject and assay context", "Data availability"],
+    "finding": "Purified yeast Aur1-Kei1 experiments support altered inhibitor binding and reduced inhibition for selected Aur1 changes. These are biochemical observations, not whole-cell MICs or clinical resistance calls.",
+    "evidence_type": "BIOCHEMICAL_AND_STRUCTURAL_EVIDENCE",
+    "measurement_scope": "ENZYME_ACTIVITY_AND_BINDING_NOT_AST",
+    "source_data_workbooks_reviewed": false,
+    "whole_paper_review_complete": false,
+    "license": "CC BY-NC-ND 4.0",
+    "reuse_boundary": "Citation and limited factual analysis only; article, figures, supplementary text and source-data payloads are not republished or adopted into the corpus."
+  },
+  "reference_grounding": {
+    "accession": "UniProtKB:P36107",
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "gene": "AUR1",
+    "ordered_locus_names": ["YKL004W"],
+    "entry_version": 184,
+    "sequence_version": 1,
+    "paper_deposited_structure": "PDB:9IVC",
+    "uniprot_has_paper_pdb_cross_reference": true,
+    "taxon_id": "NCBITaxon:559292",
+    "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+    "taxon_rank": "strain",
+    "taxon_active": true,
+    "parent_taxon_id": "NCBITaxon:4932",
+    "parent_taxon_label": "Saccharomyces cerevisiae",
+    "parent_rank_from_lineage": "species",
+    "scope": "REFERENCE_IDENTITY_ONLY_NOT_RESISTANT_SUBJECT",
+    "experimental_allele_assigned": false,
+    "experimental_genome_assigned": false,
+    "resistant_strain_taxid_assigned": false,
+    "release": "2026_03",
+    "attribution": "UniProt Consortium, UniProtKB and UniProt Taxonomy, CC BY 4.0; https://www.uniprot.org/help/license"
+  },
+  "uniprot_requests": [
+    {
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP36107&format=json&size=1&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion",
+      "status": 200,
+      "retrieved_at": "2026-10-12T18:17:03.321610+00:00",
+      "sha256": "4e36cef154038b284738d1624eca56be499e59b30026bc1f7c1936228f12bd1e",
+      "local_cache": "reports/resistance-grounding-2026-10-12-aureobasidin/request-c68856d1e9b84b7eefdab9ed2e59aaaafefeecaf2035d2865fe589490ccb1752.json",
+      "cache_file_sha256": "efcedf11b93264445cbb5928f7dbfe5891afd2d58c8366a23e16792b456d0e56",
+      "release": "2026_03",
+      "total_results": 1,
+      "result_count": 1,
+      "next_page_present": false,
+      "complete_for_exact_accession_query_only": true
+    },
+    {
+      "url": "https://rest.uniprot.org/taxonomy/559292.json",
+      "status": 200,
+      "retrieved_at": "2026-10-12T18:17:20.753826+00:00",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+      "local_cache": "reports/resistance-grounding-2026-10-12-aureobasidin/request-1617631c92b662626545cbc8b8c5576e86c826f451a20fe3de93143fbf1770cd.json",
+      "cache_file_sha256": "10dec7c12b5ce95f72b449bbeeb2dd7a4f53472e0294b06c2de6702e5972f607",
+      "release": "2026_03"
+    }
+  ],
+  "access_history": {
+    "publisher_credentials_used": false,
+    "paywall_bypass": false,
+    "note": "Normal article/PDF routes returned cookie redirects; the public cookie-error route served this openly licensed article. The exact supplement URL was parsed from publisher HTML. An obsolete supplement hostname failed DNS resolution."
+  },
+  "disposition": {
+    "decision": "HOLD_BIOLOGICAL_CURATION_UNTIL_COMPOUND_IDENTITY_RESOLVED",
+    "records_changed": 0,
+    "new_resistance_claims": 0,
+    "new_measurements": 0,
+    "curation_events_added": 0,
+    "whole_records_completed": 0,
+    "ncbi_endpoint_requests": 0,
+    "source_adoptions": 0,
+    "github_mutations": 0
+  },
+  "limitations": [
+    "This is a scoped identity and primary-evidence checkpoint, not a complete record or corpus review.",
+    "No corrected structure or experimental allele is inferred from the reference mapping.",
+    "No sequences, variant specifications, assay values, constructs or protocols are exported.",
+    "No NCBI endpoint request or outreach occurred; #1040 and NCBI work remain deferred."
+  ]
+}

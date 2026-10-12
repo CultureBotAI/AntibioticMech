@@ -1,0 +1,171 @@
+{
+  "adversarial_self_review": {
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/canary.yaml",
+      "sha256": "081fcfdb19f92cb018d6300bbdb1f141ab81659a14b132c8687ddba9d6b795da"
+    },
+    "checks": {
+      "correction": "Correction XML confirms all unlisted figures/supporting information unchanged; Table 2 and Table S2 are not replaced.",
+      "identity": "Neutral CHEBI:15353 agrees with corrected Figure 3A; CHEBI:57289 remains separate. Tested preparation not independently reidentified.",
+      "measurement": "Both Table 2 values are 60 ug/mL = 60 mg/L. Comparator range stays in notes; no clinical category inferred.",
+      "mechanism": "Reduced uptake is an operon-level interpretation. Figure 4B is a translation-inhibition proxy, not direct transport in either single-gene derivative.",
+      "preservation": "Validated canary retains original bytes as prefix and seed merge reproduces it; only two claims, two observations and one history event added.",
+      "references": "UniProt accessions remain notes/reference context; no protein_accession, gene_id, strain_taxon_id or derivative genome assigned.",
+      "subject_join": "Table 2 single-gene rows match Table S2 MG1655 derivatives CAG67774 and CAG67775. BW25113 screening context is not transferred."
+    },
+    "decision": "ACCEPT_TWO_SCOPED_DERIVATIVE_CLAIMS",
+    "review_kind": "SEPARATE_ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+    "unresolved_blocking_findings": [],
+    "whole_record_review_complete": false
+  },
+  "all_current_record_hashes_verified": 2939,
+  "all_other_record_fields_and_history_preserved": true,
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "bdede6eb9560439d3abd9d1e754cfda8553cc8f1a1ce6f587c8980ba85e5ff94"
+    },
+    {
+      "path": "research/2026-10-12-blasticidin-context.json",
+      "sha256": "dfb54be7e4f93f65a8c835881d1bc209fa454eef909ab6e3bdc8bc8dee39239b"
+    },
+    {
+      "path": "research/2026-10-12-blasticidin-curation.json",
+      "sha256": "ca46078a31bbcf6caf887df56b30ca794fda7728e056f630d412195de229a7cf"
+    },
+    {
+      "path": "research/2026-10-12-blasticidin-reconciliation.json",
+      "sha256": "5ae19d1e057b7cff2870f1a4ce36105bae36056abcba09eb61240e30ce056ae2"
+    },
+    {
+      "path": "research/2026-10-12-blasticidin-resistance-grounding.tsv",
+      "sha256": "ea6b93962d2495c9acc97beb31e6fbddb28bbd80aed88cbca748867343d22c4f"
+    },
+    {
+      "path": "research/2026-10-12-blasticidin-resistance-progress.json",
+      "sha256": "785357fd81861f0df90bfb05c39b553b71bb9ee4ee27bf48abcb9a09e379f12a"
+    },
+    {
+      "path": "research/2026-10-12-blasticidin-resistance-progress.tsv",
+      "sha256": "bbe4553768116931b73687d9aa226a975f228164aa3d5cf1907d2e6e7bcff74a"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "f49541e33477aa35389367a3bf6b65fa55dd4a0de2c06d92355507714e66e7c9"
+    },
+    {
+      "path": "tests/test_blasticidin_curation.py",
+      "sha256": "82a8b32b448b22a17ea6b03a2a435b7eb10396cf9dcb97100135a9e6f252fc10"
+    }
+  ],
+  "claims_added": 2,
+  "date": "2026-10-12",
+  "embedding": {
+    "changed_documents_encoded": 1,
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "fingerprint": "cbcb7d5798a488fb",
+    "full_projection_rebuilt": true,
+    "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+    "network_used": false,
+    "publish_receipt": {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/embedding-stage/published.json",
+      "sha256": "4c85fa23974bdefc5a76a52d1be4456df9470afdd1dd788623b45531baf83fd8"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/embedding-stage/reuse-proof.json",
+      "sha256": "b5c8b7c232e3d191b3a975e1ee755a249c3f0fbec3eafab32f060fe167497288"
+    },
+    "structure_map_unchanged": true,
+    "unchanged_vector_rows_reused": 2938
+  },
+  "experimental_genome_assignments": 0,
+  "experimental_protein_assignments": 0,
+  "focused_tests": {
+    "chemical_embedding": 8,
+    "new_and_recent_dossiers": 28,
+    "progress_index": 36,
+    "skipped": 0,
+    "total_passed": 72
+  },
+  "full_qc": {
+    "dependency_deviation": "RDKit 2025.03.6 instead of project pin 2026.3.5; no chemistry/map regeneration",
+    "environment": {
+      "numpy": "2.2.6",
+      "python": "3.13.12",
+      "rdkit": "2025.03.6",
+      "scikit_learn": "1.7.2",
+      "umap": "0.5.12"
+    },
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/full-qc-exit.json",
+      "sha256": "2875435d5209bb84775fc0889439641e7215ff713302c4b33232327bc086126e"
+    },
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/full-tests.xml",
+      "sha256": "2e1cb1aa5a505db156015023062418a12f01382e4c4451133d64f4eca9f4c9ea"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-12-blasticidin/full-qc.log",
+      "sha256": "68682864749680f34dd37e413b0117688a432fd22b11f96b0bf601d2fdb65bdf"
+    },
+    "passed": 2946,
+    "pinned_environment_reproduced": false,
+    "project_dependency_pins_changed": false,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4,
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ]
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "live_browser_verification": false,
+  "mic_observations_added": 2,
+  "ncbi_endpoint_requests": 0,
+  "original_record_bytes_preserved_as_prefix": true,
+  "post_apply_review": [
+    "Historical receipts/censuses remain immutable; tests allow subsequent evidence additions.",
+    "Stale report headline totals and latest-ledger links corrected against successor census.",
+    "No reference accession or MG1655 TaxID/genome assigned to experimental derivatives.",
+    "Rendered evidence, full-record/activity downloads and map payload checked structurally; no live-browser check claimed."
+  ],
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "reference_response_caches_verified": 4,
+  "rendered_claims_and_caveats_checked": true,
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "scope": "SELECTED_PRIMARY_EVIDENCE_NOT_COMPLETED_CORPUS_RESEARCH",
+  "source_adoptions": 0,
+  "source_asset_pins_verified": 6,
+  "status": "ALL_AUTHORITATIVE_RUNNER_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "tracked_source_inputs_and_code_unchanged": [
+    "src",
+    "curation",
+    "data/raw",
+    "data/activity_collections",
+    "scripts/embed_records.py",
+    "scripts/embed_map.py",
+    "data/embeddings/chemical-structure-map.json",
+    "NEXT_TASKS.md"
+  ],
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_primary_reviews_completed": 0
+}

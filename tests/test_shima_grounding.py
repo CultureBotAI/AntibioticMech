@@ -46,7 +46,7 @@ def test_shima_source_reproduction_matches_curated_record():
     fixture = {r["identifier"]: {"identifier": r["identifier"], "chemical_structure": {
         "standard_inchi_key": r["standard_inchi_key"]}, "curation_history": []} for r in rows}
     stats = seed.attach_phibase_resistance(fixture)
-    assert stats["reviewed_identifier_context"] == 185
+    assert stats["reviewed_identifier_context"] == 189
     assert fixture["CHEBI:3405"]["resistance_mechanisms"] == record["resistance_mechanisms"]
 
 

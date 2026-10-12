@@ -7,7 +7,7 @@
 <meta name="description" content="blasticidin S (CHEBI:15353): A blasticidin that is an antibiotic obtained from Streptomyces griseochromogene.">
 <link rel="stylesheet" href="../style.css">
 <script src="../theme-toggle.js"></script>
-</head>
+<script src="../activity-browser.js" defer></script></head>
 <body>
 <div class="wrap">
 <header class="site">
@@ -119,7 +119,86 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <dt>Mode of action</dt><dd>PROTEIN_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: PMID:23824292 determined a 3.4-A structure of blasticidin S bound to a 70S-tRNA ribosome complex and used biochemical and single-molecule FRET assays to show stabilization of a deformed P-site tRNA, strongly inhibiting release-factor hydrolysis and more weakly inhibiting peptide-bond formation. The HOST_SHARED_TARGET scope is retained because the paper reports inhibition in bacteria and eukaryotes.</span></dd></dl>
 
 
+<h2 id="activity">Activity spectrum</h2>
+<p class="meta">Measured or curated activity against specific taxa. A number
+without a method is not an observation — every row here carries an assay.</p>
+<p class="meta">2 observations &middot; <a href="blasticidin-s/activity-1.html">Browse all observations</a> &middot; <a href="blasticidin-s/record-6feddf48903e16c5cbfc48a162be9d0dc8db33b76a9ed905c04898e95ea845c3.json.gz" download>Complete record (JSON.gz)</a></p>
+<div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+<table>
+  <caption>Activity observations</caption>
+  <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
+  <tbody>
+  <tr id="observation-1">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
+    <td>—</td>
+    <td class="num">60.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized no-drug culture density</td>
+    <td class="meta">CAG67774</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="0" data-offset="0" data-total="2" data-identifier="CHEBI:15353" data-key="CXNPLSGKWMLZPZ-ZNIXKSQXSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="blasticidin-s/activity-1-472ccb5dda2aeea40c2ddf67cb9d74277c8b61f972648d70d1825cc1f498bc56.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  <tr id="observation-2">
+    <td><em>Escherichia coli</em> <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=562">NCBITaxon:562</a></td>
+    <td>—</td>
+    <td class="num">60.0 mg/L</td>
+    <td class="num">—</td>
+    <td class="meta">Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized no-drug culture density</td>
+    <td class="meta">CAG67775</td>
+    <td class="meta">
+—    </td>
+    <td><details class="activity-evidence" data-row="1" data-offset="0" data-total="2" data-identifier="CHEBI:15353" data-key="CXNPLSGKWMLZPZ-ZNIXKSQXSA-N">
+      <summary>Evidence</summary>
+      <a class="activity-data" href="blasticidin-s/activity-1-472ccb5dda2aeea40c2ddf67cb9d74277c8b61f972648d70d1825cc1f498bc56.json.gz" download>Page data (JSON.gz)</a>
+      <div class="activity-detail" aria-live="polite"></div>
+    </details></td>
+  </tr>
+  </tbody>
+</table>
 
+</div>
+
+
+<h2>Resistance mechanisms</h2>
+<p class="meta">2 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>REDUCED_PERMEABILITY <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: REDUCED_PERMEABILITY" tabindex="0">
+<table>
+    <caption>REDUCED_PERMEABILITY</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>oppA loss associated with blasticidin S resistance in laboratory E. coli<br><span class="meta">MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation, not direct transport measured in this derivative. UniProtKB:P23843 is reference-only, not an experimental protein accession. No clinical category or derivative genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain CAG67774</span></td>
+      <td class="meta">oppA</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27355376">PMID:27355376</a></span> <span class="meta">(Table 2, Table S2 and Figure 4B.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pgen.1006902">DOI:10.1371/journal.pgen.1006902</a></span> <span class="meta">(Correction inspected; corrected Figure 3 used. Table 2 and Table S2 are unchanged by the notice.)</span></li>
+</ul>
+<span class="meta">Liquid-broth dilution MIC assay</span></td>
+    </tr>
+    <tr>
+      <td>oppB loss associated with blasticidin S resistance in laboratory E. coli<br><span class="meta">MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation, not direct transport measured in this derivative. UniProtKB:P0AFH2 is reference-only, not an experimental protein accession. No clinical category or derivative genome is assigned.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain CAG67775</span></td>
+      <td class="meta">oppB</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27355376">PMID:27355376</a></span> <span class="meta">(Table 2, Table S2 and Figure 4B.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pgen.1006902">DOI:10.1371/journal.pgen.1006902</a></span> <span class="meta">(Correction inspected; corrected Figure 3 used. Table 2 and Table S2 are unchanged by the notice.)</span></li>
+</ul>
+<span class="meta">Liquid-broth dilution MIC assay</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 <h2>Producer organisms</h2>
 <p class="meta">Organisms that biosynthesize this compound. Cluster link evidence
@@ -186,6 +265,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-12 · codex · LLM-assisted</span>
+    <p>Added two primary-supported Opp subunit deletion resistance claims and two MIC observations for named laboratory derivatives. Normalized ug/mL to mg/L; kept UniProt and MG1655 genome as reference context. Preserved previous curation; no clinical category or experimental genome assigned.</p>
   </li>
 </ol>
 

@@ -115,3 +115,81 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-12T18:34:31Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two primary-supported Opp subunit deletion resistance claims and
+    two MIC observations for named laboratory derivatives. Normalized ug/mL to mg/L;
+    kept UniProt and MG1655 genome as reference context. Preserved previous curation;
+    no clinical category or experimental genome assigned.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: REDUCED_PERMEABILITY
+  label: oppA loss associated with blasticidin S resistance in laboratory E. coli
+  gene_families:
+  - oppA
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67774
+  alteration: oppA::FRT
+  phenotype_label: source-reported experimental resistance to blasticidin S
+  assay: Liquid-broth dilution MIC assay
+  note: MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation,
+    not direct transport measured in this derivative. UniProtKB:P23843 is reference-only,
+    not an experimental protein accession. No clinical category or derivative genome
+    is assigned.
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2, Table S2 and Figure 4B.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction inspected; corrected Figure 3 used. Table 2 and Table S2 are
+      unchanged by the notice.
+- mechanism_type: REDUCED_PERMEABILITY
+  label: oppB loss associated with blasticidin S resistance in laboratory E. coli
+  gene_families:
+  - oppB
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67775
+  alteration: oppB::FRT
+  phenotype_label: source-reported experimental resistance to blasticidin S
+  assay: Liquid-broth dilution MIC assay
+  note: MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation,
+    not direct transport measured in this derivative. UniProtKB:P0AFH2 is reference-only,
+    not an experimental protein accession. No clinical category or derivative genome
+    is assigned.
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2, Table S2 and Figure 4B.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction inspected; corrected Figure 3 used. Table 2 and Table S2 are
+      unchanged by the notice.
+activity_spectrum:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67774
+  mic_value: 60.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:oppA
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 reports 60 ug/mL for the oppA deletion; Table S2 identifies CAG67774.
+      Conversion to mg/L is numerically identical. The MG1655 comparator is reported
+      as a range (3-4 ug/mL), not a single value. No clinical breakpoint or S/R category
+      is assigned.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67775
+  mic_value: 60.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:oppB
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 reports 60 ug/mL for the oppB deletion; Table S2 identifies CAG67775.
+      Conversion to mg/L is numerically identical. The MG1655 comparator is reported
+      as a range (3-4 ug/mL), not a single value. No clinical breakpoint or S/R category
+      is assigned.

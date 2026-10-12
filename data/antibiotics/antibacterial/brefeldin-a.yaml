@@ -89,7 +89,7 @@ resistance_mechanisms:
   - reference: DOI:10.1128/aac.00555-13
     notes: 'Identifier-scope review: Results, Tables 1, 3 and 4, Figure 3, UniProtKB
       release 2026_03: Q5A4G2 entry 131, sequence version 1. Reviewed 2026-10-08 by
-      codex; curation/phibase_grounding_reviews.json SHA-256 5f2706ce992b66a984013fc6a6af68482edaa5718be41c0987aa9a0a7fb07702.'
+      codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -254,4 +254,10 @@ curation_history:
   action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
   changes: Refreshed the shared PHI-base review checksum after the Posteraro subject-context
     review; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-12T20:12:17Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after four reference-identifier
+    scope corrections; previous decisions, biological fields and activities unchanged.
   llm_assisted: true
