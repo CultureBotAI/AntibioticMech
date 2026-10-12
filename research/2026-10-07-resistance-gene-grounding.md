@@ -31,17 +31,22 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,847 resistance assertions across 309
-records**, including **92 curator-authored claims across 41 records**. There
-are still 2,617 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,851 resistance assertions across 310
+records**, including **96 curator-authored claims across 42 records**. There
+are still 2,616 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-12-ma-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-12-thiolutin-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-12-ma-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-12-thiolutin-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
+
+The [EmrAB-TolC follow-up](2026-10-12-emrab-context.json) adds three versioned
+UniProt component references and two paper-linked PDB entries for a lead
+involving nalidixic acid and nitroxoline. Experimental allele, subject and
+compound-form checks remain open; this reference-only work changes no counts.
 
 The latest [kasugamycin CARD follow-up](2026-10-12-kasugamycin-card-context.json)
 reviews three inherited citations. It retains RNA/protein boundaries, a
@@ -114,6 +119,16 @@ A subsequent cordycepin follow-up grounds **two yeast reference proteins** but
 holds biological curation: indexed primary Results were available, while direct
 PDF access failed and figure/subject verification remains incomplete. That
 metadata-only checkpoint changed no biological records or coverage totals.
+The [2026-10-12 endpoint follow-up](2026-10-12-cordycepin-primary-context.json)
+now inspects selected native figures from a different, accessible 2021 study
+and adds **NRT1/THI71 and RPB1/RPO21 reference mappings**. Its RNA-processing
+results do not establish growth resistance; the earlier growth-study holds,
+all biological record hashes and whole-record review totals remain unchanged.
+
+The latest [thiolutin curation](2026-10-12-thiolutin-curation.json) adds four
+qualitative laboratory-yeast associations from one study, with five reference-only
+UniProt mappings. Dosage, duplicate-candidate and combined-genotype limits remain
+explicit. Exact experimental alleles and genomes remain unresolved.
 
 A subsequent sordarin-family review distinguishes **GM193663**, neutral sordarin,
 and the sodium salt used in another study. It grounds seven DPH reference
@@ -7366,6 +7381,243 @@ See the [curation receipt](2026-10-12-ma-reference-curation.json) and
 NCBI requests, #1040, source adoption and GitHub mutations remain deferred or
 unauthorized. Corpus-wide primary research remains open.
 
+## Cordycepin Endpoint and Reference Follow-Up (2026-10-12)
+
+The [scoped dossier](2026-10-12-cordycepin-primary-context.json) follows the
+[2009-paper lead](2026-10-09-cordycepin-reference-lead.json) without rewriting it.
+It uses [Turner et al. 2021](https://doi.org/10.7554/eLife.65331), not a recovered
+copy of Holbein 2009. The administered-parent lead remains **CHEBI:29014**,
+InChIKey `OFEZSBMBBKLLBJ-BAJZRUMYSA-N`; the distinct triphosphate record
+**CHEBI:52316** is not substituted for it.
+
+The publisher's native PDF, official eLife XML and native Figure 4 supplement 2
+were retrieved and checksum-pinned. Selected text pages, native main Figure 4
+and Figure 6 pages, and the supplemental figure were inspected. This is not a
+whole-paper or whole-supplement review; source workbooks were not inspected.
+The original TIFF required Pillow decoding after a visibly corrupted PyMuPDF
+render was rejected. Native captions and XML also resolved loss of the micro
+sign in extracted exposure units. **No exposure concentration became an MIC.**
+
+| Source location | Supported interpretation | Boundary |
+| --- | --- | --- |
+| Figure 4 supplement 2D, ADO1 | RNA-processing response attenuated | Not a growth-resistance observation |
+| Same panel, ADK1 | RNA response not prevented | Negative comparison retained |
+| Same panel, NRT1 | Mild RNA-response attenuation | Transporter role is author interpretation, not a direct transport measurement |
+| Figure 6B, RPB1 | Slow-polymerase context changes the RNA response | Not measured growth resistance |
+| Figure 4 supplement 2F | Separate wild-type BY4741 growth control | Not matched gene-perturbation AST or a clinical category |
+
+Figure 6D uses combined cordycepin/mycophenolic acid exposure; Figure 6G compares
+separate treatments. Both measure RNA responses, not single-agent MICs.
+
+The two new reviewed UniProt references are **NRT1/THI71, Q08485,
+YOR071C, SGD:S000005597** (entry 159, sequence 1), and **RPO21/RPB1,
+P04050, YDL140C, SGD:S000002299** (entry 255, sequence 2). Each exact-gene,
+reference-taxon query returned one result without pagination in release
+**2026_03**; neither returned bibliography cites the 2021 paper. Attribution:
+UniProt Consortium, CC BY 4.0. The previously pinned ADO1/P47143 and
+ADK1/P07170 requests were revalidated without new requests.
+
+Species **NCBITaxon:4932** and reference strain **NCBITaxon:559292** are reused
+from pinned UniProt Taxonomy caches. S288c reference proteins do not become
+experimental BY4741 or other derivative accessions. Table 1 does not provide
+individual ADO1, ADK1 or NRT1 strain rows. Its `rbp1-1` strain-column spelling
+differs from `rpb1-1` in the genotype column, body and Figure 6; the discrepancy
+is retained without silently normalizing the subject. No exact experimental
+protein, allele, genome or sample identifier is assigned.
+
+The separately traced [Lecoq et al. 2001 publisher
+abstract](https://onlinelibrary.wiley.com/doi/abs/10.1002/1097-0061%2820010315%2918%3A4%3C335%3A%3AAID-YEA674%3E3.0.CO%3B2-X)
+reports an ADO1-associated growth phenotype, but publisher full-text and PDF
+routes returned the abstract in the web reader. Native figures and full subject
+context remain pending. Holbein 2009 publisher routes remained HTTP 403.
+Neither older growth claim is newly validated by its citation in Turner 2021.
+
+**Disposition: no biological curation from this follow-up.** The verified new
+findings are endpoint distinctions and reference-identity mappings. All
+**2,939 record paths and byte hashes** match the pre-research baseline and the
+committed Ma census. No source-owned inputs, counts or generated artifacts were
+changed; no whole-record primary review was completed. NCBI requests, contact,
+source-terms work, #1040 and source adoption remain deferred or unperformed.
+Verification passed: **105 focused tests**, Ruff, `git diff --check`,
+progress-ledger reproduction and preservation checks. A separate same-agent
+pass corrected Figure 6G's exposure description; this was not an independent
+scientific review. The PR #1080 full QC result is historical, not a new full
+QC run for this checkpoint. This research checkpoint is local and uncommitted.
+
+## Thiolutin Laboratory Evidence (2026-10-12)
+
+The [primary-context dossier](2026-10-12-thiolutin-context.json) examines
+[Qiu et al. 2024](https://doi.org/10.1093/nar/gkad1258), PMID:38214235, a candidate
+already retained by the expanded-vocabulary discovery stage. The original
+name-query result alone did not retain this paper. The full scope remains all
+2,939 records; this checkpoint advances one previously uncurated record.
+
+**CHEBI:156450**, thiolutin, retains InChIKey
+`MHMRAFONCSQAIA-UHFFFAOYSA-N`. The paper identifies its commercial preparation
+and depicts thiolutin separately from holomycin in native Figure 1. This is not
+independent chemical analysis of the administered material. The record's SMILES
+and InChI both reproduce its key under local RDKit 2025.03.6; the project-pinned
+version remains 2026.3.5.
+
+Selected primary Results, native supplemental Figures S1 and S3, Table S1's
+Isolates sheet and Table S2's Yeast Strains sheet support four qualitative claims:
+YAP1-associated, YRR1-associated, SNQ2-associated and **combined TRX1/TRX2-loss**
+resistance. These are one study's laboratory findings, not species-wide or
+clinical categories. Plate concentrations are not MICs. Main text's MDR deletion
+reference to S1D does not match the native panel: S1D is a diagram; S1E shows
+the growth comparison.
+
+YAP1/YRR1 findings retain mutant-versus-dosage uncertainty and negative deletion
+comparisons. SNQ2 candidates 220 and 221 share reported synonymous changes and
+must not be counted as distinct protein alleles. The paired thioredoxin result
+is not decomposed into two single-gene resistance claims. Table S2's CKY1984 and
+CKY1985 names do not identify which derivative is plotted. TRR1/PRO3 candidate
+caveats, YAP6 and additional pooled-screen hits remain uncurated by this pass.
+Direct transport and thioredoxin-mediated reduction are not newly measured here.
+
+Reference-only UniProt mappings, all reviewed and release **2026_03**:
+
+| Gene | UniProtKB | Ordered locus | SGD | Entry / Sequence |
+| --- | --- | --- | --- | --- |
+| YAP1 | P19880 | YML007W | S000004466 | 230 / 2 |
+| YRR1 / PDR2 | Q12172 | YOR162C | S000005688 | 169 / 1 |
+| SNQ2 | P32568 | YDR011W | S000002418 | 216 / 2 |
+| TRX1 | P22217 | YLR043C | S000004033 | 219 / 3 |
+| TRX2 | P22803 | YGR209C | S000003441 | 230 / 3 |
+
+TRX1 and TRX2 are reciprocal UniProt aliases: **each exact-name query returns
+both entries**. Canonical names, ordered loci and SGD identifiers resolve
+reference identity; first-hit selection would be wrong. The pinned YAP1 cache
+was reused. None of these returned bibliographies cites this paper. Attribution:
+UniProt Consortium, CC BY 4.0. Reused UniProt Taxonomy pins ground the species to
+**NCBITaxon:4932**, keeping reference S288c **NCBITaxon:559292** out of experimental
+subject fields. No exact experimental protein, allele, sample or genome is assigned.
+
+The guarded writer added four claims and one history event; reseeding the
+canary preserves them. The [reconciliation](2026-10-12-thiolutin-reconciliation.json)
+changes one census row and verifies 2,938 other records remain byte-identical.
+All original chemical/source fields and historical receipts remain intact.
+The paper's CC BY-NC 4.0 source assets stay local; only factual identifiers,
+citations and original scoped curation notes are exported. No bulk source is
+adopted, no NCBI endpoint is requested, and #1040 remains deferred.
+
+The [verification receipt](2026-10-12-thiolutin-verification.json) records all
+**12 local QC gates passed**, including **3,051 tests passed and 4 skipped**,
+strict validation, exact corpus reproduction and generated-site checks. The
+first attempt caught two documentation-test failures caused by the stale
+`NEXT_TASKS.md` coverage count. That count was corrected from 411 to 412; the
+tests were not weakened, and the failed run's receipt and log remain preserved.
+
+Offline replay reconstructs all five UniProt reference identities and both
+taxonomy responses and verifies eight inspected source-asset checksums. The
+thiolutin embedding and 16 control rows were genuinely re-encoded; 2,938
+unchanged vectors remain byte-identical, and the full PaCMAP projection was
+regenerated. The final preservation check again confirms exactly one changed
+biological record and no membership change across all 2,939 records, including
+ignored files.
+
+Local QC used **RDKit 2025.03.6**, not the project-pinned **2026.3.5**. No current
+pinned-version CI run, live-browser verification or independent scientific
+review is claimed. The apply-time curation receipt remains immutable. This
+checkpoint is local and uncommitted; whole-record review and additional primary
+evidence remain open.
+
+## EmrAB-TolC reference follow-up (2026-10-12)
+
+The [dossier](2026-10-12-emrab-context.json) separates EmrAB-TolC from EmrD and
+preserves the existing **ARO:3000344** assertion on nalidixic acid
+**CHEBI:100147**. Nitroxoline **CHEBI:67121** is a second paper-named lead, not
+a newly curated phenotype. Both records were read through the collection-aware
+loader and retain their exact structure identities.
+
+Zhong et al., [DOI:10.1038/s41467-026-70500-5](https://www.nature.com/articles/s41467-026-70500-5),
+is linked to **PMID:41839863** by RCSB and institutional metadata, without an
+NCBI request. The identifier is absent from all nine pinned compressed
+discovery exports checked, including ignored files. This does not establish
+absence from all earlier research or explain the query miss.
+
+Three reviewed UniProt references, release **2026_03**, are verified:
+
+| Component | UniProtKB | Ordered loci | Entry / Sequence |
+| --- | --- | --- | --- |
+| emrA | P27303 | b2685 / JW2660 | 175 / 2 |
+| emrB | P0AEJ0 | b2686 / JW2661 | 133 / 1 |
+| tolC | P02930 | b3035 / JW5503 | 216 / 3 |
+
+Each exact gene/reference-taxon query returns one result. All three link to
+[8ZAL](https://www.rcsb.org/structure/8ZAL) and
+[8ZAR](https://www.rcsb.org/structure/8ZAR); both entries cite the paper.
+Their returned UniProt bibliographies do not cite it. The PDB citation bridge
+is therefore explicit, not an invented direct UniProt citation. Each structure
+contains three protein entities, not one accession representing the complex.
+The entry resolutions, 3.11 and 3.59 angstrom, remain separate from the
+abstract's 3.13 angstrom; no correction is inferred.
+
+Reused UniProt Taxonomy pins distinguish reference K12 **NCBITaxon:83333**
+from species **NCBITaxon:562**. Neither the reference strain nor the PDB
+expression-system label identifies the exact C43(DE3)-derived assay subject.
+No experimental allele, protein, strain TaxID, sample or genome is assigned.
+
+Selected extracted Results and captions distinguish structural preparations,
+growth comparisons and vesicle endpoints. The EA preparation's reported lack
+of resistance activity prevents treating the structural entry as proof of a
+functional native pump. CHH and CCCP remain distinct chemicals, and plate
+concentrations are not MICs. These are text-review notes pending native review.
+
+Native figures and supplements were inaccessible. The cached publisher
+download is a 303 HTML response, **not a PDF**; the institutional PDF returned
+403. No bypass or copy request was attempted. Exact administered forms and
+experimental joins remain unresolved, so no biological claim is added.
+All 2,939 record hashes match the start of this follow-up, preserving the
+earlier thiolutin curation. No new full-QC run or whole-record completion is
+claimed. NCBI contact, endpoint requests and #1040 remain deferred.
+
+Verification: **60 focused tests passed**, including the EmrAB, EmrD,
+cordycepin and thiolutin checkpoint tests; Ruff and `git diff --check` passed.
+Offline replay reproduced the dossier from three UniProt queries, two reused
+taxonomy responses, two RCSB metadata receipts and the failed PDF receipt.
+The current progress export reproduces exactly. A separate same-agent review
+checked the citation bridge and experimental/reference boundaries; no
+independent scientific review is claimed. This checkpoint remains local and
+uncommitted.
+
+## Tetracenomycin Identity and References (2026-10-12)
+
+The [dossier](2026-10-12-tetracenomycin-context.json) preserves a chemical
+identity hold, not a new resistance assertion. Both full records were inspected.
+For tetracenomycin X, **CHEBI:32209**, the inventory and
+[live ChEBI](https://www.ebi.ac.uk/chebi/CHEBI:32209) agree on `C24H20O11`,
+InChIKey `CCDBRFCICQZPPE-DNQXCXABSA-N`. The paper-linked
+[PDB ligand OCW](https://www.rcsb.org/ligand/OCW), explicitly entity 55 of
+[6Y69](https://www.rcsb.org/structure/6Y69), instead has `C24H22O11`,
+key `QSPIPUXWSNFXCK-AGILITTLSA-N`. Local RDKit 2025.03.6 reproduces both
+keys and confirms an oxidation-state difference, not only stereochemistry.
+
+An [author's dissertation](https://edoc.ub.uni-muenchen.de/27062/) reproduces
+Osterman et al. 2020, DOI:10.1038/s41589-020-0578-x, PMID:32601485. The
+177-page PDF matches the repository checksum; native pages 164 and 165 were
+visually inspected. Figure 1c and the reported mass support the deposited
+ligand. Selected text and Table 1 distinguish rRNA effects from background
+effects; RNA determinants cannot be assigned UniProt protein accessions.
+No resistance measurements or variant specifications are exported. This is
+not a whole-paper review. The discrepancy's cause remains unresolved, and
+the **pre-existing target claim also requires identity reconciliation**.
+
+For tetracenomycin C, **CHEBI:9470**, selected text from
+[Guilfoile and Hutchinson 1992](https://doi.org/10.1128/jb.174.11.3651-3658.1992)
+distinguishes the producer from the heterologous assay host. UniProt 2026_03
+verifies reference **tcmA/P39886** (entry 106, sequence 1) and **tcmR/P39885**
+(entry 97, sequence 1); both returned bibliographies cite PMID:1592819.
+Producer species **NCBITaxon:1907** and host species **NCBITaxon:1916** were
+checked through UniProt Taxonomy, not NCBI. TcmR regulation is not export,
+and a proposed export mechanism is not a direct transport measurement.
+Native 1992 figures remain unverified; the cached direct download is 403 HTML,
+not a PDF. Historical CARD direct-reference counts remain unchanged.
+
+No chemical identity, experimental allele, genome or biological claim is
+changed by this follow-up. Copyrighted source assets remain local. #1040,
+NCBI requests and contact remain deferred; all whole-record reviews remain open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
@@ -7416,6 +7668,10 @@ unauthorized. Corpus-wide primary research remains open.
    The LmrC primary-context review distinguishes native and laboratory-host
    results but does not resolve tested chemical forms, exact alleles or the
    celesticetin resistance assertion; its two UniProt candidates remain separate.
+   EmrAB-TolC now has three versioned component references and two paper-linked
+   PDB entries; native figure/supplement review, exact compound forms and
+   experimental identifiers remain unresolved. Do not transfer EmrD findings
+   to this distinct complex or assign one component as the whole assembly.
 3. Review HIVDB primary evidence and resolve supported reference accessions
    beyond the verified source-region/taxon context. Retain algorithm rules as
    rules rather than measured phenotypes or biochemical mechanisms.
@@ -7449,7 +7705,12 @@ unauthorized. Corpus-wide primary research remains open.
    Keep GM193663's five qualitative gene associations in scope: figure and
    supplement review, exact experimental identifiers and broader evidence
    coverage remain pending. The 2013 sordarin sodium-salt study is not a
-   neutral-sordarin or GM193663 observation. Cordycepin remains a reference lead.
+   neutral-sordarin or GM193663 observation. Cordycepin's 2021 RNA-endpoint review
+   and two additional reference mappings do not resolve its older growth-study
+   holds. Inspect those primary figures and subjects before resistance curation;
+   do not substitute RNA-processing response for AST.
+   Thiolutin's four qualitative claims do not finish its remaining source studies,
+   pooled-screen validation, exact allele/subject mapping or mechanism review.
    Papulacandins B and D now have three qualitative gene associations; figure
    review and exact experimental identifiers remain unresolved. Papulacandin A
    and arborcandin C remain uncurated from the latest follow-up. Resolve the
