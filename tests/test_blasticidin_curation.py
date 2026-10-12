@@ -86,8 +86,9 @@ def test_mic_units_range_and_categories_remain_faithful(curation, context):
 
 def test_reference_ids_are_not_experimental_assignments(curation, context):
     for item in curation["claims"] + curation["observations"]:
-        assert not {"protein_accession", "gene_id", "strain_taxon_id", "genome_accession",
-                    "biosample_id", "bioproject_id", "source", "aro_id"} & item.keys()
+        assert not {"protein_accession", "gene_id", "strain_taxon_id", "assembly_accession",
+                    "biosample_accession", "bioproject_accession", "sra_accessions",
+                    "source", "aro_id"} & item.keys()
     assert curation["exact_protein_alleles_assigned"] == 0
     assert curation["experimental_genomes_assigned"] == 0
     assert context["reference_genome"]["accession"] == "U00096.3"
@@ -96,6 +97,15 @@ def test_reference_ids_are_not_experimental_assignments(curation, context):
     assert context["taxonomy"]["562"]["rank"] == "species"
     assert context["taxonomy"]["511145"]["rank"] == "no rank"
     assert context["taxonomy"]["511145"]["parent"]["taxonId"] == 83333
+
+
+@pytest.mark.parametrize("field", [
+    "assembly_accession", "biosample_accession", "bioproject_accession", "sra_accessions",
+])
+def test_reference_identity_guard_rejects_canonical_sample_fields(curation, context, field):
+    curation["observations"][0][field] = ["unexpected"] if field == "sra_accessions" else "unexpected"
+    with pytest.raises(AssertionError):
+        test_reference_ids_are_not_experimental_assignments(curation, context)
 
 
 def test_versioned_protein_context_is_complete_for_reference_queries(context):
