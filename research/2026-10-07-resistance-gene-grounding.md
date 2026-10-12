@@ -9,6 +9,19 @@ The source queue now puts this current direction before its historical
 2026-10-04 review. Its `BLOCKED`, `REFERENCE`, `UNVERIFIED` fields and historical
 verification date remain unchanged; no source-terms reassessment was performed.
 
+Publication checkpoint: [PR #1083](https://github.com/CultureBotAI/AntibioticMech/pull/1083).
+Dated receipts and their local/uncommitted or GitHub-mutation fields describe
+their original checkpoint time, not the PR's current state. A separate same-agent
+adversarial pass filed [#1084](https://github.com/CultureBotAI/AntibioticMech/issues/1084):
+historical tests incorrectly depended on mutable live records. The fix pins a
+pre-curation fixture, replays the exact thiolutin transition, and binds EmrAB's
+historical assertions to its census. Two regression cases failed before the fix;
+the post-fix checkpoint suite passed 63 tests, with two RDKit-dependent skips.
+Those two chemical cases also passed in the separate seven-test chemistry run.
+The pre-existing tetracenomycin identity conflict remains open as
+[#1085](https://github.com/CultureBotAI/AntibioticMech/issues/1085), not resolved
+by documenting the hold. This is not independent scientific signoff.
+
 ## Scope and baseline
 
 The collection-aware loader inspected all 2,939 records at baseline commit

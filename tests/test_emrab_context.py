@@ -10,8 +10,6 @@ from urllib.parse import parse_qs, urlsplit
 
 import pytest
 
-from antibioticmech.activity_collections import load_record
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -37,18 +35,41 @@ def test_records_and_source_assertion_are_preserved(context):
         assert (member["path"], member["sha256"], member["standard_inchi_key"]) == (
             old["path"], old["record_sha256"], old["standard_inchi_key"],
         )
-        record = load_record(ROOT / member["path"])
-        assert record["identifier"] == member["identifier"]
-        assert record["chemical_structure"]["standard_inchi_key"] == member["standard_inchi_key"]
         claims = member["existing_emrab_assertions"]
         if member["identifier"] == "CHEBI:100147":
             claim, = claims
-            assert claim["aro_id"] == "ARO:3000344" and claim in record["resistance_mechanisms"]
+            assert claim["aro_id"] == "ARO:3000344"
+            assert claim["mechanism_type"] == "ANTIBIOTIC_EFFLUX"
+            assert claim["evidence"][0]["reference"] == "ARO:3000344"
+            assert "database assertion, not a primary citation" in claim["evidence"][0]["notes"]
             assert "protein_accession" not in claim and "taxon_id" not in claim
         else:
             assert claims == []
         assert member["action"] == "PRESERVE_RECORD_NO_PRIMARY_UPGRADE"
         assert member["whole_record_review"] == "OPEN"
+
+
+def test_historical_assertions_do_not_read_evolving_live_records(context, monkeypatch):
+    original = Path.open
+    live_paths = {ROOT / member["path"] for member in context["records"]}
+
+    def without_live_records(path, *args, **kwargs):
+        assert path not in live_paths, "historical check read mutable live record"
+        return original(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", without_live_records)
+    test_records_and_source_assertion_are_preserved(context)
+
+
+@pytest.mark.parametrize("field", ["standard_inchi_key", "sha256", "claim"])
+def test_historical_assertions_reject_tampered_dossier(context, field):
+    candidate = copy.deepcopy(context)
+    if field == "claim":
+        candidate["records"][0]["existing_emrab_assertions"][0]["aro_id"] = "ARO:invalid"
+    else:
+        candidate["records"][0][field] = "invalid"
+    with pytest.raises(AssertionError):
+        test_records_and_source_assertion_are_preserved(candidate)
 
 
 @pytest.mark.parametrize("gene,accession,loci,ev,sv", [

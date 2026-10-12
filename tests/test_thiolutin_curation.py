@@ -30,24 +30,61 @@ def receipt():
     return read("-curation.json")
 
 
+def historical_order(value, keys):
+    # Sorted JSON receipts omit YAML field order; reproduce it without dropping fields.
+    assert set(value) == set(keys)
+    return {key: copy.deepcopy(value[key]) for key in keys}
+
+
 def test_four_qualitative_claims_reproduce_the_scoped_record_change(context, receipt, tmp_path):
-    path = ROOT / receipt["record"]["path"]
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == receipt["record"]["sha256"]
+    # Replay the dated transition; later live curation must not rewrite its history.
+    path = ROOT / "tests/fixtures/thiolutin-before-2026-10-12.yaml"
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == context["record_before"]["sha256"]
+    assert context["record_before"]["sha256"] == receipt["before"]["sha256"]
     record = load_record(path)
     assert record["identifier"] == "CHEBI:156450"
     assert record["chemical_structure"]["standard_inchi_key"] == "MHMRAFONCSQAIA-UHFFFAOYSA-N"
-    assert record["resistance_mechanisms"] == receipt["claims"] == context["qualitative_claims"]
+    assert not record.get("resistance_mechanisms")
+    assert receipt["claims"] == context["qualitative_claims"]
     assert len(receipt["claims"]) == 4
-    assert record["curation_history"][-1] == receipt["curation_event"]
-    previous = copy.deepcopy(record)
-    del previous["resistance_mechanisms"]
-    previous["curation_history"].pop()
-    output = tmp_path / "before.yaml"
-    write_validated_antibiotic(previous, output)
-    assert hashlib.sha256(output.read_bytes()).hexdigest() == context["record_before"]["sha256"]
-    assert context["record_before"]["sha256"] == receipt["before"]["sha256"]
+    record["curation_history"].append(historical_order(
+        receipt["curation_event"], ("timestamp", "curator", "action", "changes", "llm_assisted"),
+    ))
+    record["resistance_mechanisms"] = [historical_order(claim, (
+        "mechanism_type", "label", "gene_families", "taxon_id", "taxon_label",
+        "phenotype_label", "assay", "note", "evidence",
+    )) for claim in receipt["claims"]]
+    for claim in record["resistance_mechanisms"]:
+        claim["evidence"] = [historical_order(e, ("reference", "notes")) for e in claim["evidence"]]
+    output = tmp_path / "after.yaml"
+    write_validated_antibiotic(record, output)
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == receipt["record"]["sha256"]
     assert not record.get("activity_spectrum")
     assert receipt["history_events_added"] == receipt["records_changed"] == 1
+
+
+def test_historical_transition_does_not_read_evolving_live_record(context, receipt, tmp_path, monkeypatch):
+    original = Path.open
+
+    def without_live_record(path, *args, **kwargs):
+        assert path != ROOT / receipt["record"]["path"], "historical check read mutable live record"
+        return original(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", without_live_record)
+    test_four_qualitative_claims_reproduce_the_scoped_record_change(context, receipt, tmp_path)
+
+
+@pytest.mark.parametrize("field", ["claim", "event", "before_hash", "after_hash"])
+def test_historical_replay_rejects_tampered_receipt(context, receipt, tmp_path, field):
+    candidate = copy.deepcopy(receipt)
+    if field == "claim":
+        candidate["claims"][0]["note"] += " Unsupported change."
+    elif field == "event":
+        candidate["curation_event"]["changes"] += " Unsupported change."
+    else:
+        candidate["before" if field == "before_hash" else "record"]["sha256"] = "0" * 64
+    with pytest.raises(AssertionError):
+        test_four_qualitative_claims_reproduce_the_scoped_record_change(context, candidate, tmp_path)
 
 
 def test_genotypes_are_not_interchanged_and_dosage_is_not_resolved(receipt):

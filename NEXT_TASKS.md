@@ -23,7 +23,8 @@ prose below are the reasoning, the queue is the list.
   chemical figure supports the latter. The existing target claim also needs
   reassessment; do not silently replace the ChEBI structure or import the paper's
   resistance measurements. See
-  `research/2026-10-12-tetracenomycin-context.json` for the source-owned repair hold.
+  `research/2026-10-12-tetracenomycin-context.json` and #1085 for the source-owned
+  repair hold.
 - **Curate the next mechanism graphs.** 16 of 2,939 records carry a
   `causal_graph`; that number is the point of the repository. Start with the 412
   records that already have target or resistance evidence to build on —
