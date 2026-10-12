@@ -1,0 +1,446 @@
+{
+  "attribution": {
+    "license_url": "https://github.com/arpcard/aro/blob/0225daaf01b1336fc6e866989b4835b89afa40d8/LICENSE",
+    "source": "CARD Antibiotic Resistance Ontology"
+  },
+  "created_at": "2026-10-12T19:58:57.826044+00:00",
+  "date": "2026-10-12",
+  "determinations": {
+    "ARO:3003333": {
+      "access_limit": "Direct publisher open returned HTTP 403; full text and native figures not reviewed. No access-control bypass.",
+      "decision": "HOLD_FULL_PRIMARY_AND_NUCLEOTIDE_REFERENCE_REVIEW",
+      "definition_citations": [
+        "PMID:10512710"
+      ],
+      "doi": "10.1006/jmbi.1999.3160",
+      "experimental_protein_assigned": false,
+      "findings": [
+        {
+          "evidence_type": "ABSTRACT_REPORTED_FUNCTIONAL_EXPERIMENT",
+          "interpretation": "The experiment used a laboratory E. coli background dependent on plasmid-borne rRNA; it is not a species-wide phenotype.",
+          "location": "Abstract"
+        },
+        {
+          "evidence_type": "IDENTITY_BOUNDARY",
+          "interpretation": "KsgA is an RNA-modifying enzyme discussed separately, not the rrsC gene product.",
+          "location": "Abstract"
+        }
+      ],
+      "molecule_type": "RIBOSOMAL_RNA_NOT_PROTEIN",
+      "primary_url": "https://www.sciencedirect.com/science/article/abs/pii/S0022283699931601",
+      "reference": "PMID:10512710",
+      "reference_taxon_id": "NCBITaxon:562",
+      "review_scope": "EMBL_EBI_ABSTRACT_AND_INDEXED_PUBLISHER_EXCERPTS_ONLY",
+      "source_label": "Escherichia coli 16S rRNA (rrsC) mutation conferring resistance to kasugamicin",
+      "taxonomy_source": "Reused pinned primary context, taxonomy/562; no new NCBI request.",
+      "uniprot_disposition": "NOT_APPLICABLE_TO_RRNA_DETERMINANT"
+    },
+    "ARO:3003988": {
+      "article_license": "CC BY 4.0",
+      "chemical_identity": {
+        "preparation_form_resolved": false,
+        "reason": "The general supplier statement and substrate mass do not independently distinguish the neutral preparation from its salts.",
+        "source_label": "kasugamycin"
+      },
+      "decision": "HOLD_FOCAL_PROTEIN_COMPOUND_AND_SOURCE_DISCREPANCY_REVIEW",
+      "definition_citations": [
+        "PMID:27929110"
+      ],
+      "doi": "10.1038/ncomms13803",
+      "findings": [
+        {
+          "evidence_type": "HETEROLOGOUS_HOST_EXPERIMENT",
+          "interpretation": "E. coli expression evidence is distinct from the native LC231 antibiogram. The authors did not measure each determinant's contribution in LC231.",
+          "location": "Results opening; main Table 1"
+        },
+        {
+          "evidence_type": "NATIVE_ISOLATE_OBSERVATION",
+          "interpretation": "Native inactivation is reported as No. Functional-genomics labeling says IIa here, unlike IIb in main Table 1 and Tables S3/S4; the discrepancy is retained, not silently corrected.",
+          "location": "Table S1, kasugamycin row"
+        },
+        {
+          "evidence_type": "CENSORED_PHENOTYPE_COMPARISON",
+          "interpretation": "LC231 has a lower-bound MIC, and the comparators do not establish an eightfold difference for this drug. No clinical category is inferred.",
+          "location": "Tables S1/S2, kasugamycin rows"
+        },
+        {
+          "evidence_type": "BIOCHEMICAL_EVIDENCE",
+          "interpretation": "Purified-enzyme substrate testing and product mass support kasugamycin acetylation; this does not erase the negative native-inactivation observation.",
+          "location": "Figure S6; Table S4"
+        },
+        {
+          "evidence_type": "HOMOLOG_COMPARISON_NOT_IDENTITY",
+          "interpretation": "The IIa protein in Acidovorax is a relative, not the focal LC231 protein.",
+          "location": "Table S3"
+        }
+      ],
+      "primary_url": "https://www.nature.com/articles/ncomms13803",
+      "raw_source_redistributed": false,
+      "reference": "PMID:27929110",
+      "reference_grounding": {
+        "name_query_result_count": 24,
+        "other_taxon_candidates_assigned": 0,
+        "scope": "SOURCE_REPORTED_UNVERSIONED_WGS_PROJECT_NOT_ASSEMBLY_OR_ALLELE_ASSIGNMENT",
+        "source_accession_location": "Main article / Data availability",
+        "source_determinant_accession_range": [
+          "KX531043",
+          "KX531056"
+        ],
+        "source_organism": "Paenibacillus sp. LC231",
+        "source_wgs_project": "JFOM00000000",
+        "specific_determinant_accession_assigned": false,
+        "taxon_id": "NCBITaxon:1120679",
+        "taxonomy_rank": "species",
+        "uniprot_disposition": "NO_ENTRY_IN_REQUESTED_CURRENT_TAXON_QUERY_NOT_GLOBAL_ABSENCE",
+        "uniprot_exact_taxon_result_count": 0
+      },
+      "review_scope": "SELECTED_MAIN_XML_AND_NATIVE_SUPPLEMENT_PAGES",
+      "source_label": "AAC(2')-IIb",
+      "supplement": {
+        "locations": [
+          "Figure S6",
+          "Table S1",
+          "Table S2",
+          "Tables S3 and S4"
+        ],
+        "native_pages_reviewed_one_based": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "pages": 17,
+        "whole_supplement_review_complete": false
+      }
+    },
+    "ARO:3004628": {
+      "chemical_identity": {
+        "decision": "SALT_NOT_IDENTICAL_TO_NEUTRAL_RECORD",
+        "location": "Materials and Methods / Chemicals",
+        "neutral_mass_conversion_inferred": false,
+        "source_preparation": "kasugamycin hydrochloride"
+      },
+      "decision": "HOLD_EXACT_COMPOUND_AND_COMPLETE_PRIMARY_REVIEW",
+      "definition_citations": [
+        "PMID:22660700"
+      ],
+      "doi": "10.1128/AEM.01155-12",
+      "findings": [
+        {
+          "evidence_type": "SAME_ISOLATE_CO_OCCURRENCE",
+          "interpretation": "Field-isolate genotype/phenotype association is separate from the E. coli expression experiments.",
+          "location": "Table 1; Results / Distribution"
+        },
+        {
+          "evidence_type": "BIOCHEMICAL_EVIDENCE",
+          "interpretation": "Product analysis supports acetylation; it does not assign one protein accession to every isolate.",
+          "location": "Results / Acetylation; Figure 3 caption"
+        },
+        {
+          "evidence_type": "UNRESOLVED_ALLELE_EFFECT",
+          "interpretation": "The paper explicitly leaves the contribution of the differing isolate allele unresolved.",
+          "location": "Results / Distribution"
+        }
+      ],
+      "native_figures_reviewed": false,
+      "primary_url": "https://journals.asm.org/doi/10.1128/aem.01155-12",
+      "reference": "PMID:22660700",
+      "reference_grounding": {
+        "accession": "UniProtKB:I4DEC2",
+        "archive_accession": "AB669090",
+        "archive_protein_id": "BAM16262.1",
+        "archive_scope": "SOURCE_REPORTED_GENOMIC_FRAGMENT_NOT_ASSEMBLY",
+        "archive_version_supplied": false,
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 26,
+        "experimental_genome_assigned": false,
+        "experimental_protein_assigned": false,
+        "gene": "aac(2')-IIa",
+        "join": "Paper accession statement identifies AB669090 from B. glumae 5091; UniProt links that archive accession and BAM16262.1 to I4DEC2 and ARO:3004628.",
+        "paper_source_strain": "5091",
+        "reference_taxon_id": "NCBITaxon:337",
+        "scope": "PAPER_LINKED_REFERENCE_CROSSWALK_NOT_INDEPENDENT_SEQUENCE_VERIFICATION",
+        "sequence_version": 1
+      },
+      "review_scope": "SELECTED_PUBLISHER_HTML_TEXT_TABLE_AND_FIGURE_CAPTIONS",
+      "source_label": "AAC(2')-IIa",
+      "supplement_reviewed": false
+    }
+  },
+  "disposition": {
+    "curation_events_added": 0,
+    "experimental_genomes_assigned": 0,
+    "experimental_proteins_assigned": 0,
+    "new_claims": 0,
+    "new_measurements": 0,
+    "records_changed": 0,
+    "source_assertions_preserved": 3,
+    "whole_corpus_primary_review": "OPEN",
+    "whole_records_completed": 0
+  },
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-12-kasugamycin-resistance-grounding.tsv",
+      "sha256": "b0893e65a410d8f76285b22d935d29c6a366e99799fcd9da9bba45d452ec872a"
+    },
+    "curation_receipt": {
+      "path": "research/2026-10-12-kasugamycin-curation.json",
+      "sha256": "22f0621162bb0aba961b1be7227814994c25b487cbe24b86ad58ce77df43f032"
+    },
+    "definition_citations": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior_primary_context": {
+      "path": "research/2026-10-12-kasugamycin-context.json",
+      "sha256": "ebff90b85a509536f622a6bcdd71dfb1c60d1f4f8b9cb16d65428e1bf37fbead"
+    },
+    "prior_reference_candidates": {
+      "path": "research/2026-10-07-card-reference-grounding.json",
+      "sha256": "bf01b0fef65240d2d1daf8298398ae171194420c0093a7aad2c9ba318b9b5961"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-12-kasugamycin-verification.json",
+      "sha256": "ed575c899a1f0fc76e8c772da848969fa7280f3f320bf3a6fb21eb1621bfe784"
+    }
+  },
+  "limitations": [
+    "No NCBI endpoint request or outreach; #1040 and source-terms work remain deferred.",
+    "No sequence retrieval, genome analysis, source adoption, GitHub mutation or wet-lab procedure is added.",
+    "Reference queries are complete only for their stated search expressions and UniProt release.",
+    "No correction entry in the three metadata responses is not proof that no correction exists.",
+    "Selected primary review does not establish a whole-paper, whole-record or whole-corpus sign-off.",
+    "The current progress index deliberately omits individual paper dossiers; this follow-up changes no corpus counts."
+  ],
+  "local_name_search": {
+    "ignored_files_included": true,
+    "limit": "Name-field search only; not a structural proof that no unnamed hydrochloride record exists.",
+    "matching_identifiers": [
+      "CHEBI:81419"
+    ],
+    "method": "Path.rglob plus YAML label/synonym parsing",
+    "records_inspected": 2939,
+    "root": "data/antibiotics"
+  },
+  "measurement_policy": {
+    "censored_values_remain_censored": true,
+    "clinical_categories_inferred": false,
+    "numeric_observations_imported": 0,
+    "preferred_mic_units": "mg/L",
+    "salt_to_neutral_mass_conversion_inferred": false,
+    "ug_per_ml_factor": 1
+  },
+  "metadata": {
+    "10512710": {
+      "commentCorrectionList": null,
+      "doi": "10.1006/jmbi.1999.3160",
+      "id": "10512710",
+      "isOpenAccess": "N",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/metadata-10512710.json",
+          "sha256": "ccb4a8d666caf39bc32f6f959c75013a63f13de9409ca0ae29491451fb036165"
+        },
+        "retrieved_at": "2026-10-12T19:53:07.962597+00:00",
+        "sha256": "72aaecda1ed0f190a5ac7aadebf6a028a45a85b0143e43c69f89bc8dc87dc8fd",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10512710+AND+SRC%3AMED&resultType=core&format=json"
+      },
+      "title": "Isolation of kasugamycin resistant mutants in the 16 S ribosomal RNA of Escherichia coli."
+    },
+    "22660700": {
+      "commentCorrectionList": null,
+      "doi": "10.1128/aem.01155-12",
+      "id": "22660700",
+      "isOpenAccess": "N",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/metadata-22660700.json",
+          "sha256": "12f37d1c3696416823be2a9eaf75c42bbb2b7d6e33e85c5b30d110fe65efc28b"
+        },
+        "retrieved_at": "2026-10-12T19:53:08.660618+00:00",
+        "sha256": "c78b8741eb7d41e6466c609fccb418503cf5e081594dd2132d6ca9d130807f00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22660700+AND+SRC%3AMED&resultType=core&format=json"
+      },
+      "title": "The novel kasugamycin 2'-N-acetyltransferase gene aac(2')-IIa, carried by the IncP island, confers kasugamycin resistance to rice-pathogenic bacteria."
+    },
+    "27929110": {
+      "commentCorrectionList": null,
+      "doi": "10.1038/ncomms13803",
+      "id": "27929110",
+      "isOpenAccess": "Y",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/metadata-27929110.json",
+          "sha256": "c112edc103749c846fd2ea7c8d914ebeb1a6cbbf155b04f64336c6ff03d4da89"
+        },
+        "retrieved_at": "2026-10-12T19:52:51.930942+00:00",
+        "sha256": "d7a1ae1221b89b7b19902c3f0553f16c513f28081df0148a8bf0ae4fc791f981",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27929110+AND+SRC%3AMED&resultType=core&format=json"
+      },
+      "title": "A diverse intrinsic antibiotic resistome from a cave bacterium."
+    }
+  },
+  "primary_assets": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/primary-27929110.json",
+        "sha256": "a136eddc5a7a90de5e929f9bef00e257dd1aac7c31d8c74a6ced9cf0ffec02dc"
+      },
+      "retrieved_at": "2026-10-12T19:53:12.570678+00:00",
+      "scope": "PRIMARY_FULL_TEXT_XML",
+      "sha256": "ef9dad9d4c4b11612098c6ea67c994491b9aedc3c14f0493536194e428aeb2fa",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5155152/fullTextXML"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/primary-22660700.json",
+        "sha256": "188494e643d83099f099019d757c3cacc99cabc8170b6f507921eedc87af0fa4"
+      },
+      "retrieved_at": "2026-10-12T19:53:36.801425+00:00",
+      "scope": "FAILED_REQUEST_NO_CONTENT_REVIEW",
+      "sha256": "74dfcb4f6fe773bfb34105648763cf052ff5183acc0c4dc899b89ee8e8bb436d",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3406169/fullTextXML"
+    },
+    {
+      "archive": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/supplement.zip",
+        "sha256": "bcc90ad1708f5a132f389fc11a2740766294f38da8943467f6a34065d5b17c3b"
+      },
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/supplement-request.json",
+        "sha256": "a1591c8cbdf9ad3f98552e8d2e3b070bfeecb8d3db7855afa0b793bb93ab6294"
+      },
+      "retrieved_at": "2026-10-12T19:55:34.937516+00:00",
+      "scope": "SELECTED_NATIVE_PDF_PAGES_NOT_WHOLE_SUPPLEMENT",
+      "selected_member": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/ncomms13803-s1.pdf",
+        "sha256": "a13d57f220b3fd52177ae57eba39a2001975d56808e493b935ee006f2ed83b12"
+      },
+      "sha256": "bcc90ad1708f5a132f389fc11a2740766294f38da8943467f6a34065d5b17c3b",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5155152/supplementaryFiles"
+    }
+  ],
+  "record": {
+    "action": "PRESERVE_EXISTING_SOURCE_AND_CURATOR_SLICES",
+    "chemical_form": "NEUTRAL",
+    "identifier": "CHEBI:81419",
+    "label": "kasugamycin",
+    "path": "data/antibiotics/antifungal/kasugamycin.yaml",
+    "sha256": "7a1fb4d516dcc4337524ad052655d47fe2ff98e4dfe0b53f1c3b4c981518fd37",
+    "standard_inchi_key": "PVTHJAPFENJVNC-MHRBZPPQSA-N",
+    "whole_record_review": "OPEN"
+  },
+  "scope": "THREE_INHERITED_CARD_ASSERTIONS_SELECTED_PRIMARY_AND_REFERENCE_REVIEW",
+  "taxonomy": {
+    "1120679": {
+      "otherNames": [
+        "Paenibacillus sp. LC231"
+      ],
+      "parent": {
+        "scientificName": "unclassified Paenibacillus",
+        "taxonId": 185978
+      },
+      "rank": "species",
+      "scientificName": "Paenibacillus sp. (strain LC231)",
+      "strains": [
+        {
+          "name": "LC231"
+        }
+      ],
+      "taxonId": 1120679
+    },
+    "337": {
+      "parent": {
+        "scientificName": "Burkholderia",
+        "taxonId": 32008
+      },
+      "rank": "species",
+      "scientificName": "Burkholderia glumae",
+      "taxonId": 337
+    }
+  },
+  "uniprot_release": "2026_03",
+  "uniprot_requests": [
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-09356de11bb83206f7d90d9a26b72ee2dd840466605ea1fa02daa0dd9c6b3968.json",
+        "sha256": "5c2b443ac4a9021b488c148f2bc65f4e4e77d7e18bf867a3d4c1aef3c796a54d"
+      },
+      "complete_for_requested_query_only": true,
+      "next_page_present": false,
+      "query": "LC231",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-12T19:54:42.857591+00:00",
+      "sha256": "83c4eee1efd9317a2e2ae4ea3bc1ed1a6c9cb057cbcdac68499fd1fd1b344f64",
+      "status": 200,
+      "total_results": 1,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=LC231&format=json&size=25"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-0f7728ccc539dca125379ef9523ba8d46b94f9c2e5c778165d9cf8a9c40f6298.json",
+        "sha256": "14a8f94613b175c376032cc87ee821138cb81f2c339f455025895d807eb49417"
+      },
+      "complete_for_requested_query_only": true,
+      "next_page_present": false,
+      "query": "organism_id:1120679",
+      "release": "2026_03",
+      "result_count": 0,
+      "retrieved_at": "2026-10-12T19:55:17.589285+00:00",
+      "sha256": "7b305b9b7d68df43cd35478f57af3f0a8f5d80a10bc4f706f228124d5932f4ad",
+      "status": 200,
+      "total_results": 0,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A1120679&format=json&size=25&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_card%2Ccc_miscellaneous"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-86c2f8d5a47a2afd4fb8b0eedb9ff84108d69b17b7c60f75ea56c1ecb1a53dbb.json",
+        "sha256": "a2959b91ad14038fb8131da6a6eb56f3387482da3a1ea3b5e68751641afab7cd"
+      },
+      "complete_for_requested_query_only": true,
+      "next_page_present": false,
+      "query": "accession:I4DEC2",
+      "release": "2026_03",
+      "result_count": 1,
+      "retrieved_at": "2026-10-12T19:53:15.064675+00:00",
+      "sha256": "577a7eeb621005ffc655c0232add62adde7c2232c52d0d4c4311a51b50661632",
+      "status": 200,
+      "total_results": 1,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AI4DEC2&format=json&size=25&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_card%2Ccc_miscellaneous"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-dfb94b7fb1862a8b3e5471ead55b8317e26c02c96c0ace86bdcebead51adf081.json",
+        "sha256": "2d68284bc75b5ae8088877f0d2a473de1846c5ee01b8720ae39e164e952f7eaf"
+      },
+      "complete_for_requested_query_only": true,
+      "next_page_present": false,
+      "query": "protein_name:kasugamycin AND taxonomy_name:Paenibacillus",
+      "release": "2026_03",
+      "result_count": 24,
+      "retrieved_at": "2026-10-12T19:53:53.574439+00:00",
+      "sha256": "c2ec17b9e32f4013ba48bc07b727d43739233a15b3156ec3798d5810b2721db7",
+      "status": 200,
+      "total_results": 24,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3Akasugamycin+AND+taxonomy_name%3APaenibacillus&format=json&size=25&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_card%2Ccc_miscellaneous"
+    },
+    {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-fefca33eaf6fa69b1fae348f36a7ad5f4e8a9cabd2a7bfa463c30c7ef74169ab.json",
+        "sha256": "3da76f50c77f00faadb060e83b88134a4aa15023478416b4e7cd8063533cd980"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-12T19:53:39.091662+00:00",
+      "sha256": "fc137ddc04d3c28a10bd723a07d6e93175a2cf73a9fa82d5230803e22e441666",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/337.json"
+    }
+  ]
+}

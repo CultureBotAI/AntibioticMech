@@ -1022,6 +1022,27 @@
       "source_rows": [
         {"identifier": "CHEBI:46081", "row_sha256": "4fabfdb6e0e4b06bde7d76adfebeaab8694aa3e503a69eda76131560ece33e89"}
       ]
+    },
+    {
+      "review_id": "ma-2024-reference-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-12",
+      "pmid": "38374637",
+      "reference": "DOI:10.1021/acs.jafc.3c08093.s001",
+      "source_url": "https://doi.org/10.1021/acs.jafc.3c08093.s001",
+      "locations": [
+        "Public publisher supplement version 1, PDF p. 5: opening subject-label lines of Figure S4 caption, text-extracted and visually inspected as a crop; distinguishes 1980 UF-70, Scl02-05 and derived subjects; main text and experimental results not fully inspected",
+        "UniProtKB release 2026_03: A7EQI8 entry 111 and A7F519 entry 97, sequence versions 1; both unreviewed entries assigned to reference strain ATCC 18683 / 1980 / Ss-1, TaxID 665079",
+        "UniProt Taxonomy release 2026_03: 665079 has strain rank under species 5180; metadata retrieved 2026-10-12; no NCBI endpoint request"
+      ],
+      "note": "The source label Scl02-05 is retained as background context, not a uniquely resolved tested subject. A7EQI8, A7F519 and TaxID 665079 describe the 1980 / Ss-1 reference strain, not verified Scl02-05 or derivative accessions. Limited primary-supplement identity evidence distinguishes these backgrounds but does not establish a one-to-one source-row/subject crosswalk. Species 5180 is retained. Source alteration, phenotype, assay and mechanism remain unchanged and are not independently validated by this identifier review. Main-text assessment, exact experimental protein and genome identity remain unresolved; no measurement or new allele assignment is inferred.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "source_rows": [
+        {"identifier": "CHEBI:28909", "row_sha256": "6a547a0c6c6ea614cd7c62b24211763a0ff5f1b5f83204586e112c67a2846c7c"},
+        {"identifier": "CHEBI:28909", "row_sha256": "af434560aa89a613a0b3cfd3651e1ba2a1fa2f440ce61d4b24f02bf0c8c7c73c"},
+        {"identifier": "CHEBI:81763", "row_sha256": "f177428e52f4619cd334e023e642c1d6ab12911646a153824c1d90dd9e6f5c2f"},
+        {"identifier": "CHEBI:81763", "row_sha256": "ae814e8587fbd05c1051d3da866cb17ecb9474102bbff8b6c8d94239022d79ad"}
+      ]
     }
   ]
 }

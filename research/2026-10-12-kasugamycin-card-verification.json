@@ -1,0 +1,110 @@
+{
+  "additional_checks_run": [
+    {
+      "command": ".venv/bin/python -m ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python scripts/check_docs.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHONPATH=src .venv/bin/python scripts/summarize_resistance_progress.py --check",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "adversarial_self_review": {
+    "dispositions": [
+      "RNA determinant receives no protein accession; KsgA is not substituted.",
+      "I4DEC2 is a versioned, unreviewed reference joined through a paper-reported fragment, not an experimental genome.",
+      "Hydrochloride measurements are withheld from the neutral record; no mass correction is invented.",
+      "The IIa/IIb supplement discrepancy and negative native inactivation remain explicit.",
+      "Purified-enzyme and heterologous-host findings do not establish focal-gene contribution in LC231.",
+      "A WGS project and a determinant accession range are not converted into a versioned assembly or a selected allele.",
+      "No-hit UniProt searches remain query-scoped; other-taxon name matches are not promoted.",
+      "Historical input receipts remain immutable; corpus counters and the progress index do not change."
+    ],
+    "kind": "SCOPED_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+    "scientific_holds_open": [
+      "Full-primary and nucleotide-reference review for rrsC.",
+      "Exact-compound scope and remaining primary evidence for AAC(2')-IIa.",
+      "Focal protein mapping, preparation identity and the primary-table discrepancy for AAC(2')-IIb."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "research/2026-10-12-kasugamycin-card-context.json",
+      "sha256": "d6f42be0846f95d86e7ebb6bbcbafedc3ea11c1bff0a566b7d775310910127b1"
+    },
+    {
+      "path": "tests/test_kasugamycin_card_context.py",
+      "sha256": "86efaa460744fcd4c8f54ffca043822145f30479288882a5c4cbdffc4ce9d0cc"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "29c2914992ab1c36dc06f7a0610f7f5e79d27d9b37087e9a643167ea2f8b74df"
+    }
+  ],
+  "created_at": "2026-10-12T20:02:09.062916+00:00",
+  "current_census": {
+    "path": "research/2026-10-12-kasugamycin-resistance-grounding.tsv",
+    "sha256": "b0893e65a410d8f76285b22d935d29c6a366e99799fcd9da9bba45d452ec872a"
+  },
+  "full_qc_rerun": false,
+  "github_mutations": 0,
+  "native_pdf_pages_visually_reviewed_one_based": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "ncbi_1040_status": "DEFERRED",
+  "new_curation_events": 0,
+  "new_measurements": 0,
+  "new_ncbi_endpoint_requests": 0,
+  "new_records_or_claims": 0,
+  "pdf_reader": {
+    "installation_scope": "TEMPORARY_DIRECTORY_ONLY",
+    "package": "PyMuPDF",
+    "version": "1.28.2"
+  },
+  "pinned_environment_reproduced": false,
+  "preceding_full_qc": {
+    "path": "research/2026-10-12-kasugamycin-verification.json",
+    "sha256": "ed575c899a1f0fc76e8c772da848969fa7280f3f320bf3a6fb21eb1621bfe784"
+  },
+  "preceding_full_qc_dependency_deviation": "RDKit 2025.03.6 instead of project pin 2026.3.5; no chemistry/map regeneration",
+  "project_dependency_pins_changed": false,
+  "reason": "Only a research dossier, research report and regression tests changed in this follow-up; all corpus bytes match the preceding full-QC checkpoint.",
+  "records_checked_byte_identical": 2939,
+  "request_caches_checked": 11,
+  "source_adoptions": 0,
+  "source_owned_inputs_and_core_code_unchanged_from_head": true,
+  "status": "RESEARCH_ONLY_CHECKPOINT_VERIFIED_NO_NEW_BIOLOGICAL_CURATION",
+  "supplement_archive_and_member_hashes_checked": true,
+  "tests": [
+    {
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/focused-tests.xml",
+        "sha256": "316999340b409f485cb8d2c1c6b62db0a8032c98c77805c13c8ae3771bfd83af"
+      },
+      "passed": 55,
+      "skipped": 0
+    },
+    {
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/index-tests.xml",
+        "sha256": "362641de57d4ec0f1555f86917374aa137d895498f42a15e5b5270783dead2a2"
+      },
+      "passed": 60,
+      "skipped": 0
+    }
+  ],
+  "total_tests_passed": 115,
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_reviews_completed": 0
+}

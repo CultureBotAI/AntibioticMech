@@ -39,7 +39,7 @@ def test_hdf1_source_reproduction_preserves_all_six_claims():
     fixture = {r["identifier"]: {"identifier": r["identifier"], "chemical_structure": {
         "standard_inchi_key": r["standard_inchi_key"]}, "curation_history": []} for r in rows}
     stats = seed.attach_phibase_resistance(fixture)
-    assert stats["reviewed_identifier_context"] == 185 and stats["matched_associations"] == 217
+    assert stats["reviewed_identifier_context"] == 189 and stats["matched_associations"] == 217
     record = load_record(ROOT / "data/antibiotics/biocide/hydrogen-peroxide.yaml")
     assert fixture["CHEBI:16240"]["resistance_mechanisms"] == record["resistance_mechanisms"]
     assert len(record["resistance_mechanisms"]) == 6

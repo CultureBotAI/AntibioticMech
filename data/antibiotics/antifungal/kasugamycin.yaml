@@ -131,6 +131,140 @@ resistance_mechanisms:
   - reference: ARO:3004628
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3001296 (kasugamycin);
       database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  label: opp loss associated with kasugamycin resistance in laboratory E. coli
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67776
+  alteration: opp::FRT
+  phenotype_label: source-reported experimental resistance to kasugamycin
+  assay: Liquid-broth dilution MIC assay
+  note: MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation
+    supported by a translation-inhibition proxy, not direct drug flux measured in
+    this derivative. Operon deletions are not single-gene or single-protein assignments.
+    No clinical category or derivative genome is assigned.
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 and Table S2 identify the measured genotype; Figure 4A provides
+      separate operon-level uptake-proxy evidence.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
+      unchanged.
+- mechanism_type: REDUCED_PERMEABILITY
+  label: oppA loss associated with kasugamycin resistance in laboratory E. coli
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67774
+  alteration: oppA::FRT
+  phenotype_label: source-reported experimental resistance to kasugamycin
+  assay: Liquid-broth dilution MIC assay
+  note: 'MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation
+    supported by a translation-inhibition proxy, not direct drug flux measured in
+    this derivative. Reference protein context (reference-only): UniProtKB:P23843.
+    No exact experimental protein accession is assigned. No clinical category or derivative
+    genome is assigned.'
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 and Table S2 identify the measured genotype; Figure 4A provides
+      separate operon-level uptake-proxy evidence.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
+      unchanged.
+  gene_families:
+  - oppA
+- mechanism_type: REDUCED_PERMEABILITY
+  label: oppB loss associated with kasugamycin resistance in laboratory E. coli
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67775
+  alteration: oppB::FRT
+  phenotype_label: source-reported experimental resistance to kasugamycin
+  assay: Liquid-broth dilution MIC assay
+  note: 'MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation
+    supported by a translation-inhibition proxy, not direct drug flux measured in
+    this derivative. Reference protein context (reference-only): UniProtKB:P0AFH2.
+    No exact experimental protein accession is assigned. No clinical category or derivative
+    genome is assigned.'
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 and Table S2 identify the measured genotype; Figure 4A provides
+      separate operon-level uptake-proxy evidence.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
+      unchanged.
+  gene_families:
+  - oppB
+- mechanism_type: REDUCED_PERMEABILITY
+  label: opp and dpp loss associated with kasugamycin resistance in laboratory E.
+    coli
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67781
+  alteration: opp::FRT dpp::FRT
+  phenotype_label: source-reported experimental resistance to kasugamycin
+  assay: Liquid-broth dilution MIC assay
+  note: MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation
+    supported by a translation-inhibition proxy, not direct drug flux measured in
+    this derivative. The result belongs to the combined genotype; no component is
+    assigned its full effect. Operon deletions are not single-gene or single-protein
+    assignments. No clinical category or derivative genome is assigned.
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 and Table S2 identify the measured genotype; Figure 4A provides
+      separate operon-level uptake-proxy evidence.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
+      unchanged.
+- mechanism_type: REDUCED_PERMEABILITY
+  label: oppA and dppA loss associated with kasugamycin resistance in laboratory E.
+    coli
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67780
+  alteration: oppA::FRT dppA::FRT
+  phenotype_label: source-reported experimental resistance to kasugamycin
+  assay: Liquid-broth dilution MIC assay
+  note: 'MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation
+    supported by a translation-inhibition proxy, not direct drug flux measured in
+    this derivative. The result belongs to the combined genotype; no component is
+    assigned its full effect. Reference protein context (reference-only): UniProtKB:P23843,
+    UniProtKB:P23847. No exact experimental protein accession is assigned. No clinical
+    category or derivative genome is assigned.'
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 and Table S2 identify the measured genotype; Figure 4A provides
+      separate operon-level uptake-proxy evidence.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
+      unchanged.
+  gene_families:
+  - oppA
+  - dppA
+- mechanism_type: REDUCED_PERMEABILITY
+  label: oppB and dppB loss associated with kasugamycin resistance in laboratory E.
+    coli
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67788
+  alteration: oppB::FRT dppB::FRT
+  phenotype_label: source-reported experimental resistance to kasugamycin
+  assay: Liquid-broth dilution MIC assay
+  note: 'MG1655-derived laboratory subject. Reduced uptake is an operon-level interpretation
+    supported by a translation-inhibition proxy, not direct drug flux measured in
+    this derivative. The result belongs to the combined genotype; no component is
+    assigned its full effect. Reference protein context (reference-only): UniProtKB:P0AFH2,
+    UniProtKB:P0AEF8. No exact experimental protein accession is assigned. No clinical
+    category or derivative genome is assigned.'
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 and Table S2 identify the measured genotype; Figure 4A provides
+      separate operon-level uptake-proxy evidence.
+  - reference: DOI:10.1371/journal.pgen.1006902
+    notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
+      unchanged.
+  gene_families:
+  - oppB
+  - dppB
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -155,3 +289,104 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-12T19:13:54Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added six genotype-specific laboratory resistance claims and seven MIC
+    observations from corrected-paper Table 2. Preserved operon and combined-genotype
+    scope, the measured comparator, all three CARD assertions and prior curation.
+    Normalized ug/mL to mg/L without inferring clinical categories or assigning experimental
+    proteins/genomes.
+  llm_assisted: true
+activity_spectrum:
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG454
+  mic_value: 50.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:kasugamycin:MG1655
+  evidence:
+  - reference: PMID:27355376
+    notes: Table 2 reports 50 ug/mL for MG1655; Table S2 identifies CAG454. Conversion
+      to mg/L is numerically identical. This is the MG1655 laboratory comparator,
+      not a resistance claim. No clinical breakpoint or S/R category is assigned.
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67776
+  mic_value: 100.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:kasugamycin:opp
+  evidence:
+  - reference: PMID:27355376
+    notes: 'Table 2 reports 100 ug/mL for opp; Table S2 identifies CAG67776. Conversion
+      to mg/L is numerically identical. MG1655 comparator: 50 ug/mL. No clinical breakpoint
+      or S/R category is assigned.'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67774
+  mic_value: 100.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:kasugamycin:oppA
+  evidence:
+  - reference: PMID:27355376
+    notes: 'Table 2 reports 100 ug/mL for oppA; Table S2 identifies CAG67774. Conversion
+      to mg/L is numerically identical. MG1655 comparator: 50 ug/mL. No clinical breakpoint
+      or S/R category is assigned.'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67775
+  mic_value: 100.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:kasugamycin:oppB
+  evidence:
+  - reference: PMID:27355376
+    notes: 'Table 2 reports 100 ug/mL for oppB; Table S2 identifies CAG67775. Conversion
+      to mg/L is numerically identical. MG1655 comparator: 50 ug/mL. No clinical breakpoint
+      or S/R category is assigned.'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67781
+  mic_value: 200.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:kasugamycin:opp+dpp
+  evidence:
+  - reference: PMID:27355376
+    notes: 'Table 2 reports 200 ug/mL for opp+dpp; Table S2 identifies CAG67781. Conversion
+      to mg/L is numerically identical. MG1655 comparator: 50 ug/mL. No clinical breakpoint
+      or S/R category is assigned.'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67780
+  mic_value: 200.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:kasugamycin:oppA+dppA
+  evidence:
+  - reference: PMID:27355376
+    notes: 'Table 2 reports 200 ug/mL for oppA+dppA; Table S2 identifies CAG67780.
+      Conversion to mg/L is numerically identical. MG1655 comparator: 50 ug/mL. No
+      clinical breakpoint or S/R category is assigned.'
+- taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: CAG67788
+  mic_value: 200.0
+  mic_units: mg/L
+  assay: Liquid-broth dilution in minimal medium; source endpoint below 10% of normalized
+    no-drug culture density
+  source_observation_id: PMID:27355376:Table2:kasugamycin:oppB+dppB
+  evidence:
+  - reference: PMID:27355376
+    notes: 'Table 2 reports 200 ug/mL for oppB+dppB; Table S2 identifies CAG67788.
+      Conversion to mg/L is numerically identical. MG1655 comparator: 50 ug/mL. No
+      clinical breakpoint or S/R category is assigned.'

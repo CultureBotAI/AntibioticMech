@@ -243,6 +243,34 @@ def assert_pre_pathway_record(row, path, transition, restored):
     assert hashlib.sha256(restored.read_bytes()).hexdigest() == row["sha256"]
 
 
+def assert_pre_ma_checksum_record(path, checkpoint, receipt, restored):
+    """Reverse only the later provenance refresh, then prove the historical bytes."""
+    assert checkpoint["scope_corrections"] == 0
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == checkpoint["after_sha256"]
+    historical = load_record(path)
+    assert historical["identifier"] == checkpoint["identifier"]
+    event = historical["curation_history"].pop()
+    assert event["curator"] == "codex" and event["llm_assisted"] is True
+    assert event["action"] == "REVIEWED_RESISTANCE_REFERENCE_CONTEXT"
+    assert event["changes"] == (
+        "Refreshed the shared PHI-base review checksum after four reference-identifier scope "
+        "corrections; previous decisions, biological fields and activities unchanged."
+    )
+    current, previous = receipt["review_after_sha256"], receipt["review_before_sha256"]
+    changed = 0
+    for claim in historical.get("resistance_mechanisms", []):
+        if claim.get("source") != "PHIBASE":
+            continue
+        for evidence in claim["evidence"]:
+            note = evidence.get("notes", "")
+            if note.startswith("Identifier-scope review:") and note.endswith(f"SHA-256 {current}."):
+                evidence["notes"] = note.removesuffix(f"{current}.") + previous + "."
+                changed += 1
+    assert changed == checkpoint["checksum_refreshes"]
+    write_validated_antibiotic(historical, restored)
+    assert hashlib.sha256(restored.read_bytes()).hexdigest() == checkpoint["before_sha256"]
+
+
 def test_saved_dossier_scope_and_record_pins(tmp_path):
     doc = json.loads(OUTPUT.read_bytes())
     summary = doc["summary"]
@@ -266,8 +294,19 @@ def test_saved_dossier_scope_and_record_pins(tmp_path):
     assert set(transitions) & {row["identifier"] for row in doc["records"]} == {
         "CHEBI:45924", "CHEBI:46081", "CHEBI:9448",
     }
+    receipt = json.loads((ROOT / "research/2026-10-12-ma-reference-curation.json").read_bytes())
+    checkpoints = {row["identifier"]: row for row in receipt["records"]}
+    assert set(checkpoints) & {row["identifier"] for row in doc["records"]} == {
+        "CHEBI:46081", "CHEBI:6076", "CHEBI:64355", "CHEBI:9448", "CHEBI:10023",
+    }
     for row in doc["records"]:
         path = ROOT / row["path"]
+        if row["identifier"] in checkpoints:
+            checkpoint = checkpoints[row["identifier"]]
+            assert checkpoint["path"] == row["path"]
+            restored = tmp_path / ("pre-ma-" + path.name)
+            assert_pre_ma_checksum_record(path, checkpoint, receipt, restored)
+            path = restored
         if row["identifier"] in transitions:
             assert_pre_pathway_record(row, path, transitions[row["identifier"]], tmp_path / path.name)
             continue
@@ -313,6 +352,30 @@ def test_pathway_reconciliation_cannot_hide_other_drift(tmp_path, mutation, repi
         transition["after_sha256"] = hashlib.sha256(changed.read_bytes()).hexdigest()
     with pytest.raises(AssertionError):
         assert_pre_pathway_record(row, changed, transition, tmp_path / "historical.yaml")
+
+
+@pytest.mark.parametrize("mutation", ["label", "history", "resistance", "provenance"])
+@pytest.mark.parametrize("repin", [False, True])
+def test_checksum_reconciliation_cannot_hide_other_drift(tmp_path, mutation, repin):
+    receipt = json.loads((ROOT / "research/2026-10-12-ma-reference-curation.json").read_bytes())
+    checkpoint, = [r for r in receipt["records"] if r["identifier"] == "CHEBI:46081"]
+    current = load_record(ROOT / checkpoint["path"])
+    if mutation == "label":
+        current["label"] += " unexpected change"
+    elif mutation == "history":
+        current["curation_history"][0]["changes"] += " unexpected change"
+    elif mutation == "resistance":
+        current["resistance_mechanisms"][0]["note"] = "unexpected change"
+    else:
+        claim = next(c for c in current["resistance_mechanisms"]
+                     if c.get("source") == "PHIBASE" and len(c["evidence"]) > 1)
+        claim["evidence"][-1]["notes"] += " unexpected change"
+    changed = tmp_path / "changed.yaml"
+    write_validated_antibiotic(current, changed)
+    if repin:
+        checkpoint["after_sha256"] = hashlib.sha256(changed.read_bytes()).hexdigest()
+    with pytest.raises(AssertionError):
+        assert_pre_ma_checksum_record(changed, checkpoint, receipt, tmp_path / "historical.yaml")
 
 
 def test_saved_reference_projection_has_no_orphan_or_experimental_assignment():

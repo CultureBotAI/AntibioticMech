@@ -16,7 +16,7 @@ import phibase_grounding_reviews as review  # noqa: E402
 import seed_from_sources as seed  # noqa: E402
 
 INVENTORY = ROOT / "data/raw/phibase_amr.tsv"
-CURRENT_REVIEWED = 185
+CURRENT_REVIEWED = 189
 FUMIGATUS_REFERENCES = {
     "12543662": "DOI:10.1128/aac.47.2.577-581.2003",
     "12709346": "DOI:10.1128/aac.47.5.1719-1726.2003",
@@ -321,7 +321,13 @@ def test_seeding_preserves_claims_and_unreviewed_identifiers(inputs):
                     assert field not in new
                 assert old[field] in new["note"]
             pmid = old["evidence"][0]["reference"].removeprefix("PMID:")
-            if pmid == "12519188":
+            if pmid == "38374637":
+                assert new["strain"] == old["strain"] == "Scl02-05"
+                assert new["taxon_id"] == old["taxon_id"] == "NCBITaxon:5180"
+                assert "not independently validated" in new["note"]
+                assert "one-to-one source-row/subject crosswalk" in new["note"]
+                reference = "DOI:10.1021/acs.jafc.3c08093.s001"
+            elif pmid == "12519188":
                 assert old["strain"] == "BYP22" and new["strain"] == "BPY22.17"
                 assert new["taxon_label"] == old["taxon_label"] == "Cryptococcus neoformans"
                 assert new["alteration"] == old["alteration"]
@@ -555,7 +561,7 @@ def test_seeding_preserves_claims_and_unreviewed_identifiers(inputs):
         + ["CHEBI:64355"] * 5 + ["CHEBI:3392"] * 4
         + ["CHEBI:16240"] * 3 + ["CHEBI:40909"] * 3 + ["CHEBI:136340"] * 2
         + ["CHEBI:3405"] * 34
-        + ["CHEBI:28909"] * 13 + ["CHEBI:81763"] * 8
+        + ["CHEBI:28909"] * 15 + ["CHEBI:81763"] * 10
         + ["CHEBI:27641", "CHEBI:81760", "CHEBI:8434", "CHEBI:8489"]
         + ["CHEBI:81760"] * 3 + ["CHEBI:8434"] * 2
         + [i for i in ("CHEBI:474180", "CHEBI:55346", "CHEBI:600520") for _ in range(9)]
@@ -608,7 +614,7 @@ def test_new_review_only_refreshes_provenance_for_previous_decisions(inputs, tmp
         + ["CHEBI:9448"] * 3
         + ["CHEBI:3405"] * 34 + ["CHEBI:3392"] * 4
         + ["CHEBI:16240"] * 3 + ["CHEBI:40909"] * 3 + ["CHEBI:136340"] * 2
-        + ["CHEBI:28909"] * 13 + ["CHEBI:81763"] * 8
+        + ["CHEBI:28909"] * 15 + ["CHEBI:81763"] * 10
         + ["CHEBI:27641", "CHEBI:81760", "CHEBI:8434", "CHEBI:8489"]
         + ["CHEBI:81760"] * 3 + ["CHEBI:8434"] * 2
         + [i for i in ("CHEBI:474180", "CHEBI:55346", "CHEBI:600520") for _ in range(9)]
@@ -750,6 +756,11 @@ def test_fungicide_scope_corrections_preserve_other_claims_and_reseed(
             assert claim["strain"] == REN_SUBJECTS[row["strain_label"]]
             assert "protein_accession" not in claim and "strain_taxon_id" not in claim
             assert "Original source background label: " + row["strain_label"] in claim["note"]
+        elif row["pmid"] == "38374637":
+            assert claim["strain"] == row["strain_label"] == "Scl02-05"
+            assert "protein_accession" not in claim and "strain_taxon_id" not in claim
+            assert "not independently validated" in claim["note"]
+            assert "protein_accession=UniProtKB:" + row["protein_accession"] in claim["note"]
         else:
             assert claim["protein_accession"] == "UniProtKB:" + row["protein_accession"]
             assert claim["strain_taxon_id"] == "NCBITaxon:" + row["strain_taxon_id"]

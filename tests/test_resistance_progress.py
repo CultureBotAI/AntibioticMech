@@ -239,8 +239,8 @@ def test_live_offline_export_reproduces_and_preserves_review_boundaries(monkeypa
     assert summary["expanded_distinct_queries"] == 611
     assert summary["card_terms_with_reference_candidates"] == 978
     assert summary["card_terms_without_explicit_reference_link"] == 1024
-    assert summary["phi_identifier_scoped_associations"] == 185
-    assert summary["phi_identifier_review_pending"] == 32
+    assert summary["phi_identifier_scoped_associations"] == 189
+    assert summary["phi_identifier_review_pending"] == 28
     assert summary["hivdb_source_rules"] == 467
     assert {r["whole_record_primary_review"] for r in rows} == {"OPEN"}
     assert descriptor["scope"] == progress.SCOPE

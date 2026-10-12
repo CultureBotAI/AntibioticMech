@@ -1,0 +1,181 @@
+{
+  "adversarial_self_review": {
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/canary.yaml",
+      "sha256": "7a1fb4d516dcc4337524ad052655d47fe2ff98e4dfe0b53f1c3b4c981518fd37"
+    },
+    "checks": {
+      "combined_genotypes": "Three combined genotypes remain combined. No component receives the combination's full effect. Operon labels are not inserted as single-gene families.",
+      "comparator": "CAG454 is a measured MG1655 comparator only, with no resistance claim. No clinical S/R category or derivative genome is inferred.",
+      "compound": "Neutral kasugamycin in corrected Figure 3A agrees with CHEBI:81419. No blasticidin values, salts or commercial products are substituted; physical preparation not independently reidentified.",
+      "measurement": "Original ug/mL values are normalized by factor 1 to mg/L; the study-specific endpoint remains explicit. No standalone dpp MIC is invented from bounded prose.",
+      "mechanism": "Figures 4A/5A use an uptake proxy. Figure 5B permits an indirect effect on OppA peptide affinity and is not promoted to an unqualified direct-binding assertion.",
+      "preservation": "All three inherited CARD assertions and other record fields/history remain unchanged. The source seed reproduces the canary.",
+      "references": "Ten Opp/Dpp UniProt entries remain reference-only. No reference protein, strain TaxID or genome is assigned to a laboratory derivative.",
+      "scope": "No species-wide or pathogen-homology phenotype is inferred. Existing CARD primary review remains open. Observation locators identify the kasugamycin column explicitly.",
+      "subjects": "All seven Table 2 kasugamycin rows crosswalk to the corresponding Table S2 laboratory subjects. Original genotype spelling is retained in alterations."
+    },
+    "decision": "ACCEPT_SIX_GENOTYPES_AND_SEVEN_MIC_ROWS",
+    "review_kind": "SEPARATE_ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+    "unresolved_blocking_findings": [],
+    "whole_record_review_complete": false,
+    "wording_fix": "Polished reference-only note grammar before acceptance; biological scope unchanged."
+  },
+  "all_current_record_hashes_verified": 2939,
+  "all_other_fields_and_history_preserved": true,
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "d803e328fb495a344ad71207b5867f68e9a5126f078d41ab7f18e4c619beaab9"
+    },
+    {
+      "path": "research/2026-10-12-kasugamycin-context.json",
+      "sha256": "ebff90b85a509536f622a6bcdd71dfb1c60d1f4f8b9cb16d65428e1bf37fbead"
+    },
+    {
+      "path": "research/2026-10-12-kasugamycin-curation.json",
+      "sha256": "22f0621162bb0aba961b1be7227814994c25b487cbe24b86ad58ce77df43f032"
+    },
+    {
+      "path": "research/2026-10-12-kasugamycin-reconciliation.json",
+      "sha256": "f2856e596e2cbaf5e42efcdb61d80b8b72f712d07614b236e1c0f50b13e03372"
+    },
+    {
+      "path": "research/2026-10-12-kasugamycin-resistance-grounding.tsv",
+      "sha256": "b0893e65a410d8f76285b22d935d29c6a366e99799fcd9da9bba45d452ec872a"
+    },
+    {
+      "path": "research/2026-10-12-kasugamycin-resistance-progress.json",
+      "sha256": "385f0cf95db6c05f49655b218438ab727b1dbd7b228076217bcde9b4de31d742"
+    },
+    {
+      "path": "research/2026-10-12-kasugamycin-resistance-progress.tsv",
+      "sha256": "f6d1f58eb87c6f284bc21e97a60622fbdafc3996f5585681947355a3d433f174"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "75c735ca9c12ed2be078df1338910bfaf5cce63daeeaa3c63c91c5c02b23f449"
+    },
+    {
+      "path": "tests/test_kasugamycin_curation.py",
+      "sha256": "6b58e5387c423078f71b4e4fc090e0a9f734948778223c8cf2bb8040eae3837f"
+    }
+  ],
+  "claims_added": 6,
+  "date": "2026-10-12",
+  "embedding": {
+    "changed_documents_encoded": 1,
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "fingerprint": "b3db5e80cdb6d7c9",
+    "full_projection_rebuilt": true,
+    "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+    "network_used": false,
+    "publish_receipt": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/embedding-stage/published.json",
+      "sha256": "f8a9e0014e4e3a29506afdc791717dd1a5bf18acf385a0ed207abdf9aa5e10ee"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/embedding-stage/reuse-proof.json",
+      "sha256": "e20ac440d3eff10d5aeb3b402a3feec52d2487e7fddab38ad3ef1623ea8a05a0"
+    },
+    "structure_map_unchanged": true,
+    "unchanged_vector_rows_reused": 2938
+  },
+  "existing_card_assertions_preserved": 3,
+  "experimental_genome_assignments": 0,
+  "experimental_protein_assignments": 0,
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/focused-tests.xml",
+      "sha256": "26c7ff6caa1c1e4ac18031e564efadfd90fc8dd7fa401ca9f139a1f5d260bee9"
+    },
+    "passed": 84,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "full_qc": {
+    "dependency_deviation": "RDKit 2025.03.6 instead of project pin 2026.3.5; no chemistry/map regeneration",
+    "environment": {
+      "numpy": "2.2.6",
+      "python": "3.13.12",
+      "rdkit": "2025.03.6",
+      "scikit_learn": "1.7.2",
+      "umap": "0.5.12"
+    },
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/full-qc-exit.json",
+      "sha256": "854534f92823801a99151fa19db2b01ac8a7e91b1dbfa38d8a2bc31cbf1b65f3"
+    },
+    "exit_code": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/full-tests.xml",
+      "sha256": "668561cad8e1c398ac61d0835b59fdf624d7474b3bf1139e250ec851c5e7477b"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin/full-qc.log",
+      "sha256": "7045bf553fe9323aaabf549986d0e1150d66110483b714a257c80d1a38e2abc4"
+    },
+    "passed": 2958,
+    "pinned_environment_reproduced": false,
+    "project_dependency_pins_changed": false,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4,
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ]
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "live_browser_verification": false,
+  "mic_observations_added": 7,
+  "ncbi_endpoint_requests": 0,
+  "new_reference_requests": 2,
+  "post_apply_review": [
+    "All original source-owned claims retained; only selected laboratory claims and MIC rows added.",
+    "Operon and combined genotypes remain indivisible observations, not single-gene effects.",
+    "Comparator is not a resistance claim; source-observation locators identify the drug column.",
+    "Reference identities remain distinct from experimental subjects.",
+    "Historical receipts remain immutable; headline totals point to the successor census.",
+    "Site/downloads/map checked structurally; no live-browser or independent-review claim."
+  ],
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "reference_response_caches_verified": 6,
+  "rendered_claims_and_caveats_checked": true,
+  "rendered_downloads_match_record": true,
+  "rendered_map_payload_matches_artifact": true,
+  "rendered_map_record_links_verified": 2939,
+  "reused_reference_requests": 4,
+  "scope": "SELECTED_PRIMARY_TABLE_NOT_COMPLETED_CORPUS_RESEARCH",
+  "source_adoptions": 0,
+  "source_asset_pins_verified": 7,
+  "status": "ALL_AUTHORITATIVE_RUNNER_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "tracked_source_inputs_and_code_unchanged": [
+    "src",
+    "curation",
+    "data/raw",
+    "data/activity_collections",
+    "scripts/embed_records.py",
+    "scripts/embed_map.py",
+    "data/embeddings/chemical-structure-map.json",
+    "NEXT_TASKS.md"
+  ],
+  "whole_corpus_primary_review": "OPEN",
+  "whole_record_primary_reviews_completed": 0
+}
