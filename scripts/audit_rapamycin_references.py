@@ -19,6 +19,22 @@ URL = f"https://link.springer.com/content/pdf/{DOI}.pdf"
 QUERY = "gene_exact:TOR1 AND organism_id:559292 AND reviewed:true"
 TARGETS = {"CHEBI:9168": "QFJCIRLUMZQUOT-HPLJOQBZSA-N",
            "CHEBI:68478": "HKVAMNSJSFKALM-GKUWKFKPSA-N"}
+SIROLIMUS_PATH = "data/antibiotics/antibacterial/sirolimus.yaml"
+SIROLIMUS_FIXTURE = "tests/fixtures/sirolimus-before-2026-10-13.yaml"
+
+
+def load_checkpoint_record(root, item):
+    source = item
+    if item["identifier"] == "CHEBI:9168":
+        if item["path"] != SIROLIMUS_PATH:
+            raise ValueError("historical sirolimus record path changed")
+        # Later curation changes the live record, not this checkpoint's input bytes.
+        source = {**item, "path": SIROLIMUS_FIXTURE}
+    record = load_record(reference.check_pin(root, source))
+    if (record["identifier"] != item["identifier"]
+            or record["chemical_structure"]["standard_inchi_key"] != TARGETS[item["identifier"]]):
+        raise ValueError("historical record identity changed")
+    return record
 
 
 def project_protein(entry, gene, taxonomy):
@@ -79,7 +95,7 @@ def build(root, directory):
         raise ValueError("historical corpus census changed")
     records = []
     for item in plan["records"]:
-        record = load_record(reference.check_pin(root, item))
+        record = load_checkpoint_record(root, item)
         row, = [r for r in census if r["identifier"] == item["identifier"]]
         if (record["identifier"] != item["identifier"] or row["record_sha256"] != item["sha256"]
                 or record["chemical_structure"]["standard_inchi_key"] != TARGETS[item["identifier"]]

@@ -41,6 +41,52 @@ def test_historical_record_scope_without_reading_current_records(dossier, monkey
         assert not record["tested_preparation_independently_reidentified"]
 
 
+def test_checkpoint_load_uses_historical_bytes_not_live_record(dossier, tmp_path, monkeypatch):
+    item, = [r for r in dossier["records"] if r["identifier"] == "CHEBI:9168"]
+    original_item = copy.deepcopy(item)
+    fixture = tmp_path / audit.SIROLIMUS_FIXTURE
+    fixture.parent.mkdir(parents=True)
+    fixture.write_bytes((ROOT / audit.SIROLIMUS_FIXTURE).read_bytes())
+    live = tmp_path / item["path"]
+    live.parent.mkdir(parents=True)
+    live.write_text("Not the historical record.\n")
+    original = Path.open
+
+    def guarded(path, *args, **kwargs):
+        assert path != live
+        return original(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", guarded)
+    record = audit.load_checkpoint_record(tmp_path, item)
+    assert record["identifier"] == item["identifier"]
+    assert not record.get("resistance_mechanisms")
+    assert item == original_item
+
+
+@pytest.mark.parametrize("change", ["hash", "fixture", "path", "identity", "structure", "missing"])
+def test_historical_record_binding_rejects_tampering(dossier, tmp_path, change):
+    item = copy.deepcopy(next(r for r in dossier["records"] if r["identifier"] == "CHEBI:9168"))
+    fixture = tmp_path / audit.SIROLIMUS_FIXTURE
+    fixture.parent.mkdir(parents=True)
+    payload = (ROOT / audit.SIROLIMUS_FIXTURE).read_bytes()
+    if change == "fixture":
+        payload += b"\n"
+    elif change == "identity":
+        payload = payload.replace(b"identifier: CHEBI:9168", b"identifier: CHEBI:68478")
+        item["sha256"] = hashlib.sha256(payload).hexdigest()
+    elif change == "structure":
+        payload = payload.replace(audit.TARGETS["CHEBI:9168"].encode(), audit.TARGETS["CHEBI:68478"].encode())
+        item["sha256"] = hashlib.sha256(payload).hexdigest()
+    elif change == "hash":
+        item["sha256"] = "0" * 64
+    elif change == "path":
+        item["path"] = "data/antibiotics/antibacterial/other.yaml"
+    if change != "missing":
+        fixture.write_bytes(payload)
+    with pytest.raises((ValueError, FileNotFoundError)):
+        audit.load_checkpoint_record(tmp_path, item)
+
+
 @pytest.mark.parametrize("key,accession,version,sequence_version,locus,sgd", [
     ("tor1", "P35169", 229, 3, "YJR066W", "S000003827"),
     ("fpr1", "P20081", 220, 2, "YNL135C", "S000005079"),
