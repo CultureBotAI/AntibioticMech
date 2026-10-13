@@ -185,3 +185,75 @@ def test_primary_scope_and_public_payload(dossier):
     for forbidden in ("x-goog-signature", "x-goog-credential", '"sequence":', '"alteration":',
                       '"construct":', '"protocol":', '"mic_value":'):
         assert forbidden not in serialized
+
+
+@pytest.fixture
+def inspection(dossier):
+    return {"manual_primary_review": copy.deepcopy(dossier["primary"]["manual_review"]),
+            "renders": copy.deepcopy(dossier["primary"]["renders"])}
+
+
+@pytest.mark.parametrize("field", [
+    "selected_results_and_discussion_reviewed", "figure2_and_figure4_visually_inspected",
+    "table_s1_is_coverage_not_strain_catalog", "table_s5_selected_rows_cross_checked_against_ooxml",
+])
+@pytest.mark.parametrize("value", [False, None, 1, "true"])
+def test_primary_review_attestations_fail_closed(inspection, field, value):
+    inspection["manual_primary_review"][field] = value
+    with pytest.raises(ValueError, match="primary review"):
+        audit.validate_primary_inspection(inspection)
+
+
+@pytest.mark.parametrize("mutation", [
+    "no_manual_review", "missing_attestation", "whole_paper", "exported_detail", "figure1",
+    "no_layout_limit", "no_renders", "missing_table", "extra_table", "missing_page",
+    "extra_page", "duplicate_page", "duplicate_page_hash", "missing_pdf", "unreviewed_pages", "truthy_pages",
+])
+def test_primary_inspection_inventory_fail_closed(inspection, mutation):
+    manual, renders = inspection["manual_primary_review"], inspection["renders"]
+    if mutation == "no_manual_review":
+        del inspection["manual_primary_review"]
+    elif mutation == "missing_attestation":
+        del manual["selected_results_and_discussion_reviewed"]
+    elif mutation == "whole_paper":
+        manual["whole_article_review_complete"] = True
+    elif mutation == "exported_detail":
+        manual["sequence_variant_construct_protocol_or_numeric_ast_exported"] = True
+    elif mutation == "figure1":
+        manual["figure1_control_description"] = "NATIVE_FIGURE_REVIEWED"
+    elif mutation == "no_layout_limit":
+        manual["source_layout_limit"] = ""
+    elif mutation == "no_renders":
+        renders.clear()
+    elif mutation == "missing_table":
+        del renders["table-s1"]
+    elif mutation == "extra_table":
+        renders["other"] = renders["table-s1"]
+    elif mutation == "missing_page":
+        renders["table-s5"]["pages"].pop()
+    elif mutation == "extra_page":
+        renders["table-s5"]["pages"].append(renders["table-s1"]["pages"][0])
+    elif mutation == "duplicate_page":
+        renders["table-s5"]["pages"][1] = renders["table-s5"]["pages"][0]
+    elif mutation == "duplicate_page_hash":
+        renders["table-s5"]["pages"][1]["sha256"] = renders["table-s5"]["pages"][0]["sha256"]
+    elif mutation == "missing_pdf":
+        del renders["table-s5"]["pdf"]
+    else:
+        renders["table-s5"]["all_pages_visually_inspected"] = (
+            False if mutation == "unreviewed_pages" else 1)
+    with pytest.raises(ValueError, match="primary review"):
+        audit.validate_primary_inspection(inspection)
+
+
+def test_primary_inspection_accepts_existing_checkpoint(inspection):
+    audit.validate_primary_inspection(inspection)
+
+
+def test_builder_rejects_unreviewed_primary_before_reading_evidence(tmp_path, inspection):
+    inspection["manual_primary_review"]["selected_results_and_discussion_reviewed"] = False
+    inspection["renders"] = {}
+    (tmp_path / "cohort.json").write_text("{}")
+    (tmp_path / "inspection.json").write_text(json.dumps(inspection))
+    with pytest.raises(ValueError, match="primary review"):
+        audit.build(tmp_path, tmp_path)

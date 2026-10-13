@@ -26,6 +26,38 @@ SUBJECTS = {"Sc-G-12": ("ScLC1539", "S. cerevisiae", "hsc82"),
             "Sc-G-14": ("ScLC1541", "S. cerevisiae", "hsc82"),
             "Ca-G-10": ("CaLC1486", "C. albicans", "ca-hsp90")}
 ASSETS = {"figure2": "g002", "figure4": "g004", "table-s1": "s003", "table-s5": "s007"}
+RENDER_PAGE_COUNTS = {"table-s1": 1, "table-s5": 4}
+
+
+def validate_primary_inspection(inspection):
+    """Require review attestations; byte checks cannot establish that sources were read."""
+    manual = inspection.get("manual_primary_review", {})
+    required = ("selected_results_and_discussion_reviewed", "figure2_and_figure4_visually_inspected",
+                "table_s1_is_coverage_not_strain_catalog",
+                "table_s5_selected_rows_cross_checked_against_ooxml")
+    if (any(manual.get(field) is not True for field in required)
+            or manual.get("whole_article_review_complete") is not False
+            or manual.get("sequence_variant_construct_protocol_or_numeric_ast_exported") is not False
+            or manual.get("figure1_control_description") != "CAPTION_REVIEWED_NATIVE_FIGURE_NOT_RETRIEVED"
+            or not isinstance(manual.get("source_layout_limit"), str)
+            or not manual["source_layout_limit"].strip()):
+        raise ValueError("primary review attestations or scope changed")
+    renders = inspection.get("renders", {})
+    if set(renders) != set(RENDER_PAGE_COUNTS):
+        raise ValueError("primary review rendering inventory changed")
+    seen_paths, seen_hashes = set(), set()
+    for key, count in RENDER_PAGE_COUNTS.items():
+        rendering = renders[key]
+        pages = rendering.get("pages", [])
+        if (rendering.get("all_pages_visually_inspected") is not True
+                or len(pages) != count or not rendering.get("pdf")):
+            raise ValueError("primary review rendering coverage changed")
+        for pin in (rendering["pdf"], *pages):
+            path, checksum = pin.get("path"), pin.get("sha256")
+            if not path or path in seen_paths or not checksum or checksum in seen_hashes:
+                raise ValueError("primary review rendering pin missing or duplicated")
+            seen_paths.add(path)
+            seen_hashes.add(checksum)
 
 
 def read_table(path):
@@ -123,6 +155,7 @@ def project_asset(root, key, pins):
 def build(root, directory):
     plan_path, inspection_path = directory / "cohort.json", directory / "inspection.json"
     plan, inspection = [json.loads(p.read_bytes()) for p in (plan_path, inspection_path)]
+    validate_primary_inspection(inspection)
     if (plan["fields"] != reference.FIELDS
             or set(plan["queries"]) != set(QUERIES) | {"hsp90-2009", "hsp90-2011"}
             or any(plan["queries"][k] != q for k, q in QUERIES.items())):
