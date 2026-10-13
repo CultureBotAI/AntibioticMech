@@ -1,0 +1,123 @@
+{
+  "adversarial_self_review": [
+    "The CNA1 alias belongs to two CGD reference features, not one unambiguous symbol.",
+    "CMP1 is selected through source context and exact CGD locus evidence, not a first-hit rule.",
+    "LCB1 legacy-name zero hits do not imply absence; a source-pinned locus query resolves the reference.",
+    "Q5A325 has no returned primary gene name; LCB1 was not inserted into that field.",
+    "Both Candida references are unreviewed and are not exact experimental haplotypes or alleles.",
+    "Source strain TaxIDs remain reference context, separate from tested laboratory IDs.",
+    "Figure 5C uses miconazole, not the fluconazole used in the lineage comparison.",
+    "CNB1 pathway dependency is not labeled as an identified evolved resistance allele.",
+    "CNA1 dependency is not independent sufficiency or a separate cyclosporin-A allele test.",
+    "LCB1-associated pharmacology and differing controls are not allele-specific genetic validation.",
+    "Myriocin modifier effects are not direct myriocin resistance measurements.",
+    "Copy-number associations are not assigned to a single causative amplified gene.",
+    "WGS table membership and archive metadata do not establish experimental assemblies.",
+    "Corpus structures are checked without claiming independent identification of tested preparations.",
+    "New tests do not require ignored caches or freeze live biological-record bytes.",
+    "Manual inspection attestations are required but replay does not establish scientific truth.",
+    "Same-agent review, not independent signoff, whole-paper review or whole-record completion."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "777c6a459ab48e7ad15736472bc24aa1f2d1eaef40bec647296952dc8897abb8"
+    },
+    {
+      "path": "research/2026-10-13-calcineurin-context.json",
+      "sha256": "471e1dd974e52a20330e2e17c90d4c4330e5a47d56f8d714993dc40bf166b48b"
+    },
+    {
+      "path": "scripts/audit_calcineurin_context.py",
+      "sha256": "aed0915bcc60766c34b94332d145d1251f1e5fe993a61f17e8423e12ce7b609c"
+    },
+    {
+      "path": "tests/test_calcineurin_context.py",
+      "sha256": "c8b3fb68a3b8a5e6fb704741a242a8ab55dea99144e81c97600f03fac4260490"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-calcineurin/protected-before.json",
+    "sha256": "ec126c3b445befdd5d9ace6a0952fa069b50b039fdd88ffb7f2b4cac43f149c4"
+  },
+  "baseline_files_checked": 7140,
+  "date": "2026-10-13",
+  "exact_experimental_alleles_assigned": 0,
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_this_checkpoint": 0,
+  "ignored_files_included_in_protected_trees": true,
+  "issue_1040": "DEFERRED",
+  "metadata_source_bytes_and_dossier_replayed_offline_with_network_disabled": true,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_archive_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-calcineurin-context.json",
+    "scripts/audit_calcineurin_context.py",
+    "tests/test_calcineurin_context.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "new_native_figures_visually_inspected": 3,
+  "new_supplement_renders": 0,
+  "new_taxonomy_requests": 0,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "previous_goal_turn_classification": "PROGRESS",
+  "previous_uncommitted_checkpoint_preserved": true,
+  "primary_assets_reused": 3,
+  "progress_ledger_check_passed": true,
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "reuse_terms_review_resumed": false,
+  "scientific_interpretation_automatically_revalidated": false,
+  "source_adoptions": 0,
+  "source_layout_limit_retained": "Several nonselected Table S5 rows have crowded columns in the unchanged source rendering. Selected lineage IDs are legible and independently checked against OOXML.",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "experimental_alleles_assigned": 0,
+    "new_native_figures_inspected": 3,
+    "new_taxonomy_queries": 0,
+    "new_uniprot_queries": 5,
+    "reference_proteins": 4,
+    "reviewed_references": 2,
+    "selected_records": 7,
+    "source_lineages": 8,
+    "successful_zero_hit_queries": 1,
+    "unreviewed_references": 2,
+    "whole_records_completed": 0
+  },
+  "test_results": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_calcineurin_context.py",
+      "tests/test_yeast_regulator_context.py",
+      "tests/test_hsp90_context.py",
+      "tests/test_reference_canary_binding.py",
+      "tests/test_myriocin_references.py",
+      "tests/test_vatpase_reference_context.py",
+      "tests/test_tubercidin_curation.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_resistance_grounding_audit.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_record_review_contract.py",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-calcineurin/checkpoint-tests.xml"
+    ],
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-calcineurin/checkpoint-tests.xml",
+      "sha256": "74c51d78224b9d0f198b0323c29d6fe6a08b225b7d262e3841f37220a7fa6f85"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-calcineurin/checkpoint-tests.log",
+      "sha256": "0066fd05369bafad6ad27a21f6844e9f12de7573e5daa2337170f392999bf91e"
+    },
+    "new_tests_run_without_inherited_pythonpath": true,
+    "passed": 348,
+    "skipped": 0
+  }
+}

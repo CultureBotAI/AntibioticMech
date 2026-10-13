@@ -1,0 +1,120 @@
+{
+  "adversarial_self_review": [
+    "Combination phenotypes are not unconditional single-drug resistance assertions.",
+    "Functional phenocopy is not an independent direct test of the exact source allele.",
+    "Expression context and negative cross-resistance comparisons remain explicit.",
+    "A proposed efflux explanation is not presented as directly measured in this comparison.",
+    "Reference protein reuse does not transfer an earlier compound phenotype.",
+    "Reference-strain TaxIDs do not identify evolved experimental lineages.",
+    "Matching experiment titles do not resolve their conflicting shared sample label.",
+    "ScLC10 is not inferred to be the parent of Sc-F-1 from archive metadata.",
+    "Both experiments identify ScLC1367; the second is not assigned to Sc-G-13.",
+    "Eleven sequencing runs do not establish eleven independent biological replicates.",
+    "Study and submission snapshots agree here but their identifier roles remain distinct.",
+    "Query-plan fields and source bindings are checked, not only actual request URLs.",
+    "Identical canary bodies from different queries cannot substitute for request-specific receipts.",
+    "The Sc-G-13 archive gap is bounded to inspected metadata, not asserted globally.",
+    "Historical tests do not freeze live records or require ignored source caches.",
+    "Same-agent review, not independent scientific signoff or whole-record completion."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "73805989a2462d6152d9c70cbd9b8bc51563d81ca71834a6a2a401bf11ed50c0"
+    },
+    {
+      "path": "research/2026-10-13-yeast-regulator-context.json",
+      "sha256": "b0623eaeb0082c8cca2267299ce76b194756865099721227f39bdb014eb664a1"
+    },
+    {
+      "path": "scripts/audit_yeast_regulator_context.py",
+      "sha256": "149ae2e5f63529fc4a2b7279580b378e57b9ce855fbeddc58fa56d14a037123a"
+    },
+    {
+      "path": "tests/test_yeast_regulator_context.py",
+      "sha256": "55804153393a993b57a64d02ffe731d0555000338036f84c378850a7d3405562"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/protected-before.json",
+    "sha256": "f44c2574fc94d8cda7e793757633c152a80d75becf55a657615242f99d792bf8"
+  },
+  "baseline_files_checked": 7136,
+  "date": "2026-10-13",
+  "exact_experimental_alleles_assigned": 0,
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_this_checkpoint": 0,
+  "ignored_files_included_in_protected_trees": true,
+  "issue_1040": "DEFERRED",
+  "metadata_source_bytes_and_dossier_replayed_offline_with_network_disabled": true,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-yeast-regulator-context.json",
+    "scripts/audit_yeast_regulator_context.py",
+    "tests/test_yeast_regulator_context.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "new_native_figures_visually_inspected": 1,
+  "new_supplement_renders": 0,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "primary_assets_reused": 3,
+  "progress_ledger_check_passed": true,
+  "qualified_experiment_links": 2,
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "reuse_terms_review_resumed": false,
+  "scientific_interpretation_automatically_revalidated": false,
+  "source_adoptions": 0,
+  "source_layout_limit_retained": "Several nonselected Table S5 rows have crowded columns in the unchanged source rendering. Selected lineage IDs are legible and independently checked against OOXML.",
+  "summary": {
+    "assembly_accessions_assigned": 0,
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "ena_metadata_requests": 9,
+    "experimental_alleles_assigned": 0,
+    "lineages_with_experiment_title_matches": 1,
+    "new_taxonomy_queries": 0,
+    "new_uniprot_queries": 1,
+    "reference_proteins": 2,
+    "reused_uniprot_queries": 1,
+    "sample_annotation_conflicts": 1,
+    "selected_records": 4,
+    "source_lineages": 2,
+    "whole_records_completed": 0
+  },
+  "test_results": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_yeast_regulator_context.py",
+      "tests/test_hsp90_context.py",
+      "tests/test_reference_canary_binding.py",
+      "tests/test_myriocin_references.py",
+      "tests/test_vatpase_reference_context.py",
+      "tests/test_tubercidin_curation.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_resistance_grounding_audit.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_record_review_contract.py",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-yeast-regulators/checkpoint-tests.xml"
+    ],
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/checkpoint-tests.xml",
+      "sha256": "6cd05f3b195ecdff9de8482e915cdebc62a8ba7021f5d21c6239cd250d533cf2"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/checkpoint-tests.log",
+      "sha256": "1d7e98a61c93a26c1836f39dc9137b29c3f220e229786be5b2cda1eda6d0bd9d"
+    },
+    "new_tests_run_without_inherited_pythonpath": true,
+    "passed": 273,
+    "skipped": 0
+  },
+  "unqualified_sample_or_genome_assignments": 0
+}

@@ -44,17 +44,22 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,877 resistance assertions across 317
-records**, including **122 curator-authored claims across 50 records**. There
-are still 2,609 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,879 resistance assertions across 318
+records**, including **124 curator-authored claims across 51 records**. There
+are still 2,608 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-13-tubercidin-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-13-fpr1-primary-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-13-tubercidin-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-13-fpr1-primary-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
+
+The [FPR1/TOR2 primary checkpoint](2026-10-13-fpr1-primary-context.json) adds two
+qualified laboratory rapamycin associations to sirolimus. Native growth figures
+and the strain table support the limited claims; versioned UniProt proteins
+remain reference identities, not exact experimental alleles or genomes.
 
 The [tubercidin checkpoint](2026-10-13-tubercidin-context.json) adds two qualified
 laboratory associations in Leishmania major. Unreviewed UniProt entries are
@@ -66,6 +71,18 @@ three source lineages and three UniProt references from unconditional resistance
 to geldanamycin or radicicol. Source archive and alignment-reference labels are
 not experimental genome assignments; no biological record changes in this pass.
 
+The [yeast-regulator follow-up](2026-10-13-yeast-regulator-context.json) adds
+PDR1 and MOT3 reference grounding and conditional primary-evidence assessments.
+Two ENA experiments name Sc-F-1's laboratory identifier, but their shared sample
+names a different isolate. That conflict remains unresolved; no exact allele,
+unqualified sample or genome assignment is curated.
+
+The [calcineurin-context follow-up](2026-10-13-calcineurin-context.json) adds
+FPR1/CNB1 and Candida CMP1/LCB1-associated reference mappings, resolving a
+`CNA1` alias collision and a zero-hit legacy-name search. Native figures show
+that one FPR1 functional comparison uses miconazole, not fluconazole. Functional
+comparisons, pathway dependency and pharmacological support remain distinct.
+
 The [blasticidin deaminase follow-up](2026-10-13-blasticidin-deaminase-context.json)
 adds two qualified bsr-associated contexts, separating the native donor isolate
 from the laboratory host. UniProt remains a donor reference, not an exact
@@ -76,6 +93,12 @@ complements the earlier 59-term citation cohort with its 965-term remainder.
 It retains 44 reference candidates across 37 terms, with reference taxonomy
 checked through UniProt. These are citation/name matches, not experimental
 allele or phenotype assignments; biological counts above remain unchanged.
+
+The [combined study-context follow-up](2026-10-13-card-study-context.json)
+now binds 76 candidates from both literature cohorts to their own citation
+and strain annotations across 49 CARD terms and 63 records. It flags differing
+reference/study strain labels and a susceptibility-related citation without
+promoting database annotations to experimental identities or phenotypes.
 
 The [book-citation successor](2026-10-13-card-book-citations.json) checks all
 2,002 CARD terms and recovers ISBN references for 36 of them. Fourteen of the
@@ -8802,6 +8825,268 @@ The broader goal and every whole-record review remain open. The audit replays
 metadata, source pins and selected identifier joins, not scientific truth.
 No NCBI requests, outreach, source adoption, GitHub mutation or reuse-terms work
 occurred in this checkpoint; #1040 remains deferred.
+
+## Yeast Regulators and Conflicting Archive Labels (2026-10-13)
+
+The [regulator dossier](2026-10-13-yeast-regulator-context.json) follows the
+PDR1 and MOT3 leads in [Hill et al. (2013)](https://doi.org/10.1371/journal.pgen.1003390).
+The selected whole-genome-sequencing Results subsection, Figure 6 caption and
+native Figure 6 were inspected. Tables S1 and S5 were reused with selected
+identifiers checked against their OOXML. The earlier rendering caveat for
+nonselected crowded strain-table rows remains; this is not whole-paper review.
+Complete geldanamycin, radicicol, cyclosporin A and tacrolimus records were read
+through the collection-aware loader before interpretation. Their existing
+clinical and CARD assertions are unchanged, not independently confirmed here.
+
+| Source lineage | Gene reference | Supported scope and limitation |
+| --- | --- | --- |
+| Sc-F-1 / ScLC1367 | MOT3, UniProtKB:P54785; SGD:S000004674; YMR070W | Functional phenocopy supports a gene-level interpretation in the tacrolimus-plus-fluconazole context, not an independent direct test of the exact source allele. Cyclosporin-A-combination cross-resistance is a lineage finding, not a separate allele-specific test. |
+| Sc-G-13 / ScLC1540 | PDR1, UniProtKB:P12383; SGD:S000002981; YGL013C | Functional comparison supports a contribution to the geldanamycin-plus-fluconazole response, retaining expression-context and residual-response caveats. The reported comparisons do not show increased cross-resistance to the radicicol or tacrolimus combinations. The PDR5 efflux explanation is proposed, not directly measured in this comparison. |
+
+UniProt release 2026_03 supplies MOT3 entry version 192, sequence version 1,
+and the reused PDR1 entry version 208, sequence version 2. PDR1 reuse is identity
+only, not transfer of its earlier compound context. Both are S288c reference
+proteins, with reference-strain NCBITaxon:559292 and species NCBITaxon:4932
+verified through the previously retrieved UniProt taxonomy response. They are
+not assigned as the exact experimental proteins or resistance alleles. No new
+taxonomy query was needed. Missing focal-paper citations in those reference
+bibliographies do not negate separately inspected primary results.
+
+Both source lineages occur in Table S1's eight-lineage WGS coverage set, and
+Table S5 supplies the laboratory-ID crosswalk. The paper's SRA065341 was queried
+as a submission identifier using documented ENA fields, then its explicit
+PRJNA186947 / SRP018095 study link was followed. The two complete metadata
+queries contain the same 11 runs, two experiments and one shared sample.
+Native ENA experiment and sample XML provide the more precise interpretation:
+
+- SRX220258 is labeled ScLC1367, and SRX220314 is labeled ScLC1367_long; both
+  titles explicitly identify ScLC1367. This supports qualified experiment-level
+  links to Sc-F-1, not two independent biological subjects or 11 replicates.
+- Both point to SRS387829 / SAMN01893852, whose native sample metadata explicitly
+  names isolate ScLC10. This conflicts with the experiment labels. No shared
+  sample is assigned unconditionally to Sc-F-1, and ScLC10 is not inferred to
+  be its parent. The earlier query-plan wording about an ancestral label records
+  an intermediate interpretation, not the final subject assignment.
+- No Sc-G-13 / ScLC1540 experiment match was found in these inspected study and
+  experiment snapshots. That bounded gap does not establish absence of data
+  elsewhere. Run, experiment, sample and project accessions are not assemblies;
+  no assembly search or sequence download was performed.
+
+All findings remain conditional on the tested laboratory backgrounds and
+fluconazole co-exposure. No unconditional single-agent, species-wide, clinical
+or numeric AST assertion was added. Other genes in this paper still need their
+own primary and native-figure assessment. All 2,939 biological records and the
+current coverage ledger are unchanged; zero whole-record reviews are complete.
+
+The [offline audit](../scripts/audit_yeast_regulator_context.py) validates request
+identity, field definitions, query-plan and canary bindings, checksums and
+identifier joins. Its [regression tests](../tests/test_yeast_regulator_context.py)
+use public historical artifacts and synthetic source responses, not ignored
+network caches or current biological-record bytes. The
+[verification receipt](2026-10-13-yeast-regulator-verification.json) records the
+executed checks and preservation audit. Replay does not independently validate
+the scientific interpretation. This checkpoint made no NCBI request, contact,
+GitHub mutation, source adoption or resumed reuse-terms review; #1040 stays
+deferred and the corpus-wide goal stays open.
+
+## Calcineurin Context and Locus Aliases (2026-10-13)
+
+The [dossier](2026-10-13-calcineurin-context.json) continues the selected
+[Hill et al. (2013)](https://doi.org/10.1371/journal.pgen.1003390) primary review
+with native Figures 5, 7 and 8, their captions, the corresponding Results
+subsections and the assay paragraph's compound identities. Source Tables S1 and
+S5 were reused, with selected laboratory IDs checked against their OOXML.
+The earlier caveat about crowded nonselected rows remains. Seven existing
+compound records were loaded with collection expansion; their existing claims
+are preserved, not newly confirmed by this paper. Corpus structures are pinned,
+but the tested preparations and chemical forms were not independently reidentified.
+
+| Source context | Versioned reference | Scope |
+| --- | --- | --- |
+| S. cerevisiae FPR1 | UniProtKB:P20081; entry 220, sequence 2; SGD:S000005079; YNL135C | Reviewed reference protein, not either evolved experimental allele. |
+| S. cerevisiae CNB1 | UniProtKB:P25296; entry 211, sequence 3; SGD:S000001673; YKL190W | Reviewed reference for the pathway-dependency comparison, not an identified evolved resistance allele. |
+| C. albicans source CNA1, reference CMP1 | UniProtKB:A0A1D8PCA8; entry 44, sequence 1; CGD:CAL0000201614 | Unreviewed reference; exact CGD locus annotation links orf19.13454 to the reference feature containing the source alias. |
+| C. albicans LCB1-associated orf19.6438 | UniProtKB:Q5A325; entry 121, sequence 1; CGD:CAL0000192873 | Unreviewed, unnamed reference-gene block. The explicit locus alias orf19.13796 resolves the mapping; no primary gene name was invented. |
+
+All UniProt responses are release 2026_03. Reused taxonomy distinguishes
+reference strains NCBITaxon:559292 and NCBITaxon:237561 from species
+NCBITaxon:4932 and NCBITaxon:5476. The cached CGD release A22-s08-m01-r37
+lists `CNA1` as an alias of both CMP1 and PDE1. The paper's calcineurin
+description, CGD's reference-function distinction and the exact UniProt
+CGD/locus evidence support CMP1 for this reference context, not the PDE1
+homonym. No experimentally tested haplotype or allele is inferred from the
+CGD feature's paired aliases. CGD's LCB1-related annotation remains orthology
+context, not new biochemical validation in Candida.
+
+The first LCB1/legacy-locus query returned HTTP 200 with zero results. A distinct,
+planned query using the explicit CGD alias orf19.13796 returned Q5A325. This is
+a resolved name-index gap, not absence of the protein and not a retry of a failed
+request. Five complete UniProt queries were made; taxonomy and CGD were reused.
+
+The primary findings retain their different strengths and compound contexts:
+
+- Sc-F-2 / ScLC1441 and Sc-F-3 / ScLC1443 have FPR1 functional-comparison
+  support. Figure 5C's Sc-F-3 comparison uses miconazole with tacrolimus;
+  the lineage profiles and the Sc-F-2 functional comparison use fluconazole.
+  They must not be flattened into two identical fluconazole-specific allele
+  tests. Expression context remains a caveat, and altered binding is a proposed
+  explanation rather than a direct binding measurement in these comparisons.
+- The CNB1 comparisons retain pathway dependence. The reported negative
+  geldanamycin/cyclosporin-A cross-comparisons are scoped to the tested
+  combinations; they are not clinical susceptibility categories.
+- Ca-F-9 / CaLC1503 has CNA1-related functional-dependency support in its
+  evolved background. Figure 7B shows the tacrolimus/fluconazole comparison,
+  not a separate cyclosporin-A allele test or independent proof of sufficiency.
+- Ca-F-8 / CaLC1374 has an LCB1-associated candidate with pharmacological
+  support, not allele-specific genetic validation. Figure 7C's ancestral
+  response differs, while Ca-F-9 retains resistance in that comparison.
+  Myriocin is a modifier here, not an established direct resistance phenotype.
+- Ca-F-4 through Ca-F-7 have copy-number associations in Figure 8. These do
+  not establish which amplified gene causes the combination phenotype.
+
+Table S5 identifies all eight lineages. The six Candida lineages occur in
+Table S1's WGS coverage set; Sc-F-2 and Sc-F-3 do not. The previous ENA study
+and native-experiment snapshots identify ScLC1367, not any of these eight
+laboratory IDs. No new archive request, sequence download, sample assignment or
+assembly assignment was made. This is a bounded metadata gap, not evidence
+that genomes do not exist elsewhere.
+
+The [offline audit](../scripts/audit_calcineurin_context.py) and
+[regression tests](../tests/test_calcineurin_context.py) preserve alias,
+review-status, locus-evidence, species, panel and evidence-strength boundaries.
+The [verification receipt](2026-10-13-calcineurin-verification.json) records
+the executed checks and the ignored-file-inclusive preservation audit. All
+2,939 biological records and earlier snapshots are unchanged. No unconditional
+single-agent or exact experimental-allele assertion was added. Other source
+variants, supplements and record-level evidence remain open; this is neither
+whole-paper nor whole-record completion. No NCBI request/contact, GitHub
+mutation, source adoption or reuse-terms review occurred; #1040 stays deferred.
+
+## Rapamycin Reference Grounding and Primary Hold (2026-10-13)
+
+The [dossier](2026-10-13-rapamycin-references.json) covers sirolimus
+(CHEBI:9168, including its rapamycin synonym) and everolimus (CHEBI:68478).
+Both complete collection-aware records were read and their different structures
+pinned; neither has a resistance mechanism asserted in this snapshot. Their
+FDA status rows are not microbial susceptibility evidence.
+
+One sequence-free UniProt query resolves reviewed yeast **TOR1 / DRR1** to
+[UniProtKB:P35169](https://www.uniprot.org/uniprotkb/P35169/entry), entry 229,
+sequence version 3, locus YJR066W and SGD:S000003827. The existing FPR1 reference,
+UniProtKB:P20081 (entry 220, sequence version 2), is reused for identity only.
+Both use UniProt release 2026_03. Cached UniProt taxonomy distinguishes the
+S288c reference strain NCBITaxon:559292 from species NCBITaxon:4932. No new
+taxonomy request was made, and neither reference is assigned to an experimental
+allele or subject. A resistance-related protein name is not phenotype evidence.
+
+The 2017 [Lee et al. study](https://doi.org/10.1007/s11357-017-9988-4) was selected
+as a primary-review lead. Its publisher PDF endpoint returned HTTP 303 to
+`idp.springer.com/authorize` with an empty response body. The authorization
+redirect was not followed, and no alternate route was attempted. Search snippets
+remain discovery material: no full text, figures, supplements, compound-specific
+phenotype or experimental identifier was verified. This local access hold is
+not a claim that the article is unavailable everywhere. The paper is absent
+from the returned TOR1 and reused FPR1 bibliographies; that does not refute it.
+
+No phenotype from the earlier FPR1 combination study was transferred to these
+records. Curation remains on hold pending primary evidence; no MIC, clinical
+resistance category, exact allele or genome assignment was added. TOR2 was not
+queried. The [offline audit](../scripts/audit_rapamycin_references.py),
+[regression tests](../tests/test_rapamycin_references.py) and
+[verification receipt](2026-10-13-rapamycin-verification.json) retain these
+boundaries. All 2,939 biological records remain unchanged, with no new whole-record
+completion. NCBI contact, #1040 and reuse-terms review remain deferred; no GitHub
+mutation or source adoption occurred. The corpus-wide investigation stays open.
+
+## FPR1 and TOR2 Primary Comparisons (2026-10-13)
+
+The [dossier](2026-10-13-fpr1-primary-context.json) reviews selected Results,
+native Figures 5 and 6 and their captions in
+[Kasahara et al. (2020)](https://doi.org/10.1371/journal.pgen.1008865).
+S1 Table was inspected through its structured workbook cells, not a visual
+render. This independent paper does not remove the earlier Springer access hold.
+
+Two [qualified associations](2026-10-13-fpr1-primary-curation.json) are curated
+on sirolimus (CHEBI:9168, source name rapamycin): FPR1-associated comparisons
+in YKK207 laboratory derivatives and TOR2-associated comparisons in YKK1081
+laboratory derivatives. They are qualitative growth observations, not MICs,
+clinical categories or species-wide resistance. Different FPR1 perturbations,
+heterologous-protein comparisons and poor drug-free growth in other backgrounds
+are kept distinct. Binding explanations are not direct measurements in these
+growth panels. The source's older-paper numbering caveat is retained without
+translating residue labels. No finding is transferred to everolimus.
+
+FPR1 reuses reviewed UniProtKB:P20081 (entry 220, sequence version 2).
+New TOR2 grounding resolves reviewed
+[UniProtKB:P32600](https://www.uniprot.org/uniprotkb/P32600/entry), entry 214,
+sequence version 3, YKL203C and SGD:S000001686. Both use release 2026_03 and
+the reused S288c reference taxonomy, NCBITaxon:559292 under species
+NCBITaxon:4932. Only the species is assigned to the laboratory claims; neither
+reference protein nor strain TaxID is an exact experimental allele or subject.
+
+The source's DRA007139 and DRA008879 accessions describe RNA-seq and ChIP-seq,
+not genome assemblies. No sample/genome join or new archive request is claimed.
+The [regression tests](../tests/test_fpr1_primary_curation.py) replay the
+validated-writer transition from an immutable fixture and preserve caveats in
+rendered pages. The [verification receipt](2026-10-13-fpr1-primary-verification.json)
+records the executed QC and genuine embedding/projection refresh. All other
+2,938 biological records and prior evidence are preserved. This is selected
+primary curation, not whole-paper or whole-record completion. NCBI requests,
+#1040 and reuse-terms work stay deferred; no GitHub mutation or source adoption.
+
+## CARD Citation-Specific Study Context (2026-10-13)
+
+The [offline dossier](2026-10-13-card-study-context.json) follows all reference
+candidates from both unlinked CARD literature cohorts: **76 proteins, 49 terms
+and 63 records**. It replays **73 cached complete query chains** from UniProt
+release 2026_03 and binds the source term's citations to the exact reference
+number in each entry. The **246 citation contexts** include **81 matched
+study-context links**; 58 have strain annotations and three have multiple
+strain annotations. These are metadata counts, not independent experiments
+or unique tested organisms. Other citations on the same entry stay separate.
+
+Cached taxonomy retains the reference IDs at their actual ranks: 54 species,
+nine strains, five subspecies, seven `no rank` and one serotype. All 76 have
+a species-rank lineage in those snapshots, but none is assigned to a tested
+subject merely through a shared gene name or citation. Entry and sequence
+versions are preserved; no new protein or taxonomy request was needed.
+
+Several annotations require particular care during primary review:
+
+- IreK reference UniProtKB:Q820A8 names V583 (NCBITaxon:226185), while its
+  PMID:34672600 citation-specific strain annotation names OG1. The source
+  labels differ; the reference strain ID is not assigned to that study label.
+- The PMID:15273153 title attached to nimE candidate UniProtKB:Q6PV97 describes
+  a metronidazole-susceptible organism. This is a review flag, not a new measured
+  phenotype, a contradiction of every nimE claim, or completed primary review.
+- UniProtKB:E1A0W6, B7TCJ0 and A0A0C6ET92 each have a matched citation carrying
+  two separate strain annotations. No representative is selected. Bmr's
+  `168 / BD170` annotation likewise remains one verbatim source string, not
+  an automatically established strain equivalence.
+- mfd candidate UniProtKB:A0AC36KJL4 is a Derxia gummosa reference. Its shared
+  repair-factor citation does not establish that this reference organism was
+  the subject of the corpus's drug-resistance assertion.
+
+The separate 1997 Bmr paper, DOI:10.1128/jb.179.7.2189-2193.1997 / PMID:9079903,
+was requested once through Europe PMC's PDF endpoint. It returned HTTP 403;
+no full text, figures or tables were received or reviewed, and no alternate
+route was attempted. This is distinct from the retained 1991 PNAS access hold.
+Neither hold is evidence of biological absence or global article unavailability.
+Bmr remains an unverified source assertion for this pass's chloramphenicol,
+puromycin and acriflavine cohort; neither a database protein name nor an indexed
+abstract is substituted for compound-specific primary results.
+
+The [audit](../scripts/audit_card_study_context.py) and
+[regressions](../tests/test_card_study_context.py) preserve exact citation
+bindings, unsplit strain labels, versioned reference taxonomy and explicit
+missing contexts. Role annotations are reduced to category labels and hashes;
+raw variant-bearing role text and non-strain comment values are not exported.
+The [verification receipt](2026-10-13-card-study-context-verification.json)
+records the checks actually run. All 2,939 biological records, source inputs,
+pages, embeddings and prior snapshots remain unchanged. Earlier per-paper
+reviews retain their own scope; this metadata audit neither resets them nor
+completes a whole record. The full goal remains open, with NCBI requests,
+#1040, reuse-terms work and GitHub mutations still deferred.
 
 ## Remaining work
 

@@ -1,0 +1,872 @@
+{
+  "archive_context": {
+    "assembly_search_performed": false,
+    "complete_for_requested_limit_zero_queries": true,
+    "conflict": "Experiment titles identify ScLC1367, but their shared sample explicitly names ScLC10.",
+    "conflict_resolved": false,
+    "experiments": [
+      {
+        "experiment_accession": "SRX220258",
+        "experiment_alias": "ScLC1367",
+        "independent_biological_replicate_inferred": false,
+        "join_basis": "EXPERIMENT_TITLE_TO_EXACT_SOURCE_TABLE_LABORATORY_ID",
+        "linked_sample_label_conflict": true,
+        "run_accessions": [
+          "SRR653289",
+          "SRR653299",
+          "SRR653300",
+          "SRR653302",
+          "SRR653304",
+          "SRR653305"
+        ],
+        "source_laboratory_id": "ScLC1367",
+        "source_lineage": "Sc-F-1",
+        "unqualified_sample_or_genome_assignment": false
+      },
+      {
+        "experiment_accession": "SRX220314",
+        "experiment_alias": "ScLC1367_long",
+        "independent_biological_replicate_inferred": false,
+        "join_basis": "EXPERIMENT_TITLE_TO_EXACT_SOURCE_TABLE_LABORATORY_ID",
+        "linked_sample_label_conflict": true,
+        "run_accessions": [
+          "SRR653307",
+          "SRR653308",
+          "SRR653309",
+          "SRR653310",
+          "SRR653311"
+        ],
+        "source_laboratory_id": "ScLC1367",
+        "source_lineage": "Sc-F-1",
+        "unqualified_sample_or_genome_assignment": false
+      }
+    ],
+    "genomes_absent_everywhere_inferred": false,
+    "metadata_documentation": [
+      "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/advanced-search.html",
+      "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html"
+    ],
+    "query_plans": {
+      "ena-runs": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-plan.json",
+        "sha256": "50f5cc31450294f3c50833bc7a54da21934df7847e0b6527b948edf955c61136"
+      },
+      "ena-study": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-study-plan.json",
+        "sha256": "b79b54b74174aa35fca4c67e385355813b5ba9fe0b7b233ad3b4e4a6ca8a3ae8"
+      }
+    },
+    "requests": {
+      "SRX220258": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-SRX220258-receipt.json",
+          "sha256": "6a9b4b1939c4074128e8d02a7020020653895a5d74eb92cffe05337a280d668f"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-SRX220258-response.bin",
+          "sha256": "cfa7298ad564e093d16b571cecba461d9177f92e2f4d43c4c7ef26633981be51"
+        },
+        "retrieved_at": "2026-10-13T19:13:07.298563+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX220258"
+      },
+      "SRX220314": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-SRX220314-receipt.json",
+          "sha256": "a6b4e7b573e373148ec186c12aece4529add9e4f305f9fd5fd453977857bba43"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-SRX220314-response.bin",
+          "sha256": "50f79649eb97c19678caa58cb94ebf1d71b9ef1da955b34952f0ae3a97fac17d"
+        },
+        "retrieved_at": "2026-10-13T19:13:59.087184+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRX220314"
+      },
+      "ena-return-fields": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-return-fields-receipt.json",
+          "sha256": "c3675994f5479075916be3f80afd5d19435bd0d276a067ad49f644bd1d2db2ac"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-return-fields-response.bin",
+          "sha256": "0af650cb8eb31f1e760a3c187c8df1019f8e4c038ae3592d1554c4a3f48a02e1"
+        },
+        "retrieved_at": "2026-10-13T19:08:21.102510+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=read_run"
+      },
+      "ena-runs": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-runs-receipt.json",
+          "sha256": "0da0489fdfd8eb7578d842445be23868833932778ebc72d3917f1dd33286b307"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-runs-response.bin",
+          "sha256": "dbbad332f4503f152fcb603a449f76fe062144b86d9b4ade226a0a9b94b72b58"
+        },
+        "retrieved_at": "2026-10-13T19:10:06.156093+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=submission_accession%3D%22SRA065341%22&fields=run_accession%2Cstudy_accession%2Csecondary_study_accession%2Csample_accession%2Csecondary_sample_accession%2Cexperiment_accession%2Csubmission_accession%2Csample_alias%2Csample_title%2Cscientific_name%2Ctax_id%2Cstudy_title%2Cstudy_alias%2Cfirst_public%2Clast_updated&format=json&limit=0"
+      },
+      "ena-runs-canary": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-runs-canary-receipt.json",
+          "sha256": "baedf4b320a5a3709f8fde9f37ac9abb12fb9d44e9e720ec19972bf7e97aa294"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-runs-canary-response.bin",
+          "sha256": "221c2e955de99277e7a52bce1e8dc885c3ae03ac039684b8b1f563fd16907d2f"
+        },
+        "retrieved_at": "2026-10-13T19:09:19.845175+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=submission_accession%3D%22SRA065341%22&fields=run_accession%2Cstudy_accession%2Csecondary_study_accession%2Csample_accession%2Csecondary_sample_accession%2Cexperiment_accession%2Csubmission_accession%2Csample_alias%2Csample_title%2Cscientific_name%2Ctax_id%2Cstudy_title%2Cstudy_alias%2Cfirst_public%2Clast_updated&format=json&limit=1"
+      },
+      "ena-search-fields": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-search-fields-receipt.json",
+          "sha256": "7cab7cf15e157c7498fd5ce4941b72a7d7a9671aa14ef812c062d50281a977f0"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-search-fields-response.bin",
+          "sha256": "18f789fbf81af00184556a965e0419159051cc1ec5b4a2d2e9a719041f54d6ab"
+        },
+        "retrieved_at": "2026-10-13T19:07:23.286355+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/searchFields?result=read_run"
+      },
+      "ena-study": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-study-receipt.json",
+          "sha256": "f1b368291cb3e2193bf4fa8f98cada21664d91345f58195cc949362939e40ea8"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-study-response.bin",
+          "sha256": "afeac36409f80d61b419b04b643a46789a8e483ce1bdbdd7905b65f43123e082"
+        },
+        "retrieved_at": "2026-10-13T19:11:46.553746+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=study_accession%3D%22PRJNA186947%22&fields=run_accession%2Cstudy_accession%2Csecondary_study_accession%2Csample_accession%2Csecondary_sample_accession%2Cexperiment_accession%2Csubmission_accession%2Csample_alias%2Csample_title%2Cscientific_name%2Ctax_id%2Cstudy_title%2Cstudy_alias%2Cfirst_public%2Clast_updated&format=json&limit=0"
+      },
+      "ena-study-canary": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-study-canary-receipt.json",
+          "sha256": "2593d76f4fd49870f0537267ef37c92f32b4fc81eb40055ae14768e20c2bceba"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-study-canary-response.bin",
+          "sha256": "221c2e955de99277e7a52bce1e8dc885c3ae03ac039684b8b1f563fd16907d2f"
+        },
+        "retrieved_at": "2026-10-13T19:11:01.268510+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=read_run&query=study_accession%3D%22PRJNA186947%22&fields=run_accession%2Cstudy_accession%2Csecondary_study_accession%2Csample_accession%2Csecondary_sample_accession%2Cexperiment_accession%2Csubmission_accession%2Csample_alias%2Csample_title%2Cscientific_name%2Ctax_id%2Cstudy_title%2Cstudy_alias%2Cfirst_public%2Clast_updated&format=json&limit=1"
+      },
+      "sample": {
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-sample-receipt.json",
+          "sha256": "a2ef0742e3b904b8756e8225e737e6b774d5f588cdce904ef280dd677344ed3d"
+        },
+        "response": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/ena-sample-response.bin",
+          "sha256": "6f312ed799daf26b76aa33b40e174aa665de5f5cfc56d075ccce64c5f775e3de"
+        },
+        "retrieved_at": "2026-10-13T19:15:03.424932+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/SRS387829"
+      }
+    },
+    "sample_run_or_experiment_is_assembly": false,
+    "sc_g_13_gap_scope": "INSPECTED_STUDY_AND_EXPERIMENT_METADATA_ONLY",
+    "secondary_study_accession": "SRP018095",
+    "sequence_files_requested": false,
+    "shared_sample_provenance": {
+      "archive_sample_accession": "SRS387829",
+      "biosample_accession": "SAMN01893852",
+      "source_isolate_label": "ScLC10",
+      "source_reported_taxon_id": "NCBITaxon:559292",
+      "taxon_is_exact_evolved_subject_assignment": false
+    },
+    "source_submission_accession": "SRA065341",
+    "study_accession": "PRJNA186947",
+    "subject_experiment_matches": {
+      "Sc-F-1": [
+        "SRX220258",
+        "SRX220314"
+      ],
+      "Sc-G-13": []
+    },
+    "unique_experiments": 2,
+    "unique_runs": 11,
+    "unique_samples": 1
+  },
+  "attribution": [
+    {
+      "doi": "10.1371/journal.pgen.1003390",
+      "license": "Creative Commons Attribution (as stated by publisher)",
+      "source": "Hill et al. (2013), PLOS Genetics"
+    },
+    {
+      "license": "CC BY 4.0",
+      "license_url": "https://www.uniprot.org/help/license",
+      "source": "UniProt Consortium"
+    },
+    {
+      "scope": "Identifier metadata only",
+      "source": "European Nucleotide Archive, EMBL-EBI"
+    }
+  ],
+  "conditional_findings": [
+    {
+      "calcineurin_independence": "FUNCTIONAL_SUPPORT_IN_TESTED_LINEAGE_AND_COMBINATION",
+      "cyclosporin_a_plus_fluconazole": "LINEAGE_CROSS_RESISTANCE_NOT_INDEPENDENT_ALLELE_TEST",
+      "gene": "MOT3",
+      "lineage": "Sc-F-1",
+      "locations": [
+        "Results WGS yeast subsection",
+        "Figure 6A-C"
+      ],
+      "tacrolimus_plus_fluconazole": "FUNCTIONAL_PHENOCOPY_SUPPORT_NOT_DIRECT_TEST_OF_EXACT_ALLELE"
+    },
+    {
+      "geldanamycin_plus_fluconazole": "FUNCTIONAL_COMPARISON_SUPPORT_WITH_EXPRESSION_CONTEXT_CAVEAT",
+      "gene": "PDR1",
+      "lineage": "Sc-G-13",
+      "locations": [
+        "Results WGS yeast subsection",
+        "Figure 6D-E"
+      ],
+      "pdr5_efflux_route": "PROPOSED_EXPLANATION_NOT_DIRECTLY_MEASURED_IN_THIS_COMPARISON",
+      "radicicol_or_tacrolimus_plus_fluconazole": "NO_INCREASED_CROSS_RESISTANCE_REPORTED",
+      "residual_response": "RETAINED_WITH_ANCESTRAL_REFERENCE_COMPARISON_AND_EXPRESSION_CONTEXT"
+    }
+  ],
+  "constraints": {
+    "github_mutations_this_checkpoint": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0
+  },
+  "curation_decision": "HOLD_UNCONDITIONAL_SINGLE_DRUG_ASSERTIONS_AND_CONFLICTED_SAMPLE_ASSIGNMENTS",
+  "date": "2026-10-13",
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/protected-before.json",
+      "sha256": "f44c2574fc94d8cda7e793757633c152a80d75becf55a657615242f99d792bf8"
+    },
+    "canaries": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/canaries-reviewed.json",
+      "sha256": "897f4baafbc23d936e503ee9c6e0e0dbfd65640b56e20dbac703ef50aacabde9"
+    },
+    "census": {
+      "path": "research/2026-10-13-tubercidin-resistance-grounding.tsv",
+      "sha256": "0a9d4c8c48eb8c29a7f7fe59c8b455ce586ed6648be8e6d6759ab1b23706f6b2"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/cohort.json",
+      "sha256": "8b911ea592041521f43a14d27589d6ce73e6b29baf67ad12aae25715234e3654"
+    },
+    "prior": {
+      "path": "research/2026-10-13-hsp90-context.json",
+      "sha256": "77b9185a3ed7cf6e2944f61dc8821d78079370059b7779cdc45d08a9caa36fa1"
+    },
+    "prior_progress": {
+      "path": "research/2026-10-13-tubercidin-resistance-progress.json",
+      "sha256": "4b290eabd54e28aadd0990c4c74b07c1bcb8f6362dc8be77e90a59b827d923d6"
+    }
+  },
+  "limitations": [
+    "Reference proteins and reference-strain TaxIDs do not identify the experimental alleles.",
+    "Combination findings are not unconditional single-drug or species-wide resistance assertions.",
+    "Phenocopy supports a gene-level interpretation, not an independent test of the exact source allele.",
+    "Expression context and negative cross-resistance comparisons remain part of the PDR1 interpretation.",
+    "A matched experiment title is qualified by its conflicting linked sample metadata.",
+    "Two experiments and eleven runs are not eleven independent biological isolates.",
+    "No matching Sc-G-13 experiment in these snapshots does not imply no sequencing data elsewhere.",
+    "Other genes, lineages and discovery leads remain open; no whole-record review is complete.",
+    "Offline replay checks metadata, joins and source bytes, not the truth of scientific interpretation.",
+    "No sequences, exact variant specifications, constructs, protocols or numeric AST are exported."
+  ],
+  "primary": {
+    "doi": "10.1371/journal.pgen.1003390",
+    "figure6": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/figure6-storage-response.bin",
+        "sha256": "cb87d75f11f926c0c3405248acdb5d7db8a16dabc691d0c2043ef8c1d4c75284"
+      },
+      "final_receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/figure6-storage-receipt.json",
+        "sha256": "ae883be23a3c92f6d148c07e6a92eb320d3e3edaf9b06019235003cdfa6d7406"
+      },
+      "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.g006.PNG_L",
+      "native_figure_visually_inspected": true,
+      "retrieved_at": "2026-10-13T19:06:03.296828+00:00",
+      "source_receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/figure6-receipt.json",
+        "sha256": "92957132fdecc60047f564164546e99fdc385d9327f4e484998d40db3fabdcb2"
+      },
+      "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1003390.g006"
+    },
+    "pmid": "23593013",
+    "reused_assets": {
+      "article": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-response.bin",
+          "sha256": "0694b721f086ddc1b2ed64b649445561773691dbafa7bd4b4cfa5d613c0643b9"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-receipt.json",
+          "sha256": "a42f66e7f47a0d6a2c297495d4d906d904fb556955e8312dff2cb03e9a7580eb"
+        },
+        "final_url_without_query": "https://journals.plos.org/plosgenetics/article",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T16:51:57.650678+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-receipt.json",
+          "sha256": "a42f66e7f47a0d6a2c297495d4d906d904fb556955e8312dff2cb03e9a7580eb"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003390",
+        "status": 200,
+        "validated_redirects": 0
+      },
+      "table-s1": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-storage-response.bin",
+          "sha256": "702d4768298a45795b86fd84b8cfe2ef1605d703e90ee820dfeebbda3956b1e0"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-storage-receipt.json",
+          "sha256": "36b8692a95dfddd8a99531d687a93d4c75cb71086466f7660394cb2d4a66a057"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.s003.docx",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T17:51:08.985859+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-receipt.json",
+          "sha256": "72eb6959bee7cbdce3b6a4e4f6fb7bc6eb18ae9c00ed2e4bb85825b66320936e"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1003390.s003",
+        "status": 200,
+        "validated_redirects": 1
+      },
+      "table-s5": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-storage-response.bin",
+          "sha256": "6c39cf5f38bbaf88578bb65b32404a147d3d0ca007a61fea3517277fcc7e00c6"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-storage-receipt.json",
+          "sha256": "08b75e8e9012b80fcf23b70331142168fb8d0acf94102e02ed184f2c5298df08"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.s007.docx",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T17:52:54.873393+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-receipt.json",
+          "sha256": "2c41dbcd3f923c8486e43f393b57b72451bd4652179532e062e67b37b080b3c7"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1003390.s007",
+        "status": 200,
+        "validated_redirects": 1
+      }
+    },
+    "source_layout_limit": "Several nonselected Table S5 rows have crowded columns in the unchanged source rendering. Selected lineage IDs are legible and independently checked against OOXML.",
+    "whole_article_review_complete": false
+  },
+  "records": [
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "identifier": "CHEBI:5292",
+      "label": "geldanamycin",
+      "path": "data/antibiotics/antiviral/geldanamycin.yaml",
+      "sha256": "80d27d088eb4b732c2abc4b413335b6cd1ed5dba9b644663863e6643aebeedca",
+      "standard_inchi_key": "QTQAWLPCGQOSGP-KSRBKZBZSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "identifier": "CHEBI:556075",
+      "label": "radicicol",
+      "path": "data/antibiotics/antifungal/radicicol.yaml",
+      "sha256": "d5838a617a62b6963863d2281aa38f9089da02f1c379181f85954710fb02b2ff",
+      "standard_inchi_key": "WYZWZEOGROVVHK-GTMNPGAYSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "identifier": "CHEBI:4031",
+      "label": "cyclosporin A",
+      "path": "data/antibiotics/antifungal/cyclosporin-a.yaml",
+      "sha256": "e0d390d0eb1e3ee5652ecf1e8e7e3c5eb95293e57f8ce7b8e06902f22f1a27b9",
+      "standard_inchi_key": "PMATZTZNYRCHOR-CGLBZJNRSA-N",
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 2,
+      "identifier": "antibioticmech:aro-2e3b34cc67",
+      "label": "tacrolimus",
+      "path": "data/antibiotics/unspecified/tacrolimus.yaml",
+      "sha256": "c78b76727b23e17eb186b45746e63a146fc21e4e1608b6c09591822e21154e08",
+      "standard_inchi_key": "QJJXYPPXXYFBGM-LFZNUXCKSA-N",
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "reference_proteins": {
+    "MOT3": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.18.4.1879"
+            },
+            {
+              "database": "PubMed",
+              "id": "9528759"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s090"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169872"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1101/gr.6037607"
+            },
+            {
+              "database": "PubMed",
+              "id": "17322287"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/genetics/149.2.879"
+            },
+            {
+              "database": "PubMed",
+              "id": "9611199"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.20.19.7088-7098.2000"
+            },
+            {
+              "database": "PubMed",
+              "id": "10982825"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/emboj/cdf415"
+            },
+            {
+              "database": "PubMed",
+              "id": "12145211"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2002"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/nar/gkg792"
+            },
+            {
+              "database": "PubMed",
+              "id": "14530431"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/ec.4.4.649-660.2005"
+            },
+            {
+              "database": "PubMed",
+              "id": "15821125"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2005"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.cell.2009.02.044"
+            },
+            {
+              "database": "PubMed",
+              "id": "19345193"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.1210303109"
+            },
+            {
+              "database": "PubMed",
+              "id": "22814378"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2012"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 192,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "MOT3",
+        "ROX7"
+      ],
+      "gene_orf_names": [
+        "YM9916.09"
+      ],
+      "ordered_locus_names": [
+        "YMR070W"
+      ],
+      "primary_gene_name": "MOT3",
+      "protein_accession": "UniProtKB:P54785",
+      "protein_name": "Transcriptional activator/repressor MOT3",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reuse_scope": "REFERENCE_IDENTITY_ONLY_NOT_A_TRANSFERRED_PHENOTYPE",
+      "sequence_version": 1,
+      "sgd_id": "S000004674",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "PDR1": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(18)45464-6"
+            },
+            {
+              "database": "PubMed",
+              "id": "3316228"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1987"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/yea.320070311"
+            },
+            {
+              "database": "PubMed",
+              "id": "1882553"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s081"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169869"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/pr060559j"
+            },
+            {
+              "database": "PubMed",
+              "id": "17330950"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1371/journal.pone.0162842"
+            },
+            {
+              "database": "PubMed",
+              "id": "27618436"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2016"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 208,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "AMY1",
+        "ANT1",
+        "BOR2",
+        "CYH3",
+        "NRA2",
+        "PDR1",
+        "SMR2",
+        "TIL1",
+        "TPE1",
+        "TPE3"
+      ],
+      "gene_orf_names": [],
+      "ordered_locus_names": [
+        "YGL013C"
+      ],
+      "primary_gene_name": "PDR1",
+      "protein_accession": "UniProtKB:P12383",
+      "protein_name": "Transcription factor PDR1",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reuse_scope": "REFERENCE_IDENTITY_ONLY_NOT_A_TRANSFERRED_PHENOTYPE",
+      "sequence_version": 2,
+      "sgd_id": "S000002981",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "scope": "CONDITIONAL_REGULATOR_EVIDENCE_AND_QUALIFIED_ARCHIVE_LINKS",
+  "subjects": {
+    "Sc-F-1": {
+      "exact_experimental_protein_assigned": false,
+      "gene": "MOT3",
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "ScLC1367",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:4932",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 5
+    },
+    "Sc-G-13": {
+      "exact_experimental_protein_assigned": false,
+      "gene": "PDR1",
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "ScLC1540",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:4932",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 17
+    }
+  },
+  "summary": {
+    "assembly_accessions_assigned": 0,
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "ena_metadata_requests": 9,
+    "experimental_alleles_assigned": 0,
+    "lineages_with_experiment_title_matches": 1,
+    "new_taxonomy_queries": 0,
+    "new_uniprot_queries": 1,
+    "reference_proteins": 2,
+    "reused_uniprot_queries": 1,
+    "sample_annotation_conflicts": 1,
+    "selected_records": 4,
+    "source_lineages": 2,
+    "whole_records_completed": 0
+  },
+  "taxonomy_reused": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  },
+  "uniprot_requests": {
+    "MOT3": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/mot3-response.bin",
+        "sha256": "01d62b872f2ea8ac64f2edc34c5da31994aed9d4b884cbfce9fbadaf89bf2175"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-regulators/mot3-receipt.json",
+        "sha256": "21f24012ee08ab113b931f5774665d26b0c20a96a0c38b5579760a6eac56cc93"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T19:06:35.441468+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMOT3+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "PDR1_reused": {
+      "body_sha256": "481077bae1438e4af9df0d813ddac61ce8d8a2bafc5228f1a63e49629beba6f0",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-translation/request-33741b0e6f8d6b35ed5c500f5bea581c5921ea06a7233a13f7159a1a9bf78b91.json",
+        "sha256": "b5bfa1a307cadd03f6d554b77b68cceab9cdc5994384c974a4d6583eb0739bc5"
+      },
+      "pagination_complete": true,
+      "query": "gene_exact:PDR1 AND organism_id:559292 AND reviewed:true",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T10:21:25.173106+00:00",
+      "status": 200,
+      "total_results": 1,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APDR1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}
