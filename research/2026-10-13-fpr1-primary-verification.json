@@ -1,0 +1,240 @@
+{
+  "adversarial_self_review": [
+    "Selected qualitative comparisons do not establish every alteration, species-wide resistance or clinical AST.",
+    "Reference accessions and S288c TaxID remain distinct from experimental alleles and derivatives.",
+    "FPR1 perturbations differ; poor untreated growth is not a susceptibility call.",
+    "Foreign-protein experiments in yeast are not native-organism resistance findings.",
+    "TOR2 residue-label differences are retained without translating between papers.",
+    "FAP1 transcription results are not new FAP1 resistance experiments.",
+    "RNA-seq and ChIP-seq submission identifiers are not assemblies or verified subject joins.",
+    "Strain workbook cells were parsed and inspected, not visually rendered.",
+    "The independent PLOS study does not resolve the previous Springer access hold or everolimus evidence.",
+    "Historical snapshots remain unchanged; regression fixtures do not freeze future live curation.",
+    "Same-agent review is not independent scientific signoff or whole-record completion."
+  ],
+  "all_existing_fields_and_claims_preserved": true,
+  "artifacts": [
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "69c63c3c7ef70f131fff1f4fb3a064255d17073d2d33cc7a05c73414a89d1398"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e07092d0c48d2493ad7da94e464d2f673297db88136ed99a7cee5929e2b15d04"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "13c0208332db2872c11d9ad347e539cace479dce7984fad5f8944b8f67feed04"
+    },
+    {
+      "path": "research/2026-10-13-fpr1-primary-context.json",
+      "sha256": "5b2b961fe14b22a02be0e544e1a23af6669b799a60e31f80e33e138c2271bf6a"
+    },
+    {
+      "path": "research/2026-10-13-fpr1-primary-curation.json",
+      "sha256": "6a23c86c8aee7fd7e607f58cf0ca65b659abbc0cf757cd228518ada4079133ba"
+    },
+    {
+      "path": "research/2026-10-13-fpr1-primary-reconciliation.json",
+      "sha256": "c02e65924bc698c3a9f9b1b9314a442d88a3e258eb5f26c117722fb4261d050c"
+    },
+    {
+      "path": "research/2026-10-13-fpr1-primary-resistance-grounding.tsv",
+      "sha256": "5199994e1415dd11a99621c21dd6cd0e131da330fff954708895a0c99ac58c90"
+    },
+    {
+      "path": "research/2026-10-13-fpr1-primary-resistance-progress.json",
+      "sha256": "a08a7faf907a308a5d4649046d36e449bdb1cccc9d79e08ac56df6073d65db1d"
+    },
+    {
+      "path": "research/2026-10-13-fpr1-primary-resistance-progress.tsv",
+      "sha256": "c78a3902cec6be1d02a71cf1be534f077725a5292e04ddfe569b52d0f2ce7dcb"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "d6f5cf776a599b4300cf38563fc10b01156d67f572f341dc2da9ed36fcfa07f5"
+    },
+    {
+      "path": "tests/fixtures/sirolimus-before-2026-10-13.yaml",
+      "sha256": "27fcbe8f6b7789fcaf8b9bfba90a4c7b8e76a9967ac3a240978c59a9ec8fa375"
+    },
+    {
+      "path": "tests/test_fpr1_primary_curation.py",
+      "sha256": "a106f44fa0092568e69687de46921bd0b7042855639631d08aaf8f1962f24182"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/protected-before.json",
+    "sha256": "ef15831f3f2024f0e9f29dd233c3ed191793aff3edb919d40df8157218659279"
+  },
+  "baseline_files_checked": 7148,
+  "changed_baseline_files": [
+    "NEXT_TASKS.md",
+    "README.md",
+    "data/antibiotics/antibacterial/sirolimus.yaml",
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antibacterial/sirolimus.html",
+    "pages/index.html",
+    "pages/map.html",
+    "research/2026-10-07-resistance-gene-grounding.md",
+    "scripts/summarize_resistance_progress.py"
+  ],
+  "claims_added": 2,
+  "curator_claims": 124,
+  "curator_records": 51,
+  "date": "2026-10-13",
+  "embedding": {
+    "changed_documents_encoded": 1,
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "existing_embedding_environment": "/private/tmp/antibioticmech-embed312-20261009",
+    "full_projection_rebuilt": true,
+    "main_python_environment_lacked_torch": true,
+    "model_or_package_downloads": 0,
+    "model_revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+    "network_used": false,
+    "published": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/embedding-stage/published.json",
+      "sha256": "3658ac1c0ca05e0b744c268e93af3135e831d74f168c4131f396ae320f5e6cad"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/embedding-stage/reuse-proof.json",
+      "sha256": "e5561869794122f74ed75ca2eba24a70da70306ad443f9699d155a976b541aee"
+    },
+    "structure_map_unchanged": true,
+    "unchanged_rows_reused": 2938
+  },
+  "experimental_protein_allele_sample_or_genome_assignments": 0,
+  "focused_tests": {
+    "passed": 91,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "full_qc": {
+    "chemical_map_distribution_versions_match_pins": false,
+    "default_environment_preflight_lacked_rdkit": true,
+    "environment": {
+      "chemical_map_distribution_versions_match_pins": false,
+      "chemical_map_pins": {
+        "numpy": "2.2.6",
+        "rdkit": "2026.3.5",
+        "scikit-learn": "1.7.2",
+        "scipy": "1.15.3",
+        "umap-learn": "0.5.12"
+      },
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/run_qc.py"
+      ],
+      "dependency_deviation": "RDKit 2025.03.6 instead of project pin 2026.3.5; UMAP runtime unavailable because numba is absent. No chemistry/map regeneration.",
+      "dependency_differences": {
+        "rdkit": {
+          "actual": "2025.3.6",
+          "required": "2026.3.5"
+        }
+      },
+      "elapsed_seconds": 1875.7,
+      "exit_code": 0,
+      "pinned_rdkit_copy_preflight_failure": "ModuleNotFoundError: rdkit.RDPaths; that runtime was not used.",
+      "python": "3.13.12",
+      "pythonpath": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/src:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/scripts:/private/tmp/antibioticmech-qc-science-20261013-abd1:/private/tmp/antibioticmech-identity-20261012/lib/python3.13/site-packages:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/lib/python3.13/site-packages",
+      "rdkit_smoke_check_passed": true,
+      "started_at": "2026-10-13T20:21:46.680645+00:00",
+      "versions": {
+        "PyYAML": "6.0.3",
+        "numpy": "2.2.6",
+        "pytest": "9.1.1",
+        "rdkit": "2025.3.6",
+        "scikit-learn": "1.7.2",
+        "scipy": "1.15.3",
+        "umap-learn": "0.5.12"
+      }
+    },
+    "execution": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/full-qc-exit.json",
+      "sha256": "61b1984cc3f780c4e59e08187df3ef3af07403daea9aa721ca6492f3a7ed98a1"
+    },
+    "exit_code": 0,
+    "full_lockfile_environment_reproduced": false,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/full-tests.xml",
+      "sha256": "6d0e02f4e863dfcd84fc8bad3db64ae09feee8344b8d199c6931845cc802f0b1"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/full-qc.log",
+      "sha256": "97e7ad77fff08fbbb08f3422b4855ef5efe85730e0e862af02e47a8a9b5a0922"
+    },
+    "passed": 3683,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4,
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "umap_runtime_unavailable": true
+  },
+  "github_mutations": 0,
+  "history_events_added": 1,
+  "ignored_files_included": true,
+  "initial_failure_resolution": "Corrected historical-status expectation and waited for ledger generation before testing.",
+  "initial_focused_failures": [
+    "test_historical_census_does_not_claim_complete_review",
+    "test_live_offline_export_reproduces_and_preserves_review_boundaries"
+  ],
+  "issue_1040": "DEFERRED",
+  "live_browser_verification": false,
+  "native_figures_inspected": 2,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-fpr1-primary-context.json",
+    "research/2026-10-13-fpr1-primary-curation.json",
+    "research/2026-10-13-fpr1-primary-reconciliation.json",
+    "research/2026-10-13-fpr1-primary-resistance-grounding.tsv",
+    "research/2026-10-13-fpr1-primary-resistance-progress.json",
+    "research/2026-10-13-fpr1-primary-resistance-progress.tsv",
+    "tests/fixtures/sirolimus-before-2026-10-13.yaml",
+    "tests/test_fpr1_primary_curation.py"
+  ],
+  "new_reference_mappings": 1,
+  "new_taxonomy_requests": 0,
+  "previous_turn_classification": "PROGRESS",
+  "primary_asset_pins_verified": 4,
+  "prior_uncommitted_checkpoints_preserved": true,
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "records_checked": 2939,
+  "records_with_resistance_assertions": 318,
+  "records_without_assertions_or_rules": 2608,
+  "reference_metadata_asset_receipts_and_selected_source_cells_replayed_with_network_disabled": true,
+  "removed_regenerated_downloads": [],
+  "rendered_claims_caveats_and_record_source_link_verified": true,
+  "rendered_map_payload_verified": true,
+  "rendered_map_record_links_verified": 2939,
+  "resistance_assertions": 4879,
+  "reuse_terms_review_resumed": false,
+  "reused_reference_mappings": 1,
+  "scientific_interpretation_automatically_revalidated": false,
+  "scope": "SELECTED_PRIMARY_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "source_adoptions": 0,
+  "source_owned_inputs_and_schema_unchanged": true,
+  "status": "ALL_AUTHORITATIVE_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "strain_workbook_rendered": false,
+  "whole_corpus_goal_status": "OPEN",
+  "whole_record_primary_reviews_completed": 0
+}

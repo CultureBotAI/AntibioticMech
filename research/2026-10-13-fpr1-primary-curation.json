@@ -1,0 +1,77 @@
+{
+  "before": {
+    "path": "data/antibiotics/antibacterial/sirolimus.yaml",
+    "sha256": "27fcbe8f6b7789fcaf8b9bfba90a4c7b8e76a9967ac3a240978c59a9ec8fa375"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/sirolimus-canary.yaml",
+    "sha256": "f787018457827bb7930ca096030515abec0dfab13de8eff347c5eec8edf83b40"
+  },
+  "claims": [
+    {
+      "assay": "Comparative growth spot assay",
+      "evidence": [
+        {
+          "notes": "Kasahara et al. (2020), Results / Characterization of Fpr1 function; native Figure 5B and S1 Table host labels. Qualitative association only; no numeric AST or exact variant specification imported.",
+          "reference": "DOI:10.1371/journal.pgen.1008865"
+        },
+        {
+          "notes": "Reference-only UniProtKB:P20081, reviewed entry 220, sequence version 2, release 2026_03; YNL135C, SGD:S000005079. S288c reference lineage supports species NCBITaxon:4932; reference strain NCBITaxon:559292 is not assigned to the tested derivatives.",
+          "reference": "https://www.uniprot.org/uniprotkb/P20081/entry"
+        }
+      ],
+      "gene_id": "FPR1",
+      "label": "Laboratory FPR1-associated rapamycin resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Qualified association in the source-selected laboratory comparisons, not all perturbations of FPR1 or a species-wide or clinical phenotype. Distinct background and drug-free growth controls remain separate. Molecular binding effects are not directly measured by these growth comparisons; reference proteins are not exact experimental allele or genome assignments.",
+      "phenotype_label": "Source-reported relative rapamycin resistance",
+      "strain": "YKK207 laboratory derivatives",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    },
+    {
+      "assay": "Comparative growth spot assay",
+      "evidence": [
+        {
+          "notes": "Kasahara et al. (2020), Results / Characterization of Fpr1 function; native Figure 6 and S1 Table host labels. Qualitative association only; no numeric AST or exact variant specification imported.",
+          "reference": "DOI:10.1371/journal.pgen.1008865"
+        },
+        {
+          "notes": "Reference-only UniProtKB:P32600, reviewed entry 214, sequence version 3, release 2026_03; YKL203C, SGD:S000001686. S288c reference lineage supports species NCBITaxon:4932; reference strain NCBITaxon:559292 is not assigned to the tested derivatives.",
+          "reference": "https://www.uniprot.org/uniprotkb/P32600/entry"
+        }
+      ],
+      "gene_id": "TOR2",
+      "label": "Laboratory TOR2-associated rapamycin resistance",
+      "mechanism_type": "UNKNOWN",
+      "note": "Qualified association in the source-selected laboratory comparisons, not all perturbations of TOR2 or a species-wide or clinical phenotype. Distinct background and drug-free growth controls remain separate. Molecular binding effects are not directly measured by these growth comparisons; reference proteins are not exact experimental allele or genome assignments.",
+      "phenotype_label": "Source-reported relative rapamycin resistance",
+      "strain": "YKK1081 laboratory derivatives",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    }
+  ],
+  "context": {
+    "path": "research/2026-10-13-fpr1-primary-context.json",
+    "sha256": "5b2b961fe14b22a02be0e544e1a23af6669b799a60e31f80e33e138c2271bf6a"
+  },
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added two qualified laboratory rapamycin gene associations from primary growth comparisons and source strain-table review. Molecular routes remain UNKNOWN and UniProt proteins reference-only. No exact experimental allele, genome or numeric AST assigned; whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-13T20:08:17Z"
+  },
+  "existing_claims_preserved": 0,
+  "fixture": {
+    "path": "tests/fixtures/sirolimus-before-2026-10-13.yaml",
+    "sha256": "27fcbe8f6b7789fcaf8b9bfba90a4c7b8e76a9967ac3a240978c59a9ec8fa375"
+  },
+  "fresh_seed_merge_equal": true,
+  "identifier": "CHEBI:9168",
+  "record": {
+    "path": "data/antibiotics/antibacterial/sirolimus.yaml",
+    "sha256": "f787018457827bb7930ca096030515abec0dfab13de8eff347c5eec8edf83b40"
+  },
+  "whole_record_review_complete": false
+}

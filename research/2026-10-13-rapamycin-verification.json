@@ -1,0 +1,113 @@
+{
+  "adversarial_self_review": [
+    "Search snippets are discovery material, not inspected primary results.",
+    "An empty HTTP 303 authorization redirect is not a retrieved PDF.",
+    "The authorization endpoint was not followed or its query exposed in the public projection.",
+    "A local access hold does not establish global article unavailability.",
+    "TOR1/DRR1 reference nomenclature does not establish compound-specific resistance.",
+    "S288c reference identity is not a tested strain, sample, assembly or allele assignment.",
+    "No FPR1 phenotype is transferred from the earlier combination-context paper.",
+    "Absence from returned bibliographies is not evidence against the primary study.",
+    "No TOR2 search, source adoption, new phenotype curation or record completion is claimed.",
+    "Synthetic regression fixtures need neither ignored source caches nor fixed live records.",
+    "Same-agent review is not independent signoff or scientific revalidation."
+  ],
+  "alternate_route_attempted": false,
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "f76abfbe96335514f8dd0170641b0129ae3e2a467bfc45868a54833cea5a7e20"
+    },
+    {
+      "path": "research/2026-10-13-rapamycin-references.json",
+      "sha256": "6224632920de02d1ec61667702c26a9b10ac57570fbf4f403ad9be1a9fa45f5e"
+    },
+    {
+      "path": "scripts/audit_rapamycin_references.py",
+      "sha256": "1a4f4d5e7c170acf519761c4156942c0e41d59c69b5a5aa0a8d96ef5c0e1a521"
+    },
+    {
+      "path": "tests/test_rapamycin_references.py",
+      "sha256": "560ced4edb4489d4de07a5a55bcb14a7e10dec2657115f5fd2f6bf2c0e442e57"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-rapamycin/protected-before.json",
+    "sha256": "5f29d950c3dc479a924221ba83730645a5de1bf113efc8cc8a0498cd3cf9e340"
+  },
+  "baseline_files_checked": 7144,
+  "date": "2026-10-13",
+  "exact_experimental_alleles_assigned": 0,
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_this_checkpoint": 0,
+  "ignored_files_included_in_protected_trees": true,
+  "issue_1040": "DEFERRED",
+  "metadata_source_bytes_and_dossier_replayed_offline_with_network_disabled": true,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_archive_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-rapamycin-references.json",
+    "scripts/audit_rapamycin_references.py",
+    "tests/test_rapamycin_references.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "new_taxonomy_requests": 0,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "previous_turn_classification": "PROGRESS",
+  "previous_uncommitted_checkpoints_preserved": true,
+  "primary_review_status": "AUTHORIZATION_REDIRECT_NOT_FOLLOWED",
+  "progress_ledger_check_passed": true,
+  "records_byte_identical": 2939,
+  "reuse_terms_review_resumed": false,
+  "scientific_interpretation_automatically_revalidated": false,
+  "source_adoptions": 0,
+  "summary": {
+    "exact_experimental_alleles_assigned": 0,
+    "full_corpus_goal_status": "OPEN",
+    "new_biological_assertions": 0,
+    "new_protein_queries": 1,
+    "new_reference_mappings": 1,
+    "new_taxonomy_requests": 0,
+    "publisher_requests": 1,
+    "records_in_checkpoint": 2,
+    "reused_reference_mappings": 1,
+    "verified_primary_phenotypes": 0,
+    "whole_record_reviews_completed": 0
+  },
+  "test_results": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_rapamycin_references.py",
+      "tests/test_calcineurin_context.py",
+      "tests/test_yeast_regulator_context.py",
+      "tests/test_hsp90_context.py",
+      "tests/test_reference_canary_binding.py",
+      "tests/test_myriocin_references.py",
+      "tests/test_vatpase_reference_context.py",
+      "tests/test_tubercidin_curation.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_resistance_grounding_audit.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_record_review_contract.py",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-rapamycin/checkpoint-tests.xml"
+    ],
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/checkpoint-tests.xml",
+      "sha256": "3b05227ad588dd33bba18ba7a37e96487ab180c9214e11ba9207a5b59524574e"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/checkpoint-tests.log",
+      "sha256": "7bb20f6660f1f8b39e84f4d3fb5664a8aef58d61dd669fa937967319a64b3c7e"
+    },
+    "new_tests_run_without_inherited_pythonpath": true,
+    "passed": 378,
+    "skipped": 0
+  }
+}

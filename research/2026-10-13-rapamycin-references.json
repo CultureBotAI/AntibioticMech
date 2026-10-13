@@ -1,0 +1,282 @@
+{
+  "constraints": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "sequence_downloads": 0,
+    "source_adoptions": 0
+  },
+  "curation_decision": "HOLD_PRIMARY_EXPERIMENTAL_EVIDENCE_NOT_VERIFIED",
+  "date": "2026-10-13",
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/protected-before.json",
+      "sha256": "5f29d950c3dc479a924221ba83730645a5de1bf113efc8cc8a0498cd3cf9e340"
+    },
+    "census": {
+      "path": "research/2026-10-13-tubercidin-resistance-grounding.tsv",
+      "sha256": "0a9d4c8c48eb8c29a7f7fe59c8b455ce586ed6648be8e6d6759ab1b23706f6b2"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/cohort.json",
+      "sha256": "ce6a2eea9050927f1beeafe2ef0b2c35a887b449e6e121e7c46b26b8d8214c72"
+    },
+    "inspection": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/inspection.json",
+      "sha256": "5fc8331e4dc32a1cf84ce5f110a7bad6128e771a01db316637029d357de883f5"
+    },
+    "prior": {
+      "path": "research/2026-10-13-calcineurin-context.json",
+      "sha256": "471e1dd974e52a20330e2e17c90d4c4330e5a47d56f8d714993dc40bf166b48b"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-calcineurin-verification.json",
+      "sha256": "44f36d14dba80d368b1a32f46ee429bfe382dc60fe48a703f76114f3b44c6d5b"
+    },
+    "progress": {
+      "path": "research/2026-10-13-tubercidin-resistance-progress.json",
+      "sha256": "4b290eabd54e28aadd0990c4c74b07c1bcb8f6362dc8be77e90a59b827d923d6"
+    }
+  },
+  "limitations": [
+    "Reference proteins and S288c taxonomy are not exact experimental alleles or subjects.",
+    "The protein name and bibliography do not establish compound-specific resistance.",
+    "No phenotype is transferred from the earlier FPR1 combination-context study.",
+    "Search snippets are discovery leads, not reviewed primary results or figure evidence.",
+    "No MIC, clinical resistance category, genome or assembly assignment is inferred.",
+    "No TOR2 query or complete record review is claimed."
+  ],
+  "primary": {
+    "alternate_route_attempted": false,
+    "attempt": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/article-attempt.json",
+      "sha256": "f28ee3870c640a32d85dc1855de23936ba250ce0c863cdee2127e5c558d2c8c5"
+    },
+    "discovery_snippets_are_primary_evidence": false,
+    "doi": "10.1007/s11357-017-9988-4",
+    "figures_or_supplements_reviewed": false,
+    "full_text_received": false,
+    "global_unavailability_inferred": false,
+    "http_status": 303,
+    "pmid": "28707282",
+    "primary_results_reviewed": false,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/article-receipt.json",
+      "sha256": "eb5895d0eafd4e5a8ead63c112f180414e1cfda228a8d9732b88942479f745fb"
+    },
+    "redirect_endpoint_without_query": "https://idp.springer.com/authorize",
+    "response": {
+      "path": "reports/resistance-grounding-2026-10-13-rapamycin/article-response.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "retrieved_at": "2026-10-13T19:54:33.785139+00:00",
+    "source_url": "https://link.springer.com/content/pdf/10.1007/s11357-017-9988-4.pdf",
+    "status": "AUTHORIZATION_REDIRECT_NOT_FOLLOWED"
+  },
+  "records": [
+    {
+      "assertions_added": 0,
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "identifier": "CHEBI:9168",
+      "label": "sirolimus",
+      "path": "data/antibiotics/antibacterial/sirolimus.yaml",
+      "sha256": "27fcbe8f6b7789fcaf8b9bfba90a4c7b8e76a9967ac3a240978c59a9ec8fa375",
+      "standard_inchi_key": "QFJCIRLUMZQUOT-HPLJOQBZSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": 0,
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "identifier": "CHEBI:68478",
+      "label": "everolimus",
+      "path": "data/antibiotics/antiviral/everolimus.yaml",
+      "sha256": "cd2bdab5660a1547d2103d6e50d2b375b67d771187a35aeed3f4c43c50fb6d8c",
+      "standard_inchi_key": "HKVAMNSJSFKALM-GKUWKFKPSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "reference_proteins": {
+    "fpr1": {
+      "bibliography_primary_results_reviewed": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 220,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "FKB1",
+        "FPR1",
+        "RBP1"
+      ],
+      "gene_orf_names": [
+        "N1213",
+        "N1845"
+      ],
+      "ordered_locus_names": [
+        "YNL135C"
+      ],
+      "primary_gene_name": "FPR1",
+      "protein_accession": "UniProtKB:P20081",
+      "protein_name": "FK506-binding protein 1",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reuse_scope": "REFERENCE_IDENTITY_ONLY_NOT_A_TRANSFERRED_PHENOTYPE",
+      "sequence_version": 2,
+      "sgd_id": "S000005079",
+      "source_bibliography_pmids": [
+        "10049913",
+        "10998178",
+        "14562106",
+        "16823961",
+        "1701173",
+        "1704127",
+        "1705713",
+        "17322287",
+        "18407956",
+        "19779198",
+        "1996117",
+        "20305002",
+        "22814378",
+        "24374639",
+        "7681823",
+        "8619318",
+        "9169873",
+        "9315655"
+      ],
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "tor1": {
+      "bibliography_primary_results_reviewed": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 229,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "DRR1",
+        "TOR1"
+      ],
+      "gene_orf_names": [
+        "J1803"
+      ],
+      "ordered_locus_names": [
+        "YJR066W"
+      ],
+      "primary_gene_name": "TOR1",
+      "protein_accession": "UniProtKB:P35169",
+      "protein_name": "Serine/threonine-protein kinase TOR1",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reuse_scope": "REFERENCE_IDENTITY_ONLY_NOT_A_TRANSFERRED_PHENOTYPE",
+      "sequence_version": 3,
+      "sgd_id": "S000003827",
+      "source_bibliography_pmids": [
+        "10198052",
+        "10329624",
+        "10436010",
+        "10604478",
+        "10973982",
+        "10995454",
+        "11741537",
+        "12408816",
+        "12631735",
+        "14562106",
+        "15620355",
+        "15772072",
+        "17560372",
+        "24374639",
+        "25767889",
+        "28483912",
+        "28993463",
+        "29698392",
+        "32801125",
+        "34535752",
+        "36691768",
+        "7606777",
+        "8186460",
+        "8413204",
+        "8641269",
+        "8741837",
+        "8840504",
+        "9539725",
+        "9843498"
+      ],
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "scope": "REFERENCE_METADATA_WITH_PRIMARY_ACCESS_HOLD",
+  "summary": {
+    "exact_experimental_alleles_assigned": 0,
+    "full_corpus_goal_status": "OPEN",
+    "new_biological_assertions": 0,
+    "new_protein_queries": 1,
+    "new_reference_mappings": 1,
+    "new_taxonomy_requests": 0,
+    "publisher_requests": 1,
+    "records_in_checkpoint": 2,
+    "reused_reference_mappings": 1,
+    "verified_primary_phenotypes": 0,
+    "whole_record_reviews_completed": 0
+  },
+  "taxonomy_reused": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  },
+  "uniprot_requests": {
+    "fpr1": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/fpr1-response.bin",
+        "sha256": "39133a3d6f8b90d57ee291acea4369270aa01bf11c027d00ec96106cbe069daa"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/fpr1-receipt.json",
+        "sha256": "741c99f764f9d6d37ee5771c9c45b52cd8e5ec0eeabf98b4792f2c33a0a087e3"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T19:34:23.522968+00:00",
+      "reused": true,
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFPR1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "tor1": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-rapamycin/tor1-response.bin",
+        "sha256": "f057f72ae8ac6a476077ca5fec77cf85f355d0bf8197761cbccd1ab167212168"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-rapamycin/tor1-receipt.json",
+        "sha256": "7efacb155844c58a9419eb29e1459c6ec4aaea071caff15bed15ca06b6c95de1"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T19:54:43.230601+00:00",
+      "reused": false,
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ATOR1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

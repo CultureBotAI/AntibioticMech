@@ -1,0 +1,880 @@
+{
+  "archive_context": {
+    "experimental_sample_or_assembly_assignments": [],
+    "new_archive_requests": 0,
+    "reused_dossier": {
+      "path": "research/2026-10-13-yeast-regulator-context.json",
+      "sha256": "b0623eaeb0082c8cca2267299ce76b194756865099721227f39bdb014eb664a1"
+    },
+    "scope": "PREVIOUSLY_INSPECTED_STUDY_AND_TWO_NATIVE_EXPERIMENTS_ONLY",
+    "those_experiments_identify": "ScLC1367, not any of these eight source laboratory IDs",
+    "universal_genome_absence_inferred": false
+  },
+  "attribution": [
+    {
+      "doi": "10.1371/journal.pgen.1003390",
+      "license": "Creative Commons Attribution (as stated by publisher)",
+      "source": "Hill et al. (2013), PLOS Genetics"
+    },
+    {
+      "license": "CC BY 4.0",
+      "license_url": "https://www.uniprot.org/help/license",
+      "source": "UniProt Consortium"
+    },
+    {
+      "scope": "Selected reference identifiers from an existing pinned local snapshot",
+      "source": "Candida Genome Database",
+      "version": "A22-s08-m01-r37"
+    }
+  ],
+  "cgd_reference_features": {
+    "cna1": {
+      "aliases": [
+        "orf19.13454",
+        "CNA",
+        "IPF18159.2",
+        "IPF1465.2",
+        "Contig4-2972_0002",
+        "orf6.3161",
+        "orf6.7577",
+        "CA1587",
+        "CNA1",
+        "CaO19.6033",
+        "CMP2",
+        "orf19.6033",
+        "C1_00730C_B",
+        "C1_00730C",
+        "CAWG_01301"
+      ],
+      "cgd_id": "CAL0000201614",
+      "feature": "C1_00730C_A",
+      "feature_type": "ORF|Verified",
+      "primary_gene_name": "CMP1"
+    },
+    "cna1_homonym": {
+      "aliases": [
+        "orf19.11710",
+        "IPF22979.1",
+        "IPF7003.2",
+        "Contig4-2019_0002",
+        "orf6.6610",
+        "CA4137",
+        "CNA1",
+        "CaO19.11710",
+        "CaO19.4235",
+        "orf19.4235",
+        "C5_02290W_B",
+        "C5_02290W",
+        "CAWG_04611"
+      ],
+      "cgd_id": "CAL0000177603",
+      "feature": "C5_02290W_A",
+      "feature_type": "ORF|Verified",
+      "primary_gene_name": "PDE1"
+    },
+    "lcb1": {
+      "aliases": [
+        "orf19.13796",
+        "IPF20723.1",
+        "IPF1370.2",
+        "Contig4-3074_0027",
+        "orf6.7816",
+        "CA5101",
+        "CaO19.6438",
+        "LCB1",
+        "CaO19.13796",
+        "orf19.6438",
+        "CR_08640C_B",
+        "CR_08640C",
+        "CAWG_02149"
+      ],
+      "cgd_id": "CAL0000192873",
+      "feature": "CR_08640C_A",
+      "feature_type": "ORF|Uncharacterized",
+      "primary_gene_name": null
+    }
+  },
+  "cgd_version": "A22-s08-m01-r37",
+  "cna1_disambiguation": {
+    "basis": "CGD_ALIAS_AND_CALCINEURIN_CONTEXT_PLUS_EXACT_UNIPROT_CGD_LOCUS_EVIDENCE",
+    "experimental_allele_or_haplotype_assigned": false,
+    "other_alias_is_protein_absence": false,
+    "other_cgd_alias_gene": "PDE1",
+    "selected_reference_gene": "CMP1",
+    "source_name": "CNA1"
+  },
+  "conditional_findings": [
+    {
+      "binding_change": "PROPOSED_NOT_DIRECTLY_MEASURED_HERE",
+      "evidence": "RECIPROCAL_FUNCTIONAL_COMPARISONS",
+      "expression_context_caveat": true,
+      "functional_comparison_azole": "miconazole",
+      "gene": "FPR1",
+      "lineage": "Sc-F-3",
+      "lineage_profile_azole": "fluconazole",
+      "location": "Figure 5A,C,E; selected FPR1 Results",
+      "partner": "tacrolimus"
+    },
+    {
+      "binding_change": "PROPOSED_NOT_DIRECTLY_MEASURED_HERE",
+      "evidence": "RECIPROCAL_FUNCTIONAL_COMPARISONS",
+      "expression_context_caveat": true,
+      "functional_comparison_azole": "fluconazole",
+      "gene": "FPR1",
+      "lineage": "Sc-F-2",
+      "lineage_profile_azole": "fluconazole",
+      "location": "Figure 5B,D,F; selected FPR1 Results",
+      "partner": "tacrolimus"
+    },
+    {
+      "azole": "fluconazole",
+      "evidence": "PATHWAY_DEPENDENCY_NOT_AN_IDENTIFIED_EVOLVED_RESISTANCE_ALLELE",
+      "gene": "CNB1",
+      "lineages": [
+        "Sc-F-2",
+        "Sc-F-3"
+      ],
+      "location": "Figure 5E,F",
+      "partner": "tacrolimus"
+    },
+    {
+      "azole": "fluconazole",
+      "cyclosporin_a": "LINEAGE_PROFILE_NOT_SEPARATE_ALLELE_SPECIFIC_FUNCTIONAL_PANEL",
+      "evidence": "FUNCTIONAL_DEPENDENCY_IN_EVOLVED_BACKGROUND_NOT_INDEPENDENT_SUFFICIENCY",
+      "functional_panel_partner": "tacrolimus",
+      "gene": "CNA1 (reference CMP1)",
+      "lineage": "Ca-F-9",
+      "location": "Figure 7A,B"
+    },
+    {
+      "azole": "fluconazole",
+      "controls": "ANCESTRAL_RESPONSE_DIFFERS_AND_CA_F_9_REMAINS_RESISTANT_IN_REPORTED_COMPARISON",
+      "direct_myriocin_resistance_claim": false,
+      "evidence": "CANDIDATE_WITH_PHARMACOLOGICAL_SUPPORT_NOT_ALLELE_SPECIFIC_GENETIC_VALIDATION",
+      "gene": "LCB1-associated orf19.6438",
+      "lineage": "Ca-F-8",
+      "location": "Figure 7C",
+      "modifier": "myriocin",
+      "partner": "tacrolimus"
+    }
+  ],
+  "constraints": {
+    "github_mutations_this_checkpoint": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0
+  },
+  "curation_decision": "RETAIN_QUALIFIED_RESEARCH_NO_UNCONDITIONAL_SINGLE_AGENT_OR_EXACT_ALLELE_ASSERTION",
+  "date": "2026-10-13",
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-calcineurin/protected-before.json",
+      "sha256": "ec126c3b445befdd5d9ace6a0952fa069b50b039fdd88ffb7f2b4cac43f149c4"
+    },
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-calcineurin/canary-reviewed.json",
+      "sha256": "5f4734091c9a2283ec90238883eeb3d0e48af73032166b7cb3284f0ad3a4bb80"
+    },
+    "census": {
+      "path": "research/2026-10-13-tubercidin-resistance-grounding.tsv",
+      "sha256": "0a9d4c8c48eb8c29a7f7fe59c8b455ce586ed6648be8e6d6759ab1b23706f6b2"
+    },
+    "cgd_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-07/cgd-albicans-a22-r37-features-2026-10-09.json",
+      "sha256": "6b87732ed7e8103beb73fefc45d1a73f69f3577a8490ffaf13241ab056fa69f9"
+    },
+    "hsp90": {
+      "path": "research/2026-10-13-hsp90-context.json",
+      "sha256": "77b9185a3ed7cf6e2944f61dc8821d78079370059b7779cdc45d08a9caa36fa1"
+    },
+    "inspection": {
+      "path": "reports/resistance-grounding-2026-10-13-calcineurin/inspection.json",
+      "sha256": "09ad13b92f6c93cf47864add3f42bdf7cd4c3b19396fa4eb3509b2e2ceaa9221"
+    },
+    "locus_followup": {
+      "path": "reports/resistance-grounding-2026-10-13-calcineurin/lcb1-locus-plan.json",
+      "sha256": "ec068cecfe8ce45261f8c8b21abcdcf9de1f2b86436a1e98d46d21433357f980"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-calcineurin/cohort.json",
+      "sha256": "675e366b0441136d67e88700f01b4b9730dcc5e885bf949b52e22158d65ea943"
+    },
+    "prior": {
+      "path": "research/2026-10-13-yeast-regulator-context.json",
+      "sha256": "b0623eaeb0082c8cca2267299ce76b194756865099721227f39bdb014eb664a1"
+    },
+    "progress": {
+      "path": "research/2026-10-13-tubercidin-resistance-progress.json",
+      "sha256": "4b290eabd54e28aadd0990c4c74b07c1bcb8f6362dc8be77e90a59b827d923d6"
+    }
+  },
+  "limitations": [
+    "Reference proteins, strain TaxIDs and haplotype-paired aliases are not experimental allele IDs.",
+    "Unreviewed protein annotations and CGD orthology do not independently establish gene function.",
+    "A dependency test, an allele-specific comparison and a pharmacological modifier are distinct.",
+    "The same paper uses different azoles in different functional and lineage panels.",
+    "Corpus structures are pinned; the paper's tested preparations were not independently reidentified.",
+    "No direct drug-binding measurement is established here.",
+    "CNA1 dependency and LCB1 pharmacology do not independently establish sufficiency.",
+    "Chromosome-wide associations do not identify which amplified gene causes the phenotype.",
+    "A successful zero-hit alias query is not protein absence; the locus query resolves it.",
+    "Other candidate variants, source supplements and corpus records remain incompletely reviewed.",
+    "No sequences, exact variants, constructs, protocols, numeric AST or clinical calls exported.",
+    "Replay checks source bytes and identifier joins, not scientific truth."
+  ],
+  "lineage_profiles": {
+    "aneuploidy_figure": "Figure 8",
+    "aneuploidy_gene_specific_causality_inferred": false,
+    "aneuploidy_lineages": [
+      "Ca-F-4",
+      "Ca-F-5",
+      "Ca-F-6",
+      "Ca-F-7"
+    ],
+    "candida_calcineurin_inhibitor_combinations": "SOURCE_REPORTED_LINEAGE_CROSS_RESISTANCE",
+    "candida_lineages": [
+      "Ca-F-4",
+      "Ca-F-5",
+      "Ca-F-6",
+      "Ca-F-7",
+      "Ca-F-8",
+      "Ca-F-9"
+    ],
+    "yeast_negative_cross_comparisons": "NO_INCREASED_GELDANAMYCIN_OR_CYCLOSPORIN_A_COMBINATION_RESPONSE"
+  },
+  "primary": {
+    "doi": "10.1371/journal.pgen.1003390",
+    "native_figures": {
+      "5": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure5-storage-response.bin",
+          "sha256": "1227658037ee3c4f80f6a7a195c31f100d5be115e53e8acf85f9e7f60e2114f2"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure5-storage-receipt.json",
+          "sha256": "61ac22bf507035bb12b144a1075926049769b1a420eef72162494041377f0083"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.g005.PNG_L",
+        "native_figure_visually_inspected": true,
+        "retrieved_at": "2026-10-13T19:34:40.126775+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure5-receipt.json",
+          "sha256": "baa0bbb08cf315dc8def82946effa2729f41f671e8cdf9147939227e4d522238"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1003390.g005"
+      },
+      "7": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure7-storage-response.bin",
+          "sha256": "628b5a9a911dc136302d03982fc987fb921ccb0a8aca6800d5643af7a6b85b7c"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure7-storage-receipt.json",
+          "sha256": "a76a4135370923c871a8d5c752cc2636ff8de5e7755c25bc4da26bd906296df9"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.g007.PNG_L",
+        "native_figure_visually_inspected": true,
+        "retrieved_at": "2026-10-13T19:35:47.743316+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure7-receipt.json",
+          "sha256": "ed65699ae0bf19be9e92684913304527c24f25358a692049a16b262ed0683a77"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1003390.g007"
+      },
+      "8": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure8-storage-response.bin",
+          "sha256": "846a97bdd356c0fb5e38f5c9e189d8b6de030b2cd2e2b5f38d97bd45147e64f6"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure8-storage-receipt.json",
+          "sha256": "652571bf6a541854d5db759f27af0bbfd3a56426b885bd42a56b048630e44a29"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.g008.PNG_L",
+        "native_figure_visually_inspected": true,
+        "retrieved_at": "2026-10-13T19:35:48.525204+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/figure8-receipt.json",
+          "sha256": "c7ddba23050bcbe6dcd4270179a43dcb75841822ac64deccfe6017067985eec7"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1003390.g008"
+      }
+    },
+    "pmid": "23593013",
+    "reused_assets": {
+      "article": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-response.bin",
+          "sha256": "0694b721f086ddc1b2ed64b649445561773691dbafa7bd4b4cfa5d613c0643b9"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-receipt.json",
+          "sha256": "a42f66e7f47a0d6a2c297495d4d906d904fb556955e8312dff2cb03e9a7580eb"
+        },
+        "final_url_without_query": "https://journals.plos.org/plosgenetics/article",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T16:51:57.650678+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/article-receipt.json",
+          "sha256": "a42f66e7f47a0d6a2c297495d4d906d904fb556955e8312dff2cb03e9a7580eb"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1003390",
+        "status": 200,
+        "validated_redirects": 0
+      },
+      "table-s1": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-storage-response.bin",
+          "sha256": "702d4768298a45795b86fd84b8cfe2ef1605d703e90ee820dfeebbda3956b1e0"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-storage-receipt.json",
+          "sha256": "36b8692a95dfddd8a99531d687a93d4c75cb71086466f7660394cb2d4a66a057"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.s003.docx",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T17:51:08.985859+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s1-receipt.json",
+          "sha256": "72eb6959bee7cbdce3b6a4e4f6fb7bc6eb18ae9c00ed2e4bb85825b66320936e"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1003390.s003",
+        "status": 200,
+        "validated_redirects": 1
+      },
+      "table-s5": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-storage-response.bin",
+          "sha256": "6c39cf5f38bbaf88578bb65b32404a147d3d0ca007a61fea3517277fcc7e00c6"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-storage-receipt.json",
+          "sha256": "08b75e8e9012b80fcf23b70331142168fb8d0acf94102e02ed184f2c5298df08"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1003390/1/pgen.1003390.s007.docx",
+        "raw_payload_redistributed": false,
+        "retrieved_at": "2026-10-13T17:52:54.873393+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-hsp90/table-s5-receipt.json",
+          "sha256": "2c41dbcd3f923c8486e43f393b57b72451bd4652179532e062e67b37b080b3c7"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1003390.s007",
+        "status": 200,
+        "validated_redirects": 1
+      }
+    },
+    "source_layout_limit": "Several nonselected Table S5 rows have crowded columns in the unchanged source rendering. Selected lineage IDs are legible and independently checked against OOXML.",
+    "whole_article_review_complete": false
+  },
+  "records": [
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "existing_claims_newly_confirmed": false,
+      "identifier": "CHEBI:5292",
+      "label": "geldanamycin",
+      "path": "data/antibiotics/antiviral/geldanamycin.yaml",
+      "sha256": "80d27d088eb4b732c2abc4b413335b6cd1ed5dba9b644663863e6643aebeedca",
+      "standard_inchi_key": "QTQAWLPCGQOSGP-KSRBKZBZSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "existing_claims_newly_confirmed": false,
+      "identifier": "CHEBI:556075",
+      "label": "radicicol",
+      "path": "data/antibiotics/antifungal/radicicol.yaml",
+      "sha256": "d5838a617a62b6963863d2281aa38f9089da02f1c379181f85954710fb02b2ff",
+      "standard_inchi_key": "WYZWZEOGROVVHK-GTMNPGAYSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "existing_claims_newly_confirmed": false,
+      "identifier": "CHEBI:4031",
+      "label": "cyclosporin A",
+      "path": "data/antibiotics/antifungal/cyclosporin-a.yaml",
+      "sha256": "e0d390d0eb1e3ee5652ecf1e8e7e3c5eb95293e57f8ce7b8e06902f22f1a27b9",
+      "standard_inchi_key": "PMATZTZNYRCHOR-CGLBZJNRSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 2,
+      "existing_claims_newly_confirmed": false,
+      "identifier": "antibioticmech:aro-2e3b34cc67",
+      "label": "tacrolimus",
+      "path": "data/antibiotics/unspecified/tacrolimus.yaml",
+      "sha256": "c78b76727b23e17eb186b45746e63a146fc21e4e1608b6c09591822e21154e08",
+      "standard_inchi_key": "QJJXYPPXXYFBGM-LFZNUXCKSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 0,
+      "existing_claims_newly_confirmed": false,
+      "identifier": "CHEBI:582124",
+      "label": "myriocin",
+      "path": "data/antibiotics/antifungal/myriocin.yaml",
+      "sha256": "b9b468983efe2d35de340c675cbb59525a5dcf6a80e0585cd2a3f33468f256c0",
+      "standard_inchi_key": "ZZIKIHCNFWXKDY-GNTQXERDSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 77,
+      "existing_claims_newly_confirmed": false,
+      "identifier": "CHEBI:46081",
+      "label": "fluconazole",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    },
+    {
+      "assertions_added": [],
+      "complete_collection_aware_record_loaded": true,
+      "existing_assertions": 8,
+      "existing_claims_newly_confirmed": false,
+      "identifier": "antibioticmech:aro-11ab0a98bf",
+      "label": "miconazole",
+      "path": "data/antibiotics/antifungal/miconazole.yaml",
+      "sha256": "663c997eb1d5da9ea97d4679e9c3fd9c2fccdc1e468245af3addb0980ce62612",
+      "standard_inchi_key": "BYBLEWFAAKGYCD-UHFFFAOYSA-N",
+      "tested_preparation_independently_reidentified": false,
+      "whole_record_review": "OPEN"
+    }
+  ],
+  "reference_proteins": {
+    "cna1": {
+      "cgd_feature": {
+        "aliases": [
+          "orf19.13454",
+          "CNA",
+          "IPF18159.2",
+          "IPF1465.2",
+          "Contig4-2972_0002",
+          "orf6.3161",
+          "orf6.7577",
+          "CA1587",
+          "CNA1",
+          "CaO19.6033",
+          "CMP2",
+          "orf19.6033",
+          "C1_00730C_B",
+          "C1_00730C",
+          "CAWG_01301"
+        ],
+        "cgd_id": "CAL0000201614",
+        "feature": "C1_00730C_A",
+        "feature_type": "ORF|Verified",
+        "primary_gene_name": "CMP1"
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 44,
+      "exact_resistance_allele": false,
+      "experimental_haplotype_assigned": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "join_basis": "EXACT_CGD_LOCUS_ALIAS_AND_UNIPROT_LOCUS_ANNOTATION_EVIDENCE_ID",
+      "ordered_locus_names": [
+        "CAALFM_C100730CA",
+        "orf19.13454"
+      ],
+      "other_bibliography_primary_results_reviewed": false,
+      "primary_gene_name": "CMP1",
+      "protein_accession": "UniProtKB:A0A1D8PCA8",
+      "protein_name": "Serine/threonine-protein phosphatase",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reviewed_function_inferred": false,
+      "sequence_version": 1,
+      "source_bibliography_pmids": [
+        "15123810",
+        "17419877",
+        "24025428"
+      ],
+      "source_species_taxon_id": "NCBITaxon:5476",
+      "species_lineage_verified": true
+    },
+    "cnb1": {
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 211,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "CNB1",
+        "YCN2",
+        "YCNB"
+      ],
+      "gene_orf_names": [],
+      "ordered_locus_names": [
+        "YKL190W"
+      ],
+      "other_bibliography_primary_results_reviewed": false,
+      "primary_gene_name": "CNB1",
+      "protein_accession": "UniProtKB:P25296",
+      "protein_name": "Calcineurin subunit B",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reuse_scope": "REFERENCE_IDENTITY_ONLY_NOT_A_TRANSFERRED_PHENOTYPE",
+      "sequence_version": 3,
+      "sgd_id": "S000001673",
+      "source_bibliography_pmids": [
+        "1321337",
+        "1659397",
+        "24374639",
+        "8154185",
+        "8196765",
+        "8394042"
+      ],
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "fpr1": {
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 220,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "FKB1",
+        "FPR1",
+        "RBP1"
+      ],
+      "gene_orf_names": [
+        "N1213",
+        "N1845"
+      ],
+      "ordered_locus_names": [
+        "YNL135C"
+      ],
+      "other_bibliography_primary_results_reviewed": false,
+      "primary_gene_name": "FPR1",
+      "protein_accession": "UniProtKB:P20081",
+      "protein_name": "FK506-binding protein 1",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reuse_scope": "REFERENCE_IDENTITY_ONLY_NOT_A_TRANSFERRED_PHENOTYPE",
+      "sequence_version": 2,
+      "sgd_id": "S000005079",
+      "source_bibliography_pmids": [
+        "10049913",
+        "10998178",
+        "14562106",
+        "16823961",
+        "1701173",
+        "1704127",
+        "1705713",
+        "17322287",
+        "18407956",
+        "19779198",
+        "1996117",
+        "20305002",
+        "22814378",
+        "24374639",
+        "7681823",
+        "8619318",
+        "9169873",
+        "9315655"
+      ],
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "lcb1": {
+      "cgd_feature": {
+        "aliases": [
+          "orf19.13796",
+          "IPF20723.1",
+          "IPF1370.2",
+          "Contig4-3074_0027",
+          "orf6.7816",
+          "CA5101",
+          "CaO19.6438",
+          "LCB1",
+          "CaO19.13796",
+          "orf19.6438",
+          "CR_08640C_B",
+          "CR_08640C",
+          "CAWG_02149"
+        ],
+        "cgd_id": "CAL0000192873",
+        "feature": "CR_08640C_A",
+        "feature_type": "ORF|Uncharacterized",
+        "primary_gene_name": null
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 121,
+      "exact_resistance_allele": false,
+      "experimental_haplotype_assigned": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "join_basis": "EXACT_CGD_LOCUS_ALIAS_AND_UNIPROT_LOCUS_ANNOTATION_EVIDENCE_ID",
+      "ordered_locus_names": [
+        "CAALFM_CR08640CA",
+        "orf19.13796"
+      ],
+      "other_bibliography_primary_results_reviewed": false,
+      "primary_gene_name": null,
+      "protein_accession": "UniProtKB:Q5A325",
+      "protein_name": "serine C-palmitoyltransferase",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reviewed_function_inferred": false,
+      "sequence_version": 1,
+      "source_bibliography_pmids": [
+        "15123810",
+        "17419877",
+        "24025428"
+      ],
+      "source_species_taxon_id": "NCBITaxon:5476",
+      "species_lineage_verified": true
+    }
+  },
+  "scope": "CONDITIONAL_EVIDENCE_AND_REFERENCE_LOCUS_DISAMBIGUATION",
+  "subjects": {
+    "Ca-F-4": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "CaLC1370",
+      "source_species": "C. albicans",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:5476",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 8
+    },
+    "Ca-F-5": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "CaLC1371",
+      "source_species": "C. albicans",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:5476",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 9
+    },
+    "Ca-F-6": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "CaLC1372",
+      "source_species": "C. albicans",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:5476",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 10
+    },
+    "Ca-F-7": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "CaLC1373",
+      "source_species": "C. albicans",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:5476",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 11
+    },
+    "Ca-F-8": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "CaLC1374",
+      "source_species": "C. albicans",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:5476",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 12
+    },
+    "Ca-F-9": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": true,
+      "source_laboratory_id": "CaLC1503",
+      "source_species": "C. albicans",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:5476",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 13
+    },
+    "Sc-F-2": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": false,
+      "source_laboratory_id": "ScLC1441",
+      "source_species": "S. cerevisiae",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:4932",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 6
+    },
+    "Sc-F-3": {
+      "exact_experimental_protein_assigned": false,
+      "experimental_sample_or_assembly_assigned": false,
+      "listed_in_table_s1_wgs_coverage": false,
+      "source_laboratory_id": "ScLC1443",
+      "source_species": "S. cerevisiae",
+      "species_grounding_basis": "PRIMARY_NAME_AND_REUSED_UNIPROT_REFERENCE_LINEAGE",
+      "species_taxon_id": "NCBITaxon:4932",
+      "strain_taxon_id_assigned": false,
+      "table_s5_row_including_header": 7
+    }
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "experimental_alleles_assigned": 0,
+    "new_native_figures_inspected": 3,
+    "new_taxonomy_queries": 0,
+    "new_uniprot_queries": 5,
+    "reference_proteins": 4,
+    "reviewed_references": 2,
+    "selected_records": 7,
+    "source_lineages": 8,
+    "successful_zero_hit_queries": 1,
+    "unreviewed_references": 2,
+    "whole_records_completed": 0
+  },
+  "taxonomy_reused": {
+    "237561": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-response.bin",
+        "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-receipt.json",
+        "sha256": "004bd1f86dd4cf11611cd60ecaab541bbcb30e9a71e4867fa2e32031d59c02f1"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T15:40:37.883821+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/237561.json"
+    },
+    "559292": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+        "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    }
+  },
+  "uniprot_requests": {
+    "cna1": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/cna1-response.bin",
+        "sha256": "2c0a1d29ae896a513c8f8621c7c284bd3b8032f6196dfdce5e0efb17d6ea8499"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/cna1-receipt.json",
+        "sha256": "d89dd20e0029b5b40b2853afb3c1023a4209bbe97ff3e1e58dfc821cdbe6d510"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T19:35:33.684908+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACNA1+OR+gene_exact%3ACMP1+OR+gene_exact%3Aorf19.6033%29+AND+organism_id%3A237561&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "cnb1": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/cnb1-response.bin",
+        "sha256": "c1f86cb1efce9e961665339ed960b1260b23e589cf3fa9459ac26acc6a7bdaaf"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/cnb1-receipt.json",
+        "sha256": "00fc4092b792abe1b09fe85b43537021fb1e1feb846035743679bb7b1d32b26c"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T19:35:15.610572+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACNB1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "fpr1": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/fpr1-response.bin",
+        "sha256": "39133a3d6f8b90d57ee291acea4369270aa01bf11c027d00ec96106cbe069daa"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/fpr1-receipt.json",
+        "sha256": "741c99f764f9d6d37ee5771c9c45b52cd8e5ec0eeabf98b4792f2c33a0a087e3"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T19:34:23.522968+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFPR1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "lcb1": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/lcb1-response.bin",
+        "sha256": "4ef8c9fa6a38487f82136b148ee8e8f28affcebf460361ed69a0a3fd2a47d74f"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/lcb1-receipt.json",
+        "sha256": "bc4c24be793c90be2c6b459e9670e9d11c934e6044f08a23503678b0389b9769"
+      },
+      "release": "2026_03",
+      "results": 0,
+      "retrieved_at": "2026-10-13T19:35:34.377549+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ALCB1+OR+gene_exact%3Aorf19.6438+OR+gene_exact%3ACaO19.6438%29+AND+organism_id%3A237561&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "lcb1-locus": {
+      "all_strains_and_aliases_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/lcb1-locus-response.bin",
+        "sha256": "9402c9f235d07ca994dfc11c0ea1dd1c541d155f6ccd1c69b5d26848ca915e93"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-calcineurin/lcb1-locus-receipt.json",
+        "sha256": "07767570422d5d458824cf01afbdbf5dd616e9be3876319bb29ef2eaffabe9e6"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T19:36:57.641489+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aorf19.13796+AND+organism_id%3A237561&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

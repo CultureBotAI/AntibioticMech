@@ -1,0 +1,1019 @@
+{
+  "archive_scope": {
+    "accessions_are_assemblies": false,
+    "new_archive_requests": 0,
+    "source_data_types": [
+      "RNA-seq",
+      "ChIP-seq"
+    ],
+    "source_reported_accessions": [
+      "DRA007139",
+      "DRA008879"
+    ],
+    "subject_sample_or_genome_join_established": false
+  },
+  "chemical_scope": {
+    "complete_collection_aware_record_loaded": true,
+    "record_alias": "rapamycin",
+    "tested_preparation_independently_reidentified": false
+  },
+  "date": "2026-10-13",
+  "evidence_limits": [
+    "Growth spot assays are not MICs or clinical susceptibility categories.",
+    "The binding explanation is not directly measured by these growth comparisons.",
+    "FAP1 promoter-binding results are not a new FAP1 resistance test.",
+    "Reference proteins and strain TaxIDs are not exact experimental alleles or subjects.",
+    "No phenotype is transferred to everolimus or from the separate held Springer study."
+  ],
+  "findings": [
+    {
+      "gene": "FPR1",
+      "heterologous_scope": "Foreign proteins tested in yeast do not establish native-organism resistance.",
+      "location": "Figure 5B",
+      "negative_control_scope": "Different FPR1 perturbations do not have identical outcomes.",
+      "other_background": "Figure 5C has a distinct host and poor baseline growth in several conditions.",
+      "scope": "Qualitative growth-response association in selected laboratory comparisons.",
+      "source_host": "YKK207"
+    },
+    {
+      "gene": "TOR2",
+      "location": "Figure 6",
+      "numbering_caveat": "The source notes differences from older-paper residue labels; no translation made.",
+      "other_background": "FPR1/HMO1 contexts and drug-free growth remain separate.",
+      "scope": "Qualified growth-response association in the source-selected laboratory backgrounds.",
+      "source_host": "YKK1081"
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/sirolimus-before-2026-10-13.yaml",
+    "sha256": "27fcbe8f6b7789fcaf8b9bfba90a4c7b8e76a9967ac3a240978c59a9ec8fa375"
+  },
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/protected-before.json",
+      "sha256": "ef15831f3f2024f0e9f29dd233c3ed191793aff3edb919d40df8157218659279"
+    },
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/canary-reviewed.json",
+      "sha256": "e7daecd33147b172157aac661048e73ac55370c9b5287dfc5392ee980852deb5"
+    },
+    "census": {
+      "path": "research/2026-10-13-tubercidin-resistance-grounding.tsv",
+      "sha256": "0a9d4c8c48eb8c29a7f7fe59c8b455ce586ed6648be8e6d6759ab1b23706f6b2"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/cohort.json",
+      "sha256": "9f327f0da9b30da73fc73000e71f4ba4b50ab2376d4af74c098f5810786246e9"
+    },
+    "prior": {
+      "path": "research/2026-10-13-rapamycin-references.json",
+      "sha256": "6224632920de02d1ec61667702c26a9b10ac57570fbf4f403ad9be1a9fa45f5e"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-rapamycin-verification.json",
+      "sha256": "0f80065a91688c79622dc993d00e13c348da9edec1c14b22b7a10eaaa09586f2"
+    },
+    "progress": {
+      "path": "research/2026-10-13-tubercidin-resistance-progress.json",
+      "sha256": "4b290eabd54e28aadd0990c4c74b07c1bcb8f6362dc8be77e90a59b827d923d6"
+    },
+    "tor2_plan": {
+      "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/tor2-plan.json",
+      "sha256": "81d707f83c26e39ae6aafdf9938006f7ad298a0090cc8ef2feb0bee8024a41f9"
+    }
+  },
+  "limits": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "raw_primary_assets_redistributed": false,
+    "reuse_terms_review_resumed": false,
+    "sequences_variant_specifications_constructs_or_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "planned_gene_associations": 2,
+  "primary": {
+    "assets": {
+      "article": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/article-response.bin",
+          "sha256": "1298965038c5922b5faa3d238f9e01adf2e5d466f7210d4514f6fd0f04493c6a"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/article-receipt.json",
+          "sha256": "01148aee2f90a5743043c55cada8fa2a8cf4b12a41be771a836ec843ce84459d"
+        },
+        "final_url_without_query": "https://journals.plos.org/plosgenetics/article",
+        "retrieved_at": "2026-10-13T20:02:32.855916+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/article-receipt.json",
+          "sha256": "01148aee2f90a5743043c55cada8fa2a8cf4b12a41be771a836ec843ce84459d"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1008865",
+        "status": 200,
+        "validated_publisher_redirects": 0
+      },
+      "figure5": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/figure5-storage-response.bin",
+          "sha256": "76b0c3f960828ccc3253af78e58a452df0201dd2713f7d9a461c6336f345ab2d"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/figure5-storage-receipt.json",
+          "sha256": "73387f76144ac20b4c24082fc0becba9d3f983fe8e24008b64a253bc6adf6a94"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1008865/2/pgen.1008865.g005.PNG_L",
+        "retrieved_at": "2026-10-13T20:03:07.144928+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/figure5-receipt.json",
+          "sha256": "847652ca93de551a4c4e8fd0714923044ffd9cc6b23761e06eaf4bf64f14ea25"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1008865.g005",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      },
+      "figure6": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/figure6-storage-response.bin",
+          "sha256": "7a9840ade63f625713418995fcaad7f60756804470de40a03621e414c4691989"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/figure6-storage-receipt.json",
+          "sha256": "3044a3141a4bae7b32433a5bbe27993d5ead07de6b162052c6ff32a6bd634401"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1008865/2/pgen.1008865.g006.PNG_L",
+        "retrieved_at": "2026-10-13T20:04:04.291494+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/figure6-receipt.json",
+          "sha256": "811db32395775bdfcbf9f39340e4cc80c4c762c131a1d5a109f4e6ba9972db47"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1008865.g006",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      },
+      "strains": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/strains-storage-response.bin",
+          "sha256": "ea841e48a9769787dad023af4257a34ddafef43b1d92fca7f230cd5ff0dedfb7"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/strains-storage-receipt.json",
+          "sha256": "36c914d2d426df31e126b33cd351de4f2ac25a8b88061968c032f9adff26f681"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1008865/2/pgen.1008865.s010.xlsx",
+        "retrieved_at": "2026-10-13T20:04:06.598076+00:00",
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/strains-receipt.json",
+          "sha256": "872108bb7de1f8c3772bd3d813e303e50e6b14052cd321db3fc18a356b7061be"
+        },
+        "source_url": "https://journals.plos.org/plosgenetics/article/file?type=supplementary&id=10.1371/journal.pgen.1008865.s010",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      }
+    },
+    "attribution": "Kasahara et al. (2020), PLOS Genetics, CC BY",
+    "doi": "10.1371/journal.pgen.1008865",
+    "native_figures_visually_reviewed": [
+      "Figure 5",
+      "Figure 6"
+    ],
+    "sections_reviewed": [
+      "Results / Characterization of Fpr1 function",
+      "Figures 5 and 6 captions",
+      "Methods / source strain-table link",
+      "Data Availability"
+    ],
+    "strain_table_rendered_or_visually_reviewed": false,
+    "strain_table_structured_cells_inspected": true,
+    "url": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1008865",
+    "whole_article_review_complete": false
+  },
+  "record_before": {
+    "identifier": "CHEBI:9168",
+    "label": "sirolimus",
+    "path": "data/antibiotics/antibacterial/sirolimus.yaml",
+    "sha256": "27fcbe8f6b7789fcaf8b9bfba90a4c7b8e76a9967ac3a240978c59a9ec8fa375",
+    "standard_inchi_key": "QFJCIRLUMZQUOT-HPLJOQBZSA-N"
+  },
+  "scope": "SELECTED_PRIMARY_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "subjects": {
+    "YKK1080": {
+      "experimental_strain_taxon_or_genome_assigned": false,
+      "host_label_is_unique_assayed_derivative": false,
+      "source_cells": "Sheet1!A35:C35",
+      "source_host_label": "YKK1080",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_taxon_id": "NCBITaxon:4932"
+    },
+    "YKK1081": {
+      "experimental_strain_taxon_or_genome_assigned": false,
+      "host_label_is_unique_assayed_derivative": false,
+      "source_cells": "Sheet1!A36:C36",
+      "source_host_label": "YKK1081",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_taxon_id": "NCBITaxon:4932"
+    },
+    "YKK1093": {
+      "experimental_strain_taxon_or_genome_assigned": false,
+      "host_label_is_unique_assayed_derivative": false,
+      "source_cells": "Sheet1!A42:C42",
+      "source_host_label": "YKK1093",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_taxon_id": "NCBITaxon:4932"
+    },
+    "YKK1097": {
+      "experimental_strain_taxon_or_genome_assigned": false,
+      "host_label_is_unique_assayed_derivative": false,
+      "source_cells": "Sheet1!A43:C43",
+      "source_host_label": "YKK1097",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_taxon_id": "NCBITaxon:4932"
+    },
+    "YKK206": {
+      "experimental_strain_taxon_or_genome_assigned": false,
+      "host_label_is_unique_assayed_derivative": false,
+      "source_cells": "Sheet1!A10:C10",
+      "source_host_label": "YKK206",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_taxon_id": "NCBITaxon:4932"
+    },
+    "YKK207": {
+      "experimental_strain_taxon_or_genome_assigned": false,
+      "host_label_is_unique_assayed_derivative": false,
+      "source_cells": "Sheet1!A11:C11",
+      "source_host_label": "YKK207",
+      "source_species": "Saccharomyces cerevisiae",
+      "species_taxon_id": "NCBITaxon:4932"
+    }
+  },
+  "taxonomy_request": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  },
+  "uniprot": {
+    "FPR1": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.88.3.1029"
+            },
+            {
+              "database": "PubMed",
+              "id": "1704127"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.88.5.1948"
+            },
+            {
+              "database": "PubMed",
+              "id": "1705713"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.11.3.1718-1723.1991"
+            },
+            {
+              "database": "PubMed",
+              "id": "1996117"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/yea.320111210"
+            },
+            {
+              "database": "PubMed",
+              "id": "8619318"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s093"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169873"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1101/gr.6037607"
+            },
+            {
+              "database": "PubMed",
+              "id": "17322287"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(17)45319-1"
+            },
+            {
+              "database": "PubMed",
+              "id": "1701173"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1990"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.17.10.5968"
+            },
+            {
+              "database": "PubMed",
+              "id": "9315655"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/genetics/151.3.935"
+            },
+            {
+              "database": "PubMed",
+              "id": "10049913"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1046/j.1365-2958.2000.02105.x"
+            },
+            {
+              "database": "PubMed",
+              "id": "10998178"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/pr050477f"
+            },
+            {
+              "database": "PubMed",
+              "id": "16823961"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/ec.00044-10"
+            },
+            {
+              "database": "PubMed",
+              "id": "20305002"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2010"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.1210303109"
+            },
+            {
+              "database": "PubMed",
+              "id": "22814378"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2012"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.2210/pdb1yat/pdb"
+            },
+            {
+              "database": "PubMed",
+              "id": "7681823"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1993"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 220,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "FKB1",
+        "FPR1",
+        "RBP1"
+      ],
+      "ordered_locus_names": [
+        "YNL135C"
+      ],
+      "primary_gene_name": "FPR1",
+      "protein_accession": "UniProtKB:P20081",
+      "protein_name": "FK506-binding protein 1",
+      "reference_identity_only": true,
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/fpr1-response.bin",
+          "sha256": "39133a3d6f8b90d57ee291acea4369270aa01bf11c027d00ec96106cbe069daa"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-calcineurin/fpr1-receipt.json",
+          "sha256": "741c99f764f9d6d37ee5771c9c45b52cd8e5ec0eeabf98b4792f2c33a0a087e3"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T19:34:23.522968+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFPR1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reused": true,
+      "sequence_version": 2,
+      "sgd_id": "S000005079",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "TOR2": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/0092-8674(93)90144-f"
+            },
+            {
+              "database": "PubMed",
+              "id": "8387896"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1993"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/369371a0"
+            },
+            {
+              "database": "PubMed",
+              "id": "8196765"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1994"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/0092-8674(95)90058-6"
+            },
+            {
+              "database": "PubMed",
+              "id": "7606777"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/j.1460-2075.1995.tb00277.x"
+            },
+            {
+              "database": "PubMed",
+              "id": "8846782"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1091/mbc.7.1.25"
+            },
+            {
+              "database": "PubMed",
+              "id": "8741837"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1996"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.93.24.13780"
+            },
+            {
+              "database": "PubMed",
+              "id": "8943012"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1996"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/emboj/17.23.6924"
+            },
+            {
+              "database": "PubMed",
+              "id": "9843498"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.95.8.4264"
+            },
+            {
+              "database": "PubMed",
+              "id": "9539725"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1998"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/emboj/18.10.2782"
+            },
+            {
+              "database": "PubMed",
+              "id": "10329624"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1091/mbc.10.4.987"
+            },
+            {
+              "database": "PubMed",
+              "id": "10198052"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/45287"
+            },
+            {
+              "database": "PubMed",
+              "id": "10604478"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m007296200"
+            },
+            {
+              "database": "PubMed",
+              "id": "10973982"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s1097-2765(01)00386-0"
+            },
+            {
+              "database": "PubMed",
+              "id": "11741537"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2001"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s1097-2765(02)00636-6"
+            },
+            {
+              "database": "PubMed",
+              "id": "12408816"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2002"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1091/mbc.e02-09-0609"
+            },
+            {
+              "database": "PubMed",
+              "id": "12631735"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1091/mbc.e03-05-0323"
+            },
+            {
+              "database": "PubMed",
+              "id": "14593073"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.cell.2004.11.047"
+            },
+            {
+              "database": "PubMed",
+              "id": "15620355"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/sj.emboj.7600384"
+            },
+            {
+              "database": "PubMed",
+              "id": "15372071"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m505553200"
+            },
+            {
+              "database": "PubMed",
+              "id": "16002396"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2005"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1091/mbc.e04-07-0564"
+            },
+            {
+              "database": "PubMed",
+              "id": "15689497"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2005"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.25.16.7239-7248.2005"
+            },
+            {
+              "database": "PubMed",
+              "id": "16055732"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2005"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m604244200"
+            },
+            {
+              "database": "PubMed",
+              "id": "16959779"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.molcel.2007.04.020"
+            },
+            {
+              "database": "PubMed",
+              "id": "17560372"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1371/journal.pone.0120250"
+            },
+            {
+              "database": "PubMed",
+              "id": "25767889"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2015"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1371/journal.pgen.1007334"
+            },
+            {
+              "database": "PubMed",
+              "id": "29698392"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2018"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/s41467-017-01862-0"
+            },
+            {
+              "database": "PubMed",
+              "id": "29170376"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2017"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 214,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_bibliography": false,
+      "gene_names": [
+        "DRR2",
+        "TOR2",
+        "TSC14"
+      ],
+      "ordered_locus_names": [
+        "YKL203C"
+      ],
+      "primary_gene_name": "TOR2",
+      "protein_accession": "UniProtKB:P32600",
+      "protein_name": "Serine/threonine-protein kinase TOR2",
+      "reference_identity_only": true,
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/tor2-response.bin",
+          "sha256": "c38f1e04faf91d7456dcb18180cba08671d686d416e511e510cf44e65f0dbbe6"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fpr1-primary/tor2-receipt.json",
+          "sha256": "3bc9ea26d148c3ee68d17ff6623fc4e5e2f3fafe2f18e74e2f3d90e7ee045577"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T20:04:09.851681+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ATOR2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reused": false,
+      "sequence_version": 3,
+      "sgd_id": "S000001686",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "uniprot_attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "whole_record_reviews_completed": 0
+}
