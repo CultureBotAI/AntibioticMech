@@ -61,6 +61,11 @@ laboratory associations in Leishmania major. Unreviewed UniProt entries are
 versioned reference context only; mechanisms and exact experimental alleles
 remain unresolved. IC50 comparisons are not imported as MICs or clinical calls.
 
+The [Hsp90 combination checkpoint](2026-10-13-hsp90-context.json) distinguishes
+three source lineages and three UniProt references from unconditional resistance
+to geldanamycin or radicicol. Source archive and alignment-reference labels are
+not experimental genome assignments; no biological record changes in this pass.
+
 The [blasticidin deaminase follow-up](2026-10-13-blasticidin-deaminase-context.json)
 adds two qualified bsr-associated contexts, separating the native donor isolate
 from the laboratory host. UniProt remains a donor reference, not an exact
@@ -8746,6 +8751,57 @@ the project pin 2026.3.5; the receipt discloses this deviation and does not clai
 pinned-environment or CI reproduction. Source inputs and the earlier V-ATPase
 and myriocin checkpoints remain intact. No NCBI requests, source adoption or
 GitHub mutations occurred; #1040 remains deferred.
+
+## Hsp90 Combination and Genome Scope (2026-10-13)
+
+The [Hsp90 dossier](2026-10-13-hsp90-context.json) investigates exact geldanamycin
+CHEBI:5292 and radicicol CHEBI:556075 using selected results from
+[Hill et al. (2013)](https://doi.org/10.1371/journal.pgen.1003390).
+Native Figures 2 and 4 and all five rendered pages of Tables S1 and S5 were
+inspected. The article's Figure 1 control caption was read, but that native
+figure was not retrieved. Several nonselected strain-table rows have crowded
+columns in the unchanged rendering; selected lineage IDs were also checked
+against the source OOXML.
+
+The findings are conditional on fluconazole co-exposure. Two yeast lineages
+have HSC82-related functional evidence for the geldanamycin combination;
+their radicicol-combination cross-resistance is a lineage phenotype, not an
+independent test of the allele's effect on radicicol. The Candida lineage has
+HSP90-related functional evidence for the geldanamycin combination but no
+increased radicicol-combination cross-resistance in the reported comparison.
+HSP82 compensation is a discussion hypothesis, not an experimentally established
+determinant. Tested non-inhibitory single-agent controls do not establish a
+general susceptibility category. No unconditional single-drug assertion, clinical
+call or numeric AST was curated.
+
+UniProt release 2026_03 resolves HSC82/P15108 (entry 236, sequence 4),
+HSP82/P02829 (255, 1) and Candida HSP90/P46598 (149, 1). The yeast loci
+YMR186W and YPL240C remain separate; Candida's ordered locus CAALFM_C702030WA
+and its ORF names retain their distinct source fields. Reused UniProt taxonomy
+separates reference strains 559292 and 237561 from species 4932 and 5476.
+No reference protein or strain TaxID is assigned as an exact experimental
+allele or laboratory subject. Missing focal citations in the returned
+bibliographies do not negate the separately inspected primary results.
+
+Table S5 links Sc-G-12, Sc-G-14 and Ca-G-10 to laboratory identifiers
+ScLC1539, ScLC1541 and CaLC1486. None is listed in Table S1's eight-row
+whole-genome coverage set. This is a table-bounded finding, not a claim that
+sequencing data do not exist elsewhere. SRA065341 remains a source-reported
+archive accession only. S288c 2010 and SC5314/CGD assembly 21 are alignment
+reference labels, not versioned experimental genome accessions or sample joins.
+
+An earlier publication-ID UniProt query returned HTTP 400 because its field
+was invalid, not because access was denied or no protein existed. The second
+planned publication query was not run. Three separately planned gene-name
+queries completed. The 2009 ACS primary-text purchase hold remains; the 2011
+FASEB and 2010 human-protein leads have not had primary requests in this pass.
+Other genes in the PLOS study, including PDR1, still need their own assessment.
+
+All 2,939 biological records and the current coverage ledger remain unchanged.
+The broader goal and every whole-record review remain open. The audit replays
+metadata, source pins and selected identifier joins, not scientific truth.
+No NCBI requests, outreach, source adoption, GitHub mutation or reuse-terms work
+occurred in this checkpoint; #1040 remains deferred.
 
 ## Remaining work
 
