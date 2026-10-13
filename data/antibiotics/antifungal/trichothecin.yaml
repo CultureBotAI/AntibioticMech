@@ -58,3 +58,31 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-13T09:59:58Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added a qualified laboratory yeast PDR5 association from inspected primary
+    results. UniProt remains reference-only; no experimental allele, protein, genome
+    or numeric AST assigned. Preserved existing owners and left whole-record review
+    open.
+  llm_assisted: true
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  label: Laboratory PDR5-associated trichothecin resistance
+  gene_id: PDR5
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative trichothecin resistance
+  assay: Comparative growth susceptibility
+  note: Context-dependent association in FY1679-28C and YALA-B1/YALA-G4 derivatives.
+    Efflux is the authors' interpretation of the genetic comparisons, not a direct
+    transport measurement. This is not a species-wide phenotype. Experimental allele,
+    protein and genome unresolved; no standardized MIC or clinical category inferred.
+  evidence:
+  - reference: PMID:27245696
+    notes: DOI:10.1186/s12864-016-2718-y; Results and native Figure 1a-b. Figure 1c
+      is DON-only; the hypersensitivity screen is not imported as resistant alleles.
+  - reference: https://www.uniprot.org/uniprotkb/P33302/entry
+    notes: Reference-only UniProtKB:P33302, entry version 235, sequence version 1,
+      release 2026_03; PDR5 in S288c (NCBITaxon:559292). Not an exact experimental
+      derivative or resistance allele.

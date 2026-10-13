@@ -84,7 +84,8 @@ def test_live_claims_have_reference_provenance_not_subject_accessions(identifier
 def test_reseed_changes_only_identifier_scope_and_review_checksums(tmp_path):
     inventory = ROOT / "data/raw/phibase_amr.tsv"
     rows = list(csv.DictReader(inventory.open(), delimiter="\t"))
-    old_review = json.loads(review.DEFAULT_REVIEW.read_bytes())
+    historical_review = ROOT / "tests/fixtures/phibase-grounding-before-neurospora-2026-10-13.json"
+    old_review = json.loads(historical_review.read_bytes())
     old_review["reviews"] = [r for r in old_review["reviews"]
                              if r["review_id"] != "ma-2024-reference-context"]
     old_path = tmp_path / "old-review.json"
@@ -95,7 +96,8 @@ def test_reseed_changes_only_identifier_scope_and_review_checksums(tmp_path):
     before, after = copy.deepcopy(fixture), copy.deepcopy(fixture)
     previous_counts = seed.attach_phibase_resistance(before, grounding_review=old_path)
     assert previous_counts["reviewed_identifier_context"] == 185
-    assert seed.attach_phibase_resistance(after)["reviewed_identifier_context"] == 189
+    assert seed.attach_phibase_resistance(after, grounding_review=historical_review)[
+        "reviewed_identifier_context"] == 189
     changed = refreshed = 0
     for identifier, old in before.items():
         new = after[identifier]

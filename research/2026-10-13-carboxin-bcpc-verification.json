@@ -1,0 +1,168 @@
+{
+  "adversarial_self_review": [
+    "An exact cross-reference match is not a verified gene ID or experimental allele.",
+    "Gene-annotation membership is not independently sufficient to type a database object.",
+    "The rejected historical STS1 mapping remains rejected despite matching database text.",
+    "Conference and journal evidence remain distinct and do not create independent replicates.",
+    "Carboxin source-owned subject review remains pending; no experimental accession is inferred.",
+    "Saved export tests do not depend on mutable live-record or current-source hashes.",
+    "Same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-carboxin-bcpc-context.json",
+      "sha256": "33948e5ea3b0f97f2bd812b88aa0edade856855301bde1f80a3aef5d524bd736"
+    },
+    {
+      "path": "research/2026-10-13-phibase-gene-id-types.json",
+      "sha256": "e6397f6bc3d0e812d86567780ad44615e5c5b3fb4c16493932c86e59fdf0e25f"
+    },
+    {
+      "path": "scripts/audit_phibase_gene_ids.py",
+      "sha256": "f015bfe5773c8f4aa7a50553585fdb95a0d396862fcf9fd035efa6a78ba5b747"
+    },
+    {
+      "path": "tests/test_phibase_gene_id_types.py",
+      "sha256": "dedb1aa699df9562c9093109af235a6968329f8bd77f4f89d71cc8e7b3afdebe"
+    }
+  ],
+  "biological_claims_added": 0,
+  "checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_phibase_gene_id_types.py",
+        "tests/test_resistance_progress.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:27:33.043322+00:00",
+      "label": "focused",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/focused.log",
+        "sha256": "51d559bdb2e9ac63f7d10b64bca9c98756a52547c9f6502d2222855bc3ebc244"
+      },
+      "output": ".............................................................            [100%]\n61 passed in 35.23s\n",
+      "started": "2026-10-13T08:26:57.185421+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:27:33.128983+00:00",
+      "label": "lint",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/lint.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      "output": "All checks passed!\n",
+      "started": "2026-10-13T08:27:33.043994+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:28:07.575098+00:00",
+      "label": "documentation",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/documentation.log",
+        "sha256": "4e35248929325fef11134949b3f16dc729df9c28d017e999898555d14bcb0afd"
+      },
+      "output": "README statistics are current.\n",
+      "started": "2026-10-13T08:27:33.129539+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:28:10.704412+00:00",
+      "label": "provenance",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/provenance.log",
+        "sha256": "68c76ba32a2734dee9a016ec9d2fe6838468bcaf7abf9b221dfa6e696bf98e33"
+      },
+      "output": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n",
+      "started": "2026-10-13T08:28:07.575748+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:28:11.003530+00:00",
+      "label": "source_queue",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/source_queue.log",
+        "sha256": "3b2102be916d52253b62ecc2af38f5c018c5ea536815eddbe2ffcb4106c3fa64"
+      },
+      "output": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n",
+      "started": "2026-10-13T08:28:10.705027+00:00"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:28:11.094650+00:00",
+      "label": "diff",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/diff.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": "",
+      "started": "2026-10-13T08:28:11.004096+00:00"
+    }
+  ],
+  "date": "2026-10-13",
+  "full_qc_rerun": false,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "preservation": {
+    "activity_memberships_raw_inputs_curation_pages_and_embeddings_unchanged": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/baseline.json",
+      "sha256": "b70ecf430efdedace551eddfea9f10fd784dbce4811d3d382a06e7ef97571855"
+    },
+    "biological_records_byte_identical": 2939,
+    "historical_research_files_byte_identical_except_main_report": 388,
+    "ignored_files_included": true,
+    "protected_files_byte_identical": 3385
+  },
+  "previous_full_qc": {
+    "finished": "2026-10-13T08:10:21.149305+00:00",
+    "historical_not_new_pass": true,
+    "receipt": {
+      "path": "research/2026-10-13-abd1-verification.json",
+      "sha256": "7729b9a032f6fd1f11a98ab83b1580ea02c0b50c19a08c57520ee11a5f4fef22"
+    },
+    "test_summary": "3183 passed, 4 skipped in 1718.18s (0:28:38)"
+  },
+  "scope": "PRIMARY_CONTEXT_AND_OFFLINE_IDENTIFIER_TYPE_AUDIT",
+  "source_adoptions": 0,
+  "source_checks": {
+    "native_pdf_and_page_artifacts": 7,
+    "network_during_verification": 0,
+    "sequence_free_uniprot_requests": 2,
+    "typed_audit_reproduced_byte_identically": true
+  },
+  "verification_scope": "Focused regression, lint, documentation, provenance and source gates for research-only additions. No biological or production-pipeline edit occurred; a new full-QC pass is not claimed.",
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

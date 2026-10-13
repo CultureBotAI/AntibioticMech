@@ -1,0 +1,88 @@
+{
+  "adversarial_review": [
+    "Polyoxin D is an exact synonym of polyoxorim, not an absent record or nikkomycin synonym.",
+    "Reference isozymes are not acquired resistance alleles or exact experimental assignments.",
+    "Biochemical measurements and isozyme-dependent growth remain distinct from clinical AST.",
+    "Taxonomy is grounded through UniProt lineage, not claimed as article-reported TaxIDs.",
+    "Failed visual inspection is not replaced by cached text or a completed whole-article review.",
+    "Historical tests use pinned snapshots rather than freezing mutable live records.",
+    "Same-agent adversarial review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "2dac85dd90fed5dc0c04b7d8fd879986b1efa99c19301d370852a871b6a68a87"
+    },
+    {
+      "path": "research/2026-10-13-chitin-synthase-context.json",
+      "sha256": "6ca2438040affd2b84d94622e0abdd734347cb39456871fc274b3d2c8d24356b"
+    },
+    {
+      "path": "tests/test_chitin_synthase_context.py",
+      "sha256": "8cb97b99ad97f687aff3ab0ba2df51f45e1fb99b585499fc58355e2de8baa4e9"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-nikkomycin/protected-before.json",
+    "sha256": "e3af3ef599a73075b6e1051169c791ea8520d6dac4052de2a81df50db0f613ed"
+  },
+  "baseline_files_checked": 7110,
+  "date": "2026-10-13",
+  "experimental_accessions_assigned": 0,
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_at_checkpoint": 0,
+  "ignored_files_included": true,
+  "issue_1040": "DEFERRED",
+  "metadata_and_dossier_replayed_offline_with_network_disabled": true,
+  "native_figures_visually_inspected": false,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-chitin-synthase-context.json",
+    "tests/test_chitin_synthase_context.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "primary_scientific_interpretation_automatically_revalidated": false,
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "reuse_terms_review_resumed": false,
+  "source_adoptions": 0,
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_uniprot_queries": 2,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "new_taxonomy_requests": 0,
+    "reference_isozymes": 3,
+    "selected_records": 2,
+    "whole_records_completed": 0
+  },
+  "test_results": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_chitin_synthase_context.py",
+      "tests/test_sampangine_context.py",
+      "tests/test_tavaborole_references.py",
+      "tests/test_resistance_grounding_audit.py",
+      "tests/test_resistance_progress.py",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-nikkomycin/checkpoint-tests.xml"
+    ],
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-nikkomycin/checkpoint-tests.xml",
+      "sha256": "faef41c1755f039bf58dfbe89268a7ee94be95e2c87e49ef49d78a76df722d87"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-nikkomycin/checkpoint-tests.log",
+      "sha256": "befc0e50f15e1f3958a1ac0fb7021339f8e3fb458805d71bfdcd16b701caee9b"
+    },
+    "passed": 83,
+    "skipped": 0
+  }
+}

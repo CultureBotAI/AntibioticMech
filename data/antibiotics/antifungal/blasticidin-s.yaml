@@ -123,6 +123,14 @@ curation_history:
     kept UniProt and MG1655 genome as reference context. Preserved previous curation;
     no clinical category or experimental genome assigned.
   llm_assisted: true
+- timestamp: '2026-10-13T11:46:51Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two qualified bsr-associated blasticidin S inactivation claims, separating
+    a source-reported native isolate from a laboratory host. UniProt is reference-only;
+    no exact allele, protein, genome or numeric AST assigned. Preserved existing uptake
+    claims and activities; whole-record review remains open.
+  llm_assisted: true
 resistance_mechanisms:
 - mechanism_type: REDUCED_PERMEABILITY
   label: oppA loss associated with blasticidin S resistance in laboratory E. coli
@@ -164,6 +172,55 @@ resistance_mechanisms:
   - reference: DOI:10.1371/journal.pgen.1006902
     notes: Correction inspected; corrected Figure 3 used. Table 2 and Table S2 are
       unchanged by the notice.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  label: bsr-associated blasticidin S inactivation in the source-reported bacterial
+    isolate
+  gene_id: bsr
+  taxon_id: NCBITaxon:1396
+  taxon_label: Bacillus cereus
+  strain: K55-S1
+  phenotype_label: Source-reported blasticidin S resistance
+  assay: Qualitative resistance and biochemical deaminase evidence
+  note: Native source isolate identified phenotypically in the historical study, not
+    re-identified genomically. Deamination is distinct from chemical isomerization.
+    This is not a species-wide phenotype. Exact experimental allele, protein and genome
+    unresolved; no standardized MIC or clinical category inferred. The claim concerns
+    the blasticidin S moiety, not equivalence of salt forms.
+  evidence:
+  - reference: DOI:10.7164/antibiotics.40.1791
+    notes: 'Pages 1791-1793 and Figures 1-2: native K55-S1 context and biochemical
+      inactivation; not a host-specific E. coli susceptibility measurement.'
+  - reference: DOI:10.1271/bbb1961.55.3155
+    notes: 'Pages 3155-3157 and Figure 2: bsr donor/host provenance and qualitative
+      gene-function evidence. Laboratory host and native donor remain distinct.'
+  - reference: https://www.uniprot.org/uniprotkb/P33967/entry
+    notes: Reference-only UniProtKB:P33967, entry version 95, sequence version 1,
+      release 2026_03; bsr in Bacillus cereus, with K55-S1 in the cited source context.
+      Not an exact experimental allele or host protein accession.
+- mechanism_type: ANTIBIOTIC_INACTIVATION
+  label: bsr-associated blasticidin S inactivation in a laboratory E. coli host
+  gene_id: bsr
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  strain: TK121
+  phenotype_label: Source-reported blasticidin S resistance
+  assay: Qualitative resistance and biochemical deaminase evidence
+  note: Heterologous laboratory host; the enzyme donor is Bacillus cereus K55-S1,
+    not a native E. coli gene assignment. Deamination is distinct from chemical isomerization.
+    This is not a species-wide phenotype. Exact experimental allele, protein and genome
+    unresolved; no standardized MIC or clinical category inferred. The claim concerns
+    the blasticidin S moiety, not equivalence of salt forms.
+  evidence:
+  - reference: DOI:10.7164/antibiotics.40.1791
+    notes: 'Pages 1791-1793 and Figures 1-2: native K55-S1 context and biochemical
+      inactivation; not a host-specific E. coli susceptibility measurement.'
+  - reference: DOI:10.1271/bbb1961.55.3155
+    notes: 'Pages 3155-3157 and Figure 2: bsr donor/host provenance and qualitative
+      gene-function evidence. Laboratory host and native donor remain distinct.'
+  - reference: https://www.uniprot.org/uniprotkb/P33967/entry
+    notes: Reference-only UniProtKB:P33967, entry version 95, sequence version 1,
+      release 2026_03; bsr in Bacillus cereus, with K55-S1 in the cited source context.
+      Not an exact experimental allele or host protein accession.
 activity_spectrum:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli

@@ -1,0 +1,318 @@
+{
+  "experimental_proteins_or_genomes_assigned": 0,
+  "fresh_seed_merge_equal": true,
+  "history_events_added": 3,
+  "new_locus_associations": 11,
+  "numerical_ast_added": 0,
+  "records": [
+    {
+      "before": {
+        "path": "data/antibiotics/antifungal/aculeacin-a.yaml",
+        "sha256": "35137dae602556e4c165ffac59ed56d887ad9f5024d2b9d4c52cfa5855930b6d"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-13-acr/aculeacin-a-canary.yaml",
+        "sha256": "1317d6273e9579eca86304a66e4d42da183b7d84131671710731c92293f07b15"
+      },
+      "claims": [
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR1 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR1",
+          "label": "Historical ACR1-associated laboratory aculeacin A resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative aculeacin A resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR2 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR2",
+          "label": "Historical ACR2-associated laboratory aculeacin A resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative aculeacin A resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR3 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR3",
+          "label": "Historical ACR3-associated laboratory aculeacin A resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative aculeacin A resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR4 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR4",
+          "label": "Historical ACR4-associated laboratory aculeacin A resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative aculeacin A resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added compound-specific historical ACR locus associations from primary results. Kept the molecular route unknown, rejected unsupported modern alias/protein joins, and retained species-only taxonomy. Existing claims are unchanged; no allele, genome or numerical AST assigned. Whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-13T05:07:33Z"
+      },
+      "existing_claims_preserved": 0,
+      "fixture": {
+        "path": "tests/fixtures/aculeacin-a-before-2026-10-13.yaml",
+        "sha256": "35137dae602556e4c165ffac59ed56d887ad9f5024d2b9d4c52cfa5855930b6d"
+      },
+      "identifier": "CHEBI:2450",
+      "record": {
+        "path": "data/antibiotics/antifungal/aculeacin-a.yaml",
+        "sha256": "1317d6273e9579eca86304a66e4d42da183b7d84131671710731c92293f07b15"
+      }
+    },
+    {
+      "before": {
+        "path": "data/antibiotics/antifungal/echinocandin-b.yaml",
+        "sha256": "4dfc8af1ba680deb05b99d10faad8eba4c156e483b5892d25c16d5cc390f356f"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-13-acr/echinocandin-b-canary.yaml",
+        "sha256": "d6a0405b4759f0fef94c2067b7ce77b101a1ade2d69388cf1887004ada21bd42"
+      },
+      "claims": [
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR1 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR1",
+          "label": "Historical ACR1-associated laboratory echinocandin B resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative echinocandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR2 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR2",
+          "label": "Historical ACR2-associated laboratory echinocandin B resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative echinocandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR3 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR3",
+          "label": "Historical ACR3-associated laboratory echinocandin B resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative echinocandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR4 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR4",
+          "label": "Historical ACR4-associated laboratory echinocandin B resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved.",
+          "phenotype_label": "Source-reported relative echinocandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added compound-specific historical ACR locus associations from primary results. Kept the molecular route unknown, rejected unsupported modern alias/protein joins, and retained species-only taxonomy. Existing claims are unchanged; no allele, genome or numerical AST assigned. Whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-13T05:08:37Z"
+      },
+      "existing_claims_preserved": 0,
+      "fixture": {
+        "path": "tests/fixtures/echinocandin-b-before-2026-10-13.yaml",
+        "sha256": "4dfc8af1ba680deb05b99d10faad8eba4c156e483b5892d25c16d5cc390f356f"
+      },
+      "identifier": "CHEBI:315018",
+      "record": {
+        "path": "data/antibiotics/antifungal/echinocandin-b.yaml",
+        "sha256": "d6a0405b4759f0fef94c2067b7ce77b101a1ade2d69388cf1887004ada21bd42"
+      }
+    },
+    {
+      "before": {
+        "path": "data/antibiotics/antifungal/papulacandin-b.yaml",
+        "sha256": "7c22a84a3ed7d336a105781830aabb303401e145387906577d3f3927d572bd7f"
+      },
+      "canary": {
+        "path": "reports/resistance-grounding-2026-10-13-acr/papulacandin-b-canary.yaml",
+        "sha256": "e3468aa27d49bc0adfebd073b051209549050565bf22cf675f07d795e56c7e80"
+      },
+      "claims": [
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR1 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR1",
+          "label": "Historical ACR1-associated laboratory papulacandin B resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved. Compound-specific, background-dependent association; not transferred to ACR2.",
+          "phenotype_label": "Source-reported relative papulacandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR3 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR3",
+          "label": "Historical ACR3-associated laboratory papulacandin B resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved. Compound-specific, background-dependent association; not transferred to ACR2.",
+          "phenotype_label": "Source-reported relative papulacandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        },
+        {
+          "assay": "Comparative growth susceptibility",
+          "evidence": [
+            {
+              "notes": "Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596. Biochemical and surface observations do not establish a molecular route.",
+              "reference": "PMID:1839761"
+            },
+            {
+              "notes": "ACR4 in the unmapped-locus table, revision 406670; inspected 2026-10-13. Modern alias matches are not accepted protein crosswalks.",
+              "reference": "https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670"
+            }
+          ],
+          "gene_id": "ACR4",
+          "label": "Historical ACR4-associated laboratory papulacandin B resistance",
+          "mechanism_type": "UNKNOWN",
+          "note": "Historical unmapped locus in laboratory derivatives; not a species-wide phenotype. Molecular route, experimental protein and genome remain unresolved. Compound-specific, background-dependent association; not transferred to ACR2.",
+          "phenotype_label": "Source-reported relative papulacandin B resistance",
+          "taxon_id": "NCBITaxon:4932",
+          "taxon_label": "Saccharomyces cerevisiae"
+        }
+      ],
+      "curation_event": {
+        "action": "CURATED_RESISTANCE_EVIDENCE",
+        "changes": "Added compound-specific historical ACR locus associations from primary results. Kept the molecular route unknown, rejected unsupported modern alias/protein joins, and retained species-only taxonomy. Existing claims are unchanged; no allele, genome or numerical AST assigned. Whole-record review remains open.",
+        "curator": "codex",
+        "llm_assisted": true,
+        "timestamp": "2026-10-13T05:08:39Z"
+      },
+      "existing_claims_preserved": 2,
+      "fixture": {
+        "path": "tests/fixtures/papulacandin-b-before-2026-10-13.yaml",
+        "sha256": "7c22a84a3ed7d336a105781830aabb303401e145387906577d3f3927d572bd7f"
+      },
+      "identifier": "CHEBI:569624",
+      "record": {
+        "path": "data/antibiotics/antifungal/papulacandin-b.yaml",
+        "sha256": "e3468aa27d49bc0adfebd073b051209549050565bf22cf675f07d795e56c7e80"
+      }
+    }
+  ],
+  "records_changed": 3,
+  "whole_record_review_complete": false
+}

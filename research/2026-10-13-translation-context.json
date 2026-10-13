@@ -1,0 +1,384 @@
+{
+  "date": "2026-10-13",
+  "discovery_predecessor": {
+    "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+    "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+  },
+  "disposition": {
+    "planned_gene_associations": 2,
+    "records_to_curate": 2,
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "held_leads": [
+    {
+      "access_attempts": [
+        {
+          "body": {
+            "path": "reports/resistance-grounding-2026-10-13-translation/fried-1981-pnas-response",
+            "sha256": "f537c88c0a86f2ba339c3e09c9645a947308ff5f04bce824fb22247ae6ced825"
+          },
+          "bytes": 5543,
+          "content_type": "text/html; charset=UTF-8",
+          "location": null,
+          "redirects_followed": false,
+          "retrieved_at": "2026-10-13T09:45:58.646633+00:00",
+          "status": 403,
+          "url": "https://www.pnas.org/doi/pdf/10.1073/pnas.78.1.238"
+        },
+        {
+          "body": {
+            "path": "reports/resistance-grounding-2026-10-13-translation/fried-1981-europepmc",
+            "sha256": "97ca47117fe9c0f17b6c3f5432eda28ac364b4531d703a976d3024a1b64c8134"
+          },
+          "bytes": 5580,
+          "content_type": "text/html; charset=UTF-8",
+          "location": null,
+          "redirects_followed": false,
+          "retrieved_at": "2026-10-13T09:46:28.869154+00:00",
+          "status": 403,
+          "url": "https://europepmc.org/articles/PMC319027",
+          "url_query_omitted": true
+        }
+      ],
+      "disposition": "HOLD",
+      "doi": "10.1073/pnas.78.1.238",
+      "reason": "Both public copies returned HTTP 403; no retries or bypass. Historical TCM1/RPL3 naming does not establish each compound's primary experimental claim.",
+      "records": [
+        "CHEBI:9688",
+        "CHEBI:230243"
+      ],
+      "reference": "PMID:7017711",
+      "scope": "DISCOVERY_ONLY_FULL_TEXT_UNREVIEWED"
+    },
+    {
+      "disposition": "HOLD",
+      "doi": "10.1093/genetics/83.4.667",
+      "html": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/grant-1976-abstract.html",
+          "sha256": "50244b9b599c40c4b662f0b7e2c4abcd4454a7863dc0124373f04dae122771b0"
+        },
+        "bytes": 13637,
+        "content_type": "text/html",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T09:47:49.217480+00:00",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/article-minimal/5991765"
+      },
+      "reason": "Abstract reports a historical resistance locus and cross-resistance; full primary results and exact subject mapping remain unreviewed.",
+      "records": [
+        "CHEBI:9688",
+        "CHEBI:338412"
+      ],
+      "reference": "PMID:786781",
+      "scope": "PUBLISHER_ABSTRACT_ONLY"
+    },
+    {
+      "disposition": "HOLD",
+      "doi": "10.1073/pnas.0909777106",
+      "html": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/mclaughlin-2009-usda.html",
+          "sha256": "2dce3135e82d89df478ef84a05eea6ed25c921fbb46e82374a8e4bac9ec3e338"
+        },
+        "bytes": 30780,
+        "content_type": "text/html; charset=utf-8",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T09:57:02.977887+00:00",
+        "status": 200,
+        "url": "https://www.ars.usda.gov/research/publications/publication/?seqNo115=246160"
+      },
+      "reason": "Abstract-level mitochondrial and deletion-screen findings are not individual gene assignments. Institutional DOI has a typographical error; full primary evidence remains unreviewed.",
+      "records": [
+        "CHEBI:69621"
+      ],
+      "reference": "PMID:20007368",
+      "scope": "AUTHOR_INSTITUTION_ABSTRACT_ONLY"
+    }
+  ],
+  "identity": {
+    "class_or_congener_transfer": false,
+    "complete_collection_aware_records_loaded": true,
+    "exact_existing_name_or_synonym_used": true,
+    "tested_preparations_independently_reidentified": false
+  },
+  "initial_candidate_counts_not_primary_reviews": {
+    "CHEBI:230243": 7,
+    "CHEBI:338412": 71,
+    "CHEBI:69621": 9,
+    "CHEBI:9688": 29
+  },
+  "limits": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numerical_ast_exported": false,
+    "raw_source_assets_redistributed": false,
+    "reuse_terms_review_resumed": false,
+    "sequences_variant_specifications_constructs_or_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "primary": {
+    "PDR5": {
+      "attribution": "Kugler et al. (2016), BMC Genomics 17:417",
+      "contradictory_interpretation": "The authors dispute earlier mitochondrial-target interpretations and discuss context-dependent efflux and other confounding; neither interpretation is resolved here.",
+      "doi": "10.1186/s12864-016-2718-y",
+      "native_pages_inspected": [
+        3,
+        7,
+        10,
+        13
+      ],
+      "nontransferable_panels": {
+        "Figure 1c": "BY4741 background; DON-only comparison",
+        "Figure 4b-d": "HEL2 gain-of-resistance comparisons concern DON, not trichothecin"
+      },
+      "pdf": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016.pdf-redirect-3",
+          "sha256": "b081459f700e2b7753ccc55ed8b300f24889bc6c237ec9d12d3e6773e0d1a470"
+        },
+        "bytes": 3420670,
+        "content_type": "application/pdf",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T09:55:42.875196+00:00",
+        "status": 200,
+        "url": "https://link.springer.com/content/pdf/10.1186/s12864-016-2718-y.pdf"
+      },
+      "pdf_pages": 17,
+      "public_redirect_status_chain": [
+        303,
+        302,
+        302,
+        200
+      ],
+      "reference": "PMID:27245696",
+      "rendered_pages": [
+        {
+          "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-3.png",
+          "sha256": "626bc046756b18d9049eada691f6219e11aa0184d43f485ffff5240c37a59eb1"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-7.png",
+          "sha256": "ccaa1b7e8db35d17f202531347695cb5b80072856db1f472208b3a1ddc1f79d4"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-10.png",
+          "sha256": "08486666c174b374ca540e7c2451f1b0c76110a406b951a24f2b06dbe0aab9cc"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-13.png",
+          "sha256": "1601c6fc5e6a449110a9e27f4cf245b87d86c8654bfbeedf117a85e00317b022"
+        }
+      ],
+      "review_scope": "Selected Results, Discussion, Methods subject context and native Figures 1 and 4.",
+      "source_backgrounds": [
+        "FY1679-28C derivatives",
+        "YALA-B1/YALA-G4 derivatives"
+      ],
+      "summary": "Figure 1a-b supports PDR5-associated trichothecin resistance in separate laboratory backgrounds. Figure 1c is DON-only and is not transferred to trichothecin. Most screen hits concern gene-loss hypersensitivity, not resistant alleles.",
+      "supplements_reviewed": false,
+      "url": "https://link.springer.com/article/10.1186/s12864-016-2718-y",
+      "whole_paper_review_complete": false
+    },
+    "RPL3": {
+      "attribution": "Meskauskas and Dinman (2008), Nucleic Acids Research 36:6175-6186",
+      "cloning_host_not_subject": "Escherichia coli DH5alpha",
+      "doi": "10.1093/nar/gkn642",
+      "figure": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/meskauskas-2008-figure-2.jpeg",
+          "sha256": "c32117481fd9103f230bbd84de1b81bccc92f55fa25110c99dfb2acde47c9a36"
+        },
+        "bytes": 269773,
+        "content_type": "image/jpeg",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T09:50:25.732206+00:00",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/nar/36/19/10.1093_nar_gkn642/3/gkn642f2.jpeg",
+        "url_query_omitted": true
+      },
+      "html": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/meskauskas-2008-nar.html",
+          "sha256": "742e86f7679706f6fa99b550108f0c6f601f3424788611d6ccf8df4a0dfab62c"
+        },
+        "bytes": 275238,
+        "content_type": "text/html",
+        "location": null,
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-13T09:46:56.266316+00:00",
+        "status": 200,
+        "url": "https://oup.silverchair-cdn.com/article-minimal/2410503"
+      },
+      "native_figures_inspected": [
+        2
+      ],
+      "review_scope": "Main-text strain context, Results, Table 1, Discussion and native Figure 2; other native figures and supplements not reviewed.",
+      "source_background": "JD1090 derivatives",
+      "summary": "Selected RPL3 contexts have qualitative anisomycin resistance; other contexts differ. Figure 2D is a growth endpoint, distinct from the accompanying biochemical measurements.",
+      "unit_conflict": "Table 1 footnote and Methods/Figure 2 caption disagree on concentration units; no numeric AST is imported or silently corrected.",
+      "url": "https://academic.oup.com/nar/article/36/19/6175/2410503",
+      "whole_paper_review_complete": false
+    }
+  },
+  "records_before": [
+    {
+      "existing_resistance_claims": 0,
+      "identifier": "CHEBI:9688",
+      "label": "trichodermin",
+      "path": "data/antibiotics/antifungal/trichodermin.yaml",
+      "sha256": "b610f578772d66235c320e2c56877625d7008f8762b1d676ee64cabf6d00141b",
+      "standard_inchi_key": "HNEGCRMUYSKRRR-NWHWRWDZSA-N"
+    },
+    {
+      "existing_resistance_claims": 0,
+      "identifier": "CHEBI:69621",
+      "label": "trichothecin",
+      "path": "data/antibiotics/antifungal/trichothecin.yaml",
+      "sha256": "159ced6d28f531be9b2df72f95d777ec3711a6bfa80911b6cec5313c97a9aa62",
+      "standard_inchi_key": "LJWZOKOFCBPNAG-HULHSAFCSA-N"
+    },
+    {
+      "existing_resistance_claims": 0,
+      "identifier": "CHEBI:338412",
+      "label": "(\u2212)-anisomycin",
+      "path": "data/antibiotics/antiviral/anisomycin.yaml",
+      "sha256": "c6389c4d91a9cdb501e4ed2dcf6c456d8286ecbd3b65d0e2becd5621bdac6213",
+      "standard_inchi_key": "YKJYKKNCCRKFSL-RDBSUJKOSA-N"
+    },
+    {
+      "existing_resistance_claims": 0,
+      "identifier": "CHEBI:230243",
+      "label": "verrucarin A",
+      "path": "data/antibiotics/unspecified/verrucarin-a.yaml",
+      "sha256": "0dd4eaa28ef85d9ce3042f3520fc60597159482420b0298a04a939279cc6b202",
+      "standard_inchi_key": "NLUGUZJQJYVUHS-IDXDZYHTSA-N"
+    }
+  ],
+  "scope": "SELECTED_PRIMARY_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:4930",
+      "rank": "species",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientific_name": "Saccharomyces cerevisiae",
+      "scope": "EXPERIMENTAL_SPECIES",
+      "taxon_id": "NCBITaxon:4932"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:4932",
+      "rank": "strain",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559292"
+    }
+  ],
+  "taxonomy_predecessor": {
+    "path": "research/2026-10-12-thiolutin-context.json",
+    "sha256": "7513c5f467ee3cffad02c9a1591b60b7f56149eab1cd868b4d2533666b612f06"
+  },
+  "uniprot": {
+    "PDR5": {
+      "experimental_protein_assigned": false,
+      "reference": {
+        "accession": "UniProtKB:P33302",
+        "entry_version": 235,
+        "gene": "PDR5",
+        "ordered_locus_names": [
+          "YOR153W"
+        ],
+        "reviewed": true,
+        "sequence_version": 1,
+        "sgd_ids": [
+          "S000005679"
+        ],
+        "synonyms": [
+          "LEM1",
+          "STS1",
+          "YDR1"
+        ],
+        "taxon_id": "NCBITaxon:559292"
+      },
+      "request": {
+        "body_sha256": "e454995833f8aea382c474b0921307355adf1a443e88c0490c23536b8fe4536e",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/request-09bfc5bddb4474a53a6f761955add756976c23fc6862c3f68605d1bc3448e2c2.json",
+          "sha256": "2526e91a39ae291b224c3d4e3a5fb8c8cf954b6a874c45cedbd63ee4119ecf80"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:PDR5 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T09:55:31.290429+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APDR5+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE"
+    },
+    "RPL3": {
+      "experimental_protein_assigned": false,
+      "reference": {
+        "accession": "UniProtKB:P14126",
+        "entry_version": 233,
+        "gene": "RPL3",
+        "ordered_locus_names": [
+          "YOR063W"
+        ],
+        "reviewed": true,
+        "sequence_version": 4,
+        "sgd_ids": [
+          "S000005589"
+        ],
+        "synonyms": [
+          "MAK8",
+          "TCM1"
+        ],
+        "taxon_id": "NCBITaxon:559292"
+      },
+      "request": {
+        "body_sha256": "861d079c81ba2151dfeddb03b0ee33ff4193199c86e31a866aa699924fedf26d",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/request-eccfcf26e277cb94c6d4b067a63d76683571435cc160ad1dbaf55697fd82cc67.json",
+          "sha256": "4a04ae8cdb7bd1cc24a0d204fe5adb9d4c170d93bc070f51ddb58c114a7c742b"
+        },
+        "pagination_complete": true,
+        "query": "accession:P14126",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T09:47:28.637242+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP14126&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE"
+    }
+  },
+  "uniprot_attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  }
+}

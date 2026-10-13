@@ -91,7 +91,7 @@ resistance_mechanisms:
       UniProtKB release 2026_03: Q6X9S4 entry 84, sequence version 1; cob/cytB reference
       entry with citation-specific strain ST1/MBC; UniProt Taxonomy 1047171 is active
       at species rank. Reviewed 2026-10-09 by codex; curation/phibase_grounding_reviews.json
-      SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+      SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
 - mechanism_type: UNKNOWN
   label: CytB(G37V) (amino acid mutation) [Not assayed] associated with resistance
     to fenpicoxamid
@@ -128,7 +128,7 @@ resistance_mechanisms:
       UniProtKB release 2026_03: Q6X9S4 entry 84, sequence version 1; cob/cytB reference
       entry with citation-specific strain ST1/MBC; UniProt Taxonomy 1047171 is active
       at species rank. Reviewed 2026-10-09 by codex; curation/phibase_grounding_reviews.json
-      SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+      SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -182,4 +182,10 @@ curation_history:
   action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
   changes: Refreshed the shared PHI-base review checksum after four reference-identifier
     scope corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-13T08:51:02Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after one Neurospora subject-context
+    correction; previous decisions, biological fields and activities unchanged.
   llm_assisted: true

@@ -243,7 +243,7 @@ def assert_pre_pathway_record(row, path, transition, restored):
     assert hashlib.sha256(restored.read_bytes()).hexdigest() == row["sha256"]
 
 
-def assert_pre_ma_checksum_record(path, checkpoint, receipt, restored):
+def assert_pre_review_checksum_record(path, checkpoint, receipt, restored, action, changes):
     """Reverse only the later provenance refresh, then prove the historical bytes."""
     assert checkpoint["scope_corrections"] == 0
     assert hashlib.sha256(path.read_bytes()).hexdigest() == checkpoint["after_sha256"]
@@ -251,11 +251,8 @@ def assert_pre_ma_checksum_record(path, checkpoint, receipt, restored):
     assert historical["identifier"] == checkpoint["identifier"]
     event = historical["curation_history"].pop()
     assert event["curator"] == "codex" and event["llm_assisted"] is True
-    assert event["action"] == "REVIEWED_RESISTANCE_REFERENCE_CONTEXT"
-    assert event["changes"] == (
-        "Refreshed the shared PHI-base review checksum after four reference-identifier scope "
-        "corrections; previous decisions, biological fields and activities unchanged."
-    )
+    assert event["action"] == action
+    assert event["changes"] == changes
     current, previous = receipt["review_after_sha256"], receipt["review_before_sha256"]
     changed = 0
     for claim in historical.get("resistance_mechanisms", []):
@@ -269,6 +266,20 @@ def assert_pre_ma_checksum_record(path, checkpoint, receipt, restored):
     assert changed == checkpoint["checksum_refreshes"]
     write_validated_antibiotic(historical, restored)
     assert hashlib.sha256(restored.read_bytes()).hexdigest() == checkpoint["before_sha256"]
+
+
+def assert_pre_ma_checksum_record(path, checkpoint, receipt, restored):
+    assert_pre_review_checksum_record(path, checkpoint, receipt, restored,
+        "REVIEWED_RESISTANCE_REFERENCE_CONTEXT",
+        "Refreshed the shared PHI-base review checksum after four reference-identifier scope "
+        "corrections; previous decisions, biological fields and activities unchanged.")
+
+
+def assert_pre_neurospora_checksum_record(path, checkpoint, receipt, restored):
+    assert_pre_review_checksum_record(path, checkpoint, receipt, restored,
+        "REVIEWED_RESISTANCE_SUBJECT_CONTEXT",
+        "Refreshed the shared PHI-base review checksum after one Neurospora subject-context "
+        "correction; previous decisions, biological fields and activities unchanged.")
 
 
 def test_saved_dossier_scope_and_record_pins(tmp_path):
@@ -296,11 +307,19 @@ def test_saved_dossier_scope_and_record_pins(tmp_path):
     }
     receipt = json.loads((ROOT / "research/2026-10-12-ma-reference-curation.json").read_bytes())
     checkpoints = {row["identifier"]: row for row in receipt["records"]}
+    latest = json.loads((ROOT / "research/2026-10-13-neurospora-curation.json").read_bytes())
+    latest_checkpoints = {r["identifier"]: r for r in latest["records"]}
     assert set(checkpoints) & {row["identifier"] for row in doc["records"]} == {
         "CHEBI:46081", "CHEBI:6076", "CHEBI:64355", "CHEBI:9448", "CHEBI:10023",
     }
     for row in doc["records"]:
         path = ROOT / row["path"]
+        if row["identifier"] in latest_checkpoints:
+            checkpoint = latest_checkpoints[row["identifier"]]
+            assert checkpoint["path"] == row["path"]
+            restored = tmp_path / ("pre-neurospora-" + path.name)
+            assert_pre_neurospora_checksum_record(path, checkpoint, latest, restored)
+            path = restored
         if row["identifier"] in checkpoints:
             checkpoint = checkpoints[row["identifier"]]
             assert checkpoint["path"] == row["path"]
@@ -356,10 +375,21 @@ def test_pathway_reconciliation_cannot_hide_other_drift(tmp_path, mutation, repi
 
 @pytest.mark.parametrize("mutation", ["label", "history", "resistance", "provenance"])
 @pytest.mark.parametrize("repin", [False, True])
-def test_checksum_reconciliation_cannot_hide_other_drift(tmp_path, mutation, repin):
-    receipt = json.loads((ROOT / "research/2026-10-12-ma-reference-curation.json").read_bytes())
+@pytest.mark.parametrize("stage", ["ma", "neurospora"])
+def test_checksum_reconciliation_cannot_hide_other_drift(tmp_path, mutation, repin, stage):
+    latest = json.loads((ROOT / "research/2026-10-13-neurospora-curation.json").read_bytes())
+    latest_checkpoint, = [r for r in latest["records"] if r["identifier"] == "CHEBI:46081"]
+    path = ROOT / latest_checkpoint["path"]
+    if stage == "ma":
+        restored = tmp_path / "pre-neurospora.yaml"
+        assert_pre_neurospora_checksum_record(path, latest_checkpoint, latest, restored)
+        path = restored
+        receipt = json.loads((ROOT / "research/2026-10-12-ma-reference-curation.json").read_bytes())
+        check = assert_pre_ma_checksum_record
+    else:
+        receipt, check = latest, assert_pre_neurospora_checksum_record
     checkpoint, = [r for r in receipt["records"] if r["identifier"] == "CHEBI:46081"]
-    current = load_record(ROOT / checkpoint["path"])
+    current = load_record(path)
     if mutation == "label":
         current["label"] += " unexpected change"
     elif mutation == "history":
@@ -375,7 +405,7 @@ def test_checksum_reconciliation_cannot_hide_other_drift(tmp_path, mutation, rep
     if repin:
         checkpoint["after_sha256"] = hashlib.sha256(changed.read_bytes()).hexdigest()
     with pytest.raises(AssertionError):
-        assert_pre_ma_checksum_record(changed, checkpoint, receipt, tmp_path / "historical.yaml")
+        check(changed, checkpoint, receipt, tmp_path / "historical.yaml")
 
 
 def test_saved_reference_projection_has_no_orphan_or_experimental_assignment():

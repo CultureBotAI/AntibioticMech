@@ -1,0 +1,348 @@
+{
+  "adversarial_self_review": [
+    "S288c reference proteins do not identify W303-derived experimental alleles.",
+    "Combined-context response strength is not assigned to individual genes.",
+    "SAM3's opposite-direction control remains explicit; reduced uptake is not efflux.",
+    "Native growth figures are not standardized MICs or clinical resistance categories.",
+    "Other five leads remain qualified holds, not evidence of gene absence.",
+    "Tests replay immutable fixtures and dated receipts, not frozen live-record totals.",
+    "Same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-sinefungin-context.json",
+      "sha256": "59ae412d7cd8f127069ef7af4ce4a6ea0e29f9497fb34c11b717fb2c5e927b59"
+    },
+    {
+      "path": "research/2026-10-13-sinefungin-curation.json",
+      "sha256": "68834a8cbfb30db6c617b67f5a2bd934128d132a6e917d8bfbac2a526a9bc79f"
+    },
+    {
+      "path": "research/2026-10-13-sinefungin-reconciliation.json",
+      "sha256": "50bb198d0ef41095b59336b09b3f1a338ecc4c05273042be61663056d4d1fa03"
+    },
+    {
+      "path": "research/2026-10-13-sinefungin-resistance-grounding.tsv",
+      "sha256": "572923a11bd30374d177bbe599d64f2fba642e16ce4068a69165297db7e8f5dd"
+    },
+    {
+      "path": "research/2026-10-13-sinefungin-resistance-progress.json",
+      "sha256": "5548fa163ae6bd9176e929d7acf23e8844e96537ee3edd49e47bf12a58477e90"
+    },
+    {
+      "path": "research/2026-10-13-sinefungin-resistance-progress.tsv",
+      "sha256": "6b6654c2843383a2db79b1fe1a16725b5de860e6cfb73ef6a37bdb1b35ff304a"
+    },
+    {
+      "path": "data/antibiotics/antifungal/sinefungin.yaml",
+      "sha256": "3264f6081cdfc48b9ae4e345cc89a940bb543bcc7f53e882bb26c9d44aa2807c"
+    },
+    {
+      "path": "tests/fixtures/sinefungin-before-2026-10-13.yaml",
+      "sha256": "09998401b1ff09a558b42971bb901e26a228fd77e362814f8b37f84174245a34"
+    },
+    {
+      "path": "tests/test_sinefungin_curation.py",
+      "sha256": "ae3a30dd45619e1e9bf4709bad113388133e621f5fd92180fc5e0e3459775430"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "e6c830cc8b1cadc28166cff557d603c86c2aa2bd950f98d659596b25fedaa06e"
+    }
+  ],
+  "cached_sources_verified": 14,
+  "canary_tests": "15 passed, 1 deselected in 5.04s before live curation",
+  "coverage_reconciled_from_progress_rows": {
+    "assertions": 4870,
+    "curator_claims": 115,
+    "curator_records": 47,
+    "records": 2939,
+    "records_with_assertions": 314,
+    "without_assertions_or_rules": 2612
+  },
+  "date": "2026-10-13",
+  "embedding": {
+    "actual_reencoding": true,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection_method": "pacmap",
+    "published": {
+      "corpus_map.json": "df67974fc5dcff9e38ffa6ddf07511bad516d17fd38fb77afe7bfb73d38a9252",
+      "meta.json": "0b27faa069657c9b15e7d3aeebfa8949f1e06d0498e4f1df6be4bce2690096de",
+      "vectors.f16.npy": "89a8c85d61dd32bc59b8978d56d0910480e168df42b94a5370268f8b3b0c6e53"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-antifungal/embedding-stage/reuse-proof.json",
+      "sha256": "5380ddc0fa2b23687364f0af46b3b410426d7c11000eefc1ffe2dde46ae7e9d8"
+    },
+    "seed": 42,
+    "unchanged_rows_independently_checked_against_pinned_local_baseline": true,
+    "vector_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-acr/embedding-stage/bulk/vectors.f16.npy",
+      "sha256": "53d251d8cce832eced2cc0a2e2d779344ee222d075743d94fcb443474e952f50"
+    }
+  },
+  "embedding_reuse_proof": {
+    "baseline_sha256": "bd832b89fc44497b29d68298c6d12b76ad39da6a920f50bac21fe19c4984cce2",
+    "byte_identical_reused_rows": 2938,
+    "changed_documents": [
+      "CHEBI:45453"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "a1d9898356f44620",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "environment_limitation": "Local RDKit 2025.03.6 differs from project pin 2026.3.5. No new CI or pinned-environment pass is claimed.",
+  "experimental_proteins_or_genomes_assigned": 0,
+  "focused_preflight": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_sinefungin_curation.py",
+      "tests/test_acr_locus_curation.py",
+      "tests/test_papulacandin_curation.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_checkpoint_scope_rendering.py"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T06:19:39.075969+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-antifungal/focused.log",
+      "sha256": "6d35c230eb800f2af648370433a9367ce6099656161664d8126a4c3fa7366b26"
+    },
+    "output": "........................................................................ [ 88%]\n.........                                                                [100%]\n81 passed in 54.01s\n",
+    "started": "2026-10-13T06:18:43.928715+00:00"
+  },
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 2458.43,
+    "exit_code": 0,
+    "finished": "2026-10-13T07:04:08.179814+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-antifungal/qc.log",
+      "sha256": "8f734a8a5ba881550e417a450c075c5b9c93a0aa5c21a5ddfa721799ef366452"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T06:23:09.712500+00:00",
+    "test_summary": "3171 passed, 4 skipped in 2113.66s (0:35:13)"
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "scope_notes_visible": true
+  },
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 4,
+  "offline_source_replay": {
+    "network_requests": 0,
+    "sources": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/request-cd553b20064beef6759409c6fa6222c6b7fdf810973096d24cde862b71e1cf42.json",
+        "sha256": "6ec5c6b6ff62b0063c696bb161e59637177f10ffaba507da21a9acf94185c1c6"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/request-da6b68b58172906da07c0af0f6660dc031d6281068cc5d2824ff7b726247571f.json",
+        "sha256": "2d38221e0aa8f3cc13020b76f186226472927eb4719732a0bb8e879bbbceb23e"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/request-adafe215f7ee702c15fa8f6199ba2a06705efe0f4af57a1ef867f1844cdf9d75.json",
+        "sha256": "7e2d94acd726094ea0cb44fca4b8106bef397ab5ab4d6aa66120dba748af848d"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/request-5227b53933b4f7702107be7b630322a1e04ab1a79ce2e750c1056392b02b1308.json",
+        "sha256": "51bdd9467dfc2df994c9b6bdbc895e51f3fefe6fed63f1b9feee163055efa261"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/sinefungin-2007.html",
+        "sha256": "47c9d9e7e2363bc52923156864e77185a20f31df7ae8710f77b3e671908d25a1"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/sinefungin-2007-figure-3.jpeg",
+        "sha256": "489ff3c7e2c31dcdd79f4b9e606deaa4771c2d49f28643dece75f46a26519492"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/sinefungin-2007-figure-4.jpeg",
+        "sha256": "79c56034ebb26c04b137038e428432e97a9ea1277ce8be417736664af72278cb"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/sinefungin-2007-figure-6.jpeg",
+        "sha256": "9feeba5f1eb52f317f93238a1cb3fddd2903b0c08aab2a320c202a080745d023"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/sinefungin-2007-figure-7.jpeg",
+        "sha256": "0861f32e32ad3fa1fd0ead76041221ec0adf14d70a63100ccafc78e9fa24389f"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/azoxybacilin-1994.pdf",
+        "sha256": "0b1193d4e35ec652d115505ed96ba39c86fe7cb7400b64bf94057997dcfb8cfb"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/azoxybacilin-1995.pdf",
+        "sha256": "cc61908206623e70cb5079b848b943a8f0c01fff815d8385d918f9cdebbaf761"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/australifungin-2003.pdf",
+        "sha256": "e2f0be3384e8767c14a9bb95306c71ff268e6b862a9270c8f2eec96e2f2b8f6a"
+      }
+    ]
+  },
+  "preservation": {
+    "all_memberships_unchanged": true,
+    "all_raw_and_curation_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-antifungal/baseline.json",
+      "sha256": "bd33c1b6f79aff27056b4d8d62684ade08624070740122bcbdf9fb583887afae"
+    },
+    "changed_records": [
+      "data/antibiotics/antifungal/sinefungin.yaml"
+    ],
+    "earlier_research_files_preserved_except_main_report": true,
+    "historical_research_files_checked": 374,
+    "ignored_files_included": true,
+    "protected_files_checked": 3385,
+    "records_checked": 2939
+  },
+  "protected_files_changed": [
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antifungal/sinefungin.html",
+    "pages/index.html",
+    "pages/map.html"
+  ],
+  "records_byte_identical": 2938,
+  "render_mutation_checks": {
+    "biological_files_changed": false,
+    "caught": 16,
+    "mutations": [
+      {
+        "caught": true,
+        "gene": "SAM3",
+        "mutation": "adapter_note"
+      },
+      {
+        "caught": true,
+        "gene": "SAM1",
+        "mutation": "adapter_note"
+      },
+      {
+        "caught": true,
+        "gene": "SAM2",
+        "mutation": "adapter_note"
+      },
+      {
+        "caught": true,
+        "gene": "ABD1",
+        "mutation": "adapter_note"
+      },
+      {
+        "caught": true,
+        "gene": "SAM3",
+        "mutation": "adapter_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "SAM1",
+        "mutation": "adapter_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "SAM2",
+        "mutation": "adapter_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "ABD1",
+        "mutation": "adapter_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "SAM3",
+        "mutation": "template_note"
+      },
+      {
+        "caught": true,
+        "gene": "SAM1",
+        "mutation": "template_note"
+      },
+      {
+        "caught": true,
+        "gene": "SAM2",
+        "mutation": "template_note"
+      },
+      {
+        "caught": true,
+        "gene": "ABD1",
+        "mutation": "template_note"
+      },
+      {
+        "caught": true,
+        "gene": "SAM3",
+        "mutation": "template_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "SAM1",
+        "mutation": "template_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "SAM2",
+        "mutation": "template_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "ABD1",
+        "mutation": "template_evidence"
+      }
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-antifungal/render-mutations.json",
+      "sha256": "d5195016b1b057eb7f3c29e58395ec1132b6bd966ba24370b8aae7c60d9a8df0"
+    },
+    "template_files_changed": false
+  },
+  "scope": "SELECTED_PRIMARY_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

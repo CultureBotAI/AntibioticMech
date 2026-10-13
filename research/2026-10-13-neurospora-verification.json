@@ -1,0 +1,345 @@
+{
+  "additional_focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-neurospora/stale-counts-after.xml",
+      "sha256": "8fa1417faf3a095a033d5e9a601e8555be68a52a33736c1d12d58b066cda8ace"
+    },
+    "passed": 34,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "adversarial_self_review": [
+    "Related-paper review does not complete the original subscription article.",
+    "Reference-strain protein and taxonomy do not identify the resistant experimental allele.",
+    "The source locus value remains provenance-qualified rather than replaced by a gene-object guess.",
+    "No phenotype, assay, alteration, mechanism, measurement or assertion count is changed.",
+    "The initial canary test exposed mapping-order drift from sorted JSON; partial bulk work was stopped and order restored from hash-verified originals through the validated writer.",
+    "Repaired canary and nested-order negative tests passed before final verification.",
+    "Historical owner fixtures and checksum-transition proofs retain prior artifact hashes; new negative cases reject unrelated drift even with a repinned current hash.",
+    "Five live-reproduction tests failed on stale global-count expectations before the fix; only current expectations were updated, retaining historical dossier counts.",
+    "Same-agent review only, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-neurospora-context.json",
+      "sha256": "45782ba96153c4d918dd18817b33b45b27ce1545e1678ec58d34164a6c264e3c"
+    },
+    {
+      "path": "research/2026-10-13-neurospora-curation.json",
+      "sha256": "ddc5144d34c607485ff74ade7420bcce946687b67af18b824b5bda7d16f4fdb2"
+    },
+    {
+      "path": "research/2026-10-13-neurospora-reconciliation.json",
+      "sha256": "d074cf03e0490bf0c5b841dfd081df2c6289efefd27c85d0018afd675c65a12b"
+    },
+    {
+      "path": "research/2026-10-13-neurospora-resistance-grounding.tsv",
+      "sha256": "f30f8046cbe782c71f21057281d78c1a499d3b85a8373c847917ae0a55e97233"
+    },
+    {
+      "path": "research/2026-10-13-neurospora-resistance-progress.json",
+      "sha256": "87c3bac3f8e5e0e911c1e158c13984432a5998d048d922eb2f3636f4359bb40b"
+    },
+    {
+      "path": "research/2026-10-13-neurospora-resistance-progress.tsv",
+      "sha256": "74f657a9947aa42a323df0678d9c714a0b277fffdc8e1f3bba275feb93599d56"
+    },
+    {
+      "path": "curation/phibase_grounding_reviews.json",
+      "sha256": "1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed"
+    },
+    {
+      "path": "tests/test_neurospora_subject_context.py",
+      "sha256": "05d6043c22372a8a8658ea3a267172d3a0b2ba5a33441c54a27a13a6b919ca5f"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "3e8e3fb3c1364aed77229b0bff09bcb30b048b0bb5a6db11cf400a8ce180d491"
+    },
+    {
+      "path": "tests/test_phibase_grounding_reviews.py",
+      "sha256": "e0a1ad9111637b206b33f79e5071a554c053a9843a73b29744025bd79dd2b6d5"
+    },
+    {
+      "path": "tests/test_ma_reference_context.py",
+      "sha256": "a78c02ee4274c00e271c53b49bbe8340d760e8ff00ad59f4ae32d9b1e8e224c4"
+    },
+    {
+      "path": "tests/test_card_parent_references.py",
+      "sha256": "ab4bf716f216e26dcea23999cdb15133b916666d0a43d975d29504a2f38fedba"
+    },
+    {
+      "path": "tests/test_resistance_progress.py",
+      "sha256": "eb6c1683f385b6bf23581a434862f346e9d7dbf9117bb6ae0cd884b637f7d95a"
+    },
+    {
+      "path": "tests/test_huang_grounding.py",
+      "sha256": "10f24af3e7ac98046f5b9fcf561746e95ceb492829b77c6649ef455469c8a3d3"
+    },
+    {
+      "path": "tests/test_shima_grounding.py",
+      "sha256": "bb46c55b4d43c1171061f8ee444e8932cb699a6bd396b47e8f09ba9612b9e929"
+    },
+    {
+      "path": "tests/test_fouche_grounding.py",
+      "sha256": "5d44cabbc2eda4f6b31dec99f396be58510cae0f0f4c98b08fc2cfbd3012be2c"
+    },
+    {
+      "path": "tests/test_mehrabi_grounding.py",
+      "sha256": "dc82140888bfa3a6b7311d6c3038e91842389267b128dfdf42bddcd36f85599b"
+    },
+    {
+      "path": "tests/test_hdf1_grounding.py",
+      "sha256": "061359a2e36191bcc4cd63fa68427500747196b0fa860c278b475ee796bd3ca0"
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-neurospora/focused.xml",
+        "tests/test_neurospora_subject_context.py",
+        "tests/test_phibase_grounding_reviews.py",
+        "tests/test_phibase_import.py",
+        "tests/test_ma_reference_context.py",
+        "tests/test_card_parent_references.py",
+        "tests/test_resistance_progress.py",
+        "tests/test_phibase_gene_id_types.py",
+        "tests/test_phibase_identifier_roles.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T09:03:03.910782+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/focused.log",
+        "sha256": "4bdb18066631c62d71b631e2a858beaec8920b3cb1826ab480426e625945d7be"
+      },
+      "started": "2026-10-13T09:01:32.784319+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-ra",
+        "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-neurospora/stale-counts-after.xml",
+        "tests/test_huang_grounding.py",
+        "tests/test_shima_grounding.py",
+        "tests/test_fouche_grounding.py",
+        "tests/test_mehrabi_grounding.py",
+        "tests/test_hdf1_grounding.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T09:09:18.083749+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/stale-counts-after.log",
+        "sha256": "b5b53195cc1cba7e6098b8316b0f2161e14aa68a3b001fe99c44abb55fce007b"
+      },
+      "started": "2026-10-13T09:09:14.975399+00:00"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/render_pages.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T08:59:12.212500+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/render.log",
+        "sha256": "2e35f0c98c2277f398a9b6406ba3ead77da80ab944375516cafa0367dc293033"
+      },
+      "started": "2026-10-13T08:58:24.168684+00:00"
+    },
+    {
+      "command": [
+        "/private/tmp/antibioticmech-identity-20261012/bin/python",
+        "scripts/run_qc.py"
+      ],
+      "exit_code": 0,
+      "finished": "2026-10-13T09:39:17.123223+00:00",
+      "log": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/full-qc-retry.log",
+        "sha256": "f105649cee1ec864d92ddec7ea627db4b70ed4bab7b79f73b140d9dc506668ac"
+      },
+      "started": "2026-10-13T09:09:27.947134+00:00"
+    }
+  ],
+  "date": "2026-10-13",
+  "dependency_deviation": "RDKit 2025.03.6 instead of project pin 2026.3.5; no chemistry regeneration or fresh CI pass claimed.",
+  "dependency_versions": {
+    "numpy": "2.2.6",
+    "python": "3.13.12",
+    "rdkit": "2025.03.6",
+    "scikit_learn": "1.7.2",
+    "umap": "0.5.12"
+  },
+  "focused_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-neurospora/focused.xml",
+      "sha256": "ad5ddad8f9aa7d11bd9fc08ebff8158833071c2acac113c0faa212f1014a40c4"
+    },
+    "passed": 276,
+    "skip_reasons": [],
+    "skipped": 0
+  },
+  "full_qc_exit_code": 0,
+  "full_qc_gates": [
+    "PathwayMech links",
+    "lint",
+    "documentation",
+    "raw-data provenance",
+    "source queue",
+    "curator antibiotic structures",
+    "tests",
+    "schema validation",
+    "corpus reproduction",
+    "chemical map",
+    "generated site",
+    "corpus report"
+  ],
+  "full_tests": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-neurospora/full-tests-retry.xml",
+      "sha256": "91e0717c523f7531bc6934caf9998e8698b3d52985e3f3b388b21745d5fe17d5"
+    },
+    "passed": 3237,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4
+  },
+  "github_mutations": 0,
+  "initial_qc_attempt": {
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-neurospora/full-qc.log",
+      "sha256": "b9deb5e54879c6affabaae2064002bbaf4c0829bd529b24c81d95f56717a89a4"
+    },
+    "process_exit_code": 130,
+    "reason": "Stopped after a broader test audit found five stale current-count expectations; no complete QC pass claimed.",
+    "status": "INTERRUPTED"
+  },
+  "issue_1040": "DEFERRED",
+  "live_browser_verification": false,
+  "native_primary_assets_verified": 7,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "pinned_environment_reproduced": false,
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-neurospora/baseline.json",
+      "sha256": "b4e2bdaeedde4553ef74dbd5ae8b5fe971e7d73cea6790e3930da11cb5743237"
+    },
+    "changed_protected_files": [
+      "curation/phibase_grounding_reviews.json",
+      "pages/antibacterial/brefeldin-a.html",
+      "pages/antifungal/anidulafungin.html",
+      "pages/antifungal/azoxystrobin.html",
+      "pages/antifungal/carbendazim.html",
+      "pages/antifungal/carboxin.html",
+      "pages/antifungal/caspofungin.html",
+      "pages/antifungal/cycloheximide.html",
+      "pages/antifungal/difenoconazole.html",
+      "pages/antifungal/fenpicoxamid.html",
+      "pages/antifungal/fluconazole.html",
+      "pages/antifungal/fluconazole/activity-1.html",
+      "pages/antifungal/fludioxonil.html",
+      "pages/antifungal/iprodione.html",
+      "pages/antifungal/itraconazole.html",
+      "pages/antifungal/micafungin.html",
+      "pages/antifungal/posaconazole.html",
+      "pages/antifungal/prochloraz.html",
+      "pages/antifungal/propiconazole.html",
+      "pages/antifungal/pyrifenox.html",
+      "pages/antifungal/terbinafine.html",
+      "pages/antifungal/triflumizole.html",
+      "pages/antifungal/voriconazole.html",
+      "pages/antifungal/voriconazole/activity-1.html",
+      "pages/biocide/hydrogen-peroxide.html"
+    ],
+    "content_addressed_downloads_added": [
+      "pages/antifungal/fluconazole/record-e0ee6c90559e1e996754680b00010cbd7a8c6782c538e00d778e814b6e5a1f1e.json.gz",
+      "pages/antifungal/voriconazole/record-dbc68854550b682d9a4b0ec22635cc9d187e3735a6a09168f96c3e8b00218edc.json.gz"
+    ],
+    "content_addressed_downloads_replaced": [
+      "pages/antifungal/fluconazole/record-6b2abd0f53c4b0c71122f272ae27c04bb11452b2188d4b3fa45f8040a19f365a.json.gz",
+      "pages/antifungal/voriconazole/record-74faee4744119edcb5d68669df65f3e7475c59ab6dfa39628f19bc33abdd0d19.json.gz"
+    ],
+    "curation_statuses_preserved": true,
+    "embedded_documents_unchanged": 2939,
+    "embedding_artifacts_byte_identical": true,
+    "ignored_files_included": true,
+    "previous_decision_checksum_refreshes": 189,
+    "raw_inputs_and_activity_memberships_unchanged": true,
+    "records_byte_identical": 2917,
+    "records_changed": 22,
+    "records_verified": 2939,
+    "subject_corrections": 1
+  },
+  "rendered_activity_pages_checked": 2,
+  "rendered_downloads_checked": 2,
+  "rendered_record_caveats_checked": 22,
+  "scope": "ONE_SOURCE_SUBJECT_CORRECTION_NOT_FULL_RECORD_OR_EXACT_ALLELE_REVIEW",
+  "source_adoptions": 0,
+  "source_requests_verified": [
+    {
+      "body_sha256": "1efe550aebd8df8b4dc057acdb41e174280494b6b7904063e3a2bb0393f32f38",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/request-41b9253dd257a5526abb7e3e273071889de21682606e8f45b26fdbd7493aa437.json",
+        "sha256": "8e9fb3ae471dd5a5f03d62bbd66d1e085da7b9c21ee592938c47b90fdd0bf99c"
+      },
+      "pagination_complete": true,
+      "query": "accession:P05220",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T08:43:47.084091+00:00",
+      "status": 200,
+      "total_results": 1,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP05220&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_ensemblfungi%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    {
+      "body_sha256": "bc7b413e76616f2cca9af177d414e6ec0c8d4fba139e9f996e76f612b89f9c55",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/request-511a713dc755ba5a42abdd9f551317e0e410c4ee51458238be78893c4a60180a.json",
+        "sha256": "5eaa13df41e519358693ba7988fb518973b096c76c07a9dc52cb55688e02f5ae"
+      },
+      "retrieved_at": "2026-10-13T08:45:29.839640+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/367110"
+    },
+    {
+      "body_sha256": "e03bfad77ef3498b7700da9755f2ec9fb47caf858b04edd6377e38d9e36f63e8",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/request-d775f5d0c013bc5da0a253e15a3d2e68a1e8b3715430c1c15a58cc67e7c8c641.json",
+        "sha256": "9287d41e324deef7d54dc058fa9e8e8d9eb9815e3bbccdc108caf88a980d908e"
+      },
+      "retrieved_at": "2026-10-13T08:45:50.476100+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/5141"
+    }
+  ],
+  "stale_count_regression_before_fix": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "-ra",
+      "tests/test_huang_grounding.py",
+      "tests/test_shima_grounding.py",
+      "tests/test_fouche_grounding.py",
+      "tests/test_mehrabi_grounding.py",
+      "tests/test_hdf1_grounding.py"
+    ],
+    "exit_code": 1,
+    "finished": "2026-10-13T09:08:00.957190+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-neurospora/stale-counts-before.log",
+      "sha256": "b3f4fdea5793c8dd39c1bc9a2ac89cbbd9e82d2aa3b74260cb737097d513c840"
+    },
+    "started": "2026-10-13T09:07:58.154561+00:00"
+  },
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

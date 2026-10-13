@@ -1,0 +1,342 @@
+{
+  "adversarial_self_review": [
+    "Deleted A6ZLH5 remains historical; no replacement accession is invented.",
+    "Per-accession archive metadata distinguishes YJM789 from S288c despite shared reference sequence.",
+    "All 176 dated cross-reference intervals are retained; 172 accession/version keys are not 176 independent proteins.",
+    "K. lactis biochemical donor context and modeled orthologs are not resistant-organism observations.",
+    "The new primary association does not overwrite the earlier expression-context association.",
+    "Exact experimental alleles and genomes remain unassigned; no numerical MIC is inferred.",
+    "Historical tests use pinned fixtures and dated receipts, not frozen live-record totals.",
+    "Same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-abd1-context.json",
+      "sha256": "064f59558a2b22521b911fd1928e512da1e567697be43f5cc88ee1dceeb64398"
+    },
+    {
+      "path": "research/2026-10-13-abd1-curation.json",
+      "sha256": "1af10f9578af58de80fd2721643247d63e8f66c7acabe66549d11d47b6e8f7da"
+    },
+    {
+      "path": "research/2026-10-13-abd1-reconciliation.json",
+      "sha256": "f9c888a24e5b7136059229ffe80f44b4fc08e996b8ffeabce486475200966590"
+    },
+    {
+      "path": "research/2026-10-13-abd1-resistance-grounding.tsv",
+      "sha256": "2fc0982498efc850864ca3b4341192d40e5347ce7aeb2adca0c78e3ce48a139c"
+    },
+    {
+      "path": "research/2026-10-13-abd1-resistance-progress.json",
+      "sha256": "52acbf05b4a13786c78fbd84947218bff826613567a6e2e2e161d0c65fda926a"
+    },
+    {
+      "path": "research/2026-10-13-abd1-resistance-progress.tsv",
+      "sha256": "b9f5ca3cacf4018a2c3b20df99cddcd4b4c68614328de3f7d0f92c576ab9c816"
+    },
+    {
+      "path": "data/antibiotics/antifungal/sinefungin.yaml",
+      "sha256": "8e28863f19c58332ad21f312c7ff6c1a2b726dc5e0760549320cae35121aa80e"
+    },
+    {
+      "path": "tests/fixtures/sinefungin-before-abd1-2026-10-13.yaml",
+      "sha256": "3264f6081cdfc48b9ae4e345cc89a940bb543bcc7f53e882bb26c9d44aa2807c"
+    },
+    {
+      "path": "tests/test_abd1_archive_curation.py",
+      "sha256": "b1b79315ab1ca553d8570dfa9ff158340cf3c0f30c1bde4a4942c2ed97bb4b9b"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "5d7cd2f1472770540c6714b44d24eb92498c394fa0f27c8cbf66883351a7c32a"
+    }
+  ],
+  "cached_sources_verified": 16,
+  "canary_tests": "11 passed, 1 deselected, 1 warning in 4.43s before live curation",
+  "coverage_reconciled_from_progress_rows": {
+    "assertions": 4871,
+    "curator_claims": 116,
+    "curator_records": 47,
+    "records": 2939,
+    "records_with_assertions": 314,
+    "without_assertions_or_rules": 2612
+  },
+  "date": "2026-10-13",
+  "earlier_qc_attempt": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 103.98,
+    "exit_code": 2,
+    "failure": "Collection failed because the old temporary sklearn.manifold package lacked its Python sources. Scientific packages were restored offline into a new temporary directory; no repository dependency or biological edit was made for this failure.",
+    "finished": "2026-10-13T07:33:08.609484+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/qc.log",
+      "sha256": "7b6a975db22f763c58f46310cebc79b5f49020e8832ef02c9bd13e21751ea38e"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/qc.json",
+      "sha256": "ebab58ba420b39acfa785ab2edb014fa25c2536c71010bc6ebb347b38c2f9ea8"
+    },
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests"
+    ],
+    "started": "2026-10-13T07:31:24.631540+00:00",
+    "test_summary": null
+  },
+  "embedding": {
+    "actual_reencoding": true,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection_method": "pacmap",
+    "published": {
+      "corpus_map.json": "1c9fa67046481f43ae414fb1bdcee193fb6251f5c0a1465c5e1709a795f5cc3d",
+      "meta.json": "e09af03d91c2480e77254135368ca6caca124183b228be4dc553256c1a23cc62",
+      "vectors.f16.npy": "70b4e1597bd45689195fb0091b83862175d0ffb1c4f84f50dbf5c3efd5110132"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/embedding-stage/reuse-proof.json",
+      "sha256": "adb03e38db6da645e02e7f4cdd5fc0733544cd5c93c6cc03e138c08fc0b628ab"
+    },
+    "seed": 42,
+    "unchanged_rows_independently_checked_against_pinned_local_baseline": true,
+    "vector_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-antifungal/embedding-stage/bulk/vectors.f16.npy",
+      "sha256": "89a8c85d61dd32bc59b8978d56d0910480e168df42b94a5370268f8b3b0c6e53"
+    }
+  },
+  "embedding_reuse_proof": {
+    "baseline_sha256": "25784280d4483337cdcee80ad99a334cfbe066719a38c0dd6e1d78e65eb6e7e4",
+    "byte_identical_reused_rows": 2938,
+    "changed_documents": [
+      "CHEBI:45453"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "d6bfaa83b5aaf274",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "environment_limitation": "Local RDKit 2025.03.6 differs from project pin 2026.3.5. No new CI or pinned-environment pass is claimed.",
+  "experimental_proteins_or_genomes_assigned": 0,
+  "focused_preflight": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_abd1_archive_curation.py",
+      "tests/test_sinefungin_curation.py",
+      "tests/test_acr_locus_curation.py",
+      "tests/test_papulacandin_curation.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_checkpoint_scope_rendering.py"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T07:24:34.128129+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/focused.log",
+      "sha256": "5f167386bd596d445cbf86158dffaa6ad51c5898389ac09fb392cd3db5a34c40"
+    },
+    "output": "........................................................................ [ 77%]\n.....................                                                    [100%]\n=============================== warnings summary ===============================\n../../../../../../../../../usr/local/Caskroom/miniforge/base/lib/python3.13/importlib/metadata/__init__.py:486\n  /usr/local/Caskroom/miniforge/base/lib/python3.13/importlib/metadata/__init__.py:486: DeprecationWarning: Implicit None on return values is deprecated and will raise KeyErrors.\n    return self.metadata['Version']\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n93 passed, 1 warning in 79.99s (0:01:19)\n",
+    "started": "2026-10-13T07:23:12.578718+00:00"
+  },
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 1980.04,
+    "exit_code": 0,
+    "finished": "2026-10-13T08:10:21.149305+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/qc-retry/qc.log",
+      "sha256": "775706b68fe8df8a5fa67d1a916b445594616a52006094655f5f2f349c62463b"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T07:37:21.046835+00:00",
+    "test_summary": "3183 passed, 4 skipped in 1718.18s (0:28:38)"
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "scope_notes_visible": true
+  },
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 1,
+  "offline_source_replay": {
+    "network_requests": 0,
+    "sources": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-62aaa82601ba16031656b7ca6560ccc57264570f73ff1c9d5990cc6803ce77e1.json",
+        "sha256": "4cf30d6e2a85bd9413687d6ea33aedbc491ab9e70a818ff56da79cf9205bf55a"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-antifungal/request-cd553b20064beef6759409c6fa6222c6b7fdf810973096d24cde862b71e1cf42.json",
+        "sha256": "6ec5c6b6ff62b0063c696bb161e59637177f10ffaba507da21a9acf94185c1c6"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-26094842f8ad9f68597e07766f52a9cd7f8f2a01e024a3dfb7e2258bac92a89f.json",
+        "sha256": "2342d28a387ad6c70ac4ed16c15f3f9db31c927c158308bc34433b154a977816"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-ef13128d0c14b6b439300f97efaf8ece1e565958568013ed97cf7a3ff43d6042.json",
+        "sha256": "a914d1d3889a720af62ef08ad5c7168c3fc707148c30aeaaae40ac6be553d16d"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-33776f127ef1344baa5ddd284f2511b2bd284b9c4a6c207287eaeec858df9996.json",
+        "sha256": "92995d98b4da575bd953d1a6fd16e9efebecb278438f47b9d29b20146f14b15a"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-d9d50bff7e702ebfa55798afdcf1540900845bd11e548ee9b22d65e75a7ff611.json",
+        "sha256": "1de6e5f5a79b31a8caf59d39979a5b34416286af186c7f6b92288e4fb92adcd4"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-277fb1194afa9df0be520605758ab069cfd74bf00abac7a7f06565de60bf8c25.json",
+        "sha256": "0216bfd9209f2ca08b789a7175d5828b348221da0331edd81c512f2e035fb59f"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-44fb444ab9a93ede2ae366607bec064ae0b0ad6e0a08bd6b3a909cc0cb3bf250.json",
+        "sha256": "5338174ed97d69f5b20fbd36cbd2927ad2c26af17fe6d2731654662257cca19f"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/request-f2a62aef33c0f4309d190828042aefc8aa69ba6e49d1a2c67a2c68c426610024.json",
+        "sha256": "6cad35678d7c3e22086ee5d85e06b32fb402af91b6b4dfc10e2134c8384ab8c3"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/primary.html",
+        "sha256": "32cab2253902155dc7488a7ae61f9cde389ee626c3a7d6cedfd65a6b3fdb3e5c"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig2.jpeg",
+        "sha256": "5c5ea39c770b20168e0a6d669ee2f92019d7222ff84d1eeee6f7b0bb77bdac71"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig3.jpeg",
+        "sha256": "240c3b53d4706763369ead42e6100f268b38501441958e53d744736d8a4c4316"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig4.jpeg",
+        "sha256": "5c9475b65c7f199223cfb81f5b61268c52406ff64b66c979e2219d1748f29570"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-abd1/m_gkaf538fig7.jpeg",
+        "sha256": "3f321493f0ebdd413eae98c06403d6fb51c76c4182af95a3791676b76f9ba9be"
+      }
+    ]
+  },
+  "preservation": {
+    "all_memberships_unchanged": true,
+    "all_raw_and_curation_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/baseline.json",
+      "sha256": "cb71ee4e94b7ae04b0a651c7e413b244ba5e9a137b5faba132fe05a5fd107560"
+    },
+    "changed_records": [
+      "data/antibiotics/antifungal/sinefungin.yaml"
+    ],
+    "earlier_research_files_preserved_except_main_report": true,
+    "historical_research_files_checked": 381,
+    "ignored_files_included": true,
+    "protected_files_checked": 3385,
+    "records_checked": 2939
+  },
+  "protected_files_changed": [
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antifungal/sinefungin.html",
+    "pages/map.html"
+  ],
+  "qc_environment": {
+    "repository_dependencies_changed": false,
+    "restored_offline": true,
+    "scientific_path": "/private/tmp/antibioticmech-qc-science-20261013-abd1",
+    "versions": {
+      "joblib": "1.5.3",
+      "numpy": "2.2.6",
+      "pynndescent": "0.6.0",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "threadpoolctl": "3.6.0",
+      "tqdm": "4.70.0",
+      "umap-learn": "0.5.12"
+    }
+  },
+  "records_byte_identical": 2938,
+  "render_mutation_checks": {
+    "biological_files_changed": false,
+    "caught": 4,
+    "mutations": [
+      {
+        "caught": true,
+        "mutation": "adapter_note"
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_evidence"
+      },
+      {
+        "caught": true,
+        "mutation": "template_note"
+      },
+      {
+        "caught": true,
+        "mutation": "template_evidence"
+      }
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/render-mutations.json",
+      "sha256": "2438206a9b97dd42835a2f58efecd9b8fe473665ee59759b6b4c9c8650e04a03"
+    },
+    "template_files_changed": false
+  },
+  "scope": "SELECTED_PRIMARY_ASSOCIATION_AND_REFERENCE_ARCHIVE_REVIEW",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

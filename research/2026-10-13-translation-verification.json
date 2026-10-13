@@ -1,0 +1,425 @@
+{
+  "additional_reference_only_genes": 3,
+  "adversarial_self_review": [
+    "Reference proteins do not identify experimental derivatives or exact alleles.",
+    "Anisomycin results are not transferred to trichodermin, verrucarin A or trichothecin.",
+    "DON-only panels and gene-loss hypersensitivity are not trichothecin resistant-allele evidence.",
+    "Concentration-unit conflict is retained without importing or silently correcting numeric AST.",
+    "Coarse efflux route retains its genetic-interpretation caveat, not a direct transport measurement.",
+    "Mitochondrial-target disagreement and historical access holds remain open.",
+    "Historical replay tests use dated fixtures, not frozen live records.",
+    "Eight adapter/template omission probes fail as expected; same-agent review, not independent signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-translation-context.json",
+      "sha256": "2fbf02dedeabab1fce62677092851a6037a8694218b25af8e133a23820847326"
+    },
+    {
+      "path": "research/2026-10-13-translation-curation.json",
+      "sha256": "2572d1c068e870ecf13e37ee79f558edaf0e611afef29eabaacc17018f754035"
+    },
+    {
+      "path": "research/2026-10-13-translation-reconciliation.json",
+      "sha256": "02ec2cdca68fe5c98ae4d9f4d674fffdd53ca880b313d92ecc0e86729715ac82"
+    },
+    {
+      "path": "research/2026-10-13-translation-regulatory-references.json",
+      "sha256": "10777537b5cfb7f5d66d6216da544d8b960f4a975b9e4808b83f770c19b63f8d"
+    },
+    {
+      "path": "research/2026-10-13-translation-resistance-grounding.tsv",
+      "sha256": "d700401d0a5d98e7cc9313a5811183e172b129de9611cfef976c69b10cc5b282"
+    },
+    {
+      "path": "research/2026-10-13-translation-resistance-progress.json",
+      "sha256": "d93f994f09059b7a91f08e70e00661da4b6b3bb23aa59a6259cd774d41887313"
+    },
+    {
+      "path": "research/2026-10-13-translation-resistance-progress.tsv",
+      "sha256": "29cf146be8d320aa528b48731457d1206680daee9935d7bbede50a7d9f67eccf"
+    },
+    {
+      "path": "data/antibiotics/antiviral/anisomycin.yaml",
+      "sha256": "46a33646cb7a0f814a7b793669b3f8d824f3bcf9fcd8978b46ca8c51fbc0ca24"
+    },
+    {
+      "path": "tests/fixtures/anisomycin-before-translation-2026-10-13.yaml",
+      "sha256": "c6389c4d91a9cdb501e4ed2dcf6c456d8286ecbd3b65d0e2becd5621bdac6213"
+    },
+    {
+      "path": "data/antibiotics/antifungal/trichothecin.yaml",
+      "sha256": "39afe90626559076e5877e9ce87e3a9a712f9f905d5ea98332cba38c7174c526"
+    },
+    {
+      "path": "tests/fixtures/trichothecin-before-translation-2026-10-13.yaml",
+      "sha256": "159ced6d28f531be9b2df72f95d777ec3711a6bfa80911b6cec5313c97a9aa62"
+    },
+    {
+      "path": "tests/test_translation_gene_curation.py",
+      "sha256": "9508cf2052531cc48db00ac8e56836bf9c574a13ea25030beec3c5a79b3038e9"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "973726d8b9c328b2fe1a69b8c7e64652e90472eff2ad72461cf3f973e655ab17"
+    }
+  ],
+  "cached_sources_verified": 24,
+  "canary_tests": "19 passed, 1 deselected before live writes; a line-length lint finding was corrected before application.",
+  "coverage_reconciled_from_progress_rows": {
+    "assertions": 4873,
+    "curator_claims": 118,
+    "curator_records": 49,
+    "records": 2939,
+    "records_with_assertions": 316,
+    "without_assertions_or_rules": 2610
+  },
+  "date": "2026-10-13",
+  "earlier_qc_attempt": {
+    "child_processes_confirmed_stopped": true,
+    "exit_code": 130,
+    "focused_reproduction": {
+      "exit_code": 1,
+      "findings": [
+        "NEXT_TASKS.md target-or-resistance count 415 required 417",
+        "source_queue.tsv antiviral-without-resistance count 461 required 460"
+      ],
+      "node": "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+      "summary": "1 failed in 36.45s"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/qc.log",
+      "sha256": "e7679d460b1871d8ffec8f3f88773022c15a3f51ebc13d87c68b81d4b47a20c5"
+    },
+    "postfix_checks": {
+      "exit_code": 0,
+      "nodes": [
+        "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+        "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus"
+      ],
+      "summary": "2 passed in 68.72s"
+    },
+    "resolution": "Updated only the prose counts. Existing regression assertions, source states and biological claims were not weakened or changed.",
+    "status": "INTERRUPTED_AFTER_FAILURE"
+  },
+  "embedding": {
+    "actual_reencoding": true,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection_method": "pacmap",
+    "published": {
+      "corpus_map.json": "6a89ef6db48cb26da3af548dd4e586f95c520f92494f86b162ecb3b474304785",
+      "meta.json": "33d8a1786a429d8e1d3c425b983e77eb9ecdf5b1dc3d70b671de752c878745ce",
+      "vectors.f16.npy": "8ebfbdef87a032474e882a666032e7140e85c08e34ae6e783efd5228c5782e94"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/embedding-stage/reuse-proof.json",
+      "sha256": "2216cfe80a9d5d7100ff2b3a7df71b49c78cb7651b3811b69f0a91d7519e9361"
+    },
+    "seed": 42,
+    "unchanged_rows_independently_checked_against_pinned_local_baseline": true,
+    "vector_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-abd1/embedding-stage/bulk/vectors.f16.npy",
+      "sha256": "70b4e1597bd45689195fb0091b83862175d0ffb1c4f84f50dbf5c3efd5110132"
+    }
+  },
+  "embedding_reuse_proof": {
+    "baseline_sha256": "b8fd1e4c384d8d47b6d18b867c2db01bf6d61c5c6cfb99d7a856d2e09db05a4a",
+    "byte_identical_reused_rows": 2937,
+    "changed_documents": [
+      "CHEBI:338412",
+      "CHEBI:69621"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "bbe54dc5240ce0a1",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "environment_limitation": "Local RDKit 2025.03.6 differs from project pin 2026.3.5. No new CI or pinned-environment pass is claimed.",
+  "experimental_proteins_or_genomes_assigned": 0,
+  "focused_preflight": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_translation_gene_curation.py",
+      "tests/test_sinefungin_curation.py",
+      "tests/test_abd1_archive_curation.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_checkpoint_scope_rendering.py"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T10:05:18.161334+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/focused.log",
+      "sha256": "27cc98e045d00f0b5f00fbd3e5217e7933752a089edd26ba8aa3b23565a4879f"
+    },
+    "output": "........................................................................ [ 82%]\n...............                                                          [100%]\n87 passed in 40.78s\n",
+    "started": "2026-10-13T10:04:36.569623+00:00"
+  },
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 2400.43,
+    "exit_code": 0,
+    "finished": "2026-10-13T10:58:35.137416+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/qc-retry/qc.log",
+      "sha256": "3a6d8b4373a7cf62a653afee430705a8536cb76f958afcbd1f80599c44fbbe47"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T10:18:34.669863+00:00",
+    "test_summary": "3257 passed, 4 skipped in 2009.04s (0:33:29)"
+  },
+  "full_test_results": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/full-tests-retry.xml",
+      "sha256": "47b5cf2f1cc887c5877206988de08e440608b669d28ae9fbee5ea043dd24dd21"
+    },
+    "passed": 3257,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "scope_notes_visible": true
+  },
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 2,
+  "offline_source_replay": {
+    "network_requests": 0,
+    "sources": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016.pdf-redirect-3",
+        "sha256": "b081459f700e2b7753ccc55ed8b300f24889bc6c237ec9d12d3e6773e0d1a470"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-3.png",
+        "sha256": "626bc046756b18d9049eada691f6219e11aa0184d43f485ffff5240c37a59eb1"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-7.png",
+        "sha256": "ccaa1b7e8db35d17f202531347695cb5b80072856db1f472208b3a1ddc1f79d4"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-10.png",
+        "sha256": "08486666c174b374ca540e7c2451f1b0c76110a406b951a24f2b06dbe0aab9cc"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016-page-13.png",
+        "sha256": "1601c6fc5e6a449110a9e27f4cf245b87d86c8654bfbeedf117a85e00317b022"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/meskauskas-2008-figure-2.jpeg",
+        "sha256": "c32117481fd9103f230bbd84de1b81bccc92f55fa25110c99dfb2acde47c9a36"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/meskauskas-2008-nar.html",
+        "sha256": "742e86f7679706f6fa99b550108f0c6f601f3424788611d6ccf8df4a0dfab62c"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/fried-1981-pnas-response",
+        "sha256": "f537c88c0a86f2ba339c3e09c9645a947308ff5f04bce824fb22247ae6ced825"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/fried-1981-europepmc",
+        "sha256": "97ca47117fe9c0f17b6c3f5432eda28ac364b4531d703a976d3024a1b64c8134"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/grant-1976-abstract.html",
+        "sha256": "50244b9b599c40c4b662f0b7e2c4abcd4454a7863dc0124373f04dae122771b0"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/mclaughlin-2009-usda.html",
+        "sha256": "2dce3135e82d89df478ef84a05eea6ed25c921fbb46e82374a8e4bac9ec3e338"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/request-09bfc5bddb4474a53a6f761955add756976c23fc6862c3f68605d1bc3448e2c2.json",
+        "sha256": "2526e91a39ae291b224c3d4e3a5fb8c8cf954b6a874c45cedbd63ee4119ecf80"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/request-eccfcf26e277cb94c6d4b067a63d76683571435cc160ad1dbaf55697fd82cc67.json",
+        "sha256": "4a04ae8cdb7bd1cc24a0d204fe5adb9d4c170d93bc070f51ddb58c114a7c742b"
+      },
+      {
+        "path": "research/2026-10-12-thiolutin-context.json",
+        "sha256": "7513c5f467ee3cffad02c9a1591b60b7f56149eab1cd868b4d2533666b612f06"
+      },
+      {
+        "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+        "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/request-8cbe77ce0a827cea454f722372565cb565524050e6301162e345eda008eb8bff.json",
+        "sha256": "38ae8170486350fbefee3e930c4d122f52cf1014802546d3d5e49f4bd3c84a27"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/request-33741b0e6f8d6b35ed5c500f5bea581c5921ea06a7233a13f7159a1a9bf78b91.json",
+        "sha256": "b5bfa1a307cadd03f6d554b77b68cceab9cdc5994384c974a4d6583eb0739bc5"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/request-928a62fef9babce9bb01a907dae2d88ac53edb07769066fa13e19ef6fa0a2839.json",
+        "sha256": "610e6ec8c897aae0f34d42c632a9d97fcd46d22bbee16fcb7be1b7e4bb780fb5"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016.pdf.json",
+        "sha256": "a6d81ce9968e8d1a4970ad7ac2ccc1da055e6124ee7d530aa6444641277c5441"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016.pdf-redirect-1.json",
+        "sha256": "ab2b6887a9e9ba18741bf5fe7c5fc15cf00a59fccd7296850390ac1f813e2bc8"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016.pdf-redirect-2.json",
+        "sha256": "83cd8a01c2c6061b2397b3d91f945e7d313053177fab118b974a5d832b53be3c"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-translation/kugler-2016.pdf-redirect-3.json",
+        "sha256": "3238d349ed16072a70026215f9809423b9f024ad67e1d1c5c037874f94d08e60"
+      }
+    ]
+  },
+  "preservation": {
+    "all_memberships_unchanged": true,
+    "all_raw_and_biological_owner_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/baseline.json",
+      "sha256": "9fbfe1514e20cff664c196128bc0f3672af4d9bddcd503c54d32de9e7acf73b6"
+    },
+    "changed_records": [
+      "data/antibiotics/antifungal/trichothecin.yaml",
+      "data/antibiotics/antiviral/anisomycin.yaml"
+    ],
+    "earlier_research_files_preserved_except_main_report": true,
+    "historical_research_files_checked": 401,
+    "ignored_files_included": true,
+    "protected_files_checked": 3385,
+    "records_checked": 2939,
+    "source_queue_count_only_change": {
+      "after": {
+        "path": "curation/source_queue.tsv",
+        "sha256": "c10c56d2ecc3ba039bc76833ab94ad8068020a158b475243c751973a715e91f8"
+      },
+      "before_sha256": "8fc66ddb95a0defc607bb27f15daccebfdef0c817bfa9f5bbd323f7930f586bc",
+      "single_count_reversal_recovers_baseline": true,
+      "source_status_or_reuse_terms_changed": false
+    }
+  },
+  "protected_files_changed": [
+    "curation/source_queue.tsv",
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antifungal/trichothecin.html",
+    "pages/antiviral/anisomycin.html",
+    "pages/index.html",
+    "pages/map.html"
+  ],
+  "qc_environment": {
+    "optional_probe": "UMAP import in the QC runtime failed because numba is absent. UMAP was not used; actual BGE/PaCMAP processing succeeded in the separate Python 3.12 runtime.",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:58:33) [Clang 19.1.7 ]",
+    "versions": {
+      "numpy": "2.2.6",
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3"
+    }
+  },
+  "records_byte_identical": 2937,
+  "render_mutation_checks": {
+    "biological_files_changed": false,
+    "caught": 8,
+    "mutations": [
+      {
+        "caught": true,
+        "gene": "RPL3",
+        "mutation": "adapter_note"
+      },
+      {
+        "caught": true,
+        "gene": "RPL3",
+        "mutation": "adapter_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "RPL3",
+        "mutation": "template_note"
+      },
+      {
+        "caught": true,
+        "gene": "RPL3",
+        "mutation": "template_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "PDR5",
+        "mutation": "adapter_note"
+      },
+      {
+        "caught": true,
+        "gene": "PDR5",
+        "mutation": "adapter_evidence"
+      },
+      {
+        "caught": true,
+        "gene": "PDR5",
+        "mutation": "template_note"
+      },
+      {
+        "caught": true,
+        "gene": "PDR5",
+        "mutation": "template_evidence"
+      }
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/render-mutations.json",
+      "sha256": "5af7720fa833a0743b27091bc4146e7bc895e908ec64a335d9d48bc01aac884d"
+    },
+    "template_files_changed": false
+  },
+  "scope": "SELECTED_PRIMARY_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

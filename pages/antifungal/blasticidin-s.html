@@ -122,7 +122,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">2 observations &middot; <a href="blasticidin-s/activity-1.html">Browse all observations</a> &middot; <a href="blasticidin-s/record-6feddf48903e16c5cbfc48a162be9d0dc8db33b76a9ed905c04898e95ea845c3.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">2 observations &middot; <a href="blasticidin-s/activity-1.html">Browse all observations</a> &middot; <a href="blasticidin-s/record-b446b36c3bb298db18a479004eab4df90ba42fb0256fccdc167c536e52493ebc.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -165,9 +165,43 @@ without a method is not an observation — every row here carries an assay.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">2 source-backed resistance determinants or associations,
+<p class="meta">4 source-backed resistance determinants or associations,
 with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
+  <summary>ANTIBIOTIC_INACTIVATION <span class="pill plain">2</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_INACTIVATION" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_INACTIVATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>bsr-associated blasticidin S inactivation in a laboratory E. coli host<br><span class="meta">Heterologous laboratory host; the enzyme donor is Bacillus cereus K55-S1, not a native E. coli gene assignment. Deamination is distinct from chemical isomerization. This is not a species-wide phenotype. Exact experimental allele, protein and genome unresolved; no standardized MIC or clinical category inferred. The claim concerns the blasticidin S moiety, not equivalence of salt forms.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a><br><span class="meta">strain TK121</span> <span class="meta">bsr</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.40.1791">DOI:10.7164/antibiotics.40.1791</a></span> <span class="meta">(Pages 1791-1793 and Figures 1-2: native K55-S1 context and biochemical inactivation; not a host-specific E. coli susceptibility measurement.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1271/bbb1961.55.3155">DOI:10.1271/bbb1961.55.3155</a></span> <span class="meta">(Pages 3155-3157 and Figure 2: bsr donor/host provenance and qualitative gene-function evidence. Laboratory host and native donor remain distinct.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P33967/entry">https://www.uniprot.org/uniprotkb/P33967/entry</a></span> <span class="meta">(Reference-only UniProtKB:P33967, entry version 95, sequence version 1, release 2026_03; bsr in Bacillus cereus, with K55-S1 in the cited source context. Not an exact experimental allele or host protein accession.)</span></li>
+</ul>
+<span class="meta">Qualitative resistance and biochemical deaminase evidence</span></td>
+    </tr>
+    <tr>
+      <td>bsr-associated blasticidin S inactivation in the source-reported bacterial isolate<br><span class="meta">Native source isolate identified phenotypically in the historical study, not re-identified genomically. Deamination is distinct from chemical isomerization. This is not a species-wide phenotype. Exact experimental allele, protein and genome unresolved; no standardized MIC or clinical category inferred. The claim concerns the blasticidin S moiety, not equivalence of salt forms.</span></td>
+      <td>—</td>
+      <td><em>Bacillus cereus</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1396"><code class="curie">NCBITaxon:1396</code></a><br><span class="meta">strain K55-S1</span> <span class="meta">bsr</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.40.1791">DOI:10.7164/antibiotics.40.1791</a></span> <span class="meta">(Pages 1791-1793 and Figures 1-2: native K55-S1 context and biochemical inactivation; not a host-specific E. coli susceptibility measurement.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1271/bbb1961.55.3155">DOI:10.1271/bbb1961.55.3155</a></span> <span class="meta">(Pages 3155-3157 and Figure 2: bsr donor/host provenance and qualitative gene-function evidence. Laboratory host and native donor remain distinct.)</span></li>
+  <li><span class="meta"><a href="https://www.uniprot.org/uniprotkb/P33967/entry">https://www.uniprot.org/uniprotkb/P33967/entry</a></span> <span class="meta">(Reference-only UniProtKB:P33967, entry version 95, sequence version 1, release 2026_03; bsr in Bacillus cereus, with K55-S1 in the cited source context. Not an exact experimental allele or host protein accession.)</span></li>
+</ul>
+<span class="meta">Qualitative resistance and biochemical deaminase evidence</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
   <summary>REDUCED_PERMEABILITY <span class="pill plain">2</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: REDUCED_PERMEABILITY" tabindex="0">
 <table>
@@ -270,6 +304,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
     <span class="meta">2026-10-12 · codex · LLM-assisted</span>
     <p>Added two primary-supported Opp subunit deletion resistance claims and two MIC observations for named laboratory derivatives. Normalized ug/mL to mg/L; kept UniProt and MG1655 genome as reference context. Preserved previous curation; no clinical category or experimental genome assigned.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added two qualified bsr-associated blasticidin S inactivation claims, separating a source-reported native isolate from a laboratory host. UniProt is reference-only; no exact allele, protein, genome or numeric AST assigned. Preserved existing uptake claims and activities; whole-record review remains open.</p>
   </li>
 </ol>
 

@@ -16,7 +16,7 @@ import phibase_grounding_reviews as review  # noqa: E402
 import seed_from_sources as seed  # noqa: E402
 
 INVENTORY = ROOT / "data/raw/phibase_amr.tsv"
-CURRENT_REVIEWED = 189
+CURRENT_REVIEWED = 190
 FUMIGATUS_REFERENCES = {
     "12543662": "DOI:10.1128/aac.47.2.577-581.2003",
     "12709346": "DOI:10.1128/aac.47.5.1719-1726.2003",
@@ -321,7 +321,13 @@ def test_seeding_preserves_claims_and_unreviewed_identifiers(inputs):
                     assert field not in new
                 assert old[field] in new["note"]
             pmid = old["evidence"][0]["reference"].removeprefix("PMID:")
-            if pmid == "38374637":
+            if pmid == "1388107":
+                assert old["strain"] == "74-OR31-14a" and new["strain"] == "F914"
+                assert new["gene_id"] == old["gene_id"] == "EAA28433"
+                assert "reference, not the tested subject" in new["note"]
+                assert "Original full-text review remains open" in new["note"]
+                reference = "DOI:10.1584/jpestics.17.4_237"
+            elif pmid == "38374637":
                 assert new["strain"] == old["strain"] == "Scl02-05"
                 assert new["taxon_id"] == old["taxon_id"] == "NCBITaxon:5180"
                 assert "not independently validated" in new["note"]
@@ -558,7 +564,7 @@ def test_seeding_preserves_claims_and_unreviewed_identifiers(inputs):
         ["CHEBI:10023"] * 18 + ["CHEBI:46081"] * 30 + ["CHEBI:6076"] * 19 + ["CHEBI:48080"]
         + ["CHEBI:81784"] * 2 + ["CHEBI:81972"] * 2 + ["CHEBI:474180"] * 2
         + ["CHEBI:9448"] * 3
-        + ["CHEBI:64355"] * 5 + ["CHEBI:3392"] * 4
+        + ["CHEBI:64355"] * 5 + ["CHEBI:3392"] * 5
         + ["CHEBI:16240"] * 3 + ["CHEBI:40909"] * 3 + ["CHEBI:136340"] * 2
         + ["CHEBI:3405"] * 34
         + ["CHEBI:28909"] * 15 + ["CHEBI:81763"] * 10
@@ -612,7 +618,7 @@ def test_new_review_only_refreshes_provenance_for_previous_decisions(inputs, tmp
         ["CHEBI:10023"] * 16 + ["CHEBI:46081"] * 30 + ["CHEBI:6076"] * 9 + ["CHEBI:48080"]
         + ["CHEBI:81784"] * 2 + ["CHEBI:81972"] * 2 + ["CHEBI:474180"] * 2
         + ["CHEBI:9448"] * 3
-        + ["CHEBI:3405"] * 34 + ["CHEBI:3392"] * 4
+        + ["CHEBI:3405"] * 34 + ["CHEBI:3392"] * 5
         + ["CHEBI:16240"] * 3 + ["CHEBI:40909"] * 3 + ["CHEBI:136340"] * 2
         + ["CHEBI:28909"] * 15 + ["CHEBI:81763"] * 10
         + ["CHEBI:27641", "CHEBI:81760", "CHEBI:8434", "CHEBI:8489"]
@@ -650,6 +656,11 @@ def test_li_review_does_not_resolve_individual_clones_or_change_other_claims(inp
             assert claim["taxon_label"] == (
                 "Fusarium proliferatum" if row["strain_label"] == "HC30" else "Fusarium verticillioides"
             )
+        elif row["pmid"] == "1388107":
+            assert claim["strain"] == "F914"
+            assert "protein_accession" not in claim and "strain_taxon_id" not in claim
+            assert "EAA28433" in claim["note"]
+            assert "Original full-text review remains open" in claim["note"]
         elif row["pmid"] == "42112916":
             assert claim["strain"] == row["strain_label"] == "V592"
             assert "protein_accession" not in claim and "strain_taxon_id" not in claim

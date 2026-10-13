@@ -1,0 +1,357 @@
+{
+  "adversarial_self_review": [
+    "Native isolate and heterologous host stay separate; donor UniProt is not assigned as host protein.",
+    "Species taxonomy follows source reports, not modern genomic re-identification or strain IDs.",
+    "The related K55-S2 isolate does not inherit K55-S1's gene/protein crosswalk.",
+    "Biochemical deamination does not establish enzyme-catalyzed isomerization or a standardized MIC.",
+    "Fungal BSD, unrelated bsr racemase and existing uptake claims remain distinct.",
+    "Inherited reference metadata retains its historical primary-review flag; current native-page review is separate.",
+    "Gated or inaccessible sources remain holds; tool errors are not fabricated HTTP status codes.",
+    "Dated replay tests preserve prior data without freezing live records; eight rendering omission probes are caught.",
+    "Same-agent review is not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-blasticidin-deaminase-context.json",
+      "sha256": "e1caff934048091f6ac5905c0d843f1c249052108703b4c9edbfcdacfc7b3185"
+    },
+    {
+      "path": "research/2026-10-13-blasticidin-deaminase-curation.json",
+      "sha256": "27ce548a4cc57b7070d5c0a77ecc29bd44abb1b4721e304c85a7c56c3b0dd95c"
+    },
+    {
+      "path": "research/2026-10-13-blasticidin-deaminase-reconciliation.json",
+      "sha256": "267d75c955fc91a7ec8d4507335d19433b07ac1b7830ce0f06c11b031f791bb5"
+    },
+    {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-grounding.tsv",
+      "sha256": "b630521072e27883b1dac381e5473a838edc7ecd6a7c9d1170af19277deea0d4"
+    },
+    {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-progress.json",
+      "sha256": "8ec5b6655e5093c4aa5bd3fb6fc9dea6ecf0161985f84b31ba66fb5338ec1c75"
+    },
+    {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-progress.tsv",
+      "sha256": "7636d6699e52f8e0b844ea78ae4a2020be9307ac8544c1d14125cee5f027d596"
+    },
+    {
+      "path": "data/antibiotics/antifungal/blasticidin-s.yaml",
+      "sha256": "4886e113f1e70381dd401f1346c9058c687ea5c7f192fbbd12db7bedbc4cc3f4"
+    },
+    {
+      "path": "tests/fixtures/blasticidin-s-before-deaminase-2026-10-13.yaml",
+      "sha256": "081fcfdb19f92cb018d6300bbdb1f141ab81659a14b132c8687ddba9d6b795da"
+    },
+    {
+      "path": "tests/test_bsr_curation.py",
+      "sha256": "153483e1edf45324532bcd5c1c9df777d04f9b2c4851f80414ef33d799771b5a"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "a7b7e955b6e8c08bbda0282e255b4372e2e62594de474b1f2e6abbc92052cb22"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "e8374f57551ef6d91770934ae5bc37fa9d5d68c5be279ba0393ac09e90acfca3"
+    }
+  ],
+  "cached_sources_verified": 13,
+  "canary_preflight": "13 passed, 1 deselected before live application",
+  "coverage_reconciled_from_progress_rows": {
+    "assertions": 4875,
+    "curator_claims": 120,
+    "curator_records": 49,
+    "records": 2939,
+    "records_with_assertions": 316,
+    "without_assertions_or_rules": 2610
+  },
+  "date": "2026-10-13",
+  "embedding": {
+    "actual_reencoding": true,
+    "byte_identical_reused_rows": 2938,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection_method": "pacmap",
+    "published": {
+      "corpus_map.json": "ce04c8d379485b8bcb5934cbd30fc681618262a9dec446b8c25fb4f103162eb4",
+      "meta.json": "f02e46c33ef70c263bb4be88e2dd5b743ad68c41c0f2c52b1b713db2deca29bf",
+      "vectors.f16.npy": "def7e1ef4088712809ef66186edffa9bab9af87877ab5fc3f45ccbe1f4e4e344"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-detox-primary/embedding-stage/reuse-proof.json",
+      "sha256": "f53043dfd4681018633b584f97941776a8a85e647a20e05f00934b9fe5bed2b0"
+    },
+    "seed": 42,
+    "unchanged_rows_independently_checked_against_pinned_local_baseline": true,
+    "vector_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-translation/embedding-stage/bulk/vectors.f16.npy",
+      "sha256": "8ebfbdef87a032474e882a666032e7140e85c08e34ae6e783efd5228c5782e94"
+    }
+  },
+  "environment": {
+    "fresh_ci_or_pinned_environment_pass_claimed": false,
+    "project_rdkit_pin": "2026.3.5",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:58:33) [Clang 19.1.7 ]",
+    "versions": {
+      "numpy": "2.2.6",
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3"
+    }
+  },
+  "experimental_proteins_or_genomes_assigned": 0,
+  "focused_preflight": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_bsr_curation.py",
+      "tests/test_blasticidin_curation.py",
+      "tests/test_detox_reference_context.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_checkpoint_scope_rendering.py",
+      "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+      "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-detox-primary/focused-tests.xml"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T11:53:17.348719+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-detox-primary/focused.log",
+      "sha256": "3bb7cdcae563a25455da003fbf1f2ebf600d5e38b4d51da618eb7cfa2be2b9f9"
+    },
+    "output": "........................................................................ [ 87%]\n..........                                                               [100%]\n82 passed in 98.46s (0:01:38)\n",
+    "started": "2026-10-13T11:51:38.103298+00:00"
+  },
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 1801.26,
+    "exit_code": 0,
+    "finished": "2026-10-13T12:29:12.761227+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-detox-primary/qc/qc.log",
+      "sha256": "b9b082aa7a73677f65b8ac0d0cff5d335f8d387a5acd6f3c69ee60425192404c"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T11:59:11.467258+00:00",
+    "test_summary": "3300 passed, 4 skipped in 1563.05s (0:26:03)"
+  },
+  "full_test_results": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-detox-primary/full-tests.xml",
+      "sha256": "518ce2c7c7258e41fa77bac11afbe89610fea52130f6e6cb153d3a3bbaf88ccc"
+    },
+    "passed": 3300,
+    "skip_reasons": [
+      "got empty parameter set for (path)",
+      "historical checkpoint no longer matches the live corpus; public invariants still run"
+    ],
+    "skipped": 4
+  },
+  "generated_download_replacement": {
+    "added": {
+      "path": "pages/antifungal/blasticidin-s/record-b446b36c3bb298db18a479004eab4df90ba42fb0256fccdc167c536e52493ebc.json.gz",
+      "sha256": "b446b36c3bb298db18a479004eab4df90ba42fb0256fccdc167c536e52493ebc"
+    },
+    "before_and_after_reproduced_from_expanded_records": true,
+    "removed": "pages/antifungal/blasticidin-s/record-6feddf48903e16c5cbfc48a162be9d0dc8db33b76a9ed905c04898e95ea845c3.json.gz"
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "scope_notes_visible": true
+  },
+  "github_mutations": 0,
+  "initial_local_problems_resolved": [
+    "Three new test assertions exceeded the lint limit and were wrapped before application.",
+    "The preservation verifier initially assumed an unchanged file set and an updated main index. Actual rendering replaces the content-addressed complete-record download and its activity-page link, while the main index stays unchanged. Both downloads were reproduced from pinned before/after records before accepting this exact artifact replacement."
+  ],
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 2,
+  "offline_source_replay": {
+    "network_requests": 0,
+    "sources": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/endo-1987.pdf",
+        "sha256": "92fd856b6a8a6059975b6fe7cf25449d60880bc567f37982effe6bffdc256467"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/endo-1987-page-1.png",
+        "sha256": "69b06581404f9855b9d7ab11dd1545a22bcb9304538ba5e6ecc57a1aef758637"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/endo-1987-page-2.png",
+        "sha256": "f7623365f3410b199d648644780199178577dda148a6603e2575741c93607b39"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/endo-1987-page-3.png",
+        "sha256": "35f5bd548c571921f061f8e01c043988c9133b498af2b838971e90bc05dc2f62"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/kobayashi-1991.pdf",
+        "sha256": "882eae6c5f0e42161473a3d6e992e75ba0e90a7c4090502ffcf30aebba354314"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/kobayashi-1991-page-1.png",
+        "sha256": "cba8dced7a64e48b554f2a2f62c8cf650d4ccc8e20f034e684f7facd513f84c4"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/kobayashi-1991-page-2.png",
+        "sha256": "5ad2db04b5e85738967b23263c495e6723c5d80d945eedd586f1cc4ee9761092"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox-primary/kobayashi-1991-page-3.png",
+        "sha256": "517d05fa67d24588e1acc9477d21ccb37bd9601d7c22b64d1a36648f86ccbed8"
+      },
+      {
+        "path": "research/2026-10-12-blasticidin-context.json",
+        "sha256": "dfb54be7e4f93f65a8c835881d1bc209fa454eef909ab6e3bdc8bc8dee39239b"
+      },
+      {
+        "path": "research/2026-10-13-detox-reference-context.json",
+        "sha256": "4284a61a802b9f4516c1dbfa062ea5da7ae0fedea855d0f5f0fa1ed556a9e1ce"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox/request-659b341c58aa74aacda899a2eaf4c6e24d4e0a5f5156232850fb1534bbfdf9d8.json",
+        "sha256": "05c18bea13f48259fdcd068f58780a88d1c3f47fb18a6a770794076cfdd8f66e"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-detox/request-5eee15d0e294e3e267ae350028883d14f5e8e008a2f9f0e9e18c84bf387f829d.json",
+        "sha256": "61a456760670209d1655e5e7865949f48a9dfd8b771dd8e9beca67469aa74efe"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-ee6dbf6e3f09c6cab02e184352e45e77bb32a7adbb024d9ceea31aaf75599c37.json",
+        "sha256": "6f15a516e89969828b9950036cd9d5a791d2070e8fb836f0ba068f921f2e822e"
+      }
+    ]
+  },
+  "post_report_checks": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_bsr_curation.py",
+      "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+      "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-detox-primary/post-report-tests.xml"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T12:31:07.867464+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-detox-primary/post-report.log",
+      "sha256": "0f007f10b5eac808ee36394ece45be569cb507e1b49bc90d08fd19501d78d51d"
+    },
+    "output": "................                                                         [100%]\n16 passed in 61.92s (0:01:01)\n",
+    "started": "2026-10-13T12:30:05.150250+00:00"
+  },
+  "preservation": {
+    "all_raw_and_curation_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-detox-primary/baseline.json",
+      "sha256": "9ac5187869e0761d4837b153f797238bb74ee00f940da4b05992729a6cf6c714"
+    },
+    "changed_records": [
+      "data/antibiotics/antifungal/blasticidin-s.yaml"
+    ],
+    "earlier_research_files_preserved_except_main_report": true,
+    "historical_research_files_checked": 413,
+    "ignored_files_included": true,
+    "protected_files_checked": 3385,
+    "protected_membership_changes_only_verified_record_download": true,
+    "record_membership_unchanged": true,
+    "records_checked": 2939,
+    "source_queue_byte_identical": true
+  },
+  "protected_files_changed": [
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antifungal/blasticidin-s.html",
+    "pages/antifungal/blasticidin-s/activity-1.html",
+    "pages/map.html"
+  ],
+  "records_byte_identical": 2938,
+  "render_mutation_checks": {
+    "biological_files_changed": false,
+    "caught": 8,
+    "mutations": [
+      {
+        "caught": true,
+        "mutation": "adapter_note",
+        "subject": 0
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_evidence",
+        "subject": 0
+      },
+      {
+        "caught": true,
+        "mutation": "template_note",
+        "subject": 0
+      },
+      {
+        "caught": true,
+        "mutation": "template_evidence",
+        "subject": 0
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_note",
+        "subject": 1
+      },
+      {
+        "caught": true,
+        "mutation": "adapter_evidence",
+        "subject": 1
+      },
+      {
+        "caught": true,
+        "mutation": "template_note",
+        "subject": 1
+      },
+      {
+        "caught": true,
+        "mutation": "template_evidence",
+        "subject": 1
+      }
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-detox-primary/render-mutations.json",
+      "sha256": "9c89f866a456b42e9c552b8b0f13f487afdb3de61df91cd9741b522b3b861f33"
+    },
+    "template_files_changed": false
+  },
+  "scope": "QUALIFIED_BSR_PRIMARY_CONTEXTS_NOT_WHOLE_RECORD_REVIEW",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

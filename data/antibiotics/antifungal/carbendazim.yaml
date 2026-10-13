@@ -183,7 +183,7 @@ resistance_mechanisms:
     notes: 'Identifier-scope review: Results Sec5 and Sec7; Figure 2 and Table 1 distinguish
       SJ51M from parent SJ51, UniProtKB release 2026_03: W7M0I3 entry 62, sequence
       version 1; FVEG_05512 in M3125 / FGSC 7600, TaxID 334819. Reviewed 2026-10-08
-      by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+      by codex; curation/phibase_grounding_reviews.json SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
 - mechanism_type: UNKNOWN
   label: Mfs2delta (deletion) associated with resistance to carbendazim
   taxon_id: NCBITaxon:27337
@@ -214,7 +214,7 @@ resistance_mechanisms:
       and separate tested groups; Figure 8, Parental identity in s2-1, UniProtKB release
       2026_03: G2XFG4 entry 50, sequence version 1; VdLs.17 / ATCC MYA-4575 / FGSC
       10137 reference taxonomy. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json
-      SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+      SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
 - mechanism_type: UNKNOWN
   label: TUB2(F167Y) (amino acid mutation) [Not assayed] associated with resistance
     to carbendazim
@@ -249,7 +249,7 @@ resistance_mechanisms:
       identity, Table 1, page 9: separate parent and group columns, UniProtKB release
       2026_03: P02557 entry 224, sequence version 2; reference locus and taxonomy.
       Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256
-      e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+      1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
 - mechanism_type: UNKNOWN
   label: βtub-T351I(T351I) (amino acid mutation) [Not assayed] associated with resistance
     to carbendazim
@@ -282,17 +282,15 @@ resistance_mechanisms:
       response SHA-256 8c5698dda6b5f2f63be203d30cfec6c411cd7e206e46ee871a9c4870a4fef1f8,
       UniProtKB release 2026_03: P53374 entry 110, sequence version 1, F. fujikuroi
       TaxID 5127, strain comment A 102; not the reported species or subject. Reviewed
-      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+      2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
   taxon_id: NCBITaxon:948311
 - mechanism_type: UNKNOWN
   label: βTub transformant(F914-βTub(E198G)) (transformant) [Ectopic] associated with
     resistance to carbendazim
   taxon_id: NCBITaxon:5141
   taxon_label: Neurospora crassa
-  strain: 74-OR31-14a
-  strain_taxon_id: NCBITaxon:367110
+  strain: F914
   alteration: βTub transformant(F914-βTub(E198G)) (transformant) [Ectopic]
-  protein_accession: UniProtKB:P05220
   gene_id: EAA28433
   phenotype_id: PHIPO:0000383
   phenotype_label: resistance to carbendazim
@@ -300,12 +298,32 @@ resistance_mechanisms:
   source: PHIBASE
   source_version: 62e6a87a49397cba6ceb211b254d7ac8e5d09ff8
   source_retrieved_on: '2026-09-01'
-  note: This is a curated gene-alteration/chemical resistance association, not evidence
-    for a specific biochemical resistance mechanism.
+  note: 'This is a curated gene-alteration/chemical resistance association, not evidence
+    for a specific biochemical resistance mechanism. Grounding review fujimura-1992-neurospora-subject-context:
+    The related primary paper distinguishes background 74-OR31-14a from F914/F914a
+    and cites the original study. F914 follows the original publisher Summary. UniProt
+    P05220 and strain TaxID 367110 describe the separate 74-OR23-1A reference, not
+    the tested subject. Retained source gene_id EAA28433 is an EnsemblFungi transcript/protein
+    cross-reference, not a verified experimental allele or gene-object assignment.
+    Exact experimental protein, strain TaxID and genome remain unresolved. Original
+    full-text review remains open; source alteration, phenotype, assay and mechanism
+    are unchanged. Original source background label: 74-OR31-14a. Reference-only source
+    identifiers: strain_taxon_id=NCBITaxon:367110; protein_accession=UniProtKB:P05220.'
   evidence:
   - reference: PMID:1388107
     notes: PHI-base primary-literature antimicrobial interaction PHIG:2858; joined
       to this record by exact ChEBI identifier.
+  - reference: DOI:10.1584/jpestics.17.4_237
+    notes: 'Identifier-scope review: Related primary paper: p. 238 Strains; p. 239
+      Figure 1; pp. 240-241 Results/Discussion; p. 242 reference 13; all six PDF pages
+      visually inspected, Original PMID:1388107 publisher Summary identifies F914;
+      original full article remains subscription-limited and was not fully reviewed,
+      UniProtKB release 2026_03: P05220 entry 157, sequence version 2; tub-2/NCU04054;
+      reference strain 74-OR23-1A, TaxID 367110; EAA28433 occupies EnsemblFungi transcript
+      and protein fields, UniProt Taxonomy release 2026_03: 367110 is a reference
+      strain under species 5141; metadata retrieved 2026-10-13, without NCBI requests.
+      Reviewed 2026-10-13 by codex; curation/phibase_grounding_reviews.json SHA-256
+      1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
 - mechanism_type: UNKNOWN
   label: β2tub-E198K(E198K) (amino acid mutation) [Wild type product level] associated
     with resistance to carbendazim
@@ -604,4 +622,12 @@ curation_history:
   action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
   changes: Refreshed the shared PHI-base review checksum after four reference-identifier
     scope corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-13T08:50:10Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Separated the Neurospora experimental subject from its source background
+    label and reference-only protein/strain identifiers. Preserved source locus wording,
+    alteration, phenotype, assay and mechanism; exact experimental accessions remain
+    unresolved.
   llm_assisted: true
