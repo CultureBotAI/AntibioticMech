@@ -4,12 +4,14 @@ import copy
 import csv
 import hashlib
 import json
+import sys
 from pathlib import Path
 from urllib.parse import urlencode
 
 import pytest
 
-from scripts import audit_card_literature_expansion as audit
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import audit_card_literature_expansion as audit  # noqa: E402
 
 
 def entry(accession="P00001", gene="bmr", pmid="111"):

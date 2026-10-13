@@ -3,12 +3,14 @@
 import csv
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import pytest
 from rdflib import OWL, RDF, RDFS, XSD, BNode, Graph, Literal, URIRef
 
-from scripts import audit_card_book_citations as audit
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import audit_card_book_citations as audit  # noqa: E402
 
 TID = "ARO:3000001"
 NODE = URIRef(audit.citations.ontology.BASE + "3000001")
