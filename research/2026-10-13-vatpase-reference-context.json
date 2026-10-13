@@ -1,0 +1,790 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "compound_name_grounding": {
+    "findings_transferred_between_compounds": false,
+    "folimycin": {
+      "basis": "EXACT_CHEBI_SYNONYM",
+      "identifier": "CHEBI:73167",
+      "synonym": {
+        "source": "chebi",
+        "synonym_text": "folimycin",
+        "synonym_type": "EXACT_SYNONYM"
+      }
+    },
+    "tested_preparations_independently_reidentified": false
+  },
+  "date": "2026-10-13",
+  "inputs": {
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-vatpase/canary-reviewed.json",
+      "sha256": "183a9d22268ed1cdd41243bbedc5f9a01f2b01801253ec73977b6145ace85494"
+    },
+    "census": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-grounding.tsv",
+      "sha256": "b630521072e27883b1dac381e5473a838edc7ecd6a7c9d1170af19277deea0d4"
+    },
+    "discovery": {
+      "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+      "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-vatpase/cohort.json",
+      "sha256": "cccbea7155f82cf5a96758364106f7d3c2e94656a75da7c679292dde7ffd878f"
+    },
+    "prior_progress": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-progress.json",
+      "sha256": "8ec5b6655e5093c4aa5bd3fb6fc9dea6ecf0161985f84b31ba66fb5338ec1c75"
+    },
+    "taxonomy_dossiers": [
+      {
+        "path": "research/2026-10-13-neurospora-context.json",
+        "sha256": "45782ba96153c4d918dd18817b33b45b27ce1545e1678ec58d34164a6c264e3c"
+      },
+      {
+        "path": "research/2026-10-13-tavaborole-reference-context.json",
+        "sha256": "6f021d40120fc2ff0c66a38ca7e71acd573438a694a6d023bbd9c1f574ccf75f"
+      }
+    ]
+  },
+  "limits": [
+    "Access outcomes are manual observations; offline replay verifies metadata, not primary results.",
+    "Search-result snippets and article titles do not establish a verified resistance claim.",
+    "Missing focal citations in returned bibliographies do not disprove the primary studies.",
+    "Reference strain and species lineage identify database entries, not tested derivatives or isolates.",
+    "Exact experimental allele, strain, genome and sample links remain unresolved, not asserted absent.",
+    "ORF names remain source ORF names, not upgraded to ordered-locus identifiers.",
+    "Subunits c, c-prime and c-double-prime are distinct; similar names do not transfer phenotypes.",
+    "Biochemical inhibition is not MIC or organismal resistance; compound-specific effects remain unverified.",
+    "No sequences, variant specifications, constructs, protocols or numeric AST are exported.",
+    "No NCBI request/contact, reuse-terms review, source adoption or GitHub mutation; issue 1040 stays deferred."
+  ],
+  "primary_leads": {
+    "11724795": {
+      "checked_on": "2026-10-13",
+      "doi": "10.1074/jbc.m109756200",
+      "local_primary_text_saved": false,
+      "metadata_source": {
+        "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+        "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+      },
+      "native_figures_visually_inspected": false,
+      "observation_basis": "MANUAL_TOOL_OBSERVATION_NOT_REPLAYABLE_FROM_LOCAL_PRIMARY_BYTES",
+      "outcome": "TOOL_REPORTED_URL_INACCESSIBLE",
+      "pmid": "11724795",
+      "primary_results_verified": false,
+      "requested_url": "https://www.jbc.org/article/S0021925820874997/pdf",
+      "retry_or_alternate_transport": false
+    },
+    "15180988": {
+      "checked_on": "2026-10-13",
+      "doi": "10.1074/jbc.m404638200",
+      "local_primary_text_saved": false,
+      "metadata_source": {
+        "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+        "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+      },
+      "native_figures_visually_inspected": false,
+      "observation_basis": "MANUAL_TOOL_OBSERVATION_NOT_REPLAYABLE_FROM_LOCAL_PRIMARY_BYTES",
+      "outcome": "TOOL_REPORTED_HTTP_403",
+      "pmid": "15180988",
+      "primary_results_verified": false,
+      "requested_url": "https://www.sciencedirect.com/science/article/pii/S0021925820773722",
+      "retry_or_alternate_transport": false
+    },
+    "16912037": {
+      "checked_on": "2026-10-13",
+      "doi": "10.1074/jbc.m605532200",
+      "local_primary_text_saved": false,
+      "metadata_source": {
+        "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+        "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+      },
+      "native_figures_visually_inspected": false,
+      "observation_basis": "MANUAL_TOOL_OBSERVATION_NOT_REPLAYABLE_FROM_LOCAL_PRIMARY_BYTES",
+      "outcome": "REQUEST_MADE_BUT_ACCESS_RESULT_NOT_RETAINED",
+      "pmid": "16912037",
+      "primary_results_verified": false,
+      "requested_url": "https://www.sciencedirect.com/science/article/pii/S0021925819841030",
+      "retry_or_alternate_transport": false
+    }
+  },
+  "records": {
+    "CHEBI:22689": {
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:22689",
+      "label": "bafilomycin A1",
+      "path": "data/antibiotics/antifungal/bafilomycin-a1.yaml",
+      "resistance_assertions_added": [],
+      "sha256": "ad6d948e4dc15e65af08f0d99154e02becbaabe12811cc0a03bd5aae0fcc0cd7",
+      "standard_inchi_key": "XDHNQDDQEHDUTM-JQWOJBOSSA-N",
+      "whole_record_review": "OPEN"
+    },
+    "CHEBI:73167": {
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:73167",
+      "label": "concanamycin A",
+      "path": "data/antibiotics/antifungal/concanamycin-a.yaml",
+      "resistance_assertions_added": [],
+      "sha256": "7c5504432734e8e438328d88f00733eb9d8010294051355da360cbc77f454954",
+      "standard_inchi_key": "DJZCTUVALDDONK-HQMSUKCRSA-N",
+      "whole_record_review": "OPEN"
+    }
+  },
+  "reference_proteins": {
+    "VMA11": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(18)54261-7"
+            },
+            {
+              "database": "PubMed",
+              "id": "1837023"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.10.7.3397-3404.1990"
+            },
+            {
+              "database": "PubMed",
+              "id": "2192255"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1990"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s103"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169875"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1101/gr.6037607"
+            },
+            {
+              "database": "PubMed",
+              "id": "17322287"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.272.8.4795"
+            },
+            {
+              "database": "PubMed",
+              "id": "9030535"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0604075103"
+            },
+            {
+              "database": "PubMed",
+              "id": "16847258"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature19828"
+            },
+            {
+              "database": "PubMed",
+              "id": "27776355"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2016"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.molcel.2018.02.006"
+            },
+            {
+              "database": "PubMed",
+              "id": "29526695"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2018"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 215,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_bibliography_matches": [],
+      "gene_names": [
+        "CLS9",
+        "TFP3",
+        "VMA11"
+      ],
+      "gene_orf_names": [
+        "P1064"
+      ],
+      "ordered_locus_names": [
+        "YPL234C"
+      ],
+      "protein_accession": "UniProtKB:P32842",
+      "protein_name": "V-type proton ATPase subunit c'",
+      "reference_gene": "VMA11",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_PROTEOLIPID_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true,
+      "subunit": "c'"
+    },
+    "VMA16": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/0006-291x(90)92359-8"
+            },
+            {
+              "database": "PubMed",
+              "id": "2139779"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1990"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.8091229"
+            },
+            {
+              "database": "PubMed",
+              "id": "8091229"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1994"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1101/gr.6037607"
+            },
+            {
+              "database": "PubMed",
+              "id": "17322287"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.272.8.4795"
+            },
+            {
+              "database": "PubMed",
+              "id": "9030535"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0604075103"
+            },
+            {
+              "database": "PubMed",
+              "id": "16847258"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature19828"
+            },
+            {
+              "database": "PubMed",
+              "id": "27776355"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2016"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.molcel.2018.02.006"
+            },
+            {
+              "database": "PubMed",
+              "id": "29526695"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2018"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 205,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_bibliography_matches": [],
+      "gene_names": [
+        "PPA1",
+        "VMA16"
+      ],
+      "gene_orf_names": [],
+      "ordered_locus_names": [
+        "YHR026W"
+      ],
+      "protein_accession": "UniProtKB:P23968",
+      "protein_name": "V-type proton ATPase subunit c''",
+      "reference_gene": "VMA16",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_PROTEOLIPID_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true,
+      "subunit": "c''"
+    },
+    "VMA3": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/0014-5793(89)81259-1"
+            },
+            {
+              "database": "PubMed",
+              "id": "2540044"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1989"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s078"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169868"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1101/gr.6037607"
+            },
+            {
+              "database": "PubMed",
+              "id": "17322287"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.88.5.1938"
+            },
+            {
+              "database": "PubMed",
+              "id": "1825730"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.272.8.4795"
+            },
+            {
+              "database": "PubMed",
+              "id": "9030535"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0604075103"
+            },
+            {
+              "database": "PubMed",
+              "id": "16847258"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature14365"
+            },
+            {
+              "database": "PubMed",
+              "id": "25971514"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2015"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature19828"
+            },
+            {
+              "database": "PubMed",
+              "id": "27776355"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2016"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.molcel.2018.02.006"
+            },
+            {
+              "database": "PubMed",
+              "id": "29526695"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2018"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 217,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_bibliography_matches": [],
+      "gene_names": [
+        "CLS7",
+        "CUP5",
+        "GEF2",
+        "VMA3"
+      ],
+      "gene_orf_names": [],
+      "ordered_locus_names": [
+        "YEL027W"
+      ],
+      "protein_accession": "UniProtKB:P25515",
+      "protein_name": "V-type proton ATPase subunit c",
+      "reference_gene": "VMA3",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_PROTEOLIPID_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true,
+      "subunit": "c"
+    },
+    "vma-3": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1007/bf00283879"
+            },
+            {
+              "database": "PubMed",
+              "id": "8190074"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1994"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/nar/gkg293"
+            },
+            {
+              "database": "PubMed",
+              "id": "12655011"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature01554"
+            },
+            {
+              "database": "PubMed",
+              "id": "12712197"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 161,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_bibliography_matches": [],
+      "gene_names": [
+        "vma-3"
+      ],
+      "gene_orf_names": [
+        "12F11.130",
+        "NCU01332"
+      ],
+      "ordered_locus_names": [],
+      "protein_accession": "UniProtKB:P31413",
+      "protein_name": "V-type proton ATPase subunit c",
+      "reference_gene": "vma-3",
+      "reference_organism_name": "Neurospora crassa (strain ATCC 24698 / 74-OR23-1A / CBS 708.71 / DSM 1257 / FGSC 987)",
+      "reference_taxon_id": "NCBITaxon:367110",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Neurospora crassa (strain ATCC 24698 / 74-OR23-1A / CBS 708.71 / DSM 1257 / FGSC 987)",
+      "role": "REFERENCE_PROTEOLIPID_NOT_EXPERIMENTAL_ALLELE",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:5141",
+      "species_lineage_verified": true,
+      "subunit": "c"
+    }
+  },
+  "scope": "REFERENCE_METADATA_ONLY_PRIMARY_RESISTANCE_REVIEW_UNRESOLVED",
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_uniprot_queries": 2,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "new_phi_decisions": 0,
+    "new_taxonomy_requests": 0,
+    "reference_proteins": 4,
+    "selected_records": 2,
+    "whole_records_completed": 0
+  },
+  "taxonomy_reuse": {
+    "367110": {
+      "body_sha256": "bc7b413e76616f2cca9af177d414e6ec0c8d4fba139e9f996e76f612b89f9c55",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-neurospora/request-511a713dc755ba5a42abdd9f551317e0e410c4ee51458238be78893c4a60180a.json",
+        "sha256": "5eaa13df41e519358693ba7988fb518973b096c76c07a9dc52cb55688e02f5ae"
+      },
+      "new_request": false,
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T08:45:29.839640+00:00",
+      "reused_byte_identically": true,
+      "url": "https://rest.uniprot.org/taxonomy/367110"
+    },
+    "559292": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+      },
+      "new_request": false,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+        "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+      "reused_byte_identically": true,
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    }
+  },
+  "uniprot_requests": {
+    "neurospora-c": {
+      "all_strains_or_unreviewed_entries_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-vatpase/neurospora-c-response.bin",
+        "sha256": "70fa08ec7fd5bcf2be81b0ee8252e4e78f972c73627294c3176145821421bde9"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-vatpase/neurospora-c-receipt.json",
+        "sha256": "1672d638b6a8cdf44cc4082b26f6602f5d689951c48eec993b42ea1ec137aee2"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T15:08:16.638169+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Avma-3+AND+organism_id%3A367110+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "yeast-proteolipids": {
+      "all_strains_or_unreviewed_entries_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-vatpase/yeast-proteolipids-response.bin",
+        "sha256": "5d61df4a9d6faae4ee1ab2227a707da34cb6ad977aee048596c46fe9bfaf4a43"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-vatpase/yeast-proteolipids-receipt.json",
+        "sha256": "526be0a56820c4f06dd748e80bfaf992114efce5d13517afdeb113e0922fc46b"
+      },
+      "release": "2026_03",
+      "results": 3,
+      "retrieved_at": "2026-10-13T15:08:37.598924+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AVMA3+OR+gene_exact%3AVMA11+OR+gene_exact%3AVMA16%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}
