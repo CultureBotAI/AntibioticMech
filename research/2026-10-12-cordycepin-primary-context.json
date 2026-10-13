@@ -1,0 +1,397 @@
+{
+  "compound": {
+    "identifier": "CHEBI:29014",
+    "label": "cordycepin",
+    "path": "data/antibiotics/antibacterial/cordycepin.yaml",
+    "sha256": "721122b233eea1341feb863c2a7c82c555dbf5a6f8a5b576d71ec3b4014c6c73",
+    "standard_inchi_key": "OFEZSBMBBKLLBJ-BAJZRUMYSA-N",
+    "unchanged": true
+  },
+  "curated": false,
+  "curation_decision": "HOLD_RESISTANCE_CURATION_RNA_ENDPOINT_NOT_AST",
+  "date": "2026-10-12",
+  "determinations": [
+    {
+      "endpoint": "OM14_ALTERNATIVE_POLYADENYLATION",
+      "evidence_type": "FUNCTIONAL_EXPERIMENT_RNA_ENDPOINT",
+      "finding": "The perturbed background attenuated the cordycepin-induced RNA-processing response.",
+      "growth_resistance_supported_by_this_panel": false,
+      "location": "Results, PDF pages 10-11; Figure 4 - figure supplement 2D",
+      "source_gene": "ADO1"
+    },
+    {
+      "endpoint": "OM14_ALTERNATIVE_POLYADENYLATION",
+      "evidence_type": "NEGATIVE_FUNCTIONAL_COMPARISON_RNA_ENDPOINT",
+      "finding": "The perturbed background did not prevent the cordycepin-induced RNA-processing response.",
+      "growth_resistance_supported_by_this_panel": false,
+      "location": "Results, PDF pages 10-11; Figure 4 - figure supplement 2D",
+      "source_gene": "ADK1"
+    },
+    {
+      "direct_cordycepin_transport_measured": false,
+      "endpoint": "OM14_ALTERNATIVE_POLYADENYLATION",
+      "evidence_type": "FUNCTIONAL_EXPERIMENT_RNA_ENDPOINT",
+      "finding": "The perturbed background mildly attenuated the RNA response; a transporter role is the authors' interpretation, not a direct cordycepin transport measurement.",
+      "growth_resistance_supported_by_this_panel": false,
+      "location": "Results, PDF pages 10-11; Figure 4 - figure supplement 2D",
+      "source_gene": "NRT1"
+    },
+    {
+      "endpoint": "ALTERNATIVE_POLYADENYLATION",
+      "evidence_type": "FUNCTIONAL_EXPERIMENT_RNA_ENDPOINT",
+      "finding": "A slow-polymerase background suppressed the RNA-processing shift; this is not a measured growth-resistance endpoint.",
+      "growth_resistance_supported_by_this_panel": false,
+      "location": "Figure 6B, PDF page 13; Results, PDF page 14",
+      "source_gene": "RPB1"
+    }
+  ],
+  "distinct_metabolite": {
+    "identifier": "CHEBI:52316",
+    "label": "cordycepin triphosphate",
+    "path": "data/antibiotics/antifungal/cordycepin-triphosphate.yaml",
+    "sha256": "806180b58cfcfa939b66b8af923952b61fdfd12a6985792b66dee9ff8010cebc",
+    "standard_inchi_key": "NLIHPCYXRYQPSD-BAJZRUMYSA-N",
+    "unchanged": true
+  },
+  "earlier_primary_leads": [
+    {
+      "access": "Publisher full-text and PDF routes returned the abstract in the web reader; native main text and figures were not obtained.",
+      "authors": "Lecoq et al.",
+      "bibliographic_identity_source": "Turner 2021 XML reference and publisher abstract",
+      "decision": "HOLD_PRIMARY_FIGURE_AND_SUBJECT_REVIEW",
+      "doi": "10.1002/1097-0061(20010315)18:4<335::AID-YEA674>3.0.CO;2-X",
+      "finding": "The abstract reports an ADO1-associated cordycepin growth-resistance phenotype. Its full subject and assay context remains pending.",
+      "primary_figures_verified": false,
+      "reference": "PMID:11223943",
+      "review_scope": "ABSTRACT_ONLY",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/1097-0061%2820010315%2918%3A4%3C335%3A%3AAID-YEA674%3E3.0.CO%3B2-X",
+      "year": 2001
+    },
+    {
+      "access": "Publisher full-text and early-PDF routes remained HTTP 403 in this follow-up; no bypass attempted.",
+      "authors": "Holbein et al.",
+      "decision": "PREDECESSOR_HOLD_UNCHANGED",
+      "doi": "10.1261/rna.1458909",
+      "primary_figures_verified": false,
+      "reference": "PMID:19324962",
+      "year": 2009
+    }
+  ],
+  "endpoint_boundaries": {
+    "clinical_categories_inferred": false,
+    "combination_interpretation": "Figure 6D uses combined cordycepin and mycophenolic acid exposure; Figure 6G compares separate treatments. Both have RNA endpoints, not single-agent MIC observations.",
+    "combination_panel": "Figure 6D",
+    "separate_agent_comparison_panel": "Figure 6G",
+    "exposure_concentrations_converted_to_mic": false,
+    "growth_panel_interpretation": "A separate qualitative wild-type growth control; no gene-specific resistance or clinical category is assigned.",
+    "growth_panel_is_matched_gene_perturbation_ast": false,
+    "growth_panel_subject": "BY4741",
+    "metabolite_interpretation": "The authors distinguish proposed metabolite roles in RNA processing and toxicity; this does not transfer administered-parent exposure evidence to the triphosphate record.",
+    "numeric_ast_imported": false,
+    "old_growth_findings_validated_by_later_citation": false,
+    "wild_type_growth_panel": "Figure 4 - figure supplement 2F"
+  },
+  "limits": {
+    "full_source_assets_redistributed": false,
+    "github_mutated": false,
+    "issue_1040": "DEFERRED",
+    "latest_published_full_qc": "PR #1080 and protected merge queue: 3017 passed, 4 skipped; not a new run for this research-only checkpoint.",
+    "ncbi_contact_made": false,
+    "ncbi_requests_made": false,
+    "new_full_qc_run": false,
+    "reuse_terms_review_resumed": false,
+    "source_adopted": false
+  },
+  "new_reference_proteins": [
+    {
+      "aliases": [
+        "THI71"
+      ],
+      "canonical_gene": "NRT1",
+      "entry_version": 159,
+      "experimental_assignment": false,
+      "protein_accession": "UniProtKB:Q08485",
+      "protein_name": "Nicotinamide riboside transporter 1",
+      "reference_locus": "YOR071C",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request_index": 0,
+      "returned_references_cite_turner_2021": false,
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000005597",
+      "source_gene": "NRT1"
+    },
+    {
+      "aliases": [
+        "RPB1",
+        "RPB220",
+        "SUA8"
+      ],
+      "canonical_gene": "RPO21",
+      "entry_version": 255,
+      "experimental_assignment": false,
+      "protein_accession": "UniProtKB:P04050",
+      "protein_name": "DNA-directed RNA polymerase II subunit RPB1",
+      "reference_locus": "YDL140C",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request_index": 1,
+      "returned_references_cite_turner_2021": false,
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 2,
+      "sgd_id": "SGD:S000002299",
+      "source_gene": "RPB1"
+    }
+  ],
+  "predecessor": {
+    "path": "research/2026-10-09-cordycepin-reference-lead.json",
+    "sha256": "9dbb2c85db09d3c1afe49ecbee56fb00c7e2fecb2946507d1326c845e4e3553c"
+  },
+  "preservation": {
+    "base_commit": "18165f54cc13f9321330e34bdab71fd5bc03b05b",
+    "committed_census": {
+      "path": "research/2026-10-12-ma-resistance-grounding.tsv",
+      "sha256": "758ba8aba770343be279eb581442cba2e14a9eb5b7be79ba1e1b7f305311e542"
+    },
+    "ignored_files_included": true,
+    "local_baseline": {
+      "path": "reports/resistance-grounding-2026-10-12-cordycepin/baseline.json",
+      "sha256": "d720504f93e64a5056a22294897e83c65fbc43b4b8089bc19819aaaa0b4d89bd"
+    },
+    "new_activity_observations": 0,
+    "new_resistance_claims": 0,
+    "primary_reviews_completed": 0,
+    "records_checked": 2939,
+    "records_curated": 0,
+    "records_unchanged": 2939,
+    "verification": "All current YAML paths and bytes matched both the pre-research baseline and the committed Ma census; reference-only research does not alter source counts.",
+    "whole_corpus_status": "OPEN"
+  },
+  "primary": {
+    "assets": [
+      {
+        "bytes": 16188556,
+        "content_type": "application/pdf",
+        "path": "reports/resistance-grounding-2026-10-12-cordycepin/elife-65331-v1.pdf",
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-12T21:56:40.671039+00:00",
+        "sha256": "242ad1fa407ea1858b9131e64521edfc9519c30dc400dabbea587d41f4a5ad7e",
+        "status": 200,
+        "url": "https://cdn.elifesciences.org/articles/65331/elife-65331-v1.pdf"
+      },
+      {
+        "bytes": 302312,
+        "content_type": "text/plain; charset=utf-8",
+        "path": "reports/resistance-grounding-2026-10-12-cordycepin/elife-65331-v1.xml",
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-12T21:58:07.602703+00:00",
+        "sha256": "469d4dc296c8c27c34bbda6f8d80a2cbbc89351cd64422754fb928676a638d7f",
+        "status": 200,
+        "url": "https://raw.githubusercontent.com/elifesciences/elife-article-xml/master/articles/elife-65331-v1.xml"
+      },
+      {
+        "bytes": 1772422,
+        "content_type": "image/tiff",
+        "path": "reports/resistance-grounding-2026-10-12-cordycepin/elife-65331-fig4-figsupp2-v1.tif",
+        "redirects_followed": false,
+        "retrieved_at": "2026-10-12T21:58:51.022243+00:00",
+        "sha256": "3de99cb52a226879315de7e7d1d5203ca81c6c032a22a18adb278287db7bc6f3",
+        "status": 200,
+        "url": "https://cdn.elifesciences.org/articles/65331/elife-65331-fig4-figsupp2-v1.tif"
+      }
+    ],
+    "attribution": "Turner et al. 2021, eLife 10:e65331, CC BY 4.0",
+    "authors": "Turner et al.",
+    "doi": "10.7554/eLife.65331",
+    "extraction_note": "PDF text extraction lost the micro sign in exposure units. Native captions and XML were checked; no exposure concentration was exported as an MIC.",
+    "focal_panels": [
+      "Figure 4 - figure supplement 2D",
+      "Figure 4 - figure supplement 2F",
+      "Figure 6B"
+    ],
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "pdf_pages": 35,
+    "pdf_pages_visually_inspected_one_based": [
+      10,
+      13
+    ],
+    "pdf_text_pages_inspected_one_based": [
+      1,
+      5,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      19
+    ],
+    "rendering_note": "The first PyMuPDF TIFF decode showed striping and was rejected. The native TIFF was decoded with Pillow to a clean lossless PNG for visual inspection.",
+    "review_scope": "SELECTED_MAIN_TEXT_AND_NATIVE_FIGURES",
+    "source_workbooks_inspected": false,
+    "supplement_figure_visually_inspected": "Figure 4 - figure supplement 2",
+    "title": "Genetic and pharmacological evidence for kinetic competition between alternative poly(A) sites in yeast",
+    "url": "https://elifesciences.org/articles/65331",
+    "whole_paper_review_complete": false,
+    "whole_supplement_review_complete": false,
+    "xml_locations": [
+      "Results / Cordycepin induces lengthening of 3' UTRs",
+      "Figure 4 - figure supplement 2 caption",
+      "Figure 6 caption",
+      "Table 1",
+      "Materials and methods / Yeast cell growth conditions; 4tu labelling",
+      "References / Lecoq et al. 2001",
+      "Permissions"
+    ],
+    "year": 2021
+  },
+  "primary_review_complete": false,
+  "reused_reference_proteins": [
+    {
+      "database_cites_holbein_2009": false,
+      "entry_version": 237,
+      "experimental_assignment": false,
+      "gene": "ADK1",
+      "protein_accession": "UniProtKB:P07170",
+      "protein_name": "Adenylate kinase",
+      "reference_locus": "YDR226W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 2,
+      "sgd_id": "SGD:S000002634"
+    },
+    {
+      "database_cites_holbein_2009": false,
+      "entry_version": 200,
+      "experimental_assignment": false,
+      "gene": "ADO1",
+      "protein_accession": "UniProtKB:P47143",
+      "protein_name": "Adenosine kinase",
+      "reference_locus": "YJR105W",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reviewed": true,
+      "scope": "REFERENCE_IDENTITY_ONLY",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000003866"
+    }
+  ],
+  "status": "SCOPED_PRIMARY_ENDPOINT_REVIEW_NOT_GROWTH_RESISTANCE_CURATION",
+  "subject_context": {
+    "exact_experimental_alleles_assigned": false,
+    "exact_experimental_proteins_assigned": false,
+    "experimental_genome_or_sample_ids_assigned": false,
+    "focal_gene_rows_present_in_table_1": false,
+    "focal_genes_checked_in_table_1": [
+      "ADO1",
+      "ADK1",
+      "NRT1"
+    ],
+    "organism": "Saccharomyces cerevisiae",
+    "paper_background_labels": [
+      "BY4741",
+      "W303"
+    ],
+    "reference_strain_is_experimental_subject": false,
+    "source_label_discrepancy": {
+      "body_and_genotype_column": "rpb1-1",
+      "location": "Table 1, strain-name column versus genotype column and Figure 6",
+      "resolution": "UNRESOLVED_SOURCE_LABEL_TRANSPOSITION_NOT_SILENTLY_CORRECTED",
+      "strain_column": "rbp1-1"
+    },
+    "species_taxon_id": "NCBITaxon:4932"
+  },
+  "taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:4930",
+      "rank": "species",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientific_name": "Saccharomyces cerevisiae",
+      "scope": "EXPERIMENTAL_SPECIES",
+      "taxon_id": "NCBITaxon:4932"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:4932",
+      "rank": "strain",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559292"
+    }
+  ],
+  "verification": {
+    "focused_tests_passed": 105,
+    "test_files": [
+      "tests/test_cordycepin_primary_context.py",
+      "tests/test_cordycepin_reference_lead.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_ma_reference_context.py",
+      "tests/test_ma_reference_reconciliation.py",
+      "tests/test_kasugamycin_card_context.py"
+    ],
+    "ruff_passed": true,
+    "git_diff_check_passed": true,
+    "progress_check_passed": true,
+    "progress_command": ".venv/bin/python scripts/summarize_resistance_progress.py --check",
+    "same_agent_second_pass": "Corrected Figure 6G from combined exposure to separate-agent comparison; Figure 6D alone is the combined-exposure panel.",
+    "independent_scientific_review": false
+  },
+  "uniprot": {
+    "attribution": "UniProt Consortium, CC BY 4.0",
+    "release": "2026_03",
+    "request_order": "NRT1 canary inspected before RPB1 follow-up; both queries returned exactly one reviewed reference entry without pagination.",
+    "requests": [
+      {
+        "body_sha256": "5b5df8450bc6c85fb9f215a4ab13741a78610545a63542d419d2cd1e12c6cc79",
+        "pagination_complete": true,
+        "path": "reports/resistance-grounding-2026-10-12-cordycepin/request-bf9d110dd5ef28b7d35b539e13adac800dad9108d9b874a3497da1acfb323895.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-12T21:58:55.952183+00:00",
+        "sha256": "b912983c230766ac1fe34802f3d33809920298c6047430f5b192ba7ef59f4ba4",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ANRT1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      {
+        "body_sha256": "bbe96ea5342be26646751a63e045005a470c1d562fe4131dbcc5ebe06c71d3a7",
+        "pagination_complete": true,
+        "path": "reports/resistance-grounding-2026-10-12-cordycepin/request-245dfa57ee3a75d087ee15f4cb85529e4649e2fd0aa7f10235d51652b70026ca.json",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-12T21:59:30.960066+00:00",
+        "sha256": "e1d6b76008138f5376372415ad5cfdcb15ef45dbc2bb9f1172f4dc5e0a21d2ce",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ARPB1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    ],
+    "reused_request": {
+      "body_sha256": "4e89939b7b4e4315d58168af0031417e73612d3b7ca6b3344ac78655ef620872",
+      "pagination_complete": true,
+      "path": "reports/resistance-grounding-2026-10-07/cordycepin-20261009/request-d188ec4bb671b3024e742ec3f7f38e2fcf70d0afb89f4121f207084ec4178568.json",
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T07:19:19.257616+00:00",
+      "sha256": "c65e09d50e63f5f67b29af0f66225d694c32c13d6004ef2e21c5ed858f7d68e0",
+      "status": 200,
+      "total_results": 2,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AADO1+OR+gene_exact%3AADK1%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=20&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "sequence_or_variant_data_exported": false
+  }
+}
