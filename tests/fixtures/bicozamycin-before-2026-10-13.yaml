@@ -1,0 +1,183 @@
+identifier: CHEBI:60584
+label: bicozamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: REVIEWED
+grounding_status: EXACT
+definition: A commercially important azabicyclic antibiotic obtained from Streptomyces
+  sapporonensis. It inhibits the Rho protein of E. coli.
+definition_source: ChEBI
+synonyms:
+- synonym_text: bicozamicina
+  synonym_type: INN
+  source: chebi
+- synonym_text: bicozamycine
+  synonym_type: INN
+  source: chebi
+- synonym_text: bicozamycinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: Bicozamycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Bicyclomycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: aizumycin
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Aizumycin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bacfeed
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bacteron
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bicozamicina
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bicozamycine
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Bicozamycinum
+  synonym_type: EXACT_SYNONYM
+  source: aro
+parent_compounds:
+- CHEBI:35990
+- CHEBI:38295
+- ARO:3007150
+activity_roles:
+- CHEBI:33282
+structural_class: bicyclomycin-like antibiotic
+structural_class_id: ARO:3007150
+chemical_structure:
+  smiles: C=C1CCO[C@]2([C@@H](O)[C@@](C)(O)CO)NC(=O)[C@@]1(O)NC2=O
+  standard_inchi: InChI=1S/C12H18N2O7/c1-6-3-4-21-12(7(16)10(2,19)5-15)9(18)13-11(6,20)8(17)14-12/h7,15-16,19-20H,1,3-5H2,2H3,(H,13,18)(H,14,17)/t7-,10-,11+,12-/m0/s1
+  standard_inchi_key: WOUDXEYYJPOSNE-VKZDFBPFSA-N
+  molecular_formula: C12H18N2O7
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 302.283
+  monoisotopic_mass: 302.1114
+xrefs:
+- ARO:0000055
+- cas:38129-37-2
+- kegg.compound:C11259
+- knapsack:C00018850
+- reaxys:566286
+- chembl:CHEMBL1231250
+- pubchem.compound:65807
+source_concepts:
+- source: ARO
+  source_id: ARO:0000055
+  source_label: bicyclomycin
+  minted_identifier: antibioticmech:aro-b86b27b1dd
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-30'
+- source: CHEBI
+  source_id: CHEBI:60584
+  source_label: bicozamycin
+  minted_identifier: antibioticmech:chebi-b84bb7c116
+  role_terms:
+  - CHEBI:33282
+  source_version: '2026-08-30'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_EFFLUX
+  aro_id: ARO:3003801
+  label: bcr-1
+  evidence:
+  - reference: ARO:3003801
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000055 (bicyclomycin);
+      database assertion, not a primary citation.
+molecular_targets:
+- target_id: ARO:3000736
+  target_label: rho transcription terminator factor
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. Rho termination factor is asserted as the antibiotic
+    target.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
+  evidence:
+  - reference: ARO:3000736
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000055 (bicyclomycin); database
+      assertion, not a primary citation.
+- target_label: Rho transcription termination factor
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: A 3.15-angstrom Rho-bicyclomycin crystal structure directly
+    localized the drug next to ATP- and RNA-binding sites and showed occlusion of
+    the water required for ATP hydrolysis.
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2005-01
+  source_retrieved_on: '2026-09-02'
+  evidence:
+  - reference: PMID:15642265
+    notes: Primary bicyclomycin-bound Rho structural mechanism study (DOI:10.1016/j.str.2004.10.013).
+producer_organisms:
+- taxon_id: NCBITaxon:53446
+  taxon_label: Streptomyces cinnamoneus
+  biosynthetic_gene_cluster: BGC0001468
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'bicyclomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:29053243
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+evidence:
+- reference: PMID:15642265
+  notes: Primary exact-bicyclomycin/bicozamycin Rho cocrystal and ATPase-mechanism
+    study.
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Bicozamycin and bicyclomycin are exact synonyms on
+  the merged ChEBI/CARD record. PMID:15642265 resolved bicyclomycin in bacterial Rho,
+  where it binds beside the ATP- and RNA-binding sites and noncompetitively blocks
+  ATP turnover by excluding the nucleophilic water needed for hydrolysis, thereby
+  disrupting Rho-dependent transcription termination.'
+curation_history:
+- timestamp: '2026-08-30T00:37:45Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:36Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T19:00:11Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-03T00:42:23Z'
+  curator: codex
+  action: REVIEWED
+  changes: Verified the exact bicozamycin/bicyclomycin synonym identity, ChEBI/CARD
+    structure, antibacterial role, class, and retained CARD assertions; added transcription-termination
+    inhibition and the directly bound Rho complex.
+  llm_assisted: true
+- timestamp: '2026-09-08T02:54:20Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-08T05:59:10Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories

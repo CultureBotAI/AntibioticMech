@@ -1,0 +1,322 @@
+{
+  "access_limits": [
+    "ResearchGate native 1983 PDF link returned 404; no retry.",
+    "SGD and cited 1980 ASM paper returned 403; no retry or bypass.",
+    "PLOS standalone figure downloads failed; normal public paper PDF succeeded.",
+    "1982 DOI full text was not inspected; no independent replication claim.",
+    "EmrD correction remains unresolved; blocked Science route not retried."
+  ],
+  "date": "2026-10-13",
+  "disposition": {
+    "PDR5_mediation_proven": false,
+    "claims_added": 2,
+    "coexpression_hits_promoted": false,
+    "curated_records": 1,
+    "holds": [
+      "Historical native figures and variant-coordinate crosswalk",
+      "Exact experimental subjects and genomes",
+      "Broader record evidence review"
+    ],
+    "modern_RPL29_promoted": false,
+    "numeric_AST_added": 0,
+    "primary_support_papers": 2,
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "identifier": "CHEBI:27641",
+  "identity": {
+    "complete_collection_aware_record_loaded": true,
+    "named_compound": "cycloheximide",
+    "record_charge": 0,
+    "tested_preparation_independently_reidentified": false
+  },
+  "limits": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "raw_source_assets_redistributed": false,
+    "reuse_terms_review_resumed": false,
+    "sequences_variant_specifications_constructs_or_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "primary": [
+    {
+      "attribution": "Kaufer et al. (1983), Nucleic Acids Research 11:3123-3135; public author-uploaded primary text",
+      "doi": "10.1093/nar/11.10.3123",
+      "native_figures_inspected": [],
+      "pages": [
+        3125,
+        3132
+      ],
+      "reference": "PMID:6304624",
+      "review_scope": "SELECTED_RESULTS_AND_DISCUSSION_TEXT",
+      "url": "https://www.researchgate.net/publication/16890909_Cycloheximide_resistance_in_yeast_the_gene_and_its_protein",
+      "whole_paper_review_complete": false
+    },
+    {
+      "attribution": "Manzoor et al. (2024), PLOS ONE 19:e0303747; CC BY",
+      "caveats": [
+        "Figure 10 caption and conclusion direction wording conflicts with the expression Results; no correction inferred.",
+        "Figure 1B legend units differ from Results; no numeric endpoint adopted.",
+        "ACT1 is an expression control here, not validation of the existing CARD assertion.",
+        "Promoter association is not proof of direct DNA binding; the causal mediation test was not completed."
+      ],
+      "data_accessions": {
+        "CRA008668": "RNA-seq study, not genome assembly",
+        "PXD037674": "proteomics study, not genome assembly"
+      },
+      "data_repository_endpoints_requested": false,
+      "native_figures_inspected": [
+        1,
+        8,
+        10
+      ],
+      "pdf": {
+        "pages": 26,
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/pone-0303747.pdf",
+        "sha256": "a3b6c569145499361e87c73c70d4cff46c39f45131cb3dd95901d4c3892fd926",
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0303747&type=printable"
+      },
+      "reference": "DOI:10.1371/journal.pone.0303747",
+      "rendered_pages": [
+        {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/figure1.png",
+          "sha256": "8268569be608b896facaa5e036f9df14bdd623060c94371765c0822c20d7b65d"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/figure8.png",
+          "sha256": "8ee0afff42e8383fb67f8e510e05ff6cb703f264d474b018efe0dbb11aa8fa02"
+        },
+        {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/figure10.png",
+          "sha256": "4f8afa55ef6f1f198a0aa4ff7ba4b5c85820cfbf2397703925d26eab5fe913c3"
+        }
+      ],
+      "review_scope": "SELECTED_RESULTS_DISCUSSION_AND_NATIVE_FIGURES",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303747",
+      "whole_paper_review_complete": false
+    }
+  ],
+  "record_before": {
+    "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+    "sha256": "1b8f1dd12a79c5a71b7b45ced0935f9b403cc67ea91775860ab638fe51964879"
+  },
+  "reference_proteins": {
+    "AGP2": {
+      "aliases": [],
+      "canonical_gene": "AGP2",
+      "entry_version": 177,
+      "experimental_resistance_assignment": false,
+      "ordered_locus_names": [
+        "YBR132C"
+      ],
+      "protein_accession": "UniProtKB:P38090",
+      "protein_label": "General amino acid permease AGP2",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "efe614a3845430394a2b65c6a58d0eec82dcf3af26fa1f45a505cb22619f753e",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/request-88c63c92fe336da9ed0571164f92b668051cfc89d467d8233247ab3986c024ee.json",
+          "sha256": "deeba8091d291c937f2a2b8c0f14d6447ddfb704525fd387bd04ed8e1628cf5d"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:AGP2 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T02:26:08.266799+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AAGP2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 1,
+      "sgd_ids": [
+        "SGD:S000000336"
+      ]
+    },
+    "CYH2": {
+      "aliases": [
+        "CYH2"
+      ],
+      "canonical_gene": "RPL28",
+      "entry_version": 210,
+      "experimental_resistance_assignment": false,
+      "ordered_locus_names": [
+        "YGL103W"
+      ],
+      "protein_accession": "UniProtKB:P02406",
+      "protein_label": "Large ribosomal subunit protein uL15",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "0e376674dd2c5ee95b642d9d741ee21ec8a04d3f29d6f43c76b45bfe456379c0",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/request-e29246031d5b57697f1d1007f3377ffd3eba927769261ac2ed8e23d45c43d842.json",
+          "sha256": "bc90ba42e9905bb03f9970c8fd2c3fb80ba62dd4f564ca6e01337e5b835e724e"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:CYH2 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T02:21:44.866737+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACYH2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 3,
+      "sgd_ids": [
+        "SGD:S000003071"
+      ]
+    },
+    "PDR5": {
+      "aliases": [
+        "LEM1",
+        "STS1",
+        "YDR1"
+      ],
+      "canonical_gene": "PDR5",
+      "entry_version": 235,
+      "experimental_resistance_assignment": false,
+      "ordered_locus_names": [
+        "YOR153W"
+      ],
+      "protein_accession": "UniProtKB:P33302",
+      "protein_label": "Pleiotropic ABC efflux transporter of multiple drugs",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "e454995833f8aea382c474b0921307355adf1a443e88c0490c23536b8fe4536e",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/request-09bfc5bddb4474a53a6f761955add756976c23fc6862c3f68605d1bc3448e2c2.json",
+          "sha256": "9a84a8b9c8152aaefce4e34d2560786f34dc9d9bf99f4ab3641ed0fb214a3acb"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:PDR5 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T02:26:31.788431+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APDR5+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 1,
+      "sgd_ids": [
+        "SGD:S000005679"
+      ]
+    },
+    "RPL28": {
+      "aliases": [
+        "CYH2"
+      ],
+      "canonical_gene": "RPL28",
+      "entry_version": 210,
+      "experimental_resistance_assignment": false,
+      "ordered_locus_names": [
+        "YGL103W"
+      ],
+      "protein_accession": "UniProtKB:P02406",
+      "protein_label": "Large ribosomal subunit protein uL15",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "0e376674dd2c5ee95b642d9d741ee21ec8a04d3f29d6f43c76b45bfe456379c0",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/request-423f3372a962e18bfc28993265c08193f40f16bc812185582b07e71c868a4202.json",
+          "sha256": "65e4ec8ee1f24b8776442131291924e4d1b52ef7ccae54e3e10d78bd1a0a69f8"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:RPL28 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T02:22:24.234949+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ARPL28+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 3,
+      "sgd_ids": [
+        "SGD:S000003071"
+      ]
+    },
+    "RPL29": {
+      "aliases": [
+        "YL43"
+      ],
+      "canonical_gene": "RPL29",
+      "entry_version": 196,
+      "experimental_resistance_assignment": false,
+      "ordered_locus_names": [
+        "YFR032C-A"
+      ],
+      "protein_accession": "UniProtKB:P05747",
+      "protein_label": "Large ribosomal subunit protein eL29",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "210a207854c81bc885cc7368a5b9db0383d0da6c59d816388ce313ac9b438026",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-cyh2/request-143818df4329174e0ed08d8f8466f6c98cec9ac0839f4920f01dfec92a2c46d6.json",
+          "sha256": "58737240b79cc405869a73414d7bf6a5c6f3a3d6356e2e54adb04a4b3efbc5d4"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:RPL29 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T02:22:40.084460+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ARPL29+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 3,
+      "sgd_ids": [
+        "SGD:S000006437"
+      ]
+    }
+  },
+  "scope": "SCOPED_QUALITATIVE_GENE_CURATION_NOT_WHOLE_RECORD_REVIEW",
+  "standard_inchi_key": "YPHMISFOHDHNIV-FSZOTQKASA-N",
+  "subject_scope": {
+    "background_is_not_one_experimental_derivative": true,
+    "experimental_allele_assigned": false,
+    "experimental_protein_assigned": false,
+    "experimental_strain_taxon_assigned": false,
+    "genome_or_sample_assigned": false,
+    "reference_taxon_id": "NCBITaxon:559292",
+    "source_2024_background": "BY4741",
+    "species_taxon_id": "NCBITaxon:4932"
+  },
+  "taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:4930",
+      "rank": "species",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientific_name": "Saccharomyces cerevisiae",
+      "scope": "EXPERIMENTAL_SPECIES",
+      "taxon_id": "NCBITaxon:4932"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:4932",
+      "rank": "strain",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559292"
+    }
+  ],
+  "taxonomy_predecessor": {
+    "path": "research/2026-10-12-thiolutin-context.json",
+    "sha256": "7513c5f467ee3cffad02c9a1591b60b7f56149eab1cd868b4d2533666b612f06"
+  }
+}

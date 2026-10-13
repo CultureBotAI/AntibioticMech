@@ -1,0 +1,252 @@
+{
+  "adversarial_self_review": [
+    "Historical L29 is not mapped by name alone to modern RPL29.",
+    "PDR5 expression and promoter association are not promoted to causal mediation or direct DNA binding.",
+    "Figure-unit and source-direction conflicts remain explicit; no numerical AST imported.",
+    "Source-owned claims and reference-only protein/strain boundaries are preserved.",
+    "Immutable fixtures replay dated history without freezing mutable live records.",
+    "Same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-cycloheximide-context.json",
+      "sha256": "8dbc4d7d88a17584a4ab51c1b3c699ee4ed0f287d9bb44bd956342adac02fbeb"
+    },
+    {
+      "path": "research/2026-10-13-cycloheximide-curation.json",
+      "sha256": "6601944c16f92368f9cc1aeb6c51b13a2afe74f2d1b57016a091cfea9717219a"
+    },
+    {
+      "path": "research/2026-10-13-cycloheximide-reconciliation.json",
+      "sha256": "9da89d5cba32309f2954d4e0a62051dfc5db0e09b06c5f59411ad5e015efb8ba"
+    },
+    {
+      "path": "research/2026-10-13-cycloheximide-resistance-grounding.tsv",
+      "sha256": "17b0713a988053368fde0f0900ce47161109c47b2dd2b18be87dc609f9161ee5"
+    },
+    {
+      "path": "research/2026-10-13-cycloheximide-resistance-progress.json",
+      "sha256": "0758ee06df420ac79ed404b7270b0225d56375faf5fad3ea90df46312daf5b60"
+    },
+    {
+      "path": "research/2026-10-13-cycloheximide-resistance-progress.tsv",
+      "sha256": "0a4bb96b0c61e665508c34fcdf5d0721e9c89457c46c906330c8dd1319def075"
+    },
+    {
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "sha256": "288877066ad5b8d7ad9492315347e2ba0d5aeae6487477c8e14ca048476bce8c"
+    },
+    {
+      "path": "tests/fixtures/cycloheximide-before-2026-10-13.yaml",
+      "sha256": "1b8f1dd12a79c5a71b7b45ced0935f9b403cc67ea91775860ab638fe51964879"
+    },
+    {
+      "path": "tests/test_cycloheximide_curation.py",
+      "sha256": "0674e5e4fbda701a53ffeafa3adfe07a7da747ad0676ee9248f4444670f5cf4f"
+    },
+    {
+      "path": "tests/test_phibase_grounding_reviews.py",
+      "sha256": "904e4f679135662adacd8fae4ed8e8c35d4759e8f21f272e4d6d35bba52baad4"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "892c7965068b40133a861a98197c30700d5cc8353d1d56fe85b5dc15736975af"
+    },
+    {
+      "path": "pages/antifungal/cycloheximide.html",
+      "sha256": "28f3c64a02838a25cf3792b99d557fb584d42a977bae92856d202f49f31d22c7"
+    }
+  ],
+  "cached_sources_verified": 11,
+  "date": "2026-10-13",
+  "earlier_failed_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 2027.57,
+    "exit_code": 1,
+    "finished": "2026-10-13T03:15:42.331906+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-cyh2/qc.log",
+      "sha256": "c58f48de9b4f403306157c00dd5319cdff86e828ae657082f3d0f56bbbfd6ed0"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests"
+    ],
+    "started": "2026-10-13T02:41:54.730930+00:00",
+    "test_summary": "3134 passed, 4 skipped in 1891.07s (0:31:31)"
+  },
+  "earlier_failure_summary": "1 failed, 3134 passed, 4 skipped in 1891.07s; live cycloheximide total-count assertion",
+  "embedding": {
+    "actual_reencoding": true,
+    "model_pins": {
+      "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+      "weights_sha256": "45e1954914e29bd74080e6c1510165274ff5279421c89f76c418878732f64ae7"
+    },
+    "projection_method": "pacmap",
+    "published": {
+      "corpus_map.json": "005d66d406da040721c13da486b3cd431abd8069b414c9b01dae471086b64764",
+      "meta.json": "683bf2dbadc60a072b05282fc6c38767d1b6fe27d5bfb598bb77726d839e6353",
+      "vectors.f16.npy": "96b640427755611f0ece7a5940966dce30ce064feca5ebf7e679a3dd8b753807"
+    },
+    "reuse_proof": {
+      "path": "reports/resistance-grounding-2026-10-13-cyh2/embedding-stage/reuse-proof.json",
+      "sha256": "00c39941b335ca97df28b8746d8c870e110f801cd7ce99f0d916b89fcc8484ae"
+    },
+    "seed": 42,
+    "unchanged_rows_independently_checked_against_pinned_local_baseline": true,
+    "vector_baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-sulfathiazole/embedding-stage/bulk/vectors.f16.npy",
+      "sha256": "94e294d3bba2fbaf852e9c67980418b2e4e1303897d9665cd5ba38f819b515da"
+    }
+  },
+  "embedding_reuse_proof": {
+    "baseline_sha256": "a1d073e25f1196867f523791d66594551f3f429169e85ae9f70d21c83161a4f9",
+    "byte_identical_reused_rows": 2938,
+    "changed_documents": [
+      "CHEBI:27641"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "603c6817225400a7",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "environment_limitation": "Local RDKit 2025.03.6 differs from project pin 2026.3.5. No new CI or pinned-environment pass is claimed.",
+  "experimental_proteins_or_genomes_assigned": 0,
+  "focused_tests_after_review_fix": "19 passed in 3.59s",
+  "focused_tests_before_full_qc": "89 passed in 77.16s",
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 2051.34,
+    "exit_code": 0,
+    "finished": "2026-10-13T03:50:38.231760+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-cyh2/qc-attempt2.log",
+      "sha256": "a60bb0408f23ec7f2b655f7bc32e85711e598bc0b288c11ddb06f3eaa7ccbe6a"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T03:16:26.858972+00:00",
+    "test_summary": "3136 passed, 4 skipped in 1757.35s (0:29:17)"
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "scope_notes_visible": true
+  },
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 2,
+  "offline_source_replay": {
+    "network_requests": 0,
+    "sources": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/request-88c63c92fe336da9ed0571164f92b668051cfc89d467d8233247ab3986c024ee.json",
+        "sha256": "deeba8091d291c937f2a2b8c0f14d6447ddfb704525fd387bd04ed8e1628cf5d"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/request-e29246031d5b57697f1d1007f3377ffd3eba927769261ac2ed8e23d45c43d842.json",
+        "sha256": "bc90ba42e9905bb03f9970c8fd2c3fb80ba62dd4f564ca6e01337e5b835e724e"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/request-09bfc5bddb4474a53a6f761955add756976c23fc6862c3f68605d1bc3448e2c2.json",
+        "sha256": "9a84a8b9c8152aaefce4e34d2560786f34dc9d9bf99f4ab3641ed0fb214a3acb"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/request-423f3372a962e18bfc28993265c08193f40f16bc812185582b07e71c868a4202.json",
+        "sha256": "65e4ec8ee1f24b8776442131291924e4d1b52ef7ccae54e3e10d78bd1a0a69f8"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/request-143818df4329174e0ed08d8f8466f6c98cec9ac0839f4920f01dfec92a2c46d6.json",
+        "sha256": "58737240b79cc405869a73414d7bf6a5c6f3a3d6356e2e54adb04a4b3efbc5d4"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/pone-0303747.pdf",
+        "sha256": "a3b6c569145499361e87c73c70d4cff46c39f45131cb3dd95901d4c3892fd926"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/figure1.png",
+        "sha256": "8268569be608b896facaa5e036f9df14bdd623060c94371765c0822c20d7b65d"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/figure8.png",
+        "sha256": "8ee0afff42e8383fb67f8e510e05ff6cb703f264d474b018efe0dbb11aa8fa02"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-cyh2/figure10.png",
+        "sha256": "4f8afa55ef6f1f198a0aa4ff7ba4b5c85820cfbf2397703925d26eab5fe913c3"
+      }
+    ]
+  },
+  "preservation": {
+    "all_memberships_unchanged": true,
+    "all_raw_and_curation_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-cyh2/baseline.json",
+      "sha256": "167cbcac47c5d5eea8e672a5969599bfa0f27feb0fed5039bee48a0e1f9040ef"
+    },
+    "changed_records": [
+      "data/antibiotics/antifungal/cycloheximide.yaml"
+    ],
+    "ignored_files_included": true,
+    "previous_bcr_and_sulfathiazole_records_and_pages_byte_identical": true,
+    "protected_files_checked": 3385,
+    "records_checked": 2939
+  },
+  "protected_files_changed": [
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/antifungal/cycloheximide.html",
+    "pages/map.html"
+  ],
+  "records_byte_identical": 2938,
+  "review_fix": "Removed an unrelated live total-count freeze from the PHI-base STS1 test; retained all source-claim checks and added an unrelated-claim regression case.",
+  "scope": "TWO_QUALITATIVE_GENE_ASSOCIATIONS_ON_ONE_RECORD",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}
