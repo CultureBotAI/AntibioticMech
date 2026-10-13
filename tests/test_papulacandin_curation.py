@@ -31,10 +31,16 @@ def grounding():
     return read("2026-10-09-glucan-inhibitor-grounding.json")
 
 
-@pytest.fixture(params=["papulacandin-b", "papulacandin-d"])
-def record(request):
-    path = ROOT / "data/antibiotics/antifungal" / (request.param + ".yaml")
+def historical_record(slug, dossier):
+    path = ROOT / "tests/fixtures" / (slug + "-before-2026-10-13.yaml")
+    item = next(r for r in dossier["records"] if Path(r["record"]["path"]).stem == slug)
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == item["record"]["sha256"]
     return path, load_record(path)
+
+
+@pytest.fixture(params=["papulacandin-b", "papulacandin-d"])
+def record(request, dossier):
+    return historical_record(request.param, dossier)
 
 
 def test_exact_compound_and_species_claims(record, dossier):
@@ -45,7 +51,7 @@ def test_exact_compound_and_species_claims(record, dossier):
         "papulacandin-b": ("CHEBI:569624", "UJLFRJFJTPPIOK-RZGJRGQUSA-N", {"4932", "4896"}),
         "papulacandin-d": ("CHEBI:72630", "XKSZJTQIZHUMGA-HPZFVNCBSA-N", {"4896"}),
     }
-    identifier, key, taxids = expected[path.stem]
+    identifier, key, taxids = expected[path.stem.removesuffix("-before-2026-10-13")]
     assert doc["identifier"] == identifier
     assert doc["chemical_structure"]["standard_inchi_key"] == key
     assert {c["taxon_id"].removeprefix("NCBITaxon:") for c in item["claims"]} == taxids
@@ -104,11 +110,14 @@ def test_reference_versions_and_source_specific_aliases(grounding):
 
 
 def test_other_compounds_and_research_limits_preserved(grounding, dossier):
+    with (ROOT / "research/2026-10-09-papulacandin-resistance-grounding.tsv").open() as stream:
+        census = {r["identifier"]: r for r in csv.DictReader(stream, delimiter="\t")}
     for item in grounding["records"]:
         if item["identifier"] in {"CHEBI:72611", "antibioticmech:aro-de2f58b0cc"}:
-            path = ROOT / item["path"]
-            assert hashlib.sha256(path.read_bytes()).hexdigest() == item["sha256"]
-            assert not load_record(path).get("resistance_mechanisms")
+            row = census[item["identifier"]]
+            assert row["path"] == item["path"]
+            assert row["record_sha256"] == item["sha256"]
+            assert row["resistance_assertions"] == "0"
     assert dossier["claims_added"] == 3
     assert dossier["records_changed"] == dossier["history_events_added"] == 2
     assert dossier["other_records_unchanged"] == 2937
@@ -162,3 +171,27 @@ def test_reconciliation_pins_and_preservation():
     assert checkpoint["records_byte_identical"] == 2937
     assert checkpoint["ignored_files_included"] is True
     assert checkpoint["non_resistance_fields_preserved"] is True
+
+
+def test_historical_checks_do_not_read_live_records(dossier, grounding, monkeypatch):
+    original = Path.open
+
+    def guarded(path, *args, **kwargs):
+        assert not path.is_relative_to(ROOT / "data/antibiotics")
+        return original(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "open", guarded)
+    for slug in ("papulacandin-b", "papulacandin-d"):
+        snapshot = historical_record(slug, dossier)
+        test_exact_compound_and_species_claims(snapshot, dossier)
+        test_qualitative_scope_and_reference_only_proteins(snapshot)
+        test_schema_and_reseeding_preserve_curator_slice_without_churn(snapshot, dossier)
+    test_other_compounds_and_research_limits_preserved(grounding, dossier)
+
+
+def test_historical_fixture_pin_rejects_tampering(dossier):
+    altered = copy.deepcopy(dossier)
+    altered["records"][0]["record"]["sha256"] = "0" * 64
+    slug = Path(altered["records"][0]["record"]["path"]).stem
+    with pytest.raises(AssertionError):
+        historical_record(slug, altered)

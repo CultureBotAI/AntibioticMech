@@ -1,0 +1,175 @@
+{
+  "complete_collection_aware_record_loaded": true,
+  "date": "2026-10-13",
+  "disposition": {
+    "new_biological_claims": 0,
+    "reason": "Conference context alone does not resolve the source row's subject or justify silently replacing its identifiers.",
+    "source_owned_reviews_changed": 0,
+    "source_paper": "PMID:1423716",
+    "source_row_sha256": "6cd5e5fd14b9960870ab78fdcab70513796b317391d58999fb8d3b61bdbbafdb",
+    "source_strain_label": "IMI103761",
+    "status": "PENDING_JOURNAL_AND_EXPERIMENTAL_SUBJECT_REVIEW",
+    "whole_corpus_status": "OPEN",
+    "whole_record_reviews_completed": 0
+  },
+  "limits": {
+    "constructs_protocols_or_numerical_ast_exported": false,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "raw_assets_redistributed": false,
+    "sequences_or_variant_specifications_exported": false,
+    "source_adoptions": 0,
+    "standardized_mic_inferred": false
+  },
+  "primary": {
+    "authors": [
+      "J. P. R. Keon",
+      "P. L. E. Broomfield",
+      "J. A. Hargreaves",
+      "G. A. White"
+    ],
+    "conference_paper_review_complete": true,
+    "container_pages": 105,
+    "findings": [
+      "The authors report a qualitative association between the succinate-dehydrogenase iron-sulfur subunit and carboxin resistance.",
+      "Separate donor and recipient contexts are described without resolving the source strain label or exact experimental accession.",
+      "Discussion distinguishes the supported association from a proposed explanation of electron-transfer effects.",
+      "The paper cites the 1992 journal study and an earlier 1991 study; these reports are not counted as independent experiments.",
+      "Selectable-marker context is not evidence of intrinsic multidrug resistance."
+    ],
+    "journal_article_review_complete": false,
+    "journal_citation": {
+      "conference_location": "printed pp. 224-225",
+      "doi": "10.1007/bf00351470",
+      "reference": "PMID:1423716",
+      "subject_crosswalk_resolved": false
+    },
+    "native_pages_inspected": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/page-58.png",
+        "sha256": "1b4595fa3a60c6690b0e3fd03461e49d72248576e48985177901744c0434f1ae"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/page-59.png",
+        "sha256": "4ff246b8f16fe38274409e1da3251bbd6efe40f7f8e32b4a6bd9279e5a356417"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/page-60.png",
+        "sha256": "ba2337c5a9ee29002f0e59f476e3bbb82dbade99b4fb99f8ce137e14fdca8114"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/page-61.png",
+        "sha256": "5a221a74560c62e43c259b9ed8a1dd4de3023954c5a80741fc1ac266ad003b87"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/page-62.png",
+        "sha256": "57c3e794d9dc8c08b3b59cecf180d91e5e9932a14c3832e60b7f8fbe6f18dfaa"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/page-63.png",
+        "sha256": "0a855a2a5dee2ce66b9fc63165e3b860c6724451029c79b1eeadcbb928b87a5d"
+      }
+    ],
+    "pdf": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/bcpc-1992-session-3c.pdf",
+        "sha256": "66ba9e99a91b80fd74216a28a7193b44c3b59cfaae987eda1be2a5999265eb03"
+      },
+      "bytes": 20509332,
+      "content_type": "application/pdf",
+      "location": null,
+      "redirects_followed": false,
+      "retrieved_at": "2026-10-13T08:13:44.240552+00:00",
+      "status": 200,
+      "url": "https://www.bcpc.org/wp-content/uploads/2022/05/BCPC-Pests-and-Diseases-1992-Vol-1-Session-3C.pdf"
+    },
+    "pdf_pages_one_based": [
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "printed_pages": [
+      221,
+      222,
+      223,
+      224,
+      225,
+      226
+    ],
+    "publication": "Brighton Crop Protection Conference - Pests and Diseases 1992",
+    "session": "3C-10",
+    "title": "Molecular genetic analysis of carboxin resistance in Ustilago maydis"
+  },
+  "record": {
+    "existing_resistance_claims": 36,
+    "identifier": "CHEBI:3405",
+    "label": "carboxin",
+    "path": "data/antibiotics/antifungal/carboxin.yaml",
+    "sha256": "de61953d4d3b56dd1e6b756b4c832e3c50899a807213d017813bcb31ccf6e8ab",
+    "standard_inchi_key": "GYSSRZJIHXQEHQ-UHFFFAOYSA-N"
+  },
+  "reference": {
+    "accession": "UniProtKB:P32420",
+    "entry_version": 162,
+    "experimental_allele_or_subject_assigned": false,
+    "gene": "SDH2",
+    "identifier_types": {
+      "current_embl_protein_cross_reference": "KIS70918.1",
+      "historical_exact_match": "EnsemblFungi primary ID and ProteinId, not genes.* or GeneId",
+      "source_gene_id": "KIS70918",
+      "typed_audit": {
+        "path": "research/2026-10-13-phibase-gene-id-types.json",
+        "sha256": "e6397f6bc3d0e812d86567780ad44615e5c5b3fb4c16493932c86e59fdf0e25f"
+      },
+      "version_suffix_removed": false
+    },
+    "locus": "UMAG_00844",
+    "request": {
+      "body_sha256": "a250fcd7217fbaff82176642a6c6f90851838ac428e80c055d6b15246f98e75d",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/request-8d1757eeba3d249ce1ff6838853ed5c1d48d0b68698854740a5d3f7aaaa27197.json",
+        "sha256": "7285aa7731154a2e481fc031c4868fcfcf21208b9fc21cd9ec9a02f0a6ca57e7"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T08:15:54.501020+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP32420&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_refseq%2Ccc_caution"
+    },
+    "reviewed": true,
+    "sequence_version": 1,
+    "synonyms": [
+      "CBXR"
+    ],
+    "taxon_id": "NCBITaxon:5270"
+  },
+  "scope": "CONFERENCE_PRIMARY_CONTEXT_NOT_JOURNAL_SUBJECT_VALIDATION",
+  "taxonomy": {
+    "parent_taxon_id": "NCBITaxon:2689624",
+    "rank": "species",
+    "request": {
+      "body_sha256": "beefc5224014c19ab5315d2d32c212771a8b9417eda31bbd063e23a92f1a069e",
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-carboxin-bcpc/request-2e772ff9fded742adf63da0b1607e8c11a5af0fb19cdc4939848069e98a66fa3.json",
+        "sha256": "94d5b9b3a0e7d7e3e13191a012a0470d4c64fbc32b67a835e955b7da90578f7a"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T08:16:36.883286+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5270"
+    },
+    "scientific_name": "Mycosarcoma maydis",
+    "source_name_synonym": "Ustilago maydis",
+    "strain_or_genome_assigned": false,
+    "taxon_id": "NCBITaxon:5270"
+  },
+  "uniprot_attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  }
+}

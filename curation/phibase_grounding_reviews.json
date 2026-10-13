@@ -1043,6 +1043,26 @@
         {"identifier": "CHEBI:81763", "row_sha256": "f177428e52f4619cd334e023e642c1d6ab12911646a153824c1d90dd9e6f5c2f"},
         {"identifier": "CHEBI:81763", "row_sha256": "ae814e8587fbd05c1051d3da866cb17ecb9474102bbff8b6c8d94239022d79ad"}
       ]
+    },
+    {
+      "review_id": "fujimura-1992-neurospora-subject-context",
+      "curator": "codex",
+      "reviewed_on": "2026-10-13",
+      "pmid": "1388107",
+      "reference": "DOI:10.1584/jpestics.17.4_237",
+      "source_url": "https://www.jstage.jst.go.jp/article/jpestics1975/17/4/17_4_237/_pdf/-char/ja",
+      "locations": [
+        "Related primary paper: p. 238 Strains; p. 239 Figure 1; pp. 240-241 Results/Discussion; p. 242 reference 13; all six PDF pages visually inspected",
+        "Original PMID:1388107 publisher Summary identifies F914; original full article remains subscription-limited and was not fully reviewed",
+        "UniProtKB release 2026_03: P05220 entry 157, sequence version 2; tub-2/NCU04054; reference strain 74-OR23-1A, TaxID 367110; EAA28433 occupies EnsemblFungi transcript and protein fields",
+        "UniProt Taxonomy release 2026_03: 367110 is a reference strain under species 5141; metadata retrieved 2026-10-13, without NCBI requests"
+      ],
+      "note": "The related primary paper distinguishes background 74-OR31-14a from F914/F914a and cites the original study. F914 follows the original publisher Summary. UniProt P05220 and strain TaxID 367110 describe the separate 74-OR23-1A reference, not the tested subject. Retained source gene_id EAA28433 is an EnsemblFungi transcript/protein cross-reference, not a verified experimental allele or gene-object assignment. Exact experimental protein, strain TaxID and genome remain unresolved. Original full-text review remains open; source alteration, phenotype, assay and mechanism are unchanged.",
+      "withhold": ["strain_taxon_id", "protein_accession"],
+      "subject_strain": "F914",
+      "source_rows": [
+        {"identifier": "CHEBI:3392", "row_sha256": "7ace37c6427c588526fb1cc75a5b8d5ac8325c9a71230497df9e8cf18f319626"}
+      ]
     }
   ]
 }

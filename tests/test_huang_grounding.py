@@ -40,7 +40,7 @@ def test_huang_source_reproduction_keeps_all_prior_fluconazole_claims():
     rows = list(csv.DictReader((ROOT / "data/raw/phibase_amr.tsv").open(), delimiter="\t"))
     fixture = {r["identifier"]: {"identifier": r["identifier"], "chemical_structure": {
         "standard_inchi_key": r["standard_inchi_key"]}, "curation_history": []} for r in rows}
-    assert seed.attach_phibase_resistance(fixture)["reviewed_identifier_context"] == 189
+    assert seed.attach_phibase_resistance(fixture)["reviewed_identifier_context"] == 190
     record = load_record(ROOT / "data/antibiotics/antifungal/fluconazole.yaml")
     claims = [c for c in record["resistance_mechanisms"] if seed.is_phibase_sourced_resistance(c)]
     assert fixture["CHEBI:46081"]["resistance_mechanisms"] == claims

@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-13",
+  "interpretation_limits": {
+    "HEL2": "Figure 4a concerns trichothecin hypersensitivity; the gain-of-resistance panels 4b-d concern DON and are not transferred to trichothecin.",
+    "PDR1": "Figure 1b uses a regulatory context whose phenotype depends on PDR5; it does not identify this reference entry as an experimental allele.",
+    "PDR3": "Figure 1a's mixed-gene comparison does not isolate a PDR3-only resistance effect."
+  },
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_claims": 0,
+  "new_experimental_genomes": 0,
+  "new_strain_taxon_assignments": 0,
+  "primary_context": {
+    "path": "research/2026-10-13-translation-context.json",
+    "sha256": "2fbf02dedeabab1fce62677092851a6037a8694218b25af8e133a23820847326"
+  },
+  "record": {
+    "identifier": "CHEBI:69621",
+    "standard_inchi_key": "LJWZOKOFCBPNAG-HULHSAFCSA-N"
+  },
+  "references": {
+    "HEL2": {
+      "accession": "UniProtKB:Q05580",
+      "entry_version": 181,
+      "experimental_allele_or_protein_assigned": false,
+      "locus": "YDR266C",
+      "reference_strain": "S288c",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "6506f8ca2983f2805c680dfdfb773b552cd1c9f7c8b5c1cddb83b36344ac33f0",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/request-8cbe77ce0a827cea454f722372565cb565524050e6301162e345eda008eb8bff.json",
+          "sha256": "38ae8170486350fbefee3e930c4d122f52cf1014802546d3d5e49f4bd3c84a27"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:HEL2 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T10:21:39.870484+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AHEL2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 1,
+      "sgd_id": "S000002674"
+    },
+    "PDR1": {
+      "accession": "UniProtKB:P12383",
+      "entry_version": 208,
+      "experimental_allele_or_protein_assigned": false,
+      "locus": "YGL013C",
+      "reference_strain": "S288c",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "481077bae1438e4af9df0d813ddac61ce8d8a2bafc5228f1a63e49629beba6f0",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/request-33741b0e6f8d6b35ed5c500f5bea581c5921ea06a7233a13f7159a1a9bf78b91.json",
+          "sha256": "b5bfa1a307cadd03f6d554b77b68cceab9cdc5994384c974a4d6583eb0739bc5"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:PDR1 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T10:21:25.173106+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APDR1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 2,
+      "sgd_id": "S000002981"
+    },
+    "PDR3": {
+      "accession": "UniProtKB:P33200",
+      "entry_version": 180,
+      "experimental_allele_or_protein_assigned": false,
+      "locus": "YBL005W",
+      "reference_strain": "S288c",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "request": {
+        "body_sha256": "0ceeea75eb4b8974b1f425abffce9ddc48a6d7ef30eb3e435111f22973a81377",
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-translation/request-928a62fef9babce9bb01a907dae2d88ac53edb07769066fa13e19ef6fa0a2839.json",
+          "sha256": "610e6ec8c897aae0f34d42c632a9d97fcd46d22bbee16fcb7be1b7e4bb780fb5"
+        },
+        "pagination_complete": true,
+        "query": "gene_exact:PDR3 AND organism_id:559292 AND reviewed:true",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T10:21:35.983278+00:00",
+        "status": 200,
+        "total_results": 1,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APDR3+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=10&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "reviewed": true,
+      "sequence_version": 2,
+      "sgd_id": "S000000101"
+    }
+  },
+  "scope": "REFERENCE_IDENTITY_NOT_ADDITIONAL_RESISTANCE_CURATION",
+  "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+  "taxonomy": [
+    {
+      "parent_taxon_id": "NCBITaxon:4930",
+      "rank": "species",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "cache_sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932"
+      },
+      "scientific_name": "Saccharomyces cerevisiae",
+      "scope": "EXPERIMENTAL_SPECIES",
+      "taxon_id": "NCBITaxon:4932"
+    },
+    {
+      "parent_taxon_id": "NCBITaxon:4932",
+      "rank": "strain",
+      "request": {
+        "cache_path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "cache_sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba",
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "scope": "REFERENCE_PROTEIN_TAXON_ONLY",
+      "taxon_id": "NCBITaxon:559292"
+    }
+  ],
+  "uniprot_attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

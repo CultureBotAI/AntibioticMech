@@ -1,0 +1,110 @@
+{
+  "adversarial_review": [
+    "Replaced ambiguous paragraph ordinals with identifiable Results/Discussion statement locators.",
+    "Preserved the SNQ2 author report without promoting undisplayed data to verified resistance.",
+    "Did not reinterpret HEM4 sensitivity, negative screening or human biochemistry as resistant yeast alleles.",
+    "Kept distinct screening contexts separate instead of reading a negative result as a paper-wide denial.",
+    "Reused SNQ2 identifier metadata without transferring a thiolutin phenotype to sampangine.",
+    "Verified CIN5/YAP4 as explicit aliases while retaining reference-only scope.",
+    "Replaced an unverified article-TaxID absence claim with explicit UniProt-lineage attribution.",
+    "The cached HTTP403 document is not source evidence; text review, native figures and supplements have separate statuses.",
+    "Historical query-output absence is not absence from all literature or from the larger research archive.",
+    "All prior snapshots and biological records remain unchanged; no whole-record review is complete.",
+    "Same-agent adversarial review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "04e4da45bd3e029ca72deb0ed91963ca5237665f44f708d34e231e5b97dc1fd8"
+    },
+    {
+      "path": "research/2026-10-13-sampangine-context.json",
+      "sha256": "dbaf3392860aa8d6337c5250f2195205e0a75c6c7d1b4e465e962f87d7789539"
+    },
+    {
+      "path": "tests/test_sampangine_context.py",
+      "sha256": "bc0ef150902ea3b9f0294dd3e23d9c91e368f5aa842df4413272314d10cbf10b"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-sampangine/protected-before.json",
+    "sha256": "a0a2549a277dd129714e85102d340e8c01c01077b71ec212c8cd7b07c5b8a04c"
+  },
+  "baseline_files_checked": 7107,
+  "date": "2026-10-13",
+  "denied_publisher_response_treated_as_primary_text": false,
+  "experimental_accessions_assigned": 0,
+  "focused_checks": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_sampangine_context.py",
+      "tests/test_tavaborole_references.py",
+      "tests/test_factumycin_references.py",
+      "tests/test_thiolutin_curation.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_unreviewed_topoisomerase.py",
+      "tests/test_resistance_grounding_audit.py",
+      "tests/test_resistance_progress.py",
+      "tests/test_docs.py::test_numeric_claims_in_prose_match_the_corpus",
+      "tests/test_docs.py::test_no_unregistered_numeric_claim_about_the_corpus",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-sampangine/post-review-tests.xml"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-13T14:01:14.156161+00:00",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-sampangine/post-review.log",
+      "sha256": "df3ffa9ebe985a1286e198135f08f6ccd23a81af6eef3fe9a4f63deb5aac7927"
+    },
+    "output": "........................................................................ [ 47%]\n........................................................................ [ 94%]\n.........                                                                [100%]\n153 passed in 97.47s (0:01:37)\n",
+    "started": "2026-10-13T13:59:35.870737+00:00"
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations": 0,
+  "ignored_files_included": true,
+  "initial_check_receipt": {
+    "path": "reports/resistance-grounding-2026-10-13-sampangine/focused.json",
+    "sha256": "abd4c341e312c83d933a3e00426c84a8d035d34aadf57ff56abcba529ce16695"
+  },
+  "issue_1040": "DEFERRED",
+  "metadata_and_dossier_replayed_offline_with_network_disabled": true,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-sampangine-context.json",
+    "tests/test_sampangine_context.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "primary_scientific_interpretation_automatically_revalidated": false,
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "reuse_terms_review_resumed": false,
+  "source_adoptions": 0,
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "new_taxonomy_requests": 0,
+    "new_uniprot_queries": 2,
+    "reference_proteins": 3,
+    "reused_taxonomy_responses": 1,
+    "reused_uniprot_queries": 1,
+    "selected_primary_articles_with_text_review": 1,
+    "selected_records": 1,
+    "whole_records_completed": 0
+  },
+  "test_results": {
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-sampangine/post-review-tests.xml",
+      "sha256": "e7ff4ef7a010a98341811ec0cb48eaed7ff9f1bb9d946049be0d3adc0c7e33f4"
+    },
+    "passed": 153,
+    "skipped": 0
+  }
+}

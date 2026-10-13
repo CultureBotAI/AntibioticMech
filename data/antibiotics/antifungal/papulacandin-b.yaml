@@ -72,6 +72,14 @@ curation_history:
     and genome assignments unresolved; no quantitative AST added; figure review remains
     pending.
   llm_assisted: true
+- timestamp: '2026-10-13T05:08:39Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added compound-specific historical ACR locus associations from primary
+    results. Kept the molecular route unknown, rejected unsupported modern alias/protein
+    joins, and retained species-only taxonomy. Existing claims are unchanged; no allele,
+    genome or numerical AST assigned. Whole-record review remains open.
+  llm_assisted: true
 resistance_mechanisms:
 - mechanism_type: OTHER
   label: PBR1-associated papulacandin B resistance in Saccharomyces cerevisiae
@@ -120,3 +128,54 @@ resistance_mechanisms:
   - reference: https://www.pombase.org/gene/SPCC1840.02c
     notes: Reference-name alias and UniProt cross-reference only; official gene page
       inspected 2026-10-09, release date 2026-09-15.
+- mechanism_type: UNKNOWN
+  label: Historical ACR1-associated laboratory papulacandin B resistance
+  gene_id: ACR1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative papulacandin B resistance
+  assay: Comparative growth susceptibility
+  note: Historical unmapped locus in laboratory derivatives; not a species-wide phenotype.
+    Molecular route, experimental protein and genome remain unresolved. Compound-specific,
+    background-dependent association; not transferred to ACR2.
+  evidence:
+  - reference: PMID:1839761
+    notes: Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596.
+      Biochemical and surface observations do not establish a molecular route.
+  - reference: https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670
+    notes: ACR1 in the unmapped-locus table, revision 406670; inspected 2026-10-13.
+      Modern alias matches are not accepted protein crosswalks.
+- mechanism_type: UNKNOWN
+  label: Historical ACR3-associated laboratory papulacandin B resistance
+  gene_id: ACR3
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative papulacandin B resistance
+  assay: Comparative growth susceptibility
+  note: Historical unmapped locus in laboratory derivatives; not a species-wide phenotype.
+    Molecular route, experimental protein and genome remain unresolved. Compound-specific,
+    background-dependent association; not transferred to ACR2.
+  evidence:
+  - reference: PMID:1839761
+    notes: Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596.
+      Biochemical and surface observations do not establish a molecular route.
+  - reference: https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670
+    notes: ACR3 in the unmapped-locus table, revision 406670; inspected 2026-10-13.
+      Modern alias matches are not accepted protein crosswalks.
+- mechanism_type: UNKNOWN
+  label: Historical ACR4-associated laboratory papulacandin B resistance
+  gene_id: ACR4
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative papulacandin B resistance
+  assay: Comparative growth susceptibility
+  note: Historical unmapped locus in laboratory derivatives; not a species-wide phenotype.
+    Molecular route, experimental protein and genome remain unresolved. Compound-specific,
+    background-dependent association; not transferred to ACR2.
+  evidence:
+  - reference: PMID:1839761
+    notes: Results, native Tables 1-2 and Discussion; DOI:10.1128/aac.35.12.2596.
+      Biochemical and surface observations do not establish a molecular route.
+  - reference: https://wiki.yeastgenome.org/index.php?title=Genetic_Loci&oldid=406670
+    notes: ACR4 in the unmapped-locus table, revision 406670; inspected 2026-10-13.
+      Modern alias matches are not accepted protein crosswalks.

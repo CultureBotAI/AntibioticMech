@@ -44,7 +44,7 @@ def test_mehrabi_source_reproduction_matches_both_records():
     rows = list(csv.DictReader((ROOT / "data/raw/phibase_amr.tsv").open(), delimiter="\t"))
     fixture = {r["identifier"]: {"identifier": r["identifier"], "chemical_structure": {
         "standard_inchi_key": r["standard_inchi_key"]}, "curation_history": []} for r in rows}
-    assert seed.attach_phibase_resistance(fixture)["reviewed_identifier_context"] == 189
+    assert seed.attach_phibase_resistance(fixture)["reviewed_identifier_context"] == 190
     for slug, identifier in (("iprodione", "CHEBI:28909"), ("fludioxonil", "CHEBI:81763")):
         record = load_record(ROOT / f"data/antibiotics/antifungal/{slug}.yaml")
         assert fixture[identifier]["resistance_mechanisms"] == record["resistance_mechanisms"]

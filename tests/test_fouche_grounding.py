@@ -129,7 +129,7 @@ def test_fouche_source_rows_remain_distinct_and_reproduce_the_record():
     fixture = {r["identifier"]: {"identifier": r["identifier"], "chemical_structure": {
         "standard_inchi_key": r["standard_inchi_key"]}, "curation_history": []} for r in rows}
     counts = seed.attach_phibase_resistance(fixture)
-    assert counts["reviewed_identifier_context"] == 189 and counts["matched_associations"] == 217
+    assert counts["reviewed_identifier_context"] == 190 and counts["matched_associations"] == 217
     record = load_record(ROOT / "data/antibiotics/antifungal/fenpicoxamid.yaml")
     assert record["chemical_structure"]["standard_inchi_key"] == "QGTOTYJSCYHYFK-RBODFLQRSA-N"
     claims = record["resistance_mechanisms"]

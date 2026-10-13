@@ -1,0 +1,389 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "complete_collection_aware_record_loaded": true,
+  "date": "2026-10-13",
+  "experimental_subjects_assigned": [],
+  "inputs": {
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/canary-reviewed.json",
+      "sha256": "0285a070c780afa96351980cfe76f5136c7bf66ca38cfa939ecf2f9c30ac7cfb"
+    },
+    "census": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-grounding.tsv",
+      "sha256": "b630521072e27883b1dac381e5473a838edc7ecd6a7c9d1170af19277deea0d4"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/cohort.json",
+      "sha256": "112ec8b1636828309f850e71cdb8faa31d7b8e6f30e263e76092c67e8c4c79b1"
+    }
+  },
+  "limits": [
+    "The reference-strain TaxID and species lineage do not identify a tested resistance subject.",
+    "The two focal papers are absent from these entries' returned bibliographies; this is not a negative biological result.",
+    "The 2022 search-index result is a discovery lead, not an inspected primary experiment or curation basis.",
+    "The 2007 source already cited in the record could not be rechecked; its existing target claim was not changed.",
+    "Primary results, native figures and supplements remain unreviewed in this follow-up.",
+    "NAM2 is a separate mitochondrial reference, not a CDC60 alias or a demonstrated tavaborole-resistance gene here.",
+    "The exact queries are restricted to reviewed S288c entries; no complete organism-wide or gene-wide coverage is claimed.",
+    "No sequences, variant specifications, constructs, protocols, numerical AST, genome or sample joins are exported.",
+    "Publisher access holds were not retried through alternate routes. A sandbox DNS failure preceded the approved UniProt request and yielded no source response.",
+    "No NCBI request, contact, source adoption or GitHub mutation; issue 1040 remains deferred."
+  ],
+  "preexisting_target_mechanism": "PRESERVED_NOT_REVALIDATED_IN_THIS_FOLLOWUP",
+  "primary_access": [
+    {
+      "checked_on": "2026-10-13",
+      "doi": "10.1038/s42003-022-03076-7",
+      "primary_results_reviewed": false,
+      "reported_http_status": 500,
+      "retried_or_alternate_transport_used": false,
+      "status": "TOOL_INACCESSIBLE_IDENTITY_PROVIDER_REDIRECT",
+      "url": "https://www.nature.com/articles/s42003-022-03076-7"
+    },
+    {
+      "checked_on": "2026-10-13",
+      "doi": "10.1126/science.1142189",
+      "primary_results_reviewed": false,
+      "reported_http_status": 403,
+      "retried_or_alternate_transport_used": false,
+      "status": "HTTP_403",
+      "url": "https://www.science.org/doi/10.1126/science.1142189"
+    }
+  ],
+  "queries": {
+    "cdc60": {
+      "all_strains_or_unreviewed_entries_searched": false,
+      "complete_for_exact_query": true,
+      "establishes_biological_absence": false,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/cdc60-response.bin",
+          "sha256": "71189404f56addd0221e6aadf7db47deb89e56eed6dc6ec05304422d2dd3425e"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/cdc60-receipt.json",
+          "sha256": "20d23d9618b3db7d7b2532d1c75c54f47bd85d80fd20872215e2553e5701fd96"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:39:52.162571+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACDC60%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "results": 1
+    },
+    "nam2": {
+      "all_strains_or_unreviewed_entries_searched": false,
+      "complete_for_exact_query": true,
+      "establishes_biological_absence": false,
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/nam2-response.bin",
+          "sha256": "0daeb8f35d9f357fcf7c90b1f904cf100b2c645029189fd2e8ea5ada405b9dc8"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/nam2-receipt.json",
+          "sha256": "5973555ba31a636a6883e09060208f9ec8857d860fa86accfbfaaf254e361814"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:40:08.130772+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ANAM2%29+AND+%28organism_id%3A559292%29+AND+%28reviewed%3Atrue%29&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "results": 1
+    }
+  },
+  "record": {
+    "identifier": "CHEBI:77942",
+    "path": "data/antibiotics/antifungal/tavaborole.yaml",
+    "sha256": "9170d8fc4b59c636d7c39f86be1b5c1ddc789344fc74ae46bdd8e64156571d13",
+    "standard_inchi_key": "LFQDNHWZDQTITF-UHFFFAOYSA-N"
+  },
+  "reference_proteins": {
+    "cdc60": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/0378-1119(92)90007-c"
+            },
+            {
+              "database": "PubMed",
+              "id": "1398122"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1992"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/(sici)1097-0061(199611)12:14%3c1483::aid-yea34%3e3.0.co;2-o"
+            },
+            {
+              "database": "PubMed",
+              "id": "8948103"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1996"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s103"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169875"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.1210303109"
+            },
+            {
+              "database": "PubMed",
+              "id": "22814378"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2012"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 206,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_entry_bibliography": {
+        "10.1038/s42003-022-03076-7": false,
+        "10.1126/science.1142189": false
+      },
+      "gene_names": [
+        "CDC60"
+      ],
+      "ordered_locus_names": [
+        "YPL160W"
+      ],
+      "protein_accession": "UniProtKB:P26637",
+      "protein_name": "Leucine--tRNA ligase, cytoplasmic",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "CYTOPLASMIC_REFERENCE_ONLY",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "nam2": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(19)35432-8"
+            },
+            {
+              "database": "PubMed",
+              "id": "2826465"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1988"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/j.1460-2075.1987.tb04812.x"
+            },
+            {
+              "database": "PubMed",
+              "id": "3034607"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1987"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s087"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169871"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(18)52278-x"
+            },
+            {
+              "database": "PubMed",
+              "id": "1990003"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 201,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_paper_in_entry_bibliography": {
+        "10.1038/s42003-022-03076-7": false,
+        "10.1126/science.1142189": false
+      },
+      "gene_names": [
+        "MSL1",
+        "NAM2"
+      ],
+      "ordered_locus_names": [
+        "YLR382C"
+      ],
+      "protein_accession": "UniProtKB:P11325",
+      "protein_name": "Leucine--tRNA ligase, mitochondrial",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "MITOCHONDRIAL_COMPARATOR_NOT_CDC60",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "resistance_assertions_added": [],
+  "scope": "S288C_REFERENCE_IDENTITIES_NOT_EXPERIMENTAL_SUBJECTS",
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_queries": 2,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "primary_access_holds": 2,
+    "reference_proteins_distinguished": 2,
+    "reference_taxa_checked": 1,
+    "selected_records": 1,
+    "whole_records_completed": 0
+  },
+  "taxonomy_request": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  }
+}

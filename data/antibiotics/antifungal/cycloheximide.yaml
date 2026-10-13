@@ -149,7 +149,7 @@ resistance_mechanisms:
     notes: 'Identifier-scope review: pp. 4180-4181: gene identity and strain context,
       Results and Table I, p. 4185: STS1/PDR5 allelism, UniProtKB release 2026_03:
       P33302 entry 235, P38637 entry 160, sequence versions 1. Reviewed 2026-10-08
-      by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+      by codex; curation/phibase_grounding_reviews.json SHA-256 1f5d50346b2916fce10969afa8d6409ea836dd15e8cf7fe3cfa3a78d6289b4ed.'
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   label: CYH2/RPL28-associated laboratory cycloheximide resistance
   gene_families:
@@ -442,4 +442,10 @@ curation_history:
     and S288c taxonomy reference-only, and retained mechanistic and numerical-endpoint
     limitations. Existing source-owned claims are unchanged; whole-record review remains
     open.
+  llm_assisted: true
+- timestamp: '2026-10-13T08:51:03Z'
+  curator: codex
+  action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
+  changes: Refreshed the shared PHI-base review checksum after one Neurospora subject-context
+    correction; previous decisions, biological fields and activities unchanged.
   llm_assisted: true
