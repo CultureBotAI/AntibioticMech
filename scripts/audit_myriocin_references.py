@@ -70,8 +70,10 @@ def build(root, directory):
     canary = json.loads(canary_path.read_bytes())
     if canary["manually_reviewed"] is not True:
         raise ValueError("canary review missing")
-    for pin in (canary["response"], canary["receipt"]):
-        reference.check_pin(root, pin)
+    for field, suffix in (("response", "response.bin"), ("receipt", "receipt.json")):
+        expected = reference.pin(root, directory / f"sli1-{suffix}")
+        if canary[field] != expected:
+            raise ValueError("canary does not match the reviewed sli1 query")
     record = load_record(reference.check_pin(root, plan["record"]))
     if (record["identifier"] != "CHEBI:582124" or record.get("resistance_mechanisms")
             or record["chemical_structure"]["standard_inchi_key"] != "ZZIKIHCNFWXKDY-GNTQXERDSA-N"

@@ -79,8 +79,10 @@ def build(root, directory):
     canary = json.loads(canary_path.read_bytes())
     if canary["manually_reviewed"] is not True:
         raise ValueError("canary review missing")
-    for pin in (canary["response"], canary["receipt"]):
-        reference.check_pin(root, pin)
+    for field, suffix in (("response", "response.bin"), ("receipt", "receipt.json")):
+        expected = reference.pin(root, directory / f"neurospora-c-{suffix}")
+        if canary[field] != expected:
+            raise ValueError("canary does not match the reviewed neurospora-c query")
     with reference.check_pin(root, plan["census"]).open(newline="") as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
     if len(census) != 2939 or set(plan["records"]) != set(TARGETS):
