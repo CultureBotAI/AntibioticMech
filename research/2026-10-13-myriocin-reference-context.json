@@ -1,0 +1,843 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "compound_name_grounding": {
+    "ISP-1": {
+      "identifier": "CHEBI:582124",
+      "name_snapshot": {
+        "origins": [
+          {
+            "index": 3,
+            "kind": "SYNONYM",
+            "source": "chebi",
+            "synonym_type": "EXACT_SYNONYM"
+          }
+        ],
+        "shared_with_record_ids": [],
+        "text": "ISP-1"
+      },
+      "synonym": {
+        "source": "chebi",
+        "synonym_text": "ISP-1",
+        "synonym_type": "EXACT_SYNONYM"
+      }
+    },
+    "tested_preparation_independently_reidentified": false
+  },
+  "date": "2026-10-13",
+  "inputs": {
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-13-myriocin/canary-reviewed.json",
+      "sha256": "7cc1a12bb9769f93776d61647af2be2bb72026ded424e85d0f16ea7655873216"
+    },
+    "census": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-grounding.tsv",
+      "sha256": "b630521072e27883b1dac381e5473a838edc7ecd6a7c9d1170af19277deea0d4"
+    },
+    "discovery": {
+      "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+      "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-myriocin/cohort.json",
+      "sha256": "730b97e42f9846a0857f9f2400fb715d620aacff37356b9b54ec43676eeb0e70"
+    },
+    "prior_checkpoint": {
+      "path": "research/2026-10-13-vatpase-verification.json",
+      "sha256": "58e563d48abe1cb0dd84fcf63c2b59d40455772ead5db572a9497ddad7ed1a97"
+    },
+    "prior_progress": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-progress.json",
+      "sha256": "8ec5b6655e5093c4aa5bd3fb6fc9dea6ecf0161985f84b31ba66fb5338ec1c75"
+    },
+    "taxonomy_dossier": {
+      "path": "research/2026-10-13-tavaborole-reference-context.json",
+      "sha256": "6f021d40120fc2ff0c66a38ca7e71acd573438a694a6d023bbd9c1f574ccf75f"
+    }
+  },
+  "limits": [
+    "Reference identity and citation concordance do not verify primary resistance results.",
+    "YPK1 is also an MCK1 synonym; no first-hit or gene-name-only accession assignment is accepted.",
+    "Rejecting a homonym for this lead is not evidence that its organism is susceptible.",
+    "Archive identifiers are reference annotations, not exact experimental allele or genome joins.",
+    "Reference-strain TaxID 559292 and species lineage 4932 do not identify tested derivatives.",
+    "Biochemical inhibition, growth inhibition, MIC and clinical resistance are not interchangeable.",
+    "No native figure, supplement or primary result was verified from the unavailable sources.",
+    "The indexed abstracts are discovery only; no mechanistic claim is curated from them.",
+    "Manual web-tool access observations are not automatically verified by metadata replay.",
+    "No sequences, variant specifications, constructs, protocols or numeric AST are exported.",
+    "No NCBI requests/contact, source adoption, GitHub mutation or reuse-terms work; #1040 stays deferred."
+  ],
+  "primary_access": [
+    {
+      "doi": "10.1042/bj20040108",
+      "outcome": "HTTP_403_NON_PDF_BODY",
+      "pdf_url": "https://portlandpress.com/biochemj/article-pdf/381/1/321/716718/bj3810321.pdf",
+      "pmid": "15025559",
+      "primary_results_verified": false,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-myriocin/publisher-receipt.json",
+        "sha256": "1ab296baaf630d871b9d7df5a1ac3768e01817452df3688b0945857a2d9c0c8a"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-myriocin/publisher-response.bin",
+        "sha256": "5ca0363203f51e08061bc773b6aaa5f11fc294ae1761530626ff5a7c68cef888"
+      },
+      "retry_or_alternate_transport": false,
+      "status": 403
+    },
+    {
+      "doi": "10.1128/mcb.20.12.4411-4419.2000",
+      "local_primary_bytes_saved": false,
+      "outcome": "TOOL_REPORTED_URL_INACCESSIBLE",
+      "pmid": "10825204",
+      "primary_results_verified": false,
+      "retry_or_alternate_transport": false,
+      "url": "https://journals.asm.org/doi/full/10.1128/mcb.20.12.4411-4419.2000"
+    },
+    {
+      "doi": "10.7554/elife.03779",
+      "local_primary_bytes_saved": false,
+      "outcome": "CLIENT_CHALLENGE_NOT_ARTICLE_TEXT",
+      "primary_results_verified": false,
+      "retry_or_alternate_transport": false,
+      "url": "https://elifesciences.org/articles/03779"
+    }
+  ],
+  "record": {
+    "identifier": "CHEBI:582124",
+    "label": "myriocin",
+    "path": "data/antibiotics/antifungal/myriocin.yaml",
+    "resistance_assertions_added": [],
+    "sha256": "b9b468983efe2d35de340c675cbb59525a5dcf6a80e0585cd2a3f33468f256c0",
+    "standard_inchi_key": "ZZIKIHCNFWXKDY-GNTQXERDSA-N",
+    "whole_record_review": "OPEN"
+  },
+  "reference_proteins": {
+    "UniProtKB:P12688": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1089/dna.1.1988.7.469"
+            },
+            {
+              "database": "PubMed",
+              "id": "2850145"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1988"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/369371a0"
+            },
+            {
+              "database": "PubMed",
+              "id": "8196765"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1994"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1007/bf00277146"
+            },
+            {
+              "database": "PubMed",
+              "id": "8437590"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1993"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0960-9822(99)80088-8"
+            },
+            {
+              "database": "PubMed",
+              "id": "10074427"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1999"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.20.12.4411-4419.2000"
+            },
+            {
+              "database": "PubMed",
+              "id": "10825204"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1083/jcb.200107135"
+            },
+            {
+              "database": "PubMed",
+              "id": "11807089"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2002"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1091/mbc.e02-04-0201"
+            },
+            {
+              "database": "PubMed",
+              "id": "12221112"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2002"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02026"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562095"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1042/bj20040108"
+            },
+            {
+              "database": "PubMed",
+              "id": "15025559"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1099/mic.0.27286-0"
+            },
+            {
+              "database": "PubMed",
+              "id": "15470109"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.abb.2005.02.030"
+            },
+            {
+              "database": "PubMed",
+              "id": "15820214"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2005"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m502972200"
+            },
+            {
+              "database": "PubMed",
+              "id": "15840588"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2005"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/pr060559j"
+            },
+            {
+              "database": "PubMed",
+              "id": "17330950"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0607084104"
+            },
+            {
+              "database": "PubMed",
+              "id": "17287358"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0912497106"
+            },
+            {
+              "database": "PubMed",
+              "id": "19966303"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2010"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1111/febs.16189"
+            },
+            {
+              "database": "PubMed",
+              "id": "34492164"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2022"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.jlr.2024.100683"
+            },
+            {
+              "database": "PubMed",
+              "id": "39490931"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2024"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 239,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_bibliography_matches": [
+        "10825204",
+        "15025559"
+      ],
+      "gene_names": [
+        "SLI2",
+        "YPK1"
+      ],
+      "gene_orf_names": [],
+      "ordered_locus_names": [
+        "YKL126W"
+      ],
+      "primary_gene_name": "YPK1",
+      "protein_accession": "UniProtKB:P12688",
+      "protein_name": "Serine/threonine-protein kinase YPK1",
+      "query_gene": "YPK1",
+      "query_match_kind": "PRIMARY_NAME",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "sequence_version": 2,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "UniProtKB:P21965": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1128/mcb.10.12.6244-6256.1990"
+            },
+            {
+              "database": "PubMed",
+              "id": "1701015"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1990"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1101/gad.5.4.533"
+            },
+            {
+              "database": "PubMed",
+              "id": "2010083"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1101/gad.5.4.549"
+            },
+            {
+              "database": "PubMed",
+              "id": "2010084"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/yea.320111109"
+            },
+            {
+              "database": "PubMed",
+              "id": "7502583"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s093"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169873"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/yea.320111311"
+            },
+            {
+              "database": "PubMed",
+              "id": "8553702"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1995"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            },
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2003"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/pr060559j"
+            },
+            {
+              "database": "PubMed",
+              "id": "17330950"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2007"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/mcp.m700468-mcp200"
+            },
+            {
+              "database": "PubMed",
+              "id": "18407956"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2008"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1172867"
+            },
+            {
+              "database": "PubMed",
+              "id": "19779198"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.1210303109"
+            },
+            {
+              "database": "PubMed",
+              "id": "22814378"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2012"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 225,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_bibliography_matches": [],
+      "gene_names": [
+        "MCK1",
+        "YPK1"
+      ],
+      "gene_orf_names": [
+        "N0392"
+      ],
+      "ordered_locus_names": [
+        "YNL307C"
+      ],
+      "primary_gene_name": "MCK1",
+      "protein_accession": "UniProtKB:P21965",
+      "protein_name": "Protein kinase MCK1",
+      "query_gene": "YPK1",
+      "query_match_kind": "SYNONYM",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "UniProtKB:P53304": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/(sici)1097-0061(19970915)13:11<1077::aid-yea152>3.0.co;2-y"
+            },
+            {
+              "database": "PubMed",
+              "id": "9290212"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/387s081"
+            },
+            {
+              "database": "PubMed",
+              "id": "9169869"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            },
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2014"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1042/bj20040108"
+            },
+            {
+              "database": "PubMed",
+              "id": "15025559"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2004"
+        }
+      ],
+      "compound_specific_resistance_established": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 149,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "focal_bibliography_matches": [
+        "15025559"
+      ],
+      "gene_names": [
+        "SLI1"
+      ],
+      "gene_orf_names": [],
+      "ordered_locus_names": [
+        "YGR212W"
+      ],
+      "primary_gene_name": "SLI1",
+      "protein_accession": "UniProtKB:P53304",
+      "protein_name": "N-acetyltransferase SLI1",
+      "query_gene": "SLI1",
+      "query_match_kind": "PRIMARY_NAME",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "scope": "REFERENCE_IDENTITY_AND_HOMONYM_REVIEW_NOT_PRIMARY_RESISTANCE_VALIDATION",
+  "sli1_archive_crosswalk": {
+    "experimental_subject_assignment": false,
+    "links": [
+      {
+        "nucleotide_accession": "Z72997",
+        "protein_accession": "CAA97239.1"
+      },
+      {
+        "nucleotide_accession": "BK006941",
+        "protein_accession": "DAA08306.1"
+      }
+    ],
+    "new_archive_endpoint_requests": 0,
+    "source": "UNIPROT_ANNOTATION"
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_uniprot_queries": 2,
+    "concordant_reference_identities": 2,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "homonym_candidates_not_supported_for_lead": 1,
+    "new_phi_decisions": 0,
+    "new_taxonomy_requests": 0,
+    "reference_candidates": 3,
+    "selected_records": 1,
+    "whole_records_completed": 0
+  },
+  "taxonomy_request": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "new_request": false,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "reused_byte_identically": true,
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  },
+  "uniprot_requests": {
+    "sli1": {
+      "all_strains_or_unreviewed_entries_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-myriocin/sli1-response.bin",
+        "sha256": "5a3bd0bdba67233d13e526aed4250c5931f38e8e3a471bacc3ac468513994203"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-myriocin/sli1-receipt.json",
+        "sha256": "5f03ff78e4f52721a69c6452dccb54f916805f9a286d7dc872fbae9870d0cbd7"
+      },
+      "release": "2026_03",
+      "results": 1,
+      "retrieved_at": "2026-10-13T15:16:35.953124+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ASLI1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "ypk1": {
+      "all_strains_or_unreviewed_entries_searched": false,
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-13-myriocin/ypk1-response.bin",
+        "sha256": "658e1b9562ab8eaff7ba91f319ed491a78710aa06f9fa52b652937df44e0e692"
+      },
+      "complete_for_query": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-myriocin/ypk1-receipt.json",
+        "sha256": "0584e2dbb1d0133025ab7de935a9f576a2ee314edc07c63e322854dcf2933766"
+      },
+      "release": "2026_03",
+      "results": 2,
+      "retrieved_at": "2026-10-13T15:17:05.938362+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AYPK1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "ypk1_name_resolution": {
+    "biological_claim_curated": false,
+    "candidates": {
+      "UniProtKB:P12688": {
+        "disposition": "CONCORDANT_REFERENCE_IDENTITY",
+        "identity_checks": {
+          "primary_name_ypk1": true,
+          "sli2_alias": true,
+          "sli2_discovery_paper_in_bibliography": true,
+          "ykl126w_locus": true
+        },
+        "negative_resistance_phenotype_inferred": false
+      },
+      "UniProtKB:P21965": {
+        "disposition": "NOT_SUPPORTED_FOR_THIS_LEAD",
+        "identity_checks": {
+          "primary_name_ypk1": false,
+          "sli2_alias": false,
+          "sli2_discovery_paper_in_bibliography": false,
+          "ykl126w_locus": false
+        },
+        "negative_resistance_phenotype_inferred": false
+      }
+    },
+    "experimental_allele_assignment": false,
+    "selected_reference": "UniProtKB:P12688"
+  }
+}

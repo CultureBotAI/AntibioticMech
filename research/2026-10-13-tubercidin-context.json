@@ -1,0 +1,494 @@
+{
+  "chemical_scope": {
+    "complete_collection_aware_record_loaded": true,
+    "generic_sparsomycin_search_hits_transferred": false,
+    "tested_preparation_independently_reidentified": false
+  },
+  "date": "2026-10-13",
+  "empty_name_query": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/trp-response.bin",
+      "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+    },
+    "initial_nupm1_gene_query_run": false,
+    "protein_absence_inferred": false,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/trp-receipt.json",
+      "sha256": "90c90a6d0802455bbd5b405595784fe22a88839f7b496f6b91186d743a936819"
+    },
+    "release": "2026_03",
+    "results": 0,
+    "retrieved_at": "2026-10-13T15:26:50.067523+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ALmjF.31.2010&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+  },
+  "evidence_limits": [
+    "IC50-based comparisons are not MICs or clinical susceptibility categories.",
+    "Methods describe SEM whereas table footnotes describe SD; no numeric measurements are imported.",
+    "Negative controls and differing derivative responses remain distinct; no species-wide resistance call.",
+    "Efflux and transport explanations for TRP are hypotheses, not measured molecular routes.",
+    "Table 2 marks one comparator context not done; it is not a tested negative result.",
+    "Other-drug findings are not transferred without their own compound and subject review.",
+    "Article-specific gene and ORF identities are not inferred from TOR or TRP names alone.",
+    "Missing focal citations in UniProt do not negate primary evidence."
+  ],
+  "findings": [
+    {
+      "curation_decision": "ADMIT_QUALIFIED_ASSOCIATION",
+      "gene": "TRP",
+      "locations": [
+        "Results",
+        "Table 1",
+        "Figures 2 and 3"
+      ],
+      "locus": "LmjF.31.2010",
+      "molecular_route": "UNRESOLVED",
+      "summary": "Qualified laboratory resistance association; transcript and protein measurements differ."
+    },
+    {
+      "curation_decision": "ADMIT_QUALIFIED_ASSOCIATION",
+      "gene": "NUPM1",
+      "locations": [
+        "Results",
+        "S1 Figure",
+        "S1 Table"
+      ],
+      "locus": "LmjF.31.1940",
+      "molecular_route": "UNRESOLVED",
+      "source_alias": "TOR",
+      "summary": "Qualified laboratory resistance association; other-species mechanistic claims are not transferred."
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/tubercidin-before-2026-10-13.yaml",
+    "sha256": "68f43e55af1ac377e2ff416b2000e6bbf35e52ec3f54a52ca8d5c655d43da976"
+  },
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-grounding.tsv",
+      "sha256": "b630521072e27883b1dac381e5473a838edc7ecd6a7c9d1170af19277deea0d4"
+    },
+    "discovery": {
+      "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+      "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+    },
+    "plan": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/cohort.json",
+      "sha256": "bd6dafabd5b1fc16b2655504f6825ca2de01d004a1fd228b5c60a318fe5a8ac8"
+    },
+    "prior_checkpoint": {
+      "path": "research/2026-10-13-myriocin-verification.json",
+      "sha256": "9a3d7a768d9dc87dfc726c93b032957c9aefe06ece017fdf11a20889e3f9d199"
+    },
+    "prior_progress": {
+      "path": "research/2026-10-13-blasticidin-deaminase-resistance-progress.json",
+      "sha256": "8ec5b6655e5093c4aa5bd3fb6fc9dea6ecf0161985f84b31ba66fb5338ec1c75"
+    },
+    "refseq_query_plans": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-tubercidin/refseq-query-plan.json",
+        "sha256": "c7f2281d147eb22b65650188c99569d3b92e6e79be1eb3e45cdaa08687b4291f"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-tubercidin/nupm1-refseq-query-plan.json",
+        "sha256": "454e89540e27e8b5805c473f5979a97e65cd26c0fe39b6e0210d42426643f2cb"
+      }
+    ]
+  },
+  "limits": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "raw_primary_assets_redistributed": false,
+    "reuse_terms_review_resumed": false,
+    "sequences_variant_specifications_constructs_or_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "planned_gene_associations": 2,
+  "primary": {
+    "assets": {
+      "article": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/article-response.bin",
+          "sha256": "982b7a044ae59f0a90dbb09e4072b6af50a62974758cb090d2a3d3eea26e8558"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/article-receipt.json",
+          "sha256": "743aa0432ff37b38bfc094c00872ddef0e7a46ae62fabcbb926a0bc2e8a15f09"
+        },
+        "final_url_without_query": "https://journals.plos.org/plosntds/article",
+        "retrieved_at": "2026-10-13T15:26:39.226969+00:00",
+        "retry_performed": false,
+        "final_query_omitted": true,
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/article-receipt.json",
+          "sha256": "743aa0432ff37b38bfc094c00872ddef0e7a46ae62fabcbb926a0bc2e8a15f09"
+        },
+        "source_url": "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0004972",
+        "status": 200,
+        "validated_publisher_redirects": 0
+      },
+      "figure2": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/figure2-storage-response.bin",
+          "sha256": "09eb4d308d0074926fc883983ec4100ed8a254446bbc6342b783d78f8456f604"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/figure2-storage-receipt.json",
+          "sha256": "7c0c72494a46a5614a047c92cba1a7b3bae9225865db77d424e903ae76987064"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pntd.0004972/1/pntd.0004972.g002.PNG_L",
+        "retrieved_at": "2026-10-13T15:31:01.179977+00:00",
+        "retry_performed": false,
+        "final_query_omitted": true,
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/figure2-receipt.json",
+          "sha256": "6a045189c18c0bf236dbf8082e99f076e1ad654c8fe0c2fe1bf6f171fc00e743"
+        },
+        "source_url": "https://journals.plos.org/plosntds/article/figure/image?download&size=large&id=10.1371/journal.pntd.0004972.g002",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      },
+      "figure3": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/figure3-storage-response.bin",
+          "sha256": "b8810b7b053627e43a256f9265ea91a7b8eab0c8b2004ac94c1ae4d45b3bc04e"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/figure3-storage-receipt.json",
+          "sha256": "0cb44b52dfef3290550ea54c828d4d83b970a96570a8ab554e99619456bb70f6"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pntd.0004972/1/pntd.0004972.g003.PNG_L",
+        "retrieved_at": "2026-10-13T15:31:01.874062+00:00",
+        "retry_performed": false,
+        "final_query_omitted": true,
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/figure3-receipt.json",
+          "sha256": "19d442ae25c9b6e4a249ccb4689b53802c32b460590912e5b284fd612166d600"
+        },
+        "source_url": "https://journals.plos.org/plosntds/article/figure/image?download&size=large&id=10.1371/journal.pntd.0004972.g003",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      },
+      "supplementary-figure1": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-figure1-storage-response.bin",
+          "sha256": "f60d4429b5131848e753dafd61ff6a8a314068d37509c5fc7a293d0777adb64e"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-figure1-storage-receipt.json",
+          "sha256": "49483127d99c0007cace7fbd9aff174ab8e516606aa8d94fe649f6f96b006aad"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pntd.0004972/1/pntd.0004972.s001.tif",
+        "retrieved_at": "2026-10-13T15:31:03.050242+00:00",
+        "retry_performed": false,
+        "final_query_omitted": true,
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-figure1-receipt.json",
+          "sha256": "5f7244ad30d5829e6fb1c31e03a7091abb1ee57a14bd9be8d4330405db315fe3"
+        },
+        "source_url": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0004972.s001",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      },
+      "supplementary-table1": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-table1-storage-response.bin",
+          "sha256": "9390024d9e4c0be721ef85632486945c633292cef1307c86ea667789645fda5b"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-table1-storage-receipt.json",
+          "sha256": "bd2deea95b74a8eff7067eb8fbf622704d6664ae9729584fef3bb49ab51e984a"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pntd.0004972/1/pntd.0004972.s005.docx",
+        "retrieved_at": "2026-10-13T15:31:03.445307+00:00",
+        "retry_performed": false,
+        "final_query_omitted": true,
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-table1-receipt.json",
+          "sha256": "0837e0d55de6984e4fb27942a972bda789ca5907bb0b9dd09fb885b8b55aca7c"
+        },
+        "source_url": "https://journals.plos.org/plosntds/article/file?type=supplementary&id=10.1371/journal.pntd.0004972.s005",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      },
+      "table1": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/table1-storage-response.bin",
+          "sha256": "4cc4c0d15999c3ddd7dc339a7b501c66106f8d36b7023a053d110415fbac6580"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/table1-storage-receipt.json",
+          "sha256": "15588cb1f53e128c5fcb6906e102317da911c232220f71a9435139e4ba41dba0"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pntd.0004972/1/pntd.0004972.t001.PNG_L",
+        "retrieved_at": "2026-10-13T15:28:41.120422+00:00",
+        "retry_performed": false,
+        "final_query_omitted": true,
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/table1-receipt.json",
+          "sha256": "5449683da48387548241e7728f8a5ae7d76a2c74dbcab1ad858e824db6e65032"
+        },
+        "source_url": "https://journals.plos.org/plosntds/article/figure/image?download&size=large&id=10.1371/journal.pntd.0004972.t001",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      },
+      "table2": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/table2-storage-response.bin",
+          "sha256": "ffdcb4bf250dd6d273d53e3526b075f77cb4b490948426688551eeb47ebd8d38"
+        },
+        "final_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/table2-storage-receipt.json",
+          "sha256": "d3a6437d24db4bd62c07efde53d9b4b91a8d5269966d4d94ee2a04d568cb79b2"
+        },
+        "final_url_without_query": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pntd.0004972/1/pntd.0004972.t002.PNG_L",
+        "retrieved_at": "2026-10-13T15:31:02.363684+00:00",
+        "retry_performed": false,
+        "final_query_omitted": true,
+        "source_receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/table2-receipt.json",
+          "sha256": "99054d8c10ce6e118f6be2a6389df28593e6841ac1da58cec1731d7549392743"
+        },
+        "source_url": "https://journals.plos.org/plosntds/article/figure/image?download&size=large&id=10.1371/journal.pntd.0004972.t002",
+        "status": 200,
+        "validated_publisher_redirects": 1
+      }
+    },
+    "attribution": "Aoki et al. (2016), PLOS Neglected Tropical Diseases 10(9):e0004972, CC BY",
+    "doi": "10.1371/journal.pntd.0004972",
+    "native_assets_visually_reviewed": [
+      "Table 1",
+      "Table 2",
+      "Figure 2",
+      "Figure 3",
+      "S1 Figure",
+      "S1 Table"
+    ],
+    "pmid": "27606425",
+    "sections_reviewed": [
+      "Source organism and endpoint definitions",
+      "Results",
+      "Discussion"
+    ],
+    "supplement_rendering": {
+      "local_unsandboxed_render_succeeded": true,
+      "page_image": {
+        "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-table1-page-1.png",
+        "sha256": "6cdcf8f3c0e279952315ebb0b7e5b362919ed9a91f0807411d0580c2d6a37cac"
+      },
+      "pages": 1,
+      "pdf": {
+        "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-table1.pdf",
+        "sha256": "f3b7edbb4e5951509fe720f12e3f24d8c809e33d6d105bb810876e89f7bf4556"
+      },
+      "sandboxed_libreoffice_aborted": true,
+      "source_docx": {
+        "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-table1.docx",
+        "sha256": "9390024d9e4c0be721ef85632486945c633292cef1307c86ea667789645fda5b"
+      },
+      "source_request_repeated_for_rendering": false,
+      "tiff_render": {
+        "path": "reports/resistance-grounding-2026-10-13-tubercidin/supplementary-figure1.png",
+        "sha256": "0a9ce811f40ea8627c29c80d50b5b62a1e18710204087c2f464314cec4bd1a97"
+      }
+    },
+    "url": "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0004972",
+    "whole_article_review_complete": false
+  },
+  "record_before": {
+    "identifier": "CHEBI:48267",
+    "label": "tubercidin",
+    "path": "data/antibiotics/antifungal/tubercidin.yaml",
+    "sha256": "68f43e55af1ac377e2ff416b2000e6bbf35e52ec3f54a52ca8d5c655d43da976",
+    "standard_inchi_key": "HDZZVAMISRMYHH-KCGFPETGSA-N"
+  },
+  "scope": "SELECTED_PRIMARY_GENE_ASSOCIATIONS_NOT_WHOLE_RECORD_REVIEW",
+  "subject_scope": {
+    "background_is_one_tested_subject": false,
+    "exact_experimental_allele_protein_sample_or_genome_assigned": false,
+    "rank": "species",
+    "source_background": "Friedlin (MHOM/IL/1980/Friedlin) laboratory derivatives",
+    "source_species": "Leishmania major",
+    "strain_taxon_id_assigned": false,
+    "taxon_id": "NCBITaxon:5664"
+  },
+  "taxonomy_request": {
+    "cache": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/tax-5664-response.bin",
+      "sha256": "0fe985d9e2ef2d9cc9618e73949d022e794090c86852cd4105e16a6789c818f3"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tubercidin/tax-5664-receipt.json",
+      "sha256": "a51d145cdbc372fb6d03cad08c8e46e18794daa3b3bbced4431734f673f40071"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T15:30:22.867893+00:00",
+    "status": 200,
+    "url": "https://rest.uniprot.org/taxonomy/5664"
+  },
+  "uniprot": {
+    "NUPM1": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "16020728"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1112680"
+            }
+          ],
+          "primary_results_reviewed": false
+        },
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "22038252"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1101/gr.122945.111"
+            }
+          ],
+          "primary_results_reviewed": false
+        }
+      ],
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 71,
+      "experimental_protein_or_allele_assigned": false,
+      "focal_paper_in_bibliography": false,
+      "gene_orf_names": [
+        "LMJF_31_1940"
+      ],
+      "identity_basis": "EXACT_SOURCE_REPORTED_VERSIONED_REFSEQ_PROTEIN_AND_TRANSCRIPT_XREF",
+      "ordered_locus_names": [],
+      "primary_gene_name": null,
+      "protein_accession": "UniProtKB:Q4Q668",
+      "protein_names": [
+        "Putative transcription like protein nupm1"
+      ],
+      "reference_species_is_exact_tested_derivative": false,
+      "reference_taxon_id": "NCBITaxon:5664",
+      "reference_taxon_name": "Leishmania major",
+      "reference_taxon_rank": "species",
+      "refseq_crosswalk": {
+        "database": "RefSeq",
+        "id": "XP_001685180.1",
+        "properties": [
+          {
+            "key": "NucleotideSequenceId",
+            "value": "XM_001685128.1"
+          }
+        ]
+      },
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/nupm1-refseq-response.bin",
+          "sha256": "56ad085a84a69955395d0826c0857dca3aa68514870649b354b153c041e4d69f"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/nupm1-refseq-receipt.json",
+          "sha256": "0d1ca0362175e1578b38dfefe36d597ec2c3b0e7d2b6293f7af2029997bf2697"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T15:30:19.024696+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-XP_001685180.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "sequence_version": 1,
+      "source_gene_name": "NUPM1",
+      "source_locus": "LmjF.31.1940",
+      "source_reference_protein": "XP_001685180.1",
+      "source_reference_transcript": "XM_001685128.1"
+    },
+    "TRP": {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "16020728"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1126/science.1112680"
+            }
+          ],
+          "primary_results_reviewed": false
+        },
+        {
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "22038252"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1101/gr.122945.111"
+            }
+          ],
+          "primary_results_reviewed": false
+        }
+      ],
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 78,
+      "experimental_protein_or_allele_assigned": false,
+      "focal_paper_in_bibliography": false,
+      "gene_orf_names": [
+        "LMJF_31_2010"
+      ],
+      "identity_basis": "EXACT_SOURCE_REPORTED_VERSIONED_REFSEQ_PROTEIN_AND_TRANSCRIPT_XREF",
+      "ordered_locus_names": [],
+      "primary_gene_name": null,
+      "protein_accession": "UniProtKB:Q4Q661",
+      "protein_names": [
+        "Uncharacterized protein"
+      ],
+      "reference_species_is_exact_tested_derivative": false,
+      "reference_taxon_id": "NCBITaxon:5664",
+      "reference_taxon_name": "Leishmania major",
+      "reference_taxon_rank": "species",
+      "refseq_crosswalk": {
+        "database": "RefSeq",
+        "id": "XP_001685187.1",
+        "properties": [
+          {
+            "key": "NucleotideSequenceId",
+            "value": "XM_001685135.1"
+          }
+        ]
+      },
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/trp-refseq-response.bin",
+          "sha256": "16f0022e7f94805ad6c52cd4619ef40fc46d6799b2ed144e5b1b5b996938206f"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tubercidin/trp-refseq-receipt.json",
+          "sha256": "2fa3aecea0d962c22e46ee95a5976c66f12579cfeeb140d9b2735730953d1918"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T15:28:46.573948+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-XP_001685187.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "sequence_version": 1,
+      "source_gene_name": "TRP",
+      "source_locus": "LmjF.31.2010",
+      "source_reference_protein": "XP_001685187.1",
+      "source_reference_transcript": "XM_001685135.1"
+    }
+  },
+  "uniprot_attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "source": "UniProt Consortium"
+  },
+  "whole_record_reviews_completed": 0
+}

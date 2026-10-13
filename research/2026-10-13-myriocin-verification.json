@@ -1,0 +1,100 @@
+{
+  "adversarial_review": [
+    "ISP-1 grounds to the exact myriocin structure without independent tested-material reidentification.",
+    "The YPK1 query's MCK1 alias hit is retained, not silently selected or hidden.",
+    "SLI2 alias, primary gene name, ordered locus and cited paper jointly support reference identity only.",
+    "Missing or multiple concordant identities fail closed; hit ordering does not decide identity.",
+    "A rejected reference homonym does not establish a negative resistance phenotype.",
+    "UniProt archive cross-references and taxonomy remain reference-only, without experimental joins.",
+    "Denied primary sources are not replaced by abstract interpretation or new transports.",
+    "Historical tests pin immutable snapshots, not mutable live records.",
+    "Same-agent adversarial review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "d52028ef18f1cd035cabb48f273efca15eea2df24d854998a5aad3bddedf5c51"
+    },
+    {
+      "path": "research/2026-10-13-myriocin-reference-context.json",
+      "sha256": "4661b24e563e5424b6dad16b6ba6b63768bbb00c13a5239e370f47d001344ac1"
+    },
+    {
+      "path": "scripts/audit_myriocin_references.py",
+      "sha256": "959492478eb822ce08addd3f7137378334481e7ff4e0a8b3d544f1d58b3361d8"
+    },
+    {
+      "path": "tests/test_myriocin_references.py",
+      "sha256": "4d9842cea08dc7bd067adca25fb8c7c8a004f11680200f10ac0baaf0372254bf"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-myriocin/protected-before.json",
+    "sha256": "211ccff366052ac862252358aeea30fb663293d9245e9717b5c62e054e79d17c"
+  },
+  "baseline_files_checked": 7118,
+  "date": "2026-10-13",
+  "experimental_accessions_assigned": 0,
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_at_checkpoint": 0,
+  "ignored_files_included": true,
+  "issue_1040": "DEFERRED",
+  "metadata_and_dossier_replayed_offline_with_network_disabled": true,
+  "native_figures_visually_inspected": false,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_biological_assertions": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-myriocin-reference-context.json",
+    "scripts/audit_myriocin_references.py",
+    "tests/test_myriocin_references.py"
+  ],
+  "new_full_qc_or_ci_claimed": false,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "primary_scientific_interpretation_automatically_revalidated": false,
+  "prior_uncommitted_vatpase_checkpoint_preserved": true,
+  "raw_curation_site_embedding_history_and_prior_snapshots_preserved": true,
+  "records_byte_identical": 2939,
+  "reuse_terms_review_resumed": false,
+  "source_adoptions": 0,
+  "summary": {
+    "biological_records_changed": 0,
+    "complete_uniprot_queries": 2,
+    "concordant_reference_identities": 2,
+    "corpus_records_in_scope": 2939,
+    "experimental_accessions_assigned": 0,
+    "homonym_candidates_not_supported_for_lead": 1,
+    "new_phi_decisions": 0,
+    "new_taxonomy_requests": 0,
+    "reference_candidates": 3,
+    "selected_records": 1,
+    "whole_records_completed": 0
+  },
+  "test_results": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_myriocin_references.py",
+      "tests/test_vatpase_reference_context.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_resistance_grounding_audit.py",
+      "tests/test_resistance_progress.py",
+      "--junitxml=/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/reports/resistance-grounding-2026-10-13-myriocin/checkpoint-tests.xml"
+    ],
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-myriocin/checkpoint-tests.xml",
+      "sha256": "e10d4edbad0e404f726addde588cf92212ef28e8b0f8343f1a566f9719ee5b95"
+    },
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-myriocin/checkpoint-tests.log",
+      "sha256": "162f005f74da57618b4362a0e641c771a083d05afa11aae4e3ed2fa71e1a035d"
+    },
+    "new_test_module_collects_without_inherited_pythonpath": true,
+    "passed": 111,
+    "skipped": 0
+  }
+}

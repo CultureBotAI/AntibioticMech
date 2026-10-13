@@ -44,17 +44,22 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,875 resistance assertions across 316
-records**, including **120 curator-authored claims across 49 records**. There
-are still 2,610 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,877 resistance assertions across 317
+records**, including **122 curator-authored claims across 50 records**. There
+are still 2,609 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-13-blasticidin-deaminase-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-13-tubercidin-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-13-blasticidin-deaminase-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-13-tubercidin-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
+
+The [tubercidin checkpoint](2026-10-13-tubercidin-context.json) adds two qualified
+laboratory associations in Leishmania major. Unreviewed UniProt entries are
+versioned reference context only; mechanisms and exact experimental alleles
+remain unresolved. IC50 comparisons are not imported as MICs or clinical calls.
 
 The [blasticidin deaminase follow-up](2026-10-13-blasticidin-deaminase-context.json)
 adds two qualified bsr-associated contexts, separating the native donor isolate
@@ -8631,6 +8636,116 @@ No biological record or PHI-base decision changed. The existing PHI-base queue
 still has 190 identifier-scoped associations and 27 pending across 11 papers.
 All 2,939 records remain in scope; no whole-record review was completed. NCBI
 requests, contact and reuse-terms work remain deferred with #1040.
+
+## V-ATPase Reference Scope (2026-10-13)
+
+The [V-ATPase dossier](2026-10-13-vatpase-reference-context.json) investigates
+reference identity for bafilomycin A1 and concanamycin A. Folimycin is an exact
+ChEBI synonym of the latter structure, not a third compound or permission to
+transfer results to another congener.
+
+Two bounded UniProt queries resolve Neurospora crassa vma-3/P31413 (entry 161)
+and Saccharomyces cerevisiae VMA3/P25515 (217), VMA11/P32842 (215) and
+VMA16/P23968 (205), all sequence version 1. Subunits c, c-prime and c-double-prime
+remain separate. UniProt's ORF-name fields are retained without upgrading them
+to ordered-locus identifiers. Reused UniProt taxonomy distinguishes the
+reference strains `NCBITaxon:367110` and `NCBITaxon:559292` from their species
+lineages `NCBITaxon:5141` and `NCBITaxon:4932`. These are not exact experimental
+protein, allele, strain, sample or genome assignments.
+
+The 2002 and 2004 primary leads remain access-limited. A 2006 publisher request
+was made but its access result was not retained, so it is unresolved rather
+than labeled as a verified denial. No failed source was retried. Search
+snippets, titles and reference metadata are not primary resistance evidence;
+absence of the focal papers from returned UniProt bibliographies does not
+disprove them. Biochemical inhibition, organismal resistance, cross-compound
+response and negative controls still require primary verification.
+
+No biological record or PHI-base decision changed, and no whole-record review
+was completed. The offline audit verifies metadata only, not primary results.
+All 2,939 records remain in scope. No NCBI request, contact, reuse-terms work,
+source adoption or GitHub action was performed; #1040 remains deferred.
+
+## Myriocin Reference Name Resolution (2026-10-13)
+
+The [myriocin dossier](2026-10-13-myriocin-reference-context.json) grounds the
+paper name ISP-1 through the record's exact ChEBI synonym. It verifies reference
+SLI1/P53304 (entry 149, sequence 1, locus YGR212W) and YPK1/P12688 (entry 239,
+sequence 2, locus YKL126W). Both returned UniProt bibliographies contain the
+2004 SLI1 study; the YPK1 entry also contains the earlier SLI2 study. Citation
+concordance establishes a reference link, not verified experimental resistance.
+
+The exact-name YPK1 query also returns MCK1/P21965 (entry 225, sequence 1,
+locus YNL307C), whose synonym is YPK1. All candidates are retained. The
+SLI2 alias, canonical gene name, locus and earlier-paper citation distinguish
+P12688 as the concordant reference. MCK1 is not supported for this lead; that
+decision does not establish a negative resistance phenotype. SLI1's archive
+crosswalk is retained as a UniProt annotation, not a sequence comparison or
+experimental-subject assignment.
+
+Reused UniProt taxonomy separates reference S288c `NCBITaxon:559292` from
+species `NCBITaxon:4932`. Exact tested allele, strain, sample and genome joins
+remain unresolved. The 2004 publisher PDF returned HTTP 403 with a non-PDF
+body; the 2000 publisher article was inaccessible; the independent eLife
+study returned a client challenge. None was retried or treated as primary
+results. No native figure or supplement was verified.
+
+No biological assertion or PHI-base decision was added. No whole-record review
+was completed; all 2,939 records remain in scope. No NCBI requests, outreach,
+source adoption, GitHub mutation or reuse-terms work occurred; #1040 remains
+deferred. The public audit script replays local metadata only.
+
+## 2026-10-13 tubercidin primary associations
+
+The [context dossier](2026-10-13-tubercidin-context.json) and
+[curation receipt](2026-10-13-tubercidin-curation.json) retain selected primary
+results from [Aoki et al. (2016)](https://doi.org/10.1371/journal.pntd.0004972).
+The publisher article, Tables 1-2, Figures 2-3, S1 Figure and S1 Table were
+retrieved and byte-pinned; all six native visual assets were inspected. Ordinary
+publisher redirects to PLOS storage were checked individually. Signed storage
+queries and raw article/supplement contents are not redistributed in the dossier.
+
+Two qualified laboratory associations were added to exact tubercidin
+CHEBI:48267, retaining its existing chemical identity and source-owned fields.
+TRP and NUPM1/TOR have distinct source loci. Their IC50-based growth comparisons
+do not establish MICs, clinical categories, species-wide resistance or an
+established molecular route. Both mechanism types remain `UNKNOWN`. Negative
+controls and differing laboratory responses are not collapsed; a Table 2
+comparison marked not done is not a tested negative. The Methods/table SEM/SD
+discrepancy remains explicit, and no numeric measurements are imported.
+
+The initial exact TRP locus-name query returned zero UniProt results. Separately
+planned queries on the article's versioned RefSeq references identify Q4Q661
+(entry 78, sequence 1) and Q4Q668 (entry 71, sequence 1), release 2026_03.
+Both are **unreviewed** entries with ORF names, not primary gene names or
+ordered-locus fields. Exact protein and transcript cross-references support
+reference grounding only. UniProt taxonomy confirms L. major, NCBITaxon:5664,
+at species rank. No strain TaxID, experimental protein/allele, sample or genome
+is assigned. The missing focal article in UniProt's bibliography does not
+negate the separately inspected primary evidence.
+
+The [successor census](2026-10-13-tubercidin-resistance-grounding.tsv) retains all
+2,939 records; only tubercidin changes. All 2,938 other record hashes and all
+pre-existing claims remain unchanged. The updated totals are 4,877 resistance
+assertions across 317 records, including 122 curator-authored claims across
+50 records. These are coverage counts, not completed reviews.
+
+The [verification receipt](2026-10-13-tubercidin-verification.json) records
+39 checkpoint tests, 36 progress tests and two documentation-fix tests passing.
+The first full run caught a stale `NEXT_TASKS.md` coverage count, 417 instead of
+418; it otherwise passed 3,410 tests with four skips. The count was corrected
+without changing any gate. The clean authoritative rerun passed **3,411 tests
+with four skips and all 12 QC gates**, including strict validation, exact corpus
+reproduction and generated-site freshness. Both run histories are retained.
+
+The changed document was genuinely re-encoded using cached BGE weights; all
+2,938 other vector rows remain byte-identical. Sixteen control rows passed the
+comparison, and the full PaCMAP projection and site were regenerated. The
+structure-only map was not changed. Local QC used RDKit 2025.03.6 rather than
+the project pin 2026.3.5; the receipt discloses this deviation and does not claim
+pinned-environment or CI reproduction. Source inputs and the earlier V-ATPase
+and myriocin checkpoints remain intact. No NCBI requests, source adoption or
+GitHub mutations occurred; #1040 remains deferred.
 
 ## Remaining work
 
