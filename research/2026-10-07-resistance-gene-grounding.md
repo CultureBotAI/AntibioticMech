@@ -1,6 +1,6 @@
 # Corpus-wide resistance gene and allele investigation
 
-Date: 2026-10-07. Latest checkpoint: 2026-10-12 UTC.
+Date: 2026-10-07. Latest checkpoint: 2026-10-13 UTC.
 Status: **in progress, not a completed corpus review**.
 The maintainer requested investigation of every record, UniProtKB and NCBITaxon
 grounding where possible, and curation of verified findings. NCBI contact and
@@ -44,17 +44,32 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,851 resistance assertions across 310
-records**, including **96 curator-authored claims across 42 records**. There
-are still 2,616 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,855 resistance assertions across 311
+records**, including **100 curator-authored claims across 44 records**. There
+are still 2,615 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-12-thiolutin-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-13-cycloheximide-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-12-thiolutin-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-13-cycloheximide-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
+
+The [cycloheximide checkpoint](2026-10-13-cycloheximide-context.json) adds two
+qualified yeast gene associations while preserving all three source-owned claims.
+Reference identity and experimental subject identity remain separate. No exact
+allele, genome or numerical AST is assigned; the whole-record review stays open.
+
+The [sulfathiazole checkpoint](2026-10-13-sulfathiazole-context.json) adds two
+qualified laboratory gene associations. Versioned FolP and Bcr UniProt references
+are citation context, not experimental alleles; no genome, strain TaxID or
+numerical AST is assigned. These limited findings do not complete a record review.
+
+The [Bcr/Rho follow-up](2026-10-13-bcr-context.json) separates three E. coli
+reference proteins from the inherited Pseudomonas CARD candidate. One exact-ligand
+Rho protein example is curated on bicozamycin's existing literature-owned target;
+no resistance assertion, experimental allele or genome is added.
 
 The [EmrAB-TolC follow-up](2026-10-12-emrab-context.json) adds three versioned
 UniProt component references and two paper-linked PDB entries for a lead
@@ -7631,6 +7646,162 @@ No chemical identity, experimental allele, genome or biological claim is
 changed by this follow-up. Copyrighted source assets remain local. #1040,
 NCBI requests and contact remain deferred; all whole-record reviews remain open.
 
+## Bcr References and Rho Target Grounding (2026-10-13)
+
+The [dossier](2026-10-13-bcr-context.json) covers bicozamycin/bicyclomycin
+**CHEBI:60584** and sulfathiazole **CHEBI:9337**. Full collection-aware records
+were loaded; the existing chemical identities and source assertions are retained.
+
+| Reference | Scope |
+| --- | --- |
+| Bcr, UniProtKB:P28246, entry 179 / sequence 4 | E. coli K-12 reference; not the experimental allele or CARD bcr-1. |
+| FolP, UniProtKB:P0AC13, entry 147 / sequence 1 | Separate E. coli K-12 reference; no exact experimental assignment. |
+| Rho, UniProtKB:P0AG30, entry 164 / sequence 1 | A target protein example, not a resistance determinant. |
+| CARD ARO:3003801 / UniProtKB:A0A3S4ND58 | Historical P. fluorescens candidate, gene bcr_2; preserved without substitution. |
+
+Selected [1998 primary Results](https://journals.asm.org/doi/10.1128/aac.42.1.88)
+explicitly connect `sur` to `bcr` and cite P28246, but report differences from
+the older sequence. Current UniProt's returned bibliography does not cite this
+paper. The distinct unresolved `sux` modifier is not identified by the current
+`suxA` synonym. Native Figure 1 is enzyme inhibition, not MIC. No assay numbers,
+variant specifications or clinical interpretations are exported.
+
+[PDB 1XPO](https://www.rcsb.org/structure/1XPO) has exact bicyclomycin ligand
+InChIKey **WOUDXEYYJPOSNE-VKZDFBPFSA-N**, and entity 2 maps to P0AG30.
+PDB and UniProt cite the record's existing primary paper, PMID:15642265.
+The [guarded curation](2026-10-13-bcr-curation.json) adds this Rho example and
+source species NCBITaxon:562 to the literature-owned target. K-12 TaxID 83333
+labels the reference protein, not an assigned experimental strain. A subunit
+is not the complete Rho complex, and ligand/protein co-occurrence alone is not
+being used to infer a new binding mechanism.
+
+The canary and immutable pre-change fixture support an exact dated replay.
+The [reconciliation](2026-10-13-bcr-reconciliation.json) changes only one record
+hash in the 2,939-row census. Resistance counts and all whole-record review
+statuses remain unchanged. The embedded document is byte-identical; no vector
+or map regeneration is required. NCBI requests/contact, #1040 and terms work
+remain deferred. This continuation does not mutate GitHub.
+
+The [verification receipt](2026-10-13-bcr-verification.json) records all 12 local
+QC gates passing, including **3,100 tests passed and four skipped**, zero schema
+errors, exact corpus reproduction and a current generated site. Local RDKit
+2025.03.6 differs from the project pin 2026.3.5; this is not a new CI or
+pinned-environment result. Offline replay verifies nine cached source artifacts
+and the protein/entity/ligand relationships. The page initially hid the
+reference-only caveat in an unrendered role field; a red-to-green regression
+now keeps it in visible evidence notes. This was same-agent review, not
+independent scientific signoff.
+
+## Sulfathiazole Gene Associations (2026-10-13)
+
+The [dossier](2026-10-13-sulfathiazole-context.json) and
+[guarded curation receipt](2026-10-13-sulfathiazole-curation.json) retain the
+existing **CHEBI:9337**, InChIKey **JNMRHUJNCSQMMB-UHFFFAOYSA-N** identity.
+The source names sulfathiazole; its tested preparation was not independently
+reidentified. No salt, combination, class or source assertion was substituted.
+
+Selected [primary results](https://journals.asm.org/doi/10.1128/aac.42.1.88)
+support two qualified laboratory associations in E. coli, NCBITaxon:562.
+FolP's contribution is background-dependent and does not explain the entire
+phenotype. Bcr's association does not establish direct efflux; its route remains
+`UNKNOWN`, and the distinct unresolved `sux` modifier is not assigned through
+the modern `suxA` synonym. The earlier paper's abstract is context, not an
+independent replication or a completed full-text review.
+
+Reused UniProtKB **P0AC13** (entry 147 / sequence 1) and **P28246** (entry 179 /
+sequence 4) remain reference-only citations. K-12 TaxID 83333 is not assigned to
+the tested subjects. Exact alleles, experimental protein accessions, strain
+TaxIDs, genomes and samples remain unset. Enzyme inhibition is not converted
+to MIC, and no clinical category or numerical AST is inferred.
+
+The immutable pre-change fixture reproduces the exact two-claim, one-event
+transition through the validated writer. The
+[successor census](2026-10-13-sulfathiazole-resistance-grounding.tsv) changes one
+record; the [reconciliation](2026-10-13-sulfathiazole-reconciliation.json) preserves
+the earlier Rho curation and all other 2,938 records. Historical Bcr artifacts
+remain unchanged. The modified embedded document was genuinely re-encoded with
+the pinned cached BGE model. Sixteen controls passed the numerical tolerance;
+all other 2,938 vectors remain byte-identical. Full PaCMAP reprojection used seed
+42, and the generated site is current.
+NCBI requests/contact, #1040 and reuse-terms work remain deferred. Whole-record
+reviews completed remain **zero**, and this checkpoint does not mutate GitHub.
+
+The [verification receipt](2026-10-13-sulfathiazole-verification.json) records all
+12 authoritative local QC gates passing, with **3,118 tests passed and four
+skipped**, zero schema errors and exact corpus reproduction. The 96 focused
+tests also passed. Independent offline replay verified five cached source
+artifacts, the single changed vector and all protected file memberships,
+including ignored files. Local RDKit **2025.03.6** differs from the project pin
+**2026.3.5**; no new CI or pinned-environment result is claimed. The separate
+adversarial pass was same-agent review, not independent scientific signoff.
+
+## Cycloheximide gene evidence, 2026-10-13
+
+The [dossier](2026-10-13-cycloheximide-context.json) and
+[curation receipt](2026-10-13-cycloheximide-curation.json) describe two additions
+to **CHEBI:27641**, InChIKey `YPHMISFOHDHNIV-FSZOTQKASA-N`. The full record was
+loaded through the collection-aware API. Its chemical identity, source-owned
+claims, targets, activity content and preceding history remain unchanged.
+
+The historical CYH2/L29 nomenclature maps to **RPL28/uL15, UniProtKB:P02406**
+(YGL103W; entry 210, sequence 3), not modern **RPL29/eL29, UniProtKB:P05747**
+(YFR032C-A; entry 196, sequence 3). Reciprocal organism-restricted UniProt
+queries returned the same CYH2/RPL28 entry. The other focal reference is
+**AGP2, UniProtKB:P38090** (YBR132C; entry 177, sequence 1). PDR5/P33302 remains
+reference context, not a newly proven mediator. All entries are reviewed,
+release 2026_03, reference strain S288c. Reused pinned UniProt Taxonomy supports
+species **NCBITaxon:4932**; **NCBITaxon:559292** is not assigned to an experimental
+derivative. Raw references, sequences and variant specifications are not exported.
+
+The [1983 primary author-uploaded text](https://www.researchgate.net/publication/16890909_Cycloheximide_resistance_in_yeast_the_gene_and_its_protein)
+supports the qualified historical gene association, not direct drug binding to
+its protein. Native figures and exact variant-coordinate mapping remain open.
+For the [2024 primary study](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303747),
+selected Results/Discussion and native Figures 1, 8 and 10 were inspected.
+The curation retains causal uncertainty and source discrepancies documented in
+the dossier. It does not turn expression controls or coexpression hits into
+additional determinants. Public publisher PDF access succeeded; failed
+standalone asset routes were not bypassed.
+
+A guarded canary reproduced through the fresh seeder before application. The
+single live transition has SHA-256
+`288877066ad5b8d7ad9492315347e2ba0d5aeae6487477c8e14ca048476bce8c`.
+The [successor census](2026-10-13-cycloheximide-resistance-grounding.tsv) and
+[reconciliation](2026-10-13-cycloheximide-reconciliation.json) preserve the other
+2,938 record hashes and earlier Bcr/sulfathiazole work. Tests replay an immutable
+pre-curation fixture, not a mutable live-record hash. Focused checkpoint and
+progress tests passed **89 cases in 77.16 seconds**. The genuine BGE re-encoding
+changed one vector; 2,938 other rows remain byte-identical, with 16 re-encoded
+controls within the established tolerance. Full seed-42 PaCMAP projection and
+site rendering completed. Offline replay verified 11 cached artifacts and
+exactly five changed protected files: three embedding artifacts, the compound
+page and the map page. The index, raw inventories, source-owned curation inputs
+and prior Bcr/sulfathiazole pages are byte-identical to this checkpoint's baseline.
+The first full QC attempt exposed a P2 test defect: the live cycloheximide
+STS1/PDR5 regression asserted exactly three total resistance claims, preventing
+unrelated valid curation. The focused reproduction failed on `5 == 3`; all
+source-claim identity checks remained satisfied. The fix retains the one-PHI-base
+claim invariant and every identity/withholding assertion, removes only the
+unrelated total freeze, and adds an unrelated-curator-claim case. **19 targeted
+tests passed in 3.59 seconds** after the fix. No biological claim was altered by
+this remediation. The failed full-run log is retained. This finding is recorded
+locally, not filed on GitHub.
+
+The [verification receipt](2026-10-13-cycloheximide-verification.json) records a
+successful fresh run of all **12 authoritative local QC gates**, including
+**3,136 passed, four skipped** tests in 1,757.35 seconds. The entire rerun took
+2,051.34 seconds, ending 2026-10-13T03:50:38Z. Schema validation, exact corpus
+reproduction, chemical-map checks and generated-site checks passed. Its log
+SHA-256 is `a60bb0408f23ec7f2b655f7bc32e85711e598bc0b288c11ddb06f3eaa7ccbe6a`.
+Embedding fingerprint: `603c6817225400a7`. The first full attempt had one failed,
+3,134 passed and four skipped tests; it is not represented as a passing run.
+Local RDKit **2025.03.6** differs from project pin **2026.3.5**; no new CI or
+pinned-environment pass is claimed. Subsequent record curation should include
+the touched record's existing source-review tests in the focused preflight.
+This is a same-agent evidence review, not independent scientific signoff.
+NCBI requests/contact, source adoption and GitHub mutations: **zero**. #1040
+remains deferred; all 2,939 whole-record primary reviews remain open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
@@ -7685,6 +7856,10 @@ NCBI requests and contact remain deferred; all whole-record reviews remain open.
    PDB entries; native figure/supplement review, exact compound forms and
    experimental identifiers remain unresolved. Do not transfer EmrD findings
    to this distinct complex or assign one component as the whole assembly.
+   Two qualified Bcr/FolP sulfathiazole associations are now curated. Exact
+   experimental alleles, sample/genome joins and broader resistance review
+   remain open. The Rho target
+   example does not resolve CARD bcr-1 or certify an organismal phenotype.
 3. Review HIVDB primary evidence and resolve supported reference accessions
    beyond the verified source-region/taxon context. Retain algorithm rules as
    rules rather than measured phenotypes or biochemical mechanisms.

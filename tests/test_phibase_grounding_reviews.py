@@ -1632,10 +1632,16 @@ def test_source_identifier_mismatch_does_not_partially_mutate_the_claim(inputs, 
     assert item == original
 
 
-def test_current_cycloheximide_does_not_assign_the_wrong_sts1_gene():
+@pytest.mark.parametrize("extra_curator_claim", [False, True])
+def test_current_cycloheximide_does_not_assign_the_wrong_sts1_gene(extra_curator_claim):
     doc = load_record(ROOT / "data/antibiotics/antifungal/cycloheximide.yaml")
+    if extra_curator_claim:
+        doc["resistance_mechanisms"].append({
+            "mechanism_type": "UNKNOWN", "label": "Unrelated test association",
+            "evidence": [{"reference": "PMID:1"}],
+        })
     claims = [c for c in doc["resistance_mechanisms"] if c.get("source") == "PHIBASE"]
-    assert len(claims) == 1 and len(doc["resistance_mechanisms"]) == 3
+    assert len(claims) == 1
     claim = claims[0]
     assert doc["curation_status"] == "REVIEWED"
     assert claim["taxon_id"] == "NCBITaxon:4932"

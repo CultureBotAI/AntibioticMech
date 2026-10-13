@@ -122,6 +122,51 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 
 
+<h2>Resistance mechanisms</h2>
+<p class="meta">2 source-backed resistance determinants or associations,
+with ARO grounding where reported. Grouped by reported mechanism type.</p>
+<details class="details-group" open>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>FolP-associated laboratory sulfathiazole resistance<br><span class="meta">Laboratory comparisons show background dependence; FolP alone did not explain the full phenotype. UniProtKB:P0AC13 is reference-only, not the tested allele.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a></td>
+      <td class="meta">folP</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9449266">PMID:9449266</a></span> <span class="meta">(Results; Figure 1; Table 2; Discussion; DOI:10.1128/aac.42.1.88.)</span></li>
+  <li><span class="meta">UniProtKB:P0AC13</span> <span class="meta">(Reference identity only: folP, b3177, JW3144; UniProtKB 2026_03, entry 147, sequence 1. K-12 NCBITaxon:83333 is reference context, not an experimental strain assignment.)</span></li>
+</ul>
+<span class="meta">Comparative susceptibility and enzyme-inhibition assays</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>UNKNOWN <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
+<table>
+    <caption>UNKNOWN</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Bcr-associated laboratory sulfathiazole resistance<br><span class="meta">Laboratory association; direct efflux was not demonstrated. UniProtKB:P28246 is reference-only. Historical sequence differences remain unresolved; sux is not assigned to the bcr synonym suxA.</span></td>
+      <td>—</td>
+      <td><em>Escherichia coli</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_562"><code class="curie">NCBITaxon:562</code></a></td>
+      <td class="meta">bcr</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9449266">PMID:9449266</a></span> <span class="meta">(Results, Characterization of sur; Discussion; DOI:10.1128/aac.42.1.88.)</span></li>
+  <li><span class="meta">UniProtKB:P28246</span> <span class="meta">(Reference identity only: bcr, b2182, JW5363; UniProtKB 2026_03, entry 179, sequence 4. K-12 NCBITaxon:83333 is reference context, not an experimental strain assignment.)</span></li>
+</ul>
+<span class="meta">Comparative susceptibility assays</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
 
 
 
@@ -149,6 +194,11 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added two qualified laboratory gene-level sulfathiazole resistance associations. Kept FolP and Bcr reference proteins separate from experimental alleles and strains, retained mechanistic uncertainty for Bcr, and assigned no numerical AST or genome identifiers. Whole-record review remains open.</p>
   </li>
 </ol>
 

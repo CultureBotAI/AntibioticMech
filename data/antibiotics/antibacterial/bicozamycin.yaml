@@ -120,6 +120,28 @@ molecular_targets:
   evidence:
   - reference: PMID:15642265
     notes: Primary bicyclomycin-bound Rho structural mechanism study (DOI:10.1016/j.str.2004.10.013).
+  - reference: PDB:1XPO
+    notes: 'Reference crosswalk checked 2026-10-13: PDB entry 1.4 (2024-12-25), entity
+      2 maps to UniProtKB:P0AG30 and source species NCBITaxon:562. BCM has exact Standard
+      InChIKey WOUDXEYYJPOSNE-VKZDFBPFSA-N. PDB and UniProt cite PMID:15642265; this
+      supplements the existing primary cocrystal claim, not a new resistance or MIC
+      assertion. https://www.rcsb.org/structure/1XPO K-12 is reference context, not
+      an assigned experimental strain; P0AG30 identifies one subunit, not the whole
+      complex.'
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AG30
+    protein_label: Transcription termination factor Rho
+    gene_symbol: rho
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-13'
+    role: Reviewed Rho reference (UniProt entry 164, sequence 1), mapped by PDB 1XPO
+      entity 2. One Rho subunit, not the whole complex or a resistance allele. K-12
+      is the UniProt reference scope, not an assigned experimental strain; PDB reports
+      the source species as Escherichia coli (NCBITaxon:562).
 producer_organisms:
 - taxon_id: NCBITaxon:53446
   taxon_label: Streptomyces cinnamoneus
@@ -181,3 +203,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-13T00:47:02Z'
+  curator: codex
+  action: REGROUNDED
+  changes: Added a versioned Rho protein example and source-species context to the
+    literature-owned bicyclomycin target through the exact-ligand PDB 1XPO/UniProt
+    crosswalk. Preserved all CARD and MIBiG assertions; no resistance allele, genome,
+    or numerical AST assignment.
+  llm_assisted: true

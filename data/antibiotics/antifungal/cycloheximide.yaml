@@ -150,6 +150,45 @@ resistance_mechanisms:
       Results and Table I, p. 4185: STS1/PDR5 allelism, UniProtKB release 2026_03:
       P33302 entry 235, P38637 entry 160, sequence versions 1. Reviewed 2026-10-08
       by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.'
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  label: CYH2/RPL28-associated laboratory cycloheximide resistance
+  gene_families:
+  - RPL28
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative cycloheximide resistance
+  assay: Laboratory genetic and protein comparisons
+  note: Historical CYH2/L29 maps to current RPL28/uL15, not modern RPL29/eL29. Gene-level
+    laboratory evidence does not establish direct drug binding to this protein. Historical
+    variant coordinates remain unresolved; reference identity is not an experimental
+    allele assignment.
+  evidence:
+  - reference: PMID:6304624
+    notes: Selected Results and Discussion, pp. 3125 and 3132; DOI:10.1093/nar/11.10.3123.
+      Author-uploaded primary text inspected; native figures not inspected.
+  - reference: UniProtKB:P02406
+    notes: 'Reference identity only: RPL28, YGL103W; UniProtKB 2026_03, entry 210,
+      sequence 3. S288c NCBITaxon:559292 is reference context, not an experimental
+      strain assignment.'
+- mechanism_type: UNKNOWN
+  label: AGP2-associated laboratory cycloheximide resistance
+  gene_families:
+  - AGP2
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported relative cycloheximide resistance
+  assay: Comparative plate and liquid growth
+  note: Laboratory phenotype association. PDR5-mediated causality and direct cycloheximide
+    transport by Agp2 were not established. Figure 1B units conflict with Results;
+    no numerical AST imported. Reference identity is not an experimental allele assignment.
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0303747
+    notes: Results and Discussion; native Figures 1, 8 and 10 inspected, pp. 7, 15
+      and 19.
+  - reference: UniProtKB:P38090
+    notes: 'Reference identity only: AGP2, YBR132C; UniProtKB 2026_03, entry 177,
+      sequence 1. S288c NCBITaxon:559292 is reference context, not an experimental
+      strain assignment.'
 molecular_targets:
 - target_id: ARO:3000729
   target_label: ribosomal complex
@@ -394,4 +433,13 @@ curation_history:
   action: REVIEWED_RESISTANCE_REFERENCE_CONTEXT
   changes: Refreshed the shared PHI-base review checksum after four reference-identifier
     scope corrections; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-13T02:32:03Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added qualified CYH2/RPL28 and AGP2 laboratory cycloheximide resistance
+    associations. Distinguished historical L29 from modern RPL29, kept UniProt proteins
+    and S288c taxonomy reference-only, and retained mechanistic and numerical-endpoint
+    limitations. Existing source-owned claims are unchanged; whole-record review remains
+    open.
   llm_assisted: true

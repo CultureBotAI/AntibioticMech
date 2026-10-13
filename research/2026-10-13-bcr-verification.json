@@ -1,0 +1,176 @@
+{
+  "adversarial_self_review": [
+    "Historical tests replay the immutable fixture, not evolving live record bytes.",
+    "Bcr/FolP/Rho identities, historical CARD candidate, and source/reference taxa remain separate.",
+    "Exact BCM ligand identity and citation/entity links support only the existing Rho target example.",
+    "The page template omits example role notes; added the scope caveat to rendered evidence and demonstrated a red-to-green regression.",
+    "No resistance allele, strain genome, numeric AST, sequence, variant or protocol is added.",
+    "This is a separate same-agent review, not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-bcr-context.json",
+      "sha256": "0dde19aed74b3ccbaff161fce71d2503ddade0dc4a3fa354d37b1efcf3aebc96"
+    },
+    {
+      "path": "research/2026-10-13-bcr-curation.json",
+      "sha256": "42773649b5648dac4d38c9482b28db026cb97a752fc758d31ea4dd78adb75a27"
+    },
+    {
+      "path": "research/2026-10-13-bcr-reconciliation.json",
+      "sha256": "45ee87e3a3ef7da79f3818c04845ca0124614c5ae058d0fa7db4325faae96a82"
+    },
+    {
+      "path": "research/2026-10-13-bcr-resistance-grounding.tsv",
+      "sha256": "efe2761de9ec1b70b75482a1cc53b2d1723d8d66edc24a99787e9d5957d1d641"
+    },
+    {
+      "path": "research/2026-10-13-bcr-resistance-progress.json",
+      "sha256": "168f589f1e0ab897f22b80b1f3b847d78bbfe899b716f7e30f47c584ac17799c"
+    },
+    {
+      "path": "research/2026-10-13-bcr-resistance-progress.tsv",
+      "sha256": "a22d1962a0b964e4fa34170587ff57e9ea27d0edba24930fb5d76dd88fbeaece"
+    },
+    {
+      "path": "tests/test_bcr_context.py",
+      "sha256": "554ee7b9b29b7c88a750a5becba2ef54adb452f34578a86e08b802337eb4e576"
+    },
+    {
+      "path": "tests/fixtures/bicozamycin-before-2026-10-13.yaml",
+      "sha256": "aa6ce10000ee05029720aa3dc5daa5152379c27e7206f8726cc1f158dd34de10"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "32d02dec9ac30f52e85f890d77ae754ec8608355fbf390962734da7d283d8334"
+    },
+    {
+      "path": "data/antibiotics/antibacterial/bicozamycin.yaml",
+      "sha256": "4e16147d4f12f25d4923029afb28ebfec6368dcab9a781147ccd158847a12c7a"
+    },
+    {
+      "path": "pages/antibacterial/bicozamycin.html",
+      "sha256": "77609b398db52feaec2b40f93708c2586540f08664ecb3a2f4ef861bdc2b3d72"
+    }
+  ],
+  "date": "2026-10-13",
+  "environment_limitation": "Local RDKit 2025.03.6 differs from project pin 2026.3.5. The authoritative runner passed locally; no new CI or pinned-environment result is claimed.",
+  "focused_checks": {
+    "corrected_bcr_suite": "18 passed in 2.67s",
+    "display_scope_regression_before_fix": "1 failed, 17 deselected",
+    "initial_suite": "96 passed in 71.12s"
+  },
+  "full_local_qc": {
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "current_ci_run": false,
+    "elapsed_seconds": 1823.8,
+    "exit_code": 0,
+    "finished": "2026-10-13T01:23:26.360960+00:00",
+    "local_rdkit_version": "2025.03.6",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-bcr/qc.log",
+      "sha256": "851b6f2d89ce833bab0c842f7532ed83b9891aa181468ad2522486bef5c3141c"
+    },
+    "pinned_environment_reproduced": false,
+    "project_rdkit_version": "2026.3.5",
+    "stages": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "started": "2026-10-13T00:53:02.504514+00:00",
+    "test_summary": "3100 passed, 4 skipped in 1531.56s (0:25:31)"
+  },
+  "generated_site": {
+    "full_render_completed": true,
+    "live_browser_verification": false,
+    "reference_scope_visible_in_evidence": true
+  },
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_claims": 0,
+  "new_target_protein_examples": 1,
+  "offline_source_replay": {
+    "native_figure_assets": 1,
+    "network_requests": 0,
+    "rcsb_entity_citation_ligand_join_replayed": true,
+    "rcsb_metadata_responses": 3,
+    "reference_proteins_reconstructed": 3,
+    "sources_verified": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/request-e33995a2bb3b4ff19bbe384799fe740b5fe30fad0c2475ad9a4e2e6a0638e4ec.json",
+        "sha256": "bf4d158710148cd4a80ea51305a5c2d96e1a1cf2c4ad98fe570dc7593c0fdc33"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/request-5843f6f9a2fe2cc0cf38b32780338b72cf9ad45d633824b63025c2ebf9e85ba1.json",
+        "sha256": "4a02f204db8b80f31cb170e3c9ba6612a6c6aec0a181569c457992468d47708f"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/request-921713dbe333efafd4220143b120e81625de0657e222774fdcfa049a59b8bfac.json",
+        "sha256": "b0558b98290299641f85e0d39be515679a42d37438cc75730eaed40a01ff04ac"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-11-emrd-primary/request-366d9a2614b6f8e20200b4e74eeb57cac3965ea080c702c9cf8eae3a8dc3f28e.json",
+        "sha256": "99190e339e349e4a533dad2bf3da18c4cfdd368e901ef88e2adcfbda6a2af616"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-12-blasticidin/request-ee6dbf6e3f09c6cab02e184352e45e77bb32a7adbb024d9ceea31aaf75599c37.json",
+        "sha256": "6f15a516e89969828b9950036cd9d5a791d2070e8fb836f0ba068f921f2e822e"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/rcsb-entry.json",
+        "sha256": "1e74bd9d15d1fc980f8a631714157d20f41ae639ce14531771fe7fb16d7479b6"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/rcsb-ligand.json",
+        "sha256": "89fdaa39a77dbd138fc5016fcea7850967a76e03c1922097a591e194f651ef5e"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/rcsb-protein.json",
+        "sha256": "3eb3a068f9d7c59b5527676bc08a430780901fe773fd571db4e63da3129816fe"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-bcr/vedantam-figure-1.jpg",
+        "sha256": "b6d3c38b5ee6b61af9a0922fa848065712737111f58b4b7e959d702f81a40561"
+      }
+    ],
+    "taxonomy_caches_reused": 2
+  },
+  "preservation": {
+    "all_source_inventories_and_embedding_files_byte_identical": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-bcr/baseline.json",
+      "sha256": "49ba1bde5836663d30181c41db01c92faa13c31e1f7601e55e899599f35630b8"
+    },
+    "changed_records": [
+      "data/antibiotics/antibacterial/bicozamycin.yaml"
+    ],
+    "ignored_files_included": true,
+    "protected_files_changed": [
+      "pages/antibacterial/bicozamycin.html"
+    ],
+    "protected_files_checked": 3385,
+    "protected_membership_unchanged": true,
+    "record_membership_unchanged": true,
+    "records_byte_identical": 2938,
+    "records_checked": 2939
+  },
+  "scope": "ONE_TARGET_EXAMPLE_AND_TWO_RECORD_REFERENCE_FOLLOWUP",
+  "source_adoptions": 0,
+  "whole_corpus_status": "OPEN",
+  "whole_record_reviews_completed": 0
+}

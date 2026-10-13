@@ -148,34 +148,25 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 <h2>Resistance mechanisms</h2>
-<p class="meta">3 source-backed resistance determinants or associations,
+<p class="meta">5 source-backed resistance determinants or associations,
 with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <details class="details-group" open>
-  <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">1</span></summary>
-<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
-<table>
-    <caption>ANTIBIOTIC_EFFLUX</caption>
-    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
-    <tr>
-      <td>Trychophyton rubrum MFS1 with mutations conferring resistance against cyclohexamide</td>
-      <td><a href="http://purl.obolibrary.org/obo/ARO_3009291">ARO:3009291</a></td>
-      <td><span class="meta">not organism-specific</span></td>
-      <td class="meta">—</td>
-      <td class="meta"><ul class="plain evidence">
-  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3009291">ARO:3009291</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide); database assertion, not a primary citation.)</span></li>
-</ul>
-</td>
-    </tr>
-  </table>
-
-</div>
-</details>
-<details class="details-group">
-  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">1</span></summary>
+  <summary>ANTIBIOTIC_TARGET_ALTERATION <span class="pill plain">2</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_TARGET_ALTERATION" tabindex="0">
 <table>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>CYH2/RPL28-associated laboratory cycloheximide resistance<br><span class="meta">Historical CYH2/L29 maps to current RPL28/uL15, not modern RPL29/eL29. Gene-level laboratory evidence does not establish direct drug binding to this protein. Historical variant coordinates remain unresolved; reference identity is not an experimental allele assignment.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">RPL28</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/6304624">PMID:6304624</a></span> <span class="meta">(Selected Results and Discussion, pp. 3125 and 3132; DOI:10.1093/nar/11.10.3123. Author-uploaded primary text inspected; native figures not inspected.)</span></li>
+  <li><span class="meta">UniProtKB:P02406</span> <span class="meta">(Reference identity only: RPL28, YGL103W; UniProtKB 2026_03, entry 210, sequence 3. S288c NCBITaxon:559292 is reference context, not an experimental strain assignment.)</span></li>
+</ul>
+<span class="meta">Laboratory genetic and protein comparisons</span></td>
+    </tr>
     <tr>
       <td>Saccharomyces cerevisiae ACT1 with mutations conferring resistance to cycloheximide</td>
       <td><a href="http://purl.obolibrary.org/obo/ARO_3009326">ARO:3009326</a></td>
@@ -191,11 +182,22 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </div>
 </details>
 <details class="details-group">
-  <summary>UNKNOWN <span class="pill plain">1</span></summary>
+  <summary>UNKNOWN <span class="pill plain">2</span></summary>
 <div class="table-scroll" role="region" aria-label="Resistance mechanism: UNKNOWN" tabindex="0">
 <table>
     <caption>UNKNOWN</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>AGP2-associated laboratory cycloheximide resistance<br><span class="meta">Laboratory phenotype association. PDR5-mediated causality and direct cycloheximide transport by Agp2 were not established. Figure 1B units conflict with Results; no numerical AST imported. Reference identity is not an experimental allele assignment.</span></td>
+      <td>—</td>
+      <td><em>Saccharomyces cerevisiae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_4932"><code class="curie">NCBITaxon:4932</code></a></td>
+      <td class="meta">AGP2</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pone.0303747">DOI:10.1371/journal.pone.0303747</a></span> <span class="meta">(Results and Discussion; native Figures 1, 8 and 10 inspected, pp. 7, 15 and 19.)</span></li>
+  <li><span class="meta">UniProtKB:P38090</span> <span class="meta">(Reference identity only: AGP2, YBR132C; UniProtKB 2026_03, entry 177, sequence 1. S288c NCBITaxon:559292 is reference context, not an experimental strain assignment.)</span></li>
+</ul>
+<span class="meta">Comparative plate and liquid growth</span></td>
+    </tr>
     <tr>
       <td>STS1+ (wild type) [Overexpression] associated with resistance to cycloheximide<br><span class="meta">This is a curated gene-alteration/chemical resistance association, not evidence for a specific biochemical resistance mechanism. Grounding review bissinger-kuchler-1994-sts1-name-collision: Historical STS1 denotes PDR5, not the modern STS1 proteasome-tether gene. UniProtKB:P33302 / YOR153W supports the PDR5 reference crosswalk, not an exact experimental allele. The strain label is parent-background context; S288c is a reference, not a resolved experimental subject. Reference-only source identifiers: strain_taxon_id=NCBITaxon:559292. Rejected misassigned source identifiers: protein_accession=UniProtKB:P38637; gene_id=YIR011C_mRNA.</span></td>
       <td>—</td>
@@ -206,6 +208,26 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
   <li><span class="meta"><a href="https://doi.org/10.1016/S0021-9258%2817%2941760-1">DOI:10.1016/S0021-9258(17)41760-1</a></span> <span class="meta">(Identifier-scope review: pp. 4180-4181: gene identity and strain context, Results and Table I, p. 4185: STS1/PDR5 allelism, UniProtKB release 2026_03: P33302 entry 235, P38637 entry 160, sequence versions 1. Reviewed 2026-10-08 by codex; curation/phibase_grounding_reviews.json SHA-256 e6b233643b91bde972e2f863c7557995fa452fa1733d069a8d8aa1577ff6b5d8.)</span></li>
 </ul>
 <span class="meta">Cell growth assay</span></td>
+    </tr>
+  </table>
+
+</div>
+</details>
+<details class="details-group">
+  <summary>ANTIBIOTIC_EFFLUX <span class="pill plain">1</span></summary>
+<div class="table-scroll" role="region" aria-label="Resistance mechanism: ANTIBIOTIC_EFFLUX" tabindex="0">
+<table>
+    <caption>ANTIBIOTIC_EFFLUX</caption>
+    <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
+    <tr>
+      <td>Trychophyton rubrum MFS1 with mutations conferring resistance against cyclohexamide</td>
+      <td><a href="http://purl.obolibrary.org/obo/ARO_3009291">ARO:3009291</a></td>
+      <td><span class="meta">not organism-specific</span></td>
+      <td class="meta">—</td>
+      <td class="meta"><ul class="plain evidence">
+  <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3009291">ARO:3009291</a></span> <span class="meta">(CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009188 (cycloheximide); database assertion, not a primary citation.)</span></li>
+</ul>
+</td>
     </tr>
   </table>
 
@@ -413,6 +435,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="pill">REVIEWED_RESISTANCE_REFERENCE_CONTEXT</span>
     <span class="meta">2026-10-12 · codex · LLM-assisted</span>
     <p>Refreshed the shared PHI-base review checksum after four reference-identifier scope corrections; previous decisions, biological fields and activities unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
+    <span class="meta">2026-10-13 · codex · LLM-assisted</span>
+    <p>Added qualified CYH2/RPL28 and AGP2 laboratory cycloheximide resistance associations. Distinguished historical L29 from modern RPL29, kept UniProt proteins and S288c taxonomy reference-only, and retained mechanistic and numerical-endpoint limitations. Existing source-owned claims are unchanged; whole-record review remains open.</p>
   </li>
 </ol>
 
