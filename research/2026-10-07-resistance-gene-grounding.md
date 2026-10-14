@@ -44,15 +44,15 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,879 resistance assertions across 318
-records**, including **124 curator-authored claims across 51 records**. There
-are still 2,608 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,885 resistance assertions across 319
+records**, including **130 curator-authored claims across 52 records**. There
+are still 2,607 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-13-flucytosine-scope-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-13-syringomycin-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-13-flucytosine-scope-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-13-syringomycin-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
 
