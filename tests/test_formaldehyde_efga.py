@@ -132,6 +132,55 @@ def test_empty_queries_do_not_use_fuzzy_suggestions():
 
 
 @pytest.mark.parametrize(
+    "payload",
+    [
+        None,
+        [],
+        False,
+        0,
+        "",
+        {},
+        {"results": None},
+        {"results": {}},
+        {"results": ""},
+        {"results": False},
+        {"results": 0},
+        {"results": ()},
+    ],
+)
+def test_malformed_empty_queries_are_not_negative_evidence(payload):
+    with pytest.raises(ValueError, match="empty EfgB"):
+        audit.empty_reference(payload)
+
+
+@pytest.mark.parametrize("mutation", ["changed", "missing"])
+@pytest.mark.parametrize(
+    "group,key,value",
+    [
+        ("primary", "native_species", "different organism"),
+        ("primary", "background", "different background"),
+        ("primary", "heterologous_host", "different host"),
+        ("reference_protein", "entry_type", "UniProtKB unreviewed (TrEMBL)"),
+        ("reference_protein", "gene_names", ["efgB"]),
+        ("reference_protein", "reference_organism_name", "different organism"),
+        ("reference_protein", "reference_taxon_id", "NCBITaxon:1"),
+        ("reference_protein", "reference_taxon_rank", "species"),
+        ("reference_protein", "reference_taxon_scientific_name", "different taxon"),
+        ("reference_protein", "species_lineage_verified", False),
+        ("reference_protein", "species_lineage_verified", 1),
+    ],
+)
+def test_claims_require_subject_and_reference_identity(group, key, value, mutation):
+    data = context()
+    if mutation == "missing":
+        del data[group][key]
+    else:
+        data[group][key] = value
+    with pytest.raises(ValueError, match="scope changed"):
+        audit.claims(data)
+
+
+@pytest.mark.parametrize(
     "group", ["record", "primary", "reference_protein", "subject_species", "efgb_queries"]
 )
 def test_incomplete_or_mutated_claim_scope_rejected(group):
@@ -145,9 +194,6 @@ def test_incomplete_or_mutated_claim_scope_rejected(group):
         "record": {"path", "sha256"},
         "primary": {
             "locations",
-            "native_species",
-            "background",
-            "heterologous_host",
             "endpoints",
             "numeric_AST_exported",
             "supplement_tables_reviewed",
@@ -155,13 +201,6 @@ def test_incomplete_or_mutated_claim_scope_rejected(group):
             "crystal_density_identifies_unmodified_formaldehyde_unambiguously",
         },
         "reference_protein": {
-            "entry_type",
-            "gene_names",
-            "reference_organism_name",
-            "reference_taxon_id",
-            "reference_taxon_rank",
-            "reference_taxon_scientific_name",
-            "species_lineage_verified",
             "protein_name",
         },
     }

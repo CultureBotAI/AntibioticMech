@@ -141,7 +141,7 @@ def efga_reference(entry, taxonomy):
 
 
 def empty_reference(payload):
-    if payload["results"]:
+    if not isinstance(payload, dict) or not isinstance(payload.get("results"), list) or payload["results"]:
         raise ValueError("dated empty EfgB result changed")
     return {
         "result_count": 0,
@@ -158,8 +158,15 @@ def claims(context):
             "protein_accession": "UniProtKB:P0DX96",
             "entry_version": 8,
             "sequence_version": 1,
+            "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+            "gene_names": ["efgA"],
             "ordered_locus_names": ["Mext_4158"],
+            "reference_organism_name": "Methylorubrum extorquens (strain PA1)",
+            "reference_taxon_id": "NCBITaxon:419610",
+            "reference_taxon_rank": "strain",
+            "reference_taxon_scientific_name": "Methylorubrum extorquens (strain PA1)",
             "source_species_taxon_id": "NCBITaxon:408",
+            "species_lineage_verified": True,
             "experimental_subject_assignment": False,
             "exact_resistance_allele": False,
             "reference_assigned_to_experimental_allele": False,
@@ -177,6 +184,9 @@ def claims(context):
             "pmid": "PMID:34038406",
             "doi": "DOI:10.1371/journal.pbio.3001208",
             "source_gene_loci": {"efgA": "Mext_4158", "efgB": "Mext_0606"},
+            "native_species": "Methylorubrum extorquens",
+            "background": "PA1-derived laboratory strains; study baseline CM2730 is not unmodified PA1",
+            "heterologous_host": "Escherichia coli",
             "efga": "LOSS_OF_FUNCTION_ASSOCIATED_WITH_EXOGENOUS_FORMALDEHYDE_GROWTH",
             "efgb": "CONDITIONAL_CONTRIBUTION_IN_EFGA_ALTERED_BACKGROUNDS",
             "efgb_alone_sufficient_in_sole_formaldehyde_carbon_comparison": False,
