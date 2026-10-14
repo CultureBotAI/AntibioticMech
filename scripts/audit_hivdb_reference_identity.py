@@ -11,6 +11,7 @@ import audit_caspofungin_context as native_context
 import audit_hivdb_grounding as historical
 import audit_topoisomerase_references as reference
 from lxml import html
+from resistance_checkpoint_records import checkpoint_path
 
 from antibioticmech.activity_collections import load_record
 
@@ -208,7 +209,7 @@ def build(root, directory):
         or len({r["path"] for r in census}) != 2939
         or {r["path"] for r in census}
         != {str(p.relative_to(root)) for p in (root / "data/antibiotics").rglob("*.yaml")}
-        or any(reference.digest(root / r["path"]) != r["record_sha256"] for r in census)
+        or any(reference.digest(checkpoint_path(root, r)) != r["record_sha256"] for r in census)
     ):
         raise ValueError("current corpus membership or bytes changed")
     prior_records = {r["identifier"]: r for r in prior["records"]}

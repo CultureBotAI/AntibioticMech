@@ -9,7 +9,15 @@ from urllib.parse import urlencode, urlsplit
 
 import audit_topoisomerase_references as reference
 from lxml import etree, html
-from resistance_checkpoint_records import checkpoint_path as historical_record_path
+from resistance_checkpoint_records import (
+    CLOTRIMAZOLE_FIXTURE as CLOTRIMAZOLE_FIXTURE,
+)
+from resistance_checkpoint_records import (
+    CLOTRIMAZOLE_PATH as CLOTRIMAZOLE_PATH,
+)
+from resistance_checkpoint_records import (
+    checkpoint_path as checkpoint_path,
+)
 
 from antibioticmech.activity_collections import load_record
 
@@ -25,18 +33,6 @@ PRIMARY_URL = "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9635649/fullT
 PUBLISHER_URL = "https://oup.silverchair-cdn.com/article-minimal/6730751"
 PMID = "36173330"
 DOI = "10.1093/g3journal/jkac246"
-CLOTRIMAZOLE_PATH = "data/antibiotics/antifungal/clotrimazole.yaml"
-CLOTRIMAZOLE_FIXTURE = "tests/fixtures/clotrimazole-before-2026-10-13.yaml"
-
-
-def checkpoint_path(root, item):
-    path = item["path"]
-    if item["identifier"] == "CHEBI:3764":
-        if path != CLOTRIMAZOLE_PATH:
-            raise ValueError("historical clotrimazole path changed")
-        # The later discussion changes the live record, not this checkpoint.
-        path = CLOTRIMAZOLE_FIXTURE
-    return historical_record_path(root, {**item, "path": path})
 
 
 def project_protein(entry, gene, taxonomy):

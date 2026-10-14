@@ -14,6 +14,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import audit_syringomycin_context as audit  # noqa: E402
 
 from antibioticmech.activity_collections import load_record  # noqa: E402
+from antibioticmech.curate.curation_event import record_curation_event  # noqa: E402
+from antibioticmech.validation.write_validated import write_validated_antibiotic  # noqa: E402
 
 
 def metadata(gene):
@@ -136,9 +138,49 @@ def test_qualitative_claims_have_no_experimental_id_promotion_or_numeric_ast():
             assert "Reference identity only" in refs[0]["notes"]
 
 
-def test_live_curation_preserves_source_record_and_history():
+@pytest.mark.parametrize("change", [
+    "empty", "primary", "record", "source", "duplicate", "missing_row", "unsupported",
+    "background", "figure", "methods", "reference", "experimental_assignment",
+])
+def test_claims_require_the_reviewed_context(change):
+    data = context()
+    if change == "empty":
+        data = {"references": {}}
+    elif change == "primary":
+        del data["primary"]
+    elif change == "record":
+        data["record_before"]["identifier"] = "OTHER"
+    elif change == "source":
+        data["sources"]["primary-2011"]["body"]["sha256"] = "0" * 64
+    elif change == "duplicate":
+        data["primary"]["source_rows"].append(copy.deepcopy(data["primary"]["source_rows"][0]))
+    elif change == "missing_row":
+        data["primary"]["source_rows"].pop()
+    elif change in {"unsupported", "background", "figure", "methods"}:
+        key, value = {
+            "unsupported": ("curation_supported", False),
+            "background": ("parental_background", "OTHER"),
+            "figure": ("figure_1B_present", False),
+            "methods": ("methods_resistance_label_present", False),
+        }[change]
+        data["primary"]["source_rows"][0][key] = value
+    elif change == "reference":
+        data["references"]["SYR2"]["protein_accession"] = "UniProtKB:OTHER"
+    else:
+        data["references"]["SYR2"]["experimental_subject_assignment"] = True
+    with pytest.raises(ValueError, match="complete reviewed"):
+        audit.claims(data)
+
+
+def test_saved_curation_preserves_source_record_and_history(tmp_path):
     receipt = json.loads((ROOT / "research/2026-10-13-syringomycin-curation.json").read_bytes())
-    before, after = load_record(ROOT / audit.FIXTURE), load_record(ROOT / audit.RECORD)
+    before = load_record(ROOT / audit.FIXTURE)
+    after = copy.deepcopy(before)
+    record_curation_event(after, **receipt["curation_event"])
+    after["resistance_mechanisms"] = audit.claims(context())
+    target = tmp_path / "syringomycin-e.yaml"
+    write_validated_antibiotic(after, target)
+    assert audit.reference.digest(target) == receipt["record"]["sha256"]
     assert audit.reference.digest(ROOT / audit.FIXTURE) == audit.RECORD_SHA
     assert after["resistance_mechanisms"] == receipt["claims"] == audit.claims(context())
     assert after["curation_history"][:-1] == before["curation_history"]

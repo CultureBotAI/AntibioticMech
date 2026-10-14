@@ -11,6 +11,7 @@ from urllib.parse import urlsplit
 import audit_caspofungin_context as context
 import audit_fungamr_cohort as cohort_audit
 import audit_topoisomerase_references as reference
+from resistance_checkpoint_records import checkpoint_path
 
 from antibioticmech.activity_collections import load_record
 
@@ -144,13 +145,13 @@ def build(root, directory):
         or len({r["path"] for r in census}) != 2939
         or {r["path"] for r in census}
         != {str(p.relative_to(root)) for p in (root / "data/antibiotics").rglob("*.yaml")}
-        or any(reference.digest(root / row["path"]) != row["record_sha256"] for row in census)
+        or any(reference.digest(checkpoint_path(root, row)) != row["record_sha256"] for row in census)
     ):
         raise ValueError("current corpus membership or bytes changed")
     records = []
     expected_ids = {i for term in cohort["terms"].values() for i in term["record_memberships"]}
     for selected in cohort["records"]:
-        record = load_record(reference.check_pin(root, selected))
+        record = load_record(checkpoint_path(root, selected))
         assertions = [
             a for a in record.get("resistance_mechanisms", []) if a.get("aro_id") in cohort["terms"]
         ]

@@ -18,6 +18,7 @@ FIXTURE = Path("tests/fixtures/syringomycin-e-before-2026-10-13.yaml")
 RECORD_SHA = "1731a6718d89e95494d9d8b1c9c621ef538e9a4fd1993f6b952f11d7d0cd96bc"
 ARTICLE_SHA = "f60b103cb1198db12c3ef38e9bca9f5c2fe54339a8f9e4fbaabe1ce79bda090d"
 FIGURE_SHA = "1039cac4e550d28a4bdb2936b65da6487f70ea2cbba342238ce0553c4b76477e"
+REVIEWED_CONTEXT_SHA = "e3689aeb9d1a24e1f3ecb280fb5d348efab144a530a2a0d9817fa6315ccedb22"
 BACKGROUND = {
     "SYR2": "W303C",
     "IPT1": "W303C",
@@ -281,6 +282,10 @@ def build(root, directory):
 
 
 def claims(context):
+    # This emitter implements one reviewed checkpoint, not a general gene-to-claim rule.
+    payload = json.dumps(context, indent=2, sort_keys=True, ensure_ascii=True) + "\n"
+    if hashlib.sha256(payload.encode()).hexdigest() != REVIEWED_CONTEXT_SHA:
+        raise ValueError("claim generation requires the complete reviewed syringomycin context")
     result = []
     for gene, background in BACKGROUND.items():
         note = (
