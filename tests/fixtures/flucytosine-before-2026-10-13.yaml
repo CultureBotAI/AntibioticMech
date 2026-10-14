@@ -1,0 +1,571 @@
+identifier: CHEBI:5100
+label: flucytosine
+antimicrobial_class: ANTIFUNGAL
+curation_status: SEEDED
+grounding_status: EXACT
+definition: An organofluorine compound that is cytosine that is substituted at position
+  5 by a fluorine. A prodrug for the antifungal 5-fluorouracil, it is used for the
+  treatment of systemic fungal infections.
+definition_source: ChEBI
+synonyms:
+- synonym_text: Ancotil
+  synonym_type: BRAND_NAME
+  source: chebi
+- synonym_text: flucytosina
+  synonym_type: INN
+  source: chebi
+- synonym_text: flucytosinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 4-amino-5-fluoropyrimidin-2(1H)-one
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-FC
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Fluorocystosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 5-Fluorocytosine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Ancobon (TN)
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+parent_compounds:
+- CHEBI:37143
+- CHEBI:38337
+- CHEBI:38338
+- CHEBI:60783
+- CHEBI:87205
+- ARO:3000034
+- ARO:3007560
+activity_roles:
+- CHEBI:35718
+- CHEBI:86327
+structural_class: nucleoside antibiotic
+structural_class_id: ARO:3000034
+chemical_structure:
+  smiles: Nc1nc(=O)ncc1F
+  standard_inchi: InChI=1S/C4H4FN3O/c5-2-1-7-4(9)8-3(2)6/h1H,(H3,6,7,8,9)
+  standard_inchi_key: XRECTZIEBJDKEO-UHFFFAOYSA-N
+  molecular_formula: C4H4FN3O
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 129.094
+  monoisotopic_mass: 129.03384
+xrefs:
+- ARO:3007558
+- ARO:3009160
+- cas:2022-85-7
+- hmdb:HMDB0015231
+- lincs.smallmolecule:LSM-5878
+- pdb-ccd:1LD
+- chembl:CHEMBL1463
+- pubchem.compound:3366
+drug_xrefs:
+- drugbank:DB01099
+- drugcentral:1188
+- kegg.drug:D00323
+document_xrefs:
+- patent:US2802005
+- patent:US2945038
+- patent:US3040026
+- wikipedia.en:Flucytosine
+source_concepts:
+- source: ARO
+  source_id: ARO:3007558
+  source_label: 5-flucytosine
+  minted_identifier: antibioticmech:aro-39cd22b2c6
+  source_version: '2026-08-30'
+- source: ARO
+  source_id: ARO:3009160
+  source_label: 5-fluorocytosine
+  minted_identifier: antibioticmech:aro-0e2ad8e0aa
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-30'
+- source: CHEBI
+  source_id: CHEBI:5100
+  source_label: flucytosine
+  minted_identifier: antibioticmech:chebi-e46c25078c
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:86327
+  source_version: '2026-08-30'
+resistance_mechanisms:
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007557
+  label: Candida spp. FUR1 with mutations conferring resistance to 5-flucytosine
+  evidence:
+  - reference: ARO:3007557
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3007559
+  label: Saccharomyces spp. FUR1 with mutations conferring resistance to 5-flucytosine
+  evidence:
+  - reference: ARO:3007559
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
+      database assertion, not a primary citation.
+- mechanism_type: UNKNOWN
+  aro_id: ARO:3007568
+  label: Cryptococcus spp. UXS1 conferring resistance to 5-flucytosine via absence
+  evidence:
+  - reference: ARO:3007568
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3007642
+  label: Aspergillus spp. fcyB conferring resistance to 5-flucytosine via reduced
+    permeability
+  evidence:
+  - reference: ARO:3007642
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
+      database assertion, not a primary citation.
+- mechanism_type: REDUCED_PERMEABILITY
+  aro_id: ARO:3007665
+  label: Candida spp. FCY2 conferring resistance to 5-flucytosine via reduced permeability
+  evidence:
+  - reference: ARO:3007665
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009286
+  label: Nakaseomyces glabratus Fur1 with mutations associated with resistance to
+    5-fluorocytosine
+  evidence:
+  - reference: ARO:3009286
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009160 (5-fluorocytosine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009629
+  label: Cryptococcus neoformans USX1 UDP-xylose synthase with mutations conferring
+    resistance to 5-fluorocytosine
+  evidence:
+  - reference: ARO:3009629
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3007558 (5-flucytosine);
+      database assertion, not a primary citation.
+- mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
+  aro_id: ARO:3009633
+  label: Cryptococcus neoformans Ura6 uridylate kinase with mutations conferring resistance
+    to 5-fluorocytosine
+  evidence:
+  - reference: ARO:3009633
+    notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3009160 (5-fluorocytosine);
+      database assertion, not a primary citation.
+- mechanism_type: OTHER
+  label: FUR1-associated flucytosine resistance in LL13-040-derived cohort
+  gene_id: FUR1
+  gene_families:
+  - FUR1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported flucytosine resistance-associated growth
+  assay: Relative colony-growth area under the curve
+  note: Gene-level cohort association; not allele-specific causality or resistance
+    of the parental strain. Not all screened derivatives carried FUR1 changes. UniProtKB:P18562
+    (entry 192, sequence 2; S288c, NCBITaxon:559292; locus YHR128W) is reference-only.
+    No tested-allele protein, strain TaxID, sample/genome ID, MIC or clinical category
+    assigned.
+  evidence:
+  - reference: PMID:37856537
+    notes: 'Direct 5-FC results: sec003/sec005; Figures 2 and 4C. Cohort association.'
+  - reference: UniProtKB:P18562
+    notes: FUR1 reference identity only; release 2026_03.
+- mechanism_type: OTHER
+  label: FUR1-associated flucytosine resistance in NC-02-derived cohort
+  gene_id: FUR1
+  gene_families:
+  - FUR1
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  phenotype_label: Source-reported flucytosine resistance-associated growth
+  assay: Relative colony-growth area under the curve
+  note: Gene-level cohort association; not allele-specific causality or resistance
+    of the parental strain. Not all screened derivatives carried FUR1 changes. UniProtKB:P18562
+    (entry 192, sequence 2; S288c, NCBITaxon:559292; locus YHR128W) is reference-only.
+    No tested-allele protein, strain TaxID, sample/genome ID, MIC or clinical category
+    assigned.
+  evidence:
+  - reference: PMID:37856537
+    notes: 'Direct 5-FC results: sec003/sec005; Figures 2 and 4C. Cohort association.'
+  - reference: UniProtKB:P18562
+    notes: FUR1 reference identity only; release 2026_03.
+clinical_status: APPROVED
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '017001'
+  application_type: NDA
+  product_number: '001'
+  sponsor_name: BAUSCH
+  drug_name: ANCOBON
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '1971-11-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=017001
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '017001'
+  application_type: NDA
+  product_number: '002'
+  sponsor_name: BAUSCH
+  drug_name: ANCOBON
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '1971-11-26'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=017001
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201566'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: SIGMAPHARM LABS LLC
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2011-06-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201566
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '201566'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: SIGMAPHARM LABS LLC
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2011-06-28'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=201566
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204652'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: NOVEL LABS INC
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2017-07-07'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204652
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '204652'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: NOVEL LABS INC
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2017-07-07'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=204652
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206550'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: HIKMA
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2017-10-17'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206550
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '206550'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: HIKMA
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2017-10-17'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=206550
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '207536'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: STRIDES PHARMA
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2018-06-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207536
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '207536'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: STRIDES PHARMA
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2018-06-18'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=207536
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212632'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: STRIDES PHARMA
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2020-04-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212632
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '212632'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: STRIDES PHARMA
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2020-04-17'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=212632
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213665'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: AUROBINDO PHARMA LTD
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2020-05-01'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213665
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '213665'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: AUROBINDO PHARMA LTD
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2020-05-01'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=213665
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '218005'
+  application_type: ANDA
+  product_number: '001'
+  sponsor_name: LAURUS
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2025-07-23'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218005
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: '218005'
+  application_type: ANDA
+  product_number: '002'
+  sponsor_name: LAURUS
+  drug_name: FLUCYTOSINE
+  ingredient_name: FLUCYTOSINE
+  substance_id: UNII:D83282DT06
+  approval_date: '2025-07-23'
+  submission_status: AP
+  marketing_status: Prescription
+  currently_marketed: true
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '44'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=218005
+curation_history:
+- timestamp: '2026-08-30T00:54:36Z'
+  curator: seed_from_sources
+  action: SEEDED_FROM_SOURCES
+  changes: Seeded from data/raw/ inventories (ARO, CHEBI)
+- timestamp: '2026-08-30T01:13:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-30T09:02:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:16:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-08-31T18:22:29Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-09-10T07:43:31Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-08T16:53:46Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Added two directly supported flucytosine FUR1 cohort associations with
+    species grounding and reference-only UniProt context. Preserved eight CARD assertions;
+    no exact allele, experimental protein, genome, MIC or clinical call inferred.
+  llm_assisted: true
+- timestamp: '2026-10-08T16:56:41Z'
+  curator: codex
+  action: CURATED_RESISTANCE_EVIDENCE
+  changes: Restored original YAML key ordering after serialization review. No biological
+    fields, source assertions or prior history values changed.
+  llm_assisted: true

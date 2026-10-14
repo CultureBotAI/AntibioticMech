@@ -291,6 +291,14 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 
 
 
+<h2>Discussions</h2>
+<p class="meta">Open questions, knowledge gaps and curation todos attached to this
+compound.</p>
+<div class="note">
+  <p><span class="pill plain">CURATION_TODO</span>
+  <span class="pill">OPEN</span></p>
+  <p>Resolve the URA6 species-scope discrepancy and exact FungAMR source-row mapping before assigning a tested allele or protein to ARO:3009633.</p>
+<p class="meta">The CARD label names Cryptococcus neoformans, but the independently identified primary study by Chang et al. (2021) places its URA6 comparison in Cryptococcus gattii WM276-derived material. This is a potential source species-scope conflict, not a proven correction to CARD: the exact FungAMR row-to-primary-paper crosswalk has not been verified. Preserve the source-owned assertion as database provenance and do not transfer the WM276 evidence to C. neoformans H99. The separate H99 UniProt identity candidate does not establish an H99 resistance phenotype.</p><p class="meta">Attached to: resistance_mechanisms#ARO:3009633</p></div>
 
 
 
@@ -335,6 +343,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="pill">CURATED_RESISTANCE_EVIDENCE</span>
     <span class="meta">2026-10-08 · codex · LLM-assisted</span>
     <p>Restored original YAML key ordering after serialization review. No biological fields, source assertions or prior history values changed.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_EVIDENCE_SCOPE_DISCUSSION</span>
+    <span class="meta">2026-10-14 · codex · LLM-assisted</span>
+    <p>Added a qualified URA6 species-scope discussion: independently identified primary evidence uses C. gattii WM276, while the CARD label names C. neoformans. The exact FungAMR row crosswalk remains unverified. Preserved eight CARD assertions, two FUR1 associations and SEEDED status; reference proteins and taxonomy are not tested-allele or phenotype assignments.</p>
   </li>
 </ol>
 

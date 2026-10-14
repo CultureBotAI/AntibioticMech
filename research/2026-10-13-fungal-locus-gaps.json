@@ -1,0 +1,469 @@
+{
+  "attribution": [
+    "Wang et al., Scientific Reports (2015), DOI:10.1038/srep17575, CC BY 4.0",
+    "Chang et al., Nature Communications (2021), DOI:10.1038/s41467-021-23745-1, CC BY 4.0",
+    "UniProt release 2026_03; protein names and identifiers are database annotations."
+  ],
+  "constraints": {
+    "cross_species_phenotype_transfer": false,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "sequence_requests": 0,
+    "sequences_variants_protocols_exported": false,
+    "source_adoption": false,
+    "whole_record_signoffs": 0
+  },
+  "cyp51_reference_accession": {
+    "accession": "KJ004673",
+    "archive_endpoint_requested": false,
+    "paragraph_sha256": "c38304c8d85b948a6a3b74236bf472fa9ba4d2a34c3318a2352ea6a0fcddb163",
+    "role": "PAPER_REPORTED_REFERENCE_NOT_GENOME_OR_TESTED_RESISTANT_ALLELE",
+    "source_isolate_label": "UV-8a",
+    "uniprot_match_found": false
+  },
+  "date": "2026-10-13",
+  "goal_status": "OPEN",
+  "held_sources": {
+    "fks1-primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/fks1-primary-attempt.json",
+        "sha256": "ca5a2bf7a6ef6003f130222e84cb0a52abe75974c7268fbce575a990fa737f50"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/fks1-primary-response.bin",
+        "sha256": "d08dff0426ce85950f0621411346438f8296aedb2e8fd757bd6a7a98b2a7b8d2"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/fks1-primary-receipt.json",
+        "sha256": "03b32b40b512b8411bf1f1d4aab5de64786bb3934bb4fd8bd233801f206af5a9"
+      },
+      "retrieved_at": "2026-10-14T00:23:26.561294+00:00",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8846461/fullTextXML"
+    },
+    "h99-model-paper": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/model-paper-attempt.json",
+        "sha256": "a8504476b088b89e13ce24bfe28b0dd6d75ff3ea4ced10a3e365ca133b2d5ac1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/model-paper-response.bin",
+        "sha256": "87a9323ac85ce28867d5d7ce590c8f29b8d1a999961fca71bb33adef48683691"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/model-paper-receipt.json",
+        "sha256": "6afa55262c6191e5679dc8d9314ca5564cd823c05ff5c7f2ec4bbd96f9598569"
+      },
+      "retrieved_at": "2026-10-14T00:29:18.245604+00:00",
+      "status": 301,
+      "url": "https://www.csbj.org/action/showPdf?pii=S2001037025001989"
+    }
+  },
+  "independent_scientific_review": false,
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-yeast-atp-supplement-resistance-grounding.tsv",
+      "sha256": "645f772ce07961c3c19ea0c925d3808abf10919c6fb769e5f03669b3204b62a8"
+    },
+    "prior": {
+      "path": "research/2026-10-13-fungamr-reference-followup.json",
+      "sha256": "8523aa65b57204632b51903a0e4d783e9ada0a1e63b7156bd43291ba76f078df"
+    },
+    "prior_cohort": {
+      "path": "research/2026-10-13-fungamr-cohort-context.json",
+      "sha256": "2ecd41ec60a2a6196a915fa373004e1a041c4eeb2a00b64b8cfae8488cf99047"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-caspofungin-verification.json",
+      "sha256": "784463eb945f48debc08c5debb62b56bd16a0a5d9405040759af6a75d2e3fb33"
+    },
+    "selection": {
+      "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/selection.json",
+      "sha256": "f8c3fd51e59dc4f3fc6783c0df9b295cbd4db12c4adbd13b8df8ca043c1e1055"
+    }
+  },
+  "limitations": [
+    "No exact FungAMR database row was inspected, so primary leads are not automatically exact row crosswalks.",
+    "Reference proteins do not identify tested alleles, samples or genome assemblies.",
+    "CYP51 UniProt archive and exact-alias queries were empty, not evidence of gene absence.",
+    "The H99 alias is supported only by indexed primary-source snippets; the publisher request returned HTTP 301 and was not followed.",
+    "FKS1's EBI full-text request returned HTTP 500. This is not an HTTP 403, an authorization decision, or evidence of biological absence.",
+    "Native JATS Results and selected tables were read, but PDFs, figures and supplements were not visually inspected.",
+    "No numeric AST, exact resistance variants, sequences or procedures were exported. All 2939 records remain in scope."
+  ],
+  "primary": {
+    "cyp51-primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-primary-attempt.json",
+        "sha256": "3c009637f2c03b1da4b8108f9bcbf6edd400838a4ae214727498f7ba2f94bd6c"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-primary-response.bin",
+        "sha256": "e17ffb12864be259692e2ac6974ea1b84bb5156e080edb50edd1d84f9bba4882"
+      },
+      "doi": "10.1038/srep17575",
+      "license": "CC BY 4.0",
+      "medium": "NATIVE_JATS_XML",
+      "pdf_or_figures_visually_inspected": false,
+      "pmid": "26631591",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-primary-receipt.json",
+        "sha256": "a06be6640595e3d8f54e3a48c5c5d0f6f2ab1d5a7b58cd70289973340242749c"
+      },
+      "retrieved_at": "2026-10-14T00:22:37.807006+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4668384/fullTextXML"
+    },
+    "ura6-primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-primary-attempt.json",
+        "sha256": "4d351f8a25b868d7c7b68666de1f0b3bc4893f094f4c19e3ea568a233ff8caad"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-primary-response.bin",
+        "sha256": "9caf4a94e284c6c26bf45a05ee9512fbfc74fd87f581e641413b02231d77bfb7"
+      },
+      "doi": "10.1038/s41467-021-23745-1",
+      "license": "CC BY 4.0",
+      "medium": "NATIVE_JATS_XML",
+      "pdf_or_figures_visually_inspected": false,
+      "pmid": "34103502",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-primary-receipt.json",
+        "sha256": "e464b0fe3cabfbeabfc0e13803d748919efe52e5c477cc79a51d55cb577f8c45"
+      },
+      "retrieved_at": "2026-10-14T00:25:10.231531+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8187385/fullTextXML"
+    }
+  },
+  "queries": {
+    "cyp51-alias": {
+      "result_count": 0,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-alias-attempt.json",
+          "sha256": "e12eaa5ae67f62d77f7be8946eee0802721b6f7ac8f6aa04e8175722e8eab15d"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-alias-response.bin",
+          "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-alias-receipt.json",
+          "sha256": "6c66456eb4986e40fb95abf334b886f508b72a70ef6cf36cfc1347c529ea0344"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-14T00:25:14.281227+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AVvCYP51+AND+taxonomy_id%3A1159556&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Csequence_version%2Cversion"
+      },
+      "zero_results_establish_absence": false
+    },
+    "cyp51-reference": {
+      "result_count": 0,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-reference-attempt.json",
+          "sha256": "0365cf5b755c8d6da32a0e0a4fe9dc1e88d247800a26f1bbfdd0fa799e74d08b"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-reference-response.bin",
+          "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/cyp51-reference-receipt.json",
+          "sha256": "bc9850c9fc8ce6ef71b55d59e449b2e8c9ada3425b0e68d21b23d6298ee40e8f"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-14T00:23:30.228950+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-KJ004673+AND+taxonomy_id%3A1159556&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Csequence_version%2Cversion"
+      },
+      "zero_results_establish_absence": false
+    },
+    "ura6-h99-candidate": {
+      "result_count": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-h99-candidate-attempt.json",
+          "sha256": "a9d70f24ec96483a09e41ce86e4602c6964cc5c0827df94d835215328b74f67e"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-h99-candidate-response.bin",
+          "sha256": "32e40046296ed9c32f88f07be8f10d64f85dc28a51d9f23ff82d788e1c5e8d33"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-h99-candidate-receipt.json",
+          "sha256": "ba06ffd4e89e2cebcd8bb560d933e4cbe245c40cffeeb894269a2bae49b5a9e9"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-14T00:26:54.582712+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AJ9VUG0&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Csequence_version%2Cversion"
+      },
+      "zero_results_establish_absence": false
+    },
+    "ura6-wm276": {
+      "result_count": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-wm276-attempt.json",
+          "sha256": "95ca030560c5d29287879520a06408bfe5394bfd23add0bb9e368b2c63b2f418"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-wm276-response.bin",
+          "sha256": "214fea4185f8b7bd20d56ac646c07290b85968dc90c516519543a0117bb94237"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/ura6-wm276-receipt.json",
+          "sha256": "93496a9ce2d3215783c2e38c752a38c5b729736d4a48ce7822bf1aa00f5c17a4"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-14T00:26:28.222821+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene%3ACGB_F6195W&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Csequence_version%2Cversion"
+      },
+      "zero_results_establish_absence": false
+    }
+  },
+  "records": [
+    {
+      "citation_terms": [
+        "ARO:3009287"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:55346",
+      "label": "anidulafungin",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml",
+      "sha256": "e29724e94ef2922be6d6afaaf181f2a6052f6a95e1c7daf5aec031dea2bb6cae",
+      "standard_inchi_key": "JHVAMHSQVVQIOT-MFAJLEFUSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009633"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:5100",
+      "label": "flucytosine",
+      "path": "data/antibiotics/antifungal/flucytosine.yaml",
+      "sha256": "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3ed7ada",
+      "standard_inchi_key": "XRECTZIEBJDKEO-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009407",
+        "ARO:3009486"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:83779",
+      "label": "tebuconazole",
+      "path": "data/antibiotics/antifungal/tebuconazole.yaml",
+      "sha256": "0c6380aed52552a312323986c4baddb7f3e065d9c553876b127bbdf357db6dda",
+      "standard_inchi_key": "PXMNMQRDXWABCY-UHFFFAOYSA-N"
+    }
+  ],
+  "review_findings": [
+    {
+      "disposition": "Kept the WM276 reference separate; did not transfer its phenotype or accession to the C. neoformans term.",
+      "finding": "The identified URA6 primary comparison is in a different species from the CARD label."
+    },
+    {
+      "disposition": "Retained J9VUG0 as a reference candidate with native alias verification still open.",
+      "finding": "H99 accession and a model-derived gene alias do not establish an H99 resistance phenotype."
+    },
+    {
+      "disposition": "Used explicit locus and accession leads while preserving ordered-locus versus ORF-name fields.",
+      "finding": "An empty symbol query can miss locus-only UniProt entries."
+    },
+    {
+      "disposition": "Cited the actual XML table identity; did not silently correct the source or extract numeric values.",
+      "finding": "The CYP51 binding paragraph refers to Table 3, but native XML labels the binding table t4 as Table 4."
+    },
+    {
+      "disposition": "Validated the URA6 row's WM276 group structurally instead of treating every heading as a one-cell row.",
+      "finding": "Primary table group headings mix colspan and separate empty cells."
+    },
+    {
+      "disposition": "Preserved distinct receipts and held both unread sources; no retries or alternate routes.",
+      "finding": "An HTTP 500 and an unfollowed HTTP 301 have different meanings."
+    }
+  ],
+  "scope": "THREE_FUNGAL_REFERENCE_GAPS_NOT_WHOLE_RECORD_REVIEW",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_hash_verified": 2939,
+    "different_species_primary_references": 1,
+    "exact_alleles_assigned": 0,
+    "native_primary_articles_read": 2,
+    "new_h99_identity_candidates": 1,
+    "new_resistance_assertions": 0,
+    "new_taxonomy_queries": 1,
+    "new_uniprot_queries": 4,
+    "taxonomy_caches_reused": 1,
+    "terms_investigated": 3,
+    "unread_primary_requests_held": 2,
+    "whole_record_reviews_completed": 0
+  },
+  "taxonomy_sources": {
+    "h99": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-235443-response.bin",
+        "sha256": "76c0b459c2da93b9d45665468e88057feeb6c50b2fe9f5a53a44a3cfb77e0197"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-235443-receipt.json",
+        "sha256": "25c6da3a02e679e040f1f809ff62c11ff69db7d3a54f8a1af6dba842663ae9ad"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-09T15:40:28.581538+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/235443.json"
+    },
+    "wm276": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/taxonomy-367775-attempt.json",
+        "sha256": "25cf7f58db7738fa1b21dbe3ee832e831568f4661f4aa4b6601f4aee167a4b0a"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/taxonomy-367775-response.bin",
+        "sha256": "eb522e37e2b45e71467b9399efc1fea8593abdf24c30bade846de470dee68c92"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/taxonomy-367775-receipt.json",
+        "sha256": "9da130ddc76bb821523af1cfc3576ad94df5f629541ba2b5331a136eadb6c7ee"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T00:27:54.496353+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/367775"
+    }
+  },
+  "term_assessments": {
+    "ARO:3009287": {
+      "experimental_gene_or_phenotype_assignment": false,
+      "failed_source_retried": false,
+      "name_scope": "Candida krusei occurs in cached UniProt otherNames, not its scientificName or synonyms; no new strict alias resolution asserted.",
+      "native_status": 500,
+      "other_primary_candidates_not_read": [
+        "PMID:26324281",
+        "PMID:24858652"
+      ],
+      "primary_candidate_doi": "10.1128/aac.01856-21",
+      "primary_candidate_organism_label": "Candida krusei",
+      "primary_candidate_pmid": "34871096",
+      "primary_read": false,
+      "source_species_name": "Pichia kudriavzevii",
+      "source_species_taxon_id": "NCBITaxon:4909",
+      "status": "PRIMARY_RETRIEVAL_HELD_REFERENCE_UNRESOLVED"
+    },
+    "ARO:3009407": {
+      "evidence_scope": "The paper reports native-fungus laboratory sensitivity comparisons and separate heterologous protein-binding evidence.",
+      "exact_fungamr_row_crosswalk_verified": false,
+      "locations": [
+        "Introduction: organism naming",
+        "Results: gene identity",
+        "Table 1 (XML t1)",
+        "Results: expression comparison",
+        "Binding table (XML t4, labeled Table 4)"
+      ],
+      "new_resistance_assertion": false,
+      "new_uniprot_assignment": null,
+      "paper_gene_label": "VvCYP51",
+      "primary_name": "Villosiclava virens",
+      "primary_relation": "Paper explicitly identifies U. virens as the anamorph of V. virens",
+      "qualifications": [
+        "EC50 is not MIC; binding affinity, docking scores and expression are distinct endpoints.",
+        "The tested expression range did not show an expression-sensitivity correlation; this is not a universal absence of expression effects.",
+        "Reference accession is not the tested resistant allele or a genome assembly."
+      ],
+      "reference_accession": "KJ004673",
+      "reference_isolate_is_not_uv8b": true,
+      "reference_isolate_label": "UV-8a",
+      "source_species_name": "Ustilaginoidea virens",
+      "source_species_taxon_id": "NCBITaxon:1159556",
+      "status": "PRIMARY_ARCHIVE_REFERENCE_IDENTIFIED_UNIPROT_MAPPING_UNRESOLVED"
+    },
+    "ARO:3009633": {
+      "card_source_species": "Cryptococcus neoformans",
+      "card_species_assertion_replaced": false,
+      "card_species_taxon_id": "NCBITaxon:5207",
+      "different_species_reference": "UniProtKB:E6R8Q4",
+      "direct_card_definition_primary_citation": false,
+      "exact_fungamr_row_crosswalk_verified": false,
+      "experimental_allele_assigned": false,
+      "finding": "The URA6 functional comparison is in WM276-derived material, not H99. Its reported susceptibility shift does not account for the whole phenotype of the initially observed derivative.",
+      "h99_candidate_locus": "CNAG_05935",
+      "h99_gene_alias_native_primary_verified": false,
+      "h99_identity_candidate": "UniProtKB:J9VUG0",
+      "h99_primary_leads_medium": "Search-index snippets from SSGCID and a metabolic-model paper only",
+      "h99_resistance_claim_established": false,
+      "locations": [
+        "Par6",
+        "Par12",
+        "Table 2: WM276-derived group"
+      ],
+      "primary_locus": "CGB_F6195W",
+      "primary_species": "Cryptococcus gattii",
+      "primary_species_taxon_id": "NCBITaxon:37769",
+      "primary_ura6_background": "WM276",
+      "status": "PRIMARY_SPECIES_SCOPE_CONFLICT_REQUIRES_SOURCE_ROW_REVIEW"
+    }
+  },
+  "ura6_primary_paragraphs": {
+    "Par12": "9b5e1152cfccb1457c67e6a238480b95405b3a4c3897b99d47cefc97d44a8fd7",
+    "Par6": "89fb7a60e96d4ff3a4ca911d76db9bc5f60f0415375db29119449dc39f3b294a"
+  },
+  "ura6_references": {
+    "h99-candidate": {
+      "canonical_reference_established": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 71,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "locus": "CNAG_05935",
+      "paper_resistance_context_matches_card_species": false,
+      "primary_native_gene_alias_verified": false,
+      "protein_accession": "UniProtKB:J9VUG0",
+      "reference_organism_name": "Cryptococcus neoformans (strain H99 / ATCC 208821 / CBS 10515 / FGSC 9487)",
+      "reference_taxon_id": "NCBITaxon:235443",
+      "reference_taxon_rank": "strain",
+      "resistance_assertion_supported_by_identity_alone": false,
+      "role": "H99_IDENTITY_CANDIDATE_NOT_LINKED_RESISTANCE_EVIDENCE",
+      "sequence_version": 1,
+      "species_matches_card_term": true,
+      "species_name": "Cryptococcus neoformans",
+      "species_taxon_id": "NCBITaxon:5207",
+      "uniprot_locus_field": "orfNames"
+    },
+    "wm276": {
+      "canonical_reference_established": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 91,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "locus": "CGB_F6195W",
+      "paper_resistance_context_matches_card_species": false,
+      "primary_native_gene_alias_verified": true,
+      "protein_accession": "UniProtKB:E6R8Q4",
+      "reference_organism_name": "Cryptococcus gattii serotype B (strain WM276 / ATCC MYA-4071)",
+      "reference_taxon_id": "NCBITaxon:367775",
+      "reference_taxon_rank": "strain",
+      "resistance_assertion_supported_by_identity_alone": false,
+      "role": "DIFFERENT_SPECIES_PRIMARY_REFERENCE_NOT_CARD_ASSIGNMENT",
+      "sequence_version": 1,
+      "species_matches_card_term": false,
+      "species_name": "Cryptococcus gattii",
+      "species_taxon_id": "NCBITaxon:37769",
+      "uniprot_locus_field": "orderedLocusNames"
+    }
+  },
+  "ura6_table_scope": {
+    "group": "WM276 derived strains",
+    "row_index_zero_based": 20,
+    "table_id": "Tab2",
+    "table_xml_sha256": "ad0c81d4df4f141d81bda7911bd8cc99577e2d2b8ffb53b9998f3c7e55f14db3"
+  }
+}

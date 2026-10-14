@@ -1,0 +1,236 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-ionophore-yeast.json",
+      "sha256": "46e92fe0c48080a494e8012dae15e6f4e9ce00abb709f964f7159dc00d30aba7"
+    },
+    {
+      "path": "scripts/audit_ionophore_yeast.py",
+      "sha256": "782dad7c6bb547405a67018abfd3f5cb6d3896c3c2a06d8c06389001fd3ad9b5"
+    },
+    {
+      "path": "tests/test_ionophore_yeast.py",
+      "sha256": "eae1911fbc31d0fc55143e232ff95da6d81e2119fdc6f5514cc91577ef9f7cb5"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "9fae13f9bd3e124a65b590ff9c9a5ae56a571512e04c68d2c216f97dc4148731"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/final-tests.xml",
+      "sha256": "c79e194c76c0ae4cd1572c75a45e008b1207a76e9ab31c634a474b9cb607f901"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/cohort.json",
+      "sha256": "afeb075c9c525d85a27835d5d760e5953f329420d256a2944cd87b0a18bd3c28"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/native-plan.json",
+      "sha256": "3d035424b6c93a721d08078a206e23d03dfbb4dc6c12209583d68a3464dc2d06"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/native-canary.json",
+      "sha256": "8addcc274749d8cc25355f1ed1f8735cc31e461bcbb23b2855ccf4e89d941208"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/supplement-plan.json",
+      "sha256": "dd18de39e4fb53843f273c3ae7ec21a558890e6d73c6597a7c59aa737abd7690"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/storage-plan.json",
+      "sha256": "a7e77e6a2d954b872ce2af1ae0d7a2ac200b0511b1653d6cc51454e8c92a5987"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/reference-plan.json",
+      "sha256": "a0440d6dbe192986aa560807e818be74b2c804e1c0cd14c8f34ea6776dfaf997"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/reference-canary-review.json",
+      "sha256": "1a59907aeab9736127e52b19a2e7e256330ae64f0305589353b0b784f8a5d49b"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/workbook-private.json",
+      "sha256": "1b663c220c8c75f6bab129f06c539e8f485ad771aa7c6622c2a8575ecbff4878"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/s1-table-storage-response.png",
+      "sha256": "a6b7a26fc8c990bae76868ce6ae35c29abc5a2f487f87599cb5b202386f6d85d"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/s3-figure-storage-response.png",
+      "sha256": "18cf7b8bf48e71837020fa361464199851b7a3fb0ea36acbbe693d27aa6cbd0b"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-grounding.tsv",
+      "sha256": "a7d1c4ce9e473e43d040d8e23099ee119a6e0e2cd05f5b03f403ac80ceafa841"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.json",
+      "sha256": "f0c28fdd28209adb07e8a3dd2fb5914b93e742e265e0be3fcc1ec71cabc1ed46"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.tsv",
+      "sha256": "be3da009b8d3aec22042fe3e59d9df026821841900dbe167cec3787f9d821210"
+    }
+  ],
+  "classification": "PROGRESS_NOT_COMPLETE",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_ionophore_yeast.py",
+        "tests/test_ionophore_yeast.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_ionophore_yeast.py",
+        "tests/test_ionophore_yeast.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "constraints": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "source_adoptions": 0,
+    "whole_record_reviews_completed": 0
+  },
+  "date_label_timezone": "America/Los_Angeles",
+  "full_qc_note": "Research-only; prior full-QC receipt remains historical.",
+  "full_qc_rerun": false,
+  "local_preflight_corrections": [
+    "Historical taxonomy cache had a plan/receipt but no separate attempt file; corrected its provenance binding before HTTP.",
+    "Audit used an unsupported loader keyword; corrected to the repository's existing load_record(Path) API before report generation.",
+    "Long source strings split to satisfy repository lint. Initial 34 tests and broader 189 tests passed; final checks rerun after review fixes."
+  ],
+  "native_requests": {
+    "attempts": [
+      "article-attempt.json",
+      "reference-canary-attempt.json",
+      "reference-cohort-attempt.json",
+      "s1-table-attempt.json",
+      "s1-table-storage-attempt.json",
+      "s3-figure-attempt.json",
+      "s3-figure-storage-attempt.json",
+      "s3-table-attempt.json",
+      "s3-table-storage-attempt.json"
+    ],
+    "dependency_install": "xlrd 2.0.2 installed into a temporary directory; repository dependencies unchanged.",
+    "failed_source_retries": 0,
+    "new_sequence_downloads": 0,
+    "publisher_redirects": "Three exact publisher-provided signed asset destinations followed once.",
+    "query_hold": "130-term UniProt query exceeded the 100-OR-condition limit; no retry or alternate query.",
+    "status_counts": {
+      "200": 5,
+      "302": 3,
+      "400": 1
+    }
+  },
+  "offline_replay": {
+    "byte_identical": true,
+    "formulas_evaluated": false,
+    "http_disabled": true,
+    "raw_xls_extraction_byte_identical": true,
+    "sockets_disabled": true,
+    "workbook_modified": false,
+    "workbook_rendered": false,
+    "xls_parser": "xlrd 2.0.2"
+  },
+  "preservation": {
+    "added_before_receipt": [
+      "research/2026-10-13-ionophore-yeast.json",
+      "scripts/audit_ionophore_yeast.py",
+      "tests/test_ionophore_yeast.py"
+    ],
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-ionophore-yeast/protected-before.json",
+      "sha256": "b9a54b3c3524b61f632f68336447f776527eb698b7a25a81d8577c85005eea21"
+    },
+    "baseline_files": 7212,
+    "biological_records_byte_identical": 2939,
+    "changed": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "ignored_files_included": true,
+    "pages_inventories_and_embedding_artifacts_unchanged": true,
+    "unchanged_baseline_files": 7211
+  },
+  "remaining_scope": "All 2939 records remain in scope. This paper's qualitative cohort is accounted for; compound forms, most references and exact experimental identifiers remain open.",
+  "review": {
+    "findings": [
+      {
+        "disposition": "Keep all 127 rows: 78 resistance-labeled and 49 hypersensitivity-labeled; do not turn absent labels into susceptibility.",
+        "id": "screen-is-not-resistance-only",
+        "status": "ADDRESSED_BY_SCOPE"
+      },
+      {
+        "disposition": "Inventory and preserve all three worksheets; hidden comparison sheets do not enlarge the final cohort.",
+        "id": "hidden-workbook-sheets",
+        "status": "ADDRESSED_BY_SCOPE"
+      },
+      {
+        "disposition": "Keep ERG28 disagreement, ERG24 nonviability, ERG5 exclusion and respiration-deficient comparisons explicit.",
+        "id": "reconstruction-discordance",
+        "status": "ADDRESSED_BY_SCOPE"
+      },
+      {
+        "disposition": "One reference verified; 129 mappings pending. An HTTP 400 rejection is not a negative mapping result.",
+        "id": "query-limit",
+        "status": "OPEN"
+      },
+      {
+        "disposition": "Supplier/name evidence does not establish exact catalog/form identity; no exact-structure phenotype curation.",
+        "id": "exact-compound-form",
+        "status": "OPEN"
+      },
+      {
+        "disposition": "Cache-only source projection test is explicitly local-only; pure and public-artifact tests need no cache. Full current-corpus replay remains a separate checkpoint check.",
+        "id": "cache-portability",
+        "status": "ADDRESSED"
+      }
+    ],
+    "independent_validation": false,
+    "reviewer": "SAME_AGENT"
+  },
+  "scope": "QUALITATIVE_YEAST_SCREEN_AND_REFERENCE_CONTEXT_NOT_EXACT_ALLELES",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 189
+  },
+  "verified_at": "2026-10-14T02:10:03.195908+00:00",
+  "visual_review": {
+    "all_pages_rendered_and_inspected": true,
+    "figure_table_transcription": "Manual categorical transcription",
+    "pages_each": 1,
+    "pdf_supplements": [
+      "S1 Table",
+      "S3 Figure"
+    ],
+    "renderer": "PyMuPDF 1.28.2",
+    "reviewer": "SAME_AGENT"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-hivdb-reference-identity.json",
+      "sha256": "4c1c304d0c3acbb20fe8a9e5ad88b326693514ba728f9f2a4c467b5b8c1879cb"
+    },
+    {
+      "path": "scripts/audit_hivdb_reference_identity.py",
+      "sha256": "8a58e0de0952fd797866c7df638c243fd29da5b37677dcfcba307aea8925fb0b"
+    },
+    {
+      "path": "tests/test_hivdb_reference_identity.py",
+      "sha256": "adc970cd561164012d0c38392b901ce44d5c27ecdc131f9b294d2af977986842"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "d249df5ed6e402dddeee354713838f4d40014d5db92b0334918548a81e9c86b5"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/focused-tests.xml",
+      "sha256": "01b0e95c1f5862fad237c4755443d399df77cbd414cb5362bc8da8f204c86bde"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/reference-tests.xml",
+      "sha256": "3da32380b4616b0675983db40ee09af8fd91180ee17dcb4f4887c2442cfae7d6"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/cohort.json",
+      "sha256": "e7022aebc4f70bce177398d2cfddc0e8574a6111b42246df0fbddf056a082267"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/native-plan.json",
+      "sha256": "d183b02d71d6efde37de9a366d6aa1a0e6eebdd076dfec1cd52b3a942f3a691b"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/native-canary.json",
+      "sha256": "a7f8add8aec3c2d58d385833be6b1c5c00ba8d3b7668bb6bb2c9707f9a0106e8"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-grounding.tsv",
+      "sha256": "a7d1c4ce9e473e43d040d8e23099ee119a6e0e2cd05f5b03f403ac80ceafa841"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.json",
+      "sha256": "f0c28fdd28209adb07e8a3dd2fb5914b93e742e265e0be3fcc1ec71cabc1ed46"
+    },
+    {
+      "path": "research/2026-10-13-flucytosine-scope-resistance-progress.tsv",
+      "sha256": "be3da009b8d3aec22042fe3e59d9df026821841900dbe167cec3787f9d821210"
+    },
+    {
+      "path": "src/antibioticmech/schema/antibioticmech.yaml",
+      "sha256": "27b01b64fc0c92f279964260b3c298a2769d185628fd28ce532074c9cef649eb"
+    }
+  ],
+  "classification": "PROGRESS_NOT_COMPLETE",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_hivdb_reference_identity.py",
+        "tests/test_hivdb_reference_identity.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_hivdb_reference_identity.py",
+        "tests/test_hivdb_reference_identity.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "constraints": {
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "source_adoptions": 0,
+    "whole_record_reviews_completed": 0
+  },
+  "date_label_timezone": "America/Los_Angeles",
+  "full_qc_note": "Research-only step; prior full-QC receipt is historical.",
+  "full_qc_rerun": false,
+  "initial_test_run": {
+    "cause": "Generator projected all 13 source regions instead of the 3 adopted regions and therefore did not write the dossier; two artifact tests then failed.",
+    "counts": {
+      "errors": 0,
+      "failures": 2,
+      "skipped": 0,
+      "tests": 28
+    },
+    "reported_as_passing": false,
+    "resolution": "Project only PR, RT and IN, reject missing/malformed selected definitions, and test that other definitions are excluded."
+  },
+  "native_requests": {
+    "attempts": [
+      "faq-attempt.json",
+      "faq-content-attempt.json",
+      "faq-legacy-attempt.json",
+      "faq-router-attempt.json",
+      "faq-script-attempt.json",
+      "protein-attempt.json",
+      "taxonomy-attempt.json"
+    ],
+    "failed_source_retries": 0,
+    "faq_path": "Application shell and its three explicitly linked code assets resolved the normal production FAQ content endpoint; no denial or redirect occurred.",
+    "http_200": 7,
+    "javascript_executed": false,
+    "new_sequence_downloads": 0
+  },
+  "offline_replay": {
+    "byte_identical": true,
+    "historical_cache_global_restored": true,
+    "http_disabled": true,
+    "sockets_disabled": true
+  },
+  "preservation": {
+    "added_before_receipt": [
+      "research/2026-10-13-hivdb-reference-identity.json",
+      "scripts/audit_hivdb_reference_identity.py",
+      "tests/test_hivdb_reference_identity.py"
+    ],
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-hivdb-reference-identity/protected-before.json",
+      "sha256": "1caf4d013600ff1687c8111a88013a34f1809d284fa9fff74962fc9193564e51"
+    },
+    "baseline_files": 7208,
+    "biological_records_byte_identical": 2939,
+    "changed": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "ignored_files_included": true,
+    "pages_inventories_and_embedding_artifacts_unchanged": true,
+    "unchanged_baseline_files": 7207
+  },
+  "remaining_scope": "All 2939 records remain in scope. The 16-record HIVDB cohort has reference context, not completed primary allele or phenotype review.",
+  "review": {
+    "findings": [
+      {
+        "disposition": "Do not count the HTTP 200 shell as FAQ evidence; its normal content endpoint was located through static linked-asset inspection.",
+        "id": "shell-is-not-documentation",
+        "status": "ADDRESSED"
+      },
+      {
+        "disposition": "Current FAQ convention and HXB2 metadata remain distinct. No all-region difference, pinned-version equivalence or patient allele is inferred.",
+        "id": "consensus-not-isolate",
+        "status": "ADDRESSED_BY_SCOPE"
+      },
+      {
+        "disposition": "Only three adopted regions are projected; seven regression cases cover extra and malformed definitions.",
+        "id": "source-region-selection",
+        "status": "ADDRESSED"
+      },
+      {
+        "disposition": "Reference identity and algorithm metadata do not review the primary variant-specific studies or clinical subjects.",
+        "id": "primary-resistance-evidence",
+        "status": "OPEN"
+      }
+    ],
+    "independent_validation": false,
+    "reviewer": "SAME_AGENT"
+  },
+  "scope": "REFERENCE_CONTEXT_NOT_ALGORITHM_EQUIVALENCE_OR_PATIENT_ALLELES",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 164
+  },
+  "verified_at": "2026-10-14T01:51:38.424255+00:00"
+}

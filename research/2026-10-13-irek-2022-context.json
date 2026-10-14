@@ -1,0 +1,152 @@
+{
+  "availability": {
+    "hasPDF": "Y",
+    "inEPMC": "Y",
+    "isOpenAccess": "N",
+    "license_field_present": false,
+    "ncbi_links_followed": false,
+    "oa_only_xml_endpoint_requested": false,
+    "open_access_or_redistribution_permission_inferred": false,
+    "source": "EMBL-EBI Europe PMC"
+  },
+  "citation": {
+    "doi": "10.1128/jb.00304-22",
+    "pmcid": "PMC9578390",
+    "pmid": "36094306",
+    "title": "GpsB Promotes PASTA Kinase Signaling and Cephalosporin Resistance in Enterococcus faecalis.",
+    "uniprot_reference_number": 9,
+    "year": "2022"
+  },
+  "constraints": {
+    "automatic_redirects": false,
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequence_or_variant_exports": 0,
+    "source_adoptions": 0
+  },
+  "curation_decision": "HOLD_UNVERIFIED_PRIMARY_SUBJECT_PROTEIN_AND_MECHANISM",
+  "date": "2026-10-13",
+  "inputs": {
+    "article_plan": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-2022/article-plan.json",
+      "sha256": "a75ec429e3c2132249224fa94b386c224af0d939c8e0a670bd4f864a24818eb9"
+    },
+    "census": {
+      "path": "research/2026-10-13-fpr1-primary-resistance-grounding.tsv",
+      "sha256": "5199994e1415dd11a99621c21dd6cd0e131da330fff954708895a0c99ac58c90"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-2022/cohort.json",
+      "sha256": "cb70814b7e7b9c6479de251e4e96c34009d3fd2d7f6699b1e2632001d7ce8883"
+    },
+    "prior_context": {
+      "path": "research/2026-10-13-irek-context.json",
+      "sha256": "7ab52bc672c46110c71f0ddcc81624db68dfb3b1c6c4fa25daede0fce456d738"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-irek-verification.json",
+      "sha256": "f821c96b63749705ad680d426a86db1e06c85c70e42ce37d480cc83b7bdda03c"
+    },
+    "uniprot_source": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-34672600-response.bin",
+      "sha256": "d10975ad865333707d1b9b987fc5168d7bc951c98a5488ddc9a1ee808d3559a7"
+    }
+  },
+  "limitations": [
+    "A citation-specific UniProt strain comment is not independently reviewed primary subject evidence.",
+    "V583, OG1 and OG1RF remain distinct; no tested derivative is assigned a reference TaxID.",
+    "Availability flags and listed free URLs are not a reuse license or proof of inspected full text.",
+    "The publisher response is an access hold, not experimental results or global source unavailability.",
+    "Prior 2021 and 2023 source holds remain unchanged; this is an independent citation.",
+    "No sequences, exact variants, constructs, protocols or numeric AST are exported.",
+    "No CARD source classification or experimental claim is newly confirmed by this checkpoint."
+  ],
+  "primary_review": {
+    "alternate_route_attempted": false,
+    "figures_reviewed": false,
+    "full_text_reviewed": false,
+    "global_unavailability_inferred": false,
+    "search_snippets_used_as_primary_results": false,
+    "supplements_reviewed": false
+  },
+  "record": {
+    "aro_id": "ARO:3007678",
+    "identifier": "CHEBI:29007",
+    "path": "data/antibiotics/antibacterial/ceftriaxone.yaml",
+    "sha256": "7294a0606c41257f1589c2aa54119527ccf09778c7d84f7258d74e4253f12135",
+    "standard_inchi_key": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+    "whole_record_review": "OPEN"
+  },
+  "reference_context": {
+    "accession": "UniProtKB:Q820A8",
+    "citation_strain_comments": [
+      "OG1",
+      "OG1RF"
+    ],
+    "citation_strain_evidence": "ECO:0000303 / PubMed:36094306",
+    "entry_version": 142,
+    "experimental_protein_or_allele_assignment": false,
+    "experimental_subject_assignment": false,
+    "genome_assignment": false,
+    "reference_og1rf_species_id": "NCBITaxon:1351",
+    "reference_og1rf_taxon_id": "NCBITaxon:474186",
+    "reference_taxon_id": "NCBITaxon:226185",
+    "sequence_version": 1,
+    "strain_labels_equated": false
+  },
+  "requests": {
+    "article": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-2022/article-attempt.json",
+        "sha256": "b6336a6bab9bfb65359c8b5d35b20e69da12a628ecfe44fa74e779a91faf6ee4"
+      },
+      "bytes": 5565,
+      "http_status": 403,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-2022/article-receipt.json",
+        "sha256": "f5ae2c8c893f9632561ac893f428bdf2b50ec8e24e7175f57b2171461e605736"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-2022/article-response.bin",
+        "sha256": "2037cb4b66028f16514e7b577c5adc0defd297e3ac4df9b640d5dc82f85e6baf"
+      },
+      "retrieved_at": "2026-10-13T22:33:05.186938+00:00",
+      "retry_performed": false,
+      "url": "https://journals.asm.org/doi/full/10.1128/jb.00304-22"
+    },
+    "metadata": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-2022/metadata-attempt.json",
+        "sha256": "ea6bb1e22157e75c20ac435a082de5143fcd8993bc94a8ef2a07d919630ab1f5"
+      },
+      "bytes": 9643,
+      "http_status": 200,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-2022/metadata-receipt.json",
+        "sha256": "9fa6173b576028f1f52d6fdcf09d8cda705b2e1ecaa6c737602bcad9123c1497"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-irek-2022/metadata-response.bin",
+        "sha256": "d978dc38a6f94e8f351b40f2f1ae29aeaea237a11296a032f1ddaa775b92a2e0"
+      },
+      "retrieved_at": "2026-10-13T22:32:31.455960+00:00",
+      "retry_performed": false,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A36094306+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+    }
+  },
+  "scope": "INDEPENDENT_2022_BIBLIOGRAPHY_AND_ACCESS_CONTEXT_ONLY",
+  "status": "PRIMARY_ACCESS_HOLD_NO_NEW_BIOLOGICAL_GROUNDING",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_checked": 2939,
+    "full_corpus_goal_status": "OPEN",
+    "new_bibliographic_records_verified": 1,
+    "new_primary_access_holds": 1,
+    "new_primary_results_reviewed": 0,
+    "new_protein_or_taxon_assignments": 0,
+    "selected_records": 1,
+    "whole_record_reviews_completed": 0
+  }
+}
