@@ -9787,6 +9787,25 @@ The updated corpus census contains 4,885 resistance assertions. All 2,939
 records remain within the investigation's scope; no whole-record primary
 signoff is claimed. #1040 and NCBI remain deferred.
 
+The publication review in [PR #1097](https://github.com/CultureBotAI/AntibioticMech/pull/1097)
+found three defects: [#1098](https://github.com/CultureBotAI/AntibioticMech/issues/1098)
+allowed claim generation without a verified primary context;
+[#1099](https://github.com/CultureBotAI/AntibioticMech/issues/1099) coupled historical
+replay to mutable records; and [#1100](https://github.com/CultureBotAI/AntibioticMech/issues/1100)
+left current-status counts and links stale. The fixes require the complete
+reviewed dossier, resolve only registered historical fixture identities, replay
+the saved transition independently of later curation, and update current counts.
+All 478 focused tests passed, as did the numeric-prose regression after its fix.
+Nine dossiers and the additional transitive IreK audit replay exactly with HTTP
+and sockets disabled. The transitive fix also passes 85 focused tests (overlapping
+the 478-test suite, not an additive count). Direct comparison
+also verifies that all 2,938 unchanged embedding rows remain byte-identical.
+Desktop/mobile page and map checks passed. The
+[verification receipt](2026-10-13-syringomycin-verification.json) records completed
+offline checks and the QC status at capture time. Final quality-gate results
+are attached to the PR. This is same-agent adversarial
+review, not independent scientific signoff.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
