@@ -7,6 +7,7 @@ from pathlib import Path
 
 import audit_card_study_context as study
 import audit_topoisomerase_references as reference
+from resistance_checkpoint_records import checkpoint_path
 
 from antibioticmech.activity_collections import load_record
 
@@ -100,7 +101,7 @@ def build(root, directory):
     for key in ("protected", "prior_verification"):
         reference.check_pin(root, plan[key])
     prior = json.loads(reference.check_pin(root, plan["prior"]).read_bytes())
-    if study.build(root, root / study.CACHE) != prior:
+    if study.build(root, root / study.CACHE, record_resolver=checkpoint_path) != prior:
         raise ValueError("reused citation context no longer reproduces")
     with reference.check_pin(root, plan["census"]).open(newline="") as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
