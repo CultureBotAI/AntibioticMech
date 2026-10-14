@@ -1,0 +1,220 @@
+{
+  "adversarial_self_review": [
+    "Repeated gene rows are not independent experiment counts.",
+    "The negative result is limited to the tested comparison, not all ATP2 alleles.",
+    "Clone-level MIC data and ATP2 doubling-time comparisons remain separate.",
+    "Reference protein and strain TaxID are not exact experimental subject or allele assignments.",
+    "The exact FungAMR-row crosswalk remains unresolved; CARD ownership is preserved.",
+    "Discussion notes and citations are present in YAML but not rendered by the existing discussion template.",
+    "Offline replay and same-agent review are not independent scientific validation or whole-record completion."
+  ],
+  "artifacts": [
+    {
+      "path": "data/antibiotics/antifungal/clotrimazole.yaml",
+      "sha256": "3875eec5827ded3ae1291d6b265a71b065d66a0143d9c605fbb7236b2edf4678"
+    },
+    {
+      "path": "pages/antifungal/clotrimazole.html",
+      "sha256": "a9c9eb370c11608d07d10f43cf2f2bc1f1115c3700420d80102da12b88940c2d"
+    },
+    {
+      "path": "pages/index.html",
+      "sha256": "630dd6996d87e484a1cbf329007cedf315d4bcda81240e98e1fb916b351c12fb"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "19def63890287588a9a3c1b74408253275a79d5ef924990b4c06a915ef5f871f"
+    },
+    {
+      "path": "research/2026-10-13-yeast-atp-supplement-context.json",
+      "sha256": "64aeb53a5f9e48136a4b0c7cd07be45a64371fc478d5d57d4c5e2674fadb7184"
+    },
+    {
+      "path": "research/2026-10-13-yeast-atp-supplement-curation.json",
+      "sha256": "9db5844cc15f36d989755dcebaa499f7e31a44c47553c436708b8a9c7102bd4d"
+    },
+    {
+      "path": "research/2026-10-13-yeast-atp-supplement-resistance-grounding.tsv",
+      "sha256": "645f772ce07961c3c19ea0c925d3808abf10919c6fb769e5f03669b3204b62a8"
+    },
+    {
+      "path": "research/2026-10-13-yeast-atp-supplement-resistance-progress.json",
+      "sha256": "60d3f6e03c347d8412848d7db1129c038919403c6b44d3211ea048452b9521c3"
+    },
+    {
+      "path": "research/2026-10-13-yeast-atp-supplement-resistance-progress.tsv",
+      "sha256": "db8b035607da5b5ce56a15b3f275e330ee5d8a23572aa2123dbcb091748beb16"
+    },
+    {
+      "path": "scripts/audit_yeast_atp_context.py",
+      "sha256": "48e8392fbc282a12f4f854151737690828066e686c49e7dcc385111e0011fd64"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "04e29814b202ae20fe81a771337493dcbc771feb8a012affa014341d9dc48540"
+    },
+    {
+      "path": "tests/fixtures/clotrimazole-before-2026-10-13.yaml",
+      "sha256": "a20523175943481166351a5178707948ef52441c2a907cf1a286695f66ad95a6"
+    },
+    {
+      "path": "tests/test_clotrimazole_atp_discussion.py",
+      "sha256": "516ef234545219e8dbdaa588773f92d881bc2d4c8c0b261ddfb8f0cbbe7ac315"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/protected-before.json",
+    "sha256": "e42b7f2708498b852fd6429951374433192764e99bc1884c1eb4abf96f8ebf31"
+  },
+  "baseline_files_checked": 7171,
+  "browser": {
+    "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/browser-check.json",
+    "sha256": "3fc28c21e6f1ce035279727559dc7141ecda8b17dc730f9f1902be642069ee96"
+  },
+  "canary_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/canary-tests.xml",
+      "sha256": "2ef361038fcacd034eae1ad01eef5386fda3920159ae3e5edee67d98ea61b315"
+    },
+    "passed": 93,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 93
+  },
+  "changed_baseline_files": [
+    "data/antibiotics/antifungal/clotrimazole.yaml",
+    "pages/antifungal/clotrimazole.html",
+    "pages/index.html",
+    "research/2026-10-07-resistance-gene-grounding.md",
+    "scripts/audit_yeast_atp_context.py",
+    "scripts/summarize_resistance_progress.py"
+  ],
+  "constraints": {
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "sequences_variants_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "current_goal_turn": "PROGRESS",
+  "date": "2026-10-13",
+  "discussions_added": 1,
+  "embedding_document_and_all_embedding_artifacts_unchanged": true,
+  "existing_record_fields_and_claims_preserved": true,
+  "fingerprint": "ef7a4815aa417119",
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/focused-tests.xml",
+      "sha256": "19990ba233c21a4280709f657f5f4e1ec46cee7dd12551cab2da64a7f9a8a4e1"
+    },
+    "passed": 164,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 164
+  },
+  "fresh_encoding_performed_or_needed": false,
+  "full_corpus_goal_status": "OPEN",
+  "full_qc": {
+    "chemical_map_distribution_versions_match_pins": false,
+    "chemical_map_pins": {
+      "numpy": "2.2.6",
+      "rdkit": "2026.3.5",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    },
+    "command": [
+      "/private/tmp/antibioticmech-identity-20261012/bin/python",
+      "scripts/run_qc.py"
+    ],
+    "dependency_deviation": "RDKit 2025.3.6 instead of pin 2026.3.5. UMAP runtime unavailable because numba is absent. No map or chemistry regeneration.",
+    "dependency_differences": {
+      "rdkit": {
+        "actual": "2025.3.6",
+        "required": "2026.3.5"
+      }
+    },
+    "elapsed_seconds": 1963.311,
+    "exit_code": 0,
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/full-qc.log",
+      "sha256": "a6ac8e0beb1f31e6bd610bebc49c21cb9e99e90d98b98f2c736cedab03e9f396"
+    },
+    "python": "3.13.12",
+    "pythonpath": "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/src:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/scripts:/private/tmp/antibioticmech-qc-science-20261013-abd1:/private/tmp/antibioticmech-identity-20261012/lib/python3.13/site-packages:/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/lib/python3.13/site-packages",
+    "rdkit_smoke_check_passed": true,
+    "started_at": "2026-10-13T23:01:41.253040+00:00",
+    "tests": {
+      "errors": 0,
+      "failures": 0,
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/full-tests.xml",
+        "sha256": "34f8a93653c295ce4f0fddbf0b98a57ef4922445ce78af2dbd76895185984410"
+      },
+      "passed": 3806,
+      "skip_reasons": [
+        "got empty parameter set for (path)",
+        "historical checkpoint no longer matches the live corpus; public invariants still run"
+      ],
+      "skipped": 4,
+      "tests": 3810
+    },
+    "versions": {
+      "PyYAML": "6.0.3",
+      "numpy": "2.2.6",
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    }
+  },
+  "history_events_added": 1,
+  "http_and_sockets_disabled": true,
+  "ignored_files_included": true,
+  "native_figure_and_browser_screenshots_visually_reviewed": true,
+  "new_files_before_receipt": [
+    "research/2026-10-13-yeast-atp-supplement-context.json",
+    "research/2026-10-13-yeast-atp-supplement-curation.json",
+    "research/2026-10-13-yeast-atp-supplement-resistance-grounding.tsv",
+    "research/2026-10-13-yeast-atp-supplement-resistance-progress.json",
+    "research/2026-10-13-yeast-atp-supplement-resistance-progress.tsv",
+    "tests/fixtures/clotrimazole-before-2026-10-13.yaml",
+    "tests/test_clotrimazole_atp_discussion.py"
+  ],
+  "new_requests": {
+    "publisher_figure": 1,
+    "publisher_workbook": 1,
+    "taxonomy": 0,
+    "uniprot": 0
+  },
+  "new_resistance_assertions": 0,
+  "offline_proof": {
+    "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/offline-replay.json",
+    "sha256": "3d6314ef023e4e1b18293e18f1d3112923bcb11ab771e6612022055c11579404"
+  },
+  "old_context_replayed": {
+    "path": "research/2026-10-13-yeast-atp-context.json",
+    "sha256": "263ddf59bc2a41d75195630720257e16c5098226ed7e2c7d6556e3fbedab07ce"
+  },
+  "preexisting_uncommitted_work_preserved_except_intended_audit_and_report_updates": true,
+  "previous_goal_turn": "PROGRESS",
+  "prior_receipt_script_and_report_pins_verified_before_edits_now_historical": true,
+  "records_byte_identical": 2938,
+  "records_changed": 1,
+  "records_checked": 2939,
+  "removed_files": [],
+  "resistance_assertions": 4879,
+  "sources_replayed": true,
+  "status": "ALL_AUTHORITATIVE_GATES_PASSED_WITH_DISCLOSED_DEPENDENCY_DEVIATION",
+  "whole_record_reviews_completed": 0,
+  "workbook_cells_reproduced": true,
+  "workbook_rendered": false
+}

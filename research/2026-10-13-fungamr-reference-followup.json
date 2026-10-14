@@ -1,0 +1,1332 @@
+{
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0; CARD/ARO; Takashima and Sugita (2022); Stammler et al. (2009).",
+  "constraints": {
+    "biological_curation": false,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequences_requested": false,
+    "source_adoption": false
+  },
+  "date": "2026-10-13",
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-13-yeast-atp-supplement-resistance-grounding.tsv",
+      "sha256": "645f772ce07961c3c19ea0c925d3808abf10919c6fb769e5f03669b3204b62a8"
+    },
+    "prior": {
+      "path": "research/2026-10-13-fungamr-cohort-context.json",
+      "sha256": "2ecd41ec60a2a6196a915fa373004e1a041c4eeb2a00b64b8cfae8488cf99047"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-13-fungamr-cohort-verification.json",
+      "sha256": "d0e965d98510f1176dd88639974aec3bcf904c7cbb946bbd0d0f1a5120658307"
+    },
+    "selection": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-references/reference-selection.json",
+      "sha256": "9d59cd263b4e0683eb8ba05926b395352f1d1d0db5aa8c608696ad93f7b86905"
+    }
+  },
+  "limitations": [
+    "Reference identifiers are not experimental subject or allele assignments.",
+    "Multiple matches remain unselected; empty exact-gene searches do not establish gene or protein absence.",
+    "The nomenclatural assessment is primary-source reading; the Puccinia phenotype context is only publisher-indexed abstract/snippet reading.",
+    "No sequences, variant specifications, numeric AST, experimental protocols or inferred genome assignments are exported.",
+    "The source-reported archive molecule type is retained without independent archive validation.",
+    "No whole-record signoff, new source adoption, NCBI request, issue 1040 work or GitHub mutation occurred."
+  ],
+  "names": {
+    "Candida albicans": {
+      "matching_field": "scientificName",
+      "result_count": 1,
+      "scientific_name": "Candida albicans",
+      "source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:32.998940+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/5476",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-7c397babddc1327428ebb5b06370508431e61493117fd6e5b58de7eda0804577.json",
+          "sha256": "9f6188cbdd981bf38e6e6ef64ec60f44d0000dcd77c65d46d14aee8304d0e9a0"
+        }
+      },
+      "species_id": 5476,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Candida auris": {
+      "matching_field": "synonyms",
+      "result_count": 1,
+      "scientific_name": "Candidozyma auris",
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-candida-auris-attempt.json",
+          "sha256": "cbf63c973e23cc0c784ef27fb20acadfc410c768039ee2b104e3672e3ba134b0"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-candida-auris-response.bin",
+          "sha256": "139787fc2702d5328535a292f247e34444c38c0f991bb1f9451a846b539d8e35"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-candida-auris-receipt.json",
+          "sha256": "79686495eeea495c577c9fe0571e26daa16481162cee88336011c3c2e23f883a"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T23:49:27.095533+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Candida+auris%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "species_id": 498019,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Candida dubliniensis": {
+      "matching_field": "scientificName",
+      "result_count": 2,
+      "scientific_name": "Candida dubliniensis",
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-candida-dubliniensis-attempt.json",
+          "sha256": "6905a3c8a8c54b33cd1473c9f607179494bfa6e2d7f60c2e60cc1d00f8702e8d"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-candida-dubliniensis-response.bin",
+          "sha256": "c170744fb8d943787d05f19a4a470eccb542b7000214744ae55abca214b88458"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-candida-dubliniensis-receipt.json",
+          "sha256": "13994a13b9112671056b4f3ae9225190cb01140b2d9b7980fe3678f29ddc61e0"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T23:50:04.153740+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Candida+dubliniensis%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "species_id": 42374,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Cryptococcus neoformans": {
+      "matching_field": "scientificName",
+      "result_count": 1,
+      "scientific_name": "Cryptococcus neoformans",
+      "source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T10:40:01.169392+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/5207",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-09-posteraro/request-443359d3070c321040125a1a24511fd9e811fc9a8b56a742052e640db394bae6.json",
+          "sha256": "fecfdfc2d20c49ca24c6671635d134355d444af3cfbea22806d9d9be40a1f3c7"
+        }
+      },
+      "species_id": 5207,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Fusarium graminearum": {
+      "matching_field": "synonyms",
+      "result_count": 1,
+      "scientific_name": "Gibberella zeae",
+      "source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:36.127446+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/5518",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-3f789375d311f00135899d5556b7203c0fa994132446e131c6e3e215a77bab7e.json",
+          "sha256": "40a7a92b13b4df4f8169304a3bdf9bf182ffd9554975d575188cb967a5c5c75e"
+        }
+      },
+      "species_id": 5518,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Nakaseomyces glabratus": {
+      "doi": "10.3314/mmj.22.004",
+      "exact_match_count": 0,
+      "experimental_subject_assignment": false,
+      "mycobank_id_reported_by_paper": "843854",
+      "printed_pages": [
+        126,
+        128
+      ],
+      "result_count": 1,
+      "scientific_name": "Candida glabrata",
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-nakaseomyces-glabratus-attempt.json",
+          "sha256": "f00ab45b291f809750b2de5b271affaa480fe70c3d4f8d567dfe333f3caf86cc"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-nakaseomyces-glabratus-response.bin",
+          "sha256": "9879c5e185a164c2bbc9ac33a81e987b3158ecf6d177417e8d04f6a39a6bf05f"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-nakaseomyces-glabratus-receipt.json",
+          "sha256": "e3471b5380fb668e8390efa952d6ce1ab7b88d39b747bb3ad747ca666826630a"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T23:50:04.834689+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Nakaseomyces+glabratus%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "source_name": "Nakaseomyces glabratus",
+      "species_id": 5478,
+      "status": "PRIMARY_NOMENCLATURE_PLUS_UNIPROT_TAXONOMY"
+    },
+    "Pichia kudriavzevii": {
+      "matching_field": "scientificName",
+      "result_count": 1,
+      "scientific_name": "Pichia kudriavzevii",
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-pichia-kudriavzevii-attempt.json",
+          "sha256": "09eb443d28c3bde87d12c1eb30d7f23b60e8a14e6beee983ece51030a6790e8b"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-pichia-kudriavzevii-response.bin",
+          "sha256": "6f3960e2395dbf87986ffb5ddae713f1e67ee0a67209a851329dc5cb0c7321cc"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-pichia-kudriavzevii-receipt.json",
+          "sha256": "fb1af75462e396b30856b07e6a39a1baae913ed718f2026582eef46f20cb6a85"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T23:50:05.532740+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Pichia+kudriavzevii%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "species_id": 4909,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Puccinia triticina": {
+      "matching_field": "scientificName",
+      "result_count": 13,
+      "scientific_name": "Puccinia triticina",
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-puccinia-triticina-attempt.json",
+          "sha256": "f797e038519a90f70ee735d9a65ee717376b636078a27d419d1d55c2bd827381"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-puccinia-triticina-response.bin",
+          "sha256": "1c561f9070062132479f6b048391da2a4f6300177a1aabaf6520406da4f90bcf"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-puccinia-triticina-receipt.json",
+          "sha256": "71de14cf757370287272acb00feafa3852f817fcad7a3e6782261ccb620a7e4a"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T23:50:06.245208+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Puccinia+triticina%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "species_id": 208348,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Saccharomyces cerevisiae": {
+      "matching_field": "scientificName",
+      "result_count": 1,
+      "scientific_name": "Saccharomyces cerevisiae",
+      "source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-09T12:48:21.608137+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/4932",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-09-transport-context/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+          "sha256": "a5ccd6582704c3fe1acbdead1300386d9cc239b6c413698323b9e8343e68ffc7"
+        }
+      },
+      "species_id": 4932,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    },
+    "Ustilaginoidea virens": {
+      "matching_field": "scientificName",
+      "result_count": 1,
+      "scientific_name": "Ustilaginoidea virens",
+      "source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:58.770682+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/1159556",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-29e865a8eea0c332f3cc08c7d3f5eefe5ec4967406b0593a4ff356f0d290ea34.json",
+          "sha256": "1701a5c1b7881e804fd604e26a6e7ef02b2f39a2989ba8bb9c62f215915aa456"
+        }
+      },
+      "species_id": 1159556,
+      "status": "EXACT_UNIPROT_NAME_OR_SYNONYM"
+    }
+  },
+  "nomenclature_assessment": {
+    "doi": "10.3314/mmj.22.004",
+    "interpretation": "The formal new-combination entry explicitly lists Candida glabrata as a synonym; this resolves names, not resistance or an experimental strain.",
+    "location": "Section III, formal nomenclatural entry 3 and its continued synonym list",
+    "mycobank_id_reported_by_paper": "843854",
+    "native_pages_visually_inspected": true,
+    "ncbi_requests": 0,
+    "nomenclatural_synonymy_verified": true,
+    "printed_pages": [
+      126,
+      128
+    ],
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-references/nomenclature-pdf-receipt.json",
+      "sha256": "0eaa1675616a36e96a7df3f5ab241f5576aa4708e54a90a9e0b72cba8c12a287"
+    },
+    "redistribution": "Native PDF retained only in ignored research cache; public output paraphrases the nomenclatural finding with citation.",
+    "rendered_pages": [
+      {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-references/nomenclature-page-7.png",
+        "sha256": "81df6e5691de7e996dc8f42c66c66462c2b232fb3f406fafa81ab5f1f6154311"
+      },
+      {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-references/nomenclature-page-9.png",
+        "sha256": "9e627fc967998182bed9593445650f978193137b6e624797c3f47b2dd2d92e03"
+      }
+    ],
+    "renderer": "PyMuPDF 1.28.2",
+    "reviewed_on": "2026-10-13",
+    "source": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-references/nomenclature-pdf-response.bin",
+      "sha256": "1d85c5345ffb1310207244526aab9cd0e0ac1379d4e4d6f7df36d78347c55344"
+    },
+    "source_name": "Nakaseomyces glabratus",
+    "uniprot_species_name": "Candida glabrata",
+    "url": "https://www.jstage.jst.go.jp/article/mmj/63/4/63_22.004/_pdf",
+    "whole_paper_or_phylogeny_review_claimed": false,
+    "zero_based_pages": [
+      7,
+      9
+    ]
+  },
+  "puccinia_partial_primary_context": {
+    "authors": "Stammler et al.",
+    "curation_decision": "HOLD_RESISTANCE_ASSERTION_REPLACEMENT_PENDING_FULL_PRIMARY_CONTEXT",
+    "doi": "10.1016/j.cropro.2009.05.007",
+    "endpoint": "ED50, not MIC; no values converted or clinical category inferred",
+    "exact_experimental_allele_or_subject_assigned": false,
+    "exact_fungamr_row_crosswalk_verified": false,
+    "finding": "The abstract reports limited impact of the assessed genetic change, a moderate expression/sensitivity association, and retained in-vivo control. These are distinct observations, not proof that every CYP51 entry confers resistance.",
+    "limitations": "Indexed reading and identifier concordance are not native full-text, figure or supplement review; the paper is not equated with the UniProt submission citation.",
+    "locations": [
+      "Abstract",
+      "Origin of isolates",
+      "Analysis of the cyp51 gene sequence"
+    ],
+    "medium": "PUBLISHER_INDEXED_ABSTRACT_AND_SECTION_SNIPPETS",
+    "native_full_text_or_figures_reviewed": false,
+    "native_paper_file_cached": false,
+    "publication": "Crop Protection 28 (2009), 891-897",
+    "reported_archive_reference": "FJ976683",
+    "reviewed_on": "2026-10-13",
+    "source_formulation_or_stereochemistry_resolved": false,
+    "submission_title_alone_used_as_experimental_evidence": false,
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0261219409001239"
+  },
+  "puccinia_reference_crosswalk": {
+    "archive_endpoint_requested": false,
+    "archive_protein_id": "ACS37521.1",
+    "paper_reported_reference": "FJ976683",
+    "role": "PAPER_REFERENCE_LOCUS_NOT_GENOME_OR_TESTED_ALLELE",
+    "source": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-references/puccinia-crosswalk-attempt.json",
+        "sha256": "704b363fa9f04e4d45b1cb11d3620025a549394815597f9f50c0de41a398cbee"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-references/puccinia-crosswalk-response.bin",
+        "sha256": "1fec8387cfa583d307b57e1922e2eb1a16a9007bb14c5dcc89efabdb1441ddb3"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-fungamr-references/puccinia-crosswalk-receipt.json",
+        "sha256": "422a6c6d9d7c4cecafcfcf017834a28f6e115e1c6d76558942525adaca631901"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-13T23:59:48.115596+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AC6GJL4&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_embl"
+    },
+    "source_reported_molecule_type": "mRNA",
+    "uniprot_accession": "UniProtKB:C6GJL4"
+  },
+  "review_findings": [
+    {
+      "disposition": "Excluded hybrid, virus and otherNames-only matches; the latter required a separate primary nomenclatural assessment.",
+      "id": "taxonomy-near-matches",
+      "status": "ADDRESSED"
+    },
+    {
+      "disposition": "Only native results count. Suggested searches with altered taxonomy IDs were not followed.",
+      "id": "query-suggestions",
+      "status": "ADDRESSED"
+    },
+    {
+      "disposition": "The unreviewed singleton is a reference candidate, not a verified canonical protein or resistant allele.",
+      "id": "unreviewed-not-canonical",
+      "status": "SCOPE_GUARD_APPLIED"
+    },
+    {
+      "disposition": "The submission title and related publisher abstract do not establish a causal resistant allele; inspect full primary results, figures and source-row context before replacing the CARD claim.",
+      "id": "puccinia-primary-scope",
+      "status": "OPEN"
+    },
+    {
+      "disposition": "CYP51B identity does not resolve ARO:3009486's voriconazole-label versus tebuconazole-edge discrepancy.",
+      "id": "fungamr-drug-label-discrepancy",
+      "status": "OPEN"
+    }
+  ],
+  "scope": "FUNGAMR_SHARED_CITATION_REFERENCE_FOLLOWUP",
+  "summary": {
+    "additional_unreviewed_candidate_contexts": 1,
+    "biological_records_changed": 0,
+    "cohort_records": 10,
+    "cohort_terms": 19,
+    "corpus_records_hash_verified": 2939,
+    "exact_alleles_assigned": 0,
+    "new_resistance_assertions": 0,
+    "pending_terms_investigated": 13,
+    "primary_pdf_retrievals": 1,
+    "prior_reviewed_reference_contexts": 6,
+    "source_names_resolved": 10,
+    "term_dispositions": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 4,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 5,
+      "REVIEWED_REFERENCE": 3,
+      "UNREVIEWED_CANDIDATE": 1
+    },
+    "total_reviewed_reference_contexts": 9,
+    "uniprot_api_requests": 29,
+    "web_tool_calls": {
+      "find": 1,
+      "open": 1,
+      "search": 2
+    },
+    "whole_record_reviews_completed": 0
+  },
+  "terms": {
+    "ARO:3009213": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "ERG11",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009213-unreviewed",
+          "result_count": 9,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009213-unreviewed-attempt.json",
+              "sha256": "8b47c6d3523dcc2b27b0ea31c73f5bb0369c1e808df93929d7df3440cf963046"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009213-unreviewed-response.bin",
+              "sha256": "ffe85d0e51c7061316c855bef2fbfbc267ae1bbd54797ce28ed2f05b7c182694"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009213-unreviewed-receipt.json",
+              "sha256": "f63ca7b22d488eda982afbef4093b49def474c323ac8cd32d61fe9223cd09dfb"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:17.729567+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG11+AND+taxonomy_id%3A498019+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009213-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009213-reviewed-attempt.json",
+              "sha256": "8366f5179eb8812ba6c7123b2cfb40b6dfb1e544d52b569e3b69ab9bbfe1c6da"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009213-reviewed-response.bin",
+              "sha256": "206d8f0de860514f9465532a8a7b50e85e7f12ab3361d776eb93f6d5586eb23e"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009213-reviewed-receipt.json",
+              "sha256": "4a87ac562b7f0d00c95fabe30ae217edc8c7e682b21fbabd5808254f772038a7"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:52:22.448070+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG11+AND+taxonomy_id%3A498019+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 3,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_organism_name": "Candida auris",
+      "source_species_taxon_id": "NCBITaxon:498019",
+      "status": "MULTIPLE_CANDIDATES_NO_SELECTION"
+    },
+    "ARO:3009239": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "mrr2",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009239-reviewed",
+          "result_count": 1,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009239-reviewed-attempt.json",
+              "sha256": "69d18579a005ef96eaf0f2657250acc7b6274c95d7bf809ffc8a861854ecbd7d"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009239-reviewed-response.bin",
+              "sha256": "2098fed76092b62f2c3c9d4eb1517837ed2fb866e6f65d9f0678b87730b1cecb"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009239-reviewed-receipt.json",
+              "sha256": "a9b96c62dbe694feab781d0e46c960fd2934eec25ec1437fce245c4d90feafaf"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:50:00.347469+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Amrr2+AND+taxonomy_id%3A5476+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_context": {
+        "canonical_reference_established": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 114,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "MRR2",
+          "ZCF34"
+        ],
+        "new_resistance_assertion": false,
+        "ordered_locus_names": [
+          "CAALFM_C307860CA"
+        ],
+        "orf_names": [
+          "CaO19.6182"
+        ],
+        "protein_accession": "UniProtKB:Q59MJ1",
+        "protein_name": "multidrug resistance regulator 2",
+        "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "reference_taxon_id": "NCBITaxon:237561",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "role": "REVIEWED_GENE_REFERENCE",
+        "sequence_version": 1,
+        "source_species_taxon_id": "NCBITaxon:5476",
+        "species_lineage_verified": true
+      },
+      "reference_taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:43.807271+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/237561",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-ac4b1724ccccec8ef27ec669d7755fe12398cdb72853f39023db7b09f727315f.json",
+          "sha256": "f0563c7f3c2b4d17a741ebe86416924c49c1b78aa2f60e2db4a52d8dc04f2ff4"
+        }
+      },
+      "source_organism_name": "Candida albicans",
+      "source_species_taxon_id": "NCBITaxon:5476",
+      "status": "REVIEWED_REFERENCE"
+    },
+    "ARO:3009287": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "Fks1",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009287-unreviewed",
+          "result_count": 0,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009287-unreviewed-attempt.json",
+              "sha256": "9ad683efab5d216095a74cd40557737e6390f4c19cf0a9601c056f84b45ff81d"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009287-unreviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009287-unreviewed-receipt.json",
+              "sha256": "3ed1781c5e88c5f1ba7fd3f859a147b8047aea873125f3ebb63e14b85cc647f4"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:18.582133+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFks1+AND+taxonomy_id%3A4909+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009287-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009287-reviewed-attempt.json",
+              "sha256": "56b9189057533152001abb14f9436485d3439f5658b78079562b40c17086862f"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009287-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009287-reviewed-receipt.json",
+              "sha256": "d4d79bdb50c921392a104d79247b884b9133b4bacdfe27f7ee2087bf75e4a3c6"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:52:23.233805+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFks1+AND+taxonomy_id%3A4909+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:55346"
+      ],
+      "source_organism_name": "Pichia kudriavzevii",
+      "source_species_taxon_id": "NCBITaxon:4909",
+      "status": "NO_EXACT_GENE_RESULTS_NOT_ABSENCE"
+    },
+    "ARO:3009372": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "MRPL11",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009372-unreviewed",
+          "result_count": 0,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-unreviewed-attempt.json",
+              "sha256": "4380bb0d317596d52e38310b6c1ad2aaaba450eb0d891c193cfc38483876abda"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-unreviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-unreviewed-receipt.json",
+              "sha256": "5c0f26085d0164a17baa4f6344fd3a7aa2554b1178c319f509abe43b27261c78"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:58:00.646788+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMRPL11+AND+taxonomy_id%3A5478+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009372-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-reviewed-attempt.json",
+              "sha256": "aaa5e598caf655af589ccd19c89dfef927b2d6674c26eff3d20ab4a721902c93"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009372-reviewed-receipt.json",
+              "sha256": "dbe1b701e010a541abc7dee99be4894d4b5feaf4db4d08e3d7e657f5fdd4ea55"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:19.235200+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMRPL11+AND+taxonomy_id%3A5478+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:474180"
+      ],
+      "source_organism_name": "Nakaseomyces glabratus",
+      "source_species_taxon_id": "NCBITaxon:5478",
+      "status": "NO_EXACT_GENE_RESULTS_NOT_ABSENCE"
+    },
+    "ARO:3009390": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "Cdc6",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009390-unreviewed",
+          "result_count": 0,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-unreviewed-attempt.json",
+              "sha256": "faac2e03ef9dc8fdb1e9883dd12479c22698e2fcfc24c4f83acf975ec56dc3b1"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-unreviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-unreviewed-receipt.json",
+              "sha256": "39ad55cccb355fce0ed46b072f910f08522852a79da54baee62a3b7eb0e484b9"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:58:01.346650+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACdc6+AND+taxonomy_id%3A5478+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009390-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-reviewed-attempt.json",
+              "sha256": "d6deda0286cf33316909e9492ef569c50a1083236921b6ef8b00f92094ab732e"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009390-reviewed-receipt.json",
+              "sha256": "8eb64bbfc86550c424a488633ec46af6af4b63ef2c017f737668591afdeddc38"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:19.946119+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACdc6+AND+taxonomy_id%3A5478+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:474180"
+      ],
+      "source_organism_name": "Nakaseomyces glabratus",
+      "source_species_taxon_id": "NCBITaxon:5478",
+      "status": "NO_EXACT_GENE_RESULTS_NOT_ABSENCE"
+    },
+    "ARO:3009396": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "ERG11",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009396-unreviewed",
+          "result_count": 3,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009396-unreviewed-attempt.json",
+              "sha256": "4a3250620d4b13e8b667087cd83597706ea3b2bc79cbb435354bdf858b6cb200"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009396-unreviewed-response.bin",
+              "sha256": "6586038ceecc4fac6b92ff02a3836eca82cb151289e4339ab060d23d22bab254"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009396-unreviewed-receipt.json",
+              "sha256": "548c89047431397abb505244937c9e5afc67d083fa0004ebc080cc1714ab51e3"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:20.808318+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG11+AND+taxonomy_id%3A4909+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009396-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009396-reviewed-attempt.json",
+              "sha256": "928bbefdc28cd0fea55e527968fd77e41965b1f129ef854dd0537880f4cc0b28"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009396-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009396-reviewed-receipt.json",
+              "sha256": "5b715d3285f49bbc0e1ae59439c63b83ab19b12997a9317b8c2a87ccefaf50fe"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:52:24.028846+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG11+AND+taxonomy_id%3A4909+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_organism_name": "Pichia kudriavzevii",
+      "source_species_taxon_id": "NCBITaxon:4909",
+      "status": "MULTIPLE_CANDIDATES_NO_SELECTION"
+    },
+    "ARO:3009407": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "Cyp51",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009407-unreviewed",
+          "result_count": 0,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009407-unreviewed-attempt.json",
+              "sha256": "fd7059b31a2a0feaa95e6721f5af1ad0042ced500fbc1d26717aefe889ff3d04"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009407-unreviewed-response.bin",
+              "sha256": "1c9ae555174870b13502de4bd8a3062e284b8e1d64fa6dd4c0f644a78456931e"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009407-unreviewed-receipt.json",
+              "sha256": "978d2f2508000451614722bd0325a1d864142cb4b9a85270d3bffca7dbae1334"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:51:46.449048+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACyp51+AND+taxonomy_id%3A1159556+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 1,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009407-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009407-reviewed-attempt.json",
+              "sha256": "28543365f0cf01bbaca8521008ead61384b55421f851d8ade463fa89967fb7f5"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009407-reviewed-response.bin",
+              "sha256": "06bede776f6b5b097221509d980585d34bca3f8d5e43f56b0b3bdf451df0c7fd"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009407-reviewed-receipt.json",
+              "sha256": "808420aefe3269ad8768d0eaaeac64eeb325651d96be57cece0b1b55d0a8e4c5"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:50:01.199596+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACyp51+AND+taxonomy_id%3A1159556+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 1,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:83779"
+      ],
+      "source_organism_name": "Ustilaginoidea virens",
+      "source_species_taxon_id": "NCBITaxon:1159556",
+      "status": "NO_EXACT_GENE_RESULTS_NOT_ABSENCE"
+    },
+    "ARO:3009486": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "Cyp51B",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009486-reviewed",
+          "result_count": 1,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009486-reviewed-attempt.json",
+              "sha256": "f47020894422d7d09562b6b379c3b8053d6dae2c567eb04228e65138d5601ab6"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009486-reviewed-response.bin",
+              "sha256": "061ae3f982c969b22e79784e65782900fc64b7a4525d299d5c010257d4f14770"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009486-reviewed-receipt.json",
+              "sha256": "3725af969c98f1eb9ab4e143f6712c2c28d155eced5350521e1d19f2e6dbffae"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:50:01.926783+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACyp51B+AND+taxonomy_id%3A5518+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:83779"
+      ],
+      "reference_context": {
+        "canonical_reference_established": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 75,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "CYP51B"
+        ],
+        "new_resistance_assertion": false,
+        "ordered_locus_names": [],
+        "orf_names": [
+          "FG01000",
+          "FGRAMPH1_01T02507"
+        ],
+        "protein_accession": "UniProtKB:I1RBR4",
+        "protein_name": "Sterol 14-alpha demethylase CYP51A",
+        "reference_organism_name": "Gibberella zeae (strain ATCC MYA-4620 / CBS 123657 / FGSC 9075 / NRRL 31084 / PH-1)",
+        "reference_taxon_id": "NCBITaxon:229533",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Gibberella zeae (strain ATCC MYA-4620 / CBS 123657 / FGSC 9075 / NRRL 31084 / PH-1)",
+        "role": "REVIEWED_GENE_REFERENCE",
+        "sequence_version": 1,
+        "source_species_taxon_id": "NCBITaxon:5518",
+        "species_lineage_verified": true
+      },
+      "reference_taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:43.052441+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/229533",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-6bd68ecae369102087f2743c12dbe4acfb922c193e8ddbc19f817fe68b2550f5.json",
+          "sha256": "c348b59f45381322ca362da40e09cf51d0204fe4ab9cc8e7fd3b6f8498b07673"
+        }
+      },
+      "source_organism_name": "Fusarium graminearum",
+      "source_species_taxon_id": "NCBITaxon:5518",
+      "status": "REVIEWED_REFERENCE"
+    },
+    "ARO:3009534": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "Cyp51",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009534-unreviewed",
+          "result_count": 1,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009534-unreviewed-attempt.json",
+              "sha256": "87b557092673425f40535ef1d5da9847bf8e554eec3242e2edb89f9c3ccc2911"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009534-unreviewed-response.bin",
+              "sha256": "dc4bd5a10b1785a8a7739316589e56f3821565ca70fda3a4fe4f2d3e70ebf937"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009534-unreviewed-receipt.json",
+              "sha256": "70c93c0be49820776167ac648c14eee4cf7f291e962bfbc34031ba8155cde8d2"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:21.669784+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACyp51+AND+taxonomy_id%3A208348+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009534-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009534-reviewed-attempt.json",
+              "sha256": "b86e07355de83e2b67a40a636a7a138c28e934aa64838dfcce4cd706a516083c"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009534-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009534-reviewed-receipt.json",
+              "sha256": "15164631c30f26afdff556f3b79833fef1af71360dbb32da2a75ea11eb194ab8"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:52:25.333466+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ACyp51+AND+taxonomy_id%3A208348+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "antibioticmech:aro-e63825b7e1"
+      ],
+      "reference_context": {
+        "annotation_status": "UNREVIEWED_EXPERIMENTAL_IDENTITY_NOT_ESTABLISHED_BY_THIS_AUDIT",
+        "canonical_reference_established": false,
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 66,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "CYP51"
+        ],
+        "gene_orf_names": [],
+        "new_resistance_assertion": false,
+        "ordered_locus_names": [],
+        "orf_names": [],
+        "protein_accession": "UniProtKB:C6GJL4",
+        "protein_description_flag": null,
+        "protein_names": [
+          {
+            "kind": "submissionNames",
+            "value": "Eburicol 14 alpha-demethylase"
+          }
+        ],
+        "reference_organism_name": "Puccinia triticina",
+        "reference_taxon_id": "NCBITaxon:208348",
+        "reference_taxon_rank": "species",
+        "reference_taxon_scientific_name": "Puccinia triticina",
+        "role": "UNREVIEWED_REFERENCE_CANDIDATE",
+        "sequence_version": 1,
+        "source_species_taxon_id": "NCBITaxon:208348",
+        "species_lineage_verified": true,
+        "unflagged_means_complete": false
+      },
+      "reference_taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-puccinia-triticina-response.bin",
+          "sha256": "1c561f9070062132479f6b048391da2a4f6300177a1aabaf6520406da4f90bcf"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-fungamr-references/name-puccinia-triticina-receipt.json",
+          "sha256": "71de14cf757370287272acb00feafa3852f817fcad7a3e6782261ccb620a7e4a"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T23:50:06.245208+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Puccinia+triticina%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "source_organism_name": "Puccinia triticina",
+      "source_species_taxon_id": "NCBITaxon:208348",
+      "status": "UNREVIEWED_CANDIDATE"
+    },
+    "ARO:3009559": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "FKS1",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009559-unreviewed",
+          "result_count": 10,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009559-unreviewed-attempt.json",
+              "sha256": "9a6b364b8deba6b762a3f4265d6db9a2b5209d49500e06b9a2e0ffc4d7ffed1a"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009559-unreviewed-response.bin",
+              "sha256": "04b0979940db6022e1d8a95e6dbcf24388cd2efcab7e7d8d952da36768384750"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009559-unreviewed-receipt.json",
+              "sha256": "3ed11e7e4e3e09104ec29851217903a46d3216b7e3b38f5d35af66a249e985ba"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:52:26.245197+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFKS1+AND+taxonomy_id%3A5476+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009559-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009559-reviewed-attempt.json",
+              "sha256": "c1f594a8f74b54bb399d01ee37b0b2188ee1462813199155a207205a0805c6ec"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009559-reviewed-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009559-reviewed-receipt.json",
+              "sha256": "6f925a1385e06c53f912d566dbd31e7d59996f80f463ea6fa029c8830ac0e145"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:50:02.581240+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AFKS1+AND+taxonomy_id%3A5476+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_organism_name": "Candida albicans",
+      "source_species_taxon_id": "NCBITaxon:5476",
+      "status": "MULTIPLE_CANDIDATES_NO_SELECTION"
+    },
+    "ARO:3009578": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "ERG11",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009578-unreviewed",
+          "result_count": 2,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009578-unreviewed-attempt.json",
+              "sha256": "d2c89615ebbc254dc9307d70f2a860596a4fd5032872ba53cf532e461c70dd55"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009578-unreviewed-response.bin",
+              "sha256": "55c366f4c6415265cef5db4bdf5e98704e1e27364978811480e6cad25fdd89d5"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009578-unreviewed-receipt.json",
+              "sha256": "6c42291c27b915b2511079504a96764c735a5b7d35ff124031a9bb3c3280b078"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:56:22.455500+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG11+AND+taxonomy_id%3A42374+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009578-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009578-reviewed-attempt.json",
+              "sha256": "93385e406a3891df196ae92adf5b5e79057f9b742de2a04f4e5c71efc0110f66"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009578-reviewed-response.bin",
+              "sha256": "90bb503de06a6744a6133ca51568b96c7469a4272fc2a460bd5843b54488779b"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009578-reviewed-receipt.json",
+              "sha256": "4355a08e6cf3bf9c134abe01b866d36ca965f9e8db11c48458d3161833fbc3d9"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:52:27.070126+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG11+AND+taxonomy_id%3A42374+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 1,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "source_organism_name": "Candida dubliniensis",
+      "source_species_taxon_id": "NCBITaxon:42374",
+      "status": "MULTIPLE_CANDIDATES_NO_SELECTION"
+    },
+    "ARO:3009588": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "ERG11",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009588-reviewed",
+          "result_count": 1,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009588-reviewed-attempt.json",
+              "sha256": "c8f2346f083a59100fca46e33f92081c57b736187b9e24662ad389653bc2ed21"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009588-reviewed-response.bin",
+              "sha256": "27024d457d7d73a8c0ec52bc1f5e05fa6cdd8cd90fae2f64d2649e84ef7cf36c"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009588-reviewed-receipt.json",
+              "sha256": "676b2621d96f2910d076b9687d8d299db909aa36a9ecf6b45892f1a66b57be44"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:49:18.738402+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AERG11+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 0,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_context": {
+        "canonical_reference_established": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 222,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "CYP51",
+          "ERG11"
+        ],
+        "new_resistance_assertion": false,
+        "ordered_locus_names": [
+          "YHR007C"
+        ],
+        "orf_names": [],
+        "protein_accession": "UniProtKB:P10614",
+        "protein_name": "Lanosterol 14-alpha demethylase CYP51",
+        "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "reference_taxon_id": "NCBITaxon:559292",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "role": "REVIEWED_GENE_REFERENCE",
+        "sequence_version": 1,
+        "source_species_taxon_id": "NCBITaxon:4932",
+        "species_lineage_verified": true
+      },
+      "reference_taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+          "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+          "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "source_organism_name": "Saccharomyces cerevisiae",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "status": "REVIEWED_REFERENCE"
+    },
+    "ARO:3009633": {
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "gene": "Ura6",
+      "new_resistance_assertion": false,
+      "queries": [
+        {
+          "key": "gene-3009633-unreviewed",
+          "result_count": 0,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009633-unreviewed-attempt.json",
+              "sha256": "c2c7628e4ced1b989c6a97dd1e6aea060fe0ba0668163ebf567998302e979292"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009633-unreviewed-response.bin",
+              "sha256": "76bf7f3c971f7c343efa61306bce64023c315e42fcfa14f741862a60473a3f72"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009633-unreviewed-receipt.json",
+              "sha256": "53230649867d19f34edffd2763969532b54b392f838537fe6bbbff54c0fb686e"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:52:27.974092+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AUra6+AND+taxonomy_id%3A5207+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 3,
+          "zero_results_establish_absence": false
+        },
+        {
+          "key": "gene-3009633-reviewed",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009633-reviewed-attempt.json",
+              "sha256": "eb04ad9385432efc1c8945fa600d922830a6e23754814ef1bbb4ed7a84349cc0"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009633-reviewed-response.bin",
+              "sha256": "913184363bc0955b88145e9405ae05b6fe0337a912c888c81a03cc5bdf6545d5"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-13-fungamr-references/gene-3009633-reviewed-receipt.json",
+              "sha256": "b5de2112fe7597b75c92008b2e3ec6837a0f2e9dd6541e5ae517fb8b1d98aeba"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-13T23:50:03.452560+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AUra6+AND+taxonomy_id%3A5207+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "suggestions_ignored": 1,
+          "zero_results_establish_absence": false
+        }
+      ],
+      "record_memberships": [
+        "CHEBI:5100"
+      ],
+      "source_organism_name": "Cryptococcus neoformans",
+      "source_species_taxon_id": "NCBITaxon:5207",
+      "status": "NO_EXACT_GENE_RESULTS_NOT_ABSENCE"
+    }
+  }
+}

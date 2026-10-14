@@ -569,3 +569,57 @@ curation_history:
   changes: Restored original YAML key ordering after serialization review. No biological
     fields, source assertions or prior history values changed.
   llm_assisted: true
+- timestamp: '2026-10-14T00:40:22Z'
+  curator: codex
+  action: CURATED_EVIDENCE_SCOPE_DISCUSSION
+  changes: 'Added a qualified URA6 species-scope discussion: independently identified
+    primary evidence uses C. gattii WM276, while the CARD label names C. neoformans.
+    The exact FungAMR row crosswalk remains unverified. Preserved eight CARD assertions,
+    two FUR1 associations and SEEDED status; reference proteins and taxonomy are not
+    tested-allele or phenotype assignments.'
+  llm_assisted: true
+discussions:
+- discussion_id: flucytosine-ura6-source-scope-2026-10-13
+  kind: CURATION_TODO
+  status: OPEN
+  prompt: Resolve the URA6 species-scope discrepancy and exact FungAMR source-row
+    mapping before assigning a tested allele or protein to ARO:3009633.
+  attaches_to:
+  - resistance_mechanisms#ARO:3009633
+  rationale: 'The CARD label names Cryptococcus neoformans, but the independently
+    identified primary study by Chang et al. (2021) places its URA6 comparison in
+    Cryptococcus gattii WM276-derived material. This is a potential source species-scope
+    conflict, not a proven correction to CARD: the exact FungAMR row-to-primary-paper
+    crosswalk has not been verified. Preserve the source-owned assertion as database
+    provenance and do not transfer the WM276 evidence to C. neoformans H99. The separate
+    H99 UniProt identity candidate does not establish an H99 resistance phenotype.'
+  evidence:
+  - reference: DOI:10.1038/s41467-021-23745-1
+    evidence_source: full_text
+    explanation: Chang et al. (2021), Nature Communications, CC BY 4.0. Native JATS
+      paragraph Par6 distinguishes C. neoformans H99 from C. gattii WM276. Paragraph
+      Par12 identifies the URA6 locus CGB_F6195W; Table 2 (Tab2) places its comparison
+      under WM276-derived strains. The reported URA6 comparison does not account for
+      the entire phenotype of the initially observed derivative.
+    notes: Selected native JATS paragraphs and table inspected; the PDF, figures and
+      supplements were not visually reviewed. Independently identified primary evidence,
+      not a verified FungAMR source-row crosswalk.
+  - reference: https://www.uniprot.org/uniprotkb/E6R8Q4/entry
+    explanation: 'Reference identity only: unreviewed UniProtKB:E6R8Q4, entry 91,
+      sequence version 1, release 2026_03, ordered locus CGB_F6195W. Its reference
+      strain is C. gattii WM276 (NCBITaxon:367775), within C. gattii (NCBITaxon:37769),
+      as recorded by UniProt taxonomy. Not an experimental derivative, tested allele,
+      genome assignment or assignment to the C. neoformans CARD term.'
+  - reference: https://www.uniprot.org/uniprotkb/J9VUG0/entry
+    explanation: 'Separate H99 identity candidate only: unreviewed UniProtKB:J9VUG0,
+      entry 71, sequence version 1, release 2026_03, ORF name CNAG_05935. UniProt
+      places the H99 reference strain (NCBITaxon:235443) within C. neoformans (NCBITaxon:5207).
+      The URA6 alias still lacks native primary-table verification; neither identity
+      nor the WM276 experiment supports assigning an H99 resistance phenotype.'
+  notes: All taxonomy identifiers here are reference context from cached UniProt responses,
+    not new NCBI lookups or experimentally tested subject assignments. No source claim
+    is replaced and no resistance assertion, exact variant, sequence, numeric AST,
+    sample or genome accession is added. Eight CARD assertions and two curated FUR1
+    associations remain unchanged; this discussion is not whole-record review.
+  posed_by: codex
+  posed_date: '2026-10-13'

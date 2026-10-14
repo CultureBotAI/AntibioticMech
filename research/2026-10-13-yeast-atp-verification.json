@@ -1,0 +1,161 @@
+{
+  "adversarial_self_review": [
+    "A shared database citation is not primary verification of 19 separate CARD terms.",
+    "The 2022 study was discovered independently; no exact FungAMR row crosswalk is asserted.",
+    "Mitochondrial ATP1 and ATP2 subunit, locus, SGD, version and reference taxonomy remain distinct.",
+    "S288c reference TaxID is not assigned to tested BY4741/BY4742-derived clones or experimental alleles.",
+    "The ATP2 single-mutant growth limitation is retained; multi-gene background effects are not collapsed.",
+    "Repeated clones are not all independent events and proposed interaction edges are not all causal findings.",
+    "The BioProject accession is study context, not an assembly or exact sample-to-allele mapping.",
+    "Doubling-time comparisons are not MIC measurements or clinical categorical resistance.",
+    "The CARD classification and source assertions are unchanged, not silently promoted or deleted.",
+    "New audit unit tests use historical metadata and do not freeze live biological records.",
+    "Offline replay, focused tests and same-agent review are not independent scientific signoff or full QC."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-yeast-atp-context.json",
+      "sha256": "263ddf59bc2a41d75195630720257e16c5098226ed7e2c7d6556e3fbedab07ce"
+    },
+    {
+      "path": "scripts/audit_yeast_atp_context.py",
+      "sha256": "7c598be539b959833cfe78ae697cee9e814cc851cb88ab0098fff6f91ccc5148"
+    },
+    {
+      "path": "tests/test_yeast_atp_context.py",
+      "sha256": "f6dbabfaf9f1c01af9f5ffb596de4aaf61a07172923799e56d756b8f586ad79a"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "227beccd18e46e2af568199a7017d7a6a137d911643d17036b48d0de8fecb648"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-yeast-atp/protected-before.json",
+    "sha256": "e5d6f05e9210118983f2d9717c5505bda45fb6c8680feec686eb4db794e17799"
+  },
+  "baseline_files_checked": 7167,
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "README statistics are current.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "cli_automatic_redirects": false,
+  "current_goal_turn": "PROGRESS",
+  "date": "2026-10-13",
+  "failed_source_retries": 0,
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-atp/focused-tests.xml",
+      "sha256": "b5726a6eb6fae9cf8460e2d37338fe6294250426c35276fc135cf06504a391b9"
+    },
+    "passed": 171,
+    "skipped": 0,
+    "tests": 171
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_this_checkpoint": 0,
+  "ignored_files_included": true,
+  "initial_lint_issues_resolved": "Import ordering and line-length formatting only; data output unchanged.",
+  "initial_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-yeast-atp/initial-tests.xml",
+      "sha256": "112177d52901f05ab158562f7217bab9b2e8d3b971787ddc1f2ec79135515224"
+    },
+    "passed": 74,
+    "skipped": 0,
+    "tests": 74
+  },
+  "issue_1040": "DEFERRED",
+  "native_figures_visually_reviewed": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-yeast-atp-context.json",
+    "scripts/audit_yeast_atp_context.py",
+    "tests/test_yeast_atp_context.py"
+  ],
+  "new_full_authoritative_qc_claimed": false,
+  "offline_replay": {
+    "path": "reports/resistance-grounding-2026-10-13-yeast-atp/offline-replay.json",
+    "sha256": "ad614739bc0ac582d86abdc46cf693658263739ea6a58b964b016a1238c891ea"
+  },
+  "offline_replay_with_http_and_sockets_disabled": true,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "preexisting_uncommitted_work_preserved": true,
+  "preparation_syntax_error_corrected_before_any_baseline_or_request_write": true,
+  "previous_goal_turn": "PROGRESS",
+  "previous_progress_type": "SOURCE_TRIAGE",
+  "primary_full_texts_with_selected_sections_inspected": 1,
+  "prior_receipt_report_pin": "VERIFIED_BEFORE_EDITS_NOW_HISTORICAL",
+  "raw_inputs_curation_schema_pages_embeddings_and_prior_snapshots_unchanged": true,
+  "records_byte_identical": 2939,
+  "records_changed": 0,
+  "records_checked": 2939,
+  "removed_files": [],
+  "request_count": {
+    "ebi_bibliographic_metadata": 1,
+    "ebi_primary_full_text": 1,
+    "new_taxonomy": 0,
+    "new_uniprot_metadata": 2,
+    "publisher_figure": 1,
+    "publisher_html": 1,
+    "web_discovery_search_calls": 3,
+    "web_primary_open_calls": 1
+  },
+  "reuse_terms_review_resumed": false,
+  "source_adoptions": 0,
+  "status": "REFERENCE_GROUNDING_AND_CONDITIONAL_PRIMARY_CONTEXT_VERIFIED",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_checked": 2939,
+    "experimental_allele_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "independent_primary_texts_inspected": 1,
+    "native_figures_reviewed": 1,
+    "new_reference_proteins": 2,
+    "shared_citation_records": 10,
+    "shared_citation_terms": 19,
+    "whole_record_reviews_completed": 0
+  },
+  "supplementary_files_reviewed": 0,
+  "web_errors_are_source_http_access_holds": false,
+  "web_find_and_click_resolution_errors": 2,
+  "web_public_publisher_redirect_observed": true,
+  "whole_record_reviews_completed": 0
+}

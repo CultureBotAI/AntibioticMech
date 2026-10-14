@@ -99,7 +99,7 @@ def project_annotations(graph, labels):
     return result
 
 
-def read_corpus(root, census_path):
+def read_corpus(root, census_path, *, record_resolver=None):
     with census_path.open(newline="") as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
     if (not census or len({r["identifier"] for r in census}) != len(census)
@@ -109,7 +109,13 @@ def read_corpus(root, census_path):
         raise ValueError("census does not uniquely cover every current record")
     labels, memberships, records = {}, defaultdict(list), []
     for row in census:
-        path = reference.check_pin(root, {"path": row["path"], "sha256": row["record_sha256"]})
+        if record_resolver is None:
+            path = reference.check_pin(root, {"path": row["path"], "sha256": row["record_sha256"]})
+        else:
+            # Historical replay is explicit; normal census validation stays tied to live bytes.
+            path = record_resolver(root, row)
+            if reference.digest(path) != row["record_sha256"]:
+                raise ValueError("resolved historical record checksum changed")
         record = load_record(path)
         if (record["identifier"] != row["identifier"]
                 or record["chemical_structure"]["standard_inchi_key"] != row["standard_inchi_key"]):

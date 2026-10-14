@@ -1,0 +1,283 @@
+{
+  "assets": {
+    "figure-s3": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/figure-s3-attempt.json",
+        "sha256": "b0048464adc588a2c2a047f394c395f898d58b8cced09e1928937a01619ddf32"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/figure-s3-receipt.json",
+        "sha256": "4f7a42f4a9c5c327c62e2f5db6a08d90cb5ca33099f3eb321d156a9c4533c3d3"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/figure-s3-response.bin",
+        "sha256": "3a5b1654bf8440b9186e9f2589f3b061a68ac7d1fcd0950dad48ec103b9ad761"
+      },
+      "retrieved_at": "2026-10-13T22:56:51.111425+00:00",
+      "status": 200,
+      "url_without_query": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/g3journal/12/11/10.1093_g3journal_jkac246/1/jkac246_supplementary_figure_s3.jpeg"
+    },
+    "file-s1": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/file-s1-attempt.json",
+        "sha256": "134ec4c13427897a0f7604d739dde8df62f165f6889129732cb7d35dbda0db3e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/file-s1-receipt.json",
+        "sha256": "ef3ca3617d74f0b1954c3b452e9d0c543e6a8aa1e3bd75392884148c7a19157b"
+      },
+      "response": {
+        "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/file-s1-response.bin",
+        "sha256": "2cadbada501df6e5e73afef7991bc08dcc1b24e79e87808e4729bdf1e4a54084"
+      },
+      "retrieved_at": "2026-10-13T22:57:07.373249+00:00",
+      "status": 200,
+      "url_without_query": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/g3journal/12/11/10.1093_g3journal_jkac246/1/jkac246_supplementary_file_s1.xlsx"
+    }
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-13-yeast-atp-supplement/cohort.json",
+    "sha256": "1d80e274856b708fd6b43a059891d5ace6827243c5c4bc98fdfda197f8878c51"
+  },
+  "constraints": {
+    "failed_source_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "sequences_variants_protocols_exported": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-13",
+  "discussion": {
+    "attaches_to": [
+      "resistance_mechanisms#ARO:3009347",
+      "resistance_mechanisms#ARO:3009350"
+    ],
+    "discussion_id": "clotrimazole-atp-source-scope-2026-10-13",
+    "evidence": [
+      {
+        "evidence_source": "full_text",
+        "explanation": "Taylor et al. (2022), G3, CC BY 4.0: Results on epistatic interactions, Figure 5 and Supplementary Figure S3. The ATP2 comparison concerns growth curves and doubling time, not MIC or clinical susceptibility categories. Clone-level MIC data are supplied separately in Supplementary Table S4; they are not isolated allele-effect measurements.",
+        "notes": "Selected source cells inspected read-only: Supplementary File S1, Table S1!A1:B7 (background labels), Table S6 columns I/K/L (gene, independence and background), and Table S16!A1:CS4 (growth-comparison metadata). The workbook was not rendered and curves were not refitted. BY-derived experimental subjects are not exact S288c reference entries.",
+        "reference": "DOI:10.1093/g3journal/jkac246"
+      },
+      {
+        "explanation": "Reference ATP1 only: UniProtKB:P07251, entry 238, sequence version 5, release 2026_03; YBL099W, SGD:S000000195. Not a tested resistance allele.",
+        "reference": "https://www.uniprot.org/uniprotkb/P07251/entry"
+      },
+      {
+        "explanation": "Reference ATP2 only: UniProtKB:P00830, entry 242, sequence version 2, release 2026_03; YJR121W, SGD:S000003882. Not a tested resistance allele.",
+        "reference": "https://www.uniprot.org/uniprotkb/P00830/entry"
+      }
+    ],
+    "kind": "CURATION_TODO",
+    "notes": "Reference taxonomy from UniProt: NCBITaxon:559292 is the S288c reference strain, within Saccharomyces cerevisiae (NCBITaxon:4932). Neither identifier establishes an exact tested derivative or genome. No resistance claim, subject accession, numeric AST or exact variant is added by this discussion. Source-owned claims and whole-record review status are unchanged.",
+    "posed_by": "codex",
+    "posed_date": "2026-10-13",
+    "prompt": "Reconcile the ATP1/ATP2 CARD assertions with exact source-row, experimental-background and endpoint evidence before assigning tested alleles or interpreting target alteration mechanistically.",
+    "rationale": "Taylor et al. (2022) report ATP1/ATP2 changes in evolved multi-gene laboratory yeast backgrounds. Their tested ATP2 single mutants grew more slowly than the wild-type comparator in the reported growth analysis. Combination effects depend on background and condition; this is neither proof of a standalone ATP2 resistance effect nor evidence against every ATP2 allele. The exact FungAMR-row crosswalk to this independently identified study remains unresolved. Retain the CARD assertions as database provenance, not a newly verified direct ATP-synthase drug target.",
+    "status": "OPEN"
+  },
+  "existing_card_assertions_preserved": 4,
+  "fixture": {
+    "path": "tests/fixtures/clotrimazole-before-2026-10-13.yaml",
+    "sha256": "a20523175943481166351a5178707948ef52441c2a907cf1a286695f66ad95a6"
+  },
+  "full_corpus_goal_status": "OPEN",
+  "fungamr_source_row_crosswalk_verified": false,
+  "new_experimental_allele_assignments": 0,
+  "new_resistance_assertions": 0,
+  "primary": {
+    "attribution": "Taylor et al. (2022), G3, CC BY 4.0",
+    "doi": "10.1093/g3journal/jkac246",
+    "figure_s3_interpretation": "ATP2 single-mutant curves do not establish a standalone growth benefit; multi-gene and condition-specific effects remain distinct.",
+    "growth_curves_refitted": false,
+    "growth_genotype_labels": [
+      "ATP2",
+      "ERG25",
+      "ERG25-ATP2",
+      "ERG25-ROX1",
+      "ROX1",
+      "WT"
+    ],
+    "mic_values_converted_or_curated": false,
+    "new_native_figure_visually_reviewed": "Supplementary Figure S3",
+    "selected_sections_reinspected": [
+      "sec3",
+      "sec27",
+      "sec29",
+      "sec35"
+    ],
+    "source_gene_rows_are_independent_mutation_event_counts": false,
+    "supplement_cells": {
+      "gene_memberships": [
+        {
+          "background_cell": "L192",
+          "gene": "ATP2",
+          "gene_cell": "I192",
+          "independence_cell": "K192",
+          "source_background_label": "S288c",
+          "source_independence_marker": "yes"
+        },
+        {
+          "background_cell": "L590",
+          "gene": "ATP1",
+          "gene_cell": "I590",
+          "independence_cell": "K590",
+          "source_background_label": "S288c",
+          "source_independence_marker": "no"
+        },
+        {
+          "background_cell": "L601",
+          "gene": "ATP1",
+          "gene_cell": "I601",
+          "independence_cell": "K601",
+          "source_background_label": "S288c",
+          "source_independence_marker": "no"
+        },
+        {
+          "background_cell": "L613",
+          "gene": "ATP1",
+          "gene_cell": "I613",
+          "independence_cell": "K613",
+          "source_background_label": "S288c",
+          "source_independence_marker": "no"
+        },
+        {
+          "background_cell": "L653",
+          "gene": "ATP2",
+          "gene_cell": "I653",
+          "independence_cell": "K653",
+          "source_background_label": "S288c",
+          "source_independence_marker": "yes"
+        },
+        {
+          "background_cell": "L672",
+          "gene": "ATP1",
+          "gene_cell": "I672",
+          "independence_cell": "K672",
+          "source_background_label": "S288c",
+          "source_independence_marker": "no"
+        },
+        {
+          "background_cell": "L682",
+          "gene": "ATP1",
+          "gene_cell": "I682",
+          "independence_cell": "K682",
+          "source_background_label": "S288c",
+          "source_independence_marker": "no"
+        },
+        {
+          "background_cell": "L791",
+          "gene": "ATP2",
+          "gene_cell": "I791",
+          "independence_cell": "K791",
+          "source_background_label": "S288c",
+          "source_independence_marker": "yes"
+        },
+        {
+          "background_cell": "L811",
+          "gene": "ATP2",
+          "gene_cell": "I811",
+          "independence_cell": "K811",
+          "source_background_label": "S288c",
+          "source_independence_marker": "yes"
+        },
+        {
+          "background_cell": "L831",
+          "gene": "ATP1",
+          "gene_cell": "I831",
+          "independence_cell": "K831",
+          "source_background_label": "S288c",
+          "source_independence_marker": "yes"
+        },
+        {
+          "background_cell": "L95",
+          "gene": "ATP1",
+          "gene_cell": "I95",
+          "independence_cell": "K95",
+          "source_background_label": "S288c",
+          "source_independence_marker": "yes"
+        }
+      ],
+      "growth_metadata": "Table S16!A1:CS4",
+      "mic_header_only": "Table S4!A1:G1",
+      "readme": [
+        "readme!A1",
+        "readme!A4",
+        "readme!A6",
+        "readme!A16"
+      ],
+      "strain_labels": "Table S1!A1:B7"
+    },
+    "whole_supplement_review_complete": false,
+    "workbook_modified": false,
+    "workbook_rendered": false
+  },
+  "prior_context": {
+    "path": "research/2026-10-13-yeast-atp-context.json",
+    "sha256": "263ddf59bc2a41d75195630720257e16c5098226ed7e2c7d6556e3fbedab07ce"
+  },
+  "record_before": {
+    "path": "data/antibiotics/antifungal/clotrimazole.yaml",
+    "sha256": "a20523175943481166351a5178707948ef52441c2a907cf1a286695f66ad95a6"
+  },
+  "reference_grounding": {
+    "ATP1": {
+      "database_paper_in_bibliography": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 238,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene": "ATP1",
+      "gene_names": [
+        "ATP1"
+      ],
+      "independent_primary_in_bibliography": false,
+      "ordered_locus_names": [
+        "YBL099W"
+      ],
+      "protein_accession": "UniProtKB:P07251",
+      "protein_name": "ATP synthase subunit alpha, mitochondrial",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_IDENTITY_NOT_EXPERIMENTAL_ALLELE_OR_PHENOTYPE",
+      "sequence_version": 5,
+      "sgd_id": "S000000195",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "ATP2": {
+      "database_paper_in_bibliography": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 242,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene": "ATP2",
+      "gene_names": [
+        "ATP2"
+      ],
+      "independent_primary_in_bibliography": false,
+      "ordered_locus_names": [
+        "YJR121W"
+      ],
+      "protein_accession": "UniProtKB:P00830",
+      "protein_name": "ATP synthase subunit beta, mitochondrial",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "REFERENCE_IDENTITY_NOT_EXPERIMENTAL_ALLELE_OR_PHENOTYPE",
+      "sequence_version": 2,
+      "sgd_id": "S000003882",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "scope": "CONDITIONAL_EVIDENCE_DISCUSSION_NOT_NEW_RESISTANCE_ASSERTION",
+  "whole_record_reviews_completed": 0
+}

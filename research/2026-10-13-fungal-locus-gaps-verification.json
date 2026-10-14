@@ -1,0 +1,141 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-fungal-locus-gaps.json",
+      "sha256": "c960ec29f600eafa9cfb22d5c60b530f07660cccd41c2dcec656b143da7b8d0f"
+    },
+    {
+      "path": "scripts/audit_fungal_locus_gaps.py",
+      "sha256": "419276468373fca8f37759aea6c7c07c1e2bb84bf993f494f6130f7264f69ad0"
+    },
+    {
+      "path": "tests/test_fungal_locus_gaps.py",
+      "sha256": "82bd143a1d210774f81b5f0a46f92dbca2ac975e257eb9e96246b9dd8dd4561b"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "8fc003dc38fb6fdb34e694c70df5c29cd6be27d3b31d73ea6879c010fe7a24d0"
+    }
+  ],
+  "checks": {
+    "focused_tests": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 286
+    },
+    "full_qc_note": "Research-only; prior curation QC and its disclosed dependency deviation remain historical.",
+    "full_qc_rerun": false,
+    "git_diff_check": "PASS",
+    "native_request_hosts": {
+      "rest.uniprot.org": 5,
+      "www.csbj.org": 1,
+      "www.ebi.ac.uk": 3
+    },
+    "native_request_receipts_verified": 9,
+    "native_statuses": {
+      "200": 7,
+      "301": 1,
+      "500": 1
+    },
+    "pdf_figures_supplements_visually_inspected": false,
+    "primary_medium": "Native JATS XML; selected Results, identity paragraphs and tables",
+    "socket_and_http_disabled_replay": "PASS",
+    "test_result": {
+      "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/focused-tests.xml",
+      "sha256": "4e160cb56dcc57ee55dda4a51c80b7549fd9470988550e84f3563cab240b14ee"
+    },
+    "web_queries": 3,
+    "web_tool_calls": {
+      "search": 2
+    }
+  },
+  "classification": "PROGRESS",
+  "constraints": {
+    "failed_request_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequence_requests": 0,
+    "source_adoptions": 0
+  },
+  "git_head": "a919685f72e8e07624ffbf8ee32211913c5da1bd",
+  "goal_status": "OPEN",
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-fungal-locus-gaps/protected-before.json",
+      "sha256": "ffad898976c5cd7931301f51c8ef423b92761fae0bdbae17b3ad2eff67d9b8b9"
+    },
+    "baseline_files": 7191,
+    "biological_records_byte_identical": 2939,
+    "byte_identical_baseline_files": 7190,
+    "changed_baseline_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_artifacts_changed": 0,
+    "generated_pages_changed": 0,
+    "ignored_files_included": true,
+    "new_files_before_receipt": [
+      "research/2026-10-13-fungal-locus-gaps.json",
+      "scripts/audit_fungal_locus_gaps.py",
+      "tests/test_fungal_locus_gaps.py"
+    ],
+    "source_inventories_changed": 0
+  },
+  "prior_artifact_pins_superseded": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "prior_artifact_pins_unchanged": 3,
+  "prior_verification": {
+    "path": "research/2026-10-13-caspofungin-verification.json",
+    "sha256": "784463eb945f48debc08c5debb62b56bd16a0a5d9405040759af6a75d2e3fb33"
+  },
+  "review": {
+    "findings": [
+      {
+        "disposition": "Kept the WM276 reference separate; did not transfer its phenotype or accession to the C. neoformans term.",
+        "finding": "The identified URA6 primary comparison is in a different species from the CARD label."
+      },
+      {
+        "disposition": "Retained J9VUG0 as a reference candidate with native alias verification still open.",
+        "finding": "H99 accession and a model-derived gene alias do not establish an H99 resistance phenotype."
+      },
+      {
+        "disposition": "Used explicit locus and accession leads while preserving ordered-locus versus ORF-name fields.",
+        "finding": "An empty symbol query can miss locus-only UniProt entries."
+      },
+      {
+        "disposition": "Cited the actual XML table identity; did not silently correct the source or extract numeric values.",
+        "finding": "The CYP51 binding paragraph refers to Table 3, but native XML labels the binding table t4 as Table 4."
+      },
+      {
+        "disposition": "Validated the URA6 row's WM276 group structurally instead of treating every heading as a one-cell row.",
+        "finding": "Primary table group headings mix colspan and separate empty cells."
+      },
+      {
+        "disposition": "Preserved distinct receipts and held both unread sources; no retries or alternate routes.",
+        "finding": "An HTTP 500 and an unfollowed HTTP 301 have different meanings."
+      }
+    ],
+    "independent_scientific_review": false,
+    "scope": "Same-agent adversarial checks and source inspection; replay is not independent biological validation."
+  },
+  "scope": "THREE_REFERENCE_GAPS_AND_SPECIES_SCOPE_RISK_NOT_WHOLE_RECORD_SIGNOFF",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_hash_verified": 2939,
+    "different_species_primary_references": 1,
+    "exact_alleles_assigned": 0,
+    "native_primary_articles_read": 2,
+    "new_h99_identity_candidates": 1,
+    "new_resistance_assertions": 0,
+    "new_taxonomy_queries": 1,
+    "new_uniprot_queries": 4,
+    "taxonomy_caches_reused": 1,
+    "terms_investigated": 3,
+    "unread_primary_requests_held": 2,
+    "whole_record_reviews_completed": 0
+  },
+  "verified_at": "2026-10-14T00:34:22.946692+00:00",
+  "whole_record_reviews_completed": 0
+}

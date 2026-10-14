@@ -13,6 +13,7 @@ from antibioticmech.validation.write_validated import emit_antibiotic_yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
+from resistance_checkpoint_records import checkpoint_path  # noqa: E402
 from seed_from_sources import merge_with_existing  # noqa: E402
 
 
@@ -195,9 +196,12 @@ def test_flucytosine_fur1_curator_and_card_slices_survive_reseeding():
 
 
 def test_flucytosine_fur1_keeps_original_yaml_order_outside_the_curation_delta():
-    doc = flucytosine()
     snapshot = json.loads((ROOT / "research/2026-10-08-flucytosine-fur1-grounding.json").read_bytes())
-    path = ROOT / snapshot["record"]["path"]
+    live_path = ROOT / snapshot["record"]["path"]
+    assert emit_antibiotic_yaml(flucytosine()).encode() == live_path.read_bytes()
+    # Reconstruct this historical transition, not later curation on the live record.
+    path = checkpoint_path(ROOT, {**snapshot["record"], "sha256": snapshot["record"]["after_sha256"]})
+    doc = load_record(path)
     assert emit_antibiotic_yaml(doc).encode() == path.read_bytes()
     doc["resistance_mechanisms"] = doc["resistance_mechanisms"][:8]
     doc["curation_history"] = doc["curation_history"][:-2]

@@ -153,6 +153,27 @@ def test_only_source_owned_claims_are_citation_audit_members(corpus):
     assert memberships == {TID: ["CHEBI:1"]}
 
 
+def test_historical_resolver_is_opt_in_and_still_hash_checked(corpus):
+    root, census, live, _ = corpus
+    snapshot = root / "historical.yaml"
+    snapshot.write_bytes(live.read_bytes())
+    expected = audit.read_corpus(root, census)
+    live.write_text("Later live curation\n")
+    with pytest.raises(ValueError, match="checksum"):
+        audit.read_corpus(root, census)
+    calls = []
+
+    def resolver(base, row):
+        calls.append((base, row["identifier"], row["path"]))
+        return snapshot
+
+    assert audit.read_corpus(root, census, record_resolver=resolver) == expected
+    assert calls == [(root, "CHEBI:1", "data/antibiotics/fixture.yaml")]
+    snapshot.write_text("Corrupt historical record\n")
+    with pytest.raises(ValueError, match="checksum"):
+        audit.read_corpus(root, census, record_resolver=resolver)
+
+
 @pytest.mark.parametrize("mutation", ["hash", "identifier", "structure", "ignored_extra", "duplicate"])
 def test_whole_corpus_census_guard(corpus, mutation):
     root, census, path, record = corpus

@@ -1,0 +1,911 @@
+{
+  "attribution": "CARD/ARO and UniProt Consortium (release 2026_03), CC BY 4.0; source assertions remain source-owned.",
+  "constraints": {
+    "biological_curation": false,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "source_adoption": false
+  },
+  "database_citation": "PMID:40790106",
+  "database_doi": "10.1038/s41564-025-02084-7",
+  "date": "2026-10-13",
+  "inputs": {
+    "candidate_search": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-cohort/cached-identity-candidates.json",
+      "sha256": "a7b2b440359acc1e1f32316d7d1f0a0a2d3b7703311d71e066c7eca23fe28ff2"
+    },
+    "census": {
+      "path": "research/2026-10-13-yeast-atp-supplement-resistance-grounding.tsv",
+      "sha256": "645f772ce07961c3c19ea0c925d3808abf10919c6fb769e5f03669b3204b62a8"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-cohort/cohort.json",
+      "sha256": "71039c8e137ca73bf66821ea0d5afdf5f00e3c9264e6553e1ce27aa90350c6fb"
+    },
+    "fks1_alias_lead": {
+      "path": "research/2026-10-08-echinocandin-reference-context.json",
+      "sha256": "4e04802dc4c5a8713797d896b1216368db038e406ca4dbd7cef3944ddd0b1f66"
+    },
+    "legacy_explicit_xrefs": {
+      "path": "research/2026-10-07-card-reference-grounding.json",
+      "sha256": "bf01b0fef65240d2d1daf8298398ae171194420c0093a7aad2c9ba318b9b5961"
+    },
+    "selection": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-cohort/reference-selection.json",
+      "sha256": "e2c006fa564d3490ac45674f2d9ab6f71593c2bdae1072377483bdbf8f386067"
+    }
+  },
+  "limitations": [
+    "Cached gene/species identity does not establish a tested allele or resistance to a particular drug.",
+    "No exact FungAMR row-to-primary crosswalk is verified by this audit.",
+    "Cache discovery included ignored files but was lexical and limited to JSON and response-bin files; missing candidates do not establish absence.",
+    "No new primary experiments, sequences, variant specifications, numeric AST, or genome assignments are exported.",
+    "This is same-agent review and offline metadata validation, not independent scientific signoff.",
+    "All 2939 records remain in scope; NCBI requests and issue 1040 remain deferred."
+  ],
+  "new_network_requests": 0,
+  "records": [
+    {
+      "citation_terms": [
+        "ARO:3009287"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:55346",
+      "label": "anidulafungin",
+      "path": "data/antibiotics/antifungal/anidulafungin.yaml",
+      "sha256": "e29724e94ef2922be6d6afaaf181f2a6052f6a95e1c7daf5aec031dea2bb6cae",
+      "standard_inchi_key": "JHVAMHSQVVQIOT-MFAJLEFUSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009372",
+        "ARO:3009390"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:474180",
+      "label": "caspofungin",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "sha256": "40e52f8e7a1ef2388925e682bed0241d368812c5b71c9299edacf7361966f36b",
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009347",
+        "ARO:3009350"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:3764",
+      "label": "clotrimazole",
+      "path": "data/antibiotics/antifungal/clotrimazole.yaml",
+      "sha256": "3875eec5827ded3ae1291d6b265a71b065d66a0143d9c605fbb7236b2edf4678",
+      "standard_inchi_key": "VNFPBHJOKIVQEB-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009534"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "antibioticmech:aro-e63825b7e1",
+      "label": "epoxiconazole",
+      "path": "data/antibiotics/antifungal/epoxiconazole.yaml",
+      "sha256": "323f9511185c623815d33900730a37d6e09bbd88bf2e0ec38556a783a2b41466",
+      "standard_inchi_key": "ZMYFCFLJBGAQRS-IAGOWNOFSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009213",
+        "ARO:3009239",
+        "ARO:3009396",
+        "ARO:3009397",
+        "ARO:3009559",
+        "ARO:3009578",
+        "ARO:3009588"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:46081",
+      "label": "fluconazole",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009633"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:5100",
+      "label": "flucytosine",
+      "path": "data/antibiotics/antifungal/flucytosine.yaml",
+      "sha256": "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3ed7ada",
+      "standard_inchi_key": "XRECTZIEBJDKEO-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009575"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:64355",
+      "label": "posaconazole",
+      "path": "data/antibiotics/antifungal/posaconazole.yaml",
+      "sha256": "41ff3ee41d2ce4d716a7192152f5e7cb54bfd991f5edafe7de462daf9550d067",
+      "standard_inchi_key": "RAGOYPUPXAKGKH-XAKZXMRKSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009407",
+        "ARO:3009486"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:83779",
+      "label": "tebuconazole",
+      "path": "data/antibiotics/antifungal/tebuconazole.yaml",
+      "sha256": "0c6380aed52552a312323986c4baddb7f3e065d9c553876b127bbdf357db6dda",
+      "standard_inchi_key": "PXMNMQRDXWABCY-UHFFFAOYSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009201"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:10023",
+      "label": "voriconazole",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N"
+    },
+    {
+      "citation_terms": [
+        "ARO:3009437"
+      ],
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "antibioticmech:aro-2e3b34cc67",
+      "label": "tacrolimus",
+      "path": "data/antibiotics/unspecified/tacrolimus.yaml",
+      "sha256": "c78b76727b23e17eb186b45746e63a146fc21e4e1608b6c09591822e21154e08",
+      "standard_inchi_key": "QJJXYPPXXYFBGM-LFZNUXCKSA-N"
+    }
+  ],
+  "review_findings": [
+    {
+      "action": "Preserve the edge pending source-row and primary-evidence review; cross-resistance is not excluded.",
+      "edge_drug": "tebuconazole",
+      "id": "fungamr-cohort-drug-label-discrepancy",
+      "label_drug": "voriconazole",
+      "status": "OPEN_SOURCE_CONTEXT_REQUIRED",
+      "term": "ARO:3009486"
+    },
+    {
+      "action": "Do not fill experimental protein, strain, genome or phenotype slots from these references.",
+      "id": "fungamr-cohort-reference-not-allele",
+      "status": "SCOPE_GUARD_APPLIED",
+      "terms": [
+        "ARO:3009201",
+        "ARO:3009347",
+        "ARO:3009350",
+        "ARO:3009397",
+        "ARO:3009437",
+        "ARO:3009575"
+      ]
+    },
+    {
+      "action": "Existing CaFKS1/GSC1 context is an alias lead, not a verified mapping for this term or its drug claim.",
+      "id": "fungamr-cohort-fks1-alias",
+      "status": "OPEN_ALIAS_AND_PRIMARY_CONTEXT",
+      "term": "ARO:3009559"
+    }
+  ],
+  "scope": "SHARED_DATABASE_CITATION_REFERENCE_RECONCILIATION",
+  "summary": {
+    "biological_records_changed": 0,
+    "citation_terms": 19,
+    "corpus_records_hash_verified": 2939,
+    "exact_alleles_assigned": 0,
+    "initial_explicit_card_xref_candidates": 0,
+    "new_resistance_assertions": 0,
+    "records_in_cohort": 10,
+    "reference_contexts_reconciled": 6,
+    "terms_without_reference_resolution_here": 13,
+    "whole_record_reviews_completed": 0
+  },
+  "terms": {
+    "ARO:3009201": {
+      "definition_citation_ids": [
+        "PMID:25896700",
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "protein_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-21907818-response.bin",
+          "sha256": "f7c56f94390887ccaed5d75904aa5e01964b92bb99c64342652cbe225512c6a9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-21907818-receipt.json",
+          "sha256": "9bb03afb6b5995536ceda55c02b072b5187cd0cd174cf81a4a4d547aea0fc678"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T12:47:44.918674+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A21907818&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "record_memberships": [
+        "CHEBI:10023"
+      ],
+      "reference": {
+        "database_paper_in_bibliography": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 146,
+        "exact_card_term_mapping_asserted": false,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "cyp51A",
+          "erg11A"
+        ],
+        "ordered_locus_names": [],
+        "protein_accession": "UniProtKB:Q4WNT5",
+        "protein_name": "Sterol 14-alpha demethylase cyp51A",
+        "reference_organism_name": "Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)",
+        "reference_taxon_id": "NCBITaxon:330879",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)",
+        "role": "REFERENCE_IDENTITY_ONLY_NOT_TESTED_ALLELE_OR_DRUG_EVIDENCE",
+        "sequence_version": 1,
+        "source_species_taxon_id": "NCBITaxon:746128",
+        "species_lineage_verified": true
+      },
+      "reference_status": "GENE_SPECIES_REFERENCE_NOT_EXACT_RESISTANCE_MAPPING",
+      "source_antibiotic_id": "ARO:3007512",
+      "source_antibiotic_name": "voriconazole",
+      "source_edge_sha256": "cc6d9af767a219b0dcf1354579d7b0f43ebbcd2a7db88ebe7e02f720e056bdb5",
+      "source_gene": "cyp51a",
+      "source_label": "Aspergillus fumigatus cyp51a with mutations conferring resistance to voriconazole",
+      "source_organism_name": "Aspergillus fumigatus",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:46.843661+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/330879",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-82e6d6d5607f9791cd3fcfcc2b34f722fb8a90a5fae76b37107735d592a60f43.json",
+          "sha256": "d88fee2b9e355efb3fe3efa0a9d22130d189cab6f9957a6719965029406e875b"
+        }
+      },
+      "whole_record_review_complete": false
+    },
+    "ARO:3009213": {
+      "definition_citation_ids": [
+        "PMID:27988485",
+        "PMID:29593275",
+        "PMID:30082281",
+        "PMID:34060660",
+        "PMID:34633842",
+        "PMID:37026059",
+        "PMID:39472696",
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_antibiotic_name": "fluconazole",
+      "source_edge_sha256": "b7f6c0b34efb49100fd1a2c696b3bf664dad54a55aeb4d0fb028a2dd2ac0824f",
+      "source_gene": "ERG11",
+      "source_label": "Candida auris ERG11 lanosterol 14-alpha-demethylase with mutations conferring resistance to fluconazole",
+      "source_organism_name": "Candida auris",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009239": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_antibiotic_name": "fluconazole",
+      "source_edge_sha256": "5fcf8c39ac5199369cc2d045ec080d581c865e5920cbe29d38c1f70f502ccef9",
+      "source_gene": "mrr2",
+      "source_label": "Candida albicans mrr2 with mutations associated with resistance to fluconazole",
+      "source_organism_name": "Candida albicans",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009287": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:55346"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007503",
+      "source_antibiotic_name": "anidulafungin",
+      "source_edge_sha256": "42532cea73a73ae127a8f127ee17c8c10a40bd9b3c27bce428e361d82960f994",
+      "source_gene": "Fks1",
+      "source_label": "Pichia kudriavzevii Fks1 beta-1,3-glucan synthase with mutations associated with resistance to anidulafungin",
+      "source_organism_name": "Pichia kudriavzevii",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009347": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "protein_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-atp/atp1-response.bin",
+          "sha256": "656f9965456e5314dee54dcf3e1370c82af97ec7941b271468af499a9168ece6"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-atp/atp1-receipt.json",
+          "sha256": "57f8991912d9375375c11af4ba41f46c8fac45d44c976ea0eea5d28985a189f1"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T22:41:53.994450+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AATP1+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "record_memberships": [
+        "CHEBI:3764"
+      ],
+      "reference": {
+        "database_paper_in_bibliography": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 238,
+        "exact_card_term_mapping_asserted": false,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "ATP1"
+        ],
+        "ordered_locus_names": [
+          "YBL099W"
+        ],
+        "protein_accession": "UniProtKB:P07251",
+        "protein_name": "ATP synthase subunit alpha, mitochondrial",
+        "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "reference_taxon_id": "NCBITaxon:559292",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "role": "REFERENCE_IDENTITY_ONLY_NOT_TESTED_ALLELE_OR_DRUG_EVIDENCE",
+        "sequence_version": 5,
+        "source_species_taxon_id": "NCBITaxon:4932",
+        "species_lineage_verified": true
+      },
+      "reference_status": "GENE_SPECIES_REFERENCE_NOT_EXACT_RESISTANCE_MAPPING",
+      "source_antibiotic_id": "ARO:3007516",
+      "source_antibiotic_name": "clotrimazole",
+      "source_edge_sha256": "67928748965d1a06f71e001fb142705e0a6b14402a31bb39d32f3873c70d68f1",
+      "source_gene": "ATP1",
+      "source_label": "Saccharomyces cerevisiae ATP1 with mutations conferring resistance to clotrimazole",
+      "source_organism_name": "Saccharomyces cerevisiae",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+          "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+          "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "whole_record_review_complete": false
+    },
+    "ARO:3009350": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "protein_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-atp/atp2-response.bin",
+          "sha256": "29399783ba380d0667f245206c60ce3aed89613d96e94256646e7dc8934bb941"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-yeast-atp/atp2-receipt.json",
+          "sha256": "841c7acd3b0e290bb723321e60ac1b6616eb40eb99e4f5d8ee6a32a4122ef38e"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T22:42:26.749657+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AATP2+AND+organism_id%3A559292+AND+reviewed%3Atrue&format=json&size=50&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "record_memberships": [
+        "CHEBI:3764"
+      ],
+      "reference": {
+        "database_paper_in_bibliography": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 242,
+        "exact_card_term_mapping_asserted": false,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "ATP2"
+        ],
+        "ordered_locus_names": [
+          "YJR121W"
+        ],
+        "protein_accession": "UniProtKB:P00830",
+        "protein_name": "ATP synthase subunit beta, mitochondrial",
+        "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "reference_taxon_id": "NCBITaxon:559292",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "role": "REFERENCE_IDENTITY_ONLY_NOT_TESTED_ALLELE_OR_DRUG_EVIDENCE",
+        "sequence_version": 2,
+        "source_species_taxon_id": "NCBITaxon:4932",
+        "species_lineage_verified": true
+      },
+      "reference_status": "GENE_SPECIES_REFERENCE_NOT_EXACT_RESISTANCE_MAPPING",
+      "source_antibiotic_id": "ARO:3007516",
+      "source_antibiotic_name": "clotrimazole",
+      "source_edge_sha256": "afc44295b7a14b394924ca240ce5add44595c03b120a49b6b2e7802ff41b48f3",
+      "source_gene": "ATP2",
+      "source_label": "Saccharomyces cerevisiae ATP2 with mutations conferring resistance to clotrimazole",
+      "source_organism_name": "Saccharomyces cerevisiae",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+          "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+          "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/559292"
+      },
+      "whole_record_review_complete": false
+    },
+    "ARO:3009372": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:474180"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007501",
+      "source_antibiotic_name": "caspofungin",
+      "source_edge_sha256": "4faa123137b61e36a280931fb49f901b407d10f224194844b47d9fd1d2f1c8e5",
+      "source_gene": "MRPL11",
+      "source_label": "Nakaseomyces glabratus MRPL11 mutations with resistance to caspofungin",
+      "source_organism_name": "Nakaseomyces glabratus",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009390": {
+      "definition_citation_ids": [
+        "PMID:22615574",
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:474180"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007501",
+      "source_antibiotic_name": "caspofungin",
+      "source_edge_sha256": "de32c16a714374c0096019a51390667b7dc360481c19c012cc81f1694866a678",
+      "source_gene": "Cdc6",
+      "source_label": "Nakaseomyces glabratus Cdc6 with mutations conferring resistance against caspofungin",
+      "source_organism_name": "Nakaseomyces glabratus",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009396": {
+      "definition_citation_ids": [
+        "PMID:24867987",
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_antibiotic_name": "fluconazole",
+      "source_edge_sha256": "6af0492905806db91a715960fa9ab6d395cc0648f36d7f61992ae4369434b507",
+      "source_gene": "ERG11",
+      "source_label": "Pichia kudriavzevii ERG11 lanosterol 14-alpha-demethylase with mutations conferring resistance to fluconazole",
+      "source_organism_name": "Pichia kudriavzevii",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009397": {
+      "definition_citation_ids": [
+        "PMID:25132632",
+        "PMID:34699784",
+        "PMID:39354378",
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "protein_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:12.208720+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AO42772+OR+accession%3AP02557+OR+accession%3AP05220+OR+accession%3AP0C431+OR+accession%3AP10613+OR+accession%3AP10653+OR+accession%3AP14263+OR+accession%3AP32420+OR+accession%3AP38631+OR+accession%3AP38637+OR+accession%3AP50859+OR+accession%3AP53373+OR+accession%3AP53374+OR+accession%3AP9WHZ3+OR+accession%3AQ1KTF2&format=json&size=500",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-29e26464b281e72ab19880eb0c3e57844b4ae1654a105f1a6c8fe00bbe2a7361.json",
+          "sha256": "4f6570ffbec8320c440a8276ecfea03ab836993b75c2f92b7272d6de85a2ba59"
+        }
+      },
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference": {
+        "database_paper_in_bibliography": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 162,
+        "exact_card_term_mapping_asserted": false,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "CYP51",
+          "ERG11"
+        ],
+        "ordered_locus_names": [
+          "CAGL0E04334g"
+        ],
+        "protein_accession": "UniProtKB:P50859",
+        "protein_name": "Lanosterol 14-alpha demethylase",
+        "reference_organism_name": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+        "reference_taxon_id": "NCBITaxon:284593",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+        "role": "REFERENCE_IDENTITY_ONLY_NOT_TESTED_ALLELE_OR_DRUG_EVIDENCE",
+        "sequence_version": 1,
+        "source_species_taxon_id": "NCBITaxon:5478",
+        "species_lineage_verified": true
+      },
+      "reference_status": "GENE_SPECIES_REFERENCE_NOT_EXACT_RESISTANCE_MAPPING",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_antibiotic_name": "fluconazole",
+      "source_edge_sha256": "22ca9fa99cf20868b9f02eb7c0a771aef9da28b569c57e91e20dd974136547e9",
+      "source_gene": "ERG11",
+      "source_label": "Candida glabrata ERG11 lanosterol 14-alpha-demethylase with mutations conferring resistance to fluconazole",
+      "source_organism_name": "Candida glabrata",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:45.328349+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/284593",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-e6b6b80db984a936e72dd6aec4428784294b201ece82c35fc945c8217d9067d8.json",
+          "sha256": "f45e35a8f67500a1a6bf1445bcec377879aa874e6602a1f4c89b20e0e7876d72"
+        }
+      },
+      "whole_record_review_complete": false
+    },
+    "ARO:3009407": {
+      "definition_citation_ids": [
+        "PMID:26631591",
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:83779"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3009181",
+      "source_antibiotic_name": "tebuconazole",
+      "source_edge_sha256": "8e41107ec33ccf2d30ea7b31f693a3a29aa2dd6dfb83f1b01c8199781101316d",
+      "source_gene": "Cyp51",
+      "source_label": "Ustilaginoidea virens Cyp51 with mutations conferring resistance to tebuconazole",
+      "source_organism_name": "Ustilaginoidea virens",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009437": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "protein_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-7614555-response.bin",
+          "sha256": "959f8e15a05feabf7e3615027b3bec895452468200c07efe96f8fc40efe310f8"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-7614555-receipt.json",
+          "sha256": "7ed82ea49a668a094779fdebf60fb1142fd9efebb1f1ff117cd1e24d4175919e"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T12:39:52.622819+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A7614555&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "record_memberships": [
+        "antibioticmech:aro-2e3b34cc67"
+      ],
+      "reference": {
+        "database_paper_in_bibliography": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 115,
+        "exact_card_term_mapping_asserted": false,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "CDR1"
+        ],
+        "ordered_locus_names": [],
+        "protein_accession": "UniProtKB:P43071",
+        "protein_name": "Multidrug resistance protein CDR1",
+        "reference_organism_name": "Candida albicans",
+        "reference_taxon_id": "NCBITaxon:5476",
+        "reference_taxon_rank": "species",
+        "reference_taxon_scientific_name": "Candida albicans",
+        "role": "REFERENCE_IDENTITY_ONLY_NOT_TESTED_ALLELE_OR_DRUG_EVIDENCE",
+        "sequence_version": 1,
+        "source_species_taxon_id": "NCBITaxon:5476",
+        "species_lineage_verified": true
+      },
+      "reference_status": "GENE_SPECIES_REFERENCE_NOT_EXACT_RESISTANCE_MAPPING",
+      "source_antibiotic_id": "ARO:3009353",
+      "source_antibiotic_name": "tacrolimus",
+      "source_edge_sha256": "654fb60d8d2f250ca7853d0f4c3aaeb66727df1ff183714631223c05c1384cac",
+      "source_gene": "CDR1",
+      "source_label": "Candida albicans CDR1 with mutations conferring resistance to tacrolimus",
+      "source_organism_name": "Candida albicans",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:32.998940+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/5476",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-7c397babddc1327428ebb5b06370508431e61493117fd6e5b58de7eda0804577.json",
+          "sha256": "9f6188cbdd981bf38e6e6ef64ec60f44d0000dcd77c65d46d14aee8304d0e9a0"
+        }
+      },
+      "whole_record_review_complete": false
+    },
+    "ARO:3009486": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:83779"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3009181",
+      "source_antibiotic_name": "tebuconazole",
+      "source_edge_sha256": "1503883cdddc974f85c034deca0d94ea44e930099abce49d8a6bf9fd0bb7cfa3",
+      "source_gene": "Cyp51B",
+      "source_label": "Fusarium graminearum Cyp51B with mutations conferring resistance to voriconazole",
+      "source_organism_name": "Fusarium graminearum",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009534": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "antibioticmech:aro-e63825b7e1"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3009191",
+      "source_antibiotic_name": "epoxiconazole",
+      "source_edge_sha256": "902304172c0bddc03a42249347f8925d3155a37fb2e618a14783e17965b65b3b",
+      "source_gene": "Cyp51",
+      "source_label": "Puccinia triticina Cyp51 with mutations conferring resistance to epoxiconazole",
+      "source_organism_name": "Puccinia triticina",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009559": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_antibiotic_name": "fluconazole",
+      "source_edge_sha256": "a0f4b172f04b26535212573b2b74b57056efa9fae831f232a811604382cf3f28",
+      "source_gene": "FKS1",
+      "source_label": "Candida albicans FKS1 beta-1,3-glucan with mutations conferring resistance to fluconazole",
+      "source_organism_name": "Candida albicans",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009575": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "protein_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-9527767-response.bin",
+          "sha256": "90d88c5257176cfb4cf6132b2fb5ec197ca619f5e78167cf24479efd832a0f10"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-9527767-receipt.json",
+          "sha256": "3a07dc21d774a14876cfa4c9f0394ab1706ec6ec596a5e014b7cdd7edd0449b8"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-13T12:41:10.480895+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A9527767&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "record_memberships": [
+        "CHEBI:64355"
+      ],
+      "reference": {
+        "database_paper_in_bibliography": false,
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 179,
+        "exact_card_term_mapping_asserted": false,
+        "exact_fungamr_row_crosswalk_verified": false,
+        "exact_resistance_allele": false,
+        "experimental_genome_assignment": null,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "CYP51",
+          "ERG11",
+          "ERG16"
+        ],
+        "ordered_locus_names": [
+          "CAALFM_C500660CA"
+        ],
+        "protein_accession": "UniProtKB:P10613",
+        "protein_name": "Lanosterol 14-alpha demethylase",
+        "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "reference_taxon_id": "NCBITaxon:237561",
+        "reference_taxon_rank": "strain",
+        "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "role": "REFERENCE_IDENTITY_ONLY_NOT_TESTED_ALLELE_OR_DRUG_EVIDENCE",
+        "sequence_version": 2,
+        "source_species_taxon_id": "NCBITaxon:5476",
+        "species_lineage_verified": true
+      },
+      "reference_status": "GENE_SPECIES_REFERENCE_NOT_EXACT_RESISTANCE_MAPPING",
+      "source_antibiotic_id": "ARO:3007513",
+      "source_antibiotic_name": "posaconazole",
+      "source_edge_sha256": "439b0746789a5943ca3c1916f3ba72828480625e5140a2fa7ca14a86c35d0f88",
+      "source_gene": "ERG11",
+      "source_label": "Candida albicans ERG11 lanosterol 14-alpha-demethylase with mutations conferring resistance to posaconazole",
+      "source_organism_name": "Candida albicans",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "taxonomy_source": {
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T02:05:43.807271+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/237561",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-ac4b1724ccccec8ef27ec669d7755fe12398cdb72853f39023db7b09f727315f.json",
+          "sha256": "f0563c7f3c2b4d17a741ebe86416924c49c1b78aa2f60e2db4a52d8dc04f2ff4"
+        }
+      },
+      "whole_record_review_complete": false
+    },
+    "ARO:3009578": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_antibiotic_name": "fluconazole",
+      "source_edge_sha256": "a35e13d923c84db8025f6d41300236e5f4c8556064e674509738d36b0b3c201a",
+      "source_gene": "ERG11",
+      "source_label": "Candida dubliniensis ERG11 lanosterol 14-alpha-demethylase with mutations conferring resistance to fluconazole",
+      "source_organism_name": "Candida dubliniensis",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009588": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:46081"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3007508",
+      "source_antibiotic_name": "fluconazole",
+      "source_edge_sha256": "03467b565ef102b624f66aae96bbd4ea2801da2fa7fce7b1fb37631fc0a2459b",
+      "source_gene": "ERG11",
+      "source_label": "Saccharomyces cerevisiae ERG11 lanosterol 14-alpha-demethylase with mutations conferring resistance to fluconazole",
+      "source_organism_name": "Saccharomyces cerevisiae",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    },
+    "ARO:3009633": {
+      "definition_citation_ids": [
+        "PMID:40790106"
+      ],
+      "exact_allele_assignment": null,
+      "experimental_subject_assignment": null,
+      "new_resistance_assertion": false,
+      "record_memberships": [
+        "CHEBI:5100"
+      ],
+      "reference_status": "NOT_RESOLVED_IN_THIS_CHECKPOINT_NOT_EVIDENCE_OF_ABSENCE",
+      "source_antibiotic_id": "ARO:3009160",
+      "source_antibiotic_name": "5-fluorocytosine",
+      "source_edge_sha256": "da78e4c3edec3e8aa9be5605f0b62f08a859906bc81ebd8a63f2d0230d5738b5",
+      "source_gene": "Ura6",
+      "source_label": "Cryptococcus neoformans Ura6 uridylate kinase with mutations conferring resistance to 5-fluorocytosine",
+      "source_organism_name": "Cryptococcus neoformans",
+      "source_relation": "confers_resistance_to_antibiotic",
+      "whole_record_review_complete": false
+    }
+  }
+}

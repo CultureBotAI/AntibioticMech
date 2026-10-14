@@ -1,0 +1,133 @@
+{
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-caspofungin-context.json",
+      "sha256": "cdeacadabba2424a97991960033ac4ca10b49bbf594e7b85b593210666c758c3"
+    },
+    {
+      "path": "scripts/audit_caspofungin_context.py",
+      "sha256": "e5c2247c3ba3cb2051385e6a3c02990ce5fbd30e53c5d16bfed5749734edd2a7"
+    },
+    {
+      "path": "tests/test_caspofungin_context.py",
+      "sha256": "a54ac6009e4d30e9edd8a0947815ed75fc168cd8c8d29bac5974b6e5b1fef61b"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "598378ab9c09eb029d51b0f04b2ca97de6ef27881e13572e379e54d9ce6be39f"
+    }
+  ],
+  "checks": {
+    "focused_tests": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 237
+    },
+    "full_qc_note": "Research-only; prior curation QC and its disclosed dependency deviation remain historical.",
+    "full_qc_rerun": false,
+    "git_diff_check": "PASS",
+    "native_assets_visually_inspected": [
+      "Table 1",
+      "Figure 5"
+    ],
+    "native_request_hosts": {
+      "journals.plos.org": 3,
+      "rest.uniprot.org": 4,
+      "storage.googleapis.com": 2
+    },
+    "native_request_receipts_verified": 9,
+    "native_statuses": {
+      "200": 7,
+      "302": 2
+    },
+    "socket_and_http_disabled_replay": "PASS",
+    "test_result": {
+      "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/focused-tests.xml",
+      "sha256": "1ced78555fe0327aa9c2eb9a0393c445acdb881d39b100faa6e80fe20bf73dbf"
+    },
+    "web_tool_calls": {
+      "open": 1
+    }
+  },
+  "classification": "PROGRESS",
+  "constraints": {
+    "failed_request_retries": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequence_requests": 0,
+    "source_adoptions": 0
+  },
+  "git_head": "a919685f72e8e07624ffbf8ee32211913c5da1bd",
+  "goal_status": "OPEN",
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-13-caspofungin-context/protected-before.json",
+      "sha256": "3b898fbe227da14647b7540ca964c1dd63f7b356e894812c5c028bc4ddaa7e3d"
+    },
+    "baseline_files": 7187,
+    "biological_records_byte_identical": 2939,
+    "byte_identical_baseline_files": 7186,
+    "changed_baseline_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_artifacts_changed": 0,
+    "generated_pages_changed": 0,
+    "ignored_files_included": true,
+    "new_files_before_receipt": [
+      "research/2026-10-13-caspofungin-context.json",
+      "scripts/audit_caspofungin_context.py",
+      "tests/test_caspofungin_context.py"
+    ],
+    "source_inventories_changed": 0
+  },
+  "prior_artifact_pins_superseded": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "prior_artifact_pins_unchanged": 3,
+  "prior_verification": {
+    "path": "research/2026-10-13-fungamr-reference-verification.json",
+    "sha256": "30e564885b131a57d98407b543b574c7733dac92dd7666bbbcfffa52586eb405"
+  },
+  "review": {
+    "findings": [
+      {
+        "disposition": "Mapped only explicit primary-table systematic loci; preserved unreviewed status and versions.",
+        "finding": "Homolog names were not indexed UniProt gene symbols."
+      },
+      {
+        "disposition": "Kept CBS138 reference taxonomy separate from clinical and BG2 contexts; no genome or exact-allele assignment.",
+        "finding": "Reference strain identifiers could be mistaken for experimental-subject identifiers."
+      },
+      {
+        "disposition": "MRPL11 remains non-causal in this assessment; CDC6 functional evidence does not establish direct drug-target alteration. Source-owned assertions unchanged.",
+        "finding": "Co-occurrence and target alteration could be conflated."
+      },
+      {
+        "disposition": "Retained the annotation evidence code; did not promote a generated protein name to independent functional validation.",
+        "finding": "MRPL11's protein-name annotation uses ECO:0008006 (ProtNLM)."
+      }
+    ],
+    "independent_scientific_review": false,
+    "scope": "Same-agent adversarial checks and source inspection; replay is not independent biological validation."
+  },
+  "scope": "TWO_REFERENCE_LOCI_AND_PRIMARY_EVIDENCE_DISTINCTIONS_NOT_WHOLE_RECORD_SIGNOFF",
+  "summary": {
+    "biological_records_changed": 0,
+    "cohort_ambiguous_terms": 4,
+    "cohort_reviewed_references": 9,
+    "cohort_terms_without_reference_candidates_after_followup": 3,
+    "cohort_unreviewed_candidates": 3,
+    "corpus_records_hash_verified": 2939,
+    "empty_geneid_queries": 2,
+    "exact_alleles_assigned": 0,
+    "new_resistance_assertions": 0,
+    "new_uniprot_queries": 4,
+    "new_unreviewed_reference_locus_contexts": 2,
+    "source_terms_investigated": 2,
+    "whole_record_reviews_completed": 0
+  },
+  "verified_at": "2026-10-14T00:19:39.221174+00:00",
+  "whole_record_reviews_completed": 0
+}

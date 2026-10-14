@@ -1,0 +1,153 @@
+{
+  "adversarial_self_review": [
+    "The active OG1RF reference TaxID does not resolve the focal OG1 label or experimental subject.",
+    "The literal name and verified-TaxID gene queries are complete but do not prove protein absence.",
+    "Six alternative-query suggestions are excluded, not counted as requested-query results.",
+    "The first connection error is not mislabeled as an HTTP refusal or publisher access decision.",
+    "The independent publisher HTTP 403 is retained without interpreting its body as primary results.",
+    "CARD source ownership and its mechanism classification remain unchanged and unconfirmed here.",
+    "The previously reported whole-corpus research gaps remain open; no narrow test completes a record.",
+    "Historical metadata regression tests do not freeze current biological-record bytes.",
+    "Offline replay and same-agent review are not independent scientific signoff."
+  ],
+  "artifacts": [
+    {
+      "path": "research/2026-10-13-irek-context.json",
+      "sha256": "7ab52bc672c46110c71f0ddcc81624db68dfb3b1c6c4fa25daede0fce456d738"
+    },
+    {
+      "path": "scripts/audit_irek_context.py",
+      "sha256": "db2a25a1a679c24563d7f999176968a5005daf59b0adec51298d68c67249e3b2"
+    },
+    {
+      "path": "tests/test_irek_context.py",
+      "sha256": "cb3089892948c23a2e315b3bb653d3cbb88d80755f0d23c149b2fe2687049b0d"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "d73bf15a8349dfa887a8c1110190311d81f5f8af57005e488b688275f0c70eaa"
+    }
+  ],
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-13-irek-context/protected-before.json",
+    "sha256": "fae665550bf16514c50633ec05489b2145f78672d88cd18de3b923fa3c67d7ea"
+  },
+  "baseline_files_checked": 7161,
+  "checks": [
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+        "scripts/check_docs.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "README statistics are current.\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "current_goal_turn": "PROGRESS",
+  "date": "2026-10-13",
+  "failed_source_retries": 0,
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/focused-tests.xml",
+      "sha256": "c3de4abd8fef861d2d8454742d84dbf57867f6a8292d769959cbbe0399fd1993"
+    },
+    "passed": 286,
+    "skipped": 0,
+    "tests": 286
+  },
+  "full_corpus_goal_status": "OPEN",
+  "github_mutations_this_checkpoint": 0,
+  "ignored_files_included": true,
+  "initial_failure_resolution": "Corrected the test to use the existing reference projection's accession field.",
+  "initial_tests": {
+    "errors": 0,
+    "failures": 1,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-13-irek-context/tests.xml",
+      "sha256": "c29ff7128ded6934391d3b8d9da8c09558e8602531c90612836768c182f266c5"
+    },
+    "passed": 34,
+    "skipped": 0,
+    "tests": 35
+  },
+  "issue_1040": "DEFERRED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_files_before_this_receipt": [
+    "research/2026-10-13-irek-context.json",
+    "scripts/audit_irek_context.py",
+    "tests/test_irek_context.py"
+  ],
+  "new_full_authoritative_qc_claimed": false,
+  "new_uniprot_requests": 3,
+  "offline_replay": {
+    "path": "reports/resistance-grounding-2026-10-13-irek-context/offline-replay.json",
+    "sha256": "a32b87d3f349b60d4889141b34e8a8f3df5d9b75831474aab619e0e5de326a4e"
+  },
+  "offline_replay_with_http_and_sockets_disabled": true,
+  "old_files_changed": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "previous_goal_turn": "PROGRESS",
+  "previous_publication": {
+    "merge_commit": "a919685f72e8e07624ffbf8ee32211913c5da1bd",
+    "pr": 1095,
+    "review_issue": 1096
+  },
+  "primary_full_texts_reviewed": 0,
+  "primary_request_attempts": 2,
+  "raw_inputs_curation_schema_pages_embeddings_and_prior_snapshots_unchanged": true,
+  "records_byte_identical": 2939,
+  "records_changed": 0,
+  "records_checked": 2939,
+  "removed_files": [],
+  "reuse_terms_review_resumed": false,
+  "scope": "DISTINCT_REFERENCE_STRAIN_TAXONOMY_WITH_UNRESOLVED_PRIMARY_AND_PROTEIN_IDENTITY",
+  "source_adoptions": 0,
+  "status": "REFERENCE_CONTEXT_VERIFIED_PRIMARY_AND_PROTEIN_IDENTITY_OPEN",
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_checked": 2939,
+    "exact_gene_queries": 2,
+    "exact_gene_query_results": 0,
+    "experimental_allele_or_genome_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "http_access_holds": 1,
+    "new_primary_results_reviewed": 0,
+    "new_protein_references": 0,
+    "new_reference_strain_taxa": 1,
+    "primary_request_attempts": 2,
+    "reused_protein_references": 1,
+    "selected_records": 1,
+    "suggested_queries_excluded": 6,
+    "transport_failures": 1,
+    "whole_record_reviews_completed": 0
+  },
+  "whole_record_reviews_completed": 0
+}

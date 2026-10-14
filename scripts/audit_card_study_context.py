@@ -118,7 +118,7 @@ def primary_hold(root, directory, earlier_pin):
             "absence_or_global_unavailability_inferred": False}
 
 
-def build(root, directory):
+def build(root, directory, *, record_resolver=None):
     plan_path = directory / "study-plan.json"
     plan = json.loads(plan_path.read_bytes())
     if (plan["selection"] != "ALL_REFERENCE_CANDIDATES_FROM_BOTH_UNLINKED_CARD_LITERATURE_COHORTS"
@@ -127,7 +127,9 @@ def build(root, directory):
         raise ValueError("study-context selection or scope changed")
     paths = {k: reference.check_pin(root, p) for k, p in plan["inputs"].items()}
     audits = {name: json.loads(paths[name].read_bytes()) for name in ("earlier", "expansion")}
-    census, labels, memberships, records = definitions.read_corpus(root, paths["census"])
+    census, labels, memberships, records = definitions.read_corpus(
+        root, paths["census"], record_resolver=record_resolver
+    )
     if len(census) != 2939:
         raise ValueError("corpus coverage changed")
     taxa, taxonomy_pins = reused_taxonomy(root, audits["expansion"])
