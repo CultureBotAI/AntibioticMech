@@ -9907,6 +9907,18 @@ this receipt was captured; final local and pinned-environment CI results are
 recorded on the publication PR before merge. Local RDKit 2025.3.6 differs from
 the repository pin 2026.3.5, so the local run alone does not certify that environment.
 
+The initial full-QC run subsequently stopped on two stale antiviral-gap counters
+([#1103](https://github.com/CultureBotAI/AntibioticMech/issues/1103)): 1,247 tests
+passed, one skipped, and the numeric-prose regression failed. `NEXT_TASKS.md`
+and the Stanford source-queue rationale now correctly say 459, not 460, antiviral
+records without resistance assertions. The existing targeted regression passes.
+The [follow-up receipt](2026-10-14-mycophenolic-review-fixes-verification.json)
+verifies that only this rationale counter changed in the source queue; all
+source status/terms fields and the NCBI entry remain unchanged. Biological data
+and generated pages are unchanged since the first publication commit. Prior
+receipts retain their capture-time assertions. Full QC was restarted without
+fail-fast, and final results are required on the PR before merge.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including

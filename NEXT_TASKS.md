@@ -58,7 +58,7 @@ prose below are the reasoning, the queue is the list.
 ## Next
 
 - **Find a resistance source for the antiviral records.** CARD covers bacterial
-  and (increasingly) fungal resistance; it has nothing for viruses, so 460
+  and (increasingly) fungal resistance; it has nothing for viruses, so 459
   antiviral records still carry an empty `resistance_mechanisms`. The obvious
   candidates are the Stanford HIV Drug Resistance Database for HIV, and the
   literature for HBV/HSV/influenza —
