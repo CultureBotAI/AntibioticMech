@@ -1,0 +1,594 @@
+{
+  "attribution": {
+    "literature": "Mima et al., J Bacteriol (2007); Europe PMC metadata/abstract only",
+    "reference": "UniProt Consortium, release 2026_03, CC BY 4.0",
+    "structure": "RCSB Protein Data Bank, 6VEJ metadata, CC0"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-14-triclosan/reference-canary-reviewed.json",
+    "sha256": "8b3a64aad7ff2abbe5d9f3009e8e82317af2e98785be70bf78a68d44e8123ec5"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-triclosan/cohort.json",
+    "sha256": "a600aba6802d612c117466475804e8c2e1ad056b8691d634b4df2e509b6d77a2"
+  },
+  "date": "2026-10-14",
+  "limits": {
+    "exact_alleles_assigned": 0,
+    "experimental_genomes_assigned": 0,
+    "github_mutations": 0,
+    "held_sources_retried": false,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_taxonomy_requests": 0,
+    "sequences_variants_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_review": "OPEN"
+  },
+  "primary": {
+    "collective_locus_set": [
+      "PA0156",
+      "PA0157",
+      "PA0158"
+    ],
+    "doi": "10.1128/jb.00850-07",
+    "full_text_status": "HTTP_403_HELD_NO_RETRY_OR_ALTERNATE_ROUTE",
+    "individual_TriABC_symbol_mapping_inferred": false,
+    "metadata_and_abstract_reviewed": true,
+    "metadata_open_access_flag": "N",
+    "new_functional_resistance_curation_supported": false,
+    "pmcid": "PMC2168734",
+    "pmid": "17720796",
+    "primary_results_figures_or_supplements_reviewed": false,
+    "reuse_license_inferred": false,
+    "title": "Identification and characterization of TriABC-OpmH, a triclosan efflux pump of Pseudomonas aeruginosa requiring two membrane fusion proteins."
+  },
+  "prior_literature_query_reused": {
+    "complete_for_query": true,
+    "establishes_biological_absence": false,
+    "pages": [
+      {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-17720796-response.bin",
+          "sha256": "01a2bedef70686c6899f4daf71a11b5d40e727a28fdfe0eaabcc6064febfa456"
+        },
+        "page": 1,
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-17720796-receipt.json",
+          "sha256": "82c9d26b1d288ece2a7a2e6f5ad5fa79646d3be51df9f7bd44a5d46391f0d400"
+        },
+        "retrieved_at": "2026-10-13T12:45:25.436819+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A17720796&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    ],
+    "query": "lit_pubmed:17720796",
+    "release": "2026_03",
+    "result_count": 0,
+    "status": "COMPLETE_QUERY_NOT_PRIMARY_REVIEW"
+  },
+  "queries": {
+    "opmh-reference": {
+      "automatic_suggestions_followed": false,
+      "complete_for_query": true,
+      "query": "gene_exact:opmH AND organism_id:208964",
+      "release": "2026_03",
+      "result_count": 0,
+      "zero_result_establishes_absence": false
+    },
+    "opmh-species-reference": {
+      "automatic_suggestions_followed": false,
+      "complete_for_query": true,
+      "query": "gene_exact:opmH AND taxonomy_id:287",
+      "release": "2026_03",
+      "result_count": 0,
+      "zero_result_establishes_absence": false
+    },
+    "pa0157-reference": {
+      "automatic_suggestions_followed": false,
+      "complete_for_query": true,
+      "query": "gene_exact:PA0157",
+      "release": "2026_03",
+      "result_count": 1,
+      "zero_result_establishes_absence": false
+    },
+    "pa0158-reference": {
+      "automatic_suggestions_followed": false,
+      "complete_for_query": true,
+      "query": "gene_exact:PA0158",
+      "release": "2026_03",
+      "result_count": 1,
+      "zero_result_establishes_absence": false
+    },
+    "tria-reference-canary": {
+      "automatic_suggestions_followed": false,
+      "complete_for_query": true,
+      "query": "gene_exact:PA0156",
+      "release": "2026_03",
+      "result_count": 1,
+      "zero_result_establishes_absence": false
+    }
+  },
+  "record": {
+    "complete_collection_aware_record_loaded": true,
+    "identifier": "CHEBI:164200",
+    "path": "data/antibiotics/antibacterial/triclosan.yaml",
+    "sha256": "e8b29e87dcd8e0d2347eb6bc395b72435ff06faf01fe434083e572ed87063530",
+    "standard_inchi_key": "XEFQLINVKFYRCS-UHFFFAOYSA-N"
+  },
+  "references": {
+    "PA0156": {
+      "bibliography": [
+        [
+          {
+            "database": "DOI",
+            "id": "10.1038/35023079"
+          },
+          {
+            "database": "PubMed",
+            "id": "10984043"
+          }
+        ],
+        [
+          {
+            "database": "DOI",
+            "id": "10.1016/j.str.2020.09.001"
+          },
+          {
+            "database": "PubMed",
+            "id": "32966762"
+          }
+        ]
+      ],
+      "embl_reference": {
+        "nucleotide_accession": "AE004091",
+        "protein_id": "AAG03546.1"
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 120,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_taxon_assignment": false,
+      "explicit_structure_reference": "PDB:6VEJ",
+      "new_resistance_assertion": false,
+      "original_resistance_pmid_cited": false,
+      "paper_gene_symbol_is_entry_gene_name": false,
+      "protein_accession": "UniProtKB:Q9I6X6",
+      "reference_organism_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+      "reference_role": "UNREVIEWED_LOCUS_REFERENCE_NOT_EXPERIMENTAL_SUBJECT",
+      "reference_taxon_id": "NCBITaxon:208964",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1,
+      "species_taxon_id": "NCBITaxon:287",
+      "submitted_protein_name": "Probable Resistance-Nodulation-Cell Division (RND) efflux membrane fusion protein",
+      "systematic_locus": "PA0156"
+    },
+    "PA0157": {
+      "bibliography": [
+        [
+          {
+            "database": "DOI",
+            "id": "10.1038/35023079"
+          },
+          {
+            "database": "PubMed",
+            "id": "10984043"
+          }
+        ],
+        [
+          {
+            "database": "DOI",
+            "id": "10.1016/j.str.2020.09.001"
+          },
+          {
+            "database": "PubMed",
+            "id": "32966762"
+          }
+        ]
+      ],
+      "embl_reference": {
+        "nucleotide_accession": "AE004091",
+        "protein_id": "AAG03547.1"
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 117,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_taxon_assignment": false,
+      "explicit_structure_reference": "PDB:6VEJ",
+      "new_resistance_assertion": false,
+      "original_resistance_pmid_cited": false,
+      "paper_gene_symbol_is_entry_gene_name": false,
+      "protein_accession": "UniProtKB:Q9I6X5",
+      "reference_organism_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+      "reference_role": "UNREVIEWED_LOCUS_REFERENCE_NOT_EXPERIMENTAL_SUBJECT",
+      "reference_taxon_id": "NCBITaxon:208964",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1,
+      "species_taxon_id": "NCBITaxon:287",
+      "submitted_protein_name": "Probable Resistance-Nodulation-Cell Division (RND) efflux membrane fusion protein",
+      "systematic_locus": "PA0157"
+    },
+    "PA0158": {
+      "bibliography": [
+        [
+          {
+            "database": "DOI",
+            "id": "10.1038/35023079"
+          },
+          {
+            "database": "PubMed",
+            "id": "10984043"
+          }
+        ],
+        [
+          {
+            "database": "DOI",
+            "id": "10.1016/j.str.2020.09.001"
+          },
+          {
+            "database": "PubMed",
+            "id": "32966762"
+          }
+        ]
+      ],
+      "embl_reference": {
+        "nucleotide_accession": "AE004091",
+        "protein_id": "AAG03548.1"
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 108,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_taxon_assignment": false,
+      "explicit_structure_reference": "PDB:6VEJ",
+      "new_resistance_assertion": false,
+      "original_resistance_pmid_cited": false,
+      "paper_gene_symbol_is_entry_gene_name": false,
+      "protein_accession": "UniProtKB:Q9I6X4",
+      "reference_organism_name": "Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)",
+      "reference_role": "UNREVIEWED_LOCUS_REFERENCE_NOT_EXPERIMENTAL_SUBJECT",
+      "reference_taxon_id": "NCBITaxon:208964",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1,
+      "species_taxon_id": "NCBITaxon:287",
+      "submitted_protein_name": "Probable Resistance-Nodulation-Cell Division (RND) efflux transporter",
+      "systematic_locus": "PA0158"
+    }
+  },
+  "source_owned_assertions": [
+    {
+      "aro_id": "ARO:3000384",
+      "definition_citations": [
+        "PMID:21513882",
+        "PMID:8550435"
+      ],
+      "index": 0,
+      "label": "AcrAB-TolC"
+    },
+    {
+      "aro_id": "ARO:3000753",
+      "definition_citations": [
+        "PMID:16189122"
+      ],
+      "index": 1,
+      "label": "abeM"
+    },
+    {
+      "aro_id": "ARO:3003678",
+      "definition_citations": [
+        "PMID:17720796"
+      ],
+      "index": 2,
+      "label": "TriABC-OpmH"
+    },
+    {
+      "aro_id": "ARO:3003691",
+      "definition_citations": [
+        "PMID:12193619",
+        "PMID:15855505",
+        "PMID:15855547"
+      ],
+      "index": 3,
+      "label": "MexJK-OpmH"
+    },
+    {
+      "aro_id": "ARO:3004045",
+      "definition_citations": [
+        "PMID:27577999"
+      ],
+      "index": 4,
+      "label": "Escherichia coli fabI mutations conferring resistance to isoniazid and triclosan"
+    },
+    {
+      "aro_id": "ARO:3004049",
+      "definition_citations": [
+        "PMID:27577999"
+      ],
+      "index": 5,
+      "label": "Escherichia coli fabG mutations conferring resistance to triclosan"
+    },
+    {
+      "aro_id": "ARO:3004334",
+      "definition_citations": [
+        "PMID:29091182"
+      ],
+      "index": 6,
+      "label": "Salmonella enterica gyrA with mutation conferring resistance to triclosan"
+    },
+    {
+      "aro_id": "ARO:3004335",
+      "definition_citations": [
+        "PMID:29091182"
+      ],
+      "index": 7,
+      "label": "Escherichia coli gyrA with mutation conferring resistance to triclosan"
+    },
+    {
+      "aro_id": "ARO:3004585",
+      "definition_citations": [
+        "PMID:23836167"
+      ],
+      "index": 8,
+      "label": "Klebsiella pneumoniae KpnEF"
+    },
+    {
+      "aro_id": "ARO:3009148",
+      "definition_citations": [
+        "PMID:12193619"
+      ],
+      "index": 9,
+      "label": "MexJK"
+    }
+  ],
+  "sources": {
+    "held_pdf": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-primary-pdf-attempt.json",
+        "sha256": "f7e0d7303e89def0235cd779ffbd198c8e4736f5f15058c5b78a7e5b994549da"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-primary-pdf-response.bin",
+        "sha256": "3e998e7538f1849ead481a3fd0e1c358526eb1942d7266e1f06d9a236f877389"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-primary-pdf-plan.json",
+        "sha256": "800e253f3ddd340609770e060ad3583213f8495dbe891e63251f7337bbf176d1"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-primary-pdf-receipt.json",
+        "sha256": "f2316e4d3749bb3d76fe08310791aef54d7591cee9abe2460b8816aa2767d3eb"
+      },
+      "retrieved_at": "2026-10-14T08:52:40.933158+00:00",
+      "status": 403,
+      "url": "https://europepmc.org/articles/PMC2168734?pdf=render"
+    },
+    "metadata": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-metadata-attempt.json",
+        "sha256": "70bfae2e3ba5b9bdd1b9177cb1224fcc1308c6f4c71a03fc0ec69db9254f876f"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-metadata-response.bin",
+        "sha256": "c18d4d55413edfaf2681915b3b91448edb7860dfd9c618879c8a07f53f3d5d77"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-metadata-plan.json",
+        "sha256": "1e95c1a14cf5ccdce4eb9c6419bc7792b1b4b04711b8e8ee0333d827087cc7e6"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/triabc-metadata-receipt.json",
+        "sha256": "fb677d5e7661088748cabbd81aa63a4f0ea107f09cb9f2c5d758b74a2f1b4ca5"
+      },
+      "retrieved_at": "2026-10-14T08:50:49.818943+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17720796%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=10"
+    },
+    "opmh-reference": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-reference-attempt.json",
+        "sha256": "73daed0d4a088857d704c87b03d636fc699607c8fb605ab6aa5344eda1f2a99c"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-reference-response.bin",
+        "sha256": "69d10cecaf6e0bede8120904f330b5b76fbd2deaf574f1a23111e0266d239c92"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-reference-plan.json",
+        "sha256": "3ad9c8cafc7f309303ec948a0c51ad1bbda2a5919e0ecc5e18e18607fdd04725"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-reference-receipt.json",
+        "sha256": "6736ce3f743e4ab667be8df1d87a1da1f63515544b325ff4c2d48dd0dad1b2d1"
+      },
+      "retrieved_at": "2026-10-14T08:55:42.954225+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AopmH+AND+organism_id%3A208964&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "opmh-species-reference": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-species-reference-attempt.json",
+        "sha256": "7787704bc002b35b5d40aa17acb92f44ce4ae13bc1a7b3be2642d94ea1fa1e02"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-species-reference-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-species-reference-plan.json",
+        "sha256": "72439c3de91fcaef25cc05b1bcafb34d54c0868224469645f948cff615dd4957"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/opmh-species-reference-receipt.json",
+        "sha256": "0003374979200e385b77be067bacb16302e197bde131c904e001d5b9411b4171"
+      },
+      "retrieved_at": "2026-10-14T08:58:44.889453+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AopmH%20AND%20taxonomy_id%3A287&format=json&size=100&sort=accession%20asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "pa0157-reference": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0157-reference-attempt.json",
+        "sha256": "41796da0dffda6cb5f1aae4a616a365d9718eac07afce31ca6eb63437388a036"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0157-reference-response.bin",
+        "sha256": "8d0770214528c3ed91223a9ed5da65d9cf68fed07c1fb77ad2bb69472e265c3e"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0157-reference-plan.json",
+        "sha256": "4f0c860389b018a0bb00f64e24eca18de60163d1bde82492a35233746982dc4d"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0157-reference-receipt.json",
+        "sha256": "96e2d6e76aee0ef8a4b4d991303c1e2f55b7524b7e6033f2098fbf71ec580f3a"
+      },
+      "retrieved_at": "2026-10-14T08:55:41.393777+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APA0157&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "pa0158-reference": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0158-reference-attempt.json",
+        "sha256": "0bb75a84211172bbc28e963dc3a05a56f37ea96dcb640b49c9cc6ab9353cdc6b"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0158-reference-response.bin",
+        "sha256": "64d0e58f7c6097e14075cd78e595e09a5ed224b88934eeae82a93056044234b2"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0158-reference-plan.json",
+        "sha256": "9388a1c7480b7ab1b3e9370de1eb9bd6bd34cb1472e6e1335b05172c9d5a3f30"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pa0158-reference-receipt.json",
+        "sha256": "7aaefe6e8c4a3219ea594c4fe487de6f07fbd730d39323f3a0873222f3e8dc0e"
+      },
+      "retrieved_at": "2026-10-14T08:55:42.211328+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APA0158&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "structure": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pdb-6vej-attempt.json",
+        "sha256": "b85f809f7f4db173bfd662b5aff6f80305f4f34c8af800ee444f4df6726122e6"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pdb-6vej-response.bin",
+        "sha256": "564effc3ba5167d2611c3299d324dbb9dd78a08d0d07ef1de55c351037c8170b"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pdb-6vej-plan.json",
+        "sha256": "8673aa3de87fabee01e8153e7d8eea09450be38292a0ed0a2cf503cc363a93d4"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/pdb-6vej-receipt.json",
+        "sha256": "6e52678320cb1a4f08f106ea0da9bb5d99bbfc91ab2670bd60a8f54805a03f46"
+      },
+      "retrieved_at": "2026-10-14T08:58:40.456645+00:00",
+      "status": 200,
+      "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%226VEJ%22%5D%29+%7B%0A++++++rcsb_id%0A++++++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++++++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++++++polymer_entities+%7B%0A++++++++rcsb_id%0A++++++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++++++%7D%0A++++++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++++%7D%0A++++%7D%7D"
+    },
+    "taxonomy_reused": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-208964-response.bin",
+        "sha256": "121c67b8a2fc8d5b44efc1d39c71a8f7d54031109fe54b352bb63202c873afe4"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-208964-receipt.json",
+        "sha256": "a58d1d5311698ca632083889fff4932e3287be42392b690b25476f99d047562e"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-10T04:04:57.614762+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/208964"
+    },
+    "tria-reference-canary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/tria-reference-canary-attempt.json",
+        "sha256": "296239ccd9f28e77ee2751c2de5ce167efe07a63c84741e13dc5117a0a0d317f"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/tria-reference-canary-response.bin",
+        "sha256": "f5056e4e1c603aacea48daa6397bcb703e6fb83707a60150be38037f98ed45c0"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/tria-reference-canary-plan.json",
+        "sha256": "f4a385fd97f9bf70f535341ace9d2f550cbdb96442bf0726f45a8529daef17ae"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-triclosan/tria-reference-canary-receipt.json",
+        "sha256": "ef6d0926b1433efd14602e9cfced0af03fe520a628b9cfff8f891a9b5153f9fb"
+      },
+      "retrieved_at": "2026-10-14T08:53:12.898229+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3APA0156&format=json&size=100&sort=accession%20asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "structure": {
+    "citation": {
+      "pdbx_database_id_DOI": "10.1016/j.str.2020.09.001",
+      "pdbx_database_id_PubMed": 32966762,
+      "year": 2021
+    },
+    "entities": [
+      {
+        "entity_id": "6VEJ_1",
+        "other_reference_identifiers": [],
+        "reference_accessions": [
+          "UniProtKB:Q9I6X4"
+        ],
+        "source_organisms": [
+          {
+            "ncbi_taxonomy_id": 287,
+            "scientific_name": "Pseudomonas aeruginosa"
+          }
+        ]
+      },
+      {
+        "entity_id": "6VEJ_2",
+        "other_reference_identifiers": [],
+        "reference_accessions": [
+          "UniProtKB:Q9I6X5",
+          "UniProtKB:Q9I6X6"
+        ],
+        "source_organisms": [
+          {
+            "ncbi_taxonomy_id": 287,
+            "scientific_name": "Pseudomonas aeruginosa"
+          },
+          {
+            "ncbi_taxonomy_id": 287,
+            "scientific_name": "Pseudomonas aeruginosa"
+          }
+        ]
+      }
+    ],
+    "entity_architecture_or_experimental_allele_inferred": false,
+    "one_entity_can_reference_multiple_proteins": true,
+    "original_2007_subject_resolved": false,
+    "pdb_id": "6VEJ",
+    "primary_results_reviewed": false,
+    "revision": {
+      "major_revision": 1,
+      "minor_revision": 3,
+      "revision_date": "2024-10-23T00:00:00Z"
+    },
+    "single_representative_selected": false
+  },
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_in_scope": 2939,
+    "curated_resistance_assertions": 0,
+    "empty_opmh_queries": 2,
+    "new_native_requests": 8,
+    "new_primary_access_holds": 1,
+    "pdb_entities": 2,
+    "records_in_this_checkpoint": 1,
+    "source_assertions_preserved": 10,
+    "source_terms_investigated": 1,
+    "unreviewed_locus_references": 3,
+    "whole_record_primary_signoffs": 0
+  }
+}

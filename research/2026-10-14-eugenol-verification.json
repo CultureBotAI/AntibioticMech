@@ -1,0 +1,107 @@
+{
+  "asset_plan": {
+    "path": "reports/resistance-grounding-2026-10-14-eugenol/assets-plan.json",
+    "sha256": "4bcda2ebe4aa0ea03950ed7a4509163e0d6939cbde05d4fa4b8fbaf7e21dd269"
+  },
+  "audit_script": {
+    "path": "scripts/audit_eugenol_context.py",
+    "sha256": "24b4fc288539d63140796a0cbc277e9fe89d6b038938114ff3bc0ec45b6b520c"
+  },
+  "baseline_commit": "5e9c257a69d5a0c998e57447195f8c40d62d2a30",
+  "checkpoint": {
+    "path": "research/2026-10-14-eugenol-context.json",
+    "sha256": "2fcda31e988dddc2c7fb2632b297b7a61eaef60719cc29d2b228f44fd2f7f06d"
+  },
+  "focused_results": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-eugenol/focused-tests-final.xml",
+      "sha256": "e349bca2367a3a0fa3456bae2962bad84a6fb961e1dd746ae567c86b64b4acc3"
+    },
+    "offline_replays_blocked_requests_and_sockets": true,
+    "skipped": 0,
+    "tests": 238
+  },
+  "git_diff_check": "PASS",
+  "network": {
+    "held_queries_retried": 0,
+    "http_200": 8,
+    "native_domains": [
+      "journals.plos.org",
+      "rest.uniprot.org",
+      "storage.googleapis.com"
+    ],
+    "native_http_attempts": 13,
+    "ncbi_requests": 0,
+    "new_taxonomy_requests": 0,
+    "publisher_redirects_followed": 5,
+    "web_search": {
+      "path": "reports/resistance-grounding-2026-10-14-eugenol/web-search-result.json",
+      "sha256": "bc9719a678c211649d4a4c03b4117db68313d712c5f47341f3f7134bcafb00ad"
+    }
+  },
+  "preservation": {
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "corpus_records_byte_identical": 2939,
+    "current_census": {
+      "path": "research/2026-10-14-mycophenolic-resistance-grounding.tsv",
+      "sha256": "c2b9c15d375c86aa72cb01c3648d4288e8ec0504ab9d4617c1967a0b1a4daf48"
+    },
+    "existing_files_checked": 7241,
+    "generated_pages_unchanged": true,
+    "prior_checkpoints_unchanged": true,
+    "protected_baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-eugenol/protected-before.json",
+      "sha256": "7aa728b6fc703533ef25fe89927e4b26e42e60a8024f332607b9f522201051a8"
+    },
+    "source_owned_inputs_unchanged": true,
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "primary_plan": {
+    "path": "reports/resistance-grounding-2026-10-14-eugenol/primary-plan.json",
+    "sha256": "479e675f9d1a0e4ceefc93668afb91e05789d48e91bf074acb394ac01043ee33"
+  },
+  "reference_plan": {
+    "path": "reports/resistance-grounding-2026-10-14-eugenol/reference-plan.json",
+    "sha256": "b28769d6989415eeac2dae54bec8dd28a78d25d52ae3e79c6c4e4230eeaf6efc"
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "ffa54d0d667624f5e1fc11136abb5209486cfbfc408ae979e10e94e6ef9c163a"
+  },
+  "repository_ruff": "PASS",
+  "scope": {
+    "biological_record_changes": 0,
+    "curated_assertions": 0,
+    "full_authoritative_qc": "NOT_RUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_GENERATED_CHANGES",
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "reference_proteins": 33,
+    "source_adoptions": 0,
+    "source_gene_labels": 35,
+    "uncompleted_reference_mappings": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "self_review": [
+    "Sensitivity hits and conditional rescue are not resistant alleles or clinical categories.",
+    "Negative permease comparisons, auxotrophy and unresolved direct binding are retained.",
+    "Cached ERG2 release/version and the prior query-rejection reason are verified without new requests.",
+    "No sequence, exact variant, construct, protocol or numeric AST export."
+  ],
+  "tests": {
+    "path": "tests/test_eugenol_context.py",
+    "sha256": "d2f0150115e399005dda46834e4525a8d51ec5604e15f6d71c1e6c2642c685a8"
+  },
+  "verified_at": "2026-10-14T06:49:11.318960+00:00",
+  "visual_review": {
+    "path": "reports/resistance-grounding-2026-10-14-eugenol/reviewed-assets.json",
+    "sha256": "9d0761a16f01b073a5d5c8cac618e0f3aa6b0aef4ffc05d96f19a762e47ec1cc"
+  }
+}

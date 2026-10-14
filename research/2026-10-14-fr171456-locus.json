@@ -1,0 +1,216 @@
+{
+  "attribution": "UniProt Consortium, CC BY 4.0; Helliwell et al. 2015, CC BY 4.0.",
+  "constraints": {
+    "full_corpus_goal_status": "OPEN",
+    "full_corpus_records_in_scope": 2939,
+    "github_mutations": 0,
+    "held_sources_retried": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequences_variants_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-14",
+  "identifier": "CHEBI:88298",
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-14-bevirimat-resistance-grounding.tsv",
+      "sha256": "8a6f419ca0fa0c8bd4e18bc4c4dfbb23601bc3a84c2b8d51f8bbd1e44e3004e6"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/cohort.json",
+      "sha256": "da44bc11f042ea7e1b4179d494f2b70153ce2911ff0e77743ee309dcf21bd750"
+    },
+    "prior_checkpoint": {
+      "path": "research/2026-10-14-card-species-nodes-verification.json",
+      "sha256": "1d3bd490fba6736aed122a9d92b8bdcd8dac9e6f33e722bbe3524997ac9f51f1"
+    },
+    "prior_context": {
+      "path": "research/2026-10-11-fr171456-context.json",
+      "sha256": "1452269ff2eb365365b9cbbf53a79931cc77f679720abc8d184b145504837ba6"
+    },
+    "record": {
+      "path": "data/antibiotics/antifungal/fr171456.yaml",
+      "sha256": "7de4f1bce437efa786a58a5c1304029a70a9e9a6c570f120aa909593de9986df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limitations": [
+    "A historical ORF name and current ordered locus name are different annotation roles.",
+    "The reference mapping does not establish the gene-model history or the historical deletion boundaries.",
+    "The YPL090W query is scoped to reviewed entries; no result does not establish biological absence.",
+    "Alternative-query suggestions were not selected or treated as protein results.",
+    "Hypersensitivity context is not promoted to a new resistance claim or drug target.",
+    "The primary label conflict, exact experimental identity and other earlier holds remain unresolved.",
+    "Existing ERG26 evidence and all prior record fields remain unchanged."
+  ],
+  "primary": {
+    "cited_background_paper": {
+      "citation_location": "b26",
+      "doi": "10.1074/jbc.M608505200",
+      "primary_results_reviewed_here": false,
+      "reference": "PMID:17553796"
+    },
+    "doi": "10.1038/ncomms9613",
+    "effect_context": "SOURCE_REPORTED_HYPERSENSITIVITY_NOT_A_NEW_RESISTANCE_CLAIM",
+    "figure_2_panels_reviewed": [
+      "c",
+      "d"
+    ],
+    "figure_locus_label": "YPR090w",
+    "native_figure_visually_reviewed_this_checkpoint": true,
+    "paragraph_location": "/article/body/sec[1]/sec[3]/p[2]",
+    "reference": "PMID:26456460",
+    "source_conflict_resolved": false,
+    "source_locus_labels": [
+      "YPR090w",
+      "YPL090w"
+    ],
+    "source_typo_corrected": false
+  },
+  "queries": {
+    "YPL090W": {
+      "complete_for_query": true,
+      "query": "gene_exact:YPL090W AND taxonomy_id:4932 AND reviewed:true",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/YPL090W-response.bin",
+          "sha256": "af3989c412ceaadc624a1186be854a305f6d98851d83165ee82d28ca2290cb7a"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/YPL090W-receipt.json",
+          "sha256": "77b3f069543cfd482975be8b630fc5aae772f8230c66e40c5fa8ccd38de8dffa"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-14T10:31:57.955775+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AYPL090W+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 0,
+      "suggested_queries_not_selected": 5,
+      "suggestions_are_results": false,
+      "zero_results_establish_absence": false
+    },
+    "YPR090W": {
+      "complete_for_query": true,
+      "query": "gene_exact:YPR090W AND taxonomy_id:4932 AND reviewed:true",
+      "request": {
+        "cache": {
+          "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/YPR090W-response.bin",
+          "sha256": "203bb5d9946983ddf7c040be603a7b499a5dcdae39c47893d9421d2b4c8b2b64"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-fr171456-locus/YPR090W-receipt.json",
+          "sha256": "fd604925405fb7bd876c8880556a7854b31a8a54186f4b21d3e6ded2ebaacda6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-14T10:31:09.691667+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AYPR090W+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 1,
+      "suggested_queries_not_selected": 0,
+      "suggestions_are_results": false,
+      "zero_results_establish_absence": false
+    }
+  },
+  "reference_protein": {
+    "accession": "UniProtKB:O13585",
+    "annotation_change_history_inferred": false,
+    "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+    "entry_version": 162,
+    "exact_allele_assignment": false,
+    "experimental_deletion_identity_established": false,
+    "focal_paper_cited": false,
+    "gene_symbol": null,
+    "matched_source_label_role": "ORF_NAME_NOT_ORDERED_LOCUS_NAME",
+    "ordered_locus_names": [
+      "YPR089W"
+    ],
+    "orf_names": [
+      "YPR090W"
+    ],
+    "pubmed_ids": [
+      "12844361",
+      "14562095",
+      "14562106",
+      "24374639",
+      "9169875"
+    ],
+    "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+    "reference_taxon_id": "NCBITaxon:559292",
+    "reference_taxon_rank": "strain",
+    "resistance_effect_assigned": false,
+    "sequence_version": 2,
+    "species_name": "Saccharomyces cerevisiae",
+    "species_taxon_id": "NCBITaxon:4932"
+  },
+  "release": "2026_03",
+  "reused_sources": {
+    "figure-2": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/figure-2.jpg",
+        "sha256": "3ef0666b2ecc49dc3b14d5d4987907a9e111b7e01b1fed6c2006226c72b59230"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/figure-2-asset-receipt.json",
+        "sha256": "a4b5ec0d4adbae0e29327ab2e8d7ce3eb4672625fbadd902ac4215e6cfeac7b1"
+      },
+      "retrieved_at": "2026-10-11T02:38:46.059055+00:00",
+      "status": 200,
+      "url": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fncomms9613/MediaObjects/41467_2015_Article_BFncomms9613_Fig2_HTML.jpg"
+    },
+    "primary": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/primary.xml",
+        "sha256": "7364cf1e078b711ee9533017797f01c274543f2d088fc1eb05fc27381a70d293"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/primary-receipt.json",
+        "sha256": "237390b39185db5825968bfa1817bc45fb45a972a7575b64e19eca9718ad80c9"
+      },
+      "retrieved_at": "2026-10-10T23:53:08.094137+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4633953/fullTextXML"
+    },
+    "reference-strain": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-559292-response.json",
+        "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-559292-receipt.json",
+        "sha256": "043cf3c40d60dc5270243248e3b5e3a51f6f1a3bf019b860e783e27d1fa2f812"
+      },
+      "retrieved_at": "2026-10-10T23:51:32.286745+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292"
+    },
+    "species": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-4932-response.json",
+        "sha256": "963bbf3503fd0aa9e69dc25b64c5ae903f871991b37c4c593353b945c8e31688"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-11-fr171456/tax-4932-receipt.json",
+        "sha256": "eedd4194af7d37aec782c51c32258dcc730c5ef850853235cb4a7074c687cb9e"
+      },
+      "retrieved_at": "2026-10-10T23:51:28.574271+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932"
+    }
+  },
+  "scope": "REFERENCE_ORF_NAME_MAPPING_NOT_EXPERIMENTAL_DELETION_OR_RESISTANCE_ASSIGNMENT",
+  "standard_inchi_key": "JAHGNOXPMXOEJS-BSPLYONXSA-N",
+  "summary": {
+    "biological_record_changes": 0,
+    "corpus_record_hashes_checked": 2939,
+    "experimental_deletion_or_allele_assignments": 0,
+    "new_network_requests": 2,
+    "new_reference_entries": 1,
+    "whole_record_reviews_completed": 0
+  }
+}

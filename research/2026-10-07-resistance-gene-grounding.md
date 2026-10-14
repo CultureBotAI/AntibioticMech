@@ -1,6 +1,6 @@
 # Corpus-wide resistance gene and allele investigation
 
-Date: 2026-10-07. Latest checkpoint: 2026-10-14 UTC (2026-10-13 local).
+Date: 2026-10-07. Latest checkpoint: 2026-10-14 UTC.
 Status: **in progress, not a completed corpus review**.
 The maintainer requested investigation of every record, UniProtKB and NCBITaxon
 grounding where possible, and curation of verified findings. NCBI contact and
@@ -49,10 +49,10 @@ records**, including **131 curator-authored claims across 53 records**. There
 are still 2,606 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-14-mycophenolic-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-14-antiviral-taxa-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-14-mycophenolic-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-14-antiviral-taxa-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
 
@@ -210,7 +210,45 @@ The earlier [borrelidin curation](2026-10-09-borrelidin-curation.json) adds one
 qualified primary-author report of borO-associated resistance, explicitly
 retaining its data-not-shown limitation. The proposed mechanism remains UNKNOWN;
 donor UniProt and taxonomy references are not experimental allele assignments.
-The conflicting J1074 strain-name candidates remain unresolved.
+The [J1074 follow-up](2026-10-14-j1074-taxonomy.json) now grounds the historical
+host lineage at species level as S. albidoflavus, NCBITaxon:1886, across all five
+platen/borrelidin claims. Conflicting strain nodes remain unselected; no exact
+experimental allele, genome or strain TaxID is assigned.
+
+The [triclosan reference follow-up](2026-10-14-triclosan-context.json) verifies
+three unreviewed systematic-locus references and a two-entity structural link.
+It does not assign experimental alleles or organisms. The original primary
+paper is access-held, OpmH remains unresolved, and all ten CARD assertions stay
+unchanged.
+
+The [bevirimat taxonomy follow-up](2026-10-14-bevirimat-taxonomy.json) grounds
+one existing claim to species Lentivirus humimdef1, NCBITaxon:3418650. The HIV-1
+name node is unranked, and the paper's laboratory background is not an exact
+experimental allele or patient identifier. No protein or genome was assigned.
+
+The [direct CARD reference-lineage audit](2026-10-14-card-reference-lineages.json)
+now connects all 979 explicitly linked UniProt reference proteins to their
+species-rank ancestry, preserving all 980 candidate links across 978 terms and
+169 records. Of 288 species nodes, 254 have separately verified native responses
+in that historical checkpoint. The [standalone-species successor](2026-10-14-card-species-nodes.json)
+verifies the remaining 34, so all 288 now have standalone evidence. Twenty-five
+source labels still carry scope warnings; none becomes an experimental organism
+or allele assignment.
+
+The [FR171456 locus follow-up](2026-10-14-fr171456-locus.json) maps the paper's
+`YPR090w` label to UniProt O13585's ORF-name annotation, distinct from its current
+ordered locus `YPR089W`. The conflicting `YPL090w` label, historical deletion
+identity and hypersensitivity-to-protein interpretation remain unresolved;
+the existing ERG26 claim is unchanged.
+The [cited 2007 paper's access follow-up](2026-10-14-thevissen-2007-access.json)
+now records a journal 403 challenge after canonical publisher routing. No
+primary results were reviewed and no alternate route was attempted.
+
+The [curator taxon-gap follow-up](2026-10-14-antiviral-taxa.json) accounts for all
+11 previously taxon-empty claims and supports one species-only bictegravir update.
+The [current field index](2026-10-14-antiviral-taxa-curator-resistance-fields.json)
+now has 121 taxon-ID slots and 10 taxon-empty claims; those remaining gaps are
+not automatic errors. No new experimental allele, protein or genome was assigned.
 
 The earlier [oleandomycin curation](2026-10-09-oleandomycin-curation.json)
 adds two qualitative biochemical routes for OleI and OleD, preserving all 30
@@ -9919,6 +9957,595 @@ and generated pages are unchanged since the first publication commit. Prior
 receipts retain their capture-time assertions. Full QC was restarted without
 fail-fast, and final results are required on the PR before merge.
 
+### Mycophenolic Acid: Literature Access and Sub1 Reference Follow-up (2026-10-14)
+
+The [literature checkpoint](2026-10-14-mycophenolic-literature.json) follows two
+remaining yeast-study leads without changing the biological record. EMBL-EBI
+Europe PMC metadata confirms PMID:16278936 / DOI:10.1002/yea.1300 and
+PMID:18823333 / DOI:10.1111/j.1365-2443.2008.01229.x. Both metadata records label
+the selected publisher PDF link "Free" while recording `isOpenAccess: N`;
+neither field establishes permission to redistribute full text or completion
+of primary-result review.
+
+The exact publisher PDF link for the 2005 study returned HTTP 403. The request
+and response are preserved, with no retry or alternate retrieval. The publisher
+batch stopped at that canary, so the 2008 full text is **unrequested**, not a
+second observed denial. The earlier 2002 and 2003 holds remain untouched.
+The 2008 abstract describes a combined genetic context and expression findings;
+it is a lead for primary review, not a standalone Sub1 resistance observation.
+
+One sequence-free UniProt request establishes a reviewed **reference-only**
+Sub1 mapping: UniProtKB:P54000, canonical `SUB1`, alias `TSP1`, locus `YMR039C`,
+and SGD:S000004642. Release 2026_03, entry version 190, sequence version 1 were
+captured. Cached UniProt Taxonomy places the S288c reference NCBITaxon:559292
+under species NCBITaxon:4932. The retrieved UniProt bibliography does not cite
+the selected 2008 paper; gene-name agreement and the reference lineage do not
+establish a tested allele, derivative or genome. No new taxonomy or NCBI request
+was made, and #1040 remains deferred.
+
+No resistance assertion, exact variant, sequence, numeric AST value, construct
+or protocol was added. All 2,939 records and the existing census remain unchanged;
+whole-record review remains open. Earlier dated checkpoints retain their
+capture-time statuses. The [verification receipt](2026-10-14-mycophenolic-literature-verification.json)
+records focused tests, offline replay and preservation checks. This was
+same-agent review, not independent scientific signoff or a publication cycle.
+
+## Eugenol: Sensitivity and Conditional Rescue (2026-10-14)
+
+The [eugenol dossier](2026-10-14-eugenol-context.json) covers `CHEBI:4917`,
+InChIKey `RRAFCDWBNXTKKO-UHFFFAOYSA-N`, and the yeast study by
+[Darvishi et al. (2013)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0076028).
+The complete record, primary text, four native figures and Table 1 were inspected.
+The study names purchased eugenol, not clove oil or a related phenylpropanoid.
+
+The source reports **21 sensitivity-screen hits**, not resistant mutants.
+Its hit list excludes multidrug-resistance deletions; eight selected strains
+have follow-up spot comparisons. Figure 3 retains auxotrophy and medium context.
+Figure 4 reports partial growth rescue for GAP1 and TAT1 in a sensitized ARO1
+background, with no significant rescue reported for BAP2 or TAT2. This is not a
+clinical resistance category. The baseline S288C MIC is not a resistant-genotype
+measurement. BY4741 is the library background, not one unique tested derivative.
+The authors leave direct permease binding and the complete mechanism unresolved.
+
+Across all inspected gene panels, **35 distinct source labels** are accounted
+for. **33 reference proteins** are grounded to UniProt release 2026_03: 32 new
+sequence-free mappings and the unchanged cached ERG2 reference. KEM1 maps through
+an explicit UniProt alias to canonical XRN1 at the source locus YGL173C.
+Cached UniProt Taxonomy retains S288c reference NCBITaxon:559292 under species
+NCBITaxon:4932; neither identifies an experimental allele or genome.
+YDR442W and YMR326C remain uncompleted because they overlap the earlier rejected
+ionophore query. That query was not retried or split, and these are not negative
+search results.
+
+No resistance mechanism, direct-binding target, numeric AST, sequence, exact
+variant or experimental genome was curated from this study. The
+[verification receipt](2026-10-14-eugenol-verification.json) records offline replay,
+focused tests and preservation of every biological record and prior checkpoint.
+Other eugenol evidence and all 2,939 corpus records remain in scope. This is
+same-agent scientific review, not whole-record or independent signoff. No NCBI
+request, source adoption or GitHub mutation occurred; #1040 remains deferred.
+
+## Curator-Claim Field and Citation Index (2026-10-14)
+
+The [offline claim index](2026-10-14-curator-resistance-fields.json) checks all
+**2,939 collection-loaded records** against the current pinned census and
+retains all **131 curator-owned resistance claims across 53 records**. Source
+ownership remains separate: 4,538 CARD assertions and 217 PHI-base associations
+are counted but not reclassified or expanded into curator findings. Every
+indexed claim has its record checksum, structure identifier, claim-array
+position and content checksum; no claim text or variant specification is copied.
+
+| Field representation | Curator claims |
+| --- | ---: |
+| Both `gene_id` and `gene_families` | 18 |
+| `gene_families` only | 87 |
+| `gene_id` only | 24 |
+| Neither gene field | 2 |
+| Structured taxon ID | 114 |
+| Taxon label without a taxon ID | 5 |
+| Neither taxon label nor taxon ID | 12 |
+| Explicit UniProtKB citation | 48 |
+| Structured protein accession | 6 |
+
+The first four rows partition the 131 claims, as do the next three. Citation
+and accession counts overlap these groups and must not be summed as coverage.
+The 48 citing claims reference **42 distinct UniProtKB accessions**. URL and
+CURIE forms are both recognized; the one UniParc-citing claim remains separate.
+The six accession slots are reported as stored, not newly endorsed as exact
+experimental alleles. A protein citation may describe a canonical reference,
+donor protein or model organism rather than the tested subject.
+
+The apparent gene-field gaps are not grounds for automatic curation. The 24
+`gene_id`-only claims retain their source gene identifiers, including unresolved
+historical ACR loci. The two claims without either gene field are kasugamycin
+operon-level observations; their notes explicitly avoid a single-gene assignment.
+The five label-only taxon claims name Streptomyces albus in the platencin,
+platensimycin and borrelidin records. Resolving their experimental host and
+donor scope requires the existing evidence, not copying a reference TaxID.
+
+Thirteen claims also cite resources outside this index's identifier recognizer:
+11 cite the versioned SGD historical-loci page and two cite PomBase. These
+citations are retained by location and checksum, not treated as absent evidence.
+Notes and separate paper dossiers are deliberately not mined for assignments,
+so lacking an indexed UniProt citation does not establish missing grounding.
+
+This is a representation audit, not another primary-paper review or whole-record
+signoff. No biological records, source inventories, pages, embeddings or prior
+checkpoints were changed. No HTTP requests, NCBI contact, source adoption or
+GitHub mutation occurred; #1040 remains deferred. Remaining work still includes
+scientific review of all records and supported experimental-identity curation.
+The [verification receipt](2026-10-14-curator-resistance-fields-verification.json)
+records focused tests, offline replay, same-agent parser review and preservation
+checks. Full authoritative QC was not rerun for this research-only change.
+
+## J1074 Host Species Grounding (2026-10-14)
+
+The [taxonomy dossier](2026-10-14-j1074-taxonomy.json) resolves the five
+previously label-only curator claims in borrelidin, platencin and platensimycin
+to **Streptomyces albidoflavus, NCBITaxon:1886**, at species rank. The
+[curation receipt](2026-10-14-j1074-curation.json) records three validated writes
+and three history events. The other **2,936 records remain byte-identical**.
+This changes the host-species context of existing claims, not their phenotype,
+mechanism, donor identity or experimental allele.
+
+The selected host passages in the cached Olano 2004 paper
+([DOI:10.1016/j.chembiol.2003.12.018](https://doi.org/10.1016/j.chembiol.2003.12.018),
+journal page 92) and Peterson 2014 accepted manuscript
+([DOI:10.1016/j.chembiol.2014.01.005](https://doi.org/10.1016/j.chembiol.2014.01.005),
+Table 1, manuscript page 17) were visually rechecked. They identify the
+historically named S. albus J1074 background and keep its tested derivatives
+distinct. The accepted manuscript is not represented as the final publisher PDF.
+
+The [J1074 genome paper](https://doi.org/10.1186/1471-2164-15-97), in
+"Establishing strain ancestry" and "Sequence accession id", distinguishes J1074
+from its S. albus G ancestor and reports background chromosome CP004370.
+Sequence-free ENA accession metadata identifies **CP004370.1** as strain J1074,
+species S. albidoflavus, TaxID 1886 (metadata last updated 2018-11-09).
+The native request, response and selected field definitions are pinned in the
+dossier. UniProt taxonomy release **2026_03** independently supplies a unique
+exact-name active species result for 1886; the species-group and S. limosus
+results are not selected. A selected paragraph in the later
+[naming-context paper](https://doi.org/10.1093/nar/gkae1236) also uses
+S. albidoflavus J1074 with S. albus J1074 as its earlier name. That paper is
+not treated as an independent formal taxonomic reclassification study.
+Whole articles and supplements have not received a new complete review.
+
+CP004370.1 is a **background chromosome accession, not an assembly accession**.
+Its study and sample identifiers remain background references only. No genome,
+sample, strain TaxID or protein accession is assigned to an experimental
+derivative. The legacy name-search candidates 457425, 1962 and 3466461 remain
+documented but unselected. The older 1888 species-name reference is retained
+as historical context, not the current host assignment. Donor references
+UniProtKB:D8L2W8 and UniProtKB:Q70HZ0 remain separate from the host; the unresolved
+fabF crosswalk is not filled with a convenient reference protein.
+
+Borrelidin's qualitative, data-not-shown result and UNKNOWN mechanism remain
+unchanged. The partial platencin result remains partial. No new resistance
+claim, experimental allele, numeric AST, sequence or construct detail was added.
+The [successor field index](2026-10-14-j1074-curator-resistance-fields.json)
+retains 131 curator claims across 53 records: **119 have structured taxon IDs**,
+none have only a taxon label, and 12 retain neither field. The six structured
+protein accessions and 48 UniProt-citing claims are unchanged. Eighteen claims
+now have citations outside the index's identifier recognizer, including the
+five claims with exact ENA and taxonomy-query URLs; these remain evidence,
+not absent references. The earlier field index stays immutable.
+
+The [successor census](2026-10-14-j1074-resistance-grounding.tsv) and
+[progress index](2026-10-14-j1074-resistance-progress.json) keep all **2,939
+records** in scope and every whole-record primary review open. The census
+updates current record hashes while retaining its historical reference-audit
+columns; those columns do not index every later paper or taxonomic correction.
+Use this dossier and the successor field index for the new host grounding.
+Eight new native
+requests and two web searches were limited to permitted non-NCBI sources;
+no held source was retried. NCBI requests, source adoptions and GitHub mutations
+remain zero for this checkpoint; #1040 remains deferred.
+
+All **12 authoritative QC gates passed**, including **4,512 tests passed and
+four skipped**, closed-schema validation of all 2,939 records, exact corpus
+reproduction and generated-site checks. The focused suite passed **191 tests**.
+The four skips are one explicitly historical CARD-cache replay and three empty
+command-frontmatter parameter sets, not failed biological checks. The
+[verification receipt](2026-10-14-j1074-verification.json) retains their exact
+reasons and the terminal QC result. Same-agent adversarial review also tightened
+the taxonomy guard to reject duplicate exact species names under different IDs;
+the new regression passes without changing the captured evidence.
+
+Three changed documents were genuinely re-encoded with the pinned local model.
+Sixteen control vectors agreed within 0.0001 maximum absolute difference; the
+other 2,936 vectors stayed byte-identical. The complete PaCMAP projection and
+published pages were regenerated. A broken newly installed Annoy binary failed
+both the projection and a ten-point diagnostic. The retained earlier binary
+passed that diagnostic and the projection; both binary checksums and the repair
+are recorded, with no projection-parameter change. The repaired QC runtime used
+RDKit 2025.3.6 rather than the project's 2026.3.5 pin. The existing chemical map
+was checked, not recomputed; this is not a claim of pinned-environment
+reproduction. This is same-agent review, not independent scientific signoff.
+
+## Triclosan Reference Context (2026-10-14)
+
+The [dossier](2026-10-14-triclosan-context.json) investigates the existing
+TriABC-OpmH assertion, ARO:3003678, on triclosan (`CHEBI:164200`, Standard
+InChIKey `XEFQLINVKFYRCS-UHFFFAOYSA-N`). All ten CARD-owned resistance assertions,
+existing targets, causal graph and history remain unchanged. This is one
+source-term investigation, not a whole-record primary review.
+
+Europe PMC's metadata and abstract for [Mima et al. 2007](https://doi.org/10.1128/JB.00850-07)
+identify a collective PA0156-PA0157-PA0158 locus set associated with the paper's
+TriABC terminology. The linked native PDF returned **HTTP 403**. No retry or
+alternate route was attempted; Results, figures and supplements were not
+reviewed. Free-access links in metadata do not establish a reuse license. The
+abstract alone is not used to curate a functional resistance claim or assign
+an experimental subject.
+
+Sequence-free UniProt release **2026_03** metadata verifies these references:
+
+| Systematic locus | UniProt reference | Entry / sequence version | EMBL reference protein |
+| --- | --- | --- | --- |
+| PA0156 | [Q9I6X6](https://www.uniprot.org/uniprotkb/Q9I6X6/entry) | 120 / 1 | AAG03546.1 |
+| PA0157 | [Q9I6X5](https://www.uniprot.org/uniprotkb/Q9I6X5/entry) | 117 / 1 | AAG03547.1 |
+| PA0158 | [Q9I6X4](https://www.uniprot.org/uniprotkb/Q9I6X4/entry) | 108 / 1 | AAG03548.1 |
+
+All three are **unreviewed TrEMBL entries** with systematic locus annotations,
+not annotated TriA/TriB/TriC gene names. This checkpoint does not infer individual
+symbol-to-locus equivalence from gene order. Their EMBL nucleotide reference
+AE004091 and cached UniProt taxonomy identify PAO1 reference context:
+**NCBITaxon:208964, strain**, within **NCBITaxon:287, Pseudomonas aeruginosa,
+species**. These IDs do not identify the paper's tested derivatives, alleles,
+samples or genomes. NCBI endpoints were not contacted.
+
+The entries cite the PAO1 genome paper (PMID:10984043) and a later structural
+paper (PMID:32966762), but not the original resistance paper PMID:17720796.
+The earlier completed UniProt query for the original PMID returned zero
+results. The new locus queries therefore resolve reference annotations without
+turning that earlier zero into biological absence or primary-paper support.
+
+The explicit UniProt evidence link to [PDB 6VEJ](https://www.rcsb.org/structure/6VEJ)
+is reciprocal in sequence-free RCSB metadata, revision 1.3 dated 2024-10-23.
+Entity `6VEJ_1` references Q9I6X4; entity `6VEJ_2` references **both Q9I6X5 and
+Q9I6X6**. Each entity's source taxonomy denotes species 287. Both accessions
+and the entity-specific source rows are retained; no representative protein,
+entity architecture or experimental allele is inferred. The later structural
+citation does not resolve the original 2007 experimental subject.
+
+Two complete exact-symbol searches for OpmH, one restricted to PAO1 and one
+to the species lineage, returned zero entries. No automatic search suggestion
+was followed and no replacement protein was selected. **OpmH remains unresolved**;
+these scoped empty queries do not establish that the gene is absent.
+
+The [verification receipt](2026-10-14-triclosan-verification.json) records
+**202 passing focused tests and one historical-cache skip**, offline replay,
+repository Ruff and diff checks, and preservation of all **2,939 record files**.
+Eight native requests used permitted non-NCBI sources; taxonomy and the earlier
+literature query were reused. All 7,261 pre-existing protected files were checked;
+only this cumulative report changed. No biological or generated artifact changed,
+so full QC, embeddings and rendering were not rerun. The J1074 QC result above
+remains its dated historical verification, not a new run. Same-agent review
+also corrected the overview's stale progress links and J1074 wording. This is
+not independent scientific signoff. No source was adopted or GitHub state
+mutated; #1040 and NCBI contact remain deferred, with all 2,939 records in scope.
+
+## Bevirimat Species Context (2026-10-14)
+
+The [taxonomy dossier](2026-10-14-bevirimat-taxonomy.json) and
+[curation receipt](2026-10-14-bevirimat-curation.json) ground the existing
+bevirimat claim (`CHEBI:65484`, Standard InChIKey
+`YJEJKUQEXFSVCJ-WRFMNRASSA-N`) at species rank as **Lentivirus humimdef1,
+NCBITaxon:3418650**. This is one identifier correction, not a new resistance
+claim or a fresh endorsement of every inherited variant assertion.
+
+The cited [Adamson et al. 2010 paper](https://doi.org/10.1186/1742-4690-7-36)
+was obtained as native full-text XML from EMBL-EBI. Its Results and Discussion,
+Conclusions and figure legends distinguish laboratory comparisons in an
+**NL4-3 background** from the clinical-polymorphism literature motivating them.
+Native figure images were not visually inspected. The other cited paper,
+PMID:19279107, was reused as bibliographic context only; its Results were not
+reviewed in this checkpoint. No new functional claim, variant specification,
+assay measurement or exact-form interpretation was imported.
+
+[UniProt's species node](https://rest.uniprot.org/taxonomy/3418650) is active
+and explicitly species-ranked in release **2026_03**. The separately pinned
+HIV-1 response, retrieved 2026-10-08 in the same release, identifies
+**NCBITaxon:11676 as unranked**, with 3418650 as its parent species. The human
+cellular host and the viral resistance subject are not conflated. This update
+adds only species fields, a scoped note and the taxonomy evidence citation;
+the original mechanism, label, gene-family field, primary citations and
+variant wording are preserved. The record's earlier `REVIEWED` status is
+retained, not renewed.
+
+The completed UniProt taxonomy-name query for NL4-3 and sequence-free Gag
+query restricted to that background both returned zero entries. These are
+scoped empty searches, not biological absence. Neither HXB2 nor the HIVDB
+consensus is substituted. No protein, strain TaxID, sample, genome, patient
+isolate or normalized allele is assigned to the existing aggregate claim.
+Four new requests used only EMBL-EBI and UniProt; no held source was retried,
+NCBI was not contacted, and #1040 remains deferred.
+
+A validated canary preceded the single record write; unchanged replay adds
+no event. The [successor census](2026-10-14-bevirimat-resistance-grounding.tsv)
+updates the affected record hash while retaining historical reference-audit
+columns. The [current field index](2026-10-14-bevirimat-curator-resistance-fields.json)
+now records **120 of 131 curator claims with taxon IDs**, zero label-only
+claims and 11 without either field. Those 11 are not automatically errors:
+route-level or biochemical evidence may lack an organismal subject. The 53
+curator-record, six protein-slot, 48 UniProt-citing-claim and 42 distinct-protein
+counts are unchanged. All **2,939 records** remain in scope and all whole-record
+primary reviews remain open.
+
+All **331 focused tests passed**, including native offline replay and historical
+fixture checks. Embedding preparation stopped before model loading because
+none of the changed fields participates in the existing embedding document.
+An exact whole-corpus comparison confirms all 2,939 document strings and all
+embedding artifacts are unchanged, with fingerprint `fc78c5005699217c`.
+Vectors and the projection were retained, not re-encoded or relabeled.
+The [final verification receipt](2026-10-14-bevirimat-verification.json) records
+**all 12 authoritative QC gates passing**, including **4,640 passing tests and
+four skips**. One historical CARD cache replay was skipped because its checkpoint
+differs from the live corpus; three command-frontmatter cases had empty parameter
+sets. All 2,939 records passed schema validation and exact corpus reproduction;
+the generated site and chemical map checks passed. The preservation check covered
+7,265 pre-existing protected files: exactly seven expected files changed, while
+the other 2,938 record files and earlier checkpoint inputs remained byte-identical.
+The QC runtime used RDKit 2025.3.6 rather than the project pin 2026.3.5; the chemical
+map was checked, not recomputed. This is not a fully pinned-environment reproduction.
+This remains same-agent review, not independent scientific signoff. No source
+adoption or GitHub mutation occurred.
+
+## Direct CARD Reference Lineages (2026-10-14)
+
+The [lineage dossier](2026-10-14-card-reference-lineages.json) checks all
+**2,939 collection-loaded records and 2,002 existing CARD terms**, then projects
+the complete direct-reference cohort: **979 UniProt proteins, 980 links, 978
+terms and 169 compound records**. Both terms with multiple candidates retain
+every candidate. The earlier citation-context audit remains the owner of
+citation-specific strain annotations; this follow-up does not assign those
+labels the reference protein's TaxID.
+
+The 360 reference TaxIDs comprise 248 species, 82 strains, ten subspecies,
+19 unranked nodes and one serogroup. Their native UniProt **2026_03** responses
+support **288 distinct species-rank nodes**. Every reference node has exactly
+one such node in its selected lineage, including itself where appropriate.
+Parent identity, lineage uniqueness and separately cached node identities agree.
+These are reference-taxonomy observations, not tested-isolate identifications.
+
+Of the 288 species nodes, **254 have separately verified active native responses**:
+248 from the original snapshot and six reused from other local checkpoints.
+The remaining **34 are lineage annotations only**; their standalone active status
+was not verified here. The local `reports/**/*.json` cache search included hidden
+and ignored files. A revised pinned plan corrected the initial search's omission
+of `.json` taxonomy endpoints, recovering one additional native species response.
+The unselected-response category does not claim global cache or biological absence.
+No network request, held-source retry, source adoption or NCBI contact occurred.
+
+**Twenty-five species-rank labels** contain explicit unspecified, uncultured,
+mixed-culture or standalone "bacterium" wording. Their TaxIDs and ranks are
+preserved, with literal label flags rather than invented binomials. Whole-word
+checks do not flag named genera merely because their names contain "bacterium".
+Neither an active TaxID nor species rank establishes a named experimental species,
+a gene-to-isolate join, exact resistance allele or compound-specific phenotype.
+
+The [verification receipt](2026-10-14-card-reference-lineages-verification.json)
+records **202 passing focused tests**, network-disabled native replay, repository
+Ruff and diff checks, and preservation of **all 2,939 record files**. Across 7,275
+pre-existing protected files, only this cumulative report changed. Pages,
+embeddings, source-owned inputs and earlier checkpoints remain byte-identical.
+The four-node canary covered strain ancestry, unspecified, uncultured and
+mixed-culture scope. No biological or production behavior changed, so full QC,
+rendering and embedding generation were not rerun; the preceding bevirimat QC
+remains a dated historical result. This is same-agent review, not independent
+scientific signoff. All whole-record primary reviews remain open; #1040 stays
+deferred and no GitHub state was mutated.
+
+## Standalone CARD Species Nodes (2026-10-14)
+
+The [successor dossier](2026-10-14-card-species-nodes.json) resolves the preceding
+checkpoint's **34 lineage-only species nodes** using 34 single-attempt native
+UniProt taxonomy requests. The first, Cereibacter sphaeroides
+(`NCBITaxon:1063`), was inspected before the remaining 33 requests. All returned
+HTTP 200, active species status, the expected scientific name and release
+**2026_03**. Full ancestor paths also agree with the cached native responses
+for all **36 affected reference TaxIDs**.
+
+This adds standalone species evidence for **43 reference proteins and 43 CARD
+terms across 65 compound records**. Combined with the previous 254 verified
+nodes, **all 288 species nodes** in the direct-reference cohort now have native
+standalone evidence. It is not a new retrieval of all 288 nodes or all 979
+reference proteins. The prior dossier remains unchanged as its dated snapshot;
+all protein accessions, versions, candidate multiplicities and citation-context
+pointers are preserved. The 25 source-label warnings remain applicable.
+
+Species-node synonyms, strain lists and statistics were not turned into
+experimental isolate, protein, allele, sample or genome assignments. No new
+protein or sequence query, primary review, resistance claim or numerical AST
+was introduced. The cohort selection and prior-attempt search were pinned
+before retrieval; the selected cache search included hidden and ignored files.
+No held source was retried, no redirect was followed, and no NCBI endpoint was
+requested. #1040 remains deferred.
+
+The [verification receipt](2026-10-14-card-species-nodes-verification.json)
+records **229 passing focused tests**, offline native replay with network access
+disabled, repository Ruff and diff checks, and preservation of all **2,939
+record files**. Across **7,279 pre-existing protected files**, only this cumulative
+report changed. Earlier checkpoints, biological records, source inputs, pages
+and embeddings remain byte-identical. Full QC, rendering and embedding generation
+were not rerun for this research-only successor. This remains same-agent review,
+not independent scientific signoff; no GitHub state was mutated. The full
+corpus-wide goal and all whole-record primary reviews remain open.
+
+## FR171456 Locus-Name Follow-Up (2026-10-14)
+
+The [locus dossier](2026-10-14-fr171456-locus.json) revisits the previously
+documented `YPR090w` / `YPL090w` conflict in Helliwell et al. 2015
+(`PMID:26456460`, `DOI:10.1038/ncomms9613`). The cached native Results paragraph
+contains both spellings; native Figure 2 panels c and d, visually inspected in
+this follow-up, label `YPR090w`. The focal context is **hypersensitivity**, not
+a new resistance observation. The cited miconazole background paper
+(`PMID:17553796`, `DOI:10.1074/jbc.M608505200`, reference b26) was identified
+bibliographically, not newly reviewed for primary results.
+
+Two sequence-free UniProt searches used exact labels, species lineage 4932 and
+reviewed-entry scope. The `YPR090W` canary returned **UniProtKB:O13585**, reviewed,
+entry version **162**, sequence version **2**, in release **2026_03**. Its
+**ordered locus name is YPR089W** and its **ORF name is YPR090W**; no gene symbol
+is supplied. The S288c reference TaxID is `NCBITaxon:559292`, with species
+`NCBITaxon:4932`, verified using the previously pinned native taxonomy responses.
+This reference was newly checked for the present question, not claimed globally
+new. Its bibliography does not cite the focal 2015 paper.
+
+The completed `YPL090W` query returned zero entries and five alternative-query
+suggestions. Those suggestions were not selected or counted as results. A zero
+within this reviewed-entry query does not prove that a locus does not exist.
+The ORF-name match does not establish gene-model history, what the historical
+deletion removed, an exact allele, or a phenotype for the current reference
+protein. No spelling was silently corrected and no new organismal assertion
+was curated. The existing ERG26 claim, reference notes and earlier holds remain
+unchanged; the held supplement-archive route was not retried.
+
+The [verification receipt](2026-10-14-fr171456-locus-verification.json) records
+**101 passing focused tests**, network-disabled native replay, repository Ruff
+and diff checks, and preservation of all **2,939 record files**. The preservation
+check covered **7,283 pre-existing protected files**; only this cumulative report
+changed. All previous checkpoints, source inputs, pages and embeddings remain
+byte-identical. Full QC, rendering and embedding generation were not rerun for
+this research-only follow-up. Both new requests used UniProt; NCBI/#1040 remain
+deferred, no source was adopted and no GitHub state changed. All records remain
+in scope, with no new whole-record primary signoff.
+
+## Thevissen 2007: Publisher Access Hold (2026-10-14)
+
+The [access dossier](2026-10-14-thevissen-2007-access.json) follows Helliwell
+2015's reference b26 to Thevissen et al. 2007, `PMID:17553796`,
+`DOI:10.1074/jbc.M608505200`. The existing Europe PMC discovery response,
+retrieved on 2026-10-08, supplied bibliographic identity and negative full-text
+availability flags. Those dated flags are not proof of global inaccessibility.
+The complete FR171456 and miconazole records were loaded and their identities
+pinned; all **2,939 record hashes** were checked without implying primary review.
+
+Three planned, single-attempt requests were made: Crossref returned the exact
+DOI's metadata; its canonical Elsevier Linking Hub URL returned an HTTP 200
+**routing page, not article text**; the explicit JBC destination then returned
+a **403 challenge**. No challenge was solved, no request retried, and no alternate
+route attempted. Crossref's deposited license entries distinguish the version
+of record's CC BY 4.0 entry from a TDM license. They are retained as metadata,
+not independent review of article terms, proof of access, or source adoption.
+The routing response's TDM reservation is also preserved without inferring
+permission from it.
+
+The paper's primary results, tested miconazole chemical form and experimental
+subjects remain unverified. No locus spelling, deletion identity, gene-model
+history, resistance effect, protein, allele or genome was inferred. The earlier
+FR171456 label conflict, existing ERG26 claim and supplement hold remain intact.
+All biological records, pages, embeddings and source inputs are unchanged.
+
+The [verification receipt](2026-10-14-thevissen-2007-access-verification.json)
+records **131 passing focused tests**, including network-disabled native replay,
+repository Ruff and diff checks, and preservation of **7,287 pre-existing
+protected files** except this cumulative report. This is same-agent review,
+not independent scientific signoff. Full authoritative QC, rendering and
+embedding generation were not rerun for this research-only follow-up. NCBI
+was not contacted; #1040 stays deferred. No source was adopted or GitHub state
+mutated. All records remain in scope, with no new whole-record primary signoff.
+
+## Curator Taxon Gaps: Bictegravir Species Context (2026-10-14)
+
+The [dossier](2026-10-14-antiviral-taxa.json) accounts for all **11 curator claims
+without a taxon field across nine records**, from the preceding complete-corpus
+field index. All nine complete records were loaded and all **2,939 record hashes**
+checked. Four biochemical claims on oleandomycin and microcin C are not automatic
+organism assignments. Boceprevir and vaniprevir retain their previous access or
+primary-review limits; dasabuvir and paritaprevir retain their chemical-form holds.
+Three remaining antiviral primary leads were selected for follow-up, not treated
+as already verified.
+
+The bictegravir canary retrieved the cited native paper, `PMID:27645238`,
+`DOI:10.1128/AAC.01474-16`, through EMBL-EBI. Its native license is CC BY 4.0.
+Selected Results and the compound-source paragraph were inspected for organism
+and subject scope only. The existing claim concerns **laboratory HIV-1**;
+selected populations, site-directed test viruses and patient-derived isolates
+remain distinct. Native figures and supplements were not reviewed, and this
+does not independently revalidate the inherited variant or quantitative claim.
+The exact tested formulation remains unresolved.
+
+The [validated curation](2026-10-14-antiviral-taxa-curation.json) adds species
+**Lentivirus humimdef1, NCBITaxon:3418650**, to that one existing bictegravir
+claim. The already verified UniProt taxonomy responses were reused from release
+2026_03; HIV-1's name node `NCBITaxon:11676` is unranked beneath the species.
+No new taxonomy/protein request, reference substitution, experimental allele,
+strain TaxID, genome or patient assignment was made. The inherited mechanism,
+gene-family label, variant wording, quantitative statement and primary citation
+are preserved, as are all 44 HIVDB rules and unrelated fields. One history event
+was appended through the validated writer; a second application made no write.
+
+SG85's planned EMBL-EBI request returned **HTTP 500 Internal Server Error**.
+This is a technical failure, not a permission decision or proof of global
+unavailability. The remaining requests stopped: dolutegravir's paper is
+**unrequested**, not denied. No retry or alternate source route was attempted.
+
+The [successor census](2026-10-14-antiviral-taxa-resistance-grounding.tsv) preserves
+the total of **4,886 assertions across 320 records**, including **131 curator
+claims across 53 records**. The [field index](2026-10-14-antiviral-taxa-curator-resistance-fields.json)
+now counts **121 claims with taxon IDs**, no label-only claims, and **10 with
+neither field**. UniProt citation/protein-slot counts are unchanged; eight claims
+now explicitly cite taxonomy evidence. These are representation counts, not
+species-wide phenotypes or primary-review completion. Historical fixtures retain
+the pre-curation bytes for replay of earlier audits.
+
+Pre-write validation passed 201 focused tests; post-write validation passed
+**237 focused tests**, including offline native replay and current-corpus indexes.
+All **2,939 embedding inputs and all embedding artifacts remain byte-identical**;
+no encoding or projection was performed. The [final verification receipt](2026-10-14-antiviral-taxa-verification.json)
+records **all 12 authoritative QC gates passing**, with **4,767 tests passed and
+four skipped**. One skip is a historical CARD cache/live-corpus mismatch; three
+are empty command-frontmatter parameter sets. All 2,939 records pass strict
+schema validation, reproduce from their maintained inputs, and match generated
+pages. Across **7,291 pre-existing protected files**, only the seven expected
+files changed; **2,938 other records** and all prior public checkpoints remain
+byte-identical. The local RDKit version is **2025.3.6**, not the project pin
+**2026.3.5**: the chemical map was checked, not recomputed, and this is not a
+fully pinned-environment reproduction.
+
+Two previously saved UniProt literature-query responses were also inspected
+offline, including both citation IDs and explicit PubMed cross-references.
+Their complete union-query result sets contain 34 and 21 entries, respectively,
+in release 2026_03, retrieved on 2026-10-08. Neither contains an entry directly
+citing any of the three focal papers. This is a dated, citation-scoped result,
+not protein absence, a new query, or permission to substitute a canonical
+reference for an experimental allele. The receipt pins both native responses
+and replays this check with network requests disabled.
+
+This remains same-agent review, not independent scientific signoff or completion
+of any whole-record primary review.
+All records remain in scope. NCBI/#1040 remain deferred, no source was adopted,
+and no GitHub state was changed.
+
+## Species Checkpoint Publication Review (2026-10-14)
+
+Publication PR [#1109](https://github.com/CultureBotAI/AntibioticMech/pull/1109)
+packages the preceding species curation and reference/access checkpoints. A
+separate same-agent adversarial pass found that four new audit command-line
+entry points could not replay their pre-bictegravir censuses, despite tests that
+passed a historical resolver directly. Review issue
+[#1110](https://github.com/CultureBotAI/AntibioticMech/issues/1110) records the
+reproduced failures and the regression fix.
+
+For `audit_card_reference_lineages.py`, `audit_card_species_nodes.py`,
+`audit_fr171456_locus.py` and `audit_thevissen_2007_access.py`, replay the saved
+dossier using `--check --historical-records` when the native cache is available.
+The option selects only registered identifier/path/hash-bound fixtures. The
+default still checks live record bytes and rejects census drift. Cache-independent
+tests cover both CLI modes, and optional native replay tests now exercise the
+actual entry points with network access disabled.
+
+The [publication verification receipt](2026-10-14-species-publication-verification.json)
+records the regression checks and confirms that the fix leaves biological
+records, generated pages, source inputs and historical dossiers unchanged.
+Final locked-environment PR and merge-queue CI results are recorded on the PR;
+the earlier local QC receipt retains its original runtime limitation. The
+publication review does not complete the corpus-wide investigation, resolve
+existing scientific holds, or constitute independent scientific signoff.
+NCBI/#1040 and reuse-terms work remain deferred. No scientific endpoint was
+contacted during this publication pass.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
@@ -9938,7 +10565,10 @@ fail-fast, and final results are required on the PR before merge.
 2. Finish curator-claim review beyond the taxon and reference assignments already
    documented, including unresolved exact alleles. Review the 978 CARD
    determinants with reference candidates and investigate the 1,024 without
-   explicit links. The ontology-scope audit identifies 88 rRNA-ancestor terms
+   explicit links. The direct-reference lineage audit now scopes all 979 proteins,
+   and its successor supplies standalone evidence for all 288 species nodes;
+   label warnings and reference ancestry still do not resolve experimental identity.
+   The ontology-scope audit identifies 88 rRNA-ancestor terms
    (87 RNA labels and one protein-definition conflict) and 14 whole-cluster
    terms. Do not force true RNA loci or whole clusters into single-protein
    mappings. The name crosswalk resolves 86 term labels to 33 species TaxIDs,
@@ -9977,6 +10607,19 @@ fail-fast, and final results are required on the PR before merge.
    experimental alleles, sample/genome joins and broader resistance review
    remain open. The Rho target
    example does not resolve CARD bcr-1 or certify an organismal phenotype.
+   Triclosan's three new systematic-locus references and shared PDB metadata
+   do not resolve its held original primary study or OpmH. Preserve the
+   multi-reference entity; do not turn a complex into a single protein or
+   retry the held paper through another route.
+   Bevirimat's species grounding does not finish primary review of its inherited
+   variant claims or resolve its experimental alleles, exact formulation or
+   patient/strain identifiers. The NL4-3 reference searches remain scoped
+   empty results, not authority to substitute a different isolate.
+   Bictegravir's species-only curation does not revalidate inherited quantitative
+   or variant assertions, resolve its tested formulation, or assign experimental
+   identities. SG85's full-text request has a technical HTTP 500 hold; dolutegravir
+   remains unrequested after that source error. Do not convert either status
+   into a negative scientific result or retry a held route without new direction.
 3. Review HIVDB primary evidence and resolve supported reference accessions
    beyond the verified source-region/taxon context. Retain algorithm rules as
    rules rather than measured phenotypes or biochemical mechanisms.
@@ -10025,6 +10668,23 @@ fail-fast, and final results are required on the PR before merge.
    Resolve aureobasidin A's source-owned chemical identity discrepancy before
    transferring AUR1 evidence to its exact-structure record. The reference
    protein mapping does not resolve the chemical discrepancy or assign an allele.
+   Mycophenolic acid's 2005 primary paper is now access-held after a publisher
+   403; the 2008 paper remains unrequested after the publisher canary stopped.
+   Sub1's verified reference mapping and abstract-level context do not establish
+   experimental allele or phenotype identity. Do not retry held sources through
+   alternate routes or treat access metadata as primary review.
+   Eugenol's selected yeast study now has primary text, figure and gene-reference
+   review, but sensitivity and conditional rescue must not become resistant-allele
+   claims. Two reference loci retain their prior query hold; other studies and
+   experimental allele/genome context remain open.
+   FR171456's YPR090w label now has a scoped UniProt ORF-name mapping, but its
+   current ordered locus is different. Resolve the source-label conflict and
+   historical deletion identity before assigning a protein-specific phenotype;
+   do not turn the reported hypersensitivity into a new resistance claim.
+   Its cited Thevissen 2007 miconazole study is now access-held after a journal
+   403 challenge. Do not retry it through an alternate route or treat its
+   publisher metadata as primary results; a supplied primary copy or new
+   explicit direction is needed to revisit that hold.
 5. Curate supported findings through source-owned inputs; normalize MICs to
    mg/L where reported, keep EC50 and disk-diffusion measurements distinct, and
    never infer clinical resistance from a number without its source interpretation.

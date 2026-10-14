@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import pytest
@@ -10,6 +11,8 @@ from antibioticmech.activity_collections import load_record
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from resistance_checkpoint_records import checkpoint_path  # noqa: E402
 
 
 @pytest.fixture(scope="module")
@@ -39,7 +42,7 @@ def test_one_qualified_report_not_a_demonstrated_replacement_route(curation):
 
 
 def test_existing_chemical_and_target_curation_survives(curation, tmp_path):
-    path = ROOT / curation["record"]["path"]
+    path = checkpoint_path(ROOT, {**curation["record"], "identifier": "CHEBI:78661"})
     record = load_record(path)
     assert record["identifier"] == "CHEBI:78661"
     assert record["chemical_structure"]["standard_inchi_key"] == "OJCKRNPLOZHAOU-JTHVHBRGSA-N"

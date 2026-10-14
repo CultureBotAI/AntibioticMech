@@ -121,13 +121,14 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>HIV-1 Gag CA-SP1 cleavage-site substitutions<br><span class="meta">Resistance substitutions cluster at or near the CA-SP1 cleavage site. SP1-A1V remained robustly replicative under bevirimat, while SP1-V7A caused high-level resistance and V7M or T8 deletion caused intermediate resistance.</span></td>
+      <td>HIV-1 Gag CA-SP1 cleavage-site substitutions<br><span class="meta">Resistance substitutions cluster at or near the CA-SP1 cleavage site. SP1-A1V remained robustly replicative under bevirimat, while SP1-V7A caused high-level resistance and V7M or T8 deletion caused intermediate resistance. Species-grounding update (2026-10-14): the existing HIV-1 claim is placed in Lentivirus humimdef1 (NCBITaxon:3418650). UniProt&#39;s Human immunodeficiency virus type 1 node NCBITaxon:11676 is unranked beneath that species, not itself a species-rank node. The 2010 paper&#39;s Results and Conclusions describe laboratory comparisons in the NL4-3 background; that background is not an exact identifier for the tested derivatives or a patient-isolate assignment. This update does not revalidate every inherited variant assertion or the tested compound&#39;s exact formulation. No protein accession, strain TaxID, experimental genome or normalized allele is assigned.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Lentivirus humimdef1</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_3418650"><code class="curie">NCBITaxon:3418650</code></a></td>
       <td class="meta">HIV-1 Gag CA-SP1</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/19279107">PMID:19279107</a></span> <span class="meta">(Primary in-vitro resistance-evolution study.)</span></li>
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20406463">PMID:20406463</a></span> <span class="meta">(Primary mutational susceptibility study.)</span></li>
+  <li><span class="meta"><a href="https://rest.uniprot.org/taxonomy/3418650">https://rest.uniprot.org/taxonomy/3418650</a></span> <span class="meta">(Species context only: UniProt release 2026_03, retrieved 2026-10-14, identifies active species Lentivirus humimdef1, NCBITaxon:3418650. The separately pinned native taxonomy/11676 response (retrieved 2026-10-08, same release) identifies HIV-1 as an active unranked child of this species. These taxonomy records do not establish experimental strain, protein, allele, genome or patient identity.)</span></li>
 </ul>
 </td>
     </tr>
@@ -174,6 +175,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_TAXONOMY</span>
+    <span class="meta">2026-10-14 · codex · LLM-assisted</span>
+    <p>Grounded the existing bevirimat HIV-1 resistance claim at species rank as Lentivirus humimdef1 (NCBITaxon:3418650), using the cited 2010 primary organism context and UniProt taxonomy release 2026_03. Preserved the original mechanism, gene-family label, variant wording and primary citations. Distinguished the unranked HIV-1 node and laboratory background from experimental identities. Added no protein, strain, genome, normalized allele or numeric AST; whole-record review and exact compound formulation remain open.</p>
   </li>
 </ol>
 

@@ -8,6 +8,26 @@ FLUCYTOSINE_SHA256 = "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3
 CLOTRIMAZOLE_PATH = "data/antibiotics/antifungal/clotrimazole.yaml"
 CLOTRIMAZOLE_FIXTURE = "tests/fixtures/clotrimazole-before-2026-10-13.yaml"
 HISTORICAL_RECORDS = {
+    "ac88ec7d91f9fe520740a84623e1024bfce36c338d16da4c63398a5f2079466e": (
+        "CHEBI:172943", "data/antibiotics/antiviral/bictegravir.yaml",
+        "tests/fixtures/bictegravir-before-2026-10-14.yaml",
+    ),
+    "2894f5b4c56f5716b102720362a56e69279661421faff7dcc5c30a0954f01566": (
+        "CHEBI:65484", "data/antibiotics/antiviral/bevirimat.yaml",
+        "tests/fixtures/bevirimat-before-2026-10-14.yaml",
+    ),
+    "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58": (
+        "CHEBI:78661", "data/antibiotics/antifungal/borrelidin.yaml",
+        "tests/fixtures/borrelidin-before-2026-10-14.yaml",
+    ),
+    "5bdf0cc6feda78dd54eee8f5a7bbf37b7c8515344790fc01cb833c20953580b7": (
+        "CHEBI:68241", "data/antibiotics/antibacterial/platencin.yaml",
+        "tests/fixtures/platencin-before-2026-10-14.yaml",
+    ),
+    "f75a55971c4629c13895681a48dc43f5b43143e380431503d6a28c1e16576a84": (
+        "CHEBI:68236", "data/antibiotics/antibacterial/platensimycin.yaml",
+        "tests/fixtures/platensimycin-before-2026-10-14.yaml",
+    ),
     "36014dc9ddbd32288e27e051c676ad82bcb6ba8bfb24c793800fcc673fdabe4c": (
         "CHEBI:168396", "data/antibiotics/antiviral/mycophenolic-acid.yaml",
         "tests/fixtures/mycophenolic-acid-before-2026-10-14.yaml",

@@ -1,0 +1,95 @@
+{
+  "audit_script": {
+    "path": "scripts/audit_mycophenolic_literature.py",
+    "sha256": "4f3937c51b33c18dd9bcdbb337ed8117100bbbf7f75b7f9ececa7b03e6f40ad3"
+  },
+  "baseline_commit": "5e9c257a69d5a0c998e57447195f8c40d62d2a30",
+  "checkpoint": {
+    "path": "research/2026-10-14-mycophenolic-literature.json",
+    "sha256": "faa20e4029646e7f4929237f4d54e19a9449a4b219939dd59f0ef52034cdcf9d"
+  },
+  "focused_results": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/literature-followup/focused-tests-final.xml",
+      "sha256": "02428933c6b9f00473b3034742005b836e35a38c9ab8ec54eda5d631ee4a23eb"
+    },
+    "offline_replays_blocked_requests_and_sockets": true,
+    "skipped": 0,
+    "tests": 146
+  },
+  "git_diff_check": "PASS",
+  "native_plan": {
+    "path": "reports/resistance-grounding-2026-10-14-mycophenolic/literature-followup/metadata-plan.json",
+    "sha256": "5f9002b03d9bc96810ee04a3c1f4525d3c4b3b17ad82c6d5acfe7d489d78f6da"
+  },
+  "network": {
+    "domains": [
+      "onlinelibrary.wiley.com",
+      "rest.uniprot.org",
+      "www.ebi.ac.uk"
+    ],
+    "ncbi_requests": 0,
+    "new_taxonomy_requests": 0,
+    "primary_2005": "403",
+    "primary_2008": "NOT_REQUESTED_CANARY_STOP",
+    "requests": 4,
+    "retries": 0
+  },
+  "preservation": {
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "corpus_records_byte_identical": 2939,
+    "current_census": {
+      "path": "research/2026-10-14-mycophenolic-resistance-grounding.tsv",
+      "sha256": "c2b9c15d375c86aa72cb01c3648d4288e8ec0504ab9d4617c1967a0b1a4daf48"
+    },
+    "existing_files_checked": 7237,
+    "generated_pages_unchanged": true,
+    "prior_checkpoints_unchanged": true,
+    "protected_baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/literature-followup/protected-before.json",
+      "sha256": "425b41d70b7f3f5d9d33d024060d9bf3742166ff47a3a77f7cb7cda5e7de4826"
+    },
+    "source_owned_inputs_unchanged": true,
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "publisher_plan": {
+    "path": "reports/resistance-grounding-2026-10-14-mycophenolic/literature-followup/primary-plan.json",
+    "sha256": "73fc6ea4685888726bbee77de99939133319d174e5c7a947d26a8bdff73e7ba1"
+  },
+  "reference_plan": {
+    "path": "reports/resistance-grounding-2026-10-14-mycophenolic/literature-followup/reference-plan.json",
+    "sha256": "87a9c1d431b15185b9678e479e166986bf75918ed5d55c667457f190d24e09b1"
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "14a87253c074ba65db1e489a85ffbf6b6d6da07778d3c0ed2608d6d64888a8ff"
+  },
+  "repository_ruff": "PASS",
+  "scope": {
+    "biological_record_changes": 0,
+    "curated_assertions": 0,
+    "full_authoritative_qc": "NOT_RUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_GENERATED_CHANGES",
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "self_review": [
+    "Kept metadata access labels separate from redistribution permission and primary review.",
+    "Distinguished actual publisher denial from the unrequested second paper.",
+    "Rejected matching-but-empty reference strain names; no experimental identity promotion."
+  ],
+  "tests": {
+    "path": "tests/test_mycophenolic_literature.py",
+    "sha256": "56bc35e1385cb8835425fc282fc25275230325cccc7e4100c4296e418c67eda5"
+  },
+  "verified_at": "2026-10-14T06:29:58.320544+00:00"
+}
