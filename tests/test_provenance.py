@@ -39,7 +39,8 @@ def test_qc_runs_every_check_a_reviewer_would_expect(repo_root):
 
     names = {name for name, _, _ in COMMANDS}
     assert {"lint", "tests", "schema validation", "corpus reproduction",
-            "raw-data provenance", "documentation", "generated site"} <= names
+            "raw-data provenance", "documentation", "generated site",
+            "history records"} <= names
     for _, command, rationale in COMMANDS:
         assert rationale.strip(), command
 
