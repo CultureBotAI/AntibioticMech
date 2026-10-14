@@ -100,6 +100,31 @@ and strain annotations across 49 CARD terms and 63 records. It flags differing
 reference/study strain labels and a susceptibility-related citation without
 promoting database annotations to experimental identities or phenotypes.
 
+The [live CARD membership reconciliation](2026-10-14-card-reference-memberships.json)
+now binds these citation candidates and the explicit cross-reference cohort to
+all 4,538 current CARD assertions. Its [record index](2026-10-14-card-reference-memberships.tsv)
+retains all 2,939 records: 1,027 terms have 1,046 distinct UniProt reference
+proteins across the two cohorts, while 975 terms have no candidate in those
+cohorts. This does not combine later manual follow-ups or complete primary review.
+
+The [brefeldin A yeast follow-up](2026-10-14-brefeldin-yeast-context.json)
+distinguishes budding- and fission-yeast Bfr1 references, preserving different
+locus fields, species lineages and citation strain annotations. Two primary
+access failures remain explicit; neither reference is assigned to an experimental
+allele or the existing Candida PHI-base claim.
+
+The [valinomycin ABCB1 follow-up](2026-10-14-valinomycin-abcb1-context.json)
+checks a native primary article and figure, separating human ABCB1 reference
+P08183 / NCBITaxon:9606 from the S. cerevisiae assay-host species / NCBITaxon:4932.
+Its EC30 endpoint is not MIC; the donor reference is not a native yeast gene or
+an exact tested allele. Supplement-level and whole-record review remain open.
+
+The [aureobasidin deposition follow-up](2026-10-14-aureobasidin-structure-context.json)
+separates Aur1 and Kei1 protein references from the deposited peptide ligand.
+The ligand's producer taxon is not a resistant host. Component chemistry adds
+evidence relevant to the existing chemical discrepancy but does not reconstruct
+the complete cyclic drug or resolve the source-owned identity hold.
+
 The [IreK follow-up](2026-10-13-irek-context.json) keeps V583, the citation label
 OG1 and the separately resolved OG1RF reference taxon distinct. Two exact gene
 queries have no results; alternative-query suggestions are excluded. Both
@@ -10546,6 +10571,264 @@ existing scientific holds, or constitute independent scientific signoff.
 NCBI/#1040 and reuse-terms work remain deferred. No scientific endpoint was
 contacted during this publication pass.
 
+## Live CARD Reference Memberships (2026-10-14)
+
+The [reconciliation dossier](2026-10-14-card-reference-memberships.json) and
+[per-record index](2026-10-14-card-reference-memberships.tsv) join two dated
+reference cohorts to the current collection-aware corpus census. Eleven pinned
+inputs include the source ledger, both reference cohorts, citation contexts,
+term-scope and named-organism reviews, direct-reference species successor,
+source inventory and unchanged source queue. No new scientific request was made.
+
+| Reference scope | CARD terms | Live CARD assertions |
+| --- | ---: | ---: |
+| Explicit CARD cross-reference, reference only | 978 | 2,549 |
+| Citation plus literal gene-name candidate only | 49 | 131 |
+| No candidate in these two selected cohorts | 975 | 1,858 |
+| Total | 2,002 | 4,538 |
+
+The two selected cohorts retain 1,056 term-to-protein links to **1,046 distinct
+UniProt proteins**, affecting 173 of the 273 records with CARD assertions.
+Nine proteins occur in both cohorts; entry and sequence versions, review type,
+reference TaxID/rank and species lineage agree. Sharing an accession does not
+transfer an explicit CARD cross-reference to another term. Every exported link
+has a pointer to its own source candidate, and every assertion retains its
+record path, structure key, record hash, claim hash and original list index.
+Repeated source assertions remain repeated assertions, not deduplicated experiments.
+
+The direct cohort's 288 reference-species nodes include all 34 separately
+verified successor nodes. Existing ambiguous, mixed or uncultured label flags
+remain attached to their reference proteins. Citation candidates are checked
+against their own definition citations, exact stored study contexts and literal
+gene-name matches. The earlier cohort lacks a later redundant identity flag;
+both explicit experimental-subject and exact-allele flags must still be false.
+
+All 2,939 records remain indexed. The 217 PHI-base claims, 131 curator claims
+and 467 score rules are counted separately and **not reassessed by this join**.
+Likewise, later manual protein follow-ups are not silently folded into these
+two cohorts. The 975 unselected terms do not signify protein absence, absence
+of resistance evidence, or that a gene has never been searched. The 88 RNA
+ancestry annotations retain their named-organism review, including the
+protein-definition conflict at `ARO:3004956`; complex/subunit and whole-cluster
+annotations remain unresolved scope hints rather than single-protein assignments.
+
+The [verification receipt](2026-10-14-card-reference-memberships-verification.json)
+records **422 passing focused tests, zero skips** (including 56 new reconciliation
+tests), strict live-corpus replay and preservation checks.
+The cache-independent regression test reads pinned public checkpoints without
+reading mutable live records or native request caches; the separate CLI check
+uses the complete live corpus and rejects census drift. Reference taxonomy
+does not establish experimental organisms, alleles, genomes or phenotypes.
+No biological record, source-owned assertion, page or embedding changes; no
+whole-record primary signoffs. Full QC is not rerun for this research-only
+index. All scientific holds, NCBI/#1040 deferral and reuse-terms deferral remain
+in force, and the corpus-wide investigation remains open.
+
+## Brefeldin A: Yeast Bfr1 References (2026-10-14)
+
+The [dossier](2026-10-14-brefeldin-yeast-context.json) concerns the existing
+brefeldin A structure, `CHEBI:48080`, InChIKey `KQNZDYYTLMIZCT-KQPMLPITSA-N`.
+Its complete record was loaded before interpretation. The pre-existing
+Candida-associated PHI-base claim and its reference-identity caveats remain
+unchanged; yeast name matches do not supply identities for that claim.
+
+An ignored-inclusive local search found 190 matching cached metadata files.
+A bounded title filter retained 35 candidate papers, not an exhaustive primary
+review. The audit replays their links to 67 distinct successful, checksum-pinned
+source caches. Other organisms, biochemical studies and sensitivity screens
+remain discovery leads rather than automatic resistance observations.
+
+| UniProt reference | Gene and locus fields | Reference taxonomy |
+| --- | --- | --- |
+| [P38934](https://www.uniprot.org/uniprotkb/P38934/entry), reviewed, entry 182 / sequence 1 | BFR1; ordered locus YOR198C | S. cerevisiae S288c, NCBITaxon:559292; species ancestor NCBITaxon:4932 |
+| [P41820](https://www.uniprot.org/uniprotkb/P41820/entry), reviewed, entry 178 / sequence 1 | bfr1, synonym hba2; ORF names SPCC18B5.01c and SPCPJ732.04c | S. pombe 972, NCBITaxon:284812; species ancestor NCBITaxon:4896 |
+
+Both bounded queries returned one complete result in UniProt release 2026_03.
+The protein names describe nuclear-segregation and ABC-transporter annotations
+respectively; matching `BFR1` case-insensitively does not establish one gene,
+orthology or an interchangeable mechanism. The two fission-yeast ORF names are
+not converted to ordered loci or reduced to a preferred experimental identifier.
+Taxonomy was checked through UniProt, reusing the pinned S288c response and
+retrieving the returned fission-yeast reference taxon. No NCBI endpoint was used.
+
+The budding-yeast entry's 1994 citation, PMID:8070655,
+DOI:10.1093/genetics/137.2.423, has a strain annotation naming
+`ATCC 28383 / FL100 / VTT C-80102`, not the entry's S288c reference. The
+fission-yeast entry separately cites PMID:7883711 and PMID:7646493; only the
+latter has a `BAP1` strain annotation in this projection. These are database
+citation annotations, not independently resolved experimental subjects or
+genome accessions. The selected 2001 PMID:11410665 is not in the returned
+budding-yeast bibliography; that does not disprove its relationship to BFR1.
+
+Primary evidence remains limited. The 2001 paper's EBI full-text canary returned
+**HTTP 500** and was not retried. UniProt independently identified the 1994
+paper; a publisher-domain search corroborated its bibliographic identity and
+abstract-level, background-dependent laboratory suppression context. Its native
+publisher request returned **HTTP 403**, with no redirect or alternate route
+attempted. The search also incidentally returned indexed text for the held
+2001 paper; it was not opened or treated as native primary-results review.
+The two fission-yeast papers were not requested after the EBI canary failed.
+Native figures, tables and supplements remain unreviewed. Neither access status
+is evidence of global unavailability or a negative scientific result.
+
+The [verification receipt](2026-10-14-brefeldin-yeast-verification.json) records
+offline replay, regression tests, pinned source identities and preservation
+checks. No new resistance claim or experimental allele/genome assignment is
+curated. The record, other 2,938 records, source inputs, generated pages,
+embeddings and preceding checkpoint artifacts remain unchanged. Full QC is not
+rerun for this research-only checkpoint. All 2,939 whole-record reviews remain
+open; NCBI/#1040 and reuse-terms work remain deferred. No source adoption or
+GitHub mutation was performed.
+
+## Valinomycin: Human ABCB1 in a Yeast Assay (2026-10-14)
+
+The [dossier](2026-10-14-valinomycin-abcb1-context.json) retains the existing
+valinomycin structure `CHEBI:28545`, InChIKey
+`FCFNRCROJUBPLU-DNDCDFAISA-N`. The complete record was loaded before research;
+it currently has no resistance or activity observations. Two previously cached
+discovery queries identify the same paper, not two independent experiments.
+
+The native [Jeong et al. 2007 article](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0030039),
+PMID:17352537, and Figure 4 were retrieved and inspected. The experiment uses
+human ABCB1 in an engineered S. cerevisiae laboratory background. Figure 4A
+reports a valinomycin **EC30**, with a different endpoint for actinomycin D.
+The authors explain that solubility limited determination of valinomycin EC50.
+Neither endpoint is an MIC, and no conversion or clinical resistance category
+is inferred. The qualitative result is reference- and variant-dependent response
+within the assay, not a transferable effect across drug substrates. The
+actinomycin-specific host context is not assigned to valinomycin.
+
+| Identity | Grounding and limits |
+| --- | --- |
+| Human ABCB1, synonyms MDR1 / PGY1 | [UniProtKB:P08183](https://www.uniprot.org/uniprotkb/P08183/entry), reviewed, entry version 258 / sequence version 3; human reference, not a tested allele |
+| Donor species | Homo sapiens, NCBITaxon:9606, active species node checked through UniProt |
+| Assay-host species | S. cerevisiae, NCBITaxon:4932, supported by the primary species name and cached UniProt lineage; no reference-strain or experimental-genome assignment |
+
+The bounded UniProt query returned one complete, sequence-free result in release
+2026_03. The paper reports donor gene identifier NCBIGene:5243; it was not
+queried at NCBI. Its PMID is not in this returned UniProt bibliography, which
+does not disprove the primary paper's gene identity. The study's reference allele
+is not equated to the current UniProt reference sequence. The paper names
+valinomycin, names its supplier and shows a chemical depiction, but this audit
+does not independently identify a product lot or assign an experimental allele.
+
+The main text and figure support this contextual finding, not a complete
+per-allele audit. Supplement tables remain unreviewed. No sequence, exact variant,
+construct, protocol or numeric AST is exported. The current resistance schema
+has one observed-organism context and no separate donor/host relationship;
+that distinction and the EC30 endpoint remain explicit in the dossier rather
+than being forced into a native-yeast resistance claim or an MIC observation.
+A future model change should distinguish the donor protein reference,
+experimental host and measurement endpoint before such structured curation.
+
+The [verification receipt](2026-10-14-valinomycin-abcb1-verification.json) records
+offline replay, regression checks, native source checksums and file preservation.
+Five planned HTTP requests were made: four successful responses and one native
+figure redirect followed only by a separately planned asset request. There
+were no retries, NCBI requests, source adoptions or GitHub mutations. All
+2,939 records, source inputs, pages, embeddings and preceding checkpoint
+artifacts remain unchanged; only the maintained report is extended. Full QC is
+not rerun for this research-only checkpoint. The separate 2016 ionophore hold,
+NCBI/#1040 deferral and reuse-terms deferral remain unchanged. All whole-record
+reviews remain open.
+
+## Aureobasidin A: Deposition Roles and Component Chemistry (2026-10-14)
+
+The [new dossier](2026-10-14-aureobasidin-structure-context.json) follows the
+earlier chemical-identity hold on `CHEBI:61739`, InChIKey
+`YHSKJPXGXIYLHB-OTNPUQRPSA-N`. It does not change the structure or transfer
+the paper's biological findings to that record.
+
+Sequence-free [RCSB PDB 9IVC metadata](https://www.rcsb.org/structure/9IVC)
+identifies the same 2025 paper, PMID:40442105 / DOI:10.1038/s41467-025-60423-y,
+and revision 1.0 dated 2025-06-18. Its three polymer entities are not three
+resistance genes:
+
+| Deposited entity | Role and reference grounding |
+| --- | --- |
+| 9IVC_1 | Aur1 catalytic component; UniProtKB:P36107, AUR1 / YKL004W, entry 184 / sequence 1 |
+| 9IVC_2 | Kei1 regulatory component; UniProtKB:Q06346, KEI1 / YDR367W, entry 151 / sequence 2 |
+| 9IVC_3 | Aureobasidin A peptide ligand; no UniProt or BIRD identifier returned for this entity |
+
+Both protein entries reciprocally link 9IVC. Their reference strain is
+S. cerevisiae S288c, NCBITaxon:559292, with species ancestor NCBITaxon:4932.
+The fresh, sequence-free Kei1 query and reused Aur1/taxonomy responses use
+UniProt release 2026_03. Neither accession is assigned to the entire complex
+or to an experimentally verified resistance allele.
+
+The ligand entity's source label is `Aureobasidium pullulans R106`, with
+NCBITaxon:5580. A separate UniProt taxonomy response confirms that 5580 is an
+active **species** node, not an R106-specific strain node. This is ligand-source
+context, not a resistant assay organism or a genome assignment. The absence of
+a non-polymer entity does not mean the drug is absent: here the drug itself is
+modeled as a polymer. Null UniProt/BIRD fields are observations of this
+deposition, not proof that identifiers are globally unavailable.
+
+The ligand metadata lists eight distinct component types, not an ordered
+sequence or a residue count. Two nonstandard components were inspected through
+the [A1L3I](https://www.rcsb.org/ligand/A1L3I) and
+[A1L3J](https://www.rcsb.org/ligand/A1L3J) chemical-component records. RDKit
+2025.03.6 independently reproduces their supplied formulas and stereochemical
+InChIKeys. A1L3I is a hydroxylated, methylated valine component; its free-component
+graph contains an aliphatic hydroxyl. This adds deposition-level evidence
+relevant to the earlier hydroxyl discrepancy. The baseline record still
+reproduces `C60H92N8O10` and has no hydroxyl group.
+
+These component facts do **not** establish a complete corrected drug graph.
+Free-component hydroxyls may participate in linkages, and the unordered component
+set does not establish multiplicity, connectivity, ring closure or final
+stereochemistry. Neither summing free-component formulas nor interpreting the
+polymer entity's formula-weight field supplies an exact cyclic-drug identity.
+No replacement structure is inferred, and the original source-owned chemical
+identity hold remains unresolved. Metadata co-occurrence also does not establish
+atomic contact, mechanism, MIC or clinical resistance.
+
+The [verification receipt](2026-10-14-aureobasidin-structure-verification.json)
+records pinned native responses, offline replay, regression checks and file
+preservation. The focused suite has one legacy CARD replay skip because its
+historical census differs from the live corpus; the new aureobasidin replay
+and component-chemistry tests run in the isolated RDKit environment.
+Seven planned HTTP requests succeeded without retry or automatic
+redirect. The earlier restricted article was neither fetched again nor
+republished. All 2,939 biological records, source inputs, pages, embeddings and
+preceding checkpoint artifacts remain unchanged; only this maintained report
+is extended alongside new research artifacts. Full QC is not rerun for this
+research-only checkpoint. NCBI/#1040 and reuse-terms work remain deferred, with
+no NCBI contact, source adoption or GitHub mutation. Whole-record and
+corpus-wide review remain open.
+
+## Reference Checkpoint Publication Review (2026-10-14)
+
+[PR #1111](https://github.com/CultureBotAI/AntibioticMech/pull/1111) publishes
+the four preceding research checkpoints. A separate same-agent adversarial
+pass reproduced and fixed two validation defects:
+
+- [#1112](https://github.com/CultureBotAI/AntibioticMech/issues/1112): the Bfr1
+  replay could export a relabeled cohort identifier despite loading the correct
+  frozen compound. Identifier and structure-key mismatches now fail before
+  native source access; cache-independent regressions cover both fields.
+- [#1113](https://github.com/CultureBotAI/AntibioticMech/issues/1113): the public
+  CARD replay test accepted corrupted TSV paths and counts. It now verifies
+  immutable output pins, reconstructs every index field and the full summary
+  from pinned public evidence, and tests mutations without native caches or
+  mutable biological records.
+
+The [publication receipt](2026-10-14-reference-publication-verification.json)
+records the successor checks without rewriting historical receipts. The four
+checkpoint suites pass **197 tests without skips**, including 17 new regression
+cases. The broader run passes **291 tests with one historical CARD cache replay
+skip**; strict live CARD membership replay separately passes for all 2,939
+records and 4,538 assertions. Authoritative PR-head and merge-queue QC verdicts
+will be recorded on the PR before merge, using the locked CI environment.
+
+These fixes change validation, not the four dossiers' scientific conclusions.
+No biological record, source input, page, or embedding is changed. This is not
+independent scientific signoff. The incomplete formaldehyde investigation stays
+outside this publication, with its local evidence preserved. NCBI/#1040,
+reuse-terms work, and all scientific holds remain deferred or unresolved as
+previously documented; no scientific endpoint was contacted during publication.
+The corpus-wide research goal remains open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
@@ -10667,7 +10950,9 @@ contacted during this publication pass.
    latter's conflicting subject labels before importing a genotype-phenotype join.
    Resolve aureobasidin A's source-owned chemical identity discrepancy before
    transferring AUR1 evidence to its exact-structure record. The reference
-   protein mapping does not resolve the chemical discrepancy or assign an allele.
+   protein mappings and deposited ligand-component chemistry do not resolve
+   the complete cyclic structure or assign an allele. Keep Aur1, Kei1 and the
+   peptide ligand distinct; the ligand producer is not a resistant host.
    Mycophenolic acid's 2005 primary paper is now access-held after a publisher
    403; the 2008 paper remains unrequested after the publisher canary stopped.
    Sub1's verified reference mapping and abstract-level context do not establish

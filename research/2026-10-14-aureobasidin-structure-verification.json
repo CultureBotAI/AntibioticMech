@@ -1,0 +1,113 @@
+{
+  "baseline_commit": "ce909b1d8034970defb6c421db3de54b1fcccf00",
+  "branch": "research/card-reference-memberships",
+  "code": [
+    {
+      "path": "scripts/audit_aureobasidin_structure.py",
+      "sha256": "bf590f5c131da76986df8ab6a6a5ee0e1c1248be42d581618c5f65ee194f64b6"
+    },
+    {
+      "path": "tests/test_aureobasidin_structure.py",
+      "sha256": "78f691ccb8f0096b9a27bc9b9069a45c92b5f9e8fdd986eba81ec712cba80677"
+    }
+  ],
+  "date": "2026-10-14",
+  "dossier": {
+    "path": "research/2026-10-14-aureobasidin-structure-context.json",
+    "sha256": "5c7f889fccbdcb9b9083dc24cb2c44c6db820c38bf38e140650caffcdd4baf74"
+  },
+  "finished_at": "2026-10-14T13:46:05.361462+00:00",
+  "limits": {
+    "biological_changes": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_allele_or_genome_assignments": 0,
+    "new_scientific_http_attempts": 7,
+    "publication": "LOCAL_UNCOMMITTED_RESEARCH_CHECKPOINT",
+    "reuse_terms_review_resumed": false,
+    "sequences_variants_constructs_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/protected-before.json",
+      "sha256": "5160b7ab906979ad480c4ffe0a6a2ac128d922fea574a4dd767a1c01a89b5523"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "embedding_files_unchanged": 6,
+    "new_or_changed_files_in_data_src_curation_pages": 0,
+    "page_files_unchanged": 3353,
+    "preceding_checkpoint_artifacts_unchanged": true,
+    "protected_files": 7545,
+    "record_yaml_hashes_unchanged": 2939,
+    "source_inputs_unchanged": true,
+    "unchanged_protected_files": 7544
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "cd5d0fe1af2fb701c86cf7c3906061c031caedb25b02dd6c75b881f970f6a1e4"
+  },
+  "review": {
+    "checks": [
+      "Three deposited polymer entities classify as two protein references and one peptide ligand.",
+      "Each component's accession and source organism stay attached to its own entity.",
+      "The producer species label cannot supply a resistant subject or R106-specific TaxID.",
+      "Missing BIRD/UniProt annotations do not make the ligand an ungrounded resistance protein.",
+      "Free-component hydroxyls and mass do not reconstruct the complete cyclic drug.",
+      "The pre-existing chemical identity hold remains; no replacement structure or allele is invented.",
+      "Preceding research artifacts and all biological records remain unchanged."
+    ],
+    "scope": "SAME_AGENT_ADVERSARIAL_PASS_NOT_INDEPENDENT_SCIENTIFIC_SIGNOFF"
+  },
+  "scope": "DEPOSITION_ROLES_AND_COMPONENT_CHEMISTRY_NOT_RESISTANT_ALLELE_SIGNOFF",
+  "started_at": "2026-10-14T13:45:50.411563+00:00",
+  "verification": {
+    "chemistry_version": "RDKit 2025.03.6",
+    "environment": "Existing isolated RDKit 2025.3.6 environment; repository dependencies unchanged",
+    "focused_tests_passed": 270,
+    "focused_tests_skipped": 1,
+    "full_qc": "NOT_RERUN_RESEARCH_ONLY_NO_BIOLOGICAL_OR_RUNTIME_MODEL_CHANGES",
+    "git_diff_check_exit_code": 0,
+    "http_and_socket_disabled": true,
+    "lint_log": {
+      "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    "new_tests": 42,
+    "offline_replay_exit_code": 0,
+    "offline_replay_log": {
+      "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/offline-replay.log",
+      "sha256": "22e8b511f3287a5fcb7fa099ab73ba8bfce5646dc13106a757dcd534a9eefa92"
+    },
+    "skipped": [
+      {
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "tests.test_card_structure_links.test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "test_files": [
+      "tests/test_aureobasidin_structure.py",
+      "tests/test_aureobasidin_identity_context.py",
+      "tests/test_card_structure_links.py",
+      "tests/test_topoisomerase_reference_followup.py",
+      "tests/test_caspofungin_context.py",
+      "tests/test_valinomycin_abcb1.py",
+      "tests/test_brefeldin_yeast.py",
+      "tests/test_card_reference_memberships.py"
+    ],
+    "test_results": {
+      "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/tests.xml",
+      "sha256": "8b67dd14de98ed72c9a59e80200ce0f326b05f235bc078ce11c54fcb36c3b8b2"
+    },
+    "tests_log": {
+      "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/focused-tests.log",
+      "sha256": "d9aa447c6de0985dcf9521be76cf2d411fbbe0de9c2b1b51aec1e2215acf8c4d"
+    }
+  }
+}
