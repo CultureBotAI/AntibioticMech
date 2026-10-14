@@ -1,0 +1,414 @@
+{
+  "baseline_commit": "f346c4c304f128153c19fd67b677608f7fb1c1b3",
+  "baseline_files_checked": 7550,
+  "browser_check_setup": "Sandbox blocked Chrome launch; the approved local-only rerun succeeded after the harness was corrected to expand the collapsed UNKNOWN group before checking visible text. No site-code change.",
+  "browser_checks": [
+    {
+      "geometry": {
+        "pageWidth": 1440,
+        "width": 1440
+      },
+      "page": "formaldehyde",
+      "screenshot": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/formaldehyde-1440.png",
+      "width": 1440
+    },
+    {
+      "canvas": {
+        "height": 622,
+        "width": 902,
+        "x": 240,
+        "y": 362.65625
+      },
+      "errors": [],
+      "external": [],
+      "filter_redraw_verified": true,
+      "fingerprint": "3e004ed52b93c849",
+      "nontransparent_pixels": 36228,
+      "page": "map",
+      "restored_nontransparent_pixels": 37429,
+      "screenshot": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/map-1440.png",
+      "width": 1440
+    },
+    {
+      "geometry": {
+        "pageWidth": 390,
+        "width": 390
+      },
+      "page": "formaldehyde",
+      "screenshot": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/formaldehyde-390.png",
+      "width": 390
+    },
+    {
+      "canvas": {
+        "height": 241.71875,
+        "width": 349.96875,
+        "x": 20,
+        "y": 628.578125
+      },
+      "errors": [],
+      "external": [],
+      "filter_redraw_verified": true,
+      "fingerprint": "3e004ed52b93c849",
+      "nontransparent_pixels": 36228,
+      "page": "map",
+      "restored_nontransparent_pixels": 37429,
+      "screenshot": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/map-390.png",
+      "width": 390
+    }
+  ],
+  "browser_layout_limit": "Existing narrow mobile tables require scrolling; no page-level overflow or overlapping text was observed. No template or CSS change.",
+  "browser_screenshots_visually_inspected": [
+    "reports/resistance-grounding-2026-10-14-formaldehyde-efga/formaldehyde-1440.png",
+    "reports/resistance-grounding-2026-10-14-formaldehyde-efga/map-1440.png",
+    "reports/resistance-grounding-2026-10-14-formaldehyde-efga/formaldehyde-390.png",
+    "reports/resistance-grounding-2026-10-14-formaldehyde-efga/map-390.png"
+  ],
+  "byte_identical_other_records": 2938,
+  "canary_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 45
+  },
+  "captured_at": "2026-10-14T16:03:11.374530+00:00",
+  "changed_file_pins": [
+    {
+      "path": "NEXT_TASKS.md",
+      "sha256": "4ffdf76d221ebf9ed9489d262675aca681dd3d08edbeae70fe9a9e89378bf9d1"
+    },
+    {
+      "path": "README.md",
+      "sha256": "be054ffa34acc0201217d77b6f6f10bc610f193d33fde07280a211dbd8167bab"
+    },
+    {
+      "path": "data/antibiotics/biocide/formaldehyde.yaml",
+      "sha256": "9cdf4f1c5366aa3cf0801afa1ac63a1aed08484c257e10d419bd8ef3ff18b220"
+    },
+    {
+      "path": "data/embeddings/corpus_map.json",
+      "sha256": "d375a3aef57a04ad439f90ffffb7167b00136b826df4eebae6f1b97dafca09f7"
+    },
+    {
+      "path": "data/embeddings/meta.json",
+      "sha256": "07956a941044fda7d9f5e058f505c966409c247b39d8dcad73b8ef300dee0681"
+    },
+    {
+      "path": "data/embeddings/vectors.f16.npy",
+      "sha256": "6b0a4e94d93285eeffe8385bf5f602440e5ff7668c9d92ab7f8f4434a1096cd2"
+    },
+    {
+      "path": "pages/biocide/formaldehyde.html",
+      "sha256": "74d5c4dd42a4ed7b84762a97725269e8a7855946089cb1bdb728f5cf310f62c9"
+    },
+    {
+      "path": "pages/index.html",
+      "sha256": "2e94b4bd8fb8af72dff24762c3c123082d9b98e6df7b6c85c0d6e910bbfba754"
+    },
+    {
+      "path": "pages/map.html",
+      "sha256": "f120ab163547c9b97209bb3fcdb16aa63d1eba2a884044f70d4a4b31263110fb"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "24e2c1c710fdb0228a96193bcd63346c4d02a9c936b2e53a1c6894a8666065f2"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "b2683c03f8b076aa6f972ba2034dbf146700cc1218c3431b9ab083e92b45c196"
+    },
+    {
+      "path": "scripts/resistance_checkpoint_records.py",
+      "sha256": "0a7e29cf1dfbb2278d07c46d8aa86059e68d6d73a783e0010b159644a5934c79"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "5804435a6fcf1eef000fce72e02f41ec7ea062b3d9a22463f74023216b0d3f46"
+    },
+    {
+      "path": "tests/test_curator_resistance_fields.py",
+      "sha256": "2b59b5c1fcc8d5e9ec5f28fa60f24732c9a234a26b2047d03e19f139ad1ce786"
+    }
+  ],
+  "changed_records": [
+    "data/antibiotics/biocide/formaldehyde.yaml"
+  ],
+  "counts": {
+    "curator_claims": 133,
+    "curator_records": 54,
+    "records": 2939,
+    "records_without_resistance_or_genotype_rules": 2605,
+    "resistance_assertions": 4888,
+    "resistance_bearing_records": 321
+  },
+  "curation_events_added": 1,
+  "current_progress_ledger_hashes_match_all_records": true,
+  "documentation_fix": "The numeric-prose regression required updating NEXT_TASKS.md's target-or-resistance total from 421 to 422. No data or evidence changed.",
+  "documentation_regression_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 2
+  },
+  "embedding_reuse": {
+    "baseline_sha256": "3b8b65bcd1443b5a75f9788788ca30daa596cb01b923acbf26f43457ff4bb948",
+    "byte_identical_reused_rows": 2938,
+    "changed_documents": [
+      "CHEBI:16842"
+    ],
+    "control_max_abs_delta": 3.0517578125e-05,
+    "control_rows": 16,
+    "dimension": 1024,
+    "fingerprint": "3e004ed52b93c849",
+    "finite": true,
+    "normalized": true,
+    "vector_rows": 2939
+  },
+  "existing_record_fields_preserved": true,
+  "expected_changed_baseline_files": [
+    "NEXT_TASKS.md",
+    "README.md",
+    "data/antibiotics/biocide/formaldehyde.yaml",
+    "data/embeddings/corpus_map.json",
+    "data/embeddings/meta.json",
+    "data/embeddings/vectors.f16.npy",
+    "pages/biocide/formaldehyde.html",
+    "pages/index.html",
+    "pages/map.html",
+    "research/2026-10-07-resistance-gene-grounding.md",
+    "scripts/audit_curator_resistance_fields.py",
+    "scripts/resistance_checkpoint_records.py",
+    "scripts/summarize_resistance_progress.py",
+    "tests/test_curator_resistance_fields.py"
+  ],
+  "experimental_alleles_proteins_or_genomes_assigned": 0,
+  "files": [
+    {
+      "path": "scripts/audit_formaldehyde_efga.py",
+      "sha256": "6f54f36207ce3c1ed2584d4a77c13be2eb4c9c50a9cabd0197a241d9e7cb44d1"
+    },
+    {
+      "path": "tests/test_formaldehyde_efga.py",
+      "sha256": "058af7eea5ce6290ff6722c6a5a1a4350cd7c09e789597e2dfd5d6c9bb3f51b0"
+    },
+    {
+      "path": "tests/fixtures/formaldehyde-before-2026-10-14.yaml",
+      "sha256": "d08fcf405a7209c76c0f33749e3aa7a609504eff8c6de91737cc5f8e05c5b15c"
+    },
+    {
+      "path": "research/2026-10-14-formaldehyde-context.json",
+      "sha256": "43d6b650b6a2780f1c213f737b2a1482f5341524abac7a3d4f67419d56e24bfc"
+    },
+    {
+      "path": "research/2026-10-14-formaldehyde-curation.json",
+      "sha256": "89a983d0e807419597bff9a12b7cf832fd9284d86ad0ee8bb202d57623ccd7d2"
+    },
+    {
+      "path": "research/2026-10-14-formaldehyde-curator-resistance-fields.json",
+      "sha256": "a79212203669fb41db1f0ab1c57e6f9a0b1a22721c4abe61bb18d04168816a66"
+    },
+    {
+      "path": "research/2026-10-14-formaldehyde-resistance-progress.json",
+      "sha256": "a2399a8ef6ad37a19d9205b9005bed5a348f3dd1723f85b5c6fc24ec675e8747"
+    },
+    {
+      "path": "research/2026-10-14-formaldehyde-resistance-grounding.tsv",
+      "sha256": "0cca75691edd1ad52b0127e6d57b0ae5b5bd07c892005b238df9768b7037685a"
+    },
+    {
+      "path": "research/2026-10-14-formaldehyde-resistance-progress.tsv",
+      "sha256": "fdeca4fa8215f834854416ed28f89f2b3b1a9bb34d0851b08488a17b7f728378"
+    },
+    {
+      "path": "scripts/resistance_checkpoint_records.py",
+      "sha256": "0a7e29cf1dfbb2278d07c46d8aa86059e68d6d73a783e0010b159644a5934c79"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/canary-tests.xml",
+      "sha256": "82066e1f6b02a09c4a4b52ee9ec143288d0b2b7c2fca9d10190931cfce817250"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/focused-tests.xml",
+      "sha256": "bce8594281a8381be70786d3c1cc11b8d78bee11561bc2f2b8bab70c76ae5b97"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/historical-regression-tests.xml",
+      "sha256": "1e09b3ac8e99e903a492af1d5e673b4c9bdaad511cc715e2ea6374551cbb9287"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/documentation-regression-tests.xml",
+      "sha256": "dc897d6dce09f388184802025b1271082f80583bd5ca9c031f5ee8e3f89ea6ea"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/full-qc-final-tests.xml",
+      "sha256": "72bfb227118d3c94a287fda8fcf3563e3289239459acc83195b5fc6c54aec0e3"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/browser-check.json",
+      "sha256": "0bbcb0550b5eb9cb00e22c9115dec78da78515a8f0500953ae0d57c21ea4e800"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 196
+  },
+  "full_authoritative_qc": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-u",
+      "scripts/run_qc.py"
+    ],
+    "dependency_differences": {
+      "rdkit": {
+        "actual": "2025.3.6",
+        "required": "2026.3.5"
+      }
+    },
+    "elapsed_seconds": 2197.624,
+    "exit_code": 0,
+    "limitation": "Local RDKit differs from project pin. Chemical map checked, not recomputed.",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/full-qc-final.log",
+      "sha256": "c6cb844b4e4f770f70ff51bddb645fea5ee9cdbf5874e0953147b88299db94d6"
+    },
+    "pinned_environment_reproduced": false,
+    "pytest_addopts": "--junitxml=reports/resistance-grounding-2026-10-14-formaldehyde-efga/full-qc-final-tests.xml -ra -x",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:58:33) [Clang 19.1.7 ]",
+    "pythonpath": "/private/tmp/antibioticmech-qc-science-20261014-j1074:src:scripts",
+    "started_at": "2026-10-14T15:25:47.952776+00:00",
+    "versions": {
+      "PyYAML": "6.0.3",
+      "numba": "0.61.2",
+      "numpy": "2.2.6",
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    }
+  },
+  "full_test_skips": [
+    {
+      "class": "tests.test_card_structure_links",
+      "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+      "test": "test_cached_export_reproduces_when_research_cache_is_available"
+    },
+    {
+      "class": "tests.test_skill_frontmatter",
+      "reason": "got empty parameter set for (path)",
+      "test": "test_command_frontmatter_has_no_duplicate_keys[NOTSET]"
+    },
+    {
+      "class": "tests.test_skill_frontmatter",
+      "reason": "got empty parameter set for (path)",
+      "test": "test_command_frontmatter_is_valid_yaml[NOTSET]"
+    },
+    {
+      "class": "tests.test_skill_frontmatter",
+      "reason": "got empty parameter set for (path)",
+      "test": "test_command_declares_a_usable_description[NOTSET]"
+    }
+  ],
+  "full_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 4,
+    "tests": 5012
+  },
+  "github_mutations": 0,
+  "goal_complete": false,
+  "historical_regression_tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 111
+  },
+  "historical_replay_fix": "Reproduced the older antiviral census replay failure, registered the exact pre-curation formaldehyde identity/path/hash fixture, and retained the original census and public output unchanged.",
+  "independent_scientific_signoff": false,
+  "initial_qc_attempt": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-u",
+      "scripts/run_qc.py"
+    ],
+    "dependency_differences": {
+      "rdkit": {
+        "actual": "2025.3.6",
+        "required": "2026.3.5"
+      }
+    },
+    "elapsed_seconds": 212.561,
+    "exit_code": 2,
+    "limitation": "Local RDKit differs from project pin. Chemical map checked, not recomputed.",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/full-qc.log",
+      "sha256": "6a371274816fb203d6bd25f6f1062b09337864daed77cb9fda01ff5bd392c9c5"
+    },
+    "pinned_environment_reproduced": false,
+    "pytest_addopts": "--junitxml=reports/resistance-grounding-2026-10-14-formaldehyde-efga/full-qc-tests.xml -ra",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:58:33) [Clang 19.1.7 ]",
+    "pythonpath": "/private/tmp/antibioticmech-qc-science-20261014-j1074:src:scripts",
+    "started_at": "2026-10-14T15:11:16.704739+00:00",
+    "versions": {
+      "PyYAML": "6.0.3",
+      "numba": "0.61.2",
+      "numpy": "2.2.6",
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    }
+  },
+  "issue_1040": "DEFERRED",
+  "local_qc_limitation": "RDKit 2025.3.6 differs from pin 2026.3.5; no new pinned CI run or chemical-map regeneration.",
+  "native_offline_replay": "EXACT_WITH_HTTP_AND_SOCKET_CONNECTIONS_DISABLED",
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_scientific_http_attempts_this_continuation": 2,
+  "numeric_AST_added": 0,
+  "other_baseline_files_byte_identical": 7536,
+  "preserved_source_code_inputs_historical_exports_and_chemical_map_files": 619,
+  "reuse_terms_review_resumed": false,
+  "scientific_http_attempts": 20,
+  "scope": "LOCAL_CURATED_CHECKPOINT_NOT_WHOLE_CORPUS_SCIENTIFIC_SIGNOFF",
+  "second_qc_attempt": {
+    "command": [
+      "/Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/Mechs/AntibioticMech/.venv/bin/python",
+      "-u",
+      "scripts/run_qc.py"
+    ],
+    "dependency_differences": {
+      "rdkit": {
+        "actual": "2025.3.6",
+        "required": "2026.3.5"
+      }
+    },
+    "elapsed_seconds": 587.981,
+    "exit_code": 1,
+    "limitation": "Local RDKit differs from project pin. Chemical map checked, not recomputed.",
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-14-formaldehyde-efga/full-qc-complete.log",
+      "sha256": "05da4f0bd680384191611d758e9098dd5f8c1f302bd4a99f2bdcfafb14c45d8f"
+    },
+    "pinned_environment_reproduced": false,
+    "pytest_addopts": "--junitxml=reports/resistance-grounding-2026-10-14-formaldehyde-efga/full-qc-complete-tests.xml -ra -x",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 05:58:33) [Clang 19.1.7 ]",
+    "pythonpath": "/private/tmp/antibioticmech-qc-science-20261014-j1074:src:scripts",
+    "started_at": "2026-10-14T15:15:17.032079+00:00",
+    "versions": {
+      "PyYAML": "6.0.3",
+      "numba": "0.61.2",
+      "numpy": "2.2.6",
+      "pytest": "9.1.1",
+      "rdkit": "2025.3.6",
+      "scikit-learn": "1.7.2",
+      "scipy": "1.15.3",
+      "umap-learn": "0.5.12"
+    }
+  },
+  "separate_vector_byte_comparison": true,
+  "source_adoptions": 0,
+  "source_owned_inputs_and_historical_exports_unchanged": true
+}

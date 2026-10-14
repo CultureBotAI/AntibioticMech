@@ -44,15 +44,15 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,886 resistance assertions across 320
-records**, including **131 curator-authored claims across 53 records**. There
-are still 2,606 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,888 resistance assertions across 321
+records**, including **133 curator-authored claims across 54 records**. There
+are still 2,605 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-14-antiviral-taxa-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-14-formaldehyde-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-14-antiviral-taxa-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-14-formaldehyde-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
 
@@ -271,9 +271,14 @@ primary results were reviewed and no alternate route was attempted.
 
 The [curator taxon-gap follow-up](2026-10-14-antiviral-taxa.json) accounts for all
 11 previously taxon-empty claims and supports one species-only bictegravir update.
-The [current field index](2026-10-14-antiviral-taxa-curator-resistance-fields.json)
-now has 121 taxon-ID slots and 10 taxon-empty claims; those remaining gaps are
+The [current field index](2026-10-14-formaldehyde-curator-resistance-fields.json)
+now has 123 taxon-ID slots and 10 taxon-empty claims; those remaining gaps are
 not automatic errors. No new experimental allele, protein or genome was assigned.
+
+The [formaldehyde checkpoint](2026-10-14-formaldehyde-context.json) adds two
+qualified EfgA/EfgB gene-level claims with species grounding. P0DX96 remains
+reference-only, and EfgB has no assigned UniProt accession. Opposing endogenous
+stress effects and conditional experimental backgrounds remain explicit.
 
 The earlier [oleandomycin curation](2026-10-09-oleandomycin-curation.json)
 adds two qualitative biochemical routes for OleI and OleD, preserving all 30
@@ -10829,6 +10834,105 @@ reuse-terms work, and all scientific holds remain deferred or unresolved as
 previously documented; no scientific endpoint was contacted during publication.
 The corpus-wide research goal remains open.
 
+## Formaldehyde: Qualified Native EfgA/EfgB Evidence (2026-10-14)
+
+The [dossier](2026-10-14-formaldehyde-context.json) concerns formaldehyde,
+`CHEBI:16842`, Standard InChIKey `WSFSSNUMVMOOMR-UHFFFAOYSA-N`.
+The primary source is [Bazurto et al. (2021), PLOS Biology](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001208),
+PMID:34038406. Selected native Results, Discussion and identity Methods, plus
+Figures 3, 5, 9, 10, 11, 12 and 13, were inspected. Supplement tables and the
+source workbook were not reviewed. The named aqueous exposure supports the
+formaldehyde claim; it is not independent chemical reidentification of the lot.
+
+Two gene-level claims were added through the validated writer:
+
+| Locus | Qualified finding | Identity boundary |
+| --- | --- | --- |
+| `efgA` / `Mext_4158` | Native laboratory comparisons associate loss of EfgA function with growth under externally supplied formaldehyde; EfgA is protective in the contrasting endogenous-stress context. | Reviewed UniProtKB:P0DX96, entry 8, sequence 1, is a reference protein, not an experimental allele. |
+| `efgB` / `Mext_0606` | Conditional contribution in EfgA-altered laboratory backgrounds; EfgB changes alone did not confer growth in the sole-formaldehyde-carbon comparison. | No protein accession is assigned. The cyclase annotation is putative, not verified biochemical activity. |
+
+The native species is **Methylorubrum extorquens**, `NCBITaxon:408`, independently
+checked through UniProt taxonomy. Its older name Methylobacterium extorquens is
+a supported synonym. The reference protein's PA1 lineage, `NCBITaxon:419610`,
+does not identify every tested laboratory derivative. In particular, the study's
+CM2730 baseline is not unmodified PA1. Neither claim assigns a strain TaxID,
+exact allele, altered-protein accession or experimental genome. This species
+grounding does not assert species-wide resistance.
+
+The exact-locus EfgB query and a separately justified gene-name plus reference-
+taxon query both returned empty results in UniProt release **2026_03**. Fuzzy
+suggestions were not substituted. These are scoped dated search results, not
+proof that EfgB lacks a protein or database representation.
+
+Growth, colony-frequency and disk-diffusion endpoints remain distinct from
+MIC and clinical categories. No numeric AST was imported. Phenotypic
+heterogeneity is not explained by EfgA genotype alone. Heterologous EfgA effects
+in E. coli were not transferred to the native organism or curated as a new
+claim. The translation comparison does not create a kanamycin resistance claim.
+Crystal density compatible with formaldehyde derivatives is not described as
+unambiguous binding of unchanged formaldehyde.
+
+The [curation receipt](2026-10-14-formaldehyde-curation.json) pins the original
+record, byte-identical public fixture, inspected canary and one curation event.
+The canary survives fresh-source reseeding and preserves all non-resistance
+fields and earlier history. **45 canary and writer tests passed** before apply.
+Only this record changed; the other **2,938 record hashes** are unchanged.
+
+The [successor census](2026-10-14-formaldehyde-resistance-grounding.tsv),
+[field index](2026-10-14-formaldehyde-curator-resistance-fields.json) and
+[progress index](2026-10-14-formaldehyde-resistance-progress.json) retain all
+2,939 records. Historical exports remain unchanged. The field index counts
+**133 curator claims across 54 records**, 123 taxon-ID slots, 49 claims citing
+43 distinct UniProtKB accessions, and six altered-protein slots. Citation and
+reference counts are not experimental-allele grounding counts.
+
+The focused checkpoint suite passed **196 tests**. The first full-QC attempt
+exposed a historical dependency: the older antiviral audit checks an entire
+frozen census and could no longer resolve formaldehyde's original hash. The
+existing historical registry now binds that exact identifier, path and checksum
+to the new byte-identical fixture, without accepting mutable records as
+historical evidence. The failure was reproduced before the fix; **111 targeted
+tests passed afterward**, including fixture mutation checks and native replay.
+The interrupted QC log is retained separately from the restarted run.
+That restart then detected a stale `NEXT_TASKS.md` prose count: adding this
+record raises the target-or-resistance total from 421 to 422. The count was
+corrected without changing data, and the subsequent full run has its own log.
+
+The changed annotation was genuinely re-encoded with BGE, alongside 16 baseline
+controls; the other **2,938 vectors remain byte-identical**. A complete PaCMAP
+projection was regenerated with seed 42, fingerprint `3e004ed52b93c849`, and
+the site was rebuilt. Desktop/mobile browser checks at 1440px and 390px verify
+both claims after expanding their groups, no page-level overflow, a nonblank
+map and working class filters. The existing narrow mobile table layout still
+requires scrolling; no general layout change was made. All HTTP(S) page
+requests were blocked, with none observed. The private browser harness was
+corrected to open the initially collapsed UNKNOWN group before checking text;
+the generated site did not need a code fix.
+
+The [final verification receipt](2026-10-14-formaldehyde-verification.json)
+records **all 12 authoritative local QC gates passing**, including **5,008
+passing tests and four pre-existing skips**, zero schema errors across all
+2,939 records, exact corpus reproduction and a current generated site. The
+documentation regressions passed separately in two tests. The skipped cases
+are the historical CARD/live-hash replay and three empty-parameter skill checks;
+their reasons and both earlier failed QC attempts remain in the receipt.
+The final run took 2,197.624 seconds. Local RDKit is **2025.3.6**, not the
+project pin **2026.3.5**: this is not a new pinned-environment CI result, and
+the chemical map was checked, not regenerated. A separate post-QC comparison
+checks every baseline file against the explicit allowed changes, preserves all
+source-owned inputs and historical exports, and confirms the unchanged 2,938
+record hashes and vector rows. This is local verification, not independent
+scientific signoff or a new publication action.
+
+This checkpoint comprises **20 scientific HTTP attempts**, including separately
+planned native-asset redirects; only two requests were new in this continuation.
+All are terminal, and no failed scientific route was retried. NCBI requests,
+contact, source adoption, reuse-terms review and GitHub mutations are zero for
+this checkpoint. #1040 remains deferred. No sequences, exact variant
+specifications, constructs or protocols were exported. Broader formaldehyde
+literature, supplements, exact experimental identities and whole-record primary
+review remain open, as does the corpus-wide goal.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
@@ -10973,6 +11077,10 @@ The corpus-wide research goal remains open.
 5. Curate supported findings through source-owned inputs; normalize MICs to
    mg/L where reported, keep EC50 and disk-diffusion measurements distinct, and
    never infer clinical resistance from a number without its source interpretation.
+   Formaldehyde now has two context-limited EfgA/EfgB claims; supplements, exact
+   experimental identities and broader literature remain open. Preserve its
+   opposing endogenous-stress result and do not promote the PA1 reference into
+   a tested derivative or infer global protein absence from the EfgB queries.
 6. Verify full-corpus coverage and all curation/publication gates before calling
    the requested investigation complete. The BGE/PaCMAP refresh is now published
    with an exact baseline-reuse proof for the historical epidermin/microcin C

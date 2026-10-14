@@ -163,21 +163,21 @@ def test_full_corpus_replay_is_offline_and_matches_checkpoint(monkeypatch):
     assert result == json.loads((ROOT / audit.OUTPUT).read_bytes())
     summary = result["summary"]
     assert summary["corpus_records_checked"] == 2939
-    assert summary["resistance_claims_by_owner"] == {"CARD": 4538, "CURATOR": 131, "PHIBASE": 217}
-    assert summary["curator_claims"] == 131
-    assert summary["curator_records"] == 53
+    assert summary["resistance_claims_by_owner"] == {"CARD": 4538, "CURATOR": 133, "PHIBASE": 217}
+    assert summary["curator_claims"] == 133
+    assert summary["curator_records"] == 54
     assert summary["claims_with_protein_accession_slot"] == 6
     assert summary["gene_field_states"] == {
-        "BOTH_FIELDS": 18, "GENE_FAMILIES_ONLY": 87, "GENE_ID_ONLY": 24, "NEITHER_FIELD": 2,
+        "BOTH_FIELDS": 20, "GENE_FAMILIES_ONLY": 87, "GENE_ID_ONLY": 24, "NEITHER_FIELD": 2,
     }
-    assert summary["claims_citing_each_namespace"]["UniProtKB"] == 48
-    assert summary["distinct_cited_uniprot_accessions"] == 42
-    assert summary["claims_with_taxon_id_slot"] == 121
+    assert summary["claims_citing_each_namespace"]["UniProtKB"] == 49
+    assert summary["distinct_cited_uniprot_accessions"] == 43
+    assert summary["claims_with_taxon_id_slot"] == 123
     assert summary["claims_with_taxon_label_but_no_taxon_id"] == 0
     assert summary["claims_with_unclassified_citations"] == 18
     assert summary["claims_without_taxon_label_or_id"] == 10
     assert {c["record_identifier"] for c in result["claims"]
             if c["gene_field_state"] == "NEITHER_FIELD"} == {"CHEBI:81419"}
-    assert len({(c["record_identifier"], c["resistance_index"]) for c in result["claims"]}) == 131
+    assert len({(c["record_identifier"], c["resistance_index"]) for c in result["claims"]}) == 133
     assert result["limits"]["issue_1040"] == "DEFERRED"
     assert all(not c["experimental_identity_assessed_by_this_index"] for c in result["claims"])
