@@ -149,6 +149,9 @@ def build(root, directory=CACHE):
         "CHEBI:48080", "KQNZDYYTLMIZCT-KQPMLPITSA-N",
     ) or cohort["record"]["sha256"] != cohort["baseline"]["sha256"]:
         raise ValueError("dated compound identity changed")
+    if (cohort["record"]["identifier"] != record["identifier"]
+            or cohort["record"]["standard_inchi_key"] != record["chemical_structure"]["standard_inchi_key"]):
+        raise ValueError("cohort label differs from dated compound")
     with reference.check_pin(root, cohort["census"]).open(newline="") as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
     rows = [r for r in census if r["identifier"] == record["identifier"]]

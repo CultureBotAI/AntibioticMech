@@ -14,6 +14,91 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import audit_card_reference_memberships as audit  # noqa: E402
 
+CURATOR_PIN = {
+    "path": "research/2026-10-14-antiviral-taxa-curator-resistance-fields.json",
+    "sha256": "0a15457ee90614e9c202dae5b2c54a356b748533c4d0a0618cf4147563de6460",
+}
+
+
+def assert_public_projection(result, rows, census, ledger, curator):
+    assert curator["census"] == result["inputs"]["census"]
+    assert len(census) == len({r["identifier"] for r in census})
+    assert len(rows) == len(census) == len({r["identifier"] for r in rows})
+    by_record = defaultdict(list)
+    for claim in ledger:
+        by_record[claim["identifier"]].append(claim["aro_id"])
+    curated = Counter(c["record_identifier"] for c in curator["claims"])
+    expected = []
+    for record in sorted(census, key=lambda r: r["identifier"]):
+        identifier = record["identifier"]
+        terms = [result["terms"][tid] for tid in by_record[identifier]]
+        statuses = Counter(t["reference_status"] for t in terms)
+        references = {link["protein_accession"] for t in terms for link in t["links"]}
+        phi = int(record["resistance_assertions"]) - len(terms) - curated[identifier]
+        assert phi >= 0
+        expected.append({
+            **{k: record[k] for k in ("identifier", "path", "record_sha256", "standard_inchi_key")},
+            "card_assertions": str(len(terms)),
+            "direct_xref_claims": str(statuses[audit.DIRECT]),
+            "citation_candidate_claims": str(statuses[audit.CITATION]),
+            "unselected_candidate_claims": str(statuses[audit.UNSELECTED]),
+            "selected_reference_accessions": "|".join(sorted(references)),
+            "phi_claims_not_reassessed": str(phi),
+            "curator_claims_not_reassessed": str(curated[identifier]),
+            "score_rules_not_reassessed": record["score_rules"],
+            "whole_record_primary_review": "OPEN",
+        })
+    assert rows == expected
+    terms, proteins = result["terms"], result["proteins"]
+    assert result["summary"] == {
+        "corpus_records": len(census),
+        "card_assertions": len(ledger),
+        "card_terms": len(terms),
+        "selected_reference_terms": sum(bool(t["links"]) for t in terms.values()),
+        "selected_reference_proteins": len(proteins),
+        "reference_links": sum(len(t["links"]) for t in terms.values()),
+        "accessions_shared_between_cohorts": sum(len(p["sources"]) == 2 for p in proteins.values()),
+        "term_statuses": dict(Counter(t["reference_status"] for t in terms.values())),
+        "claim_statuses": dict(Counter(terms[r["aro_id"]]["reference_status"] for r in ledger)),
+        "records_with_selected_references": sum(bool(r["selected_reference_accessions"]) for r in expected),
+        "records_without_card_assertions": sum(r["card_assertions"] == "0" for r in expected),
+        "other_source_claims_not_reassessed": sum(
+            int(r["phi_claims_not_reassessed"]) + int(r["curator_claims_not_reassessed"]) for r in expected),
+        "score_rules_not_reassessed": sum(int(r["score_rules"]) for r in census),
+        "whole_record_primary_signoffs": 0,
+    }
+
+
+@pytest.fixture
+def public_projection():
+    result = json.loads((ROOT / (audit.PREFIX + ".json")).read_bytes())
+    rows = audit.progress.read_tsv((ROOT / (audit.PREFIX + ".tsv")).read_bytes())
+    census, ledger = [audit.progress.read_tsv(
+        audit.reference.check_pin(ROOT, result["inputs"][key]).read_bytes()) for key in ("census", "ledger")]
+    curator = json.loads(audit.reference.check_pin(ROOT, CURATOR_PIN).read_bytes())
+    return result, rows, census, ledger, curator
+
+
+@pytest.mark.parametrize("field", [
+    "path", "standard_inchi_key", "record_sha256", "card_assertions", "direct_xref_claims",
+    "citation_candidate_claims", "unselected_candidate_claims", "selected_reference_accessions",
+    "phi_claims_not_reassessed", "curator_claims_not_reassessed", "score_rules_not_reassessed",
+    "whole_record_primary_review", "summary", "duplicate_row", "extra_protein",
+])
+def test_public_projection_rejects_mutated_fields(public_projection, field):
+    result, rows, *_ = public_projection
+    assert_public_projection(*public_projection)
+    if field == "summary":
+        result["summary"]["card_assertions"] += 1
+    elif field == "duplicate_row":
+        rows[0] = copy.deepcopy(rows[1])
+    elif field == "extra_protein":
+        result["proteins"]["UniProtKB:UNEXPECTED"] = {"sources": []}
+    else:
+        rows[0][field] = "CORRUPTED"
+    with pytest.raises(AssertionError):
+        assert_public_projection(*public_projection)
+
 
 @pytest.fixture
 def cohorts():
@@ -233,11 +318,15 @@ def test_public_cohorts_replay_without_network_native_cache_or_mutable_live_reco
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(Path, "open", guarded)
     result = json.loads((ROOT / (audit.PREFIX + ".json")).read_bytes())
+    receipt = json.loads((ROOT / (audit.PREFIX + "-verification.json")).read_bytes())
+    for pin in receipt["outputs"]:
+        audit.reference.check_pin(ROOT, pin)
     plan = json.loads(audit.reference.check_pin(ROOT, result["plan"]).read_bytes())
     assert result["inputs"] == plan["inputs"]
     paths = {k: audit.reference.check_pin(ROOT, v) for k, v in result["inputs"].items()}
     source = {k: json.loads(p.read_bytes()) for k, p in paths.items() if p.suffix == ".json"}
     proteins = audit.reconcile_proteins(source["direct"], source["literature"])
+    assert set(result["proteins"]) == set(proteins)
     for accession, item in proteins.items():
         assert all(result["proteins"][accession][k] == v for k, v in item.items())
     assert len(proteins) == 1046
@@ -254,6 +343,8 @@ def test_public_cohorts_replay_without_network_native_cache_or_mutable_live_reco
     assert result["terms"] == terms
     census = {r["identifier"]: r for r in audit.progress.read_tsv(paths["census"].read_bytes())}
     rows = audit.progress.read_tsv((ROOT / (audit.PREFIX + ".tsv")).read_bytes())
+    curator = json.loads(audit.reference.check_pin(ROOT, CURATOR_PIN).read_bytes())
+    assert_public_projection(result, rows, list(census.values()), ledger, curator)
     assert {r["identifier"] for r in rows} == set(census) and len(rows) == 2939
     for row in rows:
         assert row["record_sha256"] == census[row["identifier"]]["record_sha256"]

@@ -10797,6 +10797,38 @@ research-only checkpoint. NCBI/#1040 and reuse-terms work remain deferred, with
 no NCBI contact, source adoption or GitHub mutation. Whole-record and
 corpus-wide review remain open.
 
+## Reference Checkpoint Publication Review (2026-10-14)
+
+[PR #1111](https://github.com/CultureBotAI/AntibioticMech/pull/1111) publishes
+the four preceding research checkpoints. A separate same-agent adversarial
+pass reproduced and fixed two validation defects:
+
+- [#1112](https://github.com/CultureBotAI/AntibioticMech/issues/1112): the Bfr1
+  replay could export a relabeled cohort identifier despite loading the correct
+  frozen compound. Identifier and structure-key mismatches now fail before
+  native source access; cache-independent regressions cover both fields.
+- [#1113](https://github.com/CultureBotAI/AntibioticMech/issues/1113): the public
+  CARD replay test accepted corrupted TSV paths and counts. It now verifies
+  immutable output pins, reconstructs every index field and the full summary
+  from pinned public evidence, and tests mutations without native caches or
+  mutable biological records.
+
+The [publication receipt](2026-10-14-reference-publication-verification.json)
+records the successor checks without rewriting historical receipts. The four
+checkpoint suites pass **197 tests without skips**, including 17 new regression
+cases. The broader run passes **291 tests with one historical CARD cache replay
+skip**; strict live CARD membership replay separately passes for all 2,939
+records and 4,538 assertions. Authoritative PR-head and merge-queue QC verdicts
+will be recorded on the PR before merge, using the locked CI environment.
+
+These fixes change validation, not the four dossiers' scientific conclusions.
+No biological record, source input, page, or embedding is changed. This is not
+independent scientific signoff. The incomplete formaldehyde investigation stays
+outside this publication, with its local evidence preserved. NCBI/#1040,
+reuse-terms work, and all scientific holds remain deferred or unresolved as
+previously documented; no scientific endpoint was contacted during publication.
+The corpus-wide research goal remains open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including

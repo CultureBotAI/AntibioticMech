@@ -206,6 +206,27 @@ def test_unrelated_study_context_is_not_selected():
     assert len(audit.citation_contexts(entry, ["8070655"])) == 1
 
 
+@pytest.mark.parametrize("field", ["identifier", "standard_inchi_key"])
+def test_cohort_cannot_relabel_frozen_compound_without_native_cache(tmp_path, monkeypatch, field):
+    record = {"identifier": "CHEBI:48080", "chemical_structure": {
+        "standard_inchi_key": "KQNZDYYTLMIZCT-KQPMLPITSA-N"}}
+    cohort = {key: {"path": key, "sha256": "0" * 64} for key in (
+        "baseline", "protected", "discovery", "census", "previous_checkpoint", "source_queue")}
+    cohort["record"] = {"identifier": record["identifier"], "sha256": "0" * 64,
+                        "standard_inchi_key": record["chemical_structure"]["standard_inchi_key"]}
+    cohort["record"][field] = "Different"
+    (tmp_path / "cohort.json").write_text(json.dumps(cohort))
+    monkeypatch.setattr(audit.reference, "check_pin", lambda root, pin: root / pin["path"])
+    monkeypatch.setattr(audit, "load_record", lambda path: record)
+
+    def denied(*args, **kwargs):
+        raise AssertionError("invalid compound reached source access")
+
+    monkeypatch.setattr(audit, "planned_source", denied)
+    with pytest.raises(ValueError, match="cohort label differs"):
+        audit.build(tmp_path, Path("."))
+
+
 @pytest.mark.parametrize("change", ["none", "candidate_id", "title", "source_digest", "body_digest",
                                     "status", "host", "duplicate", "no_source"])
 def test_discovery_candidates_bind_to_successful_native_cache(tmp_path, change):
