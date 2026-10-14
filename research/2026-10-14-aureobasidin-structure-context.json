@@ -1,0 +1,447 @@
+{
+  "attribution": [
+    {
+      "license": "CC0",
+      "source": "RCSB PDB / wwPDB",
+      "url": "https://www.rcsb.org/structure/9IVC"
+    },
+    {
+      "license": "CC BY 4.0",
+      "release": "2026_03",
+      "source": "UniProt Consortium",
+      "url": "https://www.uniprot.org/help/license"
+    }
+  ],
+  "baseline_graph": {
+    "aliphatic_hydroxyl_count": 0,
+    "formula": "C60H92N8O10",
+    "hydroxyl_count": 0,
+    "inchi_key": "YHSKJPXGXIYLHB-OTNPUQRPSA-N",
+    "rdkit_version": "2025.03.6",
+    "smiles_sha256": "d8c743ae7cbe967e26b381659dbfaaf0c0370e7ca290b6b38d105394f47ca1a5"
+  },
+  "chemical_components": {
+    "A1L3I": {
+      "component_id": "A1L3I",
+      "component_type": "L-peptide linking",
+      "free_component_graph": {
+        "aliphatic_hydroxyl_count": 1,
+        "formula": "C6H13NO3",
+        "hydroxyl_count": 2,
+        "inchi_key": "OMDFZKXSWRGNGX-SCSAIBSYSA-N",
+        "rdkit_version": "2025.03.6",
+        "smiles_sha256": "8c4b07a057329c5e4ea6fe485ef8079001da021297bf0ac2171c4ca4ceb94fb0"
+      },
+      "free_component_hydroxyl_count_is_polymer_hydroxyl_count": false,
+      "free_component_is_whole_drug": false,
+      "name": "(2~{S})-3-methyl-2-(methylamino)-3-oxidanyl-butanoic acid",
+      "source_revision_date": "2025-06-18T00:00:00.000+00:00"
+    },
+    "A1L3J": {
+      "component_id": "A1L3J",
+      "component_type": "non-polymer",
+      "free_component_graph": {
+        "aliphatic_hydroxyl_count": 1,
+        "formula": "C6H12O3",
+        "hydroxyl_count": 2,
+        "inchi_key": "RILPIWOPNGRASR-RFZPGFLSSA-N",
+        "rdkit_version": "2025.03.6",
+        "smiles_sha256": "df52a3eff8e1afb799fab0662ff0f809b6d08b20d7b16f240debb52bba743d75"
+      },
+      "free_component_hydroxyl_count_is_polymer_hydroxyl_count": false,
+      "free_component_is_whole_drug": false,
+      "name": "(2~{R},3~{R})-3-methyl-2-oxidanyl-pentanoic acid",
+      "source_revision_date": "2025-06-18T00:00:00.000+00:00"
+    }
+  },
+  "chemical_disposition": {
+    "complete_ligand_graph_reconstructed": false,
+    "component_metadata_proves_polymer_connectivity": false,
+    "decision": "HOLD_EXACT_STRUCTURE_CLAIM_TRANSFER",
+    "new_evidence": "DEPOSITED_LIGAND_INCLUDES_HYDROXYLATED_COMPONENT_A1L3I",
+    "replacement_structure_assigned": false,
+    "source_owned_identity_conflict_resolved": false
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/cohort.json",
+    "sha256": "c919df9189b98a8f7919839ba3747df14a752bd13c9dbfdddc3d8b95a4eaeee7"
+  },
+  "date": "2026-10-14",
+  "deposition_entities": [
+    {
+      "deposition_description": "Inositol phosphorylceramide synthase catalytic subunit AUR1",
+      "deposition_polymer_type": "polypeptide(L)",
+      "entity_id": "9IVC_1",
+      "other_reference_identifiers": [],
+      "reference_accessions": [
+        "UniProtKB:P36107"
+      ],
+      "reviewed_role": "PROTEIN_COMPONENT_REFERENCE_NOT_TESTED_RESISTANCE_ALLELE",
+      "source_organisms": [
+        {
+          "ncbi_taxonomy_id": 559292,
+          "scientific_name": "Saccharomyces cerevisiae S288C"
+        }
+      ]
+    },
+    {
+      "deposition_description": "Inositol phosphorylceramide synthase regulatory subunit KEI1",
+      "deposition_polymer_type": "polypeptide(L)",
+      "entity_id": "9IVC_2",
+      "other_reference_identifiers": [],
+      "reference_accessions": [
+        "UniProtKB:Q06346"
+      ],
+      "reviewed_role": "PROTEIN_COMPONENT_REFERENCE_NOT_TESTED_RESISTANCE_ALLELE",
+      "source_organisms": [
+        {
+          "ncbi_taxonomy_id": 559292,
+          "scientific_name": "Saccharomyces cerevisiae S288C"
+        }
+      ]
+    },
+    {
+      "deposition_description": "Aureobasidin A",
+      "deposition_polymer_type": "polypeptide(L)",
+      "entity_id": "9IVC_3",
+      "other_reference_identifiers": [],
+      "reference_accessions": [],
+      "reviewed_role": "PEPTIDE_LIGAND_NOT_RESISTANCE_PROTEIN",
+      "source_organisms": [
+        {
+          "ncbi_taxonomy_id": 5580,
+          "scientific_name": "Aureobasidium pullulans R106"
+        }
+      ]
+    }
+  ],
+  "inputs": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/baseline-record.yaml",
+      "sha256": "f0fddda36b21db7225e27f8aa236cc6e1bd6539649da69c4a6358caeadee5a94"
+    },
+    "census": {
+      "path": "research/2026-10-14-antiviral-taxa-resistance-grounding.tsv",
+      "sha256": "b15465f26802dae7fc099e52d3dc4898cd6397fd2bc37f4055443d2e40fe2935"
+    },
+    "identity_hold": {
+      "path": "research/2026-10-12-aureobasidin-identity-context.json",
+      "sha256": "dbb4a761815121831b15a6e6da5928e65cd707278a921f3f6371eadc11e37657"
+    },
+    "previous_checkpoint": {
+      "path": "research/2026-10-14-valinomycin-abcb1-verification.json",
+      "sha256": "b7984544970bb3f6c872d815fbf9bd23e8224cb5eb906b204d70bbcfdb8af16a"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "ligand_context": {
+    "atomic_contact_or_binding_mechanism_verified_from_metadata": false,
+    "bird_identifier_returned": null,
+    "component_set_is_ordered_sequence_or_complete_cyclic_structure": false,
+    "entity_id": "9IVC_3",
+    "formula_reconstructed_by_summing_components": false,
+    "polymer_formula_weight_used_as_exact_drug_mass": false,
+    "reviewed_component_ids": [
+      "A1L3I",
+      "A1L3J"
+    ],
+    "uniprot_absence_is_missing_resistance_protein": false,
+    "unique_chemical_component_count": 8
+  },
+  "limitations": [
+    "Deposition metadata is not a resistant organism, allele or genotype-phenotype experiment.",
+    "The three polymer entities are two protein components and a peptide ligand, not three genes.",
+    "The ligand producer species is distinct from the protein reference strain and is not a resistant host.",
+    "Free-component formulas and hydroxyls do not determine condensation, ring closure or final drug identity.",
+    "Null BIRD and UniProt fields are scoped deposition observations, not global identifier absence.",
+    "The earlier restricted primary article and its holds are unchanged; no material was republished."
+  ],
+  "limits": {
+    "biological_changes": 0,
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_allele_or_genome_assignments": 0,
+    "new_scientific_http_attempts": 7,
+    "reuse_terms_review_resumed": false,
+    "sequences_variants_constructs_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "producer_context": {
+    "deposition_label": "Aureobasidium pullulans R106",
+    "experimental_genome_assignment": null,
+    "name": "Aureobasidium pullulans",
+    "rank": "species",
+    "resistant_phenotype_assigned": false,
+    "role": "LIGAND_SOURCE_NOT_RESISTANT_HOST",
+    "strain_specific_taxon_assignment": false,
+    "taxon_id": "NCBITaxon:5580"
+  },
+  "protein_references": [
+    {
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 184,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene": "AUR1",
+      "gene_names": [
+        "AUR1"
+      ],
+      "ordered_locus_names": [
+        "YKL004W"
+      ],
+      "pdb_entity": "9IVC_1",
+      "protein_accession": "UniProtKB:P36107",
+      "protein_name": "Inositol phosphorylceramide synthase catalytic subunit AUR1",
+      "reciprocal_deposition_reference": "PDB:9IVC",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "resistance_inferred_from_membership": false,
+      "role": "COMPLEX_COMPONENT_REFERENCE",
+      "sequence_version": 1,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true,
+      "whole_complex_assigned_to_one_accession": false
+    },
+    {
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 151,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene": "KEI1",
+      "gene_names": [
+        "KEI1"
+      ],
+      "ordered_locus_names": [
+        "YDR367W"
+      ],
+      "pdb_entity": "9IVC_2",
+      "protein_accession": "UniProtKB:Q06346",
+      "protein_name": "Inositol phosphorylceramide synthase regulatory subunit KEI1",
+      "reciprocal_deposition_reference": "PDB:9IVC",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "resistance_inferred_from_membership": false,
+      "role": "COMPLEX_COMPONENT_REFERENCE",
+      "sequence_version": 2,
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true,
+      "whole_complex_assigned_to_one_accession": false
+    }
+  ],
+  "record": {
+    "identifier": "CHEBI:61739",
+    "path": "data/antibiotics/unspecified/aureobasidin-a.yaml",
+    "sha256": "f0fddda36b21db7225e27f8aa236cc6e1bd6539649da69c4a6358caeadee5a94",
+    "standard_inchi_key": "YHSKJPXGXIYLHB-OTNPUQRPSA-N"
+  },
+  "reused_references": {
+    "aur1": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-aureobasidin/request-c68856d1e9b84b7eefdab9ed2e59aaaafefeecaf2035d2865fe589490ccb1752.json",
+        "sha256": "efcedf11b93264445cbb5928f7dbfe5891afd2d58c8366a23e16792b456d0e56"
+      },
+      "retrieved_at": "2026-10-12T18:17:03.321610+00:00",
+      "sha256": "4e36cef154038b284738d1624eca56be499e59b30026bc1f7c1936228f12bd1e",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AP36107&format=json&size=1&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+    },
+    "yeast-taxonomy": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-12-aureobasidin/request-1617631c92b662626545cbc8b8c5576e86c826f451a20fe3de93143fbf1770cd.json",
+        "sha256": "10dec7c12b5ce95f72b449bbeeb2dd7a4f53472e0294b06c2de6702e5972f607"
+      },
+      "retrieved_at": "2026-10-12T18:17:20.753826+00:00",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292.json"
+    }
+  },
+  "scope": "DEPOSITION_ENTITY_DISAMBIGUATION_WITH_CHEMICAL_IDENTITY_HOLD",
+  "sources": {
+    "component-a1l3i": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-a1l3i-attempt.json",
+        "sha256": "1ce2c97ef4454fb5dcf37950d7fdd0069a4fa355f3c3754cb08a8a3a1b159c16"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-a1l3i-response.bin",
+        "sha256": "f7fac9b19195411de7809d85e633f481a2697ea304d6e17403b62b0a912e330f"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-plan.json",
+        "sha256": "5e0fadead8e3c8e6098f57e41f51eab13f3dae1006c36763ffdfe3ed0fe45cb8"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-a1l3i-receipt.json",
+        "sha256": "da8cf8d645c46e3be08dae4ddba9d4e8540bb6fe5cdf65e208fb4e9534ee7e77"
+      },
+      "retrieved_at": "2026-10-14T13:38:20.463150+00:00",
+      "status": 200,
+      "url": "https://data.rcsb.org/rest/v1/core/chemcomp/A1L3I"
+    },
+    "component-a1l3j": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-a1l3j-attempt.json",
+        "sha256": "71c9e2e65e5df00cdf91b5ac4815fc98e9e7a27a9e660f53f129fd1edbf376df"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-a1l3j-response.bin",
+        "sha256": "2dd170a677d957e21ece69ca045a857afe73a12b92fc712e2f36cc16a4b3691f"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-plan.json",
+        "sha256": "5e0fadead8e3c8e6098f57e41f51eab13f3dae1006c36763ffdfe3ed0fe45cb8"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/component-a1l3j-receipt.json",
+        "sha256": "aaa6b0177352933fca32d6d9a68b79eaec907e3ebf4770d988f2ceb8cf65b114"
+      },
+      "retrieved_at": "2026-10-14T13:38:29.094015+00:00",
+      "status": 200,
+      "url": "https://data.rcsb.org/rest/v1/core/chemcomp/A1L3J"
+    },
+    "entity-types": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/entity-types-attempt.json",
+        "sha256": "a2a74df219dfffcbfb464f67b0684fc304e07c1a48a93eb09dc6a173e17b21e6"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/entity-types-response.bin",
+        "sha256": "3071515e6abca08d21392d4ef94b407f70a96be770052d57d1f8ff8b2cf13cd3"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/followup-plan.json",
+        "sha256": "21d05725c432e2d50419e83227ce1ba4d5d03c8a2f57665ea61e360a3d3dec88"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/entity-types-receipt.json",
+        "sha256": "36ab351d5f247466fc85738402c851be079056bacbcc13e2058ed81e1091836b"
+      },
+      "retrieved_at": "2026-10-14T13:36:18.925756+00:00",
+      "status": 200,
+      "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%229IVC%22%5D%29+%7B%0A++rcsb_id%0A++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++polymer_entities+%7B%0A++++rcsb_id%0A++++rcsb_polymer_entity+%7Bpdbx_description+formula_weight%7D%0A++++entity_poly+%7Btype%7D%0A++%7D%0A%7D%7D"
+    },
+    "kei1-metadata": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/kei1-reference-response.bin",
+        "sha256": "8b73ac51358488481e98bfba1b77a2b44a58d7b95415b0b244616654a01effa7"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/kei1-reference-receipt.json",
+        "sha256": "47fdccd37c82b3ad9f4a178b34c167cc96f990af7408b1fd9b285301e5895e86"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T13:36:29.423703+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ06346&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+    },
+    "kei1-reference": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/kei1-reference-attempt.json",
+        "sha256": "f62e057679788b0edbd41e098db6267d2e13342d557a614df78188d6355b35ca"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/kei1-reference-response.bin",
+        "sha256": "8b73ac51358488481e98bfba1b77a2b44a58d7b95415b0b244616654a01effa7"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/followup-plan.json",
+        "sha256": "21d05725c432e2d50419e83227ce1ba4d5d03c8a2f57665ea61e360a3d3dec88"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/kei1-reference-receipt.json",
+        "sha256": "47fdccd37c82b3ad9f4a178b34c167cc96f990af7408b1fd9b285301e5895e86"
+      },
+      "retrieved_at": "2026-10-14T13:36:29.423703+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=accession%3AQ06346&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_pdb%2Csequence_version%2Cversion"
+    },
+    "ligand-identifiers": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/ligand-identifiers-attempt.json",
+        "sha256": "b4cd527574cd83b14190c8a84873a968ce9b383d29ed1e1883fc3f6c6ea17f27"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/ligand-identifiers-response.bin",
+        "sha256": "646d4a5c0729fced55fd1660048fdb19c631a1d2fae089480ff5e6da9bdd2960"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/ligand-plan.json",
+        "sha256": "1981033aa001f593c13b58552a35026dd38578ae661f8144938013028b554fd9"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/ligand-identifiers-receipt.json",
+        "sha256": "45175eb28cee0bcc7248e017a6cc07e34f7f01fca47345153740f10b94b9f52d"
+      },
+      "retrieved_at": "2026-10-14T13:37:45.779809+00:00",
+      "status": 200,
+      "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%229IVC%22%5D%29+%7B%0A++rcsb_id%0A++polymer_entities+%7B%0A++++rcsb_id%0A++++rcsb_polymer_entity_container_identifiers+%7Bprd_id+chem_comp_monomers+chem_comp_nstd_monomers%7D%0A++%7D%0A%7D%7D"
+    },
+    "pdb-9ivc": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/pdb-9ivc-attempt.json",
+        "sha256": "35b6592e472e904c893284d61294555ccde63107eae3befbfb4506fa4c5087b8"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/pdb-9ivc-response.bin",
+        "sha256": "171cedf9864fb359f9f8587fc6698607ed0661c31963e8d57e5697ace2afc25e"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/request-plan.json",
+        "sha256": "f8180ae1e6af39242614c9a1c24d2c40c94f520cd09ce2a9896323216cceb302"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/pdb-9ivc-receipt.json",
+        "sha256": "c1695fd7b4a284b879bd0210c0341b2954c1ab57f6f431e845bf9d776b7511d2"
+      },
+      "retrieved_at": "2026-10-14T13:35:13.723656+00:00",
+      "status": 200,
+      "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%229IVC%22%5D%29+%7B%0A++rcsb_id%0A++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++rcsb_entry_container_identifiers+%7Bnon_polymer_entity_ids%7D%0A++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++polymer_entities+%7B%0A++++rcsb_id%0A++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++%7D%0A++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++%7D%0A%7D%7D"
+    },
+    "producer-metadata": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/producer-taxonomy-response.bin",
+        "sha256": "0ce645a6861a7ac8cff646a5ea2169375222e73bff9fe4f78b5c99b251af4ba1"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/producer-taxonomy-receipt.json",
+        "sha256": "ca15657e4ba84d91b0a0c03b43763abb53591657866ac664bc09a13ddbed4b44"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T13:37:02.358356+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5580"
+    },
+    "producer-taxonomy": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/producer-taxonomy-attempt.json",
+        "sha256": "60610bb56db6b6d5ee3d34706b4e5a6849046d41b7cd6468f00a6fa0aee709b6"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/producer-taxonomy-response.bin",
+        "sha256": "0ce645a6861a7ac8cff646a5ea2169375222e73bff9fe4f78b5c99b251af4ba1"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/followup-plan.json",
+        "sha256": "21d05725c432e2d50419e83227ce1ba4d5d03c8a2f57665ea61e360a3d3dec88"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-aureobasidin-structure/producer-taxonomy-receipt.json",
+        "sha256": "ca15657e4ba84d91b0a0c03b43763abb53591657866ac664bc09a13ddbed4b44"
+      },
+      "retrieved_at": "2026-10-14T13:37:02.358356+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5580"
+    }
+  }
+}
