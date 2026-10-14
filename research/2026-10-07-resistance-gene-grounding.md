@@ -44,15 +44,15 @@ The CARD slice contains 4,538 assertions across 273 records and 2,002 distinct
 ARO identifiers. At baseline, fourteen records carried 15 curator-authored resistance claims.
 These remain within the requested scope, not just the 23 PHI-base records.
 
-The latest curated corpus contains **4,885 resistance assertions across 319
-records**, including **130 curator-authored claims across 52 records**. There
-are still 2,607 records without resistance assertions or genotype rules. These
+The latest curated corpus contains **4,886 resistance assertions across 320
+records**, including **131 curator-authored claims across 53 records**. There
+are still 2,606 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-13-syringomycin-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-14-mycophenolic-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-13-syringomycin-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-14-mycophenolic-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
 
@@ -9805,6 +9805,107 @@ Desktop/mobile page and map checks passed. The
 offline checks and the QC status at capture time. Final quality-gate results
 are attached to the PR. This is same-agent adversarial
 review, not independent scientific signoff.
+
+## Mycophenolic Acid: Yeast Reference and Assay Scope (2026-10-14)
+
+The [initial research-only checkpoint](2026-10-14-mycophenolic-context.json) covers
+`CHEBI:168396` (mycophenolic acid; InChIKey
+`HPNSFSBZBAHARI-RUDMXATFSA-N`), whose complete collection-aware record had no
+resistance assertions at that checkpoint. It does not cover mycophenolate mofetil, the sodium salt,
+or the earlier cordycepin combination exposure.
+
+Five sequence-free, reviewed UniProt entries were inspected in release
+`2026_03`. These are **reference identities**, not tested alleles or genomes:
+
+| Paper/reference symbol | UniProtKB | Locus | Entry / sequence version |
+| --- | --- | --- | --- |
+| IMD1 | [P39567](https://www.uniprot.org/uniprotkb/P39567/entry) | YAR073W | 176 / 1 |
+| IMD2 (PUR5) | [P38697](https://www.uniprot.org/uniprotkb/P38697/entry) | YHR216W | 208 / 1 |
+| IMD3 | [P50095](https://www.uniprot.org/uniprotkb/P50095/entry) | YLR432W | 219 / 1 |
+| IMD4 | [P50094](https://www.uniprot.org/uniprotkb/P50094/entry) | YML056C | 212 / 1 |
+| RPB1 (canonical RPO21) | [P04050](https://www.uniprot.org/uniprotkb/P04050/entry) | YDL140C | 255 / 2 |
+
+Cached UniProt Taxonomy places their S288c reference strain (`559292`) within
+*Saccharomyces cerevisiae* (`4932`). Neither identifier resolves a tested
+derivative. IMD-family membership is not a shared resistance phenotype.
+
+Selected Results, Discussion, Methods, captions, and native Figures 2 and 5
+from [Kaplan et al. 2012](https://journals.plos.org/plosgenetics/article?id=10.1371%2Fjournal.pgen.1002627)
+were inspected. Figure 2 includes both source-labeled resistant and sensitive
+RPB1 comparisons, with baseline growth defects needing matched controls.
+Figure 5A's Northern signal is not uniquely IMD2: the authors explicitly retain
+possible paralog cross-hybridization. The start-site comparisons provide
+additional gene-specific context. Drug sensitivity alone does not establish a
+generic transcription-elongation defect. These are laboratory plate-growth and
+transcription assays, not MICs or clinical categories. Tables S1/S2 and Text S1
+were still pending review at this checkpoint; the successor below records their
+inspection. No exact experimental identifier was assigned.
+
+The distinct 2002 paper (`PMID:12016207`) returned publisher HTTP 403. The
+2003 paper (`PMID:12746440`), discovered in IMD2's bibliography, has verified
+Europe PMC citation metadata, but its linked PDF also returned HTTP 403.
+Neither request was retried through another route. The 2005 and 2008 leads
+remain discovery-only. No NCBI request, source adoption, sequence, exact
+variant, numeric AST export, or biological-record edit occurred.
+
+The offline audit replays an immutable historical record snapshot so later
+curation need not invalidate this checkpoint. Focused tests guard reference
+aliases, versions, taxonomy, primary-byte identity, and the evidence limits.
+The [verification receipt](2026-10-14-mycophenolic-verification.json) records
+128 passing focused tests, lint, exact offline replay, and all 2,939 records
+byte-identical to the baseline. Full authoritative QC was not rerun for this
+research-only checkpoint; no curation or generated-site change is claimed.
+This is partial research progress, not whole-record signoff; the existing
+2,939-record census and full-corpus investigation remain unchanged.
+
+## Mycophenolic Acid: Qualified RPB1 Curation (2026-10-14)
+
+The [subject follow-up](2026-10-14-mycophenolic-subjects.json) supersedes the
+preceding research-only status. All ten rendered pages of Tables S1/S2 and
+Text S1 were inspected alongside the native DOCX tables. Table S1 records
+comparison metadata and viability, not a separate resistance endpoint.
+Table S2's CKY274, CKY283 and CKY944 are laboratory backgrounds, not unique
+tested-derivative identifiers. Text S1 places the yeast strains in the S288C
+lineage and identifies CKY283 as the genetic-comparison parent. Growth and
+purified-enzyme comparisons are not assumed to use identical backgrounds.
+
+One qualified **RPB1-associated laboratory resistance** claim was added to
+mycophenolic acid through the validated writer and one curation event. The
+[transition receipt](2026-10-14-mycophenolic-curation.json) pins the original
+record, inspected canary, evidence context and resulting record. Figure 2D's
+source-labeled resistance and Figure 2A's matched growth controls support the
+association; sensitive comparisons and baseline-growth limitations are retained.
+The mechanism remains `UNKNOWN`, with species-level `NCBITaxon:4932`.
+UniProtKB:P04050, its locus, and S288c taxonomy remain reference-only evidence.
+No experimental protein, gene, allele, strain TaxID or genome is assigned.
+IMD2 expression is not curated as an independent resistance claim, and Rpb1
+is not asserted to be the direct drug target. No numerical AST, exact variant,
+construct or protocol was exported. Other papers and whole-record review remain open.
+
+The [successor census](2026-10-14-mycophenolic-resistance-grounding.tsv) retains
+all 2,939 records. The other 2,938 records and the pre-existing fields of the
+curated record remain unchanged. The two prior access holds were not retried;
+the supplement retrievals used only the publisher's recorded redirects. No NCBI
+request, source adoption or change to deferred #1040 occurred.
+
+Same-agent adversarial review filed
+[#1101](https://github.com/CultureBotAI/AntibioticMech/issues/1101): the reference
+projector accepted a missing, empty or inconsistent species-lineage name while
+reporting the lineage verified. All 15 new regression cases failed before the
+fix; the tightened check passes the 104-test focused suite and both native
+offline checkpoint replays. The original retrieved metadata and exported
+checkpoints are unchanged. The older verification receipt retains its original
+script/test hashes; it does not certify the later revision. This review is not
+independent scientific signoff.
+
+The [publication verification receipt](2026-10-14-mycophenolic-publication-verification.json)
+records the preservation checks, current ledger hashes, focused tests and
+desktop/mobile browser checks. One text-embedding row changed; the other
+2,938 remain byte-identical. The complete text projection was regenerated,
+while the chemical map is unchanged. Full local QC was still running when
+this receipt was captured; final local and pinned-environment CI results are
+recorded on the publication PR before merge. Local RDKit 2025.3.6 differs from
+the repository pin 2026.3.5, so the local run alone does not certify that environment.
 
 ## Remaining work
 

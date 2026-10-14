@@ -1,0 +1,503 @@
+{
+  "citation_dispositions": {
+    "DOI:10.1371/journal.pgen.1002627": "SELECTED_RESULTS_AND_FIGURES_2_5_REVIEWED_SUBJECT_CROSSWALK_PENDING",
+    "PMID:12016207": "PUBLISHER_403_PRIMARY_REVIEW_HELD_NO_RETRY",
+    "PMID:12746440": "METADATA_INSPECTED_EUROPE_PMC_PDF_403_PRIMARY_REVIEW_HELD_NO_RETRY",
+    "PMID:16278936": "DISCOVERY_AND_UNIPROT_BIBLIOGRAPHY_ONLY_PRIMARY_REVIEW_PENDING",
+    "PMID:18823333": "DISCOVERY_ONLY_PRIMARY_REVIEW_PENDING"
+  },
+  "inputs": {
+    "assessment": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/reviewed.json",
+      "sha256": "35c284492e5782d813e3976ac1a7be185c8ad5d72bbb334b5afd646ce780ee2a"
+    },
+    "census": {
+      "path": "research/2026-10-13-syringomycin-resistance-grounding.tsv",
+      "sha256": "01f00af94fe6993d38a84a4a4faf4566686f8813c5740d6b1956e93120ddc5ee"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/cohort.json",
+      "sha256": "5b40ca1c28e3ac2999d8881b9d46344d3b5167e3c32662226e9f76f4089a9593"
+    },
+    "historical_record_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-14-mycophenolic/baseline-record.yaml",
+      "sha256": "36014dc9ddbd32288e27e051c676ad82bcb6ba8bfb24c793800fcc673fdabe4c"
+    },
+    "plans": {
+      "assets": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/assets-plan.json",
+        "sha256": "8c093a9b3b5e9df2e5ac31a8aee83e30b35e37adcb43416059f5d5ae163971db"
+      },
+      "comparative": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/comparative-plan.json",
+        "sha256": "c1a049556192394ee46fef15321f1a0274804f55a14efd06ad7144fd0da80355"
+      },
+      "figure2-storage": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-storage-plan.json",
+        "sha256": "e7e4349b694218e1c8581a2f87ff3e304b73a73801854fa5d43c0d05495109af"
+      },
+      "figure5-storage": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-storage-plan.json",
+        "sha256": "c269b61cede05b237de872a428679d460db3d9170b99b79f7815e1c6cc80d66b"
+      },
+      "native": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/native-plan.json",
+        "sha256": "95edaa120a454162445da29ba1d8db129551607686e2525caa86474dd69a8ab9"
+      },
+      "primary": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-plan.json",
+        "sha256": "2708de579ff22339666ce315c4dc72195d3af9af083b90f1a76d6b63a8984486"
+      },
+      "primary-2003": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2003-plan.json",
+        "sha256": "dc110ef75003f5f4571f3b75c8172fb82886afd989f3b329e1b116d578152a91"
+      },
+      "primary-2012": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2012-plan.json",
+        "sha256": "4d03885ae15168777c28e5efdf546880341f4d9a88bec1188ad5f9629a24f74a"
+      }
+    }
+  },
+  "limits": {
+    "clinical_category_inferred": false,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "numeric_ast_exported": false,
+    "reference_strain_is_experimental_subject": false,
+    "sequences_exported": false,
+    "source_adoption": false,
+    "variants_exported": false,
+    "whole_record_primary_review": "OPEN"
+  },
+  "primary": {
+    "compound_scope": "Named mycophenolic acid, not its sodium salt, mofetil prodrug or combination exposure.",
+    "doi": "10.1371/journal.pgen.1002627",
+    "experimental_allele_assignment": null,
+    "experimental_genome_assignment": null,
+    "experimental_strain_taxon_assignment": null,
+    "gene_context": [
+      {
+        "evidence": "Mixed mutant growth phenotypes in Figure 2, including source-labeled resistance and sensitivity.",
+        "gene": "RPB1",
+        "limit": "Not a direction of effect shared by all RPB1 alleles; generic growth defects require matched controls."
+      },
+      {
+        "evidence": "Expression and start-site comparisons in Figure 5 relate transcription to drug response.",
+        "gene": "IMD2",
+        "limit": "Figure 5A Northern signal is not uniquely IMD2 because of possible paralog cross-hybridization."
+      }
+    ],
+    "independent_chemical_reidentification": false,
+    "interpretation_limit": "Drug sensitivity is not sufficient evidence of a generic transcription-elongation defect.",
+    "locations": {
+      "compound_and_subject_limits": {
+        "normalized_text_sha256": "12cad85d3aac67a24c091147751e0e5106d05ec318d4cade8ce613be1b15ede0",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[7]/div[2]/p"
+      },
+      "expression_comparison": {
+        "normalized_text_sha256": "d07168915dee7d299317a197b5dcf043f08c3b8f0baf519253cdcc0db6b632fb",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[5]/p[2]"
+      },
+      "figure2_caption": {
+        "normalized_text_sha256": "35908619d812efcbd658dc8e9d101361645b12348162f846803d73a2faf03c68",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/div/p[2]"
+      },
+      "figure5_caption": {
+        "normalized_text_sha256": "a491e1c8d4530b84aa2bb850ed0c33b393b62d05cf08c7cebbaa5734c66317ba",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[5]/div/p[2]"
+      },
+      "interpretation_limit": {
+        "normalized_text_sha256": "1c32f09cd1bbfa2b29ad58e0bb5f7e2a9cf262aa5a8707a1a44f99102aa189bf",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[6]/div[2]/p"
+      },
+      "probe_specificity": {
+        "normalized_text_sha256": "363fbbf261ea72403aa064aea3b8ce8b7d8693b90f1b767eaaad01b82ca7f29c",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[5]/p[1]"
+      }
+    },
+    "measurement_scope": "Qualitative plate growth and transcription assays, not MIC or disk diffusion.",
+    "organism_scope": "Saccharomyces cerevisiae laboratory comparisons; no clinical category or species-wide resistance.",
+    "source_license_notice": "Creative Commons Attribution; Kaplan et al., 2012, PLOS Genetics.",
+    "supplement_subject_crosswalk": "PENDING_TABLES_S1_S2_AND_TEXT_S1_REVIEW",
+    "title": "Dissection of Pol II Trigger Loop Function and Pol II Activity\u2013Dependent Control of Start Site Selection In Vivo",
+    "visually_reviewed_figures": {
+      "2": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-storage-response.bin",
+          "sha256": "c39c2d63c3a24c40feb012e20ddc35094273ff96033591a9102637740d6752a3"
+        },
+        "visually_inspected": true
+      },
+      "5": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-storage-response.bin",
+          "sha256": "8fe349031d9d170dde2cb31802009a54e40802dd9fd17369898177a24a6ba271"
+        },
+        "visually_inspected": true
+      }
+    }
+  },
+  "record_before": {
+    "complete_collection_aware_record_loaded": true,
+    "identifier": "CHEBI:168396",
+    "label": "mycophenolic acid",
+    "path": "data/antibiotics/antiviral/mycophenolic-acid.yaml",
+    "sha256": "36014dc9ddbd32288e27e051c676ad82bcb6ba8bfb24c793800fcc673fdabe4c",
+    "standard_inchi_key": "HPNSFSBZBAHARI-RUDMXATFSA-N"
+  },
+  "references": {
+    "IMD1": {
+      "canonical_gene": "IMD1",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 176,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "IMD1"
+      ],
+      "ordered_locus_names": [
+        "YAR073W"
+      ],
+      "protein_accession": "UniProtKB:P39567",
+      "protein_name": "Putative inosine-5'-monophosphate dehydrogenase 1",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "release": "2026_03",
+      "resistance_asserted_from_reference": false,
+      "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_GENOME",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000000095",
+      "source_gene": "IMD1",
+      "source_request": "comparative-references",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "IMD2": {
+      "canonical_gene": "IMD2",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 208,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "IMD2",
+        "PUR5"
+      ],
+      "ordered_locus_names": [
+        "YHR216W"
+      ],
+      "protein_accession": "UniProtKB:P38697",
+      "protein_name": "Inosine-5'-monophosphate dehydrogenase 2",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "release": "2026_03",
+      "resistance_asserted_from_reference": false,
+      "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_GENOME",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000001259",
+      "source_gene": "IMD2",
+      "source_request": "imd2-reference",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "IMD3": {
+      "canonical_gene": "IMD3",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 219,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "IMD3"
+      ],
+      "ordered_locus_names": [
+        "YLR432W"
+      ],
+      "protein_accession": "UniProtKB:P50095",
+      "protein_name": "Inosine-5'-monophosphate dehydrogenase 3",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "release": "2026_03",
+      "resistance_asserted_from_reference": false,
+      "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_GENOME",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000004424",
+      "source_gene": "IMD3",
+      "source_request": "comparative-references",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "IMD4": {
+      "canonical_gene": "IMD4",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 212,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "IMD4"
+      ],
+      "ordered_locus_names": [
+        "YML056C"
+      ],
+      "protein_accession": "UniProtKB:P50094",
+      "protein_name": "Inosine-5'-monophosphate dehydrogenase 4",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "release": "2026_03",
+      "resistance_asserted_from_reference": false,
+      "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_GENOME",
+      "sequence_version": 1,
+      "sgd_id": "SGD:S000004520",
+      "source_gene": "IMD4",
+      "source_request": "comparative-references",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    },
+    "RPB1": {
+      "canonical_gene": "RPO21",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 255,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "RPB1",
+        "RPB220",
+        "RPO21",
+        "SUA8"
+      ],
+      "ordered_locus_names": [
+        "YDL140C"
+      ],
+      "protein_accession": "UniProtKB:P04050",
+      "protein_name": "DNA-directed RNA polymerase II subunit RPB1",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "release": "2026_03",
+      "resistance_asserted_from_reference": false,
+      "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_GENOME",
+      "sequence_version": 2,
+      "sgd_id": "SGD:S000002299",
+      "source_gene": "RPB1",
+      "source_request": "rpb1-reference",
+      "source_species_taxon_id": "NCBITaxon:4932",
+      "species_lineage_verified": true
+    }
+  },
+  "scope": "REFERENCE_IDENTITIES_AND_SCOPED_PRIMARY_CONTEXT_NOT_ALLELE_CURATION",
+  "sources": {
+    "comparative-references": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/comparative-references-attempt.json",
+        "sha256": "02a4ad1f8ec8173726ce02c67c99c498a783766f946bd3b8d8d4d137cd4683cb"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/comparative-references-response.bin",
+        "sha256": "b082cd9d10402e93ea396107d93e2d31b937cb9aa68add2101461978fb331af9"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/comparative-references-receipt.json",
+        "sha256": "b9e4efd287f6bc8a894279384a2f463499f5e52e6d3224a0ced29fbe3e60af1b"
+      },
+      "retrieved_at": "2026-10-14T03:58:00.861176+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AIMD1+OR+gene_exact%3AIMD3+OR+gene_exact%3AIMD4%29+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=10"
+    },
+    "figure2": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-attempt.json",
+        "sha256": "2bd2509a11a7c4225a79e952b8ccfaa6eceb38c090bb99444cab2b0f48a15c49"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-receipt.json",
+        "sha256": "719c14f9ef383faaeae798ba2f2095e29fbcaef6d892eb8df00498355ab24b86"
+      },
+      "retrieved_at": "2026-10-14T04:00:33.070853+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1002627.g002"
+    },
+    "figure2-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-storage-attempt.json",
+        "sha256": "f014b16fca3daca6a78dc47c2e94bb59eae6323f27a7563e9980bf3651a2763b"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-storage-response.bin",
+        "sha256": "c39c2d63c3a24c40feb012e20ddc35094273ff96033591a9102637740d6752a3"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure2-storage-receipt.json",
+        "sha256": "8ebddc061291da42bb31fb34ce3da095c9a85b66d0af97bddf363cc0aa6c14af"
+      },
+      "retrieved_at": "2026-10-14T04:00:50.838411+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1002627/1/pgen.1002627.g002.PNG_L"
+    },
+    "figure5": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-attempt.json",
+        "sha256": "d9d15c713c13d48303902c15a00059c7959f757b1c853022a9f12e6e38f2798c"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-receipt.json",
+        "sha256": "f2f8941cfa8b70136271212002ea478eb6f64ddf95f7eb0da84e777e30a3d68d"
+      },
+      "retrieved_at": "2026-10-14T04:00:35.690085+00:00",
+      "status": 302,
+      "url": "https://journals.plos.org/plosgenetics/article/figure/image?download&size=large&id=10.1371/journal.pgen.1002627.g005"
+    },
+    "figure5-storage": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-storage-attempt.json",
+        "sha256": "0abdb85ada5a771d6c7cd7c4260351e8fa0895d45e57b4b5e7d5d60f00e59aea"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-storage-response.bin",
+        "sha256": "8fe349031d9d170dde2cb31802009a54e40802dd9fd17369898177a24a6ba271"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/figure5-storage-receipt.json",
+        "sha256": "d6ce5e34c86892d318192f33def3c5094eac76e16d2a3bc69886541fbef12750"
+      },
+      "retrieved_at": "2026-10-14T04:00:54.532820+00:00",
+      "status": 200,
+      "url": "https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pgen.1002627/1/pgen.1002627.g005.PNG_L"
+    },
+    "imd2-reference": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/imd2-reference-attempt.json",
+        "sha256": "d8e91204c85361fb8120adc5650787c7be89b80cabde22396d0dc08096f808a4"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/imd2-reference-response.bin",
+        "sha256": "b06fe001324c30f3e325d8f5ca7082e7fab8fbaa70dfec25dc8376ad6b114789"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/imd2-reference-receipt.json",
+        "sha256": "f456be89e20be7d22fd4017ebc545b214eba5636fbb386225cf248a3cdbae181"
+      },
+      "retrieved_at": "2026-10-14T03:56:23.136591+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AIMD2+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=10"
+    },
+    "metadata-2003": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/metadata-2003-attempt.json",
+        "sha256": "0a047d3bfcef0a739593aee6c8cce805f31d0409cf13907bfdafa3ec9893d249"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/metadata-2003-response.bin",
+        "sha256": "bcc616a0b76f24b89c10c1626bd71aacc9b6ef9593c8baa048912d279bfba1c3"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/metadata-2003-receipt.json",
+        "sha256": "7bc5961ae62f358d578ea32bf2e3e3aa77bcda637b3a00fd6636bed9f6fcda8a"
+      },
+      "retrieved_at": "2026-10-14T03:58:05.060827+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A12746440+AND+SRC%3AMED&format=json&resultType=core&pageSize=10"
+    },
+    "primary-2002": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2002-attempt.json",
+        "sha256": "8564e33db6434e7de81e772c51b1f1b9395964bdd21aa468a7801a363fa5d8a9"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2002-response.bin",
+        "sha256": "7c97a4b7c067df8754a05402e992aa26f0330555da075175290826bb287ed177"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2002-receipt.json",
+        "sha256": "a446bdae114c12dbd7b0685003c881219d324985bdeaf0dc255c95de4c745c8a"
+      },
+      "retrieved_at": "2026-10-14T03:57:13.454707+00:00",
+      "status": 403,
+      "url": "https://www.jbc.org/article/S002192581860047X/pdf"
+    },
+    "primary-2003": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2003-attempt.json",
+        "sha256": "a414410459ce33614130e788431ab421b0234beee5fbc6d6fd2db1d49ede1fd3"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2003-response.bin",
+        "sha256": "67a3be0b82d3c0c78a2e134e7289afe6f53b9ee92ff6f98d483f9ed577d98220"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2003-receipt.json",
+        "sha256": "d0932f14d000a2a138679fe1b92ff34d4b9a698c49c223eb0e1b3399754c22de"
+      },
+      "retrieved_at": "2026-10-14T03:58:39.464975+00:00",
+      "status": 403,
+      "url": "https://europepmc.org/articles/PMC3367515?pdf=render"
+    },
+    "primary-2012": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2012-attempt.json",
+        "sha256": "9ff06a3ca34a05b7a4d46c500fbc051d0c6d3703f535b791f12db59c33e34224"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2012-response.bin",
+        "sha256": "081b93296d25c5822c3695bf1a74fe6de4baaa630f31c040bf817b82c67405e7"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/primary-2012-receipt.json",
+        "sha256": "f76537f3066fd800f6215dd8d52ed75f4cac37c06f1be07b92b5dcca2de41689"
+      },
+      "retrieved_at": "2026-10-14T03:59:19.231736+00:00",
+      "status": 200,
+      "url": "https://journals.plos.org/plosgenetics/article?id=10.1371%2Fjournal.pgen.1002627"
+    },
+    "rpb1-reference": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/rpb1-reference-attempt.json",
+        "sha256": "1a40e95c0dc7a3e02668d0536f8f669ebf852f90d80f9b6ccec0676445076135"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/rpb1-reference-response.bin",
+        "sha256": "bbe96ea5342be26646751a63e045005a470c1d562fe4131dbcc5ebe06c71d3a7"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-mycophenolic/rpb1-reference-receipt.json",
+        "sha256": "6c41591063f0d01e4773911b2827d0deff379eab380d1b59aae151b291c67ba0"
+      },
+      "retrieved_at": "2026-10-14T04:00:38.971072+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ARPB1+AND+organism_id%3A559292+AND+reviewed%3Atrue&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_sgd%2Clit_pubmed_id%2Csequence_version%2Cversion&format=json&size=10"
+    }
+  },
+  "summary": {
+    "corpus_records_in_scope": 2939,
+    "curated_resistance_assertions": 0,
+    "primary_access_holds": 2,
+    "records_in_this_checkpoint": 1,
+    "versioned_reference_proteins": 5,
+    "whole_record_primary_signoffs": 0
+  },
+  "taxonomy": {
+    "body": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    }
+  }
+}
