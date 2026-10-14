@@ -1,6 +1,8 @@
 """Historical pins never authorize a fallback for an unregistered live change."""
 
 import hashlib
+import importlib
+import json
 import sys
 from pathlib import Path
 
@@ -39,3 +41,32 @@ def test_registered_snapshot_not_mutable_live_record(tmp_path, checksum, change)
         assert hashlib.sha256(snapshot.read_bytes()).hexdigest() == checksum
         item["sha256"] = hashlib.sha256(live.read_bytes()).hexdigest()
         assert checkpoint.checkpoint_path(tmp_path, item) == live
+
+
+@pytest.mark.parametrize("module_name", [
+    "audit_card_reference_lineages", "audit_card_species_nodes",
+    "audit_fr171456_locus", "audit_thevissen_2007_access",
+])
+@pytest.mark.parametrize("historical", [False, True])
+def test_cli_historical_replay_is_explicit(tmp_path, monkeypatch, capsys, module_name, historical):
+    audit = importlib.import_module(module_name)
+    expected = {"summary": {"synthetic": True}}
+    output = tmp_path / "checkpoint.json"
+    output.write_text(json.dumps(expected))
+    before = output.read_bytes()
+    calls = []
+
+    def build(root, selected, *, record_resolver=None):
+        assert root == tmp_path
+        assert selected == getattr(audit, "PLAN", getattr(audit, "CACHE", None))
+        calls.append(record_resolver)
+        return expected
+
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(audit, "build", build)
+    monkeypatch.setattr(sys, "argv", [module_name, "--check", "--output", str(output)]
+                        + (["--historical-records"] if historical else []))
+    audit.main()
+    assert calls == [checkpoint.checkpoint_path if historical else None]
+    assert json.loads(capsys.readouterr().out) == expected["summary"]
+    assert output.read_bytes() == before

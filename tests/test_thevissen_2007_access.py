@@ -13,7 +13,6 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import audit_thevissen_2007_access as audit  # noqa: E402
-from resistance_checkpoint_records import checkpoint_path  # noqa: E402
 
 
 def metadata():
@@ -163,7 +162,7 @@ def test_public_dossier_preserves_review_boundaries(dossier):
     assert not dossier["constraints"]["held_sources_retried"]
 
 
-def test_offline_native_replay(dossier, monkeypatch):
+def test_offline_native_replay(dossier, monkeypatch, capsys):
     if not (ROOT / audit.CACHE / "cohort.json").exists():
         pytest.skip("optional native research cache not available")
 
@@ -173,4 +172,7 @@ def test_offline_native_replay(dossier, monkeypatch):
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
-    assert audit.build(ROOT, record_resolver=checkpoint_path) == dossier
+    monkeypatch.chdir(ROOT)
+    monkeypatch.setattr(sys, "argv", [audit.__name__, "--check", "--historical-records"])
+    audit.main()
+    assert json.loads(capsys.readouterr().out) == dossier["summary"]

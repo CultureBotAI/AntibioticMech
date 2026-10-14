@@ -15,6 +15,7 @@ from urllib.parse import urlsplit
 import audit_card_definition_citations as definitions
 import audit_card_grounding as card
 import audit_topoisomerase_references as reference
+from resistance_checkpoint_records import checkpoint_path
 
 PLAN = Path("reports/resistance-grounding-2026-10-14-card-reference-lineages/plan-v2.json")
 OUTPUT = Path("research/2026-10-14-card-reference-lineages.json")
@@ -267,8 +268,11 @@ def main():
     parser.add_argument("--plan", type=Path, default=PLAN)
     parser.add_argument("--output", type=Path, default=OUTPUT)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--historical-records", action="store_true",
+                        help="Replay registered identifier/path/hash fixtures, not the live census.")
     args = parser.parse_args()
-    result = build(Path.cwd(), args.plan)
+    result = build(Path.cwd(), args.plan,
+                   record_resolver=checkpoint_path if args.historical_records else None)
     if args.check:
         if json.loads(args.output.read_bytes()) != result:
             raise SystemExit("reference lineage dossier does not reproduce")

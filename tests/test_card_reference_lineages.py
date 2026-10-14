@@ -14,7 +14,6 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import audit_card_reference_lineages as audit  # noqa: E402
-from resistance_checkpoint_records import checkpoint_path  # noqa: E402
 
 
 def taxon():
@@ -200,7 +199,7 @@ def test_mixed_and_uncultured_nodes_remain_ranked_but_not_identified_experimenta
         assert not node["experimental_subject_assignment"]
 
 
-def test_offline_native_replay(dossier, monkeypatch):
+def test_offline_native_replay(dossier, monkeypatch, capsys):
     if not (ROOT / audit.PLAN).exists():
         pytest.skip("optional native research cache not available")
 
@@ -210,7 +209,10 @@ def test_offline_native_replay(dossier, monkeypatch):
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
-    assert audit.build(ROOT, record_resolver=checkpoint_path) == dossier
+    monkeypatch.chdir(ROOT)
+    monkeypatch.setattr(sys, "argv", [audit.__name__, "--check", "--historical-records"])
+    audit.main()
+    assert json.loads(capsys.readouterr().out) == dossier["summary"]
 
 
 def test_no_operational_or_experimental_values_are_exported(dossier):

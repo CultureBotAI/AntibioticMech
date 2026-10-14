@@ -14,7 +14,6 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import audit_card_species_nodes as audit  # noqa: E402
-from resistance_checkpoint_records import checkpoint_path  # noqa: E402
 
 
 def species():
@@ -133,7 +132,7 @@ def test_public_summary_closes_only_reference_taxonomy_gap(dossier):
     assert dossier["constraints"]["full_corpus_goal_status"] == "OPEN"
 
 
-def test_offline_native_replay(dossier, monkeypatch):
+def test_offline_native_replay(dossier, monkeypatch, capsys):
     if not (ROOT / audit.CACHE / "cohort.json").exists():
         pytest.skip("optional native taxonomy cache not available")
 
@@ -143,7 +142,10 @@ def test_offline_native_replay(dossier, monkeypatch):
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
-    assert audit.build(ROOT, record_resolver=checkpoint_path) == dossier
+    monkeypatch.chdir(ROOT)
+    monkeypatch.setattr(sys, "argv", [audit.__name__, "--check", "--historical-records"])
+    audit.main()
+    assert json.loads(capsys.readouterr().out) == dossier["summary"]
 
 
 @pytest.mark.parametrize("change", ["none", "plan_url", "attempt_url", "receipt_url", "redirects",

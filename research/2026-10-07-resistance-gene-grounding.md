@@ -10518,6 +10518,34 @@ of any whole-record primary review.
 All records remain in scope. NCBI/#1040 remain deferred, no source was adopted,
 and no GitHub state was changed.
 
+## Species Checkpoint Publication Review (2026-10-14)
+
+Publication PR [#1109](https://github.com/CultureBotAI/AntibioticMech/pull/1109)
+packages the preceding species curation and reference/access checkpoints. A
+separate same-agent adversarial pass found that four new audit command-line
+entry points could not replay their pre-bictegravir censuses, despite tests that
+passed a historical resolver directly. Review issue
+[#1110](https://github.com/CultureBotAI/AntibioticMech/issues/1110) records the
+reproduced failures and the regression fix.
+
+For `audit_card_reference_lineages.py`, `audit_card_species_nodes.py`,
+`audit_fr171456_locus.py` and `audit_thevissen_2007_access.py`, replay the saved
+dossier using `--check --historical-records` when the native cache is available.
+The option selects only registered identifier/path/hash-bound fixtures. The
+default still checks live record bytes and rejects census drift. Cache-independent
+tests cover both CLI modes, and optional native replay tests now exercise the
+actual entry points with network access disabled.
+
+The [publication verification receipt](2026-10-14-species-publication-verification.json)
+records the regression checks and confirms that the fix leaves biological
+records, generated pages, source inputs and historical dossiers unchanged.
+Final locked-environment PR and merge-queue CI results are recorded on the PR;
+the earlier local QC receipt retains its original runtime limitation. The
+publication review does not complete the corpus-wide investigation, resolve
+existing scientific holds, or constitute independent scientific signoff.
+NCBI/#1040 and reuse-terms work remain deferred. No scientific endpoint was
+contacted during this publication pass.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including

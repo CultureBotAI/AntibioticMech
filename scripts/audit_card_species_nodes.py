@@ -12,6 +12,7 @@ from pathlib import Path
 import audit_card_definition_citations as definitions
 import audit_card_reference_lineages as lineages
 import audit_topoisomerase_references as reference
+from resistance_checkpoint_records import checkpoint_path
 
 CACHE = Path("reports/resistance-grounding-2026-10-14-card-species-nodes")
 OUTPUT = Path("research/2026-10-14-card-species-nodes.json")
@@ -170,8 +171,11 @@ def main():
     parser.add_argument("--cache", type=Path, default=CACHE)
     parser.add_argument("--output", type=Path, default=OUTPUT)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--historical-records", action="store_true",
+                        help="Replay registered identifier/path/hash fixtures, not the live census.")
     args = parser.parse_args()
-    result = build(Path.cwd(), args.cache)
+    result = build(Path.cwd(), args.cache,
+                   record_resolver=checkpoint_path if args.historical_records else None)
     if args.check:
         if result != json.loads(args.output.read_bytes()):
             raise SystemExit("standalone species dossier does not reproduce")
