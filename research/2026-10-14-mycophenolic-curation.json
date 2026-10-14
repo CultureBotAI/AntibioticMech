@@ -1,0 +1,60 @@
+{
+  "before": {
+    "path": "data/antibiotics/antiviral/mycophenolic-acid.yaml",
+    "sha256": "36014dc9ddbd32288e27e051c676ad82bcb6ba8bfb24c793800fcc673fdabe4c"
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-14-mycophenolic/subject-followup/canary.yaml",
+    "sha256": "b9d227f56f71ea6e3370c738e6e345fdc832c7dcc768fc793e41572f012d5680"
+  },
+  "claims": [
+    {
+      "assay": "Comparative plate-growth assay",
+      "evidence": [
+        {
+          "notes": "Kaplan et al. 2012: Figure 2A/D, Results and Discussion, Tables S1/S2 and Text S1. Native figures and rendered supplements inspected. Viability in Table S1 is not an independent drug-resistance endpoint; growth and purified-enzyme contexts remain distinct.",
+          "reference": "DOI:10.1371/journal.pgen.1002627"
+        },
+        {
+          "notes": "Reference-only RPO21/RPB1, YDL140C, SGD:S000002299; UniProt release 2026_03, entry version 255, sequence version 2, retrieved 2026-10-14. S288c reference taxon 559292 belongs to species 4932 in cached UniProt Taxonomy. These are not tested derivative or mutant-specific accessions.",
+          "reference": "UniProtKB:P04050"
+        }
+      ],
+      "gene_families": [
+        "RPB1"
+      ],
+      "label": "RPB1-associated laboratory mycophenolic-acid resistance (qualified association)",
+      "mechanism_type": "UNKNOWN",
+      "note": "Selected RPB1 laboratory comparisons are labeled resistant in Figure 2D; Figure 2A provides matched growth controls. Other RPB1 comparisons are sensitive or have baseline growth defects. This is not a shared effect of all RPB1 alleles, a clinical resistance category, an MIC, or a species-wide phenotype. Text S1 identifies S288C-derived backgrounds and CKY283 as the genetic-comparison parent, not as an identifier for every tested derivative. RPB1 is the paper's name for RPO21. UniProtKB:P04050 and NCBITaxon:559292 identify S288c reference context only; no exact experimental protein, allele, strain TaxID or genome is assigned. The accompanying IMD transcription results do not make Rpb1 a direct drug target; the Figure 5A probe is not uniquely IMD2-specific.",
+      "phenotype_label": "Source-defined laboratory resistance to mycophenolic acid",
+      "taxon_id": "NCBITaxon:4932",
+      "taxon_label": "Saccharomyces cerevisiae"
+    }
+  ],
+  "context": {
+    "path": "research/2026-10-14-mycophenolic-subjects.json",
+    "sha256": "8efa2c17bf8b9c3f0337770bafda1c0e4c1060b45ba9d812c1083a3099d42be9"
+  },
+  "curation_event": {
+    "action": "CURATED_RESISTANCE_EVIDENCE",
+    "changes": "Added one primary-backed qualified RPB1 laboratory resistance association for named mycophenolic acid. Retained mixed growth responses and IMD probe-specificity limits. Kept the UniProt protein, locus and S288c strain taxonomy reference-only, with no exact experimental allele or genome assigned. No numeric AST, exact variant, construct or protocol was added. Whole-record review remains open.",
+    "curator": "codex",
+    "llm_assisted": true,
+    "timestamp": "2026-10-14T04:21:33Z"
+  },
+  "experimental_proteins_or_genomes_assigned": 0,
+  "fixture": {
+    "path": "tests/fixtures/mycophenolic-acid-before-2026-10-14.yaml",
+    "sha256": "36014dc9ddbd32288e27e051c676ad82bcb6ba8bfb24c793800fcc673fdabe4c"
+  },
+  "fresh_seed_merge_equal": true,
+  "history_events_added": 1,
+  "new_resistance_claims": 1,
+  "numeric_ast_added": 0,
+  "record": {
+    "path": "data/antibiotics/antiviral/mycophenolic-acid.yaml",
+    "sha256": "b9d227f56f71ea6e3370c738e6e345fdc832c7dcc768fc793e41572f012d5680"
+  },
+  "records_changed": 1,
+  "whole_record_review_complete": false
+}

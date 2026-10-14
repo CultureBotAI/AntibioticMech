@@ -8,6 +8,10 @@ FLUCYTOSINE_SHA256 = "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3
 CLOTRIMAZOLE_PATH = "data/antibiotics/antifungal/clotrimazole.yaml"
 CLOTRIMAZOLE_FIXTURE = "tests/fixtures/clotrimazole-before-2026-10-13.yaml"
 HISTORICAL_RECORDS = {
+    "36014dc9ddbd32288e27e051c676ad82bcb6ba8bfb24c793800fcc673fdabe4c": (
+        "CHEBI:168396", "data/antibiotics/antiviral/mycophenolic-acid.yaml",
+        "tests/fixtures/mycophenolic-acid-before-2026-10-14.yaml",
+    ),
     FLUCYTOSINE_SHA256: ("CHEBI:5100", FLUCYTOSINE_PATH, FLUCYTOSINE_FIXTURE),
     "a20523175943481166351a5178707948ef52441c2a907cf1a286695f66ad95a6": (
         "CHEBI:3764", CLOTRIMAZOLE_PATH, CLOTRIMAZOLE_FIXTURE,

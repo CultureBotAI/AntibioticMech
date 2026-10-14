@@ -26,7 +26,7 @@ prose below are the reasoning, the queue is the list.
   `research/2026-10-12-tetracenomycin-context.json` and #1085 for the source-owned
   repair hold.
 - **Curate the next mechanism graphs.** 16 of 2,939 records carry a
-  `causal_graph`; that number is the point of the repository. Start with the 420
+  `causal_graph`; that number is the point of the repository. Start with the 421
   records that already have target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.
   No data source will close this column: a mechanism graph is authored from
@@ -58,7 +58,7 @@ prose below are the reasoning, the queue is the list.
 ## Next
 
 - **Find a resistance source for the antiviral records.** CARD covers bacterial
-  and (increasingly) fungal resistance; it has nothing for viruses, so 460
+  and (increasingly) fungal resistance; it has nothing for viruses, so 459
   antiviral records still carry an empty `resistance_mechanisms`. The obvious
   candidates are the Stanford HIV Drug Resistance Database for HIV, and the
   literature for HBV/HSV/influenza —
