@@ -10,9 +10,9 @@ from urllib.parse import unquote, urlsplit
 from seed_from_sources import is_card_sourced, is_phibase_sourced_resistance
 from summarize_resistance_progress import current_records, digest, read_tsv
 
-CENSUS = Path("research/2026-10-14-formaldehyde-resistance-grounding.tsv")
-CENSUS_SHA = "0cca75691edd1ad52b0127e6d57b0ae5b5bd07c892005b238df9768b7037685a"
-OUTPUT = Path("research/2026-10-14-formaldehyde-curator-resistance-fields.json")
+CENSUS = Path("research/2026-10-14-platen-archive-resistance-grounding.tsv")
+CENSUS_SHA = "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+OUTPUT = Path("research/2026-10-14-platen-archive-curator-resistance-fields.json")
 SCOPE = "FIELD_AND_CITATION_INDEX_NOT_PRIMARY_REVIEW_OR_ALLELE_GROUNDING"
 PATTERNS = {
     "UniProtKB": (r"(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})"

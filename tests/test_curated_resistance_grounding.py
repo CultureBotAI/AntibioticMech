@@ -359,13 +359,20 @@ def object_sha(value):
 
 def aggregate_context_review(name):
     snapshot = json.loads((ROOT / f"research/2026-10-08-{name}-grounding.json").read_text())
-    return load_record(ROOT / snapshot["path"]), snapshot
+    path = checkpoint_path(ROOT, {
+        "identifier": snapshot["identifier"], "path": snapshot["path"],
+        "sha256": snapshot["after_record_sha256"],
+    })
+    return load_record(path), snapshot
 
 
 @pytest.mark.parametrize("name", ["pr39", "daclatasvir"])
 def test_aggregate_grounding_preserves_unrelated_fields_and_history(name):
     doc, snapshot = aggregate_context_review(name)
-    path = ROOT / snapshot["path"]
+    path = checkpoint_path(ROOT, {
+        "identifier": snapshot["identifier"], "path": snapshot["path"],
+        "sha256": snapshot["after_record_sha256"],
+    })
     assert hashlib.sha256(path.read_bytes()).hexdigest() == snapshot["after_record_sha256"]
     unchanged = {k: v for k, v in doc.items() if k not in {"resistance_mechanisms", "curation_history"}}
     assert object_sha(unchanged) == snapshot["unchanged_fields_sha256"]

@@ -1,0 +1,129 @@
+{
+  "additional_reference_relative_to_prior_checkpoint": "UniProtKB:C5NU54",
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-stth-followup/cohort.json",
+    "sha256": "8543ab6ccd2fd4e02282e0d932e6bacc7e0259ba50e15fa9d82ed4c2944ae79d"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_stth_followup.py",
+      "tests/test_stth_followup.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "earlier_focused_run_before_test_only_lint_cleanup": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 46,
+    "path": "reports/resistance-grounding-2026-10-14-stth-followup/focused-tests.xml",
+    "sha256": "7959eeda99e2feaefca84c56da26ea521ad4e442cde5bc76c568abc69ab0bdcd",
+    "skipped": 0,
+    "tests": 46
+  },
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "files": [
+    {
+      "path": "scripts/audit_stth_followup.py",
+      "sha256": "a52f8b50fee17f9188ad65e078454b52def355348920abe5a48a4bab73f0a1a3"
+    },
+    {
+      "path": "tests/test_stth_followup.py",
+      "sha256": "51f2bc21b7f4143d950334b11e631b2cdbd035e0aa854f38f98fd43ac41446da"
+    },
+    {
+      "path": "research/2026-10-14-stth-followup-context.json",
+      "sha256": "ec662c7966ea17e4b41ab8ca7c58ae332ac5a61586e9d151bdd2c2ef18ab4f6e"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "5a7323ed20dd5dfe2d8f1170c5cbe780e2c1a3c5a448ccccc4bf1c971d461ff0"
+    }
+  ],
+  "focal_reference_candidates": 2,
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "No biological or generated artifacts changed in this continuation. Focused and dependency regression checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "held_2006_and_2017_studies_not_retried": true,
+  "http_status_counts": {
+    "200": 1,
+    "302": 1,
+    "403": 1
+  },
+  "issue_1040": "DEFERRED",
+  "main_report_changes_are_exactly_the_new_section": true,
+  "manually_inspected_redirect_hops": 1,
+  "native_taxonomy_responses_reused": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_experimental_identifiers": 0,
+  "new_resistance_assertions": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_replay": "PASS",
+  "primary_access_disposition": "ACCESS_HOLD",
+  "prior_uncommitted_work_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-stth-followup/protected-before.json",
+    "sha256": "ebc06cd4f07917df39717a92c9dd40d8fc0e35441c3404bdd543183de2a1427f"
+  },
+  "protected_files_checked": 7584,
+  "publication_entries_checked": 9,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scientific_http_attempts": 3,
+  "scope": "READ_ONLY_DISTINCT_PUBLICATION_REFERENCE_CHECKPOINT",
+  "shared_Q1MW86_reference_projection_preserved": true,
+  "shared_citation_entries_not_promoted": 7,
+  "source_adoptions": 0,
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 46,
+      "path": "reports/resistance-grounding-2026-10-14-stth-followup/focused-final-tests.xml",
+      "sha256": "0ce34c18606c726e21a3fced3d2f6423a99f751b6226f8316a04ed81c38ea88f",
+      "skipped": 0,
+      "tests": 46
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 458,
+      "path": "reports/resistance-grounding-2026-10-14-stth-followup/expanded-tests.xml",
+      "sha256": "ffa4ba4dd09e07cf299e09402825f959184d843dc74f5f47f89994ece768b0be",
+      "skipped": 0,
+      "tests": 458
+    }
+  ],
+  "whole_record_primary_signoffs": 0
+}

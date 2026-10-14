@@ -3,6 +3,7 @@
 import csv
 import hashlib
 import json
+import sys
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
@@ -12,6 +13,9 @@ from antibioticmech.activity_collections import load_record
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from resistance_checkpoint_records import checkpoint_path  # noqa: E402
+
 PREFIX = ROOT / "research/2026-10-12-kasugamycin"
 
 
@@ -25,8 +29,8 @@ def curation():
     return json.loads(Path(str(PREFIX) + "-curation.json").read_bytes())
 
 
-def test_current_record_retains_curated_and_source_evidence(curation, tmp_path):
-    path = ROOT / curation["record"]["path"]
+def test_historical_record_retains_curated_and_source_evidence(curation, tmp_path):
+    path = checkpoint_path(ROOT, {**curation["record"], "identifier": "CHEBI:81419"})
     record = load_record(path)
     assert record["identifier"] == "CHEBI:81419"
     assert record["chemical_structure"]["standard_inchi_key"] == "PVTHJAPFENJVNC-MHRBZPPQSA-N"

@@ -170,8 +170,8 @@ def test_full_corpus_replay_is_offline_and_matches_checkpoint(monkeypatch):
     assert summary["gene_field_states"] == {
         "BOTH_FIELDS": 20, "GENE_FAMILIES_ONLY": 87, "GENE_ID_ONLY": 24, "NEITHER_FIELD": 2,
     }
-    assert summary["claims_citing_each_namespace"]["UniProtKB"] == 49
-    assert summary["distinct_cited_uniprot_accessions"] == 43
+    assert summary["claims_citing_each_namespace"]["UniProtKB"] == 56
+    assert summary["distinct_cited_uniprot_accessions"] == 48
     assert summary["claims_with_taxon_id_slot"] == 123
     assert summary["claims_with_taxon_label_but_no_taxon_id"] == 0
     assert summary["claims_with_unclassified_citations"] == 18

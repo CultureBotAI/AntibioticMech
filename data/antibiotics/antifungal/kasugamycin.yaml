@@ -170,6 +170,14 @@ resistance_mechanisms:
   - reference: DOI:10.1371/journal.pgen.1006902
     notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
       unchanged.
+  - reference: https://www.uniprot.org/uniprotkb/P23843/entry
+    notes: Reference-only UniProtKB:P23843 (oppA); UniProtKB reviewed (Swiss-Prot),
+      entry version 171, sequence version 2, release 2026_03; retrieved 2026-10-12.
+      Reference organism NCBITaxon:83333, not an experimental subject assignment.
+      Not an exact tested allele, altered protein, strain or genome identifier, and
+      not independent phenotype or mechanism evidence. A component reference does
+      not assign the effect of a combined genotype to that component. UniProt Consortium,
+      CC BY 4.0.
   gene_families:
   - oppA
 - mechanism_type: REDUCED_PERMEABILITY
@@ -192,6 +200,14 @@ resistance_mechanisms:
   - reference: DOI:10.1371/journal.pgen.1006902
     notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
       unchanged.
+  - reference: https://www.uniprot.org/uniprotkb/P0AFH2/entry
+    notes: Reference-only UniProtKB:P0AFH2 (oppB); UniProtKB reviewed (Swiss-Prot),
+      entry version 126, sequence version 1, release 2026_03; retrieved 2026-10-12.
+      Reference organism NCBITaxon:83333, not an experimental subject assignment.
+      Not an exact tested allele, altered protein, strain or genome identifier, and
+      not independent phenotype or mechanism evidence. A component reference does
+      not assign the effect of a combined genotype to that component. UniProt Consortium,
+      CC BY 4.0.
   gene_families:
   - oppB
 - mechanism_type: REDUCED_PERMEABILITY
@@ -237,6 +253,22 @@ resistance_mechanisms:
   - reference: DOI:10.1371/journal.pgen.1006902
     notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
       unchanged.
+  - reference: https://www.uniprot.org/uniprotkb/P23843/entry
+    notes: Reference-only UniProtKB:P23843 (oppA); UniProtKB reviewed (Swiss-Prot),
+      entry version 171, sequence version 2, release 2026_03; retrieved 2026-10-12.
+      Reference organism NCBITaxon:83333, not an experimental subject assignment.
+      Not an exact tested allele, altered protein, strain or genome identifier, and
+      not independent phenotype or mechanism evidence. A component reference does
+      not assign the effect of a combined genotype to that component. UniProt Consortium,
+      CC BY 4.0.
+  - reference: https://www.uniprot.org/uniprotkb/P23847/entry
+    notes: Reference-only UniProtKB:P23847 (dppA); UniProtKB reviewed (Swiss-Prot),
+      entry version 195, sequence version 1, release 2026_03; retrieved 2026-10-12.
+      Reference organism NCBITaxon:83333, not an experimental subject assignment.
+      Not an exact tested allele, altered protein, strain or genome identifier, and
+      not independent phenotype or mechanism evidence. A component reference does
+      not assign the effect of a combined genotype to that component. UniProt Consortium,
+      CC BY 4.0.
   gene_families:
   - oppA
   - dppA
@@ -262,6 +294,22 @@ resistance_mechanisms:
   - reference: DOI:10.1371/journal.pgen.1006902
     notes: Correction reviewed. Corrected Figure 3 used; Table 2 and Table S2 remain
       unchanged.
+  - reference: https://www.uniprot.org/uniprotkb/P0AFH2/entry
+    notes: Reference-only UniProtKB:P0AFH2 (oppB); UniProtKB reviewed (Swiss-Prot),
+      entry version 126, sequence version 1, release 2026_03; retrieved 2026-10-12.
+      Reference organism NCBITaxon:83333, not an experimental subject assignment.
+      Not an exact tested allele, altered protein, strain or genome identifier, and
+      not independent phenotype or mechanism evidence. A component reference does
+      not assign the effect of a combined genotype to that component. UniProt Consortium,
+      CC BY 4.0.
+  - reference: https://www.uniprot.org/uniprotkb/P0AEF8/entry
+    notes: Reference-only UniProtKB:P0AEF8 (dppB); UniProtKB reviewed (Swiss-Prot),
+      entry version 136, sequence version 1, release 2026_03; retrieved 2026-10-12.
+      Reference organism NCBITaxon:83333, not an experimental subject assignment.
+      Not an exact tested allele, altered protein, strain or genome identifier, and
+      not independent phenotype or mechanism evidence. A component reference does
+      not assign the effect of a combined genotype to that component. UniProt Consortium,
+      CC BY 4.0.
   gene_families:
   - oppB
   - dppB
@@ -297,6 +345,16 @@ curation_history:
     scope, the measured comparator, all three CARD assertions and prior curation.
     Normalized ug/mL to mg/L without inferring clinical categories or assigning experimental
     proteins/genomes.
+  llm_assisted: true
+- timestamp: '2026-10-14T17:19:57Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_REFERENCE_CITATIONS
+  changes: Added qualified UniProt evidence citations for reference proteins already
+    verified in the research dossier. Preserved all biological assertions, experimental
+    identity fields, activities and existing evidence. Reference citations are not
+    tested alleles, altered proteins or independent resistance evidence; no strain
+    TaxID, genome, variant or quantitative endpoint added. Whole-record review remains
+    open.
   llm_assisted: true
 activity_spectrum:
 - taxon_id: NCBITaxon:562

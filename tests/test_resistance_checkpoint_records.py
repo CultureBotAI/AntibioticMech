@@ -70,3 +70,40 @@ def test_cli_historical_replay_is_explicit(tmp_path, monkeypatch, capsys, module
     assert calls == [checkpoint.checkpoint_path if historical else None]
     assert json.loads(capsys.readouterr().out) == expected["summary"]
     assert output.read_bytes() == before
+
+
+@pytest.mark.parametrize("checksum", [*checkpoint.CITATION_BASELINES, *checkpoint.ARCHIVE_BASELINES])
+@pytest.mark.parametrize("change", ["none", "identifier", "path", "receipt", "live", "archive"])
+def test_citation_delta_restores_only_pinned_historical_bytes(tmp_path, checksum, change):
+    archive = checksum in checkpoint.ARCHIVE_BASELINES
+    baselines = checkpoint.ARCHIVE_BASELINES if archive else checkpoint.CITATION_BASELINES
+    receipt_pin = checkpoint.ARCHIVE_RECEIPT if archive else checkpoint.CITATION_RECEIPT
+    identifier, path = baselines[checksum]
+    item = {"identifier": identifier, "path": path, "sha256": checksum}
+    receipt = tmp_path / receipt_pin["path"]
+    receipt.parent.mkdir(parents=True)
+    receipt.write_bytes((ROOT / receipt_pin["path"]).read_bytes())
+    live = tmp_path / path
+    live.parent.mkdir(parents=True)
+    live.write_bytes((ROOT / path).read_bytes())
+    if change == "identifier":
+        item["identifier"] = "OTHER"
+    elif change == "path":
+        item["path"] = "data/antibiotics/other.yaml"
+    elif change == "receipt":
+        receipt.write_text("{}")
+    elif change == "live":
+        live.write_text("Later legitimate curation\n")
+    elif change == "archive":
+        archive = checkpoint.checkpoint_path(tmp_path, item)
+        archive.write_text("Corrupt historical artifact\n")
+    if change != "none":
+        with pytest.raises((ValueError, FileNotFoundError, TypeError)):
+            checkpoint.checkpoint_path(tmp_path, item)
+    else:
+        original_live = live.read_bytes()
+        archive = checkpoint.checkpoint_path(tmp_path, item)
+        assert hashlib.sha256(archive.read_bytes()).hexdigest() == checksum
+        assert live.read_bytes() == original_live
+        live.write_text("Later legitimate curation\n")
+        assert checkpoint.checkpoint_path(tmp_path, item) == archive

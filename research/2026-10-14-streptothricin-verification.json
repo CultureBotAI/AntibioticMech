@@ -1,0 +1,137 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "chemical_pdf_pages_visually_reviewed": 2,
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-streptothricin/cohort.json",
+    "sha256": "1719a147c402eab31a76890110ab7c2dd345bc96780cad796d65f1f85ed5a0c1"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_streptothricin_context.py",
+      "tests/test_streptothricin_context.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "files": [
+    {
+      "path": "scripts/audit_streptothricin_context.py",
+      "sha256": "faf9009dbfba4e0af055bcb034d8ea39384171fae8e9d6c4010fb444673f0ed4"
+    },
+    {
+      "path": "tests/test_streptothricin_context.py",
+      "sha256": "506e33dc91095a274621a69f46aefa95b3505bb54d43fa7b6494712a19e695dd"
+    },
+    {
+      "path": "research/2026-10-14-streptothricin-context.json",
+      "sha256": "c8364b2a35dd4c7781c551a28177bb26e46bd9f6f2d48683aa352a0bd77f9a68"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "6397c996f355be5cf1a6dd354a329c51aa00f86cda468c44f5f33def1eaf6b02"
+    }
+  ],
+  "first_draft_test_run": {
+    "disposition": "One replay failure caught a shortened explanatory sentence. Restored code output to the original frozen dossier wording; no evidence checks or assertions were relaxed.",
+    "receipt": {
+      "errors": 0,
+      "failures": 1,
+      "passed": 36,
+      "path": "reports/resistance-grounding-2026-10-14-streptothricin/focused-tests.xml",
+      "sha256": "dfb8af1b1047481daf4c91d26bd2bdf3beea6461991b2014385ea49f17391452",
+      "skipped": 0,
+      "tests": 37
+    }
+  },
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "No biological or generated artifacts changed in this continuation. Focused and dependency regression checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "http_status_counts": {
+    "200": 4,
+    "302": 2,
+    "403": 1
+  },
+  "issue_1040": "DEFERRED",
+  "main_report_changes_are_exactly_the_new_section": true,
+  "manual_publisher_redirect_hops": 2,
+  "native_taxonomy_responses_reused": 4,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_experimental_identifiers": 0,
+  "new_reference_candidates": 1,
+  "new_resistance_assertions": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_replay": "PASS",
+  "prior_uncommitted_work_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-streptothricin/protected-before.json",
+    "sha256": "7da31b35666ca082f0906a9e0d4c123cae89e6550aa02d8a1d3ce68092605471"
+  },
+  "protected_files_checked": 7576,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scientific_http_attempts": 7,
+  "scope": "READ_ONLY_SCIENTIFIC_CONTEXT_CHECKPOINT",
+  "screenshots": [
+    {
+      "path": "reports/resistance-grounding-2026-10-14-streptothricin/chemical-f-page-1.png",
+      "sha256": "047b8180e004d293b7b5e204582bda98031f53b5eb7d46b0355fd49ea74ac38e"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-streptothricin/chemical-d-page-1.png",
+      "sha256": "6f06b10bcb3b65926a3b81c433205af9c1b7a9c2ad20a14df9bd37ebd8e26b0c"
+    }
+  ],
+  "source_adoptions": 0,
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 40,
+      "path": "reports/resistance-grounding-2026-10-14-streptothricin/focused-fixed-tests.xml",
+      "sha256": "da427c88fcfb5c56b7454aa88e47ab41d30065cc1a934dcde967da214717fb2e",
+      "skipped": 0,
+      "tests": 40
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 357,
+      "path": "reports/resistance-grounding-2026-10-14-streptothricin/expanded-tests.xml",
+      "sha256": "3bc3e51bac354a77941292bfe40598460cc6ca9c2c2e0c42e403dfc28be0057b",
+      "skipped": 0,
+      "tests": 357
+    }
+  ],
+  "whole_record_primary_signoffs": 0
+}

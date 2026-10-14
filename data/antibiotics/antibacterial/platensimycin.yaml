@@ -129,6 +129,17 @@ curation_history:
     limits. Assigned no experimental allele, strain TaxID, sample or genome. No new
     resistance claim or numeric AST added; whole-record review remains open.
   llm_assisted: true
+- timestamp: '2026-10-14T20:50:04Z'
+  curator: codex
+  action: GROUNDED_DONOR_ARCHIVE_REFERENCE
+  changes: Appended reference-only donor FabF archive crosswalk and three source citations.
+    ENA KF543053.1 / AHA90851.1 links through UniParc UPI0003C98D16 to historical
+    inactive UniProtKB V5NR11; no active current UniProtKB mapping established. Preserved
+    tested-host identity, all phenotypes and mechanisms, original evidence, PtmP3
+    claims and source-owned slices. No protein slot, experimental allele, genome,
+    strain TaxID, quantitative endpoint or new resistance claim assigned. Whole-record
+    primary review remains open.
+  llm_assisted: true
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_REPLACEMENT
   label: ptmP3-associated reported resistance to platensimycin in a laboratory Streptomyces
@@ -206,7 +217,18 @@ resistance_mechanisms:
     or exact identity validation of the tested derivative. CP004370.1 and its associated
     sample and study remain background references only; no experimental genome, sample,
     strain TaxID or protein allele is assigned. Donor references and the original
-    phenotype and mechanism limitations remain unchanged.'
+    phenotype and mechanism limitations remain unchanged. Donor-archive update (2026-10-14):
+    the accepted manuscript''s accession statement links MA7327 fabF to KF543053.
+    Sequence-free ENA metadata explicitly links EMBL:KF543053.1 to EMBL:AHA90851.1;
+    the parent record supplies Streptomyces platensis MA7327 and species NCBITaxon:58346.
+    UniParc:UPI0003C98D16 links that EMBL protein to historical UniProtKB:V5NR11 (UniProtKB/TrEMBL
+    cross-reference version 1, inactive in UniProt release 2026_03). This updates
+    the preceding unresolved reference-search statement, not the experimental identity.
+    No active current UniProtKB mapping is established. The donor reference is not
+    the tested host Streptomyces albidoflavus SB12013, an exact tested allele, or
+    a genome; no protein accession, strain TaxID or genome is assigned. The original
+    phenotype, mechanism and primary-review limitations remain unchanged. Archive
+    membership is not independent resistance evidence.'
   evidence:
   - reference: PMID:24560608
     notes: Accepted author manuscript, Results pages 4-5, Discussion pages 6-7, Figure
@@ -227,4 +249,23 @@ resistance_mechanisms:
     notes: 'UniProt release 2026_03, retrieved 2026-10-14: the unique exact-name result
       for Streptomyces albidoflavus is active species NCBITaxon:1886. The species-group
       and Streptomyces limosus results are not substitutes; no strain node is selected.'
+  - reference: https://www.ebi.ac.uk/ena/portal/api/search?result=coding&query=parent_accession%3D%22KF543053%22&fields=accession%2Cparent_accession%2Cprotein_id%2Cgene%2Cproduct%2Cscientific_name%2Ctax_id%2Cstrain%2Csequence_version%2Cfirst_public%2Clast_updated&format=json&limit=0
+    notes: 'EMBL-EBI ENA coding metadata, retrieved 2026-10-14: the explicit parent
+      KF543053 has protein AHA90851.1, product FabF, strain MA7327. The coding row''s
+      gene, scientific_name and tax_id fields are blank; gene identity follows the
+      primary accession statement, not a filled-in coding annotation. Donor reference
+      only, not tested-allele identity.'
+  - reference: https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=%28accession%3D%22KF543053%22+OR+accession%3D%22KF543054%22%29&fields=accession%2Csequence_version%2Cdescription%2Ctax_id%2Cscientific_name%2Cstrain%2Cfirst_public%2Clast_updated&format=json&limit=0
+    notes: 'EMBL-EBI ENA parent metadata, retrieved 2026-10-14: the KF543053 row (sequence
+      version 1) names Streptomyces platensis MA7327, TaxID 58346; last updated 2014-05-15.
+      Joined by the coding row''s explicit parent_accession, not name similarity.
+      KF543054 is the separate FabH comparison, not evidence for a positive FabF claim.
+      A gene archive is not a whole genome or a strain TaxID.'
+  - reference: https://rest.uniprot.org/uniparc/UPI0003C98D16/databases?format=json&size=100
+    notes: UniProt Consortium, CC BY 4.0; release 2026_03, retrieved 2026-10-14. UniParc:UPI0003C98D16
+      has explicit EMBL AHA90851 version 1 (active) and UniProtKB/TrEMBL V5NR11 version
+      1 (inactive) cross-references, both with species NCBITaxon:58346. The historical
+      UniProtKB row's lastUpdated 2026-01-28 is not asserted to be its inactivation
+      date. This is a donor archive crosswalk, not an active UniProtKB entry, experimental
+      allele assignment, or independent phenotype evidence.
   taxon_id: NCBITaxon:1886

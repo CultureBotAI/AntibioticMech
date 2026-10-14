@@ -1,0 +1,349 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "release": "2026_03",
+    "source": "UniProt Consortium"
+  },
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-stth-followup/cohort.json",
+    "sha256": "8543ab6ccd2fd4e02282e0d932e6bacc7e0259ba50e15fa9d82ed4c2944ae79d"
+  },
+  "corpus_records_hash_checked_at_preflight": 2939,
+  "curation_decision": "NO_NEW_RESISTANCE_ASSERTION_OR_EXPERIMENTAL_IDENTIFIER",
+  "date": "2026-10-14",
+  "limits": {
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "experimental_allele_assignments": 0,
+    "experimental_genome_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "held_2006_and_2017_primary_studies_not_retried": true,
+    "issue_1040": "DEFERRED",
+    "manually_inspected_redirect_hops": 1,
+    "native_taxonomy_responses_reused": 1,
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_AST_variants_sequences_constructs_or_protocols_exported": false,
+    "retries": 0,
+    "reuse_terms_review_resumed": false,
+    "scientific_http_attempts": 3,
+    "source_adoptions": 0,
+    "whole_record_primary_review": "OPEN"
+  },
+  "primary_access": {
+    "disposition": "ACCESS_HOLD",
+    "distinct_study_not_alternate_copy_of_held_2006_paper": true,
+    "doi": "DOI:10.1271/bbb.90499",
+    "primary_results_reviewed": false,
+    "reference": "PMID:19897889",
+    "retry_or_alternate_route_attempted": false,
+    "terminal_status": 403
+  },
+  "prior_reference_checkpoint": {
+    "path": "research/2026-10-14-stth-reference-context.json",
+    "sha256": "28d1b11029d17fe2f78fb45e3ab2f85c52b0edf36b5f24cfda1a7bb95e0bef52"
+  },
+  "records": [
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:60821",
+      "label": "streptothricin F",
+      "path": "data/antibiotics/antibacterial/streptothricin-f.yaml",
+      "sha256": "9650e764d766485ce118b670e4d99cc29580e0af9cc892f1b89be4b0ce1a6c1e",
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-streptothricin/CHEBI-60821-before.yaml",
+        "sha256": "9650e764d766485ce118b670e4d99cc29580e0af9cc892f1b89be4b0ce1a6c1e"
+      },
+      "standard_inchi_key": "NRAUADCLPJTGSF-VLSXYIQESA-N"
+    },
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:60828",
+      "label": "streptothricin D",
+      "path": "data/antibiotics/unspecified/streptothricin-d.yaml",
+      "sha256": "04e6dd9619a0aeab83c97ae6350f5764615f5b6d0e88dcc1be8ee5a7fb6b2ed5",
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-streptothricin/CHEBI-60828-before.yaml",
+        "sha256": "04e6dd9619a0aeab83c97ae6350f5764615f5b6d0e88dcc1be8ee5a7fb6b2ed5"
+      },
+      "standard_inchi_key": "WUJTXMVGXDQPNN-OTQKCRDJSA-N"
+    },
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:60822",
+      "label": "streptothricin F(3+)",
+      "path": "data/antibiotics/unspecified/streptothricin-f-3.yaml",
+      "sha256": "5a65c0bd4deea7e305916e4b2e1fea19b940f8f953beec316f217c1a9045f68a",
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-streptothricin/CHEBI-60822-before.yaml",
+        "sha256": "5a65c0bd4deea7e305916e4b2e1fea19b940f8f953beec316f217c1a9045f68a"
+      },
+      "standard_inchi_key": "NRAUADCLPJTGSF-VLSXYIQESA-Q"
+    }
+  ],
+  "reference_comparison": {
+    "additional_reference_relative_to_prior_checkpoint": "UniProtKB:C5NU54",
+    "chemical_scope_holds_preserved": true,
+    "experimental_subjects_equated": false,
+    "retained_prior_reference": "UniProtKB:Q1MW86",
+    "shared_reference_projection_identical": true,
+    "shared_species_taxon_id": "NCBITaxon:1971"
+  },
+  "reference_context": {
+    "entries_checked": 9,
+    "name_resolution": {
+      "active": true,
+      "experimental_strain_or_genome_resolved": false,
+      "match_basis": "EXACT_NATIVE_TAXONOMY_SYNONYM_NOT_PROTEIN_COMMON_NAME_ALONE",
+      "rank": "species",
+      "reference_name": "Streptomyces albulus",
+      "scientific_name": "Streptomyces noursei",
+      "taxon_id": "NCBITaxon:1971"
+    },
+    "other_citation_entries": [
+      {
+        "accession": "UniProtKB:C5NU48",
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 38,
+        "reference_taxon_id": "NCBITaxon:1971",
+        "resistance_absence_inferred": false,
+        "role": "SHARED_CITATION_NOT_SELECTED_AS_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:C5NU49",
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 35,
+        "reference_taxon_id": "NCBITaxon:1971",
+        "resistance_absence_inferred": false,
+        "role": "SHARED_CITATION_NOT_SELECTED_AS_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:C5NU50",
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 46,
+        "reference_taxon_id": "NCBITaxon:1971",
+        "resistance_absence_inferred": false,
+        "role": "SHARED_CITATION_NOT_SELECTED_AS_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:C5NU51",
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 51,
+        "reference_taxon_id": "NCBITaxon:1971",
+        "resistance_absence_inferred": false,
+        "role": "SHARED_CITATION_NOT_SELECTED_AS_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:C5NU52",
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 15,
+        "reference_taxon_id": "NCBITaxon:1971",
+        "resistance_absence_inferred": false,
+        "role": "SHARED_CITATION_NOT_SELECTED_AS_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:C5NU53",
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 19,
+        "reference_taxon_id": "NCBITaxon:1971",
+        "resistance_absence_inferred": false,
+        "role": "SHARED_CITATION_NOT_SELECTED_AS_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      },
+      {
+        "accession": "UniProtKB:C5NU55",
+        "entry_type": "UniProtKB unreviewed (TrEMBL)",
+        "entry_version": 53,
+        "reference_taxon_id": "NCBITaxon:1971",
+        "resistance_absence_inferred": false,
+        "role": "SHARED_CITATION_NOT_SELECTED_AS_RESISTANCE_DETERMINANT",
+        "sequence_version": 1
+      }
+    ],
+    "protein_versions_equated_to_experimental_alleles": false,
+    "query_complete": true,
+    "reference_accessions_merged": false,
+    "release": "2026_03",
+    "same_symbol_or_species_establishes_same_locus_or_allele": false,
+    "selected_references": [
+      {
+        "bibliography": [
+          {
+            "identifiers": [
+              {
+                "database": "DOI",
+                "id": "10.1271/bbb.90499"
+              },
+              {
+                "database": "PubMed",
+                "id": "19897889"
+              }
+            ],
+            "primary_results_reviewed": false,
+            "publication_date": "2009"
+          }
+        ],
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 41,
+        "exact_resistance_allele": false,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "sttH",
+          "sttH-sn"
+        ],
+        "ordered_locus_names": [],
+        "primary_results_reviewed": false,
+        "protein_accession": "UniProtKB:C5NU54",
+        "protein_name": "Streptothricin hydrolase",
+        "reference_organism_name": "Streptomyces noursei",
+        "reference_species_taxon_id": "NCBITaxon:1971",
+        "reference_taxon_id": "NCBITaxon:1971",
+        "reference_taxon_rank": "species",
+        "reference_taxon_scientific_name": "Streptomyces noursei",
+        "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+        "sequence_version": 1,
+        "species_lineage_verified": true
+      },
+      {
+        "bibliography": [
+          {
+            "identifiers": [
+              {
+                "database": "DOI",
+                "id": "10.1074/jbc.m602294200"
+              },
+              {
+                "database": "PubMed",
+                "id": "16641084"
+              }
+            ],
+            "primary_results_reviewed": false,
+            "publication_date": "2006"
+          },
+          {
+            "identifiers": [
+              {
+                "database": "DOI",
+                "id": "10.1271/bbb.90499"
+              },
+              {
+                "database": "PubMed",
+                "id": "19897889"
+              }
+            ],
+            "primary_results_reviewed": false,
+            "publication_date": "2009"
+          }
+        ],
+        "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+        "entry_version": 58,
+        "exact_resistance_allele": false,
+        "experimental_subject_assignment": false,
+        "gene_names": [
+          "sttH"
+        ],
+        "ordered_locus_names": [],
+        "primary_results_reviewed": false,
+        "protein_accession": "UniProtKB:Q1MW86",
+        "protein_name": "Streptothricin hydrolase",
+        "reference_organism_name": "Streptomyces noursei",
+        "reference_species_taxon_id": "NCBITaxon:1971",
+        "reference_taxon_id": "NCBITaxon:1971",
+        "reference_taxon_rank": "species",
+        "reference_taxon_scientific_name": "Streptomyces noursei",
+        "role": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE",
+        "sequence_version": 2,
+        "species_lineage_verified": true
+      }
+    ],
+    "shared_citation_is_causality": false
+  },
+  "reference_retrieved_at": "2026-10-14T18:57:47.101227+00:00",
+  "reference_taxonomy": {
+    "body": null,
+    "body_sha256": "a0020c43b7b0a58056454831e228c30fc6be9ad6b8e0600411236aada4afe6d0",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-07/request-d2ec1ce7dab69ed3fbc524691e7ce9a3f98d4d3905fd027242a7045d45766d08.json",
+      "sha256": "eba8a5b9199f2844ebe13a768cc140587e001cbc4164d8a590c878dbc1d8e6dd"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-08T03:05:39.789704+00:00",
+    "url": "https://rest.uniprot.org/taxonomy/1971"
+  },
+  "scope": "DISTINCT_PUBLICATION_REFERENCE_FOLLOWUP_NOT_EXPERIMENTAL_GROUNDING",
+  "sources": {
+    "primary-doi": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/primary-doi-attempt.json",
+        "sha256": "d3713ef2fb73bfdb546d785897a4129b8aafa095f9244a79937a1b28c6fed782"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/primary-doi-response.bin",
+        "sha256": "e69f5ef48513bac19be32dc8fd4b32a0d12a83cbfbdf25fbe12eeb09560f2d85"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/request-plan.json",
+        "sha256": "bc8193977631b52c116a7beee620889a084200ff0fcc0119a3ac87830f8d688a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/primary-doi-receipt.json",
+        "sha256": "d25d3709ebcc970fdd9136b500e87fe7c5d3e6185f45da85d0667204d51bfe53"
+      },
+      "retrieved_at": "2026-10-14T18:57:26.426045+00:00",
+      "status": 302,
+      "url": "https://doi.org/10.1271/bbb.90499"
+    },
+    "primary-publisher": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/primary-publisher-attempt.json",
+        "sha256": "cd38f809cfefae621286524f692f4b6a468b64b5225e2bc100a51b7c4d3236e4"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/primary-publisher-response.bin",
+        "sha256": "0a1d8752ea5df927a169e7de28688d95fd048dad65bae6f9112e9c057b332318"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/primary-publisher-plan.json",
+        "sha256": "20ddf56faf53957145a6505819876e0192667ee1553492f856b0a2f46363aaeb"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/primary-publisher-receipt.json",
+        "sha256": "23cdb9159e2d7c1cde908142b51be21839b68776572e76d2234c5dea1f2ad2bd"
+      },
+      "retrieved_at": "2026-10-14T18:57:39.016199+00:00",
+      "status": 403,
+      "url": "https://academic.oup.com/bbb/article/73/11/2494-2500/5947804"
+    },
+    "reference-2009": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/reference-2009-attempt.json",
+        "sha256": "56c3c0b3c393bd163bbee0c0e40ea39ebabaf36ab21cea4ae4699034467d2970"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/reference-2009-response.bin",
+        "sha256": "3becd64a784fca11f92efc08fb398ac7991d22e3e89a5e901734ae9703848820"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/request-plan.json",
+        "sha256": "bc8193977631b52c116a7beee620889a084200ff0fcc0119a3ac87830f8d688a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-stth-followup/reference-2009-receipt.json",
+        "sha256": "df911f875174a1cda6ba007f0d311dad46b4e404b3819cfb315f045172ff7adc"
+      },
+      "retrieved_at": "2026-10-14T18:57:47.101227+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A19897889&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

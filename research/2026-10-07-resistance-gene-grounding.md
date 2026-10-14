@@ -49,10 +49,10 @@ records**, including **133 curator-authored claims across 54 records**. There
 are still 2,605 records without resistance assertions or genotype rules. These
 are coverage counts, not completed primary reviews or independent experiments.
 
-The [combined progress ledger](2026-10-14-formaldehyde-resistance-progress.tsv) now places
+The [combined progress ledger](2026-10-14-platen-archive-resistance-progress.tsv) now places
 all 2,939 records on one current-hash index, with separate name-search, CARD
 reference-candidate, PHI-base identifier-review and HIVDB source-rule columns.
-Its [provenance and limitations](2026-10-14-formaldehyde-resistance-progress.json) distinguish
+Its [provenance and limitations](2026-10-14-platen-archive-resistance-progress.json) distinguish
 this stage summary from primary review. Individual paper dossiers and other
 curator/reference mappings remain in this report, not in that index.
 
@@ -10932,6 +10932,602 @@ this checkpoint. #1040 remains deferred. No sequences, exact variant
 specifications, constructs or protocols were exported. Broader formaldehyde
 literature, supplements, exact experimental identities and whole-record primary
 review remain open, as does the corpus-wide goal.
+
+## Tropodithietic Acid: Reference Search Scope (2026-10-14)
+
+The [reference-context dossier](2026-10-14-tropodithietic-context.json) covers
+`CHEBI:156455`, Standard InChIKey `BLFCMITWMARUSM-UHFFFAOYSA-N`.
+The complete collection-aware record was inspected and all **2,939 current
+record hashes** were checked against the formaldehyde census before research.
+The record has no resistance or activity assertion. That is a coverage gap,
+not evidence that resistant organisms or genes do not exist.
+
+The complete retained discovery union has **15 distinct citations** for this
+record. The adopted ChEBI row supplies ten citation leads, with one overlap:
+the combined cohort therefore contains **24 distinct citations**. Two primary
+requests were attempted, and the other 22 candidates remain unreviewed.
+Discovery titles and source citation membership are not primary-result review.
+
+| Primary source | Observed result | Disposition |
+| --- | --- | --- |
+| PMID:26802120, DOI:10.1073/pnas.1518034113 | The planned Europe PMC full-text request returned HTTP 500. | Technical hold; no primary Results inspected. |
+| PMID:21263047, DOI:10.1128/aac.01222-10 | The separate publisher request returned HTTP 403. | Access hold; no primary Results inspected. |
+
+Neither study was retried or requested through another route. The second study
+is a distinct retained citation, not a fallback copy of the first. Neither
+failure is evidence about biological resistance. Both holds remain in force.
+
+Three complete, dated UniProt **2026_03** queries returned empty results:
+`lit_pubmed:26802120`, `lit_pubmed:21263047`, and
+`protein_name:"tropodithietic"`. These mean no entries in those exact queries,
+not absence of a protein, gene, reference mapping or resistance mechanism.
+The citation queries inspect reference metadata and do not replace the held
+primary studies.
+
+The separate broad `"tropodithietic"` query reports **3,932 entries**. Only its
+first **500-entry page** was retrieved; the other 3,432 entries were not assessed.
+All 500 retrieved entries are unreviewed references bearing a genome-submission
+title that mentions the compound and its producer. None of their returned
+protein or gene names contains the compound term. This is a concrete warning
+against treating a free-text database hit as a resistance determinant. It does
+not establish the search engine's complete matching logic or characterize the
+unretrieved pages. No candidate was assigned as a resistance protein.
+
+The returned page's reference species is **Phaeobacter porticola**,
+`NCBITaxon:1844006`, verified as an active species through UniProt taxonomy.
+Its submission title says Phaeobacter portensis; that title is not accepted as
+an authoritative synonym or experimental-subject crosswalk. Separately, the
+record's existing ChEBI producer label **Phaeobacter inhibens** resolves exactly
+to active species `NCBITaxon:221822`. This grounds a producer name only, not a
+resistant organism. The two species and their evidence roles remain distinct.
+
+The [offline replay](../scripts/audit_tropodithietic_context.py) verifies request
+plans, durable attempts, response checksums, complete versus partial search
+scope, candidate membership, and the frozen record/corpus baseline. Its
+[regressions](../tests/test_tropodithietic_context.py) reject malformed empty
+results, inconsistent pagination, taxon substitutions, changed bibliography
+context and unplanned biological payloads. **96 focused tests passed**, including
+the neighboring formaldehyde regressions. No biological record, source-owned
+input, embedding, generated page or existing historical export was changed.
+This research-only change does not renew the earlier whole-repository QC result
+or provide scientific signoff.
+
+All **eight scientific HTTP attempts** are terminal, with no automatic
+redirects or retries. No NCBI endpoint, outreach, source adoption, reuse-terms
+review, or GitHub mutation was performed for this cohort. #1040 remains
+deferred. No sequence, exact variant specification, construct, protocol or
+numeric AST was exported. Supported resistance-gene curation, primary results,
+exact alleles, experimental taxa/genomes and whole-record review remain open;
+the full corpus goal remains open as well.
+
+## Reference Citations on Existing Claims (2026-10-14)
+
+The [pinned citation plan](2026-10-14-reference-citation-plan.json) reuses
+previously inspected UniProt responses and research dossiers. Nine qualified
+reference citations were appended to seven existing curator claims across
+PR-39, blasticidin S and kasugamycin. No new HTTP requests or primary biological
+interpretations were made. NCBI and #1040 remain deferred.
+
+| Record | Existing claims receiving citations | Reference accessions |
+| --- | ---: | --- |
+| PR-39 | 1 | Q8ZRF5 |
+| Blasticidin S | 2 | P23843, P0AFH2 |
+| Kasugamycin | 4 | P23843, P0AFH2, P23847, P0AEF8 |
+
+These are reference proteins, **not exact experimental alleles or altered
+proteins**. The citations retain UniProt release, retrieval date, entry and
+sequence version, review status, reference taxon and attribution. They do not
+independently establish resistance, assign a reference strain or genome to a
+tested subject, or transfer a combined-genotype effect to one component.
+Operon-only claims were not given representative protein assignments.
+
+The [curation receipt](2026-10-14-reference-citation-curation.json) pins the
+before/after records and the exact append-only edits. The PR-39 canary was
+inspected before the remaining writes. All three records passed the validated
+writer, fresh-source merge equality and byte-exact inverse replay. Each gained
+one meaningful history event; original evidence, biological claims, activities,
+subject fields, source-owned slices and previous history were preserved. The
+historical resolver validates pinned citation deltas and reconstructs original
+bytes into an ignored local archive, avoiding duplicate public exports of
+existing experimental details. Unregistered or conflicting changes fail closed.
+
+The [successor census](2026-10-14-reference-citation-resistance-grounding.tsv)
+checks all 2,939 current record hashes. The
+[field index](2026-10-14-reference-citation-curator-resistance-fields.json)
+now finds UniProt citations on **56 curator claims**, citing **48 distinct
+accessions**, versus 49 claims and 43 accessions previously. This is citation
+coverage, not seven new experiments or newly resolved alleles. The corpus still
+contains 4,888 resistance assertions, including 133 curator claims; protein,
+taxon and strain-identifier slots are unchanged. All whole-record primary
+reviews remain open. Older censuses and research exports remain historical.
+
+All 2,936 other biological records and the source inputs remain byte-identical.
+The three changed records have identical embedding documents before and after;
+the full 2,939-document fingerprint remains `3e004ed52b93c849`, and existing
+vectors, metadata and maps are unchanged. No embedding refresh was needed.
+The six desktop/mobile page checks found the expected qualified citations,
+no page errors and no horizontal overflow. Visual inspection found heavy
+wrapping in the existing mobile table columns; this is a readability limitation,
+not a mobile usability signoff. Historical reconstruction requires either the
+pinned successor record or its checksum-verified local archive; later curation
+must preserve an explicit replay path rather than relaxing checksum checks.
+
+The first full-QC attempt was interrupted after two historical tests compared
+old receipts against the changed live records. Their checkpoint bindings were
+corrected, together with the same pattern in the kasugamycin test. Original
+claims and hashes remain asserted against historical records; three additional
+live-transition cases verify today's complete records by exact inverse and
+forward replay. All 232 affected and regression tests passed after the fix.
+The failed attempt and its log are retained separately from the final QC run.
+
+The [final verification](2026-10-14-reference-citation-verification.json)
+records all 12 authoritative local QC gates passing, including **5,155 tests
+passed and four skipped**, strict validation of all 2,939 records, zero corpus
+reproduction drift, and a current generated site. The skips are one historical
+CARD checkpoint mismatch and three empty skill-frontmatter parameter sets.
+Local RDKit is 2025.3.6 rather than the project-pinned 2026.3.5; the chemical
+map was checked, not regenerated. This is not a pinned-environment or whole-record
+scientific signoff. These changes remain local; no GitHub mutation occurred.
+
+## Streptothricins: Congener and Reference Boundaries (2026-10-14)
+
+The [new dossier](2026-10-14-streptothricin-context.json) scopes streptothricin F
+(`CHEBI:60821`), D (`CHEBI:60828`) and F(3+) (`CHEBI:60822`) without changing
+their records. The [2023 primary paper](https://doi.org/10.1371/journal.pbio.3002091)
+distinguishes isolated F and D from the commercial nourseothricin mixture.
+Its activity-spectrum Results and chemical-source paragraph were inspected;
+this is not a complete resistance, allele or individual-isolate review.
+Resistance to other antibiotics in its isolate cohort does not establish
+resistance to the streptothricin being tested.
+
+The native one-page **S1 Fig and S2 Fig** chemical-analysis supplements were
+rendered and visually inspected. Both describe **sulfate hydrates**, not the
+neutral structures or a bare trication. Therefore neither mixture-level results
+nor salt-form observations are silently transferred into these exact-structure
+records. No numeric AST was exported or converted. Table 1's RNA-target caption
+also does not justify assigning a protein accession to a ribosomal RNA locus;
+its mutant-level results were not reviewed in this checkpoint.
+
+The existing F record inherits **nourseothricin as an ARO exact synonym**.
+That name cannot safely identify the selected study's mixture as isolated F.
+This is a source-chemical-scope flag, not authorization to delete the synonym,
+rewrite the source inventory or reject all five inherited resistance assertions.
+The underlying source interpretation needs review before promoting new findings.
+
+Publication-linked UniProt metadata resolve a distinct SatA/YyaR reference:
+
+| Reference | Identity | Scope |
+| --- | --- | --- |
+| `UniProtKB:P37506` | Reviewed `satA` / `yyaR`, locus `BSU40740`; entry 136, sequence 1; Bacillus subtilis strain 168, `NCBITaxon:224308`, under species `NCBITaxon:1423` | New publication-linked reference candidate; not a tested allele or assigned subject. |
+| `UniProtKB:B7JE95` | Existing unreviewed CARD-linked reference, entry 70, sequence 1; Bacillus cereus AH820, `NCBITaxon:405535`, under species `NCBITaxon:1396` | Preserved separately; not replaced by the B. subtilis entry. |
+
+The complete one-result UniProt query and four reused native taxonomy responses
+are pinned to release `2026_03`. The two proteins are not interchangeable, and
+their differing species do not alone prove the CARD assertion false.
+The separate [2017 SatA primary study](https://doi.org/10.1128/aem.01590-17)
+returned **HTTP 403** from its publisher. It is now **ACCESS_HOLD**: no retry,
+alternate access route or primary-Results signoff was attempted.
+
+The [verification receipt](2026-10-14-streptothricin-verification.json) records
+the offline replay, regression checks and preservation audit. Seven individually
+planned HTTP attempts include two separately inspected publisher storage hops;
+there were no automatic redirects, retries, NCBI requests or outreach. No
+source was adopted, and #1040 and reuse-terms work remain deferred. All 2,939
+biological records, existing research exports and prior uncommitted changes
+remain preserved. Whole-record and corpus-wide reviews remain open.
+
+## SttH: Publication References and Species Synonym (2026-10-14)
+
+The [SttH dossier](2026-10-14-stth-reference-context.json) follows the distinct
+[2006 study](https://doi.org/10.1074/jbc.m602294200), `PMID:16641084`, without
+changing the three streptothricin records or lifting their chemical-form holds.
+A complete, seven-result UniProt publication query identifies reviewed
+`UniProtKB:Q1MW86`, gene `sttH`, as a reference candidate (entry 58, sequence 2;
+release `2026_03`). This is not an experimental allele assignment.
+
+Its reference organism is **Streptomyces noursei**, species `NCBITaxon:1971`.
+The reused native UniProt taxonomy response explicitly lists **Streptomyces
+albulus** as a synonym. That supports species-level reference-name resolution;
+the protein's common-name field alone would not. No experimental strain or
+genome identifier is resolved by this synonym.
+
+Six unreviewed entries share the same paper citation: `Q1MW87`, `C5NM84`,
+`C5NM86`, `C5NM87`, `Q1MW85` and `C5NM85`. They remain separately versioned
+bibliographic matches, not additional resistance determinants. Not selecting
+them does not establish that resistance activity is absent.
+
+The DOI's publisher chain was inspected one hop at a time. Its intermediate
+**HTTP 200 page was a redirect locator, not primary text**. The final journal
+request returned **HTTP 403**, so the paper is now **ACCESS_HOLD**, with no
+retry or alternate route. Primary Results, chemical identity and experimental
+subjects remain unreviewed. The separate `PMID:19897889` citation remains an
+unreviewed bibliography lead, not a substitute copy of the held paper.
+
+The [verification receipt](2026-10-14-stth-reference-verification.json) records
+offline replay and regression checks. Five individually planned HTTP attempts
+included three manually inspected redirect hops. There were no automatic
+redirects, NCBI requests, outreach, source adoption, biological record changes
+or new resistance assertions. No numeric AST, sequences, variants, constructs
+or protocols were exported. #1040 and reuse-terms work remain deferred; all
+2,939 records remain in scope and the corpus-wide investigation remains open.
+
+## SttH Follow-up: Distinct References Under One Species (2026-10-14)
+
+The [2009 follow-up dossier](2026-10-14-stth-followup-context.json) assesses the
+separate [Maruyama and Hamano study](https://doi.org/10.1271/bbb.90499),
+`PMID:19897889`. Its complete UniProt publication query returns nine entries
+in release `2026_03`, including two reviewed reference proteins:
+
+| Reference | Gene metadata | Version | Interpretation |
+| --- | --- | --- | --- |
+| `UniProtKB:Q1MW86` | `sttH` | Entry 58, sequence 2 | Same reference projection as the preceding checkpoint; not an independent new allele. |
+| `UniProtKB:C5NU54` | `sttH`, alias `sttH-sn` | Entry 41, sequence 1 | Additional reference relative to that checkpoint; not merged with Q1MW86. |
+
+Both currently name **Streptomyces noursei**, species `NCBITaxon:1971`.
+The prior native taxonomy response is reused without a new taxonomy request.
+Neither a shared species ID nor the shared `sttH` symbol establishes the same
+locus, strain, experimental protein or allele. These two accessions remain
+separate, and no reference version is asserted to be the sequence tested in
+the paper. The seven other publication-linked entries are retained only as
+bibliographic matches, not automatically promoted to resistance determinants.
+
+The DOI returned one official Oxford journal destination; its separately
+planned request returned **HTTP 403**. This distinct paper is now
+**ACCESS_HOLD** too. No primary Results or experimental subjects were reviewed,
+and no retry or alternate route was attempted. The preceding 2006 and 2017
+paper holds remain unchanged. This supersedes the preceding checkpoint's
+unrequested status for the 2009 lead, not either older access hold.
+
+The [verification receipt](2026-10-14-stth-followup-verification.json) records
+three one-shot scientific requests, offline replay, regression coverage and
+preservation of all 2,939 biological records. No chemical-scope hold was
+lifted, no resistance assertion or experimental identifier was added, and no
+numeric AST, sequence, variant, construct or protocol was exported. NCBI and
+#1040 remain deferred; whole-record and corpus-wide review remain open.
+
+## Equisetin: Activity Is Not a Resistant Allele (2026-10-14)
+
+The [equisetin dossier](2026-10-14-equisetin-context.json) assesses
+`CHEBI:142135`, Standard InChIKey `QNQBPPQLRODXET-HMHJLHGTSA-N`, which has no
+existing resistance assertion. Its two completed vocabulary queries retain
+eight candidate identities. One now has selected primary-text review; seven
+remain unreviewed. The AGR and MED records with similar mammalian-study titles
+are neither merged nor counted as independent experiments without a crosswalk.
+The TA-289 title lead names an equisetin-like compound, not an established
+exact-compound match.
+
+[Ding et al. 2021](https://doi.org/10.3389/fchem.2021.772858), `PMID:34869220`,
+is a research article. Its inspected Results report equisetin activity against
+**Bacillus subtilis ATCC 6051** and reduced antibacterial effects with vitamin C.
+This is measured activity and non-genetic modulation, not a resistant allele
+or a clinical resistance call. The paper reports MIC and inhibition-zone
+endpoints separately; no values were exported or zones converted to MIC.
+The proposed Fenton-chemistry explanation is not treated as genetically
+established causality or a complete mechanism.
+
+The assay species is grounded to **NCBITaxon:1423**, using a reused native
+UniProt taxonomy response. ATCC 6051 remains a source strain label without an
+assigned strain TaxID or genome. The reference strain 168 and its protein
+identifiers are not substituted for the assay subject.
+
+The paper's highlighted biosynthetic locus belongs to **xanthobaccin A** in
+Actinoalloteichus hymeniacidonis, not to an equisetin resistance gene in the
+assay organism. Its comparative gene-cluster accessions are not assay genomes.
+Likewise, cited HSAF oxidative-stress and transcriptomic results are not
+transferred to equisetin. No UniProt resistance-protein assignment is supported
+by the reviewed Results; this is not a claim that no resistance gene exists.
+
+Commercial equisetin is named, but exact product, lot and stereochemical
+identity were not independently verified. Figures and supplements remain
+unreviewed. No biological record changed, and the seeded antiviral role was
+not replaced. The [verification receipt](2026-10-14-equisetin-verification.json)
+records offline replay, regression checks and preservation of all 2,939
+records. One planned EBI request succeeded; no NCBI requests, retries, source
+adoption or outreach occurred. #1040 remains deferred, and existing source
+holds remain in force. Whole-record and corpus-wide review remain open.
+
+## Equisetin Follow-up: Host Context and Component References (2026-10-14)
+
+The [follow-up dossier](2026-10-14-equisetin-followup-context.json) retains the
+same exact equisetin record and separates three study contexts. The eight
+original discovery identities now have two scoped primary-text reviews,
+one access hold with primary Results unreviewed, and five unassessed leads.
+Thus six original candidates still lack primary-results review, including
+the held paper. A separately verified bibliography link adds one new primary
+study; this is not a ninth result of the original queries.
+
+The TA-289 study, `PMID:23715404`,
+[DOI:10.1039/c3mb70056a](https://doi.org/10.1039/c3mb70056a), redirected to an
+Oxford publisher page that returned **403**. It is now **ACCESS_HOLD**:
+no retry or alternate route was used, and its primary Results were not
+reviewed. An equisetin-like name does not establish exact compound identity
+or permit transferring genetic findings to equisetin.
+
+[Zhong et al. 2024](https://doi.org/10.1016/j.heliyon.2024.e25458),
+`PMID:38327434`, concerns mouse **3T3-L1 adipocyte metabolism**. Its
+insulin-resistance background is not antimicrobial resistance; AMPK signaling
+does not establish a microbial resistance determinant. Culture antibiotics
+are reagents, not susceptibility observations. The CC BY-NC-ND article is
+reference-only, with no source-data adoption or text/figure redistribution.
+The similarly titled AGR record remains unresolved rather than merged or
+counted as independent replication.
+
+Native reference `bib24` in that article supplies matching DOI, PMID and PMC
+identifiers for [Larson et al. 2020](https://doi.org/10.1371/journal.pone.0233485),
+`PMID:32470050`, *Pyrrolocin C and equisetin inhibit bacterial acetyl-CoA
+carboxylase*. Selected primary text reports inhibition of the **biotin
+carboxylase** component of recombinant **E. coli** ACC, with no inhibition of
+carboxyltransferase in the reported comparison. This is biochemical-target
+evidence, not an equisetin-resistant allele. The enzyme donor strain and
+exact binding interaction remain unresolved. Activity-panel resistance to
+other drugs, PYRC transcriptomics, and discussion of other ACC inhibitors'
+alleles are not transferred to equisetin. IC90 is not converted to MIC.
+The 2020 S. aureus and 2021 B. subtilis contexts do not establish a single
+universal mechanism or interchangeable experimental conditions.
+
+Three complete, release-pinned UniProt metadata queries distinguish search
+scope: the exact PMID returned zero entries; a reviewed biotin-carboxylase
+query using `organism_id:562` also returned zero; using `taxonomy_id:562`
+returned two. Official field configuration was inspected before the third
+query. This observed contrast limits the earlier empty-query interpretation;
+it is not a general absence claim or a universal claim about API semantics.
+The provider's alternate-PMID suggestion was not followed.
+
+| Reference protein | Reference organism and rank | Scope |
+| --- | --- | --- |
+| `UniProtKB:P24182`, `accC` (alias `fabG`), entry 218 / sequence 2 | E. coli (strain K12), `NCBITaxon:83333`, strain | Function/taxonomy reference only |
+| `UniProtKB:Q8X9B6`, `accC`, entry 142 / sequence 1 | E. coli O157:H7, `NCBITaxon:83334`, **no rank** | Function/taxonomy reference only |
+
+Neither returned bibliography includes the selected 2020 PMID. The proteins
+remain separate candidates, not direct citation matches, tested enzyme
+assignments, or resistant alleles. Both reference lineages resolve to
+E. coli, `NCBITaxon:562`. Reused native taxonomy also grounds the paper's
+S. aureus and E. faecalis species contexts to `NCBITaxon:1280` and
+`NCBITaxon:1351`; no experimental strain, genome or resistant-isolate
+assignment follows. Five native taxonomy responses were reused without
+new taxonomy or NCBI requests.
+
+The [verification receipt](2026-10-14-equisetin-followup-verification.json)
+records offline reproduction, focused/dependency regression checks, and
+preservation of all 2,939 biological records and earlier work. Eight one-shot
+HTTP attempts include one API-configuration request, one manually reviewed
+redirect hop and the publisher 403. Two local plan-helper errors occurred
+after valid plans were saved; both recoveries are recorded, with no repeated
+request or preparation. The initial dossier draft is preserved privately;
+its follow-up accounting labels were clarified before final verification.
+No biological record changed, and no exact variant, sequence, construct,
+protocol or numeric AST was exported in this pass. Figures and supplements remain
+unreviewed. NCBI/#1040 and prior holds remain deferred; whole-record and
+corpus-wide review remain open. These checks do not renew the earlier
+full-QC receipt.
+
+## Equisetin Leads: Indexed Abstracts and Access Holds (2026-10-14)
+
+The [indexed-lead dossier](2026-10-14-equisetin-leads-context.json) evaluates
+three more discovery identities without promoting their abstracts to primary
+Results review. Each exact Europe PMC query returned one complete core record.
+Two older review leads, `MED:10934347` and `MED:17707105`, remain unassessed.
+Six of the original eight identities still lack primary-results review:
+three access-held papers, one abstract-only AGR record and those two reviews.
+The separately discovered 2020 paper remains an additional bibliography lead,
+not an extra result of the original queries.
+
+[Han et al.](https://doi.org/10.1016/j.micpath.2025.108215), `PMID:41317882`,
+was first published electronically on **2025-11-28** and assigned to the
+**February 2026** issue. Its indexed abstract describes equisetin activity
+against multidrug-resistant **Enterococcus faecalis** and a transcriptomic
+response. Neither the MDR label nor gene-expression response establishes an
+equisetin-resistant allele. The abstract's reported lack of induced resistance
+is not treated as universal proof that resistance cannot arise. No numerical
+AST, gene-specific mechanism or experimental identifier was imported.
+The species name maps to **NCBITaxon:1351** through a reused native UniProt
+taxonomy response. That is abstract-level species-name grounding only, not
+verification of the tested strain, genome, protein or allele.
+
+The DOI's Elsevier Linking Hub destination returned an HTTP 200 **redirect
+page**, not article text. Its exact HTML refresh and subsequent HTTP redirect
+were inspected and planned separately. The final ScienceDirect destination
+returned **403**, establishing a new **ACCESS_HOLD**. No retry, alternate
+route, primary-results review or figure/supplement review followed. Routing
+query parameters remain in private receipts, not the public dossier.
+
+The [2015 antibiotic-library paper](https://doi.org/10.4155/fmc.15.97),
+`PMID:26431450`, describes small-molecule mimics of tetramate natural products
+in its indexed abstract. Analogue activity is not transferred to the exact
+parent equisetin structure, and antimicrobial-resistance motivation is not
+a parent-compound resistance-allele finding. Its DOI led to Taylor & Francis,
+which returned **403**. This is a separate **ACCESS_HOLD**; primary Results
+remain unreviewed, with no retry or alternate route.
+
+`AGR:IND608566932` independently supplies indexed host-adipocyte metabolic
+context, not microbial resistance evidence. Its native response has no DOI,
+PMID or PMC crosswalk. Similarity to `MED:38327434` therefore does not become
+a verified identity merge or an independent biological replicate. Its host
+metabolism genes are not assigned as microbial resistance determinants.
+
+The [verification receipt](2026-10-14-equisetin-leads-verification.json)
+records nine one-shot HTTP attempts, four manually reviewed redirect hops,
+offline replay, focused/dependency tests, and preservation of all 2,939
+biological records and earlier work. The only HTTP 200 responses were three
+metadata records and the locator page. No new UniProt query, biological
+curation, source adoption, numerical AST, variant, sequence, construct or
+protocol export occurred. NCBI/#1040 and every prior access hold remain
+deferred. Whole-record and corpus-wide investigation remain open; these
+research checks do not renew the earlier full-QC receipt.
+
+## Beauvericin: Reference Genes and a Primary Hold (2026-10-14)
+
+The [reference dossier](2026-10-14-beauvericin-reference-context.json) covers
+`CHEBI:3000`, Standard InChIKey `GYSCAQFHASJXRS-FFCOJMSVSA-N`. The current
+record has no resistance assertion. Its canonical and alias vocabulary
+queries each returned the same 58 candidate identities; repeated query
+memberships are not independent evidence. None has a primary-results
+signoff from this pass, and a title naming a gene is not an allele assessment.
+
+The selected [2016 study](https://doi.org/10.1128/aac.01959-16),
+`PMID:27736764`, distinguishes beauvericin efflux and regulatory circuitry
+from azole potentiation in its title. Its planned EBI full-text request
+returned **HTTP 500**, with an explicit JSON server-error body, not article
+XML. The route is now **TECHNICAL_HTTP_500_HOLD**. No retry or alternate route
+was used. A local XML inspection of that error body failed without yielding
+primary content; neither the error nor the title is treated as Results review.
+The [2018 study](https://doi.org/10.1128/aac.01655-18), `PMID:30249688`, and
+the [other 2016 study](https://doi.org/10.1038/nchembio.2165), `PMID:27571477`,
+remain unrequested at primary-text scope after the canary failure.
+
+Four separately planned UniProt metadata queries, all complete at release
+**2026_03**, give a useful reference-only distinction. The 2016 PMID query
+returned one entry. The 2018 PMID query and a reviewed-only `YOR1`/`STB5`
+name query in the C. albicans lineage returned zero. Removing only that
+review-status filter returned two unreviewed entries. Thus the empty
+reviewed-only result does not establish missing genes or proteins.
+
+| Gene | UniProt reference | Review status; entry / sequence version | Ordered loci |
+| --- | --- | --- | --- |
+| ZCF29 | [A0A1D8PRB7](https://www.uniprot.org/uniprotkb/A0A1D8PRB7/entry) | Reviewed; 48 / 1 | CAALFM_C703220CA; orf19.12598 |
+| STB5 | [Q5A926](https://www.uniprot.org/uniprotkb/Q5A926/entry) | Unreviewed; 148 / 1 | CAALFM_C101200WA; orf19.10818 |
+| YOR1 | [A0A1D8PIM2](https://www.uniprot.org/uniprotkb/A0A1D8PIM2/entry) | Unreviewed; 45 / 1 | CAALFM_C209990CA; orf19.9349 |
+
+ZCF29's returned bibliography includes `PMID:27736764`. STB5 and YOR1 are
+name/species reference candidates whose returned bibliographies cite genome
+papers, not any of the three selected resistance-study leads. Database
+review status, gene labels and shared reference strain do not establish
+experimental role, causal resistance mechanism or exact allele identity.
+The two unreviewed entries are not promoted to reviewed proteins, and no
+Yor1 mapping from S. cerevisiae or C. glabrata is substituted.
+
+All three entries name **C. albicans SC5314 / ATCC MYA-2876**, reference
+**NCBITaxon:237561**, rank **strain**. A reused native UniProt taxonomy
+response independently checks that reference identity and its species
+ancestor, **Candida albicans, NCBITaxon:5476**. This is reference lineage
+grounding, not proof that SC5314, its deposited genome or these protein
+sequences identify the tested organisms or alleles. No experimental genome
+or sample identifier was assigned.
+
+The [verification receipt](2026-10-14-beauvericin-reference-verification.json)
+records five one-shot HTTP attempts, offline replay, regression tests and
+preservation of all 2,939 biological records and earlier work. No new
+resistance assertion, numeric AST, exact variant, sequence, construct or
+protocol was exported. Primary Results, figures, supplements and exact
+compound/experimental-subject joins remain unresolved. NCBI/#1040 and all
+earlier source holds remain deferred. Whole-record and corpus-wide review
+remain open; these research checks do not renew the earlier full-QC receipt.
+
+## Enniatins: Congener Boundaries and an Explicit Reference Crosswalk (2026-10-14)
+
+The [dossier](2026-10-14-enniatin-context.json) preserves three distinct records:
+enniatin A (`CHEBI:64651`), enniatin B (`CHEBI:64649`), and beauvericin
+(`CHEBI:3000`). Their initial discovery memberships total 97 across 76 distinct
+candidate identities. The selected [2026 study](https://doi.org/10.3390/jof12070524),
+`PMID:42506285`, was retrieved for A and beauvericin, not B; B is assessed through
+that related-record lead. Selected primary text and captions were reviewed,
+not visual figures or supplements. This is one scoped study review, not 76
+completed reviews or a whole-record signoff.
+
+The paper names FgABCB8 as `FGSG_08823`, with `FGRAMPH1_01G10921` in Results
+3.2, but also prints `FGRAMPH1_01G010921` with an extra zero. Two complete exact
+gene queries returned zero UniProt entries. Provider spelling suggestions were
+not followed. A separately planned query for the literal labels across indexed
+fields returned one candidate; its requested EnsemblFungi cross-reference list
+was empty. An accession-specific metadata query then supplied the explicit
+**VEuPathDB cross-reference `FungiDB:FGRAMPH1_01G10921`**. This native link, not a
+guessed G-to-T substitution or the search hit alone, grounds the reference to
+[UniProtKB:I1RWY3](https://www.uniprot.org/uniprotkb/I1RWY3/entry).
+
+The entry is **unreviewed**, release **2026_03**, entry version **82**, sequence
+version **1**, with native ORF label `FGRAMPH1_01T10921`. Its generic submitted
+protein name is retained as annotation, not functional proof. The returned
+bibliography contains genome papers, not this 2026 study. Reference EMBL
+accessions `HG970333` and `CEF77263.1` are not experimental genome or allele
+assignments. The extra-zero source label remains unresolved.
+
+Reused native taxonomy responses ground the reference to **PH-1,
+NCBITaxon:229533**, rank **strain**, and its species to **NCBITaxon:5518**.
+The species response explicitly lists *Fusarium graminearum* as a synonym of
+*Gibberella zeae*. The paper's native background `FgLH03` is not assigned PH-1's
+strain identifier. Its heterologous yeast host is separately grounded at
+*Saccharomyces cerevisiae*, **NCBITaxon:4932**, species rank. Growth-assay label
+`AD12345678` and export-method label `AD1-8` are retained without independently
+asserting exact derivative equivalence. No tested genome is assigned.
+
+The native-fungus comparison names **A1, B, and B1**, not A. A1/B1 sensitivity
+effects cannot be transferred to A/B. B did not noticeably inhibit growth in
+the reported native comparison; that does not establish a resistant allele or
+species-wide resistance. For yeast growth, Results and Figure 4 name **B1**,
+while Methods name **B**; Results and caption also disagree in dose-unit wording.
+Those conflicts remain open. Beauvericin has reported heterologous growth
+protection context, not a demonstrated native-fungus resistance assertion.
+The B supernatant assay supports the authors' export interpretation at its
+reported scope, not an MIC or direct transport-kinetics measurement. Relative
+growth/AUC, transcript induction, and extracellular chemical signal stay
+separate; MICs cited from earlier studies are not imported into these assays.
+
+The [verification receipt](2026-10-14-enniatin-verification.json) covers offline
+replay, regression tests, five one-shot HTTP requests, and preservation of all
+2,939 records and earlier work. No new resistance assertion, numeric AST,
+variant, sequence, construct or protocol was exported. Compound-label conflicts,
+figure/supplement review, and exact experimental identity prevent curation in
+this pass. The earlier beauvericin primary hold was not retried. NCBI/#1040
+remains deferred; no source was adopted. Corpus-wide review remains open, and
+these research checks do not renew the earlier full-QC receipt.
+
+## Platensimycin and Platencin: Historical Donor Archives (2026-10-14)
+
+The [archive dossier](2026-10-14-platen-archive-context.json) resolves explicit
+donor reference crosswalks for the 2014 paper's deposited genes. Its cached
+accepted manuscript identifies MA7327 fabF as KF543053 and fabH as KF543054.
+The accession page was visually rechecked; this is not a new review of the
+whole paper or its uninspected supplements. The prior publisher hold was not
+retried, and no article or figure was requested again.
+
+| Donor gene | ENA parent / protein | UniParc | Historical UniProtKB |
+| --- | --- | --- | --- |
+| fabF | KF543053.1 / AHA90851.1 | UPI0003C98D16 | V5NR11, inactive |
+| fabH | KF543054.1 / AHA90852.1 | UPI0003C9A5B9 | V5NT21, inactive |
+
+The ENA coding rows explicitly provide their parent accession and MA7327
+strain label. Their gene, scientific-name and taxon fields are blank, not
+silently filled from a different row. The parent records supply **Streptomyces
+platensis, species NCBITaxon:58346**, by that explicit parent link. Reused UniProt
+taxonomy agrees at species rank; it does not establish a MA7327 strain TaxID.
+UniParc's complete database pages independently bind each version-1 EMBL
+protein to its historical UniProtKB cross-reference. The EMBL references are
+active; the UniProtKB/TrEMBL references are inactive in release **2026_03**.
+The cross-reference last-update dates are not asserted to be inactivation dates.
+
+The current UniProtKB query for the two exact versioned protein IDs returned
+zero entries. This does not prove global absence, nor does the archive status
+explain every earlier empty search. No active current UniProtKB mapping is
+established. UniParc membership does not prove a tested allele, strain identity,
+resistance phenotype, or genome; these short gene archives are not whole genomes.
+
+The [curation receipt](2026-10-14-platen-archive-curation.json) records an
+append-only reference update to the existing **FabF claim in each of the two
+records**: one qualified note, three source citations and one history event per
+record. The tested host remains **Streptomyces albidoflavus SB12013**, species
+NCBITaxon:1886, distinct from the donor. Platencin's partial resistance / reduced
+susceptibility is not promoted to full resistance. PtmP3 claims, original
+mechanisms, phenotypes, evidence, source-owned fields and chemical identities
+are preserved. The FabH negative comparison remains in the research dossier,
+not a new positive resistance claim. No protein-accession slot, experimental
+allele, strain TaxID, genome, sequence, construct, protocol or numeric AST was added.
+
+The validated canary passed round-trip loading, fresh-seed merge equality and
+embedding-document equality before production writes. Exact delta restoration
+preserves the historical J1074 and earlier platen checkpoints. The
+[successor census](2026-10-14-platen-archive-resistance-grounding.tsv) and
+[field index](2026-10-14-platen-archive-curator-resistance-fields.json) retain all
+2,939 records and the same claim counts. The field index deliberately leaves
+query-bearing database URLs unclassified; that is a citation-parser boundary,
+not evidence that the archive grounding is absent. The
+[verification receipt](2026-10-14-platen-archive-verification.json) records the
+checks actually completed and their environment limitations.
+
+All 11 planned scientific requests returned HTTP 200 without retries or
+redirects. They retrieved only ENA/UniProt metadata and API field definitions;
+NCBI was not contacted, #1040 remains deferred, no source was adopted, and all
+other source holds remain intact. Whole-record primary review and the
+corpus-wide investigation remain open.
 
 ## Remaining work
 

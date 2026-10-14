@@ -3,6 +3,7 @@
 import csv
 import hashlib
 import json
+import sys
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
@@ -12,6 +13,9 @@ from antibioticmech.activity_collections import load_record
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from resistance_checkpoint_records import checkpoint_path  # noqa: E402
+
 PREFIX = ROOT / "research/2026-10-12-blasticidin"
 SUBJECTS = {"oppA": ("CAG67774", "UniProtKB:P23843"),
             "oppB": ("CAG67775", "UniProtKB:P0AFH2")}
@@ -27,12 +31,12 @@ def curation():
     return json.loads(Path(str(PREFIX) + "-curation.json").read_bytes())
 
 
-def test_curated_evidence_remains_in_exact_record(curation, tmp_path):
-    path = ROOT / curation["record"]["path"]
+def test_curated_evidence_remains_in_exact_historical_record(curation, tmp_path):
+    path = checkpoint_path(ROOT, {**curation["record"], "identifier": "CHEBI:15353"})
     record = load_record(path)
     assert record["identifier"] == "CHEBI:15353"
     assert record["chemical_structure"]["standard_inchi_key"] == "CXNPLSGKWMLZPZ-ZNIXKSQXSA-N"
-    # Future curation can add evidence without invalidating this historical receipt.
+    # The citation-only successor is checked separately against this historical evidence.
     assert all(claim in record["resistance_mechanisms"] for claim in curation["claims"])
     assert all(observation in record["activity_spectrum"] for observation in curation["observations"])
     output = tmp_path / path.name
