@@ -1,0 +1,356 @@
+{
+  "abstract_species": {
+    "evidence_scope": "SPECIES_NAME_IN_INDEXED_ABSTRACT_NOT_PRIMARY_SUBJECT_VERIFICATION",
+    "experimental_strain_taxon_genome_or_protein_assignment": null,
+    "rank": "species",
+    "source_name": "Enterococcus faecalis",
+    "species_wide_or_equisetin_resistance_asserted": false,
+    "taxon_id": "NCBITaxon:1351"
+  },
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/cohort.json",
+    "sha256": "f48c273bbc242761e0753150bf94e3088b363640295a483f1424f5b8fa235f91"
+  },
+  "corpus_records_hash_checked_at_preflight": 2939,
+  "curation_decision": "NO_NEW_RESISTANCE_ASSERTION_OR_EXPERIMENTAL_IDENTIFIERS",
+  "date": "2026-10-14",
+  "discovery_checkpoint": {
+    "path": "research/2026-10-14-equisetin-context.json",
+    "sha256": "e2a21689e8eda90f041ca61e460c6c14da4568b90a6c9f09f934c5fbde71c237"
+  },
+  "discovery_status": {
+    "AGR_MED_same_title_records_merged_or_counted_as_replication": false,
+    "additional_primary_bibliography_leads": 1,
+    "initial_candidate_dispositions": {
+      "AGR:IND608566932": "INDEXED_HOST_METABOLISM_ABSTRACT_CROSSWALK_UNRESOLVED",
+      "MED:10934347": "UNASSESSED",
+      "MED:17707105": "UNASSESSED",
+      "MED:23715404": "ACCESS_HOLD_PRIMARY_RESULTS_UNREVIEWED",
+      "MED:26431450": "INDEXED_ANALOGUE_LIBRARY_ABSTRACT_PRIMARY_RESULTS_ACCESS_HELD",
+      "MED:34869220": "PRIOR_SCOPED_PRIMARY_TEXT_REVIEW",
+      "MED:38327434": "HOST_CONTEXT_NOT_ANTIMICROBIAL_RESISTANCE",
+      "MED:41317882": "INDEXED_ACTIVITY_ABSTRACT_PRIMARY_RESULTS_ACCESS_HELD"
+    },
+    "initial_candidate_identities": 8,
+    "initial_candidate_primary_access_holds": 3,
+    "initial_candidates_primary_results_unreviewed_including_held_and_abstract_only": 6,
+    "initial_candidates_without_followup_disposition": 2,
+    "new_primary_results_reviews": 0
+  },
+  "indexed_contexts": {
+    "2015": {
+      "abstract_sha256": "9292ced4eca7b2552c13b76d5262c4ac9e03a7611bcccb6ad2be2875ef481f60",
+      "analogue_activity_transferred_to_parent_equisetin": false,
+      "context": "TETRAMATE_NATURAL_PRODUCT_MIMIC_LIBRARY",
+      "doi": "DOI:10.4155/fmc.15.97",
+      "indexed_availability": {
+        "inEPMC": "N",
+        "inPMC": "N",
+        "isOpenAccess": "N"
+      },
+      "numeric_AST_or_source_abstract_text_exported": false,
+      "primary_results_disposition": "ACCESS_HOLD",
+      "primary_results_figures_supplements_reviewed": false,
+      "resistant_parent_compound_allele_established": false,
+      "scope": "INDEXED_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW",
+      "source_reference": "MED:26431450",
+      "source_use": "REFERENCE_ONLY_NO_SOURCE_DATA_ADOPTION",
+      "title": "Equisetin, reutericyclin and streptolodygin as natural product lead structures for novel antibiotic libraries.",
+      "uniprot_or_exact_allele_assignment": null
+    },
+    "2026": {
+      "MDR_label_establishes_equisetin_resistance": false,
+      "abstract_sha256": "fb945d438ab15ee0f23fa7a061e31ddcc18534ff17f1f770764c102349b87a92",
+      "doi": "DOI:10.1016/j.micpath.2025.108215",
+      "first_publication_date": "2025-11-28",
+      "indexed_availability": {
+        "inEPMC": "N",
+        "inPMC": "N",
+        "isOpenAccess": "N"
+      },
+      "issue_date": "2026-02-01",
+      "no_induced_resistance_statement_is_universal_absence_proof": false,
+      "numeric_AST_or_source_abstract_text_exported": false,
+      "primary_results_disposition": "ACCESS_HOLD",
+      "primary_results_figures_supplements_reviewed": false,
+      "reported_activity_species": "Enterococcus faecalis",
+      "scope": "INDEXED_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW",
+      "source_reference": "MED:41317882",
+      "source_use": "REFERENCE_ONLY_NO_SOURCE_DATA_ADOPTION",
+      "title": "Equisetin targets membrane integrity and transcriptional networks to combat multidrug-resistant Enterococcus faecalis.",
+      "transcriptomic_response_establishes_resistant_allele": false,
+      "uniprot_or_exact_allele_assignment": null
+    },
+    "AGR": {
+      "abstract_sha256": "e4f2f45d288b6ad62b4562a8a5693a4d8f7d83861b5b311009bae576e059ee61",
+      "context": "HOST_ADIPOCYTE_METABOLISM_NOT_ANTIMICROBIAL_RESISTANCE",
+      "doi": null,
+      "host_metabolism_genes_assigned_as_microbe_resistance_determinants": false,
+      "indexed_availability": {
+        "inEPMC": "N",
+        "inPMC": "N",
+        "isOpenAccess": "N"
+      },
+      "merged_with_MED38327434_or_counted_as_independent_replication": false,
+      "native_DOI_PMID_PMC_crosswalk_supplied": false,
+      "numeric_AST_or_source_abstract_text_exported": false,
+      "primary_results_figures_supplements_reviewed": false,
+      "scope": "INDEXED_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW",
+      "source_reference": "AGR:IND608566932",
+      "source_use": "REFERENCE_ONLY_NO_SOURCE_DATA_ADOPTION",
+      "title": "Equisetin inhibits adiposity through AMPK-dependent regulation of brown adipocyte differentiation",
+      "uniprot_or_exact_allele_assignment": null
+    }
+  },
+  "limits": {
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "figures_visually_reviewed": false,
+    "full_corpus_goal_status": "OPEN",
+    "http_attempts": 9,
+    "issue_1040": "DEFERRED",
+    "manually_reviewed_redirect_hops": 4,
+    "native_taxonomy_responses_reused": 1,
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_uniprot_queries": 0,
+    "numeric_AST_variants_sequences_constructs_or_protocols_exported": false,
+    "retries": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0,
+    "successful_metadata_lookups": 3,
+    "supplements_reviewed": false,
+    "whole_record_primary_review": "OPEN"
+  },
+  "locator_HTTP_200_is_primary_text": false,
+  "new_primary_holds": {
+    "MED:26431450": "ACCESS_HOLD_HTTP_403",
+    "MED:41317882": "ACCESS_HOLD_HTTP_403"
+  },
+  "prior_TA289_hold_preserved": true,
+  "prior_checkpoint": {
+    "path": "research/2026-10-14-equisetin-followup-context.json",
+    "sha256": "1ef408aac7a56a947f6e04af88beaf599ed96c60fc45a57d6751dde152a0c431"
+  },
+  "record": {
+    "historical_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-14-equisetin/CHEBI-142135-before.yaml",
+      "sha256": "25ff4496a027e2dd0c94810e189a2b06f71de2e284d1ae290c077c8f62a9df48"
+    },
+    "identifier": "CHEBI:142135",
+    "label": "equisetin",
+    "path": "data/antibiotics/antibacterial/equisetin.yaml",
+    "sha256": "25ff4496a027e2dd0c94810e189a2b06f71de2e284d1ae290c077c8f62a9df48",
+    "standard_inchi_key": "QNQBPPQLRODXET-HMHJLHGTSA-N"
+  },
+  "scope": "INDEXED_ABSTRACT_TRIAGE_NOT_PRIMARY_RESULTS_OR_RESISTANCE_CURATION",
+  "sources": {
+    "metadata-2015": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-2015-attempt.json",
+        "sha256": "7fff945fa836890a952d458e9a19ce0634dc42f9fed4d87119b982329b30a958"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-2015-response.bin",
+        "sha256": "ece1cd05a49c7c2c332995255f2636b8306f67960f5fd3025a01cb0d1f304e97"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/followup-plan.json",
+        "sha256": "e7dcd07ca86f175432b6dc13418d1955e7f4065ead4f2f38939f3d64ad17a0f4"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-2015-receipt.json",
+        "sha256": "eb90ec2127ad8d78828304193f64da55172137c44a807d070e7dcb14849a8853"
+      },
+      "retrieved_at": "2026-10-14T19:37:44.128013+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A26431450+AND+SRC%3AMED&resultType=core&format=json&pageSize=1"
+    },
+    "metadata-2026": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-2026-attempt.json",
+        "sha256": "9fd083e4aacef9418f73c191c7b9bd1a6fd259895f1a5ba2db4cff21beb70a52"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-2026-response.bin",
+        "sha256": "da5294df86834e1447fe17c788497a145c810b34ca2325755929f56824b500bf"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/request-plan.json",
+        "sha256": "d46f848c43b1a4fdf218e01c28f757e4737f5557982d809c913f16cf8f9a979f"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-2026-receipt.json",
+        "sha256": "b3a8ff603057c6ec851798175b47fefb5e9c20e509cee7631c3cce89f7ccdc1a"
+      },
+      "retrieved_at": "2026-10-14T19:36:52.226440+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A41317882+AND+SRC%3AMED&resultType=core&format=json&pageSize=1"
+    },
+    "metadata-AGR": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-AGR-attempt.json",
+        "sha256": "6fa6a8fe60b57b283bc77604f85c7f3c1b421a26ab424f3a0bd3f0b0e8054b5d"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-AGR-response.bin",
+        "sha256": "1dfa7f400c05ad1b45b61bb9572f3304b24f609602dc643c2628bbd9880f306a"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/remaining-metadata-plan.json",
+        "sha256": "4929382f441142aac5c00ce9373fe5c9060987938b2492b9c93541167aa6fa2a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/metadata-AGR-receipt.json",
+        "sha256": "3cd6ad030bc424b8ce9fccfe9f3b0b57a6743dd40afca28b95c8999bfbd370f9"
+      },
+      "retrieved_at": "2026-10-14T19:39:38.789577+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3AIND608566932+AND+SRC%3AAGR&resultType=core&format=json&pageSize=1"
+    },
+    "primary-2015-doi": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2015-doi-attempt.json",
+        "sha256": "4a24f61f8fa1bc96078a9f74d0b0eff252a44a925beed09e51f692d982cb1bdc"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2015-doi-response.bin",
+        "sha256": "a59f8948095018aae1a26c07b932fa7df14d8ad1f51216b2a5da6556102575d7"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/remaining-metadata-plan.json",
+        "sha256": "4929382f441142aac5c00ce9373fe5c9060987938b2492b9c93541167aa6fa2a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2015-doi-receipt.json",
+        "sha256": "34dbe02fd9cd3a36c18addf9d647218641886559d792d9a9491dba15b02541df"
+      },
+      "retrieved_at": "2026-10-14T19:39:46.500542+00:00",
+      "status": 302,
+      "url": "https://doi.org/10.4155/fmc.15.97"
+    },
+    "primary-2015-publisher": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2015-publisher-attempt.json",
+        "sha256": "656e0678bc61bf8aa94c9df766fca521dbf22534625a4e2a5cbddc919a0507a8"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2015-publisher-response.bin",
+        "sha256": "ee666de89f20d8590926c4848c541bdf6d480a28b665615970374aa15d844301"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2015-publisher-plan.json",
+        "sha256": "c0cfe6926397695671847ab47ff800814b28c4503870fef22e533bc81eb654e2"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2015-publisher-receipt.json",
+        "sha256": "2a09292fb6cf5ab8e231b703db8a707faa5124e42fe49918451efed1fee9192c"
+      },
+      "retrieved_at": "2026-10-14T19:40:10.316271+00:00",
+      "status": 403,
+      "url": "https://www.tandfonline.com/doi/full/10.4155/fmc.15.97"
+    },
+    "primary-2026-doi": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-doi-attempt.json",
+        "sha256": "764576bb991ce1ddd47d0ee68b2b82c7cceb5f62e5ac7324dd1589329b590c06"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-doi-response.bin",
+        "sha256": "50644a4fbcf27097dd3eff87ce2184bd307f39a27e310e25065ee162a29efd98"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/followup-plan.json",
+        "sha256": "e7dcd07ca86f175432b6dc13418d1955e7f4065ead4f2f38939f3d64ad17a0f4"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-doi-receipt.json",
+        "sha256": "35b3474bb2c42e3b50a473337009100cd27b498a030d31baca676aa92ff87f69"
+      },
+      "retrieved_at": "2026-10-14T19:37:34.604219+00:00",
+      "status": 302,
+      "url": "https://doi.org/10.1016/j.micpath.2025.108215"
+    },
+    "primary-2026-final": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-final-attempt.json",
+        "sha256": "05eb72a8dff19e6461d4283cf95e8ca849182336211d81f98cc359cc1fdd0a22"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-final-response.bin",
+        "sha256": "86488acf8c6d4a2147186c12b12712890547fe92c9239e303cd854e2eecc7963"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-final-plan.json",
+        "sha256": "c4ec942a137b4c5fe5e8c058842315d96ccbc316676337df9bfc29d327114c67"
+      },
+      "query_retained_only_in_private_receipt": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-final-receipt.json",
+        "sha256": "e75d6cef9b43daef458b585488e01cf837398e018be4f4d290369e72d6c0cb4f"
+      },
+      "retrieved_at": "2026-10-14T19:40:02.930841+00:00",
+      "status": 403,
+      "url": "https://www.sciencedirect.com/science/article/pii/S0882401025009404"
+    },
+    "primary-2026-locator": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-locator-attempt.json",
+        "sha256": "b63b97ae71efcc932245983d1e07536c5a2583a369c81d7ad3b16251fe21c7df"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-locator-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-locator-plan.json",
+        "sha256": "9418ce6d3fa6d2bcf578095df6e52b33d27a3f51a67863e8ef52b50aae5343a0"
+      },
+      "query_retained_only_in_private_receipt": true,
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-locator-receipt.json",
+        "sha256": "f0e5ff7b9d7ec98a55a6886c157f07a48b0f6b46d08c9a08767bb2ae93ee9fe0"
+      },
+      "retrieved_at": "2026-10-14T19:39:30.401287+00:00",
+      "status": 301,
+      "url": "https://linkinghub.elsevier.com/retrieve/articleSelectSinglePerm"
+    },
+    "primary-2026-publisher": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-publisher-attempt.json",
+        "sha256": "8aadf48be49d6ed6724bfe3612dbd3b65e9302b911f748119180a8c7c1add559"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-publisher-response.bin",
+        "sha256": "febf87187ba6af1369587b2dbd5afcdad2314cc486247249dddbda1c7d50d6a7"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-publisher-plan.json",
+        "sha256": "fb528e272b6c0a0f64ec84cb818931d243f1ab028335551383d3591815aef06e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-equisetin-leads/primary-2026-publisher-receipt.json",
+        "sha256": "ab82a07874b8c98b41ccf5750140f1440e6a6e71682dd64698bbc3b2a7d3a4aa"
+      },
+      "retrieved_at": "2026-10-14T19:38:23.285288+00:00",
+      "status": 200,
+      "url": "https://linkinghub.elsevier.com/retrieve/pii/S0882401025009404"
+    }
+  },
+  "taxonomy_source": {
+    "body": null,
+    "body_sha256": "a2bdb765e250e5ed552c3511c36c9052f73bf54b5502e248b0be0a3dfc302ef4",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-07/request-33c25f76b8f5cccda53e6ed08dafbeab75d97faa17f39f1e85ad0663a85434b0.json",
+      "sha256": "8f21bd5cf03a6bcee2c8a5fe983e8c8ccef74a00bda83b28d62af6f7f03d0a3d"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-08T03:04:56.555730+00:00",
+    "url": "https://rest.uniprot.org/taxonomy/1351"
+  }
+}

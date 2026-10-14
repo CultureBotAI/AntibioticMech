@@ -1,0 +1,717 @@
+{
+  "TA289": {
+    "alternate_route_or_retry": false,
+    "compound_or_genetic_findings_transferred_to_equisetin": false,
+    "disposition": "ACCESS_HOLD",
+    "doi": "DOI:10.1039/c3mb70056a",
+    "primary_results_reviewed": false,
+    "reference": "PMID:23715404",
+    "status": 403
+  },
+  "assay_species": [
+    {
+      "equisetin_resistant_isolate_asserted": false,
+      "experimental_strain_or_genome_assignment": null,
+      "name": "Staphylococcus aureus",
+      "rank": "species",
+      "taxon_id": "NCBITaxon:1280"
+    },
+    {
+      "equisetin_resistant_isolate_asserted": false,
+      "experimental_strain_or_genome_assignment": null,
+      "name": "Enterococcus faecalis",
+      "rank": "species",
+      "taxon_id": "NCBITaxon:1351"
+    },
+    {
+      "equisetin_resistant_isolate_asserted": false,
+      "experimental_strain_or_genome_assignment": null,
+      "name": "Escherichia coli",
+      "rank": "species",
+      "taxon_id": "NCBITaxon:562"
+    }
+  ],
+  "attribution": [
+    {
+      "doi": "DOI:10.1371/journal.pone.0233485",
+      "license": "CC BY 4.0",
+      "source": "Larson et al. 2020, PLOS ONE"
+    },
+    {
+      "doi": "DOI:10.1016/j.heliyon.2024.e25458",
+      "source": "Zhong et al. 2024, Heliyon",
+      "use": "REFERENCE_ONLY"
+    },
+    {
+      "license": "CC BY 4.0",
+      "release": "2026_03",
+      "source": "UniProt Consortium"
+    }
+  ],
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "bibliography_lead": {
+    "doi": "10.1371/journal.pone.0233485",
+    "native_reference_id": "bib24",
+    "pmcid": "PMC7259786",
+    "pmid": "32470050",
+    "present_in_initial_eight_candidates": false
+  },
+  "census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-ta289/cohort.json",
+    "sha256": "642c402c0cdeaafb83ffd297b30577b807709106e1dad92f0dbd6cbdfd5a1301"
+  },
+  "corpus_records_hash_checked_at_preflight": 2939,
+  "curation_decision": "NO_NEW_RESISTANCE_ASSERTION_OR_EXPERIMENTAL_PROTEIN_GENOME_ASSIGNMENT",
+  "date": "2026-10-14",
+  "discovery_status": {
+    "AGR_MED_same_title_records_merged_or_counted_as_replication": false,
+    "additional_primary_bibliography_leads": 1,
+    "initial_candidate_dispositions": {
+      "AGR:IND608566932": "UNASSESSED",
+      "MED:10934347": "UNASSESSED",
+      "MED:17707105": "UNASSESSED",
+      "MED:23715404": "ACCESS_HOLD_PRIMARY_RESULTS_UNREVIEWED",
+      "MED:26431450": "UNASSESSED",
+      "MED:34869220": "PRIOR_SCOPED_PRIMARY_TEXT_REVIEW",
+      "MED:38327434": "HOST_CONTEXT_NOT_ANTIMICROBIAL_RESISTANCE",
+      "MED:41317882": "UNASSESSED"
+    },
+    "initial_candidate_identities": 8,
+    "initial_candidates_primary_results_unreviewed_including_held": 6,
+    "initial_candidates_without_followup_disposition": 5
+  },
+  "limits": {
+    "api_configuration_requests": 1,
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "figures_visually_reviewed": false,
+    "full_corpus_goal_status": "OPEN",
+    "http_attempts": 8,
+    "issue_1040": "DEFERRED",
+    "manually_inspected_redirect_hops": 1,
+    "native_taxonomy_responses_reused": 5,
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "numeric_AST_variants_sequences_constructs_or_protocols_exported": false,
+    "retries": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0,
+    "supplements_reviewed": false,
+    "whole_record_primary_review": "OPEN"
+  },
+  "local_plan_helper_recoveries": [
+    {
+      "path": "reports/resistance-grounding-2026-10-14-ta289/local-helper-repair.json",
+      "sha256": "d0dbb502fad12862a88ac003b92bfae8f8d50407ca3fd751cad00faa14593387"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-ta289/local-helper-repair-2.json",
+      "sha256": "fb10dfe484880f082252af9ded9a4bacece35b49fd91e207fc3bcac6d08decd2"
+    }
+  ],
+  "primary_contexts": {
+    "2020": {
+      "2021_B_subtilis_modulation_and_2020_S_aureus_contexts_equated": false,
+      "PYRC_transcriptomics_transferred_to_equisetin": false,
+      "TA289_or_pyrrolocin_C_equated_to_equisetin": false,
+      "complete_common_mechanism_or_genetic_causality_established": false,
+      "context": "ACTIVITY_AND_BIOCHEMICAL_TARGET_EVIDENCE_NOT_RESISTANT_ALLELE",
+      "doi": "DOI:10.1371/journal.pone.0233485",
+      "donor_strain_resolved": false,
+      "enzyme_donor_species": "Escherichia coli",
+      "exact_binding_interaction_resolved": false,
+      "exact_tested_chemical_structure_independently_verified": false,
+      "inhibited_component": "biotin carboxylase",
+      "locations": {
+        "activity_scope": {
+          "normalized_text_sha256": "764bc8027ceabf11dfeb62dbd552fa1dcaac0837c98f891488b42fc7d2fefab1",
+          "xpath": "/article/body/sec[2]/sec[1]/p[1]"
+        },
+        "binding_unresolved": {
+          "normalized_text_sha256": "82cc2d8b1c2e0e25b2a5820264b8ee4c6e14255eaaade11b76fd59c6387839be",
+          "xpath": "/article/body/sec[3]/p[6]"
+        },
+        "component_comparison": {
+          "normalized_text_sha256": "130d836f096ca10574f005ece37a0be1669ac0fa1bfc0a1c43ebe7f300358925",
+          "xpath": "/article/body/sec[2]/sec[7]/p[2]"
+        },
+        "compound_distinction": {
+          "normalized_text_sha256": "29d95c2d39d4aee8cb05a8312637fce20d1c2103425f125c97eec254d2dacd2d",
+          "xpath": "/article/body/sec[3]/p[7]"
+        },
+        "enzyme_origin": {
+          "normalized_text_sha256": "9827e60fbddb48687789570bede62a88130ceac0137cbd684fa5d202f42781fa",
+          "xpath": "/article/body/sec[2]/sec[7]/p[1]"
+        },
+        "figure8_caption": {
+          "normalized_text_sha256": "e7f68b9214ce855027621fce0cf19e2479557aace7332ae990ca5102cfc8593d",
+          "xpath": "/article/body/sec[2]/sec[7]/fig/caption"
+        },
+        "metal_context": {
+          "normalized_text_sha256": "26cfd2f1fb72594ce3a15f57a1b8b02d0bc7ceb64a2ce9222babefe20aff5dfe",
+          "xpath": "/article/body/sec[2]/sec[3]/p"
+        },
+        "other_compound_transcriptomics": {
+          "normalized_text_sha256": "b9d43e02b9796c3076b29ff7935e944bb84e05ed750e92fc38bf6a56ff6b0109",
+          "xpath": "/article/body/sec[2]/sec[2]/p[1]"
+        }
+      },
+      "negative_comparator": "carboxyltransferase not inhibited in the reported comparison",
+      "other_ACC_inhibitor_alleles_transferred_to_equisetin": false,
+      "reference": "PMID:32470050",
+      "resistance_to_other_antibiotics_transferred_to_equisetin": false,
+      "scope": "SELECTED_PRIMARY_TEXT_NOT_COMPLETE_FIGURE_OR_SUPPLEMENT_REVIEW",
+      "source_IC90_converted_to_MIC": false,
+      "source_license": "CC BY 4.0"
+    },
+    "2024": {
+      "context": "MOUSE_3T3_L1_ADIPOCYTE_METABOLISM_NOT_MICROBIAL_SUSCEPTIBILITY",
+      "culture_antibiotics_are_susceptibility_observations": false,
+      "doi": "DOI:10.1016/j.heliyon.2024.e25458",
+      "host_AMPK_results_are_antibiotic_resistance_evidence": false,
+      "locations": {
+        "cell_model": {
+          "normalized_text_sha256": "c181252c49cc26378c22450c5191d0761691b06d850d9bd71cf89c40d91fe1e8",
+          "xpath": "/article/body/sec[2]/sec[2]/p"
+        },
+        "cell_origin": {
+          "normalized_text_sha256": "bc6ebd58f766cbdc43a1d68fd2fccb7994b802efe541e2d96a4f212dac42c1e9",
+          "xpath": "/article/body/sec[1]/p[4]"
+        },
+        "host_endpoint": {
+          "normalized_text_sha256": "ed89928c544f9133346d5d348d4a710497822d41e7d5a9affb345d40795bc4f7",
+          "xpath": "/article/body/sec[3]/sec[2]/p"
+        },
+        "host_pathway": {
+          "normalized_text_sha256": "dac2a0872a3e9717a9311c532b7aad422f2fa0e1ef59273547c7b03cd30621ad",
+          "xpath": "/article/body/sec[3]/sec[6]/p"
+        },
+        "insulin_context": {
+          "normalized_text_sha256": "235b10bb3a17b0018e573525572b55c6519255ee6da5b15dd55fd6db8fa9114b",
+          "xpath": "/article/front/article-meta/abstract[1]"
+        }
+      },
+      "reference": "PMID:38327434",
+      "resistance_term": "INSULIN_RESISTANCE_BACKGROUND_NOT_ANTIMICROBIAL_RESISTANCE",
+      "scope": "SELECTED_PRIMARY_TEXT_NOT_COMPLETE_FIGURE_OR_SUPPLEMENT_REVIEW",
+      "source_license": "CC BY-NC-ND 4.0",
+      "source_text_or_figures_redistributed": false,
+      "source_use": "REFERENCE_ONLY_NO_SOURCE_DATA_ADOPTION"
+    }
+  },
+  "primary_review_receipts": {
+    "2020": {
+      "path": "reports/resistance-grounding-2026-10-14-ta289/article-2020-reviewed.json",
+      "sha256": "79aa0338b101f8596085524612ff3f97d865546f428e89296bbe39d7bdc1ab70"
+    },
+    "2024": {
+      "path": "reports/resistance-grounding-2026-10-14-ta289/article-2024-reviewed.json",
+      "sha256": "f5af3aaf851d2a73f8a7c792971ca7a2a88a3a150f13eb3a430868328f9d206e"
+    }
+  },
+  "prior_checkpoint": {
+    "path": "research/2026-10-14-equisetin-context.json",
+    "sha256": "e2a21689e8eda90f041ca61e460c6c14da4568b90a6c9f09f934c5fbde71c237"
+  },
+  "query_interpretation": {
+    "empty_queries_establish_protein_absence": false,
+    "exact_organism_matches": 0,
+    "official_fields": [
+      {
+        "autoCompleteQueryTerm": "organism_id",
+        "label": "Organism [OS]",
+        "term": "organism_name"
+      },
+      {
+        "autoCompleteQueryTerm": "taxonomy_id",
+        "label": "Taxonomy [OC]",
+        "term": "taxonomy_name"
+      }
+    ],
+    "provider_suggested_other_PMID_followed": false,
+    "publication_matches": 0,
+    "taxonomy_scope_matches": 2,
+    "two_references_identify_one_experimental_protein": false
+  },
+  "record": {
+    "historical_snapshot": {
+      "path": "reports/resistance-grounding-2026-10-14-equisetin/CHEBI-142135-before.yaml",
+      "sha256": "25ff4496a027e2dd0c94810e189a2b06f71de2e284d1ae290c077c8f62a9df48"
+    },
+    "identifier": "CHEBI:142135",
+    "label": "equisetin",
+    "path": "data/antibiotics/antibacterial/equisetin.yaml",
+    "sha256": "25ff4496a027e2dd0c94810e189a2b06f71de2e284d1ae290c077c8f62a9df48",
+    "standard_inchi_key": "QNQBPPQLRODXET-HMHJLHGTSA-N"
+  },
+  "reference_proteins": [
+    {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.88.21.9730"
+            },
+            {
+              "database": "PubMed",
+              "id": "1682920"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1991"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/s0021-9258(18)48362-7"
+            },
+            {
+              "database": "PubMed",
+              "id": "1370469"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1992"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1126/science.277.5331.1453"
+            },
+            {
+              "database": "PubMed",
+              "id": "9278503"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/msb4100049"
+            },
+            {
+              "database": "PubMed",
+              "id": "16738553"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1002/elps.1150180807"
+            },
+            {
+              "database": "PubMed",
+              "id": "9298646"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1997"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1089/dna.1989.8.779"
+            },
+            {
+              "database": "PubMed",
+              "id": "2575489"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1989"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1021/bi00200a004"
+            },
+            {
+              "database": "PubMed",
+              "id": "7915138"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "1994"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.275.21.16183"
+            },
+            {
+              "database": "PubMed",
+              "id": "10821865"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2000"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1016/j.molcel.2006.04.026"
+            },
+            {
+              "database": "PubMed",
+              "id": "16793549"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2006"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1074/jbc.m805783200"
+            },
+            {
+              "database": "PubMed",
+              "id": "19213731"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2009"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 218,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "accC",
+        "fabG"
+      ],
+      "gene_symbol_is_verbatim_primary_paper_assignment": false,
+      "ordered_locus_names": [
+        "JW3224",
+        "b3256"
+      ],
+      "protein_accession": "UniProtKB:P24182",
+      "protein_name": "Biotin carboxylase",
+      "reference_organism_name": "Escherichia coli (strain K12)",
+      "reference_species_taxon_id": "NCBITaxon:562",
+      "reference_taxon_id": "NCBITaxon:83333",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Escherichia coli (strain K12)",
+      "role": "FUNCTION_AND_TAXONOMY_REFERENCE_NOT_TESTED_ENZYME_OR_RESISTANT_ALLELE",
+      "selected_pmid_in_returned_bibliography": false,
+      "sequence_version": 2,
+      "species_lineage_verified": true
+    },
+    {
+      "bibliography": [
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1038/35054089"
+            },
+            {
+              "database": "PubMed",
+              "id": "11206551"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2001"
+        },
+        {
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1093/dnares/8.1.11"
+            },
+            {
+              "database": "PubMed",
+              "id": "11258796"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2001"
+        }
+      ],
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 142,
+      "exact_resistance_allele": false,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "accC"
+      ],
+      "gene_symbol_is_verbatim_primary_paper_assignment": false,
+      "ordered_locus_names": [
+        "ECs4128",
+        "Z4616"
+      ],
+      "protein_accession": "UniProtKB:Q8X9B6",
+      "protein_name": "Biotin carboxylase",
+      "reference_organism_name": "Escherichia coli O157:H7",
+      "reference_species_taxon_id": "NCBITaxon:562",
+      "reference_taxon_id": "NCBITaxon:83334",
+      "reference_taxon_rank": "no rank",
+      "reference_taxon_scientific_name": "Escherichia coli O157:H7",
+      "role": "FUNCTION_AND_TAXONOMY_REFERENCE_NOT_TESTED_ENZYME_OR_RESISTANT_ALLELE",
+      "selected_pmid_in_returned_bibliography": false,
+      "sequence_version": 1,
+      "species_lineage_verified": true
+    }
+  ],
+  "scope": "PRIMARY_CONTEXT_AND_COMPONENT_REFERENCES_NOT_RESISTANCE_ALLELE_CURATION",
+  "sources": {
+    "article-2020": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2020-attempt.json",
+        "sha256": "62fbb876ffcb5bd44bdbc8017e7cabe616390b0a8968a4fb2f9f9ae4140aa412"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2020-response.bin",
+        "sha256": "15017d6d5ce400a443eca194d5f86fe9c5199287a1b19bba0d7370417d18d843"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2020-plan.json",
+        "sha256": "8aab57aa039b0d6a184849fffb727fa6f2aa9cc9eef6cff079502d5679eb01d8"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2020-receipt.json",
+        "sha256": "9c1b7272a9689b224d3585ed0631804b630d31d38dfb9cb402c6b9de91820f7f"
+      },
+      "retrieved_at": "2026-10-14T19:17:40.234131+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7259786/fullTextXML"
+    },
+    "article-2024": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2024-attempt.json",
+        "sha256": "16aed77b035f448c93827a0012f002f3804dd2c4d5f81942634085747cc5a213"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2024-response.bin",
+        "sha256": "a90f4acebb62434c2d1861697aab1d8add592b98f8978fd9500c65f922f036c6"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2024-plan.json",
+        "sha256": "a97053d769ea7cf7d808b25a0aac83417cd9450c3da05795846033d72b4de92a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/article-2024-receipt.json",
+        "sha256": "fe5c231010afd95093b5673ed1728df2b12a62c36685826f9e0d276d3cd4a205"
+      },
+      "retrieved_at": "2026-10-14T19:15:27.400022+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10847917/fullTextXML"
+    },
+    "primary-doi": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/primary-doi-attempt.json",
+        "sha256": "36082f30a5a811aa052821d793bd221ab4bff8a3c936036501214c0cf4f4d181"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/primary-doi-response.bin",
+        "sha256": "2fb39946f8bbdc90c6097622621d2cc4462d39e8b9eec089c3377a27a50aa446"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/request-plan.json",
+        "sha256": "e685ea0c4fe88dc5ec845036366f135d25fcebf1b75b6ff2ad611f5f4ca659e8"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/primary-doi-receipt.json",
+        "sha256": "cb3415367853613e1da574e10d2caf2bca6e6217ddf245441c29ef21b6a4edec"
+      },
+      "retrieved_at": "2026-10-14T19:14:16.385786+00:00",
+      "status": 302,
+      "url": "https://doi.org/10.1039/c3mb70056a"
+    },
+    "primary-publisher": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/primary-publisher-attempt.json",
+        "sha256": "32a3052769c18b29b1e40385c7e8e6a8719a8babe3c3aa4b082018b856baa0ad"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/primary-publisher-response.bin",
+        "sha256": "0a7336a5b8be316f39434531d68613eb992ca42008371c57db04daacb9da80e7"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/primary-publisher-plan.json",
+        "sha256": "a5c6e0ad6e6101194a5aca3551e22a331b57b395916fa1650780feb8db116629"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/primary-publisher-receipt.json",
+        "sha256": "cdbc2e1bc72c9a2696ac61621e993427c1b5298da6c6c6d1fea57e945a52b6b0"
+      },
+      "retrieved_at": "2026-10-14T19:14:36.447803+00:00",
+      "status": 403,
+      "url": "https://academic.oup.com/molecular-omics/article/9/8/2125/8348375"
+    },
+    "reference-2020": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-2020-attempt.json",
+        "sha256": "373fdb2014a4201378b52f58c1c38ce2c5a8089f315c0831adac82428ef65cc5"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-2020-response.bin",
+        "sha256": "a1d63393f138a32c894f4581d58c902492eab7d516e43ca572e1c05e88d7a804"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-2020-plan.json",
+        "sha256": "cd666cf8e670b4aa1e689b932a4f0be270d2b00c963a26dcb5a7683030b03592"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-2020-receipt.json",
+        "sha256": "bb8805568b180b664fa0ec17f482c1f916e9a30a41627c262e4a1fc17f8a8a57"
+      },
+      "retrieved_at": "2026-10-14T19:19:27.828551+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A32470050&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-function": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-function-attempt.json",
+        "sha256": "f2b99c9773e9b0d8673b23bb1cc608a19b806195d34c9f1c508cd89839fcfdc2"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-function-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-function-plan.json",
+        "sha256": "e2740ceb6b6b4e86cdaf125556299bff36d0d11f403203efdfa8f50360427bdc"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-function-receipt.json",
+        "sha256": "fe0db49931be210b27e6e5139e039fb7efc6ab1957916ddc6e6638a434ea5dc7"
+      },
+      "retrieved_at": "2026-10-14T19:20:57.907585+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22Biotin+carboxylase%22+AND+organism_id%3A562+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-taxonomy": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-taxonomy-attempt.json",
+        "sha256": "dbc192f3ccc311e147b8e962e7d7b26adad79bff0db578089425764bb90d8f75"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-taxonomy-response.bin",
+        "sha256": "60153123525c168068d0e5ee1e621f86cab6e8cdbfe8b0c4c94dd437f00374ad"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-taxonomy-plan.json",
+        "sha256": "c7c3f29d82c2ddc7f65d0309591d97124a127975099047cb5a02d67c8f1b8f4d"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/reference-taxonomy-receipt.json",
+        "sha256": "0abaefae40b947bfd94cf940310667d98ff5209923d4e4052194201f9f567d10"
+      },
+      "retrieved_at": "2026-10-14T19:23:42.159740+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22Biotin+carboxylase%22+AND+taxonomy_id%3A562+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "search-fields": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/search-fields-attempt.json",
+        "sha256": "06e306c06bcd5abc2e63342854fc0707731e1ae88747a67eeaaa10067f6abf8f"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/search-fields-response.bin",
+        "sha256": "13c58799b3599183693692182e2b2d0f1114ee8dc9ed892fa25beb2e6d617208"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/search-fields-plan.json",
+        "sha256": "8931847ece3a9ba23c4771396e66babf6e5fe18954f24e2f72ac8b6665acda38"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ta289/search-fields-receipt.json",
+        "sha256": "a22de5a749fd33e4c7d89cba0e95ce466e39d938e6a4e6c50294242eb234bdd2"
+      },
+      "retrieved_at": "2026-10-14T19:22:00.026853+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/configure/uniprotkb/search-fields"
+    }
+  },
+  "taxonomy_checkpoints": [
+    {
+      "path": "research/2026-10-14-card-reference-lineages.json",
+      "sha256": "55126bbdd99d5baf328a23dfd849d8db1365bab5fd24100e345f01c1fcb79d01"
+    },
+    {
+      "path": "research/2026-10-09-topoisomerase-reference-followup.json",
+      "sha256": "4aecf6ad46b502cc9610b26993fa0422fa0a92be8f85a62318e73b3994d199a4"
+    }
+  ],
+  "taxonomy_sources": {
+    "1280": {
+      "body": null,
+      "body_sha256": "faf940b385a99d02c1929991a8dd5cd3ba875441b30daf7d6b6504e8daef8cee",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-6b6dc1aedebe915f5253b6121f26cf47def70642fbc6e6582930b31c43b5c0ae.json",
+        "sha256": "22a736d90148316ffa903792eae95b75f73960386ba10dddff004d40e8226c10"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:04:45.017499+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/1280"
+    },
+    "1351": {
+      "body": null,
+      "body_sha256": "a2bdb765e250e5ed552c3511c36c9052f73bf54b5502e248b0be0a3dfc302ef4",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-33c25f76b8f5cccda53e6ed08dafbeab75d97faa17f39f1e85ad0663a85434b0.json",
+        "sha256": "8f21bd5cf03a6bcee2c8a5fe983e8c8ccef74a00bda83b28d62af6f7f03d0a3d"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:04:56.555730+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/1351"
+    },
+    "562": {
+      "body": null,
+      "body_sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-b37438d139cabeff14d8fff73da60ff02883c14f8607f400fe790db4799cc9ac.json",
+        "sha256": "56c5cdcec44f05a573796c091acdccc5142f9cc7eeef32a72ebb0bdeab0f6b40"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:04:03.650418+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/562"
+    },
+    "83333": {
+      "body": null,
+      "body_sha256": "83c59ae9694d1874b8a175d7ce7608f77f5688d35adf307a0859dbb20f9e1c17",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-07/request-5bb14d6f1fb091d5ec596c51990d122b059d006670135e99c308ef0bb1eb7734.json",
+        "sha256": "50bb456e3ae9c94ef4070970795c8628009cd5042ab742a754c828b235712eec"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:06:47.223414+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/83333"
+    },
+    "83334": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-83334-response.bin",
+        "sha256": "8a22ae71ff5a8b8fac877f045fcd02598ec70eb7de80210bffb02068293a7de9"
+      },
+      "body_sha256": "8a22ae71ff5a8b8fac877f045fcd02598ec70eb7de80210bffb02068293a7de9",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-83334-receipt.json",
+        "sha256": "000ecaf6e78dcdb26f8b6e0883e8c1804a9a335c1556f1ec2251b2b789027729"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-10T04:04:50.335802+00:00",
+      "url": "https://rest.uniprot.org/taxonomy/83334"
+    }
+  }
+}

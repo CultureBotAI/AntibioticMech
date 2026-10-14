@@ -1,0 +1,120 @@
+{
+  "assay_species_grounded": "NCBITaxon:1423",
+  "automatic_redirects": 0,
+  "baseline_commit": "a34402b45acbd069fbc0a0d5d7d5400103faff32",
+  "biological_record_hash_drift": 0,
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-equisetin/cohort.json",
+    "sha256": "dfd4bad7054379a49846f546178b19fb1bfa8f58924d33b36c404fae2936a61c"
+  },
+  "commands_passed": [
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "check",
+      "."
+    ],
+    [
+      ".venv/bin/python",
+      "-m",
+      "ruff",
+      "format",
+      "--check",
+      "scripts/audit_equisetin_context.py",
+      "tests/test_equisetin_context.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--check"
+    ]
+  ],
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-reference-citation-resistance-grounding.tsv",
+    "sha256": "5e37b4d2ee3a7bafab7d173896dcb084b0444e2f06c02f49542eda866109524a"
+  },
+  "date": "2026-10-14",
+  "embedding_files_unchanged": true,
+  "embedding_refresh_required": false,
+  "experimental_strain_taxon_protein_and_genome_assignments": 0,
+  "figures_visually_reviewed": false,
+  "files": [
+    {
+      "path": "scripts/audit_equisetin_context.py",
+      "sha256": "872c0c808b1a84553ca1d5bb55ceca70d81be6949569ffe01eded67bc07a07c1"
+    },
+    {
+      "path": "tests/test_equisetin_context.py",
+      "sha256": "d176cec7738c5a202549f33bdf65ee9b65e74d70afa9c47c141d07c12546914e"
+    },
+    {
+      "path": "research/2026-10-14-equisetin-context.json",
+      "sha256": "e2a21689e8eda90f041ca61e460c6c14da4568b90a6c9f09f934c5fbde71c237"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "b781bdb0fa57378ed1b77ed02ad0485157eebace927539d582448dba5dfd5bc3"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "full_qc_scope_note": "No biological or generated artifacts changed in this continuation. Focused and dependency regression checks do not renew the earlier full-QC receipt.",
+  "github_mutations": 0,
+  "http_status_counts": {
+    "200": 1
+  },
+  "issue_1040": "DEFERRED",
+  "main_report_changes_are_exactly_the_new_section": true,
+  "native_taxonomy_responses_reused": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_assertions": 0,
+  "new_uniprot_requests": 0,
+  "numeric_AST_or_variant_sequence_construct_or_protocol_exports": false,
+  "offline_replay": "PASS",
+  "prior_source_holds_preserved": true,
+  "prior_uncommitted_work_preserved": true,
+  "producer_locus_or_related_compound_evidence_transferred_to_equisetin": false,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-equisetin/protected-before.json",
+    "sha256": "fbc0ac79a89ae8fc196cbcccf66a5e1c4ee094dc461a0d7ce59808bbb531f049"
+  },
+  "protected_files_checked": 7588,
+  "remaining_candidate_identities_unreviewed": 7,
+  "retained_candidate_identities": 8,
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scientific_http_attempts": 1,
+  "scope": "READ_ONLY_EXACT_COMPOUND_PRIMARY_CONTEXT_CHECKPOINT",
+  "scoped_primary_text_reviews": 1,
+  "source_adoptions": 0,
+  "source_strain_label": "ATCC 6051",
+  "structured_research_exports_source_inputs_and_generated_pages_preserved": true,
+  "supplements_reviewed": false,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 32,
+      "path": "reports/resistance-grounding-2026-10-14-equisetin/focused-tests.xml",
+      "sha256": "e990d71196f04cdec8f5b3a09bca253ee99ac7e07337f956baca41afc214bd35",
+      "skipped": 0,
+      "tests": 32
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "passed": 490,
+      "path": "reports/resistance-grounding-2026-10-14-equisetin/expanded-tests.xml",
+      "sha256": "3c18113f51a8417ac68dced3223bfdf916a7b5c71758e817b54daa047e1f0bbf",
+      "skipped": 0,
+      "tests": 490
+    }
+  ],
+  "whole_record_primary_signoffs": 0
+}

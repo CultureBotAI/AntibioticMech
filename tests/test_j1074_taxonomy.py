@@ -14,6 +14,7 @@ from antibioticmech.activity_collections import load_record
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import audit_j1074_taxonomy as audit  # noqa: E402
+from resistance_checkpoint_records import checkpoint_path  # noqa: E402
 from seed_from_sources import merge_with_existing  # noqa: E402
 
 
@@ -120,12 +121,12 @@ def test_claim_scope_drift_is_not_automatically_grounded(change):
         audit.grounded_claims(identifier, [claim])
 
 
-def test_live_curation_changes_species_context_only():
+def test_historical_curation_changes_species_context_only():
     receipt = json.loads((ROOT / "research/2026-10-14-j1074-curation.json").read_bytes())
     assert receipt["records_changed"] == 3 and receipt["claims_grounded"] == 5
     for row in receipt["records"]:
         before = load_record(ROOT / row["fixture"]["path"])
-        after = load_record(ROOT / row["after"]["path"])
+        after = load_record(checkpoint_path(ROOT, {**row["after"], "identifier": row["identifier"]}))
         expected = audit.grounded_claims(row["identifier"], before["resistance_mechanisms"])
         assert after["resistance_mechanisms"] == expected
         assert after["curation_history"] == [*before["curation_history"], row["curation_event"]]
