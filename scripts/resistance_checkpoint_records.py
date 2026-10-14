@@ -8,6 +8,10 @@ FLUCYTOSINE_SHA256 = "4ffd0f50d00448664a2aec8b152d62231ec7c6fabc5e91a67fc42c27a3
 CLOTRIMAZOLE_PATH = "data/antibiotics/antifungal/clotrimazole.yaml"
 CLOTRIMAZOLE_FIXTURE = "tests/fixtures/clotrimazole-before-2026-10-13.yaml"
 HISTORICAL_RECORDS = {
+    "d08fcf405a7209c76c0f33749e3aa7a609504eff8c6de91737cc5f8e05c5b15c": (
+        "CHEBI:16842", "data/antibiotics/biocide/formaldehyde.yaml",
+        "tests/fixtures/formaldehyde-before-2026-10-14.yaml",
+    ),
     "ac88ec7d91f9fe520740a84623e1024bfce36c338d16da4c63398a5f2079466e": (
         "CHEBI:172943", "data/antibiotics/antiviral/bictegravir.yaml",
         "tests/fixtures/bictegravir-before-2026-10-14.yaml",
