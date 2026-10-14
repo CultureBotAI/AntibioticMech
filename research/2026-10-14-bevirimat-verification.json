@@ -1,0 +1,214 @@
+{
+  "census": {
+    "path": "research/2026-10-14-bevirimat-resistance-grounding.tsv",
+    "sha256": "8a6f419ca0fa0c8bd4e18bc4c4dfbb23601bc3a84c2b8d51f8bbd1e44e3004e6"
+  },
+  "curation": {
+    "path": "research/2026-10-14-bevirimat-curation.json",
+    "sha256": "f976d17981842ced3d851dc5be597c968a84a71e628ea3283f4aae291501c0fe"
+  },
+  "embedding_preservation": {
+    "artifacts_byte_identical": {
+      "chemical-structure-map.json": "ea76a56a84e3e49cf27556d57c3777105c82447a15ab349d906f1e44ff8c2eab",
+      "corpus_map.json": "ef954281e5125369598bc6a7e30bb28bc60ff9cabe7eaa412175da947e665eff",
+      "ids.json": "372bb8d3da2616edb4dc6ea3e0d075b56b658b9bfe4e2b0c1925b5f5fb862d5a",
+      "meta.json": "a83078317840fb5150e585998f02eaec6d7764c5df8ed57b563ada4ec08d50a3",
+      "records.json": "c80e32a27a8b0af9e7e5455f3666e822ac4378bf8c6e4b10ca8d93753c93278d",
+      "vectors.f16.npy": "9b269d508b5ca9f0494702efe9d08684f33fc7265a64be81bdb707c497372a96"
+    },
+    "baseline_sha256": "3b8b65bcd1443b5a75f9788788ca30daa596cb01b923acbf26f43457ff4bb948",
+    "byte_identical_documents": 2939,
+    "changed_documents": [],
+    "documents_compared": 2939,
+    "encoding_or_projection_performed": false,
+    "fingerprint": "fc78c5005699217c",
+    "initial_encode_guard": "Stopped before model loading because no embedded document changed.",
+    "proof": {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/embedding-stage/unchanged-proof.json",
+      "sha256": "071240b5f5e396549ed4bf52aedba0500191c56f2d58ad2ec06b87e356632be5"
+    },
+    "reason": "Only taxonomy, note, evidence and history changed; the existing builder uses resistance labels, not those fields."
+  },
+  "field_index": {
+    "path": "research/2026-10-14-bevirimat-curator-resistance-fields.json",
+    "sha256": "1f9eaf5ff6864cf0c9701997a4a051ec22af8dc4097bdc83afab6bb1daf960a7"
+  },
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/focused-tests.xml",
+      "sha256": "f9b89882506a8fa7fd09f3fc265b79a2db7a183d684d3e6bc572520056eb7510"
+    },
+    "passed": 331,
+    "skip_reasons": [],
+    "skipped": 0,
+    "tests": 331
+  },
+  "full_authoritative_qc": {
+    "exit_receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/full-qc-exit.json",
+      "sha256": "cb39e8faaed18fa9c7a915062e757522cf724ab1cb4bb3fbbf02ef9e96bf3ce8"
+    },
+    "gates": [
+      "PathwayMech links",
+      "lint",
+      "documentation",
+      "raw-data provenance",
+      "source queue",
+      "curator antibiotic structures",
+      "tests",
+      "schema validation",
+      "corpus reproduction",
+      "chemical map",
+      "generated site",
+      "corpus report"
+    ],
+    "log": {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/full-qc.log",
+      "sha256": "17c47c5ec1576eac9dd9e1e4a947a55216fe014dbc96b433d86459caea5b6289"
+    },
+    "pinned_environment_reproduced": false,
+    "runner": {
+      "path": "scripts/run_qc.py",
+      "sha256": "14c7eb66f38c078e2fe51331e98525a1bc5e189894b5e4ba22564ad6c85095d2"
+    },
+    "runtime_limitation": "Local RDKit differs from project pin. Chemical map checked, not recomputed.",
+    "status": "PASS",
+    "tests": {
+      "errors": 0,
+      "failures": 0,
+      "junit": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/full-tests.xml",
+        "sha256": "9ca59916c1748f18e91cc4771ec752dc0ae3c098778cf66f5974ddd0328eea44"
+      },
+      "passed": 4640,
+      "skip_reasons": [
+        {
+          "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+          "test": "tests.test_card_structure_links::test_cached_export_reproduces_when_research_cache_is_available"
+        },
+        {
+          "reason": "got empty parameter set for (path)",
+          "test": "tests.test_skill_frontmatter::test_command_frontmatter_has_no_duplicate_keys[NOTSET]"
+        },
+        {
+          "reason": "got empty parameter set for (path)",
+          "test": "tests.test_skill_frontmatter::test_command_frontmatter_is_valid_yaml[NOTSET]"
+        },
+        {
+          "reason": "got empty parameter set for (path)",
+          "test": "tests.test_skill_frontmatter::test_command_declares_a_usable_description[NOTSET]"
+        }
+      ],
+      "skipped": 4,
+      "tests": 4644
+    }
+  },
+  "implementation": [
+    {
+      "path": "scripts/audit_bevirimat_taxonomy.py",
+      "sha256": "91017a231478713bf09584bcc98487e9c1d5d530712c5469d85da6e335bbf1b2"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "db13e66f35264f828c5a3007d2b74b9b13a9eaa0feb22222d7cc613c0254aa8d"
+    },
+    {
+      "path": "scripts/summarize_resistance_progress.py",
+      "sha256": "dc7139cb875fdf612a535b0d46a58e42886d414a6ed3f54fe319ef88b3b7578b"
+    },
+    {
+      "path": "scripts/resistance_checkpoint_records.py",
+      "sha256": "a3484439b3fec3ac47e6317d4cd0bcaa07079c654d37571a4fa6bd7cb29c754f"
+    },
+    {
+      "path": "tests/test_bevirimat_taxonomy.py",
+      "sha256": "3d4c6b695f2b1e756898e090934efb6a1690042f3d27062b6e49752f1637567f"
+    },
+    {
+      "path": "tests/test_curator_resistance_fields.py",
+      "sha256": "69023f8acae1d99829a6ce2d2a8a90ca8aa782c416c70812ab5116cb870ac034"
+    }
+  ],
+  "limits": {
+    "exact_compound_form_newly_resolved": false,
+    "experimental_alleles_assigned": 0,
+    "experimental_genomes_or_samples_assigned": 0,
+    "full_corpus_records_in_scope": 2939,
+    "github_mutations": 0,
+    "held_scientific_sources_retried": false,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "native_figures_visually_reviewed": false,
+    "native_scientific_requests": 4,
+    "ncbi_requests": 0,
+    "new_resistance_claims": 0,
+    "numeric_AST_sequences_variants_or_constructs_exported": false,
+    "primary_2009_results_reviewed": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "native_source_receipts": [
+    {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/gag-reference-receipt.json",
+      "sha256": "7cf119357f01e5d97551c7e4f822598bab7d44518de0d065d880ae2316bd7889"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/nl43-taxonomy-receipt.json",
+      "sha256": "c5feb7e849a3378cb5cbf93d3f79af95f5bb671ee40525603eddf442d0c98057"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/primary-2010-receipt.json",
+      "sha256": "2fedd1f371e8bafeaa3f1e8f409e9e1a87c494be126ef36bf49b7ee9cdcd23b4"
+    },
+    {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-receipt.json",
+      "sha256": "ab456a137872c95a5f23ff55b60db0f835d9b4500a416452516bd1f042a5595c"
+    }
+  ],
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-bevirimat/protected-before.json",
+      "sha256": "9a8b107cc244ae722ab00f580b26b044b222e4ed59556dfbf26217b81dc2c9df"
+    },
+    "changed_existing_files": [
+      "data/antibiotics/antiviral/bevirimat.yaml",
+      "pages/antiviral/bevirimat.html",
+      "research/2026-10-07-resistance-gene-grounding.md",
+      "scripts/audit_curator_resistance_fields.py",
+      "scripts/resistance_checkpoint_records.py",
+      "scripts/summarize_resistance_progress.py",
+      "tests/test_curator_resistance_fields.py"
+    ],
+    "existing_files_checked": 7265,
+    "prior_checkpoints_and_source_inputs_unchanged": true,
+    "rendered_species_cell_verified": true,
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "unchanged_record_files": 2938
+  },
+  "progress": {
+    "path": "research/2026-10-14-bevirimat-resistance-progress.json",
+    "sha256": "ffa79dd8fa56bf5d576469a89bea006728c35d2d86683701db7fe458fdd6b539"
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "a5469791552f8d22939e6a79b199ccc899700afb43dd29227f75e5cfa78e8bbc"
+  },
+  "same_agent_adversarial_review": [
+    "HIV-1's unranked name node and active species node are distinct; neither identifies a derivative.",
+    "The 2010 primary context supports lineage grounding, not fresh validation of all inherited variants.",
+    "Empty reference searches are not absence; no HXB2 or HIVDB consensus substitution.",
+    "All original claim fields and citations remain, apart from the explicitly additive species context.",
+    "Historical fixtures preserve earlier audits; the live correction and idempotent replay were tested.",
+    "All embedding strings and artifacts are unchanged; an early guard prevented unnecessary encoding."
+  ],
+  "scope": "ONE_EXISTING_CLAIM_SPECIES_GROUNDING_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+  "taxonomy": {
+    "path": "research/2026-10-14-bevirimat-taxonomy.json",
+    "sha256": "2341d1e997c325a3e9c593328ed5e3f03fe78fff7c8353ccb35ca10f9d4368ec"
+  }
+}

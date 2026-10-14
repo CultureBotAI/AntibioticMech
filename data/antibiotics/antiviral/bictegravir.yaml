@@ -968,12 +968,28 @@ resistance_mechanisms:
   label: HIV-1 integrase M50I/R263K substitutions
   gene_families:
   - HIV-1 integrase
-  note: The dual integrase substitutions were selected during in-vitro dose escalation
+  note: 'The dual integrase substitutions were selected during in-vitro dose escalation
     and produced 2.8-fold reduced bictegravir susceptibility relative to wild-type
-    virus.
+    virus. Species-grounding update (2026-10-14): the existing laboratory HIV-1 claim
+    is placed in Lentivirus humimdef1 (NCBITaxon:3418650). The cited paper''s Results
+    distinguish selected viral populations, site-directed test viruses and patient-derived
+    isolates; these are not interchangeable experimental subjects. This species-only
+    update does not independently revalidate the inherited variant or quantitative
+    statement, establish the tested compound''s exact formulation, or assign a protein
+    accession, strain TaxID, experimental genome, patient identity or normalized allele.
+    UniProt''s HIV-1 name node NCBITaxon:11676 is unranked beneath this species.'
   evidence:
   - reference: PMID:27645238
     notes: Primary in-vitro selection and phenotypic-susceptibility study.
+  - reference: https://rest.uniprot.org/taxonomy/3418650
+    notes: 'Species context only: native UniProt Taxonomy release 2026_03 responses
+      for 11676 (retrieved 2026-10-08) and 3418650 (retrieved 2026-10-14) place the
+      active HIV-1 name node under active species Lentivirus humimdef1. Cached responses
+      were reused, not newly queried. PMID:27645238 Results identify HIV-1 in the
+      laboratory comparison behind the existing claim. Taxonomy does not identify
+      the tested derivative or establish an experimental protein, allele or genome.'
+  taxon_id: NCBITaxon:3418650
+  taxon_label: Lentivirus humimdef1
 curation_history:
 - timestamp: '2026-08-30T01:42:41Z'
   curator: seed_from_sources
@@ -1003,3 +1019,15 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
     Upstream retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-14T10:55:30Z'
+  curator: codex
+  action: GROUNDED_RESISTANCE_TAXONOMY
+  changes: Grounded the existing bictegravir laboratory HIV-1 resistance claim at
+    species rank as Lentivirus humimdef1 (NCBITaxon:3418650), using PMID:27645238
+    primary Results organism context and cached UniProt taxonomy release 2026_03.
+    Preserved inherited claim wording, mechanism, gene-family label, quantitative
+    statement and citation. Distinguished selected populations, test viruses and patient-derived
+    isolates without assigning an experimental protein, strain, allele or genome.
+    No new variants or numeric AST were added; exact formulation and whole-record
+    primary review remain open.
+  llm_assisted: true

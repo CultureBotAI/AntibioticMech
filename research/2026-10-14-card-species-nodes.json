@@ -1,0 +1,4676 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "license_url": "https://www.uniprot.org/help/license",
+    "slice": "Explicit CARD cross-references in UniProt; card.json was not requested or imported.",
+    "source": "UniProt Consortium, UniProtKB and UniProt Taxonomy"
+  },
+  "constraints": {
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "held_source_retries": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 34,
+    "new_primary_reviews": 0,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-14",
+  "inputs": {
+    "batch_terminal": {
+      "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/batch-terminal.json",
+      "sha256": "f6dd3f84bbf525707213baa508f6e829ca85e91d77fbe4e979438e91a399e4ea"
+    },
+    "canary": {
+      "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/canary-reviewed.json",
+      "sha256": "a26a7661e1b75697d3fbdf2b5eaae50da4daed3849111d9f4defe4a28079f79c"
+    },
+    "census": {
+      "path": "research/2026-10-14-bevirimat-resistance-grounding.tsv",
+      "sha256": "8a6f419ca0fa0c8bd4e18bc4c4dfbb23601bc3a84c2b8d51f8bbd1e44e3004e6"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/cohort.json",
+      "sha256": "f4e742bd6b0ba7b9a730fd7948dd03488aff52b23313ada908d06b53e666c06d"
+    },
+    "prior": {
+      "path": "research/2026-10-14-card-reference-lineages.json",
+      "sha256": "55126bbdd99d5baf328a23dfd849d8db1365bab5fd24100e345f01c1fcb79d01"
+    },
+    "prior_checkpoint": {
+      "path": "research/2026-10-14-card-reference-lineages-verification.json",
+      "sha256": "5c2bc0f3efee7e18ee360bb224c43fa3e0ba2aaa890caaac255ac9269bed395c"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limitations": [
+    "Standalone species evidence closes only the selected reference-taxonomy metadata gap.",
+    "All original gene, allele, primary-evidence, exact-compound and experimental-subject gaps remain.",
+    "The prior lineage-only dossier is preserved as its historical snapshot; this is its successor.",
+    "Species status does not assign a resistant isolate or prove a species-wide phenotype.",
+    "All candidate protein accessions, versions and citation-context pointers are unchanged.",
+    "Source aliases, strain lists and statistics from species responses are not experimental mappings.",
+    "No protein, sequence, variant, assay, sample or genome query or biological write occurred."
+  ],
+  "proteins": {
+    "UniProtKB:A0A0H3EDP3": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A0H3EDP3",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 51,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1681",
+      "reference_taxon_id": "NCBITaxon:702459",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A0H3G6K4": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A0H3G6K4",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 35,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:29461",
+      "reference_taxon_id": "NCBITaxon:204722",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A0K2B058": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A0K2B058",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 41,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1889",
+      "reference_taxon_id": "NCBITaxon:278992",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A0K2B0L6": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A0K2B0L6",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 44,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1889",
+      "reference_taxon_id": "NCBITaxon:278992",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A0K2B0Q1": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A0K2B0Q1",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 43,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1889",
+      "reference_taxon_id": "NCBITaxon:278992",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A0K2B0W1": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A0K2B0W1",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 43,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1889",
+      "reference_taxon_id": "NCBITaxon:278992",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A1M7HJQ7": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A1M7HJQ7",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 28,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:264463",
+      "reference_taxon_id": "NCBITaxon:1120996",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A1M7HJT6": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A1M7HJT6",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 27,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:264463",
+      "reference_taxon_id": "NCBITaxon:1120996",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A1U7Q156": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A1U7Q156",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 17,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:421530",
+      "reference_taxon_id": "NCBITaxon:1121284",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A2R4BSJ9": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A2R4BSJ9",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 18,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:59405",
+      "reference_taxon_id": "NCBITaxon:44139",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A829QAF6": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A829QAF6",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 15,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:36809",
+      "reference_taxon_id": "NCBITaxon:1299324",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0A9X6IXB2": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0A9X6IXB2",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 11,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1428",
+      "reference_taxon_id": "NCBITaxon:132264",
+      "reference_taxon_rank": "no rank",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0AA42KJC0": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0AA42KJC0",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 12,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:94625",
+      "reference_taxon_id": "NCBITaxon:2975438",
+      "reference_taxon_rank": "subspecies",
+      "sequence_version": 1
+    },
+    "UniProtKB:A0AAV3BDF9": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A0AAV3BDF9",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 8,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:632",
+      "reference_taxon_id": "NCBITaxon:373665",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A5I5U3": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A5I5U3",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 100,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1491",
+      "reference_taxon_id": "NCBITaxon:441771",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:A7Z1T2": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:A7Z1T2",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 106,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:492670",
+      "reference_taxon_id": "NCBITaxon:326423",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:B1MCI3": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:B1MCI3",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 99,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:36809",
+      "reference_taxon_id": "NCBITaxon:561007",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:B2RI48": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:B2RI48",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 65,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:837",
+      "reference_taxon_id": "NCBITaxon:431947",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:B2TTK5": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:B2TTK5",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 87,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:621",
+      "reference_taxon_id": "NCBITaxon:344609",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:C1CH31": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:C1CH31",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 79,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1313",
+      "reference_taxon_id": "NCBITaxon:488222",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:C7MEP1": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:C7MEP1",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 69,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:43669",
+      "reference_taxon_id": "NCBITaxon:446465",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:D3HKY4": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:D3HKY4",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 88,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:450",
+      "reference_taxon_id": "NCBITaxon:661367",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:D8L9Y9": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:D8L9Y9",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 55,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:196",
+      "reference_taxon_id": "NCBITaxon:32019",
+      "reference_taxon_rank": "subspecies",
+      "sequence_version": 1
+    },
+    "UniProtKB:E6ZYG3": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:E6ZYG3",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 48,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:72558",
+      "reference_taxon_id": "NCBITaxon:999809",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:E8LGK3": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:E8LGK3",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 64,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:626940",
+      "reference_taxon_id": "NCBITaxon:626939",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:F3ZTT0": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:F3ZTT0",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 47,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:151276",
+      "reference_taxon_id": "NCBITaxon:679937",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:F3ZU25": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:F3ZU25",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 59,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:151276",
+      "reference_taxon_id": "NCBITaxon:679937",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:N8ZRE3": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:N8ZRE3",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 42,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:202952",
+      "reference_taxon_id": "NCBITaxon:1120926",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:O25793": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:O25793",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 133,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:210",
+      "reference_taxon_id": "NCBITaxon:85962",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:P07287": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:P07287",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 157,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1836",
+      "reference_taxon_id": "NCBITaxon:405948",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 2
+    },
+    "UniProtKB:P09891": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:P09891",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 91,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:2041",
+      "reference_taxon_id": "NCBITaxon:31956",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:P0A4K5": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:P0A4K5",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 108,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1313",
+      "reference_taxon_id": "NCBITaxon:171101",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:P23364": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:P23364",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 127,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1176649",
+      "reference_taxon_id": "NCBITaxon:176299",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q32E34": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q32E34",
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 113,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:622",
+      "reference_taxon_id": "NCBITaxon:300267",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q3IVS9": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q3IVS9",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 92,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1063",
+      "reference_taxon_id": "NCBITaxon:272943",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q49VA0": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q49VA0",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 88,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:29385",
+      "reference_taxon_id": "NCBITaxon:342451",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q53019": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q53019",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 98,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:38293",
+      "reference_taxon_id": "NCBITaxon:38294",
+      "reference_taxon_rank": "subspecies",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q7AJZ0": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q7AJZ0",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 67,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:86665",
+      "reference_taxon_id": "NCBITaxon:272558",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q7CUB3": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q7CUB3",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 117,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1176649",
+      "reference_taxon_id": "NCBITaxon:176299",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q8DPW8": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q8DPW8",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 115,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1313",
+      "reference_taxon_id": "NCBITaxon:171101",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:Q9CD24": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:Q9CD24",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 107,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:1769",
+      "reference_taxon_id": "NCBITaxon:272631",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:S3N4B0": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:S3N4B0",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 43,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:632955",
+      "reference_taxon_id": "NCBITaxon:421052",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    },
+    "UniProtKB:U2NQD4": {
+      "citation_context_input": "contexts",
+      "citation_context_pointer": "/proteins/UniProtKB:U2NQD4",
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 26,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "reference_species_taxon_id": "NCBITaxon:305719",
+      "reference_taxon_id": "NCBITaxon:1115809",
+      "reference_taxon_rank": "strain",
+      "sequence_version": 1
+    }
+  },
+  "records": [
+    {
+      "identifier": "antibioticmech:aro-e4e652725f",
+      "path": "data/antibiotics/antibacterial/6-n-ethylnetilmicin.yaml",
+      "sha256": "12b0e7a968e0476c33edd98091bfb0509fcd9ff52edd9b49530810eb73623a0f",
+      "standard_inchi_key": "RZXCDENQJDMFQY-OLUUFXIRSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:2637",
+      "path": "data/antibiotics/antibacterial/amikacin.yaml",
+      "sha256": "8391a6c8efb2240012e1800d45ca715f729218336c3f5c976c5e8747ee3be930",
+      "standard_inchi_key": "LKCWBDHBTVXHDL-RMDFUYIESA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:2676",
+      "path": "data/antibiotics/antibacterial/amoxicillin.yaml",
+      "sha256": "1b0c83e57bdf4638c6b39f98f2f498527d2608cd330df324c3367530d4ec5447",
+      "standard_inchi_key": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:135238",
+      "path": "data/antibiotics/antibacterial/azidamfenicol.yaml",
+      "sha256": "75617cbdd690d915e9b4996dadcb8b413ac2becee017147d992bc49407e4965c",
+      "standard_inchi_key": "SGRUZFCHLOFYHZ-MWLCHTKSSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:2955",
+      "path": "data/antibiotics/antibacterial/azithromycin.yaml",
+      "sha256": "3b6f8f139da665be8e33d6db6500c3fd019d12510b99fe586b28567bc2450d51",
+      "standard_inchi_key": "MQTOSJVFKKJCRP-BICOPXKESA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:18208",
+      "path": "data/antibiotics/antibacterial/benzylpenicillin.yaml",
+      "sha256": "f1ff4843aba6b5b3ab935eeb17487097fe1ee20cafc719a5198d5a1c6f76c9ab",
+      "standard_inchi_key": "JGSARLDLIJGVTE-MBNYWOFBSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-27630f7c54",
+      "path": "data/antibiotics/antibacterial/carbomycin.yaml",
+      "sha256": "3c307b032507595363924a312954a8a70c669217bd9696ac6fe382a0e5bc3fe4",
+      "standard_inchi_key": "FQVHOULQCKDUCY-OGHXVOSASA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:124991",
+      "path": "data/antibiotics/antibacterial/cefalotin.yaml",
+      "sha256": "d3bcac46436b8e693f0d1ec4dbb584e733f11e37714468818058aeb8274cc028",
+      "standard_inchi_key": "XIURVHNZVLADCM-IUODEOHRSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:204928",
+      "path": "data/antibiotics/antibacterial/cefotaxime.yaml",
+      "sha256": "6c6123a1ec4ce59dc566a304b64b13efdc188ed01479c4fb2487633b5fc128b5",
+      "standard_inchi_key": "GPRBEKHLDVQUJE-QSWIMTSFSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:3508",
+      "path": "data/antibiotics/antibacterial/ceftazidime.yaml",
+      "sha256": "51c8151de51d168a17f89ac72d4a11ac67ca40f881071d1061476444f1332ac1",
+      "standard_inchi_key": "ORFOPKXBNMVMKC-DWVKKRMSSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:3515",
+      "path": "data/antibiotics/antibacterial/cefuroxime.yaml",
+      "sha256": "633e9f37482c6b643158430610d339544eee02cfd4b2b390ad41c1305078e713",
+      "standard_inchi_key": "JFPVXVDWJQMJEE-IZRZKJBUSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:80016",
+      "path": "data/antibiotics/antibacterial/chalcomycin.yaml",
+      "sha256": "fde1fffcdd4830fe0fc3736e6019c14bf0ea9f7ac8c0a237ca67d5bfe3b79015",
+      "standard_inchi_key": "KLGADJPDTCIJLO-LJUCOGSUSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:17698",
+      "path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+      "sha256": "aa85b6ffcb39d19950f2c8397ec4c37d5472a959130a79eb1d27aecb62404498",
+      "standard_inchi_key": "WIIZWVCIJKGZOK-RKDXNWHRSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:27644",
+      "path": "data/antibiotics/antibacterial/chlortetracycline.yaml",
+      "sha256": "a7c816be91942bd441b54611580cb972ea5d91ebdf566af54c7fea5ed23aa4a0",
+      "standard_inchi_key": "CYDMQBQPVICBEU-XRNKAMNCSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:100241",
+      "path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:3732",
+      "path": "data/antibiotics/antibacterial/clarithromycin.yaml",
+      "sha256": "ab9144b6a1b21521e7166f05819d832e9ce4d127438ac1aa1e2e9f82d02a453c",
+      "standard_inchi_key": "AGOYDEPGAOXOCK-KCBOHYOISA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:3745",
+      "path": "data/antibiotics/antibacterial/clindamycin.yaml",
+      "sha256": "042c20cb84653c1aa1357fbc742c00835bca1ab71f79c95131c71ad5589bb8e7",
+      "standard_inchi_key": "KDLRVYVGXIQJDK-AWPVFWJPSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:4309",
+      "path": "data/antibiotics/antibacterial/dalfopristin.yaml",
+      "sha256": "8b9ccad82274b5dd01563bba31e463940b3d61150d51e711ed24bfac81aebdd8",
+      "standard_inchi_key": "SUYRLXYYZQTJHF-VMBLUXKRSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-eb42322815",
+      "path": "data/antibiotics/antibacterial/defensin.yaml",
+      "sha256": "a769fd3725efdb38352c315dcd5381968a50c6e881203c013476000d0189d9c3",
+      "standard_inchi_key": "ZKALIGRYJXFMNS-XBDDSDALSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:4392",
+      "path": "data/antibiotics/antibacterial/demeclocycline.yaml",
+      "sha256": "2816d588aa9ff3e61c566f785c7c3f540b169bb316f78d719e664bb17916d813",
+      "standard_inchi_key": "FMTDIUIBLCQGJB-SEYHBJAFSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:37945",
+      "path": "data/antibiotics/antibacterial/dibekacin.yaml",
+      "sha256": "fdad190d1d11d967c216429e5f8102b3df816d2ced39980be121337668b591a6",
+      "standard_inchi_key": "JJCQSGDBDPYCEO-XVZSLQNASA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:474014",
+      "path": "data/antibiotics/antibacterial/dirithromycin.yaml",
+      "sha256": "59c79e64f19626ca95c5f0aa5df0045dfbd323d655c8e4294a6b2581e01af2f3",
+      "standard_inchi_key": "WLOHNSSYAXHWNR-DWIOZXRMSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:50845",
+      "path": "data/antibiotics/antibacterial/doxycycline.yaml",
+      "sha256": "e882cd7f14057c25a22688e168748d01103853c834614f531a722ee71243efb7",
+      "standard_inchi_key": "JBIWCJUYHHGXTC-AKNGSSGZSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:157175",
+      "path": "data/antibiotics/antibacterial/enoxacin.yaml",
+      "sha256": "634f340fe359de5ce62f2aa04523590a8c313fad7812c7b3b57cf611d534628d",
+      "standard_inchi_key": "IDYZIJYBMGIQMJ-UHFFFAOYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:42355",
+      "path": "data/antibiotics/antibacterial/erythromycin-a.yaml",
+      "sha256": "4639a9ca3005a92edabbab64b412731187bbe2a540971f251ce4a856bd6fe65f",
+      "standard_inchi_key": "ULGZDMOVFRHVEP-RWJQBGPGSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:87185",
+      "path": "data/antibiotics/antibacterial/florfenicol.yaml",
+      "sha256": "009a4b128ddc3cfd06d4f7a8ecf77b056755004337447f89574db9221f074af4",
+      "standard_inchi_key": "AYIRNRDRBQJXIF-NXEZZACHSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:28915",
+      "path": "data/antibiotics/antibacterial/fosfomycin.yaml",
+      "sha256": "921f52201f80d44c3a5e1e8063ed06df8ab1936c252509a4d2721ceb9f252c05",
+      "standard_inchi_key": "YMDXZJFXQJVXBF-STHAYSLISA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:29013",
+      "path": "data/antibiotics/antibacterial/fusidic-acid.yaml",
+      "sha256": "d44e12bee3046521b4196e7c55b7765a97679553354137470771673b9fd1ebd3",
+      "standard_inchi_key": "IECPWNUMDGFDKC-MZJAQBGESA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-b380d64ee1",
+      "path": "data/antibiotics/antibacterial/gentamicin.yaml",
+      "sha256": "fed1a91545302837eba2fa9dc4cf048db7e423556ef956f5d35cc226dd7ac5d8",
+      "standard_inchi_key": "CEAZRRDELHUEMR-UHFFFAOYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-4a4590abba",
+      "path": "data/antibiotics/antibacterial/griseoviridin.yaml",
+      "sha256": "2bf5f875d0d12b7c624625511bd824d33d26e032731221619295b1ba52aab13a",
+      "standard_inchi_key": "UXWOXTQWVMFRSE-SXTNSRNPSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:17630",
+      "path": "data/antibiotics/antibacterial/kanamycin-a.yaml",
+      "sha256": "ae1f4597070b1e1878d7e4454a53bcbcf0e5187bfa8b39940e73cd76f1bbcc38",
+      "standard_inchi_key": "SBUJHOSQTJFQJX-NOAMYHISSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:6472",
+      "path": "data/antibiotics/antibacterial/lincomycin.yaml",
+      "sha256": "98440188b1f25a69728f2fdd546666634607a37ff4e7f05a7a96ab7c28f0c968",
+      "standard_inchi_key": "OJMMVQQUTAEWLP-KIDUDLJLSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-59524d78a3",
+      "path": "data/antibiotics/antibacterial/madumycin-ii.yaml",
+      "sha256": "bdc3da307d56c3e082ffe40ef962fa231a69e2c0f4ce1d1fc413a604cefbd895",
+      "standard_inchi_key": "SAQNYTQFLPVTNJ-PPIFFTIDSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:29630",
+      "path": "data/antibiotics/antibacterial/methymycin.yaml",
+      "sha256": "092a69625363b5c8cd9761fbf6589a68fe3b4cabb998c96d52452bc2fbaa7f24",
+      "standard_inchi_key": "HUKYPYXOBINMND-HYUJHOPRSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:6909",
+      "path": "data/antibiotics/antibacterial/metronidazole.yaml",
+      "sha256": "aa73863504ab7267d085d53505986514b25d4b57ff58a342137f11f5ab5fdb2e",
+      "standard_inchi_key": "VAOCPAMSLUNLGC-UHFFFAOYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:50694",
+      "path": "data/antibiotics/antibacterial/minocycline.yaml",
+      "sha256": "39ef89c2a1c785f7f175efeb04fd3ad81bbc193ac9d2e39a47faf8e97bc062b9",
+      "standard_inchi_key": "DYKFCLLONBREIL-KVUCHLLUSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:7025",
+      "path": "data/antibiotics/antibacterial/mupirocin.yaml",
+      "sha256": "100721c12c942f6d975bda6a7c05186a295f8fe849cd18cf5c5d216001244997",
+      "standard_inchi_key": "MINDHVHHQZYEEK-HBBNESRFSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:63284",
+      "path": "data/antibiotics/antibacterial/mycinamicin-iv.yaml",
+      "sha256": "041077cabd363187ddfb15c34eb541c6a3ecb2066c00152647290acd66a6c85f",
+      "standard_inchi_key": "DBTIHDIIXPQOFR-JMHKOBKLSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:7528",
+      "path": "data/antibiotics/antibacterial/netilmycin.yaml",
+      "sha256": "3311342bb85c7fda35cedbf8df5bf0f8105e1d2a2ab9ce7988dbf1b198d7c6d8",
+      "standard_inchi_key": "ZBGPYVZLYBDXKO-HILBYHGXSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:100246",
+      "path": "data/antibiotics/antibacterial/norfloxacin.yaml",
+      "sha256": "a021e7b416bd35303fcb3762ba9627410c09052d5e0f08130c1503384c5cb1dc",
+      "standard_inchi_key": "OGJPXUAPXNRGGI-UHFFFAOYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:16869",
+      "path": "data/antibiotics/antibacterial/oleandomycin.yaml",
+      "sha256": "54f3cef2361e85c145287aef108d9af84cfc1334353b8ca3c51a1c8bef6c5ae0",
+      "standard_inchi_key": "RZPAKFUAFGMUPI-QESOVKLGSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-f4906250fc",
+      "path": "data/antibiotics/antibacterial/ostreogrycin-b3.yaml",
+      "sha256": "7a5b88673741d8c01a885013c188d17f154fd1f98cd6c1a979d3d6deb0a8f575",
+      "standard_inchi_key": "YGXCETJZBDTKRY-FULBRLTBSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:27701",
+      "path": "data/antibiotics/antibacterial/oxytetracycline.yaml",
+      "sha256": "943d63675e52158de56edf01a17e489bdce7f7b12eaec8f6fe051551f0227e6b",
+      "standard_inchi_key": "IWVCMVBTMGNXQD-PXOLEDIWSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-2ea67cad76",
+      "path": "data/antibiotics/antibacterial/patricin-a.yaml",
+      "sha256": "fb765cce6bb171e6be11769b37d270d7046864f095a34499fecc7654a987b177",
+      "standard_inchi_key": "HASLPZZCXDUQET-OTXZUHDPSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-0aefa62f74",
+      "path": "data/antibiotics/antibacterial/patricin-b.yaml",
+      "sha256": "24fe977fbb934235e1bba3cf6a7c794b6db738d23ebcfbc148ba60f12a31f3c1",
+      "standard_inchi_key": "HASLPZZCXDUQET-OTXZUHDPSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:8269",
+      "path": "data/antibiotics/antibacterial/pleuromutilin.yaml",
+      "sha256": "068be77c7f217810e535cc6c301d52cd5756d7ed72e7f1253fc61fa2bbd26ee5",
+      "standard_inchi_key": "ZRZNJUXESFHSIO-ZXVYJXQESA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:59063",
+      "path": "data/antibiotics/antibacterial/polymyxin-b2.yaml",
+      "sha256": "ad051f1e93e0e221baef06440028d74460989e6f823a734a15f61eea9aa7e2ea",
+      "standard_inchi_key": "SGPYLFWAQBAXCZ-RUDZPDEXSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:8417",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ia.yaml",
+      "sha256": "48ce58e40c27acd5d72dc044ad9d8ec4ebe4815f68e9a2796d725693b9ca66ad",
+      "standard_inchi_key": "YGXCETJZBDTKRY-DZCVGBHJSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:8418",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ib.yaml",
+      "sha256": "2658e30a7c30bda500edae25353957a15a096084773ff589e5316ca8e833d925",
+      "standard_inchi_key": "PCOXSOQWQVRJCH-UHFFFAOYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-a324312fa2",
+      "path": "data/antibiotics/antibacterial/pristinamycin-ic.yaml",
+      "sha256": "a751ebbe87e52622bfe10cb1f322309e1c5bfd1a3685a343c406dc29792541b4",
+      "standard_inchi_key": "BYRKDHSWMQLYJB-UHFFFAOYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:8732",
+      "path": "data/antibiotics/antibacterial/quinupristin.yaml",
+      "sha256": "967ba62d716c63cbfbaae4ef73bcb94c3932d6b96177ade545bed3d47e0f83b6",
+      "standard_inchi_key": "WTHRRGMBUAHGNI-MJWHERSYSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:48844",
+      "path": "data/antibiotics/antibacterial/roxithromycin.yaml",
+      "sha256": "01f4c4c700e13824fdb92ede57b1396378bc307ef080069ad844223f24335297",
+      "standard_inchi_key": "RXZBMPWDPOLZGW-HITVVWEBSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:9215",
+      "path": "data/antibiotics/antibacterial/spectinomycin.yaml",
+      "sha256": "729204cc548676666dad892dce679af79e2eb6fd979e24addd8580979a760ea5",
+      "standard_inchi_key": "UNFWWIHTNXNPBV-WXKVUWSESA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:85260",
+      "path": "data/antibiotics/antibacterial/spiramycin-i.yaml",
+      "sha256": "d4e47700833cd60e8c4dbb7c37085262ff61bc33f46aca231241838ba8a5c06a",
+      "standard_inchi_key": "ACTOXUHEUCPTEW-KWBWCIJSSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:17076",
+      "path": "data/antibiotics/antibacterial/streptomycin.yaml",
+      "sha256": "d3189ed58bc9f837961881eab7963c2564c29c994457017d6bade0336bfb4f04",
+      "standard_inchi_key": "UCSJYZPVAKXKNQ-HZYVHMACSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:29688",
+      "path": "data/antibiotics/antibacterial/telithromycin.yaml",
+      "sha256": "80911bedbfef0738e2c2a9628e8a83ce65dc79f84f7ae0ecd206cc65784d40db",
+      "standard_inchi_key": "LJVAJPDWBABPEJ-PNUFFHFMSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:27902",
+      "path": "data/antibiotics/antibacterial/tetracycline.yaml",
+      "sha256": "68de808f0457c1c59f0c1decf4ad4b958d872b52b175e37795db0e85bccc8258",
+      "standard_inchi_key": "OFVLGDICTFRJMM-WESIUVDSSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:32215",
+      "path": "data/antibiotics/antibacterial/thiamphenicol.yaml",
+      "sha256": "7d369c9774ef31eed80990dfbc0c9ef4b84651d264e88936729fbe943f3cd4f7",
+      "standard_inchi_key": "OTVAEFIXJLOWRX-NXEZZACHSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:44137",
+      "path": "data/antibiotics/antibacterial/tiamulin.yaml",
+      "sha256": "3da2c914f198b43bf5451d7f911d894fab3efa44a311b731ef45e2ed73c27367",
+      "standard_inchi_key": "UURAUHCOJAIIRQ-QGLSALSOSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:9587",
+      "path": "data/antibiotics/antibacterial/ticarcillin.yaml",
+      "sha256": "8ecab5ce09e0ecab755d6de212f8904bfc82cb8a26a23a5a49b4b166e9316e28",
+      "standard_inchi_key": "OHKOGUYZJXTSFX-KZFFXBSXSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:28864",
+      "path": "data/antibiotics/antibacterial/tobramycin.yaml",
+      "sha256": "c5345d9b0ca08f480c6fe8df7c58431f300ef6782e464ee4f266e399f8ce178a",
+      "standard_inchi_key": "NLVFBUXFDBBNBW-PBSUHMDJSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "CHEBI:17658",
+      "path": "data/antibiotics/antibacterial/tylosin.yaml",
+      "sha256": "2e55e30b4cb9dbff7da053610ade1066fa06b8da75fe5a6a142703625bbcac11",
+      "standard_inchi_key": "WBPYTXDJUQJLPQ-VMXQISHHSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-6536d0e3bb",
+      "path": "data/antibiotics/antibacterial/vernamycin-c.yaml",
+      "sha256": "87f33ad5b707a4aa96ab151bb77cef1d3d8dfc004fe71a782fefb2b542b0c4a3",
+      "standard_inchi_key": "PCRZFPGJPKPMQB-LNQSXZRDSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-88dda0e2d9",
+      "path": "data/antibiotics/antibacterial/virginiamycin-m1.yaml",
+      "sha256": "a971f8a7e268b2993698f3afd15af63f598c0ea4ac26c48973d5fa5c5e13c230",
+      "standard_inchi_key": "DAIKHDNSXMZDCU-ZFPSYPIXSA-N",
+      "whole_record_primary_review": "OPEN"
+    },
+    {
+      "identifier": "antibioticmech:aro-2a1d8b8631",
+      "path": "data/antibiotics/antibacterial/virginiamycin-s2.yaml",
+      "sha256": "6104bdf05c531995cf11c2cf82a160674760160ca1fee0cb706692ea243f5f86",
+      "standard_inchi_key": "LRSRCZBNIGNEHL-NTXCPLLSSA-N",
+      "whole_record_primary_review": "OPEN"
+    }
+  ],
+  "reference_taxa": {
+    "1115809": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:1115809",
+      "species_taxon_id": "NCBITaxon:305719"
+    },
+    "1120926": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:1120926",
+      "species_taxon_id": "NCBITaxon:202952"
+    },
+    "1120996": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:1120996",
+      "species_taxon_id": "NCBITaxon:264463"
+    },
+    "1121284": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:1121284",
+      "species_taxon_id": "NCBITaxon:421530"
+    },
+    "1299324": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:1299324",
+      "species_taxon_id": "NCBITaxon:36809"
+    },
+    "132264": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:132264",
+      "species_taxon_id": "NCBITaxon:1428"
+    },
+    "171101": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:171101",
+      "species_taxon_id": "NCBITaxon:1313"
+    },
+    "176299": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:176299",
+      "species_taxon_id": "NCBITaxon:1176649"
+    },
+    "204722": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:204722",
+      "species_taxon_id": "NCBITaxon:29461"
+    },
+    "272558": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:272558",
+      "species_taxon_id": "NCBITaxon:86665"
+    },
+    "272631": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:272631",
+      "species_taxon_id": "NCBITaxon:1769"
+    },
+    "272943": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:272943",
+      "species_taxon_id": "NCBITaxon:1063"
+    },
+    "278992": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:278992",
+      "species_taxon_id": "NCBITaxon:1889"
+    },
+    "2975438": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:2975438",
+      "species_taxon_id": "NCBITaxon:94625"
+    },
+    "300267": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:300267",
+      "species_taxon_id": "NCBITaxon:622"
+    },
+    "31956": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:31956",
+      "species_taxon_id": "NCBITaxon:2041"
+    },
+    "32019": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:32019",
+      "species_taxon_id": "NCBITaxon:196"
+    },
+    "326423": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:326423",
+      "species_taxon_id": "NCBITaxon:492670"
+    },
+    "342451": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:342451",
+      "species_taxon_id": "NCBITaxon:29385"
+    },
+    "344609": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:344609",
+      "species_taxon_id": "NCBITaxon:621"
+    },
+    "373665": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:373665",
+      "species_taxon_id": "NCBITaxon:632"
+    },
+    "38294": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:38294",
+      "species_taxon_id": "NCBITaxon:38293"
+    },
+    "405948": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:405948",
+      "species_taxon_id": "NCBITaxon:1836"
+    },
+    "421052": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:421052",
+      "species_taxon_id": "NCBITaxon:632955"
+    },
+    "431947": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:431947",
+      "species_taxon_id": "NCBITaxon:837"
+    },
+    "44139": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:44139",
+      "species_taxon_id": "NCBITaxon:59405"
+    },
+    "441771": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:441771",
+      "species_taxon_id": "NCBITaxon:1491"
+    },
+    "446465": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:446465",
+      "species_taxon_id": "NCBITaxon:43669"
+    },
+    "488222": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:488222",
+      "species_taxon_id": "NCBITaxon:1313"
+    },
+    "561007": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:561007",
+      "species_taxon_id": "NCBITaxon:36809"
+    },
+    "626939": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:626939",
+      "species_taxon_id": "NCBITaxon:626940"
+    },
+    "661367": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:661367",
+      "species_taxon_id": "NCBITaxon:450"
+    },
+    "679937": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:679937",
+      "species_taxon_id": "NCBITaxon:151276"
+    },
+    "702459": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:702459",
+      "species_taxon_id": "NCBITaxon:1681"
+    },
+    "85962": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:85962",
+      "species_taxon_id": "NCBITaxon:210"
+    },
+    "999809": {
+      "ancestor_lineage_concordant": true,
+      "experimental_subject_assignment": false,
+      "reference_taxon_id": "NCBITaxon:999809",
+      "species_taxon_id": "NCBITaxon:72558"
+    }
+  },
+  "release": "2026_03",
+  "requests": {
+    "1063": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1063-response.bin",
+        "sha256": "215b7bae539e5cd318c7f1bdd1cc59e6d874746039ae7f4a09fa91725d0be067"
+      },
+      "body_sha256": "215b7bae539e5cd318c7f1bdd1cc59e6d874746039ae7f4a09fa91725d0be067",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1063-receipt.json",
+        "sha256": "b204e6078a9bedd30a7a6e8f9f2e7e0c1755016c2f5364e117a6c0e5e0a06895"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1063-attempt.json",
+        "sha256": "d0520b175f4377b76d6fa59e16db64930a872f9864946cf47c627d5a19924866"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1063-plan.json",
+        "sha256": "8d6203244c8b7d5df6c52c691f3bec792514473acf245c6df7b2595d251278ae"
+      },
+      "retrieved_at": "2026-10-14T10:21:37.466924+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1063"
+    },
+    "1176649": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1176649-response.bin",
+        "sha256": "bbf4944d97604af97df1f42d9813df4f99a94704517798e1f47527a422539965"
+      },
+      "body_sha256": "bbf4944d97604af97df1f42d9813df4f99a94704517798e1f47527a422539965",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1176649-receipt.json",
+        "sha256": "7e6f4224723b78904c97c83fb9e4f3534a8aacb65bd8f6f5d46155db5e1ef5b1"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1176649-attempt.json",
+        "sha256": "0a5bc2ee390e006924adb8edadfa75cd6edb2d117d1480a96f46397d855ac5c4"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1176649-plan.json",
+        "sha256": "554a35c9b9cdcc2e70f1711a8ec74e20e1d01757c23693fb8f4741fa4fddc2c6"
+      },
+      "retrieved_at": "2026-10-14T10:22:37.235710+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1176649"
+    },
+    "1313": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-response.bin",
+        "sha256": "bfe5c4163819d1a00e9a38100ae7b17c881db2e15accb0d2147cc727d0074d5d"
+      },
+      "body_sha256": "bfe5c4163819d1a00e9a38100ae7b17c881db2e15accb0d2147cc727d0074d5d",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-receipt.json",
+        "sha256": "efe4c3d9397e4efd5848f569c5c9a2b4e9677e4e482c2411df99ead70d87aa78"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-attempt.json",
+        "sha256": "df1067f53ade5f8069ed9e67e108e679aca4087a48d6f8c26a7873249e92f82a"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-plan.json",
+        "sha256": "fc4eb7c61fa7543740b61c9a4500515739dd9e570bc04214359850a10349d342"
+      },
+      "retrieved_at": "2026-10-14T10:22:10.132691+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1313"
+    },
+    "1428": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1428-response.bin",
+        "sha256": "7095d32cf271722e9823bc1f5a42b89778e77c4e35dcf862f816440e99e112d3"
+      },
+      "body_sha256": "7095d32cf271722e9823bc1f5a42b89778e77c4e35dcf862f816440e99e112d3",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1428-receipt.json",
+        "sha256": "90dc5065996090eddc94b238c8ca15e6eb688b4e1f5f1037ef605eb577703d34"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1428-attempt.json",
+        "sha256": "ed8e3cc82e5c14ea9be0cef0f5cf8ad28e8720616b0915e90891807f5eb7be5a"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1428-plan.json",
+        "sha256": "ff13ddc27f4454a82ae8da599b6db80cd3cc307cac0e876ff0cc64fd284b9eb3"
+      },
+      "retrieved_at": "2026-10-14T10:22:11.303536+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1428"
+    },
+    "1491": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1491-response.bin",
+        "sha256": "6647beaeb879a92a4f80f30f218e62d802b71950b2b0fb19b8e1f70dfeb54150"
+      },
+      "body_sha256": "6647beaeb879a92a4f80f30f218e62d802b71950b2b0fb19b8e1f70dfeb54150",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1491-receipt.json",
+        "sha256": "41271652de4c0a5e3a34fad6a78f5da977c1a1ef8a25afd1f349181b1a7ff337"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1491-attempt.json",
+        "sha256": "bdf748c76a2449cd38b110d60f1a03f184e2e2d031d509f6152e999d70b539b9"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1491-plan.json",
+        "sha256": "a501825d896375ad8dcbc4bcda0bdd4a65eac71b99083ff7c0e9b4e7f7a14b2d"
+      },
+      "retrieved_at": "2026-10-14T10:22:12.372546+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1491"
+    },
+    "151276": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-151276-response.bin",
+        "sha256": "5841735e12941af59ea4264056a37ae98598b78eec45e2bece6ef04b6e2de341"
+      },
+      "body_sha256": "5841735e12941af59ea4264056a37ae98598b78eec45e2bece6ef04b6e2de341",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-151276-receipt.json",
+        "sha256": "5c7cf08200162315a599b8482577fe453209bef581c8b393a859e7158898a648"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-151276-attempt.json",
+        "sha256": "e13ef326f7ade2c9e8ca4ea0793d53b5e8d331d7d2b48d00b397cc093f2bdef9"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-151276-plan.json",
+        "sha256": "0d307ce9e296f002d756793dfb4f0bd5af0207ca23dc73539ca9458c1c7e6c68"
+      },
+      "retrieved_at": "2026-10-14T10:22:29.215888+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/151276"
+    },
+    "1681": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1681-response.bin",
+        "sha256": "2c5abb5408fc3224a5a2cd9357f21a6ca0cfa116477fa0a51ffb53b80ba6c633"
+      },
+      "body_sha256": "2c5abb5408fc3224a5a2cd9357f21a6ca0cfa116477fa0a51ffb53b80ba6c633",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1681-receipt.json",
+        "sha256": "9ea534c63e184fd625a6109fcc5f88fe786ff95ec9d389250d4d29377c3bee42"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1681-attempt.json",
+        "sha256": "fe61c9b364c67949c1c64d901b4b60722085f1f96a5682c8b51ecb36431462c9"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1681-plan.json",
+        "sha256": "88a6bd297ff6cd2076be7196bd54b7338f57027e7d94077a74b1420eeae9d630"
+      },
+      "retrieved_at": "2026-10-14T10:22:13.407208+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1681"
+    },
+    "1769": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1769-response.bin",
+        "sha256": "9db41df32ffb584801fa6c20ce9b302b30060bb8a9dea647d70b66e96db78b15"
+      },
+      "body_sha256": "9db41df32ffb584801fa6c20ce9b302b30060bb8a9dea647d70b66e96db78b15",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1769-receipt.json",
+        "sha256": "9d6cf33d09fba56f23322068a9b2852befcfef438cfc2552cb66523183b655ae"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1769-attempt.json",
+        "sha256": "eedfd29d20b2acc645a6d1250fb0c8ddd6427cc4c38ca7c4f2319ba468a79ada"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1769-plan.json",
+        "sha256": "9c6db4c2c33db57bc35f6b78ffc05b86756838560a1672c349d9471eaa217d0f"
+      },
+      "retrieved_at": "2026-10-14T10:22:14.692220+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1769"
+    },
+    "1836": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1836-response.bin",
+        "sha256": "8d119d04ec1df7a1db384dcafcfef630ca1d92e6aacc5af701c127a620eb8022"
+      },
+      "body_sha256": "8d119d04ec1df7a1db384dcafcfef630ca1d92e6aacc5af701c127a620eb8022",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1836-receipt.json",
+        "sha256": "f52bdd24154029f6e46d9ebfcffd72c1b8bbbfa3905949bb489a64058a3c8731"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1836-attempt.json",
+        "sha256": "b48f6d70cc344f9509cd042d7f128e1fb3c91230e293eebf132a21c8e069d74c"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1836-plan.json",
+        "sha256": "e071a6706932c6048623b06e4fa989a816b40a5d8f444c7e7db118fbc59902e3"
+      },
+      "retrieved_at": "2026-10-14T10:22:15.967122+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1836"
+    },
+    "1889": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1889-response.bin",
+        "sha256": "1a8e33ce48495e36faaf066cb6bc60bb7428b91ee77d3a553a6686597c397f36"
+      },
+      "body_sha256": "1a8e33ce48495e36faaf066cb6bc60bb7428b91ee77d3a553a6686597c397f36",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1889-receipt.json",
+        "sha256": "ff30fb44debd6209003b03aae462774325118e332e9533839ff6f2a601e5d72c"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1889-attempt.json",
+        "sha256": "cd70acbb5c6774b7a87414cb49bc78dc58abc2cabe08d115ea974e251f62ac1f"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1889-plan.json",
+        "sha256": "6c6e83738ddb24fa5ac4d55070335be352e60728773a4151e221a598b6d14a42"
+      },
+      "retrieved_at": "2026-10-14T10:22:17.185759+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/1889"
+    },
+    "196": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-196-response.bin",
+        "sha256": "e37c7afa8ea1c3efef7547fe6e1d39559d5680ef319d2b947e2ee4cfbe5515eb"
+      },
+      "body_sha256": "e37c7afa8ea1c3efef7547fe6e1d39559d5680ef319d2b947e2ee4cfbe5515eb",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-196-receipt.json",
+        "sha256": "e4e22bb8cdd1cfc3a0d98f573d9ce5eb3c8749b66b04c652d50d0e61e3229ab0"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-196-attempt.json",
+        "sha256": "703b7cd7c25f641891482390a2f78885795d7d317f0d82f8b144aade024679d9"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-196-plan.json",
+        "sha256": "b3af77beb189f392d516905f95180a4ce43ee65e5a1651e7931f467bf97d6bd6"
+      },
+      "retrieved_at": "2026-10-14T10:22:02.634058+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/196"
+    },
+    "202952": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-202952-response.bin",
+        "sha256": "838fd94bd7b7db89a138ef91f982762bdbebf483f82889194ce1b6a038b06e3b"
+      },
+      "body_sha256": "838fd94bd7b7db89a138ef91f982762bdbebf483f82889194ce1b6a038b06e3b",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-202952-receipt.json",
+        "sha256": "9230207ff398d51ea2d5eb369e297f00f116da3340f5c128bcbd4df507962add"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-202952-attempt.json",
+        "sha256": "232e81fdc075ec3528ec911f267a25405fb07f4a23c529746c0f7e40897e45e6"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-202952-plan.json",
+        "sha256": "9f0efd6eb8a0a8eb2c6e59d09b93dbae73a23e6b34b14a8fbb664e49778ba158"
+      },
+      "retrieved_at": "2026-10-14T10:22:30.185415+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/202952"
+    },
+    "2041": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-2041-response.bin",
+        "sha256": "3b90dcea587f1cc022ce3bbab246b053700f4e94daf4ab34c59d904cd1f47894"
+      },
+      "body_sha256": "3b90dcea587f1cc022ce3bbab246b053700f4e94daf4ab34c59d904cd1f47894",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-2041-receipt.json",
+        "sha256": "10159431bce934e46564fafcc3a7b5cd25e03e7cec18f1c4ada1949164662a69"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-2041-attempt.json",
+        "sha256": "2cef7f559d60a9e31a10b91938e5af4d26a5884601ef640595765a3831a37f25"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-2041-plan.json",
+        "sha256": "489509dc307e865e3683bce37f36011fbd41447e1255155c7489eaae3f6fa8ec"
+      },
+      "retrieved_at": "2026-10-14T10:22:18.131892+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/2041"
+    },
+    "210": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-response.bin",
+        "sha256": "aae492b585f05dbf3977809bdc6bd1e4e7eee3e626c13e46b4d080ea50f17ec4"
+      },
+      "body_sha256": "aae492b585f05dbf3977809bdc6bd1e4e7eee3e626c13e46b4d080ea50f17ec4",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-receipt.json",
+        "sha256": "0c972779918717096383cf993fdc53b7e4d2d9c2d73ec42aa1c663cd080b96a2"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-attempt.json",
+        "sha256": "dbd7aff3b2de40a88b6672e09156d184d8e2db42fa409dc84cb5be100eeb8c1b"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-plan.json",
+        "sha256": "d7cf2c8318dd28c92071961c3e78b3de24268cc4d8b0a7bbe9ddeb554cbfbc92"
+      },
+      "retrieved_at": "2026-10-14T10:22:03.694825+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/210"
+    },
+    "264463": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-264463-response.bin",
+        "sha256": "6ae0b958c92ca28ed2d1df12a2ccf02070723a728999aa75cde8930f724ab4d7"
+      },
+      "body_sha256": "6ae0b958c92ca28ed2d1df12a2ccf02070723a728999aa75cde8930f724ab4d7",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-264463-receipt.json",
+        "sha256": "56f3e44453829e1e309eb69e8a3be94e201560775dde68db7ec2f01d7f2de84c"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-264463-attempt.json",
+        "sha256": "a1c5c34febdaa7c1be9d22e873cba5ed1b4f02678a4882a517de93728dc0525c"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-264463-plan.json",
+        "sha256": "2d9ad001c55d812727ee6739f0650ff584363c1f5f554d06d086965158df86bb"
+      },
+      "retrieved_at": "2026-10-14T10:22:31.091739+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/264463"
+    },
+    "29385": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29385-response.bin",
+        "sha256": "70291ecf91b14b22773dd9c8b745de80936de3c6a7b34bb2ca95067af408d15b"
+      },
+      "body_sha256": "70291ecf91b14b22773dd9c8b745de80936de3c6a7b34bb2ca95067af408d15b",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29385-receipt.json",
+        "sha256": "c0e7bd746b01f930f6af31a8b6906d99503e346aa366e248fd133d8c431f1c6b"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29385-attempt.json",
+        "sha256": "12950a4b92801e7fe341fa10593ca9b6435df97f5c5ab47fecef6f7b0df9351a"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29385-plan.json",
+        "sha256": "4ca3cf6bbde0682b3269c440511210eebe1d967e1d6132b0cda642cd7ab69e8b"
+      },
+      "retrieved_at": "2026-10-14T10:22:19.186104+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/29385"
+    },
+    "29461": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29461-response.bin",
+        "sha256": "935d23a40da25535527d885d02143fc9ecf4ca4d6e00c1c5620c58dc81705eed"
+      },
+      "body_sha256": "935d23a40da25535527d885d02143fc9ecf4ca4d6e00c1c5620c58dc81705eed",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29461-receipt.json",
+        "sha256": "a415910a6a7986c8b53cfe2d15e1d5d2c7e9b325edaab588a081bc8bb8a17f2a"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29461-attempt.json",
+        "sha256": "a2adcd38e4770ce763cdef43f07a822bd59b75621b09c31321dd5824e18377a0"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-29461-plan.json",
+        "sha256": "8f9826d7b89ea6863e563dd858711ac4d9289cd732bcf56bbdaae60fdb07c8c7"
+      },
+      "retrieved_at": "2026-10-14T10:22:20.078720+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/29461"
+    },
+    "305719": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-305719-response.bin",
+        "sha256": "1c65c2ae951bd0d523a962966def935375198fbd2ded381454ff64631beb2d23"
+      },
+      "body_sha256": "1c65c2ae951bd0d523a962966def935375198fbd2ded381454ff64631beb2d23",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-305719-receipt.json",
+        "sha256": "00d0c7093b0dc2412fc1664f720c90de375868bc05557a4db77bece268b810eb"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-305719-attempt.json",
+        "sha256": "3f4b8d9a4bebeda670ae29d13560ac6aef4f6ba832745fb00954defc3e40ca17"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-305719-plan.json",
+        "sha256": "633e1a8d12b13e0efd60e10c17a65eb8458457e12f4383d2bc69f6f9416c3557"
+      },
+      "retrieved_at": "2026-10-14T10:22:32.136466+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/305719"
+    },
+    "36809": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-36809-response.bin",
+        "sha256": "504b8c24d3f762f2e526065ea5dbb388a15b175ebc21046fae2d9f73bb95fc6f"
+      },
+      "body_sha256": "504b8c24d3f762f2e526065ea5dbb388a15b175ebc21046fae2d9f73bb95fc6f",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-36809-receipt.json",
+        "sha256": "1702b6483265bc45b74ec6c9d13610e5628c7d9a5cdcaa6b1d63034b5d3d6333"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-36809-attempt.json",
+        "sha256": "8ed85ee24d6bb496083f694ce06aba9148b72b45bb6e4fc441067bffff8429ed"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-36809-plan.json",
+        "sha256": "c5de80476f616c9e2de2f20f3f942bcb40d44dfc82c5897c3135b79814d4e644"
+      },
+      "retrieved_at": "2026-10-14T10:22:21.400825+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/36809"
+    },
+    "38293": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-38293-response.bin",
+        "sha256": "339e8965766188466e4dc46a2cef0bd6efcf66a6a412a36ac9e9888990393df0"
+      },
+      "body_sha256": "339e8965766188466e4dc46a2cef0bd6efcf66a6a412a36ac9e9888990393df0",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-38293-receipt.json",
+        "sha256": "2d4041c77ce8743906f5dbc6ba0fd975db4f245f424ea0dfb2d2c38f569619a4"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-38293-attempt.json",
+        "sha256": "84a5f58d9bcb0c4b627e0194aaf154f75a893e5c296bdad63095eab3afceb85b"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-38293-plan.json",
+        "sha256": "c020e1b8f8c45b5f8d16518810cdfc49c09938705daa84344da211ca6a19c326"
+      },
+      "retrieved_at": "2026-10-14T10:22:22.319383+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/38293"
+    },
+    "421530": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-421530-response.bin",
+        "sha256": "432ae19180062887053d29dff15e2279fa48f0237e0766514cba623acb9393d5"
+      },
+      "body_sha256": "432ae19180062887053d29dff15e2279fa48f0237e0766514cba623acb9393d5",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-421530-receipt.json",
+        "sha256": "175af0fdf8bb42c06d69632171ef8b361b0a489ded35a2dbb2c3ca39162a8890"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-421530-attempt.json",
+        "sha256": "11813829e241ab9db91d26949b492654d9aab3d9c806ab52892f4ba4c65bd482"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-421530-plan.json",
+        "sha256": "1d08dc1257d4db2fc8fccd8f416058d97ec4d60d99ca5271e51184ee90dceee8"
+      },
+      "retrieved_at": "2026-10-14T10:22:33.195378+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/421530"
+    },
+    "43669": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-43669-response.bin",
+        "sha256": "f145e00105f28877678e5825cef5a616f803a8ab2ce1116e0b26e6e5bb54b3bf"
+      },
+      "body_sha256": "f145e00105f28877678e5825cef5a616f803a8ab2ce1116e0b26e6e5bb54b3bf",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-43669-receipt.json",
+        "sha256": "71c784370bdd88ce0e228e5abd66fed45e9eb81bc47a242329c193c136c83e5a"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-43669-attempt.json",
+        "sha256": "4bec792a7fe3ecb28006f01aa3f38b19ece06abf9ee373eee4275b5f299a05cf"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-43669-plan.json",
+        "sha256": "054645089b3e36d8fc78a7afd85219a1413ed53f6ad392d3de48c2f576541c4b"
+      },
+      "retrieved_at": "2026-10-14T10:22:23.363236+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/43669"
+    },
+    "450": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-450-response.bin",
+        "sha256": "7c94d2fedf2dc7d3d44d5deb065f187c445cb0df2ad417b98c96cafe9cc867ef"
+      },
+      "body_sha256": "7c94d2fedf2dc7d3d44d5deb065f187c445cb0df2ad417b98c96cafe9cc867ef",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-450-receipt.json",
+        "sha256": "37a0d7c20fd718ad0687c94c3aeeb8a3ed6936744a35fa6a82ce4f331f2fc977"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-450-attempt.json",
+        "sha256": "5c5d31cf5e926058be6a842f48b22e2325b7e46652152f943671a640dc3cc829"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-450-plan.json",
+        "sha256": "115ba25a03432dd10c6ac144e3b0d254a53df771730f8781856e5d84d85ff8f2"
+      },
+      "retrieved_at": "2026-10-14T10:22:04.811118+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/450"
+    },
+    "492670": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-492670-response.bin",
+        "sha256": "6b68a62a3982e2445e8f0df1e41b2647cce9c4ed8fed30457288093ed37d14fd"
+      },
+      "body_sha256": "6b68a62a3982e2445e8f0df1e41b2647cce9c4ed8fed30457288093ed37d14fd",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-492670-receipt.json",
+        "sha256": "0e7a59a4c43882b763fc1bccd312ec94cfb0e76141f7fd46822dd27bb6db5485"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-492670-attempt.json",
+        "sha256": "28bd1f62aeef04e7714574d9f38916d83675a42bad978ff559a8e5c87367ea6d"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-492670-plan.json",
+        "sha256": "f340063697b8a678b896e47aa7a0d7c41e8ad7ff859296f0f1604ad9fe42b9e9"
+      },
+      "retrieved_at": "2026-10-14T10:22:34.145736+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/492670"
+    },
+    "59405": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-59405-response.bin",
+        "sha256": "dee53088d9357b5ab25ff6f926a3200ccd5ea55b0a3487d992240baaf2a4e803"
+      },
+      "body_sha256": "dee53088d9357b5ab25ff6f926a3200ccd5ea55b0a3487d992240baaf2a4e803",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-59405-receipt.json",
+        "sha256": "8517dbb94734361fef877fc1b0bfbc59f70c1204778e1d7c770640b927c92631"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-59405-attempt.json",
+        "sha256": "61b74dcb4d5be28be4fe9fdaf69719df108a705f4bc452f724cab663d59f2093"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-59405-plan.json",
+        "sha256": "82f69b75c43e6ccd5d09a18900770249b15e4e6603a508613443219b82c5a936"
+      },
+      "retrieved_at": "2026-10-14T10:22:24.523597+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/59405"
+    },
+    "621": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-621-response.bin",
+        "sha256": "aa87f05ab32fb2ceca159e89784c342bf89983960b05c8dd6e8260b63a709516"
+      },
+      "body_sha256": "aa87f05ab32fb2ceca159e89784c342bf89983960b05c8dd6e8260b63a709516",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-621-receipt.json",
+        "sha256": "535002f34b2ea487bb4dfffa27e5762e56ec9d1e47b4a7b4660179787e0572e7"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-621-attempt.json",
+        "sha256": "0e798816e706362bf9c5b04a1498d89eef62c0f00243cc18114020809d646566"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-621-plan.json",
+        "sha256": "78dcd2585272fd08f89ef9a30538ffcdc868040d0bea1428763aa05f15f41ccc"
+      },
+      "retrieved_at": "2026-10-14T10:22:06.084822+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/621"
+    },
+    "622": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-622-response.bin",
+        "sha256": "ba76ffc5eece65ed0644e9166687d3aa10f25d60af4ed19c28a34531d86f0a14"
+      },
+      "body_sha256": "ba76ffc5eece65ed0644e9166687d3aa10f25d60af4ed19c28a34531d86f0a14",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-622-receipt.json",
+        "sha256": "c024c69b6a03d1b33e934ef826d4fb0c1c31d4eacfc12b0e4dec6d023298cd9d"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-622-attempt.json",
+        "sha256": "11c5a903041be9ebc31ddf0896351e04db168976e217586c620a409680c5ecc2"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-622-plan.json",
+        "sha256": "8c924649ee30cf58fa340969e1c78ae188236a42fece7fd05165a8cf9aab2237"
+      },
+      "retrieved_at": "2026-10-14T10:22:06.976363+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/622"
+    },
+    "626940": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-626940-response.bin",
+        "sha256": "3dcd872022525a019c794f13616b9dee4e454d444fa0e819b77d34b09d5b1b32"
+      },
+      "body_sha256": "3dcd872022525a019c794f13616b9dee4e454d444fa0e819b77d34b09d5b1b32",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-626940-receipt.json",
+        "sha256": "c5af329975ee01333b0ab933e990085c016bf309295e40295cc257960df6bb82"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-626940-attempt.json",
+        "sha256": "e9edbe5f13ed91fb845102a6bb4f00b4de126784c8fcc1b324d73404b7e7fa11"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-626940-plan.json",
+        "sha256": "967d6ac586b1ae316bda5863cea60679d47bbedcbad73190f3b36001ad4a984d"
+      },
+      "retrieved_at": "2026-10-14T10:22:35.136355+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/626940"
+    },
+    "632": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632-response.bin",
+        "sha256": "ef19b2a09f460707624a4210540cbde753476680ada888a974eb95b12b2a7be5"
+      },
+      "body_sha256": "ef19b2a09f460707624a4210540cbde753476680ada888a974eb95b12b2a7be5",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632-receipt.json",
+        "sha256": "2856e7ce34e0f5b126b2246a90ed3493bc83e14026de9ed1008c65c311b4bc2c"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632-attempt.json",
+        "sha256": "cf8eb37408024cff6f79ce00124dcf50b8785e13d4148a8aca30e452305061a6"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632-plan.json",
+        "sha256": "8e794bc383db226b1f54b5f3faddcc0dab21503f47450a1c87495b909bf13e37"
+      },
+      "retrieved_at": "2026-10-14T10:22:08.053209+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/632"
+    },
+    "632955": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632955-response.bin",
+        "sha256": "7e427b71a8b3c832b6cdf11f0eca7a9613e93f5892f54cffce18b89bb6f3269e"
+      },
+      "body_sha256": "7e427b71a8b3c832b6cdf11f0eca7a9613e93f5892f54cffce18b89bb6f3269e",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632955-receipt.json",
+        "sha256": "b60f93d46c6d57a8fcd7714d0755d50afb1c8da74442ddb317823c657dca8f29"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632955-attempt.json",
+        "sha256": "48957c7397f5869d694aa511b3ee4254f68a67ed9ec7a181f3a661e57f91429e"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-632955-plan.json",
+        "sha256": "b38b83775864d9cd14e2fbcf482904aa614e4b294eb41f3ab1494e1dfe759b48"
+      },
+      "retrieved_at": "2026-10-14T10:22:36.184731+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/632955"
+    },
+    "72558": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-72558-response.bin",
+        "sha256": "eaaaaa5d2b2f41f55393e11b7e096076cc6645cd7b75a10b3232101a5f7b1978"
+      },
+      "body_sha256": "eaaaaa5d2b2f41f55393e11b7e096076cc6645cd7b75a10b3232101a5f7b1978",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-72558-receipt.json",
+        "sha256": "bc4abb742a330902c2fe34ec31d801621c14d96219676c067ff0698cd5bd1813"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-72558-attempt.json",
+        "sha256": "944083f026c94da491605ce7370116fcf67c1d2abf7569225007c5bbf2d3f331"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-72558-plan.json",
+        "sha256": "d77ac08e27835d2094f16d56fa95534be0e83fd0c0b8549515dc67da2421c472"
+      },
+      "retrieved_at": "2026-10-14T10:22:25.598095+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/72558"
+    },
+    "837": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-837-response.bin",
+        "sha256": "78c6036a95155d2ba4ac04976078acd01724449ff33e2e8ea3fbeef54a279390"
+      },
+      "body_sha256": "78c6036a95155d2ba4ac04976078acd01724449ff33e2e8ea3fbeef54a279390",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-837-receipt.json",
+        "sha256": "fd38440dc18b591732e5337dbd6342a3ba810169e41fa3a798ce376cdfc92440"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-837-attempt.json",
+        "sha256": "b61a13b56ef2497fe211a002c3f9bc9b735125b5f34ad743ff08a95e9f1fc929"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-837-plan.json",
+        "sha256": "8606141267e9be3d4eb313a064298f06a9ed9d3b00528ffc30c8fe4c65317cb0"
+      },
+      "retrieved_at": "2026-10-14T10:22:09.106046+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/837"
+    },
+    "86665": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-86665-response.bin",
+        "sha256": "0714fdd7965757ce72c73b8e3a5475e6d444f416901376c43bfcc968087af897"
+      },
+      "body_sha256": "0714fdd7965757ce72c73b8e3a5475e6d444f416901376c43bfcc968087af897",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-86665-receipt.json",
+        "sha256": "ec424011b7a0542e302316e57275237e6c5c2ec7e5d7f6549dbb4bbfec0a3eaa"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-86665-attempt.json",
+        "sha256": "c13ff3260855dd3007201b566016c845b0ca180992176bb8ae4494743c11f776"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-86665-plan.json",
+        "sha256": "17586418c2829a9b8cac3d5889b38fce60a9e049eef4f86613853cf2001e987c"
+      },
+      "retrieved_at": "2026-10-14T10:22:27.071671+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/86665"
+    },
+    "94625": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-94625-response.bin",
+        "sha256": "00c9ca4d972939531e94a21b9b527d93a78ab6b43ac9f0db48db001c5af4a0c3"
+      },
+      "body_sha256": "00c9ca4d972939531e94a21b9b527d93a78ab6b43ac9f0db48db001c5af4a0c3",
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-94625-receipt.json",
+        "sha256": "85d170218ffbc6a0958b3843d59839a9474bb4ac4b994fc153c038c7d9591d26"
+      },
+      "release": "2026_03",
+      "request_attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-94625-attempt.json",
+        "sha256": "9c3b9a733af217ef212a107937985fe0a9403820ba0676b0f5ae2897adc3f9e0"
+      },
+      "request_plan": {
+        "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-94625-plan.json",
+        "sha256": "db038652349c876c207728b215a12b202d170fb8e600bd77709111e9cf292b8f"
+      },
+      "retrieved_at": "2026-10-14T10:22:27.963772+00:00",
+      "retry_performed": false,
+      "url": "https://rest.uniprot.org/taxonomy/94625"
+    }
+  },
+  "scope": "STANDALONE_REFERENCE_SPECIES_VERIFICATION_NOT_EXPERIMENTAL_IDENTITY",
+  "species": {
+    "1063": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Alphaproteobacteria",
+          "taxonId": 28211
+        },
+        {
+          "rank": "order",
+          "scientificName": "Rhodobacterales",
+          "taxonId": 204455
+        },
+        {
+          "rank": "family",
+          "scientificName": "Paracoccaceae",
+          "taxonId": 31989
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Cereibacter",
+          "taxonId": 1653176
+        },
+        {
+          "rank": "species",
+          "scientificName": "Cereibacter sphaeroides",
+          "taxonId": 1063
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Cereibacter sphaeroides",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1063"
+    },
+    "1176649": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Alphaproteobacteria",
+          "taxonId": 28211
+        },
+        {
+          "rank": "order",
+          "scientificName": "Hyphomicrobiales",
+          "taxonId": 356
+        },
+        {
+          "rank": "family",
+          "scientificName": "Rhizobiaceae",
+          "taxonId": 82115
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Rhizobium/Agrobacterium group",
+          "taxonId": 227290
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Agrobacterium",
+          "taxonId": 357
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Agrobacterium tumefaciens complex",
+          "taxonId": 1183400
+        },
+        {
+          "rank": "species",
+          "scientificName": "Agrobacterium fabrum",
+          "taxonId": 1176649
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Agrobacterium fabrum",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1176649"
+    },
+    "1313": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacilli",
+          "taxonId": 91061
+        },
+        {
+          "rank": "order",
+          "scientificName": "Lactobacillales",
+          "taxonId": 186826
+        },
+        {
+          "rank": "family",
+          "scientificName": "Streptococcaceae",
+          "taxonId": 1300
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Streptococcus",
+          "taxonId": 1301
+        },
+        {
+          "rank": "species",
+          "scientificName": "Streptococcus pneumoniae",
+          "taxonId": 1313
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Streptococcus pneumoniae",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1313"
+    },
+    "1428": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacilli",
+          "taxonId": 91061
+        },
+        {
+          "rank": "order",
+          "scientificName": "Caryophanales",
+          "taxonId": 1385
+        },
+        {
+          "rank": "family",
+          "scientificName": "Bacillaceae",
+          "taxonId": 186817
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Bacillus",
+          "taxonId": 1386
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Bacillus cereus group",
+          "taxonId": 86661
+        },
+        {
+          "rank": "species",
+          "scientificName": "Bacillus thuringiensis",
+          "taxonId": 1428
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Bacillus thuringiensis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1428"
+    },
+    "1491": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Clostridia",
+          "taxonId": 186801
+        },
+        {
+          "rank": "order",
+          "scientificName": "Eubacteriales",
+          "taxonId": 186802
+        },
+        {
+          "rank": "family",
+          "scientificName": "Clostridiaceae",
+          "taxonId": 31979
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Clostridium",
+          "taxonId": 1485
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Clostridium botulinum group",
+          "taxonId": 3691983
+        },
+        {
+          "rank": "species",
+          "scientificName": "Clostridium botulinum",
+          "taxonId": 1491
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Clostridium botulinum",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1491"
+    },
+    "151276": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "clade",
+          "scientificName": "FCB group",
+          "taxonId": 1783270
+        },
+        {
+          "rank": "clade",
+          "scientificName": "Bacteroidota/Chlorobiota group",
+          "taxonId": 68336
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacteroidota",
+          "taxonId": 976
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacteroidia",
+          "taxonId": 200643
+        },
+        {
+          "rank": "order",
+          "scientificName": "Bacteroidales",
+          "taxonId": 171549
+        },
+        {
+          "rank": "family",
+          "scientificName": "Bacteroidaceae",
+          "taxonId": 815
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Bacteroides",
+          "taxonId": 816
+        },
+        {
+          "rank": "species",
+          "scientificName": "Bacteroides coprosuis",
+          "taxonId": 151276
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Bacteroides coprosuis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:151276"
+    },
+    "1681": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "taxonId": 201174
+        },
+        {
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "rank": "order",
+          "scientificName": "Bifidobacteriales",
+          "taxonId": 85004
+        },
+        {
+          "rank": "family",
+          "scientificName": "Bifidobacteriaceae",
+          "taxonId": 31953
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Bifidobacterium",
+          "taxonId": 1678
+        },
+        {
+          "rank": "species",
+          "scientificName": "Bifidobacterium bifidum",
+          "taxonId": 1681
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Bifidobacterium bifidum",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1681"
+    },
+    "1769": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "taxonId": 201174
+        },
+        {
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "rank": "order",
+          "scientificName": "Mycobacteriales",
+          "taxonId": 85007
+        },
+        {
+          "rank": "family",
+          "scientificName": "Mycobacteriaceae",
+          "taxonId": 1762
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Mycobacterium",
+          "taxonId": 1763
+        },
+        {
+          "rank": "species",
+          "scientificName": "Mycobacterium leprae",
+          "taxonId": 1769
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Mycobacterium leprae",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1769"
+    },
+    "1836": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "taxonId": 201174
+        },
+        {
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "rank": "order",
+          "scientificName": "Pseudonocardiales",
+          "taxonId": 85010
+        },
+        {
+          "rank": "family",
+          "scientificName": "Pseudonocardiaceae",
+          "taxonId": 2070
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Saccharopolyspora",
+          "taxonId": 1835
+        },
+        {
+          "rank": "species",
+          "scientificName": "Saccharopolyspora erythraea",
+          "taxonId": 1836
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Saccharopolyspora erythraea",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1836"
+    },
+    "1889": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "taxonId": 201174
+        },
+        {
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "rank": "order",
+          "scientificName": "Kitasatosporales",
+          "taxonId": 85011
+        },
+        {
+          "rank": "family",
+          "scientificName": "Streptomycetaceae",
+          "taxonId": 2062
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Streptomyces",
+          "taxonId": 1883
+        },
+        {
+          "rank": "species",
+          "scientificName": "Streptomyces ambofaciens",
+          "taxonId": 1889
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Streptomyces ambofaciens",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:1889"
+    },
+    "196": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Campylobacterota",
+          "taxonId": 29547
+        },
+        {
+          "rank": "class",
+          "scientificName": "Epsilonproteobacteria",
+          "taxonId": 3031852
+        },
+        {
+          "rank": "order",
+          "scientificName": "Campylobacterales",
+          "taxonId": 213849
+        },
+        {
+          "rank": "family",
+          "scientificName": "Campylobacteraceae",
+          "taxonId": 72294
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Campylobacter",
+          "taxonId": 194
+        },
+        {
+          "rank": "species",
+          "scientificName": "Campylobacter fetus",
+          "taxonId": 196
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Campylobacter fetus",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:196"
+    },
+    "202952": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "rank": "order",
+          "scientificName": "Moraxellales",
+          "taxonId": 2887326
+        },
+        {
+          "rank": "family",
+          "scientificName": "Moraxellaceae",
+          "taxonId": 468
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Acinetobacter",
+          "taxonId": 469
+        },
+        {
+          "rank": "species",
+          "scientificName": "Acinetobacter gerneri",
+          "taxonId": 202952
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Acinetobacter gerneri",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:202952"
+    },
+    "2041": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "taxonId": 201174
+        },
+        {
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "rank": "order",
+          "scientificName": "Propionibacteriales",
+          "taxonId": 85009
+        },
+        {
+          "rank": "family",
+          "scientificName": "Nocardioidaceae",
+          "taxonId": 85015
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Aeromicrobium",
+          "taxonId": 2040
+        },
+        {
+          "rank": "species",
+          "scientificName": "Aeromicrobium erythreum",
+          "taxonId": 2041
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Aeromicrobium erythreum",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:2041"
+    },
+    "210": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Campylobacterota",
+          "taxonId": 29547
+        },
+        {
+          "rank": "class",
+          "scientificName": "Epsilonproteobacteria",
+          "taxonId": 3031852
+        },
+        {
+          "rank": "order",
+          "scientificName": "Campylobacterales",
+          "taxonId": 213849
+        },
+        {
+          "rank": "family",
+          "scientificName": "Helicobacteraceae",
+          "taxonId": 72293
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Helicobacter",
+          "taxonId": 209
+        },
+        {
+          "rank": "species",
+          "scientificName": "Helicobacter pylori",
+          "taxonId": 210
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Helicobacter pylori",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:210"
+    },
+    "264463": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Clostridia",
+          "taxonId": 186801
+        },
+        {
+          "rank": "order",
+          "scientificName": "Lachnospirales",
+          "taxonId": 3085636
+        },
+        {
+          "rank": "family",
+          "scientificName": "Lachnospiraceae",
+          "taxonId": 186803
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Anaerosporobacter",
+          "taxonId": 653683
+        },
+        {
+          "rank": "species",
+          "scientificName": "Anaerosporobacter mobilis",
+          "taxonId": 264463
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Anaerosporobacter mobilis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:264463"
+    },
+    "29385": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacilli",
+          "taxonId": 91061
+        },
+        {
+          "rank": "order",
+          "scientificName": "Caryophanales",
+          "taxonId": 1385
+        },
+        {
+          "rank": "family",
+          "scientificName": "Staphylococcaceae",
+          "taxonId": 90964
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Staphylococcus",
+          "taxonId": 1279
+        },
+        {
+          "rank": "species",
+          "scientificName": "Staphylococcus saprophyticus",
+          "taxonId": 29385
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Staphylococcus saprophyticus",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:29385"
+    },
+    "29461": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Alphaproteobacteria",
+          "taxonId": 28211
+        },
+        {
+          "rank": "order",
+          "scientificName": "Hyphomicrobiales",
+          "taxonId": 356
+        },
+        {
+          "rank": "family",
+          "scientificName": "Brucellaceae",
+          "taxonId": 118882
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Brucella/Ochrobactrum group",
+          "taxonId": 2826938
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Brucella",
+          "taxonId": 234
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Brucella melitensis group",
+          "taxonId": 3703990
+        },
+        {
+          "rank": "species",
+          "scientificName": "Brucella suis",
+          "taxonId": 29461
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Brucella suis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:29461"
+    },
+    "305719": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "clade",
+          "scientificName": "FCB group",
+          "taxonId": 1783270
+        },
+        {
+          "rank": "clade",
+          "scientificName": "Bacteroidota/Chlorobiota group",
+          "taxonId": 68336
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacteroidota",
+          "taxonId": 976
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacteroidia",
+          "taxonId": 200643
+        },
+        {
+          "rank": "order",
+          "scientificName": "Bacteroidales",
+          "taxonId": 171549
+        },
+        {
+          "rank": "family",
+          "scientificName": "Prevotellaceae",
+          "taxonId": 171552
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Segatella",
+          "taxonId": 2974251
+        },
+        {
+          "rank": "species",
+          "scientificName": "Segatella baroniae",
+          "taxonId": 305719
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Segatella baroniae",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:305719"
+    },
+    "36809": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "taxonId": 201174
+        },
+        {
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "rank": "order",
+          "scientificName": "Mycobacteriales",
+          "taxonId": 85007
+        },
+        {
+          "rank": "family",
+          "scientificName": "Mycobacteriaceae",
+          "taxonId": 1762
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Mycobacteroides",
+          "taxonId": 670516
+        },
+        {
+          "rank": "species",
+          "scientificName": "Mycobacteroides abscessus",
+          "taxonId": 36809
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Mycobacteroides abscessus",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:36809"
+    },
+    "38293": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "rank": "order",
+          "scientificName": "Vibrionales",
+          "taxonId": 135623
+        },
+        {
+          "rank": "family",
+          "scientificName": "Vibrionaceae",
+          "taxonId": 641
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Photobacterium",
+          "taxonId": 657
+        },
+        {
+          "rank": "species",
+          "scientificName": "Photobacterium damselae",
+          "taxonId": 38293
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Photobacterium damselae",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:38293"
+    },
+    "421530": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "clade",
+          "scientificName": "FCB group",
+          "taxonId": 1783270
+        },
+        {
+          "rank": "clade",
+          "scientificName": "Bacteroidota/Chlorobiota group",
+          "taxonId": 68336
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacteroidota",
+          "taxonId": 976
+        },
+        {
+          "rank": "class",
+          "scientificName": "Flavobacteriia",
+          "taxonId": 117743
+        },
+        {
+          "rank": "order",
+          "scientificName": "Flavobacteriales",
+          "taxonId": 200644
+        },
+        {
+          "rank": "family",
+          "scientificName": "Weeksellaceae",
+          "taxonId": 2762318
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Chryseobacterium group",
+          "taxonId": 2782232
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Epilithonimonas",
+          "taxonId": 2782229
+        },
+        {
+          "rank": "species",
+          "scientificName": "Epilithonimonas bovis",
+          "taxonId": 421530
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Epilithonimonas bovis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:421530"
+    },
+    "43669": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Actinomycetota",
+          "taxonId": 201174
+        },
+        {
+          "rank": "class",
+          "scientificName": "Actinomycetes",
+          "taxonId": 1760
+        },
+        {
+          "rank": "order",
+          "scientificName": "Micrococcales",
+          "taxonId": 85006
+        },
+        {
+          "rank": "family",
+          "scientificName": "Dermabacteraceae",
+          "taxonId": 85020
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Brachybacterium",
+          "taxonId": 43668
+        },
+        {
+          "rank": "species",
+          "scientificName": "Brachybacterium faecium",
+          "taxonId": 43669
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Brachybacterium faecium",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:43669"
+    },
+    "450": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "rank": "order",
+          "scientificName": "Legionellales",
+          "taxonId": 118969
+        },
+        {
+          "rank": "family",
+          "scientificName": "Legionellaceae",
+          "taxonId": 444
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Legionella",
+          "taxonId": 445
+        },
+        {
+          "rank": "species",
+          "scientificName": "Legionella longbeachae",
+          "taxonId": 450
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Legionella longbeachae",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:450"
+    },
+    "492670": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacilli",
+          "taxonId": 91061
+        },
+        {
+          "rank": "order",
+          "scientificName": "Caryophanales",
+          "taxonId": 1385
+        },
+        {
+          "rank": "family",
+          "scientificName": "Bacillaceae",
+          "taxonId": 186817
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Bacillus",
+          "taxonId": 1386
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Bacillus subtilis group",
+          "taxonId": 653685
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Bacillus amyloliquefaciens group",
+          "taxonId": 1938374
+        },
+        {
+          "rank": "species",
+          "scientificName": "Bacillus velezensis",
+          "taxonId": 492670
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Bacillus velezensis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:492670"
+    },
+    "59405": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Betaproteobacteria",
+          "taxonId": 28216
+        },
+        {
+          "rank": "order",
+          "scientificName": "Rhodocyclales",
+          "taxonId": 206389
+        },
+        {
+          "rank": "family",
+          "scientificName": "Zoogloeaceae",
+          "taxonId": 2008794
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Thauera",
+          "taxonId": 33057
+        },
+        {
+          "rank": "species",
+          "scientificName": "Thauera aromatica",
+          "taxonId": 59405
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Thauera aromatica",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:59405"
+    },
+    "621": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "rank": "order",
+          "scientificName": "Enterobacterales",
+          "taxonId": 91347
+        },
+        {
+          "rank": "family",
+          "scientificName": "Enterobacteriaceae",
+          "taxonId": 543
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Shigella",
+          "taxonId": 620
+        },
+        {
+          "rank": "species",
+          "scientificName": "Shigella boydii",
+          "taxonId": 621
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Shigella boydii",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:621"
+    },
+    "622": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "rank": "order",
+          "scientificName": "Enterobacterales",
+          "taxonId": 91347
+        },
+        {
+          "rank": "family",
+          "scientificName": "Enterobacteriaceae",
+          "taxonId": 543
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Shigella",
+          "taxonId": 620
+        },
+        {
+          "rank": "species",
+          "scientificName": "Shigella dysenteriae",
+          "taxonId": 622
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Shigella dysenteriae",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:622"
+    },
+    "626940": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Negativicutes",
+          "taxonId": 909932
+        },
+        {
+          "rank": "order",
+          "scientificName": "Acidaminococcales",
+          "taxonId": 1843488
+        },
+        {
+          "rank": "family",
+          "scientificName": "Acidaminococcaceae",
+          "taxonId": 909930
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Phascolarctobacterium",
+          "taxonId": 33024
+        },
+        {
+          "rank": "species",
+          "scientificName": "Phascolarctobacterium succinatutens",
+          "taxonId": 626940
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Phascolarctobacterium succinatutens",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:626940"
+    },
+    "632": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "rank": "order",
+          "scientificName": "Enterobacterales",
+          "taxonId": 91347
+        },
+        {
+          "rank": "family",
+          "scientificName": "Yersiniaceae",
+          "taxonId": 1903411
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Yersinia",
+          "taxonId": 629
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Yersinia pseudotuberculosis complex",
+          "taxonId": 1649845
+        },
+        {
+          "rank": "species",
+          "scientificName": "Yersinia pestis",
+          "taxonId": 632
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Yersinia pestis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:632"
+    },
+    "632955": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Gammaproteobacteria",
+          "taxonId": 1236
+        },
+        {
+          "rank": "order",
+          "scientificName": "Moraxellales",
+          "taxonId": 2887326
+        },
+        {
+          "rank": "family",
+          "scientificName": "Moraxellaceae",
+          "taxonId": 468
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Acinetobacter",
+          "taxonId": 469
+        },
+        {
+          "rank": "species",
+          "scientificName": "Acinetobacter rudis",
+          "taxonId": 632955
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Acinetobacter rudis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:632955"
+    },
+    "72558": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Eukaryota",
+          "taxonId": 2759
+        },
+        {
+          "rank": "clade",
+          "scientificName": "Opisthokonta",
+          "taxonId": 33154
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Fungi",
+          "taxonId": 4751
+        },
+        {
+          "rank": "subkingdom",
+          "scientificName": "Dikarya",
+          "taxonId": 451864
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Basidiomycota",
+          "taxonId": 5204
+        },
+        {
+          "rank": "subphylum",
+          "scientificName": "Ustilaginomycotina",
+          "taxonId": 452284
+        },
+        {
+          "rank": "class",
+          "scientificName": "Ustilaginomycetes",
+          "taxonId": 5257
+        },
+        {
+          "rank": "order",
+          "scientificName": "Ustilaginales",
+          "taxonId": 5267
+        },
+        {
+          "rank": "family",
+          "scientificName": "Ustilaginaceae",
+          "taxonId": 5268
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Sporisorium",
+          "taxonId": 63265
+        },
+        {
+          "rank": "species",
+          "scientificName": "Sporisorium reilianum",
+          "taxonId": 72558
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Sporisorium reilianum",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:72558"
+    },
+    "837": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "clade",
+          "scientificName": "FCB group",
+          "taxonId": 1783270
+        },
+        {
+          "rank": "clade",
+          "scientificName": "Bacteroidota/Chlorobiota group",
+          "taxonId": 68336
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacteroidota",
+          "taxonId": 976
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacteroidia",
+          "taxonId": 200643
+        },
+        {
+          "rank": "order",
+          "scientificName": "Bacteroidales",
+          "taxonId": 171549
+        },
+        {
+          "rank": "family",
+          "scientificName": "Porphyromonadaceae",
+          "taxonId": 171551
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Porphyromonas",
+          "taxonId": 836
+        },
+        {
+          "rank": "species",
+          "scientificName": "Porphyromonas gingivalis",
+          "taxonId": 837
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Porphyromonas gingivalis",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:837"
+    },
+    "86665": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Bacillati",
+          "taxonId": 1783272
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Bacillota",
+          "taxonId": 1239
+        },
+        {
+          "rank": "class",
+          "scientificName": "Bacilli",
+          "taxonId": 91061
+        },
+        {
+          "rank": "order",
+          "scientificName": "Caryophanales",
+          "taxonId": 1385
+        },
+        {
+          "rank": "family",
+          "scientificName": "Bacillaceae",
+          "taxonId": 186817
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Halalkalibacterium (ex Joshi et al. 2022)",
+          "taxonId": 2893055
+        },
+        {
+          "rank": "species",
+          "scientificName": "Halalkalibacterium halodurans",
+          "taxonId": 86665
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Halalkalibacterium halodurans",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:86665"
+    },
+    "94625": {
+      "active": true,
+      "exact_allele_assignment": false,
+      "experimental_subject_assignment": false,
+      "lineage": [
+        {
+          "rank": "no rank",
+          "scientificName": "cellular organisms",
+          "taxonId": 131567
+        },
+        {
+          "rank": "domain",
+          "scientificName": "Bacteria",
+          "taxonId": 2
+        },
+        {
+          "rank": "kingdom",
+          "scientificName": "Pseudomonadati",
+          "taxonId": 3379134
+        },
+        {
+          "rank": "phylum",
+          "scientificName": "Pseudomonadota",
+          "taxonId": 1224
+        },
+        {
+          "rank": "class",
+          "scientificName": "Alphaproteobacteria",
+          "taxonId": 28211
+        },
+        {
+          "rank": "order",
+          "scientificName": "Hyphomicrobiales",
+          "taxonId": 356
+        },
+        {
+          "rank": "family",
+          "scientificName": "Brucellaceae",
+          "taxonId": 118882
+        },
+        {
+          "rank": "no rank",
+          "scientificName": "Brucella/Ochrobactrum group",
+          "taxonId": 2826938
+        },
+        {
+          "rank": "genus",
+          "scientificName": "Brucella",
+          "taxonId": 234
+        },
+        {
+          "rank": "species",
+          "scientificName": "Brucella intermedia",
+          "taxonId": 94625
+        }
+      ],
+      "previous_status": "LINEAGE_ANNOTATION_ONLY_NO_STANDALONE_RESPONSE_SELECTED",
+      "rank": "species",
+      "scientific_name": "Brucella intermedia",
+      "status": "ACTIVE_NATIVE_RESPONSE_VERIFIED",
+      "taxon_id": "NCBITaxon:94625"
+    }
+  },
+  "summary": {
+    "biological_record_changes": 0,
+    "card_terms_checked": 2002,
+    "compound_records": 65,
+    "corpus_records_checked": 2939,
+    "experimental_assignments": 0,
+    "label_warning_nodes_retained": 25,
+    "new_species_responses": 34,
+    "reference_proteins_with_new_species_evidence": 43,
+    "reference_taxa_checked": 36,
+    "reference_terms_with_new_species_evidence": 43,
+    "remaining_lineage_only_species": 0,
+    "species_with_standalone_responses_after": 288,
+    "total_direct_reference_proteins": 979,
+    "total_species_nodes": 288,
+    "whole_record_signoffs": 0
+  },
+  "terms": {
+    "ARO:3000167": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:27902"
+      ],
+      "reference_accessions": [
+        "UniProtKB:E6ZYG3"
+      ],
+      "source_label_sha256": "67a1e9b771518517d40ca446c6b168cf4a0ac481530cfc8642e76885a2fd6db9"
+    },
+    "ARO:3000197": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:27644",
+        "CHEBI:27701",
+        "CHEBI:27902",
+        "CHEBI:4392",
+        "CHEBI:50694",
+        "CHEBI:50845"
+      ],
+      "reference_accessions": [
+        "UniProtKB:F3ZU25"
+      ],
+      "source_label_sha256": "2cf341089a503547e5c88a9c3e15c52f29416ee25a92458df5782e651015c63d"
+    },
+    "ARO:3000326": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:16869",
+        "CHEBI:17658",
+        "CHEBI:2955",
+        "CHEBI:29688",
+        "CHEBI:3732",
+        "CHEBI:3745",
+        "CHEBI:42355",
+        "CHEBI:4309",
+        "CHEBI:474014",
+        "CHEBI:48844",
+        "CHEBI:6472",
+        "CHEBI:8417",
+        "CHEBI:8418",
+        "CHEBI:85260",
+        "CHEBI:8732",
+        "antibioticmech:aro-0aefa62f74",
+        "antibioticmech:aro-2a1d8b8631",
+        "antibioticmech:aro-2ea67cad76",
+        "antibioticmech:aro-4a4590abba",
+        "antibioticmech:aro-59524d78a3",
+        "antibioticmech:aro-6536d0e3bb",
+        "antibioticmech:aro-88dda0e2d9",
+        "antibioticmech:aro-a324312fa2",
+        "antibioticmech:aro-f4906250fc"
+      ],
+      "reference_accessions": [
+        "UniProtKB:P07287"
+      ],
+      "source_label_sha256": "448dd1cf9461762fbf233094a28868f644660f585d8ac0f401fe6110dfdb9801"
+    },
+    "ARO:3000463": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:16869",
+        "CHEBI:17658",
+        "CHEBI:29630",
+        "CHEBI:80016"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A0K2B0Q1"
+      ],
+      "source_label_sha256": "19f7d1b7cc66d1a985737901af8d749935f73bd3a39ecc9594054c63223db826"
+    },
+    "ARO:3000556": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:27644",
+        "CHEBI:27701",
+        "CHEBI:27902",
+        "CHEBI:4392",
+        "CHEBI:50694",
+        "CHEBI:50845"
+      ],
+      "reference_accessions": [
+        "UniProtKB:D8L9Y9"
+      ],
+      "source_label_sha256": "53622df685d97167d915011f3358e333956b04f2055f85d45beaaa5e3d14f90f"
+    },
+    "ARO:3000561": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:27902"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q7CUB3"
+      ],
+      "source_label_sha256": "63317004789ad8932203de720e9c7c9463045085828d2c9c704e7b320654ce12"
+    },
+    "ARO:3000594": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:16869",
+        "CHEBI:17658",
+        "CHEBI:2955",
+        "CHEBI:29688",
+        "CHEBI:3732",
+        "CHEBI:3745",
+        "CHEBI:42355",
+        "CHEBI:4309",
+        "CHEBI:474014",
+        "CHEBI:48844",
+        "CHEBI:6472",
+        "CHEBI:8417",
+        "CHEBI:8418",
+        "CHEBI:85260",
+        "CHEBI:8732",
+        "antibioticmech:aro-0aefa62f74",
+        "antibioticmech:aro-2a1d8b8631",
+        "antibioticmech:aro-2ea67cad76",
+        "antibioticmech:aro-4a4590abba",
+        "antibioticmech:aro-59524d78a3",
+        "antibioticmech:aro-6536d0e3bb",
+        "antibioticmech:aro-88dda0e2d9",
+        "antibioticmech:aro-a324312fa2",
+        "antibioticmech:aro-f4906250fc"
+      ],
+      "reference_accessions": [
+        "UniProtKB:P09891"
+      ],
+      "source_label_sha256": "958c4771e8eaabdcf3dd3a3344480376743a9fbf29bcfedb4c8357358a99722d"
+    },
+    "ARO:3000603": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:16869",
+        "CHEBI:17658",
+        "CHEBI:2955",
+        "CHEBI:29688",
+        "CHEBI:3732",
+        "CHEBI:3745",
+        "CHEBI:42355",
+        "CHEBI:4309",
+        "CHEBI:474014",
+        "CHEBI:48844",
+        "CHEBI:6472",
+        "CHEBI:8417",
+        "CHEBI:8418",
+        "CHEBI:85260",
+        "CHEBI:8732",
+        "antibioticmech:aro-0aefa62f74",
+        "antibioticmech:aro-2a1d8b8631",
+        "antibioticmech:aro-2ea67cad76",
+        "antibioticmech:aro-4a4590abba",
+        "antibioticmech:aro-59524d78a3",
+        "antibioticmech:aro-6536d0e3bb",
+        "antibioticmech:aro-88dda0e2d9",
+        "antibioticmech:aro-a324312fa2",
+        "antibioticmech:aro-f4906250fc"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A829QAF6"
+      ],
+      "source_label_sha256": "cc949a954dd4cd5fe41a482986cb4c4bba4872c4ba64f4315768f46485162f13"
+    },
+    "ARO:3000604": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:16869",
+        "CHEBI:17658",
+        "CHEBI:2955",
+        "CHEBI:29688",
+        "CHEBI:3732",
+        "CHEBI:3745",
+        "CHEBI:42355",
+        "CHEBI:4309",
+        "CHEBI:474014",
+        "CHEBI:48844",
+        "CHEBI:6472",
+        "CHEBI:8417",
+        "CHEBI:8418",
+        "CHEBI:85260",
+        "CHEBI:8732",
+        "antibioticmech:aro-0aefa62f74",
+        "antibioticmech:aro-2a1d8b8631",
+        "antibioticmech:aro-2ea67cad76",
+        "antibioticmech:aro-4a4590abba",
+        "antibioticmech:aro-59524d78a3",
+        "antibioticmech:aro-6536d0e3bb",
+        "antibioticmech:aro-88dda0e2d9",
+        "antibioticmech:aro-a324312fa2",
+        "antibioticmech:aro-f4906250fc"
+      ],
+      "reference_accessions": [
+        "UniProtKB:F3ZTT0"
+      ],
+      "source_label_sha256": "7c548b4e8a61c2f0b50488e4e0e0e170f48ffb9504d6578692b0f6a0024b24a2"
+    },
+    "ARO:3000614": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:42355"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q8DPW8"
+      ],
+      "source_label_sha256": "bebd6c479cb92b91077d85db4f5a732cfe9952a6f6791d0e50bb63aa2b7e2b06"
+    },
+    "ARO:3000822": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:100241",
+        "CHEBI:100246"
+      ],
+      "reference_accessions": [
+        "UniProtKB:P0A4K5"
+      ],
+      "source_label_sha256": "2c184056cf8c39c4bb220239ac09a669467209962bf4a7e2c1a37b60011ceff6"
+    },
+    "ARO:3001216": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:100246",
+        "CHEBI:157175"
+      ],
+      "reference_accessions": [
+        "UniProtKB:B2TTK5"
+      ],
+      "source_label_sha256": "00f010fdb40043633a26bb553974feb7073e1759a7a0b760426dbf9ca3ef669e"
+    },
+    "ARO:3001301": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17658",
+        "CHEBI:63284"
+      ],
+      "reference_accessions": [
+        "UniProtKB:C1CH31"
+      ],
+      "source_label_sha256": "32aa52888a6c0fd983d0ac32f9f905db39de942280dd6a6108a4f154f3de7d98"
+    },
+    "ARO:3001303": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:6472",
+        "CHEBI:85260",
+        "antibioticmech:aro-27630f7c54"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A0K2B0W1"
+      ],
+      "source_label_sha256": "d2bdef55117759a9f748eacc2d14a3f2049ac10fd90389df7d085de8a439b4f4"
+    },
+    "ARO:3002527": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:28864",
+        "CHEBI:37945",
+        "CHEBI:7528",
+        "antibioticmech:aro-b380d64ee1",
+        "antibioticmech:aro-e4e652725f"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q9CD24"
+      ],
+      "source_label_sha256": "71663bdba909aff300b6ddc8ae5f2a2fc146fd92f035aff3abde434c439922ec"
+    },
+    "ARO:3002626": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17076"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A1M7HJT6"
+      ],
+      "source_label_sha256": "9e32ed0fef9a09ba460e0dde4959137a4e641037049faed1ec5e6f11b6c2de48"
+    },
+    "ARO:3002689": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:135238",
+        "CHEBI:17698",
+        "CHEBI:32215"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0AAV3BDF9"
+      ],
+      "source_label_sha256": "523aea5f4353fe2bfce3146b95ce8c99664df1f41b4b5b96bfc92d949a703b22"
+    },
+    "ARO:3002812": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17698",
+        "CHEBI:87185"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q53019"
+      ],
+      "source_label_sha256": "3dd623c6d2df53f80dac64f1e4aee64b1e526e719ae17a652db02596f78d90b7"
+    },
+    "ARO:3002814": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:135238",
+        "CHEBI:17698",
+        "CHEBI:32215",
+        "CHEBI:3745",
+        "CHEBI:4309",
+        "CHEBI:44137",
+        "CHEBI:6472",
+        "antibioticmech:aro-4a4590abba",
+        "antibioticmech:aro-59524d78a3",
+        "antibioticmech:aro-88dda0e2d9"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A7Z1T2"
+      ],
+      "source_label_sha256": "2b7f958bf408c742eca3911e242859bd39251f61f999010fe613384b53d6ad75"
+    },
+    "ARO:3002826": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:42355"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A2R4BSJ9"
+      ],
+      "source_label_sha256": "678b141e72c71ce83e26be10243e6d00a354e79e969a41221d9cdbf2eec68beb"
+    },
+    "ARO:3002828": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:85260"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A0K2B058"
+      ],
+      "source_label_sha256": "ba388b08e5e1d944775f605fd80de05c5e73bc1d2613da0bd4bb7a9bcad1ccba"
+    },
+    "ARO:3003206": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:6472",
+        "CHEBI:8269"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A1M7HJQ7"
+      ],
+      "source_label_sha256": "244ffcbd8619c5279145001412a6d2ada4111cf627c81231213c8a527d3c80de"
+    },
+    "ARO:3003730": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:7025"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A0H3EDP3"
+      ],
+      "source_label_sha256": "a134f98bcac11403cc6d6d0e07a2cd581ac3d07300eeb12c4a15f308e9776024"
+    },
+    "ARO:3003731": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:29013"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q49VA0"
+      ],
+      "source_label_sha256": "9442dd7c026729bef6ac4a7ff32fb0548e5ddf82534b82d331a53db57b4ef166"
+    },
+    "ARO:3003772": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "antibioticmech:aro-eb42322815"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A0H3G6K4"
+      ],
+      "source_label_sha256": "24b4626a61f891bdf9abb909ff7703ca1b7a9f74bb68f47b023a5436d3584467"
+    },
+    "ARO:3003920": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:59063"
+      ],
+      "reference_accessions": [
+        "UniProtKB:B2RI48"
+      ],
+      "source_label_sha256": "99dd83762f3ba61149d532627eb169d271517f011b8ddd208875e56d58526075"
+    },
+    "ARO:3003950": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:6909"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q32E34"
+      ],
+      "source_label_sha256": "bd6f77fad3b527ea766e1db014f796d87b72be8c7f0edb88bd64822816e9d3c7"
+    },
+    "ARO:3003964": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:100241",
+        "CHEBI:27902",
+        "CHEBI:6909"
+      ],
+      "reference_accessions": [
+        "UniProtKB:O25793"
+      ],
+      "source_label_sha256": "44d62c8adb665d7de54158cb0360c2aa58ea00d31d812634f53e3c64a71c9f79"
+    },
+    "ARO:3004086": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17630",
+        "CHEBI:2637"
+      ],
+      "reference_accessions": [
+        "UniProtKB:S3N4B0"
+      ],
+      "source_label_sha256": "62a3a57655a645311c2b83a88e28d670d734e65600347d584ed4e4b2ea68c48b"
+    },
+    "ARO:3004087": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17630",
+        "CHEBI:2637"
+      ],
+      "reference_accessions": [
+        "UniProtKB:N8ZRE3"
+      ],
+      "source_label_sha256": "82563eb45fca4ba875100d00ba50bff074c9d534060bdf5166449af83751c6ff"
+    },
+    "ARO:3004146": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17698",
+        "CHEBI:87185"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A5I5U3"
+      ],
+      "source_label_sha256": "9b9180a4582a2f918edde48107b77c73253a7d6904c5b88aefceadaf13e43f92"
+    },
+    "ARO:3004291": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:18208"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q3IVS9"
+      ],
+      "source_label_sha256": "a637daeb6e6dfc40b58d23f053ac184a3d7489e5e0752d2bdf6d41d66c2eb0fb"
+    },
+    "ARO:3004359": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:204928",
+        "CHEBI:2676",
+        "CHEBI:3508",
+        "CHEBI:9587"
+      ],
+      "reference_accessions": [
+        "UniProtKB:E8LGK3"
+      ],
+      "source_label_sha256": "e3ee2b02df5ade584041dbb522154cf59a9342afa4a77cbe6ff70c28f095bf9a"
+    },
+    "ARO:3004451": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17698"
+      ],
+      "reference_accessions": [
+        "UniProtKB:P23364"
+      ],
+      "source_label_sha256": "a4601987b8878ecbd35dc72af029da342581079b94c493f18def7b88286272e8"
+    },
+    "ARO:3004539": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:2955"
+      ],
+      "reference_accessions": [
+        "UniProtKB:C7MEP1"
+      ],
+      "source_label_sha256": "0d296a8cb5477a0c66e2bd88d1aa022a5704df6324eb21c07f505a5e8517ef2f"
+    },
+    "ARO:3004603": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:27701",
+        "CHEBI:27902"
+      ],
+      "reference_accessions": [
+        "UniProtKB:D3HKY4"
+      ],
+      "source_label_sha256": "c8acc1e4835b69d9b9a00aa2ad537c22d0fbea9b1e237d28786cf4a406c35561"
+    },
+    "ARO:3004605": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:85260"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A0K2B0L6"
+      ],
+      "source_label_sha256": "fe0da36333a86dd088ef26751d42e1a5fb989ebfbb87a005b924eed2eae7de77"
+    },
+    "ARO:3004643": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:42355"
+      ],
+      "reference_accessions": [
+        "UniProtKB:Q7AJZ0"
+      ],
+      "source_label_sha256": "8001255764dc419b6055d78a5ec87359c7eca6a339afbd395ad80024669f2be4"
+    },
+    "ARO:3004683": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:17076"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A1U7Q156"
+      ],
+      "source_label_sha256": "adb7bb4a687e8eb633e88e057a7dd2207882784957c74f74ffe30e202bf5d9ac"
+    },
+    "ARO:3007111": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:6909"
+      ],
+      "reference_accessions": [
+        "UniProtKB:U2NQD4"
+      ],
+      "source_label_sha256": "eaae78d26547713147579063972e743d4177375965b286056efdb1f6ef130883"
+    },
+    "ARO:3007180": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:124991",
+        "CHEBI:2676",
+        "CHEBI:3508",
+        "CHEBI:3515",
+        "CHEBI:9587"
+      ],
+      "reference_accessions": [
+        "UniProtKB:B1MCI3"
+      ],
+      "source_label_sha256": "2f7851a57f3b1a93b5328872b0b97759cece73588cb4d7197000ed547b758bf0"
+    },
+    "ARO:3007372": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:28915"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0A9X6IXB2"
+      ],
+      "source_label_sha256": "7df265323d2ee7aa5616447accf8dfe0948ca0ec23da25577e201d5fb78058a7"
+    },
+    "ARO:3007515": {
+      "experimental_subject_assignment": false,
+      "record_memberships": [
+        "CHEBI:9215"
+      ],
+      "reference_accessions": [
+        "UniProtKB:A0AA42KJC0"
+      ],
+      "source_label_sha256": "64980dc83c8285648d760a5282ce71e1ace5253843704dd81857cc04651690d4"
+    }
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "census_before": {
+    "path": "research/2026-10-14-mycophenolic-resistance-grounding.tsv",
+    "sha256": "c2b9c15d375c86aa72cb01c3648d4288e8ec0504ab9d4617c1967a0b1a4daf48"
+  },
+  "curation_scope": {
+    "existing_claims": 5,
+    "full_corpus_records_in_scope": 2939,
+    "new_resistance_claims": 0,
+    "records": 3,
+    "supported_species": {
+      "taxon_id": "NCBITaxon:1886",
+      "taxon_label": "Streptomyces albidoflavus"
+    },
+    "whole_record_primary_signoffs": 0
+  },
+  "donor_reference_proteins_preserved": [
+    "UniProtKB:D8L2W8",
+    "UniProtKB:Q70HZ0"
+  ],
+  "ena_field_definitions": {
+    "return": {
+      "selected_definitions": [
+        {
+          "columnId": "accession",
+          "description": "accession number",
+          "type": "text"
+        },
+        {
+          "columnId": "description",
+          "description": "brief sequence description",
+          "type": "text"
+        },
+        {
+          "columnId": "first_public",
+          "description": "date when made public",
+          "type": "date"
+        },
+        {
+          "columnId": "last_updated",
+          "description": "date when last updated",
+          "type": "date"
+        },
+        {
+          "columnId": "sample_accession",
+          "description": "sample accession number",
+          "type": "text"
+        },
+        {
+          "columnId": "scientific_name",
+          "description": "scientific name of an organism",
+          "type": "text"
+        },
+        {
+          "columnId": "sequence_version",
+          "description": "Version of the sequence",
+          "type": "number"
+        },
+        {
+          "columnId": "strain",
+          "description": "strain from which sample was obtained",
+          "type": "text"
+        },
+        {
+          "columnId": "study_accession",
+          "description": "study accession number",
+          "type": "text"
+        },
+        {
+          "columnId": "tax_id",
+          "description": "NCBI taxonomic classification",
+          "type": "taxonomy"
+        }
+      ],
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-return-fields-attempt.json",
+          "sha256": "52370e6feb96bd13d7e42862809c365bf082e4e1f00d2b5984ebb51e66109a4e"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-return-fields-response.bin",
+          "sha256": "c4ce5007de75e6effa90f7835860732062d535e19ae1b895dfeb06d597530df7"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-return-fields-receipt.json",
+          "sha256": "d6c1945b368ffe8e56afdc7fcd7327f024fdf1811b15fcd1289691e3c8cc59c5"
+        },
+        "retrieved_at": "2026-10-14T07:20:07.547409+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/returnFields?result=sequence&format=tsv"
+      }
+    },
+    "search": {
+      "selected_definitions": [
+        {
+          "columnId": "accession",
+          "description": "accession number",
+          "type": "text"
+        }
+      ],
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-search-fields-attempt.json",
+          "sha256": "5cb8fd196358fcbda546dcfb5c97f8c0f62c23a6cc00616313f3ebeef3677556"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-search-fields-response.bin",
+          "sha256": "329c89923166e725e6df49af9d5c688fd81e7c46bb848dcda7537d92d38fd14c"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-j1074/ena-sequence-search-fields-receipt.json",
+          "sha256": "6dd4f94a3bf390a8d413e081286f36c07b3a957d43f16bf7e172060fce51074e"
+        },
+        "retrieved_at": "2026-10-14T07:20:56.411562+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/ena/portal/api/searchFields?result=sequence&format=tsv"
+      }
+    }
+  },
+  "grounding": {
+    "assignment_scope": "SPECIES_LEVEL_HOST_LINEAGE_NOT_EXACT_DERIVATIVE_IDENTITY",
+    "background_chromosome": "CP004370.1",
+    "background_sample": "SAMN02603310",
+    "background_strain": "J1074",
+    "background_study": "PRJNA180996",
+    "chromosome_is_assembly_accession": false,
+    "current_species": {
+      "taxon_id": "NCBITaxon:1886",
+      "taxon_label": "Streptomyces albidoflavus"
+    },
+    "experimental_allele_assignment": null,
+    "experimental_genome_assignment": null,
+    "experimental_sample_assignment": null,
+    "experimental_strain_taxon_assignment": null,
+    "first_public": "2013-04-10",
+    "metadata_last_updated": "2018-11-09",
+    "resistance_inferred_from_chromosome": false,
+    "source_background_name": "Streptomyces albus J1074",
+    "species_rank": "species"
+  },
+  "historical_name_candidates_selected_as_experimental_taxa": [],
+  "historical_name_search": {
+    "candidates": [
+      {
+        "active": true,
+        "otherNames": [
+          "Streptomyces albus str. J1074",
+          "Streptomyces albus strain J1074"
+        ],
+        "parent": {
+          "scientificName": "Streptomyces albus",
+          "taxonId": 1888
+        },
+        "rank": "strain",
+        "scientificName": "Streptomyces albus J1074",
+        "strains": null,
+        "taxonId": 457425
+      },
+      {
+        "active": true,
+        "otherNames": null,
+        "parent": {
+          "scientificName": "unclassified Kitasatosporales",
+          "taxonId": 3106765
+        },
+        "rank": "species",
+        "scientificName": "Kitasatosporales bacterium J1074",
+        "strains": null,
+        "taxonId": 3466461
+      },
+      {
+        "active": true,
+        "otherNames": [
+          "Streptomyces albus (strain G)"
+        ],
+        "parent": {
+          "scientificName": "Streptomyces albus",
+          "taxonId": 1888
+        },
+        "rank": "strain",
+        "scientificName": "Streptomyces albus G",
+        "strains": [
+          {
+            "name": "J1074"
+          }
+        ],
+        "taxonId": 1962
+      }
+    ],
+    "complete_for_query": true,
+    "decision": "MULTIPLE_NAME_CANDIDATES_NO_EXPERIMENTAL_STRAIN_ASSIGNMENT",
+    "query": "J1074",
+    "request": {
+      "bytes": 3595,
+      "cache_path": "reports/resistance-grounding-2026-10-09-borrelidin/taxonomy-search-4efabffb8850-response.bin",
+      "retrieved_at": "2026-10-09T15:57:40.413908+00:00",
+      "sha256": "369c9083ba4013e41713f4bfa92c82cf95a538fa843c301215904bcfe16dc1c4",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=J1074&format=json&size=100"
+    },
+    "result_count": 3,
+    "selected_strain_taxon": null,
+    "source_label": "Streptomyces albus J1074",
+    "species_name_reference": "NCBITaxon:1888"
+  },
+  "host_taxonomy_is_donor_taxonomy": false,
+  "limits": {
+    "background_genome_proves_experimental_genotype": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "no_hit_name_query_proves_biological_absence": false,
+    "numeric_AST_or_sequence_exported": false,
+    "protocols_or_constructs_exported": false,
+    "source_adoptions": 0
+  },
+  "modern_name_is_formal_taxonomic_reclassification_study": false,
+  "primary": {
+    "genome-primary": {
+      "doi": "DOI:10.1186/1471-2164-15-97",
+      "locations": {
+        "accession": {
+          "text_sha256": "751955085d14850ab16ff41cf5697d8738c0bfaa45c45a3706817f64bd9d6fb8",
+          "xpath": "/article/body/sec[4]/sec[4]/p"
+        },
+        "ancestry": {
+          "text_sha256": "eb088883af62cf89a8aa1e51435dd0c18c085b9e110216159245c58e4c9a4172",
+          "xpath": "/article/body/sec[2]/sec[3]/p"
+        }
+      },
+      "scope": "HOST_NAME_AND_LINEAGE_ONLY_NOT_NEW_RESISTANCE_EVIDENCE",
+      "whole_article_or_supplements_reviewed": false
+    },
+    "modern-name-primary": {
+      "doi": "DOI:10.1093/nar/gkae1236",
+      "locations": {
+        "later_name_usage": {
+          "text_sha256": "8d31e5502381442e9fd6d05154d1639e9749d8f042d67ca1428f30494ddd03dc",
+          "xpath": "/article/body/sec[3]/sec[1]/p"
+        }
+      },
+      "scope": "HOST_NAME_AND_LINEAGE_ONLY_NOT_NEW_RESISTANCE_EVIDENCE",
+      "whole_article_or_supplements_reviewed": false
+    }
+  },
+  "prior_checkpoints": [
+    {
+      "path": "research/2026-10-09-borrelidin-primary-context.json",
+      "sha256": "ff6824c3ec68aef5162eb0b6776faf5a520186d75b006989d44e18b78278453b"
+    },
+    {
+      "path": "research/2026-10-09-platen-primary-context.json",
+      "sha256": "fa10f4e8dc83d7f58adc4a434f87822d13aa9f51d34db56c5a90a697f3bacec6"
+    },
+    {
+      "path": "research/2026-10-14-curator-resistance-fields.json",
+      "sha256": "2db1f8a477ca248adacc32f90c36a472de9a561fe43c32e34f28bc84d5e6bbfe"
+    },
+    {
+      "path": "research/2026-10-14-curator-resistance-fields-verification.json",
+      "sha256": "a7833e1cfab1111866bd834176c114e71a35599e42be7d5a9df144251f255bf8"
+    }
+  ],
+  "records_before": [
+    {
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:68241",
+      "path": "data/antibiotics/antibacterial/platencin.yaml",
+      "sha256": "5bdf0cc6feda78dd54eee8f5a7bbf37b7c8515344790fc01cb833c20953580b7",
+      "standard_inchi_key": "DWUHGPPFFABTIY-RLWZQHMASA-N"
+    },
+    {
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:68236",
+      "path": "data/antibiotics/antibacterial/platensimycin.yaml",
+      "sha256": "f75a55971c4629c13895681a48dc43f5b43143e380431503d6a28c1e16576a84",
+      "standard_inchi_key": "CSOMAHTTWTVBFL-OFBLZTNGSA-N"
+    },
+    {
+      "complete_collection_aware_record_loaded": true,
+      "identifier": "CHEBI:78661",
+      "path": "data/antibiotics/antifungal/borrelidin.yaml",
+      "sha256": "264f89429273999ddda4f850bf45929897b8b5f33ef0ae6a01433811a9a8ee58",
+      "standard_inchi_key": "OJCKRNPLOZHAOU-JTHVHBRGSA-N"
+    }
+  ],
+  "resistance_paper_host_evidence": {
+    "15112998": {
+      "doi": "DOI:10.1016/j.chembiol.2003.12.018",
+      "host_background": "Streptomyces albus J1074",
+      "primary_pdf": {
+        "path": "reports/resistance-grounding-2026-10-09-borrelidin/olano2004-response.bin",
+        "sha256": "a8d8deefe732afed972862811650388fa9eedcde1d23fe019bd072135b4c3116"
+      },
+      "selected_page_visually_reinspected": {
+        "path": "reports/resistance-grounding-2026-10-09-borrelidin/olano2004-page-6.png",
+        "sha256": "b96e6e9f0f6d2bccb67eb5e948cbff581184a8b1dd666eb03dbea16d7252e1dc"
+      },
+      "whole_paper_or_supplement_review": false
+    },
+    "24560608": {
+      "doi": "DOI:10.1016/j.chembiol.2014.01.005",
+      "host_background": "Streptomyces albus J1074",
+      "primary_pdf": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/peterson2014-response.bin",
+        "sha256": "c970162577780a7f73a11def17ab2ed7480a8f0a198b5144f7e077bbb3be8da4"
+      },
+      "selected_page_visually_reinspected": {
+        "path": "reports/resistance-grounding-2026-10-09-platen/peterson2014-page-17.png",
+        "sha256": "9bae329e041d654ee16e95ed53380bc7f23d171e4f9512bae47889594cc3ed98"
+      },
+      "whole_paper_or_supplement_review": false
+    }
+  },
+  "schema_version": 1,
+  "scope": "HOST_SPECIES_GROUNDING_NOT_ALLELE_OR_DERIVATIVE_GENOME_ASSIGNMENT",
+  "sources": {
+    "albidoflavus-taxonomy": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/albidoflavus-taxonomy-attempt.json",
+        "sha256": "67bc1132e40cfb75e1a3c6177e9501d0f1bed7e4c92d5a2ba580a5081735acb4"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/albidoflavus-taxonomy-response.bin",
+        "sha256": "326e8088ba2a466e57286218707a53377e604c76030e3fa55754401272d517a7"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/albidoflavus-taxonomy-receipt.json",
+        "sha256": "7164fe443683b12eabf60059491d24d05bb5e158f6f6473a8c3f531dfd792b5c"
+      },
+      "retrieved_at": "2026-10-14T07:17:06.124567+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=%22Streptomyces%20albidoflavus%22&format=json&size=100"
+    },
+    "ena-chromosome-metadata": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/ena-chromosome-metadata-attempt.json",
+        "sha256": "c4df627d31430d4114131788244cf47903c4dc777edeba585b2a61b142999b4f"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/ena-chromosome-metadata-response.bin",
+        "sha256": "ca0ecfa55b6b28a6407ba0d2e30d68637a6b321fcd2bcaed4a48b4f712684e11"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/ena-chromosome-metadata-receipt.json",
+        "sha256": "1d3e2e7aef7ae672954b7fd75fb76b32dc63f9fc34c731635f56a372439e1524"
+      },
+      "retrieved_at": "2026-10-14T07:21:36.338602+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=accession%3D%22CP004370%22&fields=accession%2Csequence_version%2Cdescription%2Ctax_id%2Cscientific_name%2Cstrain%2Cstudy_accession%2Csample_accession%2Cfirst_public%2Clast_updated&format=json&limit=10"
+    },
+    "genome-primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/genome-primary-attempt.json",
+        "sha256": "e59d5054fb27680ea688bc860e154abe41e5205188dd6252dcc4f0bdeb1b1d80"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/genome-primary-response.bin",
+        "sha256": "fcfe7f720e9a38e50f9bba49a0812605bca71749c3d1963ef0eb4449e093a634"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/genome-primary-receipt.json",
+        "sha256": "f16e2986a9100f57eef04faf80a13d0971a457b0a8c969829b2eeed902b06e46"
+      },
+      "retrieved_at": "2026-10-14T07:17:41.385111+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3937824/fullTextXML"
+    },
+    "modern-name-primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/modern-name-primary-attempt.json",
+        "sha256": "04e501e3ed0245b155e120b3823d33c9ab95eb34a25c697b760c2f888ac13f12"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/modern-name-primary-response.bin",
+        "sha256": "35e3f095e21636e8dd1183db805e56c80fbc29e93b5eec9b0fead299d7766c50"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-j1074/modern-name-primary-receipt.json",
+        "sha256": "723c0c92a0dc1dc29c118ad673ff0d38851d064e52b3551691102ade1a6c2ea0"
+      },
+      "retrieved_at": "2026-10-14T07:19:40.277238+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11754652/fullTextXML"
+    }
+  },
+  "taxonomy_release": "2026_03"
+}

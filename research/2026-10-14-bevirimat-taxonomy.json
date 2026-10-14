@@ -1,0 +1,235 @@
+{
+  "attribution": "UniProt Consortium, release 2026_03, CC BY 4.0; primary attribution retained above",
+  "baseline_record": {
+    "path": "reports/resistance-grounding-2026-10-14-bevirimat/baseline-record.yaml",
+    "sha256": "2894f5b4c56f5716b102720362a56e69279661421faff7dcc5c30a0954f01566"
+  },
+  "cited_papers": {
+    "19279107": {
+      "doi": "10.1128/jvi.02659-08",
+      "isOpenAccess": "N",
+      "pmcid": "PMC2682084",
+      "pmid": "19279107"
+    },
+    "20406463": {
+      "doi": "10.1186/1742-4690-7-36",
+      "isOpenAccess": "Y",
+      "pmcid": "PMC2873507",
+      "pmid": "20406463"
+    }
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-bevirimat/cohort.json",
+    "sha256": "5bfd91e82f9bdd9c27107f53f25cbcadc3cf9d3824f01849d0a5e4fcaa88dfe3"
+  },
+  "curation_scope": {
+    "existing_claims_grounded_at_species_rank": 1,
+    "full_corpus_records_in_scope": 2939,
+    "new_resistance_claims": 0,
+    "no_new_patient_strain_protein_allele_or_genome_assignment": true,
+    "whole_record_primary_signoffs": 0
+  },
+  "date": "2026-10-14",
+  "limits": {
+    "all_inherited_variant_claims_revalidated": false,
+    "github_mutations": 0,
+    "held_sources_retried": false,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "numeric_AST_exported": false,
+    "primary_2009_results_reviewed_in_this_checkpoint": false,
+    "source_adoptions": 0,
+    "whole_record_primary_review": "OPEN"
+  },
+  "primary": {
+    "attribution": "Adamson et al., Retrovirology 7:36 (2010), CC BY 2.0",
+    "background_is_exact_experimental_derivative": false,
+    "doi": "10.1186/1742-4690-7-36",
+    "exact_compound_form_newly_resolved": false,
+    "functional_claims_newly_curated": false,
+    "laboratory_background_label": "NL4-3",
+    "locations": {
+      "conclusion_scope": {
+        "text_sha256": "9c5397a83f60f98cbd5c56cd5215c80d904c87a60ab75926d74bd0a917abf08d",
+        "xpath": "body/sec[title='Conclusions']/p[1]"
+      },
+      "laboratory_background": {
+        "text_sha256": "8f83698fa7a1c23fa54e35b266284bd3a2cc98acee5d7c1bb3150489a0870e2b",
+        "xpath": "body/sec[title='Results and Discussion']/sec[1]/p[1]"
+      }
+    },
+    "native_images_visually_inspected": false,
+    "patient_isolates_tested_in_this_study": false,
+    "pmcid": "PMC2873507",
+    "pmid": "20406463",
+    "review_scope": "Results and Discussion, Conclusions and figure legends",
+    "sequences_variants_protocols_or_numeric_AST_exported": false,
+    "source_organism_label": "HIV-1"
+  },
+  "queries": {
+    "gag-reference": {
+      "alternate_reference_selected": false,
+      "complete_for_query": true,
+      "query": "gene_exact:gag AND organism_name:NL4-3",
+      "result_count": 0,
+      "zero_results_establish_absence": false
+    },
+    "nl43-taxonomy": {
+      "alternate_reference_selected": false,
+      "complete_for_query": true,
+      "query": "NL4-3",
+      "result_count": 0,
+      "zero_results_establish_absence": false
+    }
+  },
+  "record_before": {
+    "complete_collection_aware_record_loaded": true,
+    "identifier": "CHEBI:65484",
+    "path": "data/antibiotics/antiviral/bevirimat.yaml",
+    "sha256": "2894f5b4c56f5716b102720362a56e69279661421faff7dcc5c30a0954f01566",
+    "standard_inchi_key": "YJEJKUQEXFSVCJ-WRFMNRASSA-N"
+  },
+  "reference_plan": {
+    "path": "reports/resistance-grounding-2026-10-14-bevirimat/reference-plan.json",
+    "sha256": "6869fced54cfdbe43c33ef5eb52242749018a4a3069cff55c383270f0be7187e"
+  },
+  "sources": {
+    "gag-reference": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/gag-reference-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/gag-reference-receipt.json",
+        "sha256": "7cf119357f01e5d97551c7e4f822598bab7d44518de0d065d880ae2316bd7889"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T09:16:41.681549+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Agag+AND+organism_name%3ANL4-3&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "gag-reference_request": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/gag-reference-attempt.json",
+        "sha256": "13976b9824ac92bf3f59750d6a2783e4ca4f04257f8e92344faf077228681f21"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/gag-reference-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/gag-reference-receipt.json",
+        "sha256": "7cf119357f01e5d97551c7e4f822598bab7d44518de0d065d880ae2316bd7889"
+      },
+      "retrieved_at": "2026-10-14T09:16:41.681549+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Agag+AND+organism_name%3ANL4-3&format=json&size=100&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "nl43-taxonomy": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/nl43-taxonomy-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/nl43-taxonomy-receipt.json",
+        "sha256": "c5feb7e849a3378cb5cbf93d3f79af95f5bb671ee40525603eddf442d0c98057"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T09:16:20.755966+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=NL4-3&format=json&size=100"
+    },
+    "nl43-taxonomy_request": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/nl43-taxonomy-attempt.json",
+        "sha256": "894a05f0cba38d27fdf23f46116eafc104f012f8d6a0fb46a2ed1f182565d169"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/nl43-taxonomy-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/nl43-taxonomy-receipt.json",
+        "sha256": "c5feb7e849a3378cb5cbf93d3f79af95f5bb671ee40525603eddf442d0c98057"
+      },
+      "retrieved_at": "2026-10-14T09:16:20.755966+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/search?query=NL4-3&format=json&size=100"
+    },
+    "parent_reused": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-07/request-128583b56de08be785ae3389aabf58525f47fbc0d5ad8080c44790fc3a80a14e.json",
+        "sha256": "3a40a61592fd7b228318866e93fc8c710e7862c990d06799d73060f96517bb1d"
+      },
+      "retrieved_at": "2026-10-08T03:48:24.945318+00:00",
+      "sha256": "9f9fc6bbe373beb927ef59cafab71148e76c210c4ac0a1db3a25ff5fbe6c1de9",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/11676"
+    },
+    "primary": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/primary-2010-attempt.json",
+        "sha256": "8740df9d2efb109b311e92b68672e08fa8c0c59ae58dc1da39ccaa6245f6f55a"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/primary-2010-response.bin",
+        "sha256": "e10a8d91e352eca2e5769a5f3f7f1015288bd33832e67ac2502b386ca6febb4b"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/primary-2010-receipt.json",
+        "sha256": "2fedd1f371e8bafeaa3f1e8f409e9e1a87c494be126ef36bf49b7ee9cdcd23b4"
+      },
+      "retrieved_at": "2026-10-14T09:13:51.570061+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC2873507/fullTextXML"
+    },
+    "species": {
+      "cache": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-response.bin",
+        "sha256": "25b4c314a4dc5ed2e4efd97fad3ee5de4b18fb7045fa0bca82b92ed42ec48f8e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-receipt.json",
+        "sha256": "ab456a137872c95a5f23ff55b60db0f835d9b4500a416452516bd1f042a5595c"
+      },
+      "release": "2026_03",
+      "retrieved_at": "2026-10-14T09:16:49.831952+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/3418650"
+    },
+    "species_request": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-attempt.json",
+        "sha256": "a444e43f17a889b36625f0997a33bda28f013e7aaca07ae1c7fbeba2a7ffd0fd"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-response.bin",
+        "sha256": "25b4c314a4dc5ed2e4efd97fad3ee5de4b18fb7045fa0bca82b92ed42ec48f8e"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-bevirimat/species-taxonomy-receipt.json",
+        "sha256": "ab456a137872c95a5f23ff55b60db0f835d9b4500a416452516bd1f042a5595c"
+      },
+      "retrieved_at": "2026-10-14T09:16:49.831952+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/3418650"
+    }
+  },
+  "taxonomy": {
+    "assignment_scope": "SPECIES_LINEAGE_ONLY_NOT_TESTED_DERIVATIVE_OR_PATIENT",
+    "experimental_allele_assignment": null,
+    "experimental_genome_assignment": null,
+    "experimental_strain_taxon_assignment": null,
+    "protein_accession_assignment": null,
+    "source_common_name": "HIV-1",
+    "source_context_id": "NCBITaxon:11676",
+    "source_context_rank": "no rank",
+    "source_name": "Human immunodeficiency virus type 1",
+    "species": {
+      "taxon_id": "NCBITaxon:3418650",
+      "taxon_label": "Lentivirus humimdef1"
+    },
+    "species_rank": "species"
+  }
+}

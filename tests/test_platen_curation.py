@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import pytest
@@ -10,6 +11,8 @@ from antibioticmech.activity_collections import load_record
 from antibioticmech.validation.write_validated import write_validated_antibiotic
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+from resistance_checkpoint_records import checkpoint_path  # noqa: E402
 
 
 @pytest.fixture(scope="module")
@@ -28,7 +31,7 @@ def test_two_exact_compounds_and_four_qualified_claims(curation, tmp_path):
     assert len(curation["records"]) == 2 and curation["claims_added"] == 4
     assert curation["history_events_added"] == 2
     for row in curation["records"]:
-        path = ROOT / row["record"]["path"]
+        path = checkpoint_path(ROOT, {**row["record"], "identifier": row["identifier"]})
         record = load_record(path)
         assert record["identifier"] == row["identifier"]
         assert record["chemical_structure"]["standard_inchi_key"] == keys[row["identifier"]]

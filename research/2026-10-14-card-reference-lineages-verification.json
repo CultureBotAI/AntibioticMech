@@ -1,0 +1,250 @@
+{
+  "canary": {
+    "decision": "REFERENCE_ONLY_PROJECTION_ACCEPTED_NO_BIOLOGICAL_WRITE",
+    "reviewed_boundary_cases": [
+      "STRAIN_TO_SPECIES",
+      "UNSPECIFIED_SPECIES_LABEL",
+      "UNCULTURED_LABEL",
+      "MIXED_CULTURE_LABEL"
+    ],
+    "reviewed_reference_taxa": {
+      "100226": {
+        "experimental_subject_assignment": false,
+        "native_source": {
+          "body": null,
+          "body_sha256": "95f6d5f42ac91e315e35c4f142a25e923c249e2056b034d28c126f45154f2c7d",
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-07/request-5469741cff13801f9e177bf9d9a259834e9665d9b8ecf9603e30de5e27cd2ea8.json",
+            "sha256": "32466241faedc8dca79d9ec2dfcc5285d62a87ae587a4e4bbadce1cf247123f0"
+          },
+          "release": "2026_03",
+          "retrieved_at": "2026-10-08T03:06:55.943621+00:00",
+          "url": "https://rest.uniprot.org/taxonomy/100226"
+        },
+        "reference_active": true,
+        "reference_rank": "strain",
+        "reference_scientific_name": "Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)",
+        "reference_taxon_id": "NCBITaxon:100226",
+        "species_relation": "ANCESTOR",
+        "species_taxon_id": "NCBITaxon:1902",
+        "species_to_reference_path": [
+          {
+            "rank": "species",
+            "scientificName": "Streptomyces coelicolor",
+            "taxonId": 1902
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145)",
+            "taxonId": 100226
+          }
+        ]
+      },
+      "155900": {
+        "experimental_subject_assignment": false,
+        "native_source": {
+          "body": null,
+          "body_sha256": "746263c79539c4b5e9b087a37a367d47b70a8cad8f5f044b480663dfa2f88e6c",
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-07/request-b5083937a8cd85da55039c949a312a2e12c09dfd20f0cc1ee98405aa94730844.json",
+            "sha256": "a80092c5095529c5267995b6969c09ddb9590a5a5839ebdf57d8c5de9af15991"
+          },
+          "release": "2026_03",
+          "retrieved_at": "2026-10-08T03:07:02.235548+00:00",
+          "url": "https://rest.uniprot.org/taxonomy/155900"
+        },
+        "reference_active": true,
+        "reference_rank": "species",
+        "reference_scientific_name": "uncultured organism",
+        "reference_taxon_id": "NCBITaxon:155900",
+        "species_relation": "SELF",
+        "species_taxon_id": "NCBITaxon:155900",
+        "species_to_reference_path": [
+          {
+            "rank": "species",
+            "scientificName": "uncultured organism",
+            "taxonId": 155900
+          }
+        ]
+      },
+      "1931": {
+        "experimental_subject_assignment": false,
+        "native_source": {
+          "body": null,
+          "body_sha256": "ab3fe994a5ede1c58b1d13850ed57d59d417401a750ebd0e837bcbec97b56e56",
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-07/request-318a90a8360059479057adf5419666329f6eee988a2d65a29b4f99ecb0d77e37.json",
+            "sha256": "cd97f21578a65790ed45e392a7c19c785d046c9bf0e2313ee32faa2fe917438f"
+          },
+          "release": "2026_03",
+          "retrieved_at": "2026-10-08T03:05:33.976407+00:00",
+          "url": "https://rest.uniprot.org/taxonomy/1931"
+        },
+        "reference_active": true,
+        "reference_rank": "species",
+        "reference_scientific_name": "Streptomyces sp.",
+        "reference_taxon_id": "NCBITaxon:1931",
+        "species_relation": "SELF",
+        "species_taxon_id": "NCBITaxon:1931",
+        "species_to_reference_path": [
+          {
+            "rank": "species",
+            "scientificName": "Streptomyces sp.",
+            "taxonId": 1931
+          }
+        ]
+      },
+      "663178": {
+        "experimental_subject_assignment": false,
+        "native_source": {
+          "body": null,
+          "body_sha256": "6467574e1f59e16e96f92c2a36c36158444bddb2ded6003fbd05ef202bee7743",
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-07/request-bd201b3510c48a35d76dfe2817759b242b64ac4fe88b91d1543dada86680de35.json",
+            "sha256": "250a2d3cedcea1946cd911a584d8cb8cd4035af170ed69afd9d6bc3df6b12789"
+          },
+          "release": "2026_03",
+          "retrieved_at": "2026-10-08T03:08:21.587485+00:00",
+          "url": "https://rest.uniprot.org/taxonomy/663178"
+        },
+        "reference_active": true,
+        "reference_rank": "species",
+        "reference_scientific_name": "mixed culture bacterium PE_gF3SD01_32",
+        "reference_taxon_id": "NCBITaxon:663178",
+        "species_relation": "SELF",
+        "species_taxon_id": "NCBITaxon:663178",
+        "species_to_reference_path": [
+          {
+            "rank": "species",
+            "scientificName": "mixed culture bacterium PE_gF3SD01_32",
+            "taxonId": 663178
+          }
+        ]
+      }
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "dossier": {
+    "path": "research/2026-10-14-card-reference-lineages.json",
+    "sha256": "55126bbdd99d5baf328a23dfd849d8db1365bab5fd24100e345f01c1fcb79d01"
+  },
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-14-card-reference-lineages/focused-tests.xml",
+      "sha256": "7d3809fd85b523740c29b08c9625ed638fbd38d765a75b43165a6a50f081e16f"
+    },
+    "passed": 202,
+    "skipped": 0,
+    "tests": 202
+  },
+  "implementation": [
+    {
+      "path": "scripts/audit_card_reference_lineages.py",
+      "sha256": "005a0aea53a209754f1d1f3b6bfa8719c76e672dbc5799f008d287a5a9712e30"
+    },
+    {
+      "path": "tests/test_card_reference_lineages.py",
+      "sha256": "b63f0a605af4472a047bbbc0ddf0ddbc4f7d0e9a2acb3ac56d956ac12c4e3368"
+    }
+  ],
+  "limits": {
+    "biological_record_changes": 0,
+    "experimental_alleles_or_subjects_assigned": 0,
+    "full_authoritative_qc_rerun": false,
+    "full_corpus_goal_status": "OPEN",
+    "full_corpus_records_in_scope": 2939,
+    "full_qc_reason": "Research-only artifacts; no biological, production or generated changes.",
+    "github_mutations": 0,
+    "independent_scientific_signoff": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 0,
+    "new_primary_reviews": 0,
+    "prior_qc_checkpoint": {
+      "path": "research/2026-10-14-bevirimat-verification.json",
+      "sha256": "a4582ee6542c437d3fd20b9bdfcaab28b64eda751d5cfbf5c9fca124d48831ad"
+    },
+    "rendering_or_embedding_refresh": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_native_replay": "PASS",
+  "plan": {
+    "path": "reports/resistance-grounding-2026-10-14-card-reference-lineages/plan-v2.json",
+    "sha256": "940bc75ae1aab964122f59b7103ad1815fc1c7cf4a7917e7055c67c0c6dc3ef7"
+  },
+  "preservation": {
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-14-card-reference-lineages/protected-before.json",
+      "sha256": "93f19d778779c16bb05c7611cd8f47cca557e6dc4cd42181fdc7aba19b0ad646"
+    },
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "pages_embeddings_source_inputs_and_prior_checkpoints_unchanged": true,
+    "protected_files_checked": 7275,
+    "record_files_unchanged": 2939
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "5ae29a1910badbbc5ea20987fb484ebb5327cd6f7117be839aa16f7171cf00f0"
+  },
+  "same_agent_adversarial_review": [
+    "The initial cache search omitted .json endpoints; the revised pinned plan includes both forms.",
+    "Ranked uncultured and mixed-culture nodes remain valid source IDs, not named experimental species.",
+    "Label flags match whole words and sp. notation, not genus-name substrings.",
+    "Lineage-only ancestors do not inherit verified active status from an active child.",
+    "All 980 direct links and both multi-candidate terms remain; no representative is selected.",
+    "Historical census tests do not freeze live biology; replay uses the explicit checkpoint resolver."
+  ],
+  "scope": "REFERENCE_TAXONOMY_LINEAGES_NOT_EXPERIMENTAL_ORGANISM_OR_ALLELE_ASSIGNMENTS",
+  "status": "PASS",
+  "summary": {
+    "additional_cached_species_nodes": 6,
+    "biological_record_changes": 0,
+    "card_terms_checked": 2002,
+    "corpus_records_checked": 2939,
+    "new_network_requests": 0,
+    "record_memberships": 169,
+    "reference_links": 980,
+    "reference_proteins": 979,
+    "reference_taxa": 360,
+    "reference_taxa_without_species_rank": 0,
+    "reference_taxonomy_ranks": {
+      "no rank": 19,
+      "serogroup": 1,
+      "species": 248,
+      "strain": 82,
+      "subspecies": 10
+    },
+    "reference_terms": 978,
+    "species_lineage_nodes": 288,
+    "species_nodes_lineage_only": 34,
+    "species_nodes_with_label_flags": 25,
+    "species_nodes_with_standalone_response": 254,
+    "whole_record_reviews_completed": 0
+  }
+}

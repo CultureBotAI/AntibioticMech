@@ -131,12 +131,13 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <caption>ANTIBIOTIC_TARGET_ALTERATION</caption>
     <thead><tr><th scope="col">Determinant</th><th scope="col">ARO ID</th><th scope="col">Organism</th><th scope="col">Gene families</th><th scope="col">Evidence</th></tr></thead>
     <tr>
-      <td>HIV-1 integrase M50I/R263K substitutions<br><span class="meta">The dual integrase substitutions were selected during in-vitro dose escalation and produced 2.8-fold reduced bictegravir susceptibility relative to wild-type virus.</span></td>
+      <td>HIV-1 integrase M50I/R263K substitutions<br><span class="meta">The dual integrase substitutions were selected during in-vitro dose escalation and produced 2.8-fold reduced bictegravir susceptibility relative to wild-type virus. Species-grounding update (2026-10-14): the existing laboratory HIV-1 claim is placed in Lentivirus humimdef1 (NCBITaxon:3418650). The cited paper&#39;s Results distinguish selected viral populations, site-directed test viruses and patient-derived isolates; these are not interchangeable experimental subjects. This species-only update does not independently revalidate the inherited variant or quantitative statement, establish the tested compound&#39;s exact formulation, or assign a protein accession, strain TaxID, experimental genome, patient identity or normalized allele. UniProt&#39;s HIV-1 name node NCBITaxon:11676 is unranked beneath this species.</span></td>
       <td>—</td>
-      <td><span class="meta">not organism-specific</span></td>
+      <td><em>Lentivirus humimdef1</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_3418650"><code class="curie">NCBITaxon:3418650</code></a></td>
       <td class="meta">HIV-1 integrase</td>
       <td class="meta"><ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27645238">PMID:27645238</a></span> <span class="meta">(Primary in-vitro selection and phenotypic-susceptibility study.)</span></li>
+  <li><span class="meta"><a href="https://rest.uniprot.org/taxonomy/3418650">https://rest.uniprot.org/taxonomy/3418650</a></span> <span class="meta">(Species context only: native UniProt Taxonomy release 2026_03 responses for 11676 (retrieved 2026-10-08) and 3418650 (retrieved 2026-10-14) place the active HIV-1 name node under active species Lentivirus humimdef1. Cached responses were reused, not newly queried. PMID:27645238 Results identify HIV-1 in the laboratory comparison behind the existing claim. Taxonomy does not identify the tested derivative or establish an experimental protein, allele or genome.)</span></li>
 </ul>
 </td>
     </tr>
@@ -186,6 +187,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="pill">RESEEDED_FROM_SOURCES</span>
     <span class="meta">2026-09-28 · seed_from_sources</span>
     <p>Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336). Upstream retrieval date 2026-08-30, unchanged.</p>
+  </li>
+  <li>
+    <span class="pill">GROUNDED_RESISTANCE_TAXONOMY</span>
+    <span class="meta">2026-10-14 · codex · LLM-assisted</span>
+    <p>Grounded the existing bictegravir laboratory HIV-1 resistance claim at species rank as Lentivirus humimdef1 (NCBITaxon:3418650), using PMID:27645238 primary Results organism context and cached UniProt taxonomy release 2026_03. Preserved inherited claim wording, mechanism, gene-family label, quantitative statement and citation. Distinguished selected populations, test viruses and patient-derived isolates without assigning an experimental protein, strain, allele or genome. No new variants or numeric AST were added; exact formulation and whole-record primary review remain open.</p>
   </li>
 </ol>
 
