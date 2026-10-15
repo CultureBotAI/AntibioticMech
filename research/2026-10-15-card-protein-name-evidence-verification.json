@@ -1,0 +1,164 @@
+{
+  "all_primary_results_reviewed": false,
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-evidence/baseline.json",
+    "sha256": "1e648f7a36e37a35914ac1e5b9c784dab1755110fb1bf06e12f4ee6e576c4bcc"
+  },
+  "biological_records_changed": 0,
+  "biological_records_source_inputs_pages_embeddings_unchanged": true,
+  "broad_reference_index_updated": false,
+  "cache_free_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 27,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-card-protein-name-evidence/cache-free-tests.xml",
+      "sha256": "483b85641833ed716fe45900bd372d5d664bd3e2c8a9c78a4b55f6ed1547100f"
+    },
+    "skipped": 0,
+    "test_classes": [
+      "tests.test_card_protein_name_evidence"
+    ]
+  },
+  "canary": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-evidence/canary.json",
+    "sha256": "606ffb05d755942d8d24a476625f4c6472e1596c67fc452b71486db52267e362"
+  },
+  "checks": {
+    "git_diff_check": true,
+    "new_python_formatting": true,
+    "ruff": true,
+    "structured_review_check_require_reviews": true
+  },
+  "claim_binding_replay": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-evidence/native-replay.json",
+    "sha256": "e44454098129fc9724f1283767ac1b190d4c513080a980587a6679ec16016e57"
+  },
+  "curated_ast_observations": 0,
+  "date": "2026-10-15",
+  "earlier_report_bytes_unchanged": true,
+  "exact_allele_assignments": 0,
+  "exact_underlying_http_request_count_known": false,
+  "experimental_genome_assignments": 0,
+  "experimental_subject_assignments": 0,
+  "files": [
+    {
+      "path": "research/2026-10-15-card-protein-name-evidence.json",
+      "sha256": "198e593d90f19a138a001996c604a9c44eedc8a9c7a64d554f8c79c5b1c3bf0f"
+    },
+    {
+      "path": "research/2026-10-15-card-protein-name-evidence-assessments.json",
+      "sha256": "ed5215a715ed801e290f7468e996f00d6ac7eea71a04762c29ccdaa7cff6f61c"
+    },
+    {
+      "path": "research/2026-10-15-card-protein-name-evidence-citation.json",
+      "sha256": "4ada293625e06fc7292ab37ae3ce82a5a431907ae12499940069f9c1643f0af9"
+    },
+    {
+      "path": "scripts/audit_card_protein_name_evidence.py",
+      "sha256": "64d88d88f0bbd140292abc6f7990ea9260f1be0688ebb75be18bc31ac754f69c"
+    },
+    {
+      "path": "tests/test_card_protein_name_evidence.py",
+      "sha256": "2e62631d4cfe6946c48ec3c8e0af389e7fe5c4413c97095412eda26f7b364a19"
+    },
+    {
+      "path": "reviews/structured/20261015T131237Z-card-protein-name-primary-context/review.yaml",
+      "sha256": "a1b31734590804cbb2e399cf36f7f5f0935eb44511088ebdd6af1f2f7b0d0463"
+    },
+    {
+      "path": "reviews/structured/20261015T131237Z-card-protein-name-primary-context/review.md",
+      "sha256": "fd037b3693fb2f433434885af16d318208cc496ffb1c05a73eba462850194928"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "fdb164d8c69ff3096b30a92087b51ddabcd550fa32f41ffc30532d172dd2b6f3"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "native_primary_files_cached": false,
+  "ncbi_requests": 0,
+  "new_gene_symbols_inferred": false,
+  "operational_details_exported": false,
+  "outreach": 0,
+  "plan": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-evidence/plan.json",
+    "sha256": "d31c84bf84f71746b1442e50a07541bab560479cc8e415847fa0ece80726d8d7"
+  },
+  "primary_article_bodies_replayed": false,
+  "prior_research_artifacts_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-protein-name-evidence/protected-before.json",
+    "sha256": "d6f052175a3b85820c6e92dd918b83c4fcb3f3dec5edd19d4fab2a5ed95be471"
+  },
+  "protected_files_checked": 7787,
+  "reuse_terms_review_resumed": false,
+  "review_points": [
+    "PMID:30053115 names the nomenclature proposal, not the separate functional follow-up.",
+    "Negative MCR functional evidence and later contrasting carrier observations are kept context-specific.",
+    "Tested derivative versus exact parent compound, generic enzyme versus altered subject, and reference genome versus experimental derivative remain distinct.",
+    "Historical MsrC mechanism uncertainty is not mislabeled as CARD asserting efflux; its current classification remains target protection.",
+    "No native gene fields, experimental alleles, genomes or subjects are inferred from protein names or taxonomy.",
+    "Immutable review checks do not require HEAD to remain the pre-publication base; live replay separately checks current source bytes.",
+    "Internal web-reader errors are not invented HTTP access-denial statuses; inherited access holds remain untouched."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "SCOPED_PRIMARY_ASSESSMENTS_BOUND_TO_SOURCE_CLAIMS_NOT_EXPERIMENTAL_GROUNDING",
+  "source_adoptions": 0,
+  "status": "VERIFIED_SCOPED_PRIMARY_ASSESSMENT_CHECKPOINT",
+  "structured_review": {
+    "completion": "partial",
+    "major": 2,
+    "markdown": {
+      "path": "reviews/structured/20261015T131237Z-card-protein-name-primary-context/review.md",
+      "sha256": "fd037b3693fb2f433434885af16d318208cc496ffb1c05a73eba462850194928"
+    },
+    "minor": 2,
+    "not_biological_status_promotion": true,
+    "open_findings": 4,
+    "saved_through_shared_validator": true,
+    "verdict": "needs_curation",
+    "yaml": {
+      "path": "reviews/structured/20261015T131237Z-card-protein-name-primary-context/review.yaml",
+      "sha256": "a1b31734590804cbb2e399cf36f7f5f0935eb44511088ebdd6af1f2f7b0d0463"
+    }
+  },
+  "summary": {
+    "complete_records_read": 8,
+    "corpus_record_hashes_checked": 2939,
+    "live_card_claims": 8,
+    "reference_proteins": 6,
+    "review_media": {
+      "PUBLISHER_INDEXED_INTRODUCTORY_TEXT_AND_CACHED_CITATION_METADATA": 1,
+      "PUBLISHER_INDEXED_PRIMARY_TEXT": 6,
+      "PUBLISHER_PRIMARY_ABSTRACT_ONLY": 2,
+      "PUBLISHER_REVIEW_ABSTRACT_ONLY": 1,
+      "PUBLISHER_TABLE_OF_CONTENTS_AND_CACHED_BIBLIOGRAPHY_ONLY": 1
+    },
+    "reviewed_source_contexts": 11,
+    "source_rows": 8,
+    "source_terms": 6
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 116,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-card-protein-name-evidence/tests.xml",
+      "sha256": "480b39a42600f1c448e717922febfe5a35203f62ac0e17282864e85205afbba1"
+    },
+    "skipped": 0,
+    "test_classes": [
+      "tests.test_card_protein_name_evidence",
+      "tests.test_curator_resistance_fields",
+      "tests.test_record_review_contract",
+      "tests.test_research_checkpoint_integrity"
+    ]
+  },
+  "verification_limit": "Scoped self-review and binding checks do not complete primary evidence or the corpus goal. Full QC not rerun: Darwin x86_64 virtualenv lacks RDKit and the lockfile has no Intel macOS wheel or source distribution for pinned 2026.3.5.",
+  "web_tool_calls": 11,
+  "whole_record_primary_signoffs": 0
+}

@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --check scripts/audit_mex_citation_followup.py tests/test_mex_citation_followup.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_source_queue.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_provenance.py",
+      "exit_code": 0
+    }
+  ],
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-mex-citation-followup-plan.json",
+      "sha256": "fcadd753f9dcf463a7eff51bf14d7fb0f9bd5168828d61c70bad673a4aba49fa"
+    },
+    {
+      "path": "research/2026-10-15-mex-citation-followup-native-plan.json",
+      "sha256": "e1cfbfe8061681e08566a29b699774897a5b21e7aaace9354a0a0dff745bb3f6"
+    },
+    {
+      "path": "research/2026-10-15-mex-citation-followup.json",
+      "sha256": "566b492b2ca1d66994961f9f2305436315bf01eaad3af334efb58b9cfa5e6187"
+    },
+    {
+      "path": "scripts/audit_mex_citation_followup.py",
+      "sha256": "1dd07de62523bfa0571c210077e14638947a40d8b2eb7edb953596f227b4f22f"
+    },
+    {
+      "path": "tests/test_mex_citation_followup.py",
+      "sha256": "2d9f096faebe83262d48610257f5453791a757451dfa19bdf6093aea1597942d"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c2f24db2f1727c97408ac69c075dccf56cb9e7b9407db9009bafc9daf45e8342"
+    }
+  ],
+  "full_qc": {
+    "prior_attempt": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "reason": "Prior just qc could not start because locked RDKit 2026.3.5 lacks an Intel macOS wheel/sdist. This pass is research-only.",
+    "run_this_pass": false,
+    "status": "NOT_A_FULL_QC_PASS"
+  },
+  "limits": {
+    "all_Mex_family_aliases_or_strains_searched": false,
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_complex_membership_assignments": 0,
+    "new_primary_results_reviews": 0,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_replay_matches": true,
+  "preservation": {
+    "all_earlier_report_bytes_preserved": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-15-mex-followup/protected-before.json",
+      "sha256": "738b829fa46f2cf9e8cd36201e29ebb6389314c611685a955d0a4abc2f47f090"
+    },
+    "biological_records_changed": 0,
+    "biological_records_checked": 2939,
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "historical_artifacts_and_reviews_preserved": true,
+    "protected_files_checked": 7809
+  },
+  "regression": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mex-followup/regression.xml",
+      "sha256": "b3288300714cb56acd42ca3537baf54ec892c0e69463878cc179e8fad476b27c"
+    },
+    "passed": 223,
+    "skip_scope": "Two older live replay tests recognize documented historical record changes; immutable artifact checks still run.",
+    "skipped": 2,
+    "tests": 225
+  },
+  "regression_command": ".venv/bin/python -m pytest -q tests/test_mex_citation_followup.py tests/test_mex_component_references.py tests/test_card_protein_name_screen.py tests/test_card_reference_lineages.py tests/test_card_evidence_reviews.py tests/test_card_aph_memberships.py --junitxml=reports/resistance-grounding-2026-10-15-mex-followup/regression.xml",
+  "status": "OFFLINE_REPLAY_AND_FOCUSED_CHECKS_PASSED_PRIMARY_REVIEW_OPEN",
+  "summary": {
+    "cached_citation_queries_replayed": 11,
+    "citation_pool_entries": 8,
+    "complete_records_read_in_prior_replay": 27,
+    "corpus_records_hash_checked": 2939,
+    "new_native_http_requests": 5,
+    "new_primary_access_holds": 1,
+    "new_reference_candidates": 5,
+    "new_taxonomy_requests": 0,
+    "reference_candidates": 7,
+    "selected_claims": 34,
+    "selected_records": 18,
+    "selected_terms": 9,
+    "underlying_web_http_request_count_known": false,
+    "web_search_calls": 2
+  }
+}

@@ -41,6 +41,9 @@ from functools import lru_cache
 from pathlib import Path
 
 import yaml
+from card_evidence_reviews import DEFAULT_REVIEW as CARD_EVIDENCE_REVIEW
+from card_evidence_reviews import apply_review as apply_card_evidence_review
+from card_evidence_reviews import load_reviews as load_card_evidence_reviews
 from ncbi_ast_assays import (
     DEFAULT_REVIEW_MAP,
     REVIEW_REFERENCE,
@@ -1730,7 +1733,10 @@ def flag_structure_collisions(records: dict[str, dict], source_version: str) -> 
     return flagged
 
 
-def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
+def attach_aro_mechanism(
+    records: dict[str, dict], source_version: str, *,
+    evidence_review: Path | None = CARD_EVIDENCE_REVIEW,
+) -> None:
     """Attach CARD's resistance determinants and drug targets to seeded records.
 
     Both are database assertions, cited as such: CARD's own ARO term is the
@@ -1744,6 +1750,9 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
                 by_aro[concept["source_id"]] = identifier
 
     resistance = load_tsv(RAW_DIR / "aro_resistance_edges.tsv")
+    reviews = load_card_evidence_reviews(
+        RAW_DIR / "aro_resistance_edges.tsv", resistance, records, evidence_review,
+    )
     targets = load_tsv(RAW_DIR / "aro_target_edges.tsv")
     target_roles = {row["target_id"]: row for row in load_tsv(ARO_TARGET_ROLES_PATH)}
     target_ids = {row["target_id"] for row in targets}
@@ -1760,7 +1769,7 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
     for identifier, rows in grouped.items():
         items = []
         for row in sorted(rows, key=lambda r: r["determinant_id"]):
-            items.append({
+            item = {
                 "mechanism_type": row["mechanism"] or "UNKNOWN",
                 "aro_id": row["determinant_id"],
                 "label": row["determinant_name"],
@@ -1770,7 +1779,9 @@ def attach_aro_mechanism(records: dict[str, dict], source_version: str) -> None:
                               f"{row['antibiotic_id']} ({row['antibiotic_name']}); "
                               "database assertion, not a primary citation."),
                 }],
-            })
+            }
+            apply_card_evidence_review(item, row, reviews)
+            items.append(item)
         records[identifier]["resistance_mechanisms"] = items
         _history_last(records[identifier])
 

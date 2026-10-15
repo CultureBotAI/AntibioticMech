@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/ruff format --check scripts/audit_mdea_evidence.py tests/test_mdea_evidence.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_source_queue.py",
+      "exit_code": 0
+    },
+    {
+      "command": ".venv/bin/python scripts/check_provenance.py",
+      "exit_code": 0
+    }
+  ],
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-mdea-evidence-plan.json",
+      "sha256": "00f00f107ed7cfee5173aa5d98dfbd77f5aac6b9019b2c7691e28e245c952a2e"
+    },
+    {
+      "path": "research/2026-10-15-mdea-evidence-native-plan.json",
+      "sha256": "337b6b7fe0f4b8da23f8b0dfa4b128e70aadbff6e8813774d1e339f804883df8"
+    },
+    {
+      "path": "research/2026-10-15-mdea-evidence.json",
+      "sha256": "ea405d60e501e364654197d4e7b8dee98d941479ea1d3a3cd503d75eb6468ce0"
+    },
+    {
+      "path": "scripts/audit_mdea_evidence.py",
+      "sha256": "54f37156477c8b00c18c63c322a60051597427033e8ebf7d1c2ba42f8b59f037"
+    },
+    {
+      "path": "tests/test_mdea_evidence.py",
+      "sha256": "3f0e440873644e27966e076678bacad08d9802ac42da609b80ab415e30c3606b"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "cbdf3d493b76b37acb5ec035a982d688084b15448a41d983db0542016dfc7a03"
+    }
+  ],
+  "full_qc": {
+    "prior_attempt_receipt": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "reason": "Prior just qc could not start because locked RDKit2026.3.5 lacks an Intel macOS wheel/sdist. This pass is research-only.",
+    "run_this_pass": false,
+    "status": "NOT_A_FULL_QC_PASS"
+  },
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exact_variant_or_operational_exports": false,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "name_match_to_another_species_accepted": false,
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 0,
+    "new_taxonomy_requests": 1,
+    "new_uniprot_protein_requests": 2,
+    "outreach": 0,
+    "primary_fulltext_inspected": false,
+    "protein_absence_inferred": false,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "offline_replay_matches": true,
+  "preservation": {
+    "all_earlier_report_bytes_preserved": true,
+    "baseline": {
+      "path": "reports/resistance-grounding-2026-10-15-mdea/protected-before.json",
+      "sha256": "2a0ef034c750e6efacdc5ac67a210010a34c961075abde272d33805b7e616bcf"
+    },
+    "biological_records_changed": 0,
+    "biological_records_checked": 2939,
+    "changed_existing_files": [
+      "research/2026-10-07-resistance-gene-grounding.md"
+    ],
+    "historical_artifacts_and_reviews_preserved": true,
+    "protected_files_checked": 7828
+  },
+  "regression": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-mdea/regression.xml",
+      "sha256": "8240b6fd1c8109ac17b0e92e4c61f73895ffb9dda7cb5b420530936653a48314"
+    },
+    "passed": 297,
+    "skip_scope": "Two older live replay tests recognize historical record changes; current mdeA/Mex replays and immutable artifact checks ran.",
+    "skipped": 2,
+    "tests": 299
+  },
+  "regression_command": ".venv/bin/python -m pytest -q tests/test_mdea_evidence.py tests/test_mex_component_xrefs.py tests/test_mex_jkvw_evidence.py tests/test_mex_citation_followup.py tests/test_mex_component_references.py tests/test_card_protein_name_screen.py tests/test_card_reference_lineages.py tests/test_card_evidence_reviews.py tests/test_card_aph_memberships.py --junitxml=reports/resistance-grounding-2026-10-15-mdea/regression.xml",
+  "status": "OFFLINE_REPLAY_AND_FOCUSED_CHECKS_PASSED_PRIMARY_AND_PROTEIN_GROUNDING_OPEN",
+  "summary": {
+    "complete_empty_protein_queries": 2,
+    "complete_records_read": 7,
+    "corpus_records_hash_checked": 2939,
+    "exact_species_name_crosswalks": 1,
+    "native_http_responses": 5,
+    "new_confirmed_access_denials": 0,
+    "new_native_request_attempts": 6,
+    "new_reference_proteins": 0,
+    "publisher_transport_failures_without_http_status": 1,
+    "source_claims": 7,
+    "source_terms": 1,
+    "taxonomy_candidates_screened": 4
+  }
+}

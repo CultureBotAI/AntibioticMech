@@ -1,0 +1,39 @@
+{
+  "prior_plan": {
+    "path": "research/2026-10-15-mex-component-references-plan.json",
+    "sha256": "6d9e36a892ffdcd8e8043ae62999f6291f464b3c0694160e961356e5678dcc82"
+  },
+  "reviewed_response": {
+    "path": "reports/resistance-grounding-2026-10-15-mex-components/cohort-response.json",
+    "sha256": "70210cc52b1d7bfd3ffd6da0cbbad768138b74b9ee255152c3125c1f22001aec"
+  },
+  "missing_symbols": [
+    "mexG",
+    "mexH",
+    "mexI",
+    "mexJ",
+    "mexK",
+    "mexM",
+    "mexN",
+    "mexP",
+    "mexQ",
+    "mexV",
+    "mexW",
+    "mvaT",
+    "opmD",
+    "opmE",
+    "opmH",
+    "oprA"
+  ],
+  "urls": {
+    "pao1-unreviewed": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmexG+OR+gene_exact%3AmexH+OR+gene_exact%3AmexI+OR+gene_exact%3AmexJ+OR+gene_exact%3AmexK+OR+gene_exact%3AmexM+OR+gene_exact%3AmexN+OR+gene_exact%3AmexP+OR+gene_exact%3AmexQ+OR+gene_exact%3AmexV+OR+gene_exact%3AmexW+OR+gene_exact%3AmvaT+OR+gene_exact%3AopmD+OR+gene_exact%3AopmE+OR+gene_exact%3AopmH%29+AND+taxonomy_id%3A208964+AND+reviewed%3Afalse&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Ccc_subunit",
+    "opra-unreviewed": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AoprA%29+AND+taxonomy_id%3A287+AND+reviewed%3Afalse&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Ccc_subunit"
+  },
+  "scope": "PAO1 reference examples for unmatched symbols; OprA is searched across the named species without inventing a PAO1 component.",
+  "limits": {
+    "all_strains_or_alleles_enumerated": false,
+    "reference_genome_is_experimental_subject": false,
+    "ncbi_requests": 0,
+    "operational_exports": false
+  }
+}

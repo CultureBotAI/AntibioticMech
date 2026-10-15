@@ -1,0 +1,413 @@
+{
+  "scope": "MEX_COMPONENT_REFERENCE_EXAMPLES_NOT_SINGLE_PROTEIN_COMPLEX_OR_EXPERIMENTAL_ALLELES",
+  "selection": "All remaining CARD protein-name-screen labels starting with Mex, case-sensitive, including regulatory-context terms.",
+  "screen": {
+    "path": "research/2026-10-15-card-protein-name-screen.json",
+    "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+  },
+  "base_index": {
+    "path": "research/2026-10-15-card-aph-memberships.json",
+    "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+  },
+  "corpus_update": {
+    "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+    "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+  },
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-erm36-identity/protected-before.json",
+    "sha256": "5aa74da505a39aa3f77cb87f70656693522d15cfed7c607bd64befcd99ab49c5"
+  },
+  "terms": {
+    "ARO:3000386": {
+      "source_label": "MexAB-OprM",
+      "record_memberships": [
+        "CHEBI:100241",
+        "CHEBI:161680",
+        "CHEBI:17698",
+        "CHEBI:27902",
+        "CHEBI:28368",
+        "CHEBI:28971",
+        "CHEBI:29007",
+        "CHEBI:2955",
+        "CHEBI:3508",
+        "CHEBI:42355",
+        "CHEBI:43968",
+        "CHEBI:45924",
+        "CHEBI:59064",
+        "CHEBI:59673",
+        "CHEBI:7911"
+      ],
+      "definition_citation_ids": [
+        "PMID:16189126",
+        "PMID:17586626",
+        "PMID:18312276",
+        "PMID:18676884",
+        "PMID:9449262"
+      ],
+      "complex_label": "MexAB-OprM",
+      "component_search_symbols": [
+        "mexA",
+        "mexB",
+        "oprM"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3000797": {
+      "source_label": "MexCD-OprJ",
+      "record_memberships": [
+        "CHEBI:17698",
+        "CHEBI:27902",
+        "CHEBI:28368",
+        "CHEBI:42355",
+        "CHEBI:45924",
+        "antibioticmech:aro-2eea3233f3",
+        "antibioticmech:aro-6407ce57f1"
+      ],
+      "definition_citation_ids": [
+        "PMID:18474583",
+        "PMID:36555423",
+        "PMID:8849250",
+        "PMID:9449262"
+      ],
+      "complex_label": "MexCD-OprJ",
+      "component_search_symbols": [
+        "mexC",
+        "mexD",
+        "oprJ"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3000798": {
+      "source_label": "MexEF-OprN",
+      "record_memberships": [
+        "CHEBI:17698",
+        "CHEBI:45924"
+      ],
+      "definition_citation_ids": [
+        "PMID:10515918"
+      ],
+      "complex_label": "MexEF-OprN",
+      "component_search_symbols": [
+        "mexE",
+        "mexF",
+        "oprN"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3000799": {
+      "source_label": "MexGHI-OpmD",
+      "record_memberships": [
+        "CHEBI:100246",
+        "CHEBI:27902",
+        "antibioticmech:aro-1fe0873afd"
+      ],
+      "definition_citation_ids": [
+        "PMID:12917802",
+        "PMID:15817779"
+      ],
+      "complex_label": "MexGHI-OpmD",
+      "component_search_symbols": [
+        "mexG",
+        "mexH",
+        "mexI",
+        "opmD"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3003029": {
+      "source_label": "MexVW-OprM",
+      "record_memberships": [
+        "CHEBI:17698",
+        "CHEBI:27902",
+        "CHEBI:42355",
+        "antibioticmech:aro-1fe0873afd"
+      ],
+      "definition_citation_ids": [
+        "PMID:12951344"
+      ],
+      "complex_label": "MexVW-OprM",
+      "component_search_symbols": [
+        "mexV",
+        "mexW",
+        "oprM"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3003032": {
+      "source_label": "MexXY-OprM",
+      "record_memberships": [
+        "CHEBI:100241",
+        "CHEBI:100246",
+        "CHEBI:17698",
+        "CHEBI:2637",
+        "CHEBI:27902",
+        "CHEBI:28864",
+        "CHEBI:42355",
+        "CHEBI:43968",
+        "antibioticmech:aro-1fe0873afd",
+        "antibioticmech:aro-2eea3233f3",
+        "antibioticmech:aro-6407ce57f1"
+      ],
+      "definition_citation_ids": [
+        "PMID:12654672",
+        "PMID:21149619",
+        "PMID:23233851",
+        "PMID:9925549"
+      ],
+      "complex_label": "MexXY-OprM",
+      "component_search_symbols": [
+        "mexX",
+        "mexY",
+        "oprM"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3003038": {
+      "source_label": "MexXY-OprA",
+      "record_memberships": [
+        "CHEBI:100241",
+        "CHEBI:100246",
+        "CHEBI:2637",
+        "CHEBI:27902",
+        "CHEBI:28864",
+        "CHEBI:37922",
+        "CHEBI:42355",
+        "CHEBI:43968",
+        "antibioticmech:aro-2eea3233f3",
+        "antibioticmech:aro-6407ce57f1"
+      ],
+      "definition_citation_ids": [
+        "PMID:22282519"
+      ],
+      "complex_label": "MexXY-OprA",
+      "component_search_symbols": [
+        "mexX",
+        "mexY",
+        "oprA"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3003691": {
+      "source_label": "MexJK-OpmH",
+      "record_memberships": [
+        "CHEBI:164200"
+      ],
+      "definition_citation_ids": [
+        "PMID:12193619",
+        "PMID:15855505",
+        "PMID:15855547"
+      ],
+      "complex_label": "MexJK-OpmH",
+      "component_search_symbols": [
+        "mexJ",
+        "mexK",
+        "opmH"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3003694": {
+      "source_label": "MexJK-OprM",
+      "record_memberships": [
+        "CHEBI:27902",
+        "CHEBI:42355"
+      ],
+      "definition_citation_ids": [
+        "PMID:15855547"
+      ],
+      "complex_label": "MexJK-OprM",
+      "component_search_symbols": [
+        "mexJ",
+        "mexK",
+        "oprM"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3003697": {
+      "source_label": "MexPQ-OpmE",
+      "record_memberships": [
+        "CHEBI:17698",
+        "CHEBI:27902",
+        "CHEBI:31739",
+        "CHEBI:32103",
+        "CHEBI:32215",
+        "CHEBI:42355",
+        "CHEBI:45924",
+        "CHEBI:471744",
+        "antibioticmech:aro-1fe0873afd"
+      ],
+      "definition_citation_ids": [
+        "PMID:16301811"
+      ],
+      "complex_label": "MexPQ-OpmE",
+      "component_search_symbols": [
+        "mexP",
+        "mexQ",
+        "opmE"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3003703": {
+      "source_label": "MexMN-OprM",
+      "record_memberships": [
+        "CHEBI:17698",
+        "CHEBI:32215"
+      ],
+      "definition_citation_ids": [
+        "PMID:19713238"
+      ],
+      "complex_label": "MexMN-OprM",
+      "component_search_symbols": [
+        "mexM",
+        "mexN",
+        "oprM"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3004066": {
+      "source_label": "MexEF-OprN with MexT mutation conferring resistance to chloramphenicol, ciprofloxacin, and trimethoprim",
+      "record_memberships": [
+        "CHEBI:100241",
+        "CHEBI:17698",
+        "CHEBI:45924"
+      ],
+      "definition_citation_ids": [
+        "PMID:26833155"
+      ],
+      "complex_label": "MexEF-OprN",
+      "component_search_symbols": [
+        "mexE",
+        "mexF",
+        "oprN"
+      ],
+      "regulatory_search_symbol": "mexT",
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3004068": {
+      "source_label": "MexEF-OprN with MexS mutations conferring resistance to chloramphenicol, ciprofloxacin, and trimethoprim",
+      "record_memberships": [
+        "CHEBI:100241",
+        "CHEBI:17698",
+        "CHEBI:45924"
+      ],
+      "definition_citation_ids": [
+        "PMID:26833155"
+      ],
+      "complex_label": "MexEF-OprN",
+      "component_search_symbols": [
+        "mexE",
+        "mexF",
+        "oprN"
+      ],
+      "regulatory_search_symbol": "mexS",
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3004070": {
+      "source_label": "MexEF-OprN with MvaT deletion conferring resistance to chloramphenicol and norfloxacin",
+      "record_memberships": [
+        "CHEBI:100246",
+        "CHEBI:17698"
+      ],
+      "definition_citation_ids": [
+        "PMID:16448502",
+        "PMID:21911574"
+      ],
+      "complex_label": "MexEF-OprN",
+      "component_search_symbols": [
+        "mexE",
+        "mexF",
+        "oprN"
+      ],
+      "regulatory_search_symbol": "mvaT",
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3009148": {
+      "source_label": "MexJK",
+      "record_memberships": [
+        "CHEBI:164200"
+      ],
+      "definition_citation_ids": [
+        "PMID:12193619"
+      ],
+      "complex_label": "MexJK",
+      "component_search_symbols": [
+        "mexJ",
+        "mexK"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    },
+    "ARO:3009153": {
+      "source_label": "MexHI-OpmD",
+      "record_memberships": [
+        "CHEBI:100246",
+        "antibioticmech:aro-1fe0873afd"
+      ],
+      "definition_citation_ids": [
+        "PMID:12937010",
+        "PMID:17223624"
+      ],
+      "complex_label": "MexHI-OpmD",
+      "component_search_symbols": [
+        "mexH",
+        "mexI",
+        "opmD"
+      ],
+      "regulatory_search_symbol": null,
+      "label_tokens_are_queries_not_verified_composition": true
+    }
+  },
+  "search_symbols": [
+    "mexA",
+    "mexB",
+    "mexC",
+    "mexD",
+    "mexE",
+    "mexF",
+    "mexG",
+    "mexH",
+    "mexI",
+    "mexJ",
+    "mexK",
+    "mexM",
+    "mexN",
+    "mexP",
+    "mexQ",
+    "mexS",
+    "mexT",
+    "mexV",
+    "mexW",
+    "mexX",
+    "mexY",
+    "mvaT",
+    "opmD",
+    "opmE",
+    "opmH",
+    "oprA",
+    "oprJ",
+    "oprM",
+    "oprN"
+  ],
+  "canary_url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmexA%29+AND+taxonomy_id%3A287+AND+reviewed%3Atrue&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Ccc_subunit",
+  "cohort_url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmexA+OR+gene_exact%3AmexB+OR+gene_exact%3AmexC+OR+gene_exact%3AmexD+OR+gene_exact%3AmexE+OR+gene_exact%3AmexF+OR+gene_exact%3AmexG+OR+gene_exact%3AmexH+OR+gene_exact%3AmexI+OR+gene_exact%3AmexJ+OR+gene_exact%3AmexK+OR+gene_exact%3AmexM+OR+gene_exact%3AmexN+OR+gene_exact%3AmexP+OR+gene_exact%3AmexQ+OR+gene_exact%3AmexS+OR+gene_exact%3AmexT+OR+gene_exact%3AmexV+OR+gene_exact%3AmexW+OR+gene_exact%3AmexX+OR+gene_exact%3AmexY+OR+gene_exact%3AmvaT+OR+gene_exact%3AopmD+OR+gene_exact%3AopmE+OR+gene_exact%3AopmH+OR+gene_exact%3AoprA+OR+gene_exact%3AoprJ+OR+gene_exact%3AoprM+OR+gene_exact%3AoprN%29+AND+taxonomy_id%3A287+AND+reviewed%3Atrue&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Ccc_subunit",
+  "constraints": {
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "reuse_terms_review_resumed": false,
+    "no_sequences_variants_protocols_or_constructs": true,
+    "reviewed_reference_examples_only": true,
+    "exhaustive_family_or_allele_search": false,
+    "biological_writes": false,
+    "single_component_cannot_represent_complex": true
+  }
+}

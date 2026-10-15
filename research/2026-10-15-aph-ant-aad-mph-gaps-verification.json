@@ -1,0 +1,156 @@
+{
+  "all_prior_biological_records_unchanged": true,
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-aph-ant-aad-mph-gaps/baseline.json",
+    "sha256": "c0984dc85ccf40bed6d3ca14ddb1cbdc30d6d80c3f23f5201670480a401538d7"
+  },
+  "biological_record_changes": 0,
+  "broad_index_updated": false,
+  "cache_free_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 38,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-ant-aad-mph-gaps/cache-free-tests.xml",
+      "sha256": "52a6188f617e2b6fb04d7f47f5763455bbfab250a0604cbc5eaa356764aa9dac"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_aph_ant_aad_mph_gaps",
+        "reason": "native request caches are intentionally not committed",
+        "test": "test_native_replay_has_no_network_or_file_writes"
+      }
+    ],
+    "skipped": 1,
+    "test_classes": [
+      "tests.test_aph_ant_aad_mph_gaps"
+    ]
+  },
+  "checks": {
+    "git_diff_check": true,
+    "ruff": true,
+    "ruff_format_new_python_files": true
+  },
+  "date": "2026-10-15",
+  "earlier_report_bytes_unchanged": true,
+  "files": [
+    {
+      "path": "research/2026-10-15-aph-ant-aad-mph-gaps-plan.json",
+      "sha256": "c0a57711677b9814b8eaf9c381e583ecef384dd6f073e9900c8afb333336cc8b"
+    },
+    {
+      "path": "research/2026-10-15-aph-ant-aad-mph-gaps.json",
+      "sha256": "db5b3082d5f6cff947535cba2afbdf43dec35ce7ed8ae155495c1232f51edcbe"
+    },
+    {
+      "path": "scripts/audit_aph_ant_aad_mph_gaps.py",
+      "sha256": "d546e84f723b1ed1e3648cf8f9c6ccc933d8de62b016a054efaaa0c474ab7740"
+    },
+    {
+      "path": "tests/test_aph_ant_aad_mph_gaps.py",
+      "sha256": "0a96307462629241983f801b25c4e212b2e16f96e8860ea703ec229f16d7ff17"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "4f638fd714c74dc8aab4f6c43ddffa3c3f914d05af20cdc846af7019edfcbc75"
+    }
+  ],
+  "full_corpus_goal_status": "OPEN",
+  "full_qc_rerun": false,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "native_replay": {
+    "path": "reports/resistance-grounding-2026-10-15-aph-ant-aad-mph-gaps/native-replay.json",
+    "sha256": "d426d84196a0a61870a29c0f14bf4f0f5dcdff2e3a705eebf88659e6e6a7061b"
+  },
+  "ncbi_requests": 0,
+  "network_requests": 0,
+  "new_curated_AST_observations": 0,
+  "new_experimental_assignments": 0,
+  "outreach": 0,
+  "previous_research_checkpoints_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-aph-ant-aad-mph-gaps/protected-before.json",
+    "sha256": "85525be23e12e9b9c3e864e2a58b035f1e1e62e2dccf8f87c92d4c88e7594512"
+  },
+  "protected_files_checked": 7771,
+  "reuse_terms_review_resumed": false,
+  "review_points": [
+    "Complete prefix-selected cohort includes lowercase aad and mph labels; no enzyme-family inference.",
+    "Historical nomenclature assessment is reused, not claimed as newly replayed primary text.",
+    "Submission names, indirect PDB path and reference taxonomy do not identify tested alleles or genomes.",
+    "Shared citations and empty complete queries cannot establish label equivalence or biological absence.",
+    "Immutable public-output and plan pins reject drift without native caches."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_SCIENTIFIC_REVIEW",
+  "scope": "UNLINKED_APH_ANT_AAD_MPH_LABEL_COHORT_REFERENCE_METADATA_NOT_EXPERIMENTAL_IDENTITY",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "status": "VERIFIED_REFERENCE_ONLY_CHECKPOINT",
+  "summary": {
+    "citation_query_entries": 29,
+    "complete_cached_citation_queries": 14,
+    "complete_records_read": 16,
+    "corpus_records_hash_checked": 2939,
+    "distinct_citation_entries": 29,
+    "qualified_reference_memberships": 4,
+    "qualified_reference_proteins": 1,
+    "qualified_reference_terms": 1,
+    "source_claims": 38,
+    "source_terms": 14,
+    "term_statuses": {
+      "CITATION_ENTRIES_WITHOUT_EXACT_LABEL_MATCH_NO_SELECTION": 7,
+      "COMPLETE_CITATION_QUERIES_EMPTY_NOT_BIOLOGICAL_ABSENCE": 6,
+      "HISTORICAL_NOMENCLATURE_AND_UNREVIEWED_CITATION_TAXON_REFERENCE_ONLY": 1
+    }
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 1160,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-ant-aad-mph-gaps/tests.xml",
+      "sha256": "acf901e5ff2bd40a8588d4bbc11c623e1e149a01825c7fc391da9baddeec8186"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_card_structure_links",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "test_classes": [
+      "tests.test_aac34_followup",
+      "tests.test_aac3_evidence",
+      "tests.test_aac6_gaps",
+      "tests.test_aph_ant_aad_mph_gaps",
+      "tests.test_card_aac6_memberships",
+      "tests.test_card_beta_tubulin_memberships",
+      "tests.test_card_bla_alias_screen",
+      "tests.test_card_bla_memberships",
+      "tests.test_card_cytb_outer_memberships",
+      "tests.test_card_cytochrome_b_references",
+      "tests.test_card_definition_citations",
+      "tests.test_card_followup_memberships",
+      "tests.test_card_grounding_audit",
+      "tests.test_card_literature_expansion",
+      "tests.test_card_outer_membrane_references",
+      "tests.test_card_reference_lineages",
+      "tests.test_card_structure_links",
+      "tests.test_cipa_evidence",
+      "tests.test_cytochrome_b_evidence",
+      "tests.test_fungamr_cohort",
+      "tests.test_kasugamycin_card_context",
+      "tests.test_kpn_evidence",
+      "tests.test_outer_membrane_evidence",
+      "tests.test_research_checkpoint_integrity",
+      "tests.test_sco1_evidence",
+      "tests.test_structure_primary_context",
+      "tests.test_valinomycin_abcb1",
+      "tests.test_vgb_evidence"
+    ]
+  },
+  "verification_limit": "Reference-only cohort follow-up, not whole-record primary signoff. Full QC not rerun: RDKit absent from this virtualenv and lockfile lacks an Intel macOS wheel for pinned 2026.3.5. Historical CI does not verify these local changes.",
+  "whole_record_primary_signoffs": 0
+}

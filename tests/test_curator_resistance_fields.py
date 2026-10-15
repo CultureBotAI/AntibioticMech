@@ -152,14 +152,14 @@ def test_census_drift_fails_closed(tmp_path):
         audit.build(tmp_path)
 
 
-def test_full_corpus_replay_is_offline_and_matches_checkpoint(monkeypatch):
+def test_full_corpus_replay_is_offline_and_matches_checkpoint(monkeypatch, pre_card_qualification_root):
     def fail(*args, **kwargs):
         raise AssertionError("network forbidden")
 
     monkeypatch.setattr(socket, "create_connection", fail)
     monkeypatch.setattr(socket.socket, "connect", fail)
     monkeypatch.setattr(requests.sessions.Session, "request", fail)
-    result = audit.build(ROOT)
+    result = audit.build(pre_card_qualification_root)
     assert result == json.loads((ROOT / audit.OUTPUT).read_bytes())
     summary = result["summary"]
     assert summary["corpus_records_checked"] == 2939
