@@ -607,11 +607,14 @@ def main():
         (Path(PREFIX + suffix), payload)
         for suffix, payload in zip((".json", ".tsv"), prior.prior.prior.render(result, rows), strict=True)
     ]
+    missing = []
     for path, payload in outputs:
         if args.check or path.exists():
             require(path.read_bytes() == payload, "folP/rpo index does not reproduce")
-    for path, payload in outputs:
-        if not path.exists():
+        else:
+            missing.append((path, payload))
+    if not args.check:
+        for path, payload in missing:
             with path.open("xb") as stream:
                 stream.write(payload)
     print(json.dumps(result["summary"], sort_keys=True))
