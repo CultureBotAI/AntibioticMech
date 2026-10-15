@@ -1,0 +1,190 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-aac3-evidence/offline-projection-canary-review.json",
+    "sha256": "645afd68d97a3b8dd5316d61a5e4be67945b697cc151767fad6626e1cab37b52"
+  },
+  "captured_at": "2026-10-15T08:39:18.685154+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-15-aac3-evidence/cohort.json",
+    "sha256": "984f3e0ca281903fd6c98376b55a9a377ede4885f16986bbb343f3688fbf2ad4"
+  },
+  "complete_collection_aware_records_read": 14,
+  "corpus_records_hash_checked": 2939,
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 745,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aac3-evidence/expanded-tests.xml",
+      "sha256": "009b5d8533fcd8a5570c93eebf1d23f5e743f0464453b4eda99ed863da2c7751"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_card_structure_links",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "tests": 746
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "000d0e3ca37b157a62b6a2eb6337ad82f794fedd37c102b879b0d803c8b8e056"
+    },
+    {
+      "path": "research/2026-10-15-aac3-evidence.json",
+      "sha256": "71193a5a97ca221c23df69782545e1d85225d2aef5650455ffae2ec57d517bb3"
+    },
+    {
+      "path": "scripts/audit_aac3_evidence.py",
+      "sha256": "6d15efe61fec462af9048487d11503e435d25fd5f824002041bb3df422e39df4"
+    },
+    {
+      "path": "tests/test_aac3_evidence.py",
+      "sha256": "df747f571c23211413688275576c115919dad573f5387c1066307584265da0b2"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 43,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aac3-evidence/focused-tests.xml",
+      "sha256": "c0feedc30a3f57376b74dc1cdd2c99ff92035bef8dc673d4d681ab057e6fe908"
+    },
+    "skipped": 0,
+    "tests": 43
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_aac3_evidence_20261015.py",
+      "sha256": "a8f4cb7a15eb2319f3427fdd37d321cfd68e714c4e8c1a0dc51d51993a335185"
+    },
+    {
+      "path": "/private/tmp/aac3_metadata_canary_20261015.py",
+      "sha256": "0909229a972cdd3d5a7c63b95dc3d787b7791c98524a733c459c4819c36c60ae"
+    },
+    {
+      "path": "/private/tmp/prepare_aac3_followup_20261015.py",
+      "sha256": "2e64af33135e7461fd55807f859875d21f02a166bc8b605258e4be12d6c3108c"
+    },
+    {
+      "path": "/private/tmp/aac3_reference_followup_20261015.py",
+      "sha256": "f1f281670ef8358d64f14bdf76df9e454c260b1c0aa07c8b292ddf3fbee07bcd"
+    },
+    {
+      "path": "/private/tmp/select_aac3_iiib_20261015.py",
+      "sha256": "3bc06bc0ea378094b37866f0efa450742e3673aff02c3c90fe41f6c61b94966c"
+    },
+    {
+      "path": "/private/tmp/research_aac3_osti_20261015.py",
+      "sha256": "20a3a36b2d24c824fa03e6d5d9c4a876e7895763d0cded2edf29ee544aee40a3"
+    },
+    {
+      "path": "/private/tmp/review_aac3_primary_20261015.py",
+      "sha256": "acb9b12ded90fd4706c3bc6e96b8a954683458cdb64788c09a751d5f35f049c7"
+    },
+    {
+      "path": "/private/tmp/save_aac3_evidence_20261015.py",
+      "sha256": "fcb161ea82fb2ae822b5ad12b5286b0d13d2fce1f054fd571724df4b627119d6"
+    },
+    {
+      "path": "/private/tmp/verify_aac3_evidence_20261015.py",
+      "sha256": "bcf0012a2379432ff851dbbc5d76c066bbc5f00a2f5223bb496d3e0b4a9591c4"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "membership_index_updated": false,
+  "membership_reconciliation_pending": true,
+  "native_ontology_definition_and_citation_binding_replayed": true,
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 9,
+  "new_access_holds": 0,
+  "new_experimental_gene_allele_assignments": 0,
+  "new_metadata_requests": 4,
+  "new_osti_requests": 2,
+  "new_primary_texts": 1,
+  "new_reference_gene_links": 1,
+  "new_reference_gene_memberships": 9,
+  "new_uniprot_requests": 3,
+  "new_verified_resistance_results": 0,
+  "no_new_source_owned_or_rendered_files": true,
+  "offline_native_current_corpus_replay": "PASS",
+  "outreach": 0,
+  "previous_uncommitted_work_preserved": true,
+  "primary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-aac3-evidence/primary-context-review.json",
+    "sha256": "c29ef57aff431cce1a47358ae1eb339fb1bea1b01f21d0863f08c909770b86ae"
+  },
+  "prior_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-aac3-evidence/protected-before.json",
+    "sha256": "eb8a71d5f6e6610bccaf04ad55642432fe3c97f8a825a913d2a705a833b48aa7"
+  },
+  "protected_files_checked": 7733,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_findings_addressed": [
+    "Q51405 is an unreviewed exact gene-label/species reference; it has no explicit CARD cross-reference.",
+    "The native bibliography points to the 2018 paper, not the ARO definition's 2010 citation; experimental subjects are not equated.",
+    "The complete reviewed query is empty but the unreviewed query has one result; no-hit citation evidence is not absence.",
+    "The three generic type-IV references do not verify the IVa suffix or experimental allele.",
+    "Two generic IV entries remain fragments. Neither is treated as a complete protein or genome.",
+    "Native Salmonella sp. taxonomy is retained rather than substituted with a named species from the ARO definition.",
+    "Stutzerimonas/Pseudomonas synonymy is native taxonomy context, not a new experimental-subject crosswalk.",
+    "Fifteen incidental or other-enzyme citation hits are not assigned to AAC(3)-IVa.",
+    "OSTI's bibliographic HTML and accepted-manuscript PDF are distinct assets, both tied to the native DOI and advertised link.",
+    "The PDF is a Just Accepted manuscript, not the version of record; only four selected pages were visually inspected.",
+    "The manuscript comparator AAC-VIa is not AAC(3)-IVa; ligand binding or modification is not organismal AST.",
+    "Selected primary context is distinguished from unfinished experimental-identity primary review.",
+    "The three ARO-cited studies remain metadata-only; non-OA flags are not observed access denials."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "AAC3_III_IV_REFERENCE_IDENTITY_NOT_EXPERIMENTAL_ALLELE_OR_PHENOTYPE",
+  "selected_pdf_text_and_render_bytes_reproduced": true,
+  "source_adoptions": 0,
+  "source_claims_checked": 29,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "cohort_records": 14,
+    "corpus_records_hash_checked": 2939,
+    "existing_explicit_reference_links_rechecked": 3,
+    "fragment_references": 2,
+    "incidental_citation_hits_not_selected": 15,
+    "metadata_only_papers": 3,
+    "native_reference_taxa_checked": 5,
+    "new_exact_label_queries": 2,
+    "new_gene_reference_links": 1,
+    "new_gene_reference_memberships": 9,
+    "primary_pdf_pages_visually_reviewed": 4,
+    "reused_complete_citation_queries": 3,
+    "selected_primary_context_reviews": 1,
+    "source_claims": 29,
+    "source_terms": 5,
+    "type_iv_related_references_without_exact_iva_mapping": 3
+  },
+  "total_tests_passed": 788,
+  "verification_limit": "Reference and selected archived-manuscript context, not whole-record or whole-corpus signoff. Pinned RDKit has no Intel macOS wheel; historical Linux CI is not current signoff.",
+  "visually_reviewed_pdf_pages_one_based": [
+    1,
+    2,
+    3,
+    9
+  ],
+  "whole_record_primary_signoffs": 0
+}

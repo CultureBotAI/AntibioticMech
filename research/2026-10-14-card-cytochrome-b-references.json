@@ -1,0 +1,2768 @@
+{
+  "attribution": "CARD curation team, ARO CC BY 4.0; UniProt Consortium, release 2026_03, CC BY 4.0.",
+  "canaries": {
+    "names-plan.json": {
+      "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/names-canary-review.json",
+      "sha256": "8a92a52ce9ada2fc3031a04530ab1b4ba17ced4542307b7adaec95f6378a9196"
+    },
+    "reviewed-plan.json": {
+      "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-canary-review.json",
+      "sha256": "7f2be9f8b26c7e1429d0aaa536e3b0740eefaae90ce886a7e8a75052d1243704"
+    },
+    "taxonomy-plan.json": {
+      "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/taxonomy-canary-review.json",
+      "sha256": "0e7cfcebd154e91c40dec67699d05b2fd4071d359a6585c91b9ee0d289ef427a"
+    },
+    "unreviewed-plan.json": {
+      "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-canary-review.json",
+      "sha256": "471b033804bce2c1afd9807064d7cfb491c827e93287d125edd9cfd7beae7fcb"
+    }
+  },
+  "claims": [
+    {
+      "aro_id": "ARO:3009275",
+      "claim_sha256": "5a3565245a9ad9795e44e341afafb3f9b9ce585c0324f4d5b2aeb4bb677a0dbf",
+      "position": 0,
+      "record_identifier": "CHEBI:40909"
+    },
+    {
+      "aro_id": "ARO:3009279",
+      "claim_sha256": "7ee314ddaf0bca91993f451b1d593667f0fd7ab25388e48087659961f2b47199",
+      "position": 1,
+      "record_identifier": "CHEBI:40909"
+    },
+    {
+      "aro_id": "ARO:3009280",
+      "claim_sha256": "8277060380d9711ac7ed4505a2f602f58d5a23b4fa59ce64672e7a34b485c860",
+      "position": 2,
+      "record_identifier": "CHEBI:40909"
+    },
+    {
+      "aro_id": "ARO:3009276",
+      "claim_sha256": "3e58e18856ade61d5979d61235c6c642995ddd41b5c896cfcb693c3b1d58f28a",
+      "position": 0,
+      "record_identifier": "antibioticmech:aro-dfdbce9a83"
+    },
+    {
+      "aro_id": "ARO:3009281",
+      "claim_sha256": "b15069189b61efe9d923c1efbed6a5e225534788ef44f200e710232358c5fe29",
+      "position": 0,
+      "record_identifier": "CHEBI:2962"
+    },
+    {
+      "aro_id": "ARO:3009278",
+      "claim_sha256": "eedab2bd4dae718e3895c40bd9cad65a5ecfba22ce999b770f1ca1751e87a691",
+      "position": 0,
+      "record_identifier": "CHEBI:78780"
+    }
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/cohort.json",
+    "sha256": "2ce4b4ce1f1e1684c796d02fd58a87d0447ecffa2359e4d57f441ef4bfcdc36b"
+  },
+  "constraints": {
+    "biological_record_changes": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_requests": 0,
+    "outreach": 0,
+    "primary_access_holds_preserved": true,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-14",
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+      "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+    },
+    "definition_citations": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "index": {
+      "path": "research/2026-10-14-card-beta-tubulin-memberships.json",
+      "sha256": "55ea004bb2dee102e766785d478d71ecbd2b344ab540ea033e6078da38c5b9e3"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-14-card-beta-tubulin-memberships-verification.json",
+      "sha256": "f596fd6ea8b07bf72b3ebb3da5a1dfac93fb514fa7c452763c7909a1a5e22d31"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "interpretation": [
+    "Protein names identify reference candidates, not exact source gene symbols or resistant alleles.",
+    "All eligible candidates in the selected reviewed-first subsets are retained; zero results are not absence.",
+    "Fragments are not assigned full-length coordinates; no sequence or organelle location is inferred.",
+    "Bibliography identifiers are discovery metadata, not complete literature inventories or experimental evidence.",
+    "No citation is borrowed from a neighboring term or from the distinct Magnaporthe PHI-base context.",
+    "All records remain in the broader investigation; exact alleles, subjects, genomes and primary review remain open."
+  ],
+  "names": {
+    "Colletotrichum gloeosporioides": {
+      "candidates": [
+        {
+          "accepted_name_and_rank": true,
+          "active": true,
+          "matching_fields": [
+            "scientificName"
+          ],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum gloeosporioides",
+          "taxon_id": "NCBITaxon:474922"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum camelliae",
+          "taxon_id": "NCBITaxon:538528"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum queenslandicum",
+          "taxon_id": "NCBITaxon:1215733"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum aeschynomenes",
+          "taxon_id": "NCBITaxon:1215737"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Alphachrysovirus colletotrichi",
+          "taxon_id": "NCBITaxon:2560390"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum gloeosporioides partitivirus 1",
+          "taxon_id": "NCBITaxon:2603562"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum gloeosporioides polymycovirus virus 1",
+          "taxon_id": "NCBITaxon:3014454"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum gloeosporioides narnavirus 1",
+          "taxon_id": "NCBITaxon:3250170"
+        }
+      ],
+      "exact_match_count": 1,
+      "experimental_subject_assignment": false,
+      "protein_or_allele_assignment": null,
+      "result_count": 8,
+      "retrieval_kind": "REUSED_EXACT_NATIVE_NAME",
+      "selected_taxon": {
+        "accepted_name_and_rank": true,
+        "active": true,
+        "experimental_subject_assignment": false,
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Eukaryota",
+            "taxonId": 2759
+          },
+          {
+            "rank": "clade",
+            "scientificName": "Opisthokonta",
+            "taxonId": 33154
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Fungi",
+            "taxonId": 4751
+          },
+          {
+            "rank": "subkingdom",
+            "scientificName": "Dikarya",
+            "taxonId": 451864
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Ascomycota",
+            "taxonId": 4890
+          },
+          {
+            "rank": "clade",
+            "scientificName": "saccharomyceta",
+            "taxonId": 716545
+          },
+          {
+            "rank": "subphylum",
+            "scientificName": "Pezizomycotina",
+            "taxonId": 147538
+          },
+          {
+            "rank": "clade",
+            "scientificName": "leotiomyceta",
+            "taxonId": 716546
+          },
+          {
+            "rank": "clade",
+            "scientificName": "sordariomyceta",
+            "taxonId": 715989
+          },
+          {
+            "rank": "class",
+            "scientificName": "Sordariomycetes",
+            "taxonId": 147550
+          },
+          {
+            "rank": "subclass",
+            "scientificName": "Hypocreomycetidae",
+            "taxonId": 222543
+          },
+          {
+            "rank": "order",
+            "scientificName": "Glomerellales",
+            "taxonId": 1028384
+          },
+          {
+            "rank": "family",
+            "scientificName": "Glomerellaceae",
+            "taxonId": 681950
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Colletotrichum",
+            "taxonId": 5455
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Colletotrichum gloeosporioides species complex",
+            "taxonId": 2707338
+          },
+          {
+            "rank": "species",
+            "scientificName": "Colletotrichum gloeosporioides",
+            "taxonId": 474922
+          }
+        ],
+        "matching_fields": [
+          "scientificName"
+        ],
+        "other_name_match_only": false,
+        "rank": "species",
+        "scientific_name": "Colletotrichum gloeosporioides",
+        "species_ancestor": {
+          "rank": "species",
+          "scientificName": "Colletotrichum gloeosporioides",
+          "taxonId": 474922
+        },
+        "taxon_id": "NCBITaxon:474922"
+      },
+      "source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-gloeosporioides-response.bin",
+          "sha256": "64a4fb5cbc2fe9cf1d07f900d4d0de075ede4e8f81c1e83c6457a00ad937896a"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-gloeosporioides-receipt.json",
+          "sha256": "e7a8529726ef090a145d62c11d0965713e86dd1851566efcbecd710875841d8e"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:35:43.456821+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+gloeosporioides%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "source_name": "Colletotrichum gloeosporioides",
+      "source_name_kind": "BINOMIAL",
+      "status": "EXACT_NATIVE_NAME_REFERENCE",
+      "unresolved_name_is_biological_absence": false
+    },
+    "Colletotrichum graminicola": {
+      "candidates": [
+        {
+          "accepted_name_and_rank": true,
+          "active": true,
+          "matching_fields": [
+            "scientificName"
+          ],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum graminicola",
+          "taxon_id": "NCBITaxon:31870"
+        },
+        {
+          "accepted_name_and_rank": false,
+          "active": true,
+          "matching_fields": [],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Zea mays/Colletotrichum graminicola mixed EST library",
+          "taxon_id": "NCBITaxon:176297"
+        }
+      ],
+      "exact_match_count": 1,
+      "experimental_subject_assignment": false,
+      "protein_or_allele_assignment": null,
+      "result_count": 2,
+      "retrieval_kind": "NEW_EXACT_NATIVE_NAME",
+      "selected_taxon": {
+        "accepted_name_and_rank": true,
+        "active": true,
+        "experimental_subject_assignment": false,
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Eukaryota",
+            "taxonId": 2759
+          },
+          {
+            "rank": "clade",
+            "scientificName": "Opisthokonta",
+            "taxonId": 33154
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Fungi",
+            "taxonId": 4751
+          },
+          {
+            "rank": "subkingdom",
+            "scientificName": "Dikarya",
+            "taxonId": 451864
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Ascomycota",
+            "taxonId": 4890
+          },
+          {
+            "rank": "clade",
+            "scientificName": "saccharomyceta",
+            "taxonId": 716545
+          },
+          {
+            "rank": "subphylum",
+            "scientificName": "Pezizomycotina",
+            "taxonId": 147538
+          },
+          {
+            "rank": "clade",
+            "scientificName": "leotiomyceta",
+            "taxonId": 716546
+          },
+          {
+            "rank": "clade",
+            "scientificName": "sordariomyceta",
+            "taxonId": 715989
+          },
+          {
+            "rank": "class",
+            "scientificName": "Sordariomycetes",
+            "taxonId": 147550
+          },
+          {
+            "rank": "subclass",
+            "scientificName": "Hypocreomycetidae",
+            "taxonId": 222543
+          },
+          {
+            "rank": "order",
+            "scientificName": "Glomerellales",
+            "taxonId": 1028384
+          },
+          {
+            "rank": "family",
+            "scientificName": "Glomerellaceae",
+            "taxonId": 681950
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Colletotrichum",
+            "taxonId": 5455
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Colletotrichum graminicola species complex",
+            "taxonId": 2707348
+          },
+          {
+            "rank": "species",
+            "scientificName": "Colletotrichum graminicola",
+            "taxonId": 31870
+          }
+        ],
+        "matching_fields": [
+          "scientificName"
+        ],
+        "other_name_match_only": false,
+        "rank": "species",
+        "scientific_name": "Colletotrichum graminicola",
+        "species_ancestor": {
+          "rank": "species",
+          "scientificName": "Colletotrichum graminicola",
+          "taxonId": 31870
+        },
+        "taxon_id": "NCBITaxon:31870"
+      },
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/name-colletotrichum-graminicola-attempt.json",
+          "sha256": "90037cff211f49536607b34b92eab0510978afcdd73f7761646d284054290ca1"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/name-colletotrichum-graminicola-response.bin",
+          "sha256": "6daa792d7b71e60550053c676dea69c9014e3db0b9bf3c34f4c2d50bd9f0550f"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/names-plan.json",
+          "sha256": "023ab3a689b31fa8fe3a116138b6503732129da596adcb603fb2361fe3894ae6"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/name-colletotrichum-graminicola-receipt.json",
+          "sha256": "80d0bc57ae69a52fb95b8e577182de79c3b63505cb55003709c61b7014384bec"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:14:02.156790+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+graminicola%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "source_name": "Colletotrichum graminicola",
+      "source_name_kind": "BINOMIAL",
+      "status": "EXACT_NATIVE_NAME_REFERENCE",
+      "unresolved_name_is_biological_absence": false
+    },
+    "Colletotrichum siamense": {
+      "candidates": [
+        {
+          "accepted_name_and_rank": true,
+          "active": true,
+          "matching_fields": [
+            "scientificName"
+          ],
+          "other_name_match_only": false,
+          "rank": "species",
+          "scientific_name": "Colletotrichum siamense",
+          "taxon_id": "NCBITaxon:690259"
+        }
+      ],
+      "exact_match_count": 1,
+      "experimental_subject_assignment": false,
+      "protein_or_allele_assignment": null,
+      "result_count": 1,
+      "retrieval_kind": "REUSED_EXACT_NATIVE_NAME",
+      "selected_taxon": {
+        "accepted_name_and_rank": true,
+        "active": true,
+        "experimental_subject_assignment": false,
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Eukaryota",
+            "taxonId": 2759
+          },
+          {
+            "rank": "clade",
+            "scientificName": "Opisthokonta",
+            "taxonId": 33154
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Fungi",
+            "taxonId": 4751
+          },
+          {
+            "rank": "subkingdom",
+            "scientificName": "Dikarya",
+            "taxonId": 451864
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Ascomycota",
+            "taxonId": 4890
+          },
+          {
+            "rank": "clade",
+            "scientificName": "saccharomyceta",
+            "taxonId": 716545
+          },
+          {
+            "rank": "subphylum",
+            "scientificName": "Pezizomycotina",
+            "taxonId": 147538
+          },
+          {
+            "rank": "clade",
+            "scientificName": "leotiomyceta",
+            "taxonId": 716546
+          },
+          {
+            "rank": "clade",
+            "scientificName": "sordariomyceta",
+            "taxonId": 715989
+          },
+          {
+            "rank": "class",
+            "scientificName": "Sordariomycetes",
+            "taxonId": 147550
+          },
+          {
+            "rank": "subclass",
+            "scientificName": "Hypocreomycetidae",
+            "taxonId": 222543
+          },
+          {
+            "rank": "order",
+            "scientificName": "Glomerellales",
+            "taxonId": 1028384
+          },
+          {
+            "rank": "family",
+            "scientificName": "Glomerellaceae",
+            "taxonId": 681950
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Colletotrichum",
+            "taxonId": 5455
+          },
+          {
+            "rank": "no rank",
+            "scientificName": "Colletotrichum gloeosporioides species complex",
+            "taxonId": 2707338
+          },
+          {
+            "rank": "species",
+            "scientificName": "Colletotrichum siamense",
+            "taxonId": 690259
+          }
+        ],
+        "matching_fields": [
+          "scientificName"
+        ],
+        "other_name_match_only": false,
+        "rank": "species",
+        "scientific_name": "Colletotrichum siamense",
+        "species_ancestor": {
+          "rank": "species",
+          "scientificName": "Colletotrichum siamense",
+          "taxonId": 690259
+        },
+        "taxon_id": "NCBITaxon:690259"
+      },
+      "source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-response.bin",
+          "sha256": "c0ea6a27b5c1b4b4edeeb49e96dfee2461eecfd4a05b3934011e5d8f996e9777"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-receipt.json",
+          "sha256": "e68ea2a37382e25859354297a810de7382c91edfdae8aae280ea06ead3d477a6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:38:41.188451+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+siamense%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "source_name": "Colletotrichum siamense",
+      "source_name_kind": "BINOMIAL",
+      "status": "EXACT_NATIVE_NAME_REFERENCE",
+      "unresolved_name_is_biological_absence": false
+    }
+  },
+  "proteins": {
+    "UniProtKB:A0A0H3VGN4": {
+      "bibliography": [],
+      "bibliography_is_complete_reference_inventory": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 34,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "fragment_coordinates_mapped_to_full_length": false,
+      "native_cytochrome_b_name_matches": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "native_gene_annotations": [
+        {
+          "geneName": [
+            "cytb"
+          ],
+          "orderedLocusNames": [],
+          "orfNames": [],
+          "synonyms": []
+        }
+      ],
+      "native_protein_flag": null,
+      "native_protein_names": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "organelle_or_genomic_location_inferred_from_name": false,
+      "protein_accession": "UniProtKB:A0A0H3VGN4",
+      "reference_organism_name": "Colletotrichum siamense",
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_rank": "species",
+      "resistance_inferred_from_reference": false,
+      "sequence_version": 1,
+      "source_gene_symbol_assignment": null,
+      "species_lineage_verified": true,
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-response.bin",
+          "sha256": "c0ea6a27b5c1b4b4edeeb49e96dfee2461eecfd4a05b3934011e5d8f996e9777"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-receipt.json",
+          "sha256": "e68ea2a37382e25859354297a810de7382c91edfdae8aae280ea06ead3d477a6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:38:41.188451+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+siamense%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:A0A1S6LNE2": {
+      "bibliography": [
+        {
+          "identifier_issues": [],
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1186/s12864-016-3480-x"
+            },
+            {
+              "database": "PubMed",
+              "id": "28201983"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2017"
+        }
+      ],
+      "bibliography_is_complete_reference_inventory": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 28,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "fragment_coordinates_mapped_to_full_length": false,
+      "native_cytochrome_b_name_matches": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "native_gene_annotations": [
+        {
+          "geneName": [
+            "cob"
+          ],
+          "orderedLocusNames": [],
+          "orfNames": [],
+          "synonyms": []
+        }
+      ],
+      "native_protein_flag": null,
+      "native_protein_names": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "organelle_or_genomic_location_inferred_from_name": false,
+      "protein_accession": "UniProtKB:A0A1S6LNE2",
+      "reference_organism_name": "Colletotrichum siamense",
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_rank": "species",
+      "resistance_inferred_from_reference": false,
+      "sequence_version": 1,
+      "source_gene_symbol_assignment": null,
+      "species_lineage_verified": true,
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-response.bin",
+          "sha256": "c0ea6a27b5c1b4b4edeeb49e96dfee2461eecfd4a05b3934011e5d8f996e9777"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-receipt.json",
+          "sha256": "e68ea2a37382e25859354297a810de7382c91edfdae8aae280ea06ead3d477a6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:38:41.188451+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+siamense%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:A0A1S6LNG5": {
+      "bibliography": [
+        {
+          "identifier_issues": [],
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1186/s12864-016-3480-x"
+            },
+            {
+              "database": "PubMed",
+              "id": "28201983"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2017"
+        }
+      ],
+      "bibliography_is_complete_reference_inventory": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 28,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "fragment_coordinates_mapped_to_full_length": false,
+      "native_cytochrome_b_name_matches": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "native_gene_annotations": [
+        {
+          "geneName": [
+            "cob"
+          ],
+          "orderedLocusNames": [],
+          "orfNames": [],
+          "synonyms": []
+        }
+      ],
+      "native_protein_flag": null,
+      "native_protein_names": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "organelle_or_genomic_location_inferred_from_name": false,
+      "protein_accession": "UniProtKB:A0A1S6LNG5",
+      "reference_organism_name": "Colletotrichum siamense",
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_rank": "species",
+      "resistance_inferred_from_reference": false,
+      "sequence_version": 1,
+      "source_gene_symbol_assignment": null,
+      "species_lineage_verified": true,
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-response.bin",
+          "sha256": "c0ea6a27b5c1b4b4edeeb49e96dfee2461eecfd4a05b3934011e5d8f996e9777"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-receipt.json",
+          "sha256": "e68ea2a37382e25859354297a810de7382c91edfdae8aae280ea06ead3d477a6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:38:41.188451+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+siamense%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:A0A1S6LNJ6": {
+      "bibliography": [
+        {
+          "identifier_issues": [],
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": "10.1186/s12864-016-3480-x"
+            },
+            {
+              "database": "PubMed",
+              "id": "28201983"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2017"
+        }
+      ],
+      "bibliography_is_complete_reference_inventory": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 29,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "fragment_coordinates_mapped_to_full_length": false,
+      "native_cytochrome_b_name_matches": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "native_gene_annotations": [
+        {
+          "geneName": [
+            "cob"
+          ],
+          "orderedLocusNames": [],
+          "orfNames": [],
+          "synonyms": []
+        }
+      ],
+      "native_protein_flag": null,
+      "native_protein_names": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "organelle_or_genomic_location_inferred_from_name": false,
+      "protein_accession": "UniProtKB:A0A1S6LNJ6",
+      "reference_organism_name": "Colletotrichum gloeosporioides",
+      "reference_species_taxon_id": "NCBITaxon:474922",
+      "reference_taxon_id": "NCBITaxon:474922",
+      "reference_taxon_rank": "species",
+      "resistance_inferred_from_reference": false,
+      "sequence_version": 1,
+      "source_gene_symbol_assignment": null,
+      "species_lineage_verified": true,
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-gloeosporioides-response.bin",
+          "sha256": "64a4fb5cbc2fe9cf1d07f900d4d0de075ede4e8f81c1e83c6457a00ad937896a"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-gloeosporioides-receipt.json",
+          "sha256": "e7a8529726ef090a145d62c11d0965713e86dd1851566efcbecd710875841d8e"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:35:43.456821+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+gloeosporioides%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:A0A344X8F3": {
+      "bibliography": [
+        {
+          "identifier_issues": [
+            {
+              "database": "DOI",
+              "native_id": ".1094/PHYTO-04-18-0128-R",
+              "replacement": null,
+              "status": "MALFORMED_NATIVE_DOI_NOT_CORRECTED"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": ".1094/PHYTO-04-18-0128-R"
+            },
+            {
+              "database": "PubMed",
+              "id": "29996698"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2018"
+        }
+      ],
+      "bibliography_is_complete_reference_inventory": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 17,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "fragment_coordinates_mapped_to_full_length": false,
+      "native_cytochrome_b_name_matches": [
+        {
+          "index": 0,
+          "kind": "submissionNames",
+          "value": "Cytochrome b"
+        }
+      ],
+      "native_gene_annotations": [
+        {
+          "geneName": [
+            "cytb"
+          ],
+          "orderedLocusNames": [],
+          "orfNames": [],
+          "synonyms": []
+        }
+      ],
+      "native_protein_flag": "Fragment",
+      "native_protein_names": [
+        {
+          "index": 0,
+          "kind": "submissionNames",
+          "value": "Cytochrome b"
+        }
+      ],
+      "organelle_or_genomic_location_inferred_from_name": false,
+      "protein_accession": "UniProtKB:A0A344X8F3",
+      "reference_organism_name": "Colletotrichum siamense",
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_rank": "species",
+      "resistance_inferred_from_reference": false,
+      "sequence_version": 1,
+      "source_gene_symbol_assignment": null,
+      "species_lineage_verified": true,
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-response.bin",
+          "sha256": "c0ea6a27b5c1b4b4edeeb49e96dfee2461eecfd4a05b3934011e5d8f996e9777"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-receipt.json",
+          "sha256": "e68ea2a37382e25859354297a810de7382c91edfdae8aae280ea06ead3d477a6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:38:41.188451+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+siamense%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:A0A344X8F5": {
+      "bibliography": [
+        {
+          "identifier_issues": [
+            {
+              "database": "DOI",
+              "native_id": ".1094/PHYTO-04-18-0128-R",
+              "replacement": null,
+              "status": "MALFORMED_NATIVE_DOI_NOT_CORRECTED"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "DOI",
+              "id": ".1094/PHYTO-04-18-0128-R"
+            },
+            {
+              "database": "PubMed",
+              "id": "29996698"
+            }
+          ],
+          "primary_results_reviewed": false,
+          "publication_date": "2018"
+        }
+      ],
+      "bibliography_is_complete_reference_inventory": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 17,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "fragment_coordinates_mapped_to_full_length": false,
+      "native_cytochrome_b_name_matches": [
+        {
+          "index": 0,
+          "kind": "submissionNames",
+          "value": "Cytochrome b"
+        }
+      ],
+      "native_gene_annotations": [
+        {
+          "geneName": [
+            "cytb"
+          ],
+          "orderedLocusNames": [],
+          "orfNames": [],
+          "synonyms": []
+        }
+      ],
+      "native_protein_flag": "Fragment",
+      "native_protein_names": [
+        {
+          "index": 0,
+          "kind": "submissionNames",
+          "value": "Cytochrome b"
+        }
+      ],
+      "organelle_or_genomic_location_inferred_from_name": false,
+      "protein_accession": "UniProtKB:A0A344X8F5",
+      "reference_organism_name": "Colletotrichum siamense",
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_rank": "species",
+      "resistance_inferred_from_reference": false,
+      "sequence_version": 1,
+      "source_gene_symbol_assignment": null,
+      "species_lineage_verified": true,
+      "taxonomy_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-response.bin",
+          "sha256": "c0ea6a27b5c1b4b4edeeb49e96dfee2461eecfd4a05b3934011e5d8f996e9777"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-beta-tubulin/name-colletotrichum-siamense-receipt.json",
+          "sha256": "e68ea2a37382e25859354297a810de7382c91edfdae8aae280ea06ead3d477a6"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T03:38:41.188451+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Colletotrichum+siamense%22+AND+rank%3Aspecies&format=json&size=500"
+      },
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:E3CU97": {
+      "bibliography": [],
+      "bibliography_is_complete_reference_inventory": false,
+      "database_review_status_is_primary_results_review": false,
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "entry_version": 64,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "fragment_coordinates_mapped_to_full_length": false,
+      "native_cytochrome_b_name_matches": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "native_gene_annotations": [
+        {
+          "geneName": [],
+          "orderedLocusNames": [],
+          "orfNames": [
+            "GLRG_18002"
+          ],
+          "synonyms": []
+        }
+      ],
+      "native_protein_flag": null,
+      "native_protein_names": [
+        {
+          "index": 0,
+          "kind": "recommendedName",
+          "value": "Cytochrome b"
+        }
+      ],
+      "organelle_or_genomic_location_inferred_from_name": false,
+      "protein_accession": "UniProtKB:E3CU97",
+      "reference_organism_name": "Colletotrichum graminicola (strain M1.001 / M2 / FGSC 10212)",
+      "reference_species_taxon_id": "NCBITaxon:31870",
+      "reference_taxon_id": "NCBITaxon:645133",
+      "reference_taxon_rank": "strain",
+      "resistance_inferred_from_reference": false,
+      "sequence_version": 1,
+      "source_gene_symbol_assignment": null,
+      "species_lineage_verified": true,
+      "taxonomy_source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/taxon-645133-attempt.json",
+          "sha256": "814db7920064684633059fb480d2c037cbc315cc02ea7a500c01d22f1cfd1771"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/taxon-645133-response.bin",
+          "sha256": "1d6d9e0930315dcd1a73deaefbabe54a48268162578d3a701c85f3498a69467b"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/taxonomy-plan.json",
+          "sha256": "3a86112bb40d9de3293e1b88e0d40678a73b7e296d216d7cc6b86ac379cda0bf"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/taxon-645133-receipt.json",
+          "sha256": "0b59d43dbd1d2f6e5ae9556389819dd8b98087b79dddcaef26ddcfee1cd8a19a"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:21:20.426407+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/taxonomy/645133"
+      },
+      "unflagged_means_complete": false
+    }
+  },
+  "records": [
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "2",
+      "identifier": "CHEBI:40909",
+      "label": "azoxystrobin",
+      "lineage_checked_taxids": "NCBITaxon:1159556|NCBITaxon:117187|NCBITaxon:318829|NCBITaxon:40559",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml",
+      "primary_papers_pending": "DOI:10.1038/srep16881|DOI:10.1080/21505594.2025.2555419|DOI:10.3390/jof12020111|PMID:12612806|PMID:26596626|PMID:40934067|PMID:41745253",
+      "record_sha256": "be804c56fd7f93df43fa7980b9d9f4de86e5286f4d14ed47102f8646495c2fb8",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "11",
+      "score_rules": "0",
+      "standard_inchi_key": "WFDXOXNFNRHQEC-GHRIWEEISA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": "UniProtKB:A0A089QDC9|UniProtKB:A0A8E5ME34|UniProtKB:P53373|UniProtKB:W7MZ22"
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "antibioticmech:aro-dfdbce9a83",
+      "label": "benzothiostrobin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/benzothiostrobin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "91ce384b3c751d4c5b77bdf7342fe9bf7b8725a0bc30c45b6d3fe8cc625ac0d8",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "1",
+      "score_rules": "0",
+      "standard_inchi_key": "OMGAIUZPUSZZME-WJDWOHSUSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:2962",
+      "label": "kresoxim-methyl",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/kresoxim-methyl.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "ed31ac691818fd5e49281a22463a73316d543b1860a149ca34d64e3fa2f3a008",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "1",
+      "score_rules": "0",
+      "standard_inchi_key": "ZOTBXTZVPHCKPN-HTXNQAPBSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:78780",
+      "label": "pyraclostrobin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/pyraclostrobin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "9ef00a401f2ca54eb0b6457eb1e0a9994ec6776e1dac2a56cddace18cd8de1e0",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "3",
+      "score_rules": "0",
+      "standard_inchi_key": "HZRSNVGNWUDEFX-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    }
+  ],
+  "release": "2026_03",
+  "scope": "ALL_CARD_CYTOCHROME_B_PROTEIN_NAME_REFERENCES_NOT_EXPERIMENTAL_ALLELES",
+  "summary": {
+    "bibliography_identifier_issue_memberships": 2,
+    "complete_records_read": 4,
+    "corpus_records_hash_checked": 2939,
+    "entry_types": {
+      "UniProtKB unreviewed (TrEMBL)": 7
+    },
+    "fragment_references": 2,
+    "new_experimental_assignments": 0,
+    "reference_proteins": 7,
+    "reference_statuses": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 1,
+      "UNREVIEWED_CANDIDATE": 5
+    },
+    "resolved_source_names": 3,
+    "source_claims": 6,
+    "source_name_contexts": 3,
+    "source_terms": 6,
+    "term_protein_links": 10,
+    "terms_with_references": 6,
+    "terms_without_own_definition_citations": 6,
+    "whole_record_primary_signoffs": 0
+  },
+  "terms": {
+    "ARO:3009275": {
+      "definition_citation_ids": [],
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": "NCBITaxon:474922",
+      "primary_review_status": "OPEN",
+      "queries": {
+        "reviewed": {
+          "all_result_accessions": [],
+          "candidate_accessions": [],
+          "candidate_count": 0,
+          "complete_for_query": true,
+          "excluded_candidates": [],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-attempt.json",
+              "sha256": "62c210889e3850fee129a44bd8b01ea16dfe1f43a23696e47afc943493f52b16"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-response.bin",
+              "sha256": "7c8051673f2ae55b53d7e79eb2e7c30a72975c11040350049c5c51e6af955f17"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-plan.json",
+              "sha256": "1bb3c9a9bd37d259dad056eeefacbb31e7422bf22fa3af081037391f5c83a6cc"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-receipt.json",
+              "sha256": "748d7958ccd66bfc9e08100900af02a4d62e5355109633a773b5c53129ba2993"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:17:29.219126+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 1,
+          "zero_hit_is_biological_absence": false
+        },
+        "unreviewed": {
+          "all_result_accessions": [
+            "A0A1D8RF43",
+            "A0A1S6LNJ6",
+            "A0A8H4C8T1",
+            "A0A8H4CDW1",
+            "A0A8H4CHC8",
+            "A0A8H4CMI7",
+            "A0A8H4CRI4",
+            "A0A8H4CRP5",
+            "A0A8H4FG86",
+            "A0A8H4FKI4",
+            "A0A8H4FPY1"
+          ],
+          "candidate_accessions": [
+            "A0A1S6LNJ6"
+          ],
+          "candidate_count": 1,
+          "complete_for_query": true,
+          "excluded_candidates": [
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b mRNA-processing protein 4"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CDW1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Succinate dehydrogenase [ubiquinone] cytochrome b small subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FKI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit Rieske, mitochondrial"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CHC8",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CMI7",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 6, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 6"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FPY1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome b subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A1D8RF43",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome B subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4C8T1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 7"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRP5",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 2, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Core protein II"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FG86",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            }
+          ],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 11,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-attempt.json",
+              "sha256": "c74ca7313ccb0c3e5f28f5ca811bb2ece7fcde7b103bdf85bfc7636c7a72574b"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-response.bin",
+              "sha256": "55b73d8f6a6dd814dd44042d6800d7ad9081ff7499dbddfd9c8ddd0db0054a00"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+              "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-receipt.json",
+              "sha256": "1645a8d04f8b041cce6925340917234455464f5a5e7a8331498ed9a81e66243d"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:19:51.055319+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 0,
+          "zero_hit_is_biological_absence": false
+        }
+      },
+      "record_memberships": [
+        "CHEBI:40909"
+      ],
+      "reference_candidates": [
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A1S6LNJ6"
+        }
+      ],
+      "reference_status": "UNREVIEWED_CANDIDATE",
+      "source_claim_wording": "with mutations conferring resistance to azoxystrobin",
+      "source_gene_symbol": null,
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations conferring resistance to azoxystrobin",
+      "source_label_sha256": "2e0dcf295a6fd79f753877bca578845d798dbd4b11c1acacbd6126e35bb89bf6",
+      "source_organism_name": "Colletotrichum gloeosporioides",
+      "source_protein_label": "cytochrome b protein",
+      "taxonomy_query_name": "Colletotrichum gloeosporioides"
+    },
+    "ARO:3009276": {
+      "definition_citation_ids": [],
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": "NCBITaxon:474922",
+      "primary_review_status": "OPEN",
+      "queries": {
+        "reviewed": {
+          "all_result_accessions": [],
+          "candidate_accessions": [],
+          "candidate_count": 0,
+          "complete_for_query": true,
+          "excluded_candidates": [],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-attempt.json",
+              "sha256": "62c210889e3850fee129a44bd8b01ea16dfe1f43a23696e47afc943493f52b16"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-response.bin",
+              "sha256": "7c8051673f2ae55b53d7e79eb2e7c30a72975c11040350049c5c51e6af955f17"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-plan.json",
+              "sha256": "1bb3c9a9bd37d259dad056eeefacbb31e7422bf22fa3af081037391f5c83a6cc"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-receipt.json",
+              "sha256": "748d7958ccd66bfc9e08100900af02a4d62e5355109633a773b5c53129ba2993"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:17:29.219126+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 1,
+          "zero_hit_is_biological_absence": false
+        },
+        "unreviewed": {
+          "all_result_accessions": [
+            "A0A1D8RF43",
+            "A0A1S6LNJ6",
+            "A0A8H4C8T1",
+            "A0A8H4CDW1",
+            "A0A8H4CHC8",
+            "A0A8H4CMI7",
+            "A0A8H4CRI4",
+            "A0A8H4CRP5",
+            "A0A8H4FG86",
+            "A0A8H4FKI4",
+            "A0A8H4FPY1"
+          ],
+          "candidate_accessions": [
+            "A0A1S6LNJ6"
+          ],
+          "candidate_count": 1,
+          "complete_for_query": true,
+          "excluded_candidates": [
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b mRNA-processing protein 4"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CDW1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Succinate dehydrogenase [ubiquinone] cytochrome b small subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FKI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit Rieske, mitochondrial"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CHC8",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CMI7",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 6, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 6"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FPY1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome b subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A1D8RF43",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome B subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4C8T1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 7"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRP5",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 2, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Core protein II"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FG86",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            }
+          ],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 11,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-attempt.json",
+              "sha256": "c74ca7313ccb0c3e5f28f5ca811bb2ece7fcde7b103bdf85bfc7636c7a72574b"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-response.bin",
+              "sha256": "55b73d8f6a6dd814dd44042d6800d7ad9081ff7499dbddfd9c8ddd0db0054a00"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+              "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-receipt.json",
+              "sha256": "1645a8d04f8b041cce6925340917234455464f5a5e7a8331498ed9a81e66243d"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:19:51.055319+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 0,
+          "zero_hit_is_biological_absence": false
+        }
+      },
+      "record_memberships": [
+        "antibioticmech:aro-dfdbce9a83"
+      ],
+      "reference_candidates": [
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A1S6LNJ6"
+        }
+      ],
+      "reference_status": "UNREVIEWED_CANDIDATE",
+      "source_claim_wording": "with mutations conferring resistance to benzothiostrobin",
+      "source_gene_symbol": null,
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations conferring resistance to benzothiostrobin",
+      "source_label_sha256": "bfbe91cdc3aa8bbbe6f60fe851ac67f7e5f17e216e6a3cef8f3b397f9822c25c",
+      "source_organism_name": "Colletotrichum gloeosporioides",
+      "source_protein_label": "cytochrome b protein",
+      "taxonomy_query_name": "Colletotrichum gloeosporioides"
+    },
+    "ARO:3009278": {
+      "definition_citation_ids": [],
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": "NCBITaxon:474922",
+      "primary_review_status": "OPEN",
+      "queries": {
+        "reviewed": {
+          "all_result_accessions": [],
+          "candidate_accessions": [],
+          "candidate_count": 0,
+          "complete_for_query": true,
+          "excluded_candidates": [],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-attempt.json",
+              "sha256": "62c210889e3850fee129a44bd8b01ea16dfe1f43a23696e47afc943493f52b16"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-response.bin",
+              "sha256": "7c8051673f2ae55b53d7e79eb2e7c30a72975c11040350049c5c51e6af955f17"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-plan.json",
+              "sha256": "1bb3c9a9bd37d259dad056eeefacbb31e7422bf22fa3af081037391f5c83a6cc"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-receipt.json",
+              "sha256": "748d7958ccd66bfc9e08100900af02a4d62e5355109633a773b5c53129ba2993"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:17:29.219126+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 1,
+          "zero_hit_is_biological_absence": false
+        },
+        "unreviewed": {
+          "all_result_accessions": [
+            "A0A1D8RF43",
+            "A0A1S6LNJ6",
+            "A0A8H4C8T1",
+            "A0A8H4CDW1",
+            "A0A8H4CHC8",
+            "A0A8H4CMI7",
+            "A0A8H4CRI4",
+            "A0A8H4CRP5",
+            "A0A8H4FG86",
+            "A0A8H4FKI4",
+            "A0A8H4FPY1"
+          ],
+          "candidate_accessions": [
+            "A0A1S6LNJ6"
+          ],
+          "candidate_count": 1,
+          "complete_for_query": true,
+          "excluded_candidates": [
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b mRNA-processing protein 4"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CDW1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Succinate dehydrogenase [ubiquinone] cytochrome b small subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FKI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit Rieske, mitochondrial"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CHC8",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CMI7",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 6, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 6"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FPY1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome b subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A1D8RF43",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome B subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4C8T1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 7"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRP5",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 2, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Core protein II"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FG86",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            }
+          ],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 11,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-attempt.json",
+              "sha256": "c74ca7313ccb0c3e5f28f5ca811bb2ece7fcde7b103bdf85bfc7636c7a72574b"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-response.bin",
+              "sha256": "55b73d8f6a6dd814dd44042d6800d7ad9081ff7499dbddfd9c8ddd0db0054a00"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+              "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-receipt.json",
+              "sha256": "1645a8d04f8b041cce6925340917234455464f5a5e7a8331498ed9a81e66243d"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:19:51.055319+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 0,
+          "zero_hit_is_biological_absence": false
+        }
+      },
+      "record_memberships": [
+        "CHEBI:78780"
+      ],
+      "reference_candidates": [
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A1S6LNJ6"
+        }
+      ],
+      "reference_status": "UNREVIEWED_CANDIDATE",
+      "source_claim_wording": "with mutations conferring resistance to pyraclostrobin",
+      "source_gene_symbol": null,
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations conferring resistance to pyraclostrobin",
+      "source_label_sha256": "10afd30d7cf7750887e39ba0f87483ed6e8a852b06b6c189230506c241953025",
+      "source_organism_name": "Colletotrichum gloeosporioides",
+      "source_protein_label": "cytochrome b protein",
+      "taxonomy_query_name": "Colletotrichum gloeosporioides"
+    },
+    "ARO:3009279": {
+      "definition_citation_ids": [],
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": "NCBITaxon:690259",
+      "primary_review_status": "OPEN",
+      "queries": {
+        "reviewed": {
+          "all_result_accessions": [],
+          "candidate_accessions": [],
+          "candidate_count": 0,
+          "complete_for_query": true,
+          "excluded_candidates": [],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-690259-attempt.json",
+              "sha256": "a04c137d77d31cf95242e00c826c76f3871b781d299714b6c7e635e04033bec8"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-690259-response.bin",
+              "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-plan.json",
+              "sha256": "1bb3c9a9bd37d259dad056eeefacbb31e7422bf22fa3af081037391f5c83a6cc"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-690259-receipt.json",
+              "sha256": "14b8b0fe07d0d8f45e4b1e7d6f005cf88afad76440472c033e70c47c00c4afc9"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:18:01.288799+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A690259+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 690259,
+          "suggestions_followed": false,
+          "suggestions_ignored": 0,
+          "zero_hit_is_biological_absence": false
+        },
+        "unreviewed": {
+          "all_result_accessions": [
+            "A0A0H3VGN4",
+            "A0A1S6LNE2",
+            "A0A1S6LNG5",
+            "A0A344X8F3",
+            "A0A344X8F5",
+            "A0A9P5EJZ4",
+            "A0A9P5ENU0",
+            "A0A9P5EQV1",
+            "A0A9P5ESJ5",
+            "A0A9P5EUA3",
+            "A0A9P5EZM5",
+            "A0A9P5F381",
+            "A0A9P5K3M1"
+          ],
+          "candidate_accessions": [
+            "A0A0H3VGN4",
+            "A0A1S6LNE2",
+            "A0A1S6LNG5",
+            "A0A344X8F3",
+            "A0A344X8F5"
+          ],
+          "candidate_count": 5,
+          "complete_for_query": true,
+          "excluded_candidates": [
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b mRNA-processing protein 4"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5EJZ4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 7"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5K3M1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Succinate dehydrogenase [ubiquinone] cytochrome b small subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5F381",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit Rieske, mitochondrial"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5ESJ5",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5EQV1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5EZM5",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 6, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 6"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5ENU0",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome B subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A9P5EUA3",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            }
+          ],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 13,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-attempt.json",
+              "sha256": "29fb96e9e588ec99f7cab37248583325479dcd2fb21b27968890afed6e9462b8"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-response.bin",
+              "sha256": "f2a1314c94ba3b9a51c85fc16249b78182b01e397a139391428dc7e2957ea954"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+              "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-receipt.json",
+              "sha256": "79d41fa6c69a99048bf9e913c2177688cda5589026f1847ad1c0ff57a092a008"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:20:39.287875+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A690259+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 690259,
+          "suggestions_followed": false,
+          "suggestions_ignored": 0,
+          "zero_hit_is_biological_absence": false
+        }
+      },
+      "record_memberships": [
+        "CHEBI:40909"
+      ],
+      "reference_candidates": [
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A1S6LNE2"
+        },
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A1S6LNG5"
+        },
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A0H3VGN4"
+        },
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "submissionNames",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A344X8F3"
+        },
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "submissionNames",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A344X8F5"
+        }
+      ],
+      "reference_status": "MULTIPLE_CANDIDATES_NO_SELECTION",
+      "source_claim_wording": "with mutations associated with resistance to azoxystrobin",
+      "source_gene_symbol": null,
+      "source_label": "Colletotrichum siamense cytochrome b protein with mutations associated with resistance to azoxystrobin",
+      "source_label_sha256": "e903c9afe47172d412aada038addb515978380ffcc140a8e62052276be4bace2",
+      "source_organism_name": "Colletotrichum siamense",
+      "source_protein_label": "cytochrome b protein",
+      "taxonomy_query_name": "Colletotrichum siamense"
+    },
+    "ARO:3009280": {
+      "definition_citation_ids": [],
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": "NCBITaxon:31870",
+      "primary_review_status": "OPEN",
+      "queries": {
+        "reviewed": {
+          "all_result_accessions": [],
+          "candidate_accessions": [],
+          "candidate_count": 0,
+          "complete_for_query": true,
+          "excluded_candidates": [],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-31870-attempt.json",
+              "sha256": "c0a78405d63950b7f38db2bf5fffb6003fd806f6e712f7a224f70df7418f8a34"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-31870-response.bin",
+              "sha256": "9b68e5dfdc7737d0e7448c34e903eb58b91cfffc96ab1117ec2add24b71d0ae3"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-plan.json",
+              "sha256": "1bb3c9a9bd37d259dad056eeefacbb31e7422bf22fa3af081037391f5c83a6cc"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-31870-receipt.json",
+              "sha256": "c7a77d9a315b34efd1d46dd027b739622c1daf655239790be3a00eabe86bdd43"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:18:00.444935+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A31870+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 31870,
+          "suggestions_followed": false,
+          "suggestions_ignored": 1,
+          "zero_hit_is_biological_absence": false
+        },
+        "unreviewed": {
+          "all_result_accessions": [
+            "E3CU97",
+            "E3Q4H4",
+            "E3Q4X3",
+            "E3QFD5",
+            "E3QMQ3",
+            "E3QN99",
+            "E3QNB1",
+            "E3QQ09",
+            "E3QXJ8",
+            "E3QY96"
+          ],
+          "candidate_accessions": [
+            "E3CU97"
+          ],
+          "candidate_count": 1,
+          "complete_for_query": true,
+          "excluded_candidates": [
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b mRNA-processing protein 4"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3QFD5",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 7"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3QN99",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Succinate dehydrogenase [ubiquinone] cytochrome b small subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3Q4H4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit Rieske, mitochondrial"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3QMQ3",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3QNB1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 6, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 6"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3QY96",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome b subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3QXJ8",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "NADH-cytochrome b-5 reductase"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3Q4X3",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 2, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Core protein II"
+                }
+              ],
+              "protein_accession": "UniProtKB:E3QQ09",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            }
+          ],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 10,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-31870-attempt.json",
+              "sha256": "179d75eb4e66b50bb3578c00d28ce10c1075aeb31f4a64da17e1cc91eedc32a3"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-31870-response.bin",
+              "sha256": "60a72f45d8cb941bde6317981865013b0f66f6a182ede861cf1126201089ef2f"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+              "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-31870-receipt.json",
+              "sha256": "bccb41a3a02174dca4b65f37c61ae7f5d020bd27f0d538520d2c3f7a3df7da32"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:20:38.490384+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A31870+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 31870,
+          "suggestions_followed": false,
+          "suggestions_ignored": 0,
+          "zero_hit_is_biological_absence": false
+        }
+      },
+      "record_memberships": [
+        "CHEBI:40909"
+      ],
+      "reference_candidates": [
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:E3CU97"
+        }
+      ],
+      "reference_status": "UNREVIEWED_CANDIDATE",
+      "source_claim_wording": "with mutations associated with resistance to azoxystrobin",
+      "source_gene_symbol": null,
+      "source_label": "Colletotrichum graminicola cytochrome b protein with mutations associated with resistance to azoxystrobin",
+      "source_label_sha256": "605da46ce7d46944a7cd3cce7a34a5f8ed80415205bacc2d418edfaf70b3d563",
+      "source_organism_name": "Colletotrichum graminicola",
+      "source_protein_label": "cytochrome b protein",
+      "taxonomy_query_name": "Colletotrichum graminicola"
+    },
+    "ARO:3009281": {
+      "definition_citation_ids": [],
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": "NCBITaxon:474922",
+      "primary_review_status": "OPEN",
+      "queries": {
+        "reviewed": {
+          "all_result_accessions": [],
+          "candidate_accessions": [],
+          "candidate_count": 0,
+          "complete_for_query": true,
+          "excluded_candidates": [],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 0,
+          "reviewed_subset": true,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-attempt.json",
+              "sha256": "62c210889e3850fee129a44bd8b01ea16dfe1f43a23696e47afc943493f52b16"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-response.bin",
+              "sha256": "7c8051673f2ae55b53d7e79eb2e7c30a72975c11040350049c5c51e6af955f17"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-plan.json",
+              "sha256": "1bb3c9a9bd37d259dad056eeefacbb31e7422bf22fa3af081037391f5c83a6cc"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/reviewed-474922-receipt.json",
+              "sha256": "748d7958ccd66bfc9e08100900af02a4d62e5355109633a773b5c53129ba2993"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:17:29.219126+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 1,
+          "zero_hit_is_biological_absence": false
+        },
+        "unreviewed": {
+          "all_result_accessions": [
+            "A0A1D8RF43",
+            "A0A1S6LNJ6",
+            "A0A8H4C8T1",
+            "A0A8H4CDW1",
+            "A0A8H4CHC8",
+            "A0A8H4CMI7",
+            "A0A8H4CRI4",
+            "A0A8H4CRP5",
+            "A0A8H4FG86",
+            "A0A8H4FKI4",
+            "A0A8H4FPY1"
+          ],
+          "candidate_accessions": [
+            "A0A1S6LNJ6"
+          ],
+          "candidate_count": 1,
+          "complete_for_query": true,
+          "excluded_candidates": [
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b mRNA-processing protein 4"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CDW1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Succinate dehydrogenase [ubiquinone] cytochrome b small subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FKI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit Rieske, mitochondrial"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CHC8",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRI4",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 8"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 8"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CMI7",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 6, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Complex III subunit 6"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FPY1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome b subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A1D8RF43",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "submissionNames",
+                  "value": "Succinate dehydrogenase cytochrome B subunit"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4C8T1",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 7"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4CRP5",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            },
+            {
+              "native_protein_names": [
+                {
+                  "index": 0,
+                  "kind": "recommendedName",
+                  "value": "Cytochrome b-c1 complex subunit 2, mitochondrial"
+                },
+                {
+                  "index": 0,
+                  "kind": "alternativeNames",
+                  "value": "Core protein II"
+                }
+              ],
+              "protein_accession": "UniProtKB:A0A8H4FG86",
+              "reason": "NO_EXACT_NATIVE_CYTOCHROME_B_NAME_NOT_BIOLOGICAL_ABSENCE"
+            }
+          ],
+          "query_type": "PROTEIN_NAME_NOT_GENE_SYMBOL",
+          "result_count": 11,
+          "reviewed_subset": false,
+          "source": {
+            "attempt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-attempt.json",
+              "sha256": "c74ca7313ccb0c3e5f28f5ca811bb2ece7fcde7b103bdf85bfc7636c7a72574b"
+            },
+            "body": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-response.bin",
+              "sha256": "55b73d8f6a6dd814dd44042d6800d7ad9081ff7499dbddfd9c8ddd0db0054a00"
+            },
+            "plan": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+              "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+            },
+            "receipt": {
+              "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-receipt.json",
+              "sha256": "1645a8d04f8b041cce6925340917234455464f5a5e7a8331498ed9a81e66243d"
+            },
+            "release": "2026_03",
+            "retrieved_at": "2026-10-15T05:19:51.055319+00:00",
+            "status": 200,
+            "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+          },
+          "source_taxon_id": 474922,
+          "suggestions_followed": false,
+          "suggestions_ignored": 0,
+          "zero_hit_is_biological_absence": false
+        }
+      },
+      "record_memberships": [
+        "CHEBI:2962"
+      ],
+      "reference_candidates": [
+        {
+          "exact_resistant_allele": false,
+          "experimental_subject_assignment": false,
+          "native_cytochrome_b_name_matches": [
+            {
+              "index": 0,
+              "kind": "recommendedName",
+              "value": "Cytochrome b"
+            }
+          ],
+          "protein_accession": "UniProtKB:A0A1S6LNJ6"
+        }
+      ],
+      "reference_status": "UNREVIEWED_CANDIDATE",
+      "source_claim_wording": "with mutations associated with resistance to kresoxim-methyl",
+      "source_gene_symbol": null,
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations associated with resistance to kresoxim-methyl",
+      "source_label_sha256": "6bd92aa4346efdbc41547e75cb69e2063f5bf0af8d5a8b94c50e38152e46bd57",
+      "source_organism_name": "Colletotrichum gloeosporioides",
+      "source_protein_label": "cytochrome b protein",
+      "taxonomy_query_name": "Colletotrichum gloeosporioides"
+    }
+  }
+}

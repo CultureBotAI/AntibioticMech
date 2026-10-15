@@ -1,0 +1,944 @@
+{
+  "attribution": "CARD/ARO ontology: McMaster University, CC BY 4.0. UniProt Consortium metadata, release 2026_03. Bibliographic metadata: Europe PMC at EBI. No source adopted or primary text exported.",
+  "claims": [
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "521a18b817d839f52bed363a72b08199677ff923bcaf764e2fa69a16e692bf72",
+      "position": 17,
+      "record_identifier": "CHEBI:2676"
+    },
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "741bedf99e72b1ee1508a3cb2ef1bcbeae2d2d92c4ffb5af5adb59caf52158d2",
+      "position": 18,
+      "record_identifier": "CHEBI:124991"
+    },
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "03a8e093a41bb2283c508cfb86b962a61551b2be85affcad30933d79c2e53abd",
+      "position": 9,
+      "record_identifier": "CHEBI:478164"
+    },
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "f8d21f0de479c1ca6bf96d8adda524b4148cf2353cabcd9ac3119fab7ce06d61",
+      "position": 12,
+      "record_identifier": "CHEBI:204928"
+    },
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "7b52e7e3a60f3bfe6bd15a6661259ee5e927d18d92531b24a617d983ce3bc9fb",
+      "position": 203,
+      "record_identifier": "CHEBI:3508"
+    },
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "2885073f9a23e8e34be8db34419434f31b6d6a7f112561f9b55d05b5ff91c869",
+      "position": 5,
+      "record_identifier": "CHEBI:3515"
+    },
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "301746ed2143346dddaeaa74718a57313e6533fbd5d35b21241376c6c3c5a61c",
+      "position": 10,
+      "record_identifier": "CHEBI:8232"
+    },
+    {
+      "aro_id": "ARO:3004856",
+      "claim_sha256": "d8bcd9995f0002696cbcbacad3d9ff06ad857e76b9702b6230906829ed5a9d91",
+      "position": 11,
+      "record_identifier": "CHEBI:9587"
+    }
+  ],
+  "constraints": {
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "membership_index_updated": false,
+    "ncbi_requests": 0,
+    "new_metadata_requests": 3,
+    "new_primary_requests": 0,
+    "new_requests": 3,
+    "new_uniprot_requests": 0,
+    "outreach": 0,
+    "prior_source_holds_preserved": true,
+    "redirects_followed": false,
+    "retry_performed": false,
+    "reuse_terms_review_resumed": false,
+    "sequence_variant_protocol_exported": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-15",
+  "disposition": {
+    "biological_records_changed": 0,
+    "experimental_gene_allele_assignments": 0,
+    "experimental_genome_assignments": 0,
+    "new_verified_resistance_results": 0,
+    "reference_organisms_transferred_to_experimental_subjects": false,
+    "whole_record_primary_signoffs": 0
+  },
+  "incidental_citation_hits_not_selected": [
+    "UniProtKB:A1E3L0",
+    "UniProtKB:A4ZYU8",
+    "UniProtKB:A4ZYU9",
+    "UniProtKB:A5Y0S2",
+    "UniProtKB:A5Y0S4",
+    "UniProtKB:A5Y0S5",
+    "UniProtKB:A5Y0S6",
+    "UniProtKB:B1VCH2",
+    "UniProtKB:Q1A2M1",
+    "UniProtKB:Q57229",
+    "UniProtKB:Q68J87",
+    "UniProtKB:Q68J88",
+    "UniProtKB:Q68J89",
+    "UniProtKB:Q68J91",
+    "UniProtKB:Q68J92",
+    "UniProtKB:Q68J99",
+    "UniProtKB:Q68JA0",
+    "UniProtKB:Q68JA1",
+    "UniProtKB:Q68JA3",
+    "UniProtKB:Q68JA4",
+    "UniProtKB:Q68JA5",
+    "UniProtKB:Q68JA6",
+    "UniProtKB:Q68JA7",
+    "UniProtKB:Q68JA8",
+    "UniProtKB:Q68JA9",
+    "UniProtKB:Q68JB0",
+    "UniProtKB:Q68JB3",
+    "UniProtKB:Q68JB4",
+    "UniProtKB:Q68JC1",
+    "UniProtKB:Q68JC2",
+    "UniProtKB:Q68JC4",
+    "UniProtKB:Q68JC5",
+    "UniProtKB:Q68JC6",
+    "UniProtKB:Q68JC7",
+    "UniProtKB:Q68JC8",
+    "UniProtKB:Q68JC9",
+    "UniProtKB:Q68JD4",
+    "UniProtKB:Q68JD5",
+    "UniProtKB:Q68JD6",
+    "UniProtKB:Q68JD7",
+    "UniProtKB:Q6EMF3",
+    "UniProtKB:Q6LDA3",
+    "UniProtKB:Q6SJ61",
+    "UniProtKB:Q8GJ11",
+    "UniProtKB:Q933W7",
+    "UniProtKB:Q93D69"
+  ],
+  "inputs": {
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/cohort.json",
+      "sha256": "ff4b2aa983a974f380033c64dc4ba59d218c9c114645b52b1fe6abf050e7e9a9"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-followup-memberships.json",
+      "sha256": "dc3000fb1fd17444faa96e7bd11a6478b506cc1a2a0054878347312a70ce7177"
+    },
+    "previous_verification": {
+      "path": "research/2026-10-15-card-followup-memberships-verification.json",
+      "sha256": "9653825191234761f446172caeb7fb550f4a15fbfca0a2c0592353ffcebacd19"
+    },
+    "source_selection": {
+      "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/source-selection.json",
+      "sha256": "1e036336f4c2be840edd9786c80b673fa00928d08eaf0bff244e49041ee2c773"
+    }
+  },
+  "limitations": [
+    "The three papers remain metadata-only here; advertised free links are not inspected full text.",
+    "Non-OA metadata is not an access denial or proof that primary copies are unavailable.",
+    "Citation and exact native gene identity support reference candidates, not tested allele assignments.",
+    "Two references across eight inherited records are not sixteen resistance measurements.",
+    "Acinetobacter spp. in a paper title is broader than the species of one UniProt reference.",
+    "The 2010 citation names multiple enzymes; its other enzyme and neighboring entries are not SCO-1.",
+    "No phenotype, strain, genome or source-owned record was curated; primary results remain to review."
+  ],
+  "literature_queries": {
+    "17353248": {
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "pages": [
+        {
+          "cache": {
+            "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-17353248-response.bin",
+            "sha256": "f473a56b5548ef51dd2ff48ed2a0202ec516e2d349afe63b9d2e474aa3fc437b"
+          },
+          "page": 1,
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-17353248-receipt.json",
+            "sha256": "3525af6b4ee82d4cfd21a28ac63f46f36ec47b6929d30bc5a931af5c4eeb6d98"
+          },
+          "retrieved_at": "2026-10-13T12:45:06.460225+00:00",
+          "status": 200,
+          "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A17353248&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+        }
+      ],
+      "query": "lit_pubmed:17353248",
+      "release": "2026_03",
+      "result_count": 3,
+      "status": "COMPLETE_QUERY_NOT_PRIMARY_REVIEW"
+    },
+    "17420213": {
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "pages": [
+        {
+          "cache": {
+            "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-17420213-response.bin",
+            "sha256": "087913489808e92d31dfeab32002d578aa352c920ebf1c9fa848af6246a3c1d1"
+          },
+          "page": 1,
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-17420213-receipt.json",
+            "sha256": "3142ddc07fd830297e18a8b26394ed8dd99ae1c441fea35519eb875391bf70d1"
+          },
+          "retrieved_at": "2026-10-13T12:45:11.636540+00:00",
+          "status": 200,
+          "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A17420213&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+        }
+      ],
+      "query": "lit_pubmed:17420213",
+      "release": "2026_03",
+      "result_count": 5,
+      "status": "COMPLETE_QUERY_NOT_PRIMARY_REVIEW"
+    },
+    "20956594": {
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "pages": [
+        {
+          "cache": {
+            "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-20956594-response.bin",
+            "sha256": "c92a2c5d10c03a451e5ef1796b68adf1b7cb26eaedf962073b0d9efda8f8a49f"
+          },
+          "page": 1,
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-20956594-receipt.json",
+            "sha256": "62234fa25d221431c6e57eadf3667e3ee2519a810ab3df02f6ade1976c7bccf6"
+          },
+          "retrieved_at": "2026-10-13T12:47:18.042924+00:00",
+          "status": 200,
+          "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A20956594&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+        }
+      ],
+      "query": "lit_pubmed:20956594",
+      "release": "2026_03",
+      "result_count": 43,
+      "status": "COMPLETE_QUERY_NOT_PRIMARY_REVIEW"
+    }
+  },
+  "metadata": {
+    "17353248": {
+      "abstract_sha256": "f9145d23ac53fa56128c74dd9d9409da65362e6117e10c9ce7fc9d046e5b2b55",
+      "advertised_primary_links": [
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "doi",
+          "site": "Unpaywall",
+          "url": "https://doi.org/10.1128/AAC.01439-06"
+        },
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.1128/AAC.01439-06"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC1891400"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC1891400?pdf=render"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.1128/aac.01439-06"
+        }
+      ],
+      "doi": "10.1128/aac.01439-06",
+      "firstPublicationDate": "2007-03-12",
+      "id": "17353248",
+      "isOpenAccess": "N",
+      "non_oa_metadata_is_access_denial": false,
+      "pmcid": "PMC1891400",
+      "primary_results_reviewed": false,
+      "primary_unavailability_claimed": false,
+      "scope": "METADATA_NOT_PRIMARY_EXPERIMENTAL_EVIDENCE",
+      "source": "MED",
+      "title": "SCO-1, a novel plasmid-mediated class A beta-lactamase with carbenicillinase characteristics from Escherichia coli."
+    },
+    "17420213": {
+      "abstract_sha256": "dfa4873e4f550956921f7632aefead0b243ceb9acded82f27118d02f1973870f",
+      "advertised_primary_links": [
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.1128/AAC.01600-06"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC1891420"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC1891420?pdf=render"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.1128/aac.01600-06"
+        }
+      ],
+      "doi": "10.1128/aac.01600-06",
+      "firstPublicationDate": "2007-04-09",
+      "id": "17420213",
+      "isOpenAccess": "N",
+      "non_oa_metadata_is_access_denial": false,
+      "pmcid": "PMC1891420",
+      "primary_results_reviewed": false,
+      "primary_unavailability_claimed": false,
+      "scope": "METADATA_NOT_PRIMARY_EXPERIMENTAL_EVIDENCE",
+      "source": "MED",
+      "title": "Identification of the novel narrow-spectrum beta-lactamase SCO-1 in Acinetobacter spp. from Argentina."
+    },
+    "20956594": {
+      "abstract_sha256": "da40969eeb4a19d600a9f99206e6d58fe6755ca3a3aeaa67f12310bb786dd9cd",
+      "advertised_primary_links": [
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "pdf",
+          "site": "Unpaywall",
+          "url": "https://europepmc.org/articles/pmc3019680?pdf=render"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "pdf",
+          "site": "Unpaywall",
+          "url": "https://europepmc.org/articles/pmc3019680?pdf=render"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "pdf",
+          "site": "Unpaywall",
+          "url": "https://europepmc.org/articles/pmc3019680?pdf=render"
+        },
+        {
+          "availability": "Free after 4 months",
+          "availabilityCode": "F4",
+          "documentStyle": "pdf",
+          "site": "intl-aac.asm.org",
+          "url": "http://intl-aac.asm.org/cgi/reprint/55/1/376.pdf"
+        },
+        {
+          "availability": "Free after 4 months",
+          "availabilityCode": "F4",
+          "documentStyle": "html",
+          "site": "intl-aac.asm.org",
+          "url": "http://intl-aac.asm.org/cgi/content/full/55/1/376"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "abs",
+          "site": "intl-aac.asm.org",
+          "url": "http://intl-aac.asm.org/cgi/content/abstract/55/1/376"
+        },
+        {
+          "availability": "Subscription required",
+          "availabilityCode": "S",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.1128/AAC.00875-10"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "html",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC3019680"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "pdf",
+          "site": "Europe_PMC",
+          "url": "https://europepmc.org/articles/PMC3019680?pdf=render"
+        },
+        {
+          "availability": "Free",
+          "availabilityCode": "F",
+          "documentStyle": "doi",
+          "site": "DOI",
+          "url": "https://doi.org/10.1128/aac.00875-10"
+        }
+      ],
+      "doi": "10.1128/aac.00875-10",
+      "firstPublicationDate": "2010-10-18",
+      "id": "20956594",
+      "isOpenAccess": "N",
+      "non_oa_metadata_is_access_denial": false,
+      "pmcid": "PMC3019680",
+      "primary_results_reviewed": false,
+      "primary_unavailability_claimed": false,
+      "scope": "METADATA_NOT_PRIMARY_EXPERIMENTAL_EVIDENCE",
+      "source": "MED",
+      "title": "Sequence of pR3521, an IncB plasmid from Escherichia coli encoding ACC-4, SCO-1, and TEM-1 beta-lactamases."
+    }
+  },
+  "metadata_sources": {
+    "17353248": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-17353248-attempt.json",
+        "sha256": "dd1572fb36213427a8a5f4827a5365f60989cc2094efd2e02a13d7c3a90e1fce"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-17353248-response.bin",
+        "sha256": "ae4dcb2d2318e77766d1c319717ecb8248fb495ca611a773c89b09ac5bda2514"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-plan.json",
+        "sha256": "a5de7c58f0cfce4bb2530a813e1fd353c6be3333a10e80c9637ba06e3a5b94ea"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-17353248-receipt.json",
+        "sha256": "5a4cecc7e11451a58118b1296382cd6b4245202ef3eae25b7a0597aff4dad927"
+      },
+      "retrieved_at": "2026-10-15T08:59:11.295834+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17353248+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+    },
+    "17420213": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-17420213-attempt.json",
+        "sha256": "bd3e77b76cd2ad6807e0f48f7e6614ca27d64fb64e1b360f6d31d4af4080d29a"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-17420213-response.bin",
+        "sha256": "1686e64508b6c3d8af277b6d891c122517a2e33ec23c6d2b58476e8824c4d1a4"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-plan.json",
+        "sha256": "a5de7c58f0cfce4bb2530a813e1fd353c6be3333a10e80c9637ba06e3a5b94ea"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-17420213-receipt.json",
+        "sha256": "f3cb9b8b4c3771fac2fe1fcaa77eabbee5a54ac12d04c70e43ac3b7c38028790"
+      },
+      "retrieved_at": "2026-10-15T08:59:41.951841+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A17420213+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+    },
+    "20956594": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-20956594-attempt.json",
+        "sha256": "c0152a10c9178504d6da2004b3270ca67c304d1bf9e25fa9a6ef8f2e7b6058af"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-20956594-response.bin",
+        "sha256": "3a8e4fbc9479cc9038e5bbe0159a1ad0c630080f7bcae730011ec41b6c8858e2"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-plan.json",
+        "sha256": "a5de7c58f0cfce4bb2530a813e1fd353c6be3333a10e80c9637ba06e3a5b94ea"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-sco1-evidence/metadata-20956594-receipt.json",
+        "sha256": "0fef80d6dc48f99db879864fcef52437dcf922a97fbc3c618d56c91216f481a9"
+      },
+      "retrieved_at": "2026-10-15T08:59:56.381555+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A20956594+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+    }
+  },
+  "records": [
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:2676",
+      "label": "amoxicillin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/amoxicillin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "1b0c83e57bdf4638c6b39f98f2f498527d2608cd330df324c3367530d4ec5447",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "31",
+      "score_rules": "0",
+      "standard_inchi_key": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:124991",
+      "label": "cefalotin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/cefalotin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "d3bcac46436b8e693f0d1ec4dbb584e733f11e37714468818058aeb8274cc028",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "27",
+      "score_rules": "0",
+      "standard_inchi_key": "XIURVHNZVLADCM-IUODEOHRSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "31",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:478164",
+      "label": "cefepime",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/cefepime.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "1b7e6c555e89446b8881dd47f4dff3cee02c5f7f5c374b694bf605d816c6c992",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "13",
+      "score_rules": "0",
+      "standard_inchi_key": "HVFLCNVBZFFHBT-ZKDACBOMSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "19",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:204928",
+      "label": "cefotaxime",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/cefotaxime.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "6c6123a1ec4ce59dc566a304b64b13efdc188ed01479c4fb2487633b5fc128b5",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "20",
+      "score_rules": "0",
+      "standard_inchi_key": "GPRBEKHLDVQUJE-QSWIMTSFSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "34",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:3508",
+      "label": "ceftazidime",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ceftazidime.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "51c8151de51d168a17f89ac72d4a11ac67ca40f881071d1061476444f1332ac1",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "258",
+      "score_rules": "0",
+      "standard_inchi_key": "ORFOPKXBNMVMKC-DWVKKRMSSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:3515",
+      "label": "cefuroxime",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/cefuroxime.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "633e9f37482c6b643158430610d339544eee02cfd4b2b390ad41c1305078e713",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "10",
+      "score_rules": "0",
+      "standard_inchi_key": "JFPVXVDWJQMJEE-IZRZKJBUSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:8232",
+      "label": "piperacillin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/piperacillin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "929dbafa50c33137e706b4218f2b512294c6263ef2f40a6a9677cf1da56f9d05",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "16",
+      "score_rules": "0",
+      "standard_inchi_key": "IVBHGBMCVLDMKU-GXNBUGAJSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:9587",
+      "label": "ticarcillin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ticarcillin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "8ecab5ce09e0ecab755d6de212f8904bfc82cb8a26a23a5a49b4b166e9316e28",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "15",
+      "score_rules": "0",
+      "standard_inchi_key": "OHKOGUYZJXTSFX-KZFFXBSXSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    }
+  ],
+  "reference_memberships": [
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:124991",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:124991",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:204928",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:204928",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:2676",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:2676",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:3508",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:3508",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:3515",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:3515",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:478164",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:478164",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:8232",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:8232",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A1E3K9",
+      "record_identifier": "CHEBI:9587",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    },
+    {
+      "experimental_subject_assignment": false,
+      "protein_accession": "UniProtKB:A5Y0S3",
+      "record_identifier": "CHEBI:9587",
+      "scope": "REFERENCE_ONLY_NOT_EXPERIMENTAL_ALLELE_OR_AST",
+      "source_term_id": "ARO:3004856"
+    }
+  ],
+  "reference_taxonomy_sources": {
+    "470": {
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:03:58.233663+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/470",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-a29d6d1078f311832e3850c8f3294d8b7f4f13ea97c4efcca4de21b83aaef485.json",
+        "sha256": "7994e389db9afbdb9a5bf0d89d270b07874230e9adf4b36cebc0241096b0fda4"
+      }
+    },
+    "562": {
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T03:04:03.650418+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/562",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-b37438d139cabeff14d8fff73da60ff02883c14f8607f400fe790db4799cc9ac.json",
+        "sha256": "56c5cdcec44f05a573796c091acdccc5142f9cc7eeef32a72ebb0bdeab0f6b40"
+      }
+    }
+  },
+  "references": {
+    "UniProtKB:A1E3K9": {
+      "accession": "UniProtKB:A1E3K9",
+      "alias_basis": "EXACT_NATIVE_BLASCO1_GENE_AND_SOURCE_CITED_SCO1_PUBLICATIONS",
+      "bibliography": [
+        {
+          "doi": "DOI:10.1128/aac.01439-06",
+          "native_title": "SCO-1, a novel plasmid-mediated class A beta-lactamase with carbenicillinase characteristics from Escherichia coli.",
+          "pmid": "PMID:17353248",
+          "reference_number": 1
+        },
+        {
+          "doi": "DOI:10.1128/aac.00875-10",
+          "native_title": "Sequence of pR3521, an IncB Plasmid from Escherichia coli Encoding ACC-4, SCO-1, and TEM-1 {beta}-Lactamases.",
+          "pmid": "PMID:20956594",
+          "reference_number": 2
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 92,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "exact_allele_assignment": false,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "explicit_card_xref": false,
+      "gene_symbols": [
+        "blaSCO-1"
+      ],
+      "global_bla_prefix_normalization_enabled": false,
+      "native_protein_flag": null,
+      "native_reference_taxon_rank": "species",
+      "primary_results_reviewed": false,
+      "reference_taxon_id": "NCBITaxon:562",
+      "reference_taxon_label": "Escherichia coli",
+      "scope": "UNREVIEWED_GENE_CITATION_TAXON_REFERENCE_ONLY",
+      "source_label": "SCO-1",
+      "source_term_id": "ARO:3004856",
+      "unflagged_means_complete": false
+    },
+    "UniProtKB:A5Y0S3": {
+      "accession": "UniProtKB:A5Y0S3",
+      "alias_basis": "EXACT_NATIVE_BLASCO1_GENE_AND_SOURCE_CITED_SCO1_PUBLICATIONS",
+      "bibliography": [
+        {
+          "doi": "DOI:10.1128/aac.01600-06",
+          "native_title": "Identification of the novel narrow-spectrum beta-lactamase SCO-1 in Acinetobacter spp. from Argentina.",
+          "pmid": "PMID:17420213",
+          "reference_number": 1
+        }
+      ],
+      "entry_audit": {
+        "entryVersion": 73,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB unreviewed (TrEMBL)",
+      "exact_allele_assignment": false,
+      "experimental_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "explicit_card_xref": false,
+      "gene_symbols": [
+        "blaSCO-1"
+      ],
+      "global_bla_prefix_normalization_enabled": false,
+      "native_protein_flag": null,
+      "native_reference_taxon_rank": "species",
+      "primary_results_reviewed": false,
+      "reference_taxon_id": "NCBITaxon:470",
+      "reference_taxon_label": "Acinetobacter baumannii",
+      "scope": "UNREVIEWED_GENE_CITATION_TAXON_REFERENCE_ONLY",
+      "source_label": "SCO-1",
+      "source_term_id": "ARO:3004856",
+      "unflagged_means_complete": false
+    }
+  },
+  "scope": "SCO1_NATIVE_GENE_CITATION_TAXON_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+  "selection_context": {
+    "acinetobacter_reference_species_not_applied_to_all_paper_isolates": true,
+    "distinct_reference_accessions_collapsed": false,
+    "global_bla_prefix_normalization_enabled": false,
+    "native_gene_label": "blaSCO-1",
+    "prior_literal_screen_selected_neither_reference": true,
+    "source_cited_papers_and_native_bibliography_concordant": true,
+    "source_label": "SCO-1"
+  },
+  "source_definition": {
+    "biological_support_inferred": false,
+    "class_xrefs": {
+      "identifiers": [],
+      "other_xrefs": []
+    },
+    "definition_axioms": [
+      {
+        "identifiers": [
+          "PMID:17353248",
+          "PMID:17420213",
+          "PMID:20956594"
+        ],
+        "other_xrefs": [],
+        "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+        "target": {
+          "datatype": null,
+          "kind": "literal",
+          "language": null,
+          "sha256": "29043e49bea3e5ef622db6ee9b0081cbeb79c1c5d0cea5604ee76016cfda1ce3"
+        }
+      }
+    ],
+    "definition_citation_ids": [
+      "PMID:17353248",
+      "PMID:17420213",
+      "PMID:20956594"
+    ],
+    "definition_citation_status": "CITATIONS_PRESENT_PRIMARY_SUPPORT_UNREVIEWED",
+    "definitions": [
+      {
+        "datatype": null,
+        "kind": "literal",
+        "language": null,
+        "sha256": "29043e49bea3e5ef622db6ee9b0081cbeb79c1c5d0cea5604ee76016cfda1ce3"
+      }
+    ],
+    "label_sha256": "599cd4971164707c0740837f747cc8c0c5235c8146080158acc61f7df4ade5f0",
+    "other_axioms": [
+      {
+        "identifiers": [],
+        "other_xrefs": [],
+        "predicate": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+        "target": {
+          "datatype": null,
+          "kind": "literal",
+          "language": null,
+          "sha256": "599cd4971164707c0740837f747cc8c0c5235c8146080158acc61f7df4ade5f0"
+        }
+      }
+    ],
+    "record_memberships": [
+      "CHEBI:124991",
+      "CHEBI:204928",
+      "CHEBI:2676",
+      "CHEBI:3508",
+      "CHEBI:3515",
+      "CHEBI:478164",
+      "CHEBI:8232",
+      "CHEBI:9587"
+    ]
+  },
+  "source_label": "SCO-1",
+  "source_term": {
+    "entity_review": "NOT_REASSESSED_BY_THIS_RECONCILIATION",
+    "entity_review_source": null,
+    "experimental_subject_assignment": false,
+    "links": [],
+    "named_organism_taxon_reference_only": null,
+    "ontology_scope_hint": "OTHER_TERM_ENTITY_GRANULARITY_UNRESOLVED",
+    "ontology_scope_source": {
+      "input": "base",
+      "pointer": "/terms/ARO:3004856/ontology_scope_source"
+    },
+    "qualified_scope_followup": null,
+    "record_memberships": [
+      "CHEBI:124991",
+      "CHEBI:204928",
+      "CHEBI:2676",
+      "CHEBI:3508",
+      "CHEBI:3515",
+      "CHEBI:478164",
+      "CHEBI:8232",
+      "CHEBI:9587"
+    ],
+    "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+    "source_label_sha256": "599cd4971164707c0740837f747cc8c0c5235c8146080158acc61f7df4ade5f0",
+    "topoisomerase_followup": null,
+    "whole_record_primary_review": "OPEN"
+  },
+  "source_term_id": "ARO:3004856",
+  "summary": {
+    "cohort_records": 8,
+    "corpus_records_hash_checked": 2939,
+    "distinct_citation_query_entries": 48,
+    "incidental_citation_hits_not_selected": 46,
+    "metadata_only_papers": 3,
+    "native_reference_taxa_checked": 2,
+    "new_gene_reference_links": 2,
+    "new_gene_reference_memberships": 16,
+    "primary_context_reviews": 0,
+    "reused_complete_citation_queries": 3,
+    "source_claims": 8,
+    "source_terms": 1
+  }
+}

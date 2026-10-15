@@ -1,0 +1,289 @@
+{
+  "aac3_reference_membership_reconciliation_pending": false,
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-15-card-followup-memberships/canary-review.json",
+    "sha256": "f134bbfaa0edccf8017850bc078a0f4dd58213b3c817f7043921ed90833b7f1f"
+  },
+  "captured_at": "2026-10-15T08:55:45.279039+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "complete_collection_aware_corpus_read_by_canary": 2939,
+  "corpus_records_hash_checked": 2939,
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c7083e8f7c3c5aed4f4215f5ff8fd017c9fb959cf11500bd598130d1e9fee4f2"
+    },
+    {
+      "path": "research/2026-10-15-card-followup-memberships-plan.json",
+      "sha256": "2a6a52ec9235d1608ace6ee2645a52f057644eb2f2b0ab63826a2f6cbfb3a089"
+    },
+    {
+      "path": "research/2026-10-15-card-followup-memberships.json",
+      "sha256": "dc3000fb1fd17444faa96e7bd11a6478b506cc1a2a0054878347312a70ce7177"
+    },
+    {
+      "path": "research/2026-10-15-card-followup-memberships.tsv",
+      "sha256": "87bba371a987bfb1d304c0ae435cba56e0411a68c8a5f0d0f934ab8608759500"
+    },
+    {
+      "path": "scripts/audit_card_followup_memberships.py",
+      "sha256": "1a855f5555fa3d55f64f70b86a380e5e9c42c5ad00fec1c844940d65c216bd13"
+    },
+    {
+      "path": "tests/test_card_followup_memberships.py",
+      "sha256": "d4e6d4c01012c2b1ec593623a593c99b1539b3e942c492a7fb69974734e96db9"
+    }
+  ],
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "full_native_canary_replay": "PASS",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/prepare_card_followup_memberships_20261015.py",
+      "sha256": "6730b1395a5d6a24af19e01f6382ada15165e18315cbce0b62a4a1b5ae9b3a3e"
+    },
+    {
+      "path": "/private/tmp/finalize_card_followup_memberships_20261015.py",
+      "sha256": "f6789fa0063c578c91dee2d76c1e21558ba7c4af0cfacefd5c1fa588fa906596"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "membership_index_updated": true,
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_projection_replay": true,
+  "network_requests": 0,
+  "new_experimental_assignments": 0,
+  "new_verified_resistance_results": 0,
+  "offline_projection_replay": "PASS",
+  "outreach": 0,
+  "plan": {
+    "path": "research/2026-10-15-card-followup-memberships-plan.json",
+    "sha256": "2a6a52ec9235d1608ace6ee2645a52f057644eb2f2b0ab63826a2f6cbfb3a089"
+  },
+  "prior_index_reproduced_and_four_native_followups_replayed": true,
+  "prior_research_checkpoints_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-followup-memberships/protected-before.json",
+    "sha256": "564f83f843e8c1904f3943c0c780ffdd6c8aaf5b52078d335e6ec0c3023b8a04"
+  },
+  "protected_files_checked": 7737,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_findings_addressed": [
+    "Exactly one new term/protein link and nine reference memberships; no new experimental assignments.",
+    "Q51405 remains unreviewed with no CARD xref; its native 2018 citation is not the ARO 2010 citation.",
+    "All 4538 CARD claim positions, hashes and record memberships retained.",
+    "All 2939 TSV rows retained, including PHI, curator, score-rule and no-CARD records.",
+    "Generic IVa-adjacent references remain context, not exact IVa assignments.",
+    "Kpn complex zero-hits, unresolved cipA with a 403 hold, and Vgb limitations remain linked context.",
+    "All inherited pointers resolve to their original owner through the pinned base index.",
+    "Candidate-free status is explicitly bounded to selected index inputs, not biological absence.",
+    "All earlier source and supplement access holds remain intact; no new network request occurred.",
+    "No whole-record review or corpus-wide primary signoff claimed."
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "CARD_REFERENCE_INDEX_WITH_AAC3_KPN_CIPA_VGB_CONTEXT_NOT_EXPERIMENTAL_GROUNDING",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "added_reference_links": 1,
+    "added_reference_memberships": 9,
+    "added_reference_proteins": 1,
+    "added_reference_terms": 1,
+    "additional_evidence_for_existing_links": 1,
+    "beta_bibliography_summary": {
+      "complete_records_read": 7,
+      "corpus_records_hash_checked": 2939,
+      "journal_references_without_identifiers": 11,
+      "native_identifier_issues": 1,
+      "native_reference_memberships": 81,
+      "new_network_requests": 2,
+      "new_primary_access_holds": 1,
+      "new_primary_result_reviews": 0,
+      "primary_access_terms": 2,
+      "reference_proteins": 26,
+      "reference_types": {
+        "journal article": 45,
+        "submission": 36
+      },
+      "references_without_identifiers": 47,
+      "source_claims": 15,
+      "source_terms": 15,
+      "terms_with_own_source_citation_matches": 0,
+      "whole_record_primary_signoffs": 0
+    },
+    "beta_followup_dispositions": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 6,
+      "REVIEWED_REFERENCE": 8,
+      "UNREVIEWED_CANDIDATE": 1
+    },
+    "beta_source_claims": 15,
+    "beta_source_terms": 15,
+    "card_assertions": 4538,
+    "card_terms": 2002,
+    "claim_statuses": {
+      "CITATION_AND_LITERAL_GENE_CANDIDATE_ONLY": 131,
+      "EXPLICIT_CARD_XREF_REFERENCE_ONLY": 2543,
+      "MULTIPLE_REFERENCE_EVIDENCE_KINDS_NOT_EXPERIMENTAL_SELECTION": 6,
+      "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE": 1304,
+      "REVIEWED_BETA_TUBULIN_PROTEIN_NAME_REFERENCE_ONLY": 11,
+      "REVIEWED_FOLP_RPO_GENE_AND_TAXON_REFERENCE_ONLY": 46,
+      "REVIEWED_FUNGAL_GENE_AND_SPECIES_REFERENCE_ONLY": 68,
+      "REVIEWED_GENE_AND_SPECIES_REFERENCE_ONLY": 190,
+      "REVIEWED_OUTER_LABEL_GENE_TAXON_REFERENCE_ONLY": 12,
+      "UNREVIEWED_AAC3_IIIB_EXACT_GENE_TAXON_REFERENCE_ONLY": 9,
+      "UNREVIEWED_BETA_TUBULIN_PROTEIN_NAME_CANDIDATE_ONLY": 4,
+      "UNREVIEWED_CYTOCHROME_B_PROTEIN_NAME_REFERENCE_ONLY": 6,
+      "UNREVIEWED_FOLP_RPO_GENE_AND_TAXON_CANDIDATE_ONLY": 3,
+      "UNREVIEWED_FUNGAL_GENE_AND_SPECIES_CANDIDATE_ONLY": 78,
+      "UNREVIEWED_GENE_AND_SPECIES_CANDIDATE_ONLY": 112,
+      "UNREVIEWED_OUTER_LABEL_GENE_TAXON_CANDIDATE_ONLY": 15
+    },
+    "corpus_records": 2939,
+    "curator_claims_not_reassessed": 133,
+    "followup_claims": 94,
+    "followup_records": 58,
+    "followup_terms": 11,
+    "folp_rpo_followup_dispositions": {
+      "folp": {
+        "MULTIPLE_CANDIDATES_NO_SELECTION": 2,
+        "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 1,
+        "REVIEWED_REFERENCE": 1,
+        "UNREVIEWED_CANDIDATE": 1
+      },
+      "rpo": {
+        "MULTIPLE_CANDIDATES_NO_SELECTION": 10,
+        "REVIEWED_REFERENCE": 4,
+        "SOURCE_NAME_UNRESOLVED_NO_PROTEIN_QUERY": 2
+      }
+    },
+    "folp_rpo_source_claims": 53,
+    "folp_rpo_source_terms": 21,
+    "fungal_followup_dispositions": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 61,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 29,
+      "REVIEWED_REFERENCE": 68,
+      "SOURCE_NAME_UNRESOLVED_NO_PROTEIN_QUERY": 9,
+      "UNREVIEWED_CANDIDATE": 17
+    },
+    "fungal_source_claims": 188,
+    "fungal_source_terms": 184,
+    "new_cohort_summaries": {
+      "aac3": {
+        "cohort_records": 14,
+        "corpus_records_hash_checked": 2939,
+        "existing_explicit_reference_links_rechecked": 3,
+        "fragment_references": 2,
+        "incidental_citation_hits_not_selected": 15,
+        "metadata_only_papers": 3,
+        "native_reference_taxa_checked": 5,
+        "new_exact_label_queries": 2,
+        "new_gene_reference_links": 1,
+        "new_gene_reference_memberships": 9,
+        "primary_pdf_pages_visually_reviewed": 4,
+        "reused_complete_citation_queries": 3,
+        "selected_primary_context_reviews": 1,
+        "source_claims": 29,
+        "source_terms": 5,
+        "type_iv_related_references_without_exact_iva_mapping": 3
+      },
+      "cipa": {
+        "biological_records_changed": 0,
+        "cohort_records": 10,
+        "complete_collection_aware_records_read": 10,
+        "corpus_records_hash_checked": 2939,
+        "experimental_gene_allele_assignments": 0,
+        "metadata_only_papers": 1,
+        "native_ontology_definition_replayed": true,
+        "new_verified_resistance_results": 0,
+        "primary_context_reviews": 0,
+        "reference_candidates": 0,
+        "reused_complete_literature_queries": 1,
+        "source_claims": 10,
+        "source_terms": 1
+      },
+      "kpn": {
+        "biological_records_changed": 0,
+        "cohort_records": 26,
+        "complete_collection_aware_records_read": 26,
+        "component_query_hits": 0,
+        "corpus_records_hash_checked": 2939,
+        "experimental_gene_allele_assignments": 0,
+        "metadata_only_papers": 1,
+        "new_complete_component_queries": 4,
+        "new_verified_resistance_results": 0,
+        "paper_reported_background_genomes": 1,
+        "primary_context_reviews": 1,
+        "reused_complete_literature_queries": 2,
+        "source_claims": 28,
+        "source_terms": 2
+      },
+      "vgb": {
+        "cohort_records": 9,
+        "corpus_records_hash_checked": 2939,
+        "reused_complete_literature_queries": 4,
+        "selected_primary_context_reviews": 1,
+        "selected_supplement_pages_reviewed": 5,
+        "source_claims": 27,
+        "source_terms": 3
+      }
+    },
+    "phi_claims_not_reassessed": 217,
+    "qualified_salmonella_terms_without_selected_protein": 4,
+    "records_with_selected_references": 223,
+    "records_without_card_assertions": 2666,
+    "reference_links": 2792,
+    "score_rules_not_reassessed": 467,
+    "selected_reference_proteins": 1677,
+    "selected_reference_terms": 1276,
+    "term_statuses": {
+      "CITATION_AND_LITERAL_GENE_CANDIDATE_ONLY": 49,
+      "EXPLICIT_CARD_XREF_REFERENCE_ONLY": 976,
+      "MULTIPLE_REFERENCE_EVIDENCE_KINDS_NOT_EXPERIMENTAL_SELECTION": 2,
+      "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE": 726,
+      "REVIEWED_BETA_TUBULIN_PROTEIN_NAME_REFERENCE_ONLY": 11,
+      "REVIEWED_FOLP_RPO_GENE_AND_TAXON_REFERENCE_ONLY": 16,
+      "REVIEWED_FUNGAL_GENE_AND_SPECIES_REFERENCE_ONLY": 68,
+      "REVIEWED_GENE_AND_SPECIES_REFERENCE_ONLY": 37,
+      "REVIEWED_OUTER_LABEL_GENE_TAXON_REFERENCE_ONLY": 6,
+      "UNREVIEWED_AAC3_IIIB_EXACT_GENE_TAXON_REFERENCE_ONLY": 1,
+      "UNREVIEWED_BETA_TUBULIN_PROTEIN_NAME_CANDIDATE_ONLY": 4,
+      "UNREVIEWED_CYTOCHROME_B_PROTEIN_NAME_REFERENCE_ONLY": 6,
+      "UNREVIEWED_FOLP_RPO_GENE_AND_TAXON_CANDIDATE_ONLY": 2,
+      "UNREVIEWED_FUNGAL_GENE_AND_SPECIES_CANDIDATE_ONLY": 78,
+      "UNREVIEWED_GENE_AND_SPECIES_CANDIDATE_ONLY": 16,
+      "UNREVIEWED_OUTER_LABEL_GENE_TAXON_CANDIDATE_ONLY": 4
+    },
+    "unreviewed_fragment_references": 281,
+    "whole_record_primary_signoffs": 0
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 825,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-card-followup-memberships/tests.xml",
+      "sha256": "5c2ffd65030171e81a16fa2f3f2417074f654e2d77bdbfdd543890b0666eaadf"
+    },
+    "skip_details": [
+      {
+        "classname": "tests.test_card_structure_links",
+        "reason": "historical checkpoint no longer matches the live corpus; public invariants still run",
+        "test": "test_cached_export_reproduces_when_research_cache_is_available"
+      }
+    ],
+    "skipped": 1,
+    "tests": 826
+  },
+  "verification_limit": "Index reconciliation, not new primary review or experimental curation. Pinned RDKit lacks an Intel macOS wheel; historical Linux CI is not current signoff.",
+  "whole_record_primary_signoffs": 0
+}

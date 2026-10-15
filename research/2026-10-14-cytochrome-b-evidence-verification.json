@@ -1,0 +1,153 @@
+{
+  "baseline_commit": "b0950a9c3256aacee226834e0e8a88d1022c9948",
+  "biological_records_changed": 0,
+  "cache_independent_full_source_cohort_test": "PASS",
+  "canary_review": {
+    "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/offline-projection-canary-review.json",
+    "sha256": "3cb5a733fdda569f0209f028dbc586faccdf72005c5ff90ac295b7477daa8359"
+  },
+  "captured_at": "2026-10-15T05:54:12.698477+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/cohort.json",
+    "sha256": "75a33d20a3a496dafa3f420ef48af3260f07c04990486a1f53090ce3ae5cf049"
+  },
+  "complete_collection_aware_records_read": 4,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 482,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/expanded-tests.xml",
+      "sha256": "0a59f970332711f85e3a83421e2f0c6b93b573b6f85b0fc8346a3719b9b15b23"
+    },
+    "skipped": 0,
+    "tests": 482
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "ab2a7c6a4afc26ae109420e530e9bbeabe58512f512dcf699d42ed4b6ff4bc0b"
+    },
+    {
+      "path": "research/2026-10-14-cytochrome-b-evidence.json",
+      "sha256": "9525848e4e3b41e76cfbe3cfe9bd6833835a227f55ce103461180722b9fa53b2"
+    },
+    {
+      "path": "scripts/audit_cytochrome_b_evidence.py",
+      "sha256": "225a4e4305ece016f14cb60a24362337abb3833b513508a6aa01c0ef0a9260af"
+    },
+    {
+      "path": "tests/test_cytochrome_b_evidence.py",
+      "sha256": "690726cd55e5c8cf2f780dd6bfb6b526e5995df654cda8a373eab1b46705c269"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 60,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/focused-tests-v2.xml",
+      "sha256": "c03561d0acf034e531e535ad17e3cb58b1645cafb716a1acf7d415297e2147fb"
+    },
+    "skipped": 0,
+    "tests": 60
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_cytochrome_b_evidence_20261014.py",
+      "sha256": "0ec969e120610d070666dfc88433ad6c4edb2f6cf12aa8ccf6b9312f5be9ed39"
+    },
+    {
+      "path": "/private/tmp/publish_cytochrome_b_evidence_20261014.py",
+      "sha256": "c36f382ee7a9612004fd802ba0a8be6bd9951759f7e37b7b57d7c51ec059a0fd"
+    },
+    {
+      "path": "/private/tmp/verify_cytochrome_b_evidence_20261014.py",
+      "sha256": "370dcf770650bf55d04fa142c456afdc7a2e2d9fe5ba311aa5caa7b424c8408c"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "html_supplement_discovery_requests": 1,
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "network_and_file_writes_blocked_during_replay": true,
+  "network_requests": 4,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_html_access_holds": 1,
+  "new_verified_resistance_results": 0,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_native_current_corpus_replay": "PASS",
+  "outreach": 0,
+  "previous_uncommitted_work_preserved": true,
+  "primary_xml_requests": 1,
+  "prior_research_checkpoints_and_receipts_unchanged": true,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/protected-before.json",
+    "sha256": "de953263d9279acfa2e94b763dfd3e4dbc40860eeb1fe31eb9f99b23015b4007"
+  },
+  "protected_files_checked": 7703,
+  "repository_ruff_check": "PASS",
+  "reuse_terms_review_resumed": false,
+  "review_checks": [
+    "All seven native reference bibliographies retained, not only identifier-bearing journals",
+    "11 memberships and 22 strain comments are not independent resistance observations",
+    "Native malformed DOI retained; independently reported DOI has separate metadata provenance",
+    "Nine source isolates in four qualified groups; no exact TaxID inferred from sensu-lato names",
+    "Seven citation label matches are not experimental protein/allele/genome crosswalks",
+    "Primary XML identity and selected sections pinned; no visual figure or supplement review claimed",
+    "HTML supplement discovery 403 does not erase obtained XML or establish global inaccessibility",
+    "2018 primary remains unrequested; abstract metadata is not primary experimental evidence",
+    "All four requests have exact plan/attempt/receipt/body provenance without retries or redirects"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "CYTOCHROME_B_BIBLIOGRAPHIES_AND_SELECTED_PRIMARY_TEXT_NOT_RESISTANCE_ALLELE_SIGNOFF",
+  "selected_primary_text_context_reviews": 1,
+  "source_adoptions": 0,
+  "source_claim_content_hashes_and_positions_checked": 6,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "source_terms_checked": 6,
+  "summary": {
+    "complete_records_read": 4,
+    "corpus_records_hash_checked": 2939,
+    "doi_discrepancy_memberships": 2,
+    "memberships_with_strain_comments": 10,
+    "native_reference_memberships": 11,
+    "new_experimental_assignments": 0,
+    "new_network_requests": 4,
+    "new_supplement_discovery_holds": 1,
+    "new_verified_resistance_results": 0,
+    "paper_isolate_labels": 9,
+    "primary_xml_obtained": 1,
+    "reference_comment_label_matches": 7,
+    "reference_proteins": 7,
+    "reference_types": {
+      "journal article": 5,
+      "submission": 6
+    },
+    "references_without_identifiers": 6,
+    "selected_primary_text_context_reviews": 1,
+    "source_claims": 6,
+    "source_terms": 6,
+    "strain_comment_memberships": 22,
+    "term_protein_links": 10,
+    "unique_publications_with_identifiers": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "supplement_requests": 0,
+  "verification_limit": "Bibliography and selected primary-text context, not resistance or full-paper signoff. Pinned RDKit has no Intel macOS wheel; earlier Linux CI is historical.",
+  "whole_record_primary_signoffs": 0
+}

@@ -12490,6 +12490,859 @@ macOS environment because the pinned RDKit version has no compatible wheel.
 Any later Linux CI result is a separate publication check. All primary review
 and experimental identifier gaps, and the full-corpus goal, remain **OPEN**.
 
+## CARD Reference Index: Complete Beta-Tubulin Cohort (2026-10-14)
+
+`research/2026-10-14-card-beta-tubulin-memberships.json` and its TSV successor
+reconcile the complete beta-tubulin dossier and bibliography follow-up with
+**all 2,939 records, 2,002 CARD terms and 4,538 CARD claim memberships**. The
+preceding eight-cohort index and its verification receipts remain unchanged.
+The new index adds **26 reference proteins and 50 term-protein links across
+15 terms and 15 claims on seven records**, with no experimental identifier
+assignment or biological-record write.
+
+The selected cohorts now contain **1,546 reference proteins, 1,259 terms and
+2,658 term-protein links**, represented on **219 records**. There remain **743
+terms and 1,346 claim memberships without candidates in these nine selected
+cohorts**. This is not a finding that those genes, proteins or resistance
+phenotypes are absent. Every record remains in the index, including the 2,666
+without CARD assertions. The 217 PHI-base claims, 133 curator claims and 467
+HIVDB interpretation rules retain their prior accounting and evidence scope.
+
+Protein-name matching has its own reference-only statuses: 11 beta-tubulin
+terms have reviewed references and four have unreviewed candidates. The source
+dispositions remain eight single reviewed references, six ambiguous multi-hit
+sets and one single unreviewed candidate. Both native TUB1/TUB2 paralogs are
+retained where returned. An ORF-only entry does not acquire a gene symbol;
+native TUB is not relabeled TUB2. All 20 new fragment references and the
+cofactor-d exclusion retain their source context. Initial-case normalization
+and the native Fusarium/Gibberella synonym match do not rewrite source names
+or assign experimental organisms.
+
+The index links the full 81-membership bibliography checkpoint, retaining its
+identifier-free submissions and journal references, malformed native DOI and
+reference-only strain comments. Its nested bibliography-summary request counts
+describe the **earlier** checkpoint; this reconciliation made **zero network
+requests**. The Banno PMID:18944187 publisher challenge remains access-held,
+and a zero UniProt citation result does not invalidate the paper. None of this
+metadata establishes a tested allele, strain, genome, phenotype or causal route.
+
+The companion verification receipt records an inspected canary, cache-independent
+tests, full collection-aware record and live-claim replay, native cached dossier
+replays, and preservation of 7,693 pre-existing files except this append-only
+report section. Source-owned inputs, biological records, pages, embeddings and
+all historical research checkpoints remain unchanged. No GitHub mutation,
+source adoption, NCBI request, outreach or reuse-terms work was performed.
+#1040 remains deferred. Full authoritative QC is not claimed for these new
+changes: the pinned RDKit version has no Intel macOS wheel, and earlier Linux
+CI is historical. All whole-record primary reviews and the full-corpus
+scientific objective remain **OPEN**.
+
+## Complete Cytochrome-b Reference Cohort (2026-10-14)
+
+The [cytochrome-b dossier](2026-10-14-card-cytochrome-b-references.json) covers
+**all six current CARD terms naming cytochrome b**, their six claim memberships
+and four exact-structure records: azoxystrobin, benzothiostrobin, kresoxim-methyl
+and pyraclostrobin. All 2,939 record hashes were checked; the four selected
+records were read completely through the collection-aware loader. The preceding
+all-record index and all earlier dossiers remain unchanged. These are reference
+candidates, not assignments to resistant alleles or experimental subjects.
+
+**Taxonomy.** The exact source species names resolve to UniProt's native
+NCBITaxon references: C. gloeosporioides `474922`, C. graminicola `31870` and
+C. siamense `690259`. Two name responses were reused from the beta-tubulin
+checkpoint. The new C. graminicola query also returned a mixed maize/fungus EST
+library (`176297`); that nonmatching label was explicitly excluded rather than
+treated as the fungal species. The C. graminicola protein's reference-strain
+node `645133` has the verified species ancestor `31870`; neither the strain
+designation nor its TaxID is assigned to an experimental resistance subject.
+
+**Proteins.** Complete reviewed queries had no eligible candidates for the three
+species. Complete unreviewed queries returned 34 hits: **seven exact native-name
+candidates and 27 exclusions**, including cytochrome-b mRNA-processing proteins,
+other complex subunits and succinate-dehydrogenase components. Query suggestions
+were not followed, and an empty reviewed subset is not biological absence.
+
+| Source species | Reference candidates | Preserved scope |
+| --- | --- | --- |
+| C. gloeosporioides | [A0A1S6LNJ6](https://www.uniprot.org/uniprotkb/A0A1S6LNJ6/entry) | Native `cob`; one unreviewed reference shared by four source terms. |
+| C. graminicola | [E3CU97](https://www.uniprot.org/uniprotkb/E3CU97/entry) | Native ORF `GLRG_18002`; no invented gene symbol or experimental strain assignment. |
+| C. siamense | A0A0H3VGN4, A0A1S6LNE2, A0A1S6LNG5, A0A344X8F3, A0A344X8F5 | Five separate candidates; native `cob`/`cytb` annotations and two fragment flags retained without choosing a representative. |
+
+The six terms therefore have **ten term-protein links**. Unflagged entries are
+not certified complete; fragments receive no inferred full-length coordinates.
+Protein names do not independently establish organelle or genomic location.
+All six CARD terms lack their own allowlisted definition citations. UniProt's
+PMID/DOI memberships are discovery metadata, not borrowed support for the CARD
+claims or a complete bibliography. The native DOI `.1094/PHYTO-04-18-0128-R`
+appears on two fragment-reference memberships and is explicitly flagged as
+malformed, with no correction inferred. The distinct Magnaporthe PHI-base
+context and its primary-access hold remain separate and unchanged.
+
+The [verification receipt](2026-10-14-card-cytochrome-b-verification.json)
+records inspected retrieval and projection canaries, native offline replay,
+focused and related tests, and preservation of 7,699 pre-existing files except
+this append-only report section. Eight bounded UniProt metadata requests were
+made, with no redirects or retries. No primary paper, NCBI endpoint or held
+source was requested; no biological records, source-owned inputs, pages or
+embeddings changed. No GitHub mutation, outreach or source adoption occurred.
+#1040 and reuse-terms review remain deferred. Full authoritative QC was not
+rerun because the pinned RDKit version has no Intel macOS wheel. Experimental
+alleles, tested subjects, genome joins and primary evidence review remain open;
+this cohort does not complete the corpus-wide investigation.
+
+## Cytochrome-b Bibliographies and Primary Context (2026-10-14)
+
+The [publication-context checkpoint](2026-10-14-cytochrome-b-evidence.json)
+follows all seven reference proteins from the preceding complete cytochrome-b
+dossier: six CARD terms, six claim memberships and four exact-structure records.
+It retains **11 native bibliography memberships: five journal memberships and
+six submissions**, including all 22 strain-comment memberships. These are not
+independent biological observations. Submission titles and strain comments do
+not establish resistant subjects, exact alleles or experimental genomes.
+
+Two distinct publication identifiers were followed through exact Europe PMC
+metadata queries. For PMID:29996698, Europe PMC independently reports DOI
+`10.1094/phyto-04-18-0128-r`; the native UniProt value
+`.1094/PHYTO-04-18-0128-R` remains unchanged on both fragment references. The
+discrepancy is documented with both provenances, not silently repaired. This
+2018 paper has indexed abstract context only: its primary text was not requested,
+and no global paywall or inaccessibility conclusion is inferred from that status.
+
+**Selected primary text.** The [2017 mitochondrial-genome comparison](https://doi.org/10.1186/s12864-016-3480-x)
+was obtained as Europe PMC JATS XML. Section `Sec9` places nine source isolates
+in four groups; `Sec16` and the data-availability section `FPar2` were also
+inspected. The paper's six **C. siamense s.l.** isolates retain that qualified
+source identity. They are not automatically assigned the exact modern species
+TaxID from a UniProt reference. Seven reference strain comments match labels in
+this paper: three on A0A1S6LNE2, three on A0A1S6LNG5, and LQ33 on A0A1S6LNJ6.
+These are citation-label matches, not verified protein/allele/genome crosswalks
+or drug-specific resistance evidence. All nine source isolate labels and their
+qualified groups are retained without experimental TaxID or genome assignments.
+
+**Supplement access hold.** The primary XML locates accession information in
+Additional file 1, Tables S1 and S3. Its native spreadsheet declaration was
+recorded, but the Europe PMC HTML page returned a **403 challenge** while locating
+the download link. That route was stopped without retry or an alternate route.
+The already obtained primary XML remains available; the spreadsheet was not
+retrieved. Table S3 genome accessions therefore remain unverified, and unrelated
+accessions in figure captions were not substituted. Figures were not visually
+reviewed. This is a selected primary-text context review, not full-paper or
+whole-record signoff, and it adds no verified resistance result.
+
+The [verification receipt](2026-10-14-cytochrome-b-evidence-verification.json)
+records focused and related tests, offline native replay, all 2,939 record hash
+checks, complete collection-aware reads of the four selected records, and
+preservation of 7,703 pre-existing files except this append-only report section.
+Four requests were made in this follow-up: two bibliographic lookups, one primary
+XML request, and the held HTML supplement-link discovery request. No NCBI
+requests, held-source retries, outreach, source adoption or GitHub mutations
+occurred. Biological records, source-owned inputs, pages and embeddings remain
+unchanged. #1040 and reuse-terms review remain deferred. Full authoritative QC
+was not rerun because the pinned RDKit version has no Intel macOS wheel; earlier
+Linux CI is historical. Experimental resistance alleles, tested-subject and
+genome joins, and the corpus-wide scientific objective remain **OPEN**.
+
+## Outer-Membrane Label Reference Cohort (2026-10-14)
+
+The [reference dossier](2026-10-14-card-outer-membrane-references.json) accounts
+for **all 29 current CARD labels matching the documented outer-membrane name
+screen**, covering 117 claim memberships across 46 exact-structure records.
+This lexical screen is not an exhaustive ontology-defined set of all porins.
+All 2,939 record hashes were checked, and the 46 selected records were read
+completely through the collection-aware loader.
+
+The cohort retains three distinct scopes: 14 organism-named single-protein
+labels with 48 claims, 13 complex/regulatory labels with 65 claims, and two
+organism-unspecified labels with four claims. Complexes were not assigned one
+component as their identity, and unspecified organisms were not borrowed from
+neighboring records. Eight named species resolve through existing native
+UniProt taxonomy responses; 27 candidate taxon nodes retain verified ancestry.
+These are reference taxa, not experimentally tested resistance subjects.
+
+Fourteen complete reviewed queries and eight complete unreviewed fallback
+queries yield **124 eligible protein reference candidates**. All multiple
+candidates remain separate: for example, the E. coli LamB context has 21, the
+K. pneumoniae OmpK35 context has 17, and K. aerogenes Omp36 has five. Exact
+recorded-gene queries for S. marcescens Omp1 and A. baumannii AbuO returned no
+hits in either subset; this does not establish absence of the proteins or
+invalidate the source claims. Suggestions and inferred aliases were not used.
+
+**Subtype ambiguity.** The gonococcal `por` query returned 145 entries. Native
+protein names support PIB reference-candidate status for 70. Nine explicitly
+name IA, one names a hybrid, and 65 do not specify PIB. All 75 remaining hits
+are retained as separate dispositions, not silently assigned to the CARD PIB
+term or treated as susceptibility evidence. Even the 70 native PIB names do
+not establish exact resistant alleles or experimental subject relationships.
+
+**Native metadata boundaries.** The 124 candidates retain 47 fragment flags,
+27 precursor flags and 50 unflagged entries. Several unflagged OmpK35 names
+explicitly say truncated; unflagged never means complete here. No precursor,
+fragment or mature-protein coordinates are inferred. Mixed native protein names
+and gene aliases remain visible rather than being replaced with a clean source
+label. The 232 bibliography memberships include 186 journal memberships,
+45 submissions and an identifier-free 1998 thesis on O87753. A separate journal
+membership on O87753 carries the native DOI `.1093/infdis/jix524`, which remains
+flagged and uncorrected. Bibliography entries are not independent resistance
+observations.
+
+The existing explicit CARD references remain unchanged. In particular, the
+Omp38 term retains A0A069BCC8 from the pinned index while its exact-gene query
+returns the separate fragment Q7WZL2; no replacement or equivalence is inferred.
+Prior link pointers explicitly retain their originating-index context.
+
+The [verification receipt](2026-10-14-card-outer-membrane-verification.json)
+records canary inspection, native offline replay, focused and related tests,
+and preservation of 7,707 pre-existing files except this append-only section.
+All 22 new requests were sequence-free UniProt protein metadata lookups; no new
+taxonomy, primary-paper or NCBI request was made. No access hold was retried,
+and #1040 and reuse-terms review remain deferred. Biological records,
+source-owned inputs, pages, embeddings and earlier research checkpoints remain
+unchanged. No source adoption, outreach or GitHub mutation occurred. Full
+authoritative QC was not rerun because the pinned RDKit version has no Intel
+macOS wheel. Primary resistance evidence, exact alleles, subject/genome joins
+and the corpus-wide scientific objective remain **OPEN**.
+
+## AbuO and Omp1 Own-Citation Follow-Up (2026-10-14)
+
+The [bounded evidence dossier](2026-10-14-outer-membrane-evidence.json)
+follows the two no-exact-gene-result contexts from the outer-membrane reference
+screen: `ARO:3004578` AbuO and `ARO:3004128` Omp1. This covers **15 existing
+source claims across 14 records**, not the whole 29-term outer-membrane cohort.
+Three complete UniProt literature queries were reused without another request.
+The AbuO and older Omp1 citation queries were empty; neither result establishes
+gene absence.
+
+The PMID:25856195 query returns `UniProtKB:A0A0J9X1Q5`, **PigE, not Omp1**.
+Its two native bibliography rows and FS14 strain comments remain reference
+metadata. Sharing a publication and strain label does not assign PigE to the
+Omp1 source term. The native organism is `Serratia sp. (strain FS14)`, with
+reference `NCBITaxon:1327989`; it is not silently replaced by the source term's
+species-level taxon.
+
+Three exact Europe PMC metadata queries and one primary XML request to EBI
+returned HTTP 200. Selected text from the
+[FS14 comparative-genome paper](https://doi.org/10.1371/journal.pone.0123061)
+supports its paper-reported species interpretation and study genome context.
+The Data Availability statement identifies **GenBank CP005927**, without a
+version. This is not an independently verified assembly or a resistance-gene
+crosswalk. The paper's `S. marcescens FS14` interpretation remains separate
+from the native UniProt organism label. Selected resistance-context prose
+distinguishes genomic predictions from susceptibility results; it does not
+establish an Omp1 accession or exact allele. A case-insensitive literal
+`omp`/`porin` screen found no matches in the retrieved XML text, including its
+textual table content. This does not cover images or supplements, prove
+biological absence, or invalidate the CARD citation. Figures, supplements and
+table-level AST curation remain open; no quantitative AST was exported.
+
+The [AbuO paper metadata](https://doi.org/10.1128/aac.03626-14) and
+[1997 Omp1 paper metadata](https://europepmc.org/article/MED/9353750) remain
+metadata-only in this follow-up. Their primary texts were not requested.
+The former has a Europe PMC full-text identifier but no OA flag; the latter
+metadata has neither a DOI nor a PMCID. These are source-metadata states, not
+access denials or claims of global unavailability. No retry, alternate-route
+request, NCBI endpoint request or NCBI link traversal was performed.
+
+The offline audit is `scripts/audit_outer_membrane_evidence.py`, with focused
+regressions in `tests/test_outer_membrane_evidence.py`. The
+[verification receipt](2026-10-14-outer-membrane-evidence-verification.json)
+records actual tests, protected-file checks and replay limits. Self-review
+corrected a gene-name check to compare `Omp1` rather than its organism-qualified
+CARD label, with mixed-case synonym coverage. A post-request, ignored-inclusive,
+case-insensitive PMID/PMCID/DOI access-history check found only the three reused
+UniProt queries and this follow-up's four requests; its scope and timing are
+retained rather than represented as a pre-request check.
+
+No source-owned biological curation, experimental gene/allele assignment,
+source adoption, outreach or GitHub mutation follows from this checkpoint.
+The 14 affected records and all other records remain unchanged. #1040 and
+NCBI reuse-terms work remain deferred. The full-corpus investigation and every
+whole-record primary signoff remain **open**.
+
+## CARD Reference Index: Cytochrome-b and Outer-Membrane Cohorts (2026-10-14)
+
+The [eleven-cohort index](2026-10-14-card-cytb-outer-memberships.json) and its
+[all-record table](2026-10-14-card-cytb-outer-memberships.tsv) incorporate the
+completed cytochrome-b and outer-membrane-label reference dossiers, together
+with pointers to their selected primary-context follow-ups. This is an offline
+successor to the beta-tubulin index; historical checkpoints remain unchanged.
+The [plan](2026-10-14-card-cytb-outer-memberships-plan.json) pins every input.
+
+All **2,939 records**, **2,002 CARD terms** and **4,538 CARD assertions** remain
+represented. The successor has **1,676 distinct reference proteins** and
+**2,791 distinct term-protein links**, covering **1,275 terms across 223
+records**. Relative to the prior index, this adds 130 proteins, 133 distinct
+links, 16 previously unlinked terms and four previously unlinked records:
+kresoxim-methyl, benzothiostrobin, balofloxacin and cefamandole. No experimental
+allele, resistant isolate or genotype-phenotype relationship is assigned by
+these reference memberships.
+
+The two overlapping terms retain their original evidence. OmpK37's
+`UniProtKB:O87754` remains one candidate with its explicit CARD link and a
+separately typed gene/taxon reference-evidence membership; its two other
+candidates are not collapsed into it. Omp38's original
+`UniProtKB:A0A069BCC8` is neither replaced by nor equated with
+`UniProtKB:Q7WZL2`. Both terms now have a mixed-reference-evidence status.
+This is a mutually exclusive counting category, not withdrawal of their
+explicit CARD support: all **978 direct-linked terms and their 2,549 claim
+memberships** retain that evidence, including the two mixed terms' six claims.
+
+All six cytochrome-b terms retain their ten candidate links. The complete
+29-term outer-membrane label screen retains complex and organism-unspecified
+contexts, both no-exact-gene-result contexts, all 70 explicit PIB candidates
+and the 75 subtype nonassignments. Native fragments, precursors and unflagged
+truncated names remain source context rather than sequence-completeness claims.
+Primary-context pointers preserve the cytochrome-b supplement-access hold and
+the separate FS14 study-genome context; neither becomes an experimental allele
+or genome assignment in the index. PigE is not imported as an Omp1 candidate.
+
+There are **727 terms / 1,313 assertions without a protein candidate in these
+eleven selected cohorts**. This is not gene absence or an exhaustive inventory
+of every research dossier. All 217 PHI claims, 133 curator claims, 467 score
+rules and 2,666 records without CARD assertions remain represented and in scope;
+their primary evidence is not reassessed by this consolidation.
+
+`scripts/audit_card_cytb_outer_memberships.py` reproduces both outputs, retains
+inherited evidence-pointer ownership, checks accession identity across cohorts
+and binds every live CARD claim by record, position and content hash. The
+focused regressions cover overlap, distinct accessions, mixed-status accounting,
+PIB exclusions, no-hit contexts, source ownership and read-only check mode.
+The byte-reproduction test caught a save-helper column-order defect caused by
+reloading sorted JSON rows. Regeneration uses canonical projection order;
+the original export is retained locally and all 2,939 row values are identical.
+The [verification receipt](2026-10-14-card-cytb-outer-memberships-verification.json)
+records actual tests, full collection-aware corpus checks, native cached
+evidence replays and protected-file checks. No full authoritative QC signoff
+is claimed on the Intel macOS environment with the pinned RDKit wheel limitation.
+
+No network request, NCBI request, biological-record edit, source adoption,
+outreach or GitHub mutation occurred. #1040 and NCBI reuse-terms work remain
+deferred. All whole-record primary signoffs and the full-corpus goal remain open.
+
+## Kpn Complex Own-Citation and Component Follow-Up (2026-10-15)
+
+The complete case-insensitive `\bKpn[A-Z]` screen of the current CARD term
+labels selects **two terms, 28 claims and 26 exact-structure records**:
+`ARO:3004585` (KpnEF, 11 memberships) and `ARO:3004598` (KpnGH-TolC,
+17 memberships). The frozen cohort preserves every selected claim position
+and hash. All 2,939 current record hashes are checked, and the 26 selected
+records are read through the collection-aware loader. This is complete for
+the selected labels, not all efflux systems or all relevant literature.
+
+- Reused the two complete UniProt own-citation queries from release
+  `2026_03`. Both have zero hits; neither establishes gene or protein absence.
+- Replayed the cached UniProt species context for *Klebsiella pneumoniae*,
+  `NCBITaxon:573`, without a new taxonomy or NCBI request. It is a species
+  reference, not an experimental strain or resistant-isolate assignment.
+- Inspected selected primary context in
+  [Srinivasan et al. 2014](https://doi.org/10.1371/journal.pone.0096288),
+  PMID:24823362, obtained as open-access XML from EBI. The paper names
+  KpnG and KpnH; the selected Results paragraph also uses KpnF. Preserve
+  that inconsistency without correcting it or treating it as an alias.
+- Four complete, sequence-free UniProt exact-component queries, reviewed
+  then unreviewed for KpnG and KpnH within taxon 573, returned zero hits.
+  The paper's EmrAB homology comparison is not an exact accession crosswalk.
+- No literal `TolC` mention occurs in the retrieved XML text. This screen
+  excludes image contents and supplements and does not prove biological
+  absence, invalidate the CARD label, or establish a TolC component identity.
+- Retained the paper-reported background genome `RefSeq:NC_012731.1` and
+  NTUH-K2044 label as reference context only. No NCBI link was followed; the
+  accession was not independently verified, converted into an assembly
+  identifier, or assigned to an experimental derivative. The paper's
+  heterologous *E. coli* KAM32 context remains separate.
+- KpnEF's own citation, PMID:23836167, remains metadata-only. Its returned
+  `isOpenAccess=N` and `inEPMC=Y` values are not a global access conclusion
+  or a denial. Its primary text was not requested in this pass.
+
+Saved the [dossier](2026-10-15-kpn-evidence.json) and
+[verification receipt](2026-10-15-kpn-evidence-verification.json).
+`scripts/audit_kpn_evidence.py` replays native evidence and current record
+memberships offline; `tests/test_kpn_evidence.py` exercises misleading joins,
+unexpected new candidates, altered identities, pagination, receipt tampering,
+access constraints and every saved claim's prior position/hash. All **600
+selected tests passed**: 56 focused, 475 related and 69 collection-loader
+tests. The receipt records those counts and the protected-file check.
+
+This pass made seven one-shot requests: three EBI requests and four UniProt
+metadata queries, all HTTP 200. There were no retries, redirects, new holds,
+NCBI requests, outreach, source adoptions or GitHub mutations. Searches of
+relevant request histories included ignored files and matched request URLs,
+not incidental strings in cached full-entry bodies. Prior access holds and
+the #1040/reuse-terms deferral remain intact.
+
+**No biological curation or new experimental gene/allele assignment.**
+The selected-cohort protein index is unchanged. Figures, quantitative AST
+tables, supplements, exact assay-compound mapping and whole-record primary
+signoffs remain open. No new sequence, exact-variant or operational export
+was produced. Full authoritative QC was not rerun: the pinned RDKit build
+has no Intel macOS wheel, and historical Linux CI is not current signoff.
+The corpus-wide goal remains open.
+
+## cipA Own-Citation Follow-Up and Primary Access Hold (2026-10-15)
+
+Investigated all **10 current `cipA` claims across 10 exact-structure records**
+(`ARO:3003907`). The offline replay checks all 2,939 record hashes, reads the
+10 selected complete records through the collection-aware loader, and verifies
+the exact native ontology definition/citation binding. CARD's Cfr-like
+definition is not an exact Cfr protein, taxon or experimental-subject identity.
+
+Reused the complete release `2026_03` UniProt query for PMID:23752511. Its
+zero hits are not evidence of biological absence. One new EBI metadata
+request identifies the paper
+[Distinction between the Cfr methyltransferase conferring antibiotic resistance
+and the housekeeping RlmN methyltransferase](https://doi.org/10.1128/aac.00448-13),
+PMCID:PMC3719738. Its indexed abstract distinguishes homologous enzymes with
+different functional implications. It contains no literal `cipA` mention;
+that scoped nonmatch neither disproves the CARD citation nor resolves the
+source gene's identity. No Cfr or RlmN accession was substituted.
+
+The metadata-advertised free Europe PMC HTML page was requested once and
+returned **HTTP 403 with a challenge page**, not article text. The exact
+request, response and plan are pinned in the
+[dossier](2026-10-15-cipa-evidence.json). The paper is now **held: no retry or
+alternate route** without a supplied primary copy or new explicit direction.
+The free-link metadata does not override the denial, and the denial is not
+a biological negative result or proof of a permanent global paywall.
+
+**No new reference protein, taxon, strain, genome, allele or phenotype
+assignment; no biological curation.** Primary Results, figures, tables,
+supplements and exact compound/subject mapping remain unreviewed. No
+unscoped gene-name search was substituted for missing organism identity.
+`scripts/audit_cipa_evidence.py` reproduces the source and access decisions
+offline; `tests/test_cipa_evidence.py` tests the identity, access and
+no-substitution boundaries. The
+[verification receipt](2026-10-15-cipa-evidence-verification.json) records
+**301 passing selected tests** (44 focused and 257 related) and the
+protected-file audit. Authoritative full QC was not
+rerun under the pinned RDKit/Intel macOS limitation.
+
+The subsequent Vgb inventory found three current labels (`vgbA`, `vgbB`,
+`vgbC`) sharing nine records, with 27 claim memberships. Preserve the
+[earlier structural review](2026-10-09-card-structure-links.json) and
+[primary-access assessment](2026-10-09-structure-primary-context.json):
+`vgbA` already has an indirect `PDB:2Z2P` / `UniProtKB:P17978` reference,
+but the structural entity is inactive and its primary paper PMID:17563376
+is access-held. That reference's native `vgb` name must not silently become
+an exact `vgbA` allele identity. The current index already retains `vgbB`'s
+`UniProtKB:O87275` reference-only CARD link; `vgbC`'s own-citation query is
+complete but empty. This inventory is a follow-up priority assessment, not
+new Vgb protein grounding, primary review or a completed Vgb investigation.
+No Vgb network request was made in this pass.
+
+All new access-history searches included ignored files and matched request
+URLs rather than incidental response-body text. Two new requests were made:
+EBI metadata (200) and the Europe PMC primary page (403). No retry, redirect,
+NCBI request, outreach, source adoption or GitHub mutation occurred.
+#1040 and NCBI reuse-terms review remain deferred. The corpus-wide goal is open.
+
+## Vgb Reference and Primary-Context Reconciliation (2026-10-15)
+
+The complete Vgb label cohort contains three source terms, 27 inherited CARD
+claims and nine structure records. The dossier
+`research/2026-10-15-vgb-evidence.json` binds all memberships, replays their native
+ontology definitions and citations, and checks all 2,939 current record hashes.
+The selected records were read through the collection-aware loader. This is a
+bounded evidence review, not nine new measured resistance results or whole-record
+signoffs.
+
+| Term | Supported context | Unresolved scope |
+| --- | --- | --- |
+| vgbA / ARO:3001307 | The existing 2Z2P-to-UniProtKB:P17978 reference remains explicitly inactive and reference-only. Native UniProt uses `vgb`, not an automatically interchangeable allele label. | The structural paper's publisher 403 remains held. Its second polymer entity cannot supply the enzyme's taxon. |
+| vgbB / ARO:3001308 | UniProtKB:O87275 has an explicit CARD cross-reference, with native species taxonomy NCBITaxon:29382, Staphylococcus cohnii. | This unreviewed reference entry does not resolve an experimental allele or replace primary-results review. |
+| vgbC / ARO:3003990 | The cached primary paper identifies Paenibacillus sp. LC231. Cached UniProt taxonomy resolves NCBITaxon:1120679 and explicitly gives rank `species`, despite the strain-like label. | Neither its own-citation query nor its exact-organism UniProt query resolves a protein. These release-scoped nonmatches do not establish biological absence. |
+
+Four complete cached own-citation queries were replayed. PMID:11467949 returns
+three proteins, but sharing a citation and family name does not assign all three
+to vgbA. The current membership index is unchanged; historical reference links
+are not counted again as new grounding.
+
+The [VgbC primary paper](https://doi.org/10.1038/ncomms13803) and its supplement
+were already cached by the earlier kasugamycin review. This follow-up inspected
+the Vgb-specific Results, Table 1 and its footnote, and visually reviewed
+supplement pages 1, 7, 8, 9 and 11. Table 1's vgbC row has a **blank determinant
+MIC cell** and **NA\*** in the control column. The footnote describes the
+solubility-limited E. coli comparator, not a quantified VgbC MIC effect. The
+broad Results statement does not override these missing values.
+
+Supplementary Table S1 distinguishes the native LC231 phenotype and inactivation
+from its `vgb` prediction. Table S3's VgbA relative and Staphylococcus aureus host
+must not become the VgbC identity or taxon. Figure S1e and Table S4 support
+selected biochemical modification context; Table S6 kinetics are not MICs.
+The comparator organisms in Table S2 remain separate. None of these distinctions
+establishes VgbC's quantitative contribution in native LC231. The paper's
+unversioned WGS project is not promoted to a versioned assembly, and no particular
+determinant accession is selected from the reported range.
+
+The detailed VgbC assay concerns linopristin. An exact-compound crosswalk to the
+nine inherited memberships was not established; this is not a proven mismatch.
+No protein, experimental allele, genome,
+new activity observation or clinical interpretation was written to the corpus.
+
+One EBI metadata lookup was repeated before the older cache was discovered.
+The initial access-history search included ignored files but its filename filter
+omitted older `metadata-*.json` and `primary-*.json` wrappers. The expanded
+all-JSON filename search and both metadata snapshots are retained; this is not a
+claim of globally exhaustive access history. No new primary or UniProt requests
+followed, and no held source was retried or approached through another route.
+
+The offline audit and regression tests are in `scripts/audit_vgb_evidence.py`
+and `tests/test_vgb_evidence.py`: 37 focused and 708 related tests passed. One
+historical structure-export replay was skipped because its old checkpoint no
+longer matches the live corpus; the new Vgb replay checks the current corpus.
+The verification receipt records actual test
+counts, source pins, selected PDF review, offline replay and the 7,729-file
+preservation baseline. Full authoritative QC was not rerun: the pinned RDKit
+environment remains unavailable on Intel macOS, and historical Linux CI is not
+current signoff. No NCBI request, source adoption, outreach or GitHub mutation
+occurred. #1040 and reuse-terms review remain deferred; the full-corpus goal stays
+open.
+
+## AAC(3)-III/IV Reference and Archived-Paper Review (2026-10-15)
+
+The complete source-label cohort contains five terms, 29 inherited CARD claims
+and 14 structure records. The dossier `research/2026-10-15-aac3-evidence.json`
+replays the native ontology definitions, complete collection-aware records and
+all 2,939 current record hashes. The earlier membership index remains unchanged;
+the nine new reference-only memberships are explicitly listed in this dossier
+for subsequent index reconciliation.
+
+**New IIIb reference.** The reviewed exact-gene query returned zero results; the
+unreviewed subset returned one complete-query result:
+[UniProtKB:Q51405](https://www.uniprot.org/uniprotkb/Q51405/entry), entry version
+61 and sequence version 1. Its native gene label is `aac(3)-IIIb`, its reference
+organism is Pseudomonas aeruginosa, and cached native taxonomy confirms
+NCBITaxon:287 at species rank. This supports one gene-reference link across the
+nine inherited IIIb memberships, not nine measured resistance observations.
+Q51405 is unreviewed and has no explicit CARD cross-reference. Its native
+bibliography cites PMID:30347146, not the ARO definition's PMID:20387903; the two
+studies' tested enzymes, alleles and subjects are not equated.
+
+**Type IV remains qualified.** Replayed citation queries return three related
+references, but do not verify the exact `IVa` suffix or an experimental allele:
+
+| Reference | Native context | Limitation |
+| --- | --- | --- |
+| UniProtKB:Q8KLW8 | `aac(3)-IV`, NCBITaxon:316, Stutzerimonas stutzeri | Native fragment flag retained; Pseudomonas stutzeri is a verified taxonomy synonym, not a new strain crosswalk. |
+| UniProtKB:Q8KMV1 | `aac(3)-IV`, NCBITaxon:562, Escherichia coli | Native fragment flag retained; no complete-protein or exact-IVa assignment. |
+| UniProtKB:P08988 | `aacC4`, NCBITaxon:599, Salmonella sp. | Reviewed reference, but the generic organism label is not replaced by a named species from the ARO definition. |
+
+The complete citation pool also contains 15 incidental or other-enzyme hits.
+Plasmid-replication proteins and the adjacent hygromycin-resistance enzyme are
+not AAC(3)-IVa. Existing explicit CARD links for IIIa/P29808, IIIc/Q51406 and
+IVb/A0A5C2PMK1 were checked against their native pages and retained without
+counting them again as new discoveries. Empty citation queries are not evidence
+of biological absence.
+
+**Archived primary context.** EBI metadata for the newly found reference's
+2018 citation advertised a free [OSTI record](https://www.osti.gov/biblio/1484803).
+That page supplied the DOI-matched native accepted-manuscript link; both requests
+returned HTTP 200 without redirects, retries or an alternate route after denial.
+The 40-page PDF is a *Just Accepted* manuscript, not the version of record.
+Physical PDF pages 1, 2, 3 and 9 were visually inspected for cover/title identity,
+abstract and selected structural Results context. Whole-paper, figure, table and
+supplement review is not claimed.
+
+The selected paper context concerns enzyme-ligand structures and biochemical
+activity, not a verified clinical-resistance or experimental-genome assignment.
+Its comparator label `AAC-VIa` is not `AAC(3)-IVa`. The source gene-reference
+mapping remains separate from exact experimental identity. The three ARO-cited
+studies remain metadata-only; subscription links and non-OA metadata are not
+recorded as observed access denials or proof that primary copies are unavailable.
+
+No biological record, source-owned inventory, exact allele, genome assignment,
+AST value or curation event changed. The new script and regression tests are
+`scripts/audit_aac3_evidence.py` and `tests/test_aac3_evidence.py`. The verification
+receipt records actual test results, the source and page pins, offline replay,
+and preservation of the 7,733-file baseline. Full authoritative QC was not rerun:
+the pinned RDKit environment remains unavailable on Intel macOS; historical
+Linux CI is not current signoff. Nine requests were made: four EBI metadata,
+three UniProt and two OSTI requests. No NCBI request, outreach, source adoption
+or GitHub mutation occurred. #1040 and reuse-terms review remain deferred, and
+the full-corpus investigation stays open.
+
+## CARD Follow-up Index Reconciliation (2026-10-15)
+
+The successor `research/2026-10-15-card-followup-memberships.json` and its
+all-record TSV reconcile the AAC(3), Kpn, cipA and Vgb evidence dossiers with
+the previous corpus-wide CARD reference index. All four native follow-up
+projections and the prior index were reproduced offline. The collection-aware
+live-record check retains all 2,939 records and all 4,538 CARD claim positions
+and hashes; the follow-up context spans 11 terms, 94 claims and 58 records.
+
+**One new reference link.** AAC(3)-IIIb / ARO:3002537 now links to
+UniProtKB:Q51405, entry version 61 and sequence version 1, with species-level
+reference grounding to NCBITaxon:287 (Pseudomonas aeruginosa). Its nine inherited
+record memberships are retained individually. The entry remains unreviewed,
+without an explicit CARD cross-reference or a verified experimental allele.
+The native 2018 citation is not substituted for the ARO definition's 2010
+citation. This completes the pending IIIb reference-index reconciliation from
+the preceding checkpoint, not experimental curation of nine resistance results.
+
+The updated totals are 1,276 reference-linked terms, 1,677 distinct reference
+proteins and 2,792 unique term-protein links. The same 223 records carry selected
+references. The remaining 726 terms and 1,304 CARD claims have no candidate in
+these selected index inputs; that status is explicitly not biological absence
+or proof that other references cannot be found.
+
+**Qualified findings stay qualified.** Generic type-IV references are not
+assigned to exact IVa. Kpn complexes are not replaced by a single protein;
+their empty component queries do not establish biological absence. cipA retains
+its unresolved identity and primary-access 403 hold. Vgb primary and supplement
+context remains separate from exact experimental allele identity. Each term's
+follow-up and the complete pinned dossiers are linked from the index, while
+inherited evidence pointers and prior access holds remain attached to their
+original owners.
+
+All TSV rows retain their source partitions: 217 PHI-base claims, 133 curator
+claims and 467 score rules were not reassessed by this reconciliation. No
+biological record, source inventory, taxonomy assignment to an experimental
+subject, phenotype measurement or curation event changed. Adversarial
+self-review and regression tests cover membership completeness, input
+immutability, reference scope, pointer resolution and unchanged non-target
+terms. The verification receipt records the actual tests and preservation of
+the 7,737-file pre-edit baseline. Full authoritative QC was not rerun because
+the pinned RDKit environment remains unavailable on Intel macOS; historical
+Linux CI is not current signoff.
+
+No network request, NCBI contact, outreach, source adoption or GitHub mutation
+occurred. #1040 and reuse-terms review remain deferred. The full investigation,
+including primary support and unresolved gene/allele identities, remains open.
+
+## SCO-1 Gene-Reference and Citation Review (2026-10-15)
+
+The dossier `research/2026-10-15-sco1-evidence.json` reviews all eight current
+SCO-1 / ARO:3004856 claims in eight complete collection-aware records. It
+replays the native source definition, three complete cached UniProt citation
+queries and two cached native taxonomy responses, with all 2,939 current
+record hashes checked. Three new EBI metadata requests verify the identities
+of the source-cited papers; no new UniProt or primary-text request was made.
+
+**Two reference candidates recovered.** The previous literal screen compared
+the source label `SCO-1` with native gene names and did not select `blaSCO-1`.
+The native gene fields, matching source-cited publications and DOI identities
+support this specific reference mapping:
+
+| Reference | Native gene and reference organism | Version and citation context |
+| --- | --- | --- |
+| [UniProtKB:A1E3K9](https://www.uniprot.org/uniprotkb/A1E3K9/entry) | `blaSCO-1`; Escherichia coli, NCBITaxon:562, species | Unreviewed; entry 92, sequence 1; PMID:17353248 and PMID:20956594. |
+| [UniProtKB:A5Y0S3](https://www.uniprot.org/uniprotkb/A5Y0S3/entry) | `blaSCO-1`; Acinetobacter baumannii, NCBITaxon:470, species | Unreviewed; entry 73, sequence 1; PMID:17420213. |
+
+Neither entry has an explicit CARD cross-reference. No general `bla`-prefix
+normalization rule was introduced, and the two accessions were not collapsed.
+The Acinetobacter spp. wording in one paper title is not narrowed to
+A. baumannii for every reported isolate. Native reference taxa remain separate
+from experimental subjects, strains, genomes and exact tested alleles.
+
+The citation queries return 3, 5 and 43 entries respectively, with 48 distinct
+entries across the pool. The other 46 entries are excluded, including neighboring
+proteins and other enzymes associated with the multi-enzyme 2010 citation.
+The dossier lists 16 reference-only memberships across the eight inherited
+records, not 16 resistance measurements. These memberships await reconciliation
+into a successor broad index; the preceding index is unchanged.
+
+**Primary review remains open.** All three papers are metadata-only in this
+checkpoint. Their non-OA metadata flags are not access denials, and their
+advertised free links are not inspected primary text or proof of experimental
+identity. No primary-access failure or permanent unavailability is asserted.
+No phenotype, exact allele, genome, biological record or curation event changed.
+
+Adversarial self-review and regression tests cover exact native gene identity,
+entry versions, citation/DOI concordance, taxonomy lineage, distinct memberships
+and experimental-scope limits. The verification receipt records actual test
+results, offline reproduction and preservation of the 7,743-file baseline.
+Full authoritative QC was not rerun because the pinned RDKit environment remains
+unavailable on Intel macOS; historical Linux CI is not current signoff.
+
+No NCBI request, outreach, source adoption or GitHub mutation occurred. Existing
+access holds remain unchanged. #1040 and reuse-terms review remain deferred,
+and the full-corpus investigation remains open.
+
+## SCO-1 Primary Hold and Cached Alias Screen (2026-10-15)
+
+The metadata-advertised Europe PMC HTML route for PMID:17353248 / PMC1891400
+returned HTTP 403 with a challenge page, not primary scientific text. The
+single request was saved with its plan, attempt, receipt and body hashes.
+No redirect, retry, challenge workaround or alternate route was attempted.
+This is an observed access hold for that article route, not a biological
+negative result or proof of permanent unavailability. Primary review requires
+a user-supplied copy or new explicit direction. The earlier reference-only
+SCO-1 findings remain unchanged.
+
+The successor `research/2026-10-15-card-bla-alias-screen.json` preserves that
+hold and an offline discovery screen across all 726 terms without selected
+references in the pinned broad index. It replays 650 complete cached
+source-citation queries from two explicitly named cache locations. The rule
+looks only for a native gene name or synonym equal, case-insensitively, to
+`bla` plus the complete source label. It is a discovery rule, not a new alias
+normalization or curation rule. Ordered locus names, substrings and punctuation
+changes are not accepted as equivalent.
+
+Four term-protein pairs pass this narrow screen. Two are the previously reviewed
+SCO-1 references and are not counted as new discoveries. Two remain new leads:
+
+| Source term | Native UniProt lead | Source citation query | Status |
+| --- | --- | --- | --- |
+| CTX-M-55 / ARO:3001917 | UniProtKB:Q0GA57, native gene `blaCTX-M-55` | PMID:17449211 | Unreviewed entry; native citation and taxonomy review pending. |
+| NDM-5 / ARO:3000467 | UniProtKB:G3K399, native gene `blaNDM-5` | PMID:21930874 | Unreviewed entry; native citation and taxonomy review pending. |
+
+Both new entries report Escherichia coli and TaxID 562, but this screen does not
+independently validate their taxonomy or establish an experimental subject,
+exact allele, genome or phenotype. Complete query membership is not a verified
+primary-paper crosswalk. No new reference link or biological claim is curated.
+The three candidate terms retain 13 existing claims in 11 complete records;
+all 2,939 corpus record hashes are unchanged. The broad membership index also
+remains unchanged. Candidate-free terms are not evidence of biological absence,
+and the two-cache, one-pattern screen is not a search of every possible alias.
+
+Adversarial self-review and targeted regression tests cover the discovery rule,
+challenge handling and evidence-scope limits. The verification receipt records
+actual test results, offline reproduction and preservation of the 7,747-file
+baseline. Full authoritative QC was not rerun; the pinned RDKit environment is
+still unavailable on Intel macOS, and historical Linux CI is not current signoff.
+No NCBI request, outreach, source adoption or GitHub mutation occurred. #1040
+and reuse-terms review remain deferred. The full-corpus investigation stays open.
+
+## Native bla Reference Index Reconciliation (2026-10-15)
+
+The successor `research/2026-10-15-card-bla-memberships.json` and matching TSV
+reconcile the two newly investigated alias-screen leads and the two previously
+reviewed SCO-1 references. All work in this checkpoint is offline. Native
+UniProt release 2026_03 citation responses and the cached active species node
+for Escherichia coli, NCBITaxon:562, were replayed with their receipt and body
+hashes. No NCBI endpoint was queried.
+
+| Source term | UniProt reference | Native source-cited publication | Scope |
+| --- | --- | --- | --- |
+| CTX-M-55 / ARO:3001917 | Q0GA57, entry 150, sequence version 1 | PMID:17449211; DOI:10.1016/j.diagmicrobio.2007.02.005 | Unreviewed gene/citation/species reference; exact experimental allele unresolved. |
+| NDM-5 / ARO:3000467 | G3K399, entry 95, sequence version 1 | PMID:21930874; DOI:10.1128/aac.05108-11 | Unreviewed gene/citation/species reference; exact experimental allele unresolved. |
+
+The native primary gene labels are `blaCTX-M-55` and `blaNDM-5`, respectively.
+Each entry's focal journal reference agrees with its source term's own PMID
+and contains the expected determinant label and DOI. All 37 Q0GA57 and 20
+G3K399 bibliography items are accounted for by type, number and citation hash;
+the other items are not treated as independently reviewed primary evidence.
+Both entries lack an explicit CARD cross-reference in these cached responses.
+
+Q0GA57 also carries `bla`, `blaCTX-M-15`, `blaCTX-M-3` and `CTX-M-57` as native
+synonyms. These conflicting allele-style annotations remain explicit; they
+do not establish interchangeable alleles or justify assigning a tested allele.
+G3K399's broader `blaNDM` synonym likewise does not resolve experimental identity.
+There is no general rule treating a `bla` prefix as sufficient alias evidence.
+Species-level reference taxonomy is not transferred to a tested isolate, strain,
+sample or genome. No sequence, variant, protocol or experimental AST result is
+exported, and no source-owned biological record is changed.
+
+SCO-1's A1E3K9 and A5Y0S3 references now join the broad index with their existing
+qualifications. The later PMID:17353248 / PMC1891400 HTTP 403 access hold is
+linked explicitly alongside the earlier reference review. No retry, alternate
+route or new primary-text request was made. Historical evidence and holds remain
+unchanged, including the different Acinetobacter paper and reference scopes.
+
+The complete index still accounts for 2,939 records, 2,002 CARD terms and 4,538
+CARD claims. It now contains 1,279 terms with selected references, 1,681 distinct
+reference proteins and 2,796 term-protein links. Four added links produce 21
+reference memberships across 13 existing claims in 11 records, not 21 independent
+resistance measurements. The 723 terms and 1,291 claims still without selected
+references are unresolved within these index inputs, not biological negatives.
+All 217 PHI-base claims, 133 curator claims, 467 score rules and records without
+CARD claims remain accounted for without new primary-review signoff.
+
+Adversarial self-review addressed source-order differences in claim comparison,
+native synonym ambiguity, citation identity, taxonomy rank, version types and
+reference-to-experiment promotion. Native replay of the full predecessor chain,
+the 650-query discovery screen and the SCO-1 dossier passed with network and
+Python file-write guards active, followed by all-record live claim checks.
+The 23-module regression suite passed 944 tests with one historical-checkpoint
+skip. A separate request-cache absence simulation passed 50 public-artifact and
+synthetic tests, with 16 cache-dependent integration tests explicitly skipped;
+cache reads were blocked without moving or deleting the real evidence files.
+That check is recorded in
+`reports/resistance-grounding-2026-10-15-card-bla-memberships/cache-free-verification.json`.
+The verification receipt records the regression results and preservation of the
+7,751-file baseline. Full authoritative QC was not rerun under
+the previously documented Intel macOS / pinned RDKit limitation; historical
+Linux CI is not current signoff.
+
+No new request, outreach, source adoption, curation event or GitHub mutation
+occurred. #1040 and reuse-terms review remain deferred. Reference identities
+are better resolved, but exact experimental alleles and primary findings remain
+to investigate; the full-corpus goal stays open.
+
+## Unlinked AAC(6') Reference and Primary Context Review (2026-10-15)
+
+The checkpoint `research/2026-10-15-aac6-gaps.json` covers every currently
+unlinked source label containing `aac(6` case-insensitively in the pinned
+broad index: 15 terms, 70 existing claims and 12 complete records. This is a
+source-label cohort, not a claim to cover every member of the enzyme family.
+The case-insensitive census includes the lowercase `aac(6')-Ib-cr10` and
+`aac(6')-Ib-cr11` labels that a case-sensitive screen missed.
+
+Twelve complete cached citation queries contain 154 entry appearances and 153
+distinct UniProt accessions. Two terms acquire qualified references; four retain
+ambiguous family-level context, five have empty citation-query results, and four
+have no definition citation from which to construct this query. Neither empty
+queries nor missing citations establish biological absence or exhaust all
+possible gene-name searches.
+
+| Source term | Native gene | UniProt reference | Reference taxonomy |
+| --- | --- | --- | --- |
+| AAC(6')-29a / ARO:3002583 | aacA29a | Q9AIK9, entry 74, sequence version 1 | Pseudomonas aeruginosa, NCBITaxon:287, species |
+| AAC(6')-29b / ARO:3002584 | aacA29b | Q9AIK8, entry 73, sequence version 1 | Pseudomonas aeruginosa, NCBITaxon:287, species |
+
+Both unreviewed entries have specific submission protein names and cite the
+source term's PMID:11158753 / DOI:10.1128/aac.45.2.546-552.2001. Native gene,
+protein-name, version, bibliography and taxonomy metadata support reference
+identity, not a tested allele. Submission names are not expert review; neither
+entry has an explicit CARD cross-reference in these responses. Ten reference
+memberships across five records are retained separately from experimental
+observations. Their reconciliation into the next broad index remains pending.
+
+The EBI metadata request succeeded. Its advertised free Europe PMC PDF route
+for PMC90325 returned HTTP 403 with a challenge page, not a PDF. No redirect,
+retry, alternate route or challenge workaround was used. This is a new access
+hold, not a biological negative or a claim of permanent unavailability; primary
+review requires a user-supplied copy or new explicit direction. The non-OA
+metadata flag by itself is not treated as an access denial.
+
+Withheld contexts remain explicit. Q51409 carries a generic type-II gene label
+but type-I protein wording, which does not establish the exact IIa source term.
+Seven gene-unnamed type-I entries from the Iw citation do not identify Iw.
+Unnumbered Ib-cr or aacA4 annotations are not silently promoted to the numbered
+cr1 or cr3 subtypes. Their native organism labels are retained as reported
+metadata, not newly verified experimental taxonomy.
+
+The already cached LC231 paper, PMID:27929110 / DOI:10.1038/ncomms13803,
+provides a separate AAC(6')-34 context. Table 1 explicitly describes heterologous
+E. coli assays. Its AAC(6')-34 row reports a censored MIC of >128 ug/mL and an
+empty-vector control of 8 ug/mL, retained as >128 and 8 mg/L without changing
+the comparator or inferring a clinical R/S/I category. These are not native
+Paenibacillus MICs. The source isolate's cached UniProt taxonomy node is
+NCBITaxon:1120679, `Paenibacillus sp. (strain LC231)`, with native species rank;
+the word "strain" in its label does not change that rank. The assay-host species
+is separately grounded to E. coli, NCBITaxon:562. No exact experimental protein,
+strain or genome identifier is assigned.
+
+The table calls the compound "Kanamycin", whereas the existing AAC(6')-34
+membership is on kanamycin A, CHEBI:17630. The table-only review does not resolve
+the exact chemical form, so the measurement remains unassigned research context
+rather than a new exact-structure ActivityObservation. No construct, sequence,
+variant or protocol is exported. Export-limit flags concern experimental strain
+assignments and operational content, not native organism labels retained as
+reference metadata.
+
+Adversarial self-review and regression tests cover lowercase source selection,
+protein-name specificity, citation and taxonomy identity, held-source handling,
+MIC censoring and units, and donor-versus-assay-host scope. Native offline replay
+passes with network and Python file-write guards active; all 2,939 corpus record
+hashes match. The 24-module regression suite passed 1,010 tests with one historical
+checkpoint skip. With research-cache reads blocked, 65 public/synthetic tests
+passed and the one cache-dependent replay test skipped explicitly; real evidence
+files were not moved or deleted. The verification receipt records these outcomes and preservation of
+the 7,757-file baseline, with earlier report sections byte-identical. No source
+input, biological record, curation event, source adoption or GitHub state changed.
+Full authoritative QC was not rerun under the documented Intel macOS / pinned
+RDKit limitation. No NCBI request occurred; #1040 and reuse-terms review remain
+deferred. The full-corpus investigation remains open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
