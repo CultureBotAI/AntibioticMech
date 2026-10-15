@@ -1,0 +1,179 @@
+{
+  "all_biological_records_and_previous_dossiers_unchanged": true,
+  "authoritative_qc": {
+    "docker_server_probe": "Escalated docker version server query exited 1 with null and EOF; no Linux QC run or service restart attempted.",
+    "limitation": "Pinned RDKit 2026.3.5 lacks a compatible Intel macOS distribution. Prior Linux QC does not validate this change.",
+    "run_for_this_change": false
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-kpn-locus/protected-before.json",
+    "sha256": "0e69bfc525f6a7a4c031e4317dfd2193f24bc48f28176ca57eb92e4e52370896"
+  },
+  "baseline_files_checked": 7854,
+  "biological_records_hash_checked": 2939,
+  "checks": {
+    "diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "offline_replay": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/audit_kpn_locus_references.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "{\n  \"complete_records_read\": 26,\n  \"source_claims\": 28,\n  \"source_terms\": 2,\n  \"exact_paper_locus_reference_matches\": 2,\n  \"prior_member_references_preserved\": 4,\n  \"prior_members_with_different_species\": 2,\n  \"native_protein_entries_replayed\": 4182,\n  \"native_protein_pages_replayed\": 9,\n  \"corpus_records_hash_checked\": 2939,\n  \"new_uniprot_requests\": 3,\n  \"new_primary_text_contexts_reviewed\": 1\n}\n"
+    },
+    "provenance": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_kpn_locus_references.py",
+        "tests/test_kpn_locus_references.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_kpn_locus_references.py",
+        "tests/test_kpn_locus_references.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    "source_queue": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n"
+    }
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-kpn-locus-plan.json",
+      "sha256": "c852f6787339467a6306890f0f3b7476e9541bbbae433ccfd6610942a4e4f0b4"
+    },
+    {
+      "path": "research/2026-10-15-kpn-locus-native-plan.json",
+      "sha256": "206d76efd5465ba417102ab07a7258c55b2f938d482a68cb342f708edd3c2585"
+    },
+    {
+      "path": "research/2026-10-15-kpn-locus.json",
+      "sha256": "4566deb7d9cda97c0ba0c7e283f431202807ea11baa8af8d72f4e9dc2b8194b3"
+    },
+    {
+      "path": "research/2026-10-15-kpn-locus-assessment.json",
+      "sha256": "a00cc646f038c62931bd623fe7bf00072c1d3f367c86fb9eda6c40c5a8f6e8f2"
+    },
+    {
+      "path": "scripts/audit_kpn_locus_references.py",
+      "sha256": "697f91e01c059eeb13716dc3e811baa3358a28c49c5447bd60ff817155fb5690"
+    },
+    {
+      "path": "tests/test_kpn_locus_references.py",
+      "sha256": "ee9c852c7511cabb4e1c1bbb95ff7ce91ae3b252f82c1c506d302e67265ee94c"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "cadbe90cc8984d5005a27813b1513506c47010e9646a338489adc4c71c80c6d1"
+    }
+  ],
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 1,
+    "new_review_is_text_only_not_whole_paper_signoff": true,
+    "numeric_ast_exports": 0,
+    "operational_exports": false,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "manual_primary_reading_is_not_independently_reproduced_by_tests": true,
+  "previous_report_preserved_except_appended_section": true,
+  "prior_file_changes": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "cadbe90cc8984d5005a27813b1513506c47010e9646a338489adc4c71c80c6d1",
+      "before_sha256": "b8e1e98b9c21c4aeb4b926cf6e5cecfccff1da9f901cb15f0dcf3a2beaa1f848"
+    }
+  },
+  "publication": {
+    "commits": 0,
+    "issue_mutations": 0,
+    "pull_requests": 0,
+    "pushes": 0
+  },
+  "scope": "KPN_PAPER_LOCUS_REFERENCE_GROUNDING_NOT_EXPERIMENTAL_ALLELE_OR_AST_ASSIGNMENT",
+  "summary": {
+    "complete_records_read": 26,
+    "corpus_records_hash_checked": 2939,
+    "exact_paper_locus_reference_matches": 2,
+    "native_protein_entries_replayed": 4182,
+    "native_protein_pages_replayed": 9,
+    "new_primary_text_contexts_reviewed": 1,
+    "new_uniprot_requests": 3,
+    "prior_member_references_preserved": 4,
+    "prior_members_with_different_species": 2,
+    "source_claims": 28,
+    "source_terms": 2
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-kpn-locus/tests.xml",
+      "sha256": "d45914cf4876a8c2a1070ac743df3cb9475dbe3774ab9a16a3ca497beb854592"
+    },
+    "new_and_previous_audits_checked_with_network_disabled": true,
+    "passed": 303,
+    "skipped": 2,
+    "skips": [
+      {
+        "message": "historical corpus changed; immutable public snapshot tested separately",
+        "name": "test_native_replay_without_network_or_file_writes"
+      },
+      {
+        "message": "known qualification deltas lack historical fixtures; public artifact checks still run",
+        "name": "test_offline_native_replay"
+      }
+    ],
+    "tests": 305
+  }
+}

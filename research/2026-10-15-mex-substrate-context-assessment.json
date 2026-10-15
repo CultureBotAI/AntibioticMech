@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-15",
+  "scope": "MEX_SHARED_PRIMARY_TABLE_SCOPE_NOT_EXPERIMENTAL_ALLELE_ASSIGNMENT",
+  "citation": {
+    "pmid": "11083635",
+    "doi": "10.1128/aac.44.12.3322-3327.2000",
+    "url": "https://journals.asm.org/doi/10.1128/aac.44.12.3322-3327.2000",
+    "classification": "PRIMARY_TEXT_CONTEXT_REVIEW_NOT_WHOLE_PAPER_SIGNOFF",
+    "discovery_route": "CACHED_UNIPROT_BIBLIOGRAPHY_AND_PRIOR_REVIEW_REFERENCES",
+    "locations": ["Table 1", "Results; Tables 2 and 3 with footnotes", "Discussion; Table 4"],
+    "relationship_to_card_definitions": "ADJACENT_PRIMARY_EVIDENCE_NOT_OWN_DEFINITION_CITATION"
+  },
+  "assay_species": "Pseudomonas aeruginosa",
+  "parental_background_label": "PAO1",
+  "subject_scope": "DISTINCT_EXPERIMENTAL_DERIVATIVES_NOT_ONE_REFERENCE_ACCESSION",
+  "endpoint": "MIC",
+  "source_units": "ug/mL",
+  "standard_units": "mg/L",
+  "unit_conversion_factor": 1,
+  "context_notes": [
+    "Table 2 and Table 3 use different AmpC backgrounds; compare matched study contexts, not pooled columns.",
+    "The Discussion reports unexplained susceptibility differences among deficient backgrounds.",
+    "Susceptibility comparisons motivate efflux interpretations; they are not direct transport kinetics or clinical resistance calls.",
+    "E. coli is a laboratory host, not the resistant assay subject.",
+    "Unpublished observations in the Discussion are not independently inspected datasets."
+  ],
+  "record_table_scope": {
+    "CHEBI:2637": {"table": 2, "source_label": "amikacin"},
+    "CHEBI:28971": {"table": null, "source_label": null},
+    "CHEBI:2955": {"table": null, "source_label": null},
+    "CHEBI:161680": {"table": 3, "source_label": "aztreonam"},
+    "CHEBI:3508": {"table": 3, "source_label": "ceftazidime"},
+    "CHEBI:29007": {"table": 3, "source_label": "ceftriaxone"},
+    "CHEBI:17698": {"table": 2, "source_label": "chloramphenicol"},
+    "CHEBI:100241": {"table": 2, "source_label": "ciprofloxacin"},
+    "CHEBI:59064": {"table": null, "source_label": null},
+    "CHEBI:59673": {"table": null, "source_label": null},
+    "CHEBI:42355": {"table": 2, "source_label": "erythromycin"},
+    "antibioticmech:aro-6407ce57f1": {"table": 2, "source_label": "gentamicin"},
+    "CHEBI:43968": {"table": 3, "source_label": "meropenem"},
+    "CHEBI:100246": {"table": 2, "source_label": "norfloxacin"},
+    "CHEBI:28368": {"table": 2, "source_label": "novobiocin"},
+    "antibioticmech:aro-2eea3233f3": {"table": 2, "source_label": "ofloxacin"},
+    "CHEBI:7911": {"table": null, "source_label": null},
+    "CHEBI:27902": {"table": 2, "source_label": "tetracycline"},
+    "CHEBI:28864": {"table": 2, "source_label": "tobramycin"},
+    "CHEBI:45924": {"table": null, "source_label": null},
+    "antibioticmech:aro-1fe0873afd": {"table": null, "source_label": null}
+  },
+  "non_supporting_selected_comparisons": [
+    {
+      "aro_id": "ARO:3000797",
+      "record_identifier": "antibioticmech:aro-6407ce57f1",
+      "table": 2,
+      "status": "NO_RESISTANCE_INCREASE_IN_SELECTED_COMPARISON_NOT_GLOBAL_ABSENCE"
+    }
+  ],
+  "rejected_label_substitutions": {
+    "CHEBI:28971": "amoxicillin",
+    "CHEBI:59064": "polymyxin B",
+    "CHEBI:59673": "polymyxin B",
+    "CHEBI:7911": "S-4661"
+  },
+  "cross_study_qualification": "CURRENT_TABLE_CONTEXT_DOES_NOT_SUPERSEDE_PRIOR_STUDY_SPECIFIC_LIMITS",
+  "figure_images_visually_reviewed": false,
+  "typeset_tables_visually_verified": false,
+  "all_backgrounds_interchangeable": false,
+  "numeric_ast_exported": false,
+  "clinical_resistance_calls_assigned": false,
+  "exact_chemical_forms_verified": false,
+  "experimental_alleles_assigned": false,
+  "experimental_genomes_assigned": false,
+  "whole_claim_primary_signoff": false,
+  "biological_curation_completed": false,
+  "operational_details_exported": false,
+  "manual_primary_reading_independently_verified_by_code": false,
+  "access": {
+    "web_search_queries": 0,
+    "web_reader_open_operations": 5,
+    "web_reader_find_operations": 0,
+    "web_service_upstream_http_request_count_known": false,
+    "new_native_publisher_requests": 0,
+    "new_uniprot_requests": 0,
+    "ncbi_requests": 0,
+    "access_holds_retried": false,
+    "outreach": false,
+    "reuse_terms_review_resumed": false
+  }
+}

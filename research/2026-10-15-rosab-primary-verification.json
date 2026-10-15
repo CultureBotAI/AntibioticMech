@@ -1,0 +1,158 @@
+{
+  "all_biological_records_and_previous_dossiers_unchanged": true,
+  "authoritative_qc": {
+    "limitation": "Pinned RDKit 2026.3.5 lacks a compatible Intel macOS distribution. Prior Linux QC does not validate this change.",
+    "run_for_this_change": false
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-rosab-primary/protected-before.json",
+    "sha256": "f5dda3ccb6756e5be5d5e159deb1bc84e426e4871562af2ad911629b8ad512d8"
+  },
+  "baseline_files_checked": 7848,
+  "checks": {
+    "diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "provenance": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_rosab_primary.py",
+        "tests/test_rosab_primary.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_rosab_primary.py",
+        "tests/test_rosab_primary.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "2 files already formatted\n"
+    },
+    "source_queue": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n"
+    }
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-rosab-primary-plan.json",
+      "sha256": "39dd2070fe047990b8c8cb4655bc3d139acb5c2abae240ac8d27ff57a37211d8"
+    },
+    {
+      "path": "research/2026-10-15-rosab-primary.json",
+      "sha256": "a7e92679f5cd6210f22943681e4c397b180b70bb322cf4e723a0e44a06ee0a4f"
+    },
+    {
+      "path": "research/2026-10-15-rosab-primary-assessment.json",
+      "sha256": "f60fe2f9e8d1e77d3ee1ca9cd3c5212e9514373dbd102eea61175e56df015426"
+    },
+    {
+      "path": "scripts/audit_rosab_primary.py",
+      "sha256": "c05274016905168d2208dc1d0e321cef7b15b87d212d1341fc8cfcbc705629e2"
+    },
+    {
+      "path": "tests/test_rosab_primary.py",
+      "sha256": "f3c31af726648f16c04d92b03a9882cff06678eecef1a4193f4aac73a20c6739"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "b8e1e98b9c21c4aeb4b926cf6e5cecfccff1da9f901cb15f0dcf3a2beaa1f848"
+    }
+  ],
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 1,
+    "new_review_is_text_only_not_whole_paper_signoff": true,
+    "numeric_ast_exports": 0,
+    "operational_exports": false,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "manual_primary_reading_is_not_independently_reproduced_by_tests": true,
+  "previous_report_preserved_except_appended_section_and_explicit_backlog_count_update": true,
+  "prior_file_changes": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "b8e1e98b9c21c4aeb4b926cf6e5cecfccff1da9f901cb15f0dcf3a2beaa1f848",
+      "before_sha256": "a37ddae7191be42af76c8e2c16953066b09492a555c4077a3af1dbcb7ada8233"
+    }
+  },
+  "publication": {
+    "commits": 0,
+    "issue_mutations": 0,
+    "pull_requests": 0,
+    "pushes": 0
+  },
+  "scope": "ROSAB_PRIMARY_TEXT_SCOPE_NOT_COMPONENT_SPECIFIC_AST_OR_EXPERIMENTAL_ALLELES",
+  "summary": {
+    "complete_records_read": 4,
+    "corpus_records_hash_checked": 2939,
+    "held_primary_citations": 1,
+    "name_level_species_crosswalks": 1,
+    "native_protein_entries_replayed": 4182,
+    "native_protein_pages_replayed": 9,
+    "new_uniprot_requests": 0,
+    "primary_text_contexts_reviewed": 1,
+    "reference_proteins": 2,
+    "source_claims": 4
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-rosab-primary/tests.xml",
+      "sha256": "56cb386eaa79282085b733bef76029c8fdfe4ba514bd66650338a226f6416edf"
+    },
+    "passed": 148,
+    "rosab_and_previous_member_offline_replays_passed": true,
+    "skipped": 1,
+    "skips": [
+      {
+        "message": "historical corpus changed; immutable public snapshot tested separately",
+        "name": "test_native_replay_without_network_or_file_writes"
+      }
+    ],
+    "tests": 149
+  }
+}

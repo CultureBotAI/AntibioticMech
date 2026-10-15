@@ -1,0 +1,420 @@
+{
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-pbp-reference-context/protected-before.json",
+    "sha256": "327b683c1081a6c35034eb5d0c207f12a96011e4c013531904a1ecc93ded3f11"
+  },
+  "biological_records_changed": 0,
+  "canary": "proteins-1313",
+  "date": "2026-10-15",
+  "definition_citations": {
+    "path": "research/2026-10-09-card-definition-citations.json",
+    "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+  },
+  "exact_alleles_assigned": 0,
+  "inputs": {
+    "corpus_update": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    }
+  },
+  "issue_1040": "DEFERRED",
+  "max_response_bytes": 5000000,
+  "ncbi_requests": 0,
+  "prior_lineages": {
+    "path": "research/2026-10-14-card-reference-lineages.json",
+    "sha256": "55126bbdd99d5baf328a23dfd849d8db1365bab5fd24100e345f01c1fcb79d01"
+  },
+  "prior_species_nodes": {
+    "path": "research/2026-10-14-card-species-nodes.json",
+    "sha256": "cec4cf0881452bd79928ad159074efcb3e230ec4652243affdb63278d04ef3c7"
+  },
+  "redirects_followed": false,
+  "requests": {
+    "proteins-1280": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:1280 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Staphylococcus aureus",
+      "taxon_id": "1280",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A1280+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "proteins-1313": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:1313 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Streptococcus pneumoniae",
+      "taxon_id": "1313",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A1313+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "proteins-1314": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:1314 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Streptococcus pyogenes",
+      "taxon_id": "1314",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A1314+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "proteins-210": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:210 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Helicobacter pylori",
+      "taxon_id": "210",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A210+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "proteins-485": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:485 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Neisseria gonorrhoeae",
+      "taxon_id": "485",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A485+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "proteins-562": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:562 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Escherichia coli",
+      "taxon_id": "562",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A562+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "proteins-573": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:573 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Klebsiella pneumoniae",
+      "taxon_id": "573",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A573+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "proteins-727": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:727 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Haemophilus influenzae",
+      "taxon_id": "727",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A727+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scope": "ALL_CURRENT_PBP_LABELS_REFERENCE_METADATA_NOT_RESISTANT_ALLELES",
+  "source_inventory": {
+    "path": "data/raw/aro_resistance_edges.tsv",
+    "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+  },
+  "species": {
+    "Escherichia coli": {
+      "source": {
+        "body": null,
+        "body_sha256": "20aa358053d2fae1e2cd74636ed5aca1efbc372e5b8bcfdb10d3fa80be6789a1",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-b37438d139cabeff14d8fff73da60ff02883c14f8607f400fe790db4799cc9ac.json",
+          "sha256": "56c5cdcec44f05a573796c091acdccc5142f9cc7eeef32a72ebb0bdeab0f6b40"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:04:03.650418+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/562"
+      },
+      "taxon_id": "562"
+    },
+    "Haemophilus influenzae": {
+      "source": {
+        "body": null,
+        "body_sha256": "363f9c817a0f6e481e04f99037e013655e5f41ecb763f630310e7750cff6181f",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-364ce72113a08902e2738c8d39a7ff72c8b7a0f67515f9991d2d004eff7dd4fe.json",
+          "sha256": "39c2969931fc3edb7f7af8da6b591488d489eeeaf479b0667a8737f0ebb0de6d"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:04:33.477527+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/727"
+      },
+      "taxon_id": "727"
+    },
+    "Helicobacter pylori": {
+      "source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-response.bin",
+          "sha256": "aae492b585f05dbf3977809bdc6bd1e4e7eee3e626c13e46b4d080ea50f17ec4"
+        },
+        "body_sha256": "aae492b585f05dbf3977809bdc6bd1e4e7eee3e626c13e46b4d080ea50f17ec4",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-receipt.json",
+          "sha256": "0c972779918717096383cf993fdc53b7e4d2d9c2d73ec42aa1c663cd080b96a2"
+        },
+        "release": "2026_03",
+        "request_attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-attempt.json",
+          "sha256": "dbd7aff3b2de40a88b6672e09156d184d8e2db42fa409dc84cb5be100eeb8c1b"
+        },
+        "request_plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-210-plan.json",
+          "sha256": "d7cf2c8318dd28c92071961c3e78b3de24268cc4d8b0a7bbe9ddeb554cbfbc92"
+        },
+        "retrieved_at": "2026-10-14T10:22:03.694825+00:00",
+        "retry_performed": false,
+        "url": "https://rest.uniprot.org/taxonomy/210"
+      },
+      "taxon_id": "210"
+    },
+    "Klebsiella pneumoniae": {
+      "source": {
+        "body": null,
+        "body_sha256": "a2c864ef5070c83c8f3975d617db1168420ed425400a4a4238f58a98f4871c14",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-316524182aff1ac5eb0436beadaeb8d9483fef4ece3e95bf92b6c4366117a0c1.json",
+          "sha256": "874ec356d95fd6c2c8167bf6e3f2790985aa2e09d3f620e27587249f612203e1"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:04:06.269301+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/573"
+      },
+      "taxon_id": "573"
+    },
+    "Neisseria gonorrhoeae": {
+      "source": {
+        "body": null,
+        "body_sha256": "f9ab25148ff7f30a499d87cdadf377182a61b30888c65f7c34123004e48fed8f",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-a843be5ac6f570cc16f2421d9327e01032f1cb8ce7677f5916c11f4c11f8994f.json",
+          "sha256": "ac8ad9b8d439d05e99dc7bb535e9e63a7b1ffc9559838082ccdbe099b46236f1"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:03:59.139482+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/485"
+      },
+      "taxon_id": "485"
+    },
+    "Neisseria meningititis": {
+      "source": null,
+      "status": "SOURCE_NAME_UNRESOLVED_NO_SILENT_CORRECTION",
+      "taxon_id": null
+    },
+    "Staphylococcus aureus": {
+      "source": {
+        "body": null,
+        "body_sha256": "faf940b385a99d02c1929991a8dd5cd3ba875441b30daf7d6b6504e8daef8cee",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-6b6dc1aedebe915f5253b6121f26cf47def70642fbc6e6582930b31c43b5c0ae.json",
+          "sha256": "22a736d90148316ffa903792eae95b75f73960386ba10dddff004d40e8226c10"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:04:45.017499+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/1280"
+      },
+      "taxon_id": "1280"
+    },
+    "Streptococcus pneumoniae": {
+      "source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-response.bin",
+          "sha256": "bfe5c4163819d1a00e9a38100ae7b17c881db2e15accb0d2147cc727d0074d5d"
+        },
+        "body_sha256": "bfe5c4163819d1a00e9a38100ae7b17c881db2e15accb0d2147cc727d0074d5d",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-receipt.json",
+          "sha256": "efe4c3d9397e4efd5848f569c5c9a2b4e9677e4e482c2411df99ead70d87aa78"
+        },
+        "release": "2026_03",
+        "request_attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-attempt.json",
+          "sha256": "df1067f53ade5f8069ed9e67e108e679aca4087a48d6f8c26a7873249e92f82a"
+        },
+        "request_plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-species-nodes/species-1313-plan.json",
+          "sha256": "fc4eb7c61fa7543740b61c9a4500515739dd9e570bc04214359850a10349d342"
+        },
+        "retrieved_at": "2026-10-14T10:22:10.132691+00:00",
+        "retry_performed": false,
+        "url": "https://rest.uniprot.org/taxonomy/1313"
+      },
+      "taxon_id": "1313"
+    },
+    "Streptococcus pyogenes": {
+      "source": {
+        "body": null,
+        "body_sha256": "618fa5842fb18eea08f45ffb6d1a290986395e60b9d2a9bacea46ac2f1a692c1",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-0d04dcd08601147355446416ac339465dcd81b130747d89c0b31131bd50512e5.json",
+          "sha256": "c38dee62348e80aedd53bfb3d9362c21d0e47352b338f845410aab78f3bef34e"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:04:54.836822+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/1314"
+      },
+      "taxon_id": "1314"
+    }
+  },
+  "terms": {
+    "ARO:3003041": {
+      "definition_citations": [
+        "PMID:18394970"
+      ],
+      "source_label": "Streptococcus pneumoniae PBP1a conferring resistance to amoxicillin",
+      "source_pbp_label": "PBP1a",
+      "source_species": "Streptococcus pneumoniae"
+    },
+    "ARO:3003042": {
+      "definition_citations": [
+        "PMID:18394970"
+      ],
+      "source_label": "Streptococcus pneumoniae PBP2b conferring resistance to amoxicillin",
+      "source_pbp_label": "PBP2b",
+      "source_species": "Streptococcus pneumoniae"
+    },
+    "ARO:3003043": {
+      "definition_citations": [
+        "PMID:18394970"
+      ],
+      "source_label": "Streptococcus pneumoniae PBP2x conferring resistance to amoxicillin",
+      "source_pbp_label": "PBP2x",
+      "source_species": "Streptococcus pneumoniae"
+    },
+    "ARO:3003937": {
+      "definition_citations": [
+        "PMID:16940068",
+        "PMID:18986991",
+        "PMID:25199775",
+        "PMID:25987627",
+        "PMID:26787702",
+        "PMID:27690121"
+      ],
+      "source_label": "Neisseria meningititis PBP2 conferring resistance to beta-lactam",
+      "source_pbp_label": "PBP2",
+      "source_species": "Neisseria meningititis"
+    },
+    "ARO:3004446": {
+      "definition_citations": [
+        "PMID:29352811"
+      ],
+      "source_label": "Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics",
+      "source_pbp_label": "PBP3",
+      "source_species": "Haemophilus influenzae"
+    },
+    "ARO:3004832": {
+      "definition_citations": [
+        "PMID:20511367",
+        "PMID:22155830",
+        "PMID:23587946",
+        "PMID:25403720",
+        "PMID:25845238",
+        "PMID:34013864"
+      ],
+      "source_label": "Neisseria gonorrhoeae PBP2 conferring resistance to beta-lactam antibiotics",
+      "source_pbp_label": "PBP2",
+      "source_species": "Neisseria gonorrhoeae"
+    },
+    "ARO:3007057": {
+      "definition_citations": [
+        "PMID:18276599",
+        "PMID:31801839"
+      ],
+      "source_label": "Helicobacter pylori pbp3 conferring resistance to amoxicillin",
+      "source_pbp_label": "pbp3",
+      "source_species": "Helicobacter pylori"
+    },
+    "ARO:3007058": {
+      "definition_citations": [
+        "PMID:18276599",
+        "PMID:31801839"
+      ],
+      "source_label": "Helicobacter pylori pbp2 mutants conferring resistance to amoxicillin",
+      "source_pbp_label": "pbp2",
+      "source_species": "Helicobacter pylori"
+    },
+    "ARO:3007060": {
+      "definition_citations": [
+        "PMID:17951983",
+        "PMID:18192681",
+        "PMID:31801839",
+        "PMID:32545318",
+        "PMID:32708761",
+        "PMID:35114945",
+        "PMID:37485536"
+      ],
+      "source_label": "Helicobacter pylori pbp1 mutants conferring resistance to amoxicillin",
+      "source_pbp_label": "pbp1",
+      "source_species": "Helicobacter pylori"
+    },
+    "ARO:3007421": {
+      "definition_citations": [
+        "PMID:34551677"
+      ],
+      "source_label": "Klebsiella pneumoniae PBP3 mutants conferring resistance to ceftazidime-avibactam",
+      "source_pbp_label": "PBP3",
+      "source_species": "Klebsiella pneumoniae"
+    },
+    "ARO:3007423": {
+      "definition_citations": [
+        "PMID:25634992",
+        "PMID:28559260",
+        "PMID:41718487"
+      ],
+      "source_label": "Escherichia coli PBP3 mutants conferring resistance to beta-lactam antibiotics",
+      "source_pbp_label": "PBP3",
+      "source_species": "Escherichia coli"
+    },
+    "ARO:3007531": {
+      "definition_citations": [
+        "PMID:31630171",
+        "PMID:36374114"
+      ],
+      "source_label": "Streptococcus pyogenes PBP2x conferring resistance to beta-lactam antibiotics",
+      "source_pbp_label": "PBP2x",
+      "source_species": "Streptococcus pyogenes"
+    },
+    "ARO:3009660": {
+      "definition_citations": [
+        "PMID:34151961"
+      ],
+      "source_label": "Staphylococcus aureus PBP4 mutant conferring resistance to nafcillin and cefoxitin",
+      "source_pbp_label": "PBP4",
+      "source_species": "Staphylococcus aureus"
+    },
+    "ARO:3009661": {
+      "definition_citations": [
+        "PMID:34151961"
+      ],
+      "source_label": "Staphylococcus aureus PBP4 mutant conferring resistance to nafcillin",
+      "source_pbp_label": "PBP4",
+      "source_species": "Staphylococcus aureus"
+    }
+  },
+  "unreviewed_fallback_automatic": false
+}

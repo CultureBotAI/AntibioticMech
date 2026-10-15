@@ -1,0 +1,187 @@
+{
+  "all_prior_report_content_preserved": true,
+  "authoritative_qc": {
+    "limitation": "Local Intel macOS dependency resolution cannot install the pinned RDKit 2026.3.5 distribution. Prior merged Linux QC is not validation of this change.",
+    "run_for_this_change": false
+  },
+  "base_commit": "a038412403ca98f11b5b2b5c0b217cebfe65f8d3",
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-complex-members/protected-before.json",
+    "sha256": "866061d4ce66b60987c770379cd422c549b68cbb1a346fdfecee69767a7d5c76"
+  },
+  "baseline_files_checked": 7837,
+  "biological_records_unchanged": true,
+  "checks": {
+    "diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "provenance": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_provenance.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "provenance OK: 14 inventories, 23 upstream files, retrieved 2026-08-30\n"
+    },
+    "ruff": {
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "scripts/audit_card_complex_members.py",
+        "scripts/audit_card_protein_name_screen.py",
+        "tests/test_card_complex_members.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "All checks passed!\n"
+    },
+    "ruff_format": {
+      "command": [
+        ".venv/bin/ruff",
+        "format",
+        "--check",
+        "scripts/audit_card_complex_members.py",
+        "scripts/audit_card_protein_name_screen.py",
+        "tests/test_card_complex_members.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "3 files already formatted\n"
+    },
+    "source_queue": {
+      "command": [
+        ".venv/bin/python",
+        "scripts/check_source_queue.py"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "source queue OK: 37 sources \u2014 10 adopted, 12 blocked, 11 candidate, 4 evaluating\nnext up: chebi-citations (P3, evidence), lotus (P3, producer_organisms), antismash-db (P4, producer_organisms)\n"
+    }
+  },
+  "date": "2026-10-15",
+  "limits": {
+    "biological_records_changed": 0,
+    "broad_reference_index_updated": false,
+    "component_reference_grounding_is_not_whole_complex_grounding": true,
+    "curated_ast_observations": 0,
+    "exact_allele_assignments": 0,
+    "exhaustive_gene_alias_strain_or_allele_search": false,
+    "experimental_identity_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_results_reviews": 0,
+    "new_taxonomy_requests": 22,
+    "outreach": 0,
+    "primary_access_holds_preserved": true,
+    "regulators_inhibitors_variants_and_subclasses_propagated_as_members": false,
+    "reuse_terms_review_resumed": false,
+    "sequences_or_operational_details_exported": false,
+    "single_protein_complex_assignments": 0,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "outputs": [
+    {
+      "path": "research/2026-10-15-card-complex-members-plan.json",
+      "sha256": "42e7f67294a1729920368369de591eec73ed333d18908e35c956bedfaeb5d459"
+    },
+    {
+      "path": "research/2026-10-15-card-complex-members.json",
+      "sha256": "008d915100f8c36ca43b39b891a97a418e4e9d60dcd807cbfe9e2ed9284779ac"
+    },
+    {
+      "path": "scripts/audit_card_complex_members.py",
+      "sha256": "fe047ec763f060812abbbcf3bf7c73c885d71e22b6cbc5fb5d0ecb865c45ad84"
+    },
+    {
+      "path": "scripts/audit_card_protein_name_screen.py",
+      "sha256": "2b22ebffc6713ebd4e7300ba992e0a3bf0dad44e5f319256583c4709413bfc3a"
+    },
+    {
+      "path": "tests/test_card_complex_members.py",
+      "sha256": "7cd277a6e217536547b7fad6f81257497c4ee6d216dfa6503a86a149fb5a48f8"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "a37ddae7191be42af76c8e2c16953066b09492a555c4077a3af1dbcb7ada8233"
+    }
+  ],
+  "previous_research_snapshots_and_source_inputs_unchanged": true,
+  "previously_tracked_files_changed": {
+    "research/2026-10-07-resistance-gene-grounding.md": {
+      "after_sha256": "a37ddae7191be42af76c8e2c16953066b09492a555c4077a3af1dbcb7ada8233",
+      "before_sha256": "da1a6eb45ef2c202ecfd0aa62f46e7e6418ac8de39382f60d1ed69805b40f447"
+    },
+    "scripts/audit_card_protein_name_screen.py": {
+      "after_sha256": "2b22ebffc6713ebd4e7300ba992e0a3bf0dad44e5f319256583c4709413bfc3a",
+      "before_sha256": "69a3d8e7e71b0afc945988ac4e1ba1bb6db035dc80b430cf58bd8dad5365f009"
+    }
+  },
+  "publication": {
+    "commits": 0,
+    "issue_mutations": 0,
+    "pull_requests": 0,
+    "pushes": 0
+  },
+  "scope": "EXPLICIT_ONTOLOGY_MEMBER_REFERENCE_GROUNDING_NOT_COMPLEX_OR_EXPERIMENTAL_IDENTITY",
+  "summary": {
+    "complete_records_read": 57,
+    "corpus_records_hash_checked": 2939,
+    "direct_member_edges": 225,
+    "member_terms": 193,
+    "members_with_native_reference_candidates": 155,
+    "native_member_reference_proteins": 155,
+    "native_protein_entries_replayed": 4182,
+    "native_protein_pages_replayed": 9,
+    "new_network_requests": 22,
+    "parent_terms": 63,
+    "parents_with_all_members_matched": 34,
+    "parents_with_multiple_reference_taxa": 35,
+    "reference_proteins_not_in_broad_index": 154,
+    "reference_proteins_with_taxonomy_name_disagreement": 2,
+    "reference_taxa": 47,
+    "reference_taxa_with_metagenome_labels": 1,
+    "source_claims": 199,
+    "source_determinants_screened": 2002,
+    "source_role_variations": 2
+  },
+  "tests": {
+    "current_member_offline_replay_passed": true,
+    "errors": 0,
+    "failures": 0,
+    "first_run": {
+      "failed": 1,
+      "passed": 229,
+      "resolution": "Test expected prequalification record hashes; now accepts only the pinned qualification deltas without altering claim hashes.",
+      "skipped": 2
+    },
+    "junit": {
+      "path": "reports/resistance-grounding-2026-10-15-card-complex-members/tests.xml",
+      "sha256": "e1b66367805f7fe84348ab8b438b7deeb9df7accf2e726e88f0432b8d804c6da"
+    },
+    "passed": 230,
+    "portable_checks_for_current_and_historical_artifacts_passed": true,
+    "skipped": 2,
+    "skips": [
+      {
+        "message": "historical corpus changed; immutable public snapshot tested separately",
+        "name": "test_native_replay_without_network_or_file_writes"
+      },
+      {
+        "message": "known qualification deltas lack historical fixtures; public artifact checks still run",
+        "name": "test_offline_native_replay"
+      }
+    ],
+    "tests": 232
+  }
+}
