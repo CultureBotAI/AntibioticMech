@@ -37,6 +37,40 @@ def assessment():
     return audit.read_json(ROOT, result()["assessment"])
 
 
+def cli_fixture(monkeypatch, root, *, check=False):
+    payload = {"summary": {"terms": 0}}
+    monkeypatch.setattr(audit, "build", lambda _: payload)
+    args = ["audit", "--root", str(root), "--output", "nested/audit.json"]
+    monkeypatch.setattr(sys, "argv", args + (["--check"] if check else []))
+    return payload, root / "nested/audit.json"
+
+
+def test_cli_creates_nested_output_only_in_write_mode(tmp_path, monkeypatch):
+    payload, target = cli_fixture(monkeypatch, tmp_path)
+    audit.main()
+    assert target.read_bytes() == (json.dumps(payload, sort_keys=True, indent=2) + "\n").encode()
+    before = target.stat().st_mtime_ns
+    audit.main()
+    assert target.stat().st_mtime_ns == before
+
+
+def test_cli_check_does_not_create_missing_output_directories(tmp_path, monkeypatch):
+    _, target = cli_fixture(monkeypatch, tmp_path, check=True)
+    with pytest.raises(FileNotFoundError):
+        audit.main()
+    assert not target.parent.exists()
+
+
+@pytest.mark.parametrize("check", [False, True])
+def test_cli_never_overwrites_a_different_existing_output(tmp_path, monkeypatch, check):
+    _, target = cli_fixture(monkeypatch, tmp_path, check=check)
+    target.parent.mkdir()
+    target.write_bytes(b"historical output\n")
+    with pytest.raises(ValueError, match="preserve prior output"):
+        audit.main()
+    assert target.read_bytes() == b"historical output\n"
+
+
 @pytest.mark.parametrize(
     "name,label,matched",
     [

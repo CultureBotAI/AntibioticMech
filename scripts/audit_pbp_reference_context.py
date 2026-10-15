@@ -578,6 +578,7 @@ def main():
     if args.check or target.exists():
         require(target.read_bytes() == payload, "audit does not reproduce; preserve prior output")
     else:
+        target.parent.mkdir(parents=True, exist_ok=True)
         with target.open("xb") as stream:
             stream.write(payload)
     print(json.dumps(result["summary"], indent=2))
