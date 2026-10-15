@@ -1,0 +1,744 @@
+{
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "chemical_scope": {
+    "neutral_and_olamine_records_kept_distinct": true,
+    "salt_and_neutral_results_transferred": false,
+    "titles_establish_tested_chemical_form": false
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox/cohort.json",
+    "sha256": "da38d4415269e4212984e1713d6ae4f10acfef213ef4547322c5092997be93fe"
+  },
+  "corpus_records_hash_checked_at_preflight": 2939,
+  "curation_decision": "NO_RESISTANCE_ASSERTION_OR_EXPERIMENTAL_IDENTIFIERS_WITHOUT_PRIMARY_SUPPORT",
+  "date": "2026-10-14",
+  "discovery": {
+    "all_candidates_primary_reviewed": false,
+    "checkpoints": [
+      {
+        "input": {
+          "path": "research/2026-10-08-resistance-alias-discovery-candidates.json",
+          "sha256": "6100aa1f8c0e930d6286cd40fa7d853f25d025fde6044e1ffa91187708d4ff8f"
+        },
+        "records": [
+          {
+            "candidate_count": 15,
+            "complete_queries": 4,
+            "identifier": "CHEBI:31398",
+            "primary_results_reviewed": 0,
+            "retained_candidate_ids": [
+              "MED:12760852",
+              "MED:15790671",
+              "MED:15814599",
+              "MED:25711406",
+              "MED:27690640",
+              "MED:28680535",
+              "MED:29530857",
+              "MED:29908958",
+              "MED:31098692",
+              "MED:31655952",
+              "MED:32015042",
+              "MED:32550915",
+              "MED:33027904",
+              "MED:38483637",
+              "MED:42346559"
+            ]
+          },
+          {
+            "candidate_count": 34,
+            "complete_queries": 2,
+            "identifier": "CHEBI:453011",
+            "primary_results_reviewed": 0,
+            "retained_candidate_ids": [
+              "MED:12760852",
+              "MED:15790671",
+              "MED:15814599",
+              "MED:23936064",
+              "MED:24614379",
+              "MED:25711406",
+              "MED:27690640",
+              "MED:27931122",
+              "MED:28680535",
+              "MED:29034140",
+              "MED:29530857",
+              "MED:29654752",
+              "MED:29908958",
+              "MED:30633761",
+              "MED:31098692",
+              "MED:31655952",
+              "MED:32015042",
+              "MED:32214830",
+              "MED:32550915",
+              "MED:32770418",
+              "MED:33027904",
+              "MED:37553539",
+              "MED:37754973",
+              "MED:37823916",
+              "MED:38009614",
+              "MED:38483637",
+              "MED:40411287",
+              "MED:40657100",
+              "MED:40796670",
+              "MED:41241719",
+              "MED:41752217",
+              "MED:42346559",
+              "MED:42446053",
+              "PPR:PPR1093009"
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "path": "research/2026-10-09-resistance-vocabulary-discovery-candidates.json.gz",
+          "sha256": "86e532f162a827a285822355d68f052fc74023653fcb0ac102ddaeb9c37da969"
+        },
+        "records": [
+          {
+            "candidate_count": 28,
+            "complete_queries": 4,
+            "identifier": "CHEBI:31398",
+            "primary_results_reviewed": 0,
+            "retained_candidate_ids": [
+              "MED:11964778",
+              "MED:12661761",
+              "MED:12760852",
+              "MED:15790671",
+              "MED:15814599",
+              "MED:20964457",
+              "MED:21987135",
+              "MED:23991213",
+              "MED:25711406",
+              "MED:27690640",
+              "MED:28680535",
+              "MED:29530857",
+              "MED:29801801",
+              "MED:29908958",
+              "MED:31098692",
+              "MED:31655952",
+              "MED:32015042",
+              "MED:32550915",
+              "MED:33027904",
+              "MED:34861084",
+              "MED:35251970",
+              "MED:36382573",
+              "MED:3800346",
+              "MED:38483637",
+              "MED:40639199",
+              "MED:40790874",
+              "MED:42346559",
+              "MED:7028048"
+            ]
+          },
+          {
+            "candidate_count": 81,
+            "complete_queries": 2,
+            "identifier": "CHEBI:453011",
+            "primary_results_reviewed": 0,
+            "retained_candidate_ids": [
+              "MED:11499333",
+              "MED:11964778",
+              "MED:12614976",
+              "MED:12661761",
+              "MED:12760852",
+              "MED:15688097",
+              "MED:15790671",
+              "MED:15814599",
+              "MED:17050812",
+              "MED:17432924",
+              "MED:1799609",
+              "MED:20668553",
+              "MED:20964457",
+              "MED:21987135",
+              "MED:23936064",
+              "MED:23991213",
+              "MED:24364524",
+              "MED:24614379",
+              "MED:24614382",
+              "MED:24718510",
+              "MED:25521517",
+              "MED:25711406",
+              "MED:25775640",
+              "MED:27136621",
+              "MED:27633452",
+              "MED:27690640",
+              "MED:27931122",
+              "MED:28513812",
+              "MED:28680535",
+              "MED:29034140",
+              "MED:29530857",
+              "MED:29654752",
+              "MED:29801801",
+              "MED:29908958",
+              "MED:30633761",
+              "MED:31098692",
+              "MED:31655952",
+              "MED:31662760",
+              "MED:31820493",
+              "MED:32015042",
+              "MED:32214830",
+              "MED:32370650",
+              "MED:32550915",
+              "MED:32619957",
+              "MED:32705532",
+              "MED:32770418",
+              "MED:33027904",
+              "MED:34164339",
+              "MED:34303391",
+              "MED:34575765",
+              "MED:34861084",
+              "MED:35251970",
+              "MED:36382573",
+              "MED:37141410",
+              "MED:37283761",
+              "MED:37534217",
+              "MED:37553539",
+              "MED:37754973",
+              "MED:37823916",
+              "MED:3800346",
+              "MED:38009614",
+              "MED:38483637",
+              "MED:39142055",
+              "MED:39371335",
+              "MED:40411287",
+              "MED:40639199",
+              "MED:40657100",
+              "MED:40790874",
+              "MED:40796670",
+              "MED:41189168",
+              "MED:41241719",
+              "MED:41752217",
+              "MED:42346559",
+              "MED:42446053",
+              "MED:8944348",
+              "MED:9522245",
+              "MED:9585862",
+              "PPR:PPR1093009",
+              "PPR:PPR382558",
+              "PPR:PPR75357",
+              "PPR:PPR833098"
+            ]
+          }
+        ]
+      }
+    ],
+    "distinct_candidates": 82,
+    "distinct_retained_candidate_ids": [
+      "MED:11499333",
+      "MED:11964778",
+      "MED:12614976",
+      "MED:12661761",
+      "MED:12760852",
+      "MED:15688097",
+      "MED:15790671",
+      "MED:15814599",
+      "MED:17050812",
+      "MED:17432924",
+      "MED:1799609",
+      "MED:20668553",
+      "MED:20964457",
+      "MED:21987135",
+      "MED:23936064",
+      "MED:23991213",
+      "MED:24364524",
+      "MED:24614379",
+      "MED:24614382",
+      "MED:24718510",
+      "MED:25521517",
+      "MED:25711406",
+      "MED:25775640",
+      "MED:27136621",
+      "MED:27633452",
+      "MED:27690640",
+      "MED:27931122",
+      "MED:28513812",
+      "MED:28680535",
+      "MED:29034140",
+      "MED:29530857",
+      "MED:29654752",
+      "MED:29801801",
+      "MED:29908958",
+      "MED:30633761",
+      "MED:31098692",
+      "MED:31655952",
+      "MED:31662760",
+      "MED:31820493",
+      "MED:32015042",
+      "MED:32214830",
+      "MED:32370650",
+      "MED:32550915",
+      "MED:32619957",
+      "MED:32705532",
+      "MED:32770418",
+      "MED:33027904",
+      "MED:34164339",
+      "MED:34303391",
+      "MED:34575765",
+      "MED:34861084",
+      "MED:35251970",
+      "MED:36382573",
+      "MED:37141410",
+      "MED:37283761",
+      "MED:37534217",
+      "MED:37553539",
+      "MED:37754973",
+      "MED:37823916",
+      "MED:3800346",
+      "MED:38009614",
+      "MED:38483637",
+      "MED:39142055",
+      "MED:39371335",
+      "MED:40411287",
+      "MED:40639199",
+      "MED:40657100",
+      "MED:40790874",
+      "MED:40796670",
+      "MED:41189168",
+      "MED:41241719",
+      "MED:41752217",
+      "MED:42346559",
+      "MED:42446053",
+      "MED:7028048",
+      "MED:8944348",
+      "MED:9522245",
+      "MED:9585862",
+      "PPR:PPR1093009",
+      "PPR:PPR382558",
+      "PPR:PPR75357",
+      "PPR:PPR833098"
+    ],
+    "duplicate_query_memberships_are_independent_evidence": false,
+    "selected_leads": {
+      "12760852": {
+        "doi": "10.1128/aac.47.6.1805-1817.2003",
+        "id": "12760852",
+        "pmcid": "PMC155814",
+        "pmid": "12760852",
+        "pubType": "research support, non-u.s. gov't; research-article; journal article",
+        "pubYear": "2003",
+        "source": "MED",
+        "title": "Ciclopirox olamine treatment affects the expression pattern of Candida albicans genes encoding virulence factors, iron metabolism proteins, and drug resistance factors."
+      },
+      "15790671": {
+        "doi": "10.1093/jac/dki089",
+        "id": "15790671",
+        "pmid": "15790671",
+        "pubType": "research support, non-u.s. gov't; journal article",
+        "pubYear": "2005",
+        "source": "MED",
+        "title": "Oxygen accessibility and iron levels are critical factors for the antifungal action of ciclopirox against Candida albicans."
+      },
+      "15814599": {
+        "doi": "10.1093/jac/dki105",
+        "id": "15814599",
+        "pmid": "15814599",
+        "pubType": "research support, u.s. gov't, p.h.s.; journal article; research support, n.i.h., extramural",
+        "pubYear": "2005",
+        "source": "MED",
+        "title": "Genome-wide expression profiling of the response to ciclopirox olamine in Candida albicans."
+      }
+    }
+  },
+  "distinct_reference_proteins": 5,
+  "limits": {
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "figures_visually_reviewed": false,
+    "full_corpus_goal_status": "OPEN",
+    "http_attempts": 4,
+    "http_status_counts": {
+      "200": 3,
+      "500": 1
+    },
+    "issue_1040": "DEFERRED",
+    "native_taxonomy_responses_reused": 1,
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_taxonomy_requests": 0,
+    "numeric_AST_variants_sequences_constructs_or_protocols_exported": false,
+    "primary_results_reviews": 0,
+    "prior_source_holds_preserved": true,
+    "retries": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0,
+    "supplements_reviewed": false,
+    "whole_record_primary_review": "OPEN"
+  },
+  "primary_hold": {
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox/primary-hold.json",
+    "sha256": "7ac206adac21ddd5a88f1981903a8e7ab04421fe175b7cb8997617e323ce4066"
+  },
+  "query_memberships": {
+    "reference-2003": [
+      "UniProtKB:Q5A446"
+    ],
+    "reference-2005-expression": [
+      "UniProtKB:Q59UT4",
+      "UniProtKB:Q59UT5"
+    ],
+    "reference-2005-oxygen": [
+      "UniProtKB:G1UB63",
+      "UniProtKB:Q5A446",
+      "UniProtKB:Q5AD05"
+    ]
+  },
+  "query_result_memberships": 6,
+  "records": [
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:31398",
+      "label": "ciclopirox olamine",
+      "record": {
+        "path": "data/antibiotics/antibacterial/ciclopirox-olamine.yaml",
+        "sha256": "f3bf3b2007a77857cf56585534c70a0f1e08b139f7f4cc32f15979b40835fe94"
+      },
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/CHEBI-31398-before.yaml",
+        "sha256": "f3bf3b2007a77857cf56585534c70a0f1e08b139f7f4cc32f15979b40835fe94"
+      },
+      "standard_inchi_key": "HKUKJIQHPXYJTP-UHFFFAOYSA-O"
+    },
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:453011",
+      "label": "ciclopirox",
+      "record": {
+        "path": "data/antibiotics/antibacterial/ciclopirox.yaml",
+        "sha256": "9b77aba57969f8de2e529c917cb4529a7454b6c2f7cf461150f3ceb16ec692dc"
+      },
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/CHEBI-453011-before.yaml",
+        "sha256": "9b77aba57969f8de2e529c917cb4529a7454b6c2f7cf461150f3ceb16ec692dc"
+      },
+      "standard_inchi_key": "SCKYRAXSEDYPSA-UHFFFAOYSA-N"
+    }
+  ],
+  "reference_attribution": {
+    "license": "CC BY 4.0",
+    "release": "2026_03",
+    "source": "UniProt Consortium"
+  },
+  "reference_canary_review": {
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-canary-review.json",
+    "sha256": "38df6233cd922c45fd9c58adc50538ecc7df2d4a48d291b494e7aeff90cbab87"
+  },
+  "reference_proteins": [
+    {
+      "compound_specific_resistance_verified": false,
+      "database_review_status_is_primary_review": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 61,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "CSA1",
+        "WAP1"
+      ],
+      "gene_orf_names": [
+        "CaO19.7114"
+      ],
+      "ordered_locus_names": [
+        "CAALFM_C700090CA"
+      ],
+      "protein_accession": "UniProtKB:G1UB63",
+      "protein_name": "Cell wall protein 1",
+      "reference_gene": "CSA1",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_species_taxon_id": "NCBITaxon:5476",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "role": "CITATION_LINKED_INDUCTION_REFERENCE_NOT_RESISTANT_ALLELE",
+      "selected_citations": [
+        {
+          "database_reference_scope": "INDUCTION",
+          "doi": "DOI:10.1093/jac/dki089",
+          "primary_results_reviewed": false,
+          "reference": "PMID:15790671",
+          "resistance_causality_established": false
+        }
+      ],
+      "sequence_version": 1,
+      "species_lineage_verified": true
+    },
+    {
+      "compound_specific_resistance_verified": false,
+      "database_review_status_is_primary_review": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 104,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "RBT5"
+      ],
+      "gene_orf_names": [
+        "CaO19.13081",
+        "CaO19.5636"
+      ],
+      "ordered_locus_names": [
+        "CAALFM_C400130WA"
+      ],
+      "protein_accession": "UniProtKB:Q59UT4",
+      "protein_name": "GPI-anchored hemophore RBT5",
+      "reference_gene": "RBT5",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_species_taxon_id": "NCBITaxon:5476",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "role": "CITATION_LINKED_INDUCTION_REFERENCE_NOT_RESISTANT_ALLELE",
+      "selected_citations": [
+        {
+          "database_reference_scope": "INDUCTION",
+          "doi": "DOI:10.1093/jac/dki105",
+          "primary_results_reviewed": false,
+          "reference": "PMID:15814599",
+          "resistance_causality_established": false
+        }
+      ],
+      "sequence_version": 1,
+      "species_lineage_verified": true
+    },
+    {
+      "compound_specific_resistance_verified": false,
+      "database_review_status_is_primary_review": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 98,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "CRW3",
+        "PGA7",
+        "RBT6"
+      ],
+      "gene_orf_names": [
+        "CaO19.13080",
+        "CaO19.5635"
+      ],
+      "ordered_locus_names": [
+        "CAALFM_C400120WA"
+      ],
+      "protein_accession": "UniProtKB:Q59UT5",
+      "protein_name": "GPI-anchored hemophore PGA7",
+      "reference_gene": "PGA7",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_species_taxon_id": "NCBITaxon:5476",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "role": "CITATION_LINKED_INDUCTION_REFERENCE_NOT_RESISTANT_ALLELE",
+      "selected_citations": [
+        {
+          "database_reference_scope": "INDUCTION",
+          "doi": "DOI:10.1093/jac/dki105",
+          "primary_results_reviewed": false,
+          "reference": "PMID:15814599",
+          "resistance_causality_established": false
+        }
+      ],
+      "sequence_version": 1,
+      "species_lineage_verified": true
+    },
+    {
+      "compound_specific_resistance_verified": false,
+      "database_review_status_is_primary_review": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 125,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "CFL1",
+        "FRE1"
+      ],
+      "gene_orf_names": [
+        "CaO19.1263",
+        "CaO19.8848"
+      ],
+      "ordered_locus_names": [
+        "CAALFM_C405770CA"
+      ],
+      "protein_accession": "UniProtKB:Q5A446",
+      "protein_name": "Ferric/cupric reductase transmembrane component 1",
+      "reference_gene": "CFL1",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_species_taxon_id": "NCBITaxon:5476",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "role": "CITATION_LINKED_INDUCTION_REFERENCE_NOT_RESISTANT_ALLELE",
+      "selected_citations": [
+        {
+          "database_reference_scope": "INDUCTION",
+          "doi": "DOI:10.1128/aac.47.6.1805-1817.2003",
+          "primary_results_reviewed": false,
+          "reference": "PMID:12760852",
+          "resistance_causality_established": false
+        },
+        {
+          "database_reference_scope": "INDUCTION",
+          "doi": "DOI:10.1093/jac/dki089",
+          "primary_results_reviewed": false,
+          "reference": "PMID:15790671",
+          "resistance_causality_established": false
+        }
+      ],
+      "sequence_version": 2,
+      "species_lineage_verified": true
+    },
+    {
+      "compound_specific_resistance_verified": false,
+      "database_review_status_is_primary_review": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 133,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "PGA2",
+        "SOD32",
+        "SOD4"
+      ],
+      "gene_orf_names": [
+        "CaO19.2062",
+        "CaO19.9609"
+      ],
+      "ordered_locus_names": [
+        "CAALFM_C200660CA"
+      ],
+      "protein_accession": "UniProtKB:Q5AD05",
+      "protein_name": "Cell surface superoxide dismutase [Cu-Zn] 4",
+      "reference_gene": "SOD4",
+      "reference_organism_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "reference_species_taxon_id": "NCBITaxon:5476",
+      "reference_taxon_id": "NCBITaxon:237561",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+      "role": "CITATION_LINKED_INDUCTION_REFERENCE_NOT_RESISTANT_ALLELE",
+      "selected_citations": [
+        {
+          "database_reference_scope": "INDUCTION",
+          "doi": "DOI:10.1093/jac/dki089",
+          "primary_results_reviewed": false,
+          "reference": "PMID:15790671",
+          "resistance_causality_established": false
+        }
+      ],
+      "sequence_version": 1,
+      "species_lineage_verified": true
+    }
+  ],
+  "repeated_accessions_are_independent_proteins_or_experiments": false,
+  "scope": "INDUCTION_REFERENCE_CONTEXT_NOT_RESISTANCE_ALLELES",
+  "sources": {
+    "article-2003": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/article-2003-attempt.json",
+        "sha256": "d1456fe845fb76978d03f993793e1e7d221561480858c5e3b945260a08ec2b65"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/article-2003-response.bin",
+        "sha256": "cfea648e58893db34bf20dcced0fb4592c9b5269fd3e32d8967b8373aeb6d910"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/request-plan.json",
+        "sha256": "dc3ba1af41d57806fdd1befca376032f915cf620f2952636376df4fc6ef2a519"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/article-2003-receipt.json",
+        "sha256": "168387b030b365cc4a4e6957804108989a31f1dd3d47570c8db1d5ee9482339f"
+      },
+      "retrieved_at": "2026-10-14T22:54:39.520883+00:00",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC155814/fullTextXML"
+    },
+    "reference-2003": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2003-attempt.json",
+        "sha256": "ebb133d1ae049afb0d7f0057d5471033fa9b3c9daebe77b841bc9444d8bda2f8"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2003-response.bin",
+        "sha256": "5685eea405abbb687811973c64eedd8146d153182866dcead48357c1239e05a2"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-plan.json",
+        "sha256": "930c33c44f86264ddc0a70ba79b787a7b9d09879c5c9dbe9b802da6436efb7a0"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2003-receipt.json",
+        "sha256": "a7798482cf552813f0a46793ec1281ca390fedb78eceba19799781c71cccd941"
+      },
+      "retrieved_at": "2026-10-14T22:55:38.340607+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A12760852&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-2005-expression": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2005-expression-attempt.json",
+        "sha256": "6d5f77482469ef9daf77b9a23f884312013a9309bcedb40db7e1dd7ff859b0c1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2005-expression-response.bin",
+        "sha256": "127136811555a78652a897293c767fcce67f4408a8f63b9f5312e8d3c6669b42"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-followup-plan.json",
+        "sha256": "d55244b2f4eaa1569a32b730d2fb1cf851b2151e243c68a4f55ba2f315596bdc"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2005-expression-receipt.json",
+        "sha256": "607310699b88236f3c578c0687c0c3e2d1b22b3d0142cd36d3fcca705b3255aa"
+      },
+      "retrieved_at": "2026-10-14T22:56:46.460421+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A15814599&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-2005-oxygen": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2005-oxygen-attempt.json",
+        "sha256": "dbeca0d8f931572213f95652ccc69bbaefa3a48415156619a1294c90e541d3ab"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2005-oxygen-response.bin",
+        "sha256": "8e91570e5826a12e42de6bb7409f9eddf872b9544e1df5a4090c5c08ebf0f1af"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-followup-plan.json",
+        "sha256": "d55244b2f4eaa1569a32b730d2fb1cf851b2151e243c68a4f55ba2f315596bdc"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox/reference-2005-oxygen-receipt.json",
+        "sha256": "79a8119ed6e3017c0b836de504fbe37085e67b4d478c26d1d2dd2ef8958b9906"
+      },
+      "retrieved_at": "2026-10-14T22:56:32.314896+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A15790671&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "taxonomy_checkpoint": {
+    "path": "research/2026-10-14-beauvericin-reference-context.json",
+    "sha256": "5a803d4f62298d45a635b9731253fb72ecbddeb2b0d85d5a2c0d63333ce05685"
+  },
+  "taxonomy_source": {
+    "body": {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-response.bin",
+      "sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24"
+    },
+    "body_sha256": "d71eb389651e17d41497dac2345b9c1b834076af092f60aecd281d0b9c9bba24",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-09-transport-followup/taxonomy-237561-receipt.json",
+      "sha256": "004bd1f86dd4cf11611cd60ecaab541bbcb30e9a71e4867fa2e32031d59c02f1"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-09T15:40:37.883821+00:00",
+    "url": "https://rest.uniprot.org/taxonomy/237561.json"
+  }
+}

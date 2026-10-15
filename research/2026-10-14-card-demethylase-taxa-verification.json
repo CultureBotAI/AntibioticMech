@@ -1,0 +1,141 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "cache_independent_fixture_and_public_projection_tests": "PASS",
+  "cache_search_included_ignored_files": true,
+  "captured_at": "2026-10-15T00:19:43.867479+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-demethylase/cohort.json",
+    "sha256": "f4698c0d534e74418f7ca3bd710a4ba7314ca55112c8c149a89f1dee55678f71"
+  },
+  "complete_selected_collection_aware_records_read": 31,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 451,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-demethylase/expanded-tests.xml",
+      "sha256": "27d33a5421cc0bcdafb2cdce06a8185e2c5d4ace209e1ad83f65a31b19f21e16"
+    },
+    "skipped": 0,
+    "tests": 451
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "a5c7dcae3903bc3f6fcb4cbc13f1f3eaa8273145bdf001c9fafc75ee5102a248"
+    },
+    {
+      "path": "research/2026-10-14-card-demethylase-taxa.json",
+      "sha256": "68193e62cd689b40e03e30a645e1dc5f1a5994653ae74dfbdf29330891d420a1"
+    },
+    {
+      "path": "scripts/audit_card_demethylase_taxa.py",
+      "sha256": "490bd28fe9d52942b85e22c9d3dff1d0dd60f003bb645e97f5ea3f5998acb5b0"
+    },
+    {
+      "path": "tests/test_card_demethylase_taxa.py",
+      "sha256": "6c1b50a3bc61fa1d291e0bf573c70a01ed4dfb11073e7888ad092d2d0821d011"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 43,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-demethylase/focused-tests.xml",
+      "sha256": "007b20a2aeec97c294f16e92f7beadd39a9e73015a84cd6ec7feea9c72b93664"
+    },
+    "skipped": 0,
+    "tests": 43
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_demethylase_20261014.py",
+      "sha256": "145b006fe98e11781db6a356cfcf427979d0124c1c43d42457f2989875e17ac2"
+    },
+    {
+      "path": "/private/tmp/verify_demethylase_taxa_20261014.py",
+      "sha256": "8b67151578bf0bae1950c96af2e381dfe61284c39907918a00d6b759d07d1edb"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "native_http_attempts": 18,
+  "native_http_status_counts": {
+    "200": 18
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_primary_results_reviews": 0,
+  "new_protein_assignments": 0,
+  "offline_full_source_selection_and_request_reconstruction": "PASS",
+  "offline_native_replay": "PASS",
+  "outreach": 0,
+  "primary_paper_requests": 0,
+  "primary_source_holds_preserved": true,
+  "prior_research_checkpoints_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-card-demethylase/protected-before.json",
+    "sha256": "26c17f2e0c8890b86c54ebdeb8be56f0e5ea0db337e50b17828df3c83fff40cc"
+  },
+  "protected_files_checked": 7646,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reused_positive_native_name_sources": 17,
+  "review_fixes": [
+    "Reject higher-rank matches for qualified source names"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ALL_CARD_CYP51_ERG11_SOURCE_NAME_TAXONOMY_NOT_EXPERIMENTAL_RESISTANCE_GROUNDING",
+  "source_adoptions": 0,
+  "source_assertion_memberships_hash_and_position_checked": 141,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "assertion_memberships": 141,
+    "biological_records_changed": 0,
+    "cohort_records": 31,
+    "cohort_terms": 137,
+    "corpus_records_checked": 2939,
+    "distinct_selected_taxa": 31,
+    "experimental_assignments": 0,
+    "name_status_counts": {
+      "EXACT_NATIVE_NAME_REFERENCE": 31,
+      "GENUS_GROUP_NOT_ONE_ORGANISM": 2,
+      "NO_EXACT_ACTIVE_NAME_AT_SUPPORTED_RANK": 4
+    },
+    "new_name_queries": 18,
+    "new_protein_assignments": 0,
+    "reused_positive_names": 17,
+    "source_gene_name_contexts": 45,
+    "source_names": 37,
+    "term_name_status_counts": {
+      "EXACT_NATIVE_NAME_REFERENCE": 128,
+      "GENUS_GROUP_NOT_ONE_ORGANISM": 2,
+      "NO_EXACT_ACTIVE_NAME_AT_SUPPORTED_RANK": 7
+    },
+    "whole_record_primary_signoffs": 0
+  },
+  "taxonomy_cache_inventory": {
+    "path": "reports/resistance-grounding-2026-10-14-card-demethylase/taxonomy-cache-inventory.json",
+    "sha256": "478f95064740f637068145cdae0bcae3959baecc44b6e88afc2807d954ee1f34"
+  },
+  "verification_limit": "Source-name taxonomy only; no new protein, allele or primary phenotype signoff.",
+  "whole_record_primary_signoffs": 0
+}

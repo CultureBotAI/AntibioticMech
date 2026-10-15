@@ -1,0 +1,144 @@
+{
+  "all_new_taxonomy_scopes_without_prior_request_or_hold": true,
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "cache_independent_fixture_and_public_snapshot_tests": "PASS",
+  "cache_search_included_ignored_files": true,
+  "captured_at": "2026-10-15T01:38:54.916772+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-folp/cohort.json",
+    "sha256": "b4b711435a627de83976e52189c3c3c5fa238ed44806dbca7ac497f6d614a885"
+  },
+  "complete_selected_collection_aware_records_read": 10,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 460,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-folp/expanded-tests.xml",
+      "sha256": "76b8ad243ee13ee83950c270e045ce1088b02a5ed724baaf971d84f6aa069d35"
+    },
+    "skipped": 0,
+    "tests": 460
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c80b2975850f9b910b7026b4b7b3eccd6fdd6c5b11078d20f1c142627a626f68"
+    },
+    {
+      "path": "research/2026-10-14-card-folp-references.json",
+      "sha256": "7947d3ad4d4134ebcc1b4bcaa31f9f370f4a49c86fbc822ae021fc754d46ff8c"
+    },
+    {
+      "path": "scripts/audit_card_folp_references.py",
+      "sha256": "548055de9c6bae1b8e55fc406892ddbaf868f0932a82b228f659f932ae8a43d1"
+    },
+    {
+      "path": "tests/test_card_folp_references.py",
+      "sha256": "a3f317a3fb2c16cec48de0e380328bdc8ef6ab257a8190396e96ba1cd78435dc"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 50,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-folp/focused-tests.xml",
+      "sha256": "34ef586bd1b008506b7f8c787cea3ffa9ce473d61557a5e58b9173f01c25aa40"
+    },
+    "skipped": 0,
+    "tests": 50
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_folp_20261014.py",
+      "sha256": "83684ab9c3cc41db649a48c0976b8f756b39e521771b1c3d029c93593b8aea2b"
+    },
+    {
+      "path": "/private/tmp/verify_folp_20261014.py",
+      "sha256": "1f730df9c2ee825a0ce0cbb540f85a4db7438e14696935db968bdf25d507c519"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "native_http_attempts": 14,
+  "native_http_status_counts": {
+    "200": 14
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_candidate_taxonomy_queries": 6,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_name_queries": 1,
+  "new_primary_result_reviews": 0,
+  "new_reviewed_gene_queries": 5,
+  "new_unreviewed_gene_queries": 2,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_native_replay": "PASS",
+  "outreach": 0,
+  "primary_access_holds_preserved": true,
+  "primary_paper_requests": 0,
+  "prior_ecoli_reference_metadata_concordance": "PASS",
+  "prior_research_checkpoints_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-card-folp/protected-before.json",
+    "sha256": "702b545db50710e16dea122ac785f0091f6f98463d5f5a0905ddf090bc07f35e"
+  },
+  "protected_files_checked": 7664,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reused_candidate_taxonomy_responses": 4,
+  "reused_name_contexts": 4,
+  "review_fixes": [
+    "Require exact source-name lineage agreement, not only a shared TaxID",
+    "Retain native no-rank scope instead of broadening to a species",
+    "Accept explicit native synonyms without inventing a folP/folP1 crosswalk",
+    "Bind unreviewed fallback to the complete reviewed zero-hit evidence"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ALL_CARD_FOLP_REFERENCE_CONTEXTS_NOT_EXPERIMENTAL_ALLELES_OR_PHENOTYPES",
+  "source_adoptions": 0,
+  "source_claim_content_hashes_and_positions_checked": 21,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "biological_records_changed": 0,
+    "corpus_records_hash_checked": 2939,
+    "experimental_assignments": 0,
+    "native_protein_flags": {
+      "None": 10
+    },
+    "reference_proteins": 10,
+    "reference_taxa": 10,
+    "resolved_source_names": 5,
+    "source_assertions": 21,
+    "source_names": 5,
+    "source_records": 10,
+    "source_terms": 5,
+    "term_status_counts": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 2,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 1,
+      "REVIEWED_REFERENCE": 1,
+      "UNREVIEWED_CANDIDATE": 1
+    },
+    "terms_with_candidates": 4,
+    "whole_record_primary_signoffs": 0
+  },
+  "verification_limit": "Reference identity only; no tested allele, compound-specific phenotype or primary-results signoff.",
+  "whole_record_primary_signoffs": 0
+}
