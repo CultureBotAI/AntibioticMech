@@ -1,0 +1,1111 @@
+{
+  "attribution": "CARD/ARO CC BY 4.0; UniProt Consortium release 2026_03 CC BY 4.0; Europe PMC metadata; primary study DOI:10.1186/s12864-016-3480-x, selected text context only.",
+  "claims": [
+    {
+      "aro_id": "ARO:3009275",
+      "claim_sha256": "5a3565245a9ad9795e44e341afafb3f9b9ce585c0324f4d5b2aeb4bb677a0dbf",
+      "position": 0,
+      "record_identifier": "CHEBI:40909"
+    },
+    {
+      "aro_id": "ARO:3009279",
+      "claim_sha256": "7ee314ddaf0bca91993f451b1d593667f0fd7ab25388e48087659961f2b47199",
+      "position": 1,
+      "record_identifier": "CHEBI:40909"
+    },
+    {
+      "aro_id": "ARO:3009280",
+      "claim_sha256": "8277060380d9711ac7ed4505a2f602f58d5a23b4fa59ce64672e7a34b485c860",
+      "position": 2,
+      "record_identifier": "CHEBI:40909"
+    },
+    {
+      "aro_id": "ARO:3009276",
+      "claim_sha256": "3e58e18856ade61d5979d61235c6c642995ddd41b5c896cfcb693c3b1d58f28a",
+      "position": 0,
+      "record_identifier": "antibioticmech:aro-dfdbce9a83"
+    },
+    {
+      "aro_id": "ARO:3009281",
+      "claim_sha256": "b15069189b61efe9d923c1efbed6a5e225534788ef44f200e710232358c5fe29",
+      "position": 0,
+      "record_identifier": "CHEBI:2962"
+    },
+    {
+      "aro_id": "ARO:3009278",
+      "claim_sha256": "eedab2bd4dae718e3895c40bd9cad65a5ecfba22ce999b770f1ca1751e87a691",
+      "position": 0,
+      "record_identifier": "CHEBI:78780"
+    }
+  ],
+  "constraints": {
+    "biological_writes": false,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "held_sources_retried": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "operational_sequence_variant_or_protocol_fields_exported": false,
+    "outreach": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-14",
+  "doi_discrepancies": [
+    {
+      "independent_metadata_pmid": "PMID:29996698",
+      "independently_reported_doi": "10.1094/phyto-04-18-0128-r",
+      "native_doi": ".1094/PHYTO-04-18-0128-R",
+      "native_or_prior_artifact_corrected": false,
+      "native_reference_number": 1,
+      "primary_resistance_result_verified": false,
+      "protein_accession": "UniProtKB:A0A344X8F3"
+    },
+    {
+      "independent_metadata_pmid": "PMID:29996698",
+      "independently_reported_doi": "10.1094/phyto-04-18-0128-r",
+      "native_doi": ".1094/PHYTO-04-18-0128-R",
+      "native_or_prior_artifact_corrected": false,
+      "native_reference_number": 1,
+      "primary_resistance_result_verified": false,
+      "protein_accession": "UniProtKB:A0A344X8F5"
+    }
+  ],
+  "inputs": {
+    "census": {
+      "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+      "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/cohort.json",
+      "sha256": "75a33d20a3a496dafa3f420ef48af3260f07c04990486a1f53090ce3ae5cf049"
+    },
+    "definition_citations": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior": {
+      "path": "research/2026-10-14-card-cytochrome-b-references.json",
+      "sha256": "19b910e1f1275825900c90f6e72a01be5d18c9d3250d1937073f41d536e880e7"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-14-card-cytochrome-b-verification.json",
+      "sha256": "0d409643708b344e19f9afa827311615519fecff4ccb5e6b429eab2f01a20e7f"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limitations": [
+    "Bibliography memberships and strain comments are metadata, not independent resistance observations.",
+    "Submission titles without publication identifiers are retained, not treated as primary results.",
+    "The primary paper's sensu-lato group is not an exact modern experimental TaxID assignment.",
+    "Matching source isolate labels establish citation context only, not a protein/allele/genome crosswalk.",
+    "Selected primary text was inspected; figures were not visually reviewed and supplements were not obtained.",
+    "The 403 is a held HTML supplement-link discovery route, not absence of the already obtained primary XML.",
+    "The 2018 publication has indexed abstract context only; its primary text remains unrequested.",
+    "An independently reported DOI does not silently repair native UniProt metadata or verify resistance."
+  ],
+  "primary_context": {
+    "absence_of_resistance_words_is_susceptibility": false,
+    "doi": "10.1186/s12864-016-3480-x",
+    "figures_visually_reviewed": false,
+    "full_paper_signoff": false,
+    "locations": {
+      "FPar2": {
+        "normalized_text_sha256": "421362ef1ddb77a14b08c40193e50f1686a4337be2b1e0ad8ac9c4cf740c92b4",
+        "xpath": "/article/body/sec[6]/sec[2]"
+      },
+      "Sec16": {
+        "normalized_text_sha256": "fc984b2216953e260d7b123c6a06fa803009d55a47c5b8bb5284b56ed1cf9536",
+        "xpath": "/article/body/sec[5]"
+      },
+      "Sec9": {
+        "normalized_text_sha256": "fe9bbf0fee45c5f530b9e8dd62799e542813970bca3dcb782a762a753b737e6a",
+        "xpath": "/article/body/sec[3]/sec[1]"
+      }
+    },
+    "numeric_AST_exported": false,
+    "off_target_figure_accessions_used": false,
+    "pmid": "PMID:28201983",
+    "primary_xml_obtained": true,
+    "selected_text_establishes_drug_specific_resistance": false,
+    "siamense_sensu_lato_collapsed_to_current_species": false,
+    "source": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-28201983-attempt.json",
+        "sha256": "5beec21e1e5b6d9cae8abb56708b1bb3ef132b5348530e20850fdb9cc0b6c6e1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-28201983-response.bin",
+        "sha256": "f52cea864b969752375278f97b5e641a5472d6fc5ba6bb4ebc22873dab3e3117"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-plan.json",
+        "sha256": "e8c8880ffc1f727c97c59aaf3333743cc859dbc264f1184ccf4b5ca7f95a003d"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-28201983-receipt.json",
+        "sha256": "68eacdb1444e8ff9af7ba4ec3527057aeff0f58d974c0dee0c8af0a7c73c85f1"
+      },
+      "retrieved_at": "2026-10-15T05:34:44.813794+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5311727/fullTextXML"
+    },
+    "source_isolate_groups": [
+      {
+        "experimental_genome_accessions": [],
+        "experimental_subject_taxon_id": null,
+        "resistant_allele_assignment": null,
+        "source_isolate_labels": [
+          "1104\u20137"
+        ],
+        "source_organism_label": "C. fructicola"
+      },
+      {
+        "experimental_genome_accessions": [],
+        "experimental_subject_taxon_id": null,
+        "resistant_allele_assignment": null,
+        "source_isolate_labels": [
+          "XY-15"
+        ],
+        "source_organism_label": "C. aenigma"
+      },
+      {
+        "experimental_genome_accessions": [],
+        "experimental_subject_taxon_id": null,
+        "resistant_allele_assignment": null,
+        "source_isolate_labels": [
+          "LQ33"
+        ],
+        "source_organism_label": "C. gloeosporioides sensu stricto"
+      },
+      {
+        "experimental_genome_accessions": [],
+        "experimental_subject_taxon_id": null,
+        "resistant_allele_assignment": null,
+        "source_isolate_labels": [
+          "SQ01",
+          "LQ22",
+          "ZH01",
+          "ZH02",
+          "ZH03",
+          "YT02"
+        ],
+        "source_organism_label": "C. siamense s.l."
+      }
+    ],
+    "status": "SELECTED_PRIMARY_TEXT_CONTEXT_REVIEWED_NOT_FULL_PAPER_SIGNOFF",
+    "study_context": "MITOCHONDRIAL_GENOME_COMPARISON_AND_TAXONOMIC_PLACEMENT",
+    "supplement": {
+      "accession_locators": [
+        "Additional file 1, Table S1",
+        "Additional file 1, Table S3"
+      ],
+      "genome_crosswalk_status": "UNVERIFIED_SUPPLEMENT_NOT_RETRIEVED",
+      "native_media_id": "MOESM1",
+      "native_relative_href": "12864_2016_3480_MOESM1_ESM.xlsx",
+      "retrieved": false,
+      "reviewed": false
+    }
+  },
+  "proteins": {
+    "UniProtKB:A0A0H3VGN4": {
+      "entry_version": 34,
+      "exact_resistant_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "native_protein_flag": null,
+      "reference_rows": [
+        {
+          "citation_type": "submission",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [],
+          "native_citation_id": "CI-D8VREB55MQOCM",
+          "native_reference_number": 1,
+          "primary_results_reviewed": false,
+          "publication_date": "OCT-2014",
+          "reference_strain_comments": [
+            "OD13-5"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": "EMBL/GenBank/DDBJ databases",
+          "title": "Identification and Characterization of Colletotrichum siamense isolates Resistant to Both MBC and QoI Fungicides."
+        }
+      ],
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "sequence_version": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-attempt.json",
+          "sha256": "29fb96e9e588ec99f7cab37248583325479dcd2fb21b27968890afed6e9462b8"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-response.bin",
+          "sha256": "f2a1314c94ba3b9a51c85fc16249b78182b01e397a139391428dc7e2957ea954"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+          "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-receipt.json",
+          "sha256": "79d41fa6c69a99048bf9e913c2177688cda5589026f1847ad1c0ff57a092a008"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:20:39.287875+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A690259+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "UniProtKB:A0A1S6LNE2": {
+      "entry_version": 28,
+      "exact_resistant_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "native_protein_flag": null,
+      "reference_rows": [
+        {
+          "citation_type": "journal article",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "28201983"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1186/s12864-016-3480-x"
+            }
+          ],
+          "native_citation_id": "28201983",
+          "native_reference_number": 1,
+          "primary_results_reviewed": false,
+          "publication_date": "2017",
+          "reference_strain_comments": [
+            "ZH01",
+            "ZH02",
+            "ZH03"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": null,
+          "title": "Comparative analysis of the mitochondrial genomes of Colletotrichum gloeosporioides sensu lato: insights into the evolution of a fungal species complex interacting with diverse plants."
+        },
+        {
+          "citation_type": "submission",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [],
+          "native_citation_id": "CI-F7MEAUCE0D1LP",
+          "native_reference_number": 2,
+          "primary_results_reviewed": false,
+          "publication_date": "APR-2021",
+          "reference_strain_comments": [],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": "EMBL/GenBank/DDBJ databases",
+          "title": "The complete mitochondrial genome of Colletotrichum siamense isolated from Carya illinoinensis in Korea."
+        }
+      ],
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "sequence_version": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-attempt.json",
+          "sha256": "29fb96e9e588ec99f7cab37248583325479dcd2fb21b27968890afed6e9462b8"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-response.bin",
+          "sha256": "f2a1314c94ba3b9a51c85fc16249b78182b01e397a139391428dc7e2957ea954"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+          "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-receipt.json",
+          "sha256": "79d41fa6c69a99048bf9e913c2177688cda5589026f1847ad1c0ff57a092a008"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:20:39.287875+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A690259+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "UniProtKB:A0A1S6LNG5": {
+      "entry_version": 28,
+      "exact_resistant_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "native_protein_flag": null,
+      "reference_rows": [
+        {
+          "citation_type": "journal article",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "28201983"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1186/s12864-016-3480-x"
+            }
+          ],
+          "native_citation_id": "28201983",
+          "native_reference_number": 1,
+          "primary_results_reviewed": false,
+          "publication_date": "2017",
+          "reference_strain_comments": [
+            "LQ22",
+            "SQ01",
+            "YT02"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": null,
+          "title": "Comparative analysis of the mitochondrial genomes of Colletotrichum gloeosporioides sensu lato: insights into the evolution of a fungal species complex interacting with diverse plants."
+        }
+      ],
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "sequence_version": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-attempt.json",
+          "sha256": "29fb96e9e588ec99f7cab37248583325479dcd2fb21b27968890afed6e9462b8"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-response.bin",
+          "sha256": "f2a1314c94ba3b9a51c85fc16249b78182b01e397a139391428dc7e2957ea954"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+          "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-receipt.json",
+          "sha256": "79d41fa6c69a99048bf9e913c2177688cda5589026f1847ad1c0ff57a092a008"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:20:39.287875+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A690259+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "UniProtKB:A0A1S6LNJ6": {
+      "entry_version": 29,
+      "exact_resistant_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "native_protein_flag": null,
+      "reference_rows": [
+        {
+          "citation_type": "journal article",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "28201983"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1186/s12864-016-3480-x"
+            }
+          ],
+          "native_citation_id": "28201983",
+          "native_reference_number": 1,
+          "primary_results_reviewed": false,
+          "publication_date": "2017",
+          "reference_strain_comments": [
+            "LQ33"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": null,
+          "title": "Comparative analysis of the mitochondrial genomes of Colletotrichum gloeosporioides sensu lato: insights into the evolution of a fungal species complex interacting with diverse plants."
+        }
+      ],
+      "reference_species_taxon_id": "NCBITaxon:474922",
+      "reference_taxon_id": "NCBITaxon:474922",
+      "sequence_version": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-attempt.json",
+          "sha256": "c74ca7313ccb0c3e5f28f5ca811bb2ece7fcde7b103bdf85bfc7636c7a72574b"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-response.bin",
+          "sha256": "55b73d8f6a6dd814dd44042d6800d7ad9081ff7499dbddfd9c8ddd0db0054a00"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+          "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-474922-receipt.json",
+          "sha256": "1645a8d04f8b041cce6925340917234455464f5a5e7a8331498ed9a81e66243d"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:19:51.055319+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A474922+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "UniProtKB:A0A344X8F3": {
+      "entry_version": 17,
+      "exact_resistant_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "native_protein_flag": "Fragment",
+      "reference_rows": [
+        {
+          "citation_type": "journal article",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [
+            {
+              "database": "DOI",
+              "native_id": ".1094/PHYTO-04-18-0128-R",
+              "replacement": null,
+              "status": "MALFORMED_NATIVE_DOI_NOT_CORRECTED"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "29996698"
+            },
+            {
+              "database": "DOI",
+              "id": ".1094/PHYTO-04-18-0128-R"
+            }
+          ],
+          "native_citation_id": "29996698",
+          "native_reference_number": 1,
+          "primary_results_reviewed": false,
+          "publication_date": "2018",
+          "reference_strain_comments": [
+            "16-450",
+            "96-85D"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": null,
+          "title": "Development of High-Throughput SNP Genotyping Assays for Rapid Detection of Strawberry Colletotrichum Species and the G143A Mutation."
+        },
+        {
+          "citation_type": "submission",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [],
+          "native_citation_id": "CI-62CR19ATPLUQL",
+          "native_reference_number": 2,
+          "primary_results_reviewed": false,
+          "publication_date": "OCT-2020",
+          "reference_strain_comments": [
+            "CHO15",
+            "KFF3",
+            "KFF4",
+            "KFF9",
+            "Mclf9",
+            "Rdl82"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": "EMBL/GenBank/DDBJ databases",
+          "title": "Sensitivity of Colletotrichum species that cause bitter rot of apples in the Mid-Atlantic USA to eight fungicides in FRAC groups 1, 9, 11, 12, and 29."
+        }
+      ],
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "sequence_version": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-attempt.json",
+          "sha256": "29fb96e9e588ec99f7cab37248583325479dcd2fb21b27968890afed6e9462b8"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-response.bin",
+          "sha256": "f2a1314c94ba3b9a51c85fc16249b78182b01e397a139391428dc7e2957ea954"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+          "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-receipt.json",
+          "sha256": "79d41fa6c69a99048bf9e913c2177688cda5589026f1847ad1c0ff57a092a008"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:20:39.287875+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A690259+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "UniProtKB:A0A344X8F5": {
+      "entry_version": 17,
+      "exact_resistant_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "native_protein_flag": "Fragment",
+      "reference_rows": [
+        {
+          "citation_type": "journal article",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [
+            {
+              "database": "DOI",
+              "native_id": ".1094/PHYTO-04-18-0128-R",
+              "replacement": null,
+              "status": "MALFORMED_NATIVE_DOI_NOT_CORRECTED"
+            }
+          ],
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "29996698"
+            },
+            {
+              "database": "DOI",
+              "id": ".1094/PHYTO-04-18-0128-R"
+            }
+          ],
+          "native_citation_id": "29996698",
+          "native_reference_number": 1,
+          "primary_results_reviewed": false,
+          "publication_date": "2018",
+          "reference_strain_comments": [
+            "10-110",
+            "16-440"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": null,
+          "title": "Development of High-Throughput SNP Genotyping Assays for Rapid Detection of Strawberry Colletotrichum Species and the G143A Mutation."
+        },
+        {
+          "citation_type": "submission",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [],
+          "native_citation_id": "CI-62CR19ATPLUQL",
+          "native_reference_number": 2,
+          "primary_results_reviewed": false,
+          "publication_date": "OCT-2020",
+          "reference_strain_comments": [
+            "DLC6a",
+            "DLC6b"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": "EMBL/GenBank/DDBJ databases",
+          "title": "Sensitivity of Colletotrichum species that cause bitter rot of apples in the Mid-Atlantic USA to eight fungicides in FRAC groups 1, 9, 11, 12, and 29."
+        }
+      ],
+      "reference_species_taxon_id": "NCBITaxon:690259",
+      "reference_taxon_id": "NCBITaxon:690259",
+      "sequence_version": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-attempt.json",
+          "sha256": "29fb96e9e588ec99f7cab37248583325479dcd2fb21b27968890afed6e9462b8"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-response.bin",
+          "sha256": "f2a1314c94ba3b9a51c85fc16249b78182b01e397a139391428dc7e2957ea954"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+          "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-690259-receipt.json",
+          "sha256": "79d41fa6c69a99048bf9e913c2177688cda5589026f1847ad1c0ff57a092a008"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:20:39.287875+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A690259+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "UniProtKB:E3CU97": {
+      "entry_version": 64,
+      "exact_resistant_allele_assignment": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "native_protein_flag": null,
+      "reference_rows": [
+        {
+          "citation_type": "submission",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [],
+          "native_citation_id": "CI-205F1G7ICJT41",
+          "native_reference_number": 1,
+          "primary_results_reviewed": false,
+          "publication_date": "SEP-2010",
+          "reference_strain_comments": [
+            "M1.001 / M2 / FGSC 10212"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": "EMBL/GenBank/DDBJ databases",
+          "title": "The Genome Sequence of Glomerella graminicola strain M1.001."
+        },
+        {
+          "citation_type": "submission",
+          "experimental_subject_assignment": false,
+          "identifier_issues": [],
+          "identifiers": [],
+          "native_citation_id": "CI-3R3R1PTV5CTFS",
+          "native_reference_number": 2,
+          "primary_results_reviewed": false,
+          "publication_date": "SEP-2010",
+          "reference_strain_comments": [
+            "M1.001 / M2 / FGSC 10212"
+          ],
+          "resistance_inferred_from_citation": false,
+          "strain_comment_scope": "NATIVE_REFERENCE_METADATA_NOT_TESTED_RESISTANCE_SUBJECTS",
+          "submission_database": "EMBL/GenBank/DDBJ databases",
+          "title": null
+        }
+      ],
+      "reference_species_taxon_id": "NCBITaxon:31870",
+      "reference_taxon_id": "NCBITaxon:645133",
+      "sequence_version": 1,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-31870-attempt.json",
+          "sha256": "179d75eb4e66b50bb3578c00d28ce10c1075aeb31f4a64da17e1cc91eedc32a3"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-31870-response.bin",
+          "sha256": "60a72f45d8cb941bde6317981865013b0f66f6a182ede861cf1126201089ef2f"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-plan.json",
+          "sha256": "af3a44c03ff6cd0c0886036f6e3d392b5389e483fab4d2f892ed094c1b9c48c9"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-card-cytochrome-b/unreviewed-31870-receipt.json",
+          "sha256": "bccb41a3a02174dca4b65f37c61ae7f5d020bd27f0d538520d2c3f7a3df7da32"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T05:20:38.490384+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22cytochrome+b%22+AND+taxonomy_id%3A31870+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    }
+  },
+  "publications": {
+    "28201983": {
+      "abstract_is_experimental_crosswalk": false,
+      "abstract_sha256": "0b4f5baa9e293a5a3118c3e50655493151dd7fe697706f4c1cb5a7cf0e24e9e2",
+      "doi": "10.1186/s12864-016-3480-x",
+      "global_access_or_paywall_inferred": false,
+      "inEPMC": "Y",
+      "isOpenAccess": "Y",
+      "pmcid": "PMC5311727",
+      "pmid": "PMID:28201983",
+      "primary_request_performed": true,
+      "pubYear": "2017",
+      "scope": "INDEXED_METADATA_AND_ABSTRACT_CONTEXT_NOT_PRIMARY_RESULTS",
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-28201983-attempt.json",
+          "sha256": "f364d35fd59a5b559790e836e78a5fcd356df236ee0ae12aef296ab5eec23d59"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-28201983-response.bin",
+          "sha256": "11d50f9b0ef2f5081ba810d34d3df4f328f316c85903ddb0dacfc8f0d09aa384"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-plan.json",
+          "sha256": "dca295b4880676f571b8627089d022585b5c225dd1ead318d9dcf9c1c1ad4b0a"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-28201983-receipt.json",
+          "sha256": "b228efc91b584abf12e35d1e15413aee163b65c721a66eadcaa2f429b90eeb12"
+        },
+        "retrieved_at": "2026-10-15T05:32:30.083870+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28201983+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+      },
+      "title": "Comparative analysis of the mitochondrial genomes of Colletotrichum gloeosporioides sensu lato: insights into the evolution of a fungal species complex interacting with diverse plants."
+    },
+    "29996698": {
+      "abstract_is_experimental_crosswalk": false,
+      "abstract_sha256": "d5990347ba3034f64539225a27d196c067f8f96c7b5a2037d4bf124916d26ad3",
+      "doi": "10.1094/phyto-04-18-0128-r",
+      "global_access_or_paywall_inferred": false,
+      "inEPMC": "N",
+      "isOpenAccess": "N",
+      "pmcid": null,
+      "pmid": "PMID:29996698",
+      "primary_request_performed": false,
+      "pubYear": "2018",
+      "scope": "INDEXED_METADATA_AND_ABSTRACT_CONTEXT_NOT_PRIMARY_RESULTS",
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-29996698-attempt.json",
+          "sha256": "5889e2dd91988473b7a00350bffe7fa891a648f62b407f6739ed2d2923af3603"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-29996698-response.bin",
+          "sha256": "0ad0e128bb269298a30a3fdbbf551658a4c3c8763228b885eab403e35c709799"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-plan.json",
+          "sha256": "dca295b4880676f571b8627089d022585b5c225dd1ead318d9dcf9c1c1ad4b0a"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-29996698-receipt.json",
+          "sha256": "80750220729970b1a010590e02e3192ad2f4a5a157aa63e29e11ce58ad991815"
+        },
+        "retrieved_at": "2026-10-15T05:33:14.378901+00:00",
+        "status": 200,
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29996698+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+      },
+      "title": "Development of High-Throughput SNP Genotyping Assays for Rapid Detection of Strawberry Colletotrichum Species and the G143A Mutation."
+    }
+  },
+  "records": [
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "2",
+      "identifier": "CHEBI:40909",
+      "label": "azoxystrobin",
+      "lineage_checked_taxids": "NCBITaxon:1159556|NCBITaxon:117187|NCBITaxon:318829|NCBITaxon:40559",
+      "path": "data/antibiotics/antifungal/azoxystrobin.yaml",
+      "primary_papers_pending": "DOI:10.1038/srep16881|DOI:10.1080/21505594.2025.2555419|DOI:10.3390/jof12020111|PMID:12612806|PMID:26596626|PMID:40934067|PMID:41745253",
+      "record_sha256": "be804c56fd7f93df43fa7980b9d9f4de86e5286f4d14ed47102f8646495c2fb8",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "11",
+      "score_rules": "0",
+      "standard_inchi_key": "WFDXOXNFNRHQEC-GHRIWEEISA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": "UniProtKB:A0A089QDC9|UniProtKB:A0A8E5ME34|UniProtKB:P53373|UniProtKB:W7MZ22"
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "antibioticmech:aro-dfdbce9a83",
+      "label": "benzothiostrobin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/benzothiostrobin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "91ce384b3c751d4c5b77bdf7342fe9bf7b8725a0bc30c45b6d3fe8cc625ac0d8",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "1",
+      "score_rules": "0",
+      "standard_inchi_key": "OMGAIUZPUSZZME-WJDWOHSUSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:2962",
+      "label": "kresoxim-methyl",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/kresoxim-methyl.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "ed31ac691818fd5e49281a22463a73316d543b1860a149ca34d64e3fa2f3a008",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "1",
+      "score_rules": "0",
+      "standard_inchi_key": "ZOTBXTZVPHCKPN-HTXNQAPBSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:78780",
+      "label": "pyraclostrobin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/pyraclostrobin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "9ef00a401f2ca54eb0b6457eb1e0a9994ec6776e1dac2a56cddace18cd8de1e0",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "3",
+      "score_rules": "0",
+      "standard_inchi_key": "HZRSNVGNWUDEFX-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    }
+  ],
+  "reference_comment_paper_label_matches": [
+    {
+      "native_reference_number": 1,
+      "paper_source_organism_label": "C. siamense s.l.",
+      "protein_accession": "UniProtKB:A0A1S6LNE2",
+      "reference_strain_comment": "ZH01",
+      "scope": "MATCHING_CITATION_LABEL_NOT_RESISTANCE_SUBJECT_OR_GENOME_CROSSWALK"
+    },
+    {
+      "native_reference_number": 1,
+      "paper_source_organism_label": "C. siamense s.l.",
+      "protein_accession": "UniProtKB:A0A1S6LNE2",
+      "reference_strain_comment": "ZH02",
+      "scope": "MATCHING_CITATION_LABEL_NOT_RESISTANCE_SUBJECT_OR_GENOME_CROSSWALK"
+    },
+    {
+      "native_reference_number": 1,
+      "paper_source_organism_label": "C. siamense s.l.",
+      "protein_accession": "UniProtKB:A0A1S6LNE2",
+      "reference_strain_comment": "ZH03",
+      "scope": "MATCHING_CITATION_LABEL_NOT_RESISTANCE_SUBJECT_OR_GENOME_CROSSWALK"
+    },
+    {
+      "native_reference_number": 1,
+      "paper_source_organism_label": "C. siamense s.l.",
+      "protein_accession": "UniProtKB:A0A1S6LNG5",
+      "reference_strain_comment": "LQ22",
+      "scope": "MATCHING_CITATION_LABEL_NOT_RESISTANCE_SUBJECT_OR_GENOME_CROSSWALK"
+    },
+    {
+      "native_reference_number": 1,
+      "paper_source_organism_label": "C. siamense s.l.",
+      "protein_accession": "UniProtKB:A0A1S6LNG5",
+      "reference_strain_comment": "SQ01",
+      "scope": "MATCHING_CITATION_LABEL_NOT_RESISTANCE_SUBJECT_OR_GENOME_CROSSWALK"
+    },
+    {
+      "native_reference_number": 1,
+      "paper_source_organism_label": "C. siamense s.l.",
+      "protein_accession": "UniProtKB:A0A1S6LNG5",
+      "reference_strain_comment": "YT02",
+      "scope": "MATCHING_CITATION_LABEL_NOT_RESISTANCE_SUBJECT_OR_GENOME_CROSSWALK"
+    },
+    {
+      "native_reference_number": 1,
+      "paper_source_organism_label": "C. gloeosporioides sensu stricto",
+      "protein_accession": "UniProtKB:A0A1S6LNJ6",
+      "reference_strain_comment": "LQ33",
+      "scope": "MATCHING_CITATION_LABEL_NOT_RESISTANCE_SUBJECT_OR_GENOME_CROSSWALK"
+    }
+  ],
+  "request_sources": {
+    "article-page": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/article-page-attempt.json",
+        "sha256": "137734d5dbaf87f81a01447325afee3106382018f0a839023d7e8a94bdba3a7e"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/article-page-response.bin",
+        "sha256": "5a2e062840d156415cd30661334c71bc53ca442a6a65f9b15dabf72cdb331a48"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/asset-discovery-plan.json",
+        "sha256": "bc9263e5ef00493c75570bc9e69dfb2aacc9a36af1b18b7ce62d5a22c99de2b0"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/article-page-receipt.json",
+        "sha256": "75bebf1d98aa458e11ffa413b80162a13a1a1ea2db9641fe9d2fa17671f8cd30"
+      },
+      "retrieved_at": "2026-10-15T05:37:48.280916+00:00",
+      "status": 403,
+      "url": "https://europepmc.org/articles/PMC5311727"
+    },
+    "metadata-28201983": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-28201983-attempt.json",
+        "sha256": "f364d35fd59a5b559790e836e78a5fcd356df236ee0ae12aef296ab5eec23d59"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-28201983-response.bin",
+        "sha256": "11d50f9b0ef2f5081ba810d34d3df4f328f316c85903ddb0dacfc8f0d09aa384"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-plan.json",
+        "sha256": "dca295b4880676f571b8627089d022585b5c225dd1ead318d9dcf9c1c1ad4b0a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-28201983-receipt.json",
+        "sha256": "b228efc91b584abf12e35d1e15413aee163b65c721a66eadcaa2f429b90eeb12"
+      },
+      "retrieved_at": "2026-10-15T05:32:30.083870+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28201983+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+    },
+    "metadata-29996698": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-29996698-attempt.json",
+        "sha256": "5889e2dd91988473b7a00350bffe7fa891a648f62b407f6739ed2d2923af3603"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-29996698-response.bin",
+        "sha256": "0ad0e128bb269298a30a3fdbbf551658a4c3c8763228b885eab403e35c709799"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-plan.json",
+        "sha256": "dca295b4880676f571b8627089d022585b5c225dd1ead318d9dcf9c1c1ad4b0a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/metadata-29996698-receipt.json",
+        "sha256": "80750220729970b1a010590e02e3192ad2f4a5a157aa63e29e11ce58ad991815"
+      },
+      "retrieved_at": "2026-10-15T05:33:14.378901+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A29996698+AND+SRC%3AMED&format=json&resultType=core&pageSize=1"
+    },
+    "primary-28201983": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-28201983-attempt.json",
+        "sha256": "5beec21e1e5b6d9cae8abb56708b1bb3ef132b5348530e20850fdb9cc0b6c6e1"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-28201983-response.bin",
+        "sha256": "f52cea864b969752375278f97b5e641a5472d6fc5ba6bb4ebc22873dab3e3117"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-plan.json",
+        "sha256": "e8c8880ffc1f727c97c59aaf3333743cc859dbc264f1184ccf4b5ca7f95a003d"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cytochrome-b-evidence/primary-28201983-receipt.json",
+        "sha256": "68eacdb1444e8ff9af7ba4ec3527057aeff0f58d974c0dee0c8af0a7c73c85f1"
+      },
+      "retrieved_at": "2026-10-15T05:34:44.813794+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5311727/fullTextXML"
+    }
+  },
+  "scope": "CYTOCHROME_B_BIBLIOGRAPHIES_AND_SELECTED_PRIMARY_TEXT_NOT_RESISTANCE_ALLELE_SIGNOFF",
+  "summary": {
+    "complete_records_read": 4,
+    "corpus_records_hash_checked": 2939,
+    "doi_discrepancy_memberships": 2,
+    "memberships_with_strain_comments": 10,
+    "native_reference_memberships": 11,
+    "new_experimental_assignments": 0,
+    "new_network_requests": 4,
+    "new_supplement_discovery_holds": 1,
+    "new_verified_resistance_results": 0,
+    "paper_isolate_labels": 9,
+    "primary_xml_obtained": 1,
+    "reference_comment_label_matches": 7,
+    "reference_proteins": 7,
+    "reference_types": {
+      "journal article": 5,
+      "submission": 6
+    },
+    "references_without_identifiers": 6,
+    "selected_primary_text_context_reviews": 1,
+    "source_claims": 6,
+    "source_terms": 6,
+    "strain_comment_memberships": 22,
+    "term_protein_links": 10,
+    "unique_publications_with_identifiers": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "supplement_discovery_hold": {
+    "global_inaccessibility_inferred": false,
+    "http_status": 403,
+    "negative_biological_evidence": false,
+    "paywall_inferred": false,
+    "primary_xml_obtained_before_hold": true,
+    "requires_new_direction_or_user_supplied_supplement": true,
+    "retrieved_at": "2026-10-15T05:37:48.280916+00:00",
+    "retry_or_alternate_route_performed": false,
+    "status": "HTML_SUPPLEMENT_LINK_DISCOVERY_403_CHALLENGE_HELD_NO_RETRY",
+    "supplement_retrieved": false,
+    "url": "https://europepmc.org/articles/PMC5311727"
+  },
+  "terms": {
+    "ARO:3009275": {
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "CHEBI:40909"
+      ],
+      "reference_citations_adopted_as_primary_support": false,
+      "reference_proteins": [
+        "UniProtKB:A0A1S6LNJ6"
+      ],
+      "source_definition_citations": [],
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations conferring resistance to azoxystrobin"
+    },
+    "ARO:3009276": {
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "antibioticmech:aro-dfdbce9a83"
+      ],
+      "reference_citations_adopted_as_primary_support": false,
+      "reference_proteins": [
+        "UniProtKB:A0A1S6LNJ6"
+      ],
+      "source_definition_citations": [],
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations conferring resistance to benzothiostrobin"
+    },
+    "ARO:3009278": {
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "CHEBI:78780"
+      ],
+      "reference_citations_adopted_as_primary_support": false,
+      "reference_proteins": [
+        "UniProtKB:A0A1S6LNJ6"
+      ],
+      "source_definition_citations": [],
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations conferring resistance to pyraclostrobin"
+    },
+    "ARO:3009279": {
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "CHEBI:40909"
+      ],
+      "reference_citations_adopted_as_primary_support": false,
+      "reference_proteins": [
+        "UniProtKB:A0A1S6LNE2",
+        "UniProtKB:A0A1S6LNG5",
+        "UniProtKB:A0A0H3VGN4",
+        "UniProtKB:A0A344X8F3",
+        "UniProtKB:A0A344X8F5"
+      ],
+      "source_definition_citations": [],
+      "source_label": "Colletotrichum siamense cytochrome b protein with mutations associated with resistance to azoxystrobin"
+    },
+    "ARO:3009280": {
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "CHEBI:40909"
+      ],
+      "reference_citations_adopted_as_primary_support": false,
+      "reference_proteins": [
+        "UniProtKB:E3CU97"
+      ],
+      "source_definition_citations": [],
+      "source_label": "Colletotrichum graminicola cytochrome b protein with mutations associated with resistance to azoxystrobin"
+    },
+    "ARO:3009281": {
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "CHEBI:2962"
+      ],
+      "reference_citations_adopted_as_primary_support": false,
+      "reference_proteins": [
+        "UniProtKB:A0A1S6LNJ6"
+      ],
+      "source_definition_citations": [],
+      "source_label": "Colletotrichum gloeosporioides cytochrome b protein with mutations associated with resistance to kresoxim-methyl"
+    }
+  }
+}
