@@ -282,7 +282,7 @@ def assert_pre_neurospora_checksum_record(path, checkpoint, receipt, restored):
         "correction; previous decisions, biological fields and activities unchanged.")
 
 
-def test_saved_dossier_scope_and_record_pins(tmp_path):
+def test_saved_dossier_scope_and_record_pins(tmp_path, pre_card_qualification_root):
     doc = json.loads(OUTPUT.read_bytes())
     summary = doc["summary"]
     assert (summary["selected_terms"], summary["selected_records"], summary["assertion_memberships"]) == (
@@ -313,7 +313,7 @@ def test_saved_dossier_scope_and_record_pins(tmp_path):
         "CHEBI:46081", "CHEBI:6076", "CHEBI:64355", "CHEBI:9448", "CHEBI:10023",
     }
     for row in doc["records"]:
-        path = ROOT / row["path"]
+        path = pre_card_qualification_root / row["path"]
         if row["identifier"] in latest_checkpoints:
             checkpoint = latest_checkpoints[row["identifier"]]
             assert checkpoint["path"] == row["path"]

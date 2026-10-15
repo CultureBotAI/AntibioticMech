@@ -220,14 +220,16 @@ def test_census_checks_current_records_including_ignored_files(tmp_path, monkeyp
         progress.current_records(tmp_path, census)
 
 
-def test_live_offline_export_reproduces_and_preserves_review_boundaries(monkeypatch):
+def test_historical_offline_export_reproduces_and_preserves_review_boundaries(
+    monkeypatch, pre_card_qualification_root,
+):
     import requests
 
     def forbidden(*args, **kwargs):
         pytest.fail("progress index must not contact any service")
 
     monkeypatch.setattr(requests.sessions.Session, "request", forbidden)
-    rows, descriptor = progress.build(ROOT)
+    rows, descriptor = progress.build(pre_card_qualification_root)
     tsv, metadata = progress.render(rows, descriptor)
     assert tsv == (ROOT / (progress.PREFIX + ".tsv")).read_bytes()
     assert metadata == (ROOT / (progress.PREFIX + ".json")).read_bytes()
