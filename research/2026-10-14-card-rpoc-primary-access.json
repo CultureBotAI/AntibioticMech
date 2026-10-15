@@ -1,0 +1,311 @@
+{
+  "access_states": {
+    "PMID:23208709": {
+      "article_obtained": false,
+      "http_status": 500,
+      "negative_biological_evidence": false,
+      "primary_results_reviewed": false,
+      "retry_or_alternate_route_performed": false,
+      "status": "TECHNICAL_HTTP_500_HOLD"
+    },
+    "PMID:30337678": {
+      "access_denial_or_paywall_inferred": false,
+      "article_obtained": false,
+      "authorization_code_or_cookie_values_exported": false,
+      "automatic_redirects": 0,
+      "credentials_supplied": false,
+      "final_article_request_performed": false,
+      "followed_destination_host": "idp.nature.com",
+      "followed_destination_path": "/authorize",
+      "manual_redirect_requests": 1,
+      "observed_status_chain": [
+        303,
+        302
+      ],
+      "primary_results_reviewed": false,
+      "status": "UNRESOLVED_PUBLISHER_REDIRECT_FLOW",
+      "unfollowed_destination_host": "idp.nature.com",
+      "unfollowed_destination_path": "/transit",
+      "unfollowed_query_keys": [
+        "code",
+        "redirect_uri"
+      ],
+      "unfollowed_redirect_uri_matches_article": true
+    }
+  },
+  "bibliographic_metadata_not_primary_results": {
+    "23208709": {
+      "doi": "10.1128/aac.01541-12",
+      "id": "23208709",
+      "pmcid": "PMC3553702",
+      "pmid": "23208709",
+      "pubYear": "2013",
+      "source": "MED",
+      "title": "Putative compensatory mutations in the rpoC gene of rifampin-resistant Mycobacterium tuberculosis are associated with ongoing transmission."
+    },
+    "30337678": {
+      "doi": "10.1038/s41598-018-33731-1",
+      "id": "30337678",
+      "pmcid": "PMC6194142",
+      "pmid": "30337678",
+      "pubYear": "2018",
+      "source": "MED",
+      "title": "Integrating standardized whole genome sequence analysis with a global Mycobacterium tuberculosis antibiotic resistance knowledgebase."
+    }
+  },
+  "claims": [
+    {
+      "aro_id": "ARO:3004994",
+      "claim_sha256": "97d7cb24278288b3b2fb52703816b0b3ee00fef80f1b2904e847d16772ff6e1d",
+      "position": 14,
+      "record_identifier": "CHEBI:45367"
+    },
+    {
+      "aro_id": "ARO:3004995",
+      "claim_sha256": "9a0b3eacba8b8d7e07dabf63c635645486b1e50db50b1c4d39033464abcaf126",
+      "position": 15,
+      "record_identifier": "CHEBI:45367"
+    },
+    {
+      "aro_id": "ARO:3004994",
+      "claim_sha256": "9154afe7a3af877505790320fb8a0be364cf760b090cf1e47c0a60bd47291e56",
+      "position": 29,
+      "record_identifier": "CHEBI:28077"
+    },
+    {
+      "aro_id": "ARO:3004995",
+      "claim_sha256": "d40314f45dc9266bfeb8d975816cd80a53431b8dfcc03962dbd2bc0096e9b2de",
+      "position": 30,
+      "record_identifier": "CHEBI:28077"
+    }
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/cohort.json",
+    "sha256": "7ddcae8ab222331573f0ad7a0382c16326ead4be42634b3ee24356ab4da96cd9"
+  },
+  "constraints": {
+    "authorization_codes_or_cookie_values_exported": false,
+    "error_or_redirect_is_negative_biological_evidence": false,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "held_first_paper_retried": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "outreach": 0,
+    "prior_primary_holds_preserved": true,
+    "publisher_article_return_and_Europe_PMC_second_route_unrequested": true,
+    "reuse_terms_review_resumed": false,
+    "sequences_variants_protocols_or_numeric_AST_exported": false,
+    "source_adoptions": 0
+  },
+  "date": "2026-10-14",
+  "inputs": {
+    "access_inventory": {
+      "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/prior-access-inventory.json",
+      "sha256": "791d1c951c63a5df96644c8cf7649260a2c52e454c493e5222ba9735a91a06b2"
+    },
+    "bibliography_archive": {
+      "path": "research/2026-10-08-resistance-discovery-expansion-candidates.json.gz",
+      "sha256": "6df989a88ca0e99f6280e981e91e5a3b4e45ed14565f45da3a7a37c9557adb92"
+    },
+    "census": {
+      "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+      "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+    },
+    "definition_citations": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior": {
+      "path": "research/2026-10-14-card-rpo-references.json",
+      "sha256": "2d37d6a07035b923d9378ffc27ad656e8a49d63ee9432434479c8655fe15be7b"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-14-card-rpo-references-verification.json",
+      "sha256": "76207b2b90712635de90b55dfec9ed62ede0de89f95cdac60bcf705af449fa81"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "pending_review_requirements": [
+    "Inspect both cited primary results and relevant supplements before adjudicating the source claim.",
+    "Distinguish compensation, co-occurrence and direct resistance causality.",
+    "Verify exact compound scope separately for rifampicin and rifabutin; class membership is not evidence.",
+    "Do not assign the unnamed generic term an organism or borrow the named term's citations.",
+    "Keep reference proteins and taxa separate from tested alleles, isolates and genomes."
+  ],
+  "prior_causal_review_flag": {
+    "basis": "CACHED_PUBLICATION_TITLE_ONLY_NOT_RESULTS_REVIEW",
+    "citation": "PMID:23208709",
+    "source_claim_corrected": false,
+    "status": "REVIEW_COMPENSATION_VERSUS_DIRECT_RESISTANCE_CAUSALITY"
+  },
+  "records": [
+    {
+      "activity_observations": "268",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:45367",
+      "label": "rifabutin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/rifabutin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "fdcf820d1eb37c4c3bbb21dc89ffe97d93b990fbebe7a8706811b475d43b18b1",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "17",
+      "score_rules": "0",
+      "standard_inchi_key": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "363",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:28077",
+      "label": "rifampicin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antimycobacterial/rifampicin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "581ff192574e250dd94d983822cd8e202baded4899e64348af062e99c390dcee",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "40",
+      "score_rules": "0",
+      "standard_inchi_key": "JQXXHWHPUNPDRT-WLSIYKJHSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    }
+  ],
+  "request_sources": {
+    "article-23208709": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/article-23208709-attempt.json",
+        "sha256": "6031995793b7115506c2809076ecfbb869158d1b8aa4c4d4862579cd785f494b"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/article-23208709-response.bin",
+        "sha256": "9e1caccf2e553a8b38b54c7a130c9f4232140101e1da8cee499a084665fba596"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/primary-plan.json",
+        "sha256": "1837bafac5270b6004b6735e1ace660c59056c51bf5ac09178ef345eb639461a"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/article-23208709-receipt.json",
+        "sha256": "105af7f1e330e2e39cf1de8b6228062bf6f05619d3bc5ecc531447af0af5096d"
+      },
+      "retrieved_at": "2026-10-15T03:02:04.588940+00:00",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3553702/fullTextXML"
+    },
+    "publisher-30337678": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-30337678-attempt.json",
+        "sha256": "cd80ee8d42ae7de90e825be30f5c3c0d4a3c5da59d0825bb4b19125479c3a78e"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-30337678-response.bin",
+        "sha256": "dc9b4d151c92806167d1b4f230201c05e72a44690ce4c52e25ee7af9c1c31dac"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-plan.json",
+        "sha256": "9e79db0866913985b6f2d3d97e662306bb9e6af23d758bcd998da796678ceff3"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-30337678-receipt.json",
+        "sha256": "152da22feb1a2b2a7d4c8dfc57ca19b76e088137df205a4daa69f7baa9e6e93a"
+      },
+      "retrieved_at": "2026-10-15T03:03:25.145669+00:00",
+      "status": 303,
+      "url": "https://www.nature.com/articles/s41598-018-33731-1"
+    },
+    "publisher-cookie-flow": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-cookie-flow-attempt.json",
+        "sha256": "af1cd24d7fbf8580e0af01e240339e6c9b46405a45f0fe4fd6d027ebe269032d"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-cookie-flow-response.bin",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-redirect-plan.json",
+        "sha256": "e37ed98924f55c7b9e09c90e8f74502b5e852f4fa0c6db4121be454e3c525ce7"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-rpoc-primary/publisher-cookie-flow-receipt.json",
+        "sha256": "21618eb52a30ecf2a885c09f1b78048e534647a34899e23ead0aec645cd61553"
+      },
+      "retrieved_at": "2026-10-15T03:05:52.715399+00:00",
+      "status": 302,
+      "url": "https://idp.nature.com/authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41598-018-33731-1"
+    }
+  },
+  "scope": "RPOC_PRIMARY_ACCESS_AND_UNRESOLVED_CLAIM_SCOPE_NOT_CAUSAL_REVIEW",
+  "summary": {
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "cited_publications": 2,
+    "corpus_records_hash_checked": 2939,
+    "http_status_counts": {
+      "302": 1,
+      "303": 1,
+      "500": 1
+    },
+    "manual_redirect_requests": 1,
+    "new_primary_result_reviews": 0,
+    "primary_articles_obtained": 0,
+    "source_assertions": 4,
+    "source_records": 2,
+    "source_terms": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "term_contexts": {
+    "ARO:3004994": {
+      "definition_citation_ids": [
+        "PMID:23208709",
+        "PMID:30337678"
+      ],
+      "exact_resistant_allele": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": "NCBITaxon:1773",
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "CHEBI:28077",
+        "CHEBI:45367"
+      ],
+      "reference_protein_candidates": [
+        "UniProtKB:A1KGE8",
+        "UniProtKB:A5U053",
+        "UniProtKB:C1AL01",
+        "UniProtKB:P0A675",
+        "UniProtKB:P9WGY6",
+        "UniProtKB:P9WGY7"
+      ],
+      "source_claim_corrected": false,
+      "source_label": "Mycobacterium tuberculosis rpoC mutations confer resistance to rifampicin"
+    },
+    "ARO:3004995": {
+      "definition_citation_ids": [],
+      "exact_resistant_allele": null,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "named_reference_taxon_id": null,
+      "primary_review_status": "OPEN",
+      "record_memberships": [
+        "CHEBI:28077",
+        "CHEBI:45367"
+      ],
+      "reference_protein_candidates": [],
+      "source_claim_corrected": false,
+      "source_label": "rifampicin resistant rpoC"
+    }
+  }
+}

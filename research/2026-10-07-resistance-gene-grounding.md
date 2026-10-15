@@ -12181,6 +12181,315 @@ unchanged. Full authoritative QC was not rerun; all whole-record primary
 reviews remain open. Existing access holds, #1040 and reuse-terms deferral
 remain in force. No source adoption, outreach or GitHub mutation occurred.
 
+## Full RNA-Polymerase Reference Cohort (2026-10-14)
+
+**Scope.** The [rpo dossier](2026-10-14-card-rpo-references.json) covers all
+current CARD labels matching a word-bounded `rpoB`/`rpoC` or `RNA polymerase`:
+**16 terms, 32 assertion memberships and seven structure records**. Selection
+was checked against all 2,002 indexed CARD terms and the source inventory.
+All 2,939 record hashes were checked; all seven selected records were loaded
+completely, including the three referenced membership artifacts. The records
+are daptomycin, levofloxacin, rifabutin, rifaximin, vancomycin, rifampicin and
+rifapentine. No inherited compound-specific claim is newly validated by this
+reference lookup. The prior six-cohort index remains unchanged; neither this
+dossier nor the preceding folP dossier is incorporated into it yet.
+
+**Reference findings.** Nine source organism names resolve to native species
+nodes. Twelve distinct gene/name contexts yield **66 protein references**:
+64 reviewed entries and two unreviewed candidates. These provide 94
+term-to-protein reference links for 14 terms and their 29 assertion memberships.
+All candidates are retained; none is selected as the tested allele. The two
+organism-free terms, `ARO:3003290` and `ARO:3004995`, retain their three
+memberships but have no assigned organism or protein query.
+
+| Source organism context | Named reference TaxID | Gene and reference count |
+| --- | --- | --- |
+| Bacillus subtilis | 1423 | rpoB: 1 reviewed |
+| Bifidobacterium adolescentis | 1680 | rpoB: 1 reviewed |
+| Clostridioides difficile | 1496 | rpoB: 1 reviewed; rpoC: 1 reviewed |
+| Escherichia coli | 562 | rpoB: 21 reviewed |
+| Helicobacter pylori | 210 | rpoB: 2 unreviewed |
+| Mycobacterium leprae | 1769 | rpoB: 2 reviewed |
+| Mycobacterium tuberculosis | 1773 | rpoB: 5 reviewed; rpoC: 6 reviewed |
+| Staphylococcus aureus | 1280 | rpoB: 14 reviewed; rpoC: 10 reviewed |
+| Vibrio vulnificus | 672 | rpoB: 2 reviewed |
+
+**Identity and evidence boundaries.** `ARO:3003090` lacks an organism in its
+label, but its pinned definition says "Known from S. aureus." Its own cited
+publication, PMID:20837752, spells out *Staphylococcus aureus* in the cached
+title. This supports the abbreviation expansion for reference lookup only.
+It does not establish an experimental strain, allele or phenotype. No organism
+is borrowed from neighboring terms to fill the two remaining unnamed contexts.
+
+The complete reviewed *H. pylori* query has zero hits. Its unreviewed fallback,
+with identical gene and taxon scope, returns B5Z8J3 and Q9KJE4. B5Z8J3 retains
+the native fusion-protein description and component names, canonical `rpoC`
+name and explicit `rpoB` synonym in the same gene block. This is not an inferred
+general equivalence between rpoB and rpoC. Q9KJE4 is flagged Fragment, as is
+the reviewed *S. aureus* reference P0C1T4. The other 64 entries are unflagged;
+that does not prove sequence completeness.
+
+All 51 candidate reference taxa have active native lineages checked against
+the independently resolved source-name lineage. Native query descendants and
+their names/ranks are preserved. Five references retain *M. bovis* organism
+labels; the inspected taxonomy places those strain nodes below the *M. bovis*
+biotype within the species node 1773. They are not relabeled as experimental
+*M. tuberculosis* subjects or treated as interchangeable assay backgrounds.
+
+The cached title of PMID:23208709, cited by `ARO:3004994`, describes putative
+compensatory mutations and an association with transmission. The dossier flags
+**compensation versus direct-resistance causality for primary review**; a title
+is not sufficient to correct the source claim. No primary results, figures or
+supplements were newly reviewed. All 32 claims remain open for primary review.
+No allele coordinates, sequences, genome assignments, MICs or new organismal
+phenotypes were exported or inferred.
+
+**Retrieval and verification.** Ignored-file-inclusive cache searches preceded
+the frozen plans. Seven source-name contexts and 24 candidate-taxonomy contexts
+were reused. All **42 planned UniProt requests** returned HTTP 200: two
+source-name searches, twelve reviewed gene searches, one unreviewed fallback
+and 27 candidate-taxonomy requests. Each group had an inspected canary; no
+retry, redirect, primary-paper request or NCBI request occurred.
+
+The [verification receipt](2026-10-14-card-rpo-references-verification.json)
+records offline native replay, 54 focused tests, 393 related regression tests,
+cache-independent fixtures, public-snapshot checks and preservation of 7,669
+pre-existing files apart from this appended section. Self-review checks distinct gene contexts,
+definition/citation-bound abbreviation expansion, complete-record snapshots,
+native fusion/fragment metadata, fallback evidence and immutable checkpoint
+writes. Biological records, source-owned inputs, pages, embeddings and prior
+research checkpoints remain unchanged. Full authoritative QC was not rerun:
+the pinned RDKit build is unavailable on this Intel macOS environment, and
+the prior merged Linux QC result is historical, not a new signoff. Existing
+access holds, #1040 and reuse-terms deferral remain in force. No source adoption,
+outreach or GitHub mutation occurred. The corpus-wide investigation is open.
+
+## rpoC Primary-Access Follow-up (2026-10-14)
+
+The [primary-access dossier](2026-10-14-card-rpoc-primary-access.json) follows
+the preceding compensation-versus-resistance flag for `ARO:3004994` and keeps
+the uncited generic `ARO:3004995` alongside it. Together they account for
+**four CARD assertion memberships in rifampicin and rifabutin**. Both complete
+records were read, including their membership context, and all 2,939 corpus
+record hashes were rechecked. The preceding 16-term reference audit remains
+unchanged; this follow-up does not replace it or complete primary review.
+
+**Both cited publications remain unreviewed.** The named term cites
+PMID:23208709 (DOI:10.1128/aac.01541-12) and PMID:30337678
+(DOI:10.1038/s41598-018-33731-1). Reviewing only the compensation-titled paper
+would not adjudicate the complete citation set. Cached titles and identifiers
+remain bibliographic context, not newly inspected experimental results.
+
+| Publication | Observed access state | Consequence |
+| --- | --- | --- |
+| PMID:23208709 | Europe PMC full-text endpoint returned HTTP 500 with an internal-server-error body | Technical hold; batch stopped; no retry or alternate route |
+| PMID:30337678 | Publisher returned HTTP 303 to its public cookie-authorisation endpoint; one manually followed step returned HTTP 302 to a further authorisation endpoint | Flow stopped outside the bounded article-return path; no article obtained |
+
+The second paper's publisher request was its first request, separate from the
+failed Europe PMC request group. Its originally planned Europe PMC route
+remains unrequested. The publisher's final article-return request and further
+authorisation endpoint were not requested. No automatic redirect, login or
+supplied credentials were used. Cookie and authorisation-code values are not
+exported in the public dossier. The unresolved publisher flow is **not** a
+finding that the article is paywalled, unavailable, or access-denied.
+
+These access responses supply no biological evidence. The source assertions
+are neither corrected nor removed. The named term's six UniProt references
+and NCBITaxon:1773 remain reference context only; they do not identify the
+subjects or alleles tested in either paper. The generic term still has no
+organism assignment and does not inherit the other term's citations. Exact
+compound support for rifampicin and rifabutin, compensation versus direct
+resistance, and any experimental genotype-phenotype relationship remain open.
+No sequence, variant, protocol, MIC or new phenotype was exported or inferred.
+
+The [verification receipt](2026-10-14-card-rpoc-primary-access-verification.json)
+records offline replay, access-state and evidence-boundary tests, related
+regressions, and preservation of 7,673 pre-existing files except this appended
+section. Previous research checkpoints, biological records, source-owned
+inputs, pages and embeddings are unchanged. Full authoritative QC was not
+rerun; the Intel macOS RDKit limitation remains. The first paper's new technical
+hold and all previous primary-source holds are retained. No NCBI request,
+source adoption, outreach or GitHub mutation occurred. #1040 and reuse-terms
+work remain deferred; the corpus-wide investigation remains open.
+
+## CARD Reference Index: folP and RNA Polymerase (2026-10-14)
+
+The [successor index](2026-10-14-card-folp-rpo-memberships.json) and
+[all-record table](2026-10-14-card-folp-rpo-memberships.tsv) reconcile the complete
+folP and rpoB/rpoC dossiers with the preceding six-cohort index. This is an
+offline reconciliation of verified reference context, not new experimental
+grounding. All **2,939 complete collection-aware records** were read and all
+**4,538 CARD assertion positions and content hashes** were checked against
+the unchanged corpus. The two added cohorts comprise **21 terms and 53 assertion
+memberships**; no subset of their positive or unresolved results was omitted.
+
+| Reference-index measure | Previous checkpoint | New checkpoint |
+| --- | ---: | ---: |
+| CARD terms with reference candidates | 1,226 | 1,244 |
+| Distinct versioned UniProt reference proteins | 1,444 | 1,520 |
+| Term-to-protein links | 2,504 | 2,608 |
+| Records with reference candidates | 215 | 216 |
+| Terms without a candidate in the selected cohorts | 776 | 758 |
+| Assertion memberships without a candidate in the selected cohorts | 1,410 | 1,361 |
+
+The added references cover 18 terms and 49 assertion memberships: 16 terms
+(46 memberships) have reviewed references and two terms (three memberships)
+have unreviewed candidates after complete reviewed-query zero results.
+Dapsone (`CHEBI:4325`) is the one newly covered record. These counts measure
+reference coverage, not experimentally verified resistance or completed records.
+The remaining 758 terms include unresolved names, empty scoped queries and
+terms outside these eight selected cohorts; they do not establish biological
+absence. Separate research dossiers remain outside this reference index.
+
+The index preserves the native no-rank `Salmonella gallinarum` taxon 594 and
+its zero-hit queries without broadening them to species ancestor 28901. It
+retains the explicit folP synonym on P0C0X1, B5Z8J3's rpoB/rpoC fusion metadata,
+and the fragment flags on Q9KJE4 and reviewed P0C1T4. Unflagged entries are not
+declared complete. Both organism-free rpo terms remain unassigned; the
+definition/cited-title abbreviation bridge for ARO:3003090 remains tied to
+that term's own evidence. No representative protein, exact resistant allele,
+experimental organism, sample, genome or phenotype was inferred.
+
+The rpoC primary-access follow-up remains attached without changing its scope:
+PMID:23208709 is on technical HTTP 500 hold and PMID:30337678 has an unresolved
+publisher redirect flow, not an inferred paywall. Neither article was obtained
+or its primary results reviewed. The generic rpoC term does not inherit the
+named term's citations or organisms. The compensation-versus-resistance flag
+remains open and no source assertion was corrected.
+
+The [verification receipt](2026-10-14-card-folp-rpo-memberships-verification.json)
+records the six-case inspected canary, cache-independent public reproduction,
+network-blocked live-corpus and native-dossier replay, focused and related tests,
+and preservation of 7,677 pre-existing files except this appended section.
+All inherited reference evidence pointers resolve through their immutable
+owners. The 217 PHI-base claims, 133 curator claims and 467 interpretation
+rules are unchanged and were not reassessed by this index update. Biological
+records, source-owned inputs, pages, embeddings and earlier research checkpoints
+remain unchanged. No new primary result review or whole-record signoff occurred.
+Full authoritative QC was not rerun because the pinned RDKit build remains
+unavailable on Intel macOS; prior Linux QC is historical, not this checkpoint's
+signoff. There were no network requests, NCBI requests, outreach, source adoptions
+or GitHub mutations. Existing access holds, #1040 and reuse-terms deferral remain
+in force. The full-corpus investigation remains open.
+
+## Complete Beta-Tubulin Reference Cohort (2026-10-14)
+
+The [beta-tubulin dossier](2026-10-14-card-beta-tubulin-references.json) covers
+all **15 CARD beta-tubulin terms and 15 assertion memberships** in the current
+corpus. The seven complete collection-aware records are azoxystrobin, benomyl,
+boscalid, carbendazim, diethofencarb, pyraclostrobin and thiabendazole. Their
+selected claim positions and hashes were verified, and all **2,939 corpus
+record hashes** were rechecked. This reference-only dossier remains separate
+from the preceding all-record reference index, which is unchanged.
+
+All seven source-name contexts resolve through native UniProt taxonomy to
+species-ranked NCBITaxon identifiers. `Fusarium graminearum` is an explicit
+native synonym of the retained canonical label `Gibberella zeae`; neither
+name is silently substituted into a source-owned record. The lowercase genus
+initial in the diethofencarb term is normalized only for the taxonomy query,
+with the original `botrytis cinerea` label and case-only decision retained.
+
+| Source organism | Species reference | Selected protein-name candidates |
+| --- | --- | ---: |
+| Aspergillus fumigatus | NCBITaxon:746128 | 1 reviewed |
+| Botrytis cinerea | NCBITaxon:40559 | 1 reviewed |
+| Colletotrichum gloeosporioides | NCBITaxon:474922 | 2 reviewed |
+| Colletotrichum musae | NCBITaxon:5464 | 1 unreviewed |
+| Colletotrichum siamense | NCBITaxon:690259 | 15 unreviewed |
+| Colletotrichum truncatum | NCBITaxon:5467 | 5 unreviewed |
+| Fusarium graminearum | NCBITaxon:5518 | 1 reviewed |
+
+The result is **26 distinct versioned references and 50 term-to-protein links**:
+five reviewed entries and 21 unreviewed candidates, including **20 fragments**.
+These are all native beta-tubulin name matches in the selected query subsets,
+not an exhaustive inventory of every paralog or proof of resistance. Complete
+reviewed queries preceded unreviewed fallback for the three empty candidate
+sets; no fallback was used to replace a nonempty reviewed set. Query suggestions
+were not followed. One native hit, A0ACC3ZK29 (`Beta-tubulin cofactor d`), is
+retained as an explicit exclusion rather than assigned as beta-tubulin.
+
+Protein identity does not determine the source's gene symbol. The two
+`C. gloeosporioides` references remain separate: P32928 has native `TUB1`,
+whereas P40904 has native `TUB2`. Neither is chosen as the tested resistance
+determinant. Q4WA70 carries the ORF identifier `AFUA_7G00250` but no native
+gene symbol; it is not renamed `TUB2` or `benA`. P53373 retains native `tubA`
+and its explicit `benA`/`btuB` synonyms. K7XH91 retains native `TUB` and its
+fragment flag. Gene blocks, reference strain ancestry, annotation versions and
+fragment flags are preserved; an unflagged entry is not declared complete.
+
+Only the two Botrytis terms have their own definition citation in the pinned
+ARO snapshot, PMID:18944187. The other **13 terms lack such citations**; this
+does not establish that no primary literature exists. Neighboring citations
+and UniProt bibliographies are not transferred as claim-level experimental
+support. In particular, the azoxystrobin, pyraclostrobin and boscalid assertions
+remain open for compound-specific primary review. No new resistant allele,
+experimental organism, isolate, genome, MIC or causal resistance claim was
+assigned, and no source assertion was removed or corrected.
+
+Ignored-file-inclusive cache inventories preceded the frozen request plans.
+Four source-name contexts and all seven candidate-taxonomy contexts were
+reused. All **13 planned UniProt requests** returned HTTP 200: three exact-name
+queries, seven reviewed protein-name queries and three unreviewed fallbacks.
+Each nonempty request group had an inspected canary; all responses were
+complete, with no retry, redirect, primary-paper request or NCBI request.
+
+The [verification receipt](2026-10-14-card-beta-tubulin-references-verification.json)
+records the inspected projection canary, offline native replay, focused and
+related regression tests, and preservation of 7,683 pre-existing files except
+this appended section. Biological records, source-owned inputs, pages,
+embeddings and prior research checkpoints remain unchanged. Full authoritative
+QC was not rerun because the pinned RDKit build lacks an Intel macOS wheel;
+prior Linux QC remains historical. Existing primary-access holds, #1040 and
+reuse-terms deferral are preserved. No source adoption, outreach or GitHub
+mutation occurred. The corpus-wide investigation remains open.
+
+## Beta-Tubulin Bibliography and Banno Access (2026-10-14)
+
+The follow-up in
+`research/2026-10-14-beta-tubulin-evidence-followup.json` preserves the native
+bibliographies of **all 26 reference proteins across all 15 source terms and
+seven complete records** from the preceding checkpoint. It replays that
+checkpoint against the current 2,939 record hashes and 15 claim positions.
+This is reference-metadata research, not primary experimental review or a
+source-owned biological correction.
+
+The native entries contain **81 reference memberships**, comprising 45 journal
+article memberships and 36 sequence submissions. These are not 81 distinct
+papers or independent experiments. Forty-seven memberships have no publication
+identifiers, including 11 journal article memberships. They remain explicit
+literature leads rather than disappearing from an identifier-only projection.
+One native DOI, `.1094/PDIS-09-17-1516-RE`, is malformed as returned; it is
+retained verbatim, not silently corrected or followed as a guessed URL.
+
+The inspected canaries retain P53373's three submission-only strain comments,
+P40904's qualified organism wording in its native article title, and I7EZ98's
+identifier-free journal leads and malformed DOI. None assigns an experimental
+strain, paralog, allele, taxon or genome. No own-definition citation matched
+these reference bibliographies; this does not invalidate a source paper or
+prove that relevant literature is absent. Native reference positions, sequences
+and operational details are not exported.
+
+Both Botrytis terms cite PMID:18944187, Banno et al. (2008), DOI
+`10.1094/phyto-98-4-0397`. Cached bibliographic metadata was checked against the
+two source claims, and the earlier complete UniProt citation query's zero
+result remains a database-query result, not biological absence. A single DOI
+request returned 302 to the observed APS publisher article URL; one manual
+request to that exact URL returned **403 with a publisher challenge**. No
+article was obtained, and no retry, challenge bypass or alternate route was
+attempted. The paper is now access-held pending new direction or a supplied
+primary copy. This is not a finding of a paywall or global unavailability.
+
+The companion verification receipt records network-blocked native replay,
+cache-independent regression tests, and preservation of 7,687 pre-existing
+files except this append-only report section. All biological records,
+source-owned inputs, pages, embeddings and prior research checkpoints remain
+unchanged. There were two bounded primary-access requests, no new bibliography
+requests, no NCBI requests, no outreach and no source adoption. #1040 and reuse
+terms remain deferred. Full authoritative QC is not claimed for the Intel
+macOS environment because the pinned RDKit version has no compatible wheel.
+Any later Linux CI result is a separate publication check. All primary review
+and experimental identifier gaps, and the full-corpus goal, remain **OPEN**.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
