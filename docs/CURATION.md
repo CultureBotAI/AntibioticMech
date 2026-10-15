@@ -283,6 +283,8 @@ claims. Unknown fields, stale pins, ambiguous source ownership and changed
 chemical bindings fail closed. Use the normal dry run, validated-writer canary,
 seeding, reproduction and rendering checks. Full experimental grounding remains
 separate work; a qualification is not a whole-record scientific signoff.
+Duplicate JSON keys are rejected at every level. Evidence URLs must be valid
+HTTPS locations without embedded credentials; validation makes no network requests.
 
 **An activity claim** is the strictest of the three: an `ActivityObservation`
 requires evidence, and a reported MIC or disk-diffusion diameter requires its

@@ -8,7 +8,9 @@ import io
 import json
 import re
 from datetime import date
+from ipaddress import ip_address
 from pathlib import Path
+from urllib.parse import urlsplit
 
 DEFAULT_REVIEW = Path(__file__).resolve().parents[1] / "curation/card_evidence_reviews.json"
 
@@ -27,13 +29,48 @@ def _text(value: object) -> bool:
     )
 
 
+def _unique_object(pairs: list[tuple[str, object]]) -> dict:
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"duplicate CARD review JSON key: {key}")
+        result[key] = value
+    return result
+
+
+def _source_url(value: str) -> bool:
+    if any(c.isspace() for c in value) or "\\" in value:
+        return False
+    try:
+        parsed = urlsplit(value)
+        host = parsed.hostname
+        if (
+            parsed.scheme != "https"
+            or not host
+            or parsed.username is not None
+            or parsed.password is not None
+            or parsed.netloc.endswith(":")
+            or parsed.port == 0
+        ):
+            return False
+        if ":" in host:
+            ip_address(host)
+            return True
+        host = host.encode("idna").decode("ascii").removesuffix(".")
+        return len(host) <= 253 and all(
+            re.fullmatch(r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?", label) for label in host.split(".")
+        )
+    except (ValueError, UnicodeError):
+        return False
+
+
 def load_reviews(
     inventory: Path, rows: list[dict], records: dict, path: Path | None = DEFAULT_REVIEW
 ) -> dict:
     if path is None:
         return {}
     payload = path.read_bytes()
-    document = json.loads(payload)
+    document = json.loads(payload, object_pairs_hook=_unique_object)
     if (
         not isinstance(document, dict)
         or set(document) != {"schema_version", "source_inventory_sha256", "reviews"}
@@ -78,7 +115,7 @@ def load_reviews(
                 or set(evidence) != {"reference", "source_url", "locations", "inspected"}
                 or any(not _text(evidence[k]) for k in ("reference", "source_url", "inspected"))
                 or not re.fullmatch(r"(?:PMID:[1-9][0-9]*|DOI:10\.[0-9]{4,9}/\S+)", evidence["reference"])
-                or not evidence["source_url"].startswith("https://")
+                or not _source_url(evidence["source_url"])
                 or not isinstance(evidence["locations"], list)
                 or not evidence["locations"]
                 or any(not _text(v) for v in evidence["locations"])

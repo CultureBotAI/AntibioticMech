@@ -224,3 +224,56 @@ def test_qualifications_retain_both_conflicting_results_and_exact_compound_limit
         "DOI:10.1128/AAC.00649-18",
         "DOI:10.1093/jac/dkz413",
     }
+
+
+@pytest.mark.parametrize("key", ["schema_version", "note", "source_url", "row_sha256"])
+def test_duplicate_json_members_are_rejected_at_every_level(inputs, key):
+    inventory, rows, records, path = inputs
+    # The valid member comes last, so ordinary json.loads would hide the duplicate.
+    original = path.read_text()
+    member = json.dumps(key) + ":"
+    path.write_text(original.replace(member, member + " null, " + member, 1))
+    with pytest.raises(ValueError, match="duplicate.*JSON key"):
+        review.load_reviews(inventory, rows, records, path)
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://",
+        "https:///article",
+        "https://?article=1",
+        "https://example.org bad/article",
+        "https://example.org/has space",
+        "https://user:secret@example.org/article",
+        "https://example.org:bad/article",
+        "https://example.org:70000/article",
+        "https://example.org:/article",
+        "https://example..org/article",
+        "https://-example.org/article",
+        "https://example.org\\other/article",
+        "https://[broken/article",
+    ],
+)
+def test_malformed_primary_source_urls_fail_closed(inputs, url):
+    inventory, rows, records, path = inputs
+    document = json.loads(path.read_bytes())
+    document["reviews"][0]["evidence"][0]["source_url"] = url
+    path.write_text(json.dumps(document))
+    with pytest.raises(ValueError, match="invalid CARD review evidence"):
+        review.load_reviews(inventory, rows, records, path)
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://doi.org/10.1128/AAC.01030-13",
+        "https://journals.example.org:443/article?id=1&view=full#results",
+    ],
+)
+def test_valid_primary_source_urls_need_no_network(inputs, url):
+    inventory, rows, records, path = inputs
+    document = json.loads(path.read_bytes())
+    document["reviews"][0]["evidence"][0]["source_url"] = url
+    path.write_text(json.dumps(document))
+    assert len(review.load_reviews(inventory, rows, records, path)) == 3
