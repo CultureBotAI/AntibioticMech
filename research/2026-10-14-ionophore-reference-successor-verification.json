@@ -1,0 +1,137 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "bounded_successor_queries_after_input_validation_error": true,
+  "cache_independent_fixture_and_public_projection_tests": "PASS",
+  "captured_at": "2026-10-15T00:08:49.636547+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-ionophore-reference-successor/cohort.json",
+    "sha256": "194b9633887b8e2d8faa0deace0ca539379b602f3bf78733a1ed555a0c4f412b"
+  },
+  "complete_selected_collection_aware_records_read": 2,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 647,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-ionophore-reference-successor/expanded-tests.xml",
+      "sha256": "848f6821ac093cb325fc5ab39a1682afdc510ecbe0ee372212dd979869cf44e1"
+    },
+    "skipped": 0,
+    "tests": 647
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "a1ef2c548264fbc87a775ec026e29294e7e3b299a2eb4343dc429579db422388"
+    },
+    {
+      "path": "research/2026-10-14-ionophore-reference-successor.json",
+      "sha256": "7555469f6230e7b21b8f2152a59baab1f34f2b25a420d1ba8c44442f1e186751"
+    },
+    {
+      "path": "scripts/audit_ionophore_reference_successor.py",
+      "sha256": "a081cd79da93ec59ecade2678487cd9d720d9b90fcdb2ad8c55eaa46808f6050"
+    },
+    {
+      "path": "tests/test_ionophore_reference_successor.py",
+      "sha256": "0109e3798cd2eca12a7d4c11459d07880213d803e70e42fa6d44536f9616d237"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 52,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-ionophore-reference-successor/focused-tests.xml",
+      "sha256": "9e8db026c2500101bfcd4f7dee380c5b83cea2d5e9a4364181256fa6af77996e"
+    },
+    "skipped": 0,
+    "tests": 52
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_ionophore_successor_20261014.py",
+      "sha256": "719f03ed39ae2b0c0407ebc62bac6b4678ecd5f7630e626488bd81b88330f786"
+    },
+    {
+      "path": "/private/tmp/verify_ionophore_successor_20261014.py",
+      "sha256": "059b6010c62bf2c441b2b55c83a226608ad58164c5c4b50cbd26f60f67218480"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "native_http_attempts": 3,
+  "native_http_status_counts": {
+    "200": 3
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_primary_results_reviews": 0,
+  "new_taxonomy_requests": 0,
+  "offline_native_replay": "PASS",
+  "offline_planner_entity_and_request_reconstruction": "PASS",
+  "original_rejected_query_unchanged": true,
+  "outreach": 0,
+  "primary_paper_requests": 0,
+  "primary_source_holds_preserved": true,
+  "prior_research_checkpoints_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-ionophore-reference-successor/protected-before.json",
+    "sha256": "fa084d99c5fe0697abd4d4f19a0c18106dd373b26f93f6283cec61e1e1a37083"
+  },
+  "protected_files_checked": 7642,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reused_native_reference_responses": 1,
+  "reused_native_taxonomy_responses": 1,
+  "review_fixes": [
+    "Relative-path native replay",
+    "Stale historical hold wording in successor interpretation"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "COMPLETE_STUDY_REFERENCE_QUERY_SUCCESSOR_NOT_EXPERIMENTAL_ALLELE_CURATION",
+  "source_adoptions": 0,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "additional_figure_symbols": 3,
+    "entities": 130,
+    "experimental_allele_subject_or_genome_assignments": 0,
+    "mapped_entities": 130,
+    "multiple_candidate_entities": [],
+    "new_requests": 3,
+    "new_taxonomy_requests": 0,
+    "records_unchanged": 2939,
+    "reused_reference_entities": 1,
+    "source_dubious_orfs": 15,
+    "source_hypersensitivity_labeled_mutants": 49,
+    "source_label_differences": [
+      "locus:YDR493W",
+      "locus:YMR124W",
+      "locus:YPR153W"
+    ],
+    "source_resistance_labeled_mutants": 78,
+    "table_loci": 127,
+    "unique_reference_proteins": 130,
+    "unmatched_entities": [],
+    "whole_record_primary_signoffs": 0
+  },
+  "verification_limit": "Research reference mapping only; no renewed full-QC or experimental allele signoff.",
+  "whole_record_primary_signoffs": 0
+}

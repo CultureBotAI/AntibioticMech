@@ -1,0 +1,313 @@
+{
+  "attribution": {
+    "license": "CC BY 4.0",
+    "release": "2026_03",
+    "source": "UniProt Consortium"
+  },
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "chemical_scope": {
+    "cryptopleurine_and_emetine_kept_distinct": true,
+    "findings_transferred_between_compounds_or_salts": false,
+    "tested_exact_structure_verified": false
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/cohort.json",
+    "sha256": "2f72741be73f830f3527bd2a892af437e4fba2aa454cba518d8c2325e157548d"
+  },
+  "curation_decision": "RETAIN_REFERENCE_DOSSIER_NO_RESISTANCE_OR_ACTIVITY_RECORD_WRITE",
+  "date": "2026-10-14",
+  "discovery": {
+    "all_candidates_primary_reviewed": false,
+    "distinct_retained_candidates": 106,
+    "query_membership_establishes_compound_specific_evidence": false,
+    "selected_leads": {
+      "3037334": {
+        "doi": "10.1128/mcb.7.5.1764-1775.1987",
+        "id": "3037334",
+        "pmcid": "PMC365278",
+        "pmid": "3037334",
+        "pubType": "comparative study; research support, u.s. gov't, p.h.s.; research support, non-u.s. gov't; research-article; journal article",
+        "pubYear": "1987",
+        "source": "MED",
+        "title": "Structure and expression of the Saccharomyces cerevisiae CRY1 gene: a highly conserved ribosomal protein gene."
+      },
+      "8293976": {
+        "doi": "10.1093/genetics/135.3.719",
+        "id": "8293976",
+        "pmcid": "PMC1205715",
+        "pmid": "8293976",
+        "pubType": "research support, u.s. gov't, p.h.s.; research support, non-u.s. gov't; research-article; journal article",
+        "pubYear": "1993",
+        "source": "MED",
+        "title": "Molecular genetics of cryptopleurine resistance in Saccharomyces cerevisiae: expression of a ribosomal protein gene family."
+      }
+    },
+    "selected_query_memberships": {
+      "3037334": [
+        "CHEBI:4781",
+        "CHEBI:4781",
+        "CHEBI:3932"
+      ],
+      "8293976": [
+        "CHEBI:3932"
+      ]
+    }
+  },
+  "indexed_context": {
+    "abstract_sha256": "3d4dfefc3991638c7f7fb920a70014f749b1bd7b4a2861468319e916b7e63493",
+    "doi": "DOI:10.1093/genetics/135.3.719",
+    "experimental_allele_strain_or_genome_assignment": null,
+    "numeric_AST_or_abstract_text_exported": false,
+    "paralog_and_expression_background_dependence_reported": true,
+    "primary_results_figures_supplements_reviewed": false,
+    "reference": "PMID:8293976",
+    "scope": "INDEXED_ABSTRACT_ONLY_NOT_PRIMARY_RESULTS_REVIEW",
+    "single_gene_effect_inferred_from_combined_background": false,
+    "source_gene_labels": [
+      "CRY1",
+      "CRY2"
+    ],
+    "source_species": "Saccharomyces cerevisiae",
+    "source_use": "REFERENCE_ONLY_NO_SOURCE_ADOPTION",
+    "tested_chemical_structure_or_form_verified": false
+  },
+  "limits": {
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "domain_restricted_web_searches": 1,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "issue_1040": "DEFERRED",
+    "native_http_status_counts": {
+      "200": 3,
+      "500": 1
+    },
+    "native_scientific_http_attempts": 4,
+    "native_taxonomy_responses_reused": 1,
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_experimental_allele_strain_or_genome_assignments": 0,
+    "new_taxonomy_requests": 0,
+    "numeric_AST_sequences_variants_constructs_or_protocols_exported": false,
+    "primary_results_reviews": 0,
+    "prior_source_holds_preserved": true,
+    "retries": 0,
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "paralogs_equated_or_substituted": false,
+  "primary_1987_status": "UNREQUESTED",
+  "primary_1993_status": "TECHNICAL_HTTP_500_HOLD",
+  "records": [
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:4781",
+      "label": "emetine",
+      "record": {
+        "path": "data/antibiotics/antiprotozoal/emetine.yaml",
+        "sha256": "58f454ebed3c6dc04a459e74fdee89f548557d4c06768500beb147dba275cd97"
+      },
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/CHEBI-4781-before.yaml",
+        "sha256": "58f454ebed3c6dc04a459e74fdee89f548557d4c06768500beb147dba275cd97"
+      },
+      "standard_inchi_key": "AUVVAXYIELKVAI-CKBKHPSWSA-N"
+    },
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:3932",
+      "label": "cryptopleurine",
+      "record": {
+        "path": "data/antibiotics/antiviral/cryptopleurine.yaml",
+        "sha256": "bf2fdb2f853bd86e7df30eede9f3d982078d6e1768399938c08f19b3f66c3f3e"
+      },
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/CHEBI-3932-before.yaml",
+        "sha256": "bf2fdb2f853bd86e7df30eede9f3d982078d6e1768399938c08f19b3f66c3f3e"
+      },
+      "standard_inchi_key": "RSHYSOGXGSUUIJ-OAHLLOKOSA-N"
+    }
+  ],
+  "reference_proteins": [
+    {
+      "alternative_protein_names": [
+        "40S ribosomal protein S14-A",
+        "RP59A"
+      ],
+      "compound_specific_resistance_verified": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 222,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "CRY1",
+        "RPL59",
+        "RPS14A"
+      ],
+      "gene_orf_names": [
+        "YCR31C"
+      ],
+      "ordered_locus_names": [
+        "YCR031C"
+      ],
+      "protein_accession": "UniProtKB:P06367",
+      "protein_name": "Small ribosomal subunit protein uS11A",
+      "reference_gene": "RPS14A",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_species_taxon_id": "NCBITaxon:4932",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "PARALOG_REFERENCE_NOT_TESTED_RESISTANT_ALLELE",
+      "selected_citation": "PMID:3037334",
+      "selected_citation_scope": "SEQUENCE_ANNOTATION_NOT_RESISTANCE_PHENOTYPE_PROOF",
+      "sequence_version": 5,
+      "source_gene_alias": "CRY1",
+      "species_lineage_verified": true
+    },
+    {
+      "alternative_protein_names": [
+        "40S ribosomal protein S14-B",
+        "RP59B"
+      ],
+      "compound_specific_resistance_verified": false,
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "entry_version": 198,
+      "exact_resistance_allele": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_names": [
+        "CRY2",
+        "RPS14B"
+      ],
+      "gene_orf_names": [
+        "J0354"
+      ],
+      "ordered_locus_names": [
+        "YJL191W"
+      ],
+      "protein_accession": "UniProtKB:P39516",
+      "protein_name": "Small ribosomal subunit protein uS11B",
+      "reference_gene": "RPS14B",
+      "reference_organism_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "reference_species_taxon_id": "NCBITaxon:4932",
+      "reference_taxon_id": "NCBITaxon:559292",
+      "reference_taxon_rank": "strain",
+      "reference_taxon_scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+      "role": "PARALOG_REFERENCE_NOT_TESTED_RESISTANT_ALLELE",
+      "selected_citation": "PMID:8293976",
+      "selected_citation_scope": "SEQUENCE_ANNOTATION_NOT_RESISTANCE_PHENOTYPE_PROOF",
+      "sequence_version": 2,
+      "source_gene_alias": "CRY2",
+      "species_lineage_verified": true
+    }
+  ],
+  "scope": "HISTORICAL_PARALOG_REFERENCE_CROSSWALK_NOT_ALLELE_CURATION",
+  "sources": {
+    "article-1993": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/article-1993-attempt.json",
+        "sha256": "2e4827e38bcb474f12fbb9258fcf9f7b6fa1ac99c60498f4db4ac440ea529686"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/article-1993-response.bin",
+        "sha256": "17bc082c97714d0ad51c7d94658c3f4b445517de82b12bb5ec5cce21a74ac6bb"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/request-plan.json",
+        "sha256": "3f29de203dfa76e92ee5cad3e259f1290640d5dad4d5d05d83153a2ae45cbb03"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/article-1993-receipt.json",
+        "sha256": "1bd1223af6499a3afa1076c367a899db4aa4fb11966a0358097033feb61acdcc"
+      },
+      "retrieved_at": "2026-10-14T23:17:30.904678+00:00",
+      "status": 500,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC1205715/fullTextXML"
+    },
+    "metadata-1993": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/metadata-1993-attempt.json",
+        "sha256": "c88b12ec3709e27f1f6d17cecfd572a427d171016aae47b8ee36f01df4587f9e"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/metadata-1993-response.bin",
+        "sha256": "64edae32fa9d4f0d1c07c29d8addea83bc7777b3af5f177705d31f89885fb61b"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/metadata-plan.json",
+        "sha256": "63387abee8518334e34d94d963dec3cf0b9f92558d89b616c77e9ae7215ed5f3"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/metadata-1993-receipt.json",
+        "sha256": "0635d53e2f24675f065874870057bda80392b5d8403cd15f9a11212be433a94a"
+      },
+      "retrieved_at": "2026-10-14T23:18:25.427644+00:00",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A8293976+AND+SRC%3AMED&resultType=core&format=json&pageSize=1"
+    },
+    "reference-1987": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-1987-attempt.json",
+        "sha256": "aea48a063fa8603e19967976c3a329390adef7c599981a8523e50b8ba7b63017"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-1987-response.bin",
+        "sha256": "cdf44b6248aa1821da4d911b10271845759a7728f11bb9bdfcb4fea9e60ed02f"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-followup-plan.json",
+        "sha256": "84c711a6b734930d3ab32c302c300fc7de2097a212deb7bbca0f2d88ee9a75be"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-1987-receipt.json",
+        "sha256": "bd38181d9924d863cc5e6bc28a27e208af1f620272fbf16f0946a7674b12ab6b"
+      },
+      "retrieved_at": "2026-10-14T23:19:06.196425+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A3037334&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "reference-1993": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-1993-attempt.json",
+        "sha256": "b99b10b07d9394e3b4913f32173c2d84e39c491d88842ada5f2e841d5a55748d"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-1993-response.bin",
+        "sha256": "81f0ad78d00aae3d48a36a27bc820013894edc3cf7630bebbe3523fca642ad5a"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-plan.json",
+        "sha256": "c14ab06e0c05e31530c2ace786f29b8db211817149171257e7c3f9bf3f66ed15"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-cryptopleurine/reference-1993-receipt.json",
+        "sha256": "6ce45f26fd705f5839e08810b1ebe1c7eb2f98cb886899696eead19db54f8960"
+      },
+      "retrieved_at": "2026-10-14T23:17:57.369988+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A8293976&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "taxonomy_source": {
+    "body": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-response.bin",
+      "sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810"
+    },
+    "body_sha256": "9ebcfe8a317cc0c25c329a3a6a7cc9eaa863bb2dfebe5eaff9a34628c6684810",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-tavaborole/tax-559292-receipt.json",
+      "sha256": "836a1ae4fc4bc7158606568cc1a9cd513bf64624608bd9c3268d69f028457eb5"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-13T13:40:17.856690+00:00",
+    "url": "https://rest.uniprot.org/taxonomy/559292"
+  },
+  "technical_error_is_negative_biological_evidence": false
+}

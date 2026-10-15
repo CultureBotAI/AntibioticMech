@@ -1,0 +1,269 @@
+{
+  "attribution": [
+    {
+      "license": "CC BY",
+      "source": "Conley et al. (2019), PLOS ONE",
+      "transformation": "Qualitative scope summary and source-location hashes",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210547"
+    },
+    {
+      "license": "CC BY 4.0",
+      "release": "2026_03",
+      "source": "UniProt Consortium"
+    }
+  ],
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "chemical_scope": {
+    "compound_record_assignment": null,
+    "exact_product_or_lot_structure_independently_verified": false,
+    "neutral_and_olamine_records_kept_distinct": true,
+    "salt_and_neutral_results_transferred": false,
+    "source_compound_name": "ciclopirox",
+    "source_supplier": "Santa Cruz Biotechnologies"
+  },
+  "citation_query": {
+    "allele_or_protein_assignment": null,
+    "gene_name_or_locus_queries_performed": false,
+    "protein_absence_or_lack_of_function_inferred": false,
+    "query": "lit_pubmed:30633761",
+    "query_complete": true,
+    "release": "2026_03",
+    "result": "SCOPED_EMPTY_PUBLICATION_CITATION_QUERY",
+    "returned_entries": 0
+  },
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/cohort.json",
+    "sha256": "ae69c355c087938d192f859844785bd5440c4022dcc15658104baef1fcff769e"
+  },
+  "curation_decision": "RETAIN_QUALITATIVE_DOSSIER_WITHOUT_BIOLOGICAL_RECORD_WRITE",
+  "curation_limitations": [
+    "The screen's lower MIC direction is not an increased-resistance phenotype.",
+    "Native figures and supplementary MIC tables have not been reviewed.",
+    "A compound name and supplier do not independently establish the tested exact structure.",
+    "The empty citation query does not establish absence of reference proteins or gene function.",
+    "K12 taxonomy context does not assign experimental derivatives or genomes.",
+    "Prior-study results mentioned in the introduction or discussion are not revalidated here."
+  ],
+  "date": "2026-10-14",
+  "discovery": {
+    "independent_publications": 1,
+    "lead": {
+      "doi": "10.1371/journal.pone.0210547",
+      "id": "30633761",
+      "pmcid": "PMC6329577",
+      "pmid": "30633761",
+      "pubType": "research support, non-u.s. gov't; research-article; journal article; research support, n.i.h., extramural",
+      "pubYear": "2019",
+      "source": "MED",
+      "title": "Sugar and iron: Toward understanding the antibacterial effect of ciclopirox in Escherichia coli."
+    },
+    "query_memberships": 2
+  },
+  "limits": {
+    "automatic_redirects": 0,
+    "biological_records_changed": 0,
+    "full_corpus_goal_status": "OPEN",
+    "github_mutations": 0,
+    "http_status_counts": {
+      "200": 2
+    },
+    "issue_1040": "DEFERRED",
+    "native_figures_and_supplements_reviewed": false,
+    "native_taxonomy_responses_reused": 1,
+    "ncbi_contact": 0,
+    "ncbi_requests": 0,
+    "new_resistance_assertions_or_experimental_identifiers": 0,
+    "new_taxonomy_requests": 0,
+    "prior_source_holds_preserved": true,
+    "retries": 0,
+    "reuse_terms_review_resumed": false,
+    "scientific_http_attempts": 2,
+    "selected_primary_text_reviews": 1,
+    "source_adoptions": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "previous_context": {
+    "path": "research/2026-10-14-ciclopirox-context.json",
+    "sha256": "a7c7246f72dbff1e990be9775df9da7f7eda74e0e908205156b78f836749fb45"
+  },
+  "previous_verification": {
+    "path": "research/2026-10-14-ciclopirox-verification.json",
+    "sha256": "001bb54bf70923e0d76b930132c77e5b6aea5b5dd8c47aac10f7bf4757673f13"
+  },
+  "primary": {
+    "alleles_variants_constructs_sequences_or_protocols_exported": false,
+    "assay": "BROTH_DILUTION",
+    "catechol_signal_is_exclusive_enterobactin_measurement": false,
+    "clinical_breakpoint_or_resistance_call_inferred": false,
+    "direct_target_established_by_screen": false,
+    "doi": "DOI:10.1371/journal.pone.0210547",
+    "endpoint": "MIC",
+    "evidence_type": "LABORATORY_FUNCTIONAL_SUSCEPTIBILITY_SCREEN",
+    "experimental_genome_assignment": null,
+    "locations": {
+      "assay_specificity_limit": {
+        "normalized_text_sha256": "6eaed23ff8a4a7b9cdae3ed7a8e7779ceb74692d368bb16d0c3cc0e9a475c664",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[6]/div[2]/p[2]"
+      },
+      "chemical_supplier": {
+        "normalized_text_sha256": "81973254284b82da3b27c2a10d545dc72997e4b63f2655fd76edb21f5e23b4a5",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[4]/div[1]/p[1]"
+      },
+      "comparison_filters": {
+        "normalized_text_sha256": "3a01526dd238b5e013c18b9eaff95af51a935915d6d7497c908b0582b0576ae0",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/p[5]"
+      },
+      "conclusion_limit": {
+        "normalized_text_sha256": "370bd307e0e283c2f9dfc951b9d27ef13fae7a4d19471b91fbf63e6a0c3b01d5",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[6]/div[4]/p[4]"
+      },
+      "laboratory_subject": {
+        "normalized_text_sha256": "5f2bf153591b3f1a311f751fb34d4d867f4e6b47aa37cad34191d99267754aeb",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[4]/div[2]/p"
+      },
+      "measurement": {
+        "normalized_text_sha256": "3f8ca95510149fd35867e809a12f1839895c3ac150a68dc4a579db139067b4ff",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[4]/div[4]/p"
+      },
+      "negative_resistance_context": {
+        "normalized_text_sha256": "daad67873e1807920e6502ed250c5dbe2cc1438b3f78215e1e74a9fef0414f27",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[2]/p[7]"
+      },
+      "prior_study_not_current_experiment": {
+        "normalized_text_sha256": "e73f4e1590989c73d057192c5d3c5a102af350b5f3b8b17a97b31ad649ceb635",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/p[1]"
+      },
+      "screen_direction": {
+        "normalized_text_sha256": "e86c73596bbe80c80f6fd80d17f625cd5a3fefff03398f31e6e2a72308e91318",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/p[3]"
+      },
+      "screen_scope": {
+        "normalized_text_sha256": "3bd382a7b7907bd3b22fa42d8ea7a55cdac4e235dc7f7b92253e676f9f7ba36d",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[1]/p[2]"
+      },
+      "target_caution": {
+        "normalized_text_sha256": "5567d623f135265e826f2552450b1ae7f5109a2c33116f4d1b8a8241376ee0c0",
+        "xpath": "/html/body/main/div/section/div/div[3]/div[2]/div[5]/div[2]/p[10]"
+      }
+    },
+    "numeric_AST_exported_or_converted": false,
+    "per_gene_or_allele_signoff": false,
+    "phenotype_direction": "INCREASED_SUSCEPTIBILITY_NOT_INCREASED_RESISTANCE",
+    "pmid": "PMID:30633761",
+    "prior_study_results_counted_as_current_experiments": false,
+    "review_scope": "SELECTED_PRIMARY_TEXT_NOT_FIGURES_OR_SUPPLEMENT_TABLES",
+    "screened_deletion_strains": 96,
+    "source_background": "K-12",
+    "source_parent_strain": "BW25113",
+    "source_reported_lower_MIC_strains": 43,
+    "source_reported_specific_subset": 21,
+    "source_species": "Escherichia coli",
+    "standard_for_future_MIC_normalization": "mg/L"
+  },
+  "records": [
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:31398",
+      "label": "ciclopirox olamine",
+      "record": {
+        "path": "data/antibiotics/antibacterial/ciclopirox-olamine.yaml",
+        "sha256": "f3bf3b2007a77857cf56585534c70a0f1e08b139f7f4cc32f15979b40835fe94"
+      },
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/CHEBI-31398-before.yaml",
+        "sha256": "f3bf3b2007a77857cf56585534c70a0f1e08b139f7f4cc32f15979b40835fe94"
+      },
+      "standard_inchi_key": "HKUKJIQHPXYJTP-UHFFFAOYSA-O"
+    },
+    {
+      "complete_collection_aware_record_read": true,
+      "identifier": "CHEBI:453011",
+      "label": "ciclopirox",
+      "record": {
+        "path": "data/antibiotics/antibacterial/ciclopirox.yaml",
+        "sha256": "9b77aba57969f8de2e529c917cb4529a7454b6c2f7cf461150f3ceb16ec692dc"
+      },
+      "snapshot": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/CHEBI-453011-before.yaml",
+        "sha256": "9b77aba57969f8de2e529c917cb4529a7454b6c2f7cf461150f3ceb16ec692dc"
+      },
+      "standard_inchi_key": "SCKYRAXSEDYPSA-UHFFFAOYSA-N"
+    }
+  ],
+  "scope": "PRIMARY_SUSCEPTIBILITY_SCREEN_CONTEXT_NOT_RESISTANT_ALLELE_CURATION",
+  "sources": {
+    "article-2019": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/article-2019-attempt.json",
+        "sha256": "d7aef8425fa2c5eab1730058ad652b761e2d84a38992245b71c356dfa2b8be44"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/article-2019-response.bin",
+        "sha256": "51a9812496ff1053e673c2fa811bd42c0b8c696712eef656ea8b76623ad5a1d1"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/request-plan.json",
+        "sha256": "349799a942a58d3d64006745c6a7a8cf2af8a0363bbb32ae5dae1f5ede30b654"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/article-2019-receipt.json",
+        "sha256": "862b059a69144ee6eed635f49b880a4bf4f6b8c0f8fecfd07343298695ea7f60"
+      },
+      "retrieved_at": "2026-10-14T23:08:19.980270+00:00",
+      "status": 200,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210547"
+    },
+    "reference-2019": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/reference-2019-attempt.json",
+        "sha256": "61fc0bbeb97d57a7058be16df5210994b375fac34462ae1c4875872c3749394a"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/reference-2019-response.bin",
+        "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+      },
+      "plan": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/reference-plan.json",
+        "sha256": "65f6e6da1156bd66547501587255fe0e7c08459adb5c15c485ba24893c4056b7"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-14-ciclopirox-primary/reference-2019-receipt.json",
+        "sha256": "3d616fe9167b2e2879319aaf7a295fc9908e79ad8b3dcf4c3cdcd11adbf37b1f"
+      },
+      "retrieved_at": "2026-10-14T23:09:13.909713+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A30633761&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "species_context": {
+    "experimental_derivative_taxon_id": null,
+    "experimental_genome_assignment": null,
+    "grounding_basis": "SPECIES_NODE_IN_REUSED_UNIPROT_K12_LINEAGE",
+    "phenotype_transferred_to_species_or_other_strains": false,
+    "rank": "species",
+    "reference_lists_BW25113": true,
+    "reference_taxon_id": "NCBITaxon:83333",
+    "reference_taxon_rank": "strain",
+    "reference_taxon_uniquely_identifies_BW25113": false,
+    "source_species": "Escherichia coli",
+    "species_taxon_id": "NCBITaxon:562"
+  },
+  "taxonomy_source_reused": {
+    "body": {
+      "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-83333-response.bin",
+      "sha256": "83c59ae9694d1874b8a175d7ce7608f77f5688d35adf307a0859dbb20f9e1c17"
+    },
+    "body_sha256": "83c59ae9694d1874b8a175d7ce7608f77f5688d35adf307a0859dbb20f9e1c17",
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-09-topoisomerase-followup/reference-tax-83333-receipt.json",
+      "sha256": "748b6875ab51cbbbefe77a38ef7dbc7a2a0034cd368336e5f2717e002429b4f9"
+    },
+    "release": "2026_03",
+    "retrieved_at": "2026-10-10T04:04:37.254521+00:00",
+    "url": "https://rest.uniprot.org/taxonomy/83333"
+  }
+}

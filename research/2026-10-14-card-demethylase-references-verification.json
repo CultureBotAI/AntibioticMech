@@ -1,0 +1,164 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "cache_independent_fixture_and_public_projection_tests": "PASS",
+  "cache_search_included_ignored_files": true,
+  "captured_at": "2026-10-15T00:37:04.905030+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-card-demethylase-references/cohort.json",
+    "sha256": "fddf381bb6712805fac5154b2126a5c308d4f2d09a53323fa5bf78b19a53f35b"
+  },
+  "complete_selected_collection_aware_records_read": 31,
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 634,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-demethylase-references/expanded-tests.xml",
+      "sha256": "5b4d79c92a09aece0412cd87568f64e1d65ad58508dd429e47febec1a0df04c8"
+    },
+    "skipped": 0,
+    "tests": 634
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "31b5191f893034f242e273c5728e1268c7057c4c699cb037686becc750f8416d"
+    },
+    {
+      "path": "research/2026-10-14-card-demethylase-references.json",
+      "sha256": "97c96897f935df67c9e798f8874b51bc1ad4d5ddee34d19d0cc6ce22b4b5b1d9"
+    },
+    {
+      "path": "scripts/audit_card_demethylase_references.py",
+      "sha256": "d437b290b3876eed7b69dd325e92663a504ef8f11bf84639a53c3c271990142c"
+    },
+    {
+      "path": "tests/test_card_demethylase_references.py",
+      "sha256": "8a8221d42b4a6f6d148272302887844fe1f26bdfc11696b67ff7bb78abb1420e"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 80,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-14-card-demethylase-references/focused-tests.xml",
+      "sha256": "34bb07099d058d293943f6e65ef86e42a1d50f1139df0e652d2a37bd5db49954"
+    },
+    "skipped": 0,
+    "tests": 80
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "gene_cache_inventory": {
+    "path": "reports/resistance-grounding-2026-10-14-card-demethylase-references/gene-cache-inventory.json",
+    "sha256": "23a3c5d9d85f3e9568e39bc07d2d47c3118cb99ef4affeea103558da69e52d38"
+  },
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_demethylase_references_20261014.py",
+      "sha256": "a26a8d4024e1aa81b0f7b9dec08f824db3d008c18a582be934cfe1b0c7854960"
+    },
+    {
+      "path": "/private/tmp/verify_demethylase_references_20261014.py",
+      "sha256": "d99b9e889b7d3edc57cfe442b8d62ed8689997f525211b43bbaf51155ca9b2ed"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "issue_1040": "DEFERRED",
+  "native_http_attempts": 55,
+  "native_http_status_counts": {
+    "200": 55
+  },
+  "native_protein_flags": {
+    "Fragment": 82,
+    "None": 66
+  },
+  "ncbi_requests": 0,
+  "network_blocked_during_replay": true,
+  "new_experimental_allele_subject_or_genome_assignments": 0,
+  "new_primary_results_reviews": 0,
+  "new_reviewed_queries": 32,
+  "new_taxonomy_queries": 1,
+  "new_unreviewed_queries": 22,
+  "no_new_data_source_owned_or_rendered_files": true,
+  "offline_full_source_selection_and_request_reconstruction": "PASS",
+  "offline_native_replay": "PASS",
+  "outreach": 0,
+  "primary_paper_requests": 0,
+  "primary_source_holds_preserved": true,
+  "prior_research_checkpoints_unchanged": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-card-demethylase-references/protected-before.json",
+    "sha256": "1a07f9b9067c1c883b00b825039b040a2127eec8321dfad3dc6a1fbe9f41921d"
+  },
+  "protected_files_checked": 7650,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "reused_complete_reviewed_queries": 7,
+  "reused_complete_unreviewed_queries": 5,
+  "reused_native_taxonomy_sources": 25,
+  "review_fixes": [
+    "Retain explicit organism-label comparison without inferring identity from names",
+    "Verify taxonomy-cache inventory pin",
+    "Bind fallback plan to its complete reviewed-query evidence"
+  ],
+  "review_type": "ADVERSARIAL_SELF_REVIEW_NOT_INDEPENDENT_REVIEW",
+  "scope": "ALL_CARD_CYP51_ERG11_REFERENCE_CONTEXTS_NOT_EXPERIMENTAL_ALLELES_OR_PHENOTYPES",
+  "source_adoptions": 0,
+  "source_assertion_memberships_hash_and_position_checked": 141,
+  "source_owned_inputs_pages_and_embeddings_unchanged": true,
+  "summary": {
+    "biological_records_changed": 0,
+    "context_status_counts": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 11,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 11,
+      "REVIEWED_REFERENCE": 12,
+      "SOURCE_NAME_UNRESOLVED_NO_PROTEIN_QUERY": 6,
+      "UNREVIEWED_CANDIDATE": 5
+    },
+    "contexts_with_candidates": 28,
+    "corpus_records_checked": 2939,
+    "experimental_assignments": 0,
+    "gene_contexts": 45,
+    "protein_review_statuses": {
+      "UniProtKB reviewed (Swiss-Prot)": 11,
+      "UniProtKB unreviewed (TrEMBL)": 137
+    },
+    "queried_gene_contexts": 39,
+    "reference_proteins": 148,
+    "reference_taxa": 26,
+    "source_assertions": 141,
+    "source_records": 31,
+    "source_terms": 137,
+    "term_status_counts": {
+      "MULTIPLE_CANDIDATES_NO_SELECTION": 31,
+      "NO_EXACT_GENE_RESULTS_NOT_ABSENCE": 18,
+      "REVIEWED_REFERENCE": 65,
+      "SOURCE_NAME_UNRESOLVED_NO_PROTEIN_QUERY": 9,
+      "UNREVIEWED_CANDIDATE": 14
+    },
+    "terms_with_candidates": 110,
+    "whole_record_primary_signoffs": 0
+  },
+  "taxonomy_cache_inventory": {
+    "path": "reports/resistance-grounding-2026-10-14-card-demethylase-references/taxonomy-cache-inventory.json",
+    "sha256": "7632c1c5c5df42facc112250c3e3e4a72c84e2c623337ba651fbfc3d71413410"
+  },
+  "verification_limit": "Gene/species reference candidates only; no experimental allele or primary phenotype signoff.",
+  "whole_record_primary_signoffs": 0
+}

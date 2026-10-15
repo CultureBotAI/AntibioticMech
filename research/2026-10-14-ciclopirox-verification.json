@@ -1,0 +1,109 @@
+{
+  "automatic_redirects": 0,
+  "baseline_commit": "8861902da2991f045b2894621b1760a41d7eb061",
+  "biological_records_changed": 0,
+  "captured_at": "2026-10-14T23:03:44.878062+00:00",
+  "changed_code_format_check": "PASS",
+  "changed_existing_paths": [
+    "research/2026-10-07-resistance-gene-grounding.md"
+  ],
+  "cohort": {
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox/cohort.json",
+    "sha256": "da38d4415269e4212984e1713d6ae4f10acfef213ef4547322c5092997be93fe"
+  },
+  "corpus_records_hash_checked": 2939,
+  "current_census": {
+    "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+    "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+  },
+  "distinct_reference_proteins": 5,
+  "expanded_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 903,
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox/expanded-tests.xml",
+    "sha256": "d68fc33a61fab7b0224be516c7f6e80b7e7808db7591742b088cba4cd510746d",
+    "skipped": 0,
+    "tests": 903
+  },
+  "files": [
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "4ce56f999ef5cde8df949db0f1dcaea44d954a78326c26676d18ae8f73d9f404"
+    },
+    {
+      "path": "research/2026-10-14-ciclopirox-context.json",
+      "sha256": "a7c7246f72dbff1e990be9775df9da7f7eda74e0e908205156b78f836749fb45"
+    },
+    {
+      "path": "scripts/audit_ciclopirox_context.py",
+      "sha256": "ae714925490b4b95f960ee6fd3d64300a77c03aea842b080e122e972c060fde0"
+    },
+    {
+      "path": "tests/test_ciclopirox_context.py",
+      "sha256": "f8ef9edec4500f16d915a7aa35d79df41cecce68124968564389b0cafdc59d4e"
+    }
+  ],
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 178,
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox/focused-tests.xml",
+    "sha256": "b8d69d6a640ef80493089130fb1b645c769725cafd2b1fcf808f05e62dde6d8e",
+    "skipped": 0,
+    "tests": 178
+  },
+  "full_authoritative_qc_rerun": false,
+  "full_corpus_goal_status": "OPEN",
+  "generated_pages_source_owned_inputs_and_embeddings_unchanged": true,
+  "git_diff_check": "PASS",
+  "github_mutations": 0,
+  "helpers": [
+    {
+      "path": "/private/tmp/research_ciclopirox_20261014.py",
+      "sha256": "9b73c8484d02c997ac5d244a109aaa700ec85012ac915fc8b16c8b0a9e1ab2f6"
+    },
+    {
+      "path": "/private/tmp/verify_ciclopirox_20261014.py",
+      "sha256": "13665458c56d4b25b9f11cc2140c307666cd7bbf2a0f5959be6545e3974db50a"
+    }
+  ],
+  "historical_report_sections_byte_identical": true,
+  "http_status_counts": {
+    "200": 3,
+    "500": 1
+  },
+  "issue_1040": "DEFERRED",
+  "native_taxonomy_responses_reused": 1,
+  "ncbi_contact": 0,
+  "ncbi_requests": 0,
+  "new_resistance_assertions_or_experimental_identifiers": 0,
+  "numeric_AST_variants_sequences_constructs_or_protocols_exported": false,
+  "offline_native_replay": "PASS",
+  "offline_planner_smoke": {
+    "functions": [
+      "reference_plan",
+      "reference_followup_plan"
+    ],
+    "network_blocked": true,
+    "status": "PASS"
+  },
+  "other_selected_primary_papers": "UNREQUESTED_AFTER_CANARY_ERROR",
+  "primary_2003_hold": "TECHNICAL_HTTP_500_HOLD",
+  "primary_results_reviews": 0,
+  "prior_source_holds_preserved": true,
+  "protected_baseline": {
+    "path": "reports/resistance-grounding-2026-10-14-ciclopirox/protected-before.json",
+    "sha256": "fb422d56c537c91bafef91cebc6bf38e7ff9395277ce6334ddee64cbbf3a1f3a"
+  },
+  "protected_files_checked": 7620,
+  "repository_ruff_check": "PASS",
+  "retries": 0,
+  "reuse_terms_review_resumed": false,
+  "scientific_http_requests": 4,
+  "scope": "SCOPED_INDUCTION_REFERENCE_RESEARCH_NOT_NEW_RESISTANCE_CURATION",
+  "selected_citation_scope": "INDUCTION_NOT_RESISTANCE_CAUSALITY",
+  "source_adoptions": 0,
+  "verification_limit": "Focused and related research tests only; biological records and generated artifacts are byte-identical. Earlier full-QC receipts remain historical.",
+  "whole_record_primary_signoffs": 0
+}
