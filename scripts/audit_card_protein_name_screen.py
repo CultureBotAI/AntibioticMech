@@ -211,12 +211,12 @@ def public_context(root, plan):
     return data, records, claims
 
 
-def project_reference(entry, taxon):
+def project_reference(entry, taxon, *, allow_taxon_name_difference=False):
     require(not {"sequence", "features"} & set(entry), "unexpected sequence or variant data")
     path, species = lineage(taxon)
     require(
         entry["organism"]["taxonId"] == taxon["taxonId"]
-        and entry["organism"]["scientificName"] == taxon["scientificName"]
+        and (allow_taxon_name_difference or entry["organism"]["scientificName"] == taxon["scientificName"])
         and all(type(v) is int and v > 0 for v in entry["entryAudit"].values())
         and set(entry["entryAudit"]) == {"entryVersion", "sequenceVersion"},
         "native identity or version changed",
@@ -245,7 +245,7 @@ def project_reference(entry, taxon):
                 )
     numbers = [b["reference_number"] for b in bibliography]
     require(numbers == list(range(1, len(numbers) + 1)), "native bibliography numbering changed")
-    return {
+    result = {
         "accession": "UniProtKB:" + entry["primaryAccession"],
         "native_entry_sha256": checksum(entry),
         "entry_type": entry["entryType"],
@@ -276,6 +276,18 @@ def project_reference(entry, taxon):
         "exact_allele_assignment": False,
         "experimental_genome_assignment": None,
     }
+    if allow_taxon_name_difference:
+        result["native_protein_taxonomy"] = {
+            key: entry["organism"][key]
+            for key in ("taxonId", "scientificName", "commonName")
+            if key in entry["organism"]
+        }
+        result["taxonomy_name_comparison"] = (
+            "EXACT_NATIVE_SCIENTIFIC_NAME_AGREEMENT"
+            if entry["organism"]["scientificName"] == taxon["scientificName"]
+            else "SHARED_NATIVE_TAXID_DIFFERENT_LABELS_NOT_SILENTLY_HARMONIZED"
+        )
+    return result
 
 
 def term_status(citations, pool, matches):

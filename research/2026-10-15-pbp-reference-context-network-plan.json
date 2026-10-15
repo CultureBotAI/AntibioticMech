@@ -1,0 +1,34 @@
+{
+  "automatic_retries": 0,
+  "max_response_bytes": 5000000,
+  "ncbi_requests": 0,
+  "prior_attempt": {
+    "path": "reports/resistance-grounding-2026-10-15-pbp-reference-context/proteins-1313-attempt.json",
+    "sha256": "2e85bdd15a3c2a7cb51fd656bc50e6dc676383c32badf98f8269181a50f25183"
+  },
+  "prior_error": {
+    "path": "reports/resistance-grounding-2026-10-15-pbp-reference-context/proteins-1313-error.json",
+    "sha256": "ee18ffe83eee43d4b5783ecff8dbaeb1735785fedad47ea93f99f5b5527a925a"
+  },
+  "prior_plan": {
+    "path": "research/2026-10-15-pbp-reference-context-plan.json",
+    "sha256": "ae4bf51c18c0dac9aae028d569376a42d6341ca06b9feb77c4f51d71cbad30c2"
+  },
+  "prior_transport_attempts": 1,
+  "reason": "LOCAL_DNS_FAILURE_WITHOUT_HTTP_RESPONSE_RETRY_WITH_EXPLICIT_NETWORK_PERMISSION",
+  "requests": {
+    "proteins-1313-network": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "protein_name:\"penicillin-binding\" AND taxonomy_id:1313 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "source_species": "Streptococcus pneumoniae",
+      "taxon_id": "1313",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=protein_name%3A%22penicillin-binding%22+AND+taxonomy_id%3A1313+AND+reviewed%3Atrue&size=500&format=json&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "same_endpoint_and_parameters": true
+}

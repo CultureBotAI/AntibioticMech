@@ -1,0 +1,89 @@
+{
+  "assessment": {
+    "path": "research/2026-10-15-mexxy-context-assessment.json",
+    "sha256": "a714572166172c89c7ddc7c37533125b21c9c105d05275eed69e803326ff7d04"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-mexxy-context/protected-before.json",
+    "sha256": "3b9ef0913910b5805e384030cf34809a56034294af59a7b13cca3150d2a79d7e"
+  },
+  "biological_record_writes": false,
+  "date": "2026-10-15",
+  "host_taxonomy": {
+    "body": null,
+    "receipt": {
+      "path": "reports/resistance-grounding-2026-10-07/request-b37438d139cabeff14d8fff73da60ff02883c14f8607f400fe790db4799cc9ac.json",
+      "sha256": "56c5cdcec44f05a573796c091acdccc5142f9cc7eeef32a72ebb0bdeab0f6b40"
+    }
+  },
+  "inputs": {
+    "corpus_update": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    }
+  },
+  "issue_1040": "DEFERRED",
+  "ncbi_requests": 0,
+  "new_uniprot_requests": 0,
+  "oprA_citation_query": {
+    "directory": "reports/resistance-grounding-2026-10-09-card-literature-proteins",
+    "query": {
+      "complete_for_query": true,
+      "establishes_biological_absence": false,
+      "pages": [
+        {
+          "cache": {
+            "path": "reports/resistance-grounding-2026-10-09-card-literature-proteins/pmid-22282519-response.bin",
+            "sha256": "a18c993c66623ad3b1901735f10d9200fb5727eeef5ccbf97a01185446b52576"
+          },
+          "page": 1,
+          "receipt": {
+            "path": "reports/resistance-grounding-2026-10-09-card-literature-proteins/pmid-22282519-receipt.json",
+            "sha256": "2c7395b9e7ab575121a949dde9c00b9ecabfd62dadfe0dd053cd2ebfd72f535c"
+          },
+          "retrieved_at": "2026-10-10T05:04:31.377955+00:00",
+          "status": 200,
+          "url": "https://rest.uniprot.org/uniprotkb/search?query=lit_pubmed%3A22282519&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+        }
+      ],
+      "query": "lit_pubmed:22282519",
+      "release": "2026_03",
+      "result_count": 3,
+      "status": "COMPLETE_QUERY_NOT_PRIMARY_REVIEW"
+    }
+  },
+  "primary_attempt": {
+    "path": "reports/resistance-grounding-2026-10-15-mexxy-context/primary-attempt.json",
+    "sha256": "db8854f9dd52013f480e7f9016c13d193c25e335d1098a25ca1f627a16e483bf"
+  },
+  "primary_receipt": {
+    "path": "reports/resistance-grounding-2026-10-15-mexxy-context/primary-receipt.json",
+    "sha256": "75569fc38c21de1e8a21cc03e85359837a72cb3e6b7fba92f89683ea9d0b1444"
+  },
+  "prior_members": {
+    "path": "research/2026-10-15-card-complex-members.json",
+    "sha256": "008d915100f8c36ca43b39b891a97a418e4e9d60dcd807cbfe9e2ed9284779ac"
+  },
+  "prior_mex": {
+    "path": "research/2026-10-15-mex-component-references.json",
+    "sha256": "3f2d562cd3f0d8c5365cbc3ea67d021639ac186d3a61f0d985bee0289aa96699"
+  },
+  "request_plan": {
+    "path": "reports/resistance-grounding-2026-10-15-mexxy-context/request-plan.json",
+    "sha256": "0d71cc26e8c283d1a92f1ff5e543354b109ec66d6ca8f6b75a2f8ab104cef981"
+  },
+  "reuse_terms_review_resumed": false,
+  "scope": "MEXXY_REFERENCE_BIBLIOGRAPHY_AND_PRIMARY_HOST_CONTEXT_NOT_EXPERIMENTAL_ALLELES",
+  "source_plan": {
+    "path": "research/2026-10-15-mex-component-xrefs-plan.json",
+    "sha256": "03ca5b14555593d3146895ce32c8a56887afd0fa591a601b249e6242f884e4c5"
+  },
+  "terms": {
+    "ARO:3003032": "MexXY-OprM",
+    "ARO:3003038": "MexXY-OprA"
+  }
+}
