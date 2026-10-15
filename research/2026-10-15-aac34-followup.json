@@ -1,0 +1,141 @@
+{
+  "attribution": "UniProt Consortium metadata, release 2026_03. Pawlowski et al. (2016), DOI:10.1038/ncomms13803, narrowly inspected reagent context; no operational text exported.",
+  "chemical_context": {
+    "activity_observation_curated": false,
+    "doi": "DOI:10.1038/ncomms13803",
+    "exact_corpus_structure_assignment": null,
+    "kanamycin_specific_product_identifier_in_selected_paragraph": false,
+    "location": "Antibiotics and reagents / sec11 / sole direct paragraph",
+    "operational_paragraph_exported": false,
+    "paragraph_sha256": "c6cab8f75deae3725163124b5abf79ad87ebef259c850c33688ed4dc5d54a9b3",
+    "pmid": "PMID:27929110",
+    "supplier_context": "General Sigma-Aldrich supplier statement with exceptions, not a drug identity.",
+    "whole_article_or_supplement_identifier_absence_claimed": false
+  },
+  "date": "2026-10-15",
+  "exact_organism_query": {
+    "biological_absence_inferred": false,
+    "complete_for_query": true,
+    "query_scope": "EXACT_ORGANISM_ID_NOT_ALL_TAXONOMIC_DESCENDANTS_OR_REFERENCE_ORGANISMS",
+    "reference_taxon_id": "NCBITaxon:1120679",
+    "result_count": 0,
+    "source": {
+      "release": "2026_03",
+      "retrieved_at": "2026-10-12T19:55:17.589285+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=organism_id%3A1120679&format=json&size=25&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Csequence_version%2Cversion%2Cxref_embl%2Cxref_card%2Ccc_miscellaneous",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-0f7728ccc539dca125379ef9523ba8d46b94f9c2e5c778165d9cf8a9c40f6298.json",
+        "sha256": "14a8f94613b175c376032cc87ee821138cb81f2c339f455025895d807eb49417"
+      }
+    }
+  },
+  "inputs": {
+    "aac6": {
+      "path": "research/2026-10-15-aac6-gaps.json",
+      "sha256": "11c2c59fcd16228ef5156755b11037aba44888dd0c3dd0aa56695cf85584bfb7"
+    },
+    "aac6_verification": {
+      "path": "research/2026-10-15-aac6-gaps-verification.json",
+      "sha256": "ff57240e26c931dc98e1672318c1622f44f8b23249e02b4910b4ad82426e607c"
+    },
+    "cohort": {
+      "path": "reports/resistance-grounding-2026-10-15-aac34-followup/cohort.json",
+      "sha256": "e1cc9a8ae30fceb4e60b9b0c665dfe79806646708a3da4782d5d70ae319d7554"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-bla-memberships.json",
+      "sha256": "a1d25fde388ec82ff5d8d1f46ec847face83b38ff7b497b7ac7a22952e756491"
+    },
+    "primary": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/primary-27929110.json",
+      "sha256": "a136eddc5a7a90de5e929f9bef00e257dd1aac7c31d8c74a6ced9cf0ffec02dc"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "limits": {
+    "all_aliases_or_sources_searched": false,
+    "biological_records_changed": 0,
+    "clinical_resistance_category_inferred": false,
+    "earlier_name_query_requests_replayed": 2,
+    "experimental_assignments": 0,
+    "full_corpus_goal_status": "OPEN",
+    "genome_assignment": null,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_network_requests": 0,
+    "primary_access_holds_retried": 0,
+    "reuse_terms_review_resumed": false
+  },
+  "name_queries": {
+    "reviewed": {
+      "biological_absence_inferred": false,
+      "complete_for_query": true,
+      "query_scope": "GLOBAL_ASCII_SOURCE_LABEL_IN_GENE_OR_PROTEIN_NAME_NOT_ALL_ALIASES",
+      "result_count": 0,
+      "reviewed_subset": true,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/reviewed-attempt.json",
+          "sha256": "5f365b86249e56bba5faa6035107bb14f757002e4da257ead4701eb0a65c355b"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/reviewed-response.bin",
+          "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/reference-plan.json",
+          "sha256": "529d90edf5cdf9a9e598ba07b32b8b6176405ae5916efe4a5ed068cd08c93847"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/reviewed-receipt.json",
+          "sha256": "6ea58aceffca3dbba4ea67518ee08ec247f445790b9515add25d0ecea57d38ed"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T10:25:37.048463+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3A%22aac%286%27%29-34%22+OR+protein_name%3A%22AAC%286%27%29-34%22%29+AND+reviewed%3Atrue&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    },
+    "unreviewed": {
+      "biological_absence_inferred": false,
+      "complete_for_query": true,
+      "query_scope": "GLOBAL_ASCII_SOURCE_LABEL_IN_GENE_OR_PROTEIN_NAME_NOT_ALL_ALIASES",
+      "result_count": 0,
+      "reviewed_subset": false,
+      "source": {
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/unreviewed-attempt.json",
+          "sha256": "fa5e7e581fb2ea1368cec06adf65571c96c0d0010c5a96578f8a3b2ced47c9b1"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/unreviewed-response.bin",
+          "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+        },
+        "plan": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/reference-plan.json",
+          "sha256": "529d90edf5cdf9a9e598ba07b32b8b6176405ae5916efe4a5ed068cd08c93847"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-15-aac34-followup/unreviewed-receipt.json",
+          "sha256": "74e5d2356b605eee32f0446dc7b6b812a9bad01f43f2ca201ab13989737fedf8"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-15T10:26:22.496244+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3A%22aac%286%27%29-34%22+OR+protein_name%3A%22AAC%286%27%29-34%22%29+AND+reviewed%3Afalse&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      }
+    }
+  },
+  "scope": "AAC34_BOUNDED_NAME_QUERIES_AND_CHEMICAL_CONTEXT_NOT_EXPERIMENTAL_IDENTITY",
+  "source_term_id": "ARO:3003989",
+  "summary": {
+    "complete_cached_name_queries": 2,
+    "complete_cached_organism_queries": 1,
+    "selected_reagent_paragraphs_reviewed": 1,
+    "selected_reference_proteins": 0
+  }
+}

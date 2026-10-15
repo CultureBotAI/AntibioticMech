@@ -271,6 +271,19 @@ apply the review. Missing subject IDs remain unresolved, not inferred from a
 reference organism. This does not constitute whole-record review or a new AST
 observation.
 
+CARD evidence-scope qualifications live in `curation/card_evidence_reviews.json`.
+They pin the adopted resistance inventory, each source row, and the destination
+record identifier and InChIKey. The seeder adds only a `note`, preserving the
+original mechanism, determinant, ARO evidence and CARD ownership. Primary
+references in that note support the qualification, not an upgrade of the
+database assertion. Conflicting functional contexts and derivative-versus-parent
+compound limits must remain explicit. This lane cannot assign experimental
+proteins, organisms, alleles, genomes or AST observations, or suppress source
+claims. Unknown fields, stale pins, ambiguous source ownership and changed
+chemical bindings fail closed. Use the normal dry run, validated-writer canary,
+seeding, reproduction and rendering checks. Full experimental grounding remains
+separate work; a qualification is not a whole-record scientific signoff.
+
 **An activity claim** is the strictest of the three: an `ActivityObservation`
 requires evidence, and a reported MIC or disk-diffusion diameter requires its
 units and the assay that produced it. A definition sentence supplies none of

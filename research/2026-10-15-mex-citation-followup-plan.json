@@ -1,0 +1,67 @@
+{
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-mex-followup/protected-before.json",
+    "sha256": "738b829fa46f2cf9e8cd36201e29ebb6389314c611685a955d0a4abc2f47f090"
+  },
+  "cached_citation_queries": [
+    "12193619",
+    "12917802",
+    "12937010",
+    "12951344",
+    "15817779",
+    "15855505",
+    "15855547",
+    "16301811",
+    "17223624",
+    "19713238",
+    "22282519"
+  ],
+  "limits": {
+    "biological_writes": false,
+    "candidate_species_does_not_assign_experimental_strain": true,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_routes_require_inspection": true,
+    "operational_exports": false,
+    "reuse_terms_review_resumed": false
+  },
+  "new_gene_symbols": [
+    "mexJ",
+    "mexK",
+    "mexV",
+    "mexW"
+  ],
+  "prior": {
+    "path": "research/2026-10-15-mex-component-references.json",
+    "sha256": "3f2d562cd3f0d8c5365cbc3ea67d021639ac186d3a61f0d985bee0289aa96699"
+  },
+  "prior_verification": {
+    "path": "research/2026-10-15-mex-component-references-verification.json",
+    "sha256": "9f16fed8f2a0171ca51a6f1bd1e1d3ed0c16f8ebe4c4f0967717ecaa861ef782"
+  },
+  "query_registry": {
+    "path": "research/2026-10-15-card-protein-name-screen-plan.json",
+    "sha256": "eca6ca45feb4fc78547a9647d3f31a2952e96837ab485569f7ac1a80140a5720"
+  },
+  "reused_opmh_no_hit": {
+    "path": "research/2026-10-14-triclosan-context.json",
+    "sha256": "b9acd6b77ef071a50186e87cb04795bbf95d6140fd7267bdba1387dec6c6b957"
+  },
+  "scope": "MEX_CITATION_AND_SPECIES_REFERENCE_FOLLOWUP_NOT_EXPERIMENTAL_GROUNDING",
+  "selected_terms": [
+    "ARO:3000799",
+    "ARO:3003029",
+    "ARO:3003038",
+    "ARO:3003691",
+    "ARO:3003694",
+    "ARO:3003697",
+    "ARO:3003703",
+    "ARO:3009148",
+    "ARO:3009153"
+  ],
+  "urls": {
+    "metadata-16301811": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16301811+AND+SRC%3AMED&format=json&resultType=core&pageSize=1",
+    "mexj-canary": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmexJ%29+AND+taxonomy_id%3A287+AND+reviewed%3Afalse&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Ccc_subunit",
+    "remaining-symbols": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AmexK+OR+gene_exact%3AmexV+OR+gene_exact%3AmexW%29+AND+taxonomy_id%3A287+AND+reviewed%3Afalse&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Ccc_subunit"
+  }
+}

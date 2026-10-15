@@ -1,0 +1,226 @@
+"""Evidence qualifications preserve CARD ownership and exact source/compound scope."""
+
+import copy
+import csv
+import json
+import socket
+import sys
+from pathlib import Path
+
+import pytest
+import requests
+
+from antibioticmech.activity_collections import load_record
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import card_evidence_reviews as review  # noqa: E402
+import seed_from_sources as seed  # noqa: E402
+from audit_curator_resistance_fields import owner  # noqa: E402
+
+INVENTORY = ROOT / "data/raw/aro_resistance_edges.tsv"
+SLUGS = ("pleuromutilin", "colistin-a", "colistin-b")
+
+
+@pytest.fixture(autouse=True)
+def offline(monkeypatch):
+    def denied(*args, **kwargs):
+        raise AssertionError("network forbidden")
+
+    monkeypatch.setattr(requests.sessions.Session, "request", denied)
+    monkeypatch.setattr(socket.socket, "connect", denied)
+    monkeypatch.setattr(socket, "create_connection", denied)
+
+
+@pytest.fixture
+def inputs(tmp_path):
+    inventory = tmp_path / "inventory.tsv"
+    inventory.write_bytes(INVENTORY.read_bytes())
+    path = tmp_path / "reviews.json"
+    path.write_bytes(review.DEFAULT_REVIEW.read_bytes())
+    rows = list(csv.DictReader(inventory.open(), delimiter="\t"))
+    documents = [load_record(ROOT / f"data/antibiotics/antibacterial/{s}.yaml") for s in SLUGS]
+    return inventory, rows, {r["identifier"]: r for r in documents}, path
+
+
+def test_projection_changes_only_three_notes_and_preserves_source_ownership(inputs):
+    inventory, rows, records, path = inputs
+    decisions = review.load_reviews(*inputs)
+    assert len(decisions) == 3
+    before = copy.deepcopy(records)
+    unqualified = copy.deepcopy(records)
+    seed.attach_aro_mechanism(unqualified, "2026-10-15", evidence_review=None)
+    seed.attach_aro_mechanism(records, "2026-10-15", evidence_review=path)
+    changed = []
+    for rid, record in records.items():
+        for item, old in zip(
+            record["resistance_mechanisms"], unqualified[rid]["resistance_mechanisms"], strict=True
+        ):
+            assert seed.is_card_sourced(item) and owner(item) == "CARD"
+            if item != old:
+                changed.append((rid, item["aro_id"]))
+                assert {k: v for k, v in item.items() if k != "note"} == old
+                assert "Qualification references, not an upgrade" in item["note"]
+        assert record.get("molecular_targets") == unqualified[rid].get("molecular_targets")
+        assert {
+            k: v
+            for k, v in record.items()
+            if k
+            not in {
+                "resistance_mechanisms",
+                "molecular_targets",
+            }
+        } == {
+            k: v
+            for k, v in before[rid].items()
+            if k
+            not in {
+                "resistance_mechanisms",
+                "molecular_targets",
+            }
+        }
+    assert set(changed) == {
+        ("CHEBI:8269", "ARO:3003761"),
+        ("CHEBI:59064", "ARO:3004695"),
+        ("CHEBI:59673", "ARO:3004695"),
+    }
+    once = copy.deepcopy(records)
+    seed.attach_aro_mechanism(records, "2026-10-15", evidence_review=path)
+    assert records == once
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        "unknown_top",
+        "bool_version",
+        "inventory",
+        "rows",
+        "unknown_review",
+        "empty_note",
+        "bad_date",
+        "duplicate_id",
+        "no_evidence",
+        "bad_reference",
+        "bad_url",
+        "empty_location",
+        "unknown_evidence",
+        "duplicate_reference",
+        "no_targets",
+        "unknown_target",
+        "row_pin",
+        "duplicate_row",
+        "record_id",
+        "missing_record",
+        "chemical",
+        "source_concept",
+        "ambiguous_source",
+        "add_protein",
+        "add_taxon",
+        "add_allele",
+        "add_phenotype",
+    ],
+)
+def test_invalid_or_scope_expanding_reviews_fail_closed(inputs, change):
+    inventory, rows, records, path = inputs
+    document = json.loads(path.read_bytes())
+    first = document["reviews"][0]
+    evidence = first["evidence"][0]
+    target = first["source_rows"][0]
+    if change == "unknown_top":
+        document["extra"] = True
+    elif change == "bool_version":
+        document["schema_version"] = True
+    elif change == "inventory":
+        inventory.write_bytes(inventory.read_bytes() + b"\n")
+    elif change == "rows":
+        rows.pop()
+    elif change == "unknown_review":
+        first["extra"] = True
+    elif change == "empty_note":
+        first["note"] = " "
+    elif change == "bad_date":
+        first["reviewed_on"] = "2026-02-30"
+    elif change == "duplicate_id":
+        document["reviews"][1]["review_id"] = first["review_id"]
+    elif change == "no_evidence":
+        first["evidence"] = []
+    elif change == "bad_reference":
+        evidence["reference"] = "PMID:0"
+    elif change == "bad_url":
+        evidence["source_url"] = "http://example.org"
+    elif change == "empty_location":
+        evidence["locations"] = []
+    elif change == "unknown_evidence":
+        evidence["extra"] = "unsupported"
+    elif change == "duplicate_reference":
+        first["evidence"].append(copy.deepcopy(evidence))
+    elif change == "no_targets":
+        first["source_rows"] = []
+    elif change == "unknown_target":
+        target["extra"] = True
+    elif change == "row_pin":
+        target["row_sha256"] = "0" * 64
+    elif change == "duplicate_row":
+        first["source_rows"].append(copy.deepcopy(target))
+    elif change == "record_id":
+        target["identifier"] = "CHEBI:59064"
+    elif change == "missing_record":
+        del records[target["identifier"]]
+    elif change == "chemical":
+        records[target["identifier"]]["chemical_structure"]["standard_inchi_key"] = "changed"
+    elif change == "source_concept":
+        records[target["identifier"]]["source_concepts"] = []
+    elif change == "ambiguous_source":
+        records["CHEBI:59064"]["source_concepts"] += copy.deepcopy(
+            records[target["identifier"]]["source_concepts"]
+        )
+    else:
+        first[change.removeprefix("add_")] = "unsupported experimental assignment"
+    path.write_text(json.dumps(document))
+    with pytest.raises(ValueError):
+        review.load_reviews(inventory, rows, records, path)
+
+
+@pytest.mark.parametrize("change", ["note", "mechanism", "label", "aro", "evidence"])
+def test_review_refuses_to_modify_an_edited_claim(inputs, change):
+    inventory, rows, records, path = inputs
+    decisions = review.load_reviews(*inputs)
+    seed.attach_aro_mechanism(records, "2026-10-15", evidence_review=None)
+    row = next(r for r in rows if r["determinant_id"] == "ARO:3003761")
+    item = next(
+        r for r in records["CHEBI:8269"]["resistance_mechanisms"] if r["aro_id"] == row["determinant_id"]
+    )
+    if change == "evidence":
+        item["evidence"].append({"reference": "PMID:123"})
+    else:
+        item[{"note": "note", "mechanism": "mechanism_type", "label": "label", "aro": "aro_id"}[change]] = (
+            "changed"
+        )
+    before = copy.deepcopy(item)
+    with pytest.raises(ValueError):
+        review.apply_review(item, row, decisions)
+    assert item == before
+
+
+def test_unreviewed_claim_and_explicit_fixture_opt_out_are_unchanged(inputs):
+    inventory, rows, records, path = inputs
+    assert review.load_reviews(inventory, rows, records, None) == {}
+    decisions = review.load_reviews(*inputs)
+    row = next(r for r in rows if review.row_digest(r) not in decisions)
+    item = {"unrelated": "curator value"}
+    assert review.apply_review(item, row, decisions) is False
+    assert item == {"unrelated": "curator value"}
+
+
+def test_qualifications_retain_both_conflicting_results_and_exact_compound_limits():
+    document = json.loads(review.DEFAULT_REVIEW.read_bytes())
+    eatav, mcr = document["reviews"]
+    assert "tiamulin" in eatav["note"] and "not the parent" in eatav["note"]
+    assert "contrasting" in mcr["note"] and "not universal" in mcr["note"]
+    assert "purified colistin A or B separately" in mcr["note"]
+    assert {e["reference"] for e in mcr["evidence"]} == {
+        "DOI:10.1128/JCM.01562-17",
+        "DOI:10.1128/AAC.00649-18",
+        "DOI:10.1093/jac/dkz413",
+    }

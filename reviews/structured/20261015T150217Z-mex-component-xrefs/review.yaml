@@ -1,0 +1,345 @@
+schema_version: 1.0.0
+review_id: 20261015T150217Z-mex-component-xrefs
+kind: batch
+repository: culturebotai/AntibioticMech
+title: Mex component reference and ontology-role audit
+started_at: '2026-10-15T15:01:21Z'
+finished_at: '2026-10-15T15:02:17Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: self_review
+  independence_basis: Same agent performed the source audit and adversarial checks;
+    no independent reviewer or subagent.
+skill: antibioticmech-research-resistance-genes
+completion: partial
+verdict: needs_curation
+scientific_review: false
+summary: Five native component xrefs yield three species-compatible references and
+  two withheld species/name mismatches. One major source-role inconsistency remains
+  open. Primary biology and whole records are not signed off.
+source:
+  git_revision: 8f0dc555d7b4b683610fae7945f22bd6e9fb5105
+  inputs:
+  - path: curation/source_queue.tsv
+    role: context
+    sha256: 32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb
+  - path: data/antibiotics/antibacterial/chloramphenicol.yaml
+    role: context
+    sha256: aa85b6ffcb39d19950f2c8397ec4c37d5472a959130a79eb1d27aecb62404498
+  - path: data/antibiotics/antibacterial/erythromycin-a.yaml
+    role: context
+    sha256: 4639a9ca3005a92edabbab64b412731187bbe2a540971f251ce4a856bd6fe65f
+  - path: data/antibiotics/antibacterial/tetracycline.yaml
+    role: context
+    sha256: 68de808f0457c1c59f0c1decf4ad4b958d872b52b175e37795db0e85bccc8258
+  - path: data/antibiotics/antibacterial/triclosan.yaml
+    role: context
+    sha256: e8b29e87dcd8e0d2347eb6bc395b72435ff06faf01fe434083e572ed87063530
+  - path: data/antibiotics/biocide/acriflavine.yaml
+    role: context
+    sha256: 194ab8a3bfec7eef5ee10d299935bc5ee9f21412836cd8329949bc6115deeaf7
+  - path: data/raw/aro_resistance_edges.tsv
+    role: context
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+  - path: docs/CURATION.md
+    role: context
+    sha256: 1b16f856f63b074850d01a3e8111bda96aca891d8cd3b624ad411bcb1007cdf7
+  - path: docs/HARMONIZATION.md
+    role: context
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+  - path: research/2026-10-15-mex-component-xrefs-plan.json
+    role: context
+    sha256: 03ca5b14555593d3146895ce32c8a56887afd0fa591a601b249e6242f884e4c5
+  - path: research/2026-10-15-mex-component-xrefs.json
+    role: target
+    sha256: 623350fc0830c15749d4392803d6b4a097a39ff8e331427585acb03b6342b779
+  - path: research/2026-10-15-mex-jkvw-evidence.json
+    role: context
+    sha256: e0d24b4254443cddc56f87b263ab7189bcf25953557667311586b2ef18f49bec
+  - path: scripts/audit_mex_component_xrefs.py
+    role: context
+    sha256: 31efddca4dc447b3d2b83a6a128e929bd9ef51aba31c7876c81654c5f3620eae
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    role: context
+    sha256: 27b01b64fc0c92f279964260b3c298a2769d185628fd28ce532074c9cef649eb
+  - path: tests/test_mex_component_xrefs.py
+    role: context
+    sha256: 1b7a78af8d7c11175a6333453a2d824a5063c963b597be82adf52ffd4232ff9e
+  state: working_tree
+targets:
+- kind: snapshot_row
+  target_id: ARO:3003030
+  label: MexV
+  path: research/2026-10-15-mex-component-xrefs.json
+  selector: /components/ARO:3003030
+  owner_paths:
+  - repository: arpcard/aro
+    path: aro.owl
+    role: Authoritative component restrictions; unchanged upstream source
+  - repository: culturebotai/AntibioticMech
+    path: scripts/audit_mex_component_xrefs.py
+    role: Local reference-only projection that preserves source conflicts without
+      correcting biology
+- kind: snapshot_row
+  target_id: ARO:3003031
+  label: MexW
+  path: research/2026-10-15-mex-component-xrefs.json
+  selector: /components/ARO:3003031
+  owner_paths:
+  - repository: arpcard/aro
+    path: aro.owl
+    role: Authoritative component restrictions; unchanged upstream source
+  - repository: culturebotai/AntibioticMech
+    path: scripts/audit_mex_component_xrefs.py
+    role: Local reference-only projection that preserves source conflicts without
+      correcting biology
+- kind: snapshot_row
+  target_id: ARO:3003682
+  label: OpmH
+  path: research/2026-10-15-mex-component-xrefs.json
+  selector: /components/ARO:3003682
+  owner_paths:
+  - repository: arpcard/aro
+    path: aro.owl
+    role: Authoritative component restrictions; unchanged upstream source
+  - repository: culturebotai/AntibioticMech
+    path: scripts/audit_mex_component_xrefs.py
+    role: Local reference-only projection that preserves source conflicts without
+      correcting biology
+- kind: snapshot_row
+  target_id: ARO:3003692
+  label: MexJ
+  path: research/2026-10-15-mex-component-xrefs.json
+  selector: /components/ARO:3003692
+  owner_paths:
+  - repository: arpcard/aro
+    path: aro.owl
+    role: Authoritative component restrictions; unchanged upstream source
+  - repository: culturebotai/AntibioticMech
+    path: scripts/audit_mex_component_xrefs.py
+    role: Local reference-only projection that preserves source conflicts without
+      correcting biology
+- kind: snapshot_row
+  target_id: ARO:3003693
+  label: MexK
+  path: research/2026-10-15-mex-component-xrefs.json
+  selector: /components/ARO:3003693
+  owner_paths:
+  - repository: arpcard/aro
+    path: aro.owl
+    role: Authoritative component restrictions; unchanged upstream source
+  - repository: culturebotai/AntibioticMech
+    path: scripts/audit_mex_component_xrefs.py
+    role: Local reference-only projection that preserves source conflicts without
+      correcting biology
+scope:
+  description: Five unresolved MexJK/MexVW component source nodes and their pinned
+    UniProt metadata, bound to four existing complex terms and eight claims in five
+    records.
+  selection: MexJ, MexK, MexV, MexW and OpmH after the previous literal-symbol and
+    own-citation audits.
+  coverage: partial
+  population_size: 5
+  reviewed_target_ids:
+  - ARO:3003030
+  - ARO:3003031
+  - ARO:3003682
+  - ARO:3003692
+  - ARO:3003693
+  exclusions:
+  - target: Primary experimental identities, whole-record conclusions and remaining
+      corpus
+    reason: Reference metadata and internal ontology consistency do not resolve experimental
+      alleles, phenotype, genomes or all 2939 records.
+checks:
+- check_id: regression
+  name: Offline replay and focused adversarial regression
+  required: true
+  status: passed
+  exit_code: 0
+  target_ids:
+  - ARO:3003030
+  - ARO:3003031
+  - ARO:3003682
+  - ARO:3003692
+  - ARO:3003693
+  command: .venv/bin/python -m pytest -q tests/test_mex_component_xrefs.py tests/test_mex_jkvw_evidence.py
+    tests/test_mex_citation_followup.py tests/test_mex_component_references.py tests/test_card_protein_name_screen.py
+    tests/test_card_reference_lineages.py tests/test_card_evidence_reviews.py tests/test_card_aph_memberships.py
+    --junitxml=reports/resistance-grounding-2026-10-15-mex-component-xrefs/regression.xml
+  summary: 274 passed, 2 historical-live replay skips. Current component replay ran,
+    including 4182 native entries, nine pages and all 2939 current record hashes;
+    portable checks still cover historical artifacts.
+- check_id: lint-provenance
+  name: Lint, formatting, diff, source queue and provenance
+  required: true
+  status: passed
+  target_ids:
+  - ARO:3003030
+  - ARO:3003031
+  - ARO:3003682
+  - ARO:3003692
+  - ARO:3003693
+  summary: All five recorded local check commands exited zero; no source adoption
+    or source inventory changes.
+- check_id: primary
+  name: Primary biological resolution
+  required: true
+  status: unavailable
+  target_ids:
+  - ARO:3003030
+  - ARO:3003031
+  - ARO:3003682
+  - ARO:3003692
+  - ARO:3003693
+  summary: Existing PMID12193619 and PMID12951344 full-text HTTP403 holds remain;
+    two other selected primary papers remain unrequested. No new request or alternate
+    route was attempted.
+- check_id: full-qc
+  name: Authoritative repository QC
+  required: false
+  status: unavailable
+  target_ids:
+  - ARO:3003030
+  - ARO:3003031
+  - ARO:3003682
+  - ARO:3003692
+  - ARO:3003693
+  summary: Not rerun for this research-only pass. The previous just qc attempt could
+    not start on Intel macOS because locked RDKit2026.3.5 has no compatible wheel/sdist.
+    Focused checks are not full QC.
+evidence:
+- evidence_id: ontology
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/0225daaf01b1336fc6e866989b4835b89afa40d8/aro.owl
+  locator: MexJ ARO:3003692 and MexK ARO:3003693 direct rdfs:subClassOf owl:Restriction
+    triples; definition annotations retained by hash in local dossier
+  snapshot_sha256: 0207b9156898d011cff6397a1cf5b0e178ce7806222c73de875b57a0d0e6b6fc
+  accessed_at: '2026-10-15T15:02:17Z'
+  support: supports
+  summary: Pinned ontology date 12:08:2026 11:14 assigns opposite inner-membrane/periplasmic-adaptor
+    roles for MexJK-OpmH relative to MexJK and MexJK-OprM. This establishes a source
+    inconsistency, not which biological correction is correct.
+- evidence_id: references
+  kind: database
+  reference: research/2026-10-15-mex-component-xrefs.json
+  locator: /reference_candidates, /native_protein_pages and /taxonomy_sources
+  accessed_at: '2026-10-15T15:02:17Z'
+  snapshot_sha256: 623350fc0830c15749d4392803d6b4a097a39ff8e331427585acb03b6342b779
+  support: context_only
+  summary: UniProt2026_03 explicit CARD component crossrefs and cached active taxonomy
+    identify three PAO1 references without native gene symbols and two P. fluorescens
+    references with differing native symbols; no experimental identity is established.
+- evidence_id: scope
+  kind: record_content
+  reference: research/2026-10-15-mex-jkvw-evidence.json
+  snapshot_sha256: e0d24b4254443cddc56f87b263ab7189bcf25953557667311586b2ef18f49bec
+  accessed_at: '2026-10-15T15:02:17Z'
+  support: context_only
+  summary: Prior exact complex/record/claim bindings and primary paper dispositions
+    remain unchanged; component metadata does not turn a single accession into a complex.
+assessments:
+- assessment_id: reference-metadata
+  area: provenance
+  topic: Explicit reference links and native taxonomy
+  outcome: supported
+  target_ids:
+  - ARO:3003030
+  - ARO:3003031
+  - ARO:3003682
+  - ARO:3003692
+  - ARO:3003693
+  evidence_ids:
+  - references
+  - scope
+  summary: Native pages, aggregates, entry versions, exact CARD xrefs and taxon ranks
+    reproduce; source reference context remains separate from experimental subjects.
+- assessment_id: role-consistency
+  area: graph
+  topic: Context-dependent source role conflict
+  outcome: concern
+  target_ids:
+  - ARO:3003692
+  - ARO:3003693
+  evidence_ids:
+  - ontology
+  summary: MexJ/MexK role assignments reverse in the MexJK-OpmH context; no role is
+    silently normalized or propagated.
+- assessment_id: withheld-species
+  area: grounding
+  topic: Different-species candidate context
+  outcome: concern
+  target_ids:
+  - ARO:3003682
+  - ARO:3003693
+  evidence_ids:
+  - references
+  summary: P. fluorescens references with native tolC_3 and mexB_1 symbols cannot
+    fill the P. aeruginosa OpmH/MexK identity gaps. This does not prove their CARD
+    xrefs biologically wrong.
+findings:
+- finding_id: mexjk-role-conflict
+  issue_key: card-mexjk-opmh-component-role-conflict
+  title: MexJ and MexK source roles reverse in the MexJK-OpmH context
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  target_ids:
+  - ARO:3003692
+  - ARO:3003693
+  field_paths:
+  - /components/ARO:3003692/component_relations
+  - /components/ARO:3003693/component_relations
+  evidence_ids:
+  - ontology
+  - scope
+  owner_paths:
+  - repository: arpcard/aro
+    path: aro.owl
+    role: Authoritative component restrictions; unchanged upstream source
+  - repository: culturebotai/AntibioticMech
+    path: scripts/audit_mex_component_xrefs.py
+    role: Local reference-only projection that preserves source conflicts without
+      correcting biology
+  description: The pinned source directly asserts conflicting component roles across
+    the selected complexes. Propagating either role would materially misground a future
+    graph; existing generated records do not store these subcomponent-role assignments.
+    Preserve both assertions and resolve primary biological support before proposing
+    an upstream correction.
+actions:
+- action_id: resolve-role-conflict
+  finding_ids:
+  - mexjk-role-conflict
+  target_ids:
+  - ARO:3003692
+  - ARO:3003693
+  owner_paths:
+  - repository: arpcard/aro
+    path: aro.owl
+    role: Authoritative component restrictions; unchanged upstream source
+  - repository: culturebotai/AntibioticMech
+    path: scripts/audit_mex_component_xrefs.py
+    role: Local reference-only projection that preserves source conflicts without
+      correcting biology
+  description: Resolve the biological roles from supplied primary copies or newly
+    authorized access before any correction or propagation; no outreach is authorized.
+  acceptance_checks:
+  - Retain exact source restriction and definition provenance.
+  - Establish each component role in its own complex context from primary evidence.
+  - Keep reference accession, source organism, experimental subject and whole-complex
+    identity distinct.
+  - Do not change generated records or close this finding solely because a reference
+    matches the species.
+limitations:
+- Database metadata and internal consistency only; primary experimental support was
+  not reassessed.
+- 'No NCBI requests, outreach, AST adoption, reuse review, GitHub mutations, source
+  corrections or biological record changes. #1040 remains deferred.'
+- No sequence, variant, construct, protocol, genome or AST exports; no whole-record
+  signoff.
+- The complete CARD-xref query is not an exhaustive alias or strain search; all earlier
+  holds and findings remain unchanged.
+- Same-agent adversarial review is not independent review; full authoritative QC remains
+  unavailable on this platform.

@@ -13343,6 +13343,652 @@ Full authoritative QC was not rerun under the documented Intel macOS / pinned
 RDKit limitation. No NCBI request occurred; #1040 and reuse-terms review remain
 deferred. The full-corpus investigation remains open.
 
+## Complete AAC(6') Reference Index Reconciliation (2026-10-15)
+
+The successor `research/2026-10-15-card-aac6-memberships.json` and matching TSV
+retain all 2,939 records, 2,002 CARD terms and 4,538 CARD claim memberships.
+They reconcile the complete preceding 15-term AAC(6)-label dossier: 70 claims
+on 12 records, including both lowercase source labels. This is the selected
+source-label cohort, not a claim that every enzyme-family member is covered.
+
+Two previously qualified references now join the broad index:
+AAC(6')-29a / ARO:3002583 maps to UniProtKB:Q9AIK9, native gene `aacA29a`,
+and AAC(6')-29b / ARO:3002584 maps to UniProtKB:Q9AIK8, native gene `aacA29b`.
+Both retain their unreviewed submission-name status and verified reference
+taxonomy, Pseudomonas aeruginosa / NCBITaxon:287 / species. Their source-cited
+bibliography supports reference context, not tested-allele, strain or genome
+identity. Ten memberships across five records are not ten experimental results.
+The PMID:11158753 / PMC90325 primary-access hold remains linked without retry
+or an alternative route; primary experimental review remains open.
+
+The index now has 1,281 terms with selected references, 1,683 distinct reference
+proteins and 2,798 term-protein links on 223 records. Its 721 terms and 1,281
+claim memberships without selected references remain unresolved within these
+inputs, not biological negatives. The four ambiguous AAC(6) family contexts,
+five empty citation-query contexts and four terms without definition citations
+remain explicit. All 217 PHI-base claims, 133 curator claims, 467 score rules,
+and 2,666 records without CARD assertions retain their previous accounting.
+
+The companion `research/2026-10-15-aac34-followup.json` replays two successful
+UniProt release 2026_03 name queries captured earlier on 2026-10-15. Both the
+reviewed and unreviewed global queries for the ASCII source label in gene or
+protein names returned zero entries. The reviewed query completed before the
+unreviewed fallback. The earlier exact-organism query for TaxID 1120679 also
+returned zero entries. These are bounded query results, not a search of every
+spelling, alias, taxonomic descendant, reference organism or external resource.
+No request was restarted, and no experimental protein or genome was assigned.
+
+A narrow follow-up of the cached LC231 paper inspected the sole direct
+paragraph in its "Antibiotics and reagents" section. Its general supplier
+statement does not provide a kanamycin-specific product identifier in that
+paragraph. This is not an absence claim for the entire article or supplements.
+The paragraph is retained by hash rather than exporting its operational text.
+The earlier table's "Kanamycin" label therefore remains unassigned to the
+kanamycin A structure record. The table's heterologous assay-host context,
+censored MIC, units and unresolved experimental identities are preserved in
+the preceding dossier, without a new ActivityObservation or clinical category.
+
+Native offline replay reproduced the complete predecessor chain, both AAC(6)
+dossiers and the new index with network and Python file-write guards active.
+All live CARD claim hashes and positions were checked after collection-aware
+record loading. Adversarial tests cover missing memberships and lowercase terms,
+reference-to-experiment promotion, taxon rank, held-source handling, empty-query
+scope, inherited status columns, and evidence-pointer resolution. The public
+index projection uses only public research inputs and is also checked with request
+cache reads blocked, without moving or deleting the actual evidence caches.
+The companion verification receipt records the actual regression outcomes and
+preservation of the 7,762-file baseline; earlier report sections are unchanged.
+
+This reconciliation made zero network requests. Its two name-query receipts
+describe earlier requests, not new traffic. No biological record, source-owned
+input, curation event, page, embedding, source adoption or GitHub state changed.
+PR #1135's successful CI applies to its prior published tree, not these new
+changes. Full authoritative QC was not rerun under the documented pinned RDKit
+Intel macOS limitation. No NCBI request or outreach occurred; #1040 and
+reuse-terms review remain deferred. The full-corpus investigation remains open.
+
+## APH/ANT/aad/mph Citation and Nomenclature Review (2026-10-15)
+
+The [cohort dossier](2026-10-15-aph-ant-aad-mph-gaps.json),
+[frozen plan](2026-10-15-aph-ant-aad-mph-gaps-plan.json), and
+[offline audit](../scripts/audit_aph_ant_aad_mph_gaps.py) cover all **14** terms
+without selected references in the pinned AAC6 index whose source labels start
+with `aph`, `ant(`, `aad`, or `mph`, case-insensitively. This is a label-based
+cohort, not a claim that every included term denotes an enzyme; `aadT` remains
+included without an inferred enzymatic role. The cohort comprises **38 existing
+CARD claims across 16 complete, collection-aware records**. All **2,939** record
+hashes were checked, and their chemical identities and source claims preserved.
+
+All **14 cached citation queries** were complete for their precise queries in
+UniProt release `2026_03`. They contain **29 distinct entries**, with no new
+requests. Reusing the prior name-change assessment qualifies one reference:
+
+| Source term | Reference | Reference taxonomy | Evidence scope |
+| --- | --- | --- | --- |
+| `ARO:3002637`, `APH(2'')-IVa` | `UniProtKB:O68183`, native gene `aph(2'')-Id` | `NCBITaxon:37734`, Enterococcus casseliflavus, species | Historical nomenclature relation, source-citation concordance, and indirect structural reference; not an experimental allele. |
+
+The native entry is **unreviewed TrEMBL**, entry version **113**, sequence
+version **1**. Its name is a submission annotation, not expert review. Its
+11 bibliography entries include ten journal articles and one submission;
+reference 1 matches the source term's own citation, `PMID:9593155`. The active
+species node and its lineage were replayed from the cached UniProt taxonomy
+response. The historical `3N4T_1` structural path points to this accession,
+but the selected UniProt response has no direct CARD cross-reference. Neither
+an absent protein flag nor the structural link proves an exact tested protein.
+
+The Id-to-IVa name relation reuses the earlier assessment of the final
+nomenclature Discussion in `PMID:19158087`, DOI `10.1074/jbc.M808148200`.
+That assessment used publisher-indexed text; its native primary file was not
+cached, and Table 5, figures, supplements, and whole-paper review were not
+completed. **This pass does not claim to replay that primary text.** Its
+source-owned assessment and limits are retained unchanged. The qualified
+reference is associated with four existing memberships: `CHEBI:17630`,
+`CHEBI:2637`, `CHEBI:28418`, and `CHEBI:28864`. These are reference memberships,
+not four verified drug-specific assays or new biological observations.
+
+Seven terms retain nonmatching-hit contexts: `aadA2`, `aphA15`, and the five
+labels `mphF`, `mphL`, `mphM`, `mphI`, and `mphO`. In particular, generic `aph`
+annotation on Q9AF71 does not identify `aphA15`; a shared citation's other mph
+members cannot substitute for the focal labels. Six terms have complete empty
+citation-query contexts: `aadA8`, `APH(2'')-Ig`, `ANT(3'')-IIc`,
+`APH(3')-VIIIa`, `APH(9)-Ic`, and `aadT`. These are not biological absence
+findings, and do not claim exhaustive searches of all aliases or sources.
+
+The [verification receipt](2026-10-15-aph-ant-aad-mph-gaps-verification.json)
+records native replay, mutation tests, cache-free checks, and preservation.
+The focused regression run passed **1,160 tests**, with one documented
+historical-checkpoint replay skip. Simulated cache absence passed **38 tests**,
+with only the native replay intentionally skipped. Repository-wide Ruff,
+format checks for both new Python files, and whitespace checks passed.
+No biological record, source-owned input, page, embedding, or curation event
+changed. No experimental allele, host, genome, clinical category, or AST
+observation was assigned. Existing access holds remain in force; no NCBI
+request, outreach, adoption, reuse-terms work, or GitHub mutation occurred.
+Issue #1040 remains deferred. The broad AAC6 index is **not rewritten by this
+cohort dossier**; its 721 unselected terms remain its own checkpoint count,
+and this newly qualified reference is pending index reconciliation. Whole-record
+primary signoffs remain zero and the full-corpus investigation remains open.
+Full authoritative QC was not rerun: RDKit is absent from this virtualenv and
+the lockfile has no Intel macOS wheel for its pinned release. Earlier CI does
+not verify these local changes.
+
+## APH Reference Index Reconciliation (2026-10-15)
+
+The [successor reference index](2026-10-15-card-aph-memberships.json) and
+[all-record table](2026-10-15-card-aph-memberships.tsv) reconcile the complete
+14-label APH/ANT/aad/mph dossier with the preceding AAC6 index. The
+[plan](2026-10-15-card-aph-memberships-plan.json) pins both checkpoints,
+source inputs, census, and prior record table. The
+[offline audit](../scripts/audit_card_aph_memberships.py) replays the native
+predecessor chain and cohort dossier, loads all **2,939 complete records**, and
+checks every one of the **4,538 CARD claims** against its live position and hash.
+Network access and Python file writes were blocked during that replay.
+
+This adds **one term, one protein, one reference link, and four memberships**:
+`ARO:3002637` to `UniProtKB:O68183`, with reference species `NCBITaxon:37734`
+(Enterococcus casseliflavus). The added TSV status is
+`unreviewed_aph_nomenclature_reference_claims`. It distinguishes the historical
+Id-to-IVa name relation and source-citation concordance from a direct CARD
+cross-reference. The unreviewed entry remains version **113**, sequence
+version **1**; no experimental allele, host, genome, or clinical phenotype is
+assigned. The earlier nomenclature assessment is reused, not represented as
+newly replayed primary text or a whole-paper review.
+
+Only four existing memberships change reference status: `CHEBI:17630`,
+`CHEBI:2637`, `CHEBI:28418`, and `CHEBI:28864`. Their underlying biological
+claims, chemical identities, record hashes, and source counts do not change.
+All **14 cohort terms, 38 claims, and 16 records** retain their evidence
+contexts. The seven nonmatching-hit and six empty-query terms remain unselected;
+neither disposition means biological absence or exhaustive alias coverage.
+
+The complete index now contains **1,282 terms with selected references**,
+**1,684 distinct reference proteins**, and **2,799 term-protein links**, across
+the same **223 records with selected references**. **720 terms / 1,277 claims**
+remain without selected references. All **2,666 records without CARD claims**
+remain represented. The **217 PHI-base claims**, **133 curator claims**, and
+**467 score rules** are retained without reassessment. The source universe
+remains **2,002 CARD terms**; repeated memberships are not independent assays.
+
+Every inherited evidence pointer remains attached to its immutable prior owner,
+including AAC6, AAC34, SCO-1, and earlier primary-access holds. The prior summary
+is explicitly linked so this checkpoint's added-reference counts are not confused
+with cumulative or historical additions. The dossier's earlier statement that it
+had not rewritten the index remains true of that immutable checkpoint; this
+successor performs the pending reconciliation without editing the dossier.
+
+The [verification receipt](2026-10-15-card-aph-memberships-verification.json)
+records the native replay, adversarial self-review, regression tests, cache-free
+checks, and preservation audit. **1,228 focused regression tests passed**, with
+one documented historical-checkpoint replay skip; all **68 successor tests
+passed with native caches unavailable**. Repository-wide Ruff, formatting checks
+for both new Python files, and whitespace checks passed.
+No biological record, source-owned input,
+curation event, page, or embedding changed. No NCBI request, source adoption,
+outreach, reuse-terms work, or GitHub mutation occurred; #1040 remains deferred.
+Whole-record primary signoffs remain zero and the full investigation remains
+open. Full authoritative QC was not rerun: RDKit is absent from this virtualenv
+and the lockfile has no Intel macOS wheel for the pinned release. Historical CI
+does not verify these local changes.
+
+## Remaining CARD Protein-Name Screen (2026-10-15)
+
+The [protein-name dossier](2026-10-15-card-protein-name-screen.json) screens all
+**720 terms / 1,277 CARD claims** still unlinked in the APH reference index.
+Its [plan](2026-10-15-card-protein-name-screen-plan.json) pins the source labels,
+definition citations, index, census, and previously cached UniProt queries.
+The [offline audit](../scripts/audit_card_protein_name_screen.py) checks all
+**2,939 record hashes** and reads the **203 complete affected records** through
+the collection-aware loader. CARD ownership is checked before ARO identity:
+the curator-owned VanM claim sharing a screened term is not a CARD claim.
+
+All **643 cached citation queries** replay completely at UniProt release
+**2026_03**, yielding **6,920 entry appearances / 6,881 distinct entries**.
+Repeated entries agree across queries. The screen uses literal,
+case-insensitive bounded matches in recommended, alternative, and submission
+protein names, including full and short names. It does not normalize punctuation,
+invent gene symbols, search all aliases, or assign experimental identities.
+There are **10 term-protein matches across eight proteins**, with all matching
+native field paths and source-citation relationships retained in the dossier.
+
+| Source label | UniProt reference | Disposition |
+| --- | --- | --- |
+| AdeIJK | Q24LT6 | Withheld: the matching name identifies the AdeK subunit, not the whole complex. |
+| TEM-5, TEM-8, TEM-16 | P62593 | Three mappings withheld: alternative allele names on one entry do not identify three exact experimental alleles. |
+| QnrB65 | R4NN96 | Reference candidate only; no native gene field. |
+| msrC | Q9APB1 | Reference candidate only; no native gene field. |
+| eatAv | S5FUH0 | Reference candidate only; no native gene field. |
+| D-Ala-D-Ala ligase | Q47755 | Generic function and `ddl` symbol do not establish a resistance effect or resistant allele. |
+| tunicamycin resistance protein | P12921 | Reference candidate only; its existing `tmrB` CARD link belongs to another source term. |
+| MCR-4.3 | A0A2I6AXF4 | Reference candidate only; native gene symbol remains `mcr-4`, not an inferred allele-specific gene symbol. |
+
+Six cached native taxonomy nodes confirm these **reference** identities without
+NCBI requests. P12921's TaxID **224308** is a strain; its immediate parent
+**135461** is a subspecies, while species ancestor **1423** is Bacillus subtilis.
+A0A2I6AXF4's native TaxID **550** denotes Enterobacter cloacae. These are not
+experimental subject or genome assignments. Native entry/sequence versions,
+review status, protein flags, and bibliography counts remain explicit. The
+malformed native DOI `.1093/jac/dky290` on Q24LT6 is recorded as an anomaly,
+not silently repaired. No primary results or supplements were newly reviewed.
+
+The remaining dispositions distinguish **186 terms without definition
+citations**, **one DOI-only term** (`facT`, `DOI:10.1039/C2MD20038D`), **360 terms
+with empty complete PMID-query pools**, and **163 terms with citation entries
+but no literal protein-name match**. None establishes biological absence or
+exhaustive database coverage. All six non-withheld matches remain pending
+reference candidates; no term is promoted into the broad selected-reference
+index and none is curated into a biological record.
+
+The [verification receipt](2026-10-15-card-protein-name-screen-verification.json)
+records native replay with network and Python file writes blocked, adversarial
+self-review, source-ownership regression coverage, cache-free public-artifact
+checks, and preservation checks. **315 focused regression tests passed**, with
+no skips; **38 tests passed with native caches unavailable**, with the one
+native-replay test explicitly deselected. All **7,782 baseline files** were
+checked; only this appended report section changes earlier tracked or protected
+content. Repository-wide Ruff, new-file formatting, and whitespace checks passed.
+Earlier research artifacts and report text,
+biological records, source-owned inputs, pages, and embeddings are preserved.
+There were no network requests, NCBI requests, access-hold retries, source
+adoptions, outreach, reuse-terms work, or GitHub mutations; #1040 remains
+deferred. The broad index stays at **1,282 referenced terms / 1,684 proteins /
+2,799 links**, with **720 unselected terms**. Whole-record primary signoffs
+remain zero and the full investigation remains open. Full authoritative QC was
+not rerun: this Darwin x86_64 environment lacks RDKit, and the lockfile contains
+no Intel macOS wheel or source distribution for pinned RDKit 2026.3.5.
+Historical CI does not verify these local changes.
+
+## Protein-Name Candidates: Primary Evidence Scope (2026-10-15)
+
+The [evidence dossier](2026-10-15-card-protein-name-evidence.json) and
+[dated assessments](2026-10-15-card-protein-name-evidence-assessments.json)
+follow all **six pending name candidates**, retaining their **eight source
+claims in eight records**. The [audit](../scripts/audit_card_protein_name_evidence.py)
+checks all **2,939 record hashes**, reads the eight complete records through the
+collection-aware loader, and binds each claim to its exact source row. The
+native reference identities remain separate from experimental subjects,
+alleles and genomes; missing gene fields are not filled from protein names.
+
+This review is saved through the repository's shared validator as an immutable
+[Markdown review](../reviews/structured/20261015T131237Z-card-protein-name-primary-context/review.md)
+and [authoritative YAML](../reviews/structured/20261015T131237Z-card-protein-name-primary-context/review.yaml).
+Its verdict is **needs_curation**, completion **partial**, with **two major and
+two minor open findings** and source-owner actions. It is an agent self-review,
+not an independent assessment or whole-record signoff.
+
+- **MCR-4.3:** retain context-specific negative functional evidence and later
+  carrier observations without asserting universal inactivity or assigning
+  effects to individual colistin components.
+  [Functional study](https://journals.asm.org/doi/10.1128/aac.00649-18),
+  [later carrier study](https://journals.asm.org/doi/10.1128/aac.00133-19).
+- **eatAv:** evidence for a tested derivative does not establish the exact
+  parent-compound claim represented by the pleuromutilin record.
+  [Primary study](https://journals.asm.org/doi/10.1128/aac.01030-13).
+- **msrC:** the early association leaves causal and mechanistic limits; it
+  neither proves nor disproves CARD's current target-protection classification.
+  [Primary study](https://journals.asm.org/doi/10.1128/aac.45.1.263-266.2001).
+- **D-Ala-D-Ala ligase:** generic reference identity does not identify the
+  specific alteration-dependent subject; primary results remain incomplete.
+  [Primary abstract](https://onlinelibrary.wiley.com/doi/abs/10.1110/ps.39101).
+
+QnrB65 remains a citation-identity lead without obtained allele-specific
+results. TmrB remains abstract-supported reference context with full-paper,
+compound-form and experimental-subject checks pending. The separate Aus0004
+genome citation does not identify the later eatAv experimental derivative.
+Across **11 source contexts**, six had scoped primary-text inspection, two
+primary abstracts, one review abstract, one limited nomenclature context, and
+one citation-only context. Neither metadata retrieval nor an abstract is
+represented as full primary-results review.
+
+The [citation identity receipt](2026-10-15-card-protein-name-evidence-citation.json)
+also prevents a citation conflation: **PMID:30053115** identifies the naming
+proposal, **DOI:10.1093/jac/dky262**, not the separate functional study
+**DOI:10.1128/AAC.00649-18**. Existing local Europe PMC metadata supplied this
+crosswalk; it required no NCBI request. Web-reader internal errors are recorded
+as such, not misreported as HTTP 403 responses. All inherited access holds
+remain in force, and a later clinical Acinetobacter report remains an
+unreviewed lead rather than grounds for a universal activity conclusion.
+
+The [verification receipt](2026-10-15-card-protein-name-evidence-verification.json)
+records deterministic claim binding, structured-review validation, regression
+tests, cache-free checks and preservation. **116 focused regression tests** and
+**27 cache-free tests** passed with no skips. The shared review checker,
+repository-wide Ruff, new-file formatting and whitespace checks passed.
+All **7,787 baseline files** are preserved except this appended report section;
+the earlier report bytes remain unchanged. Native article bodies were not
+cached or replayed; figures, supplements and rendered tables were not visually
+verified. No new MICs, breakpoints, experimental identities or biological
+records were curated. No source adoption, outreach or GitHub mutation occurred.
+NCBI AST/#1040 and reuse-terms review remain deferred. The selected-reference
+index remains unchanged, and the full-corpus investigation is still open.
+Full authoritative QC was not rerun because this environment lacks RDKit and
+the lockfile has no Intel macOS build for its pinned version.
+
+## CARD Evidence-Scope Qualifications (2026-10-15)
+
+Three CARD assertions now carry reproducible qualifications from
+[`curation/card_evidence_reviews.json`](../curation/card_evidence_reviews.json):
+eatAv on parent pleuromutilin, and MCR-4.3 on colistin A and colistin B. The new
+loader pins the adopted inventory, individual source rows, record identifiers
+and exact InChIKeys. It adds only notes, preserving the original CARD evidence,
+mechanism classifications and ownership. Each changed record has one validated
+reseed event; no reference protein, taxon, experimental allele, genome or AST
+assignment is added.
+
+The later [MCR-4.3 clinical study](https://doi.org/10.1093/jac/dkz413) became
+readable through the publisher and supplies conflicting functional evidence.
+The qualification retains both positive and negative contexts, without claiming
+universal activity or resolving purified-component scope. Primary HTML results
+were read; figures and supplements were not reviewed. The prior reader error
+was not an HTTP access denial. No NCBI request or held-source retry was made.
+The eatAv note preserves the tested-derivative versus parent-compound limit
+documented in the preceding primary-evidence checkpoint.
+
+These notes mitigate presentation gaps but do not close the two major findings:
+exact-compound experimental grounding and complete source reconciliation remain
+open. The earlier msrC and ddl findings are not reassessed. The broad reference
+index and all earlier research/review artifacts remain historical, unchanged
+snapshots. Tests now check their immutable public content independently of live
+replay; replay is skipped explicitly when the original corpus bytes differ.
+
+The pleuromutilin canary was inspected before writing the two colistin records.
+Verification and a linked successor review are recorded in
+[`2026-10-15-card-evidence-qualifications-verification.json`](2026-10-15-card-evidence-qualifications-verification.json).
+`just qc` was attempted but cannot start because locked RDKit 2026.3.5 lacks an
+Intel macOS distribution. Separate available checks are not a full QC pass.
+The corpus-wide investigation remains open; #1040 and NCBI contact remain deferred.
+
+## Mex Component References and Erm(36) Access Hold (2026-10-15)
+
+The [bounded Mex dossier](2026-10-15-mex-component-references.json) covers all
+16 remaining Mex-prefixed source terms: 77 CARD claims on 27 complete records.
+All 2,939 current record hashes were checked against the historical census plus
+the three explicit evidence-qualification deltas above. This is a separate
+component-reference layer, not an update to the historical single-protein index.
+
+Four sequence-free UniProt searches, including the inspected MexA canary,
+returned 20 reference entries for 19 of 29 searched symbols in release 2026_03:
+13 reviewed and seven unreviewed. The remaining ten symbols are gaps in these
+bounded queries, not biological absences or exhaustive alias/strain searches.
+Two already-cached UniProt taxonomy responses establish the reference ranks:
+PAO1 is `NCBITaxon:208964` at strain rank; its species ancestor and the two OprA
+entries are `NCBITaxon:287` at species rank. No NCBI or new taxonomy request was made.
+
+Twelve native component annotations across 11 proteins cover four named
+complexes. Seven source terms, representing 43 claims, have annotations for
+every label-named component. This count includes regulatory-context terms but
+does not validate their alterations or effects. MexT, MexS and MvaT reference
+candidates remain separate from structural components. Native "Probable" and
+"probably" qualifiers are retained; mixed whole-comment ECO evidence is not
+promoted to relation-level primary proof. The OprA candidates are not combined
+with PAO1 MexX/MexY into an asserted MexXY-OprA complex. The remaining native
+gene-symbol matches are explicitly candidate-only.
+
+The [Erm(36) hold](2026-10-15-erm36-access-hold.json) records a new publisher
+full-text HTTP 403 for PMID:12177341, DOI:10.1099/00221287-148-8-2479. The abstract
+was accessible, but full text was not inspected. No redirect, retry or alternate
+route followed the denial. The older Erm(36)/ErmD identity conflict remains open;
+the reference entry is not an experimental allele or genome assignment.
+
+The [verification receipt](2026-10-15-mex-component-references-verification.json)
+records offline replay, focused regression and preservation checks. No biological
+record, source inventory, generated page, experimental identity or AST observation
+changed in this pass. Whole-record primary signoffs remain zero; the corpus-wide
+investigation remains open. The earlier full-QC Intel macOS/RDKit limitation still
+applies; these research checks are not a full-QC pass. #1040 remains deferred, with
+no NCBI contact, reuse-terms review, source adoption or GitHub mutation.
+
+## Mex Citation and Species Follow-Up (2026-10-15)
+
+The [successor dossier](2026-10-15-mex-citation-followup.json) examines all nine
+terms lacking complete native component annotations in the preceding Mex
+checkpoint: **34 claims across 18 records**. Its offline replay checks all
+2,939 record hashes, rereads the preceding 27 complete records, and preserves
+every selected claim's exact compound identity, position and content hash.
+
+Eleven complete cached own-citation queries contain eight entries. Exact native
+gene symbols identify seven candidate references: five additional unreviewed
+entries for MexP, MexQ, OpmE, MexM and MexN, plus the two previously documented
+OprA entries. All seven have species-rank `NCBITaxon:287`; no PAO1 or experimental
+strain assignment is inferred. The additional reference entries are G3XCL7 and
+Q4LDT6 through Q4LDT9, with their native versions retained. MexZ is explicitly
+excluded from the MexXY-OprA component candidates.
+
+Citation ownership remains separate from biological interpretation. PMID:16301811
+is MexPQ-OpmE's own definition citation, but only an adjacent follow-up lead for
+MexMN-OprM, whose own citation is PMID:19713238. The indexed abstract names both
+complexes; neither a shared bibliography nor its abstract establishes an exact
+experimental protein accession, complete complex, resistant allele or assay join.
+
+Species-wide unreviewed exact-symbol queries for MexJ, MexK, MexV and MexW
+returned no entries. The MexJ canary's two different-symbol suggestions were not
+followed or accepted as aliases. The earlier complete species-level OpmH zero-hit
+query was replayed without another request. These are scoped database nonmatches,
+not biological absence; broader aliases and exact subject identity remain open.
+
+The DOI for [Mima et al. (2005)](https://doi.org/10.1111/j.1348-0421.2005.tb03696.x)
+returned one manually followed publisher redirect, then **HTTP 403**. Full text
+was not inspected. No retry or alternate route followed; revisit requires new
+direction or a supplied copy. Index subscription flags alone were not treated
+as an access denial or reuse decision. Five native HTTP requests and two web
+search calls occurred; the web service's underlying HTTP count is unknown.
+
+The [verification receipt](2026-10-15-mex-citation-followup-verification.json)
+records actual offline replays, regression checks and preservation. No biological
+record, prior research artifact, source inventory or generated page changed in
+this pass. No experimental identity, quantitative AST or complex-membership
+assertion was curated, and the historical broad index remains unchanged.
+NCBI requests, outreach, source adoption and GitHub mutations remain zero;
+#1040 and reuse-terms work remain deferred. Primary review and the corpus-wide
+goal remain open. Separate research checks do not replace full authoritative
+QC, which retains the previously recorded Intel macOS/RDKit limitation.
+
+## MexJK and MexVW Own-Paper Access Review (2026-10-15)
+
+The [own-paper dossier](2026-10-15-mex-jkvw-evidence.json) binds all four
+MexJK/MexVW source terms to their **eight claims across five records**. The
+offline replay checks all 2,939 current record hashes and rereads the preceding
+27 complete records. All four distinct definition citations now have inspected,
+checksum-pinned EBI bibliographic metadata and abstract provenance.
+
+| Citation | Inspected scope and access disposition |
+| --- | --- |
+| [PMID:12193619](https://doi.org/10.1128/JB.184.18.5036-5044.2002) | MexJK characterization metadata; the listed Europe PMC HTML route returned HTTP 403. Full text is held, not reviewed. |
+| [PMID:12951344](https://doi.org/10.1093/jac/dkg390) | MexVW metadata; the DOI returned a manually followed Oxford publisher redirect, then HTTP 403. Full text is held, not reviewed. |
+| [PMID:15855505](https://doi.org/10.1128/AAC.49.5.1844-1851.2005) | Metadata identifies a MexL-regulation study. Full text was not requested after the Europe PMC canary denial; no denial or global unavailability is inferred for this paper. |
+| [PMID:15855547](https://doi.org/10.1128/AAC.49.5.2133-2136.2005) | Metadata names substrate-dependent component context. Full text was not requested after the Europe PMC canary denial; no denial or global unavailability is inferred for this paper. |
+
+The MexL citation is not an exact OpmH or MexJ/MexK accession crosswalk.
+Abstracts and titles are not promoted into primary-results review, exact assay
+joins, experimental alleles, or corrections of inherited CARD claims. No new
+UniProt candidates or taxonomy assignments were established in this pass.
+The earlier exact-symbol nonmatches remain scoped queries, not gene absence.
+
+Two web-reader attempts failed without HTTP status; only the subsequent native
+403 responses establish these new holds. Seven native HTTP requests comprised
+four metadata reads, two full-text canaries at distinct providers and the
+MexVW DOI redirect. No retry or alternate route followed either denial.
+Full-text copies were requested from the user. Existing holds, #1040 and the
+NCBI reuse-terms deferral remain intact; no NCBI request occurred.
+
+The [verification receipt](2026-10-15-mex-jkvw-evidence-verification.json)
+records actual offline replay, regression and preservation checks. Biological
+records, earlier research artifacts, source inventories and generated pages
+remain unchanged. No source adoption, outreach or GitHub mutation occurred.
+These access findings advance the evidence audit but do not complete primary
+review or the corpus-wide investigation. The previously recorded Intel
+macOS/RDKit limitation still prevents a full authoritative QC claim.
+
+## Mex Component Cross-References and Role Conflict (2026-10-15)
+
+The [offline component audit](2026-10-15-mex-component-xrefs.json) adds a
+separate reference layer for the five still-unresolved MexJK/MexVW component
+symbols. It replays all **4,182 native CARD-linked UniProt entries across nine
+pages**, release **2026_03**, and checks the exact component cross-references
+against the pinned ARO ontology dated `12:08:2026 11:14`. It does not update the
+broad single-protein reference index or make a subunit stand for a whole complex.
+
+| Component | Explicit UniProt reference | Native reference context | Disposition |
+| --- | --- | --- | --- |
+| MexV, ARO:3003030 | Q9HW28 | PAO1 strain TaxID 208964; no native gene symbol | Species-compatible reference only |
+| MexW, ARO:3003031 | Q9HW27 | PAO1 strain TaxID 208964; no native gene symbol | Species-compatible reference only |
+| MexJ, ARO:3003692 | Q9HXW3 | PAO1 strain TaxID 208964; no native gene symbol | Species-compatible reference only |
+| OpmH, ARO:3003682 | A0A448BTW6 | P. fluorescens species TaxID 294; native symbol tolC_3 | Withheld from P. aeruginosa context |
+| MexK, ARO:3003693 | A0A448BGH9 | P. fluorescens species TaxID 294; native symbol mexB_1 | Withheld from P. aeruginosa context |
+
+All five references are unreviewed UniProt entries. Their entry/sequence
+versions, native locus/ORF metadata, exact CARD cross-references, citation
+contexts and cached active taxonomy responses remain attached to each entry.
+The three PAO1 references have species ancestor TaxID 287, not a newly inferred
+experimental strain or genome. Missing native gene symbols remain missing;
+the CARD short-name property is not copied into that field. The two
+different-species candidates are not asserted to be erroneous CARD annotations,
+but cannot fill the P. aeruginosa identity gaps. None of these five accessions
+was in the previous 25-candidate Mex dossiers or broad reference index.
+
+The pinned ontology contains a **source-role inconsistency**: MexJ is assigned
+the inner-membrane role for MexJK-OpmH but the periplasmic-adaptor role for
+MexJK-OprM and MexJK; MexK has the opposite assignments in those contexts.
+Their definitions also distinguish the membrane-fusion and inner-membrane
+roles. Both sets of explicit restriction triples and hashed definition
+annotations are preserved. This confirms an internal source conflict, not an
+independently established biological correction. Named superclasses are kept
+separate from component restrictions; the additional OpmH-to-TriABC-OpmH edge
+is outside this selected record cohort and is not used to transfer evidence.
+
+The [saved review](../reviews/structured/20261015T150217Z-mex-component-xrefs/review.md)
+([YAML](../reviews/structured/20261015T150217Z-mex-component-xrefs/review.yaml))
+records one open major finding affecting the two component nodes. Existing
+generated records do not store these subcomponent-role assignments, so no
+record correction or evidence qualification is justified from this conflict
+alone. Primary identity resolution remains open, including the two prior
+paper-specific HTTP403 holds and two unrequested papers. No held route was
+retried; the earlier TriABC paper hold also remains intact.
+
+The audit preserves **four complex terms, eight CARD claims and five record
+bindings**, rechecks all **2,939 current record hashes**, and replays the prior
+collection-aware inspection of 27 complete Mex records. The regression suite
+passed **274 tests**, with **two historical-live replay skips**; current native
+component replay and portable artifact checks ran. Repository lint, formatting,
+diff, source-queue and provenance checks passed. See the
+[verification receipt](2026-10-15-mex-component-xrefs-verification.json).
+This is not full `just qc`: its earlier Intel macOS/RDKit dependency failure
+remains unresolved, and it was not rerun for this research-only pass.
+
+There were **zero new network requests**, including zero NCBI requests, and no
+biological record edits, experimental allele assignments, AST observations,
+source adoption, outreach, GitHub mutations, reuse-terms review, or whole-record
+signoffs. **#1040 remains deferred; the corpus-wide investigation remains open.**
+
+## mdeA Own-Citation and Species-Name Follow-Up (2026-10-15)
+
+The [mdeA dossier](2026-10-15-mdea-evidence.json) follows the own citation for
+`ARO:3007011`, retaining **seven CARD claims in seven exact-structure records**.
+The complete records were read through the collection-aware loader, and all
+**2,939 current record hashes** were checked against the historical census plus
+the three explicit qualification deltas. This is not a whole-record review.
+
+- Europe PMC metadata identifies the cited paper as PMID:23462018,
+  [DOI:10.4014/jmb.1301.01028](https://doi.org/10.4014/jmb.1301.01028), a study
+  of MdeA from **Streptococcus mutans**. Its indexed abstract distinguishes
+  the source organism from a heterologous test context. Neither that metadata
+  nor the source-name mapping establishes resistance in the native organism,
+  an exact tested allele, or an experimental strain/genome identifier.
+- The complete UniProt species-name query, release **2026_03**, returns four
+  candidates. Only **NCBITaxon:1309**, active *S. mutans* at species rank,
+  matches the exact scientific name. The other three results are retained and
+  rejected for this exact-name crosswalk. This is a named-study-organism
+  reference, not a newly curated experimental subject.
+- Replayed the earlier complete UniProt own-citation query with zero results.
+  New sequence-free exact-gene queries for `mdeA` within taxon 1309, reviewed
+  first and then unreviewed, also return zero results. **No protein accession
+  is assigned.** These bounded negative results do not establish gene or
+  protein absence, and similarly named proteins from another species are not
+  substituted. The broad reference index remains unchanged.
+- The DOI returns a 302 to the publisher's older HTTP article URL. A single
+  deliberate HTTPS request to the same host/path/query ends in a connection
+  failure **without an HTTP response**. It was not retried and no alternate
+  full-text route was requested. This is a transport failure, not a confirmed
+  access denial, a paywall conclusion, or proof of global unavailability.
+  No new paper-specific access-denial hold is created. Primary text, figures,
+  supplements and exact experimental identity remain unreviewed.
+
+Saved the [native replay plan](2026-10-15-mdea-evidence-native-plan.json) and
+[verification receipt](2026-10-15-mdea-evidence-verification.json).
+The audit replays native receipts and body hashes, exact request parameters,
+the species-name disambiguation, the reviewed-query canary, all seven current
+claim bindings, and the separate no-response publisher disposition. It exports
+no abstract text, sequence, variant, construct, protocol, genome or AST values.
+
+The regression suite passed **297 tests**, with **two historical-live replay
+skips**; current mdeA and Mex replays and portable artifact checks ran. Repository
+lint, formatting, diff, source-queue and provenance checks passed. All earlier
+artifacts and review bundles remain unchanged, and all earlier report bytes are
+preserved. Full `just qc` was not rerun: its prior Intel macOS/RDKit dependency
+failure remains unresolved, so this is not authoritative QC signoff.
+
+This pass made **six native request attempts**, yielding five HTTP responses
+and one transport error, plus three web-search calls and one unsuccessful
+web-reader call; underlying web-tool HTTP request counts are unknown. There
+were no retries, automatic redirects, NCBI requests, source adoptions, outreach,
+GitHub mutations, reuse-terms review, biological record changes or experimental
+identity assignments. **#1040 remains deferred; the corpus-wide goal is open.**
+
+## mdeA Primary Reference-Identity Context (2026-10-15)
+
+The [follow-up dossier](2026-10-15-mdea-primary.json) preserves all seven
+`ARO:3007011` claim/record bindings and adds selected primary identity context.
+The [author-uploaded text](https://www.researchgate.net/publication/235796115_Gene_Cloning_and_Characterization_of_MdeA_a_Novel_Multidrug_Efflux_Pump_in_Streptococcus_mutans)
+names the UA159 reference locus as `SMU 2109`, renamed `mdeA`, and Table 2 lists
+unversioned `NP_722397`. The experimental donor is distinguished from UA159,
+and the heterologous test host is kept separate. The paper's reported identity
+to the reference was not independently compared. These details do not establish
+a UniProt crosswalk or identify the complete tested construct.
+
+This review used the author-uploaded **web text**, not a visually verified PDF.
+The [saved assessment](2026-10-15-mdea-primary-assessment.json) records the
+specific Results, Table 2 and Discussion locations. It retains the original
+reference/donor distinctions and does not select other listed homologs as
+experimental identities. Figures, table layout, supplements, numeric AST,
+exact assay-compound correspondence and whole-paper review remain open. No
+sequence, variant, construct or protocol details are exported.
+
+Crossref's native metadata supplies a publisher-registered PDF link alongside
+the older article route. Its `similarity-checking` designation is registration
+metadata, not access or redistribution permission. A single request to that
+PDF host ends without an HTTP response. Separately, the author-page PDF link
+returns a web-reader-reported 404, while its text transcription is readable.
+Neither the transport failure nor the missing download is recorded as a
+confirmed access denial. The old article-page transport failure remains a
+separate historical observation. A PDF copy has been requested from the user
+for visual verification; no author or NCBI contact occurred.
+
+Two complete sequence-free UniProt queries, release **2026_03**, return zero
+results: the paper's RefSeq reference prefix and a species-scoped `SMU_2109`
+locus prefix. Converting the paper's space to an underscore is an explicitly
+labeled discovery query, not a verified alias. A separate one-entry control
+for *S. mutans*, taxon 1309, returns a protein and declares 2,451 total entries.
+Its remaining pages were deliberately not followed: it is **not** a completed
+protein census, and its control accession is **not** an mdeA candidate.
+Thus the species filter works, but the selected identifier searches remain
+unresolved. No biological absence or cause of the missing matches is inferred.
+
+The [verification receipt](2026-10-15-mdea-primary-verification.json) records
+**327 passing regression tests**, with **two historical-live replay skips**,
+plus the final focused rerun. Native metadata/identifier responses, current
+claim bindings, and the saved assessment reproduce offline; the primary web
+text and figures themselves are explicitly **not** replayed offline. All
+**2,939 record hashes** and the seven complete records are rechecked through
+the prior audit. Lint, formatting, diff, source-queue and provenance checks
+pass; earlier report bytes and artifacts remain unchanged. Full `just qc` is
+not rerun or claimed because of the documented Intel macOS/RDKit limitation.
+
+This pass makes **five native request attempts**, yielding four HTTP responses
+and one transport error, plus five web-reader tool calls (including three
+find commands in one call); underlying web HTTP request counts are unknown.
+There are no new UniProt candidates, biological edits, experimental assignments,
+NCBI requests, source adoptions, outreach, GitHub mutations or reuse-terms review.
+**#1040 remains deferred; the corpus-wide investigation remains open.**
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including

@@ -1,0 +1,287 @@
+{
+  "status": "QUALIFICATIONS_CURATED_FULL_QC_UNAVAILABLE_FINDINGS_OPEN",
+  "date": "2026-10-15",
+  "source_commit": "8f0dc555d7b4b683610fae7945f22bd6e9fb5105",
+  "baseline": {
+    "path": "reports/card-evidence-qualifications-2026-10-15/baseline.json",
+    "sha256": "53a558212f86265f8ca39e791e6a34a922401a0819d177af0b1af4b25386fd17"
+  },
+  "protected_files_checked": 7798,
+  "source_inventory": {
+    "path": "data/raw/aro_resistance_edges.tsv",
+    "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+  },
+  "record_deltas": [
+    {
+      "path": "data/antibiotics/antibacterial/pleuromutilin.yaml",
+      "identifier": "CHEBI:8269",
+      "before_sha256": "068be77c7f217810e535cc6c301d52cd5756d7ed72e7f1253fc61fa2bbd26ee5",
+      "after_sha256": "3c9726dea285943c9a78252cee6a0be456df57723036ed5aa86e08c2b9219578",
+      "claims": [
+        {
+          "index": 4,
+          "aro_id": "ARO:3003761",
+          "changed_fields": [
+            "note"
+          ]
+        }
+      ],
+      "history_events_added": 1
+    },
+    {
+      "path": "data/antibiotics/antibacterial/colistin-a.yaml",
+      "identifier": "CHEBI:59064",
+      "before_sha256": "185868296f91137f4154d34980a5e7d2dc54b48cfc6b00fe33b1f682ab975ec2",
+      "after_sha256": "2b8020dd24bb1b98b69d0b5286ee979baa65c123be1bf2cf3344a034049f74cd",
+      "claims": [
+        {
+          "index": 47,
+          "aro_id": "ARO:3004695",
+          "changed_fields": [
+            "note"
+          ]
+        }
+      ],
+      "history_events_added": 1
+    },
+    {
+      "path": "data/antibiotics/antibacterial/colistin-b.yaml",
+      "identifier": "CHEBI:59673",
+      "before_sha256": "0c6a2a63eb0235476c340f5fd8f5f0774125f4fc179fb7d24eb9ba3939945b91",
+      "after_sha256": "6a7050a96a3bd4403760cefc7a1c502bd67b4a235790a6c9bff98fcd9053e10c",
+      "claims": [
+        {
+          "index": 47,
+          "aro_id": "ARO:3004695",
+          "changed_fields": [
+            "note"
+          ]
+        }
+      ],
+      "history_events_added": 1
+    }
+  ],
+  "corpus_records": 2939,
+  "unchanged_records": 2936,
+  "changed_records": 3,
+  "changed_claim_fields": [
+    "note"
+  ],
+  "history_events_added": 3,
+  "embedding_documents_changed": 0,
+  "experimental_identity_assignments": 0,
+  "ast_observations_added": 0,
+  "structured_review": {
+    "yaml": {
+      "path": "reviews/structured/20261015T134842Z-card-evidence-qualifications/review.yaml",
+      "sha256": "7c3cd4d378e339a723e901bd4664b621eaf757a836a0ba4ba0bbcc3677c2825b"
+    },
+    "markdown": {
+      "path": "reviews/structured/20261015T134842Z-card-evidence-qualifications/review.md",
+      "sha256": "1974ecaa421a5ec90471fde7328af9f1b6fd7fcc8310cbc2f4664f2187dc412a"
+    }
+  },
+  "checks": [
+    {
+      "check_id": "regression",
+      "name": "Focused regression suite",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python -m pytest -q tests/test_card_evidence_reviews.py tests/test_seed_harmonization.py tests/test_phibase_grounding_reviews.py tests/test_write_validated.py tests/test_card_protein_name_screen.py tests/test_card_protein_name_evidence.py tests/test_card_aac6_memberships.py tests/test_card_aph_memberships.py tests/test_aph_ant_aad_mph_gaps.py tests/test_aac34_followup.py --junitxml=reports/card-evidence-qualifications-2026-10-15/regression-final.xml",
+      "exit_code": 0,
+      "summary": "509 passed, 3 skipped. Skips are historical live replays after corpus changes; immutable public-artifact checks still pass. The initial run found two historical/live coupling failures, fixed before this complete rerun."
+    },
+    {
+      "check_id": "schema",
+      "name": "Closed-schema corpus validation",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python scripts/validate_strict.py --quiet --workers 2 --out reports/card-evidence-qualifications-2026-10-15/validation.tsv",
+      "exit_code": 0,
+      "summary": "2939 records scanned, zero errors."
+    },
+    {
+      "check_id": "reproduction",
+      "name": "Whole-corpus source reproduction",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python scripts/verify_corpus.py",
+      "exit_code": 0,
+      "summary": "2939 expected and present; zero missing, unexpected or drifted records; no lockfile discrepancies."
+    },
+    {
+      "check_id": "no-op-reseed",
+      "name": "Repeat seeding is byte-stable",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python scripts/seed_from_sources.py --apply --only CHEBI:8269 CHEBI:59064 CHEBI:59673",
+      "exit_code": 0,
+      "summary": "After the dry run, inspected single-record canary and two-record apply, repeat seeding wrote zero records; all three were already current."
+    },
+    {
+      "check_id": "site",
+      "name": "Generated site consistency",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python scripts/render_pages.py --check",
+      "exit_code": 0,
+      "summary": "After regeneration, all 2939 compound pages and seven classes match a clean render. Only three compound pages changed."
+    },
+    {
+      "check_id": "preservation",
+      "name": "Protected files, note-only deltas and rendered text",
+      "required": true,
+      "status": "passed",
+      "summary": "Read-only changes() audit in /private/tmp/card_qualification_review_20261015.py checked 7798 baseline files and all 2939 record paths. Exactly three record notes and one history event per record changed; 2936 records, source inventories, embedding files and all earlier report bytes were preserved. Embedding documents are unchanged; each rendered page contains the full qualification."
+    },
+    {
+      "check_id": "provenance",
+      "name": "Raw source integrity",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python scripts/check_provenance.py",
+      "exit_code": 0,
+      "summary": "14 inventories and 23 upstream files retain valid provenance."
+    },
+    {
+      "check_id": "source-queue",
+      "name": "Source adoption gates",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python scripts/check_source_queue.py",
+      "exit_code": 0,
+      "summary": "37 sources checked; adoption and deferral states unchanged."
+    },
+    {
+      "check_id": "documentation",
+      "name": "Generated statistics",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/python scripts/check_docs.py --check",
+      "exit_code": 0,
+      "summary": "README statistics are current."
+    },
+    {
+      "check_id": "lint",
+      "name": "Repository lint",
+      "required": true,
+      "status": "passed",
+      "command": ".venv/bin/ruff check .",
+      "exit_code": 0,
+      "summary": "Repository lint passed; the four new or modified focused Python files also passed format checks, and git diff --check passed."
+    },
+    {
+      "check_id": "full-qc",
+      "name": "Authoritative QC",
+      "required": true,
+      "status": "failed",
+      "command": "just qc",
+      "exit_code": 2,
+      "summary": "uv cannot start the runner: locked rdkit==2026.3.5 has no source distribution or wheel for this Intel macOS platform. Available separate checks do not constitute full QC."
+    },
+    {
+      "check_id": "primary-grounding",
+      "name": "Complete primary and exact experimental grounding",
+      "required": true,
+      "status": "unavailable",
+      "summary": "Figure/supplement review, reconciliation of functional contexts, and exact-compound experimental identities remain incomplete. No whole-record signoff."
+    }
+  ],
+  "structured_review_validation": {
+    "command": ".venv/bin/python scripts/record_review.py check --require-reviews",
+    "exit_code": 0,
+    "valid_reviews": 2,
+    "contract_tests": {
+      "passed": 4,
+      "skipped": 0,
+      "junit": {
+        "path": "reports/card-evidence-qualifications-2026-10-15/review-tests.xml",
+        "sha256": "9e885ec3442f22f05e309381aa0ea2e1423e79ec43e12a040b539edf6c686b78"
+      }
+    }
+  },
+  "regression": {
+    "tests": 512,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 3,
+    "passed": 509,
+    "junit": {
+      "path": "reports/card-evidence-qualifications-2026-10-15/regression-final.xml",
+      "sha256": "b29085747a40b655c46b4c1281874706bd7d71ab1d1815761d8db51506f6c6cc"
+    }
+  },
+  "files": [
+    {
+      "path": "curation/card_evidence_reviews.json",
+      "sha256": "289d45797f11d85fc535a61991f0f559b83cd307625c4df31aab52f865a8b71e"
+    },
+    {
+      "path": "data/antibiotics/antibacterial/colistin-a.yaml",
+      "sha256": "2b8020dd24bb1b98b69d0b5286ee979baa65c123be1bf2cf3344a034049f74cd"
+    },
+    {
+      "path": "data/antibiotics/antibacterial/colistin-b.yaml",
+      "sha256": "6a7050a96a3bd4403760cefc7a1c502bd67b4a235790a6c9bff98fcd9053e10c"
+    },
+    {
+      "path": "data/antibiotics/antibacterial/pleuromutilin.yaml",
+      "sha256": "3c9726dea285943c9a78252cee6a0be456df57723036ed5aa86e08c2b9219578"
+    },
+    {
+      "path": "docs/CURATION.md",
+      "sha256": "1b16f856f63b074850d01a3e8111bda96aca891d8cd3b624ad411bcb1007cdf7"
+    },
+    {
+      "path": "pages/antibacterial/colistin-a.html",
+      "sha256": "7c523c2c568ba5d01495663fe9238c98f9410fab1bcfbbe6d55f962b4940711e"
+    },
+    {
+      "path": "pages/antibacterial/colistin-b.html",
+      "sha256": "bb9859f9bbaf5135323a6e2faaa7e7e6ea2e0f13a1e1b917fd77a7da8d0757e3"
+    },
+    {
+      "path": "pages/antibacterial/pleuromutilin.html",
+      "sha256": "b273463227d7c1869856a77a4a5aca4ac1fc0488c4f28447c7a792ed84673493"
+    },
+    {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "698dd9765e2e304cb6bc5aec47b9cc5f1ee036a33ffcf03bb40d74c0cf8bc90d"
+    },
+    {
+      "path": "scripts/card_evidence_reviews.py",
+      "sha256": "92f0d5c495567fe1121c6c4044334e9558d6c3058daf215e7d5f8b9ee18a594d"
+    },
+    {
+      "path": "scripts/seed_from_sources.py",
+      "sha256": "be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680"
+    },
+    {
+      "path": "tests/test_aph_ant_aad_mph_gaps.py",
+      "sha256": "d8769f52732601dcf8fecbfb6cfde260b28f19ef76d30d0e4c5534d941560fe6"
+    },
+    {
+      "path": "tests/test_card_evidence_reviews.py",
+      "sha256": "89ba70eb307ed50c62f14209266e4565bb73b4bdb78380f89c5425a71f408a4d"
+    },
+    {
+      "path": "tests/test_card_protein_name_screen.py",
+      "sha256": "c9ee773f0b82de5396e118168466dafb6681362d3d52cfa8ffc87142575acda3"
+    }
+  ],
+  "limits": {
+    "whole_record_primary_signoffs": 0,
+    "full_corpus_goal_status": "OPEN",
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "outreach": 0,
+    "source_adoptions": 0,
+    "github_mutations": 0,
+    "new_web_reader_calls": 1,
+    "underlying_http_request_count_known": false,
+    "reuse_terms_review_resumed": false,
+    "broad_reference_index_refreshed": false,
+    "primary_figures_or_supplements_reviewed": false,
+    "operational_details_exported": false
+  }
+}
