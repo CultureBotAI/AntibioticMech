@@ -143,6 +143,8 @@ def match_fields(entry, entity):
         for role in roles:
             if entity["query_token"] in fields[role]:
                 matches.append({"gene_index": index, "field": role, "value": entity["query_token"]})
+    if len({match["gene_index"] for match in matches}) > 1:
+        raise ValueError("reference token matches multiple native gene blocks")
     return matches
 
 
@@ -455,12 +457,13 @@ def main():
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     result = build(Path.cwd())
-    encoded = json.dumps(result, indent=2, sort_keys=True) + "\n"
-    if args.check:
-        if OUTPUT.read_text() != encoded:
+    encoded = (json.dumps(result, indent=2, sort_keys=True) + "\n").encode()
+    if args.check or OUTPUT.exists():
+        if OUTPUT.read_bytes() != encoded:
             raise ValueError("saved reference successor differs from native replay")
     else:
-        OUTPUT.write_text(encoded)
+        with OUTPUT.open("xb") as stream:
+            stream.write(encoded)
     print(json.dumps(result["summary"], sort_keys=True))
 
 

@@ -358,12 +358,13 @@ def main():
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     result = build(Path.cwd())
-    encoded = json.dumps(result, indent=2, sort_keys=True) + "\n"
-    if args.check:
-        if OUTPUT.read_text() != encoded:
+    encoded = (json.dumps(result, indent=2, sort_keys=True) + "\n").encode()
+    if args.check or OUTPUT.exists():
+        if OUTPUT.read_bytes() != encoded:
             raise ValueError("saved taxonomy cohort differs from native replay")
     else:
-        OUTPUT.write_text(encoded)
+        with OUTPUT.open("xb") as stream:
+            stream.write(encoded)
     print(json.dumps(result["summary"], sort_keys=True))
 
 

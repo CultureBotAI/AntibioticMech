@@ -257,6 +257,32 @@ def test_label_difference_nohit_and_ambiguity_remain_explicit(entry, entity):
         audit.map_entity(entity, [entry, entry])
 
 
+@pytest.mark.parametrize("kind", ["LOCUS", "SYMBOL"])
+def test_one_accession_cannot_hide_multiple_matching_gene_blocks(entry, entity, kind):
+    entity["kind"] = kind
+    if kind == "SYMBOL":
+        entity["query_token"] = "ERG2"
+    entry["genes"].append(copy.deepcopy(entry["genes"][0]))
+    with pytest.raises(ValueError, match="multiple native gene blocks"):
+        audit.match_fields(entry, entity)
+    with pytest.raises(ValueError, match="multiple native gene blocks"):
+        audit.map_entity(entity, [entry])
+
+
+@pytest.mark.parametrize("kind", ["LOCUS", "SYMBOL"])
+def test_multiple_matching_fields_in_one_gene_block_remain_valid(entry, entity, kind):
+    entity["kind"] = kind
+    if kind == "SYMBOL":
+        entity["query_token"] = "ERG2"
+        entry["genes"][0]["synonyms"].append({"value": "ERG2"})
+    else:
+        entry["genes"][0]["orfNames"].append({"value": entity["query_token"]})
+    result = audit.map_entity(entity, [entry])
+    assert result["status"] == "REFERENCE_ONLY_FIELD_MATCH"
+    matches = result["reference_candidates"][0]["matches"]
+    assert len(matches) == 2 and {m["gene_index"] for m in matches} == {0}
+
+
 @pytest.mark.parametrize("change", ["pagination", "release", "total", "error"])
 def test_incomplete_query_cannot_be_a_no_hit(entry, change):
     payload = {"results": [entry]}
@@ -288,6 +314,7 @@ def test_incomplete_query_cannot_be_a_no_hit(entry, change):
         "duplicate",
         "unmatched",
         "wrong_field",
+        "ambiguous_gene_blocks",
     ],
 )
 def test_native_batch_receipt_and_field_binding(tmp_path, plan, entry, change):
@@ -304,6 +331,8 @@ def test_native_batch_receipt_and_field_binding(tmp_path, plan, entry, change):
     elif change == "wrong_field":
         entry["genes"][0]["geneName"] = {"value": token}
         entry["genes"][0]["orderedLocusNames"] = []
+    elif change == "ambiguous_gene_blocks":
+        entry["genes"].append(copy.deepcopy(entry["genes"][0]))
     entries = [entry, entry] if change == "duplicate" else [entry]
     body_path = directory / "references-001-response.bin"
     body_path.write_text(json.dumps({"results": entries}))
@@ -364,6 +393,7 @@ def test_public_projection_is_cache_independent_and_preserves_evidence(prior):
         assert row["resistance_inferred_from_reference"] is False
         for candidate in row["reference_candidates"]:
             protein = result["references"][candidate["protein_accession"]]
+            assert len({m["gene_index"] for m in candidate["matches"]}) == 1
             for match in candidate["matches"]:
                 assert entity["query_token"] == match["value"]
                 assert match["value"] in protein["genes"][match["gene_index"]][match["field"]]
