@@ -232,13 +232,17 @@
     state.visible = state.records.filter(
       (record) => !selectedClass || record.antimicrobial_class === selectedClass
     );
+    const url = new URL(window.location.href);
+    if (selectedClass) url.searchParams.set("class", selectedClass);
+    else url.searchParams.delete("class");
+    if (colorMode.value && colorMode.value !== "class") url.searchParams.set("color", colorMode.value);
+    else url.searchParams.delete("color");
     if (state.selected && !state.visible.includes(state.selected)) {
       state.selected = null;
-      const url = new URL(window.location.href);
       url.searchParams.delete("id");
-      history.replaceState(null, "", url);
       selection.innerHTML = "<h2>Select a compound</h2><p>The previous selection is hidden by the class filter.</p>";
     }
+    history.replaceState(null, "", url);
     status.textContent = `Showing ${state.visible.length} of ${state.records.length} compounds.`;
     resultLimit = 20;
     rebuildLegend();
@@ -292,11 +296,21 @@
           option.textContent = name.replaceAll("_", " ");
           classFilter.append(option);
         });
+      const urlParams = new URL(window.location.href).searchParams;
+      const qParam = urlParams.get("q");
+      if (qParam) search.value = qParam;
+      const classParam = urlParams.get("class");
+      if (classParam) classFilter.value = classParam;
+      const colorParam = urlParams.get("color");
+      if (colorParam && ["class", "input", "fragments"].includes(colorParam)) colorMode.value = colorParam;
+      state.visible = state.records.filter(
+        (record) => !classFilter.value || record.antimicrobial_class === classFilter.value
+      );
       rebuildLegend();
       resizeCanvas();
       updateResults();
-      status.textContent = `Showing all ${state.records.length} compounds.`;
-      const requested = new URL(window.location.href).searchParams.get("id");
+      status.textContent = `Showing ${state.visible.length} of ${state.records.length} compounds.`;
+      const requested = urlParams.get("id");
       if (requested && state.byId.has(requested)) selectRecord(state.byId.get(requested), false);
     } catch (error) {
       status.textContent = `Chemical map could not be loaded: ${error.message}`;
@@ -304,10 +318,21 @@
     }
   }
 
-  search.addEventListener("input", () => { resultLimit = 20; updateResults(); });
+  search.addEventListener("input", () => {
+    resultLimit = 20;
+    const url = new URL(window.location.href);
+    if (search.value.trim()) url.searchParams.set("q", search.value.trim());
+    else url.searchParams.delete("q");
+    history.replaceState(null, "", url);
+    updateResults();
+  });
   showMore.addEventListener("click", () => { resultLimit += 20; updateResults(); });
   classFilter.addEventListener("change", applyFilters);
   colorMode.addEventListener("change", () => {
+    const url = new URL(window.location.href);
+    if (colorMode.value && colorMode.value !== "class") url.searchParams.set("color", colorMode.value);
+    else url.searchParams.delete("color");
+    history.replaceState(null, "", url);
     rebuildLegend();
     draw();
   });
@@ -319,6 +344,9 @@
     selection.innerHTML = "<h2>Select a compound</h2><p>Search by name or select a point.</p>";
     const url = new URL(window.location.href);
     url.searchParams.delete("id");
+    url.searchParams.delete("q");
+    url.searchParams.delete("class");
+    url.searchParams.delete("color");
     history.replaceState(null, "", url);
     applyFilters();
   });

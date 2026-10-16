@@ -60,6 +60,19 @@
 </head>
 <body>
 <div class="wrap">
+<header class="site">
+  <a class="brand" href="index.html">AntibioticMech</a>
+  <nav>
+    <a href="index.html">Overview</a>
+    <a href="browse.html">Browse</a>
+    <a href="map.html">Map</a>
+    <a href="chemical-map.html">Chemical map</a>
+    <a href="sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
+  </nav>
+</header>
 
 <header class="hero">
   <h1>AntibioticMech</h1>
@@ -69,6 +82,10 @@
     Ontology onto one identity per structure, with the mechanism layer a
     compound list does not carry.
   </p>
+  <form class="hero-search" action="browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search 2939 antimicrobial compounds by name, ChEBI/ARO ID, class, or status..." aria-label="Search antimicrobial compounds">
+    <button type="submit">Search</button>
+  </form>
   <div class="stats">
     <a class="stat" href="browse.html"><b>2939</b><span>compound records</span></a>
     <a class="stat" href="index.html#identity-grounding"><b>2669</b><span>ontology-grounded</span></a>
@@ -99,19 +116,31 @@
   <div class="card">
       <div class="actions">
         <a class="btn" href="chemical-map.html">Open the chemical map</a>
+        <a class="btn" href="map.html">Text map</a>
       </div>
-      <h2>Chemical map</h2>
+      <h2>Chemical &amp; text maps</h2>
       <p>All 2939 records placed by chiral molecular fingerprint
          alone &mdash; no labels, mechanisms or prose in the coordinates. Search
          a compound and inspect its nearest structural neighbours.</p>
     </div>
   <div class="card">
     <div class="actions">
-      <a class="btn" href="https://github.com/CultureBotAI/AntibioticMech">GitHub</a>
+      <a class="btn" href="sequence-map.html">Sequence map (pLM)</a>
     </div>
-    <h2>Source and schema</h2>
+    <h2>Protein sequence map (pLM)</h2>
+    <p>2D PaCMAP projection of ESM-2 (<code>esm2_t33_650M_UR50D</code>) embeddings
+       for curated target and resistance determinant proteins.</p>
+  </div>
+  <div class="card">
+    <div class="actions">
+      <a class="btn" href="https://github.com/CultureBotAI/AntibioticMech">GitHub</a>
+      <a class="btn" href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema (LinkML)</a>
+      <a class="btn" href="browse-index.json" download="antibioticmech-browse-index.json">Browse index (JSON)</a>
+      <a class="btn" href="data/chemical-structure-map.json" download="antibioticmech-chemical-map.json">Chemical map (JSON)</a>
+    </div>
+    <h2>Source, schema &amp; downloads</h2>
     <p>LinkML-validated YAML under <code>data/antibiotics/</code>. Schema,
-       curation history and the seeding pipeline all live in the repository.</p>
+       bulk JSON exports, curation history and the seeding pipeline all live in the repository.</p>
   </div>
 </div>
 
@@ -218,7 +247,7 @@
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>ae782f33ce28</code>, 2939 records). <a href="browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Most of this corpus is machine-generated and unreviewed.</strong>

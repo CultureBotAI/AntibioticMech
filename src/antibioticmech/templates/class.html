@@ -22,35 +22,89 @@
   every record here is also one of those, and is listed only here.
 </p>
 {% endif %}
-<input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
-<p class="meta" id="count" aria-live="polite"></p>
-{% call scroll_table(label ~ " compounds") %}
-<table id="tbl">
-  <caption>{{ label }} compounds</caption>
-  <thead><tr><th scope="col">Compound</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
-  <tbody>
-  {% for r in records %}
-  <tr data-identifiers="{{ r.identifiers|select|join(' ') }}">
-    <td><a href="../{{ slug }}/{{ r.slug }}.html">{{ r.label }}</a></td>
-    <td class="meta">{{ r.structural_class }}</td>
-    <td><span class="pill{{ ' warn' if r.grounding != 'EXACT' else '' }}">{{ r.grounding }}</span></td>
-    <td><span class="pill{{ ' plain' if r.status == 'SEEDED' else '' }}">{{ r.status }}</span></td>
-    <td class="meta">{{ r.sources|join(', ') }}</td>
-  </tr>
-  {% endfor %}
-  </tbody>
-</table>
-{% endcall %}
-{% if pager %}
-<nav class="pager" aria-label="Pages">
-  {% for pg in pager %}{% if pg.n == page %}<span class="pill plain" aria-current="page">{{ pg.n }}</span>{% else %}<a href="{{ pg.href }}">{{ pg.n }}</a>{% endif %} {% endfor %}
-</nav>
-<p class="meta">Showing {{ records|length }} of {{ total }}. The filter searches all
-{{ total }}, not just this page.</p>
-{% endif %}
+
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Class filters">
+    <form id="class-filter-form" class="facet-form" role="search">
+      <div class="facet-group">
+        <label class="facet-title" for="q">Filter {{ label|lower }} records</label>
+        <input class="searchbox" id="q" type="search" data-index="{{ index_url }}" data-total="{{ total }}" placeholder="Filter all {{ total }} records…" aria-label="Filter records">
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-grounding">Grounding status</label>
+        <select id="filter-grounding">
+          <option value="">All grounding statuses</option>
+          <option value="EXACT">EXACT</option>
+          <option value="UNGROUNDED">UNGROUNDED</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-status">Curation status</label>
+        <select id="filter-status">
+          <option value="">All workflow statuses</option>
+          <option value="REVIEWED">REVIEWED</option>
+          <option value="SEEDED">SEEDED</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-source">Source</label>
+        <select id="filter-source">
+          <option value="">All sources</option>
+          <option value="ChEBI">ChEBI</option>
+          <option value="ARO">ARO</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-sort">Sort by</label>
+        <select id="filter-sort">
+          <option value="name-asc">Compound name (A–Z)</option>
+          <option value="name-desc">Compound name (Z–A)</option>
+          <option value="structural">Structural class (A–Z)</option>
+          <option value="status">Curation status (REVIEWED first)</option>
+          <option value="grounding">Grounding status (EXACT first)</option>
+        </select>
+      </div>
+      <button type="reset" id="filter-reset">Reset filters</button>
+    </form>
+  </aside>
+
+  <div class="results-main">
+    <p class="meta" id="count" aria-live="polite"></p>
+    {% call scroll_table(label ~ " compounds") %}
+    <table id="tbl">
+      <caption>{{ label }} compounds</caption>
+      <thead><tr><th scope="col">Compound</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
+      <tbody>
+      {% for r in records %}
+      <tr data-identifiers="{{ r.identifiers|select|join(' ') }}">
+        <td><a href="../{{ slug }}/{{ r.slug }}.html">{{ r.label }}</a></td>
+        <td class="meta">{{ r.structural_class }}</td>
+        <td><span class="pill{{ ' warn' if r.grounding != 'EXACT' else '' }}">{{ r.grounding }}</span></td>
+        <td><span class="pill{{ ' plain' if r.status == 'SEEDED' else '' }}">{{ r.status }}</span></td>
+        <td class="meta">{{ r.sources|join(', ') }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endcall %}
+    {% if pager %}
+    <nav class="pager" aria-label="Pages">
+      {% for pg in pager %}{% if pg.n == page %}<span class="pill plain" aria-current="page">{{ pg.n }}</span>{% else %}<a href="{{ pg.href }}">{{ pg.n }}</a>{% endif %} {% endfor %}
+    </nav>
+    <p class="meta">Showing {{ records|length }} of {{ total }}. The filter searches all
+    {{ total }}, not just this page.</p>
+    {% endif %}
+  </div>
+</div>
+
 <script>
 (function () {
+  var form = document.getElementById('class-filter-form');
   var box = document.getElementById('q'), out = document.getElementById('count');
+  var fGround = document.getElementById('filter-grounding');
+  var fStatus = document.getElementById('filter-status');
+  var fSource = document.getElementById('filter-source');
+  var fSort = document.getElementById('filter-sort');
   var body = document.querySelector('#tbl tbody');
   var original = body.innerHTML;
   var index = null, pending = null;
@@ -74,15 +128,50 @@
              '</span></td><td class="meta">' + esc(r[5]) + '</td></tr>';
     }).join('');
   }
+  function sortRows(rows) {
+    var mode = fSort ? fSort.value : 'name-asc';
+    return rows.slice().sort(function (a, b) {
+      if (mode === 'name-desc') return String(b[0]).localeCompare(String(a[0]));
+      if (mode === 'structural') return String(a[2]).localeCompare(String(b[2])) || String(a[0]).localeCompare(String(b[0]));
+      if (mode === 'status') {
+        var sa = a[4] === 'REVIEWED' ? 0 : 1, sb = b[4] === 'REVIEWED' ? 0 : 1;
+        return (sa - sb) || String(a[0]).localeCompare(String(b[0]));
+      }
+      if (mode === 'grounding') {
+        var ga = a[3] === 'EXACT' ? 0 : 1, gb = b[3] === 'EXACT' ? 0 : 1;
+        return (ga - gb) || String(a[0]).localeCompare(String(b[0]));
+      }
+      return String(a[0]).localeCompare(String(b[0]));
+    });
+  }
   function apply() {
     pending = null;
     var raw = box.value.trim().toLowerCase();
-    if (!raw) { body.innerHTML = original; out.textContent = ''; return; }
+    var gVal = fGround ? fGround.value : '';
+    var sVal = fStatus ? fStatus.value : '';
+    var srcVal = fSource ? fSource.value : '';
+    var sortVal = fSort ? fSort.value : 'name-asc';
+    if (window.history && window.history.replaceState) {
+      var url = new URL(window.location.href);
+      if (raw) url.searchParams.set('q', box.value.trim()); else url.searchParams.delete('q');
+      if (gVal) url.searchParams.set('grounding', gVal); else url.searchParams.delete('grounding');
+      if (sVal) url.searchParams.set('status', sVal); else url.searchParams.delete('status');
+      if (srcVal) url.searchParams.set('source', srcVal); else url.searchParams.delete('source');
+      if (sortVal && sortVal !== 'name-asc') url.searchParams.set('sort', sortVal); else url.searchParams.delete('sort');
+      window.history.replaceState(null, '', url);
+    }
+    if (!raw && !gVal && !sVal && !srcVal && sortVal === 'name-asc') { body.innerHTML = original; out.textContent = ''; return; }
     var slugged = raw.replace(/[^a-z0-9]+/g, '-');
-    var hits = index.filter(function (r) {
-      var k = (r[0] + ' ' + r[1] + ' ' + r[2] + ' ' + r[5] + ' ' + (r[6] || '')).toLowerCase();
-      return k.indexOf(raw) !== -1 || k.indexOf(slugged) !== -1;
-    });
+    var hits = sortRows(index.filter(function (r) {
+      if (gVal && r[3] !== gVal) return false;
+      if (sVal && r[4] !== sVal) return false;
+      if (srcVal && r[5].indexOf(srcVal) === -1) return false;
+      if (raw) {
+        var k = (r[0] + ' ' + r[1] + ' ' + r[2] + ' ' + r[5] + ' ' + (r[6] || '')).toLowerCase();
+        if (k.indexOf(raw) === -1 && k.indexOf(slugged) === -1) return false;
+      }
+      return true;
+    }));
     draw(hits.slice(0, 500));
     out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
       ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
@@ -98,7 +187,7 @@
     });
   }
 
-  box.addEventListener('input', function () {
+  function triggerFilter() {
     if (index === null) {
       // Fetched once, on the first keystroke — a reader who only browses never
       // pays for it.
@@ -109,7 +198,25 @@
       return;
     }
     if (pending === null) { pending = requestAnimationFrame(apply); }
-  });
+  }
+
+  box.addEventListener('input', triggerFilter);
+  if (form) {
+    form.addEventListener('submit', function (e) { e.preventDefault(); triggerFilter(); });
+    form.addEventListener('change', triggerFilter);
+    form.addEventListener('reset', function () { setTimeout(triggerFilter, 0); });
+  }
+  if (window.location && window.location.search) {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('q')) box.value = params.get('q');
+    if (params.get('grounding') && fGround) fGround.value = params.get('grounding');
+    if (params.get('status') && fStatus) fStatus.value = params.get('status');
+    if (params.get('source') && fSource) fSource.value = params.get('source');
+    if (params.get('sort') && fSort) fSort.value = params.get('sort');
+    if (params.get('q') || params.get('grounding') || params.get('status') || params.get('source') || params.get('sort')) {
+      triggerFilter();
+    }
+  }
 })();
 </script>
 {% endblock %}

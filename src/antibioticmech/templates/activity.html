@@ -15,27 +15,33 @@
 <h1>{{ activity.label }}: activity observations</h1>
 <p class="meta">{{ activity.total }} observations &middot; <a href="{{ activity.download }}" download>Complete record (JSON.gz)</a></p>
 <section id="activity-browser" data-index="{{ activity.index }}" data-identifier="{{ activity.identifier }}" data-key="{{ activity.standard_inchi_key }}" data-total="{{ activity.total }}" data-page-size="{{ activity.page_size }}">
-  <form class="activity-filters" hidden role="search" aria-label="Activity observations">
-    <label>Taxon, strain or accession<input name="query" type="search" autocomplete="off"></label>
-    <label>Activity<select name="activity"><option value="">All activities</option>{% for value in activity.activities %}<option value="={{ value }}">{{ value or 'Not reported' }}</option>{% endfor %}</select></label>
-    <label>Source<select name="source"><option value="">All sources</option>{% for value in activity.sources %}<option value="={{ value }}">{{ value or 'Not reported' }}</option>{% endfor %}</select></label>
-    <button type="reset">Reset</button>
-  </form>
-  <p class="activity-status" role="status"></p>
-  <button class="activity-retry" type="button" hidden>Retry search</button>
-  <div class="activity-results" hidden></div>
-  <nav class="activity-results-pager pager" aria-label="Search results" hidden>
-    <button type="button" data-step="-1">Previous</button><span></span><button type="button" data-step="1">Next</button>
-  </nav>
-  <div class="activity-default">
-    {{ pager(activity, 'Activity pages') }}
-    <form class="activity-jump" hidden>
-      <label>Page <input name="page" type="number" min="1" max="{{ activity.page_count }}" value="{{ activity.number }}" required></label>
-      <button type="submit">Go</button>
-    </form>
-    <p class="meta">Observations {{ activity.offset + 1 }}&ndash;{{ activity.offset + observations|length }} of {{ activity.total }}</p>
-    {{ activity_table(observations, activity) }}
-    {{ pager(activity, 'Activity pages, bottom') }}
+  <div class="page-with-sidebar">
+    <aside class="facet-sidebar" aria-label="Activity filters">
+      <form class="activity-filters facet-form" hidden role="search" aria-label="Activity observations">
+        <label>Taxon, strain or accession<input name="query" type="search" autocomplete="off"></label>
+        <label>Activity<select name="activity"><option value="">All activities</option>{% for value in activity.activities %}<option value="={{ value }}">{{ value or 'Not reported' }}</option>{% endfor %}</select></label>
+        <label>Source<select name="source"><option value="">All sources</option>{% for value in activity.sources %}<option value="={{ value }}">{{ value or 'Not reported' }}</option>{% endfor %}</select></label>
+        <button type="reset">Reset</button>
+      </form>
+    </aside>
+    <div class="results-main">
+      <p class="activity-status" role="status"></p>
+      <button class="activity-retry" type="button" hidden>Retry search</button>
+      <div class="activity-results" hidden></div>
+      <nav class="activity-results-pager pager" aria-label="Search results" hidden>
+        <button type="button" data-step="-1">Previous</button><span></span><button type="button" data-step="1">Next</button>
+      </nav>
+      <div class="activity-default">
+        {{ pager(activity, 'Activity pages') }}
+        <form class="activity-jump" hidden>
+          <label>Page <input name="page" type="number" min="1" max="{{ activity.page_count }}" value="{{ activity.number }}" required></label>
+          <button type="submit">Go</button>
+        </form>
+        <p class="meta">Observations {{ activity.offset + 1 }}&ndash;{{ activity.offset + observations|length }} of {{ activity.total }}</p>
+        {{ activity_table(observations, activity) }}
+        {{ pager(activity, 'Activity pages, bottom') }}
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}

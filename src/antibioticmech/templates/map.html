@@ -1,41 +1,56 @@
 {% extends "base.html" %}
+{% block wrapclass %} wide{% endblock %}
 {% block title %}Corpus map · AntibioticMech{% endblock %}
 {% block content %}
 <h1>Corpus map</h1>
 <p class="lede">{{ map.n }} compounds projected from their record text into two dimensions
 ({{ map.method|upper }} over {{ map.model }}).</p>
 
-<p class="meta">Proximity means described similarly: same class, structural
-family, mechanism, asserted roles, producing organism. Not structurally
-similar.</p>
-
 <p class="meta">Proximity means <strong>described similarly</strong> — same class, structural
 family, mechanism and asserted roles — not structurally similar. These are text embeddings of
 what the corpus says about a compound; SMILES and InChI are deliberately excluded, because a
 sentence model reads them as noise. A chemical-similarity map is a different artifact.</p>
 
-<div id="map-controls">
-  {% for c in map.classes %}
-  <button class="pill plain legend" data-class="{{ loop.index0 }}"
-          style="--dot: var(--cls{{ loop.index0 }})" aria-pressed="true">{{ c.replace("_", " ")|lower }}</button>
-  {% endfor %}
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Text map filters">
+    <div class="facet-form">
+      <div class="facet-group">
+        <label class="facet-title" for="map-search">Search compounds</label>
+        <input class="searchbox" id="map-search" type="search" placeholder="Name or class…" autocomplete="off">
+      </div>
+      <div class="facet-group">
+        <span class="facet-title">Antimicrobial classes</span>
+        <div id="map-controls" class="facet-pills">
+          {% for c in map.classes %}
+          <button class="pill plain legend" data-class="{{ loop.index0 }}"
+                  style="--dot: var(--cls{{ loop.index0 }})" aria-pressed="true">{{ c.replace("_", " ")|lower }}</button>
+          {% endfor %}
+        </div>
+      </div>
+      <button type="button" id="map-reset">Reset view</button>
+    </div>
+  </aside>
+
+  <div class="results-main">
+    <p class="meta" id="map-status" role="status" aria-live="polite"></p>
+    <noscript>
+      <p class="meta"><strong>The map needs JavaScript.</strong> Every compound it shows is
+      also reachable without it, from <a href="{{ root }}browse.html">Browse</a> and the
+      per-class pages.</p>
+    </noscript>
+    <figure>
+      <canvas id="corpus-map" width="900" height="620" role="img"
+              aria-label="Scatter plot of {{ map.n }} compounds, coloured by antimicrobial class."></canvas>
+      <figcaption class="meta" id="map-hover">Hover a point for its name; click to open the record.</figcaption>
+    </figure>
+    <p class="meta">The scatter is a <strong>visual aid, and mouse-driven</strong>: its points are
+    canvas pixels, not focusable links, so it is not navigable by keyboard or screen reader.
+    Nothing is only available here — every compound has a record page reachable from
+    <a href="{{ root }}browse.html">Browse</a>, and the per-class pages list the same records
+    in text. Said plainly rather than implied, because a scatter that is the sole route to
+    some records would be an accessibility failure rather than a limitation.</p>
+  </div>
 </div>
-<noscript>
-  <p class="meta"><strong>The map needs JavaScript.</strong> Every compound it shows is
-  also reachable without it, from <a href="{{ root }}browse.html">Browse</a> and the
-  per-class pages.</p>
-</noscript>
-<figure>
-  <canvas id="corpus-map" width="900" height="620" role="img"
-          aria-label="Scatter plot of {{ map.n }} compounds, coloured by antimicrobial class."></canvas>
-  <figcaption class="meta" id="map-hover">Hover a point for its name; click to open the record.</figcaption>
-</figure>
-<p class="meta">The scatter is a <strong>visual aid, and mouse-driven</strong>: its points are
-canvas pixels, not focusable links, so it is not navigable by keyboard or screen reader.
-Nothing is only available here — every compound has a record page reachable from
-<a href="{{ root }}browse.html">Browse</a>, and the per-class pages list the same records
-in text. Said plainly rather than implied, because a scatter that is the sole route to
-some records would be an accessibility failure rather than a limitation.</p>
 
 <script id="map-data" type="application/json">{{ map_json|safe }}</script>
 <script>
@@ -43,28 +58,44 @@ some records would be an accessibility failure rather than a limitation.</p>
   var data = JSON.parse(document.getElementById("map-data").textContent);
   var cv = document.getElementById("corpus-map"), cx = cv.getContext("2d");
   var hover = document.getElementById("map-hover");
+  var search = document.getElementById("map-search");
+  var status = document.getElementById("map-status");
+  var resetBtn = document.getElementById("map-reset");
   var css = getComputedStyle(document.documentElement);
   var colors = data.classes.map(function (_, i) {
     return css.getPropertyValue("--cls" + i).trim() || "#888";
   });
   var on = data.classes.map(function () { return true; });
+  var query = "";
   var pad = 24, W = cv.width, H = cv.height;
   function px(p) { return [pad + p[0] * (W - 2 * pad), pad + (1 - p[1]) * (H - 2 * pad)]; }
+  function matches(p) {
+    if (!on[p[2]]) return false;
+    if (!query) return true;
+    var label = (p[4] + " " + data.classes[p[2]].replace(/_/g, " ")).toLowerCase();
+    return label.indexOf(query) !== -1;
+  }
   function draw() {
     cx.clearRect(0, 0, W, H);
+    var shown = 0;
     data.points.forEach(function (p) {
       if (!on[p[2]]) return;
+      var hit = matches(p);
+      if (hit) shown++;
       var q = px(p);
       cx.fillStyle = colors[p[2]];
-      cx.globalAlpha = 0.72;
-      cx.beginPath(); cx.arc(q[0], q[1], 2.6, 0, 6.2832); cx.fill();
+      cx.globalAlpha = query ? (hit ? 0.92 : 0.12) : 0.72;
+      cx.beginPath(); cx.arc(q[0], q[1], (query && hit) ? 3.8 : 2.6, 0, 6.2832); cx.fill();
     });
     cx.globalAlpha = 1;
+    if (status) {
+      status.textContent = query ? (shown + " of " + data.points.length + " compounds match.") : "";
+    }
   }
   function nearest(mx, my) {
     var best = null, bd = 144;
     data.points.forEach(function (p) {
-      if (!on[p[2]]) return;
+      if (!matches(p)) return;
       var q = px(p), d = (q[0] - mx) * (q[0] - mx) + (q[1] - my) * (q[1] - my);
       if (d < bd) { bd = d; best = p; }
     });
@@ -91,6 +122,41 @@ some records would be an accessibility failure rather than a limitation.</p>
       draw();
     });
   });
+  if (search) {
+    search.addEventListener("input", function () {
+      query = search.value.trim().toLowerCase();
+      if (window.history && window.history.replaceState) {
+        var url = new URL(window.location.href);
+        if (query) url.searchParams.set("q", search.value.trim()); else url.searchParams.delete("q");
+        window.history.replaceState(null, "", url);
+      }
+      draw();
+    });
+  }
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      if (search) search.value = "";
+      query = "";
+      on = data.classes.map(function () { return true; });
+      document.querySelectorAll("#map-controls .legend").forEach(function (b) {
+        b.setAttribute("aria-pressed", "true");
+        b.classList.remove("off");
+      });
+      if (window.history && window.history.replaceState) {
+        var url = new URL(window.location.href);
+        url.searchParams.delete("q");
+        window.history.replaceState(null, "", url);
+      }
+      draw();
+    });
+  }
+  if (window.location && window.location.search && search) {
+    var qParam = new URLSearchParams(window.location.search).get("q");
+    if (qParam) {
+      search.value = qParam;
+      query = qParam.trim().toLowerCase();
+    }
+  }
   draw();
 })();
 </script>
