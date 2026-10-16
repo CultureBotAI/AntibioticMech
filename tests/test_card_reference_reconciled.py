@@ -57,9 +57,7 @@ def test_preserves_existing_links_and_deduplicates_hmg1(frozen, reconciled):
         assert current["identity"] == row["identity"]
         if accession != "UniProtKB:Q4WHZ1":
             assert current == row
-    assert set(reconciled["proteins"]) - set(old["proteins"]) == {
-        "UniProtKB:A0QRS5", "UniProtKB:Q6FQA9"
-    }
+    assert set(reconciled["proteins"]) - set(old["proteins"]) == {"UniProtKB:A0QRS5", "UniProtKB:Q6FQA9"}
 
 
 def test_gaps_and_comparators_are_not_determinant_mappings(frozen, reconciled):
@@ -81,7 +79,21 @@ def test_gaps_and_comparators_are_not_determinant_mappings(frozen, reconciled):
 
 
 @pytest.mark.parametrize("term", audit.SELECTED)
-@pytest.mark.parametrize("change", ["accession", "allele", "rank", "inactive", "version"])
+@pytest.mark.parametrize(
+    "change",
+    [
+        "accession",
+        "allele",
+        "rank",
+        "inactive",
+        "version",
+        "locus",
+        "locus_kind",
+        "native_id",
+        "native_rank",
+        "missing_scope",
+    ],
+)
 def test_reference_identity_rejects_scope_drift(frozen, term, change):
     name, _ = audit.SELECTED[term]
     dossier = copy.deepcopy(frozen[1][name])
@@ -95,9 +107,39 @@ def test_reference_identity_rejects_scope_drift(frozen, term, change):
         raw["reference_taxon_rank"] = "species"
     elif change == "version":
         raw["sequence_version"] = True
+    elif change == "locus":
+        candidate["native_locus_matches"][0]["value"] = "OTHER"
+    elif change == "locus_kind":
+        candidate["native_locus_matches"][0]["field"] = "genes/0/synonyms/0"
+    elif change == "missing_scope":
+        del candidate["experimental_allele_assignment"]
     else:
         taxid = raw["reference_taxon_id"].split(":")[1]
-        dossier["native_taxonomy"][taxid]["active"] = False
+        node = dossier["native_taxonomy"][taxid]
+        if change == "native_id":
+            node["taxonId"] = 999
+        elif change == "native_rank":
+            node["rank"] = "no rank"
+        else:
+            node["active"] = False
+    with pytest.raises(ValueError):
+        audit.selected_identity(term, candidate, dossier)
+
+
+@pytest.mark.parametrize("term", ["ARO:3009134", "ARO:3007670"])
+@pytest.mark.parametrize("change", ["gene", "protein", "name", "lineage"])
+def test_fungal_reference_rejects_conflicting_native_evidence(frozen, term, change):
+    dossier = copy.deepcopy(frozen[1]["msh-hmg-reference"])
+    candidate = dossier["terms"][term]["references"][0]
+    native = candidate["native_reference"]
+    if change == "gene":
+        candidate["native_gene_matches"][0]["value"] = "erg10B"
+    elif change == "protein":
+        native["protein_accession"] = "UniProtKB:B0YA65"
+    elif change == "name":
+        native["reference_organism_name"] = "different strain"
+    else:
+        native["species_lineage_verified"] = False
     with pytest.raises(ValueError):
         audit.selected_identity(term, candidate, dossier)
 

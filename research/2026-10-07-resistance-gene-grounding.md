@@ -15952,8 +15952,8 @@ no network requests or biological-record changes. NCBI and #1040 remain deferred
    assessment or the source-row/experimental-subject crosswalk.
 2. Finish curator-claim review beyond the taxon and reference assignments already
    documented, including unresolved exact alleles. Review all 2,002 CARD
-   determinants: the current broad index has reference context for 1,402, with
-   600 lacking selected references. The separate explicit-member audit covers 63
+   determinants: the current broad index has reference context for 1,405, with
+   597 lacking selected references. The separate explicit-member audit covers 63
    parent terms; it does not assign a single accession to each complex or cluster.
    The earlier direct-reference lineage audit scoped 979 proteins,
    and its successor supplies standalone evidence for all 288 species nodes;

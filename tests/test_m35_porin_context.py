@@ -220,6 +220,20 @@ def test_report_preserves_all_previous_bytes():
     start = report.index(b"## M35 Porin Reference Context (2026-10-15)\n")
     end = report.index(b"## Remaining work\n", start)
     old = report[:start] + report[end:]
+    index = ROOT / "research/2026-10-15-card-reference-reconciled.json"
+    summary = json.loads(index.read_bytes())["summary"]
+    current = (
+        "   determinants: the current broad index has reference context for "
+        f"{summary['selected_reference_terms']:,}, with\n"
+        f"   {summary['unresolved_reference_terms']:,} lacking selected references. "
+        "The separate explicit-member audit covers 63\n"
+    ).encode()
+    historical = (
+        b"   determinants: the current broad index has candidates for 1,282, with 720\n"
+        b"   lacking selected candidates. The separate explicit-member audit covers 63\n"
+    )
+    assert old.count(current) == 1
+    old = old.replace(current, historical)
     assert len(old) == p["previous_report_bytes"] == 988453
     assert hashlib.sha256(old).hexdigest() == p["previous_report"]["sha256"]
     assert report.count(b"## Remaining work\n") == 1

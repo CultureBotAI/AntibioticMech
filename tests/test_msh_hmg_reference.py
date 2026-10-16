@@ -27,19 +27,35 @@ def no_network(monkeypatch):
 @pytest.fixture(scope="module")
 def frozen():
     pins = json.loads((ROOT / audit.PLAN).read_bytes())["inputs"]
-    data = {k: audit.read(ROOT, p) for k, p in pins.items() if p["path"].endswith(".json")}
-    public = {
-        k: audit.read(ROOT, p) for k, p in data["plan"]["inputs"].items() if p["path"].endswith(".json")
+    data = {
+        k: audit.read(ROOT, p)
+        for k, p in pins.items()
+        if p["path"].endswith(".json") and not p["path"].startswith("reports/")
     }
+    public = {
+        k: audit.read(ROOT, p)
+        for k, p in data["plan"]["inputs"].items()
+        if p["path"].endswith(".json") and not p["path"].startswith("reports/")
+    }
+    doc = json.loads((ROOT / audit.OUTPUT).read_bytes())
+    return pins, data, public, None, None, doc
+
+
+@pytest.fixture(scope="module")
+def native_frozen(frozen, require_native_inputs):
+    pins, data, public, _, _, doc = frozen
+    require_native_inputs(pins, data["plan"])
     msh = json.loads(audit.reference.check_pin(ROOT, pins["msh_response"]).read_bytes())["results"]
     hmg, _ = audit.literature.read_query(ROOT, ROOT / audit.literature.DIRECTORY, "30940706")
-    doc = json.loads((ROOT / audit.OUTPUT).read_bytes())
     return pins, data, public, msh, hmg, doc
 
 
-def test_exact_read_only_projection(frozen):
+def test_exact_read_only_projection(native_frozen):
+    assert audit.build(ROOT) == native_frozen[5]
+
+
+def test_public_summary(frozen):
     doc = frozen[5]
-    assert audit.build(ROOT) == doc
     assert doc["summary"] == {
         "current_corpus_hashes_verified": 2939,
         "complete_records_loaded": 8,
@@ -115,8 +131,8 @@ def test_subjects_and_family_scope_remain_unassigned(frozen):
         "duplicate",
     ],
 )
-def test_native_reference_cannot_be_substituted(frozen, key, change):
-    _, _, public, msh, hmg, doc = frozen
+def test_native_reference_cannot_be_substituted(native_frozen, key, change):
+    _, _, public, msh, hmg, doc = native_frozen
     paper = public["assessment"]["terms"][key]
     entries = copy.deepcopy(msh if key == "msh" else [hmg["Q4WHZ1"]])
     taxon = copy.deepcopy(doc["native_taxonomy"][str(paper["reference_taxon_id"])])
@@ -159,8 +175,8 @@ def test_native_reference_cannot_be_substituted(frozen, key, change):
         audit.select_reference(key, entries, taxon, species, paper)
 
 
-def test_same_paper_different_gene_is_excluded(frozen):
-    candidates = copy.deepcopy(frozen[4])
+def test_same_paper_different_gene_is_excluded(native_frozen):
+    candidates = copy.deepcopy(native_frozen[4])
     selected, excluded = audit.hmg_candidates(candidates)
     assert [e["primaryAccession"] for e in selected] == ["Q4WHZ1"]
     assert excluded["accession"] == "UniProtKB:B0YA65"
@@ -169,8 +185,8 @@ def test_same_paper_different_gene_is_excluded(frozen):
         audit.hmg_candidates(candidates)
 
 
-def test_doi_and_pmid_must_belong_to_one_citation(frozen):
-    _, _, public, _, candidates, doc = frozen
+def test_doi_and_pmid_must_belong_to_one_citation(native_frozen):
+    _, _, public, _, candidates, doc = native_frozen
     entry = copy.deepcopy(candidates["Q4WHZ1"])
     citation = next(r for r in entry["references"] if r["citation"].get("id") == "30940706")
     doi = next(x for x in citation["citation"]["citationCrossReferences"] if x["database"] == "DOI")

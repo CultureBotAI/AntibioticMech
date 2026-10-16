@@ -60,6 +60,15 @@ def read_inputs(root):
 def selected_identity(term, candidate, dossier):
     require(
         candidate["accession"] == SELECTED[term][1]
+        and all(
+            k in candidate and candidate[k] is None
+            for k in (
+                "experimental_allele_assignment",
+                "experimental_genome_assignment",
+                "experimental_protein_assignment",
+                "experimental_strain_taxon_assignment",
+            )
+        )
         and all(v is None for k, v in candidate.items() if k.startswith("experimental_")),
         "reference accession or experimental scope changed",
     )
@@ -68,7 +77,9 @@ def selected_identity(term, candidate, dossier):
             candidate["single_protein_identity_for_whole_arr_family"] is False
             and candidate["scope"]
             == "STRUCTURE_LINKED_ARR_MS_FAMILY_MEMBER_REFERENCE_NOT_EXPERIMENTAL_ALLELE"
-            and candidate["structure_entity"] == "2HW2_1",
+            and candidate["structure_entity"] == "2HW2_1"
+            and candidate["native_locus_matches"]
+            == [{"field": "genes/0/orderedLocusNames/0", "value": "MSMEG_1221"}],
             "Arr family member scope changed",
         )
         raw = {
@@ -78,14 +89,21 @@ def selected_identity(term, candidate, dossier):
         }
     else:
         native = candidate["native_reference"]
+        gene, field, locus = {
+            "ARO:3009134": ("MSH2", "orderedLocusNames", "CAGL0I07733g"),
+            "ARO:3007670": ("hmg1", "orfNames", "AFUA_2G03700"),
+        }[term]
         require(
             candidate["scope"] == "ONE_SOURCE_SPECIES_GENE_REFERENCE_NOT_FAMILY_WIDE_OR_EXPERIMENTAL_ALLELE"
             and candidate["direct_drug_target_inferred"] is False
             and candidate["resistance_phenotype_from_protein_annotation"] is False
             and native["experimental_subject_assignment"] is False
             and native["exact_resistance_allele"] is False
-            and candidate["native_gene_matches"]
-            and candidate["native_locus_matches"],
+            and candidate["native_gene_matches"] == [{"field": "genes/0/geneName", "value": gene}]
+            and candidate["native_locus_matches"] == [{"field": f"genes/0/{field}/0", "value": locus}]
+            and native["protein_accession"] == candidate["accession"]
+            and native["gene_names"] == [gene]
+            and native["species_lineage_verified"] is True,
             "fungal gene reference scope changed",
         )
         raw = {
@@ -108,7 +126,23 @@ def selected_identity(term, candidate, dossier):
     species = dossier["native_taxonomy"][expected[1].split(":")[1]]
     _, ancestor = prior_audit.taxonomy.lineage(node)
     prior_audit.taxonomy.lineage(species)
-    require(ancestor == prior_audit.taxonomy.identity(species), "reference species lineage changed")
+    require(
+        ancestor == prior_audit.taxonomy.identity(species)
+        and "NCBITaxon:" + str(node["taxonId"]) == expected[0]
+        and node["rank"] == identity["reference_taxon_rank"]
+        and "NCBITaxon:" + str(species["taxonId"]) == expected[1]
+        and species["rank"] == "species",
+        "reference species lineage changed",
+    )
+    if term != "ARO:3000390":
+        require(
+            native["reference_organism_name"]
+            == native["reference_taxon_scientific_name"]
+            == node["scientificName"]
+            and prior_audit.taxonomy.identity(candidate["source_species_context"]["native_node"])
+            == prior_audit.taxonomy.identity(species),
+            "native source names changed",
+        )
     return identity
 
 

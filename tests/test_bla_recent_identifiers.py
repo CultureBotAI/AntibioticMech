@@ -28,17 +28,34 @@ def no_network(monkeypatch):
 @pytest.fixture(scope="module")
 def frozen():
     pins = json.loads((ROOT / audit.PLAN).read_bytes())["inputs"]
-    data = {k: audit.read(ROOT, p) for k, p in pins.items() if p["path"].endswith(".json")}
+    data = {
+        k: audit.read(ROOT, p)
+        for k, p in pins.items()
+        if p["path"].endswith(".json") and not p["path"].startswith("reports/")
+    }
     public = {
-        k: audit.read(ROOT, p) for k, p in data["plan"]["inputs"].items() if p["path"].endswith(".json")
+        k: audit.read(ROOT, p)
+        for k, p in data["plan"]["inputs"].items()
+        if p["path"].endswith(".json") and not p["path"].startswith("reports/")
     }
     doc = json.loads((ROOT / audit.OUTPUT).read_bytes())
     return pins, data, public, doc
 
 
-def test_exact_offline_replay(frozen):
+@pytest.fixture(scope="module")
+def native_frozen(frozen, require_native_inputs):
+    pins, data, public, doc = frozen
+    require_native_inputs(pins, data["plan"])
+    data = {k: audit.read(ROOT, p) for k, p in pins.items() if p["path"].endswith(".json")}
+    return pins, data, public, doc
+
+
+def test_exact_offline_replay(native_frozen):
+    assert audit.build(ROOT) == native_frozen[3]
+
+
+def test_public_summary(frozen):
     doc = frozen[3]
-    assert audit.build(ROOT) == doc
     assert doc["summary"] == {
         "current_corpus_hashes_verified": 2939,
         "complete_records_loaded": 9,
@@ -88,8 +105,8 @@ def test_taxonomy_is_species_name_context_not_a_strain_mapping(frozen):
 
 @pytest.mark.parametrize("key", list(audit.QUERIES))
 @pytest.mark.parametrize("change", ["status", "release", "pagination", "redirect", "query", "hash", "count"])
-def test_native_request_failures_cannot_become_empty_searches(frozen, key, change):
-    pins, data, _, _ = frozen
+def test_native_request_failures_cannot_become_empty_searches(native_frozen, key, change):
+    pins, data, _, _ = native_frozen
     plan = copy.deepcopy(data["plan"])
     receipt, attempt = copy.deepcopy((data[key + "_receipt"], data[key + "_attempt"]))
     body = audit.reference.check_pin(ROOT, pins[key + "_response"]).read_bytes()
@@ -112,8 +129,8 @@ def test_native_request_failures_cannot_become_empty_searches(frozen, key, chang
 
 
 @pytest.mark.parametrize("forbidden", ["sequence", "features", "comments"])
-def test_nested_nonmetadata_fields_are_rejected(frozen, forbidden):
-    _, data, _, _ = frozen
+def test_nested_nonmetadata_fields_are_rejected(native_frozen, forbidden):
+    _, data, _, _ = native_frozen
     key = "wus1"
     receipt = copy.deepcopy(data[key + "_receipt"])
     body = json.dumps({"results": [{"primaryAccession": "OTHER", "nested": {forbidden: {}}}]}).encode()
@@ -176,8 +193,8 @@ def test_assessment_cannot_promote_unverified_identifiers(frozen, change):
 
 
 @pytest.mark.parametrize("change", ["active", "rank", "parent", "name", "taxon", "duplicate", "protein"])
-def test_source_taxonomy_requires_exact_native_context(frozen, change):
-    pins, data, _, _ = frozen
+def test_source_taxonomy_requires_exact_native_context(native_frozen, change):
+    pins, data, _, _ = native_frozen
     responses = {
         key: json.loads(audit.reference.check_pin(ROOT, pins[key + "_response"]).read_bytes())["results"]
         for key in audit.QUERIES

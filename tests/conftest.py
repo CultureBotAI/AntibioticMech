@@ -24,6 +24,31 @@ SCHEMA_PATH = REPO_ROOT / "src" / "antibioticmech" / "schema" / "antibioticmech.
 
 
 @pytest.fixture(scope="session")
+def require_native_inputs():
+    """Skip only optional cache consumers, never missing public inputs or corrupt pins."""
+
+    def check(*documents):
+        def visit(value):
+            if isinstance(value, dict):
+                path = value.get("path")
+                if (
+                    isinstance(path, str) and path.startswith("reports/")
+                    and "sha256" in value and not (REPO_ROOT / path).is_file()
+                ):
+                    pytest.skip(f"optional native research cache unavailable: {path}")
+                for item in value.values():
+                    visit(item)
+            elif isinstance(value, list):
+                for item in value:
+                    visit(item)
+
+        for document in documents:
+            visit(document)
+
+    return check
+
+
+@pytest.fixture(scope="session")
 def repo_root() -> Path:
     return REPO_ROOT
 

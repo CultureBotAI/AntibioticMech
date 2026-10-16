@@ -28,17 +28,37 @@ def no_network(monkeypatch):
 @pytest.fixture(scope="module")
 def frozen():
     plan = json.loads((ROOT / audit.PLAN).read_bytes())
-    data = {k: audit.read(ROOT, p) for k, p in plan["inputs"].items() if p["path"].endswith(".json")}
+    data = {
+        k: audit.read(ROOT, p)
+        for k, p in plan["inputs"].items()
+        if p["path"].endswith(".json") and not p["path"].startswith("reports/")
+    }
     public = {
-        k: audit.read(ROOT, p) for k, p in data["plan"]["inputs"].items() if p["path"].endswith(".json")
+        k: audit.read(ROOT, p)
+        for k, p in data["plan"]["inputs"].items()
+        if p["path"].endswith(".json") and not p["path"].startswith("reports/")
     }
     doc = json.loads((ROOT / audit.OUTPUT).read_bytes())
     return plan, data, public, doc
 
 
-def test_exact_offline_replay(frozen):
-    _, _, _, doc = frozen
-    assert audit.build(ROOT) == doc
+@pytest.fixture(scope="module")
+def native_frozen(frozen, require_native_inputs):
+    plan, data, _, doc = frozen
+    require_native_inputs(plan, data["plan"])
+    data = {k: audit.read(ROOT, p) for k, p in plan["inputs"].items() if p["path"].endswith(".json")}
+    public = {
+        k: audit.read(ROOT, p) for k, p in data["plan"]["inputs"].items() if p["path"].endswith(".json")
+    }
+    return plan, data, public, doc
+
+
+def test_exact_offline_replay(native_frozen):
+    assert audit.build(ROOT) == native_frozen[3]
+
+
+def test_public_summary(frozen):
+    doc = frozen[3]
     assert doc["summary"] == {
         "current_corpus_hashes_verified": 2939,
         "complete_records_loaded": 4,
@@ -120,8 +140,8 @@ def test_rph_range_cannot_supply_an_individual_gene_accession(frozen):
 
 
 @pytest.fixture
-def arr_inputs(frozen):
-    _, data, public, doc = frozen
+def arr_inputs(native_frozen):
+    _, data, public, doc = native_frozen
     body = audit.reference.check_pin(ROOT, data["plan"]["inputs"]["arr_citation_body"]).read_bytes()
     entry = audit.citation_entry(public["arr_citation_receipt"], body)
     return copy.deepcopy(
@@ -208,8 +228,8 @@ def test_pdb_component_source_and_host_cannot_be_substituted(arr_inputs, change)
 
 
 @pytest.mark.parametrize("change", ["query", "release", "count", "pagination", "hash", "status"])
-def test_reused_citation_is_bound_to_complete_native_response(frozen, change):
-    _, data, public, _ = frozen
+def test_reused_citation_is_bound_to_complete_native_response(native_frozen, change):
+    _, data, public, _ = native_frozen
     receipt = copy.deepcopy(public["arr_citation_receipt"])
     body = audit.reference.check_pin(ROOT, data["plan"]["inputs"]["arr_citation_body"]).read_bytes()
     if change == "query":
@@ -229,8 +249,8 @@ def test_reused_citation_is_bound_to_complete_native_response(frozen, change):
 
 
 @pytest.mark.parametrize("change", ["status", "redirect", "hash", "url", "graphql", "sequence"])
-def test_pdb_receipt_is_not_an_unchecked_browser_annotation(frozen, change):
-    plan, data, _, _ = frozen
+def test_pdb_receipt_is_not_an_unchecked_browser_annotation(native_frozen, change):
+    plan, data, _, _ = native_frozen
     selected = copy.deepcopy(data["plan"])
     receipt, attempt = copy.deepcopy((data["pdb-arr_receipt"], data["pdb-arr_attempt"]))
     body = audit.reference.check_pin(ROOT, plan["inputs"]["pdb-arr_response"]).read_bytes()
@@ -256,8 +276,8 @@ def test_pdb_receipt_is_not_an_unchecked_browser_annotation(frozen, change):
 
 
 @pytest.mark.parametrize("change", ["citation", "determinant", "subject", "range", "hash"])
-def test_rph_primary_scope_cannot_change_silently(frozen, change):
-    _, _, public, _ = frozen
+def test_rph_primary_scope_cannot_change_silently(native_frozen, change):
+    _, _, public, _ = native_frozen
     wrapper = copy.deepcopy(public["rph_primary"])
     if change == "hash":
         wrapper["sha256"] = "wrong"
