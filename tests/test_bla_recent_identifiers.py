@@ -50,8 +50,8 @@ def native_frozen(frozen, require_native_inputs):
     return pins, data, public, doc
 
 
-def test_exact_offline_replay(native_frozen):
-    assert audit.build(ROOT) == native_frozen[3]
+def test_exact_offline_replay(native_frozen, pre_salmonella_qualification_root):
+    assert audit.build(pre_salmonella_qualification_root) == native_frozen[3]
 
 
 def test_public_summary(frozen):

@@ -36,9 +36,9 @@ def assessment():
     return json.loads((ROOT / (audit.PREFIX + "-assessment.json")).read_bytes())
 
 
-def test_all_memberships_and_open_scope(checkpoint):
+def test_all_memberships_and_open_scope(checkpoint, pre_salmonella_qualification_root):
     index = json.loads((ROOT / "research/2026-10-15-card-current-references.json").read_bytes())
-    rows, claims = audit.bind_current(ROOT, index, set(checkpoint["terms"]))
+    rows, claims = audit.bind_current(pre_salmonella_qualification_root, index, set(checkpoint["terms"]))
     assert rows == checkpoint["records"] and claims == checkpoint["claims"]
     assert len(rows) == 11 and len(claims) == 18
     for term, row in checkpoint["terms"].items():

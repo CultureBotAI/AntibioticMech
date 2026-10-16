@@ -20,11 +20,11 @@ def transition():
 
 @pytest.mark.parametrize("index", range(4))
 def test_exact_transition_preserves_all_non_note_content_and_history(
-    pre_cdsa_qualification_root, index
+    pre_cdsa_qualification_root, pre_salmonella_qualification_root, index
 ):
     receipt = transition()
     delta = receipt["record_deltas"][index]
-    live = ROOT / delta["path"]
+    live = pre_salmonella_qualification_root / delta["path"]
     historical = pre_cdsa_qualification_root / delta["path"]
     assert hashlib.sha256(live.read_bytes()).hexdigest() == delta["after_sha256"]
     assert hashlib.sha256(historical.read_bytes()).hexdigest() == delta["before_sha256"]
@@ -53,11 +53,11 @@ def test_exact_transition_preserves_all_non_note_content_and_history(
 
 
 def test_active_review_is_only_the_original_reviews_plus_the_verified_draft(
-    pre_cdsa_qualification_root,
+    pre_cdsa_qualification_root, pre_salmonella_qualification_root,
 ):
     receipt = transition()
     old = json.loads((pre_cdsa_qualification_root / receipt["review_file"]["path"]).read_bytes())
-    live = json.loads((ROOT / receipt["review_file"]["path"]).read_bytes())
+    live = json.loads((pre_salmonella_qualification_root / receipt["review_file"]["path"]).read_bytes())
     draft = json.loads((ROOT / receipt["proposed_review"]["path"]).read_bytes())
     old["reviews"] += draft["reviews"]
     assert live == old
@@ -71,7 +71,7 @@ def test_active_review_is_only_the_original_reviews_plus_the_verified_draft(
 
 @pytest.mark.parametrize("change", ["receipt", "label", "history", "note", "unrelated_claim"])
 def test_historical_reconstruction_rejects_unregistered_drift(
-    tmp_path, restore_pre_cdsa_qualification, change
+    tmp_path, restore_pre_cdsa_qualification, pre_salmonella_qualification_root, change
 ):
     delta = next(row for row in transition()["record_deltas"] if row["identifier"] == "CHEBI:600103")
     receipt = tmp_path / RECEIPT
@@ -79,7 +79,7 @@ def test_historical_reconstruction_rejects_unregistered_drift(
     receipt.write_bytes((ROOT / RECEIPT).read_bytes())
     source = tmp_path / delta["path"]
     source.parent.mkdir(parents=True)
-    source.write_bytes((ROOT / delta["path"]).read_bytes())
+    source.write_bytes((pre_salmonella_qualification_root / delta["path"]).read_bytes())
     if change == "receipt":
         receipt.write_bytes(receipt.read_bytes() + b"\n")
     else:

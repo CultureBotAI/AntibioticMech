@@ -212,6 +212,18 @@ resistance_mechanisms:
   - reference: ARO:3003317
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000666 (sparfloxacin);
       database assertion, not a primary citation.
+  note: 'Evidence-scope review 2026-10-16-salmonella-pare-evidence-scope: The cited
+    Enteritidis study found no independent parE effect in its tested background; an
+    indirect contribution remained unresolved. This is not a universal inactivity
+    claim or evidence for every serovar and inherited compound. Retain CARD''s assertion
+    as database evidence, without assigning an experimental protein, allele, taxon
+    or susceptibility observation. Qualification references, not an upgrade of the
+    CARD assertion: DOI:10.1128/aac.01005-08 (Results: Contribution of target gene
+    mutations to quinolone resistance; Table 1: quinolone headers and relevant parE
+    comparison; Table 3: compound headers and absence of a parE-specific comparison;
+    Discussion: paragraph beginning Although complementation; publisher HTML text
+    and selected table text; no visual table, figure or supplement verification).
+    Reviewed 2026-10-16 by Codex; curation/card_evidence_reviews.json SHA-256 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687.'
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003459
   label: Mycobacterium tuberculosis gyrB with mutation conferring resistance to fluoroquinolones
@@ -315,3 +327,8 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-16T06:08:01Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
+    2026-08-30, unchanged.'

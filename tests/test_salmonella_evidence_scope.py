@@ -25,16 +25,17 @@ def no_network(monkeypatch):
 
 
 @pytest.fixture(scope="module")
-def frozen():
-    plan, data = audit.read_inputs(ROOT)
+def frozen(pre_salmonella_qualification_root):
+    plan, data = audit.read_inputs(pre_salmonella_qualification_root)
     dossier = json.loads((ROOT / (audit.PREFIX + ".json")).read_bytes())
     draft = json.loads((ROOT / (audit.PREFIX + "-proposed-review.json")).read_bytes())
-    docs = {r["identifier"]: load_record(ROOT / r["path"]) for r in dossier["records"]}
+    docs = {r["identifier"]: load_record(pre_salmonella_qualification_root / r["path"])
+            for r in dossier["records"]}
     return plan, data, dossier, draft, docs
 
 
-def test_complete_public_replay_without_native_cache(frozen):
-    result, draft = audit.build(ROOT)
+def test_complete_public_replay_without_native_cache(frozen, pre_salmonella_qualification_root):
+    result, draft = audit.build(pre_salmonella_qualification_root)
     assert result == frozen[2] and draft == frozen[3]
     assert result["summary"] == {
         "corpus_records_hash_checked": 2939, "complete_records_read": 13,
