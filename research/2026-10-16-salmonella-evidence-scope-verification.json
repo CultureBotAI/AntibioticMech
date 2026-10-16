@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "scope": "VERIFIED_RESEARCH_DRAFT_NOT_ACTIVE_SOURCE_CURATION",
+  "verified_on": "2026-10-16",
+  "base_commit": "79fcd559a7803acfc3c387255772ed58b686481c",
+  "artifacts": {
+    "dossier": {
+      "path": "research/2026-10-16-salmonella-evidence-scope.json",
+      "sha256": "8f33fe82da39dcd91f1ef7757739247ce6c87728ae4ebe5d0c4ae34fa5e67944"
+    },
+    "plan": {
+      "path": "research/2026-10-16-salmonella-evidence-scope-plan.json",
+      "sha256": "bbba6e5271b788614f1c580666edfae95f7e5e5a7b548f393a3e22966d08cbbc"
+    },
+    "assessment": {
+      "path": "research/2026-10-16-salmonella-evidence-scope-assessment.json",
+      "sha256": "1d35c7a213de21ce7d1e533374e74c66d4ca2a87a7ebaa666679e0dfcfc6f88c"
+    },
+    "proposed_review": {
+      "path": "research/2026-10-16-salmonella-evidence-scope-proposed-review.json",
+      "sha256": "616fc9df51e95edc7b305b478d8523a03ee65cc1705651dc06ec20bd7e35a2d9"
+    },
+    "auditor": {
+      "path": "scripts/audit_salmonella_evidence_scope.py",
+      "sha256": "e7b898ef3edb4a52eb358e2a24a831f777d99919f5e3e203d5b94c9efd813c04"
+    },
+    "tests": {
+      "path": "tests/test_salmonella_evidence_scope.py",
+      "sha256": "0ffdae7d749656a4636506da92fd4034f0603325abc878ab11bb166ba677b58c"
+    }
+  },
+  "checks": {
+    "native_offline_replay": "PASS",
+    "all_2939_record_hashes": "PASS",
+    "complete_cohort_records_read": 13,
+    "claim_bindings": 26,
+    "production_loader_draft_targets": 13,
+    "note_only_in_memory_projections": 13,
+    "focused_tests": {
+      "passed": 131,
+      "failed": 0,
+      "modules": [
+        "test_salmonella_evidence_scope.py",
+        "test_salmonella_source_scope.py",
+        "test_card_evidence_reviews.py",
+        "test_card_reference_reconciled.py"
+      ]
+    },
+    "cache_free_tests": {
+      "passed": 29,
+      "skipped": 1,
+      "reason": "Optional native UniProt response/receipt absent; all public audit tests passed."
+    },
+    "repository_ruff": "PASS",
+    "diff_whitespace": "PASS"
+  },
+  "adversarial_review": {
+    "scope": [
+      "Claim and compound bindings",
+      "Negative-result and organism scope",
+      "Empty-query interpretation",
+      "Draft/production separation",
+      "Public-cache independence"
+    ],
+    "remaining_findings": [],
+    "delegated": false
+  },
+  "limits": {
+    "active_curation_changed": false,
+    "production_records_written": false,
+    "publisher_body_offline_replay": false,
+    "full_qc_run_for_this_change": false,
+    "whole_record_primary_signoffs": 0,
+    "whole_corpus_goal_status": "OPEN",
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED"
+  },
+  "pending_curation": [
+    "Canary before applying the proposed review",
+    "Validated seeding and meaningful history",
+    "Historical replay transition and preservation checks",
+    "Corpus reproduction, rendering and authoritative QC"
+  ]
+}

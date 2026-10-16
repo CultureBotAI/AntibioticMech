@@ -15934,6 +15934,30 @@ preserved. PHI, curator, and score-rule claims are not reassessed by this index;
 records without CARD assertions are not declared reviewed. Reconciliation makes
 no network requests or biological-record changes. NCBI and #1040 remain deferred.
 
+## Salmonella Evidence-Scope Follow-up (2026-10-16)
+
+The [successor dossier](2026-10-16-salmonella-evidence-scope.json) binds the two
+broad-serovar gyrB/parE terms to **26 claims across 13 complete records**.
+All **2,939 record files** match the reconciled-index snapshot. The earlier
+Salmonella dossier remains unchanged; this follow-up adds selected Table 1 and
+Table 3 text review, not visual table, figure, supplement or whole-paper signoff.
+The scoped findings and exact source locations are retained in the
+[primary assessment](2026-10-16-salmonella-evidence-scope-assessment.json).
+
+The existing UniProt `lit_pubmed:19104017` query was replayed from its pinned
+2026_03 cache: complete for that query, with no entries. That is not evidence
+of protein absence. Prior genus-level taxonomy and ambiguous historical strain
+names remain context only. No reference protein, experimental allele, taxon or
+genome was assigned; the corpus-wide reference counts remain **1,405 terms with
+reference context and 597 unresolved**.
+
+The [proposed source-owned review](2026-10-16-salmonella-evidence-scope-proposed-review.json)
+passes the production review loader and an in-memory note-only projection for
+**13 parE claims**. It is **not active curation**: generated records, their
+histories, active reviews and the site are unchanged. Applying it still requires
+the curation canary, validated writes, reproduction, rendering and authoritative
+QC. The replay is offline; no new NCBI requests were made and #1040 stays deferred.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
