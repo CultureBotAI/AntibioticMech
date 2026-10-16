@@ -1,0 +1,4251 @@
+{
+  "additional_primary_context_term": {
+    "prior_assessment": {
+      "biological_absence_inferred": false,
+      "definition_citations": [],
+      "prior_status": "NO_OWN_DEFINITION_CITATIONS_DISCOVERY_REMAINS_OPEN",
+      "qualified_reference_accessions": [
+        "UniProtKB:A0A1D8PI22"
+      ],
+      "record_memberships": [
+        "CHEBI:474180"
+      ],
+      "reference_candidates": [
+        {
+          "citation_overlap_is_primary_validation": false,
+          "disposition": "MATCHING_SPECIES_NAMED_REFERENCE_NOT_EXPERIMENTAL_ALLELE",
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "literal_native_fields": [
+            {
+              "field": "genes/0/geneName",
+              "value": "AIF1"
+            }
+          ],
+          "match_kind": "GENE_SYMBOL_OR_SYNONYM",
+          "own_definition_citation_overlap": [],
+          "protein_accession": "UniProtKB:A0A1D8PI22",
+          "qualified_reference": true
+        }
+      ],
+      "source_label": "Candida albicans AIF1 with mutations conferring resistance against caspofungin",
+      "status": "QUALIFIED_NAMED_REFERENCE_PRIMARY_REVIEW_OPEN",
+      "tokens": {
+        "gene": "AIF1",
+        "species": "Candida albicans"
+      },
+      "whole_record_primary_review": "OPEN"
+    },
+    "term": "ARO:3009378"
+  },
+  "attribution": {
+    "CARD_ARO": "CC BY 4.0",
+    "CGD": "Reused cited reference crosswalk only; no new source adoption",
+    "UniProt": "CC BY 4.0",
+    "primary_article": "Cited evidence only; native NC-ND article and renders stay in ignored cache"
+  },
+  "candida_locus_disagreement": {
+    "experimental_protein_assignment": false,
+    "gene_name_match_overrides_locus_disagreement": false,
+    "paper_cgd_feature": "C4_03350C_A",
+    "paper_locus": "orf19.3362",
+    "reference_cgd_features": [
+      "C2_08100W_A"
+    ],
+    "reference_loci": [
+      "CAALFM_C208100WA",
+      "orf19.9721"
+    ],
+    "status": "DISTINCT_CGD_FEATURES_WITHHELD"
+  },
+  "cgd_features": {
+    "orf19.3362": {
+      "cgd_id": "CAL0000191273",
+      "feature": "C4_03350C_A",
+      "feature_aliases": [
+        "orf19.10870",
+        "IPF23891.1",
+        "IPF15758.2",
+        "Contig4-2353_0001",
+        "orf6.1783",
+        "CaO19.10870",
+        "CaO19.3362",
+        "orf19.3362",
+        "C4_03350C_B",
+        "C4_03350C",
+        "CAWG_03481"
+      ],
+      "feature_primary_gene_name": "AIF1",
+      "feature_type": "ORF|Uncharacterized",
+      "mapping_gene_name": "AIF1"
+    },
+    "orf19.9721": {
+      "cgd_id": "CAL0000195769",
+      "feature": "C2_08100W_A",
+      "feature_aliases": [
+        "orf19.9721",
+        "IPF25135.1",
+        "IPF19998.1",
+        "Contig4-3057_0019",
+        "Contig4-3057_0021",
+        "Contig4-3057_0022",
+        "orf6.6088",
+        "CA3743",
+        "CPD1",
+        "CaO19.9721",
+        "CaO19.2175",
+        "IPF19998",
+        "orf19.2175",
+        "C2_08100W_B",
+        "C2_08100W",
+        "AIF1",
+        "CAWG_05901"
+      ],
+      "feature_primary_gene_name": null,
+      "feature_type": "ORF|Verified",
+      "mapping_gene_name": null
+    }
+  },
+  "cgd_sources": {
+    "cg_features": {
+      "path": "reports/resistance-grounding-2026-10-07/cgd-albicans-a22-r37-features-2026-10-09.json",
+      "sha256": "6b87732ed7e8103beb73fefc45d1a73f69f3577a8490ffaf13241ab056fa69f9"
+    },
+    "cg_mapping": {
+      "path": "reports/resistance-grounding-2026-10-07/cgd-orf19-a22-mapping-2026-10-09.json",
+      "sha256": "ac4f7dd5978386d5ee6ec6e6b62ddbfefaef1cc43d88fe8a1e66f1d3cba9b3a3"
+    }
+  },
+  "claims": [
+    {
+      "aro_id": "ARO:3009252",
+      "claim_sha256": "07cab6e995119e9b876f3e3416acf9ebbd0ceea843d81d5102ef0cdf274172a8",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:10023",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 14,
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "term_pointer": "/terms/ARO:3009252"
+    },
+    {
+      "aro_id": "ARO:3009257",
+      "claim_sha256": "fe62bed345ccaae1715ab835af1567f66008d1304ec30940ff4654540502864b",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:10023",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 15,
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "term_pointer": "/terms/ARO:3009257"
+    },
+    {
+      "aro_id": "ARO:3009265",
+      "claim_sha256": "27528e202196d2bea283141c266c258ad44d32d09eee840e651e7ca5fb885d65",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:10023",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 16,
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "term_pointer": "/terms/ARO:3009265"
+    },
+    {
+      "aro_id": "ARO:3009267",
+      "claim_sha256": "d8cac58116dca364d46d265692e0305cb4e57b7e7abe87c9e7fbd2c6cb8290a5",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:10023",
+      "record_path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "record_sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 17,
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "term_pointer": "/terms/ARO:3009267"
+    },
+    {
+      "aro_id": "ARO:3003383",
+      "claim_sha256": "13c146a2856145d1c6758a01bbea2398d50cd5a05ad510312637fb4cb09f8678",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:100241",
+      "record_path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "record_sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 130,
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3003383"
+    },
+    {
+      "aro_id": "ARO:3004966",
+      "claim_sha256": "4b2c2b7f0b3797756f517a49ab8002fbd13227d9d7960e8c1daae6883d3a342e",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:17630",
+      "record_path": "data/antibiotics/antibacterial/kanamycin-a.yaml",
+      "record_sha256": "ae1f4597070b1e1878d7e4454a53bcbcf0e5187bfa8b39940e73cd76f1bbcc38",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 65,
+      "standard_inchi_key": "SBUJHOSQTJFQJX-NOAMYHISSA-N",
+      "term_pointer": "/terms/ARO:3004966"
+    },
+    {
+      "aro_id": "ARO:3009291",
+      "claim_sha256": "27fb57df07ce90ef245add2df8a9ac23f5dd0ca86e7bd4fb2f8e4d1ff850c7f4",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:27641",
+      "record_path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "record_sha256": "729c6e13f67ee7232c1ebedf67deb6814fbb604a2de271dff92c030f142043ad",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "YPHMISFOHDHNIV-FSZOTQKASA-N",
+      "term_pointer": "/terms/ARO:3009291"
+    },
+    {
+      "aro_id": "ARO:3009250",
+      "claim_sha256": "364387e173332c6704958b867dc1b54027847d4eecc246dbff8315eae2239f07",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:46081",
+      "record_path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "record_sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 15,
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009250"
+    },
+    {
+      "aro_id": "ARO:3009254",
+      "claim_sha256": "1744768ab92311663c7ff69680da79141bcf12e1618b223dd8c6b9872a78386a",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:46081",
+      "record_path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "record_sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 16,
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009254"
+    },
+    {
+      "aro_id": "ARO:3009261",
+      "claim_sha256": "540661893dee8c23718cfc5dec5f776698fff9e26425c62177090edd799f8252",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:46081",
+      "record_path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "record_sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 17,
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009261"
+    },
+    {
+      "aro_id": "ARO:3009266",
+      "claim_sha256": "d74844e89baadd6636138dbf80e5a15cc68f656378d2aa56bd0cd736aa7ba9b2",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:46081",
+      "record_path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "record_sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 18,
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009266"
+    },
+    {
+      "aro_id": "ARO:3009378",
+      "claim_sha256": "54d382accb5ab1fa85935d6c875b292d8034e11ed6e530cca90a5a7039ed4c09",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:474180",
+      "record_path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "record_sha256": "40e52f8e7a1ef2388925e682bed0241d368812c5b71c9299edacf7361966f36b",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 6,
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N",
+      "term_pointer": "/terms/ARO:3009378"
+    },
+    {
+      "aro_id": "ARO:3009380",
+      "claim_sha256": "002e0bc90190c7f88ea81c82f862c0741504c8d9a7294c14b2d725ebd95be5c5",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:474180",
+      "record_path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "record_sha256": "40e52f8e7a1ef2388925e682bed0241d368812c5b71c9299edacf7361966f36b",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 7,
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N",
+      "term_pointer": "/terms/ARO:3009380"
+    },
+    {
+      "aro_id": "ARO:3003450",
+      "claim_sha256": "ac7a82376acd6463bb9282faadc4552fc1145a397724398a5e3b7f1a22f4be9d",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:4877",
+      "record_path": "data/antibiotics/antimycobacterial/ethambutol.yaml",
+      "record_sha256": "1d921e91cfc250de4e6a9ec85363ee66fe1285dd68c82fac8ff1c3c2092d9ac1",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 8,
+      "standard_inchi_key": "AEUTYOVWOVBAKS-UWVGGRQHSA-N",
+      "term_pointer": "/terms/ARO:3003450"
+    },
+    {
+      "aro_id": "ARO:3004136",
+      "claim_sha256": "d96cec5ae25b425a1d388810f31afa6d6ff875eab50c20f4e9ea6963123d1371",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:4877",
+      "record_path": "data/antibiotics/antimycobacterial/ethambutol.yaml",
+      "record_sha256": "1d921e91cfc250de4e6a9ec85363ee66fe1285dd68c82fac8ff1c3c2092d9ac1",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 15,
+      "standard_inchi_key": "AEUTYOVWOVBAKS-UWVGGRQHSA-N",
+      "term_pointer": "/terms/ARO:3004136"
+    },
+    {
+      "aro_id": "ARO:3009290",
+      "claim_sha256": "00fcce10339287002e4ab5421f4e764746eda9cf7fd675a79f4f972f4fb8c537",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:575568",
+      "record_path": "data/antibiotics/antifungal/atovaquone.yaml",
+      "record_sha256": "3c4df8f2791e8c7ce755fc977d7368f4de77129d3ca8e14fcd9b7ca378263baa",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "KUCQYCKVKVOKAY-CTYIDZIISA-N",
+      "term_pointer": "/terms/ARO:3009290"
+    },
+    {
+      "aro_id": "ARO:3009253",
+      "claim_sha256": "5037894b963b17331281c54c17474d3b6ebaf93d1d027d25402b335c7278533b",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:6076",
+      "record_path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "record_sha256": "835f83eaa524dc3fcd707ef1eced982fd0116288121367b1310f31115533a2bd",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 9,
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "term_pointer": "/terms/ARO:3009253"
+    },
+    {
+      "aro_id": "ARO:3009255",
+      "claim_sha256": "768b5f547bbed74f8432e1d5ad3c074c88eedff4a4d4474bcbade410575e6bfb",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:6076",
+      "record_path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "record_sha256": "835f83eaa524dc3fcd707ef1eced982fd0116288121367b1310f31115533a2bd",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 10,
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "term_pointer": "/terms/ARO:3009255"
+    },
+    {
+      "aro_id": "ARO:3009259",
+      "claim_sha256": "e5981b7120b0be39730f6b135489ce7fe55eff73ae30614ba432a9a87a4f4f86",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:6076",
+      "record_path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "record_sha256": "835f83eaa524dc3fcd707ef1eced982fd0116288121367b1310f31115533a2bd",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 11,
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "term_pointer": "/terms/ARO:3009259"
+    },
+    {
+      "aro_id": "ARO:3009262",
+      "claim_sha256": "8db3d0920f707621a2aa4d065a4e49391c0df06976504195fdca161b3a78b415",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:6076",
+      "record_path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "record_sha256": "835f83eaa524dc3fcd707ef1eced982fd0116288121367b1310f31115533a2bd",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 12,
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "term_pointer": "/terms/ARO:3009262"
+    },
+    {
+      "aro_id": "ARO:3009531",
+      "claim_sha256": "41e6b0209d185073f328a9f77d0638193ed6e41d3b725c55ed46d3aeeb2eb5ac",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:81773",
+      "record_path": "data/antibiotics/antifungal/metconazole.yaml",
+      "record_sha256": "437512fec4896e717ce267983106e6911d52357690fb28ccc8c058e7f6800586",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 4,
+      "standard_inchi_key": "XWPZUHJBOLQNMN-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009531"
+    },
+    {
+      "aro_id": "ARO:3009541",
+      "claim_sha256": "990cb74c71843972c25d2c09fbb75b377f4b9b3d190fa61acaf63114742b9534",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:81922",
+      "record_path": "data/antibiotics/antifungal/flusilazole.yaml",
+      "record_sha256": "154f41135daf7fbbdb193166406616284fca65dc5cf225d147a79ce2efca16b0",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 2,
+      "standard_inchi_key": "FQKUGOMFVDPBIZ-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009541"
+    },
+    {
+      "aro_id": "ARO:3009542",
+      "claim_sha256": "39fb499988aec71bcc85dbf35a49ce609f9f658da6e8d3f9336d13782576fb83",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:81922",
+      "record_path": "data/antibiotics/antifungal/flusilazole.yaml",
+      "record_sha256": "154f41135daf7fbbdb193166406616284fca65dc5cf225d147a79ce2efca16b0",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 3,
+      "standard_inchi_key": "FQKUGOMFVDPBIZ-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009542"
+    },
+    {
+      "aro_id": "ARO:3009532",
+      "claim_sha256": "f2582f565ff911c5076eb3f4fac4e1df92c2dc67a9b2feaa534bed6fb778b3dd",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:83748",
+      "record_path": "data/antibiotics/antifungal/cyproconazole.yaml",
+      "record_sha256": "274217bcdb3f3930bea5338d433c44421858e858a1bffb09b8f59c46fc63acb5",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 1,
+      "standard_inchi_key": "UFNOUKDBUJZYDE-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009532"
+    },
+    {
+      "aro_id": "ARO:3009533",
+      "claim_sha256": "735dd7acbd1664eafb068ef10588e650715699f99dd492cc258d62611e0965a9",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:83779",
+      "record_path": "data/antibiotics/antifungal/tebuconazole.yaml",
+      "record_sha256": "0c6380aed52552a312323986c4baddb7f3e065d9c553876b127bbdf357db6dda",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 11,
+      "standard_inchi_key": "PXMNMQRDXWABCY-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009533"
+    },
+    {
+      "aro_id": "ARO:3009285",
+      "claim_sha256": "51d8e0e346b3c65ac167808554fbf1db8ae655e6476e7f1cdeb2a8899a0e0cec",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:8673",
+      "record_path": "data/antibiotics/antiprotozoal/pyrimethamine.yaml",
+      "record_sha256": "2903bba5458167ec933b05f90d9d69b3941b8f9a83d55a2a1f463b5825e1c478",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 0,
+      "standard_inchi_key": "WKSAUQYGYAYLPV-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009285"
+    },
+    {
+      "aro_id": "ARO:3009290",
+      "claim_sha256": "669a7305a0c8b2bbc4f3964f750f7719bd881d021f1ff330915ae812cd063b67",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:8673",
+      "record_path": "data/antibiotics/antiprotozoal/pyrimethamine.yaml",
+      "record_sha256": "2903bba5458167ec933b05f90d9d69b3941b8f9a83d55a2a1f463b5825e1c478",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 1,
+      "standard_inchi_key": "WKSAUQYGYAYLPV-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009290"
+    },
+    {
+      "aro_id": "ARO:3009285",
+      "claim_sha256": "677fd437bfda84eef9a3ffe9631fd28188d46ccb89603fa0206465bd51d978be",
+      "experimental_subject_assignment": false,
+      "record_identifier": "CHEBI:9329",
+      "record_path": "data/antibiotics/antibacterial/sulfadoxine.yaml",
+      "record_sha256": "7226bd02a63df469db4690b90fcc448fbdd772ae737df6a4329f767d64fb8c38",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 5,
+      "standard_inchi_key": "PJSFRIWCGOHTNF-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009285"
+    },
+    {
+      "aro_id": "ARO:3009251",
+      "claim_sha256": "89d0d3cf19c8ab99b2dd233bf46d592466e3db9ea16a30e7aa3a5658013cad9a",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-11ab0a98bf",
+      "record_path": "data/antibiotics/antifungal/miconazole.yaml",
+      "record_sha256": "663c997eb1d5da9ea97d4679e9c3fd9c2fccdc1e468245af3addb0980ce62612",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 1,
+      "standard_inchi_key": "BYBLEWFAAKGYCD-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009251"
+    },
+    {
+      "aro_id": "ARO:3009258",
+      "claim_sha256": "74657d704efb8ac8dd61b133c5aaad384e2b9041b8d3be5054952cdea6e47fd3",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-11ab0a98bf",
+      "record_path": "data/antibiotics/antifungal/miconazole.yaml",
+      "record_sha256": "663c997eb1d5da9ea97d4679e9c3fd9c2fccdc1e468245af3addb0980ce62612",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 2,
+      "standard_inchi_key": "BYBLEWFAAKGYCD-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009258"
+    },
+    {
+      "aro_id": "ARO:3009264",
+      "claim_sha256": "dce709f92133a7a3ff4be900b47b36355ac4c4ab047f5e5a773db51dcd8b9675",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-11ab0a98bf",
+      "record_path": "data/antibiotics/antifungal/miconazole.yaml",
+      "record_sha256": "663c997eb1d5da9ea97d4679e9c3fd9c2fccdc1e468245af3addb0980ce62612",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 3,
+      "standard_inchi_key": "BYBLEWFAAKGYCD-UHFFFAOYSA-N",
+      "term_pointer": "/terms/ARO:3009264"
+    },
+    {
+      "aro_id": "ARO:3009256",
+      "claim_sha256": "d276d9b9d6a464742392b0f628303600d1482dc1bea8895c6c8522bc179f7496",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-4655b07df9",
+      "record_path": "data/antibiotics/antifungal/ketoconazole.yaml",
+      "record_sha256": "35328fcc1bc0fc058210835a0f87c255fd542141877aa6ed79fdcb592af8c367",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 1,
+      "standard_inchi_key": "XMAYWYJOQHXEEK-OZXSUGGESA-N",
+      "term_pointer": "/terms/ARO:3009256"
+    },
+    {
+      "aro_id": "ARO:3009263",
+      "claim_sha256": "5764627466e10a2281e7d2e3a08b5107689c35a0bd55048668071127e08d1901",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-4655b07df9",
+      "record_path": "data/antibiotics/antifungal/ketoconazole.yaml",
+      "record_sha256": "35328fcc1bc0fc058210835a0f87c255fd542141877aa6ed79fdcb592af8c367",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 2,
+      "standard_inchi_key": "XMAYWYJOQHXEEK-OZXSUGGESA-N",
+      "term_pointer": "/terms/ARO:3009263"
+    },
+    {
+      "aro_id": "ARO:3009530",
+      "claim_sha256": "c003a1823262bc106d81188402a7a9b22e5ac062f59043a6ad13e08c8aa1b4a3",
+      "experimental_subject_assignment": false,
+      "record_identifier": "antibioticmech:aro-e63825b7e1",
+      "record_path": "data/antibiotics/antifungal/epoxiconazole.yaml",
+      "record_sha256": "323f9511185c623815d33900730a37d6e09bbd88bf2e0ec38556a783a2b41466",
+      "reference_status": "NO_PROTEIN_CANDIDATE_IN_SELECTED_INDEX_INPUTS_NOT_BIOLOGICAL_ABSENCE",
+      "resistance_index": 5,
+      "standard_inchi_key": "ZMYFCFLJBGAQRS-IAGOWNOFSA-N",
+      "term_pointer": "/terms/ARO:3009530"
+    }
+  ],
+  "date": "2026-10-15",
+  "inputs": {
+    "corpus_update": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "gene_checkpoint": {
+      "path": "research/2026-10-15-card-gene-reference-followup.json",
+      "sha256": "c0eae79c262490f95c7968a099ee7571870fc62820eb00356911ac8714a41ddf"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    },
+    "network_enabled_plan": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-holds/network-enabled-plan.json",
+      "sha256": "ac89c10942ab749c8184f4afc0f58815a6f2b8e3d7d2bbd374ab67d34e28ffde"
+    },
+    "primary_assessment": {
+      "path": "research/2026-10-15-card-name-holds-primary-assessment.json",
+      "sha256": "9077f2a39e79299b7f7204e34fba064904a37b8f9f51041616645080ee2df9ae"
+    },
+    "prior": {
+      "path": "research/2026-10-15-card-name-crosswalks.json",
+      "sha256": "97b4d759a080a35e9e2583bdf9b048fde4c3706d1acd3d5b8bd2a8ffafa6c5e1"
+    },
+    "prior_verification": {
+      "path": "research/2026-10-15-card-name-crosswalks-verification.json",
+      "sha256": "593b1fb22c47faf12ba2873d8dbf0fb06df56876e5b0f21181e37cf21c393fca"
+    },
+    "protein_canary": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-holds/protein-canary-reviewed.json",
+      "sha256": "7b751c9ec218bbcd7dbf8fb29bac8cc3636e29e1c1d20bba3a8a99c78f06bf8d"
+    },
+    "protein_plan": {
+      "path": "research/2026-10-15-card-name-holds-protein-plan.json",
+      "sha256": "318db52c1445a8eede405dcba60e5e236485000ced148c5ac1d306c0eeab2cc3"
+    },
+    "source_plan": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-holds/request-plan.json",
+      "sha256": "e3afc286cb1cd8e49e7a9cf393401c75431eeffddf9feb86b518f2390a51e47e"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "taxonomy_inventory": {
+      "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+      "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"
+    }
+  },
+  "limits": [
+    "The paper's species context is distinct from correction of the misspelled CARD source name.",
+    "A gene-name reference cannot override the paper-locus/CGD discrepancy.",
+    "The empty exact-locus query is not an exhaustive alias search or biological absence finding.",
+    "Reference strains and proteins are not assigned to experimental derivatives, alleles or genomes.",
+    "Formulation identity, source-name correction and primary claims remain separate curation gates.",
+    "No numeric AST, sequences, construction details or genotype specifications are exported.",
+    "#1040 remains deferred; no NCBI endpoint, outreach, source adoption or GitHub mutation occurred.",
+    "The full-corpus goal remains OPEN; the preceding 103-of-178 qualified reference count is unchanged."
+  ],
+  "paper_species_contexts": {
+    "Candida albicans": {
+      "experimental_strain_assignment": false,
+      "identity": {
+        "rank": "species",
+        "scientificName": "Candida albicans",
+        "taxonId": 5476
+      }
+    },
+    "Saccharomyces cerevisiae": {
+      "experimental_strain_assignment": false,
+      "identity": {
+        "rank": "species",
+        "scientificName": "Saccharomyces cerevisiae",
+        "taxonId": 4932
+      }
+    }
+  },
+  "plan": {
+    "path": "research/2026-10-15-card-name-holds-plan.json",
+    "sha256": "ec2963b6f3a86eec158949183a7c3913be6900297e53047fec0db72363415919"
+  },
+  "primary_review": {
+    "aneuploidy_validation": "NOT_ESTABLISHED_BY_REVIEWED_STUDY",
+    "citation": {
+      "authors_year": "Chin et al. 2014",
+      "doi": "10.15698/mic2014.01.119",
+      "pmid": "28357223"
+    },
+    "claim_scope": "Figure 2 supports a context-limited relative-growth comparison, including negative metacaspase controls; it does not establish clinical resistance.",
+    "control_genes": [
+      "YCA1",
+      "MCA1"
+    ],
+    "date": "2026-10-15",
+    "evidence_type": "QUALITATIVE_RELATIVE_GROWTH_AND_CELL_DEATH_CONTEXT",
+    "exact_structure_match_to_neutral_record": false,
+    "experimental_allele_assignment": false,
+    "experimental_reference_protein_assignment": false,
+    "experimental_strain_taxon_or_genome_assignment": false,
+    "figures_visually_inspected": [
+      1,
+      2
+    ],
+    "formulation_disposition": "FORMULATION_NOT_RESOLVED_TO_CORPUS_STRUCTURE",
+    "inspection": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-holds/pdf-inspection-artifacts.json",
+      "sha256": "f271aeda2092e1d9a84bb1f14c48b1def1aacdf3e49918e027d8862cf413aa62"
+    },
+    "local_attempts": 2,
+    "local_dns_failure_retried": true,
+    "mic_scope": "A wildtype MIC is mentioned as data not shown; no resistant-allele MIC comparison or breakpoint classification is established.",
+    "native_article_redistribution": "IGNORED_CACHE_ONLY_CC_BY_NC_ND_3_0_NOT_ADOPTED",
+    "native_response": {
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-primary-network-enabled-response.bin",
+        "sha256": "39feb8d05643d197aa76ce94300e7fdd8555b3989d46a7cf94457e5c6e00ce88"
+      },
+      "bytes": 1479126,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Age": "0",
+        "Cache-Control": "public, max-age=2592000",
+        "Connection": "keep-alive",
+        "Content-Length": "1479126",
+        "Content-Type": "application/pdf",
+        "Date": "Thu, 15 Oct 2026 22:25:46 GMT",
+        "ETag": "\"1691d6-6322167efb2d5\"",
+        "Expires": "Sat, 14 Nov 2026 22:25:46 GMT",
+        "Last-Modified": "Sun, 06 Apr 2025 19:48:39 GMT",
+        "Server": "nginx",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Cacheable": "NO:STATIC-FILE",
+        "X-Content-Type-Options": "nosniff",
+        "X-Varnish-Cache": "BYPASS",
+        "X-XSS-Protection": "1; mode=block"
+      },
+      "key": "chin-primary-network-enabled",
+      "plan_sha256": "ac89c10942ab749c8184f4afc0f58815a6f2b8e3d7d2bbd374ab67d34e28ffde",
+      "prior_local_dns_failure_retried": true,
+      "redirects_followed": 0,
+      "retries": 0,
+      "retrieved_at": "2026-10-15T22:25:47.842358+00:00",
+      "started_at": "2026-10-15T22:25:46.252686+00:00",
+      "status": 200,
+      "url": "https://microbialcell.com/wp-content/uploads/2014/01/2014A-Chin-Microbial_Cell.pdf"
+    },
+    "negative_control_inferred_globally_ineffective": false,
+    "network_enabled_attempt": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-primary-network-enabled-attempt.json",
+      "sha256": "6a2b948383152564b7a88cb9c071580a3bc4199908cd3171860a9abfa690b8ca"
+    },
+    "numeric_ast_exported": false,
+    "page_artifacts": {
+      "pages": [
+        {
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-1.png",
+            "sha256": "21b18fb94c8f78ea609e82a442b9d8f094908d8bc0c8fe2dc29e42c46c94e8f4"
+          },
+          "printed_page": 58,
+          "text": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-1.txt",
+            "sha256": "8c53eb211cfee913974b10c8c858fbe1eeb72ca0d22ef9015a62c8dad598e3ae"
+          },
+          "zero_based_page": 0
+        },
+        {
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-2.png",
+            "sha256": "bcbe69aba2077724aa91ea2cad7093e797d4a4c6053185dcf360a093abebec6a"
+          },
+          "printed_page": 59,
+          "text": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-2.txt",
+            "sha256": "52cb40a20918f2cf62c7f915a678da722c09a7f8a07ae957cd97521507492279"
+          },
+          "zero_based_page": 1
+        },
+        {
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-3.png",
+            "sha256": "d5ff5fdd980dcc196b88fbe3475d63fbf472d273f0a8f577c48a641dd85e89af"
+          },
+          "printed_page": 60,
+          "text": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-3.txt",
+            "sha256": "1241471ca2dcdf37fbbbb4b9822024de2201268f4d301adf5aa39926c64ee11d"
+          },
+          "zero_based_page": 2
+        },
+        {
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-4.png",
+            "sha256": "eb1f2ca5fcded617403273759abc11f5b90dea02e27fe06959cd7290f73a5d89"
+          },
+          "printed_page": 61,
+          "text": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-4.txt",
+            "sha256": "b328b1195db72f351a2eb31612440b2d7c583b6cdc4ec9cc980959ff576b360c"
+          },
+          "zero_based_page": 3
+        },
+        {
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-5.png",
+            "sha256": "8bf6522a428bf541a707da56664420879d0e6d1be8f1f546959e12d9cdb5b85c"
+          },
+          "printed_page": 62,
+          "text": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-5.txt",
+            "sha256": "bd26448bda40664d58bb94c41e798a610dfe4efca197f843dd530048d8863f3c"
+          },
+          "zero_based_page": 4
+        },
+        {
+          "image": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-6.png",
+            "sha256": "318b44de8bde95389dc059ed76a14e2bf016e4ea305e4bdf6540cac966c89d89"
+          },
+          "printed_page": 63,
+          "text": {
+            "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-page-6.txt",
+            "sha256": "e96ca40e1211032c13045a0e0a2c7a1311e0b610271a8f08e2a7e2dc12839113"
+          },
+          "zero_based_page": 5
+        }
+      ],
+      "renderer": "PyMuPDF 1.26.4",
+      "source": {
+        "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-primary-network-enabled-response.bin",
+        "sha256": "39feb8d05643d197aa76ce94300e7fdd8555b3989d46a7cf94457e5c6e00ce88"
+      }
+    },
+    "reported_species_contexts": [
+      {
+        "background_label": "W303-1A",
+        "figure": "2A",
+        "gene": "AIF1",
+        "reported_locus": null,
+        "species": "Saccharomyces cerevisiae"
+      },
+      {
+        "background_label": "RBY1132",
+        "figure": "2B",
+        "gene": "AIF1",
+        "reported_locus": "orf19.3362",
+        "species": "Candida albicans"
+      }
+    ],
+    "results_and_discussion_reviewed": true,
+    "source": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-primary-network-enabled-receipt.json",
+      "sha256": "a8548cf6e89c1a2fedfad782434ba70b39db29d366eb0f3ed6760b1d36510a44"
+    },
+    "source_compound_wording": "caspofungin (Cancidas)",
+    "source_http_denial_bypassed": false,
+    "source_spelling_correction_inferred": false,
+    "successful_http_responses": 1,
+    "visually_inspected_printed_pages": [
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "whole_record_primary_signoff": false
+  },
+  "records": [
+    {
+      "activity_observations": "59",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:100241",
+      "label": "ciprofloxacin",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "de4e65076e0a69a82637f3af5a824c0bd198a1b49ee22d85a424d67ca0c9fedd",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "188",
+      "score_rules": "0",
+      "standard_inchi_key": "MYSWGUAQZAJSOK-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:17630",
+      "label": "kanamycin A",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/kanamycin-a.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "ae1f4597070b1e1878d7e4454a53bcbcf0e5187bfa8b39940e73cd76f1bbcc38",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "78",
+      "score_rules": "0",
+      "standard_inchi_key": "SBUJHOSQTJFQJX-NOAMYHISSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:9329",
+      "label": "sulfadoxine",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antibacterial/sulfadoxine.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "7226bd02a63df469db4690b90fcc448fbdd772ae737df6a4329f767d64fb8c38",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "6",
+      "score_rules": "0",
+      "standard_inchi_key": "PJSFRIWCGOHTNF-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:575568",
+      "label": "atovaquone",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/atovaquone.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "3c4df8f2791e8c7ce755fc977d7368f4de77129d3ca8e14fcd9b7ca378263baa",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "1",
+      "score_rules": "0",
+      "standard_inchi_key": "KUCQYCKVKVOKAY-CTYIDZIISA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:474180",
+      "label": "caspofungin",
+      "lineage_checked_taxids": "NCBITaxon:4932|NCBITaxon:5476",
+      "path": "data/antibiotics/antifungal/caspofungin.yaml",
+      "primary_papers_pending": "DOI:10.1128/aac.00262-08|DOI:10.1128/aac.01653-05|DOI:10.1128/aac.49.8.3264-3273.2005|PMID:16048935|PMID:16723566|PMID:18443110",
+      "record_sha256": "40e52f8e7a1ef2388925e682bed0241d368812c5b71c9299edacf7361966f36b",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "33",
+      "score_rules": "0",
+      "standard_inchi_key": "JYIKNQVWKBUSNH-WVDDFWQHSA-N",
+      "strain_flags": "6",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": "UniProtKB:A0A1D8PCT0|UniProtKB:P38631"
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:27641",
+      "label": "cycloheximide",
+      "lineage_checked_taxids": "NCBITaxon:4932",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "primary_papers_pending": "DOI:10.1016/S0021-9258(17)41760-1|DOI:10.1371/journal.pone.0303747|PMID:6304624|PMID:8307980",
+      "record_sha256": "729c6e13f67ee7232c1ebedf67deb6814fbb604a2de271dff92c030f142043ad",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "5",
+      "score_rules": "0",
+      "standard_inchi_key": "YPHMISFOHDHNIV-FSZOTQKASA-N",
+      "strain_flags": "1",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": "UniProtKB:P38637"
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:83748",
+      "label": "cyproconazole",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/cyproconazole.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "274217bcdb3f3930bea5338d433c44421858e858a1bffb09b8f59c46fc63acb5",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "2",
+      "score_rules": "0",
+      "standard_inchi_key": "UFNOUKDBUJZYDE-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "antibioticmech:aro-e63825b7e1",
+      "label": "epoxiconazole",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/epoxiconazole.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "323f9511185c623815d33900730a37d6e09bbd88bf2e0ec38556a783a2b41466",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "8",
+      "score_rules": "0",
+      "standard_inchi_key": "ZMYFCFLJBGAQRS-IAGOWNOFSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "2",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:46081",
+      "label": "fluconazole",
+      "lineage_checked_taxids": "NCBITaxon:5207|NCBITaxon:5476|NCBITaxon:5478|NCBITaxon:5480|NCBITaxon:5482",
+      "path": "data/antibiotics/antifungal/fluconazole.yaml",
+      "primary_papers_pending": "DOI:10.1046/j.1365-2958.2003.03281.x|DOI:10.1080/21505594.2024.2405000|DOI:10.1128/aac.00555-13|DOI:10.1128/aac.00651-17|DOI:10.1128/aac.03470-14|DOI:10.1128/aac.05502-11|DOI:10.1128/aac.44.11.2985-2990.2000|DOI:10.1128/aac.45.11.3037-3045.2001|DOI:10.2147/idr.s483623|PMID:11036010|PMID:11600353|PMID:12519188|PMID:22155829|PMID:23629718|PMID:25385095|PMID:28630186|PMID:39403939|PMID:39464835",
+      "record_sha256": "1fa11ad3cd37df521216044f5b822573510e9083be72af322e94929fafc94e55",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "77",
+      "score_rules": "0",
+      "standard_inchi_key": "RFHAOTPXVQNOHP-UHFFFAOYSA-N",
+      "strain_flags": "3",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": "UniProtKB:A0A1D8PGP5|UniProtKB:G8B7T4|UniProtKB:N0A5G3|UniProtKB:P10613|UniProtKB:P14263|UniProtKB:P50859|UniProtKB:Q59VG6|UniProtKB:Q59X67|UniProtKB:Q5A4G2|UniProtKB:Q5ALV2|UniProtKB:Q870D1|UniProtKB:Q8X0Z3"
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:81922",
+      "label": "flusilazole",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/flusilazole.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "154f41135daf7fbbdb193166406616284fca65dc5cf225d147a79ce2efca16b0",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "4",
+      "score_rules": "0",
+      "standard_inchi_key": "FQKUGOMFVDPBIZ-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:6076",
+      "label": "itraconazole",
+      "lineage_checked_taxids": "NCBITaxon:5476|NCBITaxon:5480|NCBITaxon:746128",
+      "path": "data/antibiotics/antifungal/itraconazole.yaml",
+      "primary_papers_pending": "DOI:10.1128/aac.00651-17|DOI:10.1128/aac.01092-06|DOI:10.1128/aac.02101-16|DOI:10.1128/aac.03470-14|DOI:10.1128/aac.47.2.577-581.2003|DOI:10.1128/aac.47.3.1120-1124.2003|DOI:10.1128/aac.47.5.1719-1726.2003|DOI:10.1128/aac.48.11.4405-4413.2004|DOI:10.1128/aac.48.7.2747-2750.2004|DOI:10.1371/journal.pone.0050034|PMID:12543662|PMID:12604551|PMID:12709346|PMID:15215142|PMID:15504870|PMID:17371828|PMID:23226235|PMID:25385095|PMID:27799210|PMID:28630186",
+      "record_sha256": "835f83eaa524dc3fcd707ef1eced982fd0116288121367b1310f31115533a2bd",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "54",
+      "score_rules": "0",
+      "standard_inchi_key": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "strain_flags": "17",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": "UniProtKB:B0XYD8|UniProtKB:B0Y628|UniProtKB:G8B7T4|UniProtKB:P10613|UniProtKB:Q4WDM9|UniProtKB:Q4WNT5|UniProtKB:Q59VG6"
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "antibioticmech:aro-4655b07df9",
+      "label": "ketoconazole",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/ketoconazole.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "35328fcc1bc0fc058210835a0f87c255fd542141877aa6ed79fdcb592af8c367",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "8",
+      "score_rules": "0",
+      "standard_inchi_key": "XMAYWYJOQHXEEK-OZXSUGGESA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:81773",
+      "label": "metconazole",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/metconazole.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "437512fec4896e717ce267983106e6911d52357690fb28ccc8c058e7f6800586",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "6",
+      "score_rules": "0",
+      "standard_inchi_key": "XWPZUHJBOLQNMN-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "antibioticmech:aro-11ab0a98bf",
+      "label": "miconazole",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/miconazole.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "663c997eb1d5da9ea97d4679e9c3fd9c2fccdc1e468245af3addb0980ce62612",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "8",
+      "score_rules": "0",
+      "standard_inchi_key": "BYBLEWFAAKGYCD-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:83779",
+      "label": "tebuconazole",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antifungal/tebuconazole.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "0c6380aed52552a312323986c4baddb7f3e065d9c553876b127bbdf357db6dda",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "13",
+      "score_rules": "0",
+      "standard_inchi_key": "PXMNMQRDXWABCY-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "3",
+      "coordinate_flags": "7",
+      "identifier": "CHEBI:10023",
+      "label": "voriconazole",
+      "lineage_checked_taxids": "NCBITaxon:5059|NCBITaxon:5207|NCBITaxon:5476|NCBITaxon:5480|NCBITaxon:5482|NCBITaxon:746128",
+      "path": "data/antibiotics/antifungal/voriconazole.yaml",
+      "primary_papers_pending": "DOI:10.1016/j.ijantimicag.2008.06.018|DOI:10.1128/aac.00555-13|DOI:10.1128/aac.00651-17|DOI:10.1128/aac.01092-06|DOI:10.1128/aac.02101-16|DOI:10.1128/aac.03470-14|DOI:10.1128/aac.05477-11|DOI:10.1128/aac.05502-11|DOI:10.1371/journal.pone.0050034|PMID:17371828|PMID:18775650|PMID:22155829|PMID:22314539|PMID:22897872|PMID:23226235|PMID:23629718|PMID:25385095|PMID:27799210|PMID:28630186",
+      "record_sha256": "fb2ab7299b55c82b2fb1eaced93f4c57798abd181becf20d4104fd40a739df50",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "62",
+      "score_rules": "0",
+      "standard_inchi_key": "BCEHBSKCWLPMDN-MGPLVRAMSA-N",
+      "strain_flags": "13",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": "UniProtKB:B0Y628|UniProtKB:B8N2C8|UniProtKB:B8NFL5|UniProtKB:B8NUK6|UniProtKB:G8B7T4|UniProtKB:N0A5G3|UniProtKB:P10613|UniProtKB:P14263|UniProtKB:Q4WDM9|UniProtKB:Q4WNT5|UniProtKB:Q59VG6|UniProtKB:Q870D1"
+    },
+    {
+      "activity_observations": "338",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:4877",
+      "label": "ethambutol",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antimycobacterial/ethambutol.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "1d921e91cfc250de4e6a9ec85363ee66fe1285dd68c82fac8ff1c3c2092d9ac1",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "19",
+      "score_rules": "0",
+      "standard_inchi_key": "AEUTYOVWOVBAKS-UWVGGRQHSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    },
+    {
+      "activity_observations": "0",
+      "coordinate_flags": "0",
+      "identifier": "CHEBI:8673",
+      "label": "pyrimethamine",
+      "lineage_checked_taxids": "",
+      "path": "data/antibiotics/antiprotozoal/pyrimethamine.yaml",
+      "primary_papers_pending": "",
+      "record_sha256": "2903bba5458167ec933b05f90d9d69b3941b8f9a83d55a2a1f463b5825e1c478",
+      "research_status": "PENDING_PRIMARY_REVIEW",
+      "resistance_assertions": "2",
+      "score_rules": "0",
+      "standard_inchi_key": "WKSAUQYGYAYLPV-UHFFFAOYSA-N",
+      "strain_flags": "0",
+      "taxon_label_flags": "0",
+      "verified_reference_accessions": ""
+    }
+  ],
+  "reference_queries": {
+    "cached-candida-name": {
+      "native_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/proteins-5476-body.json",
+          "sha256": "37f6e34497db0bc643c5042717e721e0d321a671921eab0aea732b137578b49c"
+        },
+        "bytes": 98028,
+        "complete_for_exact_query": true,
+        "empty_result_means_biological_absence": false,
+        "headers": {
+          "access-control-allow-credentials": "true",
+          "access-control-allow-headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+          "access-control-allow-methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+          "access-control-max-age": "1728000",
+          "cache-control": "public, max-age=43200",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-type": "application/json",
+          "date": "Thu, 15 Oct 2026 21:16:14 GMT",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "transfer-encoding": "chunked",
+          "vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+          "x-api-deployment-date": "07-October-2026",
+          "x-cache": "miss cached",
+          "x-total-results": "9",
+          "x-uniprot-release": "2026_03",
+          "x-uniprot-release-date": "02-September-2026"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/proteins-5476-receipt.json",
+          "sha256": "da289d1ad3e5ee0ec1ce8db0088ac67625e528ac7262f56234f5a4158a5ae079"
+        },
+        "redirects_followed": 0,
+        "retries": 0,
+        "retrieved_at": "2026-10-15T21:16:14.293882+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AAIF1+OR+gene_exact%3ACDR1+OR+gene_exact%3ACDR2+OR+gene_exact%3ACyp51a+OR+gene_exact%3AMDR1+OR+gene_exact%3Amrr2+OR+gene_exact%3ATAC1+OR+gene_exact%3AUpc2%29+AND+taxonomy_id%3A5476+AND+reviewed%3Atrue&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 9,
+      "reused": true,
+      "selected_name_reference": "A0A1D8PI22"
+    },
+    "candida-paper-locus": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-name-holds/candida-paper-locus-attempt.json",
+        "sha256": "3240ca4752fa3b672a34f96fa2e08b7974ca8f54696345df8b67d02b294f9e00"
+      },
+      "native_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-15-card-name-holds/candida-paper-locus-body.json",
+          "sha256": "5021e624e752b001ce3e3846e8f158ed4aeb93a4c9a72fdb35a0c5b14a0eea84"
+        },
+        "bytes": 14,
+        "complete_for_exact_query": true,
+        "empty_result_means_biological_absence": false,
+        "headers": {
+          "access-control-allow-credentials": "true",
+          "access-control-allow-headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+          "access-control-allow-methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+          "access-control-max-age": "1728000",
+          "cache-control": "public, max-age=43200",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-type": "application/json",
+          "date": "Thu, 15 Oct 2026 22:30:21 GMT",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "transfer-encoding": "chunked",
+          "vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+          "x-api-deployment-date": "07-October-2026",
+          "x-cache": "miss cached",
+          "x-total-results": "0",
+          "x-uniprot-release": "2026_03",
+          "x-uniprot-release-date": "02-September-2026"
+        },
+        "key": "candida-paper-locus",
+        "plan_sha256": "318db52c1445a8eede405dcba60e5e236485000ced148c5ac1d306c0eeab2cc3",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-15-card-name-holds/candida-paper-locus-receipt.json",
+          "sha256": "ff2996f59a67a2299d02983bfbcb3cf78f173c15256cb5835c38c564e066f165"
+        },
+        "redirects_followed": 0,
+        "retries": 0,
+        "retrieved_at": "2026-10-15T22:30:21.199728+00:00",
+        "started_at": "2026-10-15T22:30:20.395718+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aorf19.3362+AND+taxonomy_id%3A5476&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 0
+    },
+    "yeast-aif1": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-name-holds/yeast-aif1-attempt.json",
+        "sha256": "5ec9f34d113b9f9b8879da358f522d7d17716472a830d3c203e0605ea046efaa"
+      },
+      "native_source": {
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-15-card-name-holds/yeast-aif1-body.json",
+          "sha256": "37f0b53042f8d9173a1f8dbb673281ee954cdbe0e47ee0e9418698004e4024cb"
+        },
+        "bytes": 6384,
+        "complete_for_exact_query": true,
+        "empty_result_means_biological_absence": false,
+        "headers": {
+          "access-control-allow-credentials": "true",
+          "access-control-allow-headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+          "access-control-allow-methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+          "access-control-max-age": "1728000",
+          "cache-control": "public, max-age=43200",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-type": "application/json",
+          "date": "Thu, 15 Oct 2026 22:29:57 GMT",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "transfer-encoding": "chunked",
+          "vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+          "x-api-deployment-date": "07-October-2026",
+          "x-cache": "miss cached",
+          "x-total-results": "1",
+          "x-uniprot-release": "2026_03",
+          "x-uniprot-release-date": "02-September-2026"
+        },
+        "key": "yeast-aif1",
+        "plan_sha256": "318db52c1445a8eede405dcba60e5e236485000ced148c5ac1d306c0eeab2cc3",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-15-card-name-holds/yeast-aif1-receipt.json",
+          "sha256": "93e2f6c5160d989546c9e738cccf4ed6322ba4bb3f4cd32bcc69c7f406911b80"
+        },
+        "redirects_followed": 0,
+        "retries": 0,
+        "retrieved_at": "2026-10-15T22:29:57.604973+00:00",
+        "started_at": "2026-10-15T22:29:56.772437+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AAIF1+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "result_count": 1
+    }
+  },
+  "reference_views": {
+    "UniProtKB:A0A1D8PI22": {
+      "accession": "UniProtKB:A0A1D8PI22",
+      "bibliography_counts": {
+        "journal article": 9
+      },
+      "entry_audit": {
+        "entryVersion": 40,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_symbols": [
+        "AIF1"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "4bd39d1a292ffc01938a08680da1ba0dd829ce3bfaba6f97df1cd1569274385f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15123810"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1073/pnas.0401648101"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "8a6a4d2317d65210761620b3ea92e9abbe69caa3443eb07f588c043d1293749b",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "17419877"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1186/gb-2007-8-4-r52"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "9279147ac28dee34885a3841322d5ecd21b93efd5a82d7598ee74789237231ee",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "24025428"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1186/gb-2013-14-9-r97"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "0ab05987bce7ccb5f67da4e4a7c0655d57efaedc2f93e936ae25cc455f72a77f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "23620174"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1007/s00284-013-0366-x"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "b16e8d48004c71572e4025a225c383bb847eebaa63937d738d422abef0220429",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "27121326"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1002/yea.3167"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "ddef9afd26cc21a165ba281bf62ebb46fb3e1cc2013a3acf16875f33cc14db18",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "30826510"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.ejmech.2019.02.051"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "96a035d69f9273b2e9aed03630e2d266847d5acabda8ac9597bfb68bb8e64f30",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "37072087"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1016/j.ijantimicag.2023.106819"
+            }
+          ],
+          "reference_number": 7
+        },
+        {
+          "citation_sha256": "ddbe32144550291a45ab8294e0c392129373c2aabf7401965b12052c00b928c5",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "38322671"
+            },
+            {
+              "database": "DOI",
+              "id": "10.3389/fcimb.2024.1336773"
+            }
+          ],
+          "reference_number": 8
+        },
+        {
+          "citation_sha256": "83fcf8812cf24710514dcee7b46cfdd918dddefc232ac4a0f45396a72e397ca0",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "38535221"
+            },
+            {
+              "database": "DOI",
+              "id": "10.3390/jof10030213"
+            }
+          ],
+          "reference_number": 9
+        }
+      ],
+      "native_card_cross_references": [],
+      "native_entry_sha256": "4acbb9acf31594d531919c59342f427e8cd68e85efcaaf68cdb7d313767aaae6",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": null,
+      "native_protein_taxonomy": {
+        "commonName": "Yeast",
+        "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "taxonId": 237561
+      },
+      "new_primary_results_review": false,
+      "ordered_locus_names": [
+        "CAALFM_C208100WA",
+        "orf19.9721"
+      ],
+      "orf_names": [],
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Apoptosis-inducing factor 1"
+        }
+      ],
+      "reference_taxonomy": {
+        "active": true,
+        "label_flags": [],
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Eukaryota",
+            "taxonId": 2759
+          },
+          {
+            "rank": "clade",
+            "scientificName": "Opisthokonta",
+            "taxonId": 33154
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Fungi",
+            "taxonId": 4751
+          },
+          {
+            "rank": "subkingdom",
+            "scientificName": "Dikarya",
+            "taxonId": 451864
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Ascomycota",
+            "taxonId": 4890
+          },
+          {
+            "rank": "clade",
+            "scientificName": "saccharomyceta",
+            "taxonId": 716545
+          },
+          {
+            "rank": "subphylum",
+            "scientificName": "Saccharomycotina",
+            "taxonId": 147537
+          },
+          {
+            "rank": "class",
+            "scientificName": "Pichiomycetes",
+            "taxonId": 3239874
+          },
+          {
+            "rank": "order",
+            "scientificName": "Serinales",
+            "taxonId": 2916678
+          },
+          {
+            "rank": "family",
+            "scientificName": "Debaryomycetaceae",
+            "taxonId": 766764
+          },
+          {
+            "rank": "clade",
+            "scientificName": "Candida/Lodderomyces clade",
+            "taxonId": 1535325
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Candida",
+            "taxonId": 5475
+          },
+          {
+            "rank": "species",
+            "scientificName": "Candida albicans",
+            "taxonId": 5476
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+            "taxonId": 237561
+          }
+        ],
+        "lineage_species_is_experimental_subject": false,
+        "native_rank": "strain",
+        "native_species_rank_establishes_individual_organism": false,
+        "parent": {
+          "commonName": "Yeast",
+          "scientificName": "Candida albicans",
+          "taxonId": 5476
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Candida albicans",
+          "taxonId": 5476
+        },
+        "taxon_id": "NCBITaxon:237561"
+      },
+      "taxonomy_name_comparison": "EXACT_NATIVE_SCIENTIFIC_NAME_AGREEMENT",
+      "unflagged_means_complete": false,
+      "whole_complex_identity_assignment": false
+    },
+    "UniProtKB:P52923": {
+      "accession": "UniProtKB:P52923",
+      "bibliography_counts": {
+        "journal article": 7
+      },
+      "entry_audit": {
+        "entryVersion": 185,
+        "sequenceVersion": 1
+      },
+      "entry_type": "UniProtKB reviewed (Swiss-Prot)",
+      "exact_allele_assignment": false,
+      "experimental_genome_assignment": null,
+      "experimental_subject_assignment": false,
+      "gene_field_present": true,
+      "gene_symbols": [
+        "AIF1"
+      ],
+      "gene_symbols_inferred_from_names": false,
+      "native_bibliography": [
+        {
+          "citation_sha256": "50540d991025fb6b12d7f6548b6bcf2eeca0ddf776c988c4bfe9d6dadc70bc17",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "8904342"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1002/(sici)1097-0061(19960315)12:3%3c289::aid-yea909%3e3.0.co;2-m"
+            }
+          ],
+          "reference_number": 1
+        },
+        {
+          "citation_sha256": "85fc971df73a9a5fa595b4690e8e7eec1865b9dd703db53a2f16f9d4a4b54654",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "9169873"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/387s093"
+            }
+          ],
+          "reference_number": 2
+        },
+        {
+          "citation_sha256": "b1b123ee8a5676c3630c8e8e61ef88a826ced1c88bbef7e7e60ddf5e20e657e0",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "24374639"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1534/g3.113.008995"
+            }
+          ],
+          "reference_number": 3
+        },
+        {
+          "citation_sha256": "ef2129b8662e191c4a9ff59de7d90bf84e8a43154e21180b628279672bcd0011",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "11409174"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1007/s002940100189"
+            }
+          ],
+          "reference_number": 4
+        },
+        {
+          "citation_sha256": "c9320cf27949620ccc4faf83dcf07a3456d55eba1951962f02ffc9f3b262e3d1",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "14562106"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1038/nature02046"
+            }
+          ],
+          "reference_number": 5
+        },
+        {
+          "citation_sha256": "36c8ce9a7a0a42d0e8acac9b057eba275dbad9bf4176e996d0512bb19285a733",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15381687"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1083/jcb.200404138"
+            }
+          ],
+          "reference_number": 6
+        },
+        {
+          "citation_sha256": "06010837e5dae0b7c01d48f68e9bedfdda82fe6321a636fca8ea627eea8df85f",
+          "citation_type": "journal article",
+          "identifiers": [
+            {
+              "database": "PubMed",
+              "id": "15939758"
+            },
+            {
+              "database": "DOI",
+              "id": "10.1083/jcb.200410064"
+            }
+          ],
+          "reference_number": 7
+        }
+      ],
+      "native_card_cross_references": [],
+      "native_entry_sha256": "0a45ca7051d7bcc07f3eb6d5256d9587ef98805e4a7749b44c0be51888f0cefe",
+      "native_identifier_anomalies": [],
+      "native_protein_flag": null,
+      "native_protein_taxonomy": {
+        "commonName": "Baker's yeast",
+        "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "taxonId": 559292
+      },
+      "new_primary_results_review": false,
+      "ordered_locus_names": [
+        "YNR074C"
+      ],
+      "orf_names": [
+        "N3815"
+      ],
+      "protein_names": [
+        {
+          "path": "recommendedName/0/fullName",
+          "value": "Apoptosis-inducing factor 1"
+        },
+        {
+          "path": "alternativeNames/0/fullName",
+          "value": "Cercosporin and photosensitizer-detoxification protein 1"
+        }
+      ],
+      "reference_taxonomy": {
+        "active": true,
+        "label_flags": [],
+        "lineage": [
+          {
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "rank": "domain",
+            "scientificName": "Eukaryota",
+            "taxonId": 2759
+          },
+          {
+            "rank": "clade",
+            "scientificName": "Opisthokonta",
+            "taxonId": 33154
+          },
+          {
+            "rank": "kingdom",
+            "scientificName": "Fungi",
+            "taxonId": 4751
+          },
+          {
+            "rank": "subkingdom",
+            "scientificName": "Dikarya",
+            "taxonId": 451864
+          },
+          {
+            "rank": "phylum",
+            "scientificName": "Ascomycota",
+            "taxonId": 4890
+          },
+          {
+            "rank": "clade",
+            "scientificName": "saccharomyceta",
+            "taxonId": 716545
+          },
+          {
+            "rank": "subphylum",
+            "scientificName": "Saccharomycotina",
+            "taxonId": 147537
+          },
+          {
+            "rank": "class",
+            "scientificName": "Saccharomycetes",
+            "taxonId": 4891
+          },
+          {
+            "rank": "order",
+            "scientificName": "Saccharomycetales",
+            "taxonId": 4892
+          },
+          {
+            "rank": "family",
+            "scientificName": "Saccharomycetaceae",
+            "taxonId": 4893
+          },
+          {
+            "rank": "genus",
+            "scientificName": "Saccharomyces",
+            "taxonId": 4930
+          },
+          {
+            "rank": "species",
+            "scientificName": "Saccharomyces cerevisiae",
+            "taxonId": 4932
+          },
+          {
+            "rank": "strain",
+            "scientificName": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+            "taxonId": 559292
+          }
+        ],
+        "lineage_species_is_experimental_subject": false,
+        "native_rank": "strain",
+        "native_species_rank_establishes_individual_organism": false,
+        "parent": {
+          "commonName": "Baker's yeast",
+          "scientificName": "Saccharomyces cerevisiae",
+          "taxonId": 4932
+        },
+        "provider": "UniProt taxonomy cached response; no NCBI request",
+        "scientific_name": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+        "species": {
+          "rank": "species",
+          "scientificName": "Saccharomyces cerevisiae",
+          "taxonId": 4932
+        },
+        "taxon_id": "NCBITaxon:559292"
+      },
+      "taxonomy_name_comparison": "EXACT_NATIVE_SCIENTIFIC_NAME_AGREEMENT",
+      "unflagged_means_complete": false,
+      "whole_complex_identity_assignment": false
+    }
+  },
+  "retained_nomenclature_access_hold": {
+    "affected_source_names": [
+      "Tapesia acuformis",
+      "Tapesia yallundae"
+    ],
+    "error": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-crosswalks/oculimacula-error.json",
+      "sha256": "6dd2097ca54c078857c9949b9f2160c58b3c17c17a995b36630b46b4e5eab6c7"
+    },
+    "full_text_retrieved": false,
+    "permanent_unavailability_inferred": false,
+    "primary_nomenclature_verified": false,
+    "retry_or_alternate_route_used": false,
+    "source": {
+      "attempt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-name-crosswalks/oculimacula-attempt.json",
+        "sha256": "ebe8bfe11f877401f05bbd033770130f89650fedcbe1a7348c6723dc471cfa96"
+      },
+      "body": {
+        "path": "reports/resistance-grounding-2026-10-15-card-name-crosswalks/oculimacula-response.bin",
+        "sha256": "26e697ac259ec727150a9d7a91b9912d1dd7db46bafe32f32fb4c7f071b5ff92"
+      },
+      "receipt": {
+        "path": "reports/resistance-grounding-2026-10-15-card-name-crosswalks/oculimacula-receipt.json",
+        "sha256": "a630feffabe7bba618ab94032c418af6315b1f905958b7e47f68287ad77df374"
+      },
+      "retrieved_at": "2026-10-15T22:04:21.890378+00:00",
+      "status": 302,
+      "url": "https://openresearch-repository.anu.edu.au/bitstreams/19d99f6c-7319-40a4-b52d-799fbba03c1c/download"
+    },
+    "status": "HTTP_302_NOT_FOLLOWED_UNDER_FROZEN_NO_REDIRECT_PLAN"
+  },
+  "scope": "UNRESOLVED_NAMES_SOURCE_CONFLICTS_AND_SEPARATE_AIF1_PRIMARY_CONTEXT",
+  "summary": {
+    "biological_record_writes": 0,
+    "cached_taxonomy_nodes": 4,
+    "complete_records_read": 18,
+    "corpus_records_hash_checked": 2939,
+    "distinct_cgd_features": 2,
+    "experimental_locus_assignments_withheld": 1,
+    "ncbi_requests": 0,
+    "new_complete_protein_queries": 2,
+    "new_qualified_source_term_references": 0,
+    "new_reference_entries": 1,
+    "paper_locus_queries_with_zero_results": 1,
+    "paper_species_grounded": 2,
+    "primary_figures_reviewed": 2,
+    "primary_pages_visually_reviewed": 6,
+    "primary_papers_reviewed": 1,
+    "remaining_name_unresolved_terms": 31,
+    "reused_complete_protein_queries": 1,
+    "reused_name_references": 1,
+    "source_claims": 34,
+    "source_gene_conflict_claims": 5,
+    "source_gene_conflict_terms": 5,
+    "whole_record_primary_signoffs": 0
+  },
+  "taxonomy_sources": {
+    "237561": {
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:43.807271+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/237561",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-ac4b1724ccccec8ef27ec669d7755fe12398cdb72853f39023db7b09f727315f.json",
+        "sha256": "f0563c7f3c2b4d17a741ebe86416924c49c1b78aa2f60e2db4a52d8dc04f2ff4"
+      }
+    },
+    "4932": {
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:26.910872+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/4932",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-f07361fe8f8eaa36e1d0d63c89157cb978fc7a29bfcd3cf2e5f95e09f5b97d51.json",
+        "sha256": "185846c03a5473d37a698acd451763fa7fd8326772a5dbf636025ad1c5620c98"
+      }
+    },
+    "5476": {
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:32.998940+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/5476",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-7c397babddc1327428ebb5b06370508431e61493117fd6e5b58de7eda0804577.json",
+        "sha256": "9f6188cbdd981bf38e6e6ef64ec60f44d0000dcd77c65d46d14aee8304d0e9a0"
+      }
+    },
+    "559292": {
+      "release": "2026_03",
+      "retrieved_at": "2026-10-08T02:05:54.274283+00:00",
+      "status": 200,
+      "url": "https://rest.uniprot.org/taxonomy/559292",
+      "wrapper": {
+        "path": "reports/resistance-grounding-2026-10-07/request-178004849aec11313d45d7a89c7f0adff8023a948d91cfd6fd4d3d8fd8615d97.json",
+        "sha256": "fe1baf53589589116e5ffaab217ceabdac3d416d5e94ae6d87a20987601073ba"
+      }
+    }
+  },
+  "terms": {
+    "ARO:3003383": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [
+          "PMID:19104017"
+        ],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "COLLECTIVE_GROUP_NOT_ONE_SPECIES_OR_ISOLATE",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [
+            "PMID:19104017"
+          ],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "COLLECTIVE_GROUP_NOT_ONE_SPECIES_OR_ISOLATE",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:100241"
+          ],
+          "reference_species": null,
+          "source_label": "Salmonella serovars soxS with mutation conferring antibiotic resistance",
+          "tokens": {
+            "gene": "soxS",
+            "species": "Salmonella serovars"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:100241"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Salmonella serovars soxS with mutation conferring antibiotic resistance",
+        "tokens": {
+          "gene": "soxS",
+          "species": "Salmonella serovars"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [
+            {
+              "identifiers": [
+                "PMID:19104017"
+              ],
+              "other_xrefs": [],
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "target": {
+                "datatype": null,
+                "kind": "literal",
+                "language": null,
+                "sha256": "deebd6c1b4eff84404400d1c1d8689abd38c4d5a14c9a84eff71fafe2d8f11c7"
+              }
+            }
+          ],
+          "definition_citation_ids": [
+            "PMID:19104017"
+          ],
+          "definition_citation_status": "CITATIONS_PRESENT_PRIMARY_SUPPORT_UNREVIEWED",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "deebd6c1b4eff84404400d1c1d8689abd38c4d5a14c9a84eff71fafe2d8f11c7"
+            }
+          ],
+          "label_sha256": "91919251cce8268db287243e0fc76aaf4aa13c9e5abef1490a9b061e6b6509ad",
+          "other_axioms": [
+            {
+              "identifiers": [],
+              "other_xrefs": [],
+              "predicate": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+              "target": {
+                "datatype": null,
+                "kind": "literal",
+                "language": null,
+                "sha256": "1bab9cd8897abbaf22d8033cee2874a69fe0a3242e87810e694d9f7306e45c31"
+              }
+            }
+          ]
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [
+          {
+            "predicate": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+            "target": {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "1bab9cd8897abbaf22d8033cee2874a69fe0a3242e87810e694d9f7306e45c31"
+            }
+          }
+        ],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3003450": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "PHENOTYPE_WORDING_NOT_AN_ORGANISM_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "PHENOTYPE_WORDING_NOT_AN_ORGANISM_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:4877"
+          ],
+          "reference_species": null,
+          "source_label": "Ethambutol resistant iniC",
+          "tokens": {
+            "gene": "iniC",
+            "species": "Ethambutol resistant"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:4877"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Ethambutol resistant iniC",
+        "tokens": {
+          "gene": "iniC",
+          "species": "Ethambutol resistant"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "8096912e556bee7888d7bfc0a7856207134961e4631897ae4cd1db4b57550e4b"
+            }
+          ],
+          "label_sha256": "c04b623dbea8b8708b40787a3e927afe95a3bfe96ae3573a35c3b2efd6348dc9",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3004136": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [
+          "PMID:10639358"
+        ],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "PHENOTYPE_WORDING_NOT_AN_ORGANISM_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [
+            "PMID:10639358"
+          ],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "PHENOTYPE_WORDING_NOT_AN_ORGANISM_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:4877"
+          ],
+          "reference_species": null,
+          "source_label": "Ethambutol resistant iniB",
+          "tokens": {
+            "gene": "iniB",
+            "species": "Ethambutol resistant"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:4877"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Ethambutol resistant iniB",
+        "tokens": {
+          "gene": "iniB",
+          "species": "Ethambutol resistant"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [
+            {
+              "identifiers": [
+                "PMID:10639358"
+              ],
+              "other_xrefs": [],
+              "predicate": "http://purl.obolibrary.org/obo/IAO_0000115",
+              "target": {
+                "datatype": null,
+                "kind": "literal",
+                "language": null,
+                "sha256": "d616086c42bab0f3de812e9669a4c5411b0675ac80a60a45de3bdac04de2ec3a"
+              }
+            }
+          ],
+          "definition_citation_ids": [
+            "PMID:10639358"
+          ],
+          "definition_citation_status": "CITATIONS_PRESENT_PRIMARY_SUPPORT_UNREVIEWED",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "d616086c42bab0f3de812e9669a4c5411b0675ac80a60a45de3bdac04de2ec3a"
+            }
+          ],
+          "label_sha256": "231ebc53ec965f67bd01afab095c225374183cbefdd6783eef2d05f90936af23",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3004966": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "PHENOTYPE_WORDING_NOT_AN_ORGANISM_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "PHENOTYPE_WORDING_NOT_AN_ORGANISM_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:17630"
+          ],
+          "reference_species": null,
+          "source_label": "Kanamycin resistant whib7",
+          "tokens": {
+            "gene": "whib7",
+            "species": "Kanamycin resistant"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:17630"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Kanamycin resistant whib7",
+        "tokens": {
+          "gene": "whib7",
+          "species": "Kanamycin resistant"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "90c07b6196a1c59f827cd975b1d8ec593252ebe6e36082a64de0c221288d55c3"
+            }
+          ],
+          "label_sha256": "5fe120f2bfdb5163f1cba56f83cdda1b0ecbe99ac3e3a72789a511c543933398",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009250": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:46081"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr1 with mutations associated with resistance to fluconazole",
+          "tokens": {
+            "gene": "Mdr1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:46081"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr1 with mutations associated with resistance to fluconazole",
+        "tokens": {
+          "gene": "Mdr1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "44c4ed3b989acefb37345ab5700ecd9cadc435721d1d1fb0e03f9bb7e2420d13"
+            }
+          ],
+          "label_sha256": "83eef1c1acfbc8da1169d9906e68eba964199282ce9b25d090f67c465fd029f1",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009251": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "antibioticmech:aro-11ab0a98bf"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr1 with mutations associated with resistance to miconazole",
+          "tokens": {
+            "gene": "Mdr1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "antibioticmech:aro-11ab0a98bf"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr1 with mutations associated with resistance to miconazole",
+        "tokens": {
+          "gene": "Mdr1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "7666a7b71fa56bd9c9cf500d487cb89f5509d9bf7fa7584e22e384916aedd790"
+            }
+          ],
+          "label_sha256": "7e6d6c7535250423c14ea81f81b31f780123ca55d7d97814e5b53107fd3d2ca9",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009252": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:10023"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr1 with mutations associated with resistance to voriconazole",
+          "tokens": {
+            "gene": "Mdr1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:10023"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr1 with mutations associated with resistance to voriconazole",
+        "tokens": {
+          "gene": "Mdr1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "7666a7b71fa56bd9c9cf500d487cb89f5509d9bf7fa7584e22e384916aedd790"
+            }
+          ],
+          "label_sha256": "c7c0db048fea194ceda5cdf718094db3198d1291a379bbb098bf710e83bf4eba",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009253": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:6076"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr2 with mutations associated with resistance to itraconazole",
+          "tokens": {
+            "gene": "Mdr2",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:6076"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr2 with mutations associated with resistance to itraconazole",
+        "tokens": {
+          "gene": "Mdr2",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "9990486de07e160b15a49c619357ffd38bfc610e6eb968cc3d4a1c2727a57223"
+            }
+          ],
+          "label_sha256": "df9c3bb42f13a6b8c3fd2e22a8e85623bf8afe39008a4c0cd181c9c1ea82c82a",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009254": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:46081"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to fluconazole",
+          "tokens": {
+            "gene": "Mdr3",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:46081"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to fluconazole",
+        "tokens": {
+          "gene": "Mdr3",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b"
+            }
+          ],
+          "label_sha256": "82f07883b135fc01e6b49a7c80fbac9ad5f138e58c5f3458597b12a46ba9a741",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": [
+        {
+          "correct_gene_inferred": false,
+          "definition_gene": "Mdr2",
+          "definition_sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b",
+          "label_gene": "Mdr3",
+          "status": "LABEL_DEFINITION_GENE_CONFLICT_WITHHELD"
+        }
+      ]
+    },
+    "ARO:3009255": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:6076"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to itraconazole",
+          "tokens": {
+            "gene": "Mdr3",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:6076"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to itraconazole",
+        "tokens": {
+          "gene": "Mdr3",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b"
+            }
+          ],
+          "label_sha256": "1ce0a2b336755cff076025fd010c6d3c244a24280fb139c894a1f6bd09aca665",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": [
+        {
+          "correct_gene_inferred": false,
+          "definition_gene": "Mdr2",
+          "definition_sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b",
+          "label_gene": "Mdr3",
+          "status": "LABEL_DEFINITION_GENE_CONFLICT_WITHHELD"
+        }
+      ]
+    },
+    "ARO:3009256": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "antibioticmech:aro-4655b07df9"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to ketoconazole",
+          "tokens": {
+            "gene": "Mdr3",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "antibioticmech:aro-4655b07df9"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to ketoconazole",
+        "tokens": {
+          "gene": "Mdr3",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b"
+            }
+          ],
+          "label_sha256": "23a2390a81887d5f31e288b48ee5374ae790274430f0a548b41560e0d8eea78e",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": [
+        {
+          "correct_gene_inferred": false,
+          "definition_gene": "Mdr2",
+          "definition_sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b",
+          "label_gene": "Mdr3",
+          "status": "LABEL_DEFINITION_GENE_CONFLICT_WITHHELD"
+        }
+      ]
+    },
+    "ARO:3009257": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:10023"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to voriconazole",
+          "tokens": {
+            "gene": "Mdr3",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:10023"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to voriconazole",
+        "tokens": {
+          "gene": "Mdr3",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b"
+            }
+          ],
+          "label_sha256": "54411386c4f69829b3f2712a6dfb92bb3fd560d2e352a3d11db631010b565a19",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": [
+        {
+          "correct_gene_inferred": false,
+          "definition_gene": "Mdr2",
+          "definition_sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b",
+          "label_gene": "Mdr3",
+          "status": "LABEL_DEFINITION_GENE_CONFLICT_WITHHELD"
+        }
+      ]
+    },
+    "ARO:3009258": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "antibioticmech:aro-11ab0a98bf"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to miconazole",
+          "tokens": {
+            "gene": "Mdr3",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "antibioticmech:aro-11ab0a98bf"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr3 with mutations associated with resistance to miconazole",
+        "tokens": {
+          "gene": "Mdr3",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b"
+            }
+          ],
+          "label_sha256": "888d7105296048c04d29a35e98c1c16469697ee072d147e2171535ae4ed25d62",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": [
+        {
+          "correct_gene_inferred": false,
+          "definition_gene": "Mdr2",
+          "definition_sha256": "8f747d5c1e61ee309447d033396ddc2f37d3c32109f2867ab5e564dd700a1c7b",
+          "label_gene": "Mdr3",
+          "status": "LABEL_DEFINITION_GENE_CONFLICT_WITHHELD"
+        }
+      ]
+    },
+    "ARO:3009259": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:6076"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mdr5 with mutations associated with resistance to itraconazole",
+          "tokens": {
+            "gene": "Mdr5",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:6076"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mdr5 with mutations associated with resistance to itraconazole",
+        "tokens": {
+          "gene": "Mdr5",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "a98677edeca51ecfb4ff06bcf528fa53403cc11227277f593e37e42a54385667"
+            }
+          ],
+          "label_sha256": "292580cb59724294efd08a1cc2832a82172961c2e6ba89a89eca1a65fbbf085b",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009261": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:46081"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to fluconazole",
+          "tokens": {
+            "gene": "Mfs1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:46081"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to fluconazole",
+        "tokens": {
+          "gene": "Mfs1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "bac1824e785b101788388e48ee47c1367f8930cf0993ae6006b61e0d12786368"
+            }
+          ],
+          "label_sha256": "19bdcc8aba108f0528c6c3d783c64061a7720cd904b41c23afea1bc9eae4ab45",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009262": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:6076"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to itraconazole",
+          "tokens": {
+            "gene": "Mfs1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:6076"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to itraconazole",
+        "tokens": {
+          "gene": "Mfs1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "bac1824e785b101788388e48ee47c1367f8930cf0993ae6006b61e0d12786368"
+            }
+          ],
+          "label_sha256": "06092e4e8732c631ab15a75fe54fb44b64c85237a1a429eff4611d39dee1c942",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009263": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "antibioticmech:aro-4655b07df9"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to ketoconazole",
+          "tokens": {
+            "gene": "Mfs1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "antibioticmech:aro-4655b07df9"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to ketoconazole",
+        "tokens": {
+          "gene": "Mfs1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "bac1824e785b101788388e48ee47c1367f8930cf0993ae6006b61e0d12786368"
+            }
+          ],
+          "label_sha256": "df60f73dc6d2696bd208453c8c5e71d44aad21ede6d47385c98dbf5c308a4dae",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009264": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "antibioticmech:aro-11ab0a98bf"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mfs1 with mutations conferring resistance to miconazole",
+          "tokens": {
+            "gene": "Mfs1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "antibioticmech:aro-11ab0a98bf"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mfs1 with mutations conferring resistance to miconazole",
+        "tokens": {
+          "gene": "Mfs1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "bac1824e785b101788388e48ee47c1367f8930cf0993ae6006b61e0d12786368"
+            }
+          ],
+          "label_sha256": "3c21c00fda55b3f7c28f6f0543120121b6a0b4469e0677b702f994d9d4357cb2",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009265": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:10023"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to voriconazole",
+          "tokens": {
+            "gene": "Mfs1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:10023"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mfs1 with mutations associated with resistance to voriconazole",
+        "tokens": {
+          "gene": "Mfs1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "bac1824e785b101788388e48ee47c1367f8930cf0993ae6006b61e0d12786368"
+            }
+          ],
+          "label_sha256": "633dda1e99fcc139218a917d15d51a769ffad916f71030ece7f3b0094fdb151a",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009266": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:46081"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mfs2 with mutations associated with resistance to fluconazole",
+          "tokens": {
+            "gene": "Mfs2",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:46081"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mfs2 with mutations associated with resistance to fluconazole",
+        "tokens": {
+          "gene": "Mfs2",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "bac1824e785b101788388e48ee47c1367f8930cf0993ae6006b61e0d12786368"
+            }
+          ],
+          "label_sha256": "b35a8a3063c94ba6c4f9ab8b37cb2bbf9ab48f49efed218fe2b3ca94decff760",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009267": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:10023"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum Mfs2 with mutations associated with resistance to voriconazole",
+          "tokens": {
+            "gene": "Mfs2",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:10023"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum Mfs2 with mutations associated with resistance to voriconazole",
+        "tokens": {
+          "gene": "Mfs2",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "bac1824e785b101788388e48ee47c1367f8930cf0993ae6006b61e0d12786368"
+            }
+          ],
+          "label_sha256": "2fe7495165a40a2c672c53309d08874bdc6065e545bf310559368230cddba684",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009285": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:8673",
+            "CHEBI:9329"
+          ],
+          "reference_species": null,
+          "source_label": "Pneumocystis jerovecii dhfr with mutations associated with resistance to pyrimethamine-sulfadoxine",
+          "tokens": {
+            "gene": "dhfr",
+            "species": "Pneumocystis jerovecii"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:8673",
+          "CHEBI:9329"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Pneumocystis jerovecii dhfr with mutations associated with resistance to pyrimethamine-sulfadoxine",
+        "tokens": {
+          "gene": "dhfr",
+          "species": "Pneumocystis jerovecii"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "39232a762ef21c4989a4233eeb8e4ab63dafb3559159a3ad8de176b49fecc8b3"
+            }
+          ],
+          "label_sha256": "4e4ebe79a28929afb5b6d874012eb538547e878b3f99bafcb66b95fd1cff45c6",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009290": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:575568",
+            "CHEBI:8673"
+          ],
+          "reference_species": null,
+          "source_label": "Pneumocystis jerovecii dhfr with mutations associated with resistance to Trimethoprim sulfamethoxazole combined with Pyrimethamine atovaquone",
+          "tokens": {
+            "gene": "dhfr",
+            "species": "Pneumocystis jerovecii"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:575568",
+          "CHEBI:8673"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Pneumocystis jerovecii dhfr with mutations associated with resistance to Trimethoprim sulfamethoxazole combined with Pyrimethamine atovaquone",
+        "tokens": {
+          "gene": "dhfr",
+          "species": "Pneumocystis jerovecii"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "39232a762ef21c4989a4233eeb8e4ab63dafb3559159a3ad8de176b49fecc8b3"
+            }
+          ],
+          "label_sha256": "9b9a15f2f6cbe140c58cf0c323fa7040756aa1745b056414b7867fb62d9dcf76",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009291": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:27641"
+          ],
+          "reference_species": null,
+          "source_label": "Trychophyton rubrum MFS1 with mutations conferring resistance against cyclohexamide",
+          "tokens": {
+            "gene": "MFS1",
+            "species": "Trychophyton rubrum"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:27641"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Trychophyton rubrum MFS1 with mutations conferring resistance against cyclohexamide",
+        "tokens": {
+          "gene": "MFS1",
+          "species": "Trychophyton rubrum"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "c44fca35423320dc347d7f2b1c5733778fc8b6466030f1f6027a6763b68c5e52"
+            }
+          ],
+          "label_sha256": "fcaeceecf1c51c41393635ca6fbe8ea336ad20a99ea43f92cea31ead66e6cb8d",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009380": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:474180"
+          ],
+          "reference_species": null,
+          "source_label": "Saccharomyces cerevasiae AIF1 with mutations conferring resistance against caspofungin",
+          "tokens": {
+            "gene": "AIF1",
+            "species": "Saccharomyces cerevasiae"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:474180"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Saccharomyces cerevasiae AIF1 with mutations conferring resistance against caspofungin",
+        "tokens": {
+          "gene": "AIF1",
+          "species": "Saccharomyces cerevasiae"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "cab9794f9e4cedb47402df6b4df9f95efa9655d4169e9d004acc7cc281e37765"
+            }
+          ],
+          "label_sha256": "432ed83f0d46011fda4151ac4be36217f2497aaf4cf446020f97d29d2f5a5abb",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009530": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "antibioticmech:aro-e63825b7e1"
+          ],
+          "reference_species": null,
+          "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to epoxiconazole",
+          "tokens": {
+            "gene": "Cyp51",
+            "species": "Phakospora pachyrhizi"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "antibioticmech:aro-e63825b7e1"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to epoxiconazole",
+        "tokens": {
+          "gene": "Cyp51",
+          "species": "Phakospora pachyrhizi"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "7f822d9085da0894af173687b6b8156ebb448315b72dbeeb50117136add86393"
+            }
+          ],
+          "label_sha256": "658ac41e99221c697e6c6e8c3f94642394b5554740603638c82da89468851c0c",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009531": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:81773"
+          ],
+          "reference_species": null,
+          "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to metconazole",
+          "tokens": {
+            "gene": "Cyp51",
+            "species": "Phakospora pachyrhizi"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:81773"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to metconazole",
+        "tokens": {
+          "gene": "Cyp51",
+          "species": "Phakospora pachyrhizi"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "7f822d9085da0894af173687b6b8156ebb448315b72dbeeb50117136add86393"
+            }
+          ],
+          "label_sha256": "5e2acec1ce756421536c4c16f786d3664b5e90e12faed23cb93c87c7684ae760",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009532": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:83748"
+          ],
+          "reference_species": null,
+          "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to cyproconazole",
+          "tokens": {
+            "gene": "Cyp51",
+            "species": "Phakospora pachyrhizi"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:83748"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to cyproconazole",
+        "tokens": {
+          "gene": "Cyp51",
+          "species": "Phakospora pachyrhizi"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "7f822d9085da0894af173687b6b8156ebb448315b72dbeeb50117136add86393"
+            }
+          ],
+          "label_sha256": "0390a9147037a75b8d5bbd0eefa6fd4e83c93c1b9ab461b35c7b70dcb61121df",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009533": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:83779"
+          ],
+          "reference_species": null,
+          "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to tebuconazole",
+          "tokens": {
+            "gene": "Cyp51",
+            "species": "Phakospora pachyrhizi"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:83779"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Phakospora pachyrhizi Cyp51 with mutations conferring resistance to tebuconazole",
+        "tokens": {
+          "gene": "Cyp51",
+          "species": "Phakospora pachyrhizi"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "7f822d9085da0894af173687b6b8156ebb448315b72dbeeb50117136add86393"
+            }
+          ],
+          "label_sha256": "6dcda5d848c92bbec6679515f6dbe0fdf6a7ff0dd4dd2cd5a417400645a83dee",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009541": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:81922"
+          ],
+          "reference_species": null,
+          "source_label": "Tapesia acuformis Cyp51 with mutations conferring resistance to flusilazole",
+          "tokens": {
+            "gene": "Cyp51",
+            "species": "Tapesia acuformis"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:81922"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Tapesia acuformis Cyp51 with mutations conferring resistance to flusilazole",
+        "tokens": {
+          "gene": "Cyp51",
+          "species": "Tapesia acuformis"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "a3b019cd93165e5436f83a71496bcc046136554cc2c2d516cfca421cee9909ec"
+            }
+          ],
+          "label_sha256": "ca701245a5989aeca60dd2ccb10907c2f7955e33c1eea510dfbdeb19f794f972",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    },
+    "ARO:3009542": {
+      "experimental_subject_assignment": false,
+      "name_disposition": "UNRESOLVED_NO_CORRECTION_INFERRED",
+      "new_qualified_reference_accessions": [],
+      "prior_assessment": {
+        "biological_absence_inferred": false,
+        "definition_citations": [],
+        "exact_allele_assignment": false,
+        "experimental_subject_assignment": false,
+        "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+        "new_query_keys": [],
+        "primary_resistance_validation": false,
+        "prior_name_assessment": {
+          "definition_citations": [],
+          "exact_allele_assignment": false,
+          "experimental_subject_assignment": false,
+          "name_status": "NO_EXACT_ACTIVE_SPECIES_NAME",
+          "protein_reference_status": "NOT_QUERIED_BY_THIS_NAME_AUDIT",
+          "record_memberships": [
+            "CHEBI:81922"
+          ],
+          "reference_species": null,
+          "source_label": "Tapesia yallundae Cyp51 with mutations conferring resistance to flusilazole",
+          "tokens": {
+            "gene": "Cyp51",
+            "species": "Tapesia yallundae"
+          },
+          "whole_record_primary_review": "OPEN"
+        },
+        "protein_reference_status": "NOT_QUERIED_BY_THIS_CROSSWALK_AUDIT",
+        "qualified_reference_accessions": [],
+        "record_memberships": [
+          "CHEBI:81922"
+        ],
+        "reference_candidates": [],
+        "reference_name_context": null,
+        "reused_query_keys": [],
+        "source_label": "Tapesia yallundae Cyp51 with mutations conferring resistance to flusilazole",
+        "tokens": {
+          "gene": "Cyp51",
+          "species": "Tapesia yallundae"
+        },
+        "whole_record_primary_review": "OPEN"
+      },
+      "source_annotations": {
+        "definition_annotation": {
+          "biological_support_inferred": false,
+          "class_xrefs": {
+            "identifiers": [],
+            "other_xrefs": []
+          },
+          "definition_axioms": [],
+          "definition_citation_ids": [],
+          "definition_citation_status": "NO_ALLOWLISTED_DEFINITION_CITATION_IN_PINNED_ONTOLOGY",
+          "definitions": [
+            {
+              "datatype": null,
+              "kind": "literal",
+              "language": null,
+              "sha256": "a3b019cd93165e5436f83a71496bcc046136554cc2c2d516cfca421cee9909ec"
+            }
+          ],
+          "label_sha256": "ee6bd5c569b6f1030cbc0990ba15bead5d545c06eeeda441fbba5d33d5df29ef",
+          "other_axioms": []
+        },
+        "selected_alias_leads": [],
+        "source_flags": [],
+        "synonym_annotations": [],
+        "unselected_synonyms_are_gene_aliases": false,
+        "unselected_synonyms_disposition": "NOT_PROMOTED_FROM_ONTOLOGY_SYNONYM_TO_GENE_IDENTITY"
+      },
+      "source_gene_conflicts": []
+    }
+  }
+}

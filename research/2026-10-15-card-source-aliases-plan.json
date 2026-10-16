@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-15",
+  "scope": "EXPLICIT_ONTOLOGY_ALIAS_REFERENCE_CONTEXT_NOT_EXPERIMENTAL_IDENTITY",
+  "inputs": {
+    "prior": {"path": "research/2026-10-15-card-all-status-gene-references.json", "sha256": "64d8a4cb5fffb7cbe702a91e900886bf9cc0b0be3518e4de4323bf0f565305d3"},
+    "prior_verification": {"path": "research/2026-10-15-card-all-status-gene-references-verification.json", "sha256": "81e1bddc0802946b1fc38ac977e33775231d139dcb1aecb478ee0c9e2c0a15b4"},
+    "definitions": {"path": "research/2026-10-09-card-definition-citations.json", "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"},
+    "index": {"path": "research/2026-10-15-card-aph-memberships.json", "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"},
+    "corpus_update": {"path": "research/2026-10-15-card-evidence-qualifications-verification.json", "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"},
+    "taxonomy_inventory": {"path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json", "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"},
+    "source_queue": {"path": "curation/source_queue.tsv", "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"}
+  },
+  "selection": "ALL_42_TERMS_WITHOUT_QUALIFIED_REFERENCE_IN_PRIOR_SPECIES_RESOLVED_COHORT",
+  "aliases": {
+    "ARO:3003737": [{"kind": "GENE_SYMBOL", "value": "rplF"}],
+    "ARO:3004578": [{"kind": "ACCESSION_LIKE_SYNONYM", "value": "A0A225SC95"}, {"kind": "ACCESSION_LIKE_SYNONYM", "value": "Q2FD57"}],
+    "ARO:3004977": [{"kind": "ORDERED_LOCUS", "value": "Rv2783c"}]
+  },
+  "cache_discovery": {
+    "ignored_files_included": true,
+    "searched_roots": ["reports", "research"],
+    "patterns": ["*.json", "*.bin", "*.tsv"],
+    "literal_patterns": ["Q2FD57", "A0A225SC95", "Rv2783c", "\"rplF\""],
+    "excluded_file": "aro-term-scope-aro.owl-0225daaf01b1336fc6e866989b4835b89afa40d8.json",
+    "scope": "CASE_SENSITIVE_DISCOVERY_ONLY_NOT_EXHAUSTIVE_ALIAS_SEARCH"
+  },
+  "cached_candidate_queries": {
+    "11677608": "reports/resistance-grounding-2026-10-09-card-literature-proteins",
+    "11743194": "reports/resistance-grounding-2026-10-09-card-literature-proteins",
+    "12044378": "reports/resistance-grounding-2026-10-09-card-literature-proteins",
+    "16513756": "reports/resistance-grounding-2026-10-09-card-literature-proteins",
+    "25931592": "reports/resistance-grounding-2026-10-13-card-literature-expansion",
+    "35137182": "reports/resistance-grounding-2026-10-13-card-literature-expansion"
+  },
+  "own_citation_plan": {"path": "research/2026-10-15-card-protein-name-screen-plan.json", "sha256": "eca6ca45feb4fc78547a9647d3f31a2952e96837ab485569f7ac1a80140a5720"},
+  "constraints": {
+    "network_requests": 0,
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "biological_record_writes": false,
+    "experimental_identity_assignments": false,
+    "operational_details_exported": false,
+    "new_primary_reviews": 0,
+    "full_corpus_goal_status": "OPEN"
+  }
+}

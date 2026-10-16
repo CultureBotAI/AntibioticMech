@@ -117,7 +117,7 @@ def test_public_reference_is_not_an_experimental_allele_or_primary_confirmation(
     assert dossier["constraints"]["full_corpus_goal_status"] == "OPEN"
 
 
-def test_offline_native_replay(dossier, monkeypatch, capsys):
+def test_offline_native_replay(dossier, monkeypatch, capsys, pre_card_qualification_root):
     if not (ROOT / audit.CACHE / "cohort.json").exists():
         pytest.skip("optional native research cache not available")
 
@@ -127,7 +127,7 @@ def test_offline_native_replay(dossier, monkeypatch, capsys):
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
-    monkeypatch.chdir(ROOT)
+    monkeypatch.chdir(pre_card_qualification_root)
     monkeypatch.setattr(sys, "argv", [audit.__name__, "--check", "--historical-records"])
     audit.main()
     assert json.loads(capsys.readouterr().out) == dossier["summary"]

@@ -1,0 +1,57 @@
+{
+  "scope": "QNR_FAMILY_MEMBER_AND_QNRC_DEPOSIT_CONTEXT_NOT_EXPERIMENTAL_GROUNDING",
+  "release": "2026_03",
+  "max_bytes": 200000,
+  "canary": "qnr-deposit",
+  "requests": {
+    "qnr-deposit": {
+      "query": "xref:embl-EU917444",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-EU917444&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "inputs": {
+    "current_index": {
+      "path": "research/2026-10-16-card-qualified-current.json",
+      "sha256": "53a7ab7b1347168aded19c0901f7beb825a014b174a546823eb89b3f2c7d167f"
+    },
+    "current_verification": {
+      "path": "research/2026-10-16-salmonella-qualification-verification.json",
+      "sha256": "f6d97b3d26659c7c7b04b73ff95dbcda819824099789d05e0701d1299ebbae0d"
+    },
+    "assessment": {
+      "path": "research/2026-10-16-qnr-identity-context-assessment.json",
+      "sha256": "5ce0f869846d9f3bbe104038443142dc3352f1fae1d7c3183eb258c258bd6fa5"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior_parent_context": {
+      "path": "research/2026-10-10-card-parents-context.json",
+      "sha256": "1347616959bc2308fe64db5da4f7f5e26a0378bc9ed41d8c8f593ccd38b81f3d"
+    },
+    "literature": {
+      "path": "research/2026-10-09-card-literature-proteins.json",
+      "sha256": "be1301bfa40cf1679510d5b08653305a450adbad9f742c9008c28ffb0e58a6b7"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "native_taxonomy_snapshot": {
+    "path": "reports/resistance-grounding-2026-10-07/card-taxonomy.json",
+    "sha256": "d75a09d19145527c20d59928f4e3a44b0e827e7fae1e3220b8a6546ce5be6e6a"
+  },
+  "constraints": {
+    "planned_new_requests": 1,
+    "ncbi_requests": 0,
+    "retries": 0,
+    "redirects_followed": 0,
+    "issue_1040": "DEFERRED",
+    "biological_record_writes": false,
+    "experimental_identifiers_assigned": false,
+    "new_reference_selection": false,
+    "full_investigation_complete": false
+  }
+}

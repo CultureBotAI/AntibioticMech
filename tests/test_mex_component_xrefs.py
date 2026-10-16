@@ -293,21 +293,22 @@ def test_candidate_identity_must_agree_with_native_taxonomy_and_crossref(change)
         audit.project_candidate(entry, xref, taxon, "MexJ")
 
 
-def test_offline_replay_when_native_cache_and_current_checkpoint_available():
-    plan = json.loads((ROOT / audit.PLAN).read_bytes())
-    if any(not (ROOT / p["path"]).exists() for p in plan["native_protein_pages"]):
+def test_offline_replay_when_native_cache_and_current_checkpoint_available(pre_cdsa_qualification_root):
+    root = pre_cdsa_qualification_root
+    plan = json.loads((root / audit.PLAN).read_bytes())
+    if any(not (root / p["path"]).exists() for p in plan["native_protein_pages"]):
         pytest.skip("native cache unavailable; portable checks still run")
-    prior = audit.mex.read_json(ROOT, plan["prior"])
-    followup = audit.mex.read_json(ROOT, prior["prior_followup"])
-    component = audit.mex.read_json(ROOT, followup["prior"])
-    update = audit.mex.read_json(ROOT, component["explicit_corpus_update"])
+    prior = audit.mex.read_json(root, plan["prior"])
+    followup = audit.mex.read_json(root, prior["prior_followup"])
+    component = audit.mex.read_json(root, followup["prior"])
+    update = audit.mex.read_json(root, component["explicit_corpus_update"])
     deltas = {d["path"]: d["after_sha256"] for d in update["record_deltas"]}
-    with audit.reference.check_pin(ROOT, component["inputs"]["census"]).open() as stream:
+    with audit.reference.check_pin(root, component["inputs"]["census"]).open() as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
     if any(
-        not (ROOT / r["path"]).exists()
-        or audit.reference.digest(ROOT / r["path"]) != deltas.get(r["path"], r["record_sha256"])
+        not (root / r["path"]).exists()
+        or audit.reference.digest(root / r["path"]) != deltas.get(r["path"], r["record_sha256"])
         for r in census
     ):
-        pytest.skip("historical record checkpoint; portable checks still run")
-    assert audit.build(ROOT) == public_result()
+        pytest.fail("checksum-verified historical fixture drifted")
+    assert audit.build(root) == public_result()

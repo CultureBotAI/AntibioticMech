@@ -350,7 +350,7 @@ def test_no_operational_or_numeric_ast_exports():
     assert not set(keys(assessment())) & forbidden
 
 
-def test_offline_read_only_replay_when_native_cache_available(monkeypatch):
+def test_offline_read_only_replay_when_native_cache_available(monkeypatch, pre_cdsa_qualification_root):
     plan = json.loads((ROOT / audit.PLAN).read_bytes())
     if not (ROOT / plan["protein_snapshot"]["path"]).exists():
         pytest.skip("native cache unavailable; portable checks still run")
@@ -364,4 +364,4 @@ def test_offline_read_only_replay_when_native_cache_available(monkeypatch):
 
     monkeypatch.setattr(builtins, "open", guard(builtins.open))
     monkeypatch.setattr(io, "open", guard(io.open))
-    assert audit.build(ROOT) == public_result()
+    assert audit.build(pre_cdsa_qualification_root) == public_result()

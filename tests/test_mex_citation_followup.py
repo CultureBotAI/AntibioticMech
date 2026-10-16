@@ -222,19 +222,20 @@ def test_public_artifact_pins():
     assert receipt["summary"] == public_result()["summary"]
 
 
-def test_offline_replay_when_native_cache_and_current_checkpoint_available():
-    native = json.loads((ROOT / audit.PLAN).read_bytes())
-    if any(not (ROOT / p["path"]).exists() for p in native["requests"].values()):
+def test_offline_replay_when_native_cache_and_current_checkpoint_available(pre_cdsa_qualification_root):
+    root = pre_cdsa_qualification_root
+    native = json.loads((root / audit.PLAN).read_bytes())
+    if any(not (root / p["path"]).exists() for p in native["requests"].values()):
         pytest.skip("native cache unavailable; portable public checks still run")
-    prior = audit.mex.read_json(ROOT, public_result()["prior"])
-    update = audit.mex.read_json(ROOT, prior["explicit_corpus_update"])
+    prior = audit.mex.read_json(root, public_result()["prior"])
+    update = audit.mex.read_json(root, prior["explicit_corpus_update"])
     deltas = {d["path"]: d["after_sha256"] for d in update["record_deltas"]}
-    with audit.reference.check_pin(ROOT, prior["inputs"]["census"]).open() as stream:
+    with audit.reference.check_pin(root, prior["inputs"]["census"]).open() as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
     if any(
-        not (ROOT / r["path"]).exists()
-        or audit.reference.digest(ROOT / r["path"]) != deltas.get(r["path"], r["record_sha256"])
+        not (root / r["path"]).exists()
+        or audit.reference.digest(root / r["path"]) != deltas.get(r["path"], r["record_sha256"])
         for r in census
     ):
-        pytest.skip("historical record checkpoint; portable public checks still run")
-    assert audit.build(ROOT) == public_result()
+        pytest.fail("checksum-verified historical fixture drifted")
+    assert audit.build(root) == public_result()

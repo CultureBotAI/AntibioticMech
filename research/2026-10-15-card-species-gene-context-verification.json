@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-15",
+  "scope": "SOURCE_QUALIFIED_REFERENCE_GROUNDING_NOT_EXPERIMENTAL_ALLELE_CURATION",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {"path": "research/2026-10-15-card-species-gene-context.json", "sha256": "81c2143b2f081125920950b98949e85d5bca07efc2894f594abcc6a195a59372"},
+    "plan": {"path": "research/2026-10-15-card-species-gene-context-plan.json", "sha256": "2a6d2483b4ebd1285d83229b331cb1d38d4318d4d012b02c9f2c4d342f497df2"},
+    "taxonomy_inspection": {"path": "research/2026-10-15-card-species-gene-context-taxonomy-inspection.json", "sha256": "c605deb9fee093b2cbc86427d069c08c988a1500498475fd7c1c1785be923c75"},
+    "script": {"path": "scripts/audit_card_species_gene_context.py", "sha256": "208418591e6a5d7a55b2543c741fcd71bef7bdd22fa63837aad19fa206c806d3"},
+    "tests": {"path": "tests/test_card_species_gene_context.py", "sha256": "20f5f23500dad01f5a81ea4d1031e71d14d21c9d62f78d7607ad9a62a27e9ba0"},
+    "report": {"path": "research/2026-10-07-resistance-gene-grounding.md", "sha256": "647586e75fd54d1d631f78223d47af944572d0453e18f085932bf577ea25342e"}
+  },
+  "coverage": {
+    "current_card_terms": 2002,
+    "unlinked_terms_in_frozen_index": 720,
+    "grammar_selected_terms": 178,
+    "grammar_exclusions_retained": 542,
+    "complete_records_read": 83,
+    "source_claims": 225,
+    "own_citation_queries_replayed": 113,
+    "native_entries_screened": 990,
+    "native_taxonomy_nodes_verified": 20,
+    "literal_gene_matched_terms": 19,
+    "qualified_reference_terms": 17,
+    "qualified_reference_links": 38,
+    "qualified_reference_claim_memberships": 24,
+    "qualified_reference_records": 17,
+    "species_mismatched_candidates_preserved_and_withheld": 4,
+    "terms_without_own_definition_citations": 102,
+    "cited_terms_without_literal_gene_matches": 57,
+    "terms_with_only_species_mismatched_candidates": 2,
+    "prior_index_rewritten": false,
+    "all_proteins_claimed_newly_discovered": false
+  },
+  "checks": {
+    "initial_focused_pytest": {"passed": 33, "failed": 0, "skipped": 0},
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py",
+      "passed": 196,
+      "failed": 0,
+      "skipped": 1,
+      "new_audit_tests_in_combined_run": 35,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_source_pins": {"occurrences": 265, "distinct_local_paths": 258, "all_verified": true},
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "prior_acr_artifacts_unchanged": true,
+    "previous_report": {
+      "sha256": "509b213b8d09a954080f7f18950d189cbf78e1be2e7433052cf8282f237b5a34",
+      "bytes": 945580,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    }
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "finding": "An initial draft marked empty definition bibliographies as all queries complete.",
+    "disposition": "FIXED_BEFORE_FINAL_OUTPUT: 102 no-citation terms now have an explicit discovery-open state and false query-complete flag, covered by a regression test.",
+    "initial_draft_preserved_locally": "reports/resistance-grounding-2026-10-15-card-species-gene-context/pre-review-draft.json",
+    "additional_checks": ["Whole-symbol versus substring matching", "Native synonyms versus locus and protein names", "Species versus strain identity", "Same-citation cross-species hits", "Multiple fragment references versus exact alleles", "Failed, redirected, retried or changed taxonomy responses", "Read-only checks and overwrite refusal"]
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "limitation": "Pinned RDKit 2026.3.5 is unavailable in this Intel macOS environment; no full-QC or biological-curation verification is claimed."
+  },
+  "access": {
+    "new_uniprot_taxonomy_requests": 1,
+    "new_protein_requests": 0,
+    "new_primary_publication_requests": 0,
+    "ncbi_requests": 0,
+    "retries": 0,
+    "redirects_followed": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false
+  },
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "whole_record_primary_signoffs": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

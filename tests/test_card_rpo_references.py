@@ -359,8 +359,8 @@ def test_public_checkpoint_retains_full_cohort_and_open_claims():
 
 
 @pytest.mark.skipif(not (ROOT / audit.CACHE / "cohort.json").exists(), reason="private native cache absent")
-def test_native_replay_is_byte_identical_and_offline():
-    result = audit.build(ROOT)
+def test_native_replay_is_byte_identical_and_offline(pre_card_qualification_root):
+    result = audit.build(pre_card_qualification_root)
     assert (json.dumps(result, indent=2, sort_keys=True) + "\n").encode() == (
         ROOT / audit.OUTPUT
     ).read_bytes()

@@ -238,11 +238,11 @@ def test_no_sequence_or_experimental_measurement_exports():
     assert not set(keys(assessment())) & forbidden
 
 
-def test_offline_replay_when_native_cache_available():
+def test_offline_replay_when_native_cache_available(pre_cdsa_qualification_root):
     plan = json.loads((ROOT / audit.PLAN).read_bytes())
     if not (ROOT / plan["inputs"]["proteins"]["path"]).exists():
         pytest.skip("native cache unavailable; portable artifact checks still run")
-    assert audit.build(ROOT) == public_result()
+    assert audit.build(pre_cdsa_qualification_root) == public_result()
 
 
 def test_public_artifact_checksum_is_stable():

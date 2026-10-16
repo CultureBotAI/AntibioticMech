@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-15",
+  "scope": "PRIMARY_SCOPE_AND_REFERENCE_IDENTITY_NOT_EXPERIMENTAL_ALLELES",
+  "terms": {
+    "dnaA": {
+      "aro_id": "ARO:3000248",
+      "label": "DnaA",
+      "source_species": "Escherichia coli",
+      "source_strains": [
+        "CM735",
+        "IF12",
+        "IF13"
+      ],
+      "reference_taxon_id": 83333,
+      "reference_species_taxon_id": 562,
+      "query": "gene_exact:dnaA AND organism_id:83333 AND reviewed:true",
+      "papers": [
+        {
+          "pmid": "19170875",
+          "doi": "10.1111/j.1365-2958.2008.06585.x",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06585.x",
+          "locations": [
+            "Results: rifampicin-resistant initiations",
+            "Results: promoter-specific transcription protection",
+            "Discussion: RNAP-subunit identity unresolved",
+            "Experimental procedures: strain identities only"
+          ],
+          "review": "The paper studies E. coli K-12 CM735 and derivatives. It reports growth-context-dependent replication initiation and partial, promoter-dependent protection of transcription, not a resistant-isolate MIC classification. DnaA-RNAP interaction does not identify the interacting RNAP subunit in this experiment. These observations must not be generalized to all rifamycins or a resistant DnaA allele."
+        }
+      ],
+      "reference_scope": "K12_REFERENCE_NOT_CM735_ALLELE"
+    },
+    "sigma": {
+      "aro_id": "ARO:3000261",
+      "label": "sigma factor conferring resistance to rifampin",
+      "source_species": "Escherichia coli",
+      "source_strains": [
+        "WAM106"
+      ],
+      "reference_taxon_id": 83333,
+      "reference_species_taxon_id": 562,
+      "query": "(gene_exact:rpoD OR gene_exact:rpoH) AND organism_id:83333 AND reviewed:true",
+      "papers": [
+        {
+          "pmid": "9862449",
+          "doi": "10.1016/S0014-5793(98)01449-5",
+          "url": "https://febs.onlinelibrary.wiley.com/doi/10.1016/S0014-5793(98)01449-5",
+          "locations": [
+            "2.1: source strain identity",
+            "3.1-3.3: transcription results",
+            "4: Discussion"
+          ],
+          "review": "The primary comparison is sigma32 versus sigma70 in cellular reporter and in-vitro transcription contexts. Both are inhibited at sufficiently high drug exposure. Sigma70 is the comparison component, not a newly demonstrated resistance determinant. This broad ARO label is not one allele; K-12 references cannot be assigned to WAM106 solely from species identity."
+        }
+      ],
+      "reference_scope": "TWO_COMPONENT_COMPARISON_NOT_SINGLE_ALLELE"
+    },
+    "hp1184": {
+      "aro_id": "ARO:3003965",
+      "label": "hp1184",
+      "source_species": "Helicobacter pylori",
+      "source_strains": [
+        "1061",
+        "clinical isolate cohort"
+      ],
+      "reference_taxon_id": 85962,
+      "reference_species_taxon_id": 210,
+      "query": "(gene_exact:HP_1184 OR gene_exact:HP1184) AND organism_id:85962",
+      "papers": [
+        {
+          "pmid": "15793129",
+          "doi": "10.1128/AAC.49.4.1477-1482.2005",
+          "url": "https://journals.asm.org/doi/10.1128/aac.49.4.1477-1482.2005",
+          "locations": [
+            "Results: genome-derived locus identification",
+            "Results: susceptibility profiles",
+            "Discussion: HP1184 specificity",
+            "Table 2: subject headings and locus footnote"
+          ],
+          "review": "Locus numbering derives from reference genome 26695; knockout phenotypes were measured in strain 1061. HP1184 disruption affected ethidium-bromide susceptibility, while the text reports unchanged antibiotic susceptibilities and no increased norfloxacin susceptibility. The metronidazole double-knockout result concerns HP0605 and HP0971, not HP1184. Reference-locus identity cannot transfer these phenotypes between genes or strains."
+        },
+        {
+          "pmid": "27303615",
+          "doi": "10.5812/jjm.30726",
+          "url": "https://brieflands.com/journals/jjm/articles/56634",
+          "locations": [
+            "Results: subject/group and gene-presence context",
+            "Discussion: hp1184 versus hp1181",
+            "Discussion: susceptible 26695 comparator"
+          ],
+          "review": "The clinical-strain study associates HP1184 more specifically with ethidium-bromide efflux and HP1181 with broader antibiotic efflux. Presence of both genes in the susceptible 26695 control shows that presence alone is not the resistance phenotype. Association and inhibitor effects do not isolate HP1184 causality for each antibiotic. No clinical-isolate protein, assembly or strain TaxID is assigned."
+        }
+      ],
+      "reference_scope": "26695_LOCUS_REFERENCE_NOT_1061_OR_CLINICAL_ALLELE"
+    }
+  },
+  "primary_review": {
+    "access_mode": "PUBLISHER_WEB_READER",
+    "native_primary_body_replay_available": false,
+    "selected_text_only": true,
+    "figure_pixels_reviewed": false,
+    "supplements_reviewed": false,
+    "whole_papers_reviewed": false
+  },
+  "constraints": {
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "biological_record_writes": false,
+    "source_adoption": false,
+    "whole_record_primary_signoff": false
+  }
+}

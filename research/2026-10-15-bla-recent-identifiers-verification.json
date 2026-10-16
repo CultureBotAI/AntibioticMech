@@ -1,0 +1,121 @@
+{
+  "adversarial_review": {
+    "method": "Separate self-review and mutated-input tests; no external reviewer claimed",
+    "remaining": [
+      "Three complete empty metadata searches do not establish absence from UniProt by every search route.",
+      "SSA primary identity and full results remain unreviewed; FRI-11 clinical full text is subscription content.",
+      "No native primary bodies, figure pixels or supplements were replayed or reviewed in this follow-up.",
+      "Experimental alleles, strain IDs, genomic crosswalks and whole-record primary signoffs remain open."
+    ],
+    "resolved": [
+      "Check per-term record memberships against actual claim memberships, not only record hashes.",
+      "Require the complete set of review limitations; dropping a limitation cannot imply review completion.",
+      "Keep FRI-11 clinical and environmental subjects separate and do not expand a deposit range into a gene crosswalk.",
+      "Do not assign a cultured host to metagenomic SSA or a strain identity from a species-name node."
+    ]
+  },
+  "audit_plan": {
+    "path": "research/2026-10-15-bla-recent-identifiers-audit-plan.json",
+    "sha256": "56a0be195e5bddaf2fd8999d226b242bb75dada19b369af4a2e799db89ead4c0"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-bla-recent-identifiers/baseline.json",
+    "sha256": "9bd3a6cfd734f344db399bea1d4d1c80915aaa0a6632d627ad5dcccf4342860c"
+  },
+  "checks": {
+    "errors": 0,
+    "failures": 0,
+    "focused_tests_passed": 143,
+    "full_authoritative_qc_rerun": false,
+    "native_primary_bodies_replayed": false,
+    "offline_write_disabled_replay": true,
+    "report_only_appended_section": true,
+    "saved_projection_equal": true,
+    "skipped": 0,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "broad_index_rewritten": false,
+    "experimental_identifiers_assigned": false,
+    "figure_pixels_reviewed": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "native_primary_bodies_replayed": false,
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "supplements_reviewed": false,
+    "whole_papers_reviewed": false
+  },
+  "date": "2026-10-15",
+  "dossier": {
+    "path": "research/2026-10-15-bla-recent-identifiers.json",
+    "sha256": "b20940d7e7b31d3d4d6931d187ba6037b49293949a2dc6512f96d1527391d862"
+  },
+  "github_mutations": 0,
+  "new_native_requests": 4,
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "73b361b6329868a3fbb8bc9c5b4791ec666de5d70d41bc158d5dcef3f00dbdb1"
+  },
+  "script": {
+    "path": "scripts/audit_bla_recent_identifiers.py",
+    "sha256": "6cd486b3a5e712f40e309b64588e0a77ccdf0288582b32628ab3a180ee9e3cc5"
+  },
+  "shared_helpers": [
+    {
+      "path": "scripts/audit_card_gene_reference_followup.py",
+      "sha256": "50f9c57b425a432a83eedae3699f80b9ba246d3e7ddb8164444def3e1b3af732"
+    },
+    {
+      "path": "scripts/audit_card_reference_lineages.py",
+      "sha256": "71474aa505ffdea55c2147eb934d9885ebdb040806f818b27490c51d8197aaa5"
+    },
+    {
+      "path": "scripts/audit_card_reference_memberships.py",
+      "sha256": "a247908f66360b08d8a1e8bd400b71ce30f5ecf95b81fe92d29057e4186be81d"
+    },
+    {
+      "path": "scripts/audit_sal_reference_context.py",
+      "sha256": "39cb77220df99b8f07bd17749a84bf50f8923263f89d59158ffa3fb3ff53d27f"
+    },
+    {
+      "path": "scripts/audit_topoisomerase_references.py",
+      "sha256": "440bc495fbc08e9e02b4365a61a41b50893638ac7a222cd3990dceb44676442a"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "bcc3493cca199a418b6eb69cec5b51a293fe3a8aa15ed3272f7f285616e0d5dd"
+    }
+  ],
+  "status": "SCOPED_IDENTIFIER_GAPS_AND_SPECIES_NAMES_VERIFIED_EXPERIMENTAL_IDENTITIES_OPEN",
+  "summary": {
+    "complete_empty_protein_queries": 3,
+    "complete_records_loaded": 9,
+    "current_corpus_hashes_verified": 2939,
+    "new_native_requests": 4,
+    "new_native_taxonomy_nodes": 1,
+    "primary_identity_holds": 1,
+    "reused_native_taxonomy_nodes": 1,
+    "selected_protein_references": 0,
+    "source_claims_bound": 14,
+    "source_species_name_contexts": 2,
+    "terms_investigated": 4,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-bla-recent-identifiers/tests.xml",
+    "sha256": "a4aac47d0f4de8f453f75e64807f0e9e2fda4bd1a91b10ff46c7415b5bda7f3b"
+  },
+  "tests": {
+    "path": "tests/test_bla_recent_identifiers.py",
+    "sha256": "7c7b8857d79c348a5e274d79cc97910beaf9d9bf00e24bda1e1f16844c12230c"
+  },
+  "verification_script": {
+    "path": "reports/resistance-grounding-2026-10-15-bla-recent-identifiers/verify.py",
+    "sha256": "7409d532f0760a929cdc78778a3244a6c01395851480d03d13539456b76c62a3"
+  }
+}

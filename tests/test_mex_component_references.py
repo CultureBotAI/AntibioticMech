@@ -251,22 +251,23 @@ def test_public_artifact_pins():
     assert receipt["preservation"]["biological_records_changed"] == 0
 
 
-def test_live_offline_replay_when_native_cache_and_checkpoint_available():
-    plan = json.loads((ROOT / audit.PLAN).read_bytes())
+def test_live_offline_replay_when_native_cache_and_checkpoint_available(pre_cdsa_qualification_root):
+    root = pre_cdsa_qualification_root
+    plan = json.loads((root / audit.PLAN).read_bytes())
     sources = list(plan["queries"].values()) + [p["receipt"] for p in plan["taxonomy"].values()]
-    if any(not (ROOT / p["path"]).exists() for p in sources):
+    if any(not (root / p["path"]).exists() for p in sources):
         pytest.skip("native ignored cache not available; portable public checks still run")
     result = public_result()
     import csv
 
-    update = json.loads((ROOT / result["explicit_corpus_update"]["path"]).read_bytes())
+    update = json.loads((root / result["explicit_corpus_update"]["path"]).read_bytes())
     deltas = {d["path"]: d["after_sha256"] for d in update["record_deltas"]}
-    with (ROOT / result["inputs"]["census"]["path"]).open() as stream:
+    with (root / result["inputs"]["census"]["path"]).open() as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
     if any(
-        not (ROOT / r["path"]).exists()
-        or audit.digest(ROOT / r["path"]) != deltas.get(r["path"], r["record_sha256"])
+        not (root / r["path"]).exists()
+        or audit.digest(root / r["path"]) != deltas.get(r["path"], r["record_sha256"])
         for r in census
     ):
-        pytest.skip("historical checkpoint after corpus changes; immutable artifact checks still run")
-    assert audit.build(ROOT) == result
+        pytest.fail("checksum-verified historical fixture drifted")
+    assert audit.build(root) == result

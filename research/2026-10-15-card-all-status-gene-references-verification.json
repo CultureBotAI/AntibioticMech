@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-15",
+  "scope": "ALL_ENTRY_STATUS_NAMED_REFERENCES_NOT_EXPERIMENTAL_ALLELES",
+  "previous_goal_turn_assessment": "PROGRESS: name-resolution dossier and verification pins checked against the current worktree",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {
+      "path": "research/2026-10-15-card-all-status-gene-references.json",
+      "sha256": "64d8a4cb5fffb7cbe702a91e900886bf9cc0b0be3518e4de4323bf0f565305d3"
+    },
+    "plan": {
+      "path": "research/2026-10-15-card-all-status-gene-references-plan.json",
+      "sha256": "818c186d5ed0330bb36efac2963c061476a398d04e5a8fb00e52a88634259063"
+    },
+    "canary": {
+      "path": "research/2026-10-15-card-all-status-gene-references-canary.json",
+      "sha256": "cbd2a441a3ef1dec9ad2e1e4507c30aa49f4d16eb96a4ca3f62a15bc4d26498c"
+    },
+    "taxonomy_plan": {
+      "path": "research/2026-10-15-card-all-status-gene-references-taxonomy-plan.json",
+      "sha256": "36f42c8f15fec94c66b5370ab08a0f700a2ff64c99ccdad500ca0b5e7d50b872"
+    },
+    "taxonomy_inspection": {
+      "path": "research/2026-10-15-card-all-status-gene-references-taxonomy-inspection.json",
+      "sha256": "1375e0b7ad71c35237ca83b76414484a1e6d9d5a90b9b7efb13ff6de79dd9025"
+    },
+    "script": {
+      "path": "scripts/audit_card_all_status_genes.py",
+      "sha256": "6f3e14bf7bbc360b46c59156a502fb94402d011d79a4349aef7b55d3c10dd0ef"
+    },
+    "tests": {
+      "path": "tests/test_card_all_status_genes.py",
+      "sha256": "af727b7c7e038508bae2f76f2349fcbb62908dbaf0ca63cbc6e818cd4a68dc1f"
+    },
+    "report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "6ab365acad2bdebd08de5128fceff51c62b4782fe5813a97435a69d5adccb493"
+    }
+  },
+  "coverage": {
+    "remaining_terms_partitioned": 90,
+    "selected_species_resolved_terms": 54,
+    "name_unresolved_terms_retained": 36,
+    "source_claims": 85,
+    "complete_collection_aware_records_read": 56,
+    "species_queries": 32,
+    "new_complete_species_queries": 31,
+    "reused_complete_species_queries": 1,
+    "new_protein_page_requests": 31,
+    "live_multipage_queries": 0,
+    "zero_hit_queries": 23,
+    "native_reference_entries": 13,
+    "native_reviewed_entries": 0,
+    "native_unreviewed_entries": 13,
+    "verified_reference_taxa": 11,
+    "cached_reference_taxa": 10,
+    "qualified_reference_terms": 12,
+    "qualified_reference_links": 16,
+    "qualified_reference_claim_memberships": 15,
+    "qualified_reference_records": 14,
+    "terms_with_multiple_references": 4,
+    "ordered_locus_only_links": 2,
+    "native_fragment_references": 2,
+    "links_with_own_definition_citation_overlap": 0,
+    "searched_terms_without_exact_native_field_match": 42,
+    "disjoint_qualified_terms_across_three_protein_audits": [17, 71, 12],
+    "frozen_grammar_cohort_terms_with_reference_context": 100,
+    "frozen_grammar_cohort_terms_still_unresolved": 78,
+    "full_grammar_cohort": 178,
+    "prior_dossiers_or_broad_index_rewritten": false,
+    "all_proteins_claimed_newly_discovered": false
+  },
+  "checks": {
+    "initial_cursor_tests": {"passed": 25, "failed": 0, "skipped": 0},
+    "focused_full_audit_tests": {"passed": 33, "failed": 0, "skipped": 0},
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q -rs tests/test_card_all_status_genes.py tests/test_card_unresolved_names.py tests/test_card_gene_reference_followup.py tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+      "passed": 342,
+      "failed": 0,
+      "skipped": 1,
+      "new_audit_tests_in_combined_run": 34,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_source_pins_before_this_receipt": {
+      "occurrences": 327,
+      "distinct_local_paths": 161,
+      "all_verified": true
+    },
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "prior_acr_species_gene_gene_followup_and_name_artifacts_unchanged": true,
+    "previous_report": {
+      "sha256": "8490182d9d360ac804583ae36ed0ae745dee049595c43f35e6b8a10e14ff33a1",
+      "bytes": 957938,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    }
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "unresolved_implementation_findings": [],
+    "checks": [
+      "The initial preflight detected an existing all-status query and stopped before network execution; the complete cached superset is now explicitly reused.",
+      "Complete zero-hit queries remain distinct from unqueried or unresolved-name contexts.",
+      "Synthetic multi-page tests reject short pages, duplicates, query or release drift, offsite cursors, missing continuations, cursor cycles, orphaned artifacts and failed responses.",
+      "All 90 remaining source terms are partitioned without dropping the 36 unresolved-name terms.",
+      "Native gene symbols, ordered loci, reference taxonomy and fragment flags remain distinct from exact alleles and tested subjects.",
+      "Unreviewed status and bibliography overlap are not primary experimental validation."
+    ],
+    "residual_risks": [
+      "Literal queries do not exhaust every source-supported alias, locus label or allele.",
+      "Primary resistance evidence and experimental identity joins remain open.",
+      "Live queries did not exercise pagination; that behavior has synthetic regression coverage."
+    ],
+    "github_issues_created": 0
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "limitation": "RDKit remains absent in this Intel macOS environment; pinned RDKit 2026.3.5 lacks an Intel macOS wheel. No full-QC or biological-curation verification is claimed."
+  },
+  "access": {
+    "new_uniprot_protein_api_requests": 31,
+    "new_uniprot_taxonomy_api_requests": 1,
+    "new_primary_publication_requests": 0,
+    "ncbi_requests": 0,
+    "retries": 0,
+    "redirects_followed": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "documentation_lookup": "Official UniProt help lookup returned a JavaScript fallback; no technical or biological claim relies on it. Incidental NCBI search results were not opened."
+  },
+  "remaining_work": [
+    "Investigate source-supported aliases and locus identifiers for the 42 queried terms without exact native-field matches.",
+    "Resolve the 36 retained source-name or non-individual contexts without inventing organism identities.",
+    "Continue primary-evidence review and supported source-owned curation across the full corpus, including records outside this grammar-selected CARD cohort."
+  ],
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "whole_record_primary_signoffs": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

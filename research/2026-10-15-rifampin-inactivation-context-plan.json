@@ -1,0 +1,114 @@
+{
+  "canary": "rgt1438",
+  "constraints": {
+    "biological_record_writes": false,
+    "figure_pixels_reviewed": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "supplements_reviewed_this_followup": false,
+    "whole_papers_reviewed": false
+  },
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_embl,lit_pubmed_id,sequence_version,version",
+  "inputs": {
+    "arr_citation_body": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-18349144-response.bin",
+      "sha256": "cdaab1608ffc2711937a55dfd772b3a3268578061653d781c53bf7a1a2c319c9"
+    },
+    "arr_citation_receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-18349144-receipt.json",
+      "sha256": "7fe831d625e103b6620cd1574ec6e63198a3861eaf1416ede529b17a5cd65ca0"
+    },
+    "assessment": {
+      "path": "research/2026-10-15-rifampin-inactivation-context-assessment.json",
+      "sha256": "b4f12e9ec0c2360ec10c36e1a42767cdd9d80fd91264e52fbcb8c00d75f4a869"
+    },
+    "current_index": {
+      "path": "research/2026-10-15-card-reference-successor.json",
+      "sha256": "ceae861cd595a44f45691e83f9bbe5ac5ca83e9a17a5b3bf24f73013210d9e3b"
+    },
+    "current_index_verification": {
+      "path": "research/2026-10-15-card-reference-successor-verification.json",
+      "sha256": "f2b27f36666ff9f84b2756d8e12b7b8f6d9fa7d11f383c3acbe72c96260ffff0"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior_name_screen": {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    "rph_primary": {
+      "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/primary-27929110.json",
+      "sha256": "a136eddc5a7a90de5e929f9bef00e257dd1aac7c31d8c74a6ced9cf0ffec02dc"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "taxonomy_inventory": {
+      "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+      "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"
+    }
+  },
+  "max_bytes": 1000000,
+  "prior_exact_query_search_included_ignored_files": true,
+  "prior_matching_exact_requests": 0,
+  "release": "2026_03",
+  "requests": {
+    "pdb-arr": {
+      "query": "{entries(entry_ids:[\"2HW2\"]) {\n  rcsb_id\n  rcsb_accession_info {major_revision minor_revision revision_date}\n  rcsb_primary_citation {pdbx_database_id_PubMed pdbx_database_id_DOI year}\n  polymer_entities {\n    rcsb_id\n    rcsb_polymer_entity {pdbx_description}\n    rcsb_polymer_entity_container_identifiers {\n      reference_sequence_identifiers {database_name database_accession}\n    }\n    rcsb_entity_source_organism {ncbi_taxonomy_id scientific_name}\n    entity_src_gen {\n      pdbx_gene_src_gene gene_src_strain pdbx_gene_src_ncbi_taxonomy_id pdbx_gene_src_scientific_name\n      pdbx_host_org_ncbi_taxonomy_id pdbx_host_org_scientific_name\n    }\n  }\n}}",
+      "url": "https://data.rcsb.org/graphql?query=%7Bentries%28entry_ids%3A%5B%222HW2%22%5D%29+%7B%0A++rcsb_id%0A++rcsb_accession_info+%7Bmajor_revision+minor_revision+revision_date%7D%0A++rcsb_primary_citation+%7Bpdbx_database_id_PubMed+pdbx_database_id_DOI+year%7D%0A++polymer_entities+%7B%0A++++rcsb_id%0A++++rcsb_polymer_entity+%7Bpdbx_description%7D%0A++++rcsb_polymer_entity_container_identifiers+%7B%0A++++++reference_sequence_identifiers+%7Bdatabase_name+database_accession%7D%0A++++%7D%0A++++rcsb_entity_source_organism+%7Bncbi_taxonomy_id+scientific_name%7D%0A++++entity_src_gen+%7B%0A++++++pdbx_gene_src_gene+gene_src_strain+pdbx_gene_src_ncbi_taxonomy_id+pdbx_gene_src_scientific_name%0A++++++pdbx_host_org_ncbi_taxonomy_id+pdbx_host_org_scientific_name%0A++++%7D%0A++%7D%0A%7D%7D"
+    },
+    "rgt1438": {
+      "query": "xref:embl-JX028276",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-JX028276&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "rphB": {
+      "query": "gene_exact:rphB AND organism_id:1120679",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ArphB+AND+organism_id%3A1120679&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "reused_taxonomy": {
+    "1120679": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/search?query=LC231&format=json&size=25",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-12-kasugamycin-card/request-09356de11bb83206f7d90d9a26b72ee2dd840466605ea1fa02daa0dd9c6b3968.json",
+          "sha256": "5c2b443ac4a9021b488c148f2bc65f4e4e77d7e18bf867a3d4c1aef3c796a54d"
+        }
+      },
+      "taxon_id": "1120679"
+    },
+    "1772": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/search?query=%22Mycolicibacterium+smegmatis%22+AND+rank%3Aspecies&format=json&size=500",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-d213fc3a166624d805b280ee1a440ce2ca33788064a7f849d5083ab1fd734d5a.json",
+          "sha256": "e6b36c9e92db0d0a953fd53ae4e94e7e399b31ce072a2f29cf2a76961dc1e646"
+        }
+      },
+      "taxon_id": "1772"
+    },
+    "246196": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/246196",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-8badbec94ec9836c8a3bc02b2c21c0900b4ee4805a9be1893db34eb926e860ca.json",
+          "sha256": "bcd8dedc25b43be7b564f45aa885b823fad40fcda35da79869c0c56fc726c320"
+        }
+      },
+      "taxon_id": "246196"
+    }
+  }
+}
