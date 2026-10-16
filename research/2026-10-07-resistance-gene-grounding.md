@@ -15994,6 +15994,35 @@ Experimental allele, protein, taxon and genome assignments remain unset.
 No new NCBI request was made, #1040 remains deferred, and the full corpus-wide
 investigation remains open.
 
+## QnrC Deposit and Family Context (2026-10-16)
+
+The [Qnr identity dossier](2026-10-16-qnr-identity-context.json) binds the generic
+Qnr term and its QnrC member to **eight source claims across seven complete
+records**, while checking all **2,939 current record hashes**. One metadata-only
+UniProt query for the paper-reported deposit returned four proteins. Gene,
+protein-identifier, citation and source-isolate agreement distinguish
+**UniProtKB:C0J7J6** from the other three deposit entries. The verified crosswalk
+retains **EU917444**, **ACK75961.1**, and the existing **NCBITaxon:584** species
+context without inventing a strain TaxID, genome, or experimental allele.
+
+Selected publisher text identifies the native **Proteus mirabilis 06-489**
+isolate as quinolone-susceptible; its gene carriage must not become a resistant
+taxon claim. Laboratory-host results remain separate. The pinned ontology
+confirms QnrC's direct family membership, but neither that edge nor a shared
+citation makes the parent family a single protein. The reference is retained as
+a named-member crosswalk, not a new whole-corpus reference selection. Current
+index counts therefore remain **1,405 terms with reference context and 597
+unresolved**. No generated biological record was changed.
+
+The [primary assessment](2026-10-16-qnr-identity-context-assessment.json) limits
+the inspection to selected text, not tables, figures, supplements or a
+whole-paper signoff. Another parent citation returned a web-tool internal error
+without an HTTP status; this is not classified as permission denial. The third
+parent citation was not requested in this follow-up. Their primary review
+remains open. The [native metadata projection](2026-10-16-qnr-identity-context-native.json)
+supports cache-independent replay while retaining checksums for optional native
+replay. NCBI was not contacted, and #1040 remains deferred.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including
