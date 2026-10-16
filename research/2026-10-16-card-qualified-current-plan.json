@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "scope": "CURRENT_CORPUS_AFTER_NOTE_QUALIFICATION_NOT_EXPERIMENTAL_GROUNDING",
+  "constraints": {
+    "biological_record_writes": false,
+    "experimental_identifiers_assigned": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "network_requests": 0,
+    "new_primary_reviews": 0
+  },
+  "inputs": {
+    "acr-reference-context": {
+      "path": "research/2026-10-15-acr-reference-context.json",
+      "sha256": "51d97fece6721d9abf917faaf1127989e51807009583b5840532545540707033"
+    },
+    "acr-reference-context_verification": {
+      "path": "research/2026-10-15-acr-reference-context-verification.json",
+      "sha256": "935222d32eae35121f064ee81d3b24d1204a7ad063b032f4759c475dbac1ce90"
+    },
+    "active_reviews": {
+      "path": "tests/fixtures/card_evidence_reviews-before-salmonella-2026-10-16.json",
+      "sha256": "6b38d17c52d8b0123e7bb2ece35341322269f0efb79b47d66d513b3c6bf6830d"
+    },
+    "aph-mph-primary": {
+      "path": "research/2026-10-15-aph-mph-primary.json",
+      "sha256": "06b3bd82fe66c862615aa8c046dc3abbcfcea18cea2e5f18224e5f217ab9f6b7"
+    },
+    "aph-mph-primary_verification": {
+      "path": "research/2026-10-15-aph-mph-primary-verification.json",
+      "sha256": "f823d81337b4ba427dc4d08a62d9a74eb5a4cefa802de51e968cfe84ae80ff59"
+    },
+    "base": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    },
+    "base_verification": {
+      "path": "research/2026-10-15-card-aph-memberships-verification.json",
+      "sha256": "0c07cd919030d8a1386c550e8b68ee28f584c37b24f404907961ae8f7d1d8626"
+    },
+    "bcmfs1-reference": {
+      "path": "research/2026-10-15-bcmfs1-reference.json",
+      "sha256": "3d1501c9b659cecc52d9d2396cd50b59f5d5dca51d9d206f570c89e52ff3566d"
+    },
+    "bcmfs1-reference_verification": {
+      "path": "research/2026-10-15-bcmfs1-reference-verification.json",
+      "sha256": "a831a8b1e11145b6deca5e955a89f6dcd79c3027c72979470d7bdb693510cafa"
+    },
+    "bla-primary-identifiers": {
+      "path": "research/2026-10-15-bla-primary-identifiers.json",
+      "sha256": "2fcb241c8878168b49b990b956e6ed9cd2b3922569e62d2152ebf194613e6fee"
+    },
+    "bla-primary-identifiers_verification": {
+      "path": "research/2026-10-15-bla-primary-identifiers-verification.json",
+      "sha256": "8f54d70f4029a239ddd18b8d9f6f4899f17cd4c3eef0b503edc4f0a56c94ccc6"
+    },
+    "bla-recent-identifiers": {
+      "path": "research/2026-10-15-bla-recent-identifiers.json",
+      "sha256": "b20940d7e7b31d3d4d6931d187ba6037b49293949a2dc6512f96d1527391d862"
+    },
+    "bla-recent-identifiers_verification": {
+      "path": "research/2026-10-15-bla-recent-identifiers-verification.json",
+      "sha256": "c29b2677877087e1a02cb4150f6b8f7cbcc357f3e32b1b9f784aa9310bc895e3"
+    },
+    "card-all-status-gene-references": {
+      "path": "research/2026-10-15-card-all-status-gene-references.json",
+      "sha256": "64d8a4cb5fffb7cbe702a91e900886bf9cc0b0be3518e4de4323bf0f565305d3"
+    },
+    "card-all-status-gene-references_verification": {
+      "path": "research/2026-10-15-card-all-status-gene-references-verification.json",
+      "sha256": "81e1bddc0802946b1fc38ac977e33775231d139dcb1aecb478ee0c9e2c0a15b4"
+    },
+    "card-complex-members": {
+      "path": "research/2026-10-15-card-complex-members.json",
+      "sha256": "008d915100f8c36ca43b39b891a97a418e4e9d60dcd807cbfe9e2ed9284779ac"
+    },
+    "card-complex-members_verification": {
+      "path": "research/2026-10-15-card-complex-members-verification.json",
+      "sha256": "b0224575a46a9fdd8361c280eaecfb146d72bcc506bad0180bb536ae6ae4bb07"
+    },
+    "card-explicit-identifiers": {
+      "path": "research/2026-10-15-card-explicit-identifiers.json",
+      "sha256": "b14e49f8e593b03b7d796576c3041485eeccc7ad3171da37a85f4ab247a47e2e"
+    },
+    "card-explicit-identifiers_verification": {
+      "path": "research/2026-10-15-card-explicit-identifiers-verification.json",
+      "sha256": "292ef8f8b6e83a5ebbb62736c29b2cd17471f9434fb96fb29705643b74521eab"
+    },
+    "card-gene-reference-followup": {
+      "path": "research/2026-10-15-card-gene-reference-followup.json",
+      "sha256": "c0eae79c262490f95c7968a099ee7571870fc62820eb00356911ac8714a41ddf"
+    },
+    "card-gene-reference-followup_verification": {
+      "path": "research/2026-10-15-card-gene-reference-followup-verification.json",
+      "sha256": "0ec7b21b5955110fe992cad8c1fa6a0dbf254865cd292ec1c2c385d16ac0c101"
+    },
+    "card-name-crosswalks": {
+      "path": "research/2026-10-15-card-name-crosswalks.json",
+      "sha256": "97b4d759a080a35e9e2583bdf9b048fde4c3706d1acd3d5b8bd2a8ffafa6c5e1"
+    },
+    "card-name-crosswalks_verification": {
+      "path": "research/2026-10-15-card-name-crosswalks-verification.json",
+      "sha256": "593b1fb22c47faf12ba2873d8dbf0fb06df56876e5b0f21181e37cf21c393fca"
+    },
+    "card-name-holds": {
+      "path": "research/2026-10-15-card-name-holds.json",
+      "sha256": "083ae4bee88a5d9f7334209c3a5644698430ee99f500715e6e8accf2a0445471"
+    },
+    "card-name-holds_verification": {
+      "path": "research/2026-10-15-card-name-holds-verification.json",
+      "sha256": "991cdb1844d04f6d3a48eae04b4fbc57268f248317ec7b0bd7a5de89585b0e85"
+    },
+    "card-protein-name-screen": {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    "card-protein-name-screen_verification": {
+      "path": "research/2026-10-15-card-protein-name-screen-verification.json",
+      "sha256": "e6819cd4d89ab5e26e48f788928d474bbed5e0cd00b9e1d4679a1daf36909d1c"
+    },
+    "card-source-aliases": {
+      "path": "research/2026-10-15-card-source-aliases.json",
+      "sha256": "70fbf5e491e7148f574065671ed7e595a6850e2a4cf99293d183403ce67a68a3"
+    },
+    "card-source-aliases_verification": {
+      "path": "research/2026-10-15-card-source-aliases-verification.json",
+      "sha256": "d49ec271d3d27e8148e8375fa69e2165ee58167861f4238e03f3fe21d46f036d"
+    },
+    "card-species-gene-context": {
+      "path": "research/2026-10-15-card-species-gene-context.json",
+      "sha256": "81c2143b2f081125920950b98949e85d5bca07efc2894f594abcc6a195a59372"
+    },
+    "card-species-gene-context_verification": {
+      "path": "research/2026-10-15-card-species-gene-context-verification.json",
+      "sha256": "37636215937b21aea296e67de1c2c17999e6a4506a2bf53354c873ea09754b53"
+    },
+    "card-unresolved-name-context": {
+      "path": "research/2026-10-15-card-unresolved-name-context.json",
+      "sha256": "14bb9b37bf62a385f897707dbeb5b91372e56c6da669b8368238f103979276a5"
+    },
+    "card-unresolved-name-context_verification": {
+      "path": "research/2026-10-15-card-unresolved-name-context-verification.json",
+      "sha256": "9b31cf09b9de896e34bbd96a82fa8a4872f58223288830bded044be193545e8e"
+    },
+    "cdsa-cyp51-context": {
+      "path": "research/2026-10-15-cdsa-cyp51-context.json",
+      "sha256": "27e56addf4c80541045757666aef72710508315945a541f5333385021371467e"
+    },
+    "cdsa-cyp51-context_verification": {
+      "path": "research/2026-10-15-cdsa-cyp51-context-verification.json",
+      "sha256": "8d6384c4fe1f4ac2adb4b1e1828141fd0e4ca6209ce1575cba78e5136f3bedbf"
+    },
+    "cdsa_transition": {
+      "path": "research/2026-10-15-cdsa-qualification-transition.json",
+      "sha256": "b5c28727895c2b88845978f0e6afe158371e1b3e2be8633a465cdcf14adca0b8"
+    },
+    "census": {
+      "path": "research/2026-10-14-platen-archive-resistance-grounding.tsv",
+      "sha256": "e9857e73bb7849b4752f21c768c706f67b6e977f5f3275e71a2976b75d5d4864"
+    },
+    "daptomycin-locus": {
+      "path": "research/2026-10-15-daptomycin-locus.json",
+      "sha256": "262a8ebefe434c8d376fb0b03cc413971dd25b5c6a1fec0e98a79fb8fc4f3a15"
+    },
+    "daptomycin-locus_verification": {
+      "path": "research/2026-10-15-daptomycin-locus-verification.json",
+      "sha256": "81512b486e1fce8ccc0e91492d0b85259cb7bc9dd2aabf4748d79c9566fd8775"
+    },
+    "dnaa-sigma-hp1184": {
+      "path": "research/2026-10-15-dnaa-sigma-hp1184.json",
+      "sha256": "710f39a850a4432b8b55a8a5de703c1da8a84cb8efb5c02ac64d879df4234394"
+    },
+    "dnaa-sigma-hp1184_verification": {
+      "path": "research/2026-10-15-dnaa-sigma-hp1184-verification.json",
+      "sha256": "eed072f82c1f49c22752099ac7ffe17c2848de1f9367aedca5fd93da9e5a0296"
+    },
+    "erm-name-context": {
+      "path": "research/2026-10-15-erm-name-context.json",
+      "sha256": "4efa5bdb49991f42259d137550ea137da04a6c5e07e4973f061aac32517ca12e"
+    },
+    "erm-name-context_verification": {
+      "path": "research/2026-10-15-erm-name-context-verification.json",
+      "sha256": "465c4c7090f8d11e9509fed246e6986ca346d95407373bd33fbfdf26976883ff"
+    },
+    "first_transition": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "kpn-evidence": {
+      "path": "research/2026-10-15-kpn-evidence.json",
+      "sha256": "19a9ec3564901476e8d047b6b541e0b2cd950c34cdde643e8dd48db8de51b679"
+    },
+    "kpn-evidence_verification": {
+      "path": "research/2026-10-15-kpn-evidence-verification.json",
+      "sha256": "9789e9e338c90e9f5ea535588d3ee145a8a7244828a44c38a1923b571341633a"
+    },
+    "kpn-locus": {
+      "path": "research/2026-10-15-kpn-locus.json",
+      "sha256": "4566deb7d9cda97c0ba0c7e283f431202807ea11baa8af8d72f4e9dc2b8194b3"
+    },
+    "kpn-locus_verification": {
+      "path": "research/2026-10-15-kpn-locus-verification.json",
+      "sha256": "02aba451b41652e39caabf6910393aceca010c65711d9151dcd8d7288cf97c1f"
+    },
+    "m35-porin-context": {
+      "path": "research/2026-10-15-m35-porin-context.json",
+      "sha256": "6046ccb3e0e0e3d3548d79d847b34757460814dc2353b5ff007c9a72de8f7339"
+    },
+    "m35-porin-context_verification": {
+      "path": "research/2026-10-15-m35-porin-context-verification.json",
+      "sha256": "a40abf4695f666c9e33583f3ec3ba7ce53de60d3329db6bd66e6d174ac6b6a51"
+    },
+    "mdea-evidence": {
+      "path": "research/2026-10-15-mdea-evidence.json",
+      "sha256": "ea405d60e501e364654197d4e7b8dee98d941479ea1d3a3cd503d75eb6468ce0"
+    },
+    "mdea-evidence_verification": {
+      "path": "research/2026-10-15-mdea-evidence-verification.json",
+      "sha256": "9d1923b48d775be231dc94744892aa393ec08187f2890cf3091c40821e2c681c"
+    },
+    "mex-citation-followup": {
+      "path": "research/2026-10-15-mex-citation-followup.json",
+      "sha256": "566b492b2ca1d66994961f9f2305436315bf01eaad3af334efb58b9cfa5e6187"
+    },
+    "mex-citation-followup_verification": {
+      "path": "research/2026-10-15-mex-citation-followup-verification.json",
+      "sha256": "e078ac20134686a91e05e5d2ffd3b2fd80bb9cd14a783b2d5f8c24f35536f73a"
+    },
+    "mex-component-references": {
+      "path": "research/2026-10-15-mex-component-references.json",
+      "sha256": "3f2d562cd3f0d8c5365cbc3ea67d021639ac186d3a61f0d985bee0289aa96699"
+    },
+    "mex-component-references_verification": {
+      "path": "research/2026-10-15-mex-component-references-verification.json",
+      "sha256": "9f16fed8f2a0171ca51a6f1bd1e1d3ed0c16f8ebe4c4f0967717ecaa861ef782"
+    },
+    "mex-component-xrefs": {
+      "path": "research/2026-10-15-mex-component-xrefs.json",
+      "sha256": "623350fc0830c15749d4392803d6b4a097a39ff8e331427585acb03b6342b779"
+    },
+    "mex-component-xrefs_verification": {
+      "path": "research/2026-10-15-mex-component-xrefs-verification.json",
+      "sha256": "289a3d3d2cc82e534815d63f705e5de3ff6ecd9eba7fece88816a06de248af73"
+    },
+    "mex-host-context": {
+      "path": "research/2026-10-15-mex-host-context.json",
+      "sha256": "5c89d691918703ced72cc1c48bc581bfd76589ebedd130209a97ffbcfa950e12"
+    },
+    "mex-host-context_verification": {
+      "path": "research/2026-10-15-mex-host-context-verification.json",
+      "sha256": "311abbd76e7a3cd1b32a937ed5fa54254abff1834429e8163497f0ef824e0852"
+    },
+    "mex-jkvw-evidence": {
+      "path": "research/2026-10-15-mex-jkvw-evidence.json",
+      "sha256": "e0d24b4254443cddc56f87b263ab7189bcf25953557667311586b2ef18f49bec"
+    },
+    "mex-jkvw-evidence_verification": {
+      "path": "research/2026-10-15-mex-jkvw-evidence-verification.json",
+      "sha256": "7d4051298935318b4ce7feda91525c3c809727186f6f17b819db615f9d5fa2f5"
+    },
+    "mex-substrate-context": {
+      "path": "research/2026-10-15-mex-substrate-context.json",
+      "sha256": "aec904e807bbcfedb00cd050182fe179d636ed78978e66856b278404d490582f"
+    },
+    "mex-substrate-context_verification": {
+      "path": "research/2026-10-15-mex-substrate-context-verification.json",
+      "sha256": "afe2f00dd12cc7d9c2caf80f82d10f5b1d8c12010957384968479d180b14e34d"
+    },
+    "mexxy-context": {
+      "path": "research/2026-10-15-mexxy-context.json",
+      "sha256": "f861aaedd543a1994a328096b7e9055be990a3f97534c7f2becf44cb7f8936f7"
+    },
+    "mexxy-context_verification": {
+      "path": "research/2026-10-15-mexxy-context-verification.json",
+      "sha256": "7b4922dd32e2d86b31f8af545e38fda78a4d8903c1f50097dd75ce084cfad589"
+    },
+    "mexxy-definitions": {
+      "path": "research/2026-10-15-mexxy-definitions.json",
+      "sha256": "6ca49ff84019917f3112430c76b733cb6f885d9c8b047e52c770a1fa9013f7b9"
+    },
+    "mexxy-definitions_verification": {
+      "path": "research/2026-10-15-mexxy-definitions-verification.json",
+      "sha256": "d4a006c3ed54c26a083211408920a2685a26e63bec3170d56b885c81cc367821"
+    },
+    "msh-hmg-reference": {
+      "path": "research/2026-10-15-msh-hmg-reference.json",
+      "sha256": "6b9f0987c93b9b37757740fe2e22628e03f295a096ead8d74e03c8f2e324c171"
+    },
+    "msh-hmg-reference_verification": {
+      "path": "research/2026-10-15-msh-hmg-reference-verification.json",
+      "sha256": "60ee61d7137e67e9198af818ee5c46474048d104435767132a8ea97e4b5817e7"
+    },
+    "pbp-reference-context": {
+      "path": "research/2026-10-15-pbp-reference-context.json",
+      "sha256": "91e6001b83982be61c51371ce534983f57478664369eefaa6c9540dba14c0543"
+    },
+    "pbp-reference-context_verification": {
+      "path": "research/2026-10-15-pbp-reference-context-verification.json",
+      "sha256": "d67175eff600154376e3241f75b3347ae967faa21c9b67af980e9343529fab9d"
+    },
+    "pjm-amz-primary": {
+      "path": "research/2026-10-15-pjm-amz-primary.json",
+      "sha256": "d2d59132012bffa2c308c4cde3146f452a8660141284742141115d118d58debe"
+    },
+    "pjm-amz-primary_verification": {
+      "path": "research/2026-10-15-pjm-amz-primary-verification.json",
+      "sha256": "a9c9bdf9d7a9f436c5c3866b7955e33eaf00d1056232b32a2fdeecaa5758ee99"
+    },
+    "prior_index": {
+      "path": "research/2026-10-15-card-current-references.json",
+      "sha256": "f98aaf50c76aaab8917fd470d4622e8ec2ababfbcdf970ce2b89439e614d71e7"
+    },
+    "prior_index_verification": {
+      "path": "research/2026-10-15-card-current-references-verification.json",
+      "sha256": "875e579f724f8c4a359f6cc0a9b973595f3e7ea4c67ccd12aaa7c8758849187c"
+    },
+    "prior_successor_index": {
+      "path": "research/2026-10-15-card-reference-successor.json",
+      "sha256": "ceae861cd595a44f45691e83f9bbe5ac5ca83e9a17a5b3bf24f73013210d9e3b"
+    },
+    "prior_successor_index_verification": {
+      "path": "research/2026-10-15-card-reference-successor-verification.json",
+      "sha256": "f2b27f36666ff9f84b2756d8e12b7b8f6d9fa7d11f383c3acbe72c96260ffff0"
+    },
+    "rifampin-inactivation-context": {
+      "path": "research/2026-10-15-rifampin-inactivation-context.json",
+      "sha256": "7ec57fa49cbdd392d23f8f74adedada966729e2bb1883f8b7bb41bd98217990e"
+    },
+    "rifampin-inactivation-context_verification": {
+      "path": "research/2026-10-15-rifampin-inactivation-context-verification.json",
+      "sha256": "ebd1f6ff239b40e101f9fb4c87eda3dabeb316a2e8b6689fb93e6d10b5be5b3b"
+    },
+    "rosab-primary": {
+      "path": "research/2026-10-15-rosab-primary.json",
+      "sha256": "a7e92679f5cd6210f22943681e4c397b180b70bb322cf4e723a0e44a06ee0a4f"
+    },
+    "rosab-primary_verification": {
+      "path": "research/2026-10-15-rosab-primary-verification.json",
+      "sha256": "dd8b66feff3ebb028f4b1938a96d296524ac8098b08750fcd119df750825d08a"
+    },
+    "sal-reference-context": {
+      "path": "research/2026-10-15-sal-reference-context.json",
+      "sha256": "47a48c941407dbd8860e69ee716dc1a2f37bb40ff183fdffe124439168157ea7"
+    },
+    "sal-reference-context_verification": {
+      "path": "research/2026-10-15-sal-reference-context-verification.json",
+      "sha256": "dfee609487152d78f86363eb762a0ff30da7cacd8006d810523d0aa0349fd717"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "vmlr2-structure": {
+      "path": "research/2026-10-15-vmlr2-structure.json",
+      "sha256": "691b67f1a1317a8ebb23b261e63195a8fb411851d36b0646b82b7982caae4b0a"
+    },
+    "vmlr2-structure_verification": {
+      "path": "research/2026-10-15-vmlr2-structure-verification.json",
+      "sha256": "661b2c66a52d6e35e93f55c950338b297c3c9b7cfeafc796ac123e873718fd38"
+    },
+    "pre_salmonella_index": {
+      "path": "research/2026-10-15-card-reference-reconciled.json",
+      "sha256": "d0a4b181ff5f2c42900f49e30498089f38aeb9499a4dd02f1b0f95f03beeab4b"
+    },
+    "salmonella_transition": {
+      "path": "research/2026-10-16-salmonella-qualification-transition.json",
+      "sha256": "95953c299ce1d257958070a37882b22febb878f3c0194d54cd119eb3eb8ec4ef"
+    },
+    "salmonella_active_reviews": {
+      "path": "curation/card_evidence_reviews.json",
+      "sha256": "584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687"
+    },
+    "salmonella_evidence_scope": {
+      "path": "research/2026-10-16-salmonella-evidence-scope.json",
+      "sha256": "8f33fe82da39dcd91f1ef7757739247ce6c87728ae4ebe5d0c4ae34fa5e67944"
+    }
+  },
+  "relocated_historical_inputs": {
+    "active_reviews": {
+      "from": {
+        "path": "curation/card_evidence_reviews.json",
+        "sha256": "6b38d17c52d8b0123e7bb2ece35341322269f0efb79b47d66d513b3c6bf6830d"
+      },
+      "to": {
+        "path": "tests/fixtures/card_evidence_reviews-before-salmonella-2026-10-16.json",
+        "sha256": "6b38d17c52d8b0123e7bb2ece35341322269f0efb79b47d66d513b3c6bf6830d"
+      }
+    }
+  }
+}

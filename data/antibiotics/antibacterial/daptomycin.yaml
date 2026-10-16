@@ -603,7 +603,7 @@ resistance_mechanisms:
     taxon, protein, allele or genome is assigned. Qualification references, not an
     upgrade of the CARD assertion: DOI:10.1128/aac.02435-16 (Addendum in proof; publisher
     primary HTML text; figures and supplements not reviewed). Reviewed 2026-10-15
-    by Codex; curation/card_evidence_reviews.json SHA-256 6b38d17c52d8b0123e7bb2ece35341322269f0efb79b47d66d513b3c6bf6830d.'
+    by Codex; curation/card_evidence_reviews.json SHA-256 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687.'
 molecular_targets:
 - target_id: ARO:3003275
   target_label: Daptomycin sensitive cardiolipin synthetase
@@ -807,6 +807,11 @@ curation_history:
     where evidence notes already named exactly one accession.
   llm_assisted: true
 - timestamp: '2026-10-16T01:11:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
+    2026-08-30, unchanged.'
+- timestamp: '2026-10-16T06:07:39Z'
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date

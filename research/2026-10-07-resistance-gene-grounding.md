@@ -15934,6 +15934,66 @@ preserved. PHI, curator, and score-rule claims are not reassessed by this index;
 records without CARD assertions are not declared reviewed. Reconciliation makes
 no network requests or biological-record changes. NCBI and #1040 remain deferred.
 
+## Salmonella Evidence-Scope Follow-up (2026-10-16)
+
+The [successor dossier](2026-10-16-salmonella-evidence-scope.json) binds the two
+broad-serovar gyrB/parE terms to **26 claims across 13 complete records**.
+All **2,939 record files** match the reconciled-index snapshot. The earlier
+Salmonella dossier remains unchanged; this follow-up adds selected Table 1 and
+Table 3 text review, not visual table, figure, supplement or whole-paper signoff.
+The scoped findings and exact source locations are retained in the
+[primary assessment](2026-10-16-salmonella-evidence-scope-assessment.json).
+
+The existing UniProt `lit_pubmed:19104017` query was replayed from its pinned
+2026_03 cache: complete for that query, with no entries. That is not evidence
+of protein absence. Prior genus-level taxonomy and ambiguous historical strain
+names remain context only. No reference protein, experimental allele, taxon or
+genome was assigned; the corpus-wide reference counts remain **1,405 terms with
+reference context and 597 unresolved**.
+
+The [proposed source-owned review](2026-10-16-salmonella-evidence-scope-proposed-review.json)
+passes the production review loader and an in-memory note-only projection for
+**13 parE claims**. It is **not active curation**: generated records, their
+histories, active reviews and the site are unchanged. Applying it still requires
+the curation canary, validated writes, reproduction, rendering and authoritative
+QC. The replay is offline; no new NCBI requests were made and #1040 stays deferred.
+
+## Salmonella Qualification Applied (2026-10-16)
+
+This section supersedes the pending curation status in the preceding historical
+draft. The verified source-owned qualification is now active for **13 parE
+claims**. The four pre-existing qualified notes also receive the new review-file
+provenance hash. The [exact transition](2026-10-16-salmonella-qualification-transition.json)
+records **17 changed records**, each with one reseeding history event; every
+non-note claim field is preserved and the other **2,922 records are byte-identical**.
+The ciprofloxacin canary preceded the bulk write. Generated pages and six
+collection-aware record downloads were regenerated from the maintained owners.
+
+The [current corpus index](2026-10-16-card-qualified-current.json) and
+[record table](2026-10-16-card-qualified-current.tsv) retain all **2,939 records**
+and **4,538 CARD claim bindings**, including original historical claim hashes.
+Reference context remains **1,405 terms with 597 unresolved**, **1,926 proteins**
+and **3,071 term-reference links**. This batch adds no reference identities,
+experimental assignments or whole-record primary signoffs. The earlier draft
+and earlier evidence artifacts remain unchanged and replay against exact
+historical fixtures, not relaxed hashes.
+
+The [verification receipt](2026-10-16-salmonella-qualification-verification.json)
+records the complete authoritative local QC result: **9,598 passed, 7 skipped**,
+with strict schema validation, corpus reproduction, chemical-map, rendered-site,
+provenance and source-queue gates passing. The cache-free regression passed
+**325 tests**, with **110 optional-cache skips**. The initial fixed-three-review
+test failure was filed as **#1154**, corrected while retaining prior assertions,
+and passed in the subsequent targeted, cache-free and full runs. Separate
+preservation checks verified all 17 rendered notes, unchanged embedding text,
+and six downloads equal to the complete collection-aware records.
+
+The qualifications preserve the scoped negative result and unresolved indirect
+role; they do not suppress CARD assertions or infer universal inactivity.
+Experimental allele, protein, taxon and genome assignments remain unset.
+No new NCBI request was made, #1040 remains deferred, and the full corpus-wide
+investigation remains open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including

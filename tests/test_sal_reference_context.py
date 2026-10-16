@@ -31,7 +31,7 @@ def checkpoint():
     return json.loads((ROOT / (audit.PREFIX + ".json")).read_bytes())
 
 
-def test_public_checkpoint_memberships_and_scope(checkpoint):
+def test_public_checkpoint_memberships_and_scope(checkpoint, pre_salmonella_qualification_root):
     assert checkpoint["counts"] == {
         "current_corpus_hashes_checked": 2939,
         "complete_records_loaded": 5,
@@ -42,7 +42,7 @@ def test_public_checkpoint_memberships_and_scope(checkpoint):
         "inactive_deposited_accessions": 1,
     }
     index = json.loads((ROOT / "research/2026-10-15-card-current-references.json").read_bytes())
-    rows, claims = audit.bind_current(ROOT, index)
+    rows, claims = audit.bind_current(pre_salmonella_qualification_root, index)
     assert rows == checkpoint["records"] and claims == checkpoint["claims"]
     for term, row in checkpoint["terms"].items():
         assert (

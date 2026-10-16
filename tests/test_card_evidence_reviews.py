@@ -20,6 +20,7 @@ from audit_curator_resistance_fields import owner  # noqa: E402
 
 INVENTORY = ROOT / "data/raw/aro_resistance_edges.tsv"
 SLUGS = ("pleuromutilin", "colistin-a", "colistin-b", "daptomycin")
+SALMONELLA = json.loads((ROOT / "research/2026-10-16-salmonella-evidence-scope.json").read_bytes())
 
 
 @pytest.fixture(autouse=True)
@@ -39,14 +40,16 @@ def inputs(tmp_path):
     path = tmp_path / "reviews.json"
     path.write_bytes(review.DEFAULT_REVIEW.read_bytes())
     rows = list(csv.DictReader(inventory.open(), delimiter="\t"))
-    documents = [load_record(ROOT / f"data/antibiotics/antibacterial/{s}.yaml") for s in SLUGS]
+    paths = {ROOT / f"data/antibiotics/antibacterial/{s}.yaml" for s in SLUGS}
+    paths.update(ROOT / r["path"] for r in SALMONELLA["records"])
+    documents = [load_record(path) for path in sorted(paths)]
     return inventory, rows, {r["identifier"]: r for r in documents}, path
 
 
-def test_projection_changes_only_four_notes_and_preserves_source_ownership(inputs):
+def test_projection_changes_only_seventeen_notes_and_preserves_source_ownership(inputs):
     inventory, rows, records, path = inputs
     decisions = review.load_reviews(*inputs)
-    assert len(decisions) == 4
+    assert len(decisions) == 17
     before = copy.deepcopy(records)
     unqualified = copy.deepcopy(records)
     seed.attach_aro_mechanism(unqualified, "2026-10-15", evidence_review=None)
@@ -84,7 +87,7 @@ def test_projection_changes_only_four_notes_and_preserves_source_ownership(input
         ("CHEBI:59064", "ARO:3004695"),
         ("CHEBI:59673", "ARO:3004695"),
         ("CHEBI:600103", "ARO:3004097"),
-    }
+    } | {(r["identifier"], "ARO:3003317") for r in SALMONELLA["records"]}
     once = copy.deepcopy(records)
     seed.attach_aro_mechanism(records, "2026-10-15", evidence_review=path)
     assert records == once
@@ -216,7 +219,7 @@ def test_unreviewed_claim_and_explicit_fixture_opt_out_are_unchanged(inputs):
 
 def test_qualifications_retain_both_conflicting_results_and_exact_compound_limits():
     document = json.loads(review.DEFAULT_REVIEW.read_bytes())
-    eatav, mcr, cdsa = document["reviews"]
+    eatav, mcr, cdsa, pare = document["reviews"]
     assert "tiamulin" in eatav["note"] and "not the parent" in eatav["note"]
     assert "contrasting" in mcr["note"] and "not universal" in mcr["note"]
     assert "purified colistin A or B separately" in mcr["note"]
@@ -233,6 +236,15 @@ def test_qualifications_retain_both_conflicting_results_and_exact_compound_limit
         (ROOT / "research/2026-10-15-cdsa-cyp51-context-proposed-review.json").read_bytes()
     )
     assert cdsa == draft["reviews"][0]
+    pare_draft = json.loads(
+        (ROOT / "research/2026-10-16-salmonella-evidence-scope-proposed-review.json").read_bytes()
+    )
+    assert pare == pare_draft["reviews"][0]
+    assert len(pare["source_rows"]) == 13
+    assert "indirect contribution remained unresolved" in pare["note"]
+    assert "not a universal inactivity claim" in pare["note"]
+    unassigned = "without assigning an experimental protein, allele, taxon or susceptibility observation"
+    assert unassigned in pare["note"]
 
 
 @pytest.mark.parametrize("key", ["schema_version", "note", "source_url", "row_sha256"])
@@ -285,4 +297,4 @@ def test_valid_primary_source_urls_need_no_network(inputs, url):
     document = json.loads(path.read_bytes())
     document["reviews"][0]["evidence"][0]["source_url"] = url
     path.write_text(json.dumps(document))
-    assert len(review.load_reviews(inventory, rows, records, path)) == 4
+    assert len(review.load_reviews(inventory, rows, records, path)) == 17

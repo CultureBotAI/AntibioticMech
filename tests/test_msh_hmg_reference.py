@@ -50,8 +50,8 @@ def native_frozen(frozen, require_native_inputs):
     return pins, data, public, msh, hmg, doc
 
 
-def test_exact_read_only_projection(native_frozen):
-    assert audit.build(ROOT) == native_frozen[5]
+def test_exact_read_only_projection(native_frozen, pre_salmonella_qualification_root):
+    assert audit.build(pre_salmonella_qualification_root) == native_frozen[5]
 
 
 def test_public_summary(frozen):

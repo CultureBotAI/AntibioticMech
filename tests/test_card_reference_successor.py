@@ -25,8 +25,8 @@ def no_network(monkeypatch):
 
 
 @pytest.fixture(scope="module")
-def frozen():
-    return audit.read_inputs(ROOT)
+def frozen(pre_salmonella_qualification_root):
+    return audit.read_inputs(pre_salmonella_qualification_root)
 
 
 @pytest.fixture(scope="module")
