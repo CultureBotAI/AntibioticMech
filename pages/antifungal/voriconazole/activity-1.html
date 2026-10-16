@@ -17,7 +17,10 @@
     <a href="../../browse.html">Browse</a>
     <a href="../../map.html">Map</a>
     <a href="../../chemical-map.html">Chemical map</a>
+    <a href="../../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
 <main>
@@ -25,29 +28,33 @@
 <h1>voriconazole: activity observations</h1>
 <p class="meta">3 observations &middot; <a href="record-dbc68854550b682d9a4b0ec22635cc9d187e3735a6a09168f96c3e8b00218edc.json.gz" download>Complete record (JSON.gz)</a></p>
 <section id="activity-browser" data-index="search-76d5d82404c22fd34ff034de7863e280dd117a5e9075d9309c4dbb5eb5c1f12a.json.gz" data-identifier="CHEBI:10023" data-key="BCEHBSKCWLPMDN-MGPLVRAMSA-N" data-total="3" data-page-size="100">
-  <form class="activity-filters" hidden role="search" aria-label="Activity observations">
-    <label>Taxon, strain or accession<input name="query" type="search" autocomplete="off"></label>
-    <label>Activity<select name="activity"><option value="">All activities</option><option value="=">Not reported</option><option value="=RESISTANT">RESISTANT</option></select></label>
-    <label>Source<select name="source"><option value="">All sources</option><option value="=">Not reported</option></select></label>
-    <button type="reset">Reset</button>
-  </form>
-  <p class="activity-status" role="status"></p>
-  <button class="activity-retry" type="button" hidden>Retry search</button>
-  <div class="activity-results" hidden></div>
-  <nav class="activity-results-pager pager" aria-label="Search results" hidden>
-    <button type="button" data-step="-1">Previous</button><span></span><button type="button" data-step="1">Next</button>
-  </nav>
-  <div class="activity-default">
-    <nav class="pager" aria-label="Activity pages">
+  <div class="page-with-sidebar">
+    <aside class="facet-sidebar" aria-label="Activity filters">
+      <form class="activity-filters facet-form" hidden role="search" aria-label="Activity observations">
+        <label>Taxon, strain or accession<input name="query" type="search" autocomplete="off"></label>
+        <label>Activity<select name="activity"><option value="">All activities</option><option value="=">Not reported</option><option value="=RESISTANT">RESISTANT</option></select></label>
+        <label>Source<select name="source"><option value="">All sources</option><option value="=">Not reported</option></select></label>
+        <button type="reset">Reset</button>
+      </form>
+    </aside>
+    <div class="results-main">
+      <p class="activity-status" role="status"></p>
+      <button class="activity-retry" type="button" hidden>Retry search</button>
+      <div class="activity-results" hidden></div>
+      <nav class="activity-results-pager pager" aria-label="Search results" hidden>
+        <button type="button" data-step="-1">Previous</button><span></span><button type="button" data-step="1">Next</button>
+      </nav>
+      <div class="activity-default">
+        <nav class="pager" aria-label="Activity pages">
   <span aria-current="page">Page 1 of 1</span>
 </nav>
 
-    <form class="activity-jump" hidden>
-      <label>Page <input name="page" type="number" min="1" max="1" value="1" required></label>
-      <button type="submit">Go</button>
-    </form>
-    <p class="meta">Observations 1&ndash;3 of 3</p>
-    <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
+        <form class="activity-jump" hidden>
+          <label>Page <input name="page" type="number" min="1" max="1" value="1" required></label>
+          <button type="submit">Go</button>
+        </form>
+        <p class="meta">Observations 1&ndash;3 of 3</p>
+        <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
   <thead><tr><th scope="col">Organism</th><th scope="col">Activity</th><th scope="col">MIC</th><th scope="col">Disk diffusion</th><th scope="col">Assay</th><th scope="col">Strain</th><th scope="col">Sample/genome</th><th scope="col">Evidence</th></tr></thead>
@@ -102,17 +109,19 @@
 
 </div>
 
-    <nav class="pager" aria-label="Activity pages, bottom">
+        <nav class="pager" aria-label="Activity pages, bottom">
   <span aria-current="page">Page 1 of 1</span>
 </nav>
 
+      </div>
+    </div>
   </div>
 </section>
 </main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f7e1838e55ec</code>, 2939 records). <a href="../../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

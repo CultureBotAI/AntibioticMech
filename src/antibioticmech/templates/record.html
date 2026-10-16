@@ -5,6 +5,13 @@
 {% block title %}{{ r.label }} — AntibioticMech{% endblock %}
 {% block description %}{{ r.label }} ({{ r.identifier }}): {{ r.definition or (r.structural_class or 'an antimicrobial compound') }}{% endblock %}
 {% block content %}
+<div class="record-topbar">
+  <p class="meta"><a href="../browse.html">Browse</a> <span class="sep">&middot;</span> <a href="../class/{{ r.class_slug }}.html">{{ r.antimicrobial_class }}</a></p>
+  <form class="record-search" action="../browse.html" method="get" role="search">
+    <input type="search" name="q" placeholder="Search all compounds…" aria-label="Search all compounds">
+    <button type="submit">Search</button>
+  </form>
+</div>
 <h1>{{ r.label }}</h1>
 <p class="meta">
   <code class="curie">{{ r.identifier }}</code>
@@ -393,6 +400,15 @@ compound.</p>
 <p class="meta">
   Seeded by <code>scripts/seed_from_sources.py</code> from the committed
   inventories in <code>data/raw/</code>.
-  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/{{ r.repo_path }}">View the record</a>.
+  <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/{{ r.repo_path }}">View the record (YAML)</a>.
+</p>
+<p class="meta">
+  <strong>Explore across X-Mech:</strong>
+  <a href="https://culturebotai.github.io/MediaIngredientMech/app.html?q={{ r.label|urlencode }}">MediaIngredientMech ({{ r.label }})</a>
+  &middot; <a href="https://culturebotai.github.io/CultureMech/?q={{ r.label|urlencode }}">CultureMech</a>
+  &middot; <a href="https://culturebotai.github.io/NaturalProductMech/pages/browse.html?q={{ r.label|urlencode }}">NaturalProductMech</a>
+  &middot; <a href="https://culturebotai.github.io/PathwayMech/pages/index.html?q={{ r.label|urlencode }}">PathwayMech</a>
+  &middot; <a href="https://culturebotai.github.io/TraitMech/pages/index.html?q={{ r.label|urlencode }}">TraitMech</a>
+  {% if r.producer_organisms and r.producer_organisms[0].taxon_label %}&middot; <a href="https://culturebotai.github.io/TaxonMech/browse.html?q={{ r.producer_organisms[0].taxon_label|urlencode }}">TaxonMech ({{ r.producer_organisms[0].taxon_label }})</a>{% endif %}
 </p>
 {% endblock %}

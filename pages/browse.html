@@ -9,7 +9,7 @@
 <script src="theme-toggle.js"></script>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap wide">
 <header class="site">
   <a class="brand" href="index.html">AntibioticMech</a>
   <nav>
@@ -17,70 +17,295 @@
     <a href="browse.html">Browse</a>
     <a href="map.html">Map</a>
     <a href="chemical-map.html">Chemical map</a>
+    <a href="sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
 <main>
 <h1>Browse</h1>
-<p class="lede">2939 compound records across 7 antimicrobial classes.</p>
-<div class="table-scroll" role="region" aria-label="Antimicrobial classes" tabindex="0">
-<table>
-  <caption>Antimicrobial classes</caption>
-  <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
-  <tr>
-    <td><a href="class/antibacterial.html">Antibacterial</a> <span class="meta">incl. subclasses</span></td>
-    <td class="num">1121</td>
-    <td class="num">867</td>
-    <td class="meta">Active against bacteria — antibacterial drugs and agents.</td>
-  </tr>
-  <tr class="subclass">
-    <td><span class="tree" aria-hidden="true">&#8627;</span> <a href="class/antimycobacterial.html">Antimycobacterial</a> <span class="meta">subclass of antibacterial, counted in it</span></td>
-    <td class="num">78</td>
-    <td class="num">78</td>
-    <td class="meta">Antitubercular, antimycobacterial and leprostatic agents.</td>
-  </tr>
-  <tr>
-    <td><a href="class/antifungal.html">Antifungal</a></td>
-    <td class="num">594</td>
-    <td class="num">581</td>
-    <td class="meta">Antifungal agents, drugs and agrochemical fungicides.</td>
-  </tr>
-  <tr>
-    <td><a href="class/antiprotozoal.html">Antiprotozoal</a></td>
-    <td class="num">248</td>
-    <td class="num">248</td>
-    <td class="meta">Antimalarial, antileishmanial, trypanocidal, coccidiostat and antitrichomonal agents.</td>
-  </tr>
-  <tr>
-    <td><a href="class/antiviral.html">Antiviral</a></td>
-    <td class="num">473</td>
-    <td class="num">473</td>
-    <td class="meta"></td>
-  </tr>
-  <tr>
-    <td><a href="class/biocide.html">Biocide</a></td>
-    <td class="num">31</td>
-    <td class="num">29</td>
-    <td class="meta">Disinfectants and antimicrobial food or cosmetic preservatives.</td>
-  </tr>
-  <tr>
-    <td><a href="class/unspecified.html">Unspecified</a></td>
-    <td class="num">472</td>
-    <td class="num">471</td>
-    <td class="meta">Asserted as an antimicrobial agent without a named microbial target group, or in scope by curation but fitting no other class.</td>
-  </tr>
-</table>
+<p class="lede">2939 compound records across 7 antimicrobial classes. <a href="browse-index.json" download="antibioticmech-browse-index.json">Download browse index (JSON)</a>.</p>
+
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Browse filters">
+    <form id="browse-form" class="facet-form" role="search">
+      <div class="facet-group">
+        <label class="facet-title" for="q">Search compounds</label>
+        <input class="searchbox" id="q" name="q" type="search" data-index="browse-index.json" data-total="2939" placeholder="Name, ChEBI/ARO ID, SMILES/InChIKey, synonym…" autocomplete="off">
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="facet-class">Antimicrobial class</label>
+        <select id="facet-class" name="class">
+          <option value="">All classes (2939)</option>
+          <option value="antibacterial">Antibacterial (1043)</option>
+          <option value="antimycobacterial">Antimycobacterial (78)</option>
+          <option value="antifungal">Antifungal (594)</option>
+          <option value="antiprotozoal">Antiprotozoal (248)</option>
+          <option value="antiviral">Antiviral (473)</option>
+          <option value="biocide">Biocide (31)</option>
+          <option value="unspecified">Unspecified (472)</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="facet-grounding">Grounding status</label>
+        <select id="facet-grounding" name="grounding">
+          <option value="">All grounding statuses</option>
+          <option value="EXACT">EXACT (2669)</option>
+          <option value="UNGROUNDED">UNGROUNDED (270)</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="facet-status">Curation status</label>
+        <select id="facet-status" name="status">
+          <option value="">All workflow statuses</option>
+          <option value="REVIEWED">REVIEWED (80)</option>
+          <option value="SEEDED">SEEDED (2829)</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="facet-source">Source</label>
+        <select id="facet-source" name="source">
+          <option value="">All sources</option>
+          <option value="ChEBI">ChEBI</option>
+          <option value="ARO">ARO</option>
+          <option value="both">ChEBI &amp; ARO (281)</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="facet-sort">Sort by</label>
+        <select id="facet-sort" name="sort">
+          <option value="name-asc">Compound name (A–Z)</option>
+          <option value="name-desc">Compound name (Z–A)</option>
+          <option value="class">Antimicrobial class (A–Z)</option>
+          <option value="structural">Structural class (A–Z)</option>
+          <option value="status">Curation status (REVIEWED first)</option>
+          <option value="grounding">Grounding status (EXACT first)</option>
+        </select>
+      </div>
+      <fieldset class="facet-group">
+        <legend class="facet-title">Mechanism coverage</legend>
+        <label class="facet-check"><input type="checkbox" id="facet-target" value="1"> Has molecular target</label>
+        <label class="facet-check"><input type="checkbox" id="facet-moa" value="2"> Has mode of action</label>
+        <label class="facet-check"><input type="checkbox" id="facet-res" value="4"> Has resistance mechanism</label>
+        <label class="facet-check"><input type="checkbox" id="facet-act" value="8"> Has activity spectrum</label>
+      </fieldset>
+      <button type="reset" id="browse-reset">Reset filters</button>
+    </form>
+  </aside>
+
+  <div class="results-main">
+    <p class="meta" id="browse-count" role="status" aria-live="polite"></p>
+    <div id="browse-results" hidden>
+<div class="table-scroll" role="region" aria-label="Matching compounds" tabindex="0">
+      <table id="browse-tbl">
+        <caption>Matching compound records</caption>
+        <thead><tr><th scope="col">Compound</th><th scope="col">Class</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
+        <tbody></tbody>
+      </table>
 
 </div>
-<p class="meta">A row marked <em>subclass of X</em> is already counted in X's own row —
-mycobacteria are bacteria, and filing is exclusive, so a compound filed antimycobacterial
-is not filed antibacterial as well. Each record is counted once in the 2939
-total, so this column sums to more than it.</p>
+    </div>
+
+    <div id="browse-overview">
+<div class="table-scroll" role="region" aria-label="Antimicrobial classes" tabindex="0">
+      <table>
+        <caption>Antimicrobial classes</caption>
+        <thead><tr><th scope="col">Class</th><th scope="col" class="num">Records</th><th scope="col" class="num">Grounded</th><th scope="col">What it holds</th></tr></thead>
+        <tr>
+          <td><a href="class/antibacterial.html">Antibacterial</a> <span class="meta">incl. subclasses</span></td>
+          <td class="num">1121</td>
+          <td class="num">867</td>
+          <td class="meta">Active against bacteria — antibacterial drugs and agents.</td>
+        </tr>
+        <tr class="subclass">
+          <td><span class="tree" aria-hidden="true">&#8627;</span> <a href="class/antimycobacterial.html">Antimycobacterial</a> <span class="meta">subclass of antibacterial, counted in it</span></td>
+          <td class="num">78</td>
+          <td class="num">78</td>
+          <td class="meta">Antitubercular, antimycobacterial and leprostatic agents.</td>
+        </tr>
+        <tr>
+          <td><a href="class/antifungal.html">Antifungal</a></td>
+          <td class="num">594</td>
+          <td class="num">581</td>
+          <td class="meta">Antifungal agents, drugs and agrochemical fungicides.</td>
+        </tr>
+        <tr>
+          <td><a href="class/antiprotozoal.html">Antiprotozoal</a></td>
+          <td class="num">248</td>
+          <td class="num">248</td>
+          <td class="meta">Antimalarial, antileishmanial, trypanocidal, coccidiostat and antitrichomonal agents.</td>
+        </tr>
+        <tr>
+          <td><a href="class/antiviral.html">Antiviral</a></td>
+          <td class="num">473</td>
+          <td class="num">473</td>
+          <td class="meta"></td>
+        </tr>
+        <tr>
+          <td><a href="class/biocide.html">Biocide</a></td>
+          <td class="num">31</td>
+          <td class="num">29</td>
+          <td class="meta">Disinfectants and antimicrobial food or cosmetic preservatives.</td>
+        </tr>
+        <tr>
+          <td><a href="class/unspecified.html">Unspecified</a></td>
+          <td class="num">472</td>
+          <td class="num">471</td>
+          <td class="meta">Asserted as an antimicrobial agent without a named microbial target group, or in scope by curation but fitting no other class.</td>
+        </tr>
+      </table>
+
+</div>
+      <p class="meta">A row marked <em>subclass of X</em> is already counted in X's own row —
+      mycobacteria are bacteria, and filing is exclusive, so a compound filed antimycobacterial
+      is not filed antibacterial as well. Each record is counted once in the 2939
+      total, so this column sums to more than it.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('browse-form');
+  var box = document.getElementById('q');
+  var fClass = document.getElementById('facet-class');
+  var fGround = document.getElementById('facet-grounding');
+  var fStatus = document.getElementById('facet-status');
+  var fSource = document.getElementById('facet-source');
+  var fSort = document.getElementById('facet-sort');
+  var checks = [
+    document.getElementById('facet-target'),
+    document.getElementById('facet-moa'),
+    document.getElementById('facet-res'),
+    document.getElementById('facet-act')
+  ];
+  var out = document.getElementById('browse-count');
+  var resultsWrap = document.getElementById('browse-results');
+  var body = document.querySelector('#browse-tbl tbody');
+  var index = null, loading = false;
+
+  function esc(t) {
+    return String(t).replace(/[&<>"]/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
+    });
+  }
+
+  function hasActiveFilter() {
+    if (box.value.trim() || fClass.value || fGround.value || fStatus.value || fSource.value) return true;
+    if (fSort && fSort.value && fSort.value !== 'name-asc') return true;
+    return checks.some(function (c) { return c.checked; });
+  }
+
+  function syncUrl() {
+    if (!window.history || !window.history.replaceState) return;
+    var url = new URL(window.location.href);
+    var q = box.value.trim();
+    if (q) url.searchParams.set('q', q); else url.searchParams.delete('q');
+    if (fClass.value) url.searchParams.set('class', fClass.value); else url.searchParams.delete('class');
+    if (fGround.value) url.searchParams.set('grounding', fGround.value); else url.searchParams.delete('grounding');
+    if (fStatus.value) url.searchParams.set('status', fStatus.value); else url.searchParams.delete('status');
+    if (fSource.value) url.searchParams.set('source', fSource.value); else url.searchParams.delete('source');
+    if (fSort && fSort.value && fSort.value !== 'name-asc') url.searchParams.set('sort', fSort.value); else url.searchParams.delete('sort');
+    var reqBits = checks.reduce(function (acc, c) { return c.checked ? (acc | parseInt(c.value, 10)) : acc; }, 0);
+    if (reqBits) url.searchParams.set('bits', String(reqBits)); else url.searchParams.delete('bits');
+    window.history.replaceState(null, '', url);
+  }
+
+  function sortHits(hits) {
+    var mode = fSort ? fSort.value : 'name-asc';
+    return hits.slice().sort(function (a, b) {
+      if (mode === 'name-desc') return String(b[0]).localeCompare(String(a[0]));
+      if (mode === 'class') return String(a[3]).localeCompare(String(b[3])) || String(a[0]).localeCompare(String(b[0]));
+      if (mode === 'structural') return String(a[4]).localeCompare(String(b[4])) || String(a[0]).localeCompare(String(b[0]));
+      if (mode === 'status') {
+        var sa = a[6] === 'REVIEWED' ? 0 : 1, sb = b[6] === 'REVIEWED' ? 0 : 1;
+        return (sa - sb) || String(a[0]).localeCompare(String(b[0]));
+      }
+      if (mode === 'grounding') {
+        var ga = a[5] === 'EXACT' ? 0 : 1, gb = b[5] === 'EXACT' ? 0 : 1;
+        return (ga - gb) || String(a[0]).localeCompare(String(b[0]));
+      }
+      return String(a[0]).localeCompare(String(b[0]));
+    });
+  }
+
+  function apply() {
+    syncUrl();
+    if (!hasActiveFilter()) {
+      resultsWrap.hidden = true;
+      out.textContent = '';
+      return;
+    }
+    if (!index) {
+      if (!loading) {
+        loading = true;
+        out.textContent = 'Loading compound index…';
+        fetch(box.getAttribute('data-index'))
+          .then(function (r) { return r.json(); })
+          .then(function (data) { index = data; loading = false; apply(); })
+          .catch(function () { loading = false; out.textContent = 'Filter index unavailable.'; });
+      }
+      return;
+    }
+    var raw = box.value.trim().toLowerCase();
+    var slugged = raw.replace(/[^a-z0-9]+/g, '-');
+    var reqBits = checks.reduce(function (acc, c) { return c.checked ? (acc | parseInt(c.value, 10)) : acc; }, 0);
+    var hits = sortHits(index.filter(function (r) {
+      // r = [label, slug, class_slug, class_name, structural_class, grounding, status, sources, identifiers, bits]
+      if (fClass.value && r[2] !== fClass.value) return false;
+      if (fGround.value && r[5] !== fGround.value) return false;
+      if (fStatus.value && r[6] !== fStatus.value) return false;
+      if (fSource.value === 'both' && !(r[7].indexOf('ChEBI') !== -1 && r[7].indexOf('ARO') !== -1)) return false;
+      if (fSource.value && fSource.value !== 'both' && r[7].indexOf(fSource.value) === -1) return false;
+      if (reqBits && ((r[9] & reqBits) !== reqBits)) return false;
+      if (raw) {
+        var k = (r[0] + ' ' + r[1] + ' ' + r[3] + ' ' + r[4] + ' ' + r[7] + ' ' + (r[8] || '')).toLowerCase();
+        if (k.indexOf(raw) === -1 && k.indexOf(slugged) === -1) return false;
+      }
+      return true;
+    }));
+    resultsWrap.hidden = false;
+    body.innerHTML = hits.slice(0, 500).map(function (r) {
+      var warn = (r[5] !== 'EXACT') ? ' warn' : '';
+      var plain = (r[6] === 'SEEDED') ? ' plain' : '';
+      return '<tr><td><a href="' + esc(r[2]) + '/' + esc(r[1]) + '.html">' + esc(r[0]) +
+             '</a></td><td class="meta"><a href="class/' + esc(r[2]) + '.html">' + esc(r[3].replace(/_/g, ' ').toLowerCase()) +
+             '</a></td><td class="meta">' + esc(r[4]) +
+             '</td><td><span class="pill' + warn + '">' + esc(r[5]) +
+             '</span></td><td><span class="pill' + plain + '">' + esc(r[6]) +
+             '</span></td><td class="meta">' + esc(r[7]) + '</td></tr>';
+    }).join('');
+    out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
+      ' compounds match' + (hits.length > 500 ? ' (first 500 shown)' : '') + '.';
+  }
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); apply(); });
+  form.addEventListener('input', apply);
+  form.addEventListener('change', apply);
+  form.addEventListener('reset', function () { setTimeout(apply, 0); });
+
+  if (window.location && window.location.search) {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('q')) box.value = params.get('q');
+    if (params.get('class')) fClass.value = params.get('class');
+    if (params.get('grounding')) fGround.value = params.get('grounding');
+    if (params.get('status')) fStatus.value = params.get('status');
+    if (params.get('source')) fSource.value = params.get('source');
+    if (params.get('sort') && fSort) fSort.value = params.get('sort');
+    var bitsParam = parseInt(params.get('bits') || '0', 10);
+    if (bitsParam) {
+      checks.forEach(function (c) { c.checked = Boolean(bitsParam & parseInt(c.value, 10)); });
+    }
+    if (hasActiveFilter()) apply();
+  }
+})();
+</script>
 </main>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f7e1838e55ec</code>, 2939 records). <a href="browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

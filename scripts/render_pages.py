@@ -455,9 +455,18 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
         key: sum(1 for _, doc in records if doc.get(key)) for key, _label in MECHANISM_FIELDS
     }
 
+    import hashlib
+    digest_h = hashlib.sha256()
+    for _, doc in records:
+        digest_h.update(
+            f"{doc.get('identifier', '')}:{doc.get('curation_status', '')}:{len(doc.get('curation_history') or [])}\n".encode("utf-8")
+        )
+    corpus_digest = digest_h.hexdigest()[:12]
+
     stats = {
         "total": total,
         "extracted_at": extracted_at(),
+        "corpus_digest": corpus_digest,
         "reviewed": curation_counts.get("REVIEWED", 0),
         "seeded": curation_counts.get("SEEDED", 0),
         "seeded_pct": round(100 * curation_counts.get("SEEDED", 0) / total, 1),
@@ -478,6 +487,7 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     href_by_identifier: dict[str, str] = {}
     activity_written: set[Path] = set()
     activity_pages: list[str] = []
+    browse_rows: list[list] = []
     for path, doc in records:
         class_dir = path.parent.name
         sources = sorted({c["source"] for c in (doc.get("source_concepts") or [])})
@@ -495,19 +505,42 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
         )
 
         href_by_identifier[str(doc.get("identifier"))] = f"{class_dir}/{path.stem}.html"
+        idents = [
+            doc["identifier"], *(doc.get("xrefs") or []),
+            (doc.get("chemical_structure") or {}).get("standard_inchi_key"),
+            *(c.get("source_id") for c in doc.get("source_concepts") or []),
+        ]
         by_class[class_dir].append(
             {
                 "label": doc["label"],
                 "identifier": doc["identifier"],
-                "identifiers": [doc["identifier"], *(doc.get("xrefs") or []),
-                                (doc.get("chemical_structure") or {}).get("standard_inchi_key"),
-                                *(c.get("source_id") for c in doc.get("source_concepts") or [])],
+                "identifiers": idents,
                 "slug": path.stem,
                 "structural_class": doc.get("structural_class") or "",
                 "grounding": doc.get("grounding_status", "?"),
                 "status": doc.get("curation_status", "?"),
                 "sources": sources,
             }
+        )
+        bits = (
+            (1 if doc.get("molecular_targets") else 0)
+            | (2 if doc.get("mode_of_action") else 0)
+            | (4 if doc.get("resistance_mechanisms") else 0)
+            | (8 if doc.get("activity_spectrum") else 0)
+        )
+        browse_rows.append(
+            [
+                doc["label"],
+                path.stem,
+                class_dir,
+                doc.get("antimicrobial_class", ""),
+                doc.get("structural_class") or "—",
+                doc.get("grounding_status", "?"),
+                doc.get("curation_status", "?"),
+                ", ".join(sources),
+                " ".join(filter(None, idents)),
+                bits,
+            ]
         )
 
     # Filing is exclusive but the classes are not disjoint: mycobacteria are
@@ -628,6 +661,11 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
         env.get_template("browse.html").render(stats=stats, classes=classes, root=""),
         encoding="utf-8",
     )
+    browse_rows.sort(key=lambda r: r[0])
+    (out_dir / "browse-index.json").write_text(
+        json.dumps(browse_rows, separators=(",", ":"), ensure_ascii=False),
+        encoding="utf-8",
+    )
     # The corpus map, when its JSON has been built. Committed and small, so the
     # page renders identically for anyone; absent only in a checkout where
     # `just embed-map` has never run, and skipped rather than half-drawn.
@@ -649,6 +687,23 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
                 .replace("<", "\\u003c").replace("\u2028", "\\u2028")
                 .replace("\u2029", "\\u2029"), root=""),
             encoding="utf-8")
+
+    seq_map_path = REPO_ROOT / "data" / "embeddings" / "sequence_map.json"
+    seq_map_rendered = seq_map_path.exists()
+    if seq_map_rendered:
+        seq_map = json.loads(seq_map_path.read_text(encoding="utf-8"))
+        (out_dir / "sequence-map.html").write_text(
+            env.get_template("sequence_map.html").render(
+                stats=stats,
+                seq_map=seq_map,
+                seq_map_json=json.dumps(seq_map, separators=(",", ":"))
+                .replace("<", "\\u003c").replace("\u2028", "\\u2028")
+                .replace("\u2029", "\\u2029"),
+                root="",
+            ),
+            encoding="utf-8",
+        )
+        shutil.copyfile(seq_map_path, out_dir / "data" / "sequence_map.json")
 
     (out_dir / "chemical-map.html").write_text(
         env.get_template("chemical_map.html").render(
@@ -691,6 +746,8 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
     listed = ["index.html", "browse.html", "chemical-map.html", "404.html"] + class_pages
+    if seq_map_rendered:
+        listed.insert(3, "sequence-map.html")
     listed += [f"{path.parent.name}/{path.stem}.html" for path, _ in records] + activity_pages
     urls = "\n".join(f"  <url><loc>{SITE_BASE}{page}</loc></url>" for page in listed)
     (out_dir / "sitemap.xml").write_text(
@@ -708,7 +765,8 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     # shrinks and shifts, not just grows; without this, pages/ keeps serving a
     # stale page forever and --check would have nothing to catch it with.
     written = {
-        out_dir / "index.html", out_dir / "browse.html", out_dir / "chemical-map.html",
+        out_dir / "index.html", out_dir / "browse.html", out_dir / "browse-index.json",
+        out_dir / "chemical-map.html",
         out_dir / "chemical-map.js", out_dir / "data" / "chemical-structure-map.json",
         out_dir / "data" / "chemical-search.json",
         out_dir / "404.html", out_dir / "style.css", out_dir / "theme-toggle.js",
@@ -719,6 +777,9 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     }
     if map_rendered:
         written.add(out_dir / "map.html")
+    if seq_map_rendered:
+        written.add(out_dir / "sequence-map.html")
+        written.add(out_dir / "data" / "sequence_map.json")
     written |= {out_dir / page for page in class_pages}
     written |= {out_dir / "class" / f"{d}.json" for d in class_dirs}
     written |= {out_dir / path.parent.name / f"{path.stem}.html" for path, _ in records}

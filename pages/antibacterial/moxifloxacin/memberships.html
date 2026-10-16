@@ -19,27 +19,36 @@
     <a href="../../browse.html">Browse</a>
     <a href="../../map.html">Map</a>
     <a href="../../chemical-map.html">Chemical map</a>
+    <a href="../../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
     <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
   </nav>
 </header>
 <main>
 <p><a href="../moxifloxacin.html#activity">moxifloxacin record</a> &middot; <a href="activity-1.html">Activity observations</a></p>
 <h1>moxifloxacin: source isolates</h1>
 <section id="membership-browser" data-index="membership-index-5ad9c68f76a474123fcbf8ef5f31f49c5c9cdd5fb39087daebe47b6dab20d812.json.gz" data-identifier="CHEBI:63611" data-key="FABPRXSRWADJSP-MEDUHNTESA-N" data-total="313">
-  <form class="activity-filters" hidden role="search" aria-label="Source isolates">
-    <label>Observation<select name="group"></select></label>
-    <label>Source isolate or accession<input name="query" type="search" autocomplete="off"></label>
-    <label>Sequencing context<select name="context"><option value="">All isolates</option><option value="linked">Linked in snapshot</option><option value="unlinked">Not in snapshot</option></select></label>
-    <button type="reset">Reset</button>
-  </form>
-  <p class="membership-status" role="status"></p>
-  <button class="membership-retry" type="button" hidden>Retry</button>
-  <div class="membership-observation"></div>
-  <div class="membership-results"></div>
-  <nav class="membership-pager pager" aria-label="Source isolate results" hidden>
-    <button type="button" data-step="-1" aria-label="Previous isolates" title="Previous isolates">&larr;</button><span></span><button type="button" data-step="1" aria-label="Next isolates" title="Next isolates">&rarr;</button>
-  </nav>
-  <noscript><p>Source-isolate downloads</p></noscript>
+  <div class="page-with-sidebar">
+    <aside class="facet-sidebar" aria-label="Isolate filters">
+      <form class="activity-filters facet-form" hidden role="search" aria-label="Source isolates">
+        <label>Observation<select name="group"></select></label>
+        <label>Source isolate or accession<input name="query" type="search" autocomplete="off"></label>
+        <label>Sequencing context<select name="context"><option value="">All isolates</option><option value="linked">Linked in snapshot</option><option value="unlinked">Not in snapshot</option></select></label>
+        <button type="reset">Reset</button>
+      </form>
+    </aside>
+    <div class="results-main">
+      <p class="membership-status" role="status"></p>
+      <button class="membership-retry" type="button" hidden>Retry</button>
+      <div class="membership-observation"></div>
+      <div class="membership-results"></div>
+      <nav class="membership-pager pager" aria-label="Source isolate results" hidden>
+        <button type="button" data-step="-1" aria-label="Previous isolates" title="Previous isolates">&larr;</button><span></span><button type="button" data-step="1" aria-label="Next isolates" title="Next isolates">&rarr;</button>
+      </nav>
+      <noscript><p>Source-isolate downloads</p></noscript>
+    </div>
+  </div>
 </section>
 <h2>Source Data</h2>
 <ul><li><a href="membership-5b206ebc7cdaabe733d9276476ea172249464bc45ad68d0f4e7745695719e1b5.json.gz" download>CRYPTIC 3.4.0 membership registry (JSON.gz)</a> &middot; 36823 source IDs &middot; 8565 without a sequencing join &middot; <a href="https://zenodo.org/records/15680920">Source release</a> &middot; retrieved 2026-10-05</li></ul>
@@ -48,7 +57,7 @@
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f7e1838e55ec</code>, 2939 records). <a href="../../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

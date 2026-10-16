@@ -26,78 +26,87 @@
     </p>
   </div>
 
-  <div class="map-controls" aria-label="Chemical map controls">
-    <label>
-      Find a compound
-      <input id="map-search" type="search" autocomplete="off"
-             placeholder="Name, synonym, or identifier">
-    </label>
-    <label>
-      Show class
-      <select id="map-class">
-        <option value="">All antimicrobial classes</option>
-      </select>
-    </label>
-    <label>
-      Color points by
-      <select id="map-color">
-        <option value="class">Antimicrobial class</option>
-        <option value="input">Structure input</option>
-        <option value="fragments">Single vs multi-fragment</option>
-      </select>
-    </label>
-    <button id="map-reset" type="button">Reset</button>
-  </div>
-
-  <div id="map-status" class="map-status" role="status" aria-live="polite">
-    Loading chemical map…
-  </div>
-  <div id="map-legend" class="map-legend" aria-label="Map legend"></div>
-
-  <div class="chemical-map-layout">
-    <div class="map-stage">
-      <canvas id="map-canvas" width="960" height="620"
-              aria-label="Interactive plot of compounds by chemical structure">
-        The interactive plot requires Canvas support. Use the search results
-        and selected-neighbor list beside it to explore the same records.
-      </canvas>
-      <div id="map-tooltip" class="map-tooltip" hidden></div>
-    </div>
-
-    <aside class="map-details" aria-label="Selected compound">
-      <div id="map-selection">
-        <h2>Select a compound</h2>
-        <p>Search by name or select a point to inspect its structural neighbors.</p>
+  <div class="page-with-sidebar">
+    <aside class="facet-sidebar" aria-label="Chemical map controls">
+      <div class="map-controls facet-form">
+        <label>
+          Find a compound
+          <input id="map-search" type="search" autocomplete="off"
+                 placeholder="Name, synonym, or identifier">
+        </label>
+        <label>
+          Show class
+          <select id="map-class">
+            <option value="">All antimicrobial classes</option>
+          </select>
+        </label>
+        <label>
+          Color points by
+          <select id="map-color">
+            <option value="class">Antimicrobial class</option>
+            <option value="input">Structure input</option>
+            <option value="fragments">Single vs multi-fragment</option>
+          </select>
+        </label>
+        <button id="map-reset" type="button">Reset</button>
       </div>
-      <div>
-        <h2>Search results</h2>
-        <p id="map-search-count" role="status" aria-live="polite"></p>
-        <ol id="map-results" class="map-results">
-          <li>Enter a name, synonym, or identifier.</li>
-        </ol>
-        <button id="map-show-more" type="button" hidden>Show more matches</button>
+      <div class="facet-group">
+        <span class="facet-title">Legend</span>
+        <div id="map-legend" class="map-legend" aria-label="Map legend"></div>
       </div>
     </aside>
-  </div>
 
-  <details class="map-method">
-    <summary>Method and provenance</summary>
-    <p>
-      Model <code>{{ model_version }}</code>. The generator parses stored SMILES
-      first and falls back to standard InChI when RDKit rejects the stored
-      SMILES. This build used that fallback for
-      {{ quality.inchi_fallback_count }} records and retained
-      {{ quality.multifragment_count }} multi-fragment records.
-      All {{ quality.stereoisomer_pair_count }} detected stereoisomer pairs have
-      nonzero model distance.
-    </p>
-    <p>
-      Distance is 90% radius-2 and 10% radius-4 chiral Morgan count-fingerprint
-      Tanimoto distance. Coordinates are generated with
-      <code>UMAP(metric=precomputed, n_neighbors=15, min_dist=0.05,
-      random_state=42)</code>. A corpus or model-version change can move every
-      point.
-    </p>
-  </details>
+    <div class="results-main">
+      <div id="map-status" class="map-status" role="status" aria-live="polite">
+        Loading chemical map…
+      </div>
+
+      <div class="chemical-map-layout">
+        <div class="map-stage">
+          <canvas id="map-canvas" width="960" height="620"
+                  aria-label="Interactive plot of compounds by chemical structure">
+            The interactive plot requires Canvas support. Use the search results
+            and selected-neighbor list beside it to explore the same records.
+          </canvas>
+          <div id="map-tooltip" class="map-tooltip" hidden></div>
+        </div>
+
+        <aside class="map-details" aria-label="Selected compound">
+          <div id="map-selection">
+            <h2>Select a compound</h2>
+            <p>Search by name or select a point to inspect its structural neighbors.</p>
+          </div>
+          <div>
+            <h2>Search results</h2>
+            <p id="map-search-count" role="status" aria-live="polite"></p>
+            <ol id="map-results" class="map-results">
+              <li>Enter a name, synonym, or identifier.</li>
+            </ol>
+            <button id="map-show-more" type="button" hidden>Show more matches</button>
+          </div>
+        </aside>
+      </div>
+
+      <details class="map-method">
+        <summary>Method and provenance</summary>
+        <p>
+          Model <code>{{ model_version }}</code>. The generator parses stored SMILES
+          first and falls back to standard InChI when RDKit rejects the stored
+          SMILES. This build used that fallback for
+          {{ quality.inchi_fallback_count }} records and retained
+          {{ quality.multifragment_count }} multi-fragment records.
+          All {{ quality.stereoisomer_pair_count }} detected stereoisomer pairs have
+          nonzero model distance.
+        </p>
+        <p>
+          Distance is 90% radius-2 and 10% radius-4 chiral Morgan count-fingerprint
+          Tanimoto distance. Coordinates are generated with
+          <code>UMAP(metric=precomputed, n_neighbors=15, min_dist=0.05,
+          random_state=42)</code>. A corpus or model-version change can move every
+          point.
+        </p>
+      </details>
+    </div>
+  </div>
 </section>
 {% endblock %}
