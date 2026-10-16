@@ -16023,6 +16023,38 @@ remains open. The [native metadata projection](2026-10-16-qnr-identity-context-n
 supports cache-independent replay while retaining checksums for optional native
 replay. NCBI was not contacted, and #1040 remains deferred.
 
+## Unresolved Qnr Members (2026-10-16)
+
+The follow-up [dossier](2026-10-16-qnr-unresolved.json) binds all seven remaining
+unselected named Qnr members to their seven CARD claims in the complete,
+collection-aware ciprofloxacin record. All 2,939 current record hashes agree
+with the prior index. This is a scoped self-review, not a whole-record signoff.
+
+- QnrVC2's cited primary paper distinguishes its sequence-based identification
+  from the measured phenotype reported for QnrVC1. Do not transfer that phenotype
+  between members. The source organism label has species-name context
+  `NCBITaxon:666`; no experimental isolate, protein or genome is assigned.
+- The qnrE1 paper identifies the native isolate separately from laboratory hosts.
+  Its organism label has species-name context `NCBITaxon:573`, not a strain-level
+  identity or a species-wide resistance conclusion.
+- Two exact deposition lookups in UniProt release `2026_03` returned complete
+  zero-result responses. Spelling suggestions were preserved but not followed.
+  Deposited regions are not assemblies, and empty queries are not biological
+  absence. Existing native UniProt taxonomy receipts were reused without requests.
+- QnrB5 remains abstract-only; QnrB65's earlier name candidate remains unselected
+  after another web-tool internal error without HTTP status. QnrVC5 and QnrVC6
+  share a correspondence citation whose primary body remains unreviewed. QnrS12's
+  citation concerns nomenclature auditing; its exact row remains unreviewed and
+  is not automatically an AST result or a finding that this allele is erroneous.
+
+The [assessments](2026-10-16-qnr-unresolved-assessments.json) retain source URLs,
+locations, access limits and subject distinctions. Publisher bodies are not
+cached; the offline audit reproduces the metadata and record bindings, not the
+primary-paper observations. No records or reference selections changed: the
+current index remains at 1,405 selected-reference terms and 597 unresolved terms.
+NCBI access, #1040 and reuse-terms review remain deferred; the full investigation
+remains open.
+
 ## Remaining work
 
 1. Review primary results for every existing PHI-base association, including

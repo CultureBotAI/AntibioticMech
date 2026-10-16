@@ -1,0 +1,277 @@
+{
+  "canary_receipt_body": "{\n  \"key\": \"qnre1\",\n  \"url\": \"https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-KY073238&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion\",\n  \"plan_sha256\": \"37331a42c5d1a1c7a5f37ab1b443b2d4ad6822d68c87ae09420760517df4f398\",\n  \"started_at\": \"2026-10-16T09:42:39.243462+00:00\",\n  \"retries\": 0,\n  \"redirects_followed\": 0,\n  \"status\": 200,\n  \"headers\": {\n    \"vary\": \"accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding\",\n    \"cache-control\": \"public, max-age=43200\",\n    \"x-cache\": \"miss cached\",\n    \"content-type\": \"application/json\",\n    \"content-encoding\": \"gzip\",\n    \"access-control-allow-credentials\": \"true\",\n    \"access-control-expose-headers\": \"Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date\",\n    \"x-api-deployment-date\": \"07-October-2026\",\n    \"strict-transport-security\": \"max-age=31536000; includeSubDomains; preload\",\n    \"date\": \"Fri, 16 Oct 2026 09:42:40 GMT\",\n    \"access-control-max-age\": \"1728000\",\n    \"x-uniprot-release\": \"2026_03\",\n    \"x-total-results\": \"0\",\n    \"access-control-allow-origin\": \"*\",\n    \"connection\": \"keep-alive\",\n    \"access-control-allow-methods\": \"GET, PUT, POST, DELETE, PATCH, OPTIONS\",\n    \"access-control-allow-headers\": \"DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization\",\n    \"content-length\": \"98\",\n    \"x-uniprot-release-date\": \"02-September-2026\"\n  },\n  \"retrieved_at\": \"2026-10-16T09:42:40.137437+00:00\",\n  \"bytes\": 70,\n  \"body\": {\n    \"path\": \"reports/qnr-unresolved-2026-10-16/qnre1-response.bin\",\n    \"sha256\": \"6a2679f368ae548cc9cbf0242073ecef1add3b33fea187aec2487a2a3f1cb5f7\"\n  }\n}",
+  "canary_review": {
+    "approved_remaining_queries": true,
+    "assessment": "HTTP 200, pinned release, complete zero-result metadata response. The service spelling suggestion is not an identifier match and will not be followed. The exact query is not evidence of biological absence. Continue only the already planned independent QnrVC2 deposition query.",
+    "plan_sha256": "37331a42c5d1a1c7a5f37ab1b443b2d4ad6822d68c87ae09420760517df4f398",
+    "receipt": {
+      "path": "reports/qnr-unresolved-2026-10-16/qnre1-receipt.json",
+      "sha256": "8b8614062b22c754793f1e6abe19c2934ca035b14c48ac12add975a3919a6c80"
+    }
+  },
+  "native_taxonomy_snapshot": {
+    "path": "reports/resistance-grounding-2026-10-07/card-taxonomy.json",
+    "sha256": "d75a09d19145527c20d59928f4e3a44b0e827e7fae1e3220b8a6546ce5be6e6a"
+  },
+  "queries": {
+    "qnre1": {
+      "attempt": {
+        "key": "qnre1",
+        "plan_sha256": "37331a42c5d1a1c7a5f37ab1b443b2d4ad6822d68c87ae09420760517df4f398",
+        "redirects_followed": 0,
+        "retries": 0,
+        "started_at": "2026-10-16T09:42:39.243462+00:00",
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-KY073238&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "receipt": {
+        "body": {
+          "path": "reports/qnr-unresolved-2026-10-16/qnre1-response.bin",
+          "sha256": "6a2679f368ae548cc9cbf0242073ecef1add3b33fea187aec2487a2a3f1cb5f7"
+        },
+        "bytes": 70,
+        "headers": {
+          "access-control-allow-credentials": "true",
+          "access-control-allow-headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+          "access-control-allow-methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+          "access-control-max-age": "1728000",
+          "cache-control": "public, max-age=43200",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-length": "98",
+          "content-type": "application/json",
+          "date": "Fri, 16 Oct 2026 09:42:40 GMT",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+          "x-api-deployment-date": "07-October-2026",
+          "x-cache": "miss cached",
+          "x-total-results": "0",
+          "x-uniprot-release": "2026_03",
+          "x-uniprot-release-date": "02-September-2026"
+        },
+        "key": "qnre1",
+        "plan_sha256": "37331a42c5d1a1c7a5f37ab1b443b2d4ad6822d68c87ae09420760517df4f398",
+        "redirects_followed": 0,
+        "retries": 0,
+        "retrieved_at": "2026-10-16T09:42:40.137437+00:00",
+        "started_at": "2026-10-16T09:42:39.243462+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-KY073238&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "response_body": "{\"results\":[],\"suggestions\":[{\"query\":\"xref:embl-ky5_3238\",\"hits\":0}]}"
+    },
+    "qnrvc2": {
+      "attempt": {
+        "key": "qnrvc2",
+        "plan_sha256": "37331a42c5d1a1c7a5f37ab1b443b2d4ad6822d68c87ae09420760517df4f398",
+        "redirects_followed": 0,
+        "retries": 0,
+        "started_at": "2026-10-16T09:42:59.780318+00:00",
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-AB200915&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "receipt": {
+        "body": {
+          "path": "reports/qnr-unresolved-2026-10-16/qnrvc2-response.bin",
+          "sha256": "2e9bc3909af1532e6f0a58c75796f6d3fba5f1d03c4e4f6045a65272df1bcb62"
+        },
+        "bytes": 230,
+        "headers": {
+          "access-control-allow-credentials": "true",
+          "access-control-allow-headers": "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization",
+          "access-control-allow-methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
+          "access-control-allow-origin": "*",
+          "access-control-expose-headers": "Link, X-Total-Results, X-UniProt-Release, X-UniProt-Release-Date, X-API-Deployment-Date",
+          "access-control-max-age": "1728000",
+          "cache-control": "public, max-age=43200",
+          "connection": "keep-alive",
+          "content-encoding": "gzip",
+          "content-length": "153",
+          "content-type": "application/json",
+          "date": "Fri, 16 Oct 2026 09:43:00 GMT",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "accept,accept-encoding,x-uniprot-release,x-api-deployment-date, User-Agent, Accept-Encoding",
+          "x-api-deployment-date": "07-October-2026",
+          "x-cache": "miss cached",
+          "x-total-results": "0",
+          "x-uniprot-release": "2026_03",
+          "x-uniprot-release-date": "02-September-2026"
+        },
+        "key": "qnrvc2",
+        "plan_sha256": "37331a42c5d1a1c7a5f37ab1b443b2d4ad6822d68c87ae09420760517df4f398",
+        "redirects_followed": 0,
+        "retries": 0,
+        "retrieved_at": "2026-10-16T09:43:00.543779+00:00",
+        "started_at": "2026-10-16T09:42:59.780318+00:00",
+        "status": 200,
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-AB200915&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+      },
+      "response_body": "{\"results\":[],\"suggestions\":[{\"query\":\"xref:embl-ab620091\",\"hits\":0},{\"query\":\"xref:embl-abo_0915\",\"hits\":0},{\"query\":\"xref:embl-abu_0915\",\"hits\":0},{\"query\":\"xref:embl-arb_00915\",\"hits\":0},{\"query\":\"xref:embl-abc0015\",\"hits\":0}]}"
+    }
+  },
+  "request_plan": {
+    "path": "research/2026-10-16-qnr-unresolved-plan.json",
+    "sha256": "37331a42c5d1a1c7a5f37ab1b443b2d4ad6822d68c87ae09420760517df4f398"
+  },
+  "taxa": {
+    "qnre1": {
+      "node": {
+        "active": true,
+        "lineage": [
+          {
+            "hidden": true,
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "commonName": "bacteria",
+            "hidden": false,
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "hidden": false,
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "commonName": "proteobacteria",
+            "hidden": false,
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "commonName": "g-proteobacteria",
+            "hidden": false,
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "hidden": false,
+            "rank": "order",
+            "scientificName": "Enterobacterales",
+            "taxonId": 91347
+          },
+          {
+            "commonName": "enterobacteria",
+            "hidden": false,
+            "rank": "family",
+            "scientificName": "Enterobacteriaceae",
+            "taxonId": 543
+          },
+          {
+            "hidden": false,
+            "rank": "genus",
+            "scientificName": "Klebsiella",
+            "taxonId": 570
+          },
+          {
+            "hidden": false,
+            "rank": "no rank",
+            "scientificName": "Klebsiella pneumoniae complex",
+            "taxonId": 3390273
+          }
+        ],
+        "parent": {
+          "scientificName": "Klebsiella pneumoniae complex",
+          "taxonId": 3390273
+        },
+        "rank": "species",
+        "scientificName": "Klebsiella pneumoniae",
+        "taxonId": 573
+      },
+      "source": {
+        "body": null,
+        "body_sha256": "a2c864ef5070c83c8f3975d617db1168420ed425400a4a4238f58a98f4871c14",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-316524182aff1ac5eb0436beadaeb8d9483fef4ece3e95bf92b6c4366117a0c1.json",
+          "sha256": "874ec356d95fd6c2c8167bf6e3f2790985aa2e09d3f620e27587249f612203e1"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:04:06.269301+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/573"
+      }
+    },
+    "qnrvc2": {
+      "node": {
+        "active": true,
+        "lineage": [
+          {
+            "hidden": true,
+            "rank": "no rank",
+            "scientificName": "cellular organisms",
+            "taxonId": 131567
+          },
+          {
+            "commonName": "bacteria",
+            "hidden": false,
+            "rank": "domain",
+            "scientificName": "Bacteria",
+            "taxonId": 2
+          },
+          {
+            "hidden": false,
+            "rank": "kingdom",
+            "scientificName": "Pseudomonadati",
+            "taxonId": 3379134
+          },
+          {
+            "commonName": "proteobacteria",
+            "hidden": false,
+            "rank": "phylum",
+            "scientificName": "Pseudomonadota",
+            "taxonId": 1224
+          },
+          {
+            "commonName": "g-proteobacteria",
+            "hidden": false,
+            "rank": "class",
+            "scientificName": "Gammaproteobacteria",
+            "taxonId": 1236
+          },
+          {
+            "hidden": false,
+            "rank": "order",
+            "scientificName": "Vibrionales",
+            "taxonId": 135623
+          },
+          {
+            "hidden": false,
+            "rank": "family",
+            "scientificName": "Vibrionaceae",
+            "taxonId": 641
+          },
+          {
+            "hidden": false,
+            "rank": "genus",
+            "scientificName": "Vibrio",
+            "taxonId": 662
+          }
+        ],
+        "parent": {
+          "scientificName": "Vibrio",
+          "taxonId": 662
+        },
+        "rank": "species",
+        "scientificName": "Vibrio cholerae",
+        "taxonId": 666
+      },
+      "source": {
+        "body": null,
+        "body_sha256": "d952a5a01e2298513858dc8aba192bff601934d1b293d728c07ec9abc6d7f060",
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-07/request-16831b6352663a3c5f03a8b398908690ef212ef5eb0cdab75e8990d746df38bb.json",
+          "sha256": "ad390d99867dedb57c5ed3e372d668f0dda90539fce69009537a2c6b8edefb6a"
+        },
+        "release": "2026_03",
+        "retrieved_at": "2026-10-08T03:04:29.864057+00:00",
+        "url": "https://rest.uniprot.org/taxonomy/666"
+      }
+    }
+  }
+}

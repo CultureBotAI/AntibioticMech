@@ -1,0 +1,37 @@
+{
+  "scope": "QNR_UNRESOLVED_MEMBER_REFERENCE_RESEARCH_NOT_EXPERIMENTAL_ASSIGNMENT",
+  "release": "2026_03",
+  "max_bytes": 200000,
+  "canary": "qnre1",
+  "requests": {
+    "qnre1": {
+      "query": "xref:embl-KY073238",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-KY073238&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "qnrvc2": {
+      "query": "xref:embl-AB200915",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-AB200915&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "inputs": {
+    "current_index": {
+      "path": "research/2026-10-16-card-qualified-current.json",
+      "sha256": "53a7ab7b1347168aded19c0901f7beb825a014b174a546823eb89b3f2c7d167f"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    }
+  },
+  "constraints": {
+    "planned_new_requests": 2,
+    "ncbi_requests": 0,
+    "retries": 0,
+    "redirects_followed": 0,
+    "issue_1040": "DEFERRED",
+    "biological_record_writes": false,
+    "experimental_identifiers_assigned": false,
+    "new_reference_selection": false,
+    "full_investigation_complete": false
+  }
+}
