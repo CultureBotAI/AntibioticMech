@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-15",
+  "scope": "PRIMARY_SOURCE_IDENTITY_AND_EVIDENCE_SCOPE_NOT_EXPERIMENTAL_UNIPROT_ASSIGNMENT",
+  "papers": {
+    "amz": {
+      "aro_id": "ARO:3007694",
+      "label": "AMZ-1",
+      "pmid": "37808287",
+      "doi": "10.3389/fmicb.2023.1252427",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1252427/full",
+      "source_organism": "Achromobacter mucicolens",
+      "source_strain": "Y3",
+      "chromosome_accession": "CP123364",
+      "gene_accession": "OQ948417",
+      "protein_accession": null,
+      "locus": null,
+      "identifier_location": "Accession numbers, XML S2.SS6",
+      "review": "The chromosome and named gene deposits are separate, unversioned source identifiers. The comparison assembly GCA_902859725.1 belongs to LMG 26685, not Y3. Native Y3, heterologous cellular assays and purified enzyme assays are distinct. For ampicillin, the reported cellular susceptibility effect coexists with undetectable hydrolysis; direct biochemical inactivation is not established by that observation. The abstract calls the assay agar dilution, while the methods say broth dilution with agar plates; assay normalization remains unresolved.",
+      "inspected": ["primary XML front metadata", "Accession numbers", "selected identity and results paragraphs in S3.SS1 and S3.SS2", "Table 2 and Table 5 headings and ampicillin entries", "abstract/methods assay wording"],
+      "not_inspected": ["figure pixels", "supplements", "whole paper"],
+      "query": "xref:embl-OQ948417",
+      "query_match_kind": "SOURCE_GENE_NUCLEOTIDE_XREF",
+      "experimental_subject_assignment": false,
+      "curation_status": "RESEARCH_ONLY_QUALIFICATION_CANDIDATE"
+    },
+    "pjm": {
+      "aro_id": "ARO:3007374",
+      "label": "PJM-1",
+      "pmid": "35943258",
+      "doi": "10.1128/aac.00691-22",
+      "url": "https://journals.asm.org/doi/10.1128/aac.00691-22",
+      "source_organism": "Pseudoxanthomonas japonensis",
+      "source_strain": "TUM20250",
+      "wgs_accession": "NZ_BOUK00000000",
+      "gene_accession": null,
+      "protein_accession": null,
+      "locus": null,
+      "identifier_location": "Introduction, paragraph beginning We further analyzed TUM20250; web reader lines 124-125",
+      "review": "The publisher text associates TUM20250 with a WGS master identifier, not an exact protein accession or versioned assembly. DSM 17109 is a comparison strain, not the experimental isolate. Native-isolate, heterologous-host and biochemical evidence remain separate. The deposited WGS identifier cannot select a UniProt protein without a determinant-specific crosswalk.",
+      "inspected": ["publisher web text identity paragraphs", "Table 1 subject headings", "selected Results and conclusion text"],
+      "not_inspected": ["figure pixels", "supplements", "whole paper"],
+      "query": "(gene_exact:blaPJM-1 OR gene_exact:PJM-1 OR gene_exact:PJM) AND organism_name:\"Pseudoxanthomonas japonensis\"",
+      "query_match_kind": "GENE_ALIAS_AND_SPECIES_CONTEXT_NOT_ALLELE_EQUIVALENCE",
+      "access": {"web_text_available_before_native_request": true, "native_publisher_http_status": 403, "native_primary_snapshot_verified": false, "planned_figure_request_performed": false, "retry_or_alternate_primary_route": false},
+      "experimental_subject_assignment": false,
+      "curation_status": "RESEARCH_ONLY_NATIVE_ACCESS_HOLD"
+    }
+  },
+  "constraints": {"ncbi_requests": 0, "issue_1040": "DEFERRED", "sequences_variants_protocols_or_numeric_ast_exported": false, "biological_record_writes": false, "source_adoption": false, "whole_record_primary_signoff": false}
+}

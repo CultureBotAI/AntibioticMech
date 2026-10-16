@@ -183,7 +183,7 @@ def test_saved_findings_do_not_promote_species_or_held_sources():
     assert dossier["goal_status"] == "OPEN"
 
 
-def test_offline_replay(monkeypatch):
+def test_offline_replay(monkeypatch, pre_card_qualification_root):
     if not (ROOT / audit.CACHE / "selection.json").exists():
         pytest.skip("private source cache is not committed")
 
@@ -193,7 +193,8 @@ def test_offline_replay(monkeypatch):
     monkeypatch.setattr(socket, "socket", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
-    value = audit.build(ROOT, ROOT / audit.CACHE)
+    root = pre_card_qualification_root
+    value = audit.build(root, root / audit.CACHE)
     assert (json.dumps(value, indent=2, sort_keys=True, ensure_ascii=True) + "\n").encode() == (
         ROOT / audit.OUTPUT
     ).read_bytes()

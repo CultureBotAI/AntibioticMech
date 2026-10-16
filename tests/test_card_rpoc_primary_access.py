@@ -314,8 +314,8 @@ def test_public_checkpoint_does_not_adjudicate_causality_or_assign_subjects():
 
 
 @pytest.mark.skipif(not (ROOT / audit.CACHE / "cohort.json").exists(), reason="private native cache absent")
-def test_native_replay_offline():
-    result = audit.build(ROOT)
+def test_native_replay_offline(pre_card_qualification_root):
+    result = audit.build(pre_card_qualification_root)
     assert (json.dumps(result, indent=2, sort_keys=True) + "\n").encode() == (
         ROOT / audit.OUTPUT
     ).read_bytes()

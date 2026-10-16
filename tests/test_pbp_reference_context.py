@@ -358,7 +358,7 @@ def test_exports_contain_no_operational_or_numerical_ast_fields():
     assert not set(keys(assessment())) & forbidden
 
 
-def test_offline_replay_has_no_network_or_python_file_writes(monkeypatch):
+def test_offline_replay_has_no_network_or_python_file_writes(monkeypatch, pre_cdsa_qualification_root):
     if not (ROOT / audit.CACHE / "taxonomy-373153-body.json").exists():
         pytest.skip("native cache unavailable; portable tests still run")
 
@@ -371,4 +371,4 @@ def test_offline_replay_has_no_network_or_python_file_writes(monkeypatch):
 
     monkeypatch.setattr(builtins, "open", guard(builtins.open))
     monkeypatch.setattr(io, "open", guard(io.open))
-    assert audit.build(ROOT) == result()
+    assert audit.build(pre_cdsa_qualification_root) == result()

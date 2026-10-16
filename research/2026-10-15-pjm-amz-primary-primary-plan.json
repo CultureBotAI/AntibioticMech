@@ -1,0 +1,71 @@
+{
+  "canary": "amz-primary",
+  "canary_review_file": "primary-canary-reviewed.json",
+  "constraints": {
+    "biological_record_writes": false,
+    "export": "IDENTITY_AND_EVIDENCE_SCOPE_NO_SEQUENCES_VARIANTS_PROTOCOLS_NUMERIC_AST",
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "inputs": {
+    "current_index": {
+      "path": "research/2026-10-15-card-current-references.json",
+      "sha256": "f98aaf50c76aaab8917fd470d4622e8ec2ababfbcdf970ce2b89439e614d71e7"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "prior_citation_screen": {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "max_bytes": 8000000,
+  "preflight": {
+    "ignored_files_included": true,
+    "matching_native_primary_history": [],
+    "patterns": [
+      "PMC10552758",
+      "PMC9487579",
+      "35943258",
+      "37808287"
+    ],
+    "prior_uniprot_citation_queries_reused": [
+      "35943258",
+      "37808287"
+    ],
+    "roots": [
+      "reports",
+      "research"
+    ],
+    "scope": "PRIMARY_REQUEST_HISTORY_NOT_A_REPOSITORY_WIDE_ABSENCE_CLAIM"
+  },
+  "requests": {
+    "amz-primary": {
+      "doi": "10.3389/fmicb.2023.1252427",
+      "pmid": "37808287",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10552758/fullTextXML"
+    },
+    "pjm-figure1": {
+      "purpose": "IDENTIFIER_LABELS_ONLY",
+      "url": "https://journals.asm.org/cms/10.1128/aac.00691-22/asset/45bb3f33-0f03-4bec-95b9-d6ae05859410/assets/images/large/aac.00691-22-f001.jpg"
+    },
+    "pjm-primary": {
+      "doi": "10.1128/aac.00691-22",
+      "pmid": "35943258",
+      "url": "https://journals.asm.org/doi/10.1128/aac.00691-22"
+    }
+  }
+}

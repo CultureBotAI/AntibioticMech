@@ -192,8 +192,9 @@ def test_checkpoint_has_no_new_resistance_or_experimental_assignments():
 
 
 @pytest.mark.parametrize("change", ["none", "release", "taxonomy_release"])
-def test_native_replay_offline(monkeypatch, change):
-    directory = ROOT / audit.CACHE
+def test_native_replay_offline(monkeypatch, change, pre_card_qualification_root):
+    root = pre_card_qualification_root
+    directory = root / audit.CACHE
     if not (directory / "pdb-6vej-response.bin").exists():
         pytest.skip("optional native research cache not present")
 
@@ -216,10 +217,10 @@ def test_native_replay_offline(monkeypatch, change):
     monkeypatch.setattr(audit.reference, "read_response", changed)
     if change != "none":
         with pytest.raises(ValueError, match="release|taxonomy"):
-            audit.build(ROOT, directory)
+            audit.build(root, directory)
         return
     payload = (
-        json.dumps(audit.build(ROOT, directory), indent=2, sort_keys=True, ensure_ascii=True) + "\n"
+        json.dumps(audit.build(root, directory), indent=2, sort_keys=True, ensure_ascii=True) + "\n"
     ).encode()
     assert payload == (ROOT / audit.OUTPUT).read_bytes()
 

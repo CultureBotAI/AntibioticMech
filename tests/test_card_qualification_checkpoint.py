@@ -16,25 +16,30 @@ DELTAS = json.loads((ROOT / RECEIPT).read_bytes())["record_deltas"]
 def test_restored_record_matches_both_pins_without_modifying_live_input(
     tmp_path,
     restore_pre_card_qualification,
+    pre_cdsa_qualification_root,
     delta,
 ):
-    source = ROOT / delta["path"]
+    source = pre_cdsa_qualification_root / delta["path"]
     original = source.read_bytes()
-    output = restore_pre_card_qualification(ROOT, delta["path"], tmp_path / "before.yaml")
+    output = restore_pre_card_qualification(
+        pre_cdsa_qualification_root, delta["path"], tmp_path / "before.yaml"
+    )
     assert source.read_bytes() == original
     assert hashlib.sha256(original).hexdigest() == delta["after_sha256"]
     assert hashlib.sha256(output.read_bytes()).hexdigest() == delta["before_sha256"]
 
 
 @pytest.mark.parametrize("change", ["receipt", "label", "history", "note", "unrelated_claim"])
-def test_restoration_rejects_unregistered_drift(tmp_path, restore_pre_card_qualification, change):
+def test_restoration_rejects_unregistered_drift(
+    tmp_path, restore_pre_card_qualification, pre_cdsa_qualification_root, change
+):
     delta = DELTAS[0]
     receipt = tmp_path / RECEIPT
     receipt.parent.mkdir(parents=True)
     receipt.write_bytes((ROOT / RECEIPT).read_bytes())
     source = tmp_path / delta["path"]
     source.parent.mkdir(parents=True)
-    source.write_bytes((ROOT / delta["path"]).read_bytes())
+    source.write_bytes((pre_cdsa_qualification_root / delta["path"]).read_bytes())
     if change == "receipt":
         receipt.write_bytes(receipt.read_bytes() + b"\n")
     else:

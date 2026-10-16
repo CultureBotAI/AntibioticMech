@@ -1,0 +1,37 @@
+{
+  "plan": {
+    "path": "research/2026-10-15-card-all-status-gene-references-plan.json",
+    "sha256": "818c186d5ed0330bb36efac2963c061476a398d04e5a8fb00e52a88634259063"
+  },
+  "approved_for_remaining_queries": true,
+  "experimental_identity_assignments": false,
+  "inspection": "Inspected the complete native zero-result response for the exact CdsA/species canary. Status 200, release 2026_03, count zero, no continuation, retry or redirect. This validates a complete empty request, not gene absence or a positive protein identity. Positive unreviewed metadata from the pinned reusable YOR1 query was separately inspected; every new entry and cursor page remains subject to fail-closed validation.",
+  "query": {
+    "query": "(gene_exact:cdsa) AND taxonomy_id:28037",
+    "pages": [
+      {
+        "page": 1,
+        "attempt": {
+          "path": "reports/resistance-grounding-2026-10-15-card-all-status-gene-references/proteins-28037-page-0001-attempt.json",
+          "sha256": "c22309376d578f25a44cb265af429b4eeecedeb18d5a2cab1e8b6af0b6a029c2"
+        },
+        "receipt": {
+          "path": "reports/resistance-grounding-2026-10-15-card-all-status-gene-references/proteins-28037-page-0001-receipt.json",
+          "sha256": "23c22103901e6fed6f9813511aabd5b123f909b5ef586f43a3e3b5ea264d5823"
+        },
+        "body": {
+          "path": "reports/resistance-grounding-2026-10-15-card-all-status-gene-references/proteins-28037-page-0001-body.json",
+          "sha256": "948c6bb4107953953d408dafca31e877e1de4c4a4937781c38a083c2c28089de"
+        },
+        "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3Acdsa%29+AND+taxonomy_id%3A28037&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion",
+        "retrieved_at": "2026-10-15T21:40:24.966734+00:00",
+        "status": 200
+      }
+    ],
+    "result_count": 0,
+    "release": "2026_03",
+    "complete_for_query": true,
+    "entry_type_counts": {},
+    "empty_result_means_biological_absence": false
+  }
+}

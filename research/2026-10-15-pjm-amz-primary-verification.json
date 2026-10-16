@@ -1,0 +1,90 @@
+{
+  "audit_plan": {
+    "path": "research/2026-10-15-pjm-amz-primary-audit-plan.json",
+    "sha256": "06503977adece113bda79088dc3549dc9f79345c318d647903f4811b84992176"
+  },
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-pjm-amz-primary/baseline.json",
+    "sha256": "2fe89e5c6586f306c6362cb7a3641a02101d3238bac971363d17b37983bc4ca3"
+  },
+  "checks": {
+    "authoritative_full_qc_rerun": false,
+    "errors": 0,
+    "failed": 0,
+    "focused_tests_passed": 60,
+    "offline_write_disabled_replay": true,
+    "report_only_appended_section": true,
+    "saved_projection_equal": true,
+    "skipped": 0,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "authoritative_qc_rerun": false,
+    "biological_record_writes": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "sequences_variants_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "whole_record_primary_signoff": false
+  },
+  "date": "2026-10-15",
+  "dossier": {
+    "path": "research/2026-10-15-pjm-amz-primary.json",
+    "sha256": "d2d59132012bffa2c308c4cde3146f452a8660141284742141115d118d58debe"
+  },
+  "native_requests": 6,
+  "native_status_counts": {
+    "200": 5,
+    "403": 1
+  },
+  "primary_publication_limits": {
+    "AMZ-1": "SELECTED_NATIVE_XML_ELEMENTS_NOT_WHOLE_PAPER",
+    "PJM-1": "WEB_TEXT_VIEW_BEFORE_NATIVE_403_NO_OFFLINE_PRIMARY_TEXT_VERIFICATION"
+  },
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "fa77866a476ebeae977ebfc45628596df6a0e9b93ce4d7d92a0f00cf78ef2cd5"
+  },
+  "script": {
+    "path": "scripts/audit_pjm_amz_primary.py",
+    "sha256": "793238939f3a5a3b2069378f72b31e247e67f9109fa1f9dc4252838e3c7d7921"
+  },
+  "shared_helpers": [
+    {
+      "path": "scripts/audit_bla_primary_identifiers.py",
+      "sha256": "d3a6cf163b9be1ca37f0670e98cc6753ef5f6f4b1cd36dfeec6f198c0fe9d77f"
+    },
+    {
+      "path": "scripts/audit_card_reference_memberships.py",
+      "sha256": "a247908f66360b08d8a1e8bd400b71ce30f5ecf95b81fe92d29057e4186be81d"
+    },
+    {
+      "path": "scripts/audit_topoisomerase_references.py",
+      "sha256": "440bc495fbc08e9e02b4365a61a41b50893638ac7a222cd3990dceb44676442a"
+    },
+    {
+      "path": "scripts/audit_curator_resistance_fields.py",
+      "sha256": "bcc3493cca199a418b6eb69cec5b51a293fe3a8aa15ed3272f7f285616e0d5dd"
+    }
+  ],
+  "status": "SOURCE_IDENTITY_AND_SPECIES_CONTEXT_REVIEWED_PROTEINS_UNRESOLVED",
+  "summary": {
+    "complete_target_records_read": 7,
+    "current_record_hashes_verified": 2939,
+    "native_primary_access_holds": 1,
+    "new_selected_proteins": 0,
+    "source_claims_bound": 10,
+    "species_names_grounded": 2,
+    "terms_investigated": 2,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-pjm-amz-primary/tests.xml",
+    "sha256": "2b93f5734e4168808d950d77b2ebcb2bea6b1544f5314d9797f9d9dc72033f4e"
+  },
+  "tests": {
+    "path": "tests/test_pjm_amz_primary.py",
+    "sha256": "fd08079ddb3700514f9f292840846d6d7488b2da8f2b820441f1b3b289935d94"
+  }
+}

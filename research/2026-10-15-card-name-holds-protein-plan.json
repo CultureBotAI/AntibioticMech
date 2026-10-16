@@ -1,0 +1,65 @@
+{
+  "biological_record_writes": false,
+  "canary": "yeast-aif1",
+  "cg_features": {
+    "path": "reports/resistance-grounding-2026-10-07/cgd-albicans-a22-r37-features-2026-10-09.json",
+    "sha256": "6b87732ed7e8103beb73fefc45d1a73f69f3577a8490ffaf13241ab056fa69f9"
+  },
+  "cg_mapping": {
+    "path": "reports/resistance-grounding-2026-10-07/cgd-orf19-a22-mapping-2026-10-09.json",
+    "sha256": "ac4f7dd5978386d5ee6ec6e6b62ddbfefaef1cc43d88fe8a1e66f1d3cba9b3a3"
+  },
+  "date": "2026-10-15",
+  "exact_allele_assignment": false,
+  "issue_1040": "DEFERRED",
+  "max_bytes": 5000000,
+  "ncbi_requests": 0,
+  "pdf_inspection_artifacts": {
+    "path": "reports/resistance-grounding-2026-10-15-card-name-holds/pdf-inspection-artifacts.json",
+    "sha256": "f271aeda2092e1d9a84bb1f14c48b1def1aacdf3e49918e027d8862cf413aa62"
+  },
+  "preflight": {
+    "path": "reports/resistance-grounding-2026-10-15-card-name-holds/protein-query-preflight.json",
+    "sha256": "65328937a0f88d40dd20c196ca5c1c32dcf56c8c29e8d263c5dc1583d1bb15c6"
+  },
+  "primary_source": {
+    "path": "reports/resistance-grounding-2026-10-15-card-name-holds/chin-primary-network-enabled-receipt.json",
+    "sha256": "a8548cf6e89c1a2fedfad782434ba70b39db29d366eb0f3ed6760b1d36510a44"
+  },
+  "redirects_followed": 0,
+  "release": "2026_03",
+  "requests": {
+    "candida-paper-locus": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "gene_exact:orf19.3362 AND taxonomy_id:5476",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "scope": "PAPER_REPORTED_LOCUS_REFERENCE_NOT_VALIDATED_EXPERIMENTAL_ALLELE",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3Aorf19.3362+AND+taxonomy_id%3A5476&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "yeast-aif1": {
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version",
+        "format": "json",
+        "query": "gene_exact:AIF1 AND taxonomy_id:4932 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "scope": "PAPER_SPECIES_GENE_REFERENCE_NOT_CARD_SPELLING_CORRECTION",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AAIF1+AND+taxonomy_id%3A4932+AND+reviewed%3Atrue&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "retries": 0,
+  "source_spelling_correction_inferred": false,
+  "visually_inspected_printed_pages": [
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ]
+}

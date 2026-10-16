@@ -288,11 +288,11 @@ def test_no_operational_values_exported():
     }
 
 
-def test_offline_replay_when_native_cache_available():
+def test_offline_replay_when_native_cache_available(pre_cdsa_qualification_root):
     plan = json.loads((ROOT / audit.PLAN).read_bytes())
     if not (ROOT / plan["request_plan"]["path"]).exists():
         pytest.skip("native cache unavailable; portable checks still run")
-    assert audit.build(ROOT) == public_result()
+    assert audit.build(pre_cdsa_qualification_root) == public_result()
 
 
 def test_request_plan_count_cannot_be_changed_without_changing_frozen_plan(tmp_path):

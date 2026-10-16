@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-15",
+  "scope": "EXPLICIT_ONTOLOGY_ALIAS_REFERENCE_CONTEXT_NOT_EXPERIMENTAL_IDENTITY",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {"path": "research/2026-10-15-card-source-aliases.json", "sha256": "70fbf5e491e7148f574065671ed7e595a6850e2a4cf99293d183403ce67a68a3"},
+    "plan": {"path": "research/2026-10-15-card-source-aliases-plan.json", "sha256": "afb546e24889a17ad9223b48bf4dd2b94a88a9ce01d34a84eafc6fcc6d7f5456"},
+    "script": {"path": "scripts/audit_card_source_aliases.py", "sha256": "5b233855db6624bf8c1206c902ada7b73097eda00bb74ea1fc4b3781af576f3b"},
+    "tests": {"path": "tests/test_card_source_aliases.py", "sha256": "eb31348950cfb80df28f1738f70437c79c287aaea67d6a3bfd8e808118d17584"},
+    "report": {"path": "research/2026-10-07-resistance-gene-grounding.md", "sha256": "493cefe7a0d2daff21bd8223ea6d6cbdf45eff23fa5cdc97358c4f50bbcdf2ec"}
+  },
+  "coverage": {
+    "selected_terms": 42,
+    "complete_collection_aware_records_read": 48,
+    "source_claims": 70,
+    "synonym_annotations": 17,
+    "inspected_alias_leads": 4,
+    "terms_with_inspected_alias_leads": 3,
+    "source_label_definition_conflicts": 2,
+    "complete_cached_queries": 13,
+    "cached_query_result_occurrences_not_unique_proteins": 18770,
+    "native_reference_candidates": 6,
+    "cached_reference_taxa": 5,
+    "qualified_reference_links": 2,
+    "qualified_reference_terms": 1,
+    "qualified_reference_claim_memberships": 1,
+    "qualified_reference_records": 1,
+    "qualified_reviewed_references": 1,
+    "qualified_unreviewed_references": 1,
+    "different_species_candidates_withheld": 3,
+    "missing_pinned_taxonomy_candidates_withheld": 1,
+    "own_definition_citation_query_overlap": 0,
+    "selected_terms_still_unresolved": 41,
+    "prior_name_unresolved_terms_unchanged": 36,
+    "disjoint_qualified_terms_across_four_passes": [17, 71, 12, 1],
+    "frozen_grammar_cohort_terms_with_reference_context": 101,
+    "frozen_grammar_cohort_terms_still_unresolved": 77,
+    "full_grammar_cohort": 178,
+    "broad_index_rewritten": false,
+    "all_proteins_claimed_newly_discovered": false
+  },
+  "checks": {
+    "initial_focused_tests": {"passed": 18, "failed": 0, "deselected": 2},
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q -rs tests/test_card_source_aliases.py tests/test_card_all_status_genes.py tests/test_card_unresolved_names.py tests/test_card_gene_reference_followup.py tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+      "passed": 369,
+      "failed": 0,
+      "skipped": 1,
+      "duration_seconds": 126.62,
+      "new_audit_tests": 27,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_pins_before_this_receipt": {
+      "occurrences_including_prior_nonreport_artifacts": 151,
+      "distinct_paths": 142,
+      "all_verified": true
+    },
+    "prior_nonreport_artifacts_checked_unchanged": 29,
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "previous_report": {
+      "sha256": "6ab365acad2bdebd08de5128fceff51c62b4782fe5813a97435a69d5adccb493",
+      "bytes": 962225,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    },
+    "reference_coverage_disjointness": "PASS_17_PLUS_71_PLUS_12_PLUS_1_EQUALS_101_OF_178"
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "unresolved_implementation_findings": [],
+    "checks": [
+      "Exact RDF predicate, literal value, language and source identity are required before accepting a planned alias lead.",
+      "Gene names, gene synonyms, ordered loci, ORFs and primary or secondary accessions cannot substitute for one another.",
+      "Reference qualification requires independently cached active taxonomy and complete species identity agreement.",
+      "Wrong-species matches and missing cached taxonomy remain explicit withheld candidates; neither is a biological absence finding.",
+      "All cached query chains are complete and release-checked; bibliography memberships are not primary resistance validation.",
+      "Source label-definition conflicts are retained without automatic correction or evidence transfer.",
+      "CLI checks are read-only, new nested output parents are supported, and differing saved outputs are not overwritten."
+    ],
+    "unresolved_source_findings": [
+      {"term": "ARO:3009450", "finding": "Label says MDR2; pinned definition begins MDR1.", "disposition": "PRIMARY_IDENTITY_REVIEW_REQUIRED_NO_CORRECTION_INFERRED"},
+      {"term": "ARO:3009454", "finding": "Label says MDR4; pinned definition begins MDR1.", "disposition": "PRIMARY_IDENTITY_REVIEW_REQUIRED_NO_CORRECTION_INFERRED"}
+    ],
+    "residual_risks": [
+      "The literal, case-sensitive cache discovery is bounded, not an exhaustive UniProt alias search.",
+      "An ontology synonym may identify a source model or annotation rather than a gene; only the inspected leads were used.",
+      "Reference mappings do not resolve experimental allele, organism, genome or phenotype joins.",
+      "Source-supported alias and primary-evidence work remains open for the rest of the cohort and corpus."
+    ],
+    "github_issues_created": 0
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "rdkit_available_rechecked": false,
+    "limitation": "RDKit is absent in the existing Intel macOS environment. No full authoritative QC or biological-curation verification is claimed."
+  },
+  "access": {
+    "new_network_requests": 0,
+    "ncbi_requests": 0,
+    "source_retries": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "ignored_files_included_in_cache_discovery": true
+  },
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "whole_record_primary_signoffs": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

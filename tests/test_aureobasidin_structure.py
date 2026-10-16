@@ -223,6 +223,7 @@ def test_offline_dated_replay_does_not_load_live_biological_record(monkeypatch):
     if not (ROOT / audit.CACHE / "cohort.json").exists():
         pytest.skip("optional native research cache not available")
     pytest.importorskip("rdkit.Chem")
+    from rdkit import rdBase as rd_base
 
     def denied(*args, **kwargs):
         raise AssertionError("offline replay attempted network access")
@@ -238,4 +239,21 @@ def test_offline_dated_replay_does_not_load_live_biological_record(monkeypatch):
     monkeypatch.setattr(Path, "open", guarded)
     monkeypatch.chdir(ROOT)
     monkeypatch.setattr(sys, "argv", ["audit_aureobasidin_structure.py", "--check"])
-    audit.main()
+    frozen_bytes = (ROOT / audit.OUTPUT).read_bytes()
+    expected = json.loads(frozen_bytes)
+    compatible = copy.deepcopy(expected)
+    graphs = [compatible["baseline_graph"]] + [
+        compatible["chemical_components"][key]["free_component_graph"]
+        for key in ("A1L3I", "A1L3J")
+    ]
+    assert {graph["rdkit_version"] for graph in graphs} == {"2025.03.6"}
+    for graph in graphs:
+        graph["rdkit_version"] = rd_base.rdkitVersion
+    # Recompute every result; only the three explicitly checked runtime fields may differ.
+    assert audit.build(ROOT) == compatible
+    if rd_base.rdkitVersion == "2025.03.6":
+        audit.main()
+    else:
+        with pytest.raises(SystemExit, match="dated aureobasidin structure checkpoint does not reproduce"):
+            audit.main()
+    assert (ROOT / audit.OUTPUT).read_bytes() == frozen_bytes

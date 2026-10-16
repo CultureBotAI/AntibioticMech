@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-15",
+  "scope": "PAPER_LOCUS_REFERENCE_AUDIT_NOT_EXPERIMENTAL_ALLELES",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {"path": "research/2026-10-15-daptomycin-locus.json", "sha256": "262a8ebefe434c8d376fb0b03cc413971dd25b5c6a1fec0e98a79fb8fc4f3a15"},
+    "source_plan": {"path": "research/2026-10-15-daptomycin-locus-plan.json", "sha256": "3717a33e84335e63b1811986ea389bc0824dec6cc37bdb597d84351610b2c0e9"},
+    "audit_plan": {"path": "research/2026-10-15-daptomycin-locus-audit-plan.json", "sha256": "7def073c1ea762bda48f17dfd715b321d354fba6d4426231279f28a070169e3f"},
+    "primary_assessment": {"path": "research/2026-10-15-daptomycin-locus-primary-assessment.json", "sha256": "d2a5e5aea467fe14fd29c2702b2d6258a08802a98f9116a041a1ea524037ae2a"},
+    "nomenclature_hold": {"path": "research/2026-10-15-daptomycin-locus-nomenclature-hold.json", "sha256": "77e8bff1c47d4084d0032ebec8f70e9168e715e3dab101d7be4a8366243457ca"},
+    "script": {"path": "scripts/audit_daptomycin_locus_context.py", "sha256": "e0e50381a06e939c8faff023eddad3abe99bfbed8a3902850d0889ef380ce5ba"},
+    "tests": {"path": "tests/test_daptomycin_locus_context.py", "sha256": "a653db236e3710f03c67aa537a1a6c88876f1f446a150018903050c6e0b0105b"},
+    "report": {"path": "research/2026-10-07-resistance-gene-grounding.md", "sha256": "4fdd631c24d3d54e31687be87a60b5851d6ad8f7d7c596b087c74c2754ce6f8d"}
+  },
+  "coverage": {
+    "corpus_record_hashes_checked": 2939,
+    "complete_collection_aware_records": 1,
+    "source_claims": 4,
+    "source_terms_followed": 4,
+    "active_reference_entries": 2,
+    "prior_qualified_terms": 105,
+    "new_qualified_source_terms": 2,
+    "combined_qualified_terms": 107,
+    "combined_remaining_terms": 71,
+    "bounded_cohort_terms": 178,
+    "broad_index_rewritten": false,
+    "scoped_publisher_html_results_reviews": 1,
+    "correction_notices_reviewed": 1,
+    "figures_or_supplements_reviewed": 0,
+    "whole_record_primary_signoffs": 0
+  },
+  "checks": {
+    "combined_regression": {
+      "status": "PASS",
+      "command": ".venv/bin/pytest -q -rs tests/test_daptomycin_locus_context.py tests/test_vmlr2_structure_context.py tests/test_card_explicit_identifiers.py tests/test_card_source_aliases.py tests/test_card_all_status_genes.py tests/test_card_species_gene_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+      "passed": 368,
+      "failed": 0,
+      "skipped": 1,
+      "duration_seconds": 175.99,
+      "new_tests_passed": 45,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "ruff_format": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_native_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "primary_evidence_replay_limit": "Manual web review is retained in a pinned assessment; no local publisher HTML body or figure replay is claimed.",
+    "explicit_pins_before_this_receipt": {"occurrences": 45, "distinct_paths": 31, "all_verified": true},
+    "artifact_pins_in_this_receipt": {"checked": 8, "all_verified": true},
+    "prior_nonreport_artifacts_checked_unchanged": 58,
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "previous_report": {
+      "sha256": "4c9139f0f893346b722054fcb78af3cf6b3e104a86816e544a2c936f88fc7f19",
+      "bytes": 984061,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    },
+    "current_report_bytes": 988453,
+    "biological_source_input_and_project_dependency_git_diff": "EMPTY"
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "unresolved_implementation_findings": [],
+    "checks": [
+      "Locus normalization permits only an optional single EF namespace underscore with exactly four digits; no arbitrary punctuation or gene-name matching is accepted.",
+      "The native ordered-locus namespace is required; ORF names, gene names and synonyms cannot substitute for it.",
+      "Source species and reference strain are independently replayed from native UniProt taxonomy, including the V583 strain name.",
+      "A missing strain in the selected YvlB paper statement remains missing rather than being inferred from the reference entry.",
+      "Q833X7 remains unreviewed and Q834B6's native liaX gene name is retained without an official-renaming assertion.",
+      "The other-species YybT candidate remains withheld, and no gdpD reference is fabricated from homology or query absence.",
+      "The pooled gene query's one result is distinguished from zero exact matches for the four selected genes.",
+      "Selected primary text, corrected-figure notice, uninspected figures and unreviewed secondary citations remain separate evidence scopes.",
+      "The reference-linkout 403 is not asserted to be the canonical article's HTTP status; no alternate route was requested.",
+      "The newer DOI tool failure is not converted into an inferred HTTP denial or primary-results review.",
+      "Every claim pointer resolves to the correct term and record membership; input-index reference status remains historical.",
+      "Exact attempt, receipt and body sets reject unaccounted retrieval artifacts; response pins and metadata-only query parameters are replayed.",
+      "Coverage derives from disjoint pinned sets and remains a bounded 178-term assessment, not whole-corpus completion.",
+      "CLI replay preserves differing output and check mode cannot create output directories."
+    ],
+    "remaining_scientific_work": [
+      "Inspect original figures, replacement Figure 6 and supplements before a complete study-level assessment.",
+      "The earlier linked study and newer LiaX nomenclature paper remain unreviewed at primary-results level.",
+      "Exact experimental alleles, strain derivatives and sample/genome joins remain unresolved.",
+      "YybT and gdpD still lack qualified reference mappings in this cohort.",
+      "The source-owned daptomycin record's other claims and the full 2939-record investigation remain open."
+    ],
+    "github_issues_created": 0
+  },
+  "access": {
+    "new_complete_uniprot_protein_queries": 2,
+    "new_uniprot_taxonomy_requests": 0,
+    "successful_native_http_responses": 2,
+    "reused_taxonomy_nodes": 2,
+    "reused_complete_queries": 3,
+    "canary_inspected_before_second_request": true,
+    "retries": 0,
+    "redirects_followed": 0,
+    "sequences_requested": false,
+    "earlier_study_linkout": "403_NO_ALTERNATE_ROUTE_REQUESTED_CANONICAL_ARTICLE_STATUS_UNKNOWN",
+    "newer_nomenclature_doi": "WEB_TOOL_INACCESSIBLE_NO_HTTP_STATUS_INFERRED_NO_ALTERNATE_ROUTE",
+    "ncbi_endpoint_requests": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "ignored_files_included_in_history_search": true,
+    "operational_details_exported": false
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "rdkit_availability_rechecked": true,
+    "rdkit_available": false,
+    "limitation": "RDKit is absent in the existing Intel macOS environment. No full authoritative QC or biological-curation verification is claimed."
+  },
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "source_adoptions": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}
