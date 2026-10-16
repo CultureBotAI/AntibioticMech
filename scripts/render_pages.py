@@ -458,9 +458,11 @@ def build(out_dir: Path, *, records: list[tuple[Path, dict]] | None = None) -> N
     import hashlib
     digest_h = hashlib.sha256()
     for _, doc in records:
-        digest_h.update(
-            f"{doc.get('identifier', '')}:{doc.get('curation_status', '')}:{len(doc.get('curation_history') or [])}\n".encode("utf-8")
+        row_key = (
+            f"{doc.get('identifier', '')}:{doc.get('curation_status', '')}:"
+            f"{len(doc.get('curation_history') or [])}\n"
         )
+        digest_h.update(row_key.encode())
     corpus_digest = digest_h.hexdigest()[:12]
 
     stats = {

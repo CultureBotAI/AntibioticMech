@@ -158,7 +158,10 @@ def embed_missing(todo_seqs: dict[str, str], model_name: str, revision: str, dty
         device = torch.device("cpu")
 
     dtype = {"float32": torch.float32, "float16": torch.float16, "bfloat16": torch.bfloat16}[dtype_name]
-    print(f"loading {model_name}@{revision[:8]} ({dtype_name}) on {device} for {len(todo_seqs)} sequences", file=sys.stderr)
+    print(
+        f"loading {model_name}@{revision[:8]} ({dtype_name}) on {device} for {len(todo_seqs)} sequences",
+        file=sys.stderr,
+    )
     tok = AutoTokenizer.from_pretrained(model_name, revision=revision)
     model = EsmModel.from_pretrained(model_name, revision=revision, dtype=dtype, add_pooling_layer=False)
     model.eval().to(device)
@@ -440,7 +443,8 @@ def main() -> int:
     }
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False) + "\n", encoding="utf-8")
+    out_json = json.dumps(payload, separators=(",", ":"), ensure_ascii=False) + "\n"
+    args.out.write_text(out_json, encoding="utf-8")
     print(
         f"wrote {len(out_proteins)} proteins across {len(distinct_records)} records -> {args.out}",
         file=sys.stderr,
