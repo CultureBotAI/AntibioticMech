@@ -1,0 +1,89 @@
+{
+  "canary": "mphL",
+  "canary_review_file": "protein-canary-reviewed.json",
+  "constraints": {
+    "aph_primary": "HTTP_403_HOLD_NO_RETRY_OR_ALTERNATE_ROUTE",
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_embl,xref_refseq,lit_pubmed_id,sequence_version,version",
+  "inputs": {
+    "assessment": {
+      "path": "research/2026-10-15-aph-mph-primary-assessment.json",
+      "sha256": "8f8f38656da3f07b44b05c76f6c94203cc55468bf4068fb7c16aa9e461b10163"
+    },
+    "extraction": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-mph-primary/supplement-extraction.json",
+      "sha256": "e291bbe94c0ff6e689fcf7ac3b2aabbeeb0a525b40d6358250227ced81c72a98"
+    },
+    "pdf": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-mph-primary/41467_2017_2680_MOESM1_ESM.pdf",
+      "sha256": "0f8ec0141d102251cfad822ba70bf015711abd95554ea3b61a590c543bb220bd"
+    },
+    "primary_plan": {
+      "path": "research/2026-10-15-aph-mph-primary-plan.json",
+      "sha256": "b7246c9d5cd54ff9882c7d2b4f923f9f0b11aad5afab420abc5edfde78c726ab"
+    },
+    "supplement_plan": {
+      "path": "research/2026-10-15-aph-mph-primary-supplement-plan.json",
+      "sha256": "2c0255f72cc3744e242484ad4fa14dda1a801d7ff9326854d26bb37bd5ba0637"
+    },
+    "supplement_receipt": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-mph-primary/mph-supplement-receipt.json",
+      "sha256": "6303cac8e19a38d5ccc441d6f9b53d827f439c2c1ee0d83ec4e509e8642cb8c7"
+    },
+    "visual_review": {
+      "path": "reports/resistance-grounding-2026-10-15-aph-mph-primary/identity-table-page-9.png",
+      "sha256": "c52b3efc9d20464899422ebb917eb6119e0b8f76a223aa5fef66b9fcdaf9fa63"
+    }
+  },
+  "max_bytes": 2000000,
+  "preflight": {
+    "globs": [
+      "*receipt*.json",
+      "*attempt*.json",
+      "*plan*.json",
+      "*request*.json"
+    ],
+    "ignored_files_included": true,
+    "literal_identifier_history_matches": [],
+    "patterns": [
+      "CAJ98570",
+      "KX531056",
+      "WP_001094257",
+      "WP_001041372",
+      "WP_050815728"
+    ],
+    "roots": [
+      "research",
+      "reports"
+    ]
+  },
+  "release": "2026_03",
+  "requests": {
+    "mphF": {
+      "query": "\"CAJ98570.1\"",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%22CAJ98570.1%22&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "mphI": {
+      "query": "xref:embl-KX531056",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Aembl-KX531056&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "mphL": {
+      "query": "xref:refseq-WP_001094257.1",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-WP_001094257.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "mphM": {
+      "query": "xref:refseq-WP_001041372.1",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-WP_001041372.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "mphO": {
+      "query": "xref:refseq-WP_050815728.1",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=xref%3Arefseq-WP_050815728.1&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Cxref_refseq%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  }
+}

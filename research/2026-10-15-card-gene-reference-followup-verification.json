@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-15",
+  "scope": "NAMED_GENE_REFERENCE_FOLLOWUP_NOT_EXPERIMENTAL_ALLELES",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {
+      "path": "research/2026-10-15-card-gene-reference-followup.json",
+      "sha256": "c0eae79c262490f95c7968a099ee7571870fc62820eb00356911ac8714a41ddf"
+    },
+    "plan": {
+      "path": "research/2026-10-15-card-gene-reference-followup-plan.json",
+      "sha256": "256553bbfae8faf411b7199ff64c1be695542af146b6dbc82c41b8e0427e70bc"
+    },
+    "canary": {
+      "path": "research/2026-10-15-card-gene-reference-followup-canary.json",
+      "sha256": "eb52f801522779fec2e18379233a389a09c7b0c481127dfb18b335efae248a13"
+    },
+    "taxonomy_plan": {
+      "path": "research/2026-10-15-card-gene-reference-followup-taxonomy-plan.json",
+      "sha256": "9b498b8633aa0c1784369fca3286dcedcd9cd1ca96600fc02b85159fe3889c49"
+    },
+    "script": {
+      "path": "scripts/audit_card_gene_reference_followup.py",
+      "sha256": "50f9c57b425a432a83eedae3699f80b9ba246d3e7ddb8164444def3e1b3af732"
+    },
+    "tests": {
+      "path": "tests/test_card_gene_reference_followup.py",
+      "sha256": "41f73ad7d1930caedf44f7ef2d9fab8acba18e741bd151cbe7c2b1697906c371"
+    },
+    "report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "c667a795d449590f965af0431657ec4867d81d350b3f0828ceea7afa5b8074a5"
+    }
+  },
+  "coverage": {
+    "selected_terms": 161,
+    "source_claims": 201,
+    "complete_collection_aware_records_read": 79,
+    "source_names": 54,
+    "resolved_source_names": 36,
+    "unresolved_source_names": 18,
+    "native_protein_queries": 36,
+    "zero_hit_queries": 19,
+    "native_reference_entries": 167,
+    "verified_reference_taxa": 59,
+    "cached_reference_taxa": 58,
+    "qualified_reference_terms": 71,
+    "qualified_reference_links": 185,
+    "qualified_reference_claim_memberships": 78,
+    "qualified_reference_records": 37,
+    "terms_with_multiple_references": 31,
+    "ordered_locus_only_links": 2,
+    "links_with_own_definition_citation_overlap": 0,
+    "terms_not_queried_unresolved_source_name": 43,
+    "terms_without_exact_field_match_in_bounded_query": 47,
+    "prior_index_rewritten": false,
+    "all_proteins_claimed_newly_discovered": false
+  },
+  "checks": {
+    "initial_focused_pytest": {"passed": 39, "failed": 0, "skipped": 0},
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q -rs tests/test_card_gene_reference_followup.py tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+      "passed": 268,
+      "failed": 0,
+      "skipped": 1,
+      "new_audit_tests_in_combined_run": 44,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_source_pins_before_this_receipt": {
+      "occurrences": 345,
+      "distinct_local_paths": 248,
+      "all_verified": true
+    },
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "prior_acr_and_species_gene_artifacts_unchanged": true,
+    "previous_report": {
+      "sha256": "647586e75fd54d1d631f78223d47af944572d0453e18f085932bf577ea25342e",
+      "bytes": 949380,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    }
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "findings": [
+      {
+        "finding": "A plan naming a nonexistent canary key could bypass binding the inspected receipt to a query.",
+        "disposition": "FIXED: require the canary key to exist; regression-tested."
+      },
+      {
+        "finding": "The generic cached taxonomy reader did not bind a standalone GET endpoint to its selected taxon ID or reject recorded retries and redirect locations.",
+        "disposition": "FIXED in this follow-up reader: check exact GET identity, retain supported search-node selection, and reject retry or redirect metadata; regression-tested."
+      }
+    ],
+    "additional_checks": [
+      "Source names must match active species scientific names or explicit synonyms.",
+      "Case-insensitive exact native fields do not permit substrings, ORFs or protein-name inference.",
+      "Ordered-locus-only matches remain distinct from gene symbols.",
+      "All references and query results retain multiple matches and complete zero-hit responses.",
+      "Bibliography overlap is distinct from primary experimental validation.",
+      "Existing dossiers and report bytes remain unchanged outside the appended section."
+    ],
+    "github_issues_created": 0
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "limitation": "RDKit is absent in this Intel macOS environment; pinned RDKit 2026.3.5 lacks an Intel macOS wheel. No full-QC or biological-curation verification is claimed."
+  },
+  "access": {
+    "new_uniprot_protein_requests": 36,
+    "new_uniprot_taxonomy_requests": 1,
+    "native_attempt_files": 37,
+    "new_primary_publication_requests": 0,
+    "ncbi_requests": 0,
+    "retries": 0,
+    "redirects_followed": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false
+  },
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "whole_record_primary_signoffs": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

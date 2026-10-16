@@ -117,7 +117,7 @@ def test_live_claim_and_history_match_saved_curation_when_applied():
         assert after[field] == before[field]
 
 
-def test_offline_native_replay(dossier, monkeypatch):
+def test_offline_native_replay(dossier, monkeypatch, pre_card_qualification_root):
     if not (ROOT / audit.CACHE / "cohort.json").exists():
         pytest.skip("optional native research cache not available")
 
@@ -127,4 +127,4 @@ def test_offline_native_replay(dossier, monkeypatch):
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
-    assert audit.build(ROOT) == dossier
+    assert audit.build(pre_card_qualification_root) == dossier

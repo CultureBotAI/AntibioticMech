@@ -1,0 +1,100 @@
+{
+  "baseline": {
+    "path": "reports/resistance-grounding-2026-10-15-card-reference-reconciled/baseline.json",
+    "sha256": "8fa7dc7254c77887ff0e345f30a36d9bab3b0b61da08e2c211b727ad2a1ea455"
+  },
+  "checks": {
+    "all_collection_aware_records_read": 2939,
+    "all_four_source_qualified_claim_histories_preserved": true,
+    "errors": 0,
+    "failures": 0,
+    "focused_tests_passed": 102,
+    "full_authoritative_qc_rerun": false,
+    "historical_dossiers_and_predecessor_index_unchanged": true,
+    "json_equal": true,
+    "offline_write_disabled_replay": true,
+    "report_only_new_section": true,
+    "skipped": 0,
+    "tsv_equal": true,
+    "unchanged_data_curation_site_files": 6353
+  },
+  "constraints": {
+    "biological_record_writes": false,
+    "experimental_identifiers_assigned": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "network_requests": 0,
+    "new_primary_reviews": 0
+  },
+  "date": "2026-10-15",
+  "files": [
+    {
+      "path": "research/2026-10-15-card-reference-reconciled-plan.json",
+      "sha256": "22400a2bdfb6f1bc4381706b3108e841d4e6d089509bd07666bb7a194144109a"
+    },
+    {
+      "path": "research/2026-10-15-card-reference-reconciled.json",
+      "sha256": "d0a4b181ff5f2c42900f49e30498089f38aeb9499a4dd02f1b0f95f03beeab4b"
+    },
+    {
+      "path": "research/2026-10-15-card-reference-reconciled.tsv",
+      "sha256": "a2ae435d1e9e0c8b49070074153a1de5b2237f1d098cd4ef322104fd81ce9f7e"
+    },
+    {
+      "path": "scripts/audit_card_reference_reconciled.py",
+      "sha256": "46514ca7d0702e821322b569a177377565b48d47a36acbe3fee469c0a27fe85d"
+    },
+    {
+      "path": "tests/test_card_reference_reconciled.py",
+      "sha256": "81239e8712a23ebbda05aeed0dcc346ddde809d2d93156202cf004196303cf01"
+    }
+  ],
+  "limitations": [
+    "Reference identity does not assign an experimental allele or phenotype.",
+    "597 terms remain without selected references; whole-record review remains open."
+  ],
+  "new_network_requests": 0,
+  "report": {
+    "path": "research/2026-10-07-resistance-gene-grounding.md",
+    "sha256": "1dabbd21ef4894853097779ab32a1ba021a20ecb5c39c033b2ef6a11cc8bdb50"
+  },
+  "status": "RECONCILED_REFERENCE_INDEX_VERIFIED_EXPERIMENTAL_REVIEW_OPEN",
+  "summary": {
+    "added_claim_memberships_with_references": 13,
+    "added_reference_links": 3,
+    "added_reference_proteins": 2,
+    "added_reference_terms": 3,
+    "card_claims": 4538,
+    "card_terms": 2002,
+    "comparators_excluded_from_reference_counts": 2,
+    "complete_collection_aware_records_read": 2939,
+    "context_only_dossiers": 24,
+    "curator_claims_not_reassessed": 133,
+    "current_source_qualified_claims": 4,
+    "new_followup_claims": 35,
+    "new_followup_dossiers": 3,
+    "new_followup_records": 21,
+    "new_followup_terms": 9,
+    "phi_claims_not_reassessed": 217,
+    "qualified_followup_dossiers": 14,
+    "records_with_reference_context": 242,
+    "records_without_card_assertions": 2666,
+    "reference_links": 3071,
+    "score_rules_not_reassessed": 467,
+    "selected_reference_proteins": 1926,
+    "selected_reference_terms": 1405,
+    "unresolved_reference_scope_counts": {
+      "EFFLUX_COMPLEX_OR_SUBUNIT_GRANULARITY_UNRESOLVED": 105,
+      "GENE_CLUSTER_NOT_ONE_PROTEIN": 14,
+      "OTHER_TERM_ENTITY_GRANULARITY_UNRESOLVED": 391,
+      "RNA_TERM_NOT_A_PROTEIN_PRODUCT": 87
+    },
+    "unresolved_reference_terms": 597,
+    "whole_record_primary_signoffs": 0
+  },
+  "test_report": {
+    "path": "reports/resistance-grounding-2026-10-15-card-reference-reconciled/tests.xml",
+    "sha256": "d3e3dfd702d013727bd71654b58a76b9011c401e18437d85d88c19afd7f12e4c"
+  }
+}

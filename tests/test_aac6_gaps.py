@@ -313,10 +313,10 @@ def test_saved_public_invariants_without_request_caches():
     assert data["aac34_primary_table_context"]["reported_determinant_mic"]["comparator"] == ">"
 
 
-def test_native_replay_when_caches_available():
+def test_native_replay_when_caches_available(pre_card_qualification_root):
     if not (ROOT / audit.CACHE / "cohort.json").exists():
         pytest.skip("native research caches unavailable; public invariants and synthetic guards still run")
-    result = audit.build(ROOT)
+    result = audit.build(pre_card_qualification_root)
     assert (json.dumps(result, sort_keys=True, indent=2) + "\n").encode() == (
         ROOT / audit.OUTPUT
     ).read_bytes()

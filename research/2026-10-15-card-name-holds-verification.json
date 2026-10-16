@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-15",
+  "scope": "UNRESOLVED_NAMES_SOURCE_CONFLICTS_AND_SEPARATE_AIF1_PRIMARY_CONTEXT",
+  "base_commit": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "branch": "research/acr-reference-context",
+  "artifacts": {
+    "dossier": {"path": "research/2026-10-15-card-name-holds.json", "sha256": "083ae4bee88a5d9f7334209c3a5644698430ee99f500715e6e8accf2a0445471"},
+    "plan": {"path": "research/2026-10-15-card-name-holds-plan.json", "sha256": "ec2963b6f3a86eec158949183a7c3913be6900297e53047fec0db72363415919"},
+    "protein_plan": {"path": "research/2026-10-15-card-name-holds-protein-plan.json", "sha256": "318db52c1445a8eede405dcba60e5e236485000ced148c5ac1d306c0eeab2cc3"},
+    "primary_assessment": {"path": "research/2026-10-15-card-name-holds-primary-assessment.json", "sha256": "9077f2a39e79299b7f7204e34fba064904a37b8f9f51041616645080ee2df9ae"},
+    "script": {"path": "scripts/audit_card_name_holds.py", "sha256": "fe1429205ddba5c92308d40ce94e52ed2090bee12979375d2f14342f60959861"},
+    "tests": {"path": "tests/test_card_name_holds.py", "sha256": "b2e2c23c31843b9732d58fd811eccefe3cbd67c29e6659f44080aa1512bbd816"},
+    "report": {"path": "research/2026-10-07-resistance-gene-grounding.md", "sha256": "1f71dcfd9810cef6895d41464bd3cf1ceab50165cfb33de31c4fd2a4bb353a68"}
+  },
+  "coverage": {
+    "remaining_name_unresolved_terms_audited": 31,
+    "related_primary_context_terms": 1,
+    "total_terms_in_complete_record_check": 32,
+    "source_claims": 34,
+    "complete_collection_aware_records_read": 18,
+    "new_source_gene_conflict_terms": 5,
+    "new_source_gene_conflict_claims": 5,
+    "primary_papers_reviewed": 1,
+    "primary_pages_visually_reviewed": 6,
+    "primary_figures_visually_reviewed": 2,
+    "paper_species_grounded": 2,
+    "new_complete_protein_queries": 2,
+    "reused_complete_protein_queries": 1,
+    "new_reviewed_reference_entries": 1,
+    "reused_reviewed_gene_name_references": 1,
+    "complete_paper_locus_zero_queries": 1,
+    "cached_taxonomy_nodes": 4,
+    "distinct_cgd_features": 2,
+    "experimental_locus_assignments_withheld": 1,
+    "new_qualified_card_term_references": 0,
+    "preceding_103_of_178_qualified_count_unchanged": true,
+    "source_spelling_corrections": 0,
+    "broad_index_rewritten": false
+  },
+  "checks": {
+    "combined_pytest": {
+      "command": ".venv/bin/pytest -q -rs tests/test_card_name_holds.py tests/test_card_name_crosswalks.py tests/test_card_source_aliases.py tests/test_card_all_status_genes.py tests/test_card_unresolved_names.py tests/test_card_gene_reference_followup.py tests/test_card_species_gene_context.py tests/test_acr_reference_context.py tests/test_card_complex_members.py tests/test_card_literature_expansion.py tests/test_card_literature_proteins.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+      "passed": 433,
+      "failed": 0,
+      "skipped": 1,
+      "duration_seconds": 103.68,
+      "new_audit_tests": 32,
+      "skip": "test_card_reference_lineages.test_offline_native_replay: known qualification deltas lack historical fixtures; public artifact checks still run"
+    },
+    "ruff": "PASS",
+    "ruff_format": "PASS",
+    "git_diff_check": "PASS",
+    "read_only_offline_replay": "PASS_WITH_NETWORK_AND_PYTHON_FILE_WRITES_DENIED",
+    "explicit_pins_before_this_receipt": {"occurrences": 109, "distinct_paths": 85, "all_verified": true},
+    "prior_nonreport_artifacts_checked_unchanged": 38,
+    "corpus_record_hashes": {"checked": 2939, "changed": 0},
+    "previous_report": {
+      "sha256": "4ad463d253a9e6117c313bfe40d31a0071d4f132a62870050c0cda67db5421c4",
+      "bytes": 970419,
+      "all_bytes_preserved": true,
+      "sole_remaining_work_heading_preserved": true
+    },
+    "current_report_bytes": 974240,
+    "biological_source_input_and_project_dependency_git_diff": "EMPTY"
+  },
+  "adversarial_review": {
+    "reviewer": "SAME_AGENT_SEPARATE_PASS",
+    "unresolved_implementation_findings": [],
+    "checks": [
+      "All 31 unresolved source rows remain historical inputs and no spelling is corrected by similarity or independent paper context.",
+      "The five Mdr3/Mdr2 definition conflicts are exact scoped source findings, not automatic gene corrections or family-name inference.",
+      "The paper's qualitative context does not become a clinical breakpoint, resistant-allele MIC, aneuploidy finding or whole-record signoff.",
+      "The paper-specific Candida locus and the cached UniProt gene-name reference map to different CGD features; the shared symbol cannot override that discrepancy.",
+      "Even a matching reference locus would not by itself assign an experimental protein or allele.",
+      "Reference taxonomy is independently replayed, with both paper species contexts separate from reference strains and experimental derivatives.",
+      "Both new native protein queries are complete, release-checked and metadata-only; the zero result is not an exhaustive alias search or biological absence.",
+      "The query plan is bound to the inspected paper and PDF review artifacts, and the remaining query is bound to the inspected canary.",
+      "The initial local DNS failure is preserved separately from the successful network-enabled same-URL request; neither a source denial nor a single-attempt history is invented.",
+      "Unexpected attempts, receipts and errors fail closed; the earlier Tapesia hold remains unchanged.",
+      "CLI replay is immutable; check mode cannot create a missing output or parent directory."
+    ],
+    "unresolved_scientific_findings": [
+      {"terms": ["ARO:3009254", "ARO:3009255", "ARO:3009256", "ARO:3009257", "ARO:3009258"], "status": "SOURCE_MDR3_LABEL_MDR2_DEFINITION_CONFLICT_NO_CORRECTION"},
+      {"term": "ARO:3009378", "status": "PAPER_LOCUS_AND_GENE_NAME_REFERENCE_HAVE_DISTINCT_CGD_FEATURES"},
+      {"term": "ARO:3009380", "status": "PAPER_SPECIES_CONTEXT_DOES_NOT_AUTOMATICALLY_CORRECT_CARD_SPELLING"},
+      {"record": "CHEBI:474180", "status": "PRIMARY_FORMULATION_NOT_RESOLVED_TO_NEUTRAL_CORPUS_STRUCTURE"}
+    ],
+    "remaining_work": [
+      "Inspect source-backed aliases for the paper's Candida locus without merging it with the distinct gene-name reference.",
+      "Resolve formulation and experimental identity before any primary-backed biological curation.",
+      "Resolve unsupported source spellings and gene-definition conflicts through source-specific evidence, not fuzzy matching.",
+      "Continue primary and reference review across the rest of the 2,939-record corpus."
+    ],
+    "github_issues_created": 0
+  },
+  "access": {
+    "research_source_local_acquisition_attempts": 4,
+    "pre_http_local_dns_failures": 1,
+    "same_url_network_enabled_retry_after_local_dns_failure": 1,
+    "successful_publisher_pdf_responses": 1,
+    "successful_new_uniprot_metadata_responses": 2,
+    "automatic_http_retries_per_attempt": 0,
+    "redirects_followed": 0,
+    "alternate_source_urls_used": 0,
+    "source_http_denials_bypassed": 0,
+    "new_taxonomy_requests": 0,
+    "ncbi_endpoint_requests": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "ignored_files_included_in_request_history_search": true,
+    "protein_request_history_matching_json_files_scanned": 177,
+    "primary_pdf_and_render_distribution": "IGNORED_RESEARCH_CACHE_ONLY",
+    "isolated_pdf_tool": {"package": "PyMuPDF", "version": "1.26.4", "location": "/private/tmp/antibioticmech-pdf-review", "project_environment_changed": false}
+  },
+  "full_authoritative_qc": {
+    "run": false,
+    "rdkit_availability_rechecked": true,
+    "rdkit_available": false,
+    "limitation": "RDKit is absent in the existing Intel macOS environment. No full authoritative QC or biological-curation verification is claimed."
+  },
+  "biological_record_writes": 0,
+  "experimental_identifiers_assigned": 0,
+  "whole_record_primary_signoffs": 0,
+  "source_adoptions": 0,
+  "github_mutations": 0,
+  "issue_1040": "DEFERRED",
+  "full_corpus_goal_status": "OPEN"
+}

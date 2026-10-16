@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-15",
+  "scope": "SOURCE_SPECIES_AND_LITERAL_GENE_REFERENCE_CONTEXT_NOT_RESISTANT_ALLELES",
+  "inputs": {
+    "acr_checkpoint": {"path": "research/2026-10-15-acr-reference-context.json", "sha256": "51d97fece6721d9abf917faaf1127989e51807009583b5840532545540707033"},
+    "acr_verification": {"path": "research/2026-10-15-acr-reference-context-verification.json", "sha256": "935222d32eae35121f064ee81d3b24d1204a7ad063b032f4759c475dbac1ce90"}
+  },
+  "selection": {
+    "universe": "All 2002 current CARD terms in the pinned index",
+    "eligibility": "Only the 720 terms without selected index references; all labels matching the exact grammar are included, including misleading apparent species names.",
+    "label_pattern": "(?P<species>[A-Z][a-z]+ [a-z]+) (?P<gene>[A-Za-z][A-Za-z0-9]*)(?: with .*)?",
+    "expected_grammar_matches": 178,
+    "expected_claims": 225,
+    "expected_distinct_own_citation_queries": 113,
+    "gene_fields": ["geneName", "synonyms"],
+    "gene_match": "CASE_INSENSITIVE_WHOLE_SYMBOL_NO_PUNCTUATION_NORMALIZATION",
+    "source_species_match": "SCIENTIFIC_NAME_OR_EXPLICIT_SYNONYM_OF_VERIFIED_STANDALONE_SPECIES_NODE",
+    "do_not_use": ["ordered locus names", "ORF names", "protein-name substrings", "taxon otherNames", "strain lists", "fuzzy species matches"]
+  },
+  "source_species_for_gene_matched_terms": {
+    "Mycobacterium tuberculosis": "1773",
+    "Klebsiella pneumoniae": "573",
+    "Enterobacter aerogenes": "548",
+    "Escherichia coli": "562",
+    "Staphylococcus aureus": "1280",
+    "Bacillus subtilis": "1423",
+    "Enterococcus faecalis": "1351",
+    "Enterobacter cloacae": "550",
+    "Candida albicans": "5476",
+    "Aspergillus fumigatus": "746128",
+    "Cryptococcus neoformans": "5207"
+  },
+  "extra_cached_taxonomy": {
+    "5476": {"body": null, "receipt": {"path": "reports/resistance-grounding-2026-10-07/request-7c397babddc1327428ebb5b06370508431e61493117fd6e5b58de7eda0804577.json", "sha256": "9f6188cbdd981bf38e6e6ef64ec60f44d0000dcd77c65d46d14aee8304d0e9a0"}},
+    "5207": {"body": null, "receipt": {"path": "reports/resistance-grounding-2026-10-07/request-443359d3070c321040125a1a24511fd9e811fc9a8b56a742052e640db394bae6.json", "sha256": "0e6b05aeed14e231f8729e7e0773285adee2f89c17e4c3d0b52d63f0438b896a"}},
+    "237561": {"body": null, "receipt": {"path": "reports/resistance-grounding-2026-10-07/request-ac4b1724ccccec8ef27ec669d7755fe12398cdb72853f39023db7b09f727315f.json", "sha256": "f0563c7f3c2b4d17a741ebe86416924c49c1b78aa2f60e2db4a52d8dc04f2ff4"}}
+  },
+  "new_taxonomy_request": {
+    "taxon_id": "1125630",
+    "url": "https://rest.uniprot.org/taxonomy/1125630.json",
+    "release": "2026_03",
+    "max_response_bytes": 2000000,
+    "timeout_seconds": 45,
+    "retries": 0,
+    "redirects_followed": 0,
+    "cache_directory": "reports/resistance-grounding-2026-10-15-card-species-gene-context",
+    "prior_absence_search": "rg --hidden --no-ignore across research and reports JSON files found no taxonomy/1125630 request; ignored files included. No new protein or primary-publication requests are planned.",
+    "stop_on_http_failure_or_release_mismatch": true
+  },
+  "constraints": {
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "outreach": false,
+    "reuse_terms_review_resumed": false,
+    "new_protein_requests": 0,
+    "new_primary_reviews": 0,
+    "biological_record_writes": false,
+    "experimental_alleles_subjects_or_genomes_assigned": false,
+    "operational_details_or_numeric_ast_exported": false,
+    "whole_record_primary_signoffs": false,
+    "full_corpus_goal_status": "OPEN"
+  }
+}

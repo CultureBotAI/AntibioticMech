@@ -596,6 +596,14 @@ resistance_mechanisms:
   - reference: ARO:3004097
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000068 (daptomycin);
       database assertion, not a primary citation.
+  note: 'Evidence-scope review 2026-10-15-cdsa-paper-taxonomic-scope: The cited paper''s
+    addendum favors S. oralis for the originally S. mitis-labelled strain 351 and
+    retains S. mitis/oralis. The CARD species label is therefore not a verified experimental
+    species assignment. Retain the source assertion as database evidence; no replacement
+    taxon, protein, allele or genome is assigned. Qualification references, not an
+    upgrade of the CARD assertion: DOI:10.1128/aac.02435-16 (Addendum in proof; publisher
+    primary HTML text; figures and supplements not reviewed). Reviewed 2026-10-15
+    by Codex; curation/card_evidence_reviews.json SHA-256 6b38d17c52d8b0123e7bb2ece35341322269f0efb79b47d66d513b3c6bf6830d.'
 molecular_targets:
 - target_id: ARO:3003275
   target_label: Daptomycin sensitive cardiolipin synthetase
@@ -798,3 +806,8 @@ curation_history:
   changes: Structured BioSample accessions on 19 activity_spectrum observation(s)
     where evidence notes already named exactly one accession.
   llm_assisted: true
+- timestamp: '2026-10-16T01:11:49Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
+    2026-08-30, unchanged.'

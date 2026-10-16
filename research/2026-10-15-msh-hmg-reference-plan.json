@@ -1,0 +1,110 @@
+{
+  "canary": "msh",
+  "constraints": {
+    "biological_record_writes": false,
+    "figure_pixels_reviewed": false,
+    "full_investigation_complete": false,
+    "issue_1040": "DEFERRED",
+    "native_primary_bodies_replayed": false,
+    "ncbi_requests": 0,
+    "primary_access": "SELECTED_PUBLISHER_WEB_TEXT_AND_ENDPOINT_HEADINGS",
+    "redirects_followed": 0,
+    "retries": 0,
+    "sequences_variants_constructs_protocols_or_numeric_ast_exported": false,
+    "source_adoption": false,
+    "supplements_reviewed": false,
+    "whole_papers_reviewed": false
+  },
+  "date": "2026-10-15",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_embl,lit_pubmed_id,sequence_version,version",
+  "inputs": {
+    "assessment": {
+      "path": "research/2026-10-15-msh-hmg-reference-assessment.json",
+      "sha256": "cc5e0a1dc7f92f64548171920edd6b1134496bd0f86aacedeb55bac4a58309c2"
+    },
+    "current_index": {
+      "path": "research/2026-10-15-card-reference-successor.json",
+      "sha256": "ceae861cd595a44f45691e83f9bbe5ac5ca83e9a17a5b3bf24f73013210d9e3b"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "hmg_body": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-30940706-response.bin",
+      "sha256": "30a92c4c565460ca91aa2fcfddb9aa8f8a096de1f9789b6eca6507067e1d329b"
+    },
+    "hmg_receipt": {
+      "path": "reports/resistance-grounding-2026-10-13-card-literature-expansion/pmid-30940706-receipt.json",
+      "sha256": "76a5fc3cf221c714c06bfbda57e32f97aa0ee02dc4983a2f76b633ed214b5d72"
+    },
+    "prior_name_screen": {
+      "path": "research/2026-10-15-card-protein-name-screen.json",
+      "sha256": "9ea833b1d24f8c48189a374f13a549ccff6458185d77f782a86961aea15a8a51"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "taxonomy_inventory": {
+      "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+      "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"
+    }
+  },
+  "max_bytes": 1000000,
+  "prior_exact_query_search_included_ignored_files": true,
+  "prior_matching_exact_requests": 0,
+  "release": "2026_03",
+  "requests": {
+    "msh": {
+      "query": "gene_exact:MSH2 AND organism_id:284593",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3AMSH2+AND+organism_id%3A284593&format=json&size=500&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_embl%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "reused_taxonomy": {
+    "284593": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/284593",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-e6b6b80db984a936e72dd6aec4428784294b201ece82c35fc945c8217d9067d8.json",
+          "sha256": "f45e35a8f67500a1a6bf1445bcec377879aa874e6602a1f4c89b20e0e7876d72"
+        }
+      },
+      "taxon_id": "284593"
+    },
+    "330879": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/330879",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-82e6d6d5607f9791cd3fcfcc2b34f722fb8a90a5fae76b37107735d592a60f43.json",
+          "sha256": "d88fee2b9e355efb3fe3efa0a9d22130d189cab6f9957a6719965029406e875b"
+        }
+      },
+      "taxon_id": "330879"
+    },
+    "5478": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/5478",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-6680d98d4897b4b8241658744e31fe09913eabf3981b3b510fe88d40ec7bebba.json",
+          "sha256": "63ed7aa91c431604195a329022fc5b3267865d19b0f0be3086abff3f86b43939"
+        }
+      },
+      "taxon_id": "5478"
+    },
+    "746128": {
+      "source": {
+        "url": "https://rest.uniprot.org/taxonomy/746128",
+        "wrapper": {
+          "path": "reports/resistance-grounding-2026-10-07/request-cdf078af3e6e89bba7f8a11825b3d32b3d626185b6898c6e33e903e6eb2d6087.json",
+          "sha256": "39a14195d5f92fb50471fe28d006a98c7988eaa03a8534ccdc4e99206511a896"
+        }
+      },
+      "taxon_id": "746128"
+    }
+  }
+}

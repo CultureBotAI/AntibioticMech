@@ -1,0 +1,84 @@
+{
+  "canary": "mph-primary",
+  "constraints": {
+    "biological_record_writes": false,
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "primary_text_export": "IDENTITY_AND_EVIDENCE_SCOPE_ONLY_NO_SEQUENCES_VARIANTS_PROTOCOLS_NUMERIC_AST",
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "inputs": {
+    "aph_discovery": {
+      "path": "reports/resistance-grounding-2026-10-07/epmc-discovery-a4b21881670e65aebccdabf1b0d825cd98118dae7b987a6101b60a73d002855d.json",
+      "sha256": "5352e2c583e1c819b80ef0ebbb8296a7a3108ba90c802964cafc08f0424ec6f7"
+    },
+    "current_index": {
+      "path": "research/2026-10-15-card-current-references.json",
+      "sha256": "f98aaf50c76aaab8917fd470d4622e8ec2ababfbcdf970ce2b89439e614d71e7"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "mph_discovery": {
+      "path": "reports/resistance-grounding-2026-10-07/epmc-discovery-f4d4459f22219f4c889b0d56199663e7816eaa67d5090cc71a7e4b8892fada91.json",
+      "sha256": "c5f792c50d16ffeec630058fc13ab53f139b481f28f04f5bf5eca867a4beda95"
+    },
+    "prior_cohort": {
+      "path": "research/2026-10-15-aph-ant-aad-mph-gaps.json",
+      "sha256": "db5b3082d5f6cff947535cba2afbdf43dec35ce7ed8ae155495c1232f51edcbe"
+    },
+    "source_inventory": {
+      "path": "data/raw/aro_resistance_edges.tsv",
+      "sha256": "5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    }
+  },
+  "max_bytes": 2000000,
+  "preflight": {
+    "globs": [
+      "*request*.json",
+      "*receipt*.json",
+      "*attempt*.json",
+      "*plan*.json",
+      "*access*.json",
+      "*primary*.json"
+    ],
+    "ignored_files_included": true,
+    "matching_native_history": [],
+    "patterns": [
+      "PMC90451",
+      "PMC5760710"
+    ],
+    "roots": [
+      "research",
+      "reports"
+    ],
+    "scope": "ONLY_LISTED_GLOBS_NOT_ALL_EVIDENCE"
+  },
+  "requests": {
+    "aph-primary": {
+      "doi": "10.1128/aac.45.4.1249-1253.2001",
+      "open_access_metadata": "N",
+      "pmid": "11257042",
+      "url": "https://europepmc.org/articles/PMC90451"
+    },
+    "mph-primary": {
+      "doi": "10.1038/s41467-017-02680-0",
+      "open_access_metadata": "Y",
+      "pmid": "29317655",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC5760710/fullTextXML"
+    }
+  },
+  "web_tool_limits": {
+    "aph_publisher": "TOOL_INACCESSIBLE_STATUS_UNKNOWN",
+    "aph_reader": "TOOL_INACCESSIBLE_STATUS_UNKNOWN",
+    "mph_publisher": "TOOL_500_WITH_IDP_REDIRECT_NOT_NATIVE_HTTP_DENIAL",
+    "mph_xml": "TOOL_INACCESSIBLE_STATUS_UNKNOWN"
+  }
+}

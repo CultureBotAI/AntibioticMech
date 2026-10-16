@@ -328,8 +328,8 @@ def test_no_operational_or_ast_fields_exported():
     assert not set(keys(assessment())) & forbidden
 
 
-def test_offline_replay_when_native_cache_available():
+def test_offline_replay_when_native_cache_available(pre_cdsa_qualification_root):
     native = json.loads((ROOT / audit.NATIVE).read_bytes())
     if not (ROOT / native["queries"]["KP1_2583"]["path"]).exists():
         pytest.skip("native cache unavailable; portable checks still run")
-    assert audit.build(ROOT) == public_result()
+    assert audit.build(pre_cdsa_qualification_root) == public_result()

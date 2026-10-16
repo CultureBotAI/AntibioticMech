@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-15",
+  "scope": "NAME_CROSSWALK_REFERENCE_PROTEINS_NOT_RESISTANT_ALLELES",
+  "cache_directory": "reports/resistance-grounding-2026-10-15-card-name-crosswalks",
+  "canary": "fur1",
+  "requests": {
+    "fur1": {
+      "gene": "Fur1",
+      "taxon_id": "5478",
+      "source_name": "Nakaseomyces glabratus",
+      "parameters": {
+        "query": "(gene_exact:Fur1) AND taxonomy_id:5478",
+        "format": "json",
+        "size": "500",
+        "sort": "accession asc",
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AFur1%29+AND+taxonomy_id%3A5478&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "atpe": {
+      "gene": "atpE",
+      "taxon_id": "36809",
+      "source_name": "Mycobacterium abscessus",
+      "parameters": {
+        "query": "(gene_exact:atpE) AND taxonomy_id:36809",
+        "format": "json",
+        "size": "500",
+        "sort": "accession asc",
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AatpE%29+AND+taxonomy_id%3A36809&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    },
+    "cyp51a": {
+      "gene": "Cyp51a",
+      "taxon_id": "1873960",
+      "source_name": "Mycosphaerella fijiensis",
+      "parameters": {
+        "query": "(gene_exact:Cyp51a) AND taxonomy_id:1873960",
+        "format": "json",
+        "size": "500",
+        "sort": "accession asc",
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version"
+      },
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3ACyp51a%29+AND+taxonomy_id%3A1873960&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion"
+    }
+  },
+  "release": "2026_03",
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version",
+  "max_bytes": 10000000,
+  "retries": 0,
+  "redirects_followed": 0,
+  "entry_status_filter": null,
+  "completion_requirement": "REQUIRE_COMPLETE_NATIVE_QUERY_OR_RETAIN_INCOMPLETE_FOR_CURSOR_FOLLOWUP",
+  "source_inputs": {
+    "name_checkpoint": {
+      "path": "research/2026-10-15-card-unresolved-name-context.json",
+      "sha256": "14bb9b37bf62a385f897707dbeb5b91372e56c6da669b8368238f103979276a5"
+    },
+    "lpsn": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-crosswalks/lpsn-receipt.json",
+      "sha256": "02a78665793b2483c5eec9cdd75fe375315a000c601c57d464d14140db0123ed"
+    },
+    "fijiensis": {
+      "path": "reports/resistance-grounding-2026-10-15-card-name-crosswalks/fijiensis-receipt.json",
+      "sha256": "ab1614e70c0db36dfc9a95ea4cc4281c1d0d722286f4712d78e8ead6d4718bf6"
+    },
+    "cached_nomenclature": {
+      "path": "reports/resistance-grounding-2026-10-13-fungamr-references/nomenclature-reviewed.json",
+      "sha256": "632ccdb359a967d682929e3915fe178324f292c7ad4cf3464ac28ddc9f178bcd"
+    }
+  },
+  "preflight": {
+    "ignored_files_included": true,
+    "searched_formats": [
+      "JSON request plans, attempts, receipts and wrappers in reports and research"
+    ],
+    "matching_Fur1_atpE_Cyp51a_requests_found": false,
+    "cached_Cdc6_and_folP_status_partitions_reused_not_requested_again": true,
+    "no_NCBI_endpoints": true
+  },
+  "constraints": {
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "new_primary_resistance_reviews": 0,
+    "biological_record_writes": false,
+    "experimental_identity_assignments": false,
+    "operational_details_exported": false
+  }
+}

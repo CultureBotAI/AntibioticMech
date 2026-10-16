@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-15",
+  "canary": "rgt-taxonomy",
+  "release": "2026_03",
+  "max_bytes": 1000000,
+  "requests": {
+    "rgt-taxonomy": {
+      "query": "WAC1438",
+      "url": "https://rest.uniprot.org/taxonomy/search?query=WAC1438&format=json&size=500"
+    }
+  },
+  "prior_exact_query_search_included_ignored_files": true,
+  "prior_matching_exact_requests": 0,
+  "related_species_inferred_as_experimental_subject": false,
+  "constraints": {
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "retries": 0,
+    "redirects_followed": 0,
+    "biological_record_writes": false,
+    "full_investigation_complete": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "cache_directory": "reports/resistance-grounding-2026-10-15-card-explicit-identifiers",
+  "canary": "source-accessions",
+  "cgd_allelic_aliases_do_not_assign_haplotype": true,
+  "cgd_feature": {
+    "cgd_id": "CAL0000191273",
+    "feature": "C4_03350C_A",
+    "feature_aliases": [
+      "orf19.10870",
+      "IPF23891.1",
+      "IPF15758.2",
+      "Contig4-2353_0001",
+      "orf6.1783",
+      "CaO19.10870",
+      "CaO19.3362",
+      "orf19.3362",
+      "C4_03350C_B",
+      "C4_03350C",
+      "CAWG_03481"
+    ],
+    "feature_primary_gene_name": "AIF1",
+    "feature_type": "ORF|Uncharacterized",
+    "mapping_gene_name": "AIF1"
+  },
+  "cgd_query_aliases": [
+    "C4_03350C",
+    "C4_03350C_A",
+    "C4_03350C_B",
+    "CAWG_03481",
+    "CaO19.10870",
+    "CaO19.3362",
+    "Contig4-2353_0001",
+    "IPF15758.2",
+    "IPF23891.1",
+    "orf19.10870",
+    "orf6.1783"
+  ],
+  "constraints": {
+    "biological_record_writes": false,
+    "experimental_identity_assignments": false,
+    "full_corpus_goal_status": "OPEN",
+    "issue_1040": "DEFERRED",
+    "ncbi_requests": 0,
+    "new_primary_reviews": 0,
+    "redirects_followed": 0,
+    "retries": 0
+  },
+  "date": "2026-10-15",
+  "documentation": {
+    "query_fields": "https://www.uniprot.org/help/query-fields",
+    "result_field_configuration": "https://rest.uniprot.org/configure/uniprotkb/result-fields",
+    "secondary_accession_queries_are_separate_from_primary_accession_queries": true
+  },
+  "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_cgd",
+  "inputs": {
+    "corpus_update": {
+      "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
+      "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c"
+    },
+    "definitions": {
+      "path": "research/2026-10-09-card-definition-citations.json",
+      "sha256": "3326f8b39a2572c5845b9fd2125a5ef17d90d36b52835bedb27c61975090678a"
+    },
+    "gene_checkpoint": {
+      "path": "research/2026-10-15-card-gene-reference-followup.json",
+      "sha256": "c0eae79c262490f95c7968a099ee7571870fc62820eb00356911ac8714a41ddf"
+    },
+    "index": {
+      "path": "research/2026-10-15-card-aph-memberships.json",
+      "sha256": "66fc408ae1bd53b78376d08f4cb9cecb1d587e95ce0c99f740ac4e186e966595"
+    },
+    "name_holds": {
+      "path": "research/2026-10-15-card-name-holds.json",
+      "sha256": "083ae4bee88a5d9f7334209c3a5644698430ee99f500715e6e8accf2a0445471"
+    },
+    "previous_verification": {
+      "path": "research/2026-10-15-card-name-holds-verification.json",
+      "sha256": "991cdb1844d04f6d3a48eae04b4fbc57268f248317ec7b0bd7a5de89585b0e85"
+    },
+    "source_aliases": {
+      "path": "research/2026-10-15-card-source-aliases.json",
+      "sha256": "70fbf5e491e7148f574065671ed7e595a6850e2a4cf99293d183403ce67a68a3"
+    },
+    "source_queue": {
+      "path": "curation/source_queue.tsv",
+      "sha256": "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+    },
+    "taxonomy_inventory": {
+      "path": "reports/resistance-grounding-2026-10-15-card-gene-reference-followup/taxonomy-cache-inventory.json",
+      "sha256": "071db296d1418042946d97ffcd408151e2d665346a36b346df4f5ab048fc2d72"
+    }
+  },
+  "max_bytes": 5000000,
+  "preflight": {
+    "path": "reports/resistance-grounding-2026-10-15-card-explicit-identifiers/preflight.json",
+    "sha256": "29bb80f4f8489fd5bc1e84c7c4936537d20ddb8e1ae394d8f0460e3ce8f14c5c"
+  },
+  "release": "2026_03",
+  "requests": {
+    "cgd-paper-locus-aliases": {
+      "expected_source_species": "5476",
+      "kind": "CGD_LOCUS_ALIAS_REFERENCE_NOT_EXPERIMENTAL_HAPLOTYPE",
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_cgd",
+        "format": "json",
+        "query": "(gene_exact:C4_03350C OR gene_exact:C4_03350C_A OR gene_exact:C4_03350C_B OR gene_exact:CAWG_03481 OR gene_exact:CaO19.10870 OR gene_exact:CaO19.3362 OR gene_exact:Contig4-2353_0001 OR gene_exact:IPF15758.2 OR gene_exact:IPF23891.1 OR gene_exact:orf19.10870 OR gene_exact:orf6.1783) AND taxonomy_id:5476",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "query": "(gene_exact:C4_03350C OR gene_exact:C4_03350C_A OR gene_exact:C4_03350C_B OR gene_exact:CAWG_03481 OR gene_exact:CaO19.10870 OR gene_exact:CaO19.3362 OR gene_exact:Contig4-2353_0001 OR gene_exact:IPF15758.2 OR gene_exact:IPF23891.1 OR gene_exact:orf19.10870 OR gene_exact:orf6.1783) AND taxonomy_id:5476",
+      "source_term": null,
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28gene_exact%3AC4_03350C+OR+gene_exact%3AC4_03350C_A+OR+gene_exact%3AC4_03350C_B+OR+gene_exact%3ACAWG_03481+OR+gene_exact%3ACaO19.10870+OR+gene_exact%3ACaO19.3362+OR+gene_exact%3AContig4-2353_0001+OR+gene_exact%3AIPF15758.2+OR+gene_exact%3AIPF23891.1+OR+gene_exact%3Aorf19.10870+OR+gene_exact%3Aorf6.1783%29+AND+taxonomy_id%3A5476&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_cgd"
+    },
+    "source-accessions": {
+      "expected_source_species": "470",
+      "kind": "PRIMARY_OR_SECONDARY_ACCESSION_NO_TAXON_FILTER_TO_RETAIN_MISMATCHES",
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_cgd",
+        "format": "json",
+        "query": "(accession:A0A225SC95 OR sec_acc:A0A225SC95 OR accession:Q2FD57 OR sec_acc:Q2FD57)",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "query": "(accession:A0A225SC95 OR sec_acc:A0A225SC95 OR accession:Q2FD57 OR sec_acc:Q2FD57)",
+      "source_term": "ARO:3004578",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=%28accession%3AA0A225SC95+OR+sec_acc%3AA0A225SC95+OR+accession%3AQ2FD57+OR+sec_acc%3AQ2FD57%29&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_cgd"
+    },
+    "source-locus": {
+      "expected_source_species": "1773",
+      "kind": "REVIEWED_ORDERED_LOCUS_REFERENCE",
+      "parameters": {
+        "fields": "accession,reviewed,protein_name,gene_names,organism_id,organism_name,xref_card,lit_pubmed_id,sequence_version,version,xref_cgd",
+        "format": "json",
+        "query": "gene_exact:Rv2783c AND taxonomy_id:1773 AND reviewed:true",
+        "size": "500",
+        "sort": "accession asc"
+      },
+      "query": "gene_exact:Rv2783c AND taxonomy_id:1773 AND reviewed:true",
+      "source_term": "ARO:3004977",
+      "url": "https://rest.uniprot.org/uniprotkb/search?query=gene_exact%3ARv2783c+AND+taxonomy_id%3A1773+AND+reviewed%3Atrue&format=json&size=500&sort=accession+asc&fields=accession%2Creviewed%2Cprotein_name%2Cgene_names%2Corganism_id%2Corganism_name%2Cxref_card%2Clit_pubmed_id%2Csequence_version%2Cversion%2Cxref_cgd"
+    }
+  },
+  "scope": "EXPLICIT_IDENTIFIER_REFERENCE_FOLLOWUP_NOT_EXPERIMENTAL_ALLELES",
+  "source_accession_leads": [
+    "A0A225SC95",
+    "Q2FD57"
+  ],
+  "source_locus_lead": "Rv2783c"
+}

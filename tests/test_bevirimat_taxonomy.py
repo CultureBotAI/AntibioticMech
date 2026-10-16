@@ -103,7 +103,7 @@ def test_unreviewed_primary_payload_rejected():
         audit.primary_context(b"HIV-1 NL4-3")
 
 
-def test_offline_native_replay(monkeypatch):
+def test_offline_native_replay(monkeypatch, pre_card_qualification_root):
     if not (ROOT / audit.CACHE / "primary-2010-response.bin").exists():
         pytest.skip("optional native research cache not available")
 
@@ -113,7 +113,8 @@ def test_offline_native_replay(monkeypatch):
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
-    assert audit.build(ROOT, ROOT / audit.CACHE) == json.loads((ROOT / audit.OUTPUT).read_bytes())
+    root = pre_card_qualification_root
+    assert audit.build(root, root / audit.CACHE) == json.loads((ROOT / audit.OUTPUT).read_bytes())
 
 
 def test_live_curation_preserves_every_other_field():

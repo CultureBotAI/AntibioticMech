@@ -199,30 +199,15 @@ def test_mixed_and_uncultured_nodes_remain_ranked_but_not_identified_experimenta
         assert not node["experimental_subject_assignment"]
 
 
-def test_offline_native_replay(dossier, monkeypatch, capsys):
+def test_offline_native_replay(dossier, monkeypatch, capsys, pre_card_qualification_root):
     if not (ROOT / audit.PLAN).exists():
         pytest.skip("optional native research cache not available")
 
-    # These later note-only deltas have no registered historical record fixture.
-    update = json.loads(audit.reference.check_pin(ROOT, {
-        "path": "research/2026-10-15-card-evidence-qualifications-verification.json",
-        "sha256": "1e6378c711d7627465a26602f6ac3129c8a4f478bb26646cf7d232ad3e89152c",
-    }).read_bytes())
-    deltas = {d["path"]: d for d in update["record_deltas"]}
     census_path = audit.reference.check_pin(ROOT, dossier["inputs"]["census"])
     with census_path.open() as stream:
         census = list(csv.DictReader(stream, delimiter="\t"))
-    unavailable = []
     for row in census:
-        delta = deltas.get(row["path"])
-        if (delta and row["identifier"] == delta["identifier"]
-                and row["record_sha256"] == delta["before_sha256"]
-                and audit.reference.digest(ROOT / row["path"]) == delta["after_sha256"]):
-            unavailable.append(row["identifier"])
-        else:
-            audit.checkpoint_path(ROOT, row)
-    if unavailable:
-        pytest.skip("known qualification deltas lack historical fixtures; public artifact checks still run")
+        audit.checkpoint_path(pre_card_qualification_root, row)
 
     def denied(*args, **kwargs):
         raise AssertionError("offline taxonomy audit attempted network access")
@@ -230,7 +215,7 @@ def test_offline_native_replay(dossier, monkeypatch, capsys):
     monkeypatch.setattr(requests.sessions.Session, "request", denied)
     monkeypatch.setattr(socket.socket, "connect", denied)
     monkeypatch.setattr(socket, "create_connection", denied)
-    monkeypatch.chdir(ROOT)
+    monkeypatch.chdir(pre_card_qualification_root)
     monkeypatch.setattr(sys, "argv", [audit.__name__, "--check", "--historical-records"])
     audit.main()
     assert json.loads(capsys.readouterr().out) == dossier["summary"]

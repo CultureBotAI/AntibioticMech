@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-15",
+  "scope": "BOUNDED_SOURCE_SCOPE_AUDIT_AND_INACTIVE_CURATION_DRAFT_NOT_FULL_QC",
+  "branch": "research/acr-reference-context",
+  "base_head": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "artifacts": {
+    "assessment": {
+      "path": "research/2026-10-15-cdsa-cyp51-context-assessment.json",
+      "sha256": "1d825451617cfcf296aee8a7f85056ac4170e3057417e52bbc04628ff3eefeaa"
+    },
+    "audit_plan": {
+      "path": "research/2026-10-15-cdsa-cyp51-context-audit-plan.json",
+      "sha256": "2f4e185509950d8f3ab469253b27acf17f2ed21f6c3caad67d473c98b7a17174"
+    },
+    "dossier": {
+      "path": "research/2026-10-15-cdsa-cyp51-context.json",
+      "sha256": "27e56addf4c80541045757666aef72710508315945a541f5333385021371467e"
+    },
+    "proposed_review": {
+      "path": "research/2026-10-15-cdsa-cyp51-context-proposed-review.json",
+      "sha256": "c85ac11a935cb4fd6ae5024835fd276cced869f5f50bc4c304ffcf2408dc6916"
+    },
+    "report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "5a1ea46e000beab8c8f914807418beadfae56fc0a54caa0e47d76aaea88bbd30"
+    },
+    "script": {
+      "path": "scripts/audit_cdsa_cyp51_context.py",
+      "sha256": "c1bd1f4dfd6280959240ef73f167af6c42251af05c29121df33c304a2778f57d"
+    },
+    "source_plan": {
+      "path": "research/2026-10-15-cdsa-cyp51-context-plan.json",
+      "sha256": "7bfcf11263d560f6bb6e3dc7d130db31dc40b4fc3013c9eeaecf7db9784319da"
+    },
+    "tests": {
+      "path": "tests/test_cdsa_cyp51_context.py",
+      "sha256": "1f67e2caf7f18e6230826f4e371f5e5817783bbeda53e256410db925651c632b"
+    }
+  },
+  "tests": {
+    "command": ".venv/bin/pytest -q -rs tests/test_cdsa_cyp51_context.py tests/test_m35_porin_context.py tests/test_card_evidence_reviews.py tests/test_card_explicit_identifiers.py tests/test_vmlr2_structure_context.py tests/test_outer_membrane_evidence.py tests/test_card_source_aliases.py tests/test_card_all_status_genes.py tests/test_card_complex_members.py tests/test_mex_component_references.py",
+    "passed": 420,
+    "skipped": 0,
+    "seconds": 178.66,
+    "new_tests": 38,
+    "native_cache_replay_passed": true,
+    "native_replay_network_and_file_writes_denied": true,
+    "inactive_draft_loader_and_note_only_projection_passed": true,
+    "ruff_check_passed": true,
+    "ruff_format_check_passed": true,
+    "git_diff_check_passed": true
+  },
+  "preservation": {
+    "explicit_pin_occurrences_checked": 56,
+    "distinct_pin_paths_checked": 41,
+    "previous_nonreport_artifacts_unchanged": 70,
+    "previous_report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "5a724b0e45ef968340aa09414b4e7fd692c7df5cc06c94e83815dff3de255a3a",
+      "bytes": 992064,
+      "all_bytes_preserved": true
+    },
+    "current_report_bytes": 995660,
+    "corpus_record_hashes_checked": 2939,
+    "complete_target_records_read": 13,
+    "source_claims": 13,
+    "source_terms": 6,
+    "biological_records_changed": 0,
+    "source_owned_inputs_changed": 0,
+    "schema_or_generated_pages_changed": 0,
+    "dependencies_changed": 0
+  },
+  "scientific_review": {
+    "new_taxonomic_scope_qualifications": 1,
+    "source_species_assigned_to_ambiguous_paper_subject": false,
+    "project_accession_promoted_to_assembly": false,
+    "exact_experimental_alleles_assigned": false,
+    "inactive_abuo_accessions_promoted_or_replaced": false,
+    "fungal_discovery_citation_promoted_to_card_source_citation": false,
+    "zero_queries_promoted_to_biological_absence": false,
+    "numeric_ast_curated": false,
+    "primary_figures_or_supplements_signed_off": false,
+    "publisher_web_review_has_local_body_replay": false,
+    "inactive_curation_drafts": 1,
+    "draft_validation_scope": "THIRTEEN_SELECTED_COMPLETE_RECORDS_NOT_FULL_SEED_QC",
+    "draft_applied_to_active_curation": false,
+    "combined_qualified_reference_terms": 108,
+    "bounded_cohort_terms": 178,
+    "remaining_reference_terms": 70,
+    "full_corpus_goal_status": "OPEN"
+  },
+  "environment_probe": {
+    "python": "3.13.12 conda-forge",
+    "platform": "macOS-26.6.2-x86_64-i386-64bit-Mach-O",
+    "architecture": "x86_64",
+    "command": "UV_HTTP_RETRIES=0 uv pip install --python .venv/bin/python --dry-run --no-deps --only-binary :all: --no-cache --no-config --default-index https://pypi.org/simple rdkit==2026.3.5",
+    "exit_code": 1,
+    "result": "No matching platform wheel for the pinned RDKit version in the PyPI binary-only resolution.",
+    "reported_available_platforms": [
+      "manylinux_2_28_aarch64",
+      "manylinux_2_28_x86_64",
+      "macosx_11_0_arm64",
+      "win_amd64"
+    ],
+    "packages_installed_or_changed": false,
+    "source_build_or_conda_availability_assessed": false,
+    "global_rdkit_unavailability_inferred": false,
+    "rdkit_import_available_after_probe": false
+  },
+  "limits": {
+    "new_uniprot_metadata_requests": 2,
+    "new_taxonomy_requests": 0,
+    "reused_complete_native_queries": 6,
+    "reused_taxonomy_nodes": 3,
+    "native_query_suggestions_ignored": 8,
+    "new_selected_publisher_context_reviews": 1,
+    "unsuccessful_primary_web_opens": 2,
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0,
+    "outreach": 0,
+    "github_mutations": 0,
+    "authoritative_full_qc_run": false,
+    "full_experimental_grounding_complete": false
+  }
+}

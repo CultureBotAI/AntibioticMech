@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-15",
+  "scope": "BOUNDED_REFERENCE_AUDIT_NOT_FULL_QC_OR_EXPERIMENTAL_ALLELE_SIGNOFF",
+  "branch": "research/acr-reference-context",
+  "base_head": "9d967d482277d4c762b3c56424b4e83d0dea83f5",
+  "artifacts": {
+    "assessment": {
+      "path": "research/2026-10-15-m35-porin-context-assessment.json",
+      "sha256": "a4c6d4cf7f2db5b1a7b753da432d068a95775b87c3a439c8467b9d49f5443d37"
+    },
+    "dossier": {
+      "path": "research/2026-10-15-m35-porin-context.json",
+      "sha256": "6046ccb3e0e0e3d3548d79d847b34757460814dc2353b5ff007c9a72de8f7339"
+    },
+    "plan": {
+      "path": "research/2026-10-15-m35-porin-context-plan.json",
+      "sha256": "1690b870691a864ff71105c764fd029482933ea39afcf9556ecf4129919ec4cd"
+    },
+    "report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "5a724b0e45ef968340aa09414b4e7fd692c7df5cc06c94e83815dff3de255a3a"
+    },
+    "script": {
+      "path": "scripts/audit_m35_porin_context.py",
+      "sha256": "301bf32f2a1627221b799720b17b8be391ca526ff066acf9dc31b5e6d5ff6680"
+    },
+    "tests": {
+      "path": "tests/test_m35_porin_context.py",
+      "sha256": "207086bad40f1ea0d0ff61e8f158e1424e5f6924bffd811f53311644bf8a8b3e"
+    }
+  },
+  "tests": {
+    "command": ".venv/bin/pytest -q tests/test_m35_porin_context.py tests/test_daptomycin_locus_context.py tests/test_outer_membrane_evidence.py tests/test_card_protein_name_screen.py tests/test_card_literature_expansion.py tests/test_card_complex_members.py tests/test_card_reference_lineages.py tests/test_mex_component_references.py",
+    "passed": 304,
+    "skipped": 2,
+    "seconds": 70.37,
+    "new_tests": 43,
+    "skip_reasons": {
+      "tests/test_card_protein_name_screen.py::test_native_replay_without_network_or_file_writes": "Historical corpus changed; immutable public snapshot tested separately.",
+      "tests/test_card_reference_lineages.py::test_offline_native_replay": "Known qualification deltas lack historical fixtures; public artifact checks still run."
+    },
+    "skip_reason_confirmation": {
+      "command": ".venv/bin/pytest -q -rs tests/test_card_protein_name_screen.py tests/test_card_reference_lineages.py",
+      "passed": 69,
+      "skipped": 2,
+      "seconds": 3.82
+    },
+    "new_native_cache_replay_passed": true,
+    "new_replay_network_and_file_writes_denied": true,
+    "ruff_check_passed": true,
+    "ruff_format_check_passed": true,
+    "git_diff_check_passed": true
+  },
+  "preservation": {
+    "explicit_pin_occurrences_checked": 45,
+    "distinct_pin_paths_checked": 34,
+    "previous_nonreport_artifacts_unchanged": 65,
+    "previous_report": {
+      "path": "research/2026-10-07-resistance-gene-grounding.md",
+      "sha256": "4fdd631c24d3d54e31687be87a60b5851d6ad8f7d7c596b087c74c2754ce6f8d",
+      "bytes": 988453,
+      "all_bytes_preserved": true
+    },
+    "current_report_bytes": 992064,
+    "corpus_record_hashes_checked": 2939,
+    "complete_target_records_read": 8,
+    "source_claims": 8,
+    "biological_records_changed": 0,
+    "source_owned_inputs_changed": 0,
+    "schema_or_generated_pages_changed": 0,
+    "dependencies_changed": 0
+  },
+  "scientific_review": {
+    "qualification": "EXACT_NATIVE_PROTEIN_FULL_NAME_SAME_PAPER_PMID_DOI_AND_INDEPENDENT_SPECIES",
+    "native_gene_symbol_inferred": false,
+    "exact_experimental_alleles_or_strains_assigned": false,
+    "reference_genomes_assigned_to_experimental_subjects": false,
+    "numeric_ast_curated": false,
+    "primary_figures_or_supplements_signed_off": false,
+    "publisher_web_review_has_local_body_replay": false,
+    "omp1_archive_web_error_is_origin_http_status": false,
+    "omp1_prior_pige_exclusion_preserved": true,
+    "combined_qualified_reference_terms": 108,
+    "bounded_cohort_terms": 178,
+    "remaining_reference_terms": 70,
+    "full_corpus_goal_status": "OPEN"
+  },
+  "limits": {
+    "new_direct_native_api_requests": 0,
+    "new_publisher_context_reads_via_web": 2,
+    "unsuccessful_archive_web_opens": 1,
+    "ncbi_requests": 0,
+    "issue_1040": "DEFERRED",
+    "reuse_terms_review_resumed": false,
+    "source_adoptions": 0,
+    "outreach": 0,
+    "github_mutations": 0,
+    "authoritative_full_qc_run": false,
+    "rdkit_available": false,
+    "full_experimental_grounding_complete": false
+  }
+}
