@@ -320,3 +320,16 @@ review-validate +paths:
 # Save authoritative YAML and derived Markdown without staging or committing.
 review-save content:
     uv run python scripts/record_review.py save --content {{content}}
+
+# --- curation history: the schema is vendored from culturebotai-claw ---
+
+# See history/README.md. "$@" not {{args}} — see `set positional-arguments`.
+# Scaffold a repository-level history record (history/<kind>/<slug>/...).
+new-history *args:
+    uv run python scripts/new_history_record.py "$@"
+
+# Works with no claw checkout, same as CI. `*args`, not `target="history"`:
+# tests/test_docs.py cannot see a recipe whose parameter has a default.
+# Validate one history record, or a directory of them (default history/), against the vendored schema.
+validate-history *args:
+    uv run python scripts/validate_history.py "$@"

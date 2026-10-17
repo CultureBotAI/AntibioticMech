@@ -54,6 +54,12 @@ COMMANDS = [
         "Tests cover harmonization rules and corpus-wide invariants per-record validation cannot see.",
     ),
     (
+        "history records",
+        [sys.executable, "scripts/validate_history.py"],
+        "A session-history record is optional, but one that exists must validate against the "
+        "vendored claw schema.",
+    ),
+    (
         "schema validation",
         [sys.executable, "scripts/validate_strict.py", "--quiet"],
         "Closed-mode validation checks every record's shape, including unknown fields.",
