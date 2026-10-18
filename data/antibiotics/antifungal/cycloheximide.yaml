@@ -220,6 +220,17 @@ molecular_targets:
   evidence:
   - reference: PMID:25209664
     notes: Primary cycloheximide-80S structural and kinetic study (DOI:10.1038/nature13737).
+  protein_examples:
+  - uniprot_id: UniProtKB:P02406
+    protein_label: Large ribosomal subunit protein uL15
+    gene_symbol: RPL28
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: 60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines
+      the cycloheximide binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor
+      crystal structure (PMID:25209664, PDB 4U3U; S288c reference strain context).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -448,4 +459,11 @@ curation_history:
   action: REVIEWED_RESISTANCE_SUBJECT_CONTEXT
   changes: Refreshed the shared PHI-base review checksum after one Neurospora subject-context
     correction; previous decisions, biological fields and activities unchanged.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Saccharomyces cerevisiae S288c 60S ribosomal protein uL15
+    / RPL28 (P02406) UniProtKB protein example on the PRIMARY_LITERATURE eukaryotic
+    80S ribosome molecular target.
   llm_assisted: true

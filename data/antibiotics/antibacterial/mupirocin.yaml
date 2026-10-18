@@ -147,6 +147,17 @@ molecular_targets:
   evidence:
   - reference: PMID:10446055
     notes: Primary mupirocin-bound S. aureus IleRS-tRNA(Ile) structure.
+  protein_examples:
+  - uniprot_id: UniProtKB:P41972
+    protein_label: Isoleucine--tRNA ligase
+    gene_symbol: ileS
+    taxon_id: NCBITaxon:1280
+    taxon_label: Staphylococcus aureus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Staphylococcus aureus isoleucyl-tRNA synthetase catalytic component crystallized
+      with tRNA(Ile) and mupirocin at the Rossmann-fold active site (PMID:10446055,
+      PDB 1QU2).
 producer_organisms:
 - taxon_id: NCBITaxon:294
   taxon_label: Pseudomonas fluorescens
@@ -389,3 +400,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Staphylococcus aureus IleS (P41972) UniProtKB protein example
+    on the PRIMARY_LITERATURE isoleucyl-tRNA synthetase-tRNA(Ile) complex molecular
+    target.
+  llm_assisted: true

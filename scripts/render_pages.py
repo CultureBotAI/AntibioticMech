@@ -253,6 +253,23 @@ def resolve_curie(curie: str, index: dict[str, dict], root: str) -> dict:
     return {"id": curie, "label": term_labels().get(curie), "href": href}
 
 
+def _resolve_protein_examples(
+    examples: list[dict], index: dict[str, dict], root: str
+) -> list[dict]:
+    return [
+        {
+            **p,
+            "resolved_uniprot_id": (
+                resolve_curie(p["uniprot_id"], index, root) if p.get("uniprot_id") else None
+            ),
+            "resolved_taxon_id": (
+                resolve_curie(p["taxon_id"], index, root) if p.get("taxon_id") else None
+            ),
+        }
+        for p in examples
+    ]
+
+
 def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> dict:
     class_dir = path.parent.name
 
@@ -309,7 +326,9 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
             "source_version": t.get("source_version"),
             "source_retrieved_on": t.get("source_retrieved_on"),
             "measurements": t.get("measurements") or [],
-            "protein_examples": t.get("protein_examples") or [],
+            "protein_examples": _resolve_protein_examples(
+                t.get("protein_examples") or [], index, root
+            ),
             "evidence": t.get("evidence") or [],
         }
         for t in (doc.get("molecular_targets") or [])
@@ -374,9 +393,26 @@ def build_record(path: Path, doc: dict, index: dict[str, dict], root: str) -> di
                 for method in (item.get("link_evidence") or [])]}
             for item in (doc.get("producer_organisms") or [])
         ],
-        "causal_graphs": [{**g, "nodes": [{**n, "resolved_grounding": resolve_curie(
-            n["grounding"], index, root) if n.get("grounding") else None}
-            for n in g.get("nodes") or []]} for g in doc.get("causal_graphs") or []],
+        "causal_graphs": [
+            {
+                **g,
+                "nodes": [
+                    {
+                        **n,
+                        "resolved_grounding": (
+                            resolve_curie(n["grounding"], index, root)
+                            if n.get("grounding")
+                            else None
+                        ),
+                        "protein_examples": _resolve_protein_examples(
+                            n.get("protein_examples") or [], index, root
+                        ),
+                    }
+                    for n in g.get("nodes") or []
+                ],
+            }
+            for g in doc.get("causal_graphs") or []
+        ],
         "discussions": doc.get("discussions") or [],
         "datasets": doc.get("datasets") or [],
         "evidence": doc.get("evidence") or [],

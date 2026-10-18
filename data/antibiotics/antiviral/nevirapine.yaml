@@ -1813,6 +1813,18 @@ causal_graphs:
       region; a family-level exact term was not asserted.
     xrefs:
     - UniProtKB:P04585
+    protein_examples:
+    - uniprot_id: UniProtKB:P04585
+      protein_label: Gag-Pol polyprotein
+      gene_symbol: gag-pol
+      taxon_id: NCBITaxon:11706
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
+        HXB2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+        noncompetitively bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970;
+        PMID:7540824, PDB 1VRT; HXB2 reference isolate context).
   - node_id: nnrti_pocket
     label: HIV-1 reverse transcriptase non-nucleoside inhibitor pocket
     node_type: STATE
@@ -2529,3 +2541,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
     Upstream retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
+    example on the nevirapine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase
+    causal graph node.
+  llm_assisted: true

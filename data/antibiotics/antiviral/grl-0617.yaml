@@ -65,6 +65,16 @@ molecular_targets:
     notes: Primary GRL-0617-bound SARS-CoV-2 PLpro structural and enzyme study (DOI:10.1016/j.apsb.2020.08.014).
   - reference: PMID:32726803
     notes: Primary PLpro biochemical, structural, and infected-cell study (DOI:10.1038/s41586-020-2601-5).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    gene_symbol: rep
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp3 papain-like protease
+      (PLpro) domain crystallized in complex with GRL-0617 (PMID:32895623, PDB 7CJM).
 xrefs:
 - cas:1093070-16-6
 - pdb-ccd:TTT
@@ -100,4 +110,11 @@ curation_history:
   changes: Verified exact ChEBI identity, structure, antiviral role, and class; added
     viral-protease inhibition, the directly bound SARS-CoV-2 PLpro target, and infected-cell
     antiviral context.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein
+    example on the PRIMARY_LITERATURE SARS-CoV-2 papain-like protease (PLpro) molecular
+    target.
   llm_assisted: true

@@ -307,6 +307,27 @@ causal_graphs:
     gene_symbols:
     - gyrA
     - gyrB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node
+        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
+        luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry).
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node
+        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
+        luteus DNA gyrase).
   - node_id: dna_supercoiling
     label: ATP-dependent DNA supercoiling
     node_type: BIOLOGICAL_PROCESS
@@ -379,3 +400,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4)
+    and subunit B (P0AES6) UniProtKB protein examples on the pefloxacin_dna_gyrase_supercoiling_inhibition
+    dna_gyrase causal graph node.
+  llm_assisted: true

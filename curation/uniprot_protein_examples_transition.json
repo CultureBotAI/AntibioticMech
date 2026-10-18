@@ -1,0 +1,1680 @@
+{
+  "schema_version": 1,
+  "task": "uniprot_protein_examples_curation",
+  "plan_path": "curation/uniprot_protein_examples.yaml",
+  "record_count": 30,
+  "record_deltas": [
+    {
+      "identifier": "CHEBI:100241",
+      "label": "ciprofloxacin",
+      "path": "data/antibiotics/antibacterial/ciprofloxacin.yaml",
+      "before_sha256": "a75d11277db999ad7221eb07998519cff7119874274f3e5a18cd906c855f9850",
+      "after_sha256": "6d89626ec4747e535c7db4435844b5103c558439e511aa623005aab7391326cc",
+      "unchanged_fields_sha256": "d5615a6c1b1141ffc1cd7971fe9a44fcaa02cbcc7fdb39a537d6be62d2947288",
+      "causal_nodes_updated": 2,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 4,
+      "history_events_added": 1,
+      "curation_history_before_len": 41,
+      "curation_history_after_len": 42,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "ciprofloxacin_topoisomerase_poisoning",
+          "node_index": 1,
+          "node_id": "dna_gyrase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Catalytic DNA cleavage-religation subunit A of the heterotetrameric A2B2 DNA gyrase complex stabilized as a ternary cleavage complex by ciprofloxacin in E. coli (PMID:9159526); K-12 reference proteome context."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "ATPase subunit B of the heterotetrameric A2B2 DNA gyrase complex targeted by ciprofloxacin in E. coli (PMID:9159526); K-12 reference proteome context."
+            }
+          ]
+        },
+        {
+          "graph_index": 0,
+          "graph_id": "ciprofloxacin_topoisomerase_poisoning",
+          "node_index": 2,
+          "node_id": "topoisomerase_iv",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Catalytic DNA breakage-reunion subunit ParC of the heterotetrameric ParC2ParE2 topoisomerase IV secondary fluoroquinolone target in E. coli (PMID:9159526); K-12 reference proteome context."
+            },
+            {
+              "uniprot_id": "UniProtKB:P20083",
+              "protein_label": "DNA topoisomerase 4 subunit B",
+              "gene_symbol": "parE",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "ATPase subunit ParE of the heterotetrameric ParC2ParE2 topoisomerase IV secondary fluoroquinolone target in E. coli (PMID:9159526); K-12 reference proteome context."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 reference-strain UniProtKB protein examples for DNA gyrase (GyrA P0AES4, GyrB P0AES6) and topoisomerase IV (ParC P0AFI2, ParE P20083) on the ciprofloxacin_topoisomerase_poisoning causal graph nodes.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:63598",
+      "label": "levofloxacin",
+      "path": "data/antibiotics/antibacterial/levofloxacin.yaml",
+      "before_sha256": "70c59c1c093c02d5b7883284bc2a178f76d26c10958cff8ad15d7fa396125785",
+      "after_sha256": "cf07953e0235270ed61f5c66472e43c3373fa0654edb744320b680fbbf213428",
+      "unchanged_fields_sha256": "bde22cca4b2aeec52f695639c54212929c030cffa6fcb34c55cebc012b24d639",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 34,
+      "curation_history_after_len": 35,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "levofloxacin_topoisomerase_iv_poisoning",
+          "node_index": 1,
+          "node_id": "topoisomerase_iv",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P72525",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:170187",
+              "taxon_label": "Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Catalytic ParC subunit of S. pneumoniae topoisomerase IV complexed with DNA and levofloxacin in the ternary cleavage-complex crystal structure (PMID:19332681; TIGR4 reference strain context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference Gram-negative bacterial topoisomerase IV ParC subunit corresponding to ARO:3000735 node grounding (E. coli K-12 reference proteome context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P20083",
+              "protein_label": "DNA topoisomerase 4 subunit B",
+              "gene_symbol": "parE",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference Gram-negative bacterial topoisomerase IV ParE subunit corresponding to ARO:3000735 node grounding (E. coli K-12 reference proteome context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated S. pneumoniae TIGR4 ParC (P72525) and E. coli K-12 ParC/ParE (P0AFI2, P20083) UniProtKB protein examples on the levofloxacin topoisomerase_iv causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:100147",
+      "label": "nalidixic acid",
+      "path": "data/antibiotics/antibacterial/nalidixic-acid.yaml",
+      "before_sha256": "09df8e476fed3bbaf84272af1728d88728fe478d061a3a1f430064826a4294ad",
+      "after_sha256": "ed68c06148181b109fc4d607aa2fd91032c5c7c18c2ac0c6217223ceeb464659",
+      "unchanged_fields_sha256": "862aaade9097a40f4d9b185ac85adea7d1c222151841096fae70006bc48cbd17",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "nalidixic_acid_gyrase_cleavage_complex",
+          "node_index": 1,
+          "node_id": "dna_gyrase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "GyrA subunit (formerly nalA gene product) of E. coli DNA gyrase that forms the nalidixic acid-stabilized DNA cleavage complex and controls supercoiling sensitivity (PMID:303505; PMID:217495; K-12 reference proteome context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "ATPase GyrB subunit partnering with GyrA in the E. coli DNA gyrase holoenzyme inhibited by nalidixic acid (PMID:303505; PMID:217495; K-12 reference proteome context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 DNA gyrase subunit A (P0AES4) and subunit B (P0AES6) UniProtKB protein examples on the nalidixic_acid_gyrase_cleavage_complex dna_gyrase causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:100246",
+      "label": "norfloxacin",
+      "path": "data/antibiotics/antibacterial/norfloxacin.yaml",
+      "before_sha256": "d7bc99cbddc740406fe115ece62c51d2ce3324391a165d8787adaf4e2748aafa",
+      "after_sha256": "21fda23d16936a7a7282022c7981f28eea2cbf6b27f255cfe157fb1711ba9785",
+      "unchanged_fields_sha256": "27e7c00383a4fc622a9fea0cfdb9c7d2a6e7a032c0f0d2e3208743b09707c892",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "norfloxacin_dna_gyrase_supercoiling_inhibition",
+          "node_index": 1,
+          "node_id": "dna_gyrase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4) and subunit B (P0AES6) UniProtKB protein examples on the norfloxacin_dna_gyrase_supercoiling_inhibition dna_gyrase causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:aro-2eea3233f3",
+      "label": "ofloxacin",
+      "path": "data/antibiotics/antibacterial/ofloxacin.yaml",
+      "before_sha256": "081c5e6d5b5fa90bb6e7517894fca427ca6376c594d012c539cdfa43dea89dbd",
+      "after_sha256": "01d084821fb0417288a6c93686a2222d44809e2e2767c67b055c212bc3c62e0d",
+      "unchanged_fields_sha256": "650a024a8c5eea7acbf7a2fc5ff185a882f61ee281bd61134cca0967e89e8754",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "ofloxacin_dna_gyrase_supercoiling_inhibition",
+          "node_index": 1,
+          "node_id": "dna_gyrase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4) and subunit B (P0AES6) UniProtKB protein examples on the ofloxacin_dna_gyrase_supercoiling_inhibition dna_gyrase causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:50199",
+      "label": "pefloxacin",
+      "path": "data/antibiotics/antibacterial/pefloxacin.yaml",
+      "before_sha256": "6913eb1fed11af07faf170d1fbfc6920d8b957060421963b26c99038c8537136",
+      "after_sha256": "57e1b0bd84e13ed8a688b5e4bc5b42622b6742e3bdb1f0f4a5c4ade53492ad62",
+      "unchanged_fields_sha256": "d79941e1e82527cdc9aac7af398fcd52389fed0dc072af9210b9bfde7bcc901d",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "pefloxacin_dna_gyrase_supercoiling_inhibition",
+          "node_index": 1,
+          "node_id": "dna_gyrase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4) and subunit B (P0AES6) UniProtKB protein examples on the pefloxacin_dna_gyrase_supercoiling_inhibition dna_gyrase causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:28368",
+      "label": "novobiocin",
+      "path": "data/antibiotics/antibacterial/novobiocin.yaml",
+      "before_sha256": "0493eb6364990e579ac5acaadb12281981ce6831f643b8797e56f2371d0cd568",
+      "after_sha256": "8024ef4546170c0a080162c9a43601c68cfdc150e8475cd752596267d12a6d24",
+      "unchanged_fields_sha256": "1f9c23a979806f066a3ca45005e15298175c506e5a796e48c5dc4bd1b656c9c2",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "novobiocin_gyrb_atpase_inhibition",
+          "node_index": 1,
+          "node_id": "gyrb",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "ATP-binding GyrB subunit whose N-terminal 24-kDa domain binds novobiocin at the ATPase site (PMID:8386298; PMID:12044152; E. coli K-12 reference context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [
+        {
+          "index": 4,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "DNA gyrase B 24-kDa fragment",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Full-length E. coli K-12 GyrB precursor of the 24-kDa N-terminal ATP-binding fragment crystallized with novobiocin (PMID:12044152; PDB 1KIJ)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 GyrB (P0AES6) UniProtKB protein examples on the novobiocin_gyrb_atpase_inhibition gyrb causal graph node and the PRIMARY_LITERATURE DNA gyrase B 24-kDa fragment molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:17076",
+      "label": "streptomycin",
+      "path": "data/antibiotics/antibacterial/streptomycin.yaml",
+      "before_sha256": "d3189ed58bc9f837961881eab7963c2564c29c994457017d6bade0336bfb4f04",
+      "after_sha256": "c8d050b241f4687ea9ecc85acf3ca7e9ad3eba9d780e9b48ed7361a9b16f9f66",
+      "unchanged_fields_sha256": "b4533a0ff2b998c011a38b20f476642fd67d54bdd2370048e63ce60bb2c8014d",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "streptomycin_30s_decoding_site_misreading",
+          "node_index": 2,
+          "node_id": "ribosomal_protein_s12",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q5SHN3",
+              "protein_label": "Small ribosomal subunit protein uS12",
+              "gene_symbol": "rpsL",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "30S ribosomal protein uS12 (S12) directly contacted by streptomycin at the decoding center in Thermus thermophilus 30S crystal structures (PMID:10984042, PDB 1FJG; PMID:23322043, PDB 4DR3; HB8 reference strain context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0A7S3",
+              "protein_label": "Small ribosomal subunit protein uS12",
+              "gene_symbol": "rpsL",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "30S ribosomal protein uS12 (S12) whose rpsL mutations govern streptomycin binding and translational misreading in E. coli (PMID:353564; K-12 reference strain context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [
+        {
+          "index": 2,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "30S ribosomal decoding center",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q5SHN3",
+              "protein_label": "Small ribosomal subunit protein uS12",
+              "gene_symbol": "rpsL",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Protein component (uS12/RpsL) of the 30S decoding-center binding pocket alongside 16S rRNA helices h18, h27, and h44 in the streptomycin-30S crystal structure (PMID:23322043, PDB 4DR3; HB8 reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated T. thermophilus HB8 (Q5SHN3) and E. coli K-12 (P0A7S3) ribosomal protein uS12 (rpsL) UniProtKB protein examples on the streptomycin_30s_decoding_site_misreading causal graph node and the PRIMARY_LITERATURE 30S ribosomal decoding center molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:164200",
+      "label": "triclosan",
+      "path": "data/antibiotics/antibacterial/triclosan.yaml",
+      "before_sha256": "e8b29e87dcd8e0d2347eb6bc395b72435ff06faf01fe434083e572ed87063530",
+      "after_sha256": "8c53ef271d8f9b207a3735e7966d6015fc308ee3d5a3a159c4d1b0008d619b2e",
+      "unchanged_fields_sha256": "8e37eb2157ee1368e01e2fab1a18922ee511f919991e6825638452b0353baab6",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 11,
+      "curation_history_after_len": 12,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "triclosan_fabi_fatty_acid_synthesis_inhibition",
+          "node_index": 1,
+          "node_id": "fabi",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AEK4",
+              "protein_label": "Enoyl-[acyl-carrier-protein] reductase [NADH] FabI",
+              "gene_symbol": "fabI",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Type II fatty-acid synthesis enoyl-ACP reductase that forms the noncovalent FabI-NAD+-triclosan ternary complex in E. coli (PMID:9675027; PMID:10220315, PDB 1QSG; PMID:21094257; K-12 reference strain context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "enoyl-acyl carrier protein reductase (FabI)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AEK4",
+              "protein_label": "Enoyl-[acyl-carrier-protein] reductase [NADH] FabI",
+              "gene_symbol": "fabI",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Direct enoyl-ACP reductase enzyme target forming the ternary FabI-NAD+-triclosan complex in E. coli (PMID:21094257; K-12 reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 FabI (P0AEK4) UniProtKB protein examples on the triclosan_fabi_fatty_acid_synthesis_inhibition fabi causal graph node and the PRIMARY_LITERATURE FabI molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45924",
+      "label": "trimethoprim",
+      "path": "data/antibiotics/antibacterial/trimethoprim.yaml",
+      "before_sha256": "b9c93a0d1282a00392d687872b31e15ae97a16a9dbadce2eb3760c80fe3be861",
+      "after_sha256": "b73be265bc37b028029a394f0dff64b0204a6c534f8d662a36597699dde63375",
+      "unchanged_fields_sha256": "1f806223293dd9cefee13ff7ebbc4c84ec301ec0b2f0ccf29833563b4d67fa4d",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "trimethoprim_folate_pathway_inhibition",
+          "node_index": 1,
+          "node_id": "bacterial_dhfr",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0A017",
+              "protein_label": "Dihydrofolate reductase",
+              "gene_symbol": "folA",
+              "taxon_id": "NCBITaxon:1280",
+              "taxon_label": "Staphylococcus aureus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Chromosomal trimethoprim-sensitive dihydrofolate reductase (dfrB/folA) directly inhibited by trimethoprim in S. aureus (PMID:14623005)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0ABQ4",
+              "protein_label": "Dihydrofolate reductase",
+              "gene_symbol": "folA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Bacterial dihydrofolate reductase forming cooperative ternary complexes with NADPH and trimethoprim in E. coli (PMID:1985419; K-12 reference strain context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated S. aureus (P0A017) and E. coli K-12 (P0ABQ4) dihydrofolate reductase (folA) UniProtKB protein examples on the trimethoprim_folate_pathway_inhibition bacterial_dhfr causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:4877",
+      "label": "ethambutol",
+      "path": "data/antibiotics/antimycobacterial/ethambutol.yaml",
+      "before_sha256": "1d921e91cfc250de4e6a9ec85363ee66fe1285dd68c82fac8ff1c3c2092d9ac1",
+      "after_sha256": "5cb306e63de07f9f3e214c6591e15f12763298fcbfea7f01865ebb6e939e46d8",
+      "unchanged_fields_sha256": "f66b0ac4275f98d32a1ae8c2a0525717271eb36082ee420a4cb0c5e692cd22e6",
+      "causal_nodes_updated": 2,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 6,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "ethambutol_emb_arabinan_inhibition",
+          "node_index": 1,
+          "node_id": "embab_complex",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P9WNL9",
+              "protein_label": "Arabinosyltransferase A",
+              "gene_symbol": "embA",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "EmbA subunit of the heterodimeric EmbA-EmbB-AcpM2 arabinosyltransferase complex bound by ethambutol in cryo-EM structures (PMID:32327601, PDB 7BVF; H37Rv reference strain context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P9WNL7",
+              "protein_label": "Arabinosyltransferase B",
+              "gene_symbol": "embB",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Catalytic EmbB subunit harboring the conserved ethambutol-binding active-site pocket within the EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv reference strain context)."
+            }
+          ]
+        },
+        {
+          "graph_index": 0,
+          "graph_id": "ethambutol_emb_arabinan_inhibition",
+          "node_index": 2,
+          "node_id": "embc_complex",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P9WNL5",
+              "protein_label": "Arabinosyltransferase C",
+              "gene_symbol": "embC",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Catalytic EmbC subunit of the homodimeric EmbC2-AcpM2 lipoarabinomannan arabinosyltransferase complex bound by ethambutol at its active site (PMID:32327601; H37Rv reference strain context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [
+        {
+          "index": 5,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "EmbA-EmbB and EmbC-EmbC arabinosyltransferase complexes",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P9WNL9",
+              "protein_label": "Arabinosyltransferase A",
+              "gene_symbol": "embA",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "EmbA subunit of the M. tuberculosis EmbA-EmbB-AcpM2 complex resolved with ethambutol by cryo-EM (PMID:32327601, PDB 7BVF; H37Rv reference strain context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P9WNL7",
+              "protein_label": "Arabinosyltransferase B",
+              "gene_symbol": "embB",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Catalytic EmbB subunit containing the direct ethambutol-binding pocket in the M. tuberculosis EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv reference strain context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P9WNL5",
+              "protein_label": "Arabinosyltransferase C",
+              "gene_symbol": "embC",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Catalytic EmbC subunit of the homodimeric EmbC-EmbC arabinosyltransferase complex directly bound by ethambutol (PMID:32327601; H37Rv reference strain context; M. smegmatis EmbC2 complex also resolved in the same study)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated M. tuberculosis H37Rv EmbA (P9WNL9), EmbB (P9WNL7), and EmbC (P9WNL5) UniProtKB protein examples on the ethambutol_emb_arabinan_inhibition causal graph nodes and the PRIMARY_LITERATURE EmbA-EmbB / EmbC-EmbC arabinosyltransferase complexes molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:119573",
+      "label": "delavirdine",
+      "path": "data/antibiotics/antiviral/delavirdine.yaml",
+      "before_sha256": "1c0b70327480073f9123d47b9bff7ae9bfdc0a95c85504668e576ad54be1eeb9",
+      "after_sha256": "f445490ae1dd5d576a64641a7d73ccc9e9aa4b300eeb5b25d21038f714c07ea4",
+      "unchanged_fields_sha256": "0ad761c750bc5e7590fa8207fdf680e5c595ae37cb13dbf8c8faf9313ee31f90",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "delavirdine_hiv1_reverse_transcriptase_inhibition",
+          "node_index": 1,
+          "node_id": "hiv1_reverse_transcriptase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P04585",
+              "protein_label": "Gag-Pol polyprotein",
+              "gene_symbol": "gag-pol",
+              "taxon_id": "NCBITaxon:11706",
+              "taxon_label": "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer bound at the non-nucleoside inhibitor pocket by delavirdine (U-90152) (PMID:1726658; PMID:10602683, PDB 1KLM; HXB2 reference isolate context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on the delavirdine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:63613",
+      "label": "nevirapine",
+      "path": "data/antibiotics/antiviral/nevirapine.yaml",
+      "before_sha256": "d95d87f0d78d95dcbe89974dee37506357ff483fbaa4aa679b298e3b3b760b4a",
+      "after_sha256": "1f2a488fc2e2f775e60dd5aad18defa4d1496fdbd249d4b9e5c63b30818fc481",
+      "unchanged_fields_sha256": "9ce60f36bc276c72acdb6263610679c8670ef764056782c33a7b1adf598950fe",
+      "causal_nodes_updated": 1,
+      "molecular_targets_updated": 0,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 11,
+      "curation_history_after_len": 12,
+      "causal_node_deltas": [
+        {
+          "graph_index": 0,
+          "graph_id": "nevirapine_hiv1_reverse_transcriptase_inhibition",
+          "node_index": 1,
+          "node_id": "hiv1_reverse_transcriptase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P04585",
+              "protein_label": "Gag-Pol polyprotein",
+              "gene_symbol": "gag-pol",
+              "taxon_id": "NCBITaxon:11706",
+              "taxon_label": "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer noncompetitively bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970; PMID:7540824, PDB 1VRT; HXB2 reference isolate context)."
+            }
+          ]
+        }
+      ],
+      "molecular_target_deltas": [],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on the nevirapine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase causal graph node.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:68590",
+      "label": "fidaxomicin",
+      "path": "data/antibiotics/antibacterial/fidaxomicin.yaml",
+      "before_sha256": "678f24edb26659bd4b66ed4f7a824f5912ada22f63bcb579dbec75d15c765c73",
+      "after_sha256": "3dfcc74c1bec19c49c60c7068102030aac63ed8c479adc10a125c508e2e0287d",
+      "unchanged_fields_sha256": "5c5c4d90b490dc1d46175e5e93356221ac2180f75146e9eeab092c2e4c5f940b",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial RNA polymerase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q18CF4",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:272563",
+              "taxon_label": "Clostridioides difficile (strain 630)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "RNA polymerase beta subunit forming part of the fidaxomicin-binding clamp cleft in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain 630 reference proteome context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:Q18CF3",
+              "protein_label": "DNA-directed RNA polymerase subunit beta'",
+              "gene_symbol": "rpoC",
+              "taxon_id": "NCBITaxon:272563",
+              "taxon_label": "Clostridioides difficile (strain 630)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "RNA polymerase beta' subunit contributing the lineage-specific fidaxomicin-sensitizing residue in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain 630 reference proteome context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Clostridioides difficile strain 630 RpoB (Q18CF4) and RpoC (Q18CF3) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA polymerase molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:443725",
+      "label": "fosmidomycin",
+      "path": "data/antibiotics/antibacterial/fosmidomycin.yaml",
+      "before_sha256": "4e757e9e15addf26cb33c9cad2bcde1fd9ba7edd05d20e2b9737003d731b5c2f",
+      "after_sha256": "ffb23130ec8bd457f6325b4a0b1bace997c0941ab2bdc23d0d9a368afc08024d",
+      "unchanged_fields_sha256": "0691e5ae091ca6c604663f53f4e32bb8dda17396166af4e6f032229e4fcd89cf",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P45568",
+              "protein_label": "1-deoxy-D-xylulose 5-phosphate reductoisomerase",
+              "gene_symbol": "dxr",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Non-mevalonate isoprenoid pathway enzyme crystallized in a ternary complex with NADPH and fosmidomycin in E. coli (PMID:17554164; K-12 reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated E. coli K-12 DXR (P45568) UniProtKB protein example on the PRIMARY_LITERATURE 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR) molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29013",
+      "label": "fusidic acid",
+      "path": "data/antibiotics/antibacterial/fusidic-acid.yaml",
+      "before_sha256": "d44e12bee3046521b4196e7c55b7765a97679553354137470771673b9fd1ebd3",
+      "after_sha256": "8173b1ee227eaf81d075fbecd6906ed0c79c8c16ed49f7de8fee3aca3f4225c3",
+      "unchanged_fields_sha256": "80a0d369432cc67e512feb28dcae33dc1fa4488dc50afff2eb5951e375b5fb55",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "elongation factor G (EF-G)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P13551",
+              "protein_label": "Elongation factor G",
+              "gene_symbol": "fusA",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Ribosomal translocation GTPase EF-G whose fusidic acid-resistant and hypersensitive mutant crystal structures define the interdomain conformational trapping mechanism (PMID:15843024; T. thermophilus HB8 reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Thermus thermophilus HB8 elongation factor G (P13551) UniProtKB protein example on the PRIMARY_LITERATURE elongation factor G (EF-G) molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:7025",
+      "label": "mupirocin",
+      "path": "data/antibiotics/antibacterial/mupirocin.yaml",
+      "before_sha256": "100721c12c942f6d975bda6a7c05186a295f8fe849cd18cf5c5d216001244997",
+      "after_sha256": "37e8f86ee9ca5b28e66532ba236a86f2b83d47fa50c18fc69479c5c90596b4e4",
+      "unchanged_fields_sha256": "f10f0f6719456c39f6be077fb0564d46f471236ac718673eddf7c09419346973",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "isoleucyl-tRNA synthetase-tRNA(Ile) complex",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P41972",
+              "protein_label": "Isoleucine--tRNA ligase",
+              "gene_symbol": "ileS",
+              "taxon_id": "NCBITaxon:1280",
+              "taxon_label": "Staphylococcus aureus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Staphylococcus aureus isoleucyl-tRNA synthetase catalytic component crystallized with tRNA(Ile) and mupirocin at the Rossmann-fold active site (PMID:10446055, PDB 1QU2)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Staphylococcus aureus IleS (P41972) UniProtKB protein example on the PRIMARY_LITERATURE isoleucyl-tRNA synthetase-tRNA(Ile) complex molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:27641",
+      "label": "cycloheximide",
+      "path": "data/antibiotics/antifungal/cycloheximide.yaml",
+      "before_sha256": "729c6e13f67ee7232c1ebedf67deb6814fbb604a2de271dff92c030f142043ad",
+      "after_sha256": "d8d465c5ee43ff77d573a3ce0755ec91f180743fcfee921c3f933ed9fd481db6",
+      "unchanged_fields_sha256": "27ca9c61166afcbf1f14330af5b5c3d02af8dc26a5a8eb79ed07cf8c6c09313a",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 40,
+      "curation_history_after_len": 41,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "eukaryotic 80S ribosome",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P02406",
+              "protein_label": "Large ribosomal subunit protein uL15",
+              "gene_symbol": "RPL28",
+              "taxon_id": "NCBITaxon:559292",
+              "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines the cycloheximide binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor crystal structure (PMID:25209664, PDB 4U3U; S288c reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Saccharomyces cerevisiae S288c 60S ribosomal protein uL15 / RPL28 (P02406) UniProtKB protein example on the PRIMARY_LITERATURE eukaryotic 80S ribosome molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:28285",
+      "label": "oligomycin A",
+      "path": "data/antibiotics/antifungal/oligomycin-a.yaml",
+      "before_sha256": "6aa3063293998315a8397e4599cbb0b28dcb3f59dccb0a15ccaadb91473ff97b",
+      "after_sha256": "7dabb1c1e924b93ff92836c8bfb5dd409333940596bef3b31c2b25589866df83",
+      "unchanged_fields_sha256": "f9827106ece26347f69c3cde8f97943e186160e86cb53cc71af68b57939e5735",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "mitochondrial F_O ATP synthase c-ring",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P61829",
+              "protein_label": "ATP synthase subunit 9, mitochondrial",
+              "gene_symbol": "OLI1",
+              "taxon_id": "NCBITaxon:559292",
+              "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Proton-translocating F_O c-ring subunit (Subunit 9 / Atp9) bound at the essential carboxyl-protonation face in the S. cerevisiae c10-ring oligomycin crystal structure (PMID:22869738, PDB 4F4S; S288c reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Saccharomyces cerevisiae S288c mitochondrial ATP synthase subunit 9 / OLI1 (P61829) UniProtKB protein example on the PRIMARY_LITERATURE mitochondrial F_O ATP synthase c-ring molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:83823",
+      "label": "pyrisoxazole",
+      "path": "data/antibiotics/antifungal/pyrisoxazole.yaml",
+      "before_sha256": "0e2ee936a93d7638a1c3cf49f9335f99874692fa8d0b95c8860c975f80a41e1a",
+      "after_sha256": "d897e1bf51f591002bd24cb111905fb4a01f412b3991b85a06e4f5939158e266",
+      "unchanged_fields_sha256": "5468ca75703ff455f2d00c99034cd0335998207f2e31371f40ed2f85ffb9bcfe",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "fungal CYP51 sterol 14-alpha-demethylase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:A0A7G4P320",
+              "protein_label": "Sterol 14-alpha-demethylase",
+              "gene_symbol": "cyp51",
+              "taxon_id": "NCBITaxon:40559",
+              "taxon_label": "Botrytis cinerea",
+              "entry_status": "UNREVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Botrytis cinerea ergosterol-biosynthesis CYP51 enzyme assayed for stereoselective binding and inhibition by pyrisoxazole isomers (PMID:32714305; species-level reference sequence context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Botrytis cinerea CYP51 sterol 14-alpha-demethylase (A0A7G4P320) UniProtKB protein example on the PRIMARY_LITERATURE fungal CYP51 sterol 14-alpha-demethylase molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:28077",
+      "label": "rifampicin",
+      "path": "data/antibiotics/antimycobacterial/rifampicin.yaml",
+      "before_sha256": "581ff192574e250dd94d983822cd8e202baded4899e64348af062e99c390dcee",
+      "after_sha256": "314362e93a3cd88cb3fbcc899ef077e96354cfe82f066e30d2aea3c764506bf3",
+      "unchanged_fields_sha256": "75b4b3ae1f5878955dd07ad6ed6bde609ae1fa13e23a4f653e525fefda9c0e75",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 13,
+      "curation_history_after_len": 14,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial RNA polymerase beta-subunit channel",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q9KWU6",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:271",
+              "taxon_label": "Thermus aquaticus",
+              "entry_status": "UNREVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Thermus aquaticus core RNA polymerase beta subunit directly bound by rifampicin within the DNA/RNA exit channel in the cocrystal structure (PMID:11290327, PDB 1I6V)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P9WGY9",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Primary antimycobacterial target RpoB subunit in M. tuberculosis whose conserved rifampicin-resistance cluster maps to the PMID:11290327 beta-subunit binding pocket (H37Rv reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Thermus aquaticus RpoB (Q9KWU6) and M. tuberculosis H37Rv RpoB (P9WGY9) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA polymerase beta-subunit channel molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:68621",
+      "label": "boceprevir",
+      "path": "data/antibiotics/antiviral/boceprevir.yaml",
+      "before_sha256": "c036d67aac15570797be6a7ad39b51a3373f12c83a1d65afa0a28f1f303e7fa4",
+      "after_sha256": "9c1d1e1fde3edaf41a9f689bfc175d95c59dd4d3c015217a21fe1e1c5c883c15",
+      "unchanged_fields_sha256": "2e3085c381abf0252573eca9587701ac4a39956cd8dc8ba3bdbb9f13c87a8e54",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "hepatitis C virus NS3/4A serine protease",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P26662",
+              "protein_label": "Genome polyprotein",
+              "taxon_id": "NCBITaxon:11108",
+              "taxon_label": "Hepatitis C virus genotype 1b (isolate BK)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference HCV genotype 1b polyprotein encoding the nonstructural NS3 serine protease and NS4A cofactor inhibited by boceprevir (SCH 503034) in enzyme and replicon assays (PMID:18201776; PMID:20004570; genotype 1b reference isolate BK context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB protein example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:232062",
+      "label": "exophillic acid",
+      "path": "data/antibiotics/antiviral/exophillic-acid.yaml",
+      "before_sha256": "455caceba43b1a5381f140ec8ac729f1cafddfc9d0bb4856b822aec3f3775cc2",
+      "after_sha256": "c4eb2a751c10ce78dbc302df7104597f86d003f8352af01a8a3d75afc33f649b",
+      "unchanged_fields_sha256": "5e2f4be9d1f43fab5c60782aff04f2267b9b114ec3542722019eab2ab60a6445",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 2,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "HIV-1 integrase strand-transfer activity",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P04585",
+              "protein_label": "Gag-Pol polyprotein",
+              "gene_symbol": "gag-pol",
+              "taxon_id": "NCBITaxon:11706",
+              "taxon_label": "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "HIV-1 Gag-Pol precursor encoding the integrase enzyme whose strand-transfer activity is inhibited by exophillic acid in vitro (PMID:15015729; HXB2 reference isolate context)."
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "sodium taurocholate cotransporting polypeptide (NTCP)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q14973",
+              "protein_label": "Sodium/bile acid cotransporter",
+              "gene_symbol": "SLC10A1",
+              "taxon_id": "NCBITaxon:9606",
+              "taxon_label": "Homo sapiens",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor bound by exophillic acid to block HBV and HDV preS1-mediated viral attachment (PMID:35458494)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) and human host SLC10A1/NTCP (Q14973) UniProtKB protein examples on the two PRIMARY_LITERATURE molecular targets of exophillic acid.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:170009",
+      "label": "favipiravir-RTP",
+      "path": "data/antibiotics/antiviral/favipiravir-rtp.yaml",
+      "before_sha256": "ae6f4bc7b661ac7597ed21183446c5aca5693154eb3b01b95742214607b0b7aa",
+      "after_sha256": "1ce0303efb7d641ab4a180e5aa14ad2e2411f73cfd64514707d1786d8d1ef45e",
+      "unchanged_fields_sha256": "bc01c5eb8ead27a79124e8b2018e67c3740bec07ffc65dc27f57523bdc258f6a",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "SARS-CoV-2 RNA-dependent RNA polymerase catalytic site",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0DTD1",
+              "protein_label": "Replicase polyprotein 1ab",
+              "gene_symbol": "rep",
+              "taxon_id": "NCBITaxon:2697049",
+              "taxon_label": "Severe acute respiratory syndrome coronavirus 2",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "SARS-CoV-2 replicase polyprotein 1ab encoding the nsp12 RNA-dependent RNA polymerase catalytic subunit resolved with favipiravir-RTP by cryo-EM (PMID:33526596, PDB 7CTT)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example on the PRIMARY_LITERATURE SARS-CoV-2 RNA-dependent RNA polymerase catalytic site molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:167176",
+      "label": "GRL-0617",
+      "path": "data/antibiotics/antiviral/grl-0617.yaml",
+      "before_sha256": "fdc04579e5996696b7bb5009af41255a7c3f6c34285e52b934f4bc77e106d1f0",
+      "after_sha256": "b0f955b19a84cff61e7e05364137b296122c46e593734d772a8baa47874e23de",
+      "unchanged_fields_sha256": "f5949b17d5b154b9c2039fd391f70df71808806aec46c5b354c41e47050a81d0",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "SARS-CoV-2 papain-like protease (PLpro)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0DTD1",
+              "protein_label": "Replicase polyprotein 1ab",
+              "gene_symbol": "rep",
+              "taxon_id": "NCBITaxon:2697049",
+              "taxon_label": "Severe acute respiratory syndrome coronavirus 2",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "SARS-CoV-2 replicase polyprotein 1ab encoding the nsp3 papain-like protease (PLpro) domain crystallized in complex with GRL-0617 (PMID:32895623, PDB 7CJM)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example on the PRIMARY_LITERATURE SARS-CoV-2 papain-like protease (PLpro) molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:66081",
+      "label": "integric acid",
+      "path": "data/antibiotics/antiviral/integric-acid.yaml",
+      "before_sha256": "b95c027f61579f8a3e496f51b95a777b0290496ee1a2161f758f6d13ba250cd0",
+      "after_sha256": "eadfd2f658aff8718aea61b617d46a1c2100e7c2ca2bb4aa61a1be8bd69430e3",
+      "unchanged_fields_sha256": "96300d163e25cf6b8ea193fda6f7ea26aaeb8e743c18bc5348f24805c3f2ede7",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "HIV-1 integrase catalytic activities",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P04585",
+              "protein_label": "Gag-Pol polyprotein",
+              "gene_symbol": "gag-pol",
+              "taxon_id": "NCBITaxon:11706",
+              "taxon_label": "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "HIV-1 Gag-Pol precursor encoding the integrase enzyme whose 3'-end processing, strand-transfer, and disintegration activities are inhibited by integric acid (PMID:10335400; PMID:10698443; HXB2 reference isolate context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on the PRIMARY_LITERATURE HIV-1 integrase catalytic activities molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:173104",
+      "label": "narlaprevir",
+      "path": "data/antibiotics/antiviral/narlaprevir.yaml",
+      "before_sha256": "9c3e565a664311dec750fe2950471e1abfca6f7770f7676e5b48fc99b71482c7",
+      "after_sha256": "585176ebe1f38ae122a16e85062aef46c16d979587fd1fa73776053c209d605d",
+      "unchanged_fields_sha256": "57bc40bf24b044462e75ffc8c26e450a2fb33753c8a5a35bf2625a91a9e233d4",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "hepatitis C virus NS3/4A serine protease",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P26662",
+              "protein_label": "Genome polyprotein",
+              "taxon_id": "NCBITaxon:11108",
+              "taxon_label": "Hepatitis C virus genotype 1b (isolate BK)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference HCV genotype 1b polyprotein encoding the NS3/4A serine protease inhibited by narlaprevir (SCH 900518) during discovery and potency optimization (PMID:24900178; genotype 1b reference isolate BK context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB protein example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:170007",
+      "label": "nirmatrelvir",
+      "path": "data/antibiotics/antiviral/nirmatrelvir.yaml",
+      "before_sha256": "1b2a2a689d33902eaa8ac3a47d866d8d9be4f9a72fbcd5f647d15cdcbff6c3bc",
+      "after_sha256": "1ec718010f7d421dd2a4ca7461d1229167e7f5afb39ffe762718b6104fd18302",
+      "unchanged_fields_sha256": "003c8786edf4a59ed502ac1b9571dcf3bab0f9fcf2f8329ec068f94f565315a9",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "SARS-CoV-2 main protease (Mpro; 3CLpro)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0DTD1",
+              "protein_label": "Replicase polyprotein 1ab",
+              "gene_symbol": "rep",
+              "taxon_id": "NCBITaxon:2697049",
+              "taxon_label": "Severe acute respiratory syndrome coronavirus 2",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "SARS-CoV-2 replicase polyprotein 1ab encoding the nsp5 3C-like main protease (Mpro/3CLpro) crystallized with PF-07321332 (nirmatrelvir) and assayed across lineage variants (PMID:34687004, PDB 7RF7; PMID:35182772)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example on the PRIMARY_LITERATURE SARS-CoV-2 main protease (Mpro; 3CLpro) molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:68606",
+      "label": "rilpivirine",
+      "path": "data/antibiotics/antiviral/rilpivirine.yaml",
+      "before_sha256": "0fe52b034ebd51186eaf00675e2a2b76c60f537caa8adcf48e1f798751a1d04d",
+      "after_sha256": "fe270d0c2ebd23693f365a704caca10d16e1f6206b95510dbf436ebf092d36f7",
+      "unchanged_fields_sha256": "3af3d0ed3693653ffbda01a64f2a00c0e12bd9093a54378fe8e241858f1a9722",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "HIV-1 reverse transcriptase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P04585",
+              "protein_label": "Gag-Pol polyprotein",
+              "gene_symbol": "gag-pol",
+              "taxon_id": "NCBITaxon:11706",
+              "taxon_label": "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer crystallized in complex with rilpivirine (TMC278) in wild-type and K103N mutant forms (PMID:20438081, PDB 2ZD1 / 3MEE; HXB2 reference isolate context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on the PRIMARY_LITERATURE HIV-1 reverse transcriptase molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:136047",
+      "label": "vaniprevir",
+      "path": "data/antibiotics/antiviral/vaniprevir.yaml",
+      "before_sha256": "490200454d25d51d874cc3286dd4f6c01986a1dee51adf046340b2f0ef35f3cf",
+      "after_sha256": "8d124eaa910bb9f6bcf3c85fffcbcb425b064fbe3e5d589ad75e1fe1ef71adc1",
+      "unchanged_fields_sha256": "4cda3ce20b8521746cf63c7daaca474b68e7d22d774bde4533af49b9e02dc230",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "hepatitis C virus NS3/4A protease",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P26664",
+              "protein_label": "Genome polyprotein",
+              "taxon_id": "NCBITaxon:63746",
+              "taxon_label": "Hepatitis C virus genotype 1a (isolate H)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference HCV genotype 1a polyprotein encoding the NS3/4A protease inhibited at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1a reference isolate H context)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P26662",
+              "protein_label": "Genome polyprotein",
+              "taxon_id": "NCBITaxon:11108",
+              "taxon_label": "Hepatitis C virus genotype 1b (isolate BK)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Reference HCV genotype 1b polyprotein encoding the NS3/4A protease inhibited at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1b reference isolate BK context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-18T00:00:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated HCV genotype 1a isolate H (P26664) and genotype 1b isolate BK (P26662) genome polyprotein UniProtKB protein examples on the PRIMARY_LITERATURE hepatitis C virus NS3/4A protease molecular target.",
+        "llm_assisted": true
+      }
+    }
+  ]
+}

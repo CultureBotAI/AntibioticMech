@@ -29,8 +29,8 @@ def frozen():
     return plan, data, result
 
 
-def test_full_current_corpus_replay(frozen):
-    assert audit.build(ROOT) == frozen[2]
+def test_full_current_corpus_replay(frozen, pre_uniprot_protein_examples_root):
+    assert audit.build(pre_uniprot_protein_examples_root) == frozen[2]
     result = frozen[2]
     assert result["qualification_update_summary"] == {
         "records_checked": 2939, "card_claims_checked": 4538,

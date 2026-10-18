@@ -287,6 +287,16 @@ molecular_targets:
   evidence:
   - reference: PMID:12044152
     notes: Primary coumarin-gyrase thermodynamics and structure study (DOI:10.1021/bi0159837).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Full-length E. coli K-12 GyrB precursor of the 24-kDa N-terminal ATP-binding
+      fragment crystallized with novobiocin (PMID:12044152; PDB 1KIJ).
 causal_graphs:
 - graph_id: novobiocin_gyrb_atpase_inhibition
   title: Novobiocin inhibits GyrB ATPase-dependent DNA supercoiling
@@ -309,6 +319,16 @@ causal_graphs:
     - ARO:3003260
     gene_symbols:
     - gyrB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: ATP-binding GyrB subunit whose N-terminal 24-kDa domain binds novobiocin
+        at the ATPase site (PMID:8386298; PMID:12044152; E. coli K-12 reference context).
   - node_id: gyrb_coumarin_binding_domain
     label: GyrB amino-terminal coumarin-binding domain
     node_type: STATE
@@ -427,4 +447,11 @@ curation_history:
     finding; preserved donor/host/reference distinctions and all existing source slices.
     No exact allele, numerical AST or genome assigned. Whole-record review remains
     open.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated E. coli K-12 GyrB (P0AES6) UniProtKB protein examples on
+    the novobiocin_gyrb_atpase_inhibition gyrb causal graph node and the PRIMARY_LITERATURE
+    DNA gyrase B 24-kDa fragment molecular target.
   llm_assisted: true

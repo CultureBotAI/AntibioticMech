@@ -5887,6 +5887,35 @@ causal_graphs:
     gene_symbols:
     - parC
     - parE
+    protein_examples:
+    - uniprot_id: UniProtKB:P72525
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:170187
+      taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Catalytic ParC subunit of S. pneumoniae topoisomerase IV complexed with
+        DNA and levofloxacin in the ternary cleavage-complex crystal structure (PMID:19332681;
+        TIGR4 reference strain context).
+    - uniprot_id: UniProtKB:P0AFI2
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference Gram-negative bacterial topoisomerase IV ParC subunit corresponding
+        to ARO:3000735 node grounding (E. coli K-12 reference proteome context).
+    - uniprot_id: UniProtKB:P20083
+      protein_label: DNA topoisomerase 4 subunit B
+      gene_symbol: parE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference Gram-negative bacterial topoisomerase IV ParE subunit corresponding
+        to ARO:3000735 node grounding (E. coli K-12 reference proteome context).
   - node_id: topoiv_dna_cleavage_complex
     label: topoisomerase IV covalent DNA cleavage complex
     node_type: STATE
@@ -6147,3 +6176,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated S. pneumoniae TIGR4 ParC (P72525) and E. coli K-12 ParC/ParE
+    (P0AFI2, P20083) UniProtKB protein examples on the levofloxacin topoisomerase_iv
+    causal graph node.
+  llm_assisted: true

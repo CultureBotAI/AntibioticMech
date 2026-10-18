@@ -451,6 +451,27 @@ causal_graphs:
       sensitivity.
     gene_symbols:
     - gyrA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: GyrA subunit (formerly nalA gene product) of E. coli DNA gyrase that forms
+        the nalidixic acid-stabilized DNA cleavage complex and controls supercoiling
+        sensitivity (PMID:303505; PMID:217495; K-12 reference proteome context).
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: ATPase GyrB subunit partnering with GyrA in the E. coli DNA gyrase holoenzyme
+        inhibited by nalidixic acid (PMID:303505; PMID:217495; K-12 reference proteome
+        context).
   - node_id: gyrase_dna_cleavage_complex
     label: DNA gyrase covalent DNA cleavage complex
     node_type: STATE
@@ -762,3 +783,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated E. coli K-12 DNA gyrase subunit A (P0AES4) and subunit B
+    (P0AES6) UniProtKB protein examples on the nalidixic_acid_gyrase_cleavage_complex
+    dna_gyrase causal graph node.
+  llm_assisted: true

@@ -6534,6 +6534,27 @@ molecular_targets:
   evidence:
   - reference: PMID:11290327
     notes: Primary rifampicin-bound bacterial RNAP structural mechanism study (DOI:10.1016/S0092-8674(01)00286-0).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q9KWU6
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:271
+    taxon_label: Thermus aquaticus
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Thermus aquaticus core RNA polymerase beta subunit directly bound by rifampicin
+      within the DNA/RNA exit channel in the cocrystal structure (PMID:11290327, PDB
+      1I6V).
+  - uniprot_id: UniProtKB:P9WGY9
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Primary antimycobacterial target RpoB subunit in M. tuberculosis whose conserved
+      rifampicin-resistance cluster maps to the PMID:11290327 beta-subunit binding
+      pocket (H37Rv reference strain context).
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -7043,3 +7064,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
     retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Thermus aquaticus RpoB (Q9KWU6) and M. tuberculosis H37Rv
+    RpoB (P9WGY9) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA
+    polymerase beta-subunit channel molecular target.
+  llm_assisted: true

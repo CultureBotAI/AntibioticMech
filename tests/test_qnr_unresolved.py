@@ -30,9 +30,9 @@ def frozen():
     return {k: audit.read(ROOT, pin) for k, pin in config["inputs"].items()}
 
 
-def test_full_public_replay(frozen):
+def test_full_public_replay(frozen, pre_uniprot_protein_examples_root):
     dossier = json.loads((ROOT / audit.OUTPUT).read_bytes())
-    assert audit.build(ROOT) == dossier
+    assert audit.build(pre_uniprot_protein_examples_root) == dossier
     assert len(dossier["claims"]) == len(dossier["reviews"]) == 7
     assert len(dossier["records"]) == 1
     assert dossier["summary"]["corpus_records_hash_checked"] == 2939

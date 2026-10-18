@@ -59,6 +59,17 @@ molecular_targets:
     notes: Primary oligomycin-c-ring crystal structure (DOI:10.1073/pnas.1207912109).
   - reference: PMID:29650704
     notes: Primary full ATP-synthase cryo-EM study with oligomycin.
+  protein_examples:
+  - uniprot_id: UniProtKB:P61829
+    protein_label: ATP synthase subunit 9, mitochondrial
+    gene_symbol: OLI1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Proton-translocating F_O c-ring subunit (Subunit 9 / Atp9) bound at the
+      essential carboxyl-protonation face in the S. cerevisiae c10-ring oligomycin
+      crystal structure (PMID:22869738, PDB 4F4S; S288c reference strain context).
 xrefs:
 - cas:579-13-5
 - kegg.compound:C11311
@@ -101,4 +112,11 @@ curation_history:
   changes: Verified exact ChEBI identity, structure, and antifungal class; curator-confirmed
     ATP-synthesis inhibition and added the directly bound mitochondrial ATP-synthase
     c-ring with two structural studies.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Saccharomyces cerevisiae S288c mitochondrial ATP synthase
+    subunit 9 / OLI1 (P61829) UniProtKB protein example on the PRIMARY_LITERATURE
+    mitochondrial F_O ATP synthase c-ring molecular target.
   llm_assisted: true

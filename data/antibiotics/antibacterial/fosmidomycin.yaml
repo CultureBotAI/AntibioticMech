@@ -104,6 +104,17 @@ molecular_targets:
   evidence:
   - reference: PMID:17554164
     notes: Primary fosmidomycin-DXR-Mg2+-NADPH structure (DOI:10.1107/S1744309107024475).
+  protein_examples:
+  - uniprot_id: UniProtKB:P45568
+    protein_label: 1-deoxy-D-xylulose 5-phosphate reductoisomerase
+    gene_symbol: dxr
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Non-mevalonate isoprenoid pathway enzyme crystallized in a ternary complex
+      with NADPH and fosmidomycin in E. coli (PMID:17554164; K-12 reference strain
+      context).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -132,3 +143,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated E. coli K-12 DXR (P45568) UniProtKB protein example on the
+    PRIMARY_LITERATURE 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR) molecular
+    target.
+  llm_assisted: true

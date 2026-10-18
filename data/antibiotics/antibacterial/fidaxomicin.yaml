@@ -124,6 +124,27 @@ molecular_targets:
   evidence:
   - reference: PMID:35388215
     notes: Primary C. difficile RNAP-fidaxomicin structure and selectivity study (DOI:10.1038/s41586-022-04545-z).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q18CF4
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:272563
+    taxon_label: Clostridioides difficile (strain 630)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: RNA polymerase beta subunit forming part of the fidaxomicin-binding clamp
+      cleft in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain 630
+      reference proteome context).
+  - uniprot_id: UniProtKB:Q18CF3
+    protein_label: DNA-directed RNA polymerase subunit beta'
+    gene_symbol: rpoC
+    taxon_id: NCBITaxon:272563
+    taxon_label: Clostridioides difficile (strain 630)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: RNA polymerase beta' subunit contributing the lineage-specific fidaxomicin-sensitizing
+      residue in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain
+      630 reference proteome context).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -152,3 +173,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Clostridioides difficile strain 630 RpoB (Q18CF4) and RpoC
+    (Q18CF3) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA polymerase
+    molecular target.
+  llm_assisted: true

@@ -19,10 +19,13 @@ def transition():
 
 
 @pytest.mark.parametrize("index", range(17))
-def test_exact_note_only_transition(pre_salmonella_qualification_root, index):
+def test_exact_note_only_transition(
+    pre_salmonella_qualification_root, pre_uniprot_protein_examples_root, index
+):
     receipt = transition()
     delta = receipt["record_deltas"][index]
-    live, historical = ROOT / delta["path"], pre_salmonella_qualification_root / delta["path"]
+    live = pre_uniprot_protein_examples_root / delta["path"]
+    historical = pre_salmonella_qualification_root / delta["path"]
     assert hashlib.sha256(live.read_bytes()).hexdigest() == delta["after_sha256"]
     assert hashlib.sha256(historical.read_bytes()).hexdigest() == delta["before_sha256"]
     current, before = load_record(live), load_record(historical)
@@ -49,10 +52,12 @@ def test_exact_note_only_transition(pre_salmonella_qualification_root, index):
     assert restored == before
 
 
-def test_active_review_appends_only_verified_draft(pre_salmonella_qualification_root):
+def test_active_review_appends_only_verified_draft(
+    pre_salmonella_qualification_root, pre_uniprot_protein_examples_root
+):
     receipt = transition()
     old = json.loads((pre_salmonella_qualification_root / receipt["review_file"]["path"]).read_bytes())
-    live = json.loads((ROOT / receipt["review_file"]["path"]).read_bytes())
+    live = json.loads((pre_uniprot_protein_examples_root / receipt["review_file"]["path"]).read_bytes())
     draft = json.loads((ROOT / receipt["proposed_review"]["path"]).read_bytes())
     old["reviews"] += draft["reviews"]
     assert live == old
@@ -67,30 +72,37 @@ def test_active_review_appends_only_verified_draft(pre_salmonella_qualification_
     assert not receipt["protocols_exported"]
 
 
-def test_all_record_hashes_match_exactly_one_approved_transition(pre_salmonella_qualification_root):
+def test_all_record_hashes_match_exactly_one_approved_transition(
+    pre_salmonella_qualification_root, pre_uniprot_protein_examples_root
+):
     previous = json.loads((ROOT / "research/2026-10-15-card-reference-reconciled.json").read_bytes())
     deltas = {d["path"]: d for d in transition()["record_deltas"]}
     assert len(deltas) == 17
-    assert {p.relative_to(ROOT).as_posix() for p in (ROOT / "data/antibiotics").rglob("*.yaml")} == {
+    assert {
+        p.relative_to(pre_uniprot_protein_examples_root).as_posix()
+        for p in (pre_uniprot_protein_examples_root / "data/antibiotics").rglob("*.yaml")
+    } == {
         r["path"] for r in previous["records"]
     }
     for record in previous["records"]:
         path = record["path"]
         before = hashlib.sha256((pre_salmonella_qualification_root / path).read_bytes()).hexdigest()
-        after = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+        after = hashlib.sha256((pre_uniprot_protein_examples_root / path).read_bytes()).hexdigest()
         assert before == record["record_sha256"]
         assert after == deltas.get(path, {}).get("after_sha256", before)
 
 
 @pytest.mark.parametrize("change", ["receipt", "label", "history", "note", "unrelated_claim"])
-def test_reconstruction_rejects_unregistered_changes(tmp_path, restore_pre_salmonella_qualification, change):
+def test_reconstruction_rejects_unregistered_changes(
+    tmp_path, restore_pre_salmonella_qualification, pre_uniprot_protein_examples_root, change
+):
     delta = next(d for d in transition()["record_deltas"] if d["identifier"] == "CHEBI:100241")
     receipt = tmp_path / RECEIPT
     receipt.parent.mkdir(parents=True)
     receipt.write_bytes((ROOT / RECEIPT).read_bytes())
     source = tmp_path / delta["path"]
     source.parent.mkdir(parents=True)
-    source.write_bytes((ROOT / delta["path"]).read_bytes())
+    source.write_bytes((pre_uniprot_protein_examples_root / delta["path"]).read_bytes())
     if change == "receipt":
         receipt.write_bytes(receipt.read_bytes() + b"\n")
     else:

@@ -324,6 +324,36 @@ molecular_targets:
   evidence:
   - reference: PMID:32327601
     notes: Primary ethambutol-bound arabinosyltransferase structural study (DOI:10.1126/science.aba9102).
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WNL9
+    protein_label: Arabinosyltransferase A
+    gene_symbol: embA
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: EmbA subunit of the M. tuberculosis EmbA-EmbB-AcpM2 complex resolved with
+      ethambutol by cryo-EM (PMID:32327601, PDB 7BVF; H37Rv reference strain context).
+  - uniprot_id: UniProtKB:P9WNL7
+    protein_label: Arabinosyltransferase B
+    gene_symbol: embB
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Catalytic EmbB subunit containing the direct ethambutol-binding pocket in
+      the M. tuberculosis EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv
+      reference strain context).
+  - uniprot_id: UniProtKB:P9WNL5
+    protein_label: Arabinosyltransferase C
+    gene_symbol: embC
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Catalytic EmbC subunit of the homodimeric EmbC-EmbC arabinosyltransferase
+      complex directly bound by ethambutol (PMID:32327601; H37Rv reference strain
+      context; M. smegmatis EmbC2 complex also resolved in the same study).
 activity_spectrum:
 - taxon_label: Mycobacterium tuberculosis complex
   assay: CRyPTIC DST; CRyPTIC; liquid media; microdilution plate; UKMYC5; critical
@@ -6108,6 +6138,27 @@ causal_graphs:
     gene_symbols:
     - embA
     - embB
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WNL9
+      protein_label: Arabinosyltransferase A
+      gene_symbol: embA
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: EmbA subunit of the heterodimeric EmbA-EmbB-AcpM2 arabinosyltransferase
+        complex bound by ethambutol in cryo-EM structures (PMID:32327601, PDB 7BVF;
+        H37Rv reference strain context).
+    - uniprot_id: UniProtKB:P9WNL7
+      protein_label: Arabinosyltransferase B
+      gene_symbol: embB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Catalytic EmbB subunit harboring the conserved ethambutol-binding active-site
+        pocket within the EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv
+        reference strain context).
   - node_id: embc_complex
     label: mycobacterial EmbC arabinosyltransferase complex
     node_type: GENE_OR_PROTEIN
@@ -6118,6 +6169,17 @@ causal_graphs:
     - ARO:3000763
     gene_symbols:
     - embC
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WNL5
+      protein_label: Arabinosyltransferase C
+      gene_symbol: embC
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Catalytic EmbC subunit of the homodimeric EmbC2-AcpM2 lipoarabinomannan
+        arabinosyltransferase complex bound by ethambutol at its active site (PMID:32327601;
+        H37Rv reference strain context).
   - node_id: arabinogalactan_arabinan
     label: mycobacterial arabinogalactan arabinan
     node_type: CHEMICAL
@@ -6249,3 +6311,11 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
     retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated M. tuberculosis H37Rv EmbA (P9WNL9), EmbB (P9WNL7), and EmbC
+    (P9WNL5) UniProtKB protein examples on the ethambutol_emb_arabinan_inhibition
+    causal graph nodes and the PRIMARY_LITERATURE EmbA-EmbB / EmbC-EmbC arabinosyltransferase
+    complexes molecular target.
+  llm_assisted: true

@@ -185,6 +185,17 @@ molecular_targets:
   - reference: PMID:15843024
     notes: Primary EF-G mutant structure and fusidic-acid resistance/sensitivity study
       (DOI:10.1016/j.jmb.2005.02.066).
+  protein_examples:
+  - uniprot_id: UniProtKB:P13551
+    protein_label: Elongation factor G
+    gene_symbol: fusA
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Ribosomal translocation GTPase EF-G whose fusidic acid-resistant and hypersensitive
+      mutant crystal structures define the interdomain conformational trapping mechanism
+      (PMID:15843024; T. thermophilus HB8 reference strain context).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -214,3 +225,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Thermus thermophilus HB8 elongation factor G (P13551) UniProtKB
+    protein example on the PRIMARY_LITERATURE elongation factor G (EF-G) molecular
+    target.
+  llm_assisted: true

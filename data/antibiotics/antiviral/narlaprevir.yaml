@@ -77,6 +77,16 @@ molecular_targets:
   evidence:
   - reference: PMID:24900178
     notes: Primary medicinal-chemistry discovery and target-potency report.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26662
+    protein_label: Genome polyprotein
+    taxon_id: NCBITaxon:11108
+    taxon_label: Hepatitis C virus genotype 1b (isolate BK)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference HCV genotype 1b polyprotein encoding the NS3/4A serine protease
+      inhibited by narlaprevir (SCH 900518) during discovery and potency optimization
+      (PMID:24900178; genotype 1b reference isolate BK context).
 xrefs:
 - cas:865466-24-6
 - chemspider:10031710
@@ -150,4 +160,11 @@ curation_history:
   changes: Grounded the existing HCV clinical association to an active species TaxID;
     retained the original claim without assigning patient-specific proteins, strains,
     genomes or allele coordinates.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB
+    protein example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease
+    molecular target.
   llm_assisted: true
