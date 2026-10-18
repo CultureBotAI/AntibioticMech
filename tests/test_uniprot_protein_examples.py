@@ -17,7 +17,9 @@ from antibioticmech.uniprot_examples import (
     DEFAULT_RECEIPT_PATH,
     apply_planned_examples_to_record_data,
     load_uniprot_examples_plan,
+    validate_held_target_entry,
     validate_protein_example_spec,
+    verify_corpus_protein_examples_accounting,
 )
 from scripts.render_pages import TEMPLATES_DIR, build_record
 
@@ -39,6 +41,10 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
         for graph in graphs:
             for node in graph.get("nodes") or []:
                 if node.get("node_type") != "GENE_OR_PROTEIN":
+                    assert not node.get("protein_examples"), (
+                        f"{path}: non-GENE_OR_PROTEIN node {graph.get('graph_id')}.{node.get('node_id')} "
+                        f"({node.get('node_type')}) must not carry protein_examples"
+                    )
                     continue
                 gene_or_protein_nodes += 1
                 examples = node.get("protein_examples")
@@ -63,6 +69,17 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
     assert causal_graph_records == 16
     assert gene_or_protein_nodes == 15
 
+    accounting = verify_corpus_protein_examples_accounting(records)
+    assert accounting == {
+        "causal_graphs_total": 16,
+        "causal_graphs_with_protein_nodes": 13,
+        "causal_graphs_held": 3,
+        "gene_or_protein_nodes": 15,
+        "primary_literature_targets_total": 85,
+        "primary_literature_targets_populated": 24,
+        "primary_literature_targets_held": 61,
+    }
+
 
 def test_plan_and_transition_summary_counts():
     plan = load_uniprot_examples_plan(DEFAULT_PLAN_PATH)
@@ -71,7 +88,122 @@ def test_plan_and_transition_summary_counts():
     assert sum(d["causal_nodes_updated"] for d in receipt["record_deltas"]) == 15
     assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 22
     assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 53
-    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) >= 30
+    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 64
+
+
+def test_strict_protein_example_and_held_target_validation():
+    base_spec = {
+        "uniprot_id": "UniProtKB:P0AES6",
+        "protein_label": "DNA gyrase subunit B",
+        "gene_symbol": "gyrB",
+        "taxon_id": "NCBITaxon:83333",
+        "taxon_label": "Escherichia coli (strain K12)",
+        "entry_status": "REVIEWED",
+        "retrieved_on": "2026-04-17",
+        "role": "Primary target",
+    }
+    valid_isoform = validate_protein_example_spec(
+        {**base_spec, "uniprot_id": "UniProtKB:P0AES6-2"},
+        context="test",
+    )
+    assert valid_isoform["uniprot_id"] == "UniProtKB:P0AES6-2"
+
+    for bad_uniprot in ["UniProtKB:P0AES6-0", "UniProtKB:P0AES6-01", "P0AES6"]:
+        with pytest.raises(ValueError, match="invalid uniprot_id"):
+            validate_protein_example_spec({**base_spec, "uniprot_id": bad_uniprot}, context="test")
+
+    for bad_taxon in ["NCBITaxon:0", "NCBITaxon:0123", "taxon:83333"]:
+        with pytest.raises(ValueError, match="invalid taxon_id"):
+            validate_protein_example_spec({**base_spec, "taxon_id": bad_taxon}, context="test")
+
+    for bad_date in ["2026-02-30", "2026-13-01", "2026/04/17"]:
+        with pytest.raises(ValueError, match="invalid retrieved_on"):
+            validate_protein_example_spec({**base_spec, "retrieved_on": bad_date}, context="test")
+
+    valid_held = {
+        "identifier": "CHEBI:17698",
+        "path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+        "label": "chloramphenicol",
+        "scope": "causal_graphs",
+        "graph_id": "chloramphenicol_bacteriostatic_core",
+        "reason": "Non-protein causal nodes only.",
+    }
+    held_key = validate_held_target_entry(valid_held)
+    assert held_key == ("causal_graphs", "CHEBI:17698", "chloramphenicol_bacteriostatic_core")
+
+    with pytest.raises(ValueError, match="held_targets scope must be one of"):
+        validate_held_target_entry({**valid_held, "scope": "unknown_scope"})
+    with pytest.raises(ValueError, match="held molecular_targets entry requires"):
+        validate_held_target_entry(
+            {
+                "identifier": "CHEBI:17698",
+                "path": "data/antibiotics/antibacterial/chloramphenicol.yaml",
+                "label": "chloramphenicol",
+                "scope": "molecular_targets",
+                "reason": "Non-protein target.",
+            }
+        )
+
+
+def test_non_protein_causal_node_and_target_reject_protein_examples():
+    path = ROOT / "data/antibiotics/antibacterial/chloramphenicol.yaml"
+    doc = load_record(path)
+    base_spec = {
+        "uniprot_id": "UniProtKB:P0AES6",
+        "protein_label": "DNA gyrase subunit B",
+        "gene_symbol": "gyrB",
+        "taxon_id": "NCBITaxon:83333",
+        "taxon_label": "Escherichia coli (strain K12)",
+        "entry_status": "REVIEWED",
+        "retrieved_on": "2026-04-17",
+        "role": "Primary target",
+    }
+    first_graph = doc["causal_graphs"][0]
+    first_node = first_graph["nodes"][0]
+    with pytest.raises(ValueError, match="expected 'GENE_OR_PROTEIN'"):
+        apply_planned_examples_to_record_data(
+            doc,
+            {
+                "identifier": "CHEBI:17698",
+                "label": "chloramphenicol",
+                "causal_node_examples": [
+                    {
+                        "graph_id": first_graph["graph_id"],
+                        "node_id": first_node["node_id"],
+                        "node_label": first_node["label"],
+                        "protein_examples": [base_spec],
+                    }
+                ],
+                "molecular_target_examples": [],
+            },
+        )
+
+    doc_with_non_protein_target = copy.deepcopy(doc)
+    doc_with_non_protein_target["molecular_targets"] = [
+        {
+            "target_label": "23S rRNA peptidyl transferase center",
+            "target_type": "NUCLEIC_ACID",
+            "source": "PRIMARY_LITERATURE",
+            "evidence": [{"reference": "PMID:1"}],
+        }
+    ]
+    with pytest.raises(ValueError, match="has target_type 'NUCLEIC_ACID'"):
+        apply_planned_examples_to_record_data(
+            doc_with_non_protein_target,
+            {
+                "identifier": "CHEBI:17698",
+                "label": "chloramphenicol",
+                "causal_node_examples": [],
+                "molecular_target_examples": [
+                    {
+                        "target_label": "23S rRNA peptidyl transferase center",
+                        "target_reference": "PMID:1",
+                        "source": "PRIMARY_LITERATURE",
+                        "protein_examples": [base_spec],
+                    }
+                ],
+            },
+        )
 
 
 @pytest.mark.parametrize("index", range(30))
@@ -171,6 +303,11 @@ def test_causal_node_and_molecular_target_protein_examples_render_in_record_html
     )
     html = env.get_template("record.html").render(r=record, root="../", stats={})
     assert "UniProtKB:P0AES6" in html
+    assert "https://www.uniprot.org/uniprotkb/P0AES6" in html
+    assert "http://purl.obolibrary.org/obo/NCBITaxon_83333" in html
     assert "DNA gyrase subunit B (gyrB)" in html
+    assert "Full-length E. coli K-12 GyrB precursor of the 24-kDa N-terminal ATP-binding fragment" in html
+    assert "ATP-binding GyrB subunit whose N-terminal 24-kDa domain binds novobiocin" in html
     assert "Examples:" in html
     assert "NCBITaxon:83333" in html
+

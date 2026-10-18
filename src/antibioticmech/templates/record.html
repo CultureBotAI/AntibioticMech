@@ -187,9 +187,9 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
   {% for p in t.protein_examples %}
   <tr>
-    <td>{{ p.protein_label }} <code class="curie">{{ p.uniprot_id }}</code></td>
+    <td>{{ p.protein_label }}{% if p.resolved_uniprot_id %}{{ curie_link(p.resolved_uniprot_id) }}{% elif p.uniprot_id %} <code class="curie">{{ p.uniprot_id }}</code>{% endif %}{% if p.role %}<br><span class="meta">{{ p.role }}</span>{% endif %}</td>
     <td>{{ p.gene_symbol or '—' }}</td>
-    <td><em>{{ p.taxon_label }}</em></td>
+    <td><em>{{ p.taxon_label }}</em>{% if p.resolved_taxon_id %}{{ curie_link(p.resolved_taxon_id) }}{% elif p.taxon_id %} <code class="curie">{{ p.taxon_id }}</code>{% endif %}</td>
     <td><span class="pill{{ ' plain' if p.entry_status == 'UNREVIEWED' else '' }}">{{ p.entry_status }}</span></td>
   </tr>
   {% endfor %}
@@ -318,7 +318,7 @@ or death.</p>
   {% for n in cg.nodes %}
   <tr>
     <td><code class="curie">{{ n.node_id }}</code></td>
-    <td>{{ n.label }}{% if n.protein_examples %}<br><span class="meta">Examples: {% for p in n.protein_examples %}{{ p.protein_label }}{% if p.gene_symbol %} ({{ p.gene_symbol }}){% endif %} <code class="curie">{{ p.uniprot_id }}</code>, <em>{{ p.taxon_label }}</em> <code class="curie">{{ p.taxon_id }}</code> <span class="pill{{ ' plain' if p.entry_status == 'UNREVIEWED' else '' }}">{{ p.entry_status }}</span>{% if p.role %} — {{ p.role }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</span>{% endif %}</td>
+    <td>{{ n.label }}{% if n.protein_examples %}<br><span class="meta">Examples: {% for p in n.protein_examples %}{{ p.protein_label }}{% if p.gene_symbol %} ({{ p.gene_symbol }}){% endif %}{% if p.resolved_uniprot_id %}{{ curie_link(p.resolved_uniprot_id) }}{% elif p.uniprot_id %} <code class="curie">{{ p.uniprot_id }}</code>{% endif %}, <em>{{ p.taxon_label }}</em>{% if p.resolved_taxon_id %}{{ curie_link(p.resolved_taxon_id) }}{% elif p.taxon_id %} <code class="curie">{{ p.taxon_id }}</code>{% endif %} <span class="pill{{ ' plain' if p.entry_status == 'UNREVIEWED' else '' }}">{{ p.entry_status }}</span>{% if p.role %} — {{ p.role }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</span>{% endif %}</td>
     <td class="meta">{{ n.node_type }}</td>
     <td>{% if n.resolved_grounding and n.resolved_grounding.href %}{{ curie_link(n.resolved_grounding) }}{% elif n.grounding %}{{ reference_link(n.grounding) }}{% elif n.grounding_status %}<span class="pill warn">{{ n.grounding_status }}</span>{% else %}—{% endif %}</td>
   </tr>

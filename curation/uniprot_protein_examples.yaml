@@ -1035,195 +1035,616 @@ records:
               (PMID:19841155; genotype 1b reference isolate BK context).
 
 held_targets:
-  - identifier: CHEBI:2682
-    label: amphotericin B
-    scope: causal_graphs + molecular_targets
-    reason: >-
-      Non-protein sterol target (ergosterol; CELL_ENVELOPE_COMPONENT /
-      MEMBRANE_COMPONENT); no GENE_OR_PROTEIN causal nodes or protein targets.
-  - identifier: CHEBI:3732
-    label: clarithromycin
-    scope: causal_graphs + molecular_targets
-    reason: >-
-      Causal graph nodes are 23S rRNA (RNA_ELEMENT) and 50S subunit
-      (CELLULAR_STRUCTURE), and PRIMARY_LITERATURE target is 50S ribosomal
-      peptidyl-transferase center / nascent-peptide exit tunnel (RNA_ELEMENT).
-  - identifier: CHEBI:18266
-    label: fosfomycin
-    scope: causal_graphs
-    reason: >-
-      The fosfomycin_mura_peptidoglycan_inhibition causal graph currently models
-      MurA inhibition as a BIOLOGICAL_PROCESS node rather than a GENE_OR_PROTEIN
-      node, and its molecular_targets are CARD_ARO / BINDINGDB rather than
-      PRIMARY_LITERATURE.
-  - identifier: CHEBI:28619
-    label: D-cycloserine
-    scope: molecular_targets
-    reason: >-
-      Held in alignment with curation/pathway_links.yaml: PMID:4973690 assayed
-      E. coli strain W (ATCC 9637) D-alanine--D-alanine ligase, whereas DdlA/DdlB
-      isozyme resolution in E. coli K-12 is not established by the 1968 study.
-  - identifier: CHEBI:64198
-    label: tavaborole
-    scope: molecular_targets
-    reason: >-
-      Held because tests/test_tavaborole_references.py pins the live tavaborole.yaml
-      SHA-256 and curation_history length directly against ROOT, and the record
-      note explicitly leaves the exact cytoplasmic vs mitochondrial LeuRS
-      accession unresolved from abstract-only curation.
-  - identifier: CHEBI:138488
-    label: bictegravir
-    scope: molecular_targets
-    reason: >-
-      Held because tests/test_antiviral_taxa.py asserts field-by-field identity
-      on the live bictegravir.yaml record for all fields outside
-      resistance_mechanisms and curation_history.
-  - identifier: CHEBI:68618
-    label: dolutegravir
-    scope: molecular_targets
-    reason: >-
-      Held in alignment with tests/test_antiviral_taxa.py: PMID:21968597 assayed
-      recombinant HIV-1 NL4-3 vectors rather than HXB2, so HXB2 reference
-      protein grounding is not asserted without full-text construct verification.
-  - identifier: CHEBI:63628
-    label: raltegravir
-    scope: molecular_targets
-    reason: >-
-      Held because PMID:20118912 crystallized prototype foamy virus (PFV)
-      intasome as a structural model rather than HIV-1 integrase directly.
-  - identifier: CHEBI:68641
-    label: daclatasvir
-    scope: molecular_targets
-    reason: >-
-      Held because tests/test_curated_resistance_grounding.py pins the live
-      daclatasvir.yaml SHA-256 and unchanged_fields_sha256 directly on ROOT.
-  - identifier: CHEBI:85094
-    label: dasabuvir
-    scope: molecular_targets
-    reason: >-
-      Held because tests/test_curated_resistance_grounding.py pins the live
-      dasabuvir.yaml SHA-256 and unchanged_fields_sha256 directly on ROOT.
-  - identifier: CHEBI:132016
-    label: elbasvir
-    scope: molecular_targets
-    reason: >-
-      Held because tests/test_curated_resistance_grounding.py pins the live
-      elbasvir.yaml SHA-256 and unchanged_fields_sha256 directly on ROOT.
-  - identifier: CHEBI:85191
-    label: paritaprevir
-    scope: molecular_targets
-    reason: >-
-      Held because tests/test_curated_resistance_grounding.py pins the live
-      paritaprevir.yaml SHA-256 and unchanged_fields_sha256 directly on ROOT.
-  - identifier: CHEBI:474180
-    label: caspofungin
-    scope: molecular_targets
-    reason: >-
-      Multi-species / multi-paralog fungal Fks1/Fks2 1,3-beta-D-glucan synthase
-      target (PMID:11502506) without a single experimental strain accession.
-  - identifier: CHEBI:4734
-    label: echinocandin B
-    scope: molecular_targets
-    reason: >-
-      Multi-paralog fungal 1,3-beta-D-glucan synthase complex target without a
-      single resolved subunit accession in the cited primary study.
-  - identifier: CHEBI:7508
-    label: netilmicin
-    scope: molecular_targets
-    reason: >-
-      Whole 30S ribosomal subunit target from historic translational misreading
-      assays (PMID:383920) without a single resolved ribosomal protein component.
-  - identifier: CHEBI:7932
-    label: paromomycin
-    scope: molecular_targets
-    reason: >-
-      RNA_ELEMENT target (16S ribosomal RNA A-site decoding region).
-  - identifier: CHEBI:16944
-    label: ribostamycin
-    scope: molecular_targets
-    reason: >-
-      RNA_ELEMENT target (bacterial 16S rRNA decoding A-site).
-  - identifier: CHEBI:29007
-    label: sisomicin
-    scope: molecular_targets
-    reason: >-
-      RNA_ELEMENT target (bacterial 16S rRNA decoding A-site).
-  - identifier: CHEBI:9433
-    label: Telithromycin
-    scope: molecular_targets
-    reason: >-
-      RNA_ELEMENT target (bacterial 50S ribosomal subunit 23S rRNA domains II and V).
-  - identifier: CHEBI:78602
-    label: ceftolozane
-    scope: molecular_targets
-    reason: >-
-      Multi-paralog penicillin-binding proteins (PBP1b, PBP1c, PBP3) target entry
-      in Pseudomonas aeruginosa without per-isoform split target items.
-  - identifier: CHEBI:50890
-    label: faropenem
-    scope: molecular_targets
-    reason: >-
-      Multi-paralog bacterial high-molecular-weight penicillin-binding proteins
-      target across multiple organisms.
-  - identifier: CHEBI:61522
-    label: panipenem
-    scope: molecular_targets
-    reason: >-
-      Multi-paralog penicillin-binding proteins target (PBP1A, PBP1B, PBP2, PBP3,
-      PBP4) across E. coli, S. aureus, and P. aeruginosa.
-  - identifier: CHEBI:32049
-    label: foscarnet
-    scope: molecular_targets
-    reason: >-
-      Composite viral DNA polymerases and HIV-1 reverse transcriptase target across
-      multiple herpesviruses and retroviruses.
-  - identifier: CHEBI:8874
-    label: ribavirin
-    scope: molecular_targets
-    reason: >-
-      Broad-spectrum viral RNA-dependent RNA polymerase target without a single
-      viral species in the target definition.
-  - identifier: CHEBI:135771
-    label: entecavir
-    scope: molecular_targets
-    reason: >-
-      HBV reverse transcriptase/DNA polymerase target where the abstract-level
-      primary citation does not establish a single HBV genotype/isolate UniProt
-      entry.
-  - identifier: CHEBI:63587
-    label: lamivudine
-    scope: molecular_targets
-    reason: >-
-      Composite HIV-1 and HBV reverse transcriptase target combining two distinct
-      viral families in one molecular_targets entry.
-  - identifier: CHEBI:46375
-    label: tenofovir
-    scope: molecular_targets
-    reason: >-
-      Prodrug/metabolite (tenofovir diphosphate) target entry where active-metabolite
-      and isolate-specific polymerase construct provenance are separated.
-  - identifier: CHEBI:10110
-    label: zidovudine
-    scope: molecular_targets
-    reason: >-
-      Historical 1986 HIV-1 reverse transcriptase study (PMID:2430381) using
-      zidovudine 5'-triphosphate without an HXB2 structural construct pin.
-  - identifier: CHEBI:145218
-    label: baloxavir acid
-    scope: molecular_targets
-    reason: >-
-      Composite influenza A and influenza B polymerase acidic (PA) endonuclease
-      target spanning two viral species in one target entry.
-  - identifier: CHEBI:5905
-    label: indinavir
-    scope: molecular_targets
-    reason: >-
-      Composite HIV-1 and HIV-2 protease target spanning two lentiviral species
-      in one target entry.
-  - identifier: CHEBI:45526
-    label: ritonavir
-    scope: molecular_targets
-    reason: >-
-      HIV-1 protease target from early clinical/preclinical ABT-538 selection
-      studies across multiple patient/laboratory isolates without a single
-      structural isolate pin.
+- identifier: CHEBI:17698
+  label: chloramphenicol
+  path: data/antibiotics/antibacterial/chloramphenicol.yaml
+  scope: causal_graphs
+  graph_id: chloramphenicol_50s_peptidyl_transferase_inhibition
+  reason: Causal graph chloramphenicol_50s_peptidyl_transferase_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, COMPOUND, RNA, STATE) and has no GENE_OR_PROTEIN nodes.
+- identifier: CHEBI:3732
+  label: clarithromycin
+  path: data/antibiotics/antibacterial/clarithromycin.yaml
+  scope: causal_graphs
+  graph_id: clarithromycin_50s_exit_tunnel_inhibition
+  reason: Causal graph clarithromycin_50s_exit_tunnel_inhibition contains only non-protein node
+    types (BIOLOGICAL_PROCESS, COMPOUND, RNA, STATE) and has no GENE_OR_PROTEIN nodes.
+- identifier: CHEBI:600103
+  label: daptomycin
+  path: data/antibiotics/antibacterial/daptomycin.yaml
+  scope: causal_graphs
+  graph_id: daptomycin_phosphatidylglycerol_membrane_depolarization
+  reason: Causal graph daptomycin_phosphatidylglycerol_membrane_depolarization contains only non-protein
+    node types (CELL_STRUCTURE, CHEMICAL, COMPOUND, QUALITY, STATE, TRANSPORT_PROCESS) and has
+    no GENE_OR_PROTEIN nodes.
+- identifier: CHEBI:157683
+  label: althiomycin
+  path: data/antibiotics/antibacterial/althiomycin.yaml
+  scope: molecular_targets
+  target_label: bacterial ribosomal peptidyl-transferase reaction
+  target_type: BIOLOGICAL_PROCESS
+  target_reference: PMID:4917791
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial ribosomal peptidyl-transferase
+    reaction); protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:85984
+  label: avibactam
+  path: data/antibiotics/antibacterial/avibactam.yaml
+  scope: molecular_targets
+  target_label: class D OXA beta-lactamases
+  target_type: PROTEIN
+  target_reference: PMID:25406838
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (class D OXA beta-lactamases;
+    PMID:25406838) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:144087
+  label: bromodeoxytopsentin
+  path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+  scope: molecular_targets
+  target_label: pyruvate kinase
+  target_type: PROTEIN
+  target_reference: PMID:22030393
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (pyruvate kinase; PMID:22030393)
+    held from single-UniProt accession assignment pending strain/subunit-specific split.
+- identifier: CHEBI:29506
+  label: cethromycin
+  path: data/antibiotics/antibacterial/cethromycin.yaml
+  scope: molecular_targets
+  target_label: 50S ribosomal subunit nascent-peptide exit tunnel
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:12623020
+  reason: Ribosomal subunit / rRNA binding-pocket target (50S ribosomal subunit nascent-peptide
+    exit tunnel; PMID:12623020) where the primary mechanism acts on rRNA or whole-subunit conformation
+    without a single primary target protein accession in the cited study.
+- identifier: CHEBI:17698
+  label: chloramphenicol
+  path: data/antibiotics/antibacterial/chloramphenicol.yaml
+  scope: molecular_targets
+  target_label: 50S ribosomal peptidyl-transferase center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:20876128
+  reason: Ribosomal subunit / rRNA binding-pocket target (50S ribosomal peptidyl-transferase center;
+    PMID:20876128) where the primary mechanism acts on rRNA or whole-subunit conformation without
+    a single primary target protein accession in the cited study.
+- identifier: CHEBI:4309
+  label: dalfopristin
+  path: data/antibiotics/antibacterial/dalfopristin.yaml
+  scope: molecular_targets
+  target_label: 50S ribosomal peptidyl-transferase center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:15059283
+  reason: Ribosomal subunit / rRNA binding-pocket target (50S ribosomal peptidyl-transferase center;
+    PMID:15059283) where the primary mechanism acts on rRNA or whole-subunit conformation without
+    a single primary target protein accession in the cited study.
+- identifier: CHEBI:172922
+  label: ethylzingerone
+  path: data/antibiotics/antibacterial/ethylzingerone.yaml
+  scope: molecular_targets
+  target_label: intracellular oxidation and associated bacterial stress responses
+  target_type: BIOLOGICAL_PROCESS
+  target_reference: PMID:32737133
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: intracellular oxidation
+    and associated bacterial stress responses); protein_examples are restricted to protein-containing
+    target types.'
+- identifier: CHEBI:156451
+  label: holomycin
+  path: data/antibiotics/antibacterial/holomycin.yaml
+  scope: molecular_targets
+  target_label: bacterial RNA synthesis and transcription elongation
+  target_type: BIOLOGICAL_PROCESS
+  target_reference: PMID:11158751
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial RNA synthesis
+    and transcription elongation); protein_examples are restricted to protein-containing target
+    types.'
+- identifier: CHEBI:63607
+  label: linezolid
+  path: data/antibiotics/antibacterial/linezolid.yaml
+  scope: molecular_targets
+  target_label: 50S ribosomal peptidyl-transferase-center A-site pocket
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:18757750
+  reason: Ribosomal subunit / rRNA binding-pocket target (50S ribosomal peptidyl-transferase-center
+    A-site pocket; PMID:18757750) where the primary mechanism acts on rRNA or whole-subunit conformation
+    without a single primary target protein accession in the cited study.
+- identifier: CHEBI:17351
+  label: linoleic acid
+  path: data/antibiotics/antibacterial/linoleic-acid.yaml
+  scope: molecular_targets
+  target_label: bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_reference: PMID:93615
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: bacterial cytoplasmic membrane);
+    protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:16196
+  label: oleic acid
+  path: data/antibiotics/antibacterial/oleic-acid.yaml
+  scope: molecular_targets
+  target_label: group A streptococcal cytoplasmic membrane
+  target_type: MEMBRANE
+  target_reference: PMID:393631
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: group A streptococcal cytoplasmic
+    membrane); protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:82699
+  label: oritavancin
+  path: data/antibiotics/antibacterial/oritavancin.yaml
+  scope: molecular_targets
+  target_label: peptidoglycan D-Ala-D-Ala termini and pentaglycyl bridges
+  target_type: CELL_WALL_COMPONENT
+  target_reference: PMID:18258256
+  reason: 'Non-protein molecular target (target_type=CELL_WALL_COMPONENT: peptidoglycan D-Ala-D-Ala
+    termini and pentaglycyl bridges); protein_examples are restricted to protein-containing target
+    types.'
+- identifier: CHEBI:7934
+  label: paromomycin
+  path: data/antibiotics/antibacterial/paromomycin.yaml
+  scope: molecular_targets
+  target_label: 16S-rRNA decoding A-site oligonucleotide
+  target_type: NUCLEIC_ACID
+  target_reference: PMID:11587639
+  reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: 16S-rRNA decoding A-site oligonucleotide);
+    protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:131850
+  label: PR-39
+  path: data/antibiotics/antibacterial/pr-39.yaml
+  scope: molecular_targets
+  target_label: bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_reference: PMID:24755622
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: bacterial cytoplasmic membrane);
+    protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:131850
+  label: PR-39
+  path: data/antibiotics/antibacterial/pr-39.yaml
+  scope: molecular_targets
+  target_label: SbmA peptide transporter
+  target_type: PROTEIN
+  target_reference: PMID:18519732
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (SbmA peptide transporter;
+    PMID:18519732) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:171658
+  label: promysalin
+  path: data/antibiotics/antibacterial/promysalin.yaml
+  scope: molecular_targets
+  target_label: succinate dehydrogenase
+  target_type: PROTEIN
+  target_reference: PMID:29300464
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (succinate dehydrogenase;
+    PMID:29300464) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:171658
+  label: promysalin
+  path: data/antibiotics/antibacterial/promysalin.yaml
+  scope: molecular_targets
+  target_label: Gram-positive bacterial cell membrane
+  target_type: MEMBRANE
+  target_reference: PMID:28821717
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: Gram-positive bacterial cell membrane);
+    protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:9215
+  label: spectinomycin
+  path: data/antibiotics/antibacterial/spectinomycin.yaml
+  scope: molecular_targets
+  target_label: 30S ribosomal head domain
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:17696316
+  reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal head domain; PMID:17696316)
+    where the primary mechanism acts on rRNA or whole-subunit conformation without a single primary
+    target protein accession in the cited study.
+- identifier: CHEBI:84192
+  label: teixobactin
+  path: data/antibiotics/antibacterial/teixobactin.yaml
+  scope: molecular_targets
+  target_label: conserved pyrophosphate-sugar motif of lipid II and lipid III
+  target_type: CELL_WALL_COMPONENT
+  target_reference: PMID:25561178
+  reason: 'Non-protein molecular target (target_type=CELL_WALL_COMPONENT: conserved pyrophosphate-sugar
+    motif of lipid II and lipid III); protein_examples are restricted to protein-containing target
+    types.'
+- identifier: CHEBI:32209
+  label: tetracenomycin X
+  path: data/antibiotics/antibacterial/tetracenomycin-x.yaml
+  scope: molecular_targets
+  target_label: polypeptide exit tunnel of the bacterial 50S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:32601485
+  reason: Ribosomal subunit / rRNA binding-pocket target (polypeptide exit tunnel of the bacterial
+    50S ribosomal subunit; PMID:32601485) where the primary mechanism acts on rRNA or whole-subunit
+    conformation without a single primary target protein accession in the cited study.
+- identifier: CHEBI:27902
+  label: tetracycline
+  path: data/antibiotics/antibacterial/tetracycline.yaml
+  scope: molecular_targets
+  target_label: 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:11163189
+  reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal subunit; PMID:11163189)
+    where the primary mechanism acts on rRNA or whole-subunit conformation without a single primary
+    target protein accession in the cited study.
+- identifier: CHEBI:29693
+  label: thiostrepton
+  path: data/antibiotics/antibacterial/thiostrepton.yaml
+  scope: molecular_targets
+  target_label: 70S ribosome GTPase-associated center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:21908407
+  reason: Ribosomal subunit / rRNA binding-pocket target (70S ribosome GTPase-associated center;
+    PMID:21908407) where the primary mechanism acts on rRNA or whole-subunit conformation without
+    a single primary target protein accession in the cited study.
+- identifier: CHEBI:2450
+  label: aculeacin A
+  path: data/antibiotics/antifungal/aculeacin-a.yaml
+  scope: molecular_targets
+  target_label: beta-1,3-glucan synthase reaction
+  target_type: BIOLOGICAL_PROCESS
+  target_reference: PMID:324960
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: beta-1,3-glucan synthase
+    reaction); protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:156219
+  label: ascochlorin
+  path: data/antibiotics/antifungal/ascochlorin.yaml
+  scope: molecular_targets
+  target_label: cytochrome bc1 complex Qi and Qo ubiquinone sites
+  target_type: PROTEIN_COMPLEX
+  target_reference: PMID:20025846
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (cytochrome bc1 complex
+    Qi and Qo ubiquinone sites; PMID:20025846) held from single-UniProt accession assignment pending
+    strain/subunit-specific split.
+- identifier: CHEBI:15353
+  label: blasticidin S
+  path: data/antibiotics/antifungal/blasticidin-s.yaml
+  scope: molecular_targets
+  target_label: 70S ribosome P-site tRNA complex
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:23824292
+  reason: Ribosomal subunit / rRNA binding-pocket target (70S ribosome P-site tRNA complex; PMID:23824292)
+    where the primary mechanism acts on rRNA or whole-subunit conformation without a single primary
+    target protein accession in the cited study.
+- identifier: CHEBI:78661
+  label: borrelidin
+  path: data/antibiotics/antifungal/borrelidin.yaml
+  scope: molecular_targets
+  target_label: threonyl-tRNA synthetase
+  target_type: PROTEIN
+  target_reference: PMID:22967236
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (threonyl-tRNA synthetase;
+    PMID:22967236) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:3434
+  label: carpropamid
+  path: data/antibiotics/antifungal/carpropamid.yaml
+  scope: molecular_targets
+  target_label: fungal scytalone dehydratase
+  target_type: PROTEIN
+  target_reference: PMID:9665698
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (fungal scytalone dehydratase;
+    PMID:9665698) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:77693
+  label: CTBT
+  path: data/antibiotics/antifungal/ctbt.yaml
+  scope: molecular_targets
+  target_label: mitochondrial superoxide generation and fungal oxidative-stress response
+  target_type: BIOLOGICAL_PROCESS
+  target_reference: PMID:20202201
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: mitochondrial superoxide
+    generation and fungal oxidative-stress response); protein_examples are restricted to protein-containing
+    target types.'
+- identifier: CHEBI:81419
+  label: kasugamycin
+  path: data/antibiotics/antifungal/kasugamycin.yaml
+  scope: molecular_targets
+  target_label: 30S ribosomal subunit mRNA channel
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:16998486
+  reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal subunit mRNA channel;
+    PMID:16998486) where the primary mechanism acts on rRNA or whole-subunit conformation without
+    a single primary target protein accession in the cited study.
+- identifier: CHEBI:7488
+  label: natamycin
+  path: data/antibiotics/antifungal/natamycin.yaml
+  scope: molecular_targets
+  target_label: ergosterol in the fungal plasma membrane
+  target_type: MEMBRANE
+  target_reference: PMID:18165687
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: ergosterol in the fungal plasma
+    membrane); protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:45081
+  label: pentamidine
+  path: data/antibiotics/antifungal/pentamidine.yaml
+  scope: molecular_targets
+  target_label: mitochondrial translation
+  target_type: BIOLOGICAL_PROCESS
+  target_reference: PMID:10917591
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: mitochondrial translation);
+    protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:77942
+  label: tavaborole
+  path: data/antibiotics/antifungal/tavaborole.yaml
+  scope: molecular_targets
+  target_label: cytoplasmic leucyl-tRNA synthetase-tRNA(Leu) editing complex
+  target_type: PROTEIN_COMPLEX
+  target_reference: PMID:17588934
+  reason: Held because tests/test_tavaborole_references.py pins the live tavaborole.yaml SHA-256
+    and curation_history length directly against ROOT, and the record note explicitly leaves the
+    exact cytoplasmic vs mitochondrial LeuRS accession unresolved from abstract-only curation.
+- identifier: CHEBI:40009
+  label: D-cycloserine
+  path: data/antibiotics/antimycobacterial/d-cycloserine.yaml
+  scope: molecular_targets
+  target_label: alanine racemase
+  target_type: PROTEIN
+  target_reference: PMID:4555420
+  reason: 'Held in alignment with curation/pathway_links.yaml: PMID:4973690 assayed E. coli strain
+    W (ATCC 9637) D-alanine--D-alanine ligase, whereas DdlA/DdlB isozyme resolution in E. coli
+    K-12 is not established by the 1968 study.'
+- identifier: CHEBI:65485
+  label: dihydrobetulinic acid
+  path: data/antibiotics/antiprotozoal/dihydrobetulinic-acid.yaml
+  scope: molecular_targets
+  target_label: DNA topoisomerases I and II
+  target_type: PROTEIN
+  target_reference: PMID:12765337
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (DNA topoisomerases I and
+    II; PMID:12765337) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:4781
+  label: emetine
+  path: data/antibiotics/antiprotozoal/emetine.yaml
+  scope: molecular_targets
+  target_label: eukaryotic 80S ribosome small-subunit E site
+  target_type: PROTEIN_COMPLEX
+  target_reference: PMID:24913268
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (eukaryotic 80S ribosome
+    small-subunit E site; PMID:24913268) held from single-UniProt accession assignment pending
+    strain/subunit-specific split.
+- identifier: CHEBI:65484
+  label: bevirimat
+  path: data/antibiotics/antiviral/bevirimat.yaml
+  scope: molecular_targets
+  target_label: HIV-1 Gag CA-SP1 cleavage-site region in immature particles
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:22151792
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (HIV-1 Gag CA-SP1 cleavage-site
+    region in immature particles; PMID:22151792) held from single-UniProt accession assignment
+    pending strain/subunit-specific split.
+- identifier: CHEBI:172943
+  label: bictegravir
+  path: data/antibiotics/antiviral/bictegravir.yaml
+  scope: molecular_targets
+  target_label: HIV-1 integrase strand-transfer activity
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:27645238
+  reason: Held because tests/test_antiviral_taxa.py asserts field-by-field identity on the live
+    bictegravir.yaml record for all fields outside resistance_mechanisms and curation_history.
+- identifier: CHEBI:135632
+  label: camostat
+  path: data/antibiotics/antiviral/camostat.yaml
+  scope: molecular_targets
+  target_label: host-serine-protease-dependent influenza hemagglutinin activation
+  target_type: BIOLOGICAL_PROCESS
+  target_reference: PMID:26166259
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: host-serine-protease-dependent
+    influenza hemagglutinin activation); protein_examples are restricted to protein-containing
+    target types.'
+- identifier: CHEBI:145999
+  label: cinanserin
+  path: data/antibiotics/antiviral/cinanserin.yaml
+  scope: molecular_targets
+  target_label: coronavirus 3C-like protease (3CLpro)
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:15890949
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (coronavirus 3C-like protease
+    (3CLpro); PMID:15890949) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:82977
+  label: daclatasvir
+  path: data/antibiotics/antiviral/daclatasvir.yaml
+  scope: molecular_targets
+  target_label: hepatitis C virus nonstructural protein 5A (NS5A)
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:23089758
+  reason: Held because tests/test_curated_resistance_grounding.py pins the live daclatasvir.yaml
+    SHA-256 and unchanged_fields_sha256 directly on ROOT.
+- identifier: CHEBI:85182
+  label: dasabuvir
+  path: data/antibiotics/antiviral/dasabuvir.yaml
+  scope: molecular_targets
+  target_label: hepatitis C virus NS5B RNA-dependent RNA polymerase palm-I site
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:25534735
+  reason: Held because tests/test_curated_resistance_grounding.py pins the live dasabuvir.yaml
+    SHA-256 and unchanged_fields_sha256 directly on ROOT.
+- identifier: CHEBI:76010
+  label: dolutegravir
+  path: data/antibiotics/antiviral/dolutegravir.yaml
+  scope: molecular_targets
+  target_label: HIV-1 integrase strand-transfer activity
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:22205735
+  reason: 'Held in alignment with tests/test_antiviral_taxa.py: PMID:21968597 assayed recombinant
+    HIV-1 NL4-3 vectors rather than HXB2, so HXB2 reference protein grounding is not asserted
+    without full-text construct verification.'
+- identifier: CHEBI:132967
+  label: elbasvir
+  path: data/antibiotics/antiviral/elbasvir.yaml
+  scope: molecular_targets
+  target_label: hepatitis C virus nonstructural protein 5A (NS5A)
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:24127258
+  reason: Held because tests/test_curated_resistance_grounding.py pins the live elbasvir.yaml
+    SHA-256 and unchanged_fields_sha256 directly on ROOT.
+- identifier: CHEBI:134722
+  label: favipiravir
+  path: data/antibiotics/antiviral/favipiravir.yaml
+  scope: molecular_targets
+  target_label: influenza virus RNA-dependent RNA polymerase (via T-705RTP)
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:23917318
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (influenza virus RNA-dependent
+    RNA polymerase (via T-705RTP); PMID:23917318) held from single-UniProt accession assignment
+    pending strain/subunit-specific split.
+- identifier: CHEBI:85188
+  label: paritaprevir
+  path: data/antibiotics/antiviral/paritaprevir.yaml
+  scope: molecular_targets
+  target_label: hepatitis C virus NS3/4A serine protease
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:25451053
+  reason: Held because tests/test_curated_resistance_grounding.py pins the live paritaprevir.yaml
+    SHA-256 and unchanged_fields_sha256 directly on ROOT.
+- identifier: CHEBI:134184
+  label: pateamine
+  path: data/antibiotics/antiviral/pateamine.yaml
+  scope: molecular_targets
+  target_label: eukaryotic translation initiation factor 4A (eIF4A) family
+  target_type: PROTEIN
+  target_reference: PMID:16337595
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (eukaryotic translation
+    initiation factor 4A (eIF4A) family; PMID:16337595) held from single-UniProt accession assignment
+    pending strain/subunit-specific split.
+- identifier: CHEBI:127780
+  label: phosphonoformic acid
+  path: data/antibiotics/antiviral/phosphonoformic-acid.yaml
+  scope: molecular_targets
+  target_label: viral family-B DNA polymerase active site
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:21566148
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (viral family-B DNA polymerase
+    active site; PMID:21566148) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:82960
+  label: raltegravir
+  path: data/antibiotics/antiviral/raltegravir.yaml
+  scope: molecular_targets
+  target_label: retroviral integrase-DNA intasome active site
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:21030679
+  reason: Held because PMID:20118912 crystallized prototype foamy virus (PFV) intasome as a structural
+    model rather than HIV-1 integrase directly.
+- identifier: CHEBI:45490
+  label: ribavirin 5'-monophosphate
+  path: data/antibiotics/antiviral/ribavirin-5-monophosphate.yaml
+  scope: molecular_targets
+  target_label: inosine monophosphate dehydrogenase (IMPDH)
+  target_type: PROTEIN
+  target_reference: PMID:12235158
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (inosine monophosphate dehydrogenase
+    (IMPDH); PMID:12235158) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:45578
+  label: ribavirin 5'-triphosphate
+  path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
+  scope: molecular_targets
+  target_label: dengue virus NS5 mRNA 2'-O-methyltransferase domain
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:15152003
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (dengue virus NS5 mRNA 2'-O-methyltransferase
+    domain; PMID:15152003) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:45578
+  label: ribavirin 5'-triphosphate
+  path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
+  scope: molecular_targets
+  target_label: hepatitis C virus NTPase/helicase
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:11833782
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (hepatitis C virus NTPase/helicase;
+    PMID:11833782) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:45578
+  label: ribavirin 5'-triphosphate
+  path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
+  scope: molecular_targets
+  target_label: hepatitis C virus RNA-dependent RNA polymerase
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:12606760
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (hepatitis C virus RNA-dependent
+    RNA polymerase; PMID:12606760) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:147346
+  label: SG85
+  path: data/antibiotics/antiviral/sg85.yaml
+  scope: molecular_targets
+  target_label: picornavirus 3C protease
+  target_type: VIRAL_PROTEIN
+  target_reference: PMID:23388726
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (picornavirus 3C protease;
+    PMID:23388726) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:82809
+  label: agrocin 84
+  path: data/antibiotics/unspecified/agrocin-84.yaml
+  scope: molecular_targets
+  target_label: leucyl-tRNA synthetase–tRNA(Leu) complex
+  target_type: PROTEIN_COMPLEX
+  target_reference: PMID:23361008
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (leucyl-tRNA synthetase–tRNA(Leu)
+    complex; PMID:23361008) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:134107
+  label: CHIR-090
+  path: data/antibiotics/unspecified/chir-090.yaml
+  scope: molecular_targets
+  target_label: UDP-3-O-acyl-N-acetylglucosamine deacetylase (LpxC)
+  target_type: PROTEIN
+  target_reference: PMID:21171638
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (UDP-3-O-acyl-N-acetylglucosamine
+    deacetylase (LpxC); PMID:21171638) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:141991
+  label: cinnamycin
+  path: data/antibiotics/unspecified/cinnamycin.yaml
+  scope: molecular_targets
+  target_label: phosphatidylethanolamine-containing membrane
+  target_type: MEMBRANE
+  target_reference: PMID:11827543
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: phosphatidylethanolamine-containing
+    membrane); protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:77772
+  label: ilicicolin H
+  path: data/antibiotics/unspecified/ilicicolin-h.yaml
+  scope: molecular_targets
+  target_label: cytochrome bc1 complex Qn site
+  target_type: PROTEIN_COMPLEX
+  target_reference: PMID:14670947
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (cytochrome bc1 complex
+    Qn site; PMID:14670947) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
+- identifier: CHEBI:44504
+  label: nogalamycin
+  path: data/antibiotics/unspecified/nogalamycin.yaml
+  scope: molecular_targets
+  target_label: double-stranded DNA
+  target_type: NUCLEIC_ACID
+  target_reference: PMID:1991116
+  reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: double-stranded DNA); protein_examples
+    are restricted to protein-containing target types.'
+- identifier: CHEBI:27834
+  label: pentostatin
+  path: data/antibiotics/unspecified/pentostatin.yaml
+  scope: molecular_targets
+  target_label: adenosine deaminase
+  target_type: PROTEIN
+  target_reference: PMID:18602399
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (adenosine deaminase; PMID:18602399)
+    held from single-UniProt accession assignment pending strain/subunit-specific split.
+- identifier: CHEBI:45773
+  label: streptolydigin
+  path: data/antibiotics/unspecified/streptolydigin.yaml
+  scope: molecular_targets
+  target_label: bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site
+  target_type: PROTEIN_COMPLEX
+  target_reference: PMID:16122422
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (bacterial DNA-directed
+    RNA polymerase bridge-helix/trigger-loop site; PMID:16122422) held from single-UniProt accession
+    assignment pending strain/subunit-specific split.
+- identifier: CHEBI:9321
+  label: sulbactam
+  path: data/antibiotics/unspecified/sulbactam.yaml
+  scope: molecular_targets
+  target_label: engineered S70C SHV-1 beta-lactamase
+  target_type: PROTEIN
+  target_reference: PMID:22974281
+  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (engineered S70C SHV-1 beta-lactamase;
+    PMID:22974281) held from single-UniProt accession assignment pending strain/subunit-specific
+    split.
