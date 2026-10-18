@@ -30,9 +30,11 @@ def context():
 
 
 @pytest.mark.parametrize("identifier", ["CHEBI:28368", "CHEBI:3907"])
-def test_one_claim_per_record_preserves_existing_slices(curation, identifier, tmp_path):
+def test_one_claim_per_record_preserves_existing_slices(
+    curation, identifier, tmp_path, pre_uniprot_protein_examples_root
+):
     row, = [r for r in curation["records"] if r["identifier"] == identifier]
-    path = ROOT / row["record"]["path"]
+    path = pre_uniprot_protein_examples_root / row["record"]["path"]
     record = load_record(path)
     assert record["identifier"] == identifier
     assert record["chemical_structure"]["standard_inchi_key"] == row["standard_inchi_key"]
