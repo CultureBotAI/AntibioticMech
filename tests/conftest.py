@@ -250,23 +250,90 @@ def restore_pre_salmonella_qualification():
 
 
 @pytest.fixture(scope="session")
-def pre_salmonella_qualification_root(tmp_path_factory):
+def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_examples_root):
     """Restore only the 17 exact note/history deltas and the prior review bytes."""
-    transition = _salmonella_transition(REPO_ROOT)
+    source = pre_uniprot_protein_examples_root
+    transition = _salmonella_transition(source)
     review = transition["review_file"]
-    assert hashlib.sha256((REPO_ROOT / review["path"]).read_bytes()).hexdigest() == review["after_sha256"]
+    assert hashlib.sha256((source / review["path"]).read_bytes()).hexdigest() == review["after_sha256"]
     archive = transition["historical_review_fixture"]
-    payload = (REPO_ROOT / archive["path"]).read_bytes()
+    payload = (source / archive["path"]).read_bytes()
     assert hashlib.sha256(payload).hexdigest() == archive["sha256"] == review["before_sha256"]
     root = tmp_path_factory.mktemp("pre-salmonella-qualification")
+    shutil.copytree(source / "data/antibiotics", root / "data/antibiotics")
+    for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
+        (root / relative).symlink_to(source / relative, target_is_directory=True)
+    (root / "curation").mkdir()
+    for path in (source / "curation").iterdir():
+        if path.name != "card_evidence_reviews.json":
+            (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
+    (root / review["path"]).write_bytes(payload)
+    for delta in transition["record_deltas"]:
+        _restore_pre_salmonella(source, delta["path"], root / delta["path"])
+    return root
+
+
+def _uniprot_protein_examples_transition(root):
+    payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
+    assert hashlib.sha256(payload).hexdigest() == (
+        "7829b35a58de3b6480fb33814f42d48341d970d2db78dca56979b1f8b23aaf9c"
+    )
+    transition = json.loads(payload)
+    assert len(transition["record_deltas"]) == 30
+    return transition
+
+
+def _restore_pre_uniprot_protein_examples(root, relative_path, output):
+    import copy
+
+    from antibioticmech.validation.write_validated import write_validated_antibiotic
+
+    transition = _uniprot_protein_examples_transition(root)
+    delta = next(row for row in transition["record_deltas"] if row["path"] == relative_path)
+    source = root / relative_path
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == delta["after_sha256"]
+    historical = load_record(source)
+    assert historical["identifier"] == delta["identifier"]
+    assert delta["history_events_added"] == 1
+    assert historical["curation_history"].pop() == delta["added_history_event"]
+    for change in delta["causal_node_deltas"]:
+        assert change["changed_fields"] == ["protein_examples"]
+        graph = historical["causal_graphs"][change["graph_index"]]
+        assert graph["graph_id"] == change["graph_id"]
+        node = graph["nodes"][change["node_index"]]
+        assert node["node_id"] == change["node_id"]
+        assert node.pop("protein_examples") == change["after_protein_examples"]
+        if change["before_protein_examples"] is not None:
+            node["protein_examples"] = copy.deepcopy(change["before_protein_examples"])
+    for change in delta["molecular_target_deltas"]:
+        assert change["changed_fields"] == ["protein_examples"]
+        target = historical["molecular_targets"][change["index"]]
+        assert target["source"] == change["source"] == "PRIMARY_LITERATURE"
+        assert target["target_label"] == change["target_label"]
+        assert target.pop("protein_examples") == change["after_protein_examples"]
+        if change["before_protein_examples"] is not None:
+            target["protein_examples"] = copy.deepcopy(change["before_protein_examples"])
+    write_validated_antibiotic(historical, output)
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == delta["before_sha256"]
+    return output
+
+
+@pytest.fixture
+def restore_pre_uniprot_protein_examples():
+    return _restore_pre_uniprot_protein_examples
+
+
+@pytest.fixture(scope="session")
+def pre_uniprot_protein_examples_root(tmp_path_factory):
+    """Restore only the 30 curated UniProt protein-example record deltas in isolation."""
+    transition = _uniprot_protein_examples_transition(REPO_ROOT)
+    root = tmp_path_factory.mktemp("pre-uniprot-protein-examples")
     shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
         (root / relative).symlink_to(REPO_ROOT / relative, target_is_directory=True)
     (root / "curation").mkdir()
     for path in (REPO_ROOT / "curation").iterdir():
-        if path.name != "card_evidence_reviews.json":
-            (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
-    (root / review["path"]).write_bytes(payload)
+        (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
     for delta in transition["record_deltas"]:
-        _restore_pre_salmonella(REPO_ROOT, delta["path"], root / delta["path"])
+        _restore_pre_uniprot_protein_examples(REPO_ROOT, delta["path"], root / delta["path"])
     return root

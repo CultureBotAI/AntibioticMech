@@ -53,6 +53,17 @@ molecular_targets:
   evidence:
   - reference: PMID:15015729
     notes: Primary isolation, structure-elucidation, and HIV-1 integrase assay study.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04585
+    protein_label: Gag-Pol polyprotein
+    gene_symbol: gag-pol
+    taxon_id: NCBITaxon:11706
+    taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose strand-transfer
+      activity is inhibited by exophillic acid in vitro (PMID:15015729; HXB2 reference
+      isolate context).
 - target_label: sodium taurocholate cotransporting polypeptide (NTCP)
   target_type: PROTEIN
   target_relation: MEASURED_TARGET_ASSOCIATION
@@ -66,6 +77,17 @@ molecular_targets:
   evidence:
   - reference: PMID:35458494
     notes: Primary HBV/HDV entry and host-receptor mechanism study (DOI:10.3390/v14040764).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q14973
+    protein_label: Sodium/bile acid cotransporter
+    gene_symbol: SLC10A1
+    taxon_id: NCBITaxon:9606
+    taxon_label: Homo sapiens
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor
+      bound by exophillic acid to block HBV and HDV preS1-mediated viral attachment
+      (PMID:35458494).
 xrefs:
 - cas:676565-22-3
 - knapsack:C00015027
@@ -101,4 +123,11 @@ curation_history:
   changes: Verified exact ChEBI identity, structure, and antiviral class; added the
     distinct HIV-integrase and host-NTCP entry mechanisms, used MULTIPLE for their
     coexistence, and deliberately omitted a misleading single scope.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) and human host SLC10A1/NTCP
+    (Q14973) UniProtKB protein examples on the two PRIMARY_LITERATURE molecular targets
+    of exophillic acid.
   llm_assisted: true

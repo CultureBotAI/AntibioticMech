@@ -154,7 +154,20 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 <h3>30S ribosomal decoding center <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
 <p class="meta">Streptomycin-bound T. thermophilus 30S structures with mRNA and cognate or near-cognate anticodon-stem loops directly showed local 16S-rRNA distortion and altered substrate recognition. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2013 (retrieved 2026-09-02).</p>
-<p><em>Thermus thermophilus</em> <code class="curie">NCBITaxon:274</code></p><ul class="plain evidence">
+<p><em>Thermus thermophilus</em> <code class="curie">NCBITaxon:274</code></p><div class="table-scroll" role="region" aria-label="30S ribosomal decoding center organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Small ribosomal subunit protein uS12 <code class="curie">UniProtKB:Q5SHN3</code></td>
+    <td>rpsL</td>
+    <td><em>Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)</em></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23322043">PMID:23322043</a></span> <span class="meta">(Primary streptomycin-bound 30S decoding and misreading study (DOI:10.1038/ncomms2346).)</span></li>
 </ul>
 
@@ -167,7 +180,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">80 observations &middot; <a href="streptomycin/activity-1.html">Browse all observations</a> &middot; <a href="streptomycin/record-1dd2bc5e04231aa3e452ad0a07edd8035e46f3b1551de688d0cf979e7d3e7dfb.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">80 observations &middot; <a href="streptomycin/activity-1.html">Browse all observations</a> &middot; <a href="streptomycin/record-10d0fc6d4bdb57004955587a7b76c70024a720f1fc01e91ed0b179c13c075be4.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -2077,7 +2090,7 @@ or death.</p>
   </tr>
   <tr>
     <td><code class="curie">ribosomal_protein_s12</code></td>
-    <td>ribosomal protein S12</td>
+    <td>ribosomal protein S12<br><span class="meta">Examples: Small ribosomal subunit protein uS12 (rpsL) <code class="curie">UniProtKB:Q5SHN3</code>, <em>Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)</em> <code class="curie">NCBITaxon:300852</code> <span class="pill">REVIEWED</span> — 30S ribosomal protein uS12 (S12) directly contacted by streptomycin at the decoding center in Thermus thermophilus 30S crystal structures (PMID:10984042, PDB 1FJG; PMID:23322043, PDB 4DR3; HB8 reference strain context).; Small ribosomal subunit protein uS12 (rpsL) <code class="curie">UniProtKB:P0A7S3</code>, <em>Escherichia coli (strain K12)</em> <code class="curie">NCBITaxon:83333</code> <span class="pill">REVIEWED</span> — 30S ribosomal protein uS12 (S12) whose rpsL mutations govern streptomycin binding and translational misreading in E. coli (PMID:353564; K-12 reference strain context).</span></td>
     <td class="meta">GENE_OR_PROTEIN</td>
     <td> <a href="http://purl.obolibrary.org/obo/ARO_3003431"><code class="curie">ARO:3003431</code></a></td>
   </tr>
@@ -2225,6 +2238,11 @@ or death.</p>
     <span class="meta">2026-10-05 · seed_from_sources</span>
     <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
+    <p>Added curated T. thermophilus HB8 (Q5SHN3) and E. coli K-12 (P0A7S3) ribosomal protein uS12 (rpsL) UniProtKB protein examples on the streptomycin_30s_decoding_site_misreading causal graph node and the PRIMARY_LITERATURE 30S ribosomal decoding center molecular target.</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -2245,7 +2263,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>ae782f33ce28</code>, 2939 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1cd2b29a0ec5</code>, 2939 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

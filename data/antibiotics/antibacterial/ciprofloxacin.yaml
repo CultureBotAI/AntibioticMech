@@ -2444,6 +2444,26 @@ causal_graphs:
     gene_symbols:
     - gyrA
     - gyrB
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Catalytic DNA cleavage-religation subunit A of the heterotetrameric A2B2
+        DNA gyrase complex stabilized as a ternary cleavage complex by ciprofloxacin
+        in E. coli (PMID:9159526); K-12 reference proteome context.
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: ATPase subunit B of the heterotetrameric A2B2 DNA gyrase complex targeted
+        by ciprofloxacin in E. coli (PMID:9159526); K-12 reference proteome context.
   - node_id: topoisomerase_iv
     label: bacterial topoisomerase IV
     node_type: GENE_OR_PROTEIN
@@ -2453,6 +2473,27 @@ causal_graphs:
     gene_symbols:
     - parC
     - parE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AFI2
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Catalytic DNA breakage-reunion subunit ParC of the heterotetrameric ParC2ParE2
+        topoisomerase IV secondary fluoroquinolone target in E. coli (PMID:9159526);
+        K-12 reference proteome context.
+    - uniprot_id: UniProtKB:P20083
+      protein_label: DNA topoisomerase 4 subunit B
+      gene_symbol: parE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: ATPase subunit ParE of the heterotetrameric ParC2ParE2 topoisomerase IV
+        secondary fluoroquinolone target in E. coli (PMID:9159526); K-12 reference
+        proteome context.
   - node_id: gyrase_dna_cleavage_complex
     label: DNA gyrase covalent DNA cleavage complex
     node_type: STATE
@@ -3516,3 +3557,10 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated E. coli K-12 reference-strain UniProtKB protein examples
+    for DNA gyrase (GyrA P0AES4, GyrB P0AES6) and topoisomerase IV (ParC P0AFI2, ParE
+    P20083) on the ciprofloxacin_topoisomerase_poisoning causal graph nodes.
+  llm_assisted: true

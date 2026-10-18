@@ -54,6 +54,17 @@ molecular_targets:
   evidence:
   - reference: PMID:20438081
     notes: Primary compound-enzyme crystal-structure study.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04585
+    protein_label: Gag-Pol polyprotein
+    gene_symbol: gag-pol
+    taxon_id: NCBITaxon:11706
+    taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+      crystallized in complex with rilpivirine (TMC278) in wild-type and K103N mutant
+      forms (PMID:20438081, PDB 2ZD1 / 3MEE; HXB2 reference isolate context).
 xrefs:
 - cas:500287-72-9
 - hmdb:HMDB0061725
@@ -680,3 +691,9 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: genotype_resistance_score_rules (HIVDB_HIVFACTS be1c11a5145fea9073fdb71801919d4a34265336).
     Upstream retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
+    example on the PRIMARY_LITERATURE HIV-1 reverse transcriptase molecular target.
+  llm_assisted: true

@@ -377,7 +377,12 @@ that an unread natural product is.
   restore the link, move it to `parent_compounds`, or agree it was wrong.
 - **A protein target should be taxon-agnostic.** Prefer a family, complex or
   function term (GO, InterPro, ComplexPortal); a UniProt accession is an example
-  of the target in one organism, and belongs in `protein_examples`.
+  of the target in one organism, and belongs in `protein_examples` on
+  `MolecularTarget` (`source: PRIMARY_LITERATURE`) or `CausalNode`
+  (`node_type: GENE_OR_PROTEIN`). Reviewed UniProtKB protein examples and
+  explicitly held non-protein or multi-paralog targets are maintained in
+  `curation/uniprot_protein_examples.yaml` and applied through
+  `scripts/curate_uniprot_protein_examples.py`.
 - **A producer organism claim needs a citation or a MIBiG BGC accession.** "This
   compound is made by *Streptomyces*" is a biological claim like any other.
 - **Do not read a mode of action off a drug class.** Most macrolides inhibit

@@ -949,6 +949,26 @@ causal_graphs:
     grounding: ARO:3000745
     gene_symbols:
     - folA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A017
+      protein_label: Dihydrofolate reductase
+      gene_symbol: folA
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Chromosomal trimethoprim-sensitive dihydrofolate reductase (dfrB/folA)
+        directly inhibited by trimethoprim in S. aureus (PMID:14623005).
+    - uniprot_id: UniProtKB:P0ABQ4
+      protein_label: Dihydrofolate reductase
+      gene_symbol: folA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Bacterial dihydrofolate reductase forming cooperative ternary complexes
+        with NADPH and trimethoprim in E. coli (PMID:1985419; K-12 reference strain
+        context).
   - node_id: dhfr_activity
     label: dihydrofolate reductase activity
     node_type: MOLECULAR_FUNCTION
@@ -1295,6 +1315,13 @@ curation_history:
   changes: Added reviewed PathwayMech relationships and any supported protein example
     from curation/pathway_links.yaml; organism and evidence limits are recorded in
     each basis.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated S. aureus (P0A017) and E. coli K-12 (P0ABQ4) dihydrofolate
+    reductase (folA) UniProtKB protein examples on the trimethoprim_folate_pathway_inhibition
+    bacterial_dhfr causal graph node.
   llm_assisted: true
 related_records:
 - corpus: PathwayMech

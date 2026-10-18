@@ -96,7 +96,7 @@ records the sha256 of every upstream file and every emitted inventory.
 
 ## Skills
 
-`.claude/skills/` carries seven repository-specific workflows:
+`.claude/skills/` carries eight repository-specific workflows:
 
 - **`add-antibiotic`** — prove a named compound or publication lead is one new
   structure, then add the reproducible source path that emits its first
@@ -105,6 +105,11 @@ records the sha256 of every upstream file and every emitted inventory.
   one existing antibiotic record, keeping every directed causal edge attached to
   its own primary-paper support and writing only through the validated
   curation-event path.
+- **`add-uniprot-protein-examples`** — audit and curate reviewed `UniProtKB`
+  `ProteinExample` entries on `GENE_OR_PROTEIN` causal graph nodes and
+  `PRIMARY_LITERATURE` molecular targets via `curation/uniprot_protein_examples.yaml`
+  and `scripts/curate_uniprot_protein_examples.py`, keeping primary target and
+  node groundings taxon-agnostic.
 - **`research-resistant-taxa`** — find and curate MIC-grounded resistant
   organism or strain observations for one existing antibiotic record, preserving
   source taxon, isolate and genome context without inventing an unknown
@@ -125,9 +130,10 @@ records the sha256 of every upstream file and every emitted inventory.
 
 The issue and source-queue workflows do not close issues, adopt sources, or edit
 the corpus. The add-antibiotic workflow adds records only through a reproducible
-source path. The record, causal-graph and resistant-taxa workflows edit existing
-records only when the user asks to curate or improve them. None of the skills
-sends messages or mutates GitHub without explicit authorization.
+source path. The record, causal-graph, uniprot-protein-examples and
+resistant-taxa workflows edit existing records only when the user asks to curate
+or improve them. None of the skills sends messages or mutates GitHub without
+explicit authorization.
 
 ## Adopting a data source
 

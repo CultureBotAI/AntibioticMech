@@ -1702,6 +1702,14 @@ classes:
         description: Gene symbols encoding this protein or the components of this complex.
         multivalued: true
         range: string
+      protein_examples:
+        description: >-
+          Organism-specific UniProt entries illustrating a GENE_OR_PROTEIN node
+          (or component subunits of a complex node), each with the organism in
+          which its role was established.
+        multivalued: true
+        inlined_as_list: true
+        range: ProteinExample
 
   CausalEdge:
     description: An evidence-backed directed relationship in a mechanism graph.

@@ -318,7 +318,7 @@ or death.</p>
   {% for n in cg.nodes %}
   <tr>
     <td><code class="curie">{{ n.node_id }}</code></td>
-    <td>{{ n.label }}</td>
+    <td>{{ n.label }}{% if n.protein_examples %}<br><span class="meta">Examples: {% for p in n.protein_examples %}{{ p.protein_label }}{% if p.gene_symbol %} ({{ p.gene_symbol }}){% endif %} <code class="curie">{{ p.uniprot_id }}</code>, <em>{{ p.taxon_label }}</em> <code class="curie">{{ p.taxon_id }}</code> <span class="pill{{ ' plain' if p.entry_status == 'UNREVIEWED' else '' }}">{{ p.entry_status }}</span>{% if p.role %} — {{ p.role }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}</span>{% endif %}</td>
     <td class="meta">{{ n.node_type }}</td>
     <td>{% if n.resolved_grounding and n.resolved_grounding.href %}{{ curie_link(n.resolved_grounding) }}{% elif n.grounding %}{{ reference_link(n.grounding) }}{% elif n.grounding_status %}<span class="pill warn">{{ n.grounding_status }}</span>{% else %}—{% endif %}</td>
   </tr>

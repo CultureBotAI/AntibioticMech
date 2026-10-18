@@ -67,6 +67,25 @@ molecular_targets:
   evidence:
   - reference: PMID:19841155
     notes: Primary compound-specific enzyme, replicon, and selectivity study.
+  protein_examples:
+  - uniprot_id: UniProtKB:P26664
+    protein_label: Genome polyprotein
+    taxon_id: NCBITaxon:63746
+    taxon_label: Hepatitis C virus genotype 1a (isolate H)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference HCV genotype 1a polyprotein encoding the NS3/4A protease inhibited
+      at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1a
+      reference isolate H context).
+  - uniprot_id: UniProtKB:P26662
+    protein_label: Genome polyprotein
+    taxon_id: NCBITaxon:11108
+    taxon_label: Hepatitis C virus genotype 1b (isolate BK)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference HCV genotype 1b polyprotein encoding the NS3/4A protease inhibited
+      at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1b
+      reference isolate BK context).
 xrefs:
 - cas:923590-37-8
 - chemspider:28475381
@@ -124,3 +143,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HCV genotype 1a isolate H (P26664) and genotype 1b isolate
+    BK (P26662) genome polyprotein UniProtKB protein examples on the PRIMARY_LITERATURE
+    hepatitis C virus NS3/4A protease molecular target.
+  llm_assisted: true

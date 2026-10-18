@@ -68,6 +68,17 @@ molecular_targets:
   - reference: PMID:33526596
     notes: Primary cryo-EM structure and polymerase-activity study of the exact triphosphate
       metabolite.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    gene_symbol: rep
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp12 RNA-dependent RNA
+      polymerase catalytic subunit resolved with favipiravir-RTP by cryo-EM (PMID:33526596,
+      PDB 7CTT).
 xrefs:
 - cas:740790-94-7
 - pdb-ccd:GE6
@@ -102,4 +113,11 @@ curation_history:
   changes: Verified the exact triphosphate identity, structure, and antiviral class;
     curator-confirmed viral polymerase inhibition and added the direct SARS-CoV-2
     RdRp catalytic-site target.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein
+    example on the PRIMARY_LITERATURE SARS-CoV-2 RNA-dependent RNA polymerase catalytic
+    site molecular target.
   llm_assisted: true

@@ -66,6 +66,17 @@ molecular_targets:
     notes: Primary nirmatrelvir-Mpro crystal-structure report.
   - reference: PMID:35182772
     notes: Primary enzyme-kinetics comparison of wild-type and six Mpro variants.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0DTD1
+    protein_label: Replicase polyprotein 1ab
+    gene_symbol: rep
+    taxon_id: NCBITaxon:2697049
+    taxon_label: Severe acute respiratory syndrome coronavirus 2
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp5 3C-like main protease
+      (Mpro/3CLpro) crystallized with PF-07321332 (nirmatrelvir) and assayed across
+      lineage variants (PMID:34687004, PDB 7RF7; PMID:35182772).
 xrefs:
 - cas:2628280-40-8
 drug_xrefs:
@@ -110,3 +121,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein
+    example on the PRIMARY_LITERATURE SARS-CoV-2 main protease (Mpro; 3CLpro) molecular
+    target.
+  llm_assisted: true

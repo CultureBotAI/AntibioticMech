@@ -601,6 +601,17 @@ molecular_targets:
   evidence:
   - reference: PMID:23322043
     notes: Primary streptomycin-bound 30S decoding and misreading study (DOI:10.1038/ncomms2346).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q5SHN3
+    protein_label: Small ribosomal subunit protein uS12
+    gene_symbol: rpsL
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Protein component (uS12/RpsL) of the 30S decoding-center binding pocket
+      alongside 16S rRNA helices h18, h27, and h44 in the streptomycin-30S crystal
+      structure (PMID:23322043, PDB 4DR3; HB8 reference strain context).
 activity_spectrum:
 - taxon_label: Mycobacterium tuberculosis complex
   assay: CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960
@@ -1785,6 +1796,27 @@ causal_graphs:
     grounding: ARO:3003431
     gene_symbols:
     - rpsL
+    protein_examples:
+    - uniprot_id: UniProtKB:Q5SHN3
+      protein_label: Small ribosomal subunit protein uS12
+      gene_symbol: rpsL
+      taxon_id: NCBITaxon:300852
+      taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: 30S ribosomal protein uS12 (S12) directly contacted by streptomycin at
+        the decoding center in Thermus thermophilus 30S crystal structures (PMID:10984042,
+        PDB 1FJG; PMID:23322043, PDB 4DR3; HB8 reference strain context).
+    - uniprot_id: UniProtKB:P0A7S3
+      protein_label: Small ribosomal subunit protein uS12
+      gene_symbol: rpsL
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: 30S ribosomal protein uS12 (S12) whose rpsL mutations govern streptomycin
+        binding and translational misreading in E. coli (PMID:353564; K-12 reference
+        strain context).
   - node_id: streptomycin_30s_binding_site
     label: streptomycin binding site in the 30S ribosomal subunit
     node_type: STATE
@@ -1907,3 +1939,11 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
     retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated T. thermophilus HB8 (Q5SHN3) and E. coli K-12 (P0A7S3) ribosomal
+    protein uS12 (rpsL) UniProtKB protein examples on the streptomycin_30s_decoding_site_misreading
+    causal graph node and the PRIMARY_LITERATURE 30S ribosomal decoding center molecular
+    target.
+  llm_assisted: true

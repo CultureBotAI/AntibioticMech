@@ -52,6 +52,17 @@ molecular_targets:
   - reference: PMID:32714305
     notes: Primary susceptibility, mutant-selection, sequencing, expression, and cross-resistance
       study.
+  protein_examples:
+  - uniprot_id: UniProtKB:A0A7G4P320
+    protein_label: Sterol 14-alpha-demethylase
+    gene_symbol: cyp51
+    taxon_id: NCBITaxon:40559
+    taxon_label: Botrytis cinerea
+    entry_status: UNREVIEWED
+    retrieved_on: '2026-10-17'
+    role: Botrytis cinerea ergosterol-biosynthesis CYP51 enzyme assayed for stereoselective
+      binding and inhibition by pyrisoxazole isomers (PMID:32714305; species-level
+      reference sequence context).
 xrefs:
 - cas:847749-37-5
 - pesticides:pyrisoxazole
@@ -146,4 +157,11 @@ curation_history:
   changes: Separated curator-owned study groups; grounded the supported protein/taxon
     crosswalk and preserved unresolved numbering and isolate-name limitations. No
     activity measurements or source-owned assertions changed.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Botrytis cinerea CYP51 sterol 14-alpha-demethylase (A0A7G4P320)
+    UniProtKB protein example on the PRIMARY_LITERATURE fungal CYP51 sterol 14-alpha-demethylase
+    molecular target.
   llm_assisted: true

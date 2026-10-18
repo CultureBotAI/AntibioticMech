@@ -51,6 +51,17 @@ molecular_targets:
     notes: Primary discovery and multi-assay integrase-inhibition study.
   - reference: PMID:10698443
     notes: Primary integric-acid analogue and integrase structure-activity study.
+  protein_examples:
+  - uniprot_id: UniProtKB:P04585
+    protein_label: Gag-Pol polyprotein
+    gene_symbol: gag-pol
+    taxon_id: NCBITaxon:11706
+    taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose 3'-end processing,
+      strand-transfer, and disintegration activities are inhibited by integric acid
+      (PMID:10335400; PMID:10698443; HXB2 reference isolate context).
 xrefs:
 - reaxys:19897595
 source_concepts:
@@ -85,4 +96,11 @@ curation_history:
   changes: Verified exact ChEBI identity, structure, and antiviral class; curator-confirmed
     HIV-1 integrase inhibition and added the measured viral target with two primary
     biochemical studies.
+  llm_assisted: true
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
+    example on the PRIMARY_LITERATURE HIV-1 integrase catalytic activities molecular
+    target.
   llm_assisted: true

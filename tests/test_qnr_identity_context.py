@@ -32,8 +32,8 @@ def frozen():
     return plan, data, projection, dossier
 
 
-def test_complete_public_replay(frozen):
-    assert audit.build(ROOT) == frozen[3]
+def test_complete_public_replay(frozen, pre_uniprot_protein_examples_root):
+    assert audit.build(pre_uniprot_protein_examples_root) == frozen[3]
     assert frozen[3]["summary"] == {
         "corpus_records_hash_checked": 2939,
         "complete_records_loaded": 7,

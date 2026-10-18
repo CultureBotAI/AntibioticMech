@@ -343,6 +343,18 @@ causal_graphs:
       region; a family-level exact term was not asserted.
     xrefs:
     - UniProtKB:P04585
+    protein_examples:
+    - uniprot_id: UniProtKB:P04585
+      protein_label: Gag-Pol polyprotein
+      gene_symbol: gag-pol
+      taxon_id: NCBITaxon:11706
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
+        HXB2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+        bound at the non-nucleoside inhibitor pocket by delavirdine (U-90152) (PMID:1726658;
+        PMID:10602683, PDB 1KLM; HXB2 reference isolate context).
   - node_id: rna_directed_dna_polymerase_activity
     label: RNA-directed DNA polymerase activity
     node_type: MOLECULAR_FUNCTION
@@ -415,3 +427,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-18T00:00:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
+    example on the delavirdine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase
+    causal graph node.
+  llm_assisted: true
