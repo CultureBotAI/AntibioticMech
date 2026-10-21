@@ -1,0 +1,1089 @@
+# Indanomycin: supported natural-product identity with invalid SMILES and inconsistent exact cross-reference
+
+- Review: 20261021T185356Z-indanomycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:21:43Z
+- Finished UTC: 2026-10-21T18:53:56Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The independent InChI, systematic synonym, current PubChem, maintained MIBiG structure and original structural drawing agree on indanomycin. The native SMILES is invalid, and the linked KNApSAcK entry has mutually inconsistent stereochemical encodings. The inherited structural definition also contains malformed nomenclature. Original experiments support antibacterial activity and ion transport; patent evidence for antihypertensive activity and feed-utilization effects has narrower experimental scope than a clinical or animal growth claim.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 551; one entire exact record. All thirteen original input hashes are preserved, with two actual MIBiG inputs appended before assessment, yielding fifteen inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:141380 | data/antibiotics/antibacterial/indanomycin.yaml | generated | indanomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:141380 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:141380 | Actual focused execution exited 0. |
+| Focused chemistry verification | failed | False | CHEBI:141380 | Actual focused execution exited 1. |
+| Structured source grounding before mechanism follow-up | passed | False | CHEBI:141380 | Actual structured catalog/query completed; results remain annotation context rather than drug-specific evidence. |
+| Structured source grounding before mechanism follow-up | passed | False | CHEBI:141380 | Actual structured catalog/query completed; results remain annotation context rather than drug-specific evidence. |
+| Independent source-graph and name comparison | passed | False | CHEBI:141380 | Diagnostic executed successfully and identified the invalid native/current ChEBI SMILES and inconsistent KNApSAcK encodings. Native InChI, scratch pyrrole repair, MIBiG, PubChem and OPSIN-parsed systematic name agree. Successful diagnostic execution does not mean all inputs were valid. |
+| Authoritative full QC | failed | True | CHEBI:141380 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:141380 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:141380 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:141380 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:141380 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:141380 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:141380 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:141380 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:141380 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral exact natural product and stereochemistry
+
+identity: supported. Targets: CHEBI:141380.
+
+The valid native InChI agrees with independently parsed current PubChem, maintained MIBiG and the exact systematic synonym; original structural evidence and a nine-centre drawing map agree. The SMILES serialization and exact KNApSAcK reference require correction, without changing the native full InChI or inferring a mixture.
+
+### Four structural parents, antibacterial class and role
+
+grounding: supported. Targets: CHEBI:141380.
+
+Each parent term was inspected and is compatible with the valid graph. Original exact-compound bacterial experiments support the antibacterial class/role, with their historical diffusion endpoint explicitly retained.
+
+### Ionophore-derived mechanism and host-shared scope
+
+evidence: supported. Targets: CHEBI:141380.
+
+Primary artificial-membrane ion-transport experiments and the mitochondrial abstract support ionophore activity. The source-qualified broad enum does not assert membrane rupture, a named bacterial protein interaction or therapeutic selectivity. No expression annotation or biosynthetic enzyme is substituted for a direct antimicrobial target.
+
+### Chemical prose and secondary biological claims
+
+evidence: unknown. Targets: CHEBI:141380.
+
+The structural prose contains malformed locants/spelling despite an independently valid exact systematic synonym. Antihypertensive effects have rat evidence and feed-utilization claims have ex vivo rumen evidence plus the original authors’ growth-promotant statement. The antitumour clause remains unverified at exact experimental depth; no global absence or inactivity claim follows.
+
+### Species, exact cluster join and inherited citation caveat
+
+evidence: supported. Targets: CHEBI:141380.
+
+The current BGC and maintained row agree, and original fermentation independently demonstrates the named strain’s production. The 2009 abstract explicitly supports deletion-confirmed cluster involvement, while the native correctly preserves the narrower inherited-reference status. Updating that optional evidence placement is not required to correct an existing false assertion.
+
+### Initial hashes, actual source ownership and history
+
+provenance: supported. Targets: CHEBI:141380.
+
+Original thirteen inputs were preserved; MIBiG raw input and extractor were appended before assessment. Source configuration and code account for all populated fields and five history events. No curated evidence or overridden structure is implied by SEEDED status.
+
+### Whole-record coverage and bounded optional enrichment
+
+completeness: unknown. Targets: CHEBI:141380.
+
+All populated fields, exact groundings and adopted citations were assessed. Missing optional MIC/target/clinical/graph/dataset fields are not themselves defects. Original artificial-barrier and historical diffusion measurements require their own methods if later curated; incomplete antitumour and newer-paper access limits prevent an unqualified full scientific sign-off.
+
+## Findings
+
+### F1: Repair the non-parsing pyrrole SMILES
+
+blocker / open / confirmed; issue key: indanomycin-invalid-pyrrole-smiles.
+
+The native SMILES ends with aromatic c1cccn1 and cannot be kekulized. Both adopted and current ChEBI repeat the defect. A scratch-only [nH] repair produces exactly the independently valid native InChI/key and primary-supported identity. Correct the maintained source representation and regenerate; do not invert stereochemistry or replace the record with the inconsistent KNApSAcK InChI.
+
+### F2: Resolve the inconsistent exact KNApSAcK cross-reference
+
+major / open / confirmed; issue key: indanomycin-knapsack-exact-reference-stereo-conflict.
+
+KNApSAcK C00016347 displays an InChI with four opposite indane centres, a SMILES with native tetrahedral configuration but unspecified diene geometry, and a third unreproduced key. The unqualified exact xref therefore does not resolve to a consistent equivalent structure. Preserve the intended database association only with an appropriate qualification or exclude it from exact equivalence pending authority correction.
+
+### F3: Replace malformed structural prose with a verified description
+
+minor / open / confirmed; issue key: indanomycin-malformed-definition-nomenclature.
+
+The inherited definition includes an indene 9-pro-S substitution and hexa-1,3-dineyl wording. These do not form a valid description under the stated indene numbering and diene nomenclature. The separate systematic synonym parses to the correct native graph. Replace the malformed structural description from a verified source/name rather than guessing a new stereochemical graph.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the inherited SMILES reproducibly while preserving the supported identity.
+
+- The regenerated SMILES parses and reproduces BAIPOTOKPGDCHA-MWBHXQFBSA-N, C31H43NO4, nine assigned tetrahedral centres and both E diene geometries.
+- Preserve independent InChI, neutral acid material, synonyms and original source attribution; validate through maintained source normalization or a scoped override rather than direct generated-YAML repair.
+- Run focused schema, strict, standalone chemistry and source-reproduction checks after a future curation change.
+
+### A2
+
+Resolve the exact-reference inconsistency without changing the natural-product hand.
+
+- Either obtain corrected consistent KNApSAcK encodings or prevent C00016347 from asserting unqualified exact structure equivalence.
+- Retain the full observed authority strings and the original-primary drawing comparison; do not select a replacement merely from an external key or matching formula.
+
+### A3
+
+Replace the malformed chemical prose and preserve biological evidence boundaries.
+
+- Use a verified plain structural description or the independently validated systematic name, removing the unsupported 9-pro-S locator and dineyl spelling.
+- If biological wording is revised, distinguish rat antihypertensive results, ex vivo rumen-fermentation effects, historical growth-promotant statements and the unresolved exact antitumour experimental basis. Do not convert a missing accessible assay into a categorical inactivity claim.
+
+### A4
+
+Keep assay and biosynthetic scope explicit in optional scientific enrichment.
+
+- Preserve the agar-diffusion endpoint rather than importing its MIC numbers as broth microdilution; retain organism/strain and material context.
+- Keep artificial chloroform-barrier transport separate from bacterial membrane rupture and named protein targets.
+- If upgrading producer evidence, attach the original 2009 result at its actual read depth; do not infer antimicrobial targets from Idm biosynthetic proteins or gene-expression annotations.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/indanomycin.yaml; Complete native record, including all chemistry, four synonyms, four parents, one activity role, ionophore mapping, exact xref, source concept, producer qualification and five history events. | supports | The SEEDED/EXACT record represents neutral indanomycin, CHEBI:141380, formula C31H43NO4 and key BAIPOTOKPGDCHA-MWBHXQFBSA-N. The source-seeded MEMBRANE_DISRUPTION assignment is explicitly inherited from ionophore role CHEBI:24869, is not a curator mechanistic review and carries HOST_SHARED_TARGET scope. The single producer assertion retains questionable MIBiG quality and explicitly warns that its legacy PMID has not been curated as link-specific evidence. No clinical-status, resistance, molecular-target, MIC, causal-graph or dataset objects are populated. |
+| owners | data/raw/chebi_antimicrobials.tsv:2637; data/raw/mibig_producers.tsv:34; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/extract_mibig_producers.py; scripts/seed_from_sources.py; Complete exact raw rows and relevant extraction, mapping, exact-key producer-join and source qualification branches; hidden/ignored-inclusive owner search. | supports | ChEBI supplies definition, names, formula, structure, parents, role and one KNApSAcK reference. Its seven adopted PMIDs were all individually dispositioned. MIBiG row BGC0000079 version 5 supplies one X-14547 compound, nine-centre stereo-complete structure, exact full key, taxon 1890, knock-out link and questionable quality. The extractor chooses the first legacy reference; the seeder correctly preserves that limitation rather than silently asserting primary link evidence. No target/resistance, FDA, BindingDB, PubChem-fallback or curator override row was found in the ignored-inclusive exact searches. Original thirteen hashes remain intact. |
+| chebi | CHEBI:141380; https://www.ebi.ac.uk/chebi/backend/api/public/compound/141380/; Complete official compound JSON, including names, structure, parents, roles, references and producer origin. | supports | Current ChEBI reproduces the native invalid pyrrole SMILES, independently valid InChI/key, malformed definition and exact KNApSAcK reference. It also associates S. antibioticus taxon 1890, strain NRRL 8167 with PMID 374323. The neutral formula, charge, mass and all four aliases agree with the intended compound; the systematic synonym is independently parsed below. |
+| classes | CHEBI:25384; CHEBI:37910; CHEBI:46942; CHEBI:76224; CHEBI:33282; CHEBI:24869; Official definitions of monocarboxylic acid, indene, oxanes, aromatic ketone, antibacterial agent and ionophore; individual cached JSON files. | supports | The graph contains one carboxylic acid, the partially hydrogenated indene skeleton, an oxane ring and a pyrrolyl aromatic ketone. The primary antibacterial experiments support the antibacterial role. The ionophore definition concerns carrying ions through membranes; the configured broad mechanism mapping does not itself demonstrate membrane lysis or a particular bacterial protein target. |
+| chemistry | Native/current ChEBI; PubChem CID10345604; OPSIN exact native systematic name; maintained MIBiG row; Independent RDKit parsing and full InChI comparison; 551-authority-chemistry.json, 551-compare.py and exact OPSIN/PubChem responses. | supports | The native and current ChEBI SMILES fail kekulization at the pyrrole c1cccn1. Replacing only that diagnostic fragment with c1ccc[nH]1 in scratch produces the native full InChI/key, formula and nine assigned tetrahedral centres with two E alkenes. Independently parsed native/current ChEBI InChI, PubChem SMILES/InChI, MIBiG SMILES and the OPSIN-parsed exact native systematic synonym all agree. Thus no inversion of the native stereochemical identity or automatic replacement from a conflicting authority is justified. Average mass 493.688 and monoisotopic mass 493.31921 are consistent. |
+| knapsack | knapsack:C00016347; http://www.knapsackfamily.com/knapsack_core/information.php?word=C00016347; Entire official exact-reference page and all three displayed structure encodings independently checked. | supports | The name/formula and producer references identify indanomycin, but the displayed InChI reverses four indane stereocentres relative to native and regenerates BAIPOTOKPGDCHA-IVSUKGIASA-N. Its displayed SMILES instead preserves the native nine tetrahedral centres but specifies neither diene geometry and regenerates BAIPOTOKPGDCHA-ZAKCOQKTSA-N. The page displays a third key, BAIPOTOKPGDCHA-IFTNUKTHNA-N, which reproduces neither parsed string. This is a confirmed exact-reference consistency problem, not evidence that the native InChI is the wrong natural product. |
+| structure1979 | PMID:374323; DOI:10.7164/antibiotics.32.100; Complete original eight-page paper read; original salt stereodrawing Figure 6 visually inspected, along with discovery Figure 1. | supports | The authors isolate neutral X-14547A from S. antibioticus NRRL 8167 and establish formula C31H43NO4, negative optical rotation, pyrrole NH, carboxylic acid and conjugated E,E diene. Absolute configuration was determined through an R(+)-bromophenylethylamine salt containing two antibiotic molecules per amine; the bulk acid and the separately prepared calcium salt are distinguished. The unusual crystal stoichiometry does not make the native acid a mixture. The authors disclose relatively high refinement residuals due to a diffractometer problem, but the independent primary drawing and modern matching encodings support the exact identity. Co-isolated pyrrole acid, fatty acids and indole metabolite are not transferred to this record. |
+| primary-map | PMID:374324; original Figure 1 p95; 551-primary-stereo.py and 551-primary-stereo.json; Published numbered drawing visually inspected and all nine tetrahedral configurations checked using graph connectivity and independently transcribed drawing directions. | supports | The primary drawing has the trans-fused indane and nine assigned centres at original carbons 2,3,6,7,12,15,16,19,20. The diagnostic mapping agrees with the native InChI at every centre, including the four centres inverted by the KNApSAcK InChI. Both diene double bonds are E. This diagnostic uses the actual drawing and explicit mapped bonds, not the original paper’s historical systematic name as an automatic machine-readable structure. |
+| activity1979 | PMID:374324; DOI:10.7164/antibiotics.32.95; Complete five-page original discovery paper; Table 4 p98 and Figure 2 p99 visually inspected. | supports | The isolated antibiotic is active against the tested Gram-positive panel. Table 4 gives S. aureus ATCC 6538P 0.2 µg/mL, B. subtilis NRRL 558 0.1 µg/mL and M. phlei ATCC 355 3.1 µg/mL, while the listed Gram-negative bacteria and fungi exceed 100 µg/mL. Crucially, its MIC footnote defines the endpoint as the lowest twofold dilution giving a zone in agar diffusion, not a modern broth microdilution MIC. Figure 2 measures radioactive Ca2+ and Rb+ transport through a chloroform barrier in a U-tube with 2×10^-4M antibiotic, 20 mM Tris pH 9.5 and 1 mM cation. This directly establishes ion carriage in that artificial system, not bacterial membrane rupture or a protein-binding target. |
+| producer | MIBiG BGC0000079.5; https://mibig.secondarymetabolites.org/repository/BGC0000079.5/; Complete current official entry body plus maintained exact row and original fermentation paper. | supports | The current entry is active with questionable quality and unknown completeness, names X-14547 and S. antibioticus, cites PMID 19301315 and records knock-out studies at FJ545274.1. Current producer/species and native qualifier agree. Original1979 fermentation and isolation independently establish production by S. antibioticus NRRL 8167. Biosynthetic genes and predicted transporter/regulatory annotations are not antimicrobial targets. |
+| biosynthetic-leads | PMID:19072095; PMID:19301315; PMID:21491871; PMID:23180592; All four complete indexed original abstracts inspected from 551-core.json; full papers not obtained or claimed read. | supports | PMID 19072095 reports labelled precursor incorporation in the NRRL 8167 producer. PMID 19301315 describes the approximately 80 kb cluster and explicitly reports deletion-mutagenesis confirmation, supporting the producer/cluster relation at abstract depth despite the native legacy-reference caveat. PMID 21491871 identifies a linear tetraene shunt product after idmH disruption, not a direct antimicrobial target or simple pathway intermediate. PMID 23180592 concerns synthetic indanomycin/stawamycin hexahydroindene fragments, not exact-parent biological assays. |
+| insect1997 | PMID:9711253; DOI:10.7164/antibiotics.50.617; Complete four-page original paper read, including isolation, spectra interpretation, feeding methods and results; original Figure 1 viewed. | supports | The authors isolate and identify indanomycin from S. griseofuscus MS/ZD/033 by NMR/MS and report insect weight reduction and mosquito larval mortality. The report also describes bacterial activity at 1 ppm but uses the apparent taxonomic error Streptococcus aureus and gives limited antibacterial methods; it is not converted into a strain-resolved modern MIC. The exact compound identification and alternative producer are supporting context, while insect effects do not explain antibacterial causality. The secondary NH and free acid are explicitly distinguished experimentally. |
+| patent | US4167579A; https://patents.google.com/patent/US4167579A/en; Original patent description, exact compound material, ex vivo rumen protocol/table and DOCA-Na rat experiment/table inspected; not a review article or human clinical trial. | supports | The patent reports increased propionate/(acetate+butyrate) ratios in four-hour rumen-fluid incubations: control mean 0.386, 10 ppm 0.491 and 25 ppm 0.521. These are ex vivo fermentation results, not direct animal body-weight or feed-conversion measurements. The DOCA-Na experiment reports systolic pressure changes in six hypertensive rats receiving 10 mg/kg orally over three days, with serial results and cardiac-rate measurements. This supports an experimental antihypertensive effect, not an approved clinical indication. Formulation/use claims and proposed benefits are not treated as measured outcomes. The accompanying 1979 paper itself calls the antibiotic a growth promotant while citing the patent family. |
+| host-scope | PMID:6427002; DOI:10.1007/BF01982325; PMID:7326036; Complete available indexed abstract for the mitochondrial study; second record has title/metadata only and no indexed abstract. | context_only | The mitochondrial study directly reports cation release with X-14547A and a predominant K+ carrier effect in that particular test system. It supports the host-shared ionophore boundary; it does not establish the exact bacterial mechanism. The chromaffin-granule title is only a follow-up lead, not a read assay or quantitative result. |
+| adapter | 551-adapter.json; iModulonDB catalog and E. coli precise1k ion transport query; Actual structured adapter executed before mechanism web research. | context_only | The catalog query returned 28 datasets; ion transport returned b3040/zupT and b1217/chaB annotations with no component. These are generic annotations, not indanomycin exposures or binding targets. S. antibioticus is outside this returned catalog; that does not refute producer identity or activity. |
+| search | 551-local-hits.txt;551-owner-hits.txt;551-literature.json;551-fetch-results.json through551-fetch4-results.json; Hidden/ignored-inclusive repository/cache searches; exact names/IDs; seven adopted citations and bounded follow-up on ionophore, antihypertensive, antitumour and growth claims. | context_only | All seven adopted references were assessed: three original articles in full and four at complete indexed abstract depth. Later indanomycin derivatives, indanopyrroles, fragments and mixed extracts were not promoted to parent evidence. The bounded antitumour search found repeated authority/introductory statements but no inspected exact-parent antitumour experiment. Official 1985 and 1994 synthesis pages returned 403; indexed introductory statements are not treated as experimental support. This leaves the antitumour assertion unresolved rather than proving inactivity. Early unversioned MIBiG routes returned 404; the correct versioned official entry was subsequently retrieved. |
+
+## Limits And Additional Notes
+
+- The 1979 discovery and structure papers and 1997 insect paper were read in full; original discovery Figures 1/2, Table 4, structure Figure 6 and insect Figure 1 were visually inspected. Raw diffraction/NMR data were not independently re-refined. The original crystal report itself discloses diffractometer problems and relatively high residuals.
+- The four other adopted papers were read at complete indexed abstract depth. Full 2009 deletion protocols, detailed 2011 shunt-product data and 2012 synthetic-fragment spectra were not obtained. This is not treated as proof that their claims are false.
+- The patent inspection covered exact material, rumen fermentation, rat hypertension protocols/results and their surrounding claims. Rumen measurements are ex vivo and do not provide an animal body-weight endpoint; formulations and proposed indications are not clinical trials.
+- The exact-parent antitumour claim remains experimentally unresolved after bounded searches. Official 1985/1994 synthesis pages returned 403; repeated database/introduction statements were not upgraded to a verified antitumour experiment.
+- The native standalone chemistry check actually exited 1 due to invalid SMILES; schema and strict validation both passed. Successful independent diagnostics identify the defect rather than erase that failure.
+- The linked KNApSAcK page is internally inconsistent. Its displayed key is not reproduced by either displayed structure, so no exact natural-product correction is chosen from it. The scratch pyrrole repair and mapped drawing checks are diagnostics, not native edits.
+- Structured adapter coverage is limited to returned catalog/annotation results, with no indanomycin-specific expression experiment established. The absence of the producer species from that catalog has no biological negative meaning.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All public retrieval manifests preserve actual URLs, UTC access times, status and hashes. Original input captures were preserved before assessment. New PubChem/OPSIN responses are independent authority checks, not an assertion that PubChem was an adopted native source.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T185356Z-indanomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Indanomycin: supported natural-product identity with invalid SMILES and inconsistent
+  exact cross-reference'
+started_at: '2026-10-21T18:21:43Z'
+finished_at: '2026-10-21T18:53:56Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The independent InChI, systematic synonym, current PubChem, maintained MIBiG
+  structure and original structural drawing agree on indanomycin. The native SMILES
+  is invalid, and the linked KNApSAcK entry has mutually inconsistent stereochemical
+  encodings. The inherited structural definition also contains malformed nomenclature.
+  Original experiments support antibacterial activity and ion transport; patent evidence
+  for antihypertensive activity and feed-utilization effects has narrower experimental
+  scope than a clinical or animal growth claim.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/indanomycin.yaml
+    sha256: faef30d40f0c20d7e742c7c5078c9035f04db4c58babb1fdbacd0e0eb8b377ad
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/mibig_producers.tsv
+    sha256: d55289619e77e035ed437d432dd692ab382f254c3841c9a314752ef22578a01b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_mibig_producers.py
+    sha256: a078cdf4c9b2d09999800ab7ae03f93d3972f29b7d2f460ebbbe7d7ec6b31c53
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:141380
+  path: data/antibiotics/antibacterial/indanomycin.yaml
+  label: indanomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/mibig_producers.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_mibig_producers.py
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 551; one entire exact record. All thirteen original input
+    hashes are preserved, with two actual MIBiG inputs appended before assessment,
+    yielding fifteen inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:141380
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/indanomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/indanomycin.yaml --out /private/tmp/am-review-session/551-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Actual focused execution exited 1.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 551
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: adapter-catalog
+  name: Structured source grounding before mechanism follow-up
+  status: passed
+  required: false
+  summary: Actual structured catalog/query completed; results remain annotation context
+    rather than drug-specific evidence.
+  target_ids:
+  - CHEBI:141380
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-ion-transport
+  name: Structured source grounding before mechanism follow-up
+  status: passed
+  required: false
+  summary: Actual structured catalog/query completed; results remain annotation context
+    rather than drug-specific evidence.
+  target_ids:
+  - CHEBI:141380
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query ion
+    transport
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent source-graph and name comparison
+  status: passed
+  required: false
+  summary: Diagnostic executed successfully and identified the invalid native/current
+    ChEBI SMILES and inconsistent KNApSAcK encodings. Native InChI, scratch pyrrole
+    repair, MIBiG, PubChem and OPSIN-parsed systematic name agree. Successful diagnostic
+    execution does not mean all inputs were valid.
+  target_ids:
+  - CHEBI:141380
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/551-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:141380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/indanomycin.yaml
+  locator: Complete native record, including all chemistry, four synonyms, four parents,
+    one activity role, ionophore mapping, exact xref, source concept, producer qualification
+    and five history events.
+  accessed_at: '2026-10-21T18:52:38Z'
+  support: supports
+  summary: The SEEDED/EXACT record represents neutral indanomycin, CHEBI:141380, formula
+    C31H43NO4 and key BAIPOTOKPGDCHA-MWBHXQFBSA-N. The source-seeded MEMBRANE_DISRUPTION
+    assignment is explicitly inherited from ionophore role CHEBI:24869, is not a curator
+    mechanistic review and carries HOST_SHARED_TARGET scope. The single producer assertion
+    retains questionable MIBiG quality and explicitly warns that its legacy PMID has
+    not been curated as link-specific evidence. No clinical-status, resistance, molecular-target,
+    MIC, causal-graph or dataset objects are populated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:2637; data/raw/mibig_producers.tsv:34;
+    conf/sources.yaml; scripts/extract_source_inventory.py; scripts/extract_mibig_producers.py;
+    scripts/seed_from_sources.py
+  locator: Complete exact raw rows and relevant extraction, mapping, exact-key producer-join
+    and source qualification branches; hidden/ignored-inclusive owner search.
+  accessed_at: '2026-10-21T18:52:38Z'
+  support: supports
+  summary: ChEBI supplies definition, names, formula, structure, parents, role and
+    one KNApSAcK reference. Its seven adopted PMIDs were all individually dispositioned.
+    MIBiG row BGC0000079 version 5 supplies one X-14547 compound, nine-centre stereo-complete
+    structure, exact full key, taxon 1890, knock-out link and questionable quality.
+    The extractor chooses the first legacy reference; the seeder correctly preserves
+    that limitation rather than silently asserting primary link evidence. No target/resistance,
+    FDA, BindingDB, PubChem-fallback or curator override row was found in the ignored-inclusive
+    exact searches. Original thirteen hashes remain intact.
+  snapshot_sha256: b03f52d2b4d3e64c4568e7fcaa544254b9af19d6aa37dd5ee3469f31551ed1b4
+- evidence_id: chebi
+  kind: authority
+  reference: CHEBI:141380; https://www.ebi.ac.uk/chebi/backend/api/public/compound/141380/
+  locator: Complete official compound JSON, including names, structure, parents, roles,
+    references and producer origin.
+  accessed_at: '2026-10-21T18:42:51Z'
+  support: supports
+  summary: Current ChEBI reproduces the native invalid pyrrole SMILES, independently
+    valid InChI/key, malformed definition and exact KNApSAcK reference. It also associates
+    S. antibioticus taxon 1890, strain NRRL 8167 with PMID 374323. The neutral formula,
+    charge, mass and all four aliases agree with the intended compound; the systematic
+    synonym is independently parsed below.
+  snapshot_sha256: 7026c6e2f1fdd9685ab461c20cda109fa0482ecfa6cc19615193bf1b7d48a6e3
+- evidence_id: classes
+  kind: authority
+  reference: CHEBI:25384; CHEBI:37910; CHEBI:46942; CHEBI:76224; CHEBI:33282; CHEBI:24869
+  locator: Official definitions of monocarboxylic acid, indene, oxanes, aromatic ketone,
+    antibacterial agent and ionophore; individual cached JSON files.
+  accessed_at: '2026-10-21T18:42:53Z'
+  support: supports
+  summary: The graph contains one carboxylic acid, the partially hydrogenated indene
+    skeleton, an oxane ring and a pyrrolyl aromatic ketone. The primary antibacterial
+    experiments support the antibacterial role. The ionophore definition concerns
+    carrying ions through membranes; the configured broad mechanism mapping does not
+    itself demonstrate membrane lysis or a particular bacterial protein target.
+  snapshot_sha256: 035285e457c89197486dc4253a2aec425a811562bbf153c35ac388dbd9aebcf7
+- evidence_id: chemistry
+  kind: authority
+  reference: Native/current ChEBI; PubChem CID10345604; OPSIN exact native systematic
+    name; maintained MIBiG row
+  locator: Independent RDKit parsing and full InChI comparison; 551-authority-chemistry.json,
+    551-compare.py and exact OPSIN/PubChem responses.
+  accessed_at: '2026-10-21T18:52:38Z'
+  support: supports
+  summary: The native and current ChEBI SMILES fail kekulization at the pyrrole c1cccn1.
+    Replacing only that diagnostic fragment with c1ccc[nH]1 in scratch produces the
+    native full InChI/key, formula and nine assigned tetrahedral centres with two
+    E alkenes. Independently parsed native/current ChEBI InChI, PubChem SMILES/InChI,
+    MIBiG SMILES and the OPSIN-parsed exact native systematic synonym all agree. Thus
+    no inversion of the native stereochemical identity or automatic replacement from
+    a conflicting authority is justified. Average mass 493.688 and monoisotopic mass
+    493.31921 are consistent.
+  snapshot_sha256: d2c2576a265a1ac228d0fc2722a1be235d4b17f8a5262f41afba51d5b7d07762
+- evidence_id: knapsack
+  kind: authority
+  reference: knapsack:C00016347; http://www.knapsackfamily.com/knapsack_core/information.php?word=C00016347
+  locator: Entire official exact-reference page and all three displayed structure
+    encodings independently checked.
+  accessed_at: '2026-10-21T18:42:51Z'
+  support: supports
+  summary: The name/formula and producer references identify indanomycin, but the
+    displayed InChI reverses four indane stereocentres relative to native and regenerates
+    BAIPOTOKPGDCHA-IVSUKGIASA-N. Its displayed SMILES instead preserves the native
+    nine tetrahedral centres but specifies neither diene geometry and regenerates
+    BAIPOTOKPGDCHA-ZAKCOQKTSA-N. The page displays a third key, BAIPOTOKPGDCHA-IFTNUKTHNA-N,
+    which reproduces neither parsed string. This is a confirmed exact-reference consistency
+    problem, not evidence that the native InChI is the wrong natural product.
+  snapshot_sha256: 3601795a3815e47adf0a397ffbe6a2affe978f6ced33c7b8f2067087f9df93f7
+- evidence_id: structure1979
+  kind: primary_source
+  reference: PMID:374323; DOI:10.7164/antibiotics.32.100
+  locator: Complete original eight-page paper read; original salt stereodrawing Figure
+    6 visually inspected, along with discovery Figure 1.
+  accessed_at: '2026-10-21T18:43:14Z'
+  support: supports
+  summary: The authors isolate neutral X-14547A from S. antibioticus NRRL 8167 and
+    establish formula C31H43NO4, negative optical rotation, pyrrole NH, carboxylic
+    acid and conjugated E,E diene. Absolute configuration was determined through an
+    R(+)-bromophenylethylamine salt containing two antibiotic molecules per amine;
+    the bulk acid and the separately prepared calcium salt are distinguished. The
+    unusual crystal stoichiometry does not make the native acid a mixture. The authors
+    disclose relatively high refinement residuals due to a diffractometer problem,
+    but the independent primary drawing and modern matching encodings support the
+    exact identity. Co-isolated pyrrole acid, fatty acids and indole metabolite are
+    not transferred to this record.
+  snapshot_sha256: a6b409f7540b7c31d45600fc7a81bb72cbb6a1bb96e51784bd79460d70a9b899
+- evidence_id: primary-map
+  kind: primary_source
+  reference: PMID:374324; original Figure 1 p95; 551-primary-stereo.py and 551-primary-stereo.json
+  locator: Published numbered drawing visually inspected and all nine tetrahedral
+    configurations checked using graph connectivity and independently transcribed
+    drawing directions.
+  accessed_at: '2026-10-21T18:52:38Z'
+  support: supports
+  summary: The primary drawing has the trans-fused indane and nine assigned centres
+    at original carbons 2,3,6,7,12,15,16,19,20. The diagnostic mapping agrees with
+    the native InChI at every centre, including the four centres inverted by the KNApSAcK
+    InChI. Both diene double bonds are E. This diagnostic uses the actual drawing
+    and explicit mapped bonds, not the original paper’s historical systematic name
+    as an automatic machine-readable structure.
+  snapshot_sha256: 441b3faaf5868f28b010f15cabe02533a8644974006dea9ebe4343b80488fb7d
+- evidence_id: activity1979
+  kind: primary_source
+  reference: PMID:374324; DOI:10.7164/antibiotics.32.95
+  locator: Complete five-page original discovery paper; Table 4 p98 and Figure 2 p99
+    visually inspected.
+  accessed_at: '2026-10-21T18:43:14Z'
+  support: supports
+  summary: The isolated antibiotic is active against the tested Gram-positive panel.
+    Table 4 gives S. aureus ATCC 6538P 0.2 µg/mL, B. subtilis NRRL 558 0.1 µg/mL and
+    M. phlei ATCC 355 3.1 µg/mL, while the listed Gram-negative bacteria and fungi
+    exceed 100 µg/mL. Crucially, its MIC footnote defines the endpoint as the lowest
+    twofold dilution giving a zone in agar diffusion, not a modern broth microdilution
+    MIC. Figure 2 measures radioactive Ca2+ and Rb+ transport through a chloroform
+    barrier in a U-tube with 2×10^-4M antibiotic, 20 mM Tris pH 9.5 and 1 mM cation.
+    This directly establishes ion carriage in that artificial system, not bacterial
+    membrane rupture or a protein-binding target.
+  snapshot_sha256: 5004a0209758dbafe82aa4f1acf87e8112f169abae666b6d02d6f6810732d7ee
+- evidence_id: producer
+  kind: authority
+  reference: MIBiG BGC0000079.5; https://mibig.secondarymetabolites.org/repository/BGC0000079.5/
+  locator: Complete current official entry body plus maintained exact row and original
+    fermentation paper.
+  accessed_at: '2026-10-21T18:47:11Z'
+  support: supports
+  summary: The current entry is active with questionable quality and unknown completeness,
+    names X-14547 and S. antibioticus, cites PMID 19301315 and records knock-out studies
+    at FJ545274.1. Current producer/species and native qualifier agree. Original1979
+    fermentation and isolation independently establish production by S. antibioticus
+    NRRL 8167. Biosynthetic genes and predicted transporter/regulatory annotations
+    are not antimicrobial targets.
+  snapshot_sha256: 10d16d55ebf72d03e126184e28d682390f04e799a8bbb9aed3e06c6d1ae7d71e
+- evidence_id: biosynthetic-leads
+  kind: primary_source
+  reference: PMID:19072095; PMID:19301315; PMID:21491871; PMID:23180592
+  locator: All four complete indexed original abstracts inspected from 551-core.json;
+    full papers not obtained or claimed read.
+  accessed_at: '2026-10-21T18:42:53Z'
+  support: supports
+  summary: PMID 19072095 reports labelled precursor incorporation in the NRRL 8167
+    producer. PMID 19301315 describes the approximately 80 kb cluster and explicitly
+    reports deletion-mutagenesis confirmation, supporting the producer/cluster relation
+    at abstract depth despite the native legacy-reference caveat. PMID 21491871 identifies
+    a linear tetraene shunt product after idmH disruption, not a direct antimicrobial
+    target or simple pathway intermediate. PMID 23180592 concerns synthetic indanomycin/stawamycin
+    hexahydroindene fragments, not exact-parent biological assays.
+  snapshot_sha256: b154f7753f7f201bb372ff71d7dd8d2c740b54ed3e7646dfe482d7ad92631ce9
+- evidence_id: insect1997
+  kind: primary_source
+  reference: PMID:9711253; DOI:10.7164/antibiotics.50.617
+  locator: Complete four-page original paper read, including isolation, spectra interpretation,
+    feeding methods and results; original Figure 1 viewed.
+  accessed_at: '2026-10-21T18:43:14Z'
+  support: supports
+  summary: The authors isolate and identify indanomycin from S. griseofuscus MS/ZD/033
+    by NMR/MS and report insect weight reduction and mosquito larval mortality. The
+    report also describes bacterial activity at 1 ppm but uses the apparent taxonomic
+    error Streptococcus aureus and gives limited antibacterial methods; it is not
+    converted into a strain-resolved modern MIC. The exact compound identification
+    and alternative producer are supporting context, while insect effects do not explain
+    antibacterial causality. The secondary NH and free acid are explicitly distinguished
+    experimentally.
+  snapshot_sha256: 9bedc30d4c8a64b728a1dd0cfe163a2fc4c4cf2a50a7b2e2ec0cf049a5ffb9cd
+- evidence_id: patent
+  kind: primary_source
+  reference: US4167579A; https://patents.google.com/patent/US4167579A/en
+  locator: Original patent description, exact compound material, ex vivo rumen protocol/table
+    and DOCA-Na rat experiment/table inspected; not a review article or human clinical
+    trial.
+  accessed_at: '2026-10-21T18:43:14Z'
+  support: supports
+  summary: 'The patent reports increased propionate/(acetate+butyrate) ratios in four-hour
+    rumen-fluid incubations: control mean 0.386, 10 ppm 0.491 and 25 ppm 0.521. These
+    are ex vivo fermentation results, not direct animal body-weight or feed-conversion
+    measurements. The DOCA-Na experiment reports systolic pressure changes in six
+    hypertensive rats receiving 10 mg/kg orally over three days, with serial results
+    and cardiac-rate measurements. This supports an experimental antihypertensive
+    effect, not an approved clinical indication. Formulation/use claims and proposed
+    benefits are not treated as measured outcomes. The accompanying 1979 paper itself
+    calls the antibiotic a growth promotant while citing the patent family.'
+  snapshot_sha256: a39fb42ab4dd2eca9e025c352077e87de8d59fead3dc9b125c19771b5da39bfe
+- evidence_id: host-scope
+  kind: primary_source
+  reference: PMID:6427002; DOI:10.1007/BF01982325; PMID:7326036
+  locator: Complete available indexed abstract for the mitochondrial study; second
+    record has title/metadata only and no indexed abstract.
+  accessed_at: '2026-10-21T18:47:11Z'
+  support: context_only
+  summary: The mitochondrial study directly reports cation release with X-14547A and
+    a predominant K+ carrier effect in that particular test system. It supports the
+    host-shared ionophore boundary; it does not establish the exact bacterial mechanism.
+    The chromaffin-granule title is only a follow-up lead, not a read assay or quantitative
+    result.
+  snapshot_sha256: c6804801709cc5cc38113fdfad85a093cc94a701108d2880a59cb81eee2caa00
+- evidence_id: adapter
+  kind: database
+  reference: 551-adapter.json; iModulonDB catalog and E. coli precise1k ion transport
+    query
+  locator: Actual structured adapter executed before mechanism web research.
+  accessed_at: '2026-10-21T18:52:38Z'
+  support: context_only
+  summary: The catalog query returned 28 datasets; ion transport returned b3040/zupT
+    and b1217/chaB annotations with no component. These are generic annotations, not
+    indanomycin exposures or binding targets. S. antibioticus is outside this returned
+    catalog; that does not refute producer identity or activity.
+  snapshot_sha256: 7774a7e27af89d7cbf567620964ca04a708d10efe7890cb66c02e7de159a39d7
+- evidence_id: search
+  kind: search
+  reference: 551-local-hits.txt;551-owner-hits.txt;551-literature.json;551-fetch-results.json
+    through551-fetch4-results.json
+  locator: Hidden/ignored-inclusive repository/cache searches; exact names/IDs; seven
+    adopted citations and bounded follow-up on ionophore, antihypertensive, antitumour
+    and growth claims.
+  accessed_at: '2026-10-21T18:42:53Z'
+  support: context_only
+  summary: 'All seven adopted references were assessed: three original articles in
+    full and four at complete indexed abstract depth. Later indanomycin derivatives,
+    indanopyrroles, fragments and mixed extracts were not promoted to parent evidence.
+    The bounded antitumour search found repeated authority/introductory statements
+    but no inspected exact-parent antitumour experiment. Official 1985 and 1994 synthesis
+    pages returned 403; indexed introductory statements are not treated as experimental
+    support. This leaves the antitumour assertion unresolved rather than proving inactivity.
+    Early unversioned MIBiG routes returned 404; the correct versioned official entry
+    was subsequently retrieved.'
+  snapshot_sha256: 497a58f79f933e29b7cdb0d278ffd25de9b8e08507402bbc135f9b6664bd853e
+  search_scope: 2026-10-21; hidden and ignored files included. Exact indanomycin/X-14547A,
+    CHEBI:141380, KNApSAcK C00016347, BGC0000079 and all seven adopted PMID leads;
+    bounded public-source follow-up with read depths retained.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral exact natural product and stereochemistry
+  outcome: supported
+  summary: The valid native InChI agrees with independently parsed current PubChem,
+    maintained MIBiG and the exact systematic synonym; original structural evidence
+    and a nine-centre drawing map agree. The SMILES serialization and exact KNApSAcK
+    reference require correction, without changing the native full InChI or inferring
+    a mixture.
+  target_ids:
+  - CHEBI:141380
+  evidence_ids:
+  - chemistry
+  - primary-map
+  - structure1979
+  - knapsack
+- assessment_id: classification
+  area: grounding
+  topic: Four structural parents, antibacterial class and role
+  outcome: supported
+  summary: Each parent term was inspected and is compatible with the valid graph.
+    Original exact-compound bacterial experiments support the antibacterial class/role,
+    with their historical diffusion endpoint explicitly retained.
+  target_ids:
+  - CHEBI:141380
+  evidence_ids:
+  - classes
+  - activity1979
+  - structure1979
+- assessment_id: mechanism
+  area: evidence
+  topic: Ionophore-derived mechanism and host-shared scope
+  outcome: supported
+  summary: Primary artificial-membrane ion-transport experiments and the mitochondrial
+    abstract support ionophore activity. The source-qualified broad enum does not
+    assert membrane rupture, a named bacterial protein interaction or therapeutic
+    selectivity. No expression annotation or biosynthetic enzyme is substituted for
+    a direct antimicrobial target.
+  target_ids:
+  - CHEBI:141380
+  evidence_ids:
+  - activity1979
+  - host-scope
+  - adapter
+  - owners
+- assessment_id: definition
+  area: evidence
+  topic: Chemical prose and secondary biological claims
+  outcome: unknown
+  summary: The structural prose contains malformed locants/spelling despite an independently
+    valid exact systematic synonym. Antihypertensive effects have rat evidence and
+    feed-utilization claims have ex vivo rumen evidence plus the original authors’
+    growth-promotant statement. The antitumour clause remains unverified at exact
+    experimental depth; no global absence or inactivity claim follows.
+  target_ids:
+  - CHEBI:141380
+  evidence_ids:
+  - chebi
+  - chemistry
+  - patent
+  - search
+- assessment_id: producer
+  area: evidence
+  topic: Species, exact cluster join and inherited citation caveat
+  outcome: supported
+  summary: The current BGC and maintained row agree, and original fermentation independently
+    demonstrates the named strain’s production. The 2009 abstract explicitly supports
+    deletion-confirmed cluster involvement, while the native correctly preserves the
+    narrower inherited-reference status. Updating that optional evidence placement
+    is not required to correct an existing false assertion.
+  target_ids:
+  - CHEBI:141380
+  evidence_ids:
+  - owners
+  - producer
+  - biosynthetic-leads
+  - activity1979
+- assessment_id: provenance
+  area: provenance
+  topic: Initial hashes, actual source ownership and history
+  outcome: supported
+  summary: Original thirteen inputs were preserved; MIBiG raw input and extractor
+    were appended before assessment. Source configuration and code account for all
+    populated fields and five history events. No curated evidence or overridden structure
+    is implied by SEEDED status.
+  target_ids:
+  - CHEBI:141380
+  evidence_ids:
+  - owners
+  - native
+- assessment_id: coverage
+  area: completeness
+  topic: Whole-record coverage and bounded optional enrichment
+  outcome: unknown
+  summary: All populated fields, exact groundings and adopted citations were assessed.
+    Missing optional MIC/target/clinical/graph/dataset fields are not themselves defects.
+    Original artificial-barrier and historical diffusion measurements require their
+    own methods if later curated; incomplete antitumour and newer-paper access limits
+    prevent an unqualified full scientific sign-off.
+  target_ids:
+  - CHEBI:141380
+  evidence_ids:
+  - search
+  - activity1979
+  - patent
+  - adapter
+findings:
+- finding_id: F1
+  issue_key: indanomycin-invalid-pyrrole-smiles
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Repair the non-parsing pyrrole SMILES
+  description: The native SMILES ends with aromatic c1cccn1 and cannot be kekulized.
+    Both adopted and current ChEBI repeat the defect. A scratch-only [nH] repair produces
+    exactly the independently valid native InChI/key and primary-supported identity.
+    Correct the maintained source representation and regenerate; do not invert stereochemistry
+    or replace the record with the inconsistent KNApSAcK InChI.
+  target_ids:
+  - CHEBI:141380
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - structure1979
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited chemical representation and descriptive text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field emission
+  rule_id: 'Native checklist: exact identity, consistent chemical representation and
+    accurate naming'
+  native_severity: blocker
+  normalization_reason: The shared rubric classifies an invalid chemical representation
+    as blocker. The independently valid InChI preserves the intended identity but
+    does not cure the non-parsing principal SMILES; this blocker does not assert that
+    the native InChI denotes the wrong compound.
+- finding_id: F2
+  issue_key: indanomycin-knapsack-exact-reference-stereo-conflict
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve the inconsistent exact KNApSAcK cross-reference
+  description: KNApSAcK C00016347 displays an InChI with four opposite indane centres,
+    a SMILES with native tetrahedral configuration but unspecified diene geometry,
+    and a third unreproduced key. The unqualified exact xref therefore does not resolve
+    to a consistent equivalent structure. Preserve the intended database association
+    only with an appropriate qualification or exclude it from exact equivalence pending
+    authority correction.
+  target_ids:
+  - CHEBI:141380
+  field_paths:
+  - xrefs[0]
+  evidence_ids:
+  - knapsack
+  - chemistry
+  - primary-map
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited chemical representation and descriptive text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field emission
+  rule_id: 'Native checklist: exact identity, consistent chemical representation and
+    accurate naming'
+  native_severity: major
+  normalization_reason: Exact equivalence is contradicted by independently parsed
+    authority encodings; this is more than a missing optional field or harmless format
+    difference. The native identity remains independently supported.
+- finding_id: F3
+  issue_key: indanomycin-malformed-definition-nomenclature
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Replace malformed structural prose with a verified description
+  description: The inherited definition includes an indene 9-pro-S substitution and
+    hexa-1,3-dineyl wording. These do not form a valid description under the stated
+    indene numbering and diene nomenclature. The separate systematic synonym parses
+    to the correct native graph. Replace the malformed structural description from
+    a verified source/name rather than guessing a new stereochemical graph.
+  target_ids:
+  - CHEBI:141380
+  field_paths:
+  - definition
+  evidence_ids:
+  - chebi
+  - chemistry
+  - primary-map
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited chemical representation and descriptive text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field emission
+  rule_id: 'Native checklist: exact identity, consistent chemical representation and
+    accurate naming'
+  native_severity: minor
+  normalization_reason: This is a descriptive nomenclature defect with a correct independently
+    parsed systematic synonym and supported core identity; minor is proportionate.
+actions:
+- action_id: A1
+  description: Correct the inherited SMILES reproducibly while preserving the supported
+    identity.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:141380
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited chemical representation and descriptive text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field emission
+  acceptance_checks:
+  - The regenerated SMILES parses and reproduces BAIPOTOKPGDCHA-MWBHXQFBSA-N, C31H43NO4,
+    nine assigned tetrahedral centres and both E diene geometries.
+  - Preserve independent InChI, neutral acid material, synonyms and original source
+    attribution; validate through maintained source normalization or a scoped override
+    rather than direct generated-YAML repair.
+  - Run focused schema, strict, standalone chemistry and source-reproduction checks
+    after a future curation change.
+- action_id: A2
+  description: Resolve the exact-reference inconsistency without changing the natural-product
+    hand.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:141380
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited chemical representation and descriptive text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field emission
+  acceptance_checks:
+  - Either obtain corrected consistent KNApSAcK encodings or prevent C00016347 from
+    asserting unqualified exact structure equivalence.
+  - Retain the full observed authority strings and the original-primary drawing comparison;
+    do not select a replacement merely from an external key or matching formula.
+- action_id: A3
+  description: Replace the malformed chemical prose and preserve biological evidence
+    boundaries.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:141380
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Inherited chemical representation and descriptive text
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source normalization
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field emission
+  acceptance_checks:
+  - Use a verified plain structural description or the independently validated systematic
+    name, removing the unsupported 9-pro-S locator and dineyl spelling.
+  - If biological wording is revised, distinguish rat antihypertensive results, ex
+    vivo rumen-fermentation effects, historical growth-promotant statements and the
+    unresolved exact antitumour experimental basis. Do not convert a missing accessible
+    assay into a categorical inactivity claim.
+- action_id: A4
+  description: Keep assay and biosynthetic scope explicit in optional scientific enrichment.
+  finding_ids: []
+  target_ids:
+  - CHEBI:141380
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/indanomycin.yaml
+    role: Optional curator-owned scientific additions through the validated writer
+  acceptance_checks:
+  - Preserve the agar-diffusion endpoint rather than importing its MIC numbers as
+    broth microdilution; retain organism/strain and material context.
+  - Keep artificial chloroform-barrier transport separate from bacterial membrane
+    rupture and named protein targets.
+  - If upgrading producer evidence, attach the original 2009 result at its actual
+    read depth; do not infer antimicrobial targets from Idm biosynthetic proteins
+    or gene-expression annotations.
+limitations:
+- The 1979 discovery and structure papers and 1997 insect paper were read in full;
+  original discovery Figures 1/2, Table 4, structure Figure 6 and insect Figure 1
+  were visually inspected. Raw diffraction/NMR data were not independently re-refined.
+  The original crystal report itself discloses diffractometer problems and relatively
+  high residuals.
+- The four other adopted papers were read at complete indexed abstract depth. Full
+  2009 deletion protocols, detailed 2011 shunt-product data and 2012 synthetic-fragment
+  spectra were not obtained. This is not treated as proof that their claims are false.
+- The patent inspection covered exact material, rumen fermentation, rat hypertension
+  protocols/results and their surrounding claims. Rumen measurements are ex vivo and
+  do not provide an animal body-weight endpoint; formulations and proposed indications
+  are not clinical trials.
+- The exact-parent antitumour claim remains experimentally unresolved after bounded
+  searches. Official 1985/1994 synthesis pages returned 403; repeated database/introduction
+  statements were not upgraded to a verified antitumour experiment.
+- The native standalone chemistry check actually exited 1 due to invalid SMILES; schema
+  and strict validation both passed. Successful independent diagnostics identify the
+  defect rather than erase that failure.
+- The linked KNApSAcK page is internally inconsistent. Its displayed key is not reproduced
+  by either displayed structure, so no exact natural-product correction is chosen
+  from it. The scratch pyrrole repair and mapped drawing checks are diagnostics, not
+  native edits.
+- Structured adapter coverage is limited to returned catalog/annotation results, with
+  no indanomycin-specific expression experiment established. The absence of the producer
+  species from that catalog has no biological negative meaning.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All public retrieval manifests preserve actual URLs, UTC access times, status and
+  hashes. Original input captures were preserved before assessment. New PubChem/OPSIN
+  responses are independent authority checks, not an assertion that PubChem was an
+  adopted native source.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
