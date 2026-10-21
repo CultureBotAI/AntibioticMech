@@ -1,0 +1,778 @@
+# Asperlactone: consistent identity and abstract-supported antimicrobial activity with bounded assay detail
+
+- Review: 20261021T092648Z-asperlactone
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:19:00Z
+- Finished UTC: 2026-10-21T09:26:48Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Native asperlactone chemistry matches official ChEBI and independent PubChem calculations. No confirmed native error was found. The complete author-linked abstract of the 1998 original comparative study explicitly includes asperlactone and supports its antibacterial/antifungal activity and Aspergillus ochraceus source at abstract level. Full assay tables remain unavailable. Other adopted papers provide fungal isolation, biosynthesis, extract or host-cell observations with distinct subjects. One informational follow-up requests qualified primary assay detail without transferring extract or derivative activity. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole exact asperlactone record, stereochemistry, CAS and ontology terms, all four adopted citations, historical antimicrobial source and bounded primary isolation/activity context.
+
+Selection: Queue 112, CHEBI:156386 at the locked native path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:156386 | data/antibiotics/antibacterial/asperlactone.yaml | generated | asperlactone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:156386 | Focused LinkML validation exited 0. |
+| strict | passed | True | CHEBI:156386 | Focused strict scan exited 0 without ERROR rows. |
+| chemistry | passed | False | CHEBI:156386 | Native SMILES/InChI, formula, charge, masses and deterministic mint agree. |
+| Authoritative full QC | failed | True | CHEBI:156386 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:156386 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:156386 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:156386 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:156386 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:156386 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:156386 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:156386 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:156386 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact chemical structure and source identifiers
+
+identity: supported. Targets: CHEBI:156386.
+
+Official chemistry and independent calculations agree, including all four stereocentres, chemical synonyms and CAS crosswalk.
+
+### Antibacterial and antifungal definition/roles
+
+evidence: supported. Targets: CHEBI:156386.
+
+The original 1998 comparative-study abstract explicitly includes asperlactone and supports the antibacterial/antifungal classification at abstract level. Exact quantitative assay conditions, strain panel and operational killing endpoints remain unverified; current ChEBI agrees.
+
+### Fungal isolation and producer scope
+
+evidence: supported. Targets: CHEBI:156386.
+
+The 1998 original abstract identifies asperlactone as an Aspergillus ochraceus metabolite. Other primary papers support separate fungal isolation and a biosynthesis lead; species and historical strains are not conflated.
+
+### Direct antimicrobial mechanism, targets and datasets
+
+completeness: unknown. Targets: CHEBI:156386.
+
+No direct antimicrobial target is verified. Biosynthetic enzymes and host-neutrophil responses are not antimicrobial targets; no transcriptomics dataset is inferred. Optional absent annotations are not errors.
+
+### Compound-specific activity observations
+
+completeness: unknown. Targets: CHEBI:156386.
+
+The original 1998 abstract supports qualitative exact-compound activity. Full tables and methods are still required for quantified activity_spectrum annotations; extract and derivative results cannot fill that gap.
+
+### Maintained source and future evidence owners
+
+ownership: supported. Targets: CHEBI:156386.
+
+The source row and extraction/seed paths own generated chemistry and roles. The actual native record owns any separately authorized primary annotation.
+
+### Focused validation and native history
+
+schema: supported. Targets: CHEBI:156386.
+
+Focused gates pass; three seed/reseed events are consistent with SEEDED. No scientific-status promotion is proposed.
+
+## Findings
+
+### F1: Retrieve original assay detail before quantitative enrichment
+
+informational / open / confirmed; issue key: asperlactone-exact-primary-antimicrobial-support-followup.
+
+The complete original 1998 abstract supports asperlactone antimicrobial activity, but full assay methods and tables remain unavailable through inspected free routes. The four adopted references provide isolation, biosynthesis, extract activity or host-cell responses; their derivative and extract MICs do not belong to asperlactone. Obtain the historical full study before adding precise susceptible strains, potency, killing endpoints or a mechanism. This is an optional enrichment gap, not an error in the qualitative antibacterial/antifungal role.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Recover the historical full assay methods and tables, preserving the qualitative exact-compound support already verified from its original abstract.
+
+- Inspect the 1998 original study for exact asperlactone identity, purity, strains, medium, endpoint and quantitative results; distinguish growth inhibition from bactericidal or fungicidal killing according to its actual assays.
+- Do not transfer MICs for chlorohydroaspyrones 1 and 2, or any A. creber extract value, to asperlactone. Retain tentative LC-MS identity as tentative and do not claim stereochemical confirmation from it.
+- Keep A. ochraceus historical source identification separate from A. westerdijkiae and A. ochraceopetaliformis unless a primary strain/taxonomy link is inspected. Culture fermentation plus isolated exact compound can support producer evidence; a tentative mixed-extract peak cannot alone prove exact stereochemical production.
+- The aomsas knockout/complementation abstract is a biosynthesis lead, not an antimicrobial target. Obtain full methods before adding detailed pathway or gene annotations.
+- Keep the human-neutrophil superoxide/elastase and cancer-cell assays outside antibacterial/antifungal activity and target claims. Do not infer bacterial ROS, NF-kappaB binding or a causal killing chain.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/asperlactone.yaml for separately authorized primary curation, then run focused/shared gates; no automatic REVIEWED promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/asperlactone.yaml; Entire native YAML and three seed/reseed events. | supports | SEEDED and EXACT ChEBI record with chemical and biological definition, two chemical synonyms, five parents, antibacterial and antifungal roles, one CAS xref and one source concept. No native mode of action, target, quantified activity, resistance, structured producer, clinical, causal graph or dataset annotation. Optional absence is not a schema defect. |
+| source | data/raw/chebi_antimicrobials.tsv; Complete line 2759 in 112-raw.json; source config, ChEBI extraction and seeder role/definition handling. | supports | Native fields reproduce the adopted exact ChEBI row, including four source PMIDs. Antifungal role CHEBI:35718 is consistent with the antibiotic-antifungal parent and source role closure. Non-antimicrobial roles shown on the current ontology page are outside the source role filter. All 13 captured maintained input hashes remain unchanged. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:156386; 112-chebi.html/txt; complete chemical identity, names, parents, roles, metabolite-source and registry sections. | supports | Official ChEBI agrees on C9H12O4, charge 0, full key VMLNPJDEXLLCQG-DGCAKLBHSA-N and the (5R), hydroxyethyl-(1S), epoxide-(2S,3S) stereochemistry. Parents are polyketide CHEBI:26188, epoxide CHEBI:32955, secondary alcohol CHEBI:35681, butenolide CHEBI:50523 and antibiotic antifungal agent CHEBI:86478. Antibacterial role CHEBI:33282 and CAS 76375-62-7 resolve. The page links A. ochraceus provenance to the historical 1998 DOI, separate from other fungal sources. |
+| chemistry | Independent RDKit calculations and official PubChem properties; 112-chemistry.json; CAS-resolved PubChem CID 156698 in 112-pubchem.json, independently parsed SMILES. | supports | Native SMILES and InChI describe one neutral fragment with four assigned tetrahedral centres. Formula, average mass 184.191, exact mass 184.073558864 and source mint agree. Independently parsed PubChem SMILES yields the same full key. CAS is cross-corroborated by official chemical databases, not directly audited against a registry record. |
+| adopted2008 | DOI:10.1021/np800107c; PMID 18661951; complete original abstract in 112-epmc.json. | partial | Asperlactone is compound 4 isolated from a cultured marine Exophiala broth. The abstract reports antibacterial MICs for chlorohydroaspyrones A and B, compounds 1 and 2. Those derivative values do not establish an asperlactone MIC. Full text, individual compound-4 assay results and raw stereochemical data were not retrieved. |
+| adopted2009 | DOI:10.1016/j.fgb.2009.07.002; PMID 19589392; complete original abstract in 112-epmc.json. | partial | The A. westerdijkiae study reports aomsas disruption, genetic complementation and chemical complementation associated with asperlactone, isoasperlactone and 6-methylsalicylic-acid production. This is a biosynthesis/producer lead, not an antibacterial target mechanism. It does not by itself prove that a historical A. ochraceus strain is the same strain or justify an unqualified taxonomic replacement. |
+| adopted2019 | DOI:10.33073/pjm-2019-033; PMID 31880876, PMC7256719; complete Experimental, Results and Discussion, including Tables I–III, in 112-PMC7256719.xml. | supports | A. creber is cultured in Czapek-Dox broth with yeast extract, then the ethyl-acetate filtrate extract is tested. Asperlactone is only tentatively assigned by mass, MS/MS and references; exact stereochemistry is not established by that peak. All reported inhibition zones, MICs, DPPH/ABTS and total-phenol results apply to the extract, not purified asperlactone. This supports a qualified culture-metabolite detection lead, but neither exact-structure producer proof nor compound-specific antimicrobial potency. |
+| adopted2020 | DOI:10.1021/acsomega.0c02489; PMID 32875235, PMC7450643; known-compound identification passage, bioactivity Results, Tables 2–3, Conclusions and complete Materials and Methods. | supports | Asperlactone is isolated compound 9, recovered as 20.4 mg after fermentation and chromatography of A. ochraceopetaliformis K004643. The culture is grown in PDB at 25 C for seven days. At 10 micromolar, compound 9 decreases stimulated human-neutrophil superoxide generation by 30 plus or minus 9 percent and elastase release by 25 plus or minus 4 percent; the superoxide result is marked significant, whereas that elastase entry is not. HepG2 cytotoxic IC50 is 42.9 plus or minus 0.5 micromolar. These are host-cell observations, not microbial killing, bacterial ROS, NF-kappaB binding or a direct antimicrobial target. Spectral comparison for the known compound cites the 1984 structural paper; new-compound ECD analysis must not be transferred as newly performed asperlactone stereochemical proof. |
+| historical | DOI:10.1002/(SICI)1096-9063(199805)53:1&lt;9::AID-PS745&gt;3.0.CO;2-P; Crossref bibliographic metadata in 112-1998-crossref.json; complete original abstract at https://www.researchgate.net/publication/247953845_Bactericidal_and_fungicidal_activity_ofAspergillus_ochraceus_metabolites_and_some_derivatives; reading notes in 112-1998-author-abstract-notes.json. | partial | The 1998 comparative study explicitly tests asperlactone and aspyrone from Aspergillus ochraceus, plus aspyrone derivatives, for bactericidal and fungicidal activity. Aspyrone generally performs better than asperlactone and derivatives; the inhibition patterns differ. Helminthosporium monoceras is the most inhibited tested mould. The epoxide comparison is a structure–activity observation, not identification of a microbial target. No compound-specific numerical value, broad species panel, assay method, strain or killing threshold is supplied in the abstract. |
+| search | CultureBotAI/AntibioticMech; 112-local-hits.txt, 112-maintained-search.txt and bounded exact-name/CAS literature searches. | context_only | Hidden- and ignored-inclusive searches locate the record, maintained source row and readiness queue. Historical ad hoc resistance ledgers and generated pages were treated as leads, not scientific evidence. No exact-record curated primary addition was found among the searched maintained owners. Vendor target descriptions and illustrative hypothetical MIC tables were not adopted. |
+| adapter | Structured adapter applicability; Same-session successful 055 iModulonDB dataset inventory and the native whole-record read. | context_only | The native record contains no gene, protein, pathway, stress response or transcriptomics assertion requiring a targeted adapter query. The A. westerdijkiae biosynthesis lead has no matching organism/dataset in the inspected inventory, and human neutrophil assays are outside that bacterial expression context. No unrelated fungal species or gene was substituted. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Exact identity, producer, primary activity, mechanism and completeness rules; CLAUDE and native review profile. | supports | Extract activity, congener MICs, host-cell responses, culture detection and biosynthesis genetics support different claims. Missing optional fields do not require fabricated mechanisms or automatic status promotion. |
+| validation | Documented focused checks and input audit; 112-focused-results.json and focused logs. | supports | Schema, strict and independent chemistry checks pass. All 13 captured maintained inputs remain unchanged. No native record edits, paid access or contact occurred during the scientific review. |
+
+## Limits And Additional Notes
+
+- All four adopted primary abstracts were read. The 2008 Exophiala and 2009 biosynthesis papers remain abstract-only. Their complete assays, raw structural data and strain details were not inspected.
+- The 2019 A. creber Experimental, Results and Discussion, including tables, were read. It tests an extract and tentatively identifies asperlactone; no exact-compound numerical activity is inferred.
+- The 2020 paper was read for known-compound identification, activity Results and tables, Conclusions and complete Methods. Unrelated new-compound elucidation was not fully reviewed; Figure 1, supplemental spectra and raw data were not independently interpreted.
+- The complete author-linked original 1998 abstract was read and explicitly includes asperlactone in a comparative antimicrobial study. Publisher routes return 403 and the author page offers no full text. Exact methods, compound-specific numerical results, stereochemical characterization and killing thresholds remain uninspected; no author contact was made.
+- CAS is source-crosswalk corroborated, not registry-direct. No exhaustive resistance or producer census is claimed; no unmeasured antimicrobial protein target or transcriptomic response is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T092648Z-asperlactone
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Asperlactone: consistent identity and abstract-supported antimicrobial activity
+  with bounded assay detail'
+started_at: '2026-10-21T09:19:00Z'
+finished_at: '2026-10-21T09:26:48Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Initial capture preceded assessment.
+    Entire native record, maintained ChEBI row, relevant source transforms, official
+    chemical data and all adopted citation abstracts were inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Native asperlactone chemistry matches official ChEBI and independent PubChem
+  calculations. No confirmed native error was found. The complete author-linked abstract
+  of the 1998 original comparative study explicitly includes asperlactone and supports
+  its antibacterial/antifungal activity and Aspergillus ochraceus source at abstract
+  level. Full assay tables remain unavailable. Other adopted papers provide fungal
+  isolation, biosynthesis, extract or host-cell observations with distinct subjects.
+  One informational follow-up requests qualified primary assay detail without transferring
+  extract or derivative activity. Scientific assessment retains the stated evidence
+  limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/asperlactone.yaml
+    sha256: dde6c178322465a9e5cadf12abcbc7b9fadfe33d93614e5c5ccdff985158ef9e
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:156386
+  path: data/antibiotics/antibacterial/asperlactone.yaml
+  label: asperlactone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole exact asperlactone record, stereochemistry, CAS and ontology
+    terms, all four adopted citations, historical antimicrobial source and bounded
+    primary isolation/activity context.
+  selection: Queue 112, CHEBI:156386 at the locked native path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:156386
+  exclusions:
+  - target: Aspyrone, isoasperlactone, chlorohydroaspyrones, asperochralactones and
+      fungal extracts as exact equivalents
+    reason: Different structures or mixtures. Their numerical bioactivities and mechanisms
+      do not establish asperlactone activity.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validation exited 0.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/asperlactone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict scan exited 0 without ERROR rows.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/asperlactone.yaml --out /private/tmp/am-review-session/112-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Native SMILES/InChI, formula, charge, masses and deterministic mint agree.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 112
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:156386
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/asperlactone.yaml
+  locator: Entire native YAML and three seed/reseed events.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: SEEDED and EXACT ChEBI record with chemical and biological definition,
+    two chemical synonyms, five parents, antibacterial and antifungal roles, one CAS
+    xref and one source concept. No native mode of action, target, quantified activity,
+    resistance, structured producer, clinical, causal graph or dataset annotation.
+    Optional absence is not a schema defect.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete line 2759 in 112-raw.json; source config, ChEBI extraction and
+    seeder role/definition handling.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: Native fields reproduce the adopted exact ChEBI row, including four source
+    PMIDs. Antifungal role CHEBI:35718 is consistent with the antibiotic-antifungal
+    parent and source role closure. Non-antimicrobial roles shown on the current ontology
+    page are outside the source role filter. All 13 captured maintained input hashes
+    remain unchanged.
+  snapshot_sha256: 6f638b1ca37f4368b3ca9a540e9f7e01a40e85349ac7e6342fbccc62cd2beec2
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:156386
+  locator: 112-chebi.html/txt; complete chemical identity, names, parents, roles,
+    metabolite-source and registry sections.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: Official ChEBI agrees on C9H12O4, charge 0, full key VMLNPJDEXLLCQG-DGCAKLBHSA-N
+    and the (5R), hydroxyethyl-(1S), epoxide-(2S,3S) stereochemistry. Parents are
+    polyketide CHEBI:26188, epoxide CHEBI:32955, secondary alcohol CHEBI:35681, butenolide
+    CHEBI:50523 and antibiotic antifungal agent CHEBI:86478. Antibacterial role CHEBI:33282
+    and CAS 76375-62-7 resolve. The page links A. ochraceus provenance to the historical
+    1998 DOI, separate from other fungal sources.
+  snapshot_sha256: 052044d1ebbb89236c3535c97193e356d63b278a81f1f302ea36c401870ca24b
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations and official PubChem properties
+  locator: 112-chemistry.json; CAS-resolved PubChem CID 156698 in 112-pubchem.json,
+    independently parsed SMILES.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: Native SMILES and InChI describe one neutral fragment with four assigned
+    tetrahedral centres. Formula, average mass 184.191, exact mass 184.073558864 and
+    source mint agree. Independently parsed PubChem SMILES yields the same full key.
+    CAS is cross-corroborated by official chemical databases, not directly audited
+    against a registry record.
+  snapshot_sha256: 70fdeb9a6a3ee385a786e98c35661a3c8d24e62915745c04562153dfade0943d
+- evidence_id: adopted2008
+  kind: primary_source
+  reference: DOI:10.1021/np800107c
+  locator: PMID 18661951; complete original abstract in 112-epmc.json.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: partial
+  summary: Asperlactone is compound 4 isolated from a cultured marine Exophiala broth.
+    The abstract reports antibacterial MICs for chlorohydroaspyrones A and B, compounds
+    1 and 2. Those derivative values do not establish an asperlactone MIC. Full text,
+    individual compound-4 assay results and raw stereochemical data were not retrieved.
+  snapshot_sha256: 8a886eb322c115b42a47a7b8b93ac3623562a60c9fa0b07ca4bd41a3969dece1
+- evidence_id: adopted2009
+  kind: primary_source
+  reference: DOI:10.1016/j.fgb.2009.07.002
+  locator: PMID 19589392; complete original abstract in 112-epmc.json.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: partial
+  summary: The A. westerdijkiae study reports aomsas disruption, genetic complementation
+    and chemical complementation associated with asperlactone, isoasperlactone and
+    6-methylsalicylic-acid production. This is a biosynthesis/producer lead, not an
+    antibacterial target mechanism. It does not by itself prove that a historical
+    A. ochraceus strain is the same strain or justify an unqualified taxonomic replacement.
+  snapshot_sha256: 8a886eb322c115b42a47a7b8b93ac3623562a60c9fa0b07ca4bd41a3969dece1
+- evidence_id: adopted2019
+  kind: primary_source
+  reference: DOI:10.33073/pjm-2019-033
+  locator: PMID 31880876, PMC7256719; complete Experimental, Results and Discussion,
+    including Tables I–III, in 112-PMC7256719.xml.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: A. creber is cultured in Czapek-Dox broth with yeast extract, then the
+    ethyl-acetate filtrate extract is tested. Asperlactone is only tentatively assigned
+    by mass, MS/MS and references; exact stereochemistry is not established by that
+    peak. All reported inhibition zones, MICs, DPPH/ABTS and total-phenol results
+    apply to the extract, not purified asperlactone. This supports a qualified culture-metabolite
+    detection lead, but neither exact-structure producer proof nor compound-specific
+    antimicrobial potency.
+  snapshot_sha256: e13d03e1519d83ff120f8791867f1aeff29f85ea07c3fd90eb2bcf7960dde8bc
+- evidence_id: adopted2020
+  kind: primary_source
+  reference: DOI:10.1021/acsomega.0c02489
+  locator: PMID 32875235, PMC7450643; known-compound identification passage, bioactivity
+    Results, Tables 2–3, Conclusions and complete Materials and Methods.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: Asperlactone is isolated compound 9, recovered as 20.4 mg after fermentation
+    and chromatography of A. ochraceopetaliformis K004643. The culture is grown in
+    PDB at 25 C for seven days. At 10 micromolar, compound 9 decreases stimulated
+    human-neutrophil superoxide generation by 30 plus or minus 9 percent and elastase
+    release by 25 plus or minus 4 percent; the superoxide result is marked significant,
+    whereas that elastase entry is not. HepG2 cytotoxic IC50 is 42.9 plus or minus
+    0.5 micromolar. These are host-cell observations, not microbial killing, bacterial
+    ROS, NF-kappaB binding or a direct antimicrobial target. Spectral comparison for
+    the known compound cites the 1984 structural paper; new-compound ECD analysis
+    must not be transferred as newly performed asperlactone stereochemical proof.
+  snapshot_sha256: 67142436b440c7bf04ea8688f36f904bc151b9a2f9b9767136b984302e7a0c19
+- evidence_id: historical
+  kind: primary_source
+  reference: DOI:10.1002/(SICI)1096-9063(199805)53:1<9::AID-PS745>3.0.CO;2-P
+  locator: Crossref bibliographic metadata in 112-1998-crossref.json; complete original
+    abstract at https://www.researchgate.net/publication/247953845_Bactericidal_and_fungicidal_activity_ofAspergillus_ochraceus_metabolites_and_some_derivatives;
+    reading notes in 112-1998-author-abstract-notes.json.
+  accessed_at: '2026-10-21T09:25:57Z'
+  support: partial
+  summary: The 1998 comparative study explicitly tests asperlactone and aspyrone from
+    Aspergillus ochraceus, plus aspyrone derivatives, for bactericidal and fungicidal
+    activity. Aspyrone generally performs better than asperlactone and derivatives;
+    the inhibition patterns differ. Helminthosporium monoceras is the most inhibited
+    tested mould. The epoxide comparison is a structure–activity observation, not
+    identification of a microbial target. No compound-specific numerical value, broad
+    species panel, assay method, strain or killing threshold is supplied in the abstract.
+  snapshot_sha256: f4a734fe88b2fa62750bb128b81b428c4c0db476b0d9d8530e21c64814a2d92b
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 112-local-hits.txt, 112-maintained-search.txt and bounded exact-name/CAS
+    literature searches.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive searches locate the record, maintained source
+    row and readiness queue. Historical ad hoc resistance ledgers and generated pages
+    were treated as leads, not scientific evidence. No exact-record curated primary
+    addition was found among the searched maintained owners. Vendor target descriptions
+    and illustrative hypothetical MIC tables were not adopted.
+  search_scope: rg --no-ignore --hidden for asperlactone, Asperlactone, CHEBI:156386
+    and VMLNPJDEXLLCQG across batch012, then maintained curation/conf/scripts/data/raw/src/reports/reviews;
+    initial scan excludes .git and .venv. Official ChEBI/PubChem, adopted PubMed/Europe
+    PMC citations, Wiley/Crossref and bounded exact historical-title searches; free
+    access only.
+  snapshot_sha256: 77bbdee14bfeb1863624795351ad5155b4834da2db36e9eb6d2be402654c2f9f
+- evidence_id: adapter
+  kind: database
+  reference: Structured adapter applicability
+  locator: Same-session successful 055 iModulonDB dataset inventory and the native
+    whole-record read.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: context_only
+  summary: The native record contains no gene, protein, pathway, stress response or
+    transcriptomics assertion requiring a targeted adapter query. The A. westerdijkiae
+    biosynthesis lead has no matching organism/dataset in the inspected inventory,
+    and human neutrophil assays are outside that bacterial expression context. No
+    unrelated fungal species or gene was substituted.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Exact identity, producer, primary activity, mechanism and completeness
+    rules; CLAUDE and native review profile.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: Extract activity, congener MICs, host-cell responses, culture detection
+    and biosynthesis genetics support different claims. Missing optional fields do
+    not require fabricated mechanisms or automatic status promotion.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused checks and input audit
+  locator: 112-focused-results.json and focused logs.
+  accessed_at: '2026-10-21T09:21:46Z'
+  support: supports
+  summary: Schema, strict and independent chemistry checks pass. All 13 captured maintained
+    inputs remain unchanged. No native record edits, paid access or contact occurred
+    during the scientific review.
+  snapshot_sha256: b09e40a36865a6239d5e184c96d397f52033691624d8aeeceac1863045115323
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact chemical structure and source identifiers
+  outcome: supported
+  summary: Official chemistry and independent calculations agree, including all four
+    stereocentres, chemical synonyms and CAS crosswalk.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - identity
+  - chemistry
+- assessment_id: biology
+  area: evidence
+  topic: Antibacterial and antifungal definition/roles
+  outcome: supported
+  summary: The original 1998 comparative-study abstract explicitly includes asperlactone
+    and supports the antibacterial/antifungal classification at abstract level. Exact
+    quantitative assay conditions, strain panel and operational killing endpoints
+    remain unverified; current ChEBI agrees.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - identity
+  - historical
+  - adopted2008
+  - adopted2019
+- assessment_id: source-organism
+  area: evidence
+  topic: Fungal isolation and producer scope
+  outcome: supported
+  summary: The 1998 original abstract identifies asperlactone as an Aspergillus ochraceus
+    metabolite. Other primary papers support separate fungal isolation and a biosynthesis
+    lead; species and historical strains are not conflated.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - adopted2008
+  - adopted2009
+  - adopted2020
+  - historical
+- assessment_id: mechanism
+  area: completeness
+  topic: Direct antimicrobial mechanism, targets and datasets
+  outcome: unknown
+  summary: No direct antimicrobial target is verified. Biosynthetic enzymes and host-neutrophil
+    responses are not antimicrobial targets; no transcriptomics dataset is inferred.
+    Optional absent annotations are not errors.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - record
+  - adopted2009
+  - adopted2020
+  - adapter
+- assessment_id: activity
+  area: completeness
+  topic: Compound-specific activity observations
+  outcome: unknown
+  summary: The original 1998 abstract supports qualitative exact-compound activity.
+    Full tables and methods are still required for quantified activity_spectrum annotations;
+    extract and derivative results cannot fill that gap.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - adopted2008
+  - adopted2019
+  - historical
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained source and future evidence owners
+  outcome: supported
+  summary: The source row and extraction/seed paths own generated chemistry and roles.
+    The actual native record owns any separately authorized primary annotation.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: gates
+  area: schema
+  topic: Focused validation and native history
+  outcome: supported
+  summary: Focused gates pass; three seed/reseed events are consistent with SEEDED.
+    No scientific-status promotion is proposed.
+  target_ids:
+  - CHEBI:156386
+  evidence_ids:
+  - validation
+  - record
+findings:
+- finding_id: F1
+  issue_key: asperlactone-exact-primary-antimicrobial-support-followup
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Retrieve original assay detail before quantitative enrichment
+  description: The complete original 1998 abstract supports asperlactone antimicrobial
+    activity, but full assay methods and tables remain unavailable through inspected
+    free routes. The four adopted references provide isolation, biosynthesis, extract
+    activity or host-cell responses; their derivative and extract MICs do not belong
+    to asperlactone. Obtain the historical full study before adding precise susceptible
+    strains, potency, killing endpoints or a mechanism. This is an optional enrichment
+    gap, not an error in the qualitative antibacterial/antifungal role.
+  target_ids:
+  - CHEBI:156386
+  field_paths:
+  - definition
+  - activity_roles
+  - activity_spectrum
+  - evidence
+  - discussions
+  evidence_ids:
+  - historical
+  - adopted2008
+  - adopted2009
+  - adopted2019
+  - adopted2020
+  - rubric
+  rule_id: 'native-review-checklist: Exact-subject evidence and optional completeness'
+  native_severity: informational unresolved primary assay-detail access gap
+  normalization_reason: An access gap and absent optional detail do not prove the
+    source assertion false. No exclusion, inactivity claim or required-field error
+    is justified.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/asperlactone.yaml
+    role: Curator-owned primary evidence and qualified source/activity annotations
+      through the validated writer and history helper
+actions:
+- action_id: A1
+  description: Recover the historical full assay methods and tables, preserving the
+    qualitative exact-compound support already verified from its original abstract.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:156386
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/asperlactone.yaml
+    role: Curator-owned primary evidence and qualified source/activity annotations
+      through the validated writer and history helper
+  acceptance_checks:
+  - Inspect the 1998 original study for exact asperlactone identity, purity, strains,
+    medium, endpoint and quantitative results; distinguish growth inhibition from
+    bactericidal or fungicidal killing according to its actual assays.
+  - Do not transfer MICs for chlorohydroaspyrones 1 and 2, or any A. creber extract
+    value, to asperlactone. Retain tentative LC-MS identity as tentative and do not
+    claim stereochemical confirmation from it.
+  - Keep A. ochraceus historical source identification separate from A. westerdijkiae
+    and A. ochraceopetaliformis unless a primary strain/taxonomy link is inspected.
+    Culture fermentation plus isolated exact compound can support producer evidence;
+    a tentative mixed-extract peak cannot alone prove exact stereochemical production.
+  - The aomsas knockout/complementation abstract is a biosynthesis lead, not an antimicrobial
+    target. Obtain full methods before adding detailed pathway or gene annotations.
+  - Keep the human-neutrophil superoxide/elastase and cancer-cell assays outside antibacterial/antifungal
+    activity and target claims. Do not infer bacterial ROS, NF-kappaB binding or a
+    causal killing chain.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/asperlactone.yaml
+    for separately authorized primary curation, then run focused/shared gates; no
+    automatic REVIEWED promotion.
+limitations:
+- All four adopted primary abstracts were read. The 2008 Exophiala and 2009 biosynthesis
+  papers remain abstract-only. Their complete assays, raw structural data and strain
+  details were not inspected.
+- The 2019 A. creber Experimental, Results and Discussion, including tables, were
+  read. It tests an extract and tentatively identifies asperlactone; no exact-compound
+  numerical activity is inferred.
+- The 2020 paper was read for known-compound identification, activity Results and
+  tables, Conclusions and complete Methods. Unrelated new-compound elucidation was
+  not fully reviewed; Figure 1, supplemental spectra and raw data were not independently
+  interpreted.
+- The complete author-linked original 1998 abstract was read and explicitly includes
+  asperlactone in a comparative antimicrobial study. Publisher routes return 403 and
+  the author page offers no full text. Exact methods, compound-specific numerical
+  results, stereochemical characterization and killing thresholds remain uninspected;
+  no author contact was made.
+- CAS is source-crosswalk corroborated, not registry-direct. No exhaustive resistance
+  or producer census is claimed; no unmeasured antimicrobial protein target or transcriptomic
+  response is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

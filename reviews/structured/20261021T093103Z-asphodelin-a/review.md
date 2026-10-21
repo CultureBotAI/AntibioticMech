@@ -1,0 +1,734 @@
+# Asphodelin A: consistent aglycone identity with bounded primary assay and computational mechanism evidence
+
+- Review: 20261021T093103Z-asphodelin-a
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:26:06Z
+- Finished UTC: 2026-10-21T09:31:03Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Native asphodelin A chemistry agrees with official ChEBI and independently parsed PubChem structures. The adopted original abstract identifies exact aglycone compound 2 and reports antimicrobial activity separately from glucoside compound 1. Its full organism-specific assays remain inaccessible. A later original docking study supplies predictions, not measured target inhibition. No confirmed native error; one informational follow-up requests qualified primary assay evidence. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole exact aglycone record, all native identifiers and assertions, adopted primary citation, official identity and a bounded computational mechanism lead.
+
+Selection: Queue 114, CHEBI:65453 at its locked native path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:65453 | data/antibiotics/antibacterial/asphodelin-a.yaml | generated | asphodelin A |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:65453 | Focused LinkML validation exited 0. |
+| strict | passed | True | CHEBI:65453 | Focused strict scan exited 0 without ERROR rows. |
+| chemistry | passed | False | CHEBI:65453 | Native SMILES/InChI, formula, charge, masses and source mint agree. |
+| Structured gene-context cross-check | passed | False | CHEBI:65453 | Exit 0; exact gyrB gene context returned, with no target-binding inference. |
+| Authoritative full QC | failed | True | CHEBI:65453 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:65453 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:65453 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:65453 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:65453 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:65453 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:65453 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:65453 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:65453 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact aglycone chemistry and identifiers
+
+identity: supported. Targets: CHEBI:65453.
+
+Official sources and independent calculations agree on the neutral aglycone, all substitution positions and source mint; Reaxys remains source-crosswalk-only.
+
+### General antimicrobial activity versus exact organism detail
+
+evidence: unknown. Targets: CHEBI:65453.
+
+The sole adopted original abstract supports exact-aglycone antimicrobial activity. Named-organism details and root-specific isolation are supported by ChEBI but remain unverified against the inaccessible full original assay. No conflicting primary result was established.
+
+### Optional target, mode and causal graph
+
+completeness: unknown. Targets: CHEBI:65453.
+
+The accessible original study offers computational docking predictions only. Neither those scores, review-table labels nor a gyrB expression-catalog match establishes an experimentally verified direct target. Missing optional targets and mode are not errors.
+
+### Resistance, producer, clinical and datasets
+
+completeness: unknown. Targets: CHEBI:65453.
+
+No unsupported native claim in these optional fields. The isolated plant source is not evidence for an identified biosynthetic pathway or microbial producer. No clinical efficacy or transcriptomics inferred.
+
+### Maintained sources and primary annotation owner
+
+ownership: supported. Targets: CHEBI:65453.
+
+ChEBI extraction/seed owners reproduce the row; the actual native path owns any later primary-evidence annotation.
+
+### Focused validation and history
+
+schema: supported. Targets: CHEBI:65453.
+
+Focused schema, strict and chemistry gates pass; scientific status remains SEEDED.
+
+## Findings
+
+### F1: Inspect compound-2 assays before quantitative or experimental-target enrichment
+
+informational / open / confirmed; issue key: asphodelin-a-qualified-primary-assay-followup.
+
+The adopted original abstract supports asphodelin A compound 2 and antimicrobial activity, but not the full organism-specific assay details. Retrieve the original table and methods before adding potency or a measured protein target. The later exact-ligand study is docking only; keep its hypothetical target interactions distinct from experimentally demonstrated mechanisms.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Retrieve and inspect the original aglycone assays, then curate only bounded exact-compound evidence.
+
+- Match original compound 2 to native C15H10O6 and full key OZOZCKVLUMXFGS-UHFFFAOYSA-N; do not transfer glycoside compound-1 potency.
+- Read the original table and Methods for each named organism, strain, medium, endpoint, concentration, unit and root-versus-bulb source. Preserve the distinction between inhibition and killing.
+- Treat the 2016 ligand-295 scores as computational predictions. Require exact-compound enzyme, binding or other suitable primary experiments before adding a demonstrated gyrase or other molecular target. Expression-catalog gene matches do not establish that evidence.
+- Do not transfer aminocoumarin gyrase mechanisms to this arylcoumarin on the basis of scaffold naming.
+- Plant isolation establishes source occurrence; do not infer biosynthetic genes, microbial production, clinical efficacy or resistance determinants.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/asphodelin-a.yaml for separately authorized primary curation, then run focused/shared gates without automatic REVIEWED promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/asphodelin-a.yaml; Entire YAML, including three seed/reseed events. | supports | SEEDED and EXACT ChEBI aglycone with two exact chemical synonyms, two structural parents, antibacterial and antifungal roles, one Reaxys xref and one source concept. The biological definition names three bacteria and two fungi. No target, mode of action, quantitative activity, resistance, structured producer, clinical use, causal graph or transcriptomics assertion is present. Optional absence is not a schema error. |
+| source | data/raw/chebi_antimicrobials.tsv; 114-raw.json, complete adopted row at line 1176; relevant ChEBI config, extractor and seeder. | supports | Native chemistry, names, biological definition, parents, roles and Reaxys crosswalk reproduce the adopted CHEBI:65453 row. Sole citation is PMID 17253862. Extraction deliberately retains literature as leads rather than claim-level evidence; role priority files the record under antibacterial while preserving the antifungal role. The adjacent glucoside is a distinct exact structure. All 13 maintained inputs remain unchanged. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:65453; 114-chebi.html/txt; complete chemical, name, ontology, registry and metabolite-source sections. | supports | Official ChEBI agrees on neutral C15H10O6, key OZOZCKVLUMXFGS-UHFFFAOYSA-N and the 3-(2,4-dihydroxyphenyl)-4,7-dihydroxycoumarin structure. Parents CHEBI:26195 and CHEBI:37912 are polyphenol and hydroxycoumarin. Roles CHEBI:33282 and CHEBI:35718 are antibacterial and antifungal. Reaxys 11288782 is listed but its underlying paid entry is uninspected. The incoming functional-parent link from glucoside CHEBI:65454 does not merge the records. |
+| chemistry | Independent RDKit and official PubChem structure; 114-chemistry.json and 114-pubchem.json; official PubChem CID 54679752 SMILES independently parsed. | supports | Native SMILES and InChI yield one neutral fragment without tetrahedral stereocentres, the same full key, formula C15H10O6, average mass 286.239 and exact mass 286.04773804 consistent with stored precision. Deterministic source mint agrees. Independently parsed official PubChem SMILES yields the same key; the aglycone is chemically distinct from its glycoside. |
+| primary | DOI:10.1021/np060444u; PMID 17253862; complete original abstract and metadata in 114-epmc.json. | partial | The complete original El-Seedi abstract identifies asphodelin A 4-prime-O-beta-D-glucoside as compound 1 and its aglycone asphodelin A as compound 2 after bioactivity-directed fractionation of Asphodelus microcarpus. The explicit chemical names agree with the native structures. It describes moderate activity for 1 and potent activity for 2, without numerical endpoints, strains, media, root-specific extraction details or enzyme experiments. Bibliographic indexing names the bacterial/fungal groups but is not an independently inspected compound-specific assay table. |
+| access | Bounded primary full-text and exact-mechanism search; 114-fetch-results.json; same-paper 113 author/repository searches and new exact-aglycone mechanism searches. | context_only | The new ACS PDF attempt returned 403; prior same-paper official main routes also failed. The author ResearchGate record is request-only, and bounded free author/repository searches found no full original. Review tables supply numerical MICs and gyrase labels, but are leads only. A separate accessible original docking study was inspected and is explicitly computational. |
+| docking | DOI:10.3390/antibiotics5030030; PMID 27626453, PMC5039526; complete abstract, Computational Methods and Conclusions, and exact asphodelin A ligand-295 rows with headers in Tables 2–4, 114-PMC5039526.xml. | context_only | The original 2016 study computationally docks 561 phytochemicals. Asphodelin A is ligand 295 with predicted scores against peptide deformylases, topoisomerases/gyrase, phosphatases, mycobacterial UGM/CYP121 and DNA ligases. Structures are built and optimized, flexible ligands are docked to rigid protein models, and the authors describe solvation, permeability, bioavailability and modeling limitations. These are not measured binding affinities, enzyme inhibition, antimicrobial MICs or validated causal targets. No protein target should be promoted from these scores. |
+| local-search | CultureBotAI/AntibioticMech; 114-local-hits.txt and 114-maintained-search.txt. | context_only | Hidden- and ignored-inclusive searches locate the native record, maintained source row, neighboring glucoside and readiness context. No exact-aglycone curated primary addition was found among the searched maintained owners. Historical reports and generated products were leads only. |
+| adapter | iModulonDB e_coli/precise_mg1655; Same-session successful 055 inventory; 114-imodulondb-gyrB.txt. | context_only | No native protein or response claim triggered a pre-search query. After the docking lead emerged, a structured gyrB query returned gene e_coli/precise_mg1655/b3699 and no iModulon match. This supplies gene context only; it neither demonstrates asphodelin binding nor proves inhibition, resistance, a compound-induced transcriptomic response or absence of biological activity. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity, evidence placement, activity, target and producer rules; CLAUDE and native review profile. | supports | A glycoside and its aglycone require separate assay attribution. Isolation supports source occurrence; biosynthesis and producer-gene claims need further evidence. Optional evidence gaps do not justify fabricated mechanisms or status promotion. |
+| validation | Documented focused gates and input audit; 114-focused-results.json, schema/strict logs and independent chemistry output. | supports | All focused checks pass, and all 13 captured maintained inputs remain unchanged. Three seed/reseed events are consistent with SEEDED. No native record edits, paid access or contact occurred during the scientific review. |
+
+## Limits And Additional Notes
+
+- The sole adopted original abstract was read in full. ACS PDF/main routes are inaccessible, and bounded free author/repository searches did not retrieve the main text. Original spectra, exact assay table, strain conditions and root/bulb methods remain uninspected.
+- Named-organism and root-source wording remains ontology-supported; the primary abstract does not resolve those details. This is an access limit, not proof the assertions are false.
+- The 2016 computational paper was read for its abstract, complete Computational Methods and Conclusions, and exact ligand-295 table rows with headers. The entire 561-compound survey, supplementary ligand structures and raw docking poses were not audited. No direct target or potency is inferred.
+- Reaxys 11288782 remains source-crosswalk-only. No exhaustive literature, producer or resistance census is claimed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T093103Z-asphodelin-a
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Asphodelin A: consistent aglycone identity with bounded primary assay and
+  computational mechanism evidence'
+started_at: '2026-10-21T09:26:06Z'
+finished_at: '2026-10-21T09:31:03Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Initial input capture preceded assessment.
+    Entire native record, exact source row, source configuration and relevant transforms
+    were inspected, with official structures, the sole adopted original abstract and
+    a separate computational primary study.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Native asphodelin A chemistry agrees with official ChEBI and independently
+  parsed PubChem structures. The adopted original abstract identifies exact aglycone
+  compound 2 and reports antimicrobial activity separately from glucoside compound
+  1. Its full organism-specific assays remain inaccessible. A later original docking
+  study supplies predictions, not measured target inhibition. No confirmed native
+  error; one informational follow-up requests qualified primary assay evidence. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/asphodelin-a.yaml
+    sha256: 67f0dee00efb9d6817b8d0cac3bce35a626fb54568570f0fee5452a5bc8f5647
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:65453
+  path: data/antibiotics/antibacterial/asphodelin-a.yaml
+  label: asphodelin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole exact aglycone record, all native identifiers and assertions,
+    adopted primary citation, official identity and a bounded computational mechanism
+    lead.
+  selection: Queue 114, CHEBI:65453 at its locked native path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:65453
+  exclusions:
+  - target: Asphodelin A 4-prime-O-beta-D-glucoside and other coumarin antibiotics
+      as exact substitutes
+    reason: The aglycone is original compound 2; glycoside compound 1 and antibiotic
+      aminocoumarins have different structures and assay attribution.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validation exited 0.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/asphodelin-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict scan exited 0 without ERROR rows.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/asphodelin-a.yaml --out /private/tmp/am-review-session/114-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Native SMILES/InChI, formula, charge, masses and source mint agree.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 114
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter
+  name: Structured gene-context cross-check
+  status: passed
+  required: false
+  summary: Exit 0; exact gyrB gene context returned, with no target-binding inference.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise_mg1655 --query gyrB
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:65453
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/asphodelin-a.yaml
+  locator: Entire YAML, including three seed/reseed events.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: supports
+  summary: SEEDED and EXACT ChEBI aglycone with two exact chemical synonyms, two structural
+    parents, antibacterial and antifungal roles, one Reaxys xref and one source concept.
+    The biological definition names three bacteria and two fungi. No target, mode
+    of action, quantitative activity, resistance, structured producer, clinical use,
+    causal graph or transcriptomics assertion is present. Optional absence is not
+    a schema error.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: 114-raw.json, complete adopted row at line 1176; relevant ChEBI config,
+    extractor and seeder.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: supports
+  summary: Native chemistry, names, biological definition, parents, roles and Reaxys
+    crosswalk reproduce the adopted CHEBI:65453 row. Sole citation is PMID 17253862.
+    Extraction deliberately retains literature as leads rather than claim-level evidence;
+    role priority files the record under antibacterial while preserving the antifungal
+    role. The adjacent glucoside is a distinct exact structure. All 13 maintained
+    inputs remain unchanged.
+  snapshot_sha256: 60b79c78e7495b364970376d8b5c3b0c1c30f4a31c25eda1c002949f36a8e718
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:65453
+  locator: 114-chebi.html/txt; complete chemical, name, ontology, registry and metabolite-source
+    sections.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: supports
+  summary: Official ChEBI agrees on neutral C15H10O6, key OZOZCKVLUMXFGS-UHFFFAOYSA-N
+    and the 3-(2,4-dihydroxyphenyl)-4,7-dihydroxycoumarin structure. Parents CHEBI:26195
+    and CHEBI:37912 are polyphenol and hydroxycoumarin. Roles CHEBI:33282 and CHEBI:35718
+    are antibacterial and antifungal. Reaxys 11288782 is listed but its underlying
+    paid entry is uninspected. The incoming functional-parent link from glucoside
+    CHEBI:65454 does not merge the records.
+  snapshot_sha256: e4cc2b8e01ac2027467fbee6e656e2ae82dde9a1191a8435a287972be449f2ea
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit and official PubChem structure
+  locator: 114-chemistry.json and 114-pubchem.json; official PubChem CID 54679752
+    SMILES independently parsed.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: supports
+  summary: Native SMILES and InChI yield one neutral fragment without tetrahedral
+    stereocentres, the same full key, formula C15H10O6, average mass 286.239 and exact
+    mass 286.04773804 consistent with stored precision. Deterministic source mint
+    agrees. Independently parsed official PubChem SMILES yields the same key; the
+    aglycone is chemically distinct from its glycoside.
+  snapshot_sha256: e2c17014ae92d83af5f66cfb6552cf155ecd45b96a92b25f52e83539731c0240
+- evidence_id: primary
+  kind: primary_source
+  reference: DOI:10.1021/np060444u
+  locator: PMID 17253862; complete original abstract and metadata in 114-epmc.json.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: partial
+  summary: The complete original El-Seedi abstract identifies asphodelin A 4-prime-O-beta-D-glucoside
+    as compound 1 and its aglycone asphodelin A as compound 2 after bioactivity-directed
+    fractionation of Asphodelus microcarpus. The explicit chemical names agree with
+    the native structures. It describes moderate activity for 1 and potent activity
+    for 2, without numerical endpoints, strains, media, root-specific extraction details
+    or enzyme experiments. Bibliographic indexing names the bacterial/fungal groups
+    but is not an independently inspected compound-specific assay table.
+  snapshot_sha256: 025524fe5aa77f83685130de04719c09c0cbbd3e2e06fb7529c8dc4b3205a882
+- evidence_id: access
+  kind: search
+  reference: Bounded primary full-text and exact-mechanism search
+  locator: 114-fetch-results.json; same-paper 113 author/repository searches and new
+    exact-aglycone mechanism searches.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: context_only
+  summary: The new ACS PDF attempt returned 403; prior same-paper official main routes
+    also failed. The author ResearchGate record is request-only, and bounded free
+    author/repository searches found no full original. Review tables supply numerical
+    MICs and gyrase labels, but are leads only. A separate accessible original docking
+    study was inspected and is explicitly computational.
+  search_scope: Exact name, key, DOI 10.1021/np060444u, PMID 17253862, original title,
+    full-text/author repository and gyrase/mechanism terms; free sources only.
+  snapshot_sha256: e0ce177ac66b1ab2143750d31c15924b30d5a336de16f78631bd63aa7a1415b3
+- evidence_id: docking
+  kind: primary_source
+  reference: DOI:10.3390/antibiotics5030030
+  locator: PMID 27626453, PMC5039526; complete abstract, Computational Methods and
+    Conclusions, and exact asphodelin A ligand-295 rows with headers in Tables 2–4,
+    114-PMC5039526.xml.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: context_only
+  summary: The original 2016 study computationally docks 561 phytochemicals. Asphodelin
+    A is ligand 295 with predicted scores against peptide deformylases, topoisomerases/gyrase,
+    phosphatases, mycobacterial UGM/CYP121 and DNA ligases. Structures are built and
+    optimized, flexible ligands are docked to rigid protein models, and the authors
+    describe solvation, permeability, bioavailability and modeling limitations. These
+    are not measured binding affinities, enzyme inhibition, antimicrobial MICs or
+    validated causal targets. No protein target should be promoted from these scores.
+  snapshot_sha256: 80c5a65ef46bda6664afd765d3ba70a6f1d2ebae2c8b3f6c7a6f2cdb0306c84b
+- evidence_id: local-search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 114-local-hits.txt and 114-maintained-search.txt.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive searches locate the native record, maintained
+    source row, neighboring glucoside and readiness context. No exact-aglycone curated
+    primary addition was found among the searched maintained owners. Historical reports
+    and generated products were leads only.
+  search_scope: rg --no-ignore --hidden for asphodelin, Asphodelin, OZOZCKVLUMXFGS
+    and CHEBI:65453 across batch012, then maintained curation/conf/scripts/data/raw/src/reports/reviews;
+    initial scan excludes .git and .venv.
+  snapshot_sha256: 8717435b58273575d02a3d6f83aab41af534be290934cb340b9e7200c0308a62
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise_mg1655
+  locator: Same-session successful 055 inventory; 114-imodulondb-gyrB.txt.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: context_only
+  summary: No native protein or response claim triggered a pre-search query. After
+    the docking lead emerged, a structured gyrB query returned gene e_coli/precise_mg1655/b3699
+    and no iModulon match. This supplies gene context only; it neither demonstrates
+    asphodelin binding nor proves inhibition, resistance, a compound-induced transcriptomic
+    response or absence of biological activity.
+  snapshot_sha256: 7ae9d5ddafa4c6b69e35b85c41caf94becc517f8953ef61a2c5980bfef29c196
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, evidence placement, activity, target and producer rules; CLAUDE
+    and native review profile.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: supports
+  summary: A glycoside and its aglycone require separate assay attribution. Isolation
+    supports source occurrence; biosynthesis and producer-gene claims need further
+    evidence. Optional evidence gaps do not justify fabricated mechanisms or status
+    promotion.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused gates and input audit
+  locator: 114-focused-results.json, schema/strict logs and independent chemistry
+    output.
+  accessed_at: '2026-10-21T09:28:03Z'
+  support: supports
+  summary: All focused checks pass, and all 13 captured maintained inputs remain unchanged.
+    Three seed/reseed events are consistent with SEEDED. No native record edits, paid
+    access or contact occurred during the scientific review.
+  snapshot_sha256: 02cde348279839bba01cee088b9d9849d231df19eb5d29229df133e46e0cd52a
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact aglycone chemistry and identifiers
+  outcome: supported
+  summary: Official sources and independent calculations agree on the neutral aglycone,
+    all substitution positions and source mint; Reaxys remains source-crosswalk-only.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - identity
+  - chemistry
+  - primary
+- assessment_id: activity
+  area: evidence
+  topic: General antimicrobial activity versus exact organism detail
+  outcome: unknown
+  summary: The sole adopted original abstract supports exact-aglycone antimicrobial
+    activity. Named-organism details and root-specific isolation are supported by
+    ChEBI but remain unverified against the inaccessible full original assay. No conflicting
+    primary result was established.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - primary
+  - identity
+  - access
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional target, mode and causal graph
+  outcome: unknown
+  summary: The accessible original study offers computational docking predictions
+    only. Neither those scores, review-table labels nor a gyrB expression-catalog
+    match establishes an experimentally verified direct target. Missing optional targets
+    and mode are not errors.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - primary
+  - docking
+  - adapter
+  - rubric
+- assessment_id: other
+  area: completeness
+  topic: Resistance, producer, clinical and datasets
+  outcome: unknown
+  summary: No unsupported native claim in these optional fields. The isolated plant
+    source is not evidence for an identified biosynthetic pathway or microbial producer.
+    No clinical efficacy or transcriptomics inferred.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - record
+  - primary
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained sources and primary annotation owner
+  outcome: supported
+  summary: ChEBI extraction/seed owners reproduce the row; the actual native path
+    owns any later primary-evidence annotation.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - source
+  - rubric
+- assessment_id: gates
+  area: schema
+  topic: Focused validation and history
+  outcome: supported
+  summary: Focused schema, strict and chemistry gates pass; scientific status remains
+    SEEDED.
+  target_ids:
+  - CHEBI:65453
+  evidence_ids:
+  - validation
+  - record
+findings:
+- finding_id: F1
+  issue_key: asphodelin-a-qualified-primary-assay-followup
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Inspect compound-2 assays before quantitative or experimental-target enrichment
+  description: The adopted original abstract supports asphodelin A compound 2 and
+    antimicrobial activity, but not the full organism-specific assay details. Retrieve
+    the original table and methods before adding potency or a measured protein target.
+    The later exact-ligand study is docking only; keep its hypothetical target interactions
+    distinct from experimentally demonstrated mechanisms.
+  target_ids:
+  - CHEBI:65453
+  field_paths:
+  - definition
+  - activity_spectrum
+  - molecular_targets
+  - mode_of_action
+  - evidence
+  - discussions
+  evidence_ids:
+  - primary
+  - access
+  - docking
+  - adapter
+  - identity
+  - rubric
+  rule_id: 'native-review-checklist: Exact-subject primary evidence and completeness'
+  native_severity: informational optional evidence enrichment with an access limitation
+  normalization_reason: No confirmed wrong assertion or required-field failure; source
+    detail is limited by primary access. Secondary tables cannot replace original
+    inspection.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/asphodelin-a.yaml
+    role: Curator-owned primary evidence and qualified activity annotations through
+      the validated writer and history helper
+actions:
+- action_id: A1
+  description: Retrieve and inspect the original aglycone assays, then curate only
+    bounded exact-compound evidence.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:65453
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/asphodelin-a.yaml
+    role: Curator-owned primary evidence and qualified activity annotations through
+      the validated writer and history helper
+  acceptance_checks:
+  - Match original compound 2 to native C15H10O6 and full key OZOZCKVLUMXFGS-UHFFFAOYSA-N;
+    do not transfer glycoside compound-1 potency.
+  - Read the original table and Methods for each named organism, strain, medium, endpoint,
+    concentration, unit and root-versus-bulb source. Preserve the distinction between
+    inhibition and killing.
+  - Treat the 2016 ligand-295 scores as computational predictions. Require exact-compound
+    enzyme, binding or other suitable primary experiments before adding a demonstrated
+    gyrase or other molecular target. Expression-catalog gene matches do not establish
+    that evidence.
+  - Do not transfer aminocoumarin gyrase mechanisms to this arylcoumarin on the basis
+    of scaffold naming.
+  - Plant isolation establishes source occurrence; do not infer biosynthetic genes,
+    microbial production, clinical efficacy or resistance determinants.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/asphodelin-a.yaml
+    for separately authorized primary curation, then run focused/shared gates without
+    automatic REVIEWED promotion.
+limitations:
+- The sole adopted original abstract was read in full. ACS PDF/main routes are inaccessible,
+  and bounded free author/repository searches did not retrieve the main text. Original
+  spectra, exact assay table, strain conditions and root/bulb methods remain uninspected.
+- Named-organism and root-source wording remains ontology-supported; the primary abstract
+  does not resolve those details. This is an access limit, not proof the assertions
+  are false.
+- The 2016 computational paper was read for its abstract, complete Computational Methods
+  and Conclusions, and exact ligand-295 table rows with headers. The entire 561-compound
+  survey, supplementary ligand structures and raw docking poses were not audited.
+  No direct target or potency is inferred.
+- Reaxys 11288782 remains source-crosswalk-only. No exhaustive literature, producer
+  or resistance census is claimed.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
