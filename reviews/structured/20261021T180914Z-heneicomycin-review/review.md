@@ -1,0 +1,908 @@
+# Heneicomycin: the PubChem fallback has the wrong terminal alkene geometry
+
+- Review: 20261021T180914Z-heneicomycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T17:48:33Z
+- Finished UTC: 2026-10-21T18:09:14Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The stored graph faithfully reproduces current PubChem but assigns E to the terminal C37=C38 bond. Independently inspected original 1979 and adopted 1991 structure figures show Z, supported by the 1991 proton-coupling data. This is a blocker exact-identity error. The original isolation and antibacterial papers support the named natural product, producer and elfamycin relationship, with assay and remaining stereochemical boundaries retained.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Assigned queue position 527; one exact native record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-828c8da980 | data/antibiotics/antibacterial/heneicomycin.yaml | generated | heneicomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-828c8da980 | Actual focused execution exited 0. Executed against worktree 053; chemistry used existing 019 RDKit and native validators used 053. Passing chemistry verifies encoding consistency, not natural-product identity. |
+| Focused schema verification | passed | True | antibioticmech:aro-828c8da980 | Actual focused execution exited 0. Executed against worktree 053; chemistry used existing 019 RDKit and native validators used 053. Passing chemistry verifies encoding consistency, not natural-product identity. |
+| Focused strict verification | passed | True | antibioticmech:aro-828c8da980 | Actual focused execution exited 0. Executed against worktree 053; chemistry used existing 019 RDKit and native validators used 053. Passing chemistry verifies encoding consistency, not natural-product identity. |
+| Authoritative full QC | failed | True | antibioticmech:aro-828c8da980 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-828c8da980 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-828c8da980 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-828c8da980 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-828c8da980 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-828c8da980 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-828c8da980 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-828c8da980 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-828c8da980 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact natural-product geometry versus reproducible fallback
+
+identity: concern. Targets: antibioticmech:aro-828c8da980.
+
+The graph parses and agrees with its current PubChem source, but C37=C38 is E where the actual original isolation/structure figures show Z. Formula, mass and ten assigned tetrahedra do not rescue the wrong geometric isomer. The diagnostic changes only this bond and preserves remaining stereochemistry without overclaiming its complete experimental adjudication.
+
+### MINTED identifier, class hierarchy and exact PubChem xref
+
+grounding: concern. Targets: antibioticmech:aro-828c8da980.
+
+The ARO mint is deterministic and the asserted broader elfamycin class follows the current kirromycin-like hierarchy. The exact PubChem xref faithfully identifies the same wrong terminal geometry. This is one coupled fallback identity failure, not an additional duplicated finding. MINTED status itself is not an error.
+
+### Definition, producer and antibacterial filing
+
+evidence: supported. Targets: antibioticmech:aro-828c8da980.
+
+Both adopted originals were read in full, together with the original isolation report. They support the intended natural heneicomycin, S. filipinensis producer and structural relationship to aurodox/kirromycin/efrotomycin. Biological measurements concern the natural preparation, not an independently tested terminal-E isomer.
+
+### Mechanism and assay enrichment limits
+
+completeness: supported. Targets: antibioticmech:aro-828c8da980.
+
+No native direct target, resistance or causal claim is present. The 1979 mechanism discussion is analogy, while ontology-class reviews concern other agents; no EF-Tu primary claim is manufactured. Optional activity_spectrum and structured producer fields can be considered after identity repair, with exact strain, time, medium and material qualifiers.
+
+### Whole-record ownership and history
+
+provenance: supported. Targets: antibioticmech:aro-828c8da980.
+
+The entire record, all adopted source rows and three seed/reseed history events were read. Original 13 hashes and expanded 29 inputs were preserved. ARO/PubChem extraction and fallback owners, not ChEBI, own the future repair. No native scientific status was changed.
+
+## Findings
+
+### F1: The stored terminal alkene is the wrong geometric isomer
+
+blocker / open / confirmed; issue key: heneicomycin-terminal-e-versus-natural-z.
+
+The native SMILES/InChI and exact PubChem135612719 encode C37=C38 as E (zero-based native atoms 50=51). The independently inspected1979 Fig 1 and adopted 1991 p838 full structure plus p841 Fig 2 show Z; the original Table 2 terminal-proton coupling reinforces this assignment. Changing only that bond yields diagnostic key VKGDSUWMXCVJEA-HYJCFLTESA-N with unchanged constitution and tetrahedral layer. The named natural product cannot be identified by an all-E fallback simply because internal validation and the database agree.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate and repair the ARO-to-PubChem structure fallback through maintained owners.
+
+- Map primary C37=C38 to native 50=51 and require Z geometry. Verify the remaining absolute stereochemistry against appropriate original evidence before adopting a complete replacement graph; the diagnostic candidate is not a newly verified public accession.
+- Update all coupled structure fields and exact chemical xrefs consistently. Do not retain CID135612719 as exact equivalence to a corrected Z graph unless that authority is corrected. Preserve original source provenance and avoid direct generated-YAML edits.
+- Regenerate and run exact geometry/mapping, formula/charge/mass, schema/strict, reference/history and required corpus reproduction checks.
+
+### A2
+
+Optional primary activity and producer enrichment after structure adjudication.
+
+- Use exact historical strain codes, medium,24/48 h endpoint, MIC units and inequalities from the heneicomycin columns. Keep zone diameters, mouse mg/dose protection and plasma bioassays separate.
+- Retain the historical hydrated-powder qualification and avoid converting ion adducts to salt identities.
+- Do not turn class reviews, comparator personal communication or structural analogy into direct heneicomycin target/resistance claims; any authorized native annotation uses the separate validated-writer/history workflow.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/heneicomycin.yaml; Entire native YAML: definition, class, chemistry, both xrefs, source and all three history entries | supports | This MINTED/SEEDED ARO record has neutral C44H62N2O11, ten assigned tetrahedra and seven assigned acyclic E alkenes. No molecular target, resistance, activity_spectrum, clinical product or causal graph is asserted. The producer is a definition statement. |
+| owners | data/raw/aro_antibiotics.tsv#ARO:3001264; ARO row240, PubChem fallback row74, readiness row2719 and exact owner search | context_only | The raw ARO row supplies two adopted PMIDs and CID135612719. The PubChem row supplies the native structure. Original 13 input hashes were preserved; actual ARO/PubChem and transform/context hashes were appended, giving 29 inputs. No exact curator/decision override or target/resistance row was found. Owner roles were corrected in scratch to the actual ARO/PubChem generation path rather than the initial generic ChEBI template. |
+| search | /private/tmp/am-review-session/527-context-search.txt; Original whole-tree capture and ignored-inclusive source-owner follow-up | context_only | The label, identifier, source accession and slug were searched with hidden and gitignored files included. Absence statements are limited to the searched exact maintained rows and sources. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Current ARO:3001264, ARO:3001310 and ARO:3001219; extracted527-current-aro-terms.txt | supports | Current ARO retains heneicomycin, its kirromycin-like parent, transitive elfamycin class, two original references and the PubChem mapping. This verifies source transcription and ontology hierarchy, not natural-product geometry. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/135612719/property/MolecularFormula,MolecularWeight,MonoisotopicMass,InChI,InChIKey,IUPACName,CanonicalSMILES,IsomericSMILES/JSON; CID135612719 current complete SMILES/InChI/key and IUPAC name | supports | Current official PubChem exactly reproduces native key VKGDSUWMXCVJEA-ZODLGNRVSA-N. Its IUPAC name explicitly gives the pyran-attached pentadienyl group as 1E,3E. Agreement with the fallback therefore reproduces the terminal-geometry error rather than resolving it. |
+| name-lookup | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/heneicomycin/cids/JSON?name_type=complete; Exact complete-name CID lookup | context_only | The complete heneicomycin name resolves only CID135612719 in this response. No independently verified alternate PubChem exact graph was found through this bounded lookup; the scratch Z candidate is not represented as an adopted accession. |
+| mapping | /private/tmp/am-review-session/527-final-map.py; 019 RDKit2026.03.5, cwd053; explicit primary-number/native-index map | supports | Primary C35,C36,C37,C38,C39 map to native zero-based atoms 48,49,50,51,52. Native 50=51 is E. Both primary figures place the carbon substituents on the same side, hence Z; literal1979 figure-coordinate signs agree. Changing only this bond gives diagnostic key VKGDSUWMXCVJEA-HYJCFLTESA-N, with unchanged connectivity, formula, charge and tetrahedral layer. This diagnoses the error but does not independently certify all ten absolute centres. |
+| primary1991 | PMID:1917698; DOI10.7164/antibiotics.44.838; complete six-page main text, actual p838 structure and p841 Table 2/Fig 2 inspected | supports | The adopted original identifies isolated heneicomycin as the C30-deoxy analogue of aurodox, with C44H62N2O11 and a methylene at C30. It reports mass/NMR data and relative pyran stereochemical NOE analysis. Its p838 numbered full structure and p841 Fig 2 show C37=C38 Z. Table 2 lists H38 as a doublet of quartets with 10.5 and 7 Hz couplings; H35 has 15 Hz, consistent with the adjacent E bond. The study is structural characterization, not a direct antibacterial-target assay. |
+| primary1991-structure | https://www.jstage.jst.go.jp/article/antibiotics1968/44/8/44_8_838/_pdf; Actual original p838 full numbered structure, compound 1 R=H versus aurodox 2 R=OH | supports | The terminal diene is 35E,37Z. The pyran C30 is a methylene in heneicomycin, distinguishing it from aurodox. The broad original drawing is not treated as a newly established complete absolute-configuration determination for every native tetrahedron. |
+| primary1991-nmr | https://www.jstage.jst.go.jp/article/antibiotics1968/44/8/44_8_838/_pdf; Actual original p841 Table 2 and Fig 2, terminal diene and pyran NOEs | supports | The separately drawn NMR/NOE figure independently retains terminal Z geometry, and the observed proton couplings support it. NOEs establish local relative pyran relationships; the review does not convert them alone into proof of every absolute centre or conflate the C30-deoxy parent with aurodox. |
+| primary1979-isolation | PMID:468741; DOI10.7164/antibiotics.32.665; complete two-page main text and actual p665 Fig 1/Table 1 inspected | supports | The original isolates antibiotic A21A from S. filipinensis NRRL 11044, also called MA-4581. It gives fermentation, extraction and preparative TLC conditions and identifies the product as the deoxy pyran modification of aurodox. Actual Fig 1 independently shows the terminal Z bond. Table 1 is inhibition-zone diameter after 15 µL of 1,000 µg/mL material in 40% acetone/water on seeded nutrient agar; these zones are not MICs. The solvent control had no inhibition. |
+| primary1979-figure | https://www.jstage.jst.go.jp/article/antibiotics1968/32/6/32_6_665/_pdf; Actual original p665 Fig 1 and producer passage | supports | The earlier independent isolation figure already depicts the terminal carbon substituents on the same side of C37=C38. This corroborates the later numbered structural paper rather than relying solely on a coupling threshold or a secondary structure drawing. |
+| primary1979-activity | PMID:468738; DOI10.7164/antibiotics.32.626; complete four-page main text and actual Table 1/Table 2 inspected | supports | The adopted original compares heneicomycin with separate efrotomycin, mocimycin and X-5108 preparations. Table 1 uses brain-heart agar with 5% horse serum, spots of 3×10^2–7×10^3 viable cells and visual scoring at 37 °C after 24/48 h. Heneicomycin MICs include M. bovis 2884 ≤0.4/≤0.4, H. influenzae 2261 1.6/1.6, S. pyogenes C-203 0.8/3.1 and S. aureus 2949 &gt;400/&gt;400 µg/mL. These are bounded historical assays, not universal activity or clinical resistance classifications. |
+| primary1979-table | https://www.jstage.jst.go.jp/article/antibiotics1968/32/6/32_6_626/_pdf; Actual p627 Table 1, exact heneicomycin24 h/48 h columns and footnotes | supports | The actual table confirms the separate time-dependent MIC columns and the inoculum/medium method. A growth-reduction footnote does not change the stated &gt;400 endpoint into an exact MIC, and ng means the control failed to grow at24 h rather than drug inhibition. Comparator columns partly reuse earlier published data. |
+| primary1979-invivo | https://www.jstage.jst.go.jp/article/antibiotics1968/32/6/32_6_626/_pdf; Actual p628 Table 2 and plasma curves; p626 discussion | supports | Mouse protection and plasma-bioassay endpoints are distinct from MICs. Table 2 reports heneicomycin ED50 as mg/dose with two doses, not mg/kg: M. bovis 526 gives 0.49 subcutaneous/1.82 oral and S. pyogenes C203 gives 0.22/0.86. The culture code differs from the in-vitro M. bovis 2884 row. Methods for infection protection are referenced to earlier work; no clinical efficacy is inferred. The discussion only proposes shared mechanism by structural analogy and cites personal communication for a comparator, not a direct heneicomycin–EF-Tu experiment. |
+| material | PMID:1917698; Original p839 characterization, compared with 1979 isolation p666 | context_only | Elemental analyses are calculated for C44H62N2O11·H2O, while mass spectra report the anhydrous molecular moiety and proton/sodium adducts. The native record denotes that neutral molecular graph; the historical hydrated powder and measured ion masses do not establish a native salt or formula error. Assay mass-normalization details should remain explicit in any later enrichment. |
+| primary1995 | PMID:7662297; DOI10.1007/bf01570013; original abstract only | context_only | The original abstract reports heneicomycin/aurodox coproduction by Streptomyces sp. GE44282 and bioconversion of heneicomycin to aurodox by that strain and S. goldiniensis ATCC 21386, but not by the original S. filipinensisNRRL 11044 producer. It supports a strain-specific biosynthetic relationship, not a direct target, universal pathway or new exact-compound potency value. |
+| class-reviews | PMID:12370016; PMID:12370016 and16876786; both current elfamycin-class original abstracts read | context_only | These are secondary EF-Tu mechanism reviews underlying the broader ontology class. Their abstracts concern kirromycin, enacyloxin, aurodox, pulvomycin and GE2270A. They do not independently establish a heneicomycin-specific target/allele/strain experiment, and no such edge is asserted in this native record. |
+| adapter | /private/tmp/am-review-session/527-adapter-scope.json; Applicability assessed before open-web follow-up | context_only | The native record names no gene, protein, regulator, pathway or transcriptomic dataset. Its chemical class and producer statement do not require an expression-module query. The preserved catalog was checked for applicability; no negative biological inference is made. |
+
+## Limits And Additional Notes
+
+- Required shared full-corpus gates are incorporated separately by root before finalization; actual focused checks are recorded here.
+- The original 1991 structure paper,1979 adopted activity paper and1979 isolation communication were read in full. Actual structure figures, the NMR table/NOE figure and activity tables were inspected. The review did not reprocess raw spectral data or reconstruct every absolute tetrahedral assignment from the cited aurodox/kirromycin structural literature. The terminal Z conflict is independently established without those broader claims.
+- The 1995 bioconversion source and both current parent-class mechanism reviews were read at abstract depth. No exact heneicomycin direct-target experiment was retrieved; absence from this bounded review is not a claim that no such study exists.
+- The 1979 protection study delegates some infection methods to an earlier paper, and the samples were limited. Historical mass-based activity uses the reported preparation; hydrate-adjusted active-moiety normalization and modern clinical breakpoints are not supplied.
+- The initial unrestricted EPMC identifier query also returned a non-MED record with a colliding numeric identifier. It was excluded; the subsequent SRC:MED query and original DOI/PDF resolve both adopted papers unambiguously.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 13 original hashes and all 29 expanded input hashes were rechecked before draft writing. No native/source/history/progress/saved-bundle/Git edits were made.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T180914Z-heneicomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Heneicomycin: the PubChem fallback has the wrong terminal alkene geometry'
+started_at: '2026-10-21T17:48:33Z'
+finished_at: '2026-10-21T18:09:14Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The stored graph faithfully reproduces current PubChem but assigns E to the
+  terminal C37=C38 bond. Independently inspected original 1979 and adopted 1991 structure
+  figures show Z, supported by the 1991 proton-coupling data. This is a blocker exact-identity
+  error. The original isolation and antibacterial papers support the named natural
+  product, producer and elfamycin relationship, with assay and remaining stereochemical
+  boundaries retained.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/heneicomycin.yaml
+    sha256: 1254f27c2e5cdf677a3f3301c555a197b77ac7e81cc73cc8378f5ff77ff56746
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-828c8da980
+  path: data/antibiotics/antibacterial/heneicomycin.yaml
+  label: heneicomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem fallback retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 527; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-828c8da980
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed against worktree 053; chemistry
+    used existing 019 RDKit and native validators used 053. Passing chemistry verifies
+    encoding consistency, not natural-product identity.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    527
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against worktree 053; chemistry
+    used existing 019 RDKit and native validators used 053. Passing chemistry verifies
+    encoding consistency, not natural-product identity.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/heneicomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against worktree 053; chemistry
+    used existing 019 RDKit and native validators used 053. Passing chemistry verifies
+    encoding consistency, not natural-product identity.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/heneicomycin.yaml --out /private/tmp/am-review-session/527-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/heneicomycin.yaml
+  locator: 'Entire native YAML: definition, class, chemistry, both xrefs, source and
+    all three history entries'
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: supports
+  summary: This MINTED/SEEDED ARO record has neutral C44H62N2O11, ten assigned tetrahedra
+    and seven assigned acyclic E alkenes. No molecular target, resistance, activity_spectrum,
+    clinical product or causal graph is asserted. The producer is a definition statement.
+  snapshot_sha256: 1254f27c2e5cdf677a3f3301c555a197b77ac7e81cc73cc8378f5ff77ff56746
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv#ARO:3001264
+  locator: ARO row240, PubChem fallback row74, readiness row2719 and exact owner search
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: context_only
+  summary: The raw ARO row supplies two adopted PMIDs and CID135612719. The PubChem
+    row supplies the native structure. Original 13 input hashes were preserved; actual
+    ARO/PubChem and transform/context hashes were appended, giving 29 inputs. No exact
+    curator/decision override or target/resistance row was found. Owner roles were
+    corrected in scratch to the actual ARO/PubChem generation path rather than the
+    initial generic ChEBI template.
+  snapshot_sha256: 8b6f4dcbb6094266862a2aaf2d3f84689dc3d9820a9c61825b8768aab4858189
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/527-context-search.txt
+  locator: Original whole-tree capture and ignored-inclusive source-owner follow-up
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: context_only
+  summary: The label, identifier, source accession and slug were searched with hidden
+    and gitignored files included. Absence statements are limited to the searched
+    exact maintained rows and sources.
+  snapshot_sha256: c8742c8d1eca093412249b071165338dc72604d6ee3e7f10b595eca6c6802814
+  search_scope: Isolated053 original527-local-hits.txt plus rg --no-ignore --hidden
+    in curation/conf/scripts/data/raw and complete exact-row projections.
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Current ARO:3001264, ARO:3001310 and ARO:3001219; extracted527-current-aro-terms.txt
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: Current ARO retains heneicomycin, its kirromycin-like parent, transitive
+    elfamycin class, two original references and the PubChem mapping. This verifies
+    source transcription and ontology hierarchy, not natural-product geometry.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/135612719/property/MolecularFormula,MolecularWeight,MonoisotopicMass,InChI,InChIKey,IUPACName,CanonicalSMILES,IsomericSMILES/JSON
+  locator: CID135612719 current complete SMILES/InChI/key and IUPAC name
+  accessed_at: '2026-10-21T18:05:03.872151Z'
+  support: supports
+  summary: Current official PubChem exactly reproduces native key VKGDSUWMXCVJEA-ZODLGNRVSA-N.
+    Its IUPAC name explicitly gives the pyran-attached pentadienyl group as 1E,3E.
+    Agreement with the fallback therefore reproduces the terminal-geometry error rather
+    than resolving it.
+  snapshot_sha256: cc2655e2e405ab22cc8b79f98ba8cbef1a024510d15569b3947c6d8792ecfcc5
+- evidence_id: name-lookup
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/heneicomycin/cids/JSON?name_type=complete
+  locator: Exact complete-name CID lookup
+  accessed_at: '2026-10-21T18:06:17.232219Z'
+  support: context_only
+  summary: The complete heneicomycin name resolves only CID135612719 in this response.
+    No independently verified alternate PubChem exact graph was found through this
+    bounded lookup; the scratch Z candidate is not represented as an adopted accession.
+  snapshot_sha256: 978407ef7701bc5d5112d1814e072db281f2c208af743bfc2da5d3414ac98bd5
+- evidence_id: mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/527-final-map.py
+  locator: 019 RDKit2026.03.5, cwd053; explicit primary-number/native-index map
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: supports
+  summary: Primary C35,C36,C37,C38,C39 map to native zero-based atoms 48,49,50,51,52.
+    Native 50=51 is E. Both primary figures place the carbon substituents on the same
+    side, hence Z; literal1979 figure-coordinate signs agree. Changing only this bond
+    gives diagnostic key VKGDSUWMXCVJEA-HYJCFLTESA-N, with unchanged connectivity,
+    formula, charge and tetrahedral layer. This diagnoses the error but does not independently
+    certify all ten absolute centres.
+  snapshot_sha256: 86c2b3fb3d7e381c218674b58f8bc3cd895790b29021313bdc86ef93d127850c
+- evidence_id: primary1991
+  kind: primary_source
+  reference: PMID:1917698
+  locator: DOI10.7164/antibiotics.44.838; complete six-page main text, actual p838
+    structure and p841 Table 2/Fig 2 inspected
+  accessed_at: '2026-10-21T18:05:17.488249Z'
+  support: supports
+  summary: The adopted original identifies isolated heneicomycin as the C30-deoxy
+    analogue of aurodox, with C44H62N2O11 and a methylene at C30. It reports mass/NMR
+    data and relative pyran stereochemical NOE analysis. Its p838 numbered full structure
+    and p841 Fig 2 show C37=C38 Z. Table 2 lists H38 as a doublet of quartets with
+    10.5 and 7 Hz couplings; H35 has 15 Hz, consistent with the adjacent E bond. The
+    study is structural characterization, not a direct antibacterial-target assay.
+  snapshot_sha256: d0e3b8a2d472b465c3d50dd219d5cdb8ba70fa6b771b814ed7a9fbc05768dcbe
+- evidence_id: primary1991-structure
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/antibiotics1968/44/8/44_8_838/_pdf
+  locator: Actual original p838 full numbered structure, compound 1 R=H versus aurodox
+    2 R=OH
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: supports
+  summary: The terminal diene is 35E,37Z. The pyran C30 is a methylene in heneicomycin,
+    distinguishing it from aurodox. The broad original drawing is not treated as a
+    newly established complete absolute-configuration determination for every native
+    tetrahedron.
+  snapshot_sha256: 2dc47f6996b3f28ad014a3e28152e63a06ce997c1d3beba26cf9cf6059f41446
+- evidence_id: primary1991-nmr
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/antibiotics1968/44/8/44_8_838/_pdf
+  locator: Actual original p841 Table 2 and Fig 2, terminal diene and pyran NOEs
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: supports
+  summary: The separately drawn NMR/NOE figure independently retains terminal Z geometry,
+    and the observed proton couplings support it. NOEs establish local relative pyran
+    relationships; the review does not convert them alone into proof of every absolute
+    centre or conflate the C30-deoxy parent with aurodox.
+  snapshot_sha256: 6de4af5226c4f3628764afc5cb5e5e0b22998c4818517ca0f41e5e8972a3ba4b
+- evidence_id: primary1979-isolation
+  kind: primary_source
+  reference: PMID:468741
+  locator: DOI10.7164/antibiotics.32.665; complete two-page main text and actual p665
+    Fig 1/Table 1 inspected
+  accessed_at: '2026-10-21T18:05:17.488628Z'
+  support: supports
+  summary: The original isolates antibiotic A21A from S. filipinensis NRRL 11044,
+    also called MA-4581. It gives fermentation, extraction and preparative TLC conditions
+    and identifies the product as the deoxy pyran modification of aurodox. Actual
+    Fig 1 independently shows the terminal Z bond. Table 1 is inhibition-zone diameter
+    after 15 µL of 1,000 µg/mL material in 40% acetone/water on seeded nutrient agar;
+    these zones are not MICs. The solvent control had no inhibition.
+  snapshot_sha256: 052a84d1bf60bec3059924e832001902219be9703a563b1a024f5ee01f810059
+- evidence_id: primary1979-figure
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/antibiotics1968/32/6/32_6_665/_pdf
+  locator: Actual original p665 Fig 1 and producer passage
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: supports
+  summary: The earlier independent isolation figure already depicts the terminal carbon
+    substituents on the same side of C37=C38. This corroborates the later numbered
+    structural paper rather than relying solely on a coupling threshold or a secondary
+    structure drawing.
+  snapshot_sha256: 8f40e8f226565330d16e52dfa3a1116d0ff7a449af72ca46caabbe2b8dd3d9b9
+- evidence_id: primary1979-activity
+  kind: primary_source
+  reference: PMID:468738
+  locator: DOI10.7164/antibiotics.32.626; complete four-page main text and actual
+    Table 1/Table 2 inspected
+  accessed_at: '2026-10-21T18:05:17.488530Z'
+  support: supports
+  summary: The adopted original compares heneicomycin with separate efrotomycin, mocimycin
+    and X-5108 preparations. Table 1 uses brain-heart agar with 5% horse serum, spots
+    of 3×10^2–7×10^3 viable cells and visual scoring at 37 °C after 24/48 h. Heneicomycin
+    MICs include M. bovis 2884 ≤0.4/≤0.4, H. influenzae 2261 1.6/1.6, S. pyogenes
+    C-203 0.8/3.1 and S. aureus 2949 >400/>400 µg/mL. These are bounded historical
+    assays, not universal activity or clinical resistance classifications.
+  snapshot_sha256: 973c59891f62663004368ed60250e94d39c54c9dc0aeb2693c570099b4d60843
+- evidence_id: primary1979-table
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/antibiotics1968/32/6/32_6_626/_pdf
+  locator: Actual p627 Table 1, exact heneicomycin24 h/48 h columns and footnotes
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: supports
+  summary: The actual table confirms the separate time-dependent MIC columns and the
+    inoculum/medium method. A growth-reduction footnote does not change the stated
+    >400 endpoint into an exact MIC, and ng means the control failed to grow at24
+    h rather than drug inhibition. Comparator columns partly reuse earlier published
+    data.
+  snapshot_sha256: ba73d46a02331b937c5895addf7da2c0688042b71a0828fd4390419d7871a154
+- evidence_id: primary1979-invivo
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/antibiotics1968/32/6/32_6_626/_pdf
+  locator: Actual p628 Table 2 and plasma curves; p626 discussion
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: supports
+  summary: 'Mouse protection and plasma-bioassay endpoints are distinct from MICs.
+    Table 2 reports heneicomycin ED50 as mg/dose with two doses, not mg/kg: M. bovis
+    526 gives 0.49 subcutaneous/1.82 oral and S. pyogenes C203 gives 0.22/0.86. The
+    culture code differs from the in-vitro M. bovis 2884 row. Methods for infection
+    protection are referenced to earlier work; no clinical efficacy is inferred. The
+    discussion only proposes shared mechanism by structural analogy and cites personal
+    communication for a comparator, not a direct heneicomycin–EF-Tu experiment.'
+  snapshot_sha256: 5875fbfc6740ea89ab353eb62250566f66a36d1a9dd23d60db5470dcc4c916a2
+- evidence_id: material
+  kind: primary_source
+  reference: PMID:1917698
+  locator: Original p839 characterization, compared with 1979 isolation p666
+  accessed_at: '2026-10-21T18:05:17.488249Z'
+  support: context_only
+  summary: Elemental analyses are calculated for C44H62N2O11·H2O, while mass spectra
+    report the anhydrous molecular moiety and proton/sodium adducts. The native record
+    denotes that neutral molecular graph; the historical hydrated powder and measured
+    ion masses do not establish a native salt or formula error. Assay mass-normalization
+    details should remain explicit in any later enrichment.
+  snapshot_sha256: d0e3b8a2d472b465c3d50dd219d5cdb8ba70fa6b771b814ed7a9fbc05768dcbe
+- evidence_id: primary1995
+  kind: primary_source
+  reference: PMID:7662297
+  locator: DOI10.1007/bf01570013; original abstract only
+  accessed_at: '2026-10-21T18:05:17.488725Z'
+  support: context_only
+  summary: The original abstract reports heneicomycin/aurodox coproduction by Streptomyces
+    sp. GE44282 and bioconversion of heneicomycin to aurodox by that strain and S.
+    goldiniensis ATCC 21386, but not by the original S. filipinensisNRRL 11044 producer.
+    It supports a strain-specific biosynthetic relationship, not a direct target,
+    universal pathway or new exact-compound potency value.
+  snapshot_sha256: 0bfa353102bca58fafdf5adf517273ff6699c9ee805bc8468ba4d6b7bdb6e944
+- evidence_id: class-reviews
+  kind: database
+  reference: PMID:12370016
+  locator: PMID:12370016 and16876786; both current elfamycin-class original abstracts
+    read
+  accessed_at: '2026-10-21T18:05:37.851502Z'
+  support: context_only
+  summary: These are secondary EF-Tu mechanism reviews underlying the broader ontology
+    class. Their abstracts concern kirromycin, enacyloxin, aurodox, pulvomycin and
+    GE2270A. They do not independently establish a heneicomycin-specific target/allele/strain
+    experiment, and no such edge is asserted in this native record.
+  snapshot_sha256: adaa6d64c204a6054343bdea922ea02946b8c4f17d5abef6de1f19e89abc7425
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/527-adapter-scope.json
+  locator: Applicability assessed before open-web follow-up
+  accessed_at: '2026-10-21T18:08:16Z'
+  support: context_only
+  summary: The native record names no gene, protein, regulator, pathway or transcriptomic
+    dataset. Its chemical class and producer statement do not require an expression-module
+    query. The preserved catalog was checked for applicability; no negative biological
+    inference is made.
+  snapshot_sha256: 78e129c1e120326b2cdd00b066bf5727a18e63ce64d4e399c09217c580231b45
+  search_scope: Entire native527 and preserved catalog456460-adapter-catalog.txt;
+    no applicable native protein/gene claim.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact natural-product geometry versus reproducible fallback
+  outcome: concern
+  summary: The graph parses and agrees with its current PubChem source, but C37=C38
+    is E where the actual original isolation/structure figures show Z. Formula, mass
+    and ten assigned tetrahedra do not rescue the wrong geometric isomer. The diagnostic
+    changes only this bond and preserves remaining stereochemistry without overclaiming
+    its complete experimental adjudication.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  evidence_ids:
+  - native
+  - pubchem
+  - mapping
+  - primary1991
+  - primary1991-structure
+  - primary1991-nmr
+  - primary1979-figure
+- assessment_id: grounding
+  area: grounding
+  topic: MINTED identifier, class hierarchy and exact PubChem xref
+  outcome: concern
+  summary: The ARO mint is deterministic and the asserted broader elfamycin class
+    follows the current kirromycin-like hierarchy. The exact PubChem xref faithfully
+    identifies the same wrong terminal geometry. This is one coupled fallback identity
+    failure, not an additional duplicated finding. MINTED status itself is not an
+    error.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  evidence_ids:
+  - aro
+  - pubchem
+  - mapping
+  - owners
+- assessment_id: evidence
+  area: evidence
+  topic: Definition, producer and antibacterial filing
+  outcome: supported
+  summary: Both adopted originals were read in full, together with the original isolation
+    report. They support the intended natural heneicomycin, S. filipinensis producer
+    and structural relationship to aurodox/kirromycin/efrotomycin. Biological measurements
+    concern the natural preparation, not an independently tested terminal-E isomer.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  evidence_ids:
+  - primary1991
+  - primary1979-isolation
+  - primary1979-activity
+  - primary1995
+- assessment_id: completeness
+  area: completeness
+  topic: Mechanism and assay enrichment limits
+  outcome: supported
+  summary: No native direct target, resistance or causal claim is present. The 1979
+    mechanism discussion is analogy, while ontology-class reviews concern other agents;
+    no EF-Tu primary claim is manufactured. Optional activity_spectrum and structured
+    producer fields can be considered after identity repair, with exact strain, time,
+    medium and material qualifiers.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  evidence_ids:
+  - native
+  - primary1979-table
+  - primary1979-invivo
+  - class-reviews
+  - material
+- assessment_id: provenance
+  area: provenance
+  topic: Whole-record ownership and history
+  outcome: supported
+  summary: The entire record, all adopted source rows and three seed/reseed history
+    events were read. Original 13 hashes and expanded 29 inputs were preserved. ARO/PubChem
+    extraction and fallback owners, not ChEBI, own the future repair. No native scientific
+    status was changed.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  evidence_ids:
+  - native
+  - owners
+  - search
+findings:
+- finding_id: F1
+  issue_key: heneicomycin-terminal-e-versus-natural-z
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The stored terminal alkene is the wrong geometric isomer
+  description: The native SMILES/InChI and exact PubChem135612719 encode C37=C38 as
+    E (zero-based native atoms 50=51). The independently inspected1979 Fig 1 and adopted
+    1991 p838 full structure plus p841 Fig 2 show Z; the original Table 2 terminal-proton
+    coupling reinforces this assignment. Changing only that bond yields diagnostic
+    key VKGDSUWMXCVJEA-HYJCFLTESA-N with unchanged constitution and tetrahedral layer.
+    The named natural product cannot be identified by an all-E fallback simply because
+    internal validation and the database agree.
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - xrefs[1]
+  evidence_ids:
+  - native
+  - pubchem
+  - mapping
+  - primary1991-structure
+  - primary1991-nmr
+  - primary1979-figure
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem fallback retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-yaml-record:Workflow:identity
+  native_severity: blocker
+  normalization_reason: The explicit native rubric assigns blocker to wrong chemical
+    identity. An assigned alkene stereoisomer is a different exact structure despite
+    unchanged formula, masses and internally consistent encodings.
+actions:
+- action_id: A1
+  description: Adjudicate and repair the ARO-to-PubChem structure fallback through
+    maintained owners.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, exact xrefs and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem fallback structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem fallback retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Publication-backed exact structure override if required
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Map primary C37=C38 to native 50=51 and require Z geometry. Verify the remaining
+    absolute stereochemistry against appropriate original evidence before adopting
+    a complete replacement graph; the diagnostic candidate is not a newly verified
+    public accession.
+  - Update all coupled structure fields and exact chemical xrefs consistently. Do
+    not retain CID135612719 as exact equivalence to a corrected Z graph unless that
+    authority is corrected. Preserve original source provenance and avoid direct generated-YAML
+    edits.
+  - Regenerate and run exact geometry/mapping, formula/charge/mass, schema/strict,
+    reference/history and required corpus reproduction checks.
+- action_id: A2
+  description: Optional primary activity and producer enrichment after structure adjudication.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-828c8da980
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/heneicomycin.yaml
+    role: Future validated curator-owned literature annotation
+  acceptance_checks:
+  - Use exact historical strain codes, medium,24/48 h endpoint, MIC units and inequalities
+    from the heneicomycin columns. Keep zone diameters, mouse mg/dose protection and
+    plasma bioassays separate.
+  - Retain the historical hydrated-powder qualification and avoid converting ion adducts
+    to salt identities.
+  - Do not turn class reviews, comparator personal communication or structural analogy
+    into direct heneicomycin target/resistance claims; any authorized native annotation
+    uses the separate validated-writer/history workflow.
+limitations:
+- Required shared full-corpus gates are incorporated separately by root before finalization;
+  actual focused checks are recorded here.
+- The original 1991 structure paper,1979 adopted activity paper and1979 isolation
+  communication were read in full. Actual structure figures, the NMR table/NOE figure
+  and activity tables were inspected. The review did not reprocess raw spectral data
+  or reconstruct every absolute tetrahedral assignment from the cited aurodox/kirromycin
+  structural literature. The terminal Z conflict is independently established without
+  those broader claims.
+- The 1995 bioconversion source and both current parent-class mechanism reviews were
+  read at abstract depth. No exact heneicomycin direct-target experiment was retrieved;
+  absence from this bounded review is not a claim that no such study exists.
+- The 1979 protection study delegates some infection methods to an earlier paper,
+  and the samples were limited. Historical mass-based activity uses the reported preparation;
+  hydrate-adjusted active-moiety normalization and modern clinical breakpoints are
+  not supplied.
+- The initial unrestricted EPMC identifier query also returned a non-MED record with
+  a colliding numeric identifier. It was excluded; the subsequent SRC:MED query and
+  original DOI/PDF resolve both adopted papers unambiguously.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 original hashes and all 29 expanded input hashes were rechecked before draft
+  writing. No native/source/history/progress/saved-bundle/Git edits were made.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

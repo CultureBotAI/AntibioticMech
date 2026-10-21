@@ -1,0 +1,628 @@
+schema_version: 1.0.0
+review_id: 20261021T180854Z-helvolic-acid-methyl-ester-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Helvolic acid methyl ester: coherent exact ester with bounded primary activity
+  evidence'
+started_at: '2026-10-21T17:48:32Z'
+finished_at: '2026-10-21T18:08:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The exact methyl ester graph agrees with current ChEBI and the independently
+  inspected original 2016 supplement structure. The original abstract supports the
+  Fusarium/Ficus carica isolation statement and both antibacterial and antifungal
+  activity. All adopted historical leads were resolved at their actual reading depth.
+  No required native correction was established; the inaccessible 2016 main assay
+  table limits numerical and mechanistic enrichment. Scientific assessment retains
+  the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/helvolic-acid-methyl-ester.yaml
+    sha256: 1c0ce1c99f57d41951ca9fdec71946f9728e8af7fd6b3e725498167029b4dd52
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: CHEBI:141360
+  path: data/antibiotics/antibacterial/helvolic-acid-methyl-ester.yaml
+  label: helvolic acid methyl ester
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 525; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:141360
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed in worktree053; chemistry used
+    existing019 RDKit, while native validators used053.
+  target_ids:
+  - CHEBI:141360
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    525
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed in worktree053; chemistry used
+    existing019 RDKit, while native validators used053.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/helvolic-acid-methyl-ester.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed in worktree053; chemistry used
+    existing019 RDKit, while native validators used053.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/helvolic-acid-methyl-ester.yaml --out /private/tmp/am-review-session/525-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:141360
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/helvolic-acid-methyl-ester.yaml
+  locator: Entire native YAML, all synonyms, parent/role terms, chemistry, source
+    and three history events
+  accessed_at: '2026-10-21T17:58:25Z'
+  support: supports
+  summary: Exact CHEBI:141360 is a neutral C34H46O8 methyl ester with two acetate
+    esters and nine assigned tetrahedral centres. It is SEEDED, with no native target,
+    resistance, activity_spectrum, causal graph, clinical-product or structured producer
+    claim. The isolation statement is in the definition. No external chemical xref
+    is asserted.
+  snapshot_sha256: 1c0ce1c99f57d41951ca9fdec71946f9728e8af7fd6b3e725498167029b4dd52
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv#CHEBI:141360
+  locator: Exact ChEBI row2633 and readiness row1366; curator/decision search
+  accessed_at: '2026-10-21T17:58:25Z'
+  support: context_only
+  summary: The full adopted row reproduces identity, definition, three synonyms, three
+    parents, two roles and five citation leads (four PMIDs plus one PMC source). Initial
+    13 input hashes were preserved and expanded to 21 context/owner hashes. No exact
+    curator override or decision row was found in the ignored-inclusive search.
+  snapshot_sha256: 6bbe09cd591127308f45f8063c82258fc825ef48814fe677198480f783eea203
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/525-context-search.txt
+  locator: Initial525-local-hits.txt plus exact source-owner follow-up
+  accessed_at: '2026-10-21T17:58:25Z'
+  support: context_only
+  summary: Label, identifier and slug were searched with hidden/ignored files included;
+    no absence claim relies on a gitignore-sensitive search.
+  snapshot_sha256: d7c44bd8b30ee50db366fa3670d88e7ac38ff30039d4f8dffd12f90b96d9e09d
+  search_scope: Initial whole-tree target capture and rg --no-ignore --hidden in isolated053
+    curation/conf/scripts/data/raw.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/141360/
+  locator: CHEBI:141360 current exact structure, definition and names
+  accessed_at: '2026-10-21T17:56:12.683183Z'
+  support: supports
+  summary: Current ChEBI agrees with native SMILES, InChI, key JHEAWXMXAWIRAB-FTVOIDONSA-N,
+    neutral charge and composition. The ester and acid are distinct chemical identities;
+    no parent-acid mechanism is imported merely from their relationship.
+  snapshot_sha256: 2f4f2fd944da0195afcb8a189056c0b4a30a985db290cc9621c5671cff381c8b
+- evidence_id: chemistry
+  kind: validation
+  reference: /private/tmp/am-review-session/525-map.py
+  locator: 019 RDKit2026.03.5, cwd053; exact authority comparison and functional-group
+    map
+  accessed_at: '2026-10-21T17:58:25Z'
+  support: supports
+  summary: Independent native SMILES/InChI and current authority structures agree.
+    Atom mapping identifies one carboxyl methyl ester and two acetate esters; the
+    specified exocyclic alkene is Z. All nine tetrahedral centres are assigned. Formula,
+    charge, masses and source mint pass focused checks. The inspected native depiction
+    agrees with the primary supplement skeleton, substituents and relative stereochemical
+    drawing.
+  snapshot_sha256: b6457f4e592044941d583d7fe2976c458166ad4250be03755d44e88203121f78
+- evidence_id: term20156
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/20156/
+  locator: CHEBI:20156, current name/definition
+  accessed_at: '2026-10-21T17:56:13.004239Z'
+  support: supports
+  summary: 'Resolved term: 3-oxo-Δ<small><sup>1</small></sup> steroid. The parent
+    is a broader structural class compatible with the mapped graph.'
+  snapshot_sha256: 1f22bb798ac2f9e3272a1c2c9b10755dbeb5805c65d3402cf02f41ff9d7eb4f5
+- evidence_id: term25248
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25248/
+  locator: CHEBI:25248, current name/definition
+  accessed_at: '2026-10-21T17:56:13.358469Z'
+  support: supports
+  summary: 'Resolved term: methyl ester. The parent is a broader structural class
+    compatible with the mapped graph.'
+  snapshot_sha256: c14bd82431a77fb8195daeb8cc70ed6d618c0f727f8faccf9db58e70c39b73bc
+- evidence_id: term47622
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/47622/
+  locator: CHEBI:47622, current name/definition
+  accessed_at: '2026-10-21T17:56:13.411812Z'
+  support: supports
+  summary: 'Resolved term: acetate ester. The parent is a broader structural class
+    compatible with the mapped graph.'
+  snapshot_sha256: 920adf6e3ca4fd81d4289410e249bcd5893dadac27014a9f753d82df2883a005
+- evidence_id: term33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/33282/
+  locator: CHEBI:33282, current name/definition
+  accessed_at: '2026-10-21T17:56:13.503383Z'
+  support: supports
+  summary: 'Resolved term: antibacterial agent. This activity role is supported at
+    qualitative level by the exact-compound original 2016 abstract.'
+  snapshot_sha256: 20d92ce7e00c204b1753184671c043160821d692438278344335446aadcd5082
+- evidence_id: term35718
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/35718/
+  locator: CHEBI:35718, current name/definition
+  accessed_at: '2026-10-21T17:56:13.720107Z'
+  support: supports
+  summary: 'Resolved term: antifungal agent. This activity role is supported at qualitative
+    level by the exact-compound original 2016 abstract.'
+  snapshot_sha256: 7f56c810697e29ebf26829b2fc896e43b7a5e35241e7130921f858ed7a565f2f
+- evidence_id: primary2016
+  kind: primary_source
+  reference: PMID:27265219
+  locator: DOI10.1080/14786419.2016.1190722; original abstract and publisher-linked
+    supplement
+  accessed_at: '2026-10-21T17:56:12.683364Z'
+  support: supports
+  summary: Original authors identify compound 1 as helvolic acid methyl ester, separately
+    from helvolic acid 2 and hydrohelvolic acid 3, isolated from fermentation of a
+    Fusarium endophyte of Ficus carica leaves. The abstract reports both antibacterial
+    and antifungal activity for 1–3. It does not expose exact MIC values, assay conditions
+    or a direct molecular target.
+  snapshot_sha256: c6f32fd51585947829fff5f3251749f1589c950843473c5986c7870d826dcaef
+- evidence_id: primary2016-supp
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/5342791
+  locator: Original supplement, seven pages; actual structure/Table S1 p2, HRESI-MS
+    p6 and FL10 identification p7 inspected
+  accessed_at: '2026-10-21T17:56:27.362978Z'
+  support: supports
+  summary: The actual p2 drawing specifies the methyl ester, two acetates, dioxo steroid
+    framework and stereochemical wedges. Table S1 assigns 34 carbons, including methoxy
+    C34 at 53.6 ppm/3.71 ppm. The p6 positive-ion spectrum labels 583.3284; this is
+    an observed ion, not the neutral exact mass. The p7 morphology/sequence/tree support
+    genus-level Fusarium strain FL10, not an independently resolved species assignment.
+    The supplement contains spectra and strain identification, but no antibacterial
+    MIC table or mechanism experiment.
+  snapshot_sha256: f75915531a1e9e9bd9d922425730b391a20abd5eaa6803cf90cd6eef99ba9732
+- evidence_id: supp-provenance
+  kind: database
+  reference: https://api.figshare.com/v2/articles/3413503
+  locator: Publisher Figshare article 3413503, file 5342791 and IsSupplementTo relation
+  accessed_at: '2026-10-21T17:56:27.361808Z'
+  support: context_only
+  summary: The public file is explicitly supplementary material for DOI10.1080/14786419.2016.1190722,
+    not the main six-page article. This prevents treating the open-access link as
+    full main-text assay access.
+  snapshot_sha256: febbd003c0d02b757efe9d9b608fa7387dc33e2ce575dea74a70b3143f27387e
+- evidence_id: primary1943
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2065538/
+  locator: Crowfoot and Low, original single-page crystallography note, p120, actual
+    scan read
+  accessed_at: '2026-10-21T17:56:46.631949Z'
+  support: context_only
+  summary: The original note separately examines helvolic acid and its methyl ester,
+    reporting unit cells, space groups, densities and estimated molecular weights.
+    Its historical formula assignment predates the modern structure. It does not provide
+    a resolved stereochemical molecular structure or an antibacterial assay of the
+    ester. No obsolete formula is used to contradict the modern graph.
+  snapshot_sha256: b0ab4eea0fd86300efcb1cbc7373c384b984d12ab563ba9a5f760e259d450da3
+- evidence_id: primary1952
+  kind: primary_source
+  reference: PMID:13018119
+  locator: DOI10.1042/bj0510538; actual p539 and selected chemical-property passages
+    in pp538–542
+  accessed_at: '2026-10-21T17:56:47.135287Z'
+  support: context_only
+  summary: The original study describes diazomethane formation of monomethyl helvolate
+    and chemical-group characterization, with then-provisional elemental formulae.
+    It also distinguishes early culture antibacterial activity due to gliotoxin from
+    later helvolic-acid production. This historical chemistry is not a modern exact-ester
+    whole-cell potency table or complete absolute stereochemical proof.
+  snapshot_sha256: ffaf5d6d2224fa5ce87060ba2a3b392e118a720cff6f2783f05c1ad45f673ae1
+- evidence_id: primary1956
+  kind: primary_source
+  reference: PMID:13293169
+  locator: DOI10.1042/bj0620171; actual p173 and selected methyl-helvolate/cephalosporinP1
+    comparative passages
+  accessed_at: '2026-10-21T17:56:46.635660Z'
+  support: context_only
+  summary: The original work compares cephalosporinP1 and helvolic acid and describes
+    hydrogenation of methyl helvolate to methyl tetrahydrohelvolate. It explicitly
+    states that further degradation was needed to establish the carbon skeleton. Cephalosporin
+    antibacterial comparisons and the reduced ester must not be assigned to this exact
+    unreduced methyl ester.
+  snapshot_sha256: 3d31368689bc0a2aa76c28239a83f4587cbf5ecc12dd2ed85fc39d3b527e62cc
+- evidence_id: review2018
+  kind: database
+  reference: PMID:29941838
+  locator: DOI10.3390/jof4030077; selected helvolic-acid paragraph and reference 83
+    in full XML
+  accessed_at: '2026-10-21T17:56:27.727949Z'
+  support: context_only
+  summary: This is a secondary antifungal review, not new experimental evidence. It
+    refers back to the 2016 isolation paper and groups three congeners in a potency
+    range. Such grouped values are not imported as a compound-specific MIC; the original
+    abstract and supplement are the narrower evidence used here.
+  snapshot_sha256: 45a64e2fa9fef69c04f5b336d61a7a5a1135a0dbab47524c7549c5fd3bb1d998
+- evidence_id: adapter
+  kind: search
+  reference: /private/tmp/am-review-session/525-adapter-scope.json
+  locator: Record-specific applicability check before open-web source research
+  accessed_at: '2026-10-21T17:58:25Z'
+  support: context_only
+  summary: No native gene, protein, regulator, pathway or expression-module claim
+    is present. The preserved structured catalog was inspected for applicability;
+    no expression query or negative biological inference was required.
+  snapshot_sha256: 8042518a11e4479ce2de3627593eb083c165e73e8ecb13fde4ab7ddaf3191de2
+  search_scope: Full native525 and preserved iModulonDB catalog456460-adapter-catalog.txt
+    hash.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Methyl ester identity and chemistry
+  outcome: supported
+  summary: Native and current ChEBI agree on the exact neutral ester, all nine tetrahedra
+    and assigned Z geometry. The actual 2016 original supplement drawing independently
+    corroborates the ester skeleton, substituents and stereochemical depiction. Its
+    parent acid, hydrohelvolic acid and hydrogenated historical derivatives remain
+    separate.
+  target_ids:
+  - CHEBI:141360
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - primary2016-supp
+- assessment_id: grounding
+  area: grounding
+  topic: Exact ChEBI identity, synonyms and broader classes
+  outcome: supported
+  summary: CHEBI:141360 is exact and the source mint reproduces. The chemical synonyms
+    consistently denote methyl helvolate. Parents 3-oxo-Delta1 steroid, methyl ester
+    and acetate ester are compatible broader classes; the graph contains the corresponding
+    motifs. No unasserted public lookup is treated as a native xref.
+  target_ids:
+  - CHEBI:141360
+  evidence_ids:
+  - chebi
+  - chemistry
+  - term20156
+  - term25248
+  - term47622
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial filing and antifungal role
+  outcome: supported
+  summary: The exact original 2016 abstract explicitly includes compound 1 among the
+    antibacterial and antifungal products, supporting the qualitative native roles.
+    Numerical potency, clinical susceptibility and molecular mechanism remain unresolved
+    because the main methods/table were inaccessible; none is asserted in the native
+    record.
+  target_ids:
+  - CHEBI:141360
+  evidence_ids:
+  - primary2016
+  - primary2016-supp
+  - term33282
+  - term35718
+- assessment_id: producer
+  area: provenance
+  topic: Definition isolation context
+  outcome: supported
+  summary: Original abstract supports a Fusarium endophyte associated with Ficus carica
+    leaves; the supplement identifies isolate FL10 at genus level. The native wording
+    does not promote a phylogenetic neighbour to a species or confuse the plant with
+    the fungal producer. Historical Aspergillus helvolic-acid production is not substituted
+    for this exact ester isolation.
+  target_ids:
+  - CHEBI:141360
+  evidence_ids:
+  - primary2016
+  - primary2016-supp
+  - primary1952
+- assessment_id: completeness
+  area: completeness
+  topic: Adopted bibliography and optional fields
+  outcome: supported
+  summary: 'All five adopted references were resolved: 2016 original abstract/supplement,
+    1943 original complete scan, 1952/1956 selected original chemical passages, and
+    2018 secondary-review paragraph. Absent activity_spectrum, targets, resistance
+    and causal graphs are optional gaps, not invalid schema or evidence defects. No
+    fusidic-acid or parent-acid target is inferred for the ester.'
+  target_ids:
+  - CHEBI:141360
+  evidence_ids:
+  - owners
+  - primary1943
+  - primary1952
+  - primary1956
+  - primary2016
+  - review2018
+- assessment_id: ownership
+  area: ownership
+  topic: Seeded ownership, history and read-only review
+  outcome: supported
+  summary: All native fields and three seed/reseed history events were read. The ChEBI
+    row/extractor/seeder own generated fields; no curator annotation was invented.
+    Original 13 and expanded 21 hashes were preserved.
+  target_ids:
+  - CHEBI:141360
+  evidence_ids:
+  - native
+  - owners
+  - search
+findings: []
+actions:
+- action_id: A1
+  description: 'Optional follow-up: recover the original 2016 main methods/table before
+    quantitative or mechanistic enrichment.'
+  finding_ids: []
+  target_ids:
+  - CHEBI:141360
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/helvolic-acid-methyl-ester.yaml
+    role: Future validated curator-owned literature annotation
+  acceptance_checks:
+  - Attach only exact compound 1 values after reading the original strain, medium,
+    incubation and endpoint definitions; do not substitute secondary-review ranges
+    or parent-acid values.
+  - Retain Fusarium sp.FL10/plant context without a species assignment unless independently
+    grounded; preserve the exact ester graph.
+  - Use the separate validated-writer/history workflow for any authorized future native
+    additions.
+limitations:
+- Required shared full-corpus gates are incorporated separately by root before finalization;
+  actual focused checks are recorded here.
+- The 2016 main publisher article returned 403 and its public Figshare file is the
+  supplement only. The original abstract and all supplement text were read; actual
+  p2 structure/Table S1 and p6/p7 figures were inspected. No original antibacterial
+  table, complete assay protocol or direct-target experiment was available, and no
+  numerical activity is transferred from secondary sources.
+- The 1943 crystallographic note was read in full. The 1952/1956 sources were read
+  selectively for methyl-ester identity, chemistry and scope, not every reaction or
+  assay in those papers. Their obsolete formula hypotheses are preserved as historical
+  context, not modern exact-equivalence evidence.
+- The original supplement supports its depicted stereochemistry, but the review did
+  not independently reprocess NMR raw data or establish all absolute centres from
+  new experiments. No evidence of a required native stereochemical correction was
+  found.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 original input hashes and all 21 expanded hashes rechecked unchanged before
+  draft writing. No native/source/history/progress/saved-bundle/Git changes were made.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
