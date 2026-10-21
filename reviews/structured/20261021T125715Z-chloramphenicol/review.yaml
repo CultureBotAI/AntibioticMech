@@ -1,0 +1,1157 @@
+schema_version: 1.0.0
+review_id: 20261021T125715Z-chloramphenicol
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Chloramphenicol: sound identity with causal-source and SoxR/S mechanism corrections'
+started_at: '2026-10-21T12:36:38Z'
+finished_at: '2026-10-21T12:57:15Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Complete native read, all adopted lead dispositions, independent
+    public structural comparisons, original claim-bearing target/resistance/graph
+    sections and figures, official CDC/FDA checks, and explicit database-only limits.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'Two major corrections are supported: an archaeal exit-tunnel structure is
+  misapplied to a bacterial PTC graph edge, and SoxR/S regulatory resistance is typed
+  as antibiotic target alteration. Exact molecular identity, accessible chemical grounding,
+  the two CDC observations, fourteen historical FDA assertions, the qualified E. coli
+  target and six curator-added resistance associations are otherwise coherent. All
+  17 adopted/native PMID leads were resolved at explicit reading depths. The 87 imported
+  ARO assertions were checked against raw rows and current terms, not all independently
+  re-proven experimentally.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/chloramphenicol.yaml
+    sha256: aa85b6ffcb39d19950f2c8397ec4c37d5472a959130a79eb1d27aecb62404498
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    role: context
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+  - path: docs/record-review-profile.md
+    role: context
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+  - path: docs/record-reviews.md
+    role: context
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+  - path: conf/record_review.yaml
+    role: context
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    role: context
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+  - path: schema/record_review.yaml
+    role: context
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+  - path: scripts/record_review.py
+    role: context
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+  - path: justfile
+    role: context
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: Additional source owner discovered during seeder trace
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: Additional source owner discovered during seeder trace
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: CARD evidence qualification overlay
+targets:
+- target_id: CHEBI:17698
+  path: data/antibiotics/antibacterial/chloramphenicol.yaml
+  label: chloramphenicol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/chloramphenicol.yaml
+    role: Curator-owned activity, mechanism, primary resistance, target, causal evidence
+      and history
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: ChEBI activity role label resolution
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: CARD/ARO identity and aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: CARD/ARO source-owned resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: CARD/ARO source-owned molecular target assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: FDA product and GSRS exact-structure assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA product ingestion and identity gate
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: CARD target typing or evidence-overlay application owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: CARD target typing or evidence-overlay application owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: CARD evidence qualification overlay
+scope:
+  description: Whole-record review of exact neutral stereodefined chloramphenicol,
+    including populated mechanism, resistance, assay, clinical, graph and history
+    domains.
+  selection: Queue 287 in isolated batch 029; preserved 18 initial input hashes and
+    appended actual source/context owners to 29 inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:17698
+  exclusions:
+  - target: Chloramphenicol esters, salts, stereoisomers, analogs and distinct clinical
+      isolates as exact evidence substitutes
+    reason: Material, strain and allele identity are not interchangeable.
+  - target: Independent primary validation of every experiment underlying all 87 imported
+      ARO associations
+    reason: All source assertions and term definitions were checked at their explicit
+      database tier; original experiments were inspected for populated curator claims
+      and the identified regulator inconsistency.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0 with no errors.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/chloramphenicol.yaml (cwd /private/tmp/antibioticmech-record-reviews-029)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0 with no errors.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/chloramphenicol.yaml --out /private/tmp/am-review-session/287-validation.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-029)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Exact molecular comparison
+  status: passed
+  required: false
+  summary: Native and compared public molecular encodings, formula, charge, masses,
+    stereo and source mints agree.
+  target_ids:
+  - CHEBI:17698
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/287-chemistry.py
+    (cwd /private/tmp/antibioticmech-record-reviews-029)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:17698
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/chloramphenicol.yaml
+  locator: Entire 1396-line native YAML
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: supports
+  summary: Read all identity, aliases, parents, roles, source concepts, chemistry,
+    93 resistance entries, two activity observations, two targets, one graph with
+    five nodes and four edges causal graph, fourteen FDA assertions and all history.
+    REVIEWED/EXACT status and prior qualified primary resistance curation were assessed
+    without editing.
+  snapshot_sha256: 76c7210f07f31aac6d5a0f3dbdadaacf6b2dc51c240b461a6b4250790b448d9c
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_resistance_edges.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; conf/sources.yaml
+  locator: Exact source rows; mechanism_for; attach_card_edges; conf/aro_target_roles.tsv;
+    curation/card_evidence_reviews.json
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: supports
+  summary: All 87 imported resistance labels and mechanism enums reproduce their exact
+    raw ARO rows. SoxR/S rows use mechanism_source_id ARO:0001001. The extractor performs
+    nearest-ancestor traversal over is_a/participates_in; the seeder copies the selected
+    enum. The target-role table types ARO:3000754 as a nucleic-acid direct target,
+    while the seeder explicitly marks primary evidence needed. No target-specific
+    CARD evidence-overlay row was found. All 18 inherited hashes and 29 expanded inputs
+    were rechecked unchanged.
+  snapshot_sha256: b47a767c2a2d105959d6aa24bd1a98145002aecb5fce7867eb6bdfb6349e1c43
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:17698
+  locator: Complete current molecular fields, Names, Manual Xrefs, Registry Numbers
+    and relations
+  accessed_at: '2026-10-21T12:45:27.942196Z'
+  support: supports
+  summary: Current ChEBI repeats the exact neutral (1R,2R) chloramphenicol graph,
+    formula C11H12Cl2N2O5, masses and full InChIKey. Native chemical parents and typed
+    aliases are consistent. Current ChEBI also contains additional metabolite/L16
+    prose not adopted by this native record; it was not imported as producer or direct-target
+    evidence.
+  snapshot_sha256: c0df3f0fe706ed987a2527442b2fb0277647059edea0684840f587118fb6dee4
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit 2026.03.5 molecular comparison
+  locator: 287-chemistry.py and 287-chemistry.json; batch 019 interpreter, batch 029
+    cwd
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: supports
+  summary: Ten encodings from native SMILES/InChI, current ChEBI, PubChem 5959, ChEMBL
+    130, GSRS 66974FR9Q1, KEGG C00918/D00104 and PDB CLM all parse and generate WIIZWVCIJKGZOK-RKDXNWHRSA-N.
+    They have one component, charge zero, two R centers, mass 323.132 and exact mass
+    322.012326844. Both SHA256-derived source mints agree.
+  snapshot_sha256: c76bfb9655241638ddd52e122f88a81c881d41ee24ba545f111b6186cf97490f
+- evidence_id: xref
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/5959
+  locator: 287-pc.json; 287-chembl.json; KEGG molfiles; 287-CLM.cif; 287-gsrs.json
+  accessed_at: '2026-10-21T12:45:27.942320Z'
+  support: supports
+  summary: The compared public structural identifiers agree at full stereochemical
+    identity. CAS 56-75-7 resolves to the same PubChem graph. GSRS substance 66974FR9Q1
+    is the free chloramphenicol molecule. DrugCentral 589 and ChemSpider 5744 pages
+    identify chloramphenicol; their names alone are not treated as full independent
+    graph verification.
+  snapshot_sha256: 537c25119bb5f36fec54356d76d1823314448fbf372048769a508661dd730904
+- evidence_id: xref-boundaries
+  kind: authority
+  reference: http://www.alanwood.net/pesticides/chloramphenicol.html
+  locator: Redirected BCPC compound page; VSDB 1835; 287-fetch-results.json and 287-final-fetch.json
+  accessed_at: '2026-10-21T12:46:03.267753Z'
+  support: partial
+  summary: The actual pesticides namespace resolves to the BCPC chloramphenicol page,
+    which gives the full matching key/CAS; VSDB 1835 also gives the matching key and
+    stereochemical name. HMDB and DrugBank returned 403, LINCS returned 500, MetaCyc
+    required login, and proprietary Beilstein content was not inspected. Current ChEBI
+    repeats those imported identifiers but does not independently validate them. An
+    exploratory unrelated PPDB route was excluded from identity evidence.
+  snapshot_sha256: a27e3d4a41f2876e5fffcc0aa14dfe64d84a86aade3e92464744a179db1d8d42
+- evidence_id: terms
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/ontologies/aro
+  locator: 287-term-review.json; all 97 exact ARO/ChEBI identifiers
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: partial
+  summary: All 97 queried terms resolve with no obsolete flag. Broad parents fit the
+    molecular graph. Resistance definitions were read at database-assertion depth
+    and compared with native labels/enums; this is not independent experimental verification
+    of all 87 source-owned associations. SoxR/S descriptions identify regulatory efflux/permeability
+    pathways, while ARO:0001001 is target mutation/modification.
+  snapshot_sha256: c6ddd492a9017f5189b1f00e5cffb327516f446e67752e46774d8bed393e7ba8
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/
+  locator: 287-adapter-results.json; 287-adapter-summaries.json; catalog and exact
+    commands
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: context_only
+  summary: The structured catalog and covered-organism gene searches preceded open-ended
+    protein research. E. coli/precise1k genes b4063/b4062 map SoxR/S; component 22
+    SoxS was summarized (117 genes). P. aeruginosa/precise364 component 78 MexS was
+    summarized (40 genes, including mexS/mexE/mexF/oprN). Other efflux/regulator searches
+    and unmatched queries are retained. These are computational expression contexts,
+    not resistant-strain MICs or mutant causation. The initial sandbox DNS failure
+    was resolved through public network retrieval.
+  snapshot_sha256: 4cd87f3034e004ea4994bf52cf72262dd7dfab8233f1bff01e6cbcfac326e076
+- evidence_id: binding2010
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC2951456/
+  locator: PMID:20876128; chloramphenicol Results/Discussion, crystallization Methods
+    and actual Figure 5
+  accessed_at: '2026-10-21T12:46:31.694946Z'
+  support: supports
+  summary: E. coli MRE600 70S crystals were soaked overnight with 100 micromolar Sigma
+    chloramphenicol diluted from an ethanol stock. The approximately 3.3-3.4 A structures
+    place the drug at the bacterial PTC A-site cleft. Figure 5 shows nitrobenzene
+    stacking with C2452 and the distinct orientation from D. radiodurans. The authors
+    observed no corresponding density at the H. marismortui site in these crystals.
+    This supports the existing qualified E. coli target and mode-of-action notes,
+    not a universal claim that other sites never bind.
+  snapshot_sha256: de8004ef63618774798f0c2a84fbeaecec4ba4452112946c14336a87068bb4e9
+- evidence_id: binding2003
+  kind: primary_source
+  reference: https://doi.org/10.1016/S0022-2836(03)00668-5
+  locator: PMID:12860128; archived original PDF pp1064-1066 Figures 4/5, pp1069-1070
+    Discussion, p1071 Methods
+  accessed_at: '2026-10-21T12:52:19.710389Z'
+  support: refutes
+  summary: The actual study used H. marismortui large-subunit crystals and Sigma chloramphenicol
+    at 20 mM in DMSO-containing stabilization buffer. Figure 5b and the chloramphenicol
+    Results place the drug in the exit-tunnel hydrophobic crevice near G2099/A2100,
+    explicitly distinct from the D. radiodurans active-site position discussed from
+    prior work. The authors discuss possible relevance of both sites and more complex
+    kinetics. This source does not itself solve a bacterial chloramphenicol-PTC complex,
+    as implied by graph edge 0.
+  snapshot_sha256: e01240974fd1253c2d2db353dab7e3d5619771eff28573a6c9a640cd3c7d23ad
+- evidence_id: context2022
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC9071271/
+  locator: PMID:35165455; Results, Table 1, toeprinting/crystallography/binding Methods;
+    actual Figure 3 and Extended Data2/7
+  accessed_at: '2026-10-21T12:46:31.693156Z'
+  support: supports
+  summary: T. thermophilus HB8 70S structures with synthetic short peptidyl-tRNA mimics
+    distinguish MTI/MAI from MFI contexts; crystal mixtures used 500 micromolar chloramphenicol.
+    Cell-free osmC toeprints used 200 micromolar drug for 5 min and show sequence-dependent
+    stalling. The separate binding assay used 1.25 micromolar 50S and 2 micromolar
+    14C-chloramphenicol; MAI plus deacylated CACCA strongly increases bound fraction,
+    not a measured universal KD. The authors favor substrate-dependent uncompetitive
+    inhibition. This supports the native context-specific edge 2 note while qualifying
+    the older competitive wording in edge 3.
+  snapshot_sha256: a942f94185920b762eb664466ead950b47d4db5ad307bb534fbe04030de2f0a1
+- evidence_id: historical-site
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC291879/
+  locator: PMID:14654696; original abstract, Introduction and crosslinking Methods
+  accessed_at: '2026-10-21T12:51:52.569840Z'
+  support: context_only
+  summary: The separate 2003 study used E. coli MRE600 and H. halobium R1 ribosomes,
+    generally 1.2 mM chloramphenicol and 365 nm irradiation, and mapped modifications
+    near the exit tunnel. Its bacterial-site inference is distinct from a bacterial
+    active-site crystal structure. It is retained as historical experimental context;
+    the review does not claim that no bacterial exit-tunnel interaction has ever been
+    observed.
+  snapshot_sha256: cd268090c134e5d589b86a0d42467a88148b38b25354032f63e030707022bc54
+- evidence_id: soxr
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC1168631/
+  locator: PMID:15980345; original Methods, Results and actual Figure 3; Figure 4
+    text
+  accessed_at: '2026-10-21T12:50:44.179420Z'
+  support: refutes
+  summary: Clinical E. coli E17/E19/M1 mutant SoxR alleles increased chloramphenicol
+    gradient-plate growth when introduced into TN402, whereas E3/I237 alleles did
+    not show the same constitutive effect. Figure 3 measures millimeters of growth
+    along a 0-30 microgram/mL gradient, not an MIC. Complementary reporter and multicopy
+    wild-type suppression experiments support a regulatory contribution; the mechanism
+    is SoxS-dependent efflux/permeability regulation, not alteration of chloramphenicol-bound
+    23S rRNA. Effects remain allele/background dependent.
+  snapshot_sha256: 2acb7148409eb80f88edd1936452eee0f14ce91a849066aca45ccd39cfbca0ad
+- evidence_id: soxs
+  kind: primary_source
+  reference: https://doi.org/10.1093/jac/dkv105
+  locator: PMID:25921515; complete original abstract in 287-sox-core.json
+  accessed_at: '2026-10-21T12:50:04.974436Z'
+  support: refutes
+  summary: The 2015 study reconstructed SoxS Ala12Ser and wild-type soxS in the E.
+    coli JW4023 soxS-null background by allelic exchange. The mutant increased chloramphenicol
+    MIC and soxS/acrB expression relative to restored wild type. This directly supports
+    a regulatory efflux contribution for that allele, not drug-target alteration.
+    The full PDF returned 403; no uninspected numerical MIC or universal mutation
+    rule is inferred.
+  snapshot_sha256: b7c6dedf627ce4823e2cd5f50ed7d3efcc2c948be92a3fedcc74c586b6b73c96
+- evidence_id: sox-related
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3071027/
+  locator: PMID:21226770 and PMID:11302826 original abstracts; 287-sox-core.json
+  accessed_at: '2026-10-21T12:50:04.974436Z'
+  support: context_only
+  summary: The 2011 study directly tests SoxR redox sensing, not chloramphenicol MIC;
+    the 2001 study examines acrB/marA/soxS expression in fluoroquinolone-resistant
+    isolates. These additional ontology-linked leads are contextual and are not substituted
+    for the chloramphenicol-specific mutant experiments.
+  snapshot_sha256: b7c6dedf627ce4823e2cd5f50ed7d3efcc2c948be92a3fedcc74c586b6b73c96
+- evidence_id: avian
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC89696/
+  locator: PMID:10639375; original Methods, Tables 1/2 and Results
+  accessed_at: '2026-10-21T12:46:32.332165Z'
+  support: supports
+  summary: Among 100 avian E. coli isolates, four flo-positive named isolates 5334/5790/5840/6468
+    were chloramphenicol resistant; 6468 additionally carried cmlA. Table 1 reports
+    chloramphenicol 100 microgram/mL for each and separate florfenicol values 32-64
+    microgram/mL. The source includes disk screening, gene detection and plasmid analyses.
+    Native qualitative association/UNKNOWN entries appropriately avoid asserting a
+    specific allele, genome or gene-specific causation.
+  snapshot_sha256: 2a4dd262b4dfab23cb67bcf92fdd57be6231b2e38fef576312ae8c36eb530ed3
+- evidence_id: bovine
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC87642/
+  locator: PMID:11101601; Methods, Results and Tables 1/2
+  accessed_at: '2026-10-21T12:46:32.223962Z'
+  support: supports
+  summary: The 48 calf-diarrhea E. coli isolates were tested by Sensititre broth microdilution
+    under NCCLS methods. Table 2 gives flo-only chloramphenicol MICs from at-or-below
+    16 to above 256 microgram/mL, dual flo/cmlA from 64 to above 256, and cmlA-only
+    from 32 to above 256. All 12 cmlA-positive isolates had chloramphenicol MIC at
+    least 32; the 8 dual-positive isolates had at least 64. The native resistant-subgroup
+    qualification avoids incorrectly declaring every flo-positive isolate resistant.
+  snapshot_sha256: 9128241bca7351228f9928d01febac69668c16535170974ce0d6d7e4f143c9a6
+- evidence_id: sof1
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC90522/
+  locator: PMID:11353602; Methods and SOF-1 susceptibility/integron Results; Table
+    1 scope
+  accessed_at: '2026-10-21T12:46:32.155121Z'
+  support: supports
+  summary: SOF-1 was a 1999 rectal-swab P. aeruginosa clinical isolate. Chloramphenicol
+    disk resistance is explicitly reported as data not shown, and CMLA6 occurs downstream
+    in the integron. The measured MIC table and uptake experiments concern beta-lactams/norfloxacin,
+    not a chloramphenicol MIC or CMLA6 knockout/complementation. Native wording correctly
+    keeps co-occurrence and qualitative phenotype separate.
+  snapshot_sha256: eb72824cc156348a80295e808fa0cd613afbccf26874119a923e64e18440066f
+- evidence_id: accessions
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q933G9.json
+  locator: Q933G9/Q9F0D9 complete references; ENA AF294653.1 and AF252855.1 feature
+    tables
+  accessed_at: '2026-10-21T12:45:29.314247Z'
+  support: supports
+  summary: Q933G9 combines CmlA6/cmlA1 sequence references, including AF294653 for
+    the SOF-1 paper; it is unreviewed sequence context, not a strain genome. Q9F0D9
+    links the 2000 bovine flo sequence AF252855 and a separate 2004 EC56/pEC56 submission.
+    AF252855 is1378 bp and AF294653 is4148 bp, not whole genomes. Neither proves exact
+    alleles for the four avian isolates; the native caveats are supported.
+  snapshot_sha256: 9a1e0f6add0718e3257a171b3a65291576faca11e0dfd31ea8faf8114d2b7c6c
+- evidence_id: cdc
+  kind: authority
+  reference: https://wwwn.cdc.gov/arisolatebank/panel/IsolateDetail?IsolateID=10093&PanelID=1130
+  locator: 287-cdc0782.html and 287-cdc0780.html; chloramphenicol susceptibility rows
+    and method footnotes
+  accessed_at: '2026-10-21T12:45:28.718866Z'
+  support: supports
+  summary: The actual linked CDC pages independently reproduce E. faecalis 0782 and
+    0780, chloramphenicol>32 microgram/mL, resistant call, modal broth-microdilution
+    MIC and CLSI 2025 M100 S35. One microgram/mL equals one mg/L, so native value/unit/comparator
+    are preserved. CDC also links0782 to SAMN15040081; no genome or genotype causation
+    is inferred.
+  snapshot_sha256: 62e33c1a6a50ab6f97fe3aa351040671a92525e8b2904fe47dadcfa3f7431fb7
+- evidence_id: biosample
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN15040081
+  locator: BioSample complete XML; identifiers, taxon and antibiogram
+  accessed_at: '2026-10-21T12:45:29.114041Z'
+  support: partial
+  summary: SAMN15040081 is AR-0782, E. faecalis taxon 1351, panel VRE-02. Its older
+    antibiogram encodes chloramphenicol>=32 mg/L, while the current cited CDC page
+    uses>32. The source discrepancy is preserved; the BioSample accession is used
+    for isolate identity rather than silently replacing the CDC-derived quantitative
+    observation.
+  snapshot_sha256: 6a7eb49212e8ab4a212bc7898af3d4e1beba5e8666d23309ce548a2764560109
+- evidence_id: fda
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json
+  locator: All 14 exact application/product rows; 287-fda-comparison.json and individual
+    API responses
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: supports
+  summary: Live FDA comparisons agree for all 14 native application/product assertions,
+    approval dates, product names, ingredient and Discontinued marketing status. Historical
+    approval does not imply current marketing; native currently_marketed=false is
+    preserved. GSRS 66974FR9Q1 matches the neutral stereodefined drug, and no succinate/palmitate
+    formulation is transferred.
+  snapshot_sha256: 4890e11a65505c741226451074e646bf447841f3d9f8e45b0e7a94ab926fcd66
+- evidence_id: citations
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A10639375%20OR%20EXT_ID%3A11101601%20OR%20EXT_ID%3A11353602%20OR%20EXT_ID%3A11468347%20OR%20EXT_ID%3A12217690%20OR%20EXT_ID%3A12860128%20OR%20EXT_ID%3A16659995%20OR%20EXT_ID%3A16897441%20OR%20EXT_ID%3A17217404%20OR%20EXT_ID%3A17692887%20OR%20EXT_ID%3A17737966%20OR%20EXT_ID%3A17963326%20OR%20EXT_ID%3A18559535%20OR%20EXT_ID%3A18657290%20OR%20EXT_ID%3A18794387%20OR%20EXT_ID%3A20876128%20OR%20EXT_ID%3A35165455%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: 287-citation-dispositions.json; all 17 adopted/native PMID leads
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: partial
+  summary: All 17 distinct PMID/DOI/title leads were resolved. Six curated target/graph/resistance
+    citations were checked against original claim-bearing source sections. The ten
+    ChEBI-only leads were screened at the stated abstract/full-text depth; host-cell,
+    ecotoxicology, ELISA, derivative-CPT and clinical interaction endpoints are separated
+    from antibacterial targets. The 1947 discovery source remains metadata-only after
+    access failure. No source is treated as support for an unrelated field.
+  snapshot_sha256: 2124f3b41a244525b4329c2feb123a42c6fb44e02e7c72e7b68df79e52ad5303
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/GB796901A/en
+  locator: 'All six native patent records: original descriptions/abstracts and relevant
+    synthesis/fermentation examples'
+  accessed_at: '2026-10-21T12:45:31.558999Z'
+  support: supports
+  summary: US2483871 describes isolation of crystalline chloramphenicol from S. venezuelae;
+    US2483892 describes its fermentation. US2483884 covers synthesis/resolution of
+    nitrophenyl acylamido diols including chloramphenicol and multiple stereoisomers.
+    GB795131 and US2839577 concern related serine/aminodiol reduction, with the latter
+    mentioning N-dichloroacetyl products. GB796901 Example 1 explicitly produces chloramphenicol
+    by reduction/acylation. These are relevant document links, not six exact-compound
+    assay sources; no OCR-derived potency or precursor identity is transferred.
+  snapshot_sha256: a0dad530e09f9754b7d2371c324a685342163f36f8523f61b800813eb3818ba7
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local search and free original-source retrieval
+  locator: 287-focused-local-hits.txt; 287-local-hits.txt;fetch manifests
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: context_only
+  summary: Searches included hidden and ignored files outside .git/.venv. Historical
+    local research reports were treated only as discovery leads. Full native/source
+    owners were identified, and public source artifacts retain URLs, actual access
+    times, status codes and SHA256. No paid retrieval or outreach occurred.
+  snapshot_sha256: b65b7cc755709c4aefcb3a65d18058cd427e5c8630ad5efca09d869457ab39df
+  search_scope: 2026-10-21, isolated batch029; hidden/ignored-inclusive repository
+    search and free public official/primary sources.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused native validators
+  locator: 287-focused-results.json; schema/strict logs
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: supports
+  summary: Schema and strict commands both exit 0 with no errors. Passing deterministic
+    gates does not validate a causal citation or resistance-mechanism interpretation.
+  snapshot_sha256: 7c828f3e51f76a0c8b24aded6eae331961e9a3729a60604d62f8554ccb29b0d9
+- evidence_id: lead-18794387
+  kind: primary_source
+  reference: https://doi.org/10.1128/aac.00805-08
+  locator: PMID:18794387; Original abstract and full case report
+  accessed_at: '2026-10-21T12:46:31.695594Z'
+  support: context_only
+  summary: Adolescent intravenous chloramphenicol/voriconazole coadministration supports
+    a qualified pharmacokinetic interaction inference; formulation is not independently
+    resolved here and it is not a bacterial target assay.
+  snapshot_sha256: ff3811d8da245fa9695479103a1733d7418eb6f00d0b4664f5b8de00730bb394
+- evidence_id: lead-18657290
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.chemosphere.2008.06.033
+  locator: PMID:18657290; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: Chamelea gallina antioxidant/CYP responses to exposure are ecotoxicological
+    endpoints, not antibacterial MICs.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-18559535
+  kind: primary_source
+  reference: https://doi.org/10.1158/0008-5472.can-07-6061
+  locator: PMID:18559535; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: Activated T-cell differentiation/apoptosis is host-cell context, not bacterial
+    target evidence.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-17692887
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.watres.2007.07.030
+  locator: PMID:17692887; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: Photocatalytic degradation and Kirby-Bauer activity reduction do not supply
+    a native exact-strain MIC or direct target.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-17217404
+  kind: primary_source
+  reference: https://doi.org/10.1111/j.1365-2885.2007.00817.x
+  locator: PMID:17217404; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: Competitive ELISA measures chloramphenicol analytically in sheep serum;
+    antibody recognition is not the antibacterial target.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-17963326
+  kind: primary_source
+  reference: https://doi.org/10.1142/s0192415x0700534x
+  locator: PMID:17963326; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: Eriobotrya extract modulation of chloramphenicol-associated ROS/NO in blood
+    cells is host-cell/extract context, not a direct microbial mechanism.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-16897441
+  kind: primary_source
+  reference: https://doi.org/10.1007/s10565-006-0058-4
+  locator: PMID:16897441; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: Human keratinocyte growth arrest and apoptosis are host-cell endpoints;
+    not antibacterial target evidence.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-12217690
+  kind: primary_source
+  reference: https://doi.org/10.1016/s0022-2836(02)00784-2
+  locator: PMID:12217690; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: In-vivo lacZ reporter work reports frameshifting and nonsense suppression
+    rather than general amino-acid misincorporation; not a native quantitative or
+    taxon-specific assertion.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-11468347
+  kind: primary_source
+  reference: https://doi.org/10.1002/pro.101508
+  locator: PMID:11468347; Original abstract and full-text ligand Results/Discussion
+  accessed_at: '2026-10-21T12:46:31.695880Z'
+  support: context_only
+  summary: 2001 CPT structures use nonchlorinated 2-N-Ac-Cm and p-amino-Cm analogs.
+    These enzyme/substrate and producer-tolerance results are not direct bacterial
+    ribosome binding evidence for the parent drug.
+  snapshot_sha256: 7672be312886e8ee0e1f9720983d5a6ccd60a69edc0922b35f2ed5c776557db4
+- evidence_id: lead-16659995
+  kind: primary_source
+  reference: https://doi.org/10.1104/pp.59.6.1067
+  locator: PMID:16659995; Complete original abstract
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: 1977 maize scutellum subcellular-fraction protein-synthesis experiments
+    concern plant/mitochondrial context, not a bacterial direct-target experiment.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+- evidence_id: lead-17737966
+  kind: primary_source
+  reference: https://doi.org/10.1126/science.106.2757.417
+  locator: PMID:17737966; Metadata only
+  accessed_at: '2026-10-21T12:45:27.941798Z'
+  support: context_only
+  summary: Original 1947 discovery title and DOI verified; no abstract and publisher
+    PDF returned 403. No numerical historical activity extracted.
+  snapshot_sha256: 318f69df02e56bff5109f353d2dad37f9d1eb80d5b3d3880e2cfb17a71d64778
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral D-threo chloramphenicol
+  outcome: supported
+  summary: Native and complete external comparisons agree on the same 1R,2R molecule.
+    Chemical/INN aliases and broader chemical parents are coherent; brands are explicitly
+    typed as brands. Salts, esters, racemates and derivatives are not merged.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - xref
+- assessment_id: crossrefs
+  area: grounding
+  topic: Chemical, drug and document links
+  outcome: unknown
+  summary: Full structural checks support the accessible core identifiers; the six
+    patents are relevant at their stated documentary scope. Restricted HMDB/DrugBank/LINCS/MetaCyc/Beilstein
+    content remains incompletely independently verified, without evidence of a confirmed
+    wrong native link.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - xref
+  - xref-boundaries
+  - patents
+- assessment_id: activity
+  area: evidence
+  topic: Two exact CDC resistant observations
+  outcome: supported
+  summary: Both >32 mg/L resistant calls reproduce their cited CDC pages and preserve
+    modal broth-microdilution/CLSI context. BioSample identity is correct; its>= comparator
+    is a separately retained source discrepancy.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - cdc
+  - biosample
+- assessment_id: targets
+  area: evidence
+  topic: Primary bacterial target versus source-owned broad target
+  outcome: supported
+  summary: The E. coli-specific primary50S target and species-qualified mode-of-action
+    notes are supported by the 2010 crystal study. The generic ARO23S target remains
+    explicitly database-supported with primary evidence needed; these are different
+    evidence tiers rather than a fabricated independent experiment.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - binding2010
+  - terms
+  - owners
+  - native
+- assessment_id: graph
+  area: graph
+  topic: Taxon/site attribution and kinetic interpretation
+  outcome: concern
+  summary: The binding edge cites the 2003 archaeal exit-tunnel structure as if it
+    directly establishes the bacterial PTC state. The already-adopted 2010 and 2022
+    papers provide qualified bacterial structural evidence. The older competitive
+    wording should be reconciled with the 2022 context-specific substrate-dependent
+    interpretation without declaring all historical exit-tunnel observations false.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - binding2003
+  - binding2010
+  - context2022
+  - historical-site
+- assessment_id: source-resistance
+  area: evidence
+  topic: Eighty-seven imported ARO assertions
+  outcome: concern
+  summary: All 87 source rows and current term identities are corroborated at database
+    depth. The SoxR/S target-alteration enums conflict with inspected regulator experiments
+    and definitions. Remaining imported claims retain database-only evidence; a full
+    experimental allele-by-allele review of all 87 was not performed.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - owners
+  - terms
+  - soxr
+  - soxs
+  - adapter
+- assessment_id: curator-resistance
+  area: evidence
+  topic: Six primary resistance entries and reference sequence scope
+  outcome: supported
+  summary: SOF-1, four avian E. coli isolates and the bovine resistant subgroup are
+    accurately bounded qualitative associations. UNKNOWN mechanism enums and explicit
+    noncausal/accession caveats avoid overassigning a determinant, strain genome or
+    exact allele.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - sof1
+  - avian
+  - bovine
+  - accessions
+- assessment_id: clinical
+  area: evidence
+  topic: Fourteen historical FDA assertions
+  outcome: supported
+  summary: All 14 live FDA rows agree with the captured native historical approvals
+    and discontinued products. Native aggregateAPPROVED is historical and does not
+    claim active marketing.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - fda
+  - chemistry
+  - native
+- assessment_id: lead-disposition
+  area: provenance
+  topic: Every adopted PMID and native primary citation
+  outcome: supported
+  summary: All 17 leads have explicit reading-depth and disposition records. Nonbacterial,
+    analytical, derivative and interaction studies are not promoted to native bacterial
+    targets; unavailable original1947 text is identified as such.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - citations
+  - lead-17737966
+  - lead-11468347
+  - lead-18794387
+- assessment_id: completeness
+  area: completeness
+  topic: Optional producers, spectra and mechanistic enrichment
+  outcome: unknown
+  summary: No optional missing producer, MIC panel or causal detail is classified
+    as a required-field defect. Additional original studies could enrich the record,
+    but this review prioritizes correcting two populated assertions and preserving
+    existing material/strain limits.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - native
+  - citations
+  - patents
+- assessment_id: status
+  area: provenance
+  topic: Ownership, prior REVIEWED state and history
+  outcome: supported
+  summary: Native history and source-owner capture are coherent. The prior REVIEWED
+    label does not excuse current claim-level problems; this review itself neither
+    promotes nor demotes status. Initial input hashes remain unchanged, and the parent-requested
+    target-kind metadata correction preserves all owners.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - native
+  - owners
+- assessment_id: validation
+  area: schema
+  topic: Focused checks and structural consistency
+  outcome: supported
+  summary: Schema, strict and chemistry pass. Two scientific interpretation defects
+    remain despite those passes.
+  target_ids:
+  - CHEBI:17698
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-17698-bacterial-ptc-archaeal-citation-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The bacterial PTC binding edge is supported by an archaeal exit-tunnel experiment
+  description: Graph edge 0 cites only PMID:12860128 and describes a bacterial chloramphenicol-bound
+    PTC state. The original study actually visualizes H. marismortui chloramphenicol
+    in an exit-tunnel crevice at 20 mM, explicitly distinct from the bacterial active-site
+    pose discussed from earlier work. This is a source/taxon/site mismatch, not a
+    denial of the well-supported bacterial PTC mechanism. Related edge 1 and edge
+    3 notes should preserve the same distinction and reconcile their older competitive
+    phrasing with the adopted 2022 context-specific interpretation.
+  target_ids:
+  - CHEBI:17698
+  field_paths:
+  - causal_graphs[0].edges[0].evidence[0]
+  - causal_graphs[0].edges[1].evidence[0]
+  - causal_graphs[0].edges[3].evidence[0]
+  evidence_ids:
+  - native
+  - binding2003
+  - binding2010
+  - context2022
+  - historical-site
+  rule_id: 'review-checklist: claim-level primary evidence and taxon/experimental-context
+    scope'
+  native_severity: 'Major: populated causal evidence is assigned beyond the experiment
+    it reports'
+  normalization_reason: The molecule and general bacterial mechanism are correct,
+    but an individual causal edge is not supported by its sole cited experiment. This
+    is a scientific evidence-placement defect, not a schema failure or identity blocker.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/chloramphenicol.yaml
+    role: Curator-owned primary target, resistance and causal-graph assertions through
+      validated record writer
+- finding_id: F2
+  issue_key: chebi-17698-soxrs-target-alteration-enum
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: SoxR and SoxS regulation is mislabeled as antibiotic target alteration
+  description: Native resistance entries 52 and 54 inherit ANTIBIOTIC_TARGET_ALTERATION
+    from raw rows classified through ARO:0001001. Current term definitions and original
+    SoxR mutant/reconstruction work, plus the SoxS Ala12Ser allelic-exchange abstract,
+    support regulation of efflux/permeability rather than alteration of the chloramphenicol-binding
+    ribosomal target. A regulator mutation is not itself a drug-target mutation. Preserve
+    the source resistance association and exact allele/background scope while correcting
+    the biochemical category through the maintained source mapping.
+  target_ids:
+  - CHEBI:17698
+  field_paths:
+  - resistance_mechanisms[52].mechanism_type
+  - resistance_mechanisms[54].mechanism_type
+  evidence_ids:
+  - owners
+  - terms
+  - soxr
+  - soxs
+  - adapter
+  rule_id: 'review-checklist and ResistanceMechanismEnum: biological mechanism must
+    match source evidence'
+  native_severity: 'Major: incorrect populated resistance mechanism and reproducible
+    source-classification defect'
+  normalization_reason: Two source-owned labels misrepresent the molecular route even
+    though raw-source fidelity and validators pass. The finding does not allege that
+    SoxR/S variants lack resistance effects or that every variant has the same effect.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted determinant-to-drug rows and mechanism_source_id
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Nearest-ancestor mechanism_for classification
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: aro_mechanism_map used by extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated resistance representation
+actions:
+- action_id: A1
+  description: Replace or supplement the bacterial graph binding evidence with the
+    already-adopted E. coli 2010 and T. thermophilus 2022 primary studies, explicitly
+    recording species, site and nascent-chain context. Retain the 2003 H. marismortui
+    result only with its archaeal exit-tunnel scope, and qualify the historical competitive
+    interpretation.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:17698
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/chloramphenicol.yaml
+    role: Curator-owned primary target, resistance and causal-graph assertions through
+      validated record writer
+  acceptance_checks:
+  - Every graph edge is supported by the cited original experiment at the stated taxon/site
+    scope.
+  - Preserve existing context-specific inhibition notes and distinguish crystallography,
+    toeprinting and radiolabeled binding from growth MIC.
+  - Do not remove historical bacterial photocrosslink observations merely because
+    the 2010 crystal preparation did not show that site.
+  - Run focused schema/strict and applicable graph/reference/history/full-corpus gates
+    after separately authorized curation.
+- action_id: A2
+  description: Adjudicate and implement a source-specific mechanism correction for
+    ARO:3003381 and ARO:3003511. Represent regulatory efflux and any supported permeability
+    contribution without treating the regulator as the drug target; if a single enum
+    cannot capture the route, use an appropriately qualified category rather than
+    unsupported target alteration. Preserve original database evidence and add exact
+    primary qualifications.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:17698
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted determinant-to-drug rows and mechanism_source_id
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Nearest-ancestor mechanism_for classification
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: aro_mechanism_map used by extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated resistance representation
+  generator: just extract-inventory; just seed; just seed-canary CHEBI:17698
+  acceptance_checks:
+  - Both source rows and regenerated native mechanism enums agree with the inspected
+    regulatory mechanism.
+  - 'Retain allele/background limits: the 2005 mutant alleles are not interchangeable
+    and the 2015 result specifically tests SoxS Ala12Ser.'
+  - Do not convert Figure 3 growth distance along an antibiotic gradient into an MIC
+    or import uninspected 2015 numerical values.
+  - Regression-check the source classifier for regulator-versus-target mutation scope
+    and run source-row, seed-canary, schema/strict and applicable shared gates.
+limitations:
+- The 87 imported ARO associations are verified for source-row fidelity, identifier
+  resolution and definition-level scope; this is not an exhaustive primary experimental
+  validation of all determinant alleles.
+- The 1947 discovery paper remained metadata-only. Several ChEBI-only leads were inspected
+  through complete original abstracts; the 2015 SoxS primary full PDF returned 403.
+  Exact reading depths and all 17 dispositions are recorded, and no unavailable numerical
+  assay detail is inferred.
+- HMDB, DrugBank, LINCS, MetaCyc and proprietary Beilstein content could not be independently
+  checked in full. ChemSpider and DrugCentral were checked at identifying-page depth;
+  structural agreement is established independently for the other listed molecular
+  resources.
+- BioSample SAMN15040081 retains >=32 mg/L while the cited CDC 0782 page reports >32
+  microgram/mL; native CDC provenance and censoring are retained without merging those
+  source representations.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, raw inventory, scientific status, history or immutable review
+  bundle was edited.
+- The invalid scratch target kind mixed was corrected to generated at the parent reviewer's
+  explicit request, retaining the native curator owner and every original input SHA.
+  Additional CARD typing/evidence-overlay owners were captured when found.
+- The batch 029 environment ran native validators; standalone RDKit 2026.03.5 used
+  the existing batch 019 interpreter with batch 029 cwd.
+- Public retrieval manifests retain failed routes and content types. The first Citeseer
+  response was an HTML archive wrapper; the separately fetched archived PDF was the
+  actual original paper inspected.
+- Optional links/tags were freshly selected and audited for chloramphenicol only.
+- Root read all native fields, verified every one of the 87 repeated database-evidence
+  templates and all six curated resistance entries, read the full scientific draft
+  and all four Sox follow-up abstracts, independently inspected the original 2003
+  chloramphenicol Results/Discussion/Methods and Figure5b, and the 2010 chloramphenicol
+  Results. All29 input hashes were rechecked before saving.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:17698
+- https://pubchem.ncbi.nlm.nih.gov/compound/5959
+- https://doi.org/10.1073/pnas.1007988107
+- https://doi.org/10.1038/s41594-022-00720-y
+tags:
+- chloramphenicol
+- phenicol
+- ribosome
+- causal-evidence-scope
+- soxrs-regulation
