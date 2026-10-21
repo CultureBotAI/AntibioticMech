@@ -1,0 +1,883 @@
+# Review of G418
+
+- Review: 20261021T171956Z-g418-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T16:59:17Z
+- Finished UTC: 2026-10-21T17:19:56Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The fully specified neutral G418 structure, broader aminoglycoside classification and database target provenance are supported. One minor definition error calls the antibiotic a selectable marker instead of the selection agent used with an APH3-prime resistance marker. Original mutation experiments are condition-specific; exact G418 assays behind several methyltransferase database edges remain unresolved.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position 485; original 13 input hashes preserved, five actual ARO/PubChem owner inputs appended before detailed assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-9047378d43 | data/antibiotics/antibacterial/g418.yaml | generated | G418 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-9047378d43 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | antibioticmech:aro-9047378d43 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | antibioticmech:aro-9047378d43 | Actual focused execution exited 0. |
+| Independent chemical authority comparison | passed | False | antibioticmech:aro-9047378d43 | Five exact native/PubChem/CCD encodings agree; atom mapping establishes the single unspecified centre in the broader ChEBI candidate. |
+| Source, citation and history ledger | passed | False | antibioticmech:aro-9047378d43 | All 18 inputs unchanged, original 13 preserved; 17 leads, six current resistance edges, one target and four histories checked. |
+| Structured source catalog | passed | False | antibioticmech:aro-9047378d43 | Public dataset catalog executed before protein literature follow-up. |
+| Structured rrsB query | passed | False | antibioticmech:aro-9047378d43 | No gene or iModulon hit; no component summary applicable. Absence is not biological negative evidence. |
+| Structured rmtA query | passed | False | antibioticmech:aro-9047378d43 | No gene or iModulon hit; no component summary applicable. Absence is not biological negative evidence. |
+| Authoritative full QC | failed | True | antibioticmech:aro-9047378d43 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-9047378d43 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-9047378d43 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-9047378d43 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-9047378d43 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-9047378d43 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-9047378d43 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-9047378d43 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-9047378d43 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral G418
+
+identity: supported. Targets: antibioticmech:aro-9047378d43.
+
+Five encodings and the original deposited ligand agree; no sulfate product or undefined mixture is substituted.
+
+### Minted identity, parent and exact xrefs
+
+grounding: supported. Targets: antibioticmech:aro-9047378d43.
+
+PubChem and ARO identifiers resolve. The broader ChEBI candidate is not exact at one centre, so a minted identity is justified under the current record contract.
+
+### Selection agent versus selectable marker
+
+evidence: concern. Targets: antibioticmech:aro-9047378d43.
+
+The cited original assigns the marker role to APH3-prime; G418 is the antibiotic used to select resistant cells.
+
+### Geneticin chemical and product naming
+
+grounding: unknown. Targets: antibioticmech:aro-9047378d43.
+
+Both exact chemical usage and trademarked sulfate reagent usage are documented. No forced alias removal follows solely from the trademark; product/form qualification remains necessary for future claims.
+
+### 16S-rRNA binding target
+
+evidence: supported. Targets: antibioticmech:aro-9047378d43.
+
+Original model crystallography and the matching deposited ligand support the exact binding site; the native edge remains honestly database-tier.
+
+### Mutation and methyltransferase scopes
+
+evidence: unknown. Targets: antibioticmech:aro-9047378d43.
+
+Current edges are verified and the original U1406A G418 phenotype is directly inspected. Exact G418 material/phenotype support is unresolved for several methyltransferase leads; no contradictory universal assertion or false primary citation is established.
+
+### Seeded status and optional enrichment
+
+completeness: supported. Targets: antibioticmech:aro-9047378d43.
+
+Missing optional primary-target, MIC, producer, causal and clinical fields are not required defects. Original yeast, mammalian selection, bacterial mutation and product evidence remain in separate contexts.
+
+### Source owners and history
+
+ownership: supported. Targets: antibioticmech:aro-9047378d43.
+
+Original inputs and four chronological source events are preserved and checked.
+
+## Findings
+
+### F1: Definition conflates the selection agent with the selectable marker
+
+minor / open / confirmed; issue key: g418-definition-selection-agent-marker-wording.
+
+The definition calls G418 a selectable marker for the neo cassette. Its cited PMID4007271 identifies aminoglycoside 3-prime phosphotransferase as the dominant selectable marker and isolates antibiotic-resistant clones using G418. Describe G418 as the selection agent used to select cells carrying the neo/APH3-prime marker. The underlying compound identity and common laboratory use remain supported.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the maintained ARO definition or reviewed source-definition lane to describe G418 as a selection agent for cells carrying the neo/APH3-prime selectable marker. Retain PMID4007271 and the exact neutral structure; reproduce the correction through documented extraction/seeding or validated curation, not a hand edit of generated output.
+
+- Compare revised wording with the cited original abstract and preserve selection-agent versus resistance-gene distinction.
+- Run native schema/strict, reference/history/corpus checks and QC after documented regeneration; keep unrelated fields and source events unchanged.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/g418.yaml; Entire native record, including all four history entries | supports | The SEEDED, MINTED record has one chemical alias, one broader ARO parent, two exact xrefs, one database 16S-rRNA target and six database resistance assertions. No clinical approval, MIC, producer object, protein example or causal graph is asserted. All target/resistance provenance remains explicitly CARD/ARO database-tier. |
+| chemistry | PubChem:123865; pdb-ccd:GET; PDB:1MWL; 485-authority-chemistry.json; native, current PubChem and official GET snapshots | supports | Native SMILES/InChI, current PubChem SMILES/InChI and CCD GET InChI all match BRZYSWJRSDMWLG-DJWUNRQOSA-N and C20H40N4O10 with neutral charge, formula/mass agreement and reciprocal chirality-aware graph matches. GET is the ligand in the original 1MWL geneticin A-site crystal. This corroborates the native configuration independently of the enrichment snapshot. |
+| candidate | CHEBI:42768; 485-chebi42768.json/.mol; mapping in 485-authority-chemistry.json | supports | Current ChEBI geneticin has the same constitution and compatible specified centres but leaves the hydroxyethyl 6-prime centre unspecified. Atom mapping places it at the native R centre. This is a specificity boundary, not an opposing configured isomer or proof of a mixture. The record does not assert this ChEBI ID; keeping a minted exact identifier is not a defect. |
+| definition | PMID:4007271; 485-adopted-core.json; complete supplied original abstract | supports | The original Vero-cell study identifies aminoglycoside 3-prime phosphotransferase as the dominant selectable marker and isolates G418-resistant clones after cotransfection. It supports the mammalian selection use. Calling G418 itself the selectable marker confuses the antibiotic selection agent with the resistance-gene marker. Full original text was not available through the inspected metadata. |
+| yeast | PMID:6378088; DOI:10.1128/AEM.47.5.1164-1166.1984; Complete abstract and 485-PMC240094.html landing text | supports | The second frozen ARO definition lead reports named Saccharomyces/Schwanniomyces strain susceptibility, including a resistant S. castellii strain. This provides selection-context evidence at tested yeast scope, not a universal spectrum or exact free-base bacterial MIC. Its scanned PDF route returned HTML rather than the requested PDF. |
+| original-activity | PMID:15828184; PMID:15825308; DOI:10.1128/AAC.6.2.144; DOI:10.1128/AAC.6.5.579; Original 1974 abstracts in 485-PMC444619.html and 485-PMC444695.html | supports | The discovery abstract identifies G-418 as a major product of M. rhodorangea NRRL5326; the activity abstract reports comparative bacterial testing and mouse protection. These independently support the antibiotic identity/class at abstract depth. Detailed isolated salt, purity and individual assay table values were not read because scanned PDF requests returned HTML; no native producer or quantitative observation is added. |
+| binding | PMID:12589761; DOI:10.1016/S0022-2836(02)01435-3; PDB:1MWL; 485-crystal-core.json; 485-1MWL.json; original deposited GET ligand | supports | The complete original abstract and deposit report geneticin bound to a synthetic 22-nt bacterial 16S-rRNA A-site model at 2.4 Å. The exact ligand key matches native G418. The model directly supports the binding site while preserving the distinction from a complete ribosome or whole-cell assay. The related 2005 paper discusses this earlier geneticin structure; it is not misattributed as a new 2005 G418 experiment. |
+| mutation | PMID:11502507; DOI:10.1128/AAC.45.9.2414-2419.2001; Shared original 476-PMC90670.html, retrieval476-fetch3.json; independently reread G418 methods and Tables2/4 with results | supports | In LB broth, the original G418 MIC was 5 µg/mL for wild type. U1406A gave twofold resistance with mixed ribosomes and 128-fold with homogeneous mutant ribosomes; Table4 gives 640 µg/mL for U1406A and 5 for A1408G. The methods distinguish E. coli DH1 and TA531 and a 24-hour 37°C endpoint. Direct chemical footprinting used kanamycin A, not G418. These results support a mutation-specific rrsB resistance assertion, not all mutations or a verified free-base reagent MIC. |
+| methylases | PMID:16377684; PMID:20194115; 485-PMC1346777.html methods/Table2/results; 485-PMC2896518.xml introduction, methods and selected results/discussion | supports | The original RmtC study tests other named aminoglycosides and demonstrates methyltransferase activity; the inspected susceptibility table does not establish a G418 result. The Sgm original determines cofactor-bound enzyme structures, mutagenesis/footprinting and docking, not a G418-bound enzyme or exact G418 MIC. These papers support the general mechanism while exact-drug phenotype support remains unresolved; lack of a listed assay is not proof of no G418 resistance. |
+| aro | ARO:3000653; ARO:0000016; ARO:3000755; six resistance identifiers; 485-aro-blocks.json; full official ontology 426-current-aro.obo with 426-fetch2-results.json provenance | supports | All six native resistance edges and the 16S-rRNA targeted_by_antibiotic edge persist in current ARO. The broader aminoglycoside parent matches the amino-sugar/aminocyclitol skeleton. Native resistance rows explicitly label database assertions, and the target carries PRIMARY_EVIDENCE_NEEDED; the review does not promote them to fully checked primary evidence. |
+| leads | All 17 frozen/current ARO literature leads; 485-adopted-core.json and 485-source-audit.json | supports | All identifiers resolve to MED records. Fifteen complete supplied abstracts were read; PMID10103173 and 11083623 have no supplied abstract and remain metadata-only review leads. Each methyltransferase, surveillance, RNA-model, selection and mutation source has an explicit disposition. Several abstracts address other aminoglycosides or class-wide mechanisms and do not independently establish exact G418 assays. |
+| alias | Geneticin chemical name and Geneticin trademarked sulfate reagent; Original PMID12589761/CCD GET; 485-geneticin-product.pdf; official Thermo trademark-information page, Geneticin row | supports | Thermo identifies Geneticin as its trademark and its current reagent as G418 sulfate. However, the original crystal paper and official CCD also use geneticin as the exact chemical name for the native neutral graph. The retained lower-case chemical alias is therefore not automatically treated as a false synonym. Any future reagent/product claim must retain the sulfate and catalog context; product concentration ranges are not neutral-parent MICs. |
+| owners | Maintained ARO and PubChem enrichment lanes; 485-source-audit.json; 485-inspect.json; 485-raw-rows.json; ignored-inclusive 485-owners-search.json | supports | All 18 captured hashes remain unchanged, including original 13. Nine matched raw rows, source mint and four chronological events were checked. ARO owns the wording, PubChem enrichment owns the exact structure, and the source extractor/seeder reproduces the current record. Local searches included ignored files across raw inventories, curation, config, scripts and src. |
+| adapter | iModulonDB e_coli/precise1k and p_aeruginosa/precise364; 485-imodulon-datasets.json; 485-imodulon-rrsB.json; 485-imodulon-rmtA.json | supports | Catalog-first searches found no exact rrsB/rmtA gene or component hits. No transcriptomic result is used as evidence of drug binding, resistance or biological absence. |
+
+## Limits And Additional Notes
+
+- Fifteen of 17 adopted/current ARO leads supplied abstracts and were read completely; two review leads had no abstract. Most methyltransferase/epidemiology originals were not read in full, and exact G418 assay support is not uniformly established.
+- The 1974 discovery/activity and 1984 yeast scanned-PDF requests returned HTML, not PDF. Their original abstracts and landing text were read, but detailed material forms and tables were not verified.
+- The 2003 original crystal abstract and official deposit were inspected; a HAL repository lead was inaccessible and the full article was not read. Direct binding is supported at the synthetic 22-nt RNA-model scope.
+- The 2001 G418 resistance experiment does not verify a specific free-base or sulfate reagent catalog; no quantitative native MIC is adopted. Its kanamycin footprinting is not attributed to G418.
+- ChEBI42768 leaves one centre unspecified and is not adopted as an exact native xref. Geneticin has both documented chemical-name and trademarked sulfate-product usage; these contexts remain distinct.
+- XML retrieval for two selected methyltransferase papers failed with HTTP500 and HTML fallbacks succeeded. The ArmA maturation HTML was retrieved but only its complete abstract was assessed; successful retrieval alone is not full-text review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Standalone chemistry used batch019 against batch049; native checks, ledger and contract used batch049.
+- No native/source bytes or scientific status were changed; original input hashes and exact owner metadata remain preserved.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T171956Z-g418-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of G418
+started_at: '2026-10-21T16:59:17Z'
+finished_at: '2026-10-21T17:19:56Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The fully specified neutral G418 structure, broader aminoglycoside classification
+  and database target provenance are supported. One minor definition error calls the
+  antibiotic a selectable marker instead of the selection agent used with an APH3-prime
+  resistance marker. Original mutation experiments are condition-specific; exact G418
+  assays behind several methyltransferase database edges remain unresolved.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/g418.yaml
+    sha256: f59ed83b2cf79b0d898e7a5c126bb98e4024d73f32f7aad90687d901e598f2bd
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: antibioticmech:aro-9047378d43
+  path: data/antibiotics/antibacterial/g418.yaml
+  label: G418
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, definition and synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted database target
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted database resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact neutral PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem enrichment producer
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: CARD/ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native field generation
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-scoped definition or synonym controls
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 485; original 13 input hashes preserved,
+    five actual ARO/PubChem owner inputs appended before detailed assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-9047378d43
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    485
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/g418.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/g418.yaml --out /private/tmp/am-review-session/485-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent chemical authority comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/485-authority-check.py
+    > /private/tmp/am-review-session/485-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Five exact native/PubChem/CCD encodings agree; atom mapping establishes
+    the single unspecified centre in the broader ChEBI candidate.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+- check_id: ledger
+  name: Source, citation and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/485-ledger.py > /private/tmp/am-review-session/485-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 18 inputs unchanged, original 13 preserved; 17 leads, six current resistance
+    edges, one target and four histories checked.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+- check_id: adapter-catalog
+  name: Structured source catalog
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/485-imodulon-datasets.json
+    2> /private/tmp/am-review-session/485-imodulon-datasets.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Public dataset catalog executed before protein literature follow-up.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+- check_id: adapter-rrsB
+  name: Structured rrsB query
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query rrsB
+    > /private/tmp/am-review-session/485-imodulon-rrsB.json 2> /private/tmp/am-review-session/485-imodulon-rrsB.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No gene or iModulon hit; no component summary applicable. Absence is not
+    biological negative evidence.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+- check_id: adapter-rmtA
+  name: Structured rmtA query
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    rmtA > /private/tmp/am-review-session/485-imodulon-rmtA.json 2> /private/tmp/am-review-session/485-imodulon-rmtA.err
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: No gene or iModulon hit; no component summary applicable. Absence is not
+    biological negative evidence.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/g418.yaml
+  locator: Entire native record, including all four history entries
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: The SEEDED, MINTED record has one chemical alias, one broader ARO parent,
+    two exact xrefs, one database 16S-rRNA target and six database resistance assertions.
+    No clinical approval, MIC, producer object, protein example or causal graph is
+    asserted. All target/resistance provenance remains explicitly CARD/ARO database-tier.
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem:123865; pdb-ccd:GET; PDB:1MWL
+  locator: 485-authority-chemistry.json; native, current PubChem and official GET
+    snapshots
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: Native SMILES/InChI, current PubChem SMILES/InChI and CCD GET InChI all
+    match BRZYSWJRSDMWLG-DJWUNRQOSA-N and C20H40N4O10 with neutral charge, formula/mass
+    agreement and reciprocal chirality-aware graph matches. GET is the ligand in the
+    original 1MWL geneticin A-site crystal. This corroborates the native configuration
+    independently of the enrichment snapshot.
+  snapshot_sha256: c37e97e05015bee3ab9ce941ab0772eb83abb7d7a799b98f9231efd06ba54eb5
+- evidence_id: candidate
+  kind: authority
+  reference: CHEBI:42768
+  locator: 485-chebi42768.json/.mol; mapping in 485-authority-chemistry.json
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: Current ChEBI geneticin has the same constitution and compatible specified
+    centres but leaves the hydroxyethyl 6-prime centre unspecified. Atom mapping places
+    it at the native R centre. This is a specificity boundary, not an opposing configured
+    isomer or proof of a mixture. The record does not assert this ChEBI ID; keeping
+    a minted exact identifier is not a defect.
+  snapshot_sha256: eae3b09db3dccd82de2861375e2a4f995a7fd469a817ce8486911ef9f8f7675a
+- evidence_id: definition
+  kind: primary_source
+  reference: PMID:4007271
+  locator: 485-adopted-core.json; complete supplied original abstract
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: The original Vero-cell study identifies aminoglycoside 3-prime phosphotransferase
+    as the dominant selectable marker and isolates G418-resistant clones after cotransfection.
+    It supports the mammalian selection use. Calling G418 itself the selectable marker
+    confuses the antibiotic selection agent with the resistance-gene marker. Full
+    original text was not available through the inspected metadata.
+  snapshot_sha256: c05fda2acc90f298d472b9cfceadd8e2131737de469fd9bd1f78969592045cd3
+- evidence_id: yeast
+  kind: primary_source
+  reference: PMID:6378088; DOI:10.1128/AEM.47.5.1164-1166.1984
+  locator: Complete abstract and 485-PMC240094.html landing text
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: The second frozen ARO definition lead reports named Saccharomyces/Schwanniomyces
+    strain susceptibility, including a resistant S. castellii strain. This provides
+    selection-context evidence at tested yeast scope, not a universal spectrum or
+    exact free-base bacterial MIC. Its scanned PDF route returned HTML rather than
+    the requested PDF.
+  snapshot_sha256: 67ef2c58b6a003359cd0fbb8ba6414dbe012993368a9b66b75580198223d2dc1
+- evidence_id: original-activity
+  kind: primary_source
+  reference: PMID:15828184; PMID:15825308; DOI:10.1128/AAC.6.2.144; DOI:10.1128/AAC.6.5.579
+  locator: Original 1974 abstracts in 485-PMC444619.html and 485-PMC444695.html
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: The discovery abstract identifies G-418 as a major product of M. rhodorangea
+    NRRL5326; the activity abstract reports comparative bacterial testing and mouse
+    protection. These independently support the antibiotic identity/class at abstract
+    depth. Detailed isolated salt, purity and individual assay table values were not
+    read because scanned PDF requests returned HTML; no native producer or quantitative
+    observation is added.
+  snapshot_sha256: 5e366db019cf9c7ccfc87d297a6f50db467ff2b5359953bb6ad038308bde0f85
+- evidence_id: binding
+  kind: primary_source
+  reference: PMID:12589761; DOI:10.1016/S0022-2836(02)01435-3; PDB:1MWL
+  locator: 485-crystal-core.json; 485-1MWL.json; original deposited GET ligand
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: The complete original abstract and deposit report geneticin bound to a
+    synthetic 22-nt bacterial 16S-rRNA A-site model at 2.4 Å. The exact ligand key
+    matches native G418. The model directly supports the binding site while preserving
+    the distinction from a complete ribosome or whole-cell assay. The related 2005
+    paper discusses this earlier geneticin structure; it is not misattributed as a
+    new 2005 G418 experiment.
+  snapshot_sha256: a0f883bc63bbf7e21a3a742b7d4fa6e54417c6c397ad8a0a6c433bc3026d2074
+- evidence_id: mutation
+  kind: primary_source
+  reference: PMID:11502507; DOI:10.1128/AAC.45.9.2414-2419.2001
+  locator: Shared original 476-PMC90670.html, retrieval476-fetch3.json; independently
+    reread G418 methods and Tables2/4 with results
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: In LB broth, the original G418 MIC was 5 µg/mL for wild type. U1406A gave
+    twofold resistance with mixed ribosomes and 128-fold with homogeneous mutant ribosomes;
+    Table4 gives 640 µg/mL for U1406A and 5 for A1408G. The methods distinguish E.
+    coli DH1 and TA531 and a 24-hour 37°C endpoint. Direct chemical footprinting used
+    kanamycin A, not G418. These results support a mutation-specific rrsB resistance
+    assertion, not all mutations or a verified free-base reagent MIC.
+  snapshot_sha256: aad1c9d5055754a8521dba28d0a400a10334ee286fcec77dec54d2ddc1e1deba
+- evidence_id: methylases
+  kind: primary_source
+  reference: PMID:16377684; PMID:20194115
+  locator: 485-PMC1346777.html methods/Table2/results; 485-PMC2896518.xml introduction,
+    methods and selected results/discussion
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: The original RmtC study tests other named aminoglycosides and demonstrates
+    methyltransferase activity; the inspected susceptibility table does not establish
+    a G418 result. The Sgm original determines cofactor-bound enzyme structures, mutagenesis/footprinting
+    and docking, not a G418-bound enzyme or exact G418 MIC. These papers support the
+    general mechanism while exact-drug phenotype support remains unresolved; lack
+    of a listed assay is not proof of no G418 resistance.
+  snapshot_sha256: d2dfb79e29d44d03d8bf5667efff170324b5cd6ac839eeeafe34073a7bf62d05
+- evidence_id: aro
+  kind: database
+  reference: ARO:3000653; ARO:0000016; ARO:3000755; six resistance identifiers
+  locator: 485-aro-blocks.json; full official ontology 426-current-aro.obo with 426-fetch2-results.json
+    provenance
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: All six native resistance edges and the 16S-rRNA targeted_by_antibiotic
+    edge persist in current ARO. The broader aminoglycoside parent matches the amino-sugar/aminocyclitol
+    skeleton. Native resistance rows explicitly label database assertions, and the
+    target carries PRIMARY_EVIDENCE_NEEDED; the review does not promote them to fully
+    checked primary evidence.
+  snapshot_sha256: 78f8785d6e4fcd5184ac4f3a7e69dc66112b88db36978bb8978e0753ba81c6c6
+- evidence_id: leads
+  kind: database
+  reference: All 17 frozen/current ARO literature leads
+  locator: 485-adopted-core.json and 485-source-audit.json
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: All identifiers resolve to MED records. Fifteen complete supplied abstracts
+    were read; PMID10103173 and 11083623 have no supplied abstract and remain metadata-only
+    review leads. Each methyltransferase, surveillance, RNA-model, selection and mutation
+    source has an explicit disposition. Several abstracts address other aminoglycosides
+    or class-wide mechanisms and do not independently establish exact G418 assays.
+  snapshot_sha256: 15b5f0e6fecd96dd8252c10bbd982854b819624c347c3db709154303e251ffeb
+- evidence_id: alias
+  kind: authority
+  reference: Geneticin chemical name and Geneticin trademarked sulfate reagent
+  locator: Original PMID12589761/CCD GET; 485-geneticin-product.pdf; official Thermo
+    trademark-information page, Geneticin row
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: Thermo identifies Geneticin as its trademark and its current reagent as
+    G418 sulfate. However, the original crystal paper and official CCD also use geneticin
+    as the exact chemical name for the native neutral graph. The retained lower-case
+    chemical alias is therefore not automatically treated as a false synonym. Any
+    future reagent/product claim must retain the sulfate and catalog context; product
+    concentration ranges are not neutral-parent MICs.
+  snapshot_sha256: 1b6ab4a5ee2a21c05dd4afa90aed7a1be1c4752223f3b75ba585d39f54662784
+- evidence_id: owners
+  kind: validation
+  reference: Maintained ARO and PubChem enrichment lanes
+  locator: 485-source-audit.json; 485-inspect.json; 485-raw-rows.json; ignored-inclusive
+    485-owners-search.json
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: All 18 captured hashes remain unchanged, including original 13. Nine matched
+    raw rows, source mint and four chronological events were checked. ARO owns the
+    wording, PubChem enrichment owns the exact structure, and the source extractor/seeder
+    reproduces the current record. Local searches included ignored files across raw
+    inventories, curation, config, scripts and src.
+  snapshot_sha256: 15b5f0e6fecd96dd8252c10bbd982854b819624c347c3db709154303e251ffeb
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k and p_aeruginosa/precise364
+  locator: 485-imodulon-datasets.json; 485-imodulon-rrsB.json; 485-imodulon-rmtA.json
+  accessed_at: '2026-10-21T17:08:17Z'
+  support: supports
+  summary: Catalog-first searches found no exact rrsB/rmtA gene or component hits.
+    No transcriptomic result is used as evidence of drug binding, resistance or biological
+    absence.
+  snapshot_sha256: 0f8386e2ad07bbcc3a7881b66e3738b28e4fb9a43deebd2ea2fad12f61a1be45
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral G418
+  outcome: supported
+  summary: Five encodings and the original deposited ligand agree; no sulfate product
+    or undefined mixture is substituted.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - record
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Minted identity, parent and exact xrefs
+  outcome: supported
+  summary: PubChem and ARO identifiers resolve. The broader ChEBI candidate is not
+    exact at one centre, so a minted identity is justified under the current record
+    contract.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - candidate
+  - chemistry
+  - aro
+- assessment_id: wording
+  area: evidence
+  topic: Selection agent versus selectable marker
+  outcome: concern
+  summary: The cited original assigns the marker role to APH3-prime; G418 is the antibiotic
+    used to select resistant cells.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - record
+  - definition
+- assessment_id: alias
+  area: grounding
+  topic: Geneticin chemical and product naming
+  outcome: unknown
+  summary: Both exact chemical usage and trademarked sulfate reagent usage are documented.
+    No forced alias removal follows solely from the trademark; product/form qualification
+    remains necessary for future claims.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - alias
+  - binding
+- assessment_id: target
+  area: evidence
+  topic: 16S-rRNA binding target
+  outcome: supported
+  summary: Original model crystallography and the matching deposited ligand support
+    the exact binding site; the native edge remains honestly database-tier.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - binding
+  - aro
+- assessment_id: resistance
+  area: evidence
+  topic: Mutation and methyltransferase scopes
+  outcome: unknown
+  summary: Current edges are verified and the original U1406A G418 phenotype is directly
+    inspected. Exact G418 material/phenotype support is unresolved for several methyltransferase
+    leads; no contradictory universal assertion or false primary citation is established.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - mutation
+  - methylases
+  - leads
+  - aro
+  - adapter
+- assessment_id: completeness
+  area: completeness
+  topic: Seeded status and optional enrichment
+  outcome: supported
+  summary: Missing optional primary-target, MIC, producer, causal and clinical fields
+    are not required defects. Original yeast, mammalian selection, bacterial mutation
+    and product evidence remain in separate contexts.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - record
+  - definition
+  - yeast
+  - original-activity
+  - mutation
+- assessment_id: provenance
+  area: ownership
+  topic: Source owners and history
+  outcome: supported
+  summary: Original inputs and four chronological source events are preserved and
+    checked.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  evidence_ids:
+  - owners
+findings:
+- finding_id: F1
+  issue_key: g418-definition-selection-agent-marker-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Definition conflates the selection agent with the selectable marker
+  description: The definition calls G418 a selectable marker for the neo cassette.
+    Its cited PMID4007271 identifies aminoglycoside 3-prime phosphotransferase as
+    the dominant selectable marker and isolates antibiotic-resistant clones using
+    G418. Describe G418 as the selection agent used to select cells carrying the neo/APH3-prime
+    marker. The underlying compound identity and common laboratory use remain supported.
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - definition
+  - alias
+  - owners
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Evidence
+    standard and definition accuracy'
+  normalization_reason: Minor terminology error in otherwise supported laboratory-use
+    wording; no wrong molecular identity or false primary experimental result is asserted.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and PMID leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native definition generation
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source definition controls where applicable
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-9047378d43
+  description: Correct the maintained ARO definition or reviewed source-definition
+    lane to describe G418 as a selection agent for cells carrying the neo/APH3-prime
+    selectable marker. Retain PMID4007271 and the exact neutral structure; reproduce
+    the correction through documented extraction/seeding or validated curation, not
+    a hand edit of generated output.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and PMID leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native definition generation
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source definition controls where applicable
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Compare revised wording with the cited original abstract and preserve selection-agent
+    versus resistance-gene distinction.
+  - Run native schema/strict, reference/history/corpus checks and QC after documented
+    regeneration; keep unrelated fields and source events unchanged.
+limitations:
+- Fifteen of 17 adopted/current ARO leads supplied abstracts and were read completely;
+  two review leads had no abstract. Most methyltransferase/epidemiology originals
+  were not read in full, and exact G418 assay support is not uniformly established.
+- The 1974 discovery/activity and 1984 yeast scanned-PDF requests returned HTML, not
+  PDF. Their original abstracts and landing text were read, but detailed material
+  forms and tables were not verified.
+- The 2003 original crystal abstract and official deposit were inspected; a HAL repository
+  lead was inaccessible and the full article was not read. Direct binding is supported
+  at the synthetic 22-nt RNA-model scope.
+- The 2001 G418 resistance experiment does not verify a specific free-base or sulfate
+  reagent catalog; no quantitative native MIC is adopted. Its kanamycin footprinting
+  is not attributed to G418.
+- ChEBI42768 leaves one centre unspecified and is not adopted as an exact native xref.
+  Geneticin has both documented chemical-name and trademarked sulfate-product usage;
+  these contexts remain distinct.
+- XML retrieval for two selected methyltransferase papers failed with HTTP500 and
+  HTML fallbacks succeeded. The ArmA maturation HTML was retrieved but only its complete
+  abstract was assessed; successful retrieval alone is not full-text review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Standalone chemistry used batch019 against batch049; native checks, ledger and contract
+  used batch049.
+- No native/source bytes or scientific status were changed; original input hashes
+  and exact owner metadata remain preserved.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubchem.ncbi.nlm.nih.gov/compound/123865
+- https://www.rcsb.org/structure/1MWL
+- https://pubmed.ncbi.nlm.nih.gov/4007271/
+tags:
+- record-review
+- g418
+```
