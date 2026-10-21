@@ -1,0 +1,919 @@
+# Cefprozil: correct ChEBI graph with an E-isomer PubChem cross-reference mismatch
+
+- Review: 20261021T115643Z-cefprozil
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:39:22Z
+- Finished UTC: 2026-10-21T11:56:43Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native ChEBI graph consistently represents anhydrous cefprozil with three assigned stereocentres and unspecified propenyl E/Z geometry. One confirmed major exact-xref defect remains: PubChem 5281006 specifies E geometry and a different full key; official PubChem 62977 matches the native graph. KEGG also exports an E-drawn MOL and needs source-representation reconciliation. Original research distinguishes Z and E materials and their activities; the clinical monohydrate product is a predominantly cis mixture. None of those facts alone warrants excluding the unspecified graph or replacing it with a pure isomer. The PBP annotation honestly remains a database assertion requiring primary evidence.
+
+## Scope And Provenance
+
+Entire CHEBI:3506 YAML: definition, seven synonyms, three parents, two roles, structure, seven chemical xrefs, two drug links, three document links, two source concepts, one molecular target and five history events. Both adopted citation abstracts were inspected.
+
+Selection: Queue 246. Original thirteen captured inputs retained; three actual ARO identity/target/policy inputs appended before assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:3506 | data/antibiotics/antibacterial/cefprozil.yaml | generated | cefprozil |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:3506 | Actual focused command exited 0. |
+| strict | passed | True | CHEBI:3506 | Actual focused command exited 0. |
+| chemistry | passed | False | CHEBI:3506 | Actual focused command exited 0. Batch019 RDKit parsed the batch025 record and reproduced both source mints. |
+| Authoritative full QC | failed | True | CHEBI:3506 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:3506 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:3506 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:3506 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:3506 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:3506 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:3506 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:3506 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:3506 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native graph and exact chemical cross-references
+
+identity: concern. Targets: CHEBI:3506.
+
+The native ChEBI identity is coherent, but the PubChem xref resolves to an explicitly different E-specified representation. KEGG exports the same E geometry while retaining an unqualified name. Correct the links through actual source owners; do not change native identity merely to match them.
+
+### Isomers, clinical mixture and corpus boundary
+
+scope: supported. Targets: CHEBI:3506.
+
+HARMONIZATION makes chemical structure the record unit and CURATION requires exact xref identity. Unspecified E/Z geometry alone does not establish a mixture. Clinical monohydrate composition and the separately tested Z/E structures require explicit scope when enriching data; there is no justified automatic EXCLUDE decision here.
+
+### Antibacterial activity and drug-use definition
+
+evidence: supported. Targets: CHEBI:3506.
+
+Original experiments support activity of the separated cefprozil isomers; the label supports the qualified drug indications. Native quantitative claims are absent. Bounded activity evidence is preserved without converting clinical product or pure-Z measurements into an unspecified-material MIC.
+
+### PBP database annotation and available primary mechanism evidence
+
+evidence: supported. Targets: CHEBI:3506.
+
+The target has correct explicit database provenance and PRIMARY_EVIDENCE_NEEDED. The original mode-of-action abstract supports peptidoglycan functional effects in specified organisms but does not resolve direct purified-PBP binding or tested isomer purity. The structured search adds no claim.
+
+### Both adopted citations and document links
+
+evidence: supported. Targets: CHEBI:3506.
+
+Both adopted bibliographic records resolve and were read as reviews. Original patents are relevant document links. Database, label, functional-assay, PK and primary antibacterial evidence remain distinct.
+
+### Optional enrichment
+
+completeness: unknown. Targets: CHEBI:3506.
+
+Missing optional quantitative activity, resistance, producer, clinical-status, causal-graph and dataset slots are not required-field failures. New values require exact experimental material and method/organism scope.
+
+### Source provenance and reproducible correction
+
+ownership: supported. Targets: CHEBI:3506.
+
+All sixteen initial/appended inputs retain their captured hashes. PubChem comes from the ARO inventory; KEGG comes from ChEBI. Corrections belong to the source inventory/extractor/seeder or an explicitly authorized maintained decision, not an ad hoc generated-YAML change.
+
+### Focused gates
+
+schema: supported. Targets: CHEBI:3506.
+
+All focused checks passed. Their success does not establish exact external stereochemical identity.
+
+## Findings
+
+### F1: Replace or remove the E-isomer PubChem exact cross-reference
+
+major / open / confirmed; issue key: cefprozil-pubchem-e-isomer-exact-xref-mismatch.
+
+xrefs[6] is PubChem 5281006, whose official SMILES, InChI /b3-2+ layer and full key explicitly specify E-cefprozil. Native CHEBI:3506 deliberately has no E/Z specification and a different full key. PubChem 62977 has now been independently verified as matching the native graph. Separately, KEGG C06888 exports an E-drawn MOL despite its unqualified name and needs reconciliation before being called an exact match. The confirmed finding rests on the explicit PubChem identity, not an inference that missing E/Z geometry means a mixture.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the inherited exact-xref mismatch through the maintained source path and reconcile KEGG export geometry.
+
+- Replace or remove PubChem 5281006 through the ARO inventory/extractor/seeder or an authorized maintained decision; PubChem 62977 is a verified candidate matching the existing full key, formula, charge and stereochemistry.
+- Inspect KEGG C06888 exported geometry and source concept scope. Correct, qualify or remove an incompatible exact chemical link as justified without assuming its unqualified drug name proves pure E identity.
+- Preserve the native ChEBI graph unless separate exact-identity curation establishes another target. Do not infer a 90:10 mixture, pure Z identity, or an EXCLUDE decision from unspecified E/Z geometry alone.
+- After authorized curation, regenerate the record and verify exact cross-reference structures, source mints and unchanged intended molecular identity; run focused schema/strict and applicable source/provenance/reproducibility checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/cefprozil.yaml; Entire YAML, including target evidence and all history events. | supports | The SEEDED/EXACT record has an internally consistent neutral graph, formula C18H19N3O5S, masses 389.433/389.10454 and full key WDLWHQDACQUCJR-PBFPGSCMSA-N. It does not specify propenyl E/Z geometry. It has no quantitative activity, producer, resistance, clinical-status, causal-graph or transcriptomic assertions. |
+| source | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv; conf/aro_target_roles.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Exact ChEBI row 91, ARO identity row 302, target row 238 and target-role policy row 30; source extraction/seeding and attach_aro_mechanism code. | supports | ChEBI supplies the graph, definition, chemical aliases and most links. ARO supplies the class, additional aliases, ChEMBL/PubChem links and PBP relation. Target-role policy correctly makes this an explicitly qualified DIRECT_BINDING_TARGET database assertion with PRIMARY_EVIDENCE_NEEDED. The two source bibliography PMIDs are reviews, not direct target experiments. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:3506; Current complete visible chemical entry: definition, structure, names, relations and xrefs. | supports | The entry matches the native unspecified-E/Z graph, three R stereocentres, neutral formula, masses and full key. Its name and systematic synonym do not specify Z or E. CHEBI:23066 and CHEBI:72588 are broader cephalosporin and semisynthetic-derivative terms; CHEBI:33281 and CHEBI:36047 are antimicrobial and antibacterial-drug roles. |
+| pubchem-conflict | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5281006/property/MolecularFormula,SMILES,InChI,InChIKey,IUPACName/JSON; Full official property response and independent SMILES/InChI parses. | refutes | CID5281006 explicitly specifies an E-propenyl group: its SMILES contains C/C=C/C, InChI has /b3-2+, and both parse to WDLWHQDACQUCJR-ZAMMOSSLSA-N. Native CHEBI:3506 has no /b layer and key PBFPGSCMSA-N. This is a concrete exact-structure xref mismatch, independent of clinical mixture terminology. |
+| matching-structures | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/62977/property/InChI,InChIKey,IsomericSMILES,IUPACName/JSON; https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3301800.json; https://www.hmdb.ca/metabolites/HMDB0015281; Official property responses, ChEMBL chemical structure fields and HMDB indexed chemical representation. | supports | PubChem 62977 SMILES and InChI independently reproduce the native unspecified-E/Z full key. ChEMBL 3301800 also supplies and independently parses to that graph. HMDB0015281 indexed source text exposes matching SMILES/InChI/key; direct HMDB requests and a later web reopen returned 403, so retrieval scope is recorded rather than hidden. |
+| kegg | https://rest.kegg.jp/get/C06888; https://rest.kegg.jp/get/C06888/mol; https://rest.kegg.jp/get/D07651; Full compound/drug responses and independently parsed exported MOL. | partial | C06888 names cefprozil/cefprozil anhydrous and links D07651, CAS 92665-29-7 and CHEBI:3506. D07651 distinguishes a separate clinical product entry D00261. However, the current C06888 MOL draws the propenyl group so that RDKit assigns E and returns key ZAMMOSSLSA-N. Its unqualified name does not resolve that exported-structure discrepancy. Reconcile the source representation before asserting that this chemical xref is an exact graph match; do not infer that every clinical use of cefprozil denotes pure E. |
+| card | https://card.mcmaster.ca/ontology/40932; https://card.mcmaster.ca/ontology/37129; Identity page and beta-lactam sensitive PBP ontology page, definition, parent/subterm relations and bibliography. | supports | ARO:3004005 is cefprozil, with the native unassigned-E/Z SMILES and cephalosporin class ARO:0000032. Its PubChem 5281006 link is the inherited mismatched identifier. ARO:3000749 explicitly lists cefprozil in targeted_by_antibiotic and represents a broad PBP family; its descriptive E. coli numbering is not an exact native organism claim. The linked review is not a direct cefprozil PBP-binding experiment. |
+| other-links | https://www.ebi.ac.uk/chebi/CHEBI:3506; https://rest.kegg.jp/get/C06888; https://go.drugbank.com/drugs/DB01150; https://en.wikipedia.org/wiki/Cefprozil; Public registry attestations and bounded document/drug link checks. | partial | CAS 92665-29-7 is consistently attested by ChEBI, KEGG and CARD; Beilstein 8167198 is publicly attested by ChEBI but its registry contents were not inspected. DrugBank direct access failed and the web route showed a generic site shell, so its exact structure was not verified. The encyclopedia resolves to cefprozil as a drug topic; it is a document link, not primary identity evidence. Brand and drug links may concern formulation context rather than a pure geometric isomer. |
+| adapter | kg-microbe-sources imodulondb --timeout 15 datasets; kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset precise_mg1655 --query penicillin-binding; Structured catalog and search before web research; PYTHONDONTWRITEBYTECODE=1. | context_only | The catalog covers E. coli; this was a bounded contextual family-name search because the source PBP description uses E. coli numbering, while the native target lacks a specified organism. The search returned zero genes/modules. This is neither negative target evidence nor a reason to add a transcriptomic dataset. No component required summarization. |
+| synthesis | PMID:3624077; https://doi.org/10.7164/antibiotics.40.991; Original text introduction and stereochemical discussion; p. 997–999 activity methods/tables; p. 1003 separation and characterization; Table 7 p. 999 visually inspected. | supports | The paper identifies BMY-28100 as Z compound 6d and separately prepares E compound 7d by HPLC separation and crystallization. Vinyl coupling constants distinguish the isomers. Table 7 reports geometric-mean MICs over organism groups, not single-strain MICs: Z 6d versus E 7d are 0.30/0.36, 0.70/1.4 and 0.92/6.3 µg/mL for the three groups, using Mueller-Hinton agar, 10^6 CFU/mL, 37°C and 18 h. Both isomers have activity, but their values are not interchangeable. Solid-state analytical water content is not converted into an anhydrous experimental-material assertion. |
+| activity | PMID:3500158; https://doi.org/10.7164/antibiotics.40.1175; Entire nine-page text, Methods, tables, discussion and figure captions. | supports | The original study tests BMY-28100, identified as the Z compound by its structure/name and cited synthesis. Agar dilution uses Mueller-Hinton medium except the stated fastidious-organism alternative, about 0.003 mL of 10^6 cells/mL inoculum and 18 h at 37°C. Broth MIC/MBC and time-kill experiments support bactericidal effects in specified strains; beta-lactamase hydrolysis depends on enzyme source. Quantitative pure-Z results, rodent efficacy and host PK are not automatically observations for the native unspecified-E/Z graph or the clinical mixture. |
+| mode-primary | PMID:1864765; https://pubmed.ncbi.nlm.nih.gov/1864765/; Complete original abstract; no inspected free full paper obtained in bounded searches. | partial | Cefprozil/BMY-28100 was studied in E. coli K12, S. marcescens IFO 12648 and M. morganii IFO 3848. The abstract reports MICs, EDTA-dependent changes, relative beta-lactamase stability and inhibited peptidoglycan cross-linking in ether-treated cells. That last assay is functional cell-preparation evidence; it does not by itself identify a purified PBP or establish direct binding. The complete Methods and tested isomer proportions were not inspected. |
+| clinical-material | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14527f4a-ce99-449d-a5a5-9edd7fb28dee; Official Lupin label Description, Microbiology and Indications/Usage. | supports | The label explicitly describes a cis/trans mixture with at least 90% cis, supplied as monohydrate and dosed in anhydrous equivalents. Indications include susceptible bacterial otitis, acute bacterial exacerbations of chronic bronchitis and specified skin infections, supporting the native definition at drug-use level. This is not proof that an E/Z-unspecified graph is itself a measured90:10 mixture. Label susceptibility quality-control ranges are not new primary isolate MICs. |
+| pk-primary | PMID:2073105; https://doi.org/10.1128/AAC.34.11.2152; PMID:1430299; https://doi.org/10.1002/j.1552-4604.1992.tb03885.x; PMID:1924169; https://doi.org/10.1023/A:1015896722170; Complete indexed original abstracts. | context_only | These human PK/analytical studies distinguish cis BMY-28100 from trans BMY-28167 and describe approximately 90:10 clinical material. Their plasma concentrations and analytical measurements are not microbial inhibition or PBP-binding assays, and their formulation ratio is not silently assigned to the native graph. |
+| patents | https://patents.google.com/patent/US4520022A/en; https://patents.google.com/patent/DE3402642A1/en; Published identifiers/titles and selected original Procedure/Example 8–9 passages. | supports | Both published patent documents concern substituted vinyl cephalosporins and describe separation of cis BMY-28100 from the trans material. They resolve as relevant document links. Their broader claims and analogues are not exact-identity assertions for every compound in the native record; no legal-status conclusion was drawn. |
+| adopted-reviews | PMID:29017833; https://doi.org/10.1016/j.jaip.2017.08.027; PMID:12841400; https://doi.org/10.1007/BF02723613; Both complete adopted citation abstracts, inspected from the official literature index. | context_only | 29017833 is an allergy/cross-reactivity review; 12841400 is a cefprozil pharmacology/clinical review. Neither is primary proof of a microbial PBP interaction. The latter abstract calls cefprozil third-generation, whereas native/current ChEBI, CARD and KEGG use second-generation; this classification wording conflict does not change the exact molecule. No additional experimental claim was imported from either review. |
+| search | 246-inclusive-file-hits-final.txt; bounded public exact-name/code/PMID searches; Hidden and ignored repository files included. | context_only | The inclusive search located the native/raw rows, path locks, queue and generated maps, with no exact curator overlay or corrective decision found in the searched areas. Public searches were bounded to cefprozil, BMY-28100, its exact chemical identifiers and original source citations; access limits are explicit, not universal absence conclusions. |
+| validation | 246-focused-results.json;246-chemistry.json;246-external-chemistry.json; Actual focused gates, native structure/source mints and independent official chemical parses. | supports | Schema, strict and native chemistry commands exit 0. Native SMILES/InChI/mints agree. The external parse separately demonstrates E geometry in PubChem 5281006 and KEGG MOL versus unassigned geometry in PubChem 62977 and ChEMBL 3301800; deterministic native checks do not detect this scientific xref mismatch. |
+
+## Limits And Additional Notes
+
+- All native fields and actual source rows were read. The original thirteen capture hashes were preserved and three actual ARO inputs appended before judgment; all sixteen remain unchanged.
+- The 1987 activity paper was read completely as extracted text, including Methods, tables, discussion and figure captions. The synthesis paper was read selectively for identity, stereochemistry, activity methods/tables and exact separation/characterization; Table 7 was visually inspected. Its other analogue synthesis details were not exhaustively reviewed.
+- Both adopted citation abstracts were inspected and classified as reviews. The 1991 mode-of-action paper was inspected at complete abstract level; no free full paper was obtained in bounded searches. Direct purified-PBP binding and exact tested isomer composition remain unresolved.
+- Official labeling and three original PK/analytical abstracts establish clinical product/isomer context, not an automatic mixture interpretation of the unspecified native graph. No formulation or pure-isomer measurement was added as an unqualified native observation.
+- PubChem 5281006 versus native identity is a confirmed explicit stereochemical mismatch. The KEGG export also parses as E, but its unqualified naming/source concept needs reconciliation before a final link correction. PubChem 62977 and ChEMBL 3301800 match the native graph.
+- HMDB indexed chemical text was inspectable, but direct requests and a later reopen returned 403. DrugBank yielded no inspected compound detail. CAS and Beilstein were checked through public source attestations; paid registry contents were not accessed. Patent inspection was limited to identifiers and relevant separation examples.
+- The iModulonDB family-name search was contextual to source E. coli numbering, not a claim that the native target specifies that organism. Zero results do not disprove PBP activity, and no transcriptomic dataset was inferred. Optional missing fields are not scientific errors.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T115643Z-cefprozil
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefprozil: correct ChEBI graph with an E-isomer PubChem cross-reference mismatch'
+started_at: '2026-10-21T11:39:22Z'
+finished_at: '2026-10-21T11:56:43Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed. Preserved initial input hashes, inspected
+    the entire native record and actual maintained source rows before judgment, and
+    independently checked official chemical structures and original antibacterial
+    evidence.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The native ChEBI graph consistently represents anhydrous cefprozil with
+  three assigned stereocentres and unspecified propenyl E/Z geometry. One confirmed
+  major exact-xref defect remains: PubChem 5281006 specifies E geometry and a different
+  full key; official PubChem 62977 matches the native graph. KEGG also exports an
+  E-drawn MOL and needs source-representation reconciliation. Original research distinguishes
+  Z and E materials and their activities; the clinical monohydrate product is a predominantly
+  cis mixture. None of those facts alone warrants excluding the unspecified graph
+  or replacing it with a pure isomer. The PBP annotation honestly remains a database
+  assertion requiring primary evidence.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefprozil.yaml
+    sha256: cad990b21bf7d40548ed557514b2d8a29a1dd085095a746fe4e5c64624cb6202
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+targets:
+- target_id: CHEBI:3506
+  path: data/antibiotics/antibacterial/cefprozil.yaml
+  label: cefprozil
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Maintained target-role/type policy
+scope:
+  description: 'Entire CHEBI:3506 YAML: definition, seven synonyms, three parents,
+    two roles, structure, seven chemical xrefs, two drug links, three document links,
+    two source concepts, one molecular target and five history events. Both adopted
+    citation abstracts were inspected.'
+  selection: Queue 246. Original thirteen captured inputs retained; three actual ARO
+    identity/target/policy inputs appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3506
+  exclusions:
+  - target: Pure Z or E cefprozil, hydrate solids and clinical cis/trans formulations
+    reason: These are explicitly distinguished experimental or product materials.
+      They inform scope but are not silently equated with the native E/Z-unspecified
+      anhydrous representation.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefprozil.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefprozil.yaml --out /private/tmp/am-review-session/246-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. Batch019 RDKit parsed the batch025 record
+    and reproduced both source mints.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 246
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3506
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefprozil.yaml
+  locator: Entire YAML, including target evidence and all history events.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: The SEEDED/EXACT record has an internally consistent neutral graph, formula
+    C18H19N3O5S, masses 389.433/389.10454 and full key WDLWHQDACQUCJR-PBFPGSCMSA-N.
+    It does not specify propenyl E/Z geometry. It has no quantitative activity, producer,
+    resistance, clinical-status, causal-graph or transcriptomic assertions.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    conf/aro_target_roles.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: Exact ChEBI row 91, ARO identity row 302, target row 238 and target-role
+    policy row 30; source extraction/seeding and attach_aro_mechanism code.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: ChEBI supplies the graph, definition, chemical aliases and most links.
+    ARO supplies the class, additional aliases, ChEMBL/PubChem links and PBP relation.
+    Target-role policy correctly makes this an explicitly qualified DIRECT_BINDING_TARGET
+    database assertion with PRIMARY_EVIDENCE_NEEDED. The two source bibliography PMIDs
+    are reviews, not direct target experiments.
+  snapshot_sha256: 624f7b1b5be9451fa252a234eac9d59f943052199e7cce0b56518fd4ea6f9043
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3506
+  locator: 'Current complete visible chemical entry: definition, structure, names,
+    relations and xrefs.'
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: The entry matches the native unspecified-E/Z graph, three R stereocentres,
+    neutral formula, masses and full key. Its name and systematic synonym do not specify
+    Z or E. CHEBI:23066 and CHEBI:72588 are broader cephalosporin and semisynthetic-derivative
+    terms; CHEBI:33281 and CHEBI:36047 are antimicrobial and antibacterial-drug roles.
+  snapshot_sha256: 510ceb393053ec6ab3c475e841350c73897381f07251878b4052f24c3e567d72
+- evidence_id: pubchem-conflict
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5281006/property/MolecularFormula,SMILES,InChI,InChIKey,IUPACName/JSON
+  locator: Full official property response and independent SMILES/InChI parses.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: refutes
+  summary: 'CID5281006 explicitly specifies an E-propenyl group: its SMILES contains
+    C/C=C/C, InChI has /b3-2+, and both parse to WDLWHQDACQUCJR-ZAMMOSSLSA-N. Native
+    CHEBI:3506 has no /b layer and key PBFPGSCMSA-N. This is a concrete exact-structure
+    xref mismatch, independent of clinical mixture terminology.'
+  snapshot_sha256: 9205fe6e1e7af71ccac467d77448563000af3cf3d1d36ce405f0e04e5d48eea0
+- evidence_id: matching-structures
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/62977/property/InChI,InChIKey,IsomericSMILES,IUPACName/JSON;
+    https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3301800.json; https://www.hmdb.ca/metabolites/HMDB0015281
+  locator: Official property responses, ChEMBL chemical structure fields and HMDB
+    indexed chemical representation.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: PubChem 62977 SMILES and InChI independently reproduce the native unspecified-E/Z
+    full key. ChEMBL 3301800 also supplies and independently parses to that graph.
+    HMDB0015281 indexed source text exposes matching SMILES/InChI/key; direct HMDB
+    requests and a later web reopen returned 403, so retrieval scope is recorded rather
+    than hidden.
+  snapshot_sha256: 6299ba376a627bebed6c1fb1a0ac2b6a0e23b74f4b6c2384e38869d22953189e
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C06888; https://rest.kegg.jp/get/C06888/mol;
+    https://rest.kegg.jp/get/D07651
+  locator: Full compound/drug responses and independently parsed exported MOL.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: partial
+  summary: C06888 names cefprozil/cefprozil anhydrous and links D07651, CAS 92665-29-7
+    and CHEBI:3506. D07651 distinguishes a separate clinical product entry D00261.
+    However, the current C06888 MOL draws the propenyl group so that RDKit assigns
+    E and returns key ZAMMOSSLSA-N. Its unqualified name does not resolve that exported-structure
+    discrepancy. Reconcile the source representation before asserting that this chemical
+    xref is an exact graph match; do not infer that every clinical use of cefprozil
+    denotes pure E.
+  snapshot_sha256: 3ed47b4414252adbb5a13d2a3034376dff06521472e53873876e382b2d1520e0
+- evidence_id: card
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/40932; https://card.mcmaster.ca/ontology/37129
+  locator: Identity page and beta-lactam sensitive PBP ontology page, definition,
+    parent/subterm relations and bibliography.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: ARO:3004005 is cefprozil, with the native unassigned-E/Z SMILES and cephalosporin
+    class ARO:0000032. Its PubChem 5281006 link is the inherited mismatched identifier.
+    ARO:3000749 explicitly lists cefprozil in targeted_by_antibiotic and represents
+    a broad PBP family; its descriptive E. coli numbering is not an exact native organism
+    claim. The linked review is not a direct cefprozil PBP-binding experiment.
+  snapshot_sha256: 1acac477328201d0374dc3dec72a28776ca8fa6c57b1b04f466ef2efe38f0324
+- evidence_id: other-links
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:3506; https://rest.kegg.jp/get/C06888;
+    https://go.drugbank.com/drugs/DB01150; https://en.wikipedia.org/wiki/Cefprozil
+  locator: Public registry attestations and bounded document/drug link checks.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: partial
+  summary: CAS 92665-29-7 is consistently attested by ChEBI, KEGG and CARD; Beilstein
+    8167198 is publicly attested by ChEBI but its registry contents were not inspected.
+    DrugBank direct access failed and the web route showed a generic site shell, so
+    its exact structure was not verified. The encyclopedia resolves to cefprozil as
+    a drug topic; it is a document link, not primary identity evidence. Brand and
+    drug links may concern formulation context rather than a pure geometric isomer.
+  snapshot_sha256: 510ceb393053ec6ab3c475e841350c73897381f07251878b4052f24c3e567d72
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb --timeout 15 datasets; kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise_mg1655 --query
+    penicillin-binding
+  locator: Structured catalog and search before web research; PYTHONDONTWRITEBYTECODE=1.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: context_only
+  summary: The catalog covers E. coli; this was a bounded contextual family-name search
+    because the source PBP description uses E. coli numbering, while the native target
+    lacks a specified organism. The search returned zero genes/modules. This is neither
+    negative target evidence nor a reason to add a transcriptomic dataset. No component
+    required summarization.
+  snapshot_sha256: c0c1349634c9fe27513341b9e3874b42ccdbe1e5aaf236bb1dc12561a196e078
+- evidence_id: synthesis
+  kind: primary_source
+  reference: PMID:3624077; https://doi.org/10.7164/antibiotics.40.991
+  locator: Original text introduction and stereochemical discussion; p. 997–999 activity
+    methods/tables; p. 1003 separation and characterization; Table 7 p. 999 visually
+    inspected.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: 'The paper identifies BMY-28100 as Z compound 6d and separately prepares
+    E compound 7d by HPLC separation and crystallization. Vinyl coupling constants
+    distinguish the isomers. Table 7 reports geometric-mean MICs over organism groups,
+    not single-strain MICs: Z 6d versus E 7d are 0.30/0.36, 0.70/1.4 and 0.92/6.3
+    µg/mL for the three groups, using Mueller-Hinton agar, 10^6 CFU/mL, 37°C and 18
+    h. Both isomers have activity, but their values are not interchangeable. Solid-state
+    analytical water content is not converted into an anhydrous experimental-material
+    assertion.'
+  snapshot_sha256: 869cd93401a66af0fdf8e11a44cf89c4d610579a739b50f1803200303f61eb9c
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:3500158; https://doi.org/10.7164/antibiotics.40.1175
+  locator: Entire nine-page text, Methods, tables, discussion and figure captions.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: The original study tests BMY-28100, identified as the Z compound by its
+    structure/name and cited synthesis. Agar dilution uses Mueller-Hinton medium except
+    the stated fastidious-organism alternative, about 0.003 mL of 10^6 cells/mL inoculum
+    and 18 h at 37°C. Broth MIC/MBC and time-kill experiments support bactericidal
+    effects in specified strains; beta-lactamase hydrolysis depends on enzyme source.
+    Quantitative pure-Z results, rodent efficacy and host PK are not automatically
+    observations for the native unspecified-E/Z graph or the clinical mixture.
+  snapshot_sha256: 3128550ce57c555f56cdca7a1b3c6808c625a30d2459898597c430c5af66e9c4
+- evidence_id: mode-primary
+  kind: primary_source
+  reference: PMID:1864765; https://pubmed.ncbi.nlm.nih.gov/1864765/
+  locator: Complete original abstract; no inspected free full paper obtained in bounded
+    searches.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: partial
+  summary: Cefprozil/BMY-28100 was studied in E. coli K12, S. marcescens IFO 12648
+    and M. morganii IFO 3848. The abstract reports MICs, EDTA-dependent changes, relative
+    beta-lactamase stability and inhibited peptidoglycan cross-linking in ether-treated
+    cells. That last assay is functional cell-preparation evidence; it does not by
+    itself identify a purified PBP or establish direct binding. The complete Methods
+    and tested isomer proportions were not inspected.
+  snapshot_sha256: 8ea4929fab393814bf935ddb793e24734195a9ba3ea18f849b3554131b5397e0
+- evidence_id: clinical-material
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14527f4a-ce99-449d-a5a5-9edd7fb28dee
+  locator: Official Lupin label Description, Microbiology and Indications/Usage.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: The label explicitly describes a cis/trans mixture with at least 90% cis,
+    supplied as monohydrate and dosed in anhydrous equivalents. Indications include
+    susceptible bacterial otitis, acute bacterial exacerbations of chronic bronchitis
+    and specified skin infections, supporting the native definition at drug-use level.
+    This is not proof that an E/Z-unspecified graph is itself a measured90:10 mixture.
+    Label susceptibility quality-control ranges are not new primary isolate MICs.
+  snapshot_sha256: 372e06608ccbac8d4bc197e4155ef096a3d77d575fb948fc9b9e2e9dc7659122
+- evidence_id: pk-primary
+  kind: primary_source
+  reference: PMID:2073105; https://doi.org/10.1128/AAC.34.11.2152; PMID:1430299; https://doi.org/10.1002/j.1552-4604.1992.tb03885.x;
+    PMID:1924169; https://doi.org/10.1023/A:1015896722170
+  locator: Complete indexed original abstracts.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: context_only
+  summary: These human PK/analytical studies distinguish cis BMY-28100 from trans
+    BMY-28167 and describe approximately 90:10 clinical material. Their plasma concentrations
+    and analytical measurements are not microbial inhibition or PBP-binding assays,
+    and their formulation ratio is not silently assigned to the native graph.
+  snapshot_sha256: 8ea4929fab393814bf935ddb793e24734195a9ba3ea18f849b3554131b5397e0
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4520022A/en; https://patents.google.com/patent/DE3402642A1/en
+  locator: Published identifiers/titles and selected original Procedure/Example 8–9
+    passages.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: Both published patent documents concern substituted vinyl cephalosporins
+    and describe separation of cis BMY-28100 from the trans material. They resolve
+    as relevant document links. Their broader claims and analogues are not exact-identity
+    assertions for every compound in the native record; no legal-status conclusion
+    was drawn.
+  snapshot_sha256: db763c47888c3ff14572b98c9e6779df6c5d117dd575d870033534454832a7f7
+- evidence_id: adopted-reviews
+  kind: database
+  reference: PMID:29017833; https://doi.org/10.1016/j.jaip.2017.08.027; PMID:12841400;
+    https://doi.org/10.1007/BF02723613
+  locator: Both complete adopted citation abstracts, inspected from the official literature
+    index.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: context_only
+  summary: 29017833 is an allergy/cross-reactivity review; 12841400 is a cefprozil
+    pharmacology/clinical review. Neither is primary proof of a microbial PBP interaction.
+    The latter abstract calls cefprozil third-generation, whereas native/current ChEBI,
+    CARD and KEGG use second-generation; this classification wording conflict does
+    not change the exact molecule. No additional experimental claim was imported from
+    either review.
+  snapshot_sha256: 2025d3e7237440403282832d78abe8df2198a0a961e9d45b9adfdb89e5b8686c
+- evidence_id: search
+  kind: search
+  reference: 246-inclusive-file-hits-final.txt; bounded public exact-name/code/PMID
+    searches
+  locator: Hidden and ignored repository files included.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: context_only
+  summary: The inclusive search located the native/raw rows, path locks, queue and
+    generated maps, with no exact curator overlay or corrective decision found in
+    the searched areas. Public searches were bounded to cefprozil, BMY-28100, its
+    exact chemical identifiers and original source citations; access limits are explicit,
+    not universal absence conclusions.
+  snapshot_sha256: 7e8ac353674dbf6469c2d4d659f442e52cb12edc4871e66b24a2ec46dcd7390c
+  search_scope: rg --no-ignore --hidden over data, curation, conf, scripts, src, docs,
+    .claude, reviews and reports for cefprozil, CHEBI:3506, ARO:3004005, full key
+    and source mint.
+- evidence_id: validation
+  kind: validation
+  reference: 246-focused-results.json;246-chemistry.json;246-external-chemistry.json
+  locator: Actual focused gates, native structure/source mints and independent official
+    chemical parses.
+  accessed_at: '2026-10-21T11:53:52Z'
+  support: supports
+  summary: Schema, strict and native chemistry commands exit 0. Native SMILES/InChI/mints
+    agree. The external parse separately demonstrates E geometry in PubChem 5281006
+    and KEGG MOL versus unassigned geometry in PubChem 62977 and ChEMBL 3301800; deterministic
+    native checks do not detect this scientific xref mismatch.
+  snapshot_sha256: c591b8ab3163307dacc2c03ea628fbee649d61dc90a23be8fcd1335985791e27
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native graph and exact chemical cross-references
+  outcome: concern
+  summary: The native ChEBI identity is coherent, but the PubChem xref resolves to
+    an explicitly different E-specified representation. KEGG exports the same E geometry
+    while retaining an unqualified name. Correct the links through actual source owners;
+    do not change native identity merely to match them.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - chebi
+  - pubchem-conflict
+  - matching-structures
+  - kegg
+  - validation
+- assessment_id: scope
+  area: scope
+  topic: Isomers, clinical mixture and corpus boundary
+  outcome: supported
+  summary: HARMONIZATION makes chemical structure the record unit and CURATION requires
+    exact xref identity. Unspecified E/Z geometry alone does not establish a mixture.
+    Clinical monohydrate composition and the separately tested Z/E structures require
+    explicit scope when enriching data; there is no justified automatic EXCLUDE decision
+    here.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - record
+  - synthesis
+  - clinical-material
+  - pk-primary
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial activity and drug-use definition
+  outcome: supported
+  summary: Original experiments support activity of the separated cefprozil isomers;
+    the label supports the qualified drug indications. Native quantitative claims
+    are absent. Bounded activity evidence is preserved without converting clinical
+    product or pure-Z measurements into an unspecified-material MIC.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - synthesis
+  - activity
+  - clinical-material
+- assessment_id: target
+  area: evidence
+  topic: PBP database annotation and available primary mechanism evidence
+  outcome: supported
+  summary: The target has correct explicit database provenance and PRIMARY_EVIDENCE_NEEDED.
+    The original mode-of-action abstract supports peptidoglycan functional effects
+    in specified organisms but does not resolve direct purified-PBP binding or tested
+    isomer purity. The structured search adds no claim.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - card
+  - source
+  - mode-primary
+  - adapter
+- assessment_id: citations
+  area: evidence
+  topic: Both adopted citations and document links
+  outcome: supported
+  summary: Both adopted bibliographic records resolve and were read as reviews. Original
+    patents are relevant document links. Database, label, functional-assay, PK and
+    primary antibacterial evidence remain distinct.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - adopted-reviews
+  - patents
+  - other-links
+- assessment_id: completeness
+  area: completeness
+  topic: Optional enrichment
+  outcome: unknown
+  summary: Missing optional quantitative activity, resistance, producer, clinical-status,
+    causal-graph and dataset slots are not required-field failures. New values require
+    exact experimental material and method/organism scope.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - record
+  - activity
+  - mode-primary
+  - clinical-material
+- assessment_id: owners
+  area: ownership
+  topic: Source provenance and reproducible correction
+  outcome: supported
+  summary: All sixteen initial/appended inputs retain their captured hashes. PubChem
+    comes from the ARO inventory; KEGG comes from ChEBI. Corrections belong to the
+    source inventory/extractor/seeder or an explicitly authorized maintained decision,
+    not an ad hoc generated-YAML change.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - source
+  - search
+  - validation
+- assessment_id: checks
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: All focused checks passed. Their success does not establish exact external
+    stereochemical identity.
+  target_ids:
+  - CHEBI:3506
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: cefprozil-pubchem-e-isomer-exact-xref-mismatch
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Replace or remove the E-isomer PubChem exact cross-reference
+  description: xrefs[6] is PubChem 5281006, whose official SMILES, InChI /b3-2+ layer
+    and full key explicitly specify E-cefprozil. Native CHEBI:3506 deliberately has
+    no E/Z specification and a different full key. PubChem 62977 has now been independently
+    verified as matching the native graph. Separately, KEGG C06888 exports an E-drawn
+    MOL despite its unqualified name and needs reconciliation before being called
+    an exact match. The confirmed finding rests on the explicit PubChem identity,
+    not an inference that missing E/Z geometry means a mixture.
+  target_ids:
+  - CHEBI:3506
+  field_paths:
+  - xrefs[6]
+  evidence_ids:
+  - record
+  - source
+  - pubchem-conflict
+  - matching-structures
+  - kegg
+  - synthesis
+  rule_id: 'docs/CURATION.md: An xref is the same structure; docs/HARMONIZATION.md:
+    unit of corpus is a structure'
+  native_severity: major
+  normalization_reason: An exact chemical xref asserts a narrower geometric isomer
+    than the stored graph. The native graph remains coherent, so this is a major xref
+    identity defect rather than a blocker requiring wholesale structure replacement
+    or exclusion.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted PubChem xref source for ARO:3004005
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted native identity and KEGG xref source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible xref extraction or correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and xref owner
+actions:
+- action_id: A1
+  description: Correct the inherited exact-xref mismatch through the maintained source
+    path and reconcile KEGG export geometry.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3506
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted PubChem xref source for ARO:3004005
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted native identity and KEGG xref source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible xref extraction or correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated identity and xref owner
+  acceptance_checks:
+  - Replace or remove PubChem 5281006 through the ARO inventory/extractor/seeder or
+    an authorized maintained decision; PubChem 62977 is a verified candidate matching
+    the existing full key, formula, charge and stereochemistry.
+  - Inspect KEGG C06888 exported geometry and source concept scope. Correct, qualify
+    or remove an incompatible exact chemical link as justified without assuming its
+    unqualified drug name proves pure E identity.
+  - Preserve the native ChEBI graph unless separate exact-identity curation establishes
+    another target. Do not infer a 90:10 mixture, pure Z identity, or an EXCLUDE decision
+    from unspecified E/Z geometry alone.
+  - After authorized curation, regenerate the record and verify exact cross-reference
+    structures, source mints and unchanged intended molecular identity; run focused
+    schema/strict and applicable source/provenance/reproducibility checks.
+limitations:
+- All native fields and actual source rows were read. The original thirteen capture
+  hashes were preserved and three actual ARO inputs appended before judgment; all
+  sixteen remain unchanged.
+- The 1987 activity paper was read completely as extracted text, including Methods,
+  tables, discussion and figure captions. The synthesis paper was read selectively
+  for identity, stereochemistry, activity methods/tables and exact separation/characterization;
+  Table 7 was visually inspected. Its other analogue synthesis details were not exhaustively
+  reviewed.
+- Both adopted citation abstracts were inspected and classified as reviews. The 1991
+  mode-of-action paper was inspected at complete abstract level; no free full paper
+  was obtained in bounded searches. Direct purified-PBP binding and exact tested isomer
+  composition remain unresolved.
+- Official labeling and three original PK/analytical abstracts establish clinical
+  product/isomer context, not an automatic mixture interpretation of the unspecified
+  native graph. No formulation or pure-isomer measurement was added as an unqualified
+  native observation.
+- PubChem 5281006 versus native identity is a confirmed explicit stereochemical mismatch.
+  The KEGG export also parses as E, but its unqualified naming/source concept needs
+  reconciliation before a final link correction. PubChem 62977 and ChEMBL 3301800
+  match the native graph.
+- HMDB indexed chemical text was inspectable, but direct requests and a later reopen
+  returned 403. DrugBank yielded no inspected compound detail. CAS and Beilstein were
+  checked through public source attestations; paid registry contents were not accessed.
+  Patent inspection was limited to identifiers and relevant separation examples.
+- The iModulonDB family-name search was contextual to source E. coli numbering, not
+  a claim that the native target specifies that organism. Zero results do not disprove
+  PBP activity, and no transcriptomic dataset was inferred. Optional missing fields
+  are not scientific errors.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
