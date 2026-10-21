@@ -1,0 +1,714 @@
+schema_version: 1.0.0
+review_id: 20261021T202213Z-magainin-2-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Magainin 2: supported mature peptide with a bounded lysis-definition qualification'
+started_at: '2026-10-21T20:11:19Z'
+finished_at: '2026-10-21T20:22:13Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native all-L free-acid 23mer is independently corroborated by the original
+  sequence, precursor, PubChem and all three current ChEMBL encodings. The cited 1988
+  paper supports antibacterial and antifungal activity, but its demonstrated osmotic-lysis
+  experiment concerns Paramecium rather than bacteria. One minor finding requests
+  accurate organism and mechanism wording without denying bacterial membrane damage
+  or possible lysis under other conditions. The less complete two-star ChEBI representation
+  and the exact-material limits of later mechanism papers remain explicit.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/magainin-2.yaml
+    sha256: d038fdd2281ba79ba7093228e8eec6fef4da914e212c1da90f4612b26d74d722
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-b18912d1c6
+  path: data/antibiotics/antibacterial/magainin-2.yaml
+  label: magainin 2
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual maintained source input for the record
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 623; all thirteen original input hashes were verified
+    unchanged, actual ARO/PubChem owners were appended, and every native field was
+    read. Shared original magainin papers were assessed for the exact magainin 2 component
+    separately.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-b18912d1c6
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/magainin-2.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/magainin-2.yaml --out /private/tmp/am-review-session/623-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 623
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: sequence-authorities
+  name: Independent mature-sequence and authority reconstruction
+  status: passed
+  required: false
+  summary: The all-L free-acid sequence reproduces the complete native, PubChem and
+    ChEMBL key. ChEBI InChI lacks stereo and its invalid SMILES is reported explicitly,
+    not silently repaired.
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/623-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/magainin-2.yaml
+  locator: Entire native record, including all structure fields, four exact xrefs,
+    one source concept and three history events.
+  accessed_at: '2026-10-21T20:21:16Z'
+  support: supports
+  summary: Magainin 2 is an ANTIBACTERIAL, SEEDED, MINTED ARO record with peptide-antibiotic
+    parent/class. Its definition cites PMID:3277183 and asserts osmotic lysis of bacteria.
+    No native synonyms, drug associations, activity roles, mode enum, target, resistance,
+    numeric activity, clinical status, producer object, causal graph, dataset or discussion
+    is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv:266; data/raw/pubchem_structures.tsv:91;
+    conf/sources.yaml; scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: Complete actual source rows, configured three-star ChEBI eligibility and
+    ARO/PubChem extraction/enrichment/seeding branches.
+  accessed_at: '2026-10-21T20:21:16Z'
+  support: supports
+  summary: ARO owns the definition, PMID, imported xrefs and class; PubChem owns the
+    complete stored graph. The two-star ChEBI entry is not present in the adopted
+    inventory, explaining the valid MINTED fallback. All thirteen original hashes
+    remain; the actual ARO inventory, PubChem inventory and enrichment script were
+    appended before assessment. Independent mint calculation matches the identifier.
+  snapshot_sha256: 63db78b92bfcc4a19043b0670b4b2f114bf1b804b4582f782c8d2b3c3e153397
+- evidence_id: local-search
+  kind: validation
+  reference: /private/tmp/am-review-session/623-local-hits.txt
+  locator: Identifier/label/slug search included hidden and ignored files, followed
+    by complete matching maintained-table rows.
+  accessed_at: '2026-10-21T20:21:16Z'
+  support: context_only
+  summary: The whole native file establishes its assertion set. Generated pages and
+    historical research matches served only as leads. Absence of optional mechanism,
+    activity, resistance or clinical objects is not treated as a defect.
+  snapshot_sha256: 2f81ec1571c373420f521c6d4f41671e21cc19697194c90380c81f3338c20e52
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Official snapshot terms ARO:3003572, ARO:3000694 and ARO:3000053 independently
+    read in 623-current-aro.txt.
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: Current ARO repeats the same exact definition and PMID, including bacteria
+    as the object of osmotic lysis. Magainin is under the broader peptide-antibiotic
+    class. The source family context does not resolve the species and endpoint mismatch
+    in the cited original experiment.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/16130189
+  locator: Current PUG REST formula, charge, mass, Standard InChI and key.
+  accessed_at: '2026-10-21T20:16:57Z'
+  support: supports
+  summary: Current PubChem agrees with the native neutral C114H180N30O29S free-acid
+    peptide, key MGIUUAHJVPPFEV-ABXDCCGRSA-N and reported masses at the stated precision.
+    The neutral formal graph does not assert that the molecule is uncharged under
+    every biological assay condition.
+  snapshot_sha256: 7465ded19616d010654fa914e5b896488d5c27e6feb85152ce114dde2b4e3b07
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL414933.json
+  locator: Current magainin 2 label, formula, SMILES, molfile and Standard InChI independently
+    inspected and parsed.
+  accessed_at: '2026-10-21T20:16:57Z'
+  support: supports
+  summary: All three ChEMBL encodings reproduce the entire native key, including the
+    free carboxyl terminus and twenty-one assigned centres. The separate magainin
+    1 ChEMBL mismatch is not transferred to this record.
+  snapshot_sha256: 0d3d3b01075638eb7b822a2e3cf9816074f752ffd63b87febc5372de78d6cc82
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:201476
+  locator: Entire current two-star entry, submitted name, chemical data, default structure
+    and peptide parent.
+  accessed_at: '2026-10-21T20:16:57Z'
+  support: partial
+  summary: The submitted systematic name is stereospecified, but default InChI lacks
+    the tetrahedral layer and yields MGIUUAHJVPPFEV-UHFFFAOYSA-N. Its aromatic histidine
+    SMILES does not kekulize. The independently parsed InChI preserves native constitution;
+    it is insufficient by itself to corroborate exact chirality. This upstream representation
+    limit is not proof of an opposite natural epimer or a native parse defect.
+  snapshot_sha256: c9c8db9951460a615e04e40e2c228fd084205c4ddb76c3494fdabb98fa5c387e
+- evidence_id: sequence
+  kind: validation
+  reference: /private/tmp/am-review-session/623-compare.py; /private/tmp/am-review-session/623-authority-chemistry.json
+  locator: Independent all-L sequence reconstruction and exact authority comparison.
+  accessed_at: '2026-10-21T20:21:16Z'
+  support: supports
+  summary: GIGKFLHSAKKFGKAFVGEIMNS with a free N terminus and carboxyl terminus generates
+    the exact native/PubChem/ChEMBL key and formula. The peptide differs from magainin
+    1 at residues 10 and 22, and both isoleucine side-chain centres are retained.
+    No modified or amidated analogue is silently substituted.
+  snapshot_sha256: b18cc11e22cc1f953a6dd5824b7764ea571adecde62209213da29c1255a4c1b6
+- evidence_id: uniprot
+  kind: database
+  reference: https://rest.uniprot.org/uniprotkb/P11006.json
+  locator: Reviewed Xenopus laevis precursor sequence and processed peptide segments.
+  accessed_at: '2026-10-21T20:16:58Z'
+  support: supports
+  summary: P11006 contains magainin 2 copies, including residues 83–105 with the exact
+    23-residue sequence. It corroborates precursor-derived biosynthesis and the mature
+    sequence; the whole precursor is neither an exact chemical xref nor a microbial
+    molecular target.
+  snapshot_sha256: 4e6465c69b6ac43626291a32cb04fe6f7e4e11b42842d09ee5c6b35c6cb9ffd5
+- evidence_id: discovery1987
+  kind: primary_source
+  reference: PMID:3299384; DOI:10.1073/pnas.84.15.5449; https://pmc.ncbi.nlm.nih.gov/articles/PMC298875/
+  locator: All five original scanned pages read; exact magainin 2 sequence Figure
+    3, Table 1, killing/hemolysis Figure 4 and precursor Figure 5 inspected.
+  accessed_at: '2026-10-21T20:13:43Z'
+  support: supports
+  summary: The original study purified magainin 2 from female Xenopus laevis ventral
+    skin, sequenced the 23mer and linked it to precursor cDNA. Table 1 measures inhibition
+    in specific bacterial isolates; Figure 4A shows loss of E. coli D31 viability
+    after exposure to 10 microgram/mL. The osmotic-swelling/bursting description concerns
+    Paramecium caudatum. Bacterial death, growth inhibition and protozoal osmotic
+    lysis are distinct observations. The authors describe an antimicrobial host-defense
+    interpretation without proving clinical efficacy.
+  snapshot_sha256: 206ce9eefcce10a569046b76637f9557932991d2482e72bf382883a1df6449fd
+- evidence_id: adopted1988
+  kind: primary_source
+  reference: PMID:3277183; DOI:10.1073/pnas.85.3.910; https://pmc.ncbi.nlm.nih.gov/articles/PMC279666/
+  locator: All four original scanned pages read, with exact component mapping and
+    Tables 1–3/Figures 1–3 directly viewed.
+  accessed_at: '2026-10-21T20:13:43Z'
+  support: partial
+  summary: Full-length magainin 2 is component 3, distinct from the truncated 22-residue
+    components 1/2 and from magainin 1/component 5. Carboxypeptidase release and synthetic/natural
+    chromatography support the free C terminus. Table 3 gives bacterial growth-suppression
+    intervals, including 1–7 microgram/mL for E. coli D31 and ATCC25922; the assay
+    used about 10^5 CFU/mL, trypticase soy broth, 5 hours at 37 °C and OD600, with
+    concentrations 1, 7, 35, 70 and 100 microgram/mL. Figure 2 specifically depicts
+    Paramecium caudatum contractile-vacuole swelling and subsequent rupture. The discussion
+    explicitly leaves mechanism incompletely defined and suggests altered water flux
+    rather than indiscriminate membrane rupture. The native bacteria-specific osmotic-lysis
+    sentence is not supported by this experiment.
+  snapshot_sha256: 40f9dca1476488e4e270b4b7e3af3d9a411c73025bf02acce4e2997d0d217846
+- evidence_id: native1997
+  kind: primary_source
+  reference: PMID:9247173; DOI:10.1016/S0005-2736(97)00051-5
+  locator: Complete indexed primary abstract, retrieved within the bounded exact-name
+    mechanism query.
+  accessed_at: '2026-10-21T20:16:57Z'
+  support: partial
+  summary: The original abstract explicitly distinguishes native magainin 2 from charge/hydrophobicity
+    variants. Native treatment of E. coli induces potassium efflux, loss of viability,
+    surface blebs and increased outer-membrane permeability. This supports bacterial
+    membrane damage and death, while not itself establishing osmotic rupture as the
+    universal killing endpoint. Full experimental text, exact bulk formulation and
+    terminal-state verification were not obtained, so no quantitative or stereospecific
+    target assertion is imported.
+  snapshot_sha256: c7de5659adff81a1a91d866d3ead266e48be5b5d693efda736f7160e1dc7a02b
+- evidence_id: analogue2008
+  kind: primary_source
+  reference: PMID:18835901; DOI:10.1529/biophysj.108.133488; https://pmc.ncbi.nlm.nih.gov/articles/PMC2599864/
+  locator: Original Abstract, Introduction, complete main Methods and selected bacterial/mammalian
+    Results and Discussion inspected.
+  accessed_at: '2026-10-21T20:17:23Z'
+  support: context_only
+  summary: Despite the title naming magainin 2, the experimental peptide is F5W-magainin
+    2, sometimes doped with a TAMRA-labeled derivative; an A9P/F5W derivative is also
+    used. Bacillus megaterium and CHO permeability/pore-size observations therefore
+    remain analogue evidence. Neither exact-parent pore sizes nor a bacterial osmotic-lysis
+    claim is transferred from this paper.
+  snapshot_sha256: a65a65786039c64310335c85714b4332cfd4a7b103a61c2de37decb01dc7b31e
+- evidence_id: cells2023
+  kind: primary_source
+  reference: PMID:37950441; https://pmc.ncbi.nlm.nih.gov/articles/PMC10754687/
+  locator: Original abstract/introduction, selected magainin Results, general Discussion
+    and Conclusions inspected. Detailed Methods are deferred to unavailable supplement.
+  accessed_at: '2026-10-21T20:17:23Z'
+  support: partial
+  summary: The study connects short magainin exposure, SYTOX entry and inability of
+    E. coli single cells to form colonies after dilution. These are permeability and
+    proliferation endpoints, not direct measurement of osmotic rupture. The linked
+    methods PDF route returned an 1817-byte HTML response, not a PDF; exact peptide
+    formulation/termini and full conditions are not asserted here. Quantitative observations
+    and a species-wide causal mechanism are not imported.
+  snapshot_sha256: 48348e01b8fca108136521ae8e7d8aacb07ff7c91f748c36f111aa7a62a2099a
+- evidence_id: membranes2026
+  kind: primary_source
+  reference: PMID:42650666; https://pmc.ncbi.nlm.nih.gov/articles/PMC13509787/
+  locator: Original abstract, introduction, sequence Table 1, peptide Materials and
+    Conclusions inspected; remaining figures/results and supplement not fully assessed.
+  accessed_at: '2026-10-21T20:17:23Z'
+  support: context_only
+  summary: Table 1 lists the exact magainin 2 sequence without an amide suffix while
+    separately marking other amidated peptides. Synthetic peptides were purified by
+    HPLC, verified by MALDI and exchanged from trifluoroacetate into acetate. The
+    experiments address bilayer permeability and dynamics; the proposed membrane-dynamics
+    contribution is not a demonstrated protein target or proof of osmotic bacterial
+    rupture. This selected source is mechanistic context, not an exhaustive new mode
+    curation.
+  snapshot_sha256: 79d8a52c4b1132627f49bad692f1049e6bd2994311be48f74a0aae86844841c3
+- evidence_id: search-adapter
+  kind: database
+  reference: /private/tmp/am-review-session/623-core.json; /private/tmp/am-review-session/622-adapter-datasets.txt
+  locator: Bounded exact-name plus lysis/osmotic/permeabilization query returned 69
+    titles; structured catalog had already been read before follow-up.
+  accessed_at: '2026-10-21T20:16:57Z'
+  support: context_only
+  summary: The sole adopted PMID 3277183 was read in full original scans. Later titles
+    were screened for exact-parent versus derivative/material scope and selected primaries
+    inspected at the stated depth. The iModulonDB catalog lacks Xenopus and this record
+    names no microbial gene, locus, regulator or transcriptome accession; no module
+    inference applies. Neither search nor catalog absence is proof that bacteria cannot
+    undergo lysis.
+  snapshot_sha256: c7de5659adff81a1a91d866d3ead266e48be5b5d693efda736f7160e1dc7a02b
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact mature peptide and chemical associations
+  outcome: supported
+  summary: The natural all-L free acid is positively corroborated by original sequence/terminal
+    analysis, current PubChem, ChEMBL and independent peptide reconstruction. ChEBI
+    is a weaker incomplete authority, not evidence to invert or remove native stereochemistry.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  evidence_ids:
+  - native
+  - sequence
+  - pubchem
+  - chembl
+  - chebi
+  - discovery1987
+  - adopted1988
+  - uniprot
+- assessment_id: structure
+  area: consistency
+  topic: Serialization, formal charge, centres and masses
+  outcome: supported
+  summary: All native fields agree and focused chemistry passes. The neutral free-acid
+    graph is distinct from the solution protonation and bulk counterion composition
+    of experimental preparations. All twenty-one centres and both termini are represented
+    consistently.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  evidence_ids:
+  - sequence
+  - pubchem
+  - chembl
+  - native
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial filing and peptide parent
+  outcome: supported
+  summary: The exact full-length peptide has displayed primary antibacterial inhibition
+    and killing evidence, and its class is strictly broader. Fungal and protozoal
+    observations are separate from antibacterial filing. Optional activity roles and
+    observations are not required to be populated in this seeded record.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  evidence_ids:
+  - aro
+  - adopted1988
+  - discovery1987
+- assessment_id: mechanism
+  area: evidence
+  topic: Osmotic-lysis wording versus measured bacterial endpoints
+  outcome: concern
+  summary: The cited osmotic-lysis evidence is explicitly protozoal, whereas bacterial
+    inhibition and killing are separately measured. Later exact-named evidence supports
+    bacterial membrane injury; the inspected sources do not establish the unrestricted
+    bacteria-specific osmotic-rupture sentence. Qualify the definition without denying
+    possible lysis under other experimental conditions.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  evidence_ids:
+  - adopted1988
+  - discovery1987
+  - native1997
+  - analogue2008
+  - cells2023
+  - membranes2026
+- assessment_id: completeness
+  area: completeness
+  topic: Unasserted target, resistance, clinical, producer and dataset objects
+  outcome: supported
+  summary: No unsupported molecular target, clinical use, resistance determinant,
+    quantitative observation, graph or dataset is asserted. Original cDNA supports
+    optional producer/precursor enrichment, while membrane-active physical processes
+    need no invented protein-binding target. Optional fields remain separate from
+    the bounded definition concern.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  evidence_ids:
+  - native
+  - uniprot
+  - discovery1987
+  - search-adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source ownership and history
+  outcome: supported
+  summary: All native fields trace to maintained ARO/PubChem rows and the inspected
+    extraction/enrichment/seeder branches. The exact mint and all initial hashes are
+    verified; three seeding events make no scientific-review claim.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  evidence_ids:
+  - owners
+  - aro
+  - local-search
+  - native
+findings:
+- finding_id: F1
+  issue_key: magainin-2-osmotic-lysis-bacterial-versus-protozoal-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the organism and endpoint of the osmotic-lysis sentence
+  description: The definition attributes osmotic lysis to bacteria and cites PMID
+    3277183. That article demonstrates swelling/rupture in Paramecium caudatum; its
+    bacterial table measures growth suppression, and the preceding discovery separately
+    measures E. coli loss of viability. Inspected later studies support membrane injury
+    but do not turn those endpoints into direct proof of unrestricted bacterial osmotic
+    rupture. Correct the bounded citation and wording mismatch; this is not evidence
+    that magainin 2 lacks antibacterial activity or can never lyse a bacterium.
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - adopted1988
+  - discovery1987
+  - native1997
+  - analogue2008
+  - cells2023
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported definition and PMID
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained upstream definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition emission and any source-specific adjudication
+  rule_id: 'Native checklist: preserve organism, experimental endpoint and claim-level
+    source scope'
+  native_severity: minor
+  normalization_reason: The core peptide identity, origin and antibacterial activity
+    are correct. The defect is a bounded explanatory sentence that overstates what
+    its cited experiment establishes, rather than a false antibacterial role or an
+    invented populated target graph.
+actions:
+- action_id: A1
+  description: Qualify the imported lysis definition through the maintained source
+    path.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported definition and PMID
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained upstream definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Definition emission and any source-specific adjudication
+  acceptance_checks:
+  - Retain Xenopus-derived antibacterial peptide identity and PMID 3277183 for its
+    supported claims. Remove the unrestricted bacteria-specific osmotic-lysis clause
+    or replace it with the exact protozoal observation and assay context.
+  - If a bacterial lysis mechanism is retained, cite and inspect an exact-parent primary
+    experiment that distinguishes osmotic rupture from membrane leakage, depolarization,
+    growth suppression and loss of viability; preserve organism and exposure conditions.
+  - Do not transfer F5W, TAMRA-labeled, amidated or other analogue results automatically.
+    Regenerate through the source path and rerun focused schema/strict plus corpus
+    reproduction.
+- action_id: A2
+  description: Optional exact-parent activity and membrane-mechanism enrichment.
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-b18912d1c6
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/magainin-2.yaml
+    role: Curator-owned optional literature evidence through the validated writer
+  acceptance_checks:
+  - Keep component 3/full-length magainin 2 distinct from the 22-residue truncation
+    and magainin 1/component 5. Preserve the historical assay intervals and avoid
+    clinical breakpoint interpretation.
+  - Resolve terminal form, counterions and purity before importing modern quantitative
+    mechanism measurements. A precursor accession should be represented as biosynthesis
+    context, not a compound xref or microbial target.
+  - Resolve the incomplete upstream ChEBI graph before relying on it alone for exact
+    stereochemical identity; native/PubChem/ChEMBL and primary sequence remain the
+    corroborated identity.
+limitations:
+- Current two-star ChEBI 201476 omits every tetrahedral assignment in its default
+  InChI and has an invalid aromatic-histidine SMILES. Its submitted systematic name
+  is more specific than those default serializations. No native stereochemical defect
+  or mixture is inferred.
+- The 1987 discovery and cited 1988 article were read in full original scans with
+  figures and tables. PMID 9247173 was read only as its complete primary abstract,
+  and the 2008 F5W study only at the explicitly stated main-text sections.
+- The 2023 cell study was inspected in selected main sections; its methods supplement
+  returned HTML instead of PDF. Exact experimental terminal form and full formulation
+  remain unresolved, so no numeric or exact-parent stereochemical claim is transferred.
+- The 2026 bilayer study was read only at the stated sequence/material/conclusion
+  sections. It is context for membrane behavior, not independent proof of a particular
+  bacterial lethal target or osmotic rupture.
+- The 69-hit exact-name mechanism search is bounded and includes derivatives and model
+  systems. The wording finding concerns what the adopted citation actually shows,
+  not a claim that all literature excludes bacterial lysis.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All thirteen initial hashes were preserved and three actual source-owner inputs
+  appended before assessment. Fetch manifests record actual retrieval time, response
+  size and SHA256. The unsuccessful supplement response is explicitly retained as
+  HTML, not counted as read PDF.
+- The native structure and SEEDED status remain unchanged. A passing deterministic
+  check does not confer scientific sign-off.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
