@@ -1,0 +1,458 @@
+schema_version: 1.0.0
+review_id: 20261021T193754Z-lansic-acid-3-ethyl-ester-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Lansic acid 3-ethyl ester: exact compound8 and bounded original evidence'
+started_at: '2026-10-21T19:16:35Z'
+finished_at: '2026-10-21T19:37:54Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native ethyl ester is chemically valid and agrees with current ChEBI
+  and PubChem. The original abstract explicitly includes compound8 among the antibacterial
+  isolates, and its exact original supporting spectra corroborate composition. No
+  confirmed native defect is established; full activity Methods, absolute-stereochemistry
+  evidence and independent Reaxys equivalence remain limited. Scientific assessment
+  retains the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/lansic-acid-3-ethyl-ester.yaml
+    sha256: 73f830a41aef7178e8dd855c90cb17c6788eb13cdf9871fe8dcad4072a4205d9
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:67480
+  path: data/antibiotics/antibacterial/lansic-acid-3-ethyl-ester.yaml
+  label: lansic acid 3-ethyl ester
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position592; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:67480
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:67480
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    592
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/lansic-acid-3-ethyl-ester.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/lansic-acid-3-ethyl-ester.yaml --out /private/tmp/am-review-session/592-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent current authority structure comparison
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/060-root-chem.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The six native/current-authority serializations reproduce the same full
+    identity; masses and accurate stereochemical labels were independently checked.
+  target_ids:
+  - CHEBI:67480
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:67480
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/lansic-acid-3-ethyl-ester.yaml
+  locator: Entire native record, including all names, ontology terms, chemical properties,
+    xrefs, source concept and history.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: supports
+  summary: The SEEDED/EXACT record has neutral formula C32H50O4, full key ZLSDLEGKMGQSFU-BFIHGEENSA-N,
+    and 6 assigned tetrahedral centres. No structured target, resistance, MIC, producer,
+    clinical or causal-graph object is asserted. All populated fields were assessed.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:1674;conf/sources.yaml;scripts/extract_source_inventory.py;scripts/seed_from_sources.py
+  locator: Complete adopted row, applicable extraction/emission branches and ignored/hidden-inclusive
+    maintained-owner searches.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: supports
+  summary: The row owns the native source-derived fields and lists PMID:21401117 as
+    citation leads. Those leads are not claim-level evidence emitted into the record.
+    The mint recomputes as antibioticmech:chebi-4b4d96e6e1; the three chronological
+    seed/reseed events do not constitute scientific sign-off. The exact overlay searches
+    found no curator/decision override, including ignored files. All thirteen original
+    inputs already include these owners and remain unchanged.
+  snapshot_sha256: f3f14bc9affaa68770678e4eca9c5dc80017740ac6673d5cd874f864bb4aff10
+- evidence_id: authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/67480/
+  locator: Complete current entry and asserted parent/role definitions; official PubChem
+    property strings.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: supports
+  summary: 'Current ChEBI and PubChem agree with both native serializations: six independently
+    parsed encodings reproduce the exact full key, composition, charge and mass. The
+    calculated monoisotopic mass is 498.37091008; average mass agrees at native precision.
+    Accurate CIP labels were captured separately from legacy labels. The native systematic
+    name and broader functional-group parents agree with the graph.'
+  snapshot_sha256: 6f9b4e94c432a0bd143e5b917f2a813453d7d1b99f3fe8566184323158a72479
+- evidence_id: registry
+  kind: authority
+  reference: reaxys:21534277
+  locator: Native and current ChEBI registry attribution only.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: unknown
+  summary: The Reaxys association is consistently source-attributed, but its licensed
+    registry graph was not independently inspected. Source repetition alone is not
+    an exact-equivalence check, and access limitation alone is not evidence of a wrong
+    identifier.
+  snapshot_sha256: 2a012cb7b024e77de999b3df16c19d7970759ec06f30a430a5300f924a29a2e3
+- evidence_id: original
+  kind: primary_source
+  reference: PMID:21401117;DOI:10.1021/np100943x
+  locator: Complete original abstract and bibliographic record; original main text
+    unavailable.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: supports
+  summary: The 2011 paper identifies lansic acid 3-ethyl ester as compound8 isolated
+    from Lansium domesticum twigs, distinct from lamesticumin A ethanolysis product2
+    and ethyl lansiolate9. Compounds1–9 were reported to show moderate activity against
+    Gram-positive bacteria. This supports coarse antibacterial filing and origin,
+    but not an invented strain-specific MIC, medium, inoculum or target.
+  snapshot_sha256: 9d68dbae37dc628a060cb0827d8cac9639a3b77e0393a3cb02cc47b695862b01
+- evidence_id: supplement
+  kind: primary_source
+  reference: DOI:10.1021/np100943x.s001;https://acs.figshare.com/articles/journal_contribution/2647528
+  locator: Official62-page SI contents, actual compound8 proton-NMR page54/S51 and
+    HRESIMS page57/S54 viewed.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: supports
+  summary: The exact compound8 HRESIMS gives m/z521.3605 for C32H50NaO4, calculated521.3601,
+    consistent with the neutral C32H50O4 native formula. This analytical sodium adduct
+    is not a sodium-salt material assignment. The labeled proton-NMR spectrum includes
+    the ethyl-ester region; raw spectral data and all correlations were not independently
+    reassigned. The inspected SI pages do not establish every absolute stereocentre.
+  snapshot_sha256: 9118904a9e8cc7f4ab3d63537aff1be87c58aeeb7fb9f43631918118dacb4800
+- evidence_id: stereo
+  kind: validation
+  reference: 060-root-chemistry.json
+  locator: Accurate CIP and legacy label diagnostics on identical six-centre graphs.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: supports
+  summary: All six native/current-authority serializations agree. Accurate assignment
+    gives six S centres consistent with the systematic synonym. The legacy algorithm
+    labels native atom11 R on the same graph; that algorithmic difference is not an
+    epimer and warrants no native identity finding.
+  snapshot_sha256: 6f9b4e94c432a0bd143e5b917f2a813453d7d1b99f3fe8566184323158a72479
+- evidence_id: search
+  kind: search
+  reference: 592-discovery.json;592-local-hits.txt;592-owner-hits.txt;lam-openalex.json
+  locator: Nine broad discovery result titles and relevant complete abstract; ignored-inclusive
+    repository/source searches and bounded original access routes.
+  accessed_at: '2026-10-21T19:33:08Z'
+  support: context_only
+  summary: The result titles were screened for exact lansic acid 3-ethyl ester. Related
+    lansium acids, lamesticumins and host-cell studies cannot supply exact-compound
+    antibacterial measurements. The native has no gene/pathway assertions requiring
+    a structured-adapter query; this applicability decision preceded open research.
+    ACS main text returned403, its landing page offered purchase, and OpenAlex reported
+    closed access without repository full text. The official SI was retrieved. No
+    literature-exhaustiveness claim is made.
+  search_scope: 2026-10-21; exact label, CHEBI67480, full key, PMID21401117 and DOI;
+    ignored/hidden-inclusive local search and bounded public primary follow-up.
+  snapshot_sha256: 6da3a2e8c4a3ad09e94c70e50a8c13c721612cd307f63086a0d42dd5d0cd252f
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Constitution, stereo and exact material
+  outcome: unknown
+  summary: The complete native graph is valid and matches current authorities and
+    original composition evidence. Experimental proof of all absolute centres requires
+    the unavailable original main; no wrong stereoisomer is established.
+  target_ids:
+  - CHEBI:67480
+  evidence_ids:
+  - native
+  - authority
+  - stereo
+  - supplement
+- assessment_id: grounding
+  area: grounding
+  topic: Names, terms and registry scope
+  outcome: unknown
+  summary: The exact systematic name and ethyl-ester, dicarboxylic-acid-monoester
+    and triterpenoid parents are consistent. The sole Reaxys exact link remains independently
+    unverified.
+  target_ids:
+  - CHEBI:67480
+  evidence_ids:
+  - authority
+  - registry
+  - stereo
+- assessment_id: activity
+  area: evidence
+  topic: Original twig isolation and antibacterial role
+  outcome: supported
+  summary: Exact compound8 is explicitly included among the reported Gram-positive-active
+    isolates. Optional quantitative activity or molecular targets require original
+    assay-level evidence and are not missing-field defects.
+  target_ids:
+  - CHEBI:67480
+  evidence_ids:
+  - original
+  - supplement
+- assessment_id: provenance
+  area: provenance
+  topic: Complete native coverage and source ownership
+  outcome: supported
+  summary: All populated fields, sole adopted citation, source mint and generation
+    history were inspected; original captures remain intact.
+  target_ids:
+  - CHEBI:67480
+  evidence_ids:
+  - native
+  - owners
+  - search
+findings: []
+actions:
+- action_id: A1
+  description: Optional primary-evidence follow-up before unrestricted scientific
+    sign-off.
+  finding_ids: []
+  target_ids:
+  - CHEBI:67480
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained source and identity assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - If original main text becomes lawfully available, inspect exact compound8 structure-elucidation
+    and antibacterial rows with material, strain, endpoint, method and units.
+  - Verify the original absolute-configuration basis and Reaxys identity without confusing
+    legacy CIP letters with changed geometry.
+  - Keep compound8 separate from ethanolysis product2, ethyl lansiolate9 and related
+    congener activity.
+limitations:
+- The original main text was unavailable. Its complete abstract and the stated original
+  SI pages were read/viewed; no full antibacterial table or Methods verification is
+  claimed.
+- Native/current-authority agreement and an exact mass do not independently establish
+  every absolute stereocentre. The licensed Reaxys graph was not inspected.
+- The search was bounded and the original spectra were not reprocessed. Optional enrichment
+  omissions were not treated as defects.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All thirteen original source hashes remain unchanged. No native scientific status
+  or field was modified. Shared full-QC disposition is attached during finalization.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

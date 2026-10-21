@@ -1,0 +1,1031 @@
+schema_version: 1.0.0
+review_id: 20261021T194045Z-levofloxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of levofloxacin
+started_at: '2026-10-21T19:16:39Z'
+finished_at: '2026-10-21T19:40:45Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. Entire native content,
+    exact maintained owners, current authorities and original primary sources were
+    assessed. A separate coordinating reviewer independently checked all CRyPTIC memberships
+    and original DST groups; that contribution and its limits are explicitly attributed.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact neutral S-levofloxacin graph, antibacterial identity, scoped topoisomerase-IV
+  causal mechanism and all 39 curated CDC MIC values are supported. Three major corrections
+  concern an exact ChEMBL hydrate cross-reference, an unrelated PMID in a protein-example
+  role, and ten CRyPTIC assay descriptions that render the categorical WHO token as
+  mg/L. Two verified product names need minor BRAND_NAME typing. Qualified resistance
+  assertions, original assay material and inaccessible registries retain explicit
+  limits.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/levofloxacin.yaml
+    sha256: cf07953e0235270ed61f5c66472e43c3373fa0654edb744320b680fbbf213428
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: data/raw/cryptic_activity.tsv
+    sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+    role: context
+  - path: data/raw/cryptic_memberships.tsv.gz
+    sha256: f121fc3ac48a44a89931366d908877d833bd846d9690257583c5dbbdb8bd2601
+    role: context
+  - path: data/raw/cryptic_isolates.tsv.gz
+    sha256: 7d51bf3032e295a56e2543f52f12e59d6a8589ad6f2208e2314a154e6e8cf2c5
+    role: context
+  - path: curation/cryptic_drug_map.tsv
+    sha256: 69643f9b5e6dfc91761a4541317de63c5dca565131f6a07a3193878d7f863a54
+    role: context
+  - path: scripts/extract_cryptic_memberships.py
+    sha256: d944260859c29ff3af55137c311e14be45b6c3219b5283c4cbd1b794d49fe952
+    role: context
+  - path: scripts/cryptic_membership_inventory.py
+    sha256: b0d8ae24cac64dfb2813bfa5a5ef590e3330e3c5ace82e25f3528b025147d6cc
+    role: context
+  - path: src/antibioticmech/activity_memberships.py
+    sha256: 22849043b741d7a48a708dfade09524a11ac46afa7efb08d350ec7422ec2e146
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: 536ab4cc7ba9be95c80242bcc25321d67a5bdbfecbc50f3be5a449000abfe5f5
+    role: context
+  - path: scripts/curate_uniprot_protein_examples.py
+    sha256: 3399882f3f23e95f717eb94081666022545e1ed999e99b5425d1a3c95bf9e54e
+    role: context
+  - path: data/antibiotics/antibacterial/membership-030520812ba54cef779ffa05bcb49863cf60c5755d86f77b49f219eeb4ec0d2b.json.gz
+    sha256: 030520812ba54cef779ffa05bcb49863cf60c5755d86f77b49f219eeb4ec0d2b
+    role: context
+targets:
+- target_id: CHEBI:63598
+  path: data/antibiotics/antibacterial/levofloxacin.yaml
+  label: levofloxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact structure, identity and adopted chemical leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Chemical and antimicrobial role labels
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO concept, aliases and source leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Thirty-five qualified resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Two qualified target assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relationship policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Evidence scope overlay
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Evidence scope application
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_activity.tsv
+    role: Grouped CRyPTIC observations
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_memberships.tsv.gz
+    role: Adopted group-isolate membership
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_isolates.tsv.gz
+    role: Adopted isolate sequencing context
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/cryptic_drug_map.tsv
+    role: Exact drug mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_cryptic_memberships.py
+    role: CRyPTIC membership extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/cryptic_membership_inventory.py
+    role: Membership generation
+  - repository: CultureBotAI/AntibioticMech
+    path: src/antibioticmech/activity_memberships.py
+    role: Membership contract and integrity
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Maintained protein-example overlay
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Protein-example application
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI and CARD extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated source claims and preservation of curated observations/graphs
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source and synonym/role policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Exact identity decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/levofloxacin.yaml
+    role: Curator-owned causal graph and CDC MIC observations preserved by seeder
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/membership-030520812ba54cef779ffa05bcb49863cf60c5755d86f77b49f219eeb4ec0d2b.json.gz
+    role: Immutable CRyPTIC membership payload
+scope:
+  description: 'Entire 6,185-line native levofloxacin record: identity and all source
+    fields, 35 resistance assertions, two targets, one five-node/four-edge causal
+    graph with three protein examples, 321 activity observations and one compact membership
+    collection. All 282 CRyPTIC rows were read through a verified lossless representation;
+    39 curated CDC observations were individually checked.'
+  selection: Initially uncovered queue position 598; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:63598
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:63598
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    598
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/levofloxacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/levofloxacin.yaml --out /private/tmp/am-review-session/598-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent authority verification
+  status: passed
+  required: false
+  summary: Actual final execution returned exit 0; scientific mismatches and the initial
+    scratch-ledger assertion remain reported separately.
+  target_ids:
+  - CHEBI:63598
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/598-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: source-ledger
+  name: Independent source-ledger verification
+  status: passed
+  required: false
+  summary: Actual final execution returned exit 0; scientific mismatches and the initial
+    scratch-ledger assertion remain reported separately.
+  target_ids:
+  - CHEBI:63598
+  command: /private/tmp/antibioticmech-record-reviews-060/.venv/bin/python /private/tmp/am-review-session/598-ledger.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:63598
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/levofloxacin.yaml
+  locator: Entire native file; original capture 598-initial-inspect.json and expanded
+    598-inspect.json; lossless 598-native-lossless.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: SEEDED/EXACT antibacterial CHEBI:63598 contains the neutral S graph, seventeen
+    aliases, four parents, two activity roles, ten chemical xrefs, three drug-context
+    links, a document link, two source concepts, thirty-five qualified resistance
+    assertions, two targets, a causal graph, 321 activity observations and thirty-five
+    history events. The 282 CRyPTIC rows round-trip without omitted fields. No separate
+    structured clinical-indication or producer objects are present; general definition
+    and source claims were assessed.
+  snapshot_sha256: d01166cb6efeec6d0d8b7a9b14e6ae8815d6ac475a471423300579d6f54a7013
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent authority structure comparison
+  locator: 598-authority-check.py;598-authority-chemistry.json; actual 019 interpreter
+    against 060 cwd
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: Twenty encodings were compared using complete InChIKeys, molecular formula,
+    charge, fragments and reciprocal chirality-aware graph mappings. Seventeen agree
+    with native C18H20FN3O4, charge 0, S stereochemistry and GSDSWSVVBLHKDQ-JTQLQIEISA-N.
+    These include native SMILES/InChI, current ChEBI SMILES/InChI/molfile, PubChem
+    149096, KEGG C07660/D08120, PDB-CCD LFX and VSDB 1899, plus ChEMBL parent 33.
+    The three disagreeing encodings all belong to the hydrate cross-reference, not
+    to the native structure.
+  snapshot_sha256: e1543b0d908bf8c9f152887a710141d8784eb9c2ba8179393b9695e9a99afcba
+- evidence_id: hydrate
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL5315124.json
+  locator: Current molecule structures and hierarchy;598-chembl.json,598-chembl-parent.json;598-fetch.json/598-fetch2.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: refutes
+  summary: 'CHEMBL5315124 SMILES, InChI and molfile encode two exact levofloxacin
+    molecules plus one water: C36H42F2N6O9 and SUIQUYDRLGGZOL-RCWTXCDDSA-N. The parent
+    CHEMBL33 has three encodings matching the native neutral molecule. The native
+    xrefs slot asserts chemical equivalence and therefore overstates this hydrate
+    mapping; qualified drug_xrefs have a different contract.'
+  snapshot_sha256: 6c8f1099d3240000b6fb1848e558995ff8797a9860aeee2f3675ad755dba35ea
+- evidence_id: groundings
+  kind: authority
+  reference: Official ChEBI, KEGG, PubChem, CCD, VSDB and drug registries
+  locator: 598-source-audit.json authority_dispositions; actual payloads and timestamps
+    in 598-fetch.json/598-fetch2.json/598-fetch3.json/598-fetch4.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: Current structural parent CHEBI:194135 is a broader stereo-unspecified
+    graph, not evidence that native S identity is a mixture. CHEBI:86324/87211 class
+    definitions and CHEBI:33281/36047 roles fit. Inhibitor-role context CHEBI:50750/53559/59517
+    matches the explicitly inferred microbial mode-of-action scope. KEGG and DrugCentral
+    resolve the expected drug context. HMDB, Reaxys and DrugBank could not be independently
+    inspected; CAS public routes did not expose registry content. Limited HMS2020
+    archive absence of LSM-5270 is unresolved, not a wrong-ID finding. Wikipedia resolves
+    and its lead was read only as a secondary document.
+  snapshot_sha256: d01166cb6efeec6d0d8b7a9b14e6ae8815d6ac475a471423300579d6f54a7013
+- evidence_id: topo2016
+  kind: primary_source
+  reference: PMID:27050128
+  locator: DOI:10.1107/S2059798316001212; PMC4822561 full main, tables and captions;
+    Methods2.1–2.5 and Results/Discussion;598-PMC4822561.xml
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: Original study directly observes levofloxacin-stabilized DNA-cleavage complexes
+    of K. pneumoniae ATCC 35657 ParE-ParC core fusion and S. pneumoniae isolate 7785
+    ParC/ParE domains. Deposits 5EIX/3RAE support ligand-DNA-enzyme complexes; core-protein
+    cleavage experiments support poisoning. These are engineered/domain constructs,
+    not intact full-length cellular holoenzymes. Species-specific target preference
+    and water/Mg-mediated drug contacts remain bounded. The generic graph topology/religation
+    explanation is consistent with the primary mechanism; no universal primary-target
+    preference or new MIC is inferred.
+  snapshot_sha256: 358463c89a3bee49a5ed59645d8622da128de62a927df0081f799be52b5dd33b
+- evidence_id: topo2010
+  kind: primary_source
+  reference: PMID:20596531
+  locator: DOI:10.1371/journal.pone.0011338; PMC2893164 full main, tables and captions;
+    levofloxacin-soaked 3K9F complex;598-PMC2893164.xml
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: This is the original levofloxacin-containing S. pneumoniae ParC55/ParE30-DNA
+    structure. Levofloxacin-specific water-mediated contacts differ from those of
+    the quinazolinedione comparator. Drug-free cleaved/resealed complexes arose after
+    removal of the dione; those experiments are not relabeled as levofloxacin-only
+    religation assays. This source and the valid 2016 citation can repair the unrelated
+    protein-example PMID.
+  snapshot_sha256: f108d69fa3b0b1b16d4c52642b356176ef403ba03ee6948d079c7ddc8d9eca98
+- evidence_id: wrongpmid
+  kind: primary_source
+  reference: PMID:19332681
+  locator: Exact MED record in 598-native-core0.json; title and complete original
+    abstract
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: refutes
+  summary: The cited article concerns voriconazole distribution in healthy and inflamed
+    rat lung and muscle, with DOI 10.1128/AAC.00885-08. It contains no levofloxacin/ParC
+    ternary-complex experiment and cannot support the protein-example role that cites
+    it. The identifier resolves normally; this is a wrong source-to-claim assignment.
+  snapshot_sha256: f26f849e55bff31dda54679820d9257f8a90161828e618148c79d357bb491d98
+- evidence_id: protein
+  kind: database
+  reference: UniProtKB:P72525; UniProtKB:P0AFI2; UniProtKB:P20083; PDB:3K9F; PDB:3RAE
+  locator: Official reviewed entry JSONs and deposited mmCIF entity/source/sequence
+    mappings;598-uniprot-*.json and598-pdb-*.cif
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: All three UniProt accessions, gene symbols and taxa resolve as stated.
+    P72525 is a reviewed TIGR4 reference ParC; the experimental S. pneumoniae source
+    is isolate 7785, whose constructs map to that reference. The 3RAE sequence mapping
+    includes an experimental THR 257 versus reference ILE 257 discrepancy, reinforcing
+    that a reference mapping is not an identical-strain claim. Retain the valid accession
+    with clear reference/construct scope. The two E. coli K12 examples are already
+    explicitly reference context.
+  snapshot_sha256: 6dd18e4a7513bc14c0df40b624df34a92e95e3f020f1b84444f6d57b3b789c8c
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources iModulonDB adapter
+  locator: 598-adapter-results.json; six exact executed search commands, all exit
+    0; dataset inventory575-adapter-datasets.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: Structured adapter ran before open-ended protein follow-up. E. coli precise1k
+    searches resolve gyrA b2231, parC b3019 and parE b3030; M. tuberculosis modulome
+    searches resolve gyrA Rv0006, gyrB Rv0005 and Rv1877. Substring gyrase hits were
+    distinguished. No iModulon component hit required summarize. Gene-catalog membership
+    is expression/resource context, not direct binding or a resistance experiment.
+  snapshot_sha256: 299dc28a00d3021624859d01746498a073bb8ebd6d806cc4f13b2b4eb2a1f00a
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Reused official 426-current-aro.obo with original manifest 426-fetch2-results.json;
+    exact 39 blocks in 598-aro-blocks.json; source rows 598-raw-rows.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: All 35 native resistance relations remain present in the current official
+    ontology, along with the exact antibiotic, parent and two targets. All 76 current
+    PMID discovery records were resolved and inspected at title/abstract depth:74
+    abstracts and 2 metadata-only records. Native DATABASE_ASSERTION/PRIMARY_EVIDENCE_NEEDED
+    qualifiers remain meaningful. Selected original evidence was checked for target
+    structures and potentially conflicting resistance edges; no claim is made to have
+    read all 76 complete papers.
+  snapshot_sha256: 1fc11a93afb5719c52c1d143db1519a7f4dd89111f5c9844045931ae4a5595ac
+- evidence_id: resistance
+  kind: primary_source
+  reference: PMID:10348780; PMID:10817737; PMID:30774400; PMID:30815255; PMID:19104017
+  locator: Full 1999/2000 H. pylori mains/tables; selected 2019 rpoB sections; reused
+    490-independent-salmonella-original.pdf Methods, Tables1/3 and complementation
+    Results; exact read depth in 598-source-audit.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: H. pylori rpoB studies concern rifampin/rifabutin or rifaximin, while quinolone
+    analyses concern gyrase. The fifth current lead PMID:17350989 abstract also concerns
+    rifamycins. Direct support for the current rpoB-to-levofloxacin edge remains unresolved;
+    neither deleting a faithful database assertion nor claiming universal absence
+    is justified. The 2009 Salmonella study found no quinolone-MIC change after parE
+    complementation in its ciprofloxacin-selected context; native evidence already
+    explicitly retains this uncertainty. Mtb gyrase, H. pylori GyrB, C. difficile
+    GyrA and heterologous Rv1877 abstract scopes are recorded separately, not generalized
+    to every allele.
+  snapshot_sha256: d01166cb6efeec6d0d8b7a9b14e6ae8815d6ac475a471423300579d6f54a7013
+- evidence_id: who_catalogue
+  kind: authority
+  reference: https://www.who.int/publications/i/item/9789240082410
+  locator: Official 2023 second-edition landing page; ISBN 9789240082410;598-who.html
+    and598-fetch4.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: 'The cited WHO catalogue resolves and describes mutation associations based
+    on matched genome/phenotypic susceptibility data. Its complete variant tables
+    were not inspected: the attempted PDF was an HTML shell and browser API access
+    failed. The two levofloxacin-specific Mtb ARO mutation terms therefore remain
+    qualified database assertions, not independently revalidated individual variant
+    claims.'
+  snapshot_sha256: 99b316014474917290d6b79f24e563c200828a733af5ddf7d7c32b1e92e3e7e2
+- evidence_id: adopted
+  kind: primary_source
+  reference: All11 adopted ChEBI/ARO PMID leads
+  locator: 598-adopted-core0.json and individual dispositions598-source-audit.json;
+    9 complete available abstracts and 2 metadata-only records
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: Every adopted PMID resolved. Human plasma/skin and isolated-rat-lung studies
+    supply pharmacokinetic context; one source studies ofloxacin rather than exact
+    levofloxacin. The meningitis case is combination treatment, the EHEC experiment
+    has specific germ-free-mouse/strain scope, and the C. difficile article concerns
+    infection association after antibiotic exposure. Reviews and clinical comparisons
+    are not promoted to direct molecular experiments. Both metadata-only reviews remain
+    explicitly limited.
+  snapshot_sha256: d01166cb6efeec6d0d8b7a9b14e6ae8815d6ac475a471423300579d6f54a7013
+- evidence_id: cdc
+  kind: authority
+  reference: CDC/FDA Antimicrobial Resistance Isolate Bank
+  locator: All 39 native URLs fetched;598-cdc-audit.json/.txt; source-specific isolate
+    pages 598-cdc-*.html
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: All 39 MIC values, inequality signs, R interpretations and taxon/strain
+    identities match their current official pages. All 35 named BioSamples occur on
+    the matching pages; four observations correctly leave unavailable accessions absent.
+    The original micrograms/mL values equal native mg/L. Source-specific breakpoint
+    editions were checked, including unversioned 0033 and 2026 Panel 1394 pages; the
+    last three rows correctly do not claim a broth method absent from their page.
+    Source R calls are not new independent clinical-breakpoint judgments.
+  snapshot_sha256: d3e0f4378ef3c931b65ffee5d86a0afe7bf0cb573d8f51ffe4ee38f4d1cd4bbd
+- evidence_id: cryptic
+  kind: validation
+  reference: Independent coordinating-reviewer CRyPTIC audit
+  locator: 598-root-cryptic-audit.py/.json/.log; original pinned134-DST_MEASUREMENTS.parquet;
+    native membership payload and adopted activity/membership/isolate registries
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: 'Independent audit verifies all 282 observation digests, 49,046 memberships
+    and 25,551 subject contexts: 18,550 linked and 7,001 explicitly unlinked. All
+    adopted joins agree; all 91 DST groups independently join 27,365 original LEV
+    source rows. All 191 UKMYC groups agree with adopted tables, but original public
+    parquet/API 403 prevented the original-source join; original WGS assignments were
+    not rejoined. Ten assay strings falsely append mg/L to categorical METHOD_CC=WHO.
+    Membership integrity is supported; this finding concerns quantitative assay wording.'
+  snapshot_sha256: 1501b5bac037f18a1b454d543a014188dd7d3d0089232997c40629f1de12c746
+- evidence_id: brands
+  kind: authority
+  reference: FDA historical Levaquin label and AEMPS Tavanic SmPC
+  locator: 598-levaquin.pdf/.txt title and section11;598-tavanic.html/.txt sections1–2;
+    manifests598-fetch.json
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: The official 2008 FDA label identifies Levaquin products and levofloxacin
+    hemihydrate. Current AEMPS CIMA 62065 identifies Tavanic 500mg film-coated tablets
+    and the hemihydrate ingredient. These sources establish product-brand typing for
+    native synonyms 15/16; they do not make product and neutral molecular forms identical
+    or supply current treatment advice.
+  snapshot_sha256: 7a82b22122fefd230e43aa529d01568e134675bae915643e21db091c2f05379f
+- evidence_id: provenance
+  kind: validation
+  reference: Input and maintained-owner audit
+  locator: 598-ledger.py;598-source-audit.json; original13 and expanded29 captures;35
+    history events
+  accessed_at: '2026-10-21T19:33:23Z'
+  support: supports
+  summary: All 29 input hashes still match, with the 13 original inputs unchanged.
+    Both source-concept mints recompute and all 35 history events are chronological.
+    ChEBI/CARD extraction, synonym policy, protein-example overlay, curated graph/MIC
+    ownership and CRyPTIC extraction/seeding are identified. Focused chemistry/schema/strict
+    checks all returned 0. A scratch-ledger assertion initially overgeneralized broth
+    microdilution to three correctly bounded native rows; that helper assertion was
+    corrected and the failure retained in 598-ledger-attempts.json.
+  snapshot_sha256: d01166cb6efeec6d0d8b7a9b14e6ae8815d6ac475a471423300579d6f54a7013
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral S-levofloxacin
+  outcome: supported
+  summary: The native molecular graph is valid and agrees with independent exact chemical
+    authorities. Hydrated pharmaceutical material and database entities are distinguished
+    from this neutral structure.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - native
+  - chemistry
+  - groundings
+- assessment_id: xref
+  area: grounding
+  topic: Exact chemical and drug-context links
+  outcome: concern
+  summary: CHEMBL5315124 is a demonstrated hemihydrate mismatch in the exact chemical
+    xrefs slot. CHEMBL33 independently matches the native graph. Unavailable registries
+    and qualified drug-context links are retained without forced equivalence or absence
+    findings.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - hydrate
+  - chemistry
+  - groundings
+- assessment_id: nomenclature
+  area: nomenclature
+  topic: Chemical and brand aliases
+  outcome: concern
+  summary: Chemical names and S-ofloxacin/DR-3355 usage are supported at their stated
+    scope. Verified Levaquin and Tavanic products need BRAND_NAME typing; their conventional
+    relationship to levofloxacin is retained.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - native
+  - brands
+  - adopted
+- assessment_id: mechanism
+  area: evidence
+  topic: Targets and causal graph
+  outcome: supported
+  summary: Original levofloxacin-DNA-topoisomerase-IV structures support the curated
+    mechanism. Full-length cellular enzymes, species preference, domain constructs
+    and comparator-derived religation experiments are distinguished. Database-only
+    target annotations remain appropriately qualified.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - topo2016
+  - topo2010
+  - aro
+  - adapter
+- assessment_id: protein
+  area: evidence
+  topic: Protein-example role citation and strain context
+  outcome: concern
+  summary: P72525 is a valid reference protein, but the role cites an unrelated voriconazole
+    paper. The correct levofloxacin structural originals use isolate 7785 constructs
+    mapping to the TIGR4 reference; the experimental context should be explicit.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - wrongpmid
+  - protein
+  - topo2010
+  - topo2016
+- assessment_id: resistance
+  area: evidence
+  topic: Qualified resistance associations
+  outcome: unknown
+  summary: All 35 current ARO memberships are present and all available discovery
+    abstracts were inspected. Individual primary effect and material context are not
+    established for every allele. H. pylori rpoB exact-levo support is unresolved,
+    and Salmonella ParE already has a suitable native uncertainty overlay.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - aro
+  - resistance
+  - who_catalogue
+  - adapter
+- assessment_id: activity
+  area: scope
+  topic: Curated isolate and compact dataset observations
+  outcome: concern
+  summary: All 39 CDC values and all compact memberships match their checked sources.
+    Ten CRyPTIC assays misrender a categorical token as a numeric concentration. Original
+    UKMYC/WGS joins and physical drug material remain explicitly limited.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - cdc
+  - cryptic
+- assessment_id: classification
+  area: scope
+  topic: Definition, class, roles and source scope
+  outcome: supported
+  summary: Quinolone/fluoroquinolone antibacterial identity and the generic dual topoisomerase
+    mechanism are supported. Neither secondary clinical prose nor database membership
+    is promoted into new exact experimental evidence.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - groundings
+  - topo2016
+  - topo2010
+  - adopted
+- assessment_id: provenance
+  area: provenance
+  topic: Owners, hashes, source mints and native history
+  outcome: supported
+  summary: Original inputs, appended owners, source identities and chronological history
+    are verified. Focused checks do not replace required shared corpus gates.
+  target_ids:
+  - CHEBI:63598
+  evidence_ids:
+  - provenance
+  - cryptic
+  - native
+findings:
+- finding_id: F1
+  issue_key: levofloxacin-chembl5315124-hydrate-exact-xref
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The exact ChEMBL cross-reference denotes a hemihydrate
+  description: Native xrefs[8] points to CHEMBL5315124. Its three current encodings
+    contain two levofloxacin molecules and one water, while native chemical_structure
+    is one neutral anhydrous molecule. Current parent CHEMBL33 independently matches
+    the complete native structure.
+  target_ids:
+  - CHEBI:63598
+  field_paths:
+  - xrefs[8]
+  evidence_ids:
+  - hydrate
+  - chemistry
+  - native
+  rule_id: Exact entity scope and claim-level evidence/quantitative provenance
+  normalization_reason: Wrong exact chemical grounding is material; the independently
+    supported native identity remains correct, so no identity blocker is asserted.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned exact chemical cross-reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ARO extraction/reconciliation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Chemical xref placement
+- finding_id: F2
+  issue_key: levofloxacin-parc-role-unrelated-pmid19332681
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: A structural protein role cites an unrelated voriconazole paper
+  description: The P72525 role cites PMID:19332681 as a levofloxacin ternary-complex
+    structure, but that paper studies voriconazole distribution in rats. Correct original
+    levofloxacin structures are documented by PMID:20596531 and PMID:27050128. P72525
+    remains a valid TIGR4 reference mapping; the experimental isolate 7785 construct
+    context must be distinguished.
+  target_ids:
+  - CHEBI:63598
+  field_paths:
+  - causal_graphs[0].nodes[1].protein_examples[0].role
+  evidence_ids:
+  - wrongpmid
+  - protein
+  - topo2010
+  - topo2016
+  rule_id: Exact entity scope and claim-level evidence/quantitative provenance
+  normalization_reason: The PMID resolves but supports a different experiment; this
+    is major unsupported claim-level evidence, not an invalid accession or wrong native
+    compound.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Maintained levofloxacin protein-example role and citation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Protein-example overlay application
+- finding_id: F3
+  issue_key: levofloxacin-cryptic-who-token-as-mg-l
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Ten categorical WHO designations are rendered as concentrations
+  description: At activity indices 70,71,72,73,74,75,83,84,89,90 the seeder turns
+    original METHOD_CC=WHO into critical concentration WHO mg/L. WHO is not a numeric
+    quantity. All memberships, source phenotypes and the three U groups without native
+    activity categories remain intact.
+  target_ids:
+  - CHEBI:63598
+  field_paths:
+  - activity_spectrum[70].assay
+  - activity_spectrum[71].assay
+  - activity_spectrum[72].assay
+  - activity_spectrum[73].assay
+  - activity_spectrum[74].assay
+  - activity_spectrum[75].assay
+  - activity_spectrum[83].assay
+  - activity_spectrum[84].assay
+  - activity_spectrum[89].assay
+  - activity_spectrum[90].assay
+  evidence_ids:
+  - cryptic
+  - native
+  rule_id: Exact entity scope and claim-level evidence/quantitative provenance
+  normalization_reason: A systematic formatter invents quantitative units for nonnumeric
+    metadata. This is major assay provenance/representation, with no demonstrated
+    membership corruption.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: cryptic_activity_assay formatting of METHOD_CC
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_activity.tsv
+    role: Adopted categorical critical-concentration source token
+- finding_id: F4
+  issue_key: levofloxacin-levaquin-tavanic-brand-typing
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Levaquin and Tavanic need product-brand typing
+  description: Native synonyms 15/16 label two verified product names EXACT_SYNONYM.
+    Official named-product sources establish BRAND_NAME scope, including hemihydrate
+    pharmaceutical material.
+  target_ids:
+  - CHEBI:63598
+  field_paths:
+  - synonyms[15].synonym_type
+  - synonyms[16].synonym_type
+  evidence_ids:
+  - brands
+  - native
+  rule_id: Exact entity scope and claim-level evidence/quantitative provenance
+  normalization_reason: Bounded alias-type defect; retain legitimate drug-product
+    association and native chemical identity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned brand aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO synonym typing
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: BRAND NAME to BRAND_NAME generation
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:63598
+  description: Correct the maintained ARO exact-xref extraction/reconciliation lane
+    so the native neutral record uses a verified exact CHEMBL33 mapping rather than
+    CHEMBL5315124. Keep hydrate associations only in explicitly qualified form/drug
+    context. Preserve the supported native graph and do not edit generated output
+    alone.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned exact chemical cross-reference
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ARO extraction/reconciliation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Chemical xref placement
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Regenerated exact xrefs match the full native graph, formula, charge and S configuration.
+  - Hemihydrate stoichiometry is not asserted as exact neutral equivalence.
+  - Required schema, strict, term/reference/history and corpus gates pass after curation.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:63598
+  description: Amend the maintained P72525 role to cite an actually inspected levofloxacin
+    structure paper and explain that the experimental isolate 7785 domains map to
+    a TIGR4 reference accession. Preserve valid UniProt metadata and the already bounded
+    E. coli reference examples; do not call a domain construct an intact full-length
+    enzyme or transfer dione-only religation experiments to levofloxacin.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/uniprot_protein_examples.yaml
+    role: Maintained levofloxacin protein-example role and citation
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/curate_uniprot_protein_examples.py
+    role: Protein-example overlay application
+  generator: scripts/curate_uniprot_protein_examples.py
+  acceptance_checks:
+  - The role no longer attributes a levofloxacin structure to PMID:19332681.
+  - Each replacement citation directly supports the stated drug, construct and strain
+    scope.
+  - Overlay regeneration preserves graph/node grounding and correctly scoped reference
+    examples.
+- action_id: A3
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:63598
+  description: Change cryptic_activity_assay to distinguish numeric critical concentrations
+    from categorical source designations. Preserve WHO verbatim as a designation without
+    concentration units, retain genuine numeric values and source phenotypes, and
+    do not infer a numeric threshold from neighboring groups. Re-seed through the
+    maintained generator.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: cryptic_activity_assay formatting of METHOD_CC
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/cryptic_activity.tsv
+    role: Adopted categorical critical-concentration source token
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - All ten affected assay strings retain the WHO source designation without presenting
+    it as mg/L.
+  - A meaningful generator check distinguishes numeric, categorical and empty METHOD_CC
+    inputs.
+  - All 282 observation identities, 49,046 memberships and 25,551 subject contexts
+    remain correct; U groups remain unclassified.
+  - MIC inequalities/units and source R/S calls remain unchanged.
+- action_id: A4
+  finding_ids:
+  - F4
+  target_ids:
+  - CHEBI:63598
+  description: Type the source-owned Levaquin and Tavanic aliases as product brands
+    using reproducible source typing or an equivalent maintained policy that emits
+    BRAND_NAME. Preserve their names and source provenance without asserting product
+    hydrate and neutral-molecule equivalence.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Source-owned brand aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO synonym typing
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: BRAND NAME to BRAND_NAME generation
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Both verified aliases regenerate as BRAND_NAME.
+  - Neutral chemical identity and qualified clinical drug links remain intact.
+limitations:
+- 'All 11 adopted leads were resolved: 9 indexed abstracts read and 2 metadata-only
+  reviews. All 76 current discovery leads were resolved: 74 abstracts read and 2 metadata-only
+  records. Complete or selected original reading is explicitly itemized; this is not
+  a claim to have read every full original.'
+- The 2010/2016 structural complexes use core-domain/engineered proteins and particular
+  DNA preparations. Ligand structure does not establish the solid hydration state
+  of every commercial reagent, and target preference is organism dependent.
+- HMDB, Reaxys and DrugBank independent contents remain unavailable; CAS public routes
+  exposed no registry entry. The limited HMS archive cannot establish a wrong LINCS
+  mapping from absence.
+- The WHO landing page resolves the cited catalogue, but the full variant sheets were
+  not inspected. Attempted WHO PDF was HTML, and fresh PMC1346799/PMC2650546 pages
+  were browser challenges. Failed retrievals are not counted as primary reading.
+- All 191 UKMYC groups match adopted tables, but original public parquet and API returned
+  403, and ignored-inclusive searches of /private/tmp and the primary repository did
+  not locate that original parquet. Original WGS assignments were not independently
+  rejoined.
+- CDC susceptibility interpretations are retained exactly as source-specific calls;
+  current source agreement does not independently rederive clinical breakpoints or
+  establish a shared physical drug preparation.
+- The current H. pylori rpoB-to-levofloxacin source edge remains unresolved at exact
+  experimental scope. Native database qualifiers and the already qualified Salmonella
+  ParE overlay are respected; no absence-based edge removal is proposed.
+- The required shared full-QC gate has the established platform SciPy import failure.
+  Focused checks and review-contract success do not substitute for the separately
+  recorded shared corpus gates and failed full QC.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 original inputs are preserved within 29 verified hashes. Native records,
+  maintained sources and prior saved reviews remain unchanged by this review.
+- Standalone chemistry used the 019 interpreter against 060; schema/strict, source
+  ledger and draft contract used 060. The initial scratch-ledger diagnostic failure
+  is preserved and was corrected only after checking the three natively bounded Panel
+  1394 rows.
+- CRyPTIC original-DST and membership checks were independently performed by the coordinating
+  reviewer and are cited with exact script/report hashes. No native scientific status
+  or curation history was changed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

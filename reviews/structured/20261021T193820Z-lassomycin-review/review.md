@@ -1,0 +1,953 @@
+# Lassomycin: stored linear aldehyde conflicts with the natural cyclic methyl ester
+
+- Review: 20261021T193820Z-lassomycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T19:16:37Z
+- Finished UTC: 2026-10-21T19:38:20Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The complete native record and source owners were reviewed. The adopted original establishes an eight-residue macrolactam and C-terminal methyl ester, while native and current PubChem encode an open peptide aldehyde. This is a confirmed identity blocker despite passing internal validation. Original activity and ClpC1 biochemical evidence support the named natural product, with separate limits on causal interpretation and folded topology.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Assigned queue position 595; one exact native record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-41b2842f38 | data/antibiotics/antibacterial/lassomycin.yaml | generated | lassomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | antibioticmech:aro-41b2842f38 | Actual focused execution exited 0. Executed against batch060; standalone chemistry used the existing batch019 RDKit interpreter, while schema and strict checks used batch060. |
+| Focused schema verification | passed | True | antibioticmech:aro-41b2842f38 | Actual focused execution exited 0. Executed against batch060; standalone chemistry used the existing batch019 RDKit interpreter, while schema and strict checks used batch060. |
+| Focused strict verification | passed | True | antibioticmech:aro-41b2842f38 | Actual focused execution exited 0. Executed against batch060; standalone chemistry used the existing batch019 RDKit interpreter, while schema and strict checks used batch060. |
+| Authoritative full QC | failed | True | antibioticmech:aro-41b2842f38 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-41b2842f38 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-41b2842f38 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-41b2842f38 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-41b2842f38 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-41b2842f38 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-41b2842f38 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-41b2842f38 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-41b2842f38 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Natural macrocyclic peptide versus linear aldehyde
+
+identity: concern. Targets: antibioticmech:aro-41b2842f38.
+
+The native fields consistently encode the wrong covalent molecule. The sole adopted original and actual structure figure establish macrocyclization and a methyl ester, while the native graph contains a free N terminus, free Asp side-chain acid and an Ile aldehyde. Formula and mass are therefore also those of the wrong structure. Folded topology remains separate from this confirmed defect.
+
+### ARO concept and exact PubChem chemical link
+
+grounding: concern. Targets: antibioticmech:aro-41b2842f38.
+
+ARO denotes the named natural product and the minted identifier reproduces correctly. PubChem102602724 currently reproduces the wrong linear aldehyde, so retaining it as an exact chemical equivalent after primary-grounded repair would perpetuate the conflict. No automatic alternative CID is proposed. The labetaomycin alias is traceable to ARO but independent primary nomenclature remains unresolved; no confirmed false-alias finding is made.
+
+### Definition activity and ClpC1 mechanism
+
+evidence: supported. Targets: antibioticmech:aro-41b2842f38.
+
+The original supports selective in vitro antimycobacterial activity, selected ClpC1 resistance mutants and biochemical ATPase/proteolysis uncoupling for the isolated natural material. The 2014 pocket model is docking and its apparent Kd is an activation fit; the later bound-domain deposit supports broad binding but was not treated as complete mechanistic or exact-material adjudication. Neither source validates activity of the stored linear aldehyde.
+
+### Optional structured annotations and topological limits
+
+completeness: unknown. Targets: antibioticmech:aro-41b2842f38.
+
+No required optional field is missing. Producer, strain-specific activity and selected-mutant observations could be curated after identity repair. Native definition does not assert threaded versus unthreaded topology. The 2016 comparison and inaccessible later full paper constrain that question; ordinary covalent SMILES does not independently resolve it. Do not add biosynthetic proteins as drug targets or convert the adapter gene hit into mechanism evidence.
+
+### Reproducible source ownership and history
+
+provenance: supported. Targets: antibioticmech:aro-41b2842f38.
+
+All original 13 and expanded 26 inputs are preserved. ARO source extraction and PubChem structural enrichment explain the native fields; three historical seed/reseed events are coherent and the native remains SEEDED. Passing schema and internal chemistry checks does not establish natural-product identity.
+
+## Findings
+
+### F1: The stored graph is an open-chain aldehyde rather than natural lassomycin
+
+blocker / open / confirmed; issue key: lassomycin-open-aldehyde-versus-macrocyclic-methyl-ester.
+
+Native and current PubChem encode C82H142N30O20 with free Gly1 nitrogen, free Asp8 side-chain acid and Ile16 aldehyde. The adopted primary explicitly establishes the Gly1–Asp8 macrolactam and terminal methyl ester, independently visible in Figure1A. A minimal diagnostic reconstruction adds those functions and yields C83H142N30O20 and key RXGUTSDRVTWAFL-FAEWSBKISA-N, retaining the native tetrahedra. The wrong native constitution, formula and masses cannot be reconciled by the separate threaded/unthreaded debate. The PubChem exact xref must be adjudicated with the structural repair.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate and correct lassomycin through maintained chemical ownership, preserving source and topology boundaries.
+
+- Map Gly1 N and Asp8 side-chain carbonyl to native atoms 131 and 70, and Ile16 terminal carbonyl to atom 5; encode the documented macrolactam and methyl ester with all-L residue stereochemistry.
+- Treat RXGUTSDRVTWAFL-FAEWSBKISA-N as a scratch diagnostic requiring independent review, not automatic adoption of a PDB or a guessed CID. Recalculate SMILES, InChI, key, formula and masses together.
+- Resolve the asserted PubChem102602724 exact link against the adjudicated natural molecule; preserve ARO source provenance without asserting exact equivalence to the current linear aldehyde entry.
+- Keep natural-versus-synthetic activity and threaded/unthreaded topology explicit. Do not infer a stoichiometric TFA salt from purification, or equate an unvalidated covalent candidate with a confirmed bioactive fold.
+- Implement reproducibly in maintained input/curator ownership and regenerate, then rerun focused and required corpus validation; do not patch only generated YAML.
+
+### A2
+
+Optional future enrichment should retain exact natural material, strain and mechanistic evidence levels.
+
+- Use the original producer IS009804 and natural-isolate MIC/MBC methods with exact strain identifiers, units, censoring and incubation. Resistance to other drugs is not lassomycin resistance.
+- If adding molecular_targets or causal_graphs, distinguish purified ClpC1 activation/proteolysis effects, selected-mutant association, 2014 docking and the later bound-domain structure. The activation-fit Kd is not a separate equilibrium binding measurement.
+- Resolve the natural fold and labetaomycin nomenclature only from appropriate primary material; no mandatory correction follows merely from their current bounded uncertainty.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/lassomycin.yaml; Entire record, exact synonym, source concept and all three historical events | supports | Native denotes lassomycin, a SEEDED MINTED antibacterial record grounded to ARO3004295 and PubChem102602724. Its definition asserts cyclic peptide identity, antimycobacterial activity and ClpC1-dependent uncoupling. The graph is neutral C82H142N30O20, key NLWVIEFILMVVQV-OBXQOZEMSA-N. There are no separate structured targets, resistance, activity_spectrum, producer, product or causal-graph objects; definition claims remain substantive assertions. |
+| owners | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; Complete ARO row 329, PubChem row 111 and readiness row 2743 | context_only | The ARO row supplies the name, labetaomycin alias, definition, citation and source links. PubChem enrichment supplies the exact native chemical fields. There are no matching exact target, resistance, ChEBI, curator or decisions rows in the inspected inventories. All original 13 hashes were preserved and expanded to 26 actual/context inputs before detailed assessment. |
+| pubchem-owner | data/raw/pubchem_structures.tsv; Exact PubChem102602724 enrichment row | context_only | The adopted source row already contains the linear aldehyde graph and its formula/masses. This is an inherited source-identity problem rather than an isolated YAML serialization failure. |
+| search | /private/tmp/am-review-session/595-context-search.txt; Preserved initial full search and ignored-inclusive owner follow-up | context_only | Exact identifier, lassomycin and ARO3004295 were searched with hidden and ignored files included. Readiness is a curation lead, not evidence of a missing required optional field. |
+| adapter | kg-microbe-sources imodulondb; Actual pre-web query: m_tuberculosis / modulome / clpC1 | context_only | The structured adapter returned Rv3596c/clpC1 and zero components, exit 0. It supplied gene grounding context, not compound binding, an expression mechanism or a negative biological result. The catalog and exact runner output were inspected before protein-related web follow-up. |
+| aro | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004295; Current official ARO3004295 response and independently inspected official OBO term | partial | Current ARO retains the native name, labetaomycin exact synonym, definition, original citation and PubChem accession. The upstream OBO also contains a rifamycin parent, but native does not assert that parent; it is not reported as a native class defect. Alias provenance is established, while independent original use of labetaomycin was not resolved. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/102602724/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass/JSON; Complete current CID102602724 property response | refutes | Current PubChem still supplies byte-identical native SMILES, C82H142N30O20, neutral form, mass 1868.2 and the full native InChIKey. Thus source agreement confirms propagation but does not resolve the contradiction with the original natural-product structure. |
+| adopted-identity | PMID:24684906; DOI:10.1016/j.chembiol.2014.01.014; Full original main text, Structural elucidation; actual Figure1A viewed | supports | The isolated natural product contains the sequence GLRRLFADQLVGRRNI. Its Gly1 amino nitrogen forms an amide with the Asp8 side-chain carboxyl, creating an eight-residue macrolactam; Ile16 terminates as a methyl ester. Acid hydrolysis, Marfey derivatization and LC/MS assign all residues as L. These explicit covalent features contradict the stored open-chain aldehyde. |
+| structure-figure | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/233b/4060151/1b8f4f1be942/nihms580874f1.jpg; Actual Figure1A, compared directly with native graph | supports | The original figure explicitly draws the Gly1 N–Asp8 side-chain carbonyl linkage and labels the Ile16 terminus CO2CH3. Panels B/C show the originally proposed unthreaded fold; the blocker concerns missing covalent functionality, not adjudication of that fold. |
+| mapping | /private/tmp/am-review-session/595-map.py; Independent RDKit atom map and scratch covalent candidate | supports | Native atom 131 is the free Gly1 nitrogen; Asp8 side-chain carbonyl 70 is bonded to hydroxyl oxygen 72; Ile16 terminal carbon 5 is an aldehyde. Native has only the phenyl ring. Adding the 131–70 bond, removing O72 and replacing the aldehyde H with OCH3 gives C83H142N30O20, exact mass 1879.101666944 and candidate key RXGUTSDRVTWAFL-FAEWSBKISA-N, retaining existing tetrahedra. This is a diagnostic covalent graph, not a claim to encode threaded topology or a ready-to-adopt authority record. PubChem supplied SMILES matches native exactly; the raw InChI importer has a substructure-normalization limitation documented in the artifact, despite identical regenerated keys. |
+| adopted-producer | PMID:24684906; Full Isolation, strain identification, fermentation and purification methods | supports | The material was bioassay-guided HPLC isolate from Lentzea kentuckyensis sp. IS009804, identified by 99.7% 16S similarity to accession DQ291145. Production used R4 broth at 28 °C for five days; 4 L culture yielded 80 mg lyophilized white material after extraction and reverse-phase HPLC containing TFA. LC/MS showed a major [M+H]+ at approximately 1880. No defined stoichiometric TFA salt was established, so chromatographic acid does not mandate a different native salt graph. The taxon is the source identification, not a new species reassignment. |
+| adopted-activity | PMID:24684906; Full Table1 and Compound spectrum/activity methods | supports | Broth microdilution used twofold drug dilution, culture at OD650 0.3 diluted 1:100, and visual no-growth readout after 14 days at 37 °C. H37Rv MIC was 0.78–1.56 µg/mL and the auxotrophic mc2 6020 strain 0.39–0.78. Listed drug-resistant clinical isolates were 0.78–3.1; resistance abbreviations concern other drugs, not lassomycin resistance. Nonmycobacterial entries were mostly &gt;50, while P. acnes and B. longum were 12.5–25 and 25–50 µg/mL. The limited panel supports selectivity without universal inactivity against other bacteria. |
+| adopted-killing | PMID:24684906; Bioactivity text, Figure3 caption and MBC method | supports | The authors report MBC 1–4 µg/mL against M. tuberculosis and M. avium subsp. paratuberculosis. MBC required at least 99.9% colony reduction after plating 2–8×MIC wells and incubating three to four weeks. Figure3 compares growing and stationary mc2 6020 cultures at 10×MIC with three biological replicates and a detection limit. These are in vitro natural-isolate results, not efficacy of the stored aldehyde or clinical treatment evidence. |
+| adopted-resistance | PMID:24684906; Target identification; actual Figure4 viewed; whole-genome sequencing methods | supports | Six mc2 6020 mutants selected at 16 µg/mL carried ClpC1 N-terminal changes: Q17R in three isolates, Q17H, R21S or P79T. Variants were checked by PCR/Sanger sequencing after whole-genome analysis. This is direct selected-mutant association in that strain background, not a survey of clinical resistance or proof that every homologous substitution has the same effect. |
+| adopted-mechanism | PMID:24684906; Full biochemical Results and Methods; actual Figure5A–D viewed | supports | Purified M. tuberculosis ClpC1 expressed in M. smegmatis showed enhanced ATP hydrolysis, with apparent activation parameter called Kd 0.41 µM and Hill coefficient about 2. FITC-casein degradation stimulated by ClpC1/ClpP1P2 was suppressed in the presence of 10 µM lassomycin, using ATP, Mg2+ and Z-Leu-Leu activation conditions. This supports uncoupling in the reconstructed system. The activation fit is not an independently measured equilibrium binding constant, and casein-dependent ATPase additivity is indirect evidence concerning substrate binding. |
+| mechanism-boundary | PMID:24684906; Docking, Significance and Figure6 caption, read in full | partial | The 2014 binding-pocket placement used resistance positions plus AutoDock Vina against the N-terminal 3WDB structure, not a lassomycin-bound crystal. The authors explicitly leave unresolved whether death follows blocked proteolysis, accelerated ATP consumption or excessive unfolding. The native broad ClpC1/uncoupling summary is supported, but future causal edges should preserve these distinctions rather than convert docking or proposed downstream events into direct demonstrations. |
+| synthesis2016 | PMID:27101411; DOI:10.1039/c6ob00631k; Author-hosted accepted manuscript, identity and Results pp1–5; MIC methods pp6–7; parent characterization p7 | context_only | The authors synthesized the same macrolactam/methyl-ester constitution and an amide analog. Parent characterization reports [M+2H]2+ formula C83H144N30O20. Synthetic peptides and a truncated analog did not inhibit H37Rv up to 100 µg/mL in broth/agar assays; the natural isolate was unavailable as an authentic assay comparator. NMR differences and activity led the authors to propose a threaded natural conformation. This does not establish that the native open aldehyde is lassomycin, nor negate the original natural-isolate activity. Accepted-manuscript intermediate numbers differ from the final publisher rendering. |
+| later-structure | PMID:37683752; DOI:10.1016/j.ijbiomac.2023.126771; PDB:8IBO; Complete original abstract and released experimental deposit metadata, not full paper | partial | The 2023 original reports a 1.83 Å ClpC1 N-terminal-domain/lassomycin complex, providing later direct structural support for the broad binding assertion. Correct publisher full text remained 403. Deposit sequence GLRRLFADQLVGRRN(ILM) and the terminal methyl-isoleucine component were inspected, but the polymer linkage metadata omits the expected Gly1–Asp8 closure and its reported weight is inconsistent with the primary covalent candidate. The deposit is not used as an automatic exact-graph replacement or to settle natural fold/material details. |
+| access | /private/tmp/am-review-session/595-fetch4.json; Actual retrieval ledger and reading-depth boundaries | context_only | The sole adopted original was fully read through Methods, Table1 and figure captions; actual Figures1,4,5 were viewed. Additional 2016 identity, synthesis outcome, NMR interpretation and assay sections were read in the complete accepted-manuscript PDF. Original 2014 SI returned a small HTML challenge instead of PDF, the guessed 2016 SI route was 404, and 2023 full text was 403. Wrong guessed publisher PII and failed files were retained as failures and supply no evidence. |
+
+## Limits And Additional Notes
+
+- The adopted 2014 main text, Table1 and all figure captions were read; actual Figures1,4,5 were viewed. Original SI retrieval returned HTML, so raw NMR restraints, all supplementary assignments and diffraction data were not independently reprocessed.
+- The additional 2016 accepted manuscript was read for identity, synthesis outcome, NMR comparison and biological methods/results. Its remaining individual synthetic procedures and all SI spectra were not exhaustively reanalyzed; the attempted SI route returned 404. Its negative synthetic activity is not a test of authentic natural lassomycin.
+- The 2023 abstract and released 8IBO metadata/sequence/linkage records were inspected, but the correct publisher full text returned 403. The deposit is not adopted as an exact graph because its linkage metadata and reported molecular weight require adjudication. No conclusion about all natural fold states is asserted.
+- Current ARO verifies labetaomycin alias provenance; the bounded original-paper/name search did not independently establish that synonym. No positive evidence of a different compound was found, so no false-synonym correction is claimed.
+- Other discovery-query results concerning lassomycin-like peptides, cyclomarin, rufomycin and biosynthetic enzymes were screened as leads, not transferred as parent activity or direct target evidence. No exhaustive claim about all published studies is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All original 13 and expanded 26 input hashes were verified unchanged at draft writing. No native, source, history, saved-bundle, progress or Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T193820Z-lassomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Lassomycin: stored linear aldehyde conflicts with the natural cyclic methyl
+  ester'
+started_at: '2026-10-21T19:16:37Z'
+finished_at: '2026-10-21T19:38:20Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The complete native record and source owners were reviewed. The adopted original
+  establishes an eight-residue macrolactam and C-terminal methyl ester, while native
+  and current PubChem encode an open peptide aldehyde. This is a confirmed identity
+  blocker despite passing internal validation. Original activity and ClpC1 biochemical
+  evidence support the named natural product, with separate limits on causal interpretation
+  and folded topology.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/lassomycin.yaml
+    sha256: d5eeab69c63ea2006ee21de3442876b612d1de81a378a316576739ac939a6b88
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+targets:
+- target_id: antibioticmech:aro-41b2842f38
+  path: data/antibiotics/antibacterial/lassomycin.yaml
+  label: lassomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO molecule identity, classification, definition, xref and citation
+      owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: ARO classification and source merge rules
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment transform
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 595; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-41b2842f38
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Executed against batch060; standalone
+    chemistry used the existing batch019 RDKit interpreter, while schema and strict
+    checks used batch060.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    595
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against batch060; standalone
+    chemistry used the existing batch019 RDKit interpreter, while schema and strict
+    checks used batch060.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/lassomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Executed against batch060; standalone
+    chemistry used the existing batch019 RDKit interpreter, while schema and strict
+    checks used batch060.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/lassomycin.yaml --out /private/tmp/am-review-session/595-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/lassomycin.yaml
+  locator: Entire record, exact synonym, source concept and all three historical events
+  accessed_at: '2026-10-21T19:24:57Z'
+  support: supports
+  summary: Native denotes lassomycin, a SEEDED MINTED antibacterial record grounded
+    to ARO3004295 and PubChem102602724. Its definition asserts cyclic peptide identity,
+    antimycobacterial activity and ClpC1-dependent uncoupling. The graph is neutral
+    C82H142N30O20, key NLWVIEFILMVVQV-OBXQOZEMSA-N. There are no separate structured
+    targets, resistance, activity_spectrum, producer, product or causal-graph objects;
+    definition claims remain substantive assertions.
+  snapshot_sha256: d5eeab69c63ea2006ee21de3442876b612d1de81a378a316576739ac939a6b88
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: Complete ARO row 329, PubChem row 111 and readiness row 2743
+  accessed_at: '2026-10-21T19:24:57Z'
+  support: context_only
+  summary: The ARO row supplies the name, labetaomycin alias, definition, citation
+    and source links. PubChem enrichment supplies the exact native chemical fields.
+    There are no matching exact target, resistance, ChEBI, curator or decisions rows
+    in the inspected inventories. All original 13 hashes were preserved and expanded
+    to 26 actual/context inputs before detailed assessment.
+  snapshot_sha256: 5fc2d35ba850b9d9e29016bdc27f6d5803ac6bb517932a7f74d7521d7d9c0752
+- evidence_id: pubchem-owner
+  kind: record_content
+  reference: data/raw/pubchem_structures.tsv
+  locator: Exact PubChem102602724 enrichment row
+  accessed_at: '2026-10-21T19:24:57Z'
+  support: context_only
+  summary: The adopted source row already contains the linear aldehyde graph and its
+    formula/masses. This is an inherited source-identity problem rather than an isolated
+    YAML serialization failure.
+  snapshot_sha256: 6c2997595f35c31cf0e4dbfc0b396b4719cc77aaaa879dc8c3b69833527b742e
+- evidence_id: search
+  kind: search
+  reference: /private/tmp/am-review-session/595-context-search.txt
+  locator: Preserved initial full search and ignored-inclusive owner follow-up
+  accessed_at: '2026-10-21T19:24:57Z'
+  support: context_only
+  summary: Exact identifier, lassomycin and ARO3004295 were searched with hidden and
+    ignored files included. Readiness is a curation lead, not evidence of a missing
+    required optional field.
+  snapshot_sha256: cf21d7e44b0c8c27ddffe05f9523e02f271bdc852c915535e15ea50c3356ceff
+  search_scope: Preserved initial595-local-hits plus rg --no-ignore --hidden across
+    curation, conf, scripts and data/raw.
+- evidence_id: adapter
+  kind: search
+  reference: kg-microbe-sources imodulondb
+  locator: 'Actual pre-web query: m_tuberculosis / modulome / clpC1'
+  accessed_at: '2026-10-21T19:24:57Z'
+  support: context_only
+  summary: The structured adapter returned Rv3596c/clpC1 and zero components, exit
+    0. It supplied gene grounding context, not compound binding, an expression mechanism
+    or a negative biological result. The catalog and exact runner output were inspected
+    before protein-related web follow-up.
+  snapshot_sha256: e07a4aba1f5d6b8364f4d921e147d79c5d8e0f4e3701f9fdd24c545dc25ef981
+  search_scope: Structured iModulonDB m_tuberculosis/modulome exact clpC1 query; one
+    gene and zero components. Pre-open catalog already inspected.
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004295
+  locator: Current official ARO3004295 response and independently inspected official
+    OBO term
+  accessed_at: '2026-10-21T19:20:06.016586Z'
+  support: partial
+  summary: Current ARO retains the native name, labetaomycin exact synonym, definition,
+    original citation and PubChem accession. The upstream OBO also contains a rifamycin
+    parent, but native does not assert that parent; it is not reported as a native
+    class defect. Alias provenance is established, while independent original use
+    of labetaomycin was not resolved.
+  snapshot_sha256: b83e23fb3d2f860c93ad802fb8954ef67dac61372601b4d45016b43170a4b454
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/102602724/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass/JSON
+  locator: Complete current CID102602724 property response
+  accessed_at: '2026-10-21T19:20:06.016344Z'
+  support: refutes
+  summary: Current PubChem still supplies byte-identical native SMILES, C82H142N30O20,
+    neutral form, mass 1868.2 and the full native InChIKey. Thus source agreement
+    confirms propagation but does not resolve the contradiction with the original
+    natural-product structure.
+  snapshot_sha256: 8de17e73e6b20b7f738b7a7dffc26a4a3677b245a82d413ea303c29c7119d215
+- evidence_id: adopted-identity
+  kind: primary_source
+  reference: PMID:24684906; DOI:10.1016/j.chembiol.2014.01.014
+  locator: Full original main text, Structural elucidation; actual Figure1A viewed
+  accessed_at: '2026-10-21T19:20:30.303795Z'
+  support: supports
+  summary: The isolated natural product contains the sequence GLRRLFADQLVGRRNI. Its
+    Gly1 amino nitrogen forms an amide with the Asp8 side-chain carboxyl, creating
+    an eight-residue macrolactam; Ile16 terminates as a methyl ester. Acid hydrolysis,
+    Marfey derivatization and LC/MS assign all residues as L. These explicit covalent
+    features contradict the stored open-chain aldehyde.
+  snapshot_sha256: bad1afcf79cb9c71427a2f681c0177205f862c06231256712117e927950ddb8f
+- evidence_id: structure-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/233b/4060151/1b8f4f1be942/nihms580874f1.jpg
+  locator: Actual Figure1A, compared directly with native graph
+  accessed_at: '2026-10-21T19:22:22.259821Z'
+  support: supports
+  summary: The original figure explicitly draws the Gly1 N–Asp8 side-chain carbonyl
+    linkage and labels the Ile16 terminus CO2CH3. Panels B/C show the originally proposed
+    unthreaded fold; the blocker concerns missing covalent functionality, not adjudication
+    of that fold.
+  snapshot_sha256: 163ea400535d4428cf428f8be4826481d7d5431e3f8019217623897c3c467b5e
+- evidence_id: mapping
+  kind: validation
+  reference: /private/tmp/am-review-session/595-map.py
+  locator: Independent RDKit atom map and scratch covalent candidate
+  accessed_at: '2026-10-21T19:24:57Z'
+  support: supports
+  summary: Native atom 131 is the free Gly1 nitrogen; Asp8 side-chain carbonyl 70
+    is bonded to hydroxyl oxygen 72; Ile16 terminal carbon 5 is an aldehyde. Native
+    has only the phenyl ring. Adding the 131–70 bond, removing O72 and replacing the
+    aldehyde H with OCH3 gives C83H142N30O20, exact mass 1879.101666944 and candidate
+    key RXGUTSDRVTWAFL-FAEWSBKISA-N, retaining existing tetrahedra. This is a diagnostic
+    covalent graph, not a claim to encode threaded topology or a ready-to-adopt authority
+    record. PubChem supplied SMILES matches native exactly; the raw InChI importer
+    has a substructure-normalization limitation documented in the artifact, despite
+    identical regenerated keys.
+  snapshot_sha256: fe4f2ee0c92efe75c066f4072f984e136341a490d9c0a081df46ffd56170d795
+- evidence_id: adopted-producer
+  kind: primary_source
+  reference: PMID:24684906
+  locator: Full Isolation, strain identification, fermentation and purification methods
+  accessed_at: '2026-10-21T19:20:30.303795Z'
+  support: supports
+  summary: The material was bioassay-guided HPLC isolate from Lentzea kentuckyensis
+    sp. IS009804, identified by 99.7% 16S similarity to accession DQ291145. Production
+    used R4 broth at 28 °C for five days; 4 L culture yielded 80 mg lyophilized white
+    material after extraction and reverse-phase HPLC containing TFA. LC/MS showed
+    a major [M+H]+ at approximately 1880. No defined stoichiometric TFA salt was established,
+    so chromatographic acid does not mandate a different native salt graph. The taxon
+    is the source identification, not a new species reassignment.
+  snapshot_sha256: bad1afcf79cb9c71427a2f681c0177205f862c06231256712117e927950ddb8f
+- evidence_id: adopted-activity
+  kind: primary_source
+  reference: PMID:24684906
+  locator: Full Table1 and Compound spectrum/activity methods
+  accessed_at: '2026-10-21T19:20:30.303795Z'
+  support: supports
+  summary: Broth microdilution used twofold drug dilution, culture at OD650 0.3 diluted
+    1:100, and visual no-growth readout after 14 days at 37 °C. H37Rv MIC was 0.78–1.56
+    µg/mL and the auxotrophic mc2 6020 strain 0.39–0.78. Listed drug-resistant clinical
+    isolates were 0.78–3.1; resistance abbreviations concern other drugs, not lassomycin
+    resistance. Nonmycobacterial entries were mostly >50, while P. acnes and B. longum
+    were 12.5–25 and 25–50 µg/mL. The limited panel supports selectivity without universal
+    inactivity against other bacteria.
+  snapshot_sha256: bad1afcf79cb9c71427a2f681c0177205f862c06231256712117e927950ddb8f
+- evidence_id: adopted-killing
+  kind: primary_source
+  reference: PMID:24684906
+  locator: Bioactivity text, Figure3 caption and MBC method
+  accessed_at: '2026-10-21T19:20:30.303795Z'
+  support: supports
+  summary: The authors report MBC 1–4 µg/mL against M. tuberculosis and M. avium subsp.
+    paratuberculosis. MBC required at least 99.9% colony reduction after plating 2–8×MIC
+    wells and incubating three to four weeks. Figure3 compares growing and stationary
+    mc2 6020 cultures at 10×MIC with three biological replicates and a detection limit.
+    These are in vitro natural-isolate results, not efficacy of the stored aldehyde
+    or clinical treatment evidence.
+  snapshot_sha256: bad1afcf79cb9c71427a2f681c0177205f862c06231256712117e927950ddb8f
+- evidence_id: adopted-resistance
+  kind: primary_source
+  reference: PMID:24684906
+  locator: Target identification; actual Figure4 viewed; whole-genome sequencing methods
+  accessed_at: '2026-10-21T19:22:22.260500Z'
+  support: supports
+  summary: 'Six mc2 6020 mutants selected at 16 µg/mL carried ClpC1 N-terminal changes:
+    Q17R in three isolates, Q17H, R21S or P79T. Variants were checked by PCR/Sanger
+    sequencing after whole-genome analysis. This is direct selected-mutant association
+    in that strain background, not a survey of clinical resistance or proof that every
+    homologous substitution has the same effect.'
+  snapshot_sha256: e3d82f815c18a20e12bb01396e58b04a9f69f70d1e535ab1d0e10a7cf22b1dd4
+- evidence_id: adopted-mechanism
+  kind: primary_source
+  reference: PMID:24684906
+  locator: Full biochemical Results and Methods; actual Figure5A–D viewed
+  accessed_at: '2026-10-21T19:22:22.260587Z'
+  support: supports
+  summary: Purified M. tuberculosis ClpC1 expressed in M. smegmatis showed enhanced
+    ATP hydrolysis, with apparent activation parameter called Kd 0.41 µM and Hill
+    coefficient about 2. FITC-casein degradation stimulated by ClpC1/ClpP1P2 was suppressed
+    in the presence of 10 µM lassomycin, using ATP, Mg2+ and Z-Leu-Leu activation
+    conditions. This supports uncoupling in the reconstructed system. The activation
+    fit is not an independently measured equilibrium binding constant, and casein-dependent
+    ATPase additivity is indirect evidence concerning substrate binding.
+  snapshot_sha256: 9fb2ab913301eaf098a8a33617cc3c0c469c22728817f63a52fda9e944c4b47a
+- evidence_id: mechanism-boundary
+  kind: primary_source
+  reference: PMID:24684906
+  locator: Docking, Significance and Figure6 caption, read in full
+  accessed_at: '2026-10-21T19:20:30.303795Z'
+  support: partial
+  summary: The 2014 binding-pocket placement used resistance positions plus AutoDock
+    Vina against the N-terminal 3WDB structure, not a lassomycin-bound crystal. The
+    authors explicitly leave unresolved whether death follows blocked proteolysis,
+    accelerated ATP consumption or excessive unfolding. The native broad ClpC1/uncoupling
+    summary is supported, but future causal edges should preserve these distinctions
+    rather than convert docking or proposed downstream events into direct demonstrations.
+  snapshot_sha256: bad1afcf79cb9c71427a2f681c0177205f862c06231256712117e927950ddb8f
+- evidence_id: synthesis2016
+  kind: primary_source
+  reference: PMID:27101411; DOI:10.1039/c6ob00631k
+  locator: Author-hosted accepted manuscript, identity and Results pp1–5; MIC methods
+    pp6–7; parent characterization p7
+  accessed_at: '2026-10-21T19:21:56.457934Z'
+  support: context_only
+  summary: The authors synthesized the same macrolactam/methyl-ester constitution
+    and an amide analog. Parent characterization reports [M+2H]2+ formula C83H144N30O20.
+    Synthetic peptides and a truncated analog did not inhibit H37Rv up to 100 µg/mL
+    in broth/agar assays; the natural isolate was unavailable as an authentic assay
+    comparator. NMR differences and activity led the authors to propose a threaded
+    natural conformation. This does not establish that the native open aldehyde is
+    lassomycin, nor negate the original natural-isolate activity. Accepted-manuscript
+    intermediate numbers differ from the final publisher rendering.
+  snapshot_sha256: 834c31141aeac9a894f8fcdf3e0790a161d0af8a551f324c6bf16dd1dc73dc86
+- evidence_id: later-structure
+  kind: primary_source
+  reference: PMID:37683752; DOI:10.1016/j.ijbiomac.2023.126771; PDB:8IBO
+  locator: Complete original abstract and released experimental deposit metadata,
+    not full paper
+  accessed_at: '2026-10-21T19:21:56.458730Z'
+  support: partial
+  summary: The 2023 original reports a 1.83 Å ClpC1 N-terminal-domain/lassomycin complex,
+    providing later direct structural support for the broad binding assertion. Correct
+    publisher full text remained 403. Deposit sequence GLRRLFADQLVGRRN(ILM) and the
+    terminal methyl-isoleucine component were inspected, but the polymer linkage metadata
+    omits the expected Gly1–Asp8 closure and its reported weight is inconsistent with
+    the primary covalent candidate. The deposit is not used as an automatic exact-graph
+    replacement or to settle natural fold/material details.
+  snapshot_sha256: bf100a027aa953c512e26b4a660687e00fb8412fa74a4f5510dd87c3801bad22
+- evidence_id: access
+  kind: validation
+  reference: /private/tmp/am-review-session/595-fetch4.json
+  locator: Actual retrieval ledger and reading-depth boundaries
+  accessed_at: '2026-10-21T19:24:57Z'
+  support: context_only
+  summary: The sole adopted original was fully read through Methods, Table1 and figure
+    captions; actual Figures1,4,5 were viewed. Additional 2016 identity, synthesis
+    outcome, NMR interpretation and assay sections were read in the complete accepted-manuscript
+    PDF. Original 2014 SI returned a small HTML challenge instead of PDF, the guessed
+    2016 SI route was 404, and 2023 full text was 403. Wrong guessed publisher PII
+    and failed files were retained as failures and supply no evidence.
+  snapshot_sha256: fa17b727720be2e9a39f372e05b63ebef961eb9aaac2ddb54e56fbc1ecbd0db8
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Natural macrocyclic peptide versus linear aldehyde
+  outcome: concern
+  summary: The native fields consistently encode the wrong covalent molecule. The
+    sole adopted original and actual structure figure establish macrocyclization and
+    a methyl ester, while the native graph contains a free N terminus, free Asp side-chain
+    acid and an Ile aldehyde. Formula and mass are therefore also those of the wrong
+    structure. Folded topology remains separate from this confirmed defect.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  evidence_ids:
+  - native
+  - pubchem
+  - adopted-identity
+  - structure-figure
+  - mapping
+  - synthesis2016
+- assessment_id: grounding
+  area: grounding
+  topic: ARO concept and exact PubChem chemical link
+  outcome: concern
+  summary: ARO denotes the named natural product and the minted identifier reproduces
+    correctly. PubChem102602724 currently reproduces the wrong linear aldehyde, so
+    retaining it as an exact chemical equivalent after primary-grounded repair would
+    perpetuate the conflict. No automatic alternative CID is proposed. The labetaomycin
+    alias is traceable to ARO but independent primary nomenclature remains unresolved;
+    no confirmed false-alias finding is made.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  evidence_ids:
+  - aro
+  - pubchem
+  - mapping
+  - owners
+- assessment_id: evidence
+  area: evidence
+  topic: Definition activity and ClpC1 mechanism
+  outcome: supported
+  summary: The original supports selective in vitro antimycobacterial activity, selected
+    ClpC1 resistance mutants and biochemical ATPase/proteolysis uncoupling for the
+    isolated natural material. The 2014 pocket model is docking and its apparent Kd
+    is an activation fit; the later bound-domain deposit supports broad binding but
+    was not treated as complete mechanistic or exact-material adjudication. Neither
+    source validates activity of the stored linear aldehyde.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  evidence_ids:
+  - adopted-producer
+  - adopted-activity
+  - adopted-killing
+  - adopted-resistance
+  - adopted-mechanism
+  - mechanism-boundary
+  - later-structure
+- assessment_id: completeness
+  area: completeness
+  topic: Optional structured annotations and topological limits
+  outcome: unknown
+  summary: No required optional field is missing. Producer, strain-specific activity
+    and selected-mutant observations could be curated after identity repair. Native
+    definition does not assert threaded versus unthreaded topology. The 2016 comparison
+    and inaccessible later full paper constrain that question; ordinary covalent SMILES
+    does not independently resolve it. Do not add biosynthetic proteins as drug targets
+    or convert the adapter gene hit into mechanism evidence.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  evidence_ids:
+  - search
+  - adapter
+  - adopted-producer
+  - adopted-activity
+  - adopted-resistance
+  - synthesis2016
+  - later-structure
+- assessment_id: provenance
+  area: provenance
+  topic: Reproducible source ownership and history
+  outcome: supported
+  summary: All original 13 and expanded 26 inputs are preserved. ARO source extraction
+    and PubChem structural enrichment explain the native fields; three historical
+    seed/reseed events are coherent and the native remains SEEDED. Passing schema
+    and internal chemistry checks does not establish natural-product identity.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  evidence_ids:
+  - owners
+  - pubchem-owner
+  - native
+  - mapping
+findings:
+- finding_id: F1
+  issue_key: lassomycin-open-aldehyde-versus-macrocyclic-methyl-ester
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The stored graph is an open-chain aldehyde rather than natural lassomycin
+  description: Native and current PubChem encode C82H142N30O20 with free Gly1 nitrogen,
+    free Asp8 side-chain acid and Ile16 aldehyde. The adopted primary explicitly establishes
+    the Gly1–Asp8 macrolactam and terminal methyl ester, independently visible in
+    Figure1A. A minimal diagnostic reconstruction adds those functions and yields
+    C83H142N30O20 and key RXGUTSDRVTWAFL-FAEWSBKISA-N, retaining the native tetrahedra.
+    The wrong native constitution, formula and masses cannot be reconciled by the
+    separate threaded/unthreaded debate. The PubChem exact xref must be adjudicated
+    with the structural repair.
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  field_paths:
+  - chemical_structure
+  - xrefs[1]
+  evidence_ids:
+  - pubchem-owner
+  - pubchem
+  - adopted-identity
+  - structure-figure
+  - mapping
+  - synthesis2016
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO molecule identity, classification, definition, xref and citation
+      owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: ARO classification and source merge rules
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment transform
+  rule_id: 'review-yaml-record: exact identity'
+  normalization_reason: 'Blocker under the wrong-identity rubric: the asserted graph
+    lacks established covalent functionality and denotes a different molecule, despite
+    internally coherent identifiers and masses.'
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  description: Adjudicate and correct lassomycin through maintained chemical ownership,
+    preserving source and topology boundaries.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO molecule identity, classification, definition, xref and citation
+      owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: ARO classification and source merge rules
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment transform
+  generator: scripts/enrich_pubchem_structures.py; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  acceptance_checks:
+  - Map Gly1 N and Asp8 side-chain carbonyl to native atoms 131 and 70, and Ile16
+    terminal carbonyl to atom 5; encode the documented macrolactam and methyl ester
+    with all-L residue stereochemistry.
+  - Treat RXGUTSDRVTWAFL-FAEWSBKISA-N as a scratch diagnostic requiring independent
+    review, not automatic adoption of a PDB or a guessed CID. Recalculate SMILES,
+    InChI, key, formula and masses together.
+  - Resolve the asserted PubChem102602724 exact link against the adjudicated natural
+    molecule; preserve ARO source provenance without asserting exact equivalence to
+    the current linear aldehyde entry.
+  - Keep natural-versus-synthetic activity and threaded/unthreaded topology explicit.
+    Do not infer a stoichiometric TFA salt from purification, or equate an unvalidated
+    covalent candidate with a confirmed bioactive fold.
+  - Implement reproducibly in maintained input/curator ownership and regenerate, then
+    rerun focused and required corpus validation; do not patch only generated YAML.
+- action_id: A2
+  finding_ids: []
+  target_ids:
+  - antibioticmech:aro-41b2842f38
+  description: Optional future enrichment should retain exact natural material, strain
+    and mechanistic evidence levels.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO molecule identity, classification, definition, xref and citation
+      owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: ARO classification and source merge rules
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment transform
+  acceptance_checks:
+  - Use the original producer IS009804 and natural-isolate MIC/MBC methods with exact
+    strain identifiers, units, censoring and incubation. Resistance to other drugs
+    is not lassomycin resistance.
+  - If adding molecular_targets or causal_graphs, distinguish purified ClpC1 activation/proteolysis
+    effects, selected-mutant association, 2014 docking and the later bound-domain
+    structure. The activation-fit Kd is not a separate equilibrium binding measurement.
+  - Resolve the natural fold and labetaomycin nomenclature only from appropriate primary
+    material; no mandatory correction follows merely from their current bounded uncertainty.
+limitations:
+- The adopted 2014 main text, Table1 and all figure captions were read; actual Figures1,4,5
+  were viewed. Original SI retrieval returned HTML, so raw NMR restraints, all supplementary
+  assignments and diffraction data were not independently reprocessed.
+- The additional 2016 accepted manuscript was read for identity, synthesis outcome,
+  NMR comparison and biological methods/results. Its remaining individual synthetic
+  procedures and all SI spectra were not exhaustively reanalyzed; the attempted SI
+  route returned 404. Its negative synthetic activity is not a test of authentic natural
+  lassomycin.
+- The 2023 abstract and released 8IBO metadata/sequence/linkage records were inspected,
+  but the correct publisher full text returned 403. The deposit is not adopted as
+  an exact graph because its linkage metadata and reported molecular weight require
+  adjudication. No conclusion about all natural fold states is asserted.
+- Current ARO verifies labetaomycin alias provenance; the bounded original-paper/name
+  search did not independently establish that synonym. No positive evidence of a different
+  compound was found, so no false-synonym correction is claimed.
+- Other discovery-query results concerning lassomycin-like peptides, cyclomarin, rufomycin
+  and biosynthetic enzymes were screened as leads, not transferred as parent activity
+  or direct target evidence. No exhaustive claim about all published studies is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All original 13 and expanded 26 input hashes were verified unchanged at draft writing.
+  No native, source, history, saved-bundle, progress or Git writes occurred.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
