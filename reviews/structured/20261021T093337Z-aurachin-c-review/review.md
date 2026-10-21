@@ -1,0 +1,796 @@
+# Aurachin C: exact structure supported; qualify an external stereo discrepancy and analogue evidence
+
+- Review: 20261021T093337Z-aurachin-c-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:15:28Z
+- Finished UTC: 2026-10-21T09:33:37Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Native aurachin C identity, both E alkenes and antibacterial classification are supported. One minor finding concerns internally inconsistent KNApSAcK stereochemical descriptors, not the native graph. Original growth and respiratory-enzyme experiments offer optional enrichment, while later synthetic analogue results must remain compound-specific. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position121; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:90888 | data/antibiotics/antibacterial/aurachin-c.yaml | generated | aurachin C |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:90888 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:90888 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:90888 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:90888 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:90888 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:90888 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:90888 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:90888 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:90888 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:90888 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:90888 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:90888 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Focused validation, provenance and native status
+
+schema: supported. Targets: CHEBI:90888.
+
+Actual checks pass and all 13 initial input hashes remain unchanged. A structured review does not promote native SEEDED status.
+
+### Exact native molecular graph and stereo
+
+identity: supported. Targets: CHEBI:90888.
+
+Native encodings, systematic synonym and independent current PubChem agree. Natural C remains distinct from A, D, short-chain and differently substituted analogues.
+
+### KNApSAcK internal descriptor scope
+
+evidence: concern. Targets: CHEBI:90888.
+
+The full InChI matches native, while displayed key and SMILES omit two E assignments. Preserve exact source fields rather than importing the less-specific representations.
+
+### Antibacterial role and original growth experiments
+
+evidence: supported. Targets: CHEBI:90888.
+
+Original purified-compound MICs support the qualitative role, with medium, missing-strain and fungal incomplete-inhibition limits.
+
+### Optional bacterial respiratory target evidence
+
+completeness: unknown. Targets: CHEBI:90888.
+
+Original exact-C enzyme leads exist, but complete 1995 assays remain uninspected. Host mitochondria, archaeal enzymes and synthetic analogues must not silently define a bacterial causal graph.
+
+### Producer, clinical, resistance and expression context
+
+scope: unknown. Targets: CHEBI:90888.
+
+No unsupported native assertions occur. Original culture supports a producer lead, but no current exact-strain taxonomy or gene-level producer object was created. Native lacks gene/protein/pathway or transcriptomic claims, so a targeted adapter query is not applicable to this review.
+
+## Findings
+
+### F1: Qualify internally inconsistent KNApSAcK stereochemical descriptors
+
+minor / open / confirmed; issue key: aurachin-c-knapsack-internal-stereo-scope.
+
+The exact full InChI corroborates the xref, but the displayed key and SMILES omit native E-bond assignments. Preserve native chemistry and record the external descriptor limitation.
+
+### F2: Enrich exact primary activity while separating natural C from analogues
+
+informational / open / confirmed; issue key: aurachin-c-primary-assay-and-analogue-boundaries.
+
+Original natural-C growth and enzyme work can support optional annotation. Later analogue experiments cannot supply native C constants or mutant phenotypes.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Qualify the external stereochemical discrepancy through maintained source handling.
+
+- Recheck the complete C00017847 InChI, displayed key and SMILES separately; an entry name alone does not resolve their discrepancy.
+- Retain both native E assignments and the full native key. Do not describe unspecified geometry as a demonstrated mixture.
+- If changing xref qualification or extraction policy, preserve provenance and verify reproducible seeding.
+
+### A2
+
+Curate exact natural-C experiments with preparation, organism and endpoint boundaries.
+
+- Extract original Table 4 MICs without inventing strain IDs or conflating disk zones and incomplete inhibition.
+- Retrieve and inspect the complete 1995 paper before detailed binding constants or causal-chain claims; retain the truncated-abstract limit until then.
+- Keep Oscillatoria SQR, archaeal SQR and beef-heart respiration separate; no cross-taxon target or cellular lethality follows automatically.
+- Exclude AC1-10/AC2-11/AC4-11 and aurachin D data from natural-C claims. Use the validated native writer and claim-level evidence workflow for separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/aurachin-c.yaml; Entire YAML including three seed/reseed events | supports | Read the definition, two synonyms, four structural parents, antibacterial role, complete chemical encodings, four xrefs and ChEBI source concept. The graph has no tetrahedral centres and two assigned E double bonds. No quantitative activity, molecular target, mode, producer, clinical, resistance, causal graph or dataset annotation is asserted. |
+| source | data/raw/chebi_antimicrobials.tsv; Row 2415; relevant extractor/seeder branches | supports | Adopted ChEBI row reproduces native identity, roles, xrefs and nine PMID leads. Literature leads are not themselves native claim-level evidence. The source mint and history reproduce without native changes. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:90888; Current ChEBI page, OLS parent terms and PubChem CID 6439171 | supports | Current ChEBI and PubChem agree on neutral C25H33NO2 and full key FIHXCHBEHLCXEG-YEFHWUCQSA-N with two E alkenes. Parents CHEBI:23765 quinolone, CHEBI:24709 hydroxylamines, CHEBI:27171 organic heterobicyclic compound and CHEBI:90918 C-type aurachin fit the structure. CHEBI:33282 remains the source antibacterial role. |
+| knapsack | https://www.knapsackfamily.com/knapsack_core/information.php?word=C00017847; Current entry and independently parsed 121-knapsack-comparison.json | partial | Entry name, formula and full Standard InChI agree with native aurachin C, including the two E bonds. Its displayed key FIHXCHBEHLCXEG-UHFFFAOYSA-N and SMILES omit those geometric assignments. Thus the entry is internally inconsistent in stereochemical scope. The matching full InChI preserves the exact compound link; no native structure correction follows. |
+| growth | PMID:3106289; DOI:10.7164/antibiotics.40.258; complete eight-page original paper, reused 120-primary1987.pdf; p263 Tables 3–4 visually checked | supports | Purified aurachins A–D were obtained separately from Stigmatella aurantiaca Sg a15 cultures. Table 4 aurachin C serial-dilution MICs in standard complex media are B. subtilis 0.15, S. aureus 0.39, A. aurescens 0.19, B. ammoniagenes 0.05, C. fascians 0.78 and E. coli &gt;50 µg/mL. Table 4 lacks strain IDs, so do not silently join every row to Table 3 disk-test strains. Its yeast rows at 10 and 0.19 µg/mL retain incomplete-inhibition qualifiers. Table 3 disk zones at 40 µg per 6-mm disk are a separate endpoint. |
+| host-respiration | DOI:10.7164/antibiotics.40.258; Original p264 Table 5 and Discussion | supports | Aurachin C gives reported 50% inhibition of NADH oxidation at 42 nM in beef-heart submitochondrial particles. This host organelle preparation is not a bacterial MIC, a purified bacterial target-binding constant or evidence of universal killing. The original authors leave exact bacterial mechanism unresolved. |
+| oxidases1995 | PMID:7827023; DOI:10.1021/bi00003a044; inspected indexed abstract, explicitly truncated at 250 words | partial | The abstract reports natural aurachin C inhibition of quinol oxidation by E. coli cytochromes bo and bd, with observed dissociation constants around 1e-8 M in membrane preparations. It describes a purified-bo estimate of 0.6 inhibitor sites per enzyme and effects on quinol-mediated reduction rather than the reaction of reduced enzyme with oxygen. These are bounded original biochemical results, not MICs. The full ACS paper was inaccessible and the indexed abstract is incomplete. |
+| sqr1994 | PMID:8119908; DOI:10.1016/S0021-9258(17)37518-X; complete indexed abstract | partial | Purified sulfide-quinone reductase from Oscillatoria limnetica was inhibited by aurachin C with I50 7 nM. This is an enzyme inhibition endpoint in that cyanobacterium; it does not demonstrate direct binding, antibacterial growth inhibition or transfer to other taxa. |
+| analogues1999 | PMID:9880809; DOI:10.1093/oxfordjournals.jbchem.a022250; 121-primary1999.pdf complete main article pp138–142 | supports | The original paper synthesizes and tests AC0-10, AC1-10, AC10-1 and other N-hydroxy-4-quinolone analogues. Its new purified E. coli bo/bd and mutant-membrane measurements are analogue-specific. Natural C numerical potency is cited from the earlier study. The new AC1-10 Ki of 9.8 ± 0.9 nM cannot be assigned to native aurachin C. Assays use spectrophotometric ubiquinol oxidation and different substrates for bo and bd, not bacterial growth. |
+| analogues2021 | PMID:34903826; DOI:10.1038/s41598-021-03288-7; PMC8668966 complete main text, Methods and tables | context_only | Despite broad aurachin C discussion, the new C-type assays concern AC1-10, AC2-11 and AC4-11, alongside aurachin D derivatives. The reported apparent inhibition values therefore do not describe native natural C. The operational Kiapp is derived from dose-response EC50 at fixed enzyme concentration, not automatically an equilibrium binding constant. This paper is useful for excluding an incorrect compound transfer. |
+| other-adopted | Other adopted ChEBI references; 121-adopted.json; complete available abstracts and indexed metadata | partial | PMID18989924 reports Sg a15 isolation and biosynthetic feeding of aurachins A–L. PMID22907798, DOI10.1002/anie.201204138, has no indexed abstract; its semipinacol biosynthesis title alone does not verify methods. PMID23103448, DOI10.1016/j.bbabio.2012.10.010, reports Caldivirga maquilingensis archaeal SQR inhibition at abstract scope, distinct from bacteria. PMID25130733, DOI10.1080/09168451.2014.918494, is a C/D/L synthesis and activity lead without inspected full assays. PMID25209961, DOI10.1002/cbic.201402373, concerns AuaG-catalysed substrate rearrangement and analogues, not a drug target. These five plus the four separately assessed references account for all nine adopted leads. |
+| other-xrefs | Current ChEBI crosswalks; CAS 108354-14-9, Reaxys 19334109 and MetaCyc CPD-7733 | partial | CAS and Reaxys are corroborated as source xref strings, without direct proprietary registry access. MetaCyc requires an account. No absent resource is inferred from access failures. |
+| chemistry | Independent RDKit calculations; 121-chemistry.json and actual focused validation logs | supports | Both native encodings reproduce the full key, formula, neutral charge, one fragment, average and exact masses, and deterministic ChEBI mint. Schema and strict checks exit 0. Internal consistency does not by itself prove biological activity. |
+| search | CultureBotAI/AntibioticMech; 121-local-hits.txt and 121-maintained-search.txt | context_only | Exact identity resolves to the native source row and readiness queue. No exact-target maintained override was found in the specified search. The aureoquinone numeric-ID search also returned an unrelated CRyPTIC measurement, which was rejected as a substring collision. |
+
+## Limits And Additional Notes
+
+- All nine adopted indexed records and available abstracts were read. The 1995 indexed abstract is explicitly truncated at 250 words and the 2012 semipinacol paper has no available abstract. ACS full text returned 403; archaeal SQR full-text XML returned 500.
+- The 1987 and 1999 main papers and 2021 main XML were read. The 1987 MIC table was visually checked; 1999 chemical schemes and table images were not independently digitized, because no new analogue measurements are imported. No raw spectra or kinetics were reanalysed.
+- CAS/Reaxys were not directly queried; MetaCyc required an account. No claim of an exhaustive mechanism, producer, resistance or clinical literature search is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 13 captured input hashes were rechecked unchanged. No native record was edited; absent optional fields are not treated as schema defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T093337Z-aurachin-c-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Aurachin C: exact structure supported; qualify an external stereo discrepancy
+  and analogue evidence'
+started_at: '2026-10-21T09:15:28Z'
+finished_at: '2026-10-21T09:33:37Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Native aurachin C identity, both E alkenes and antibacterial classification
+  are supported. One minor finding concerns internally inconsistent KNApSAcK stereochemical
+  descriptors, not the native graph. Original growth and respiratory-enzyme experiments
+  offer optional enrichment, while later synthetic analogue results must remain compound-specific.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/aurachin-c.yaml
+    sha256: 8cc17cd6d784fd11974fe3967834abce75a990dae7ba577308078d09875d0a05
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:90888
+  path: data/antibiotics/antibacterial/aurachin-c.yaml
+  label: aurachin C
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position121; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:90888
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:90888
+  command: .venv/bin/python /private/tmp/am-review-session/focus011-root.py 121
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/aurachin-c.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/aurachin-c.yaml --out /private/tmp/am-review-session/121-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:90888
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/aurachin-c.yaml
+  locator: Entire YAML including three seed/reseed events
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: supports
+  summary: Read the definition, two synonyms, four structural parents, antibacterial
+    role, complete chemical encodings, four xrefs and ChEBI source concept. The graph
+    has no tetrahedral centres and two assigned E double bonds. No quantitative activity,
+    molecular target, mode, producer, clinical, resistance, causal graph or dataset
+    annotation is asserted.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Row 2415; relevant extractor/seeder branches
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: supports
+  summary: Adopted ChEBI row reproduces native identity, roles, xrefs and nine PMID
+    leads. Literature leads are not themselves native claim-level evidence. The source
+    mint and history reproduce without native changes.
+  snapshot_sha256: cda757dafdf299abc90090b82256e0840e2858aa3c43ae28d2a4b0e961d7a4b1
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:90888
+  locator: Current ChEBI page, OLS parent terms and PubChem CID 6439171
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: supports
+  summary: Current ChEBI and PubChem agree on neutral C25H33NO2 and full key FIHXCHBEHLCXEG-YEFHWUCQSA-N
+    with two E alkenes. Parents CHEBI:23765 quinolone, CHEBI:24709 hydroxylamines,
+    CHEBI:27171 organic heterobicyclic compound and CHEBI:90918 C-type aurachin fit
+    the structure. CHEBI:33282 remains the source antibacterial role.
+  snapshot_sha256: d48df005d37633d87ec66fdddca062642d363a1bd71bb0b67eba779cd89a547a
+- evidence_id: knapsack
+  kind: database
+  reference: https://www.knapsackfamily.com/knapsack_core/information.php?word=C00017847
+  locator: Current entry and independently parsed 121-knapsack-comparison.json
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: partial
+  summary: Entry name, formula and full Standard InChI agree with native aurachin
+    C, including the two E bonds. Its displayed key FIHXCHBEHLCXEG-UHFFFAOYSA-N and
+    SMILES omit those geometric assignments. Thus the entry is internally inconsistent
+    in stereochemical scope. The matching full InChI preserves the exact compound
+    link; no native structure correction follows.
+  snapshot_sha256: cd3c09a48daa04b70130520f7e3c2fd2fa0b81c1a074bc223113dee05185f510
+- evidence_id: growth
+  kind: primary_source
+  reference: PMID:3106289
+  locator: DOI:10.7164/antibiotics.40.258; complete eight-page original paper, reused
+    120-primary1987.pdf; p263 Tables 3–4 visually checked
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: supports
+  summary: Purified aurachins A–D were obtained separately from Stigmatella aurantiaca
+    Sg a15 cultures. Table 4 aurachin C serial-dilution MICs in standard complex media
+    are B. subtilis 0.15, S. aureus 0.39, A. aurescens 0.19, B. ammoniagenes 0.05,
+    C. fascians 0.78 and E. coli >50 µg/mL. Table 4 lacks strain IDs, so do not silently
+    join every row to Table 3 disk-test strains. Its yeast rows at 10 and 0.19 µg/mL
+    retain incomplete-inhibition qualifiers. Table 3 disk zones at 40 µg per 6-mm
+    disk are a separate endpoint.
+  snapshot_sha256: 56573cace27c9b51785c05459dee5d45dcbe2f0b65b6a1416aa0dc3e46a7303b
+- evidence_id: host-respiration
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.40.258
+  locator: Original p264 Table 5 and Discussion
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: supports
+  summary: Aurachin C gives reported 50% inhibition of NADH oxidation at 42 nM in
+    beef-heart submitochondrial particles. This host organelle preparation is not
+    a bacterial MIC, a purified bacterial target-binding constant or evidence of universal
+    killing. The original authors leave exact bacterial mechanism unresolved.
+  snapshot_sha256: 56573cace27c9b51785c05459dee5d45dcbe2f0b65b6a1416aa0dc3e46a7303b
+- evidence_id: oxidases1995
+  kind: primary_source
+  reference: PMID:7827023
+  locator: DOI:10.1021/bi00003a044; inspected indexed abstract, explicitly truncated
+    at 250 words
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: partial
+  summary: The abstract reports natural aurachin C inhibition of quinol oxidation
+    by E. coli cytochromes bo and bd, with observed dissociation constants around
+    1e-8 M in membrane preparations. It describes a purified-bo estimate of 0.6 inhibitor
+    sites per enzyme and effects on quinol-mediated reduction rather than the reaction
+    of reduced enzyme with oxygen. These are bounded original biochemical results,
+    not MICs. The full ACS paper was inaccessible and the indexed abstract is incomplete.
+  snapshot_sha256: 6fbf45e7eb0aaa17e20fda6b33390387078e05f6cb380a571a126c4e60df5446
+- evidence_id: sqr1994
+  kind: primary_source
+  reference: PMID:8119908
+  locator: DOI:10.1016/S0021-9258(17)37518-X; complete indexed abstract
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: partial
+  summary: Purified sulfide-quinone reductase from Oscillatoria limnetica was inhibited
+    by aurachin C with I50 7 nM. This is an enzyme inhibition endpoint in that cyanobacterium;
+    it does not demonstrate direct binding, antibacterial growth inhibition or transfer
+    to other taxa.
+  snapshot_sha256: 6fbf45e7eb0aaa17e20fda6b33390387078e05f6cb380a571a126c4e60df5446
+- evidence_id: analogues1999
+  kind: primary_source
+  reference: PMID:9880809
+  locator: DOI:10.1093/oxfordjournals.jbchem.a022250; 121-primary1999.pdf complete
+    main article pp138–142
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: supports
+  summary: The original paper synthesizes and tests AC0-10, AC1-10, AC10-1 and other
+    N-hydroxy-4-quinolone analogues. Its new purified E. coli bo/bd and mutant-membrane
+    measurements are analogue-specific. Natural C numerical potency is cited from
+    the earlier study. The new AC1-10 Ki of 9.8 ± 0.9 nM cannot be assigned to native
+    aurachin C. Assays use spectrophotometric ubiquinol oxidation and different substrates
+    for bo and bd, not bacterial growth.
+  snapshot_sha256: d9002b5f7d6ce41a828744da5b90304141eaa4697ee8145c7ccec01f72a4a959
+- evidence_id: analogues2021
+  kind: primary_source
+  reference: PMID:34903826
+  locator: DOI:10.1038/s41598-021-03288-7; PMC8668966 complete main text, Methods
+    and tables
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: context_only
+  summary: Despite broad aurachin C discussion, the new C-type assays concern AC1-10,
+    AC2-11 and AC4-11, alongside aurachin D derivatives. The reported apparent inhibition
+    values therefore do not describe native natural C. The operational Kiapp is derived
+    from dose-response EC50 at fixed enzyme concentration, not automatically an equilibrium
+    binding constant. This paper is useful for excluding an incorrect compound transfer.
+  snapshot_sha256: 2f35c0970830a6e18df7abc864924537381495751d92fe23388c20dba3679455
+- evidence_id: other-adopted
+  kind: primary_source
+  reference: Other adopted ChEBI references
+  locator: 121-adopted.json; complete available abstracts and indexed metadata
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: partial
+  summary: PMID18989924 reports Sg a15 isolation and biosynthetic feeding of aurachins
+    A–L. PMID22907798, DOI10.1002/anie.201204138, has no indexed abstract; its semipinacol
+    biosynthesis title alone does not verify methods. PMID23103448, DOI10.1016/j.bbabio.2012.10.010,
+    reports Caldivirga maquilingensis archaeal SQR inhibition at abstract scope, distinct
+    from bacteria. PMID25130733, DOI10.1080/09168451.2014.918494, is a C/D/L synthesis
+    and activity lead without inspected full assays. PMID25209961, DOI10.1002/cbic.201402373,
+    concerns AuaG-catalysed substrate rearrangement and analogues, not a drug target.
+    These five plus the four separately assessed references account for all nine adopted
+    leads.
+  snapshot_sha256: 6fbf45e7eb0aaa17e20fda6b33390387078e05f6cb380a571a126c4e60df5446
+- evidence_id: other-xrefs
+  kind: database
+  reference: Current ChEBI crosswalks
+  locator: CAS 108354-14-9, Reaxys 19334109 and MetaCyc CPD-7733
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: partial
+  summary: CAS and Reaxys are corroborated as source xref strings, without direct
+    proprietary registry access. MetaCyc requires an account. No absent resource is
+    inferred from access failures.
+  snapshot_sha256: f14da65987911a85a9690dd922111c9327284a84f735ba2e46f2d1f25e899497
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: 121-chemistry.json and actual focused validation logs
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: supports
+  summary: Both native encodings reproduce the full key, formula, neutral charge,
+    one fragment, average and exact masses, and deterministic ChEBI mint. Schema and
+    strict checks exit 0. Internal consistency does not by itself prove biological
+    activity.
+  snapshot_sha256: b86ca86be126de3b37feac9e94769624bb90cbfd7be465ea01923833bb6333b6
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 121-local-hits.txt and 121-maintained-search.txt
+  accessed_at: '2026-10-21T09:23:22Z'
+  support: context_only
+  summary: Exact identity resolves to the native source row and readiness queue. No
+    exact-target maintained override was found in the specified search. The aureoquinone
+    numeric-ID search also returned an unrelated CRyPTIC measurement, which was rejected
+    as a substring collision.
+  search_scope: Initial rg --no-ignore --hidden search excluding .git/.venv; subsequent
+    ignored-inclusive exact name, slug, ChEBI number and full-key-stem search across
+    curation, conf, scripts, data/raw, src, reports and reviews. Free official database,
+    Europe PMC and primary publisher follow-up; no exhaustive literature-absence assertion.
+  snapshot_sha256: f4ba4b5889b7b3ddd735d7b8272962fab3a406270d47e10536e06a46394b2574
+assessments:
+- assessment_id: schema
+  area: schema
+  topic: Focused validation, provenance and native status
+  outcome: supported
+  summary: Actual checks pass and all 13 initial input hashes remain unchanged. A
+    structured review does not promote native SEEDED status.
+  target_ids:
+  - CHEBI:90888
+  evidence_ids:
+  - native
+  - source
+  - chemistry
+- assessment_id: identity
+  area: identity
+  topic: Exact native molecular graph and stereo
+  outcome: supported
+  summary: Native encodings, systematic synonym and independent current PubChem agree.
+    Natural C remains distinct from A, D, short-chain and differently substituted
+    analogues.
+  target_ids:
+  - CHEBI:90888
+  evidence_ids:
+  - identity
+  - chemistry
+  - native
+- assessment_id: xref
+  area: evidence
+  topic: KNApSAcK internal descriptor scope
+  outcome: concern
+  summary: The full InChI matches native, while displayed key and SMILES omit two
+    E assignments. Preserve exact source fields rather than importing the less-specific
+    representations.
+  target_ids:
+  - CHEBI:90888
+  evidence_ids:
+  - knapsack
+  - identity
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and original growth experiments
+  outcome: supported
+  summary: Original purified-compound MICs support the qualitative role, with medium,
+    missing-strain and fungal incomplete-inhibition limits.
+  target_ids:
+  - CHEBI:90888
+  evidence_ids:
+  - growth
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional bacterial respiratory target evidence
+  outcome: unknown
+  summary: Original exact-C enzyme leads exist, but complete 1995 assays remain uninspected.
+    Host mitochondria, archaeal enzymes and synthetic analogues must not silently
+    define a bacterial causal graph.
+  target_ids:
+  - CHEBI:90888
+  evidence_ids:
+  - oxidases1995
+  - sqr1994
+  - analogues1999
+  - analogues2021
+  - host-respiration
+  - other-adopted
+- assessment_id: optional
+  area: scope
+  topic: Producer, clinical, resistance and expression context
+  outcome: unknown
+  summary: No unsupported native assertions occur. Original culture supports a producer
+    lead, but no current exact-strain taxonomy or gene-level producer object was created.
+    Native lacks gene/protein/pathway or transcriptomic claims, so a targeted adapter
+    query is not applicable to this review.
+  target_ids:
+  - CHEBI:90888
+  evidence_ids:
+  - native
+  - growth
+  - other-adopted
+findings:
+- finding_id: F1
+  issue_key: aurachin-c-knapsack-internal-stereo-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify internally inconsistent KNApSAcK stereochemical descriptors
+  description: The exact full InChI corroborates the xref, but the displayed key and
+    SMILES omit native E-bond assignments. Preserve native chemistry and record the
+    external descriptor limitation.
+  target_ids:
+  - CHEBI:90888
+  field_paths:
+  - xrefs
+  evidence_ids:
+  - knapsack
+  - identity
+  - chemistry
+  rule_id: 'native-review-checklist: Identity, Equivalence, Evidence and Completeness'
+  native_severity: minor
+  normalization_reason: The exact full InChI corroborates the xref, but the displayed
+    key and SMILES omit native E-bond assignments. Preserve native chemistry and record
+    the external descriptor limitation.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+- finding_id: F2
+  issue_key: aurachin-c-primary-assay-and-analogue-boundaries
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Enrich exact primary activity while separating natural C from analogues
+  description: Original natural-C growth and enzyme work can support optional annotation.
+    Later analogue experiments cannot supply native C constants or mutant phenotypes.
+  target_ids:
+  - CHEBI:90888
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - molecular_targets
+  - mode_of_action
+  - discussions
+  evidence_ids:
+  - growth
+  - oxidases1995
+  - sqr1994
+  - analogues1999
+  - analogues2021
+  rule_id: 'native-review-checklist: Identity, Equivalence, Evidence and Completeness'
+  native_severity: informational
+  normalization_reason: Original natural-C growth and enzyme work can support optional
+    annotation. Later analogue experiments cannot supply native C constants or mutant
+    phenotypes.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aurachin-c.yaml
+    role: Curator-owned exact primary activity, mechanism and evidence
+actions:
+- action_id: A1
+  description: Qualify the external stereochemical discrepancy through maintained
+    source handling.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:90888
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  acceptance_checks:
+  - Recheck the complete C00017847 InChI, displayed key and SMILES separately; an
+    entry name alone does not resolve their discrepancy.
+  - Retain both native E assignments and the full native key. Do not describe unspecified
+    geometry as a demonstrated mixture.
+  - If changing xref qualification or extraction policy, preserve provenance and verify
+    reproducible seeding.
+- action_id: A2
+  description: Curate exact natural-C experiments with preparation, organism and endpoint
+    boundaries.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:90888
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aurachin-c.yaml
+    role: Curator-owned exact primary activity, mechanism and evidence
+  acceptance_checks:
+  - Extract original Table 4 MICs without inventing strain IDs or conflating disk
+    zones and incomplete inhibition.
+  - Retrieve and inspect the complete 1995 paper before detailed binding constants
+    or causal-chain claims; retain the truncated-abstract limit until then.
+  - Keep Oscillatoria SQR, archaeal SQR and beef-heart respiration separate; no cross-taxon
+    target or cellular lethality follows automatically.
+  - Exclude AC1-10/AC2-11/AC4-11 and aurachin D data from natural-C claims. Use the
+    validated native writer and claim-level evidence workflow for separately authorized
+    curation.
+limitations:
+- All nine adopted indexed records and available abstracts were read. The 1995 indexed
+  abstract is explicitly truncated at 250 words and the 2012 semipinacol paper has
+  no available abstract. ACS full text returned 403; archaeal SQR full-text XML returned
+  500.
+- The 1987 and 1999 main papers and 2021 main XML were read. The 1987 MIC table was
+  visually checked; 1999 chemical schemes and table images were not independently
+  digitized, because no new analogue measurements are imported. No raw spectra or
+  kinetics were reanalysed.
+- CAS/Reaxys were not directly queried; MetaCyc required an account. No claim of an
+  exhaustive mechanism, producer, resistance or clinical literature search is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 captured input hashes were rechecked unchanged. No native record was edited;
+  absent optional fields are not treated as schema defects.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
