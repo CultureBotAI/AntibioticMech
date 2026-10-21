@@ -1,0 +1,650 @@
+schema_version: 1.0.0
+review_id: 20261021T120201Z-ceftaroline-fosamil-acetate
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ceftaroline fosamil acetate: exact anhydrous composition with active-metabolite
+  evidence boundaries'
+started_at: '2026-10-21T11:48:54Z'
+finished_at: '2026-10-21T12:02:01Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent entire native/ChEBI owner review; current CAS-resolved
+    full structure; component-aware chemistry; adopted original 2008 paper methods
+    and results; additional prodrug primary abstracts and official product material
+    label.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed native defect. Native structure and current CAS identity agree
+  on anhydrous 1:1 ceftaroline fosamil/acetic acid composition, 6R,7R and Z oxime.
+  The sole adopted primary paper explicitly assays active ceftaroline, not fosamil
+  acetate, and cannot support direct acetate MICs. Official clinical material is the
+  monoacetate monohydrate; the native clinical-use prose is supported at the prodrug-moiety
+  level, while an independently administered anhydrous preparation is not established.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ceftaroline-fosamil-acetate.yaml
+    sha256: 74f45074091e4addc5692995fe2be4aaa49dda7d424267881fdcad483ddbde2f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:70715
+  path: data/antibiotics/antibacterial/ceftaroline-fosamil-acetate.yaml
+  label: ceftaroline fosamil acetate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, definition, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+scope:
+  description: Whole-record review of exact anhydrous ceftaroline fosamil acetate.
+  selection: Queue 251 in isolated batch 026; original captures preserved and actual
+    owner/context inputs expanded before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:70715
+  exclusions:
+  - target: Monoacetate monohydrate, unsolvated fosamil, active ceftaroline and complete
+      Teflaro injection
+    reason: Separate exact compositions and distinguish pharmacological conversion
+      from direct assay identity.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ceftaroline-fosamil-acetate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ceftaroline-fosamil-acetate.yaml --out /private/tmp/am-review-session/251-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: generic-chemistry
+  name: Supplemental generic molecular helper
+  status: failed
+  required: false
+  summary: Exit 1 from component-formula versus summed-formula string equality only.
+    Full keys, masses, charge and mint agree; independent elemental counting resolves
+    the helper limitation.
+  target_ids:
+  - CHEBI:70715
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/check199200.py
+    251 (cwd /private/tmp/antibioticmech-record-reviews-026)
+  exit_code: 1
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+  - formula-check
+- check_id: component-formula
+  name: Component-aware molecular comparison
+  status: passed
+  required: false
+  summary: Elemental count and complete CAS molecular identity agree with native exact
+    anhydrous acetate.
+  target_ids:
+  - CHEBI:70715
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/compare-251252.py
+    (cwd /private/tmp/antibioticmech-record-reviews-026)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - formula-check
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:70715
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ceftaroline-fosamil-acetate.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T11:55:43Z'
+  support: supports
+  summary: Read seeded/exact identifier, composition/prodrug/clinical definition,
+    both exact synonyms, acetate-salt parent, two roles, full structure, CAS/Reaxys
+    xrefs, Wikipedia document, ChEBI source concept and four history events. No native
+    assay, target, resistance, clinical-status, producer, dataset or graph objects.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Entire row 1810
+  accessed_at: '2026-10-21T11:55:43Z'
+  support: supports
+  summary: ChEBI owns the anhydrous acetate identity, formula, definition, exact names
+    and sole adopted PMID 18625769. Its discovery citation is not a native claim-level
+    activity object.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, Equivalence, Evidence standard and generated ownership
+  accessed_at: '2026-10-21T11:55:43Z'
+  support: supports
+  summary: Keep anhydrous salt, hydrated product, unsolvated prodrug and active metabolite
+    distinct; optional missing fields alone are not defects.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:70715
+  locator: Current exact structure, names, definition and parent
+  accessed_at: '2026-10-21T11:53:37Z'
+  support: supports
+  summary: Current ChEBI matches the 1:1 anhydrous composition and exact names; CHEBI:59230
+    is an acetate salt. Explicit anhydrous name distinguishes the adjacent monohydrate.
+    Reaxys mapping is retained by this authority but proprietary content is not independently
+    inspected.
+  snapshot_sha256: 859475952ddda73b1c5b49ab0b0f66640ef9835ddcca4d87df4a20a004393ca6
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit 2026.03.5 native molecular helper
+  locator: 251-chemistry.json
+  accessed_at: '2026-10-21T11:53:19Z'
+  support: partial
+  summary: Both encodings reproduce UGHHNQFYEVOFIV-VRDMTWHKSA-N, two components, net
+    zero charge, masses 744.752/744.031410, core R,R and source mint. Generic check
+    fails only because its formula comparison uses literal strings.
+  snapshot_sha256: 375efaa808687c56f5f7409fa813da865291c6585ea752d84965de19db9e313b
+- evidence_id: formula-check
+  kind: validation
+  reference: Component-aware independent molecular comparison
+  locator: 251252-xref-check.json; 251 section
+  accessed_at: '2026-10-21T11:54:34Z'
+  support: supports
+  summary: C22H21N8O8PS4.C2H4O2 sums to C24H25N8O10PS4, exactly matching the graph.
+    CAS-resolved CID 56841980 reproduces the complete native key.
+  snapshot_sha256: 15d9561940c68f0e5ee55e97be647f734f9743e078921bc81ece86550e100387
+- evidence_id: cas
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/400827-46-5/JSON
+  locator: Complete CAS-resolved CID 56841980
+  accessed_at: '2026-10-21T11:53:37Z'
+  support: supports
+  summary: CAS 400827-46-5 resolves exact anhydrous fosamil acetate with native full
+    key, summed formula, 6R,7R and Z oxime. No water is present.
+  snapshot_sha256: 14302c92b6ca73a1acb2610e023b29e5ec2e48e4e2b5c311f8df980f81bec1d4
+- evidence_id: wiki
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Ceftaroline_fosamil
+  locator: Document identity only
+  accessed_at: '2026-10-21T11:53:38Z'
+  support: context_only
+  summary: Named document resolves the broader drug/prodrug topic. As a document_xref
+    it need not denote the exact anhydrous acetate structure and is not used as primary
+    evidence.
+  snapshot_sha256: 6e664c260effca49b293bb10092bad9b48eb448eb16cf4608256c3e90766a0ae
+- evidence_id: adopted-18625769
+  kind: primary_source
+  reference: PMID:18625769
+  locator: DOI 10.1128/AAC.00149-08; original Introduction, susceptibility Methods
+    and Results
+  accessed_at: '2026-10-21T11:54:11Z'
+  support: context_only
+  summary: Original paper explicitly distinguishes fosamil PPI-0903/TAK-599 from active
+    ceftaroline. Methods identify tested ceftaroline PPI-0903 M, lot M599-R1001, supplied
+    by Cerexa. Broth microdilution followed CLSI M7-A7 with frozen panels and named
+    QC strains. Thus its 4151-isolate activity data belong to active ceftaroline,
+    not anhydrous fosamil acetate.
+  snapshot_sha256: 04358c674d9db7f15811e9da85af7725be152c90a95f717b5d549dbd5cd6c825
+- evidence_id: active-spectrum
+  kind: primary_source
+  reference: PMID:18625769
+  locator: Original Results, Table 1-associated narrative and Gram-negative discussion
+  accessed_at: '2026-10-21T11:54:11Z'
+  support: context_only
+  summary: Active ceftaroline inhibited the tested MRSA collection with MIC90 1 µg/mL
+    and all isolates at ≤2 µg/mL; activity was limited against E. faecium and ceftazidime-nonsusceptible
+    Enterobacteriaceae. The isolate collection has stated non-US/earlier exceptions.
+    These qualify active-metabolite spectrum and must not become acetate-form MIC
+    observations.
+  snapshot_sha256: 04358c674d9db7f15811e9da85af7725be152c90a95f717b5d549dbd5cd6c825
+- evidence_id: synthesis-lead
+  kind: primary_source
+  reference: PMID:12735989
+  locator: DOI 10.1016/S0968-0896(03)00126-3; complete original abstract
+  accessed_at: '2026-10-21T11:54:52Z'
+  support: partial
+  summary: Original TAK-599 synthesis/pharmacology abstract distinguishes crystalline
+    prodrug 1 from active T-91825 compound 2a and reports rapid blood conversion after
+    IV administration to rats and monkeys. Exact acetate/hydration of compound 1 is
+    not resolved at abstract level; active 2a potency is not assigned directly to
+    acetate prodrug.
+  snapshot_sha256: bee558aec3b96f9641f20dce8ca68e438a9dbd96ff537a04db07dcf4d4d16183
+- evidence_id: activation-lead
+  kind: primary_source
+  reference: PMID:15290453
+  locator: DOI 10.1007/s10156-004-0309-3; complete original abstract
+  accessed_at: '2026-10-21T11:54:52Z'
+  support: partial
+  summary: Original study explicitly separates T-91825 in vitro activity from TAK-599
+    in vivo mouse efficacy. This supports prodrug pharmacology at moiety level but
+    not a measured exact-anhydrous-acetate antibacterial target interaction.
+  snapshot_sha256: 739a459165fc718ae9d5d6cecf02d31d6163dce86be2e0e935a26a7c798faf9a
+- evidence_id: label
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ecde48b-75a2-4beb-9999-369f3f61bb8a
+  locator: Official Teflaro label sections 1.1, 11, 12.3 and 14.1
+  accessed_at: '2026-10-21T11:49:37Z'
+  support: partial
+  summary: Supports adult ABSSSI use and fosamil conversion to active ceftaroline.
+    The manufactured material is monoacetate monohydrate plus L-arginine, with dose
+    expressed as anhydrous fosamil. This supports prodrug-use context but does not
+    independently establish an anhydrous-acetate product or its direct binding activity.
+  snapshot_sha256: 36415b712a00b0cc1a15255298d51092b00d1ad9e88c67842c3e6cd2ede6361c
+- evidence_id: local-search
+  kind: search
+  reference: Ignored-inclusive source and primary follow-up
+  locator: 251-owner-hits.txt;251-local-hits.txt;251-adopted.json
+  accessed_at: '2026-10-21T11:53:15Z'
+  support: context_only
+  summary: Exact ID, label and full key searched in batch 026 outside .git/.venv with
+    ignored/hidden coverage. Sole adopted source followed to full original text; its
+    primary synthesis/activation comparators were inspected at abstract level.
+  snapshot_sha256: cec9473402fcf463d10dc46d6b8ca8fc172445be0480c47120870bb0dce0bc11
+  search_scope: 2026-10-21; rg --no-ignore --hidden across isolated batch 026 outside
+    .git/.venv; current official molecular sources, sole adopted PMID original text,
+    additional primary abstracts and official label.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused checks
+  locator: 251-focused-results.json
+  accessed_at: '2026-10-21T11:53:19Z'
+  support: supports
+  summary: Native schema/strict pass; generic molecular helper exit 1 retained and
+    independently resolved by component-aware formula check.
+  snapshot_sha256: e12efd7bc2ef30c7142054c01cd40a8b5d7234487d4864ad43f683927edfa351
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact anhydrous acetate composition
+  outcome: supported
+  summary: Names, 1:1 components, zero net charge, full key, 6R,7R and Z oxime, masses
+    and source mint agree. Component formula is equivalent to summed formula.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - formula-check
+  - cas
+- assessment_id: grounding
+  area: grounding
+  topic: Acetate parent, roles and external mappings
+  outcome: supported
+  summary: Acetate-salt parent and prodrug-mediated antibacterial filing fit; CAS
+    exact identity verified. Wikipedia is a broader document, not exact chemical grounding.
+    Proprietary Reaxys detail remains uninspected.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - chebi
+  - cas
+  - wiki
+  - label
+- assessment_id: adopted
+  area: evidence
+  topic: Sole adopted source material assignment
+  outcome: supported
+  summary: PMID 18625769 methods identify active ceftaroline PPI-0903M. It cannot
+    be used as direct acetate MIC or target evidence.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - adopted-18625769
+  - active-spectrum
+- assessment_id: definition
+  area: evidence
+  topic: Prodrug and clinical-use prose
+  outcome: unknown
+  summary: Moiety-level prodrug conversion and adult ABSSSI use are supported. Current
+    product explicitly uses monohydrate; a separately administered anhydrous acetate
+    preparation is not established. No native product approval object or exact-form
+    activity datum is asserted.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - native
+  - label
+  - synthesis-lead
+  - activation-lead
+- assessment_id: mechanism
+  area: evidence
+  topic: Direct target versus activation
+  outcome: not_applicable
+  summary: No native target is populated. Direct active-ceftaroline activity and prodrug
+    conversion are not equivalent to direct anhydrous-acetate binding.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - native
+  - adopted-18625769
+  - activation-lead
+- assessment_id: adapter
+  area: scope
+  topic: Structured source applicability
+  outcome: not_applicable
+  summary: Native record names no gene, protein, pathway or transcriptomics dataset;
+    no expression-module evidence is needed to assess its exact chemical identity.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - native
+- assessment_id: other-fields
+  area: scope
+  topic: Resistance, clinical status, producer, dataset and graph
+  outcome: not_applicable
+  summary: No populated objects in these optional domains. Embedded use prose is separately
+    qualified above.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - native
+  - label
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owner and history
+  outcome: supported
+  summary: ChEBI owner, mint and four history events traceable; original inputs unchanged
+    and status stays SEEDED.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: schema
+  area: schema
+  topic: Native and supplemental checks
+  outcome: supported
+  summary: Native schema/strict pass. Generic formula-text failure does not survive
+    component-aware elemental verification.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - gates
+  - formula-check
+- assessment_id: completeness
+  area: completeness
+  topic: Optional enrichment and preparation qualification
+  outcome: supported
+  summary: No required-field defect established. Any enrichment must use exact material
+    and keep current formulated hydrate use distinct from isolated anhydrous acetate.
+  target_ids:
+  - CHEBI:70715
+  evidence_ids:
+  - rubric
+  - label
+  - adopted-18625769
+findings: []
+actions:
+- action_id: A1
+  description: Optionally clarify preparation scope and add claim-specific prodrug
+    evidence.
+  finding_ids: []
+  target_ids:
+  - CHEBI:70715
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI identity, structure, definition, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ceftaroline-fosamil-acetate.yaml
+    role: Curator-owned primary evidence and activity annotations via validated writer
+  acceptance_checks:
+  - If refining definition prose, state that clinical use is through fosamil formulations,
+    with the inspected marketed product using monoacetate monohydrate; do not invent
+    a separate anhydrous-acetate approval.
+  - Do not attach PMID 18625769 active-ceftaroline MICs directly to this acetate.
+    Inspect original synthesis/activation methods for exact compound 1 material before
+    quantitative transfer.
+  - Preserve exact anhydrous composition and source-owned identity on regeneration;
+    run applicable schema/strict and term/reference/history/corpus gates after separately
+    authorized curation.
+limitations:
+- The exact anhydrous acetate was verified structurally; an independently administered
+  anhydrous-acetate clinical formulation was not established. Official label identifies
+  monohydrate product material and anhydrous-fosamil dose basis.
+- Adopted 2008 original Methods/Results were inspected, but its active-ceftaroline
+  experiments do not test this prodrug acetate. Additional synthesis and activation
+  sources were inspected at abstract level only.
+- Independent proprietary Reaxys content was not inspected; current ChEBI retention
+  is contextual support for that mapping.
+- Generic chemistry helper exit 1 reflects component-formula text comparison only;
+  the original result is retained alongside a passing elemental-equivalence check.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 20 expanded hashes unchanged; no native/source/status/history edits.
+- Native checks used batch 026 environment. RDKit 2026.03.5 standalone checks used
+  existing batch 019 interpreter against batch 026 cwd.
+- Official label was previously retrieved during the adjacent hydrate review; its
+  original access timestamp and snapshot hash are retained. Free public sources only.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:3502
+- https://doi.org/10.7164/antibiotics.45.709
+- https://www.jstage.jst.go.jp/article/antibiotics1968/45/5/45_5_709/_pdf
+tags:
+- cefozopran
+- chemical-description
+- thiadiazole
+- primary-activity
