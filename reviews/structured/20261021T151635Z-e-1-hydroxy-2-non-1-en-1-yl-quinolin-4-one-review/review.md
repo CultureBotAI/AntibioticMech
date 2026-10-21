@@ -1,0 +1,775 @@
+# trans-Δ1-NQNO: exact E identity and antibacterial activity supported, with comparative wording to qualify
+
+- Review: 20261021T151635Z-e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:52:12Z
+- Finished UTC: 2026-10-21T15:16:35Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The native E structure agrees with current ChEBI and the original 2017 synthesis and culture-identification study. That primary study supports antibacterial and virulence phenotypes under specified S. aureus assay conditions. One minor wording qualification is proposed for the unbounded strongest-agent and inactive-Z statements; the observed E/Z difference itself is well supported.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 385; one exact record. All thirteen original captured input hashes were preserved and verified before judgment; the ChEBI source-owner set was confirmed.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:137441 | data/antibiotics/antibacterial/e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one.yaml | generated | (E)-1-hydroxy-2-(non-1-en-1-yl)quinolin-4-one |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:137441 | Actual focused schema validation passed. |
+| strict | passed | True | CHEBI:137441 | Actual focused strict validation passed. |
+| chemistry | passed | False | CHEBI:137441 | Native encodings agree in full key, formula, charge and masses; the deterministic source alias reproduces. |
+| authority-chemistry | passed | False | CHEBI:137441 | Native SMILES, native InChI and the current ChEBI molfile independently yield the same E-configured structure. |
+| adapter-catalog | passed | False | CHEBI:137441 | The structured organism/dataset catalog was inspected before mechanistic literature follow-up. |
+| adapter-pseudomonas | passed | False | CHEBI:137441 | One pqsH gene result and no iModulon result; this is related quinolone-biosynthesis context, not exact-compound target proof. |
+| adapter-staphylococcus | failed | False | CHEBI:137441 | The optional source query failed because an imodulon regulator value was null rather than a JSON list. No absent-module inference was made; inspected primary evidence supplied the biological assessment. |
+| Authoritative full QC | failed | True | CHEBI:137441 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:137441 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:137441 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:137441 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:137441 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:137441 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:137441 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:137441 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:137441 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact E structure, aliases and ontology scope
+
+identity: supported. Targets: CHEBI:137441.
+
+All native and official chemical encodings agree. Original Scheme1 independently distinguishes exact6e from cis6f and from the AQ precursor lacking N-hydroxylation. The broad structural parents and exact synonyms are compatible.
+
+### Antibacterial role and comparative activity wording
+
+evidence: concern. Targets: CHEBI:137441.
+
+The exact primary assay strongly supports antibacterial activity and the measured E/Z contrast. The native wording should retain the tested S. aureus conditions and comparator scope when calling6e most active and6f inactive; it should not imply a universal ranking of all Pseudomonas products or all potential cis-isomer activities.
+
+### Culture production and virulence phenotypes
+
+evidence: supported. Targets: CHEBI:137441.
+
+Synthetic-standard LC-HRMS comparison supports production of6e by the tested PA14 and PAO1 cultures. Whole-culture growth, colony and hemolysis observations support the bounded virulence-modulation description. No general biosynthetic-enzyme assignment is established.
+
+### Biological target and structured-source boundaries
+
+evidence: supported. Targets: CHEBI:137441.
+
+The native does not assert a direct molecular target. Original nitrate-reduction and electron-transport interpretations are distinguishable from direct binding, and the adapter result is context only. Optional target, quantitative activity, producer-object or dataset absence is not a corrective defect.
+
+### Source ownership, complete native coverage and evidence placement
+
+provenance: supported. Targets: CHEBI:137441.
+
+The maintained ChEBI path reproduces all asserted fields; both adopted original leads received explicit scope dispositions. Original captured hashes and source history are preserved. The review does not promote the native SEEDED status.
+
+## Findings
+
+### F1: Bound the potency ranking and cis-isomer inactivity to the reported comparison
+
+minor / open / confirmed; issue key: trans-delta1-nqno-comparative-activity-wording.
+
+The native definition calls the E compound the most active agent produced by P. aeruginosa and calls its Z isomer inactive without an assay boundary. The original study supports10–25 micromolar MICs in four tested S. aureus strains, comparison with the studied AQNO congeners and pyocyanin, and no cis-isomer growth inhibition at200 micromolar or25 nanomoles per disc. Preserve those results while qualifying the comparative wording to the tested compounds and S. aureus conditions.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Qualify the comparative activity sentence in the maintained definition source path.
+
+- Describe6e as more potent than the studied saturated AQNO comparators and pyocyanin under the reported S. aureus assay conditions; describe6f as inactive under the tested conditions rather than universally inactive.
+- Preserve the exact E identity, supported P. aeruginosa culture association and antibacterial role. Do not install the proposed cytochrome or nitrate-reductase proteins as direct targets without separate claim-level primary evidence.
+- Regenerate through the maintained extraction/seeding path and run focused schema, strict and source-reproduction checks. Per-strain numerical curation requires the original supplemental table and full method context.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one.yaml; Entire native YAML. | supports | CHEBI:137441 is an EXACT, SEEDED neutral E alkene, C18H23NO2, full key LOUOCBKBIWBTTR-DHZHZOJOSA-N, with two exact synonyms, four broader structural parents and antibacterial role CHEBI:33282. The definition asserts production by P. aeruginosa and effects on S. aureus growth and virulence. No external registry xrefs, molecular targets, resistance, quantitative observations, producer objects, clinical assertions, datasets or causal graphs are present. |
+| owners | data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; conf/sources.yaml; Complete exact ChEBI row 2580 and maintained extraction/seeding paths. | supports | The native fields reproduce the three-star ChEBI source row, including the comparative definition and E/Z contrast. PMID15144975 and PMID28523838 are adopted curator leads. The extractor retains these as compound-level leads rather than direct support for every field. No separate ARO, target, resistance, FDA, PubChem or MIBiG row owns this record. The source concept, dated source version, deterministic alias and all three seed/reseed history entries are consistent. |
+| chebi | CHEBI:137441; https://www.ebi.ac.uk/chebi/CHEBI:137441; Complete current chemical entry, names, molecular descriptors, outgoing relations and both publication leads. | supports | Current ChEBI matches the native neutral E structure, full key, formula, masses and two names. Its structural parents are quinolone CHEBI:23765, hydroxylamines CHEBI:24709, organic heterobicyclic compound CHEBI:27171 and olefinic compound CHEBI:78840; these are compatible broader classes. The antibacterial role is compatible with the exact primary assay. The current source also associates PA14 and PAO1 with PMID28523838. The native does not assert a paid external registry identifier. |
+| authority-graph | https://www.ebi.ac.uk/chebi/backend/api/public/molfile/137441; Complete official molfile and independent parse comparison. | supports | Native SMILES, native InChI and the official molfile all yield LOUOCBKBIWBTTR-DHZHZOJOSA-N, C18H23NO2, charge zero and monoisotopic mass285.172878976, with the side-chain alkene explicitly E. No tetrahedral stereochemistry is asserted. |
+| early-lead | PMID:15144975; DOI:10.1016/j.jasms.2004.02.012; Complete original indexed abstract and bibliographic record; publisher full text not obtained. | supports | The 2004 LC/MS study describes 56 HAQs in P. aeruginosa PA14 culture supernatants, including unsaturated and N-oxide series. Lack of N-oxides in a pqsL mutant is biosynthetic-family context. It does not establish the exact alkene geometry or antibacterial activity of this E structure. The later original study explicitly resolves the cis/trans ambiguity; no direct target claim is derived from the 2004 abstract. |
+| original-structure | PMID:28523838; DOI:10.1002/anie.201702944; https://www.lookchem.com/FreePDFArticle_1851-90-7_71366254.htm; Complete publicly indexed original early-view main-article text read, with original Scheme1 on early-view page2 visually inspected. | supports | The original study synthesizes and distinguishes trans-Δ1-NQNO 6e from cis isomer6f and non-N-hydroxylated AQ3e. Scheme1 shows the exact N-hydroxy-4-quinolone and nine-carbon E side chain of native6e. Original Figure4 displays its N-hydroxy and charged N-oxide tautomers, so the depiction difference is not a different compound. Main-article text and figure images were inspected separately; the reproduced page PNGs contain graphics while body text is supplied as indexed HTML. |
+| producer | PMID:28523838; DOI:10.1002/anie.201702944; Original main text, early-view pages2–3, and Figure2A. | supports | LC-HRMS of P. aeruginosa PA14 and PAO1 culture supernatants was compared with synthesized reference compounds. The chromatography separates cis and trans material and identifies6e rather than6f in both strains. This supports the definition production claim for those examined cultures; it does not determine a particular biosynthetic enzyme for6e. |
+| activity | PMID:28523838; DOI:10.1002/anie.201702944; Original main Results, early-view pages3–4, and Figures2B/C and3; original graphic units visually checked. | supports | Four S. aureus strains, including MRSA, were tested. Exact6e has reported MICs of10–25 micromolar, approximately3–7 micrograms/mL, whereas6f did not inhibit growth at200 micromolar or25 nanomoles per disc. Pyocyanin MIC50 micromolar and saturated AQNO comparisons support greater potency within the studied comparisons. USA300 growth curves distinguish10,5 and2.5 micromolar6e. Mu50 cultures exposed to150 micromolar6e regrew after dilution into drug-free medium, supporting bacteriostasis under that protocol. Small-colony-variant and blood-agar hemolysis phenotypes are strain-, exposure- and assay-specific. The supplement containing per-strain MIC TableS1 was not obtained, so individual strain MICs and a complete protocol are not reconstructed. |
+| mechanism | PMID:28523838; DOI:10.1002/anie.201702944; Original main Discussion and Figure3C/4 on early-view pages3–4. | supports | A whole-culture anaerobic nitrate-reduction assay with5 micromolar6e shows suppressed nitrite production, with altered growth also reported. Figure4 proposes interference with menaquinone/menaquinol-dependent electron transport, cytochrome b and nitrate reductase. These are mechanistic interpretations informed partly by related HQNO structures, not purified6e-target inhibition, direct binding or a measured dissociation constant. No direct protein target is installed or inferred from the native blank target list. |
+| adapter | iModulonDB p_aeruginosa/precise364/PA2587; s_aureus/staph_precise108; Actual catalog and two searches, performed before primary mechanism follow-up. | context_only | The Pseudomonas query returns pqsH, annotated as PQS synthase, and zero modules. This related biosynthetic gene does not prove synthesis of exact6e or its bacterial target. The Staphylococcus virulence query fails a null-regulator data-type check; no negative biological conclusion follows. The structured source therefore supplies bounded context only, and original experiments provide the assessment. |
+| search | 385-inclusive-corrected-hits.txt; original-source retrieval attempts; Ignored-inclusive local input/evidence search and bounded exact-name/PMID/DOI public-source search. | context_only | The corrected ignored-inclusive search locates the exact native/raw entry, path lock, readiness queue and a historical ad hoc review. That historical report was treated only as a literature lead; its proposed missing-optional-field defects are not adopted. No exact corrective overlay was identified in the searched curation/conf/reports/reviews paths. The publisher main/SI routes returned403 and direct reproduction download503, but the web tool exposed the complete original main text and original public figure images downloaded successfully. |
+| validation | 385-schema.log; 385-strict.log; 385-chemistry.json; 385-xref-chemistry.json; Actual focused validators, independently parsed chemical encodings and unchanged-input recheck. | supports | Schema, strict, chemistry and official-graph checks passed. Representation consistency does not itself establish assay activity or a causal mechanism. |
+
+## Limits And Additional Notes
+
+- The original2017 main article was read in a public reproduction of its early-view text, with Scheme1 and Figures2–4 visually inspected from the original page graphics. Publisher main/SI downloads returned403; direct reproduction HTML returned503, while indexed body text and public PNG downloads were available. Main text and graphics were not mistaken for an inspected supplemental table.
+- The original supplementary TableS1 and full strain-by-strain protocols were not obtained. The main-text MIC range and pictured units are explicit, but individual strain MIC values and all method details are not reconstructed.
+- The2004 adopted study was assessed at complete original indexed abstract depth because the publisher full-text route returned403. Its family-level analytical findings are not used to assign E geometry or a direct antibacterial target.
+- The optional Staphylococcus structured-source query failed on a null regulator value. This is an adapter data-format limitation, not evidence that the biological response is absent. The Pseudomonas pqsH result is related pathway context only.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- The two trans/cis compounds are independently resolved in the primary study. The exact E record remains biologically supported; missing optional slots are not carried forward as defects from the historical ad hoc review.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T151635Z-e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'trans-Δ1-NQNO: exact E identity and antibacterial activity supported, with
+  comparative wording to qualify'
+started_at: '2026-10-21T14:52:12Z'
+finished_at: '2026-10-21T15:16:35Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native E structure agrees with current ChEBI and the original 2017 synthesis
+  and culture-identification study. That primary study supports antibacterial and
+  virulence phenotypes under specified S. aureus assay conditions. One minor wording
+  qualification is proposed for the unbounded strongest-agent and inactive-Z statements;
+  the observed E/Z difference itself is well supported.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one.yaml
+    sha256: 75a4bdb4bd41cc2142c16c139ef891811aad9d286606a96872ba242d70f7ddc4
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:137441
+  path: data/antibiotics/antibacterial/e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one.yaml
+  label: (E)-1-hydroxy-2-(non-1-en-1-yl)quinolin-4-one
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 385; one exact record. All thirteen original captured
+    input hashes were preserved and verified before judgment; the ChEBI source-owner
+    set was confirmed.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:137441
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused schema validation passed.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused strict validation passed.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one.yaml
+    --out /private/tmp/am-review-session/385-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Native encodings agree in full key, formula, charge and masses; the deterministic
+    source alias reproduces.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 385
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: authority-chemistry
+  status: passed
+  required: false
+  summary: Native SMILES, native InChI and the current ChEBI molfile independently
+    yield the same E-configured structure.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/385-xref-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-catalog
+  name: adapter-catalog
+  status: passed
+  required: false
+  summary: The structured organism/dataset catalog was inspected before mechanistic
+    literature follow-up.
+  target_ids:
+  - CHEBI:137441
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-pseudomonas
+  name: adapter-pseudomonas
+  status: passed
+  required: false
+  summary: One pqsH gene result and no iModulon result; this is related quinolone-biosynthesis
+    context, not exact-compound target proof.
+  target_ids:
+  - CHEBI:137441
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    quinolone
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-staphylococcus
+  name: adapter-staphylococcus
+  status: failed
+  required: false
+  summary: The optional source query failed because an imodulon regulator value was
+    null rather than a JSON list. No absent-module inference was made; inspected primary
+    evidence supplied the biological assessment.
+  target_ids:
+  - CHEBI:137441
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism s_aureus --dataset staph_precise108
+    --query virulence
+  exit_code: 2
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:137441
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/e-1-hydroxy-2-non-1-en-1-yl-quinolin-4-one.yaml
+  locator: Entire native YAML.
+  accessed_at: '2026-10-21T15:15:59Z'
+  support: supports
+  summary: CHEBI:137441 is an EXACT, SEEDED neutral E alkene, C18H23NO2, full key
+    LOUOCBKBIWBTTR-DHZHZOJOSA-N, with two exact synonyms, four broader structural
+    parents and antibacterial role CHEBI:33282. The definition asserts production
+    by P. aeruginosa and effects on S. aureus growth and virulence. No external registry
+    xrefs, molecular targets, resistance, quantitative observations, producer objects,
+    clinical assertions, datasets or causal graphs are present.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py; conf/sources.yaml
+  locator: Complete exact ChEBI row 2580 and maintained extraction/seeding paths.
+  accessed_at: '2026-10-21T15:15:59Z'
+  support: supports
+  summary: The native fields reproduce the three-star ChEBI source row, including
+    the comparative definition and E/Z contrast. PMID15144975 and PMID28523838 are
+    adopted curator leads. The extractor retains these as compound-level leads rather
+    than direct support for every field. No separate ARO, target, resistance, FDA,
+    PubChem or MIBiG row owns this record. The source concept, dated source version,
+    deterministic alias and all three seed/reseed history entries are consistent.
+  snapshot_sha256: 2098f89c76e9992a786e3040815fba6d4d9617f3ac37e2288642c078dcb42330
+- evidence_id: chebi
+  kind: authority
+  reference: CHEBI:137441; https://www.ebi.ac.uk/chebi/CHEBI:137441
+  locator: Complete current chemical entry, names, molecular descriptors, outgoing
+    relations and both publication leads.
+  accessed_at: '2026-10-21T15:11:35Z'
+  support: supports
+  summary: Current ChEBI matches the native neutral E structure, full key, formula,
+    masses and two names. Its structural parents are quinolone CHEBI:23765, hydroxylamines
+    CHEBI:24709, organic heterobicyclic compound CHEBI:27171 and olefinic compound
+    CHEBI:78840; these are compatible broader classes. The antibacterial role is compatible
+    with the exact primary assay. The current source also associates PA14 and PAO1
+    with PMID28523838. The native does not assert a paid external registry identifier.
+  snapshot_sha256: 07d812af876f8d7cfac2ed07e12cc7415ea3890a0a387d709ced6c23e3b8e3c2
+- evidence_id: authority-graph
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/molfile/137441
+  locator: Complete official molfile and independent parse comparison.
+  accessed_at: '2026-10-21T15:11:35Z'
+  support: supports
+  summary: Native SMILES, native InChI and the official molfile all yield LOUOCBKBIWBTTR-DHZHZOJOSA-N,
+    C18H23NO2, charge zero and monoisotopic mass285.172878976, with the side-chain
+    alkene explicitly E. No tetrahedral stereochemistry is asserted.
+  snapshot_sha256: 2ac60ba5390a7994f4e6232cb3015589b3657752ad228f9bf487c4fbbebfe8ed
+- evidence_id: early-lead
+  kind: primary_source
+  reference: PMID:15144975; DOI:10.1016/j.jasms.2004.02.012
+  locator: Complete original indexed abstract and bibliographic record; publisher
+    full text not obtained.
+  accessed_at: '2026-10-21T15:11:35Z'
+  support: supports
+  summary: The 2004 LC/MS study describes 56 HAQs in P. aeruginosa PA14 culture supernatants,
+    including unsaturated and N-oxide series. Lack of N-oxides in a pqsL mutant is
+    biosynthetic-family context. It does not establish the exact alkene geometry or
+    antibacterial activity of this E structure. The later original study explicitly
+    resolves the cis/trans ambiguity; no direct target claim is derived from the 2004
+    abstract.
+  snapshot_sha256: b71353d7d1d76fec67c3d1f2356520f4a79af783106e4e106caeb708535f4925
+- evidence_id: original-structure
+  kind: primary_source
+  reference: PMID:28523838; DOI:10.1002/anie.201702944; https://www.lookchem.com/FreePDFArticle_1851-90-7_71366254.htm
+  locator: Complete publicly indexed original early-view main-article text read, with
+    original Scheme1 on early-view page2 visually inspected.
+  accessed_at: '2026-10-21T15:12:40Z'
+  support: supports
+  summary: The original study synthesizes and distinguishes trans-Δ1-NQNO 6e from
+    cis isomer6f and non-N-hydroxylated AQ3e. Scheme1 shows the exact N-hydroxy-4-quinolone
+    and nine-carbon E side chain of native6e. Original Figure4 displays its N-hydroxy
+    and charged N-oxide tautomers, so the depiction difference is not a different
+    compound. Main-article text and figure images were inspected separately; the reproduced
+    page PNGs contain graphics while body text is supplied as indexed HTML.
+  snapshot_sha256: d1d93e1b56085eb3bafb3c2d9a905bdec244abc299f643dd8792cdf2a3449a3c
+- evidence_id: producer
+  kind: primary_source
+  reference: PMID:28523838; DOI:10.1002/anie.201702944
+  locator: Original main text, early-view pages2–3, and Figure2A.
+  accessed_at: '2026-10-21T15:12:40Z'
+  support: supports
+  summary: LC-HRMS of P. aeruginosa PA14 and PAO1 culture supernatants was compared
+    with synthesized reference compounds. The chromatography separates cis and trans
+    material and identifies6e rather than6f in both strains. This supports the definition
+    production claim for those examined cultures; it does not determine a particular
+    biosynthetic enzyme for6e.
+  snapshot_sha256: 8382da751523a3ab2a4f8623ce0be8807003ee0fb30734948aa938d6797065d3
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:28523838; DOI:10.1002/anie.201702944
+  locator: Original main Results, early-view pages3–4, and Figures2B/C and3; original
+    graphic units visually checked.
+  accessed_at: '2026-10-21T15:12:40Z'
+  support: supports
+  summary: Four S. aureus strains, including MRSA, were tested. Exact6e has reported
+    MICs of10–25 micromolar, approximately3–7 micrograms/mL, whereas6f did not inhibit
+    growth at200 micromolar or25 nanomoles per disc. Pyocyanin MIC50 micromolar and
+    saturated AQNO comparisons support greater potency within the studied comparisons.
+    USA300 growth curves distinguish10,5 and2.5 micromolar6e. Mu50 cultures exposed
+    to150 micromolar6e regrew after dilution into drug-free medium, supporting bacteriostasis
+    under that protocol. Small-colony-variant and blood-agar hemolysis phenotypes
+    are strain-, exposure- and assay-specific. The supplement containing per-strain
+    MIC TableS1 was not obtained, so individual strain MICs and a complete protocol
+    are not reconstructed.
+  snapshot_sha256: 8382da751523a3ab2a4f8623ce0be8807003ee0fb30734948aa938d6797065d3
+- evidence_id: mechanism
+  kind: primary_source
+  reference: PMID:28523838; DOI:10.1002/anie.201702944
+  locator: Original main Discussion and Figure3C/4 on early-view pages3–4.
+  accessed_at: '2026-10-21T15:12:40Z'
+  support: supports
+  summary: A whole-culture anaerobic nitrate-reduction assay with5 micromolar6e shows
+    suppressed nitrite production, with altered growth also reported. Figure4 proposes
+    interference with menaquinone/menaquinol-dependent electron transport, cytochrome
+    b and nitrate reductase. These are mechanistic interpretations informed partly
+    by related HQNO structures, not purified6e-target inhibition, direct binding or
+    a measured dissociation constant. No direct protein target is installed or inferred
+    from the native blank target list.
+  snapshot_sha256: 4a60f78a1769b3375fb858a734dd5b854e573453a8b19adee44d32e68308a4e1
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB p_aeruginosa/precise364/PA2587; s_aureus/staph_precise108
+  locator: Actual catalog and two searches, performed before primary mechanism follow-up.
+  accessed_at: '2026-10-21T15:15:59Z'
+  support: context_only
+  summary: The Pseudomonas query returns pqsH, annotated as PQS synthase, and zero
+    modules. This related biosynthetic gene does not prove synthesis of exact6e or
+    its bacterial target. The Staphylococcus virulence query fails a null-regulator
+    data-type check; no negative biological conclusion follows. The structured source
+    therefore supplies bounded context only, and original experiments provide the
+    assessment.
+  snapshot_sha256: 01644efd788becb694a82442f70de93e0332b4f9d0f30f1bffaf93e9be443cc9
+- evidence_id: search
+  kind: search
+  reference: 385-inclusive-corrected-hits.txt; original-source retrieval attempts
+  locator: Ignored-inclusive local input/evidence search and bounded exact-name/PMID/DOI
+    public-source search.
+  accessed_at: '2026-10-21T15:15:59Z'
+  support: context_only
+  summary: The corrected ignored-inclusive search locates the exact native/raw entry,
+    path lock, readiness queue and a historical ad hoc review. That historical report
+    was treated only as a literature lead; its proposed missing-optional-field defects
+    are not adopted. No exact corrective overlay was identified in the searched curation/conf/reports/reviews
+    paths. The publisher main/SI routes returned403 and direct reproduction download503,
+    but the web tool exposed the complete original main text and original public figure
+    images downloaded successfully.
+  search_scope: '2026-10-21: rg --no-ignore --hidden across data, curation, conf,
+    scripts, src, docs, .claude, reviews and reports for CHEBI:137441, full key LOUOCBKBIWBTTR-DHZHZOJOSA-N
+    and exact-name variants. Initial wrong-ID search was retained but not used to
+    establish absence. Public searches used PMID15144975, PMID28523838, DOI10.1002/anie.201702944
+    and trans-Delta1-NQNO to locate original study text, figures and supplemental
+    material.'
+  snapshot_sha256: bb6bef3229f0b8124a8d926c1d5f4d34744fea4fe2af6c94ee5410e39df03b7a
+- evidence_id: validation
+  kind: validation
+  reference: 385-schema.log; 385-strict.log; 385-chemistry.json; 385-xref-chemistry.json
+  locator: Actual focused validators, independently parsed chemical encodings and
+    unchanged-input recheck.
+  accessed_at: '2026-10-21T15:15:59Z'
+  support: supports
+  summary: Schema, strict, chemistry and official-graph checks passed. Representation
+    consistency does not itself establish assay activity or a causal mechanism.
+  snapshot_sha256: 532a4e2d92250e0825dd9c99f5c4dfe09dc9b9af5c1b241b9b07ed6d970f762d
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact E structure, aliases and ontology scope
+  outcome: supported
+  summary: All native and official chemical encodings agree. Original Scheme1 independently
+    distinguishes exact6e from cis6f and from the AQ precursor lacking N-hydroxylation.
+    The broad structural parents and exact synonyms are compatible.
+  target_ids:
+  - CHEBI:137441
+  evidence_ids:
+  - native
+  - chebi
+  - authority-graph
+  - original-structure
+  - validation
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and comparative activity wording
+  outcome: concern
+  summary: The exact primary assay strongly supports antibacterial activity and the
+    measured E/Z contrast. The native wording should retain the tested S. aureus conditions
+    and comparator scope when calling6e most active and6f inactive; it should not
+    imply a universal ranking of all Pseudomonas products or all potential cis-isomer
+    activities.
+  target_ids:
+  - CHEBI:137441
+  evidence_ids:
+  - native
+  - activity
+  - owners
+- assessment_id: producer
+  area: evidence
+  topic: Culture production and virulence phenotypes
+  outcome: supported
+  summary: Synthetic-standard LC-HRMS comparison supports production of6e by the tested
+    PA14 and PAO1 cultures. Whole-culture growth, colony and hemolysis observations
+    support the bounded virulence-modulation description. No general biosynthetic-enzyme
+    assignment is established.
+  target_ids:
+  - CHEBI:137441
+  evidence_ids:
+  - producer
+  - activity
+  - early-lead
+- assessment_id: mechanism
+  area: evidence
+  topic: Biological target and structured-source boundaries
+  outcome: supported
+  summary: The native does not assert a direct molecular target. Original nitrate-reduction
+    and electron-transport interpretations are distinguishable from direct binding,
+    and the adapter result is context only. Optional target, quantitative activity,
+    producer-object or dataset absence is not a corrective defect.
+  target_ids:
+  - CHEBI:137441
+  evidence_ids:
+  - native
+  - mechanism
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership, complete native coverage and evidence placement
+  outcome: supported
+  summary: The maintained ChEBI path reproduces all asserted fields; both adopted
+    original leads received explicit scope dispositions. Original captured hashes
+    and source history are preserved. The review does not promote the native SEEDED
+    status.
+  target_ids:
+  - CHEBI:137441
+  evidence_ids:
+  - owners
+  - native
+  - search
+  - validation
+findings:
+- finding_id: F1
+  issue_key: trans-delta1-nqno-comparative-activity-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Bound the potency ranking and cis-isomer inactivity to the reported comparison
+  description: The native definition calls the E compound the most active agent produced
+    by P. aeruginosa and calls its Z isomer inactive without an assay boundary. The
+    original study supports10–25 micromolar MICs in four tested S. aureus strains,
+    comparison with the studied AQNO congeners and pyocyanin, and no cis-isomer growth
+    inhibition at200 micromolar or25 nanomoles per disc. Preserve those results while
+    qualifying the comparative wording to the tested compounds and S. aureus conditions.
+  target_ids:
+  - CHEBI:137441
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - owners
+  - activity
+  rule_id: Keep comparative and negative biological claims within the inspected assay
+    scope
+  native_severity: minor
+  normalization_reason: Exact identity, production, antibacterial role and the observed
+    E/Z difference are supported. This is a bounded wording qualification, not evidence
+    that the E compound lacks activity or that the cis compound was active in the
+    reported assay.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source-specific definition qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition emission
+actions:
+- action_id: A1
+  description: Qualify the comparative activity sentence in the maintained definition
+    source path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:137441
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source-specific definition qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition emission
+  acceptance_checks:
+  - Describe6e as more potent than the studied saturated AQNO comparators and pyocyanin
+    under the reported S. aureus assay conditions; describe6f as inactive under the
+    tested conditions rather than universally inactive.
+  - Preserve the exact E identity, supported P. aeruginosa culture association and
+    antibacterial role. Do not install the proposed cytochrome or nitrate-reductase
+    proteins as direct targets without separate claim-level primary evidence.
+  - Regenerate through the maintained extraction/seeding path and run focused schema,
+    strict and source-reproduction checks. Per-strain numerical curation requires
+    the original supplemental table and full method context.
+limitations:
+- The original2017 main article was read in a public reproduction of its early-view
+  text, with Scheme1 and Figures2–4 visually inspected from the original page graphics.
+  Publisher main/SI downloads returned403; direct reproduction HTML returned503, while
+  indexed body text and public PNG downloads were available. Main text and graphics
+  were not mistaken for an inspected supplemental table.
+- The original supplementary TableS1 and full strain-by-strain protocols were not
+  obtained. The main-text MIC range and pictured units are explicit, but individual
+  strain MIC values and all method details are not reconstructed.
+- The2004 adopted study was assessed at complete original indexed abstract depth because
+  the publisher full-text route returned403. Its family-level analytical findings
+  are not used to assign E geometry or a direct antibacterial target.
+- The optional Staphylococcus structured-source query failed on a null regulator value.
+  This is an adapter data-format limitation, not evidence that the biological response
+  is absent. The Pseudomonas pqsH result is related pathway context only.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The two trans/cis compounds are independently resolved in the primary study. The
+  exact E record remains biologically supported; missing optional slots are not carried
+  forward as defects from the historical ad hoc review.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
