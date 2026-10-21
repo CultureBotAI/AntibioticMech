@@ -1,0 +1,483 @@
+schema_version: 1.0.0
+review_id: 20261021T182727Z-hookerianamide-k-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of hookerianamide K
+started_at: '2026-10-21T18:01:01Z'
+finished_at: '2026-10-21T18:27:27Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The native exact K steroidal diamine graph, names, parents and provenance
+  agree with independent current chemical authorities and the original abstract-level
+  structure diagram. Exact compound database extracts support antibacterial and antileishmanial
+  activity, while original assay tables and detailed structural assignments remain
+  unavailable. No confirmed native defect was found; host enzyme and other-congener
+  findings are not transferred as K antimicrobial mechanism. Scientific assessment
+  retains the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/hookerianamide-k.yaml
+    sha256: 6871b970db179382c0be1db930be6c660a0234847f47053343a3aa84a6315908
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:66023
+  path: data/antibiotics/antibacterial/hookerianamide-k.yaml
+  label: hookerianamide K
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Exact identity, definition, synonyms, parents, roles and adopted lead
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Role labels
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record and role policy
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Class and role configuration
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position 538; all original 13 captured inputs
+    preserved, with actual ChEBI owners identified before scientific assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:66023
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:66023
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    538
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/hookerianamide-k.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/hookerianamide-k.yaml --out /private/tmp/am-review-session/538-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority
+  name: Independent exact K chemical comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/538-authority-check.py
+    > /private/tmp/am-review-session/538-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine native and current authority encodings agree at the complete K key,
+    formula and charge with reciprocal chirality-aware mapping of seven centres.
+  target_ids:
+  - CHEBI:66023
+- check_id: ledger
+  name: Exact K source and provenance audit
+  command: .venv/bin/python /private/tmp/am-review-session/538-ledger.py > /private/tmp/am-review-session/538-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All original13 input hashes unchanged; three chronological history events,
+    source mint, sole adopted PMID and ten K-specific database activity rows verified.
+  target_ids:
+  - CHEBI:66023
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:66023
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/hookerianamide-k.yaml
+  locator: Entire native record, both synonyms, two parents, two roles, full structure,
+    Reaxys link, source concept and all three history events
+  accessed_at: '2026-10-21T18:19:28Z'
+  support: supports
+  summary: The SEEDED/EXACT record is neutral hookerianamide K, a steroidal diamine
+    with delta4 and delta14 bonds. It carries antibacterial and antileishmanial roles
+    plus plant-isolation wording, but no target, pathway, MIC, resistance, clinical
+    claim, structured producer or causal graph.
+- evidence_id: identity
+  kind: validation
+  reference: CHEBI:66023;pubchem.compound:25016412;CHEMBL496488
+  locator: 538-authority-chemistry.json;538-chebi-66023.json/.mol,538-pubchem.json,538-chembl-search.json;538-fetch.json
+  accessed_at: '2026-10-21T18:19:28Z'
+  support: supports
+  summary: Native SMILES/InChI and current ChEBI, PubChem and ChEMBL encodings agree
+    at JLDLXPZTQHZTBT-JYNQZMPESA-N, C25H42N2 and charge0. Reciprocal chirality-aware
+    atom maps preserve all seven configured tetrahedral centres. Both exact names
+    describe the same 3beta,20S steroidal diamine; masses agree at declared precision.
+  snapshot_sha256: a47df07c1c4e68b95289079b6da7f9237c84084879eb4211f43747d959270942
+- evidence_id: terms
+  kind: database
+  reference: CHEBI:26767;CHEBI:50996;CHEBI:33282;CHEBI:70868;reaxys:18885919
+  locator: 538-chebi-66023.json,538-chebi-50996.json; reused537-chebi-26767.json,537-chebi-33282.json,537-chebi-70868.json
+    with original fetch manifests
+  accessed_at: '2026-10-21T18:19:28Z'
+  support: supports
+  summary: Steroid alkaloid and tertiary amino compound fit the exact graph; each
+    dimethylamino N has three carbon substituents. The two activity terms resolve
+    and remain source-backed. Current ChEBI reproduces Reaxys18885919, whose direct
+    licensed record was not accessed.
+  snapshot_sha256: 727b07e74a9cac7f6835df671b08fd2c57a11565329142e05f712c5fa2709920
+- evidence_id: original
+  kind: primary_source
+  reference: PMID:18681480;DOI:10.1021/np800305b
+  locator: Reused537-adopted-core.json and537-repository.pdf; complete original abstract
+    plus entire one-page diagram inspected for K;537-fetch3.json preserves institutional
+    URL/hash
+  accessed_at: '2026-10-21T18:19:28Z'
+  support: supports
+  summary: The discovery labels K as compound2. Its diagram table specifies methyl/methyl
+    N substituents, no 4-hydroxy group and delta4,5 plus delta14,15 unsaturation,
+    with the steroid scaffold stereochemistry. The abstract identifies S.hookeriana
+    isolation and says the compounds were tested against L.major and four bacteria.
+    The accessible institutional file is only a one-page abstract/diagram; exact K
+    results and detailed spectral assignment are not present.
+  snapshot_sha256: f584cbc50c1a1c6cc011810e4692ea5c86776084089605482b1f44e3c3bd608b
+- evidence_id: activity
+  kind: database
+  reference: CHEMBL496488;CHEMBL1156637;PMID:18681480
+  locator: 538-chembl-activity.json; all ten exact K rows inspected, graph independently
+    mapped
+  accessed_at: '2026-10-21T18:19:28Z'
+  support: supports
+  summary: K-specific extraction reports L.major IC50 6.8 micromolar. Agar-well zones
+    at1mg/mL are13mm B.subtilis,9.5mm M.luteus,10mm source-named S.faecalis and10.5mm
+    source-named P.pallida. Separate MIC rows are337.8,650.6 and168.9 micromolar for
+    B.subtilis, M.luteus and P.pallida. These are database-transcribed endpoints,
+    not numbers independently checked against the unavailable original tables or calculated
+    from the zones. The two cholinesterase IC50 entries concern host pharmacology.
+  snapshot_sha256: cad6354f37a60a6ec8a002d6775c7693214be831daff37dcd951fe813dc0a91a
+- evidence_id: owners
+  kind: validation
+  reference: data/raw/chebi_antimicrobials.tsv;data/raw/chebi_role_names.tsv;scripts/extract_source_inventory.py;scripts/seed_from_sources.py;curation/decisions.tsv;conf/sources.yaml
+  locator: 538-raw-rows.json;538-owners-search.json;538-source-audit.json
+  accessed_at: '2026-10-21T18:19:28Z'
+  support: supports
+  summary: The exact maintained ChEBI row owns the native definition, graph, synonyms,
+    parents and adopted PMID. Actual owners were already in the original13 captured
+    inputs; every hash is unchanged. The deterministic minted source concept and all
+    chronological history events reproduce. Owner discovery included ignored and hidden
+    files.
+  snapshot_sha256: f748562260bffe90eea71637e8e2b64d6d731332851eb3a4ecc87ae027003cbf
+- evidence_id: search
+  kind: search
+  reference: Exact K primary-activity and mechanism discovery
+  locator: 538-source-audit.json; shared537-discovery.json and537-fetch*.json; additional
+    exact K web searches
+  accessed_at: '2026-10-21T18:19:28Z'
+  support: supports
+  summary: The original2008 K source was inspected at available abstract/diagram depth.
+    Current chemical authorities and exact K database extraction were checked separately.
+    The2007 H/I paper,2010 L/M/N/O paper and2021 J POP computation do not establish
+    K mechanism; pooled mechanistic language in the2023 steroid review abstract is
+    not promoted as an exact K experiment. No verified K antimicrobial molecular target
+    emerged in this bounded review.
+  search_scope: Ignored-inclusive local exact K name, CHEBI66023 and full key; shared91-result
+    EuropePMC family discovery titles; exact K mechanism/structure web searches; original
+    DOI/publisher and institutional repository access; current official chemical and
+    activity API records.
+  snapshot_sha256: f748562260bffe90eea71637e8e2b64d6d731332851eb3a4ecc87ae027003cbf
+assessments:
+- assessment_id: chemical
+  area: identity
+  topic: Exact K graph and configured stereochemistry
+  outcome: supported
+  summary: Nine native/current encodings agree and the original diagram independently
+    corroborates K constitution and depicted stereo. Full original spectra and their
+    assignment discussion were unavailable, so they were not reanalysed.
+  target_ids:
+  - CHEBI:66023
+  evidence_ids:
+  - identity
+  - original
+- assessment_id: grounding
+  area: grounding
+  topic: Exact names, parents and source identity
+  outcome: supported
+  summary: Both names, two structural parents, source mint and CHEBI66023 agree with
+    the native graph. Direct Reaxys remains an explicitly unverified database link
+    rather than a demonstrated mismatch.
+  target_ids:
+  - CHEBI:66023
+  evidence_ids:
+  - identity
+  - terms
+  - owners
+- assessment_id: activity
+  area: scope
+  topic: K-specific antibacterial and antileishmanial evidence
+  outcome: supported
+  summary: Compound-specific source-linked database rows support the qualitative native
+    roles. The values retain their original database units and endpoints, and unread
+    primary methods limit organism, strain and assay interpretation. Neither J values
+    nor clinical efficacy is inferred.
+  target_ids:
+  - CHEBI:66023
+  evidence_ids:
+  - activity
+  - original
+  - record
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional exact K molecular mechanism
+  outcome: unknown
+  summary: No native protein/pathway assertion requires validation, and no exact K
+    antimicrobial target experiment was established. Host cholinesterase assays and
+    J-only docking do not warrant a K antimicrobial target; the structured bacterial
+    adapter was not triggered.
+  target_ids:
+  - CHEBI:66023
+  evidence_ids:
+  - search
+  - activity
+  - record
+- assessment_id: producer
+  area: scope
+  topic: Plant isolation versus demonstrated biosynthesis
+  outcome: supported
+  summary: The original abstract supports K isolation from S.hookeriana. The native
+    has no structured producer claim and no biosynthetic gene or BGC inference is
+    added.
+  target_ids:
+  - CHEBI:66023
+  evidence_ids:
+  - original
+  - record
+- assessment_id: provenance
+  area: provenance
+  topic: Source owners, sole adopted lead and history
+  outcome: supported
+  summary: The sole adopted PMID was inspected at its available original depth, with
+    exact database extraction distinctly identified. All13 original input hashes,
+    source-concept mint and three history events are consistent.
+  target_ids:
+  - CHEBI:66023
+  evidence_ids:
+  - owners
+  - original
+  - activity
+findings: []
+actions: []
+limitations:
+- The2008 full main, original spectra/assignment and assay tables were not obtained.
+  The publisher returned403 and Bielefeld served an anti-bot page; the institutional
+  PDF contains only a one-page abstract/diagram. Shared exact DOI Figshare resource
+  query returned an empty list, not proof of absent supplementary material.
+- All detailed K activity numbers are current ChEMBL extracts. Original strains, parasite
+  stage, source enzyme species, replicates, error estimates and detailed MIC/agar-well
+  protocols remain unverified. No new native quantitative observations are proposed
+  from these extracts alone.
+- Reaxys18885919 was verified only as an explicit current ChEBI mapping; the direct
+  licensed database was not accessed.
+- 'Discovery was bounded: shared91 EuropePMC titles and exact K searches were screened.
+  Nonadopted family reviews and other congeners are leads, not exact K experimental
+  evidence. No universal absence of additional mechanism evidence is claimed.'
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All13 original captured hashes remain unchanged; actual owners were already present.
+  Standalone chemistry019 ran against054, with native schema/strict and ledger in054.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
