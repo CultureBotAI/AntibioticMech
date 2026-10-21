@@ -1,0 +1,816 @@
+# Review cefacetrile exact parent and evidence scope
+
+- Review: 20261021T105843Z-cefacetrile-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:44:43Z
+- Finished UTC: 2026-10-21T10:58:43Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral cefacetrile structure and antibacterial filing are supported. One major exact-synonym defect conflates the sodium salt with the acid. A minor citation gap attaches the PBP-binding/lysis mechanism to a primary paper that measures activity and beta-lactamase hydrolysis rather than PBP engagement.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position203; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:135437 | data/antibiotics/antibacterial/cefacetrile.yaml | generated | cefacetrile |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:135437 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:135437 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:135437 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:135437 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:135437 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:135437 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:135437 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:135437 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:135437 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:135437 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:135437 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:135437 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral parent
+
+identity: supported. Targets: CHEBI:135437.
+
+Internal encodings, masses, source mints and current ChEBI/PubChem identity agree. No parent structure change is proposed.
+
+### Source and history ownership
+
+provenance: supported. Targets: CHEBI:135437.
+
+Both source concepts and four dated seed/reseed events are coherent. Original hashes remain intact; no native-only correction is proposed.
+
+### Structured gene context
+
+scope: supported. Targets: CHEBI:135437.
+
+Required adapter-first lookup completed. Contextual gene search hits do not establish target engagement.
+
+### Optional blank domains
+
+completeness: supported. Targets: CHEBI:135437.
+
+No blank optional causal graph, producer, activity or clinical field is itself a defect. Any enrichment must preserve exact material, taxon, strain and assay scope.
+
+### Acid versus sodium exact synonym
+
+identity: concern. Targets: CHEBI:135437.
+
+The sodium name is not exact chemical equivalence to the one neutral acid graph.
+
+### Cephalosporin and antibacterial role
+
+grounding: supported. Targets: CHEBI:135437.
+
+The structural cephalosporin parents and antimicrobial role fit the native graph and direct antibacterial evidence, with tested sodium material preserved.
+
+### Exact and drug identifiers
+
+grounding: supported. Targets: CHEBI:135437.
+
+ChEBI, PubChem and ChEMBL match the neutral acid. CAS is consistently source-attested; HMDB direct comparison remains unavailable. DrugCentral appropriately stays a drug reference.
+
+### Definition citation supports the stated mechanism
+
+evidence: concern. Targets: CHEBI:135437.
+
+The cited primary paper supports antibacterial activity and hydrolysis, not the attached PBP engagement/lysis sentence. This is a claim-to-source placement gap, not evidence that the conventional cephalosporin mechanism is false.
+
+### Hydrolysis and non-susceptibility
+
+evidence: supported. Targets: CHEBI:135437.
+
+Original beta-lactamase observations and censored MICs can support bounded optional enrichment. Do not convert historical unnamed isolates into contemporary universal species claims.
+
+## Findings
+
+### F1: Separate cefacetrile sodium from exact acid synonyms
+
+major / open / confirmed; issue key: cefacetrile-sodium-exact-synonym.
+
+The native neutral acid is C13H13N3O6S, while its exact synonym cefacetrile sodium denotes a different sodium-containing structure. The original assay paper explicitly used and drew the salt. Product-level naming does not establish exact structural equivalence.
+
+### F2: Give the PBP mechanism its own supporting source
+
+minor / open / confirmed; issue key: cefacetrile-definition-pbp-citation-scope.
+
+PMID4661097 is the definition_source for a sentence claiming direct PBP binding/inactivation and lysis, but the full paper tests antimicrobial activity and beta-lactamase hydrolysis. Those are distinct experiments. The conventional class mechanism may be correct, but the single primary citation does not establish it.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the exact salt synonym through maintained extraction/seeding ownership.
+
+- Keep the native neutral acid graph and its exact identifiers. Remove or qualify the sodium name as a form relationship rather than an exact synonym.
+- Preserve raw authority provenance and inspect the upstream synonym relation; use a reproducible source-aware correction rather than a generated YAML-only edit.
+- Regenerate and confirm the correction survives; run focused schema/strict, source provenance, identity/duplicate and corpus reproduction gates.
+
+### A2
+
+Qualify or separately support the PBP mechanism and preserve original salt assay context.
+
+- Do not cite beta-lactamase substrate hydrolysis as direct PBP binding. Supply an inspected compound-specific primary target experiment, or retain explicit authority/class-level provenance for the mechanism.
+- Any MIC or hydrolysis enrichment must preserve crystalline sodium material, media, inoculum, strain/isolate scope, concentrations and censored endpoints.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cefacetrile.yaml; Entire native YAML and source/history blocks | supports | Entire neutral-parent record read. All native synonyms, chemical encodings, roles, parents, exact/drug/document cross-references, source concepts and history events were assessed. Native SEEDED status remains unchanged. |
+| chemistry | Independent RDKit calculations; 203-chemistry.json | supports | Both SMILES and InChI reproduce the native full key, formula, charge, masses and configured stereochemistry. Both ARO and ChEBI source mints independently match. |
+| owners | data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv; Exact adopted rows; extractor/seeder; original and expanded inspect captures | supports | ChEBI supplies the neutral structure and synonyms; ARO supplies class and complementary mappings. Actual owners were appended while preserving original hashes. The ignored-inclusive curation/conf search found no exact correction for these specific findings. |
+| adapter | iModulonDB; 203-204-adapter-catalog.json;203-204-adapter-pbp.txt | supports | Catalog and gene searches were executed before web follow-up. The catalog has no H. influenzae dataset. E. coli/modulome penicillin query returns b2430/yfeW, PBP4B; No iModulon component was returned, so no component summary was applicable. These are contextual gene matches, not drug-binding evidence or cross-species protein identity. |
+| authorities | https://www.ebi.ac.uk/chebi/CHEBI:135437; 203-ols.json;203-chebi.html;203-aro-stanzas.txt | supports | Current ChEBI neutral structure matches the native graph. Adopted ARO class and compound definitions were read in the separately hashed local ontology cache. The broad cephalosporin parents are compatible with the graph. Current registry labels are not clinical approval evidence. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/91562; 203-pubchem.json | supports | The current PubChem full stereochemical key and neutral molecular formula agree exactly with the native structure. |
+| drugcentral | https://drugcentral.org/drugcard/524; 203-drugcentral.html; drug card identity section | supports | DrugCentral resolves the expected parent name, CAS and formula but also lists product/form synonyms. Native drug_xrefs placement permits that drug-level context; it does not make every product synonym an exact chemical equivalence. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2110602.json; Current molecular graph | supports | CHEMBL2110602 reproduces neutral C13H13N3O6S and full key RRYMAQUWDLIUPV-BXKDBHETSA-N. Native two configured centres are 6R,7R. |
+| salt | https://pubchem.ncbi.nlm.nih.gov/compound/23668837; 203-sodium-name.json; KEGG D01262 and D07629 | refutes | Cefacetrile sodium resolves to C13H12N3NaO6S with key GXCRUTWHNMMJEK-WYUVZMMLSA-M, distinct from the native acid. KEGG separately lists D01262 sodium and D07629 acid. Native synonym_text cefacetrile sodium is marked EXACT_SYNONYM. |
+| original | https://doi.org/10.7164/antibiotics.25.400; PMID4661097; original five pages400–404; Methods, Tables1–6 and Figure1 | supports | Full original paper read, including visual inspection of pages401–403. Material is crystalline sodium salt from Ciba-Geigy, depicted in Figure1. Clinical isolates were tested by tube dilution in trypticase soy broth, 16h at35C; agar methods and inocula differ. S. aureus19 isolates have MIC0.64–1.28ug/mL; P. aeruginosa29 isolates are &gt;100ug/mL in Table2. Table3 contains individual unnamed isolates, not population MIC90. Agar/broth and inoculum effects are explicit. Antibacterial parent-moiety context is supported while salt form is retained. |
+| hydrolysis | https://doi.org/10.7164/antibiotics.25.400; Original pages403–404; Tables5–6 and discussion | partial | The paper measures intact-cell and isolated beta-lactamase hydrolysis and substrate kinetic constants. The enzyme names are resistance/degradation actors, not PBPs. It does not demonstrate direct PBP binding or PBP-mediated lysis; the native definition_source nevertheless cites this paper for the complete mechanism sentence. |
+| adopted | PMID:15646539;319233;37468498;4661097;15673804;11585791;6810737; 203-core-fixed.json; all seven metadata records and all available complete abstracts | supports | All adopted compound and class leads resolve. 15646539 is a liver-injury bibliography with no abstract;319233 concerns sulfur-containing side-chain analogues, not a direct cefacetrile PBP experiment;37468498 is a host secondary-pharmacology/ADR resource. 15673804/11585791/6810737 are beta-lactamase/cephalosporin reviews; the first and last lack indexed abstracts. 4661097 lacks an indexed abstract but its full original paper was read. No analogue or host endpoint is transferred. |
+
+## Limits And Additional Notes
+
+- Direct HMDB requests returned HTTP403. Reaxys, where present, remains source-asserted without an independent public registry comparison. No mapping is removed merely for limited access.
+- Focused schema and strict checks passed in batch021; chemistry used the batch019 RDKit interpreter against unchanged batch021 inputs. Shared required corpus gates will be inserted before save.
+- No current clinical recommendation, jurisdictional approval or exhaustive resistance/producer survey is claimed. Historical assays do not define current clinical breakpoints.
+- No cefacetrile-specific direct PBP experiment was established in the bounded searches. A wrong preliminary KEGG candidate D02232 resolved to cefoselis and was discarded; verified cefacetrile entries are D01262/D07629. Initial unparenthesized EPMC queries returned zero hits and were corrected; all seven intended leads then resolved.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T105843Z-cefacetrile-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review cefacetrile exact parent and evidence scope
+started_at: '2026-10-21T10:44:43Z'
+finished_at: '2026-10-21T10:58:43Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The neutral cefacetrile structure and antibacterial filing are supported.
+  One major exact-synonym defect conflates the sodium salt with the acid. A minor
+  citation gap attaches the PBP-binding/lysis mechanism to a primary paper that measures
+  activity and beta-lactamase hydrolysis rather than PBP engagement.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefacetrile.yaml
+    sha256: 514e2cd81f93de5ee0ea77126952a566ec2b55db6c177f3c865478127050f96d
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:135437
+  path: data/antibiotics/antibacterial/cefacetrile.yaml
+  label: cefacetrile
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Cross-source molecular mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Molecular enrichment transform
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position203; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:135437
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:135437
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    203
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefacetrile.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefacetrile.yaml --out /private/tmp/am-review-session/203-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:135437
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefacetrile.yaml
+  locator: Entire native YAML and source/history blocks
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: Entire neutral-parent record read. All native synonyms, chemical encodings,
+    roles, parents, exact/drug/document cross-references, source concepts and history
+    events were assessed. Native SEEDED status remains unchanged.
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: 203-chemistry.json
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: Both SMILES and InChI reproduce the native full key, formula, charge, masses
+    and configured stereochemistry. Both ARO and ChEBI source mints independently
+    match.
+  snapshot_sha256: 3d5dba6fb6b961f91d85ae15337980b809d529a3e5358219f627ea3025b90d21
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv
+  locator: Exact adopted rows; extractor/seeder; original and expanded inspect captures
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: ChEBI supplies the neutral structure and synonyms; ARO supplies class and
+    complementary mappings. Actual owners were appended while preserving original
+    hashes. The ignored-inclusive curation/conf search found no exact correction for
+    these specific findings.
+  search_scope: rg --no-ignore --hidden exact identifier and relevant ChEMBL mapping
+    across curation/conf; unrelated CHEBI:34785 substring hit discarded.
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: 203-204-adapter-catalog.json;203-204-adapter-pbp.txt
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: Catalog and gene searches were executed before web follow-up. The catalog
+    has no H. influenzae dataset. E. coli/modulome penicillin query returns b2430/yfeW,
+    PBP4B; No iModulon component was returned, so no component summary was applicable.
+    These are contextual gene matches, not drug-binding evidence or cross-species
+    protein identity.
+  snapshot_sha256: 98627808541dbd07b37e85a4bfb692fc0fe8a0a9564839813c9f2f9ac41a4a10
+- evidence_id: authorities
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:135437
+  locator: 203-ols.json;203-chebi.html;203-aro-stanzas.txt
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: Current ChEBI neutral structure matches the native graph. Adopted ARO class
+    and compound definitions were read in the separately hashed local ontology cache.
+    The broad cephalosporin parents are compatible with the graph. Current registry
+    labels are not clinical approval evidence.
+  snapshot_sha256: efc7fcf16ff361cced6e0abb4a260ba812f2b26c5d821b12d71c8aa004addbea
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/91562
+  locator: 203-pubchem.json
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: The current PubChem full stereochemical key and neutral molecular formula
+    agree exactly with the native structure.
+  snapshot_sha256: 8d5212c58dcc1564e469f60413ffe621b61f13ae78d7724a4fb48995083f9385
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drugcard/524
+  locator: 203-drugcentral.html; drug card identity section
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: DrugCentral resolves the expected parent name, CAS and formula but also
+    lists product/form synonyms. Native drug_xrefs placement permits that drug-level
+    context; it does not make every product synonym an exact chemical equivalence.
+  snapshot_sha256: 2cfa359986e1dad5cb873cdde7141a00447cb5ae10ca4c4377299febbeb83128
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2110602.json
+  locator: Current molecular graph
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: CHEMBL2110602 reproduces neutral C13H13N3O6S and full key RRYMAQUWDLIUPV-BXKDBHETSA-N.
+    Native two configured centres are 6R,7R.
+  snapshot_sha256: 1fd2f29b5dcb365114c51975120ff65f690a6078bd0b67881b3fd1c5adf02f23
+- evidence_id: salt
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/23668837
+  locator: 203-sodium-name.json; KEGG D01262 and D07629
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: refutes
+  summary: Cefacetrile sodium resolves to C13H12N3NaO6S with key GXCRUTWHNMMJEK-WYUVZMMLSA-M,
+    distinct from the native acid. KEGG separately lists D01262 sodium and D07629
+    acid. Native synonym_text cefacetrile sodium is marked EXACT_SYNONYM.
+  snapshot_sha256: c6c7cff82a7b371b22190b5e783408395ce39d62b3c477b7557b3f6c2f49b48a
+- evidence_id: original
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.25.400
+  locator: PMID4661097; original five pages400–404; Methods, Tables1–6 and Figure1
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: Full original paper read, including visual inspection of pages401–403.
+    Material is crystalline sodium salt from Ciba-Geigy, depicted in Figure1. Clinical
+    isolates were tested by tube dilution in trypticase soy broth, 16h at35C; agar
+    methods and inocula differ. S. aureus19 isolates have MIC0.64–1.28ug/mL; P. aeruginosa29
+    isolates are >100ug/mL in Table2. Table3 contains individual unnamed isolates,
+    not population MIC90. Agar/broth and inoculum effects are explicit. Antibacterial
+    parent-moiety context is supported while salt form is retained.
+  snapshot_sha256: 125bb3a29acfab43581a18ac80e69e94de03746401bdfddea9e2c69646abe514
+- evidence_id: hydrolysis
+  kind: primary_source
+  reference: https://doi.org/10.7164/antibiotics.25.400
+  locator: Original pages403–404; Tables5–6 and discussion
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: partial
+  summary: The paper measures intact-cell and isolated beta-lactamase hydrolysis and
+    substrate kinetic constants. The enzyme names are resistance/degradation actors,
+    not PBPs. It does not demonstrate direct PBP binding or PBP-mediated lysis; the
+    native definition_source nevertheless cites this paper for the complete mechanism
+    sentence.
+  snapshot_sha256: 125bb3a29acfab43581a18ac80e69e94de03746401bdfddea9e2c69646abe514
+- evidence_id: adopted
+  kind: database
+  reference: PMID:15646539;319233;37468498;4661097;15673804;11585791;6810737
+  locator: 203-core-fixed.json; all seven metadata records and all available complete
+    abstracts
+  accessed_at: '2026-10-21T10:52:24Z'
+  support: supports
+  summary: All adopted compound and class leads resolve. 15646539 is a liver-injury
+    bibliography with no abstract;319233 concerns sulfur-containing side-chain analogues,
+    not a direct cefacetrile PBP experiment;37468498 is a host secondary-pharmacology/ADR
+    resource. 15673804/11585791/6810737 are beta-lactamase/cephalosporin reviews;
+    the first and last lack indexed abstracts. 4661097 lacks an indexed abstract but
+    its full original paper was read. No analogue or host endpoint is transferred.
+  snapshot_sha256: 57cf5390a4ac285b2795abba3a6b56d5b42a04a066cfb7fc00101549a00e041b
+assessments:
+- assessment_id: chemistry
+  area: identity
+  topic: Exact neutral parent
+  outcome: supported
+  summary: Internal encodings, masses, source mints and current ChEBI/PubChem identity
+    agree. No parent structure change is proposed.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - chemistry
+  - authorities
+  - pubchem
+- assessment_id: provenance
+  area: provenance
+  topic: Source and history ownership
+  outcome: supported
+  summary: Both source concepts and four dated seed/reseed events are coherent. Original
+    hashes remain intact; no native-only correction is proposed.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: adapter
+  area: scope
+  topic: Structured gene context
+  outcome: supported
+  summary: Required adapter-first lookup completed. Contextual gene search hits do
+    not establish target engagement.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - adapter
+- assessment_id: optional
+  area: completeness
+  topic: Optional blank domains
+  outcome: supported
+  summary: No blank optional causal graph, producer, activity or clinical field is
+    itself a defect. Any enrichment must preserve exact material, taxon, strain and
+    assay scope.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - native
+- assessment_id: names
+  area: identity
+  topic: Acid versus sodium exact synonym
+  outcome: concern
+  summary: The sodium name is not exact chemical equivalence to the one neutral acid
+    graph.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - native
+  - salt
+  - original
+- assessment_id: class
+  area: grounding
+  topic: Cephalosporin and antibacterial role
+  outcome: supported
+  summary: The structural cephalosporin parents and antimicrobial role fit the native
+    graph and direct antibacterial evidence, with tested sodium material preserved.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - chemistry
+  - authorities
+  - original
+- assessment_id: xref
+  area: grounding
+  topic: Exact and drug identifiers
+  outcome: supported
+  summary: ChEBI, PubChem and ChEMBL match the neutral acid. CAS is consistently source-attested;
+    HMDB direct comparison remains unavailable. DrugCentral appropriately stays a
+    drug reference.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - authorities
+  - pubchem
+  - chembl
+  - drugcentral
+- assessment_id: definition
+  area: evidence
+  topic: Definition citation supports the stated mechanism
+  outcome: concern
+  summary: The cited primary paper supports antibacterial activity and hydrolysis,
+    not the attached PBP engagement/lysis sentence. This is a claim-to-source placement
+    gap, not evidence that the conventional cephalosporin mechanism is false.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - native
+  - original
+  - hydrolysis
+  - adopted
+- assessment_id: resistance
+  area: evidence
+  topic: Hydrolysis and non-susceptibility
+  outcome: supported
+  summary: Original beta-lactamase observations and censored MICs can support bounded
+    optional enrichment. Do not convert historical unnamed isolates into contemporary
+    universal species claims.
+  target_ids:
+  - CHEBI:135437
+  evidence_ids:
+  - original
+  - hydrolysis
+findings:
+- finding_id: F1
+  issue_key: cefacetrile-sodium-exact-synonym
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Separate cefacetrile sodium from exact acid synonyms
+  description: The native neutral acid is C13H13N3O6S, while its exact synonym cefacetrile
+    sodium denotes a different sodium-containing structure. The original assay paper
+    explicitly used and drew the salt. Product-level naming does not establish exact
+    structural equivalence.
+  target_ids:
+  - CHEBI:135437
+  field_paths:
+  - synonyms[4]
+  - chemical_structure
+  evidence_ids:
+  - native
+  - salt
+  - original
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted source synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Retain source synonym scope
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym ownership
+  rule_id: 'docs/HARMONIZATION.md: one structure per record; exact equivalence'
+  native_severity: major chemical-form conflation
+  normalization_reason: An explicit exact name denotes a different composition and
+    full structure key. The acid graph itself is coherent.
+- finding_id: F2
+  issue_key: cefacetrile-definition-pbp-citation-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Give the PBP mechanism its own supporting source
+  description: PMID4661097 is the definition_source for a sentence claiming direct
+    PBP binding/inactivation and lysis, but the full paper tests antimicrobial activity
+    and beta-lactamase hydrolysis. Those are distinct experiments. The conventional
+    class mechanism may be correct, but the single primary citation does not establish
+    it.
+  target_ids:
+  - CHEBI:135437
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - native
+  - original
+  - hydrolysis
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Definition and definition_refs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source assertion extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition ownership
+  rule_id: 'review-checklist: claim-level source support'
+  native_severity: minor citation placement gap
+  normalization_reason: This is a bounded support gap for a conventional mechanism,
+    not a contradictory experiment or a false quantitative target claim.
+actions:
+- action_id: A1
+  description: Correct the exact salt synonym through maintained extraction/seeding
+    ownership.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:135437
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted source synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Retain source synonym scope
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym ownership
+  acceptance_checks:
+  - Keep the native neutral acid graph and its exact identifiers. Remove or qualify
+    the sodium name as a form relationship rather than an exact synonym.
+  - Preserve raw authority provenance and inspect the upstream synonym relation; use
+    a reproducible source-aware correction rather than a generated YAML-only edit.
+  - Regenerate and confirm the correction survives; run focused schema/strict, source
+    provenance, identity/duplicate and corpus reproduction gates.
+- action_id: A2
+  description: Qualify or separately support the PBP mechanism and preserve original
+    salt assay context.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:135437
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Definition and definition_refs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source assertion extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition ownership
+  acceptance_checks:
+  - Do not cite beta-lactamase substrate hydrolysis as direct PBP binding. Supply
+    an inspected compound-specific primary target experiment, or retain explicit authority/class-level
+    provenance for the mechanism.
+  - Any MIC or hydrolysis enrichment must preserve crystalline sodium material, media,
+    inoculum, strain/isolate scope, concentrations and censored endpoints.
+limitations:
+- Direct HMDB requests returned HTTP403. Reaxys, where present, remains source-asserted
+  without an independent public registry comparison. No mapping is removed merely
+  for limited access.
+- Focused schema and strict checks passed in batch021; chemistry used the batch019
+  RDKit interpreter against unchanged batch021 inputs. Shared required corpus gates
+  will be inserted before save.
+- No current clinical recommendation, jurisdictional approval or exhaustive resistance/producer
+  survey is claimed. Historical assays do not define current clinical breakpoints.
+- No cefacetrile-specific direct PBP experiment was established in the bounded searches.
+  A wrong preliminary KEGG candidate D02232 resolved to cefoselis and was discarded;
+  verified cefacetrile entries are D01262/D07629. Initial unparenthesized EPMC queries
+  returned zero hits and were corrected; all seven intended leads then resolved.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

@@ -1,0 +1,650 @@
+schema_version: 1.0.0
+review_id: 20261021T110059Z-cefaloridine-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of cefaloridine
+started_at: '2026-10-21T10:44:47Z'
+finished_at: '2026-10-21T11:00:59Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact zwitterionic structure supported; minor OmpC combined-loss context
+  qualification
+scientific_review: true
+summary: 'The native zwitterionic cefaloridine graph and public exact mappings agree.
+  Original CblA experiments support compound-specific inactivation, and a primary
+  transpeptidase study supplies bounded target evidence for possible enrichment. The
+  OmpC note should preserve combined OmpF/OmpC-loss context: the original single ompC
+  mutant retained wild-type cefaloridine susceptibility. The CDA-1 edge has independent
+  cefaloridine susceptibility support; purified kinetic measurements in that paper
+  use cephalothin and must not be transferred. Scientific assessment retains the stated
+  evidence limits; full verification is blocked by the shared native-library failure.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefaloridine.yaml
+    sha256: 34996a247c5cb65c00254881db34658fe0572a419c5f4648baccd1b776e3a027
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+scope:
+  description: Entire exact SEEDED record, four history events, all four resistance
+    entries, actual ChEBI/ARO owner rows and all 18 adopted compound, determinant
+    and parent PMID leads; original porin, CblA, CDA-1 and selected transpeptidase
+    evidence.
+  selection: Queue 207; original 13 inputs retained and five actual ARO/evidence owner
+    inputs appended before detailed judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3537
+targets:
+- target_id: CHEBI:3537
+  path: data/antibiotics/antibacterial/cefaloridine.yaml
+  label: cefaloridine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual imported ARO claim or maintained evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual imported ARO claim or maintained evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual imported ARO claim or maintained evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Actual imported ARO claim or maintained evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Actual imported ARO claim or maintained evidence owner
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefaloridine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0, zero ERROR rows.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefaloridine.yaml --out /private/tmp/am-review-session/207-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental exact graph consistency
+  status: passed
+  required: false
+  summary: Exit 0 using 019 chemistry interpreter against 021 files.
+  target_ids:
+  - CHEBI:3537
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/207-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-catalog
+  name: Structured source catalog
+  status: passed
+  required: false
+  summary: Catalog inspected before protein follow-up.
+  target_ids:
+  - CHEBI:3537
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/207-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-ompc
+  name: Structured OmpC query
+  status: passed
+  required: false
+  summary: One gene hit, no iModulon hit.
+  target_ids:
+  - CHEBI:3537
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset modulome --query OmpC
+    > /private/tmp/am-review-session/207-imodulondb-ompc.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3537
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefaloridine.yaml
+  locator: Entire YAML and four history events
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: supports
+  summary: EXACT/SEEDED cefaloridine stores a neutral zwitterion, not an added counterion
+    salt. Four resistance entries retain explicit CARD database provenance. CblA family
+    and CblA-1 member are hierarchical source entries, not necessarily two distinct
+    experimentally measured mechanisms. No native MIC, molecular target, causal graph
+    or producer is asserted.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:3537; PubChem:5773; CHEMBL316157; KEGG:C11754
+  locator: 207-chemistry.py/.json; 207-ols.json; 207-pubchem.json; 207-chembl.json;
+    207-kegg.mol
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: supports
+  summary: SMILES/InChI/fullkey CZTQZXZIADLWOZ-CRAIPNDOSA-N, formula C19H17N3O4S2,
+    masses and two configured R centers agree. The graph has pyridinium+ and carboxylate-
+    with net 0. Current ChEBI, PubChem, ChEMBL and KEGG compound graphs agree; no
+    salt or additional proton is imposed.
+  snapshot_sha256: 9ca96580b093f12357b9b00bb30526648ef8f4f3d255a4aa21fc922b4e8c75c2
+- evidence_id: grounding
+  kind: authority
+  reference: CHEBI:3537; ARO:3004129; ARO:0000032
+  locator: 207-chebi.html; 207-aro-stanzas.txt; 207-kegg.txt; 207-drugcentral.html
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: partial
+  summary: Current ChEBI reproduces cephalosporin, semisynthetic derivative and beta-lactam
+    antibiotic allergen parents, plus antimicrobial agent and antibacterial drug roles.
+    KEGG C11754/D01075 and DrugCentral 573 resolve cefaloridine; drug and document
+    mappings are separately placed. CAS 50-59-9 is corroborated by authorities; Reaxys
+    4166301 was not directly accessed.
+  snapshot_sha256: 3c2ce22f83d79c1d6043e53754f0bb38b052d15b725c3c153b220adfd3a75b1b
+- evidence_id: cbla
+  kind: primary_source
+  reference: PMID:7985999
+  locator: DOI:10.1128/aac.38.8.1711; 207-cbla-1711 through 1714 original scans/OCR,
+    Table 1 visual on p1712
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: supports
+  summary: The gene cloned from B. uniformis WAL-7088 was used to complement a cblA-inactivated
+    BU1001 derivative. Table 1 agar-dilution cephaloridine MICs are 64 micrograms/mL
+    for BU1001, 2 for the insertion mutant, 8 for empty-vector mutant and 64 for complemented
+    mutant. Cell-extract spectrophotometry directly measures cephaloridine degradation.
+    Thus exact inactivation/phenotype support exists; WAL-7088 also contains CfxA
+    and is not the same strain as the knockout comparison.
+  snapshot_sha256: d90b73c023ce3b42e736d0fe482b013aaff3b08efd5813e45bc32fb64cf6cc04
+- evidence_id: ompc
+  kind: primary_source
+  reference: PMID:6760806
+  locator: DOI:10.1128/aac.22.6.942; 207-ompc original scans pp 942–947, Table 3 p945
+    and p946 visually checked
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: partial
+  summary: In E. coli K-12, the single ompC::Tn5 mutant B1478 and parent pop1010 each
+    show 2 micrograms/mL cefaloridine, whereas combined ompF1466 ompC::Tn5 mutant
+    B1467 shows 64. The endpoint is 99% CFU inhibition on Mueller-Hinton agar at 37
+    C, not a modern standardized MIC. Original text explicitly distinguishes single-porin
+    from combined-loss phenotypes. The imported reduced-permeability route is sound,
+    but its note should preserve this genetic context rather than imply normal OmpC
+    or isolated OmpC loss universally causes resistance.
+  snapshot_sha256: c873e025b14dd953e87f28429fa16ee5a0909fccce00b2a6d4fdf3057a31f0c9
+- evidence_id: cda
+  kind: primary_source
+  reference: PMID:25136020
+  locator: DOI:10.1128/aac.03237-14; 207-cda.html original main text and Tables1–2
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: supports
+  summary: 'Table 1 includes Cefaloridine: E. coli TOP10(pCDA-1) has MIC >256 micrograms/mL
+    versus 1 in TOP10; porin-deficient HB4 is 256 even without the plasmid. Thus the
+    recombinant comparison directly supports cefaloridine resistance while distinguishing
+    enzyme and permeability contexts. Table 2 purified kinetics use cephalothin, not
+    cefaloridine, so its numerical hydrolysis parameters must not be transferred.'
+  snapshot_sha256: b7bd4dfa5f8bd2dec1b70dee503f9e9a05d454eddcd310cb3b1bf7b86faf8d21
+- evidence_id: binding
+  kind: primary_source
+  reference: PMID:4464853
+  locator: DOI:10.1042/bj1430241; 207-pbp-core.json complete abstract; original scans
+    pp241, 242, 247, 248; binding experiment p247 visually checked
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: supports
+  summary: Glaxo cephaloridine reacts approximately 1:1 with the isolated exocellular
+    Streptomyces R39 DD-carboxypeptidase-transpeptidase, inactivating the enzyme and
+    opening the drug beta-lactam ring. Complex dissociation/reactivation depends on
+    defined buffer and temperature. This supports a bounded enzyme-target example
+    for optional enrichment, not a claim about every bacterial PBP or clinical killing.
+  snapshot_sha256: fcf585c23f0b162b22797618e9b6159796b495992e82841fd2096e8fdea60dcf
+- evidence_id: adopted-leads
+  kind: database
+  reference: All 18 adopted/parent PMID records
+  locator: 207-core.json; 207-lead-dispositions.json
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: context_only
+  summary: All 18 MED records resolve. Eleven have complete abstracts that were read;
+    seven are metadata-only. ChEBI allergy leads 12569987/2083978/29017833 concern
+    host IgE or reviews, not antimicrobial target proof. 1965 PMID 5175748 directly
+    compares staphylococcal cephaloridine/cephalothin destruction; 2907014 is a historical
+    urinary-isolate resistance survey. 17426813 studies tetracycline adaptation and
+    23034325 is a porin/efflux review. Parent cephalosporin references are reviews.
+    An unrelated non-MED result sharing external ID 724127 was excluded.
+  snapshot_sha256: 70f66d03da6cb71f07282113280b802920accf53a1782bf361731d89ad893821
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: 207-imodulondb-datasets.txt; 207-imodulondb-ompc.txt
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: context_only
+  summary: E. coli/modulome search identifies b2215 ompC with no component hit, so
+    no summarize call applies. This is annotation context, not cefaloridine phenotype
+    evidence. B. uniformis and Cedecea davisae are not covered in the catalog; no
+    unrelated species or paralog is substituted.
+  snapshot_sha256: acafb81299e5085c94ba494cab3e6ce4837da5fa0849192eb4f100b0fd6a0cf1
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_resistance_edges.tsv; curation/card_evidence_reviews.json
+  locator: 207-aro_resistance_edges.json; 207-aro_target_edges.json; extractor/seeder
+    and evidence-review owner
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: supports
+  summary: Four exact imported resistance rows reproduce the native record; no direct
+    ARO target row is emitted. The maintained card_evidence_reviews mechanism can
+    qualify an imported source row while retaining database provenance. No existing
+    exact record-specific qualification was found in the ignored-inclusive search.
+  search_scope: rg --no-ignore --hidden for cefaloridine, cephaloridine, CHEBI3537,
+    ARO3004129 across curation/conf/data/antibiotics; 207-local-hits.txt inspected.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema/strict/chemistry
+  locator: 207-strict.tsv; 207-chemistry.json
+  accessed_at: '2026-10-21T10:56:55Z'
+  support: supports
+  summary: Native schema/strict exit 0; alternate 019 chemistry interpreter against
+    021 files exit 0. Required shared reference/history/source/full-corpus gates are
+    separate.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact zwitterionic structure
+  outcome: supported
+  summary: Current public exact graphs agree with the native graph and its two configured
+    centers.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - chemistry
+  - grounding
+- assessment_id: class
+  area: grounding
+  topic: Class and roles
+  outcome: supported
+  summary: Cephalosporin/antibacterial roles and allergen context are supported by
+    authorities and original microbial/IgE evidence at their respective scopes.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - grounding
+  - adopted-leads
+  - cbla
+- assessment_id: cbla
+  area: evidence
+  topic: CblA family/member inactivation
+  outcome: supported
+  summary: Original genotype, complementation and degradation support exact cefaloridine
+    inactivation.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - cbla
+- assessment_id: ompc
+  area: scope
+  topic: Combined porin-loss condition
+  outcome: concern
+  summary: The correct reduced-permeability route needs a source note preserving the
+    combined-loss context; isolated ompC loss was WT-like in the cited experiment.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - ompc
+- assessment_id: cda
+  area: evidence
+  topic: CDA-1 exact compound support
+  outcome: supported
+  summary: The 2014 Table 1 recombinant comparison supports cefaloridine resistance;
+    purified cephalothin kinetics remain a distinct assay.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - cda
+  - record
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional primary target enrichment
+  outcome: supported
+  summary: A direct DD-carboxypeptidase-transpeptidase experiment is available at
+    bounded organism/protein scope; absent native target is not itself a required-field
+    defect.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - binding
+- assessment_id: provenance
+  area: provenance
+  topic: References and history
+  outcome: supported
+  summary: 18 adopted/parent MED records resolve at stated depth; actual source owners
+    and four history events checked.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - adopted-leads
+  - owners
+  - record
+- assessment_id: schema
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: Schema/strict and supplemental chemistry pass.
+  target_ids:
+  - CHEBI:3537
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-3537-ompc-combined-loss-context
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Preserve combined OmpF/OmpC-loss context in the imported OmpC note
+  description: The resistance note contains a generic OmpC-to-cefaloridine edge. Original
+    Table 3 and p946 distinguish single ompC loss, which remains WT-like, from combined
+    porin deficiency, which reduces cefaloridine susceptibility. Keep REDUCED_PERMEABILITY
+    and CARD provenance, but qualify the affected strain/genotype and direction; do
+    not imply universal resistance from normal OmpC activity or isolated ompC deletion.
+  target_ids:
+  - CHEBI:3537
+  field_paths:
+  - resistance_mechanisms[2].evidence[0].notes
+  evidence_ids:
+  - ompc
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Curated source-preserving imported evidence qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Evidence-review validation/application
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted exact OmpC cefaloridine edge
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate qualified imported evidence
+  rule_id: 'review-checklist: resistance direction and experimental context'
+  native_severity: minor non-blocking source-context omission
+  normalization_reason: The native mechanism already states REDUCED_PERMEABILITY and
+    database provenance; the missing combined-loss condition can mislead but is not
+    a fabricated native primary experiment.
+actions:
+- action_id: A1
+  description: Qualify the imported OmpC evidence through its maintained review owner.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:3537
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Curated source-preserving imported evidence qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Evidence-review validation/application
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted exact OmpC cefaloridine edge
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate qualified imported evidence
+  acceptance_checks:
+  - Bind the qualification to the exact ARO3004114/ARO3004129 source-row hash and
+    CHEBI3537 full structure key; retain database provenance and REDUCED_PERMEABILITY.
+  - State the E. coli K-12 combined OmpF/OmpC-deficiency context and single ompC control.
+    If quantities are adopted, retain 99% CFU-inhibition endpoint, Mueller-Hinton
+    agar, 37C and micrograms/mL rather than calling them contemporary clinical MICs.
+  - Regenerate through the existing evidence-review merge path and confirm persistence;
+    run focused schema/strict and required source, reference, history and full-corpus
+    gates.
+limitations:
+- 'Seven of 18 adopted/parent MED references have no indexed abstract: 14226120, 4868829,
+  5325246, 5740219, 724127, 15673804, 6810737. Eleven complete abstracts were read;
+  original CblA/OmpC scans and CDA-1 full HTML supply deeper support for selected
+  claims.'
+- CDA-1 PMID 25136020 full HTML was obtained after Europe PMC XML failed 500. Table
+  1 supports exact cefaloridine susceptibility effects, but the purified kinetic Table
+  2 uses cephalothin. These distinct assay scopes are retained.
+- PMC PDF links for CblA/OmpC returned download-preparation HTML. Original publicly
+  served page scans were retrieved and read, including visual verification of relevant
+  tables; this is not a failed full-text conclusion. OCR was used for navigation and
+  was checked against the source images for quantitative claims.
+- The additional 1974 target paper was inspected as complete abstract plus original
+  pp 241, 242, 247, 248, not every page. Publisher PDF request failed 403. The bounded
+  isolated-enzyme experiment is distinct from species-wide antibacterial susceptibility
+  or a resistance beta-lactamase mechanism.
+- Reaxys was not directly accessed. CAS mapping is corroborated by public authorities
+  rather than a direct registry record. Historical source nomenclature and clinical
+  susceptibility thresholds were not updated or reinterpreted.
+- No exhaustive clinical, resistance, taxonomic or immunological survey was undertaken.
+  021 native checks passed; supplemental chemistry used 019 RDKit environment. No
+  native scientific status promotion is implied.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 18 repository input hashes and external ARO cache hash remain unchanged; no
+  native or saved-bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1128/aac.22.6.942
+- https://doi.org/10.1128/aac.38.8.1711
+- https://doi.org/10.1042/bj1430241
+- https://doi.org/10.1128/aac.03237-14
+tags:
+- record-review
+- cefaloridine
+- porin-context
