@@ -1,0 +1,942 @@
+schema_version: 1.0.0
+review_id: 20261021T114511Z-cefoxitin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefoxitin: activity observations verified; qualify enzyme stability and repair
+  one exact synonym'
+started_at: '2026-10-21T11:21:27Z'
+finished_at: '2026-10-21T11:45:11Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the seed or activity observations. Preserved
+    initial captures, inspected the entire record and actual maintained owners before
+    assessment, independently parsed chemical representations and checked original
+    activity and mechanism sources.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The neutral cefoxitin graph and inspected identifiers agree, and all twenty
+  native activity observations match their exact sources. The CARD target and twenty-three
+  resistance entries resolve as explicitly qualified database assertions. Two minor
+  ChEBI-derived corrections remain: qualify the blanket beta-lactamase stability sentence
+  and repair an exact synonym that places the carbamoyloxymethyl substituent at bicyclic
+  position 4 instead of 3. These are localized prose/name defects, not a defect in
+  the stored molecular graph.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefoxitin.yaml
+    sha256: f965fea71486b27fc14a56e1a6b69260ef241712114fd55c9f621b68dd1bbc84
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+targets:
+- target_id: CHEBI:209807
+  path: data/antibiotics/antibacterial/cefoxitin.yaml
+  label: cefoxitin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity and bibliography
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO target assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefoxitin.yaml
+    role: Curator-maintained activity observations and evidence
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Maintained ARO target-role and target-type mapping
+scope:
+  description: 'Entire CHEBI:209807 record: definition, fourteen synonyms, five parent
+    terms, two roles, chemical identity and ten chemical xrefs, three drug xrefs,
+    four document xrefs, two source concepts, one molecular target, twenty-three resistance
+    mechanisms, twenty activity observations and all curation history. All thirteen
+    adopted ChEBI/ARO citation leads were dispositioned at the stated read scope.'
+  selection: Queue 240; original thirteen input hashes preserved, with six actual
+    ARO/target-policy inputs appended before assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:209807
+  exclusions:
+  - target: Cefoxitin salts, conjugate base, precursor cephamycin C and derivative
+      compounds
+    reason: Distinct structures and experimental materials are not interchangeable.
+      Reported cefoxitin AST is mapped to the drug active moiety without claiming
+      that the tested powder was an isolated neutral solid.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefoxitin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefoxitin.yaml --out /private/tmp/am-review-session/240-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. The batch019 RDKit interpreter parsed
+    the batch024 record and reproduced both source mints.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 240
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:209807
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefoxitin.yaml
+  locator: Entire YAML, including all activity observations, molecular target, resistance
+    entries and history.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: The SEEDED/EXACT record represents neutral cefoxitin. Target evidence explicitly
+    identifies CARD/ARO database provenance and PRIMARY_EVIDENCE_NEEDED, and resistance
+    notes explicitly retain database-level scope with missing organism/strain/assay
+    details. Curator activity observations have their own exact primary or CDC references.
+    No producer, expression dataset, causal graph or current clinical-status assertion
+    is present.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    data/raw/aro_resistance_edges.tsv; conf/aro_target_roles.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: ChEBI row 2883; ARO antibiotic and target row 6; resistance rows 212–234;
+    extraction, CARD role mapping and curated-field preservation code.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: ChEBI owns the definition, chemical descriptors, aliases, ontology roles
+    and chemical/document xrefs. ARO supplies its aliases, class, bibliography and
+    qualified target/resistance edges. The role policy maps ARO:3000749 to a direct-binding
+    protein target, while the seeder preserves its PRIMARY_EVIDENCE_NEEDED status.
+    No exact cefoxitin CARD evidence-review override was found. Native activity observations
+    are maintained in this record and preserved during seeding.
+  snapshot_sha256: 82edf77194c81cc0b86efce1596f7afe30de8a8f1477e677dbf1b083b744ed6a
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:209807
+  locator: 'Full visible current entry: structure, names, definition, roles, outgoing
+    ontology relations and xrefs.'
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: The official entry agrees with the native free-acid graph, formula C16H17N3O7S2,
+    charge 0, masses, 6R/7S stereochemistry and full key WZOZEZRFJCJXNZ-ZBFHGGJFSA-N.
+    It also repeats the unqualified enzyme-stability statement and the problematic
+    bicyclic 4-substituted name. CHEBI:23066, 55429, 72588 and 88225 are broader cephalosporin,
+    cephamycin, semisynthetic-derivative and beta-lactam-antibiotic-allergen terms,
+    not exact-compound identifiers. CHEBI:33281 and 36047 are compatible antimicrobial
+    and antibacterial-drug roles.
+  snapshot_sha256: 5da462ac52714a1f5e5bcd1758ea8bec90981229873535f35fa63220420a314f
+- evidence_id: chemical-xrefs
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL996.json; https://pubchem.ncbi.nlm.nih.gov/compound/441199;
+    https://rest.kegg.jp/get/C06887; https://rest.kegg.jp/get/D02345; https://drugcentral.org/drugcard/550;
+    https://data.rcsb.org/rest/v1/core/chemcomp/CFX; https://card.mcmaster.ca/ontology/35927
+  locator: Complete chemical-property responses and independent parsing of nine representations
+    from six services.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: ChEMBL SMILES/InChI, PubChem SMILES/InChI, KEGG MOL, DrugCentral InChI,
+    PDB CFX stereochemical SMILES/InChI and CARD SMILES all reproduce the native full
+    key, formula, charge and two assigned centres. KEGG drug D02345 explicitly maps
+    to compound C06887. PDB CFX defines the intact cefoxitin chemical component; a
+    reacted protein adduct in a particular experiment is a separate state.
+  snapshot_sha256: aea7fc4732de2eb0d8ab96325afd703db6472c33e57936c32dd19c2d5a2a1cc1
+- evidence_id: systematic-name
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/441199/property/IUPACName/JSON
+  locator: Official computed IUPAC name, compared with native synonyms[4] and synonyms[6]
+    and the independently parsed graph.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: refutes
+  summary: The correct 5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic-acid name
+    places carbamoyloxymethyl at position 3. Native synonyms[4] instead says position
+    4 under the same bicyclic numbering and contains malformed thiophen-2-enyl wording.
+    The native graph and another native exact synonym are coherent with position 3.
+    This is a localized name-string defect inherited from ChEBI, not a charge, stereochemistry
+    or whole-structure discrepancy.
+  snapshot_sha256: 35228cba49cc1c64a6e39c15641c2e7ffc036d1ef3b3c19b93bcea4ece4361ae
+- evidence_id: drugbank-other-xrefs
+  kind: database
+  reference: https://go.drugbank.com/drugs/DB01331; https://www.ebi.ac.uk/chebi/CHEBI:209807;
+    https://en.wikipedia.org/wiki/Cefoxitin
+  locator: Public DrugBank identity overview through web retrieval; official xref
+    attestation; encyclopedia identity section.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: partial
+  summary: DB01331 identifies cefoxitin with the matching full key, structure and
+    CAS. The encyclopedia link resolves to the same compound and CAS. ChEBI attests
+    HMDB0015426, LINCS LSM-5786, Beilstein4216947 and Reaxys4216947. HMDB page/MOL
+    attempts returned 403; LINCS failed certificate verification. Paid registry entries
+    were not inspected. Database statements about precursor fermentation, clinical
+    use or PBP targets were not converted into new producer, regulatory or exact primary
+    target claims.
+  snapshot_sha256: 7f90199cc143d6c709b4a2012c6acb5579c38912fd06a4c032227bc1f12aab8d
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/DE2129675A1/en; https://patents.google.com/patent/DE2203653A1/en;
+    https://patents.google.com/patent/US4297488A/en
+  locator: Selected descriptions and exact 7-methoxy/3-carbamoyloxymethyl/2-thienylacetamido
+    product passages, including DE2203653 Example 4 and US4297488 named thienyl-product
+    Step C.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: The inspected patent text contains preparation of the cefoxitin substitution
+    pattern, including free acid and salt steps. This establishes document relevance;
+    salt preparations do not redefine the neutral native graph. The review did not
+    examine every drawing or make a legal claim-scope assessment.
+  snapshot_sha256: 67847154c23dc2741595a40e610d403616e428986a2c4cea8543a98ed91064b3
+- evidence_id: gargis
+  kind: primary_source
+  reference: PMID:31996449; https://doi.org/10.1128/JCM.02038-19; https://pmc.ncbi.nlm.nih.gov/articles/PMC7098754/?page=1
+  locator: Full original letter and Table 1, including all footnotes and references.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: AR-0978, AR-0979 and AR-0997 have cefoxitin modal reference BMD MICs 16,
+    8 and 16 µg/mL, respectively, matching the native mg/L values. All are mecA positive,
+    CC5, with SCCmec VI, VI and IV, respectively. At least three tests by at least
+    three operators supplied each modal MIC. Table 1 classifies these as resistant
+    using CLSI M100 28th edition, with cefoxitin R ≥8 µg/mL. Automated-instrument
+    false susceptibility elsewhere in the study is distinct from these reference results.
+    The original PMC request challenged, but the public page=1 URL yielded the full
+    letter.
+  snapshot_sha256: 9477d03b44a56581653acf039afa4059393bcf6752c32f5e902773a00b38b38d
+- evidence_id: cdc
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/; exact seventeen URLs retained in
+    native activity_spectrum[3:20].evidence
+  locator: 'Each isolate page: isolate identity, BioSample, cefoxitin row, AST method,
+    interpretation footnotes and source details where present.'
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: 'All seventeen rows match: isolates 0074, 0346, 1305, 1149, 1150, 1151,
+    1152, 1153, 1158, 1160, 1162, 1163, 0701, 0702, 0637, 1329 and 1331 each report
+    >16 µg/mL and R. The native > qualifier and conversion to mg/L are correct. Pages
+    describe modal broth microdilution and CLSI 2025 M100 S35. For 0701/0702, cefoxitin
+    is the stated mecA-mediated oxacillin-resistance surrogate, already preserved
+    in native notes. The food, urine and wound source details checked for 0637, 1329
+    and 1331 also agree. These observations are isolate-specific and do not assert
+    universal taxon resistance.'
+  snapshot_sha256: 37b8d81949518c9408183ca35144002831df825a56f7c83a01a9adee0aa98f54
+- evidence_id: taxa-biosamples
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/; https://www.ncbi.nlm.nih.gov/taxonomy/;
+    exact native SAMN and NCBITaxon accessions
+  locator: All seventeen BioSample records, six native taxon records and detailed
+    E. cloacae/E. hormaechei lineages.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: The CDC-linked BioSample accessions and organism mappings agree. Six BioSamples
+    identify E. cloacae or E. hormaechei more narrowly than the CDC E. cloacae complex
+    label; both species lie within that complex, so retaining the exact CDC label
+    is not a mismatch. Where BioSample lacks an AR isolate string or uses a study
+    strain code, the CDC page explicitly supplies the accession link. No unobserved
+    genome or sequence identity is inferred.
+  snapshot_sha256: bb176d040afef343a7bc8383c8e5058dfbb3af2ac039007ae6828d073f6c621e
+- evidence_id: card
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/35927; individual linked ARO target
+    and resistance pages listed in 240-card-relations.json
+  locator: Complete cefoxitin entry and all twenty-four linked target/resistance identity,
+    definition, relationship and citation sections.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: All twenty-three native resistance terms explicitly confer resistance to
+    cefoxitin in current CARD; ARO:3000749 explicitly has the corresponding targeted-by
+    relationship. Their typed database provenance is retained. Porin loss, lower permeability
+    in a replacement/heterologous context and specific PBP4 mutations must not be
+    generalized to all intact proteins or all variants. The direct-binding PBP-family
+    edge remains PRIMARY_EVIDENCE_NEEDED; its current family page cites a review rather
+    than an exact experiment.
+  snapshot_sha256: 8005f33472514eb6e7f05c0691dbd8a633e73f5b982d7cd26f03a80dc70e6b48
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb datasets; search --organism s_aureus --dataset
+    staph_precise108 --query pbp4; search --organism m_tuberculosis --dataset modulome
+    --query blaC
+  locator: Read-only structured adapter run before broad web research, with PYTHONDONTWRITEBYTECODE=1
+    and --timeout 15.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: context_only
+  summary: The catalog was inspected for applicable organism datasets. The S. aureus
+    pbp4 search returned no genes or modules; the M. tuberculosis blaC search returned
+    Rv2068c beta-lactamase and no modules. No applicable dataset was present for several
+    other native organism contexts. These are bounded catalog/query results, not evidence
+    that the proteins or mechanisms are absent. No expression module was used, so
+    no module-summary claim or dataset annotation was introduced.
+  snapshot_sha256: 74bf38a8697e5d70544b203db4c6974e0653b5b5131111818f4af9a155717ddc
+- evidence_id: cfxa
+  kind: primary_source
+  reference: PMID:8517690; https://doi.org/10.1128/AAC.37.5.1028; https://pmc.ncbi.nlm.nih.gov/articles/PMC187887/
+  locator: All nine original scanned pages 1028–1036 personally read, including Table
+    1 on 1030, Table 2 on 1031, methods and discussion.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: refutes
+  summary: cfxA cloning and insertional disruption link this determinant to cefoxitin
+    resistance in the tested Bacteroides backgrounds. Table 1 reports 128 µg/mL for
+    an intact cfxA strain versus 8 µg/mL after disruption. Whole-cell HPLC shows substantial
+    cefoxitin degradation in positive strains. Table 2 instead reports <0.01% relative
+    cefoxitin activity in the short crude-extract assay; the authors explain this
+    slow rate. This is evidence against unqualified resistance to all beta-lactamases,
+    not evidence of rapid purified-enzyme turnover or universal resistance across
+    taxa.
+  snapshot_sha256: 2d18f3088dd0c19303d7b9b57b860cb11c7c45c270d1bc0248c27b70cc7c866a
+- evidence_id: faraci
+  kind: primary_source
+  reference: PMID:3487346; https://doi.org/10.1021/bi00358a030
+  locator: Complete available indexed abstract, explicitly truncated at 250 words;
+    full paper not inspected.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: The RTEM-2 study compares cefoxitin and specified analogues. It reports
+    poor substrate behaviour, a relatively stable acyl intermediate, effects of the
+    7-methoxy group on binding/acylation/deacylation and a contribution from the 3
+    leaving group. These enzyme-specific results support qualified stability wording.
+    They do not justify immunity to every beta-lactamase, and the exact experimental
+    details beyond the abstract remain unverified.
+  snapshot_sha256: bed3cc54c76b866f8d95df280c2c39cfdfe36b8b5d339d341567f4f6e96bca6e
+- evidence_id: pbp4
+  kind: primary_source
+  reference: PMID:34151961; https://doi.org/10.1093/jac/dkab201; https://pmc.ncbi.nlm.nih.gov/articles/PMC8633438/
+  locator: Entire main article text and figure captions; supplemental methods were
+    not inspected.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: 'The study tests specific PBP4 variants in an isogenic S. aureus background:
+    R200L improves growth at 3 mg/L cefoxitin, whereas E218K does not show the same
+    cefoxitin phenotype. Crystallography reports a covalent cefoxitin-derived acyl
+    adduct at Ser75, with loss of the carbamoyloxymethyl group. This is direct primary
+    target/resistance context for that protein and tested variants. Proposed changes
+    to substrate handling or protein stability remain hypotheses and should not be
+    encoded as established mechanisms.'
+  snapshot_sha256: 540a455994784d079c2e98e90907d7994e1d4a32cecec1fac44a152755cb8aec
+- evidence_id: adopted-allergy
+  kind: primary_source
+  reference: PMID:12569987; PMID:2083978
+  locator: Complete available indexed abstracts.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: context_only
+  summary: Both concern human IgE/antibody recognition and beta-lactam side-chain
+    cross-reactivity, with cefoxitin among the compared structures. They are relevant
+    to the allergen class context, not microbial PBP inhibition, MICs, biosynthetic
+    production or bacterial resistance. They do not supply exact quantitative primary
+    antimicrobial annotations.
+  snapshot_sha256: bed3cc54c76b866f8d95df280c2c39cfdfe36b8b5d339d341567f4f6e96bca6e
+- evidence_id: adopted-mechanism-leads
+  kind: primary_source
+  reference: PMID:17043131; PMID:17178800; PMID:17220412; PMID:17353248; PMID:18070972
+  locator: All available indexed abstracts read; downloaded full-text files were not
+    treated as fully read evidence.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: partial
+  summary: 17043131 studies Salmonella ciprofloxacin-associated efflux/target mechanisms;
+    17178800 concerns SHV-31 in a Klebsiella outbreak; 17220412 concerns TEM-151/152;
+    17353248 concerns SCO-1; and 18070972 concerns CAD-1. These are source citation
+    leads with organism/enzyme-specific scopes. Abstract-level information was not
+    transferred into an unqualified cefoxitin protein or resistance claim. Native
+    CARD entries retain their independent database citations.
+  snapshot_sha256: bed3cc54c76b866f8d95df280c2c39cfdfe36b8b5d339d341567f4f6e96bca6e
+- evidence_id: adopted-clinical-ast
+  kind: primary_source
+  reference: PMID:17387156; PMID:17923492; PMID:18056283
+  locator: Complete available abstracts of the first two; entire short original letter
+    and Table 1 for PMID18056283.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: partial
+  summary: 17387156 is a retrospective ESBL bloodstream-infection outcome study; 17923492
+    studies Dialister isolate susceptibility. Neither abstract alone supplies a new
+    exact-cefoxitin assay annotation. The 18056283 letter reports cefoxitin Etest
+    MICs of 64 µg/mL for K. pneumoniae GR, 4 for its E. coli transconjugant and 2
+    for the recipient under the cited CLSI context. The plasmid carries KPC-2 and
+    TEM-1; these observations do not isolate either enzyme as the sole cause of the
+    cefoxitin phenotype.
+  snapshot_sha256: ef0b00b760f8d7d369d9af29b4bdc8cbc8c060b6578f74c94816526a9c732cad
+- evidence_id: adopted-reviews
+  kind: database
+  reference: PMID:15673804; PMID:11585791; PMID:3055170
+  locator: Metadata of the first review; available abstract of the second; PBP-family
+    review citation metadata.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: context_only
+  summary: The two adopted ARO bibliography leads are beta-lactam resistance reviews,
+    not primary experiments. PMID15673804 had no abstract in the retrieved index.
+    The PBP-family page additionally cites the older review PMID3055170. These references
+    provide context or leads and were not relabelled as primary target evidence.
+  snapshot_sha256: 7ec44efd342f8cc3f4d2f263b6f75cee0eab2973bb236a86860251cc44fd6999
+- evidence_id: resistance-primary-leads
+  kind: primary_source
+  reference: PMID:37808287; 37529328; 36626997; 36504772; 35943258; 33416461; 30789204;
+    27645385; 25856195; 25136020; 24788109; 24132992; 21930874; 21388298; 20353175;
+    19258272; 16553832; 15699201; 14567756; 10217760; 9559791; 9353750; 9103972; 8787910;
+    8052644
+  locator: All available abstracts for exact current CARD citation leads; selected
+    original Table 2 and associated results/discussion for PMID33416461.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: partial
+  summary: These studies cover individual enzymes, porin perturbations, heterologous
+    expression and combined resistance backgrounds. Abstracts alone do not establish
+    every exact cefoxitin substrate/kinetic relationship. In PMID33416461, Table 2
+    tests cloned genes against listed beta-lactams but does not itself contain a cefoxitin
+    row; genotype-prediction performance and broader source edges should not be mistaken
+    for that missing direct assay. No new primary assertion was derived from uninspected
+    tables. Current CARD relationship provenance is verified separately.
+  snapshot_sha256: 7ec44efd342f8cc3f4d2f263b6f75cee0eab2973bb236a86860251cc44fd6999
+- evidence_id: search
+  kind: search
+  reference: 240-inclusive-file-hits.txt; public exact-cefoxitin, identifier, source-paper
+    and patent queries
+  locator: Hidden/ignored-inclusive local search plus bounded public primary/official
+    retrieval.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: context_only
+  summary: The local search found the native record, exact raw rows, queue/path locks,
+    drug maps and contextual generated/other-record mentions. It found no exact corrective
+    decision, curator overlay or CARD evidence-review override. Public searches and
+    original source links supplied the inspected chemical, AST and mechanistic evidence.
+    No search result was treated as proof of universal literature absence.
+  snapshot_sha256: b74fb94a3a8fae2b881ee853527e9fbc650ede9e7eec1d837af2a91cd4546099
+  search_scope: rg --no-ignore --hidden across data, curation, conf, scripts, src,
+    docs, .claude, reviews and reports for cefoxitin, CHEBI:209807, full key and exact
+    source identifiers; public exact drug, paper/DOI and patent searches.
+- evidence_id: validation
+  kind: validation
+  reference: 240-focused-results.json; 240-chemistry.json; 240-external-chemistry.json
+  locator: Actual focused commands; independent native and external structure parsing.
+  accessed_at: '2026-10-21T11:43:13Z'
+  support: supports
+  summary: Schema, strict and chemistry commands exit 0. Native SMILES and InChI agree
+    in full key, formula, charge, stereochemistry and exact mass; both source mints
+    reproduce. Nine external representations from six official services agree. These
+    gates do not detect the localized name-string or biological prose overgeneralization.
+  snapshot_sha256: 1fe5845399721a92fa34da03d719384fff6a557a6ff71f6226c0e0352993e524
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral cefoxitin graph and identifiers
+  outcome: supported
+  summary: The molecular graph, source mints, class mapping and inspected database
+    identities agree. The one malformed exact synonym does not change the correctly
+    stored structure. Inaccessible provider entries are bounded access limitations.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - chebi
+  - chemical-xrefs
+  - drugbank-other-xrefs
+  - validation
+- assessment_id: nomenclature
+  area: identity
+  topic: Exact systematic synonym
+  outcome: concern
+  summary: synonyms[4] gives position 4 on the same bicyclic parent for which the
+    graph and correct synonym require position 3. Its thiophen-2-enyl spelling also
+    needs repair. This remains a minor naming defect with the correct graph retained.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - record
+  - chebi
+  - systematic-name
+- assessment_id: enzyme-stability
+  area: evidence
+  topic: Definition beta-lactamase scope
+  outcome: concern
+  summary: Poor substrate behaviour for RTEM-2 does not support an unqualified claim
+    of resistance to beta-lactamase. Original CfxA genetic and degradation experiments
+    demonstrate a counterexample in their tested system. The definition should describe
+    enzyme-dependent relative stability.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - record
+  - chebi
+  - cfxa
+  - faraci
+- assessment_id: activity
+  area: evidence
+  topic: All twenty curated activity observations
+  outcome: supported
+  summary: The three exact primary-letter MICs, genotypes and methods agree, as do
+    all seventeen CDC rows, censoring qualifiers, source notes and interpretive qualifications.
+    Taxon identifiers and BioSample links are coherent; narrower BioSample species
+    within the E. cloacae complex are not contradictions.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - gargis
+  - cdc
+  - taxa-biosamples
+- assessment_id: targets
+  area: evidence
+  topic: PBP family target and primary scope
+  outcome: supported
+  summary: The current CARD family relation and maintained direct-binding protein
+    role agree with native qualified database scope. Specific PBP4 experiments provide
+    useful primary follow-up, but do not erase the native PRIMARY_EVIDENCE_NEEDED
+    qualifier for the broader family claim or establish a universal variant effect.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - source
+  - card
+  - pbp4
+  - adapter
+- assessment_id: resistance
+  area: evidence
+  topic: Twenty-three database resistance entries
+  outcome: supported
+  summary: All exact CARD edges resolve. Full CfxA experiments and PBP4 main text
+    independently support selected mechanisms with organism, variant and assay bounds.
+    Most other cited primary leads were abstract-level checks, so the review does
+    not claim every underlying exact substrate result was independently reproduced.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - card
+  - cfxa
+  - pbp4
+  - resistance-primary-leads
+- assessment_id: citations
+  area: evidence
+  topic: Adopted citation relevance and read scope
+  outcome: supported
+  summary: All thirteen adopted bibliography leads were dispositioned. Allergy studies,
+    outcome studies and reviews remain in their proper context; generic source bibliography
+    does not replace claim-level activity or protein evidence. Exact patents have
+    inspected product passages.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - adopted-allergy
+  - adopted-mechanism-leads
+  - adopted-clinical-ast
+  - adopted-reviews
+  - faraci
+  - patents
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanism, producer and dataset enrichment
+  outcome: unknown
+  summary: The absence of a causal graph, producer, expression dataset or regulatory
+    summary is not a required-field failure. Cephamycin C fermentation cannot be transferred
+    into a cefoxitin producer assertion. Optional protein enrichment would require
+    exact organism/variant/experimental qualification. No iModulon result informed
+    the biological verdict.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - record
+  - drugbank-other-xrefs
+  - adapter
+  - pbp4
+- assessment_id: ownership
+  area: ownership
+  topic: Reproducible field owners
+  outcome: supported
+  summary: The two findings belong to the adopted ChEBI definition/name path. CARD
+    roles and edges have their own raw tables and policy file, while curator activity
+    observations belong to the exact native record. All nineteen captured inputs remain
+    unchanged.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - source
+  - search
+  - validation
+- assessment_id: gates
+  area: schema
+  topic: Focused validation and chemical consistency
+  outcome: supported
+  summary: Focused schema/strict and chemical consistency checks pass; the two scientific/name
+    issues require source-aware curation rather than a schema-only repair.
+  target_ids:
+  - CHEBI:209807
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: cefoxitin-definition-enzyme-stability-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify the blanket beta-lactamase stability sentence
+  description: The ChEBI-derived definition says cefoxitin is resistant to beta-lactamase
+    without an enzyme or relative-stability qualifier. Original CfxA experiments show
+    cfxA-dependent resistance and cefoxitin degradation; their very slow short-assay
+    activity must remain distinguished from whole-cell HPLC degradation. The adopted
+    RTEM-2 abstract supports poor substrate behaviour for that enzyme, not universal
+    stability. Qualify the sentence to relative, enzyme-dependent stability or remove
+    the unsupported blanket wording.
+  target_ids:
+  - CHEBI:209807
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - chebi
+  - cfxa
+  - faraci
+  rule_id: 'native-review-checklist: exact identity and claim-level source support'
+  native_severity: minor
+  normalization_reason: The core cephamycin identity and antibacterial classification
+    are correct. This is a bounded overgeneralization in a descriptive sentence, not
+    a claim that cefoxitin is unstable to every beta-lactamase or that every resistant
+    isolate uses CfxA.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition and exact synonym source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI extraction or narrowly scoped correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and synonym owner
+- finding_id: F2
+  issue_key: cefoxitin-exact-synonym-bicyclic-locant
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Repair the exact synonym with the wrong bicyclic substituent locant
+  description: synonyms[4] uses 4-[(carbamoyloxy)methyl] on 5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic
+    acid, whereas the stored graph, another exact synonym and official PubChem computed
+    name place that group at position 3. The same string contains malformed thiophen-2-enyl
+    wording. Correct or remove this exact-name assertion through the maintained ChEBI
+    source path while preserving the coherent native molecular structure.
+  target_ids:
+  - CHEBI:209807
+  field_paths:
+  - synonyms[4].synonym_text
+  evidence_ids:
+  - record
+  - chebi
+  - systematic-name
+  - chemical-xrefs
+  rule_id: 'native-review-checklist: exact identity and claim-level source support'
+  native_severity: minor
+  normalization_reason: A single inherited systematic-name string is wrong; the authoritative
+    graph, stereochemistry, formula, full key and other identifiers agree. This does
+    not warrant replacing the structure or changing exact grounding.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition and exact synonym source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI extraction or narrowly scoped correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and synonym owner
+actions:
+- action_id: A1
+  description: Qualify cefoxitin enzyme stability in the maintained definition source.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:209807
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition and exact synonym source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI extraction or narrowly scoped correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and synonym owner
+  acceptance_checks:
+  - Use source-supported wording that distinguishes relative stability toward particular
+    beta-lactamases from universal protection. Preserve the semisynthetic cephamycin
+    and substitution description.
+  - If quantitative mechanism evidence is added, preserve the CfxA organism/genetic
+    background and distinguish whole-cell degradation from the crude-extract short
+    assay; do not infer a rapid purified turnover constant.
+  - Reproduce the corrected field through the maintained inventory/extractor/seeder,
+    then run focused schema/strict, provenance and applicable reproducibility/shared
+    gates after separately authorized curation.
+- action_id: A2
+  description: Repair or remove the malformed systematic exact synonym.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:209807
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted definition and exact synonym source
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI extraction or narrowly scoped correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated definition and synonym owner
+  acceptance_checks:
+  - Verify the corrected name against the existing neutral 6R,7S graph, including
+    bicyclic position 3 and the thiophen-2-ylacetyl side chain. A shared scaffold
+    name or a different numbering convention must not conceal the wrong locant on
+    the same stated parent.
+  - Preserve the correct SMILES, InChI, full key, formula, source mints and activity
+    observations. Do not change molecular identity to fit the erroneous alias.
+  - Implement a reproducible source correction, inspect the regenerated synonym list
+    and run focused schema/strict, chemical identity and provenance checks.
+limitations:
+- The entire native record and maintained exact source rows were read. Initial thirteen
+  input hashes were preserved, with six actual ARO/target-policy inputs appended before
+  assessment; all nineteen were rehashed unchanged.
+- All twenty native activity observations were checked against their exact source
+  pages or full primary letter. Source MIC units were converted only by the exact
+  equivalence 1 µg/mL = 1 mg/L. Assay references identify cefoxitin as the tested
+  drug but do not establish the isolated neutral solid or commercial counterion in
+  every experiment.
+- The CfxA paper was personally read from all nine original scans. The PBP4 main article
+  and figure captions were read in full, but its supplemental methods were not inspected.
+  PMID33416461 was checked selectively for relevant results and Table 2, not read
+  in full.
+- All thirteen adopted ChEBI/ARO citation leads were assessed at the stated scope.
+  Faraci PMID3487346 provides only an indexed abstract marked truncated at 250 words;
+  PMID15673804 has metadata without an abstract. Most other adopted or CARD-linked
+  primary papers were read at abstract level. Downloading their full-text files was
+  not counted as reading their tables or validating every underlying edge.
+- The current CARD target and twenty-three resistance relationships are verified as
+  database assertions. Except for the specifically inspected primary studies, exact
+  organism, expression, variant, MIC and enzyme-kinetic support remains a bounded
+  follow-up rather than a fully completed primary-mechanism audit.
+- HMDB0015426 was officially attested but public page and MOL retrieval returned 403;
+  LINCS LSM-5786 failed certificate verification. Paid CAS Registry, Beilstein and
+  Reaxys contents were not accessed. DrugBank public identity was inspected through
+  web retrieval.
+- Patent inspection establishes relevant chemical product passages, not complete visual
+  reading of every page or a legal claim interpretation.
+- Structured iModulonDB catalog/search checks preceded web research for native protein
+  assertions. No expression module or causal inference resulted. Optional absence
+  of a producer, dataset, graph or clinical-status summary was not treated as an error.
+  Native status remains SEEDED.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.

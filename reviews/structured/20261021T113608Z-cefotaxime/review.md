@@ -1,0 +1,2002 @@
+# Cefotaxime: exact acid, verified isolate observations and qualified resistance evidence
+
+- Review: 20261021T113608Z-cefotaxime
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:21:17Z
+- Finished UTC: 2026-10-21T11:36:08Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+No confirmed native defect. Neutral (6R,7R), Z-oxime cefotaxime is structurally coherent and accessible exact xrefs agree. All nineteen CDC MIC observations match their sources. The twenty resistance entries explicitly retain database evidence, and the PBP target is marked PRIMARY_EVIDENCE_NEEDED. Primary papers support bounded enrichment while distinguishing relative MIC shifts, enzyme activity, porin background, organism-specific PBP numbering and reagent form from clinical resistance. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole-record review of cefotaxime, including nineteen activity observations, twenty database resistance assertions and one PBP target.
+
+Selection: Queue 233 in isolated batch 024; preserved original capture and appended actual ARO inventory/edge and curator-owned inputs before judgment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:204928 | data/antibiotics/antibacterial/cefotaxime.yaml | generated | cefotaxime |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | CHEBI:204928 | Actual focused command passed with zero errors. |
+| Focused strict | passed | True | CHEBI:204928 | Actual focused command passed with zero errors. |
+| Molecular encodings and source mints | passed | True | CHEBI:204928 | Both encodings agree on exact key, neutral formula, masses and two R centres; both mints agree. |
+| Authoritative full QC | failed | True | CHEBI:204928 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:204928 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:204928 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:204928 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:204928 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:204928 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:204928 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:204928 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:204928 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Neutral active cefotaxime
+
+identity: supported. Targets: CHEBI:204928.
+
+Both encodings and complete current PubChem, ChEMBL, CAS and CCD mappings agree, with 6R,7R and Z oxime. Sodium, metabolite and combinations retain distinct boundaries.
+
+### Parents and antibacterial eligibility
+
+grounding: supported. Targets: CHEBI:204928.
+
+Graph supports all three chemical parents and cephalosporin class. Live observations and compound-specific primary assays establish antibacterial eligibility.
+
+### Exact/drug/document scope
+
+grounding: unknown. Targets: CHEBI:204928.
+
+Accessible complete structure xrefs agree; all four patents concern relevant cephem chemistry, with strongest exact syn-acid claims in US4152432/DE2702501. DrugBank and independent proprietary registry detail remain uninspected.
+
+### Nineteen native CDC observations
+
+evidence: supported. Targets: CHEBI:204928.
+
+All nineteen values, qualifiers, interpretation footers and source accessions agree. Enterobacter species-level BioSample refinements and the broader Salmonella sample label are preserved alongside the CDC taxon.
+
+### PBP family assertion and exact primary experiment
+
+evidence: supported. Targets: CHEBI:204928.
+
+The native target is honestly marked PRIMARY_EVIDENCE_NEEDED. The 2023 gonococcal membrane study supplies optional direct competition evidence with explicit organism/PBP numbering and unresolved supplier-material form; it does not convert a generic E. coli target into gonococcal PBP2 without annotation.
+
+### Twenty typed database assertions
+
+evidence: supported. Targets: CHEBI:204928.
+
+All twenty current CARD terms retain the exact cefotaxime relation and mechanism type. Primary follow-up illustrates bounded transporter, porin, mutant and weak-hydrolysis contexts; no automatic clinical phenotype is assigned.
+
+### Unresolved strength of individual source claims
+
+evidence: unknown. Targets: CHEBI:204928.
+
+AbcA inspected drug panel lacks cefotaxime; VIM63 distinct primary lead was not exposed. Other source-linked enzyme abstracts are not a complete kinetic audit. These remain typed database claims, with follow-up rather than an unsupported hard deletion.
+
+### Eleven inventory PMID dispositions
+
+evidence: supported. Targets: CHEBI:204928.
+
+Every adopted PMID abstract was inspected and assigned to primary activity, derivative/comparator, immunochemistry or review context. None is indiscriminately used as whole-record proof.
+
+### Maintained ownership and eighteen history events
+
+provenance: supported. Targets: CHEBI:204928.
+
+Both source mints and five seed/reseed events are coherent; later curator events account for nineteen CDC records and BioSample structuring. Original captures remain unchanged, and SEEDED is not promoted.
+
+### Unpopulated clinical/producer/graph fields
+
+scope: not_applicable. Targets: CHEBI:204928.
+
+No native clinical-status, natural-producer or causal-graph claim is made. Historical clinical review recommendations and donor-strain origin are not transferred.
+
+### Optional enrichment
+
+completeness: supported. Targets: CHEBI:204928.
+
+Concrete primary target and resistance experiments can enrich the record under separate curation, preserving material and genotype context. Empty optional fields alone are not defects.
+
+### Focused native gates
+
+schema: supported. Targets: CHEBI:204928.
+
+Schema/strict and independent molecular/mint checks pass. Scientific review is separate from deterministic validation.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally replace or supplement the provisional PBP database evidence with exact primary experiments.
+
+- Preserve N. gonorrhoeae ATCC 19424/49226 membrane preparations,30 min at 37°C competition and 25 µM Bocillin FL from DOI 10.1128/spectrum.00692-23. Do not equate IC50 with MIC or Kd.
+- Retain organism-specific numbering: gonococcal PBP2 corresponds to E. coli PBP3, and a family-level ontology grounding remains separate from a concrete protein example.
+- Resolve Laboratorios Normon formulation/counterion before asserting exact free-acid reagent identity or transferring quantitative mass-based activity without qualification.
+- Run native schema/strict and applicable term/reference/evidence/history/corpus checks after separately authorized curation.
+
+### A2
+
+Qualify primary resistance evidence before strengthening database claims.
+
+- For OmpK37 retain the porin-deficient beta-lactamase-producing background and comparison with OmpK35/OmpK36; high OmpK37 reduces MIC relative to the no-porin control while remaining less permeable than the major porins.
+- For CmeABC/CmeR distinguish transcriptional regulation from direct drug transport, retain modest MIC shifts and experimental conditions. For S. pyogenes T553K distinguish reduced susceptibility from clinical resistance and disclose the abstract-versus-Results fold difference.
+- For SCO-1 retain both 2007 papers: unchanged low MIC in one clone system and weak measurable kinetics/twofold MIC shift in another. Donor multienzyme resistance is not solely SCO-1.
+- Find cefotaxime-specific AbcA primary evidence and an identifiable VIM63 experimental source before promoting those database entries. H. influenzae correlated SNPs do not isolate each mutation causally.
+
+### A3
+
+Preserve activity/source identity boundaries during any later enrichment.
+
+- Keep all CDC values, greater-than qualifiers and exact breakpoint editions, including absent edition for 0033. Preserve separate inhibitor-combination rows and source-level species refinements.
+- Treat US4152432/DE2702501 syn free acid separately from sodium, hydrates, solvates and anti isomer; map individual compounds in broader patents before numeric transfer.
+- Resolve remaining DrugBank/Beilstein/Reaxys detail through permissible source access; access failure alone is not a correction.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/cefotaxime.yaml; Entire YAML | supports | Read exact identity, definition, parents/roles/class, nineteen activity_spectrum rows and evidence, complete structure and all exact/drug/document xrefs, two source concepts, twenty resistance entries, one target and eighteen history events. Native has no clinical-status, producer or causal-graph claims. |
+| owners | data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv;data/raw/aro_resistance_edges.tsv;data/raw/aro_target_edges.tsv; ChEBI row 2881;ARO inventory row 145;resistance rows 3034–3053;target row 162 | supports | Actual inventories/edges own the source-derived identity/class, database resistance and PBP claims. The native file owns curated CDC observations/history. Additional NCBI AST mapping context explicitly distinguishes neutral cefotaxime from sodium and inhibitor combinations; it is not the owner of these CDC measurements. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:204928; Current structure and ontology | supports | Matches neutral C16H17N5O7S2, complete key GPRBEKHLDVQUJE-QSWIMTSFSA-N, (6R,7R), Z oxime, cephalosporin/1,3-thiazole/oxime O-ether parents. Primary activity supports antibiotic/antibacterial roles; current additional role annotations do not require optional-field expansion. |
+| chemistry | Independent RDKit2026.03.5 checks; 233-chemistry.json | supports | SMILES and InChI reproduce one neutral fragment, formula, complete key,455.474 average/455.05694 exact mass and two R centres. Z oxime is explicit. Both source mints agree. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/5742673; Current complete structure | supports | CID5742673 matches the exact neutral cefotaxime stereochemical structure, including Z oxime. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1730.json; Complete current molecule | supports | CHEMBL1730 matches the exact acid formula and full key; no hydrate or counterion is introduced. |
+| cas | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/63527-52-6/JSON; CAS lookup | supports | CAS63527-52-6 resolves to CID5742673 and the complete neutral stereochemical structure. |
+| pdb | https://files.rcsb.org/ligands/download/CE3.cif; CCD CE3 descriptors and atom/bond model | supports | CE3 has the matching InChI/full key and stereochemical names/canonical SMILES. This is exact component identity; mere inclusion in CCD does not establish a particular protein interaction. |
+| kegg-compound | https://rest.kegg.jp/get/C06885; Compound identity | supports | C06885 identifies cefotaxime with the matching molecular formula and cephalosporin framework. |
+| registries | https://www.ebi.ac.uk/chebi/CHEBI:204928; Beilstein1096643 and Reaxys1096643 | partial | The exact ChEBI entry retains both registry mappings. Independent proprietary registry detail was not inspected through free access; no mismatch is demonstrated. |
+| aro-identity | https://card.mcmaster.ca/aro/3000645; Current cefotaxime record | supports | ARO identity/class and exact neutral structure agree. Its broad beta-lactamase-stability prose is database context; it is not expanded into universal stability, especially given the native resistant-isolate observations. |
+| drugcentral | https://drugcentral.org/drugcard/546; Drug-level cefotaxime entry | supports | DrugCentral 546 resolves cefotaxime, CAS 63527-52-6 and C16H17N5O7S2. Its synonym list also includes cefotaxime sodium; drug-level forms, dosing and clinical-use information are not exact free-acid material or current jurisdiction-specific approval assertions. |
+| kegg-drug | https://rest.kegg.jp/get/D07647; Drug D07647 | supports | D07647 identifies cefotaxime; broader product/formulation and generic PBP annotations remain drug/database context. |
+| drugbank | https://go.drugbank.com/drugs/DB00493; Free access boundary | unknown | Direct detailed retrieval returned HTTP403; ChEBI retains the DB00493 drug mapping. No deletion or identity error is inferred from access failure. |
+| patent-us4152432 | https://patents.google.com/patent/US4152432A/en; Claims 3–8; syn acid versus sodium/hydrate examples | supports | The patent explicitly claims the matching syn methoxyimino aminothiazole acetoxymethyl cephalosporanic acid and separately its sodium, crystalline and hydrated/solvated forms. Anti isomer, other oxime ethers and salts also occur in the document; numeric activity is not indiscriminately transferred. |
+| patent-de2702501 | https://patents.google.com/patent/DE2702501A1/en; Original German claims 5–8 and corresponding displayed text | supports | The claims separately name matching acid, sodium salt and syn isomers. This is relevant cefotaxime chemistry documentation, with salts/solvates distinct from the native acid. |
+| patent-us4098888 | https://patents.google.com/patent/US4098888A/en; Description and methoxyimino aminothiazole cephalosporanic-acid preparation | partial | The broader cephem patent includes the methoxyimino aminothiazole cephalosporanic-acid framework, tert-butyl intermediate and trifluoroacetate material. It is related chemistry rather than a unique exact-form assay citation; syn/anti assignment for that preparation was not fully resolved. References in its cited-by list are not substituted for its own text. |
+| patent-de2556736 | https://patents.google.com/patent/DE2556736A1/en; Cephem compounds; original description and claims | partial | The German cephem-derivative patent is relevant chemical-series documentation. Its broad Markush and preparative scope does not establish every example as exact neutral cefotaxime; individual structure/stereo mapping is required before assay transfer. |
+| wikipedia | https://en.wikipedia.org/wiki/Cefotaxime; Document identity | context_only | Resolves the named cefotaxime document. Not used as primary antibacterial, molecular or clinical evidence. |
+| taxa | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=562,573,470,354276,90371&amp;retmode=xml; Current native organism identifiers | supports | All native taxa resolve correctly, including Enterobacter cloacae complex 354276 and Salmonella enterica subsp.enterica serovar Typhimurium 90371. CDC explicitly names Typhimurium; its BioSample uses the broader S. enterica label, not an independently sequenced serovar assertion. |
+| complex-taxonomy | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=550,158836,90371&amp;retmode=xml; Species within native complex | supports | E. cloacae 550 and E. hormaechei 158836 are within the E. cloacae complex lineage. BioSamples for 1150 versus 1151/1152/1160 name those more specific species; native retains the CDC complex label and does not misidentify their accession. |
+| cdc-audit | All nineteen live CDC/BioSample pairs; 233-cdc-verification.json | supports | Every MIC, greater-than qualifier and R interpretation agrees, with matching strain/accession linkage and source-specific CLSI 2025/2024/2020 or absent versioned footer. µg/mL converts 1:1 to mg/L. Source/MLST notes for 0495/0033/0078/0083/0539 also match the CDC pages. |
+| pbp-database | https://card.mcmaster.ca/aro/3000749; Current targeted_by_antibiotic relation and definition | supports | The PBP ontology term retains cefotaxime as target-linked antibiotic. Native explicitly marks PRIMARY_EVIDENCE_NEEDED and unspecified organism/assay; the database family term is not an asserted species-specific experimental protein. |
+| pbp-primary | https://doi.org/10.1128/spectrum.00692-23; PMID37093051/PMC10269775; Methods, Table 2 CTX column and Results | supports | Cefotaxime from Laboratorios Normon was tested in membrane preparations of N. gonorrhoeae ATCC 19424/49226. After 30 min at 37°C, competition with 25 µM Bocillin FL gave PBP2 IC50=0.01 mg/L in both, with MIC 0.004/0.008 mg/L. Higher-concentration PBP1/PBP3 binding was also measured. Gonococcal PBP2 is the E. coli PBP3 homolog: preserve organism numbering. Counterion/formulation was not specified beyond supplier. IC50 is not Kd or MIC. |
+| cmer | https://doi.org/10.1128/AAC.49.3.1067-1075.2005; PMID15728904; Methods, Table 4 and Results/Discussion | supports | C. jejuni 81-176 cefotaxime MIC 0.390 µg/mL increased to 0.780 in cmeR mutant JL107 and 1.56 in selected CR3e. CmeR disruption/promoter change enhanced CmeABC expression; direct biochemical binding is CmeR-to-promoter, not cefotaxime-to-pump. Sigma cefotaxime and microaerophilic 42°C/2-day MH broth conditions are reported. The authors explicitly qualify modest shifts and possible pleiotropy. |
+| ompk37 | https://doi.org/10.1128/JB.181.9.2726-2732.1999; PMID10217760; Methods, Table 3 and Results/Discussion | supports | In a beta-lactamase-producing porin-deficient K. pneumoniae background, cefotaxime MIC 512 µg/mL fell to 128 with high OmpK37 expression, versus 4 with OmpK35 or OmpK36. Thus OmpK37 is less permeable than alternative porins; it is not a universal resistance-producing gain relative to the no-porin parent. Medium/expression controls are explicit. |
+| abca | https://doi.org/10.1128/JB.01406-13; PMID24509312; complete drug list, Methods, Table 3 and discussion | partial | The inspected AbcA study establishes strain-dependent responses to other cell-envelope agents, notably moenomycin, but does not provide a cefotaxime experiment in its drug panel. The database cefotaxime relation remains at database level; this paper alone cannot promote it to primary cefotaxime efflux proof. |
+| pbp2x | https://doi.org/10.1093/cid/ciz1000; PMID31630171; Methods, Table 1, Results and discussion | supports | Near-isogenic clinical S. pyogenes isolates with pbp2x T553K showed low cefotaxime MICs around 0.06 µg/mL, below the stated 0.5 susceptible cutoff. Abstract says threefold, Results describes twofold relative shift; preserve the source discrepancy instead of inventing clinical resistance. This is a qualified reduced-susceptibility observation, not a universal wild-type PBP2x effect. |
+| hinfluenzae | https://doi.org/10.1186/s13104-018-3169-0; PMID29352811/PMC5775570; clinical-isolate Methods, Figure 2 description and limitations | supports | The H. influenzae study correlates ftsI/PBP SNP patterns with beta-lactam MICs, including cefotaxime; it does not isolate every substitution causally. The authors note correlated SNPs, small sample size and possible H. haemolyticus misclassification for two isolates. Native database family-level evidence is not promoted to direct mutant binding. |
+| sco-ecoli | https://doi.org/10.1128/AAC.01439-06; PMID17353248; Tables 1–2 and biochemical methods | supports | SCO-1 clone and empty E. coli DH5α control both have cefotaxime MIC ≤0.12 µg/mL, whereas a multienzyme plasmid gives higher MICs. Relative cefotaxime hydrolysis is &lt;1 with penicillinG=100. This bounded low-activity result cautions against attributing the multienzyme phenotype solely to SCO-1. |
+| sco-acinetobacter | https://doi.org/10.1128/AAC.01600-06; PMID17420213; Tables 2–3 and Methods | supports | A separate SCO-1 expression experiment gives E. coli TOP10 clone cefotaxime MIC 0.25 versus 0.12 µg/mL control and purified-enzyme kcat 0.1 s−1, Km 2000 µM. This is weak but measurable hydrolysis/a small MIC shift; donor Acinetobacter with additional enzymes has much higher MIC. Preserve assay differences rather than claiming no cefotaxime hydrolysis or generalized high-level resistance. |
+| aro-leads | https://www.ebi.ac.uk/europepmc/webservices/rest/search; 233-aro-leads.json;28 source-linked abstracts | partial | All 28 abstracts were inspected. ACC2/ACC4, ACI1, CMY136, PRC1, KPC123 and other enzyme reports supply bounded cloning/kinetics leads; review, plasmid-sequence and genome-comparison sources are distinguished. VIM63 has no distinct primary citation beyond the general CARD paper in the inspected entry. This review does not claim full primary adjudication of all twenty database edges. |
+| adapter | kg-microbe-sources imodulondb; 233-adapter-results.json; catalog and native-claim context | context_only | The structured check preceded web mechanism follow-up. e_coli/precise1k/ftsI found b0084; s_aureus/staph_precise108/abcA and s_pyogenes/modulome/pbp2x returned no hits. No iModulon hits required summarize. The catalog lacked Campylobacter/Klebsiella/Serratia/Haemophilus datasets; absence is not negative mechanism evidence. |
+| search | Ignored-inclusive repository and public-source inspection; 233-local-hits.txt;233-owner-hits.txt | context_only | Hidden/ignored files were included outside .git/.venv. Exact native/raw/generated ownership and historical leads were distinguished, all adopted citation leads inspected, and source-linked primary follow-ups evaluated at the stated text level. |
+| gates | Actual focused native checks; 233-focused-results.json;233-validation.tsv | supports | Schema/strict, molecular consistency and mint checks pass. All expanded input hashes were rechecked unchanged. |
+| adopted-2083516 | https://doi.org/10.2165/00003495-199040040-00008; Adopted PMID2083516; inspected abstract | context_only | Pharmacology/therapeutic-use review. It separates active desacetyl metabolite and combination effects from parent cefotaxime; not primary PBP evidence. |
+| adopted-10866367 | https://doi.org/10.1016/s0960-894x(00)00130-x; Adopted PMID10866367; inspected abstract | partial | Synthesis/activity of novel C3 N-linked quaternary-ammonium cephalosporins. Abstract does not establish a unique cefotaxime assay; derivative results are not transferred. |
+| adopted-11034276 | https://doi.org/10.1111/j.1574-6968.2000.tb09283.x; Adopted PMID11034276; inspected abstract | context_only | Review of ESBL treatment options. Historical therapeutic discussion and inoculum effects do not establish an exact protein assay or current clinical recommendation. |
+| adopted-11061623 | https://pubmed.ncbi.nlm.nih.gov/11061623/; Adopted PMID11061623; inspected abstract | partial | Thirty water A. hydrophila isolates were tested; abstract names cefotaxime as the most active beta-lactam. Material/protocol/numeric details are not established at abstract level. |
+| adopted-11677129 | https://doi.org/10.1016/s0960-894x(01)00587-x; Adopted PMID11677129; inspected abstract | partial | Alpha-trifluoroketoacetamide/enol SAR, with cefotaxime at most a contextual/comparator lead. Abstract does not support a cefotaxime-specific target claim. |
+| adopted-12833570 | https://doi.org/10.1002/jmr.621; Adopted PMID12833570; inspected abstract | partial | Synthetic cephalosporin antigenic determinants and IgE/RAST inhibition. Protein-conjugated hapten recognition is not antibacterial target binding. |
+| adopted-1384868 | https://doi.org/10.1159/000236216; Adopted PMID1384868; inspected abstract | partial | Aztreonam monoclonal-antibody epitope study using beta-lactam/HSA conjugates. Immunological cross-reaction is not antibacterial PBP inhibition. |
+| adopted-14512220 | https://doi.org/10.1016/j.ijantimicag.2003.08.005; Adopted PMID14512220; inspected abstract | context_only | NCCLS breakpoint perspective/review; historical pneumococcal nonmeningeal breakpoint changes are not the current CDC isolate editions. |
+| adopted-1502708 | https://doi.org/10.1046/j.1537-2995.1992.32692367200.x; Adopted PMID1502708; inspected abstract | partial | Gel-test study of drug-dependent red-cell antibodies includes one cefotaxime case. Host immune complexes are separate from bacterial targets. |
+| adopted-15164972 | https://doi.org/10.1016/j.ijantimicag.2003.07.018; Adopted PMID15164972; inspected abstract | partial | ARISE clinical respiratory-isolate survey includes H. influenzae,H. parainfluenzae and M. catarrhalis; cefotaxime is active in that panel. No transfer to current CDC strain measurements. |
+| adopted-15361989 | https://doi.org/10.1590/s1413-86702004000200001; Adopted PMID15361989; inspected abstract | partial | Surgical-infection microbiology reports cefotaxime among active agents for tested Gram-negative isolates. Aggregate historical susceptibility is not universal efficacy or exact single-strain data. |
+| aro-3000773 | https://card.mcmaster.ca/aro/3000773; Current definition/classification and exact cefotaxime edge | supports | ARO:3000773 resolves to CmeABC, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_EFFLUX. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3000930 | https://card.mcmaster.ca/aro/3000930; Current definition/classification and exact cefotaxime edge | supports | ARO:3000930 resolves to TEM-61, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3001815 | https://card.mcmaster.ca/aro/3001815; Current definition/classification and exact cefotaxime edge | supports | ARO:3001815 resolves to ACC-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3001816 | https://card.mcmaster.ca/aro/3001816; Current definition/classification and exact cefotaxime edge | supports | ARO:3001816 resolves to ACC-2, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3001818 | https://card.mcmaster.ca/aro/3001818; Current definition/classification and exact cefotaxime edge | supports | ARO:3001818 resolves to ACC-4, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3003942 | https://card.mcmaster.ca/aro/3003942; Current definition/classification and exact cefotaxime edge | supports | ARO:3003942 resolves to abcA, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_EFFLUX. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3004122 | https://card.mcmaster.ca/aro/3004122; Current definition/classification and exact cefotaxime edge | supports | ARO:3004122 resolves to Klebsiella pneumoniae OmpK37, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type REDUCED_PERMEABILITY. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3004128 | https://card.mcmaster.ca/aro/3004128; Current definition/classification and exact cefotaxime edge | supports | ARO:3004128 resolves to Serratia marcescens Omp1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type REDUCED_PERMEABILITY. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3004359 | https://card.mcmaster.ca/aro/3004359; Current definition/classification and exact cefotaxime edge | supports | ARO:3004359 resolves to ACI-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3004446 | https://card.mcmaster.ca/aro/3004446; Current definition/classification and exact cefotaxime edge | supports | ARO:3004446 resolves to Haemophilus influenzae PBP3 conferring resistance to beta-lactam antibiotics, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_TARGET_ALTERATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3004559 | https://card.mcmaster.ca/aro/3004559; Current definition/classification and exact cefotaxime edge | supports | ARO:3004559 resolves to CAM-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3004854 | https://card.mcmaster.ca/aro/3004854; Current definition/classification and exact cefotaxime edge | supports | ARO:3004854 resolves to CMY-136, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3004856 | https://card.mcmaster.ca/aro/3004856; Current definition/classification and exact cefotaxime edge | supports | ARO:3004856 resolves to SCO-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3005015 | https://card.mcmaster.ca/aro/3005015; Current definition/classification and exact cefotaxime edge | supports | ARO:3005015 resolves to VMB-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3005511 | https://card.mcmaster.ca/aro/3005511; Current definition/classification and exact cefotaxime edge | supports | ARO:3005511 resolves to VIM-63, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3007062 | https://card.mcmaster.ca/aro/3007062; Current definition/classification and exact cefotaxime edge | supports | ARO:3007062 resolves to VAM-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3007085 | https://card.mcmaster.ca/aro/3007085; Current definition/classification and exact cefotaxime edge | supports | ARO:3007085 resolves to PRC-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3007196 | https://card.mcmaster.ca/aro/3007196; Current definition/classification and exact cefotaxime edge | supports | ARO:3007196 resolves to KPC-123, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3007374 | https://card.mcmaster.ca/aro/3007374; Current definition/classification and exact cefotaxime edge | supports | ARO:3007374 resolves to PJM-1, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| aro-3007531 | https://card.mcmaster.ca/aro/3007531; Current definition/classification and exact cefotaxime edge | supports | ARO:3007531 resolves to Streptococcus pyogenes PBP2x conferring resistance to beta-lactam antibiotics, retains cefotaxime confers_resistance_to_antibiotic, and is consistent with native mechanism type ANTIBIOTIC_TARGET_ALTERATION. The native evidence explicitly says database assertion; this is not blanket primary or clinical resistance validation. |
+| cdc-1 | https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&amp;PanelID=10; Isolate 0349; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-1 | https://www.ncbi.nlm.nih.gov/biosample/SAMN11953777; SAMN11953777; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-2 | https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&amp;PanelID=10; Isolate 0497; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-2 | https://www.ncbi.nlm.nih.gov/biosample/SAMN11953783; SAMN11953783; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-3 | https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&amp;PanelID=1; Isolate 0297; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2024 M100 S34; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-3 | https://www.ncbi.nlm.nih.gov/biosample/SAMN04901687; SAMN04901687; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-4 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&amp;PanelID=10; Isolate 0346; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-4 | https://www.ncbi.nlm.nih.gov/biosample/SAMN11953774; SAMN11953774; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-5 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&amp;PanelID=1247; Isolate 1305; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-5 | https://www.ncbi.nlm.nih.gov/biosample/SAMN46941623; SAMN46941623; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-6 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10440&amp;PanelID=1247; Isolate 1149; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-6 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111336; SAMN34111336; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-7 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10441&amp;PanelID=1247; Isolate 1150; cefotaxime monotherapy row and footer | supports | Live source reports 32 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-7 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111337; SAMN34111337; full sample record | supports | BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160, a refinement within the native/CDC E. cloacae complex. |
+| cdc-8 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10442&amp;PanelID=1247; Isolate 1151; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-8 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111338; SAMN34111338; full sample record | supports | BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160, a refinement within the native/CDC E. cloacae complex. |
+| cdc-9 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10443&amp;PanelID=1247; Isolate 1152; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-9 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111339; SAMN34111339; full sample record | supports | BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160, a refinement within the native/CDC E. cloacae complex. |
+| cdc-10 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&amp;PanelID=1247; Isolate 1153; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-10 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111340; SAMN34111340; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-11 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10449&amp;PanelID=1247; Isolate 1158; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-11 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111344; SAMN34111344; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-12 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10451&amp;PanelID=1247; Isolate 1160; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-12 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111346; SAMN34111346; full sample record | supports | BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160, a refinement within the native/CDC E. cloacae complex. |
+| cdc-13 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10453&amp;PanelID=1247; Isolate 1162; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-13 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111348; SAMN34111348; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-14 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&amp;PanelID=1247; Isolate 1163; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-14 | https://www.ncbi.nlm.nih.gov/biosample/SAMN34111349; SAMN34111349; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-15 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=495&amp;PanelID=10; Isolate 0495; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-15 | https://www.ncbi.nlm.nih.gov/biosample/SAMN11953781; SAMN11953781; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-16 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&amp;PanelID=1227; Isolate 0033; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and no versioned CLSI footnote; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-16 | https://www.ncbi.nlm.nih.gov/biosample/SAMN04014874; SAMN04014874; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-17 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&amp;PanelID=1227; Isolate 0078; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2024 M100 S34; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-17 | https://www.ncbi.nlm.nih.gov/biosample/SAMN04014919; SAMN04014919; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-18 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&amp;PanelID=1227; Isolate 0083; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2020 M100 S30; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-18 | https://www.ncbi.nlm.nih.gov/biosample/SAMN04014924; SAMN04014924; full sample record | supports | The live sample identifier and taxon support the source accession linkage. |
+| cdc-19 | https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=539&amp;PanelID=10; Isolate 0539; cefotaxime monotherapy row and footer | supports | Live source reports &gt;64 µg/mL, R, modal broth microdilution and CLSI 2025 M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the page are kept separate. |
+| biosample-19 | https://www.ncbi.nlm.nih.gov/biosample/SAMN07688908; SAMN07688908; full sample record | supports | BioSample uses S. enterica and source strain 2008AR-0009; CDC explicitly maps this accession to AR 0539 and Typhimurium. The BioSample alone does not establish the serovar. |
+
+## Limits And Additional Notes
+
+- DrugBank detailed access returned 403; independent Beilstein/Reaxys contents were not inspected. Broader patent-series exact example stereochemistry was not exhaustively resolved.
+- All eleven adopted inventory PMID abstracts and 28 CARD-linked abstracts were inspected; most inventory leads were not read in full. Selected primary source sections/tables were inspected directly as cited, rather than claiming a complete primary audit of every database edge.
+- The PBP primary study identifies a supplier but not a full reagent salt/formulation. Gonococcal binding and MIC results are not direct E. coli protein measurements or current clinical breakpoint evidence.
+- AbcA cefotaxime-specific primary support and a distinct VIM63 primary source remain unresolved. The 2019 S. pyogenes paper differs between abstract and Results in its reported fold change; both indicate low MICs.
+- CDC complex-level labels are retained where BioSamples identify E. cloacae/E. hormaechei. CDC supplies the Typhimurium identification for 0539; the BioSample independently labels only S. enterica.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 25 expanded input hashes unchanged, including original captures. No native/source/status/history edits.
+- Native checks used 024 own environment; chemistry used 019 locked RDKit 2026.03.5 against 024 cwd.
+- Free public retrieval only. Initial BioSample viewer requests returned 400 and were resolved through canonical BioSample pages. EPMC XML failures for selected older papers were resolved through free PMC article pages.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T113608Z-cefotaxime
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Cefotaxime: exact acid, verified isolate observations and qualified resistance
+  evidence'
+started_at: '2026-10-21T11:21:17Z'
+finished_at: '2026-10-21T11:36:08Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent whole native and maintained owner review; current
+    complete structure mappings; all nineteen CDC/BioSample pairs and twenty CARD
+    assertions; all eleven adopted PMID abstracts; selected original PBP, transporter,
+    porin, target-variant and SCO-1 experiments.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No confirmed native defect. Neutral (6R,7R), Z-oxime cefotaxime is structurally
+  coherent and accessible exact xrefs agree. All nineteen CDC MIC observations match
+  their sources. The twenty resistance entries explicitly retain database evidence,
+  and the PBP target is marked PRIMARY_EVIDENCE_NEEDED. Primary papers support bounded
+  enrichment while distinguishing relative MIC shifts, enzyme activity, porin background,
+  organism-specific PBP numbering and reagent form from clinical resistance. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: curation/ncbi_ast_biosample_review.json
+    sha256: 4ca294f58d57e627753e033ab2d3ee29d7c54ea10111bd24b534ddde69f72fbb
+    role: context
+  - path: curation/ncbi_ast_drug_map.tsv
+    sha256: 8b224448e1b2107e40107c4fb99820230249ec1318e36b032bb60324e1948088
+    role: context
+  - path: data/antibiotics/antibacterial/cefotaxime.yaml
+    sha256: 6c6123a1ec4ce59dc566a304b64b13efdc188ed01479c4fb2487633b5fc128b5
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:204928
+  path: data/antibiotics/antibacterial/cefotaxime.yaml
+  label: cefotaxime
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted exact ChEBI identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding and exclusion overrides
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, class and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Source-owned ARO resistance evidence
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Source-owned ARO target evidence
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefotaxime.yaml
+    role: Curator-owned activity_spectrum, primary evidence and history
+scope:
+  description: Whole-record review of cefotaxime, including nineteen activity observations,
+    twenty database resistance assertions and one PBP target.
+  selection: Queue 233 in isolated batch 024; preserved original capture and appended
+    actual ARO inventory/edge and curator-owned inputs before judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:204928
+  exclusions:
+  - target: Cefotaxime sodium, desacetylcefotaxime, anti-oxime isomer and beta-lactamase-inhibitor
+      combinations
+    reason: Distinct forms, metabolite, stereoisomer and combinations retain separate
+      assay/material scope.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefotaxime.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed with zero errors.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefotaxime.yaml --out /private/tmp/am-review-session/233-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Molecular encodings and source mints
+  status: passed
+  required: true
+  summary: Both encodings agree on exact key, neutral formula, masses and two R centres;
+    both mints agree.
+  target_ids:
+  - CHEBI:204928
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/check199200.py
+    233 (cwd /private/tmp/antibioticmech-record-reviews-024)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:204928
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefotaxime.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T11:29:30Z'
+  support: supports
+  summary: Read exact identity, definition, parents/roles/class, nineteen activity_spectrum
+    rows and evidence, complete structure and all exact/drug/document xrefs, two source
+    concepts, twenty resistance entries, one target and eighteen history events. Native
+    has no clinical-status, producer or causal-graph claims.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;data/raw/aro_antibiotics.tsv;data/raw/aro_resistance_edges.tsv;data/raw/aro_target_edges.tsv
+  locator: ChEBI row 2881;ARO inventory row 145;resistance rows 3034–3053;target row
+    162
+  accessed_at: '2026-10-21T11:29:30Z'
+  support: supports
+  summary: Actual inventories/edges own the source-derived identity/class, database
+    resistance and PBP claims. The native file owns curated CDC observations/history.
+    Additional NCBI AST mapping context explicitly distinguishes neutral cefotaxime
+    from sodium and inhibitor combinations; it is not the owner of these CDC measurements.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:204928
+  locator: Current structure and ontology
+  accessed_at: '2026-10-21T11:22:57Z'
+  support: supports
+  summary: Matches neutral C16H17N5O7S2, complete key GPRBEKHLDVQUJE-QSWIMTSFSA-N,
+    (6R,7R), Z oxime, cephalosporin/1,3-thiazole/oxime O-ether parents. Primary activity
+    supports antibiotic/antibacterial roles; current additional role annotations do
+    not require optional-field expansion.
+  snapshot_sha256: 5a5439b03357ded9e4b3615b098654c4b2b1965a60e7e51f33280b430a9c55da
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit2026.03.5 checks
+  locator: 233-chemistry.json
+  accessed_at: '2026-10-21T11:22:40Z'
+  support: supports
+  summary: SMILES and InChI reproduce one neutral fragment, formula, complete key,455.474
+    average/455.05694 exact mass and two R centres. Z oxime is explicit. Both source
+    mints agree.
+  snapshot_sha256: b357e5391a57bcd668fd854c4c35242f74b52373bc2ccd610825f54137265d6e
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/5742673
+  locator: Current complete structure
+  accessed_at: '2026-10-21T11:23:06Z'
+  support: supports
+  summary: CID5742673 matches the exact neutral cefotaxime stereochemical structure,
+    including Z oxime.
+  snapshot_sha256: 9a910cbea1876e7fd9eeb4cc495efa01ead59a295f0c91a2e849ac6ce2751b41
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1730.json
+  locator: Complete current molecule
+  accessed_at: '2026-10-21T11:23:06Z'
+  support: supports
+  summary: CHEMBL1730 matches the exact acid formula and full key; no hydrate or counterion
+    is introduced.
+  snapshot_sha256: 475caa1dd9ee8f26336e1e33f563c759ac5899333fcbd8b77c2aa166a88cec6d
+- evidence_id: cas
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/63527-52-6/JSON
+  locator: CAS lookup
+  accessed_at: '2026-10-21T11:23:05Z'
+  support: supports
+  summary: CAS63527-52-6 resolves to CID5742673 and the complete neutral stereochemical
+    structure.
+  snapshot_sha256: 9a910cbea1876e7fd9eeb4cc495efa01ead59a295f0c91a2e849ac6ce2751b41
+- evidence_id: pdb
+  kind: database
+  reference: https://files.rcsb.org/ligands/download/CE3.cif
+  locator: CCD CE3 descriptors and atom/bond model
+  accessed_at: '2026-10-21T11:23:06Z'
+  support: supports
+  summary: CE3 has the matching InChI/full key and stereochemical names/canonical
+    SMILES. This is exact component identity; mere inclusion in CCD does not establish
+    a particular protein interaction.
+  snapshot_sha256: d673095c24587418fcec0f2d92b77d5a215e22010eefa31202f7489122eeec1c
+- evidence_id: kegg-compound
+  kind: database
+  reference: https://rest.kegg.jp/get/C06885
+  locator: Compound identity
+  accessed_at: '2026-10-21T11:23:06Z'
+  support: supports
+  summary: C06885 identifies cefotaxime with the matching molecular formula and cephalosporin
+    framework.
+  snapshot_sha256: d24d71e5601c007ca56a76ea4dd9deac47586efb896175b0b36aeb35290b0bf3
+- evidence_id: registries
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:204928
+  locator: Beilstein1096643 and Reaxys1096643
+  accessed_at: '2026-10-21T11:22:57Z'
+  support: partial
+  summary: The exact ChEBI entry retains both registry mappings. Independent proprietary
+    registry detail was not inspected through free access; no mismatch is demonstrated.
+  snapshot_sha256: 5a5439b03357ded9e4b3615b098654c4b2b1965a60e7e51f33280b430a9c55da
+- evidence_id: aro-identity
+  kind: authority
+  reference: https://card.mcmaster.ca/aro/3000645
+  locator: Current cefotaxime record
+  accessed_at: '2026-10-21T11:23:05Z'
+  support: supports
+  summary: ARO identity/class and exact neutral structure agree. Its broad beta-lactamase-stability
+    prose is database context; it is not expanded into universal stability, especially
+    given the native resistant-isolate observations.
+  snapshot_sha256: 8be0be01b639c161d95ac83df07debb07ec64821bb67a7c0786fff2080736163
+- evidence_id: drugcentral
+  kind: database
+  reference: https://drugcentral.org/drugcard/546
+  locator: Drug-level cefotaxime entry
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: supports
+  summary: DrugCentral 546 resolves cefotaxime, CAS 63527-52-6 and C16H17N5O7S2. Its
+    synonym list also includes cefotaxime sodium; drug-level forms, dosing and clinical-use
+    information are not exact free-acid material or current jurisdiction-specific
+    approval assertions.
+  snapshot_sha256: d80e71a64fa466352c70826874c8bca763609182331155e7ed314600b1f2d7ff
+- evidence_id: kegg-drug
+  kind: database
+  reference: https://rest.kegg.jp/get/D07647
+  locator: Drug D07647
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: supports
+  summary: D07647 identifies cefotaxime; broader product/formulation and generic PBP
+    annotations remain drug/database context.
+  snapshot_sha256: ff8c4c7d4c56cddb99c9cbf661caa95c4cdf49e31fddcd4d82a3f14ed0641ba3
+- evidence_id: drugbank
+  kind: search
+  reference: https://go.drugbank.com/drugs/DB00493
+  locator: Free access boundary
+  accessed_at: '2026-10-21T11:23:25Z'
+  support: unknown
+  summary: Direct detailed retrieval returned HTTP403; ChEBI retains the DB00493 drug
+    mapping. No deletion or identity error is inferred from access failure.
+  snapshot_sha256: e30968b5f3c2ba9155f2d6a9832c9da2278a600f3c7b422d3f44e449fe956e04
+  search_scope: Exact cefotaxime/CHEBI:204928/ARO:3000645/full-key ignored-inclusive
+    batch 024 search outside .git/.venv; native protein/pathway adapter before web
+    follow-up; free current identifiers, CDC/BioSample records, patents and primary
+    literature on 2026-10-21.
+- evidence_id: patent-us4152432
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4152432A/en
+  locator: Claims 3–8; syn acid versus sodium/hydrate examples
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: supports
+  summary: The patent explicitly claims the matching syn methoxyimino aminothiazole
+    acetoxymethyl cephalosporanic acid and separately its sodium, crystalline and
+    hydrated/solvated forms. Anti isomer, other oxime ethers and salts also occur
+    in the document; numeric activity is not indiscriminately transferred.
+  snapshot_sha256: bd6631c2c1851f8f9a1360b07504d8ac7c63c6421216c395aabe52eb1e12b598
+- evidence_id: patent-de2702501
+  kind: primary_source
+  reference: https://patents.google.com/patent/DE2702501A1/en
+  locator: Original German claims 5–8 and corresponding displayed text
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: supports
+  summary: The claims separately name matching acid, sodium salt and syn isomers.
+    This is relevant cefotaxime chemistry documentation, with salts/solvates distinct
+    from the native acid.
+  snapshot_sha256: a7fd2e26a73e03965e79ffa96e7d6887ede72fe13080fd99a287eb31b51d7402
+- evidence_id: patent-us4098888
+  kind: primary_source
+  reference: https://patents.google.com/patent/US4098888A/en
+  locator: Description and methoxyimino aminothiazole cephalosporanic-acid preparation
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: partial
+  summary: The broader cephem patent includes the methoxyimino aminothiazole cephalosporanic-acid
+    framework, tert-butyl intermediate and trifluoroacetate material. It is related
+    chemistry rather than a unique exact-form assay citation; syn/anti assignment
+    for that preparation was not fully resolved. References in its cited-by list are
+    not substituted for its own text.
+  snapshot_sha256: 4532ccdbcb23ec8d492c728624b7669dfae27fa7c452176197d6fd555aaae842
+- evidence_id: patent-de2556736
+  kind: primary_source
+  reference: https://patents.google.com/patent/DE2556736A1/en
+  locator: Cephem compounds; original description and claims
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: partial
+  summary: The German cephem-derivative patent is relevant chemical-series documentation.
+    Its broad Markush and preparative scope does not establish every example as exact
+    neutral cefotaxime; individual structure/stereo mapping is required before assay
+    transfer.
+  snapshot_sha256: 941bf339d14d972fe26dfb701721401378b41d7abf17119d9e37bc5c37f6adb3
+- evidence_id: wikipedia
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Cefotaxime
+  locator: Document identity
+  accessed_at: '2026-10-21T11:23:07Z'
+  support: context_only
+  summary: Resolves the named cefotaxime document. Not used as primary antibacterial,
+    molecular or clinical evidence.
+  snapshot_sha256: dd52af09d22e75b08f27972dac5143c661f2a22b22c59b3446e5f8c055069c75
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=562,573,470,354276,90371&retmode=xml
+  locator: Current native organism identifiers
+  accessed_at: '2026-10-21T11:23:19Z'
+  support: supports
+  summary: All native taxa resolve correctly, including Enterobacter cloacae complex
+    354276 and Salmonella enterica subsp.enterica serovar Typhimurium 90371. CDC explicitly
+    names Typhimurium; its BioSample uses the broader S. enterica label, not an independently
+    sequenced serovar assertion.
+  snapshot_sha256: f43ca7a337cd7256dbabd3230532e9c954dd03d977b46daa19e08ded0fe2a74d
+- evidence_id: complex-taxonomy
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=550,158836,90371&retmode=xml
+  locator: Species within native complex
+  accessed_at: '2026-10-21T11:26:20Z'
+  support: supports
+  summary: E. cloacae 550 and E. hormaechei 158836 are within the E. cloacae complex
+    lineage. BioSamples for 1150 versus 1151/1152/1160 name those more specific species;
+    native retains the CDC complex label and does not misidentify their accession.
+  snapshot_sha256: b5cc817c04948a076d61b3fb6f154639ea7aca1d612cee6a8b172a55aa794b8f
+- evidence_id: cdc-audit
+  kind: validation
+  reference: All nineteen live CDC/BioSample pairs
+  locator: 233-cdc-verification.json
+  accessed_at: '2026-10-21T11:25:49Z'
+  support: supports
+  summary: Every MIC, greater-than qualifier and R interpretation agrees, with matching
+    strain/accession linkage and source-specific CLSI 2025/2024/2020 or absent versioned
+    footer. µg/mL converts 1:1 to mg/L. Source/MLST notes for 0495/0033/0078/0083/0539
+    also match the CDC pages.
+  snapshot_sha256: a87fcad22baf9eb7ee72003d7a64e76c39df9ab71b9193daa4c650b8b5c550a7
+- evidence_id: pbp-database
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3000749
+  locator: Current targeted_by_antibiotic relation and definition
+  accessed_at: '2026-10-21T11:23:17Z'
+  support: supports
+  summary: The PBP ontology term retains cefotaxime as target-linked antibiotic. Native
+    explicitly marks PRIMARY_EVIDENCE_NEEDED and unspecified organism/assay; the database
+    family term is not an asserted species-specific experimental protein.
+  snapshot_sha256: 3307b1c2222c69ef68d2007c75f830d56537b08102f661307425ba3716ccebc8
+- evidence_id: pbp-primary
+  kind: primary_source
+  reference: https://doi.org/10.1128/spectrum.00692-23
+  locator: PMID37093051/PMC10269775; Methods, Table 2 CTX column and Results
+  accessed_at: '2026-10-21T11:25:25Z'
+  support: supports
+  summary: 'Cefotaxime from Laboratorios Normon was tested in membrane preparations
+    of N. gonorrhoeae ATCC 19424/49226. After 30 min at 37°C, competition with 25
+    µM Bocillin FL gave PBP2 IC50=0.01 mg/L in both, with MIC 0.004/0.008 mg/L. Higher-concentration
+    PBP1/PBP3 binding was also measured. Gonococcal PBP2 is the E. coli PBP3 homolog:
+    preserve organism numbering. Counterion/formulation was not specified beyond supplier.
+    IC50 is not Kd or MIC.'
+  snapshot_sha256: e58464ca8dddd8cda470278cb03b9e1c7edc14d95e9e33645342458b54eab320
+- evidence_id: cmer
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.49.3.1067-1075.2005
+  locator: PMID15728904; Methods, Table 4 and Results/Discussion
+  accessed_at: '2026-10-21T11:26:19Z'
+  support: supports
+  summary: C. jejuni 81-176 cefotaxime MIC 0.390 µg/mL increased to 0.780 in cmeR
+    mutant JL107 and 1.56 in selected CR3e. CmeR disruption/promoter change enhanced
+    CmeABC expression; direct biochemical binding is CmeR-to-promoter, not cefotaxime-to-pump.
+    Sigma cefotaxime and microaerophilic 42°C/2-day MH broth conditions are reported.
+    The authors explicitly qualify modest shifts and possible pleiotropy.
+  snapshot_sha256: bb2b677d95effed7885b8fab2899b5ae5acd7437005e01154faf23d92fd383f0
+- evidence_id: ompk37
+  kind: primary_source
+  reference: https://doi.org/10.1128/JB.181.9.2726-2732.1999
+  locator: PMID10217760; Methods, Table 3 and Results/Discussion
+  accessed_at: '2026-10-21T11:26:19Z'
+  support: supports
+  summary: In a beta-lactamase-producing porin-deficient K. pneumoniae background,
+    cefotaxime MIC 512 µg/mL fell to 128 with high OmpK37 expression, versus 4 with
+    OmpK35 or OmpK36. Thus OmpK37 is less permeable than alternative porins; it is
+    not a universal resistance-producing gain relative to the no-porin parent. Medium/expression
+    controls are explicit.
+  snapshot_sha256: 01532e1c97b1c46ddf5a6e79c57a0cf828a2193bf73d92b9d9c10208917c169e
+- evidence_id: abca
+  kind: primary_source
+  reference: https://doi.org/10.1128/JB.01406-13
+  locator: PMID24509312; complete drug list, Methods, Table 3 and discussion
+  accessed_at: '2026-10-21T11:26:19Z'
+  support: partial
+  summary: The inspected AbcA study establishes strain-dependent responses to other
+    cell-envelope agents, notably moenomycin, but does not provide a cefotaxime experiment
+    in its drug panel. The database cefotaxime relation remains at database level;
+    this paper alone cannot promote it to primary cefotaxime efflux proof.
+  snapshot_sha256: 835f4121afea502edd14bcaad5087ef3e924b84bbab5956786f611fd9967cbeb
+- evidence_id: pbp2x
+  kind: primary_source
+  reference: https://doi.org/10.1093/cid/ciz1000
+  locator: PMID31630171; Methods, Table 1, Results and discussion
+  accessed_at: '2026-10-21T11:26:19Z'
+  support: supports
+  summary: Near-isogenic clinical S. pyogenes isolates with pbp2x T553K showed low
+    cefotaxime MICs around 0.06 µg/mL, below the stated 0.5 susceptible cutoff. Abstract
+    says threefold, Results describes twofold relative shift; preserve the source
+    discrepancy instead of inventing clinical resistance. This is a qualified reduced-susceptibility
+    observation, not a universal wild-type PBP2x effect.
+  snapshot_sha256: 9f2096e09ec8ecb05a734119c07334511e17bf3d713636308e450234cdc7ed6d
+- evidence_id: hinfluenzae
+  kind: primary_source
+  reference: https://doi.org/10.1186/s13104-018-3169-0
+  locator: PMID29352811/PMC5775570; clinical-isolate Methods, Figure 2 description
+    and limitations
+  accessed_at: '2026-10-21T11:25:27Z'
+  support: supports
+  summary: The H. influenzae study correlates ftsI/PBP SNP patterns with beta-lactam
+    MICs, including cefotaxime; it does not isolate every substitution causally. The
+    authors note correlated SNPs, small sample size and possible H. haemolyticus misclassification
+    for two isolates. Native database family-level evidence is not promoted to direct
+    mutant binding.
+  snapshot_sha256: d74da6e4fb573e9c9b85f77c6ff2cf8392fc68008b8510e2325c4b3c514fad03
+- evidence_id: sco-ecoli
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.01439-06
+  locator: PMID17353248; Tables 1–2 and biochemical methods
+  accessed_at: '2026-10-21T11:26:20Z'
+  support: supports
+  summary: SCO-1 clone and empty E. coli DH5α control both have cefotaxime MIC ≤0.12
+    µg/mL, whereas a multienzyme plasmid gives higher MICs. Relative cefotaxime hydrolysis
+    is <1 with penicillinG=100. This bounded low-activity result cautions against
+    attributing the multienzyme phenotype solely to SCO-1.
+  snapshot_sha256: 9c0fc20adefed74cddf0f168bb34295e0e88ead1a34fc446162fe43cd6790707
+- evidence_id: sco-acinetobacter
+  kind: primary_source
+  reference: https://doi.org/10.1128/AAC.01600-06
+  locator: PMID17420213; Tables 2–3 and Methods
+  accessed_at: '2026-10-21T11:26:20Z'
+  support: supports
+  summary: A separate SCO-1 expression experiment gives E. coli TOP10 clone cefotaxime
+    MIC 0.25 versus 0.12 µg/mL control and purified-enzyme kcat 0.1 s−1, Km 2000 µM.
+    This is weak but measurable hydrolysis/a small MIC shift; donor Acinetobacter
+    with additional enzymes has much higher MIC. Preserve assay differences rather
+    than claiming no cefotaxime hydrolysis or generalized high-level resistance.
+  snapshot_sha256: 7e3ad271585daf03687f861c34401df53886991cf21686f993e90d5855bf103f
+- evidence_id: aro-leads
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: 233-aro-leads.json;28 source-linked abstracts
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: partial
+  summary: All 28 abstracts were inspected. ACC2/ACC4, ACI1, CMY136, PRC1, KPC123
+    and other enzyme reports supply bounded cloning/kinetics leads; review, plasmid-sequence
+    and genome-comparison sources are distinguished. VIM63 has no distinct primary
+    citation beyond the general CARD paper in the inspected entry. This review does
+    not claim full primary adjudication of all twenty database edges.
+  snapshot_sha256: 534a6babf4a7191398d266a9d7478e1bf7b59f034bef2480187158df4aa32b77
+- evidence_id: adapter
+  kind: search
+  reference: kg-microbe-sources imodulondb
+  locator: 233-adapter-results.json; catalog and native-claim context
+  accessed_at: '2026-10-21T11:22:36Z'
+  support: context_only
+  summary: The structured check preceded web mechanism follow-up. e_coli/precise1k/ftsI
+    found b0084; s_aureus/staph_precise108/abcA and s_pyogenes/modulome/pbp2x returned
+    no hits. No iModulon hits required summarize. The catalog lacked Campylobacter/Klebsiella/Serratia/Haemophilus
+    datasets; absence is not negative mechanism evidence.
+  snapshot_sha256: b956ffaf7659da2402ef718b36d71e8dcab953b845f6bee9f5008bc6e7069070
+  search_scope: Exact cefotaxime/CHEBI:204928/ARO:3000645/full-key ignored-inclusive
+    batch 024 search outside .git/.venv; native protein/pathway adapter before web
+    follow-up; free current identifiers, CDC/BioSample records, patents and primary
+    literature on 2026-10-21.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive repository and public-source inspection
+  locator: 233-local-hits.txt;233-owner-hits.txt
+  accessed_at: '2026-10-21T11:22:40Z'
+  support: context_only
+  summary: Hidden/ignored files were included outside .git/.venv. Exact native/raw/generated
+    ownership and historical leads were distinguished, all adopted citation leads
+    inspected, and source-linked primary follow-ups evaluated at the stated text level.
+  snapshot_sha256: 32784504e0beb19b41f8eb814f806a749bb27a8253328af54b48063e150df4bb
+  search_scope: Exact cefotaxime/CHEBI:204928/ARO:3000645/full-key ignored-inclusive
+    batch 024 search outside .git/.venv; native protein/pathway adapter before web
+    follow-up; free current identifiers, CDC/BioSample records, patents and primary
+    literature on 2026-10-21.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused native checks
+  locator: 233-focused-results.json;233-validation.tsv
+  accessed_at: '2026-10-21T11:22:40Z'
+  support: supports
+  summary: Schema/strict, molecular consistency and mint checks pass. All expanded
+    input hashes were rechecked unchanged.
+  snapshot_sha256: 231a8c7ead904327c94d7ef5b8d8387eeb75d087a35066d8a100dd853df8ae6a
+- evidence_id: adopted-2083516
+  kind: database
+  reference: https://doi.org/10.2165/00003495-199040040-00008
+  locator: Adopted PMID2083516; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: context_only
+  summary: Pharmacology/therapeutic-use review. It separates active desacetyl metabolite
+    and combination effects from parent cefotaxime; not primary PBP evidence.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-10866367
+  kind: primary_source
+  reference: https://doi.org/10.1016/s0960-894x(00)00130-x
+  locator: Adopted PMID10866367; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: Synthesis/activity of novel C3 N-linked quaternary-ammonium cephalosporins.
+    Abstract does not establish a unique cefotaxime assay; derivative results are
+    not transferred.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-11034276
+  kind: database
+  reference: https://doi.org/10.1111/j.1574-6968.2000.tb09283.x
+  locator: Adopted PMID11034276; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: context_only
+  summary: Review of ESBL treatment options. Historical therapeutic discussion and
+    inoculum effects do not establish an exact protein assay or current clinical recommendation.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-11061623
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/11061623/
+  locator: Adopted PMID11061623; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: Thirty water A. hydrophila isolates were tested; abstract names cefotaxime
+    as the most active beta-lactam. Material/protocol/numeric details are not established
+    at abstract level.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-11677129
+  kind: primary_source
+  reference: https://doi.org/10.1016/s0960-894x(01)00587-x
+  locator: Adopted PMID11677129; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: Alpha-trifluoroketoacetamide/enol SAR, with cefotaxime at most a contextual/comparator
+    lead. Abstract does not support a cefotaxime-specific target claim.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-12833570
+  kind: primary_source
+  reference: https://doi.org/10.1002/jmr.621
+  locator: Adopted PMID12833570; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: Synthetic cephalosporin antigenic determinants and IgE/RAST inhibition.
+    Protein-conjugated hapten recognition is not antibacterial target binding.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-1384868
+  kind: primary_source
+  reference: https://doi.org/10.1159/000236216
+  locator: Adopted PMID1384868; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: Aztreonam monoclonal-antibody epitope study using beta-lactam/HSA conjugates.
+    Immunological cross-reaction is not antibacterial PBP inhibition.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-14512220
+  kind: database
+  reference: https://doi.org/10.1016/j.ijantimicag.2003.08.005
+  locator: Adopted PMID14512220; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: context_only
+  summary: NCCLS breakpoint perspective/review; historical pneumococcal nonmeningeal
+    breakpoint changes are not the current CDC isolate editions.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-1502708
+  kind: primary_source
+  reference: https://doi.org/10.1046/j.1537-2995.1992.32692367200.x
+  locator: Adopted PMID1502708; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: Gel-test study of drug-dependent red-cell antibodies includes one cefotaxime
+    case. Host immune complexes are separate from bacterial targets.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-15164972
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.ijantimicag.2003.07.018
+  locator: Adopted PMID15164972; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: ARISE clinical respiratory-isolate survey includes H. influenzae,H. parainfluenzae
+    and M. catarrhalis; cefotaxime is active in that panel. No transfer to current
+    CDC strain measurements.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: adopted-15361989
+  kind: primary_source
+  reference: https://doi.org/10.1590/s1413-86702004000200001
+  locator: Adopted PMID15361989; inspected abstract
+  accessed_at: '2026-10-21T11:23:18Z'
+  support: partial
+  summary: Surgical-infection microbiology reports cefotaxime among active agents
+    for tested Gram-negative isolates. Aggregate historical susceptibility is not
+    universal efficacy or exact single-strain data.
+  snapshot_sha256: ae71ed316d9d4946aa1ce60b830e6119b4557c24e3c205c7b0d0a42db18f5d99
+- evidence_id: aro-3000773
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3000773
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:08Z'
+  support: supports
+  summary: ARO:3000773 resolves to CmeABC, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_EFFLUX. The native evidence
+    explicitly says database assertion; this is not blanket primary or clinical resistance
+    validation.
+  snapshot_sha256: 3bd1a4c4f2d41b244b037305675ed1122fb142b798ddd42d7d9bd2173046f84a
+- evidence_id: aro-3000930
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3000930
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:08Z'
+  support: supports
+  summary: ARO:3000930 resolves to TEM-61, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: e071cddd1909760a8b201467b1a63bf3842a9e111648ae2883e70967cf401b30
+- evidence_id: aro-3001815
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3001815
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:09Z'
+  support: supports
+  summary: ARO:3001815 resolves to ACC-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: f109bc3cf1545b83dfc99f2c8870c4e855a63f80215a09b2195ed001cd6a514c
+- evidence_id: aro-3001816
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3001816
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:09Z'
+  support: supports
+  summary: ARO:3001816 resolves to ACC-2, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 607d84501fde17318757ee2b5516242990435699de249a4fd2b2a2aa97dd8448
+- evidence_id: aro-3001818
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3001818
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:10Z'
+  support: supports
+  summary: ARO:3001818 resolves to ACC-4, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 0a38b7c686abf081bd5f730d29b128bc0b47ee07c9de1c4684097752bc12ef22
+- evidence_id: aro-3003942
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3003942
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:10Z'
+  support: supports
+  summary: ARO:3003942 resolves to abcA, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_EFFLUX. The native evidence
+    explicitly says database assertion; this is not blanket primary or clinical resistance
+    validation.
+  snapshot_sha256: eb0e2acf62e1ff883401d0c2af93c0812f0a7f33d72ca8ccd14dd6d5e06301ad
+- evidence_id: aro-3004122
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3004122
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:10Z'
+  support: supports
+  summary: ARO:3004122 resolves to Klebsiella pneumoniae OmpK37, retains cefotaxime
+    confers_resistance_to_antibiotic, and is consistent with native mechanism type
+    REDUCED_PERMEABILITY. The native evidence explicitly says database assertion;
+    this is not blanket primary or clinical resistance validation.
+  snapshot_sha256: 0c0079a9ff3b9170639b41fc60d66f18371cb172c8a3417461bce33f82e235f5
+- evidence_id: aro-3004128
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3004128
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:11Z'
+  support: supports
+  summary: ARO:3004128 resolves to Serratia marcescens Omp1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type REDUCED_PERMEABILITY. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 2464ce2775eae707744e18d6a84f47581c8f0a6257cadb1845085b8356e90175
+- evidence_id: aro-3004359
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3004359
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:12Z'
+  support: supports
+  summary: ARO:3004359 resolves to ACI-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: ef39f438c5ae6b8884e3aacb9e6cef106160d880d7cd324137328f569ae712f3
+- evidence_id: aro-3004446
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3004446
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:12Z'
+  support: supports
+  summary: ARO:3004446 resolves to Haemophilus influenzae PBP3 conferring resistance
+    to beta-lactam antibiotics, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_TARGET_ALTERATION. The
+    native evidence explicitly says database assertion; this is not blanket primary
+    or clinical resistance validation.
+  snapshot_sha256: b27f084ccad474875d95c315900438b020883dd285570bd094e7bb0396982cc6
+- evidence_id: aro-3004559
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3004559
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:12Z'
+  support: supports
+  summary: ARO:3004559 resolves to CAM-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 878fe092da74e2b0b59e98878991054a0736dd14cfe22e19c15c739584b7f2a8
+- evidence_id: aro-3004854
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3004854
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:12Z'
+  support: supports
+  summary: ARO:3004854 resolves to CMY-136, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 9c522aa1c1bff16a535d6f1446169208505e689db38694b3c14d0cb335c29745
+- evidence_id: aro-3004856
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3004856
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:14Z'
+  support: supports
+  summary: ARO:3004856 resolves to SCO-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 090e1ff24c328277f91dfaa411ddffa9f094122dc42406d179df5d8fbdc0b537
+- evidence_id: aro-3005015
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3005015
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:14Z'
+  support: supports
+  summary: ARO:3005015 resolves to VMB-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 6c9fd04e010317248491d53d378acfe6cc4aaa7859c4bc5ed532e922cedb64e8
+- evidence_id: aro-3005511
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3005511
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:14Z'
+  support: supports
+  summary: ARO:3005511 resolves to VIM-63, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 3eb024e368cbbc6ea3017fce35ba8e167964a23552289a993ba9109aa299abd3
+- evidence_id: aro-3007062
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3007062
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:14Z'
+  support: supports
+  summary: ARO:3007062 resolves to VAM-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 7d380f0445e55a4ab2fc7f9db4848be28051a066055eae7fdcb1aff6f787f63a
+- evidence_id: aro-3007085
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3007085
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:15Z'
+  support: supports
+  summary: ARO:3007085 resolves to PRC-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 032358c19a95ab9b8e152133c132b1a7c97ea5418ff092dec7b074f69eb59e83
+- evidence_id: aro-3007196
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3007196
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:15Z'
+  support: supports
+  summary: ARO:3007196 resolves to KPC-123, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 7f4cd1d7e63aff4e60d7fce4c6f97dc2f6307d561850d9ec4004953cdeb017ee
+- evidence_id: aro-3007374
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3007374
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:15Z'
+  support: supports
+  summary: ARO:3007374 resolves to PJM-1, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_INACTIVATION. The native
+    evidence explicitly says database assertion; this is not blanket primary or clinical
+    resistance validation.
+  snapshot_sha256: 92232992563c71eea8ab4ff315ec708f84964e000f04709316e01422fb884bb4
+- evidence_id: aro-3007531
+  kind: database
+  reference: https://card.mcmaster.ca/aro/3007531
+  locator: Current definition/classification and exact cefotaxime edge
+  accessed_at: '2026-10-21T11:23:16Z'
+  support: supports
+  summary: ARO:3007531 resolves to Streptococcus pyogenes PBP2x conferring resistance
+    to beta-lactam antibiotics, retains cefotaxime confers_resistance_to_antibiotic,
+    and is consistent with native mechanism type ANTIBIOTIC_TARGET_ALTERATION. The
+    native evidence explicitly says database assertion; this is not blanket primary
+    or clinical resistance validation.
+  snapshot_sha256: eec5087e9fb94881faffc95982b7ff2eb3800d88fd4d0cb1015761c13a364cf4
+- evidence_id: cdc-1
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=349&PanelID=10
+  locator: Isolate 0349; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:22:57Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 315b1161fa668258313f588fed8a9b77aa82a64cea190d44061be436543eedf3
+- evidence_id: biosample-1
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN11953777
+  locator: SAMN11953777; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 47beabfba5dc7403d66eacdb32ceedfa1577421cb300c0fb9d8e06ddb2c6e569
+- evidence_id: cdc-2
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/Isolatedetail?IsolateID=497&PanelID=10
+  locator: Isolate 0497; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:22:57Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 2c069866d9462e3c70165dc01691bc23de059b66046f29a0bff1a69c9ff7b9c6
+- evidence_id: biosample-2
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN11953783
+  locator: SAMN11953783; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 5bc3cb4d741ee88770cbe313af83284b5c4a5dbfebbb39fbf4a80e8c5e5bfaaa
+- evidence_id: cdc-3
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ArIsolateBank/panel/IsolateDetail?IsolateID=297&PanelID=1
+  locator: Isolate 0297; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:22:59Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2024
+    M100 S34; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: bdaccebf4cd234e21faacae5d4d72b2018110bac8cc643ddef6b1bbc4c6d98f0
+- evidence_id: biosample-3
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN04901687
+  locator: SAMN04901687; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 7d00b8c5716a9c93f7401576ac251b19760a4da909ef400654d49f9d48938388
+- evidence_id: cdc-4
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=346&PanelID=10
+  locator: Isolate 0346; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:22:59Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 48e0b2549e402ea6b112157e412506cbcf423f615b309271b4b9a5cbc73c093f
+- evidence_id: biosample-4
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN11953774
+  locator: SAMN11953774; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 5d17372341d56e6aa4c90b3153a1d76016c2a5a1a5402ab0a5e761b125567795
+- evidence_id: cdc-5
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
+  locator: Isolate 1305; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:00Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: a73539de88cbe02916dcd11ac180246876a1e213b00af5b703a30bc61418a658
+- evidence_id: biosample-5
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN46941623
+  locator: SAMN46941623; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 635d4439e201dd0a545209f98a7e1a68527c2a84893c2a4d79f987f163816f34
+- evidence_id: cdc-6
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10440&PanelID=1247
+  locator: Isolate 1149; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:01Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 63c6bb2d0bce7233465421b2c23fdfae9aad9b7c40f2083577860cbb17c0e972
+- evidence_id: biosample-6
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111336
+  locator: SAMN34111336; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 48b5aaef1ae4efdd8108b265f5dab2f5d6c51219f147af1a3d0ccedb4c07df5b
+- evidence_id: cdc-7
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10441&PanelID=1247
+  locator: Isolate 1150; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:01Z'
+  support: supports
+  summary: Live source reports 32 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 8398d6f48daaaa7ea85b49a6d839744075e13d77e858d4757e8e7bcb912c11e2
+- evidence_id: biosample-7
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111337
+  locator: SAMN34111337; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160,
+    a refinement within the native/CDC E. cloacae complex.
+  snapshot_sha256: 73fc0a08c53db6f376dbe03050c5ce650aaf551e8df0965bb89a79fcd27f14ea
+- evidence_id: cdc-8
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10442&PanelID=1247
+  locator: Isolate 1151; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:02Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: b2fed56eaae43261fafef159b2380f0751f1b84e2011b8b8f2387c7c34e16654
+- evidence_id: biosample-8
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111338
+  locator: SAMN34111338; full sample record
+  accessed_at: '2026-10-21T11:24:36Z'
+  support: supports
+  summary: BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160,
+    a refinement within the native/CDC E. cloacae complex.
+  snapshot_sha256: 4c087c38fa6a90ed20e0e7e8e3ae29926540940623fca727182045be8516b746
+- evidence_id: cdc-9
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10443&PanelID=1247
+  locator: Isolate 1152; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:02Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 03f3009a3e5de1fee035a6a6aca88619af326fa33186bb09a437b20d30800347
+- evidence_id: biosample-9
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111339
+  locator: SAMN34111339; full sample record
+  accessed_at: '2026-10-21T11:24:37Z'
+  support: supports
+  summary: BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160,
+    a refinement within the native/CDC E. cloacae complex.
+  snapshot_sha256: 242b3e7448f139609a55e4fd78403f04e696f7fb099bc9989bdfbde0a7982af7
+- evidence_id: cdc-10
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10444&PanelID=1247
+  locator: Isolate 1153; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:02Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 3fed27212c41f0c27977b630a30ddb6e962dfb628c534295a94768124c421607
+- evidence_id: biosample-10
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111340
+  locator: SAMN34111340; full sample record
+  accessed_at: '2026-10-21T11:24:37Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: cd2d3ca1949d0a6ee12698e374494cb847fbc34cd6268bd30178d4204dc44241
+- evidence_id: cdc-11
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10449&PanelID=1247
+  locator: Isolate 1158; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:03Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: f854747ff6e2331dfb5ece3d19443a3f8131a081dc0d478e119203a3f98454f4
+- evidence_id: biosample-11
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111344
+  locator: SAMN34111344; full sample record
+  accessed_at: '2026-10-21T11:24:37Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: eb0eb8814cf0d2d30d53b6c547ebee1b58d44013d96674bc6c18320472c40a5b
+- evidence_id: cdc-12
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10451&PanelID=1247
+  locator: Isolate 1160; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:03Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: d63ff5afd0eee691e7ced7dee4bc79a58cf7f1b2e8db998fe2bf28ae56799b7e
+- evidence_id: biosample-12
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111346
+  locator: SAMN34111346; full sample record
+  accessed_at: '2026-10-21T11:24:37Z'
+  support: supports
+  summary: BioSample names E. cloacae for 1150 or E. hormaechei for 1151/1152/1160,
+    a refinement within the native/CDC E. cloacae complex.
+  snapshot_sha256: 6de9ec026513a0336c74a1e03867684d27591c25885386f24780162f8ffa02b3
+- evidence_id: cdc-13
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10453&PanelID=1247
+  locator: Isolate 1162; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:03Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: f8b5953f88b2e4b13ce92caf03c9aae38904ab377018d12dc50816aadbef51e0
+- evidence_id: biosample-13
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111348
+  locator: SAMN34111348; full sample record
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 26e70a45969ca1af44b6567d0b1cb96f26c0b718fda9fc972beec9e377827696
+- evidence_id: cdc-14
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10454&PanelID=1247
+  locator: Isolate 1163; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:03Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: d572dfe17f5b19aee87bb7a444063d37e70d3d320d7baf1b4bc0b135a41810b4
+- evidence_id: biosample-14
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN34111349
+  locator: SAMN34111349; full sample record
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 4d23666e087a37cb1ef35915118c201f3adcb48c4713a2f747b166f36e14574d
+- evidence_id: cdc-15
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=495&PanelID=10
+  locator: Isolate 0495; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:04Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 78b532a290078893b6581f24b0544d9f24c3a68ba4ca3c36db36c04152886e41
+- evidence_id: biosample-15
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN11953781
+  locator: SAMN11953781; full sample record
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 4a526646f481e3047c951252609a3c4aeeaf6e5e46792954acaf9b99e26dbf6e
+- evidence_id: cdc-16
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=33&PanelID=1227
+  locator: Isolate 0033; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:04Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and no versioned
+    CLSI footnote; native mg/L/censoring agrees. Drug-inhibitor combination rows on
+    the page are kept separate.
+  snapshot_sha256: 7af9c1d9de4217d39948985f625bc1ba82c1649d14a86743df250ec4cd8c9cf4
+- evidence_id: biosample-16
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN04014874
+  locator: SAMN04014874; full sample record
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 70da53a72d4632f4c0f4a60dc96b7ae157122b723b6f4c8c9f079670f51150f3
+- evidence_id: cdc-17
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=78&PanelID=1227
+  locator: Isolate 0078; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:04Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2024
+    M100 S34; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: f98146ac447e838a6ae3e890603cfcd228a215b46198b85d697263fba22315c5
+- evidence_id: biosample-17
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN04014919
+  locator: SAMN04014919; full sample record
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: 702d48317a6092e13d2157d9e05e722f4bf8479143a48f413219e1e55ef8303f
+- evidence_id: cdc-18
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=83&PanelID=1227
+  locator: Isolate 0083; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:05Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2020
+    M100 S30; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: c86c7008a39f9798bb4553612a9816c5207640f75619a5f092d884ce80358f04
+- evidence_id: biosample-18
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN04014924
+  locator: SAMN04014924; full sample record
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: supports
+  summary: The live sample identifier and taxon support the source accession linkage.
+  snapshot_sha256: e9216932286ce8a45a9974172b7a83898a4c58f5717c25996950353523452156
+- evidence_id: cdc-19
+  kind: primary_source
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=539&PanelID=10
+  locator: Isolate 0539; cefotaxime monotherapy row and footer
+  accessed_at: '2026-10-21T11:23:05Z'
+  support: supports
+  summary: Live source reports >64 µg/mL, R, modal broth microdilution and CLSI 2025
+    M100 S35; native mg/L/censoring agrees. Drug-inhibitor combination rows on the
+    page are kept separate.
+  snapshot_sha256: 3cc26cdcfa8941d95d0c216bac7adfae7666ce12eb6a1f4f4e6af3943fe118c4
+- evidence_id: biosample-19
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN07688908
+  locator: SAMN07688908; full sample record
+  accessed_at: '2026-10-21T11:24:38Z'
+  support: supports
+  summary: BioSample uses S. enterica and source strain 2008AR-0009; CDC explicitly
+    maps this accession to AR 0539 and Typhimurium. The BioSample alone does not establish
+    the serovar.
+  snapshot_sha256: c266a2e299403d52dc025dcb761f9f1ff1525b4bf0855c3d59d6e38e1281ac44
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral active cefotaxime
+  outcome: supported
+  summary: Both encodings and complete current PubChem, ChEMBL, CAS and CCD mappings
+    agree, with 6R,7R and Z oxime. Sodium, metabolite and combinations retain distinct
+    boundaries.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - pubchem
+  - chembl
+  - cas
+  - pdb
+- assessment_id: grounding
+  area: grounding
+  topic: Parents and antibacterial eligibility
+  outcome: supported
+  summary: Graph supports all three chemical parents and cephalosporin class. Live
+    observations and compound-specific primary assays establish antibacterial eligibility.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - chebi
+  - aro-identity
+  - pbp-primary
+  - cdc-audit
+- assessment_id: xrefs
+  area: grounding
+  topic: Exact/drug/document scope
+  outcome: unknown
+  summary: Accessible complete structure xrefs agree; all four patents concern relevant
+    cephem chemistry, with strongest exact syn-acid claims in US4152432/DE2702501.
+    DrugBank and independent proprietary registry detail remain uninspected.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - pdb
+  - kegg-compound
+  - registries
+  - drugcentral
+  - kegg-drug
+  - drugbank
+  - patent-us4152432
+  - patent-de2702501
+  - patent-us4098888
+  - patent-de2556736
+  - wikipedia
+- assessment_id: activity
+  area: evidence
+  topic: Nineteen native CDC observations
+  outcome: supported
+  summary: All nineteen values, qualifiers, interpretation footers and source accessions
+    agree. Enterobacter species-level BioSample refinements and the broader Salmonella
+    sample label are preserved alongside the CDC taxon.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - cdc-audit
+  - taxa
+  - complex-taxonomy
+  - cdc-1
+  - cdc-2
+  - cdc-3
+  - cdc-4
+  - cdc-5
+  - cdc-6
+  - cdc-7
+  - cdc-8
+  - cdc-9
+  - cdc-10
+  - cdc-11
+  - cdc-12
+  - cdc-13
+  - cdc-14
+  - cdc-15
+  - cdc-16
+  - cdc-17
+  - cdc-18
+  - cdc-19
+  - biosample-1
+  - biosample-2
+  - biosample-3
+  - biosample-4
+  - biosample-5
+  - biosample-6
+  - biosample-7
+  - biosample-8
+  - biosample-9
+  - biosample-10
+  - biosample-11
+  - biosample-12
+  - biosample-13
+  - biosample-14
+  - biosample-15
+  - biosample-16
+  - biosample-17
+  - biosample-18
+  - biosample-19
+- assessment_id: target
+  area: evidence
+  topic: PBP family assertion and exact primary experiment
+  outcome: supported
+  summary: The native target is honestly marked PRIMARY_EVIDENCE_NEEDED. The 2023
+    gonococcal membrane study supplies optional direct competition evidence with explicit
+    organism/PBP numbering and unresolved supplier-material form; it does not convert
+    a generic E. coli target into gonococcal PBP2 without annotation.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - pbp-database
+  - pbp-primary
+  - adapter
+- assessment_id: resistance
+  area: evidence
+  topic: Twenty typed database assertions
+  outcome: supported
+  summary: All twenty current CARD terms retain the exact cefotaxime relation and
+    mechanism type. Primary follow-up illustrates bounded transporter, porin, mutant
+    and weak-hydrolysis contexts; no automatic clinical phenotype is assigned.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - aro-3000773
+  - aro-3000930
+  - aro-3001815
+  - aro-3001816
+  - aro-3001818
+  - aro-3003942
+  - aro-3004122
+  - aro-3004128
+  - aro-3004359
+  - aro-3004446
+  - aro-3004559
+  - aro-3004854
+  - aro-3004856
+  - aro-3005015
+  - aro-3005511
+  - aro-3007062
+  - aro-3007085
+  - aro-3007196
+  - aro-3007374
+  - aro-3007531
+  - cmer
+  - ompk37
+  - pbp2x
+  - hinfluenzae
+  - sco-ecoli
+  - sco-acinetobacter
+- assessment_id: primary-limits
+  area: evidence
+  topic: Unresolved strength of individual source claims
+  outcome: unknown
+  summary: AbcA inspected drug panel lacks cefotaxime; VIM63 distinct primary lead
+    was not exposed. Other source-linked enzyme abstracts are not a complete kinetic
+    audit. These remain typed database claims, with follow-up rather than an unsupported
+    hard deletion.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - abca
+  - aro-leads
+  - sco-ecoli
+  - sco-acinetobacter
+- assessment_id: adopted-leads
+  area: evidence
+  topic: Eleven inventory PMID dispositions
+  outcome: supported
+  summary: Every adopted PMID abstract was inspected and assigned to primary activity,
+    derivative/comparator, immunochemistry or review context. None is indiscriminately
+    used as whole-record proof.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - adopted-2083516
+  - adopted-10866367
+  - adopted-11034276
+  - adopted-11061623
+  - adopted-11677129
+  - adopted-12833570
+  - adopted-1384868
+  - adopted-14512220
+  - adopted-1502708
+  - adopted-15164972
+  - adopted-15361989
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership and eighteen history events
+  outcome: supported
+  summary: Both source mints and five seed/reseed events are coherent; later curator
+    events account for nineteen CDC records and BioSample structuring. Original captures
+    remain unchanged, and SEEDED is not promoted.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+- assessment_id: clinical-producer
+  area: scope
+  topic: Unpopulated clinical/producer/graph fields
+  outcome: not_applicable
+  summary: No native clinical-status, natural-producer or causal-graph claim is made.
+    Historical clinical review recommendations and donor-strain origin are not transferred.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - native
+  - adopted-2083516
+- assessment_id: completeness
+  area: completeness
+  topic: Optional enrichment
+  outcome: supported
+  summary: Concrete primary target and resistance experiments can enrich the record
+    under separate curation, preserving material and genotype context. Empty optional
+    fields alone are not defects.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - pbp-primary
+  - cmer
+  - ompk37
+  - sco-acinetobacter
+- assessment_id: schema
+  area: schema
+  topic: Focused native gates
+  outcome: supported
+  summary: Schema/strict and independent molecular/mint checks pass. Scientific review
+    is separate from deterministic validation.
+  target_ids:
+  - CHEBI:204928
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: Optionally replace or supplement the provisional PBP database evidence
+    with exact primary experiments.
+  finding_ids: []
+  target_ids:
+  - CHEBI:204928
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefotaxime.yaml
+    role: Curator-owned molecular_targets and primary evidence via validated writer
+  acceptance_checks:
+  - Preserve N. gonorrhoeae ATCC 19424/49226 membrane preparations,30 min at 37°C
+    competition and 25 µM Bocillin FL from DOI 10.1128/spectrum.00692-23. Do not equate
+    IC50 with MIC or Kd.
+  - 'Retain organism-specific numbering: gonococcal PBP2 corresponds to E. coli PBP3,
+    and a family-level ontology grounding remains separate from a concrete protein
+    example.'
+  - Resolve Laboratorios Normon formulation/counterion before asserting exact free-acid
+    reagent identity or transferring quantitative mass-based activity without qualification.
+  - Run native schema/strict and applicable term/reference/evidence/history/corpus
+    checks after separately authorized curation.
+- action_id: A2
+  description: Qualify primary resistance evidence before strengthening database claims.
+  finding_ids: []
+  target_ids:
+  - CHEBI:204928
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefotaxime.yaml
+    role: Curator-owned resistance_mechanisms/evidence
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Source-owned database edge inventory
+  acceptance_checks:
+  - For OmpK37 retain the porin-deficient beta-lactamase-producing background and
+    comparison with OmpK35/OmpK36; high OmpK37 reduces MIC relative to the no-porin
+    control while remaining less permeable than the major porins.
+  - For CmeABC/CmeR distinguish transcriptional regulation from direct drug transport,
+    retain modest MIC shifts and experimental conditions. For S. pyogenes T553K distinguish
+    reduced susceptibility from clinical resistance and disclose the abstract-versus-Results
+    fold difference.
+  - 'For SCO-1 retain both 2007 papers: unchanged low MIC in one clone system and
+    weak measurable kinetics/twofold MIC shift in another. Donor multienzyme resistance
+    is not solely SCO-1.'
+  - Find cefotaxime-specific AbcA primary evidence and an identifiable VIM63 experimental
+    source before promoting those database entries. H. influenzae correlated SNPs
+    do not isolate each mutation causally.
+- action_id: A3
+  description: Preserve activity/source identity boundaries during any later enrichment.
+  finding_ids: []
+  target_ids:
+  - CHEBI:204928
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cefotaxime.yaml
+    role: Curator-owned activity_spectrum and evidence
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Source-owned registry/document mappings
+  acceptance_checks:
+  - Keep all CDC values, greater-than qualifiers and exact breakpoint editions, including
+    absent edition for 0033. Preserve separate inhibitor-combination rows and source-level
+    species refinements.
+  - Treat US4152432/DE2702501 syn free acid separately from sodium, hydrates, solvates
+    and anti isomer; map individual compounds in broader patents before numeric transfer.
+  - Resolve remaining DrugBank/Beilstein/Reaxys detail through permissible source
+    access; access failure alone is not a correction.
+limitations:
+- DrugBank detailed access returned 403; independent Beilstein/Reaxys contents were
+  not inspected. Broader patent-series exact example stereochemistry was not exhaustively
+  resolved.
+- All eleven adopted inventory PMID abstracts and 28 CARD-linked abstracts were inspected;
+  most inventory leads were not read in full. Selected primary source sections/tables
+  were inspected directly as cited, rather than claiming a complete primary audit
+  of every database edge.
+- The PBP primary study identifies a supplier but not a full reagent salt/formulation.
+  Gonococcal binding and MIC results are not direct E. coli protein measurements or
+  current clinical breakpoint evidence.
+- AbcA cefotaxime-specific primary support and a distinct VIM63 primary source remain
+  unresolved. The 2019 S. pyogenes paper differs between abstract and Results in its
+  reported fold change; both indicate low MICs.
+- CDC complex-level labels are retained where BioSamples identify E. cloacae/E. hormaechei.
+  CDC supplies the Typhimurium identification for 0539; the BioSample independently
+  labels only S. enterica.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 25 expanded input hashes unchanged, including original captures. No native/source/status/history
+  edits.
+- Native checks used 024 own environment; chemistry used 019 locked RDKit 2026.03.5
+  against 024 cwd.
+- Free public retrieval only. Initial BioSample viewer requests returned 400 and were
+  resolved through canonical BioSample pages. EPMC XML failures for selected older
+  papers were resolved through free PMC article pages.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:204928
+- https://doi.org/10.1128/spectrum.00692-23
+- https://doi.org/10.1128/JB.181.9.2726-2732.1999
+- https://doi.org/10.1128/AAC.01600-06
+tags:
+- cefotaxime
+- exact-identity
+- cdc-isolates
+- primary-target
+- resistance-scope
+```
