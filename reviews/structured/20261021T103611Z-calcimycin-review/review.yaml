@@ -1,0 +1,668 @@
+schema_version: 1.0.0
+review_id: 20261021T103611Z-calcimycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Calcimycin: invalid molecular encoding and exact-stereochemistry conflict'
+started_at: '2026-10-21T10:11:13Z'
+finished_at: '2026-10-21T10:36:11Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The stored SMILES fails aromatic parsing. Its surviving InChI has two unspecified
+  centres and two assigned configurations that disagree with the linked PubChem and
+  ChEMBL structures. The producer name also needs correction to Streptomyces chartreusis.
+  Broad ionophore and antibacterial context are supported, but exact structural reconciliation
+  must precede quantitative enrichment.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/calcimycin.yaml
+    sha256: f73791bca0d53cc4f2bb1c036eeccb879be15c8536169b423230baa042944aa9
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: CHEBI:3305
+  path: data/antibiotics/antibacterial/calcimycin.yaml
+  label: calcimycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual adopted ARO source or exact PubChem enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Actual adopted ARO source or exact PubChem enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Actual adopted ARO source or exact PubChem enrichment owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position178; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:3305
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: failed
+  required: false
+  summary: Actual focused execution exited 1.
+  target_ids:
+  - CHEBI:3305
+  command: .venv/bin/python /private/tmp/am-review-session/focus014-root.py 178
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3305
+  command: just validate data/antibiotics/antibacterial/calcimycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:3305
+  command: just validate-strict data/antibiotics/antibacterial/calcimycin.yaml --out
+    /private/tmp/am-review-session/178-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-applicability
+  name: Structured protein-context applicability
+  status: not_applicable
+  required: false
+  summary: No native named protein, gene, regulator, pathway or transcriptomic claim
+    is populated. Host-cell signaling and biosynthetic enzymes appear only in follow-up
+    literature; neither is adopted as an antibiotic target.
+  target_ids:
+  - CHEBI:3305
+  evidence_ids:
+  - native
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:3305
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/calcimycin.yaml
+  locator: Entire49-line native YAML and16 initially/supplementally captured inputs
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: supports
+  summary: The SEEDED CHEBI3305 record has a neutral formula/key, invalid pyrrole
+    SMILES, A23187 synonym, ARO ionophore class and CAS/ChEMBL/PubChem mappings. It
+    has no direct protein target, quantitative activity, producer block, resistance
+    observation or causal graph. The definition uses Streptomyces chartrecensis and
+    cites PMID38103757.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/chebi_antimicrobials.tsv; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: 178-raw-all.json; ARO row527 and ChEBI row62
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: supports
+  summary: ARO owns the description/crosswalk and ChEBI owns the molecular fields.
+    The adopted ChEBI row is2-star and outside its antibacterial role scope, while
+    ARO supplies antibacterial eligibility. Both current and adopted ChEBI retain
+    the same problematic descriptors. Initial capture was preserved and actual ARO/PubChem
+    owners added before detailed judgment. Ignored-inclusive local searches inspected
+    exact identifiers and maintained owners.
+  snapshot_sha256: c23078faee45d3215066ac3874517417aa7e09dcf1498e9b7bccc00fb73879ce
+- evidence_id: chemistry
+  kind: validation
+  reference: Native encoding versus official PubChem/ChEMBL descriptors
+  locator: 178-focus-run.log;178-chemistry-comparison.json;178-focused-results.json
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: supports
+  summary: The real initial chemistry command fails because c3cccn3 cannot be kekulized
+    as the intended pyrrole. Native InChI independently parses to HIYAVKIYRIFSCZ-CVXKHCKVSA-N,
+    neutral C29H37N3O6 and matching stored masses. A scratch-only replacement with
+    c3ccc[nH]3 restores parsing and exactly reproduces that native InChI key; it does
+    not repair the separate stereochemical conflict. No repository field was edited.
+  snapshot_sha256: e9f9e54af22b956f7ab22ca0581821b20a7daf08f7bcfaa5fd26732f4eba112f
+- evidence_id: xref
+  kind: database
+  reference: PubChem:11957499; ChEMBL:CHEMBL1256686; ChEBI:3305
+  locator: 178-pubchem.json;178-chembl.json;178-chebi.json;178-chemistry-comparison.json
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: refutes
+  summary: PubChem and independently parsed ChEMBL agree on HIYAVKIYRIFSCZ-CYEMHPAKSA-N
+    with seven assigned centres. In identical canonical InChI atom order, native indices14/21
+    are S versus R,17/28 are unspecified versus S, and15/16/26 agree. The unchanged
+    constitution makes this a confirmed exact-structure crosswalk conflict, not just
+    a missing-stereo annotation. ChEBI agrees with the conflicting native representation.
+    CAS52665-69-7 is source-attested; a proprietary CAS registry was not accessed.
+  snapshot_sha256: e9f9e54af22b956f7ab22ca0581821b20a7daf08f7bcfaa5fd26732f4eba112f
+- evidence_id: structure
+  kind: primary_source
+  reference: PMID:776918; DOI:10.7164/antibiotics.29.424
+  locator: 178-crystal1976.pdf; complete four-page paper text and rendered Figure1
+    p426
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: supports
+  summary: The original crystal study determines Ca(A23187-H)2 with two ethanol molecules.
+    Each antibiotic supplies three coordination ligands to calcium. Its absolute configuration
+    was explicitly not redetermined and was assumed from the1974 free-acid study.
+    It supports divalent-cation complexation and distinguishes the metal complex from
+    neutral native acid; it cannot independently settle the competing absolute encodings.
+    Atomic coordinates were not re-refined.
+  snapshot_sha256: 72fca42bdfe8b2c8889c0f0e8d90678524a76e247967c009cc510f10bf3f1365
+- evidence_id: original-access
+  kind: search
+  reference: PMID:4815763; DOI:10.1021/ja00813a047
+  locator: PubMed metadata and official publisher access page; Natural Products Atlas
+    NPA03386 crosswalk
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: partial
+  summary: The1974 original free-acid structure paper was located but full text remained
+    unavailable through free routes; no purchase was made. NPatlas links that paper
+    and carries the same full CYEMHPAKSA-N InChI as PubChem/ChEMBL. This is supporting
+    database provenance, not a substitute for inspecting the original absolute-structure
+    proof.
+  search_scope: Exact A23187/1974 title, PMID and DOI; official ACS/PubMed, NPatlas,
+    free routes and the accessible1976 follow-up.
+- evidence_id: producer
+  kind: primary_source
+  reference: PMID:21173184; DOI:10.1128/AAC.01130-10
+  locator: 178-biosynthesis2011.pdf; original abstract, opening text, culture/HPLC
+    and deletion-complementation Methods and Results
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: supports
+  summary: S.chartreusis NRRL3882 produced calcimycin detected by HPLC/MS against
+    a commercial standard. Three gene deletions abolished production; complementation
+    of calN2 restored it. This demonstrates biosynthesis by the named strain rather
+    than isolation alone. The64-kb cluster contains27 predicted genes and is accession
+    HM452329. Predicted enzyme functions and producer-resistance genes are not antibiotic
+    targets. The complete remaining pathway analysis was not audited.
+  snapshot_sha256: 3145113db5479277cf99e99abfde1ec4c1cd3c03ef61b026761f66ef98eab4a9
+- evidence_id: taxonomy
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1079985
+  locator: Current strain taxonomy entry and species1969
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: supports
+  summary: NCBI indexes Streptomyces chartreusis NRRL3882 under S.chartreusis. This
+    corroborates the name used by the original biosynthesis paper and production patent;
+    the native chartrecensis spelling should not be silently treated as a verified
+    taxon.
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/US3923823A/en
+  locator: 178-patent.html; description through TableIV, production/taxonomic description
+    and early fermentation discussion
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: supports
+  summary: The original patent separately describes A23187 free acid, mixed calcium-magnesium
+    salt and other metal forms, with production by S.chartreusis NRRL3882. TableIV
+    reports antibacterial and fungal MICs, but its material/method details and OCR
+    table values were not fully validated for numeric curation. The broad antimicrobial
+    and production context is supported; patent applications and mouse toxicity are
+    not clinical efficacy evidence.
+  snapshot_sha256: 6daa47160c1ed3a8808455537987edc30f1e24d46fd0db402c7e40eeed7e517d
+- evidence_id: definition-source
+  kind: primary_source
+  reference: PMID:38103757; DOI:10.1016/j.bbagen.2023.130535
+  locator: 178-literature.json; complete original abstract
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: context_only
+  summary: The adopted2023 source concerns human breast/cervical cancer-cell responses,
+    P2RX4 expression and calcium/p38-associated pharmacological perturbations. Its
+    background repeats the producer-name problem. Host-cell inhibitor rescue and expression
+    changes do not establish bacterial target binding, or replace original biosynthesis
+    and ionophore evidence.
+  snapshot_sha256: cad0fc38091aa570d47fe0211a68e2851738e1713a9b6bdcee05d5daac434a9a
+- evidence_id: class-reference
+  kind: database
+  reference: PMID:22849267; DOI:10.20506/rst.31.1.2096
+  locator: 178-extra-core.json; complete review abstract and ARO class stanza
+  accessed_at: '2026-10-21T10:31:03Z'
+  support: context_only
+  summary: The ARO class reference is a broad review of cell-wall/membrane agents.
+    Its ionophore discussion is class context, not an exact calcimycin antibacterial
+    experiment. The1972 original ion-carrier study PMID4263618 was located as metadata;
+    no complete primary full-text audit is claimed.
+  snapshot_sha256: ed17d6146c7dd8a633975a791beb2901e9ee6ec13aacc5379ae98cae21db9817
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact molecular representations
+  outcome: concern
+  summary: Invalid aromatic SMILES and conflicting stereochemistry prevent exact identity
+    sign-off.
+  target_ids:
+  - CHEBI:3305
+  evidence_ids:
+  - chemistry
+  - xref
+- assessment_id: grounding
+  area: grounding
+  topic: Ionophore class and cross-references
+  outcome: concern
+  summary: Broad ionophore chemistry is supported; the exact structure links disagree
+    and require source-owner reconciliation.
+  target_ids:
+  - CHEBI:3305
+  evidence_ids:
+  - structure
+  - xref
+  - class-reference
+- assessment_id: evidence
+  area: evidence
+  topic: Definition and producer spelling
+  outcome: concern
+  summary: The producer is S.chartreusis NRRL3882 in the primary biosynthesis evidence;
+    the2023 cancer paper is not an antibacterial mechanism study.
+  target_ids:
+  - CHEBI:3305
+  evidence_ids:
+  - producer
+  - taxonomy
+  - definition-source
+- assessment_id: provenance
+  area: provenance
+  topic: Source ownership and history
+  outcome: supported
+  summary: Adopted owners faithfully reproduce the problematic fields; this does not
+    establish scientific correctness.
+  target_ids:
+  - CHEBI:3305
+  evidence_ids:
+  - owners
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary activity and production
+  outcome: unknown
+  summary: After structure resolution, exact material-aware activity and strain-specific
+    biosynthesis are useful optional enrichment; blanks are not automatic defects.
+  target_ids:
+  - CHEBI:3305
+  evidence_ids:
+  - patent
+  - producer
+  - structure
+- assessment_id: schema
+  area: schema
+  topic: Focused validation boundaries
+  outcome: concern
+  summary: Schema and strict validation pass while real molecular parsing fails; serialization
+    gates do not certify chemical validity.
+  target_ids:
+  - CHEBI:3305
+  evidence_ids:
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: calcimycin-invalid-pyrrole-smiles
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Repair the nonparseable pyrrole SMILES
+  description: The stored aromatic nitrogen lacks the hydrogen needed for the represented
+    pyrrole and standard RDKit parsing fails. Adding [nH] in scratch restores the
+    original InChI graph, demonstrating a bounded serialization defect; it does not
+    solve the separate absolute-structure conflict.
+  target_ids:
+  - CHEBI:3305
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - chemistry
+  - owners
+  rule_id: 'native-review-checklist: exact identity, resolvable structures and primary
+    source fidelity'
+  native_severity: major chemical representation conflict
+  normalization_reason: The precise defect is established; this review does not claim
+    the unread original absolute configuration was independently rederived.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted molecular descriptors
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and crosswalk
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduction and source precedence
+- finding_id: F2
+  issue_key: calcimycin-exact-stereochemical-crosswalk-conflict
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve incompatible exact stereochemical mappings
+  description: Native/ChEBI and linked PubChem/ChEMBL share constitution but disagree
+    at two assigned configurations and two unspecified centres. All cannot be exact
+    mappings for the same represented structure. Current independent databases favor
+    CYEMHPAKSA-N; the original1974 absolute-structure evidence still requires inspection
+    before choosing a durable correction.
+  target_ids:
+  - CHEBI:3305
+  field_paths:
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - xrefs
+  evidence_ids:
+  - xref
+  - chemistry
+  - original-access
+  - structure
+  rule_id: 'native-review-checklist: exact identity, resolvable structures and primary
+    source fidelity'
+  native_severity: major chemical representation conflict
+  normalization_reason: The precise defect is established; this review does not claim
+    the unread original absolute configuration was independently rederived.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted molecular descriptors
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and crosswalk
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduction and source precedence
+- finding_id: F3
+  issue_key: calcimycin-producer-name-spelling
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the producer name using original biosynthesis evidence
+  description: The definition spells the producer Streptomyces chartrecensis. Original
+    biosynthesis and production sources identify S.chartreusis NRRL3882, corroborated
+    by the current strain taxonomy. Preserve the original cited spelling as provenance
+    if needed while correcting the generated assertion.
+  target_ids:
+  - CHEBI:3305
+  field_paths:
+  - definition
+  - definition_source
+  evidence_ids:
+  - native
+  - producer
+  - taxonomy
+  - patent
+  rule_id: 'native-review-checklist: exact identity, resolvable structures and primary
+    source fidelity'
+  native_severity: minor producer-name correction
+  normalization_reason: The precise defect is established; this review does not claim
+    the unread original absolute configuration was independently rederived.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted molecular descriptors
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and crosswalk
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduction and source precedence
+actions:
+- action_id: A1
+  description: Reconcile calcimycin structure and producer description through maintained
+    sources.
+  finding_ids:
+  - F1
+  - F2
+  - F3
+  target_ids:
+  - CHEBI:3305
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted molecular descriptors
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and crosswalk
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduction and source precedence
+  acceptance_checks:
+  - Inspect the original free-acid absolute-structure evidence and reconcile all seven
+    centres against current PubChem11957499/ChEMBL1256686 and ChEBI3305. Do not treat
+    an undefined centre as racemic or infer identity from connectivity alone.
+  - Produce a valid pyrrole [nH] SMILES and mutually consistent full InChI/key/formula/charge/masses.
+    Reparse independent encodings and exact cross-references. The scratch aromatic
+    fix alone is insufficient.
+  - Correct the name to S.chartreusis, preserving NRRL3882 strain evidence and claim-level
+    primary provenance. Keep free acid distinct from calcium/magnesium complexes,
+    other salts and synthetic derivatives.
+  - Document correction in the maintained ChEBI/ARO extraction or harmonization path
+    and canary reseed; do not patch only generated YAML. Run focused chemistry, schema/strict,
+    provenance/history and required corpus gates.
+  - Only after exact structure resolution, consider optional assay or producer curation.
+    Do not import cancer P2RX4/p38 responses or biosynthetic enzymes as antibacterial
+    targets.
+limitations:
+- The1974 original free-acid structure paper remained metadata-only; the1976 calcium-complex
+  paper explicitly assumed its absolute configuration. Current database agreement
+  establishes a crosswalk conflict but does not replace primary structural adjudication.
+- The2011 biosynthesis abstract and relevant culture, analytical, deletion/complementation
+  sections were read. Remaining proposed pathway details and all figures were not
+  fully reanalyzed. The production patent was inspected at relevant descriptive passages;
+  its numerical MIC table was not visually validated.
+- The2023 adopted cancer-cell study and broad2012 class review were assessed through
+  their complete original abstracts. No exhaustive clinical, resistance or transcriptomic
+  survey is claimed. Licensed registry access was not used.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All16 captured repository input hashes remain unchanged. Real molecular-check failure
+  is retained separately from passing schema/strict gates. Scratch diagnostics did
+  not alter native data or source inventories.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.7164/antibiotics.29.424
+- https://doi.org/10.1021/ja00813a047
+- https://doi.org/10.1128/AAC.01130-10
+- https://patents.google.com/patent/US3923823A/en
