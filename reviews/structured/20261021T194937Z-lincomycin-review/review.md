@@ -1,0 +1,1326 @@
+# Lincomycin: supported native structure with exact-reference, alias and resistance-category conflicts
+
+- Review: 20261021T194937Z-lincomycin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T19:32:11Z
+- Finished UTC: 2026-10-21T19:49:37Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral nine-centre native structure, producer definition, antibacterial role and 23S-rRNA target are supported. Four major source-mapping defects remain: an exact salt cross-reference, an exact reference with one unspecified centre, an epimer typed as an exact synonym, and an ABC-F protection protein classified as antibiotic inactivation. Lincocin also needs brand typing. All sixty resistance edges were checked as qualified database assertions; they were not all promoted to primary evidence.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 604; one whole native record. All thirteen original input hashes were verified unchanged before assessment; actual ARO inventory, target, resistance and target-role owners were appended, giving seventeen captured inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:6472 | data/antibiotics/antibacterial/lincomycin.yaml | generated | lincomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema verification | passed | True | CHEBI:6472 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:6472 | Actual focused execution exited 0. |
+| Focused chemistry verification | passed | False | CHEBI:6472 | Actual focused execution exited 0. |
+| Independent authority graph and stereo-scope comparison | passed | False | CHEBI:6472 | Native and matching authority strings reproduce the exact neutral graph. Salt, epimer and unspecified-centre differences were independently localized. |
+| Current ARO resistance edge and category audit | passed | False | CHEBI:6472 | All sixty native labels, explicit lincomycin edges and inherited categories reproduce the current source; scientific consistency was assessed separately. |
+| Authoritative full QC | failed | True | CHEBI:6472 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:6472 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:6472 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:6472 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:6472 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:6472 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:6472 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:6472 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:6472 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Native structure and exact reference scope
+
+identity: concern. Targets: CHEBI:6472.
+
+The native neutral nine-centre graph is valid and strongly corroborated. C14002 adds hydrochloride/water and the HMDB depositor graph omits one native centre; these exact associations require qualification. None justifies changing the supported native structure.
+
+### Exact chemical names versus epimer and brand
+
+grounding: concern. Targets: CHEBI:6472.
+
+Epilincomycin is a distinct C7 epimer, while Lincocin denotes a salt formulation brand. Other inspected systematic/INN names are consistent with lincomycin. Unverified commercial-looking aliases are not automatically classified as defects.
+
+### Producer definition and biochemical context
+
+evidence: supported. Targets: CHEBI:6472.
+
+The S. lincolnensis producer definition and carbohydrate-containing antibiotic description agree with current authority and primary biosynthesis/production work. Biosynthetic enzyme experiments do not become antibacterial target or ROS mechanisms.
+
+### Antibacterial role and assay scope
+
+evidence: supported. Targets: CHEBI:6472.
+
+Original lincomycin susceptibility and reporter-expression experiments support the antibacterial role. Numeric endpoints remain material- and condition-specific; no unsupported native MIC, clinical indication or universal bactericidal claim is present.
+
+### RNA target and binding mechanism
+
+grounding: supported. Targets: CHEBI:6472.
+
+The native target is correctly nucleic acid and honestly marked PRIMARY_EVIDENCE_NEEDED. The original S. aureus complex supports 23S-rRNA/PTC binding, with separate reporter-expression evidence. Optional addition of these primary citations is not itself a defect finding.
+
+### Sixty database edges and lin category
+
+evidence: concern. Targets: CHEBI:6472.
+
+All sixty native source assertions reproduce. Their database qualifications are appropriate, but lin has positive protein-identity and primary protection evidence contradicting its inactivation category. The remaining fifty-nine were checked against authority, not all independently functionally validated.
+
+### Maintained inputs and evidence ownership
+
+provenance: supported. Targets: CHEBI:6472.
+
+Whole native content, exact source rows, mapped ancestors, target-role configuration and relevant seeding code were read. All three adopted citations have explicit dispositions and original input hashes remain unchanged.
+
+### Optional enrichment and access limits
+
+completeness: unknown. Targets: CHEBI:6472.
+
+All asserted fields and reference namespaces were examined, but LINCS/Reaxys current exact graphs and direct live HMDB were not retrieved. DrugBank is a broader reference. Optional activity, clinical, producer, transcriptome and graph objects were not scored as missing required content.
+
+## Findings
+
+### F1: Qualify the hydrochloride-monohydrate exact cross-reference
+
+major / open / confirmed; issue key: lincomycin-kegg-c14002-salt-exact-xref.
+
+Native xrefs[4] C14002 denotes lincomycin hydrochloride monohydrate rather than the neutral native molecule. Its official formula, registration and independently parsed three-component graph establish the mismatch. Preserve the correct neutral graph and retain useful salt associations only with appropriate scope.
+
+### F2: Resolve the HMDB exact-reference stereochemical scope
+
+major / open / confirmed; issue key: lincomycin-hmdb0015564-unspecified-pyrrolidine-centre.
+
+HMDB0015564 official deposit SID348283992 version 2 has one unspecified pyrrolidine centre, while the native molecule assigns all nine. Clearing only native canonical InChI C11 reproduces its key. Direct HMDB access failed, so reconcile the current live entry before retaining exact equivalence; do not infer an opposite epimer or a mixture.
+
+### F3: Remove the epimer from exact synonym equivalence
+
+major / open / confirmed; issue key: lincomycin-epilincomycin-exact-synonym.
+
+Epilincomycin denotes the L-threo C7 epimer, distinguished by the original preparation, NLM concept/CAS and independently parsed graph. Native synonyms[7] incorrectly treats it as exact lincomycin. Preserve any useful association as an explicitly related compound rather than an exact name.
+
+### F4: Correct lin from drug inactivation to target protection
+
+major / open / confirmed; issue key: lincomycin-lin-aro3004651-protection-not-inactivation.
+
+Native resistance_mechanisms[50] inherits ANTIBIOTIC_INACTIVATION for ARO3004651 lin. CARD describes an ABC-F protection protein; its reference sequence exactly matches the experimentally characterized Lmo0919/VgaL protein. Original ribosome and deletion studies support target protection and conditional lincomycin resistance, not drug nucleotidylation. Preserve the resistance relation and source qualification while resolving the category.
+
+### F5: Type Lincocin as a brand name
+
+minor / open / confirmed; issue key: lincomycin-lincocin-brand-exact-synonym.
+
+The official product is a lincomycin hydrochloride monohydrate formulation. Preserve Lincocin for search but use BRAND_NAME rather than EXACT_SYNONYM for the neutral compound.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile conflicting exact references through maintained source handling.
+
+- Keep native neutral KIDUDLJLSA chemistry and matching exact authorities. C14002 must not remain an unqualified exact chemical equivalent.
+- Check the current direct HMDB entry against its official deposit and document the one-centre scope decision. An unspecified centre is not proof of a mixture or the opposite epimer.
+- Preserve D02346 as an allowed broader drug association. Regenerate and run schema, strict, chemistry and source-reproduction checks.
+
+### A2
+
+Correct exact synonym scope without losing useful search labels.
+
+- Epilincomycin must not be emitted as an exact synonym of lincomycin. Retain a related-compound link only with explicitly supported scope.
+- Emit Lincocin as BRAND_NAME and preserve source attribution. Use maintained exclusions/typing or extend the mapping explicitly, rather than patching generated YAML.
+- Verify regeneration preserves the corrected semantics and the native graph.
+
+### A3
+
+Adjudicate the lin category at its maintained source mapping.
+
+- Retain ARO3004651 and the qualified lincomycin resistance assertion but classify the grounded ABC-F protein as target protection.
+- Document the AEO25219.1/Q8Y8I3 sequence match and keep FSL R2-561 separate from experimental EGD-e strain phenotypes. Do not reclassify all LNU proteins by analogy.
+- Preserve other source-qualified edges and verify extraction/seeding reproduce the adjudicated result.
+
+### A4
+
+Keep optional primary enrichment specific to the tested system.
+
+- Add PDB 5HKV and the original S. aureus RNA-binding evidence only with exact organism, structural method and ligand identity. Do not call the luciferase IC50 an MIC or Kd.
+- Preserve bulk salt/purity uncertainty in quantitative activity. Keep the antibiotic-free ABC-F complex and deletion phenotype distinct from direct drug-displacement observation.
+- Do not transfer biosynthetic enzyme/ROS chemistry, clindamycin induction or related transporter phenotypes to exact lincomycin killing.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/lincomycin.yaml; Complete 567-line native YAML, including all sixteen synonyms, nine exact xrefs, four drug references, sixty resistance edges, the molecular target and five history events. | supports | The SEEDED EXACT record denotes neutral C18H34N2O6S, key OJMMVQQUTAEWLP-KIDUDLJLSA-N, with nine assigned centres. The RNA target is explicitly DIRECT_BINDING_TARGET with PRIMARY_EVIDENCE_NEEDED. Resistance entries explicitly identify CARD/ARO database assertions. No clinical, numeric activity, producer-object, dataset or causal-graph assertion is present. |
+| owners | data/raw/chebi_antimicrobials.tsv:210; data/raw/aro_antibiotics.tsv:33; data/raw/aro_target_edges.tsv:34; data/raw/aro_resistance_edges.tsv:974-1033; conf/aro_target_roles.tsv; Complete exact source rows and applicable extraction/seeding branches, including scripts/extract_source_inventory.py:450-506 and scripts/seed_from_sources.py:255-320,1528-1557. | supports | ChEBI supplies the native graph and definition; ARO supplies additional aliases, target and resistance assertions. The extractor classifies resistance from mapped ontology ancestors. The target-role table maps ARO3000754 to a nucleic-acid direct target. Exact xrefs differ semantically from broader drug references. Source-scoped synonym exclusions are already supported, while any new relation or category override must be explicitly maintained. |
+| local-search | /private/tmp/am-review-session/604-local-hits.txt; Ignored-inclusive and hidden-inclusive label, slug and identifier search; complete returned path inventory read. | context_only | Native, raw, generated and historical research paths were found. Historical reports were leads only. Entire-record and maintained-row inspection establish present claims and optional-field scope. |
+| native-authorities | CHEBI:6472; PubChem:3000540; ChEMBL:CHEMBL1447; KEGG:C06812; Complete official chemical responses, all available isomeric strings and ChEMBL/KEGG molfiles. | supports | Independent parsing reproduces the native full key and all nine centres. Formula, charge and masses agree at stated precision. CAS 154-21-2 is corroborated in these public authorities, not through a licensed registry. The supported native structure should not be replaced to accommodate conflicting references. |
+| parent-role | CHEBI:23007; CHEBI:29347; CHEBI:35275; CHEBI:46770; CHEBI:84186; CHEBI:33281; ARO:0000017; All five ChEBI parent definitions, antimicrobial role and current ARO lincosamide class read. | supports | These structural parents and the broader antimicrobial/lincosamide classifications fit the native graph and inspected experiments. Current additional bacterial-metabolite annotation is optional and does not make its omission a defect. |
+| salt-xref | https://rest.kegg.jp/get/C14002; KEGG:D02346; Complete official entries and independent parsing of both molfiles. | refutes | C14002 explicitly denotes lincomycin hydrochloride monohydrate, CAS 7179-49-9 and formula C18H34N2O6S.HCl.H2O. Its three-component graph gives LFZGYTBWUHCAKF-DCNJEFSFSA-N; its organic component agrees with native lincomycin. D02346 has the same salt scope. Native xrefs[4] incorrectly asserts exact equivalence, whereas D02346 is appropriately a broader drug association. |
+| hmdb-deposit | PubChem Substance:348283992 version2; HMDB:HMDB0015564; PubChem:656509; Official HMDB depositor metadata and SDF accessed through PubChem; direct HMDB entry/XML/mol routes returned 403. | refutes | The deposit explicitly names HMDB0015564 and links CID656509. Its own SDF and both CID structure strings encode OJMMVQQUTAEWLP-ISVUEQNNSA-N, with pyrrolidine C2 unspecified. Eight centres remain assigned. This is positive disagreement in exact stereo scope, not proof of an opposite epimer or a mixture; the live HMDB graph could not be independently rechecked. |
+| chemical-diagnostic | /private/tmp/am-review-session/604-authority-chemistry.json; Independent native/authority parsing and single-centre diagnostics. | supports | Clearing only canonical InChI C11 of the native graph reproduces the HMDB-deposited key. Inverting only canonical C9, the sugar-chain C7 alcohol centre, reproduces epilincomycin key OJMMVQQUTAEWLP-AWPVFWJPSA-N. The native graph and matching exact authorities remain unchanged. This comparison also records the salt components and deposited ribosome ligand. |
+| epi-authority | https://meshb.nlm.nih.gov/record/ui?ui=D008034; PubChem:40469496; Complete NLM MeSH concept listing and CAS 17017-22-0-linked PubChem structure response. | refutes | NLM distinguishes narrower concept M0330146, lincomycin L-threo isomer, with term Epilincomycin and CAS 17017-22-0. Its independent PubChem graph differs at the sugar C7 centre. A shared descriptor hierarchy does not make this epimer an exact synonym of the D-erythro native compound. |
+| epi-primary | US3539689A; Original patent description of D-erythro/L-threo interconversion and complete Preparation 5 A-D read in full text; whole patent not audited. | refutes | The experimental preparation oxidizes the C7 alcohol and reduces the resulting 7-oxo compound, separating normal lincomycin from the 7-epi L-threo product. This directly supports the distinct epimer identity. No patent activity number or unspecified derivative result is transferred to native lincomycin. |
+| brand | https://www.pfizermedical.com/lincocin; Official product Description and identity sections, with NLM trade-name and KEGG product corroboration. | refutes | Lincocin is a brand for an injectable lincomycin hydrochloride monohydrate product. The label distinguishes 300 mg lincomycin-equivalent from 340 mg hydrochloride material per mL. This is a product name, not an exact chemical synonym for the neutral molecule. Other imported commercial-looking names were not assumed erroneous without equivalent evidence. |
+| other-references | DrugCentral:1582; DrugBank:DB01627; KEGG:D00223/D02346; LINCS:LSM-5602; Reaxys:707677; Wikipedia:Lincomycin; Complete DrugCentral identity and KEGG drug entries; Wikipedia topic identity checked; current ChEBI registry associations inspected. | context_only | DrugCentral and D00223 identify lincomycin, while D02346 is the salt product. These are drug-level associations and need not be exact graph equivalents. DrugBank returned 403; LINCS routes failed and Reaxys was not accessed through paid service, so their current graphs are not independently verified. The Wikipedia page is correctly a document link and is not primary scientific evidence. |
+| current-aro | https://purl.obolibrary.org/obo/aro.obo; All sixty native resistance term labels, definitions, explicit drug edges and applicable hierarchy fields, plus compound/class/target context; eighty-four relevant terms inspected. | supports | Every native drug edge and emitted category reproduces current ARO. Source qualifiers must remain database-level evidence. One internal scientific conflict is material: ARO3004651 lin is described as ABC-F ribosomal protection but inherits an LNU/inactivation category. Matching an upstream category does not establish its biochemical correctness. |
+| adapter | iModulonDB structured adapter via kg-microbe-sources; Catalog and exact gene/locus searches executed before web follow-up; all commands exited 0. | context_only | The catalog contains 28 datasets. Matches include E. coli precise1k b4337 mdtM and B. subtilis modulome BSU_05610 vmlR and BSU_02670 lmrB; no relevant module was returned. The 23S search returned modification enzymes rather than the RNA ligand target. S. lincolnensis and Listeria were not catalogued. Other erm/vga searches had no relevant hit; none is negative phenotype or binding evidence. |
+| lin-sequence | CARD:ARO3004651; GenBank:AEO25219.1; UniProt:Q8Y8I3; Complete CARD model page, official reference protein XML and UniProt lmo0919 sequence; independent full-sequence comparison. | supports | CARD calls lin an ABC-F protection protein and provides AEO25219.1 from L. monocytogenes FSL R2-561. Its 523-residue sequence matches Q8Y8I3, lmo0919 from EGD-e, at every residue. This supports protein-level correspondence to the original mechanistic studies without equating the two strains or transferring all strain phenotypes. |
+| lin-protection | PMID:34117249; DOI:10.1038/s41467-021-23753-1; PMC8196190; Selected original structural Results, initiation/PTC sections, mechanistic Discussion and L. monocytogenes Methods read; supplement not read. | refutes | The original identifies VgaL as Lmo0919, clones EGD-e material and determines an antibiotic-resistance ABC-F/ribosome complex at 2.9Å using E104Q/E408Q protein. The protein occupies the E-site with its resistance domain toward the PTC. The complex was formed without antibiotic, so drug release is a structural/mechanistic model rather than a directly observed chemical-inactivation reaction. The results positively support target protection, not nucleotidylation. |
+| lin-functional | PMID:35733912; DOI:10.1093/jacamr/dlac061; PMC9204466; Full original main text and Table 1 read. | supports | Lincomycin MIC was 8 mg/L for EGD-e wild type versus 0.25–1 mg/L for its lmo0919 deletion. Broth microdilution used MH-F, approximately 5e5 CFU/mL, 37°C and 48 h scoring, with three biological replicates. Bulk salt/purity is unspecified. This supports conditional lincomycin resistance from Lmo0919; iboxamycin post-antibiotic and killing experiments are not lincomycin endpoints. A suspicious beta-NAD unit in Methods is not silently repaired or copied. |
+| lin-card-citation | PMID:32615922; PMC7331262; Original antimicrobial-resistance annotation Methods and relevant Results/Discussion read; other genomic analyses not fully audited. | context_only | The paper uses RGI/CARD to infer genetic resistance determinants. It does not establish lin-mediated drug nucleotidylation, and explicitly cautions that genetic differences are not demonstrated resistance advantages. This source cannot resolve the category conflict in favor of inactivation. |
+| ribosome-primary | PMID:28973455; DOI:10.1093/nar/gkx658; PMC5622323; Full original main text, Table 1 and all captions read; Figures 1, 2 and 4 viewed. | supports | The S. aureus RN4220 large-subunit complex was determined at 3.64Å after a 22 µg/mL lincomycin soak for 6 h. The drug occupies the 23S-rRNA peptidyl-transferase centre and exit-tunnel entrance, interfering with the A-site tRNA terminus. Spermidine was a crystallization additive and is not established as a universally required physiological mediator. This supports the native nucleic-acid target without assigning an RNA-binding claim to a ribosomal protein. |
+| ribosome-ligand | PDB:5HKV; pdb-ccd:3QB; Official entry and complete CCD response, with all three available structural serializations independently parsed. | supports | 5HKV is the original lincomycin complex; 5NRG is derivative RB02. CCD 3QB reproduces all nine native centres. This validates the deposited ligand graph, not the exact counterion or purity of the bulk commercial reagent, and is not independent re-refinement or absolute-hand determination. |
+| translation-primary | PMID:28973455; DOI:10.1093/nar/gkx658; Original cell-free Methods, Figure 4 and corresponding Results. | supports | Coupled luciferase transcription/translation with S. aureus ribosomes and E. coli ribosome-free extract gave IC50 0.03±0.002 µg/mL; the E. coli ribosome comparison was 1.7±0.2 µg/mL. These are reporter-expression endpoints, not MICs, binding affinities or isolated peptidyl-transfer rates. Derivative RB02 and clindamycin results remain separate. |
+| producer-adopted | PMID:24324587; DOI:10.1371/journal.pone.0079974; PMC3851162; Full original main text, both tables and all embedded captions read; separate supplemental files not inspected. | supports | This adopted study uses the S. lincolnensis ATCC25466 lincomycin biosynthetic system and expresses/purifies LmbB2 in E. coli to study tyrosine hydroxylation to DOPA. It supports producer and biosynthetic context. LmbB2, heme and peroxide chemistry are not antibacterial targets or proof that lincomycin kills by ROS. |
+| producer-resistance | PMID:34488446; DOI:10.1128/mBio.01731-21; PMC8546547; First two original Results sections read in full, covering producer resistance and drug induction; remaining main sections and supplement not fully audited. | context_only | The study measures lincomycin production in S. lincolnensis strains. LmrC overexpression in S. coelicolor supports moderate lincosamide resistance, whereas loss in the natural producer is not the principal resistance determinant under the tested conditions. Clindamycin induction and transcript measurements are not an exact lincomycin RNA-seq dataset. S. lincolnensis LmrC must not be conflated with the Lactococcus LmrCD transporter. |
+| adopted-2004 | PMID:15135500; DOI:10.1016/S0732-8893(03)00130-5; Complete original indexed abstract read; full text not obtained. | context_only | The study examines twenty pneumococcal clinical isolates with ribosomal mutations. Its abstract names erythromycin, josamycin, clindamycin and ketolides, without an exact lincomycin experiment. It provides related resistance context, not direct proof of every native lincomycin edge or the exact RNA-binding mechanism. |
+| adopted-review | PMID:10582867; DOI:10.1128/AAC.43.12.2823; PMC89572; Original review narrative and relevant nomenclature/resistance tables read; not an exhaustive audit of every table row or reference. | context_only | This 1999 article is a secondary nomenclature review. It supports historical macrolide-lincosamide-streptogramin resistance context; older ABC-efflux interpretations do not override later ABC-F protection experiments. It is not classified here as new primary evidence. |
+| additional-abstracts | PMID:30126986; PMID:23221628; PMID:19684139; PMID:15317768; PMID:16958846; PMID:15358090; Complete indexed original abstracts read; full texts not assessed for these additional leads. | context_only | These cover VmlR protection, MdtM transport, lnuP, B. subtilis LmrAB, Lactococcus LmrCD and lincomycin hydrochloride-monohydrate crystallography. The 2004 crystal abstract reports anomalous-scattering absolute configuration, but no full drawing or new atom mapping was extracted. The transporter papers are scoped to their named systems; lack of lincomycin detail in an abstract is not treated as refutation of a qualified native database edge. |
+| bounded-search | Europe PMC exact lincomycin structure, mechanism and resistance search plus bounded official identity follow-up; First 100 returned titles of 183 results inspected; all three adopted leads dispositioned and decisive originals followed up. | context_only | The review distinguishes exact lincomycin from clindamycin, derivatives, salts, epilincomycin and biosynthetic enzymes. A mistaken guessed carbohydrate DOI resolved to unrelated PMID15183738 and was excluded. A 1998 epimer chromatography publisher route returned 403; no detailed experiment was inferred from its search snippet. This is not an exhaustive literature or clinical-status review. |
+
+## Limits And Additional Notes
+
+- Current HMDB direct entry/XML/mol access returned 403. Its own official PubChem deposit and SDF were inspected and independently parsed, but a current live-entry correction could not be checked.
+- LINCS routes failed, Reaxys was not accessed through a paid service and DrugBank direct access returned 403. Their adopted/current-authority associations were examined, but no independent current graph equivalence is claimed for the inaccessible exact references.
+- All sixty resistance assertions were checked against the current official ontology and their explicit database qualifiers. Primary functional evidence was inspected for selected decisive systems, not for every resistance allele or taxon.
+- The 2017 ribosome original was read in full and Figures 1, 2, 4 viewed. Supplemental electron-density/spectral files were not inspected and the coordinates were not re-refined. Bulk reagent salt/purity was not established by the neutral deposited ligand.
+- The 2021 VgaL study was read in selected relevant Results, Discussion and Methods; the supplement was not inspected. The complex lacked antibiotic. The 2022 main text/Table 1 was read in full; a suspicious beta-NAD unit limits copying its medium formulation verbatim.
+- The 2013 biosynthesis main text/tables were read in full. The 2021 producer study was read only in its first two relevant Results sections. Biosynthesis and induction evidence were not transferred into direct antibacterial causality.
+- The adopted 2004 clinical mutation paper and six additional original leads were read at complete-abstract depth. The 1999 adopted article is a secondary review, with narrative and relevant tables read rather than every cited study.
+- Patent reading was limited to the decisive stereochemical description and complete Preparation 5. The 2004 crystal original was available only at abstract depth. The 1998 chromatography publisher route failed; its search snippet was not used as decisive evidence.
+- This bounded review does not establish current clinical approval, all commercial formulation identities or universal susceptibility. Missing optional structured enrichment is not treated as a defect.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- The thirteen original captures remain unchanged; actual source-owner inputs were appended to seventeen. Public retrieval manifests preserve actual URLs, UTC timestamps, status and hashes.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T194937Z-lincomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Lincomycin: supported native structure with exact-reference, alias and resistance-category
+  conflicts'
+started_at: '2026-10-21T19:32:11Z'
+finished_at: '2026-10-21T19:49:37Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The neutral nine-centre native structure, producer definition, antibacterial
+  role and 23S-rRNA target are supported. Four major source-mapping defects remain:
+  an exact salt cross-reference, an exact reference with one unspecified centre, an
+  epimer typed as an exact synonym, and an ABC-F protection protein classified as
+  antibiotic inactivation. Lincocin also needs brand typing. All sixty resistance
+  edges were checked as qualified database assertions; they were not all promoted
+  to primary evidence.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/lincomycin.yaml
+    sha256: 98440188b1f25a69728f2fdd546666634607a37ff4e7f05a7a96ab7c28f0c968
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:6472
+  path: data/antibiotics/antibacterial/lincomycin.yaml
+  label: lincomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual maintained source input for the record
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Actual maintained target type and relation mapping
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 604; one whole native record. All thirteen original input
+    hashes were verified unchanged before assessment; actual ARO inventory, target,
+    resistance and target-role owners were appended, giving seventeen captured inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:6472
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/lincomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/lincomycin.yaml --out /private/tmp/am-review-session/604-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 604
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-comparison
+  name: Independent authority graph and stereo-scope comparison
+  status: passed
+  required: false
+  summary: Native and matching authority strings reproduce the exact neutral graph.
+    Salt, epimer and unspecified-centre differences were independently localized.
+  target_ids:
+  - CHEBI:6472
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/604-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: aro-edge-audit
+  name: Current ARO resistance edge and category audit
+  status: passed
+  required: false
+  summary: All sixty native labels, explicit lincomycin edges and inherited categories
+    reproduce the current source; scientific consistency was assessed separately.
+  target_ids:
+  - CHEBI:6472
+  command: /private/tmp/antibioticmech-record-reviews-061/.venv/bin/python /private/tmp/am-review-session/604-aro-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:6472
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/lincomycin.yaml
+  locator: Complete 567-line native YAML, including all sixteen synonyms, nine exact
+    xrefs, four drug references, sixty resistance edges, the molecular target and
+    five history events.
+  accessed_at: '2026-10-21T19:45:33Z'
+  support: supports
+  summary: The SEEDED EXACT record denotes neutral C18H34N2O6S, key OJMMVQQUTAEWLP-KIDUDLJLSA-N,
+    with nine assigned centres. The RNA target is explicitly DIRECT_BINDING_TARGET
+    with PRIMARY_EVIDENCE_NEEDED. Resistance entries explicitly identify CARD/ARO
+    database assertions. No clinical, numeric activity, producer-object, dataset or
+    causal-graph assertion is present.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:210; data/raw/aro_antibiotics.tsv:33;
+    data/raw/aro_target_edges.tsv:34; data/raw/aro_resistance_edges.tsv:974-1033;
+    conf/aro_target_roles.tsv
+  locator: Complete exact source rows and applicable extraction/seeding branches,
+    including scripts/extract_source_inventory.py:450-506 and scripts/seed_from_sources.py:255-320,1528-1557.
+  accessed_at: '2026-10-21T19:45:33Z'
+  support: supports
+  summary: ChEBI supplies the native graph and definition; ARO supplies additional
+    aliases, target and resistance assertions. The extractor classifies resistance
+    from mapped ontology ancestors. The target-role table maps ARO3000754 to a nucleic-acid
+    direct target. Exact xrefs differ semantically from broader drug references. Source-scoped
+    synonym exclusions are already supported, while any new relation or category override
+    must be explicitly maintained.
+  snapshot_sha256: 0fb5a30a96a7f17bd883e499c2a43935fd59f59421f13ea7f6666840b8d7ef64
+- evidence_id: local-search
+  kind: search
+  reference: /private/tmp/am-review-session/604-local-hits.txt
+  locator: Ignored-inclusive and hidden-inclusive label, slug and identifier search;
+    complete returned path inventory read.
+  accessed_at: '2026-10-21T19:45:33Z'
+  support: context_only
+  summary: Native, raw, generated and historical research paths were found. Historical
+    reports were leads only. Entire-record and maintained-row inspection establish
+    present claims and optional-field scope.
+  snapshot_sha256: 845046e6cc6474537d681e94457ba412c836be05fa32459e3e9c087a88222089
+  search_scope: 2026-10-21; exact lincomycin, CHEBI6472, ARO0000046, native slug and
+    identifiers. Local search included ignored and hidden files. Europe PMC exact
+    compound/structure/mechanism/resistance query returned 183 records, first 100
+    titles inspected, with selected original and official identity follow-up; not
+    exhaustive.
+- evidence_id: native-authorities
+  kind: database
+  reference: CHEBI:6472; PubChem:3000540; ChEMBL:CHEMBL1447; KEGG:C06812
+  locator: Complete official chemical responses, all available isomeric strings and
+    ChEMBL/KEGG molfiles.
+  accessed_at: '2026-10-21T19:36:04Z'
+  support: supports
+  summary: Independent parsing reproduces the native full key and all nine centres.
+    Formula, charge and masses agree at stated precision. CAS 154-21-2 is corroborated
+    in these public authorities, not through a licensed registry. The supported native
+    structure should not be replaced to accommodate conflicting references.
+  snapshot_sha256: a976faad321b334681af6efeb2a4eaf364f241a21a1f2c716277f61dd7b479e6
+- evidence_id: parent-role
+  kind: database
+  reference: CHEBI:23007; CHEBI:29347; CHEBI:35275; CHEBI:46770; CHEBI:84186; CHEBI:33281;
+    ARO:0000017
+  locator: All five ChEBI parent definitions, antimicrobial role and current ARO lincosamide
+    class read.
+  accessed_at: '2026-10-21T19:36:06Z'
+  support: supports
+  summary: These structural parents and the broader antimicrobial/lincosamide classifications
+    fit the native graph and inspected experiments. Current additional bacterial-metabolite
+    annotation is optional and does not make its omission a defect.
+  snapshot_sha256: 0f66df822d1a825c02531f80cc0fcc12783ac72a0c2f0482a9d9018db0dba9e1
+- evidence_id: salt-xref
+  kind: database
+  reference: https://rest.kegg.jp/get/C14002; KEGG:D02346
+  locator: Complete official entries and independent parsing of both molfiles.
+  accessed_at: '2026-10-21T19:36:05Z'
+  support: refutes
+  summary: C14002 explicitly denotes lincomycin hydrochloride monohydrate, CAS 7179-49-9
+    and formula C18H34N2O6S.HCl.H2O. Its three-component graph gives LFZGYTBWUHCAKF-DCNJEFSFSA-N;
+    its organic component agrees with native lincomycin. D02346 has the same salt
+    scope. Native xrefs[4] incorrectly asserts exact equivalence, whereas D02346 is
+    appropriately a broader drug association.
+  snapshot_sha256: 936486d3c1b42170ab1e463a2efccafe4e0a97e6df512267f8508bcba4f83a07
+- evidence_id: hmdb-deposit
+  kind: database
+  reference: PubChem Substance:348283992 version2; HMDB:HMDB0015564; PubChem:656509
+  locator: Official HMDB depositor metadata and SDF accessed through PubChem; direct
+    HMDB entry/XML/mol routes returned 403.
+  accessed_at: '2026-10-21T19:40:10Z'
+  support: refutes
+  summary: The deposit explicitly names HMDB0015564 and links CID656509. Its own SDF
+    and both CID structure strings encode OJMMVQQUTAEWLP-ISVUEQNNSA-N, with pyrrolidine
+    C2 unspecified. Eight centres remain assigned. This is positive disagreement in
+    exact stereo scope, not proof of an opposite epimer or a mixture; the live HMDB
+    graph could not be independently rechecked.
+  snapshot_sha256: d620d4022912abf0e20b1002ba8f99309853d2c756876f83b0218b511483731d
+- evidence_id: chemical-diagnostic
+  kind: validation
+  reference: /private/tmp/am-review-session/604-authority-chemistry.json
+  locator: Independent native/authority parsing and single-centre diagnostics.
+  accessed_at: '2026-10-21T19:45:33Z'
+  support: supports
+  summary: Clearing only canonical InChI C11 of the native graph reproduces the HMDB-deposited
+    key. Inverting only canonical C9, the sugar-chain C7 alcohol centre, reproduces
+    epilincomycin key OJMMVQQUTAEWLP-AWPVFWJPSA-N. The native graph and matching exact
+    authorities remain unchanged. This comparison also records the salt components
+    and deposited ribosome ligand.
+  snapshot_sha256: 3d0fb65c68005302749610a148d1b47ddf9e523c441f8375f34c82cfa1327ea9
+- evidence_id: epi-authority
+  kind: authority
+  reference: https://meshb.nlm.nih.gov/record/ui?ui=D008034; PubChem:40469496
+  locator: Complete NLM MeSH concept listing and CAS 17017-22-0-linked PubChem structure
+    response.
+  accessed_at: '2026-10-21T19:37:44Z'
+  support: refutes
+  summary: NLM distinguishes narrower concept M0330146, lincomycin L-threo isomer,
+    with term Epilincomycin and CAS 17017-22-0. Its independent PubChem graph differs
+    at the sugar C7 centre. A shared descriptor hierarchy does not make this epimer
+    an exact synonym of the D-erythro native compound.
+  snapshot_sha256: e6d452370cde40d6df303be0cc747e4beb6c8b360aa34e176d9282ce00952cbb
+- evidence_id: epi-primary
+  kind: primary_source
+  reference: US3539689A
+  locator: Original patent description of D-erythro/L-threo interconversion and complete
+    Preparation 5 A-D read in full text; whole patent not audited.
+  accessed_at: '2026-10-21T19:39:54Z'
+  support: refutes
+  summary: The experimental preparation oxidizes the C7 alcohol and reduces the resulting
+    7-oxo compound, separating normal lincomycin from the 7-epi L-threo product. This
+    directly supports the distinct epimer identity. No patent activity number or unspecified
+    derivative result is transferred to native lincomycin.
+  snapshot_sha256: 76c88ea9033d1357af48a5538cf6bda6b6d48bef80e22add0117e7566cca67f2
+- evidence_id: brand
+  kind: authority
+  reference: https://www.pfizermedical.com/lincocin
+  locator: Official product Description and identity sections, with NLM trade-name
+    and KEGG product corroboration.
+  accessed_at: '2026-10-21T19:37:44Z'
+  support: refutes
+  summary: Lincocin is a brand for an injectable lincomycin hydrochloride monohydrate
+    product. The label distinguishes 300 mg lincomycin-equivalent from 340 mg hydrochloride
+    material per mL. This is a product name, not an exact chemical synonym for the
+    neutral molecule. Other imported commercial-looking names were not assumed erroneous
+    without equivalent evidence.
+  snapshot_sha256: b0149fb65e69fa31cfad8e74239b4327f1a6e90642c944da142897a0b02ba87c
+- evidence_id: other-references
+  kind: database
+  reference: DrugCentral:1582; DrugBank:DB01627; KEGG:D00223/D02346; LINCS:LSM-5602;
+    Reaxys:707677; Wikipedia:Lincomycin
+  locator: Complete DrugCentral identity and KEGG drug entries; Wikipedia topic identity
+    checked; current ChEBI registry associations inspected.
+  accessed_at: '2026-10-21T19:36:04Z'
+  support: context_only
+  summary: DrugCentral and D00223 identify lincomycin, while D02346 is the salt product.
+    These are drug-level associations and need not be exact graph equivalents. DrugBank
+    returned 403; LINCS routes failed and Reaxys was not accessed through paid service,
+    so their current graphs are not independently verified. The Wikipedia page is
+    correctly a document link and is not primary scientific evidence.
+  snapshot_sha256: 3959a8520ca4658fc731db3e9f8216e69139982f70eee5f7ea8e541b919b53ea
+- evidence_id: current-aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: All sixty native resistance term labels, definitions, explicit drug edges
+    and applicable hierarchy fields, plus compound/class/target context; eighty-four
+    relevant terms inspected.
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: supports
+  summary: 'Every native drug edge and emitted category reproduces current ARO. Source
+    qualifiers must remain database-level evidence. One internal scientific conflict
+    is material: ARO3004651 lin is described as ABC-F ribosomal protection but inherits
+    an LNU/inactivation category. Matching an upstream category does not establish
+    its biochemical correctness.'
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured adapter via kg-microbe-sources
+  locator: Catalog and exact gene/locus searches executed before web follow-up; all
+    commands exited 0.
+  accessed_at: '2026-10-21T19:35:43Z'
+  support: context_only
+  summary: The catalog contains 28 datasets. Matches include E. coli precise1k b4337
+    mdtM and B. subtilis modulome BSU_05610 vmlR and BSU_02670 lmrB; no relevant module
+    was returned. The 23S search returned modification enzymes rather than the RNA
+    ligand target. S. lincolnensis and Listeria were not catalogued. Other erm/vga
+    searches had no relevant hit; none is negative phenotype or binding evidence.
+  snapshot_sha256: 11d8711f7fb02d862b059f1bf75aa5d76fe91b4ea35dc968b704e9750e0c5829
+- evidence_id: lin-sequence
+  kind: database
+  reference: CARD:ARO3004651; GenBank:AEO25219.1; UniProt:Q8Y8I3
+  locator: Complete CARD model page, official reference protein XML and UniProt lmo0919
+    sequence; independent full-sequence comparison.
+  accessed_at: '2026-10-21T19:45:33Z'
+  support: supports
+  summary: CARD calls lin an ABC-F protection protein and provides AEO25219.1 from
+    L. monocytogenes FSL R2-561. Its 523-residue sequence matches Q8Y8I3, lmo0919
+    from EGD-e, at every residue. This supports protein-level correspondence to the
+    original mechanistic studies without equating the two strains or transferring
+    all strain phenotypes.
+  snapshot_sha256: 01ba5de5089e4213e1c34259b3ecaf2273a3f379062df2ef2ff64b4e92a6a58a
+- evidence_id: lin-protection
+  kind: primary_source
+  reference: PMID:34117249; DOI:10.1038/s41467-021-23753-1; PMC8196190
+  locator: Selected original structural Results, initiation/PTC sections, mechanistic
+    Discussion and L. monocytogenes Methods read; supplement not read.
+  accessed_at: '2026-10-21T19:40:29Z'
+  support: refutes
+  summary: The original identifies VgaL as Lmo0919, clones EGD-e material and determines
+    an antibiotic-resistance ABC-F/ribosome complex at 2.9Å using E104Q/E408Q protein.
+    The protein occupies the E-site with its resistance domain toward the PTC. The
+    complex was formed without antibiotic, so drug release is a structural/mechanistic
+    model rather than a directly observed chemical-inactivation reaction. The results
+    positively support target protection, not nucleotidylation.
+  snapshot_sha256: dac4d80a934902469c02a1165c681222dc1442c878025b42e5b8c853e82c3369
+- evidence_id: lin-functional
+  kind: primary_source
+  reference: PMID:35733912; DOI:10.1093/jacamr/dlac061; PMC9204466
+  locator: Full original main text and Table 1 read.
+  accessed_at: '2026-10-21T19:39:07Z'
+  support: supports
+  summary: Lincomycin MIC was 8 mg/L for EGD-e wild type versus 0.25–1 mg/L for its
+    lmo0919 deletion. Broth microdilution used MH-F, approximately 5e5 CFU/mL, 37°C
+    and 48 h scoring, with three biological replicates. Bulk salt/purity is unspecified.
+    This supports conditional lincomycin resistance from Lmo0919; iboxamycin post-antibiotic
+    and killing experiments are not lincomycin endpoints. A suspicious beta-NAD unit
+    in Methods is not silently repaired or copied.
+  snapshot_sha256: 46683d1c0a9cae98de377b7c242880ba9501607b752523dd4da8e8041fd850ef
+- evidence_id: lin-card-citation
+  kind: primary_source
+  reference: PMID:32615922; PMC7331262
+  locator: Original antimicrobial-resistance annotation Methods and relevant Results/Discussion
+    read; other genomic analyses not fully audited.
+  accessed_at: '2026-10-21T19:39:07Z'
+  support: context_only
+  summary: The paper uses RGI/CARD to infer genetic resistance determinants. It does
+    not establish lin-mediated drug nucleotidylation, and explicitly cautions that
+    genetic differences are not demonstrated resistance advantages. This source cannot
+    resolve the category conflict in favor of inactivation.
+  snapshot_sha256: 12bff91fef9aacbff8fb60f0353129bc7d3be3e02061a8e82c263eb330bc285e
+- evidence_id: ribosome-primary
+  kind: primary_source
+  reference: PMID:28973455; DOI:10.1093/nar/gkx658; PMC5622323
+  locator: Full original main text, Table 1 and all captions read; Figures 1, 2 and
+    4 viewed.
+  accessed_at: '2026-10-21T19:37:44Z'
+  support: supports
+  summary: The S. aureus RN4220 large-subunit complex was determined at 3.64Å after
+    a 22 µg/mL lincomycin soak for 6 h. The drug occupies the 23S-rRNA peptidyl-transferase
+    centre and exit-tunnel entrance, interfering with the A-site tRNA terminus. Spermidine
+    was a crystallization additive and is not established as a universally required
+    physiological mediator. This supports the native nucleic-acid target without assigning
+    an RNA-binding claim to a ribosomal protein.
+  snapshot_sha256: b8a6073cc36026aa2d8df9a4e142b10e9e15e3170da585903c8563ac6781f9ef
+- evidence_id: ribosome-ligand
+  kind: database
+  reference: PDB:5HKV; pdb-ccd:3QB
+  locator: Official entry and complete CCD response, with all three available structural
+    serializations independently parsed.
+  accessed_at: '2026-10-21T19:37:44Z'
+  support: supports
+  summary: 5HKV is the original lincomycin complex; 5NRG is derivative RB02. CCD 3QB
+    reproduces all nine native centres. This validates the deposited ligand graph,
+    not the exact counterion or purity of the bulk commercial reagent, and is not
+    independent re-refinement or absolute-hand determination.
+  snapshot_sha256: 64eb42673809716237db37100f884895507f291699107e151a9c3533946651f4
+- evidence_id: translation-primary
+  kind: primary_source
+  reference: PMID:28973455; DOI:10.1093/nar/gkx658
+  locator: Original cell-free Methods, Figure 4 and corresponding Results.
+  accessed_at: '2026-10-21T19:39:08Z'
+  support: supports
+  summary: Coupled luciferase transcription/translation with S. aureus ribosomes and
+    E. coli ribosome-free extract gave IC50 0.03±0.002 µg/mL; the E. coli ribosome
+    comparison was 1.7±0.2 µg/mL. These are reporter-expression endpoints, not MICs,
+    binding affinities or isolated peptidyl-transfer rates. Derivative RB02 and clindamycin
+    results remain separate.
+  snapshot_sha256: 790e2ab890c98ca68e05ad8f52c8f25b1944da9d1621e5f51eda911518019755
+- evidence_id: producer-adopted
+  kind: primary_source
+  reference: PMID:24324587; DOI:10.1371/journal.pone.0079974; PMC3851162
+  locator: Full original main text, both tables and all embedded captions read; separate
+    supplemental files not inspected.
+  accessed_at: '2026-10-21T19:37:44Z'
+  support: supports
+  summary: This adopted study uses the S. lincolnensis ATCC25466 lincomycin biosynthetic
+    system and expresses/purifies LmbB2 in E. coli to study tyrosine hydroxylation
+    to DOPA. It supports producer and biosynthetic context. LmbB2, heme and peroxide
+    chemistry are not antibacterial targets or proof that lincomycin kills by ROS.
+  snapshot_sha256: 5449570df23e95a44125aa1181ef8a4a3e93d1eb24296dc484a21b64145d89f0
+- evidence_id: producer-resistance
+  kind: primary_source
+  reference: PMID:34488446; DOI:10.1128/mBio.01731-21; PMC8546547
+  locator: First two original Results sections read in full, covering producer resistance
+    and drug induction; remaining main sections and supplement not fully audited.
+  accessed_at: '2026-10-21T19:39:07Z'
+  support: context_only
+  summary: The study measures lincomycin production in S. lincolnensis strains. LmrC
+    overexpression in S. coelicolor supports moderate lincosamide resistance, whereas
+    loss in the natural producer is not the principal resistance determinant under
+    the tested conditions. Clindamycin induction and transcript measurements are not
+    an exact lincomycin RNA-seq dataset. S. lincolnensis LmrC must not be conflated
+    with the Lactococcus LmrCD transporter.
+  snapshot_sha256: 6f3df86a7aecf1aca3162ae6e2f857882beb7f4ee1f6d0c990fd902aec5d11d6
+- evidence_id: adopted-2004
+  kind: primary_source
+  reference: PMID:15135500; DOI:10.1016/S0732-8893(03)00130-5
+  locator: Complete original indexed abstract read; full text not obtained.
+  accessed_at: '2026-10-21T19:36:04Z'
+  support: context_only
+  summary: The study examines twenty pneumococcal clinical isolates with ribosomal
+    mutations. Its abstract names erythromycin, josamycin, clindamycin and ketolides,
+    without an exact lincomycin experiment. It provides related resistance context,
+    not direct proof of every native lincomycin edge or the exact RNA-binding mechanism.
+  snapshot_sha256: 28d2ae7de7ba35b55bfffe1a80ecbb86cfb54020f5f8656d19ee240cfa85a4ae
+- evidence_id: adopted-review
+  kind: database
+  reference: PMID:10582867; DOI:10.1128/AAC.43.12.2823; PMC89572
+  locator: Original review narrative and relevant nomenclature/resistance tables read;
+    not an exhaustive audit of every table row or reference.
+  accessed_at: '2026-10-21T19:37:44Z'
+  support: context_only
+  summary: This 1999 article is a secondary nomenclature review. It supports historical
+    macrolide-lincosamide-streptogramin resistance context; older ABC-efflux interpretations
+    do not override later ABC-F protection experiments. It is not classified here
+    as new primary evidence.
+  snapshot_sha256: 102a1be94763ff315c550a46134646cb750f2da0531467646db80c3b23c67a7a
+- evidence_id: additional-abstracts
+  kind: primary_source
+  reference: PMID:30126986; PMID:23221628; PMID:19684139; PMID:15317768; PMID:16958846;
+    PMID:15358090
+  locator: Complete indexed original abstracts read; full texts not assessed for these
+    additional leads.
+  accessed_at: '2026-10-21T19:38:35Z'
+  support: context_only
+  summary: These cover VmlR protection, MdtM transport, lnuP, B. subtilis LmrAB, Lactococcus
+    LmrCD and lincomycin hydrochloride-monohydrate crystallography. The 2004 crystal
+    abstract reports anomalous-scattering absolute configuration, but no full drawing
+    or new atom mapping was extracted. The transporter papers are scoped to their
+    named systems; lack of lincomycin detail in an abstract is not treated as refutation
+    of a qualified native database edge.
+  snapshot_sha256: af741791c3b7e60a8aad0310c80908927ee49a2b246c550685384f8bbc599a05
+- evidence_id: bounded-search
+  kind: search
+  reference: Europe PMC exact lincomycin structure, mechanism and resistance search
+    plus bounded official identity follow-up
+  locator: First 100 returned titles of 183 results inspected; all three adopted leads
+    dispositioned and decisive originals followed up.
+  accessed_at: '2026-10-21T19:37:45Z'
+  support: context_only
+  summary: The review distinguishes exact lincomycin from clindamycin, derivatives,
+    salts, epilincomycin and biosynthetic enzymes. A mistaken guessed carbohydrate
+    DOI resolved to unrelated PMID15183738 and was excluded. A 1998 epimer chromatography
+    publisher route returned 403; no detailed experiment was inferred from its search
+    snippet. This is not an exhaustive literature or clinical-status review.
+  snapshot_sha256: 3ccef9f59a13eff51ce7920629b8a21b3eb504ed8bd1c2ca93e48e6d61ad562e
+  search_scope: 2026-10-21; exact lincomycin, CHEBI6472, ARO0000046, native slug and
+    identifiers. Local search included ignored and hidden files. Europe PMC exact
+    compound/structure/mechanism/resistance query returned 183 records, first 100
+    titles inspected, with selected original and official identity follow-up; not
+    exhaustive.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native structure and exact reference scope
+  outcome: concern
+  summary: The native neutral nine-centre graph is valid and strongly corroborated.
+    C14002 adds hydrochloride/water and the HMDB depositor graph omits one native
+    centre; these exact associations require qualification. None justifies changing
+    the supported native structure.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - native-authorities
+  - salt-xref
+  - hmdb-deposit
+  - chemical-diagnostic
+  - ribosome-ligand
+- assessment_id: names
+  area: grounding
+  topic: Exact chemical names versus epimer and brand
+  outcome: concern
+  summary: Epilincomycin is a distinct C7 epimer, while Lincocin denotes a salt formulation
+    brand. Other inspected systematic/INN names are consistent with lincomycin. Unverified
+    commercial-looking aliases are not automatically classified as defects.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - native
+  - epi-authority
+  - epi-primary
+  - brand
+  - chemical-diagnostic
+- assessment_id: producer
+  area: evidence
+  topic: Producer definition and biochemical context
+  outcome: supported
+  summary: The S. lincolnensis producer definition and carbohydrate-containing antibiotic
+    description agree with current authority and primary biosynthesis/production work.
+    Biosynthetic enzyme experiments do not become antibacterial target or ROS mechanisms.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - producer-adopted
+  - producer-resistance
+  - native-authorities
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial role and assay scope
+  outcome: supported
+  summary: Original lincomycin susceptibility and reporter-expression experiments
+    support the antibacterial role. Numeric endpoints remain material- and condition-specific;
+    no unsupported native MIC, clinical indication or universal bactericidal claim
+    is present.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - lin-functional
+  - translation-primary
+  - parent-role
+- assessment_id: target
+  area: grounding
+  topic: RNA target and binding mechanism
+  outcome: supported
+  summary: The native target is correctly nucleic acid and honestly marked PRIMARY_EVIDENCE_NEEDED.
+    The original S. aureus complex supports 23S-rRNA/PTC binding, with separate reporter-expression
+    evidence. Optional addition of these primary citations is not itself a defect
+    finding.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - ribosome-primary
+  - ribosome-ligand
+  - translation-primary
+  - owners
+- assessment_id: resistance
+  area: evidence
+  topic: Sixty database edges and lin category
+  outcome: concern
+  summary: All sixty native source assertions reproduce. Their database qualifications
+    are appropriate, but lin has positive protein-identity and primary protection
+    evidence contradicting its inactivation category. The remaining fifty-nine were
+    checked against authority, not all independently functionally validated.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - current-aro
+  - lin-sequence
+  - lin-protection
+  - lin-functional
+  - lin-card-citation
+  - adopted-review
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained inputs and evidence ownership
+  outcome: supported
+  summary: Whole native content, exact source rows, mapped ancestors, target-role
+    configuration and relevant seeding code were read. All three adopted citations
+    have explicit dispositions and original input hashes remain unchanged.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - native
+  - owners
+  - local-search
+  - current-aro
+- assessment_id: coverage
+  area: completeness
+  topic: Optional enrichment and access limits
+  outcome: unknown
+  summary: All asserted fields and reference namespaces were examined, but LINCS/Reaxys
+    current exact graphs and direct live HMDB were not retrieved. DrugBank is a broader
+    reference. Optional activity, clinical, producer, transcriptome and graph objects
+    were not scored as missing required content.
+  target_ids:
+  - CHEBI:6472
+  evidence_ids:
+  - other-references
+  - hmdb-deposit
+  - bounded-search
+  - adapter
+findings:
+- finding_id: F1
+  issue_key: lincomycin-kegg-c14002-salt-exact-xref
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Qualify the hydrochloride-monohydrate exact cross-reference
+  description: Native xrefs[4] C14002 denotes lincomycin hydrochloride monohydrate
+    rather than the neutral native molecule. Its official formula, registration and
+    independently parsed three-component graph establish the mismatch. Preserve the
+    correct neutral graph and retain useful salt associations only with appropriate
+    scope.
+  target_ids:
+  - CHEBI:6472
+  field_paths:
+  - xrefs[4]
+  evidence_ids:
+  - salt-xref
+  - chemical-diagnostic
+  - native-authorities
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported exact chemical references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and identity policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact versus broader reference emission
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-scoped adjudication
+  rule_id: Exact chemical xrefs must denote the same complete chemical entity
+  native_severity: major
+  normalization_reason: This is a positively verified exact-reference error. The native
+    identity remains valid, so it is not a wrong-native-identity blocker.
+- finding_id: F2
+  issue_key: lincomycin-hmdb0015564-unspecified-pyrrolidine-centre
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Resolve the HMDB exact-reference stereochemical scope
+  description: HMDB0015564 official deposit SID348283992 version 2 has one unspecified
+    pyrrolidine centre, while the native molecule assigns all nine. Clearing only
+    native canonical InChI C11 reproduces its key. Direct HMDB access failed, so reconcile
+    the current live entry before retaining exact equivalence; do not infer an opposite
+    epimer or a mixture.
+  target_ids:
+  - CHEBI:6472
+  field_paths:
+  - xrefs[2]
+  evidence_ids:
+  - hmdb-deposit
+  - chemical-diagnostic
+  - native-authorities
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported exact chemical references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and identity policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact versus broader reference emission
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-scoped adjudication
+  rule_id: Exact chemical xrefs must preserve assigned stereochemical scope
+  native_severity: major
+  normalization_reason: Official source-deposited chemistry positively differs in
+    exact scope; the current direct landing page is an access limit, not the sole
+    basis for the finding.
+- finding_id: F3
+  issue_key: lincomycin-epilincomycin-exact-synonym
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Remove the epimer from exact synonym equivalence
+  description: Epilincomycin denotes the L-threo C7 epimer, distinguished by the original
+    preparation, NLM concept/CAS and independently parsed graph. Native synonyms[7]
+    incorrectly treats it as exact lincomycin. Preserve any useful association as
+    an explicitly related compound rather than an exact name.
+  target_ids:
+  - CHEBI:6472
+  field_paths:
+  - synonyms[7]
+  evidence_ids:
+  - epi-authority
+  - epi-primary
+  - chemical-diagnostic
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported source aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO synonym extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym typing and source-scoped exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-scoped synonym policy
+  rule_id: Exact synonyms must identify the same stereochemical compound
+  native_severity: major
+  normalization_reason: A positively identified distinct epimer is materially misleading
+    exact identity metadata, while the selected native graph itself remains sound.
+- finding_id: F4
+  issue_key: lincomycin-lin-aro3004651-protection-not-inactivation
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Correct lin from drug inactivation to target protection
+  description: Native resistance_mechanisms[50] inherits ANTIBIOTIC_INACTIVATION for
+    ARO3004651 lin. CARD describes an ABC-F protection protein; its reference sequence
+    exactly matches the experimentally characterized Lmo0919/VgaL protein. Original
+    ribosome and deletion studies support target protection and conditional lincomycin
+    resistance, not drug nucleotidylation. Preserve the resistance relation and source
+    qualification while resolving the category.
+  target_ids:
+  - CHEBI:6472
+  field_paths:
+  - resistance_mechanisms[50].mechanism_type
+  evidence_ids:
+  - current-aro
+  - lin-sequence
+  - lin-protection
+  - lin-functional
+  - lin-card-citation
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance category
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Mapped-ancestor category extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Qualified resistance assertion emission
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source adjudication if an explicit override is introduced
+  rule_id: Mechanism categories must agree with the grounded protein and positive
+    experimental mechanism
+  native_severity: major
+  normalization_reason: This is a positive mechanistic incompatibility, not a demand
+    for primary evidence on every database edge or an inference from missing assays.
+- finding_id: F5
+  issue_key: lincomycin-lincocin-brand-exact-synonym
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Type Lincocin as a brand name
+  description: The official product is a lincomycin hydrochloride monohydrate formulation.
+    Preserve Lincocin for search but use BRAND_NAME rather than EXACT_SYNONYM for
+    the neutral compound.
+  target_ids:
+  - CHEBI:6472
+  field_paths:
+  - synonyms[9]
+  evidence_ids:
+  - brand
+  - salt-xref
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported source aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO synonym extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym typing and source-scoped exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-scoped synonym policy
+  rule_id: Synonym typing must distinguish product brands from exact chemical names
+  native_severity: minor
+  normalization_reason: This is a bounded metadata correction; the native structure
+    and recognized active moiety remain correct.
+actions:
+- action_id: A1
+  description: Reconcile conflicting exact references through maintained source handling.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - CHEBI:6472
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported exact chemical references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and identity policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Exact versus broader reference emission
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-scoped adjudication
+  acceptance_checks:
+  - Keep native neutral KIDUDLJLSA chemistry and matching exact authorities. C14002
+    must not remain an unqualified exact chemical equivalent.
+  - Check the current direct HMDB entry against its official deposit and document
+    the one-centre scope decision. An unspecified centre is not proof of a mixture
+    or the opposite epimer.
+  - Preserve D02346 as an allowed broader drug association. Regenerate and run schema,
+    strict, chemistry and source-reproduction checks.
+- action_id: A2
+  description: Correct exact synonym scope without losing useful search labels.
+  finding_ids:
+  - F3
+  - F5
+  target_ids:
+  - CHEBI:6472
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Imported source aliases
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO synonym extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Synonym typing and source-scoped exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-scoped synonym policy
+  acceptance_checks:
+  - Epilincomycin must not be emitted as an exact synonym of lincomycin. Retain a
+    related-compound link only with explicitly supported scope.
+  - Emit Lincocin as BRAND_NAME and preserve source attribution. Use maintained exclusions/typing
+    or extend the mapping explicitly, rather than patching generated YAML.
+  - Verify regeneration preserves the corrected semantics and the native graph.
+- action_id: A3
+  description: Adjudicate the lin category at its maintained source mapping.
+  finding_ids:
+  - F4
+  target_ids:
+  - CHEBI:6472
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance category
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Mapped-ancestor category extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Qualified resistance assertion emission
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source adjudication if an explicit override is introduced
+  acceptance_checks:
+  - Retain ARO3004651 and the qualified lincomycin resistance assertion but classify
+    the grounded ABC-F protein as target protection.
+  - Document the AEO25219.1/Q8Y8I3 sequence match and keep FSL R2-561 separate from
+    experimental EGD-e strain phenotypes. Do not reclassify all LNU proteins by analogy.
+  - Preserve other source-qualified edges and verify extraction/seeding reproduce
+    the adjudicated result.
+- action_id: A4
+  description: Keep optional primary enrichment specific to the tested system.
+  finding_ids: []
+  target_ids:
+  - CHEBI:6472
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/lincomycin.yaml
+    role: Curator-owned target and activity evidence through the validated writer
+  acceptance_checks:
+  - Add PDB 5HKV and the original S. aureus RNA-binding evidence only with exact organism,
+    structural method and ligand identity. Do not call the luciferase IC50 an MIC
+    or Kd.
+  - Preserve bulk salt/purity uncertainty in quantitative activity. Keep the antibiotic-free
+    ABC-F complex and deletion phenotype distinct from direct drug-displacement observation.
+  - Do not transfer biosynthetic enzyme/ROS chemistry, clindamycin induction or related
+    transporter phenotypes to exact lincomycin killing.
+limitations:
+- Current HMDB direct entry/XML/mol access returned 403. Its own official PubChem
+  deposit and SDF were inspected and independently parsed, but a current live-entry
+  correction could not be checked.
+- LINCS routes failed, Reaxys was not accessed through a paid service and DrugBank
+  direct access returned 403. Their adopted/current-authority associations were examined,
+  but no independent current graph equivalence is claimed for the inaccessible exact
+  references.
+- All sixty resistance assertions were checked against the current official ontology
+  and their explicit database qualifiers. Primary functional evidence was inspected
+  for selected decisive systems, not for every resistance allele or taxon.
+- The 2017 ribosome original was read in full and Figures 1, 2, 4 viewed. Supplemental
+  electron-density/spectral files were not inspected and the coordinates were not
+  re-refined. Bulk reagent salt/purity was not established by the neutral deposited
+  ligand.
+- The 2021 VgaL study was read in selected relevant Results, Discussion and Methods;
+  the supplement was not inspected. The complex lacked antibiotic. The 2022 main text/Table
+  1 was read in full; a suspicious beta-NAD unit limits copying its medium formulation
+  verbatim.
+- The 2013 biosynthesis main text/tables were read in full. The 2021 producer study
+  was read only in its first two relevant Results sections. Biosynthesis and induction
+  evidence were not transferred into direct antibacterial causality.
+- The adopted 2004 clinical mutation paper and six additional original leads were
+  read at complete-abstract depth. The 1999 adopted article is a secondary review,
+  with narrative and relevant tables read rather than every cited study.
+- Patent reading was limited to the decisive stereochemical description and complete
+  Preparation 5. The 2004 crystal original was available only at abstract depth. The
+  1998 chromatography publisher route failed; its search snippet was not used as decisive
+  evidence.
+- This bounded review does not establish current clinical approval, all commercial
+  formulation identities or universal susceptibility. Missing optional structured
+  enrichment is not treated as a defect.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The thirteen original captures remain unchanged; actual source-owner inputs were
+  appended to seventeen. Public retrieval manifests preserve actual URLs, UTC timestamps,
+  status and hashes.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
