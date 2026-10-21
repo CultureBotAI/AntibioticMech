@@ -1,0 +1,643 @@
+schema_version: 1.0.0
+review_id: 20261021T172656Z-gemifloxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Gemifloxacin: coherent Z-oxime identity with localized definition and brand
+  corrections'
+started_at: '2026-10-21T17:15:11Z'
+finished_at: '2026-10-21T17:26:56Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The exact neutral gemifloxacin graph is corroborated independently. The chemical
+  definition misstates the fluorine position and pyrrolidine ring name, and Factive
+  is classified as an exact synonym rather than a brand. Original pneumococcal genetics
+  and enzyme assays support the qualified mechanism, while the Clostridioides resistance
+  edge remains explicitly database-attributed.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/gemifloxacin.yaml
+    sha256: 51c75d31bee636bc3872d9bf214c48dc3b94c16f6ecd8ddfbfdc6d2badb4220c
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    role: context
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+  - path: data/raw/aro_resistance_edges.tsv
+    role: context
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+targets:
+- target_id: CHEBI:101853
+  path: data/antibiotics/antibacterial/gemifloxacin.yaml
+  label: gemifloxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO compound, class, definition and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native field emission
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Maintained grounding decisions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Native chemical identity and roles
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Qualified native CARD gyrB resistance assertion
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position493; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:101853
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:101853
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    493
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/gemifloxacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/gemifloxacin.yaml --out /private/tmp/am-review-session/493-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:101853
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/gemifloxacin.yaml
+  locator: Entire native YAML and every chronological history event
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: The SEEDED record denotes neutral C18H20FN5O4 with full key ZRCVYEYHRGVLOC-HYARGMPZSA-N.
+    Every asserted name, classification, chemical value, grounding, provenance and
+    evidence field was read. No numerical activity observation, producer object or
+    causal graph is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: 493-source-rows.json; conf/sources.yaml; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Complete matching maintained inventory rows and actual extraction/emission
+    ownership
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: The original thirteen captured inputs are preserved, with actual additional
+    owners appended before assessment. ChEBI supplies the definition, structure, parents
+    and role-derived mechanism. ARO supplies the additional class, brand synonym and
+    one explicitly database-attributed resistance edge. The mesylate has a distinct
+    maintained ChEBI source row.
+  snapshot_sha256: 30c671f6c04caff18795bdb2cef820b1262ab99ff590feb2d4a75e7f97f9dfd7
+- evidence_id: chemistry
+  kind: validation
+  reference: 050-root-authority-chemistry.json
+  locator: Independent forward parsing of both native encodings and current public
+    authority encodings
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: Ten encodings from native SMILES/InChI, current ChEBI101853, PubChem name
+    resolution and exact CID9571107, and CHEMBL430 agree at the full key. The graph
+    has a Z oxime and one unassigned tetrahedral centre; no salt counterion is included.
+  snapshot_sha256: 2627fe582a7974f745e9762382f402a6adc04160d704bcdb568883e6aa3ed7e1
+- evidence_id: gates
+  kind: validation
+  reference: 493-focused-results.json; 493-chemistry.json
+  locator: Actual focused internal chemistry, schema and strict outputs
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: All focused checks exit 0; formula, charge, masses and full key are internally
+    coherent. Deterministic success does not validate source prose or current regulatory
+    status.
+  snapshot_sha256: 0ccdfc649539a6750efd4f192deea0f889c2bcea7d17a46f87c701ee53004040
+- evidence_id: search
+  kind: search
+  reference: 493-local-hits.txt; 050-root-fetch1.json through 050-root-fetch5.json
+  locator: Hidden- and ignored-inclusive local search and bounded public source retrievals
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: context_only
+  summary: Local searches included ignored files. Current chemical authorities, each
+    adopted compound citation and selected original activity/mechanism papers were
+    inspected at the stated depths. Search-result totals are not claimed as fully
+    read literature. Failed XML and blocked registry requests are access limits, not
+    evidence of absence.
+  search_scope: 2026-10-21; own050 checkout rg --no-ignore --hidden; adopted exact
+    PMID and bounded Europe PMC TITLE_ABS:gemifloxacin mechanism/gyrase/synthesis
+    searches; current official authorities and selected PMC originals.
+  snapshot_sha256: 7a412acb25ad9d5d06103b8c4572f1d58405f724652642136f23284793737154
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:101853; CHEBI:25384,73537,86324,87211,33281,36047,53559; ARO:3007165
+  locator: Complete current compound, structural-parent and activity-role entries;
+    current ARO compound stanza
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: The graph fits monocarboxylic acid, naphthyridine, quinolone and fluoroquinolone
+    parents. Antibacterial-drug and antimicrobial-agent roles have pharmaceutical
+    and experimental support. CHEBI53559 is topoisomerase IV inhibitor and the native
+    mode annotation explicitly remains a ChEBI source assertion. Current ChEBI repeats
+    the positional/ring wording error but its systematic synonym and graph place fluorine
+    at C6 and use pyrrolidin-1-yl.
+  snapshot_sha256: 392b9494cf1f06d9c1f0ac01a5c19837a4adb09b092dd2153502f3c8336074c3
+- evidence_id: label
+  kind: primary_source
+  reference: https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/021158s025lbl.pdf
+  locator: 2018 official FACTIVE label, Description and tablet composition, extracted
+    PDF text
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: FACTIVE is the branded gemifloxacin-mesylate tablet. Description identifies
+    the R,S material with Z methoxyimino group, fluorine at C6 and a pyrrolidinyl
+    substituent. The marketed material is mesylate in sesquihydrate form, while the
+    native graph is the neutral parent. This establishes the brand and chemical naming
+    boundaries, not current marketing availability or a treatment recommendation.
+  snapshot_sha256: a829e721018f81d435643b08914f0b9d094b4d6af2f84b19439008fe7f3a688a
+- evidence_id: adopted
+  kind: database
+  reference: PMID:12764426; DOI:10.1358/dot.2001.37.6.627959
+  locator: Complete indexed abstract of the sole adopted compound citation
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: The 2001 gemifloxacin overview summarizes activity and gyrase/topoisomerase
+    inhibition. It is review-level context, not an exact primary target experiment
+    or evidence for later US discontinuation. No modern withdrawal claim from the
+    ARO source definition is copied into the native ChEBI definition.
+  snapshot_sha256: 0d1d9c50fc2f14a656203d93499aa61cfdf4b7cf6524266c0fa8cc20053c624c
+- evidence_id: primary2000
+  kind: primary_source
+  reference: PMID:11036032; DOI:10.1128/AAC.44.11.3112-3117.2000; https://pmc.ncbi.nlm.nih.gov/articles/PMC101612/
+  locator: Complete original Methods, Results, Tables 1 and 2, Discussion and figure
+    captions; raw gel images not inspected
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: SmithKline Beecham supplied gemifloxacin mesylate. S. pneumoniae 7785 and
+    isogenic mutants were tested by twofold BHI agar dilution with 10% horse blood,
+    10^4–10^5 CFU, 37 degrees C and 18–24 h. Wild-type MIC was 0.06 micrograms/mL;
+    single gyrA or parC mutants had 0.12–0.25 and double mutants 0.5–1. First-step
+    gemifloxacin selection produced gyrA mutations, followed by parC mutations, suggesting
+    preferential gyrase targeting in vivo with substantial contributions from both
+    enzymes. Purified recombinant gyrase and topoisomerase IV generated drug-stabilized
+    DNA cleavage; Table 2 CC25 values were 5 and 0.1 micromolar respectively. CC25
+    measures 25% DNA linearization, not IC50 or binding affinity. These data do not
+    equate whole-cell potency, enzyme preference and isolated-subunit binding.
+  snapshot_sha256: 83237a544ff083d3de55fed9dbb108a5be20eb34c87151c9621db7fed4c671dd
+- evidence_id: resistance
+  kind: database
+  reference: ARO:3004562; PMID:27842877,22508299,12384345,18480338,20226332
+  locator: Current full resistance stanza and all five indexed citation abstracts
+    assessed during adjacent gatifloxacin review; exact native edge rechecked
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: CARD currently asserts the same C. difficile gyrB-to-gemifloxacin relationship.
+    The native evidence explicitly calls it a database assertion and does not claim
+    a primary citation. The five discovery abstracts cover differing quinolones and
+    experiments; their presence does not make each one compound-specific proof.
+  snapshot_sha256: c6b041136577328cafe1ac9578e1f99d6e889dffc53b9a78d07f9a2ff5e7f93c
+- evidence_id: primary2012
+  kind: primary_source
+  reference: PMID:22508299; DOI:10.1128/AAC.00191-12; https://pmc.ncbi.nlm.nih.gov/articles/PMC3393409/
+  locator: Original susceptibility Methods, resistance Results, complete Table 4 and
+    Discussion; no raw figure image inspection
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: The 403 Taiwan C. difficile isolates were tested by agar dilution on supplemented
+    Brucella blood agar with 10^5 CFU, anaerobically for 48 h at 35 degrees C. Gemifloxacin
+    was supplied by LG Chem. Table 4 groups 81 moxifloxacin-nonsusceptible isolates
+    by moxifloxacin MIC and reports gemifloxacin ranges alongside QRDR substitutions.
+    Some moxifloxacin-nonsusceptible isolates retain low gemifloxacin MICs. These
+    are isolate associations with grouped MIC ranges, not single-allele complementation
+    or mutation-specific gemifloxacin causality; the authors require site-directed
+    mutagenesis for uncertain substitutions. Preserve the existing database qualification.
+  snapshot_sha256: f7b612e3961cfd002b5eeb40d1e581d02329e5acf552c52df3064022814d51b4
+- evidence_id: links
+  kind: authority
+  reference: drugcentral:1286; kegg.drug:D08012; drugbank:DB01155; patent:EP688772;
+    patent:US5633262; wikipedia.en:Gemifloxacin
+  locator: Direct DrugCentral identity/synonym section, entire KEGG entry, patent
+    identity and selected US Example 180, Wikipedia identity; DrugBank 403
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: DrugCentral1286 names gemifloxacin and includes mesylate synonyms, consistent
+    with a broad drug association. KEGG D08012 identifies the parent formula and separate
+    drug-group scope; its registry number differs from native CAS and is not promoted
+    to exact native synonymy. US5633262 Example180 reports the matching naphthyridine/methoxyiminopyrrolidine
+    constitution and M+H 390 but does not establish the native Z/racemic scope in
+    the inspected text. EP0688772A1 is the related series patent with many image-only
+    examples. Wikipedia resolves to the expected drug. CAS175463-14-6 and Beilstein8361408
+    remain source-attributed registry groundings; no direct Beilstein record was inspected.
+  snapshot_sha256: 42f233e7d34767763f5705945da1df6fb7a9bbd8863584a2cd70405ae3fa0e9d
+- evidence_id: adapter
+  kind: database
+  reference: 475-imodulon-datasets.json; 050-root-adapter-results.json; 050-root-adapter-s_pneumoniae-gyrA.txt;
+    050-root-adapter-s_pneumoniae-parC.txt
+  locator: Actual structured catalog and two successful precise718 gene queries
+  accessed_at: '2026-10-21T17:26:15Z'
+  support: supports
+  summary: The covered S. pneumoniae dataset resolves gyrA/SP1219, gyrB/SP0806 through
+    the broad gyrA query, and parC/SP0855, with zero module hits. It does not contain
+    the native C. difficile taxon. These catalog/search results neither confirm nor
+    refute drug mechanisms and are not mapped to the experimental strain7785 as exact
+    ortholog observations.
+  snapshot_sha256: 00ad02c9a6ad840fb00a725e3e6e2a1fb4560773516c0d3311fb722eaffb736f
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral parent, stereochemistry and exact links
+  outcome: supported
+  summary: Independent graphs reproduce the same Z oxime with one unassigned tetrahedral
+    centre. The historical label explicitly supplies R,S context; salt and hydrate
+    formulations remain separate.
+  target_ids:
+  - CHEBI:101853
+  evidence_ids:
+  - native
+  - chemistry
+  - label
+  - authority
+- assessment_id: definition
+  area: consistency
+  topic: Chemical positional and ring nomenclature
+  outcome: concern
+  summary: The graph and systematic synonym put fluorine at C6 and identify a pyrrolidine
+    ring. The prose says C5 and pyrrolin-1-yl. These are localized definition corrections;
+    they do not require changing the corroborated graph.
+  target_ids:
+  - CHEBI:101853
+  evidence_ids:
+  - native
+  - authority
+  - label
+- assessment_id: names
+  area: grounding
+  topic: Brand versus exact chemical synonym
+  outcome: concern
+  summary: Factive is a product brand for the mesylate formulation and should use
+    the supported BRAND synonym type.
+  target_ids:
+  - CHEBI:101853
+  evidence_ids:
+  - native
+  - owners
+  - label
+- assessment_id: mechanism
+  area: evidence
+  topic: Topoisomerase activity and qualified resistance association
+  outcome: supported
+  summary: Original strain-specific genetics and purified-enzyme cleavage experiments
+    support the mode at distinct levels. The native ChEBI mode and CARD resistance
+    evidence already disclose database provenance; no unqualified target-binding claim
+    is present.
+  target_ids:
+  - CHEBI:101853
+  evidence_ids:
+  - primary2000
+  - primary2012
+  - resistance
+  - authority
+- assessment_id: provenance
+  area: provenance
+  topic: Source merge, citations and history
+  outcome: supported
+  summary: Both concepts, all four history events, complete matching source rows and
+    the adopted overview citation were inspected. Chemistry/schema/strict gates pass.
+  target_ids:
+  - CHEBI:101853
+  evidence_ids:
+  - native
+  - owners
+  - adopted
+  - gates
+- assessment_id: limits
+  area: completeness
+  topic: Unresolved registry and optional enrichment boundaries
+  outcome: unknown
+  summary: Direct DrugBank/Beilstein scope and exhaustive patent stereochemistry remain
+    unverified. Optional numerical activity, molecular-target and graph fields need
+    exact assay/material support, not inheritance from broad drug associations.
+  target_ids:
+  - CHEBI:101853
+  evidence_ids:
+  - links
+  - adapter
+  - primary2000
+  - primary2012
+  - search
+findings:
+- finding_id: F1
+  issue_key: gemifloxacin-definition-fluorine-position-and-ring
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Correct the gemifloxacin structural definition
+  description: The native definition places fluorine at position5 and calls the substituent
+    pyrrolin-1-yl. The independently corroborated structure, systematic synonym and
+    official chemical description identify C6 fluorine and pyrrolidin-1-yl. Also correct
+    the spelling sustituent. The chemical graph itself is coherent.
+  target_ids:
+  - CHEBI:101853
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - chemistry
+  - authority
+  - label
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted chemical definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted Factive synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and synonym semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native regeneration
+  rule_id: Chemical definition agrees with exact structure
+  native_severity: minor
+  normalization_reason: Localized prose nomenclature is wrong while the native exact
+    graph, formula and principal identifiers remain intact.
+- finding_id: F2
+  issue_key: gemifloxacin-factive-brand-synonym
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Classify Factive as a brand synonym
+  description: Factive is typed EXACT_SYNONYM, while the official label identifies
+    the branded gemifloxacin-mesylate tablet. Preserve the recognizable name with
+    BRAND semantics and keep the neutral parent separate from the product salt/hydrate.
+  target_ids:
+  - CHEBI:101853
+  field_paths:
+  - synonyms[1].synonym_type
+  evidence_ids:
+  - native
+  - owners
+  - label
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted chemical definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted Factive synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and synonym semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native regeneration
+  rule_id: Brand names are not exact chemical synonyms
+  native_severity: minor
+  normalization_reason: This is a bounded synonym-type error, not a wrong native molecular
+    identity.
+actions:
+- action_id: A1
+  description: Correct the maintained definition and Factive synonym semantics, then
+    regenerate.
+  finding_ids:
+  - F1
+  - F2
+  target_ids:
+  - CHEBI:101853
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted chemical definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted Factive synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source extraction and synonym semantics
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Native regeneration
+  acceptance_checks:
+  - Use C6 fluorine, pyrrolidin-1-yl and correct substituent spelling; preserve the
+    corroborated Z-oxime graph and existing source provenance.
+  - Emit Factive as BRAND. Do not replace the parent structure with mesylate or hydrate,
+    or copy unverified current-market assertions.
+  - Run focused schema/strict, source reproduction and required QC; retain the explicitly
+    qualified CARD resistance evidence.
+limitations:
+- The adopted2001 overview was read at indexed abstract level. The2000 original Methods/Results/Tables/Discussion
+  and2012 susceptibility/resistance sections and Table4 were read; raw gel and susceptibility-plot
+  images were not inspected.
+- The official Factive label is dated2018 and is used for chemical/brand identity
+  only. No current marketing or prescribing recommendation is inferred.
+- DrugBank returned403; direct Beilstein was not read. KEGG and DrugCentral are broad
+  drug associations. Patent inspection is bounded to document context and US Example180,
+  not every image-based stereochemical example.
+- The native CARD evidence already says database assertion, not a primary citation.
+  Clinical-isolate associations and grouped gemifloxacin MIC ranges do not justify
+  unsupported allele-specific causal claims.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
