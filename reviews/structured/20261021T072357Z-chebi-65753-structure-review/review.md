@@ -1,0 +1,922 @@
+# Review of CHEBI:65753: stereochemical consistency and primary antibacterial evidence
+
+- Review: 20261021T072357Z-chebi-65753-structure-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:15:02Z
+- Finished UTC: 2026-10-21T07:23:57Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One major internal structure inconsistency survives both native per-record validators: the stored SMILES is fully specified while the InChI/key omit one stereocentre. The adopted inventory and current ChEBI page repeat the conflict; official Molfile and PubChem support a concrete correction candidate. One minor claim-level primary-evidence gap is also actionable. The original abstract supports bounded antibacterial activity but not a molecular mechanism.
+
+## Scope And Provenance
+
+Whole generated record, maintained source ownership, identity and stereochemical encodings, all asserted ontology IDs, primary abstract scope, validation and completeness.
+
+Selection: Path-ordered unreviewed queue index 026; exactly one target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:65753 | data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml | generated | 3,5-di-O-acetyl-1-O-[(5β,8α,9β,10α)-18-oxokaur-16-en-18-yl]-β-L-arabinofuranose |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented per-record LinkML validation | passed | True | CHEBI:65753 | No issues found. |
+| Documented per-record closed-schema validation | passed | True | CHEBI:65753 | One file scanned; zero ERROR rows. |
+| Independent structure and source identity comparison | failed | False | CHEBI:65753 | Stored SMILES and InChI disagree stereochemically. Official Molfile and PubChem support the fully specified SMILES; formula, charge, masses and minted identity checks pass. |
+| Source reproduction and ontology resolution | passed | False | CHEBI:65753 | Adopted fields, parent and role IDs and all thirteen input hashes agree. The upstream structure conflict remains. |
+| Structured expression-module adapter applicability | not_applicable | False | CHEBI:65753 | The record names no gene, protein, regulator, pathway, stress response or transcriptomic dataset. The isolation plant and compound structure do not provide a matching gene/module query. |
+| Authoritative full QC | failed | True | CHEBI:65753 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:65753 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:65753 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:65753 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:65753 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:65753 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:65753 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:65753 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:65753 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### One named entity with conflicting stereochemical encodings
+
+identity: concern. Targets: CHEBI:65753.
+
+The target identifier, alias and experimental compound resolve, but its two structure encodings do not describe identical stereochemical specificity. EXACT grounding cannot make the disagreement harmless. This is not evidence for a racemate or a different constitutional compound.
+
+### Parent, role and source identity scope
+
+grounding: supported. Targets: CHEBI:65753.
+
+Both parents are broader chemical classes fitting the constitution, not exact replacements. The antibacterial role and native filing have database and primary activity support. No additional exact xref is asserted.
+
+### Compound-specific antibacterial definition
+
+evidence: supported. Targets: CHEBI:65753.
+
+The primary abstract links compound 2 to both named oral bacterial strains and supports the definition at that bounded level. It does not justify activity against all oral pathogens or clinical efficacy.
+
+### Claim-level primary evidence and activity context
+
+completeness: concern. Targets: CHEBI:65753.
+
+The source inventory retains a concrete primary lead, but the native record has no evidence object or scoped activity context. Recovering the full methods and exact structure assignment would enable meaningful curation.
+
+### Unknown molecular action and target
+
+scope: unknown. Targets: CHEBI:65753.
+
+No exact-compound molecular mechanism or directly inhibited target was established in the inspected primary abstract. Growth inhibition and structural class do not supply one; mechanism clearance for REVIEWED remains unresolved.
+
+### Isolation versus biosynthetic producer
+
+representation: supported. Targets: CHEBI:65753.
+
+The whole-herb isolation statement is supported by the primary abstract. No producer_organisms object is asserted. Biosynthesis should not be inferred solely from extraction or a database metabolite relationship.
+
+### Other unasserted scientific objects
+
+representation: not_applicable. Targets: CHEBI:65753.
+
+No resistance, clinical, causal-graph or dataset claim is asserted. Missing optional objects alone are not errors; no neighbouring-compound data are transferred.
+
+### Upstream conflict and maintained repair route
+
+ownership: concern. Targets: CHEBI:65753.
+
+The seed and its three history events faithfully reproduce maintained inputs, which themselves copy inconsistent ChEBI literals. Correcting only the YAML would be overwritten; source/transform ownership and reproducible reseeding must be preserved.
+
+### Schema success versus chemical consistency failure
+
+schema: concern. Targets: CHEBI:65753.
+
+Both native focused validators pass, while the separate chemical equivalence test fails. Deterministic schema success is not scientific structural sign-off.
+
+## Findings
+
+### F1: SMILES and InChI disagree at one stereocentre
+
+major / open / confirmed; issue key: chebi-65753-stereochemical-encoding-inconsistency.
+
+The fully specified stored SMILES produces NDNXVUYCJZMRRS-USRICQPJSA-N; stored Standard InChI/key encode NDNXVUYCJZMRRS-ABRNDMKOSA-N and leave canonical InChI centre 19 unspecified. The conflict is copied from the adopted ChEBI inventory and current source page. Official ChEBI Molfile and PubChem corroborate the SMILES, providing a concrete correction candidate without pretending the original paper was fully inspected.
+
+### F2: Primary activity evidence remains a detached source lead
+
+minor / open / confirmed; issue key: chebi-65753-primary-activity-evidence-completeness.
+
+The original abstract explicitly identifies this compound and reports strain-specific MICs, but the seed retains only a broad definition with no claim-linked primary evidence. Full methods and the structure assignment must be inspected before fine-grained assay curation; no unsupported mechanism should be filled merely to complete the record.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile the source-owned structure triple through an upstream correction or documented maintained normalization. The official Molfile and current SMILES support regenerating the Standard InChI and key as the fully specified candidate NDNXVUYCJZMRRS-USRICQPJSA-N. Verify intended stereochemistry and retain the conflicting-source provenance before applying that candidate; reseed from the corrected maintained path.
+
+- Stored SMILES, Standard InChI, key and the retained source Molfile encode the same justified stereochemistry, constitution, charge and formula. Do not erase a stereocentre merely to force equality or infer a racemate from the old undefined centre.
+- Inspect the primary structure assignment or obtain an authoritative correction to settle intended configuration. Record which source was normalized and why; do not repair only the generated YAML.
+- Preserve CHEBI:65753 and its source concept unless independently justified remapping is required. Re-run documented extraction/seeding, verify-corpus, focused schema/strict checks and full QC; check affected identity joins and structure-derived products.
+
+### A2
+
+After resolving structure consistency, obtain the correct full primary article and curate narrow evidence and activity context for compound 2. Retain an explicit unresolved mechanism rationale rather than assigning a target from the diterpenoid scaffold.
+
+- Match the target to compound 2 and its tested chemical form; preserve original organism/strain labels, MIC 15.6 micrograms/mL, assay medium, inoculum, incubation and endpoint from the correct paper. Verify current strain taxonomy separately if adding taxon groundings.
+- Do not import compound 3/4/5 MICs, all-oral-pathogen scope, biofilm efficacy, clinical susceptibility, bactericidal activity or direct target binding from the abstract.
+- Keep whole-herb isolation in claim evidence/discussions unless separate biosynthesis support justifies producer_organisms.
+- Use the validated writer and curation event and all native gates; retain SEEDED until every REVIEWED requirement is actually met.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml; Entire native YAML | supports | Read the definition, one exact synonym, two parent concepts, antibacterial role, complete structure, source concept and three seed/reseed events. No molecular mechanism, target, primary evidence, quantitative activity, resistance, producer, clinical, graph or dataset object is asserted. |
+| inventory | data/raw/chebi_antimicrobials.tsv; Complete CHEBI:65753 row and header; data/raw/MANIFEST.yaml | supports | The adopted row copies the same inconsistent structure pair and otherwise matches identity, formula, charge, masses, parents and role. It retains PMID:17315313 as a discovery citation and has no mechanism role. This is an imported source conflict, not a hand-edited YAML error. |
+| ownership | scripts/extract_source_inventory.py; Default-structure copying at lines 319-321; scripts/seed_from_sources.py structure_from_chebi and generated identity selection | supports | The extractor and seeder reproduce source structure fields; source citations remain discovery leads rather than automatically becoming claim evidence. Repair must be maintained in the adopted source/transform and reseeded, with an auditable upstream correction or documented normalization. Evidence additions use the validated curator writer/history, not an invented overlay. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:65753; Current native ChEBI entry; 026-chebi.html | supports | The released three-star entry matches the target label, alias, definition and metadata. It repeats the fully specified SMILES together with an InChI containing /t19? and key NDNXVUYCJZMRRS-ABRNDMKOSA-N. Its displayed structure fields therefore contain the same conflict as the seed. The page links PMID:17315313 and distinguishes the functional sugar parent from biological roles. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_65753; 026-ols.json, 026-parents.json and 026-has_role.json; checked against native-page relationship types | supports | The target is not obsolete. CHEBI:36760 ent-kaurane diterpenoid and CHEBI:47622 acetate ester are current direct parents. CHEBI:33282 antibacterial agent is current and asserted. The page also has metabolite and functional-parent beta-L-arabinofuranose relationships; the functional parent is not treated as a biological role. The OLS structure literals repeat the source conflict. |
+| molfile | https://www.ebi.ac.uk/chebi/backend/api/public/molfile/65753; Official downloaded Molfile, independently parsed with RDKit; 026-molfile.mol | supports | The official Molfile gives the same fully specified molecular structure and NDNXVUYCJZMRRS-USRICQPJSA-N as the stored SMILES. This supplies a concrete source-backed correction candidate for the InChI/key pair; the review does not silently choose between conflicting source representations. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/70697740; PUG REST structure property response; 026-pubchem.json | supports | The same-name PubChem structure independently computes NDNXVUYCJZMRRS-USRICQPJSA-N and matches the stored SMILES and ChEBI Molfile. PubChem is corroboration, not a new exact cross-reference automatically added to the record. |
+| chemistry | RDKit local structure comparison; 026-chemistry.py and 026-chemistry.json | supports | The record SMILES, official Molfile and PubChem structure all yield NDNXVUYCJZMRRS-USRICQPJSA-N with ten assigned stereocentres. Stored InChI yields its stored NDNXVUYCJZMRRS-ABRNDMKOSA-N with one undefined centre at canonical InChI atom 19. All representations retain C29H42O8, charge zero, one fragment, average mass 518.647 and exact mass 518.287968304. Minted source identity is reproduced. The equality check exits 1 because the record encodings disagree. |
+| source-check | Focused source-copy and ontology assertions; 026-source-check.py and 026-source-check.json | supports | The adopted structure literals reproduce the record, ontology parents and role resolve, PMID discovery lead is preserved, and all thirteen originally captured input hashes remain unchanged. Passing source reproduction does not repair the copied stereochemical conflict. |
+| primary | PMID:17315313; DOI:10.1055/s-2006-951773; PubMed abstract and Europe PMC core record 026-pubmed.json | supports | The 2007 Liu et al. study identifies compound 2 as the target arabinofuranosyl ent-kaurane derivative, isolated from whole Sagittaria pygmaea. It reports MIC 15.6 micrograms/mL against Streptococcus mutans ATCC 25175 and Actinomyces viscosus ATCC 27044. Neighbouring numbered compounds have different structures and MIC values. The abstract does not supply detailed assay conditions or establish a molecular mechanism; its general structural-method statement is not compound-specific proof of an absolute configuration. |
+| retrieval | https://iplab.hkust.edu.hk/publications.html; Linked PDF https://iplab.hkust.edu.hk/pdf/Journals%20pdf/2007_10%20PlantaMedica.pdf; 026-lab.pdf and visually inspected first page | context_only | The laboratory publication list links the target title to a different paper, Minor Limonoids from Melia toosendan and their Antibacterial Activity, DOI:10.1055/s-2007-981618, pp.1298-1303. It was rejected as target evidence. Publisher HTML retrieval returned a bot-protection page, not article text. No assay or structural details from the wrong PDF were transferred. |
+| validation | just validate; just validate-strict; Actual focused commands in batch003 checkout; 026-strict.tsv | supports | Both documented per-record validators exited 0; strict validation scanned one file with zero ERROR rows. These schema gates did not detect the structure-pair inconsistency. |
+| search | Ignored-inclusive local and bounded free web discovery; 026-local-hits.txt; exact identifier, synonym, title and DOI searches | context_only | Local results include native inventory, queue, research ledgers and generated products. Bounded primary-source searches established activity but not an exact-compound mechanism. Generic diterpenoid mechanisms and sibling Sagittaria compounds were not imported. |
+| independent-mapping | RDKit atom mapping of stored encodings; 026-adversarial-mapping.json; independent reviewer graph comparison | supports | All 37 atoms map between the stored encodings. The nine other assigned centres agree; the difference is one R centre in the SMILES versus an unspecified centre in the InChI, canonical InChI position19. This confirms the precise scope of the internal inconsistency. |
+
+## Limits And Additional Notes
+
+- The correct primary article was available at abstract level only. Publisher retrieval returned a bot-protection page. A full-text link from the author laboratory resolved to a different paper, verified visually and excluded. Detailed assay methods, compound-specific crystallography and absolute-configuration reasoning remain uninspected.
+- The source conflict is confirmed computationally and across current ChEBI representations. The Molfile/SMILES/PubChem candidate is well supported, but this review does not silently apply it or claim independent experimental determination of the intended stereocentre.
+- Public source downloads initially failed under sandbox DNS restrictions and then succeeded with read-only network escalation. Successful HTTP retrieval of publisher HTML was not treated as successful article retrieval.
+- Bounded searches do not prove that a molecular mechanism, resistance mechanism or additional primary study does not exist. No direct-target or class-wide activity assertion was inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Only temporary review artifacts were written. No record, inventory, generated product or curation history was modified.
+- The thirteen input hashes captured before judgment were rechecked without refresh. Native history/reference and full-corpus validation are distinct shared checks; chemical equivalence failure is retained explicitly.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T072357Z-chebi-65753-structure-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Review of CHEBI:65753: stereochemical consistency and primary antibacterial
+  evidence'
+started_at: '2026-10-21T07:15:02Z'
+finished_at: '2026-10-21T07:23:57Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the generated record. Exact target and
+    maintained input hashes were captured before assessment; current sources and calculations
+    were inspected independently.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: SEEDED with a confirmed major source-origin stereochemical inconsistency;
+  the native REVIEWED structure-equivalence gate is blocked, and primary activity
+  is supported but mechanism unresolved
+scientific_review: true
+summary: 'One major internal structure inconsistency survives both native per-record
+  validators: the stored SMILES is fully specified while the InChI/key omit one stereocentre.
+  The adopted inventory and current ChEBI page repeat the conflict; official Molfile
+  and PubChem support a concrete correction candidate. One minor claim-level primary-evidence
+  gap is also actionable. The original abstract supports bounded antibacterial activity
+  but not a molecular mechanism.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml
+    sha256: 6b7a65a7c7c51573d22524f8c730a7dd6472662e98c07f28bbdf61eac355332c
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Whole generated record, maintained source ownership, identity and stereochemical
+    encodings, all asserted ontology IDs, primary abstract scope, validation and completeness.
+  selection: Path-ordered unreviewed queue index 026; exactly one target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:65753
+targets:
+- target_id: CHEBI:65753
+  path: data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml
+  label: 3,5-di-O-acetyl-1-O-[(5β,8α,9β,10α)-18-oxokaur-16-en-18-yl]-β-L-arabinofuranose
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    'data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml'
+  exit_code: 0
+  summary: No issues found.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    'data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml'
+    --out /private/tmp/am-review-session/026-strict.tsv
+  exit_code: 0
+  summary: One file scanned; zero ERROR rows.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Independent structure and source identity comparison
+  status: failed
+  required: false
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/026-chemistry.py
+  exit_code: 1
+  expected_exit_code: 0
+  summary: Stored SMILES and InChI disagree stereochemically. Official Molfile and
+    PubChem support the fully specified SMILES; formula, charge, masses and minted
+    identity checks pass.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - chemistry
+  - molfile
+  - pubchem
+- check_id: source-check
+  name: Source reproduction and ontology resolution
+  status: passed
+  required: false
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/026-source-check.py
+  exit_code: 0
+  summary: Adopted fields, parent and role IDs and all thirteen input hashes agree.
+    The upstream structure conflict remains.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - source-check
+  - ontology
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: The record names no gene, protein, regulator, pathway, stress response
+    or transcriptomic dataset. The isolation plant and compound structure do not provide
+    a matching gene/module query.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:65753
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: Read the definition, one exact synonym, two parent concepts, antibacterial
+    role, complete structure, source concept and three seed/reseed events. No molecular
+    mechanism, target, primary evidence, quantitative activity, resistance, producer,
+    clinical, graph or dataset object is asserted.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:65753 row and header; data/raw/MANIFEST.yaml
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The adopted row copies the same inconsistent structure pair and otherwise
+    matches identity, formula, charge, masses, parents and role. It retains PMID:17315313
+    as a discovery citation and has no mechanism role. This is an imported source
+    conflict, not a hand-edited YAML error.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/extract_source_inventory.py
+  locator: Default-structure copying at lines 319-321; scripts/seed_from_sources.py
+    structure_from_chebi and generated identity selection
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The extractor and seeder reproduce source structure fields; source citations
+    remain discovery leads rather than automatically becoming claim evidence. Repair
+    must be maintained in the adopted source/transform and reseeded, with an auditable
+    upstream correction or documented normalization. Evidence additions use the validated
+    curator writer/history, not an invented overlay.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:65753
+  locator: Current native ChEBI entry; 026-chebi.html
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The released three-star entry matches the target label, alias, definition
+    and metadata. It repeats the fully specified SMILES together with an InChI containing
+    /t19? and key NDNXVUYCJZMRRS-ABRNDMKOSA-N. Its displayed structure fields therefore
+    contain the same conflict as the seed. The page links PMID:17315313 and distinguishes
+    the functional sugar parent from biological roles.
+  snapshot_sha256: fa9ac3a26f010ec105143addb531ca3ec6ae8b2446e221ac65913462dfc125d3
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_65753
+  locator: 026-ols.json, 026-parents.json and 026-has_role.json; checked against native-page
+    relationship types
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The target is not obsolete. CHEBI:36760 ent-kaurane diterpenoid and CHEBI:47622
+    acetate ester are current direct parents. CHEBI:33282 antibacterial agent is current
+    and asserted. The page also has metabolite and functional-parent beta-L-arabinofuranose
+    relationships; the functional parent is not treated as a biological role. The
+    OLS structure literals repeat the source conflict.
+  snapshot_sha256: d70ee61783f2bb307fc957b47813264580370fa65e1d6edcab58e7c87abb52a4
+- evidence_id: molfile
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/molfile/65753
+  locator: Official downloaded Molfile, independently parsed with RDKit; 026-molfile.mol
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The official Molfile gives the same fully specified molecular structure
+    and NDNXVUYCJZMRRS-USRICQPJSA-N as the stored SMILES. This supplies a concrete
+    source-backed correction candidate for the InChI/key pair; the review does not
+    silently choose between conflicting source representations.
+  snapshot_sha256: d7c72f54606ef174809d63e0041fab5fe0c66c5fe68497d310fe3e0afe969a4d
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/70697740
+  locator: PUG REST structure property response; 026-pubchem.json
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The same-name PubChem structure independently computes NDNXVUYCJZMRRS-USRICQPJSA-N
+    and matches the stored SMILES and ChEBI Molfile. PubChem is corroboration, not
+    a new exact cross-reference automatically added to the record.
+  snapshot_sha256: 9e910007805f11dc066d6346e04734d38231eeba363712a483ec78cecc8612aa
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit local structure comparison
+  locator: 026-chemistry.py and 026-chemistry.json
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The record SMILES, official Molfile and PubChem structure all yield NDNXVUYCJZMRRS-USRICQPJSA-N
+    with ten assigned stereocentres. Stored InChI yields its stored NDNXVUYCJZMRRS-ABRNDMKOSA-N
+    with one undefined centre at canonical InChI atom 19. All representations retain
+    C29H42O8, charge zero, one fragment, average mass 518.647 and exact mass 518.287968304.
+    Minted source identity is reproduced. The equality check exits 1 because the record
+    encodings disagree.
+  snapshot_sha256: c19c361c2420c25e8e926fe0a6a8ab60bdd8c061b8d13d5d272bceccc2b2d34b
+- evidence_id: source-check
+  kind: validation
+  reference: Focused source-copy and ontology assertions
+  locator: 026-source-check.py and 026-source-check.json
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The adopted structure literals reproduce the record, ontology parents and
+    role resolve, PMID discovery lead is preserved, and all thirteen originally captured
+    input hashes remain unchanged. Passing source reproduction does not repair the
+    copied stereochemical conflict.
+  snapshot_sha256: 48229bdf6895f3b82e4326ea248c44f9266555cf2283300376556a2c1d6830c3
+- evidence_id: primary
+  kind: primary_source
+  reference: PMID:17315313
+  locator: DOI:10.1055/s-2006-951773; PubMed abstract and Europe PMC core record 026-pubmed.json
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: The 2007 Liu et al. study identifies compound 2 as the target arabinofuranosyl
+    ent-kaurane derivative, isolated from whole Sagittaria pygmaea. It reports MIC
+    15.6 micrograms/mL against Streptococcus mutans ATCC 25175 and Actinomyces viscosus
+    ATCC 27044. Neighbouring numbered compounds have different structures and MIC
+    values. The abstract does not supply detailed assay conditions or establish a
+    molecular mechanism; its general structural-method statement is not compound-specific
+    proof of an absolute configuration.
+  snapshot_sha256: d935a2ef52168a0b043ec679471a26d33f58a5d3273c1bf3af0a0201c2cde28b
+- evidence_id: retrieval
+  kind: search
+  reference: https://iplab.hkust.edu.hk/publications.html
+  locator: Linked PDF https://iplab.hkust.edu.hk/pdf/Journals%20pdf/2007_10%20PlantaMedica.pdf;
+    026-lab.pdf and visually inspected first page
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: context_only
+  summary: The laboratory publication list links the target title to a different paper,
+    Minor Limonoids from Melia toosendan and their Antibacterial Activity, DOI:10.1055/s-2007-981618,
+    pp.1298-1303. It was rejected as target evidence. Publisher HTML retrieval returned
+    a bot-protection page, not article text. No assay or structural details from the
+    wrong PDF were transferred.
+  snapshot_sha256: d2d29914af77120e07ca7686416a0a5c2b0cc8dcd7f189e934a714b032f4bdd4
+  search_scope: Followed the full-text link attached to this exact title on the author
+    laboratory publication page; downloaded that PDF and visually inspected its first
+    page. Also retrieved the exact DOI publisher HTML and inspected its returned content.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused commands in batch003 checkout; 026-strict.tsv
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: Both documented per-record validators exited 0; strict validation scanned
+    one file with zero ERROR rows. These schema gates did not detect the structure-pair
+    inconsistency.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and bounded free web discovery
+  locator: 026-local-hits.txt; exact identifier, synonym, title and DOI searches
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: context_only
+  summary: Local results include native inventory, queue, research ledgers and generated
+    products. Bounded primary-source searches established activity but not an exact-compound
+    mechanism. Generic diterpenoid mechanisms and sibling Sagittaria compounds were
+    not imported.
+  search_scope: prepare.py 26 used rg --no-ignore --hidden for identifier, full label
+    and slug across the isolated checkout, excluding only .git and .venv. Search engines
+    were queried for CHEBI:65753, the exact arabinofuranosyl synonym, Sagittaria pygmaea
+    antibacterial diterpenoids, the full original title, DOI and mechanism terms;
+    primary abstract, ChEBI/OLS, PubChem and the linked laboratory PDF were inspected.
+- evidence_id: independent-mapping
+  kind: validation
+  reference: RDKit atom mapping of stored encodings
+  locator: 026-adversarial-mapping.json; independent reviewer graph comparison
+  accessed_at: '2026-10-21T07:19:29Z'
+  support: supports
+  summary: All 37 atoms map between the stored encodings. The nine other assigned
+    centres agree; the difference is one R centre in the SMILES versus an unspecified
+    centre in the InChI, canonical InChI position19. This confirms the precise scope
+    of the internal inconsistency.
+  snapshot_sha256: 0eb5fd71a55b22fbca48a90c44017a4ad8d0d3f903d4ffcbef5db6d366f51e1a
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: One named entity with conflicting stereochemical encodings
+  outcome: concern
+  summary: The target identifier, alias and experimental compound resolve, but its
+    two structure encodings do not describe identical stereochemical specificity.
+    EXACT grounding cannot make the disagreement harmless. This is not evidence for
+    a racemate or a different constitutional compound.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+  - primary
+- assessment_id: grounding
+  area: grounding
+  topic: Parent, role and source identity scope
+  outcome: supported
+  summary: Both parents are broader chemical classes fitting the constitution, not
+    exact replacements. The antibacterial role and native filing have database and
+    primary activity support. No additional exact xref is asserted.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+  - ontology
+  - primary
+- assessment_id: activity
+  area: evidence
+  topic: Compound-specific antibacterial definition
+  outcome: supported
+  summary: The primary abstract links compound 2 to both named oral bacterial strains
+    and supports the definition at that bounded level. It does not justify activity
+    against all oral pathogens or clinical efficacy.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+  - primary
+- assessment_id: completeness
+  area: completeness
+  topic: Claim-level primary evidence and activity context
+  outcome: concern
+  summary: The source inventory retains a concrete primary lead, but the native record
+    has no evidence object or scoped activity context. Recovering the full methods
+    and exact structure assignment would enable meaningful curation.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+  - inventory
+  - primary
+- assessment_id: mechanism
+  area: scope
+  topic: Unknown molecular action and target
+  outcome: unknown
+  summary: No exact-compound molecular mechanism or directly inhibited target was
+    established in the inspected primary abstract. Growth inhibition and structural
+    class do not supply one; mechanism clearance for REVIEWED remains unresolved.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+  - primary
+  - search
+- assessment_id: producer
+  area: representation
+  topic: Isolation versus biosynthetic producer
+  outcome: supported
+  summary: The whole-herb isolation statement is supported by the primary abstract.
+    No producer_organisms object is asserted. Biosynthesis should not be inferred
+    solely from extraction or a database metabolite relationship.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+  - primary
+  - chebi
+- assessment_id: optional
+  area: representation
+  topic: Other unasserted scientific objects
+  outcome: not_applicable
+  summary: No resistance, clinical, causal-graph or dataset claim is asserted. Missing
+    optional objects alone are not errors; no neighbouring-compound data are transferred.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - record
+- assessment_id: provenance
+  area: ownership
+  topic: Upstream conflict and maintained repair route
+  outcome: concern
+  summary: The seed and its three history events faithfully reproduce maintained inputs,
+    which themselves copy inconsistent ChEBI literals. Correcting only the YAML would
+    be overwritten; source/transform ownership and reproducible reseeding must be
+    preserved.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - inventory
+  - ownership
+  - chebi
+  - source-check
+- assessment_id: schema-assessment
+  area: schema
+  topic: Schema success versus chemical consistency failure
+  outcome: concern
+  summary: Both native focused validators pass, while the separate chemical equivalence
+    test fails. Deterministic schema success is not scientific structural sign-off.
+  target_ids:
+  - CHEBI:65753
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-65753-stereochemical-encoding-inconsistency
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: SMILES and InChI disagree at one stereocentre
+  description: The fully specified stored SMILES produces NDNXVUYCJZMRRS-USRICQPJSA-N;
+    stored Standard InChI/key encode NDNXVUYCJZMRRS-ABRNDMKOSA-N and leave canonical
+    InChI centre 19 unspecified. The conflict is copied from the adopted ChEBI inventory
+    and current source page. Official ChEBI Molfile and PubChem corroborate the SMILES,
+    providing a concrete correction candidate without pretending the original paper
+    was fully inspected.
+  target_ids:
+  - CHEBI:65753
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - grounding_status
+  evidence_ids:
+  - record
+  - inventory
+  - chebi
+  - chemistry
+  - molfile
+  - pubchem
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: 'review-checklist: Identity and structure; native exact-structure consistency'
+  native_severity: major inconsistent chemical representation
+  normalization_reason: Constitution and named entity remain recoverable, so this
+    is not an unresolved target or proven wrong constitutional identity. The confirmed
+    stereo disagreement is scientifically material and exceeds a style or optional-completeness
+    issue.
+- finding_id: F2
+  issue_key: chebi-65753-primary-activity-evidence-completeness
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Primary activity evidence remains a detached source lead
+  description: The original abstract explicitly identifies this compound and reports
+    strain-specific MICs, but the seed retains only a broad definition with no claim-linked
+    primary evidence. Full methods and the structure assignment must be inspected
+    before fine-grained assay curation; no unsupported mechanism should be filled
+    merely to complete the record.
+  target_ids:
+  - CHEBI:65753
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - discussions
+  - mode_of_action_notes
+  evidence_ids:
+  - record
+  - inventory
+  - primary
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml
+    role: Curator-owned evidence, activity observations and discussions through validated
+      writer and curation history
+  rule_id: 'review-checklist: Evidence standard, Activity, Mode of action and Audit'
+  native_severity: minor actionable primary-evidence completeness gap
+  normalization_reason: A concrete source-specific enrichment is available. The broad
+    activity definition is supported, and optional fields are not being treated as
+    automatically required.
+actions:
+- action_id: A1
+  description: Reconcile the source-owned structure triple through an upstream correction
+    or documented maintained normalization. The official Molfile and current SMILES
+    support regenerating the Standard InChI and key as the fully specified candidate
+    NDNXVUYCJZMRRS-USRICQPJSA-N. Verify intended stereochemistry and retain the conflicting-source
+    provenance before applying that candidate; reseed from the corrected maintained
+    path.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:65753
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Stored SMILES, Standard InChI, key and the retained source Molfile encode the
+    same justified stereochemistry, constitution, charge and formula. Do not erase
+    a stereocentre merely to force equality or infer a racemate from the old undefined
+    centre.
+  - Inspect the primary structure assignment or obtain an authoritative correction
+    to settle intended configuration. Record which source was normalized and why;
+    do not repair only the generated YAML.
+  - Preserve CHEBI:65753 and its source concept unless independently justified remapping
+    is required. Re-run documented extraction/seeding, verify-corpus, focused schema/strict
+    checks and full QC; check affected identity joins and structure-derived products.
+- action_id: A2
+  description: After resolving structure consistency, obtain the correct full primary
+    article and curate narrow evidence and activity context for compound 2. Retain
+    an explicit unresolved mechanism rationale rather than assigning a target from
+    the diterpenoid scaffold.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:65753
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/3-5-di-o-acetyl-1-o-5β-8α-9β-10α-18-oxokaur-16-en-18-yl-β-l-arabinofur.yaml
+    role: Curator-owned evidence, activity observations and discussions through validated
+      writer and curation history
+  acceptance_checks:
+  - Match the target to compound 2 and its tested chemical form; preserve original
+    organism/strain labels, MIC 15.6 micrograms/mL, assay medium, inoculum, incubation
+    and endpoint from the correct paper. Verify current strain taxonomy separately
+    if adding taxon groundings.
+  - Do not import compound 3/4/5 MICs, all-oral-pathogen scope, biofilm efficacy,
+    clinical susceptibility, bactericidal activity or direct target binding from the
+    abstract.
+  - Keep whole-herb isolation in claim evidence/discussions unless separate biosynthesis
+    support justifies producer_organisms.
+  - Use the validated writer and curation event and all native gates; retain SEEDED
+    until every REVIEWED requirement is actually met.
+limitations:
+- The correct primary article was available at abstract level only. Publisher retrieval
+  returned a bot-protection page. A full-text link from the author laboratory resolved
+  to a different paper, verified visually and excluded. Detailed assay methods, compound-specific
+  crystallography and absolute-configuration reasoning remain uninspected.
+- The source conflict is confirmed computationally and across current ChEBI representations.
+  The Molfile/SMILES/PubChem candidate is well supported, but this review does not
+  silently apply it or claim independent experimental determination of the intended
+  stereocentre.
+- Public source downloads initially failed under sandbox DNS restrictions and then
+  succeeded with read-only network escalation. Successful HTTP retrieval of publisher
+  HTML was not treated as successful article retrieval.
+- Bounded searches do not prove that a molecular mechanism, resistance mechanism or
+  additional primary study does not exist. No direct-target or class-wide activity
+  assertion was inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Only temporary review artifacts were written. No record, inventory, generated product
+  or curation history was modified.
+- The thirteen input hashes captured before judgment were rechecked without refresh.
+  Native history/reference and full-corpus validation are distinct shared checks;
+  chemical equivalence failure is retained explicitly.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:65753
+- https://www.ebi.ac.uk/chebi/backend/api/public/molfile/65753
+- https://pubchem.ncbi.nlm.nih.gov/compound/70697740
+- https://pubmed.ncbi.nlm.nih.gov/17315313/
+- https://doi.org/10.1055/s-2006-951773
+tags:
+- record-review
+- stereochemical-consistency
+- source-origin-defect
+- primary-activity-evidence
+```
