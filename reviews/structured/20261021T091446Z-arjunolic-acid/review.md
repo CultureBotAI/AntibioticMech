@@ -1,0 +1,880 @@
+# Arjunolic acid: exact aglycone identity and bounded primary activity
+
+- Review: 20261021T091446Z-arjunolic-acid
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:00:03Z
+- Finished UTC: 2026-10-21T09:14:46Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Exact neutral arjunolic acid identity, parent classes, antibacterial/antifungal roles and antioxidant wording are supported within inspected source scope. No demonstrated native corrective defect. Keep glycosides, mixtures, host effects and combination studies distinct; quantitative antifungal preparation remains partly unresolved. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole-record scientific review of arjunolic acid.
+
+Selection: Queue107 in isolated batch011.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:68381 | data/antibiotics/antibacterial/arjunolic-acid.yaml | generated | arjunolic acid |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused schema | passed | True | CHEBI:68381 | Actual focused command passed. |
+| Focused strict | passed | True | CHEBI:68381 | Actual focused command passed. |
+| Independent chemistry | passed | True | CHEBI:68381 | Native encodings, full key, formula, charge, masses and mint agree. |
+| Structured source adapter applicability | not_applicable | False | CHEBI:68381 | Native record contains no named gene, locus, protein, regulator, pathway, stress response or transcriptomics dataset. |
+| Authoritative full QC | failed | True | CHEBI:68381 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:68381 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:68381 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:68381 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:68381 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:68381 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:68381 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:68381 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:68381 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact free acid
+
+identity: supported. Targets: CHEBI:68381.
+
+Both encodings and official authorities agree on stereochemical identity, formula, masses, charge and mint.
+
+### Parents and role terms
+
+grounding: supported. Targets: CHEBI:68381.
+
+Both structural parents are broader; activity roles are antibacterial and antifungal. Antioxidant wording resides in definition.
+
+### Named plant occurrence
+
+evidence: supported. Targets: CHEBI:68381.
+
+Primary S.lancifolia separation supports free acid occurrence. J.sinensis occurrence is corroborated by HPLC against standards; original isolation article is only abstract-inspected.
+
+### Antibacterial and antifungal activities
+
+evidence: supported. Targets: CHEBI:68381.
+
+Exact free-acid antibacterial MICs and antifungal primary abstract support qualitative roles. Quantitative fungal transfer requires preparation adjudication.
+
+### Definition antioxidant activity
+
+evidence: supported. Targets: CHEBI:68381.
+
+Commercial arjunolic acid has primary host-cell ROS/cytoprotection evidence; this does not imply bacterial ROS mechanism.
+
+### Optional mechanism and activity enrichment
+
+completeness: unknown. Targets: CHEBI:68381.
+
+A bounded quantitative bacterial follow-up is available. No native target or mode is asserted; combination, host-signaling and patent endpoints cannot fill those fields as direct antibacterial evidence.
+
+### Registry and document placement
+
+provenance: supported. Targets: CHEBI:68381.
+
+Current ChEBI retains all registry links and three patent documents resolve; their document placement does not assert assay proof. HMDB/Reaxys independent content remains limited.
+
+### Owner, citations and history
+
+provenance: supported. Targets: CHEBI:68381.
+
+Source owner and four historical seed events are retained; reviews and tumor-cell assays are explicitly bounded rather than promoted to primary antimicrobial evidence.
+
+### Resistance,clinical,producer,dataset and graph
+
+scope: not_applicable. Targets: CHEBI:68381.
+
+No native claims in these optional blocks require adjudication. Plant occurrence is not a biosynthesis or clinical-efficacy assertion.
+
+### Focused validation
+
+schema: supported. Targets: CHEBI:68381.
+
+Focused gates and independent chemical consistency pass.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/arjunolic-acid.yaml; Entire YAML | supports | Read definition, two synonyms, both parents and roles, complete structure/xrefs, source mint and four history events. Exact neutral free acid; no native target, mode, quantitative activity, resistance, clinical, producer, dataset or graph assertion. SEEDED/EXACT retained. |
+| owner | data/raw/chebi_antimicrobials.tsv; Row 1708; source extractor and seeder | supports | Generated identity, roles and four citation leads reproduce adopted ChEBI row. Maintained source owners and context were captured before assessment. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:68381; Entry structure, roles, hierarchy, registry and species sources | supports | Current ChEBI agrees with exact native structure, CAS465-00-9, HMDB0034502, Reaxys2712723, parents, antibacterial and antifungal roles. Additional species-specific PMID links were investigated independently. |
+| chemistry | Independent RDKit calculations; Both native encodings and deterministic mint | supports | Both encodings reproduce RWNHLTKFBKYDOJ-DDHMHSPCSA-N, C30H48O5, zero charge, one fragment, ten defined stereocentres, mass488.709 and exact mass488.350174636. Mint matches. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/compound/73641; Full-key PUG response | supports | CID73641 agrees with exact InChI/key, formula, charge and masses. This is the free oleanane acid, not the ursane isomer asiatic acid or an arjunolic glycoside. |
+| term25872 | https://www.ebi.ac.uk/chebi/CHEBI:25872; Definition and hierarchy | supports | Live term resolves to pentacyclic triterpenoid. Native placement is appropriate. |
+| term35868 | https://www.ebi.ac.uk/chebi/CHEBI:35868; Definition and hierarchy | supports | Live term resolves to hydroxy monocarboxylic acid. Native placement is appropriate. |
+| term33282 | https://www.ebi.ac.uk/chebi/CHEBI:33282; Definition and hierarchy | supports | Live term resolves to antibacterial agent. Native placement is appropriate. |
+| term35718 | https://www.ebi.ac.uk/chebi/CHEBI:35718; Definition and hierarchy | supports | Live term resolves to antifungal agent. Native placement is appropriate. |
+| adopted21046976 | PMID:21046976; EPMC metadata and abstract; No DOI returned | context_only | Review of therapeutic applications, not independent primary antibacterial evidence. |
+| adopted21732908 | PMID:21732908; EPMC metadata and abstract; 10.1080/14786419.2011.566870 | context_only | Primary abstract reports isolation from Terminalia arjuna core wood and EAC/DAL tumor-cell cytotoxicity. It neither verifies the two native named plants nor establishes bacterial membrane damage. |
+| adopted22486656 | PMID:22486656; EPMC metadata and abstract; 10.3109/10715762.2012.683431 | context_only | Review of diabetes/organ protection; host oxidative-stress signaling is not an antibacterial mechanism. |
+| adopted23402784 | PMID:23402784; EPMC metadata and abstract; 10.1016/j.biochi.2013.01.016 | context_only | Multifunctional therapeutic review; useful discovery context but not a primary assay source. |
+| symplocos | https://doi.org/10.1021/np100502y; PMID21288041; author-posted primary text, Results/Extraction/Table3/Broth assays, pp163–168 | supports | Free arjunolic acid is separated from S. lancifolia leaves and identified by comparison of NMR data. Table3 gives MIC64 µg/mL against S. aureus and E. faecalis and &gt;128 against E. coli and P. aeruginosa; assays are liquid microdilution with DMSO stocks and triplicate concentrations. Standard strains named in experimental section are ATCC25923,29212,25922,27853 respectively. Earlier mixture studies and saponins1–3 are distinct. No molecular target is demonstrated. |
+| juglans | https://doi.org/10.4103/0973-1296.160463; PMID26246728/PMC4522839; preparation, HPLC-ELSD Figure2 and Discussion | partial | J. sinensis leaf/twig extract contains an arjunolic-acid peak matched to external standards. This corroborates occurrence; hepatoprotection is measured for the mixed extract and cannot be transferred to isolated arjunolic acid. The original2011 isolation PMID21309591 abstract was inspected but does not list all17 known compounds. |
+| juglans-original | PMID:21309591; DOI10.1021/np1008202; abstract | context_only | J. sinensis leaves/twigs yielded four new and17 known triterpenes; abstract-level compound enumeration is insufficient to independently verify exact arjunolic isolation or transfer HSC-T6 effects. |
+| combretum-lead | PMID:21265555; DOI10.1021/np100784t; abstract | context_only | C. quadrangulare primary abstract concerns new cycloartanes, known oleananes and flavonols; it does not identify all known oleananes or establish arjunolic antibacterial mechanism. |
+| antioxidant | https://doi.org/10.1016/j.biocel.2015.08.015; PMID26319153/PMC4630159; Chemicals, Results/Figure2 and Conclusions | supports | Sigma arjunolic acid SMB00119, specified lot, reduced ROS-related readouts in PMA-stimulated and myocardial-infarction mouse neutrophils. Supports bounded antioxidant/cytoprotective wording. Host p47phox/ERK phosphorylation and mitochondrial effects are not bacterial target evidence; proposed chemical radical mechanisms are not independently demonstrated by these readouts. |
+| antifungal2003 | https://pubmed.ncbi.nlm.nih.gov/12865988/; DOI10.1055/s-2003-40646; primary abstract | partial | Isolated arjunolic acid from Leandra chaetodon is reported to inhibit C. neoformans with IC50 20µg/mL. Supports antifungal role at abstract-level scope; strain, assay details and full identity characterization were not available in inspected text. |
+| antifungal2008 | https://doi.org/10.3390/molecules13112717; PMID18978701/PMC6245402; Results, Table1, Extraction and antifungal methods | partial | Table1 separately reports arjunolic acid2 MIC50µg/mL for C.albicans ATCC90028, C.krusei ATCC6258 and C.neoformans ATCC32045, versus200 for2/7 mixture. Microbroth dilution was performed in duplicate. Extraction/characterization, however, explicitly describes2 with asiatic acid7 as a mixture and does not clearly trace a separate pure2 preparation. Preserve the reported distinction but resolve this preparation gap before adopting exact quantitative rows. |
+| combination | https://doi.org/10.1021/acsomega.0c00460; PMID32478231/PMC7254530; Materials and Table1 | context_only | Commercial Sigma arjunolic acid has single-agent MIC512(≥512)µg/mL in the reported E.coli ZJ487 experiment and contributes to a meropenem combination result. The paper title and detailed oleanolic-acid mechanism experiments do not establish the same direct target mechanism for arjunolic acid. |
+| patentCN101416970A | https://patents.google.com/patent/CN101416970A/en; Abstract and relevant description | context_only | Patent identifies the exact trihydroxyoleanene acid and claims alpha-glucosidase inhibition/diabetes applications, not an antibacterial target experiment. |
+| patentGB923414A | https://patents.google.com/patent/GB923414A/en; Abstract and relevant description | context_only | Historical patent names arjunolic and asiatic acids and extraction/composition claims; claimed bactericidal properties are not a controlled strain-level assay. |
+| patentWO2013064326A2 | https://patents.google.com/patent/WO2013064326A2/en; Abstract and relevant description | context_only | Patent concerns cosmetic sebum production and formulations with1,2-pentanediol, optionally asiatic acid. A2 is the resolving document kind. No antibacterial mechanism is inferred. |
+| gates | just validate; just validate-strict; Actual batch011 commands | supports | Both focused validators exited 0; strict scanned one target with zero errors. |
+| search | CultureBotAI/AntibioticMech; Ignored-inclusive label/ID/slug search and free primary discovery | context_only | Native, raw, curation and generated context searched including ignored files. Glycoside relatives and mixture studies were kept separate. HMDB denied access403; Reaxys content was not inspected. No native named gene/protein/pathway/dataset triggers structured-adapter use. |
+
+## Limits And Additional Notes
+
+- HMDB0034502 returned 403 and Reaxys2712723 registry content was not independently inspected; both remain current ChEBI assertions.
+- Original J.sinensis isolation PMID21309591 and adopted four citations were inspected at abstract level. Later primary HPLC supports occurrence but does not supply an independent complete stereochemical re-identification.
+- The 2003 fungal source was abstract-inspected. The 2008 primary source separates compound2 and2/7 assay rows but its extraction narrative documents only the mixture; exact pure-compound preparation needs resolution before quantitative curation.
+- Symplocos primary text was accessible through the author-posted full-text web view despite direct download403; raw NMR spectra were not reprocessed. Free literature discovery was bounded and does not establish absence of further mechanism evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 20 captured input hashes rechecked unchanged. No native content or scientific status was changed.
+- A curator may add claim-level PMID21288041 activity observations under activity_spectrum, preserving four strains, MIC comparators, DMSO/microdilution context and source method details. Add primary evidence through the maintained record curation workflow; optional absence is not a defect.
+- Host antioxidant signaling and the oleanolic-acid mechanism in a related-compound paper do not establish an arjunolic antibacterial molecular target.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T091446Z-arjunolic-acid
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Arjunolic acid: exact aglycone identity and bounded primary activity'
+started_at: '2026-10-21T09:00:03Z'
+finished_at: '2026-10-21T09:14:46Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole-record and source-owner review, independent chemistry
+    and live identity checks, primary source text inspection.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Exact neutral arjunolic acid identity, parent classes, antibacterial/antifungal
+  roles and antioxidant wording are supported within inspected source scope. No demonstrated
+  native corrective defect. Keep glycosides, mixtures, host effects and combination
+  studies distinct; quantitative antifungal preparation remains partly unresolved.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/arjunolic-acid.yaml
+    sha256: 028c44e91cd6b7f3bc8a8677054bb0372194dafc35d10913761342fc65b2d676
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+targets:
+- target_id: CHEBI:68381
+  path: data/antibiotics/antibacterial/arjunolic-acid.yaml
+  label: arjunolic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole-record scientific review of arjunolic acid.
+  selection: Queue107 in isolated batch011.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:68381
+  exclusions:
+  - target: Asiatic acid, arjunolic glycosides, plant extracts and drug combinations
+    reason: Distinct structures or experimental preparations; contextual evidence
+      only.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/arjunolic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual focused command passed.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/arjunolic-acid.yaml --out /private/tmp/am-review-session/107-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Independent chemistry
+  status: passed
+  required: true
+  summary: Native encodings, full key, formula, charge, masses and mint agree.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - chemistry
+- check_id: adapter
+  name: Structured source adapter applicability
+  status: not_applicable
+  required: false
+  summary: Native record contains no named gene, locus, protein, regulator, pathway,
+    stress response or transcriptomics dataset.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - native
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:68381
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/arjunolic-acid.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T09:05:29Z'
+  support: supports
+  summary: Read definition, two synonyms, both parents and roles, complete structure/xrefs,
+    source mint and four history events. Exact neutral free acid; no native target,
+    mode, quantitative activity, resistance, clinical, producer, dataset or graph
+    assertion. SEEDED/EXACT retained.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Row 1708; source extractor and seeder
+  accessed_at: '2026-10-21T09:05:29Z'
+  support: supports
+  summary: Generated identity, roles and four citation leads reproduce adopted ChEBI
+    row. Maintained source owners and context were captured before assessment.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:68381
+  locator: Entry structure, roles, hierarchy, registry and species sources
+  accessed_at: '2026-10-21T09:00:26Z'
+  support: supports
+  summary: Current ChEBI agrees with exact native structure, CAS465-00-9, HMDB0034502,
+    Reaxys2712723, parents, antibacterial and antifungal roles. Additional species-specific
+    PMID links were investigated independently.
+  snapshot_sha256: d002de988488fcaec58b9b703bc07b058159aaac0e6ff37aa2131f2b509d7430
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: Both native encodings and deterministic mint
+  accessed_at: '2026-10-21T09:00:21Z'
+  support: supports
+  summary: Both encodings reproduce RWNHLTKFBKYDOJ-DDHMHSPCSA-N, C30H48O5, zero charge,
+    one fragment, ten defined stereocentres, mass488.709 and exact mass488.350174636.
+    Mint matches.
+  snapshot_sha256: 21fc514105fb22c45f14866c11d41bef18696004572895a6e765226aa2b8d657
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/73641
+  locator: Full-key PUG response
+  accessed_at: '2026-10-21T09:00:25Z'
+  support: supports
+  summary: CID73641 agrees with exact InChI/key, formula, charge and masses. This
+    is the free oleanane acid, not the ursane isomer asiatic acid or an arjunolic
+    glycoside.
+  snapshot_sha256: b57e6105bccf2b0ea95e71501dbd4e8c781c3ca5674eedfc24b4d8bdb5f09a76
+- evidence_id: term25872
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:25872
+  locator: Definition and hierarchy
+  accessed_at: '2026-10-21T09:00:33Z'
+  support: supports
+  summary: Live term resolves to pentacyclic triterpenoid. Native placement is appropriate.
+  snapshot_sha256: af3fdd216b2cef3e880f632788330cd6f092b8d0a3df9cd87dd33ac5ed3ef567
+- evidence_id: term35868
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35868
+  locator: Definition and hierarchy
+  accessed_at: '2026-10-21T09:00:34Z'
+  support: supports
+  summary: Live term resolves to hydroxy monocarboxylic acid. Native placement is
+    appropriate.
+  snapshot_sha256: 435e8c6db3b5bc0b1daa76b83657d20e866cd9823ece23904fcf875ae047fb84
+- evidence_id: term33282
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Definition and hierarchy
+  accessed_at: '2026-10-21T09:00:28Z'
+  support: supports
+  summary: Live term resolves to antibacterial agent. Native placement is appropriate.
+  snapshot_sha256: b01c6b5fdd1b347f419247657124ebfe9a2770af7974844696755ce975a1ba21
+- evidence_id: term35718
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35718
+  locator: Definition and hierarchy
+  accessed_at: '2026-10-21T09:00:26Z'
+  support: supports
+  summary: Live term resolves to antifungal agent. Native placement is appropriate.
+  snapshot_sha256: 00609b86a5cd623402e94a4b58b7f6e74e4887706201b36cfa2a24b58569c282
+- evidence_id: adopted21046976
+  kind: database
+  reference: PMID:21046976
+  locator: EPMC metadata and abstract; No DOI returned
+  accessed_at: '2026-10-21T09:00:25Z'
+  support: context_only
+  summary: Review of therapeutic applications, not independent primary antibacterial
+    evidence.
+  snapshot_sha256: 54c8a404a7d16cc12f1820ae02c2b87276769cf3445285cf95793e308389e28c
+- evidence_id: adopted21732908
+  kind: primary_source
+  reference: PMID:21732908
+  locator: EPMC metadata and abstract; 10.1080/14786419.2011.566870
+  accessed_at: '2026-10-21T09:00:26Z'
+  support: context_only
+  summary: Primary abstract reports isolation from Terminalia arjuna core wood and
+    EAC/DAL tumor-cell cytotoxicity. It neither verifies the two native named plants
+    nor establishes bacterial membrane damage.
+  snapshot_sha256: 24bbf3261e10b4ec656d56b8ee68fdabb56bd06787fbe7b63bb3df126ba1b2e6
+- evidence_id: adopted22486656
+  kind: database
+  reference: PMID:22486656
+  locator: EPMC metadata and abstract; 10.3109/10715762.2012.683431
+  accessed_at: '2026-10-21T09:00:27Z'
+  support: context_only
+  summary: Review of diabetes/organ protection; host oxidative-stress signaling is
+    not an antibacterial mechanism.
+  snapshot_sha256: 196b88b7d3926ae41678a6c9ac99c43fec3e8d065656034f7ff633dff726f868
+- evidence_id: adopted23402784
+  kind: database
+  reference: PMID:23402784
+  locator: EPMC metadata and abstract; 10.1016/j.biochi.2013.01.016
+  accessed_at: '2026-10-21T09:00:27Z'
+  support: context_only
+  summary: Multifunctional therapeutic review; useful discovery context but not a
+    primary assay source.
+  snapshot_sha256: 823f2f884701a198fe7ea52a2e5390697f1b292ba8f456c9187d0277ce76f76d
+- evidence_id: symplocos
+  kind: primary_source
+  reference: https://doi.org/10.1021/np100502y
+  locator: PMID21288041; author-posted primary text, Results/Extraction/Table3/Broth
+    assays, pp163–168
+  accessed_at: '2026-10-21T09:03:27Z'
+  support: supports
+  summary: Free arjunolic acid is separated from S. lancifolia leaves and identified
+    by comparison of NMR data. Table3 gives MIC64 µg/mL against S. aureus and E. faecalis
+    and >128 against E. coli and P. aeruginosa; assays are liquid microdilution with
+    DMSO stocks and triplicate concentrations. Standard strains named in experimental
+    section are ATCC25923,29212,25922,27853 respectively. Earlier mixture studies
+    and saponins1–3 are distinct. No molecular target is demonstrated.
+  snapshot_sha256: 314e31f975ed661777e518956a9614e34e6ef159831a84895d46164128e33a60
+- evidence_id: juglans
+  kind: primary_source
+  reference: https://doi.org/10.4103/0973-1296.160463
+  locator: PMID26246728/PMC4522839; preparation, HPLC-ELSD Figure2 and Discussion
+  accessed_at: '2026-10-21T09:03:17Z'
+  support: partial
+  summary: J. sinensis leaf/twig extract contains an arjunolic-acid peak matched to
+    external standards. This corroborates occurrence; hepatoprotection is measured
+    for the mixed extract and cannot be transferred to isolated arjunolic acid. The
+    original2011 isolation PMID21309591 abstract was inspected but does not list all17
+    known compounds.
+  snapshot_sha256: d513c5eaf11008f670c11d333caf8106d661f82597df4ab11f200ee72b132e88
+- evidence_id: juglans-original
+  kind: primary_source
+  reference: PMID:21309591
+  locator: DOI10.1021/np1008202; abstract
+  accessed_at: '2026-10-21T09:02:52Z'
+  support: context_only
+  summary: J. sinensis leaves/twigs yielded four new and17 known triterpenes; abstract-level
+    compound enumeration is insufficient to independently verify exact arjunolic isolation
+    or transfer HSC-T6 effects.
+  snapshot_sha256: 3bb2a05e24863539d633f68d7bddc89463dc364138b0e98fb91b97ecc8dbbb26
+- evidence_id: combretum-lead
+  kind: primary_source
+  reference: PMID:21265555
+  locator: DOI10.1021/np100784t; abstract
+  accessed_at: '2026-10-21T09:02:52Z'
+  support: context_only
+  summary: C. quadrangulare primary abstract concerns new cycloartanes, known oleananes
+    and flavonols; it does not identify all known oleananes or establish arjunolic
+    antibacterial mechanism.
+  snapshot_sha256: e67b2a99ac3e30f31e8845b49fb40e7e888cbe806c075ca3ff0e39ef4e01d4f7
+- evidence_id: antioxidant
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.biocel.2015.08.015
+  locator: PMID26319153/PMC4630159; Chemicals, Results/Figure2 and Conclusions
+  accessed_at: '2026-10-21T09:03:38Z'
+  support: supports
+  summary: Sigma arjunolic acid SMB00119, specified lot, reduced ROS-related readouts
+    in PMA-stimulated and myocardial-infarction mouse neutrophils. Supports bounded
+    antioxidant/cytoprotective wording. Host p47phox/ERK phosphorylation and mitochondrial
+    effects are not bacterial target evidence; proposed chemical radical mechanisms
+    are not independently demonstrated by these readouts.
+  snapshot_sha256: be59575c87fd08f5ee7ae31a659d7947e57abe77925fd5087da11399358570f5
+- evidence_id: antifungal2003
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/12865988/
+  locator: DOI10.1055/s-2003-40646; primary abstract
+  accessed_at: '2026-10-21T09:05:29Z'
+  support: partial
+  summary: Isolated arjunolic acid from Leandra chaetodon is reported to inhibit C.
+    neoformans with IC50 20µg/mL. Supports antifungal role at abstract-level scope;
+    strain, assay details and full identity characterization were not available in
+    inspected text.
+- evidence_id: antifungal2008
+  kind: primary_source
+  reference: https://doi.org/10.3390/molecules13112717
+  locator: PMID18978701/PMC6245402; Results, Table1, Extraction and antifungal methods
+  accessed_at: '2026-10-21T09:04:11Z'
+  support: partial
+  summary: Table1 separately reports arjunolic acid2 MIC50µg/mL for C.albicans ATCC90028,
+    C.krusei ATCC6258 and C.neoformans ATCC32045, versus200 for2/7 mixture. Microbroth
+    dilution was performed in duplicate. Extraction/characterization, however, explicitly
+    describes2 with asiatic acid7 as a mixture and does not clearly trace a separate
+    pure2 preparation. Preserve the reported distinction but resolve this preparation
+    gap before adopting exact quantitative rows.
+  snapshot_sha256: 9e4b1226303217c6f3fc7391b2aa4ebd6d1195d30dd5b9658d91befada9e901b
+- evidence_id: combination
+  kind: primary_source
+  reference: https://doi.org/10.1021/acsomega.0c00460
+  locator: PMID32478231/PMC7254530; Materials and Table1
+  accessed_at: '2026-10-21T09:03:17Z'
+  support: context_only
+  summary: Commercial Sigma arjunolic acid has single-agent MIC512(≥512)µg/mL in the
+    reported E.coli ZJ487 experiment and contributes to a meropenem combination result.
+    The paper title and detailed oleanolic-acid mechanism experiments do not establish
+    the same direct target mechanism for arjunolic acid.
+  snapshot_sha256: 9f03a5850f37f20e5fc53d2676fc772395636cfdd428956030f522361f967d7b
+- evidence_id: patentCN101416970A
+  kind: database
+  reference: https://patents.google.com/patent/CN101416970A/en
+  locator: Abstract and relevant description
+  accessed_at: '2026-10-21T09:00:27Z'
+  support: context_only
+  summary: Patent identifies the exact trihydroxyoleanene acid and claims alpha-glucosidase
+    inhibition/diabetes applications, not an antibacterial target experiment.
+  snapshot_sha256: 82a1e095de71f55a96a0bbd4bec59acdc2323c824cefe90c994f1a8ada2be208
+- evidence_id: patentGB923414A
+  kind: database
+  reference: https://patents.google.com/patent/GB923414A/en
+  locator: Abstract and relevant description
+  accessed_at: '2026-10-21T09:00:27Z'
+  support: context_only
+  summary: Historical patent names arjunolic and asiatic acids and extraction/composition
+    claims; claimed bactericidal properties are not a controlled strain-level assay.
+  snapshot_sha256: 630105bccca8fda6e13ea0b4bba0a31f53f90cf11299261e7e7a2f22bc5f9c65
+- evidence_id: patentWO2013064326A2
+  kind: database
+  reference: https://patents.google.com/patent/WO2013064326A2/en
+  locator: Abstract and relevant description
+  accessed_at: '2026-10-21T09:02:52Z'
+  support: context_only
+  summary: Patent concerns cosmetic sebum production and formulations with1,2-pentanediol,
+    optionally asiatic acid. A2 is the resolving document kind. No antibacterial mechanism
+    is inferred.
+  snapshot_sha256: b304e90d46d7f5bb3b33e2b64491c528341e1de72a71426156367885c4f9ee88
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual batch011 commands
+  accessed_at: '2026-10-21T09:04:23Z'
+  support: supports
+  summary: Both focused validators exited 0; strict scanned one target with zero errors.
+  snapshot_sha256: d900b13e788cc11ee8323e4898602bc28c6ac3bf3789919dcce65c85b6bc40dd
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive label/ID/slug search and free primary discovery
+  accessed_at: '2026-10-21T09:05:29Z'
+  support: context_only
+  summary: Native, raw, curation and generated context searched including ignored
+    files. Glycoside relatives and mixture studies were kept separate. HMDB denied
+    access403; Reaxys content was not inspected. No native named gene/protein/pathway/dataset
+    triggers structured-adapter use.
+  search_scope: prepare.py107 rg --no-ignore --hidden excluding.git/.venv; ChEBI/PubChem
+    and term pages; four adopted citation abstracts plus species-specific primary
+    leads; free primary full-text sections and exact patent documents.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact free acid
+  outcome: supported
+  summary: Both encodings and official authorities agree on stereochemical identity,
+    formula, masses, charge and mint.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - pubchem
+- assessment_id: grounding
+  area: grounding
+  topic: Parents and role terms
+  outcome: supported
+  summary: Both structural parents are broader; activity roles are antibacterial and
+    antifungal. Antioxidant wording resides in definition.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - term25872
+  - term35868
+  - term33282
+  - term35718
+  - chebi
+- assessment_id: occurrence
+  area: evidence
+  topic: Named plant occurrence
+  outcome: supported
+  summary: Primary S.lancifolia separation supports free acid occurrence. J.sinensis
+    occurrence is corroborated by HPLC against standards; original isolation article
+    is only abstract-inspected.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - symplocos
+  - juglans
+  - juglans-original
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial and antifungal activities
+  outcome: supported
+  summary: Exact free-acid antibacterial MICs and antifungal primary abstract support
+    qualitative roles. Quantitative fungal transfer requires preparation adjudication.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - symplocos
+  - antifungal2003
+  - antifungal2008
+- assessment_id: antioxidant
+  area: evidence
+  topic: Definition antioxidant activity
+  outcome: supported
+  summary: Commercial arjunolic acid has primary host-cell ROS/cytoprotection evidence;
+    this does not imply bacterial ROS mechanism.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - antioxidant
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional mechanism and activity enrichment
+  outcome: unknown
+  summary: A bounded quantitative bacterial follow-up is available. No native target
+    or mode is asserted; combination, host-signaling and patent endpoints cannot fill
+    those fields as direct antibacterial evidence.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - native
+  - symplocos
+  - combination
+  - antioxidant
+- assessment_id: xrefs
+  area: provenance
+  topic: Registry and document placement
+  outcome: supported
+  summary: Current ChEBI retains all registry links and three patent documents resolve;
+    their document placement does not assert assay proof. HMDB/Reaxys independent
+    content remains limited.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - chebi
+  - patentCN101416970A
+  - patentGB923414A
+  - patentWO2013064326A2
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Owner, citations and history
+  outcome: supported
+  summary: Source owner and four historical seed events are retained; reviews and
+    tumor-cell assays are explicitly bounded rather than promoted to primary antimicrobial
+    evidence.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - owner
+  - native
+  - adopted21046976
+  - adopted21732908
+  - adopted22486656
+  - adopted23402784
+- assessment_id: other
+  area: scope
+  topic: Resistance,clinical,producer,dataset and graph
+  outcome: not_applicable
+  summary: No native claims in these optional blocks require adjudication. Plant occurrence
+    is not a biosynthesis or clinical-efficacy assertion.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - native
+  - juglans
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Focused gates and independent chemical consistency pass.
+  target_ids:
+  - CHEBI:68381
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions: []
+limitations:
+- HMDB0034502 returned 403 and Reaxys2712723 registry content was not independently
+  inspected; both remain current ChEBI assertions.
+- Original J.sinensis isolation PMID21309591 and adopted four citations were inspected
+  at abstract level. Later primary HPLC supports occurrence but does not supply an
+  independent complete stereochemical re-identification.
+- The 2003 fungal source was abstract-inspected. The 2008 primary source separates
+  compound2 and2/7 assay rows but its extraction narrative documents only the mixture;
+  exact pure-compound preparation needs resolution before quantitative curation.
+- Symplocos primary text was accessible through the author-posted full-text web view
+  despite direct download403; raw NMR spectra were not reprocessed. Free literature
+  discovery was bounded and does not establish absence of further mechanism evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 20 captured input hashes rechecked unchanged. No native content or scientific
+  status was changed.
+- A curator may add claim-level PMID21288041 activity observations under activity_spectrum,
+  preserving four strains, MIC comparators, DMSO/microdilution context and source
+  method details. Add primary evidence through the maintained record curation workflow;
+  optional absence is not a defect.
+- Host antioxidant signaling and the oleanolic-acid mechanism in a related-compound
+  paper do not establish an arjunolic antibacterial molecular target.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:68381
+- https://doi.org/10.1021/np100502y
+- https://doi.org/10.3390/molecules13112717
+tags:
+- arjunolic-acid
+- triterpenoid
+- antibacterial
+- antifungal
+- mixture-boundary
+```

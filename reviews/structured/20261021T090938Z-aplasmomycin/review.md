@@ -1,0 +1,809 @@
+# Aplasmomycin: supported sodium-complex identity, antibacterial activity and ionophore context
+
+- Review: 20261021T090938Z-aplasmomycin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:59:49Z
+- Finished UTC: 2026-10-21T09:09:38Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Native aplasmomycin sodium borate chemistry matches ChEBI and PubChem. Original studies support fermentation production, Gram-positive antibacterial activity, mouse antiplasmodial activity and potassium transport in an artificial bulk-phase system. The cited2018 study supplies a bounded futalosine-pathway lead, but its full main text remains inaccessible. One informational primary-evidence enrichment is proposed; no confirmed native scientific error. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole exact record; adopted ChEBI/ARO rows and class; sole adopted PMID citation; official structures and all xrefs; original1976 isolation/activity,1977 structure and1978 transport papers; bounded2018 pathway evidence.
+
+Selection: Queue102,CHEBI:32617 (+)-aplasmomycin at locked native path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:32617 | data/antibiotics/antibacterial/aplasmomycin.yaml | generated | (+)-aplasmomycin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | CHEBI:32617 | Focused LinkML validator exited0. |
+| strict | passed | True | CHEBI:32617 | Focused strict scan exited0 with no ERROR rows. |
+| initial-chemistry | failed | False | CHEBI:32617 | Initial helper exited1 because it compared literal formula strings C40H60BO14.Na andC40H60BNaO14. Structure keys, charge and masses already agreed. Retained for audit; corrected composition-aware comparison below. |
+| chemistry | passed | False | CHEBI:32617 | Element counts, SMILES/InChI keys, charge, masses and source mints agree; independently parsed PubChem structure also matches. |
+| Authoritative full QC | failed | True | CHEBI:32617 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:32617 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:32617 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:32617 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:32617 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:32617 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:32617 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:32617 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:32617 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Sodium complex and original structure evidence
+
+identity: supported. Targets: CHEBI:32617.
+
+Official chemistry and independent calculations agree;1977 correction and silver-derivative stereochemistry are preserved as qualified historical context.
+
+### Production, antibacterial and animal antiplasmodial assertions
+
+evidence: supported. Targets: CHEBI:32617.
+
+Original1976 culture, isolation and activity results support native definition. Its adopted2018 reference is a later source citing these originals; no bibliographic mismatch is alleged without full main text.
+
+### Natural ionophore assertion
+
+evidence: supported. Targets: CHEBI:32617.
+
+1978 parent-compound K+ transport supports ionophore function. Artificial bulk-phase assay does not establish a specific bacterial protein target or universal causal mechanism.
+
+### Optional primary claims and futalosine context
+
+completeness: unknown. Targets: CHEBI:32617.
+
+Primary activity, producer and transport evidence can be curated. Detailed2018 pathway mechanism remains limited by main-text access; missing optional targets are not errors.
+
+### Resistance, clinical approval, graphs anddatasets
+
+completeness: unknown. Targets: CHEBI:32617.
+
+No unsupported native assertions. Mouse survival and antibiotic class do not establish human clinical efficacy or50S binding. No omics dataset inferred from pathway language.
+
+### Generated source andcurator addition owners
+
+ownership: supported. Targets: CHEBI:32617.
+
+Both source rows and relevant transforms captured; actual native path owns optional primary annotations.
+
+### Focused validation and history
+
+schema: supported. Targets: CHEBI:32617.
+
+Focused validators and corrected chemistry pass; history is consistent with SEEDED. No status promotion.
+
+## Findings
+
+### F1: Add qualified original activity, producer and ion-transport evidence
+
+informational / open / confirmed; issue key: aplasmomycin-qualified-primary-ionophore-activity-enrichment.
+
+Original1976/1978 studies provide concrete primary support for native biological and ionophore assertions. Optional structured enrichment should retain the sodium form, tested strains, culture-production evidence and artificial transport endpoint. The2018 futalosine study is a pathway lead, not a verified direct protein target in this review.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally curate original exact-parent activity, fermentation production and qualified ionophore evidence on the native record.
+
+- UsePMID994322 Table6 exact strains, agar-dilution method, medium additions and qualifiers. Keep mouseP.bergheiNK65 activity separate from bacterial susceptibility and human efficacy.
+- If adding producer annotation, use the documentedSS-20 culture production and fermentation isolation, preserving historicalS.griseus identification andFERM-P3448 accession; do not infer a biosynthetic gene cluster from it.
+- UsePMID681248 for parent K+ transport in the specified artificial bulk phase; distinguish cation affinity, transport and disk-zone endpoints. Do not assign membrane potential,50S binding or a protein target from scaffold class.
+- Preserve1977 formula correction and silver-complex crystallography as derivative evidence; do not change native sodium identity to silver,potassium,B/C or deboro forms.
+- Obtain fullPMID30089869 before detailed pathway/target annotation; inspect experimental subjects and rescue design. Do not infer a directly boundMqn/MTAN enzyme or quantitativeH.pylori assay from abstract/supplement captions.
+- Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/aplasmomycin.yaml for any authorized future mutation; run focused/shared gates without automaticREVIEWED promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/aplasmomycin.yaml; Entire native YAML and three seed/reseed history events. | supports | SEEDED/EXACT sodium borate complex; two synonyms, three parents, antimicrobial role33281, macrolide structural class, two source concepts and four xrefs. Definition carries PMID30089869. No separate mode, target, resistance, quantified activity, producer, clinical, causal graph or dataset annotation. Optional blanks are not schema defects. |
+| source | data/raw/chebi_antimicrobials.tsv; 102-raw.json: ChEBI line705 andARO molecule line560; complete selected target/resistance rows; source config and extractor/seeder logic. | supports | ChEBI supplies exact chemical structure and accepted antimicrobial role; its definition and citation list are empty. ARO supplies definition, PMID30089869 and macrolide class0000000. No adopted resistance or target edges for this molecule. Definition provenance is intentionally inherited from ARO. Initial13 plus3 supplemental maintained inputs remain unchanged. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:32617; 102-chebi.html/txt and PubChemCID23697358 property response. | supports | Both official sources identify sodium aplasmomycin with C40H60BO14.Na, total charge0 and full keyGEIYDRPAWIMINR-ZDKANEFWSA-N. Sixteen carbon stereocentres and two trans alkenes are represented; boron stereotag remains as published. Sodium cation and borate anion are separate fragments. Macrolide and boron-oxoanion parent terms reproduce source classification; structural class does not assert50S binding. |
+| chemistry | Independent RDKit calculations; 102-chemistry.json and102-chemistry-final.json. | supports | Native SMILES andInChI yield identical full keys, two fragments, zero total charge, element countsC40H60BNaO14, average mass798.708 and exact mass798.39738128. Both mint IDs agree. PubChem SMILES independently yields native key. Dot-separated and Hill-order formula strings are equivalent compositions, not a native error. |
+| aro | https://purl.obolibrary.org/obo/aro.obo; Same-session094-aro.obo; full terms3007792 and0000000 in102-aro-terms.txt. | supports | Official OBO bytes match MANIFEST SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4. Molecule definition, exact xrefs and macrolide parent agree. Generic macrolide class text describes ribosomal antibiotics; the native record does not propagate that mechanism to this macrodiolide. |
+| xrefs | Official ChEBI and PubChem identity endpoints; 102-fetch-results.json,102-pubchem.json and source OBO. | partial | ARO3007792 and PubChem23697358 resolve and agree with the sodium form. CAS61230-25-9 is cross-corroborated by ChEBI/ARO, not registry-direct. Beilstein5801225 is explicitly listed by ChEBI but its legacy endpoint was not independently inspected. |
+| primary1976 | DOI:10.7164/antibiotics.29.1019; PMID994322;102-1976.pdf/text, full main paper and Table6. Optical rotation visually checked on p1023. | supports | Streptomyces griseus SS-20, depositedFERM-P3448, produces aplasmomycin in controlled cultures; purified material is isolated from broth after sodium-hydroxide treatment. Table6 nutrient-agar dilution gives S.aureusFDA209P MIC1.56µg/mL, B.subtilisPCI2191.56µg/mL, M.smegmatis6076.25µg/mL; E.coliK12 andS.typhiT63 exceed100µg/mL. Mycobacterial medium includes1% glycerol. In P.bergheiNK65-infected mice, two oral100mg/kg doses improve survival/parasitemia versus control; this is animal evidence, not human treatment. The initially tentative C41/no-boron formula was corrected in1977. The scanned original rotation is+225 degrees; OCR falsely rendered a minus sign. |
+| primary1977 | DOI:10.7164/antibiotics.30.714; PMID924893;102-1977.pdf/text, main narrative and Figure1 visually inspected on p716. | supports | This paper explicitly corrects the sodium formula toC40H60O14BNa and identifies the central boron. Absolute configuration is determined by anomalous scattering of the silver-salt crystal, with185/190 selected Friedel pairs supporting handedness. The crystal is a silver complex with water, not native sodium salt; use as qualified scaffold stereochemical evidence. Its abstract directly contains the biological and natural-ionophore assertions reproduced in the native definition. |
+| primary1978 | DOI:10.7164/antibiotics.31.632; PMID681248;102-1978.pdf/text, complete four-page main paper,Tables3–4 andFigure3 caption. | supports | Parent aplasmomycin is tested separately from acetylatedB/C and deboro analogue. Parent andB mediate netK+ transport through a CCl4 bulk phase at2e-4M with aqueousKCl/NaCl buffers;C/deboro do not. Cation-complex affinity and antibacterial zones are distinct endpoints. Table3 uses500µg/mL disk solution and inhibition diameters, not MIC. This directly supports an ionophore function but does not itself measure bacterial membrane potential or prove that all antibacterial action follows only this route. |
+| adopted2018 | DOI:10.1038/s41429-018-0087-2; PMID30089869; complete abstract in102-epmc.json, public Nature preview/references and freely accessible supplement text. | partial | Sole adopted citation reports aplasmomycin from Streptomyces sp.K15-0223 as a futalosine-pathway inhibitor and boromycin as a separate comparator. Public supplement describes compound1 NMR/MS characterization and a B.haloduransC-125 growth-recovery assay. Main text is subscription-limited. The abstract does not identify a directly bound enzyme; no Mqn/MTAN protein target or H.pylori quantitative assay is inferred. Public references include original1976/1977 papers supporting definition background. |
+| other-literature | Bounded original aplasmomycin literature abstracts; 102-epmc.json, complete abstracts for selected exact-title hits. | context_only | PMID25096282 DOI10.1039/c4ob01017e reports total synthesis ending in aplasmomycinA sodium borate.7251473 DOI10.7164/antibiotics.33.1316 analyzes NMR of aplasmomycin/deboro form.1895301 and7590961 concern synthetic monoterpenic fragments, not exact parent-assay substitutes. These are context only; no analogue results transferred. |
+| search | CultureBotAI/AntibioticMech; 102-local-hits.txt and102-maintained-search.txt; bounded official and exact-title literature routes. | context_only | Ignored-inclusive searches locate maintained source/queue context, with no target-specific curated primary addition found among searched owners. Source rows contain no target/resistance edges. Successful same-session iModulonDB inventory has no H.pylori orB.halodurans dataset; no covered organism was substituted for an unmeasured protein target. No absence of literature or biology is claimed. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity, equivalence, evidence, mechanism, producer, activity andaudit rules; CLAUDE/HARMONIZATION/CURATION. | supports | Salt forms, structural classes, artificial-system transport, pathway rescue and direct protein binding are separate claims. Optional missing fields are enrichment opportunities; culture production supports a producer assertion, unlike mere extraction from an environmental mixture. |
+| validation | Documented focused gates; 102-focused-results.json,schema/strict logs,initial/final chemistry outputs. | supports | Schema and strict pass. Initial literal-formula helper failure is preserved; composition-aware independent chemistry passes. All16 maintained input hashes remain unchanged. |
+
+## Limits And Additional Notes
+
+- Original1976 main paper and activity table,1977 structure narrative andFigure1,and complete1978 four-page paper read. Numerical crystallographic coordinates were not independently refined; no raw NMR reanalysis.1976 rotation sign was visually verified after OCR error.
+- Sole adoptedPMID30089869 abstract, public publisher preview/reference list and supplement text inspected. Full main text is paywalled; local Nature PDF/image downloads returned HTML challenge pages and are not treated as valid PDFs/images. Supplement graphs and spectra not independently visually interpreted.
+- 2014 synthesis,1980 NMR and1991/1995 analogue studies are abstract-only context. No analogue or silver-salt antibacterial results transferred to native sodium form.
+- CAS andBeilstein identifiers are source-crosswalk corroborated, not registry-direct. OfficialChEBI/PubChem structures agree. Historicalculture identification was not reclassified genomically.
+- Available structured dataset inventory lacksH.pylori andB.halodurans; no organism or gene substitution. No transcriptomic dataset, direct binding target, or universal single-route killing mechanism established by this bounded review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T090938Z-aplasmomycin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Aplasmomycin: supported sodium-complex identity, antibacterial activity and
+  ionophore context'
+started_at: '2026-10-21T08:59:49Z'
+finished_at: '2026-10-21T09:09:38Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author record. Input captures preceded assessment. Entire
+    native record and exact maintained source rows, relevant transformations, official
+    chemistry and original activity/structure/transport papers inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Native aplasmomycin sodium borate chemistry matches ChEBI and PubChem. Original
+  studies support fermentation production, Gram-positive antibacterial activity, mouse
+  antiplasmodial activity and potassium transport in an artificial bulk-phase system.
+  The cited2018 study supplies a bounded futalosine-pathway lead, but its full main
+  text remains inaccessible. One informational primary-evidence enrichment is proposed;
+  no confirmed native scientific error. Scientific assessment retains the stated evidence
+  limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/aplasmomycin.yaml
+    sha256: c1dc6478412df0672ea8737b75d18bd86dfd9eed90204f656c244378f41e8fa6
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+targets:
+- target_id: CHEBI:32617
+  path: data/antibiotics/antibacterial/aplasmomycin.yaml
+  label: (+)-aplasmomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO source assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted ARO source assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted ARO source assertions
+scope:
+  description: Whole exact record; adopted ChEBI/ARO rows and class; sole adopted
+    PMID citation; official structures and all xrefs; original1976 isolation/activity,1977
+    structure and1978 transport papers; bounded2018 pathway evidence.
+  selection: Queue102,CHEBI:32617 (+)-aplasmomycin at locked native path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:32617
+  exclusions:
+  - target: Aplasmomycins B/C, deboroaplasmomycin, boromycin and silver/potassium
+      forms as exact equivalents
+    reason: Different structures or cation forms. Comparative assays and crystal derivatives
+      provide qualified context, not automatic identity or activity transfer.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validator exited0.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/aplasmomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict scan exited0 with no ERROR rows.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/aplasmomycin.yaml --out /private/tmp/am-review-session/102-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: initial-chemistry
+  name: initial-chemistry
+  status: failed
+  required: false
+  summary: Initial helper exited1 because it compared literal formula strings C40H60BO14.Na
+    andC40H60BNaO14. Structure keys, charge and masses already agreed. Retained for
+    audit; corrected composition-aware comparison below.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/102-chemistry-check.py 102
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Element counts, SMILES/InChI keys, charge, masses and source mints agree;
+    independently parsed PubChem structure also matches.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/102-chemistry-final.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:32617
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/aplasmomycin.yaml
+  locator: Entire native YAML and three seed/reseed history events.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: SEEDED/EXACT sodium borate complex; two synonyms, three parents, antimicrobial
+    role33281, macrolide structural class, two source concepts and four xrefs. Definition
+    carries PMID30089869. No separate mode, target, resistance, quantified activity,
+    producer, clinical, causal graph or dataset annotation. Optional blanks are not
+    schema defects.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: '102-raw.json: ChEBI line705 andARO molecule line560; complete selected
+    target/resistance rows; source config and extractor/seeder logic.'
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: ChEBI supplies exact chemical structure and accepted antimicrobial role;
+    its definition and citation list are empty. ARO supplies definition, PMID30089869
+    and macrolide class0000000. No adopted resistance or target edges for this molecule.
+    Definition provenance is intentionally inherited from ARO. Initial13 plus3 supplemental
+    maintained inputs remain unchanged.
+  snapshot_sha256: 4e67cad09dab9950647b573647f4f1fe2290c4410438b177b5e248d96e4e4a0c
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:32617
+  locator: 102-chebi.html/txt and PubChemCID23697358 property response.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: Both official sources identify sodium aplasmomycin with C40H60BO14.Na,
+    total charge0 and full keyGEIYDRPAWIMINR-ZDKANEFWSA-N. Sixteen carbon stereocentres
+    and two trans alkenes are represented; boron stereotag remains as published. Sodium
+    cation and borate anion are separate fragments. Macrolide and boron-oxoanion parent
+    terms reproduce source classification; structural class does not assert50S binding.
+  snapshot_sha256: b854b39999fd6c8f18d74cdb41856b3887864fd6923173334add191d1b1bf6e7
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculations
+  locator: 102-chemistry.json and102-chemistry-final.json.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: Native SMILES andInChI yield identical full keys, two fragments, zero total
+    charge, element countsC40H60BNaO14, average mass798.708 and exact mass798.39738128.
+    Both mint IDs agree. PubChem SMILES independently yields native key. Dot-separated
+    and Hill-order formula strings are equivalent compositions, not a native error.
+  snapshot_sha256: 7ca992b13b73af76e147efa909ae22d998ccd765ad3ab7655577a65ccccab60b
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Same-session094-aro.obo; full terms3007792 and0000000 in102-aro-terms.txt.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: Official OBO bytes match MANIFEST SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+    Molecule definition, exact xrefs and macrolide parent agree. Generic macrolide
+    class text describes ribosomal antibiotics; the native record does not propagate
+    that mechanism to this macrodiolide.
+  snapshot_sha256: 4c776d2e8de73afba30612d397278704da8b6c8c83231d93f9015001dbbe4b7f
+- evidence_id: xrefs
+  kind: database
+  reference: Official ChEBI and PubChem identity endpoints
+  locator: 102-fetch-results.json,102-pubchem.json and source OBO.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: partial
+  summary: ARO3007792 and PubChem23697358 resolve and agree with the sodium form.
+    CAS61230-25-9 is cross-corroborated by ChEBI/ARO, not registry-direct. Beilstein5801225
+    is explicitly listed by ChEBI but its legacy endpoint was not independently inspected.
+  snapshot_sha256: c3d6e03476b259358851d29444c6e468a54a735efb70ca072702e8b59c3683f1
+- evidence_id: primary1976
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.29.1019
+  locator: PMID994322;102-1976.pdf/text, full main paper and Table6. Optical rotation
+    visually checked on p1023.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: Streptomyces griseus SS-20, depositedFERM-P3448, produces aplasmomycin
+    in controlled cultures; purified material is isolated from broth after sodium-hydroxide
+    treatment. Table6 nutrient-agar dilution gives S.aureusFDA209P MIC1.56µg/mL, B.subtilisPCI2191.56µg/mL,
+    M.smegmatis6076.25µg/mL; E.coliK12 andS.typhiT63 exceed100µg/mL. Mycobacterial
+    medium includes1% glycerol. In P.bergheiNK65-infected mice, two oral100mg/kg doses
+    improve survival/parasitemia versus control; this is animal evidence, not human
+    treatment. The initially tentative C41/no-boron formula was corrected in1977.
+    The scanned original rotation is+225 degrees; OCR falsely rendered a minus sign.
+  snapshot_sha256: 2f428980e2bbb52d1f5aa7a3d4bd5de0b53f0436e3a0c143289b5b5bd3a20432
+- evidence_id: primary1977
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.30.714
+  locator: PMID924893;102-1977.pdf/text, main narrative and Figure1 visually inspected
+    on p716.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: This paper explicitly corrects the sodium formula toC40H60O14BNa and identifies
+    the central boron. Absolute configuration is determined by anomalous scattering
+    of the silver-salt crystal, with185/190 selected Friedel pairs supporting handedness.
+    The crystal is a silver complex with water, not native sodium salt; use as qualified
+    scaffold stereochemical evidence. Its abstract directly contains the biological
+    and natural-ionophore assertions reproduced in the native definition.
+  snapshot_sha256: 2fb59f93d7c1429389211f1867c057558a2ff912c5dbed0fb516f3ab05c45992
+- evidence_id: primary1978
+  kind: primary_source
+  reference: DOI:10.7164/antibiotics.31.632
+  locator: PMID681248;102-1978.pdf/text, complete four-page main paper,Tables3–4 andFigure3
+    caption.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: Parent aplasmomycin is tested separately from acetylatedB/C and deboro
+    analogue. Parent andB mediate netK+ transport through a CCl4 bulk phase at2e-4M
+    with aqueousKCl/NaCl buffers;C/deboro do not. Cation-complex affinity and antibacterial
+    zones are distinct endpoints. Table3 uses500µg/mL disk solution and inhibition
+    diameters, not MIC. This directly supports an ionophore function but does not
+    itself measure bacterial membrane potential or prove that all antibacterial action
+    follows only this route.
+  snapshot_sha256: 1306f00c4ff3a658ee9199208c89aed5932f1d3b27bbe3daa67a62af43c7b714
+- evidence_id: adopted2018
+  kind: primary_source
+  reference: DOI:10.1038/s41429-018-0087-2
+  locator: PMID30089869; complete abstract in102-epmc.json, public Nature preview/references
+    and freely accessible supplement text.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: partial
+  summary: Sole adopted citation reports aplasmomycin from Streptomyces sp.K15-0223
+    as a futalosine-pathway inhibitor and boromycin as a separate comparator. Public
+    supplement describes compound1 NMR/MS characterization and a B.haloduransC-125
+    growth-recovery assay. Main text is subscription-limited. The abstract does not
+    identify a directly bound enzyme; no Mqn/MTAN protein target or H.pylori quantitative
+    assay is inferred. Public references include original1976/1977 papers supporting
+    definition background.
+  snapshot_sha256: c669fecd85ce3840de9dfddab6f3d9e57dbcb9281a38ac2f2213bf150eca76af
+- evidence_id: other-literature
+  kind: primary_source
+  reference: Bounded original aplasmomycin literature abstracts
+  locator: 102-epmc.json, complete abstracts for selected exact-title hits.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: context_only
+  summary: PMID25096282 DOI10.1039/c4ob01017e reports total synthesis ending in aplasmomycinA
+    sodium borate.7251473 DOI10.7164/antibiotics.33.1316 analyzes NMR of aplasmomycin/deboro
+    form.1895301 and7590961 concern synthetic monoterpenic fragments, not exact parent-assay
+    substitutes. These are context only; no analogue results transferred.
+  snapshot_sha256: c669fecd85ce3840de9dfddab6f3d9e57dbcb9281a38ac2f2213bf150eca76af
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 102-local-hits.txt and102-maintained-search.txt; bounded official and exact-title
+    literature routes.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: context_only
+  summary: Ignored-inclusive searches locate maintained source/queue context, with
+    no target-specific curated primary addition found among searched owners. Source
+    rows contain no target/resistance edges. Successful same-session iModulonDB inventory
+    has no H.pylori orB.halodurans dataset; no covered organism was substituted for
+    an unmeasured protein target. No absence of literature or biology is claimed.
+  search_scope: rg --no-ignore --hidden for aplasmomycin,Aplasmomycin,CHEBI:32617,GEIYDRPAWIMINR
+    andARO:3007792 across batch011 and maintained curation/conf/scripts/data/raw/src/reports/reviews,
+    excluding.git/.venv. ExactPubMed/EuropePMC/Nature/J-STAGE citations and bounded
+    futalosine/ion-transport searches; free sources only.
+  snapshot_sha256: 4bce865d3d42e64085f74611b7a669a0bc22cfa29a2584bca033c45fbfa39c03
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, equivalence, evidence, mechanism, producer, activity andaudit
+    rules; CLAUDE/HARMONIZATION/CURATION.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: Salt forms, structural classes, artificial-system transport, pathway rescue
+    and direct protein binding are separate claims. Optional missing fields are enrichment
+    opportunities; culture production supports a producer assertion, unlike mere extraction
+    from an environmental mixture.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused gates
+  locator: 102-focused-results.json,schema/strict logs,initial/final chemistry outputs.
+  accessed_at: '2026-10-21T09:04:31Z'
+  support: supports
+  summary: Schema and strict pass. Initial literal-formula helper failure is preserved;
+    composition-aware independent chemistry passes. All16 maintained input hashes
+    remain unchanged.
+  snapshot_sha256: 66d4830295aa7dac2440bb294bd9af52c4b0e4ce4f1917ff1d5c29c269dec788
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Sodium complex and original structure evidence
+  outcome: supported
+  summary: Official chemistry and independent calculations agree;1977 correction and
+    silver-derivative stereochemistry are preserved as qualified historical context.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - identity
+  - chemistry
+  - primary1976
+  - primary1977
+- assessment_id: definition
+  area: evidence
+  topic: Production, antibacterial and animal antiplasmodial assertions
+  outcome: supported
+  summary: Original1976 culture, isolation and activity results support native definition.
+    Its adopted2018 reference is a later source citing these originals; no bibliographic
+    mismatch is alleged without full main text.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - source
+  - primary1976
+  - primary1977
+  - adopted2018
+- assessment_id: mechanism
+  area: evidence
+  topic: Natural ionophore assertion
+  outcome: supported
+  summary: 1978 parent-compound K+ transport supports ionophore function. Artificial
+    bulk-phase assay does not establish a specific bacterial protein target or universal
+    causal mechanism.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - primary1978
+  - rubric
+- assessment_id: enrichment
+  area: completeness
+  topic: Optional primary claims and futalosine context
+  outcome: unknown
+  summary: Primary activity, producer and transport evidence can be curated. Detailed2018
+    pathway mechanism remains limited by main-text access; missing optional targets
+    are not errors.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - primary1976
+  - primary1978
+  - adopted2018
+  - search
+- assessment_id: other
+  area: completeness
+  topic: Resistance, clinical approval, graphs anddatasets
+  outcome: unknown
+  summary: No unsupported native assertions. Mouse survival and antibiotic class do
+    not establish human clinical efficacy or50S binding. No omics dataset inferred
+    from pathway language.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - record
+  - aro
+  - primary1976
+  - adopted2018
+- assessment_id: ownership
+  area: ownership
+  topic: Generated source andcurator addition owners
+  outcome: supported
+  summary: Both source rows and relevant transforms captured; actual native path owns
+    optional primary annotations.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - source
+  - search
+- assessment_id: gates
+  area: schema
+  topic: Focused validation and history
+  outcome: supported
+  summary: Focused validators and corrected chemistry pass; history is consistent
+    with SEEDED. No status promotion.
+  target_ids:
+  - CHEBI:32617
+  evidence_ids:
+  - validation
+  - record
+findings:
+- finding_id: F1
+  issue_key: aplasmomycin-qualified-primary-ionophore-activity-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add qualified original activity, producer and ion-transport evidence
+  description: Original1976/1978 studies provide concrete primary support for native
+    biological and ionophore assertions. Optional structured enrichment should retain
+    the sodium form, tested strains, culture-production evidence and artificial transport
+    endpoint. The2018 futalosine study is a pathway lead, not a verified direct protein
+    target in this review.
+  target_ids:
+  - CHEBI:32617
+  field_paths:
+  - definition_source
+  - mode_of_action
+  - activity_spectrum
+  - evidence
+  - discussions
+  evidence_ids:
+  - primary1976
+  - primary1977
+  - primary1978
+  - adopted2018
+  - rubric
+  rule_id: 'native-review-checklist: Evidence/Targets/Activity/Producer/Completeness'
+  native_severity: informational optional primary enrichment
+  normalization_reason: The native assertions are supported and optional slots are
+    not mandatory. Later citation provenance remains honest; adding direct original
+    sources would improve claim-level grounding.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aplasmomycin.yaml
+    role: Curator-owned primary evidence, activity, mechanism, producer context and
+      discussions through validated writer/history
+actions:
+- action_id: A1
+  description: Optionally curate original exact-parent activity, fermentation production
+    and qualified ionophore evidence on the native record.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:32617
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aplasmomycin.yaml
+    role: Curator-owned primary evidence, activity, mechanism, producer context and
+      discussions through validated writer/history
+  acceptance_checks:
+  - UsePMID994322 Table6 exact strains, agar-dilution method, medium additions and
+    qualifiers. Keep mouseP.bergheiNK65 activity separate from bacterial susceptibility
+    and human efficacy.
+  - If adding producer annotation, use the documentedSS-20 culture production and
+    fermentation isolation, preserving historicalS.griseus identification andFERM-P3448
+    accession; do not infer a biosynthetic gene cluster from it.
+  - UsePMID681248 for parent K+ transport in the specified artificial bulk phase;
+    distinguish cation affinity, transport and disk-zone endpoints. Do not assign
+    membrane potential,50S binding or a protein target from scaffold class.
+  - Preserve1977 formula correction and silver-complex crystallography as derivative
+    evidence; do not change native sodium identity to silver,potassium,B/C or deboro
+    forms.
+  - Obtain fullPMID30089869 before detailed pathway/target annotation; inspect experimental
+    subjects and rescue design. Do not infer a directly boundMqn/MTAN enzyme or quantitativeH.pylori
+    assay from abstract/supplement captions.
+  - Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/aplasmomycin.yaml
+    for any authorized future mutation; run focused/shared gates without automaticREVIEWED
+    promotion.
+limitations:
+- Original1976 main paper and activity table,1977 structure narrative andFigure1,and
+  complete1978 four-page paper read. Numerical crystallographic coordinates were not
+  independently refined; no raw NMR reanalysis.1976 rotation sign was visually verified
+  after OCR error.
+- Sole adoptedPMID30089869 abstract, public publisher preview/reference list and supplement
+  text inspected. Full main text is paywalled; local Nature PDF/image downloads returned
+  HTML challenge pages and are not treated as valid PDFs/images. Supplement graphs
+  and spectra not independently visually interpreted.
+- 2014 synthesis,1980 NMR and1991/1995 analogue studies are abstract-only context.
+  No analogue or silver-salt antibacterial results transferred to native sodium form.
+- CAS andBeilstein identifiers are source-crosswalk corroborated, not registry-direct.
+  OfficialChEBI/PubChem structures agree. Historicalculture identification was not
+  reclassified genomically.
+- Available structured dataset inventory lacksH.pylori andB.halodurans; no organism
+  or gene substitution. No transcriptomic dataset, direct binding target, or universal
+  single-route killing mechanism established by this bounded review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
