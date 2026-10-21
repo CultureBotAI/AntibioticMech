@@ -1,0 +1,768 @@
+schema_version: 1.0.0
+review_id: 20261021T154007Z-eravacycline-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Eravacycline: exact neutral structure and ribosome evidence with assay corrections'
+started_at: '2026-10-21T15:13:50Z'
+finished_at: '2026-10-21T15:40:07Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Independent whole-record review after initial input capture,
+    actual maintained-row inspection, authority comparisons, independent chemistry
+    and bounded original-paper review. No native or source record was authored or
+    modified by this reviewer.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The ARO-minted eravacycline record has a coherent neutral, four-centre stereochemical
+  graph and supported antibacterial/ribosome scope. Current PubChem and ChEBI agree
+  with the native structure; ChEMBL uses an alternate keto-enol representation that
+  requires qualification rather than automatic rejection. The adopted 2013 antibacterial
+  paper and original 2012 translation/binding experiments support the definition,
+  with the 2015 assay-table correction preserved. No confirmed native correction is
+  required. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/eravacycline.yaml
+    sha256: 5ec5965c9a45c0bb71139d28fb3a53320a7e5e0b2c5a03271c603849b1c4beab
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+targets:
+- target_id: antibioticmech:aro-2d35d60097
+  path: data/antibiotics/antibacterial/eravacycline.yaml
+  label: eravacycline
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Frozen role-scoped ChEBI lookup controlling ARO grounding and PubChem fallback
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Adopted ontology source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition, aliases and source groundings
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Exact adopted PubChem graph
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 407; one exact record. Original thirteen input hashes
+    retained within 24 expanded inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-2d35d60097
+checks:
+- check_id: structured-adapter
+  name: Structured source catalog before open protein research
+  status: passed
+  required: false
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - adapter
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The actual read-only catalog command succeeded; E. coli coverage was resolved
+    before original target research.
+- check_id: ribosome-query
+  name: Covered organism ribosome query
+  status: passed
+  required: false
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - ribosome-adapter
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query ribosome
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The actual exact query succeeded. No computational module was used to infer
+    antibiotic binding or resistance.
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/401407-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/eravacycline.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/eravacycline.yaml --out /private/tmp/am-review-session/407-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/eravacycline.yaml
+  locator: Entire exact native YAML, including all source, history and product entries
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Whole record read and all populated domains assessed. SEEDED status and
+    deterministic reproduction are not treated as primary scientific sign-off.
+- evidence_id: owners
+  kind: record_content
+  reference: 401407-raw-rows.json; actual maintained owners in targets
+  locator: Exact source rows; scripts/seed_from_sources.py source selection and field
+    ownership
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Exact maintained source rows and applicable extraction/structure-enrichment
+    ownership were inspected after preserving original captures. No matching curator
+    or decision override was found in the inspected complete tables.
+  snapshot_sha256: 3ce338473a51af48012f9d6156d449d87905e62996131252d8458afa50dca8cc
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local identifier/name search
+  locator: 401407-all-local-paths.txt and original local-hits captures
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: Case-insensitive search included hidden and gitignored content across data,
+    curation, conf, scripts, src, reports and reviews. Hits were followed to exact
+    rows; no absence of external literature is inferred. The initial case-sensitive
+    search was supplemented so uppercase FDA ingredient names were covered.
+  search_scope: rg --no-ignore --hidden -il 'CHEBI:195558|entrectinib|antibioticmech:aro-2d35d60097|eravacycline|ARO:3003979|L5ORF0AN1I'
+    data curation conf scripts src reports reviews
+  snapshot_sha256: ca19b61069339ed93e81e7c299f626dc2a2386f5444402bd8c4ea92f7e722b5b
+- evidence_id: chemistry
+  kind: record_content
+  reference: 407-chemistry.json; 401407-chemical-xrefs.json
+  locator: Independent RDKit 2026.03.5 calculations using batch019 interpreter against
+    batch041 cwd
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Native SMILES and InChI were parsed independently, with formula, charge,
+    mass, stereocentres and source mint calculations. Exact authority structure comparisons
+    are retained separately; the actual result is not inferred from schema success.
+  snapshot_sha256: 0ddbc8365984d9b8f4748f7cc4ae5f93386e9468aabbf42c78f44851100c656b
+- evidence_id: xref-calculations
+  kind: record_content
+  reference: 401407-chemical-xrefs.json
+  locator: Independently parsed current authority structures and native comparison
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Each parsed external representation retains its own key and scope; inconsistent
+    descriptors or alternate tautomers are not silently normalized into an exact-graph
+    assertion.
+  snapshot_sha256: d89e525971f5c39dd9e833dfa7416d169fa27df99bd116c95ab0d9150d6a3f93
+- evidence_id: gates
+  kind: record_content
+  reference: 407-focused-results.json
+  locator: Actual chemistry, schema and strict commands and exit codes
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: supports
+  summary: Focused checks ran from batch041; native schema and strict checks use its
+    own environment, while standalone chemistry uses the installed batch019 RDKit
+    interpreter. All original input hashes are preserved.
+  snapshot_sha256: a57e071e5bb07d1198ceea0b048ccb7e649037aff10cda2d7d0730d178c44020
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured dataset catalog
+  locator: 401407-adapter-catalog.txt; exact runner resolved before open protein research
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: The catalog was inspected before open protein research, and E. coli/precise1k
+    coverage was identified for a bounded ribosome query. Expression-module context
+    cannot establish eravacycline binding.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: aro
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003979
+  locator: ARO3003979 current exact term, definition, synonyms and cited PMID
+  accessed_at: '2026-10-21T15:24:18.545617Z'
+  support: supports
+  summary: The exact ARO term maps eravacycline/TP-434 to the fluorocycline ribosome-inhibition
+    definition and cites PMID23979750. The source identity and name relationship are
+    coherent.
+  snapshot_sha256: 86c3745cd9d8db2b618c3c67761872d3d6519a91435764a7c76fc0e3060ea76e
+- evidence_id: parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000050
+  locator: ARO3000050 tetracycline antibiotic class
+  accessed_at: '2026-10-21T15:24:18.561372Z'
+  support: supports
+  summary: The parent term resolves to the tetracycline antibiotic class. The class
+    relationship does not imply that this fully synthetic compound has a natural producer.
+  snapshot_sha256: 667e592449c1600d6344ae555ec631db33da2508a91197664e0adb84a50e9156
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/177804/
+  locator: CHEBI177804 current two-star compound identity and structure
+  accessed_at: '2026-10-21T15:24:17.598254Z'
+  support: supports
+  summary: Current ChEBI has the same neutral formula and exact standard InChI/key
+    as native PubChem-derived eravacycline. Its current existence does not automatically
+    replace a historically reproducible ARO mint selected from a role-scoped frozen
+    inventory. External metabolomics origin metadata is not adopted as a producer
+    assertion.
+  snapshot_sha256: 6037c94edb785c48b546723b324e69a595877c85f85419a0c1a2cdc3136e16e2
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/54726192/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: CID54726192 current exact chemical properties
+  accessed_at: '2026-10-21T15:24:18.564161Z'
+  support: supports
+  summary: PubChem matches the native neutral graph, four specified stereocentres,
+    formula and key AKLMFDDQCHURPW-ISIOAQNYSA-N. The native average mass 558.6 is
+    an appropriate rounding of the independently calculated 558.563.
+  snapshot_sha256: 7b5743db51734ba3ab775a5a18334281be0da1457fbdfd09f0c7de3567b43c2a
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1951095.json
+  locator: CHEMBL1951095 exact current structure and standard InChI
+  accessed_at: '2026-10-21T15:24:18.629588Z'
+  support: partial
+  summary: ChEMBL identifies eravacycline but uses key HLFSMUUOKPBTSM-ISIOAQNYSA-N.
+    Formula, heavy-atom connectivity and /t11-,13-,20-,27-/m0/s1 layers agree; hydrogen
+    and double-bond placement differs across the keto-enol system. This is qualified
+    as an alternate tautomer, not an independently established wrong enantiomer.
+  snapshot_sha256: 37078f6448b12cde5866a0ba29792a21b3853a2d12546fea57b6b308924105d3
+- evidence_id: tautomer-check
+  kind: record_content
+  reference: 407-tautomer-check.json
+  locator: Native versus ChEMBL original InChI layers and bounded RDKit tautomer calculation
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: partial
+  summary: RDKit reaches the same canonical tautomer from both structures, but its
+    default enumeration reached the transform limit and the common canonical representation
+    removes a stereocentre. That convergence alone cannot prove absolute stereochemistry.
+    Original connectivity, formula and stereolayers were compared directly; no automatic
+    identifier removal is proposed.
+  snapshot_sha256: c7a2f36fbab792664ef707ea07048539742c3ca5fd89e23e68bc1e3a64b6ef6d
+- evidence_id: ribosome-adapter
+  kind: database
+  reference: iModulonDB e_coli/precise1k
+  locator: 407-adapter-ribosome.txt; component e_coli/precise1k/1 and ten matching
+    genes
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: The exact ribosome query returned ten genes and a Translation component
+    regulated by DksA. These search hits are expression context, not direct drug targets
+    or binding evidence, and no component result informs the scientific verdict.
+  snapshot_sha256: 4ef19db2de035adbc2f7beef42557c23781397a09c373bf896469afe0dae8729
+- evidence_id: adopted-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A23979750%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: PMID23979750, DOI10.1128/AAC.01288-13; complete original abstract
+  accessed_at: '2026-10-21T15:24:17.607884Z'
+  support: supports
+  summary: The sole adopted PMID resolves to the original eravacycline antibacterial
+    study. Its broad activity summary is bounded to tested isolate panels; P. aeruginosa
+    and B. cenocepacia panels had substantially higher MIC90 values than most tested
+    species.
+  snapshot_sha256: 54b28c85463a6d173d40969f6aad92a489a8c2a3f7191263575ce6ab8ddb13c0
+- evidence_id: primary-2013
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3811277/?pdf=1
+  locator: PMID23979750; Materials and Methods, Introduction reference 16, selected
+    Table 1 A. baumannii row, full Table 5 and relevant Discussion
+  accessed_at: '2026-10-21T15:25:31.619236Z'
+  support: supports
+  summary: The exact eravacycline material was synthesized by the cited method. Aerobic
+    MICs used broth microdilution and anaerobic MICs agar dilution under cited CLSI
+    methods; all detailed incubation parameters are not restated in the main text.
+    The inspected A. baumannii panel contains 188 isolates with MIC50 0.25, MIC90
+    1 and range 0.016–8 µg/mL. Table 5 gives eravacycline 0.004 µg/mL for S. aureus
+    SA981/SA982 norA and SA983 parent, but 0.016 for SA984 mepA. This does not establish
+    immunity to all efflux. The ribosome claim cites the separate original 2012 mechanism
+    paper rather than measuring binding in this 2013 assay.
+  snapshot_sha256: 31362026cc9508b9bc134bab23d7aa02cb5d7776760cf13c7ab7e008650e4428
+- evidence_id: structure-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/644d/3811277/b893d4fa9702/zac0111323070001.jpg
+  locator: Actual Figure 1 of the 2013 original paper
+  accessed_at: '2026-10-21T15:27:10.248541Z'
+  support: supports
+  summary: The actual structure image was viewed. It shows the tetracycline core with
+    C7 fluorine, C9 pyrrolidinoacetamido substitution and the specified tetracycline
+    stereochemistry, without a drawn counterion. The drawing supports the neutral
+    chemical entity but does not identify the isolated assay batch as a particular
+    salt or hydrate.
+  snapshot_sha256: 601ea05855aed422b34e65c7b716abef63f8c3423185f99b5a96effe4b183aca
+- evidence_id: mechanism-primary
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3346605/?pdf=1
+  locator: PMID22354310, DOI10.1128/AAC.06187-11; relevant complete Methods, Results/Discussion
+    and Tables 1–3
+  accessed_at: '2026-10-21T15:27:10.243508Z'
+  support: supports
+  summary: Tetraphase-synthesized TP-434 was tested in E. coli coupled transcription/translation
+    with a luciferase readout, 22 µL reactions, 37 °C for 1 h, with or without 2.75
+    µM purified Tet(M). Separate competition used empty E. coli 70S ribosomes at 0.4
+    µM, 8 µM radiolabeled tetracycline, room temperature for 2 h and nitrocellulose
+    capture. TP-434 competition IC50 was 0.22 ± 0.07 µM, supporting an overlapping
+    tetracycline ribosome site. This is not a Kd, growth MIC or atom-resolved binding
+    structure. Exact isolated salt form is not specified in the inspected Methods.
+  snapshot_sha256: 49e30433a3217cad523a68da26094532806147d40f15b57f946b6ae11c18a462
+- evidence_id: erratum
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4538530/?pdf=1
+  locator: PMID26276898, DOI10.1128/AAC.01551-15; corrected Table 1
+  accessed_at: '2026-10-21T15:27:10.246313Z'
+  support: supports
+  summary: The 2015 correction explicitly reverses the original Table 1 column labels.
+    Correct TP-434 translation IC50 values are 0.29 ± 0.09 µg/mL without Tet(M) and
+    0.27 ± 0.16 µg/mL with Tet(M). Quantitative enrichment must use this corrected
+    table and retain the original Results prose discrepancy rather than silently combining
+    entries.
+  snapshot_sha256: 6cd15e087a6b4532342d4f226aa53dc3be89060888ad1dc9b374fa41c428fe5d
+- evidence_id: translation-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9cd1/3346605/4775323624be/zac9991008450002.jpg
+  locator: Actual Figure 2 of the 2012 mechanism paper
+  accessed_at: '2026-10-21T15:29:29.029306Z'
+  support: supports
+  summary: The actual translation dose-response image was viewed. TP-434 remains active
+    with the tested Tet(M) concentration, unlike the pronounced tetracycline shift.
+    The corrected table determines exact numerical labels; no broader resistance universality
+    is inferred.
+  snapshot_sha256: 832d517538a4c76bc293f745e1cf4d91034440c449226376f89c7fa103c4e4ea
+- evidence_id: binding-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9cd1/3346605/554f74e27e28/zac9991008450003.jpg
+  locator: Actual Figure 3 of the 2012 mechanism paper
+  accessed_at: '2026-10-21T15:29:29.031883Z'
+  support: supports
+  summary: The actual radioligand-competition image was viewed. TP-434 and tigecycline
+    compete at substantially lower concentrations than tetracycline under these conditions,
+    while erythromycin does not show comparable displacement. The endpoint remains
+    competition IC50 on the tested empty ribosomes.
+  snapshot_sha256: c97e6f28522870fc767fc55e2bad3c440076c9376bf90dcd4ad51d81004bcb9f
+- evidence_id: resistance-scope
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3346605/
+  locator: Original Methods and Tables 2/3 in 407-PMC3346605.html
+  accessed_at: '2026-10-21T15:27:10.243508Z'
+  support: supports
+  summary: Isogenic E. coli DH10B pBAD-expression MICs used ampicillin selection and
+    arabinose preinduction, followed by CAMHB at 35 °C for 18–20 h. TP-434 MICs were
+    0.063 for lacZ control, 0.25 for tet(A) and 4 µg/mL for tet(X); tested tet(M),
+    tet(K) and tet(B) did not increase the control value. P. acnes G1058C observations
+    concern separate clinical strains, not an isogenic reconstruction. These results
+    support bounded mechanistic follow-up, not a claim that all tetracycline resistance
+    is overcome.
+  snapshot_sha256: 49e30433a3217cad523a68da26094532806147d40f15b57f946b6ae11c18a462
+- evidence_id: synthesis-abstract
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22Fluorocyclines.%201.%22&format=json&resultType=core&pageSize=100
+  locator: PMID22148514, DOI10.1021/jm201465w; complete original abstract
+  accessed_at: '2026-10-21T15:26:19.404331Z'
+  support: context_only
+  summary: The original synthesis abstract identifies compound 17j as TP-434 and gives
+    the exact fluorocycline chemical name. Full ACS text returned 403; no uninspected
+    NMR, isolated-salt assignment or analogue potency is adopted.
+  snapshot_sha256: 18637b226b500b34dfbe4f63ab66a1c7f4a57a9cac1e93aaad0e9935c39864a8
+- evidence_id: access-boundaries
+  kind: search
+  reference: 401407-fetch1.json through 401407-fetch7.json
+  locator: Exact source requests, alternatives, timestamps and hashes
+  accessed_at: '2026-10-21T15:35:20Z'
+  support: context_only
+  summary: The original 2013 fullTextXML request failed, but public PMC HTML was retrieved
+    and inspected. The 2012 synthesis publisher text returned 403. A mistakenly selected
+    JavaScript asset was excluded; the actual 2013 structure image was retrieved separately
+    and viewed.
+  search_scope: Exact native ARO/ChEBI/PubChem/ChEMBL identifiers, adopted PMID23979750,
+    its directly relevant original mechanism and synthesis references, the linked
+    erratum and actual original figures; no paid research.
+  snapshot_sha256: ec5d6a6d20781dc35520baa941f0c371f9fb749b7e2801db8573211c8eb62ea1
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral fluorocycline and stereochemistry
+  outcome: supported
+  summary: Native SMILES and InChI independently reproduce the same neutral C27H31FN4O8
+    graph with all four stereocentres assigned. PubChem, current ChEBI and the actual
+    original structure drawing agree at this chemical-entity scope. Assay batches
+    are not claimed to be a separately established hydrochloride or hydrate.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - native
+  - chemistry
+  - xref-calculations
+  - pubchem
+  - chebi
+  - structure-figure
+- assessment_id: grounding
+  area: grounding
+  topic: ARO mint and cross-reference representation
+  outcome: supported
+  summary: The ARO mint is reproducible from its exact source identifier and frozen
+    role-scoped source selection. Current ChEBI is an agreeing two-star cross-reference,
+    not evidence that the historical mint was misgenerated. ChEMBL is retained with
+    the explicitly identified alternate-tautomer boundary; the tautomer calculation
+    alone is not used to assert stereochemical equivalence.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - native
+  - owners
+  - aro
+  - parent
+  - pubchem
+  - chebi
+  - chembl
+  - tautomer-check
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial and tetracycline-class scope
+  outcome: supported
+  summary: The original tested bacterial panels support antibacterial filing and the
+    tetracycline/fluorocycline class. Development code TP-434 and the chemical synonym
+    refer to the same entity. Class membership does not imply natural biosynthesis
+    or clinical coverage of every bacterial taxon.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - native
+  - aro
+  - parent
+  - adopted-abstract
+  - primary-2013
+  - structure-figure
+- assessment_id: mechanism
+  area: evidence
+  topic: Definition-level bacterial ribosome inhibition
+  outcome: supported
+  summary: The adopted 2013 article points to original TP-434 translation inhibition
+    and direct radioligand competition on bacterial ribosomes. Those original experiments
+    support the native generic definition without inventing an exact protein target,
+    UniProt accession or atomic binding contact. The published correction to Table
+    1 is preserved.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - native
+  - primary-2013
+  - mechanism-primary
+  - erratum
+  - translation-figure
+  - binding-figure
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary activity and resistance enrichment
+  outcome: unknown
+  summary: The absence of activity_spectrum, molecular targets, mode, causal graph
+    and resistance entries is not a required-schema failure. Original MIC and resistance
+    panels are useful bounded enrichment leads, but would require exact strains, assay
+    units, expression conditions and the corrected translation table. No universal
+    resistance escape is justified.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - native
+  - search
+  - primary-2013
+  - mechanism-primary
+  - erratum
+  - resistance-scope
+- assessment_id: other-domains
+  area: scope
+  topic: Product, producer and activity-collection assertions
+  outcome: not_applicable
+  summary: No FDA product assertion, producer or activity-collection membership is
+    present in this exact native record. The neutral molecule is not automatically
+    equated with an injectable salt product, and no producer is inferred from external
+    metabolomics metadata.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - native
+  - search
+  - chebi
+  - synthesis-abstract
+- assessment_id: provenance
+  area: provenance
+  topic: Actual generated ownership and history
+  outcome: supported
+  summary: All three seed/reseed events, the ARO source row and exact PubChem enrichment
+    row were inspected. Original thirteen input hashes remain within 24 expanded inputs,
+    including actual ARO and structure-enrichment owners.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - native
+  - owners
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused native checks
+  outcome: supported
+  summary: Native schema, strict validation, independent chemistry and source-mint
+    checks pass. These checks alone do not establish assay scope or resolve a source
+    erratum.
+  target_ids:
+  - antibioticmech:aro-2d35d60097
+  evidence_ids:
+  - gates
+  - chemistry
+  - erratum
+findings: []
+actions: []
+limitations:
+- The adopted 2013 paper was read for Methods, relevant Introduction/Discussion, its
+  exact structure figure, the selected A. baumannii Table 1 row and all of Table 5.
+  Every row of the much larger clinical isolate Tables 1–4 was not independently re-audited;
+  no complete current clinical spectrum is certified.
+- The original 2012 mechanism Methods, relevant Results/Discussion, Tables 1–3 and
+  actual Figures 2/3 were inspected with the full 2015 erratum. Competition IC50 is
+  not Kd or MIC, and the non-isogenic P. acnes comparison is not direct mutation reconstruction.
+- The original synthesis abstract was inspected, but the full ACS paper returned 403.
+  The exact isolated assay preparation is not assigned a salt, hydrate or analytical
+  purity from uninspected synthetic methods.
+- ChEMBL uses an alternate keto-enol representation. RDKit tautomer enumeration reached
+  its transform cap and the common canonical result removes stereochemistry; the original
+  formula, connectivity and stereolayers were therefore retained as separate evidence.
+  No graph replacement or identifier deletion is recommended from that calculation
+  alone.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native, source, status or history field was edited. Original thirteen input hashes
+  were retained and all expanded inputs were checked unchanged before output. Optional
+  links, tags and notes were checked against this exact compound.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pubmed.ncbi.nlm.nih.gov/23979750/
+- https://doi.org/10.1128/AAC.06187-11
+- https://doi.org/10.1128/AAC.01551-15
+tags:
+- eravacycline
+- ribosome
+- tautomer-scope
+- primary-assay-correction
