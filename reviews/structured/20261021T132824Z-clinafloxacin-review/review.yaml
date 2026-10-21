@@ -1,0 +1,755 @@
+schema_version: 1.0.0
+review_id: 20261021T132824Z-clinafloxacin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of clinafloxacin
+started_at: '2026-10-21T13:05:03Z'
+finished_at: '2026-10-21T13:28:24Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Entire native record compared with preserved maintained inputs,
+    independent PubChem and ChEMBL structures, current CARD/ARO and inspected original
+    susceptibility, genetic, enzyme and structural studies.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Supported seeded molecular identity and antibacterial activity; minor
+  definition-citation scope gap; GyrB direct binding remains explicitly unresolved
+scientific_review: true
+summary: 'The native neutral clinafloxacin structure, unspecified pyrrolidine stereocenter,
+  fluoroquinolone class and three cross-references are supported. Both CARD target
+  assertions remain current and are honestly labeled PRIMARY_EVIDENCE_NEEDED. Later
+  original experiments support gyrase/topoisomerase IV activity and enzyme-mediated
+  DNA cleavage, with material, species and assay limits. One minor provenance correction
+  is recommended: the sole definition citation, PMID 3142350, is a susceptibility
+  study that does not directly establish the full mechanistic sentence. No wrong-identity
+  or wrong-GyrB-target conclusion is justified.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/clinafloxacin.yaml
+    sha256: 46657bdc2260c06a9c75cc1660e4b057e44f3f19ea27571f9ad2ea60b4126ec5
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: Adopted definition, class and xrefs
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: Adopted exact PubChem structure
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: Structure enrichment owner
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: Adopted target assertions
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: Target classification mapping
+scope:
+  description: 'Entire SEEDED, MINTED record: definition and its sole adopted PMID,
+    exact abbreviation, chemical parent and class, all molecular fields, three cross-references,
+    source concept, both target objects and four history events. No native quantitative
+    MIC, clinical-approval, producer, resistance or causal-graph assertion is present.'
+  selection: Queue310 in isolated batch031; eighteen previously captured inputs preserved,
+    including actual ARO target and PubChem owners.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-86221775c0
+targets:
+- target_id: antibioticmech:aro-86221775c0
+  path: data/antibiotics/antibacterial/clinafloxacin.yaml
+  label: clinafloxacin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition, class and xrefs
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact PubChem structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: Structure enrichment owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target classification mapping
+checks:
+- check_id: schema
+  name: Documented schema validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/clinafloxacin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/clinafloxacin.yaml --out /private/tmp/am-review-session/310-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    310 > /private/tmp/am-review-session/310-focused-run.log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; molecular encodings, formula, charge, masses and minted identifier
+    agree.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-chemistry
+  name: Independent exact molecular comparisons
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/310-chemistry.py
+    > /private/tmp/am-review-session/310-chemistry.log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; seven encodings agree by standard InChIKey and mutual chirality-aware
+    atom mapping.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - chemistry
+- check_id: source-ledger
+  name: Maintained source and citation reconciliation
+  status: passed
+  required: false
+  command: .venv/bin/python /private/tmp/am-review-session/310-ledger.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; eighteen unchanged input hashes, four history events, all target
+    rows and the sole adopted PMID reconcile.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - owners
+  - validation
+- check_id: adapter-gyrA
+  name: Structured gyrA context
+  status: passed
+  required: false
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset modulome --query gyrA
+    > /private/tmp/am-review-session/310-adapter-gyrA.txt
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; four gene hits and zero iModulons.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - adapter
+- check_id: adapter-gyrB
+  name: Structured gyrB context
+  status: passed
+  required: false
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset modulome --query gyrB
+    > /private/tmp/am-review-session/310-adapter-gyrB.txt
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; b3699/gyrB gene hit and zero iModulons. No summarize call applies.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/clinafloxacin.yaml
+  locator: Entire native YAML, including both target qualifications and complete history
+  accessed_at: '2026-10-21T13:27:46Z'
+  support: supports
+  summary: The record describes neutral clinafloxacin, not its hydrochloride. Its
+    one pyrrolidine stereocenter is unspecified. The GyrA and GyrB objects explicitly
+    lack organism, strain and assay context, cite database terms, and require primary
+    evidence. There is no native claim that a particular purified GyrB binding experiment
+    has been performed.
+- evidence_id: chemistry
+  kind: validation
+  reference: PubChem:60063; ChEMBL:CHEMBL278255
+  locator: 310-authority-chemistry.json;310-chemistry.py/.log;310-pubchem.json;310-chembl.json
+  accessed_at: '2026-10-21T13:27:46Z'
+  support: supports
+  summary: Native SMILES and InChI, PubChem SMILES and InChI, and ChEMBL canonical
+    SMILES, InChI and molfile all yield QGPKADBNRMWEQR-UHFFFAOYSA-N, C17H17ClFN3O3,
+    charge 0, with mutual chirality-aware atom mappings. Average mass 365.792 agrees
+    with rounded native 365.8; exact mass 365.094247304 agrees. Each encoding has
+    one unspecified stereocenter. This consistent partial stereochemical representation
+    does not itself establish an experimentally racemic material, and no particular
+    enantiomer or hydrochloride is silently substituted.
+  snapshot_sha256: 84463ff830523b1b7fa22373b47a1a88523f4e6e19b74375c88716a5e2dc96e3
+- evidence_id: aro
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/40938; https://purl.obolibrary.org/obo/aro.obo
+  locator: '310-card-official.html;310-aro-current.obo;310-aro-selected.json: ARO:3004011,0000001,3000733,3003261'
+  accessed_at: '2026-10-21T13:22:43.359603Z'
+  support: supports
+  summary: Current official ARO retains the exact native definition, PMID 3142350,
+    CLX exact abbreviation, fluoroquinolone parent, PubChem 60063 and ChEMBL278255.
+    Both target terms still assert targeted_by_antibiotic ARO:3004011. The GyrA definition
+    describes alpha-subunit binding and carries general gyrase references; the GyrB
+    definition describes susceptibility and has no definition bibliography. Neither
+    ontology entry supplies an exact clinafloxacin/GyrB primary binding assay. This
+    supports preservation of the database assertions with their existing evidence
+    qualifications.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: original1988
+  kind: primary_source
+  reference: PMID:3142350; DOI:10.1128/aac.32.8.1251
+  locator: Original 1988 pp1251–1256;310-1988-p1.png throughp6.png, all six pages
+    visually inspected; Figure1 and Table3
+  accessed_at: '2026-10-21T13:22:43.930276Z'
+  support: supports
+  summary: PD127391 was supplied by Warner-Lambert. Figure 1 depicts the native acid
+    connectivity without assigning the pyrrolidine stereocenter; the starting salt
+    and enantiomeric composition are not established. The paper measures susceptibility,
+    MBC, medium/pH effects and serum protein binding. It does not directly measure
+    gyrase binding or DNA cleavage. Table 3 reports unchanged PD127391 MIC 0.008 microgram/mL
+    for E. coli KL16 and its nalD mutant, while ciprofloxacin changes from 0.004 to
+    0.06. The Discussion connects nalD with GyrB and raises a possible difference
+    requiring further work. This is a bounded mutant observation, not proof that clinafloxacin
+    cannot interact with GyrB. It supports antibacterial identity/activity but cannot
+    alone carry all mechanistic clauses in the native definition.
+  snapshot_sha256: 4fbd73599ecce7cbf8678d93744676c22a5b626d290de76bbf1b8cd6b6546448
+- evidence_id: genetic1998
+  kind: primary_source
+  reference: PMID:9797208; DOI:10.1128/aac.42.11.2810
+  locator: '310-primary1998.html: complete Methods, Results, Tables1–3 and Discussion'
+  accessed_at: '2026-10-21T13:22:43.359699Z'
+  support: supports
+  summary: S. pneumoniae 7785 and derived mutants were tested with clinafloxacin hydrochloride
+    from Parke-Davis, using brain-heart-infusion agar with 10% horse blood. Individual
+    gyrA or parC mutants show small twofold MIC changes, whereas double mutants show
+    a larger change; stepwise selections alternate changes in gyrase and topo IV.
+    The GyrB E474K first-step mutant supports a target-associated genetic effect,
+    not isolated GyrB binding. The authors infer comparable but unequal cellular targeting,
+    with a modest gyrase preference, and explicitly leave molecular determinants unresolved.
+    These strain-specific hydrochloride results are active-moiety evidence, not measurements
+    on isolated neutral acid or proof of universal target preference.
+  snapshot_sha256: 8d4cdfc62a31cbf2774d70abd11c215d75739443f5d66744c1499d1cfb9cbf0a
+- evidence_id: enzyme1999
+  kind: primary_source
+  reference: PMID:10223925; DOI:10.1128/aac.43.5.1129
+  locator: '310-primary1999.html: complete Methods, Results, Table1 and Discussion'
+  accessed_at: '2026-10-21T13:22:43.359759Z'
+  support: supports
+  summary: Purified recombinant His-tagged S. pneumoniae 7785 GyrA/GyrB and ParC/ParE
+    subunits were reconstituted into active enzymes. Clinafloxacin hydrochloride from
+    Parke-Davis inhibited gyrase supercoiling and topo IV decatenation and promoted
+    enzyme-mediated plasmid linearization after SDS/proteinase K treatment. Table
+    1 reports gyrase supercoiling IC50=2.5 micromolar and cleavage CC25=2.5 micromolar;
+    topo IV cleavage CC25=0.1 micromolar. These are enzyme endpoints, not MICs. The
+    stronger topo IV preference in vitro contrasts with the genetic cellular targeting
+    results, and the Discussion distinguishes affinity, intracellular conditions and
+    downstream lethality. This directly supports cleavage-complex activity, but it
+    does not independently measure ligand binding to purified GyrB alone.
+  snapshot_sha256: 91c3ab74153e55fac6399cba937944698d2af6215792580d5eecc54f47a19926
+- evidence_id: structure2016
+  kind: primary_source
+  reference: PMID:27655731; DOI:10.1098/rsob.160157; PDB:3RAD
+  locator: '310-primary2016.xml: Methods, Figure6, Figures7–8, Tables5–6 and Results;310-pdb3rad.json'
+  accessed_at: '2026-10-21T13:23:26.146952Z'
+  support: supports
+  summary: The original paper studies new bridged fluoroquinolones and includes actual
+    clinafloxacin comparator experiments and the clinafloxacin topo IV-DNA complex
+    3RAD. Figure 6 compares drug positions; Table 6 separately reports clinafloxacin
+    cleavage activity for wild-type core and mutant topo IV complexes. The ParE475A
+    effect and ParC/ParE structural context inform clinafloxacin interactions with
+    this S. pneumoniae topo IV system. ParE is not GyrB, so these observations are
+    not transferred to the native GyrB object. Novel ACHN245/454 data are likewise
+    not relabeled as clinafloxacin. The inspected methods do not independently resolve
+    the clinafloxacin comparator solid form or enantiomeric composition.
+  snapshot_sha256: 6ebb8d79aa506fc5bde070545f2985831ed4e6d6be3639ba44290b1ff4730d1d
+- evidence_id: later-context
+  kind: primary_source
+  reference: PMID:15047530; DOI:10.1128/aac.48.4.1281-1288.2004
+  locator: Complete original abstract in 310-core.json
+  accessed_at: '2026-10-21T13:22:07.206831Z'
+  support: context_only
+  summary: The abstract reports recombinant M. tuberculosis gyrase assays across 22
+    quinolones and includes clinafloxacin among the active agents. Full original methods/results
+    were not inspected here, and no pooled potency range, exact reagent form, individual
+    GyrB binding result or new native quantitative value is adopted from it.
+  snapshot_sha256: a83e752af18ba10401c9e9e556dfe79c63ec24d59423c7afc23102c07ac5f0f6
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/modulome
+  locator: 308-adapter-datasets.txt reused current catalog;310-adapter-gyrA.txt;310-adapter-gyrB.txt
+  accessed_at: '2026-10-21T13:27:46Z'
+  support: context_only
+  summary: Structured catalog coverage was established before these two searches and
+    before open mechanism research. The exact gene hits include b2231/gyrA and b3699/gyrB,
+    plus product-text matches yacG and sbmC in the gyrA query. Both searches return
+    zero iModulons. Gene-catalog membership does not establish clinafloxacin binding,
+    a MIC, or the taxon of the native family-level target. No organism-specific target
+    is added.
+  snapshot_sha256: 395fa3591de87480432a5773183956e6df8cfeeb9b2650f098595868b254048d
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv;data/raw/pubchem_structures.tsv;data/raw/aro_target_edges.tsv;conf/aro_target_roles.tsv;scripts/extract_source_inventory.py;scripts/enrich_pubchem_structures.py;scripts/seed_from_sources.py
+  locator: 310-source-audit.json;310-lead-dispositions.json; exact source rows and
+    maintained code
+  accessed_at: '2026-10-21T13:27:46Z'
+  support: supports
+  summary: All eighteen captured input hashes and four chronological history events
+    are unchanged. Source rows reproduce definition, class, abbreviation, structure
+    and both target objects. The sole adopted PMID 3142350 was read in full. ARO extraction
+    retains definition references and the seeder chooses the first one as definition_source;
+    the role table maps both targets to DIRECT_BINDING_TARGET, and the seeder correctly
+    adds PRIMARY_EVIDENCE_NEEDED and database-only notes. This identifies the precise
+    provenance and target-evidence ownership without changing native data.
+  snapshot_sha256: 5d8f250b1c8c640ca9617a578199fab7e222e02f081312b0fe9766d80135dea1
+- evidence_id: validation
+  kind: validation
+  reference: Documented validators and independent chemistry/source checks
+  locator: 310-focused-results.json;310-schema.log;310-strict.log;310-strict.tsv;310-authority-chemistry.json;310-source-audit.json
+  accessed_at: '2026-10-21T13:27:46Z'
+  support: supports
+  summary: Schema and strict validation, native molecular consistency, exact authority
+    comparisons and maintained-source reconciliation all pass. These focused outcomes
+    do not substitute for the separately recorded required full-corpus gates.
+  snapshot_sha256: d3a0b5e3f3e43755cafdcce1728decfb1507a1736da7efdef1ea1203fa2ab545
+- evidence_id: search
+  kind: search
+  reference: Exact native and original-source discovery
+  locator: Ignored-inclusive rg across curation,conf,scripts,data/raw for clinafloxacin,ARO:3004011,ARO:3003261,ARO:3000733
+    and QGPKADBNRMWEQR; exact SRC:MED PMID query; CARD and original-paper follow-up
+  accessed_at: '2026-10-21T13:27:46Z'
+  support: context_only
+  summary: Ignored files were included in the local source search. The current official
+    ontology, exact chemical authorities, sole adopted paper and later original mechanism
+    studies were distinguished from source leads. No absence-of-binding conclusion
+    is drawn from a database or literature search miss.
+  snapshot_sha256: 0e8be9517f8a0bfada1ab909ab774a6eb4962ee5fccfecbc54e5e8847a47ad5f
+  search_scope: Ignored-inclusive rg across curation,conf,scripts,data/raw for clinafloxacin,ARO:3004011,ARO:3003261,ARO:3000733
+    and QGPKADBNRMWEQR; exact SRC:MED PMID query; CARD and original-paper follow-up
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral clinafloxacin and exact cross-references
+  outcome: supported
+  summary: Independent molecular encodings agree; unspecified stereochemistry is retained
+    without an inferred mixture or specific enantiomer.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - record
+  - chemistry
+  - aro
+  - original1988
+- assessment_id: class
+  area: grounding
+  topic: Fluoroquinolone class and CLX abbreviation
+  outcome: supported
+  summary: Current ARO class and exact abbreviation agree with the frozen source;
+    original structure and susceptibility evidence support antibacterial classification.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - aro
+  - original1988
+  - chemistry
+- assessment_id: mechanism
+  area: evidence
+  topic: Gyrase activity and DNA cleavage
+  outcome: supported
+  summary: Later original experiments support reconstituted-enzyme inhibition and
+    cleavage-complex effects, while cellular target preference and lethal downstream
+    events remain distinguished.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - genetic1998
+  - enzyme1999
+- assessment_id: definition-source
+  area: provenance
+  topic: Scope of sole definition citation
+  outcome: concern
+  summary: PMID 3142350 supports susceptibility and identity but does not directly
+    establish the full mechanistic sentence. A bounded definition-source correction
+    is warranted.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - original1988
+  - enzyme1999
+  - owners
+- assessment_id: gyrB
+  area: evidence
+  topic: Sensitive GyrB versus direct ligand binding
+  outcome: unknown
+  summary: Current database assertion and genetic association are supported. Exact
+    direct GyrB binding is unresolved in the inspected evidence; native PRIMARY_EVIDENCE_NEEDED
+    is appropriate. No positive evidence here demonstrates that the relation is false.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - record
+  - aro
+  - genetic1998
+  - enzyme1999
+  - structure2016
+- assessment_id: target-scope
+  area: consistency
+  topic: GyrA, topo IV and species/assay boundaries
+  outcome: supported
+  summary: Both native targets remain explicitly database assertions without invented
+    strain context. Topo IV ParC/ParE structural results and hydrochloride measurements
+    are not silently assigned to isolated GyrB or neutral-solid assays.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - record
+  - aro
+  - genetic1998
+  - enzyme1999
+  - structure2016
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained inputs, all adopted leads and history
+  outcome: supported
+  summary: All eighteen hashes, four history events, PubChem enrichment and both ARO
+    target transformations reconcile; the sole adopted PMID has a full-text disposition.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - owners
+  - validation
+- assessment_id: completeness
+  area: completeness
+  topic: Optional enrichment and status
+  outcome: supported
+  summary: Later primary target evidence and a bounded causal chain could be curated
+    separately. Missing optional MIC, clinical, producer or causal-graph data are
+    not treated as defects; no regulatory approval is inferred.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - record
+  - enzyme1999
+  - structure2016
+- assessment_id: schema
+  area: schema
+  topic: Focused native validity
+  outcome: supported
+  summary: Schema, strict and chemistry checks pass. Native scientific-status promotion
+    still requires the full documented gates.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: aro-3004011-definition-primary-citation-scope
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The sole definition citation does not establish its full mechanistic sentence
+  description: The native definition_source is PMID 3142350, an original susceptibility/MBC
+    study. Its full text does not perform the gyrase-binding or DNA-cleavage experiments
+    needed to support all mechanistic clauses as primary findings. The mechanism itself
+    is supported by later original work, and current ARO retains the imported sentence,
+    so this is a bounded non-blocking provenance gap rather than a false mechanism
+    or wrong identity.
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  field_paths:
+  - definition_source
+  - definition
+  evidence_ids:
+  - original1988
+  - enzyme1999
+  - aro
+  - owners
+  rule_id: 'review-checklist: Claim-level evidence and provenance'
+  native_severity: Minor provenance scope gap
+  normalization_reason: Exact identity, antibacterial activity and the broad mechanistic
+    interpretation remain supported. The recommended correction concerns which source
+    is credited for the full imported definition, not removal of the qualified target
+    assertions.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and definition_refs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Selection of first ARO definition reference as definition_source
+actions:
+- action_id: A1
+  description: Correct the generated definition provenance through the maintained
+    ARO extraction/seeding lane. Preserve ARO:3004011 as the source of the imported
+    composite definition instead of implying that its first bibliography item experimentally
+    establishes every clause. If a per-concept definition-provenance override is used,
+    implement and document that maintained override rather than assuming one already
+    exists or hand-editing a frozen source row. Any separately curated primary mechanism
+    evidence should cite PMID 10223925 with the S. pneumoniae reconstituted-enzyme
+    and hydrochloride scope; retain PMID 3142350 as antibacterial susceptibility evidence.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-86221775c0
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted definition and definition_refs
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO definition extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Selection of first ARO definition reference as definition_source
+  acceptance_checks:
+  - Regeneration preserves the exact clinafloxacin graph and source history while
+    making the definition attribution distinguish ARO synthesis from the scope of
+    PMID 3142350.
+  - Any primary target upgrade records tested species, enzyme complex, material and
+    endpoint. It must not convert genetic GyrB association or topo IV ParE structural
+    evidence into unsupported isolated GyrB binding.
+  - Rerun documented schema/strict validation and required corpus gates after separately
+    authorized curation.
+limitations:
+- The inspected 1988 paper does not establish starting salt or enantiomeric composition.
+  The 1998 and 1999 studies explicitly use clinafloxacin hydrochloride; they support
+  active-moiety biology without proving assays on isolated neutral acid.
+- Direct clinafloxacin binding to GyrB as a distinct protein is unresolved in the
+  inspected sources. Native database provenance and PRIMARY_EVIDENCE_NEEDED are preserved;
+  the unchanged nalD-mutant MIC is not a universal no-binding result.
+- The 1998 cellular target preference and 1999 purified-enzyme preference differ.
+  Their authors discuss this discrepancy; no single universal target hierarchy is
+  imposed.
+- The 2016 source includes novel compounds and clinafloxacin comparators. Only the
+  clinafloxacin portions inform this review, and topo IV ParE findings are not transferred
+  to GyrB. Its reported clinafloxacin-comparator solid form and enantiomeric composition
+  were not independently resolved.
+- PMID 15047530 was inspected only at abstract depth and remains context; no quantitative
+  or exact material claim is adopted from it. General bibliography embedded in current
+  ontology class definitions was not treated as new native primary evidence.
+- Initial direct ARO GitHub retrieval returned404 and an alternate CARD hostname failed
+  TLS validation; official PURL and card.mcmaster.ca retrievals succeeded. Europe
+  PMC XML requests for 1998 and 1999 returned500, but complete original PMC HTML was
+  obtained and inspected. The 2016 XML succeeded.
+- Focused checks do not replace the separately recorded full-corpus reference, history,
+  term and QC gates or authorize promotion to REVIEWED.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, maintained source, status or history is changed by this review.
+- The independent chemistry command uses the existing batch019 RDKit interpreter against
+  batch031 native paths; schema and strict checks use the batch031 environment.
+- The current structured catalog is the successfully retrieved 308-adapter-datasets.txt;
+  310-specific gyrA/gyrB searches were executed before mechanism web research. Its
+  earlier failed catalog attempt is recorded in the 308 review and is not relabeled
+  as a new 310 command.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC172387/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC89122/
+- https://card.mcmaster.ca/ontology/40938
+tags:
+- record-review
+- clinafloxacin
+- exact-form
+- target-evidence
