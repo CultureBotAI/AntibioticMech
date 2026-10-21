@@ -1,0 +1,871 @@
+schema_version: 1.0.0
+review_id: 20261021T142430Z-daptomycin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Daptomycin: obsolete Asn stereochemistry misgrounds otherwise traceable biological
+  evidence'
+started_at: '2026-10-21T14:02:25Z'
+finished_at: '2026-10-21T14:24:30Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The record retains L-Asn at residue 2, whereas an adopted primary paper explicitly
+  revised natural daptomycin to D-Asn and independently parsed current GSRS, PubChem
+  and KEGG DRUG structures confirm that single-centre change. This is an exact-identity
+  blocker. A separate major finding concerns an invalid indole SMILES. The nineteen
+  MIC observations, BioSamples, qualified CARD relations and membrane studies are
+  traceable at the stated depths, but their evidence for natural daptomycin must not
+  be assigned automatically to the L-Asn epimer.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/daptomycin.yaml
+    sha256: f51adec1f114ac3ef729fb0c919fb35cccd9b367dfbd14bd60ef7b0ab2a334a8
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+targets:
+- target_id: CHEBI:600103
+  path: data/antibiotics/antibacterial/daptomycin.yaml
+  label: daptomycin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity and class
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported CARD target edges
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported CARD resistance edges
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Maintained target relation and type mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained CARD evidence qualification including CdsA taxon scope
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Overlay application and integrity checks
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/daptomycin.yaml
+    role: Curator-owned MIC observations, BioSamples, primary membrane target and
+      causal graph
+scope:
+  description: 'Entire native record: definition, fourteen synonyms, six parents,
+    three roles, structural class, nineteen strain MIC observations and BioSamples,
+    all chemical fields, four exact xrefs, two drug links and document link, both
+    source concepts, thirty-five database resistance assertions, five molecular targets,
+    six causal nodes and five edges, and all ten history events. All fifteen distinct
+    adopted publication leads resolved and their complete abstracts read; four additional
+    native primary references assessed separately.'
+  selection: Queue 342; all thirteen original captured inputs were verified before
+    judgment and preserved. Six actual ARO and evidence-overlay owners were appended,
+    for nineteen inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:600103
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused schema check passed.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/daptomycin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual strict check scanned one record with zero errors.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/daptomycin.yaml --out /private/tmp/am-review-session/342-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: failed
+  required: false
+  summary: The native SMILES cannot be kekulized. The independently parsed InChI is
+    valid and reproduces the stored full key, neutral formula, mass and thirteen assigned
+    centres; source mints also reproduce. This is a failed chemistry gate, not a schema
+    failure.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 342
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: authority-chemistry
+  status: passed
+  required: false
+  summary: Diagnostic comparison executed successfully and reports substantive stereochemical
+    disagreement; exit 0 does not mean all structures agree.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/342-chemistry-comparison.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: atom-map-and-observations
+  name: atom-map-and-observations
+  status: passed
+  required: false
+  summary: Standard-InChI-normalized graph mapping identifies the unique Asn side-chain
+    amide and one changed centre. All nineteen MIC values, the greater-than qualifier,
+    strain/BioSample identities and taxon pairs match the original table and independent
+    NCBI records. Earlier scratch attempts used an amide-only SMARTS on an imidic-acid
+    tautomer and guessed mic_relation instead of the actual mic_qualifier key; corrected
+    diagnostics pass. Neither scratch-reader mistake is a native defect.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/342-final-checks.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:600103
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/daptomycin.yaml
+  locator: Entire 818-line YAML, including all nineteen observations and thirty-five
+    resistance entries.
+  accessed_at: '2026-10-21T14:23:59Z'
+  support: supports
+  summary: The native is SEEDED, EXACT and ANTIBACTERIAL. Its neutral C72H101N17O26
+    InChI has key DOAKLVKFURWEDJ-RWDRXURGSA-N. Three explicit exact names contain
+    L-asparaginyl after N-decanoyl-L-tryptophyl. Cidecin and Cubicin are correctly
+    typed BRAND_NAME. Four imported target entries expressly distinguish susceptibility
+    determinants or a downstream process from direct binding; the fifth is a curator-supported
+    membrane target. No clinical-status, producer or protein-example assertion is
+    present.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    data/raw/aro_resistance_edges.tsv; conf/aro_target_roles.tsv; curation/card_evidence_reviews.json;
+    scripts/card_evidence_reviews.py; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: 'Complete exact rows: ChEBI2986, ARO53, targets53–56 and resistance1839–1873;
+    actual target-role and CdsA overlay entries and extraction/seeding preservation
+    logic.'
+  accessed_at: '2026-10-21T14:23:59Z'
+  support: supports
+  summary: The adopted ChEBI row already contains the malformed SMILES, L-Asn names
+    and RWDRXURG key. ARO supplies PubChem16134395 and all direct database relations;
+    the extractor does not manufacture these by class expansion. The target-role map
+    deliberately bounds cls, mprF and pgsA as susceptibility determinants and rpoB
+    as a downstream process. The maintained CdsA qualification is reproduced. Curator-owned
+    activity, BioSample, primary-target and graph additions are owned by the native
+    record and preserved by reseeding.
+  snapshot_sha256: a1af892790ea1e0d8f82ef2c97a5bd97af40fef0024af82eac217d06c5ada140
+- evidence_id: stereo-revision
+  kind: primary_source
+  reference: PMID:15870461; DOI:10.1099/mic.0.27757-0; https://www.ars.usda.gov/research/publications/publication/?seqNo115=183603
+  locator: Complete original indexed and publisher abstracts; complete USDA author-record
+    interpretive summary and technical abstract. Original full body/PDF not obtained.
+  accessed_at: '2026-10-21T14:20:06Z'
+  support: refutes
+  summary: The 2005 original study reports an unexpected epimerase domain in module
+    2 and explicitly revises natural daptomycin from L-Asn to D-Asn. Its abstract
+    states that stereospecific synthetic peptides and the natural product were compared
+    chemically and microbiologically. The author record independently repeats the
+    revision. This is an explicit published structural correction, not an inference
+    from vendor synonyms or biosynthetic prediction alone. The detailed comparison
+    experiments and their numerical outcomes remain outside the inspected full-text
+    scope.
+  snapshot_sha256: aacf46198babb7e35e619aecf3a802ccaf89f7c8d5ce32bbf92d74e1c180acd5
+- evidence_id: stereo-authorities
+  kind: authority
+  reference: CHEBI:600103; PubChem:16134395; PubChem:21585658; FDA GSRS UNII:NWQ5N31VKK
+    version 64; KEGG:D01080; KEGG:C12013
+  locator: Complete official chemical responses and molfiles, independently parsed;
+    unique Asn connectivity and all thirteen centres mapped in342-final-checks.json.
+  accessed_at: '2026-10-21T14:23:59Z'
+  support: refutes
+  summary: 'Current ChEBI and the native exact PubChem16134395 still encode RWDRXURG.
+    PubChem21585658, GSRS SMILES and molfile, and KEGG DRUG D01080 independently produce
+    DOAKLVKFURWEDJ-QCMAZARJSA-N. After Standard-InChI normalization to avoid amide/imidic-acid
+    matching artifacts, connectivity matches and only the unique Asn alpha carbon
+    differs: native atom 44, zero-based in the parsed InChI graph, is S/L; each corrected
+    authority is R/D. The other twelve assigned centres agree. KEGG COMPOUND C12013
+    gives OFNKPWESSA-N, retains L-Asn and leaves three other centres unassigned; it
+    is not an exact complete stereochemical match. Authority disagreement is preserved
+    rather than hidden.'
+  snapshot_sha256: 6abb89426481a25485ba8556e7ce0a239550d909627e5f183b60638bb1da342a
+- evidence_id: smiles
+  kind: validation
+  reference: 342-chemistry.json;342-authority-chemistry.json
+  locator: Actual RDKit parsing and scratch-only diagnostic repair.
+  accessed_at: '2026-10-21T14:23:59Z'
+  support: refutes
+  summary: The native and maintained source SMILES use c1cnc2ccccc12 for the tryptophan
+    indole, omitting pyrrolic [nH]; RDKit reports a kekulization failure. Replacing
+    only that aromatic n with [nH] in scratch yields a valid graph and the stored
+    RWDRXURG key. Thus repairing syntax alone preserves the independently incorrect
+    L-Asn identity. No native structure was modified.
+  snapshot_sha256: 732f6630ccde85b7fe15049576428522882852630f0d97931d2af6b4045becf8
+- evidence_id: classification-links
+  kind: authority
+  reference: CHEBI:24533; CHEBI:25061; CHEBI:25106; CHEBI:46895; CHEBI:51026; CHEBI:140190;
+    CHEBI:33281; CHEBI:36047; CHEBI:29108; ARO:3009657; CAS:103060-53-3; DrugBank:DB00080;
+    KEGG:D01080
+  locator: Official ChEBI term names/definitions and current ARO class; registry attestations
+    and KEGG drug entry.
+  accessed_at: '2026-10-21T14:15:15Z'
+  support: supports
+  summary: The peptide/ester macrocycle and N-decanoyl chain support the broad heterodetic
+    cyclic peptide, lipopeptide, macrolide and macrocycle parents. CHEBI140190 denotes
+    calcium-dependent antibiotics; CHEBI29108 is calcium(2+), matching the graph cofactor.
+    Antimicrobial/antibacterial roles describe intended natural daptomycin, whose
+    exact structural grounding needs correction. CAS and the two named drug links
+    resolve through current ChEBI/GSRS/KEGG attestations; KEGG drug structure has
+    the corrected D-Asn. DrugBank direct access was403, so its graph was not independently
+    confirmed. Wikipedia remains a topic link, not experimental evidence.
+  snapshot_sha256: e660cc746bdd9ecca14f74c4e8d51ffc607035dc31911eab0c470e4280fe4153
+- evidence_id: mic-primary
+  kind: primary_source
+  reference: PMID:35178041; DOI:10.3389/fmicb.2021.807398; PMC8846945
+  locator: Entire original main prose, Methods and Table 1 read; all nineteen Table
+    1 rows independently compared with native observations.
+  accessed_at: '2026-10-21T14:15:39Z'
+  support: supports
+  summary: 'The CDC Sentinel Surveillance study tested 708 Enterococcus isolates and
+    reports nineteen daptomycin-resistant isolates in Table 1: two E. faecalis and
+    seventeen E. faecium. Every native strain, BioSample, MIC8/16/>16 and qualifier
+    matches. Micrograms/mL equals mg/L. Methods explicitly report broth microdilution
+    with 50 micrograms/mL calcium chloride and 2021 CLSI interpretation, as the native
+    assay does. No mutation association is promoted to causation by these MIC entries.
+    The article notes that testing was not repeated or confirmed by another method.
+    Exact reagent counterion/purity and stereochemical verification are not provided;
+    these observations of the named drug do not establish activity of the native L-Asn
+    epimer.'
+  snapshot_sha256: 0ce6e6cedbf578a37697e553d98250501f985f85150a167f1a210ed1d29a7514
+- evidence_id: biosamples
+  kind: authority
+  reference: NCBI BioSample:SAMN16584109–SAMN16584128, excluding SAMN16584117; NCBITaxon:1351;
+    NCBITaxon:1352
+  locator: All nineteen exact BioSample records fetched and read through the independent
+    attribute comparison; both taxonomy records.
+  accessed_at: '2026-10-21T14:15:15Z'
+  support: supports
+  summary: Each native accession resolves to the stated isolate and organism. Taxon1351
+    is E. faecalis and1352 is E. faecium. The comparison preserves strain-level scope;
+    BioSample identity is not independent proof of the MIC or of the tested compound
+    stereochemistry.
+  snapshot_sha256: 028f81157c95756720a90af7bf14f2ec56b330292b8169efac35a01c255c7efe
+- evidence_id: membrane-primary
+  kind: primary_source
+  reference: PMID:40455071; DOI:10.7554/eLife.93267; PMC12129450
+  locator: Entire main article text and Methods read; Figures 1, 5 and 6 visually
+    inspected from the original PDF; inline supplemental captions read, raw supplemental
+    datasets not reprocessed.
+  accessed_at: '2026-10-21T14:16:09Z'
+  support: supports
+  summary: Figure 1 explicitly shows D-Asn2 and the correctly protonated indole. Model-membrane
+    fluorescence, circular dichroism and NMR support calcium-dependent PG complex
+    formation and a slower PG-dependent uptake phase distinct from fast reversible
+    binding to anionic lipids. The study also isolates a drug/PG complex from treated
+    B. subtilis168 membranes; this is not a producer claim. Figure 6 is explicitly
+    a proposed two-phase mechanism, including a pre-insertion state and tail unfolding.
+    The native qualitative membrane target and first four graph edges broadly follow
+    this interpretation, but should retain model-versus-observation scope. This paper
+    does not directly measure depolarization or establish every bactericidal consequence,
+    and it supports the D-Asn compound rather than the native L-Asn graph.
+  snapshot_sha256: cfc231b22ed740b961d0b2bb4baf549a20695f66c64fbe97633901f1cae3bb12
+- evidence_id: potential-primary
+  kind: primary_source
+  reference: PMID:1666494; DOI:10.1128/AAC.35.11.2282; PMC245372
+  locator: All six original scanned pages2282–2287 read, including all four figures
+    and captions.
+  accessed_at: '2026-10-21T14:20:06Z'
+  support: supports
+  summary: The 1991 study uses growing S. aureus209P/ATCC6538P, Lilly daptomycin and
+    calcium-adjusted Mueller-Hinton broth. Radiolabeled TPP and acetylsalicylic-acid
+    flow-cell assays distinguish electrical potential from delta-pH. Daptomycin caused
+    calcium-dependent potential dissipation without a measurable delta-pH effect.
+    Killing was reduced when available potential was lowered. The high-density flow-cell
+    exposure used 100 micrograms/mL; separate viability experiments used 1 microgram/mL.
+    These are distinct experiments, not a universal MIC or a direct test of the 2025
+    PG pre-insertion intermediate. The native final-edge note correctly retains growing
+    S. aureus context; the complete graph is a synthesis across studies, conditional
+    on correcting the compound identity.
+  snapshot_sha256: 47ce80b87d9a8de7d39af60ff85552ac733c347b337f6f4ea7552acdb27438a7
+- evidence_id: card
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: Official ontology retrieved2026-10-21T14:10:59Z, header dated2026-08-11;
+    all 41 relevant blocks examined, with all 35 exact resistance and 4 target relations.
+  accessed_at: '2026-10-21T14:10:59Z'
+  support: supports
+  summary: Every native resistance identifier resolves to the expected source label
+    and explicit daptomycin relation. The native notes accurately retain database-only
+    status. Generic and species-specific mutant terms are not interchangeable alleles
+    or evidence of direct drug binding. The four target entries also match the source;
+    maintained role mapping appropriately avoids converting sensitivity associations
+    to direct protein binding. Source definitions such as an rpoC-binding claim are
+    not automatically adopted as primary mechanism facts. Their individual experimental
+    literatures were not exhaustively audited.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: cdsa-primary
+  kind: primary_source
+  reference: PMID:28115347; DOI:10.1128/AAC.02435-16; PMC5365703
+  locator: Original Results on genetic exchange and membrane lipids, Methods, Tables
+    1/2 and Addendum in proof read; microscopy captions read but images/supplements
+    not reprocessed.
+  accessed_at: '2026-10-21T14:15:39Z'
+  support: supports
+  summary: The paper reports cdsA deletion and reciprocal allele replacements supporting
+    resistance in strain351 derivatives, with altered membrane phospholipids. This
+    is a susceptibility mechanism, not direct daptomycin binding to CdsA. The Addendum
+    explicitly favors S. oralis after whole-genome ANI and retains S. mitis/oralis351.
+    The existing maintained qualification correctly prevents the CARD S. mitis label
+    from becoming a verified experimental species assignment; no replacement taxon
+    or protein is justified from that label alone.
+  snapshot_sha256: 8c09b3ee5a39fe15f098b4872fc51dc244e7b3e1c317aeb1fef5d495b71a5207
+- evidence_id: adopted
+  kind: database
+  reference: PMID:14622998;15227539;15271343;15500379;15815985;15870461;16311632;17402833;18360590;18989686;20522545;22083474;11353654;14985278;12615866
+  locator: All fifteen distinct adopted leads resolved and complete indexed abstracts
+    read; classifications checked against titles and content.
+  accessed_at: '2026-10-21T14:15:15Z'
+  support: context_only
+  summary: 14622998 concerns N-acyl-Orn analogues, not automatic parent potency.15227539
+    and15815985 are primary calcium/conformation studies; old structural assignments
+    do not override the later Asn revision.15870461 is the original stereo revision
+    assessed separately.22083474 studies environmental actinomycete hydrolysis of
+    ring/tail and is not an asserted clinical resistance enzyme here.11353654 compares
+    2789 isolates and calcium conditions;14985278 is a 6737-isolate global panel;12615866
+    is the SECURE European panel. Their population results are not the nineteen native
+    isolates.15271343 is a comment;15500379,16311632,17402833,18360590,18989686 and20522545
+    are reviews or review-context sources, not independent primary demonstrations.
+    Their full texts were not claimed read.
+  snapshot_sha256: ab9845c0bbcff48cbc6573ea00b07bd04ac115197a3fb7d09dd9846aa16a6b20
+- evidence_id: adapter
+  kind: database
+  reference: Structured iModulonDB adapter
+  locator: Catalog plus S. aureus/staph_precise108 searches for mprF and cls, and
+    B. subtilis/modulome search for pgsA, all executed before web follow-up.
+  accessed_at: '2026-10-21T14:23:59Z'
+  support: context_only
+  summary: All calls exited 0. S. aureus mprF returned USA300HOU_RS06925; cls returned
+    cls1/RS06700 and cls2/RS11270. B. subtilis pgsA returned BSU16920. None returned
+    a module requiring summarize. The inspected catalog did not cover Enterococcus
+    or S. mitis/oralis. These results establish bounded database context, not direct
+    binding, resistance causality or evidence of absence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: search
+  kind: search
+  reference: 342-inclusive-hits.txt;342-current-aro-selected.txt;342-fetch-results.json;342-followup-fetch-results.json;342-extra-fetch-results.json;342-more-fetch-results.json;342-final-fetch-results.json
+  locator: Hidden- and ignored-inclusive local search plus bounded official identity,
+    exact PMID/DOI and author-source retrieval.
+  accessed_at: '2026-10-21T14:23:59Z'
+  support: context_only
+  summary: The entire native, exact maintained rows and CdsA overlay were located.
+    Original input hashes were verified before assessment and remain unchanged. Public
+    retrievals distinguish genuine full text from challenge HTML; initial PMC245372
+    returned a challenge, while the public page=1 page supplied six legitimate scanned-page
+    links subsequently read. No broad claim that additional primary evidence does
+    not exist is made.
+  search_scope: 2026-10-21; rg --no-ignore --hidden across data, curation, conf, scripts,
+    src, docs, .claude, reviews and reports using daptomycin, CHEBI:600103, ARO:0000068
+    and the exact key; relevant ignored-inclusive scratch cache lookup; all adopted
+    PMID/DOI leads, public chemical authorities and primary publisher/author routes.
+  snapshot_sha256: bebb9f2f457cce9bf1fa841268572386957ba3296323486580a162e45dc05a1c
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Natural daptomycin versus the stored L-Asn epimer
+  outcome: concern
+  summary: The exact graph and three explicit synonyms retain a published, superseded
+    residue 2 assignment. Primary revision, current authority graph mapping and the
+    native mechanism paper drawing independently support D-Asn. This is not a salt,
+    tautomer, unspecified-stereo or mixture difference.
+  target_ids:
+  - CHEBI:600103
+  evidence_ids:
+  - native
+  - owners
+  - stereo-revision
+  - stereo-authorities
+  - membrane-primary
+- assessment_id: representation
+  area: identity
+  topic: Native structural syntax and exact cross-reference scope
+  outcome: concern
+  summary: The indole SMILES is independently invalid. Its scratch syntax repair reproduces
+    the stored L-Asn key and therefore cannot resolve the identity blocker. PubChem16134395
+    agrees with that old graph; KEGG C12013 is additionally stereochemically incomplete.
+    All exact identifiers and aliases require reconciliation together.
+  target_ids:
+  - CHEBI:600103
+  evidence_ids:
+  - smiles
+  - stereo-authorities
+  - owners
+- assessment_id: activity
+  area: evidence
+  topic: Nineteen resistant-isolate observations and material identity
+  outcome: concern
+  summary: All numerical observations, units, qualifiers, strain names, accessions
+    and taxonomy match the original table and NCBI records. Their reported natural-drug
+    context is sound, but the source does not demonstrate that the tested material
+    was the native L-Asn epimer. Preserve the valid observations and repair their
+    chemical grounding rather than altering MIC numbers or asserting the epimer is
+    inactive.
+  target_ids:
+  - CHEBI:600103
+  evidence_ids:
+  - mic-primary
+  - biosamples
+  - stereo-revision
+  - native
+- assessment_id: mechanism
+  area: evidence
+  topic: Membrane target and five-edge causal synthesis
+  outcome: concern
+  summary: The 2025 paper supports the D-Asn natural compound, PG/calcium complex
+    and uptake model; the 1991 original supports calcium-dependent depolarization
+    in growing S. aureus. The graph has appropriate label-only states and separates
+    its source citations, but is a cross-study mechanistic synthesis rather than one
+    experiment proving every intermediate. Correct its compound identity and preserve
+    proposed-model and organism/condition boundaries.
+  target_ids:
+  - CHEBI:600103
+  evidence_ids:
+  - membrane-primary
+  - potential-primary
+  - classification-links
+  - native
+- assessment_id: resistance
+  area: evidence
+  topic: Thirty-five qualified CARD relations and CdsA taxonomic scope
+  outcome: supported
+  summary: All exported relations match the official ontology at database level. The
+    target-role map avoids false direct-protein binding, and the CdsA overlay accurately
+    preserves the original addendum. The exact daptomycin identifier still requires
+    correction across these associations; this assessment does not independently promote
+    all 35 relations to functional primary evidence.
+  target_ids:
+  - CHEBI:600103
+  evidence_ids:
+  - card
+  - cdsa-primary
+  - owners
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Owners, citations, history and optional enrichment
+  outcome: supported
+  summary: Initial captures and actual owners are preserved; source mints reproduce.
+    All adopted leads have a documented disposition. Native SEEDED status is not silently
+    promoted. Missing optional producer, clinical status or protein examples are not
+    separate defects. The broad class and role assertions describe intended daptomycin,
+    conditional on exact identity repair.
+  target_ids:
+  - CHEBI:600103
+  evidence_ids:
+  - owners
+  - adopted
+  - native
+  - classification-links
+  - search
+findings:
+- finding_id: F1
+  issue_key: daptomycin-obsolete-l-asn2-exact-identity
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: The exact record retains L-Asn2 instead of natural daptomycin D-Asn2
+  description: The native InChI/key and three explicit exact names retain L-Asn at
+    residue 2. The adopted 2005 primary paper expressly corrected this to D-Asn after
+    comparison of synthetic stereoisomers with the natural product. Independent current
+    GSRS, PubChem21585658 and KEGG DRUG mappings differ from the native graph only
+    at the unique Asn alpha carbon, S/L versus R/D; the 2025 native mechanism paper
+    visually labels D-Asn2. Current ChEBI and PubChem16134395 still carry the old
+    assignment, so authority agreement with those entries does not settle natural-product
+    identity. The record therefore misgrounds natural daptomycin evidence to its L-Asn
+    epimer. This finding does not establish that the epimer is inactive or that all
+    assays should be automatically transferred to a newly chosen structure.
+  target_ids:
+  - CHEBI:600103
+  field_paths:
+  - chemical_structure
+  - synonyms[5]
+  - synonyms[8]
+  - synonyms[9]
+  - xrefs
+  - activity_spectrum
+  - molecular_targets[4]
+  - causal_graphs[0].nodes[0]
+  evidence_ids:
+  - stereo-revision
+  - stereo-authorities
+  - membrane-primary
+  - native
+  - owners
+  rule_id: '.claude/skills/review-yaml-record/SKILL.md: wrong exact identity is blocker;
+    HARMONIZATION.md exact-structure scope'
+  native_severity: blocker
+  normalization_reason: The native denoted stereoisomer conflicts with an explicit
+    primary structural revision of the intended natural compound. This changes exact
+    identity and the material grounding of curated biological evidence, rather than
+    merely omitting an optional detail.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted structure and explicit stereochemical names
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted PubChem identity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction and identity handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible compound merge and regeneration
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/daptomycin.yaml
+    role: Curator-owned MICs, BioSamples, primary membrane target and causal graph
+      requiring correct material grounding
+- finding_id: F2
+  issue_key: daptomycin-indole-smiles-missing-pyrrolic-hydrogen
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The exported indole SMILES cannot be parsed as the intended aromatic structure
+  description: The native and maintained source SMILES encode the tryptophan indole
+    as c1cnc2ccccc12 instead of a pyrrolic [nH] representation. Actual RDKit parsing
+    fails kekulization. A scratch-only hydrogen correction restores a valid graph
+    that matches the stored InChI/key, demonstrating a representation failure separate
+    from the Asn epimer problem. A syntax-only repair would leave F1 unresolved.
+  target_ids:
+  - CHEBI:600103
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - smiles
+  - owners
+  - stereo-authorities
+  rule_id: Review checklist chemical representation consistency and reproducible source
+    ownership
+  native_severity: major
+  normalization_reason: An invalid exported structure prevents downstream chemical
+    use despite successful YAML/strict gates. The record has a valid independent InChI,
+    so this representation failure is kept separate from the exact-identity blocker.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted malformed indole SMILES
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source structure handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerated structure
+actions:
+- action_id: A1
+  description: Reconcile the natural daptomycin identity through maintained source
+    handling and re-audit every dependent evidence link.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:600103
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted structure and explicit stereochemical names
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted PubChem identity
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source extraction and identity handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible compound merge and regeneration
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/daptomycin.yaml
+    role: Curator-owned MICs, BioSamples, primary membrane target and causal graph
+      requiring correct material grounding
+  acceptance_checks:
+  - Retain the original2005 revision and current authority mappings. Confirm the unique
+    Asn2 centre and all other stereocentres; do not choose a replacement from connectivity-only
+    keys or vendor synonyms.
+  - Reconcile the chemical graph, three explicit L-Asn names, ChEBI/ARO merge, PubChem16134395
+    and incomplete KEGG C12013 exact equivalences. Preserve conflicting historical
+    source identities explicitly rather than silently treating epimers as synonyms.
+  - Review the actual material in each curator-owned MIC, membrane-target and graph
+    source before re-grounding it. Preserve valid strain values and BioSamples; do
+    not infer epimer inactivity or automatically copy every biological assertion across
+    stereoisomers.
+  - Regenerate through maintained owners and rerun focused schema/strict, independent
+    chemical parsing/full-key equivalence, source-mint checks and all applicable repository
+    gates.
+- action_id: A2
+  description: Repair the indole representation in the maintained source path after
+    resolving exact identity.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:600103
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted malformed indole SMILES
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Source structure handling
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerated structure
+  acceptance_checks:
+  - Use a valid pyrrolic indole encoding and demonstrate successful independent parsing.
+  - Show that the resulting SMILES, InChI, full stereochemical key, formula, charge
+    and mass all agree for the identity resolved under A1. A match to the old L-Asn
+    key alone is insufficient.
+  - Regenerate the record and confirm that the defective source string cannot silently
+    reappear on reseeding.
+limitations:
+- The 2005 structural-revision paper was read at complete original-abstract depth
+  plus its USDA author record. Direct publisher fulltext/PDF, public deliver and legacy
+  PDF routes returned 403; the indexed CiteSeer route failed 404/403. Detailed synthetic
+  comparison methods and numerical outcomes were not read or inferred. The explicit
+  revision is nevertheless corroborated by independent graph mapping and the original2025
+  figure.
+- The 2025 main article and Figures 1, 5, 6 were read; raw supplementary spectra and
+  datasets were not independently reprocessed, and the appended peer-review history
+  was not exhaustively read. Its proposed pre-insertion model is distinct from direct
+  observation of every causal step.
+- The 1991 paper was read completely from all six original scans. Flow-cell and viability
+  exposures differ, and no direct experiment tests the later proposed PG intermediate.
+  Its reagent was Lilly daptomycin; a full stereochemical certificate was not provided.
+- The 2022 MIC paper main text and all nineteen relevant table rows were read; there
+  was no independent laboratory replication. Its own limitation states no repeat or
+  alternative-method confirmation. Exact salt/purity and stereochemical characterization
+  of its test reagent were not established.
+- All fifteen adopted leads were read at complete indexed-abstract depth; only the
+  separately identified native primary papers received the deeper scope recorded above.
+  Reviews and comments are not primary evidence. Each of the thirty-five CARD determinant
+  literatures was not independently audited in full.
+- DrugBank direct access returned 403. Its identifier is retained as current source
+  attestation and a drug-level link, not a verified same-structure descriptor. Current
+  ChEBI and PubChem16134395 still conflict with the natural-product stereo revision.
+- Standard InChI parsing yields an imidic-acid tautomer for some amides. External
+  atom maps therefore normalized both inputs through Standard InChI; failed unnormalized
+  graph matches were not treated as constitutional-isomer findings.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All nineteen captured source input hashes are unchanged. Optional enrichment is
+  separate from the two established corrective findings.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
