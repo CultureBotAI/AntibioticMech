@@ -327,13 +327,40 @@ def restore_pre_uniprot_protein_examples():
 def pre_uniprot_protein_examples_root(tmp_path_factory):
     """Restore only the 30 curated UniProt protein-example record deltas in isolation."""
     transition = _uniprot_protein_examples_transition(REPO_ROOT)
+    historical_manifest = json.loads(
+        (REPO_ROOT / "research/2026-10-15-card-reference-reconciled.json").read_bytes()
+    )
+    historical_paths = {row["path"] for row in historical_manifest["records"]}
+    historical_slugs = {
+        Path(p).relative_to("data/antibiotics").with_suffix("").as_posix()
+        for p in historical_paths
+    }
     root = tmp_path_factory.mktemp("pre-uniprot-protein-examples")
     shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
+    for yaml_path in list((root / "data/antibiotics").rglob("*.yaml")):
+        rel = yaml_path.relative_to(root).as_posix()
+        if rel not in historical_paths:
+            yaml_path.unlink()
+    paths_tsv = root / "data/antibiotics/PATHS.tsv"
+    with (CORPUS_DIR / "PATHS.tsv").open(encoding="utf-8", newline="") as fh:
+        reader = csv.DictReader(fh, delimiter="\t")
+        rows = [row for row in reader if row["slug"] in historical_slugs]
+    with paths_tsv.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.DictWriter(
+            fh, fieldnames=["identifier", "slug"], delimiter="\t", lineterminator="\n"
+        )
+        writer.writeheader()
+        writer.writerows(rows)
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
         (root / relative).symlink_to(REPO_ROOT / relative, target_is_directory=True)
     (root / "curation").mkdir()
     for path in (REPO_ROOT / "curation").iterdir():
-        (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
+        if path.name == "curator_antibiotics.tsv":
+            lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+            (root / "curation" / path.name).write_text("".join(lines[:31]), encoding="utf-8")
+        else:
+            (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
     for delta in transition["record_deltas"]:
         _restore_pre_uniprot_protein_examples(REPO_ROOT, delta["path"], root / delta["path"])
     return root
+

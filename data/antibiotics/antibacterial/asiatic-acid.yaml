@@ -1,0 +1,47 @@
+identifier: antibioticmech:curator-1c9e30494e
+label: Asiatic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An ursane-type pentacyclic triterpenoid with antibacterial, antibiofilm,
+  and efflux-inhibitory activity against Shigella flexneri.
+definition_source: DOI:10.1080/19490976.2025.2586329
+synonyms:
+- synonym_text: dammarolic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@H]1CC[C@@]2(CC[C@@]3(C(=CC[C@H]4[C@]3(CC[C@@H]5[C@@]4(C[C@H]([C@@H]([C@@]5(C)CO)O)O)C)C)[C@@H]2[C@H]1C)C)C(=O)O
+  standard_inchi: InChI=1S/C30H48O5/c1-17-9-12-30(25(34)35)14-13-28(5)19(23(30)18(17)2)7-8-22-26(3)15-20(32)24(33)27(4,16-31)21(26)10-11-29(22,28)6/h7,17-18,20-24,31-33H,8-16H2,1-6H3,(H,34,35)/t17-,18+,20-,21-,22-,23+,24+,26+,27+,28-,29-,30+/m1/s1
+  standard_inchi_key: JXSVIVRDWWRQRT-UYDOISQJSA-N
+  molecular_formula: C30H48O5
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/119034
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 488.71
+  monoisotopic_mass: 488.35017464
+xrefs:
+- pubchem.compound:119034
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1080/19490976.2025.2586329#asiatic-acid
+  source_label: Asiatic acid
+  minted_identifier: antibioticmech:curator-1c9e30494e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1080/19490976.2025.2586329
+    snippet: Maitra et al. reported that asiatic acid inhibited Shigella flexneri
+      Sf2457T and multidrug-resistant clinical strain BCH12654 in a dose-dependent
+      manner, reduced biofilm viability and AcrAB-TolC efflux pump expression, and
+      lowered bacterial burden in vivo.
+    notes: PubChem CID 119034 supplies the standard InChI, InChIKey, formula, and
+      isomeric SMILES for asiatic acid.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

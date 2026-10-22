@@ -59,18 +59,18 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | PROPOSED | REVIEWED | With target or resistance evidence |
 |---|---:|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1121 | 1059 | 30 | 32 | 291 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1151 | 1059 | 60 | 32 | 291 |
 | &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 75 | 0 | 3 | 16 |
 | ANTIFUNGAL | 594 | 581 | 0 | 13 | 76 |
 | ANTIPROTOZOAL | 248 | 246 | 0 | 2 | 5 |
 | ANTIVIRAL | 473 | 448 | 0 | 25 | 34 |
 | BIOCIDE | 31 | 31 | 0 | 0 | 3 |
 | ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 0 | 8 | 13 |
-| **TOTAL** | **2939** | **2829** | **30** | **80** | **422** |
+| **TOTAL** | **2969** | **2829** | **60** | **80** | **422** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
-Identity: **2669** records (91%) are grounded in a ChEBI term; **270** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2669** records (90%) are grounded in a ChEBI term; **300** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **287** from CARD alone.
 
@@ -103,7 +103,7 @@ so seeding, validation, rendering and the whole test suite run offline.
 
 The generated site includes a
 **[Chemical structure map](https://culturebotai.github.io/AntibioticMech/pages/chemical-map.html)**
-covering all 2,939 records. Its coordinates and nearest neighbors use only the
+covering all 2,969 records. Its coordinates and nearest neighbors use only the
 exact stored chemical structure:
 
 ```text

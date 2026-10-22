@@ -1,0 +1,50 @@
+identifier: antibioticmech:curator-82c0567873
+label: Zoledronic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An imidazole-containing bisphosphonate with bactericidal membrane-permeabilizing
+  activity against Acinetobacter baylyi and Escherichia coli.
+definition_source: DOI:10.1099/mic.0.001619
+synonyms:
+- synonym_text: zoledronate
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: CGP-42446
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=CN(C=N1)CC(O)(P(=O)(O)O)P(=O)(O)O
+  standard_inchi: InChI=1S/C5H10N2O7P2/c8-5(15(9,10)11,16(12,13)14)3-7-2-1-6-4-7/h1-2,4,8H,3H2,(H2,9,10,11)(H2,12,13,14)
+  standard_inchi_key: XRASPMIURGNCCH-UHFFFAOYSA-N
+  molecular_formula: C5H10N2O7P2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/68740
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 272.09
+  monoisotopic_mass: 271.99632392
+xrefs:
+- pubchem.compound:68740
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1099/mic.0.001619#zoledronic-acid
+  source_label: Zoledronic acid
+  minted_identifier: antibioticmech:curator-82c0567873
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1099/mic.0.001619
+    snippet: Salcedo-Sora and Kell identified zoledronic acid in a flow-cytometric
+      membrane-permeabilization screen and reported growth inhibition with IC50 values
+      of 0.57 to 0.59 mg/L against Acinetobacter baylyi ADP1 and 0.68 to 0.72 mg/L
+      against Escherichia coli BW25113.
+    notes: PubChem CID 68740 supplies the standard InChI, InChIKey, formula, and SMILES
+      for zoledronic acid.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

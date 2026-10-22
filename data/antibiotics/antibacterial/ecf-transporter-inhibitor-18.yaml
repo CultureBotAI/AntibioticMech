@@ -1,0 +1,49 @@
+identifier: antibioticmech:curator-cad9f0650f
+label: ECF transporter inhibitor 18
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A bis(5-chloro-6-isopropoxypyridin-3-yl)benzyloxy salicylic acid ECF transporter
+  inhibitor with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1021/acs.jmedchem.5c02721
+synonyms:
+- synonym_text: compound 18
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)C1=CC(OCC2=CC(C3=CC(Cl)=C(OC(C)C)N=C3)=CC(C4=CC(Cl)=C(OC(C)C)N=C4)=C2)=CC=C1O
+  standard_inchi: InChI=1S/C30H28Cl2N2O6/c1-16(2)39-28-25(31)10-21(13-33-28)19-7-18(15-38-23-5-6-27(35)24(12-23)30(36)37)8-20(9-19)22-11-26(32)29(34-14-22)40-17(3)4/h5-14,16-17,35H,15H2,1-4H3,(H,36,37)
+  standard_inchi_key: BIORWQMWXNMPAG-UHFFFAOYSA-N
+  molecular_formula: C30H28Cl2N2O6
+  structure_source: https://pubs.acs.org/doi/suppl/10.1021/acs.jmedchem.5c02721/suppl_file/jm5c02721_si_002.csv
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 583.47
+  monoisotopic_mass: 582.13244198
+xrefs:
+- pubchem.compound:176360086
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jmedchem.5c02721#18
+  source_label: ECF transporter inhibitor 18
+  minted_identifier: antibioticmech:curator-cad9f0650f
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jmedchem.5c02721
+    snippet: Exapicheidou et al. reported that compound 18 inhibited Enterococcus
+      faecalis, Enterococcus faecium, and Streptococcus pneumoniae strains with MIC
+      values of 1 to 9 ug/mL, inhibited Lactobacillus casei vitamin uptake with an
+      IC50 of 4 uM, and improved larval survival in a Galleria mellonella Streptococcus
+      pneumoniae infection model.
+    notes: Supplementary Data CSV row 18 reports the SMILES for compound 18, matching
+      PubChem CID 176360086; the SMILES was normalized with RDKit to derive the standard
+      InChI and InChIKey.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -109,7 +109,7 @@ def test_only_exact_one_to_one_structure_matches_are_seeded(records):
         ("CHEBI:60828", "BGC0000432"),
         ("CHEBI:28001", "BGC0000455"),
     } <= claims
-    assert len(claims) == 64
+    assert len(claims) == 65
     # BGC0000311 balhimycin shares only a connectivity block with a corpus
     # record, so it must stay out. This does NOT guard the stereochemistry gate,
     # whatever its old comment claimed: balhimycin has no exact key match at all,
@@ -247,7 +247,7 @@ def test_link_evidence_scope_reads_the_source_entry_not_the_surviving_rows(recor
                         if by_accession[producer["biosynthetic_gene_cluster"]] == "1"
                         else "CLUSTER_INHERITED")
             assert producer.get("link_evidence_scope") == expected, record["identifier"]
-    assert seen == 64
+    assert seen == 65
 
 
 def test_a_producer_naming_no_organism_is_refused_and_queued(records):

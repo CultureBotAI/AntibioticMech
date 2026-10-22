@@ -1,0 +1,53 @@
+identifier: antibioticmech:curator-024cbfdb66
+label: 4-Fluoro-L-phenylalanine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A fluorinated L-phenylalanine analogue with antibacterial and antibiofilm
+  activity against Pseudomonas aeruginosa.
+definition_source: DOI:10.3390/molecules31132341
+synonyms:
+- synonym_text: (S)-4-F-Phe
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: p-fluoro-L-phenylalanine
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: 4-fluorophenyl-L-alanine
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=CC(=CC=C1C[C@@H](C(=O)O)N)F
+  standard_inchi: InChI=1S/C9H10FNO2/c10-7-3-1-6(2-4-7)5-8(11)9(12)13/h1-4,8H,5,11H2,(H,12,13)/t8-/m0/s1
+  standard_inchi_key: XWHHYOYVRVGJJY-QMMMGPOBSA-N
+  molecular_formula: C9H10FNO2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/716312
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 183.18
+  monoisotopic_mass: 183.06955678
+xrefs:
+- pubchem.compound:716312
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/molecules31132341#3
+  source_label: 4-Fluoro-L-phenylalanine
+  minted_identifier: antibioticmech:curator-024cbfdb66
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/molecules31132341
+    snippet: Dounay et al. reported that compound 3, (S)-4-F-Phe, inhibited Pseudomonas
+      aeruginosa PA14 planktonic growth with IC50 and IC90 values of 0.42 and 1.24
+      ug/mL and inhibited biofilm formation with IC50 and IC90 values of 0.26 and
+      0.84 ug/mL.
+    notes: PubChem CID 716312 supplies the standard InChI, InChIKey, formula, and
+      isomeric SMILES for 4-fluoro-L-phenylalanine ((S)-4-F-Phe, compound 3).
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

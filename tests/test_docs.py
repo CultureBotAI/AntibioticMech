@@ -117,12 +117,17 @@ def test_no_document_quotes_a_stale_record_count(repo_root):
         pytest.skip("no corpus")
 
     pattern = re.compile(r"([\d,]{3,})\s+(?:of\s+the\s+)?records\b")
+    canonical_block = re.compile(
+        r"<!-- canonical:begin [^\n]+ -->.*?<!-- canonical:end [^\n]+ -->",
+        re.DOTALL,
+    )
     stale = []
     for name in DOC_FILES + ["ATTRIBUTION.md"]:
         path = repo_root / name
         if not path.exists():
             continue
-        for match in pattern.finditer(path.read_text(encoding="utf-8")):
+        text = canonical_block.sub("", path.read_text(encoding="utf-8"))
+        for match in pattern.finditer(text):
             value = int(match.group(1).replace(",", ""))
             # A count is either the corpus total or a documented subset; only a
             # claim about the whole corpus can be checked mechanically.
@@ -155,8 +160,8 @@ NUMERIC_CLAIMS = [
     ("curation/source_queue.tsv", "maps {} of them", "mapped_roles"),
     # Producer figures. Both halves are derivable, so the tripwire accepts them
     # swapped; only this table checks a number against ITS OWN claim (#230).
-    ("docs/CURATION.md", "22 of the {} seeded assertions", "mibig_producer_items"),
-    ("docs/CURATION.md", "{} of the 64 seeded assertions", "cluster_inherited"),
+    ("docs/CURATION.md", "23 of the {} seeded assertions", "mibig_producer_items"),
+    ("docs/CURATION.md", "{} of the 65 seeded assertions", "cluster_inherited"),
     # The adoption record. Its shape carries no corpus noun, so the tripwire
     # cannot see it at all and only this table can (#230).
     ("curation/source_queue.tsv", "of which it publishes {}", "mibig_producer_items"),

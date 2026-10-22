@@ -1,0 +1,69 @@
+identifier: antibioticmech:curator-a0ddbc12c9
+label: Deferoxamine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A bacterial tris-hydroxamate siderophore and iron chelator with antimycobacterial
+  and antibiofilm activity against Mycobacterium abscessus.
+definition_source: DOI:10.3390/ijms27135789
+synonyms:
+- synonym_text: desferrioxamine B
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: DFO
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCNC(=O)CCC(=O)N(CCCCCN)O)O)O
+  standard_inchi: InChI=1S/C25H48N6O8/c1-21(32)29(37)18-9-3-6-16-27-22(33)12-14-25(36)31(39)20-10-4-7-17-28-23(34)11-13-24(35)30(38)19-8-2-5-15-26/h37-39H,2-20,26H2,1H3,(H,27,33)(H,28,34)
+  standard_inchi_key: UBQYURCVBFRUQT-UHFFFAOYSA-N
+  molecular_formula: C25H48N6O8
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/2973
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 560.69
+  monoisotopic_mass: 560.3533625
+xrefs:
+- pubchem.compound:2973
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/ijms27135789#deferoxamine
+  source_label: Deferoxamine
+  minted_identifier: antibioticmech:curator-a0ddbc12c9
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/ijms27135789
+    snippet: Lira et al. reported that deferoxamine inhibited Mycobacterium abscessus
+      subsp. massiliense with a bacteriostatic MIC of 9.75 ug/mL, showed strong synergy
+      with clarithromycin (FICI 0.047), reduced biofilm biomass, and lowered intracellular
+      bacterial burden in infected RAW 264.7 macrophages.
+    notes: PubChem CID 2973 supplies the standard InChI, InChIKey, formula, and SMILES
+      for deferoxamine.
+  source_version: '2026-09-10'
+producer_organisms:
+- taxon_id: NCBITaxon:100226
+  taxon_label: Streptomyces coelicolor
+  strain: A3(2)
+  biosynthetic_gene_cluster: BGC0000940
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'desferrioxamin B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:15600304
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

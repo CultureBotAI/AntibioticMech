@@ -1,0 +1,50 @@
+identifier: antibioticmech:curator-0c36c19930
+label: Caffeic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 3,4-dihydroxycinnamic acid with bactericidal and antibiofilm activity
+  against wound-associated bacterial pathogens.
+definition_source: DOI:10.1128/spectrum.01336-26
+synonyms:
+- synonym_text: (E)-caffeic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: 3,4-dihydroxycinnamic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=CC(=C(C=C1/C=C/C(=O)O)O)O
+  standard_inchi: InChI=1S/C9H8O4/c10-7-3-1-6(5-8(7)11)2-4-9(12)13/h1-5,10-11H,(H,12,13)/b4-2+
+  standard_inchi_key: QAIPRVGONGVQAS-DUXPYHPUSA-N
+  molecular_formula: C9H8O4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/689043
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 180.16
+  monoisotopic_mass: 180.04225874
+xrefs:
+- pubchem.compound:689043
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.01336-26#caffeic-acid
+  source_label: Caffeic acid
+  minted_identifier: antibioticmech:curator-0c36c19930
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.01336-26
+    snippet: Barzdina et al. evaluated caffeic acid against a panel of 10 wound-associated
+      bacterial strains and reported bactericidal activity (MIC 0.625 to 10.0 mg/mL),
+      filamentation of planktonic Pseudomonas aeruginosa, and 10% to 90% biofilm biomass
+      reduction.
+    notes: PubChem CID 689043 supplies the standard InChI, InChIKey, formula, and
+      isomeric SMILES for caffeic acid.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
