@@ -1,0 +1,52 @@
+identifier: CHEBI:68329
+label: Syringic acid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 4-hydroxy-3,5-dimethoxybenzoic acid with bactericidal and antibiofilm
+  activity against wound-associated bacterial pathogens.
+definition_source: DOI:10.1128/spectrum.01336-26
+synonyms:
+- synonym_text: 4-hydroxy-3,5-dimethoxybenzoic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COC1=CC(=CC(=C1O)OC)C(=O)O
+  standard_inchi: InChI=1S/C9H10O5/c1-13-6-3-5(9(11)12)4-7(14-2)8(6)10/h3-4,10H,1-2H3,(H,11,12)
+  standard_inchi_key: JMSVCTWVEWCHDZ-UHFFFAOYSA-N
+  molecular_formula: C9H10O5
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/10742
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 198.17
+  monoisotopic_mass: 198.05282342
+xrefs:
+- pubchem.compound:10742
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.01336-26#syringic-acid
+  source_label: Syringic acid
+  minted_identifier: antibioticmech:curator-b3784a7db9
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.01336-26
+    snippet: Barzdina et al. reported that syringic acid inhibited 7 of 10 tested
+      wound-associated bacterial strains at a MIC of 2.5 mg/mL and Escherichia coli
+      ATCC 35218, Klebsiella quasipneumoniae ATCC 700603, and Klebsiella pneumoniae
+      ATCC 10031 at 5.0 mg/mL (Table 1), with MBCs of 2.5 to 5.0 mg/mL (Table 2).
+    notes: PubChem CID 10742 and ChEBI CHEBI:68329 supply the standard InChI, InChIKey,
+      formula, and SMILES for syringic acid.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

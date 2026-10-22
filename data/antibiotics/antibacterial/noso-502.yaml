@@ -1,0 +1,48 @@
+identifier: antibioticmech:curator-a485dcd8d3
+label: NOSO-502
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A synthetic odilorhabdin peptide antibiotic that inhibits the bacterial
+  30S ribosomal subunit and has antibacterial activity against Enterobacterales and
+  efflux-deficient Pseudomonas aeruginosa.
+definition_source: DOI:10.1128/spectrum.00466-26
+synonyms:
+- synonym_text: NOSO 502
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1C[C@H](N(C1)C(=O)[C@@H](CCCN)NC(=O)CNC(=O)[C@H](CCN)NC(=O)[C@H]([C@H](CN)O)NC(=O)[C@H](CCCCN)N)C(=O)N[C@@H](CC2=CC=CC=C2F)C(=O)N[C@@H](CCCCN)C(=O)N/C(=C\CCN=C(N)N)/C(=O)O
+  standard_inchi: InChI=1S/C47H80FN17O11/c48-28-11-2-1-10-27(28)24-34(42(71)60-30(13-4-6-19-50)41(70)62-33(46(75)76)15-8-22-57-47(55)56)63-43(72)35-16-9-23-65(35)45(74)32(14-7-20-51)59-37(67)26-58-40(69)31(17-21-52)61-44(73)38(36(66)25-53)64-39(68)29(54)12-3-5-18-49/h1-2,10-11,15,29-32,34-36,38,66H,3-9,12-14,16-26,49-54H2,(H,58,69)(H,59,67)(H,60,71)(H,61,73)(H,62,70)(H,63,72)(H,64,68)(H,75,76)(H4,55,56,57)/b33-15-/t29-,30-,31-,32+,34-,35-,36-,38-/m0/s1
+  standard_inchi_key: JJUNUSUNICLAGV-URDXWPNVSA-N
+  molecular_formula: C47H80FN17O11
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/121246383
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 1078.26
+  monoisotopic_mass: 1077.6207246
+xrefs:
+- pubchem.compound:121246383
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.00466-26#noso-502
+  source_label: NOSO-502
+  minted_identifier: antibioticmech:curator-a485dcd8d3
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.00466-26
+    snippet: Racine et al. evaluated the odilorhabdin antibiotic NOSO-502 and reported
+      that MexXY-OprM efflux-deficient Pseudomonas aeruginosa strains (PAO750, 11B,
+      PAO1T, and PAO1 delta-mexXY) were susceptible to NOSO-502 with MIC values of
+      2 ug/mL.
+    notes: PubChem CID 121246383 supplies the standard InChI, InChIKey, formula, and
+      isomeric SMILES for NOSO-502.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

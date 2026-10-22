@@ -1063,7 +1063,10 @@ def resolve_identity(concept: Concept, chebi_rows: dict[str, dict]) -> tuple[str
     if concept.source == "CHEBI":
         return concept.source_id, "EXACT"
     chebi_id = next((x for x in concept.xrefs if x.startswith("CHEBI:")), "")
-    if chebi_id and chebi_rows.get(chebi_id, {}).get("standard_inchi_key"):
+    if chebi_id and (
+        chebi_rows.get(chebi_id, {}).get("standard_inchi_key")
+        or (concept.source == "CURATOR" and concept.structure.get("standard_inchi_key"))
+    ):
         return chebi_id, "EXACT"
     return concept.minted, "MINTED"
 

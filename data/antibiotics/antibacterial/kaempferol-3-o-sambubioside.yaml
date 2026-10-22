@@ -1,0 +1,56 @@
+identifier: CHEBI:189496
+label: Kaempferol 3-O-sambubioside
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A kaempferol O-diglycoside flavonoid with antibacterial and antibiofilm
+  activity against methicillin-resistant Staphylococcus aureus.
+definition_source: DOI:10.1371/journal.pone.0338733
+synonyms:
+- synonym_text: kaempferol 3-sambubioside
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: leucoside
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1[C@H]([C@@H]([C@H]([C@@H](O1)O[C@@H]2[C@H]([C@@H]([C@H](O[C@H]2OC3=C(OC4=CC(=CC(=C4C3=O)O)O)C5=CC=C(C=C5)O)CO)O)O)O)O)O
+  standard_inchi: InChI=1S/C26H28O15/c27-7-15-18(33)20(35)24(41-25-21(36)17(32)13(31)8-37-25)26(39-15)40-23-19(34)16-12(30)5-11(29)6-14(16)38-22(23)9-1-3-10(28)4-2-9/h1-6,13,15,17-18,20-21,24-33,35-36H,7-8H2/t13-,15-,17+,18-,20+,21-,24-,25+,26+/m1/s1
+  standard_inchi_key: RXAXTTGJEMODPY-CJNLAGEVSA-N
+  molecular_formula: C26H28O15
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/44566720
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 580.5
+  monoisotopic_mass: 580.1428202
+xrefs:
+- pubchem.compound:44566720
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1371/journal.pone.0338733#kaempferol-3-o-sambubioside
+  source_label: Kaempferol 3-O-sambubioside
+  minted_identifier: antibioticmech:curator-a196202606
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0338733
+    snippet: Samir et al. isolated kaempferol 3-O-sambubioside from Solanum muricatum
+      aerial parts and reported anti-MRSA activity with a MIC of 10.2 uM and MBC of
+      20.4 uM, 75.09% biofilm inhibition at 1/2 MIC, and synergy with gentamicin (FICI
+      0.413).
+    notes: PubChem CID 44566720 and ChEBI CHEBI:189496 (leucoside) supply the fully
+      stereodefined standard InChI, InChIKey, formula, and isomeric SMILES for kaempferol
+      3-O-beta-D-sambubioside.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:32:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, synonyms, xrefs, chemical_structure, source_concepts,
+    grounding_status. Curator inputs 2026-09-10, unchanged.'

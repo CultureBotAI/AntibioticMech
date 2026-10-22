@@ -1,0 +1,55 @@
+identifier: CHEBI:136785
+label: Kaempferol 3-O-gentiobioside
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A kaempferol O-diglycoside flavonoid with antibacterial and antibiofilm
+  activity against methicillin-resistant Staphylococcus aureus.
+definition_source: DOI:10.1371/journal.pone.0338733
+synonyms:
+- synonym_text: kaempferol 3-gentiobioside
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: kaempferol 3-beta-gentiobioside
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=CC(=CC=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O[C@H]4[C@@H]([C@H]([C@@H]([C@H](O4)CO[C@H]5[C@@H]([C@H]([C@@H]([C@H](O5)CO)O)O)O)O)O)O)O
+  standard_inchi: InChI=1S/C27H30O16/c28-7-14-17(32)20(35)22(37)26(41-14)39-8-15-18(33)21(36)23(38)27(42-15)43-25-19(34)16-12(31)5-11(30)6-13(16)40-24(25)9-1-3-10(29)4-2-9/h1-6,14-15,17-18,20-23,26-33,35-38H,7-8H2/t14-,15-,17-,18-,20+,21+,22-,23-,26-,27+/m1/s1
+  standard_inchi_key: BITPRCODIALMOV-DEFKTLOSSA-N
+  molecular_formula: C27H30O16
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/9960512
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 610.52
+  monoisotopic_mass: 610.15338488
+xrefs:
+- pubchem.compound:9960512
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1371/journal.pone.0338733#kaempferol-3-o-gentiobioside
+  source_label: Kaempferol 3-O-gentiobioside
+  minted_identifier: antibioticmech:curator-75dc194e52
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0338733
+    snippet: Samir et al. isolated kaempferol 3-O-gentiobioside from Solanum muricatum
+      aerial parts and reported anti-MRSA activity with a MIC of 8.3 uM and MBC of
+      16.5 uM, 70.11% biofilm inhibition at 1/2 MIC, and synergy with gentamicin (FICI
+      0.285).
+    notes: PubChem CID 9960512 and ChEBI CHEBI:136785 supply the standard InChI, InChIKey,
+      formula, and isomeric SMILES for kaempferol 3-O-gentiobioside.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:32:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, synonyms, source_concepts, grounding_status.
+    Curator inputs 2026-09-10, unchanged.'

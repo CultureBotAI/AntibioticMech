@@ -1,0 +1,48 @@
+identifier: antibioticmech:curator-105c804e50
+label: ECF transporter inhibitor 31
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A cyclopentyl-triazolyl-pyridinyl salicylic acid ECF transporter inhibitor
+  with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1021/acs.jmedchem.5c02721
+synonyms:
+- synonym_text: compound 31
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)C1=CC(OCC2=CC(N3N=NC(C4CCCC4)=C3)=CC(C5=CC(Cl)=C(OC(C)C)N=C5)=C2)=CC=C1O
+  standard_inchi: InChI=1S/C29H29ClN4O5/c1-17(2)39-28-25(30)12-21(14-31-28)20-9-18(16-38-23-7-8-27(35)24(13-23)29(36)37)10-22(11-20)34-15-26(32-33-34)19-5-3-4-6-19/h7-15,17,19,35H,3-6,16H2,1-2H3,(H,36,37)
+  standard_inchi_key: ZFFLOIRBVYHVSH-UHFFFAOYSA-N
+  molecular_formula: C29H29ClN4O5
+  structure_source: https://pubs.acs.org/doi/suppl/10.1021/acs.jmedchem.5c02721/suppl_file/jm5c02721_si_002.csv
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 549.03
+  monoisotopic_mass: 548.18264771
+xrefs:
+- pubchem.compound:176359509
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jmedchem.5c02721#31
+  source_label: ECF transporter inhibitor 31
+  minted_identifier: antibioticmech:curator-105c804e50
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jmedchem.5c02721
+    snippet: Exapicheidou et al. reported that compound 31 inhibited Enterococcus
+      faecalis, Enterococcus faecium, and Streptococcus pneumoniae strains with MIC
+      values of 0.5 to 2 ug/mL and inhibited Lactobacillus casei vitamin uptake with
+      an IC50 of 5 uM.
+    notes: Supplementary Data CSV row 31 reports the SMILES for compound 31, matching
+      PubChem CID 176359509; the SMILES was normalized with RDKit to derive the standard
+      InChI and InChIKey.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

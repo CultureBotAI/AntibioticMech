@@ -1,0 +1,57 @@
+identifier: CHEBI:27684
+label: Phenylmercuric acetate
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An organomercury compound with antibacterial and antifungal activity that
+  inhibits bacterial cytochrome c biogenesis in vivo.
+definition_source: DOI:10.1128/mbio.00273-26
+synonyms:
+- synonym_text: phenyl mercuric acetate
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: acetoxyphenylmercury
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(=O)O[Hg]C1=CC=CC=C1
+  standard_inchi: InChI=1S/C6H5.C2H4O2.Hg/c1-2-4-6-5-3-1;1-2(3)4;/h1-5H;1H3,(H,3,4);/q;;+1/p-1
+  standard_inchi_key: XEBWQGVWTUSTLN-UHFFFAOYSA-M
+  molecular_formula: C8H8HgO2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/16682730
+  retrieved_on: '2026-09-10'
+  charge: 0
+  average_mass: 336.74
+  monoisotopic_mass: 338.0230725
+xrefs:
+- pubchem.compound:16682730
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/mbio.00273-26#phenylmercuric-acetate
+  source_label: Phenylmercuric acetate
+  minted_identifier: antibioticmech:curator-8c82d0627a
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/mbio.00273-26
+    snippet: Mendez et al. reported that phenylmercuric acetate inhibited in vivo
+      cytochrome c biogenesis System I and System II (reducing heme signals to 10%
+      and 2% of wild type at 7.5 uM) and demonstrated strong antibacterial zone-of-inhibition
+      activity across six tested bacterial species.
+    notes: PubChem CID 16682730 and ChEBI CHEBI:27684 supply the standard InChI, InChIKey,
+      formula, and SMILES for phenylmercuric acetate.
+  source_version: '2026-09-10'
+curation_history:
+- timestamp: '2026-10-19T05:58:07Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'
