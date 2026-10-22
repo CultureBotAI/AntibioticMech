@@ -21,7 +21,12 @@ individual structure can become committed YAML.
   antimicrobial activity.
 - Reject mixtures, combination drugs, drug classes, scaffolds, extracts,
   structureless names, and evidence for a salt, fragment, conjugate or
-  stereoisomer that is not the exact structure being added.
+  stereoisomer that is not the exact structure being added. Defined-stoichiometry
+  coordination or organometallic complexes curated as distinct active
+  antimicrobial agents (such as zinc pyrithione or phenylmercuric acetate) are
+  admissible when the complex itself is the tested active species and carries a
+  unique Standard InChIKey; cross-reference any corresponding free-ligand record
+  in the definition or notes.
 - If the compound already has a YAML file under `data/antibiotics/`, switch to
   `curate-yaml-record`.
 - If the source is missing from the reproducible pipeline, add the extractor or
@@ -91,7 +96,9 @@ mutable display label.
 Grounding follows the existing merge rules:
 
 - use the ChEBI CURIE and `grounding_status: EXACT` when ChEBI itself supplies
-  the exact default structure;
+  the exact default structure (including `CURATOR` concepts in
+  `curation/curator_antibiotics.tsv` whose exact Standard InChIKey matches a
+  ChEBI entry recorded in the row's `xrefs`);
 - merge a CARD/ARO concept into that ChEBI record only when the ChEBI
   cross-reference survives the exact cross-reference checks;
 - keep an `antibioticmech:` CURIE and `grounding_status: MINTED` when no

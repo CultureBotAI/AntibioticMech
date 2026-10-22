@@ -125,20 +125,20 @@ that it exists is not.
 
 ## This repository's scheme
 
-- **Scheme**: Upstream-first (`CHEBI:<digits>`) with minted fallback (`AntibioticMech:NNNNNN`)
+- **Scheme**: Upstream-first (`CHEBI:<digits>`) with content-hashed minted fallback (`antibioticmech:<source>-<10-hex>`)
 - **Identity slot**: `identifier` (`identifier: true` on `AntibioticRecord`)
 
 AntibioticMech uses the **upstream-first** scheme:
 
-- **Identity slot**: `identifier` on `AntibioticRecord` (`pattern: ^(CHEBI:[0-9]+|AntibioticMech:[0-9]{6})$`).
-- **When ChEBI has an exact compound entry**: `identifier` is `CHEBI:<digits>` and `grounding_status` is `EXACT`.
-- **When ChEBI lacks the exact compound**: `identifier` is minted as `AntibioticMech:NNNNNN` (6-digit zero-padded), `grounding_status` is `MINTED`, and the allocation is recorded in `curation/minted_identifiers.tsv`.
+- **Identity slot**: `identifier` on `AntibioticRecord` (`range: curie`), enforced by `scripts/verify_corpus.py` and tracked in `data/antibiotics/PATHS.tsv` (active records) and `data/antibiotics/RETIRED.tsv` (retired records).
+- **When ChEBI has an exact compound entry with a verified chemical structure**: `identifier` is `CHEBI:<digits>` and `grounding_status` is `EXACT`.
+- **When ChEBI lacks an exact structure-bearing compound**: `identifier` is minted deterministically by `mint(source, key)` in `scripts/seed_from_sources.py` as `antibioticmech:<source>-<10-hex>` (lowercase source tag `aro`, `pubchem`, `drugbank`, `kegg`, or `curator` followed by the first 10 hex digits of `sha1("{source}:{key}")`), and `grounding_status` is `CLOSE` (if `parent_compounds` maps to a broader `CHEBI:` parent) or `MINTED` (if no ChEBI parent applies). Slug stability, retirements, and merge/keep/split decisions are governed by `data/antibiotics/PATHS.tsv`, `data/antibiotics/RETIRED.tsv`, and `curation/decisions.tsv`.
 - **Validation commands**:
   ```bash
   just validate-strict
   just verify-corpus
   ```
-- **Worked example**: `identifier: CHEBI:17833` (daptomycin, `grounding_status: EXACT`) or `identifier: AntibioticMech:000001` (`grounding_status: MINTED`, tracked in `curation/minted_identifiers.tsv`).
+- **Worked example**: `identifier: CHEBI:17833` (daptomycin, `grounding_status: EXACT`) or `identifier: antibioticmech:curator-67bf5a4ae7` (corramycin, `grounding_status: MINTED`, tracked in `data/antibiotics/PATHS.tsv`).
 ## Related
 
 - `kg-microbe-skills check` validates that every path and sibling-skill

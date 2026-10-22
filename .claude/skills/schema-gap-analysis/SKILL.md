@@ -161,7 +161,7 @@ AntibioticMech keeps **both skills with a clear boundary**:
 |---|---|---|
 | Undeclared keys in `AntibioticRecord` or nested `MolecularTarget` / `ResistanceMechanism` / `ActivityObservation` objects | Process | Fix the mutator/importer and re-write through `write_validated_antibiotic`. |
 | Missing claim-level `evidence` on targets, resistance mechanisms, or causal edges | Instances | Curate from primary literature or CARD/ARO with proper source provenance. |
-| Minted ID or grounding status mismatch against `curation/minted_identifiers.tsv` | Process | Reconcile via `just verify-corpus` (`scripts/verify_corpus.py`). |
+| Minted ID, grounding status, or lockfile mismatch against `data/antibiotics/PATHS.tsv` and `data/antibiotics/RETIRED.tsv` | Process | Reconcile via `just verify-corpus` (`scripts/verify_corpus.py`). |
 ## Related
 
 - The `manage-identifiers` skill covers identity, and `id-label-correspondence`

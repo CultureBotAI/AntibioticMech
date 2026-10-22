@@ -123,6 +123,27 @@ def test_curator_inventory_accepts_https_references(tmp_path):
     assert concepts[0].evidence[0]["reference"] == "https://example.org/stable/widgetmycin"
 
 
+def test_curator_inventory_with_chebi_xref_grounds_to_chebi_exact(tmp_path):
+    concepts = load_curator_concepts(_curator_inventory(
+        tmp_path,
+        xrefs="CHEBI:16183|PubChem:297",
+    ))
+    for concept in concepts:
+        concept.minted = mint(concept.source, concept.source_id)
+
+    records, skipped = merge(concepts, {}, CONF, {}, "2026-09-01")
+    record = records["CHEBI:16183"]
+
+    assert skipped == []
+    assert record["identifier"] == "CHEBI:16183"
+    assert record["grounding_status"] == "EXACT"
+    assert record["curation_status"] == "PROPOSED"
+    assert record["xrefs"] == ["pubchem.compound:297"]
+    assert record["source_concepts"][0]["minted_identifier"] == mint(
+        "CURATOR", "DOI:10.1000/widget#compound-1"
+    )
+
+
 def test_curator_inventory_requires_a_doi_or_stable_url(tmp_path):
     path = _curator_inventory(tmp_path, reference="PMID:123")
 

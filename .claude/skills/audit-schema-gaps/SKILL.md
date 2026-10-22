@@ -51,7 +51,7 @@ does not declare. In AntibioticMech, `just validate-strict`
 (`scripts/validate_strict.py`) enforces closed-schema validation across all
 records under `data/antibiotics/**/*.yaml`, and `just verify-corpus`
 (`scripts/verify_corpus.py`) checks corpus-wide invariants, identifier
-uniqueness, and minted-ID registry alignment (`curation/minted_identifiers.tsv`).
+uniqueness, and path/retirement lockfile alignment (`data/antibiotics/PATHS.tsv` and `data/antibiotics/RETIRED.tsv`).
 Always derive current record and error counts from a fresh run.
 
 The skill is built around three orthogonal lenses:
@@ -61,8 +61,8 @@ The skill is built around three orthogonal lenses:
    `scripts/validate_strict.py` and checked for structural/corpus invariants via
    `scripts/verify_corpus.py`.
 2. **Schema audit** — structural inspection of `src/antibioticmech/schema/antibioticmech.yaml`
-   for identifier policy (`id` carrying `CHEBI:<digits>` or minted
-   `AntibioticMech:NNNNNN`), untyped `string` slots, term wrapper consistency,
+   for identifier policy (`identifier` carrying `CHEBI:<digits>` or minted
+   `antibioticmech:<source>-<10-hex>`), untyped `string` slots, term wrapper consistency,
    `required:` alignment, orphan enums, and enum casing.
 3. **Pipeline / writer audit** — inspection of YAML-writing modules in
    `scripts/` and `src/antibioticmech/` for `curation_history` tracking,
@@ -81,7 +81,7 @@ The skill is built around three orthogonal lenses:
 **Don't** invoke this skill for:
 - Quick three-axis error triage without saving a structured review — use `schema-gap-analysis`.
 - Single-record scientific review or curation — use `review-yaml-record` or `curate-yaml-record`.
-- Identifier minting or `curation/minted_identifiers.tsv` reconciliation alone — use `manage-identifiers`.
+- Identifier minting or `data/antibiotics/PATHS.tsv` / `data/antibiotics/RETIRED.tsv` reconciliation alone — use `manage-identifiers`.
 
 ## Workflow
 
@@ -145,6 +145,6 @@ via `scripts/record_review.py`.
 ## Related skills
 
 - `schema-gap-analysis` — canonical three-axis drift classification guide.
-- `manage-identifiers` — `CHEBI:` vs `AntibioticMech:NNNNNN` identifier policy.
+- `manage-identifiers` — `CHEBI:` vs `antibioticmech:<source>-<10-hex>` identifier policy.
 - `id-label-correspondence` — ontology ID and canonical label correspondence checks.
 - `curate-yaml-record` — single-record evidence-backed curation workflow.

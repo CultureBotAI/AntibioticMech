@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-82c0567873
+identifier: CHEBI:46557
 label: Zoledronic acid
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: An imidazole-containing bisphosphonate with bactericidal membrane-permeabilizing
   activity against Acinetobacter baylyi and Escherichia coli.
 definition_source: DOI:10.1099/mic.0.001619
@@ -36,15 +36,21 @@ source_concepts:
   - CHEBI:33282
   evidence:
   - reference: DOI:10.1099/mic.0.001619
-    snippet: Salcedo-Sora and Kell identified zoledronic acid in a flow-cytometric
-      membrane-permeabilization screen and reported growth inhibition with IC50 values
-      of 0.57 to 0.59 mg/L against Acinetobacter baylyi ADP1 and 0.68 to 0.72 mg/L
-      against Escherichia coli BW25113.
-    notes: PubChem CID 68740 supplies the standard InChI, InChIKey, formula, and SMILES
-      for zoledronic acid.
+    snippet: 'Salcedo-Sora and Kell identified the nitrogen-containing bisphosphonate
+      zoledronic acid as a top hit in a flow-cytometric Prestwick library membrane-permeabilization
+      screen and reported growth inhibition (Fig. 7a-b median IC50 across the three
+      validated hits: 0.57 to 0.59 mg/L against Acinetobacter baylyi ADP1 and 0.68
+      to 0.72 mg/L against Escherichia coli BW25113).'
+    notes: PubChem CID 68740 and ChEBI CHEBI:46557 supply the standard InChI, InChIKey,
+      formula, and SMILES for zoledronic acid.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:16Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

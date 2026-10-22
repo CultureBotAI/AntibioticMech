@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-2eccc93f3a
+identifier: CHEBI:180720
 label: Viniferifuran
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A benzofuran resveratrol dimer stilbenoid with antibacterial activity
   against methicillin-resistant Staphylococcus aureus.
 definition_source: DOI:10.1002/biof.70128
@@ -36,11 +36,16 @@ source_concepts:
     snippet: Johnsen et al. reported that viniferifuran inhibited methicillin-resistant
       Staphylococcus aureus USA300 and cefoxitin-treated USA300Cef with a MIC of 8
       ug/mL and MBC values of 32 to 64 ug/mL.
-    notes: PubChem CID 131751470 supplies the standard InChI, InChIKey, formula, and
-      isomeric SMILES for viniferifuran.
+    notes: PubChem CID 131751470 and ChEBI CHEBI:180720 supply the standard InChI,
+      InChIKey, formula, and isomeric SMILES for viniferifuran.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:32:56Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

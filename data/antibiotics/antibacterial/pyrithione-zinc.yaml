@@ -1,10 +1,10 @@
-identifier: antibioticmech:curator-0eb8493a07
+identifier: CHEBI:32076
 label: Pyrithione zinc
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
-definition: A zinc coordination complex of pyrithione with broad-spectrum antibacterial
-  and antifungal activity.
+grounding_status: EXACT
+definition: A zinc coordination complex of pyrithione (CHEBI:8647) with broad-spectrum
+  antibacterial and antifungal activity.
 definition_source: DOI:10.1128/mbio.00273-26
 synonyms:
 - synonym_text: zinc pyrithione
@@ -42,11 +42,17 @@ source_concepts:
       c biogenesis System I and System II (reducing heme signals to 14% and 12% of
       wild type at 7.5 uM) and demonstrated strong broad-spectrum antibacterial zone-of-inhibition
       activity across six bacterial species.
-    notes: PubChem CID 26041 supplies the standard InChI, InChIKey, formula, and SMILES
-      for pyrithione zinc.
+    notes: PubChem CID 26041 and ChEBI CHEBI:32076 supply the standard InChI, InChIKey,
+      formula, and SMILES for pyrithione zinc (the 2:1 Zn(II) coordination complex
+      of pyrithione, CHEBI:8647).
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:05Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, definition, source_concepts, grounding_status.
+    Curator inputs 2026-09-10, unchanged.'

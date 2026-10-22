@@ -34,10 +34,15 @@ source_concepts:
       pathogen Vibrio harveyi VH306 with a MIC of 300 ug/mL.
     notes: Table 5 of DOI:10.3390/ijms27177714 explicitly cites PubChem CID 163114856
       for trichorzianine 1938, supplying the standard InChI, InChIKey, formula, and
-      isomeric SMILES.
+      isomeric SMILES (with the C-91 isovaline stereocenter left unassigned in the
+      primary source).
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:50Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: source_concepts. Curator inputs 2026-09-10, unchanged.'

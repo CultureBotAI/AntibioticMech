@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-1c9e30494e
+identifier: CHEBI:2873
 label: Asiatic acid
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: An ursane-type pentacyclic triterpenoid with antibacterial, antibiofilm,
   and efflux-inhibitory activity against Shigella flexneri.
 definition_source: DOI:10.1080/19490976.2025.2586329
@@ -37,11 +37,16 @@ source_concepts:
       Sf2457T and multidrug-resistant clinical strain BCH12654 in a dose-dependent
       manner, reduced biofilm viability and AcrAB-TolC efflux pump expression, and
       lowered bacterial burden in vivo.
-    notes: PubChem CID 119034 supplies the standard InChI, InChIKey, formula, and
-      isomeric SMILES for asiatic acid.
+    notes: PubChem CID 119034 and ChEBI CHEBI:2873 supply the standard InChI, InChIKey,
+      formula, and isomeric SMILES for asiatic acid.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:02Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-8c82d0627a
+identifier: CHEBI:27684
 label: Phenylmercuric acetate
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: An organomercury compound with antibacterial and antifungal activity that
   inhibits bacterial cytochrome c biogenesis in vivo.
 definition_source: DOI:10.1128/mbio.00273-26
@@ -42,11 +42,16 @@ source_concepts:
       cytochrome c biogenesis System I and System II (reducing heme signals to 10%
       and 2% of wild type at 7.5 uM) and demonstrated strong antibacterial zone-of-inhibition
       activity across six tested bacterial species.
-    notes: PubChem CID 16682730 supplies the standard InChI, InChIKey, formula, and
-      SMILES for phenylmercuric acetate.
+    notes: PubChem CID 16682730 and ChEBI CHEBI:27684 supply the standard InChI, InChIKey,
+      formula, and SMILES for phenylmercuric acetate.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:00Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

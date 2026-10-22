@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-4ae80d4bd3
+identifier: CHEBI:109543
 label: Broxyquinoline
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A 5,7-dibromoquinolin-8-ol with antibacterial activity that inhibits bacterial
   cytochrome c maturation in vivo.
 definition_source: DOI:10.1128/mbio.00273-26
@@ -40,11 +40,16 @@ source_concepts:
       cytochrome c biogenesis System I (reducing heme signal to 28% of wild type at
       7.5 uM) and demonstrated antibacterial zone-of-inhibition activity across tested
       bacterial species.
-    notes: PubChem CID 2453 supplies the standard InChI, InChIKey, formula, and SMILES
-      for broxyquinoline.
+    notes: PubChem CID 2453 and ChEBI CHEBI:109543 supply the standard InChI, InChIKey,
+      formula, and SMILES for broxyquinoline.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:32:48Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-b3784a7db9
+identifier: CHEBI:68329
 label: Syringic acid
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A 4-hydroxy-3,5-dimethoxybenzoic acid with bactericidal and antibiofilm
   activity against wound-associated bacterial pathogens.
 definition_source: DOI:10.1128/spectrum.01336-26
@@ -33,14 +33,20 @@ source_concepts:
   - CHEBI:33282
   evidence:
   - reference: DOI:10.1128/spectrum.01336-26
-    snippet: Barzdina et al. evaluated syringic acid against a panel of 10 wound-associated
-      bacterial strains and reported bactericidal activity with MIC values in the
-      range of 0.625 to 10.0 mg/mL and 10% to 90% reduction of bacterial biofilm biomass.
-    notes: PubChem CID 10742 supplies the standard InChI, InChIKey, formula, and SMILES
-      for syringic acid.
+    snippet: Barzdina et al. reported that syringic acid inhibited 7 of 10 tested
+      wound-associated bacterial strains at a MIC of 2.5 mg/mL and Escherichia coli
+      ATCC 35218, Klebsiella quasipneumoniae ATCC 700603, and Klebsiella pneumoniae
+      ATCC 10031 at 5.0 mg/mL (Table 1), with MBCs of 2.5 to 5.0 mg/mL (Table 2).
+    notes: PubChem CID 10742 and ChEBI CHEBI:68329 supply the standard InChI, InChIKey,
+      formula, and SMILES for syringic acid.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:34Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

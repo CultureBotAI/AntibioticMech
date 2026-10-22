@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-a0ddbc12c9
+identifier: CHEBI:4356
 label: Deferoxamine
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A bacterial tris-hydroxamate siderophore and iron chelator with antimycobacterial
   and antibiofilm activity against Mycobacterium abscessus.
 definition_source: DOI:10.3390/ijms27135789
@@ -40,8 +40,8 @@ source_concepts:
       subsp. massiliense with a bacteriostatic MIC of 9.75 ug/mL, showed strong synergy
       with clarithromycin (FICI 0.047), reduced biofilm biomass, and lowered intracellular
       bacterial burden in infected RAW 264.7 macrophages.
-    notes: PubChem CID 2973 supplies the standard InChI, InChIKey, formula, and SMILES
-      for deferoxamine.
+    notes: PubChem CID 2973 and ChEBI CHEBI:4356 supply the standard InChI, InChIKey,
+      formula, and SMILES for deferoxamine.
   source_version: '2026-09-10'
 producer_organisms:
 - taxon_id: NCBITaxon:100226
@@ -67,3 +67,8 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:13Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

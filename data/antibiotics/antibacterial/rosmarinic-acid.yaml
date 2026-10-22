@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-ce6080f25f
+identifier: CHEBI:50371
 label: Rosmarinic acid
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A caffeic acid ester of salvianic acid A with bactericidal and antibiofilm
   activity against wound-associated bacterial pathogens.
 definition_source: DOI:10.1128/spectrum.01336-26
@@ -29,14 +29,20 @@ source_concepts:
   - CHEBI:33282
   evidence:
   - reference: DOI:10.1128/spectrum.01336-26
-    snippet: Barzdina et al. evaluated rosmarinic acid against a panel of 10 wound-associated
-      bacterial strains and reported bactericidal activity with MIC values in the
-      range of 0.625 to 10.0 mg/mL and 10% to 90% reduction of bacterial biofilm biomass.
-    notes: PubChem CID 5281792 supplies the standard InChI, InChIKey, formula, and
-      isomeric SMILES for rosmarinic acid.
+    snippet: Barzdina et al. reported that rosmarinic acid inhibited 8 of 10 tested
+      wound-associated bacterial strains at a MIC of 5.0 mg/mL and Escherichia coli
+      ATCC 35218 and Klebsiella pneumoniae ATCC 10031 at 10.0 mg/mL (Table 1), with
+      MBC values of 5.0 to 10.0 mg/mL (Table 2).
+    notes: PubChem CID 5281792 and ChEBI CHEBI:50371 supply the standard InChI, InChIKey,
+      formula, and isomeric SMILES for rosmarinic acid.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:19Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

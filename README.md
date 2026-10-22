@@ -70,7 +70,7 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
-Identity: **2669** records (90%) are grounded in a ChEBI term; **300** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2691** records (91%) are grounded in a ChEBI term; **278** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **287** from CARD alone.
 

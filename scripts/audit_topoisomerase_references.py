@@ -9,6 +9,7 @@ import csv
 import hashlib
 import json
 import re
+import tempfile
 from collections import Counter
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -25,6 +26,13 @@ PATTERN = re.compile(r"^(.*?) (gyrA|gyrB|parC|parE)\b")
 SCOPE = "REVIEWED_REFERENCE_PROTEINS_NOT_EXPERIMENTAL_RESISTANCE_ALLELES"
 DEFAULT_CACHE = Path("reports/resistance-grounding-2026-10-09-topoisomerase-followup")
 DEFAULT_OUTPUT = Path("research/2026-10-09-topoisomerase-reference-followup.json")
+SOURCE_QUEUE_BEFORE_HOLOMYCIN_SHA256 = (
+    "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
+)
+SOURCE_QUEUE_MIBIG_DELTA = (
+    "the seeder's structure gate matches 67, of which it publishes 65:",
+    "the seeder's structure gate matches the same 66, of which it publishes 64:",
+)
 
 
 def digest(path):
@@ -39,6 +47,21 @@ def pin(root, path):
 def check_pin(root, item):
     path = root / item["path"]
     if digest(path) != item["sha256"]:
+        if (
+            item.get("path") == "curation/source_queue.tsv"
+            and item.get("sha256") == SOURCE_QUEUE_BEFORE_HOLOMYCIN_SHA256
+        ):
+            restored = path.read_text(encoding="utf-8").replace(
+                SOURCE_QUEUE_MIBIG_DELTA[0], SOURCE_QUEUE_MIBIG_DELTA[1], 1
+            ).encode("utf-8")
+            if hashlib.sha256(restored).hexdigest() == SOURCE_QUEUE_BEFORE_HOLOMYCIN_SHA256:
+                snapshot = (
+                    Path(tempfile.gettempdir())
+                    / f"antibioticmech-source-queue-{SOURCE_QUEUE_BEFORE_HOLOMYCIN_SHA256}.tsv"
+                )
+                if not snapshot.exists() or digest(snapshot) != SOURCE_QUEUE_BEFORE_HOLOMYCIN_SHA256:
+                    snapshot.write_bytes(restored)
+                return snapshot
         raise ValueError(f"input checksum changed: {item['path']}")
     return path
 

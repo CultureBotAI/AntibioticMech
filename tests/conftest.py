@@ -330,6 +330,7 @@ def pre_uniprot_protein_examples_root(tmp_path_factory):
     historical_manifest = json.loads(
         (REPO_ROOT / "research/2026-10-15-card-reference-reconciled.json").read_bytes()
     )
+    historical_identifiers = {row["identifier"] for row in historical_manifest["records"]}
     historical_paths = {row["path"] for row in historical_manifest["records"]}
     historical_slugs = {
         Path(p).relative_to("data/antibiotics").with_suffix("").as_posix()
@@ -356,8 +357,31 @@ def pre_uniprot_protein_examples_root(tmp_path_factory):
     (root / "curation").mkdir()
     for path in (REPO_ROOT / "curation").iterdir():
         if path.name == "curator_antibiotics.tsv":
-            lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
-            (root / "curation" / path.name).write_text("".join(lines[:31]), encoding="utf-8")
+            with path.open(encoding="utf-8", newline="") as fh:
+                reader = csv.DictReader(fh, delimiter="\t")
+                fieldnames = list(reader.fieldnames or [])
+                curator_rows = [
+                    row
+                    for row in reader
+                    if (
+                        "antibioticmech:curator-"
+                        + hashlib.sha1(f"CURATOR:{row['source_id']}".encode()).hexdigest()[:10]
+                    )
+                    in historical_identifiers
+                ]
+            with (root / "curation" / path.name).open("w", encoding="utf-8", newline="") as fh:
+                writer = csv.DictWriter(
+                    fh, fieldnames=fieldnames, delimiter="\t", lineterminator="\n"
+                )
+                writer.writeheader()
+                writer.writerows(curator_rows)
+        elif path.name == "source_queue.tsv":
+            restored = path.read_text(encoding="utf-8").replace(
+                "the seeder's structure gate matches 67, of which it publishes 65:",
+                "the seeder's structure gate matches the same 66, of which it publishes 64:",
+                1,
+            )
+            (root / "curation" / path.name).write_text(restored, encoding="utf-8")
         else:
             (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
     for delta in transition["record_deltas"]:

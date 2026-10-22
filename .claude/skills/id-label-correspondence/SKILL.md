@@ -128,13 +128,14 @@ so there is no correct label to compare against. Re-map it.
 
 ## How this repository runs it
 
-- **Validator / configuration**: `scripts/validate_id_label_correspondence.py` / `conf/id_label_targets.yaml`
-- **Label-bearing surfaces checked**: Ontology-grounded `identifier`, `parent_compounds`, `resistance_mechanisms`, `molecular_targets`, and `activity_spectrum` taxon terms in `data/antibiotics/**/*.yaml`, configured via `conf/id_label_targets.yaml`
+- **Validator**: `scripts/validate_id_label_correspondence.py` (shared OAK validator vendored in `scripts/`; requires a target config file passed via `-c <targets.yaml>`, while `just verify-corpus` (`scripts/verify_corpus.py`) enforces live corpus-wide identifier/label/synonym hygiene)
+- **Label-bearing surfaces to configure**: Ontology-grounded `identifier`, `parent_compounds`, `resistance_mechanisms`, `molecular_targets`, and `activity_spectrum` taxon terms in `data/antibiotics/**/*.yaml`
 - **Worked example**: CHEBI:17833 (`daptomycin`) or ARO:3000026 (`ermA`)
-- **Skipped / non-OAK prefixes**: `AntibioticMech` (minted local IDs), `UniProtKB`, `PUBCHEM.COMPOUND`, `DRUGBANK`, `KEGG.COMPOUND`, `CAS`
+- **Skipped / non-OAK prefixes**: `antibioticmech` (minted local IDs), `UniProtKB`, `PUBCHEM.COMPOUND`, `DRUGBANK`, `KEGG.COMPOUND`, `CAS`
 
 ```bash
-uv run python scripts/validate_id_label_correspondence.py -c conf/id_label_targets.yaml --report reports/id_label_drift.tsv
+just verify-corpus
+uv run python scripts/validate_id_label_correspondence.py -c /tmp/id_label_targets.yaml --report /tmp/id_label_drift.tsv
 ```
 ## Related
 

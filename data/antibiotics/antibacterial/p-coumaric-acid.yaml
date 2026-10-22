@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-72744e980b
+identifier: CHEBI:32374
 label: p-Coumaric acid
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A 4-hydroxycinnamic acid with bactericidal and antibiofilm activity against
   wound-associated bacterial pathogens.
 definition_source: DOI:10.1128/spectrum.01336-26
@@ -36,15 +36,21 @@ source_concepts:
   - CHEBI:33282
   evidence:
   - reference: DOI:10.1128/spectrum.01336-26
-    snippet: Barzdina et al. evaluated p-coumaric acid against 10 wound-associated
-      bacterial strains, reported bactericidal activity (MIC 0.625 to 10.0 mg/mL)
-      and 10% to 90% biofilm biomass reduction, and identified p-coumaric acid as
-      one of the most potent antibacterial phenolic acids tested.
-    notes: PubChem CID 637542 supplies the standard InChI, InChIKey, formula, and
-      isomeric SMILES for p-coumaric acid.
+    snippet: Barzdina et al. reported that p-coumaric acid inhibited Bacillus subtilis
+      ATCC 6633 at a MIC of 0.625 mg/mL, Staphylococcus aureus, Staphylococcus epidermidis,
+      Klebsiella quasipneumoniae, and Klebsiella pneumoniae at 1.25 mg/mL, and Escherichia
+      coli, Pseudomonas aeruginosa, and Proteus mirabilis at 2.5 mg/mL (Table 1),
+      with uniform MBCs of 2.5 mg/mL across all 10 strains (Table 2).
+    notes: PubChem CID 637542 and ChEBI CHEBI:32374 supply the standard InChI, InChIKey,
+      formula, and isomeric SMILES for p-coumaric acid.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:06Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

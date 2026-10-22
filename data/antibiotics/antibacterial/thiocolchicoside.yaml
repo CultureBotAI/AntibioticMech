@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-1a3190f911
+identifier: CHEBI:94557
 label: Thiocolchicoside
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A semi-synthetic sulfur-substituted colchicoside derivative with antibacterial
   and antifungal activity.
 definition_source: DOI:10.7759/cureus.110122
@@ -35,11 +35,16 @@ source_concepts:
       mutans, Staphylococcus aureus, Lactobacillus acidophilus, Escherichia coli,
       and Candida albicans with MICs of 125 ug/mL, Aspergillus niger at 250 ug/mL,
       and Klebsiella pneumoniae at 500 ug/mL.
-    notes: PubChem CID 9915886 supplies the standard InChI, InChIKey, formula, and
-      isomeric SMILES for thiocolchicoside.
+    notes: PubChem CID 9915886 and ChEBI CHEBI:94557 supply the standard InChI, InChIKey,
+      formula, and isomeric SMILES for thiocolchicoside.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:33:46Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, source_concepts, grounding_status. Curator
+    inputs 2026-09-10, unchanged.'

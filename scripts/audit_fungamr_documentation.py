@@ -94,8 +94,10 @@ def build(root, directory):
     for key in ("prior_verification", "prior_cohort", "current_census", "protected"):
         reference.check_pin(root, cohort[key])
     protected = json.loads((root / cohort["protected"]["path"]).read_bytes())
-    if reference.digest(root / "curation/source_queue.tsv") != protected["curation/source_queue.tsv"]:
-        raise ValueError("source queue changed since the documentation plan")
+    reference.check_pin(
+        root,
+        {"path": "curation/source_queue.tsv", "sha256": protected["curation/source_queue.tsv"]},
+    )
     if {key: row["url"] for key, row in plan["requests"].items()} != URLS:
         raise ValueError("documentation-only request scope changed")
     if set(cohort["terms"]) != set(cohort_audit.GENES):

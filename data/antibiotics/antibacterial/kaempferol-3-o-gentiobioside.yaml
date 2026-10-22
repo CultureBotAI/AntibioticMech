@@ -1,13 +1,16 @@
-identifier: antibioticmech:curator-75dc194e52
+identifier: CHEBI:136785
 label: Kaempferol 3-O-gentiobioside
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A kaempferol O-diglycoside flavonoid with antibacterial and antibiofilm
   activity against methicillin-resistant Staphylococcus aureus.
 definition_source: DOI:10.1371/journal.pone.0338733
 synonyms:
 - synonym_text: kaempferol 3-gentiobioside
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: kaempferol 3-beta-gentiobioside
   synonym_type: EXACT_SYNONYM
   source: curator
 activity_roles:
@@ -37,11 +40,16 @@ source_concepts:
       aerial parts and reported anti-MRSA activity with a MIC of 8.3 uM and MBC of
       16.5 uM, 70.11% biofilm inhibition at 1/2 MIC, and synergy with gentamicin (FICI
       0.285).
-    notes: PubChem CID 9960512 supplies the standard InChI, InChIKey, formula, and
-      isomeric SMILES for kaempferol 3-O-gentiobioside.
+    notes: PubChem CID 9960512 and ChEBI CHEBI:136785 supply the standard InChI, InChIKey,
+      formula, and isomeric SMILES for kaempferol 3-O-gentiobioside.
   source_version: '2026-09-10'
 curation_history:
 - timestamp: '2026-10-19T05:58:07Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-22T05:32:51Z'
+  curator: seed_from_sources
+  action: RESEEDED_FROM_SOURCES
+  changes: 'Re-seeded; changed: identifier, synonyms, source_concepts, grounding_status.
+    Curator inputs 2026-09-10, unchanged.'
