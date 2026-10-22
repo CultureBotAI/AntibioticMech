@@ -365,9 +365,14 @@ def pre_uniprot_protein_examples_root(tmp_path_factory):
                     for row in reader
                     if (
                         "antibioticmech:curator-"
-                        + hashlib.sha1(f"CURATOR:{row['source_id']}".encode()).hexdigest()[:10]
+                        + hashlib.sha256(f"CURATOR|{row['source_id']}".encode()).hexdigest()[:10]
                     )
                     in historical_identifiers
+                    or any(
+                        xref in historical_identifiers
+                        for xref in (row.get("xrefs") or "").split("|")
+                        if xref.startswith("CHEBI:")
+                    )
                 ]
             with (root / "curation" / path.name).open("w", encoding="utf-8", newline="") as fh:
                 writer = csv.DictWriter(

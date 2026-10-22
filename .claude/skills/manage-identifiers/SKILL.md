@@ -132,13 +132,13 @@ AntibioticMech uses the **upstream-first** scheme:
 
 - **Identity slot**: `identifier` on `AntibioticRecord` (`range: curie`), enforced by `scripts/verify_corpus.py` and tracked in `data/antibiotics/PATHS.tsv` (active records) and `data/antibiotics/RETIRED.tsv` (retired records).
 - **When ChEBI has an exact compound entry with a verified chemical structure**: `identifier` is `CHEBI:<digits>` and `grounding_status` is `EXACT`.
-- **When ChEBI lacks an exact structure-bearing compound**: `identifier` is minted deterministically by `mint(source, key)` in `scripts/seed_from_sources.py` as `antibioticmech:<source>-<10-hex>` (lowercase source tag `aro`, `pubchem`, `drugbank`, `kegg`, or `curator` followed by the first 10 hex digits of `sha1("{source}:{key}")`), and `grounding_status` is `CLOSE` (if `parent_compounds` maps to a broader `CHEBI:` parent) or `MINTED` (if no ChEBI parent applies). Slug stability, retirements, and merge/keep/split decisions are governed by `data/antibiotics/PATHS.tsv`, `data/antibiotics/RETIRED.tsv`, and `curation/decisions.tsv`.
+- **When ChEBI lacks an exact structure-bearing compound**: `identifier` is minted deterministically by `mint(source, source_id)` in `scripts/seed_from_sources.py` as `antibioticmech:<source>-<10-hex>` (lowercase source tag `curator`, `aro`, or `chebi` followed by the first 10 hex digits of `sha256("{source}|{source_id}")`), and `grounding_status` is `CLOSE` (if `parent_compounds` maps to a broader `CHEBI:` parent) or `MINTED` (if no ChEBI parent applies). Slug stability, retirements, and merge/keep/split decisions are governed by `data/antibiotics/PATHS.tsv`, `data/antibiotics/RETIRED.tsv`, and `curation/decisions.tsv`.
 - **Validation commands**:
   ```bash
   just validate-strict
   just verify-corpus
   ```
-- **Worked example**: `identifier: CHEBI:17833` (daptomycin, `grounding_status: EXACT`) or `identifier: antibioticmech:curator-67bf5a4ae7` (corramycin, `grounding_status: MINTED`, tracked in `data/antibiotics/PATHS.tsv`).
+- **Worked example**: `identifier: CHEBI:17833` (daptomycin, `grounding_status: EXACT`) or `identifier: antibioticmech:curator-452d38df8e` (corramycin, `grounding_status: MINTED`, tracked in `data/antibiotics/PATHS.tsv`).
 ## Related
 
 - `kg-microbe-skills check` validates that every path and sibling-skill
