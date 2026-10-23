@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:100147</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_100147">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A monocarboxylic acid comprising 1,8-naphthyridin-4-one substituted by carboxylic acid, ethyl and methyl groups at positions 3, 1, and 7, respectively. An orally administered antibacterial, it is used in the treatment of lower urinary-tract infections due to Gram-negative bacteria, including the majority of E. coli, Enterobacter, Klebsiella, and Proteus species.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000001">fluoroquinolone antibiotic</a><code class="curie">ARO:0000001</code></p>
@@ -182,6 +179,31 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 </div>
 <ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17074800">PMID:17074800</a></span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
+</ul>
+
+<h3>bacterial DNA gyrase <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Purified Escherichia coli DNA gyrase (NalA/GyrA and GyrB) supercoiling and detergent-induced DNA cleavage-complex assays in the presence of nalidixic acid (PMID:200930). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 1977-11 (retrieved 2026-10-23).</p>
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><div class="table-scroll" role="region" aria-label="bacterial DNA gyrase organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>DNA gyrase subunit A <a href="https://www.uniprot.org/uniprotkb/P0AES4"><code class="curie">UniProtKB:P0AES4</code></a><br><span class="meta">GyrA subunit (formerly nalA gene product) of E. coli DNA gyrase that forms the nalidixic acid-stabilized DNA cleavage complex and controls supercoiling sensitivity (PMID:303505; PMID:217495; K-12 reference proteome context).</span></td>
+    <td>gyrA</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>DNA gyrase subunit B <a href="https://www.uniprot.org/uniprotkb/P0AES6"><code class="curie">UniProtKB:P0AES6</code></a><br><span class="meta">ATPase GyrB subunit partnering with GyrA in the E. coli DNA gyrase holoenzyme inhibited by nalidixic acid (PMID:303505; PMID:217495; K-12 reference proteome context).</span></td>
+    <td>gyrB</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/200930">PMID:200930</a></span> <span class="meta">(Sugino et al. demonstrated that nalidixic acid inhibits Escherichia coli DNA gyrase via the NalA/GyrA subunit and traps a covalent gyrase-DNA cleavage complex.)</span></li>
 </ul>
 
 
@@ -732,6 +754,11 @@ or death.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated E. coli K-12 DNA gyrase subunit A (P0AES4) and subunit B (P0AES6) UniProtKB protein examples on the nalidixic_acid_gyrase_cleavage_complex dna_gyrase causal graph node.</p>
   </li>
+  <li>
+    <span class="pill">RESOLVED_REVIEW_FINDINGS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for bacterial DNA gyrase (PMID:200930) with reviewed UniProtKB protein examples and promoted nalidixic acid to REVIEWED (#1254).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -752,7 +779,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>87d262c34ac1</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>95aca57ba56b</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:63613</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_63613">resolve</a>  <span class="sep">·</span><a href="../class/antiviral.html">ANTIVIRAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A dipyridodiazepine that is 5,11-dihydro-6H-dipyrido[3,2-b:2&#39;,3&#39;-e][1,4]diazepine which is substituted by methyl, oxo, and cyclopropyl groups at positions 4, 6, and 11, respectively. A non-nucleoside reverse transcriptase inhibitor with activity against HIV-1, it is used in combination with other antiretrovirals for the treatment of HIV infection.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p class="meta">Strictly broader compounds or drug classes this molecule belongs to.</p>
@@ -978,10 +975,30 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27936595">PMID:27936595</a></span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
 </ul>
 
+<h3>HIV-1 reverse transcriptase <span class="pill plain">VIRAL_PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Crystal structures of HIV-1 reverse transcriptase-DNA-nevirapine complexes resolving NNRTI-pocket binding, primer displacement, and dNTP-pocket distortion (PMID:22266819; PMID:1377403). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2012-02 (retrieved 2026-10-23).</p>
+<p><em>Human immunodeficiency virus 1</em> <code class="curie">NCBITaxon:11676</code></p><div class="table-scroll" role="region" aria-label="HIV-1 reverse transcriptase organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Gag-Pol polyprotein <a href="https://www.uniprot.org/uniprotkb/P04585"><code class="curie">UniProtKB:P04585</code></a><br><span class="meta">HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer noncompetitively bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970; PMID:7540824, PDB 1VRT; HXB2 reference isolate context).</span></td>
+    <td>gag-pol</td>
+    <td><em>Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_11706"><code class="curie">NCBITaxon:11706</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22266819">PMID:22266819</a></span> <span class="meta">(Das et al. resolved crystal structures of HIV-1 RT-DNA-nevirapine complexes showing NNRTI-pocket occupancy and primer displacement from the polymerase active site.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/1377403">PMID:1377403</a></span> <span class="meta">(Kohlstaedt et al. resolved the HIV-1 reverse transcriptase crystal structure in complex with nevirapine.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>VIRAL_POLYMERASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>VIRAL_POLYMERASE_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed as non-nucleoside allosteric pocket binding and inhibition of HIV-1 reverse transcriptase primer-active-site alignment and polymerase activity. PMID:1377403; PMID:22266819.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
 
@@ -1144,6 +1161,11 @@ or death.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on the nevirapine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase causal graph node.</p>
   </li>
+  <li>
+    <span class="pill">RESOLVED_REVIEW_FINDINGS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Confirmed nevirapine mode_of_action_notes, added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for HIV-1 reverse transcriptase (PMID:22266819; PMID:1377403), and promoted nevirapine to REVIEWED (#1255).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -1164,7 +1186,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>87d262c34ac1</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>95aca57ba56b</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

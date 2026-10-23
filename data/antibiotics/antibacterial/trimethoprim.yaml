@@ -1,7 +1,7 @@
 identifier: CHEBI:45924
 label: trimethoprim
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An aminopyrimidine antibiotic whose structure consists of pyrimidine 2,4-diamine
   and 1,2,3-trimethoxybenzene moieties linked by a methylene bridge.
@@ -37,11 +37,10 @@ activity_roles:
 structural_class: diaminopyrimidine antibiotic
 structural_class_id: ARO:3000171
 mode_of_action: FOLATE_PATHWAY_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50683 (EC 1.5.1.3 (dihydrofolate
-  reductase) inhibitor). ChEBI asserts the role on the compound. The target it names
-  is one the host has too, so the mechanism is true but is not evidence of selectivity
-  — see mode_of_action_target_scope. Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Confirmed as selective inhibition of bacterial dihydrofolate
+  reductase (DHFR / FolA) blocking reduced folate regeneration and nucleotide biosynthesis.
+  PMID:4254117; PMID:14623005.'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OC
   standard_inchi: InChI=1S/C14H18N4O3/c1-19-10-5-8(6-11(20-2)12(10)21-3)4-9-7-17-14(16)18-13(9)15/h5-7H,4H2,1-3H3,(H4,15,16,17,18)
@@ -931,6 +930,42 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+- target_label: bacterial dihydrofolate reductase (DHFR)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Direct enzyme inhibition of Staphylococcus aureus dihydrofolate
+    reductase (PMID:14623005) and tetrahydrofolate-pool depletion in Escherichia coli
+    (PMID:4254117).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2003-11
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A017
+    protein_label: Dihydrofolate reductase
+    gene_symbol: folA
+    taxon_id: NCBITaxon:1280
+    taxon_label: Staphylococcus aureus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Chromosomal trimethoprim-sensitive dihydrofolate reductase (dfrB/folA) directly
+      inhibited by trimethoprim in S. aureus (PMID:14623005).
+  - uniprot_id: UniProtKB:P0ABQ4
+    protein_label: Dihydrofolate reductase
+    gene_symbol: folA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Bacterial dihydrofolate reductase forming cooperative ternary complexes
+      with NADPH and trimethoprim in E. coli (PMID:1985419; K-12 reference strain
+      context).
+  evidence:
+  - reference: PMID:14623005
+    notes: Direct IC50 inhibition of bacterial dihydrofolate reductase by trimethoprim.
+  - reference: PMID:4254117
+    notes: Miovic and Pizer linked bacterial DHFR inhibition by trimethoprim to reduced
+      folate depletion and macromolecular synthesis arrest in Escherichia coli.
 causal_graphs:
 - graph_id: trimethoprim_folate_pathway_inhibition
   title: Trimethoprim inhibits bacterial dihydrofolate reductase
@@ -1322,6 +1357,13 @@ curation_history:
   changes: Added curated S. aureus (P0A017) and E. coli K-12 (P0ABQ4) dihydrofolate
     reductase (folA) UniProtKB protein examples on the trimethoprim_folate_pathway_inhibition
     bacterial_dhfr causal graph node.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Confirmed trimethoprim mode_of_action_notes and MICROBIAL_TARGET scope,
+    added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for bacterial DHFR (PMID:14623005;
+    PMID:4254117), and promoted trimethoprim to REVIEWED (#1255).
   llm_assisted: true
 related_records:
 - corpus: PathwayMech

@@ -1,7 +1,7 @@
 identifier: CHEBI:600103
 label: daptomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A polypeptide comprising N-decanoyltryptophan, asparagine, aspartic acid,
   threonine, glycine, ornithine, aspartic acid, D-alanine, aspartic acid, glycine,
@@ -672,7 +672,7 @@ molecular_targets:
     phosphatidylglycerol complex and selective uptake into bacterial membranes; no
     single organism or strain is generalized from the membrane models.
   evidence_status: PRIMARY_EVIDENCE
-  source: CURATOR
+  source: PRIMARY_LITERATURE
   source_version: '2026-08-31'
   source_retrieved_on: '2026-08-31'
   evidence:
@@ -816,3 +816,15 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Set daptomycin mode_of_action to MEMBRANE_DISRUPTION with MICROBIAL_TARGET
+    scope, normalized PRIMARY_EVIDENCE membrane target source to PRIMARY_LITERATURE
+    (PMID:40455071; PMID:1666494), and promoted daptomycin to REVIEWED (#1255).
+  llm_assisted: true
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_notes: 'CURATOR: Confirmed as calcium-dependent complexation with phosphatidylglycerol-rich
+  bacterial membranes driving selective membrane insertion and depolarization. PMID:1666494;
+  PMID:40455071.'
+mode_of_action_target_scope: MICROBIAL_TARGET

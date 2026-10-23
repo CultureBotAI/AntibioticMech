@@ -1,0 +1,211 @@
+schema_version: 1.0.0
+repository_key: antibioticmech
+github_repository: CultureBotAI/AntibioticMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 5
+revision: 1
+outcome: completed
+summary: "Grouped all 12 Stage 4 review findings by root cause and repair ownership into 12 finding groups mapped to real GitHub issues (#1253-#1259 and #1140-#1144), resolved all 3 actionable record/curation groups (#1253, #1254, #1255) across 11 antibiotic records via native writers and seeded pipeline regeneration, recorded the structural_observations seeder drop (#1256) in INFRA_TASKS.md for Stage 6, re-reviewed the 11 remediated records in reviews/structured/20261023T184800Z-stage5-remediated-records-review/, and preserved the 9 deferred findings for carry-forward."
+source_revision: 4e3cb51384be1b7fed69a980eb4f73de417d1a62
+scope_frozen_at: "2026-10-23T17:26:24Z"
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+  sha256: fa77944065bbf9856717d95ebdf957e142a1ff42c06c3c2d1013070046aa8976
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  sha256: ab29f0f4f5879b86036354daa1c684d77dba82de8048bc3cf361f7b454e58f03
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  sha256: fefe8f5f821762c1f2c3df99ddf801329f26824f0deead5a101130d1aa094a42
+  kind: validation
+findings:
+- finding_id: rifampicin-moa-scope-leftover
+  status: resolved
+  summary: "Resolved in #1253 by updating mode_of_action_target_scope on REVIEWED record CHEBI:28077 (data/antibiotics/antimycobacterial/rifampicin.yaml) from HOST_SHARED_TARGET to MICROBIAL_TARGET via record_curation_event (CURATED_MODE_OF_ACTION, PMID:11290327) and write_validated_antibiotic."
+  group_id: group-01-rifampicin-moa-target-scope
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1253
+  disposition: "Updated mode_of_action_target_scope to MICROBIAL_TARGET on CHEBI:28077 (rifampicin.yaml) and verified via fresh review 20261023T184800Z-stage5-remediated-records-review."
+  carried_from: rifampicin-moa-scope-leftover
+- finding_id: seeded-causal-graphs-missing-primary-targets
+  status: resolved
+  summary: "Resolved in #1254 by adding source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed UniProtKB:P0AES4 protein_examples on the 3 quinolones) and promoting clarithromycin (CHEBI:3732), nalidixic-acid (CHEBI:100147), norfloxacin (CHEBI:100246), and pefloxacin (CHEBI:50199) to REVIEWED."
+  group_id: group-02-seeded-causal-graphs-missing-primary-targets
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1254
+  disposition: "Added PRIMARY_LITERATURE molecular_targets and promoted all 4 records to REVIEWED via native writers and curation/uniprot_protein_examples.yaml; verified via fresh review 20261023T184800Z-stage5-remediated-records-review."
+  carried_from: seeded-causal-graphs-missing-primary-targets
+- finding_id: seeded-causal-graphs-unsettled-moa-and-targets
+  status: resolved
+  summary: "Resolved in #1255 by settling mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes, adding source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed UniProtKB protein_examples on all 5 protein-target records), and promoting ciprofloxacin (CHEBI:100241), daptomycin (CHEBI:600103), levofloxacin (CHEBI:63598), trimethoprim (CHEBI:45924), delavirdine (CHEBI:119573), and nevirapine (CHEBI:63613) to REVIEWED."
+  group_id: group-03-seeded-causal-graphs-unsettled-moa-and-targets
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1255
+  disposition: "Settled mode_of_action, added PRIMARY_LITERATURE molecular_targets, and promoted all 6 records to REVIEWED via native writers and curation/uniprot_protein_examples.yaml; verified via fresh review 20261023T184800Z-stage5-remediated-records-review."
+  carried_from: seeded-causal-graphs-unsettled-moa-and-targets
+- finding_id: unreviewed-seeded-pdb-structural-observations
+  status: deferred
+  summary: "Three SEEDED records carry ChEBI-seeded PDB structural_observations with relevance: UNREVIEWED (3 target(s): CHEBI:138488, CHEBI:28971, CHEBI:44499). Deferred to Stage 6 under #1256 and INFRA_TASKS.md (antibioticmech-infra-0001) because scripts/seed_from_sources.py overwrites structural_observations on SEEDED records."
+  group_id: group-04-unreviewed-seeded-pdb-structural-observations
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1256
+  disposition: "Recorded as infrastructure task antibioticmech-infra-0001 in INFRA_TASKS.md for Stage 6 (implement_infrastructure_tasks) so scripts/seed_from_sources.py preserves curator-reviewed structural_observations or supports a sidecar curation table without premature REVIEWED promotion."
+  carried_from: unreviewed-seeded-pdb-structural-observations
+- finding_id: mcr43-context
+  status: deferred
+  summary: "Contrasting functional contexts and component-specific grounding for MCR-4.3 remain unresolved (2 target(s): CHEBI:59064, CHEBI:59673)."
+  group_id: group-05-mcr43-context
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1140
+  disposition: "Source-owned qualification notes are already projected via curation/card_evidence_reviews.json; component-specific experimental grounding requires external primary experimental data not available in local cached sources."
+  carried_from: mcr43-context
+- finding_id: eatav-compound
+  status: deferred
+  summary: "Tested pleuromutilin derivative (tiamulin) in eatAv study does not ground parent pleuromutilin (1 target(s): CHEBI:8269)."
+  group_id: group-06-eatav-compound
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1141
+  disposition: "Derivative-versus-parent qualification note is already projected via curation/card_evidence_reviews.json; exact parent pleuromutilin experimental testing is absent from the cited primary study."
+  carried_from: eatav-compound
+- finding_id: msrc-evidence
+  status: deferred
+  summary: "Early msrC association study does not establish exclusive causality or target-protection mechanism (2 target(s): CHEBI:42355, CHEBI:8732)."
+  group_id: group-07-msrc-evidence
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1143
+  disposition: "Awaits later primary mechanistic evidence curation and native gene-field representation on source-owned ResistanceMechanismEntry items."
+  carried_from: msrc-evidence
+- finding_id: ddl-scope
+  status: deferred
+  summary: "Generic D-Ala-D-Ala ligase reference on vancomycin leaves tested alteration unresolved (1 target(s): CHEBI:28001)."
+  group_id: group-08-ddl-scope
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1144
+  disposition: "Full-text primary results for PMID:11266628 remain unavailable under publisher HTTP 403 access hold; experimental allele identity cannot be inferred from abstract or review text."
+  carried_from: ddl-scope
+- finding_id: mexjk-role-conflict
+  status: deferred
+  summary: "Upstream CARD aro.owl reverses MexJ and MexK component roles in MexJK-OpmH relative to MexJK-OprM (4 target(s): CHEBI:42355, CHEBI:27902, CHEBI:164200, antibioticmech:aro-1fe0873afd)."
+  group_id: group-09-mexjk-role-conflict
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1142
+  disposition: "Primary papers PMID:12193619 and PMID:12951344 remain under publisher HTTP 403 hold, and generated AntibioticRecord files do not store subcomponent role restrictions; preserved without guessing which upstream CARD restriction is correct."
+  carried_from: mexjk-role-conflict
+- finding_id: reviewed-records-awaiting-causal-graphs
+  status: deferred
+  summary: "39 REVIEWED records await primary-literature causal_graphs and ofloxacin is blocked by structureless CHEBI:7731."
+  group_id: group-10-reviewed-records-awaiting-causal-graphs
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1257
+  disposition: "Curating new multi-step primary-literature causal_graphs across 39 additional compounds and resolving upstream ChEBI structure availability for racemic CHEBI:7731 are multi-cycle corpus expansion tasks outside bounded Stage 5 coherence remediation."
+  carried_from: reviewed-records-awaiting-causal-graphs
+- finding_id: proposed-antibacterial-records-awaiting-grounding-and-mechanism
+  status: deferred
+  summary: "60 PROPOSED literature-seeded antibacterial records await primary mechanism curation and structure registration."
+  group_id: group-11-proposed-antibacterial-records-backlog
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1258
+  disposition: "Requires compound-by-compound primary mechanism literature retrieval and upstream ChEBI structure registration across future dedicated curation cycles."
+  carried_from: proposed-antibacterial-records-awaiting-grounding-and-mechanism
+- finding_id: minted-aro-records-without-exact-chebi-structure
+  status: deferred
+  summary: "240 SEEDED MINTED records lack an exact single-molecule ChEBI chemical_structure."
+  group_id: group-12-minted-aro-records-structure-backlog
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1259
+  disposition: "REVIEWED promotion is intentionally gated by structure_completeness_audit until exact single-molecule ChEBI structures or complex-mixture policy support is available."
+  carried_from: minted-aro-records-without-exact-chebi-structure
+groups:
+- group_id: group-01-rifampicin-moa-target-scope
+  finding_ids:
+  - rifampicin-moa-scope-leftover
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1253
+  status: resolved
+  summary: "Correct curator-owned mode_of_action_target_scope leftover on REVIEWED record CHEBI:28077 (rifampicin) from HOST_SHARED_TARGET to MICROBIAL_TARGET."
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  disposition: "Updated mode_of_action_target_scope to MICROBIAL_TARGET via record_curation_event and write_validated_antibiotic; verified by fresh review 20261023T184800Z-stage5-remediated-records-review."
+- group_id: group-02-seeded-causal-graphs-missing-primary-targets
+  finding_ids:
+  - seeded-causal-graphs-missing-primary-targets
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1254
+  status: resolved
+  summary: "Add PRIMARY_LITERATURE molecular_targets and promote 4 SEEDED EXACT causal_graph records (clarithromycin, nalidixic-acid, norfloxacin, pefloxacin) to REVIEWED."
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  disposition: "Added source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed UniProtKB:P0AES4 protein_examples on the 3 quinolones) and promoted all 4 records to REVIEWED; verified by fresh review 20261023T184800Z-stage5-remediated-records-review."
+- group_id: group-03-seeded-causal-graphs-unsettled-moa-and-targets
+  finding_ids:
+  - seeded-causal-graphs-unsettled-moa-and-targets
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1255
+  status: resolved
+  summary: "Settle mode_of_action, add PRIMARY_LITERATURE molecular_targets, and promote 6 SEEDED EXACT causal_graph records (ciprofloxacin, daptomycin, levofloxacin, trimethoprim, delavirdine, nevirapine) to REVIEWED."
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-05/revision-0001/validation.md
+  disposition: "Settled mode_of_action, added PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples on all 5 protein-target records), and promoted all 6 records to REVIEWED; verified by fresh review 20261023T184800Z-stage5-remediated-records-review."
+- group_id: group-04-unreviewed-seeded-pdb-structural-observations
+  finding_ids:
+  - unreviewed-seeded-pdb-structural-observations
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1256
+  status: deferred
+  summary: "Preserve curator-reviewed structural_observations in scripts/seed_from_sources.py and curate 3 ChEBI-seeded PDB complexes (CHEBI:138488, CHEBI:28971, CHEBI:44499)."
+  disposition: "Recorded as infrastructure task antibioticmech-infra-0001 in INFRA_TASKS.md for Stage 6 (implement_infrastructure_tasks) so scripts/seed_from_sources.py preserves curator-reviewed structural_observations or supports a sidecar curation table without premature REVIEWED promotion."
+- group_id: group-05-mcr43-context
+  finding_ids:
+  - mcr43-context
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1140
+  status: deferred
+  summary: "Reconcile MCR-4.3 functional contexts and component-specific grounding on colistin A (CHEBI:59064) and colistin B (CHEBI:59673)."
+  disposition: "Source-owned qualification notes are already projected via curation/card_evidence_reviews.json; component-specific experimental grounding requires external primary experimental data not available in local cached sources."
+- group_id: group-06-eatav-compound
+  finding_ids:
+  - eatav-compound
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1141
+  status: deferred
+  summary: "Resolve eatAv derivative-versus-parent compound evidence scope on pleuromutilin (CHEBI:8269)."
+  disposition: "Derivative-versus-parent qualification note is already projected via curation/card_evidence_reviews.json; exact parent pleuromutilin experimental testing is absent from the cited primary study."
+- group_id: group-07-msrc-evidence
+  finding_ids:
+  - msrc-evidence
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1143
+  status: deferred
+  summary: "Resolve msrC association versus mechanism evidence on erythromycin A (CHEBI:42355) and quinupristin (CHEBI:8732)."
+  disposition: "Awaits later primary mechanistic evidence curation and native gene-field representation on source-owned ResistanceMechanismEntry items."
+- group_id: group-08-ddl-scope
+  finding_ids:
+  - ddl-scope
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1144
+  status: deferred
+  summary: "Resolve tested Ddl alteration on vancomycin (CHEBI:28001) without promoting a generic enzyme reference."
+  disposition: "Full-text primary results for PMID:11266628 remain unavailable under publisher HTTP 403 access hold; experimental allele identity cannot be inferred from abstract or review text."
+- group_id: group-09-mexjk-role-conflict
+  finding_ids:
+  - mexjk-role-conflict
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1142
+  status: deferred
+  summary: "Resolve conflicting MexJ and MexK roles in pinned ARO complexes MexJK-OpmH and MexJK-OprM."
+  disposition: "Primary papers PMID:12193619 and PMID:12951344 remain under publisher HTTP 403 hold, and generated AntibioticRecord files do not store subcomponent role restrictions; preserved without guessing which upstream CARD restriction is correct."
+- group_id: group-10-reviewed-records-awaiting-causal-graphs
+  finding_ids:
+  - reviewed-records-awaiting-causal-graphs
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1257
+  status: deferred
+  summary: "Curate primary-literature causal_graphs on 39 held REVIEWED records and resolve CHEBI:7731 structure for ofloxacin."
+  disposition: "Curating new multi-step primary-literature causal_graphs across 39 additional compounds and resolving upstream ChEBI structure availability for racemic CHEBI:7731 are multi-cycle corpus expansion tasks outside bounded Stage 5 coherence remediation."
+- group_id: group-11-proposed-antibacterial-records-backlog
+  finding_ids:
+  - proposed-antibacterial-records-awaiting-grounding-and-mechanism
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1258
+  status: deferred
+  summary: "Curate primary mechanism evidence and exact ChEBI structures for 60 PROPOSED antibacterial records."
+  disposition: "Requires compound-by-compound primary mechanism literature retrieval and upstream ChEBI structure registration across future dedicated curation cycles."
+- group_id: group-12-minted-aro-records-structure-backlog
+  finding_ids:
+  - minted-aro-records-without-exact-chebi-structure
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1259
+  status: deferred
+  summary: "Resolve exact single-molecule ChEBI structures or complex-mixture policy for 240 SEEDED MINTED records."
+  disposition: "REVIEWED promotion is intentionally gated by structure_completeness_audit until exact single-molecule ChEBI structures or complex-mixture policy support is available."
+carry_forward_ids:
+- unreviewed-seeded-pdb-structural-observations
+- mcr43-context
+- eatav-compound
+- msrc-evidence
+- ddl-scope
+- mexjk-role-conflict
+- reviewed-records-awaiting-causal-graphs
+- proposed-antibacterial-records-awaiting-grounding-and-mechanism
+- minted-aro-records-without-exact-chebi-structure
+infra_tasks: []

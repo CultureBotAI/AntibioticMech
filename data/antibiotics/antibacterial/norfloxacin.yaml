@@ -1,7 +1,7 @@
 identifier: CHEBI:100246
 label: norfloxacin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A quinolinemonocarboxylic acid with broad-spectrum antibacterial activity
   against most gram-negative and gram-positive bacteria. Norfloxacin is bactericidal
@@ -480,6 +480,49 @@ molecular_targets:
   - reference: ARO:3000735
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000662 (norfloxacin); database
       assertion, not a primary citation.
+- target_label: bacterial DNA gyrase
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  experimental_context: Radiolabeled [3H]norfloxacin binding to Escherichia coli DNA
+    gyrase-DNA complexes (PMID:2536729; PMID:2982149) and purified Micrococcus luteus
+    DNA gyrase supercoiling inhibition assays (PMID:3010848).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1989-02
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node
+      grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
+      luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node
+      grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
+      luteus DNA gyrase).
+  evidence:
+  - reference: PMID:2536729
+    notes: Shen et al. characterized cooperative norfloxacin binding sites formed
+      in bacterial DNA gyrase-DNA complexes.
+  - reference: PMID:2982149
+    notes: Shen and Pernet measured [3H]norfloxacin binding and inhibition of DNA
+      gyrase supercoiling.
+  - reference: PMID:3010848
+    notes: Zweerink and Edison quantified norfloxacin inhibition of purified bacterial
+      DNA gyrase supercoiling activity.
 causal_graphs:
 - graph_id: norfloxacin_dna_gyrase_supercoiling_inhibition
   title: Norfloxacin inhibits bacterial DNA gyrase supercoiling
@@ -663,4 +706,11 @@ curation_history:
   changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4)
     and subunit B (P0AES6) UniProtKB protein examples on the norfloxacin_dna_gyrase_supercoiling_inhibition
     dna_gyrase causal graph node.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for bacterial DNA gyrase
+    (PMID:2536729; PMID:2982149; PMID:3010848) with reviewed UniProtKB protein examples
+    and promoted norfloxacin to REVIEWED (#1254).
   llm_assisted: true

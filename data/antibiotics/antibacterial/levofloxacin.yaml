@@ -1,7 +1,7 @@
 identifier: CHEBI:63598
 label: levofloxacin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An optically active form of ofloxacin having (S)-configuration; an inhibitor
   of bacterial topoisomerase IV and DNA gyrase.
@@ -5529,11 +5529,8 @@ activity_membership_collections:
   measurement_count: 49046
   unlinked_subject_count: 7001
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
-  (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
-  (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The role names
-  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
-  a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: Confirmed as bacterial topoisomerase IV and DNA gyrase
+  cleavage-complex stabilization after primary levofloxacin mechanism review. PMID:27050128.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: C[C@H]1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
@@ -5866,6 +5863,49 @@ molecular_targets:
   - reference: ARO:3000735
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000071 (levofloxacin); database
       assertion, not a primary citation.
+- target_label: bacterial topoisomerase IV
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: X-ray crystal structures of levofloxacin-stabilized bacterial
+    topoisomerase IV (ParC/ParE) covalent DNA cleavage complexes from Streptococcus
+    pneumoniae and Klebsiella pneumoniae (PMID:27050128).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2016-04
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P72525
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:170187
+    taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Catalytic ParC subunit of S. pneumoniae topoisomerase IV complexed with
+      DNA and levofloxacin in the ternary cleavage-complex crystal structure (PMID:19332681;
+      TIGR4 reference strain context).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference Gram-negative bacterial topoisomerase IV ParC subunit corresponding
+      to ARO:3000735 node grounding (E. coli K-12 reference proteome context).
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Reference Gram-negative bacterial topoisomerase IV ParE subunit corresponding
+      to ARO:3000735 node grounding (E. coli K-12 reference proteome context).
+  evidence:
+  - reference: PMID:27050128
+    notes: Veselkov et al. resolved crystal structures of levofloxacin-stabilized
+      bacterial ParC/ParE topoisomerase IV-DNA cleavage complexes.
 causal_graphs:
 - graph_id: levofloxacin_topoisomerase_iv_poisoning
   title: Levofloxacin poisons bacterial topoisomerase IV
@@ -6182,4 +6222,11 @@ curation_history:
   changes: Added curated S. pneumoniae TIGR4 ParC (P72525) and E. coli K-12 ParC/ParE
     (P0AFI2, P20083) UniProtKB protein examples on the levofloxacin topoisomerase_iv
     causal graph node.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Confirmed levofloxacin mode_of_action_notes, added PRIMARY_LITERATURE DIRECT_BINDING_TARGET
+    for bacterial topoisomerase IV (PMID:27050128) with reviewed UniProtKB protein
+    examples, and promoted levofloxacin to REVIEWED (#1255).
   llm_assisted: true

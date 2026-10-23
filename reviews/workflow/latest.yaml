@@ -1,0 +1,22 @@
+authority: verified_closure
+entries:
+- cycle: 1
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml
+    sha256: fa77944065bbf9856717d95ebdf957e142a1ff42c06c3c2d1013070046aa8976
+  receipt_sha256: d604d61638131f5cc58a8da409f2be42e2f43f8d7cf23baec571de31c3b175cf
+  stage: 4
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 8905217a7109ac5feda37d130de7c9c9016c4e54
+    merge_commit_sha: 4e3cb51384be1b7fed69a980eb4f73de417d1a62
+    merged_at: '2026-10-23T17:16:05Z'
+    pr_number: 1252
+    status: merged
+    verified_at: '2026-10-23T17:24:49.473866+00:00'

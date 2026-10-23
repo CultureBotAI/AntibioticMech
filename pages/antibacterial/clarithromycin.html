@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:3732</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_3732">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>The 6-O-methyl ether of erythromycin A, clarithromycin is a macrolide antibiotic used in the treatment of respiratory-tract, skin and soft-tissue infections. It is also used to eradicate Helicobacter pylori in the treatment of peptic ulcer disease. It prevents bacteria from growing by interfering with their protein synthesis.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000000">macrolide antibiotic</a><code class="curie">ARO:0000000</code></p>
@@ -142,6 +139,13 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000757">ARO:3000757</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000065 (clarithromycin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>bacterial 50S ribosomal subunit nascent-peptide exit tunnel <span class="pill plain">RIBOSOMAL_SUBUNIT</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Cryo-EM structure of Mycobacterium tuberculosis 50S ribosomal subunits complexed with clarithromycin in the nascent-peptide exit tunnel (PMID:34935599) and cellular translation-inhibition assays in Staphylococcus aureus (PMID:9425251). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2022-01 (retrieved 2026-10-23).</p>
+<p><em>Mycobacterium tuberculosis</em> <code class="curie">NCBITaxon:1773</code></p><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/34935599">PMID:34935599</a></span> <span class="meta">(Zhang et al. resolved Mycobacterium tuberculosis 50S ribosomal subunits with bound clarithromycin occupying the macrolide site in the nascent-peptide exit tunnel.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/9425251">PMID:9425251</a></span> <span class="meta">(Champney and Burdine measured clarithromycin-dependent inhibition of cellular translation elongation in Staphylococcus aureus.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
@@ -151,7 +155,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">6 observations &middot; <a href="clarithromycin/activity-1.html">Browse all observations</a> &middot; <a href="clarithromycin/record-1256a0c3e20c3c16f11f2f51cd1b932761d71163b1288643354edfb857bf0f68.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">6 observations &middot; <a href="clarithromycin/activity-1.html">Browse all observations</a> &middot; <a href="clarithromycin/record-3b9903ba8e6f1064aac694aac681fd3a2dd9773f18a548a2908766338c8563f5.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -994,6 +998,11 @@ or death.</p>
     <span class="meta">2026-10-10 · codex · LLM-assisted</span>
     <p>Added ten clinical-isolate erm(55)/clarithromycin co-occurrence claims using corrected primary Table 2; grounded the verified species synonym while withholding exact alleles and protein identifiers. Preserved all source-owned content and negative-comparator distinctions. Whole-record review remains open.</p>
   </li>
+  <li>
+    <span class="pill">RESOLVED_REVIEW_FINDINGS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for the bacterial 50S ribosomal subunit nascent-peptide exit tunnel (PMID:34935599; PMID:9425251) and promoted clarithromycin to REVIEWED (#1254).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -1014,7 +1023,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>87d262c34ac1</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>95aca57ba56b</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

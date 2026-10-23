@@ -1,7 +1,7 @@
 identifier: CHEBI:100241
 label: ciprofloxacin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A quinolone that is quinolin-4(1H)-one bearing cyclopropyl, carboxylic
   acid, fluoro and piperazin-1-yl substituents at positions 1, 3, 6 and 7, respectively.
@@ -949,11 +949,9 @@ activity_membership_collections:
   measurement_count: 1515
   unlinked_subject_count: 299
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
-  (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517
-  (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The role names
-  a target specific to the microbe or virus — see mode_of_action_target_scope. Not
-  a curator's mechanistic review.
+mode_of_action_notes: 'CURATOR: Confirmed as bacterial DNA gyrase and topoisomerase
+  IV poisoning after primary ciprofloxacin mechanism review. PMID:8891138; PMID:9207016;
+  PMID:24497635.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
@@ -2421,6 +2419,68 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 2
+- target_label: bacterial DNA gyrase and topoisomerase IV
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:562
+  taxon_label: Escherichia coli
+  experimental_context: In vitro ciprofloxacin-stabilized DNA cleavage-complex assays
+    with purified bacterial DNA gyrase and topoisomerase IV (PMID:9207016; PMID:24497635)
+    and target genetics in Streptococcus pneumoniae (PMID:8891138).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-02
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Catalytic DNA cleavage-religation subunit A of the heterotetrameric A2B2
+      DNA gyrase complex stabilized as a ternary cleavage complex by ciprofloxacin
+      in E. coli (PMID:9159526); K-12 reference proteome context.
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: ATPase subunit B of the heterotetrameric A2B2 DNA gyrase complex targeted
+      by ciprofloxacin in E. coli (PMID:9159526); K-12 reference proteome context.
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Catalytic DNA breakage-reunion subunit ParC of the heterotetrameric ParC2ParE2
+      topoisomerase IV secondary fluoroquinolone target in E. coli (PMID:9159526);
+      K-12 reference proteome context.
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: ATPase subunit ParE of the heterotetrameric ParC2ParE2 topoisomerase IV
+      secondary fluoroquinolone target in E. coli (PMID:9159526); K-12 reference proteome
+      context.
+  evidence:
+  - reference: PMID:24497635
+    notes: Mustaev et al. assayed ciprofloxacin-stabilized ternary DNA cleavage complexes
+      formed by bacterial DNA gyrase and topoisomerase IV.
+  - reference: PMID:9207016
+    notes: Cove et al. demonstrated ciprofloxacin-dependent DNA cleavage by purified
+      bacterial DNA gyrase.
+  - reference: PMID:8891138
+    notes: Pan et al. established both topoisomerase IV and DNA gyrase as primary
+      ciprofloxacin targets.
 causal_graphs:
 - graph_id: ciprofloxacin_topoisomerase_poisoning
   title: Ciprofloxacin poisons bacterial type II topoisomerases
@@ -3563,4 +3623,11 @@ curation_history:
   changes: Added curated E. coli K-12 reference-strain UniProtKB protein examples
     for DNA gyrase (GyrA P0AES4, GyrB P0AES6) and topoisomerase IV (ParC P0AFI2, ParE
     P20083) on the ciprofloxacin_topoisomerase_poisoning causal graph nodes.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Confirmed ciprofloxacin mode_of_action_notes, added PRIMARY_LITERATURE
+    DIRECT_BINDING_TARGET for bacterial DNA gyrase and topoisomerase IV (PMID:24497635;
+    PMID:9207016; PMID:8891138), and promoted ciprofloxacin to REVIEWED (#1255).
   llm_assisted: true

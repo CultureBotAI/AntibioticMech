@@ -38,11 +38,11 @@ def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
     accounting = verify_reviewed_causal_graphs_accounting(records)
     assert accounting == {
         "total_causal_graph_records": 52,
-        "reviewed_total": 80,
-        "reviewed_existing_graphs": 5,
+        "reviewed_total": 90,
+        "reviewed_existing_graphs": 15,
         "reviewed_curated_graphs": 36,
         "reviewed_held": 39,
-        "seeded_existing_graphs": 11,
+        "seeded_existing_graphs": 1,
     }
 
     plan = load_causal_graphs_plan(DEFAULT_PLAN_PATH)
@@ -443,14 +443,16 @@ def test_apply_causal_graphs_plan_dry_run_does_not_mutate(pre_causal_graphs_root
 
 
 @pytest.mark.parametrize("index", range(36))
-def test_exact_scoped_transition_and_idempotence(pre_causal_graphs_root, index):
+def test_exact_scoped_transition_and_idempotence(
+    pre_stage5_remediation_root, pre_causal_graphs_root, index
+):
     plan = load_causal_graphs_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
     delta = receipt["record_deltas"][index]
     plan_entry = plan["records"][index]
     assert delta["identifier"] == plan_entry["identifier"]
 
-    live_path = ROOT / delta["path"]
+    live_path = pre_stage5_remediation_root / delta["path"]
     historical_path = pre_causal_graphs_root / delta["path"]
     assert hashlib.sha256(live_path.read_bytes()).hexdigest() == delta["after_sha256"]
     assert hashlib.sha256(historical_path.read_bytes()).hexdigest() == delta["before_sha256"]

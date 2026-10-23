@@ -1666,3 +1666,21 @@ held_targets:
     mutant (S70C with an artificial C70-K73 sulfenamide bond) of Klebsiella pneumoniae SHV-1 (UniProtKB:P0AD64)
     to trap intact sulbactam, and the record explicitly warns against extrapolating this mutant construct
     to wild-type enzyme.
+- identifier: CHEBI:3732
+  label: clarithromycin
+  path: data/antibiotics/antibacterial/clarithromycin.yaml
+  scope: molecular_targets
+  target_label: bacterial 50S ribosomal subunit nascent-peptide exit tunnel
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: PMID:34935599
+  reason: 'Non-protein molecular target (target_type=RIBOSOMAL_SUBUNIT: bacterial 50S ribosomal subunit
+    nascent-peptide exit tunnel); protein_examples are restricted to protein-containing target types.'
+- identifier: CHEBI:600103
+  label: daptomycin
+  path: data/antibiotics/antibacterial/daptomycin.yaml
+  scope: molecular_targets
+  target_label: phosphatidylglycerol-rich bacterial membrane
+  target_type: MEMBRANE
+  target_reference: PMID:40455071
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: phosphatidylglycerol-rich bacterial membrane);
+    protein_examples are restricted to protein-containing target types.'
