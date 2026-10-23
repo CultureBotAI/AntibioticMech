@@ -1,0 +1,1239 @@
+schema_version: 1.0.0
+review_id: 20261021T155425Z-ertapenem-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ertapenem: supported identity and resistance context with two minor wording
+  issues'
+started_at: '2026-10-21T15:30:49Z'
+finished_at: '2026-10-21T15:54:25Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The native neutral ertapenem graph and six assigned stereocentres are coherent,
+  and all four curated CDC isolate MIC observations reconcile with the current CDC
+  and BioSample records. The nine resistance entries remain explicitly qualified database
+  assertions; original experiments support several exact associations with promoter,
+  strain and endpoint limits. Invanz is a product brand recorded as an exact synonym,
+  and the definition contains the minor phrase “the one of”.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ertapenem.yaml
+    sha256: b7b94d852b4dacac59e87a8a7e078d06bb24e97f59109dce87204096fa6f9de2
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/ncbi_ast_biosample_review.json
+    sha256: 4ca294f58d57e627753e033ab2d3ee29d7c54ea10111bd24b534ddde69f72fbb
+    role: context
+  - path: curation/ncbi_ast_drug_map.tsv
+    sha256: 8b224448e1b2107e40107c4fb99820230249ec1318e36b032bb60324e1948088
+    role: context
+  - path: curation/cryptic_drug_map.tsv
+    sha256: 69643f9b5e6dfc91761a4541317de63c5dca565131f6a07a3193878d7f863a54
+    role: context
+targets:
+- target_id: CHEBI:404903
+  path: data/antibiotics/antibacterial/ertapenem.yaml
+  label: ertapenem
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition and grounding
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported ARO resistance claims
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported ARO target claim
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target type and relation mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ertapenem.yaml
+    role: Native curator-owned CDC activity_spectrum observations and their history;
+      not overwritten by seeding
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 413; one exact neutral ertapenem record. Original thirteen
+    input hashes preserved within 27 expanded inputs, including actual ARO and native
+    curator ownership.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:404903
+checks:
+- check_id: structured-adapter
+  name: Structured adapter before protein research
+  status: passed
+  required: false
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - adapter
+  command: Pre-web iModulonDB datasets catalog and six commands recorded in 413-adapter-results.json
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All actual catalog/query executions succeeded; no exact query result was
+    used as biological evidence.
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:404903
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/412413419-focused.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ertapenem.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ertapenem.yaml --out /private/tmp/am-review-session/413-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:404903
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ertapenem.yaml
+  locator: Entire 271-line YAML, including all four activity observations, nine resistance
+    entries, target and nine history events
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: supports
+  summary: Every populated native domain was read. The neutral graph is kept distinct
+    from salt preparations, product brands and empirical assay material.
+- evidence_id: owners
+  kind: record_content
+  reference: 412413419-raw-rows.json
+  locator: Exact ChEBI and ARO ertapenem rows, all nine adopted resistance edges and
+    exact PBP target edge
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: supports
+  summary: The raw ChEBI row owns identity and the definition; the ARO row supplies
+    ERT and Invanz, and the seeder currently types ARO synonym strings as EXACT_SYNONYM.
+    The four CDC observations and their curation events are native curator-owned,
+    not source-generated AST rows. Extra unrelated PBP rows in the search capture
+    are not evidence for this record.
+  snapshot_sha256: c546fff3c15dd28b31ced02ac53f2f0e227666149841f6d23b09c868299cbed7
+- evidence_id: search
+  kind: search
+  reference: 412413419-all-local-paths.txt
+  locator: Ignored-inclusive identifier, label and slug search plus exact overlay
+    comparison
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: context_only
+  summary: The search included hidden and ignored data, curation, conf, scripts, src,
+    reports and reviews. No exact curator/decision overlay or native activity-collection
+    membership was identified. Drug maps were retained as context, not claimed as
+    owners of the curated CDC entries. No absence of external research is inferred.
+  search_scope: rg --no-ignore --hidden -il 'CHEBI:60070|CHEBI:404903|CHEBI:134705|ertapenem|etimicin'
+    data curation conf scripts src reports reviews
+  snapshot_sha256: 0ddb1e1c4005691595186e8f80b8c6c15cef3a3b6086b7acb0d8ebe880b600d6
+- evidence_id: chemistry
+  kind: record_content
+  reference: 412413419-xref-chemistry.json
+  locator: Independent RDKit 2026.03.5 parsing; batch019 interpreter against batch042
+    cwd
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: supports
+  summary: Native SMILES and InChI reproduce JUZNIMUFDBIJCM-ANEDZVCMSA-N, six assigned
+    stereocentres, neutral C22H25N3O7S composition and masses. Current ChEBI, PubChem,
+    ChEMBL, KEGG and DrugCentral exports reproduce the same key. The exact sodium
+    graph remains separate; drug-level associations do not require graph equivalence.
+  snapshot_sha256: 244f6d89d046a96750ccb2205d82fd09368a63d477dad250e5681c2d6cddbfc5
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/404903/
+  locator: Current CHEBI404903 record, structure, names, parent and role relations
+  accessed_at: '2026-10-21T15:37:07.152077Z'
+  support: supports
+  summary: Current ChEBI agrees with neutral structure, systematic names and CAS153832-46-3.
+    Native carbapenem carboxylic acid/pyrrolidine carboxamide classification is coherent.
+    The definition itself contains “the one of”, inherited in the native record.
+  snapshot_sha256: 485e1a70fcfd3a9fde5317d0fa7bcd5262158712394efaeff178b3b74e3513c8
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/150610/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: CID150610 exact chemical properties
+  accessed_at: '2026-10-21T15:37:07.817303Z'
+  support: supports
+  summary: The exact structural registry entry agrees with formula, charge, mass and
+    stereochemical key.
+  snapshot_sha256: 32d03718567047c75bfafb5bb62872e3cefc4a85c2718ebe0ac41410b4f62599
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1359.json
+  locator: CHEMBL1359 molecule structure
+  accessed_at: '2026-10-21T15:37:07.828488Z'
+  support: supports
+  summary: Current ChEMBL structure agrees with the fully specified native neutral
+    compound.
+  snapshot_sha256: 468f29e46f9e5ebfb1d899d1e2f42d7c343d419048f49ff3287a8464a345aff1
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D07908/mol
+  locator: KEGG DRUG D07908 molecular export and companion entry
+  accessed_at: '2026-10-21T15:37:07.167125Z'
+  support: supports
+  summary: The linked structure matches the neutral graph. KEGG DRUG remains a drug-level
+    association under the schema even where this particular export matches exactly.
+  snapshot_sha256: 2b538205585d6498242dd1d48d8e64ce8a332975f89786cd8bc1175835fc4887
+- evidence_id: drugcentral
+  kind: authority
+  reference: https://drugcentral.org/drug/1046/molfile
+  locator: Official DrugCentral 1046 card-linked /drug/1046/molfile export
+  accessed_at: '2026-10-21T15:38:22.861440Z'
+  support: supports
+  summary: The corrected official export route yields the same neutral graph; the
+    initial guessed /structure route returned 404. The drug association is valid under
+    the native field semantics.
+  snapshot_sha256: 36e94a8f12291bdfbf195c64502a62902ac5deed1a24a7eb803ccb073c99f564
+- evidence_id: field-semantics
+  kind: record_content
+  reference: src/antibioticmech/schema/antibioticmech.yaml
+  locator: AntibioticRecord.xrefs/drug_xrefs/document_xrefs and SynonymTypeEnum; docs/HARMONIZATION.md
+    declared synonym-type handling
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: supports
+  summary: The schema distinguishes exact structural xrefs from drug-level DrugBank/DrugCentral/KEGG
+    DRUG associations covering parents, salts and stereoisomers, and from document
+    links. BRAND_NAME is an explicit synonym type; downstream name handling uses declared
+    types rather than guessed spelling.
+- evidence_id: label
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f3b99b-fa82-42e0-26bf-f49891ae3d22
+  locator: Official INVANZ label, name, section3 and section11
+  accessed_at: '2026-10-21T15:38:22.860840Z'
+  support: supports
+  summary: INVANZ is the named ertapenem sodium injection product, containing 1.046
+    g salt equivalent to 1 g ertapenem. This supports retaining Invanz as a drug brand
+    with BRAND_NAME type, not as an exact systematic molecular synonym. Product indications
+    support the definition’s explicitly salt-qualified clinical context.
+  snapshot_sha256: c3beac391868ed88bb207ae7f9d69facad6fa3a88f1f6b00e120cc5ed9e8b86a
+- evidence_id: drugbank
+  kind: authority
+  reference: https://go.drugbank.com/drugs/DB00303
+  locator: Official public page captured in 412413-drugbank-web.json
+  accessed_at: '2026-10-21T15:38:23.989419Z'
+  support: supports
+  summary: The public DrugBank page identifies neutral ertapenem and its sodium-salt
+    products. It supports the native drug-level association; drug_xrefs does not assert
+    exact structural equivalence.
+  snapshot_sha256: 7ac29c01a18a59401fe385a1e5367cd9e252eb12d9a2f33b30e663cd6347ae17
+- evidence_id: patent-us
+  kind: primary_source
+  reference: https://patents.google.com/patent/US5478820/en
+  locator: US5478820, exact compound list, Examples 4/12 and claims 1–5
+  accessed_at: '2026-10-21T15:37:08.803689Z'
+  support: supports
+  summary: The original patent explicitly names the native six-configuration ertapenem
+    constitution. Example 4 specifies disodium salt; Example 12 uses an acid title
+    but sodium bicarbonate workup and sodium-containing MS signals. Claims distinguish
+    acid, monosodium, disodium and mixtures. This supports a relevant document relationship;
+    it does not prove every isolated preparation is neutral free acid.
+  snapshot_sha256: ae074597fc915668fa3290a02f1947cdeb34725d2b1081782658cb76176a8757
+- evidence_id: patent-wo
+  kind: primary_source
+  reference: https://patents.google.com/patent/WO1993015078A1/en
+  locator: Normalized publication WO1993015078A1, exact named compound and Examples
+    4/12
+  accessed_at: '2026-10-21T15:48:51.090647Z'
+  support: supports
+  summary: The shorthand WO9315078 resolves after normalizing the year/publication
+    suffix. The original disclosure includes the same exact named carbapenem and separately
+    described salt preparations. The initial shorthand web route 404 does not make
+    the native document reference unrelated.
+  snapshot_sha256: 5ee140cdb5ed871632c59db97c69bedb61404e2b1b269385a5bf12180173d1ae
+- evidence_id: wikipedia
+  kind: authority
+  reference: https://en.wikipedia.org/wiki/Ertapenem
+  locator: Referenced encyclopedia topic
+  accessed_at: '2026-10-21T15:37:10.854961Z'
+  support: context_only
+  summary: The document resolves to the ertapenem topic. It is checked for document
+    relevance, not used as original activity or mechanism evidence.
+  snapshot_sha256: cf298697bf051a564b7e2d9e54f94dff0a771bd2bed76bd90e8edc2b18062847
+- evidence_id: aro-drug
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_0000070
+  locator: Current ARO0000070 drug term and adopted bibliography
+  accessed_at: '2026-10-21T15:37:08.951223Z'
+  support: supports
+  summary: The drug term and structural-class association are coherent. Adopted PMID12951340
+    is a review with no indexed abstract; PMID27572414 is an original combination
+    study. The raw ARO definition’s broad beta-lactamase wording is not the native
+    ChEBI-derived definition.
+  snapshot_sha256: f010c78525964159c986e30f7f244dd6c47ca916281f184b8622aef2724b2309
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A11585791%20OR%20EXT_ID%3A12775683%20OR%20EXT_ID%3A12951340%20OR%20EXT_ID%3A15673804%20OR%20EXT_ID%3A19770275%20OR%20EXT_ID%3A21507902%20OR%20EXT_ID%3A21774017%20OR%20EXT_ID%3A21930874%20OR%20EXT_ID%3A24790993%20OR%20EXT_ID%3A24823362%20OR%20EXT_ID%3A26824956%20OR%20EXT_ID%3A27572414%20OR%20EXT_ID%3A27575913%20OR%20EXT_ID%3A27645385%20OR%20EXT_ID%3A29454953%20OR%20EXT_ID%3A3055170%20OR%20EXT_ID%3A33416461%20OR%20EXT_ID%3A36773190%20OR%20EXT_ID%3A8787910%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Nineteen exact drug/target/resistance citation leads and original abstracts
+    where present
+  accessed_at: '2026-10-21T15:38:22.860392Z'
+  support: context_only
+  summary: Every listed original abstract was read, with reviews and records lacking
+    abstracts kept distinct. Source-specific dispositions cover all nine resistance
+    terms and the PBP lead. Metadata or review text is not promoted to direct assay
+    evidence.
+  snapshot_sha256: dd152b8b06ea04aad10bf8cf046c8d63833f0f1625fb8b0c8e3195f43ddf8912
+- evidence_id: dispositions
+  kind: record_content
+  reference: 413-literature-dispositions.json
+  locator: Twenty per-PMID reading-depth and material/endpoint dispositions
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: context_only
+  summary: The ledger distinguishes two adopted drug bibliography leads, resistance/target
+    citation leads and the additional exact VIM-63 original. Full-text access gaps
+    are explicit; only inspected source text supports conclusions.
+  snapshot_sha256: 5439e023fa0d20cbbee10f24ba651c87477b9354206345c2528ce8f2fce4a03e
+- evidence_id: combination
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5075066/?pdf=1
+  locator: PMID27572414, DOI10.1128/AAC.01192-16; original Methods and relevant Results
+  accessed_at: '2026-10-21T15:38:23.102847Z'
+  support: supports
+  summary: Commercial Merck ertapenem and Sandoz cefazolin were tested in checkerboard,
+    time-kill, PK/PD and murine models, following an index MSSA bacteremia case. Checkerboard
+    uses MHII broth and 10^5 CFU/mL; synergy is a combination result. Inspected material
+    text does not establish a specific isolated ertapenem salt or potency basis. Background
+    PBP1 discussion is not a newly measured direct binding experiment.
+  snapshot_sha256: 59f50b583049563cad17f74907bd8a8680c95837577558f723c166b3ef797d50
+- evidence_id: ndm
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3232805/?pdf=1
+  locator: PMID21930874, DOI10.1128/AAC.05108-11; relevant complete text and Tables
+    1/2
+  accessed_at: '2026-10-21T15:39:36.556559Z'
+  support: supports
+  summary: Original E. coli EC405 NDM-5 study includes cloned NDM-1 and NDM-5 TOP10
+    controls. Etest on MH agar gives ertapenem MIC 0.008 µg/mL for TOP10, 8 for pCR2.1
+    P+NDM-1 and 32 for P+NDM-5; promoter/vector changes strongly affect the result.
+    The authors explicitly leave enhanced purified-enzyme kinetics unresolved. Clinical
+    EC405 also carries TEM-1/CTX-M-15, so its phenotype alone is not isolated allele
+    proof.
+  snapshot_sha256: 3d9f7d25a0ace409c774f99222ff7badf74813fbc6a3c05f1ed1b4d1b48f9474
+- evidence_id: ctxm-cmy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8115898/?pdf=1
+  locator: PMID33416461, DOI10.1099/mgen.0.000500; relevant Methods/Results/Table
+    2
+  accessed_at: '2026-10-21T15:39:36.236513Z'
+  support: supports
+  summary: The study separates predictive associations from cloned-gene AST. pGDP
+    constructs in wild-type E. coli BW25113 were tested by broth microdilution, CLSI
+    growth inoculum method, 18 h at 37 °C and OD600 endpoint. Table 2 reports the
+    CTX-M-27 ertapenem increase. A clinical-model association is not a purified hydrolysis
+    experiment.
+  snapshot_sha256: 9f320c6d3fc04d6f21cbe1bdb9042f239ca187924c0a7c401d165f025397a003
+- evidence_id: ctxm-cmy-si
+  kind: primary_source
+  reference: 413-mgen-7-500-s002.xlsx
+  locator: Original Table S1 sheet 1, header and ertapenem rows 72–81
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: supports
+  summary: Actual XLSX cells give no-vector MIC 0.25, CMY-2/pGDP1 1–2 and CTX-M-27/pGDP1
+    128 µg/mL, with a stated Enterobacteriaceae resistant cutoff of ≥2. CMY-2 has
+    a measured increase spanning that cutoff; its absence from the main selected-positive
+    table does not refute the association. No corresponding purified ertapenem kinetics
+    are provided.
+  snapshot_sha256: fcb40c40f060c0ba1146d4e65b0e14325d7a6a7fd5341a28fe1c8ff7bae40b1e
+- evidence_id: vcc
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4775928/?pdf=1
+  locator: PMID26824956, DOI10.1128/AAC.02812-15; original relevant Methods/Tables
+    1/2
+  accessed_at: '2026-10-21T15:39:36.236727Z'
+  support: supports
+  summary: VCC-1 expression in E. coli TOP10 raises ertapenem Etest MIC from 0.004
+    to 1.5 µg/mL; source V. cholerae N14-02106 is >32. Purified-enzyme Table 2 demonstrates
+    imipenem/meropenem hydrolysis but has no ertapenem kinetic row. Preserve the genetic
+    phenotype and carbapenemase context without inventing an ertapenem rate.
+  snapshot_sha256: b7a71c211b4273d96ec7e3d2c2e698ebd705add65ccd93a774f3a2b391dadbdb
+- evidence_id: porin
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC5105900/?pdf=1
+  locator: PMID27645385, DOI10.1128/JB.00590-16; relevant Methods, Table 1 and Discussion
+  accessed_at: '2026-10-21T15:39:36.236637Z'
+  support: supports
+  summary: In K. pneumoniae subsp. ozaenae ATCC 11296, deleting ompK35 raises ertapenem
+    MIC 0.015 to 0.06 µg/mL, while deleting ompK36 leaves 0.015. The assay uses twofold
+    microdilution in LB plus 5 mM MgCl2, approximately 10^3 inoculated cells, 37 °C
+    for 16 h. Resistance context is loss of permeability, not normal porin expression
+    as an inactivating enzyme or a universal clinical resistance phenotype.
+  snapshot_sha256: 904ccb751adde1fedd8eba8dff67c50e76595a13f1fce63ca56e9ff3f925af50
+- evidence_id: efflux
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4019481/?pdf=1
+  locator: PMID24823362, DOI10.1371/journal.pone.0096288; relevant Methods/Results
+    and Tables2/3
+  accessed_at: '2026-10-21T15:39:36.354962Z'
+  support: supports
+  summary: The original K. pneumoniae NTUH-K2044 deletion study reports altered ertapenem
+    disk susceptibility. MIC Table 3 lists other antibiotics, not ertapenem. The direct
+    fluorescence transport assay uses ethidium bromide; it does not directly measure
+    ertapenem flux or experimentally assemble a KpnGH–TolC complex. These limits preserve
+    the qualified database-level mechanism association.
+  snapshot_sha256: dace66b73cd32a9b338d2c7b64bcd2734c01da6dcc53f9acfa0665088bc087e7
+- evidence_id: efflux-figure
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/20d0/4019481/d6e5290aa90a/pone.0096288.g003.jpg
+  locator: Actual original Figure 3 image, ETP10 bar pair
+  accessed_at: '2026-10-21T15:48:51.090560Z'
+  support: supports
+  summary: The image was viewed directly. The ertapenem-labelled bar pair shows a
+    larger inhibition zone for ΔkpnGH than wild type. The plotted endpoint is zone
+    diameter in millimetres, not a MIC or direct transport rate.
+  snapshot_sha256: 4bd6e47e93faeb7b14040c33b0bab9e60639fd443d3369488c64155354d73304
+- evidence_id: vim63
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35758752%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: PMID35758752, DOI10.1128/JB.00088-22; complete original abstract
+  accessed_at: '2026-10-21T15:47:52.357742Z'
+  support: partial
+  summary: The original study identifies VIM-63 A676C/Ile226Leu in C. freundii and
+    P. aeruginosa, with cloned susceptibility and purified-enzyme studies. The abstract
+    reports increased ertapenem turnover relative to VIM-2 without MIC differences.
+    No uninspected numeric kinetic constant is inferred. Experimental full-text retrieval
+    failed after partial web access.
+  snapshot_sha256: 3814df69da40a3bbb3abed9ba6e0a8e265632bd760c421fd8de2c1548dc7d886
+- evidence_id: fri11
+  kind: search
+  reference: https://link.springer.com/article/10.1007/s10096-023-04565-1
+  locator: Publisher access response for PMID36773190
+  accessed_at: '2026-10-21T15:39:36.236230Z'
+  support: unknown
+  summary: 'The publisher returned client-challenge HTML despite HTTP 200. The original
+    abstract is available in the cited metadata: a carbapenem-resistant Enterobacter
+    isolate carries FRI-11. Exact ertapenem-specific MIC and isolated enzyme parameters
+    remain uninspected.'
+  snapshot_sha256: 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea
+  search_scope: Exact FRI-11 DOI publisher full-text attempt after current ARO citation
+    and original abstract review.
+- evidence_id: aro-3000467
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000467
+  locator: Current ARO:3000467 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.021822Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: bc0a83dd68bd97c5fb6697d087594a666d297cc0a68fec8598b37e948a4c41a1
+- evidence_id: aro-3000589
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000589
+  locator: Current ARO:3000589 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.198262Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: 42b835e3dbfb9f3ca0412234176f6a86fb0bc1eddb4f963cf0b232bcb7da54a4
+- evidence_id: aro-3001889
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3001889
+  locator: Current ARO:3001889 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.486099Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: d31f2f3a3a3fab3671539482e6a5b1fc0d011626121b070341e387aa419f703e
+- evidence_id: aro-3002013
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3002013
+  locator: Current ARO:3002013 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.587994Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: dceb5cdb7e3b0ec84435efbd33de8b5bdabe2189c128422ebff457e0b9e0271d
+- evidence_id: aro-3003713
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003713
+  locator: Current ARO:3003713 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.617100Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: 340dd5ce7de0b96abfce9768b30cfe802986f42a4d44e45678baf3baa8446825
+- evidence_id: aro-3003966
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3003966
+  locator: Current ARO:3003966 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.629486Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: aab6b2cf39fee731a496f03567743165fa1d6905420f97d9813185b2f6240978
+- evidence_id: aro-3004598
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3004598
+  locator: Current ARO:3004598 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.652031Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: 41ce5ad519a7fb139b1beec0073c4806906c04a41fc4a65e25d190d0660e4b7a
+- evidence_id: aro-3005511
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3005511
+  locator: Current ARO:3005511 definition and citation leads
+  accessed_at: '2026-10-21T15:37:09.859635Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: e4ee628434a1f89f6deaee512f8a6728df84f5afbedfde329de3ea1fe7727c92
+- evidence_id: aro-3007632
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3007632
+  locator: Current ARO:3007632 definition and citation leads
+  accessed_at: '2026-10-21T15:37:10.053766Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: ab71ce83089b3abeab8a1fec949916906403e8e37023daf8065e8546d516f28a
+- evidence_id: aro-3000749
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000749
+  locator: Current ARO:3000749 definition and citation leads
+  accessed_at: '2026-10-21T15:37:10.104027Z'
+  support: context_only
+  summary: The exact term, mechanism/target context and available bibliography were
+    inspected. Its native evidence is explicitly labelled as a database assertion;
+    it is not silently upgraded to primary experimental evidence.
+  snapshot_sha256: 36555208df08a5176fb7af953115daa155391c96f53c0b1d6a9db6fe310c63c0
+- evidence_id: cdc-1305
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=10596&PanelID=1247
+  locator: Exact isolate metadata, ertapenem susceptibility row and method/breakpoint
+    footnotes
+  accessed_at: '2026-10-21T15:37:10.237405Z'
+  support: supports
+  summary: The native isolate/BioSample/taxon, ertapenem value and qualifier, R interpretation,
+    modal broth microdilution and stated CLSI 2025 M100 S35 source version reconcile.
+    CDC µg/mL and native mg/L are numerically equivalent. Revival instructions are
+    not MIC assay conditions.
+  snapshot_sha256: b6ca50b402c85550349f3a826c805ce5576b5659adb73e9786b992af6bd5eacb
+- evidence_id: biosample-1305
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN46941623
+  locator: Exact BioSample identifiers, organism, sample name and ertapenem antibiogram
+  accessed_at: '2026-10-21T15:37:10.314889Z'
+  support: supports
+  summary: The accession, taxon and AR sample identifier agree with the CDC/native
+    observation. The BioSample ertapenem value/qualifier and resistance annotation
+    also agree. Missing ancillary isolate attributes are not treated as disagreement
+    with the explicit sample name.
+  snapshot_sha256: 5178858330b0eedd2411fd16ff4f027cbac0f992c62dcf5cd2975b024f445740
+- evidence_id: cdc-0347
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=347&PanelID=10
+  locator: Exact isolate metadata, ertapenem susceptibility row and method/breakpoint
+    footnotes
+  accessed_at: '2026-10-21T15:37:10.249302Z'
+  support: supports
+  summary: The native isolate/BioSample/taxon, ertapenem value and qualifier, R interpretation,
+    modal broth microdilution and stated CLSI 2025 M100 S35 source version reconcile.
+    CDC µg/mL and native mg/L are numerically equivalent. Revival instructions are
+    not MIC assay conditions.
+  snapshot_sha256: 40d9d48d8ce6357c9c6ef2b0f8598fd709a0c8d4a5716a2e94c3db2529775f65
+- evidence_id: biosample-0347
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN11953775
+  locator: Exact BioSample identifiers, organism, sample name and ertapenem antibiogram
+  accessed_at: '2026-10-21T15:37:10.499743Z'
+  support: supports
+  summary: The accession, taxon and AR sample identifier agree with the CDC/native
+    observation. The BioSample ertapenem value/qualifier and resistance annotation
+    also agree. Missing ancillary isolate attributes are not treated as disagreement
+    with the explicit sample name.
+  snapshot_sha256: 489f9f9fee62bd978e1b9e4ca475d02b328f8b3aef18fd422ee2da5889ad0749
+- evidence_id: cdc-0348
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=348&PanelID=10
+  locator: Exact isolate metadata, ertapenem susceptibility row and method/breakpoint
+    footnotes
+  accessed_at: '2026-10-21T15:37:10.268450Z'
+  support: supports
+  summary: The native isolate/BioSample/taxon, ertapenem value and qualifier, R interpretation,
+    modal broth microdilution and stated CLSI 2025 M100 S35 source version reconcile.
+    CDC µg/mL and native mg/L are numerically equivalent. Revival instructions are
+    not MIC assay conditions.
+  snapshot_sha256: 506fe9d7c076435b384a601cf09fc8d01ac76cf4e48d555141b42c684e11a84e
+- evidence_id: biosample-0348
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN11953776
+  locator: Exact BioSample identifiers, organism, sample name and ertapenem antibiogram
+  accessed_at: '2026-10-21T15:37:10.711656Z'
+  support: supports
+  summary: The accession, taxon and AR sample identifier agree with the CDC/native
+    observation. The BioSample ertapenem value/qualifier and resistance annotation
+    also agree. Missing ancillary isolate attributes are not treated as disagreement
+    with the explicit sample name.
+  snapshot_sha256: 155ae8e932cb6f1bab94b690c6d7b34aa82b280645b1a510ebdc289e4f9b356b
+- evidence_id: cdc-0074
+  kind: authority
+  reference: https://wwwn.cdc.gov/ARIsolateBank/Panel/IsolateDetail.aspx?IsolateID=74&PanelID=1168
+  locator: Exact isolate metadata, ertapenem susceptibility row and method/breakpoint
+    footnotes
+  accessed_at: '2026-10-21T15:37:10.307736Z'
+  support: supports
+  summary: The native isolate/BioSample/taxon, ertapenem value and qualifier, R interpretation,
+    modal broth microdilution and stated CLSI 2025 M100 S35 source version reconcile.
+    CDC µg/mL and native mg/L are numerically equivalent. Revival instructions are
+    not MIC assay conditions.
+  snapshot_sha256: b2a74c72d312a264884ea97d76303a1a505f1ff4608e4de29394ea32286b8fb2
+- evidence_id: biosample-0074
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/biosample/SAMN04014915
+  locator: Exact BioSample identifiers, organism, sample name and ertapenem antibiogram
+  accessed_at: '2026-10-21T15:37:10.723148Z'
+  support: supports
+  summary: The accession, taxon and AR sample identifier agree with the CDC/native
+    observation. The BioSample ertapenem value/qualifier and resistance annotation
+    also agree. Missing ancillary isolate attributes are not treated as disagreement
+    with the explicit sample name.
+  snapshot_sha256: 526ee5636010f0461ac73cd4e72b2b96fa319fcaf5a52663e5993741734747c8
+- evidence_id: cdc-audit
+  kind: record_content
+  reference: 413-cdc-audit.json
+  locator: Four independently reconciled native activity_spectrum rows
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: supports
+  summary: AR1305, AR0347 and AR0348 have >8 mg/L; AR0074 has 2 mg/L. All remain individual
+    observations. The last isolate’s peritoneal-fluid source is supported by CDC even
+    where the BioSample isolation-source attribute is missing.
+  snapshot_sha256: 12547effbab073a4ff997d8023532acd0591f05d99ca4cd84f004faafd23396f
+- evidence_id: adapter
+  kind: database
+  reference: 413-adapter-results.json
+  locator: Actual pre-web catalog and six E. coli precise1k protein/resistance searches
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: context_only
+  summary: The catalog was inspected first, then penicillin-binding, NDM, CTX-M, CMY,
+    VIM and FRI searches ran successfully with zero matches. No covered matching Klebsiella/Vibrio
+    dataset was available. No-match results are search limits, not evidence against
+    protein function.
+  snapshot_sha256: 20a4bd76af158e24326ec79f32115763f083890d1e90623c16df6ac0af05e9a7
+- evidence_id: gates
+  kind: record_content
+  reference: 413-focused-results.json
+  locator: Actual native schema/strict and independent chemistry execution
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: supports
+  summary: All focused checks passed using the batch042 native environment and batch019
+    RDKit interpreter against batch042 cwd. No shared corpus gate is invented here.
+  snapshot_sha256: d24fc9ed5f39425750b777c8a6f1c4480c38416f4531a87d80d3858a0bd17d64
+- evidence_id: access
+  kind: search
+  reference: 412413419-fetch1.json through 412413419-fetch4.json; 413-fetch5.json;
+    413-fetch6.json
+  locator: Actual requests, timestamps, HTTP statuses and hashes
+  accessed_at: '2026-10-21T15:52:00Z'
+  support: context_only
+  summary: The short WO patent URL failed but its normalized publication resolved.
+    Reaxys remained 403; DrugCentral corrected export worked. NDM-1/VIM-63 full-text
+    routes returned browser challenges, 500 or 403, and the CTX-M-27 publisher PDF
+    returned 403. The older ertapenem review has no indexed abstract and its publisher
+    was inaccessible. HTTP 200 challenge bodies are not counted as full text.
+  search_scope: Exact native chemical/document identifiers, both adopted drug bibliography
+    leads, all nine resistance-term citation leads, exact PBP lead, four CDC/BioSample
+    pairs and directly relevant original experiments; public free access only.
+  snapshot_sha256: 1b9f3acae2cb4ec1b1dedd5db9d3bd6f10886495bfd4786e5d765a75d8d0c96d
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Neutral graph, stereochemistry and structural class
+  outcome: supported
+  summary: The neutral six-centre graph, formula, charge, masses and both source mints
+    agree. Current exact PubChem/ChEMBL structures and ChEBI agree; alternative systematic
+    numbering is consistent with the named patent compound. No salt/product identity
+    is substituted.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - chebi
+  - pubchem
+  - chembl
+  - patent-us
+- assessment_id: grounding
+  area: grounding
+  topic: Exact chemical, drug-level and document reference semantics
+  outcome: supported
+  summary: Exact chemical identifiers agree where independently retrieved. DrugBank,
+    DrugCentral and KEGG DRUG associations are legitimate broader drug links under
+    the schema, regardless of exact export equivalence. Both patent identifiers resolve
+    to relevant disclosures after WO normalization; encyclopedia relevance is separate
+    from scientific evidence. Beilstein remains unverified.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - chemistry
+  - field-semantics
+  - drugbank
+  - drugcentral
+  - kegg
+  - patent-us
+  - patent-wo
+  - wikipedia
+  - access
+- assessment_id: names
+  area: nomenclature
+  topic: Invanz synonym type and definition grammar
+  outcome: concern
+  summary: Invanz is an official product brand but is labelled EXACT_SYNONYM by the
+    ARO synonym import. Retype it as BRAND_NAME while retaining the association. The
+    ChEBI-derived definition’s “the one of” should read “one of”; neither issue changes
+    the supported molecular graph.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - owners
+  - label
+  - field-semantics
+  - chebi
+- assessment_id: classification
+  area: scope
+  topic: Antibacterial role and explicitly salt-qualified clinical use
+  outcome: supported
+  summary: The carbapenem/antibacterial classification is supported. The definition
+    explicitly attributes the listed treatment use to the sodium salt; it does not
+    assert the clinical product is neutral free acid. Imported ARO broad beta-lactamase
+    wording is not present in this native definition.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - chebi
+  - aro-drug
+  - label
+  - combination
+  - cdc-audit
+- assessment_id: activity
+  area: evidence
+  topic: Four curator-owned isolate MIC observations
+  outcome: supported
+  summary: All four exact CDC/BioSample pairs, taxa, study identifiers, numeric qualifiers,
+    units and stated CLSI2025 interpretation version reconcile. No species-wide resistance,
+    causative determinant or assay-incubation condition is inferred from these observational
+    rows.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - cdc-audit
+  - cdc-1305
+  - cdc-0347
+  - cdc-0348
+  - cdc-0074
+  - biosample-1305
+  - biosample-0347
+  - biosample-0348
+  - biosample-0074
+- assessment_id: resistance
+  area: evidence
+  topic: Nine qualified resistance database assertions
+  outcome: supported
+  summary: The asserted mechanism classes and exact terms are coherent within their
+    explicit database-evidence status. Original gene-expression, porin-deletion and
+    disk experiments support several exact ertapenem relationships with strain/promoter/endpoint
+    limits. CMY-2’s measured MIC increase is retained despite the threshold-spanning
+    range; no purified rate or direct ertapenem transport is invented. FRI-11 and
+    some NDM/VIM details remain bounded by original abstract access.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - owners
+  - dispositions
+  - ndm
+  - ctxm-cmy
+  - ctxm-cmy-si
+  - vcc
+  - porin
+  - efflux
+  - efflux-figure
+  - vim63
+  - fri11
+- assessment_id: target
+  area: evidence
+  topic: Generic PBP assertion and primary-evidence status
+  outcome: supported
+  summary: The PBP entry accurately states a taxon/assay-unspecified CARD assertion
+    and PRIMARY_EVIDENCE_NEEDED. The general PBP review and the combination paper’s
+    background do not justify inventing a species-specific directly measured target.
+    This is a bounded optional primary-evidence gap rather than a falsely marked primary
+    claim.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - aro-3000749
+  - dispositions
+  - combination
+  - adapter
+- assessment_id: bibliography
+  area: evidence
+  topic: Adopted lead and preparation scope
+  outcome: supported
+  summary: Both adopted drug leads and all target/resistance citation leads have explicit
+    dispositions. Reviews, original abstracts, original figures, cloned AST, combination
+    outcomes and enzyme kinetics retain distinct evidence scopes. Patent acid titles
+    do not override sodium workup/formulation details.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - owners
+  - bibliography
+  - dispositions
+  - combination
+  - patent-us
+  - patent-wo
+  - access
+- assessment_id: provenance
+  area: provenance
+  topic: Generated source claims and native curated AST ownership
+  outcome: supported
+  summary: All nine history entries were read. ARO/ChEBI claims reproduce maintained
+    sources; the four CDC observations have their actual native curator owner. Drug-map
+    context is not mislabeled as an AST source. Original thirteen input hashes remain
+    unchanged within 27 expanded inputs.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - owners
+  - search
+  - gates
+- assessment_id: completeness
+  area: completeness
+  topic: Optional enrichment and unasserted domains
+  outcome: unknown
+  summary: No native FDA product assertion, producer, mode list, causal graph or activity-collection
+    membership is present. These omissions do not establish a schema defect. Primary
+    target/resistance upgrades would need exact construct, taxon, preparation, endpoint
+    and source limitations; no whole-species generalization follows from the four
+    isolates.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - native
+  - search
+  - dispositions
+  - adapter
+- assessment_id: validation
+  area: schema
+  topic: Focused native validation and chemistry
+  outcome: supported
+  summary: Schema, strict, independent structure and source-mint checks pass. These
+    checks do not detect confirmed synonym-type or local grammar issues. Drug-level
+    identifier semantics were independently read and applied.
+  target_ids:
+  - CHEBI:404903
+  evidence_ids:
+  - gates
+  - chemistry
+  - field-semantics
+findings:
+- finding_id: F1
+  issue_key: ertapenem-invanz-brand-synonym-type
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Invanz is typed as an exact molecular synonym
+  description: Official labelling establishes INVANZ as an ertapenem sodium injection
+    product brand. The ARO string import assigns EXACT_SYNONYM to Invanz. Retain the
+    useful brand association but use the explicit BRAND_NAME type; do not remove the
+    valid drug-level cross-references.
+  target_ids:
+  - CHEBI:404903
+  field_paths:
+  - synonyms[5].synonym_type
+  evidence_ids:
+  - native
+  - owners
+  - label
+  - field-semantics
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition and grounding
+  rule_id: review-checklist:Identity/Names/Definition
+  native_severity: minor
+  normalization_reason: The correction concerns name typing or local wording without
+    changing the supported molecular identity or activity evidence.
+- finding_id: F2
+  issue_key: ertapenem-definition-the-one-of
+  category: nomenclature
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Definition contains the phrase “the one of”
+  description: The definition begins “Meropenem in which the one of the two methyl
+    groups...”. Remove the extraneous “the” before “one” through the maintained field
+    owner. The intended chemical substitution is otherwise coherent.
+  target_ids:
+  - CHEBI:404903
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  rule_id: review-checklist:Identity/Names/Definition
+  native_severity: minor
+  normalization_reason: The correction concerns name typing or local wording without
+    changing the supported molecular identity or activity evidence.
+actions:
+- action_id: A1
+  description: Retype the verified Invanz brand through the maintained ARO synonym
+    import.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:404903
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO definition and grounding
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Regenerated Invanz has BRAND_NAME type while exact systematic synonyms and valid
+    drug associations are preserved.
+  - Run native schema/strict and maintained-source reproduction checks; preserve all
+    four curated CDC observations.
+- action_id: A2
+  description: Correct the inherited definition grammar through the maintained field
+    owner.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:404903
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - The regenerated definition reads “in which one of the two methyl groups” and preserves
+    the supported substitution and salt-qualified use.
+  - Run native schema/strict and maintained-source reproduction checks; preserve all
+    four curated CDC observations.
+limitations:
+- The nineteen citation metadata records and their available original abstracts were
+  inspected, plus the exact VIM-63 original abstract. Full experimental sections were
+  inspected for NDM-5, CTX-M-27/CMY-2 expression, VCC-1, OmpK35, KpnGH and the combination
+  study only within the stated relevant scopes; not every figure, clinical endpoint
+  or supplementary dataset was reanalyzed.
+- NDM-1 and VIM-63 full experimental sections remained inaccessible after browser
+  challenges and alternative failures. FRI-11 publisher access returned a client challenge;
+  its original abstract lacks exact ertapenem numerical assay detail. The older ertapenem
+  review has no indexed abstract and was not obtained. No unavailable full text is
+  described as read.
+- The original 2021 Table S1 cells and KpnGH Figure 3 were inspected. Phenotypic MIC
+  or inhibition-zone changes do not by themselves supply purified hydrolysis rates
+  or direct ertapenem efflux measurements. The primary porin result concerns gene
+  loss in one subspecies/strain, not normal porin expression as a universal resistance
+  determinant.
+- The two patents were checked for exact named-compound relevance, Example 4/12 material
+  boundaries and the US acid/salt claims. Every patent drawing, preparation and analytical
+  trace was not independently reanalyzed; no patent-wide activity is transferred to
+  the neutral compound.
+- The Beilstein9025520 mapping remains unverified after Reaxys 403. Current authority/version
+  agreement and database assertions do not constitute primary biological evidence.
+  Optional future target enrichment requires an inspected exact ertapenem binding
+  experiment.
+- The four CDC observations are source-specific modal MICs with normal assay variability.
+  Concentration units reconcile, but no unreported salt/potency basis, clinical outcome
+  or resistance genotype is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or maintained source was edited. Original captures were preserved; every
+  expanded input hash is checked unchanged. Optional links, tags and notes refer to
+  ertapenem.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:404903
+- https://doi.org/10.1099/mgen.0.000500
+- https://patents.google.com/patent/US5478820A/en
+tags:
+- ertapenem
+- isolate-mic-evidence
+- database-resistance-assertions
+- brand-synonym-type
