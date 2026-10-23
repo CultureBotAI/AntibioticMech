@@ -1,7 +1,7 @@
 identifier: CHEBI:3732
 label: clarithromycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: The 6-O-methyl ether of erythromycin A, clarithromycin is a macrolide
   antibiotic used in the treatment of respiratory-tract, skin and soft-tissue infections.
@@ -701,6 +701,26 @@ molecular_targets:
   - reference: ARO:3000757
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000065 (clarithromycin); database
       assertion, not a primary citation.
+- target_label: bacterial 50S ribosomal subunit nascent-peptide exit tunnel
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  experimental_context: Cryo-EM structure of Mycobacterium tuberculosis 50S ribosomal
+    subunits complexed with clarithromycin in the nascent-peptide exit tunnel (PMID:34935599)
+    and cellular translation-inhibition assays in Staphylococcus aureus (PMID:9425251).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-01
+  source_retrieved_on: '2026-10-23'
+  evidence:
+  - reference: PMID:34935599
+    notes: Zhang et al. resolved Mycobacterium tuberculosis 50S ribosomal subunits
+      with bound clarithromycin occupying the macrolide site in the nascent-peptide
+      exit tunnel.
+  - reference: PMID:9425251
+    notes: Champney and Burdine measured clarithromycin-dependent inhibition of cellular
+      translation elongation in Staphylococcus aureus.
 activity_spectrum:
 - taxon_label: Mycobacterium tuberculosis complex
   assay: CRyPTIC DST; CLIRES2020; not specified
@@ -1877,4 +1897,11 @@ curation_history:
     using corrected primary Table 2; grounded the verified species synonym while withholding
     exact alleles and protein identifiers. Preserved all source-owned content and
     negative-comparator distinctions. Whole-record review remains open.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for the bacterial 50S ribosomal
+    subunit nascent-peptide exit tunnel (PMID:34935599; PMID:9425251) and promoted
+    clarithromycin to REVIEWED (#1254).
   llm_assisted: true

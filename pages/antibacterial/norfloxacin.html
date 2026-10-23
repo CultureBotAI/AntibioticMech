@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:100246</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_100246">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A quinolinemonocarboxylic acid with broad-spectrum antibacterial activity against most gram-negative and gram-positive bacteria. Norfloxacin is bactericidal and its mode of action depends on blocking of bacterial DNA replication by binding itself to an enzyme called DNA gyrase.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000001">fluoroquinolone antibiotic</a><code class="curie">ARO:0000001</code></p>
@@ -154,6 +151,33 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <p class="meta"><a href="http://purl.obolibrary.org/obo/ARO_3000735">ARO:3000735</a></p><p class="meta">CARD/ARO database assertion; target organism, strain, and assay are not specified. ParC is asserted as the fluoroquinolone-sensitive subunit. Evidence status: PRIMARY_EVIDENCE_NEEDED. Source: CARD_ARO 2026-08-30 (retrieved 2026-08-30).</p>
 <ul class="plain evidence">
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000735">ARO:3000735</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000662 (norfloxacin); database assertion, not a primary citation.)</span></li>
+</ul>
+
+<h3>bacterial DNA gyrase <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Radiolabeled [3H]norfloxacin binding to Escherichia coli DNA gyrase-DNA complexes (PMID:2536729; PMID:2982149) and purified Micrococcus luteus DNA gyrase supercoiling inhibition assays (PMID:3010848). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 1989-02 (retrieved 2026-10-23).</p>
+<p><em>Escherichia coli</em> <code class="curie">NCBITaxon:562</code></p><div class="table-scroll" role="region" aria-label="bacterial DNA gyrase organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>DNA gyrase subunit A <a href="https://www.uniprot.org/uniprotkb/P0AES4"><code class="curie">UniProtKB:P0AES4</code></a><br><span class="meta">Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry).</span></td>
+    <td>gyrA</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>DNA gyrase subunit B <a href="https://www.uniprot.org/uniprotkb/P0AES6"><code class="curie">UniProtKB:P0AES6</code></a><br><span class="meta">Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA gyrase).</span></td>
+    <td>gyrB</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/2536729">PMID:2536729</a></span> <span class="meta">(Shen et al. characterized cooperative norfloxacin binding sites formed in bacterial DNA gyrase-DNA complexes.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/2982149">PMID:2982149</a></span> <span class="meta">(Shen and Pernet measured [3H]norfloxacin binding and inhibition of DNA gyrase supercoiling.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/3010848">PMID:3010848</a></span> <span class="meta">(Zweerink and Edison quantified norfloxacin inhibition of purified bacterial DNA gyrase supercoiling activity.)</span></li>
 </ul>
 
 
@@ -814,6 +838,11 @@ or death.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4) and subunit B (P0AES6) UniProtKB protein examples on the norfloxacin_dna_gyrase_supercoiling_inhibition dna_gyrase causal graph node.</p>
   </li>
+  <li>
+    <span class="pill">RESOLVED_REVIEW_FINDINGS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for bacterial DNA gyrase (PMID:2536729; PMID:2982149; PMID:3010848) with reviewed UniProtKB protein examples and promoted norfloxacin to REVIEWED (#1254).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -834,7 +863,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>87d262c34ac1</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>95aca57ba56b</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

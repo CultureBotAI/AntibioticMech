@@ -432,22 +432,102 @@ def restore_pre_causal_graphs():
 
 
 @pytest.fixture(scope="session")
-def pre_causal_graphs_root(tmp_path_factory):
+def pre_stage5_remediation_root(tmp_path_factory):
+    """Restore the 11 Stage 5 review-remediated records and held_targets additions in isolation."""
+    import yaml
+
+    from antibioticmech.validation.write_validated import write_validated_antibiotic
+
+    transition = json.loads(
+        (REPO_ROOT / "curation/stage5_review_remediation_transition.json").read_bytes()
+    )
+    root = tmp_path_factory.mktemp("pre-stage5-remediation")
+    shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
+    for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
+        (root / relative).symlink_to(REPO_ROOT / relative, target_is_directory=True)
+    (root / "curation").mkdir()
+    stage5_held_keys = {
+        ("molecular_targets", "CHEBI:3732", "PMID:34935599"),
+        ("molecular_targets", "CHEBI:600103", "PMID:40455071"),
+    }
+    promoted_existing_ids = {
+        "CHEBI:3732",
+        "CHEBI:100147",
+        "CHEBI:100246",
+        "CHEBI:50199",
+        "CHEBI:100241",
+        "CHEBI:600103",
+        "CHEBI:63598",
+        "CHEBI:45924",
+        "CHEBI:119573",
+        "CHEBI:63613",
+    }
+    for path in (REPO_ROOT / "curation").iterdir():
+        if path.name == "uniprot_protein_examples.yaml":
+            loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+            plan_data = yaml.load(path.read_text(encoding="utf-8"), Loader=loader)
+            plan_data["held_targets"] = [
+                h
+                for h in (plan_data.get("held_targets") or [])
+                if (h.get("scope"), h.get("identifier"), h.get("target_reference"))
+                not in stage5_held_keys
+            ]
+            assert len(plan_data["held_targets"]) == 74
+            (root / "curation" / path.name).write_text(
+                yaml.dump(plan_data, sort_keys=False, allow_unicode=True, width=100),
+                encoding="utf-8",
+            )
+        elif path.name == "causal_graphs.yaml":
+            loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+            cg_data = yaml.load(path.read_text(encoding="utf-8"), Loader=loader)
+            for item in cg_data.get("existing_causal_graphs") or []:
+                if item.get("identifier") in promoted_existing_ids:
+                    item["curation_status"] = "SEEDED"
+            (root / "curation" / path.name).write_text(
+                yaml.dump(cg_data, sort_keys=False, allow_unicode=True, width=100),
+                encoding="utf-8",
+            )
+        else:
+            (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
+    for entry in transition["records"]:
+        rel_path = entry["path"]
+        rec = load_record(REPO_ROOT / rel_path)
+        assert rec["identifier"] == entry["identifier"]
+        assert rec["curation_history"][-1]["action"] == "RESOLVED_REVIEW_FINDINGS"
+        rec["curation_history"] = rec["curation_history"][: entry["previous_curation_history_len"]]
+        for k, v in entry["previous_fields"].items():
+            if v is None:
+                rec.pop(k, None)
+            else:
+                rec[k] = v
+        if "previous_molecular_targets_len" in entry:
+            rec["molecular_targets"] = rec["molecular_targets"][
+                : entry["previous_molecular_targets_len"]
+            ]
+        if "previous_daptomycin_target4_source" in entry:
+            rec["molecular_targets"][4]["source"] = entry["previous_daptomycin_target4_source"]
+        write_validated_antibiotic(rec, root / rel_path)
+    return root
+
+
+@pytest.fixture(scope="session")
+def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
     """Restore only the 36 curated causal_graphs record deltas and held_targets additions in isolation."""
     import yaml
 
-    transition = _causal_graphs_transition(REPO_ROOT)
+    source = pre_stage5_remediation_root
+    transition = _causal_graphs_transition(source)
     cohort_b_ids = {
         row["identifier"]
         for row in transition["record_deltas"]
         if row.get("cohort") == "non_protein_direct_or_measured_target"
     }
     root = tmp_path_factory.mktemp("pre-causal-graphs")
-    shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
+    shutil.copytree(source / "data/antibiotics", root / "data/antibiotics")
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
-        (root / relative).symlink_to(REPO_ROOT / relative, target_is_directory=True)
+        (root / relative).symlink_to(source / relative, target_is_directory=True)
     (root / "curation").mkdir()
-    for path in (REPO_ROOT / "curation").iterdir():
+    for path in (source / "curation").iterdir():
         if path.name == "uniprot_protein_examples.yaml":
             loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
             plan_data = yaml.load(path.read_text(encoding="utf-8"), Loader=loader)
@@ -464,6 +544,6 @@ def pre_causal_graphs_root(tmp_path_factory):
         else:
             (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
     for delta in transition["record_deltas"]:
-        _restore_pre_causal_graphs(REPO_ROOT, delta["path"], root / delta["path"])
+        _restore_pre_causal_graphs(source, delta["path"], root / delta["path"])
     return root
 

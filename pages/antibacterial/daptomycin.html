@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:600103</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_600103">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A polypeptide comprising N-decanoyltryptophan, asparagine, aspartic acid, threonine, glycine, ornithine, aspartic acid, D-alanine, aspartic acid, glycine, D-serine, threo-3-methylglutamic acid and 3-anthraniloylalanine (also known as kynurinine) coupled in sequence and lactonised by condensation of the carboxylic acid group of the 3-anthraniloylalanine with the alcohol group of the threonine residue.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3009657">nonribosomal peptide antibiotics</a><code class="curie">ARO:3009657</code></p>
@@ -159,18 +156,21 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 </ul>
 
 <h3>phosphatidylglycerol-rich bacterial membrane <span class="pill plain">MEMBRANE</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
-<p class="meta">Biophysical and cellular study of the calcium-dependent daptomycin- phosphatidylglycerol complex and selective uptake into bacterial membranes; no single organism or strain is generalized from the membrane models. Evidence status: PRIMARY_EVIDENCE. Source: CURATOR 2026-08-31 (retrieved 2026-08-31).</p>
+<p class="meta">Biophysical and cellular study of the calcium-dependent daptomycin- phosphatidylglycerol complex and selective uptake into bacterial membranes; no single organism or strain is generalized from the membrane models. Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2026-08-31 (retrieved 2026-08-31).</p>
 <ul class="plain evidence">
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/40455071">PMID:40455071</a></span> <span class="meta">(Primary evidence for stable phosphatidylglycerol complex formation and selective bacterial-membrane uptake.)</span></li>
 </ul>
 
 
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>MEMBRANE_DISRUPTION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed as calcium-dependent complexation with phosphatidylglycerol-rich bacterial membranes driving selective membrane insertion and depolarization. PMID:1666494; PMID:40455071.</span></dd></dl>
 
 
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">19 observations &middot; <a href="daptomycin/activity-1.html">Browse all observations</a> &middot; <a href="daptomycin/record-2360db375b1d654c4626880df8fb6df12a322dcab08f4db0499708c07082cfe3.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">19 observations &middot; <a href="daptomycin/activity-1.html">Browse all observations</a> &middot; <a href="daptomycin/record-8b67dda9dd6f9fdd9a43fbf25914d45a002c43000d480b4af86004dafc7babef.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -998,6 +998,11 @@ or death.</p>
     <span class="meta">2026-10-16 · seed_from_sources</span>
     <p>Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date 2026-08-30, unchanged.</p>
   </li>
+  <li>
+    <span class="pill">RESOLVED_REVIEW_FINDINGS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Set daptomycin mode_of_action to MEMBRANE_DISRUPTION with MICROBIAL_TARGET scope, normalized PRIMARY_EVIDENCE membrane target source to PRIMARY_LITERATURE (PMID:40455071; PMID:1666494), and promoted daptomycin to REVIEWED (#1255).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -1018,7 +1023,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>87d262c34ac1</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>95aca57ba56b</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

@@ -78,9 +78,9 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
         "causal_graphs_with_protein_nodes": 33,
         "causal_graphs_held": 20,
         "gene_or_protein_nodes": 35,
-        "primary_literature_targets_total": 85,
-        "primary_literature_targets_populated": 31,
-        "primary_literature_targets_held": 54,
+        "primary_literature_targets_total": 95,
+        "primary_literature_targets_populated": 39,
+        "primary_literature_targets_held": 56,
     }
 
 
@@ -91,7 +91,7 @@ def test_plan_and_transition_summary_counts():
     assert sum(d["causal_nodes_updated"] for d in receipt["record_deltas"]) == 15
     assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 29
     assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 62
-    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 74
+    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 76
 
 
 def test_strict_protein_example_and_held_target_validation():

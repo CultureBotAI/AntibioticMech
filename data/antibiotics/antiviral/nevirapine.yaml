@@ -1,7 +1,7 @@
 identifier: CHEBI:63613
 label: nevirapine
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A dipyridodiazepine that is 5,11-dihydro-6H-dipyrido[3,2-b:2',3'-e][1,4]diazepine
   which is substituted by methyl, oxo, and cyclopropyl groups at positions 4, 6, and
@@ -35,10 +35,9 @@ activity_roles:
 - CHEBI:36044
 - CHEBI:53756
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
-  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
-  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: Confirmed as non-nucleoside allosteric pocket binding
+  and inhibition of HIV-1 reverse transcriptase primer-active-site alignment and polymerase
+  activity. PMID:1377403; PMID:22266819.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Cc1ccnc2c1NC(=O)c1cccnc1N2C1CC1
@@ -1347,6 +1346,37 @@ molecular_targets:
     entry_status: UNREVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+- target_label: HIV-1 reverse transcriptase
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:11676
+  taxon_label: Human immunodeficiency virus 1
+  experimental_context: Crystal structures of HIV-1 reverse transcriptase-DNA-nevirapine
+    complexes resolving NNRTI-pocket binding, primer displacement, and dNTP-pocket
+    distortion (PMID:22266819; PMID:1377403).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-02
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P04585
+    protein_label: Gag-Pol polyprotein
+    gene_symbol: gag-pol
+    taxon_id: NCBITaxon:11706
+    taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+      noncompetitively bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970;
+      PMID:7540824, PDB 1VRT; HXB2 reference isolate context).
+  evidence:
+  - reference: PMID:22266819
+    notes: Das et al. resolved crystal structures of HIV-1 RT-DNA-nevirapine complexes
+      showing NNRTI-pocket occupancy and primer displacement from the polymerase active
+      site.
+  - reference: PMID:1377403
+    notes: Kohlstaedt et al. resolved the HIV-1 reverse transcriptase crystal structure
+      in complex with nevirapine.
 genotype_resistance_score_rules:
 - pathogen_label: Human immunodeficiency virus 1
   gene: RT
@@ -2547,4 +2577,11 @@ curation_history:
   changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
     example on the nevirapine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase
     causal graph node.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Confirmed nevirapine mode_of_action_notes, added PRIMARY_LITERATURE DIRECT_BINDING_TARGET
+    for HIV-1 reverse transcriptase (PMID:22266819; PMID:1377403), and promoted nevirapine
+    to REVIEWED (#1255).
   llm_assisted: true

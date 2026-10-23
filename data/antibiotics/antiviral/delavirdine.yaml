@@ -1,7 +1,7 @@
 identifier: CHEBI:119573
 label: delavirdine
 antimicrobial_class: ANTIVIRAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: The amide resulting from the formal condensation of 5-[(methylsulfonyl)amino]-1H-indole-2-carboxylic
   acid and 4-amino group of 1-[3-(isopropylamino)pyridin-2-yl]piperazine, delavirdine
@@ -42,10 +42,9 @@ activity_roles:
 - CHEBI:36044
 - CHEBI:53756
 mode_of_action: VIRAL_POLYMERASE_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:53756 (HIV-1 reverse transcriptase
-  inhibitor). ChEBI asserts the role on the compound. The role names a target specific
-  to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic
-  review.
+mode_of_action_notes: 'CURATOR: Confirmed as non-nucleoside allosteric pocket binding
+  and inhibition of HIV-1 reverse transcriptase RNA- and DNA-directed DNA polymerase
+  activities. PMID:1377403; PMID:8809165; PMID:10514285.'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CC(C)Nc1cccnc1N1CCN(C(=O)c2cc3cc(NS(C)(=O)=O)ccc3n2)CC1
@@ -324,6 +323,38 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-08-31'
     role: BindingDB target chain 1
+- target_label: HIV-1 reverse transcriptase
+  target_type: VIRAL_PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:11676
+  taxon_label: Human immunodeficiency virus 1
+  experimental_context: Biochemical inhibition assays against wild-type and mutant
+    HIV-1 reverse transcriptase (PMID:8809165; PMID:10514285) and structural characterization
+    of the viral DNA polymerase target (PMID:1377403).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1999-10
+  source_retrieved_on: '2026-10-23'
+  protein_examples:
+  - uniprot_id: UniProtKB:P04585
+    protein_label: Gag-Pol polyprotein
+    gene_symbol: gag-pol
+    taxon_id: NCBITaxon:11706
+    taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+      bound at the non-nucleoside inhibitor pocket by delavirdine (U-90152) (PMID:1726658;
+      PMID:10602683, PDB 1KLM; HXB2 reference isolate context).
+  evidence:
+  - reference: PMID:8809165
+    notes: Direct IC50 inhibition of HIV-1 reverse transcriptase by delavirdine.
+  - reference: PMID:10514285
+    notes: Biochemical inhibition of wild-type and mutant HIV-1 reverse transcriptases
+      by delavirdine.
+  - reference: PMID:1377403
+    notes: Structural characterization of HIV-1 reverse transcriptase as a non-nucleoside
+      inhibitor viral polymerase target.
 causal_graphs:
 - graph_id: delavirdine_hiv1_reverse_transcriptase_inhibition
   title: Delavirdine inhibits HIV-1 reverse transcriptase
@@ -433,4 +464,11 @@ curation_history:
   changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
     example on the delavirdine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase
     causal graph node.
+  llm_assisted: true
+- timestamp: '2026-10-23T18:15:00Z'
+  curator: antigravity
+  action: RESOLVED_REVIEW_FINDINGS
+  changes: Confirmed delavirdine mode_of_action_notes, added PRIMARY_LITERATURE DIRECT_BINDING_TARGET
+    for HIV-1 reverse transcriptase (PMID:8809165; PMID:10514285; PMID:1377403), and
+    promoted delavirdine to REVIEWED (#1255).
   llm_assisted: true

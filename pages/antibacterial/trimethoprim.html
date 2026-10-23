@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:45924</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_45924">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An aminopyrimidine antibiotic whose structure consists of pyrimidine 2,4-diamine and 1,2,3-trimethoxybenzene moieties linked by a methylene bridge.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000171">diaminopyrimidine antibiotic</a><code class="curie">ARO:3000171</code></p>
@@ -374,10 +371,36 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27939900">PMID:27939900</a></span> <span class="meta">(BindingDB literature-curated quantitative target measurement; source value, assay text, reaction-set ID, and target organism retained.)</span></li>
 </ul>
 
+<h3>bacterial dihydrofolate reductase (DHFR) <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Direct enzyme inhibition of Staphylococcus aureus dihydrofolate reductase (PMID:14623005) and tetrahydrofolate-pool depletion in Escherichia coli (PMID:4254117). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2003-11 (retrieved 2026-10-23).</p>
+<div class="table-scroll" role="region" aria-label="bacterial dihydrofolate reductase (DHFR) organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydrofolate reductase <a href="https://www.uniprot.org/uniprotkb/P0A017"><code class="curie">UniProtKB:P0A017</code></a><br><span class="meta">Chromosomal trimethoprim-sensitive dihydrofolate reductase (dfrB/folA) directly inhibited by trimethoprim in S. aureus (PMID:14623005).</span></td>
+    <td>folA</td>
+    <td><em>Staphylococcus aureus</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_1280"><code class="curie">NCBITaxon:1280</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>Dihydrofolate reductase <a href="https://www.uniprot.org/uniprotkb/P0ABQ4"><code class="curie">UniProtKB:P0ABQ4</code></a><br><span class="meta">Bacterial dihydrofolate reductase forming cooperative ternary complexes with NADPH and trimethoprim in E. coli (PMID:1985419; K-12 reference strain context).</span></td>
+    <td>folA</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/14623005">PMID:14623005</a></span> <span class="meta">(Direct IC50 inhibition of bacterial dihydrofolate reductase by trimethoprim.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/4254117">PMID:4254117</a></span> <span class="meta">(Miovic and Pizer linked bacterial DHFR inhibition by trimethoprim to reduced folate depletion and macromolecular synthesis arrest in Escherichia coli.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>FOLATE_PATHWAY_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:50683 (EC 1.5.1.3 (dihydrofolate reductase) inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
+<dt>Mode of action</dt><dd>FOLATE_PATHWAY_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed as selective inhibition of bacterial dihydrofolate reductase (DHFR / FolA) blocking reduced folate regeneration and nucleotide biosynthesis. PMID:4254117; PMID:14623005.</span></dd><dt>Clinical status</dt><dd>APPROVED</dd></dl>
 
 
 
@@ -1257,6 +1280,11 @@ or death.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated S. aureus (P0A017) and E. coli K-12 (P0ABQ4) dihydrofolate reductase (folA) UniProtKB protein examples on the trimethoprim_folate_pathway_inhibition bacterial_dhfr causal graph node.</p>
   </li>
+  <li>
+    <span class="pill">RESOLVED_REVIEW_FINDINGS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Confirmed trimethoprim mode_of_action_notes and MICROBIAL_TARGET scope, added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for bacterial DHFR (PMID:14623005; PMID:4254117), and promoted trimethoprim to REVIEWED (#1255).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -1277,7 +1305,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>87d262c34ac1</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>95aca57ba56b</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

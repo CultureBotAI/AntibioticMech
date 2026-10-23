@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:63598</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_63598">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An optically active form of ofloxacin having (S)-configuration; an inhibitor of bacterial topoisomerase IV and DNA gyrase.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_0000001">fluoroquinolone antibiotic</a><code class="curie">ARO:0000001</code></p>
@@ -150,16 +147,47 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000735">ARO:3000735</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:0000071 (levofloxacin); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>bacterial topoisomerase IV <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">X-ray crystal structures of levofloxacin-stabilized bacterial topoisomerase IV (ParC/ParE) covalent DNA cleavage complexes from Streptococcus pneumoniae and Klebsiella pneumoniae (PMID:27050128). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2016-04 (retrieved 2026-10-23).</p>
+<div class="table-scroll" role="region" aria-label="bacterial topoisomerase IV organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>DNA topoisomerase 4 subunit A <a href="https://www.uniprot.org/uniprotkb/P72525"><code class="curie">UniProtKB:P72525</code></a><br><span class="meta">Catalytic ParC subunit of S. pneumoniae topoisomerase IV complexed with DNA and levofloxacin in the ternary cleavage-complex crystal structure (PMID:19332681; TIGR4 reference strain context).</span></td>
+    <td>parC</td>
+    <td><em>Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_170187"><code class="curie">NCBITaxon:170187</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>DNA topoisomerase 4 subunit A <a href="https://www.uniprot.org/uniprotkb/P0AFI2"><code class="curie">UniProtKB:P0AFI2</code></a><br><span class="meta">Reference Gram-negative bacterial topoisomerase IV ParC subunit corresponding to ARO:3000735 node grounding (E. coli K-12 reference proteome context).</span></td>
+    <td>parC</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>DNA topoisomerase 4 subunit B <a href="https://www.uniprot.org/uniprotkb/P20083"><code class="curie">UniProtKB:P20083</code></a><br><span class="meta">Reference Gram-negative bacterial topoisomerase IV ParE subunit corresponding to ARO:3000735 node grounding (E. coli K-12 reference proteome context).</span></td>
+    <td>parE</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/27050128">PMID:27050128</a></span> <span class="meta">(Veselkov et al. resolved crystal structures of levofloxacin-stabilized bacterial ParC/ParE topoisomerase IV-DNA cleavage complexes.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor), CHEBI:59517 (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Confirmed as bacterial topoisomerase IV and DNA gyrase cleavage-complex stabilization after primary levofloxacin mechanism review. PMID:27050128.</span></dd></dl>
 
 
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">321 observations &middot; <a href="levofloxacin/activity-1.html">Browse all observations</a> &middot; <a href="levofloxacin/record-7e3ec86a0cb677d6a0d21c1167dca19405ecca333a05be6f135647e2d6ab49d5.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">321 observations &middot; <a href="levofloxacin/activity-1.html">Browse all observations</a> &middot; <a href="levofloxacin/record-f5f597d42a7a0f53f0d5e994948c8cf7c11eafb01b6431f2483871e0e1663c2e.json.gz" download>Complete record (JSON.gz)</a></p>
 <p class="meta">Observations 1&ndash;20 of 321</p><div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -1132,6 +1160,11 @@ or death.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated S. pneumoniae TIGR4 ParC (P72525) and E. coli K-12 ParC/ParE (P0AFI2, P20083) UniProtKB protein examples on the levofloxacin topoisomerase_iv causal graph node.</p>
   </li>
+  <li>
+    <span class="pill">RESOLVED_REVIEW_FINDINGS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Confirmed levofloxacin mode_of_action_notes, added PRIMARY_LITERATURE DIRECT_BINDING_TARGET for bacterial topoisomerase IV (PMID:27050128) with reviewed UniProtKB protein examples, and promoted levofloxacin to REVIEWED (#1255).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -1152,7 +1185,7 @@ or death.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>87d262c34ac1</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>95aca57ba56b</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>
