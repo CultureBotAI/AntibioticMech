@@ -56,6 +56,16 @@ molecular_targets:
   evidence:
   - reference: PMID:9665698
     notes: Primary compound-enzyme cocrystal study (DOI:10.1021/bi980321b).
+  protein_examples:
+  - uniprot_id: UniProtKB:P56221
+    protein_label: Scytalone dehydratase
+    gene_symbol: SDH1
+    taxon_id: NCBITaxon:242507
+    taxon_label: Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with carpropamid
+      bound in the hydrophobic active-site cavity (PMID:9665698, PDB 2STD).
 xrefs:
 - cas:104030-54-8
 - kegg.compound:C10932
@@ -103,3 +113,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T12:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Pyricularia oryzae 70-15 scytalone dehydratase SDH1 (P56221)
+    UniProtKB protein example on the PRIMARY_LITERATURE fungal scytalone dehydratase
+    molecular target.
+  llm_assisted: true

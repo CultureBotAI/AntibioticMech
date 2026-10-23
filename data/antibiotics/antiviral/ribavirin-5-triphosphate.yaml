@@ -68,6 +68,16 @@ molecular_targets:
   evidence:
   - reference: PMID:15152003
     notes: Primary enzyme-inhibition and ternary-cocrystal study (DOI:10.1074/jbc.m400460200).
+  protein_examples:
+  - uniprot_id: UniProtKB:P12823
+    protein_label: Genome polyprotein
+    taxon_id: NCBITaxon:11066
+    taxon_label: Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA
+      2'-O-methyltransferase domain crystallized in a 2.6-angstrom ternary complex
+      with ribavirin 5'-triphosphate at the GTP-binding site (PMID:15152003, PDB 1R6A).
 - target_label: hepatitis C virus NTPase/helicase
   target_type: VIRAL_PROTEIN
   target_relation: MEASURED_TARGET_ASSOCIATION
@@ -156,4 +166,11 @@ curation_history:
     the polymerase-only mechanism to MULTIPLE, added three viral-enzyme targets with
     primary evidence, and documented the unresolved eIF4E binding controversy without
     asserting it as fact.
+  llm_assisted: true
+- timestamp: '2026-10-23T12:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Dengue virus type 2 PR159-S1 genome polyprotein (P12823)
+    UniProtKB protein example on the PRIMARY_LITERATURE dengue virus NS5 mRNA 2'-O-methyltransferase
+    domain molecular target.
   llm_assisted: true

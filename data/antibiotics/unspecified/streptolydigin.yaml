@@ -100,6 +100,27 @@ molecular_targets:
   - reference: PMID:16167380
     notes: Independent bacterial RNAP-streptolydigin cocrystal and biochemical study
       (DOI:10.1016/j.molcel.2005.07.020).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q8RQE9
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Core RNA polymerase beta subunit contributing the Stl1/Stl2 streptolydigin-binding
+      pocket adjacent to the active center in Thermus thermophilus RNAP cocrystals
+      (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR).
+  - uniprot_id: UniProtKB:Q8RQE8
+    protein_label: DNA-directed RNA polymerase subunit beta'
+    gene_symbol: rpoC
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Core RNA polymerase beta' subunit whose bridge helix and trigger loop are
+      trapped in an inactive preinsertion conformation by streptolydigin in Thermus
+      thermophilus RNAP cocrystals (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -133,3 +154,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T12:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Thermus thermophilus HB8 RNA polymerase beta (Q8RQE9) and
+    beta' (Q8RQE8) subunit UniProtKB protein examples on the PRIMARY_LITERATURE bacterial
+    DNA-directed RNA polymerase bridge-helix/trigger-loop site molecular target.
+  llm_assisted: true

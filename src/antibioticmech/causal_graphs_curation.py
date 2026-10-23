@@ -604,6 +604,14 @@ def validate_held_record_entry(
             f"{plan_path}: held_records entry requires identifier, label, path, "
             "blocker_category, target_summary, and reason"
         )
+    if (
+        "pending strain/subunit-specific split" in reason
+        or "Multi-subunit, multi-isoform, or isolate-unspecified target (" in reason
+    ):
+        raise ValueError(
+            f"{plan_path} ({identifier}): held_records reason must cite the specific "
+            "study/accession blocker rather than generic placeholder text"
+        )
     if blocker_category not in ALLOWED_BLOCKER_CATEGORIES:
         raise ValueError(
             f"{plan_path} ({identifier}): blocker_category must be one of "

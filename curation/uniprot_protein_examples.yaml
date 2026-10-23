@@ -841,6 +841,162 @@ records:
       retrieved_on: '2026-10-17'
       role: Reference HCV genotype 1b polyprotein encoding the NS3/4A protease inhibited at subnanomolar
         potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1b reference isolate BK context).
+- identifier: CHEBI:3434
+  label: carpropamid
+  path: data/antibiotics/antifungal/carpropamid.yaml
+  changes: Added curated Pyricularia oryzae 70-15 scytalone dehydratase SDH1 (P56221) UniProtKB protein
+    example on the PRIMARY_LITERATURE fungal scytalone dehydratase molecular target.
+  molecular_target_examples:
+  - source: PRIMARY_LITERATURE
+    target_label: fungal scytalone dehydratase
+    target_reference: PMID:9665698
+    protein_examples:
+    - uniprot_id: UniProtKB:P56221
+      protein_label: Scytalone dehydratase
+      gene_symbol: SDH1
+      taxon_id: NCBITaxon:242507
+      taxon_label: Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with carpropamid bound in
+        the hydrophobic active-site cavity (PMID:9665698, PDB 2STD).
+- identifier: CHEBI:145999
+  label: cinanserin
+  path: data/antibiotics/antiviral/cinanserin.yaml
+  changes: Added curated SARS-CoV (P0C6X7) and HCoV-229E (P0C6X1) replicase polyprotein 1ab UniProtKB
+    protein examples on the PRIMARY_LITERATURE coronavirus 3C-like protease (3CLpro) molecular target.
+  molecular_target_examples:
+  - source: PRIMARY_LITERATURE
+    target_label: coronavirus 3C-like protease (3CLpro)
+    target_reference: PMID:15890949
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C6X7
+      protein_label: Replicase polyprotein 1ab
+      gene_symbol: rep
+      taxon_id: NCBITaxon:694009
+      taxon_label: Severe acute respiratory syndrome coronavirus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: SARS-CoV replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound and
+        inhibited by cinanserin in surface plasmon resonance, catalytic, and replicon assays (PMID:15890949).
+    - uniprot_id: UniProtKB:P0C6X1
+      protein_label: Replicase polyprotein 1ab
+      gene_symbol: rep
+      taxon_id: NCBITaxon:11137
+      taxon_label: Human coronavirus 229E
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: HCoV-229E replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound
+        and inhibited by cinanserin in surface plasmon resonance and enzyme assays (PMID:15890949).
+- identifier: CHEBI:45490
+  label: ribavirin 5'-monophosphate
+  path: data/antibiotics/antiviral/ribavirin-5-monophosphate.yaml
+  changes: Added curated Tritrichomonas foetus IMP dehydrogenase (P50097) UniProtKB protein example on
+    the PRIMARY_LITERATURE inosine monophosphate dehydrogenase (IMPDH) molecular target.
+  molecular_target_examples:
+  - source: PRIMARY_LITERATURE
+    target_label: inosine monophosphate dehydrogenase (IMPDH)
+    target_reference: PMID:12235158
+    protein_examples:
+    - uniprot_id: UniProtKB:P50097
+      protein_label: Inosine-5'-monophosphate dehydrogenase
+      gene_symbol: IMPDH
+      taxon_id: NCBITaxon:56690
+      taxon_label: Tritrichomonas foetus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Protozoan IMP dehydrogenase catalytic subunit resolved in high-resolution cocrystals bound
+        to ribavirin 5'-monophosphate at the substrate site (PMID:12235158, PDB 1ME8/1MEI).
+- identifier: CHEBI:45578
+  label: ribavirin 5'-triphosphate
+  path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
+  changes: Added curated Dengue virus type 2 PR159-S1 genome polyprotein (P12823) UniProtKB protein example
+    on the PRIMARY_LITERATURE dengue virus NS5 mRNA 2'-O-methyltransferase domain molecular target.
+  molecular_target_examples:
+  - source: PRIMARY_LITERATURE
+    target_label: dengue virus NS5 mRNA 2'-O-methyltransferase domain
+    target_reference: PMID:15152003
+    protein_examples:
+    - uniprot_id: UniProtKB:P12823
+      protein_label: Genome polyprotein
+      taxon_id: NCBITaxon:11066
+      taxon_label: Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA 2'-O-methyltransferase
+        domain crystallized in a 2.6-angstrom ternary complex with ribavirin 5'-triphosphate at the GTP-binding
+        site (PMID:15152003, PDB 1R6A).
+- identifier: CHEBI:77772
+  label: ilicicolin H
+  path: data/antibiotics/unspecified/ilicicolin-h.yaml
+  changes: Added curated Saccharomyces cerevisiae S288c mitochondrial cytochrome b / COB (P00163) UniProtKB
+    protein example on the PRIMARY_LITERATURE cytochrome bc1 complex Qn site molecular target.
+  molecular_target_examples:
+  - source: PRIMARY_LITERATURE
+    target_label: cytochrome bc1 complex Qn site
+    target_reference: PMID:14670947
+    protein_examples:
+    - uniprot_id: UniProtKB:P00163
+      protein_label: Cytochrome b
+      gene_symbol: COB
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Mitochondrial cytochrome b catalytic subunit forming the Qn (Qi) ubiquinone-reduction pocket
+        stoichiometrically bound and inhibited at nanomolar potency by ilicicolin H in S. cerevisiae (PMID:14670947;
+        PMID:18022381; S288c reference strain context).
+- identifier: CHEBI:27834
+  label: pentostatin
+  path: data/antibiotics/unspecified/pentostatin.yaml
+  changes: Added curated Plasmodium vivax Salvador I adenosine deaminase ADA (A5KE01) UniProtKB protein
+    example on the PRIMARY_LITERATURE adenosine deaminase molecular target.
+  molecular_target_examples:
+  - source: PRIMARY_LITERATURE
+    target_label: adenosine deaminase
+    target_reference: PMID:18602399
+    protein_examples:
+    - uniprot_id: UniProtKB:A5KE01
+      protein_label: Adenosine deaminase
+      gene_symbol: ADA
+      taxon_id: NCBITaxon:126793
+      taxon_label: Plasmodium vivax (strain Salvador I)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Parasite purine-salvage adenosine deaminase resolved in cocrystal complex with pentostatin
+        (2'-deoxycoformycin) at the catalytic site (PMID:18602399, PDB 2PGF; Salvador I reference strain
+        context).
+- identifier: CHEBI:45773
+  label: streptolydigin
+  path: data/antibiotics/unspecified/streptolydigin.yaml
+  changes: Added curated Thermus thermophilus HB8 RNA polymerase beta (Q8RQE9) and beta' (Q8RQE8) subunit
+    UniProtKB protein examples on the PRIMARY_LITERATURE bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop
+    site molecular target.
+  molecular_target_examples:
+  - source: PRIMARY_LITERATURE
+    target_label: bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site
+    target_reference: PMID:16122422
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8RQE9
+      protein_label: DNA-directed RNA polymerase subunit beta
+      gene_symbol: rpoB
+      taxon_id: NCBITaxon:300852
+      taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Core RNA polymerase beta subunit contributing the Stl1/Stl2 streptolydigin-binding pocket
+        adjacent to the active center in Thermus thermophilus RNAP cocrystals (PMID:16122422, PDB 2A68;
+        PMID:16167380, PDB 1ZYR).
+    - uniprot_id: UniProtKB:Q8RQE8
+      protein_label: DNA-directed RNA polymerase subunit beta'
+      gene_symbol: rpoC
+      taxon_id: NCBITaxon:300852
+      taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Core RNA polymerase beta' subunit whose bridge helix and trigger loop are trapped in an inactive
+        preinsertion conformation by streptolydigin in Thermus thermophilus RNAP cocrystals (PMID:16122422,
+        PDB 2A68; PMID:16167380, PDB 1ZYR).
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -999,8 +1155,10 @@ held_targets:
   target_label: class D OXA beta-lactamases
   target_type: PROTEIN
   target_reference: PMID:25406838
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (class D OXA beta-lactamases; PMID:25406838)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because PMID:25406838 jointly characterizes covalent inhibition across two distinct bacterial
+    species—Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, mapped to unreviewed TrEMBL UniProtKB:Q8RLA6)
+    and Klebsiella pneumoniae OXA-48 (PDB:4S2K/4S2N/4WMC, UniProtKB:Q6XEC0)—and OXA-24/OXA-40 lacks a
+    reviewed Swiss-Prot entry.
 - identifier: CHEBI:144087
   label: bromodeoxytopsentin
   path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
@@ -1008,8 +1166,9 @@ held_targets:
   target_label: pyruvate kinase
   target_type: PROTEIN
   target_reference: PMID:22030393
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (pyruvate kinase; PMID:22030393)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because PMID:22030393 evaluates marine bisindole inhibition against MRSA pyruvate kinase
+    alongside human pyruvate kinase isoforms without establishing a strain-specific cocrystal accession
+    for the exact compound.
 - identifier: CHEBI:29506
   label: cethromycin
   path: data/antibiotics/antibacterial/cethromycin.yaml
@@ -1120,8 +1279,9 @@ held_targets:
   target_label: SbmA peptide transporter
   target_type: PROTEIN
   target_reference: PMID:18519732
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (SbmA peptide transporter; PMID:18519732)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because SbmA (UniProtKB:P0A940) is the inner-membrane uptake transporter required for PR-39
+    internalization rather than the lethal intracellular effector target, and scripts/resistance_checkpoint_records.py
+    references this record.
 - identifier: CHEBI:171658
   label: promysalin
   path: data/antibiotics/antibacterial/promysalin.yaml
@@ -1129,8 +1289,9 @@ held_targets:
   target_label: succinate dehydrogenase
   target_type: PROTEIN
   target_reference: PMID:29300464
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (succinate dehydrogenase; PMID:29300464)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because the Pseudomonas aeruginosa PAO1 succinate dehydrogenase complex subunits (sdhA UniProtKB:Q9I3D5,
+    sdhB UniProtKB:Q9I3D4, sdhC UniProtKB:Q9I3D7, sdhD UniProtKB:Q9I3D6) identified by affinity-based
+    protein profiling in PMID:29300464 are all unreviewed TrEMBL entries with no reviewed Swiss-Prot accession.
 - identifier: CHEBI:171658
   label: promysalin
   path: data/antibiotics/antibacterial/promysalin.yaml
@@ -1205,9 +1366,9 @@ held_targets:
   target_label: cytochrome bc1 complex Qi and Qo ubiquinone sites
   target_type: PROTEIN_COMPLEX
   target_reference: PMID:20025846
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (cytochrome bc1 complex Qi and Qo
-    ubiquinone sites; PMID:20025846) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because the PMID:20025846 dual-site Qi/Qo cocrystals (PDB:3H1I/3H1J) were determined using
+    purified Gallus gallus (chicken heart) mitochondrial complex III (UniProtKB:P18946 plus unreviewed
+    TrEMBL subunits D0VX26–D0VX32) as a vertebrate structural surrogate rather than a fungal target complex.
 - identifier: CHEBI:15353
   label: blasticidin S
   path: data/antibiotics/antifungal/blasticidin-s.yaml
@@ -1225,17 +1386,9 @@ held_targets:
   target_label: threonyl-tRNA synthetase
   target_type: PROTEIN
   target_reference: PMID:22967236
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (threonyl-tRNA synthetase; PMID:22967236)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
-- identifier: CHEBI:3434
-  label: carpropamid
-  path: data/antibiotics/antifungal/carpropamid.yaml
-  scope: molecular_targets
-  target_label: fungal scytalone dehydratase
-  target_type: PROTEIN
-  target_reference: PMID:9665698
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (fungal scytalone dehydratase; PMID:9665698)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because the Phytophthora sojae threonyl-tRNA synthetase proteins (UniProtKB:G4ZFI7, UniProtKB:G3FIN0,
+    UniProtKB:G4ZJB1) corresponding to the oomycete target in PMID:22967236 are all unreviewed TrEMBL
+    entries with no reviewed Swiss-Prot accession.
 - identifier: CHEBI:77693
   label: CTBT
   path: data/antibiotics/antifungal/ctbt.yaml
@@ -1301,8 +1454,9 @@ held_targets:
   target_label: DNA topoisomerases I and II
   target_type: PROTEIN
   target_reference: PMID:12765337
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (DNA topoisomerases I and II; PMID:12765337)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because PMID:12765337 bundles two distinct enzyme classes (Leishmania donovani DNA topoisomerase
+    I and type II topoisomerase) into one target entry, and the corresponding L. donovani sequences (UniProtKB:A0A3Q8IHS4,
+    UniProtKB:O97149, UniProtKB:Q9XZN0) are unreviewed TrEMBL entries.
 - identifier: CHEBI:4781
   label: emetine
   path: data/antibiotics/antiprotozoal/emetine.yaml
@@ -1310,9 +1464,10 @@ held_targets:
   target_label: eukaryotic 80S ribosome small-subunit E site
   target_type: PROTEIN_COMPLEX
   target_reference: PMID:24913268
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (eukaryotic 80S ribosome small-subunit
-    E site; PMID:24913268) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because the PMID:24913268 3.2-angstrom cryo-EM structure (PDB:3J7A) shows emetine binding
+    the 18S rRNA E-site pocket (base-stacking with G973-A974 and U1191) of the Plasmodium falciparum 40S
+    subunit, where the P. falciparum 3D7 ribosomal proteins are predominantly unreviewed TrEMBL entries
+    and the primary contact is rRNA.
 - identifier: CHEBI:65484
   label: bevirimat
   path: data/antibiotics/antiviral/bevirimat.yaml
@@ -1320,9 +1475,9 @@ held_targets:
   target_label: HIV-1 Gag CA-SP1 cleavage-site region in immature particles
   target_type: VIRAL_PROTEIN
   target_reference: PMID:22151792
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (HIV-1 Gag CA-SP1 cleavage-site
-    region in immature particles; PMID:22151792) held from single-UniProt accession assignment pending
-    strain/subunit-specific split.
+  reason: Held because PMID:22151792 characterizes photoaffinity crosslinking and resistance mutations
+    across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical clade B/C isolates) without a single
+    isolate-resolved cocrystal accession.
 - identifier: CHEBI:172943
   label: bictegravir
   path: data/antibiotics/antiviral/bictegravir.yaml
@@ -1342,15 +1497,6 @@ held_targets:
   reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: host-serine-protease-dependent
     influenza hemagglutinin activation); protein_examples are restricted to protein-containing target
     types.'
-- identifier: CHEBI:145999
-  label: cinanserin
-  path: data/antibiotics/antiviral/cinanserin.yaml
-  scope: molecular_targets
-  target_label: coronavirus 3C-like protease (3CLpro)
-  target_type: VIRAL_PROTEIN
-  target_reference: PMID:15890949
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (coronavirus 3C-like protease (3CLpro);
-    PMID:15890949) held from single-UniProt accession assignment pending strain/subunit-specific split.
 - identifier: CHEBI:82977
   label: daclatasvir
   path: data/antibiotics/antiviral/daclatasvir.yaml
@@ -1395,9 +1541,10 @@ held_targets:
   target_label: influenza virus RNA-dependent RNA polymerase (via T-705RTP)
   target_type: VIRAL_PROTEIN
   target_reference: PMID:23917318
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (influenza virus RNA-dependent RNA
-    polymerase (via T-705RTP); PMID:23917318) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because favipiravir (CHEBI:134722) is the unphosphorylated prodrug that requires host intracellular
+    phosphoribosylation and phosphorylation to active favipiravir-RTP (CHEBI:170009), and PMID:23917318
+    assays heterotrimeric PB1-PB2-PA influenza A polymerase without a strain-specific cocrystal of the
+    parent prodrug.
 - identifier: CHEBI:85188
   label: paritaprevir
   path: data/antibiotics/antiviral/paritaprevir.yaml
@@ -1414,9 +1561,9 @@ held_targets:
   target_label: eukaryotic translation initiation factor 4A (eIF4A) family
   target_type: PROTEIN
   target_reference: PMID:16337595
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (eukaryotic translation initiation
-    factor 4A (eIF4A) family; PMID:16337595) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because PMID:16337595 characterizes pateamine A across multiple mammalian paralogs (EIF4A1
+    UniProtKB:P60842, EIF4A2 UniProtKB:Q14240, and NMD factor EIF4A3 UniProtKB:P38919) as an isoform-spanning
+    family target without a single compound-bound crystal structure in the cited study.
 - identifier: CHEBI:127780
   label: phosphonoformic acid
   path: data/antibiotics/antiviral/phosphonoformic-acid.yaml
@@ -1424,9 +1571,9 @@ held_targets:
   target_label: viral family-B DNA polymerase active site
   target_type: VIRAL_PROTEIN
   target_reference: PMID:21566148
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (viral family-B DNA polymerase active
-    site; PMID:21566148) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because PMID:21566148 (PDB:3KD5) crystallized the bacteriophage RB69 chimeric family-B
+    gp43 DNA polymerase (UniProtKB:Q38087) engineered with six human cytomegalovirus UL54 residues as
+    a surrogate model rather than an authentic herpesvirus DNA polymerase.
 - identifier: CHEBI:82960
   label: raltegravir
   path: data/antibiotics/antiviral/raltegravir.yaml
@@ -1436,26 +1583,6 @@ held_targets:
   target_reference: PMID:21030679
   reason: Held because PMID:20118912 crystallized prototype foamy virus (PFV) intasome as a structural
     model rather than HIV-1 integrase directly.
-- identifier: CHEBI:45490
-  label: ribavirin 5'-monophosphate
-  path: data/antibiotics/antiviral/ribavirin-5-monophosphate.yaml
-  scope: molecular_targets
-  target_label: inosine monophosphate dehydrogenase (IMPDH)
-  target_type: PROTEIN
-  target_reference: PMID:12235158
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (inosine monophosphate dehydrogenase
-    (IMPDH); PMID:12235158) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
-- identifier: CHEBI:45578
-  label: ribavirin 5'-triphosphate
-  path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
-  scope: molecular_targets
-  target_label: dengue virus NS5 mRNA 2'-O-methyltransferase domain
-  target_type: VIRAL_PROTEIN
-  target_reference: PMID:15152003
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (dengue virus NS5 mRNA 2'-O-methyltransferase
-    domain; PMID:15152003) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
 - identifier: CHEBI:45578
   label: ribavirin 5'-triphosphate
   path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
@@ -1463,8 +1590,9 @@ held_targets:
   target_label: hepatitis C virus NTPase/helicase
   target_type: VIRAL_PROTEIN
   target_reference: PMID:11833782
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (hepatitis C virus NTPase/helicase;
-    PMID:11833782) held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because PMID:11833782 measures biochemical unwinding kinetics on recombinant HCV NS3 helicase
+    without specifying an exact genotype/isolate cocrystal sequence among the multiple reviewed HCV polyprotein
+    accessions.
 - identifier: CHEBI:45578
   label: ribavirin 5'-triphosphate
   path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
@@ -1472,9 +1600,9 @@ held_targets:
   target_label: hepatitis C virus RNA-dependent RNA polymerase
   target_type: VIRAL_PROTEIN
   target_reference: PMID:12606760
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (hepatitis C virus RNA-dependent
-    RNA polymerase; PMID:12606760) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because PMID:12606760 compares ribavirin nucleotides in initiation/elongation kinetics
+    against recombinant HCV NS5B polymerase without a compound-bound crystal structure or single reference
+    isolate assignment.
 - identifier: CHEBI:147346
   label: SG85
   path: data/antibiotics/antiviral/sg85.yaml
@@ -1482,8 +1610,9 @@ held_targets:
   target_label: picornavirus 3C protease
   target_type: VIRAL_PROTEIN
   target_reference: PMID:23388726
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (picornavirus 3C protease; PMID:23388726)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because the Human enterovirus D68 genome polyprotein (UniProtKB:A1E4A3) resolved in the
+    PMID:23388726 crystal structures (PDB:3ZV9, 3ZVA, 3ZVB) is an unreviewed TrEMBL entry with no reviewed
+    Swiss-Prot accession.
 - identifier: CHEBI:82809
   label: agrocin 84
   path: data/antibiotics/unspecified/agrocin-84.yaml
@@ -1491,9 +1620,10 @@ held_targets:
   target_label: leucyl-tRNA synthetase–tRNA(Leu) complex
   target_type: PROTEIN_COMPLEX
   target_reference: PMID:23361008
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (leucyl-tRNA synthetase–tRNA(Leu)
-    complex; PMID:23361008) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because agrocin 84 (CHEBI:82809) is a Trojan-horse prodrug whose active warhead TM84 (not
+    intact agrocin 84) inhibits Agrobacterium tumefaciens LeuRS (UniProtKB:Q8U9X3, unreviewed TrEMBL),
+    and the PMID:23361008 cocrystal (PDB:3ZJV) uses heterologous Escherichia coli LeuRS (UniProtKB:P07813)
+    bound to TM84.
 - identifier: CHEBI:134107
   label: CHIR-090
   path: data/antibiotics/unspecified/chir-090.yaml
@@ -1501,9 +1631,10 @@ held_targets:
   target_label: UDP-3-O-acyl-N-acetylglucosamine deacetylase (LpxC)
   target_type: PROTEIN
   target_reference: PMID:21171638
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (UDP-3-O-acyl-N-acetylglucosamine
-    deacetylase (LpxC); PMID:21171638) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.
+  reason: Held because the Yersinia enterocolitica LpxC enzyme (UniProtKB:A1JJJ9) resolved in the PMID:21171638
+    cocrystal (PDB:3NZK) is an unreviewed TrEMBL entry, and the kinetic assays span multiple Gram-negative
+    species (E. coli, P. aeruginosa, A. aeolicus, R. leguminosarum) without a single reviewed cocrystal
+    accession.
 - identifier: CHEBI:141991
   label: cinnamycin
   path: data/antibiotics/unspecified/cinnamycin.yaml
@@ -1513,15 +1644,6 @@ held_targets:
   target_reference: PMID:11827543
   reason: 'Non-protein molecular target (target_type=MEMBRANE: phosphatidylethanolamine-containing membrane);
     protein_examples are restricted to protein-containing target types.'
-- identifier: CHEBI:77772
-  label: ilicicolin H
-  path: data/antibiotics/unspecified/ilicicolin-h.yaml
-  scope: molecular_targets
-  target_label: cytochrome bc1 complex Qn site
-  target_type: PROTEIN_COMPLEX
-  target_reference: PMID:14670947
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (cytochrome bc1 complex Qn site;
-    PMID:14670947) held from single-UniProt accession assignment pending strain/subunit-specific split.
 - identifier: CHEBI:44504
   label: nogalamycin
   path: data/antibiotics/unspecified/nogalamycin.yaml
@@ -1531,25 +1653,6 @@ held_targets:
   target_reference: PMID:1991116
   reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: double-stranded DNA); protein_examples
     are restricted to protein-containing target types.'
-- identifier: CHEBI:27834
-  label: pentostatin
-  path: data/antibiotics/unspecified/pentostatin.yaml
-  scope: molecular_targets
-  target_label: adenosine deaminase
-  target_type: PROTEIN
-  target_reference: PMID:18602399
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (adenosine deaminase; PMID:18602399)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.
-- identifier: CHEBI:45773
-  label: streptolydigin
-  path: data/antibiotics/unspecified/streptolydigin.yaml
-  scope: molecular_targets
-  target_label: bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site
-  target_type: PROTEIN_COMPLEX
-  target_reference: PMID:16122422
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (bacterial DNA-directed RNA polymerase
-    bridge-helix/trigger-loop site; PMID:16122422) held from single-UniProt accession assignment pending
-    strain/subunit-specific split.
 - identifier: CHEBI:9321
   label: sulbactam
   path: data/antibiotics/unspecified/sulbactam.yaml
@@ -1557,5 +1660,7 @@ held_targets:
   target_label: engineered S70C SHV-1 beta-lactamase
   target_type: PROTEIN
   target_reference: PMID:22974281
-  reason: Multi-subunit, multi-isoform, or isolate-unspecified target (engineered S70C SHV-1 beta-lactamase;
-    PMID:22974281) held from single-UniProt accession assignment pending strain/subunit-specific split.
+  reason: Held because the PMID:22974281 preacylation cocrystal (PDB:4FH2) required an engineered catalytic-site
+    mutant (S70C with an artificial C70-K73 sulfenamide bond) of Klebsiella pneumoniae SHV-1 (UniProtKB:P0AD64)
+    to trap intact sulbactam, and the record explicitly warns against extrapolating this mutant construct
+    to wild-type enzyme.

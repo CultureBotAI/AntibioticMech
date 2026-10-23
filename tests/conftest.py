@@ -276,10 +276,10 @@ def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_exam
 def _uniprot_protein_examples_transition(root):
     payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "7829b35a58de3b6480fb33814f42d48341d970d2db78dca56979b1f8b23aaf9c"
+        "36b959ad223247b5d91a25fa7e8b6252d958fc1d4d43da176611c27e208c90a8"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 30
+    assert len(transition["record_deltas"]) == 37
     return transition
 
 
@@ -456,7 +456,7 @@ def pre_causal_graphs_root(tmp_path_factory):
                 for h in (plan_data.get("held_targets") or [])
                 if not (h.get("scope") == "causal_graphs" and h.get("identifier") in cohort_b_ids)
             ]
-            assert len(plan_data["held_targets"]) == 64
+            assert len(plan_data["held_targets"]) == 57
             (root / "curation" / path.name).write_text(
                 yaml.dump(plan_data, sort_keys=False, allow_unicode=True, width=100),
                 encoding="utf-8",

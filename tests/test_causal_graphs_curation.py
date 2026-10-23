@@ -380,6 +380,28 @@ def test_strict_causal_graph_spec_validation():
         )
         == "CHEBI:40009"
     )
+    with pytest.raises(
+        ValueError,
+        match=(
+            "held_records reason must cite the specific study/accession blocker "
+            "rather than generic placeholder text"
+        ),
+    ):
+        validate_held_record_entry(
+            {
+                "identifier": "CHEBI:85984",
+                "label": "avibactam",
+                "path": "data/antibiotics/antibacterial/avibactam.yaml",
+                "blocker_category": "uniprot_protein_example_held",
+                "target_summary": "class D OXA beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)",
+                "references": ["PMID:25406838"],
+                "reason": (
+                    "Multi-subunit, multi-isoform, or isolate-unspecified target "
+                    "(class D OXA beta-lactamases; PMID:25406838) held from single-UniProt "
+                    "accession assignment pending strain/subunit-specific split."
+                ),
+            }
+        )
 
 
 def test_apply_causal_graphs_plan_dry_run_does_not_mutate(pre_causal_graphs_root, tmp_path):

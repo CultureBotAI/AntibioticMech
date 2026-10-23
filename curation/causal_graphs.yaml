@@ -2673,9 +2673,10 @@ held_records:
   - PMID:25406838
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (class
     D OXA beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (class D OXA beta-lactamases; PMID:25406838) held from single-UniProt accession
-    assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because PMID:25406838 jointly
+    characterizes covalent inhibition across two distinct bacterial species—Acinetobacter baumannii OXA-24/OXA-40
+    (PDB:4WM9, mapped to unreviewed TrEMBL UniProtKB:Q8RLA6) and Klebsiella pneumoniae OXA-48 (PDB:4S2K/4S2N/4WMC,
+    UniProtKB:Q6XEC0)—and OXA-24/OXA-40 lacks a reviewed Swiss-Prot entry.)
 - identifier: CHEBI:144087
   label: bromodeoxytopsentin
   path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
@@ -2685,9 +2686,9 @@ held_records:
   - PMID:22030393
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (pyruvate
     kinase (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml without
-    a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or isolate-unspecified
-    target (pyruvate kinase; PMID:22030393) held from single-UniProt accession assignment pending strain/subunit-specific
-    split.)
+    a single verified experimental-strain UniProtKB accession (Held because PMID:22030393 evaluates marine
+    bisindole inhibition against MRSA pyruvate kinase alongside human pyruvate kinase isoforms without
+    establishing a strain-specific cocrystal accession for the exact compound.)
 - identifier: CHEBI:172922
   label: ethylzingerone
   path: data/antibiotics/antibacterial/ethylzingerone.yaml
@@ -2743,8 +2744,9 @@ held_records:
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (bacterial
     cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT); SbmA peptide transporter (PROTEIN, SUSCEPTIBILITY_DETERMINANT))
     is held in curation/uniprot_protein_examples.yaml without a single verified experimental-strain UniProtKB
-    accession (Multi-subunit, multi-isoform, or isolate-unspecified target (SbmA peptide transporter;
-    PMID:18519732) held from single-UniProt accession assignment pending strain/subunit-specific split.)
+    accession (Held because SbmA (UniProtKB:P0A940) is the inner-membrane uptake transporter required
+    for PR-39 internalization rather than the lethal intracellular effector target, and scripts/resistance_checkpoint_records.py
+    references this record.)
 - identifier: CHEBI:171658
   label: promysalin
   path: data/antibiotics/antibacterial/promysalin.yaml
@@ -2757,8 +2759,10 @@ held_records:
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (succinate
     dehydrogenase (PROTEIN, MEASURED_TARGET_ASSOCIATION); Gram-positive bacterial cell membrane (MEMBRANE,
     ATTACKED_COMPONENT)) is held in curation/uniprot_protein_examples.yaml without a single verified experimental-strain
-    UniProtKB accession (Multi-subunit, multi-isoform, or isolate-unspecified target (succinate dehydrogenase;
-    PMID:29300464) held from single-UniProt accession assignment pending strain/subunit-specific split.)
+    UniProtKB accession (Held because the Pseudomonas aeruginosa PAO1 succinate dehydrogenase complex
+    subunits (sdhA UniProtKB:Q9I3D5, sdhB UniProtKB:Q9I3D4, sdhC UniProtKB:Q9I3D7, sdhD UniProtKB:Q9I3D6)
+    identified by affinity-based protein profiling in PMID:29300464 are all unreviewed TrEMBL entries
+    with no reviewed Swiss-Prot accession.)
 - identifier: CHEBI:156219
   label: ascochlorin
   path: data/antibiotics/antifungal/ascochlorin.yaml
@@ -2768,9 +2772,10 @@ held_records:
   - PMID:20025846
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (cytochrome
     bc1 complex Qi and Qo ubiquinone sites (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (cytochrome bc1 complex Qi and Qo ubiquinone sites; PMID:20025846) held
-    from single-UniProt accession assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because the PMID:20025846
+    dual-site Qi/Qo cocrystals (PDB:3H1I/3H1J) were determined using purified Gallus gallus (chicken heart)
+    mitochondrial complex III (UniProtKB:P18946 plus unreviewed TrEMBL subunits D0VX26–D0VX32) as a vertebrate
+    structural surrogate rather than a fungal target complex.)
 - identifier: CHEBI:78661
   label: borrelidin
   path: data/antibiotics/antifungal/borrelidin.yaml
@@ -2780,9 +2785,9 @@ held_records:
   - PMID:22967236
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (threonyl-tRNA
     synthetase (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml without
-    a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or isolate-unspecified
-    target (threonyl-tRNA synthetase; PMID:22967236) held from single-UniProt accession assignment pending
-    strain/subunit-specific split.)
+    a single verified experimental-strain UniProtKB accession (Held because the Phytophthora sojae threonyl-tRNA
+    synthetase proteins (UniProtKB:G4ZFI7, UniProtKB:G3FIN0, UniProtKB:G4ZJB1) corresponding to the oomycete
+    target in PMID:22967236 are all unreviewed TrEMBL entries with no reviewed Swiss-Prot accession.)
 - identifier: CHEBI:3434
   label: carpropamid
   path: data/antibiotics/antifungal/carpropamid.yaml
@@ -2790,11 +2795,10 @@ held_records:
   target_summary: fungal scytalone dehydratase (PROTEIN, DIRECT_BINDING_TARGET)
   references:
   - PMID:9665698
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (fungal
-    scytalone dehydratase (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (fungal scytalone dehydratase; PMID:9665698) held from single-UniProt accession
-    assignment pending strain/subunit-specific split.)
+  reason: Held from causal_graphs curation during the Stage 2 causal_graphs_transition.json snapshot because
+    fungal scytalone dehydratase lacked a curated protein_example in pre_causal_graphs_root; UniProtKB:P56597
+    (Pyricularia grisea scytalone dehydratase, PDB:2STD) is now curated on molecular_targets in Stage
+    3 and ready for causal_graphs promotion in the next causal_graphs pass.
 - identifier: CHEBI:77693
   label: CTBT
   path: data/antibiotics/antifungal/ctbt.yaml
@@ -2851,9 +2855,10 @@ held_records:
   - PMID:12765337
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (DNA
     topoisomerases I and II (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (DNA topoisomerases I and II; PMID:12765337) held from single-UniProt accession
-    assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because PMID:12765337 bundles
+    two distinct enzyme classes (Leishmania donovani DNA topoisomerase I and type II topoisomerase) into
+    one target entry, and the corresponding L. donovani sequences (UniProtKB:A0A3Q8IHS4, UniProtKB:O97149,
+    UniProtKB:Q9XZN0) are unreviewed TrEMBL entries.)
 - identifier: CHEBI:4781
   label: emetine
   path: data/antibiotics/antiprotozoal/emetine.yaml
@@ -2863,9 +2868,10 @@ held_records:
   - PMID:24913268
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (eukaryotic
     80S ribosome small-subunit E site (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (eukaryotic 80S ribosome small-subunit E site; PMID:24913268) held from
-    single-UniProt accession assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because the PMID:24913268
+    3.2-angstrom cryo-EM structure (PDB:3J7A) shows emetine binding the 18S rRNA E-site pocket (base-stacking
+    with G973-A974 and U1191) of the Plasmodium falciparum 40S subunit, where the P. falciparum 3D7 ribosomal
+    proteins are predominantly unreviewed TrEMBL entries and the primary contact is rRNA.)
 - identifier: CHEBI:65484
   label: bevirimat
   path: data/antibiotics/antiviral/bevirimat.yaml
@@ -2876,9 +2882,9 @@ held_records:
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (HIV-1
     Gag CA-SP1 cleavage-site region in immature particles (VIRAL_PROTEIN, DIRECT_BINDING_TARGET)) is held
     in curation/uniprot_protein_examples.yaml without a single verified experimental-strain UniProtKB
-    accession (Multi-subunit, multi-isoform, or isolate-unspecified target (HIV-1 Gag CA-SP1 cleavage-site
-    region in immature particles; PMID:22151792) held from single-UniProt accession assignment pending
-    strain/subunit-specific split.)
+    accession (Held because PMID:22151792 characterizes photoaffinity crosslinking and resistance mutations
+    across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical clade B/C isolates) without a single
+    isolate-resolved cocrystal accession.)
 - identifier: CHEBI:172943
   label: bictegravir
   path: data/antibiotics/antiviral/bictegravir.yaml
@@ -2910,11 +2916,10 @@ held_records:
   target_summary: coronavirus 3C-like protease (3CLpro) (VIRAL_PROTEIN, DIRECT_BINDING_TARGET)
   references:
   - PMID:15890949
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (coronavirus
-    3C-like protease (3CLpro) (VIRAL_PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (coronavirus 3C-like protease (3CLpro); PMID:15890949) held from single-UniProt
-    accession assignment pending strain/subunit-specific split.)
+  reason: Held from causal_graphs curation during the Stage 2 causal_graphs_transition.json snapshot because
+    coronavirus 3C-like protease (3CLpro) lacked curated protein_examples in pre_causal_graphs_root; UniProtKB:P0C6U8
+    (SARS-CoV) and UniProtKB:P0C6W2 (HCoV-229E) are now curated on molecular_targets in Stage 3 and ready
+    for causal_graphs promotion in the next causal_graphs pass.
 - identifier: CHEBI:82977
   label: daclatasvir
   path: data/antibiotics/antiviral/daclatasvir.yaml
@@ -2973,9 +2978,10 @@ held_records:
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (influenza
     virus RNA-dependent RNA polymerase (via T-705RTP) (VIRAL_PROTEIN, MEASURED_TARGET_ASSOCIATION)) is
     held in curation/uniprot_protein_examples.yaml without a single verified experimental-strain UniProtKB
-    accession (Multi-subunit, multi-isoform, or isolate-unspecified target (influenza virus RNA-dependent
-    RNA polymerase (via T-705RTP); PMID:23917318) held from single-UniProt accession assignment pending
-    strain/subunit-specific split.)
+    accession (Held because favipiravir (CHEBI:134722) is the unphosphorylated prodrug that requires host
+    intracellular phosphoribosylation and phosphorylation to active favipiravir-RTP (CHEBI:170009), and
+    PMID:23917318 assays heterotrimeric PB1-PB2-PA influenza A polymerase without a strain-specific cocrystal
+    of the parent prodrug.)
 - identifier: CHEBI:85188
   label: paritaprevir
   path: data/antibiotics/antiviral/paritaprevir.yaml
@@ -2998,9 +3004,10 @@ held_records:
   - PMID:26773380
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (eukaryotic
     translation initiation factor 4A (eIF4A) family (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (eukaryotic translation initiation factor 4A (eIF4A) family; PMID:16337595)
-    held from single-UniProt accession assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because PMID:16337595 characterizes
+    pateamine A across multiple mammalian paralogs (EIF4A1 UniProtKB:P60842, EIF4A2 UniProtKB:Q14240,
+    and NMD factor EIF4A3 UniProtKB:P38919) as an isoform-spanning family target without a single compound-bound
+    crystal structure in the cited study.)
 - identifier: CHEBI:127780
   label: phosphonoformic acid
   path: data/antibiotics/antiviral/phosphonoformic-acid.yaml
@@ -3010,9 +3017,10 @@ held_records:
   - PMID:21566148
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (viral
     family-B DNA polymerase active site (VIRAL_PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (viral family-B DNA polymerase active site; PMID:21566148) held from single-UniProt
-    accession assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because PMID:21566148 (PDB:3KD5)
+    crystallized the bacteriophage RB69 chimeric family-B gp43 DNA polymerase (UniProtKB:Q38087) engineered
+    with six human cytomegalovirus UL54 residues as a surrogate model rather than an authentic herpesvirus
+    DNA polymerase.)
 - identifier: CHEBI:82960
   label: raltegravir
   path: data/antibiotics/antiviral/raltegravir.yaml
@@ -3031,11 +3039,10 @@ held_records:
   target_summary: inosine monophosphate dehydrogenase (IMPDH) (PROTEIN, DIRECT_BINDING_TARGET)
   references:
   - PMID:12235158
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (inosine
-    monophosphate dehydrogenase (IMPDH) (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (inosine monophosphate dehydrogenase (IMPDH); PMID:12235158) held from
-    single-UniProt accession assignment pending strain/subunit-specific split.)
+  reason: Held from causal_graphs curation during the Stage 2 causal_graphs_transition.json snapshot because
+    inosine monophosphate dehydrogenase (IMPDH) lacked a curated protein_example in pre_causal_graphs_root;
+    UniProtKB:P12268 (human IMPDH2, PDB:1NF7) is now curated on molecular_targets in Stage 3 and ready
+    for causal_graphs promotion in the next causal_graphs pass.
 - identifier: CHEBI:45578
   label: ribavirin 5'-triphosphate
   path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
@@ -3047,17 +3054,11 @@ held_records:
   - PMID:11833782
   - PMID:12606760
   - PMID:15152003
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (dengue
-    virus NS5 mRNA 2'-O-methyltransferase domain (VIRAL_PROTEIN, DIRECT_BINDING_TARGET); hepatitis C virus
-    NTPase/helicase (VIRAL_PROTEIN, MEASURED_TARGET_ASSOCIATION); hepatitis C virus RNA-dependent RNA
-    polymerase (VIRAL_PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (dengue virus NS5 mRNA 2'-O-methyltransferase domain; PMID:15152003) held
-    from single-UniProt accession assignment pending strain/subunit-specific split. Multi-subunit, multi-isoform,
-    or isolate-unspecified target (hepatitis C virus NTPase/helicase; PMID:11833782) held from single-UniProt
-    accession assignment pending strain/subunit-specific split. Multi-subunit, multi-isoform, or isolate-unspecified
-    target (hepatitis C virus RNA-dependent RNA polymerase; PMID:12606760) held from single-UniProt accession
-    assignment pending strain/subunit-specific split.)
+  reason: Held from causal_graphs curation because while the dengue virus NS5 mRNA 2'-O-methyltransferase
+    domain target (PMID:15152003) now carries curated UniProtKB:P17763 in Stage 3, the two hepatitis C
+    virus targets (NTPase/helicase PMID:11833782 and RNA-dependent RNA polymerase PMID:12606760) remain
+    held in curation/uniprot_protein_examples.yaml without a single verified experimental-strain UniProtKB
+    accession.
 - identifier: CHEBI:147346
   label: SG85
   path: data/antibiotics/antiviral/sg85.yaml
@@ -3068,9 +3069,9 @@ held_records:
   - PMID:26055377
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (picornavirus
     3C protease (VIRAL_PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (picornavirus 3C protease; PMID:23388726) held from single-UniProt accession
-    assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because the Human enterovirus
+    D68 genome polyprotein (UniProtKB:A1E4A3) resolved in the PMID:23388726 crystal structures (PDB:3ZV9,
+    3ZVA, 3ZVB) is an unreviewed TrEMBL entry with no reviewed Swiss-Prot accession.)
 - identifier: CHEBI:82809
   label: agrocin 84
   path: data/antibiotics/unspecified/agrocin-84.yaml
@@ -3080,9 +3081,10 @@ held_records:
   - PMID:23361008
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (leucyl-tRNA
     synthetase–tRNA(Leu) complex (PROTEIN_COMPLEX, DOWNSTREAM_AFFECTED_PROCESS)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (leucyl-tRNA synthetase–tRNA(Leu) complex; PMID:23361008) held from single-UniProt
-    accession assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because agrocin 84 (CHEBI:82809)
+    is a Trojan-horse prodrug whose active warhead TM84 (not intact agrocin 84) inhibits Agrobacterium
+    tumefaciens LeuRS (UniProtKB:Q8U9X3, unreviewed TrEMBL), and the PMID:23361008 cocrystal (PDB:3ZJV)
+    uses heterologous Escherichia coli LeuRS (UniProtKB:P07813) bound to TM84.)
 - identifier: CHEBI:134107
   label: CHIR-090
   path: data/antibiotics/unspecified/chir-090.yaml
@@ -3092,9 +3094,10 @@ held_records:
   - PMID:21171638
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (UDP-3-O-acyl-N-acetylglucosamine
     deacetylase (LpxC) (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (UDP-3-O-acyl-N-acetylglucosamine deacetylase (LpxC); PMID:21171638) held
-    from single-UniProt accession assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because the Yersinia enterocolitica
+    LpxC enzyme (UniProtKB:A1JJJ9) resolved in the PMID:21171638 cocrystal (PDB:3NZK) is an unreviewed
+    TrEMBL entry, and the kinetic assays span multiple Gram-negative species (E. coli, P. aeruginosa,
+    A. aeolicus, R. leguminosarum) without a single reviewed cocrystal accession.)
 - identifier: CHEBI:77772
   label: ilicicolin H
   path: data/antibiotics/unspecified/ilicicolin-h.yaml
@@ -3103,11 +3106,10 @@ held_records:
   references:
   - PMID:14670947
   - PMID:18022381
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (cytochrome
-    bc1 complex Qn site (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (cytochrome bc1 complex Qn site; PMID:14670947) held from single-UniProt
-    accession assignment pending strain/subunit-specific split.)
+  reason: Held from causal_graphs curation during the Stage 2 causal_graphs_transition.json snapshot because
+    cytochrome bc1 complex Qn site lacked a curated protein_example in pre_causal_graphs_root; UniProtKB:P00163
+    (Saccharomyces cerevisiae S288c COB/CYTB) is now curated on molecular_targets in Stage 3 and ready
+    for causal_graphs promotion in the next causal_graphs pass.
 - identifier: CHEBI:27834
   label: pentostatin
   path: data/antibiotics/unspecified/pentostatin.yaml
@@ -3115,11 +3117,10 @@ held_records:
   target_summary: adenosine deaminase (PROTEIN, DIRECT_BINDING_TARGET)
   references:
   - PMID:18602399
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (adenosine
-    deaminase (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml without
-    a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or isolate-unspecified
-    target (adenosine deaminase; PMID:18602399) held from single-UniProt accession assignment pending
-    strain/subunit-specific split.)
+  reason: Held from causal_graphs curation during the Stage 2 causal_graphs_transition.json snapshot because
+    adenosine deaminase lacked a curated protein_example in pre_causal_graphs_root; UniProtKB:P03958 (Mus
+    musculus Ada, PDB:1ADD) is now curated on molecular_targets in Stage 3 and ready for causal_graphs
+    promotion in the next causal_graphs pass.
 - identifier: CHEBI:45773
   label: streptolydigin
   path: data/antibiotics/unspecified/streptolydigin.yaml
@@ -3129,12 +3130,11 @@ held_records:
   references:
   - PMID:16122422
   - PMID:16167380
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (bacterial
-    DNA-directed RNA polymerase bridge-helix/trigger-loop site (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET))
-    is held in curation/uniprot_protein_examples.yaml without a single verified experimental-strain UniProtKB
-    accession (Multi-subunit, multi-isoform, or isolate-unspecified target (bacterial DNA-directed RNA
-    polymerase bridge-helix/trigger-loop site; PMID:16122422) held from single-UniProt accession assignment
-    pending strain/subunit-specific split.)
+  reason: Held from causal_graphs curation during the Stage 2 causal_graphs_transition.json snapshot because
+    bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site lacked curated protein_examples
+    in pre_causal_graphs_root; UniProtKB:Q8RQE9 (rpoB) and UniProtKB:Q8RQE8 (rpoC) from Thermus thermophilus
+    HB8 (PDB:2A68/1ZYR) are now curated on molecular_targets in Stage 3 and ready for causal_graphs promotion
+    in the next causal_graphs pass.
 - identifier: CHEBI:9321
   label: sulbactam
   path: data/antibiotics/unspecified/sulbactam.yaml
@@ -3144,6 +3144,7 @@ held_records:
   - PMID:22974281
   reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (engineered
     S70C SHV-1 beta-lactamase (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Multi-subunit, multi-isoform, or
-    isolate-unspecified target (engineered S70C SHV-1 beta-lactamase; PMID:22974281) held from single-UniProt
-    accession assignment pending strain/subunit-specific split.)
+    without a single verified experimental-strain UniProtKB accession (Held because the PMID:22974281
+    preacylation cocrystal (PDB:4FH2) required an engineered catalytic-site mutant (S70C with an artificial
+    C70-K73 sulfenamide bond) of Klebsiella pneumoniae SHV-1 (UniProtKB:P0AD64) to trap intact sulbactam,
+    and the record explicitly warns against extrapolating this mutant construct to wild-type enzyme.)

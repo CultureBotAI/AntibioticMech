@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 30,
+  "record_count": 37,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -1673,6 +1673,340 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added curated HCV genotype 1a isolate H (P26664) and genotype 1b isolate BK (P26662) genome polyprotein UniProtKB protein examples on the PRIMARY_LITERATURE hepatitis C virus NS3/4A protease molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:3434",
+      "label": "carpropamid",
+      "path": "data/antibiotics/antifungal/carpropamid.yaml",
+      "before_sha256": "5ff268a9774ca16f8bfc1dab3082d7c1f32081eed0a6bae181cadf93f2eca734",
+      "after_sha256": "bbfaf2561c52d3f71d3414d599c42a42d5b94aed19d09cc56870ca01d49efdd5",
+      "unchanged_fields_sha256": "a6fa38cd9a415a3c735a16e929fce7372047f636d157bbb1debc4e461f46a01b",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "fungal scytalone dehydratase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P56221",
+              "protein_label": "Scytalone dehydratase",
+              "gene_symbol": "SDH1",
+              "taxon_id": "NCBITaxon:242507",
+              "taxon_label": "Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with carpropamid bound in the hydrophobic active-site cavity (PMID:9665698, PDB 2STD)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-23T12:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Pyricularia oryzae 70-15 scytalone dehydratase SDH1 (P56221) UniProtKB protein example on the PRIMARY_LITERATURE fungal scytalone dehydratase molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:145999",
+      "label": "cinanserin",
+      "path": "data/antibiotics/antiviral/cinanserin.yaml",
+      "before_sha256": "0d3750fdec9b0e1a7c9a3cc4df640bae8049cf8000c79072995f182df358f902",
+      "after_sha256": "bbde72d54a294b4985fb3d808d3ab4f6ddc1248354afab20e8e034e4a4f39070",
+      "unchanged_fields_sha256": "d55e24482923b8b22de88328419cd69ae4b3132076ec3e36bcdc46e9f9afc083",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "coronavirus 3C-like protease (3CLpro)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0C6X7",
+              "protein_label": "Replicase polyprotein 1ab",
+              "gene_symbol": "rep",
+              "taxon_id": "NCBITaxon:694009",
+              "taxon_label": "Severe acute respiratory syndrome coronavirus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "SARS-CoV replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound and inhibited by cinanserin in surface plasmon resonance, catalytic, and replicon assays (PMID:15890949)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0C6X1",
+              "protein_label": "Replicase polyprotein 1ab",
+              "gene_symbol": "rep",
+              "taxon_id": "NCBITaxon:11137",
+              "taxon_label": "Human coronavirus 229E",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "HCoV-229E replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound and inhibited by cinanserin in surface plasmon resonance and enzyme assays (PMID:15890949)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-23T12:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated SARS-CoV (P0C6X7) and HCoV-229E (P0C6X1) replicase polyprotein 1ab UniProtKB protein examples on the PRIMARY_LITERATURE coronavirus 3C-like protease (3CLpro) molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45490",
+      "label": "ribavirin 5'-monophosphate",
+      "path": "data/antibiotics/antiviral/ribavirin-5-monophosphate.yaml",
+      "before_sha256": "0be3a8b80ef7732af5794bc0752ec450912ec24fa17178413cfde691c8320ded",
+      "after_sha256": "711bef2f94aa03838356f892942eff9fdce3897b38f71fb19caf81c97a66208b",
+      "unchanged_fields_sha256": "3cfc20cbb8f026225219f2c871879244a5a32d0bcadbc77b90b9a7fb747caeef",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "inosine monophosphate dehydrogenase (IMPDH)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P50097",
+              "protein_label": "Inosine-5'-monophosphate dehydrogenase",
+              "gene_symbol": "IMPDH",
+              "taxon_id": "NCBITaxon:56690",
+              "taxon_label": "Tritrichomonas foetus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Protozoan IMP dehydrogenase catalytic subunit resolved in high-resolution cocrystals bound to ribavirin 5'-monophosphate at the substrate site (PMID:12235158, PDB 1ME8/1MEI)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-23T12:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Tritrichomonas foetus IMP dehydrogenase (P50097) UniProtKB protein example on the PRIMARY_LITERATURE inosine monophosphate dehydrogenase (IMPDH) molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45578",
+      "label": "ribavirin 5'-triphosphate",
+      "path": "data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml",
+      "before_sha256": "478b8a71667fc1d92a8414f4682b06ab3ec00b6a470178cf79b8a146c374785f",
+      "after_sha256": "6a77c211e3417f1babc65f187ab6ab46561b73da27dcdbb33dcbc853ed8d3ca0",
+      "unchanged_fields_sha256": "575108dc38912bb52bdf9e9fee732ff8bcb0d6884a5519e348836acfb20d9221",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "dengue virus NS5 mRNA 2'-O-methyltransferase domain",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P12823",
+              "protein_label": "Genome polyprotein",
+              "taxon_id": "NCBITaxon:11066",
+              "taxon_label": "Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA 2'-O-methyltransferase domain crystallized in a 2.6-angstrom ternary complex with ribavirin 5'-triphosphate at the GTP-binding site (PMID:15152003, PDB 1R6A)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-23T12:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Dengue virus type 2 PR159-S1 genome polyprotein (P12823) UniProtKB protein example on the PRIMARY_LITERATURE dengue virus NS5 mRNA 2'-O-methyltransferase domain molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:77772",
+      "label": "ilicicolin H",
+      "path": "data/antibiotics/unspecified/ilicicolin-h.yaml",
+      "before_sha256": "483ae9d57d15e77005e8966d088b90c9bab30d2b7e3fb2a7186d4791241b6cf3",
+      "after_sha256": "a7f0ced67eff6f5b0c9c353ab02441a2cae2450efb621c4a3b32506bb7379093",
+      "unchanged_fields_sha256": "16a5ed85699975fa34dd0dce53329424f75e865971c56c54b84ec06a9f6464a2",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "cytochrome bc1 complex Qn site",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P00163",
+              "protein_label": "Cytochrome b",
+              "gene_symbol": "COB",
+              "taxon_id": "NCBITaxon:559292",
+              "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Mitochondrial cytochrome b catalytic subunit forming the Qn (Qi) ubiquinone-reduction pocket stoichiometrically bound and inhibited at nanomolar potency by ilicicolin H in S. cerevisiae (PMID:14670947; PMID:18022381; S288c reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-23T12:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Saccharomyces cerevisiae S288c mitochondrial cytochrome b / COB (P00163) UniProtKB protein example on the PRIMARY_LITERATURE cytochrome bc1 complex Qn site molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:27834",
+      "label": "pentostatin",
+      "path": "data/antibiotics/unspecified/pentostatin.yaml",
+      "before_sha256": "d71ddcad75396389638b66b2e63bb1c5812d839384a44c3b2bdc89b655f4e1c9",
+      "after_sha256": "6903b64a3511b6712519b56bbedc04939dcb2238772cf29f42f4e05831ea0c80",
+      "unchanged_fields_sha256": "817ab8219452cecbe2cc072476f565effe628e7a903767a667f794f926b2f22c",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "adenosine deaminase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:A5KE01",
+              "protein_label": "Adenosine deaminase",
+              "gene_symbol": "ADA",
+              "taxon_id": "NCBITaxon:126793",
+              "taxon_label": "Plasmodium vivax (strain Salvador I)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Parasite purine-salvage adenosine deaminase resolved in cocrystal complex with pentostatin (2'-deoxycoformycin) at the catalytic site (PMID:18602399, PDB 2PGF; Salvador I reference strain context)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-23T12:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Plasmodium vivax Salvador I adenosine deaminase ADA (A5KE01) UniProtKB protein example on the PRIMARY_LITERATURE adenosine deaminase molecular target.",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45773",
+      "label": "streptolydigin",
+      "path": "data/antibiotics/unspecified/streptolydigin.yaml",
+      "before_sha256": "3359f30663039e8a8f4c989c5bf641925089a13b5dfaeab222121830b52884d7",
+      "after_sha256": "376cd3ff2b445b64d3003b725e497f7058a1870cd3825e507bbbbc912f181635",
+      "unchanged_fields_sha256": "a291fa9d32c2daa218f1f697c2e8f21a900194c91131b4d1d75e0ce952259258",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q8RQE9",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Core RNA polymerase beta subunit contributing the Stl1/Stl2 streptolydigin-binding pocket adjacent to the active center in Thermus thermophilus RNAP cocrystals (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR)."
+            },
+            {
+              "uniprot_id": "UniProtKB:Q8RQE8",
+              "protein_label": "DNA-directed RNA polymerase subunit beta'",
+              "gene_symbol": "rpoC",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-17",
+              "role": "Core RNA polymerase beta' subunit whose bridge helix and trigger loop are trapped in an inactive preinsertion conformation by streptolydigin in Thermus thermophilus RNAP cocrystals (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-23T12:35:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added curated Thermus thermophilus HB8 RNA polymerase beta (Q8RQE9) and beta' (Q8RQE8) subunit UniProtKB protein examples on the PRIMARY_LITERATURE bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site molecular target.",
         "llm_assisted": true
       }
     }
