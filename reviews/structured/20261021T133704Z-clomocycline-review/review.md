@@ -1,0 +1,927 @@
+# Clomocycline: coherent exact identity with bounded historical antibacterial evidence
+
+- Review: 20261021T133704Z-clomocycline-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:22:49Z
+- Finished UTC: 2026-10-21T13:37:04Z
+- Reviewer: Codex dodecanediol_sources subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The entire record and source row are coherent with current asserted chemical groundings and the relevant synthesis patent. Original gonococcal testing supports antibacterial eligibility. Exact antiprotozoal activity, specific ribosomal binding, and all broad clinical indications were not independently established; these are bounded evidence limitations rather than automatic native defects. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Queue position 313; one exact record. All 13 original input hashes were preserved and all 21 expanded input hashes were rechecked.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:59589 | data/antibiotics/antibacterial/clomocycline.yaml | generated | clomocycline |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:59589 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:59589 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:59589 | Actual focused execution exited 0. |
+| Authoritative full QC | failed | True | CHEBI:59589 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:59589 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:59589 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:59589 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:59589 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:59589 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:59589 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:59589 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:59589 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact parent, stereochemistry, formula and names
+
+identity: supported. Targets: CHEBI:59589.
+
+All asserted structural groundings agree with the complete native parent and its five assigned centres. The patent example is relevant and distinguishes other salt preparations.
+
+### EXACT ChEBI grounding and all asserted xrefs
+
+grounding: supported. Targets: CHEBI:59589.
+
+CAS, DrugBank, DrugCentral, KEGG and the patent resolve coherently. PubChem is only an additional comparator and has a tautomer representation boundary requiring care in any future enrichment.
+
+### Antibacterial role and class
+
+evidence: supported. Targets: CHEBI:59589.
+
+Original exact-name gonococcal susceptibility testing and historical clinical use support antibacterial eligibility. The scaffold and parents are consistent with clomocycline.
+
+### Breadth of inherited clinical indications
+
+evidence: unknown. Targets: CHEBI:59589.
+
+Historical gonorrhoea evidence was inspected. Surgical/urological and acne studies were located but not fully accessible/read. Non-gonococcal urethritis is not equivalent to proven Chlamydia infection, and gum-disease use was not independently established in this bounded review. This does not establish a false native indication.
+
+### Inherited CHEBI:35820 application
+
+evidence: unknown. Targets: CHEBI:59589.
+
+Current ChEBI supports the source attribution. An exact clomocycline protozoal experiment was not independently verified; class-level antimalarial studies and database repetition were not substituted as primary proof. No automatic role deletion is recommended.
+
+### Protein synthesis inhibition and HOST_SHARED_TARGET scope
+
+evidence: unknown. Targets: CHEBI:59589.
+
+The source-based broad mechanism and scope are accurately attributed. Exact compound purified-ribosome binding or translation assays were not independently inspected. HOST_SHARED_TARGET names a process common to host and bacteria; it is not proof of equal host inhibition or lack of therapeutic selectivity.
+
+### Optional activity_spectrum enrichment
+
+completeness: unknown. Targets: CHEBI:59589.
+
+The original gonococcal disk experiment is a useful exact-name lead, but disk potency is not an MIC. The quoted 1967 tube-dilution values require the original paper before quantitative adoption. Clinical outcomes are distinct from in vitro endpoints.
+
+### Unpopulated targets, resistance, producer, graph, datasets and product status
+
+scope: not_applicable. Targets: CHEBI:59589.
+
+No native assertions in these domains require correction. A semisynthetic compound must not inherit the natural precursor producer, and database ribosomal proteins are not automatic direct targets.
+
+### Maintained source, historical extraction and status
+
+provenance: supported. Targets: CHEBI:59589.
+
+The ChEBI row and seeding logic own the source claims; no adopted PMID was omitted. All original input hashes were preserved and all expanded inputs rechecked. SEEDED history was not mistaken for scientific review.
+
+### Evidence placement and bounded follow-up
+
+completeness: supported. Targets: CHEBI:59589.
+
+The record may remain limited while exact primary evidence is sought. Optional absent fields do not constitute a blanket completeness defect, and the supported molecular identity does not depend on modern clinical efficacy.
+
+### Deterministic focused gates
+
+schema: supported. Targets: CHEBI:59589.
+
+Molecular, schema and strict checks passed; their scope is distinct from original assay adjudication.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Optionally enrich exact clomocycline primary activity and resolve the inherited application/clinical scope before adding stronger mechanistic claims.
+
+- Inspect the original Martin and Kliger 1967 tube-dilution paper before adopting numerical MICs quoted by the 1969 study.
+- Keep disk potency, tube MIC, clinical cure/failure and default denominators separate, with named material and organism scope.
+- Seek original exact-compound protozoal, translation and clinical-indication evidence; do not infer Chlamydia from undifferentiated non-gonococcal urethritis.
+- Treat the optional PubChem tautomer separately from the current exact asserted graph, and preserve parent versus salt/formulation boundaries.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/clomocycline.yaml; Entire 80-line native YAML, all four synonyms, parents, roles, mechanism scope, structure, xrefs and four history events | supports | The record is one neutral, stereodefined clomocycline parent with EXACT grounding and SEEDED status. ChEBI owns the definition, roles and broad protein-synthesis annotation. No activity_spectrum, molecular target, resistance entry, producer, causal graph, clinical-product assertion or native primary citation is populated. |
+| owners | data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/seed_from_sources.py; Exact source row 1044; ChEBI role-to-mechanism transform and source mint | supports | The native values trace to the exact ChEBI row. The maintained source contains no adopted PMID leads. CHEBI:48001 maps to PROTEIN_SYNTHESIS_INHIBITION and HOST_SHARED_TARGET with explicit broad-process and nonselectivity caveats. The four historical seed/reseed events do not claim scientific sign-off. |
+| rubric | .claude/skills/review-yaml-record/SKILL.md; docs/record-review-profile.md; .claude/skills/curate-yaml-record/references/review-checklist.md; Exact chemical grounding, source-supported assertions and optional completeness | supports | Optional targets, quantitative activity, graph and primary citations are not universally mandatory. A database-sourced role may remain qualified while primary follow-up is unresolved; missing optional enrichment alone is not a native schema defect. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/59589/; Complete official CHEBI:59589 record: names, graph, ontology relations and database accessions | supports | Current ChEBI reproduces the native full key GJGDLRSSCNAKGL-KMVLDZISSA-N, formula C23H25ClN2O9, charge zero, systematic configuration, asserted CAS and drug/document links, both parents and all three retained roles. It also directly asserts protein-synthesis inhibition. The modified date is 2018; the native 2026 source_version is an extraction snapshot, not a claimed chemical revision. |
+| chemistry | Independent RDKit molecular and source-mint calculation; 313-chemistry.json; 313314-xref-chemistry.json | supports | Both native encodings reproduce the complete key, one neutral component, five assigned S stereocentres, average mass 508.911 and exact mass 508.12485806. The ChEBI source mint recomputes correctly. Current KEGG, DrugCentral and the browser-readable DrugBank molecular encoding reproduce the same complete structure. |
+| kegg | https://rest.kegg.jp/get/D06885; D06885 complete entry and companion molfile | supports | KEGG resolves the asserted drug identifier, clomocycline name, CAS and formula to the native exact molecular graph. Its class/clinical context is database evidence, not an original antibacterial experiment. |
+| drugcentral | https://drugcentral.org/drug/702/molfile; DrugCentral 702 official downloadable molecular structure | supports | The valid /drug/702/molfile endpoint returns the exact native structure. The initially guessed /structure/702/mol endpoint failed and was superseded by this verified official route. |
+| drugbank | https://go.drugbank.com/drugs/DB00453; Browser-readable complete identity/structure fields, saved structured reading note | supports | DrugBank DB00453 names clomocycline and supplies the same CAS, formula, complete key and stereochemical graph. Its 30S mechanism and protein associations remain database context; they were not promoted to experimentally demonstrated individual direct targets. The direct download route returned a challenge but the browser reader exposed the identity fields. |
+| tautomer | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/clomocycline/property/InChI,InChIKey,IsomericSMILES,MolecularFormula,MolecularWeight,ExactMass/JSON; New name-search comparator CID 54680675; not an asserted native xref | context_only | PubChem supplies a different keto/enol bond-and-hydrogen representation with key BXTHDFJCJQJHKD-KMVLDZISSA-N. Formula, connectivity and standard InChI stereochemical layers agree, while the hydrogen layer differs. This is an explicit representation boundary, not evidence that a native centre is inverted; an optional PubChem enrichment must not blindly replace the current graph. |
+| patent | https://patents.google.com/patent/BE628142A/en; BE628142A, original French description and Examples 1-7, especially Example 5 (logical page 4) | supports | The patent concerns N-hydroxymethyl tetracycline derivatives. Example 5 starts from chlortetracycline hydrochloride and reports the N-methylol product with formula C23H25O9N2Cl, consistent with the neutral native parent. General discussion separately describes monosodium products under alkaline conditions, so a sodium salt cannot be assigned to every example. Its qualitative biological statements provide no exact organism/MIC table. The document xref is relevant. |
+| clinical-material | https://doi.org/10.1136/sti.45.2.154; PMID:4892122; original scan p154, introduction and Preliminary Tests | supports | The 1969 study identifies clomocycline as the methylol derivative of chlortetracycline, sold as Megaclor oil-based 170-mg capsules. Susceptibility disks were prepared from a clomocycline working standard using water; the study does not report independent lot structure analysis or an explicit counterion. This is named-compound support, with formulation and isolated reagent kept distinct. |
+| clinical-assays | https://doi.org/10.1136/sti.45.2.154; Original p154 Preliminary Tests; p155 management and results; all three original pages and Tables I-II visually inspected | supports | Ten random gonococcal strains were tested with disks ranging 0.125-2 micrograms. A separate parenthetical report attributes tube-dilution results on fourteen strains to Martin and Kliger 1967: six 0.02-0.34, five 3.125, two 6.25 and one 25 micrograms/mL. Those values are secondary quotations within this paper, not independently inspected 1967 original measurements. The clinical series included 60 gonorrhoea and 50 non-gonococcal urethritis cases. |
+| clinical-results | https://doi.org/10.1136/sti.45.2.154; Original pp155-156, Tables I and II and full management/follow-up text | supports | For gonorrhoea, Table I reports 37 cured, 15 failed and eight defaulted among 60 patients across two dose schedules; the higher-dose group had six failures among 50 treated. The 50 non-gonococcal cases had 29 cures, six immediate failures, five relapses and ten defaults. These historical uncontrolled outcomes support antibacterial use without establishing modern efficacy, a breakpoint, bactericidal kinetics or Chlamydia-specific activity. |
+| letter1965 | https://doi.org/10.1136/bmj.1.5439.923; PMID:14257416 / PMC2165624; original p923 left-column letter, fully visually inspected | supports | Chappell describes a small double-blind comparison in 28 chronic-bronchitis exacerbations: 15 received chlormethylenecycline and 13 tetracycline. The focus was tolerability; all recovered, and the author explicitly says superiority was not demonstrated. Statements about antibacterial spectrum refer to prior Italian work/personal communication. The letter does not establish a new exact target, species-specific MIC or general safety advantage. |
+| other-primary-leads | https://www.ebi.ac.uk/europepmc/webservices/rest/search; 313-extra-core.json and 313-discovery.json, original metadata/available abstracts | context_only | PMIDs 5342074 and 5342075 identify historical surgical/urological trials; 4234717 identifies an acne comparison, but no abstracts were available and their full studies were not read. PMID 788767 is a placebo crossover trial of palmoplantar pustulosis, with 40 of 60 completing; its host skin endpoint does not itself prove bacterial killing. PMID 14256805 concerns tetracycline stability and fetal skeleton. PMID 6615686 concerns host lymphocyte DNA synthesis. These endpoints were not transferred to bacterial mechanism. |
+| role-terms | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms; 313-term-139592/26895/33281/35820/36047/48001.json, all retained labels and definitions | supports | The retained parent and role identifiers resolve to the stated chemical classes and antimicrobial applications. Antiprotozoal drug is an application annotation; the broad protein-synthesis term does not identify a particular protein or establish selectivity for bacterial versus host translation. |
+| search | Ignored-inclusive local and bounded public primary-source search; 313-local-hits.txt; 313-focused-local-search.json; 313-discovery.json; exact-name antiprotozoal follow-up | context_only | No target-specific curator/decision override was located in the focused hidden/ignored-inclusive search. Free original 1969 and 1965 scans were recovered. Exact-name antiprotozoal searches returned database statements and class-level studies, but no independently inspected exact clomocycline protozoal experiment; this is a bounded limitation rather than a claim of nonexistence. |
+| access | Public retrieval manifests; 313314-fetch.json, primary-fetch, scans-fetch, followup-fetch, recovery-fetch and images-final | context_only | BMJ direct PDF requests and some publisher/direct drug routes failed or returned challenge content. PMC base article URLs and actual PNG scans recovered the two clinical originals. A mistakenly guessed PMC2166420 lead was an unrelated rheumatology article and was excluded; the correct letter is PMC2165624. No failed HTML response was treated as an inspected PDF. |
+| gates | Actual focused native validation; 313-focused-results.json and companion schema/strict logs | supports | Chemistry, schema and strict checks each exited zero against the unchanged record. Deterministic checks do not independently establish every inherited clinical or antiprotozoal statement. |
+
+## Limits And Additional Notes
+
+- The three-page 1969 paper and complete 1965 letter were visually inspected. Several other historical clinical studies had metadata only; the 1976 pustulosis and host-assay abstracts were read without claiming full-text appraisal.
+- The 1969 paper quotes 1967 MIC measurements that were not independently recovered. No breakpoint, modern efficacy, specific non-gonococcal pathogen or kinetic killing conclusion is inferred.
+- No independently inspected exact clomocycline protozoal experiment or purified bacterial translation/binding study was established in this bounded search. Current inherited source annotations are retained with this limitation.
+- The patent original French text and relevant Examples 1-7 were inspected; its unavailable embedded structural placeholders were not treated as visually verified figures. Quantitative antibacterial patent assays were not provided in the inspected passages.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record or source table was altered.
+- Native schema and strict checks used batch 032; independent molecular calculations used the existing batch 019 RDKit interpreter against batch 032 cwd.
+- All optional links, tags and notes were checked for this exact target; historical reports and related-compound papers were discovery only.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T133704Z-clomocycline-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Clomocycline: coherent exact identity with bounded historical antibacterial
+  evidence'
+started_at: '2026-10-21T13:22:49Z'
+finished_at: '2026-10-21T13:37:04Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: The entire record and source row are coherent with current asserted chemical
+  groundings and the relevant synthesis patent. Original gonococcal testing supports
+  antibacterial eligibility. Exact antiprotozoal activity, specific ribosomal binding,
+  and all broad clinical indications were not independently established; these are
+  bounded evidence limitations rather than automatic native defects. Scientific assessment
+  retains the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/clomocycline.yaml
+    sha256: 93c889f23cbf8f5252141134c3e046604aa38b9169fbc8862188172ba2eef9fd
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+targets:
+- target_id: CHEBI:59589
+  path: data/antibiotics/antibacterial/clomocycline.yaml
+  label: clomocycline
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 313; one exact record. All 13 original input hashes were
+    preserved and all 21 expanded input hashes were rechecked.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:59589
+  exclusions:
+  - target: Class-wide tetracycline effects and non-gonococcal urethritis as organism-specific
+      clomocycline evidence
+    reason: Class pharmacology does not establish exact compound assays, and the historical
+      non-gonococcal clinical group was not assigned to Chlamydia by the original
+      paper.
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:59589
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    313 (cwd /private/tmp/antibioticmech-record-reviews-032)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/clomocycline.yaml (cwd /private/tmp/antibioticmech-record-reviews-032)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/clomocycline.yaml --out /private/tmp/am-review-session/313-strict.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-032)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:59589
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/clomocycline.yaml
+  locator: Entire 80-line native YAML, all four synonyms, parents, roles, mechanism
+    scope, structure, xrefs and four history events
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: supports
+  summary: The record is one neutral, stereodefined clomocycline parent with EXACT
+    grounding and SEEDED status. ChEBI owns the definition, roles and broad protein-synthesis
+    annotation. No activity_spectrum, molecular target, resistance entry, producer,
+    causal graph, clinical-product assertion or native primary citation is populated.
+  snapshot_sha256: 895e876d639333f4599793f67418f6cbea019e0bd1de9c5d769673edb15b8a1f
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; conf/sources.yaml; scripts/seed_from_sources.py
+  locator: Exact source row 1044; ChEBI role-to-mechanism transform and source mint
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: supports
+  summary: The native values trace to the exact ChEBI row. The maintained source contains
+    no adopted PMID leads. CHEBI:48001 maps to PROTEIN_SYNTHESIS_INHIBITION and HOST_SHARED_TARGET
+    with explicit broad-process and nonselectivity caveats. The four historical seed/reseed
+    events do not claim scientific sign-off.
+  snapshot_sha256: 895e876d639333f4599793f67418f6cbea019e0bd1de9c5d769673edb15b8a1f
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/review-yaml-record/SKILL.md; docs/record-review-profile.md;
+    .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Exact chemical grounding, source-supported assertions and optional completeness
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: supports
+  summary: Optional targets, quantitative activity, graph and primary citations are
+    not universally mandatory. A database-sourced role may remain qualified while
+    primary follow-up is unresolved; missing optional enrichment alone is not a native
+    schema defect.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/59589/
+  locator: 'Complete official CHEBI:59589 record: names, graph, ontology relations
+    and database accessions'
+  accessed_at: '2026-10-21T13:25:44.897079Z'
+  support: supports
+  summary: Current ChEBI reproduces the native full key GJGDLRSSCNAKGL-KMVLDZISSA-N,
+    formula C23H25ClN2O9, charge zero, systematic configuration, asserted CAS and
+    drug/document links, both parents and all three retained roles. It also directly
+    asserts protein-synthesis inhibition. The modified date is 2018; the native 2026
+    source_version is an extraction snapshot, not a claimed chemical revision.
+  snapshot_sha256: 00d71a4186f0a4dca20bd7d20b28ce89692cfda2b1e775c9413033a67b32ef9a
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit molecular and source-mint calculation
+  locator: 313-chemistry.json; 313314-xref-chemistry.json
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: supports
+  summary: Both native encodings reproduce the complete key, one neutral component,
+    five assigned S stereocentres, average mass 508.911 and exact mass 508.12485806.
+    The ChEBI source mint recomputes correctly. Current KEGG, DrugCentral and the
+    browser-readable DrugBank molecular encoding reproduce the same complete structure.
+  snapshot_sha256: 04d5cb15306d020aa77c731880e1e46e3adc38ad12ec632317b11416e27245ed
+- evidence_id: kegg
+  kind: authority
+  reference: https://rest.kegg.jp/get/D06885
+  locator: D06885 complete entry and companion molfile
+  accessed_at: '2026-10-21T13:25:44.897801Z'
+  support: supports
+  summary: KEGG resolves the asserted drug identifier, clomocycline name, CAS and
+    formula to the native exact molecular graph. Its class/clinical context is database
+    evidence, not an original antibacterial experiment.
+  snapshot_sha256: 9a5cc1adf3d8d75e4e133af28f4eceb04f9b4b2e82d3ee73e0335770f28582d0
+- evidence_id: drugcentral
+  kind: authority
+  reference: https://drugcentral.org/drug/702/molfile
+  locator: DrugCentral 702 official downloadable molecular structure
+  accessed_at: '2026-10-21T13:26:48.875948Z'
+  support: supports
+  summary: The valid /drug/702/molfile endpoint returns the exact native structure.
+    The initially guessed /structure/702/mol endpoint failed and was superseded by
+    this verified official route.
+  snapshot_sha256: 94afe312b006d7368f99a1c1340a96c9304966596e2fc0ffd168ab4dce5cfa70
+- evidence_id: drugbank
+  kind: authority
+  reference: https://go.drugbank.com/drugs/DB00453
+  locator: Browser-readable complete identity/structure fields, saved structured reading
+    note
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: supports
+  summary: DrugBank DB00453 names clomocycline and supplies the same CAS, formula,
+    complete key and stereochemical graph. Its 30S mechanism and protein associations
+    remain database context; they were not promoted to experimentally demonstrated
+    individual direct targets. The direct download route returned a challenge but
+    the browser reader exposed the identity fields.
+  snapshot_sha256: 22d3cba67b476ee84b89118794a978e083a1438a24f928ed3b60b093eeaeb9d1
+- evidence_id: tautomer
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/clomocycline/property/InChI,InChIKey,IsomericSMILES,MolecularFormula,MolecularWeight,ExactMass/JSON
+  locator: New name-search comparator CID 54680675; not an asserted native xref
+  accessed_at: '2026-10-21T13:25:44.897458Z'
+  support: context_only
+  summary: PubChem supplies a different keto/enol bond-and-hydrogen representation
+    with key BXTHDFJCJQJHKD-KMVLDZISSA-N. Formula, connectivity and standard InChI
+    stereochemical layers agree, while the hydrogen layer differs. This is an explicit
+    representation boundary, not evidence that a native centre is inverted; an optional
+    PubChem enrichment must not blindly replace the current graph.
+  snapshot_sha256: fd7d28572ada32300314f1b47bc355313e9574b46afb992cf74a27c66b91c6e4
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/BE628142A/en
+  locator: BE628142A, original French description and Examples 1-7, especially Example
+    5 (logical page 4)
+  accessed_at: '2026-10-21T13:25:44.904417Z'
+  support: supports
+  summary: The patent concerns N-hydroxymethyl tetracycline derivatives. Example 5
+    starts from chlortetracycline hydrochloride and reports the N-methylol product
+    with formula C23H25O9N2Cl, consistent with the neutral native parent. General
+    discussion separately describes monosodium products under alkaline conditions,
+    so a sodium salt cannot be assigned to every example. Its qualitative biological
+    statements provide no exact organism/MIC table. The document xref is relevant.
+  snapshot_sha256: 2ddacd04e644af95fab46a8f687b3c2e81ecec0adbde0a4ca3626e9dc57fde28
+- evidence_id: clinical-material
+  kind: primary_source
+  reference: https://doi.org/10.1136/sti.45.2.154
+  locator: PMID:4892122; original scan p154, introduction and Preliminary Tests
+  accessed_at: '2026-10-21T13:27:35.314623Z'
+  support: supports
+  summary: The 1969 study identifies clomocycline as the methylol derivative of chlortetracycline,
+    sold as Megaclor oil-based 170-mg capsules. Susceptibility disks were prepared
+    from a clomocycline working standard using water; the study does not report independent
+    lot structure analysis or an explicit counterion. This is named-compound support,
+    with formulation and isolated reagent kept distinct.
+  snapshot_sha256: d609740b1ccb667c4098a9c747555625149b9d5bc2fd8b8da2d6ba2078b07e16
+- evidence_id: clinical-assays
+  kind: primary_source
+  reference: https://doi.org/10.1136/sti.45.2.154
+  locator: Original p154 Preliminary Tests; p155 management and results; all three
+    original pages and Tables I-II visually inspected
+  accessed_at: '2026-10-21T13:27:35.314623Z'
+  support: supports
+  summary: 'Ten random gonococcal strains were tested with disks ranging 0.125-2 micrograms.
+    A separate parenthetical report attributes tube-dilution results on fourteen strains
+    to Martin and Kliger 1967: six 0.02-0.34, five 3.125, two 6.25 and one 25 micrograms/mL.
+    Those values are secondary quotations within this paper, not independently inspected
+    1967 original measurements. The clinical series included 60 gonorrhoea and 50
+    non-gonococcal urethritis cases.'
+  snapshot_sha256: d609740b1ccb667c4098a9c747555625149b9d5bc2fd8b8da2d6ba2078b07e16
+- evidence_id: clinical-results
+  kind: primary_source
+  reference: https://doi.org/10.1136/sti.45.2.154
+  locator: Original pp155-156, Tables I and II and full management/follow-up text
+  accessed_at: '2026-10-21T13:27:35.319339Z'
+  support: supports
+  summary: For gonorrhoea, Table I reports 37 cured, 15 failed and eight defaulted
+    among 60 patients across two dose schedules; the higher-dose group had six failures
+    among 50 treated. The 50 non-gonococcal cases had 29 cures, six immediate failures,
+    five relapses and ten defaults. These historical uncontrolled outcomes support
+    antibacterial use without establishing modern efficacy, a breakpoint, bactericidal
+    kinetics or Chlamydia-specific activity.
+  snapshot_sha256: 8d134d1fdeb43436fc32b93aa3a266f90c959cdbc5db008450cd3a4bb87a8f0e
+- evidence_id: letter1965
+  kind: primary_source
+  reference: https://doi.org/10.1136/bmj.1.5439.923
+  locator: PMID:14257416 / PMC2165624; original p923 left-column letter, fully visually
+    inspected
+  accessed_at: '2026-10-21T13:30:48.983936Z'
+  support: supports
+  summary: 'Chappell describes a small double-blind comparison in 28 chronic-bronchitis
+    exacerbations: 15 received chlormethylenecycline and 13 tetracycline. The focus
+    was tolerability; all recovered, and the author explicitly says superiority was
+    not demonstrated. Statements about antibacterial spectrum refer to prior Italian
+    work/personal communication. The letter does not establish a new exact target,
+    species-specific MIC or general safety advantage.'
+  snapshot_sha256: a05b5c228ff07aef7c5dd68e99575e80004dcea0f2a6eabd0e7f14ae11712c46
+- evidence_id: other-primary-leads
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: 313-extra-core.json and 313-discovery.json, original metadata/available
+    abstracts
+  accessed_at: '2026-10-21T13:27:35.642844Z'
+  support: context_only
+  summary: PMIDs 5342074 and 5342075 identify historical surgical/urological trials;
+    4234717 identifies an acne comparison, but no abstracts were available and their
+    full studies were not read. PMID 788767 is a placebo crossover trial of palmoplantar
+    pustulosis, with 40 of 60 completing; its host skin endpoint does not itself prove
+    bacterial killing. PMID 14256805 concerns tetracycline stability and fetal skeleton.
+    PMID 6615686 concerns host lymphocyte DNA synthesis. These endpoints were not
+    transferred to bacterial mechanism.
+  snapshot_sha256: b3f29ad743c1c288b15a26fa77134a2d4eca729da9706e31b821e2c9e0ecd4fd
+- evidence_id: role-terms
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms
+  locator: 313-term-139592/26895/33281/35820/36047/48001.json, all retained labels
+    and definitions
+  accessed_at: '2026-10-21T13:25:45.866914Z'
+  support: supports
+  summary: The retained parent and role identifiers resolve to the stated chemical
+    classes and antimicrobial applications. Antiprotozoal drug is an application annotation;
+    the broad protein-synthesis term does not identify a particular protein or establish
+    selectivity for bacterial versus host translation.
+  snapshot_sha256: 994164a8e84d5414290ffcc637eddf11ce79f1a215bf0fe5369d332a53b7cbe6
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and bounded public primary-source search
+  locator: 313-local-hits.txt; 313-focused-local-search.json; 313-discovery.json;
+    exact-name antiprotozoal follow-up
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: context_only
+  summary: No target-specific curator/decision override was located in the focused
+    hidden/ignored-inclusive search. Free original 1969 and 1965 scans were recovered.
+    Exact-name antiprotozoal searches returned database statements and class-level
+    studies, but no independently inspected exact clomocycline protozoal experiment;
+    this is a bounded limitation rather than a claim of nonexistence.
+  snapshot_sha256: 8ad6abdd43636ab9c2ee692ccbaebe3acc1d8dc83528009b12ded9857903c4b7
+  search_scope: 2026-10-21; clomocycline, chlormethylenecycline, chloromethylencycline,
+    CHEBI:59589, complete molecular key and asserted identifiers. Initial repository-wide
+    and focused curation/conf searches included hidden and ignored files. Free primary/official
+    source retrieval was bounded; no exhaustive absence claim is made.
+- evidence_id: access
+  kind: search
+  reference: Public retrieval manifests
+  locator: 313314-fetch.json, primary-fetch, scans-fetch, followup-fetch, recovery-fetch
+    and images-final
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: context_only
+  summary: BMJ direct PDF requests and some publisher/direct drug routes failed or
+    returned challenge content. PMC base article URLs and actual PNG scans recovered
+    the two clinical originals. A mistakenly guessed PMC2166420 lead was an unrelated
+    rheumatology article and was excluded; the correct letter is PMC2165624. No failed
+    HTML response was treated as an inspected PDF.
+  snapshot_sha256: 018ea392d113b4ea5361847c4f9bc32a35b734310a725a5f6ff3b046c1cec47e
+  search_scope: 2026-10-21; clomocycline, chlormethylenecycline, chloromethylencycline,
+    CHEBI:59589, complete molecular key and asserted identifiers. Initial repository-wide
+    and focused curation/conf searches included hidden and ignored files. Free primary/official
+    source retrieval was bounded; no exhaustive absence claim is made.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused native validation
+  locator: 313-focused-results.json and companion schema/strict logs
+  accessed_at: '2026-10-21T13:32:05Z'
+  support: supports
+  summary: Chemistry, schema and strict checks each exited zero against the unchanged
+    record. Deterministic checks do not independently establish every inherited clinical
+    or antiprotozoal statement.
+  snapshot_sha256: 6011fbee3dbe617c2c316c23d446932299f32a0315e94a34e16e5181bf9fcc01
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact parent, stereochemistry, formula and names
+  outcome: supported
+  summary: All asserted structural groundings agree with the complete native parent
+    and its five assigned centres. The patent example is relevant and distinguishes
+    other salt preparations.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - kegg
+  - drugcentral
+  - drugbank
+  - patent
+- assessment_id: grounding
+  area: grounding
+  topic: EXACT ChEBI grounding and all asserted xrefs
+  outcome: supported
+  summary: CAS, DrugBank, DrugCentral, KEGG and the patent resolve coherently. PubChem
+    is only an additional comparator and has a tautomer representation boundary requiring
+    care in any future enrichment.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - chebi
+  - kegg
+  - drugcentral
+  - drugbank
+  - patent
+  - tautomer
+  - chemistry
+- assessment_id: eligibility
+  area: evidence
+  topic: Antibacterial role and class
+  outcome: supported
+  summary: Original exact-name gonococcal susceptibility testing and historical clinical
+    use support antibacterial eligibility. The scaffold and parents are consistent
+    with clomocycline.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - clinical-material
+  - clinical-assays
+  - clinical-results
+  - letter1965
+  - role-terms
+  - chemistry
+- assessment_id: clinical-definition
+  area: evidence
+  topic: Breadth of inherited clinical indications
+  outcome: unknown
+  summary: Historical gonorrhoea evidence was inspected. Surgical/urological and acne
+    studies were located but not fully accessible/read. Non-gonococcal urethritis
+    is not equivalent to proven Chlamydia infection, and gum-disease use was not independently
+    established in this bounded review. This does not establish a false native indication.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - chebi
+  - clinical-results
+  - other-primary-leads
+  - search
+- assessment_id: antiprotozoal
+  area: evidence
+  topic: Inherited CHEBI:35820 application
+  outcome: unknown
+  summary: Current ChEBI supports the source attribution. An exact clomocycline protozoal
+    experiment was not independently verified; class-level antimalarial studies and
+    database repetition were not substituted as primary proof. No automatic role deletion
+    is recommended.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - chebi
+  - role-terms
+  - search
+  - rubric
+- assessment_id: mechanism
+  area: evidence
+  topic: Protein synthesis inhibition and HOST_SHARED_TARGET scope
+  outcome: unknown
+  summary: The source-based broad mechanism and scope are accurately attributed. Exact
+    compound purified-ribosome binding or translation assays were not independently
+    inspected. HOST_SHARED_TARGET names a process common to host and bacteria; it
+    is not proof of equal host inhibition or lack of therapeutic selectivity.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - owners
+  - chebi
+  - drugbank
+  - role-terms
+  - rubric
+- assessment_id: activity
+  area: completeness
+  topic: Optional activity_spectrum enrichment
+  outcome: unknown
+  summary: The original gonococcal disk experiment is a useful exact-name lead, but
+    disk potency is not an MIC. The quoted 1967 tube-dilution values require the original
+    paper before quantitative adoption. Clinical outcomes are distinct from in vitro
+    endpoints.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - clinical-assays
+  - clinical-results
+  - rubric
+- assessment_id: other-domains
+  area: scope
+  topic: Unpopulated targets, resistance, producer, graph, datasets and product status
+  outcome: not_applicable
+  summary: No native assertions in these domains require correction. A semisynthetic
+    compound must not inherit the natural precursor producer, and database ribosomal
+    proteins are not automatic direct targets.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - native
+  - drugbank
+  - patent
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained source, historical extraction and status
+  outcome: supported
+  summary: The ChEBI row and seeding logic own the source claims; no adopted PMID
+    was omitted. All original input hashes were preserved and all expanded inputs
+    rechecked. SEEDED history was not mistaken for scientific review.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - owners
+  - native
+  - chebi
+  - search
+- assessment_id: completeness
+  area: completeness
+  topic: Evidence placement and bounded follow-up
+  outcome: supported
+  summary: The record may remain limited while exact primary evidence is sought. Optional
+    absent fields do not constitute a blanket completeness defect, and the supported
+    molecular identity does not depend on modern clinical efficacy.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - rubric
+  - clinical-assays
+  - search
+- assessment_id: schema
+  area: schema
+  topic: Deterministic focused gates
+  outcome: supported
+  summary: Molecular, schema and strict checks passed; their scope is distinct from
+    original assay adjudication.
+  target_ids:
+  - CHEBI:59589
+  evidence_ids:
+  - chemistry
+  - gates
+findings: []
+actions:
+- action_id: A1
+  description: Optionally enrich exact clomocycline primary activity and resolve the
+    inherited application/clinical scope before adding stronger mechanistic claims.
+  finding_ids: []
+  target_ids:
+  - CHEBI:59589
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, inherited roles and definition
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/clomocycline.yaml
+    role: Curator-owned evidence and activity_spectrum through the validated writer
+  acceptance_checks:
+  - Inspect the original Martin and Kliger 1967 tube-dilution paper before adopting
+    numerical MICs quoted by the 1969 study.
+  - Keep disk potency, tube MIC, clinical cure/failure and default denominators separate,
+    with named material and organism scope.
+  - Seek original exact-compound protozoal, translation and clinical-indication evidence;
+    do not infer Chlamydia from undifferentiated non-gonococcal urethritis.
+  - Treat the optional PubChem tautomer separately from the current exact asserted
+    graph, and preserve parent versus salt/formulation boundaries.
+limitations:
+- The three-page 1969 paper and complete 1965 letter were visually inspected. Several
+  other historical clinical studies had metadata only; the 1976 pustulosis and host-assay
+  abstracts were read without claiming full-text appraisal.
+- The 1969 paper quotes 1967 MIC measurements that were not independently recovered.
+  No breakpoint, modern efficacy, specific non-gonococcal pathogen or kinetic killing
+  conclusion is inferred.
+- No independently inspected exact clomocycline protozoal experiment or purified bacterial
+  translation/binding study was established in this bounded search. Current inherited
+  source annotations are retained with this limitation.
+- The patent original French text and relevant Examples 1-7 were inspected; its unavailable
+  embedded structural placeholders were not treated as visually verified figures.
+  Quantitative antibacterial patent assays were not provided in the inspected passages.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record or source table was altered.
+- Native schema and strict checks used batch 032; independent molecular calculations
+  used the existing batch 019 RDKit interpreter against batch 032 cwd.
+- All optional links, tags and notes were checked for this exact target; historical
+  reports and related-compound papers were discovery only.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:59589
+- https://doi.org/10.1136/sti.45.2.154
+- https://patents.google.com/patent/BE628142A/en
+tags:
+- clomocycline
+- exact-parent
+- historical-primary-evidence
+```
