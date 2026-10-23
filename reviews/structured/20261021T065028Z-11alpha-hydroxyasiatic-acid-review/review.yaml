@@ -1,0 +1,578 @@
+schema_version: 1.0.0
+review_id: 20261021T065028Z-11alpha-hydroxyasiatic-acid-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of CHEBI:68380 (11alpha-hydroxyasiatic acid)
+started_at: '2026-10-21T06:43:33Z'
+finished_at: '2026-10-21T06:50:28Z'
+reviewer:
+  identity: Codex agent review002
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring this generated
+    record, using an isolated clone.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Exact chemical identity supported; antibacterial support requires
+  adjudication
+scientific_review: true
+summary: Identity and structure are consistent, and schema checks pass. However, the
+  sole source-linked paper explicitly did not assay compound 4, identified as this
+  molecule. The record nevertheless repeats an unqualified antibacterial claim from
+  ChEBI. This is a major claim-support conflict, not evidence of inactivity. Independent
+  support was not found in the bounded exact-name search.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/11α-hydroxyasiatic-acid.yaml
+    sha256: fc4537d1979c12a1b4d62454ce62d21cd53394a94c94306d2aafa85935d91b17
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Full selected record, maintained source row and generator ownership;
+    official chemical identity; source-paper identity, isolation, assay discussion
+    and Table 3.
+  selection: Seventh path-ordered unreviewed target assigned by the parent task.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:68380
+targets:
+- target_id: CHEBI:68380
+  path: data/antibiotics/antibacterial/11α-hydroxyasiatic-acid.yaml
+  label: 11α-hydroxyasiatic acid
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained ChEBI inventory; exact CHEBI:68380 row
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Role classification and source policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record seeding
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Identity and exclusion decisions
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/11α-hydroxyasiatic-acid.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file; zero ERROR rows.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/11α-hydroxyasiatic-acid.yaml --out /private/tmp/am-review-session/007-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Independent RDKit structure and internal identifier consistency
+  status: passed
+  required: false
+  summary: SMILES and InChI reproduce the recorded key, formula, charge and masses;
+    thirteen defined stereocenters; minted ID reproduced.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    -
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: No named protein, gene, regulator, pathway, stress response or expression
+    dataset in the record. iModulonDB not applicable and not negative evidence.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at test collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This is not a scientific
+    failure of this record.'
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references. No invented per-record validator.
+  target_ids:
+  - CHEBI:68380
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/11α-hydroxyasiatic-acid.yaml
+  locator: Entire generated AntibioticRecord
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: Read every field including exact structure, synonym, two parent classes,
+    one antibacterial role, Reaxys cross-reference, source concept and three seed/reseed
+    events. Definition asserts antibacterial activity. No mechanism, target, MIC,
+    resistance, producer, clinical, graph or dataset object is asserted.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:68380 row
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: The 3-star in-scope ChEBI row supplies the antibacterial role and definition;
+    PMID:21288041 is its only citation; mechanism_role_ids is empty.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/seed_from_sources.py
+  locator: mint, structure_from_chebi, build_concepts, build_record; conf/sources.yaml;
+    extract_source_inventory.py; MANIFEST
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: Inspected generation imports the ChEBI definition and reviewed role edges
+    and maps CHEBI:33282 to ANTIBACTERIAL. Source version matches 2026-08-30 retrieval
+    metadata. A future disposition belongs in maintained inputs/decisions and the
+    seeder, not a record-only patch.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:68380
+  locator: Properties, definition, ontology, names and registry identifiers
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: Official entry matches the stereospecific neutral structure, synonym, Reaxys
+    21306691 and both broader parents. It also asserts antibacterial activity and
+    links the plant-isolation context to PMID:21288041.
+- evidence_id: parent-acid
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35868
+  locator: Term and incoming CHEBI:68380 relation
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: The parent is hydroxy monocarboxylic acid and explicitly contains this
+    compound.
+- evidence_id: parent-triterpenoid
+  kind: database
+  reference: https://amigo.geneontology.org/amigo/term/CHEBI:25872
+  locator: Official GO browser external ChEBI term view, including child CHEBI:68380
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: The term is pentacyclic triterpenoid and the child relation is retained.
+    Direct ChEBI parent page access failed, while the compound ChEBI page independently
+    states the same broader relation.
+- evidence_id: role
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Antibacterial agent definition and incoming relation for CHEBI:68380
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: Role identifier resolves to antibacterial agent. This corroborates what
+    the source ontology asserts, not the experimental basis.
+- evidence_id: primary
+  kind: primary_source
+  reference: DOI:10.1021/np100502y
+  locator: Author-uploaded full primary article at https://www.researchgate.net/publication/49804721_Triterpenoid_Saponins_from_Symplocos_lancifolia;
+    pp.163 and 166 compound-4 identity/discussion; p.168 Table 3 and broth assay methods
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: refutes
+  summary: Compound 4 is this hydroxylated asiatic acid isolated from S. lancifolia
+    leaves. The authors explicitly excluded it from activity testing; Table 3 and
+    broth methods concern six other sapogenins. Thus this paper does not support the
+    recorded antibacterial claim. This refutes attribution of an activity assay to
+    compound 4; it does not refute the possibility of antibacterial activity.
+  quote: Due to the limited availability of the new triterpenoid 4, its antimicrobial
+    activity could not be evaluated.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and hashlib local calculation
+  locator: /private/tmp/am-review-session/007-structure.json
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: Both encodings yield FFPKNVKIBUBHMY-CCEBUSCFSA-N; C30H48O6; charge 0; one
+    fragment; thirteen assigned stereocenters; average mass 504.708; exact mass 504.345089256;
+    minted ID antibioticmech:chebi-8f1547f595.
+  snapshot_sha256: c32037a8fdd7b84b56d63f8b8646c524b30bcc330375e5af11a5318077d8b074
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: /private/tmp/am-review-session/007-validate.log; 007-strict.log; 007-strict.tsv
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: supports
+  summary: Both documented per-record gates exited 0; strict validation found zero
+    errors.
+- evidence_id: search
+  kind: search
+  reference: Repository-inclusive and exact-compound free literature search
+  locator: /private/tmp/am-review-session/007-inclusive-search.txt; bounded web search
+    on review date
+  accessed_at: '2026-10-21T06:46:03Z'
+  support: context_only
+  summary: No matching curated override was found in maintained decision/curator tables.
+    Exact-name and key searches returned the source paper and database repeats, without
+    a newly inspected independent antibacterial experiment. This does not establish
+    absence of all possible evidence.
+  search_scope: 'Local rg --no-ignore --hidden -n -e ''CHEBI:68380'' -e ''FFPKNVKIBUBHMY''
+    -e ''11α-hydroxyasiatic'' -e ''11alpha-hydroxyasiatic'' . -g ''!.git/**'' -g ''!.venv/**'';
+    includes ignored/hidden working files except Git internals/virtualenv. Maintained
+    rows also searched using minted ID. Free web exact queries: 11alpha-hydroxyasiatic
+    acid antibacterial; 11α-hydroxyasiatic acid mechanism; FFPKNVKIBUBHMY antibacterial;
+    2α,3β,11α,23-tetrahydroxyurs-12-en-28-oic acid antimicrobial. Publisher full page
+    returned403; author-deposited primary text opened successfully. PubMed/Europe
+    PMC access was incomplete.'
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact structure and compound-4 identity
+  outcome: supported
+  summary: Official identity, stereospecific encodings and source-paper compound identity
+    agree. Independent RDKit reconstruction supports internal consistency; no salt,
+    mixture or different hydroxyl-position match was substituted.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+  - primary
+- assessment_id: parents
+  area: grounding
+  topic: Broader classes and registry xref
+  outcome: supported
+  summary: Both parents are broader classes. Reaxys matches ChEBI, though the underlying
+    registry was not independently accessed.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - chebi
+  - parent-acid
+  - parent-triterpenoid
+- assessment_id: classification
+  area: evidence
+  topic: Antibacterial definition, source role and filing
+  outcome: concern
+  summary: The deterministic filing faithfully preserves ChEBI, but the sole linked
+    primary paper excludes this compound from its testing. Database agreement cannot
+    resolve that experimental-support conflict.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - record
+  - inventory
+  - ownership
+  - chebi
+  - primary
+- assessment_id: isolation
+  area: provenance
+  topic: Plant isolation versus biosynthetic production
+  outcome: supported
+  summary: Leaf extraction context is supported by the source paper. No biosynthetic
+    producer claim is made, appropriately distinguishing isolation from proof of production.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - record
+  - primary
+- assessment_id: mechanism
+  area: completeness
+  topic: Mode, targets and target scope
+  outcome: unknown
+  summary: No antimicrobial mechanism is represented or established here. Native REVIEWED
+    criteria are unmet; the chemical family alone cannot assign a mechanism.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - record
+  - inventory
+  - search
+- assessment_id: optional
+  area: representation
+  topic: Activity measurements, resistance, clinical claims, graph and datasets
+  outcome: not_applicable
+  summary: These optional objects are absent. No MIC from another sapogenin should
+    be imported; their absence is not itself a defect.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - record
+  - primary
+- assessment_id: audit
+  area: ownership
+  topic: Source ownership and history
+  outcome: supported
+  summary: SEEDED and the seed/reseed history preserve provenance. Source transformation
+    explains the inherited claim and identifies a reproducible correction path. No
+    scientific status promotion or data edit occurred.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - record
+  - inventory
+  - ownership
+- assessment_id: schema-assessment
+  area: schema
+  topic: Validation and structure consistency
+  outcome: supported
+  summary: Both per-record validators and independent chemical assertions pass despite
+    the biological claim-support conflict.
+  target_ids:
+  - CHEBI:68380
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-68380-antibacterial-claim-primary-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Antibacterial assertion is not supported by the sole source-linked experiment
+  description: 'The unqualified definition and role lack support from the cited study:
+    its compound 4 was untested. This is a confirmed source-support mismatch, not
+    proof of inactivity. Scope should be adjudicated against independent exact-compound
+    evidence before any exclusion decision.'
+  target_ids:
+  - CHEBI:68380
+  field_paths:
+  - definition
+  - activity_roles
+  - antimicrobial_class
+  - source_concepts[0].role_terms
+  evidence_ids:
+  - record
+  - inventory
+  - chebi
+  - primary
+  - search
+  rule_id: 'review-checklist: Evidence standard, Classification; CLAUDE.md individual
+    structures with antimicrobial activity'
+  native_severity: major unsupported activity assertion
+  normalization_reason: The issue is an explicit antimicrobial claim with a mismatched
+    experimental basis, not an optional-field gap. It materially affects corpus admission
+    and interpretation while chemical identity remains sound.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained source row containing definition and role assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Curated scope disposition keyed antibioticmech:chebi-8f1547f595
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated corpus and exclusion decisions
+actions:
+- action_id: A1
+  description: Adjudicate the exact compound antibacterial evidence. If an independent
+    primary experiment supports the claim, retain its narrow evidence and reconcile
+    the source discrepancy. If no adequate support is found, propose an EXCLUDE decision
+    keyed antibioticmech:chebi-8f1547f595 and a reproducible source correction; do
+    not directly edit or delete generated YAML.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:68380
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Maintained source row containing definition and role assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Curated scope disposition keyed antibioticmech:chebi-8f1547f595
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated corpus and exclusion decisions
+  acceptance_checks:
+  - A decision explicitly distinguishes untested from inactive and addresses the sole
+    source-linked paper conflict.
+  - Any retained antimicrobial assertion identifies an independently inspected exact-structure
+    experiment, avoiding results for asiatic acid or other sapogenins.
+  - Any separately authorized source/decision change is reseeded through repository
+    recipes and passes just verify-corpus --summary, just validate-strict and just
+    qc; regenerated products are reviewed.
+  generator: scripts/seed_from_sources.py
+limitations:
+- The primary paper was inspected through an author-deposited full text on ResearchGate
+  after the publisher returned403; its text layer renders some Greek alpha glyphs
+  as R. Compound mapping was cross-checked against the abstract and official systematic
+  name.
+- Reaxys itself was not accessed; its cross-reference is corroborated by ChEBI. Direct
+  CHEBI:25872 access failed, with official compound relations and GO external-term
+  view used instead.
+- Bounded literature search does not prove biological inactivity or that no independent
+  evidence exists. Exclusion is a conditional proposed curation step, not an action
+  taken.
+- Authoritative just qc failed during collection because the pinned SciPy 1.15.3 native
+  library has an invalid Mach-O section on this platform; identical pinned version
+  also failed under Python 3.10. No dependency versions were changed. Full closed-schema,
+  reproduction and corpus-integrity gates passed independently; these do not replace
+  full QC.
+notes:
+- No record, maintained input, generated product or history event was modified.
+- Bundle completion is partial because full repository QC is not available on this
+  runtime; the selected record was read and assessed in full. A saved review does
+  not promote scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:68380
+- https://www.researchgate.net/publication/49804721_Triterpenoid_Saponins_from_Symplocos_lancifolia
+- https://doi.org/10.1021/np100502y
+tags:
+- record-review
+- triterpenoid
+- primary-scope-conflict

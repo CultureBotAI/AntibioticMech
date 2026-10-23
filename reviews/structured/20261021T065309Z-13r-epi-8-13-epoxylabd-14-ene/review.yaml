@@ -1,0 +1,731 @@
+schema_version: 1.0.0
+review_id: 20261021T065309Z-13r-epi-8-13-epoxylabd-14-ene
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '(13R)-epi-8,13-epoxylabd-14-ene: stereoisomer scope and source-specific curation
+  opportunities'
+started_at: '2026-10-21T06:47:01Z'
+finished_at: '2026-10-21T06:53:09Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not create or curate the seed. Primary text and
+    current identity were independently checked; historical prose supplied discovery
+    leads only. This is not independent human sign-off.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Exact identity, source classification and generated provenance are coherent.
+  Two minor source-specific opportunities concern isolated-compound activity and producer
+  evidence. Antimicrobial mechanism remains unresolved in the inspected material;
+  related epimers and biosynthetic enzymes must not supply unsupported targets.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/PATHS.tsv
+    sha256: 3b1d82d007878e4aca2c28f4001a468776b325b726da2e48abb76a3dc551cc38
+    role: context
+  - path: data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+    sha256: 8350eaabc6a73c92b3bdd1b9e2dcf60416d0752cbac69e72ca5d39b651d05db6
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: reports/yaml_record_review/20260921T191247Z-13r-epi-8-13-epoxylabd-14-ene.md
+    sha256: 54e63a683150747be5229516703b480dcf81acf259a7e4bc5d46841ced8dd98d
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:138224
+  path: data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+  label: (13R)-epi-8,13-epoxylabd-14-ene
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: One complete generated AntibioticRecord and bounded primary-literature
+    completeness assessment.
+  selection: Eighth uncovered path in the coordinator path-ordered queue; only CHEBI:138224
+    receives a scientific verdict.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:138224
+  exclusions:
+  - target: Other manoyl-oxide stereoisomers, derivatives and mixtures
+    reason: Context for evidence boundaries only; not additional reviewed targets.
+checks:
+- check_id: schema
+  name: Single-record LinkML schema
+  status: passed
+  required: true
+  summary: No issues found.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Single-record strict validation
+  status: passed
+  required: true
+  summary: 1 file scanned; 0 ERROR rows.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml --out /private/tmp/am-review-session/008-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: identity-terms
+  name: Official identity and ontology reference verification
+  status: passed
+  required: true
+  summary: ChEBI identity, complete structure, four parents, antibacterial role and
+    registry listings agree.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - chebi
+- check_id: independent-xrefs
+  name: Independent registry destination access
+  status: unavailable
+  required: false
+  summary: KNApSAcK timed out and MetaCyc links were inaccessible; Reaxys was not
+    independently inspected. Official ChEBI lists all target xrefs, so no wrong-xref
+    finding is inferred.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - chebi
+- check_id: imodulondb
+  name: Expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: No target gene, protein, regulator, pathway or expression dataset is asserted.
+    Biosynthetic enzyme context is not a compound inhibition assertion. No expression-evidence
+    absence claim made.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - biosynthetic-context
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at test collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This is not a scientific
+    failure of this record.'
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references. No invented per-record validator.
+  target_ids:
+  - CHEBI:138224
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution on unchanged base corpus; applies to the current target
+    as part of all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+  locator: Entire YAML, all fields and three curation events
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: The full record is a ChEBI-only exact SEEDED entry with explicit stereochemistry,
+    neutral formula C20H34O, three aliases, four parents, four xrefs and one antibacterial
+    role. It asserts plant/fungal origin in the adopted definition. No activity collections,
+    activity_spectrum, target, mechanism, producer, resistance, clinical, dataset
+    or graph objects are present.
+- evidence_id: raw-owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:138224 row2583; data/raw/MANIFEST.yaml; source extractor and seed
+    merge ownership
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: The maintained row reproduces every seed-owned target field and supplies
+    six PMID discovery leads:11301869,12443786,15564689,17236091,26077765,7765688.
+    The extractor filters roles to antimicrobial scope, keeping mechanism roles separate;
+    generic plant/fungal metabolite roles are not missing antimicrobial roles. Seeder
+    history and source version2026-08-30 agree with the adopted inventory.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:138224
+  locator: Identity, chemical properties, outgoing relations, names and registry entries
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: Live ChEBI matches the complete stereochemical SMILES, Standard InChI and
+    key IGGWKHQYMAJOHK-QVHQYWGISA-N, formula, charge0 and masses290.491/290.26097.
+    It confirms all four parent CURIEs, antibacterial role and imported aliases/xrefs.
+    The definition typo is upstream text, not generated-record drift. Current species-origin
+    annotations provide leads, not automatically curated producer assertions.
+- evidence_id: local-search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: Ignored-inclusive clone-wide and focused curation/reviews searches
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: context_only
+  summary: The broad search found the target, raw row, path lock, generated views,
+    research ledgers and an historical prose report. Focused exact ID/key/minted-key
+    search of curation and reviews, excluding the queue, returned no match. These
+    bounded local observations do not imply literature absence. All target fields
+    were independently read.
+  search_scope: rg --no-ignore --hidden -l -F -e CHEBI:138224 -e '(13R)-epi-8,13-epoxylabd-14-ene'
+    -e 13r-epi-8-13-epoxylabd-14-ene --glob '!.git/**' --glob '!.venv/**' .; focused
+    rg --no-ignore --hidden -n -F -e CHEBI:138224 -e IGGWKHQYMAJOHK-QVHQYWGISA-N -e
+    04cfd8e533 curation reviews --glob '!record_review_queue.tsv'. Ignored and hidden
+    files included; .git/.venv excluded.
+- evidence_id: rubric
+  kind: record_content
+  reference: docs/CURATION.md
+  locator: REVIEWED criteria and producer/evidence rules; native review-checklist;
+    schema AntibioticRecord slots; conf/sources.yaml
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: ChEBI provenance can justify source classification without record-level
+    citations. Optional empty fields are not schema failures. Mechanistic targets,
+    producer links and taxon-specific activity require their own evidence and correct
+    scope. Seed-owned identity corrections belong upstream; curator-owned additions
+    require record_curation_event and write_validated_antibiotic.
+- evidence_id: epimer-mixtures
+  kind: primary_source
+  reference: PMID:12443786
+  locator: https://pubmed.ncbi.nlm.nih.gov/12443786/ — complete abstract, DOI10.1016/S0960-894X(02)00792-8
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: The study distinguishes C13 epimers using GC-MS with NMR support, isolates
+    pure ent-13-epi-manoyl oxide and mixtures, and reports antibacterial comparisons
+    among mixtures with different epimeric composition. It does not supply sufficient
+    abstract-level assay detail to assign a mixture MIC to this exact stereoisomer.
+    Publisher full-text access returned403.
+- evidence_id: plant-origin
+  kind: primary_source
+  reference: PMID:11301869
+  locator: https://pubmed.ncbi.nlm.nih.gov/11301869/ — abstract, DOI10.1055/s-2001-11497
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: The abstract explicitly reports isolation and spectroscopic identification
+    of ent-13-epi-manoyl oxide from Cistus monspeliensis leaf hexane extract. Its
+    reported biological testing concerns leukemic-cell growth inhibition, not an antibacterial
+    molecular target. Full paper was not inspected.
+- evidence_id: fungal-origin
+  kind: primary_source
+  reference: DOI:10.1271/bbb.68.2418
+  locator: https://www.jstage.jst.go.jp/article/bbb/68/11/68_11_2418/_pdf — pp2418–2420,
+    Figure1, Table1 and isolation paragraph p2420; PMID15564689 verified
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: The full source describes culture and isolation of compound1, (-)-ent-13-epi-manoyl
+    oxide, from Phaeosphaeria sp.L487 mycelial material, with optical rotation and
+    NMR comparison. It also reports GC-MS detection in Gibberella fujikuroi IFO30336.
+    These are compound/producer observations, separate from phaeoside glycoside evidence
+    and proposed biosynthetic steps. No antibacterial mechanism experiment is reported.
+- evidence_id: salvia-activity
+  kind: primary_source
+  reference: DOI:10.22037/ijpr.2013.1297
+  locator: https://brieflands.com/journals/ijpr/articles/125699.pdf — pp396–398, extraction/identification,
+    Figure1 and Table1 with footnotes
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: Full publisher text and PDF images inspected. The authors name purified
+    ent-13-epi-manoyloxide from Salvia sharifii aerial material and provide NMR/mass
+    data. Table1 assigns agar-dilution MICs of256 µg/mL to E.coli PTCC1533, P.aeruginosa
+    PTCC1310, S.typhi PTCC1609 and K.varians PTCC1484, and128 µg/mL to B.pumilus PTCC1319
+    and L.monocytogenes PTCC1298. Disc diffusion is separate. The paper provides a
+    short method referring to earlier protocols and no antimicrobial target experiment.
+    Exact structural assignment, culture-method details and taxon labels require careful
+    verification during extraction.
+- evidence_id: borrelia-lead
+  kind: primary_source
+  reference: PMID:31474477
+  locator: https://pubmed.ncbi.nlm.nih.gov/31474477/ — Methods and Results abstract;
+    DOI10.1016/j.phymed.2019.152977
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: context_only
+  summary: The abstract reports isolated epi-manoyloxide D activity against Borrelia
+    burgdorferi sensu stricto and distinguishes it from the resin and other constituents.
+    The abbreviated epimer name alone does not establish all stereocentres for this
+    record; full structural and assay tables were inaccessible. Neither the in-vitro
+    comparison with amoxicillin nor the authors therapeutic speculation establishes
+    clinical use or mechanism.
+- evidence_id: derivatives
+  kind: primary_source
+  reference: PMID:7765688
+  locator: https://pubmed.ncbi.nlm.nih.gov/7765688/ — abstract; DOI10.1016/S0031-9422(00)90350-9
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: context_only
+  summary: The experiments concern keto/hydroxy/unsaturated manoyl-oxide derivatives
+    and microbial transformations. Reported antileishmanial and adenylate-cyclase
+    effects cannot be assigned to the unmodified target structure. Curvularia transformation
+    in this paper does not establish natural production of the target.
+- evidence_id: biosynthetic-context
+  kind: database
+  reference: https://www.uniprot.org/uniprotkb/H6VLG5/entry
+  locator: Reviewed KSL2 entry Function and catalytic activity; primary leadPMID26077765,
+    DOI10.1104/pp.15.00695
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: context_only
+  summary: The entry identifies a plant enzyme producing ent-13-epi-manoyl oxide.
+    It supplies a biosynthesis lead, not an antimicrobial drug target. Initial PMC
+    source metadata loaded but subsequent section access returned a challenge, and
+    the author-repository PDF failed. The primary full experimental source is therefore
+    not used to establish additional producer or target claims.
+- evidence_id: unread-lead
+  kind: database
+  reference: PMID:17236091
+  locator: https://doi.org/10.1055/s-2006-959584 — publisher search metadata; PubMed
+    and EuropePMC retrieval attempts
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: context_only
+  summary: The adopted lead points to the1994 natural-metabolites/resin paper. Direct
+    sources did not return substantive text. Metadata are a discovery lead only; they
+    do not establish isolation details, assay results or mechanism.
+- evidence_id: historical
+  kind: prior_review
+  reference: reports/yaml_record_review/20260921T191247Z-13r-epi-8-13-epoxylabd-14-ene.md
+  locator: Read-only discovery context
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: context_only
+  summary: The historical ad hoc report supplied leads but is not validated coverage
+    or reused scientific proof. Its blanket severity and non-schema activity field
+    wording were not inherited. Current identity, primary evidence and focused gates
+    were checked independently.
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Isolated clone; strict TSV /private/tmp/am-review-session/008-validation.tsv
+  accessed_at: '2026-10-21T06:49:41Z'
+  support: supports
+  summary: LinkML validation exited0 with no issues. Strict validation exited0, scanning1
+    file with0 ERROR rows. These are representation checks, not scientific sign-off.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: One exact neutral stereoisomer
+  outcome: supported
+  summary: Current record and authority agree on stereochemistry, formula, charge,
+    masses and structure. Similar manoyl-oxide names, mixtures and substituted derivatives
+    remain distinct evidence subjects.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - raw-owner
+  - chebi
+  - epimer-mixtures
+  - derivatives
+- assessment_id: classification
+  area: grounding
+  topic: Broader parents and antibacterial classification
+  outcome: supported
+  summary: All parent CURIEs are broader chemical classes, not alternative exact identities.
+    The antibacterial role justifies the filing class. Non-antimicrobial plant/fungal
+    metabolite roles are intentionally outside activity_roles. Exact-grounding status
+    is supported by the sole self-identical ChEBI concept.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - chebi
+  - raw-owner
+  - rubric
+- assessment_id: xref-scope
+  area: scope
+  topic: Imported references and verification limits
+  outcome: supported
+  summary: Four imported chemical identifiers are explicitly listed by ChEBI. Independent
+    destination access limitations are recorded; no publication or derivative has
+    been promoted to exact identity.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - chebi
+- assessment_id: activity
+  area: completeness
+  topic: Identified assay-specific extraction opportunity
+  outcome: concern
+  summary: The newly inspected isolated-compound paper supplies an actionable activity
+    follow-up. C13-mixture comparisons and abbreviated epi-manoyloxide results require
+    separate identity review. None supports species-wide cidality or a genetic resistance
+    mechanism.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - salvia-activity
+  - epimer-mixtures
+  - borrelia-lead
+- assessment_id: producer
+  area: completeness
+  topic: Concrete origin claims beyond generic definition
+  outcome: concern
+  summary: Exact-name plant isolation and the fungal culture study provide source-specific
+    producer curation opportunities. The definition is supported in broad scope, but
+    no structured producer assertions are present. Natural origin must remain separate
+    from derivative biotransformation. Plant isolation alone does not establish biosynthesis
+    and must not automatically become a producer assertion.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - plant-origin
+  - fungal-origin
+  - derivatives
+- assessment_id: mechanism
+  area: evidence
+  topic: Mechanism and causal evidence boundary
+  outcome: unknown
+  summary: No inspected exact-compound antimicrobial study establishes a specific
+    molecular target or mechanistic chain. The source leads include activity, structural
+    identification and biosynthesis, which are different claims. Empty mechanism/target/graph
+    slots are not errors; before native REVIEWED status, a curator should record the
+    bounded unresolved mechanism disposition rather than guess a terpene-class mechanism.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - rubric
+  - epimer-mixtures
+  - salvia-activity
+  - biosynthetic-context
+- assessment_id: other-claims
+  area: evidence
+  topic: Other optional scientific assertions
+  outcome: not_applicable
+  summary: No resistant-taxon, genetic resistance, clinical, pathway, protein-example,
+    dataset or structural-observation claim requires repair. No blanket completeness
+    finding is assigned to their absence.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - rubric
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership and status
+  outcome: supported
+  summary: Seed fields match adopted input; SEEDED status and seed-only history are
+    appropriate. Definition spelling correction belongs to upstream inventory/extraction,
+    not a direct generated-field edit. This review changes no native curation status.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - record
+  - raw-owner
+  - chebi
+  - historical
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Both documented single-record validation commands passed. Shared corpus
+    gate results and full-QC platform limitations are recorded separately.
+  target_ids:
+  - CHEBI:138224
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-138224-isolated-compound-activity
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: An inspected isolated-compound assay offers a bounded activity curation follow-up
+  description: The current record has no activity_spectrum entries, while an accessible
+    primary paper names the isolated compound and supplies strain-specific results.
+    Extract only after checking its structural assignment and method references; mixture
+    and abbreviated-epimer studies cannot automatically supply observations. This
+    is an actionable enrichment gap, not invalidity of an optional field.
+  target_ids:
+  - CHEBI:138224
+  field_paths:
+  - activity_spectrum
+  evidence_ids:
+  - record
+  - salvia-activity
+  - epimer-mixtures
+  - borrelia-lead
+  - rubric
+  rule_id: native-review-checklist:Activity; docs/CURATION.md:evidence scope
+  native_severity: minor completeness/readiness gap
+  normalization_reason: Specific inspected evidence makes follow-up concrete. The
+    current seed asserts no erroneous assay or inflated reviewed status.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+    role: Curator-owned evidence, activity and producer assertions; native validated
+      writer and curation event required
+- finding_id: F2
+  issue_key: chebi-138224-structured-producer-evidence
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Specific plant and fungal origin evidence remains uncurated
+  description: The generic origin definition is supported, but primary isolation studies
+    identify concrete source organisms that could support structured producer assertions.
+    Source material, strain and compound identity must be preserved; a transformation
+    host or a biosynthetic enzyme is not automatically equivalent to a natural producer
+    assertion. Plant extraction alone establishes an isolation source, not biosynthesis;
+    if biosynthesis cannot be supported, preserve that context as evidence or discussion
+    instead of a ProducerOrganism assertion.
+  target_ids:
+  - CHEBI:138224
+  field_paths:
+  - producer_organisms
+  - evidence
+  - discussions
+  evidence_ids:
+  - record
+  - plant-origin
+  - fungal-origin
+  - derivatives
+  - rubric
+  rule_id: native-review-checklist:Producer organisms; docs/CURATION.md:producer evidence
+  native_severity: minor completeness/readiness gap
+  normalization_reason: A source-specific producer enrichment opportunity is supported;
+    optional absence is not a schema violation or scientific contradiction.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+    role: Curator-owned evidence, activity and producer assertions; native validated
+      writer and curation event required
+actions:
+- action_id: A1
+  description: Assess the2013 isolated-compound identity against the exact target
+    stereochemistry and the full method references, then curate reproducible strain-specific
+    activity_spectrum observations. Keep epimer mixtures, botanical extracts and the
+    incompletely resolved2019 epimer lead separate. Document an unresolved mechanism
+    assessment if primary target evidence remains unavailable.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:138224
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+    role: Curator-owned evidence, activity and producer assertions; native validated
+      writer and curation event required
+  acceptance_checks:
+  - Each activity row preserves the original value, qualifier, units, assay, strain
+    and primary citation; diffusion and MIC endpoints remain distinct.
+  - No derivative, mixture, class-wide membrane mechanism, species-wide resistance
+    or clinical efficacy is inferred.
+  - Native writer and record_curation_event are used; focused validate-strict, verify-corpus
+    and QC pass.
+- action_id: A2
+  description: Curate only compound-specific producer links supported by the inspected
+    isolation studies, verifying organism identifiers and preserving source tissue
+    or strain. Distinguish direct isolation from GC-MS detection and proposed biosynthetic
+    relationships.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:138224
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/13r-epi-8-13-epoxylabd-14-ene.yaml
+    role: Curator-owned evidence, activity and producer assertions; native validated
+      writer and curation event required
+  acceptance_checks:
+  - Before adding ProducerOrganism, verify that the evidence supports biosynthesis
+    of this exact compound by that organism. Plant isolation alone belongs in evidence/discussion
+    when biosynthesis is unresolved.
+  - Every ProducerOrganism has an organism identity and claim-level EvidenceItem with
+    exact compound and experimental scope.
+  - Phaeoside/other derivative production and Curvularia transformations are not transferred
+    to the target.
+  - Use the native validated writer and curation event; strict validation, reproducibility
+    and QC pass.
+limitations:
+- The2004 fungal isolation full text and2013 activity full text/PDF were inspected.
+  Most other leads were abstract-only;2002 and2019 complete papers were inaccessible.
+  Exact epimer assignment and detailed methods remain prerequisites for activity curation.
+- PMID17236091 yielded no substantive source text. The2015 biosynthesis primary full
+  text was not reliably accessible; verified UniProt content is context only.
+- KNApSAcK and MetaCyc destinations were inaccessible and Reaxys was not independently
+  checked. Official ChEBI xref assertions were verified.
+- Bounded searches do not prove absence of mechanism, resistance or other evidence.
+  No paid research or native record modification was performed.
+- Authoritative just qc failed during collection because the pinned SciPy 1.15.3 native
+  library has an invalid Mach-O section on this platform; identical pinned version
+  also failed under Python 3.10. No dependency versions were changed. Full closed-schema,
+  reproduction and corpus-integrity gates passed independently; these do not replace
+  full QC.
+notes:
+- Original inspect capture preceded assessment. All original hashes and the Git base
+  remained unchanged when additional local context was captured.
+- The publisher2013 PDF was downloaded and rendered locally to verify the structure
+  figure and Table1 column/footnote placement; no table values were inferred from
+  malformed HTML ordering.
+- Access timestamps are real clock captures after the source inspection interval,
+  not claimed request-start times.
+- Historical ad hoc reports are discovery context only and do not create structured
+  review lineage.
+- Bundle completion is partial because full repository QC is not available on this
+  runtime; the selected record was read and assessed in full. A saved review does
+  not promote scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:138224
+- https://brieflands.com/journals/ijpr/articles/125699.pdf
+- https://www.jstage.jst.go.jp/article/bbb/68/11/68_11_2418/_pdf
+tags:
+- antibacterial
+- stereochemistry
+- natural-product
+- seeded
