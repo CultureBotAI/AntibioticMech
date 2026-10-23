@@ -75,6 +75,16 @@ def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
                         )
     assert scored_curated == 36
 
+    plan_with_stale_uid = copy.deepcopy(plan)
+    carpropamid_held = next(
+        item for item in plan_with_stale_uid["held_records"] if item["identifier"] == "CHEBI:3434"
+    )
+    carpropamid_held["reason"] = carpropamid_held["reason"].replace(
+        "UniProtKB:P56221", "UniProtKB:P15993"
+    )
+    with pytest.raises(ValueError, match="held_records reason UniProtKB accessions"):
+        verify_reviewed_causal_graphs_accounting(records, plan=plan_with_stale_uid)
+
 
 def test_plan_and_transition_summary_counts():
     plan = load_causal_graphs_plan(DEFAULT_PLAN_PATH)
@@ -380,6 +390,28 @@ def test_strict_causal_graph_spec_validation():
         )
         == "CHEBI:40009"
     )
+    with pytest.raises(
+        ValueError,
+        match=(
+            "held_records reason must cite the specific study/accession blocker "
+            "rather than generic placeholder text"
+        ),
+    ):
+        validate_held_record_entry(
+            {
+                "identifier": "CHEBI:85984",
+                "label": "avibactam",
+                "path": "data/antibiotics/antibacterial/avibactam.yaml",
+                "blocker_category": "uniprot_protein_example_held",
+                "target_summary": "class D OXA beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)",
+                "references": ["PMID:25406838"],
+                "reason": (
+                    "Multi-subunit, multi-isoform, or isolate-unspecified target "
+                    "(class D OXA beta-lactamases; PMID:25406838) held from single-UniProt "
+                    "accession assignment pending strain/subunit-specific split."
+                ),
+            }
+        )
 
 
 def test_apply_causal_graphs_plan_dry_run_does_not_mutate(pre_causal_graphs_root, tmp_path):

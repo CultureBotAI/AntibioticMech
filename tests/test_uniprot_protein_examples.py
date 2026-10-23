@@ -79,19 +79,19 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
         "causal_graphs_held": 20,
         "gene_or_protein_nodes": 35,
         "primary_literature_targets_total": 85,
-        "primary_literature_targets_populated": 24,
-        "primary_literature_targets_held": 61,
+        "primary_literature_targets_populated": 31,
+        "primary_literature_targets_held": 54,
     }
 
 
 def test_plan_and_transition_summary_counts():
     plan = load_uniprot_examples_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
-    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 30
+    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 37
     assert sum(d["causal_nodes_updated"] for d in receipt["record_deltas"]) == 15
-    assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 22
-    assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 53
-    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 81
+    assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 29
+    assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 62
+    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 74
 
 
 def test_strict_protein_example_and_held_target_validation():
@@ -144,6 +144,29 @@ def test_strict_protein_example_and_held_target_validation():
                 "label": "chloramphenicol",
                 "scope": "molecular_targets",
                 "reason": "Non-protein target.",
+            }
+        )
+    with pytest.raises(
+        ValueError,
+        match=(
+            "held_targets reason must cite the specific study/accession blocker "
+            "rather than generic placeholder text"
+        ),
+    ):
+        validate_held_target_entry(
+            {
+                "identifier": "CHEBI:85984",
+                "path": "data/antibiotics/antibacterial/avibactam.yaml",
+                "label": "avibactam",
+                "scope": "molecular_targets",
+                "target_label": "class D OXA beta-lactamases",
+                "target_type": "PROTEIN",
+                "target_reference": "PMID:25406838",
+                "reason": (
+                    "Multi-subunit, multi-isoform, or isolate-unspecified target "
+                    "(class D OXA beta-lactamases; PMID:25406838) held from single-UniProt "
+                    "accession assignment pending strain/subunit-specific split."
+                ),
             }
         )
 
@@ -208,8 +231,35 @@ def test_non_protein_causal_node_and_target_reject_protein_examples():
             },
         )
 
+    doc_with_multi_ref_target = copy.deepcopy(doc)
+    doc_with_multi_ref_target["molecular_targets"] = [
+        {
+            "target_label": "DNA gyrase subunit B",
+            "target_type": "PROTEIN",
+            "source": "PRIMARY_LITERATURE",
+            "evidence": [{"reference": "PMID:1"}, {"reference": "PMID:2"}],
+        }
+    ]
+    with pytest.raises(ValueError, match="must match primary evidence reference 'PMID:1'"):
+        apply_planned_examples_to_record_data(
+            doc_with_multi_ref_target,
+            {
+                "identifier": "CHEBI:17698",
+                "label": "chloramphenicol",
+                "causal_node_examples": [],
+                "molecular_target_examples": [
+                    {
+                        "target_label": "DNA gyrase subunit B",
+                        "target_reference": "PMID:2",
+                        "source": "PRIMARY_LITERATURE",
+                        "protein_examples": [base_spec],
+                    }
+                ],
+            },
+        )
 
-@pytest.mark.parametrize("index", range(30))
+
+@pytest.mark.parametrize("index", range(37))
 def test_exact_scoped_transition_and_idempotence(
     pre_causal_graphs_root, pre_uniprot_protein_examples_root, index
 ):

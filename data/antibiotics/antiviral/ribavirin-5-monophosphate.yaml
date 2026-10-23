@@ -70,6 +70,17 @@ molecular_targets:
   evidence:
   - reference: PMID:12235158
     notes: Primary ribavirin-monophosphate-bound protozoan IMPDH structure (DOI:10.1074/jbc.M208330200).
+  protein_examples:
+  - uniprot_id: UniProtKB:P50097
+    protein_label: Inosine-5'-monophosphate dehydrogenase
+    gene_symbol: IMPDH
+    taxon_id: NCBITaxon:56690
+    taxon_label: Tritrichomonas foetus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Protozoan IMP dehydrogenase catalytic subunit resolved in high-resolution
+      cocrystals bound to ribavirin 5'-monophosphate at the substrate site (PMID:12235158,
+      PDB 1ME8/1MEI).
 xrefs:
 - cas:40925-28-8
 - chemspider:90600
@@ -112,3 +123,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T12:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Tritrichomonas foetus IMP dehydrogenase (P50097) UniProtKB
+    protein example on the PRIMARY_LITERATURE inosine monophosphate dehydrogenase
+    (IMPDH) molecular target.
+  llm_assisted: true

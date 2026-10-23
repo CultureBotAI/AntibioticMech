@@ -92,6 +92,17 @@ molecular_targets:
     notes: Primary yeast bc1 Qn-site binding and inhibition study (DOI:10.1074/jbc.M311805200).
   - reference: PMID:18022381
     notes: Primary yeast, bovine, and bacterial bc1 selectivity comparison (DOI:10.1016/j.bbabio.2007.10.011).
+  protein_examples:
+  - uniprot_id: UniProtKB:P00163
+    protein_label: Cytochrome b
+    gene_symbol: COB
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-17'
+    role: Mitochondrial cytochrome b catalytic subunit forming the Qn (Qi) ubiquinone-reduction
+      pocket stoichiometrically bound and inhibited at nanomolar potency by ilicicolin
+      H in S. cerevisiae (PMID:14670947; PMID:18022381; S288c reference strain context).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -124,3 +135,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T12:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added curated Saccharomyces cerevisiae S288c mitochondrial cytochrome b
+    / COB (P00163) UniProtKB protein example on the PRIMARY_LITERATURE cytochrome
+    bc1 complex Qn site molecular target.
+  llm_assisted: true

@@ -100,6 +100,13 @@ def validate_held_target_entry(
         raise ValueError(
             f"{plan_path}: held_targets entry requires identifier, label, path, scope, and reason"
         )
+    if "pending strain/subunit-specific split" in reason or reason.startswith(
+        "Multi-subunit, multi-isoform, or isolate-unspecified target ("
+    ):
+        raise ValueError(
+            f"{plan_path} ({identifier}): held_targets reason must cite the specific "
+            "study/accession blocker rather than generic placeholder text"
+        )
     if scope not in ALLOWED_HELD_SCOPES:
         raise ValueError(
             f"{plan_path} ({identifier}): held_targets scope must be one of {sorted(ALLOWED_HELD_SCOPES)}"
@@ -435,14 +442,21 @@ def apply_planned_examples_to_record_data(
                 continue
             if target.get("target_label") != target_label:
                 continue
-            refs = {
+            refs = [
                 str(ev.get("reference") or "").strip()
                 for ev in (target.get("evidence") or [])
-                if isinstance(ev, dict)
-            }
-            if target_reference in refs:
+                if isinstance(ev, dict) and str(ev.get("reference") or "").strip()
+            ]
+            first_ref = refs[0] if refs else ""
+            if target_reference == first_ref:
                 matched_target = target
                 break
+            if target_reference in refs:
+                raise ValueError(
+                    f"{identifier}: molecular_target ({source}, {target_label!r}) "
+                    f"target_reference {target_reference!r} must match primary evidence "
+                    f"reference {first_ref!r}"
+                )
         if matched_target is None:
             raise ValueError(
                 f"{identifier}: molecular_target ({source}, {target_label!r}, {target_reference}) not found"
@@ -808,6 +822,19 @@ def apply_uniprot_examples_plan(
         )
 
     if apply and receipt_path is not None and only_identifiers is None and receipt_records:
+        existing_by_id: dict[str, dict[str, Any]] = {}
+        if receipt_path.exists():
+            existing_payload = json.loads(receipt_path.read_text(encoding="utf-8"))
+            for item in existing_payload.get("record_deltas") or []:
+                if isinstance(item, dict) and item.get("identifier"):
+                    existing_by_id[str(item["identifier"])] = item
+        for item in receipt_records:
+            existing_by_id[str(item["identifier"])] = item
+        ordered_deltas = [
+            existing_by_id[str(entry["identifier"])]
+            for entry in plan["records"]
+            if str(entry["identifier"]) in existing_by_id
+        ]
         rel_plan = (
             plan_path.relative_to(root).as_posix()
             if plan_path.is_relative_to(root)
@@ -817,8 +844,8 @@ def apply_uniprot_examples_plan(
             "schema_version": 1,
             "task": str(plan.get("task") or "uniprot_protein_examples_curation"),
             "plan_path": rel_plan,
-            "record_count": len(receipt_records),
-            "record_deltas": receipt_records,
+            "record_count": len(ordered_deltas),
+            "record_deltas": ordered_deltas,
         }
         receipt_path.parent.mkdir(parents=True, exist_ok=True)
         receipt_path.write_text(
