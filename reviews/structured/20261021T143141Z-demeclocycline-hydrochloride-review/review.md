@@ -1,0 +1,809 @@
+# Review of demeclocycline hydrochloride
+
+- Review: 20261021T143141Z-demeclocycline-hydrochloride-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:11:38Z
+- Finished UTC: 2026-10-21T14:31:41Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native unhydrated monohydrochloride identity agrees with ChEBI, GSRS, KEGG and PubChem after explicit tautomer normalization that preserves stereochemistry. All 15 FDA product assertions match both the maintained source and the current eight-application response. Official labels support antibacterial use, severe-acne context and a qualified UK SIADH indication. No confirmed corrective finding was established; the broad Lyme-disease wording and uninspected exact target evidence remain limitations rather than claims of absence. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire SEEDED, EXACT record: definition, five synonyms, hydrochloride parent and antibacterial role, full structure, two exact identifiers and two drug-context cross-references, all 15 clinical assertions and six history events. The frozen ChEBI row has no adopted PMID leads; all six current ChEBI leads were separately checked.
+
+Selection: Queue 353 in isolated batch 036; all thirteen original hashes preserved and the two actual FDA-owner hashes appended before detailed judgment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:59725 | data/antibiotics/antibacterial/demeclocycline-hydrochloride.yaml | generated | demeclocycline hydrochloride |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | CHEBI:59725 | Exit 0. |
+| Documented strict validation | passed | True | CHEBI:59725 | Exit 0; no ERROR rows. |
+| Native molecular consistency | passed | False | CHEBI:59725 | Native SMILES/InChI, key, formula, charge and masses agree. |
+| Initial supplemental center-count check | failed | False | CHEBI:59725 | Actual exit 1: the assertion incorrectly required five total centers after normalization; two formerly sp2 atoms become unspecified centers. Original configured stereochemistry was not shown wrong. |
+| Supplemental raw-CIP preservation attempt | failed | False | CHEBI:59725 | Actual exit 1: PubChem tautomer normalization changes CIP priority. The final check compares atom-neighbor ordering and chiral parity instead of requiring invariant CIP labels. |
+| Independent tautomer and stereochemical mapping | passed | False | CHEBI:59725 | Nine authority/native encodings agree after explicit tautomer normalization preserving tetrahedral and bond stereochemistry; all five original configured centers retain atom-neighbor order and chiral parity. |
+| Complete FDA/source/history reconciliation | passed | False | CHEBI:59725 | All fifteen input hashes, fifteen FDA assertions, eight current applications, six current PMID leads and six history events reconcile. |
+| Authoritative full QC | failed | True | CHEBI:59725 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:59725 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:59725 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:59725 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:59725 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:59725 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:59725 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:59725 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:59725 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact unhydrated monohydrochloride
+
+identity: supported. Targets: CHEBI:59725.
+
+Independent formula/fragment/charge/mass checks and explicit stereo-preserving tautomer mappings support the native salt. Raw tautomer key differences are explained without changing configured centers.
+
+### Aliases, salt parent and identifier placement
+
+representation: supported. Targets: CHEBI:59725.
+
+Five chemical aliases and the hydrochloride parent match the exact form. The KEGG salt entry is compatible and broad DrugBank context is already segregated from exact structural xrefs.
+
+### Antibacterial identity and role
+
+evidence: supported. Targets: CHEBI:59725.
+
+Exact-salt labels and original OP50 growth inhibition support the antibacterial classification. The growth endpoint is not converted into a MIC, binding assay or longevity mechanism.
+
+### All clinical-status assertions
+
+evidence: supported. Targets: CHEBI:59725.
+
+Every FDA row reproduces and matches current application/product facts; identity registry status, historical approval and current marketing remain distinct.
+
+### Clinical-use wording and SIADH boundaries
+
+evidence: unknown. Targets: CHEBI:59725.
+
+Antibacterial, acne and respiratory use are supported, and the UK label provides qualified SIADH support. The broad Lyme-disease and bronchitis wording was not fully established as an exact modern label indication or independently inspected clinical trial; no claim of no historical use follows.
+
+### Potential protein-mechanism enrichment
+
+completeness: unknown. Targets: CHEBI:59725.
+
+No native target or mode-of-action edge is asserted. Class pharmacology and database target annotations do not replace a primary exact-compound binding study. Any future mechanism addition needs its own source, material and organism boundaries.
+
+### Maintained fields, citations and review history
+
+provenance: supported. Targets: CHEBI:59725.
+
+Fifteen captured inputs and six history events remain unchanged; all six current publication leads have explicit dispositions, distinct from the empty adopted list.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/demeclocycline-hydrochloride.yaml; Entire YAML and all clinical assertions; 353-source-audit.json | supports | The record describes demeclocycline monohydrochloride with no water component. Five aliases identify the salt, and DrugBank/KEGG are already placed in drug_xrefs. There is no native molecular target, mode of action, producer, MIC object or causal graph. The salt definition does not contain the parent record's methyl-position wording. No chemical synonym is a brand. |
+| chemistry | CHEBI:59725; CAS:64-73-3; UNII:29O079NTYT; PubChem CID 54686764; KEGG D00290; 353-chebi.json/.mol; 353-pubchem.json; 353-gsrs.json; 353-kegg.txt/.mol; 353-authority-chemistry.json | supports | Nine encodings retain total formula C21H22Cl2N2O8, zero formal charge, two disconnected components and five configured centers. ChEBI/GSRS use native key GVSJQNRGSCOSNJ-KBHRXELFSA-N; PubChem uses an enol tautomer with key OAPVUSSHCBRCOL-KBHRXELFSA-N. Explicit tautomer normalization with removal of sp3 and bond stereo disabled gives reciprocal chirality-aware graph agreement. A raw CIP-label difference caused by the tautomer priorities is not an epimer. Normalization creates two additional unspecified centers from formerly sp2 atoms; these are comparison artifacts, not native material stereochemistry. Average/exact masses reconcile; no hydrate or unspecified salt mixture is inferred. |
+| authority | Current ChEBI, GSRS and KEGG exact-salt records; 353-chebi.json, 353-parent.json, 353-role.json, 353-gsrs.json and 353-kegg.txt | supports | Current ChEBI repeats the exact salt identity, CAS, synonyms, hydrochloride parent CHEBI:36807 and antibacterial-drug role CHEBI:36047. KEGG D00290 explicitly names demeclocycline hydrochloride. GSRS version 26 identifies the exact salt UNII and compatible graph. Its approved registry status is not independently treated as drug approval. DrugBank access failed, so the inherited DB00618 drug-context relationship is not claimed to be an independently verified exact-salt structure. |
+| fda | Drugs@FDA and GSRS exact-identity join; 353-fda-source-rows.json; 353-fda-current.json; 353-current-clinical-audit.json; 353-source-audit.json | supports | All 15 native assertions match the maintained FDA rows through UNII 29O079NTYT and the exact native InChIKey. Current FDA returns the same eight applications and product rows, with matching ingredient, brand, sponsor, original approval date and marketing status. Nine products are discontinued and six prescription products currently marketed in that source. APPROVED and discontinued are separate dimensions; no new approval is inferred for a different hydrate, formulation or every listed indication. |
+| us-label | DailyMed Amneal demeclocycline hydrochloride SPL, setid 539add06-e0a0-401a-b4f6-20776084aa9c; 353-dailymed.xml and 353-dailymed-body.txt: Description, Microbiology and Indications and Usage; effective 2026-04-02 | supports | The official SPL identifies monohydrochloride 150/300 mg tablets and ANDA065425, with exact ingredient UNII 29O079NTYT and a distinct active-moiety identifier. It supports susceptible-organism respiratory infections and severe-acne adjunctive use. Its tetracycline protein-synthesis explanation is class-level pharmacology, not a newly inspected exact-drug ribosomal binding experiment. Its Borrelia recurrentis relapsing-fever indication does not by itself validate Lyme disease. |
+| uk-label | Demeclocycline Hydrochloride DAWA 300 mg Capsules SmPC; 353-uk-smpc.html sections 1–2, 4.1 and 5.1; https://www.medicines.org.uk/emc/product/100035/smpc | supports | The product contains 300 mg demeclocycline hydrochloride. The label supports susceptible bacterial infections and severe acne. Its SIADH indication is specifically chronic hyponatraemia secondary to malignant disease when water restriction is ineffective and without concomitant cirrhosis. This supports qualified clinical context, not universal first-line treatment or a US SIADH approval. |
+| primary-growth | PMID:24134630; DOI:10.1111/acel.12163; 354-aging.xml: Table 1, initial lifespan-screen methods and Results paragraph beginning The LOPAC library contains 28 antibiotics | supports | The original LOPAC study explicitly lists demeclocycline hydrochloride in Table 1 and reports growth inhibition of the OP50 feeding bacteria by all three lifespan-extending tetracycline antibiotics, tested at 1.5 times their respective optimal lifespan-assay concentrations. This is direct bacterial-growth evidence for the named salt material. The 16% lifespan endpoint is a nematode result with a possible food-bacteria confound; Table 1's 30S target attribution comes from library/database annotations, not a binding experiment performed in this paper. No MIC value or human longevity claim is inferred. |
+| historical-primary | PMID:827554; DOI:10.1136/jcp.29.12.1097; PMID:113900; DOI:10.1136/thx.34.3.324; 353-primary-leads.json, complete indexed abstracts; attempted original full-text retrievals in 353-fetch2.json/353-fetch3.json | context_only | The 1976 study describes a 100-strain Brucella panel and demethylchlortetracycline activity, but the abstract does not settle the material's salt form or full assay method. The 1979 SIADH abstract describes a small clinical series and renal effects; it is not generalized to all patients or used to infer a new bacterial mechanism. PMID115487 resolves as a Japanese salt-specific SIADH report without an indexed abstract; its title alone is not efficacy evidence. |
+| leads | Six current ChEBI MED citation leads; zero frozen adopted PMID leads; 353-current-leads.json and 353-lead-dispositions.json | context_only | All six exact MED records and complete abstracts were read. Neural-stem-cell and liver-injury modeling papers concern host biology; the Plasmodium screen's individually discussed PfPgh-1 mapping concerns dihydroergotamine methanesulfonate; the Dicer and OATP studies do not establish exact hydrochloride antimicrobial targets in their abstracts. These current bibliographic associations are not silently promoted to adopted claim evidence. |
+| owners | Maintained ChEBI/FDA sources and generated-field owners; 353-inspect.json; 353-owner-append.json; 353-chebi-row.json; 353-source-audit.json; scripts/seed_from_sources.py attach_fda_clinical_status | supports | All thirteen original input hashes remain intact and two actual FDA-owner inputs were appended before detailed assessment. Native identity/class/source fields, exact-identity FDA projections and six ordered history events reproduce. Any later curation should update maintained owners and regenerate rather than patching only YAML. |
+| validation | Executed focused native checks; 353-focused-results.json; 353-focused-run.log; 353-strict.tsv; 353-chemistry-authorities.log; 353-ledger.log | supports | Native chemistry, schema, strict validation, independent normalized authority mapping and the complete clinical/source ledger all exit 0. Two earlier supplemental comparison assertions exited 1 and their logs/scripts are retained: a total-center count assertion and an invariant-CIP assertion. Both are corrected in the final parity-aware check. |
+| search | Exact salt and identifier searches, current labels and primary literature; 353-local-hits.txt includes ignored files; 353-label-fetch.json and 353-fetch/353-fetch2/353-fetch3.json; public ChEBI/GSRS/KEGG/FDA/PMC searches | context_only | DrugBank returned 403. The original Brucella PDF returned 403 and PMC returned a browser challenge despite HTTP 200; Europe PMC full XML returned 500 for the Brucella and SIADH papers. Those attempts do not demonstrate absent literature. No licensed Beilstein entry was inspected. |
+
+## Limits And Additional Notes
+
+- Two supplemental comparison attempts exited 1 because total-center count and CIP labels can change across tautomer normalization. The final successful comparison explicitly retains the original five configured atom centers, their neighbor ordering and chiral parity, while permitting newly formed unspecified centers. These analytical assertions were not native validation failures.
+- The Lyme-disease and broad bronchitis wording was not fully resolved by exact-compound clinical originals. Relapsing fever due to Borrelia recurrentis is not Lyme disease. This is an evidence limitation, not a confirmed false-use or absence finding.
+- The UK SIADH label is population- and jurisdiction-specific. The review does not make a universal recommendation, infer US approval for SIADH, or transfer every labeled tablet feature into the native chemical identity.
+- The 2013 original Table 1, relevant lifespan-screen methods and bacterial-growth Results passage were read. Supplementary Figure S4 and raw concentration-response data were not independently inspected; no new numerical MIC or bacterial molecular target is claimed.
+- The 1976 Brucella and 1979 SIADH papers were assessed at complete-abstract level because public full-text routes failed or returned challenges. The Japanese 1979 report had no indexed abstract. Material form and detailed assay controls are not inferred from their titles.
+- The six current ChEBI citation abstracts were read, but their full datasets and supplementary exact-compound rows were not inspected. They are not adopted as proof of additional microbial targets or clinical safety.
+- DrugBank returned 403 and the licensed Beilstein identifier was not independently resolved. Their scope remains bounded; no wrong-identifier finding follows solely from inaccessible entries.
+- Native formula and current authorities specify an unhydrated salt. These comparisons do not claim a particular solid-state solvate, crystal structure or universal protonation microstate in solution.
+- Focused native and independent checks passed; shared corpus gates are separate and retain their actual outcomes. No native status promotion or curation is part of this review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- A later primary-evidence enrichment can separate microbial protein-synthesis effects from host aquaretic effects and experimentally tested material. No native target is currently misstated, so missing mechanism detail is optional enrichment.
+- The methyl-position defect under review in the neutral parent record is absent from this salt definition; it is not propagated here by association.
+- Native records and maintained inputs were unchanged. All new review artifacts were written in scratch; checks used batch 036, with the recorded batch 019 interpreter for standalone chemistry.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T143141Z-demeclocycline-hydrochloride-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of demeclocycline hydrochloride
+started_at: '2026-10-21T14:11:38Z'
+finished_at: '2026-10-21T14:31:41Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Whole-record comparison with frozen source fields, current chemical
+    authorities and independent chirality-aware molecular mapping, all FDA product
+    rows, exact-salt official labels, original bacterial-growth observations and separate
+    dispositions for every current citation lead.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact monohydrochloride, antibacterial role and all 15 FDA assertions
+  supported; several source-specific details remain bounded
+scientific_review: true
+summary: The native unhydrated monohydrochloride identity agrees with ChEBI, GSRS,
+  KEGG and PubChem after explicit tautomer normalization that preserves stereochemistry.
+  All 15 FDA product assertions match both the maintained source and the current eight-application
+  response. Official labels support antibacterial use, severe-acne context and a qualified
+  UK SIADH indication. No confirmed corrective finding was established; the broad
+  Lyme-disease wording and uninspected exact target evidence remain limitations rather
+  than claims of absence. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/demeclocycline-hydrochloride.yaml
+    sha256: 224fe20e109b873b2b9208e986f0b9eb5b4849dd8049ac6993abbfbd783b4dd0
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+scope:
+  description: 'Entire SEEDED, EXACT record: definition, five synonyms, hydrochloride
+    parent and antibacterial role, full structure, two exact identifiers and two drug-context
+    cross-references, all 15 clinical assertions and six history events. The frozen
+    ChEBI row has no adopted PMID leads; all six current ChEBI leads were separately
+    checked.'
+  selection: Queue 353 in isolated batch 036; all thirteen original hashes preserved
+    and the two actual FDA-owner hashes appended before detailed judgment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:59725
+targets:
+- target_id: CHEBI:59725
+  path: data/antibiotics/antibacterial/demeclocycline-hydrochloride.yaml
+  label: demeclocycline hydrochloride
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: FDA/GSRS exact-salt clinical assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA and GSRS extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Adopted antibacterial-drug role label
+checks:
+- check_id: schema
+  name: Documented schema validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/demeclocycline-hydrochloride.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/demeclocycline-hydrochloride.yaml --out /private/tmp/am-review-session/353-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    353
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native SMILES/InChI, key, formula, charge and masses agree.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-initial
+  name: Initial supplemental center-count check
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/353-chemistry-authorities-initial.py
+    > /private/tmp/am-review-session/353-chemistry-authorities-initial.log 2>&1
+  status: failed
+  required: false
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Actual exit 1: the assertion incorrectly required five total centers after
+    normalization; two formerly sp2 atoms become unspecified centers. Original configured
+    stereochemistry was not shown wrong.'
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-cip-attempt
+  name: Supplemental raw-CIP preservation attempt
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/353-chemistry-authorities-cip-attempt.py
+    > /private/tmp/am-review-session/353-chemistry-authorities-cip-attempt.log 2>&1
+  status: failed
+  required: false
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Actual exit 1: PubChem tautomer normalization changes CIP priority. The
+    final check compares atom-neighbor ordering and chiral parity instead of requiring
+    invariant CIP labels.'
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-chemistry
+  name: Independent tautomer and stereochemical mapping
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/353-chemistry-authorities.py
+    > /private/tmp/am-review-session/353-chemistry-authorities.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Nine authority/native encodings agree after explicit tautomer normalization
+    preserving tetrahedral and bond stereochemistry; all five original configured
+    centers retain atom-neighbor order and chiral parity.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - chemistry
+- check_id: ledger
+  name: Complete FDA/source/history reconciliation
+  command: .venv/bin/python /private/tmp/am-review-session/353-ledger.py > /private/tmp/am-review-session/353-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All fifteen input hashes, fifteen FDA assertions, eight current applications,
+    six current PMID leads and six history events reconcile.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - fda
+  - owners
+  - leads
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:59725
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/demeclocycline-hydrochloride.yaml
+  locator: Entire YAML and all clinical assertions; 353-source-audit.json
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: supports
+  summary: The record describes demeclocycline monohydrochloride with no water component.
+    Five aliases identify the salt, and DrugBank/KEGG are already placed in drug_xrefs.
+    There is no native molecular target, mode of action, producer, MIC object or causal
+    graph. The salt definition does not contain the parent record's methyl-position
+    wording. No chemical synonym is a brand.
+- evidence_id: chemistry
+  kind: authority
+  reference: CHEBI:59725; CAS:64-73-3; UNII:29O079NTYT; PubChem CID 54686764; KEGG
+    D00290
+  locator: 353-chebi.json/.mol; 353-pubchem.json; 353-gsrs.json; 353-kegg.txt/.mol;
+    353-authority-chemistry.json
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: supports
+  summary: Nine encodings retain total formula C21H22Cl2N2O8, zero formal charge,
+    two disconnected components and five configured centers. ChEBI/GSRS use native
+    key GVSJQNRGSCOSNJ-KBHRXELFSA-N; PubChem uses an enol tautomer with key OAPVUSSHCBRCOL-KBHRXELFSA-N.
+    Explicit tautomer normalization with removal of sp3 and bond stereo disabled gives
+    reciprocal chirality-aware graph agreement. A raw CIP-label difference caused
+    by the tautomer priorities is not an epimer. Normalization creates two additional
+    unspecified centers from formerly sp2 atoms; these are comparison artifacts, not
+    native material stereochemistry. Average/exact masses reconcile; no hydrate or
+    unspecified salt mixture is inferred.
+  snapshot_sha256: 25264c585272fd8c342112a4a8642fe3d6b5be676a3ad2112993f04fe829fbb1
+- evidence_id: authority
+  kind: database
+  reference: Current ChEBI, GSRS and KEGG exact-salt records
+  locator: 353-chebi.json, 353-parent.json, 353-role.json, 353-gsrs.json and 353-kegg.txt
+  accessed_at: '2026-10-21T14:23:17.973275Z'
+  support: supports
+  summary: Current ChEBI repeats the exact salt identity, CAS, synonyms, hydrochloride
+    parent CHEBI:36807 and antibacterial-drug role CHEBI:36047. KEGG D00290 explicitly
+    names demeclocycline hydrochloride. GSRS version 26 identifies the exact salt
+    UNII and compatible graph. Its approved registry status is not independently treated
+    as drug approval. DrugBank access failed, so the inherited DB00618 drug-context
+    relationship is not claimed to be an independently verified exact-salt structure.
+  snapshot_sha256: 19579849eee5d03a3d216397b6320933e1328e7655e1fc169907b556c57a573e
+- evidence_id: fda
+  kind: authority
+  reference: Drugs@FDA and GSRS exact-identity join
+  locator: 353-fda-source-rows.json; 353-fda-current.json; 353-current-clinical-audit.json;
+    353-source-audit.json
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: supports
+  summary: All 15 native assertions match the maintained FDA rows through UNII 29O079NTYT
+    and the exact native InChIKey. Current FDA returns the same eight applications
+    and product rows, with matching ingredient, brand, sponsor, original approval
+    date and marketing status. Nine products are discontinued and six prescription
+    products currently marketed in that source. APPROVED and discontinued are separate
+    dimensions; no new approval is inferred for a different hydrate, formulation or
+    every listed indication.
+  snapshot_sha256: 000434aad0a91076052cd4adc3383f1efe17559ce30e86cf594a0cab1a688259
+- evidence_id: us-label
+  kind: authority
+  reference: DailyMed Amneal demeclocycline hydrochloride SPL, setid 539add06-e0a0-401a-b4f6-20776084aa9c
+  locator: '353-dailymed.xml and 353-dailymed-body.txt: Description, Microbiology
+    and Indications and Usage; effective 2026-04-02'
+  accessed_at: '2026-10-21T14:20:46.478740Z'
+  support: supports
+  summary: The official SPL identifies monohydrochloride 150/300 mg tablets and ANDA065425,
+    with exact ingredient UNII 29O079NTYT and a distinct active-moiety identifier.
+    It supports susceptible-organism respiratory infections and severe-acne adjunctive
+    use. Its tetracycline protein-synthesis explanation is class-level pharmacology,
+    not a newly inspected exact-drug ribosomal binding experiment. Its Borrelia recurrentis
+    relapsing-fever indication does not by itself validate Lyme disease.
+  snapshot_sha256: 8e78588acc3df700a546a9afda662ff9d0d109ab00557089e52d50d1fe61e174
+- evidence_id: uk-label
+  kind: authority
+  reference: Demeclocycline Hydrochloride DAWA 300 mg Capsules SmPC
+  locator: 353-uk-smpc.html sections 1–2, 4.1 and 5.1; https://www.medicines.org.uk/emc/product/100035/smpc
+  accessed_at: '2026-10-21T14:24:15.245627Z'
+  support: supports
+  summary: The product contains 300 mg demeclocycline hydrochloride. The label supports
+    susceptible bacterial infections and severe acne. Its SIADH indication is specifically
+    chronic hyponatraemia secondary to malignant disease when water restriction is
+    ineffective and without concomitant cirrhosis. This supports qualified clinical
+    context, not universal first-line treatment or a US SIADH approval.
+  snapshot_sha256: c02908c3daa836b7e87cdea84d9c8d93e022cb404d721b803799ab2d679b1a0c
+- evidence_id: primary-growth
+  kind: primary_source
+  reference: PMID:24134630; DOI:10.1111/acel.12163
+  locator: '354-aging.xml: Table 1, initial lifespan-screen methods and Results paragraph
+    beginning The LOPAC library contains 28 antibiotics'
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: supports
+  summary: The original LOPAC study explicitly lists demeclocycline hydrochloride
+    in Table 1 and reports growth inhibition of the OP50 feeding bacteria by all three
+    lifespan-extending tetracycline antibiotics, tested at 1.5 times their respective
+    optimal lifespan-assay concentrations. This is direct bacterial-growth evidence
+    for the named salt material. The 16% lifespan endpoint is a nematode result with
+    a possible food-bacteria confound; Table 1's 30S target attribution comes from
+    library/database annotations, not a binding experiment performed in this paper.
+    No MIC value or human longevity claim is inferred.
+  snapshot_sha256: 0437e8114d4a736a9339c6e67054d2ea187301eb3b29dea2d21b531086b258ae
+- evidence_id: historical-primary
+  kind: primary_source
+  reference: PMID:827554; DOI:10.1136/jcp.29.12.1097; PMID:113900; DOI:10.1136/thx.34.3.324
+  locator: 353-primary-leads.json, complete indexed abstracts; attempted original
+    full-text retrievals in 353-fetch2.json/353-fetch3.json
+  accessed_at: '2026-10-21T14:24:15.246148Z'
+  support: context_only
+  summary: The 1976 study describes a 100-strain Brucella panel and demethylchlortetracycline
+    activity, but the abstract does not settle the material's salt form or full assay
+    method. The 1979 SIADH abstract describes a small clinical series and renal effects;
+    it is not generalized to all patients or used to infer a new bacterial mechanism.
+    PMID115487 resolves as a Japanese salt-specific SIADH report without an indexed
+    abstract; its title alone is not efficacy evidence.
+  snapshot_sha256: 69368c0a15834e470c4a227ce50f4ac37a133041dffea4aecb4a455a834a2dbf
+- evidence_id: leads
+  kind: database
+  reference: Six current ChEBI MED citation leads; zero frozen adopted PMID leads
+  locator: 353-current-leads.json and 353-lead-dispositions.json
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: context_only
+  summary: All six exact MED records and complete abstracts were read. Neural-stem-cell
+    and liver-injury modeling papers concern host biology; the Plasmodium screen's
+    individually discussed PfPgh-1 mapping concerns dihydroergotamine methanesulfonate;
+    the Dicer and OATP studies do not establish exact hydrochloride antimicrobial
+    targets in their abstracts. These current bibliographic associations are not silently
+    promoted to adopted claim evidence.
+  snapshot_sha256: f3981b6f2405c7cd6ab6f98cf1b2f04718b3ea4055ab8711ee8544096f0bb016
+- evidence_id: owners
+  kind: database
+  reference: Maintained ChEBI/FDA sources and generated-field owners
+  locator: 353-inspect.json; 353-owner-append.json; 353-chebi-row.json; 353-source-audit.json;
+    scripts/seed_from_sources.py attach_fda_clinical_status
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: supports
+  summary: All thirteen original input hashes remain intact and two actual FDA-owner
+    inputs were appended before detailed assessment. Native identity/class/source
+    fields, exact-identity FDA projections and six ordered history events reproduce.
+    Any later curation should update maintained owners and regenerate rather than
+    patching only YAML.
+  snapshot_sha256: c7c96f0403bd9ac852c7082e46d574c820def606c50fda498ba4c6a5bafdae7b
+- evidence_id: validation
+  kind: validation
+  reference: Executed focused native checks
+  locator: 353-focused-results.json; 353-focused-run.log; 353-strict.tsv; 353-chemistry-authorities.log;
+    353-ledger.log
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: supports
+  summary: 'Native chemistry, schema, strict validation, independent normalized authority
+    mapping and the complete clinical/source ledger all exit 0. Two earlier supplemental
+    comparison assertions exited 1 and their logs/scripts are retained: a total-center
+    count assertion and an invariant-CIP assertion. Both are corrected in the final
+    parity-aware check.'
+  snapshot_sha256: adc2f6f88bc70c84de87fd5f21fc20a9468df2a21f3cfab27ad01942fcb8c538
+- evidence_id: search
+  kind: search
+  reference: Exact salt and identifier searches, current labels and primary literature
+  locator: 353-local-hits.txt includes ignored files; 353-label-fetch.json and 353-fetch/353-fetch2/353-fetch3.json;
+    public ChEBI/GSRS/KEGG/FDA/PMC searches
+  accessed_at: '2026-10-21T14:29:55Z'
+  support: context_only
+  summary: DrugBank returned 403. The original Brucella PDF returned 403 and PMC returned
+    a browser challenge despite HTTP 200; Europe PMC full XML returned 500 for the
+    Brucella and SIADH papers. Those attempts do not demonstrate absent literature.
+    No licensed Beilstein entry was inspected.
+  snapshot_sha256: 17dab7e298f0db619e5ba6a9dc2a13841443ac67ee9485dfedefd6a215bef90e
+  search_scope: 353-local-hits.txt includes ignored files; 353-label-fetch.json and
+    353-fetch/353-fetch2/353-fetch3.json; public ChEBI/GSRS/KEGG/FDA/PMC searches
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact unhydrated monohydrochloride
+  outcome: supported
+  summary: Independent formula/fragment/charge/mass checks and explicit stereo-preserving
+    tautomer mappings support the native salt. Raw tautomer key differences are explained
+    without changing configured centers.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - chemistry
+  - authority
+- assessment_id: representation
+  area: representation
+  topic: Aliases, salt parent and identifier placement
+  outcome: supported
+  summary: Five chemical aliases and the hydrochloride parent match the exact form.
+    The KEGG salt entry is compatible and broad DrugBank context is already segregated
+    from exact structural xrefs.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - record
+  - authority
+  - chemistry
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial identity and role
+  outcome: supported
+  summary: Exact-salt labels and original OP50 growth inhibition support the antibacterial
+    classification. The growth endpoint is not converted into a MIC, binding assay
+    or longevity mechanism.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - us-label
+  - uk-label
+  - primary-growth
+  - historical-primary
+- assessment_id: clinical
+  area: evidence
+  topic: All clinical-status assertions
+  outcome: supported
+  summary: Every FDA row reproduces and matches current application/product facts;
+    identity registry status, historical approval and current marketing remain distinct.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - fda
+  - owners
+  - us-label
+- assessment_id: definition
+  area: evidence
+  topic: Clinical-use wording and SIADH boundaries
+  outcome: unknown
+  summary: Antibacterial, acne and respiratory use are supported, and the UK label
+    provides qualified SIADH support. The broad Lyme-disease and bronchitis wording
+    was not fully established as an exact modern label indication or independently
+    inspected clinical trial; no claim of no historical use follows.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - record
+  - us-label
+  - uk-label
+  - historical-primary
+- assessment_id: mechanism
+  area: completeness
+  topic: Potential protein-mechanism enrichment
+  outcome: unknown
+  summary: No native target or mode-of-action edge is asserted. Class pharmacology
+    and database target annotations do not replace a primary exact-compound binding
+    study. Any future mechanism addition needs its own source, material and organism
+    boundaries.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - record
+  - us-label
+  - primary-growth
+  - leads
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained fields, citations and review history
+  outcome: supported
+  summary: Fifteen captured inputs and six history events remain unchanged; all six
+    current publication leads have explicit dispositions, distinct from the empty
+    adopted list.
+  target_ids:
+  - CHEBI:59725
+  evidence_ids:
+  - owners
+  - leads
+  - validation
+findings: []
+actions: []
+limitations:
+- Two supplemental comparison attempts exited 1 because total-center count and CIP
+  labels can change across tautomer normalization. The final successful comparison
+  explicitly retains the original five configured atom centers, their neighbor ordering
+  and chiral parity, while permitting newly formed unspecified centers. These analytical
+  assertions were not native validation failures.
+- The Lyme-disease and broad bronchitis wording was not fully resolved by exact-compound
+  clinical originals. Relapsing fever due to Borrelia recurrentis is not Lyme disease.
+  This is an evidence limitation, not a confirmed false-use or absence finding.
+- The UK SIADH label is population- and jurisdiction-specific. The review does not
+  make a universal recommendation, infer US approval for SIADH, or transfer every
+  labeled tablet feature into the native chemical identity.
+- The 2013 original Table 1, relevant lifespan-screen methods and bacterial-growth
+  Results passage were read. Supplementary Figure S4 and raw concentration-response
+  data were not independently inspected; no new numerical MIC or bacterial molecular
+  target is claimed.
+- The 1976 Brucella and 1979 SIADH papers were assessed at complete-abstract level
+  because public full-text routes failed or returned challenges. The Japanese 1979
+  report had no indexed abstract. Material form and detailed assay controls are not
+  inferred from their titles.
+- The six current ChEBI citation abstracts were read, but their full datasets and
+  supplementary exact-compound rows were not inspected. They are not adopted as proof
+  of additional microbial targets or clinical safety.
+- DrugBank returned 403 and the licensed Beilstein identifier was not independently
+  resolved. Their scope remains bounded; no wrong-identifier finding follows solely
+  from inaccessible entries.
+- Native formula and current authorities specify an unhydrated salt. These comparisons
+  do not claim a particular solid-state solvate, crystal structure or universal protonation
+  microstate in solution.
+- Focused native and independent checks passed; shared corpus gates are separate and
+  retain their actual outcomes. No native status promotion or curation is part of
+  this review.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- A later primary-evidence enrichment can separate microbial protein-synthesis effects
+  from host aquaretic effects and experimentally tested material. No native target
+  is currently misstated, so missing mechanism detail is optional enrichment.
+- The methyl-position defect under review in the neutral parent record is absent from
+  this salt definition; it is not propagated here by association.
+- Native records and maintained inputs were unchanged. All new review artifacts were
+  written in scratch; checks used batch 036, with the recorded batch 019 interpreter
+  for standalone chemistry.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:59725
+- https://gsrs.ncats.nih.gov/api/v1/substances/29O079NTYT
+- https://www.medicines.org.uk/emc/product/100035/smpc
+- https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=539add06-e0a0-401a-b4f6-20776084aa9c
+- https://doi.org/10.1111/acel.12163
+tags:
+- record-review
+- demeclocycline-hydrochloride
+- salt-identity
+- fda-provenance
+```
