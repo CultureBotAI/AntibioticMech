@@ -131,7 +131,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">2 observations &middot; <a href="althiomycin/activity-1.html">Browse all observations</a> &middot; <a href="althiomycin/record-6ed7c4f2874e62926a424e8e0708c2a0eb895b68f2b20d06f125071c9ed51a56.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">2 observations &middot; <a href="althiomycin/activity-1.html">Browse all observations</a> &middot; <a href="althiomycin/record-2e97756797cf6e524f2ff4ad78304f6a851ede5d83bbed7903f64d3e5e365a9e.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -215,6 +215,76 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Althiomycin inhibits the bacterial ribosomal peptidyl-transferase reaction <span class="pill">MECHANISTIC</span></h3>
+<p>Althiomycin inhibits the bacterial ribosomal peptidyl-transferase (puromycin) reaction without blocking aminoacyl-tRNA synthesis or aminoacyl-tRNA binding, thereby arresting bacterial protein synthesis in Escherichia coli.</p><div class="table-scroll" role="region" aria-label="Nodes: althiomycin_50s_peptidyl_transferase_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — althiomycin_50s_peptidyl_transferase_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">althiomycin</code></td>
+    <td>althiomycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/althiomycin.html"><code class="curie">CHEBI:157683</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_peptidyl_transferase_reaction</code></td>
+    <td>bacterial ribosomal peptidyl-transferase reaction</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">peptidyl_transfer_blockade</code></td>
+    <td>althiomycin-inhibited ribosomal peptide-bond formation</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_protein_synthesis</code></td>
+    <td>bacterial protein synthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: althiomycin_50s_peptidyl_transferase_inhibition" tabindex="0">
+<table>
+  <caption>Edges — althiomycin_50s_peptidyl_transferase_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">althiomycin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">ribosomal_peptidyl_transferase_reaction</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/4917791">PMID:4917791</a></span> <span class="meta">(Cell-free Escherichia coli B assays showed that althiomycin inhibits the puromycin reaction without inhibiting aminoacyl-tRNA synthesis or ribosome binding.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_peptidyl_transferase_reaction</code></td>
+    <td>participates in</td>
+    <td><code class="curie">peptidyl_transfer_blockade</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/4917791">PMID:4917791</a></span> <span class="meta">(The puromycin reaction assay localized althiomycin action to the peptide-bond-forming step.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">peptidyl_transfer_blockade</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">bacterial_protein_synthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/4917791">PMID:4917791</a></span> <span class="meta">(Both intact-cell and cell-free E. coli B experiments confirmed inhibition of bacterial protein synthesis by althiomycin.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -255,6 +325,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph althiomycin_50s_peptidyl_transferase_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:4917791).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -275,7 +350,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

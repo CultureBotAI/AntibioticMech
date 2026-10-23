@@ -697,3 +697,82 @@ curation_history:
   changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
     example on the PRIMARY_LITERATURE HIV-1 reverse transcriptase molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph rilpivirine_hiv1_rt_nnrti_pocket_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:20438081).
+  llm_assisted: true
+causal_graphs:
+- graph_id: rilpivirine_hiv1_rt_nnrti_pocket_inhibition
+  title: Rilpivirine binds the HIV-1 reverse transcriptase NNRTI pocket to block viral
+    DNA synthesis
+  description: Rilpivirine (TMC278) binds the non-nucleoside inhibitor pocket of wild-type
+    and K103N mutant HIV-1 reverse transcriptase via conformational adaptation and
+    blocks HIV-1 reverse transcription.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rilpivirine
+    label: rilpivirine
+    node_type: COMPOUND
+    grounding: CHEBI:68606
+  - node_id: hiv1_reverse_transcriptase
+    label: HIV-1 reverse transcriptase
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: HIV-1 p66/p51 reverse transcriptase heterodimer; kept label-only
+      with HIV-1 HXB2 Gag-Pol polyprotein (UniProtKB:P04585) protein_examples.
+    gene_symbols:
+    - gag-pol
+    protein_examples:
+    - uniprot_id: UniProtKB:P04585
+      protein_label: Gag-Pol polyprotein
+      gene_symbol: gag-pol
+      taxon_id: NCBITaxon:11706
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
+        HXB2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
+        crystallized in complex with rilpivirine (TMC278) in wild-type and K103N mutant
+        forms (PMID:20438081, PDB 2ZD1 / 3MEE; HXB2 reference isolate context).
+  - node_id: rilpivirine_bound_rt_nnrti_pocket
+    label: rilpivirine-bound HIV-1 reverse transcriptase NNRTI pocket
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cocrystal-resolved non-nucleoside inhibitor complex in both wild-type
+      and K103N HIV-1 reverse transcriptase.
+  - node_id: hiv1_reverse_transcription
+    label: HIV-1 reverse transcriptase polymerase activity
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Viral DNA synthesis catalyzed by HIV-1 reverse transcriptase.
+  edges:
+  - subject: rilpivirine
+    predicate: binds
+    object: rilpivirine_bound_rt_nnrti_pocket
+    description: Rilpivirine binds the non-nucleoside binding pocket of wild-type
+      and K103N HIV-1 reverse transcriptase.
+    evidence:
+    - reference: PMID:20438081
+      notes: X-ray crystal structures directly resolved rilpivirine bound to both
+        wild-type and K103N mutant HIV-1 reverse transcriptase.
+  - subject: hiv1_reverse_transcriptase
+    predicate: participates in
+    object: rilpivirine_bound_rt_nnrti_pocket
+    description: HIV-1 reverse transcriptase forms the flexible hydrophobic NNRTI
+      pocket occupied by rilpivirine.
+    evidence:
+    - reference: PMID:20438081
+      notes: The wild-type and K103N RT cocrystals demonstrated how pocket and drug
+        conformational flexibility preserve rilpivirine binding.
+  - subject: rilpivirine_bound_rt_nnrti_pocket
+    predicate: inhibits
+    object: hiv1_reverse_transcription
+    description: NNRTI-pocket occupancy by rilpivirine allosterically inhibits HIV-1
+      reverse transcriptase catalysis.
+    evidence:
+    - reference: PMID:20438081
+      notes: The structural and antiviral study established potent non-nucleoside
+        inhibition of wild-type and K103N HIV-1 reverse transcriptase by rilpivirine.

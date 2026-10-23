@@ -162,7 +162,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">20 observations &middot; <a href="tetracycline/activity-1.html">Browse all observations</a> &middot; <a href="tetracycline/record-ed87f7225fef077c99a087b566a350ac4974655469acad45eb7c0ea96f4ead43.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">20 observations &middot; <a href="tetracycline/activity-1.html">Browse all observations</a> &middot; <a href="tetracycline/record-6d0a7e563cb3f2e95cc0ca625f6ce5d3aea04eeb8cf875a931c2046a174f55cc.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -1709,6 +1709,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Tetracycline binds the bacterial 30S ribosomal subunit to block aminoacyl-tRNA delivery <span class="pill">MECHANISTIC</span></h3>
+<p>Tetracycline binds discrete sites on the bacterial 30S ribosomal subunit, including the primary A-site decoding pocket, and prevents stable accommodation of aminoacyl-tRNA during bacterial protein synthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: tetracycline_30s_a_site_trna_delivery_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — tetracycline_30s_a_site_trna_delivery_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">tetracycline</code></td>
+    <td>tetracycline</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/tetracycline.html"><code class="curie">CHEBI:27902</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_30s_ribosomal_subunit</code></td>
+    <td>30S ribosomal subunit</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">tetracycline_bound_30s_a_site</code></td>
+    <td>tetracycline-bound 30S ribosomal A-site complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">aminoacyl_trna_delivery_and_translation</code></td>
+    <td>A-site aminoacyl-tRNA delivery and bacterial protein synthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: tetracycline_30s_a_site_trna_delivery_inhibition" tabindex="0">
+<table>
+  <caption>Edges — tetracycline_30s_a_site_trna_delivery_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">tetracycline</code></td>
+    <td>binds</td>
+    <td><code class="curie">tetracycline_bound_30s_a_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11163189">PMID:11163189</a></span> <span class="meta">(Atomic crystal structures of tetracycline bound to the 30S ribosomal subunit localized the primary drug site in the A-site decoding pocket.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_30s_ribosomal_subunit</code></td>
+    <td>participates in</td>
+    <td><code class="curie">tetracycline_bound_30s_a_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11163189">PMID:11163189</a></span> <span class="meta">(The 30S-tetracycline cocrystal defined the 16S rRNA sugar-phosphate and Mg2+-mediated drug contacts.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">tetracycline_bound_30s_a_site</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">aminoacyl_trna_delivery_and_translation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11163189">PMID:11163189</a></span> <span class="meta">(Structural superposition showed steric clash between primary-site tetracycline and A-site tRNA, explaining translation inhibition.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -1820,6 +1890,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-09-26 · codex · LLM-assisted</span>
     <p>Structured BioSample accessions on 20 activity_spectrum observation(s) where evidence notes already named exactly one accession.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph tetracycline_30s_a_site_trna_delivery_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:11163189).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -1840,7 +1915,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

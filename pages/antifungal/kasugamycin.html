@@ -147,7 +147,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">7 observations &middot; <a href="kasugamycin/activity-1.html">Browse all observations</a> &middot; <a href="kasugamycin/record-846f92918f4c61b9149387f6e76f580572e7eb9a5f5c65290b81c0ea6343986a.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">7 observations &middot; <a href="kasugamycin/activity-1.html">Browse all observations</a> &middot; <a href="kasugamycin/record-340c1361caf7af1974ac3d1bd8ae8277c6ef10fae0f92a8e9ea556f6c07a9164.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -401,6 +401,79 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Kasugamycin binds the 30S ribosomal mRNA channel to block canonical translation initiation <span class="pill">MECHANISTIC</span></h3>
+<p>Kasugamycin binds within the mRNA path of the Escherichia coli 30S ribosomal subunit near the P/E-site junction, perturbs the mRNA-initiator-tRNA codon-anticodon interaction, and inhibits canonical bacterial translation initiation.</p><div class="table-scroll" role="region" aria-label="Nodes: kasugamycin_30s_mrna_channel_initiation_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — kasugamycin_30s_mrna_channel_initiation_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">kasugamycin</code></td>
+    <td>kasugamycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/kasugamycin.html"><code class="curie">CHEBI:81419</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_30s_mrna_channel</code></td>
+    <td>30S ribosomal subunit mRNA channel</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">kasugamycin_occupied_30s_mrna_path</code></td>
+    <td>kasugamycin-occupied 30S mRNA channel P/E-site junction</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">canonical_translation_initiation</code></td>
+    <td>initiator fMet-tRNA binding and canonical bacterial translation initiation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: kasugamycin_30s_mrna_channel_initiation_inhibition" tabindex="0">
+<table>
+  <caption>Edges — kasugamycin_30s_mrna_channel_initiation_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">kasugamycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">kasugamycin_occupied_30s_mrna_path</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/16998486">PMID:16998486</a></span> <span class="meta">(A 3.5-angstrom Escherichia coli 70S-kasugamycin crystal structure localized the antibiotic within the 30S mRNA channel.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/16998488">PMID:16998488</a></span> <span class="meta">(An E. coli 30S-kasugamycin crystal structure independently resolved drug binding along the mRNA path.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_30s_mrna_channel</code></td>
+    <td>participates in</td>
+    <td><code class="curie">kasugamycin_occupied_30s_mrna_path</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/16998486">PMID:16998486</a></span> <span class="meta">(The 70S cocrystal mapped 16S rRNA contacts at A794 and G926 in the mRNA path.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/16998488">PMID:16998488</a></span> <span class="meta">(The 30S cocrystal confirmed mimicry of mRNA nucleotides by kasugamycin in the P/E-site channel.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">kasugamycin_occupied_30s_mrna_path</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">canonical_translation_initiation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/16998486">PMID:16998486</a></span> <span class="meta">(Biochemical assays showed that kasugamycin destabilizes fMet-tRNAfMet binding to programmed 30S initiation complexes.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/16998488">PMID:16998488</a></span> <span class="meta">(Functional initiation assays demonstrated indirect perturbation of P-site tRNA accommodation via mRNA path distortion.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -448,6 +521,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-10-14 · codex · LLM-assisted</span>
     <p>Added qualified UniProt evidence citations for reference proteins already verified in the research dossier. Preserved all biological assertions, experimental identity fields, activities and existing evidence. Reference citations are not tested alleles, altered proteins or independent resistance evidence; no strain TaxID, genome, variant or quantitative endpoint added. Whole-record review remains open.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph kasugamycin_30s_mrna_channel_initiation_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:16998486, PMID:16998488).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -468,7 +546,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

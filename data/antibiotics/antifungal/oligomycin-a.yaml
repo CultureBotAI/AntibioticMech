@@ -120,3 +120,88 @@ curation_history:
     subunit 9 / OLI1 (P61829) UniProtKB protein example on the PRIMARY_LITERATURE
     mitochondrial F_O ATP synthase c-ring molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph oligomycin_a_atp_synthase_c_ring_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:22869738, PMID:29650704).
+  llm_assisted: true
+causal_graphs:
+- graph_id: oligomycin_a_atp_synthase_c_ring_inhibition
+  title: Oligomycin A binds the mitochondrial F_O ATP synthase c-ring to block proton-coupled
+    ATP synthesis
+  description: Oligomycin A binds across adjacent subunit-c protomers at the proton-translocating
+    glutamate face of the yeast mitochondrial F_O ATP synthase c10-ring, blocking
+    c-ring rotation and inhibiting mitochondrial ATP synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: oligomycin_a
+    label: oligomycin A
+    node_type: COMPOUND
+    grounding: CHEBI:28285
+  - node_id: mitochondrial_fo_c_ring
+    label: mitochondrial F_O ATP synthase c-ring
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Mitochondrial F_O ATP synthase proton-translocating c-ring; kept
+      label-only with Saccharomyces cerevisiae S288c Atp9/OLI1 (UniProtKB:P61829)
+      protein_examples.
+    gene_symbols:
+    - OLI1
+    protein_examples:
+    - uniprot_id: UniProtKB:P61829
+      protein_label: ATP synthase subunit 9, mitochondrial
+      gene_symbol: OLI1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Proton-translocating F_O c-ring subunit (Subunit 9 / Atp9) bound at the
+        essential carboxyl-protonation face in the S. cerevisiae c10-ring oligomycin
+        crystal structure (PMID:22869738, PDB 4F4S; S288c reference strain context).
+  - node_id: oligomycin_bound_c_ring_proton_site
+    label: oligomycin-locked F_O c-ring proton-binding site
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Inhibited c10-ring state resolved by 1.9-angstrom X-ray crystallography
+      and 3.8-angstrom lipid-bilayer cryo-EM.
+  - node_id: mitochondrial_atp_synthesis
+    label: proton-coupled mitochondrial ATP synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: F1FO-ATP synthase proton translocation and oxidative phosphorylation.
+  edges:
+  - subject: oligomycin_a
+    predicate: binds
+    object: oligomycin_bound_c_ring_proton_site
+    description: Oligomycin A binds across neighboring subunit-c protomers at the
+      essential carboxyl proton-translocation site.
+    evidence:
+    - reference: PMID:22869738
+      notes: A 1.9-angstrom crystal structure resolved oligomycin bound to the Saccharomyces
+        cerevisiae mitochondrial ATP synthase c10-ring.
+    - reference: PMID:29650704
+      notes: A 3.8-angstrom cryo-EM structure resolved oligomycin bound to intact
+        mitochondrial ATP synthase in a lipid bilayer.
+  - subject: mitochondrial_fo_c_ring
+    predicate: participates in
+    object: oligomycin_bound_c_ring_proton_site
+    description: The mitochondrial F_O c-ring provides the subunit-c interface bound
+      by oligomycin A.
+    evidence:
+    - reference: PMID:22869738
+      notes: The c10-ring cocrystal mapped oligomycin contacts across two adjacent
+        subunit-c molecules.
+  - subject: oligomycin_bound_c_ring_proton_site
+    predicate: inhibits
+    object: mitochondrial_atp_synthesis
+    description: Locking of the F_O c-ring protonation face blocks proton translocation
+      and mitochondrial ATP synthesis.
+    evidence:
+    - reference: PMID:22869738
+      notes: Oligomycin binding at the proton-translocating carboxyl face explains
+        blockade of proton-coupled ATP synthesis.
+    - reference: PMID:29650704
+      notes: Full-complex cryo-EM confirmed the oligomycin-inhibited conformation
+        of mitochondrial ATP synthase.

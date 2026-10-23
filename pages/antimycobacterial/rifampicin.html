@@ -177,7 +177,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">363 observations &middot; <a href="rifampicin/activity-1.html">Browse all observations</a> &middot; <a href="rifampicin/record-b46ebaba3fedb0ae337186b30e75da80c406113a402b50b6d715fb4d868833b9.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">363 observations &middot; <a href="rifampicin/activity-1.html">Browse all observations</a> &middot; <a href="rifampicin/record-732b9704a30a61ef8256fd82c4316aad1bf7e89057bacb4ee6aabde369bce02c.json.gz" download>Complete record (JSON.gz)</a></p>
 <p class="meta">Observations 1&ndash;20 of 363</p><div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -944,6 +944,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Rifampicin occludes the bacterial RNA polymerase beta-subunit DNA/RNA channel <span class="pill">MECHANISTIC</span></h3>
+<p>Rifampicin binds a conserved pocket on the bacterial RNA polymerase beta subunit (RpoB) within the DNA/RNA exit channel and sterically blocks nascent RNA extension beyond two to three nucleotides.</p><div class="table-scroll" role="region" aria-label="Nodes: rifampicin_rnap_beta_channel_transcription_occlusion" tabindex="0">
+<table>
+  <caption>Nodes — rifampicin_rnap_beta_channel_transcription_occlusion</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">rifampicin</code></td>
+    <td>rifampicin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antimycobacterial/rifampicin.html"><code class="curie">CHEBI:28077</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rnap_beta_subunit_channel</code></td>
+    <td>bacterial RNA polymerase beta-subunit channel<br><span class="meta">Examples: DNA-directed RNA polymerase subunit beta (rpoB) <a href="https://www.uniprot.org/uniprotkb/Q9KWU6"><code class="curie">UniProtKB:Q9KWU6</code></a>, <em>Thermus aquaticus</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_271"><code class="curie">NCBITaxon:271</code></a> <span class="pill plain">UNREVIEWED</span> — Thermus aquaticus core RNA polymerase beta subunit directly bound by rifampicin within the DNA/RNA exit channel in the cocrystal structure (PMID:11290327, PDB 1I6V).; DNA-directed RNA polymerase subunit beta (rpoB) <a href="https://www.uniprot.org/uniprotkb/P9WGY9"><code class="curie">UniProtKB:P9WGY9</code></a>, <em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a> <span class="pill">REVIEWED</span> — Primary antimycobacterial target RpoB subunit in M. tuberculosis whose conserved rifampicin-resistance cluster maps to the PMID:11290327 beta-subunit binding pocket (H37Rv reference strain context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rifampicin_occluded_rna_exit_channel</code></td>
+    <td>rifampicin-occluded RNA polymerase DNA/RNA channel</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">nascent_rna_elongation</code></td>
+    <td>bacterial nascent RNA transcript extension</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: rifampicin_rnap_beta_channel_transcription_occlusion" tabindex="0">
+<table>
+  <caption>Edges — rifampicin_rnap_beta_channel_transcription_occlusion</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">rifampicin</code></td>
+    <td>binds</td>
+    <td><code class="curie">rifampicin_occluded_rna_exit_channel</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11290327">PMID:11290327</a></span> <span class="meta">(A Thermus aquaticus core RNA polymerase cocrystal directly resolved rifampicin bound in the beta-subunit DNA/RNA channel.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rnap_beta_subunit_channel</code></td>
+    <td>participates in</td>
+    <td><code class="curie">rifampicin_occluded_rna_exit_channel</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11290327">PMID:11290327</a></span> <span class="meta">(The crystal structure mapped the 12 RpoB residues directly contacting rifampicin.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rifampicin_occluded_rna_exit_channel</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">nascent_rna_elongation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11290327">PMID:11290327</a></span> <span class="meta">(Structural modeling and transcription assays established steric occlusion of growing RNA chains after 2-3 nucleotides.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -1025,6 +1095,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated Thermus aquaticus RpoB (Q9KWU6) and M. tuberculosis H37Rv RpoB (P9WGY9) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA polymerase beta-subunit channel molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph rifampicin_rnap_beta_channel_transcription_occlusion (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:11290327).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -1045,7 +1120,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

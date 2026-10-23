@@ -467,3 +467,81 @@ curation_history:
     / RPL28 (P02406) UniProtKB protein example on the PRIMARY_LITERATURE eukaryotic
     80S ribosome molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph cycloheximide_80s_ribosome_elongation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:25209664).
+  llm_assisted: true
+causal_graphs:
+- graph_id: cycloheximide_80s_ribosome_elongation_inhibition
+  title: Cycloheximide binds the eukaryotic 80S ribosome E site to block translation
+    elongation
+  description: Cycloheximide binds the 60S E-site pocket lined by 25S rRNA and ribosomal
+    protein uL15 on the Saccharomyces cerevisiae 80S ribosome and inhibits eukaryotic
+    translation elongation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cycloheximide
+    label: cycloheximide
+    node_type: COMPOUND
+    grounding: CHEBI:27641
+  - node_id: eukaryotic_80s_ribosome
+    label: eukaryotic 80S ribosome
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Eukaryotic 80S ribosome complex; kept label-only with Saccharomyces
+      cerevisiae S288c uL15/RPL28 (UniProtKB:P02406) protein_examples.
+    gene_symbols:
+    - RPL28
+    protein_examples:
+    - uniprot_id: UniProtKB:P02406
+      protein_label: Large ribosomal subunit protein uL15
+      gene_symbol: RPL28
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: 60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines
+        the cycloheximide binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor
+        crystal structure (PMID:25209664, PDB 4U3U; S288c reference strain context).
+  - node_id: cycloheximide_bound_80s_e_site
+    label: cycloheximide-bound 80S ribosomal E-site pocket
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Inhibitor-occupied 60S tRNA exit site resolved in high-resolution
+      yeast 80S X-ray structures.
+  - node_id: eukaryotic_translation_elongation
+    label: eukaryotic translation elongation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: mRNA/tRNA translocation cycle during eukaryotic cytoplasmic protein
+      synthesis.
+  edges:
+  - subject: cycloheximide
+    predicate: binds
+    object: cycloheximide_bound_80s_e_site
+    description: Cycloheximide binds the E-site pocket on the eukaryotic 80S ribosome.
+    evidence:
+    - reference: PMID:25209664
+      notes: High-resolution X-ray crystal structures of Saccharomyces cerevisiae
+        80S ribosomes localized cycloheximide in the 60S E site.
+  - subject: eukaryotic_80s_ribosome
+    predicate: participates in
+    object: cycloheximide_bound_80s_e_site
+    description: The eukaryotic 80S ribosome 25S rRNA and protein uL15 form the cycloheximide
+      binding pocket.
+    evidence:
+    - reference: PMID:25209664
+      notes: The yeast 80S-cycloheximide crystal structure defined drug contacts with
+        25S rRNA and uL15 (RPL28).
+  - subject: cycloheximide_bound_80s_e_site
+    predicate: inhibits
+    object: eukaryotic_translation_elongation
+    description: Cycloheximide occupancy at the 80S E site blocks eukaryotic translation
+      elongation.
+    evidence:
+    - reference: PMID:25209664
+      notes: Paired structural and kinetic analyses demonstrated how E-site cycloheximide
+        binding inhibits eukaryotic translation elongation.

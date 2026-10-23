@@ -359,10 +359,14 @@ def test_cached_source_replay_and_bounded_plan_are_offline(monkeypatch):
 
 
 @pytest.mark.parametrize("identifier", ["CHEBI:131850", "CHEBI:15353", "CHEBI:81419"])
-def test_live_citation_transition_preserves_complete_historical_record(identifier):
-    receipt = json.loads((ROOT / "research/2026-10-14-reference-citation-curation.json").read_bytes())
+def test_live_citation_transition_preserves_complete_historical_record(
+    identifier, pre_causal_graphs_root
+):
+    receipt = json.loads(
+        (pre_causal_graphs_root / "research/2026-10-14-reference-citation-curation.json").read_bytes()
+    )
     (row,) = [r for r in receipt["records"] if r["identifier"] == identifier]
-    after = load_record(ROOT / row["after"]["path"])
+    after = load_record(pre_causal_graphs_root / row["after"]["path"])
     before = audit.restore_before(after, row)
     rebuilt = audit.add_citations(before, row)
     rebuilt["curation_history"].append(row["curation_event"])

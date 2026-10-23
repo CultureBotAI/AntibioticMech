@@ -118,3 +118,86 @@ curation_history:
     example on the PRIMARY_LITERATURE SARS-CoV-2 papain-like protease (PLpro) molecular
     target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph grl_0617_sars_cov_2_plpro_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:32726803, PMID:32895623).
+  llm_assisted: true
+causal_graphs:
+- graph_id: grl_0617_sars_cov_2_plpro_inhibition
+  title: GRL-0617 binds SARS-CoV-2 papain-like protease S3-S4 pockets to block viral
+    replication
+  description: GRL-0617 binds the S3-S4 substrate-binding pockets of SARS-CoV-2 papain-like
+    protease (PLpro), closes the BL2 loop over the substrate cleft, inhibits PLpro
+    catalytic activity, and suppresses SARS-CoV-2 replication in infected cells.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: grl_0617
+    label: GRL-0617
+    node_type: COMPOUND
+    grounding: CHEBI:167176
+  - node_id: sars_cov_2_plpro
+    label: SARS-CoV-2 papain-like protease (PLpro)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: SARS-CoV-2 nsp3 papain-like protease domain; kept label-only
+      with SARS-CoV-2 replicase polyprotein 1ab (UniProtKB:P0DTD1) protein_examples.
+    gene_symbols:
+    - rep
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DTD1
+      protein_label: Replicase polyprotein 1ab
+      gene_symbol: rep
+      taxon_id: NCBITaxon:2697049
+      taxon_label: Severe acute respiratory syndrome coronavirus 2
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp3 papain-like protease
+        (PLpro) domain crystallized in complex with GRL-0617 (PMID:32895623, PDB 7CJM).
+  - node_id: grl_0617_plpro_s3_s4_complex
+    label: GRL-0617-bound PLpro S3-S4 pocket closed-BL2-loop complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 2.6-angstrom cocrystal state where GRL-0617 occupies the S3-S4
+      pockets and prevents substrate access.
+  - node_id: sars_cov_2_plpro_cleavage_and_replication
+    label: PLpro-dependent viral cleavage and SARS-CoV-2 replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: PLpro proteolytic activity and viral replication measured in
+      biochemical and infected-cell assays.
+  edges:
+  - subject: grl_0617
+    predicate: binds
+    object: grl_0617_plpro_s3_s4_complex
+    description: GRL-0617 binds the S3-S4 substrate pockets of SARS-CoV-2 PLpro and
+      stabilizes BL2-loop closure.
+    evidence:
+    - reference: PMID:32895623
+      notes: A 2.6-angstrom GRL-0617-PLpro cocrystal localized the inhibitor in the
+        S3-S4 pockets with a closed BL2 loop.
+    - reference: PMID:32726803
+      notes: Structural and biochemical analyses characterized PLpro substrate recognition
+        and inhibition by GRL-0617.
+  - subject: sars_cov_2_plpro
+    predicate: participates in
+    object: grl_0617_plpro_s3_s4_complex
+    description: SARS-CoV-2 PLpro provides the S3-S4 cleft and BL2 loop that coordinate
+      GRL-0617.
+    evidence:
+    - reference: PMID:32895623
+      notes: The cocrystal structure mapped the PLpro S3-S4 residues contacting GRL-0617.
+  - subject: grl_0617_plpro_s3_s4_complex
+    predicate: inhibits
+    object: sars_cov_2_plpro_cleavage_and_replication
+    description: Occupation of the PLpro S3-S4 pockets inhibits protease catalysis
+      and reduces SARS-CoV-2 replication in infected cells.
+    evidence:
+    - reference: PMID:32895623
+      notes: Enzyme-activity and antiviral assays showed potent PLpro inhibition and
+        suppression of SARS-CoV-2 replication by GRL-0617.
+    - reference: PMID:32726803
+      notes: Infected-cell experiments showed that PLpro inhibition by GRL-0617 reduces
+        viral replication and preserves host interferon signaling.

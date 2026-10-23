@@ -148,6 +148,77 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Nirmatrelvir binds SARS-CoV-2 main protease Mpro to block viral polyprotein cleavage <span class="pill">MECHANISTIC</span></h3>
+<p>Nirmatrelvir (PF-07321332) binds the catalytic cleft of SARS-CoV-2 main protease (Mpro / 3CLpro) and inhibits proteolytic processing across wild-type and variant Mpro enzymes.</p><div class="table-scroll" role="region" aria-label="Nodes: nirmatrelvir_sars_cov_2_mpro_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — nirmatrelvir_sars_cov_2_mpro_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">nirmatrelvir</code></td>
+    <td>nirmatrelvir</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antiviral/nirmatrelvir.html"><code class="curie">CHEBI:170007</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">sars_cov_2_mpro</code></td>
+    <td>SARS-CoV-2 main protease (Mpro; 3CLpro)<br><span class="meta">Examples: Replicase polyprotein 1ab (rep) <a href="https://www.uniprot.org/uniprotkb/P0DTD1"><code class="curie">UniProtKB:P0DTD1</code></a>, <em>Severe acute respiratory syndrome coronavirus 2</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_2697049"><code class="curie">NCBITaxon:2697049</code></a> <span class="pill">REVIEWED</span> — SARS-CoV-2 replicase polyprotein 1ab encoding the nsp5 3C-like main protease (Mpro/3CLpro) crystallized with PF-07321332 (nirmatrelvir) and assayed across lineage variants (PMID:34687004, PDB 7RF7; PMID:35182772).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">nirmatrelvir_bound_mpro_active_site</code></td>
+    <td>nirmatrelvir-bound SARS-CoV-2 Mpro catalytic site</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">mpro_polyprotein_proteolysis</code></td>
+    <td>SARS-CoV-2 Mpro proteolytic activity and viral replication</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: nirmatrelvir_sars_cov_2_mpro_inhibition" tabindex="0">
+<table>
+  <caption>Edges — nirmatrelvir_sars_cov_2_mpro_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">nirmatrelvir</code></td>
+    <td>binds</td>
+    <td><code class="curie">nirmatrelvir_bound_mpro_active_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/34687004">PMID:34687004</a></span> <span class="meta">(X-ray crystallography directly resolved PF-07321332 (nirmatrelvir) bound in the SARS-CoV-2 Mpro active site.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">sars_cov_2_mpro</code></td>
+    <td>participates in</td>
+    <td><code class="curie">nirmatrelvir_bound_mpro_active_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/34687004">PMID:34687004</a></span> <span class="meta">(The crystal structure defined the active-site interactions between SARS-CoV-2 Mpro and nirmatrelvir.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">nirmatrelvir_bound_mpro_active_site</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">mpro_polyprotein_proteolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/34687004">PMID:34687004</a></span> <span class="meta">(Biochemical and antiviral characterization established potent Mpro inhibition by nirmatrelvir.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/35182772">PMID:35182772</a></span> <span class="meta">(Enzyme kinetics confirmed potent nirmatrelvir inhibition across wild-type SARS-CoV-2 Mpro and six lineage-associated Mpro variants.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -190,6 +261,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example on the PRIMARY_LITERATURE SARS-CoV-2 main protease (Mpro; 3CLpro) molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph nirmatrelvir_sars_cov_2_mpro_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:34687004, PMID:35182772).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -210,7 +286,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

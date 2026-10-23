@@ -102,3 +102,67 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph cinnamycin_phosphatidylethanolamine_bilayer_disruption
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:11827543).
+  llm_assisted: true
+causal_graphs:
+- graph_id: cinnamycin_phosphatidylethanolamine_bilayer_disruption
+  title: Cinnamycin forms a 1:1 complex with membrane phosphatidylethanolamine to
+    reorganize the lipid bilayer
+  description: Cinnamycin (Ro 09-0198) binds phosphatidylethanolamine with 1:1 stoichiometry
+    and high affinity in biological and model membranes, reorganizing the phospholipid
+    bilayer matrix.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cinnamycin
+    label: cinnamycin
+    node_type: COMPOUND
+    grounding: CHEBI:141991
+  - node_id: phosphatidylethanolamine_membrane
+    label: phosphatidylethanolamine-containing membrane
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Biological or model lipid membrane containing phosphatidylethanolamine.
+  - node_id: cinnamycin_pe_1_to_1_complex
+    label: 1:1 cinnamycin-phosphatidylethanolamine membrane complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: High-affinity 1:1 peptide-lipid complex characterized by isothermal
+      titration calorimetry.
+  - node_id: membrane_bilayer_organization
+    label: phospholipid bilayer lamellar organization
+    node_type: QUALITY
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Normal lamellar lipid bilayer organization disrupted upon cinnamycin-PE
+      complexation.
+  edges:
+  - subject: cinnamycin
+    predicate: binds
+    object: cinnamycin_pe_1_to_1_complex
+    description: Cinnamycin binds membrane phosphatidylethanolamine in a high-affinity
+      1:1 complex.
+    evidence:
+    - reference: PMID:11827543
+      notes: Isothermal titration calorimetry measured 1:1 high-affinity complex formation
+        between cinnamycin (Ro 09-0198) and phosphatidylethanolamine.
+  - subject: phosphatidylethanolamine_membrane
+    predicate: participates in
+    object: cinnamycin_pe_1_to_1_complex
+    description: Membrane phosphatidylethanolamine headgroups provide the specific
+      lipid partner for cinnamycin.
+    evidence:
+    - reference: PMID:11827543
+      notes: Calorimetric and solid-state NMR analyses established headgroup-specific
+        recognition of phosphatidylethanolamine.
+  - subject: cinnamycin_pe_1_to_1_complex
+    predicate: disrupts
+    object: membrane_bilayer_organization
+    description: Cinnamycin-phosphatidylethanolamine complex formation reorganizes
+      and disrupts the normal lamellar bilayer matrix.
+    evidence:
+    - reference: PMID:11827543
+      notes: 31P and 2H solid-state NMR demonstrated loss of normal bilayer organization
+        in phosphatidylethanolamine-containing membranes.

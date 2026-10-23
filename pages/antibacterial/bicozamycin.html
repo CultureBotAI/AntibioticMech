@@ -201,6 +201,85 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Bicozamycin noncompetitively blocks Rho ATP hydrolysis and transcription termination <span class="pill">MECHANISTIC</span></h3>
+<p>Bicozamycin (bicyclomycin) binds Escherichia coli transcription termination factor Rho adjacent to the ATP- and RNA-binding sites, occludes the nucleophilic water required for ATP hydrolysis, and disrupts Rho-dependent bacterial transcription termination.</p><div class="table-scroll" role="region" aria-label="Nodes: bicozamycin_rho_atpase_transcription_termination_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — bicozamycin_rho_atpase_transcription_termination_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">bicozamycin</code></td>
+    <td>bicozamycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/bicozamycin.html"><code class="curie">CHEBI:60584</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_termination_factor</code></td>
+    <td>Rho transcription termination factor<br><span class="meta">Examples: Transcription termination factor Rho (rho) <a href="https://www.uniprot.org/uniprotkb/P0AG30"><code class="curie">UniProtKB:P0AG30</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Reviewed Rho reference (UniProt entry 164, sequence 1), mapped by PDB 1XPO entity 2. One Rho subunit, not the whole complex or a resistance allele. K-12 is the UniProt reference scope, not an assigned experimental strain; PDB reports the source species as Escherichia coli (NCBITaxon:562).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td>Rho-catalyzed ATP hydrolysis</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_dependent_transcription_termination</code></td>
+    <td>Rho-dependent bacterial transcription termination</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: bicozamycin_rho_atpase_transcription_termination_inhibition" tabindex="0">
+<table>
+  <caption>Edges — bicozamycin_rho_atpase_transcription_termination_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">bicozamycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">rho_termination_factor</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(A 3.15-angstrom Escherichia coli Rho-bicyclomycin crystal structure localized the antibiotic adjacent to the ATP- and RNA-binding sites.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bicozamycin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(The Rho-bicyclomycin cocrystal showed steric occlusion of the attack water required for ATP hydrolysis.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_termination_factor</code></td>
+    <td>enables</td>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(The structural study mapped the ATP-hydrolysis active site within the Rho hexamer.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rho_atp_hydrolysis</code></td>
+    <td>supports</td>
+    <td><code class="curie">rho_dependent_transcription_termination</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15642265">PMID:15642265</a></span> <span class="meta">(Occlusion of Rho ATP hydrolysis explains bicyclomycin disruption of Rho-dependent transcription termination.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -252,6 +331,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-10-13 · codex · LLM-assisted</span>
     <p>Added a versioned Rho protein example and source-species context to the literature-owned bicyclomycin target through the exact-ligand PDB 1XPO/UniProt crosswalk. Preserved all CARD and MIBiG assertions; no resistance allele, genome, or numerical AST assignment.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph bicozamycin_rho_atpase_transcription_termination_inhibition (4 nodes, 4 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:15642265).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -272,7 +356,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

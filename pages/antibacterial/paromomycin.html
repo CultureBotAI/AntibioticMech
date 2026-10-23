@@ -337,6 +337,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Paromomycin binds the 16S-rRNA decoding A site and stabilizes bulged A1492/A1493 <span class="pill">MECHANISTIC</span></h3>
+<p>Paromomycin binds in the major groove of the Escherichia coli 16S-rRNA decoding A site via direct and water-mediated contacts and stabilizes the bulged-out conformation of universally conserved adenines A1492 and A1493, perturbing ribosomal decoding.</p><div class="table-scroll" role="region" aria-label="Nodes: paromomycin_16s_rrna_decoding_site_stabilization" tabindex="0">
+<table>
+  <caption>Nodes — paromomycin_16s_rrna_decoding_site_stabilization</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">paromomycin</code></td>
+    <td>paromomycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/paromomycin.html"><code class="curie">CHEBI:7934</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">decoding_a_site_16s_rrna</code></td>
+    <td>16S-rRNA decoding A-site oligonucleotide</td>
+    <td class="meta">RNA</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">paromomycin_bulged_a1492_a1493_state</code></td>
+    <td>paromomycin-bound decoding A site with bulged A1492 and A1493</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_decoding_fidelity</code></td>
+    <td>bacterial 16S-rRNA decoding-site conformational fidelity</td>
+    <td class="meta">QUALITY</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: paromomycin_16s_rrna_decoding_site_stabilization" tabindex="0">
+<table>
+  <caption>Edges — paromomycin_16s_rrna_decoding_site_stabilization</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">paromomycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">paromomycin_bulged_a1492_a1493_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11587639">PMID:11587639</a></span> <span class="meta">(A 2.5-angstrom crystal structure directly resolved paromomycin bound to an oligonucleotide containing two E. coli 16S-rRNA decoding A sites.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">decoding_a_site_16s_rrna</code></td>
+    <td>participates in</td>
+    <td><code class="curie">paromomycin_bulged_a1492_a1493_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11587639">PMID:11587639</a></span> <span class="meta">(The high-resolution RNA-paromomycin structure defined the direct and water-bridged interactions stabilizing bulged A1492 and A1493.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">paromomycin_bulged_a1492_a1493_state</code></td>
+    <td>decreases</td>
+    <td><code class="curie">ribosomal_decoding_fidelity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11587639">PMID:11587639</a></span> <span class="meta">(The decoding-A-site cocrystal explained aminoglycoside-induced misreading via stabilization of the A1492/A1493 bulged state.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -378,6 +448,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph paromomycin_16s_rrna_decoding_site_stabilization (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:11587639).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -398,7 +473,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

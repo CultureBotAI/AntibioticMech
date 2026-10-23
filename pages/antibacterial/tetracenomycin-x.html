@@ -128,6 +128,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Tetracenomycin X binds the bacterial 50S polypeptide exit tunnel to inhibit translation elongation <span class="pill">MECHANISTIC</span></h3>
+<p>Tetracenomycin X stacks on the noncanonical 23S rRNA U1782-U2586 base pair in the polypeptide exit tunnel of the bacterial 50S ribosomal subunit and arrests translation after synthesis of short oligopeptides.</p><div class="table-scroll" role="region" aria-label="Nodes: tetracenomycin_x_50s_exit_tunnel_translation_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — tetracenomycin_x_50s_exit_tunnel_translation_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">tetracenomycin_x</code></td>
+    <td>tetracenomycin X</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/tetracenomycin-x.html"><code class="curie">CHEBI:32209</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_50s_polypeptide_exit_tunnel</code></td>
+    <td>polypeptide exit tunnel of the bacterial 50S ribosomal subunit</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">tetracenomycin_x_bound_exit_tunnel</code></td>
+    <td>tetracenomycin X-occupied 50S polypeptide exit tunnel</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">nascent_polypeptide_elongation</code></td>
+    <td>bacterial nascent-polypeptide elongation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: tetracenomycin_x_50s_exit_tunnel_translation_inhibition" tabindex="0">
+<table>
+  <caption>Edges — tetracenomycin_x_50s_exit_tunnel_translation_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">tetracenomycin_x</code></td>
+    <td>binds</td>
+    <td><code class="curie">tetracenomycin_x_bound_exit_tunnel</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32601485">PMID:32601485</a></span> <span class="meta">(Structural and biochemical analyses localized tetracenomycin X to the 23S rRNA U1782-U2586 base pair in the 50S polypeptide exit tunnel.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_50s_polypeptide_exit_tunnel</code></td>
+    <td>participates in</td>
+    <td><code class="curie">tetracenomycin_x_bound_exit_tunnel</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32601485">PMID:32601485</a></span> <span class="meta">(Resistance mutations and structural mapping confirmed the 23S rRNA exit-tunnel binding locus.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">tetracenomycin_x_bound_exit_tunnel</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">nascent_polypeptide_elongation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32601485">PMID:32601485</a></span> <span class="meta">(In-vitro and in-vivo translation assays established that tetracenomycin X blocks protein synthesis by obstructing the 50S exit tunnel rather than damaging DNA.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -159,6 +229,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-09-02 · codex · LLM-assisted</span>
     <p>Verified identity, structure, and antibacterial class; added the primary-evidence bacterial 50S exit-tunnel target and corrected the mechanism from the historical DNA-damage proposal to translation inhibition.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph tetracenomycin_x_50s_exit_tunnel_translation_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:32601485).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -179,7 +254,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

@@ -151,3 +151,68 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph oritavancin_peptidoglycan_stem_bridge_cell_wall_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:18258256).
+  llm_assisted: true
+causal_graphs:
+- graph_id: oritavancin_peptidoglycan_stem_bridge_cell_wall_inhibition
+  title: Oritavancin binds peptidoglycan D-Ala-D-Ala stems and pentaglycyl bridges
+    to inhibit transglycosylation and transpeptidation
+  description: Oritavancin binds Staphylococcus aureus cell-wall peptidoglycan via
+    both D-Ala-D-Ala stem termini and pentaglycyl bridge segments, inhibiting both
+    transglycosylation and transpeptidation steps of bacterial peptidoglycan biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: oritavancin
+    label: oritavancin
+    node_type: COMPOUND
+    grounding: CHEBI:82699
+  - node_id: peptidoglycan_stem_and_bridge
+    label: peptidoglycan D-Ala-D-Ala termini and pentaglycyl bridges
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cell-wall peptidoglycan stem and bridge motifs in intact Staphylococcus
+      aureus cells.
+  - node_id: oritavancin_peptidoglycan_complex
+    label: oritavancin-bound peptidoglycan stem-and-bridge complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Dual-mode cell-wall complex resolved by whole-cell solid-state
+      NMR in Staphylococcus aureus.
+  - node_id: transglycosylation_and_transpeptidation
+    label: peptidoglycan transglycosylation and transpeptidation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Glycan chain polymerization and peptide cross-linking in Staphylococcus
+      aureus cell-wall synthesis.
+  edges:
+  - subject: oritavancin
+    predicate: binds
+    object: oritavancin_peptidoglycan_complex
+    description: Oritavancin binds both D-Ala-D-Ala stem termini and pentaglycyl bridges
+      in intact Staphylococcus aureus peptidoglycan.
+    evidence:
+    - reference: PMID:18258256
+      notes: Whole-cell solid-state NMR on selectively labeled S. aureus established
+        oritavancin contacts with both D-Ala-D-Ala stems and pentaglycyl bridges.
+  - subject: peptidoglycan_stem_and_bridge
+    predicate: participates in
+    object: oritavancin_peptidoglycan_complex
+    description: Peptidoglycan D-Ala-D-Ala termini and pentaglycyl bridges form the
+      dual binding site for oritavancin.
+    evidence:
+    - reference: PMID:18258256
+      notes: Solid-state NMR distance measurements defined the stem and bridge binding
+        geometry in intact S. aureus cell walls.
+  - subject: oritavancin_peptidoglycan_complex
+    predicate: inhibits
+    object: transglycosylation_and_transpeptidation
+    description: Dual peptidoglycan binding by oritavancin inhibits both transglycosylation
+      and transpeptidation.
+    evidence:
+    - reference: PMID:18258256
+      notes: Quantitative whole-cell NMR analysis demonstrated inhibition of both
+        transglycosylation and transpeptidation in S. aureus.

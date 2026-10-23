@@ -132,6 +132,78 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>GRL-0617 binds SARS-CoV-2 papain-like protease S3-S4 pockets to block viral replication <span class="pill">MECHANISTIC</span></h3>
+<p>GRL-0617 binds the S3-S4 substrate-binding pockets of SARS-CoV-2 papain-like protease (PLpro), closes the BL2 loop over the substrate cleft, inhibits PLpro catalytic activity, and suppresses SARS-CoV-2 replication in infected cells.</p><div class="table-scroll" role="region" aria-label="Nodes: grl_0617_sars_cov_2_plpro_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — grl_0617_sars_cov_2_plpro_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">grl_0617</code></td>
+    <td>GRL-0617</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antiviral/grl-0617.html"><code class="curie">CHEBI:167176</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">sars_cov_2_plpro</code></td>
+    <td>SARS-CoV-2 papain-like protease (PLpro)<br><span class="meta">Examples: Replicase polyprotein 1ab (rep) <a href="https://www.uniprot.org/uniprotkb/P0DTD1"><code class="curie">UniProtKB:P0DTD1</code></a>, <em>Severe acute respiratory syndrome coronavirus 2</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_2697049"><code class="curie">NCBITaxon:2697049</code></a> <span class="pill">REVIEWED</span> — SARS-CoV-2 replicase polyprotein 1ab encoding the nsp3 papain-like protease (PLpro) domain crystallized in complex with GRL-0617 (PMID:32895623, PDB 7CJM).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">grl_0617_plpro_s3_s4_complex</code></td>
+    <td>GRL-0617-bound PLpro S3-S4 pocket closed-BL2-loop complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">sars_cov_2_plpro_cleavage_and_replication</code></td>
+    <td>PLpro-dependent viral cleavage and SARS-CoV-2 replication</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: grl_0617_sars_cov_2_plpro_inhibition" tabindex="0">
+<table>
+  <caption>Edges — grl_0617_sars_cov_2_plpro_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">grl_0617</code></td>
+    <td>binds</td>
+    <td><code class="curie">grl_0617_plpro_s3_s4_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32895623">PMID:32895623</a></span> <span class="meta">(A 2.6-angstrom GRL-0617-PLpro cocrystal localized the inhibitor in the S3-S4 pockets with a closed BL2 loop.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32726803">PMID:32726803</a></span> <span class="meta">(Structural and biochemical analyses characterized PLpro substrate recognition and inhibition by GRL-0617.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">sars_cov_2_plpro</code></td>
+    <td>participates in</td>
+    <td><code class="curie">grl_0617_plpro_s3_s4_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32895623">PMID:32895623</a></span> <span class="meta">(The cocrystal structure mapped the PLpro S3-S4 residues contacting GRL-0617.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">grl_0617_plpro_s3_s4_complex</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">sars_cov_2_plpro_cleavage_and_replication</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32895623">PMID:32895623</a></span> <span class="meta">(Enzyme-activity and antiviral assays showed potent PLpro inhibition and suppression of SARS-CoV-2 replication by GRL-0617.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32726803">PMID:32726803</a></span> <span class="meta">(Infected-cell experiments showed that PLpro inhibition by GRL-0617 reduces viral replication and preserves host interferon signaling.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -169,6 +241,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example on the PRIMARY_LITERATURE SARS-CoV-2 papain-like protease (PLpro) molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph grl_0617_sars_cov_2_plpro_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:32726803, PMID:32895623).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -189,7 +266,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

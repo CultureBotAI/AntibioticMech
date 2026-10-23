@@ -104,7 +104,33 @@ def reference_snapshot(root, item, checksum, baselines, receipt_pin, restore_bef
         raise ValueError("historical citation receipt binding changed")
     snapshot = root / "reports/resistance-reference-checkpoints" / f"{checksum}.yaml"
     if not snapshot.exists():
-        before = restore_before(load_record(root / item["path"]), rows[0])
+        import hashlib
+        from pathlib import Path
+
+        source_path = root / item["path"]
+        record = load_record(source_path)
+        repo_root = Path(__file__).resolve().parents[1]
+        cg_receipt_path = root / "curation/causal_graphs_transition.json"
+        if not cg_receipt_path.is_file():
+            cg_receipt_path = repo_root / "curation/causal_graphs_transition.json"
+        if cg_receipt_path.is_file() and isinstance(record, dict):
+            source_sha = hashlib.sha256(source_path.read_bytes()).hexdigest()
+            cg_receipt = json.loads(cg_receipt_path.read_bytes())
+            for delta in cg_receipt.get("record_deltas") or []:
+                if (
+                    delta.get("path") == item["path"]
+                    and delta.get("after_sha256") == source_sha
+                    and record.get("causal_graphs") == delta.get("after_causal_graphs")
+                    and (record.get("curation_history") or [None])[-1]
+                    == delta.get("added_history_event")
+                ):
+                    record["curation_history"].pop()
+                    if delta.get("before_causal_graphs") is not None:
+                        record["causal_graphs"] = delta["before_causal_graphs"]
+                    else:
+                        record.pop("causal_graphs", None)
+                    break
+        before = restore_before(record, rows[0])
         write_validated_antibiotic(before, snapshot)
     return reference.check_pin(root, {"path": str(snapshot.relative_to(root)), "sha256": checksum})
 

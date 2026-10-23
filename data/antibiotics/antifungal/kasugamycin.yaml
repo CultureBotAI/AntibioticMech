@@ -356,6 +356,13 @@ curation_history:
     TaxID, genome, variant or quantitative endpoint added. Whole-record review remains
     open.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph kasugamycin_30s_mrna_channel_initiation_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:16998486,
+    PMID:16998488).
+  llm_assisted: true
 activity_spectrum:
 - taxon_id: NCBITaxon:562
   taxon_label: Escherichia coli
@@ -448,3 +455,71 @@ activity_spectrum:
     notes: 'Table 2 reports 200 ug/mL for oppB+dppB; Table S2 identifies CAG67788.
       Conversion to mg/L is numerically identical. MG1655 comparator: 50 ug/mL. No
       clinical breakpoint or S/R category is assigned.'
+causal_graphs:
+- graph_id: kasugamycin_30s_mrna_channel_initiation_inhibition
+  title: Kasugamycin binds the 30S ribosomal mRNA channel to block canonical translation
+    initiation
+  description: Kasugamycin binds within the mRNA path of the Escherichia coli 30S
+    ribosomal subunit near the P/E-site junction, perturbs the mRNA-initiator-tRNA
+    codon-anticodon interaction, and inhibits canonical bacterial translation initiation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: kasugamycin
+    label: kasugamycin
+    node_type: COMPOUND
+    grounding: CHEBI:81419
+  - node_id: ribosomal_30s_mrna_channel
+    label: 30S ribosomal subunit mRNA channel
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: mRNA path across the P/E-site junction of the Escherichia coli
+      30S ribosomal subunit.
+  - node_id: kasugamycin_occupied_30s_mrna_path
+    label: kasugamycin-occupied 30S mRNA channel P/E-site junction
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cocrystal-resolved drug occupancy in E. coli 70S and 30S ribosome
+      structures overlapping the P-site codon trajectory.
+  - node_id: canonical_translation_initiation
+    label: initiator fMet-tRNA binding and canonical bacterial translation initiation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: mRNA-dependent fMet-tRNAfMet positioning at the 30S P site during
+      translation initiation.
+  edges:
+  - subject: kasugamycin
+    predicate: binds
+    object: kasugamycin_occupied_30s_mrna_path
+    description: Kasugamycin binds in the 30S ribosomal subunit mRNA channel between
+      the P and E sites.
+    evidence:
+    - reference: PMID:16998486
+      notes: A 3.5-angstrom Escherichia coli 70S-kasugamycin crystal structure localized
+        the antibiotic within the 30S mRNA channel.
+    - reference: PMID:16998488
+      notes: An E. coli 30S-kasugamycin crystal structure independently resolved drug
+        binding along the mRNA path.
+  - subject: ribosomal_30s_mrna_channel
+    predicate: participates in
+    object: kasugamycin_occupied_30s_mrna_path
+    description: 16S rRNA nucleotides of the 30S mRNA channel form the kasugamycin
+      binding pocket.
+    evidence:
+    - reference: PMID:16998486
+      notes: The 70S cocrystal mapped 16S rRNA contacts at A794 and G926 in the mRNA
+        path.
+    - reference: PMID:16998488
+      notes: The 30S cocrystal confirmed mimicry of mRNA nucleotides by kasugamycin
+        in the P/E-site channel.
+  - subject: kasugamycin_occupied_30s_mrna_path
+    predicate: inhibits
+    object: canonical_translation_initiation
+    description: Occupancy of the 30S mRNA path perturbs P-site codon-anticodon pairing
+      and inhibits canonical translation initiation.
+    evidence:
+    - reference: PMID:16998486
+      notes: Biochemical assays showed that kasugamycin destabilizes fMet-tRNAfMet
+        binding to programmed 30S initiation complexes.
+    - reference: PMID:16998488
+      notes: Functional initiation assays demonstrated indirect perturbation of P-site
+        tRNA accommodation via mRNA path distortion.

@@ -156,7 +156,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">273 observations &middot; <a href="linezolid/activity-1.html">Browse all observations</a> &middot; <a href="linezolid/record-747e66b8f02edb1fe69fbaaa66183fbf61f7f345ffcf9054c544ec7bbde53d37.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">273 observations &middot; <a href="linezolid/activity-1.html">Browse all observations</a> &middot; <a href="linezolid/record-3119d58b9ba2973dfc9332c4145511b46bf57d3038a5b77c9d5a47bde1c9ed92.json.gz" download>Complete record (JSON.gz)</a></p>
 <p class="meta">Observations 1&ndash;20 of 273</p><div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -603,6 +603,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Linezolid binds the 50S peptidyl-transferase-center A-site pocket to perturb tRNA positioning <span class="pill">MECHANISTIC</span></h3>
+<p>Linezolid binds the A-site cleft of the bacterial 50S ribosomal peptidyl-transferase center, stabilizes conserved 23S rRNA nucleotide U2585 in a nonproductive orientation that overlaps the aminoacyl moiety of A-site tRNA, and blocks bacterial protein synthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: linezolid_50s_ptc_a_site_trna_positioning_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — linezolid_50s_ptc_a_site_trna_positioning_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">linezolid</code></td>
+    <td>linezolid</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/linezolid.html"><code class="curie">CHEBI:63607</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ptc_a_site_pocket</code></td>
+    <td>50S ribosomal peptidyl-transferase-center A-site pocket</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td>linezolid-bound PTC A-site pocket with nonproductive U2585 orientation</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">a_site_trna_accommodation_and_translation</code></td>
+    <td>A-site aminoacyl-tRNA positioning and bacterial protein synthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: linezolid_50s_ptc_a_site_trna_positioning_inhibition" tabindex="0">
+<table>
+  <caption>Edges — linezolid_50s_ptc_a_site_trna_positioning_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">linezolid</code></td>
+    <td>binds</td>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(An X-ray crystal structure of linezolid bound to the Deinococcus radiodurans 50S subunit localized the drug in the PTC A-site pocket.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ptc_a_site_pocket</code></td>
+    <td>participates in</td>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(The 50S-linezolid crystal structure showed stabilization of 23S rRNA nucleotide U2585 in a nonproductive conformation.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">linezolid_u2585_nonproductive_state</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">a_site_trna_accommodation_and_translation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18757750">PMID:18757750</a></span> <span class="meta">(Superposition with tRNA substrates showed steric overlap with the A-site aminoacyl group, explaining translation inhibition.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -684,6 +754,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-10-05 · seed_from_sources</span>
     <p>Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream retrieval date 2026-08-30, unchanged.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph linezolid_50s_ptc_a_site_trna_positioning_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:18757750).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -704,7 +779,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

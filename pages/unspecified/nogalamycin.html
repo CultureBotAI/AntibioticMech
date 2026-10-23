@@ -137,6 +137,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Nogalamycin intercalates into double-stranded DNA and distorts B-DNA helix geometry <span class="pill">MECHANISTIC</span></h3>
+<p>Nogalamycin intercalates at CpG steps of double-stranded DNA, threading its sugar substituents into both the major and minor grooves and inducing pronounced base-pair buckling and backbone distortion that block nucleic-acid template function.</p><div class="table-scroll" role="region" aria-label="Nodes: nogalamycin_dna_intercalation_helix_distortion" tabindex="0">
+<table>
+  <caption>Nodes — nogalamycin_dna_intercalation_helix_distortion</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">nogalamycin</code></td>
+    <td>nogalamycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../unspecified/nogalamycin.html"><code class="curie">CHEBI:44504</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">double_stranded_dna</code></td>
+    <td>double-stranded DNA</td>
+    <td class="meta">CHEMICAL</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">nogalamycin_intercalated_dna_complex</code></td>
+    <td>two-groove-threaded nogalamycin-DNA intercalation complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_duplex_geometry_and_synthesis</code></td>
+    <td>B-DNA duplex geometry and DNA-templated nucleic acid synthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: nogalamycin_dna_intercalation_helix_distortion" tabindex="0">
+<table>
+  <caption>Edges — nogalamycin_dna_intercalation_helix_distortion</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">nogalamycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">nogalamycin_intercalated_dna_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/1991116">PMID:1991116</a></span> <span class="meta">(An X-ray crystal structure of nogalamycin complexed with a self-complementary DNA hexamer resolved terminal-CpG intercalation and two-groove contacts.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">double_stranded_dna</code></td>
+    <td>participates in</td>
+    <td><code class="curie">nogalamycin_intercalated_dna_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/1991116">PMID:1991116</a></span> <span class="meta">(The nogalamycin-DNA cocrystal mapped direct and water-mediated contacts with both DNA strands.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">nogalamycin_intercalated_dna_complex</code></td>
+    <td>disrupts</td>
+    <td><code class="curie">dna_duplex_geometry_and_synthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/1991116">PMID:1991116</a></span> <span class="meta">(Crystallographic analysis showed large base-pair buckle and backbone distortions induced by nogalamycin intercalation.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -173,6 +243,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph nogalamycin_dna_intercalation_helix_distortion (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:1991116).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -193,7 +268,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

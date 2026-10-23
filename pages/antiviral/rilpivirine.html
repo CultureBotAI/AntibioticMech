@@ -155,6 +155,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Rilpivirine binds the HIV-1 reverse transcriptase NNRTI pocket to block viral DNA synthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Rilpivirine (TMC278) binds the non-nucleoside inhibitor pocket of wild-type and K103N mutant HIV-1 reverse transcriptase via conformational adaptation and blocks HIV-1 reverse transcription.</p><div class="table-scroll" role="region" aria-label="Nodes: rilpivirine_hiv1_rt_nnrti_pocket_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — rilpivirine_hiv1_rt_nnrti_pocket_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">rilpivirine</code></td>
+    <td>rilpivirine</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antiviral/rilpivirine.html"><code class="curie">CHEBI:68606</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcriptase</code></td>
+    <td>HIV-1 reverse transcriptase<br><span class="meta">Examples: Gag-Pol polyprotein (gag-pol) <a href="https://www.uniprot.org/uniprotkb/P04585"><code class="curie">UniProtKB:P04585</code></a>, <em>Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_11706"><code class="curie">NCBITaxon:11706</code></a> <span class="pill">REVIEWED</span> — HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer crystallized in complex with rilpivirine (TMC278) in wild-type and K103N mutant forms (PMID:20438081, PDB 2ZD1 / 3MEE; HXB2 reference isolate context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rilpivirine_bound_rt_nnrti_pocket</code></td>
+    <td>rilpivirine-bound HIV-1 reverse transcriptase NNRTI pocket</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcription</code></td>
+    <td>HIV-1 reverse transcriptase polymerase activity</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: rilpivirine_hiv1_rt_nnrti_pocket_inhibition" tabindex="0">
+<table>
+  <caption>Edges — rilpivirine_hiv1_rt_nnrti_pocket_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">rilpivirine</code></td>
+    <td>binds</td>
+    <td><code class="curie">rilpivirine_bound_rt_nnrti_pocket</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20438081">PMID:20438081</a></span> <span class="meta">(X-ray crystal structures directly resolved rilpivirine bound to both wild-type and K103N mutant HIV-1 reverse transcriptase.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_reverse_transcriptase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">rilpivirine_bound_rt_nnrti_pocket</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20438081">PMID:20438081</a></span> <span class="meta">(The wild-type and K103N RT cocrystals demonstrated how pocket and drug conformational flexibility preserve rilpivirine binding.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rilpivirine_bound_rt_nnrti_pocket</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">hiv1_reverse_transcription</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/20438081">PMID:20438081</a></span> <span class="meta">(The structural and antiviral study established potent non-nucleoside inhibition of wild-type and K103N HIV-1 reverse transcriptase by rilpivirine.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -201,6 +271,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on the PRIMARY_LITERATURE HIV-1 reverse transcriptase molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph rilpivirine_hiv1_rt_nnrti_pocket_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:20438081).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -221,7 +296,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

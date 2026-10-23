@@ -155,6 +155,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Fosmidomycin inhibits DXR in the bacterial MEP isoprenoid biosynthesis pathway <span class="pill">MECHANISTIC</span></h3>
+<p>Fosmidomycin coordinates the catalytic Mg2+ ion in the active site of NADPH-bound 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR), ordering the active-site loop and inhibiting non-mevalonate (MEP) isoprenoid biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: fosmidomycin_dxr_mep_isoprenoid_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — fosmidomycin_dxr_mep_isoprenoid_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">fosmidomycin</code></td>
+    <td>fosmidomycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/fosmidomycin.html"><code class="curie">CHEBI:443725</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dxr_reductoisomerase</code></td>
+    <td>1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR)<br><span class="meta">Examples: 1-deoxy-D-xylulose 5-phosphate reductoisomerase (dxr) <a href="https://www.uniprot.org/uniprotkb/P45568"><code class="curie">UniProtKB:P45568</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Non-mevalonate isoprenoid pathway enzyme crystallized in a ternary complex with NADPH and fosmidomycin in E. coli (PMID:17554164; K-12 reference strain context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dxr_mg_nadph_fosmidomycin_complex</code></td>
+    <td>quaternary DXR-Mg2+-NADPH-fosmidomycin inhibited complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">mep_isoprenoid_biosynthesis</code></td>
+    <td>non-mevalonate (MEP) isoprenoid biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: fosmidomycin_dxr_mep_isoprenoid_inhibition" tabindex="0">
+<table>
+  <caption>Edges — fosmidomycin_dxr_mep_isoprenoid_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">fosmidomycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">dxr_mg_nadph_fosmidomycin_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17554164">PMID:17554164</a></span> <span class="meta">(A 2.2-angstrom E. coli DXR quaternary crystal structure resolved fosmidomycin, Mg2+, and NADPH with an ordered active-site loop.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dxr_reductoisomerase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">dxr_mg_nadph_fosmidomycin_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17554164">PMID:17554164</a></span> <span class="meta">(The crystal structure established how DXR active-site residues and Mg2+ coordinate fosmidomycin.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dxr_mg_nadph_fosmidomycin_complex</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">mep_isoprenoid_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/17554164">PMID:17554164</a></span> <span class="meta">(Structural characterization of the quaternary DXR-Mg2+-NADPH-fosmidomycin complex defined the inhibited state of the MEP pathway enzyme.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -201,6 +271,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated E. coli K-12 DXR (P45568) UniProtKB protein example on the PRIMARY_LITERATURE 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR) molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph fosmidomycin_dxr_mep_isoprenoid_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:17554164).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -221,7 +296,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

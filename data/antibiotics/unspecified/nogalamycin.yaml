@@ -112,3 +112,67 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph nogalamycin_dna_intercalation_helix_distortion
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:1991116).
+  llm_assisted: true
+causal_graphs:
+- graph_id: nogalamycin_dna_intercalation_helix_distortion
+  title: Nogalamycin intercalates into double-stranded DNA and distorts B-DNA helix
+    geometry
+  description: Nogalamycin intercalates at CpG steps of double-stranded DNA, threading
+    its sugar substituents into both the major and minor grooves and inducing pronounced
+    base-pair buckling and backbone distortion that block nucleic-acid template function.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: nogalamycin
+    label: nogalamycin
+    node_type: COMPOUND
+    grounding: CHEBI:44504
+  - node_id: double_stranded_dna
+    label: double-stranded DNA
+    node_type: CHEMICAL
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Double-stranded B-DNA duplex containing CpG intercalation steps.
+  - node_id: nogalamycin_intercalated_dna_complex
+    label: two-groove-threaded nogalamycin-DNA intercalation complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: X-ray crystal structure state showing terminal CpG intercalation
+      and contacts across both DNA strands and grooves.
+  - node_id: dna_duplex_geometry_and_synthesis
+    label: B-DNA duplex geometry and DNA-templated nucleic acid synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Native B-DNA helical geometry required for DNA-templated nucleic-acid
+      synthesis.
+  edges:
+  - subject: nogalamycin
+    predicate: binds
+    object: nogalamycin_intercalated_dna_complex
+    description: Nogalamycin intercalates into double-stranded DNA and contacts both
+      strands in the major and minor grooves.
+    evidence:
+    - reference: PMID:1991116
+      notes: An X-ray crystal structure of nogalamycin complexed with a self-complementary
+        DNA hexamer resolved terminal-CpG intercalation and two-groove contacts.
+  - subject: double_stranded_dna
+    predicate: participates in
+    object: nogalamycin_intercalated_dna_complex
+    description: Double-stranded DNA duplex base pairs form the intercalation cavity
+      occupied by nogalamycin.
+    evidence:
+    - reference: PMID:1991116
+      notes: The nogalamycin-DNA cocrystal mapped direct and water-mediated contacts
+        with both DNA strands.
+  - subject: nogalamycin_intercalated_dna_complex
+    predicate: disrupts
+    object: dna_duplex_geometry_and_synthesis
+    description: Intercalation of nogalamycin causes severe departures from B-DNA
+      geometry and inhibits nucleic-acid synthesis.
+    evidence:
+    - reference: PMID:1991116
+      notes: Crystallographic analysis showed large base-pair buckle and backbone
+        distortions induced by nogalamycin intercalation.

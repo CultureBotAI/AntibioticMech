@@ -324,11 +324,12 @@ def restore_pre_uniprot_protein_examples():
 
 
 @pytest.fixture(scope="session")
-def pre_uniprot_protein_examples_root(tmp_path_factory):
+def pre_uniprot_protein_examples_root(tmp_path_factory, pre_causal_graphs_root):
     """Restore only the 30 curated UniProt protein-example record deltas in isolation."""
-    transition = _uniprot_protein_examples_transition(REPO_ROOT)
+    source = pre_causal_graphs_root
+    transition = _uniprot_protein_examples_transition(source)
     historical_manifest = json.loads(
-        (REPO_ROOT / "research/2026-10-15-card-reference-reconciled.json").read_bytes()
+        (source / "research/2026-10-15-card-reference-reconciled.json").read_bytes()
     )
     historical_identifiers = {row["identifier"] for row in historical_manifest["records"]}
     historical_paths = {row["path"] for row in historical_manifest["records"]}
@@ -337,13 +338,13 @@ def pre_uniprot_protein_examples_root(tmp_path_factory):
         for p in historical_paths
     }
     root = tmp_path_factory.mktemp("pre-uniprot-protein-examples")
-    shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
+    shutil.copytree(source / "data/antibiotics", root / "data/antibiotics")
     for yaml_path in list((root / "data/antibiotics").rglob("*.yaml")):
         rel = yaml_path.relative_to(root).as_posix()
         if rel not in historical_paths:
             yaml_path.unlink()
     paths_tsv = root / "data/antibiotics/PATHS.tsv"
-    with (CORPUS_DIR / "PATHS.tsv").open(encoding="utf-8", newline="") as fh:
+    with (source / "data/antibiotics/PATHS.tsv").open(encoding="utf-8", newline="") as fh:
         reader = csv.DictReader(fh, delimiter="\t")
         rows = [row for row in reader if row["slug"] in historical_slugs]
     with paths_tsv.open("w", encoding="utf-8", newline="") as fh:
@@ -353,9 +354,9 @@ def pre_uniprot_protein_examples_root(tmp_path_factory):
         writer.writeheader()
         writer.writerows(rows)
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
-        (root / relative).symlink_to(REPO_ROOT / relative, target_is_directory=True)
+        (root / relative).symlink_to(source / relative, target_is_directory=True)
     (root / "curation").mkdir()
-    for path in (REPO_ROOT / "curation").iterdir():
+    for path in (source / "curation").iterdir():
         if path.name == "curator_antibiotics.tsv":
             with path.open(encoding="utf-8", newline="") as fh:
                 reader = csv.DictReader(fh, delimiter="\t")
@@ -390,6 +391,79 @@ def pre_uniprot_protein_examples_root(tmp_path_factory):
         else:
             (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
     for delta in transition["record_deltas"]:
-        _restore_pre_uniprot_protein_examples(REPO_ROOT, delta["path"], root / delta["path"])
+        _restore_pre_uniprot_protein_examples(source, delta["path"], root / delta["path"])
+    return root
+
+
+def _causal_graphs_transition(root):
+    payload = (root / "curation/causal_graphs_transition.json").read_bytes()
+    assert hashlib.sha256(payload).hexdigest() == (
+        "71620f1aed8e864ee590cbba391f803d21e9fefd6bb1893d41e07ec4a467f08a"
+    )
+    transition = json.loads(payload)
+    assert len(transition["record_deltas"]) == 36
+    return transition
+
+
+def _restore_pre_causal_graphs(root, relative_path, output):
+    import copy
+
+    from antibioticmech.validation.write_validated import write_validated_antibiotic
+
+    transition = _causal_graphs_transition(root)
+    delta = next(row for row in transition["record_deltas"] if row["path"] == relative_path)
+    source = root / relative_path
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == delta["after_sha256"]
+    historical = load_record(source)
+    assert historical["identifier"] == delta["identifier"]
+    assert delta["history_events_added"] == 1
+    assert historical["curation_history"].pop() == delta["added_history_event"]
+    assert historical.pop("causal_graphs", None) == delta["after_causal_graphs"]
+    if delta["before_causal_graphs"] is not None:
+        historical["causal_graphs"] = copy.deepcopy(delta["before_causal_graphs"])
+    write_validated_antibiotic(historical, output)
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == delta["before_sha256"]
+    return output
+
+
+@pytest.fixture
+def restore_pre_causal_graphs():
+    return _restore_pre_causal_graphs
+
+
+@pytest.fixture(scope="session")
+def pre_causal_graphs_root(tmp_path_factory):
+    """Restore only the 36 curated causal_graphs record deltas and held_targets additions in isolation."""
+    import yaml
+
+    transition = _causal_graphs_transition(REPO_ROOT)
+    cohort_b_ids = {
+        row["identifier"]
+        for row in transition["record_deltas"]
+        if row.get("cohort") == "non_protein_direct_or_measured_target"
+    }
+    root = tmp_path_factory.mktemp("pre-causal-graphs")
+    shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
+    for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
+        (root / relative).symlink_to(REPO_ROOT / relative, target_is_directory=True)
+    (root / "curation").mkdir()
+    for path in (REPO_ROOT / "curation").iterdir():
+        if path.name == "uniprot_protein_examples.yaml":
+            loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+            plan_data = yaml.load(path.read_text(encoding="utf-8"), Loader=loader)
+            plan_data["held_targets"] = [
+                h
+                for h in (plan_data.get("held_targets") or [])
+                if not (h.get("scope") == "causal_graphs" and h.get("identifier") in cohort_b_ids)
+            ]
+            assert len(plan_data["held_targets"]) == 64
+            (root / "curation" / path.name).write_text(
+                yaml.dump(plan_data, sort_keys=False, allow_unicode=True, width=100),
+                encoding="utf-8",
+            )
+        else:
+            (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
+    for delta in transition["record_deltas"]:
+        _restore_pre_causal_graphs(REPO_ROOT, delta["path"], root / delta["path"])
     return root
 

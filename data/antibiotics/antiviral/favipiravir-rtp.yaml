@@ -121,3 +121,83 @@ curation_history:
     example on the PRIMARY_LITERATURE SARS-CoV-2 RNA-dependent RNA polymerase catalytic
     site molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph favipiravir_rtp_sars_cov_2_rdrp_replication_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:33526596).
+  llm_assisted: true
+causal_graphs:
+- graph_id: favipiravir_rtp_sars_cov_2_rdrp_replication_inhibition
+  title: Favipiravir-RTP binds the SARS-CoV-2 RdRp catalytic site and suppresses viral
+    RNA synthesis
+  description: Favipiravir ribofuranosyl-5'-triphosphate (favipiravir-RTP) binds the
+    template-primer-engaged catalytic site of SARS-CoV-2 RNA-dependent RNA polymerase
+    (RdRp), undergoes weak incorporation, and suppresses coronavirus RNA replication.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: favipiravir_rtp
+    label: favipiravir-RTP
+    node_type: COMPOUND
+    grounding: CHEBI:170009
+  - node_id: sars_cov_2_rdrp
+    label: SARS-CoV-2 RNA-dependent RNA polymerase catalytic site
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: SARS-CoV-2 nsp12 RNA-dependent RNA polymerase catalytic complex;
+      kept label-only with SARS-CoV-2 replicase polyprotein 1ab (UniProtKB:P0DTD1)
+      protein_examples.
+    gene_symbols:
+    - rep
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DTD1
+      protein_label: Replicase polyprotein 1ab
+      gene_symbol: rep
+      taxon_id: NCBITaxon:2697049
+      taxon_label: Severe acute respiratory syndrome coronavirus 2
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp12 RNA-dependent
+        RNA polymerase catalytic subunit resolved with favipiravir-RTP by cryo-EM
+        (PMID:33526596, PDB 7CTT).
+  - node_id: favipiravir_rtp_bound_rdrp_complex
+    label: favipiravir-RTP-bound SARS-CoV-2 RdRp template-primer complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 2.5-angstrom cryo-EM structure of favipiravir-RTP positioned
+      at the nsp12 RdRp catalytic site.
+  - node_id: sars_cov_2_rna_synthesis
+    label: SARS-CoV-2 RdRp-catalyzed viral RNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Primer-dependent viral RNA extension assayed with purified SARS-CoV-2
+      polymerase complex.
+  edges:
+  - subject: favipiravir_rtp
+    predicate: binds
+    object: favipiravir_rtp_bound_rdrp_complex
+    description: Favipiravir-RTP binds the catalytic site of template-primer-engaged
+      SARS-CoV-2 RdRp.
+    evidence:
+    - reference: PMID:33526596
+      notes: A 2.5-angstrom cryo-EM structure resolved favipiravir-RTP bound at the
+        catalytic site of the SARS-CoV-2 RdRp-RNA complex.
+  - subject: sars_cov_2_rdrp
+    predicate: participates in
+    object: favipiravir_rtp_bound_rdrp_complex
+    description: The SARS-CoV-2 nsp12 RdRp catalytic site coordinates favipiravir-RTP
+      opposite the RNA template.
+    evidence:
+    - reference: PMID:33526596
+      notes: The cryo-EM structure defined the pre-incorporation binding mode of favipiravir-RTP
+        in the SARS-CoV-2 RdRp active site.
+  - subject: favipiravir_rtp_bound_rdrp_complex
+    predicate: inhibits
+    object: sars_cov_2_rna_synthesis
+    description: Favipiravir-RTP binding and weak incorporation at the RdRp active
+      site suppress SARS-CoV-2 RNA synthesis.
+    evidence:
+    - reference: PMID:33526596
+      notes: Polymerase extension and viral replication assays demonstrated weak favipiravir-RTP
+        incorporation and suppression of SARS-CoV-2 RNA replication.

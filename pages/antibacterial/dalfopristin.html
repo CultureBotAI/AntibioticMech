@@ -504,6 +504,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Dalfopristin binds the 50S peptidyl-transferase center and perturbs tRNA positioning <span class="pill">MECHANISTIC</span></h3>
+<p>Dalfopristin binds the peptidyl-transferase center of the bacterial 50S ribosomal subunit, induces a nonproductive 23S rRNA conformation that overlaps A- and P-site tRNA substrates, and inhibits bacterial protein synthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: dalfopristin_50s_ptc_rrna_rearrangement_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — dalfopristin_50s_ptc_rrna_rearrangement_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">dalfopristin</code></td>
+    <td>dalfopristin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/dalfopristin.html"><code class="curie">CHEBI:4309</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_50s_ptc</code></td>
+    <td>50S ribosomal peptidyl-transferase center</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dalfopristin_perturbed_ptc_state</code></td>
+    <td>dalfopristin-bound nonproductive peptidyl-transferase-center conformation</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_peptide_bond_formation</code></td>
+    <td>bacterial ribosomal peptide-bond formation and translation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: dalfopristin_50s_ptc_rrna_rearrangement_inhibition" tabindex="0">
+<table>
+  <caption>Edges — dalfopristin_50s_ptc_rrna_rearrangement_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">dalfopristin</code></td>
+    <td>binds</td>
+    <td><code class="curie">dalfopristin_perturbed_ptc_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15059283">PMID:15059283</a></span> <span class="meta">(A Deinococcus radiodurans 50S cocrystal resolved dalfopristin bound in the peptidyl-transferase center.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_50s_ptc</code></td>
+    <td>participates in</td>
+    <td><code class="curie">dalfopristin_perturbed_ptc_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15059283">PMID:15059283</a></span> <span class="meta">(The 50S structure showed a nonproductive 23S rRNA rearrangement stabilized by dalfopristin and quinupristin.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dalfopristin_perturbed_ptc_state</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">bacterial_peptide_bond_formation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15059283">PMID:15059283</a></span> <span class="meta">(Dalfopristin overlaps both A- and P-site tRNA substrate positions in the 50S catalytic center.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -546,6 +616,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph dalfopristin_50s_ptc_rrna_rearrangement_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:15059283).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -566,7 +641,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

@@ -124,6 +124,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Cinnamycin forms a 1:1 complex with membrane phosphatidylethanolamine to reorganize the lipid bilayer <span class="pill">MECHANISTIC</span></h3>
+<p>Cinnamycin (Ro 09-0198) binds phosphatidylethanolamine with 1:1 stoichiometry and high affinity in biological and model membranes, reorganizing the phospholipid bilayer matrix.</p><div class="table-scroll" role="region" aria-label="Nodes: cinnamycin_phosphatidylethanolamine_bilayer_disruption" tabindex="0">
+<table>
+  <caption>Nodes — cinnamycin_phosphatidylethanolamine_bilayer_disruption</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">cinnamycin</code></td>
+    <td>cinnamycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../unspecified/cinnamycin.html"><code class="curie">CHEBI:141991</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">phosphatidylethanolamine_membrane</code></td>
+    <td>phosphatidylethanolamine-containing membrane</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">cinnamycin_pe_1_to_1_complex</code></td>
+    <td>1:1 cinnamycin-phosphatidylethanolamine membrane complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">membrane_bilayer_organization</code></td>
+    <td>phospholipid bilayer lamellar organization</td>
+    <td class="meta">QUALITY</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: cinnamycin_phosphatidylethanolamine_bilayer_disruption" tabindex="0">
+<table>
+  <caption>Edges — cinnamycin_phosphatidylethanolamine_bilayer_disruption</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">cinnamycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">cinnamycin_pe_1_to_1_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11827543">PMID:11827543</a></span> <span class="meta">(Isothermal titration calorimetry measured 1:1 high-affinity complex formation between cinnamycin (Ro 09-0198) and phosphatidylethanolamine.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">phosphatidylethanolamine_membrane</code></td>
+    <td>participates in</td>
+    <td><code class="curie">cinnamycin_pe_1_to_1_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11827543">PMID:11827543</a></span> <span class="meta">(Calorimetric and solid-state NMR analyses established headgroup-specific recognition of phosphatidylethanolamine.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">cinnamycin_pe_1_to_1_complex</code></td>
+    <td>disrupts</td>
+    <td><code class="curie">membrane_bilayer_organization</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/11827543">PMID:11827543</a></span> <span class="meta">(31P and 2H solid-state NMR demonstrated loss of normal bilayer organization in phosphatidylethanolamine-containing membranes.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -160,6 +230,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph cinnamycin_phosphatidylethanolamine_bilayer_disruption (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:11827543).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -180,7 +255,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

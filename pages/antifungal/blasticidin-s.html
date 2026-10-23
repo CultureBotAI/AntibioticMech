@@ -132,7 +132,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <h2 id="activity">Activity spectrum</h2>
 <p class="meta">Measured or curated activity against specific taxa. A number
 without a method is not an observation — every row here carries an assay.</p>
-<p class="meta">2 observations &middot; <a href="blasticidin-s/activity-1.html">Browse all observations</a> &middot; <a href="blasticidin-s/record-3f59cba42988b10da406f709d8dd32e6900118c546d2aef000a73e6f130b9f81.json.gz" download>Complete record (JSON.gz)</a></p>
+<p class="meta">2 observations &middot; <a href="blasticidin-s/activity-1.html">Browse all observations</a> &middot; <a href="blasticidin-s/record-7a1a4fbe0c8091b109316e0749d17ea268e7bbd2804cae4ead39ed26789e534a.json.gz" download>Complete record (JSON.gz)</a></p>
 <div class="table-scroll" role="region" aria-label="Activity observations" tabindex="0">
 <table>
   <caption>Activity observations</caption>
@@ -275,6 +275,76 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Blasticidin S bends P-site tRNA on the 70S ribosome to inhibit translation termination <span class="pill">MECHANISTIC</span></h3>
+<p>Blasticidin S binds the 50S P-site loop of the 70S ribosome-tRNA complex, stabilizes a deformed P-site tRNA conformation toward the A site, and strongly inhibits release-factor-mediated peptidyl-tRNA hydrolysis during translation termination.</p><div class="table-scroll" role="region" aria-label="Nodes: blasticidin_s_70s_p_site_trna_termination_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — blasticidin_s_70s_p_site_trna_termination_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">blasticidin_s</code></td>
+    <td>blasticidin S</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/blasticidin-s.html"><code class="curie">CHEBI:15353</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosome_70s_p_site_trna_complex</code></td>
+    <td>70S ribosome P-site tRNA complex</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td>blasticidin S-stabilized deformed P-site tRNA CCA conformation</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">release_factor_peptidyl_trna_hydrolysis</code></td>
+    <td>release-factor-mediated translation termination and peptide-bond formation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: blasticidin_s_70s_p_site_trna_termination_inhibition" tabindex="0">
+<table>
+  <caption>Edges — blasticidin_s_70s_p_site_trna_termination_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">blasticidin_s</code></td>
+    <td>binds</td>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(A 3.4-angstrom crystal structure and single-molecule FRET assays showed blasticidin S stabilizing a distorted P-site tRNA conformation on the 70S ribosome.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosome_70s_p_site_trna_complex</code></td>
+    <td>participates in</td>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(The 70S-tRNA-blasticidin S crystal structure resolved drug base-pairing with G2252 and bending of the P-site tRNA 3&#39; CCA end.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">deformed_p_site_trna_conformation</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">release_factor_peptidyl_trna_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23824292">PMID:23824292</a></span> <span class="meta">(Biochemical release-factor and dipeptide-formation assays demonstrated potent inhibition of translation termination and weaker inhibition of elongation.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -327,6 +397,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-10-14 · codex · LLM-assisted</span>
     <p>Added qualified UniProt evidence citations for reference proteins already verified in the research dossier. Preserved all biological assertions, experimental identity fields, activities and existing evidence. Reference citations are not tested alleles, altered proteins or independent resistance evidence; no strain TaxID, genome, variant or quantitative endpoint added. Whole-record review remains open.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph blasticidin_s_70s_p_site_trna_termination_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:23824292).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -347,7 +422,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>
