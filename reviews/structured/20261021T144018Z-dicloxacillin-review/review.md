@@ -1,0 +1,879 @@
+# Review of dicloxacillin
+
+- Review: 20261021T144018Z-dicloxacillin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T14:27:08Z
+- Finished UTC: 2026-10-21T14:40:18Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Independent authority structures support exact neutral (2S,5R,6R) dicloxacillin. Its antibacterial classification and qualified CARD PBP relationship are supported; original pneumococcal competition-binding work supplies a bounded future primary-evidence route. All eight adopted publication leads were checked. The confirmed correction is a stray closing square bracket in the structural definition, reproduced from ChEBI. Unresolved LINCS/Reaxys access and assay salt details are retained as limitations.
+
+## Scope And Provenance
+
+Entire SEEDED, EXACT record: definition, eight synonyms, three parents, two activity roles, chemical structure, seven exact cross-references, three drug-context and three document references, both source concepts, sole molecular-target assertion and five history events. All eight adopted ARO/ChEBI PMID leads checked.
+
+Selection: Queue 361 in isolated batch 037; thirteen original input hashes preserved and three actual ARO target/source owner hashes appended before scientific assessment.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:4511 | data/antibiotics/antibacterial/dicloxacillin.yaml | generated | dicloxacillin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | CHEBI:4511 | Exit 0. |
+| Documented strict validation | passed | True | CHEBI:4511 | Exit 0; no ERROR rows. |
+| Native molecular consistency | passed | False | CHEBI:4511 | Native identity, formula, charge and masses agree. |
+| Initial direct-graph comparison | failed | False | CHEBI:4511 | Exit 1 because standard InChI reconstructs the sidechain imidic-acid tautomer; raw graphs differ while standard identity agrees. |
+| Explicit stereo-preserving tautomer comparison | passed | False | CHEBI:4511 | All nine normalized encodings match by reciprocal chirality-aware mappings and retain three configured centers; stereo-removal options are disabled. |
+| Initial structured dataset discovery and exploratory queries | passed | False | CHEBI:4511 | All child exits 0. Dataset discovery succeeded, but three searches accidentally used the unlisted precise1 key; their empty results are noninformative and were corrected. |
+| Catalog-listed PBP gene queries | passed | False | CHEBI:4511 | All child exits 0; e_coli/modulome returns ftsI/b0084 and no iModulon hits. Catalog context is not binding evidence. |
+| Whole source, citation and history audit | passed | False | CHEBI:4511 | Sixteen unchanged hashes, eight aliases, eight adopted PMID records, the exact target relation and five histories reconcile. |
+| Authoritative full QC | failed | True | CHEBI:4511 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:4511 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:4511 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:4511 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:4511 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:4511 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:4511 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:4511 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:4511 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral dicloxacillin
+
+identity: supported. Targets: CHEBI:4511.
+
+Independent structure mappings, composition and configured stereo agree; broad drug/salt references remain separately scoped.
+
+### Structural-definition delimiter
+
+representation: concern. Targets: CHEBI:4511.
+
+One unmatched closing square bracket is inherited from ChEBI and should be corrected reproducibly.
+
+### Antibacterial class and roles
+
+evidence: supported. Targets: CHEBI:4511.
+
+Authority classifications and original growth evidence support the role, with material and organism limitations retained.
+
+### Qualified PBP database assertion
+
+evidence: supported. Targets: CHEBI:4511.
+
+The exact current CARD relation agrees and remains honestly marked PRIMARY_EVIDENCE_NEEDED; original competition work supports a bounded future enrichment.
+
+### Remaining external exact-identifier resolution
+
+identity: unknown. Targets: CHEBI:4511.
+
+LINCS and licensed Reaxys mappings remain unresolved; failed or limited access does not establish an incorrect identifier.
+
+### Adopted citations, source fields and history
+
+provenance: supported. Targets: CHEBI:4511.
+
+All eight adopted PMID abstracts have individual dispositions and all captured inputs/source projections remain unchanged.
+
+## Findings
+
+### F1: The structural definition contains an unmatched closing bracket
+
+minor / open / confirmed; issue key: dicloxacillin-definition-unmatched-sidechain-bracket.
+
+The definition contains oxazol-4-yl]formyl with no opening square bracket. Structure and correctly balanced systematic synonyms identify the intended acyl sidechain; this is a naming-format defect, not a stereochemical or molecular-identity conflict.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+During separately authorized curation, correct the adopted ChEBI definition through an upstream correction and refreshed extraction, or an explicitly implemented narrow maintained text transform. Add the missing opening bracket before the sidechain name or rewrite it clearly as acylation of 6-aminopenicillanic acid by the 3-(2,6-dichlorophenyl)-5-methyl-1,2-oxazole-4-carbonyl group. Do not use the classification-only aro_definition_overrides as a text override. Regenerate the record without changing its chemical graph or database target provenance.
+
+- Definition delimiters balance and its acyl connectivity agrees with the native graph and systematic synonym.
+- The narrow maintained correction survives extraction/reseeding without changing other ChEBI definitions.
+- Run native schema/strict and required corpus/history/reference gates after the separately authorized change.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/dicloxacillin.yaml; Entire YAML, including molecular_targets[0] and all five curation_history entries | supports | The record denotes neutral dicloxacillin with three configured centers. Its PBP edge is explicitly a CARD database assertion, with organism and assay unspecified and PRIMARY_EVIDENCE_NEEDED. There are no native MIC, clinical approval, producer or causal-graph objects. |
+| chemistry | CHEBI:4511; PubChem:18381; CHEMBL893; KEGG C06950 and D02348; 361-chebi.json/.mol; 361-pubchem.json; 361-chembl.json; both KEGG mol/text pairs; 361-authority-chemistry.json | supports | Nine encodings match neutral C19H17Cl2N3O5S and key YFAGHNZHGGCZAX-JKIFEVAISA-N after explicit tautomer comparison. Standard InChI reconstruction gives the sidechain imidic-acid form; normalization with sp3/bond stereo removal disabled restores matching graphs and three configured centers. Reciprocal chirality-aware atom mappings support (2S,5R,6R); masses agree. No sodium, hydrate or extra component is present. |
+| definition | Native and adopted/current ChEBI definition; definition; 361-raw-rows.json chebi_antimicrobials row; 361-chebi.json definition; 361-source-audit.json | refutes | The sidechain text has one closing square bracket after oxazol-4-yl and no opening square bracket. The intended acyl sidechain is established by the native graph, systematic synonyms, authority structures and patent chemistry; the unmatched delimiter is a bounded naming defect rather than a different molecular identity. Current ChEBI repeats it. |
+| terms | CHEBI:17334; CHEBI:23697; CHEBI:33281; CHEBI:36047; ARO:3000008; 361-term-*.json and 361-card-class.html | supports | Current terms resolve respectively to penicillin, dichlorobenzene, antimicrobial agent, antibacterial drug and penicillin beta-lactam. Their class/role scope is compatible with the exact structure and antibacterial evidence; ontology classification does not independently establish every assay or organism. |
+| aliases-xrefs | Current CARD, MeSH and DrugCentral identifiers; 361-card.html; 361-mesh.html; 361-drugcentral.html; 361-kegg-D02348.txt | supports | CARD confirms ARO:3000635, CAS3116-76-5, PubChem18381, ChEMBL893 and its two aliases. MeSH independently places dicloxacycline within the dicloxacillin concept; it is not rejected merely because its spelling resembles a different antibiotic class. DrugCentral866 resolves dicloxacillin with matching formula/CAS and mixed drug/salt terminology, appropriate to drug_xrefs. KEGG D02348 agrees with the neutral parent. DrugBank is retained only as unverified inherited drug context. |
+| patents | GB978299A; US3239507A; 361-patent-GB978299.html abstract; 361-patent-US3239507.html description, Examples I–III and claims 2–4 | supports | Both patent documents concern the 3-(2,6-dihalophenyl)-5-methylisoxazolyl penicillins. The US document explicitly distinguishes the dicloxacillin free acid from its sodium and potassium salts. Sodium-monohydrate preparation/activity text is not assigned to an unhydrated free-acid assay. OCR defects and incomplete formula rendering limit numeric and stereochemical reconstruction from the patent alone. |
+| target | ARO:3000749 targeted_by_antibiotic ARO:3000635; 361-card.html and exact 361-card-pbp.html; native molecular_targets[0]; conf/aro_target_roles.tsv | supports | Current CARD retains the precise PBP relationship. The native qualifier honestly states that this is a database assertion and lacks a specified primary assay. CARD's PBP numbering discussion is E. coli-specific and cannot be substituted for pneumococcal PBP numbering. The broad relation is not a claim that every PBP isoform binds with equal affinity. |
+| binding | PMID:35218689; DOI:10.1515/hsz-2021-0386; 361-primary-binding.html: antibiotic stocks, live-cell titration, image processing and MIC methods; Table 1 dicloxacillin row; Figure 3 and penicillin Results | supports | MilliporeSigma dicloxacillin was tested in S. pneumoniae IU1945, an unencapsulated D39 derivative. Live-cell drug exposure followed by Bocillin-FL competition and gel analysis supports PBP engagement, with PBP2x/PBP3 co-selectivity under the study criterion. This is not a purified-protein equilibrium Kd. The methods do not identify catalog number or exact salt/hydration state; the numerical profile cannot be called a separately verified free-acid material assay or transferred to E. coli numbering. |
+| activity-primary | PMID:28721014; DOI:10.2147/DDDT.S139632; 361-primary-mic.xml: bacterial isolates, susceptibility methods, Determination of MICs/Table 2 and simulation Results | supports | The original study tests 867 clinical isolates from 31 Chinese hospitals by agar dilution using Bright Future dicloxacillin. Activity is prominent in tested MSSA/CNS panels but varies by organism; exact catalog/salt form is unstated. Reported susceptible/resistant calls use oxacillin interpretive standards. Dose simulations are distinct from observed clinical efficacy. No new row or broad breakpoint interpretation is adopted here. |
+| leads | Eight adopted ChEBI/CARD PMID leads; 361-adopted-core.json and 361-lead-dispositions.json | context_only | All eight complete abstracts were read. TarO inhibition belongs to tarocins, not automatically dicloxacillin; host CYP/PXR induction, allergy, pregnancy, analytical quantitation and age/formulation-specific PK remain separately scoped. The clinical-isolate study also received original-methods/results inspection. The two historical CARD PK citations do not supply the new PBP assay. |
+| adapter | iModulonDB e_coli/modulome; 361-adapter-results.json and 361-adapter-corrected-results.json | context_only | Dataset discovery preceded open web research. Initial unlisted precise1 searches are noninformative. Corrected catalog-listed searches identify ftsI as b0084, with no iModulons; ponA/pbpA returned no hits. None of these catalog outcomes establishes presence, absence or binding specificity of a native PBP target. |
+| documents | Wikipedia Dicloxacillin; limited HMS LINCS archive; 361-wikipedia.html identity, medical-use and mechanism sections; 361-hms-hits.txt; 300-hms-small-molecules.sdf | context_only | Wikipedia resolves the intended dicloxacillin page and matching parent formula/key but is not primary mechanism proof. The previously fetched official HMS collection snapshot has no LSM-5234 or dicloxacillin match; that limited collection is not the full LINCS registry, so the exact LINCS mapping remains unresolved. |
+| owners | Maintained source and target-role projection; 361-inspect.json; 361-owner-append.json; 361-raw-rows.json; 361-source-audit.json; seeder definition priority and attach_aro_mechanism | supports | Sixteen input hashes and five history events remain unchanged. ChEBI supplies the malformed definition; ARO supplies the qualified target and two aliases. The seeder copies the preferred ChEBI definition. The existing aro_definition_overrides configuration concerns antimicrobial classification, not arbitrary ChEBI definition-text replacement. |
+| validation | Executed focused checks; 361-focused-results.json; 361-strict.tsv; 361-chemistry-authorities-initial.log; 361-chemistry-authorities.log; 361-ledger.log | supports | Native chemistry/schema/strict and final normalized authority/source checks exit 0. The initial direct-graph supplemental assertion exited 1 because of amide/imidic-acid reconstruction; its actual script/log are retained. |
+| search | Exact identity, owner and source searches; 361-local-hits.txt includes ignored files; 361-fetch manifests and exact CARD-linked target follow-up | context_only | DrugBank returned 403; the PBP full XML returned 500, followed by successful full HTML. An initial guessed CARD URL resolved another entry and is not used as target evidence; the actual linked ARO:3000749 page was fetched and checked. Licensed Reaxys content was not inspected. |
+
+## Limits And Additional Notes
+
+- The original PBP study specifies MilliporeSigma powder but no catalog, salt or hydration identity. Its competition and MIC observations are not represented as a proven free-acid-versus-sodium comparison or universal PBP selectivity.
+- The 2017 isolate study gives the commercial supplier but not exact chemical-form identification and uses oxacillin interpretive standards. No organism-wide clinical susceptibility claim, dosage recommendation or new quantitative native MIC is inferred.
+- All eight adopted PMID abstracts were inspected. Apart from the original isolate study, their full primary bodies were not all obtained; current ChEBI lists additional historical associations outside this adopted-lead audit.
+- Patent document relevance and free-acid/salt distinction were checked in public OCR text; all original scanned formulae, analytical spectra and quantitative examples were not independently reconstructed.
+- The limited official HMS snapshot lacks this LINCS ID, and licensed Reaxys and blocked DrugBank content remain unresolved. Current exact structure authorities agree, but this is not a blanket verification of inaccessible references.
+- The initial raw graph assertion failed because standard InChI reconstructs an imidic-acid tautomer. Final comparison explicitly preserves stereochemistry while normalizing tautomers; no native molecular defect follows.
+- Native focused checks passed; shared corpus gate outcomes remain separate. Native records and maintained inputs were not edited.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- The current spelling dicloxacycline is independently recognized in MeSH and retained; similarity to tetracycline spelling alone is insufficient evidence for an alias exclusion.
+- A future primary PBP enrichment should preserve the IU1945 organism, competition-assay endpoint and material limitations rather than assigning all numeric results to the broad E. coli-numbered ARO description.
+- All new review artifacts are scratch files. Standalone chemistry used the recorded batch 019 interpreter against batch 037; native checks used batch 037.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T144018Z-dicloxacillin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of dicloxacillin
+started_at: '2026-10-21T14:27:08Z'
+finished_at: '2026-10-21T14:40:18Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Whole native record and actual owners, independent neutral-parent
+    structural mappings, original patent scope, all adopted abstracts, original clinical-isolate
+    and PBP-competition methods/results, and exact current database relation verification.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Minor unmatched bracket in definition; exact neutral identity and
+  qualified PBP database assertion otherwise supported
+scientific_review: true
+summary: Independent authority structures support exact neutral (2S,5R,6R) dicloxacillin.
+  Its antibacterial classification and qualified CARD PBP relationship are supported;
+  original pneumococcal competition-binding work supplies a bounded future primary-evidence
+  route. All eight adopted publication leads were checked. The confirmed correction
+  is a stray closing square bracket in the structural definition, reproduced from
+  ChEBI. Unresolved LINCS/Reaxys access and assay salt details are retained as limitations.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/dicloxacillin.yaml
+    sha256: 44b41dfac066e2b238f4cd1e7583837db1b62ab5749ca9138fca8d6b38d399a7
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+scope:
+  description: 'Entire SEEDED, EXACT record: definition, eight synonyms, three parents,
+    two activity roles, chemical structure, seven exact cross-references, three drug-context
+    and three document references, both source concepts, sole molecular-target assertion
+    and five history events. All eight adopted ARO/ChEBI PMID leads checked.'
+  selection: Queue 361 in isolated batch 037; thirteen original input hashes preserved
+    and three actual ARO target/source owner hashes appended before scientific assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:4511
+targets:
+- target_id: CHEBI:4511
+  path: data/antibiotics/antibacterial/dicloxacillin.yaml
+  label: dicloxacillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI and CARD/ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted CARD identity, synonyms and publication leads
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted PBP relation
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Maintained target relation and evidence qualification
+checks:
+- check_id: schema
+  name: Documented schema validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/dicloxacillin.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/dicloxacillin.yaml --out /private/tmp/am-review-session/361-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    361
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native identity, formula, charge and masses agree.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-initial
+  name: Initial direct-graph comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/361-chemistry-authorities-initial.py
+    > /private/tmp/am-review-session/361-chemistry-authorities-initial.log 2>&1
+  status: failed
+  required: false
+  exit_code: 1
+  expected_exit_code: 0
+  summary: Exit 1 because standard InChI reconstructs the sidechain imidic-acid tautomer;
+    raw graphs differ while standard identity agrees.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - chemistry
+- check_id: authority-normalized
+  name: Explicit stereo-preserving tautomer comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/361-chemistry-authorities.py
+    > /private/tmp/am-review-session/361-chemistry-authorities.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All nine normalized encodings match by reciprocal chirality-aware mappings
+    and retain three configured centers; stereo-removal options are disabled.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - chemistry
+- check_id: adapter-initial
+  name: Initial structured dataset discovery and exploratory queries
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/361-adapter.py
+    > /private/tmp/am-review-session/361-adapter.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All child exits 0. Dataset discovery succeeded, but three searches accidentally
+    used the unlisted precise1 key; their empty results are noninformative and were
+    corrected.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - adapter
+- check_id: adapter-corrected
+  name: Catalog-listed PBP gene queries
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/361-adapter-corrected.py
+    > /private/tmp/am-review-session/361-adapter-corrected.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All child exits 0; e_coli/modulome returns ftsI/b0084 and no iModulon hits.
+    Catalog context is not binding evidence.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - adapter
+- check_id: ledger
+  name: Whole source, citation and history audit
+  command: .venv/bin/python /private/tmp/am-review-session/361-ledger.py > /private/tmp/am-review-session/361-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Sixteen unchanged hashes, eight aliases, eight adopted PMID records, the
+    exact target relation and five histories reconcile.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - owners
+  - leads
+  - definition
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:4511
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/dicloxacillin.yaml
+  locator: Entire YAML, including molecular_targets[0] and all five curation_history
+    entries
+  accessed_at: '2026-10-21T14:34:42Z'
+  support: supports
+  summary: The record denotes neutral dicloxacillin with three configured centers.
+    Its PBP edge is explicitly a CARD database assertion, with organism and assay
+    unspecified and PRIMARY_EVIDENCE_NEEDED. There are no native MIC, clinical approval,
+    producer or causal-graph objects.
+- evidence_id: chemistry
+  kind: authority
+  reference: CHEBI:4511; PubChem:18381; CHEMBL893; KEGG C06950 and D02348
+  locator: 361-chebi.json/.mol; 361-pubchem.json; 361-chembl.json; both KEGG mol/text
+    pairs; 361-authority-chemistry.json
+  accessed_at: '2026-10-21T14:34:42Z'
+  support: supports
+  summary: Nine encodings match neutral C19H17Cl2N3O5S and key YFAGHNZHGGCZAX-JKIFEVAISA-N
+    after explicit tautomer comparison. Standard InChI reconstruction gives the sidechain
+    imidic-acid form; normalization with sp3/bond stereo removal disabled restores
+    matching graphs and three configured centers. Reciprocal chirality-aware atom
+    mappings support (2S,5R,6R); masses agree. No sodium, hydrate or extra component
+    is present.
+  snapshot_sha256: 87e160926a9064be12e2a3c6e19f34c988f2f3e60f978668b1971052745c039a
+- evidence_id: definition
+  kind: record_content
+  reference: Native and adopted/current ChEBI definition
+  locator: definition; 361-raw-rows.json chebi_antimicrobials row; 361-chebi.json
+    definition; 361-source-audit.json
+  accessed_at: '2026-10-21T14:31:22.596344Z'
+  support: refutes
+  summary: The sidechain text has one closing square bracket after oxazol-4-yl and
+    no opening square bracket. The intended acyl sidechain is established by the native
+    graph, systematic synonyms, authority structures and patent chemistry; the unmatched
+    delimiter is a bounded naming defect rather than a different molecular identity.
+    Current ChEBI repeats it.
+  snapshot_sha256: a0db79aef991cb2151d2ee1b0ac69950a8fdbe3284c8193b76a794d8b07b5577
+- evidence_id: terms
+  kind: authority
+  reference: CHEBI:17334; CHEBI:23697; CHEBI:33281; CHEBI:36047; ARO:3000008
+  locator: 361-term-*.json and 361-card-class.html
+  accessed_at: '2026-10-21T14:32:12.220871Z'
+  support: supports
+  summary: Current terms resolve respectively to penicillin, dichlorobenzene, antimicrobial
+    agent, antibacterial drug and penicillin beta-lactam. Their class/role scope is
+    compatible with the exact structure and antibacterial evidence; ontology classification
+    does not independently establish every assay or organism.
+  snapshot_sha256: 1df603011b5b6e0f39154c1f4129db30373303abb9be33027871d879b8146315
+- evidence_id: aliases-xrefs
+  kind: database
+  reference: Current CARD, MeSH and DrugCentral identifiers
+  locator: 361-card.html; 361-mesh.html; 361-drugcentral.html; 361-kegg-D02348.txt
+  accessed_at: '2026-10-21T14:31:51.288674Z'
+  support: supports
+  summary: CARD confirms ARO:3000635, CAS3116-76-5, PubChem18381, ChEMBL893 and its
+    two aliases. MeSH independently places dicloxacycline within the dicloxacillin
+    concept; it is not rejected merely because its spelling resembles a different
+    antibiotic class. DrugCentral866 resolves dicloxacillin with matching formula/CAS
+    and mixed drug/salt terminology, appropriate to drug_xrefs. KEGG D02348 agrees
+    with the neutral parent. DrugBank is retained only as unverified inherited drug
+    context.
+  snapshot_sha256: c38bd4f3a7b0e25b1240109956579b161e3d4901e2a53453f22195042201e9c3
+- evidence_id: patents
+  kind: primary_source
+  reference: GB978299A; US3239507A
+  locator: 361-patent-GB978299.html abstract; 361-patent-US3239507.html description,
+    Examples I–III and claims 2–4
+  accessed_at: '2026-10-21T14:31:23.761048Z'
+  support: supports
+  summary: Both patent documents concern the 3-(2,6-dihalophenyl)-5-methylisoxazolyl
+    penicillins. The US document explicitly distinguishes the dicloxacillin free acid
+    from its sodium and potassium salts. Sodium-monohydrate preparation/activity text
+    is not assigned to an unhydrated free-acid assay. OCR defects and incomplete formula
+    rendering limit numeric and stereochemical reconstruction from the patent alone.
+  snapshot_sha256: aa4d736794b9822022c88b3ae1ccdfaa5550c888f08b72b1e7eba1cba01ac57c
+- evidence_id: target
+  kind: database
+  reference: ARO:3000749 targeted_by_antibiotic ARO:3000635
+  locator: 361-card.html and exact 361-card-pbp.html; native molecular_targets[0];
+    conf/aro_target_roles.tsv
+  accessed_at: '2026-10-21T14:32:12.220785Z'
+  support: supports
+  summary: Current CARD retains the precise PBP relationship. The native qualifier
+    honestly states that this is a database assertion and lacks a specified primary
+    assay. CARD's PBP numbering discussion is E. coli-specific and cannot be substituted
+    for pneumococcal PBP numbering. The broad relation is not a claim that every PBP
+    isoform binds with equal affinity.
+  snapshot_sha256: 282e782d4c196b01bf92f58fa94859bbe01d1892c9961f9606bbca2175ded182
+- evidence_id: binding
+  kind: primary_source
+  reference: PMID:35218689; DOI:10.1515/hsz-2021-0386
+  locator: '361-primary-binding.html: antibiotic stocks, live-cell titration, image
+    processing and MIC methods; Table 1 dicloxacillin row; Figure 3 and penicillin
+    Results'
+  accessed_at: '2026-10-21T14:32:12.220161Z'
+  support: supports
+  summary: MilliporeSigma dicloxacillin was tested in S. pneumoniae IU1945, an unencapsulated
+    D39 derivative. Live-cell drug exposure followed by Bocillin-FL competition and
+    gel analysis supports PBP engagement, with PBP2x/PBP3 co-selectivity under the
+    study criterion. This is not a purified-protein equilibrium Kd. The methods do
+    not identify catalog number or exact salt/hydration state; the numerical profile
+    cannot be called a separately verified free-acid material assay or transferred
+    to E. coli numbering.
+  snapshot_sha256: 8373d43e1e16e087b21dc40e4b7ef21854b14ec61e3d16c4e3d2ed0b78164e88
+- evidence_id: activity-primary
+  kind: primary_source
+  reference: PMID:28721014; DOI:10.2147/DDDT.S139632
+  locator: '361-primary-mic.xml: bacterial isolates, susceptibility methods, Determination
+    of MICs/Table 2 and simulation Results'
+  accessed_at: '2026-10-21T14:32:12.220701Z'
+  support: supports
+  summary: The original study tests 867 clinical isolates from 31 Chinese hospitals
+    by agar dilution using Bright Future dicloxacillin. Activity is prominent in tested
+    MSSA/CNS panels but varies by organism; exact catalog/salt form is unstated. Reported
+    susceptible/resistant calls use oxacillin interpretive standards. Dose simulations
+    are distinct from observed clinical efficacy. No new row or broad breakpoint interpretation
+    is adopted here.
+  snapshot_sha256: 7f9e32475a859bafd9bf71a7ea855d53765cb858a6dba842a45ea9524b782d8a
+- evidence_id: leads
+  kind: database
+  reference: Eight adopted ChEBI/CARD PMID leads
+  locator: 361-adopted-core.json and 361-lead-dispositions.json
+  accessed_at: '2026-10-21T14:34:42Z'
+  support: context_only
+  summary: All eight complete abstracts were read. TarO inhibition belongs to tarocins,
+    not automatically dicloxacillin; host CYP/PXR induction, allergy, pregnancy, analytical
+    quantitation and age/formulation-specific PK remain separately scoped. The clinical-isolate
+    study also received original-methods/results inspection. The two historical CARD
+    PK citations do not supply the new PBP assay.
+  snapshot_sha256: 9dce9ded532a35f84cfb7aaf3ed7b9bc3a4619afa0d78f2e73c37c6ddb12d11b
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/modulome
+  locator: 361-adapter-results.json and 361-adapter-corrected-results.json
+  accessed_at: '2026-10-21T14:34:42Z'
+  support: context_only
+  summary: Dataset discovery preceded open web research. Initial unlisted precise1
+    searches are noninformative. Corrected catalog-listed searches identify ftsI as
+    b0084, with no iModulons; ponA/pbpA returned no hits. None of these catalog outcomes
+    establishes presence, absence or binding specificity of a native PBP target.
+  snapshot_sha256: 0a50129549336b7c543271a079eb049fb04fab6c2479b03eeb498b186cf31187
+- evidence_id: documents
+  kind: database
+  reference: Wikipedia Dicloxacillin; limited HMS LINCS archive
+  locator: 361-wikipedia.html identity, medical-use and mechanism sections; 361-hms-hits.txt;
+    300-hms-small-molecules.sdf
+  accessed_at: '2026-10-21T14:31:23.657802Z'
+  support: context_only
+  summary: Wikipedia resolves the intended dicloxacillin page and matching parent
+    formula/key but is not primary mechanism proof. The previously fetched official
+    HMS collection snapshot has no LSM-5234 or dicloxacillin match; that limited collection
+    is not the full LINCS registry, so the exact LINCS mapping remains unresolved.
+  snapshot_sha256: 470b6e750549c2c13e2a94b7841786b1fef9310d14e021178edc57c5895de592
+- evidence_id: owners
+  kind: database
+  reference: Maintained source and target-role projection
+  locator: 361-inspect.json; 361-owner-append.json; 361-raw-rows.json; 361-source-audit.json;
+    seeder definition priority and attach_aro_mechanism
+  accessed_at: '2026-10-21T14:34:42Z'
+  support: supports
+  summary: Sixteen input hashes and five history events remain unchanged. ChEBI supplies
+    the malformed definition; ARO supplies the qualified target and two aliases. The
+    seeder copies the preferred ChEBI definition. The existing aro_definition_overrides
+    configuration concerns antimicrobial classification, not arbitrary ChEBI definition-text
+    replacement.
+  snapshot_sha256: 5f38a31ea2857a050be148e899033411f614009db901b72890e2acb526008819
+- evidence_id: validation
+  kind: validation
+  reference: Executed focused checks
+  locator: 361-focused-results.json; 361-strict.tsv; 361-chemistry-authorities-initial.log;
+    361-chemistry-authorities.log; 361-ledger.log
+  accessed_at: '2026-10-21T14:34:42Z'
+  support: supports
+  summary: Native chemistry/schema/strict and final normalized authority/source checks
+    exit 0. The initial direct-graph supplemental assertion exited 1 because of amide/imidic-acid
+    reconstruction; its actual script/log are retained.
+  snapshot_sha256: 1e6652cba3df683e4011f69413a99c01fc66e2ba18115826815e417727cf1092
+- evidence_id: search
+  kind: search
+  reference: Exact identity, owner and source searches
+  locator: 361-local-hits.txt includes ignored files; 361-fetch manifests and exact
+    CARD-linked target follow-up
+  accessed_at: '2026-10-21T14:34:42Z'
+  support: context_only
+  summary: DrugBank returned 403; the PBP full XML returned 500, followed by successful
+    full HTML. An initial guessed CARD URL resolved another entry and is not used
+    as target evidence; the actual linked ARO:3000749 page was fetched and checked.
+    Licensed Reaxys content was not inspected.
+  snapshot_sha256: 26cfd037e87a63a1697723a4654d1df038dbe5fa8130897956e68f93c53c08db
+  search_scope: 361-local-hits.txt includes ignored files; 361-fetch manifests and
+    exact CARD-linked target follow-up
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral dicloxacillin
+  outcome: supported
+  summary: Independent structure mappings, composition and configured stereo agree;
+    broad drug/salt references remain separately scoped.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - chemistry
+  - aliases-xrefs
+  - patents
+- assessment_id: definition
+  area: representation
+  topic: Structural-definition delimiter
+  outcome: concern
+  summary: One unmatched closing square bracket is inherited from ChEBI and should
+    be corrected reproducibly.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - definition
+  - owners
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial class and roles
+  outcome: supported
+  summary: Authority classifications and original growth evidence support the role,
+    with material and organism limitations retained.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - terms
+  - activity-primary
+  - binding
+- assessment_id: target
+  area: evidence
+  topic: Qualified PBP database assertion
+  outcome: supported
+  summary: The exact current CARD relation agrees and remains honestly marked PRIMARY_EVIDENCE_NEEDED;
+    original competition work supports a bounded future enrichment.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - target
+  - binding
+  - adapter
+- assessment_id: exact-xrefs
+  area: identity
+  topic: Remaining external exact-identifier resolution
+  outcome: unknown
+  summary: LINCS and licensed Reaxys mappings remain unresolved; failed or limited
+    access does not establish an incorrect identifier.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - documents
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted citations, source fields and history
+  outcome: supported
+  summary: All eight adopted PMID abstracts have individual dispositions and all captured
+    inputs/source projections remain unchanged.
+  target_ids:
+  - CHEBI:4511
+  evidence_ids:
+  - leads
+  - owners
+  - validation
+findings:
+- finding_id: F1
+  issue_key: dicloxacillin-definition-unmatched-sidechain-bracket
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The structural definition contains an unmatched closing bracket
+  description: The definition contains oxazol-4-yl]formyl with no opening square bracket.
+    Structure and correctly balanced systematic synonyms identify the intended acyl
+    sidechain; this is a naming-format defect, not a stereochemical or molecular-identity
+    conflict.
+  target_ids:
+  - CHEBI:4511
+  field_paths:
+  - definition
+  evidence_ids:
+  - definition
+  - chemistry
+  - patents
+  - owners
+  rule_id: 'review-checklist: identity and definition accuracy'
+  native_severity: Minor malformed structural wording
+  normalization_reason: Chemical identity and antimicrobial/PBP provenance remain
+    supported; the correction is bounded to the structural prose.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI structural definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and future maintained correction lane
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Preferred-definition projection
+actions:
+- action_id: A1
+  description: During separately authorized curation, correct the adopted ChEBI definition
+    through an upstream correction and refreshed extraction, or an explicitly implemented
+    narrow maintained text transform. Add the missing opening bracket before the sidechain
+    name or rewrite it clearly as acylation of 6-aminopenicillanic acid by the 3-(2,6-dichlorophenyl)-5-methyl-1,2-oxazole-4-carbonyl
+    group. Do not use the classification-only aro_definition_overrides as a text override.
+    Regenerate the record without changing its chemical graph or database target provenance.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:4511
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI structural definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI extraction and future maintained correction lane
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Preferred-definition projection
+  acceptance_checks:
+  - Definition delimiters balance and its acyl connectivity agrees with the native
+    graph and systematic synonym.
+  - The narrow maintained correction survives extraction/reseeding without changing
+    other ChEBI definitions.
+  - Run native schema/strict and required corpus/history/reference gates after the
+    separately authorized change.
+limitations:
+- The original PBP study specifies MilliporeSigma powder but no catalog, salt or hydration
+  identity. Its competition and MIC observations are not represented as a proven free-acid-versus-sodium
+  comparison or universal PBP selectivity.
+- The 2017 isolate study gives the commercial supplier but not exact chemical-form
+  identification and uses oxacillin interpretive standards. No organism-wide clinical
+  susceptibility claim, dosage recommendation or new quantitative native MIC is inferred.
+- All eight adopted PMID abstracts were inspected. Apart from the original isolate
+  study, their full primary bodies were not all obtained; current ChEBI lists additional
+  historical associations outside this adopted-lead audit.
+- Patent document relevance and free-acid/salt distinction were checked in public
+  OCR text; all original scanned formulae, analytical spectra and quantitative examples
+  were not independently reconstructed.
+- The limited official HMS snapshot lacks this LINCS ID, and licensed Reaxys and blocked
+  DrugBank content remain unresolved. Current exact structure authorities agree, but
+  this is not a blanket verification of inaccessible references.
+- The initial raw graph assertion failed because standard InChI reconstructs an imidic-acid
+  tautomer. Final comparison explicitly preserves stereochemistry while normalizing
+  tautomers; no native molecular defect follows.
+- Native focused checks passed; shared corpus gate outcomes remain separate. Native
+  records and maintained inputs were not edited.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- The current spelling dicloxacycline is independently recognized in MeSH and retained;
+  similarity to tetracycline spelling alone is insufficient evidence for an alias
+  exclusion.
+- A future primary PBP enrichment should preserve the IU1945 organism, competition-assay
+  endpoint and material limitations rather than assigning all numeric results to the
+  broad E. coli-numbered ARO description.
+- All new review artifacts are scratch files. Standalone chemistry used the recorded
+  batch 019 interpreter against batch 037; native checks used batch 037.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:4511
+- https://card.mcmaster.ca/ontology/36979
+- https://card.mcmaster.ca/ontology/37129
+- https://doi.org/10.1515/hsz-2021-0386
+- https://doi.org/10.2147/DDDT.S139632
+tags:
+- record-review
+- dicloxacillin
+- definition-typography
+- pbp-source-scope
+```
