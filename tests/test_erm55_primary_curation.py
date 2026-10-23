@@ -32,8 +32,10 @@ def context():
     return json.loads(Path(str(PREFIX) + "-context.json").read_bytes())
 
 
-def test_ten_added_claims_preserve_record_and_membership_bindings(curation, tmp_path):
-    path = ROOT / curation["record"]["path"]
+def test_ten_added_claims_preserve_record_and_membership_bindings(
+    curation, tmp_path, pre_stage5_remediation_root
+):
+    path = pre_stage5_remediation_root / curation["record"]["path"]
     record = load_record(path)
     assert record["identifier"] == "CHEBI:3732"
     assert record["chemical_structure"]["standard_inchi_key"] == curation["standard_inchi_key"]
