@@ -1,0 +1,1026 @@
+schema_version: 1.0.0
+review_id: 20261021T100525Z-bacitracin-a
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Bacitracin A: invalid SMILES, conflicting ChEMBL stereochemistry and omitted
+  sequence residue'
+started_at: '2026-10-21T09:39:58Z'
+finished_at: '2026-10-21T10:05:25Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent
+  kind: agent
+  independence: independent
+  independence_basis: Whole native/source-owner review, current independent chemical
+    authorities, molecular comparison, structured gene checks and inspected primary
+    full text.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Two major findings affect SMILES parseability and ChEMBL chemical equivalence;
+  one minor finding is an omitted residue in the definition. Valid native InChI and
+  exact-A primary evidence support intended identity and carrier-pyrophosphate activity.
+  Schema validators pass, chemistry fails the SMILES. Resistance assertions retain
+  database-only and preparation/species limits.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/bacitracin-a.yaml
+    sha256: dc0b5c4a28b2a88e16d5e89f1e6d3961e01689f802ecc76bb9b36c1833f0afcf
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+targets:
+- target_id: CHEBI:35862
+  path: data/antibiotics/antibacterial/bacitracin-a.yaml
+  label: bacitracin A
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and source merge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported chemical targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim review decisions
+scope:
+  description: Whole-record review of bacitracin A CHEBI35862.
+  selection: Queue139 in isolated batch014.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:35862
+  exclusions:
+  - target: Other bacitracin congeners, complex and separate organism/protein records
+    reason: Context only for exact molecular identity and claim boundaries.
+checks:
+- check_id: schema
+  name: Focused schema
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/bacitracin-a.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict
+  status: passed
+  required: true
+  summary: Actual command passed.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/bacitracin-a.yaml --out /private/tmp/am-review-session/139-validation.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: chemistry
+  name: Internal chemical consistency and mints
+  status: failed
+  required: true
+  summary: Native SMILES fails; InChI, formula, charge, masses and both mints pass.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - chemistry
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:35862
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/bacitracin-a.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T09:46:24Z'
+  support: supports
+  summary: Read exact SEEDED identity, full definition, all names, three parents,
+    two roles, structural class, chemical fields, six xrefs, two source concepts,
+    four resistance assertions, two chemical targets and four seed-history events.
+    Optional activity, producer, clinical, dataset and graph blocks are unpopulated.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    data/raw/aro_resistance_edges.tsv
+  locator: ChEBI row744; ARO row129; target rows143–144; resistance rows2970–2973;
+    source config and claim-review owners
+  accessed_at: '2026-10-21T09:46:24Z'
+  support: supports
+  summary: Native reproduces adopted ChEBI chemical fields and definition plus ARO
+    target/resistance database assertions. All relevant owners were captured before
+    judgment.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:35862
+  locator: Live entry, structure, definition, parents, roles and registry mappings
+  accessed_at: '2026-10-21T09:40:24Z'
+  support: supports
+  summary: Current ChEBI repeats native InChI/key, C66H103N17O16S, neutral charge,
+    masses, parents and roles. It also repeats the invalid imidazole SMILES and definition
+    omission. CAS22601-59-8 and Reaxys8969478 remain source mappings. Upstream agreement
+    does not resolve these defects.
+  snapshot_sha256: a688f3284ba48a488eb0912f9a83ad44518fbab6fdaa986b0cae48a0a77845bb
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/10909430
+  locator: Live PUG chemical properties
+  accessed_at: '2026-10-21T09:40:22Z'
+  support: supports
+  summary: PubChem matches native full Standard InChI/key CLKOFPXJLQSYAH-ABRJDSQDSA-N,
+    formula and charge; reported rounded masses are compatible. This independently
+    supports the retained molecular structure.
+  snapshot_sha256: d86485f14d105fc629ee9cbbc07d8270e042991a84d677bbd5d210ab6464f43d
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit and source-mint checks
+  locator: Native encodings and scratch-only repair
+  accessed_at: '2026-10-21T09:40:34Z'
+  support: refutes
+  summary: Native SMILES fails aromatic kekulization at the histidine imidazole fragment
+    Cc3cncn3. Standard InChI parses with correct formula, key, charge and masses.
+    Replacing that fragment in scratch with Cc3c[nH]cn3 yields exactly the native
+    key. Both actual ARO and ChEBI minted IDs reproduce.
+  snapshot_sha256: b8fea9668ed449a12e00ad7855ee88a4ce561d7973caae27f7681dbe389ac63b
+- evidence_id: chembl
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1790520.json
+  locator: Live molecule_structures Standard InChI
+  accessed_at: '2026-10-21T09:40:22Z'
+  support: refutes
+  summary: The accession is named BACITRACIN A but its fully specified key is CLKOFPXJLQSYAH-NXKKORMHSA-N.
+    Connectivity and formula agree while 12 of 15 tetrahedral centres are inverted
+    relative to native. A matching name does not establish chemical equivalence.
+  snapshot_sha256: a7d1ab2d3a7e05a2bbf237e7d3b2c833fa7fa58fc1c7f90d04a968f86902286b
+- evidence_id: stereo
+  kind: validation
+  reference: Independent full InChI and RDKit comparison
+  locator: Native versus ChEMBL1790520
+  accessed_at: '2026-10-21T09:41:55Z'
+  support: refutes
+  summary: Layers before tetrahedral stereochemistry are identical. InChI atom numbers40,41,42,43,44,45,46,47,48,52,53,54
+    reverse signs; side-chain centres35,36,37 are unchanged. This is a non-equivalent
+    stereoisomer, not merely alternative CIP naming, a tautomer, unspecified configuration
+    or the full enantiomer.
+  snapshot_sha256: d3512d5a7c5c3999bd60d9ab21e48f2068e57175a3c507c029a1014cf00a4f0a
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/C15482
+  locator: Live compound sequence and cross-references
+  accessed_at: '2026-10-21T09:40:22Z'
+  support: supports
+  summary: 'KEGG matches CAS and ChEBI and gives twelve residues: Ile-Cys-Leu-DGlu-Ile-Lys-DOrn-Ile-DPhe-His-DAsp-Asn
+    with Lys6-to-Asn12 cyclization. The native definition omits Ile5. KEGG bacA/bacB/bacC
+    are biosynthetic synthetases and must not be confused with BacA resistance phosphatase.'
+  snapshot_sha256: 7d21cc7912f2c70d4fa0d981ffed3db90f28ac91e1827cfccb484d673cc25571
+- evidence_id: aro
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Terms3000629,3009657,3000719,3003251,3002986–3002988,3003250
+  accessed_at: '2026-10-21T09:40:22Z'
+  support: supports
+  summary: All native ARO identifiers resolve and retained database edges persist.
+    Both target terms denote lipid-carrier pyrophosphates. Native chemical target
+    typing and explicit database-only scope avoid upstream enzyme-label confusion.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: adopted-review
+  kind: database
+  reference: https://doi.org/10.1016/0163-7258(82)90054-7
+  locator: PMID6752975; indexed metadata only
+  accessed_at: '2026-10-21T09:40:56Z'
+  support: context_only
+  summary: The ARO-adopted 1982 Bacitracin citation resolves as a review. No abstract/full
+    text was inspected; it is not used as primary evidence for specific resistance
+    or binding assays.
+  snapshot_sha256: 458d043f63517b9606c4e0e7b43e549de2496df3c0c0ce918b70cccbdb8c50b6
+- evidence_id: primary-structure
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.1308268110
+  locator: PMID23940351/PMC3761639; full Methods, Results and Discussion; 4K7T
+  accessed_at: '2026-10-21T09:41:37Z'
+  support: supports
+  summary: Study used Sigma VETRANAL bacitracin A purified by HPLC from congeners.
+    The 1.1-angstrom ternary crystal contains bacitracin, zinc and geranyl pyrophosphate
+    (C10), not a C55 crystalline ligand. Separate liposome SPR experiments tested
+    undecaprenyl pyrophosphate and metal dependence; complex kinetics were analyzed
+    semiquantitatively without a fitted affinity. This supports lipid-pyrophosphate
+    recognition and sequestration rather than an enzyme-inhibition claim. M.luteus
+    ATCC49732 MIC was0.5 mg/L in BHI; potassium leakage occurred only far above the
+    MIC, not at ordinary antibacterial concentrations.
+  snapshot_sha256: 43279f525170ffc0cd06bc549e56f139be135503f6b8d8026a6ad4e035a929a5
+- evidence_id: primary-figure
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3761639/
+  locator: Figure1 image visually inspected
+  accessed_at: '2026-10-21T09:42:22Z'
+  support: supports
+  summary: The complete twelve-residue sequence and chemical drawing include Ile5
+    between Glu4 and Lys6. Source A/A2 nomenclature is kept separate from the explicit
+    molecular drawing; no naming-only finding is made.
+  snapshot_sha256: d0ee7e8db32f564beb128d3cb3fc91354e12afa85e4627fb5da115694f144bc6
+- evidence_id: pdbe
+  kind: database
+  reference: https://www.ebi.ac.uk/pdbe/api/pdb/entry/molecules/4k7t
+  locator: Entity sequence
+  accessed_at: '2026-10-21T09:42:23Z'
+  support: context_only
+  summary: Structure deposition lists twelve residues including the Ile between D-Glu
+    and Lys. Its polymer weight is not used as a neutral-molecule formula/mass validation.
+  snapshot_sha256: d5754d39615314040cc67af2938e2c342331e0875983bad99a2f4ce015d3060b
+- evidence_id: synthetic-primary
+  kind: primary_source
+  reference: https://doi.org/10.1002/cbic.202200547
+  locator: PMC10099996; full main text, synthesis/epimerization Results, Table1 and
+    MIC Methods
+  accessed_at: '2026-10-21T09:42:34Z'
+  support: supports
+  summary: Synthetic bacitracin A matching commercial purified A by coelution and
+    NMR retained activity; inversion at Cys2 or Ile1 reduced potency. Table1 gives
+    commercial and matching synthetic A MICs2,2,32,0.25,16 micrograms/mL respectively
+    against S.aureus ATCC29213, USA300, B.subtilis168, S.simulans22 and E.faeciumE980.
+    Table1/Results specify LB plus0.3 mM ZnSO4, whereas Methods prints0.3 M; preserve
+    this unresolved concentration inconsistency before quantitative assay curation.
+    These are preparation- and strain-specific results, not clinical susceptibility
+    criteria.
+  snapshot_sha256: 39a5fddfc528eb4c6e68bb7ad13806e6988c838acd41ee451455d38ce4001ab4
+- evidence_id: adapter
+  kind: database
+  reference: kg-microbe-sources imodulondb
+  locator: datasets; e_coli/precise1k bacA; b_subtilis/modulome bcrC
+  accessed_at: '2026-10-21T09:40:52Z'
+  support: context_only
+  summary: Structured queries preceded open-ended protein follow-up. Returned e_coli/precise1k/b3057
+    and b_subtilis/modulome/BSU_36530, each a UPP phosphatase gene and zero iModulon
+    hits. No covered B.licheniformis or E.faecalis dataset was available. Gene context
+    is not expression, transport or resistance proof.
+  snapshot_sha256: 4d2187c500f1a8f1e79e7289bc7d5c6310cf9eccc5fbf2657b24f24dfe333de1
+- evidence_id: uppp
+  kind: primary_source
+  reference: https://doi.org/10.1093/jac/dkt048
+  locator: PMID23460607; inspected indexed abstract
+  accessed_at: '2026-10-21T09:40:56Z'
+  support: partial
+  summary: E.faecalis JH2-2/V583 uppP mutants had bacitracin MIC3–6 mg/L versus32–48
+    wild type; overexpression increased MIC. This supports that species-specific BacA-type
+    phosphatase resistance mechanism. Abstract does not establish a purified A preparation
+    or E.coli-specific result.
+  snapshot_sha256: 2cc47afa1775164aee385ac70158a7298177b57abb12d3fb5e000d5713421ec1
+- evidence_id: bcrab
+  kind: primary_source
+  reference: https://doi.org/10.1111/j.1365-2958.1995.tb02322.x
+  locator: PMID7476193; inspected indexed abstract
+  accessed_at: '2026-10-21T09:40:56Z'
+  support: partial
+  summary: B.licheniformis bcrABC locus transferred resistance to heterologous hosts.
+    BcrA was an ATP-binding component and BcrB/BcrC hydrophobic components; removal
+    of antibiotic from its target was proposed. Abstract does not supply direct drug-flux
+    proof or purified-A composition. This B.licheniformis BcrC is distinct from B.subtilis
+    phosphatase BcrC.
+  snapshot_sha256: 700673e74e4795eade4e37a143bfb13380cd4553642ecb67780bf4b7d3d28c5e
+- evidence_id: bcrc
+  kind: primary_source
+  reference: https://doi.org/10.1074/jbc.M413750200
+  locator: PMID15946938; inspected indexed abstract
+  accessed_at: '2026-10-21T09:40:56Z'
+  support: partial
+  summary: B.subtilis BcrC/YwoA is a PAP2-family UPP phosphatase, experimentally linked
+    to resistance, membrane phosphatase enhancement and purified-enzyme activity.
+    The work concerns lipid-carrier dephosphorylation, not mutation of a bacitracin
+    protein target. Exact preparation transfer remains unresolved at abstract level.
+  snapshot_sha256: 1dd831fb5aac9018301d8e181fc090708939c02b7b16bbfbc988164a12e967ff
+- evidence_id: older-binding
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.68.12.3223
+  locator: PMID4332017; indexed abstract
+  accessed_at: '2026-10-21T09:40:56Z'
+  support: context_only
+  summary: Reports metal-dependent complex formation with C55 isoprenyl pyrophosphate.
+    Exact bacitracin congener composition is not resolved by the abstract; this is
+    contextual corroboration, not the main exact-A evidence.
+  snapshot_sha256: 42120c8c174f34e1eea192e47eec218da758e29f2cfde86e8a35a27ff48f03c0
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech and free public literature
+  locator: Ignored-inclusive identifiers, label and slug; adopted citation leads and
+    structural follow-up
+  accessed_at: '2026-10-21T09:39:59Z'
+  support: context_only
+  summary: Repository search included ignored files outside .git/.venv. Primary structural
+    and synthetic studies were inspected as exact-A evidence; generic bacitracin resistance
+    literature retains preparation and species boundaries.
+  search_scope: prepare.py139 ignored-inclusive target search; adopted ARO PMIDs;
+    current ChEBI/PubChem/ChEMBL/KEGG; free primary PMC full text and EuropePMC core
+    abstracts.
+  snapshot_sha256: fea3919c0da57912386fa08becbd813057bda017bd049f688252317f7a7e9214
+- evidence_id: gates
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused batch014 commands
+  accessed_at: '2026-10-21T09:46:24Z'
+  support: supports
+  summary: Both validators exit0; strict checked one file with zero errors. Independent
+    chemistry fails native SMILES, showing the limitation of schema-only checks.
+  snapshot_sha256: 91de54b58706a718b254aae3cf22751d1f53bce4ff860e29dd0d39b579ce7f94
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact bacitracin A structure
+  outcome: supported
+  summary: Full native InChI, PubChem, chemical sequence and primary structural work
+    agree at the molecular scope. Native SEEDED is retained.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - native
+  - pubchem
+  - kegg
+  - primary-structure
+  - primary-figure
+- assessment_id: encoding
+  area: identity
+  topic: SMILES versus valid InChI
+  outcome: concern
+  summary: SMILES omits required imidazole pyrrolic hydrogen; scratch repair returns
+    the retained native identity.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - chemistry
+  - chebi
+- assessment_id: xref
+  area: grounding
+  topic: Chemical xrefs
+  outcome: concern
+  summary: PubChem, KEGG, CAS and ARO support the intended structure; ChEMBL resolves
+    to a non-equivalent specified stereoisomer. Reaxys is verified only as the source
+    mapping.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - chebi
+  - pubchem
+  - kegg
+  - aro
+  - chembl
+  - stereo
+- assessment_id: definition
+  area: evidence
+  topic: Peptide sequence
+  outcome: concern
+  summary: Definition omits Ile5, while native systematic name, encoded structure,
+    KEGG and primary figure include it. Major-component wording is supported by primary
+    description.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - native
+  - kegg
+  - primary-figure
+  - primary-structure
+- assessment_id: classification
+  area: grounding
+  topic: Parents, roles and class
+  outcome: supported
+  summary: Cyclic peptide/polypeptide and nonribosomal peptide classifications are
+    broader and coherent; exact-A activity supports retained antimicrobial roles.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - chebi
+  - aro
+  - primary-structure
+  - synthetic-primary
+- assessment_id: targets
+  area: evidence
+  topic: Chemical carrier targets
+  outcome: supported
+  summary: Both native target entries explicitly represent database-only chemical
+    carrier assertions. Direct purified-A evidence supports pyrophosphate recognition,
+    with C10 crystal and C55 liposome assays distinguished. They can be upgraded only
+    with separately curated assay scope.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - native
+  - aro
+  - primary-structure
+- assessment_id: resistance
+  area: evidence
+  topic: Four inherited resistance assertions
+  outcome: unknown
+  summary: ARO assertions are faithfully and explicitly labeled. Inspected primary
+    abstracts support relevant resistance pathways but do not resolve exact-A material
+    throughout or directly prove BcrAB drug efflux. BcrC organism and BacA biosynthetic/resistance
+    name collisions must remain explicit.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - native
+  - aro
+  - adapter
+  - uppp
+  - bcrab
+  - bcrc
+  - kegg
+- assessment_id: activity
+  area: evidence
+  topic: Exact-A antibacterial activity
+  outcome: supported
+  summary: Purified/synthetic A primary studies provide strain-specific MICs. Optional
+    activity_spectrum is empty, not invalid. Zinc concentration discrepancy in2023
+    must be resolved or transparently qualified when adding measurements.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - primary-structure
+  - synthetic-primary
+- assessment_id: provenance
+  area: provenance
+  topic: Merged sources and history
+  outcome: supported
+  summary: Two actual source mints, four seed events and imported assertion provenance
+    are coherent. Upstream defects still require maintained correction.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - native
+  - owners
+  - chemistry
+  - aro
+- assessment_id: completeness
+  area: completeness
+  topic: Evidence upgrades
+  outcome: unknown
+  summary: Primary exact-A target/activity evidence is available for future curation.
+    REVIEWED promotion requires correction of findings and complete claim-level evidence;
+    optional blank fields alone are not findings.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - primary-structure
+  - synthetic-primary
+  - uppp
+  - bcrab
+  - bcrc
+- assessment_id: other
+  area: scope
+  topic: Producer, clinical, dataset and graph claims
+  outcome: not_applicable
+  summary: No populated native claims in these blocks; no therapeutic, transcriptomic
+    or biosynthetic inference is imported.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - native
+  - adapter
+- assessment_id: schema
+  area: schema
+  topic: Focused validation
+  outcome: supported
+  summary: Both actual schema validators pass; internal chemistry failure is separately
+    recorded.
+  target_ids:
+  - CHEBI:35862
+  evidence_ids:
+  - gates
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: bacitracin-a-invalid-imidazole-smiles
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Repair the invalid histidine imidazole SMILES
+  description: The source-derived SMILES omits pyrrolic [nH], preventing aromatic
+    kekulization. A scratch-only one-atom correction reproduces the full retained
+    InChIKey. Fix through maintained source extraction or an approved structure override,
+    not an isolated generated YAML edit.
+  target_ids:
+  - CHEBI:35862
+  field_paths:
+  - chemical_structure.smiles
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - pubchem
+  rule_id: native-review-checklist:Identity and Equivalence; Chemical Structure; Evidence
+    Fidelity
+  native_severity: major chemical representation or descriptive inconsistency
+  normalization_reason: The intended exact record identity remains recoverable from
+    valid InChI and independent authorities; severity reflects the specific affected
+    field.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and source merge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported chemical targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim review decisions
+- finding_id: F2
+  issue_key: bacitracin-a-chembl-stereoisomer-xref
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Adjudicate the stereochemically non-equivalent ChEMBL xref
+  description: CHEMBL1790520 is named bacitracin A but reverses12 of15 specified tetrahedral
+    centres relative to native/PubChem. It cannot function as an exact chemical equivalence
+    link until corrected or qualified upstream.
+  target_ids:
+  - CHEBI:35862
+  field_paths:
+  - xrefs[4]
+  evidence_ids:
+  - native
+  - chembl
+  - stereo
+  - pubchem
+  - primary-figure
+  - synthetic-primary
+  rule_id: native-review-checklist:Identity and Equivalence; Chemical Structure; Evidence
+    Fidelity
+  native_severity: major chemical representation or descriptive inconsistency
+  normalization_reason: The intended exact record identity remains recoverable from
+    valid InChI and independent authorities; severity reflects the specific affected
+    field.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and source merge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported chemical targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim review decisions
+- finding_id: F3
+  issue_key: bacitracin-a-definition-missing-ile5
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Restore the omitted Ile5 in the peptide sequence definition
+  description: The prose sequence jumps from D-glutamyl to L-lysyl. Native structure
+    and independent primary/KEGG sequences contain L-isoleucyl between them. The valid
+    molecular structure is unaffected, but the definition describes one residue too
+    few.
+  target_ids:
+  - CHEBI:35862
+  field_paths:
+  - definition
+  evidence_ids:
+  - native
+  - kegg
+  - primary-figure
+  - pdbe
+  rule_id: native-review-checklist:Identity and Equivalence; Chemical Structure; Evidence
+    Fidelity
+  native_severity: minor chemical representation or descriptive inconsistency
+  normalization_reason: The intended exact record identity remains recoverable from
+    valid InChI and independent authorities; severity reflects the specific affected
+    field.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and source merge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported chemical targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim review decisions
+actions:
+- action_id: A1
+  description: Correct the maintained SMILES representation and regenerate the record,
+    preserving full stereochemistry and chemical identity.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:35862
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and source merge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported chemical targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim review decisions
+  acceptance_checks:
+  - Both native encodings parse and generate CLKOFPXJLQSYAH-ABRJDSQDSA-N, C66H103N17O16S
+    and neutral charge.
+  - Confirm formula/masses and all specified centres are preserved; rerun focused
+    and full chemical gates.
+- action_id: A2
+  description: Resolve the ChEMBL stereochemistry conflict through maintained xref
+    adjudication; remove or qualify the exact-equivalence assertion until a matching
+    accession is established.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:35862
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and source merge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported chemical targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim review decisions
+  acceptance_checks:
+  - Compare full Standard InChI stereochemistry of any retained replacement; matching
+    label/connectivity alone is insufficient.
+  - Do not overwrite the independently supported native structure to fit the conflicting
+    xref.
+  - Regenerate and run xref, identity, reference and history gates.
+- action_id: A3
+  description: Correct the maintained definition to include L-isoleucyl after D-glutamyl,
+    then regenerate.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:35862
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition and source merge
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Imported chemical targets
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Imported resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target role mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Imported claim review decisions
+  acceptance_checks:
+  - The prose and encoded twelve-residue peptide agree, including Ile5 and Lys6-to-Asn12
+    cyclization.
+  - Retain source attribution and focused validation; no scientific status promotion
+    from this review alone.
+limitations:
+- Reaxys8969478 was verified as the live ChEBI mapping, not independently opened in
+  the proprietary registry.
+- Resistance source follow-up was bounded to indexed primary abstracts. Exact bacitracin
+  A preparation and direct BcrAB drug transport were not established there; database-only
+  native evidence was not silently upgraded.
+- The2023 source reports0.3 mM ZnSO4 in Results/Table1 but0.3 M in Methods. Resolve
+  or preserve that inconsistency before curating its assay conditions.
+- The2013 crystal uses geranyl pyrophosphate; C55 recognition is supported separately
+  by liposome assays. No crystal, affinity or membrane-leakage claim is expanded beyond
+  its measured condition.
+- Some primary publisher requests returned403 or verification pages; accessible alternative
+  PMC full text supplied the key exact-A structural and synthetic evidence. No failed
+  retrieval was treated as absence of evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All25 captured inputs rechecked unchanged. No native, source-table or scientific
+  status/history edits.
+- An initial helper compared a ChEBI mint with the first ARO source concept; corrected
+  scratch checks confirm both actual mints. This helper issue is not a native finding.
+- Optional activity_spectrum and primary target annotations can be added later with
+  strain, preparation, metal and assay qualifiers; empty optional fields are not findings.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:35862
+- https://pubchem.ncbi.nlm.nih.gov/compound/10909430
+- https://doi.org/10.1073/pnas.1308268110
+- https://doi.org/10.1002/cbic.202200547
+tags:
+- bacitracin-a
+- invalid-smiles
+- stereochemistry
+- pyrophosphate
