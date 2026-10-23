@@ -1,0 +1,941 @@
+# Review of ciprofloxacin hydrochloride hydrate
+
+- Review: 20261021T131955Z-ciprofloxacin-hydrochloride-hydrate-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T13:04:58Z
+- Finished UTC: 2026-10-21T13:19:55Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The exact monohydrate identity agrees across native encodings, ChEBI, PubChem, KEGG and GSRS. All 66 FDA assertions reproduce the frozen source and their current product, approval-date and marketing-status fields agree; two current sponsor names differ from the dated snapshot. The CIPRO tablet label explicitly identifies monohydrate, while its oral suspension uses free base. Primary enzyme studies support the active ciprofloxacin mechanism without establishing starting hydration. No confirmed native scientific defect was demonstrated. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire SEEDED, EXACT record: definition, seven synonyms, hydrate parent, antibacterial role, qualified database-derived mechanism, all structure fields, CAS and KEGG chemical links, two drug-context links, all 66 clinical assertions across 31 applications, source concept and six history events.
+
+Selection: Queue 304; preserved initial capture with actual maintained owners identified before detailed judgment. Fifteen input hashes include the FDA table and extractor.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:59936 | data/antibiotics/antibacterial/ciprofloxacin-hydrochloride-hydrate.yaml | generated | ciprofloxacin hydrochloride hydrate |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | CHEBI:59936 | Exit 0. |
+| Documented strict validation | passed | True | CHEBI:59936 | Exit 0; no ERROR rows. |
+| Native molecular consistency | passed | False | CHEBI:59936 | Exit 0; actual alternate interpreter used because the worktree environment lacks RDKit. Native SMILES, InChI, key, formula, charge and masses agree. |
+| Initial supplemental comparison script | failed | False | CHEBI:59936 | Exit 1: initial scratch script had an unmatched closing parenthesis and failed with SyntaxError before comparisons. The script was corrected and rerun. |
+| Corrected supplemental authority comparison | passed | False | CHEBI:59936 | Exit 0; exact neutral-component graphs agree; alternative protonation encodings are explicitly distinguished from raw graph identity. |
+| Input, source and history reconciliation | passed | False | CHEBI:59936 | Exit 0; fifteen unchanged hashes, six history events, zero adopted PMID leads and all 66 frozen clinical rows reconciled. Current product/approval/marketing comparisons pass; two sponsor changes remain explicitly recorded. |
+| Structured adapter initial catalog attempt | failed | False | CHEBI:59936 | Exit 2 from sandbox DNS failure. The approved network retry succeeded; this failure is retained. |
+| Structured adapter catalog retry | passed | False | CHEBI:59936 | Exit 0; organism and dataset catalog inspected before protein-focused web research. The output is Markdown despite its historical .json filename. |
+| Structured adapter gyrA search | passed | False | CHEBI:59936 | Exit 0; covered E. coli gene hits, zero iModulon hits. No component summary was applicable. |
+| Structured adapter parC search | passed | False | CHEBI:59936 | Exit 0; covered E. coli gene hits, zero iModulon hits. No component summary was applicable. |
+| Authoritative full QC | failed | True | CHEBI:59936 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:59936 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:59936 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:59936 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:59936 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:59936 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:59936 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:59936 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:59936 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact salt, hydration and protonation boundary
+
+identity: supported. Targets: CHEBI:59936.
+
+The requested exact component stoichiometry agrees across native and inspected official structures. Standard-InChI protonation normalization is distinguished from identical raw graphs and from measured solid hydration.
+
+### Chemical parent, synonyms and antibacterial role
+
+grounding: supported. Targets: CHEBI:59936.
+
+The chemical parent and antibacterial-drug role agree with exact composition and active-ciprofloxacin evidence. Generic hydrochloride aliases need the record definition to specify hydration; no brand product is treated as an exact synonym.
+
+### Database-derived nucleic-acid synthesis inhibition
+
+evidence: supported. Targets: CHEBI:59936.
+
+Current authority retains both inhibitor roles, and original E. coli enzyme studies substantiate the active-moiety mechanism. The native notes correctly identify source-assigned roles rather than a curated primary target assertion. Exact starting hydration is unresolved in those enzyme studies.
+
+### Registry and drug-context link boundaries
+
+identity: unknown. Targets: CHEBI:59936.
+
+DrugBank direct access failed with 403; its native drug-context placement is retained. Independent proprietary registry bodies were not inspected. KEGG chemical/drug links independently resolve to the exact monohydrate.
+
+### All dated FDA assertions and exact ingredient mapping
+
+evidence: supported. Targets: CHEBI:59936.
+
+All 66 rows reconcile with the frozen maintained source, and all current application/product, approval and marketing comparisons pass. GSRS and the original tablet label support monohydrate identity. Current sponsor differences are time-scoped rather than silently overwritten.
+
+### Current sponsor and GSRS-version differences
+
+provenance: unknown. Targets: CHEBI:59936.
+
+Two ANDA 208921 sponsor names differ from the historical source; current GSRS is version 61 rather than 57. Historical provenance remains intact. A later source refresh could update these fields, but no required scientific correction is demonstrated.
+
+### Maintained inputs, citation dispositions and history
+
+provenance: supported. Targets: CHEBI:59936.
+
+The adopted ChEBI row has no PMID citations. Actual input owners and source-generation mappings were checked; original hashes and history are preserved. Newly inspected literature is explicitly distinguished from adopted citations.
+
+### Optional primary mechanism enrichment
+
+completeness: supported. Targets: CHEBI:59936.
+
+Primary enzyme evidence would permit bounded enrichment after separate curation. Missing optional targets, MICs or causal graphs are not by themselves demonstrated false claims in this SEEDED record.
+
+### Focused schema and strict validation
+
+schema: supported. Targets: CHEBI:59936.
+
+Documented focused checks pass; full-corpus gates and native REVIEWED status remain separate.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/ciprofloxacin-hydrochloride-hydrate.yaml; Entire native record, including every clinical assertion where present and complete curation history | supports | Entire SEEDED, EXACT record: definition, seven synonyms, hydrate parent, antibacterial role, qualified database-derived mechanism, all structure fields, CAS and KEGG chemical links, two drug-context links, all 66 clinical assertions across 31 applications, source concept and six history events. No native molecular-target object, resistance edge, quantitative MIC, producer or causal graph is asserted. |
+| chemistry | CHEBI:59936; official ChEBI molfile; exact-key PubChem lookup; KEGG:C13993/D02216; UNII:4BA73M5E37; 304-authority-chemistry.json;303-304-chemistry.py;303-304-chemistry.log | supports | Native monohydrate SMILES, InChI, official ChEBI molfile, PubChem CID 62998, both KEGG molfiles and GSRS structure generate ARPUHYJMCVWYCZ-UHFFFAOYSA-N, formula C17H21ClFN3O4, charge zero and identical canonical component graphs. Exactly one water component distinguishes it from anhydrous hydrochloride. Average and monoisotopic masses agree with 385.823 and 385.12046. PubChem CID 60206643 uses separated proton/chloride notation and shares the standard key, but its raw component graph is not identical. |
+| authority | https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:59936; 304-chebi.json and official molfile; adopted source row and chemical parent/role names | supports | Current ChEBI agrees with the monohydrate definition, hydrate parent, antibacterial-drug role, seven aliases and native source accessions. KEGG C13993 and D02216 contain matching monohydrate structures and CAS 86393-32-0. Generic ciprofloxacin-hydrochloride aliases require the surrounding exact-form definition; the alias alone does not determine hydration. Current ChEBI retains both native inhibitor-role identifiers. DrugBank DB00537 is in drug_xrefs, a drug-context field rather than an exact salt cross-reference; its direct page returned HTTP 403. |
+| patent | https://patents.google.com/patent/US20080300258A1/en; Original technical description, PXRD/IR discussion and Examples 1–3 in 303-patent.html | supports | The original disclosure experimentally prepares anhydrous ciprofloxacin hydrochloride from monohydrate and distinguishes the solids by water content, IR and powder diffraction. The inspected examples are solid-form preparation and stability evidence. They are not comparative antibacterial or clinical-approval experiments, and no patent efficacy or legal-status claim is adopted. Native identity does not assert a specific patented polymorph. |
+| adapter | iModulonDB e_coli/modulome; 303-adapter-datasets.json,303-adapter-gyrA.json,303-adapter-parC.json; actual output is Markdown | context_only | The catalog was inspected before protein-follow-up web research. gyrA search returns e_coli/modulome/b2231 (gyrA), b3699 (gyrB), b0101 (yacG) and b2009 (sbmC); parC returns b3019. Both searches return zero iModulons, so no summarize call applies. These gene results provide organism-specific context for later E. coli primary papers. They do not prove binding, antimicrobial phenotype, exact hydration or a taxon-agnostic target claim. Native family-level mechanism remains broader than this selected experimental organism. |
+| topoiv | PMID:25115926; DOI:10.1021/bi500682e; 303-topoiv.xml: original Materials/Methods, cleavage and religation experiments, mutant comparisons and discussion | supports | Purified E. coli topoisomerase IV experiments directly show ciprofloxacin-induced DNA cleavage and impaired religation. Mutant and metal-dependent assays distinguish drug binding, productive positioning and relaxation inhibition; enzyme-assay endpoints are not whole-cell MICs. Ciprofloxacin was purchased from LKT and dissolved as a 40 mM stock in 0.1 N NaOH. Starting salt/hydration was not specified. This supports the active ciprofloxacin mechanism in solution, not a separate exact-hydrate potency or universal species claim. Water in the water–metal ion bridge is assay coordination water, not evidence of crystal-water stoichiometry. |
+| gyrase | PMID:36769202; DOI:10.3390/ijms24032879; 303-gyrase.xml: original enzyme/DNA-cleavage Methods, metal/competition experiments and main Results | supports | Purified E. coli gyrase experiments support ciprofloxacin-stabilized DNA cleavage and a role for water–metal coordination in positioning the drug. Ciprofloxacin from Sigma-Aldrich was dissolved in NaOH; the starting salt/hydration was not established. Species-specific comparisons and model interpretations do not justify a universal bacterial mechanism detail. The Methods and Results use different first-substitution labels for the double mutant; no exact double-mutant resistance claim or quantitative value is adopted. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/chebi_role_names.tsv; conf/sources.yaml; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; data/raw/fda_clinical_status.tsv; scripts/extract_fda_clinical_status.py; 304-source-audit.json; preserved inspect input ledger; exact source row; source-generation mappings | supports | ChEBI owns the native identity, structure, synonyms, parent/activity terms and database-derived inhibitor roles. The configured mapping uses CHEBI:50750 and CHEBI:53559 for nucleic-acid synthesis inhibition; the microbial topoisomerase IV role makes the aggregate scope MICROBIAL_TARGET. This does not assert exclusive absence of host effects. The FDA extractor and adopted clinical table own the 66 dated assertions; all 15 input hashes and six history events reconcile. |
+| leads | Frozen ChEBI source row; 304-source-row.json | supports | The adopted row has zero PMID citations, and current ChEBI has no PubMed citation list requiring further adopted-lead follow-up. Newly inspected primary solid-form and enzyme sources remain separate evidence. |
+| validation | Native documented validators and supplemental checks; 304-focused-results.json;304-schema.log;304-strict.log;304-strict.tsv;304-source-audit.json;303-304-chemistry.log | supports | Schema, strict validation, native chemistry, corrected authority comparison and source reconciliation all passed. Initial scratch syntax failure and initial adapter network failure are separately retained. Shared full-corpus gates remain separate from these focused checks. |
+| search | Local provenance and exact salt/hydrate discovery; 304-local-hits.txt: ignored-inclusive record identifier/label/slug search;303-search-core.json: SRC:MED exact ciprofloxacin-hydrochloride and anhydrous/monohydrate/structure terms | context_only | Ignored files were included in the local provenance search. The exact-form EuropePMC query returned 52 metadata hits; selected original solid-form and target studies were inspected at the depths described. This is not a complete full-text audit of every ciprofloxacin paper. Search leads are not substituted for claim evidence. |
+| gsrs | https://gsrs.ncats.nih.gov/api/v1/substances/4BA73M5E37; 304-gsrs.json: UNII, structure, formula and record version 61 | supports | Current GSRS resolves UNII 4BA73M5E37 to ciprofloxacin hydrochloride monohydrate with the exact native molecular structure and hydration. The frozen FDA assertions retain historical GSRS version 57; current version 61 corroborates identity without rewriting historical provenance. |
+| clinical | FDA Drugs@FDA; https://api.fda.gov/drug/drugsfda.json; 304-fda-open.json;304-current-clinical-audit.json;304-fda-source-rows.json;304-native-clinical-lossless.json | supports | All 66 native clinical rows across 31 applications were read and reconciled against the exact adopted UNII source rows. A lossless representation retained every differing row value and was reconstructed to the original assertions. Current FDA data resolve every application/product and agree with drug/ingredient names, original approval dates, submission status and marketing state. The two ANDA 208921 product rows retain dated source sponsor YILING while current FDA lists PHARMOBEDIENT. Approval is distinct from current marketing: discontinued products remain explicitly discontinued. A broader ingredient-name search also finds other applications; those were not silently added. |
+| sponsor | https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&amp;ApplNo=208921; 304-fda-208921.html: current company and products 001/002 | context_only | Direct official application page confirms current sponsor PHARMOBEDIENT. The native dated snapshot records YILING, which agrees with its maintained frozen source. This is a temporal freshness limitation, not evidence of a wrong monohydrate identity or historically incorrect assertion. |
+| label | https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019537s086lbl.pdf; Original FDA 2016 CIPRO label, section 11 Description (printed p26) and section 12.4 Microbiology | supports | CIPRO tablets explicitly contain ciprofloxacin monohydrochloride monohydrate, formula C17H18FN3O3·HCl·H2O and molecular weight 385.8. Tablet strengths are expressed as ciprofloxacin equivalents. The same label distinguishes oral suspension as ciprofloxacin free base, so the broad brand/header is not used to collapse different materials. Native NDA 019537 rows 002/003/004 are tablets and agree with this form boundary. The label also describes gyrase/topoisomerase IV inhibition. This historical source is not presented as current treatment guidance. |
+| fractional-hydrate | PMID:12608770; DOI:10.2116/analsci.19.329; Original two-page 2003 crystal report, molecular formula, water-site occupancy and structure discussion | context_only | The actual crystallographic material is ciprofloxacin hydrochloride 1.34-hydrate, not a 1:1 monohydrate: the second water site has partial occupancy 0.34(2). The report describes ciprofloxacin cation/chloride and retains the carboxylic-acid proton. It provides relevant protonation/solid-form context but cannot serve as exact structural proof for the native monohydrate. Fractional hydration is not rounded or treated as a record defect. |
+
+## Limits And Additional Notes
+
+- Primary E. coli enzyme studies use dissolved commercial ciprofloxacin with no verified starting salt/hydration. Their solution-phase target evidence is active-moiety support; it is not an anhydrous-versus-hydrate potency comparison or a whole-cell MIC measurement.
+- The anhydrous patent supplies preparation/solid-state evidence, not independently replicated therapeutic superiority or regulatory approval. No particular polymorph or patent legal status is assigned to the native record.
+- DrugBank DB00537 returned HTTP 403. The independent CAS registry body was not obtained; the source-derived CAS accession is not represented as an independently resolved registry record.
+- The supplemental chemistry script initially failed with SyntaxError and was corrected before its successful comparisons. The adapter initial catalog attempt failed with DNS exit 2 and succeeded on approved network retry. Both actual failures remain in the check ledger.
+- The selected primary mechanism studies are species- and assay-specific. The 2023 paper has a Methods/Results double-mutant naming discrepancy; no exact mutation claim is adopted from that discrepancy.
+- All 66 clinical rows were checked against the maintained source and current FDA application/product data, but original labels for every generic, ophthalmic and otic product were not individually inspected. Their exact-form mapping rests on the maintained FDA/GSRS identity join, with direct CIPRO-tablet label corroboration.
+- Current FDA sponsor PHARMOBEDIENT differs from dated YILING in two ANDA 208921 rows; current GSRS version 61 differs from frozen version 57. The review preserves the historical snapshot and does not silently refresh it.
+- The 2003 crystallographic paper concerns 1.34-hydrate and is excluded as exact proof of a monohydrate crystal structure. Generic ciprofloxacin-hydrochloride names alone do not resolve hydration.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record or maintained source was edited. The original input hashes were preserved and rechecked.
+- Both salt forms are reviewed separately; a shared active moiety does not collapse different water stoichiometries.
+- Structured adapter results are gene-catalog context. Zero iModulon hits do not imply a negative biological result.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T131955Z-ciprofloxacin-hydrochloride-hydrate-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of ciprofloxacin hydrochloride hydrate
+started_at: '2026-10-21T13:04:58Z'
+finished_at: '2026-10-21T13:19:55Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Entire native record audited against preserved maintained inputs,
+    official molecular and regulatory authorities, and inspected original solid-form
+    and enzyme studies.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Exact identity supported with bounded source and assay limitations;
+  native REVIEWED gate remains dependent on shared required checks
+scientific_review: true
+summary: The exact monohydrate identity agrees across native encodings, ChEBI, PubChem,
+  KEGG and GSRS. All 66 FDA assertions reproduce the frozen source and their current
+  product, approval-date and marketing-status fields agree; two current sponsor names
+  differ from the dated snapshot. The CIPRO tablet label explicitly identifies monohydrate,
+  while its oral suspension uses free base. Primary enzyme studies support the active
+  ciprofloxacin mechanism without establishing starting hydration. No confirmed native
+  scientific defect was demonstrated. Scientific assessment retains the stated evidence
+  limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ciprofloxacin-hydrochloride-hydrate.yaml
+    sha256: 225febbf736920099043263cefdf69fbf476839d7b26b992a46e237a0ab60c5a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: Adopted FDA/GSRS product and exact ingredient assertions
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: Maintained FDA/GSRS extraction and identity matching
+scope:
+  description: 'Entire SEEDED, EXACT record: definition, seven synonyms, hydrate parent,
+    antibacterial role, qualified database-derived mechanism, all structure fields,
+    CAS and KEGG chemical links, two drug-context links, all 66 clinical assertions
+    across 31 applications, source concept and six history events.'
+  selection: Queue 304; preserved initial capture with actual maintained owners identified
+    before detailed judgment. Fifteen input hashes include the FDA table and extractor.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:59936
+targets:
+- target_id: CHEBI:59936
+  path: data/antibiotics/antibacterial/ciprofloxacin-hydrochloride-hydrate.yaml
+  label: ciprofloxacin hydrochloride hydrate
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: Adopted role names
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained ChEBI mechanism mapping and target scope
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: Adopted FDA/GSRS product and exact ingredient assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: Maintained FDA/GSRS extraction and identity matching
+checks:
+- check_id: schema
+  name: Documented schema validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ciprofloxacin-hydrochloride-hydrate.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  status: passed
+  required: true
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ciprofloxacin-hydrochloride-hydrate.yaml --out
+    /private/tmp/am-review-session/304-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; no ERROR rows.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - validation
+- check_id: native-chemistry
+  name: Native molecular consistency
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    304
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; actual alternate interpreter used because the worktree environment
+    lacks RDKit. Native SMILES, InChI, key, formula, charge and masses agree.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - chemistry
+  - validation
+- check_id: authority-comparison-initial
+  name: Initial supplemental comparison script
+  status: failed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/303-304-chemistry.py
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Exit 1: initial scratch script had an unmatched closing parenthesis and
+    failed with SyntaxError before comparisons. The script was corrected and rerun.'
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - validation
+- check_id: authority-comparison
+  name: Corrected supplemental authority comparison
+  status: passed
+  required: false
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/303-304-chemistry.py
+    > /private/tmp/am-review-session/303-304-chemistry.log
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; exact neutral-component graphs agree; alternative protonation encodings
+    are explicitly distinguished from raw graph identity.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - chemistry
+- check_id: source-reconciliation
+  name: Input, source and history reconciliation
+  status: passed
+  required: false
+  command: .venv/bin/python /private/tmp/am-review-session/303-304-ledger.py 304
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; fifteen unchanged hashes, six history events, zero adopted PMID
+    leads and all 66 frozen clinical rows reconciled. Current product/approval/marketing
+    comparisons pass; two sponsor changes remain explicitly recorded.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - owners
+  - leads
+  - clinical
+- check_id: adapter-initial
+  name: Structured adapter initial catalog attempt
+  status: failed
+  required: false
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/303-adapter-datasets.json
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 from sandbox DNS failure. The approved network retry succeeded;
+    this failure is retained.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - adapter
+- check_id: adapter-catalog
+  name: Structured adapter catalog retry
+  status: passed
+  required: false
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/303-adapter-datasets.json
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; organism and dataset catalog inspected before protein-focused web
+    research. The output is Markdown despite its historical .json filename.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - adapter
+- check_id: adapter-gyrA
+  name: Structured adapter gyrA search
+  status: passed
+  required: false
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset modulome --query gyrA
+    > /private/tmp/am-review-session/303-adapter-gyrA.json
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; covered E. coli gene hits, zero iModulon hits. No component summary
+    was applicable.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - adapter
+- check_id: adapter-parC
+  name: Structured adapter parC search
+  status: passed
+  required: false
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset modulome --query parC
+    > /private/tmp/am-review-session/303-adapter-parC.json
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit 0; covered E. coli gene hits, zero iModulon hits. No component summary
+    was applicable.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:59936
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ciprofloxacin-hydrochloride-hydrate.yaml
+  locator: Entire native record, including every clinical assertion where present
+    and complete curation history
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: supports
+  summary: 'Entire SEEDED, EXACT record: definition, seven synonyms, hydrate parent,
+    antibacterial role, qualified database-derived mechanism, all structure fields,
+    CAS and KEGG chemical links, two drug-context links, all 66 clinical assertions
+    across 31 applications, source concept and six history events. No native molecular-target
+    object, resistance edge, quantitative MIC, producer or causal graph is asserted.'
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:59936; official ChEBI molfile; exact-key PubChem lookup; KEGG:C13993/D02216;
+    UNII:4BA73M5E37
+  locator: 304-authority-chemistry.json;303-304-chemistry.py;303-304-chemistry.log
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: supports
+  summary: Native monohydrate SMILES, InChI, official ChEBI molfile, PubChem CID 62998,
+    both KEGG molfiles and GSRS structure generate ARPUHYJMCVWYCZ-UHFFFAOYSA-N, formula
+    C17H21ClFN3O4, charge zero and identical canonical component graphs. Exactly one
+    water component distinguishes it from anhydrous hydrochloride. Average and monoisotopic
+    masses agree with 385.823 and 385.12046. PubChem CID 60206643 uses separated proton/chloride
+    notation and shares the standard key, but its raw component graph is not identical.
+  snapshot_sha256: b7a445b5f17d74b9a879cf67379ba91aacc909eaf89fe1a5af73d719d20904e4
+- evidence_id: authority
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:59936
+  locator: 304-chebi.json and official molfile; adopted source row and chemical parent/role
+    names
+  accessed_at: '2026-10-21T13:06:34.835804Z'
+  support: supports
+  summary: Current ChEBI agrees with the monohydrate definition, hydrate parent, antibacterial-drug
+    role, seven aliases and native source accessions. KEGG C13993 and D02216 contain
+    matching monohydrate structures and CAS 86393-32-0. Generic ciprofloxacin-hydrochloride
+    aliases require the surrounding exact-form definition; the alias alone does not
+    determine hydration. Current ChEBI retains both native inhibitor-role identifiers.
+    DrugBank DB00537 is in drug_xrefs, a drug-context field rather than an exact salt
+    cross-reference; its direct page returned HTTP 403.
+  snapshot_sha256: a2bc4062cab389275a370a774ecfe8aeac28f31a478ec05668d0a09b496d81bc
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/US20080300258A1/en
+  locator: Original technical description, PXRD/IR discussion and Examples 1–3 in
+    303-patent.html
+  accessed_at: '2026-10-21T13:07:36.927571Z'
+  support: supports
+  summary: The original disclosure experimentally prepares anhydrous ciprofloxacin
+    hydrochloride from monohydrate and distinguishes the solids by water content,
+    IR and powder diffraction. The inspected examples are solid-form preparation and
+    stability evidence. They are not comparative antibacterial or clinical-approval
+    experiments, and no patent efficacy or legal-status claim is adopted. Native identity
+    does not assert a specific patented polymorph.
+  snapshot_sha256: 3a575b919deec5b67053fe592b25cdc3ce14e89adf9353576e627fd705dc4fe8
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB e_coli/modulome
+  locator: 303-adapter-datasets.json,303-adapter-gyrA.json,303-adapter-parC.json;
+    actual output is Markdown
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: context_only
+  summary: The catalog was inspected before protein-follow-up web research. gyrA search
+    returns e_coli/modulome/b2231 (gyrA), b3699 (gyrB), b0101 (yacG) and b2009 (sbmC);
+    parC returns b3019. Both searches return zero iModulons, so no summarize call
+    applies. These gene results provide organism-specific context for later E. coli
+    primary papers. They do not prove binding, antimicrobial phenotype, exact hydration
+    or a taxon-agnostic target claim. Native family-level mechanism remains broader
+    than this selected experimental organism.
+  snapshot_sha256: e3140c5e8a9656cb6ef3ede679984452a02047dcc10498d8bcfbbaff10ff224b
+- evidence_id: topoiv
+  kind: primary_source
+  reference: PMID:25115926; DOI:10.1021/bi500682e
+  locator: '303-topoiv.xml: original Materials/Methods, cleavage and religation experiments,
+    mutant comparisons and discussion'
+  accessed_at: '2026-10-21T13:07:36.927758Z'
+  support: supports
+  summary: Purified E. coli topoisomerase IV experiments directly show ciprofloxacin-induced
+    DNA cleavage and impaired religation. Mutant and metal-dependent assays distinguish
+    drug binding, productive positioning and relaxation inhibition; enzyme-assay endpoints
+    are not whole-cell MICs. Ciprofloxacin was purchased from LKT and dissolved as
+    a 40 mM stock in 0.1 N NaOH. Starting salt/hydration was not specified. This supports
+    the active ciprofloxacin mechanism in solution, not a separate exact-hydrate potency
+    or universal species claim. Water in the water–metal ion bridge is assay coordination
+    water, not evidence of crystal-water stoichiometry.
+  snapshot_sha256: 2226d5b28847b1ca0060076f650d47dd5303cfac6c788cafad87dc580015d67a
+- evidence_id: gyrase
+  kind: primary_source
+  reference: PMID:36769202; DOI:10.3390/ijms24032879
+  locator: '303-gyrase.xml: original enzyme/DNA-cleavage Methods, metal/competition
+    experiments and main Results'
+  accessed_at: '2026-10-21T13:08:33.044324Z'
+  support: supports
+  summary: Purified E. coli gyrase experiments support ciprofloxacin-stabilized DNA
+    cleavage and a role for water–metal coordination in positioning the drug. Ciprofloxacin
+    from Sigma-Aldrich was dissolved in NaOH; the starting salt/hydration was not
+    established. Species-specific comparisons and model interpretations do not justify
+    a universal bacterial mechanism detail. The Methods and Results use different
+    first-substitution labels for the double mutant; no exact double-mutant resistance
+    claim or quantitative value is adopted.
+  snapshot_sha256: f692d331bec90c51f24b1f702ec7f0186fa06c20d03c6234290736cf13355926
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/chebi_role_names.tsv; conf/sources.yaml;
+    scripts/extract_source_inventory.py; scripts/seed_from_sources.py; data/raw/fda_clinical_status.tsv;
+    scripts/extract_fda_clinical_status.py
+  locator: 304-source-audit.json; preserved inspect input ledger; exact source row;
+    source-generation mappings
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: supports
+  summary: ChEBI owns the native identity, structure, synonyms, parent/activity terms
+    and database-derived inhibitor roles. The configured mapping uses CHEBI:50750
+    and CHEBI:53559 for nucleic-acid synthesis inhibition; the microbial topoisomerase
+    IV role makes the aggregate scope MICROBIAL_TARGET. This does not assert exclusive
+    absence of host effects. The FDA extractor and adopted clinical table own the
+    66 dated assertions; all 15 input hashes and six history events reconcile.
+  snapshot_sha256: 98cf406880d821a91b0481a663911ff75c9acb8ef15087c76cc88030c4cfd834
+- evidence_id: leads
+  kind: database
+  reference: Frozen ChEBI source row
+  locator: 304-source-row.json
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: supports
+  summary: The adopted row has zero PMID citations, and current ChEBI has no PubMed
+    citation list requiring further adopted-lead follow-up. Newly inspected primary
+    solid-form and enzyme sources remain separate evidence.
+  snapshot_sha256: 72f21db9e3e870c44f5cc03121ecfb24b612d2802d86a6776c435f1574ad0e11
+- evidence_id: validation
+  kind: validation
+  reference: Native documented validators and supplemental checks
+  locator: 304-focused-results.json;304-schema.log;304-strict.log;304-strict.tsv;304-source-audit.json;303-304-chemistry.log
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: supports
+  summary: Schema, strict validation, native chemistry, corrected authority comparison
+    and source reconciliation all passed. Initial scratch syntax failure and initial
+    adapter network failure are separately retained. Shared full-corpus gates remain
+    separate from these focused checks.
+  snapshot_sha256: 4ae9c2f6d686d6bbbe9ddc0103f2d38c2fc07c72dce095c9fb3121041b35b394
+- evidence_id: search
+  kind: search
+  reference: Local provenance and exact salt/hydrate discovery
+  locator: '304-local-hits.txt: ignored-inclusive record identifier/label/slug search;303-search-core.json:
+    SRC:MED exact ciprofloxacin-hydrochloride and anhydrous/monohydrate/structure
+    terms'
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: context_only
+  summary: Ignored files were included in the local provenance search. The exact-form
+    EuropePMC query returned 52 metadata hits; selected original solid-form and target
+    studies were inspected at the depths described. This is not a complete full-text
+    audit of every ciprofloxacin paper. Search leads are not substituted for claim
+    evidence.
+  snapshot_sha256: cb21802284c3d528dad03df867e256e19274b9b37ec2d660c47c20bc53800dc6
+  search_scope: '304-local-hits.txt: ignored-inclusive record identifier/label/slug
+    search;303-search-core.json: SRC:MED exact ciprofloxacin-hydrochloride and anhydrous/monohydrate/structure
+    terms'
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/4BA73M5E37
+  locator: '304-gsrs.json: UNII, structure, formula and record version 61'
+  accessed_at: '2026-10-21T13:06:35.419348Z'
+  support: supports
+  summary: Current GSRS resolves UNII 4BA73M5E37 to ciprofloxacin hydrochloride monohydrate
+    with the exact native molecular structure and hydration. The frozen FDA assertions
+    retain historical GSRS version 57; current version 61 corroborates identity without
+    rewriting historical provenance.
+  snapshot_sha256: 2c628975a4c58e3007736ebed1b9c0551aebb734394d28556b7aca923032f9ea
+- evidence_id: clinical
+  kind: authority
+  reference: FDA Drugs@FDA; https://api.fda.gov/drug/drugsfda.json
+  locator: 304-fda-open.json;304-current-clinical-audit.json;304-fda-source-rows.json;304-native-clinical-lossless.json
+  accessed_at: '2026-10-21T13:13:46Z'
+  support: supports
+  summary: 'All 66 native clinical rows across 31 applications were read and reconciled
+    against the exact adopted UNII source rows. A lossless representation retained
+    every differing row value and was reconstructed to the original assertions. Current
+    FDA data resolve every application/product and agree with drug/ingredient names,
+    original approval dates, submission status and marketing state. The two ANDA 208921
+    product rows retain dated source sponsor YILING while current FDA lists PHARMOBEDIENT.
+    Approval is distinct from current marketing: discontinued products remain explicitly
+    discontinued. A broader ingredient-name search also finds other applications;
+    those were not silently added.'
+  snapshot_sha256: cb317dcf813e70fec7b8ceb6f62b3723dcf501b932f17283aa360c6aefc2e338
+- evidence_id: sponsor
+  kind: authority
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=208921
+  locator: '304-fda-208921.html: current company and products 001/002'
+  accessed_at: '2026-10-21T13:08:33.044705Z'
+  support: context_only
+  summary: Direct official application page confirms current sponsor PHARMOBEDIENT.
+    The native dated snapshot records YILING, which agrees with its maintained frozen
+    source. This is a temporal freshness limitation, not evidence of a wrong monohydrate
+    identity or historically incorrect assertion.
+  snapshot_sha256: 73b38d48b76f2a45832553aa0334effe3d67091bdc7a1fe821a6f581a5663d68
+- evidence_id: label
+  kind: authority
+  reference: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019537s086lbl.pdf
+  locator: Original FDA 2016 CIPRO label, section 11 Description (printed p26) and
+    section 12.4 Microbiology
+  accessed_at: '2026-10-21T13:07:36.928002Z'
+  support: supports
+  summary: CIPRO tablets explicitly contain ciprofloxacin monohydrochloride monohydrate,
+    formula C17H18FN3O3·HCl·H2O and molecular weight 385.8. Tablet strengths are expressed
+    as ciprofloxacin equivalents. The same label distinguishes oral suspension as
+    ciprofloxacin free base, so the broad brand/header is not used to collapse different
+    materials. Native NDA 019537 rows 002/003/004 are tablets and agree with this
+    form boundary. The label also describes gyrase/topoisomerase IV inhibition. This
+    historical source is not presented as current treatment guidance.
+  snapshot_sha256: e8bc2dd4d8114a57c9be8b912a5eaa3ac4fa8ceb8a708f45dd103cb0d7d09a4c
+- evidence_id: fractional-hydrate
+  kind: primary_source
+  reference: PMID:12608770; DOI:10.2116/analsci.19.329
+  locator: Original two-page 2003 crystal report, molecular formula, water-site occupancy
+    and structure discussion
+  accessed_at: '2026-10-21T13:07:36.927882Z'
+  support: context_only
+  summary: 'The actual crystallographic material is ciprofloxacin hydrochloride 1.34-hydrate,
+    not a 1:1 monohydrate: the second water site has partial occupancy 0.34(2). The
+    report describes ciprofloxacin cation/chloride and retains the carboxylic-acid
+    proton. It provides relevant protonation/solid-form context but cannot serve as
+    exact structural proof for the native monohydrate. Fractional hydration is not
+    rounded or treated as a record defect.'
+  snapshot_sha256: 261a27ac3354ce01517057ea3a6c7d69a9e42011efdf425377bfddfe3bc81601
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact salt, hydration and protonation boundary
+  outcome: supported
+  summary: The requested exact component stoichiometry agrees across native and inspected
+    official structures. Standard-InChI protonation normalization is distinguished
+    from identical raw graphs and from measured solid hydration.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - chemistry
+  - authority
+  - patent
+  - gsrs
+  - fractional-hydrate
+  - label
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical parent, synonyms and antibacterial role
+  outcome: supported
+  summary: The chemical parent and antibacterial-drug role agree with exact composition
+    and active-ciprofloxacin evidence. Generic hydrochloride aliases need the record
+    definition to specify hydration; no brand product is treated as an exact synonym.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - authority
+  - chemistry
+  - topoiv
+  - gyrase
+- assessment_id: mechanism
+  area: evidence
+  topic: Database-derived nucleic-acid synthesis inhibition
+  outcome: supported
+  summary: Current authority retains both inhibitor roles, and original E. coli enzyme
+    studies substantiate the active-moiety mechanism. The native notes correctly identify
+    source-assigned roles rather than a curated primary target assertion. Exact starting
+    hydration is unresolved in those enzyme studies.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - owners
+  - authority
+  - topoiv
+  - gyrase
+  - adapter
+- assessment_id: external
+  area: identity
+  topic: Registry and drug-context link boundaries
+  outcome: unknown
+  summary: DrugBank direct access failed with 403; its native drug-context placement
+    is retained. Independent proprietary registry bodies were not inspected. KEGG
+    chemical/drug links independently resolve to the exact monohydrate.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - authority
+  - chemistry
+- assessment_id: clinical
+  area: evidence
+  topic: All dated FDA assertions and exact ingredient mapping
+  outcome: supported
+  summary: All 66 rows reconcile with the frozen maintained source, and all current
+    application/product, approval and marketing comparisons pass. GSRS and the original
+    tablet label support monohydrate identity. Current sponsor differences are time-scoped
+    rather than silently overwritten.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - clinical
+  - gsrs
+  - label
+  - sponsor
+  - owners
+- assessment_id: freshness
+  area: provenance
+  topic: Current sponsor and GSRS-version differences
+  outcome: unknown
+  summary: Two ANDA 208921 sponsor names differ from the historical source; current
+    GSRS is version 61 rather than 57. Historical provenance remains intact. A later
+    source refresh could update these fields, but no required scientific correction
+    is demonstrated.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - sponsor
+  - clinical
+  - gsrs
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained inputs, citation dispositions and history
+  outcome: supported
+  summary: The adopted ChEBI row has no PMID citations. Actual input owners and source-generation
+    mappings were checked; original hashes and history are preserved. Newly inspected
+    literature is explicitly distinguished from adopted citations.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - owners
+  - leads
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary mechanism enrichment
+  outcome: supported
+  summary: Primary enzyme evidence would permit bounded enrichment after separate
+    curation. Missing optional targets, MICs or causal graphs are not by themselves
+    demonstrated false claims in this SEEDED record.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - record
+  - topoiv
+  - gyrase
+- assessment_id: schema
+  area: schema
+  topic: Focused schema and strict validation
+  outcome: supported
+  summary: Documented focused checks pass; full-corpus gates and native REVIEWED status
+    remain separate.
+  target_ids:
+  - CHEBI:59936
+  evidence_ids:
+  - validation
+findings: []
+actions: []
+limitations:
+- Primary E. coli enzyme studies use dissolved commercial ciprofloxacin with no verified
+  starting salt/hydration. Their solution-phase target evidence is active-moiety support;
+  it is not an anhydrous-versus-hydrate potency comparison or a whole-cell MIC measurement.
+- The anhydrous patent supplies preparation/solid-state evidence, not independently
+  replicated therapeutic superiority or regulatory approval. No particular polymorph
+  or patent legal status is assigned to the native record.
+- DrugBank DB00537 returned HTTP 403. The independent CAS registry body was not obtained;
+  the source-derived CAS accession is not represented as an independently resolved
+  registry record.
+- The supplemental chemistry script initially failed with SyntaxError and was corrected
+  before its successful comparisons. The adapter initial catalog attempt failed with
+  DNS exit 2 and succeeded on approved network retry. Both actual failures remain
+  in the check ledger.
+- The selected primary mechanism studies are species- and assay-specific. The 2023
+  paper has a Methods/Results double-mutant naming discrepancy; no exact mutation
+  claim is adopted from that discrepancy.
+- All 66 clinical rows were checked against the maintained source and current FDA
+  application/product data, but original labels for every generic, ophthalmic and
+  otic product were not individually inspected. Their exact-form mapping rests on
+  the maintained FDA/GSRS identity join, with direct CIPRO-tablet label corroboration.
+- Current FDA sponsor PHARMOBEDIENT differs from dated YILING in two ANDA 208921 rows;
+  current GSRS version 61 differs from frozen version 57. The review preserves the
+  historical snapshot and does not silently refresh it.
+- The 2003 crystallographic paper concerns 1.34-hydrate and is excluded as exact proof
+  of a monohydrate crystal structure. Generic ciprofloxacin-hydrochloride names alone
+  do not resolve hydration.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record or maintained source was edited. The original input hashes were
+  preserved and rechecked.
+- Both salt forms are reviewed separately; a shared active moiety does not collapse
+  different water stoichiometries.
+- Structured adapter results are gene-catalog context. Zero iModulon hits do not imply
+  a negative biological result.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links: []
+tags:
+- record-review
+- ciprofloxacin-hydrochloride
+- hydration-state
+- assay-scope
+```
