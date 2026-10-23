@@ -1,0 +1,657 @@
+schema_version: 1.0.0
+review_id: 20261021T162851Z-flavaspidic-acid-ab-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of flavaspidic acid AB
+started_at: '2026-10-21T16:12:19Z'
+finished_at: '2026-10-21T16:28:51Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: The reviewer read the entire native record and maintained source
+    row, preserved initial hashes, independently compared official chemical structures,
+    read the adopted original paper, and checked source-specific compound and assay
+    boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Major formal parent/definition conflict; exact chemical identity supported
+scientific_review: true
+summary: The exact AB structure, source occurrence and bounded antioxidant/antibacterial
+  claims are supported. However, CHEBI:26195 requires at least two hydroxy-substituted
+  benzene rings, while this molecule has only one; the other ring contains a gem-dimethyl
+  quaternary carbon that cannot become aromatic by keto–enol tautomerism. The inherited
+  polyphenol parent and opening definition require a maintained-source correction.
+  Registry tautomer differences do not establish a different congener, and quantitative
+  antibacterial and mechanism limits remain.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/flavaspidic-acid-ab.yaml
+    sha256: ef19893d31d2608e221ebc7410f7bba23b4c2090678dbdc2d018145f18eddcc9
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+scope:
+  description: 'Whole SEEDED, EXACT flavaspidic acid AB record: definition, four strictly
+    broader parents, antibacterial role, every chemical field, two registry links,
+    source concept and all three histories; sole adopted paper and relevant exact-congener
+    activity boundaries.'
+  selection: Queue 442 in isolated batch 045. Original 13 initial input hashes preserved;
+    actual source-lead queue appended before scientific assessment, giving 14 unchanged
+    inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:65897
+targets:
+- target_id: CHEBI:65897
+  path: data/antibiotics/antibacterial/flavaspidic-acid-ab.yaml
+  label: flavaspidic acid AB
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: chemistry
+  name: Native chemistry
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    442
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual exit 0; focused molecular consistency is separate from schema and
+    strict term validation.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - validation
+- check_id: schema
+  name: Native schema
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/flavaspidic-acid-ab.yaml
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual exit 0; focused molecular consistency is separate from schema and
+    strict term validation.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Native strict
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/flavaspidic-acid-ab.yaml --out /private/tmp/am-review-session/442-strict.tsv
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual exit 0; focused molecular consistency is separate from schema and
+    strict term validation.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - validation
+- check_id: authority
+  name: Independent authority and tautomer comparison
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/442-authority-check.py
+    > /private/tmp/am-review-session/442-authority-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Eight encodings agree after explicit tautomer normalization preserving
+    stereochemistry; raw keys are retained, and no different-congener inference is
+    made.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - chemistry
+- check_id: ledger
+  name: Source, term, reference and history ledger
+  command: .venv/bin/python /private/tmp/am-review-session/442-ledger.py > /private/tmp/am-review-session/442-ledger.log
+    2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: All 14 hashes remain unchanged, original 13 are preserved, and adopted
+    lead, source fields, exact links and three histories are accounted for.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - owners
+- check_id: ring-topology
+  name: Independent formal parent topology check
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/442443-ring-check.py
+    > /private/tmp/am-review-session/442443-ring-check.log 2>&1
+  status: passed
+  required: false
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Exit0 confirms one benzene ring and the nonaromatizable gem-dimethyl ring
+    in each exact compound; this is positive evidence of the formal parent conflict,
+    not a passing classification judgment.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - ring-topology
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:65897
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/flavaspidic-acid-ab.yaml
+  locator: Entire native YAML
+  accessed_at: '2026-10-21T16:18:13Z'
+  support: supports
+  summary: The record denotes the neutral AB congener, with no synonym, dedicated
+    producer, clinical, MIC, molecular-target, resistance or causal-graph assertion.
+    Generic antioxidant and antibacterial language is assessed separately from detailed
+    mechanisms.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:65897; ChemSpider:23275362; PubChem CID25096977
+  locator: 442-authority-chemistry.json;442-chebi.json;442-chebi-molfile.mol;442-chemspider.html;442-pubchem-name.json
+  accessed_at: '2026-10-21T16:18:13Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES and official molfile give C22H26O8,
+    charge 0 and XRWVZSPWRNDJNS-UHFFFAOYSA-N. ChemSpider has IJUGBJUDELQHAJ-UHFFFAOYSA-N
+    and PubChem PPRFIMGXDRYLGD-UHFFFAOYSA-N. The different keto–enol graphs share
+    the heavy-atom scaffold and converge under canonical tautomer normalization with
+    sp3/bond stereo removal disabled. Neither contains a distinct configured stereoisomer;
+    the native tautomer matches the adopted Figure 1.
+  snapshot_sha256: 8c366364339ba5c5897799acb20df954c3a6ee46eb6d3e7b9ada3deda78e1844
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:65897; CHEBI:26195; CHEBI:51867; CHEBI:55380; CHEBI:76224; CHEBI:33282
+  locator: 442-chebi.json and five term snapshots
+  accessed_at: '2026-10-21T16:15:16.180158Z'
+  support: supports
+  summary: Current ChEBI repeats the native identity, definition and polyphenol parent,
+    so simple source refresh would retain the classification conflict. The exact CHEBI:26195
+    definition requires two or more benzene rings, each bearing hydroxy. Methyl ketone,
+    beta-hydroxy ketone and aromatic ketone remain supported; the antibacterial role
+    has separate primary support.
+  snapshot_sha256: a7372f74703ab4c49ad977d7e6703e4db02275c7843ec91b1678e8c0fae4c3ab
+- evidence_id: adopted
+  kind: primary_source
+  reference: PMID:12951487; DOI:10.1248/bpb.26.1354
+  locator: 442-original2003.pdf, full three-page paper; Figure 1 and Table 1, printed
+    p1355, visually inspected
+  accessed_at: '2026-10-21T16:15:52.003410Z'
+  support: supports
+  summary: The sole adopted paper isolates AB as compound 2 and PB as compound 1 from
+    D. crassirhizoma rhizomes, voucher CNU 1011. Figure 1 distinguishes AB acetyl
+    from PB propionyl substitution, with the common butyryl ring. AB DPPH, superoxide
+    and rat-brain lipid-peroxidation IC50 values are 76.3, 64.4 and 13.1 µM. This
+    supports radical-scavenging language and occurrence. Iron-chelation interpretation
+    in the antioxidant experiment is not an antibacterial target claim.
+  snapshot_sha256: afdff7bf2f11c89886a556389579c977c3c2b5b3b385ed7588a1d59eaf7a0da3
+- evidence_id: antibacterial
+  kind: primary_source
+  reference: PMID:19471878; DOI:10.1007/s12272-009-1502-9
+  locator: 442-PMC7091015.xml complete original abstract; publisher abstract HTML
+    in442-original2009-springer.pdf
+  accessed_at: '2026-10-21T16:15:52.003469Z'
+  support: supports
+  summary: The original antibacterial abstract describes separately isolated and spectrally
+    characterized AB/PB and paper-disc activity against Gram-positive bacteria, including
+    source-described MRSA S. aureus KCTC 1928, S. mutans and B. subtilis. Fungal/chlorella
+    negatives are limited to that panel. The inaccessible main tables prevent independent
+    assignment of numerical per-congener MICs or inhibition zones; none is adopted.
+  snapshot_sha256: 22569895c28836f101733468ffa7317f31a180d98e530f9a701fa0bbdf78570e
+- evidence_id: fraction
+  kind: primary_source
+  reference: PMID:36339560; DOI:10.3389/fphar.2022.961087
+  locator: 442-PMC9630833.xml, selected fractionation Results, Table 2, Table 3 and
+    mechanism discussion/methods
+  accessed_at: '2026-10-21T16:15:52.510542Z'
+  support: context_only
+  summary: The study could not separate AB and nor-AB; NMR was unsuccessful and identities
+    were assigned by multistage MS. A3 was enriched in nor-AB and tested against MRSA
+    USA300. Its 6-hour growth-suppression MIC50 and metabolomic changes belong to
+    the fraction, not purified AB, and do not establish direct inhibition of a specific
+    bacterial enzyme.
+  snapshot_sha256: d7c6a664468e0727893316bf69a85b00c6e5ca17a428af578f806b24e57b4988
+- evidence_id: later-isolation
+  kind: primary_source
+  reference: PMID:33383880; DOI:10.3390/molecules26010122
+  locator: 442-PMC7796287.xml, isolation, exact compound 2 physicochemical data, Tables
+    1/2 and assay methods
+  accessed_at: '2026-10-21T16:15:52.533976Z'
+  support: supports
+  summary: The later original isolates AB as compound 2 and PB as compound 3, with
+    distinct acyl substituents and respective masses. AB is C22H26O8 with [M-H]- m/z417.1547.
+    The enzyme experiment uses bovine-milk xanthine oxidase; it supports that assay
+    context, not an antibacterial target.
+  snapshot_sha256: b389bd7225516a7532d4a89c9565d086fd0e54414dc3d7e2400c5006aff13a1b
+- evidence_id: owners
+  kind: database
+  reference: Maintained ChEBI source lane
+  locator: 442-raw-rows.json;442-source-audit.json;extract_source_inventory.py ChEBI
+    field mapping;seed_from_sources.py
+  accessed_at: '2026-10-21T16:18:13Z'
+  support: supports
+  summary: The native fields reproduce the frozen CHEBI:65897 row. Its sole citation
+    is PMID12951487; the source lead remains a lead rather than a claim-level mechanism
+    citation. All 14 inputs are unchanged, and all three chronological histories are
+    consistent with seeded status.
+  snapshot_sha256: 489081487989898c80159ee18351ae225354e711459d0e05eaa67336a35c087b
+- evidence_id: validation
+  kind: validation
+  reference: Actual focused native checks
+  locator: 442-focused-results.json;442-chemistry.json;442-schema.log;442-strict.log;442-ledger.log
+  accessed_at: '2026-10-21T16:18:13Z'
+  support: supports
+  summary: Actual chemistry, schema and strict validation all exit 0. Authority comparison
+    and source ledger also exit 0; these do not establish a molecular mechanism or
+    promote native status.
+  snapshot_sha256: f2bde93800d46182ab03190e58408136d23d18d99bf6d5cffc8d792f0b1c538c
+- evidence_id: access
+  kind: search
+  reference: Bounded public source and registry investigation
+  locator: 442-local-hits.txt ignored-inclusive local source/curation/scripts/schema/tests
+    search;442-fetch1/2/3.json;442-search-core.json
+  accessed_at: '2026-10-21T16:18:13Z'
+  support: context_only
+  summary: Exact-key PubChem lookup returned 404; name lookup supplied the independently
+    mapped alternative tautomer. Direct Reaxys returned 403. ChEBI structure URL first
+    returned SVG despite the local .mol suffix; the proper molfile was then fetched.
+    The 2009 PMC PDF path returned download-preparation HTML and Springer returned
+    abstract HTML, so neither was read as a PDF. Broader flavaspidic searches included
+    BB and AB/nor-AB fraction studies, which were not generalized to pure AB.
+  snapshot_sha256: e868a5cde8d1224f2192f9e3257b7a0d8feb80c7d63de1b761df9aea2b88fcba
+  search_scope: 442-local-hits.txt ignored-inclusive local source/curation/scripts/schema/tests
+    search;442-fetch1/2/3.json;442-search-core.json
+- evidence_id: ring-topology
+  kind: validation
+  reference: Native graph; CHEBI:26195 definition; original structure drawing
+  locator: 442443-ring-audit.json;442443-ring-check.py;442443-ring-check.log;442-chebi-26195.json;
+    original2003 Figure1 printedp1355
+  accessed_at: '2026-10-21T16:27:01Z'
+  support: refutes
+  summary: Both native graphs have exactly two six-carbon rings, only one aromatic.
+    In the other ring, zero-based atom17 has four carbon-carbon single bonds, including
+    two methyl substituents, and zero hydrogens. It cannot become a benzene carbon
+    while preserving connectivity. All584 enumerated keto–enol tautomers have at most
+    one benzene ring. This refutes the formal two-benzene requirement, not the published
+    exact structure or broad natural-products use of polyphenolic.
+  snapshot_sha256: 46fef0d16cc881f5e052358d9f3ce264e5087f11b449ac1dc9ffa67bbddbbe46
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact AB congener
+  outcome: supported
+  summary: The source graph, original compound-2 drawing, formula and acyl pattern
+    agree. AB is distinguished from PB, BB and nor-AB.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - record
+  - chemistry
+  - adopted
+  - later-isolation
+- assessment_id: structure
+  area: consistency
+  topic: Chemical representation and registry normalization
+  outcome: supported
+  summary: All native structure fields agree. Different ChemSpider/PubChem tautomer
+    keys are explicitly resolved at the shared scaffold level; no stereochemical or
+    acyl-congener conflict is demonstrated.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - chemistry
+  - validation
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, role and definition
+  outcome: concern
+  summary: The CHEBI:26195 parent and polyphenol opening conflict with the exact formal
+    class definition. Other listed parent classes and bounded occurrence/activity
+    statements remain supported.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - authority
+  - ring-topology
+  - adopted
+  - antibacterial
+- assessment_id: registry
+  area: grounding
+  topic: Reaxys independent exact mapping
+  outcome: unknown
+  summary: The registry link is repeated by current ChEBI but its exact record was
+    inaccessible. It is unresolved, not shown wrong.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - authority
+  - access
+- assessment_id: mechanism
+  area: evidence
+  topic: Bacterial molecular target
+  outcome: unknown
+  summary: No native target is asserted. Fraction metabolomics and bovine xanthine
+    oxidase do not supply a pure-AB antibacterial mechanism.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - fraction
+  - later-isolation
+  - record
+- assessment_id: quantity
+  area: quantity
+  topic: Quantitative antibacterial adoption
+  outcome: unknown
+  summary: The original full antibacterial tables were not obtained. Paper-disc activity
+    supports the bounded role but later summaries are insufficient to assign an exact
+    AB MIC; none is present natively.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - antibacterial
+  - access
+- assessment_id: ownership
+  area: ownership
+  topic: Reproducibility and history
+  outcome: supported
+  summary: Fourteen unchanged inputs and three chronological seeded events preserve
+    provenance. The source-derived parent and definition need a maintained correction;
+    changing only the generated YAML would not persist.
+  target_ids:
+  - CHEBI:65897
+  evidence_ids:
+  - owners
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-65897-polyphenol-parent-requires-two-benzene-rings
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Polyphenol parent conflicts with its two-benzene-ring requirement
+  description: The native definition opens with polyphenol and parent_compounds[0]
+    is CHEBI:26195. That class explicitly requires at least two hydroxy-substituted
+    benzene rings. The exact supported molecule contains one benzene ring and one
+    nonaromatic cyclohexadienone ring with a gem-dimethyl quaternary carbon. Ordinary
+    keto–enol tautomerism cannot remove that four-carbon-bond valence constraint.
+    Current ChEBI repeats the conflicting class assignment; its provenance does not
+    make the graph satisfy the class definition.
+  target_ids:
+  - CHEBI:65897
+  field_paths:
+  - parent_compounds[0]
+  - definition
+  evidence_ids:
+  - ring-topology
+  - authority
+  - chemistry
+  - owners
+  rule_id: 'review-checklist: Parent compounds must be strictly broader and scientifically
+    valid'
+  native_severity: Major required chemical-class correction; native REVIEWED classification
+    gate blocked
+  normalization_reason: This is a false formal chemical parent and corresponding defining
+    statement, not a spelling issue or a distinct-compound identity claim. Exact structure,
+    congener and activity evidence remain intact.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted CHEBI:65897 definition and parent_ids input
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI definition and parent extraction policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduce corrected source fields in the generated record
+actions:
+- action_id: A1
+  description: Implement a documented maintained-source correction that excludes CHEBI:26195
+    for this exact record and replaces the opening with A phloroglucinol derivative,
+    retaining the supported occurrence and activity clauses. Use the ChEBI extraction/input
+    ownership lane and regenerate; do not silently patch only the generated YAML or
+    change the valid molecular graph to fit the class. A replacement parent is optional
+    and requires its own exact definition check.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:65897
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted CHEBI:65897 definition and parent_ids input
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ChEBI definition and parent extraction policy
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproduce corrected source fields in the generated record
+  acceptance_checks:
+  - Generated parent_compounds no longer includes CHEBI:26195 and the definition no
+    longer asserts its incompatible formal class. Preserve the other supported parent
+    classes.
+  - Preserve exact chemical identity and all structure encodings; one aromatic benzene
+    ring and the gem-dimethyl nonaromatic ring remain correct. Do not aromatize by
+    deleting methyl groups or changing connectivity.
+  - Document the current upstream conflict and ensure the maintained correction survives
+    extraction and reseeding.
+  - After authorized curation, rerun molecular checks, schema, strict terms, corpus
+    reproducibility/history and full QC; retain SEEDED until all required native REVIEWED
+    gates are satisfied.
+limitations:
+- Independent Reaxys 2067974 identity remains inaccessible. ChemSpider is verified
+  at an explicitly tautomer-normalized scaffold level, not by equal raw InChIKeys.
+- The 2009 antibacterial main tables/methods were not retrieved. Its complete original
+  abstract supports the qualitative isolated-compound claim, while precise congener-specific
+  zone or MIC values remain unverified.
+- The 2022 A3 fraction cannot establish purified AB potency, a direct enzyme target
+  or an exact AB causal mechanism. Bovine xanthine oxidase and antioxidant iron-chelation
+  observations are separate contexts.
+- Additional anti-PRRSV AB activity was found in a complete original abstract (PMID23178515)
+  as a discovery lead. No new antiviral role or mechanism is adopted, and sibling
+  BB studies are outside exact-AB evidence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Standalone chemistry used the batch 019 interpreter against batch 045; the source
+  ledger and contract use batch 045.
+- Native contains no named gene/protein/pathway. Mixed-fraction pathway suggestions
+  and bovine enzyme experiments were excluded from bacterial mechanism adoption, so
+  the structured bacterial adapter was not applicable.
+- All native inputs and status remain unchanged; no optional field absence is treated
+  as a demonstrated defect.
+- Before saving, an independent reviewer raised the formal polyphenol requirement.
+  A separate atom-level recheck confirmed it, and this unsaved review was revised.
+  Broad natural-products terminology is distinguished from the explicit ontology constraint.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:65897
+- https://www.chemspider.com/Chemical-Structure.23275362.html
+- https://doi.org/10.1248/bpb.26.1354
+- https://doi.org/10.1007/s12272-009-1502-9
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC9630833/
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC7796287/
+tags:
+- record-review
+- flavaspidic-acid-ab
+- phloroglucinol
