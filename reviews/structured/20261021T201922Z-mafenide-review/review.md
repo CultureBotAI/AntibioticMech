@@ -1,0 +1,1364 @@
+# Mafenide: coherent free-base identity with a DHPS evidence conflict and brand alias
+
+- Review: 20261021T201922Z-mafenide-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T20:11:14Z
+- Finished UTC: 2026-10-21T20:19:22Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The entire native record and actual ARO, ChEBI and BindingDB source rows were reviewed. Nine native and current chemical encodings agree on neutral mafenide. A compound-specific original reports no DHPS inhibition under its experimental conditions, creating a material conflict with the retained direct-binding target assertion that needs explicit adjudication. Sulfamylon is a brand for an acetate preparation and should not be typed as an exact chemical synonym. Both carbonic anhydrase measurements reproduce in live BindingDB, but their original full tables and the specific mycobacterial strain mapping remain unverified.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Assigned queue position 621; one exact native record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:6633 | data/antibiotics/antibacterial/mafenide.yaml | generated | mafenide |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:6633 | Actual focused execution exited 0. Actual execution in batch 063; chemistry used 019 RDKit and schema/strict used 063 environment. |
+| Focused schema verification | passed | True | CHEBI:6633 | Actual focused execution exited 0. Actual execution in batch 063; chemistry used 019 RDKit and schema/strict used 063 environment. |
+| Focused strict verification | passed | True | CHEBI:6633 | Actual focused execution exited 0. Actual execution in batch 063; chemistry used 019 RDKit and schema/strict used 063 environment. |
+| Authoritative full QC | failed | True | CHEBI:6633 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:6633 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:6633 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:6633 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:6633 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:6633 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:6633 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:6633 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:6633 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact free base and brand distinction
+
+identity: supported. Targets: CHEBI:6633.
+
+Nine native/authority encodings agree on neutral mafenide and its exact chemical identifiers. Ambamide and maphenide remain compatible source names. Sulfamylon is a branded acetate preparation and needs synonym typing correction without changing the valid free-base graph.
+
+### Chemical cross-references and class
+
+grounding: supported. Targets: CHEBI:6633.
+
+ChEBI grounding, ARO identity, ChEMBL and PubChem exact graphs agree. The sulfonamide structural class is appropriate. CAS direct registry access remains unavailable. Class membership is not treated as sufficient proof of DHPS inhibition.
+
+### Compound-specific contradiction to the retained DHPS edge
+
+evidence: concern. Targets: CHEBI:6633.
+
+Native target 0 honestly declares CARD_ARO and PRIMARY_EVIDENCE_NEEDED, but still asserts DIRECT_BINDING_TARGET and an inhibited enzyme. Original PMID2108114 reports the opposite enzyme result in the tested systems. This is positive contradictory evidence that needs an explicit source adjudication; it is not a new finding based merely on absent literature. Its abstract-level limits do not justify claiming universal nonbinding or rejecting every folP/sul route.
+
+### Five database assertions and compound-specific limits
+
+evidence: unknown. Targets: CHEBI:6633.
+
+All five imported routes reproduce in the official ARO snapshot and are labelled database assertions in the native record. Their eleven upstream definition leads were read as complete abstracts. Several explicitly test other sulfonamides; these observations do not alone prove the mafenide associations false. The DHPS conflict warrants compound-specific follow-up, with no automatic deletion of all five routes or invented strain/allele data.
+
+### Quantitative enzyme associations and exact preparation boundaries
+
+evidence: unknown. Targets: CHEBI:6633.
+
+Both native Ki values and assay descriptions reproduce in live BindingDB. Original abstracts confirm mtCA3 and a Nce103/Can2 comparison. Exact primary tables, reagent form and the mycobacterial recombinant construct/strain remain unverified. The current deletion of R4ML78 is not by itself proof of erroneous historical metadata. Neither biochemical value is converted into antimicrobial mechanism or MIC.
+
+### Topical antibacterial scope and salt preparation
+
+evidence: supported. Targets: CHEBI:6633.
+
+The official label and primary2024 preparation experiment support the broad antibacterial topical-use context. Their acetate preparation endpoints remain separate from exact neutral-graph assay measurements. No antibacterial role is removed because the record lacks an optional structured spectrum, and no host CA effect is recast as a microbial therapeutic mechanism.
+
+### Optional fields and evidence placement
+
+completeness: unknown. Targets: CHEBI:6633.
+
+No missing optional mode, activity, producer, product or causal graph field is itself a defect. Evidence is attached to all imported mechanism objects, with clear database notes. Exact primary enzyme and resistance follow-up remains bounded by unavailable originals. No native quotation snippet is present to assess.
+
+### Complete native audit and reproducible ownership
+
+provenance: supported. Targets: CHEBI:6633.
+
+All native fields, source rows and five history events were read. ARO supplies the native definition lead; BindingDB supplies two native primary citations; all ten additional ChEBI grounding-row abstracts and eleven current ARO upstream abstracts were also disposed. Original 13 and expanded 25 input hashes remain unchanged. No scientific status or native history was altered.
+
+## Findings
+
+### F1: The retained DHPS target conflicts with a compound-specific original experiment
+
+major / open / confirmed; issue key: mafenide-dhps-target-primary-counterevidence.
+
+Molecular target 0 is explicitly an unconfirmed CARD assertion, but its relation and context still state direct DHPS targeting and inhibition. Original PMID2108114 reports no DHPS inhibition under its experimental conditions and pABA-insensitive whole-cell inhibition. The record does not capture this material contradiction. The required correction is evidence adjudication and an appropriately qualified or withheld target claim; the abstract does not prove universal absence of binding, identify every reagent detail or refute all five resistance associations.
+
+### F2: Sulfamylon is typed as an exact chemical synonym instead of a brand name
+
+minor / open / confirmed; issue key: mafenide-sulfamylon-brand-exact-synonym.
+
+The official SPL identifies Sulfamylon as a mafenide acetate cream, and current ChEBI explicitly types the name as a brand. Native synonyms[2] instead declares EXACT_SYNONYM for the neutral free-base record. Preserve the useful drug-brand association with the appropriate synonym type or explicit product qualification.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Adjudicate the mafenide-specific CARD DHPS edge against the original negative enzyme study through maintained source evidence handling.
+
+- Record PMID2108114 and its actual abstract-level reading limits, preserving the original CARD provenance and explicit negative result.
+- Recover the full original methods before asserting a universal nonbinding result or an exact enzyme preparation; qualify or withhold the conflicting direct-target claim according to the evidence-review mechanism.
+- Evaluate each sul/folP resistance route separately if further curation is proposed; do not delete all five solely by analogy.
+- Regenerate and run focused validation, corpus reproduction and required shared gates.
+
+### A2
+
+Correct Sulfamylon synonym typing in maintained ARO name handling and regenerate.
+
+- Represent Sulfamylon as a brand association with the acetate-preparation context, rather than exact chemical equivalence.
+- Retain the native free-base graph, valid chemical xrefs and other supported synonyms.
+- Regenerate through the validated writer and rerun focused and shared checks.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/mafenide.yaml; Entire native record, including all five resistance entries, three targets and five history events | supports | The native graph is neutral mafenide, C7H10N2O2S, with no stereocentres. The record has three ARO exact synonyms, four exact xrefs, a sulfonamide parent/class, five explicitly database-sourced resistance routes, one PRIMARY_EVIDENCE_NEEDED CARD target and two PRIMARY_EVIDENCE BindingDB target associations. No separate mode of action, activity spectrum, producer, product or causal graph objects are asserted. The definition carries a broad topical-use statement. |
+| owners | data/raw/aro_antibiotics.tsv; data/raw/chebi_antimicrobials.tsv; data/raw/aro_resistance_edges.tsv; data/raw/aro_target_edges.tsv; data/raw/bindingdb_target_measurements.tsv; Exact source rows in the captured subset; ARO row 181, ChEBI row 217, resistance rows 3718–3722, target row 199 and BindingDB rows 157–158 | context_only | ARO owns the definition, synonyms, class and source concept. ChEBI supplies the grounding graph but is a two-star, out-of-role-scope comparator; its ten citation leads are not the native ARO definition bibliography. BindingDB owns the quantitative associations. All original 13 hashes were retained and actual-owner/context capture expanded to 25 before detailed judgment. |
+| local-search | /private/tmp/am-review-session/621-context-search.txt; Exact ID, structure key and mafenide search including hidden and ignored files | context_only | The search covered curation, conf, scripts, data/raw and reports, with preserved initial local hits. No exact curator override or CARD evidence-review adjudication for this compound was located within that bounded scope. Source-owned claims remain source-owned. |
+| adapter | https://imodulondb.org/api/datasets; Structured catalog and three searches before open-ended literature research | context_only | The initial sandbox request failed DNS; free public retry succeeded. E. coli precise1k folP returned b3177; S. pyogenes modulome folP returned SP5448_05480; M. tuberculosis modulome carbonic-anhydrase search returned Rv1284, Rv3273 and Rv3588c. All returned zero iModulons. No Cryptococcus dataset was listed. These are contextual gene mappings, not mafenide inhibition, resistance or CAS/NITR204 assay evidence. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/6633/; Current exact authority response | supports | Current CHEBI:6633 retains the native free-base encodings and composition. It explicitly types Sulfamylon as BRAND NAME. Other source-only salt aliases are not asserted native synonyms and are not findings on this record. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/3998/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON; Current exact authority response | supports | Asserted CID3998 has the native exact free-base key, composition and neutral charge. |
+| chembl | https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL419.json; Current exact authority response | supports | Asserted CHEMBL419 supplies matching SMILES, InChI and molfile. These three encodings were parsed independently. |
+| chemistry | /private/tmp/am-review-session/621-authority-chemistry.json; Nine actual encodings calculated with RDKit 2026.03.5 in 019, cwd 063 | supports | Native 2, ChEBI 2, PubChem 2 and ChEMBL 3 encodings all give TYMRLRRVMHJFTF-UHFFFAOYSA-N, neutral C7H10N2O2S, with no stereocentres. Native mass 186.236 and exact mass 186.0463 agree with calculation. The source mint reproduces. This is a free-base graph, not acetate salt or formulated cream. |
+| aro-identity | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000684; Current ARO identity term and declared exact cross-references | supports | ARO3000684 resolves to mafenide and retains the native definition, synonyms and CAS/ChEBI/ChEMBL/PubChem associations. The broader sulfonamide class is structurally compatible; its generic mechanism wording does not establish mafenide-specific DHPS inhibition. Ambamide and maphenide are retained by current ChEBI as name synonyms. |
+| aro-parent | https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000282; Current sulfonamide-antibiotic definition | partial | The term denotes synthetic antibacterial compounds with a sulfonamide group. The native molecule contains a primary arylsulfonamide and is an antibacterial drug. The term also describes typical DHPS inhibition; that general class explanation must not override contradictory compound-specific evidence. |
+| cas | https://commonchemistry.cas.org/api/detail?cas_rn=138-39-6; CAS138-39-6 direct request | unknown | The registry API returned401. Matching CAS assertions in current ARO and ChEBI are corroborative source metadata, not independent inspection of the CAS registry structure. No chemical-xref defect is inferred from access failure. |
+| card-current | https://purl.obolibrary.org/obo/aro.obo; Exact seven term blocks extracted from same-day official snapshot426-current-aro.obo | context_only | The inspected official blocks retain all five mafenide resistance associations and the DHPS targeted_by_antibiotic edge. Their definitions concern sul1, sul2, sul3 and the named folP routes. This establishes faithful source propagation, not primary validation of each mafenide phenotype. The original official snapshot hash and access time are retained in 426-fetch2-results.json. |
+| adopted-definition | PMID:4948236; DOI:10.2165/00003495-197101060-00002; Complete bibliographic record; no abstract supplied | context_only | The adopted definition citation is a 1971 review of mafenide acetate cream. It is not a primary free-base experiment. The publisher request returned challenge HTML, so its full conclusions were not read. The broad topical-use statement is independently corroborated by the official product label; no quantitative assay is inferred from this unread review. |
+| dailymed | https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/008eaa23-8f19-4e39-85ff-540c1c834a9e.xml; Official SPL description, clinical pharmacology, indication and precautions; current version 2 | partial | Sulfamylon is explicitly an acetate-containing cream whose strength is expressed as85 mg mafenide base per gram. The label supports topical adjunctive treatment of second- and third-degree burns and identifies the branded preparation. Its carbonic-anhydrase warning concerns drug/metabolite effects in patients and does not prove a microbial antibacterial target. This product is not exact chemical equivalence with the neutral native graph. |
+| dhps-original | PMID:2108114; DOI:10.1093/jac/25.1.25; Complete original abstract, independently resolved through EuropePMC and publisher metadata | refutes | The original compares intact Pseudomonas aeruginosa and Escherichia coli and reports that pABA did not prevent or reverse mafenide growth inhibition. Its enzyme-level result explicitly states that mafenide did not inhibit DHPS. This directly contradicts an unqualified mechanistic interpretation of the retained DHPS edge, within the reported conditions. Full methods, concentrations, enzyme preparations and reagent salt were not recovered; the result is not generalized to every organism or all possible conditions. |
+| mtb-original | PMID:19338333; DOI:10.1021/jm9003126; Complete original abstract | partial | The original identifies the Rv3273 product as mtCA3 and reports biochemical inhibition screening. Its abstract does not supply the mafenide row or establish CAS/NITR204 as the experimental strain. Thus it validates the paper and broad enzyme subject, while the exact7330 nM datum and strain-specific material mapping still require the full original. |
+| fungal-original | PMID:19450983; DOI:10.1016/j.bmc.2009.05.002; Complete original abstract | partial | The study concerns Candida albicans Nce103 and explicitly discusses comparison with Cryptococcus neoformans Can2. The Candida title therefore does not itself invalidate a Can2 comparator measurement. The mafenide18490 nM Can2 row and whether it is new or reused comparison data were not verified in the inaccessible original tables. |
+| binding-mtb | https://www.bindingdb.org/rwd/jsp/dbsearch/Summary_ki.jsp?entryid=3201&amp;reactant_set_id=53332; Exact reaction details and molecule/target descriptors | partial | Live exact entry 3201/reactant 53332 gives mafenide BDBM10860, Ki 7330 nM, pH 8.3,293.15 K, mtCA3 and the retained R4ML78 sequence association. The page names M. tuberculosis generally; the native CAS/NITR204 taxon derives from the mapped protein, not an independently inspected original material description. |
+| binding-fungal | https://www.bindingdb.org/rwd/jsp/dbsearch/Summary_ki.jsp?entryid=3445&amp;reactant_set_id=60913; Exact reaction details and molecule/target descriptors | partial | Live exact entry 3445/reactant 60913 gives the same mafenide graph and Ki 18490 nM for Can2, labelled Cryptococcus neoformans var. grubii. This reproduces the database datum and comparative-enzyme association without proving a fungal whole-cell endpoint. |
+| assay-mtb | https://www.bindingdb.org/rwd/jsp/dbsearch/assay.jsp?assayid=1&amp;entryid=3201; Complete assay description | supports | The database description matches the native stopped-flow CO2 hydration assay, phenol-red 557 nm detection, fitted inhibition constants and at least three determinations. Enzyme inhibition is a measured target association, not microbial MIC, target engagement in cells or proof of the therapeutic mechanism. |
+| assay-fungal | https://www.bindingdb.org/rwd/jsp/dbsearch/assay.jsp?assayid=1&amp;entryid=3445; Complete assay description | supports | The database description matches the native stopped-flow CO2 hydration assay, phenol-red 557 nm detection, fitted inhibition constants and at least three determinations. Enzyme inhibition is a measured target association, not microbial MIC, target engagement in cells or proof of the therapeutic mechanism. |
+| uniprot-mtb | https://rest.uniprot.org/uniprotkb/R4ML78.json; Current exact accession state | unknown | R4ML78 is currently inactive/deleted because it is not part of a reference proteome. That current administrative state alone does not falsify the historically timestamped UNREVIEWED record. Its linkage to the actual2009 recombinant enzyme and native CAS/NITR204 assignment remains unresolved; no automatic replacement accession is proposed. |
+| uniprot-fungal | https://rest.uniprot.org/uniprotkb/Q3I4V7.json; Current accession organism, Can2 annotation and sequence | partial | Q3I4V7 resolves as an unreviewed C. neoformans protein at taxon 5207, consistent with the retained example at the database level. Original preparation/strain boundaries still depend on the primary paper. |
+| card-lead-21537009 | PMID:21537009; DOI:10.1128/aac.00221-11; Complete original abstract of the current ARO definition citation | context_only | AbaR genomic-resistance-island diversity study; the abstract does not establish a mafenide-specific route. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-19075060 | PMID:19075060; DOI:10.1128/aac.00970-08; Complete original abstract of the current ARO definition citation | context_only | Plasmid sequencing and qnrB2/ISCR1 mobilization; the abstract is not a mafenide assay. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-18753343 | PMID:18753343; DOI:10.1128/jcm.00835-08; Complete original abstract of the current ARO definition citation | context_only | Class1 integron and multidrug-resistance population study; the abstract supplies no mafenide-specific experiment. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-17827139 | PMID:17827139; DOI:10.1093/jac/dkm336; Complete original abstract of the current ARO definition citation | context_only | Salmonella resistance genetics; abstract specifically names trimethoprim-sulfamethoxazole among tested resistance phenotypes. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-17158944 | PMID:17158944; DOI:10.1128/aac.01345-06; Complete original abstract of the current ARO definition citation | context_only | RmtD/SPM-1 study in P. aeruginosa; reported aminoglycoside and beta-lactam findings do not independently validate mafenide-sul1 activity. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-15722395 | PMID:15722395; DOI:10.1093/jac/dki015; Complete original abstract of the current ARO definition citation | context_only | Salmonella resistance-region comparison; abstract supplies genomic linkage rather than exact mafenide phenotype. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-12604565 | PMID:12604565; DOI:10.1128/aac.47.3.1169-1172.2003; Complete original abstract of the current ARO definition citation | context_only | Original sul3 cloning study explicitly establishes sulfamethoxazole resistance in E. coli. It is not automatically a mafenide experiment. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-12111724 | PMID:12111724; DOI:10.1002/bies.10114; Complete original abstract of the current ARO definition citation | context_only | Secondary folate-pathway review, not an original mafenide target experiment. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-11432417 | PMID:11432417; DOI:10.1051/vetres:2001123; Complete original abstract of the current ARO definition citation | context_only | Secondary review of sulfonamide and trimethoprim resistance; not direct mafenide experimental evidence. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-9593127 | PMID:9593127; DOI:10.1128/aac.42.5.1062; Complete original abstract of the current ARO definition citation | context_only | Original S. pyogenes folP study establishes sequence differences and sulfathiazole enzyme affinity. It is not direct proof for mafenide. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| card-lead-9449266 | PMID:9449266; DOI:10.1128/aac.42.1.88; Complete original abstract of the current ARO definition citation | context_only | Original E. coli folP Pro64Ser study tests sulfathiazole; background modifiers affect the observed resistance level. No mafenide allele-level claim is inferred. Full papers were not inspected in this bounded route audit, so absence from the abstract is not proof that no relevant result exists. |
+| chebi-lead-10411484 | PMID:10411484; Complete original abstract from additional adopted grounding-row citation list | context_only | New water-soluble sulfonamide derivatives and ocular effects. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-10479300 | PMID:10479300; Complete original abstract from additional adopted grounding-row citation list | context_only | Aminoacyl/dipeptidyl derivative synthesis and ocular effects. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-10649985 | PMID:10649985; Complete original abstract from additional adopted grounding-row citation list | context_only | Charged, membrane-impermeant derivatives and animal perfusion assays. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-10843231 | PMID:10843231; Complete original abstract from additional adopted grounding-row citation list | context_only | N-morpholylthiocarbonylsulfenyl derivatives and CA/tumour-cell experiments. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-11229775 | PMID:11229775; Complete original abstract from additional adopted grounding-row citation list | context_only | DTPA derivatives and zinc complexes. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-11906288 | PMID:11906288; Complete original abstract from additional adopted grounding-row citation list | context_only | Polyamino-polycarboxylate derivatives and metal complexes. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-12565948 | PMID:12565948; Complete original abstract from additional adopted grounding-row citation list | context_only | QSAR modelling by molecular negentropy. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-12643899 | PMID:12643899; Complete original abstract from additional adopted grounding-row citation list | context_only | Tumour-associated CAIX inhibition by a sulfonamide panel. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-14971907 | PMID:14971907; Complete original abstract from additional adopted grounding-row citation list | context_only | Murine mitochondrial CAV inhibition panel, with other isoenzymes for comparison. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| chebi-lead-15149691 | PMID:15149691; Complete original abstract from additional adopted grounding-row citation list | context_only | CAIX QSAR analysis. These ten leads belong to the ChEBI grounding row, rather than the native ARO source concept. Exact parent-compound rows and primary tables were not recovered; derivative, mammalian or computational effects are not transferred to bacterial targets. |
+| activity2024 | PMID:38247601; DOI:10.3390/antibiotics13010042; https://pmc.ncbi.nlm.nih.gov/articles/PMC10812663/; Original abstract, main results, methods 4.1–4.7 and captions 1–4; full XML available | partial | The exact test material is a 5% mafenide acetate solution from the Cologne hospital pharmacy, tested against P. aeruginosa DSM939. The 15 min suspension assay gives a reported 1.23log10 CFU reduction; the prolonged ex-vivo skin-wound treatment gives about 3.6 log10 reduction. These are preparation- and assay-specific CFU endpoints, not free-base MICs or clinical efficacy. Biofilm staining and viable counts are distinct measurements. Actual image downloads returned403, so plotted points were not independently inspected. |
+| search-access | /private/tmp/am-review-session/621-discovery.json; Bounded EuropePMC query plus exact DOI/title full-text searches | context_only | The stored mafenide mechanism/resistance discovery query returned53 records; all titles and selected exact leads were inspected. Publisher full text for1990 and both2009 papers was inaccessible. Kent and Florence repositories explicitly had no full paper; the 2009 PDF mirror timed out. The 2023 derivative study was a discovery lead only: local publisher/author-page requests were403, so no quantitative table is adopted from search excerpts. |
+| access-manifests | /private/tmp/am-review-session/621-fetch1.json; /private/tmp/am-review-session/621-fetch2.json; /private/tmp/am-review-session/621-fetch3.json; /private/tmp/am-review-session/621-fetch4.json; /private/tmp/am-review-session/621-fetch5.json; Actual retrieval statuses, timestamps and bytes | context_only | Authority and database records were read from successful snapshots. CAS returned401; publisher routes returned403 or challenge HTML; the original2009 mirror failed connections; attempted2024 figure PNGs returned403. HTTP200 challenge pages were not treated as full papers. |
+
+## Limits And Additional Notes
+
+- The 1990 DHPS paper was read as its complete original abstract. Full methods, drug concentration/form and enzyme preparation were inaccessible; the negative result is restricted to its stated experimental context.
+- Both 2009 target papers were read as complete original abstracts, with exact live BindingDB reaction and assay pages independently checked. Original tables, mafenide reagent form and the specific CAS/NITR204 mapping were not verified; the Can2 comparator must not be dismissed solely because the paper title names Candida.
+- The 1971 definition citation is a review with no abstract, and its full text was blocked by a publisher challenge. The ten ChEBI-grounding and eleven current ARO definition leads were read at abstract depth, not full-table depth. Absence from an abstract is not proof of absence from the original.
+- The 2024 acetate study was read for relevant original main results, methods and captions. Actual figure-image retrieval failed; reported numerical CFU reductions were not independently read from plotted points and are not transferred as free-base MICs.
+- CAS registry access returned401. The current R4ML78 deletion does not establish that historically recorded unreviewed metadata was false.
+- Discovery was bounded to the stored 53-title query and selected exact-source routes. The 2023 imine study remained a discovery lead; its derivative values are not assigned to mafenide.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Original 13 and expanded 25 input hashes remain unchanged. No native, source, saved-review or history bytes were edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T201922Z-mafenide-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Mafenide: coherent free-base identity with a DHPS evidence conflict and brand
+  alias'
+started_at: '2026-10-21T20:11:14Z'
+finished_at: '2026-10-21T20:19:22Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The entire native record and actual ARO, ChEBI and BindingDB source rows
+  were reviewed. Nine native and current chemical encodings agree on neutral mafenide.
+  A compound-specific original reports no DHPS inhibition under its experimental conditions,
+  creating a material conflict with the retained direct-binding target assertion that
+  needs explicit adjudication. Sulfamylon is a brand for an acetate preparation and
+  should not be typed as an exact chemical synonym. Both carbonic anhydrase measurements
+  reproduce in live BindingDB, but their original full tables and the specific mycobacterial
+  strain mapping remain unverified.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/mafenide.yaml
+    sha256: 46c9cb7c06dcc0b832de9fa873e7721a2f88e934edd6bc3d709b59fd0b0ebc71
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/bindingdb_target_measurements.tsv
+    sha256: faccfe5634f467801aeb256e6560af09d193cdb53bdbf29dea195c9c0488c480
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: scripts/extract_bindingdb_targets.py
+    sha256: 9914a61b93326808b9800f3680dc935af2abcfa1e9925d6c3dd39180dbc78a2d
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+targets:
+- target_id: CHEBI:6633
+  path: data/antibiotics/antibacterial/mafenide.yaml
+  label: mafenide
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted identity, definition, synonyms and citation lead
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted grounding structure
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted CARD resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted CARD target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/bindingdb_target_measurements.tsv
+    role: Adopted quantitative target associations
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO and ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Assigned queue position 621; one exact native record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:6633
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0. Actual execution in batch 063; chemistry
+    used 019 RDKit and schema/strict used 063 environment.
+  target_ids:
+  - CHEBI:6633
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    621
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Actual execution in batch 063; chemistry
+    used 019 RDKit and schema/strict used 063 environment.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/mafenide.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0. Actual execution in batch 063; chemistry
+    used 019 RDKit and schema/strict used 063 environment.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/mafenide.yaml --out /private/tmp/am-review-session/621-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:6633
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/mafenide.yaml
+  locator: Entire native record, including all five resistance entries, three targets
+    and five history events
+  accessed_at: '2026-10-21T20:17:36Z'
+  support: supports
+  summary: The native graph is neutral mafenide, C7H10N2O2S, with no stereocentres.
+    The record has three ARO exact synonyms, four exact xrefs, a sulfonamide parent/class,
+    five explicitly database-sourced resistance routes, one PRIMARY_EVIDENCE_NEEDED
+    CARD target and two PRIMARY_EVIDENCE BindingDB target associations. No separate
+    mode of action, activity spectrum, producer, product or causal graph objects are
+    asserted. The definition carries a broad topical-use statement.
+  snapshot_sha256: 46c9cb7c06dcc0b832de9fa873e7721a2f88e934edd6bc3d709b59fd0b0ebc71
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/chebi_antimicrobials.tsv; data/raw/aro_resistance_edges.tsv;
+    data/raw/aro_target_edges.tsv; data/raw/bindingdb_target_measurements.tsv
+  locator: Exact source rows in the captured subset; ARO row 181, ChEBI row 217, resistance
+    rows 3718–3722, target row 199 and BindingDB rows 157–158
+  accessed_at: '2026-10-21T20:17:36Z'
+  support: context_only
+  summary: ARO owns the definition, synonyms, class and source concept. ChEBI supplies
+    the grounding graph but is a two-star, out-of-role-scope comparator; its ten citation
+    leads are not the native ARO definition bibliography. BindingDB owns the quantitative
+    associations. All original 13 hashes were retained and actual-owner/context capture
+    expanded to 25 before detailed judgment.
+  snapshot_sha256: e8a4a19068ca9fa8b56b8587700a87be0c10931818f93c9a5027448373aef77d
+- evidence_id: local-search
+  kind: search
+  reference: /private/tmp/am-review-session/621-context-search.txt
+  locator: Exact ID, structure key and mafenide search including hidden and ignored
+    files
+  accessed_at: '2026-10-21T20:17:36Z'
+  support: context_only
+  summary: The search covered curation, conf, scripts, data/raw and reports, with
+    preserved initial local hits. No exact curator override or CARD evidence-review
+    adjudication for this compound was located within that bounded scope. Source-owned
+    claims remain source-owned.
+  snapshot_sha256: 8cd0a4bad087aef5aa4fda9f7f4426734ad0789fe2e528c852ac120b0467e9ce
+  search_scope: rg --no-ignore --hidden -n -i mafenide|ARO:3000684|CHEBI:6633|TYMRLRRVMHJFTF
+    in curation, conf, scripts, data/raw and reports, plus preserved initial local
+    hits.
+- evidence_id: adapter
+  kind: search
+  reference: https://imodulondb.org/api/datasets
+  locator: Structured catalog and three searches before open-ended literature research
+  accessed_at: '2026-10-21T20:17:36Z'
+  support: context_only
+  summary: The initial sandbox request failed DNS; free public retry succeeded. E.
+    coli precise1k folP returned b3177; S. pyogenes modulome folP returned SP5448_05480;
+    M. tuberculosis modulome carbonic-anhydrase search returned Rv1284, Rv3273 and
+    Rv3588c. All returned zero iModulons. No Cryptococcus dataset was listed. These
+    are contextual gene mappings, not mafenide inhibition, resistance or CAS/NITR204
+    assay evidence.
+  snapshot_sha256: 0e8179a02caf82a77a479c649b2a0841c0357000d03fe96672c3939e88cd9756
+  search_scope: Catalog followed by folP searches in e_coli/precise1k and s_pyogenes/modulome,
+    and carbonic anhydrase in m_tuberculosis/modulome; no component result required
+    summarize.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/6633/
+  locator: Current exact authority response
+  accessed_at: '2026-10-21T20:13:01.667311Z'
+  support: supports
+  summary: Current CHEBI:6633 retains the native free-base encodings and composition.
+    It explicitly types Sulfamylon as BRAND NAME. Other source-only salt aliases are
+    not asserted native synonyms and are not findings on this record.
+  snapshot_sha256: d009690c5eacfd18898536fe767dc72dc4de8d6cf40317142b39032a460b639b
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/3998/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: Current exact authority response
+  accessed_at: '2026-10-21T20:13:01.667544Z'
+  support: supports
+  summary: Asserted CID3998 has the native exact free-base key, composition and neutral
+    charge.
+  snapshot_sha256: f9749d830e8f9c6c0eb02262614d12c7083fb3d0bdf3e96f0b24c77cdbc6e1d5
+- evidence_id: chembl
+  kind: authority
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL419.json
+  locator: Current exact authority response
+  accessed_at: '2026-10-21T20:13:01.667755Z'
+  support: supports
+  summary: Asserted CHEMBL419 supplies matching SMILES, InChI and molfile. These three
+    encodings were parsed independently.
+  snapshot_sha256: ce777fae5ca18aa57fdbd25b5cde150e43391a3ed37dac4d71e72781aa5bafad
+- evidence_id: chemistry
+  kind: validation
+  reference: /private/tmp/am-review-session/621-authority-chemistry.json
+  locator: Nine actual encodings calculated with RDKit 2026.03.5 in 019, cwd 063
+  accessed_at: '2026-10-21T20:17:36Z'
+  support: supports
+  summary: Native 2, ChEBI 2, PubChem 2 and ChEMBL 3 encodings all give TYMRLRRVMHJFTF-UHFFFAOYSA-N,
+    neutral C7H10N2O2S, with no stereocentres. Native mass 186.236 and exact mass
+    186.0463 agree with calculation. The source mint reproduces. This is a free-base
+    graph, not acetate salt or formulated cream.
+  snapshot_sha256: 582310590458b267193f994090a0658173fbba82ca2c873a41ff0e97f3c7e6fe
+- evidence_id: aro-identity
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000684
+  locator: Current ARO identity term and declared exact cross-references
+  accessed_at: '2026-10-21T20:13:02.699150Z'
+  support: supports
+  summary: ARO3000684 resolves to mafenide and retains the native definition, synonyms
+    and CAS/ChEBI/ChEMBL/PubChem associations. The broader sulfonamide class is structurally
+    compatible; its generic mechanism wording does not establish mafenide-specific
+    DHPS inhibition. Ambamide and maphenide are retained by current ChEBI as name
+    synonyms.
+  snapshot_sha256: b6e50e76700070017ca5f6d52ac7ff087641877a4332bf45703fee9011abb5c2
+- evidence_id: aro-parent
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/aro/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FARO_3000282
+  locator: Current sulfonamide-antibiotic definition
+  accessed_at: '2026-10-21T20:13:03.017873Z'
+  support: partial
+  summary: The term denotes synthetic antibacterial compounds with a sulfonamide group.
+    The native molecule contains a primary arylsulfonamide and is an antibacterial
+    drug. The term also describes typical DHPS inhibition; that general class explanation
+    must not override contradictory compound-specific evidence.
+  snapshot_sha256: b495778d90079b0f247948bacfbaf6179fc32057bd1033ecfb4d8774827f837d
+- evidence_id: cas
+  kind: authority
+  reference: https://commonchemistry.cas.org/api/detail?cas_rn=138-39-6
+  locator: CAS138-39-6 direct request
+  accessed_at: '2026-10-21T20:13:01.668307Z'
+  support: unknown
+  summary: The registry API returned401. Matching CAS assertions in current ARO and
+    ChEBI are corroborative source metadata, not independent inspection of the CAS
+    registry structure. No chemical-xref defect is inferred from access failure.
+  snapshot_sha256: 3e7db788e384631f8a9f299d1797e6f8af6d16d643a1c91f9e83ae15212de45c
+- evidence_id: card-current
+  kind: authority
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Exact seven term blocks extracted from same-day official snapshot426-current-aro.obo
+  accessed_at: '2026-10-21T15:57:42Z'
+  support: context_only
+  summary: The inspected official blocks retain all five mafenide resistance associations
+    and the DHPS targeted_by_antibiotic edge. Their definitions concern sul1, sul2,
+    sul3 and the named folP routes. This establishes faithful source propagation,
+    not primary validation of each mafenide phenotype. The original official snapshot
+    hash and access time are retained in 426-fetch2-results.json.
+  snapshot_sha256: d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+- evidence_id: adopted-definition
+  kind: database
+  reference: PMID:4948236; DOI:10.2165/00003495-197101060-00002
+  locator: Complete bibliographic record; no abstract supplied
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: The adopted definition citation is a 1971 review of mafenide acetate cream.
+    It is not a primary free-base experiment. The publisher request returned challenge
+    HTML, so its full conclusions were not read. The broad topical-use statement is
+    independently corroborated by the official product label; no quantitative assay
+    is inferred from this unread review.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: dailymed
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/008eaa23-8f19-4e39-85ff-540c1c834a9e.xml
+  locator: Official SPL description, clinical pharmacology, indication and precautions;
+    current version 2
+  accessed_at: '2026-10-21T20:13:39.882744Z'
+  support: partial
+  summary: Sulfamylon is explicitly an acetate-containing cream whose strength is
+    expressed as85 mg mafenide base per gram. The label supports topical adjunctive
+    treatment of second- and third-degree burns and identifies the branded preparation.
+    Its carbonic-anhydrase warning concerns drug/metabolite effects in patients and
+    does not prove a microbial antibacterial target. This product is not exact chemical
+    equivalence with the neutral native graph.
+  snapshot_sha256: 5db529c8a8fa15a38f0b0990cc86b90ebe77ad8993c4c5b1689bad79d76d55a0
+- evidence_id: dhps-original
+  kind: primary_source
+  reference: PMID:2108114; DOI:10.1093/jac/25.1.25
+  locator: Complete original abstract, independently resolved through EuropePMC and
+    publisher metadata
+  accessed_at: '2026-10-21T20:13:39.819021Z'
+  support: refutes
+  summary: The original compares intact Pseudomonas aeruginosa and Escherichia coli
+    and reports that pABA did not prevent or reverse mafenide growth inhibition. Its
+    enzyme-level result explicitly states that mafenide did not inhibit DHPS. This
+    directly contradicts an unqualified mechanistic interpretation of the retained
+    DHPS edge, within the reported conditions. Full methods, concentrations, enzyme
+    preparations and reagent salt were not recovered; the result is not generalized
+    to every organism or all possible conditions.
+  snapshot_sha256: f079db279f32bdb679e66e4e4dec48a1781f06303148dbb7c3132f9ed68635fb
+- evidence_id: mtb-original
+  kind: primary_source
+  reference: PMID:19338333; DOI:10.1021/jm9003126
+  locator: Complete original abstract
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: partial
+  summary: The original identifies the Rv3273 product as mtCA3 and reports biochemical
+    inhibition screening. Its abstract does not supply the mafenide row or establish
+    CAS/NITR204 as the experimental strain. Thus it validates the paper and broad
+    enzyme subject, while the exact7330 nM datum and strain-specific material mapping
+    still require the full original.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: fungal-original
+  kind: primary_source
+  reference: PMID:19450983; DOI:10.1016/j.bmc.2009.05.002
+  locator: Complete original abstract
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: partial
+  summary: The study concerns Candida albicans Nce103 and explicitly discusses comparison
+    with Cryptococcus neoformans Can2. The Candida title therefore does not itself
+    invalidate a Can2 comparator measurement. The mafenide18490 nM Can2 row and whether
+    it is new or reused comparison data were not verified in the inaccessible original
+    tables.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: binding-mtb
+  kind: database
+  reference: https://www.bindingdb.org/rwd/jsp/dbsearch/Summary_ki.jsp?entryid=3201&reactant_set_id=53332
+  locator: Exact reaction details and molecule/target descriptors
+  accessed_at: '2026-10-21T20:14:33.420135Z'
+  support: partial
+  summary: Live exact entry 3201/reactant 53332 gives mafenide BDBM10860, Ki 7330
+    nM, pH 8.3,293.15 K, mtCA3 and the retained R4ML78 sequence association. The page
+    names M. tuberculosis generally; the native CAS/NITR204 taxon derives from the
+    mapped protein, not an independently inspected original material description.
+  snapshot_sha256: 94f2f7d330eda09126ca0346fd14be4801f5b0e5d4d296811e8807e28705df7f
+- evidence_id: binding-fungal
+  kind: database
+  reference: https://www.bindingdb.org/rwd/jsp/dbsearch/Summary_ki.jsp?entryid=3445&reactant_set_id=60913
+  locator: Exact reaction details and molecule/target descriptors
+  accessed_at: '2026-10-21T20:14:33.472258Z'
+  support: partial
+  summary: Live exact entry 3445/reactant 60913 gives the same mafenide graph and
+    Ki 18490 nM for Can2, labelled Cryptococcus neoformans var. grubii. This reproduces
+    the database datum and comparative-enzyme association without proving a fungal
+    whole-cell endpoint.
+  snapshot_sha256: b84474b673c39b37171ef8bea15672318c9a7a77eb71513a7def6fd8939c11fa
+- evidence_id: assay-mtb
+  kind: database
+  reference: https://www.bindingdb.org/rwd/jsp/dbsearch/assay.jsp?assayid=1&entryid=3201
+  locator: Complete assay description
+  accessed_at: '2026-10-21T20:16:01.731165Z'
+  support: supports
+  summary: The database description matches the native stopped-flow CO2 hydration
+    assay, phenol-red 557 nm detection, fitted inhibition constants and at least three
+    determinations. Enzyme inhibition is a measured target association, not microbial
+    MIC, target engagement in cells or proof of the therapeutic mechanism.
+  snapshot_sha256: cfd9fb6761cbb52a613d2e9ab7636a561d62d72512e048d1ed35481946c2ec4d
+- evidence_id: assay-fungal
+  kind: database
+  reference: https://www.bindingdb.org/rwd/jsp/dbsearch/assay.jsp?assayid=1&entryid=3445
+  locator: Complete assay description
+  accessed_at: '2026-10-21T20:16:01.731395Z'
+  support: supports
+  summary: The database description matches the native stopped-flow CO2 hydration
+    assay, phenol-red 557 nm detection, fitted inhibition constants and at least three
+    determinations. Enzyme inhibition is a measured target association, not microbial
+    MIC, target engagement in cells or proof of the therapeutic mechanism.
+  snapshot_sha256: 479bae4cfb6124b786acf90cc206a14e97067b7d6a52077518264b7dde091aba
+- evidence_id: uniprot-mtb
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/R4ML78.json
+  locator: Current exact accession state
+  accessed_at: '2026-10-21T20:13:02.027368Z'
+  support: unknown
+  summary: R4ML78 is currently inactive/deleted because it is not part of a reference
+    proteome. That current administrative state alone does not falsify the historically
+    timestamped UNREVIEWED record. Its linkage to the actual2009 recombinant enzyme
+    and native CAS/NITR204 assignment remains unresolved; no automatic replacement
+    accession is proposed.
+  snapshot_sha256: 685bc66f6508dc288b1f024809f21bd3f71d0427473c0d5cccdbf6df910fe179
+- evidence_id: uniprot-fungal
+  kind: authority
+  reference: https://rest.uniprot.org/uniprotkb/Q3I4V7.json
+  locator: Current accession organism, Can2 annotation and sequence
+  accessed_at: '2026-10-21T20:13:02.406468Z'
+  support: partial
+  summary: Q3I4V7 resolves as an unreviewed C. neoformans protein at taxon 5207, consistent
+    with the retained example at the database level. Original preparation/strain boundaries
+    still depend on the primary paper.
+  snapshot_sha256: 462862c29c6dec23dae5d61fa778cee04bf5bf2260c66f168c1550d308672139
+- evidence_id: card-lead-21537009
+  kind: primary_source
+  reference: PMID:21537009; DOI:10.1128/aac.00221-11
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: AbaR genomic-resistance-island diversity study; the abstract does not establish
+    a mafenide-specific route. Full papers were not inspected in this bounded route
+    audit, so absence from the abstract is not proof that no relevant result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-19075060
+  kind: primary_source
+  reference: PMID:19075060; DOI:10.1128/aac.00970-08
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Plasmid sequencing and qnrB2/ISCR1 mobilization; the abstract is not a
+    mafenide assay. Full papers were not inspected in this bounded route audit, so
+    absence from the abstract is not proof that no relevant result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-18753343
+  kind: primary_source
+  reference: PMID:18753343; DOI:10.1128/jcm.00835-08
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Class1 integron and multidrug-resistance population study; the abstract
+    supplies no mafenide-specific experiment. Full papers were not inspected in this
+    bounded route audit, so absence from the abstract is not proof that no relevant
+    result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-17827139
+  kind: primary_source
+  reference: PMID:17827139; DOI:10.1093/jac/dkm336
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Salmonella resistance genetics; abstract specifically names trimethoprim-sulfamethoxazole
+    among tested resistance phenotypes. Full papers were not inspected in this bounded
+    route audit, so absence from the abstract is not proof that no relevant result
+    exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-17158944
+  kind: primary_source
+  reference: PMID:17158944; DOI:10.1128/aac.01345-06
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: RmtD/SPM-1 study in P. aeruginosa; reported aminoglycoside and beta-lactam
+    findings do not independently validate mafenide-sul1 activity. Full papers were
+    not inspected in this bounded route audit, so absence from the abstract is not
+    proof that no relevant result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-15722395
+  kind: primary_source
+  reference: PMID:15722395; DOI:10.1093/jac/dki015
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Salmonella resistance-region comparison; abstract supplies genomic linkage
+    rather than exact mafenide phenotype. Full papers were not inspected in this bounded
+    route audit, so absence from the abstract is not proof that no relevant result
+    exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-12604565
+  kind: primary_source
+  reference: PMID:12604565; DOI:10.1128/aac.47.3.1169-1172.2003
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Original sul3 cloning study explicitly establishes sulfamethoxazole resistance
+    in E. coli. It is not automatically a mafenide experiment. Full papers were not
+    inspected in this bounded route audit, so absence from the abstract is not proof
+    that no relevant result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-12111724
+  kind: database
+  reference: PMID:12111724; DOI:10.1002/bies.10114
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Secondary folate-pathway review, not an original mafenide target experiment.
+    Full papers were not inspected in this bounded route audit, so absence from the
+    abstract is not proof that no relevant result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-11432417
+  kind: database
+  reference: PMID:11432417; DOI:10.1051/vetres:2001123
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Secondary review of sulfonamide and trimethoprim resistance; not direct
+    mafenide experimental evidence. Full papers were not inspected in this bounded
+    route audit, so absence from the abstract is not proof that no relevant result
+    exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-9593127
+  kind: primary_source
+  reference: PMID:9593127; DOI:10.1128/aac.42.5.1062
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Original S. pyogenes folP study establishes sequence differences and sulfathiazole
+    enzyme affinity. It is not direct proof for mafenide. Full papers were not inspected
+    in this bounded route audit, so absence from the abstract is not proof that no
+    relevant result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: card-lead-9449266
+  kind: primary_source
+  reference: PMID:9449266; DOI:10.1128/aac.42.1.88
+  locator: Complete original abstract of the current ARO definition citation
+  accessed_at: '2026-10-21T20:15:11.927238Z'
+  support: context_only
+  summary: Original E. coli folP Pro64Ser study tests sulfathiazole; background modifiers
+    affect the observed resistance level. No mafenide allele-level claim is inferred.
+    Full papers were not inspected in this bounded route audit, so absence from the
+    abstract is not proof that no relevant result exists.
+  snapshot_sha256: 93102da0d6bfa0af972713c571221476ba74738984464493ae814985b2f5e5ed
+- evidence_id: chebi-lead-10411484
+  kind: primary_source
+  reference: PMID:10411484
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: New water-soluble sulfonamide derivatives and ocular effects. These ten
+    leads belong to the ChEBI grounding row, rather than the native ARO source concept.
+    Exact parent-compound rows and primary tables were not recovered; derivative,
+    mammalian or computational effects are not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-10479300
+  kind: primary_source
+  reference: PMID:10479300
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: Aminoacyl/dipeptidyl derivative synthesis and ocular effects. These ten
+    leads belong to the ChEBI grounding row, rather than the native ARO source concept.
+    Exact parent-compound rows and primary tables were not recovered; derivative,
+    mammalian or computational effects are not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-10649985
+  kind: primary_source
+  reference: PMID:10649985
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: Charged, membrane-impermeant derivatives and animal perfusion assays. These
+    ten leads belong to the ChEBI grounding row, rather than the native ARO source
+    concept. Exact parent-compound rows and primary tables were not recovered; derivative,
+    mammalian or computational effects are not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-10843231
+  kind: primary_source
+  reference: PMID:10843231
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: N-morpholylthiocarbonylsulfenyl derivatives and CA/tumour-cell experiments.
+    These ten leads belong to the ChEBI grounding row, rather than the native ARO
+    source concept. Exact parent-compound rows and primary tables were not recovered;
+    derivative, mammalian or computational effects are not transferred to bacterial
+    targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-11229775
+  kind: primary_source
+  reference: PMID:11229775
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: DTPA derivatives and zinc complexes. These ten leads belong to the ChEBI
+    grounding row, rather than the native ARO source concept. Exact parent-compound
+    rows and primary tables were not recovered; derivative, mammalian or computational
+    effects are not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-11906288
+  kind: primary_source
+  reference: PMID:11906288
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: Polyamino-polycarboxylate derivatives and metal complexes. These ten leads
+    belong to the ChEBI grounding row, rather than the native ARO source concept.
+    Exact parent-compound rows and primary tables were not recovered; derivative,
+    mammalian or computational effects are not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-12565948
+  kind: primary_source
+  reference: PMID:12565948
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: QSAR modelling by molecular negentropy. These ten leads belong to the ChEBI
+    grounding row, rather than the native ARO source concept. Exact parent-compound
+    rows and primary tables were not recovered; derivative, mammalian or computational
+    effects are not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-12643899
+  kind: primary_source
+  reference: PMID:12643899
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: Tumour-associated CAIX inhibition by a sulfonamide panel. These ten leads
+    belong to the ChEBI grounding row, rather than the native ARO source concept.
+    Exact parent-compound rows and primary tables were not recovered; derivative,
+    mammalian or computational effects are not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-14971907
+  kind: primary_source
+  reference: PMID:14971907
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: Murine mitochondrial CAV inhibition panel, with other isoenzymes for comparison.
+    These ten leads belong to the ChEBI grounding row, rather than the native ARO
+    source concept. Exact parent-compound rows and primary tables were not recovered;
+    derivative, mammalian or computational effects are not transferred to bacterial
+    targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: chebi-lead-15149691
+  kind: primary_source
+  reference: PMID:15149691
+  locator: Complete original abstract from additional adopted grounding-row citation
+    list
+  accessed_at: '2026-10-21T20:13:01.673929Z'
+  support: context_only
+  summary: CAIX QSAR analysis. These ten leads belong to the ChEBI grounding row,
+    rather than the native ARO source concept. Exact parent-compound rows and primary
+    tables were not recovered; derivative, mammalian or computational effects are
+    not transferred to bacterial targets.
+  snapshot_sha256: 61f900b2f05a5217ea622225f8ed17cc4d93e474a31edbbf6a1389b5a3f73eec
+- evidence_id: activity2024
+  kind: primary_source
+  reference: PMID:38247601; DOI:10.3390/antibiotics13010042; https://pmc.ncbi.nlm.nih.gov/articles/PMC10812663/
+  locator: Original abstract, main results, methods 4.1–4.7 and captions 1–4; full
+    XML available
+  accessed_at: '2026-10-21T20:13:39.885202Z'
+  support: partial
+  summary: The exact test material is a 5% mafenide acetate solution from the Cologne
+    hospital pharmacy, tested against P. aeruginosa DSM939. The 15 min suspension
+    assay gives a reported 1.23log10 CFU reduction; the prolonged ex-vivo skin-wound
+    treatment gives about 3.6 log10 reduction. These are preparation- and assay-specific
+    CFU endpoints, not free-base MICs or clinical efficacy. Biofilm staining and viable
+    counts are distinct measurements. Actual image downloads returned403, so plotted
+    points were not independently inspected.
+  snapshot_sha256: 323b4038699c6592c6dd660634a07f1fc09487588038cf038264e1d12ecebdad
+- evidence_id: search-access
+  kind: search
+  reference: /private/tmp/am-review-session/621-discovery.json
+  locator: Bounded EuropePMC query plus exact DOI/title full-text searches
+  accessed_at: '2026-10-21T20:13:01.675799Z'
+  support: context_only
+  summary: 'The stored mafenide mechanism/resistance discovery query returned53 records;
+    all titles and selected exact leads were inspected. Publisher full text for1990
+    and both2009 papers was inaccessible. Kent and Florence repositories explicitly
+    had no full paper; the 2009 PDF mirror timed out. The 2023 derivative study was
+    a discovery lead only: local publisher/author-page requests were403, so no quantitative
+    table is adopted from search excerpts.'
+  snapshot_sha256: e6b4ade9197fb383957247d4a31bd88ddbd14770b7953622ba4f5893bb48e923
+  search_scope: EuropePMC TITLE_ABS:mafenide AND (mechanism OR dihydropteroate OR
+    sulfonamide OR carbonic OR resistance), all 53 titles; subsequent exact PMID,
+    DOI and title routes. Not an exhaustive history of every mafenide publication.
+- evidence_id: access-manifests
+  kind: validation
+  reference: /private/tmp/am-review-session/621-fetch1.json; /private/tmp/am-review-session/621-fetch2.json;
+    /private/tmp/am-review-session/621-fetch3.json; /private/tmp/am-review-session/621-fetch4.json;
+    /private/tmp/am-review-session/621-fetch5.json
+  locator: Actual retrieval statuses, timestamps and bytes
+  accessed_at: '2026-10-21T20:17:36Z'
+  support: context_only
+  summary: Authority and database records were read from successful snapshots. CAS
+    returned401; publisher routes returned403 or challenge HTML; the original2009
+    mirror failed connections; attempted2024 figure PNGs returned403. HTTP200 challenge
+    pages were not treated as full papers.
+  snapshot_sha256: b189e0bf4841eca6b41ec9aef64af3c8975b2634edb9fba5df241c98a1244cf6
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact free base and brand distinction
+  outcome: supported
+  summary: Nine native/authority encodings agree on neutral mafenide and its exact
+    chemical identifiers. Ambamide and maphenide remain compatible source names. Sulfamylon
+    is a branded acetate preparation and needs synonym typing correction without changing
+    the valid free-base graph.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - pubchem
+  - chembl
+  - aro-identity
+  - dailymed
+- assessment_id: grounding
+  area: grounding
+  topic: Chemical cross-references and class
+  outcome: supported
+  summary: ChEBI grounding, ARO identity, ChEMBL and PubChem exact graphs agree. The
+    sulfonamide structural class is appropriate. CAS direct registry access remains
+    unavailable. Class membership is not treated as sufficient proof of DHPS inhibition.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - chemistry
+  - aro-identity
+  - aro-parent
+  - cas
+- assessment_id: mechanism
+  area: evidence
+  topic: Compound-specific contradiction to the retained DHPS edge
+  outcome: concern
+  summary: Native target 0 honestly declares CARD_ARO and PRIMARY_EVIDENCE_NEEDED,
+    but still asserts DIRECT_BINDING_TARGET and an inhibited enzyme. Original PMID2108114
+    reports the opposite enzyme result in the tested systems. This is positive contradictory
+    evidence that needs an explicit source adjudication; it is not a new finding based
+    merely on absent literature. Its abstract-level limits do not justify claiming
+    universal nonbinding or rejecting every folP/sul route.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - native
+  - card-current
+  - dhps-original
+  - card-lead-12111724
+  - adapter
+- assessment_id: resistance
+  area: evidence
+  topic: Five database assertions and compound-specific limits
+  outcome: unknown
+  summary: All five imported routes reproduce in the official ARO snapshot and are
+    labelled database assertions in the native record. Their eleven upstream definition
+    leads were read as complete abstracts. Several explicitly test other sulfonamides;
+    these observations do not alone prove the mafenide associations false. The DHPS
+    conflict warrants compound-specific follow-up, with no automatic deletion of all
+    five routes or invented strain/allele data.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - native
+  - card-current
+  - dhps-original
+  - card-lead-21537009
+  - card-lead-19075060
+  - card-lead-18753343
+  - card-lead-17827139
+  - card-lead-17158944
+  - card-lead-15722395
+  - card-lead-12604565
+  - card-lead-12111724
+  - card-lead-11432417
+  - card-lead-9593127
+  - card-lead-9449266
+- assessment_id: bindingdb
+  area: evidence
+  topic: Quantitative enzyme associations and exact preparation boundaries
+  outcome: unknown
+  summary: Both native Ki values and assay descriptions reproduce in live BindingDB.
+    Original abstracts confirm mtCA3 and a Nce103/Can2 comparison. Exact primary tables,
+    reagent form and the mycobacterial recombinant construct/strain remain unverified.
+    The current deletion of R4ML78 is not by itself proof of erroneous historical
+    metadata. Neither biochemical value is converted into antimicrobial mechanism
+    or MIC.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - mtb-original
+  - fungal-original
+  - binding-mtb
+  - binding-fungal
+  - assay-mtb
+  - assay-fungal
+  - uniprot-mtb
+  - uniprot-fungal
+- assessment_id: activity
+  area: evidence
+  topic: Topical antibacterial scope and salt preparation
+  outcome: supported
+  summary: The official label and primary2024 preparation experiment support the broad
+    antibacterial topical-use context. Their acetate preparation endpoints remain
+    separate from exact neutral-graph assay measurements. No antibacterial role is
+    removed because the record lacks an optional structured spectrum, and no host
+    CA effect is recast as a microbial therapeutic mechanism.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - dailymed
+  - activity2024
+  - adopted-definition
+- assessment_id: completeness
+  area: completeness
+  topic: Optional fields and evidence placement
+  outcome: unknown
+  summary: No missing optional mode, activity, producer, product or causal graph field
+    is itself a defect. Evidence is attached to all imported mechanism objects, with
+    clear database notes. Exact primary enzyme and resistance follow-up remains bounded
+    by unavailable originals. No native quotation snippet is present to assess.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - native
+  - search-access
+  - access-manifests
+- assessment_id: provenance
+  area: provenance
+  topic: Complete native audit and reproducible ownership
+  outcome: supported
+  summary: All native fields, source rows and five history events were read. ARO supplies
+    the native definition lead; BindingDB supplies two native primary citations; all
+    ten additional ChEBI grounding-row abstracts and eleven current ARO upstream abstracts
+    were also disposed. Original 13 and expanded 25 input hashes remain unchanged.
+    No scientific status or native history was altered.
+  target_ids:
+  - CHEBI:6633
+  evidence_ids:
+  - native
+  - owners
+  - local-search
+  - adopted-definition
+  - mtb-original
+  - fungal-original
+  - access-manifests
+findings:
+- finding_id: F1
+  issue_key: mafenide-dhps-target-primary-counterevidence
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The retained DHPS target conflicts with a compound-specific original experiment
+  description: Molecular target 0 is explicitly an unconfirmed CARD assertion, but
+    its relation and context still state direct DHPS targeting and inhibition. Original
+    PMID2108114 reports no DHPS inhibition under its experimental conditions and pABA-insensitive
+    whole-cell inhibition. The record does not capture this material contradiction.
+    The required correction is evidence adjudication and an appropriately qualified
+    or withheld target claim; the abstract does not prove universal absence of binding,
+    identify every reagent detail or refute all five resistance associations.
+  target_ids:
+  - CHEBI:6633
+  field_paths:
+  - molecular_targets[0].target_relation
+  - molecular_targets[0].experimental_context
+  - molecular_targets[0].evidence
+  evidence_ids:
+  - native
+  - card-current
+  - dhps-original
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted CARD target association
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained compound-specific CARD evidence adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated target field owner
+  rule_id: 'review-yaml-record: compound-specific mechanism evidence and preserved
+    conflicts'
+  normalization_reason: Major mechanistic conflict supported by an original negative
+    enzyme result. The existing PRIMARY_EVIDENCE_NEEDED qualifier is acknowledged,
+    and missing evidence alone is not the finding.
+- finding_id: F2
+  issue_key: mafenide-sulfamylon-brand-exact-synonym
+  category: identity
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Sulfamylon is typed as an exact chemical synonym instead of a brand name
+  description: The official SPL identifies Sulfamylon as a mafenide acetate cream,
+    and current ChEBI explicitly types the name as a brand. Native synonyms[2] instead
+    declares EXACT_SYNONYM for the neutral free-base record. Preserve the useful drug-brand
+    association with the appropriate synonym type or explicit product qualification.
+  target_ids:
+  - CHEBI:6633
+  field_paths:
+  - synonyms[2]
+  evidence_ids:
+  - native
+  - chebi
+  - dailymed
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO synonyms
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym field owner
+  rule_id: 'review-yaml-record: identity and synonym typing'
+  normalization_reason: Minor bounded brand/provenance typing error; the main identity,
+    free-base structure and chemical xrefs remain coherent.
+actions:
+- action_id: A1
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:6633
+  description: Adjudicate the mafenide-specific CARD DHPS edge against the original
+    negative enzyme study through maintained source evidence handling.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted CARD target association
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained compound-specific CARD evidence adjudication
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated target field owner
+  generator: scripts/seed_from_sources.py
+  acceptance_checks:
+  - Record PMID2108114 and its actual abstract-level reading limits, preserving the
+    original CARD provenance and explicit negative result.
+  - Recover the full original methods before asserting a universal nonbinding result
+    or an exact enzyme preparation; qualify or withhold the conflicting direct-target
+    claim according to the evidence-review mechanism.
+  - Evaluate each sul/folP resistance route separately if further curation is proposed;
+    do not delete all five solely by analogy.
+  - Regenerate and run focused validation, corpus reproduction and required shared
+    gates.
+- action_id: A2
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:6633
+  description: Correct Sulfamylon synonym typing in maintained ARO name handling and
+    regenerate.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO synonyms
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated synonym field owner
+  generator: scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  acceptance_checks:
+  - Represent Sulfamylon as a brand association with the acetate-preparation context,
+    rather than exact chemical equivalence.
+  - Retain the native free-base graph, valid chemical xrefs and other supported synonyms.
+  - Regenerate through the validated writer and rerun focused and shared checks.
+limitations:
+- The 1990 DHPS paper was read as its complete original abstract. Full methods, drug
+  concentration/form and enzyme preparation were inaccessible; the negative result
+  is restricted to its stated experimental context.
+- Both 2009 target papers were read as complete original abstracts, with exact live
+  BindingDB reaction and assay pages independently checked. Original tables, mafenide
+  reagent form and the specific CAS/NITR204 mapping were not verified; the Can2 comparator
+  must not be dismissed solely because the paper title names Candida.
+- The 1971 definition citation is a review with no abstract, and its full text was
+  blocked by a publisher challenge. The ten ChEBI-grounding and eleven current ARO
+  definition leads were read at abstract depth, not full-table depth. Absence from
+  an abstract is not proof of absence from the original.
+- The 2024 acetate study was read for relevant original main results, methods and
+  captions. Actual figure-image retrieval failed; reported numerical CFU reductions
+  were not independently read from plotted points and are not transferred as free-base
+  MICs.
+- CAS registry access returned401. The current R4ML78 deletion does not establish
+  that historically recorded unreviewed metadata was false.
+- Discovery was bounded to the stored 53-title query and selected exact-source routes.
+  The 2023 imine study remained a discovery lead; its derivative values are not assigned
+  to mafenide.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Original 13 and expanded 25 input hashes remain unchanged. No native, source, saved-review
+  or history bytes were edited.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
