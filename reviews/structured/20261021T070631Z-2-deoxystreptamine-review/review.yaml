@@ -1,0 +1,639 @@
+schema_version: 1.0.0
+review_id: 20261021T070631Z-2-deoxystreptamine-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of CHEBI:28295 (2-deoxystreptamine)
+started_at: '2026-10-21T06:55:18Z'
+finished_at: '2026-10-21T07:06:31Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; inspection and input hashes were captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Exact identity and source-derived filing supported; standalone activity
+  scope and mechanism require qualification
+scientific_review: true
+summary: The exact neutral aminocyclitol is internally consistent and independently
+  corroborated; per-record validators pass. The ChEBI role includes active constituents,
+  while source-linked papers concern engineered biosynthesis or modified analogues.
+  One minor finding asks for explicit experimental scope qualification. Neither universal
+  inactivity nor an exact antimicrobial target is established.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/2-deoxystreptamine.yaml
+    sha256: aeaa6a8669a6a06abf571527488e98906b7dba97383fccb5a5e1293c1557c86a
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: All fields of one generated record, maintained source row and ownership,
+    official identity/xrefs, both source-linked primary abstracts and the relevant
+    standalone-assay primary text.
+  selection: Sixteenth path-ordered unreviewed target assigned by the parent task;
+    exactly one record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:28295
+targets:
+- target_id: CHEBI:28295
+  path: data/antibiotics/antibacterial/2-deoxystreptamine.yaml
+  label: 2-deoxystreptamine
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/2-deoxystreptamine.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file scanned, zero ERROR rows.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/2-deoxystreptamine.yaml --out /private/tmp/am-review-session/016-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Independent molecular and internal identifier consistency
+  status: passed
+  required: false
+  summary: Both encodings reproduce structure identifiers, formula, charge, masses
+    and the minted identity.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/016-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: The record has no named gene, protein, regulator, stress response or transcriptomic
+    dataset to cross-check. Biosynthesis and resistance proteins in literature are
+    contextual leads, not asserted record targets. No negative biological inference
+    follows.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:28295
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/2-deoxystreptamine.yaml
+  locator: Entire generated AntibioticRecord
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: Read exact neutral identity, structural definition, five synonyms, one
+    parent, antibacterial role, all structure fields, five xrefs, source concept and
+    all three seed/reseed events. No mode, molecular target, evidence, activity, resistance,
+    producer, clinical, graph or dataset assertion is present.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:28295 row and header; data/raw/MANIFEST.yaml
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: The 3-star source row agrees with the record and supplies PMID:23108876
+    and PMID:24440302 as literature leads. mechanism_role_ids is empty. Source version
+    agrees with the adopted retrieval date. Ignored-inclusive search found no matching
+    maintained decision or curator seed row.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/seed_from_sources.py
+  locator: mint, classify, build_record, structure_from_chebi and curator-owned merge
+    logic; scripts/extract_source_inventory.py; conf/sources.yaml; docs/CURATION.md
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: The seeder copies ChEBI identity, structure, exact synonyms, direct broader
+    parent and roles, derives ANTIBACTERIAL from its sole activity role, and preserves
+    separate curator annotations. Native REVIEWED requires mechanism review. An imported-role
+    change belongs in the maintained inventory/transform or an explicit source-concept
+    decision, while annotation additions use the validated writer.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:28295
+  locator: Full official entry, reached through searchId.do redirect
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: Exact definition, five names, neutral formula/charge/masses, stereospecific
+    structure and InChIKey match. CHEBI:61689 is labelled amino cyclitol and is broader.
+    CHEBI:33282 is asserted as a role. KEGG C02627, MetaCyc CPD-10151, PDBeChem CYY,
+    CAS 2037-48-1 and Reaxys 2802188 are listed.
+- evidence_id: role
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Definition and exact-compound outgoing relation on CHEBI:28295
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: The role includes a substance or active part thereof. Consequently a role
+    on a constituent scaffold is not by itself an exact free-compound antibacterial
+    assay. This semantic scope cautions against interpreting this record as proof
+    of standalone efficacy.
+- evidence_id: kegg
+  kind: database
+  reference: https://www.kegg.jp/entry/C02627
+  locator: Name, formula, masses, CAS mapping, ChEBI mapping and biosynthetic context
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: Official entry names 2-deoxystreptamine, gives C6H14N2O3, exact mass 162.1004
+    and CAS 2037-48-1, and cross-links CHEBI:28295 and CYY. Its neomycin/kanamycin/gentamicin
+    biosynthesis links are biosynthetic context, not an antimicrobial target assignment.
+- evidence_id: ccd
+  kind: database
+  reference: https://www.rcsb.org/ligand/CYY
+  locator: Chemical component summary and descriptors
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: CYY is a NON-POLYMER chemical component, not a whole macromolecular structure.
+    Its InChI, key and CACTVS stereochemical SMILES exactly match this record, with
+    charge zero and the same formula. Reported covalently linked structural occurrences
+    do not demonstrate activity of the isolated scaffold.
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:23108876
+  locator: PubMed abstract and metadata; DOI:10.1007/s10529-012-1077-2
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: The study constructs a genetic circuit for 2-DOS production in engineered
+    E. coli BL21(DE3) and reports analytical confirmation by TLC, LC-ELSD and ESI-MS/MS.
+    It supports engineered production context, not a natural wild-type producer claim
+    or antibacterial mechanism. Full text could not be retrieved.
+- evidence_id: analogues
+  kind: primary_source
+  reference: PMID:24440302
+  locator: PubMed abstract and metadata; DOI:10.1016/j.bmcl.2013.12.125
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: The study functionalizes 2-DOS to obtain triazole-containing analogues
+    for binding and antibacterial evaluation. The inspected abstract does not establish
+    a free-scaffold ribosomal target or quantitative activity. Analogue findings must
+    not be transferred to CHEBI:28295. Publisher full-text access returned 403.
+- evidence_id: rsc-assay
+  kind: primary_source
+  reference: DOI:10.1039/C5MD00496A
+  locator: https://pubs.rsc.org/en/content/getauthorversionpdf/C5MD00496A; accepted
+    manuscript pp.5-6, In vivo activity, Table 2 and MIC method; supplementary text
+    also inspected
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: context_only
+  summary: Table 2 reports 2-DOS MIC >100 micrograms/mL for E. coli BL21(DE3), empty-vector
+    and pET-aadk contexts. The assay used Mueller-Hinton broth, 37 C, 12 hours and
+    greater than 90% growth inhibition. No AMP-2-DOS product was detected. These bounded
+    results do not establish universal inactivity or an ANT(6)-mediated resistance
+    mechanism for 2-DOS. Exact reagent preparation remains to be checked before structured
+    assay curation.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and hashlib local calculation
+  locator: /private/tmp/am-review-session/016-chemistry.py; 016-chemistry.json
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: Both molecular encodings reproduce DTFAJAKTSMLKAT-JDCCYXBGSA-N, formula
+    C6H14N2O3, charge zero, average mass 162.189 and exact mass 162.100442308. One
+    fragment and five assigned stereochemical centers were detected. The source-concept
+    minted identifier is reproduced.
+  snapshot_sha256: 5ce4f511bf026e85d87d6d891c550de5e5b149151a11158d138c9f66b379224f
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual tool executions in the isolated batch-002 checkout; /private/tmp/am-review-session/016-strict.tsv
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: supports
+  summary: LinkML validation exited 0 with No issues found. Strict validation exited
+    0 after one file with zero ERROR rows.
+- evidence_id: search
+  kind: search
+  reference: Inclusive local search and bounded free web search
+  locator: /private/tmp/am-review-session/016-local-hits.txt; web search on review
+    date
+  accessed_at: '2026-10-21T06:58:23Z'
+  support: context_only
+  summary: Generated pages and historical research are discovery context only. No
+    matching maintained override was found. Searches did not establish an exact free-compound
+    antimicrobial mechanism; this is not an exhaustive absence claim.
+  search_scope: rg --no-ignore --hidden searched identifier CHEBI:28295, label and
+    slug across working files including ignored/hidden files, excluding only .git
+    and .venv. Maintained curation tables were additionally searched for antibioticmech:chebi-6b7a612fa6.
+    Web queries included 2-deoxystreptamine antibacterial activity, 2-deoxystreptamine
+    inactive antibiotic, both PMIDs with exact-compound context, and the ANT(6) paper
+    title. Both primary abstracts and the RSC accepted-manuscript assay sections were
+    opened and read.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact chemical entity, synonyms and structure
+  outcome: supported
+  summary: The record consistently denotes the neutral, unsubstituted aminocyclitol,
+    not a glycosylated aminoglycoside, triazole analogue or conjugate acid. Structure
+    and registry checks agree. The systematic synonym and stored stereo are supported
+    by ChEBI.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+  - chebi
+  - kegg
+  - ccd
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Direct broader parent and exact registry references
+  outcome: supported
+  summary: CHEBI:61689 is labelled amino cyclitol in the exact official entry and
+    the structure contains the corresponding amino-substituted cyclitol framework.
+    It is broader, not an exact replacement. KEGG/CYY and CAS are independently corroborated;
+    MetaCyc and Reaxys remain ChEBI-supported assertions with access limits.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - chebi
+  - kegg
+  - ccd
+- assessment_id: classification
+  area: evidence
+  topic: Database role versus standalone antimicrobial evidence
+  outcome: concern
+  summary: Filing faithfully follows the imported role. Its active-part scope and
+    the inspected experimental literature require a distinction between this scaffold
+    and active derivatives. The record does not currently explain that distinction.
+    No universally false role or universal inactivity is established.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+  - inventory
+  - role
+  - analogues
+  - rsc-assay
+- assessment_id: mechanism
+  area: completeness
+  topic: Antimicrobial mode, target and scope
+  outcome: unknown
+  summary: No exact-compound antimicrobial mode or direct target is established in
+    the inspected material. Aminoglycoside-class ribosome binding, analogue binding
+    and an enzyme discussed for streptomycin must not supply this record with a mode,
+    target or resistance mechanism. Native REVIEWED criteria remain unmet.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+  - analogues
+  - rsc-assay
+  - search
+- assessment_id: activity
+  area: representation
+  topic: Assay evidence and resistance scope
+  outcome: concern
+  summary: The inspected standalone scaffold result is not represented. An evidence-linked
+    discussion can preserve its organism and assay bounds; any later numeric observation
+    needs the original reagent provenance and exact method. The result supplies no
+    clinical resistance breakpoint.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+  - rsc-assay
+- assessment_id: producer
+  area: representation
+  topic: Engineered production versus natural producer
+  outcome: unknown
+  summary: The primary abstract supports biosynthesis in an engineered host; it does
+    not identify wild-type E. coli as a natural producer. No unsupported producer
+    entry is currently asserted. Any future producer annotation must preserve the
+    engineered context and inspect full methods.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+  - biosynthesis
+- assessment_id: optional
+  area: completeness
+  topic: Clinical, graph and dataset objects
+  outcome: not_applicable
+  summary: No such objects are asserted; their absence is not a schema error. No clinical
+    benefit or molecular mechanism is inferred from scaffold identity.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+- assessment_id: provenance
+  area: ownership
+  topic: Maintained inputs and audit history
+  outcome: supported
+  summary: SEEDED and three seed/reseed events are consistent with generated provenance.
+    Captured source ownership and hashes are retained; no curation or scientific-status
+    event was added.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - record
+  - inventory
+  - ownership
+- assessment_id: schema-assessment
+  area: schema
+  topic: Per-record validation
+  outcome: supported
+  summary: Both documented per-record validators and the independent chemistry assertions
+    pass; these checks do not prove antibacterial activity.
+  target_ids:
+  - CHEBI:28295
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-28295-scaffold-activity-scope-qualification
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Scaffold activity needs explicit evidence-scope qualification
+  description: The imported role is a valid ChEBI assertion, but its active-part semantics
+    and the inspected negative assay are not explained. Source-linked biosynthesis
+    and analogue studies cannot establish this isolated scaffold as a potent antibiotic.
+    Add a bounded discussion and exact-compound evidence assessment before mechanism
+    sign-off; the finding does not declare the role wrong or all contexts inactive.
+  target_ids:
+  - CHEBI:28295
+  field_paths:
+  - activity_roles
+  - evidence
+  - activity_spectrum
+  - discussions
+  - mode_of_action_notes
+  evidence_ids:
+  - record
+  - role
+  - biosynthesis
+  - analogues
+  - rsc-assay
+  rule_id: 'review-checklist: Evidence standard, Classification, Activity, Mode of
+    action; REVIEWED gate'
+  native_severity: minor evidence-scope and contextual completeness gap
+  normalization_reason: The database role is accurately reproduced and no quantitative
+    efficacy or molecular target is asserted. The actionable defect is missing qualification
+    of a consequential evidence boundary, not proven wrong identity or universally
+    false biological activity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2-deoxystreptamine.yaml
+    role: Curator-owned evidence, discussions and activity observations through write_validated_antibiotic
+      and a curation event; imported identity and roles remain source-owned
+actions:
+- action_id: A1
+  description: In a separately authorized curation pass, add claim-level evidence
+    and a discussion distinguishing an active constituent scaffold from tested standalone
+    activity. Preserve the negative experiment within its bounds; inspect reagent
+    provenance before encoding an activity observation. Leave mechanism unresolved
+    unless exact-compound primary support is inspected.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:28295
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2-deoxystreptamine.yaml
+    role: Curator-owned evidence, discussions and activity observations through write_validated_antibiotic
+      and a curation event; imported identity and roles remain source-owned
+  acceptance_checks:
+  - No result for a glycosylated, triazole-functionalized or otherwise modified molecule
+    is assigned to this structure.
+  - Any numeric observation preserves qualifier, units, strain/vector context, method
+    and compound preparation; no species-wide inactivity or clinical resistance classification
+    is inferred.
+  - The database role is cited as such; any proposed removal or exclusion is separately
+    adjudicated in the maintained source owner and reproduced by seeding, rather than
+    silently editing a generated role.
+  - Engineered production is not relabelled as natural production, and contextual
+    enzymes are not encoded as antimicrobial targets.
+  - Use the validated writer with a curation event for annotations, then just validate,
+    just validate-strict, just verify-corpus --summary and just qc. Retain SEEDED
+    until native REVIEWED criteria are actually met.
+limitations:
+- The two source-linked papers were inspected at abstract level; publisher full text
+  could not be retrieved. No analogue target or engineered-host phenotype was transferred
+  to the record.
+- The RSC accepted manuscript assay text and supplement were inspected. Final publisher
+  HTML and PDF screenshot access failed. Exact reagent preparation and any salt specification
+  remain prerequisites for structured activity curation.
+- The standalone amino-cyclitol term page could not be retrieved; its label and is-a
+  relation were verified on the official exact-compound entry. MetaCyc access failed
+  and Reaxys was not independently accessed; both remain corroborated only through
+  ChEBI.
+- Searches are bounded and do not prove universal absence of activity or later mechanism
+  evidence. Optional missing objects alone are not schema errors.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Only scratch review artifacts were written. No source record, maintained input,
+  generated product or curation history was modified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:28295
+- https://www.ebi.ac.uk/chebi/CHEBI:33282
+- https://www.kegg.jp/entry/C02627
+- https://www.rcsb.org/ligand/CYY
+- https://pubmed.ncbi.nlm.nih.gov/23108876/
+- https://pubmed.ncbi.nlm.nih.gov/24440302/
+- https://pubs.rsc.org/en/content/getauthorversionpdf/C5MD00496A
+tags:
+- record-review
+- aminocyclitol
+- scaffold-activity-scope

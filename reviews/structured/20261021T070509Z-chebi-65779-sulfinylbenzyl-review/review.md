@@ -1,0 +1,703 @@
+# Review of CHEBI:65779 (dihydroxy-methanesulfinylbenzyl alcohol)
+
+- Review: 20261021T070509Z-chebi-65779-sulfinylbenzyl-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T06:55:07Z
+- Finished UTC: 2026-10-21T07:05:09Z
+- Reviewer: Codex agent review002 (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Official identities agree with independent calculation. The cited primary paper supports the producer and activity claims. Per-record gates pass. Optional evidence and assay enrichment remains; no molecular mechanism is established. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire record, maintained source row/configuration and code, official identifiers and primary full paper, including structure and table images.
+
+Selection: Path-ordered unreviewed queue index 015.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:65779 | data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml | generated | 2,5-dihydroxy-3-methanesulfinylbenzyl alcohol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented per-record LinkML validation | passed | True | CHEBI:65779 | Exit 0; No issues found. |
+| Documented per-record closed-schema validation | passed | True | CHEBI:65779 | Exit 0; one file scanned; zero ERROR rows. |
+| Independent RDKit structure and internal identifier consistency | passed | False | CHEBI:65779 | Both encodings reproduce key, formula, charge and masses; one unspecified sulfur stereocenter and one fragment; minted ID reproduced. |
+| Structured expression-module adapter applicability | not_applicable | False | CHEBI:65779 | No named gene, protein, regulator, pathway, stress response or expression dataset is asserted. iModulonDB is not applicable and this does not supply negative evidence. |
+| Authoritative full QC | failed | True | CHEBI:65779 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:65779 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:65779 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:65779 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:65779 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:65779 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:65779 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:65779 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:65779 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral structure and sulfur stereochemistry
+
+identity: supported. Targets: CHEBI:65779.
+
+Official identity and independent calculation agree. Unspecified sulfur does not assert one enantiomer and is consistent with the inspected publication.
+
+### Parent classes and cross-reference
+
+grounding: supported. Targets: CHEBI:65779.
+
+All three parents are appropriate broader classes. Reaxys matches official ChEBI; that registry itself was not independently accessed.
+
+### Definition activity and producer claims
+
+evidence: supported. Targets: CHEBI:65779.
+
+Exact-compound evidence supports the named taxa under tested strain conditions and the stated fungal source. Do not generalize across all strains or transfer extract activity.
+
+### Mode of action and targets
+
+completeness: unknown. Targets: CHEBI:65779.
+
+The inspected evidence does not establish a molecular mechanism. Native REVIEWED requirements remain unmet.
+
+### Optional enrichment and absent claims
+
+representation: not_applicable. Targets: CHEBI:65779.
+
+Missing optional activity, producer and evidence objects are not errors. No resistance, clinical or causal-graph claim is made.
+
+### Seed ownership and history
+
+ownership: supported. Targets: CHEBI:65779.
+
+SEEDED status and three history events accurately describe source generation. Future scientific additions belong to the actual record through the validated curation writer.
+
+### Focused validation and chemistry
+
+schema: supported. Targets: CHEBI:65779.
+
+Both documented validators and independent structure calculations pass.
+
+## Findings
+
+### F1: Primary evidence and assay observations can be added during curation
+
+informational / open / confirmed; issue key: chebi-65779-primary-assay-enrichment.
+
+Existing claims are supported. Optional evidence and activity objects remain absent; this is an enrichment opportunity, not a demonstrated scientific or schema error.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+During separately authorized curation, attach exact primary evidence and preserve IC50, units, strain, method, uncertainty and negative result. Keep mechanism unresolved unless exact experimental support is found.
+
+- Encode the Table 1 endpoint as IC50, never MIC, retaining its exact compound column and assay conditions.
+- Do not assign sulfur absolute configuration from optical inactivity alone or transfer activities from adjacent analogues.
+- Use write_validated_antibiotic and a curation event; pass just validate, just validate-strict, just verify-corpus --summary and just qc before native promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml; Every field of generated AntibioticRecord | supports | Read definition, exact synonym, three parents, retained role, structure, Reaxys reference, source concept and three seed/reseed events. No mechanism, target, assay, resistance, clinical, causal-graph or expression dataset object is present. |
+| inventory | data/raw/chebi_antimicrobials.tsv; Complete CHEBI:65779 row and header | supports | The in-scope 3-star row matches seeded data and retains PMID:18603789 as its sole citation lead. Mechanism-role column is empty. Inclusive maintained-table searches found no matching decision or curator override. |
+| ownership | scripts/seed_from_sources.py; mint, structure_from_chebi and build_record; scripts/extract_source_inventory.py ChEBI processing; conf/sources.yaml; data/raw/MANIFEST.yaml | supports | Seeder reproduces source identity and the reviewed antimicrobial role subset. The extractor retains citations as leads without creating primary evidence objects. Source date matches retrieval metadata; history describes generation rather than scientific curation. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:65779; Full official entry, structure, synonym, registry, ontology, species and citation | supports | Official exact identifier, systematic synonym, formula, masses, charge, connectivity and unspecified stereochemistry agree. Three parents and antibacterial role match. Reaxys 18590032 is listed. Metabolite is outside the retained antimicrobial-role subset. |
+| parent-benzyl | https://www.ebi.ac.uk/chebi/CHEBI:22743; Definition and incoming CHEBI:65779 edge | supports | The broader parent denotes phenylmethanol-containing compounds. |
+| parent-hydroquinone | https://www.ebi.ac.uk/chebi/CHEBI:24646; Definition | supports | The broader parent denotes para-related benzenediols; the record has that hydroxyl arrangement. |
+| parent-sulfoxide | https://www.ebi.ac.uk/chebi/CHEBI:22063; Definition | supports | The broader organosulfur parent is appropriate to the methyl/aryl-substituted sulfoxide. |
+| role | https://www.ebi.ac.uk/chebi/CHEBI:33282; Definition | supports | The role denotes antibacterial agent and agrees with the source entry. |
+| primary | DOI:10.1271/bbb.80043; PMID:18603789; J-STAGE full paper pp.1746-1749; compound 2, methods, Table 1; https://www.jstage.jst.go.jp/article/bbb/72/7/72_80043/_pdf/-char/en | supports | Compound 2 matches the drawn substitution pattern. Ampelomyces sp. SC0307 cultures yielded the isolated molecule; authors interpreted optical inactivity as racemic sulfur. MABA IC50 values in µg/mL are E. coli ATCC8739 13.62±1.09, P. vulgaris CMCC49027 65.59±1.24, P. aeruginosa ATCC9027 63.19±5.92; S. aureus ATCC6538 &gt;128. Table values are triplicate means±SD. Methods use Mueller-Hinton broth, 32°C, fluorescence detection and ceftazidime control. Table units and compound drawing were visually inspected from the publisher PDF. No molecular target experiment is reported. |
+| citation | https://www.jstage.jst.go.jp/article/bbb/72/7/72_80043/_article/-char/en; Publisher metadata and abstract; PubMed record 18603789 | supports | Title, authors, DOI, volume 72(7), pages 1746-1749 and 2008 publication match the maintained PMID lead. |
+| chemistry | RDKit and hashlib calculation; /private/tmp/am-review-session/015-chemistry.py; 015-structure.json | supports | SMILES and InChI independently yield NADRVFUNXRGAII-UHFFFAOYSA-N, C8H10O4S, charge 0, average mass 202.231 and exact mass 202.0299798. One unspecified S center and one fragment; minted identifier antibioticmech:chebi-a105a20e17 reproduced. |
+| validation | just validate; just validate-strict; /private/tmp/am-review-session/015-validate.log; 015-strict.log; 015-strict.tsv | supports | Both documented focused gates exited 0. Strict validation scanned one file with zero ERROR rows. |
+| search | Inclusive local search and bounded free literature retrieval; /private/tmp/am-review-session/015-local-hits.txt; 015-owner-search.txt | context_only | No maintained decision/curator override matched. Search leads were followed to official identity pages and the exact primary paper. Related compounds and secondary database summaries were not used as exact experimental mechanism evidence. |
+
+## Limits And Additional Notes
+
+- Reaxys was corroborated through official ChEBI rather than independently inspected in the registry.
+- No exact antimicrobial mechanism emerged from the bounded search; this is not an exhaustive literature-absence claim.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No source record, maintained input, generated product or history event was modified. Review performed in /private/tmp/antibioticmech-record-reviews-002.
+- Publisher PDF retained in scratch as 015-primary.pdf with hash recorded above; Table 1 and compound drawings were inspected as rendered images. Text extraction substitutes m for the micro symbol, so the original image was used for units.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T070509Z-chebi-65779-sulfinylbenzyl-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of CHEBI:65779 (dihydroxy-methanesulfinylbenzyl alcohol)
+started_at: '2026-10-21T06:55:07Z'
+finished_at: '2026-10-21T07:05:09Z'
+reviewer:
+  identity: Codex agent review002
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review in a task-owned worktree, by an agent uninvolved
+    in authoring the record; exact input hashes were captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: SEEDED identity and source activity supported; mechanism unresolved
+scientific_review: true
+summary: Official identities agree with independent calculation. The cited primary
+  paper supports the producer and activity claims. Per-record gates pass. Optional
+  evidence and assay enrichment remains; no molecular mechanism is established. Scientific
+  assessment retains the stated evidence limits; full verification is blocked by the
+  shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml
+    sha256: 6fe0addef11d117ff7925f144533b27c083fd0920c3094d9cc2c3b1bca0aa315
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Entire record, maintained source row/configuration and code, official
+    identifiers and primary full paper, including structure and table images.
+  selection: Path-ordered unreviewed queue index 015.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:65779
+targets:
+- target_id: CHEBI:65779
+  path: data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml
+  label: 2,5-dihydroxy-3-methanesulfinylbenzyl alcohol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file scanned; zero ERROR rows.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml
+    --out /private/tmp/am-review-session/015-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Independent RDKit structure and internal identifier consistency
+  status: passed
+  required: false
+  summary: Both encodings reproduce key, formula, charge and masses; one unspecified
+    sulfur stereocenter and one fragment; minted ID reproduced.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/015-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: imodulondb
+  name: Structured expression-module adapter applicability
+  status: not_applicable
+  required: false
+  summary: No named gene, protein, regulator, pathway, stress response or expression
+    dataset is asserted. iModulonDB is not applicable and this does not supply negative
+    evidence.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:65779
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml
+  locator: Every field of generated AntibioticRecord
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: Read definition, exact synonym, three parents, retained role, structure,
+    Reaxys reference, source concept and three seed/reseed events. No mechanism, target,
+    assay, resistance, clinical, causal-graph or expression dataset object is present.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Complete CHEBI:65779 row and header
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: The in-scope 3-star row matches seeded data and retains PMID:18603789 as
+    its sole citation lead. Mechanism-role column is empty. Inclusive maintained-table
+    searches found no matching decision or curator override.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/seed_from_sources.py
+  locator: mint, structure_from_chebi and build_record; scripts/extract_source_inventory.py
+    ChEBI processing; conf/sources.yaml; data/raw/MANIFEST.yaml
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: Seeder reproduces source identity and the reviewed antimicrobial role subset.
+    The extractor retains citations as leads without creating primary evidence objects.
+    Source date matches retrieval metadata; history describes generation rather than
+    scientific curation.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:65779
+  locator: Full official entry, structure, synonym, registry, ontology, species and
+    citation
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: Official exact identifier, systematic synonym, formula, masses, charge,
+    connectivity and unspecified stereochemistry agree. Three parents and antibacterial
+    role match. Reaxys 18590032 is listed. Metabolite is outside the retained antimicrobial-role
+    subset.
+- evidence_id: parent-benzyl
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:22743
+  locator: Definition and incoming CHEBI:65779 edge
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: The broader parent denotes phenylmethanol-containing compounds.
+- evidence_id: parent-hydroquinone
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:24646
+  locator: Definition
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: The broader parent denotes para-related benzenediols; the record has that
+    hydroxyl arrangement.
+- evidence_id: parent-sulfoxide
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:22063
+  locator: Definition
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: The broader organosulfur parent is appropriate to the methyl/aryl-substituted
+    sulfoxide.
+- evidence_id: role
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:33282
+  locator: Definition
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: The role denotes antibacterial agent and agrees with the source entry.
+- evidence_id: primary
+  kind: primary_source
+  reference: DOI:10.1271/bbb.80043
+  locator: PMID:18603789; J-STAGE full paper pp.1746-1749; compound 2, methods, Table
+    1; https://www.jstage.jst.go.jp/article/bbb/72/7/72_80043/_pdf/-char/en
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: Compound 2 matches the drawn substitution pattern. Ampelomyces sp. SC0307
+    cultures yielded the isolated molecule; authors interpreted optical inactivity
+    as racemic sulfur. MABA IC50 values in µg/mL are E. coli ATCC8739 13.62±1.09,
+    P. vulgaris CMCC49027 65.59±1.24, P. aeruginosa ATCC9027 63.19±5.92; S. aureus
+    ATCC6538 >128. Table values are triplicate means±SD. Methods use Mueller-Hinton
+    broth, 32°C, fluorescence detection and ceftazidime control. Table units and compound
+    drawing were visually inspected from the publisher PDF. No molecular target experiment
+    is reported.
+  snapshot_sha256: f7062a1e8ef4eadc9d39730f002b1be3c81a7a71ad7474d44393fd5ae34b3027
+- evidence_id: citation
+  kind: primary_source
+  reference: https://www.jstage.jst.go.jp/article/bbb/72/7/72_80043/_article/-char/en
+  locator: Publisher metadata and abstract; PubMed record 18603789
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: Title, authors, DOI, volume 72(7), pages 1746-1749 and 2008 publication
+    match the maintained PMID lead.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and hashlib calculation
+  locator: /private/tmp/am-review-session/015-chemistry.py; 015-structure.json
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: SMILES and InChI independently yield NADRVFUNXRGAII-UHFFFAOYSA-N, C8H10O4S,
+    charge 0, average mass 202.231 and exact mass 202.0299798. One unspecified S center
+    and one fragment; minted identifier antibioticmech:chebi-a105a20e17 reproduced.
+  snapshot_sha256: 177de8499753a26a8b11db244eaf546008b39eef961cbceb907469a5665156fa
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: /private/tmp/am-review-session/015-validate.log; 015-strict.log; 015-strict.tsv
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: supports
+  summary: Both documented focused gates exited 0. Strict validation scanned one file
+    with zero ERROR rows.
+- evidence_id: search
+  kind: search
+  reference: Inclusive local search and bounded free literature retrieval
+  locator: /private/tmp/am-review-session/015-local-hits.txt; 015-owner-search.txt
+  accessed_at: '2026-10-21T06:58:36Z'
+  support: context_only
+  summary: No maintained decision/curator override matched. Search leads were followed
+    to official identity pages and the exact primary paper. Related compounds and
+    secondary database summaries were not used as exact experimental mechanism evidence.
+  search_scope: prepare.py 15 searched identifier, exact label and slug with rg --no-ignore
+    --hidden across the worktree, including ignored and hidden files except .git and
+    .venv. A targeted inclusive search covered curation/curator_antibiotics.tsv, curation/decisions.tsv
+    and conf using identifier, minted ID and exact label. Bounded free web search
+    included exact label plus mechanism, primary paper title, and PMID/DOI. Official
+    ChEBI, J-STAGE full paper and author-posted full text were inspected. No paid
+    access or author contact occurred.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral structure and sulfur stereochemistry
+  outcome: supported
+  summary: Official identity and independent calculation agree. Unspecified sulfur
+    does not assert one enantiomer and is consistent with the inspected publication.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - record
+  - chebi
+  - chemistry
+  - primary
+- assessment_id: grounding
+  area: grounding
+  topic: Parent classes and cross-reference
+  outcome: supported
+  summary: All three parents are appropriate broader classes. Reaxys matches official
+    ChEBI; that registry itself was not independently accessed.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - chebi
+  - parent-benzyl
+  - parent-hydroquinone
+  - parent-sulfoxide
+- assessment_id: activity
+  area: evidence
+  topic: Definition activity and producer claims
+  outcome: supported
+  summary: Exact-compound evidence supports the named taxa under tested strain conditions
+    and the stated fungal source. Do not generalize across all strains or transfer
+    extract activity.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - record
+  - primary
+- assessment_id: mechanism
+  area: completeness
+  topic: Mode of action and targets
+  outcome: unknown
+  summary: The inspected evidence does not establish a molecular mechanism. Native
+    REVIEWED requirements remain unmet.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - record
+  - primary
+  - search
+- assessment_id: representation
+  area: representation
+  topic: Optional enrichment and absent claims
+  outcome: not_applicable
+  summary: Missing optional activity, producer and evidence objects are not errors.
+    No resistance, clinical or causal-graph claim is made.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - record
+- assessment_id: provenance
+  area: ownership
+  topic: Seed ownership and history
+  outcome: supported
+  summary: SEEDED status and three history events accurately describe source generation.
+    Future scientific additions belong to the actual record through the validated
+    curation writer.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - record
+  - inventory
+  - ownership
+- assessment_id: schema-assessment
+  area: schema
+  topic: Focused validation and chemistry
+  outcome: supported
+  summary: Both documented validators and independent structure calculations pass.
+  target_ids:
+  - CHEBI:65779
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-65779-primary-assay-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Primary evidence and assay observations can be added during curation
+  description: Existing claims are supported. Optional evidence and activity objects
+    remain absent; this is an enrichment opportunity, not a demonstrated scientific
+    or schema error.
+  target_ids:
+  - CHEBI:65779
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action
+  evidence_ids:
+  - record
+  - primary
+  - search
+  rule_id: 'review-checklist: Evidence standard, Activity, Mode of action'
+  native_severity: informational optional enrichment
+  normalization_reason: No false assertion or missing required field was demonstrated.
+    Missing mechanism limits native promotion without invalidating the seeded identity/activity
+    claims.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml
+    role: Curator-owned evidence and activity observations through write_validated_antibiotic
+      and a curation event
+actions:
+- action_id: A1
+  description: During separately authorized curation, attach exact primary evidence
+    and preserve IC50, units, strain, method, uncertainty and negative result. Keep
+    mechanism unresolved unless exact experimental support is found.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:65779
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/2-5-dihydroxy-3-methanesulfinylbenzyl-alcohol.yaml
+    role: Curator-owned evidence and activity observations through write_validated_antibiotic
+      and a curation event
+  acceptance_checks:
+  - Encode the Table 1 endpoint as IC50, never MIC, retaining its exact compound column
+    and assay conditions.
+  - Do not assign sulfur absolute configuration from optical inactivity alone or transfer
+    activities from adjacent analogues.
+  - Use write_validated_antibiotic and a curation event; pass just validate, just
+    validate-strict, just verify-corpus --summary and just qc before native promotion.
+limitations:
+- Reaxys was corroborated through official ChEBI rather than independently inspected
+  in the registry.
+- No exact antimicrobial mechanism emerged from the bounded search; this is not an
+  exhaustive literature-absence claim.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No source record, maintained input, generated product or history event was modified.
+  Review performed in /private/tmp/antibioticmech-record-reviews-002.
+- Publisher PDF retained in scratch as 015-primary.pdf with hash recorded above; Table
+  1 and compound drawings were inspected as rendered images. Text extraction substitutes
+  m for the micro symbol, so the original image was used for units.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:65779
+- https://pubmed.ncbi.nlm.nih.gov/18603789/
+- https://www.jstage.jst.go.jp/article/bbb/72/7/72_80043/_pdf/-char/en
+tags:
+- record-review
+- sulfoxide
+- primary-assay
+```
