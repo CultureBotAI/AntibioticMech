@@ -878,7 +878,8 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: SARS-CoV replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound and
-        inhibited by cinanserin in surface plasmon resonance, catalytic, and replicon assays (PMID:15890949).
+        inhibited by cinanserin in surface plasmon resonance, catalytic, and infectious-virus tissue-culture
+        assays (PMID:15890949).
     - uniprot_id: UniProtKB:P0C6X1
       protein_label: Replicase polyprotein 1ab
       gene_symbol: rep
@@ -887,7 +888,8 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: HCoV-229E replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound
-        and inhibited by cinanserin in surface plasmon resonance and enzyme assays (PMID:15890949).
+        and inhibited by cinanserin in surface plasmon resonance, catalytic, replicon, and tissue-culture
+        assays (PMID:15890949).
 - identifier: CHEBI:45490
   label: ribavirin 5'-monophosphate
   path: data/antibiotics/antiviral/ribavirin-5-monophosphate.yaml
@@ -949,8 +951,8 @@ records:
 - identifier: CHEBI:27834
   label: pentostatin
   path: data/antibiotics/unspecified/pentostatin.yaml
-  changes: Added curated Plasmodium vivax Salvador I adenosine deaminase ADA (A5KE01) UniProtKB protein
-    example on the PRIMARY_LITERATURE adenosine deaminase molecular target.
+  changes: Added curated Plasmodium vivax Salvador I adenosine deaminase PVX_111245 (A5KE01) UniProtKB
+    protein example on the PRIMARY_LITERATURE adenosine deaminase molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: adenosine deaminase
@@ -958,13 +960,13 @@ records:
     protein_examples:
     - uniprot_id: UniProtKB:A5KE01
       protein_label: Adenosine deaminase
-      gene_symbol: ADA
+      gene_symbol: PVX_111245
       taxon_id: NCBITaxon:126793
       taxon_label: Plasmodium vivax (strain Salvador I)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: Parasite purine-salvage adenosine deaminase resolved in cocrystal complex with pentostatin
-        (2'-deoxycoformycin) at the catalytic site (PMID:18602399, PDB 2PGF; Salvador I reference strain
+        (2'-deoxycoformycin) at the catalytic site (PMID:18602399, PDB 2PGG; Salvador I reference strain
         context).
 - identifier: CHEBI:45773
   label: streptolydigin

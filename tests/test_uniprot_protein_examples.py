@@ -231,6 +231,33 @@ def test_non_protein_causal_node_and_target_reject_protein_examples():
             },
         )
 
+    doc_with_multi_ref_target = copy.deepcopy(doc)
+    doc_with_multi_ref_target["molecular_targets"] = [
+        {
+            "target_label": "DNA gyrase subunit B",
+            "target_type": "PROTEIN",
+            "source": "PRIMARY_LITERATURE",
+            "evidence": [{"reference": "PMID:1"}, {"reference": "PMID:2"}],
+        }
+    ]
+    with pytest.raises(ValueError, match="must match primary evidence reference 'PMID:1'"):
+        apply_planned_examples_to_record_data(
+            doc_with_multi_ref_target,
+            {
+                "identifier": "CHEBI:17698",
+                "label": "chloramphenicol",
+                "causal_node_examples": [],
+                "molecular_target_examples": [
+                    {
+                        "target_label": "DNA gyrase subunit B",
+                        "target_reference": "PMID:2",
+                        "source": "PRIMARY_LITERATURE",
+                        "protein_examples": [base_spec],
+                    }
+                ],
+            },
+        )
+
 
 @pytest.mark.parametrize("index", range(37))
 def test_exact_scoped_transition_and_idempotence(

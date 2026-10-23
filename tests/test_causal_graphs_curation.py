@@ -75,6 +75,16 @@ def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
                         )
     assert scored_curated == 36
 
+    plan_with_stale_uid = copy.deepcopy(plan)
+    carpropamid_held = next(
+        item for item in plan_with_stale_uid["held_records"] if item["identifier"] == "CHEBI:3434"
+    )
+    carpropamid_held["reason"] = carpropamid_held["reason"].replace(
+        "UniProtKB:P56221", "UniProtKB:P15993"
+    )
+    with pytest.raises(ValueError, match="held_records reason UniProtKB accessions"):
+        verify_reviewed_causal_graphs_accounting(records, plan=plan_with_stale_uid)
+
 
 def test_plan_and_transition_summary_counts():
     plan = load_causal_graphs_plan(DEFAULT_PLAN_PATH)

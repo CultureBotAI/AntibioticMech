@@ -896,6 +896,22 @@ def verify_reviewed_causal_graphs_accounting(
                 held = held_by_id[identifier]
                 if held["label"] != label or held["path"] != rel_path:
                     raise ValueError(f"{rel_path}: held_records metadata mismatch for {identifier}")
+                curated_target_uids = {
+                    str(ex.get("uniprot_id") or "").strip()
+                    for t in (doc.get("molecular_targets") or [])
+                    if isinstance(t, dict) and t.get("source") == "PRIMARY_LITERATURE"
+                    for ex in (t.get("protein_examples") or [])
+                    if isinstance(ex, dict) and str(ex.get("uniprot_id") or "").strip()
+                }
+                if curated_target_uids:
+                    reason_uids = set(re.findall(r"UniProtKB:[A-Z0-9]+", held["reason"]))
+                    if reason_uids != curated_target_uids:
+                        raise ValueError(
+                            f"{rel_path}: held_records reason UniProtKB accessions "
+                            f"{sorted(reason_uids)} != live PRIMARY_LITERATURE "
+                            f"molecular_targets protein_examples {sorted(curated_target_uids)} "
+                            f"for {identifier}"
+                        )
                 seen_held.add(identifier)
                 reviewed_held += 1
             elif identifier in held_by_id:

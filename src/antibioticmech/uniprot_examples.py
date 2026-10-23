@@ -442,14 +442,21 @@ def apply_planned_examples_to_record_data(
                 continue
             if target.get("target_label") != target_label:
                 continue
-            refs = {
+            refs = [
                 str(ev.get("reference") or "").strip()
                 for ev in (target.get("evidence") or [])
-                if isinstance(ev, dict)
-            }
-            if target_reference in refs:
+                if isinstance(ev, dict) and str(ev.get("reference") or "").strip()
+            ]
+            first_ref = refs[0] if refs else ""
+            if target_reference == first_ref:
                 matched_target = target
                 break
+            if target_reference in refs:
+                raise ValueError(
+                    f"{identifier}: molecular_target ({source}, {target_label!r}) "
+                    f"target_reference {target_reference!r} must match primary evidence "
+                    f"reference {first_ref!r}"
+                )
         if matched_target is None:
             raise ValueError(
                 f"{identifier}: molecular_target ({source}, {target_label!r}, {target_reference}) not found"
