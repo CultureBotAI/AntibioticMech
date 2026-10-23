@@ -1,0 +1,865 @@
+# 4-Hydroxycordoin: coherent exact identity and primary antibacterial support
+
+- Review: 20261021T074914Z-4-hydroxycordoin
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:41:32Z
+- Finished UTC: 2026-10-21T07:49:14Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Exact identity, ontology parents, antibacterial role and maintained source provenance are coherent. Focused schema, strict and chemistry checks pass. One informational follow-up concerns adding optional assay-level evidence while separating antibacterial endpoints, host responses, fungal antivirulence and structural analogues. Original isolation and some additional full texts remain inaccessible; no direct bacterial target or biosynthetic producer is inferred. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted identity fields and identifiers, maintained source ownership, both adopted primary citations and bounded additional primary discovery.
+
+Selection: Queue index 044, CHEBI:70080 at its locked native path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:70080 | data/antibiotics/antibacterial/4-hydroxycordoin.yaml | generated | 4-hydroxycordoin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused LinkML validation | passed | True | CHEBI:70080 | No issues found. |
+| Focused strict validation | passed | True | CHEBI:70080 | Scanned one file; zero ERROR rows. |
+| Independent native chemistry and minted identifier | passed | False | CHEBI:70080 | Both representations reproduce the full key, E bond, formula, charge, rounded masses and mint. |
+| Initial structured inventory request | failed | False | CHEBI:70080 | Sandboxed request failed DNS resolution; the same read-only public request subsequently succeeded with network permission. |
+| Structured source coverage retry | passed | False | CHEBI:70080 | Inventory succeeded. No matching human, Candida, Porphyromonas, Fusobacterium or Prevotella dataset covers the cited experimental contexts. |
+| Expression-module applicability | not_applicable | False | CHEBI:70080 | No native gene, molecular target or transcriptomic dataset is asserted. The inspected pathway response is in human macrophages; no covered matching dataset was found. |
+| Additional original full-text access | unavailable | False | CHEBI:70080 | The Candida study was available as official abstract only. The original 1973 isolation text was not obtained. The 2026 main article was inaccessible; official PubMed lists its PMC manuscript as embargoed until 2027-01-12. Its official abstract and exact-compound SI section were inspected. |
+| Independent registry cross-reference access | unavailable | False | CHEBI:70080 | CAS is corroborated by ChEBI and official PubChem synonyms; Reaxys remains a ChEBI-source assertion. No independent paid registry inspection was performed. |
+| Authoritative full QC | failed | True | CHEBI:70080 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:70080 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:70080 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:70080 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:70080 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:70080 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:70080 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:70080 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:70080 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact E compound
+
+identity: supported. Targets: CHEBI:70080.
+
+Native structure, exact synonym, official databases, corrected primary structure and independently calculated chemistry agree.
+
+### Parents, roles and cross-references
+
+grounding: supported. Targets: CHEBI:70080.
+
+All broader chemical classes and antibacterial role fit. CAS is corroborated; independent Reaxys access remains limited.
+
+### Structural definition and plant isolation attribution
+
+evidence: supported. Targets: CHEBI:70080.
+
+The structural definition is exact. Official ChEBI and a primary article’s retrospective attribution support the isolation statement; original isolation and biosynthesis were not independently established.
+
+### Exact-compound antibacterial role
+
+evidence: supported. Targets: CHEBI:70080.
+
+The inspected original assay supports the antibacterial role with species/strain and endpoint scope preserved.
+
+### Fungal findings versus antibacterial classification
+
+evidence: supported. Targets: CHEBI:70080.
+
+The source citation concerns fungal antivirulence. It does not contradict the independently supported antibacterial classification or require a fungicidal claim.
+
+### Direct bacterial mechanism
+
+evidence: unknown. Targets: CHEBI:70080.
+
+The native record asserts none. Host signaling, fungal morphology and analogues do not establish a direct molecular target for this compound.
+
+### Producer, resistance, clinical and graph fields
+
+representation: not_applicable. Targets: CHEBI:70080.
+
+No native objects require correction. Biological production, resistance mechanisms and clinical efficacy cannot be inferred from the available evidence.
+
+### Optional activity and evidence enrichment
+
+completeness: supported. Targets: CHEBI:70080.
+
+Exact-compound primary observations could be represented with explicit assay and access boundaries; missing optional entries are informational.
+
+### Maintained source and native status
+
+ownership: supported. Targets: CHEBI:70080.
+
+Source row, source transformations, mint, version and history agree; captured hashes remain unchanged. Scientific additions belong to the actual native record without status promotion by review.
+
+### Focused gates
+
+schema: supported. Targets: CHEBI:70080.
+
+Schema, strict and chemistry pass independently of the scientific assessment.
+
+## Findings
+
+### F1: Add optional primary activity evidence with endpoint and organism boundaries
+
+informational / open / confirmed; issue key: chebi-70080-qualified-activity-evidence-enrichment.
+
+The seed’s antibacterial classification is supported. Optional assay-level observations and claim-level primary evidence are unrepresented; no false quantitative or direct-target assertion is currently present. Additional sources have explicit access limitations.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+If selected for curation, add narrowly scoped primary activity/evidence entries after mapping the reported assay conditions and exact compound version.
+
+- Keep MIC and MBC as separate endpoints and preserve reported organism, strain, medium, duration and units.
+- Use the corrected primary structure and keep host-cell effects, fungal antivirulence and analogue results distinct from direct antibacterial targets.
+- Retrieve uninspected additional full texts before using their assay details; original isolation attribution alone does not establish biosynthesis.
+- Do not infer universal mechanism absence, resistance, clinical efficacy or a producer from the bounded evidence.
+- Use write_validated_antibiotic with native curation history for separately authorized additions; rerun focused schema/strict and required corpus gates.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/4-hydroxycordoin.yaml; Entire YAML: definition, exact synonym, three parents, role, chemistry, both xrefs, source concept and three history events. | supports | The SEEDED/EXACT record denotes neutral E-4-hydroxycordoin. The definition asserts structural substitution and plant isolation. Quantitative activity, evidence, mechanism, producer, resistance, clinical and causal-graph objects are not present. Their optional absence is not a required-field defect. |
+| owner | data/raw/chebi_antimicrobials.tsv; CHEBI:70080 row 1783; raw MANIFEST and PATHS; conf/sources.yaml; extractor and seeder source reader/build_record/mint. | supports | The complete source row matches the native identity and antibacterial role. PMID21158427 and PMID21353508 are adopted citation leads; mechanism_role_ids is empty. Source version 2026-08-30, three seed/reseed events and deterministic mint antibioticmech:chebi-05d0e7bd54 are coherent. All 13 initially captured hashes were rechecked unchanged. |
+| identity | https://www.ebi.ac.uk/chebi/CHEBI:70080; Complete official page saved as 044-chebi.html and 044-chebi.txt; official PubChem CID5879763 PUG outputs 044-pubchem.json and 044-pubchem-synonyms.json. | supports | ChEBI matches the exact systematic E synonym, full structure strings, SFXYAAFUXNWNQF-BJMVGYQFSA-N, C20H20O4, neutral charge and masses. ChEBI parents 23086 chalcones, 26195 polyphenol and 35618 aromatic ether fit; 33282 is antibacterial agent. PubChem independently reproduces the native full InChI/key and includes CAS55524-25-9. Reaxys2665335 is present in ChEBI but was not independently inspected. CID321238 does not encode the same stereo specificity. |
+| chemistry | RDKit native calculation; 044-chemistry.py and 044-chemistry.json. | supports | Native SMILES and InChI independently parse to the same single neutral fragment with E chalcone bond and no tetrahedral centers; formula C20H20O4, mass 324.376 and exact mass 324.13615912. Full key and source mint match. |
+| oral | PMID:21158427; DOI:10.1021/np100547b, pp26–31; complete article text reproduced at https://www.lookchem.com/FreePDFArticle_24672-83-1_9006570.htm. Structure graphic and Figure1 inspected visually; 044-primary2011-page1-visible.png and 044-primary2011-page2.png. | supports | Corrected published compound1 matches the native E structure; synthetic material was assayed. MIC/MBC in µg/mL: P.intermedia ATCC25611 2.5/5; P.gingivalis ATCC33277 5/10; F.nucleatum ATCC25586 40/&gt;40. THB with hemin/vitamin K, anaerobic 37°C, 24-hour growth; MBC used no-colony recovery after five days. P.gingivalis epithelial attachment was reduced. NF-κB p65/AP-1 changes concern human macrophages, not bacterial target engagement. The article notes a structure-graphic correction after initial online publication; the corrected drawing was checked. The assay reports no direct bacterial molecular target. |
+| isolation | PMID:21158427; Introduction and reference2, De Mello et al., Revista do Instituto de Antibióticos 1973,13,37–46; official ChEBI definition and species origin. | context_only | The 2011 paper retrospectively attributes isolation to Lonchocarpus neuroscapha; its experiment uses synthesized compound. The original 1973 isolation report was not independently retrieved. This corroborates the native attribution but is not independent modern biosynthesis proof. |
+| fungal | PMID:21353508; DOI:10.1016/j.phymed.2011.01.013; complete official abstract in 044-epmc.json. | supports | Two C.albicans strains showed no growth effect up to 200 µg/mL. Biofilm formation was inhibited by &gt;85% at 20 µg/mL; yeast-hyphal transition was inhibited at 50–200 µg/mL. These are fungal antivirulence observations, not fungicidal endpoints or direct bacterial targets. Full methods and strain identities were not inspected. |
+| newer | PMID:41635702; DOI:10.1039/D5MD00839E; official PubMed/RSC abstract and SI pS2 at https://www.rsc.org/suppdata/d5/md/d5md00839e/d5md00839e1.pdf. Abstract capture 044-2026-epmc.json. | context_only | The 2026 study includes hydroxycordoin1a and derivatives. SI names 1a with the exact native E systematic structure and supplies synthesis/NMR/HRMS. The abstract identifies distinct benzofuran20 as the most potent derivative; neither its potency nor a proposed membrane-affinity rationale can be assigned to 1a. Main-text parent-compound assays remain uninspected. Official PubMed identifies PMC12863399 as available only on 2027-01-12. |
+| access | Free original-paper discovery and retrieval; ACS and public full-text reproduction; Elsevier DOI; RSC landing/HTML/PDF/SI; PubMed and PMC12863399; Europe PMC fullTextXML; original-isolation title/reference search. | context_only | Complete corrected 2011 antibacterial text was read as a public reproduction of the journal article, not a supplier interpretation; its journal header, DOI, authors, all sections, references and relevant figures were inspected. The 2011 fungal full text and original 1973 report were unavailable. RSC main HTML/PDF returned403, PMC challenged and EuropePMC XML returned500; the later-available date was explicitly verified on PubMed. SI was readable via browser but direct file download returned403. No paid route was used. |
+| adapter | https://imodulondb.org/api/datasets; Actual runner output 044-imodulondb-datasets.txt. | context_only | Initial sandbox request failed DNS; authorized public retry returned the inventory. Human macrophage NF-κB/AP-1 and the tested Candida/oral-pathogen organisms have no matching covered dataset. No term search or component summary was warranted; database absence is not biological negative evidence. |
+| search | CultureBotAI/AntibioticMech; 044-local-hits.txt and 044-focused-local-hits.txt; bounded public exact-name/synonym discovery. | context_only | Repository search included hidden and ignored files. Focused curation/reviews/historical-review/conf search had no exact matches outside the queue. Historical reports, thesis snippets and supplier claims were leads only. This bounded search does not establish absence of all other exact-compound mechanism or activity studies. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Identity, evidence, activity, mechanism, producer and status rules; CURATION/HARMONIZATION. | supports | Optional omissions are not required-field defects. A broader scaffold, structural derivative or host response does not establish the exact compound’s direct antibacterial mechanism. Plant isolation attribution does not itself demonstrate biosynthesis. |
+| validation | Documented per-record validators; Actual worktree005 commands and 044-strict.tsv. | supports | Schema and strict exited0; independent chemistry exited0. Actual shared corpus checks are recorded separately. |
+
+## Limits And Additional Notes
+
+- Both adopted primary abstracts were inspected. Complete corrected 2011 antibacterial text was inspected through a free public reproduction, with relevant structure and growth figures checked visually; publisher full text was not directly available.
+- Original 1973 isolation and 2011 Candida full texts were not retrieved. Plant origin is an official/retrospective attribution, not independently established biosynthesis.
+- 2026 official abstract and exact 1a SI chemistry were inspected, but main-text assays were inaccessible. PubMed explicitly embargoes its PMC manuscript until 2027-01-12. Results for derivative20 are not transferred.
+- CAS was corroborated by ChEBI and official PubChem; independent registry inspection and Reaxys verification were unavailable.
+- Structured coverage lacks the relevant host and oral-pathogen contexts. Its absence and the bounded literature search are not proof that further relevant studies or mechanisms do not exist.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T074914Z-4-hydroxycordoin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: '4-Hydroxycordoin: coherent exact identity and primary antibacterial support'
+started_at: '2026-10-21T07:41:32Z'
+finished_at: '2026-10-21T07:49:14Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the record. Provenance was captured
+    before assessment. The entire native record, maintained source row and transforms,
+    official identity sources, both adopted primary abstracts, complete corrected
+    2011 antibacterial article and independent chemistry were inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Exact identity, ontology parents, antibacterial role and maintained source
+  provenance are coherent. Focused schema, strict and chemistry checks pass. One informational
+  follow-up concerns adding optional assay-level evidence while separating antibacterial
+  endpoints, host responses, fungal antivirulence and structural analogues. Original
+  isolation and some additional full texts remain inaccessible; no direct bacterial
+  target or biosynthetic producer is inferred. Scientific assessment retains the stated
+  evidence limits; full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/4-hydroxycordoin.yaml
+    sha256: b778f626b48c678a7150907a97fc50d4b85a46b62292104784512c1c23392c3f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:70080
+  path: data/antibiotics/antibacterial/4-hydroxycordoin.yaml
+  label: 4-hydroxycordoin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted identity fields and identifiers,
+    maintained source ownership, both adopted primary citations and bounded additional
+    primary discovery.
+  selection: Queue index 044, CHEBI:70080 at its locked native path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:70080
+  exclusions:
+  - target: Cordoin, other O- or C-prenyl chalcones, stereochemically unspecified
+      PubChem CID321238 and the 2026 derivative series
+    reason: These are distinct or less specifically defined entities; activity or
+      mechanisms are not transferred to exact E-4-hydroxycordoin.
+checks:
+- check_id: schema
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  summary: No issues found.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/4-hydroxycordoin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  summary: Scanned one file; zero ERROR rows.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/4-hydroxycordoin.yaml --out /private/tmp/am-review-session/044-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Independent native chemistry and minted identifier
+  status: passed
+  required: false
+  summary: Both representations reproduce the full key, E bond, formula, charge, rounded
+    masses and mint.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/044-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-initial
+  name: Initial structured inventory request
+  status: failed
+  required: false
+  summary: Sandboxed request failed DNS resolution; the same read-only public request
+    subsequently succeeded with network permission.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 datasets
+  exit_code: 2
+  expected_exit_code: 0
+- check_id: adapter
+  name: Structured source coverage retry
+  status: passed
+  required: false
+  summary: Inventory succeeded. No matching human, Candida, Porphyromonas, Fusobacterium
+    or Prevotella dataset covers the cited experimental contexts.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter-scope
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  summary: No native gene, molecular target or transcriptomic dataset is asserted.
+    The inspected pathway response is in human macrophages; no covered matching dataset
+    was found.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - adapter
+  - oral
+- check_id: additional-full-text
+  name: Additional original full-text access
+  status: unavailable
+  required: false
+  summary: The Candida study was available as official abstract only. The original
+    1973 isolation text was not obtained. The 2026 main article was inaccessible;
+    official PubMed lists its PMC manuscript as embargoed until 2027-01-12. Its official
+    abstract and exact-compound SI section were inspected.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - fungal
+  - newer
+  - access
+- check_id: registry
+  name: Independent registry cross-reference access
+  status: unavailable
+  required: false
+  summary: CAS is corroborated by ChEBI and official PubChem synonyms; Reaxys remains
+    a ChEBI-source assertion. No independent paid registry inspection was performed.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - identity
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:70080
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/4-hydroxycordoin.yaml
+  locator: 'Entire YAML: definition, exact synonym, three parents, role, chemistry,
+    both xrefs, source concept and three history events.'
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: The SEEDED/EXACT record denotes neutral E-4-hydroxycordoin. The definition
+    asserts structural substitution and plant isolation. Quantitative activity, evidence,
+    mechanism, producer, resistance, clinical and causal-graph objects are not present.
+    Their optional absence is not a required-field defect.
+- evidence_id: owner
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: CHEBI:70080 row 1783; raw MANIFEST and PATHS; conf/sources.yaml; extractor
+    and seeder source reader/build_record/mint.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: The complete source row matches the native identity and antibacterial role.
+    PMID21158427 and PMID21353508 are adopted citation leads; mechanism_role_ids is
+    empty. Source version 2026-08-30, three seed/reseed events and deterministic mint
+    antibioticmech:chebi-05d0e7bd54 are coherent. All 13 initially captured hashes
+    were rechecked unchanged.
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:70080
+  locator: Complete official page saved as 044-chebi.html and 044-chebi.txt; official
+    PubChem CID5879763 PUG outputs 044-pubchem.json and 044-pubchem-synonyms.json.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: ChEBI matches the exact systematic E synonym, full structure strings, SFXYAAFUXNWNQF-BJMVGYQFSA-N,
+    C20H20O4, neutral charge and masses. ChEBI parents 23086 chalcones, 26195 polyphenol
+    and 35618 aromatic ether fit; 33282 is antibacterial agent. PubChem independently
+    reproduces the native full InChI/key and includes CAS55524-25-9. Reaxys2665335
+    is present in ChEBI but was not independently inspected. CID321238 does not encode
+    the same stereo specificity.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit native calculation
+  locator: 044-chemistry.py and 044-chemistry.json.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: Native SMILES and InChI independently parse to the same single neutral
+    fragment with E chalcone bond and no tetrahedral centers; formula C20H20O4, mass
+    324.376 and exact mass 324.13615912. Full key and source mint match.
+  snapshot_sha256: 2240c8eb3b34ed0800fd3485c51c3520e9682b2c6ee8d9dd4e4bb44b606e8e6e
+- evidence_id: oral
+  kind: primary_source
+  reference: PMID:21158427
+  locator: DOI:10.1021/np100547b, pp26–31; complete article text reproduced at https://www.lookchem.com/FreePDFArticle_24672-83-1_9006570.htm.
+    Structure graphic and Figure1 inspected visually; 044-primary2011-page1-visible.png
+    and 044-primary2011-page2.png.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: 'Corrected published compound1 matches the native E structure; synthetic
+    material was assayed. MIC/MBC in µg/mL: P.intermedia ATCC25611 2.5/5; P.gingivalis
+    ATCC33277 5/10; F.nucleatum ATCC25586 40/>40. THB with hemin/vitamin K, anaerobic
+    37°C, 24-hour growth; MBC used no-colony recovery after five days. P.gingivalis
+    epithelial attachment was reduced. NF-κB p65/AP-1 changes concern human macrophages,
+    not bacterial target engagement. The article notes a structure-graphic correction
+    after initial online publication; the corrected drawing was checked. The assay
+    reports no direct bacterial molecular target.'
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:21158427
+  locator: Introduction and reference2, De Mello et al., Revista do Instituto de Antibióticos
+    1973,13,37–46; official ChEBI definition and species origin.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: context_only
+  summary: The 2011 paper retrospectively attributes isolation to Lonchocarpus neuroscapha;
+    its experiment uses synthesized compound. The original 1973 isolation report was
+    not independently retrieved. This corroborates the native attribution but is not
+    independent modern biosynthesis proof.
+- evidence_id: fungal
+  kind: primary_source
+  reference: PMID:21353508
+  locator: DOI:10.1016/j.phymed.2011.01.013; complete official abstract in 044-epmc.json.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: Two C.albicans strains showed no growth effect up to 200 µg/mL. Biofilm
+    formation was inhibited by >85% at 20 µg/mL; yeast-hyphal transition was inhibited
+    at 50–200 µg/mL. These are fungal antivirulence observations, not fungicidal endpoints
+    or direct bacterial targets. Full methods and strain identities were not inspected.
+- evidence_id: newer
+  kind: primary_source
+  reference: PMID:41635702
+  locator: DOI:10.1039/D5MD00839E; official PubMed/RSC abstract and SI pS2 at https://www.rsc.org/suppdata/d5/md/d5md00839e/d5md00839e1.pdf.
+    Abstract capture 044-2026-epmc.json.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: context_only
+  summary: The 2026 study includes hydroxycordoin1a and derivatives. SI names 1a with
+    the exact native E systematic structure and supplies synthesis/NMR/HRMS. The abstract
+    identifies distinct benzofuran20 as the most potent derivative; neither its potency
+    nor a proposed membrane-affinity rationale can be assigned to 1a. Main-text parent-compound
+    assays remain uninspected. Official PubMed identifies PMC12863399 as available
+    only on 2027-01-12.
+  snapshot_sha256: 4af3cde8692da2ff4433b8270741eda79bb40ca5819d1fb7ab1a0d65c1da5448
+- evidence_id: access
+  kind: search
+  reference: Free original-paper discovery and retrieval
+  locator: ACS and public full-text reproduction; Elsevier DOI; RSC landing/HTML/PDF/SI;
+    PubMed and PMC12863399; Europe PMC fullTextXML; original-isolation title/reference
+    search.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: context_only
+  summary: Complete corrected 2011 antibacterial text was read as a public reproduction
+    of the journal article, not a supplier interpretation; its journal header, DOI,
+    authors, all sections, references and relevant figures were inspected. The 2011
+    fungal full text and original 1973 report were unavailable. RSC main HTML/PDF
+    returned403, PMC challenged and EuropePMC XML returned500; the later-available
+    date was explicitly verified on PubMed. SI was readable via browser but direct
+    file download returned403. No paid route was used.
+  search_scope: Free official publisher, PubMed, Europe PMC, PMC and author-repository
+    discovery for DOI10.1021/np100547b, DOI10.1016/j.phymed.2011.01.013 and DOI10.1039/D5MD00839E;
+    exact original-isolation title/authors and Lonchocarpus neuroscapha with hydroxycordoin.
+    Public reproduction used only for original journal text.
+- evidence_id: adapter
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Actual runner output 044-imodulondb-datasets.txt.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: context_only
+  summary: Initial sandbox request failed DNS; authorized public retry returned the
+    inventory. Human macrophage NF-κB/AP-1 and the tested Candida/oral-pathogen organisms
+    have no matching covered dataset. No term search or component summary was warranted;
+    database absence is not biological negative evidence.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 044-local-hits.txt and 044-focused-local-hits.txt; bounded public exact-name/synonym
+    discovery.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: context_only
+  summary: Repository search included hidden and ignored files. Focused curation/reviews/historical-review/conf
+    search had no exact matches outside the queue. Historical reports, thesis snippets
+    and supplier claims were leads only. This bounded search does not establish absence
+    of all other exact-compound mechanism or activity studies.
+  search_scope: rg --no-ignore --hidden identifier,label,slug across worktree005 excluding.git/.venv;
+    focused CHEBI:70080,SFXYAAFUXNWNQF,4-hydroxycordoin,hydroxycordoin in curation,reviews,reports/yaml_record_review,conf
+    excluding record_review_queue.tsv. Ignored files included. Public exact-name/CAS/antibacterial/mechanism
+    searches and cited original-isolation discovery.
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity, evidence, activity, mechanism, producer and status rules; CURATION/HARMONIZATION.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: Optional omissions are not required-field defects. A broader scaffold,
+    structural derivative or host response does not establish the exact compound’s
+    direct antibacterial mechanism. Plant isolation attribution does not itself demonstrate
+    biosynthesis.
+- evidence_id: validation
+  kind: validation
+  reference: Documented per-record validators
+  locator: Actual worktree005 commands and 044-strict.tsv.
+  accessed_at: '2026-10-21T07:48:01Z'
+  support: supports
+  summary: Schema and strict exited0; independent chemistry exited0. Actual shared
+    corpus checks are recorded separately.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact E compound
+  outcome: supported
+  summary: Native structure, exact synonym, official databases, corrected primary
+    structure and independently calculated chemistry agree.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - record
+  - identity
+  - chemistry
+  - oral
+  - newer
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, roles and cross-references
+  outcome: supported
+  summary: All broader chemical classes and antibacterial role fit. CAS is corroborated;
+    independent Reaxys access remains limited.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - identity
+  - oral
+- assessment_id: definition
+  area: evidence
+  topic: Structural definition and plant isolation attribution
+  outcome: supported
+  summary: The structural definition is exact. Official ChEBI and a primary article’s
+    retrospective attribution support the isolation statement; original isolation
+    and biosynthesis were not independently established.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - record
+  - identity
+  - isolation
+- assessment_id: activity
+  area: evidence
+  topic: Exact-compound antibacterial role
+  outcome: supported
+  summary: The inspected original assay supports the antibacterial role with species/strain
+    and endpoint scope preserved.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - oral
+- assessment_id: fungal
+  area: evidence
+  topic: Fungal findings versus antibacterial classification
+  outcome: supported
+  summary: The source citation concerns fungal antivirulence. It does not contradict
+    the independently supported antibacterial classification or require a fungicidal
+    claim.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - fungal
+  - oral
+- assessment_id: mechanism
+  area: evidence
+  topic: Direct bacterial mechanism
+  outcome: unknown
+  summary: The native record asserts none. Host signaling, fungal morphology and analogues
+    do not establish a direct molecular target for this compound.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - record
+  - oral
+  - fungal
+  - newer
+  - adapter
+- assessment_id: other
+  area: representation
+  topic: Producer, resistance, clinical and graph fields
+  outcome: not_applicable
+  summary: No native objects require correction. Biological production, resistance
+    mechanisms and clinical efficacy cannot be inferred from the available evidence.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - record
+  - isolation
+  - rubric
+- assessment_id: completeness
+  area: completeness
+  topic: Optional activity and evidence enrichment
+  outcome: supported
+  summary: Exact-compound primary observations could be represented with explicit
+    assay and access boundaries; missing optional entries are informational.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - record
+  - oral
+  - fungal
+  - access
+  - rubric
+- assessment_id: provenance
+  area: ownership
+  topic: Maintained source and native status
+  outcome: supported
+  summary: Source row, source transformations, mint, version and history agree; captured
+    hashes remain unchanged. Scientific additions belong to the actual native record
+    without status promotion by review.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - owner
+  - record
+  - rubric
+- assessment_id: schema
+  area: schema
+  topic: Focused gates
+  outcome: supported
+  summary: Schema, strict and chemistry pass independently of the scientific assessment.
+  target_ids:
+  - CHEBI:70080
+  evidence_ids:
+  - validation
+  - chemistry
+findings:
+- finding_id: F1
+  issue_key: chebi-70080-qualified-activity-evidence-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add optional primary activity evidence with endpoint and organism boundaries
+  description: The seed’s antibacterial classification is supported. Optional assay-level
+    observations and claim-level primary evidence are unrepresented; no false quantitative
+    or direct-target assertion is currently present. Additional sources have explicit
+    access limitations.
+  target_ids:
+  - CHEBI:70080
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action_notes
+  evidence_ids:
+  - record
+  - oral
+  - fungal
+  - newer
+  - access
+  - rubric
+  rule_id: 'native-review-checklist: Activity and Evidence'
+  native_severity: informational optional enrichment and bounded source-access gap
+  normalization_reason: No wrong identity, unsupported current quantitative claim
+    or missing required field is established.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/4-hydroxycordoin.yaml
+    role: Curator-owned scientific additions through write_validated_antibiotic and
+      native curation history
+actions:
+- action_id: A1
+  description: If selected for curation, add narrowly scoped primary activity/evidence
+    entries after mapping the reported assay conditions and exact compound version.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:70080
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/4-hydroxycordoin.yaml
+    role: Curator-owned scientific additions through write_validated_antibiotic and
+      native curation history
+  acceptance_checks:
+  - Keep MIC and MBC as separate endpoints and preserve reported organism, strain,
+    medium, duration and units.
+  - Use the corrected primary structure and keep host-cell effects, fungal antivirulence
+    and analogue results distinct from direct antibacterial targets.
+  - Retrieve uninspected additional full texts before using their assay details; original
+    isolation attribution alone does not establish biosynthesis.
+  - Do not infer universal mechanism absence, resistance, clinical efficacy or a producer
+    from the bounded evidence.
+  - Use write_validated_antibiotic with native curation history for separately authorized
+    additions; rerun focused schema/strict and required corpus gates.
+limitations:
+- Both adopted primary abstracts were inspected. Complete corrected 2011 antibacterial
+  text was inspected through a free public reproduction, with relevant structure and
+  growth figures checked visually; publisher full text was not directly available.
+- Original 1973 isolation and 2011 Candida full texts were not retrieved. Plant origin
+  is an official/retrospective attribution, not independently established biosynthesis.
+- 2026 official abstract and exact 1a SI chemistry were inspected, but main-text assays
+  were inaccessible. PubMed explicitly embargoes its PMC manuscript until 2027-01-12.
+  Results for derivative20 are not transferred.
+- CAS was corroborated by ChEBI and official PubChem; independent registry inspection
+  and Reaxys verification were unavailable.
+- Structured coverage lacks the relevant host and oral-pathogen contexts. Its absence
+  and the bounded literature search are not proof that further relevant studies or
+  mechanisms do not exist.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```

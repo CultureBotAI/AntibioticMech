@@ -1,0 +1,1102 @@
+# Review of ARO:3007379 (5-episisomicin)
+
+- Review: 20261021T075807Z-aro-3007379-5-episisomicin-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T07:44:23Z
+- Finished UTC: 2026-10-21T07:58:07Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The recorded free-base structure is the specified 5-epimer of sisomicin and matches PubChem. All 42 resistance assertions reproduce their adopted ARO labels and edges, and the current CARD compound page lists the same set. Two minor findings concern an inherited spelling error in the definition and concrete primary activity evidence. Older enzyme-group phenotypes, resistance constructs and model-ribozyme assays must retain their narrower scopes.
+
+## Scope And Provenance
+
+Entire record and all 42 resistance entries, correct ARO/PubChem source ownership, exact stereochemistry, current authoritative identity, original activity study, and bounded resistance/antimicrobial-mechanism evidence.
+
+Selection: Path-ordered unreviewed queue index 050; exactly one record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-3b4e0b6d96 | data/antibiotics/antibacterial/5-episisomicin.yaml | generated | 5-episisomicin |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented per-record LinkML validation | passed | True | antibioticmech:aro-3b4e0b6d96 | Exit 0; No issues found. |
+| Documented per-record closed-schema validation | passed | True | antibioticmech:aro-3b4e0b6d96 | Exit 0; one record, zero ERROR rows. |
+| Independent chemistry, mint and current PubChem comparison | passed | False | antibioticmech:aro-3b4e0b6d96 | Exit 0; both native encodings and exact current PubChem structure agree. |
+| Expanded source comparison initial execution | failed | False | antibioticmech:aro-3b4e0b6d96 | Exit 1 was a reviewer-script KeyError from using inchi instead of the actual standard_inchi TSV header. The preceding 42-edge checks passed. Initial code is preserved as 050-aro-check-header-error.py; corrected execution follows. |
+| All resistance source edges and current CARD comparison | passed | False | antibioticmech:aro-3b4e0b6d96 | Exit 0 after correcting the reviewer script header lookup; all 44 ARO identifiers/42 direct edges, live labels and native source rows agree. |
+| Structured adapter initial discovery | failed | False | antibioticmech:aro-3b4e0b6d96 | Initial sandbox execution exited 2 with a DNS resolution error; a permitted network retry succeeded before open-web research. |
+| Structured adapter dataset discovery retry | passed | False | antibioticmech:aro-3b4e0b6d96 | Exit 0; public dataset catalog includes P. aeruginosa precise364. |
+| Source-grounded resistance-gene context search | passed | False | antibioticmech:aro-3b4e0b6d96 | Exit 0; AAC(3)-IIIa query in p_aeruginosa/precise364 returned zero genes and zero modules. This single query is not an exhaustive gene-expression absence claim. |
+| Authoritative full QC | failed | True | antibioticmech:aro-3b4e0b6d96 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-3b4e0b6d96 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-3b4e0b6d96 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-3b4e0b6d96 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-3b4e0b6d96 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-3b4e0b6d96 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-3b4e0b6d96 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-3b4e0b6d96 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-3b4e0b6d96 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact specified 5-epimer and free base
+
+identity: supported. Targets: antibioticmech:aro-3b4e0b6d96.
+
+Complete source structure agrees and differs from sisomicin at the expected one central hydroxyl-bearing centre. Preserve all 11 assigned centres and distinguish salts, the parent epimer and generic aminoglycoside class.
+
+### ARO/PubChem anchors and minted source concept
+
+grounding: supported. Targets: antibioticmech:aro-3b4e0b6d96.
+
+Both external xrefs resolve to the same molecule. The class is a broader parent, not an exact synonym. The deterministic mint is reproducible; no exact ChEBI reassignment was established in this bounded review.
+
+### Inherited incorrect name spelling
+
+representation: concern. Targets: antibioticmech:aro-3b4e0b6d96.
+
+The definition opening contains5-episosomicin; title, exact synonym mapping and primary paper establish 5-episisomicin. This is an inherited textual typo, not a different encoded molecule.
+
+### Antibacterial and aminoglycoside classification
+
+evidence: supported. Targets: antibioticmech:aro-3b4e0b6d96.
+
+The specified molecule has direct antibacterial activity evidence and the parent/class fits its structure. The definition citation is a primary exact-compound study.
+
+### All 42 resistance evidence placements
+
+evidence: supported. Targets: antibioticmech:aro-3b4e0b6d96.
+
+Every object accurately identifies a database relation. This review verified each source edge and citation placement; it did not promote those notes into direct biochemical or clinical evidence for all 42 variants.
+
+### Available assay-resolved primary evidence
+
+completeness: concern. Targets: antibioticmech:aro-3b4e0b6d96.
+
+Activity and resistance-context observations can enrich the seed. Historical group labels, clinical-isolate associations, construct phenotypes and current variant-specific annotations must remain distinct.
+
+### Antimicrobial target versus class/model inference
+
+scope: unknown. Targets: antibioticmech:aro-3b4e0b6d96.
+
+Aminoglycoside-class ribosomal action is contextual; no inspected exact-drug direct binding or translation-inhibition experiment completes native molecular-target sign-off. Model hairpin-RNA effects and putative methylase-associated resistance do not independently establish a lethal target.
+
+### Semisynthetic identity and source organism
+
+representation: not_applicable. Targets: antibioticmech:aro-3b4e0b6d96.
+
+No producer object is asserted. Semisynthesis and literature discussion of sisomicin analogues do not justify inventing an exact-compound producer claim.
+
+### Clinical and resistance-category bounds
+
+scope: not_applicable. Targets: antibioticmech:aro-3b4e0b6d96.
+
+No clinical assertion exists. Historical isolate panels and projected exposure comparisons do not establish approval, efficacy or current clinical breakpoints.
+
+### Graph and expression context
+
+scope: not_applicable. Targets: antibioticmech:aro-3b4e0b6d96.
+
+No graph or transcriptomic dataset annotation is present. The adapter query found no literal match within its one stated dataset; this does not refute a resistance mechanism or exclude broader expression evidence.
+
+### Generation and provenance
+
+ownership: supported. Targets: antibioticmech:aro-3b4e0b6d96.
+
+Correct ARO/PubChem owners and evidence-promotion layer are recorded; three seed/reseed events are consistent. Source corrections and primary enrichments require their respective durable layers and history.
+
+### Native validators and source calculations
+
+schema: supported. Targets: antibioticmech:aro-3b4e0b6d96.
+
+Native validators, structure consistency and final all-edge comparison pass. The intermediate script header error and initial adapter DNS failure are disclosed, not misreported as scientific failures.
+
+## Findings
+
+### F1: Definition inherits a misspelled compound name
+
+minor / open / confirmed; issue key: aro-3007379-definition-name-spelling.
+
+The opening 5-episosomicin differs from the correct5-episisomicin used by the record label, current source title and cited primary paper. The source inventory and live CARD contain the same error, so a direct generated-YAML edit would not be durable.
+
+### F2: Exact-compound activity evidence can be represented with assay context
+
+minor / open / confirmed; issue key: aro-3007379-primary-activity-evidence-completeness.
+
+The cited original study provides strain/medium-specific primary antibacterial observations absent from the broad seed. Additional resistance studies supply bounded follow-up context. This is a concrete enrichment opportunity, not a requirement to populate every optional field or to promote all source resistance edges.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Correct the definition opening from 5-episosomicin to 5-episisomicin in a durable source-owned layer, then regenerate.
+
+- Correct the upstream/adopted ARO definition or document a narrowly scoped extraction normalization; preserve the definition citation and semantic meaning. Do not rely on editing generated YAML alone.
+- Regeneration must reproduce the correction while preserving exact stereochemical identity, source identifiers and all database-level resistance notes. Run native validation, corpus verification and required QC.
+
+### A2
+
+Curate exact primary activity and bounded resistance context without conflating assay, enzyme-group or construct scope.
+
+- Use visually verified Table 2 strain/medium values in µg/mL, distinguishing single-isolate MIC/MBC from population MIC50/90 and from separate killing curves. Preserve original uncertainty in corrupted Methods wording; do not convert the anomalous B. fragilis zero into a measured MIC.
+- Do not map historical AAC(6-prime),AAC(3)-II or AAC(2-prime) labels to modern subtypes without sequence/source verification. Keep all 42 current database assertions at their stated level unless independently reviewed primary evidence supports a specific promotion.
+- Keep pIP1204 and four-ORF pAT780 observations separate from armA-only constructs; do not invent an exact 5-episisomicin MIC or claim a compound-specific single-gene result from a class-level statement.
+- Do not promote model hairpin-ribozyme activity or aminoglycoside-class context into an exact antimicrobial target. Retain the explicit unresolved direct-mechanism gap.
+- Use validated writer and curation history; if promoting a CARD-derived claim, use the maintained claim-level evidence review layer and appropriate ProteinExample requirements only after exact identity/taxon validation. Run just validate, just validate-strict, just verify-corpus --summary and just qc before native REVIEWED sign-off.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/5-episisomicin.yaml; Entire generated record, including every resistance object | supports | Read identity, definition/citation, pentisomicin synonym, parent/class, full structure, two xrefs, minted source concept, 42 antibiotic-inactivation assertions with their evidence notes, and three seed/reseed events. No top-level primary evidence, activity observations, mode, target, producer, clinical, graph or dataset objects are asserted. |
+| inventory | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/aro_resistance_edges.tsv; ARO:3007379 rows, all 42 incoming determinant edges, manifest and curation/card_evidence_reviews.json | supports | Adopted ARO identity and definition citation reproduce; PubChem enrichment supplies the exact structure. Each resistance note accurately declares a database assertion. Ignored-inclusive maintained-input search found no exact curator override or claim-level promotion. The compound has no exact edge in aro_target_edges.tsv. |
+| ownership | scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py; scripts/seed_from_sources.py; ARO extraction, PubChem enrichment, source-owned definition selection, resistance assembly and curator merge | supports | The imported definition and resistance fields are source-owned. Correct ARO/PubChem inventories and evidence-review layer were added to captured inputs/owners before source judgment, preserving the initial target hash. Primary annotations require validated curation/history; a generated definition edit alone would be overwritten. |
+| pubchem | https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/65453/property/InChI,InChIKey,MolecularFormula,MolecularWeight,Charge/JSON; 050-pubchem.json and current compound page https://pubchem.ncbi.nlm.nih.gov/compound/65453 | supports | CID 65453 is pentisomicin/5-epi-sisomicin and matches the complete stereochemical InChI, key URWAJWIAIPFPJE-VHLNBGGKSA-N, formula C19H37N5O7 and free-base charge. Salt and protonated forms are distinct. |
+| epimer | RDKit atom-mapped comparison against current PubChem sisomicin; 050-sisomicin.json and 050-epimer.json | supports | All 31 heavy atoms map without chirality constraints; the structures differ at exactly one hydroxyl-bearing centre on the central ring (InChI atom 12). Other ten assigned centres agree. This matches the original paper description as the 5-epimer; sisomicin itself has a different stereochemical key. |
+| card | https://card.mcmaster.ca/ontology/46129; 050-card.html; compound identity, parent, synonym, reference and all reverse relations | supports | Current CARD identifies ARO:3007379, pentisomicin, PubChem 65453 and the aminoglycoside parent. Its 42 reverse resistance labels match all stored determinants. The definition itself spells the molecule 5-episosomicin, unlike the title and cited primary article; the record faithfully inherited this typo. |
+| aro-check | Adopted ARO ontology and complete focused source comparisons; Read-only original downloads/aro.obo dated 11:08:2026; 050-aro-check.py and 050-aro-check.json | supports | All 44 unique ARO terms resolve with their expected labels and no obsolete flag; all 42 exact confers_resistance_to_antibiotic edges agree with adopted rows and object-level database references. Cached OBO sha256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4. Current compound page corroborates the set, but this is not an independent primary-literature audit of every subtype. |
+| primary1978 | PMID:697347; DOI:10.1128/AAC.14.2.194; seven original PMC scanned pages 194-200, 050-aac00290-0042.png through 0048.png; full OCR plus visual methods and Tables 1/2/3/6 | supports | The Schering-supplied 5-epimer is tested by twofold dilution with a usual 10^5-CFU inoculum at 35 C. Table 2 reports E. coli 3939 MIC/MBC 3.1/3.1 µg/mL in Mueller-Hinton broth, versus 0.8/3.1 in nutrient broth. MIC50/90 tables are population summaries, not single-strain measurements. Table 6 uses historical enzyme groups, not all modern ARO subtypes. The printed Methods contain duplicated/corrupted MBC/Bacteroides wording, requiring qualified extraction. |
+| primary1978-page | https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a09c/352432/3ca206f45d76/aac00290-0043.png; Original p195 image, Table 2 | supports | Visually verified the exact E. coli 3939 medium-specific values. The Table 1 B. fragilis row displays an anomalous zero while the narrative says not inhibited; do not encode that zero as a susceptibility endpoint. |
+| resistance1978 | PMID:101131; DOI:10.1128/AAC.14.3.391; publisher abstract and 050-1978resistancecore.json | partial | The separate resistant-isolate study reports some AAC6-prime and AAC3-bearing isolates resistant to and acetylating the compound, while many enzyme-bearing isolates remain inhibited. This abstract supports a specific follow-up lead, not every modern determinant or a universal enzyme-family phenotype. |
+| arma2003 | DOI:10.1128/AAC.47.8.2565-2571.2003; Full publisher text at https://journals.asm.org/doi/full/10.1128/aac.47.8.2565-2571.2003; Methods, Results and Discussion; Table 2 values not inspected | partial | The authors explicitly report exact-drug high-level resistance after transfer of pIP1204 and in E. coli carrying pAT780, a four-ORF insert containing armA. Separate armA-only constructs support a class-level resistance interpretation. The inspected narrative does not supply an exact 5-episisomicin MIC or direct drug-binding measurement; do not substitute a multi-gene construct observation for compound-specific single-gene causality. |
+| rna1998 | PMID:9837982; DOI:10.1093/nar/26.24.5551; PMC148042 abstract and publisher discovery snippet | context_only | The abstract names 5-epi-sisomicin among inhibitors of hairpin-ribozyme cleavage in the presence of metal ions. This model RNA-catalysis result is not demonstration of bacterial killing through that RNA and cannot establish an antimicrobial ribosomal target. Full article/PDF was not retrieved. |
+| chemistry | RDKit and source mint calculation; 050-chemistry.py and 050-chemistry.json | supports | Both native encodings agree on the exact key, C19H37N5O7, charge zero, one fragment and eleven assigned stereocentres. Computed average 447.533 and exact 447.269298524 masses agree at stored precision. ARO-derived minted identifier reproduces. |
+| imodulondb | Structured iModulonDB adapter; 050-imodulondb-datasets.txt and 050-imodulondb-search.txt | context_only | Initial DNS failure exited 2; network retry catalog exited 0 before open-web research. Source definition places AAC(3)-IIIa in P. aeruginosa, supporting a precise364 query; it returned no genes/modules. No module annotation was inferred from that bounded search. |
+| validation | just validate; just validate-strict; Actual isolated batch-005 executions; 050-strict.tsv | supports | Both documented per-record validators exited 0; strict scanned one file with zero ERROR rows. A reviewer-script TSV-column typo produced one intermediate exit 1, preserved separately and corrected before the final passing source comparison. |
+| search | Ignored-inclusive local and bounded public exact-compound research; 050-local-hits.txt; maintained-input, official database and primary-paper queries | context_only | Exact molecule identity, stereochemistry, primary activity and resistance scope were checked. The imported aminoglycoside class alone does not supply a compound-specific target experiment. |
+
+## Limits And Additional Notes
+
+- All 42 resistance entries were checked against exact adopted source edges and current CARD labels, not independently against 42 primary experimental literatures. Database provenance is accurate; exact biochemical/clinical validation remains a separate task.
+- The original 1978 activity paper was read as all seven publicly served PMC scanned pages with OCR; methods and relevant tables were also checked visually. The PDF endpoint returned browser-challenge HTML, not a PDF. OCR was not used alone for numerical extraction.
+- The original 1978 printed Methods contain duplicated/corrupted MBC and anaerobic-incubation prose, and the B. fragilis table row is anomalous. The review does not silently repair those source defects or infer unprinted values.
+- PMID:101131 and PMID:9837982 were inspected at abstract level. Their full text/PDF was not successfully retrieved; a preliminary guessed XML accession for the RNA paper returned 500 and was not used as evidence. Correct RNA identity is PMC148042/PMID:9837982.
+- The 2003 full publisher narrative was read, but Table 2 values were not inspected. Its exact-drug pAT780 phenotype has a four-ORF construct scope; no exact MIC or isolated-armA result for 5-episisomicin is claimed here. Europe PMC XML retrieval returned 500.
+- The structured adapter initially failed with DNS exit 2, then succeeded with catalog and one source-grounded gene query. Zero results cover only that literal name/dataset, not all resistance variants or organisms.
+- An expanded reviewer script initially used a wrong TSV key and exited 1; its initial code is preserved and the corrected script passes. This technical mistake is distinct from a native-data defect.
+- A direct exact-compound antimicrobial target experiment was not established by the bounded literature search. Native REVIEWED criteria remain incomplete; the original record stays SEEDED.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Only scratch review artifacts were written. No native record, maintained input, generated artifact or curation history was modified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T075807Z-aro-3007379-5-episisomicin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of ARO:3007379 (5-episisomicin)
+started_at: '2026-10-21T07:44:23Z'
+finished_at: '2026-10-21T07:58:07Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Exact identity and database-scoped resistance annotations supported;
+  a source definition typo and primary-evidence enrichment remain, with direct antimicrobial-target
+  evidence unresolved
+scientific_review: true
+summary: The recorded free-base structure is the specified 5-epimer of sisomicin and
+  matches PubChem. All 42 resistance assertions reproduce their adopted ARO labels
+  and edges, and the current CARD compound page lists the same set. Two minor findings
+  concern an inherited spelling error in the definition and concrete primary activity
+  evidence. Older enzyme-group phenotypes, resistance constructs and model-ribozyme
+  assays must retain their narrower scopes.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/5-episisomicin.yaml
+    sha256: d2b76fc859864adea480e25885b26d7a12d21220dc2dd01fa5ae49c2d68853db
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Entire record and all 42 resistance entries, correct ARO/PubChem source
+    ownership, exact stereochemistry, current authoritative identity, original activity
+    study, and bounded resistance/antimicrobial-mechanism evidence.
+  selection: Path-ordered unreviewed queue index 050; exactly one record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+targets:
+- target_id: antibioticmech:aro-3b4e0b6d96
+  path: data/antibiotics/antibacterial/5-episisomicin.yaml
+  label: 5-episisomicin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition, class, synonyms and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: ARO resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: PubChem exact structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem property retrieval
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Claim-level primary evidence promotions
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/5-episisomicin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Documented per-record closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one record, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/5-episisomicin.yaml --out /private/tmp/am-review-session/050-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Independent chemistry, mint and current PubChem comparison
+  status: passed
+  required: false
+  summary: Exit 0; both native encodings and exact current PubChem structure agree.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - chemistry
+  - pubchem
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/050-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: aro-expanded-first
+  name: Expanded source comparison initial execution
+  status: failed
+  required: false
+  summary: Exit 1 was a reviewer-script KeyError from using inchi instead of the actual
+    standard_inchi TSV header. The preceding 42-edge checks passed. Initial code is
+    preserved as 050-aro-check-header-error.py; corrected execution follows.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - aro-check
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/050-aro-check.py
+  exit_code: 1
+  expected_exit_code: 0
+- check_id: aro-check
+  name: All resistance source edges and current CARD comparison
+  status: passed
+  required: false
+  summary: Exit 0 after correcting the reviewer script header lookup; all 44 ARO identifiers/42
+    direct edges, live labels and native source rows agree.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - aro-check
+  - card
+  - inventory
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/050-aro-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-first
+  name: Structured adapter initial discovery
+  status: failed
+  required: false
+  summary: Initial sandbox execution exited 2 with a DNS resolution error; a permitted
+    network retry succeeded before open-web research.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - imodulondb
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 datasets > /private/tmp/am-review-session/050-imodulondb-datasets.txt
+  exit_code: 2
+  expected_exit_code: 0
+- check_id: imodulondb-catalog
+  name: Structured adapter dataset discovery retry
+  status: passed
+  required: false
+  summary: Exit 0; public dataset catalog includes P. aeruginosa precise364.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - imodulondb
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 datasets > /private/tmp/am-review-session/050-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-query
+  name: Source-grounded resistance-gene context search
+  status: passed
+  required: false
+  summary: Exit 0; AAC(3)-IIIa query in p_aeruginosa/precise364 returned zero genes
+    and zero modules. This single query is not an exhaustive gene-expression absence
+    claim.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - imodulondb
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism p_aeruginosa --dataset
+    precise364 --query 'AAC(3)-IIIa' > /private/tmp/am-review-session/050-imodulondb-search.txt
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/5-episisomicin.yaml
+  locator: Entire generated record, including every resistance object
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: Read identity, definition/citation, pentisomicin synonym, parent/class,
+    full structure, two xrefs, minted source concept, 42 antibiotic-inactivation assertions
+    with their evidence notes, and three seed/reseed events. No top-level primary
+    evidence, activity observations, mode, target, producer, clinical, graph or dataset
+    objects are asserted.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; data/raw/aro_resistance_edges.tsv
+  locator: ARO:3007379 rows, all 42 incoming determinant edges, manifest and curation/card_evidence_reviews.json
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: Adopted ARO identity and definition citation reproduce; PubChem enrichment
+    supplies the exact structure. Each resistance note accurately declares a database
+    assertion. Ignored-inclusive maintained-input search found no exact curator override
+    or claim-level promotion. The compound has no exact edge in aro_target_edges.tsv.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/extract_source_inventory.py; scripts/enrich_pubchem_structures.py;
+    scripts/seed_from_sources.py
+  locator: ARO extraction, PubChem enrichment, source-owned definition selection,
+    resistance assembly and curator merge
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: The imported definition and resistance fields are source-owned. Correct
+    ARO/PubChem inventories and evidence-review layer were added to captured inputs/owners
+    before source judgment, preserving the initial target hash. Primary annotations
+    require validated curation/history; a generated definition edit alone would be
+    overwritten.
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/65453/property/InChI,InChIKey,MolecularFormula,MolecularWeight,Charge/JSON
+  locator: 050-pubchem.json and current compound page https://pubchem.ncbi.nlm.nih.gov/compound/65453
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: CID 65453 is pentisomicin/5-epi-sisomicin and matches the complete stereochemical
+    InChI, key URWAJWIAIPFPJE-VHLNBGGKSA-N, formula C19H37N5O7 and free-base charge.
+    Salt and protonated forms are distinct.
+  snapshot_sha256: 41fab7565dff3f74b368ccb513b677f83722ed00c11600ac0fe8cf6aa5df3009
+- evidence_id: epimer
+  kind: validation
+  reference: RDKit atom-mapped comparison against current PubChem sisomicin
+  locator: 050-sisomicin.json and 050-epimer.json
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: All 31 heavy atoms map without chirality constraints; the structures differ
+    at exactly one hydroxyl-bearing centre on the central ring (InChI atom 12). Other
+    ten assigned centres agree. This matches the original paper description as the
+    5-epimer; sisomicin itself has a different stereochemical key.
+  snapshot_sha256: a6b83c35327e7303e44e57aa4d9af6d6d89b5fb61b1b1eff497fa11306b8506c
+- evidence_id: card
+  kind: database
+  reference: https://card.mcmaster.ca/ontology/46129
+  locator: 050-card.html; compound identity, parent, synonym, reference and all reverse
+    relations
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: Current CARD identifies ARO:3007379, pentisomicin, PubChem 65453 and the
+    aminoglycoside parent. Its 42 reverse resistance labels match all stored determinants.
+    The definition itself spells the molecule 5-episosomicin, unlike the title and
+    cited primary article; the record faithfully inherited this typo.
+  snapshot_sha256: 0a01ace69a39d0f2c9d579c4e5da9b769d011a0b90988cf490c879b2e7c1d0c9
+- evidence_id: aro-check
+  kind: validation
+  reference: Adopted ARO ontology and complete focused source comparisons
+  locator: Read-only original downloads/aro.obo dated 11:08:2026; 050-aro-check.py
+    and 050-aro-check.json
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: All 44 unique ARO terms resolve with their expected labels and no obsolete
+    flag; all 42 exact confers_resistance_to_antibiotic edges agree with adopted rows
+    and object-level database references. Cached OBO sha256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4.
+    Current compound page corroborates the set, but this is not an independent primary-literature
+    audit of every subtype.
+  snapshot_sha256: 0cb43c2631cd07b7ccd3ee9d0a0af2e50c53e95335ad07dceaf07b89c7d2eecf
+- evidence_id: primary1978
+  kind: primary_source
+  reference: PMID:697347
+  locator: DOI:10.1128/AAC.14.2.194; seven original PMC scanned pages 194-200, 050-aac00290-0042.png
+    through 0048.png; full OCR plus visual methods and Tables 1/2/3/6
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: The Schering-supplied 5-epimer is tested by twofold dilution with a usual
+    10^5-CFU inoculum at 35 C. Table 2 reports E. coli 3939 MIC/MBC 3.1/3.1 µg/mL
+    in Mueller-Hinton broth, versus 0.8/3.1 in nutrient broth. MIC50/90 tables are
+    population summaries, not single-strain measurements. Table 6 uses historical
+    enzyme groups, not all modern ARO subtypes. The printed Methods contain duplicated/corrupted
+    MBC/Bacteroides wording, requiring qualified extraction.
+  snapshot_sha256: 1fe92d6bdf8a7d4f412a9af5033cb1ef658c32c950d7ea45f0b37f6fd7893a8d
+- evidence_id: primary1978-page
+  kind: primary_source
+  reference: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a09c/352432/3ca206f45d76/aac00290-0043.png
+  locator: Original p195 image, Table 2
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: Visually verified the exact E. coli 3939 medium-specific values. The Table
+    1 B. fragilis row displays an anomalous zero while the narrative says not inhibited;
+    do not encode that zero as a susceptibility endpoint.
+  snapshot_sha256: bfef92aed321dfcae2d87b56d5ead36087d788bcec27812d50477f3e17ac9094
+- evidence_id: resistance1978
+  kind: primary_source
+  reference: PMID:101131
+  locator: DOI:10.1128/AAC.14.3.391; publisher abstract and 050-1978resistancecore.json
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: partial
+  summary: The separate resistant-isolate study reports some AAC6-prime and AAC3-bearing
+    isolates resistant to and acetylating the compound, while many enzyme-bearing
+    isolates remain inhibited. This abstract supports a specific follow-up lead, not
+    every modern determinant or a universal enzyme-family phenotype.
+  snapshot_sha256: 12dc828d7d38c2867078078fcdb1b80a851b26d2a56907c1ad1dcd2ea717f3e8
+- evidence_id: arma2003
+  kind: primary_source
+  reference: DOI:10.1128/AAC.47.8.2565-2571.2003
+  locator: Full publisher text at https://journals.asm.org/doi/full/10.1128/aac.47.8.2565-2571.2003;
+    Methods, Results and Discussion; Table 2 values not inspected
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: partial
+  summary: The authors explicitly report exact-drug high-level resistance after transfer
+    of pIP1204 and in E. coli carrying pAT780, a four-ORF insert containing armA.
+    Separate armA-only constructs support a class-level resistance interpretation.
+    The inspected narrative does not supply an exact 5-episisomicin MIC or direct
+    drug-binding measurement; do not substitute a multi-gene construct observation
+    for compound-specific single-gene causality.
+- evidence_id: rna1998
+  kind: primary_source
+  reference: PMID:9837982
+  locator: DOI:10.1093/nar/26.24.5551; PMC148042 abstract and publisher discovery
+    snippet
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: context_only
+  summary: The abstract names 5-epi-sisomicin among inhibitors of hairpin-ribozyme
+    cleavage in the presence of metal ions. This model RNA-catalysis result is not
+    demonstration of bacterial killing through that RNA and cannot establish an antimicrobial
+    ribosomal target. Full article/PDF was not retrieved.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit and source mint calculation
+  locator: 050-chemistry.py and 050-chemistry.json
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: Both native encodings agree on the exact key, C19H37N5O7, charge zero,
+    one fragment and eleven assigned stereocentres. Computed average 447.533 and exact
+    447.269298524 masses agree at stored precision. ARO-derived minted identifier
+    reproduces.
+  snapshot_sha256: d4715cff8f6239265bec2492ea2a25d51123d03f8729879d959ce7e48519647a
+- evidence_id: imodulondb
+  kind: search
+  reference: Structured iModulonDB adapter
+  locator: 050-imodulondb-datasets.txt and 050-imodulondb-search.txt
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: context_only
+  summary: Initial DNS failure exited 2; network retry catalog exited 0 before open-web
+    research. Source definition places AAC(3)-IIIa in P. aeruginosa, supporting a
+    precise364 query; it returned no genes/modules. No module annotation was inferred
+    from that bounded search.
+  search_scope: Dataset discovery and one literal AAC(3)-IIIa query in p_aeruginosa/precise364.
+    No claim of exhaustive coverage of all 42 determinant names, aliases, taxa or
+    datasets.
+  snapshot_sha256: 2393db038e03d291fa5afee21d748d3410864a6226b2368f89ed81d01df240e0
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual isolated batch-005 executions; 050-strict.tsv
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: supports
+  summary: Both documented per-record validators exited 0; strict scanned one file
+    with zero ERROR rows. A reviewer-script TSV-column typo produced one intermediate
+    exit 1, preserved separately and corrected before the final passing source comparison.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and bounded public exact-compound research
+  locator: 050-local-hits.txt; maintained-input, official database and primary-paper
+    queries
+  accessed_at: '2026-10-21T07:50:43Z'
+  support: context_only
+  summary: Exact molecule identity, stereochemistry, primary activity and resistance
+    scope were checked. The imported aminoglycoside class alone does not supply a
+    compound-specific target experiment.
+  search_scope: prepare.py 50 searched identifier, label and slug with rg --no-ignore
+    --hidden excluding only .git/.venv. Follow-up ignored-inclusive maintained-input
+    searches covered ARO:3007379, minted ID, 5-episisomicin, misspelling 5-episosomicin
+    and pentisomicin. Public queries covered exact names, cited PMID:697347, resistance,
+    ribosome/protein synthesis, primary RNA experiments and possible ChEBI grounding.
+    Current CARD/PubChem, full 1978 scanned activity study, 1978 resistance abstract,
+    2003 resistance full narrative and 1998 RNA abstract were inspected. No exhaustive
+    absence claim is made.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact specified 5-epimer and free base
+  outcome: supported
+  summary: Complete source structure agrees and differs from sisomicin at the expected
+    one central hydroxyl-bearing centre. Preserve all 11 assigned centres and distinguish
+    salts, the parent epimer and generic aminoglycoside class.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - record
+  - pubchem
+  - epimer
+  - chemistry
+  - primary1978
+- assessment_id: grounding
+  area: grounding
+  topic: ARO/PubChem anchors and minted source concept
+  outcome: supported
+  summary: Both external xrefs resolve to the same molecule. The class is a broader
+    parent, not an exact synonym. The deterministic mint is reproducible; no exact
+    ChEBI reassignment was established in this bounded review.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - pubchem
+  - card
+  - aro-check
+  - chemistry
+- assessment_id: definition
+  area: representation
+  topic: Inherited incorrect name spelling
+  outcome: concern
+  summary: The definition opening contains5-episosomicin; title, exact synonym mapping
+    and primary paper establish 5-episisomicin. This is an inherited textual typo,
+    not a different encoded molecule.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - record
+  - inventory
+  - card
+  - primary1978
+- assessment_id: classification
+  area: evidence
+  topic: Antibacterial and aminoglycoside classification
+  outcome: supported
+  summary: The specified molecule has direct antibacterial activity evidence and the
+    parent/class fits its structure. The definition citation is a primary exact-compound
+    study.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - primary1978
+  - card
+  - chemistry
+- assessment_id: resistance
+  area: evidence
+  topic: All 42 resistance evidence placements
+  outcome: supported
+  summary: Every object accurately identifies a database relation. This review verified
+    each source edge and citation placement; it did not promote those notes into direct
+    biochemical or clinical evidence for all 42 variants.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - record
+  - inventory
+  - aro-check
+  - card
+- assessment_id: primary
+  area: completeness
+  topic: Available assay-resolved primary evidence
+  outcome: concern
+  summary: Activity and resistance-context observations can enrich the seed. Historical
+    group labels, clinical-isolate associations, construct phenotypes and current
+    variant-specific annotations must remain distinct.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - primary1978
+  - resistance1978
+  - arma2003
+- assessment_id: mechanism
+  area: scope
+  topic: Antimicrobial target versus class/model inference
+  outcome: unknown
+  summary: Aminoglycoside-class ribosomal action is contextual; no inspected exact-drug
+    direct binding or translation-inhibition experiment completes native molecular-target
+    sign-off. Model hairpin-RNA effects and putative methylase-associated resistance
+    do not independently establish a lethal target.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - record
+  - rna1998
+  - arma2003
+  - search
+- assessment_id: producer
+  area: representation
+  topic: Semisynthetic identity and source organism
+  outcome: not_applicable
+  summary: No producer object is asserted. Semisynthesis and literature discussion
+    of sisomicin analogues do not justify inventing an exact-compound producer claim.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - record
+  - primary1978
+- assessment_id: clinical
+  area: scope
+  topic: Clinical and resistance-category bounds
+  outcome: not_applicable
+  summary: No clinical assertion exists. Historical isolate panels and projected exposure
+    comparisons do not establish approval, efficacy or current clinical breakpoints.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - record
+  - primary1978
+- assessment_id: datasets
+  area: scope
+  topic: Graph and expression context
+  outcome: not_applicable
+  summary: No graph or transcriptomic dataset annotation is present. The adapter query
+    found no literal match within its one stated dataset; this does not refute a resistance
+    mechanism or exclude broader expression evidence.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - record
+  - imodulondb
+- assessment_id: ownership
+  area: ownership
+  topic: Generation and provenance
+  outcome: supported
+  summary: Correct ARO/PubChem owners and evidence-promotion layer are recorded; three
+    seed/reseed events are consistent. Source corrections and primary enrichments
+    require their respective durable layers and history.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - inventory
+  - ownership
+  - chemistry
+- assessment_id: schema-assessment
+  area: schema
+  topic: Native validators and source calculations
+  outcome: supported
+  summary: Native validators, structure consistency and final all-edge comparison
+    pass. The intermediate script header error and initial adapter DNS failure are
+    disclosed, not misreported as scientific failures.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  evidence_ids:
+  - validation
+  - chemistry
+  - aro-check
+  - imodulondb
+findings:
+- finding_id: F1
+  issue_key: aro-3007379-definition-name-spelling
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Definition inherits a misspelled compound name
+  description: The opening 5-episosomicin differs from the correct5-episisomicin used
+    by the record label, current source title and cited primary paper. The source
+    inventory and live CARD contain the same error, so a direct generated-YAML edit
+    would not be durable.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  field_paths:
+  - definition
+  evidence_ids:
+  - record
+  - inventory
+  - card
+  - primary1978
+  rule_id: 'review-checklist: Identity and Audit'
+  native_severity: minor source-owned textual error
+  normalization_reason: Identity remains unambiguous through the exact structure,
+    label and xrefs; this spelling defect does not indicate a wrong molecule or justify
+    major severity.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition, class, synonyms and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+- finding_id: F2
+  issue_key: aro-3007379-primary-activity-evidence-completeness
+  category: completeness
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Exact-compound activity evidence can be represented with assay context
+  description: The cited original study provides strain/medium-specific primary antibacterial
+    observations absent from the broad seed. Additional resistance studies supply
+    bounded follow-up context. This is a concrete enrichment opportunity, not a requirement
+    to populate every optional field or to promote all source resistance edges.
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - discussions
+  - mode_of_action_notes
+  evidence_ids:
+  - record
+  - primary1978
+  - primary1978-page
+  - resistance1978
+  - arma2003
+  rule_id: 'review-checklist: Evidence standard, Activity, Resistance and Mode of
+    action'
+  native_severity: minor actionable primary-evidence completeness gap
+  normalization_reason: Specific verified primary observations improve the record;
+    existing source-scoped resistance notes are not falsely presented as direct primary
+    experiments.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/5-episisomicin.yaml
+    role: Curator-owned primary evidence, activity observations and discussions through
+      validated writer/history; CARD evidence promotions use curation/card_evidence_reviews.json
+actions:
+- action_id: A1
+  description: Correct the definition opening from 5-episosomicin to 5-episisomicin
+    in a durable source-owned layer, then regenerate.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: ARO definition, class, synonyms and cross-references
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  acceptance_checks:
+  - Correct the upstream/adopted ARO definition or document a narrowly scoped extraction
+    normalization; preserve the definition citation and semantic meaning. Do not rely
+    on editing generated YAML alone.
+  - Regeneration must reproduce the correction while preserving exact stereochemical
+    identity, source identifiers and all database-level resistance notes. Run native
+    validation, corpus verification and required QC.
+- action_id: A2
+  description: Curate exact primary activity and bounded resistance context without
+    conflating assay, enzyme-group or construct scope.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-3b4e0b6d96
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/5-episisomicin.yaml
+    role: Curator-owned primary evidence, activity observations and discussions through
+      validated writer/history; CARD evidence promotions use curation/card_evidence_reviews.json
+  acceptance_checks:
+  - Use visually verified Table 2 strain/medium values in µg/mL, distinguishing single-isolate
+    MIC/MBC from population MIC50/90 and from separate killing curves. Preserve original
+    uncertainty in corrupted Methods wording; do not convert the anomalous B. fragilis
+    zero into a measured MIC.
+  - Do not map historical AAC(6-prime),AAC(3)-II or AAC(2-prime) labels to modern
+    subtypes without sequence/source verification. Keep all 42 current database assertions
+    at their stated level unless independently reviewed primary evidence supports
+    a specific promotion.
+  - Keep pIP1204 and four-ORF pAT780 observations separate from armA-only constructs;
+    do not invent an exact 5-episisomicin MIC or claim a compound-specific single-gene
+    result from a class-level statement.
+  - Do not promote model hairpin-ribozyme activity or aminoglycoside-class context
+    into an exact antimicrobial target. Retain the explicit unresolved direct-mechanism
+    gap.
+  - Use validated writer and curation history; if promoting a CARD-derived claim,
+    use the maintained claim-level evidence review layer and appropriate ProteinExample
+    requirements only after exact identity/taxon validation. Run just validate, just
+    validate-strict, just verify-corpus --summary and just qc before native REVIEWED
+    sign-off.
+limitations:
+- All 42 resistance entries were checked against exact adopted source edges and current
+  CARD labels, not independently against 42 primary experimental literatures. Database
+  provenance is accurate; exact biochemical/clinical validation remains a separate
+  task.
+- The original 1978 activity paper was read as all seven publicly served PMC scanned
+  pages with OCR; methods and relevant tables were also checked visually. The PDF
+  endpoint returned browser-challenge HTML, not a PDF. OCR was not used alone for
+  numerical extraction.
+- The original 1978 printed Methods contain duplicated/corrupted MBC and anaerobic-incubation
+  prose, and the B. fragilis table row is anomalous. The review does not silently
+  repair those source defects or infer unprinted values.
+- PMID:101131 and PMID:9837982 were inspected at abstract level. Their full text/PDF
+  was not successfully retrieved; a preliminary guessed XML accession for the RNA
+  paper returned 500 and was not used as evidence. Correct RNA identity is PMC148042/PMID:9837982.
+- The 2003 full publisher narrative was read, but Table 2 values were not inspected.
+  Its exact-drug pAT780 phenotype has a four-ORF construct scope; no exact MIC or
+  isolated-armA result for 5-episisomicin is claimed here. Europe PMC XML retrieval
+  returned 500.
+- The structured adapter initially failed with DNS exit 2, then succeeded with catalog
+  and one source-grounded gene query. Zero results cover only that literal name/dataset,
+  not all resistance variants or organisms.
+- An expanded reviewer script initially used a wrong TSV key and exited 1; its initial
+  code is preserved and the corrected script passes. This technical mistake is distinct
+  from a native-data defect.
+- A direct exact-compound antimicrobial target experiment was not established by the
+  bounded literature search. Native REVIEWED criteria remain incomplete; the original
+  record stays SEEDED.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Only scratch review artifacts were written. No native record, maintained input,
+  generated artifact or curation history was modified.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://card.mcmaster.ca/ontology/46129
+- https://pubchem.ncbi.nlm.nih.gov/compound/65453
+- https://doi.org/10.1128/AAC.14.2.194
+- https://doi.org/10.1128/AAC.14.3.391
+- https://doi.org/10.1128/AAC.47.8.2565-2571.2003
+- https://doi.org/10.1093/nar/26.24.5551
+tags:
+- record-review
+- aminoglycoside
+- stereochemical-identity
+- database-resistance-scope
+- primary-activity-evidence
+```
