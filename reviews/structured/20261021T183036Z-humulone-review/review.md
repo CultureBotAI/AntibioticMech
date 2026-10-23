@@ -1,0 +1,939 @@
+# Humulone exact-record review
+
+- Review: 20261021T183036Z-humulone-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T18:01:03Z
+- Finished UTC: 2026-10-21T18:30:36Z
+- Reviewer: Codex (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The imported structure consistently encodes (6R)-humulone, whereas original crystallographic work assigns natural (-)-humulone as (6S), corroborated by a later stereochemical study. The aromatic-ketone parent also conflicts with the nonaromatic graph. Historical antibacterial evidence supports natural humulone at bounded assay depth; it cannot silently validate the opposite enantiomer. One identity blocker and one major classification defect require source-level reconciliation.
+
+## Scope And Provenance
+
+Entire exact native record, all asserted groundings, source provenance and adopted citation scope, with bounded primary activity and mechanism follow-up.
+
+Selection: Initially uncovered queue position540; one exact record in path order.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:5769 | data/antibiotics/antibacterial/humulone.yaml | generated | humulone |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused chemistry verification | passed | False | CHEBI:5769 | Actual focused execution exited 0. |
+| Focused schema verification | passed | True | CHEBI:5769 | Actual focused execution exited 0. |
+| Focused strict verification | passed | True | CHEBI:5769 | Actual focused execution exited 0. |
+| Independent current-authority graph and CIP comparison | passed | False | CHEBI:5769 | Nine encodings agree on the imported R enantiomer; accurate CIP assignment and an independently mapped ring establish the contrast with the primary S assignment. Scratch inversion has the expected different complete key. |
+| Structured-source applicability | not_applicable | False | CHEBI:5769 | No native gene, protein, regulator, pathway or expression assertion is present in this chemical-only record. |
+| Authoritative full QC | failed | True | CHEBI:5769 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:5769 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:5769 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:5769 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:5769 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:5769 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:5769 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:5769 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:5769 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Natural-product stereochemistry versus imported database identity
+
+identity: concern. Targets: CHEBI:5769.
+
+Internal representation agreement and schema success conceal an enantiomer-level conflict with primary stereochemical evidence. Both the configured structure and exact R aliases require a coordinated source-level decision.
+
+### Structural parents and role scope
+
+grounding: concern. Targets: CHEBI:5769.
+
+Four structural parents fit; the aromatic-ketone parent does not. Natural humulone has antibacterial support, but that role is not thereby established for the encoded unnatural R enantiomer or as a modern approved-drug claim.
+
+### Cross-reference and document boundaries
+
+grounding: unknown. Targets: CHEBI:5769.
+
+Several chemical providers agree on the imported R representation, while direct CAS/Reaxys enantiomer scope remains unresolved. Patent document relevance is supported at selected-text depth without treating derivatives or compositions as exact compound evidence.
+
+### Antimicrobial versus host and derivative experiments
+
+evidence: supported. Targets: CHEBI:5769.
+
+The primary evidence has been separated by material and endpoint. No unasserted molecular target, conventional MIC, clinical status or biosynthetic enzyme target is invented from host studies or derivative experiments.
+
+### Read-depth and identity gate
+
+completeness: unknown. Targets: CHEBI:5769.
+
+Full primary stereochemical main text supports the confirmed identity conflict; inaccessible supplementary diffraction and older metadata-only leads limit complete experimental reassessment. Resolve identity before enriching quantitative or mechanism objects.
+
+### Reproducible imported ownership and history
+
+provenance: supported. Targets: CHEBI:5769.
+
+The source row and source-to-mint calculation agree with the native record and four chronological seed/reseed events. Reviews do not change SEEDED status or native history.
+
+## Findings
+
+### F1: Resolve the imported R enantiomer against natural humulone assigned as6S
+
+blocker / open / confirmed; issue key: humulone-natural-enantiomer-stale-6r-assignment.
+
+The record label and natural-compound source context denote humulone, but the native graph and two systematic aliases encode6R. The2013 original assigns natural (-)-humulone6S using a crystallographic salt; the2026 original explicitly distinguishes naturalS from unnaturalR. Accurate independent CIP calculations establish that this is an actual enantiomer difference, not an atom-order or SMILES-symbol convention. Database agreement reproduces the older assignment and does not reconcile the contradiction. Natural-product antibacterial evidence cannot silently be attached to the opposite enantiomer.
+
+### F2: Remove the aromatic-ketone parent from this nonaromatic graph
+
+major / open / confirmed; issue key: humulone-nonaromatic-graph-aromatic-ketone-parent.
+
+parent_compounds[4] is CHEBI:76224, whose definition requires a carbonyl attached to an aromatic ring. The represented cyclohexadienone has tetrahedral C6, only two ring double bonds and no aromatic atoms. Reversing the stereocentre does not change this connectivity or repair the parent mismatch. Biosynthetic derivation from phloroglucinol does not establish aromaticity of the final compound.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile natural humulone identity in maintained sources before adding activity or mechanism claims.
+
+- Document the2013 natural6S assignment and2026 corroboration; preserve a clear distinction from unnatural6R and from isohumulone derivatives.
+- If the record remains natural humulone, all emitted structure encodings and systematic aliases must agree on6S; scratch candidate CC(C)=CCC1=C(O)[C@@](O)(CC=C(C)C)C(=O)C(C(=O)CC(C)C)=C1O yields VMSLCPKYRPDHLN-NRFANRHFSA-N. This is a proposal requiring source identity reconciliation, not an authorization to hand-edit generated YAML.
+- Recheck ChEBI grounding, exact registry/xrefs, merge/duplicate and slug implications under the native harmonization rules; do not silently retain incompatible R-specific exact references.
+- Preserve formula, neutral charge and connectivity; regenerate through maintained owners and pass focused chemistry/schema/strict, corpus reproduction and full QC.
+
+### A2
+
+Correct the maintained structural-parent mapping and reproduce the record.
+
+- The regenerated record no longer inherits CHEBI:76224 for this graph.
+- Retain independently supported triol, cyclic-ketone, diketone and tertiary-alpha-hydroxy-ketone parents; recheck exact graph and ontology definitions.
+- Pass schema/strict, corpus reproduction and full QC without weakening validation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| native | data/antibiotics/antibacterial/humulone.yaml; Entire native record, five aliases, five parents, role, structure, five cross-references, four patent links and all four history events. | supports | CHEBI:5769 is EXACT/SEEDED. The two systematic aliases explicitly specify6R. All encodings agree internally on neutral C21H30O5 and VMSLCPKYRPDHLN-OAQYLSRUSA-N. No claim-level antimicrobial measurement, protein target, resistance mechanism, producer or clinical object is asserted. |
+| owners | data/raw/chebi_antimicrobials.tsv:191; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; Complete maintained row and extraction/seeding ownership; exact ignored-inclusive maintained-input search. | supports | The adopted row supplies the R structure, both R aliases, all parents, role, references and nine PMID leads. Exact searches of curation/conf/raw identify the source and readiness row, without a matching curator override in that searched scope. The deterministic mint and four seed/reseed events agree. Original thirteen captured input hashes are retained. |
+| chebi | https://www.ebi.ac.uk/chebi/backend/api/public/compound/5769/; Current official structure, aliases, relationships and reference associations. | supports | ChEBI still carries6R in both the configured graph and systematic names, alongside the aromatic-ketone parent. Agreement with the adopted snapshot establishes where the contradiction originates; it does not override newer primary stereochemical evidence. |
+| chemistry | 540-authority-check.py; PubChem:442911; KEGG:C10695; KNApSAcK:C00002697; Nine native/current-authority encodings, accurate rdCIPLabeler assignment, full graph keys and explicit ring atom map. | supports | Native SMILES/InChI, ChEBI SMILES/InChI, PubChem SMILES/InChI, KEGG molfile and KNApSAcK SMILES/InChI all produce the native R key. Native zero-based atom8 maps to systematic C6 and is R; ring C1–C6 map to atoms15,17,24,5,6,8. Inverting only atom8 gives6S and VMSLCPKYRPDHLN-NRFANRHFSA-N without changing formula, charge or connectivity. The ring contains two double bonds and tetrahedral C6, with zero aromatic atoms. This is an independent scratch diagnosis, not a native correction. |
+| stereo2013 | PMID:23239507; DOI:10.1002/anie.201208450; https://pmc.ncbi.nlm.nih.gov/articles/PMC3563212/; Complete original three-page article1553–1555 and actual page images; Scheme1 and Table1 row5. | supports | The authors assign natural (-)-humulone5 as6S from its small, weakly diffracting salt5c with trans-(1R,2R)-diaminocyclohexane. Table1 associates the free acid with negative rotation and explicitly lists6S, correcting older assignments. The salt provides the stereochemical reference; it does not make the native free compound a salt. Figure1 itself depicts tetrahydroisocohumulone2, not humulone. Supplement routes failed or returned challenge HTML, so raw parent diffraction data were not reanalysed. |
+| stereo2026 | PMID:42588575; DOI:10.3390/molecules31152731; https://pmc.ncbi.nlm.nih.gov/articles/PMC13467588/; Entire original main text including methods, results, discussion, tables and captions; actual figure pixels and supplementary data not independently inspected. | supports | The later study explicitly distinguishes natural S-(-)-humulone from unnatural R-(+)-humulone, studies racemization and chiral-HPLC separation, and retains the2013 natural-product assignment. Its new crystallographic structure is trans-isohumulone, not a second crystal determination of the parent. Thermal and photochemical isomerization products are distinct from the natural parent; no antibacterial comparison of the two parent enantiomers is established here. |
+| classes | CHEBI:139592; CHEBI:27136; CHEBI:3992; CHEBI:46640; CHEBI:76224; CHEBI:36047; All official parent/role names and definitions; graph comparison. | supports | Tertiary alpha-hydroxy ketone, triol, cyclic ketone and diketone match the represented graph. Aromatic ketone requires a carbonyl attached to an aromatic ring; the native has no aromatic ring and its tetrahedral C6 prevents a fully conjugated ring. Phloroglucinol ancestry does not make this derivative aromatic. The antibacterial-drug role is a source classification, not evidence of contemporary clinical approval. |
+| xrefs | PubChem:442911; CAS:23510-81-8; CAS:26472-41-3; KEGG:C10695; KNApSAcK:C00002697; Reaxys:3221160; Official KEGG graph, KNApSAcK structure, PubChem CAS queries and source registry associations. | supports | KEGG and KNApSAcK repeat the native R graph and therefore do not resolve the primary conflict. KNApSAcK displays VMSLCPKYRPDHLN-RNZRUAGMNA-N despite a Standard InChI whose recomputed key is the native R key; this is an external internal-display inconsistency, not a separate native xref mismatch. Both CAS queries map to the same PubChem R entry, but direct CAS detail returns401 and direct Reaxys content was not obtained. Their exact enantiomer scope needs rechecking as part of any identity correction. |
+| activity1949 | PMID:16695762; DOI:10.1172/JCI102178; https://pmc.ncbi.nlm.nih.gov/articles/PMC438924/; All four actual original page scans916–919, including experimental material, Table1 and tuberculosis paragraphs. | supports | Natural hop humulon was purified through its phenylenediamine salt and free acid prepared shortly before testing; experiments included both forms without separate Table1 rows. Agar-streak experiments report maximum dilutions producing complete or nearly complete inhibition, not modern unit-bearing MICs. Humulon inhibited several Gram-positive organisms; the tested Gram-negative entries were bounded negative results. The subsequent H37Rv and mouse-treatment work primarily concerns lupulon; humulon was less active and not pursued. These results support natural-compound antibacterial activity, not automatic evidence for the opposite configured enantiomer. |
+| pm17372274 | PMID:17372274; DOI:10.1093/carcin/bgm054; Complete indexed original abstract read; source identifier and bibliographic metadata verified. | context_only | Mouse-skin TPA responses implicate host COX2 transcription, NF-kappaB/AP1 and upstream signaling; these are not bacterial targets. |
+| pm10631313 | PMID:10631313; DOI:10.1016/S0014-5793(99)01727-5; Complete indexed original abstract read; source identifier and bibliographic metadata verified. | context_only | MC3T3-E1 host-cell COX2 transcription and purified cyclooxygenase inhibition are distinct experimental endpoints, not microbial killing. |
+| pm9680110 | PMID:9680110; DOI:10.1016/S0145-2126(98)00046-0; Complete indexed original abstract read; source identifier and bibliographic metadata verified. | context_only | U937 leukemia differentiation with vitaminD3 concerns host cells, not antibacterial activity. |
+| pm9214766 | PMID:9214766; DOI:10.1271/bbb.61.1027; Complete indexed original abstract read; source identifier and bibliographic metadata verified. | context_only | HL60 apoptosis experiments concern host leukemia cells; cytotoxicity does not establish an antimicrobial molecular target. |
+| pm7854777 | PMID:7854777; DOI:10.1159/000227448; Complete indexed original abstract read; source identifier and bibliographic metadata verified. | context_only | Mouse TPA-induced tumor promotion and ear inflammation concern host effects, not bacterial growth. |
+| metadata-leads | PMID:14948476; PMID:14920156; PMID:17774957; DOI:10.1126/science.110.2846.68; Adopted bibliographic metadata; no indexed abstracts and original full text not obtained. | context_only | Two1952 German/French antibacterial or antituberculous reports and a1949 ascorbic-acid protection paper remain leads at metadata depth. Their titles cannot supply exact experimental conditions, mechanism or quantitative results. The fully inspected1949 JCI source does not substitute for all three separate papers. |
+| activity-followup | PMID:29407045; DOI:10.1016/j.resmic.2017.12.005; PMID:1517174; DOI:10.1111/j.1365-2672.1992.tb01843.x; Complete indexed original abstracts only. | supports | The staphylococcal study compares purified humulone, lupulone and xanthohumol; strongest biofilm-eradication statements are not freely transferable among compounds. The Lactobacillus brevis IFO3960 study separates humulone from trans-isohumulone and emphasizes pH/undissociated-acid effects; the more extensive cation/lipid findings concern the isomerized compound. Neither abstract resolves enantiomer-specific activity or supplies a fully checked native MIC. |
+| mechanism-lead | PMID:4205069; DOI:10.1007/BF00416690; PMID:41121659; DOI:10.1002/mbo3.70080; 1973 metadata/title only and2025 complete indexed abstract. | context_only | The Bacillus subtilis168 membrane-damage title is a mechanism lead without inspected methods/results. The newer poultry-pathogen panel uses metabolic-activity endpoints and discusses multiple hop compounds; its abstract alone cannot establish an exact humulone mechanism or a conventional MIC value. No native target is currently asserted. |
+| patents | https://patents.google.com/patent/CN101134719A/en; https://patents.google.com/patent/DE102007028397A1/en; https://patents.google.com/patent/US20110021610A1/en; https://patents.google.com/patent/WO2009114939A1/en; Selected original abstracts, identity/background and relevant production examples; not complete patent claims or image audit. | context_only | CN101134719 concerns tetrahydroisohumulone manufacture. DE102007028397 concerns a cosmetic hair-growth composition including humulon. US20110021610 and WO2009114939 are the aromatic-prenyltransferase family, including Sf9 expression and precursor prenylation examples. The enzyme is biosynthetic, not a bacterial drug target. These documents are relevant associations with derivatives/compositions/production, not exact-enantiomer antimicrobial experiments. The US publication is resolved with its standardized eleven-digit publication number. |
+| search | 540-discovery.json; 540-local-hits.txt; 054-root-fetch1.json through054-root-fetch4.json; Hidden/ignored-inclusive local search; bounded public exact-name literature and authority retrieval. | context_only | All94 returned discovery titles and all nine adopted leads were considered at the declared depths. The2013 stereochemical revision and2026 original were followed up in full main text; the1949 original was read from actual scans. The2013 supplement returned challenge HTML from PMC and403 from Wiley. Direct registry limits are preserved. This is not an assertion of an exhaustive literature or supplement review. |
+
+## Limits And Additional Notes
+
+- The2013 main article and actual page images were inspected, but its supplemental diffraction files were inaccessible. The assignment is based on the original authors crystallographic result and explicit table, not an independent raw-crystal refinement.
+- The2026 full main text, tables and captions were read; actual figure pixels, chromatographic raw data and supplementary materials were not independently assessed. Its crystal is an isohumulone derivative, not parent humulone.
+- All nine adopted PMID identities were resolved: five host-study abstracts were read, the1949 JCI article was fully read from scans, and three older citations remain metadata-only. Most additional antibacterial leads remain abstract-depth.
+- The1949 assays combine salt/free-acid experiments and report dilution limits; no modern unit-bearing MIC or enantiomer-specific potency can be extracted without further material and protocol work.
+- Both CAS queries agree with PubChem at provider-association level, but direct CAS returns401 and direct Reaxys verification was unavailable. Exact enantiomer scope is unresolved.
+- Patent inspection is limited to selected original text and relevant examples. No claim of complete patent or clinical-regulatory review is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Native records, source inputs, history and status are unchanged. Internal chemistry validation passing does not resolve the independently established primary-literature identity conflict.
+- KNApSAcK displayed-key discordance is recorded as an external limitation; its supplied graph itself matches the native R structure.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T183036Z-humulone-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Humulone exact-record review
+started_at: '2026-10-21T18:01:03Z'
+finished_at: '2026-10-21T18:30:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The imported structure consistently encodes (6R)-humulone, whereas original
+  crystallographic work assigns natural (-)-humulone as (6S), corroborated by a later
+  stereochemical study. The aromatic-ketone parent also conflicts with the nonaromatic
+  graph. Historical antibacterial evidence supports natural humulone at bounded assay
+  depth; it cannot silently validate the opposite enantiomer. One identity blocker
+  and one major classification defect require source-level reconciliation.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/humulone.yaml
+    sha256: 8243a9222eba731951b9bb0dfb206cd0bb66b717fb97fb969a4a7d9ca5bf99a7
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:5769
+  path: data/antibiotics/antibacterial/humulone.yaml
+  label: humulone
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position540; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:5769
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5769
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    540
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/humulone.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/humulone.yaml --out /private/tmp/am-review-session/540-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent current-authority graph and CIP comparison
+  status: passed
+  required: false
+  summary: Nine encodings agree on the imported R enantiomer; accurate CIP assignment
+    and an independently mapped ring establish the contrast with the primary S assignment.
+    Scratch inversion has the expected different complete key.
+  target_ids:
+  - CHEBI:5769
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/540-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: adapter
+  name: Structured-source applicability
+  status: not_applicable
+  required: false
+  summary: No native gene, protein, regulator, pathway or expression assertion is
+    present in this chemical-only record.
+  target_ids:
+  - CHEBI:5769
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:5769
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/humulone.yaml
+  locator: Entire native record, five aliases, five parents, role, structure, five
+    cross-references, four patent links and all four history events.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: CHEBI:5769 is EXACT/SEEDED. The two systematic aliases explicitly specify6R.
+    All encodings agree internally on neutral C21H30O5 and VMSLCPKYRPDHLN-OAQYLSRUSA-N.
+    No claim-level antimicrobial measurement, protein target, resistance mechanism,
+    producer or clinical object is asserted.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:191; scripts/extract_source_inventory.py;
+    scripts/seed_from_sources.py
+  locator: Complete maintained row and extraction/seeding ownership; exact ignored-inclusive
+    maintained-input search.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: The adopted row supplies the R structure, both R aliases, all parents,
+    role, references and nine PMID leads. Exact searches of curation/conf/raw identify
+    the source and readiness row, without a matching curator override in that searched
+    scope. The deterministic mint and four seed/reseed events agree. Original thirteen
+    captured input hashes are retained.
+  snapshot_sha256: 99fe9630bb1bdedd8f233f3ce9df1162a6b1716366148adbd7ddee00e84c5f7d
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/5769/
+  locator: Current official structure, aliases, relationships and reference associations.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: ChEBI still carries6R in both the configured graph and systematic names,
+    alongside the aromatic-ketone parent. Agreement with the adopted snapshot establishes
+    where the contradiction originates; it does not override newer primary stereochemical
+    evidence.
+  snapshot_sha256: 960db129059f7b5972787fef6e67159c84103a025d3de8e0c3bf44cfc6a155ac
+- evidence_id: chemistry
+  kind: validation
+  reference: 540-authority-check.py; PubChem:442911; KEGG:C10695; KNApSAcK:C00002697
+  locator: Nine native/current-authority encodings, accurate rdCIPLabeler assignment,
+    full graph keys and explicit ring atom map.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: Native SMILES/InChI, ChEBI SMILES/InChI, PubChem SMILES/InChI, KEGG molfile
+    and KNApSAcK SMILES/InChI all produce the native R key. Native zero-based atom8
+    maps to systematic C6 and is R; ring C1–C6 map to atoms15,17,24,5,6,8. Inverting
+    only atom8 gives6S and VMSLCPKYRPDHLN-NRFANRHFSA-N without changing formula, charge
+    or connectivity. The ring contains two double bonds and tetrahedral C6, with zero
+    aromatic atoms. This is an independent scratch diagnosis, not a native correction.
+  snapshot_sha256: 5c4683f2a357530a68c807819b0c37de5a74b2f6ddb0873d5e71a90b3a7b8749
+- evidence_id: stereo2013
+  kind: primary_source
+  reference: PMID:23239507; DOI:10.1002/anie.201208450; https://pmc.ncbi.nlm.nih.gov/articles/PMC3563212/
+  locator: Complete original three-page article1553–1555 and actual page images; Scheme1
+    and Table1 row5.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: The authors assign natural (-)-humulone5 as6S from its small, weakly diffracting
+    salt5c with trans-(1R,2R)-diaminocyclohexane. Table1 associates the free acid
+    with negative rotation and explicitly lists6S, correcting older assignments. The
+    salt provides the stereochemical reference; it does not make the native free compound
+    a salt. Figure1 itself depicts tetrahydroisocohumulone2, not humulone. Supplement
+    routes failed or returned challenge HTML, so raw parent diffraction data were
+    not reanalysed.
+  snapshot_sha256: 4e43f7846e5b35e16e73593e3aed23a94a013d48ec06658edaedec4ac166bca7
+- evidence_id: stereo2026
+  kind: primary_source
+  reference: PMID:42588575; DOI:10.3390/molecules31152731; https://pmc.ncbi.nlm.nih.gov/articles/PMC13467588/
+  locator: Entire original main text including methods, results, discussion, tables
+    and captions; actual figure pixels and supplementary data not independently inspected.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: The later study explicitly distinguishes natural S-(-)-humulone from unnatural
+    R-(+)-humulone, studies racemization and chiral-HPLC separation, and retains the2013
+    natural-product assignment. Its new crystallographic structure is trans-isohumulone,
+    not a second crystal determination of the parent. Thermal and photochemical isomerization
+    products are distinct from the natural parent; no antibacterial comparison of
+    the two parent enantiomers is established here.
+  snapshot_sha256: 21a1fb3f3089d206765a8108da1eefadf307dcdaa77c4e18159733b545adf3d8
+- evidence_id: classes
+  kind: authority
+  reference: CHEBI:139592; CHEBI:27136; CHEBI:3992; CHEBI:46640; CHEBI:76224; CHEBI:36047
+  locator: All official parent/role names and definitions; graph comparison.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: Tertiary alpha-hydroxy ketone, triol, cyclic ketone and diketone match
+    the represented graph. Aromatic ketone requires a carbonyl attached to an aromatic
+    ring; the native has no aromatic ring and its tetrahedral C6 prevents a fully
+    conjugated ring. Phloroglucinol ancestry does not make this derivative aromatic.
+    The antibacterial-drug role is a source classification, not evidence of contemporary
+    clinical approval.
+  snapshot_sha256: 6fe659d40a3883a1154aba748d40a0207a9a51654830f4b4e46fb86b23a59486
+- evidence_id: xrefs
+  kind: authority
+  reference: PubChem:442911; CAS:23510-81-8; CAS:26472-41-3; KEGG:C10695; KNApSAcK:C00002697;
+    Reaxys:3221160
+  locator: Official KEGG graph, KNApSAcK structure, PubChem CAS queries and source
+    registry associations.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: KEGG and KNApSAcK repeat the native R graph and therefore do not resolve
+    the primary conflict. KNApSAcK displays VMSLCPKYRPDHLN-RNZRUAGMNA-N despite a
+    Standard InChI whose recomputed key is the native R key; this is an external internal-display
+    inconsistency, not a separate native xref mismatch. Both CAS queries map to the
+    same PubChem R entry, but direct CAS detail returns401 and direct Reaxys content
+    was not obtained. Their exact enantiomer scope needs rechecking as part of any
+    identity correction.
+  snapshot_sha256: b46765d4da6a8fcccbe3bdfd56220a85cabb2d018b42c1bfa39700d205e6311c
+- evidence_id: activity1949
+  kind: primary_source
+  reference: PMID:16695762; DOI:10.1172/JCI102178; https://pmc.ncbi.nlm.nih.gov/articles/PMC438924/
+  locator: All four actual original page scans916–919, including experimental material,
+    Table1 and tuberculosis paragraphs.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: Natural hop humulon was purified through its phenylenediamine salt and
+    free acid prepared shortly before testing; experiments included both forms without
+    separate Table1 rows. Agar-streak experiments report maximum dilutions producing
+    complete or nearly complete inhibition, not modern unit-bearing MICs. Humulon
+    inhibited several Gram-positive organisms; the tested Gram-negative entries were
+    bounded negative results. The subsequent H37Rv and mouse-treatment work primarily
+    concerns lupulon; humulon was less active and not pursued. These results support
+    natural-compound antibacterial activity, not automatic evidence for the opposite
+    configured enantiomer.
+  snapshot_sha256: 2c45621599d7f9f766ede0725bacaea25a7e834cd506f513caa2b58b368707c2
+- evidence_id: pm17372274
+  kind: primary_source
+  reference: PMID:17372274; DOI:10.1093/carcin/bgm054
+  locator: Complete indexed original abstract read; source identifier and bibliographic
+    metadata verified.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: Mouse-skin TPA responses implicate host COX2 transcription, NF-kappaB/AP1
+    and upstream signaling; these are not bacterial targets.
+  snapshot_sha256: de9ea2c1badb1776ade54e291beb04b4f08b8e0e8fe7076e2756c11860df8e77
+- evidence_id: pm10631313
+  kind: primary_source
+  reference: PMID:10631313; DOI:10.1016/S0014-5793(99)01727-5
+  locator: Complete indexed original abstract read; source identifier and bibliographic
+    metadata verified.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: MC3T3-E1 host-cell COX2 transcription and purified cyclooxygenase inhibition
+    are distinct experimental endpoints, not microbial killing.
+  snapshot_sha256: de9ea2c1badb1776ade54e291beb04b4f08b8e0e8fe7076e2756c11860df8e77
+- evidence_id: pm9680110
+  kind: primary_source
+  reference: PMID:9680110; DOI:10.1016/S0145-2126(98)00046-0
+  locator: Complete indexed original abstract read; source identifier and bibliographic
+    metadata verified.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: U937 leukemia differentiation with vitaminD3 concerns host cells, not antibacterial
+    activity.
+  snapshot_sha256: de9ea2c1badb1776ade54e291beb04b4f08b8e0e8fe7076e2756c11860df8e77
+- evidence_id: pm9214766
+  kind: primary_source
+  reference: PMID:9214766; DOI:10.1271/bbb.61.1027
+  locator: Complete indexed original abstract read; source identifier and bibliographic
+    metadata verified.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: HL60 apoptosis experiments concern host leukemia cells; cytotoxicity does
+    not establish an antimicrobial molecular target.
+  snapshot_sha256: de9ea2c1badb1776ade54e291beb04b4f08b8e0e8fe7076e2756c11860df8e77
+- evidence_id: pm7854777
+  kind: primary_source
+  reference: PMID:7854777; DOI:10.1159/000227448
+  locator: Complete indexed original abstract read; source identifier and bibliographic
+    metadata verified.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: Mouse TPA-induced tumor promotion and ear inflammation concern host effects,
+    not bacterial growth.
+  snapshot_sha256: de9ea2c1badb1776ade54e291beb04b4f08b8e0e8fe7076e2756c11860df8e77
+- evidence_id: metadata-leads
+  kind: database
+  reference: PMID:14948476; PMID:14920156; PMID:17774957; DOI:10.1126/science.110.2846.68
+  locator: Adopted bibliographic metadata; no indexed abstracts and original full
+    text not obtained.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: Two1952 German/French antibacterial or antituberculous reports and a1949
+    ascorbic-acid protection paper remain leads at metadata depth. Their titles cannot
+    supply exact experimental conditions, mechanism or quantitative results. The fully
+    inspected1949 JCI source does not substitute for all three separate papers.
+  snapshot_sha256: de9ea2c1badb1776ade54e291beb04b4f08b8e0e8fe7076e2756c11860df8e77
+- evidence_id: activity-followup
+  kind: primary_source
+  reference: PMID:29407045; DOI:10.1016/j.resmic.2017.12.005; PMID:1517174; DOI:10.1111/j.1365-2672.1992.tb01843.x
+  locator: Complete indexed original abstracts only.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: supports
+  summary: The staphylococcal study compares purified humulone, lupulone and xanthohumol;
+    strongest biofilm-eradication statements are not freely transferable among compounds.
+    The Lactobacillus brevis IFO3960 study separates humulone from trans-isohumulone
+    and emphasizes pH/undissociated-acid effects; the more extensive cation/lipid
+    findings concern the isomerized compound. Neither abstract resolves enantiomer-specific
+    activity or supplies a fully checked native MIC.
+  snapshot_sha256: 5557c2b34e8935b9ed970e6ba5aa920c91d3a8b223ce25be817fea517435043e
+- evidence_id: mechanism-lead
+  kind: database
+  reference: PMID:4205069; DOI:10.1007/BF00416690; PMID:41121659; DOI:10.1002/mbo3.70080
+  locator: 1973 metadata/title only and2025 complete indexed abstract.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: The Bacillus subtilis168 membrane-damage title is a mechanism lead without
+    inspected methods/results. The newer poultry-pathogen panel uses metabolic-activity
+    endpoints and discusses multiple hop compounds; its abstract alone cannot establish
+    an exact humulone mechanism or a conventional MIC value. No native target is currently
+    asserted.
+  snapshot_sha256: 5557c2b34e8935b9ed970e6ba5aa920c91d3a8b223ce25be817fea517435043e
+- evidence_id: patents
+  kind: primary_source
+  reference: https://patents.google.com/patent/CN101134719A/en; https://patents.google.com/patent/DE102007028397A1/en;
+    https://patents.google.com/patent/US20110021610A1/en; https://patents.google.com/patent/WO2009114939A1/en
+  locator: Selected original abstracts, identity/background and relevant production
+    examples; not complete patent claims or image audit.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: CN101134719 concerns tetrahydroisohumulone manufacture. DE102007028397
+    concerns a cosmetic hair-growth composition including humulon. US20110021610 and
+    WO2009114939 are the aromatic-prenyltransferase family, including Sf9 expression
+    and precursor prenylation examples. The enzyme is biosynthetic, not a bacterial
+    drug target. These documents are relevant associations with derivatives/compositions/production,
+    not exact-enantiomer antimicrobial experiments. The US publication is resolved
+    with its standardized eleven-digit publication number.
+  snapshot_sha256: 0a7350d5b5ee7c84bc1fb12fe8191d3fc0fdc00e36e1d43209e32582e02b65e2
+- evidence_id: search
+  kind: search
+  reference: 540-discovery.json; 540-local-hits.txt; 054-root-fetch1.json through054-root-fetch4.json
+  locator: Hidden/ignored-inclusive local search; bounded public exact-name literature
+    and authority retrieval.
+  accessed_at: '2026-10-21T18:28:26Z'
+  support: context_only
+  summary: All94 returned discovery titles and all nine adopted leads were considered
+    at the declared depths. The2013 stereochemical revision and2026 original were
+    followed up in full main text; the1949 original was read from actual scans. The2013
+    supplement returned challenge HTML from PMC and403 from Wiley. Direct registry
+    limits are preserved. This is not an assertion of an exhaustive literature or
+    supplement review.
+  search_scope: 2026-10-21; whole-worktree exact label, identifier, key and slug searches
+    included hidden and ignored files; focused curation/conf/raw owner search; public
+    exact-name and stereo follow-up with94 discovery hits and nine adopted leads.
+  snapshot_sha256: 3160434cc0e689359e81b33fc2723eb26a3d1b7c0deb3ed1821efc31fdbd2ffd
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Natural-product stereochemistry versus imported database identity
+  outcome: concern
+  summary: Internal representation agreement and schema success conceal an enantiomer-level
+    conflict with primary stereochemical evidence. Both the configured structure and
+    exact R aliases require a coordinated source-level decision.
+  target_ids:
+  - CHEBI:5769
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - stereo2013
+  - stereo2026
+- assessment_id: classification
+  area: grounding
+  topic: Structural parents and role scope
+  outcome: concern
+  summary: Four structural parents fit; the aromatic-ketone parent does not. Natural
+    humulone has antibacterial support, but that role is not thereby established for
+    the encoded unnatural R enantiomer or as a modern approved-drug claim.
+  target_ids:
+  - CHEBI:5769
+  evidence_ids:
+  - classes
+  - chemistry
+  - activity1949
+  - activity-followup
+- assessment_id: references
+  area: grounding
+  topic: Cross-reference and document boundaries
+  outcome: unknown
+  summary: Several chemical providers agree on the imported R representation, while
+    direct CAS/Reaxys enantiomer scope remains unresolved. Patent document relevance
+    is supported at selected-text depth without treating derivatives or compositions
+    as exact compound evidence.
+  target_ids:
+  - CHEBI:5769
+  evidence_ids:
+  - xrefs
+  - patents
+  - chebi
+- assessment_id: evidence
+  area: evidence
+  topic: Antimicrobial versus host and derivative experiments
+  outcome: supported
+  summary: The primary evidence has been separated by material and endpoint. No unasserted
+    molecular target, conventional MIC, clinical status or biosynthetic enzyme target
+    is invented from host studies or derivative experiments.
+  target_ids:
+  - CHEBI:5769
+  evidence_ids:
+  - activity1949
+  - activity-followup
+  - mechanism-lead
+  - patents
+  - pm17372274
+  - pm10631313
+  - pm9680110
+  - pm9214766
+  - pm7854777
+- assessment_id: completeness
+  area: completeness
+  topic: Read-depth and identity gate
+  outcome: unknown
+  summary: Full primary stereochemical main text supports the confirmed identity conflict;
+    inaccessible supplementary diffraction and older metadata-only leads limit complete
+    experimental reassessment. Resolve identity before enriching quantitative or mechanism
+    objects.
+  target_ids:
+  - CHEBI:5769
+  evidence_ids:
+  - stereo2013
+  - stereo2026
+  - metadata-leads
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Reproducible imported ownership and history
+  outcome: supported
+  summary: The source row and source-to-mint calculation agree with the native record
+    and four chronological seed/reseed events. Reviews do not change SEEDED status
+    or native history.
+  target_ids:
+  - CHEBI:5769
+  evidence_ids:
+  - native
+  - owners
+  - chebi
+findings:
+- finding_id: F1
+  issue_key: humulone-natural-enantiomer-stale-6r-assignment
+  category: identity
+  severity: blocker
+  status: open
+  certainty: confirmed
+  title: Resolve the imported R enantiomer against natural humulone assigned as6S
+  description: The record label and natural-compound source context denote humulone,
+    but the native graph and two systematic aliases encode6R. The2013 original assigns
+    natural (-)-humulone6S using a crystallographic salt; the2026 original explicitly
+    distinguishes naturalS from unnaturalR. Accurate independent CIP calculations
+    establish that this is an actual enantiomer difference, not an atom-order or SMILES-symbol
+    convention. Database agreement reproduces the older assignment and does not reconcile
+    the contradiction. Natural-product antibacterial evidence cannot silently be attached
+    to the opposite enantiomer.
+  target_ids:
+  - CHEBI:5769
+  field_paths:
+  - chemical_structure.smiles
+  - chemical_structure.standard_inchi
+  - chemical_structure.standard_inchi_key
+  - synonyms[0]
+  - synonyms[1]
+  - grounding_status
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - stereo2013
+  - stereo2026
+  - activity1949
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity and ontology row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source interpretation and correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible native emission
+  rule_id: Exact structure and stereochemistry must denote the claimed compound
+  native_severity: blocker
+  normalization_reason: An enantiomer-level identity conflict makes the record denote
+    the wrong exact natural-product structure and therefore meets the shared blocker
+    criterion.
+- finding_id: F2
+  issue_key: humulone-nonaromatic-graph-aromatic-ketone-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Remove the aromatic-ketone parent from this nonaromatic graph
+  description: parent_compounds[4] is CHEBI:76224, whose definition requires a carbonyl
+    attached to an aromatic ring. The represented cyclohexadienone has tetrahedral
+    C6, only two ring double bonds and no aromatic atoms. Reversing the stereocentre
+    does not change this connectivity or repair the parent mismatch. Biosynthetic
+    derivation from phloroglucinol does not establish aromaticity of the final compound.
+  target_ids:
+  - CHEBI:5769
+  field_paths:
+  - parent_compounds[4]
+  evidence_ids:
+  - native
+  - chemistry
+  - classes
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity and ontology row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source interpretation and correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible native emission
+  rule_id: Parent compounds must be valid strictly broader structural classes
+  native_severity: major
+  normalization_reason: A confirmed wrong ontology parent is materially incorrect
+    grounding; it remains distinct from the stereochemical identity blocker.
+actions:
+- action_id: A1
+  description: Reconcile natural humulone identity in maintained sources before adding
+    activity or mechanism claims.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:5769
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity and ontology row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source interpretation and correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible native emission
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - Document the2013 natural6S assignment and2026 corroboration; preserve a clear
+    distinction from unnatural6R and from isohumulone derivatives.
+  - If the record remains natural humulone, all emitted structure encodings and systematic
+    aliases must agree on6S; scratch candidate CC(C)=CCC1=C(O)[C@@](O)(CC=C(C)C)C(=O)C(C(=O)CC(C)C)=C1O
+    yields VMSLCPKYRPDHLN-NRFANRHFSA-N. This is a proposal requiring source identity
+    reconciliation, not an authorization to hand-edit generated YAML.
+  - Recheck ChEBI grounding, exact registry/xrefs, merge/duplicate and slug implications
+    under the native harmonization rules; do not silently retain incompatible R-specific
+    exact references.
+  - Preserve formula, neutral charge and connectivity; regenerate through maintained
+    owners and pass focused chemistry/schema/strict, corpus reproduction and full
+    QC.
+- action_id: A2
+  description: Correct the maintained structural-parent mapping and reproduce the
+    record.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:5769
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity and ontology row
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained source interpretation and correction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Reproducible native emission
+  generator: scripts/extract_source_inventory.py and scripts/seed_from_sources.py
+  acceptance_checks:
+  - The regenerated record no longer inherits CHEBI:76224 for this graph.
+  - Retain independently supported triol, cyclic-ketone, diketone and tertiary-alpha-hydroxy-ketone
+    parents; recheck exact graph and ontology definitions.
+  - Pass schema/strict, corpus reproduction and full QC without weakening validation.
+limitations:
+- The2013 main article and actual page images were inspected, but its supplemental
+  diffraction files were inaccessible. The assignment is based on the original authors
+  crystallographic result and explicit table, not an independent raw-crystal refinement.
+- The2026 full main text, tables and captions were read; actual figure pixels, chromatographic
+  raw data and supplementary materials were not independently assessed. Its crystal
+  is an isohumulone derivative, not parent humulone.
+- 'All nine adopted PMID identities were resolved: five host-study abstracts were
+  read, the1949 JCI article was fully read from scans, and three older citations remain
+  metadata-only. Most additional antibacterial leads remain abstract-depth.'
+- The1949 assays combine salt/free-acid experiments and report dilution limits; no
+  modern unit-bearing MIC or enantiomer-specific potency can be extracted without
+  further material and protocol work.
+- Both CAS queries agree with PubChem at provider-association level, but direct CAS
+  returns401 and direct Reaxys verification was unavailable. Exact enantiomer scope
+  is unresolved.
+- Patent inspection is limited to selected original text and relevant examples. No
+  claim of complete patent or clinical-regulatory review is made.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Native records, source inputs, history and status are unchanged. Internal chemistry
+  validation passing does not resolve the independently established primary-literature
+  identity conflict.
+- KNApSAcK displayed-key discordance is recorded as an external limitation; its supplied
+  graph itself matches the native R structure.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
