@@ -1021,6 +1021,39 @@ def seeded_structural_view(record: dict) -> set[str]:
             if item.get("source") in SEEDER_STRUCTURE_SOURCES}
 
 
+_SEEDED_STRUCTURE_KEYS = frozenset({
+    "structure_id",
+    "relevance",
+    "evidence_status",
+    "source",
+    "source_version",
+    "retrieved_on",
+})
+
+
+def is_curated_structural_observation(item: dict) -> bool:
+    """Whether a seeded structural observation has been classified or enriched by a curator."""
+    return (
+        item.get("relevance") not in (None, "UNREVIEWED")
+        or item.get("evidence_status") not in (None, "PRIMARY_EVIDENCE_NEEDED")
+        or bool(set(item) - _SEEDED_STRUCTURE_KEYS)
+    )
+
+
+def _seeded_structural_reseed_view(record: dict) -> set[tuple]:
+    """Seeder-owned identity and snapshot metadata for structural observations."""
+    return {
+        (
+            item.get("structure_id"),
+            item.get("source"),
+            item.get("source_version"),
+            item.get("retrieved_on"),
+        )
+        for item in (record.get("structural_observations") or [])
+        if item.get("source") in SEEDER_STRUCTURE_SOURCES
+    }
+
+
 def _cas_numbers(raw: str) -> set[str]:
     """CAS values, ignoring empty ones.
 
@@ -4014,6 +4047,8 @@ def reseed_delta(existing: dict, record: dict, merged: dict,
                 for item in (record.get(field) or [])
                 if item.get("source") == source and item.get("source_version")})
             moved.append(f"{field} ({source}{' ' + ', '.join(versions) if versions else ''})")
+    if _seeded_structural_reseed_view(existing) != _seeded_structural_reseed_view(record):
+        moved.append("structural_observations")
     if not curator_owns_clinical and existing.get("clinical_status") != merged.get("clinical_status"):
         moved.append("clinical_status")
     moved += [f for f in ("mode_of_action", "mode_of_action_notes", "mode_of_action_target_scope")
@@ -4211,6 +4246,38 @@ def merge_with_existing(record: dict, existing: dict) -> dict:
             merged[field] = seeded_items + curator_items
         else:
             merged.pop(field, None)
+
+    existing_seeded_structures = {
+        (item.get("structure_id"), item.get("source")): item
+        for item in (existing.get("structural_observations") or [])
+        if item.get("source") in SEEDER_STRUCTURE_SOURCES
+    }
+    merged_seeded_structures: list[dict] = []
+    for seeded_item in record.get("structural_observations") or []:
+        key = (seeded_item.get("structure_id"), seeded_item.get("source"))
+        existing_item = existing_seeded_structures.get(key)
+        if existing_item and is_curated_structural_observation(existing_item):
+            preserved = dict(existing_item)
+            if "source_version" in seeded_item:
+                preserved["source_version"] = seeded_item["source_version"]
+            else:
+                preserved.pop("source_version", None)
+            if "retrieved_on" in seeded_item:
+                preserved["retrieved_on"] = seeded_item["retrieved_on"]
+            else:
+                preserved.pop("retrieved_on", None)
+            merged_seeded_structures.append(preserved)
+        else:
+            merged_seeded_structures.append(seeded_item)
+    curator_structures = [
+        item
+        for item in (existing.get("structural_observations") or [])
+        if item.get("source") not in SEEDER_STRUCTURE_SOURCES
+    ]
+    if merged_seeded_structures or curator_structures:
+        merged["structural_observations"] = merged_seeded_structures + curator_structures
+    else:
+        merged.pop("structural_observations", None)
 
     history = list(existing.get("curation_history") or [])
     # The comparison covers the CARD mechanism sections too: a refresh that adds

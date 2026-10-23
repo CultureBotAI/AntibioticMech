@@ -60,18 +60,20 @@ def test_a_pdb_accession_never_appears_as_a_chemical_xref():
 
 
 def test_the_migrated_accessions_are_present_and_unreviewed():
-    """Moved, not deleted — and not silently upgraded to evidence either."""
+    """Moved, not deleted — and either explicitly unreviewed or curator-classified with primary evidence."""
     seen = {item["structure_id"]: item
             for record in _records()
             for item in record.get("structural_observations") or []}
     assert {"PDB:1H8S", "PDB:1Q3W", "PDB:1CLY"} <= set(seen), sorted(seen)
     for structure_id, item in seen.items():
-        assert item["relevance"] == "UNREVIEWED", (
-            f"{structure_id} was classified without a curator; the seeder cannot "
-            "know what the macromolecule is")
-        assert item["evidence_status"] == "PRIMARY_EVIDENCE_NEEDED"
-        assert not item.get("evidence"), (
-            f"{structure_id} carries evidence the inventories do not contain")
+        if item["relevance"] == "UNREVIEWED":
+            assert item["evidence_status"] == "PRIMARY_EVIDENCE_NEEDED"
+            assert not item.get("evidence"), (
+                f"{structure_id} carries evidence while still marked UNREVIEWED")
+        else:
+            assert item["evidence_status"] == "PRIMARY_EVIDENCE"
+            assert item.get("evidence"), (
+                f"{structure_id} was classified as {item['relevance']} without evidence")
 
 
 def test_a_target_complex_claim_requires_a_citation():
@@ -187,17 +189,54 @@ def test_a_curator_addition_does_not_break_reproduction():
     `just verify-corpus` fail and stay failing — the defect #65 records, in a new
     field. It now compares only the slice the seeder writes, the same way
     card_sourced_view and mibig_sourced_producer_view do (#173).
+
+    In addition, `merge_with_existing` and `reseed_delta` must preserve
+    curator-reviewed classifications on seeded observations and curator-added
+    observations across reseeding (#1256).
     """
-    from seed_from_sources import seeded_structural_view
+    from seed_from_sources import (
+        merge_with_existing,
+        reseed_delta,
+        seeded_structural_view,
+    )
 
     seeded = {"structural_observations": [
-        {"structure_id": "PDB:1H8S", "source": "CHEBI"}]}
+        {"structure_id": "PDB:1H8S", "source": "CHEBI",
+         "relevance": "UNREVIEWED", "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+         "source_version": "2026-10-01", "retrieved_on": "2026-10-02"}]}
     curated = {"structural_observations": [
         # a curator classified the seeded one ...
-        {"structure_id": "PDB:1H8S", "source": "CHEBI", "relevance": "ANTIBODY_COMPLEX"},
+        {"structure_id": "PDB:1H8S", "source": "CHEBI",
+         "relevance": "ANTIBODY_COMPLEX", "evidence_status": "PRIMARY_EVIDENCE",
+         "evidence": [{"reference": "PMID:11580250"}],
+         "source_version": "2026-09-01", "retrieved_on": "2026-09-02"},
         # ... and added their own
-        {"structure_id": "PDB:9XYZ", "source": "curator", "relevance": "TARGET_COMPLEX"}]}
+        {"structure_id": "PDB:9XYZ", "source": "curator",
+         "relevance": "TARGET_COMPLEX", "evidence_status": "PRIMARY_EVIDENCE",
+         "evidence": [{"reference": "PMID:12345678"}]}]}
     assert seeded_structural_view(seeded) == seeded_structural_view(curated)
+
+    # Reseeding must preserve both the curator classification on the seeded
+    # entry (updating provenance dates) and the curator-added entry (#1256).
+    merged = merge_with_existing(seeded, curated)
+    assert len(merged["structural_observations"]) == 2
+    by_id = {o["structure_id"]: o for o in merged["structural_observations"]}
+    assert by_id["PDB:1H8S"]["relevance"] == "ANTIBODY_COMPLEX"
+    assert by_id["PDB:1H8S"]["evidence_status"] == "PRIMARY_EVIDENCE"
+    assert by_id["PDB:1H8S"]["source_version"] == "2026-10-01"
+    assert by_id["PDB:1H8S"]["retrieved_on"] == "2026-10-02"
+    assert by_id["PDB:9XYZ"]["relevance"] == "TARGET_COMPLEX"
+    assert by_id["PDB:9XYZ"]["source"] == "curator"
+    assert reseed_delta(curated, seeded, merged, False) == ["structural_observations"]
+    assert reseed_delta(merged, seeded, merged, False) == []
+
+    # An unreviewed seeded entry is still refreshed cleanly on reseed.
+    unreviewed_existing = {"structural_observations": [
+        {"structure_id": "PDB:1H8S", "source": "CHEBI",
+         "relevance": "UNREVIEWED", "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+         "source_version": "2026-09-01", "retrieved_on": "2026-09-02"}]}
+    merged_unreviewed = merge_with_existing(seeded, unreviewed_existing)
+    assert merged_unreviewed["structural_observations"] == seeded["structural_observations"]
 
     # But a seeded observation may not vanish, and one may not be forged under
     # the seeder's provenance.
