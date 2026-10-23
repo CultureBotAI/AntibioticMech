@@ -1,0 +1,1211 @@
+# Aurodox: remove the mocimycin exact synonym and separate antibacterial from antivirulence evidence
+
+- Review: 20261021T095007Z-aurodox
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T09:40:41Z
+- Finished UTC: 2026-10-21T09:50:07Z
+- Reviewer: Codex review002 subagent (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The neutral, fully stereospecified aurodox structure is independently concordant with PubChem, ChEMBL and PDB MAU. The imported EXACT_SYNONYM mocimycin is incorrect: primary chemical conversion and structural evidence distinguish its N-demethyl structure from aurodox. The EF-Tu claim is independently supported, but the sole definition citation supports isolation/activity rather than that mechanism. Additional primary work supports qualified producer, resistance-phenotype, antivirulence/PurA and exposure-transcriptomic follow-up. One major synonym finding, one minor citation-scope finding and one informational enrichment finding.
+
+## Scope And Provenance
+
+Whole ARO-derived aurodox record, including all four names, structural-class/parent identifier, source mint, all four xrefs, formula/stereochemistry, producer/activity/mechanism definition, sole adopted citation and bounded exact primary completeness checks.
+
+Selection: Queue 125, antibioticmech:aro-5086cca2e7 at its locked path.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| antibioticmech:aro-5086cca2e7 | data/antibiotics/antibacterial/aurodox.yaml | generated | aurodox |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| schema | passed | True | antibioticmech:aro-5086cca2e7 | Actual focused command exited 0. Structure agreement does not validate every textual synonym or citation scope. |
+| strict | passed | True | antibioticmech:aro-5086cca2e7 | Actual focused command exited 0. Structure agreement does not validate every textual synonym or citation scope. |
+| chemistry | passed | False | antibioticmech:aro-5086cca2e7 | Actual focused command exited 0. Structure agreement does not validate every textual synonym or citation scope. |
+| Authoritative full QC | failed | True | antibioticmech:aro-5086cca2e7 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | antibioticmech:aro-5086cca2e7 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | antibioticmech:aro-5086cca2e7 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | antibioticmech:aro-5086cca2e7 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | antibioticmech:aro-5086cca2e7 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | antibioticmech:aro-5086cca2e7 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | antibioticmech:aro-5086cca2e7 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | antibioticmech:aro-5086cca2e7 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | antibioticmech:aro-5086cca2e7 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact aurodox versus mocimycin synonym
+
+identity: concern. Targets: antibioticmech:aro-5086cca2e7.
+
+The native full stereostructure is sound; mocimycin is a different N-demethyl compound and should not remain an exact synonym. ChEBI provides a broader unspecified-stereo crosswalk, not automatic exact grounding.
+
+### Composite definition and its sole citation
+
+evidence: concern. Targets: antibioticmech:aro-5086cca2e7.
+
+Producer and predominantly Gram-positive activity are directly supported by the adopted 1973 paper. EF-Tu binding is independently supported by later primary evidence, but the sole definition citation does not cover that clause.
+
+### Antibacterial inclusion and endpoint limits
+
+evidence: supported. Targets: antibioticmech:aro-5086cca2e7.
+
+Exact historical assays support antibacterial inclusion. Historical 50-percent inhibition labeled MIC, preparation purity/salt and animal results require qualification. Later antivirulence endpoints are separate from growth inhibition.
+
+### EF-Tu versus PurA/antivirulence mechanisms
+
+completeness: supported. Targets: antibioticmech:aro-5086cca2e7.
+
+EF-Tu binding is supported. PurA affinity/probe and genetics provide a distinct antivirulence lead; Ler regulation is response evidence, and probe KD cannot be assigned to free aurodox. Missing structured target/graph fields are optional.
+
+### Natural and engineered production
+
+evidence: supported. Targets: antibioticmech:aro-5086cca2e7.
+
+Original isolation and modern heterologous/deletion studies support S. goldiniensis production. Engineered hosts and biosynthetic Aur proteins remain distinct from natural producers and drug targets.
+
+### Resistance, exposure datasets and clinical limits
+
+completeness: unknown. Targets: antibioticmech:aro-5086cca2e7.
+
+Laboratory resistance phenotypes and real exposure-RNA-seq are available but need exact strain/sample qualification. The induced producer resistance mechanism remains unresolved. Mouse protection is not human clinical efficacy.
+
+### Generated names/source provenance and curator annotations
+
+ownership: supported. Targets: antibioticmech:aro-5086cca2e7.
+
+ARO extraction, source-specific synonym policy and seeding own the exact-name fix. Primary enrichment belongs to the actual native record. Preserve initial hashes and current MINTED status pending proper grounding review.
+
+### Focused gates and history
+
+schema: supported. Targets: antibioticmech:aro-5086cca2e7.
+
+Focused gates pass, all 19 supplementary maintained hashes and original capture hashes remain unchanged, and seed history is consistent.
+
+## Findings
+
+### F1: Mocimycin denotes the N-demethyl analogue, not exact aurodox
+
+major / open / confirmed; issue key: aurodox-mocimycin-false-exact-synonym.
+
+Native synonyms[3] asserts bare mocimycin as an EXACT_SYNONYM. Original chemical conversion and the visually checked structure scheme distinguish mocimycin N-H from aurodox N-methyl. The exact native structure is independently correct; suppress or correct the one erroneous source-derived synonym without changing that structure.
+
+### F2: The sole definition citation does not support its EF-Tu clause
+
+minor / open / confirmed; issue key: aurodox-definition-eftu-citation-scope.
+
+PMID 4781274 supports X-5108 isolation, producer and activity but has no EF-Tu experiment or mechanism claim. Later exact-compound primary evidence supports the clause, so the problem is citation placement, not a disproved mechanism. Add claim-level primary support while retaining the historical isolation source for the claims it actually supports.
+
+### F3: Curate separate exact antibacterial, antivirulence, producer and exposure evidence
+
+informational / open / confirmed; issue key: aurodox-qualified-primary-enrichment.
+
+Inspected primary work supplies useful optional annotations. Preserve EF-Tu binding, PurA probe-binding/genetic evidence, response-level Ler/T3SS effects, producer biosynthesis, induced resistance phenotype and exposure datasets as distinct claims. Historical MIC labeling and modern dose/platform discrepancies require explicit limits.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Remove or correct the mocimycin exact-synonym assertion through the maintained source policy.
+
+- Apply a record-specific synonym exclusion for ARO:3001235 or a scientifically supported replacement such as 1-methylmocimycin; preserve bare mocimycin for its own distinct compound where appropriate.
+- Regenerate through the normal source workflow and inspect the exact diff. Retain the valid native full key, all stereo and the supported X-5108/goldinodox/goldinomycin names.
+- Do not promote the record to CHEBI:201478 exact grounding from connectivity alone; resolve the unspecified-stereo crosswalk through maintained grounding policy if pursued.
+- Run focused schema/strict and required shared source/history/reference checks; chemistry agreement alone cannot validate textual synonyms.
+
+### A2
+
+Attach exact primary support to the EF-Tu definition claim without losing the isolation/activity provenance.
+
+- Retain PMID 4781274 for production, historical X-5108 naming and measured activity. Attach PMID 11278992 and its PDB 1HA3 ligand identity to the EF-Tu claim at the narrowest supported location.
+- If changing generated definition/reference behavior, update the maintained owner and ensure reseeding preserves qualified evidence. Do not simply substitute one PMID for the entire composite definition.
+- Represent Thermus protein origin separately from E. coli expression host, with engineered protein and full-paper access limitations. Do not assign all kirromycin resistance mutations to aurodox without exact evidence.
+
+### A3
+
+Curate optional primary evidence with exact endpoint, chemical-form and experimental scope.
+
+- Preserve the 1973 material purity and sodium-salt preparation. Qualify Table 4 as historically labeled MIC with explicit 50-percent inhibition language for B. megaterium; do not silently convert it to modern MIC or MBC.
+- Keep EF-Tu-mediated protein synthesis separate from low-dose T3SS effects. For PurA distinguish parent enzyme inhibition from immobilized derivative binding; the 0.65 micromolar KD belongs to a biotinylated probe. Do not infer direct Ler binding or a proven PurA catalytic route to T3SS suppression.
+- Preserve selected-system limits in the 2024 multi-pathogen study, including Salmonella SPI-2 versus SPI-1 and time-dependent infection results.
+- Curate natural S. goldiniensis separately from engineered hosts and biosynthetic genes. Verify ion/adduct assignments before copying the 2022 m/z 793 description; do not turn extract zones into pure-compound MICs.
+- Treat original serial-passage and producer tolerance observations as phenotypes. Resolve ATCC 21386 versus 21387 in the historical producer-resistance paper before strain-level merging; its permeability/EF-Tu explanations remain hypotheses.
+- Before adding ENA PRJEB29967, resolve sample treatment/replicate mapping, the paper 5 mg/mL versus 5 micrograms/mL discrepancy and NextSeq versus ENA HiSeq metadata. Inspect 2024 supplement/raw accession separately; no untreated genetic comparison is substituted for exposure data.
+- Keep mouse protection and poultry growth promotion distinct from human clinical use. Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/aurodox.yaml for separately authorized curation, then run focused/shared checks without automatic REVIEWED promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/aurodox.yaml; Entire YAML and three seed/reseed events. | supports | SEEDED, MINTED ARO record with four exact synonyms, elfamycin class and ARO:3001219 parent, PubChem structure, four xrefs and a composite definition sourced to PMID 4781274. EF-Tu appears in the definition; no native structured molecular target, mode, quantitative activity, resistance, producer object, clinical indication, causal graph or transcriptomics dataset. These optional absences are not inherently errors. |
+| source | data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv; 125-raw.json: complete ARO line 223 and PubChem line 59; conf/sources.yaml ARO/PubChem settings; scripts/extract_source_inventory.py extract_aro; scripts/enrich_pubchem_structures.py request/to_row; scripts/seed_from_sources.py build_concepts, identity and record construction. | supports | ARO supplies definition, PMID, names and nearest marked drug class. The PubChem fallback supplies the fully stereospecified structure and retrieval date. The seeder turns imported ARO synonyms into EXACT_SYNONYM and uses the first definition reference, explaining both findings. The raw ARO parent is kirromycin-like antibiotics ARO:3001310, with nearest marked class ARO:3001219 intentionally used natively. Exact local ARO target/resistance edge searches returned no row for this molecule. The original 13 captured hashes and all 19 supplemental maintained input hashes remain unchanged. |
+| aro | https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo; 125-aro-current.obo and extracted complete ARO:3001235, ARO:3001310 and ARO:3001219 terms in 125-aro-terms.txt. | supports | Official current ARO agrees with the imported definition, all four names and three external xrefs. It includes the same false mocimycin exact synonym. The parent chain is aurodox to kirromycin-like antibiotics to elfamycin antibiotic; the latter is explicitly a drug class defined through EF-Tu activity rather than one conserved backbone. Native structural_class naming reflects the maintained schema convention and does not mean that the source class is one exact molecule. The CARD HTML route was unavailable; official public ontology text was inspected instead. |
+| chemistry | Independent RDKit; PubChem CID 135509117; ChEMBL CHEMBL3221419; PDB MAU; 125-chemistry.json, 125-pubchem.json, 125-chembl.json, 125-PDB-MAU.json and 125-crosswalk-chemistry.json. | supports | Native SMILES and InChI parse to one neutral C44H62N2O12 fragment with the full key NTAHMPNXQOYXSX-WKSONYIQSA-N; formula, mass precision and deterministic ARO mint agree. Independently parsed current PubChem, ChEMBL and PDB stereochemical representations give the identical full key. PDB MAU explicitly names N-methyl kirromycin and lists aurodox, 1-methylmocimycin, antibiotic X-5108, goldinodox and goldinomycin. This corroborates the other three native synonyms but not bare mocimycin. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:201478; 125-chebi.html/txt, full identity, names, parent and cross-reference sections. | partial | Current third-party ChEBI aurodox has matching connectivity/formula but an unspecified-stereochemistry structure with key NTAHMPNXQOYXSX-UHFFFAOYSA-N. Its IUPAC name is stereospecified, so its structure/name precision is internally uneven. This does not establish an opposite isomer or a racemate, and it must not automatically replace the native exact stereo representation. Native MINTED status is appropriate to preserve pending maintained grounding checks; the retained xref is a source crosswalk, not independent proof of full stereochemical equivalence. Its metabolomics occurrence is not producer proof. |
+| synonym | PMID:381270; DOI:10.7164/antibiotics.32.361; 125-primary1979.pdf/text, exact conversion discussion and Methods; page 362 structure scheme visually inspected in 125-primary1979-p2.png. | refutes | The original chemistry paper explicitly distinguishes mocimycin 1 from aurodox 2 by the N-methyl group absent from mocimycin. Protection, N-methylation and deprotection convert mocimycin to aurodox, which is compared with authentic material by spectra, TLC and bioactivity. The visually inspected scheme labels the pyridone substituent R=H for mocimycin and R=Me for aurodox. Therefore bare mocimycin cannot be an exact synonym of the encoded N-methyl structure. Derivative activity and poultry endpoints are separate experimental claims. |
+| historical-name | PMID:328470; DOI:10.7164/antibiotics.30.416; 125-primary1977.pdf/text, introduction and nomenclature footnote 2. | supports | The primary biosynthesis paper identifies aurodox and its N-demethyl homolog mocimycin separately. Footnote 2 says aurodox is the adopted nonproprietary name of X-5108 and that the previously proposed goldinodox name was withdrawn. Retaining a historical exact synonym does not assert it remains the preferred name. Label-incorporation experiments concern biosynthesis, not antibiotic targets. |
+| adopted1973 | PMID:4781274; DOI:10.7164/antibiotics.26.15; 125-primary1973.pdf, complete eight-page extracted text; page 22 Tables 4/5 and accompanying narrative visually inspected in 125-primary1973-p8.png. | supports | The sole adopted definition paper supports X-5108 isolation from cultured Streptomyces goldiniensis var. goldiniensis, deposited as ATCC 21386, and predominantly Gram-positive activity with weaker Gram-negative activity. It does not contain an EF-Tu mechanism experiment or claim. The material is purified mainly as sodium salt; lot 306 is estimated 90–95 percent pure, and the free acid is separately prepared. Structure elucidation remains incomplete in this 1973 paper. Table 4 labels values MIC, but accompanying text describes the B. megaterium 0.06 micrograms/mL value as 50 percent growth inhibition; it must not become an unqualified modern complete-inhibition MIC. Mouse activity and poultry growth promotion are not human clinical efficacy. |
+| adopted-resistance | PMID:4781274; DOI:10.7164/antibiotics.26.15; 125-primary1973.pdf/text, page 22 resistance paragraph. | partial | Serial passage produces laboratory resistance in Bacillus E and a 64-fold change in pneumococci/streptococci after 45 passages, with limited tested cross-resistance. These are strain/protocol-specific phenotypes without an identified resistance gene. No broad clinical resistance mechanism follows from them. |
+| eftu | PMID:11278992; DOI:10.1074/jbc.M100017200; PDB:1HA3; 125-epmc.json complete original abstract; official PDB 1HA3 entry and MAU component in 125-PDB1HA3.json and 125-PDB-MAU.json. | partial | The study reports the 2.0-angstrom 1:1:1 Thermus thermophilus EF-Tu:GDP:aurodox structure, with a GTP-like protein conformation despite GDP binding. The official deposited ligand has the exact native full key. This directly supports aurodox binding to EF-Tu and the mechanistic interpretation used by the native definition. The current PDB entry identifies an engineered Thermus thermophilus HB8 protein expressed in E. coli BL21(DE3), with four sequence mutations; the expression host is not the protein organism. Detailed full paper, electron-density maps and mutation consequences were not independently audited. |
+| eftu1989 | PMID:2510820; DOI:10.1021/bi00443a046; 125-epmc.json, complete original abstract. | partial | The exact N-methylkirromycin/aurodox study measures antibiotic-induced EF-Tu fluorescence/conformational and chemical-reactivity changes, supporting a GTP-like state of EF-Tu.GDP. Full methods were not inspected, so no affinity, organism-specific potency or quantitative inhibition value is adopted from this abstract. |
+| producer2022 | PMID:35867559; DOI:10.1128/aem.00692-22; 125-primary2022.xml/txt, complete main-text Results, Methods and Discussion. | partial | Cultured S. goldiniensis ATCC 21386 and an authentic commercial standard support aurodox production. Heterologous expression of the putative cluster in S. coelicolor M1152 and loss of the aurodox-associated peak after aurAI deletion provide causal biosynthesis support. aurM* expression in a kirromycin-producing host produces aurodox-associated material. These are biosynthetic functions, not drug targets. Culture-extract zones against S. aureus ATCC 43300 are not pure-aurodox MICs. The paper describes m/z 793 as a molecular ion despite the neutral mass near 810; matched standard/retention and genetic evidence are useful, but that mass annotation should not be copied without checking ion/adduct details and supplementary spectra. |
+| induced-resistance | PMID:118955; DOI:10.7164/antibiotics.32.1025; 125-primary1979-resistance.pdf/text, abstract, complete Methods, initial Results and full Discussion. | partial | The original study supports exposure-dependent acquired tolerance of protein/aurodox synthesis in producer-derived strains, including induction in a nonproducing mutant. It expressly leaves the mechanism unresolved: permeability changes, metabolite accumulation and EF-Tu modification remain hypotheses, not demonstrated genes or pathways. The Methods name ATCC 21387-derived strains, whereas the original isolation paper uses ATCC 21386; preserve that accession difference until checked, rather than merging strain identities. Detailed remaining Results tables were not independently audited, so no numeric resistance annotation is proposed. |
+| t3ss2019 | PMID:30455200; DOI:10.1128/iai.00595-18; 125-primary2019.xml/txt, complete main-text Results, Methods and Discussion. | partial | Commercial aurodox suppresses secretion/LEE transcription in tested EHEC TUV93-0, EPEC E2348/69 and C. rodentium experiments at low concentrations with no measured growth effect under those conditions. Ler overexpression reverses the secretion phenotype, supporting an effect at or upstream of Ler rather than proof of direct Ler binding or binding to a T3SS needle. RecA reporters and toxin immunoblot experiments are bounded response measurements; they do not establish universal absence of toxin induction or clinical safety. The paper has internal reporting differences: Results say RNA-seq used 5 mg/mL, whereas stock and Methods specify 5 micrograms/mL; growth-condition and Citrobacter strain descriptions also vary. Retain these limits before exact dataset/assay annotation. |
+| pura2024 | PMID:38640341; DOI:10.1073/pnas.2322363121; 125-primary2024-PurA.xml/txt, complete main-text Results, Discussion and Methods. | partial | The EPEC E2348/69 delta-cesT study identifies PurA and EF-Tu in aurodox-bead affinity capture. purA deletion/complementation changes T3SS-secreted proteins and hemolysis. BLI measures binding of an immobilized biotinylated aurodox derivative to purified PurA, with reported KD 6.5e-7 M; this is not a free-parent aurodox KD. Parent aurodox inhibits purified PurA GTPase activity much more weakly, IC50 42.3 micrograms/mL, than the reported T3SS hemolysis endpoint, 1.42 micrograms/mL, so catalytic inhibition is not established as the low-dose antivirulence route. Initial dose-response growth IC50 72.7 micrograms/mL and hemolysis IC50 2.7 micrograms/mL are distinct endpoints, not MIC/MBC. PurA knockout/animal results support a virulence role but do not locate a binding site or close every mechanistic link. |
+| multiple2024 | PMID:39591989; DOI:10.1098/rsob.240240; 125-primary2024-multiple.xml/txt, complete main Methods, Results and Discussion. | partial | Aurodox suppresses selected secretion-system outputs in S. Typhimurium, Y. pseudotuberculosis and V. parahaemolyticus; it does not suppress all tested T3SSs. Salmonella SPI-2 is suppressed while SPI-1 is not. One-hour 5 micrograms/mL Salmonella exposure RNA-seq and comparisons with the earlier EHEC dataset show response patterns, not new direct targets. PurA transcript abundance is not significantly altered, which does not refute protein binding. RAW264.7 infection effects depend on time, with a higher early infection fraction but fewer infected cells at 24 hours; do not reduce this to an unqualified universal inhibition claim. Supplementary strain/media tables were not independently audited. |
+| datasets | ENA PRJEB29967; Figshare collection 7523090; 125-ENA-PRJEB29967.xml, 125-ENA-runs.tsv and 125-figshare2024.json. | partial | Official ENA metadata matches the 2019 aurodox exposure study and lists six E. coli RNA-seq runs. Run metadata say HiSeq 2500, whereas the paper Methods say NextSeq 500; sample titles are generic, and exact treatment/replicate mapping was not independently resolved. The 2024 Figshare collection resolves to two supplementary items, but their files and any raw Salmonella accession were not inspected. These are bounded dataset leads, not fully curated sample-level records. |
+| clinical | PMID:40169888; DOI:10.1038/s44259-025-00094-3; 125-primary2025.xml, original abstract only. | partial | The newer study reports protection in a C. rodentium DBS770 Shiga-toxin mouse model and changes in the fecal bacteriome. The experiment is not a human clinical trial, and its model organism is not literal STEC despite the translational framing in the title. Detailed efficacy methods, dose, animal outcomes and microbiome data were not independently reviewed; no quantitative clinical claim is proposed. |
+| adapter | iModulonDB structured protein cross-checks; 055-imodulondb-datasets-retry.txt inventory; 125-imodulondb-tuf.txt and 125-imodulondb-purA.txt. | context_only | The native EF-Tu claim was checked before open-ended web research with e_coli/precise_mg1655 query elongation factor Tu: tufA b3339 and tufB b3980 matched, with no module hit. A subsequent purA query returns b4177, again no module hit. These provide generic gene context, not drug binding, EHEC equivalence or exposure validation. The inspected inventory does not cover the exact native producer S. goldiniensis or the Thermus protein system. |
+| adapter-command | Structured source runner; Actual commands and successful outputs. | context_only | env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1 uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset precise_mg1655 --query "elongation factor Tu"; the second query uses --query purA. Both exit 0; no module hit required summarize. |
+| search | CultureBotAI/AntibioticMech; 125-local-hits.txt, 125-maintained-search.txt and 125-exact-owner-search.txt; bounded exact-name, original-title and DOI searches. | context_only | Hidden- and ignored-inclusive searches located the ARO/PubChem source rows and generated record context, without a maintained exact-record synonym exclusion or primary curator annotation. No ARO target/resistance edge row names this molecule. Current ChEBI is a source crosswalk not represented as an exact native ChEBI record in the adopted inventory. Searches and generated/historical reports were leads; all conclusions above use inspected primary or official text. |
+| validation | Focused checks and preserved input audit; 125-focused-results.json, focused logs, 125-inspect.json and 125-source-inspect.json. | supports | Schema, strict and independent chemistry commands all exit 0. Initial capture remains intact; supplemental capture corrects generic ownership and adds six actual maintained ARO/PubChem-related inputs. Every captured hash is unchanged. Three seed/reseed events are consistent with SEEDED; no scientific status promotion is proposed. |
+| rubric | .claude/skills/curate-yaml-record/references/review-checklist.md; Exact identity, primary claim support, mechanism, activity, producer, resistance and completeness rules. | supports | An N-demethyl analogue is not an exact synonym. Definition citation scope must be distinguished from independently supported truth. Preserve free parent versus salt/probe, activity endpoint, strain, exposure, direct binding, biosynthetic gene and response-only evidence boundaries. |
+
+## Limits And Additional Notes
+
+- All original and supplemental maintained input hashes remain unchanged. The initial generic capture was preserved; the review source uses the supplementary native inspect with correct ARO/PubChem owners and 19 inputs.
+- The sole adopted PMID 4781274 was read as a complete eight-page paper, including visual inspection of Tables 4/5. Some historical strain, broth and assay endpoint details are sparse, and quantitative claims require the stated purity/form and 50-percent-inhibition qualification.
+- The 1979 conversion discussion, conversion Methods and structure scheme were inspected. Not every derivative assay or synthesis was audited. The 1977 introduction and naming footnote were inspected as historical identity support.
+- The EF-Tu primary abstract and official PDB entry/ligand descriptors were inspected; full 2001 paper and density maps were not independently examined. The 1989 conformation study remains abstract-level.
+- The 2019 and 2022 main text, and 2024 PurA and multi-pathogen main Methods/Results/Discussion were read. Raw sequencing data, spectra, full supplements and probe assay fits were not reanalyzed. Primary dose, instrument, strain and mass-annotation differences are retained rather than silently harmonized.
+- The 1979 resistance abstract, Methods, initial Results and Discussion were inspected. Remaining numerical Results tables and the historical producer accession discrepancy were not resolved; no resistance gene is asserted.
+- Official ENA study and six RNA-seq run records were checked, but sample-level treatment mapping and instrument discrepancies remain. The 2024 Figshare collection resolves, but its files and a raw Salmonella accession were not inspected.
+- The 2025 mouse study was inspected only at its original abstract. No human clinical efficacy, universal absence of toxin induction, complete resistance survey or exhaustive literature review is claimed. Native ChEBI crosswalk lacks structural stereochemistry; MINTED status is preserved.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T095007Z-aurodox
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Aurodox: remove the mocimycin exact synonym and separate antibacterial from
+  antivirulence evidence'
+started_at: '2026-10-21T09:40:41Z'
+finished_at: '2026-10-21T09:50:07Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the record. Captured target and inputs before
+    scientific assessment. The initial generic ChEBI-oriented capture was preserved;
+    an additional native inspect captured ARO/PubChem maintained inputs and corrected
+    owners before judgment. Read the entire record, relevant complete source rows,
+    config and extraction/enrichment/seeding branches, the sole adopted primary paper,
+    and bounded additional exact-compound studies.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: 'The neutral, fully stereospecified aurodox structure is independently concordant
+  with PubChem, ChEMBL and PDB MAU. The imported EXACT_SYNONYM mocimycin is incorrect:
+  primary chemical conversion and structural evidence distinguish its N-demethyl structure
+  from aurodox. The EF-Tu claim is independently supported, but the sole definition
+  citation supports isolation/activity rather than that mechanism. Additional primary
+  work supports qualified producer, resistance-phenotype, antivirulence/PurA and exposure-transcriptomic
+  follow-up. One major synonym finding, one minor citation-scope finding and one informational
+  enrichment finding.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/aurodox.yaml
+    sha256: de92dd5cf18ec2fdb1422a12fd180a1368ff0205d9e15e7c79091791e45f5614
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/pubchem_structures.tsv
+    sha256: feff7c22bdca2b4af95c8df328c6f23561ec71403a3d2ed779c5074ade3e616b
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:aro-5086cca2e7
+  path: data/antibiotics/antibacterial/aurodox.yaml
+  label: aurodox
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity, names, class and definition citation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/pubchem_structures.tsv
+    role: Adopted exact PubChem structure
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ARO inventory extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/enrich_pubchem_structures.py
+    role: PubChem structure enrichment
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated record owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Whole ARO-derived aurodox record, including all four names, structural-class/parent
+    identifier, source mint, all four xrefs, formula/stereochemistry, producer/activity/mechanism
+    definition, sole adopted citation and bounded exact primary completeness checks.
+  selection: Queue 125, antibioticmech:aro-5086cca2e7 at its locked path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:aro-5086cca2e7
+  exclusions:
+  - target: Mocimycin/kirromycin, efrotomycin and chemically modified aurodox derivatives
+      as exact equivalents
+    reason: Different structures. Derivatized affinity probes, mixtures and genetically
+      altered producers require their own experimental scopes.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. Structure agreement does not validate
+    every textual synonym or citation scope.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/aurodox.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0. Structure agreement does not validate
+    every textual synonym or citation scope.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/aurodox.yaml --out /private/tmp/am-review-session/125-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. Structure agreement does not validate
+    every textual synonym or citation scope.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 125
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/aurodox.yaml
+  locator: Entire YAML and three seed/reseed events.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: SEEDED, MINTED ARO record with four exact synonyms, elfamycin class and
+    ARO:3001219 parent, PubChem structure, four xrefs and a composite definition sourced
+    to PMID 4781274. EF-Tu appears in the definition; no native structured molecular
+    target, mode, quantitative activity, resistance, producer object, clinical indication,
+    causal graph or transcriptomics dataset. These optional absences are not inherently
+    errors.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/aro_antibiotics.tsv; data/raw/pubchem_structures.tsv
+  locator: '125-raw.json: complete ARO line 223 and PubChem line 59; conf/sources.yaml
+    ARO/PubChem settings; scripts/extract_source_inventory.py extract_aro; scripts/enrich_pubchem_structures.py
+    request/to_row; scripts/seed_from_sources.py build_concepts, identity and record
+    construction.'
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: ARO supplies definition, PMID, names and nearest marked drug class. The
+    PubChem fallback supplies the fully stereospecified structure and retrieval date.
+    The seeder turns imported ARO synonyms into EXACT_SYNONYM and uses the first definition
+    reference, explaining both findings. The raw ARO parent is kirromycin-like antibiotics
+    ARO:3001310, with nearest marked class ARO:3001219 intentionally used natively.
+    Exact local ARO target/resistance edge searches returned no row for this molecule.
+    The original 13 captured hashes and all 19 supplemental maintained input hashes
+    remain unchanged.
+  snapshot_sha256: 6924815a423c57dca71f3452412f339ca235917223b716b2bf9235bd322eaadb
+- evidence_id: aro
+  kind: database
+  reference: https://raw.githubusercontent.com/arpcard/aro/master/src/ontology/aro.obo
+  locator: 125-aro-current.obo and extracted complete ARO:3001235, ARO:3001310 and
+    ARO:3001219 terms in 125-aro-terms.txt.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: Official current ARO agrees with the imported definition, all four names
+    and three external xrefs. It includes the same false mocimycin exact synonym.
+    The parent chain is aurodox to kirromycin-like antibiotics to elfamycin antibiotic;
+    the latter is explicitly a drug class defined through EF-Tu activity rather than
+    one conserved backbone. Native structural_class naming reflects the maintained
+    schema convention and does not mean that the source class is one exact molecule.
+    The CARD HTML route was unavailable; official public ontology text was inspected
+    instead.
+  snapshot_sha256: c39889844b8416e64612267714aab4f21af4fc1505f7d54e1b85ccdc8f0a3793
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit; PubChem CID 135509117; ChEMBL CHEMBL3221419; PDB MAU
+  locator: 125-chemistry.json, 125-pubchem.json, 125-chembl.json, 125-PDB-MAU.json
+    and 125-crosswalk-chemistry.json.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: Native SMILES and InChI parse to one neutral C44H62N2O12 fragment with
+    the full key NTAHMPNXQOYXSX-WKSONYIQSA-N; formula, mass precision and deterministic
+    ARO mint agree. Independently parsed current PubChem, ChEMBL and PDB stereochemical
+    representations give the identical full key. PDB MAU explicitly names N-methyl
+    kirromycin and lists aurodox, 1-methylmocimycin, antibiotic X-5108, goldinodox
+    and goldinomycin. This corroborates the other three native synonyms but not bare
+    mocimycin.
+  snapshot_sha256: 74595710469d21283ac3f6aaa9167ea4ff71452d2a57f43d27d488aad70fe2aa
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:201478
+  locator: 125-chebi.html/txt, full identity, names, parent and cross-reference sections.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: Current third-party ChEBI aurodox has matching connectivity/formula but
+    an unspecified-stereochemistry structure with key NTAHMPNXQOYXSX-UHFFFAOYSA-N.
+    Its IUPAC name is stereospecified, so its structure/name precision is internally
+    uneven. This does not establish an opposite isomer or a racemate, and it must
+    not automatically replace the native exact stereo representation. Native MINTED
+    status is appropriate to preserve pending maintained grounding checks; the retained
+    xref is a source crosswalk, not independent proof of full stereochemical equivalence.
+    Its metabolomics occurrence is not producer proof.
+  snapshot_sha256: 6ecf905e2e5f3b5dcd8004e3e693bf5de687ae18b9ab1243c86fcfac292bb58d
+- evidence_id: synonym
+  kind: primary_source
+  reference: PMID:381270; DOI:10.7164/antibiotics.32.361
+  locator: 125-primary1979.pdf/text, exact conversion discussion and Methods; page
+    362 structure scheme visually inspected in 125-primary1979-p2.png.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: refutes
+  summary: The original chemistry paper explicitly distinguishes mocimycin 1 from
+    aurodox 2 by the N-methyl group absent from mocimycin. Protection, N-methylation
+    and deprotection convert mocimycin to aurodox, which is compared with authentic
+    material by spectra, TLC and bioactivity. The visually inspected scheme labels
+    the pyridone substituent R=H for mocimycin and R=Me for aurodox. Therefore bare
+    mocimycin cannot be an exact synonym of the encoded N-methyl structure. Derivative
+    activity and poultry endpoints are separate experimental claims.
+  snapshot_sha256: 590be7bba4597f90b4fe98ed2536e381a24defd580bf2448e92cb39db7af294d
+- evidence_id: historical-name
+  kind: primary_source
+  reference: PMID:328470; DOI:10.7164/antibiotics.30.416
+  locator: 125-primary1977.pdf/text, introduction and nomenclature footnote 2.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: The primary biosynthesis paper identifies aurodox and its N-demethyl homolog
+    mocimycin separately. Footnote 2 says aurodox is the adopted nonproprietary name
+    of X-5108 and that the previously proposed goldinodox name was withdrawn. Retaining
+    a historical exact synonym does not assert it remains the preferred name. Label-incorporation
+    experiments concern biosynthesis, not antibiotic targets.
+  snapshot_sha256: 502362e6e077275f20f9fd9e445dbdecb518a139e210469e041d04c27371f0b2
+- evidence_id: adopted1973
+  kind: primary_source
+  reference: PMID:4781274; DOI:10.7164/antibiotics.26.15
+  locator: 125-primary1973.pdf, complete eight-page extracted text; page 22 Tables
+    4/5 and accompanying narrative visually inspected in 125-primary1973-p8.png.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: The sole adopted definition paper supports X-5108 isolation from cultured
+    Streptomyces goldiniensis var. goldiniensis, deposited as ATCC 21386, and predominantly
+    Gram-positive activity with weaker Gram-negative activity. It does not contain
+    an EF-Tu mechanism experiment or claim. The material is purified mainly as sodium
+    salt; lot 306 is estimated 90–95 percent pure, and the free acid is separately
+    prepared. Structure elucidation remains incomplete in this 1973 paper. Table 4
+    labels values MIC, but accompanying text describes the B. megaterium 0.06 micrograms/mL
+    value as 50 percent growth inhibition; it must not become an unqualified modern
+    complete-inhibition MIC. Mouse activity and poultry growth promotion are not human
+    clinical efficacy.
+  snapshot_sha256: c3783cec049658156c4525046298b8c8782fb797a92690a6dd5355bca5cc03bf
+- evidence_id: adopted-resistance
+  kind: primary_source
+  reference: PMID:4781274; DOI:10.7164/antibiotics.26.15
+  locator: 125-primary1973.pdf/text, page 22 resistance paragraph.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: Serial passage produces laboratory resistance in Bacillus E and a 64-fold
+    change in pneumococci/streptococci after 45 passages, with limited tested cross-resistance.
+    These are strain/protocol-specific phenotypes without an identified resistance
+    gene. No broad clinical resistance mechanism follows from them.
+  snapshot_sha256: f243cee5038128368718f2a9e282f909ee44b5c2621612d0bcaedc81a44bbf7b
+- evidence_id: eftu
+  kind: primary_source
+  reference: PMID:11278992; DOI:10.1074/jbc.M100017200; PDB:1HA3
+  locator: 125-epmc.json complete original abstract; official PDB 1HA3 entry and MAU
+    component in 125-PDB1HA3.json and 125-PDB-MAU.json.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: The study reports the 2.0-angstrom 1:1:1 Thermus thermophilus EF-Tu:GDP:aurodox
+    structure, with a GTP-like protein conformation despite GDP binding. The official
+    deposited ligand has the exact native full key. This directly supports aurodox
+    binding to EF-Tu and the mechanistic interpretation used by the native definition.
+    The current PDB entry identifies an engineered Thermus thermophilus HB8 protein
+    expressed in E. coli BL21(DE3), with four sequence mutations; the expression host
+    is not the protein organism. Detailed full paper, electron-density maps and mutation
+    consequences were not independently audited.
+  snapshot_sha256: 20a514339ea079004b0cb106e2c2319b1172217f92d0676a3af2daeb45ae2896
+- evidence_id: eftu1989
+  kind: primary_source
+  reference: PMID:2510820; DOI:10.1021/bi00443a046
+  locator: 125-epmc.json, complete original abstract.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: The exact N-methylkirromycin/aurodox study measures antibiotic-induced
+    EF-Tu fluorescence/conformational and chemical-reactivity changes, supporting
+    a GTP-like state of EF-Tu.GDP. Full methods were not inspected, so no affinity,
+    organism-specific potency or quantitative inhibition value is adopted from this
+    abstract.
+  snapshot_sha256: 6e316d240eaf73ec2043da6d6cfc2409caabecaa688a082a24b55ec42af12dca
+- evidence_id: producer2022
+  kind: primary_source
+  reference: PMID:35867559; DOI:10.1128/aem.00692-22
+  locator: 125-primary2022.xml/txt, complete main-text Results, Methods and Discussion.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: Cultured S. goldiniensis ATCC 21386 and an authentic commercial standard
+    support aurodox production. Heterologous expression of the putative cluster in
+    S. coelicolor M1152 and loss of the aurodox-associated peak after aurAI deletion
+    provide causal biosynthesis support. aurM* expression in a kirromycin-producing
+    host produces aurodox-associated material. These are biosynthetic functions, not
+    drug targets. Culture-extract zones against S. aureus ATCC 43300 are not pure-aurodox
+    MICs. The paper describes m/z 793 as a molecular ion despite the neutral mass
+    near 810; matched standard/retention and genetic evidence are useful, but that
+    mass annotation should not be copied without checking ion/adduct details and supplementary
+    spectra.
+  snapshot_sha256: 0b3a07db50f11408e98af945aed0c37c9817679a1262a09d449c39f2602564d2
+- evidence_id: induced-resistance
+  kind: primary_source
+  reference: PMID:118955; DOI:10.7164/antibiotics.32.1025
+  locator: 125-primary1979-resistance.pdf/text, abstract, complete Methods, initial
+    Results and full Discussion.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: 'The original study supports exposure-dependent acquired tolerance of protein/aurodox
+    synthesis in producer-derived strains, including induction in a nonproducing mutant.
+    It expressly leaves the mechanism unresolved: permeability changes, metabolite
+    accumulation and EF-Tu modification remain hypotheses, not demonstrated genes
+    or pathways. The Methods name ATCC 21387-derived strains, whereas the original
+    isolation paper uses ATCC 21386; preserve that accession difference until checked,
+    rather than merging strain identities. Detailed remaining Results tables were
+    not independently audited, so no numeric resistance annotation is proposed.'
+  snapshot_sha256: 6ec652a4ad54c0e15a90052fbc6fedfac35764029b818b2437d80f0e9fe23762
+- evidence_id: t3ss2019
+  kind: primary_source
+  reference: PMID:30455200; DOI:10.1128/iai.00595-18
+  locator: 125-primary2019.xml/txt, complete main-text Results, Methods and Discussion.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: 'Commercial aurodox suppresses secretion/LEE transcription in tested EHEC
+    TUV93-0, EPEC E2348/69 and C. rodentium experiments at low concentrations with
+    no measured growth effect under those conditions. Ler overexpression reverses
+    the secretion phenotype, supporting an effect at or upstream of Ler rather than
+    proof of direct Ler binding or binding to a T3SS needle. RecA reporters and toxin
+    immunoblot experiments are bounded response measurements; they do not establish
+    universal absence of toxin induction or clinical safety. The paper has internal
+    reporting differences: Results say RNA-seq used 5 mg/mL, whereas stock and Methods
+    specify 5 micrograms/mL; growth-condition and Citrobacter strain descriptions
+    also vary. Retain these limits before exact dataset/assay annotation.'
+  snapshot_sha256: 3c93029be0651cb200dc240be7ca57da0dd04b6c37596ea1978b9485eb0a8d82
+- evidence_id: pura2024
+  kind: primary_source
+  reference: PMID:38640341; DOI:10.1073/pnas.2322363121
+  locator: 125-primary2024-PurA.xml/txt, complete main-text Results, Discussion and
+    Methods.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: The EPEC E2348/69 delta-cesT study identifies PurA and EF-Tu in aurodox-bead
+    affinity capture. purA deletion/complementation changes T3SS-secreted proteins
+    and hemolysis. BLI measures binding of an immobilized biotinylated aurodox derivative
+    to purified PurA, with reported KD 6.5e-7 M; this is not a free-parent aurodox
+    KD. Parent aurodox inhibits purified PurA GTPase activity much more weakly, IC50
+    42.3 micrograms/mL, than the reported T3SS hemolysis endpoint, 1.42 micrograms/mL,
+    so catalytic inhibition is not established as the low-dose antivirulence route.
+    Initial dose-response growth IC50 72.7 micrograms/mL and hemolysis IC50 2.7 micrograms/mL
+    are distinct endpoints, not MIC/MBC. PurA knockout/animal results support a virulence
+    role but do not locate a binding site or close every mechanistic link.
+  snapshot_sha256: 866321b68d1bff8a0dfd9326a89c2de35466b69ff8db99695ba68f207c2d9ded
+- evidence_id: multiple2024
+  kind: primary_source
+  reference: PMID:39591989; DOI:10.1098/rsob.240240
+  locator: 125-primary2024-multiple.xml/txt, complete main Methods, Results and Discussion.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: Aurodox suppresses selected secretion-system outputs in S. Typhimurium,
+    Y. pseudotuberculosis and V. parahaemolyticus; it does not suppress all tested
+    T3SSs. Salmonella SPI-2 is suppressed while SPI-1 is not. One-hour 5 micrograms/mL
+    Salmonella exposure RNA-seq and comparisons with the earlier EHEC dataset show
+    response patterns, not new direct targets. PurA transcript abundance is not significantly
+    altered, which does not refute protein binding. RAW264.7 infection effects depend
+    on time, with a higher early infection fraction but fewer infected cells at 24
+    hours; do not reduce this to an unqualified universal inhibition claim. Supplementary
+    strain/media tables were not independently audited.
+  snapshot_sha256: 0b978170f07520e9550bf3bc9827b0dad19cbf7fbe4d6aa6e40140f4d00b7860
+- evidence_id: datasets
+  kind: database
+  reference: ENA PRJEB29967; Figshare collection 7523090
+  locator: 125-ENA-PRJEB29967.xml, 125-ENA-runs.tsv and 125-figshare2024.json.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: Official ENA metadata matches the 2019 aurodox exposure study and lists
+    six E. coli RNA-seq runs. Run metadata say HiSeq 2500, whereas the paper Methods
+    say NextSeq 500; sample titles are generic, and exact treatment/replicate mapping
+    was not independently resolved. The 2024 Figshare collection resolves to two supplementary
+    items, but their files and any raw Salmonella accession were not inspected. These
+    are bounded dataset leads, not fully curated sample-level records.
+  snapshot_sha256: 0c7e20ed0adbb5776be9f4c2f601fd9cc4fbb055ce9ddad5db3a457acfedc238
+- evidence_id: clinical
+  kind: primary_source
+  reference: PMID:40169888; DOI:10.1038/s44259-025-00094-3
+  locator: 125-primary2025.xml, original abstract only.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: partial
+  summary: The newer study reports protection in a C. rodentium DBS770 Shiga-toxin
+    mouse model and changes in the fecal bacteriome. The experiment is not a human
+    clinical trial, and its model organism is not literal STEC despite the translational
+    framing in the title. Detailed efficacy methods, dose, animal outcomes and microbiome
+    data were not independently reviewed; no quantitative clinical claim is proposed.
+  snapshot_sha256: 64ac47a0391e926e50859efa67eb00fb5e2ba150f266da00963210f97f21062a
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured protein cross-checks
+  locator: 055-imodulondb-datasets-retry.txt inventory; 125-imodulondb-tuf.txt and
+    125-imodulondb-purA.txt.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: context_only
+  summary: 'The native EF-Tu claim was checked before open-ended web research with
+    e_coli/precise_mg1655 query elongation factor Tu: tufA b3339 and tufB b3980 matched,
+    with no module hit. A subsequent purA query returns b4177, again no module hit.
+    These provide generic gene context, not drug binding, EHEC equivalence or exposure
+    validation. The inspected inventory does not cover the exact native producer S.
+    goldiniensis or the Thermus protein system.'
+  snapshot_sha256: 1d323a2458662c37e2798c1098d475730f7d8ef5b33367f7f0c0db7a1dccd250
+- evidence_id: adapter-command
+  kind: validation
+  reference: Structured source runner
+  locator: Actual commands and successful outputs.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: context_only
+  summary: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise_mg1655 --query "elongation factor Tu"; the second query uses --query purA.
+    Both exit 0; no module hit required summarize.
+  snapshot_sha256: 4be70c995db3206600859769daca7862f2d25d6bf2e123812320b4c3fb8e5ad8
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 125-local-hits.txt, 125-maintained-search.txt and 125-exact-owner-search.txt;
+    bounded exact-name, original-title and DOI searches.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: context_only
+  summary: Hidden- and ignored-inclusive searches located the ARO/PubChem source rows
+    and generated record context, without a maintained exact-record synonym exclusion
+    or primary curator annotation. No ARO target/resistance edge row names this molecule.
+    Current ChEBI is a source crosswalk not represented as an exact native ChEBI record
+    in the adopted inventory. Searches and generated/historical reports were leads;
+    all conclusions above use inspected primary or official text.
+  search_scope: rg --no-ignore --hidden for native identifier, aurodox and slug across
+    batch013 excluding .git/.venv, plus ARO:3001235, CHEBI:201478 and NTAHMPNXQOYXSX
+    across maintained curation/conf/data/raw/reports/reviews/src/scripts. Sole adopted
+    PMID plus bounded original identity, target, activity, producer, resistance and
+    exposure-study searches; free access only.
+  snapshot_sha256: c12ae30d80f330739f7129d06abc2347246834f30afb0435b4fa321462965050
+- evidence_id: validation
+  kind: validation
+  reference: Focused checks and preserved input audit
+  locator: 125-focused-results.json, focused logs, 125-inspect.json and 125-source-inspect.json.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: Schema, strict and independent chemistry commands all exit 0. Initial capture
+    remains intact; supplemental capture corrects generic ownership and adds six actual
+    maintained ARO/PubChem-related inputs. Every captured hash is unchanged. Three
+    seed/reseed events are consistent with SEEDED; no scientific status promotion
+    is proposed.
+  snapshot_sha256: dc0ceeba21824c32469d595bfe3d249426ea98523f1a314a2b6de77e2ff9e906
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Exact identity, primary claim support, mechanism, activity, producer, resistance
+    and completeness rules.
+  accessed_at: '2026-10-21T09:48:08Z'
+  support: supports
+  summary: An N-demethyl analogue is not an exact synonym. Definition citation scope
+    must be distinguished from independently supported truth. Preserve free parent
+    versus salt/probe, activity endpoint, strain, exposure, direct binding, biosynthetic
+    gene and response-only evidence boundaries.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact aurodox versus mocimycin synonym
+  outcome: concern
+  summary: The native full stereostructure is sound; mocimycin is a different N-demethyl
+    compound and should not remain an exact synonym. ChEBI provides a broader unspecified-stereo
+    crosswalk, not automatic exact grounding.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - chemistry
+  - chebi
+  - synonym
+  - historical-name
+- assessment_id: definition
+  area: evidence
+  topic: Composite definition and its sole citation
+  outcome: concern
+  summary: Producer and predominantly Gram-positive activity are directly supported
+    by the adopted 1973 paper. EF-Tu binding is independently supported by later primary
+    evidence, but the sole definition citation does not cover that clause.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - adopted1973
+  - eftu
+  - eftu1989
+  - source
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial inclusion and endpoint limits
+  outcome: supported
+  summary: Exact historical assays support antibacterial inclusion. Historical 50-percent
+    inhibition labeled MIC, preparation purity/salt and animal results require qualification.
+    Later antivirulence endpoints are separate from growth inhibition.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - adopted1973
+  - t3ss2019
+  - pura2024
+  - multiple2024
+- assessment_id: mechanism
+  area: completeness
+  topic: EF-Tu versus PurA/antivirulence mechanisms
+  outcome: supported
+  summary: EF-Tu binding is supported. PurA affinity/probe and genetics provide a
+    distinct antivirulence lead; Ler regulation is response evidence, and probe KD
+    cannot be assigned to free aurodox. Missing structured target/graph fields are
+    optional.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - eftu
+  - pura2024
+  - t3ss2019
+  - adapter
+  - rubric
+- assessment_id: producer
+  area: evidence
+  topic: Natural and engineered production
+  outcome: supported
+  summary: Original isolation and modern heterologous/deletion studies support S.
+    goldiniensis production. Engineered hosts and biosynthetic Aur proteins remain
+    distinct from natural producers and drug targets.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - adopted1973
+  - producer2022
+- assessment_id: other
+  area: completeness
+  topic: Resistance, exposure datasets and clinical limits
+  outcome: unknown
+  summary: Laboratory resistance phenotypes and real exposure-RNA-seq are available
+    but need exact strain/sample qualification. The induced producer resistance mechanism
+    remains unresolved. Mouse protection is not human clinical efficacy.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - adopted-resistance
+  - induced-resistance
+  - datasets
+  - clinical
+- assessment_id: ownership
+  area: ownership
+  topic: Generated names/source provenance and curator annotations
+  outcome: supported
+  summary: ARO extraction, source-specific synonym policy and seeding own the exact-name
+    fix. Primary enrichment belongs to the actual native record. Preserve initial
+    hashes and current MINTED status pending proper grounding review.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - source
+  - aro
+  - validation
+  - rubric
+- assessment_id: gates
+  area: schema
+  topic: Focused gates and history
+  outcome: supported
+  summary: Focused gates pass, all 19 supplementary maintained hashes and original
+    capture hashes remain unchanged, and seed history is consistent.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: aurodox-mocimycin-false-exact-synonym
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Mocimycin denotes the N-demethyl analogue, not exact aurodox
+  description: Native synonyms[3] asserts bare mocimycin as an EXACT_SYNONYM. Original
+    chemical conversion and the visually checked structure scheme distinguish mocimycin
+    N-H from aurodox N-methyl. The exact native structure is independently correct;
+    suppress or correct the one erroneous source-derived synonym without changing
+    that structure.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  field_paths:
+  - synonyms[3].synonym_text
+  - synonyms[3].synonym_type
+  evidence_ids:
+  - synonym
+  - historical-name
+  - chemistry
+  - aro
+  - source
+  - rubric
+  rule_id: 'native-review-checklist: Exact chemical identity and synonym scope'
+  native_severity: major false exact-identity assertion
+  normalization_reason: The wrong exact synonym can misground name-based consumers
+    even while all structure validators pass. It does not make the encoded aurodox
+    structure wrong or justify excluding the record.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-specific exact-synonym exclusion policy for ARO:3001235
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted upstream names and composite definition/citation provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated name filtering and definition/citation placement
+- finding_id: F2
+  issue_key: aurodox-definition-eftu-citation-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The sole definition citation does not support its EF-Tu clause
+  description: PMID 4781274 supports X-5108 isolation, producer and activity but has
+    no EF-Tu experiment or mechanism claim. Later exact-compound primary evidence
+    supports the clause, so the problem is citation placement, not a disproved mechanism.
+    Add claim-level primary support while retaining the historical isolation source
+    for the claims it actually supports.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  field_paths:
+  - definition
+  - definition_source
+  - evidence
+  evidence_ids:
+  - adopted1973
+  - eftu
+  - eftu1989
+  - source
+  - rubric
+  rule_id: 'native-review-checklist: Claim-level primary citation support'
+  native_severity: minor non-blocking evidence provenance gap
+  normalization_reason: The biological target claim is independently supported. Replacing
+    one source with another for the entire composite definition would create a different
+    scope gap; narrow evidence placement is required.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-specific exact-synonym exclusion policy for ARO:3001235
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted upstream names and composite definition/citation provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated name filtering and definition/citation placement
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aurodox.yaml
+    role: Curator-owned claim-level primary evidence and qualified mechanism/activity/producer/resistance/dataset
+      annotations through validated writer and history helper
+- finding_id: F3
+  issue_key: aurodox-qualified-primary-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Curate separate exact antibacterial, antivirulence, producer and exposure
+    evidence
+  description: Inspected primary work supplies useful optional annotations. Preserve
+    EF-Tu binding, PurA probe-binding/genetic evidence, response-level Ler/T3SS effects,
+    producer biosynthesis, induced resistance phenotype and exposure datasets as distinct
+    claims. Historical MIC labeling and modern dose/platform discrepancies require
+    explicit limits.
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  field_paths:
+  - activity_spectrum
+  - molecular_targets
+  - mode_of_action
+  - producer_organisms
+  - resistance_mechanisms
+  - datasets
+  - causal_graphs
+  - evidence
+  - discussions
+  evidence_ids:
+  - adopted1973
+  - eftu
+  - pura2024
+  - t3ss2019
+  - multiple2024
+  - producer2022
+  - induced-resistance
+  - datasets
+  - rubric
+  rule_id: 'native-review-checklist: Qualified primary evidence and optional completeness'
+  native_severity: informational optional primary enrichment
+  normalization_reason: Missing annotations are optional and antibacterial inclusion
+    is supported. Source/probe/strain/endpoint restrictions prevent unqualified automatic
+    additions.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aurodox.yaml
+    role: Curator-owned claim-level primary evidence and qualified mechanism/activity/producer/resistance/dataset
+      annotations through validated writer and history helper
+actions:
+- action_id: A1
+  description: Remove or correct the mocimycin exact-synonym assertion through the
+    maintained source policy.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-specific exact-synonym exclusion policy for ARO:3001235
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted upstream names and composite definition/citation provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated name filtering and definition/citation placement
+  acceptance_checks:
+  - Apply a record-specific synonym exclusion for ARO:3001235 or a scientifically
+    supported replacement such as 1-methylmocimycin; preserve bare mocimycin for its
+    own distinct compound where appropriate.
+  - Regenerate through the normal source workflow and inspect the exact diff. Retain
+    the valid native full key, all stereo and the supported X-5108/goldinodox/goldinomycin
+    names.
+  - Do not promote the record to CHEBI:201478 exact grounding from connectivity alone;
+    resolve the unspecified-stereo crosswalk through maintained grounding policy if
+    pursued.
+  - Run focused schema/strict and required shared source/history/reference checks;
+    chemistry agreement alone cannot validate textual synonyms.
+- action_id: A2
+  description: Attach exact primary support to the EF-Tu definition claim without
+    losing the isolation/activity provenance.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Source-specific exact-synonym exclusion policy for ARO:3001235
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted upstream names and composite definition/citation provenance
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Maintained ARO extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated name filtering and definition/citation placement
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aurodox.yaml
+    role: Curator-owned claim-level primary evidence and qualified mechanism/activity/producer/resistance/dataset
+      annotations through validated writer and history helper
+  acceptance_checks:
+  - Retain PMID 4781274 for production, historical X-5108 naming and measured activity.
+    Attach PMID 11278992 and its PDB 1HA3 ligand identity to the EF-Tu claim at the
+    narrowest supported location.
+  - If changing generated definition/reference behavior, update the maintained owner
+    and ensure reseeding preserves qualified evidence. Do not simply substitute one
+    PMID for the entire composite definition.
+  - Represent Thermus protein origin separately from E. coli expression host, with
+    engineered protein and full-paper access limitations. Do not assign all kirromycin
+    resistance mutations to aurodox without exact evidence.
+- action_id: A3
+  description: Curate optional primary evidence with exact endpoint, chemical-form
+    and experimental scope.
+  finding_ids:
+  - F3
+  target_ids:
+  - antibioticmech:aro-5086cca2e7
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/aurodox.yaml
+    role: Curator-owned claim-level primary evidence and qualified mechanism/activity/producer/resistance/dataset
+      annotations through validated writer and history helper
+  acceptance_checks:
+  - Preserve the 1973 material purity and sodium-salt preparation. Qualify Table 4
+    as historically labeled MIC with explicit 50-percent inhibition language for B.
+    megaterium; do not silently convert it to modern MIC or MBC.
+  - Keep EF-Tu-mediated protein synthesis separate from low-dose T3SS effects. For
+    PurA distinguish parent enzyme inhibition from immobilized derivative binding;
+    the 0.65 micromolar KD belongs to a biotinylated probe. Do not infer direct Ler
+    binding or a proven PurA catalytic route to T3SS suppression.
+  - Preserve selected-system limits in the 2024 multi-pathogen study, including Salmonella
+    SPI-2 versus SPI-1 and time-dependent infection results.
+  - Curate natural S. goldiniensis separately from engineered hosts and biosynthetic
+    genes. Verify ion/adduct assignments before copying the 2022 m/z 793 description;
+    do not turn extract zones into pure-compound MICs.
+  - Treat original serial-passage and producer tolerance observations as phenotypes.
+    Resolve ATCC 21386 versus 21387 in the historical producer-resistance paper before
+    strain-level merging; its permeability/EF-Tu explanations remain hypotheses.
+  - Before adding ENA PRJEB29967, resolve sample treatment/replicate mapping, the
+    paper 5 mg/mL versus 5 micrograms/mL discrepancy and NextSeq versus ENA HiSeq
+    metadata. Inspect 2024 supplement/raw accession separately; no untreated genetic
+    comparison is substituted for exposure data.
+  - Keep mouse protection and poultry growth promotion distinct from human clinical
+    use. Use write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/aurodox.yaml
+    for separately authorized curation, then run focused/shared checks without automatic
+    REVIEWED promotion.
+limitations:
+- All original and supplemental maintained input hashes remain unchanged. The initial
+  generic capture was preserved; the review source uses the supplementary native inspect
+  with correct ARO/PubChem owners and 19 inputs.
+- The sole adopted PMID 4781274 was read as a complete eight-page paper, including
+  visual inspection of Tables 4/5. Some historical strain, broth and assay endpoint
+  details are sparse, and quantitative claims require the stated purity/form and 50-percent-inhibition
+  qualification.
+- The 1979 conversion discussion, conversion Methods and structure scheme were inspected.
+  Not every derivative assay or synthesis was audited. The 1977 introduction and naming
+  footnote were inspected as historical identity support.
+- The EF-Tu primary abstract and official PDB entry/ligand descriptors were inspected;
+  full 2001 paper and density maps were not independently examined. The 1989 conformation
+  study remains abstract-level.
+- The 2019 and 2022 main text, and 2024 PurA and multi-pathogen main Methods/Results/Discussion
+  were read. Raw sequencing data, spectra, full supplements and probe assay fits were
+  not reanalyzed. Primary dose, instrument, strain and mass-annotation differences
+  are retained rather than silently harmonized.
+- The 1979 resistance abstract, Methods, initial Results and Discussion were inspected.
+  Remaining numerical Results tables and the historical producer accession discrepancy
+  were not resolved; no resistance gene is asserted.
+- Official ENA study and six RNA-seq run records were checked, but sample-level treatment
+  mapping and instrument discrepancies remain. The 2024 Figshare collection resolves,
+  but its files and a raw Salmonella accession were not inspected.
+- The 2025 mouse study was inspected only at its original abstract. No human clinical
+  efficacy, universal absence of toxin induction, complete resistance survey or exhaustive
+  literature review is claimed. Native ChEBI crosswalk lacks structural stereochemistry;
+  MINTED status is preserved.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+```
