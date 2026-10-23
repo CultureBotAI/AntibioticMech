@@ -1,0 +1,806 @@
+schema_version: 1.0.0
+review_id: 20261021T105830Z-cdk9-in-2
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'CDK9-IN-2: primary HPrK and antibacterial support; restore the depicted trans
+  ring geometry and correct paraphrased evidence'
+started_at: '2026-10-21T10:44:43Z'
+finished_at: '2026-10-21T10:58:30Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author the curator inventory. Preserved the initial
+    capture and corrected actual ownership before assessment, read the entire record
+    and source row, inspected the primary article and supplement, visually checked
+    Figures 3 and 4, and independently parsed native and comparison structures.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: The cited primary paper supports CDK9-IN-2 antibacterial activity and HPrK
+  enzyme inhibition/direct protein binding. Native structures reproduce the cited
+  PubChem entry and all focused checks pass, but both omit the trans-1,4-cyclohexyl
+  geometry explicitly drawn for the primary-paper compound. One major representation
+  finding, one minor paraphrased-snippet finding and one informational claim-level
+  enrichment finding require maintained-source or bounded curator follow-up. No opposite
+  absolute isomer, racemate, natural producer, clinical efficacy or experimentally
+  demonstrated downstream metabolic chain is inferred.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cdk9-in-2.yaml
+    sha256: ca1f4b3a32a5cbeedc8a19ab386e2693bb7ced067965b391487ce92fe2deb3ad
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: antibioticmech:curator-9e16033cea
+  path: data/antibiotics/antibacterial/cdk9-in-2.yaml
+  label: CDK9-IN-2
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Maintained exact structure, definition, activity and primary-reference inventory
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: CURATOR source validation, minting and record generation
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cdk9-in-2.yaml
+    role: Future claim-level primary evidence and mechanism curation
+scope:
+  description: 'Whole PROPOSED/MINTED CDK9-IN-2 record: exact minted identity, definition
+    and source DOI, antibacterial role, every chemical descriptor and structure-source
+    date, sole PubChem xref, source-concept evidence and single history event.'
+  selection: Queue 202; original capture preserved. Actual CURATOR source owners recorded
+    in 202-owner-capture.json before scientific assessment.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:curator-9e16033cea
+  exclusions:
+  - target: Other CDK inhibitors, cis ring comparator, human CDK9 signaling, producer
+      claims and clinical efficacy
+    reason: These are not interchangeable with the depicted trans compound, tested
+      bacterial HPrK protein or experimental antimicrobial endpoints.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cdk9-in-2.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Actual focused command exited 0.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cdk9-in-2.yaml --out /private/tmp/am-review-session/202-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Actual focused command exited 0. Batch021 lacks RDKit, so the existing
+    batch019 interpreter was used against batch021 inputs. Optional mass fields are
+    absent and were not required by this check.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/202-chemistry-check.py 202
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cdk9-in-2.yaml
+  locator: Entire native record and sole PROPOSED_FROM_CURATOR_INVENTORY history event.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: The record is PROPOSED/MINTED from one curated source row, not ChEBI. It
+    asserts a named HPrK inhibitor and antibacterial activity but has no structured
+    mode, direct target, activity observations, resistance mechanism, producer or
+    causal graph. These optional omissions alone do not establish a schema error.
+- evidence_id: source
+  kind: record_content
+  reference: curation/curator_antibiotics.tsv; scripts/seed_from_sources.py; docs/CURATION.md
+  locator: Exact inventory row 13; seeder lines 594–693, 1496–1568 and 1661–1667;
+    CURATOR inventory policy.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: The inventory reproduces all native assertions and is the maintained identity/definition/evidence
+    owner. The seeder imports structure and evidence, normalizes PubChem xrefs, mints
+    the CURATOR identifier, and intentionally emits PROPOSED status. The initial generic
+    ChEBI owner list was corrected in a separate pre-assessment owner capture; all
+    original 13 input hashes remain unchanged and already include the actual curator
+    inventory and seeder.
+  snapshot_sha256: b51ae869fd74b52c7522f881d69d18d6fefd2888c7b7c1cf9eb44e93c039655b
+- evidence_id: pubchem
+  kind: database
+  reference: https://pubchem.ncbi.nlm.nih.gov/compound/49855228
+  locator: Official PUG property response and PUG-View computed descriptors/depositor
+    synonyms.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: partial
+  summary: CID 49855228 is named CDK9-IN-2 and exactly reproduces native SMILES, Standard
+    InChI, key XKHXPTSUVPZYDW-UHFFFAOYSA-N, C23H25ClFN5 and neutral charge. Its canonical
+    descriptors omit the cyclohexane relative geometry; depositor synonyms include
+    trans names and links to distinct ChEMBL stereochemical entries. Synonym aggregation
+    alone does not establish exact tested-material identity. The native xref is source-faithful,
+    but the primary depiction is more stereospecific.
+  snapshot_sha256: 12eb9dba2a333e5d4bcd79244f0540793f70f85145a89cf70ac09c69a48f3f9b
+- evidence_id: primary-identity
+  kind: primary_source
+  reference: PMID:41841724; DOI:10.1128/spectrum.03977-25; PMC13055401
+  locator: Complete main text and original Figure 3E, visually inspected from the
+    official open-access archive package.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: partial
+  summary: Figure 3E identifies the hit as CDK9-IN-2 with formula C23H25ClFN5 and
+    depicts opposite solid-wedge/dashed-wedge substituents at cyclohexane positions
+    1 and 4, specifying trans relative geometry. Screening uses a MedChemExpress kinase-inhibitor
+    library. This agrees with native connectivity but is more specific than the native
+    stereo-unspecified graph. The Methods docking SMILES is malformed in the source
+    XML and is not a safe replacement string. The drawing supports relative geometry,
+    not an invented absolute R/S assignment or a claim about batch stereochemical
+    purity.
+  snapshot_sha256: aa1faf00678b71cf6c15ae7bcac4a8a947e6bca8bb5c436a8ce0b1481d9a74b1
+- evidence_id: stereo-comparison
+  kind: database
+  reference: https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4525049.json; https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3653006.json
+  locator: Official structures compared with Figure 3E; independent MOL, SMILES and
+    InChI parsing.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: CHEMBL4525049 encodes trans ring geometry with Standard InChI /t17-,18-
+    and key XKHXPTSUVPZYDW-IYARVYRRSA-N, matching the relative-geometry candidate
+    transcribed from Figure 3E. CHEMBL3653006 encodes the distinct cis geometry with
+    /t17-,18+ and key XKHXPTSUVPZYDW-HDICACEKSA-N. Both have the same connectivity
+    as the native unspecified structure. Each official MOL/SMILES/InChI reproduces
+    its own full key. These comparisons demonstrate representability; they do not
+    authorize substituting every annotation from either ChEMBL entry.
+  snapshot_sha256: f73c1d3177bceccfc81dc409380939c4331c18b8f445ca185f9dc00dc3d8afbc
+- evidence_id: kinase
+  kind: primary_source
+  reference: PMID:41841724; DOI:10.1128/spectrum.03977-25
+  locator: Methods High-throughput screening; Results assay development; Figure 3,
+    visually inspected.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: A luciferase ATP-consumption assay uses purified HPrK and HPr, 80 µM ATP,
+    2 µM HPrK, 100 µM HPr and 0.5 mM compound for 1 h at 37 °C. CDK9-IN-2 is the strongest
+    reported hit with approximately 99% inhibition in this screen. This is an enzyme-screen
+    endpoint, not an IC50 measurement or proof of intracellular target occupancy.
+  snapshot_sha256: 4623ddf6fa761d260883291090d2538a8b6a1667d18130721f6d772dc7b8630e
+- evidence_id: binding
+  kind: primary_source
+  reference: PMID:41841724; DOI:10.1128/spectrum.03977-25
+  locator: Methods BLI/docking; Results Binding mode; original Figure 4A–D visually
+    inspected.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: BLI directly tests binding to recombinant S. suis HPrK; Figure 4C reports
+    KD 2.2 × 10^-4 M for wild type and 4.4 × 10^-3 M for the combined D242A/D249A/N281A
+    mutant. Docking proposes the contacts and the triple mutant also has reduced catalytic
+    activity. Together these support HPrK interaction, but do not separately prove
+    each atomic contact, exclude structural effects of mutation, demonstrate drug-resistant
+    cellular rescue, or establish direct binding to every aligned ortholog.
+  snapshot_sha256: 2953f9ea717c86e218f010e540f05781e4252e01e00c42f1271bed7748440c42
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:41841724; DOI:10.1128/spectrum.03977-25
+  locator: Complete Methods/Results; Table 1 and Galleria experiment.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: Twofold serial-dilution assays use 1 × 10^6 CFU/mL bacteria or 1 × 10^4
+    CCU/mL mycoplasmas over 0.0625–128 µg/mL, in triplicate; MBC is assessed by subculture.
+    Table 1 reports MIC 16 µg/mL and MBC 32 µg/mL for S. suis SC19 and eight named
+    clinical isolates. Tested Gram-positive MICs are 16–32 µg/mL, MBCs 32–64 µg/mL;
+    four named mycoplasma strains have MICs 16–32 µg/mL, with MBC not tested. E. coli
+    ATCC25922 and S. Typhimurium ATCC14028 have MIC 128 µg/mL and MBC >128 µg/mL.
+    Media differ among taxa. The larval infection experiment is an animal-model endpoint,
+    not human clinical efficacy.
+  snapshot_sha256: 4623ddf6fa761d260883291090d2538a8b6a1667d18130721f6d772dc7b8630e
+- evidence_id: supplement
+  kind: primary_source
+  reference: DOI:10.1128/spectrum.03977-25.SuF1
+  locator: Complete extracted supplement text, Figure S1/S2 captions and Tables S1–S3.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: 'Table S3 provides strain provenance and conventional-antibiotic resistance
+    profiles supporting the source description of resistant S. suis clinical isolates.
+    These are not CDK9-IN-2 resistance mechanisms. PCR/inducible-promoter experiments
+    support HPrK essentiality in the studied S. suis context. Mycoplasma RD2408 has
+    an internal name/description inconsistency: the row is named M. hyopneumoniae
+    but described as M. hyorhinis. Resolve that discrepancy before adding its exact
+    species-level AST observation. Plasmid/primer sequences were read as source context,
+    not independently resequenced or aligned.'
+  snapshot_sha256: 76fd08c703da55e0815f2d89366186086737b26a8777166203dba5fdb5ad5335
+- evidence_id: causal-scope
+  kind: primary_source
+  reference: PMID:41841724; DOI:10.1128/spectrum.03977-25
+  locator: Complete Discussion and comparison with actual experiments.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: partial
+  summary: The authors explicitly frame compound-induced HPr dephosphorylation, disruption
+    of carbon catabolite repression and impaired energy metabolism as speculation.
+    The paper does not directly measure that complete chain after compound treatment.
+    Genetic essentiality, enzyme inhibition, BLI and bacterial growth are distinct
+    observations. Human CDK9/cancer discussion is context, not a bacterial CDK9 target
+    or proof of clinical selectivity.
+  snapshot_sha256: 4623ddf6fa761d260883291090d2538a8b6a1667d18130721f6d772dc7b8630e
+- evidence_id: snippet
+  kind: record_content
+  reference: curation/curator_antibiotics.tsv:evidence_snippet; source_concepts[0].evidence[0].snippet
+  locator: Entire source snippet compared with the inspected original article.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: refutes
+  summary: The sentence beginning Yan et al. identified is a curator-written summary,
+    not a verbatim passage in the cited article. Its scientific substance is supported,
+    but the local checklist reserves snippet for exact short quotations and puts interpretation
+    in notes. The defect originates in the maintained inventory and propagates through
+    seeding.
+  snapshot_sha256: b51ae869fd74b52c7522f881d69d18d6fefd2888c7b7c1cf9eb44e93c039655b
+- evidence_id: adapter
+  kind: database
+  reference: 202-imodulondb-datasets.txt; 202-imodulondb-hprK-saureus.txt; 202-imodulondb-hprK-bsubtilis.txt
+  locator: Structured catalog before web; bounded HPrK searches in covered Gram-positive
+    datasets after primary taxa were resolved.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: context_only
+  summary: The catalog has no S. suis or mycoplasma dataset matching the native target
+    context. Follow-up searches identify hprK genes s_aureus/staph_precise108/USA300HOU_RS04115
+    and b_subtilis/modulome/BSU_35000, each with zero matching iModulons. These are
+    contextual gene annotations, not drug-binding, MIC, essentiality or same-strain
+    evidence. No module hit required a summarize call. The first sandbox catalog attempt
+    failed DNS, then the same public command succeeded with network access. All successful
+    calls used env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15, followed by datasets or search --organism
+    s_aureus --dataset staph_precise108 --query hprK, or search --organism b_subtilis
+    --dataset modulome --query hprK; exit 0.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: local-search
+  kind: search
+  reference: 202-local-hits.txt; 202-inclusive-file-hits.txt; 202-maintained-search.txt
+  locator: Identifier, name, slug and key search with hidden and ignored files included.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: context_only
+  summary: Matches include the exact curator inventory/native record, review queue,
+    path ledger and generated maps. No separate maintained corrective decision or
+    exact source row was found. Optional native biological fields were checked in
+    the complete record.
+  snapshot_sha256: a8861f82eb95a9d18555f7f4d98d76d5d99d125171adf3283a855e8694783b8a
+  search_scope: rg --no-ignore --hidden across data, curation, conf, scripts, src,
+    docs, .claude, reviews and reports for antibioticmech:curator-9e16033cea, XKHXPTSUVPZYDW,
+    cdk9-in-2 and CDK9-IN-2; .git and .venv internals excluded.
+- evidence_id: validation
+  kind: validation
+  reference: 202-focused-results.json; 202-chemistry.json; 202-stereo-candidate.json
+  locator: Actual focused schema/strict commands and independent native chemistry.
+  accessed_at: '2026-10-21T10:55:36Z'
+  support: supports
+  summary: All focused checks pass. Native SMILES and InChI reproduce one neutral
+    fragment, formula and full key, and mint antibioticmech:curator-9e16033cea reproduces
+    from CURATOR and its exact DOI-fragment source ID. Internal consistency does not
+    prove agreement with more specific primary ring geometry. FindMolChiralCenters
+    returns no individual centres here, while FindPotentialStereo recognizes the two
+    specified ring stereoelements in the trans candidate; an R/S-centre count alone
+    is insufficient for this case.
+  snapshot_sha256: bceb1b76e8370aa4d5b0904619453e7ac57be0bf615a59b19d0b91b9a3fed683
+assessments:
+- assessment_id: identity
+  area: representation
+  topic: Primary trans relative geometry versus unspecified native structure
+  outcome: concern
+  summary: The native and PubChem structures agree internally but omit relative ring
+    geometry explicitly depicted for the primary-paper hit. This is under-specification,
+    not evidence of the opposite isomer or a mixture.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - pubchem
+  - primary-identity
+  - stereo-comparison
+  - validation
+- assessment_id: classification
+  area: grounding
+  topic: Minted source and antibacterial filing
+  outcome: supported
+  summary: The sole CURATOR DOI-fragment source and mint are coherent, and the primary
+    paper supports antibacterial activity. PROPOSED/MINTED status correctly avoids
+    asserting completed curation.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - source
+  - activity
+  - validation
+- assessment_id: definition
+  area: evidence
+  topic: HPrK inhibitor definition and source citation
+  outcome: supported
+  summary: The adopted DOI resolves to Yan et al. and supports both HPrK inhibition/binding
+    and the stated tested-group antibacterial activity. The definition must remain
+    tied to the depicted material and experimental scope.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - kinase
+  - binding
+  - activity
+  - primary-identity
+- assessment_id: quote
+  area: provenance
+  topic: Snippet versus interpretation
+  outcome: concern
+  summary: The evidence summary is scientifically supported but placed in a field
+    requiring verbatim source text. Move it to notes or replace it with an exact short
+    passage.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - snippet
+  - source
+- assessment_id: target
+  area: scope
+  topic: Target, binding residues and downstream causality
+  outcome: supported
+  summary: HPrK has direct protein-binding and enzyme evidence. Residue assignment
+    combines docking with a triple mutant; the full cellular metabolic chain remains
+    a hypothesis and homolog alignments are not ortholog binding experiments.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - binding
+  - kinase
+  - causal-scope
+  - adapter
+- assessment_id: activity
+  area: quantity
+  topic: Strain-specific activity and resistance context
+  outcome: supported
+  summary: The paper and supplement support tested-strain activity and conventional-antibiotic
+    resistant isolates. No tested strain is shown to acquire a CDK9-IN-2 resistance
+    mechanism; the RD2408 taxonomy discrepancy needs resolution only if that optional
+    observation is curated.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - activity
+  - supplement
+- assessment_id: completeness
+  area: completeness
+  topic: Structured target and activity enrichment
+  outcome: unknown
+  summary: Optional claim-level HPrK and activity entries could be added after identity
+    reconciliation. A producer, natural biosynthesis origin, human clinical indication
+    or fully demonstrated causal graph is not established by the inspected evidence.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - record
+  - kinase
+  - binding
+  - activity
+  - causal-scope
+- assessment_id: ownership
+  area: ownership
+  topic: Maintained correction and curator additions
+  outcome: supported
+  summary: Structure, xrefs and imported source evidence originate in curator_antibiotics.tsv
+    and must be corrected there before regeneration. New claim-level targets and activity
+    belong to the actual native record through approved helpers.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - source
+  - local-search
+- assessment_id: validation
+  area: schema
+  topic: Focused validators and chemistry
+  outcome: supported
+  summary: Actual focused gates pass. They do not detect a difference between a self-consistent
+    unspecified graph and the trans relative geometry of the primary depiction.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  evidence_ids:
+  - validation
+  - primary-identity
+findings:
+- finding_id: F1
+  issue_key: cdk9-in-2-trans-ring-geometry-underspecified
+  category: representation
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Reconcile the primary trans cyclohexane geometry with the stereo-unspecified
+    inventory
+  description: Figure 3E of the exact antibacterial paper depicts trans-1,4 substituents,
+    whereas the native SMILES, InChI and key copied from PubChem omit relative geometry.
+    Independent stereochemical comparison shows that this distinction is representable
+    and materially changes the full InChIKey. The native structure is not asserted
+    to be the cis isomer or a racemate; the problem is loss of the primary compound’s
+    specified relative geometry.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  field_paths:
+  - chemical_structure
+  - xrefs[0]
+  - source_concepts[0]
+  evidence_ids:
+  - primary-identity
+  - pubchem
+  - stereo-comparison
+  - validation
+  - source
+  rule_id: 'native-review-checklist: exact salt/stereo/charge identity and source-to-tested-material
+    correspondence'
+  native_severity: major
+  normalization_reason: This is a confirmed structure-representation gap affecting
+    exact-material interpretation despite passing internal checks. Major is used for
+    under-specification; no opposite absolute identity or invalid native syntax is
+    alleged.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Exact source-row structure, xref, definition and imported evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate the CURATOR record after a maintained-source correction
+- finding_id: F2
+  issue_key: cdk9-in-2-curator-paraphrase-in-snippet
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Move the curator paraphrase out of the verbatim snippet field
+  description: The imported evidence snippet summarizes Yan et al. in third person
+    and is not a verbatim passage from the inspected source. Its substance is supported,
+    so the correction concerns evidence provenance and representation rather than
+    false antibacterial evidence.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  field_paths:
+  - source_concepts[0].evidence[0].snippet
+  evidence_ids:
+  - snippet
+  - source
+  - activity
+  - kinase
+  rule_id: 'native-review-checklist: snippets are short verbatim passages; interpretations
+    belong in notes'
+  native_severity: minor
+  normalization_reason: A supported paraphrase is misplaced in a verbatim field. This
+    is a nonblocking provenance defect, not an unsupported scientific claim.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Exact source-row structure, xref, definition and imported evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate the CURATOR record after a maintained-source correction
+- finding_id: F3
+  issue_key: cdk9-in-2-qualified-hprk-activity-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Add qualified HPrK and activity evidence after exact-material reconciliation
+  description: The cited primary paper provides direct HPrK protein interaction, enzyme-screen
+    and strain-specific activity evidence that is not yet represented on structured
+    claim objects. This is an optional enrichment opportunity; a graph that treats
+    all proposed carbon-metabolism steps as observed would overstate the experiments.
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  field_paths:
+  - molecular_targets
+  - mode_of_action
+  - activity_spectrum
+  - causal_graphs
+  evidence_ids:
+  - kinase
+  - binding
+  - activity
+  - supplement
+  - causal-scope
+  - adapter
+  rule_id: 'native-review-checklist: narrow claim-level support and direct versus
+    inferred causal evidence'
+  native_severity: informational
+  normalization_reason: The PROPOSED record does not require all optional fields.
+    No automatic missing-field error is assigned.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cdk9-in-2.yaml
+    role: Future claim-level target, mechanism and activity evidence
+actions:
+- action_id: A1
+  description: Preserve the primary compound’s trans relative geometry through the
+    maintained inventory and exact xref policy.
+  finding_ids:
+  - F1
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Exact source-row structure, xref, definition and imported evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate the CURATOR record after a maintained-source correction
+  acceptance_checks:
+  - Independently verify Figure 3E and the tested commercial material mapping, using
+    a valid stereochemical representation. Preserve trans-1,4 relative geometry without
+    inventing absolute R/S centres, a racemate, or a batch-purity statement.
+  - The scratch candidate with /t17-,18- and key XKHXPTSUVPZYDW-IYARVYRRSA-N is an
+    independently checked candidate, not an automatic replacement. CHEMBL4525049 is
+    a matching structural comparator; CHEMBL3653006 is the distinct cis comparator
+    and must not be substituted by label.
+  - Correct the exact curation/curator_antibiotics.tsv row’s structure strings and
+    source provenance coherently, and resolve whether the stereo-unspecified PubChem
+    CID remains an allowed relationship rather than silently retaining it as an exact
+    stereo xref. Do not use the malformed published docking SMILES.
+  - Regenerate through the documented seed pipeline, review the object-level identity/source
+    diff and mint continuity, and run per-record schema/strict, explicit ring-stereo
+    checks and applicable shared gates. Preserve PROPOSED status until native sign-off
+    is complete.
+- action_id: A2
+  description: Correct the source-owned evidence field placement while retaining the
+    supported scientific summary.
+  finding_ids:
+  - F2
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Exact source-row structure, xref, definition and imported evidence owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate the CURATOR record after a maintained-source correction
+  acceptance_checks:
+  - Move the current paraphrase from evidence_snippet to evidence_notes, or replace
+    it with a short exact passage checked against the original paper; keep the DOI
+    and method/organism qualifications.
+  - Update the maintained curator inventory and regenerate, rather than patching only
+    source_concepts in generated YAML. Verify the regenerated evidence text and focused
+    validators.
+- action_id: A3
+  description: Curate narrow target and assay claims without importing hypothetical
+    or unrelated biology.
+  finding_ids:
+  - F3
+  target_ids:
+  - antibioticmech:curator-9e16033cea
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/cdk9-in-2.yaml
+    role: Future claim-level target, mechanism and activity evidence
+  acceptance_checks:
+  - After resolving F1, represent HPrK as the protein-function target with the actual
+    S. suis recombinant binding/enzyme context and primary evidence. Ground an organism-specific
+    protein example independently if one is added; the iModulon gene hits are contextual
+    and from different datasets/strains.
+  - Keep the 0.5 mM screening inhibition endpoint separate from BLI KD and MIC/MBC.
+    Do not turn approximately 99% screen inhibition into an IC50, or the triple-mutant
+    result into proof of each individual atomic contact or cellular resistance rescue.
+  - For any activity observations, preserve exact strain, medium, inoculum, MIC versus
+    MBC, units and tested range. Retain not-tested mycoplasma MBC and >128 µg/mL qualifiers.
+    Resolve the RD2408 species-description discrepancy before assigning that observation
+    to a species.
+  - Do not encode the proposed HPr dephosphorylation-to-CCR-to-energy-metabolism chain
+    as directly demonstrated. Conventional-antibiotic resistance profiles, expression-host
+    E. coli and larval survival do not establish CDK9-IN-2 resistance, biosynthesis
+    or human efficacy.
+  - Use write_validated_antibiotic and record_curation_event for separately authorized
+    native additions, and run relevant focused/shared gates before status promotion.
+limitations:
+- All 13 original input hashes remain unchanged. Actual CURATOR source ownership was
+  recorded separately before scientific assessment; no original capture was silently
+  replaced.
+- The single adopted reference was verified as PMID41841724, DOI10.1128/spectrum.03977-25
+  and PMC13055401. The full main text and extracted supplement text were read, and
+  original Figures 3 and 4 were visually inspected. Supplementary plasmid/primer sequences
+  were not independently aligned or experimentally revalidated.
+- The exact primary figure supports trans relative ring geometry; no independent analytical
+  certificate of the purchased test batch was inspected. The native unspecified graph
+  does not prove a mixture, racemate or the opposite cis material.
+- The published docking SMILES is malformed in the inspected XML. Structural comparison
+  therefore uses the original figure and independently parsed official ChEMBL structures,
+  with the corrected trans string retained only as a scratch candidate.
+- 'The primary report has limitations relevant to later enrichment: no reported enzyme
+  IC50, no drug-resistant cellular target rescue, no direct measurement of the full
+  proposed downstream metabolic chain, and an RD2408 species-description inconsistency.
+  These do not negate the demonstrated in vitro activity and protein-binding observations.'
+- The catalog lacks the exact S. suis/mycoplasma context. Covered HPrK gene annotations
+  are not equivalent-strain drug response experiments, and zero module search hits
+  are not negative evidence.
+- Some direct publisher/archive routes returned 403 or 404; the full primary XML and
+  original figures/supplement were ultimately retrieved through the public EuropePMC
+  API. No commercial evidence or paid access was required.
+- The locked batch021 environment lacks RDKit; actual independent chemistry used the
+  existing batch019 interpreter against unchanged batch021 inputs. Passing deterministic
+  checks do not close the primary relative-geometry finding.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
