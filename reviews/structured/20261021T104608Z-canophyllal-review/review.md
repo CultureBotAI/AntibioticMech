@@ -1,0 +1,702 @@
+# Review of canophyllal
+
+- Review: 20261021T104608Z-canophyllal-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T10:32:37Z
+- Finished UTC: 2026-10-21T10:46:08Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Canophyllal identity is coherent and primary antibacterial evidence supports its role. The definition should describe isolation from Syzygium formosanum without implying first discovery: the cited 1999 paper calls canophyllal known and only newly reported from that species. Exact antiplasmodial evidence provides optional enrichment; extract activity, other triterpenes and untested host endpoints must remain separate.
+
+## Scope And Provenance
+
+Entire SEEDED record and three history events; identity, parents, antibacterial role and definition; all eight adopted PMID complete abstracts; original2008 full paper/visualTable 2 and2023 main-source identity/assay scope.
+
+Selection: Queue index193; root original13 input hashes retained,all applicable maintained ChEBI owners already included.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:132345 | data/antibiotics/antibacterial/canophyllal.yaml | generated | canophyllal |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:132345 | Exit0 in batch020environment. |
+| Documented strict check | passed | True | CHEBI:132345 | Exit0; zeroERRORrows in batch020environment. |
+| Supplemental chemistry/source consistency | passed | False | CHEBI:132345 | Exit0 using existing batch019 RDKit environment with batch020 working directory. |
+| Structured-source applicability | not_applicable | False | CHEBI:132345 | Native record contains no microbial gene, protein, pathway, regulator or transcriptomics assertion. Phenotypic growth assays and plant isolation do not trigger a gene-module lookup. |
+| Authoritative full QC | failed | True | CHEBI:132345 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:132345 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:132345 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:132345 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:132345 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:132345 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:132345 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:132345 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:132345 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact aldehyde/ketone structure
+
+identity: supported. Targets: CHEBI:132345.
+
+Current exact public structures and primary characterization support identity and distinguish nearby oxidation states.
+
+### Antibacterial role and chemical parents
+
+grounding: supported. Targets: CHEBI:132345.
+
+Exact compound 4 antibacterial report supports role; chemical parents fit.
+
+### Isolation priority wording
+
+nomenclature: concern. Targets: CHEBI:132345.
+
+The cited paper establishes first reporting in the species, not first discovery of the known compound.
+
+### Optional mechanism and additional activity
+
+completeness: unknown. Targets: CHEBI:132345.
+
+Exact antiplasmodial observation is available; inspected sources do not establish a molecular mechanism. Optional absence is not a required-field defect.
+
+### Compound and extract boundaries
+
+scope: supported. Targets: CHEBI:132345.
+
+Canophyllal assays remain separated from extracts, neighboring triterpenes and untested host endpoints.
+
+### Adopted leads and history
+
+provenance: supported. Targets: CHEBI:132345.
+
+All eight adopted abstracts and three history events checked; maintained owners recorded.
+
+### Focused checks
+
+schema: supported. Targets: CHEBI:132345.
+
+Schema/strict/alternate-environment chemistry pass.
+
+## Findings
+
+### F1: Remove unsupported first-isolation implication
+
+minor / open / confirmed; issue key: chebi-132345-isolation-priority-wording.
+
+The definition says originally isolated from S. formosanum, but its cited 1999 study explicitly treats canophyllal as known and reports its first isolation from that plant. Use isolated from rather than implying original discovery priority; the plant isolation itself is supported.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Reconcile the maintained definition to the actual species-isolation claim.
+
+- Replace originally isolated from with isolated from in the maintained upstream/source reconciliation path; retain S. formosanum leaf isolation and formula. Do not invent an earlier discovery species without verifying its primary report.
+- Regenerate through the validated workflow under separate curation authorization and confirm only intended definition/provenance changes.
+- Run focused schema/strict and required source-provenance, reference/history and corpus gates. Optional antiplasmodial enrichment must carry exact compound 4/W2/IC50/micromolar/method evidence.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/canophyllal.yaml; Entire YAML and three history events | supports | SEEDED/EXACT record has a neutral aldehyde/ketone friedelane graph, nine configured centers, one antibacterial role and source-isolation definition. No target, MIC, resistance, causal graph or curated producer object is asserted. |
+| chemistry | CHEBI:132345;PubChem:12302400; 193-chemistry.py;193-chemistry.json;193-ols.json;193-chebi.html;193-pubchem-key.json | supports | SMILES/InChI/fullkey ONRNCDHSZVITNY-TWWFCBCGSA-N, neutral C30H48O2, masses and current public graph match. Parent pentacyclic triterpenoid, ketone and aldehyde classes fit. Synonyms identify friedelan3-one28-al, not canophyllol or canophyllic acid. Adopted source roles/parents and citation list reproduce. |
+| isolation | PMID:10075776; DOI:10.1021/np980313w;193-core.json complete abstract | partial | The 1999 paper reports a new4-epifriedelin and twelve known terpenoids, explicitly including canophyllal. All are first reported from S. formosanum. It supports leaf isolation, not an implication that canophyllal itself was first discovered in that species. |
+| antibacterial | PMID:26724423; DOI:10.1016/j.jep.2015.12.043;193-core.json complete abstract | supports | Original Alchornea study isolates friedelane3-one28-al as compound 4 and evaluates eight specified Gram-positive/negative strains by microdilution. Abstract reports antibacterial activity for all seven isolated compounds, with3–6 among the strongest. This supports the broad native antibacterial role. Group-level highest2micrograms/mL is not assigned as an exact compound 4/strain MIC without the full table. |
+| antiplasmodial | PMID:18310952; DOI:10.1248/cpb.56.374;193-primary2008.pdf;complete4pages,visualp376Table2,assayMethods | supports | Exact canophyllal is compound 4 isolated from E. calophylloides stem bark(voucherHNC29528). Table 2 and Results report W2 P.falciparum IC50 18.2±1.0 micromolar, triplicate; 48h ring-synchronized erythrocyte culture with flow-cytometric parasitemia readout. The crystal and most detailed new-compound analysis concern endodesmiadiol1, not canophyllal. Activity supplies optional antimalarial enrichment, not a direct molecular target. |
+| other-isolations | PMID:16864458;PMID:22256754; 193-core.json complete abstracts | context_only | Canophyllal was isolated from T. wilfordii roots and T. hypoglaucum root bark, respectively. The former paper cytotoxic values8.5/25micrograms/mL apply to new compounds1/2, not canophyllal 4. These support isolation context, not exact antibacterial mechanisms. |
+| host-boundaries | PMID:11849847;PMID:20188156;PMID:17487607; 193-core.json complete abstracts | context_only | Hippocratea extract fractions were gastroprotective but isolated canophyllal was inactive in that assay.2010Calophyllum paper evaluated triterpenoid HL60 growth inhibition without compound-specific values in its abstract. Commiphora extract COX2/antimicrobial effects and syringic-acid activities are not demonstrated canophyllal effects. No host-target mechanism is transferred. |
+| later-identity | PMID:37233623; DOI:10.3390/metabo13050582;193-primary2023.html;Isolation,compound14NMR and section3.4 | supports | Canophyllal 14 was purified from C. tacamahaca leaves and identified with aldehyde proton9.47ppm plus separate aldehyde/ketone carbon signals. The authors explicitly did not evaluate14 in HepG2/HT29 cytotoxicity because material was scarce. Neighboring canophyllalic acid, canophyllol and canophyllic acid activities must not be transferred. |
+| owners | data/raw/chebi_antimicrobials.tsv;scripts/extract_source_inventory.py;scripts/seed_from_sources.py; CHEBI132345 row and current ChEBI definition | supports | Native definition, structure and role reproduce the adopted source. All eight PMID references resolve and complete abstracts were read. Ignored-inclusive curation/conf search found queue references but no exact maintained definition correction. |
+| validation | Focused schema/strict and alternate-environment chemistry; 193-strict.tsv;193-chemistry.json | supports | Focused native gates pass. Supplemental graph calculations use the existing batch019RDKit interpreter against020files; no tracked dependency or native file changed. |
+
+## Limits And Additional Notes
+
+- All eight adopted PMID abstracts were complete and read; most full papers were unavailable in this bounded review. Publisher routes for the 1999 isolation and2016 antibacterial papers failed/403 or were inaccessible. No compound-specific antibacterial MIC table was re-extracted.
+- The 2008 full paper and Table 2 were inspected, including units visually. It has an abstract/Results discrepancy for endodesmiadiol1(11.8 versus13.0), but canophyllal 4 is consistently18.2micromolar; no other-compound figure or efficacy value was transferred.
+- The 2023 full main-source identity and relevant assay sections were inspected, not all raw spectra. Canophyllal 14 was explicitly untested in its cancer-cell assay.
+- An older1986 isolation citation was found in the2008 reference list, but its original full text was not verified. The limited wording finding rests on the directly inspected1999 known-compound statement; no earliest-discovery claim is made.
+- Reaxys was not independently accessed. Exact public ChEBI/PubChem mappings and source characterization support identity without a licensed registry audit.
+- The020environment lacksRDKit; the supplemental chemistry command used the existing019interpreter against020working files. Native schema and strict commands ran normally in020.
+- No exhaustive mechanism or clinical survey was undertaken. Phenotypic activity does not prove a molecular target or clinical efficacy. Focused gates do not establish full-corpus success or promote SEEDED status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 13 repository input hashes remain unchanged; no native or saved-bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T104608Z-canophyllal-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of canophyllal
+started_at: '2026-10-21T10:32:37Z'
+finished_at: '2026-10-21T10:46:08Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: Exact identity and antibacterial role supported; minor first-isolation
+  wording correction
+scientific_review: true
+summary: 'Canophyllal identity is coherent and primary antibacterial evidence supports
+  its role. The definition should describe isolation from Syzygium formosanum without
+  implying first discovery: the cited 1999 paper calls canophyllal known and only
+  newly reported from that species. Exact antiplasmodial evidence provides optional
+  enrichment; extract activity, other triterpenes and untested host endpoints must
+  remain separate.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/canophyllal.yaml
+    sha256: de65d3b3c4ebcea977daedfa45c03a7a5c12aafe8cd738deb4e35d0b069ae17f
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Entire SEEDED record and three history events; identity, parents, antibacterial
+    role and definition; all eight adopted PMID complete abstracts; original2008 full
+    paper/visualTable 2 and2023 main-source identity/assay scope.
+  selection: Queue index193; root original13 input hashes retained,all applicable
+    maintained ChEBI owners already included.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:132345
+targets:
+- target_id: CHEBI:132345
+  path: data/antibiotics/antibacterial/canophyllal.yaml
+  label: canophyllal
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit0 in batch020environment.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/canophyllal.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit0; zeroERRORrows in batch020environment.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/canophyllal.yaml --out /private/tmp/am-review-session/193-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental chemistry/source consistency
+  status: passed
+  required: false
+  summary: Exit0 using existing batch019 RDKit environment with batch020 working directory.
+  target_ids:
+  - CHEBI:132345
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/193-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: structured-adapter
+  name: Structured-source applicability
+  status: not_applicable
+  required: false
+  summary: Native record contains no microbial gene, protein, pathway, regulator or
+    transcriptomics assertion. Phenotypic growth assays and plant isolation do not
+    trigger a gene-module lookup.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - record
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:132345
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/canophyllal.yaml
+  locator: Entire YAML and three history events
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: supports
+  summary: SEEDED/EXACT record has a neutral aldehyde/ketone friedelane graph, nine
+    configured centers, one antibacterial role and source-isolation definition. No
+    target, MIC, resistance, causal graph or curated producer object is asserted.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:132345;PubChem:12302400
+  locator: 193-chemistry.py;193-chemistry.json;193-ols.json;193-chebi.html;193-pubchem-key.json
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: supports
+  summary: SMILES/InChI/fullkey ONRNCDHSZVITNY-TWWFCBCGSA-N, neutral C30H48O2, masses
+    and current public graph match. Parent pentacyclic triterpenoid, ketone and aldehyde
+    classes fit. Synonyms identify friedelan3-one28-al, not canophyllol or canophyllic
+    acid. Adopted source roles/parents and citation list reproduce.
+  snapshot_sha256: f26b1a042b46d424028e24d0be3105db2937d38e5214d2c84ced1307f87ec440
+- evidence_id: isolation
+  kind: primary_source
+  reference: PMID:10075776
+  locator: DOI:10.1021/np980313w;193-core.json complete abstract
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: partial
+  summary: The 1999 paper reports a new4-epifriedelin and twelve known terpenoids,
+    explicitly including canophyllal. All are first reported from S. formosanum. It
+    supports leaf isolation, not an implication that canophyllal itself was first
+    discovered in that species.
+  snapshot_sha256: 7fa11df9d66f8ef1cf4467e0935fab5523fa7a9b97af0cb0f712819bf25bfa6a
+- evidence_id: antibacterial
+  kind: primary_source
+  reference: PMID:26724423
+  locator: DOI:10.1016/j.jep.2015.12.043;193-core.json complete abstract
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: supports
+  summary: Original Alchornea study isolates friedelane3-one28-al as compound 4 and
+    evaluates eight specified Gram-positive/negative strains by microdilution. Abstract
+    reports antibacterial activity for all seven isolated compounds, with3–6 among
+    the strongest. This supports the broad native antibacterial role. Group-level
+    highest2micrograms/mL is not assigned as an exact compound 4/strain MIC without
+    the full table.
+  snapshot_sha256: 7fa11df9d66f8ef1cf4467e0935fab5523fa7a9b97af0cb0f712819bf25bfa6a
+- evidence_id: antiplasmodial
+  kind: primary_source
+  reference: PMID:18310952
+  locator: DOI:10.1248/cpb.56.374;193-primary2008.pdf;complete4pages,visualp376Table2,assayMethods
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: supports
+  summary: Exact canophyllal is compound 4 isolated from E. calophylloides stem bark(voucherHNC29528).
+    Table 2 and Results report W2 P.falciparum IC50 18.2±1.0 micromolar, triplicate;
+    48h ring-synchronized erythrocyte culture with flow-cytometric parasitemia readout.
+    The crystal and most detailed new-compound analysis concern endodesmiadiol1, not
+    canophyllal. Activity supplies optional antimalarial enrichment, not a direct
+    molecular target.
+  snapshot_sha256: 8a7ff43379fca6a190353795586d5f3829eb31eb1a4384c122367221f2e879be
+- evidence_id: other-isolations
+  kind: primary_source
+  reference: PMID:16864458;PMID:22256754
+  locator: 193-core.json complete abstracts
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: context_only
+  summary: Canophyllal was isolated from T. wilfordii roots and T. hypoglaucum root
+    bark, respectively. The former paper cytotoxic values8.5/25micrograms/mL apply
+    to new compounds1/2, not canophyllal 4. These support isolation context, not exact
+    antibacterial mechanisms.
+  snapshot_sha256: 7fa11df9d66f8ef1cf4467e0935fab5523fa7a9b97af0cb0f712819bf25bfa6a
+- evidence_id: host-boundaries
+  kind: primary_source
+  reference: PMID:11849847;PMID:20188156;PMID:17487607
+  locator: 193-core.json complete abstracts
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: context_only
+  summary: Hippocratea extract fractions were gastroprotective but isolated canophyllal
+    was inactive in that assay.2010Calophyllum paper evaluated triterpenoid HL60 growth
+    inhibition without compound-specific values in its abstract. Commiphora extract
+    COX2/antimicrobial effects and syringic-acid activities are not demonstrated canophyllal
+    effects. No host-target mechanism is transferred.
+  snapshot_sha256: 7fa11df9d66f8ef1cf4467e0935fab5523fa7a9b97af0cb0f712819bf25bfa6a
+- evidence_id: later-identity
+  kind: primary_source
+  reference: PMID:37233623
+  locator: DOI:10.3390/metabo13050582;193-primary2023.html;Isolation,compound14NMR
+    and section3.4
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: supports
+  summary: Canophyllal 14 was purified from C. tacamahaca leaves and identified with
+    aldehyde proton9.47ppm plus separate aldehyde/ketone carbon signals. The authors
+    explicitly did not evaluate14 in HepG2/HT29 cytotoxicity because material was
+    scarce. Neighboring canophyllalic acid, canophyllol and canophyllic acid activities
+    must not be transferred.
+  snapshot_sha256: d1d2717fe338ab3a06b554395b7b8ec29ccabde3f614e09d57ca86dba5f2246c
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv;scripts/extract_source_inventory.py;scripts/seed_from_sources.py
+  locator: CHEBI132345 row and current ChEBI definition
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: supports
+  summary: Native definition, structure and role reproduce the adopted source. All
+    eight PMID references resolve and complete abstracts were read. Ignored-inclusive
+    curation/conf search found queue references but no exact maintained definition
+    correction.
+  search_scope: rg --no-ignore --hidden exact132345 andcanophyllal over curation/conf;
+    adopted row read from data/raw/chebi_antimicrobials.tsv.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema/strict and alternate-environment chemistry
+  locator: 193-strict.tsv;193-chemistry.json
+  accessed_at: '2026-10-21T10:36:26Z'
+  support: supports
+  summary: Focused native gates pass. Supplemental graph calculations use the existing
+    batch019RDKit interpreter against020files; no tracked dependency or native file
+    changed.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact aldehyde/ketone structure
+  outcome: supported
+  summary: Current exact public structures and primary characterization support identity
+    and distinguish nearby oxidation states.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - chemistry
+  - later-identity
+- assessment_id: class
+  area: grounding
+  topic: Antibacterial role and chemical parents
+  outcome: supported
+  summary: Exact compound 4 antibacterial report supports role; chemical parents fit.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - chemistry
+  - antibacterial
+- assessment_id: definition
+  area: nomenclature
+  topic: Isolation priority wording
+  outcome: concern
+  summary: The cited paper establishes first reporting in the species, not first discovery
+    of the known compound.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - isolation
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional mechanism and additional activity
+  outcome: unknown
+  summary: Exact antiplasmodial observation is available; inspected sources do not
+    establish a molecular mechanism. Optional absence is not a required-field defect.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - antiplasmodial
+  - host-boundaries
+- assessment_id: scope
+  area: scope
+  topic: Compound and extract boundaries
+  outcome: supported
+  summary: Canophyllal assays remain separated from extracts, neighboring triterpenes
+    and untested host endpoints.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - other-isolations
+  - host-boundaries
+  - later-identity
+- assessment_id: provenance
+  area: provenance
+  topic: Adopted leads and history
+  outcome: supported
+  summary: All eight adopted abstracts and three history events checked; maintained
+    owners recorded.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - record
+  - owners
+- assessment_id: schema
+  area: schema
+  topic: Focused checks
+  outcome: supported
+  summary: Schema/strict/alternate-environment chemistry pass.
+  target_ids:
+  - CHEBI:132345
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-132345-isolation-priority-wording
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Remove unsupported first-isolation implication
+  description: The definition says originally isolated from S. formosanum, but its
+    cited 1999 study explicitly treats canophyllal as known and reports its first
+    isolation from that plant. Use isolated from rather than implying original discovery
+    priority; the plant isolation itself is supported.
+  target_ids:
+  - CHEBI:132345
+  field_paths:
+  - definition
+  evidence_ids:
+  - isolation
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible source reconciliation for corrected definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate source-owned definition
+  rule_id: 'review-checklist: source scope and precise definition'
+  native_severity: minor bounded historical wording
+  normalization_reason: This does not change compound identity, plant isolation or
+    antibacterial activity; it removes an unsupported temporal implication.
+actions:
+- action_id: A1
+  description: Reconcile the maintained definition to the actual species-isolation
+    claim.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:132345
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted ChEBI definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: Reproducible source reconciliation for corrected definition
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Regenerate source-owned definition
+  acceptance_checks:
+  - Replace originally isolated from with isolated from in the maintained upstream/source
+    reconciliation path; retain S. formosanum leaf isolation and formula. Do not invent
+    an earlier discovery species without verifying its primary report.
+  - Regenerate through the validated workflow under separate curation authorization
+    and confirm only intended definition/provenance changes.
+  - Run focused schema/strict and required source-provenance, reference/history and
+    corpus gates. Optional antiplasmodial enrichment must carry exact compound 4/W2/IC50/micromolar/method
+    evidence.
+limitations:
+- All eight adopted PMID abstracts were complete and read; most full papers were unavailable
+  in this bounded review. Publisher routes for the 1999 isolation and2016 antibacterial
+  papers failed/403 or were inaccessible. No compound-specific antibacterial MIC table
+  was re-extracted.
+- The 2008 full paper and Table 2 were inspected, including units visually. It has
+  an abstract/Results discrepancy for endodesmiadiol1(11.8 versus13.0), but canophyllal
+  4 is consistently18.2micromolar; no other-compound figure or efficacy value was
+  transferred.
+- The 2023 full main-source identity and relevant assay sections were inspected, not
+  all raw spectra. Canophyllal 14 was explicitly untested in its cancer-cell assay.
+- An older1986 isolation citation was found in the2008 reference list, but its original
+  full text was not verified. The limited wording finding rests on the directly inspected1999
+  known-compound statement; no earliest-discovery claim is made.
+- Reaxys was not independently accessed. Exact public ChEBI/PubChem mappings and source
+  characterization support identity without a licensed registry audit.
+- The020environment lacksRDKit; the supplemental chemistry command used the existing019interpreter
+  against020working files. Native schema and strict commands ran normally in020.
+- No exhaustive mechanism or clinical survey was undertaken. Phenotypic activity does
+  not prove a molecular target or clinical efficacy. Focused gates do not establish
+  full-corpus success or promote SEEDED status.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All 13 repository input hashes remain unchanged; no native or saved-bundle edits.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1021/np980313w
+- https://doi.org/10.1016/j.jep.2015.12.043
+- https://doi.org/10.1248/cpb.56.374
+tags:
+- record-review
+- canophyllal
+- source-scope
+```
