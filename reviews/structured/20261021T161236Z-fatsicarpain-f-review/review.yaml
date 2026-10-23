@@ -1,0 +1,651 @@
+schema_version: 1.0.0
+review_id: 20261021T161236Z-fatsicarpain-f-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Fatsicarpain F: exact chemical and antibacterial evidence with unresolved
+  antiviral scope'
+started_at: '2026-10-21T15:56:39Z'
+finished_at: '2026-10-21T16:12:36Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: 'The exact neutral fatsicarpain F graph reproduces ChEBI and agrees with
+  independent PubChem encodings and the original supplement drawing. Exact-parent
+  antibacterial observations support the retained role. Selective anti-HBV activity
+  cannot be signed off from the inspected sources: the original main text and correction
+  are inaccessible, while the later paper mixes cytotoxic and viral terminology and
+  units. Scientific assessment retains the stated evidence limits; full verification
+  is blocked by the shared native-library failure.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/fatsicarpain-f.yaml
+    sha256: 3608e89b515261cc47de8ff72e90ab8115ec49b6fd920fabb17ec578b79bc7f0
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+targets:
+- target_id: CHEBI:69221
+  path: data/antibiotics/antibacterial/fatsicarpain-f.yaml
+  label: fatsicarpain F
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position435; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:69221
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69221
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    435
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/fatsicarpain-f.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/fatsicarpain-f.yaml --out /private/tmp/am-review-session/435-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:69221
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fatsicarpain-f.yaml
+  locator: Entire native YAML, every synonym, parent, role, structural field, cross-reference
+    and three history events
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: The complete SEEDED/EXACT record CHEBI:69221 was read. The definition attributes
+    isolation to Fatsia polycarpa leaves and twigs and asserts anti-HBV activity.
+    No numerical activity, molecular target, resistance mechanism, causal graph, product
+    or structured producer is present.
+- evidence_id: owner
+  kind: record_content
+  reference: 435-source-rows.json
+  locator: Exact ChEBI raw row and readiness-queue row
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: The adopted ChEBI row owns the graph, definition, names, roles, Reaxys
+    link and sole PMID:21766884 lead. The readiness row is a follow-up pointer, not
+    primary mechanism evidence. All original thirteen hashes are retained with the
+    queue file appended.
+  snapshot_sha256: dad028414fd5f9d552534bc2070a347e16e79f3a52d4c4cfd5912a64c049d463
+- evidence_id: search
+  kind: search
+  reference: 435-local-hits.txt
+  locator: Ignored- and hidden-inclusive local name/identifier search
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: context_only
+  summary: The inspected source and generated record paths explain the maintained
+    owners. No extra curator override or native activity collection was identified
+    within the searched repository scope; no external absence is inferred.
+  search_scope: rg --no-ignore --hidden -l -F with exact native identifier, label
+    and path stem across the worktree, excluding only .git and .venv; supplemented
+    by the exact name/ChEBI owner search in curation, conf, scripts, data/raw and
+    .claude
+  snapshot_sha256: e2de686d0c2d68a6ed532f7720b0e6935ffb0a67bf4219d0335a3097b0d70a2d
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/69221/
+  locator: Current entire ChEBI record, structure, origin, relationships and citation
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: The current authority reproduces the stored definition, names, roles and
+    exact graph. Its leaf/twig origin is linked to PMID:21766884. Source agreement
+    is not an independent antiviral experiment.
+  snapshot_sha256: 8fafd2a1fcb41c001271d04916c25485ef8411d8d02d7a497dd886510094dc77
+- evidence_id: pubchem
+  kind: authority
+  reference: https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/53493584/property/IsomericSMILES,InChI,InChIKey,MolecularFormula,MolecularWeight,MonoisotopicMass,Charge/JSON
+  locator: Current PubChem property export
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: CID 53493584 has formula C31H50O4, neutral charge and key XPGFAFLAVZYSFJ-AJNNAGPSSA-N,
+    agreeing with the native compound.
+  snapshot_sha256: d24c1ccea2403ee70bb10ffb7745adf3f6bbf36e6219059b85aecaff64124159
+- evidence_id: chemistry
+  kind: record_content
+  reference: 435-authority-chemistry.json
+  locator: Independent RDKit native/current ChEBI/PubChem comparison
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: Native SMILES/InChI, current ChEBI SMILES/molfile and PubChem SMILES/InChI
+    all produce XPGFAFLAVZYSFJ-AJNNAGPSSA-N. Formula, charge and masses agree, with
+    9 specified centres. This establishes encoding equivalence, not independent experimental
+    absolute-configuration proof.
+  snapshot_sha256: 6c34e3e85d65bf3f99bfe2b48b471fd8797b88a7433bac8b04f1b5d383d9867c
+- evidence_id: parents
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25698/
+  locator: All three parent term exports and both role term exports
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: Ether, pentacyclic triterpenoid and hydroxy monocarboxylic acid resolve
+    and match the graph. Antibacterial agent means killing or slowing bacterial growth;
+    anti-HBV agent means destruction or inhibition of HBV replication. The latter
+    is distinct from nonspecific HepG2 cytotoxicity.
+  snapshot_sha256: 967ba11ae3dda02a1355e2bb3288bfdc3ae50348e27c62dc095ec53a25f59bc1
+- evidence_id: adopted
+  kind: primary_source
+  reference: https://doi.org/10.1021/np2002435
+  locator: PMID:21766884, complete original abstract
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: partial
+  summary: The original reports seven new fatsicarpains A–G from leaves and twigs
+    of Fatsia polycarpa. It identifies crystal work on compounds 1, 8 and 9, not C
+    or F. It says cytotoxicity, anti-HBV and antibacterial activities were evaluated;
+    this does not establish every tested compound as positive in every assay.
+  snapshot_sha256: b3752d23041edfec1631cfe222ef71331cb855b6a304e7188547ce38b7c1d911
+- evidence_id: original-si
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/4271092
+  locator: Official DOI10.1021/np2002435.s004 supplement; actual PDF page 13 viewed
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: partial
+  summary: The original page identifies fatsicarpain F as compound 6 and depicts the
+    monoene, methoxy substituent, carboxy group and alpha hydroxy orientation. The
+    methoxy resonance is visible near 3.23 ppm. The depicted constitution is coherent
+    with the native graph. This was a drawing and displayed-spectrum inspection, not
+    a fresh full NMR structure elucidation or absolute-hand determination.
+  snapshot_sha256: 6b6c33ff37d4781e3dff6c09637aa375e102454fdb36c436af3421e261a6080a
+- evidence_id: main-access
+  kind: search
+  reference: https://pubs.acs.org/doi/10.1021/np2002435
+  locator: Official original main-text retrieval and lawful author-copy search
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: context_only
+  summary: The publisher returned HTTP403. OpenAlex gave no accessible main-text copy
+    and the bounded author-copy search did not recover one. The original full assay
+    methods and per-compound 2011 antiviral results were not read.
+  search_scope: Exact DOI publisher and public author-repository discovery; abstract
+    and official free supplement separately inspected; no paid access or author contact.
+  snapshot_sha256: 47b1267b52f815c577ac286f06fb87eb016deb8d414c56283b9aaafd5b91ed95
+- evidence_id: correction
+  kind: primary_source
+  reference: https://doi.org/10.1021/np200650p
+  locator: 2011 correction bibliographic metadata, not correction body
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: context_only
+  summary: The correction is identified as Journal of Natural Products 74, 2030. Official
+    full-text, abstract and PDF routes returned HTTP403; its substantive changes were
+    not recovered. The correction cannot be assumed irrelevant to identity or assay
+    interpretation.
+  snapshot_sha256: 75c4c8645ec0ff94a5dd6ce66431e456cf234ca30c2882d99f1baa65ef3d8a40
+- evidence_id: activity2013
+  kind: primary_source
+  reference: https://doi.org/10.3390/molecules181013003
+  locator: PMID:24145793 / PMC6269735; Introduction, exact parent columns in Table
+    2, relevant Results and Methods 3.6
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: The exact F column gives H. pylori MBC 64 µg/mL and B. cereus MIC 2 µg/mL;
+    S. aureus is >128 µg/mL. The other inspected parental Gram-negative columns are
+    >128 µg/mL. These values belong to the named parents, separately from numbered
+    synthetic derivatives. MBC and MIC are distinct. Methods 3.6 defers the experimental
+    details to the inaccessible 2011 original, so strain, medium, incubation and endpoint
+    reconstruction remain incomplete. No native numeric activity is added.
+  snapshot_sha256: d6485c70036c3b55150905f6343846004f1373012a8a785aa113d07f2cf091f0
+- evidence_id: hbv2013
+  kind: primary_source
+  reference: https://doi.org/10.3390/molecules181013003
+  locator: Exact parent row in Table 1 and preceding antiviral/cytotoxicity discussion
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: partial
+  summary: Table 1 labels the HepG2 2.2.15 value as 23.9 under an IC50 µg/mL heading,
+    with both HBsAg and HBeAg >50. The prose instead uses µM and mixes cytotoxicity
+    with HBV-DNA inhibition. These observations cannot establish selective antiviral
+    activity, nor does an above-limit antigen endpoint alone prove no antiviral effect.
+    The native anti-HBV role remains unresolved pending the original assay and correction.
+  snapshot_sha256: d6485c70036c3b55150905f6343846004f1373012a8a785aa113d07f2cf091f0
+- evidence_id: producer2013
+  kind: primary_source
+  reference: https://doi.org/10.3390/molecules181013003
+  locator: Methods 3.2 and 3.3, plant material and chemical transformations
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: The original identifies leaves/twigs collected at Hohuan Mountain, Taiwan
+    in November 2009, voucher FPL, and explicitly uses the named parent as a reagent
+    for its acetylated derivative. This supports the plant-material attribution but
+    does not turn an acetylated product or its pharmacology into the native parent.
+  snapshot_sha256: d6485c70036c3b55150905f6343846004f1373012a8a785aa113d07f2cf091f0
+- evidence_id: inflammation2013
+  kind: primary_source
+  reference: https://doi.org/10.1155/2013/857213
+  locator: PMID:24489593 / PMC3899712; full abstract, isolation Methods 2.2, cytotoxicity
+    Results 3.2 and selected mechanism discussion
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: context_only
+  summary: Fatsicarpain F was isolated as 2 mg and tested separately from crude extract
+    and HOEO. It reduced RAW264.7 survival at the tested higher concentrations; mechanistic
+    IKK/NF-kappaB and MAPK experiments were pursued on extract/HOEO. Those host-signaling
+    claims do not establish a bacterial protein target for F. The underlying F cytotoxic
+    mechanism remained unclear.
+  snapshot_sha256: f7d5fb60583240124e3752b46891250720308cfe1de72c1137cd5adef2d1dc9e
+- evidence_id: discovery
+  kind: search
+  reference: 435-focused-search.json
+  locator: Bounded exact-name Europe PMC discovery and title screening
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: context_only
+  summary: Exact-name discovery was screened for original structure/activity work.
+    Secondary antiviral reviews and derivative/family reports do not replace the exact
+    original parent assay. This bounded review does not claim global evidence absence.
+  search_scope: Europe PMC exact phrase fatsicarpain F; original2011 and relevant2013
+    studies selected, with correction metadata followed.
+  snapshot_sha256: b548269b85ad01b7fbcc9d7b374d533d2e44613dd541255888b713ad2f8e8635
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB
+  locator: Actual pre-follow-up catalog invocation in044-imodulon-catalog.json
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: context_only
+  summary: The command completed successfully. The catalog contains bacterial datasets
+    but no Fatsia dataset and provides no exact compound/protein evidence here. No
+    direct antibacterial target is inferred from expression components.
+  snapshot_sha256: 1e76828df39ff699ab7278c8586c1794b6bc23934d944644b00b88e8613c5549
+- evidence_id: gates
+  kind: record_content
+  reference: 435-focused-results.json
+  locator: Focused schema, strict and independent chemistry checks
+  accessed_at: '2026-10-21T16:11:10Z'
+  support: supports
+  summary: All three focused checks passed. Encoding checks do not decide antiviral
+    selectivity or resolve inaccessible original material.
+  snapshot_sha256: a2955623b6816786d80f6b0e656ab3244c37c5cf361e88ef9537e45eef3b1e11
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact graph and original drawing
+  outcome: supported
+  summary: The neutral C31H50O4 graph, 9 specified centres and complete key agree
+    across independent encodings. The original supplement depicts the same constitution;
+    no physical mixture is inferred. Full independent absolute-configuration redetermination
+    is outside the inspected evidence.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - native
+  - chebi
+  - pubchem
+  - chemistry
+  - original-si
+- assessment_id: names
+  area: identity
+  topic: Names and prose
+  outcome: supported
+  summary: The systematic name and definition describe the alpha 3-hydroxy/alpha 11-methoxy
+    monoene acid consistently with the native graph and inspected original drawing.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - native
+  - chebi
+  - original-si
+- assessment_id: grounding
+  area: grounding
+  topic: ChEBI, source mint and sole Reaxys accession
+  outcome: unknown
+  summary: The current ChEBI accession and source-mint calculation agree. Reaxys is
+    cross-listed by ChEBI, but its underlying exact structure was not independently
+    accessible; it remains unverified rather than disproven.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - chebi
+  - chemistry
+  - gates
+- assessment_id: classification
+  area: scope
+  topic: Chemical parents and antibacterial eligibility
+  outcome: supported
+  summary: All parent identifiers resolve coherently. Exact-parent growth inhibition/bactericidal
+    observations support antibacterial placement; whole-cell activity does not identify
+    a molecular target.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - parents
+  - activity2013
+  - chemistry
+- assessment_id: antiviral
+  area: evidence
+  topic: Anti-HBV definition and role
+  outcome: unknown
+  summary: Source attribution is reproducible, but selective antiviral support remains
+    unresolved because exact original results/correction are inaccessible and the
+    later assay terminology and units conflict. Neither source agreement nor host-cell
+    toxicity is accepted as antiviral validation.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - native
+  - adopted
+  - hbv2013
+  - main-access
+  - correction
+- assessment_id: producer
+  area: evidence
+  topic: Leaves and twigs attribution
+  outcome: supported
+  summary: The original abstract and later original plant-material/derivatization
+    methods support the botanical source. No microbial biosynthetic locus or uninspected
+    producer-strain claim is asserted.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - adopted
+  - producer2013
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanism and quantitative enrichment
+  outcome: unknown
+  summary: Activity is available as a bounded enrichment lead, but exact assay conditions
+    require the 2011 main text. Optional absent targets, resistance, activity_spectrum
+    and causal graphs are not required-schema defects. Host inflammatory signaling
+    and derivative activity are not transferred to a bacterial target.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - native
+  - activity2013
+  - main-access
+  - adapter
+  - inflammation2013
+- assessment_id: other
+  area: scope
+  topic: Products, resistance and collections
+  outcome: not_applicable
+  summary: No product, clinical brand, resistance assertion or activity collection
+    is present. No such missing optional domain is asserted as a defect.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - native
+  - search
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained inputs and seed history
+  outcome: supported
+  summary: The entire native history and exact source rows were read. Original thirteen
+    hashes are retained, the readiness owner is appended, and all inputs remain unchanged.
+    Source fidelity does not replace scientific evidence.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - native
+  - owner
+  - gates
+- assessment_id: validation
+  area: schema
+  topic: Focused executed checks
+  outcome: supported
+  summary: Schema, strict validation, native chemistry and source mint pass; the independent
+    authority comparison also passes. Required shared gates are attached during finalization.
+  target_ids:
+  - CHEBI:69221
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A2
+  description: Resolve original antiviral and correction scope before scientific sign-off
+    or quantitative enrichment.
+  finding_ids: []
+  target_ids:
+  - CHEBI:69221
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  acceptance_checks:
+  - Read the 2011 exact compound assay results and correction when lawfully accessible.
+  - Separate host cytotoxicity, antigen expression and viral DNA endpoints; reconcile
+    µg/mL versus µM before normalization.
+  - Recover strain, medium, incubation, solvent and endpoint definitions before adding
+    exact MIC or MBC observations.
+limitations:
+- The complete adopted abstract and selected original supplement page were read; the
+  2011 main article and correction body were not accessible.
+- The 2013 parent activity table and relevant Results/Methods were inspected, but
+  the assay protocol is deferred to the inaccessible original. No new numeric native
+  assay is entered.
+- The original supplement drawing is not a full raw-spectrum re-elucidation or independent
+  absolute-hand determination. C/F themselves were not the compounds named in the
+  abstract as crystallographically characterized.
+- Reaxys underlying exact structure remains unverified. Search is bounded and does
+  not prove global evidence absence.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, maintained source or saved review was edited. Optional links and
+  tags were checked for the exact compound.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1021/np2002435
+- https://doi.org/10.3390/molecules181013003
+- https://doi.org/10.1021/np200650p
+tags:
+- fatsicarpain-f
+- primary-evidence
+- assay-scope
