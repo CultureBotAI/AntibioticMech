@@ -1,0 +1,814 @@
+# Review of cefotiam
+
+- Review: 20261021T114042Z-cefotiam-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T11:21:22Z
+- Finished UTC: 2026-10-21T11:40:42Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+The native neutral cefotiam structure, configured core centers, formula, masses and accessible exact identifiers agree. The imported PBP assertion is honestly database-scoped; original SCE-963 experiments independently support cefotiam binding to E. coli PBPs, with assay and reagent-form limits. Current ChEBI and Wikipedia call it third generation, while WHO ATC, KEGG and adopted ARO classify it as second generation. One contextual patent link remains unresolved at exact-compound scope. These are retained as bounded follow-up observations; no confirmed identity, mechanism or required-representation defect was established. No native record was changed. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Entire exact SEEDED neutral cefotiam record, all six synonyms and five history events, chemical and contextual identifiers, parents/roles, one imported PBP assertion, all seven adopted compound/parent/target PMID leads, plus original activity and binding evidence.
+
+Selection: Queue 238. Original 13 inputs preserved; four actual ARO inventory and target-semantics owners appended before detailed judgment, giving 17 captured inputs.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:355510 | data/antibiotics/antibacterial/cefotiam.yaml | generated | cefotiam |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema check | passed | True | CHEBI:355510 | Exit 0. |
+| Documented strict check | passed | True | CHEBI:355510 | Exit 0; zero ERROR rows. |
+| Supplemental identity and stereochemistry comparison | passed | False | CHEBI:355510 | Exit 0 using the existing 019 interpreter against the 024 checkout. |
+| Initial structured dataset request | failed | False | CHEBI:355510 | Exit 2: sandbox DNS resolution failed. The same command subsequently succeeded with public network access. |
+| Structured dataset discovery retry | passed | False | CHEBI:355510 | Exit 0 after public network access was available; E. coli dataset coverage inspected. |
+| Structured PBP search before protein follow-up | passed | False | CHEBI:355510 | Exit 0; one gene, zero iModulons. No component summary was applicable. |
+| Authoritative full QC | failed | True | CHEBI:355510 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:355510 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:355510 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:355510 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:355510 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:355510 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:355510 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:355510 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:355510 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact neutral cefotiam and stereochemistry
+
+identity: supported. Targets: CHEBI:355510.
+
+Native chemistry and accessible exact authority graphs agree, with two R core centers.
+
+### Generation assignment
+
+consistency: unknown. Targets: CHEBI:355510.
+
+The general cephalosporin and antibacterial classifications are supported; generation labels conflict across inspected authorities and should be qualified rather than silently adjudicated.
+
+### Antibacterial and allergen roles
+
+evidence: supported. Targets: CHEBI:355510.
+
+Original activity and a cefotiam-specific IgE study support the respective source roles at their actual scopes.
+
+### PBP family claim and primary assay scope
+
+evidence: supported. Targets: CHEBI:355510.
+
+The source-scoped native PBP assertion is accurate. Independent original competition and radiolabel evidence supports PBP binding without universal selectivity, intact-cell affinity or exact-salt quantitative claims.
+
+### Exact and contextual accession boundaries
+
+grounding: unknown. Targets: CHEBI:355510.
+
+Accessible exact chemical mappings agree. LINCS remains independently unresolved; DrugBank was inaccessible, and the exact relevance of DE2458695 is unconfirmed. Their source provenance and field placement are explicit.
+
+### Owners, all adopted leads and history
+
+provenance: supported. Targets: CHEBI:355510.
+
+All seven adopted/parent/target PMID records were resolved and dispositioned at their actual access depth. Actual owners and the five source-seeding events are intact.
+
+### Optional primary enrichment
+
+completeness: supported. Targets: CHEBI:355510.
+
+A separately scoped primary PBP item is a useful future enrichment; the current SEEDED database assertion does not masquerade as such evidence, and empty optional fields are not demonstrated defects.
+
+### Focused validity
+
+schema: supported. Targets: CHEBI:355510.
+
+Focused schema, strict and supplemental chemistry checks pass.
+
+## Findings
+
+No findings recorded within this review's declared scope.
+
+## Recommended Actions And Acceptance Checks
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/cefotiam.yaml; Entire native YAML, six synonyms and five source-seeding history events | supports | The record denotes neutral cefotiam and keeps drug/document accessions separate from exact chemical xrefs. Its PBP family assertion explicitly states CARD/ARO provenance, unspecified organism/assay and PRIMARY_EVIDENCE_NEEDED. It has no curator mechanism, MIC, resistance, producer or approval assertion. |
+| chemistry | CHEBI:355510; PubChem:43708; ChEMBL:CHEMBL1296; KEGG:D07648; 238-chemistry.py/.json and current authority snapshots | supports | Native SMILES and InChI, current ChEBI, PubChem, ChEMBL and KEGG molfile agree on QYQDKDWGWDOFFU-IUODEOHRSA-N, C18H23N9O4S3, charge 0, two R core centers, average mass 525.642 and exact mass 525.103513216. InChI reconstruction changes mobile-hydrogen tautomer placement without changing the standard identity key. The native six synonyms retain the same acid and 6R,7R configuration. Salt and hexetil ester structures are not treated as exact equivalents. |
+| grounding | CHEBI:23066; CHEBI:72588; CHEBI:88225; CHEBI:33281; CHEBI:36047; ARO:0000032; ARO:3000643; cas:61622-34-2; 238-parent-23066.json, 238-parent-72588.json, 238-parent-88225.json; 238-aro-stanzas.txt; adopted chebi_role_names.tsv; current chemical authority records | supports | Cephalosporin, semisynthetic derivative and beta-lactam antibiotic allergen terms resolve. The adopted role vocabulary identifies antimicrobial agent and antibacterial drug. ARO compound and family accessions, CAS and the accessible chemical xrefs are corroborated by inspected authorities. CAS was not independently checked through the registry. |
+| classification | WHO ATC:J01DC07; KEGG:D07648; ARO:3000643; CHEBI:355510; 238-atc.html, 238-kegg.txt, 238-aro-stanzas.txt and 238-ols.json | partial | The current WHO ATC entry places cefotiam under J01DC, second-generation cephalosporins; KEGG and the adopted ARO compound parent agree. Current ChEBI repeats the native third-generation wording. This is an explicit source-classification disagreement, not evidence for a different molecule. The native broad cephalosporin structural class is unaffected. |
+| target-owner | ARO:3000749; ARO:3000643; 238-aro_target_edges.json; 238-aro-stanzas.txt; conf/aro_target_roles.tsv line 30; 238-aro-cache-hash.json | supports | The source edge directly asserts targeted_by_antibiotic cefotiam. Its maintained semantics map to DIRECT_BINDING_TARGET/PROTEIN. The native claim preserves this database status and does not invent a primary assay, taxon or measured affinity. The ARO family definition uses E. coli PBP numbering, explaining the bounded adapter query. External ARO cache provenance is recorded separately. |
+| adapter | iModulonDB:e_coli/precise1k/b2430; 238-imodulondb-datasets.txt and 238-imodulondb-pbp.txt | context_only | Dataset discovery and the penicillin query preceded open-ended protein follow-up. One yfeW gene-product hit for PBP4B and zero iModulons were returned. This catalog hit neither establishes cefotiam binding nor contradicts the native target. No component summary was warranted. An initial DNS failure exited 2; the network-enabled retry and search exited 0. |
+| pbp | PMID:371539; DOI:10.1128/AAC.15.1.20; Original eight printed pages 20-27: 236-pbp20.png through 236-pbp22.png and 238-pbp23.png through 238-pbp27.png; Table 1 p.24 and Figures 5/7 pp.25/26 | supports | The original SCE-963 study reports E. coli K-12 KN126 envelope PBP competition, direct radiolabeled SCE-963 binding, peptidoglycan experiments in Y10/LD2 systems and morphology. Table 1 gives competition I50 values of 0.075, 0.70 and 0.11 micrograms/mL for PBPs 1A, 1B and 3, respectively; these are not Kd or Ki measurements. PBP2 competition is biphasic, and weak binding to other bands is not proof of universal absence. Figure 7 independently labels SCE-963 binding. Authors distinguish envelope affinity from intact-cell permeability and interpret PBP1B/3 correlations with activity as a hypothesis. The synthesized reagent salt form is unspecified, so exact salt-mass MIC transfer is not justified. |
+| activity | PMID:718154; DOI:10.1128/AAC.14.4.557; Previously inspected complete abstract and original 236-activity557.png/236-activity558.png, printed pp.557-558 | supports | Original SCE-963 antibacterial testing supports the broad antibacterial role at tested strain/panel scope. The inspected methods identify the Takeda compound but do not resolve its salt form. Only the first two original pages and complete abstract were inspected here; no full-panel quantitative claim or universal organism coverage is adopted. |
+| adopted-leads | PMID:28543395; PMID:6341590; PMID:18611654; PMID:3055170; PMID:15673804; PMID:11585791; PMID:6810737; 238-core.json; 238-lead-dispositions.json; all seven MED records resolved, four complete abstracts and three metadata-only records | partial | PMID28543395 directly supports cefotiam-specific IgE/contact urticaria and the allergen classification, at case/assay scope. PMID6341590 studies carbapenem Z isomers and cefotiam combination protection in P. vulgaris GN4815-infected mice, not cefotiam stereoisomers or monotherapy binding. PMID3055170 is a general PBP review, and PMID11585791 is a general ESBL review; neither supplies an exact cefotiam experiment. PMID18611654 is a 1995 cefotiam hexetil review with no returned abstract; PMID15673804 and PMID6810737 likewise resolved as review metadata without abstracts. No result is inferred from those titles alone. |
+| drug-links | drugcentral:548; drugbank:DB00229; kegg.drug:D07648; lincs.smallmolecule:LSM-2022; 238-drugcentral.html and 238-kegg.txt; 238-fetch-results.json | partial | DrugCentral resolves cefotiam with matching acid formula/CAS while also carrying hydrochloride aliases and drug-context information; its placement under drug_xrefs is appropriate. KEGG supplies the matching neutral graph and separately links products. DrugBank returned HTTP403 and LINCS returned HTTP500; ChEBI retains both mappings, but independent DrugBank content and exact LINCS structure were not verified. DrugCentral approval and predicted/off-target information were not imported as native evidence. |
+| documents | patent:US4080498; patent:DE2458695; wikipedia.en:Cefotiam; 238-patent-us.html claim 3; 238-patent-de.html title, description and claims 1-12; 238-wikipedia.html complete article | partial | US4080498 claim 3 explicitly names the cefotiam acid substitution pattern and acceptable salts. DE2458695 instead presents 3-(morpholinoalkoxyiminomethyl) cephems; exact cefotiam relevance remains unresolved from its inspected claims/description, so it is not used as exact-compound synthesis or activity evidence. Wikipedia resolves the compound and matching identifiers but repeats third-generation wording while linking the second-generation ATC entry; its clinical and MIC statements are not adopted as primary evidence. All three remain document-context references rather than exact identities. |
+| owners | data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv; conf/aro_target_roles.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py; 238-chebi_antimicrobials.json; 238-aro_antibiotics.json; 238-aro_target_edges.json; 238-local-hits.txt; preserved 17-input capture | supports | ChEBI owns the selected definition and exact chemistry; ARO contributes the compound concept and imported PBP edge. No exact compound-specific curator overlay was found in the bounded ignored-inclusive search. Any seeded definition correction belongs in the maintained ChEBI source/extraction path or a supported curator override, followed by reseeding. Optional primary PBP enrichment belongs in a separately evidenced curator-owned target item while preserving imported provenance. |
+| validation | Focused schema, strict and supplemental chemistry checks; 238-strict.tsv; 238-chemistry.json | supports | Schema and strict validators exited 0 with zero ERROR rows; supplemental chemistry exited 0. These focused checks do not replace required shared corpus, term, reference or history gates. |
+
+## Limits And Additional Notes
+
+- Generation terminology is inconsistent: current ChEBI and the linked Wikipedia article say third generation, whereas WHO ATC, KEGG and the adopted ARO parent classify cefotiam as second generation. The review preserves this conflict without asserting a chemical identity error. A curator should qualify the generated definition or add an evidence-backed controversy through the appropriate maintained owner.
+- LINCS LSM-2022 returned HTTP500 and DrugBank DB00229 returned HTTP403. The adopted/current ChEBI links corroborate provenance, but independent exact LINCS identity and DrugBank content were not verified. CAS was corroborated through authorities without direct registry access.
+- DE2458695 resolves to a different named cephem series in its title and claims. Its exact relevance to cefotiam was not established from the inspected description/claims, and no legal-scope interpretation or automatic link deletion is proposed. US4080498 claim 3 is directly relevant. Wikipedia is a contextual document, not primary assay evidence.
+- All seven adopted compound/parent/target PMID records were resolved: four complete abstracts and three metadata-only reviews. PMID18611654 concerns the hexetil prodrug. General PBP/ESBL reviews and carbapenem combination research were not transferred to exact cefotiam monotherapy claims.
+- The original PBP article was read across all eight printed pages. Its competition I50 values depend on envelope preparation and labeling conditions and are not Kd/Ki values; its activity correlations are interpretations. The reagent salt form is unspecified. The earlier antibacterial paper was read at complete abstract plus original pp.557-558 depth, not its entire numerical panel.
+- The iModulonDB query is generic PBP catalog context, not evidence for cefotiam binding. The initial DNS failure exited 2; network-enabled dataset retry and search succeeded. No iModulon summary was relevant because the search returned zero components.
+- Optional primary target or mechanism enrichment would require separate curator-owned, claim-level evidence with strain, assay, reagent-form and measurement context; the native database item must retain its provenance. Supplemental chemistry used the existing 019 interpreter against 024. Focused checks do not substitute for required shared corpus gates.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- All 17 captured repository input hashes are unchanged: 13 original inputs plus four actual ARO owners. No native record, saved bundle or Git state was modified.
+- Source retrieval timestamps and hashes are retained in 238-fetch-results.json, 238-fetch2-results.json and the reused 236 source manifests. The adopted external ARO cache path/hash is retained in 238-aro-cache-hash.json. Failed optional HTML parsing helpers lacked BeautifulSoup in 024 and 019; a standard-library HTML parser then extracted the cached documents successfully.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T114042Z-cefotiam-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of cefotiam
+started_at: '2026-10-21T11:21:22Z'
+finished_at: '2026-10-21T11:40:42Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Qualified scientific pass; exact identity and PBP assertion supported,
+  with classification and document relevance limits
+scientific_review: true
+summary: The native neutral cefotiam structure, configured core centers, formula,
+  masses and accessible exact identifiers agree. The imported PBP assertion is honestly
+  database-scoped; original SCE-963 experiments independently support cefotiam binding
+  to E. coli PBPs, with assay and reagent-form limits. Current ChEBI and Wikipedia
+  call it third generation, while WHO ATC, KEGG and adopted ARO classify it as second
+  generation. One contextual patent link remains unresolved at exact-compound scope.
+  These are retained as bounded follow-up observations; no confirmed identity, mechanism
+  or required-representation defect was established. No native record was changed.
+  Scientific assessment retains the stated evidence limits; full verification is blocked
+  by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/cefotiam.yaml
+    sha256: 9f2dd3fc32485faa595d9e90cd17a530b633502396ffff69a19b8f131413a060
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+scope:
+  description: Entire exact SEEDED neutral cefotiam record, all six synonyms and five
+    history events, chemical and contextual identifiers, parents/roles, one imported
+    PBP assertion, all seven adopted compound/parent/target PMID leads, plus original
+    activity and binding evidence.
+  selection: Queue 238. Original 13 inputs preserved; four actual ARO inventory and
+    target-semantics owners appended before detailed judgment, giving 17 captured
+    inputs.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:355510
+targets:
+- target_id: CHEBI:355510
+  path: data/antibiotics/antibacterial/cefotiam.yaml
+  label: cefotiam
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual ARO source or target semantic owner
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Actual ARO source or target semantic owner
+checks:
+- check_id: schema
+  name: Documented schema check
+  status: passed
+  required: true
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/cefotiam.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict check
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/cefotiam.yaml --out /private/tmp/am-review-session/238-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental identity and stereochemistry comparison
+  status: passed
+  required: false
+  summary: Exit 0 using the existing 019 interpreter against the 024 checkout.
+  target_ids:
+  - CHEBI:355510
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/238-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-initial
+  name: Initial structured dataset request
+  status: failed
+  required: false
+  summary: 'Exit 2: sandbox DNS resolution failed. The same command subsequently succeeded
+    with public network access.'
+  target_ids:
+  - CHEBI:355510
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/238-imodulondb-datasets.txt
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-datasets
+  name: Structured dataset discovery retry
+  status: passed
+  required: false
+  summary: Exit 0 after public network access was available; E. coli dataset coverage
+    inspected.
+  target_ids:
+  - CHEBI:355510
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/238-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-search
+  name: Structured PBP search before protein follow-up
+  status: passed
+  required: false
+  summary: Exit 0; one gene, zero iModulons. No component summary was applicable.
+  target_ids:
+  - CHEBI:355510
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query penicillin
+    > /private/tmp/am-review-session/238-imodulondb-pbp.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:355510
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/cefotiam.yaml
+  locator: Entire native YAML, six synonyms and five source-seeding history events
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: The record denotes neutral cefotiam and keeps drug/document accessions
+    separate from exact chemical xrefs. Its PBP family assertion explicitly states
+    CARD/ARO provenance, unspecified organism/assay and PRIMARY_EVIDENCE_NEEDED. It
+    has no curator mechanism, MIC, resistance, producer or approval assertion.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:355510; PubChem:43708; ChEMBL:CHEMBL1296; KEGG:D07648
+  locator: 238-chemistry.py/.json and current authority snapshots
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: Native SMILES and InChI, current ChEBI, PubChem, ChEMBL and KEGG molfile
+    agree on QYQDKDWGWDOFFU-IUODEOHRSA-N, C18H23N9O4S3, charge 0, two R core centers,
+    average mass 525.642 and exact mass 525.103513216. InChI reconstruction changes
+    mobile-hydrogen tautomer placement without changing the standard identity key.
+    The native six synonyms retain the same acid and 6R,7R configuration. Salt and
+    hexetil ester structures are not treated as exact equivalents.
+  snapshot_sha256: 58958f8e78ce5f8a87d446d7e3ce0276573c8f25997abb491cd80ed7d6cb7213
+- evidence_id: grounding
+  kind: authority
+  reference: CHEBI:23066; CHEBI:72588; CHEBI:88225; CHEBI:33281; CHEBI:36047; ARO:0000032;
+    ARO:3000643; cas:61622-34-2
+  locator: 238-parent-23066.json, 238-parent-72588.json, 238-parent-88225.json; 238-aro-stanzas.txt;
+    adopted chebi_role_names.tsv; current chemical authority records
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: Cephalosporin, semisynthetic derivative and beta-lactam antibiotic allergen
+    terms resolve. The adopted role vocabulary identifies antimicrobial agent and
+    antibacterial drug. ARO compound and family accessions, CAS and the accessible
+    chemical xrefs are corroborated by inspected authorities. CAS was not independently
+    checked through the registry.
+  snapshot_sha256: 0df6c93c6729fa30bcecb41e15b2776a7d2abfbc6b5529e7d336df6ff647d2a8
+- evidence_id: classification
+  kind: authority
+  reference: WHO ATC:J01DC07; KEGG:D07648; ARO:3000643; CHEBI:355510
+  locator: 238-atc.html, 238-kegg.txt, 238-aro-stanzas.txt and 238-ols.json
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: partial
+  summary: The current WHO ATC entry places cefotiam under J01DC, second-generation
+    cephalosporins; KEGG and the adopted ARO compound parent agree. Current ChEBI
+    repeats the native third-generation wording. This is an explicit source-classification
+    disagreement, not evidence for a different molecule. The native broad cephalosporin
+    structural class is unaffected.
+  snapshot_sha256: 6b0b6ac70a374689fc032faa5da99a3b260c3459675883e03cb41eaf24f09523
+- evidence_id: target-owner
+  kind: authority
+  reference: ARO:3000749; ARO:3000643
+  locator: 238-aro_target_edges.json; 238-aro-stanzas.txt; conf/aro_target_roles.tsv
+    line 30; 238-aro-cache-hash.json
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: The source edge directly asserts targeted_by_antibiotic cefotiam. Its maintained
+    semantics map to DIRECT_BINDING_TARGET/PROTEIN. The native claim preserves this
+    database status and does not invent a primary assay, taxon or measured affinity.
+    The ARO family definition uses E. coli PBP numbering, explaining the bounded adapter
+    query. External ARO cache provenance is recorded separately.
+  snapshot_sha256: d30108f93478f51a33e14aa181141f4ae16a816fb9621386c5e3788a34fa737b
+- evidence_id: adapter
+  kind: search
+  reference: iModulonDB:e_coli/precise1k/b2430
+  locator: 238-imodulondb-datasets.txt and 238-imodulondb-pbp.txt
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: context_only
+  summary: Dataset discovery and the penicillin query preceded open-ended protein
+    follow-up. One yfeW gene-product hit for PBP4B and zero iModulons were returned.
+    This catalog hit neither establishes cefotiam binding nor contradicts the native
+    target. No component summary was warranted. An initial DNS failure exited 2; the
+    network-enabled retry and search exited 0.
+  snapshot_sha256: b0f3ec2d7316806c534510fc9e133a264a0079b8388c2e423af73d3f40edf70a
+  search_scope: Exact public adapter dataset discovery, then e_coli/precise1k search
+    --query penicillin; no absence-of-mechanism inference.
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:371539; DOI:10.1128/AAC.15.1.20
+  locator: 'Original eight printed pages 20-27: 236-pbp20.png through 236-pbp22.png
+    and 238-pbp23.png through 238-pbp27.png; Table 1 p.24 and Figures 5/7 pp.25/26'
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: The original SCE-963 study reports E. coli K-12 KN126 envelope PBP competition,
+    direct radiolabeled SCE-963 binding, peptidoglycan experiments in Y10/LD2 systems
+    and morphology. Table 1 gives competition I50 values of 0.075, 0.70 and 0.11 micrograms/mL
+    for PBPs 1A, 1B and 3, respectively; these are not Kd or Ki measurements. PBP2
+    competition is biphasic, and weak binding to other bands is not proof of universal
+    absence. Figure 7 independently labels SCE-963 binding. Authors distinguish envelope
+    affinity from intact-cell permeability and interpret PBP1B/3 correlations with
+    activity as a hypothesis. The synthesized reagent salt form is unspecified, so
+    exact salt-mass MIC transfer is not justified.
+  snapshot_sha256: ea187628c919b3507ab6fb45a151d0647859a5d721399d3ed15fe7e89ebfd1d2
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:718154; DOI:10.1128/AAC.14.4.557
+  locator: Previously inspected complete abstract and original 236-activity557.png/236-activity558.png,
+    printed pp.557-558
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: Original SCE-963 antibacterial testing supports the broad antibacterial
+    role at tested strain/panel scope. The inspected methods identify the Takeda compound
+    but do not resolve its salt form. Only the first two original pages and complete
+    abstract were inspected here; no full-panel quantitative claim or universal organism
+    coverage is adopted.
+  snapshot_sha256: 62b12bf82b254e7956a9943e25260f44f1129328f6bc99a3c9f67b9d8fb81ecf
+- evidence_id: adopted-leads
+  kind: primary_source
+  reference: PMID:28543395; PMID:6341590; PMID:18611654; PMID:3055170; PMID:15673804;
+    PMID:11585791; PMID:6810737
+  locator: 238-core.json; 238-lead-dispositions.json; all seven MED records resolved,
+    four complete abstracts and three metadata-only records
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: partial
+  summary: PMID28543395 directly supports cefotiam-specific IgE/contact urticaria
+    and the allergen classification, at case/assay scope. PMID6341590 studies carbapenem
+    Z isomers and cefotiam combination protection in P. vulgaris GN4815-infected mice,
+    not cefotiam stereoisomers or monotherapy binding. PMID3055170 is a general PBP
+    review, and PMID11585791 is a general ESBL review; neither supplies an exact cefotiam
+    experiment. PMID18611654 is a 1995 cefotiam hexetil review with no returned abstract;
+    PMID15673804 and PMID6810737 likewise resolved as review metadata without abstracts.
+    No result is inferred from those titles alone.
+  snapshot_sha256: f9dd0c8a6267c90997dae9093d3105546c13dbafcb6650e5bfce931b0d3330ee
+- evidence_id: drug-links
+  kind: authority
+  reference: drugcentral:548; drugbank:DB00229; kegg.drug:D07648; lincs.smallmolecule:LSM-2022
+  locator: 238-drugcentral.html and 238-kegg.txt; 238-fetch-results.json
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: partial
+  summary: DrugCentral resolves cefotiam with matching acid formula/CAS while also
+    carrying hydrochloride aliases and drug-context information; its placement under
+    drug_xrefs is appropriate. KEGG supplies the matching neutral graph and separately
+    links products. DrugBank returned HTTP403 and LINCS returned HTTP500; ChEBI retains
+    both mappings, but independent DrugBank content and exact LINCS structure were
+    not verified. DrugCentral approval and predicted/off-target information were not
+    imported as native evidence.
+  snapshot_sha256: 72a6f1868c2beda56de88c6503daee64a8b019bdbc7504e9080a57d460e93259
+- evidence_id: documents
+  kind: authority
+  reference: patent:US4080498; patent:DE2458695; wikipedia.en:Cefotiam
+  locator: 238-patent-us.html claim 3; 238-patent-de.html title, description and claims
+    1-12; 238-wikipedia.html complete article
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: partial
+  summary: US4080498 claim 3 explicitly names the cefotiam acid substitution pattern
+    and acceptable salts. DE2458695 instead presents 3-(morpholinoalkoxyiminomethyl)
+    cephems; exact cefotiam relevance remains unresolved from its inspected claims/description,
+    so it is not used as exact-compound synthesis or activity evidence. Wikipedia
+    resolves the compound and matching identifiers but repeats third-generation wording
+    while linking the second-generation ATC entry; its clinical and MIC statements
+    are not adopted as primary evidence. All three remain document-context references
+    rather than exact identities.
+  snapshot_sha256: 083f6acc1b77c1e3d5472ce5f493375719e276ae3afb1f6ec7beca02f785cc01
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/aro_antibiotics.tsv; data/raw/aro_target_edges.tsv;
+    conf/aro_target_roles.tsv; scripts/extract_source_inventory.py; scripts/seed_from_sources.py
+  locator: 238-chebi_antimicrobials.json; 238-aro_antibiotics.json; 238-aro_target_edges.json;
+    238-local-hits.txt; preserved 17-input capture
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: ChEBI owns the selected definition and exact chemistry; ARO contributes
+    the compound concept and imported PBP edge. No exact compound-specific curator
+    overlay was found in the bounded ignored-inclusive search. Any seeded definition
+    correction belongs in the maintained ChEBI source/extraction path or a supported
+    curator override, followed by reseeding. Optional primary PBP enrichment belongs
+    in a separately evidenced curator-owned target item while preserving imported
+    provenance.
+  snapshot_sha256: 1a462495a1e69fc77c001ba49ba140188ecc8e9f22363d5ab3242d0fb8164a17
+  search_scope: rg --no-ignore --hidden over curation, conf, data/raw, scripts and
+    docs for cefotiam, CHEBI:355510, ARO:3000643 and QYQDKDWGWDOFFU; exact target
+    and actual owner rows read.
+- evidence_id: validation
+  kind: validation
+  reference: Focused schema, strict and supplemental chemistry checks
+  locator: 238-strict.tsv; 238-chemistry.json
+  accessed_at: '2026-10-21T11:40:13Z'
+  support: supports
+  summary: Schema and strict validators exited 0 with zero ERROR rows; supplemental
+    chemistry exited 0. These focused checks do not replace required shared corpus,
+    term, reference or history gates.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral cefotiam and stereochemistry
+  outcome: supported
+  summary: Native chemistry and accessible exact authority graphs agree, with two
+    R core centers.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - chemistry
+  - grounding
+- assessment_id: classification
+  area: consistency
+  topic: Generation assignment
+  outcome: unknown
+  summary: The general cephalosporin and antibacterial classifications are supported;
+    generation labels conflict across inspected authorities and should be qualified
+    rather than silently adjudicated.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - classification
+  - documents
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial and allergen roles
+  outcome: supported
+  summary: Original activity and a cefotiam-specific IgE study support the respective
+    source roles at their actual scopes.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - activity
+  - adopted-leads
+- assessment_id: target
+  area: evidence
+  topic: PBP family claim and primary assay scope
+  outcome: supported
+  summary: The source-scoped native PBP assertion is accurate. Independent original
+    competition and radiolabel evidence supports PBP binding without universal selectivity,
+    intact-cell affinity or exact-salt quantitative claims.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - target-owner
+  - pbp
+  - adapter
+- assessment_id: references
+  area: grounding
+  topic: Exact and contextual accession boundaries
+  outcome: unknown
+  summary: Accessible exact chemical mappings agree. LINCS remains independently unresolved;
+    DrugBank was inaccessible, and the exact relevance of DE2458695 is unconfirmed.
+    Their source provenance and field placement are explicit.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - grounding
+  - chemistry
+  - drug-links
+  - documents
+- assessment_id: provenance
+  area: provenance
+  topic: Owners, all adopted leads and history
+  outcome: supported
+  summary: All seven adopted/parent/target PMID records were resolved and dispositioned
+    at their actual access depth. Actual owners and the five source-seeding events
+    are intact.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - owners
+  - adopted-leads
+  - record
+- assessment_id: completeness
+  area: completeness
+  topic: Optional primary enrichment
+  outcome: supported
+  summary: A separately scoped primary PBP item is a useful future enrichment; the
+    current SEEDED database assertion does not masquerade as such evidence, and empty
+    optional fields are not demonstrated defects.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - record
+  - pbp
+- assessment_id: schema
+  area: schema
+  topic: Focused validity
+  outcome: supported
+  summary: Focused schema, strict and supplemental chemistry checks pass.
+  target_ids:
+  - CHEBI:355510
+  evidence_ids:
+  - validation
+findings: []
+actions: []
+limitations:
+- 'Generation terminology is inconsistent: current ChEBI and the linked Wikipedia
+  article say third generation, whereas WHO ATC, KEGG and the adopted ARO parent classify
+  cefotiam as second generation. The review preserves this conflict without asserting
+  a chemical identity error. A curator should qualify the generated definition or
+  add an evidence-backed controversy through the appropriate maintained owner.'
+- LINCS LSM-2022 returned HTTP500 and DrugBank DB00229 returned HTTP403. The adopted/current
+  ChEBI links corroborate provenance, but independent exact LINCS identity and DrugBank
+  content were not verified. CAS was corroborated through authorities without direct
+  registry access.
+- DE2458695 resolves to a different named cephem series in its title and claims. Its
+  exact relevance to cefotiam was not established from the inspected description/claims,
+  and no legal-scope interpretation or automatic link deletion is proposed. US4080498
+  claim 3 is directly relevant. Wikipedia is a contextual document, not primary assay
+  evidence.
+- 'All seven adopted compound/parent/target PMID records were resolved: four complete
+  abstracts and three metadata-only reviews. PMID18611654 concerns the hexetil prodrug.
+  General PBP/ESBL reviews and carbapenem combination research were not transferred
+  to exact cefotiam monotherapy claims.'
+- The original PBP article was read across all eight printed pages. Its competition
+  I50 values depend on envelope preparation and labeling conditions and are not Kd/Ki
+  values; its activity correlations are interpretations. The reagent salt form is
+  unspecified. The earlier antibacterial paper was read at complete abstract plus
+  original pp.557-558 depth, not its entire numerical panel.
+- The iModulonDB query is generic PBP catalog context, not evidence for cefotiam binding.
+  The initial DNS failure exited 2; network-enabled dataset retry and search succeeded.
+  No iModulon summary was relevant because the search returned zero components.
+- Optional primary target or mechanism enrichment would require separate curator-owned,
+  claim-level evidence with strain, assay, reagent-form and measurement context; the
+  native database item must retain its provenance. Supplemental chemistry used the
+  existing 019 interpreter against 024. Focused checks do not substitute for required
+  shared corpus gates.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- 'All 17 captured repository input hashes are unchanged: 13 original inputs plus
+  four actual ARO owners. No native record, saved bundle or Git state was modified.'
+- Source retrieval timestamps and hashes are retained in 238-fetch-results.json, 238-fetch2-results.json
+  and the reused 236 source manifests. The adopted external ARO cache path/hash is
+  retained in 238-aro-cache-hash.json. Failed optional HTML parsing helpers lacked
+  BeautifulSoup in 024 and 019; a standard-library HTML parser then extracted the
+  cached documents successfully.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1128/AAC.15.1.20
+- https://doi.org/10.1128/AAC.14.4.557
+- https://doi.org/10.1111/ced.13126
+- https://atcddd.fhi.no/atc_ddd_index/?code=J01DC07&showdescription=no
+- https://patents.google.com/patent/US4080498A/en
+- https://patents.google.com/patent/DE2458695A1/en
+tags:
+- record-review
+- cefotiam
+- pbp
+- source-conflict
+```
