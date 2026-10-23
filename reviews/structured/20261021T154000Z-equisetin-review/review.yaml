@@ -1,0 +1,572 @@
+schema_version: 1.0.0
+review_id: 20261021T154000Z-equisetin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Equisetin: antibacterial and integrase evidence with unresolved enol representation'
+started_at: '2026-10-21T15:13:49Z'
+finished_at: '2026-10-21T15:40:00Z'
+reviewer:
+  identity: Codex
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: Original antibacterial experiments and original integrase-inhibition abstracts
+  support both activities, so antibacterial filing and the explicitly antiviral mechanism
+  annotation can coexist. The neutral native graph is internally coherent and matches
+  ChEBI, but independently retrieved PubChem and GSRS encode the opposite exocyclic
+  enol geometry. That unresolved representation difference is not treated as proof
+  of a different natural product or silently normalized away. No confirmed native
+  correction is prescribed from the accessible evidence. Scientific assessment retains
+  the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/equisetin.yaml
+    sha256: 25ff4496a027e2dd0c94810e189a2b06f71de2e284d1ae290c077c8f62a9df48
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 3828a5120b892ee0ee0b776affc6c3e4f1f1a3355ec4edd30e6005762de00e70
+    role: context
+  - path: scripts/enrich_pubchem_structures.py
+    sha256: c4299aa8385272ade40ee12c44b908c25bd901eb8459560f13ba3b7c1823b4bd
+    role: context
+targets:
+- target_id: CHEBI:142135
+  path: data/antibiotics/antibacterial/equisetin.yaml
+  label: equisetin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Initially uncovered queue position406; one exact record in path order.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:142135
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:142135
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    406
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/equisetin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/equisetin.yaml --out /private/tmp/am-review-session/406-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:142135
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/equisetin.yaml
+  locator: Entire native YAML including five histories
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: The EXACT/SEEDED record describes N-methyltrichosetin from Fusarium heterosporum,
+    four structural parents, antibacterial and HIV-integrase roles, an explicitly
+    antiviral mode qualifier, three chemical cross-references and one patent. There
+    are no direct-target objects, primary MIC observations, resistance entries, clinical
+    assertions, activity collections or causal graphs.
+- evidence_id: owners
+  kind: record_content
+  reference: 406-source-rows.json; source extraction/seeding implementation
+  locator: Exact CHEBI142135 row and role projection
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: The adopted ChEBI row owns graph, definition, roles, exact links and ten
+    bibliography leads. CHEBI142133 trichosetin is a deliberate structural comparator,
+    not an owner of equisetin. Original thirteen hashes are retained within sixteen
+    unchanged inputs. The five seeded/reseeded histories and deterministic identifier
+    agree with generation.
+  snapshot_sha256: 85f4d25c6cc4c5f88e5d6ce4b9ca4ddd9deb1d74e6bd314ab60e6667b3d49703
+- evidence_id: chemistry
+  kind: validation
+  reference: 041-authority-compare.json;406-demethylation-check.json;406-gsrs-compare.json
+  locator: Independent native and authority molecular parsing
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: Native SMILES, InChI and current ChEBI molfile agree on C22H31NO4, neutral
+    charge, all six tetrahedral centres, E propenyl and Z exocyclic enol geometry,
+    key QNQBPPQLRODXET-HMHJLHGTSA-N. Removing only the N-methyl carbon in a scratch
+    diagnostic reproduces the adopted trichosetin full key. Current PubChem54684703
+    and GSRS V56ZMM5VMZ SMILES/molfile agree with each other on AIMHRHHOSA, differing
+    only in specified enol geometry; that is not an exact full-key match.
+  snapshot_sha256: 888ed975fd7b3f58fc069b58117d5bd400fa28653b2ac08c928bcb15ed6ab91c
+- evidence_id: chebi
+  kind: authority
+  reference: CHEBI:142135 and its current parent/role definitions
+  locator: 406-chebi.json;041-term-138397,140155,15734,33823,67268.json
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: The four parents describe the octahydronaphthalene system, tetramic acid,
+    primary alcohol and enol, all present in the graph. The HIV-1 integrase inhibitor
+    role supports the documented source projection. Current ontology annotations resolve
+    but are distinct from primary experiments.
+  snapshot_sha256: 055b74259a6541c4ed48ff037a6454165b0689344764155500f312cbc6b39a78
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/search?q=root_approvalID:V56ZMM5VMZ
+  locator: Official chemical substance, complete SMILES/molfile and descriptors
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: context_only
+  summary: The current chemical substance is equisetin with six defined stereocentres
+    and two defined double-bond geometries. Its full enol-specific key differs from
+    native as documented. It is not a native exact cross-reference; neither this authority
+    nor PubChem was silently substituted for the adopted ChEBI representation.
+  snapshot_sha256: 2495a6aec3002435030ed6c67656f7b377ca67c62fb76c0df2f48af63064edc9
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/US3959468A/en
+  locator: Complete original Description, Example1, Table1 and Claims read
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: Chromatographically purified equisetin from Fusarium equiseti NRRL5537
+    has formulaC22H31NO4 and bacterial growth activity. MICs were determined by twofold
+    agar dilution in TGY, ethanol-solubilized antibiotic,37C for bacteria with24/48h
+    observations and complete growth inhibition. Table1 reports strain-specific activity
+    including B.subtilis and S.aureus, with exceptions among Gram-negative bacteria.
+    This independently supports antibacterial eligibility; the early partial structural
+    assignment is not proof of the final full stereostructure. Copper salt, degraded
+    material, animal toxicity and isolated neutral antibiotic remain distinct.
+  snapshot_sha256: dd3070f071053c790a73ea9ae13ef359bb058210547ee6c58b4f00d8e71270e4
+- evidence_id: '1979'
+  kind: primary_source
+  reference: PMID:541270; DOI:10.7164/antibiotics.32.759
+  locator: Entire three-page original report read as text
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: context_only
+  summary: The original paper identifies the N-methyl acyltetramic acid portion and
+    elemental composition, with spectroscopic and chemical transformations. Its proposed
+    hydrocarbon substructure still includes unresolved placement and an early ring
+    interpretation; it cannot independently certify the modern full decalin stereochemical
+    graph. Activity statements point to the1974 discovery report and are not new MIC
+    experiments.
+  snapshot_sha256: e6cbe94e604556c9266f1669ab2a3cc41a21845eca1baf389003709d3676caac
+- evidence_id: integrase
+  kind: primary_source
+  reference: DOI:10.1016/S0040-4039(98)00269-X; PMID:10335400; DOI:10.1177/095632029901000202
+  locator: Complete original1998 and1999 abstracts inspected on publisher/PubMed pages
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: The1998 study distinguishes Fusarium-derived equisetin from Phoma-derived
+    phomasetin and reports recombinant integrase inhibition. The1999 original tests
+    the HIV-1 integrase reactions and catalytic core and reports inhibition of integration
+    by isolated preintegration complexes. These support an integrase-inhibition role
+    at biochemical scope, without establishing clinical antiviral efficacy, a directly
+    observed equisetin binding site or the antibacterial mechanism. Direct full-text
+    retrieval returned403.
+- evidence_id: biosynthesis
+  kind: primary_source
+  reference: PMID:15724180; DOI:10.1039/b413523g
+  locator: Complete original abstract in041-root-primary-abstracts.json
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: An iterative polyketide-synthase/peptide-synthetase hybrid assembles equisetin
+    in Fusarium heterosporum, directly supporting the native producer species at abstract
+    scope. RSC full text/PDF returned403. PMID28379186 separately concerns trichosetin
+    in F.fujikuroi lacking eqxD; that different product is not equisetin production
+    evidence.
+  snapshot_sha256: 66bb9d78bce8a2bfbb433391c04f0b79082089343bc0426ec5a564919cf7065f
+- evidence_id: adopted
+  kind: primary_source
+  reference: Ten adopted ChEBI PubMed leads
+  locator: 041-root-primary-abstracts.json complete abstracts and identifiers
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: All ten adopted leads were read at complete-abstract level:11073657/15632969
+    total syntheses;15724180 biosynthesis;24038394 biomimetic fusarisetin synthesis;2536535
+    Rhodospirillum rubrum membrane ATPase/PPase inhibition with a proposed hydrophobic
+    mechanism;25770422 Fsa2 stereochemical biosynthesis;26075378 cottonseed mycotoxin-mixture
+    context;26431450 analogue libraries;28379186 trichosetin heterologous production;28401214
+    Fsa2 chemoenzymatic synthesis. Their different compounds and assay scopes are
+    preserved. No abstract is represented as a read full experimental paper.
+  snapshot_sha256: 66bb9d78bce8a2bfbb433391c04f0b79082089343bc0426ec5a564919cf7065f
+- evidence_id: acc
+  kind: primary_source
+  reference: PMID:32470050; DOI:10.1371/journal.pone.0233485
+  locator: 2020 full main XML Methods, Results and Discussion; actual Fig1, Table1
+    and Fig8 viewed
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: The study distinguishes equisetin from pyrrolocin C and tests antibacterial
+    growth, S.aureus metabolomics/fatty-acid rescue and purified E.coli ACC components.
+    At100 micromolar equisetin inhibits biotin carboxylase by84.5%, while carboxyltransferase
+    and coupling controls are not inhibited. This is single-concentration activity,
+    not an IC50 or binding affinity; molecular interactions and S.aureus structural
+    confirmation remain future work in the paper. Table1 usesIC90 and has a vancomycin-resistant
+    E.faecalis accession inconsistent with Methods. The M.tuberculosis transcriptomics
+    are pyrrolocin C, not equisetin. Fig1 depicts an internal-enol tautomer; Discussion
+    acknowledges tetramic tautomerism without resolving native Z versus current-authority
+    E solution populations.
+  snapshot_sha256: 15017d6d5ce400a443eca194d5f86fe9c5199287a1b19bba0d7370417d18d843
+- evidence_id: later
+  kind: primary_source
+  reference: PMID:29502217;8132493
+  locator: 406-extra-abstracts.json complete original abstracts
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: context_only
+  summary: The2018 study reports quorum-sensing and biofilm effects at subinhibitory
+    concentrations in P.aeruginosa, not direct binding to a QS regulator. The1993
+    study addresses rat-liver mitochondrial transport and excludes inhibition of isolated
+    F1-ATPase under tested conditions. Neither is a native bacterial direct-target
+    assertion. Current ontology AGR:IND605932073 is an additional lead whose original
+    source was not independently verified.
+  snapshot_sha256: efdd3e025c4827a78b0c7a395025f494d457ae8329829e7683a71b81b54f0ceb
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured catalog and exact ACC queries
+  locator: 406-adapter-receipt.json;406-adapter-acc.json
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: context_only
+  summary: The structured catalog was inspected before native integrase follow-up
+    and has no HIV or Fusarium dataset. Once the new2020 ACC paper was discovered
+    during structural research, covered-organism queries resolved E.coli accC b3256
+    and two S.aureus accC annotations. Those follow-up queries occurred after the
+    new paper was read, not before its discovery. No component hit required summarization;
+    gene membership is not inhibition or resistance evidence.
+  snapshot_sha256: c39feda0d3c03e4df89652d3db3b49fc0e004a61ceaf47d80af2525534f64df0
+- evidence_id: access
+  kind: search
+  reference: 406-local-hits.txt;406-owners-search.json;041-root-fetch manifests
+  locator: Ignored-inclusive local search and exact source requests
+  accessed_at: '2026-10-21T15:31:59Z'
+  support: supports
+  summary: Searches included hidden and gitignored files. MetaCyc returned a login
+    page rather than inspectable CPD17992 descriptors; Reaxys5773365 is independently
+    unverified. The1989 characterization publisher PDF returned403 and the supplement
+    route an empty202; the paper was not read. The1979 paper, native patent and2020
+    primary XML/PDF were freely retrieved. Initial guessed RSC URLs were not valid
+    evidence; the verified biosynthesis DOI also returned403.
+  search_scope: Exact label, CHEBI142135, full key, cited identifiers and source-linked
+    original journal routes; rg --no-ignore --hidden over own data/curation/conf/scripts/reviews/reports
+  snapshot_sha256: 6a4b5a34917ba11598db621b7b05c3759ea4dba3929fac8d3a4b33f386c1dbfc
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Graph, systematic names and N-methyl relation
+  outcome: unknown
+  summary: Native encodings are coherent and match current ChEBI; the N-methyltrichosetin
+    relation is independently reproduced. Opposite specified enol geometry in PubChem/GSRS
+    remains unresolved because primary solution-state equivalence or predominance
+    was not independently established. No unsupported native stereo inversion is proposed.
+  target_ids:
+  - CHEBI:142135
+  evidence_ids:
+  - native
+  - chemistry
+  - chebi
+  - gsrs
+  - '1979'
+  - acc
+  - access
+- assessment_id: activity
+  area: evidence
+  topic: Antibacterial eligibility
+  outcome: supported
+  summary: Original strain-specific growth assays support antibacterial filing; the
+    antiviral role does not negate bacterial activity. Historical patent MICs and2020
+    IC90s retain their distinct methods and material limits.
+  target_ids:
+  - CHEBI:142135
+  evidence_ids:
+  - patent
+  - acc
+- assessment_id: mode
+  area: evidence
+  topic: Integrase annotation and optional antibacterial mechanism
+  outcome: supported
+  summary: The source-qualified antiviral mechanism is supported at original-abstract
+    scope. The2020 ACC results are useful optional antibacterial enrichment leads,
+    without requiring a primary target object or conflating biochemical activity with
+    direct binding.
+  target_ids:
+  - CHEBI:142135
+  evidence_ids:
+  - integrase
+  - acc
+  - chebi
+  - adapter
+- assessment_id: producer
+  area: evidence
+  topic: Fusarium heterosporum biosynthesis
+  outcome: supported
+  summary: The original2005 abstract directly supports the native producer. F.equiseti
+    patent material is a distinct producer context, and F.fujikuroi trichosetin is
+    not transferred.
+  target_ids:
+  - CHEBI:142135
+  evidence_ids:
+  - biosynthesis
+  - patent
+  - adopted
+- assessment_id: xrefs
+  area: grounding
+  topic: Chemical and document cross-references
+  outcome: unknown
+  summary: The patent is directly relevant. MetaCyc and Reaxys exact structures remain
+    inaccessible; adopted identifier agreement does not independently validate their
+    graphs. No mismatch is inferred from an access failure.
+  target_ids:
+  - CHEBI:142135
+  evidence_ids:
+  - patent
+  - access
+  - owners
+- assessment_id: provenance
+  area: provenance
+  topic: All adopted leads, history and completeness
+  outcome: supported
+  summary: All ten adopted abstracts, actual row, role mapping, source concept and
+    five histories were assessed. Unpopulated optional activity, target, resistance,
+    graph, dataset and clinical fields are not corrective defects.
+  target_ids:
+  - CHEBI:142135
+  evidence_ids:
+  - native
+  - owners
+  - adopted
+  - chemistry
+  - access
+findings: []
+actions: []
+limitations:
+- Current ChEBI Z and PubChem/GSRS E exocyclic enol encodings do not match exactly.
+  Tetramic tautomerism is relevant context but does not by itself prove exact equivalence;
+  the inaccessible1989 full characterization and solution-state assignment remain
+  a bounded follow-up.
+- All ten adopted publication leads were read as complete abstracts; subscription
+  full methods and raw spectra were not obtained. The1998/1999 integrase papers were
+  also inspected at complete-abstract level only.
+- The2020 main paper was read for relevant equisetin Methods/Results/Discussion and
+  actual Fig1,Table1,Fig8. Every raw trace and supplement was not independently reprocessed.
+  Its main methods explicitly describe pyrrolocin isolation but do not independently
+  establish the exact equisetin batch/form in the inspected section; the E.faecalis
+  accession mismatch must be resolved before reuse.
+- The1979 full text and patent predate the complete modern stereochemical characterization.
+  Neither is treated as independent proof of the native full graph. MetaCyc login,
+  proprietary Reaxys and the unverified AGR lead remain explicit access limits.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native or source edits were made. Source-qualified antiviral activity and bacterial
+  growth eligibility can both be true; no unsupported curation-status promotion is
+  made.
+- A later authorized structural reconciliation should compare the original1989 assignment
+  and solution tautomer data with the specified native Z and authority E forms before
+  deciding whether a representation correction is warranted.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://doi.org/10.1371/journal.pone.0233485
+- https://doi.org/10.1177/095632029901000202
+- https://doi.org/10.1039/b413523g
+- https://patents.google.com/patent/US3959468A/en
