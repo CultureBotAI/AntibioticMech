@@ -1,0 +1,994 @@
+schema_version: 1.0.0
+review_id: 20261021T090050Z-ampicillin
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ampicillin: correct native chemistry and CDC observations; resolve PN1 epimer
+  and qualify AMZ-1 scope'
+started_at: '2026-10-21T08:48:08Z'
+finished_at: '2026-10-21T09:00:50Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Did not author record. Original and supplemental maintained
+    input captures preceded assessment. Entire native record and source rows, relevant
+    transformations, official identifiers, every adopted citation disposition and
+    bounded primary evidence inspected.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+scientific_review: true
+summary: Native neutral stereospecific ampicillin chemistry agrees across independent
+  sources, and all21 curated CDC MIC observations match current source pages including
+  qualifiers and BioSamples. A major exact-xref error links to CCD PN1, whose structures
+  encode the opposite side-chain stereocentre. All37 CARD resistance assertions reproduce
+  the ontology; the AMZ-1 route needs a bounded qualification distinguishing increased
+  ampicillin MIC from undetectable purified-enzyme hydrolysis. Optional primary target/structure
+  enrichment is identified.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ampicillin.yaml
+    sha256: 3983eac47db2f393481b546bb5ab5579a11c7c25da07b0c541a5a608d1a7f5cf
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: conf/aro_target_roles.tsv
+    sha256: 8cfb773d8cd86aacfd9dab5feba688427f140a571553b460940c901facb81167
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: data/raw/aro_target_edges.tsv
+    sha256: 556c2ad9d389e3df28b4ff4006f83991bf94e80076cb10fba67bbddfb752bc81
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+targets:
+- target_id: CHEBI:28971
+  path: data/antibiotics/antibacterial/ampicillin.yaml
+  label: ampicillin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity/classification
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation/evidence status
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Pinned source-specific CARD evidence-scope qualifications
+scope:
+  description: Whole exact native record, ChEBI and ARO maintained owners, all12 molecule-level
+    citation dispositions, all37 official resistance terms,21 CDC observations and
+    their NCBI samples/taxa, chemical/document crosslinks and selected primary mechanism
+    evidence.
+  selection: Queue095, exact CHEBI:28971 at locked ampicillin path.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:28971
+  exclusions:
+  - target: Ampicillin sodium/trihydrate, sulbactam combinations and side-chain epimers
+    reason: Different exact forms or mixtures; no unqualified chemistry or assay transfer.
+checks:
+- check_id: schema
+  name: schema
+  status: passed
+  required: true
+  summary: Focused LinkML validator exited0.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ampicillin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: strict
+  status: passed
+  required: true
+  summary: Focused strict scan exited0 with no ERROR rows.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - validation
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ampicillin.yaml --out /private/tmp/am-review-session/095-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: chemistry
+  status: passed
+  required: false
+  summary: Native SMILES/InChI/formula/charge/masses and both mint identifiers agree;
+    this does not establish every xref.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/095-chemistry-check.py 95
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: aro-comparison
+  name: aro-comparison
+  status: passed
+  required: false
+  summary: All37 source edge/name/mechanism lineage checks agree; KEGG/ChEMBL structures
+    agree.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - aro
+  - chemistry
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/095-compare.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: source-comparison
+  name: source-comparison
+  status: passed
+  required: false
+  summary: All21 CDC comparisons pass. Both CCD descriptors independently parsed;
+    PN1 is an epimer. Successful execution exposes the identity finding rather than
+    passing PN1 equivalence.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - cdc
+  - ccd
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/095-check-sources.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: ncbi
+  name: ncbi
+  status: passed
+  required: false
+  summary: All21 source-linked BioSamples and7 native taxon identifiers resolve.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - ncbi
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache .venv/bin/python
+    /private/tmp/am-review-session/095-ncbi.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-acrb
+  name: imodulondb-acrb
+  status: passed
+  required: false
+  summary: Read-only adapter request exited0; context only. The S.aureus mdeA query
+    is rejected as the wrong organism for this ARO source experiment.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism e_coli --dataset
+    precise_mg1655 --query acrB
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-mexb
+  name: imodulondb-mexb
+  status: passed
+  required: false
+  summary: Read-only adapter request exited0; context only. The S.aureus mdeA query
+    is rejected as the wrong organism for this ARO source experiment.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism p_aeruginosa --dataset
+    precise364 --query mexB
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: imodulondb-mdea
+  name: imodulondb-mdea
+  status: passed
+  required: false
+  summary: Read-only adapter request exited0; context only. The S.aureus mdeA query
+    is rejected as the wrong organism for this ARO source experiment.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - adapter
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache PYTHONDONTWRITEBYTECODE=1
+    uv run --project /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw
+    kg-microbe-sources imodulondb --timeout 15 search --organism s_aureus --dataset
+    staph_precise108 --query mdeA
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:28971
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ampicillin.yaml
+  locator: Entire native YAML and all21 history events captured before judgment.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: SEEDED/EXACT neutral ampicillin;19 synonyms,4 parents,2 activity roles,2
+    source concepts,37 resistance assertions,1 database PBP target,1 UNREVIEWED PDB
+    observation and21 curated MIC observations. Six seed/reseed events plus15 curator
+    events are compatible with SEEDED status. No unsupported native clinical,producer,causal-graph
+    or dataset assertion.
+- evidence_id: source
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: 095-raw.json; exact ChEBI row569,ARO molecule137,37 resistance rows and
+    target row; extractor/seeder and CARD qualification logic.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: ChEBI supplies native identity and accepted roles; ARO supplies penicillin
+    class,database target and resistance routes. Empty ChEBI mechanism roles explain
+    absent mode. Ten ChEBI plus two ARO molecule-level references are discovery leads,not
+    automatically adopted claim evidence. Initial13 plus6 supplemental maintained
+    input hashes are unchanged.
+  snapshot_sha256: b213fea89f4216085163fa4c66d746ae90213aafbdceceed16a38f104a874357
+- evidence_id: identity
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:28971
+  locator: 095-chebi.html and official PubChem6249,ChEMBL174,KEGG C06574,VSDB1849
+    endpoints.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: Neutral C16H19N3O4S and full stereochemical key AVKUERGKIZMTKX-NJBDSQKTSA-N
+    agree across accessible sources. Parents17334 penicillin,27933 beta-lactam antibiotic,88187
+    penicillin allergen andARO3000008 are broader concepts. Roles33281 antimicrobial
+    agent and36047 antibacterial drug reproduce accepted source roles. Current web
+    role display is not proof of additional extractable accepted roles.
+  snapshot_sha256: bc5c8615add2193465d1559577f37b96969f2b5f66d0b87101f7875f6721b2d4
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit calculation
+  locator: 095-chemistry.json and095-xref-chemistry.json.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: Native SMILES/InChI parse as one neutral fragment with four specified centres,matching
+    formula,349.412 average mass,349.109627088 exact mass and both source-specific
+    mint IDs. Independently parsed KEGG MOL and ChEMBL SMILES yield the same full
+    key.
+  snapshot_sha256: 95676ba97d04db51800d641fc42ec4be6308d912fee4a73bb0552624b6a69ce3
+- evidence_id: ccd
+  kind: database
+  reference: https://data.rcsb.org/rest/v1/core/chemcomp/PN1
+  locator: 095-PN1.json,095-AIC.json and095-ccd-chemistry.json; both InChI and stereochemical
+    SMILES parsed independently.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: refutes
+  summary: 'AIC matches native full key. PN1 instead yields AVKUERGKIZMTKX-BBGACYKPSA-N:
+    the side-chain alpha-amino carbon is S rather than native R,while the three penam
+    centres agree. PN1 name describes R but its two independent structure representations
+    describe S,an internal CCD name/structure discrepancy. This is one epimer,not
+    the complete enantiomer. A source label alone cannot establish exact equivalence.'
+  snapshot_sha256: 881bdc81813fabcf51324d3a49b02ec1d6476d9d96fad54af16a8ecf5cd476dc
+- evidence_id: links
+  kind: database
+  reference: Official chemical,drug and document cross-reference endpoints
+  locator: 095-fetch-results.json; downloaded KEGG D00204,DrugCentral198,VSDB1849
+    and patent pages.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: partial
+  summary: CAS69-53-4 is cross-corroborated,not registry-direct. DrugCentral198 and
+    KEGG D00204 identify ampicillin; broader salt/product listings are legitimate
+    drug_xrefs,not proof of exact-form approval. GB902703A Penicillins,US2985648A
+    Alpha-aminobenzylpenicillins andUS3157640A D(-)-alpha-aminobenzylpenicillin trihydrate
+    are relevant documents,not chemical equivalence assertions. Wikipedia resolves
+    as a document. HMDB0014559 andDrugBankDB00415 return403,LINCSLSM-5761 returns500
+    andReaxys4300240 is not directly inspected.
+  snapshot_sha256: 6ec458329d9f8cc576e38cfd54d3254d539bcea5eec47b80e3fac36904ad5c03
+- evidence_id: aro
+  kind: database
+  reference: https://purl.obolibrary.org/obo/aro.obo
+  locator: Same-session094-aro.obo,095-aro-terms.txt and095-aro-comparison.json.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: Official downloaded OBO SHA256 d12ec5d36c55f371079c392492b034d115adb256f8d2ff4a84041c6202f4a1c4
+    exactly matches MANIFEST. All37 determinant names,ampicillin resistance edges
+    and nearest mapped mechanism classes agree. ARO3000749 explicitly targets ampicillin.
+    Source assertion verification is distinct from independently validating all underlying
+    experiments; generic routes and target correctly retain database provenance.
+  snapshot_sha256: 32ebb1555a95da3691e76ee640a3611001e54c1537d06979bf494982948165cf
+- evidence_id: cdc
+  kind: database
+  reference: https://wwwn.cdc.gov/ARIsolateBank/
+  locator: 095-cdc-XXXX.html/txt for all21 native strain IDs and095-cdc-verified.json;
+    full isolate pages and susceptibility rows inspected.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: All21 ampicillin values,qualifiers,R interpretations,AR IDs,study IDs,BioSample
+    accessions and CLSI2025 M100 S35 context match.0783 is64mg/L,0500 is128mg/L,other19
+    are>32mg/L; source unitsµg/mL are numerically equal. All pages state broth microdilution
+    and modal MIC. Each species/group label agrees,including Salmonella Typhimurium0539.
+    Recorded source notes match corresponding pages. Routine isolate propagation medium
+    is not substituted for the AST medium; no genotype cause is inferred from the
+    phenotype.
+  snapshot_sha256: 0a5884c5303de062956d738d146cf099020ff8a1d2390b14750e3fe08f5aa1f4
+- evidence_id: ncbi
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi
+  locator: 095-biosamples.xml,095-biosample-details.json,095-taxonomy.xml and095-taxa.json.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: All21 CDC-linked sample accessions resolve; direct CDC links establish
+    mappings even where sample strain names differ from AR IDs. All7 native taxonomy
+    IDs resolve to their stated taxon labels. Some E.cloacae-complex samples carry
+    finer E.cloacae or E.hormaechei metadata; the record faithfully retains the CDC
+    group-level label. BioSample source context is not conflated with resistance mechanism
+    or producer identity.
+  snapshot_sha256: 8f19f06b655779dd10507f7e9064afc21faeb04a96ed9d8a061a88e21363258b
+- evidence_id: citation-dispositions
+  kind: primary_source
+  reference: All12 adopted molecule-level PMID leads
+  locator: 095-epmc.json,095-abstracts.txt and095-primary-extra.json.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: context_only
+  summary: 'Complete available abstracts inspected:10930630 polyamine IgE recognition;12562703
+    enteric recombinant B.licheniformis PenP pellets remove IV ampicillin from beagle
+    jejunum,not plasma;12569987 benzylpenicillin/cephalothin allergen cross-reaction;12833570
+    cephalosporin determinants;15768449 imprinted-polyurethane surface adsorption
+    and bacterial adhesion,not free-drug MIC;16033609 allergy cytokines;18611716 anaerobe
+    ampicillin with/without sulbactam,whose combination MICs cannot transfer;19967069
+    host-mouse ischemic preconditioning;44765 respiratory-isolate MIC/morphology abstract
+    with pooled ranges;3224398 staphylococcal ampicillin/sulbactam comparison,not
+    species-wide standalone susceptibility.14139119 gonococcal urethritis treatment
+    and14455820 sensitivity/blood-level study have no available abstracts: title/metadata
+    only,no inferred experimental detail.'
+  snapshot_sha256: ea69e7b9ed7a0172d046e4d96be5dc86a68fc795dfc23561665ce07881d75043
+- evidence_id: amz-primary
+  kind: primary_source
+  reference: DOI:10.3389/fmicb.2023.1252427
+  locator: PMID37808287,PMC10552758; full main article and Tables1–5 in094-37808287.xml,Table2/5
+    and discussion re-inspected for ampicillin.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: partial
+  summary: In E.coli DH5alpha,pUCP24-blaAMZ-1 raises ampicillin MIC32 versus4µg/mL
+    vector control; wild-type Achromobacter mucicolens Y3 is16µg/mL,a separate subject.
+    Purified AMZ-1 Table5 reports NH,no detectable ampicillin hydrolysis. Discussion
+    proposes assay-condition/overproduction explanations but does not establish them.
+    Amoxicillin hydrolysis cannot be transferred to ampicillin. Abstract calls agar
+    dilution while Methods says broth dilution with MH agar,an unresolved assay-method
+    inconsistency.
+  snapshot_sha256: 47d5c619cd335d6d422cff250193203e662b276277914318b9293463f8792d11
+- evidence_id: pbp-primary
+  kind: primary_source
+  reference: DOI:10.1074/jbc.M116.718403
+  locator: PMID27899450 complete abstract in095-primary-extra.json and official5HL9
+    entry in095-5HL9.json.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: partial
+  summary: Original paper describes E.coli PBP1b beta-lactam transpeptidase-site complexes
+    and gel competition. Official PDB5HL9 specifically identifies the acyl-ampicillin/moenomycin
+    complex and same primary citation. This supports a concrete optional primary-curation
+    lead; full article was inaccessible through attempted public routes,so no uninspected
+    numeric potency,material-form or residue-level claim is adopted. Moenomycin inhibition
+    of the glycosyltransferase domain must not transfer to ampicillin.
+  snapshot_sha256: d3663a95628ff87dd9e8412cd63cc8d3ad04df6045a13987d35aa112fa44efba
+- evidence_id: antibody
+  kind: primary_source
+  reference: DOI:10.1006/jmbi.2001.4663
+  locator: PMID11397088 complete abstract and official PDB1H8S metadata in095-primary-extra.json
+    and095-1H8S.json.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: 1H8S is an anti-ampicillin single-chain Fv/hapten complex from murine antibody
+    libraries,not a bacterial PBP target. The study selects intact-ampicillin specificity
+    and reports mutant antibody crystallization enabling antigen binding. Native UNREVIEWED/PRIMARY_EVIDENCE_NEEDED
+    is honest; optional review can classify ANTIBODY_COMPLEX with this citation.
+  snapshot_sha256: 684dfe1a5cb0f7e7048d65cc6f0cd08252a250b5970edfb543537833b5def9ee
+- evidence_id: other-primary
+  kind: primary_source
+  reference: DOI:10.4014/jmb.1301.01028
+  locator: PMID23462018 full abstract in095-primary-extra.json; same-session094-primary-epmc.json
+    forPMID31630171.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: context_only
+  summary: MdeA is cloned from Streptococcus mutans KCTC3065 into efflux-deficient
+    E.coli KAM32; increased resistance including ampicillin belongs to that heterologous
+    experiment,not S.aureus or unspecified native clinical isolates. S.pyogenes PBP2xT553K
+    PMID31630171 reports eight-fold aminopenicillin MIC increases as reduced susceptibility/possible
+    first step,not established universal clinical resistance. No blanket primary upgrade
+    of all37 routes.
+  snapshot_sha256: f859cf2be1b3d7be2847fb9b2cb3cc3f1d03e43235e858d8bdbc86a29fb817dd
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured source runner
+  locator: Successful same-session055 dataset inventory;095-imodulondb-acrb.txt,mexb.txt,mdea.txt.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: context_only
+  summary: E.coli precise_mg1655 resolves b0462/acrB; P.aeruginosa precise364 resolves
+    PA0426/mexB. Neither produces a module hit. Initial S.aureus mdeA query has zero
+    hits but is rejected for this source experiment because the primary donor is S.mutans,which
+    is absent from the available inventory. No gene-context result establishes an
+    ampicillin experiment or negative biological evidence.
+  snapshot_sha256: 2f48dfe6be5268444b350060aa5a630c6ecc0598c19fe58449b6499ee6a4ffd4
+- evidence_id: search
+  kind: search
+  reference: CultureBotAI/AntibioticMech
+  locator: 095-local-hits.txt,095-maintained-search.txt and095-conflict-search.txt;
+    bounded official/primary queries.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: context_only
+  summary: Ignored-inclusive searches locate maintained source/queue and CDC mapping
+    context. No existing ampicillin-specific PN1 or AMZ qualification was found among
+    the searched maintained curation/conf/reviews. Historical ad hoc audit scripts
+    were treated only as leads,not primary evidence. No absence of relevant literature
+    is asserted.
+  search_scope: rg --no-ignore --hidden for ampicillin,CHEBI:28971,ARO:3000637,fullkey/mints
+    andPN1/AMZ-1/37808287/3007694 across batch010 including maintained curation/conf/scripts/data/raw/src/reports/reviews,
+    excluding.git/.venv. Exact official chemical/CCD/CDC/NCBI/ARO identifiers and
+    bounded PubMed/EuropePMC PBP,antibody and specific determinant queries. Free access
+    only.
+  snapshot_sha256: ba0c271019dddd2e5efe66e7e68b8117a7606a3848786f976b2d967ab9c8e388
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Identity,equivalence,evidence,target,resistance,activity and audit;CLAUDE/HARMONIZATION/CURATION.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: Exact xrefs must preserve stereochemistry. Imported CARD claims retain
+    database provenance; phenotype,mechanism and primary experimental subject require
+    separate qualification. Optional blanks are not mandatory-field defects. Structural
+    observations distinguish antibodies from antimicrobial targets,with schema explicitly
+    naming1H8S as ANTIBODY_COMPLEX example.
+- evidence_id: validation
+  kind: validation
+  reference: Documented focused checks
+  locator: 095-focused-results.json,095-schema.log,095-strict.log/tsv and095-chemistry.json.
+  accessed_at: '2026-10-21T08:55:26Z'
+  support: supports
+  summary: Focused schema,strict and native chemistry exit0. Source comparison and
+    NCBI helpers exit0. All19 captured maintained hashes unchanged.
+  snapshot_sha256: 0d6e898d5ac2d3cd520085bccb9637d9dadd4e8db771293f71729fbddfa00aea
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Native exact structure versus CCD PN1
+  outcome: concern
+  summary: Native chemistry and AIC match independently; PN1 encodes the opposite
+    side-chain stereocentre and is not an exact chemical equivalent.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - identity
+  - chemistry
+  - ccd
+- assessment_id: activity
+  area: evidence
+  topic: All21 curated CDC susceptibility observations
+  outcome: supported
+  summary: Every value,qualifier,interpretation,method,source isolate,BioSample and
+    taxonomy label checked against official records. Resistant phenotypes do not identify
+    their causal determinants.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - cdc
+  - ncbi
+- assessment_id: claims
+  area: evidence
+  topic: Imported PBP and37 resistance assertions
+  outcome: supported
+  summary: All source assertions reproduce exact official OBO bytes with database
+    provenance. Selected primary studies support narrow contexts; all37 have not been
+    independently experimentally re-grounded.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - aro
+  - other-primary
+  - rubric
+- assessment_id: amz
+  area: evidence
+  topic: AMZ-1 ampicillin phenotype versus inactivation
+  outcome: concern
+  summary: Primary clone MIC rises despite no detectable purified-enzyme hydrolysis.
+    Preserve source classification and observed phenotype while qualifying direct
+    catalytic support.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - amz-primary
+  - aro
+- assessment_id: structure
+  area: evidence
+  topic: 1H8S observation and optional PBP structure
+  outcome: supported
+  summary: Native UNREVIEWED is honest; primary antibody identity is now available.5HL9
+    is a bounded PBP target-complex lead,not an exact chemical xref.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - antibody
+  - pbp-primary
+  - rubric
+- assessment_id: enrichment
+  area: completeness
+  topic: Optional primary mechanism and contextual annotation
+  outcome: unknown
+  summary: No optional absence is a defect. Detailed primary PBP curation requires
+    full paper,exact material and endpoint inspection. Host effects,combination assays
+    and reference gene context cannot substitute.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - citation-dispositions
+  - pbp-primary
+  - adapter
+  - other-primary
+- assessment_id: other
+  area: completeness
+  topic: Producer,clinical,datasets and graphs
+  outcome: unknown
+  summary: No unsupported native assertions. Drug listings do not prove exact-form
+    approval; a beta-lactamase-producing bacterium is not an ampicillin producer.
+    No transcriptomic dataset is inferred from module queries or MIC experiments.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - record
+  - links
+  - rubric
+- assessment_id: ownership
+  area: ownership
+  topic: Generated and curator-maintained owners
+  outcome: supported
+  summary: ChEBI/ARO and qualification inputs captured. Native path owns curated activity
+    and proposed primary additions; source-xref correction must survive reseeding.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - source
+  - search
+- assessment_id: gates
+  area: schema
+  topic: Focused deterministic checks
+  outcome: supported
+  summary: Native focused validators pass while independent cross-identifier chemistry
+    exposes a scientific identity defect. No REVIEWED promotion.
+  target_ids:
+  - CHEBI:28971
+  evidence_ids:
+  - validation
+  - ccd
+findings:
+- finding_id: F1
+  issue_key: ampicillin-pdb-ccd-pn1-sidechain-epimer
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Remove or explicitly qualify PN1 as an exact ampicillin xref
+  description: Native xrefs includes pdb-ccd:PN1. Official PN1 InChI and stereochemical
+    SMILES independently encode the side-chain S epimer,whereas native ampicillin
+    andCCD AIC have R. The other three centres agree. PN1 has an internal name/structure
+    mismatch,so its name cannot override structure-level disagreement. Native chemistry
+    should remain unchanged.
+  target_ids:
+  - CHEBI:28971
+  field_paths:
+  - xrefs
+  evidence_ids:
+  - ccd
+  - identity
+  - chemistry
+  - source
+  - rubric
+  rule_id: 'native-review-checklist: Identity/Equivalence'
+  native_severity: major stereochemical exact-identity conflict
+  normalization_reason: An exact chemical equivalence assertion conflates two diastereomers
+    even though native chemistry and deterministic gates pass.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity/classification
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation/evidence status
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Pinned source-specific CARD evidence-scope qualifications
+- finding_id: F2
+  issue_key: ampicillin-amz1-mic-hydrolysis-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Qualify AMZ-1 phenotype and direct hydrolysis support separately
+  description: The imported ANTIBIOTIC_INACTIVATION assertion is correctly attributed
+    to CARD. Its primary source shows an eight-fold ampicillin MIC rise but no detectable
+    hydrolysis by purified AMZ-1. Record this distinction without deleting supported
+    resistance phenotype or treating the authors proposed overproduction explanation
+    as demonstrated.
+  target_ids:
+  - CHEBI:28971
+  field_paths:
+  - resistance_mechanisms
+  - discussions
+  evidence_ids:
+  - amz-primary
+  - aro
+  - source
+  - rubric
+  rule_id: 'native-review-checklist: Resistance/Evidence'
+  native_severity: minor missing primary-evidence scope qualification
+  normalization_reason: Database provenance is honest and the phenotype is supported;
+    the gap is a missing bounded qualification,not fabricated primary kinetics or
+    proof that AMZ-1 cannot hydrolyze ampicillin under any condition.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained source-specific CARD assertion qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Qualification validation and application
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ampicillin.yaml
+    role: Curator-owned evidence, activity, structural observations and discussions
+      through validated writer/history
+- finding_id: F3
+  issue_key: ampicillin-primary-pbp-and-antibody-enrichment
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Optionally curate primary PBP and antibody structural context
+  description: Primary1H8S metadata/abstract establish an antibody complex suitable
+    for ANTIBODY_COMPLEX qualification. PBP1b structure5HL9 and the corresponding
+    original study provide a concrete target-curation lead. Retain exact material
+    and assay boundaries,and do not transfer moenomycin GTase inhibition or antibody
+    recognition to ampicillin target mechanism.
+  target_ids:
+  - CHEBI:28971
+  field_paths:
+  - molecular_targets
+  - structural_observations
+  - mode_of_action
+  - evidence
+  evidence_ids:
+  - antibody
+  - pbp-primary
+  - citation-dispositions
+  - adapter
+  - rubric
+  rule_id: 'native-review-checklist: Targets/Evidence/Completeness'
+  native_severity: informational optional primary enrichment
+  normalization_reason: Current UNREVIEWED and PRIMARY_EVIDENCE_NEEDED states are
+    honest; missing optional primary annotation is not a schema defect.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ampicillin.yaml
+    role: Curator-owned evidence, activity, structural observations and discussions
+      through validated writer/history
+actions:
+- action_id: A1
+  description: Correct the PN1 equivalence through maintained ChEBI source/extractor/decision
+    ownership.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:28971
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted ARO identity/classification
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_target_edges.tsv
+    role: Adopted target assertion
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Adopted resistance assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/aro_target_roles.tsv
+    role: Target relation/evidence status
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Pinned source-specific CARD evidence-scope qualifications
+  acceptance_checks:
+  - Reconfirm PN1 current InChI and stereochemical SMILES versus native andAIC,not
+    its name alone; document the single side-chain epimer and source internal discrepancy.
+  - Exclude PN1 from exact xrefs or represent a supported nonexact relation through
+    schema/owner policy; preserve raw provenance,native ampicillin structure and validAIC.
+    Do not silently rewrite source chemistry.
+  - Reseed and verify the correction survives; run focused schema/strict,chemistry
+    and corpus reproduction.
+- action_id: A2
+  description: Add a source-specific AMZ-1 scope qualification using the maintained
+    CARD review owner.
+  finding_ids:
+  - F2
+  target_ids:
+  - CHEBI:28971
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Maintained source-specific CARD assertion qualification
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Qualification validation and application
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ampicillin.yaml
+    role: Curator-owned evidence, activity, structural observations and discussions
+      through validated writer/history
+  acceptance_checks:
+  - CitePMID37808287 Table2,Table5 anddiscussion; preserve clone32 versusvector4µg/mL
+    andNH endpoint as different measurements.
+  - Retain honest CARD mechanism provenance and supported resistance phenotype; do
+    not assert direct ampicillin hydrolysis,prove universal absence,or transfer amoxicillin
+    kinetics. Mark the authors assay-condition/overproduction explanation as hypothesis.
+  - Preserve the unresolved agar/broth method inconsistency before any quantitative
+    primary activity addition. Apply validated owner pathway and verify qualification
+    survives reseeding.
+- action_id: A3
+  description: Optionally add narrow primary structural and target evidence on the
+    native record.
+  finding_ids:
+  - F3
+  target_ids:
+  - CHEBI:28971
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ampicillin.yaml
+    role: Curator-owned evidence, activity, structural observations and discussions
+      through validated writer/history
+  acceptance_checks:
+  - Use PMID11397088 and official1H8S to classify ANTIBODY_COMPLEX with citation,not
+    a bacterial target.
+  - Retrieve fullPMID27899450 before detailed target/assay curation; verify exact
+    ampicillin material,acyl-adduct identity,PBP1b organism and assay endpoints. Keep5HL9
+    as a structural observation rather than a chemical-equivalence xref.
+  - Distinguish ampicillin transpeptidase interaction from moenomycin glycosyltransferase
+    inhibition; no target from a reference gene-module hit or host allergy study.
+  - Preserve all21 verified CDC observations and BioSample/qualifier contexts. Use
+    write_validated_antibiotic and record_curation_event on data/antibiotics/antibacterial/ampicillin.yaml
+    for any authorized future mutation; no status promotion from this review.
+limitations:
+- All12 adopted molecule-level citation leads inspected:10 available abstracts and2
+  metadata-only older articles,PMIDs14139119 and14455820. No experimental detail inferred
+  for the latter. Most adopted references concern host allergy,combination assays
+  or historical context,not direct molecular targets.
+- 'Full2023 AMZ-1 main article and tables read. The2017 PBP paper is abstract and
+  official structure metadata only: EuropePMC XML500,PMC challenge andpublisher403
+  prevented full-text verification; no search-result-only quantitative claims adopted.2001
+  antibody paper is abstract and official PDB metadata only. MdeA andselectedPBP2x
+  findings are abstract-level.'
+- All37 CARD source assertions verified against exact official ontology bytes; most
+  original determinant-specific experiments not individually reassessed. Source consistency
+  is not complete experimental proof.
+- All21 CDC pages,linked BioSamples and7 native taxonomy IDs inspected. No raw AST
+  retesting,genome reanalysis or breakpoint reinterpretation performed; current CDC
+  CLSI2025 context is preserved.
+- HMDB andDrugBank direct pages403,LINCS500,Reaxys andCAS registry uninspected directly.
+  Accessible official crosswalks do not establish independent exact equivalence for
+  every legacy endpoint. Patents were checked for document identity/relevance,not
+  legal status or all experimental claims.
+- Structured adapter results are gene context only. The initial S.aureus mdeA query
+  is an organism mismatch rejected after primary-source inspection; S.mutans is not
+  represented in the available inventory. No hits or unavailable coverage do not refute
+  biology.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
