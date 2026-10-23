@@ -1,0 +1,40 @@
+schema_version: 1.0.0
+repository_key: antibioticmech
+github_repository: CultureBotAI/AntibioticMech
+run_id: mech-goal-sequence-20261019
+cycle: 1
+stage: 6
+revision: 1
+outcome: completed
+summary: Frozen INFRA_TASKS.md at 2026-10-23T21:52:57Z, implemented structural_observations
+  preservation across scripts/seed_from_sources.py merge_with_existing and reseed_delta
+  for antibioticmech-infra-0001 (#1256), updated tests/test_structural_observations.py,
+  and updated INFRA_TASKS.md and reviews/workflow/latest.yaml.
+source_revision: 13877e8d28288acfff5c4880866a6c09758d2fdc
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/infra_snapshot.md
+  sha256: ac059552ec14b8604a42afca131875bfcd5c0a59bf2566b605451fb2c51270f9
+  kind: infra_snapshot
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  sha256: 86a41ea2ae1c052c1ae4672a34ba05b40316127a72fe5f6fad9c2bf4580a3661
+  kind: implementation_plan
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  sha256: 053eff83f89a8ee1f635346047446c453daa97e253e3eb3cc59bd2114183a5f9
+  kind: validation
+findings: []
+groups: []
+carry_forward_ids: []
+infra_tasks:
+- task_id: antibioticmech-infra-0001
+  issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1256
+  status: resolved
+  summary: Preserve curator-reviewed structural_observations across scripts/seed_from_sources.py
+    merge_with_existing runs
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/implementation_plan.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-06/revision-0001/validation.md
+  disposition: Implemented structural_observations preservation in scripts/seed_from_sources.py
+    (is_curated_structural_observation, _seeded_structural_reseed_view, merge_with_existing,
+    and reseed_delta) and expanded tests/test_structural_observations.py to cover
+    both unreviewed and curator-classified structural_observations across reseeding.
+scope_frozen_at: '2026-10-23T21:52:57Z'
