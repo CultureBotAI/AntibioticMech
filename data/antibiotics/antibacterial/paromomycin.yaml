@@ -335,3 +335,66 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph paromomycin_16s_rrna_decoding_site_stabilization
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:11587639).
+  llm_assisted: true
+causal_graphs:
+- graph_id: paromomycin_16s_rrna_decoding_site_stabilization
+  title: Paromomycin binds the 16S-rRNA decoding A site and stabilizes bulged A1492/A1493
+  description: Paromomycin binds in the major groove of the Escherichia coli 16S-rRNA
+    decoding A site via direct and water-mediated contacts and stabilizes the bulged-out
+    conformation of universally conserved adenines A1492 and A1493, perturbing ribosomal
+    decoding.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: paromomycin
+    label: paromomycin
+    node_type: COMPOUND
+    grounding: CHEBI:7934
+  - node_id: decoding_a_site_16s_rrna
+    label: 16S-rRNA decoding A-site oligonucleotide
+    node_type: RNA
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Escherichia coli 16S-rRNA decoding A-site RNA construct.
+  - node_id: paromomycin_bulged_a1492_a1493_state
+    label: paromomycin-bound decoding A site with bulged A1492 and A1493
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 2.5-angstrom crystal structure state showing direct and water-mediated
+      contacts that lock A1492/A1493 out of the helix.
+  - node_id: ribosomal_decoding_fidelity
+    label: bacterial 16S-rRNA decoding-site conformational fidelity
+    node_type: QUALITY
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Decoding-site RNA conformational control of codon-anticodon discrimination.
+  edges:
+  - subject: paromomycin
+    predicate: binds
+    object: paromomycin_bulged_a1492_a1493_state
+    description: Paromomycin binds the Escherichia coli 16S-rRNA decoding A site through
+      direct and water-mediated contacts.
+    evidence:
+    - reference: PMID:11587639
+      notes: A 2.5-angstrom crystal structure directly resolved paromomycin bound
+        to an oligonucleotide containing two E. coli 16S-rRNA decoding A sites.
+  - subject: decoding_a_site_16s_rrna
+    predicate: participates in
+    object: paromomycin_bulged_a1492_a1493_state
+    description: The 16S-rRNA decoding A-site pocket flips adenines A1492 and A1493
+      into the bulged conformation upon paromomycin binding.
+    evidence:
+    - reference: PMID:11587639
+      notes: The high-resolution RNA-paromomycin structure defined the direct and
+        water-bridged interactions stabilizing bulged A1492 and A1493.
+  - subject: paromomycin_bulged_a1492_a1493_state
+    predicate: decreases
+    object: ribosomal_decoding_fidelity
+    description: Stabilization of bulged A1492 and A1493 in the decoding A site perturbs
+      translational decoding accuracy.
+    evidence:
+    - reference: PMID:11587639
+      notes: The decoding-A-site cocrystal explained aminoglycoside-induced misreading
+        via stabilization of the A1492/A1493 bulged state.

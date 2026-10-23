@@ -150,3 +150,87 @@ curation_history:
     BK (P26662) genome polyprotein UniProtKB protein examples on the PRIMARY_LITERATURE
     hepatitis C virus NS3/4A protease molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph vaniprevir_hcv_ns3_4a_protease_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:19841155).
+  llm_assisted: true
+causal_graphs:
+- graph_id: vaniprevir_hcv_ns3_4a_protease_inhibition
+  title: Vaniprevir inhibits hepatitis C virus NS3/4A protease and replicon RNA replication
+  description: Vaniprevir (MK-7009) inhibits the hepatitis C virus NS3/4A protease
+    across multiple genotypes at subnanomolar potency and blocks cellular HCV replicon
+    RNA replication.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: vaniprevir
+    label: vaniprevir
+    node_type: COMPOUND
+    grounding: CHEBI:136047
+  - node_id: hcv_ns3_4a_protease
+    label: hepatitis C virus NS3/4A protease
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Hepatitis C virus NS3/4A protease complex; kept label-only with
+      HCV genotype 1a isolate H (UniProtKB:P26664) and genotype 1b isolate BK (UniProtKB:P26662)
+      polyprotein protein_examples.
+    protein_examples:
+    - uniprot_id: UniProtKB:P26664
+      protein_label: Genome polyprotein
+      taxon_id: NCBITaxon:63746
+      taxon_label: Hepatitis C virus genotype 1a (isolate H)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference HCV genotype 1a polyprotein encoding the NS3/4A protease inhibited
+        at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1a
+        reference isolate H context).
+    - uniprot_id: UniProtKB:P26662
+      protein_label: Genome polyprotein
+      taxon_id: NCBITaxon:11108
+      taxon_label: Hepatitis C virus genotype 1b (isolate BK)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference HCV genotype 1b polyprotein encoding the NS3/4A protease inhibited
+        at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1b
+        reference isolate BK context).
+  - node_id: hcv_ns3_4a_catalysis
+    label: HCV NS3/4A protease catalytic activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Subnanomolar-sensitive NS3/4A protease catalysis measured across
+      HCV genotypes 1a, 1b, 2a, and 2b.
+  - node_id: hcv_replicon_replication
+    label: hepatitis C virus replicon RNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: NS3/4A-dependent viral RNA replication measured in cell-based
+      HCV replicon assays.
+  edges:
+  - subject: vaniprevir
+    predicate: inhibits
+    object: hcv_ns3_4a_catalysis
+    description: Vaniprevir inhibits purified hepatitis C virus NS3/4A protease activity
+      across genotypes 1a, 1b, 2a, and 2b.
+    evidence:
+    - reference: PMID:19841155
+      notes: Purified enzyme assays measured subnanomolar inhibition of genotype 1a
+        and 1b and nanomolar inhibition of genotype 2a and 2b HCV NS3/4A proteases
+        by MK-7009 (vaniprevir).
+  - subject: hcv_ns3_4a_protease
+    predicate: enables
+    object: hcv_ns3_4a_catalysis
+    description: The HCV NS3/4A protease complex catalyzes viral polyprotein cleavage.
+    evidence:
+    - reference: PMID:19841155
+      notes: The preclinical characterization established selective inhibition of
+        viral NS3/4A protease over human proteases.
+  - subject: hcv_ns3_4a_catalysis
+    predicate: supports
+    object: hcv_replicon_replication
+    description: NS3/4A protease activity supports cellular HCV RNA replication.
+    evidence:
+    - reference: PMID:19841155
+      notes: Cell-based HCV replicon assays demonstrated nanomolar suppression of
+        viral replication by vaniprevir.

@@ -211,3 +211,93 @@ curation_history:
     crosswalk. Preserved all CARD and MIBiG assertions; no resistance allele, genome,
     or numerical AST assignment.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph bicozamycin_rho_atpase_transcription_termination_inhibition
+    (4 nodes, 4 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:15642265).
+  llm_assisted: true
+causal_graphs:
+- graph_id: bicozamycin_rho_atpase_transcription_termination_inhibition
+  title: Bicozamycin noncompetitively blocks Rho ATP hydrolysis and transcription
+    termination
+  description: Bicozamycin (bicyclomycin) binds Escherichia coli transcription termination
+    factor Rho adjacent to the ATP- and RNA-binding sites, occludes the nucleophilic
+    water required for ATP hydrolysis, and disrupts Rho-dependent bacterial transcription
+    termination.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bicozamycin
+    label: bicozamycin
+    node_type: COMPOUND
+    grounding: CHEBI:60584
+  - node_id: rho_termination_factor
+    label: Rho transcription termination factor
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Hexameric bacterial transcription termination factor Rho; kept
+      label-only with reviewed Escherichia coli K-12 Rho subunit protein_examples
+      (UniProtKB:P0AG30).
+    gene_symbols:
+    - rho
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AG30
+      protein_label: Transcription termination factor Rho
+      gene_symbol: rho
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-13'
+      role: Reviewed Rho reference (UniProt entry 164, sequence 1), mapped by PDB
+        1XPO entity 2. One Rho subunit, not the whole complex or a resistance allele.
+        K-12 is the UniProt reference scope, not an assigned experimental strain;
+        PDB reports the source species as Escherichia coli (NCBITaxon:562).
+  - node_id: rho_atp_hydrolysis
+    label: Rho-catalyzed ATP hydrolysis
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Nucleophilic water-attack step of ATP turnover at the Rho catalytic
+      pocket occluded in the bicyclomycin cocrystal.
+  - node_id: rho_dependent_transcription_termination
+    label: Rho-dependent bacterial transcription termination
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: ATP-powered transcript release by bacterial Rho termination factor.
+  edges:
+  - subject: bicozamycin
+    predicate: binds
+    object: rho_termination_factor
+    description: Bicozamycin binds transcription termination factor Rho next to the
+      ATP- and RNA-binding sites.
+    evidence:
+    - reference: PMID:15642265
+      notes: A 3.15-angstrom Escherichia coli Rho-bicyclomycin crystal structure localized
+        the antibiotic adjacent to the ATP- and RNA-binding sites.
+  - subject: bicozamycin
+    predicate: inhibits
+    object: rho_atp_hydrolysis
+    description: Bicozamycin noncompetitively inhibits Rho ATPase catalysis by excluding
+      the nucleophilic water molecule required for ATP hydrolysis.
+    evidence:
+    - reference: PMID:15642265
+      notes: The Rho-bicyclomycin cocrystal showed steric occlusion of the attack
+        water required for ATP hydrolysis.
+  - subject: rho_termination_factor
+    predicate: enables
+    object: rho_atp_hydrolysis
+    description: Rho catalyzes the RNA-dependent ATP hydrolysis step required for
+      helicase translocation.
+    evidence:
+    - reference: PMID:15642265
+      notes: The structural study mapped the ATP-hydrolysis active site within the
+        Rho hexamer.
+  - subject: rho_atp_hydrolysis
+    predicate: supports
+    object: rho_dependent_transcription_termination
+    description: ATP turnover by Rho drives Rho-dependent bacterial transcription
+      termination.
+    evidence:
+    - reference: PMID:15642265
+      notes: Occlusion of Rho ATP hydrolysis explains bicyclomycin disruption of Rho-dependent
+        transcription termination.

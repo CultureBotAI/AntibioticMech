@@ -232,3 +232,81 @@ curation_history:
     protein example on the PRIMARY_LITERATURE elongation factor G (EF-G) molecular
     target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph fusidic_acid_efg_ribosome_translocation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:15843024).
+  llm_assisted: true
+causal_graphs:
+- graph_id: fusidic_acid_efg_ribosome_translocation_inhibition
+  title: Fusidic acid traps elongation factor G to block bacterial protein synthesis
+  description: Fusidic acid targets bacterial elongation factor G (EF-G) interdomain
+    conformational dynamics coupled to GTP hydrolysis and stalls EF-G turnover during
+    ribosomal translation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: fusidic_acid
+    label: fusidic acid
+    node_type: COMPOUND
+    grounding: CHEBI:29013
+  - node_id: elongation_factor_g
+    label: elongation factor G (EF-G)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial ribosomal translocation GTPase EF-G; kept label-only
+      with Thermus thermophilus HB8 FusA (UniProtKB:P13551) protein_examples.
+    gene_symbols:
+    - fusA
+    protein_examples:
+    - uniprot_id: UniProtKB:P13551
+      protein_label: Elongation factor G
+      gene_symbol: fusA
+      taxon_id: NCBITaxon:300852
+      taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Ribosomal translocation GTPase EF-G whose fusidic acid-resistant and hypersensitive
+        mutant crystal structures define the interdomain conformational trapping mechanism
+        (PMID:15843024; T. thermophilus HB8 reference strain context).
+  - node_id: efg_interdomain_gtpase_cycle
+    label: EF-G interdomain conformational and GTPase cycle
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: GTP-affinity and interdomain switch dynamics altered in fusidic-acid-resistant
+      G16V and hypersensitive T84A EF-G mutants.
+  - node_id: bacterial_protein_synthesis
+    label: bacterial translation elongation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: EF-G-dependent ribosomal translocation during bacterial protein
+      synthesis.
+  edges:
+  - subject: fusidic_acid
+    predicate: inhibits
+    object: efg_interdomain_gtpase_cycle
+    description: Fusidic acid disrupts the EF-G conformational and GTP-hydrolysis
+      cycle on the ribosome.
+    evidence:
+    - reference: PMID:15843024
+      notes: Fusidic-acid sensitivity, GTP-affinity assays, and G16V/T84A mutant crystal
+        structures mapped the interdomain conformational mechanism of EF-G inhibition.
+  - subject: elongation_factor_g
+    predicate: enables
+    object: efg_interdomain_gtpase_cycle
+    description: Elongation factor G undergoes GTP-coupled interdomain rearrangements
+      required for ribosomal factor release.
+    evidence:
+    - reference: PMID:15843024
+      notes: Crystal structures and biochemical assays of Thermus thermophilus EF-G
+        mutants connected switch/interdomain flexibility to fusidic-acid sensitivity.
+  - subject: efg_interdomain_gtpase_cycle
+    predicate: supports
+    object: bacterial_protein_synthesis
+    description: Productive EF-G conformational cycling supports ongoing bacterial
+      translation elongation.
+    evidence:
+    - reference: PMID:15843024
+      notes: Inhibition of EF-G turnover by fusidic acid blocks bacterial translation
+        elongation.

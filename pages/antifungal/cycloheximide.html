@@ -258,6 +258,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Cycloheximide binds the eukaryotic 80S ribosome E site to block translation elongation <span class="pill">MECHANISTIC</span></h3>
+<p>Cycloheximide binds the 60S E-site pocket lined by 25S rRNA and ribosomal protein uL15 on the Saccharomyces cerevisiae 80S ribosome and inhibits eukaryotic translation elongation.</p><div class="table-scroll" role="region" aria-label="Nodes: cycloheximide_80s_ribosome_elongation_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — cycloheximide_80s_ribosome_elongation_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">cycloheximide</code></td>
+    <td>cycloheximide</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/cycloheximide.html"><code class="curie">CHEBI:27641</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">eukaryotic_80s_ribosome</code></td>
+    <td>eukaryotic 80S ribosome<br><span class="meta">Examples: Large ribosomal subunit protein uL15 (RPL28) <a href="https://www.uniprot.org/uniprotkb/P02406"><code class="curie">UniProtKB:P02406</code></a>, <em>Saccharomyces cerevisiae (strain ATCC 204508 / S288c)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_559292"><code class="curie">NCBITaxon:559292</code></a> <span class="pill">REVIEWED</span> — 60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines the cycloheximide binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor crystal structure (PMID:25209664, PDB 4U3U; S288c reference strain context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">cycloheximide_bound_80s_e_site</code></td>
+    <td>cycloheximide-bound 80S ribosomal E-site pocket</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">eukaryotic_translation_elongation</code></td>
+    <td>eukaryotic translation elongation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: cycloheximide_80s_ribosome_elongation_inhibition" tabindex="0">
+<table>
+  <caption>Edges — cycloheximide_80s_ribosome_elongation_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">cycloheximide</code></td>
+    <td>binds</td>
+    <td><code class="curie">cycloheximide_bound_80s_e_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25209664">PMID:25209664</a></span> <span class="meta">(High-resolution X-ray crystal structures of Saccharomyces cerevisiae 80S ribosomes localized cycloheximide in the 60S E site.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">eukaryotic_80s_ribosome</code></td>
+    <td>participates in</td>
+    <td><code class="curie">cycloheximide_bound_80s_e_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25209664">PMID:25209664</a></span> <span class="meta">(The yeast 80S-cycloheximide crystal structure defined drug contacts with 25S rRNA and uL15 (RPL28).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">cycloheximide_bound_80s_e_site</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">eukaryotic_translation_elongation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25209664">PMID:25209664</a></span> <span class="meta">(Paired structural and kinetic analyses demonstrated how E-site cycloheximide binding inhibits eukaryotic translation elongation.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -474,6 +544,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated Saccharomyces cerevisiae S288c 60S ribosomal protein uL15 / RPL28 (P02406) UniProtKB protein example on the PRIMARY_LITERATURE eukaryotic 80S ribosome molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph cycloheximide_80s_ribosome_elongation_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:25209664).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -494,7 +569,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

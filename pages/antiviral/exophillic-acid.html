@@ -151,6 +151,142 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Exophillic acid inhibits HIV-1 integrase strand-transfer catalysis <span class="pill">MECHANISTIC</span></h3>
+<p>Exophillic acid inhibits the catalytic strand-transfer reaction of HIV-1 integrase in vitro with an IC50 of 68 micromolar, blocking integrase-mediated viral DNA strand transfer.</p><div class="table-scroll" role="region" aria-label="Nodes: exophillic_acid_hiv1_integrase_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — exophillic_acid_hiv1_integrase_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">exophillic_acid</code></td>
+    <td>exophillic acid</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antiviral/exophillic-acid.html"><code class="curie">CHEBI:232062</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_integrase</code></td>
+    <td>HIV-1 integrase<br><span class="meta">Examples: Gag-Pol polyprotein (gag-pol) <a href="https://www.uniprot.org/uniprotkb/P04585"><code class="curie">UniProtKB:P04585</code></a>, <em>Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_11706"><code class="curie">NCBITaxon:11706</code></a> <span class="pill">REVIEWED</span> — HIV-1 Gag-Pol precursor encoding the integrase enzyme whose strand-transfer activity is inhibited by exophillic acid in vitro (PMID:15015729; HXB2 reference isolate context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_integrase_strand_transfer</code></td>
+    <td>HIV-1 integrase strand-transfer catalysis</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">retroviral_dna_strand_transfer_integration</code></td>
+    <td>HIV-1 viral DNA strand-transfer integration</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: exophillic_acid_hiv1_integrase_inhibition" tabindex="0">
+<table>
+  <caption>Edges — exophillic_acid_hiv1_integrase_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">exophillic_acid</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">hiv1_integrase_strand_transfer</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15015729">PMID:15015729</a></span> <span class="meta">(In-vitro HIV-1 integrase strand-transfer assays measured inhibition by exophillic acid with an IC50 of 68 micromolar.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_integrase</code></td>
+    <td>enables</td>
+    <td><code class="curie">hiv1_integrase_strand_transfer</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15015729">PMID:15015729</a></span> <span class="meta">(Purified HIV-1 integrase strand-transfer activity was assayed during isolation and characterization of exophillic acid.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_integrase_strand_transfer</code></td>
+    <td>supports</td>
+    <td><code class="curie">retroviral_dna_strand_transfer_integration</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15015729">PMID:15015729</a></span> <span class="meta">(The in-vitro strand-transfer assay directly measured integrase-catalyzed DNA joining inhibited by exophillic acid.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
+<h3>Exophillic acid blocks host NTCP-mediated HBV and HDV viral entry <span class="pill">MECHANISTIC</span></h3>
+<p>Exophillic acid interacts with the human hepatocyte receptor sodium taurocholate cotransporting polypeptide (NTCP), inhibiting its viral preS1-receptor function and blocking attachment and entry of hepatitis B and hepatitis D viruses.</p><div class="table-scroll" role="region" aria-label="Nodes: exophillic_acid_ntcp_hbv_hdv_entry_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — exophillic_acid_ntcp_hbv_hdv_entry_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">exophillic_acid</code></td>
+    <td>exophillic acid</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antiviral/exophillic-acid.html"><code class="curie">CHEBI:232062</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">host_ntcp_receptor</code></td>
+    <td>sodium taurocholate cotransporting polypeptide (NTCP)<br><span class="meta">Examples: Sodium/bile acid cotransporter (SLC10A1) <a href="https://www.uniprot.org/uniprotkb/Q14973"><code class="curie">UniProtKB:Q14973</code></a>, <em>Homo sapiens</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_9606"><code class="curie">NCBITaxon:9606</code></a> <span class="pill">REVIEWED</span> — Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor bound by exophillic acid to block HBV and HDV preS1-mediated viral attachment (PMID:35458494).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ntcp_pres1_receptor_binding</code></td>
+    <td>NTCP viral preS1 receptor binding and bile-acid cotransport</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hbv_hdv_pres1_viral_entry</code></td>
+    <td>NTCP-dependent HBV and HDV preS1 attachment and hepatocyte entry</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: exophillic_acid_ntcp_hbv_hdv_entry_inhibition" tabindex="0">
+<table>
+  <caption>Edges — exophillic_acid_ntcp_hbv_hdv_entry_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">exophillic_acid</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">ntcp_pres1_receptor_binding</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/35458494">PMID:35458494</a></span> <span class="meta">(Compound-NTCP interaction, bile-acid uptake, and preS1-probe binding assays established host NTCP engagement by exophillic acid.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">host_ntcp_receptor</code></td>
+    <td>enables</td>
+    <td><code class="curie">ntcp_pres1_receptor_binding</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/35458494">PMID:35458494</a></span> <span class="meta">(Receptor binding and bile-acid transport assays evaluated NTCP activity in the presence of exophillic acid.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ntcp_pres1_receptor_binding</code></td>
+    <td>supports</td>
+    <td><code class="curie">hbv_hdv_pres1_viral_entry</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/35458494">PMID:35458494</a></span> <span class="meta">(Primary human hepatocyte infection and preS1 attachment assays demonstrated inhibition of NTCP-dependent HBV and HDV entry by exophillic acid.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -188,6 +324,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) and human host SLC10A1/NTCP (Q14973) UniProtKB protein examples on the two PRIMARY_LITERATURE molecular targets of exophillic acid.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added 2 evidence-backed MECHANISTIC causal graphs (exophillic_acid_hiv1_integrase_inhibition and exophillic_acid_ntcp_hbv_hdv_entry_inhibition; 8 nodes, 6 edges) covering HIV-1 integrase strand-transfer inhibition (PMID:15015729) and host NTCP-mediated HBV/HDV entry blockade (PMID:35458494).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -208,7 +349,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

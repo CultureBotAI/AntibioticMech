@@ -151,6 +151,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Teixobactin binds the conserved pyrophosphate-sugar motif of lipid II and lipid III to block cell-wall synthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Teixobactin binds the conserved pyrophosphate-sugar motif shared by the peptidoglycan precursor lipid II and the wall-teichoic-acid precursor lipid III, sequestering both precursors and inhibiting bacterial cell-wall biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">teixobactin</code></td>
+    <td>teixobactin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/teixobactin.html"><code class="curie">CHEBI:84192</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">lipid_ii_and_lipid_iii_motif</code></td>
+    <td>conserved pyrophosphate-sugar motif of lipid II and lipid III</td>
+    <td class="meta">CHEMICAL</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">teixobactin_lipid_precursor_complex</code></td>
+    <td>teixobactin-bound lipid II and lipid III precursor complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">peptidoglycan_and_teichoic_acid_biosynthesis</code></td>
+    <td>bacterial peptidoglycan and wall-teichoic-acid biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition" tabindex="0">
+<table>
+  <caption>Edges — teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">teixobactin</code></td>
+    <td>binds</td>
+    <td><code class="curie">teixobactin_lipid_precursor_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25561178">PMID:25561178</a></span> <span class="meta">(Biochemical target-identification assays demonstrated direct teixobactin binding to the pyrophosphate-sugar motif of lipid II and lipid III.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">lipid_ii_and_lipid_iii_motif</code></td>
+    <td>participates in</td>
+    <td><code class="curie">teixobactin_lipid_precursor_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25561178">PMID:25561178</a></span> <span class="meta">(Precursor-binding and antagonism assays mapped interaction to the shared pyrophosphate-sugar region of lipid II and lipid III.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">teixobactin_lipid_precursor_complex</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">peptidoglycan_and_teichoic_acid_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25561178">PMID:25561178</a></span> <span class="meta">(Whole-cell and in-vitro biosynthesis assays showed coordinated inhibition of peptidoglycan and wall-teichoic-acid synthesis by teixobactin.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -197,6 +267,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-05 · codex · LLM-assisted</span>
     <p>Added reviewed PathwayMech relationships and any supported protein example from curation/pathway_links.yaml; organism and evidence limits are recorded in each basis.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:25561178).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -217,7 +292,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

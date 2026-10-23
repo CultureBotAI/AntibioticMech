@@ -1404,3 +1404,68 @@ curation_history:
   changes: Structured BioSample accessions on 20 activity_spectrum observation(s)
     where evidence notes already named exactly one accession.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph tetracycline_30s_a_site_trna_delivery_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:11163189).
+  llm_assisted: true
+causal_graphs:
+- graph_id: tetracycline_30s_a_site_trna_delivery_inhibition
+  title: Tetracycline binds the bacterial 30S ribosomal subunit to block aminoacyl-tRNA
+    delivery
+  description: Tetracycline binds discrete sites on the bacterial 30S ribosomal subunit,
+    including the primary A-site decoding pocket, and prevents stable accommodation
+    of aminoacyl-tRNA during bacterial protein synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: tetracycline
+    label: tetracycline
+    node_type: COMPOUND
+    grounding: CHEBI:27902
+  - node_id: bacterial_30s_ribosomal_subunit
+    label: 30S ribosomal subunit
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial 30S small ribosomal subunit containing the 16S rRNA
+      A-site tetracycline pocket.
+  - node_id: tetracycline_bound_30s_a_site
+    label: tetracycline-bound 30S ribosomal A-site complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Atomic-resolution 30S-tetracycline cocrystal state occupying
+      the aminoacyl-tRNA A site.
+  - node_id: aminoacyl_trna_delivery_and_translation
+    label: A-site aminoacyl-tRNA delivery and bacterial protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Delivery and accommodation of aminoacyl-tRNA into the ribosomal
+      A site during elongation.
+  edges:
+  - subject: tetracycline
+    predicate: binds
+    object: tetracycline_bound_30s_a_site
+    description: Tetracycline binds discrete 16S rRNA sites on the bacterial 30S ribosomal
+      subunit.
+    evidence:
+    - reference: PMID:11163189
+      notes: Atomic crystal structures of tetracycline bound to the 30S ribosomal
+        subunit localized the primary drug site in the A-site decoding pocket.
+  - subject: bacterial_30s_ribosomal_subunit
+    predicate: participates in
+    object: tetracycline_bound_30s_a_site
+    description: The bacterial 30S ribosomal subunit 16S rRNA helices form the tetracycline
+      binding sites.
+    evidence:
+    - reference: PMID:11163189
+      notes: The 30S-tetracycline cocrystal defined the 16S rRNA sugar-phosphate and
+        Mg2+-mediated drug contacts.
+  - subject: tetracycline_bound_30s_a_site
+    predicate: inhibits
+    object: aminoacyl_trna_delivery_and_translation
+    description: Tetracycline occupancy at the 30S A site sterically blocks aminoacyl-tRNA
+      delivery and inhibits bacterial protein synthesis.
+    evidence:
+    - reference: PMID:11163189
+      notes: Structural superposition showed steric clash between primary-site tetracycline
+        and A-site tRNA, explaining translation inhibition.

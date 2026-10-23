@@ -174,6 +174,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Thiostrepton targets the 70S ribosome GTPase-associated center to block EF-G and EF4 engagement <span class="pill">MECHANISTIC</span></h3>
+<p>Thiostrepton targets the GTPase-associated center of the bacterial 70S ribosome and prevents stable ribosome binding and ribosome-dependent GTP hydrolysis by elongation factors EF-G and EF4.</p><div class="table-scroll" role="region" aria-label="Nodes: thiostrepton_70s_gac_elongation_factor_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — thiostrepton_70s_gac_elongation_factor_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">thiostrepton</code></td>
+    <td>thiostrepton</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/thiostrepton.html"><code class="curie">CHEBI:29693</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosome_70s_gac</code></td>
+    <td>70S ribosome GTPase-associated center</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">thiostrepton_perturbed_gac</code></td>
+    <td>thiostrepton-modified 70S GTPase-associated center</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">efg_ef4_ribosome_gtpase_engagement</code></td>
+    <td>EF-G and EF4 stable 70S binding and ribosome-dependent GTP hydrolysis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: thiostrepton_70s_gac_elongation_factor_inhibition" tabindex="0">
+<table>
+  <caption>Edges — thiostrepton_70s_gac_elongation_factor_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">thiostrepton</code></td>
+    <td>binds</td>
+    <td><code class="curie">thiostrepton_perturbed_gac</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/21908407">PMID:21908407</a></span> <span class="meta">(70S binding, GTPase, EF-G domain IV/V truncation, and footprinting assays localized thiostrepton action to the 70S GTPase-associated center.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosome_70s_gac</code></td>
+    <td>participates in</td>
+    <td><code class="curie">thiostrepton_perturbed_gac</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/21908407">PMID:21908407</a></span> <span class="meta">(Truncation of EF-G domains IV and V rendered factor activity insensitive to thiostrepton on 70S ribosomes.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">thiostrepton_perturbed_gac</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">efg_ef4_ribosome_gtpase_engagement</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/21908407">PMID:21908407</a></span> <span class="meta">(Submicromolar thiostrepton abolished stable 70S binding and uncoupled GTPase activity of full-length EF-G and EF4.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -215,6 +285,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph thiostrepton_70s_gac_elongation_factor_inhibition (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:21908407).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -235,7 +310,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

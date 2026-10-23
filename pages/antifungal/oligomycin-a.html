@@ -139,6 +139,78 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Oligomycin A binds the mitochondrial F_O ATP synthase c-ring to block proton-coupled ATP synthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Oligomycin A binds across adjacent subunit-c protomers at the proton-translocating glutamate face of the yeast mitochondrial F_O ATP synthase c10-ring, blocking c-ring rotation and inhibiting mitochondrial ATP synthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: oligomycin_a_atp_synthase_c_ring_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — oligomycin_a_atp_synthase_c_ring_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">oligomycin_a</code></td>
+    <td>oligomycin A</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/oligomycin-a.html"><code class="curie">CHEBI:28285</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">mitochondrial_fo_c_ring</code></td>
+    <td>mitochondrial F_O ATP synthase c-ring<br><span class="meta">Examples: ATP synthase subunit 9, mitochondrial (OLI1) <a href="https://www.uniprot.org/uniprotkb/P61829"><code class="curie">UniProtKB:P61829</code></a>, <em>Saccharomyces cerevisiae (strain ATCC 204508 / S288c)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_559292"><code class="curie">NCBITaxon:559292</code></a> <span class="pill">REVIEWED</span> — Proton-translocating F_O c-ring subunit (Subunit 9 / Atp9) bound at the essential carboxyl-protonation face in the S. cerevisiae c10-ring oligomycin crystal structure (PMID:22869738, PDB 4F4S; S288c reference strain context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">oligomycin_bound_c_ring_proton_site</code></td>
+    <td>oligomycin-locked F_O c-ring proton-binding site</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">mitochondrial_atp_synthesis</code></td>
+    <td>proton-coupled mitochondrial ATP synthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: oligomycin_a_atp_synthase_c_ring_inhibition" tabindex="0">
+<table>
+  <caption>Edges — oligomycin_a_atp_synthase_c_ring_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">oligomycin_a</code></td>
+    <td>binds</td>
+    <td><code class="curie">oligomycin_bound_c_ring_proton_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22869738">PMID:22869738</a></span> <span class="meta">(A 1.9-angstrom crystal structure resolved oligomycin bound to the Saccharomyces cerevisiae mitochondrial ATP synthase c10-ring.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/29650704">PMID:29650704</a></span> <span class="meta">(A 3.8-angstrom cryo-EM structure resolved oligomycin bound to intact mitochondrial ATP synthase in a lipid bilayer.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">mitochondrial_fo_c_ring</code></td>
+    <td>participates in</td>
+    <td><code class="curie">oligomycin_bound_c_ring_proton_site</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22869738">PMID:22869738</a></span> <span class="meta">(The c10-ring cocrystal mapped oligomycin contacts across two adjacent subunit-c molecules.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">oligomycin_bound_c_ring_proton_site</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">mitochondrial_atp_synthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22869738">PMID:22869738</a></span> <span class="meta">(Oligomycin binding at the proton-translocating carboxyl face explains blockade of proton-coupled ATP synthesis.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/29650704">PMID:29650704</a></span> <span class="meta">(Full-complex cryo-EM confirmed the oligomycin-inhibited conformation of mitochondrial ATP synthase.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -176,6 +248,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated Saccharomyces cerevisiae S288c mitochondrial ATP synthase subunit 9 / OLI1 (P61829) UniProtKB protein example on the PRIMARY_LITERATURE mitochondrial F_O ATP synthase c-ring molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph oligomycin_a_atp_synthase_c_ring_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:22869738, PMID:29650704).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -196,7 +273,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

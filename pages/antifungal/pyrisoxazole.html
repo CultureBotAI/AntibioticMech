@@ -185,6 +185,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Pyrisoxazole inhibits fungal CYP51-dependent ergosterol biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Pyrisoxazole acts as a sterol 14-alpha-demethylase (CYP51) inhibitor in Botrytis cinerea, where CYP51 mutations and overexpression govern resistance and demethylase inhibition blocks fungal ergosterol biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: pyrisoxazole_cyp51_ergosterol_pathway_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — pyrisoxazole_cyp51_ergosterol_pathway_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">pyrisoxazole</code></td>
+    <td>pyrisoxazole</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/pyrisoxazole.html"><code class="curie">CHEBI:83823</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_cyp51</code></td>
+    <td>fungal CYP51 sterol 14-alpha-demethylase<br><span class="meta">Examples: Sterol 14-alpha-demethylase (cyp51) <a href="https://www.uniprot.org/uniprotkb/A0A7G4P320"><code class="curie">UniProtKB:A0A7G4P320</code></a>, <em>Botrytis cinerea</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_40559"><code class="curie">NCBITaxon:40559</code></a> <span class="pill plain">UNREVIEWED</span> — Botrytis cinerea ergosterol-biosynthesis CYP51 enzyme assayed for stereoselective binding and inhibition by pyrisoxazole isomers (PMID:32714305; species-level reference sequence context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">sterol_14_alpha_demethylation</code></td>
+    <td>CYP51-dependent sterol 14-alpha-demethylation</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_ergosterol_biosynthesis</code></td>
+    <td>fungal ergosterol biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: pyrisoxazole_cyp51_ergosterol_pathway_inhibition" tabindex="0">
+<table>
+  <caption>Edges — pyrisoxazole_cyp51_ergosterol_pathway_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">pyrisoxazole</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">sterol_14_alpha_demethylation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(Susceptibility testing, DMI-specific cross-resistance, CYP51 sequencing, and expression analyses in Botrytis cinerea established CYP51-mediated demethylation as the target pathway.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_cyp51</code></td>
+    <td>enables</td>
+    <td><code class="curie">sterol_14_alpha_demethylation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(Resistant Botrytis cinerea mutants carried CYP51 point mutations and elevated CYP51 expression.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">sterol_14_alpha_demethylation</code></td>
+    <td>supports</td>
+    <td><code class="curie">fungal_ergosterol_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/32714305">PMID:32714305</a></span> <span class="meta">(The study characterized pyrisoxazole as a sterol 14-alpha-demethylase inhibitor blocking fungal ergosterol biosynthesis.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -231,6 +301,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated Botrytis cinerea CYP51 sterol 14-alpha-demethylase (A0A7G4P320) UniProtKB protein example on the PRIMARY_LITERATURE fungal CYP51 sterol 14-alpha-demethylase molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph pyrisoxazole_cyp51_ergosterol_pathway_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:32714305).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -251,7 +326,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

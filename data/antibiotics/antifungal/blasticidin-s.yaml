@@ -141,6 +141,12 @@ curation_history:
     TaxID, genome, variant or quantitative endpoint added. Whole-record review remains
     open.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph blasticidin_s_70s_p_site_trna_termination_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:23824292).
+  llm_assisted: true
 resistance_mechanisms:
 - mechanism_type: REDUCED_PERMEABILITY
   label: oppA loss associated with blasticidin S resistance in laboratory E. coli
@@ -276,3 +282,63 @@ activity_spectrum:
       Conversion to mg/L is numerically identical. The MG1655 comparator is reported
       as a range (3-4 ug/mL), not a single value. No clinical breakpoint or S/R category
       is assigned.
+causal_graphs:
+- graph_id: blasticidin_s_70s_p_site_trna_termination_inhibition
+  title: Blasticidin S bends P-site tRNA on the 70S ribosome to inhibit translation
+    termination
+  description: Blasticidin S binds the 50S P-site loop of the 70S ribosome-tRNA complex,
+    stabilizes a deformed P-site tRNA conformation toward the A site, and strongly
+    inhibits release-factor-mediated peptidyl-tRNA hydrolysis during translation termination.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: blasticidin_s
+    label: blasticidin S
+    node_type: COMPOUND
+    grounding: CHEBI:15353
+  - node_id: ribosome_70s_p_site_trna_complex
+    label: 70S ribosome P-site tRNA complex
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 70S ribosome complex containing P-site tRNA and 23S rRNA P-loop
+      nucleotides G2251/G2252.
+  - node_id: deformed_p_site_trna_conformation
+    label: blasticidin S-stabilized deformed P-site tRNA CCA conformation
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 3.4-angstrom crystal structure and smFRET-verified distorted
+      P-site tRNA CCA-end geometry.
+  - node_id: release_factor_peptidyl_trna_hydrolysis
+    label: release-factor-mediated translation termination and peptide-bond formation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Release-factor catalysis of peptidyl-tRNA hydrolysis and ribosomal
+      peptide-bond formation.
+  edges:
+  - subject: blasticidin_s
+    predicate: binds
+    object: deformed_p_site_trna_conformation
+    description: Blasticidin S binds the 70S ribosome P site and stabilizes a deformed
+      P-site tRNA conformation.
+    evidence:
+    - reference: PMID:23824292
+      notes: A 3.4-angstrom crystal structure and single-molecule FRET assays showed
+        blasticidin S stabilizing a distorted P-site tRNA conformation on the 70S
+        ribosome.
+  - subject: ribosome_70s_p_site_trna_complex
+    predicate: participates in
+    object: deformed_p_site_trna_conformation
+    description: The 70S ribosome P-site tRNA complex undergoes CCA-end distortion
+      upon blasticidin S binding.
+    evidence:
+    - reference: PMID:23824292
+      notes: The 70S-tRNA-blasticidin S crystal structure resolved drug base-pairing
+        with G2252 and bending of the P-site tRNA 3' CCA end.
+  - subject: deformed_p_site_trna_conformation
+    predicate: inhibits
+    object: release_factor_peptidyl_trna_hydrolysis
+    description: Distortion of the P-site tRNA CCA end strongly inhibits release-factor
+      peptidyl-tRNA hydrolysis and more weakly inhibits peptide-bond formation.
+    evidence:
+    - reference: PMID:23824292
+      notes: Biochemical release-factor and dipeptide-formation assays demonstrated
+        potent inhibition of translation termination and weaker inhibition of elongation.

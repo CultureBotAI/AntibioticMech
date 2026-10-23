@@ -128,3 +128,84 @@ curation_history:
     example on the PRIMARY_LITERATURE SARS-CoV-2 main protease (Mpro; 3CLpro) molecular
     target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph nirmatrelvir_sars_cov_2_mpro_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:34687004, PMID:35182772).
+  llm_assisted: true
+causal_graphs:
+- graph_id: nirmatrelvir_sars_cov_2_mpro_inhibition
+  title: Nirmatrelvir binds SARS-CoV-2 main protease Mpro to block viral polyprotein
+    cleavage
+  description: Nirmatrelvir (PF-07321332) binds the catalytic cleft of SARS-CoV-2
+    main protease (Mpro / 3CLpro) and inhibits proteolytic processing across wild-type
+    and variant Mpro enzymes.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: nirmatrelvir
+    label: nirmatrelvir
+    node_type: COMPOUND
+    grounding: CHEBI:170007
+  - node_id: sars_cov_2_mpro
+    label: SARS-CoV-2 main protease (Mpro; 3CLpro)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: SARS-CoV-2 nsp5 main protease (Mpro / 3CLpro); kept label-only
+      with SARS-CoV-2 replicase polyprotein 1ab (UniProtKB:P0DTD1) protein_examples.
+    gene_symbols:
+    - rep
+    protein_examples:
+    - uniprot_id: UniProtKB:P0DTD1
+      protein_label: Replicase polyprotein 1ab
+      gene_symbol: rep
+      taxon_id: NCBITaxon:2697049
+      taxon_label: Severe acute respiratory syndrome coronavirus 2
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp5 3C-like main protease
+        (Mpro/3CLpro) crystallized with PF-07321332 (nirmatrelvir) and assayed across
+        lineage variants (PMID:34687004, PDB 7RF7; PMID:35182772).
+  - node_id: nirmatrelvir_bound_mpro_active_site
+    label: nirmatrelvir-bound SARS-CoV-2 Mpro catalytic site
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Crystal-structure-resolved inhibitor-Mpro active-site complex.
+  - node_id: mpro_polyprotein_proteolysis
+    label: SARS-CoV-2 Mpro proteolytic activity and viral replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 3C-like protease cleavage required for coronavirus replicase
+      maturation.
+  edges:
+  - subject: nirmatrelvir
+    predicate: binds
+    object: nirmatrelvir_bound_mpro_active_site
+    description: Nirmatrelvir binds the catalytic site of SARS-CoV-2 main protease
+      Mpro.
+    evidence:
+    - reference: PMID:34687004
+      notes: X-ray crystallography directly resolved PF-07321332 (nirmatrelvir) bound
+        in the SARS-CoV-2 Mpro active site.
+  - subject: sars_cov_2_mpro
+    predicate: participates in
+    object: nirmatrelvir_bound_mpro_active_site
+    description: SARS-CoV-2 Mpro catalytic residues form the active-site pocket occupied
+      by nirmatrelvir.
+    evidence:
+    - reference: PMID:34687004
+      notes: The crystal structure defined the active-site interactions between SARS-CoV-2
+        Mpro and nirmatrelvir.
+  - subject: nirmatrelvir_bound_mpro_active_site
+    predicate: inhibits
+    object: mpro_polyprotein_proteolysis
+    description: Active-site binding of nirmatrelvir potently inhibits SARS-CoV-2
+      Mpro proteolytic catalysis.
+    evidence:
+    - reference: PMID:34687004
+      notes: Biochemical and antiviral characterization established potent Mpro inhibition
+        by nirmatrelvir.
+    - reference: PMID:35182772
+      notes: Enzyme kinetics confirmed potent nirmatrelvir inhibition across wild-type
+        SARS-CoV-2 Mpro and six lineage-associated Mpro variants.

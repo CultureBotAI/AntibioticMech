@@ -571,6 +571,13 @@ curation_history:
     from curation/pathway_links.yaml; organism and evidence limits are recorded in
     each basis.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph fosfomycin_mura_cys115_cell_wall_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:8994972).
+  llm_assisted: true
 related_records:
 - corpus: PathwayMech
   identifier: WikiPathways:WP5060
@@ -579,3 +586,72 @@ related_records:
     E. coli pathway contains MurA (UniProtKB:P0A749); this links the target to its
     pathway, not the drug to every step.
   source_version: aa305727458c44ab05614901334540e2c87a9f3a
+causal_graphs:
+- graph_id: fosfomycin_mura_cys115_cell_wall_inhibition
+  title: Fosfomycin covalently modifies MurA Cys115 to block peptidoglycan biosynthesis
+  description: Fosfomycin forms a covalent adduct with active-site Cys115 of UDP-N-acetylglucosamine
+    enolpyruvyl transferase (MurA) in the presence of UDP-GlcNAc, inhibiting enolpyruvyl
+    transfer and blocking bacterial peptidoglycan biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: fosfomycin
+    label: fosfomycin
+    node_type: COMPOUND
+    grounding: CHEBI:28915
+  - node_id: mura_transferase
+    label: UDP-N-acetylglucosamine enolpyruvyl transferase (MurA)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial MurA enzyme; kept label-only with Escherichia coli
+      K-12 MurA (UniProtKB:P0A749) protein_examples.
+    gene_symbols:
+    - murA
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A749
+      protein_label: UDP-N-acetylglucosamine 1-carboxyvinyltransferase
+      gene_symbol: murA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-05'
+      role: MurA cocrystallized with fosfomycin; UniProtKB:P0A749 maps PMID:8994972
+        to PDB:1UAE. The parent target retains the primary binding evidence.
+  - node_id: mura_cys115_covalent_adduct
+    label: covalently inactivated MurA-Cys115-fosfomycin complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ternary MurA-UDP-GlcNAc-fosfomycin complex with covalent attachment
+      at Cys115.
+  - node_id: peptidoglycan_biosynthesis
+    label: bacterial peptidoglycan biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: First committed cell-wall peptidoglycan synthesis pathway step
+      catalyzed by MurA.
+  edges:
+  - subject: fosfomycin
+    predicate: binds
+    object: mura_cys115_covalent_adduct
+    description: Fosfomycin covalently modifies active-site Cys115 of MurA alongside
+      bound UDP-GlcNAc.
+    evidence:
+    - reference: PMID:8994972
+      notes: A 1.8-angstrom Escherichia coli MurA cocrystal resolved fosfomycin covalently
+        attached to Cys115 alongside UDP-GlcNAc.
+  - subject: mura_transferase
+    predicate: participates in
+    object: mura_cys115_covalent_adduct
+    description: MurA provides the catalytic Cys115 nucleophile modified by fosfomycin.
+    evidence:
+    - reference: PMID:8994972
+      notes: The E. coli MurA crystal structure defined the active-site Cys115 adduct
+        geometry.
+  - subject: mura_cys115_covalent_adduct
+    predicate: inhibits
+    object: peptidoglycan_biosynthesis
+    description: Covalent inactivation of MurA blocks the first committed step of
+      bacterial peptidoglycan biosynthesis.
+    evidence:
+    - reference: PMID:8994972
+      notes: Covalent modification of MurA Cys115 inactivates enolpyruvyl transfer
+        in the peptidoglycan pathway.

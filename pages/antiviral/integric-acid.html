@@ -133,6 +133,77 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Integric acid inhibits HIV-1 integrase 3&#39;-end processing and strand-transfer catalysis <span class="pill">MECHANISTIC</span></h3>
+<p>Integric acid inhibits the catalytic 3&#39;-end processing, strand-transfer, and disintegration activities of HIV-1 integrase across purified enzyme, stable-complex, and pre-integration-complex assays.</p><div class="table-scroll" role="region" aria-label="Nodes: integric_acid_hiv1_integrase_catalytic_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — integric_acid_hiv1_integrase_catalytic_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">integric_acid</code></td>
+    <td>integric acid</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antiviral/integric-acid.html"><code class="curie">CHEBI:66081</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_integrase</code></td>
+    <td>HIV-1 integrase<br><span class="meta">Examples: Gag-Pol polyprotein (gag-pol) <a href="https://www.uniprot.org/uniprotkb/P04585"><code class="curie">UniProtKB:P04585</code></a>, <em>Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_11706"><code class="curie">NCBITaxon:11706</code></a> <span class="pill">REVIEWED</span> — HIV-1 Gag-Pol precursor encoding the integrase enzyme whose 3&#39;-end processing, strand-transfer, and disintegration activities are inhibited by integric acid (PMID:10335400; PMID:10698443; HXB2 reference isolate context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">integrase_3prime_and_strand_transfer_catalysis</code></td>
+    <td>HIV-1 integrase 3&#39;-end processing and strand-transfer reactions</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">retroviral_dna_integration</code></td>
+    <td>HIV-1 viral DNA integration reaction</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: integric_acid_hiv1_integrase_catalytic_inhibition" tabindex="0">
+<table>
+  <caption>Edges — integric_acid_hiv1_integrase_catalytic_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">integric_acid</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">integrase_3prime_and_strand_transfer_catalysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10335400">PMID:10335400</a></span> <span class="meta">(Biochemical assays showed low-micromolar inhibition of HIV-1 integrase 3&#39;-end processing, strand transfer, disintegration, and pre-integration complexes by integric acid.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10698443">PMID:10698443</a></span> <span class="meta">(Structure-activity studies of integric acid analogues confirmed inhibition of HIV-1 integrase 3&#39;-processing and strand transfer.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">hiv1_integrase</code></td>
+    <td>enables</td>
+    <td><code class="curie">integrase_3prime_and_strand_transfer_catalysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10335400">PMID:10335400</a></span> <span class="meta">(Both full-length HIV-1 integrase and the catalytic core domain catalyzed the reactions inhibited by integric acid.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">integrase_3prime_and_strand_transfer_catalysis</code></td>
+    <td>supports</td>
+    <td><code class="curie">retroviral_dna_integration</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/10335400">PMID:10335400</a></span> <span class="meta">(Integric acid blocked viral DNA integration catalyzed by assembled HIV-1 complexes and pre-integration complexes.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -170,6 +241,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-18 · antigravity · LLM-assisted</span>
     <p>Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on the PRIMARY_LITERATURE HIV-1 integrase catalytic activities molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph integric_acid_hiv1_integrase_catalytic_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:10335400, PMID:10698443).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -190,7 +266,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f258219e4b99</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>1623b02ae8cc</code>, 2969 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

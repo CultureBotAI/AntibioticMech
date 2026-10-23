@@ -7071,3 +7071,92 @@ curation_history:
     RpoB (P9WGY9) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA
     polymerase beta-subunit channel molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph rifampicin_rnap_beta_channel_transcription_occlusion
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:11290327).
+  llm_assisted: true
+causal_graphs:
+- graph_id: rifampicin_rnap_beta_channel_transcription_occlusion
+  title: Rifampicin occludes the bacterial RNA polymerase beta-subunit DNA/RNA channel
+  description: Rifampicin binds a conserved pocket on the bacterial RNA polymerase
+    beta subunit (RpoB) within the DNA/RNA exit channel and sterically blocks nascent
+    RNA extension beyond two to three nucleotides.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rifampicin
+    label: rifampicin
+    node_type: COMPOUND
+    grounding: CHEBI:28077
+  - node_id: rnap_beta_subunit_channel
+    label: bacterial RNA polymerase beta-subunit channel
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial core RNA polymerase beta-subunit DNA/RNA channel; kept
+      label-only with Thermus aquaticus RpoB (UniProtKB:Q9KWU6) and Mycobacterium
+      tuberculosis RpoB (UniProtKB:P9WGY9) protein_examples.
+    gene_symbols:
+    - rpoB
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9KWU6
+      protein_label: DNA-directed RNA polymerase subunit beta
+      gene_symbol: rpoB
+      taxon_id: NCBITaxon:271
+      taxon_label: Thermus aquaticus
+      entry_status: UNREVIEWED
+      retrieved_on: '2026-10-17'
+      role: Thermus aquaticus core RNA polymerase beta subunit directly bound by rifampicin
+        within the DNA/RNA exit channel in the cocrystal structure (PMID:11290327,
+        PDB 1I6V).
+    - uniprot_id: UniProtKB:P9WGY9
+      protein_label: DNA-directed RNA polymerase subunit beta
+      gene_symbol: rpoB
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Primary antimycobacterial target RpoB subunit in M. tuberculosis whose
+        conserved rifampicin-resistance cluster maps to the PMID:11290327 beta-subunit
+        binding pocket (H37Rv reference strain context).
+  - node_id: rifampicin_occluded_rna_exit_channel
+    label: rifampicin-occluded RNA polymerase DNA/RNA channel
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cocrystal-resolved RpoB pocket occupancy ~12 angstrom from the
+      active site that sterically collides with 2-3 nt nascent transcripts.
+  - node_id: nascent_rna_elongation
+    label: bacterial nascent RNA transcript extension
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Promoter-proximal RNA chain extension into productive bacterial
+      transcription.
+  edges:
+  - subject: rifampicin
+    predicate: binds
+    object: rifampicin_occluded_rna_exit_channel
+    description: Rifampicin binds inside the bacterial RNA polymerase beta-subunit
+      DNA/RNA channel.
+    evidence:
+    - reference: PMID:11290327
+      notes: A Thermus aquaticus core RNA polymerase cocrystal directly resolved rifampicin
+        bound in the beta-subunit DNA/RNA channel.
+  - subject: rnap_beta_subunit_channel
+    predicate: participates in
+    object: rifampicin_occluded_rna_exit_channel
+    description: The conserved RpoB beta-subunit pocket forms the rifampicin binding
+      site along the nascent RNA path.
+    evidence:
+    - reference: PMID:11290327
+      notes: The crystal structure mapped the 12 RpoB residues directly contacting
+        rifampicin.
+  - subject: rifampicin_occluded_rna_exit_channel
+    predicate: inhibits
+    object: nascent_rna_elongation
+    description: Channel occupancy by rifampicin sterically blocks nascent RNA extension
+      beyond two to three nucleotides.
+    evidence:
+    - reference: PMID:11290327
+      notes: Structural modeling and transcription assays established steric occlusion
+        of growing RNA chains after 2-3 nucleotides.

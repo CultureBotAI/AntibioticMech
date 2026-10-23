@@ -5734,3 +5734,69 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: activity_membership_collections (CRYPTIC 3.4.0). Upstream
     retrieval date 2026-08-30, unchanged.'
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph linezolid_50s_ptc_a_site_trna_positioning_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:18757750).
+  llm_assisted: true
+causal_graphs:
+- graph_id: linezolid_50s_ptc_a_site_trna_positioning_inhibition
+  title: Linezolid binds the 50S peptidyl-transferase-center A-site pocket to perturb
+    tRNA positioning
+  description: Linezolid binds the A-site cleft of the bacterial 50S ribosomal peptidyl-transferase
+    center, stabilizes conserved 23S rRNA nucleotide U2585 in a nonproductive orientation
+    that overlaps the aminoacyl moiety of A-site tRNA, and blocks bacterial protein
+    synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: linezolid
+    label: linezolid
+    node_type: COMPOUND
+    grounding: CHEBI:63607
+  - node_id: ptc_a_site_pocket
+    label: 50S ribosomal peptidyl-transferase-center A-site pocket
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: A-site cleft of the bacterial 50S ribosomal peptidyl-transferase
+      center.
+  - node_id: linezolid_u2585_nonproductive_state
+    label: linezolid-bound PTC A-site pocket with nonproductive U2585 orientation
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cocrystal-resolved Deinococcus radiodurans 50S state where linezolid
+      stabilizes U2585 and collides with A-site aminoacyl-tRNA.
+  - node_id: a_site_trna_accommodation_and_translation
+    label: A-site aminoacyl-tRNA positioning and bacterial protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Productive A-site tRNA accommodation at the peptidyl-transferase
+      center.
+  edges:
+  - subject: linezolid
+    predicate: binds
+    object: linezolid_u2585_nonproductive_state
+    description: Linezolid binds the A-site pocket of the bacterial 50S peptidyl-transferase
+      center.
+    evidence:
+    - reference: PMID:18757750
+      notes: An X-ray crystal structure of linezolid bound to the Deinococcus radiodurans
+        50S subunit localized the drug in the PTC A-site pocket.
+  - subject: ptc_a_site_pocket
+    predicate: participates in
+    object: linezolid_u2585_nonproductive_state
+    description: Conserved 23S rRNA nucleotides of the PTC A-site pocket, including
+      U2585, form the linezolid binding site.
+    evidence:
+    - reference: PMID:18757750
+      notes: The 50S-linezolid crystal structure showed stabilization of 23S rRNA
+        nucleotide U2585 in a nonproductive conformation.
+  - subject: linezolid_u2585_nonproductive_state
+    predicate: inhibits
+    object: a_site_trna_accommodation_and_translation
+    description: Linezolid occupancy and U2585 stabilization perturb A-site aminoacyl-tRNA
+      positioning and inhibit bacterial translation.
+    evidence:
+    - reference: PMID:18757750
+      notes: Superposition with tRNA substrates showed steric overlap with the A-site
+        aminoacyl group, explaining translation inhibition.

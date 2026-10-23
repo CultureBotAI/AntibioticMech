@@ -150,3 +150,81 @@ curation_history:
     PRIMARY_LITERATURE 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR) molecular
     target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph fosmidomycin_dxr_mep_isoprenoid_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:17554164).
+  llm_assisted: true
+causal_graphs:
+- graph_id: fosmidomycin_dxr_mep_isoprenoid_inhibition
+  title: Fosmidomycin inhibits DXR in the bacterial MEP isoprenoid biosynthesis pathway
+  description: Fosmidomycin coordinates the catalytic Mg2+ ion in the active site
+    of NADPH-bound 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR), ordering
+    the active-site loop and inhibiting non-mevalonate (MEP) isoprenoid biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: fosmidomycin
+    label: fosmidomycin
+    node_type: COMPOUND
+    grounding: CHEBI:443725
+  - node_id: dxr_reductoisomerase
+    label: 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial MEP-pathway DXR enzyme; kept label-only with Escherichia
+      coli K-12 DXR (UniProtKB:P45568) protein_examples.
+    gene_symbols:
+    - dxr
+    protein_examples:
+    - uniprot_id: UniProtKB:P45568
+      protein_label: 1-deoxy-D-xylulose 5-phosphate reductoisomerase
+      gene_symbol: dxr
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Non-mevalonate isoprenoid pathway enzyme crystallized in a ternary complex
+        with NADPH and fosmidomycin in E. coli (PMID:17554164; K-12 reference strain
+        context).
+  - node_id: dxr_mg_nadph_fosmidomycin_complex
+    label: quaternary DXR-Mg2+-NADPH-fosmidomycin inhibited complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Closed active-site loop quaternary complex resolved by 2.2-angstrom
+      X-ray crystallography.
+  - node_id: mep_isoprenoid_biosynthesis
+    label: non-mevalonate (MEP) isoprenoid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 2-C-methyl-D-erythritol 4-phosphate synthesis step catalyzed
+      by DXR.
+  edges:
+  - subject: fosmidomycin
+    predicate: binds
+    object: dxr_mg_nadph_fosmidomycin_complex
+    description: Fosmidomycin binds the Mg2+- and NADPH-occupied active site of Escherichia
+      coli DXR.
+    evidence:
+    - reference: PMID:17554164
+      notes: A 2.2-angstrom E. coli DXR quaternary crystal structure resolved fosmidomycin,
+        Mg2+, and NADPH with an ordered active-site loop.
+  - subject: dxr_reductoisomerase
+    predicate: participates in
+    object: dxr_mg_nadph_fosmidomycin_complex
+    description: DXR forms the quaternary inhibitor complex that traps the flexible
+      catalytic loop.
+    evidence:
+    - reference: PMID:17554164
+      notes: The crystal structure established how DXR active-site residues and Mg2+
+        coordinate fosmidomycin.
+  - subject: dxr_mg_nadph_fosmidomycin_complex
+    predicate: inhibits
+    object: mep_isoprenoid_biosynthesis
+    description: Active-site occupancy by fosmidomycin blocks DXR reductoisomerase
+      catalysis in the MEP isoprenoid pathway.
+    evidence:
+    - reference: PMID:17554164
+      notes: Structural characterization of the quaternary DXR-Mg2+-NADPH-fosmidomycin
+        complex defined the inhibited state of the MEP pathway enzyme.

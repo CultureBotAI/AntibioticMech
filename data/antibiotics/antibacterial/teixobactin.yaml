@@ -142,6 +142,12 @@ curation_history:
     from curation/pathway_links.yaml; organism and evidence limits are recorded in
     each basis.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:25561178).
+  llm_assisted: true
 related_records:
 - corpus: PathwayMech
   identifier: WikiPathways:WP5060
@@ -151,3 +157,62 @@ related_records:
     assert teixobactin activity against E. coli, a protein target, or equivalence
     of lipid-III and peptidoglycan routes.
   source_version: aa305727458c44ab05614901334540e2c87a9f3a
+causal_graphs:
+- graph_id: teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition
+  title: Teixobactin binds the conserved pyrophosphate-sugar motif of lipid II and
+    lipid III to block cell-wall synthesis
+  description: Teixobactin binds the conserved pyrophosphate-sugar motif shared by
+    the peptidoglycan precursor lipid II and the wall-teichoic-acid precursor lipid
+    III, sequestering both precursors and inhibiting bacterial cell-wall biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: teixobactin
+    label: teixobactin
+    node_type: COMPOUND
+    grounding: CHEBI:84192
+  - node_id: lipid_ii_and_lipid_iii_motif
+    label: conserved pyrophosphate-sugar motif of lipid II and lipid III
+    node_type: CHEMICAL
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Pyrophosphate-sugar precursor motif shared by bacterial peptidoglycan
+      precursor lipid II and teichoic-acid precursor lipid III.
+  - node_id: teixobactin_lipid_precursor_complex
+    label: teixobactin-bound lipid II and lipid III precursor complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Stoichiometric antibiotic-precursor complexes formed with undecaprenyl-coupled
+      cell-wall precursors.
+  - node_id: peptidoglycan_and_teichoic_acid_biosynthesis
+    label: bacterial peptidoglycan and wall-teichoic-acid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Lipid II- and lipid III-dependent cell-wall polymer synthesis
+      in Gram-positive bacteria.
+  edges:
+  - subject: teixobactin
+    predicate: binds
+    object: teixobactin_lipid_precursor_complex
+    description: Teixobactin binds the conserved pyrophosphate-sugar moiety of lipid
+      II and lipid III.
+    evidence:
+    - reference: PMID:25561178
+      notes: Biochemical target-identification assays demonstrated direct teixobactin
+        binding to the pyrophosphate-sugar motif of lipid II and lipid III.
+  - subject: lipid_ii_and_lipid_iii_motif
+    predicate: participates in
+    object: teixobactin_lipid_precursor_complex
+    description: Lipid II and lipid III precursors supply the conserved pyrophosphate-sugar
+      recognition motif bound by teixobactin.
+    evidence:
+    - reference: PMID:25561178
+      notes: Precursor-binding and antagonism assays mapped interaction to the shared
+        pyrophosphate-sugar region of lipid II and lipid III.
+  - subject: teixobactin_lipid_precursor_complex
+    predicate: inhibits
+    object: peptidoglycan_and_teichoic_acid_biosynthesis
+    description: Sequestration of lipid II and lipid III inhibits bacterial peptidoglycan
+      and wall-teichoic-acid synthesis.
+    evidence:
+    - reference: PMID:25561178
+      notes: Whole-cell and in-vitro biosynthesis assays showed coordinated inhibition
+        of peptidoglycan and wall-teichoic-acid synthesis by teixobactin.

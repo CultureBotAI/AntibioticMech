@@ -179,3 +179,80 @@ curation_history:
     protein example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease
     molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph boceprevir_hcv_ns3_4a_protease_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:18201776, PMID:20004570).
+  llm_assisted: true
+causal_graphs:
+- graph_id: boceprevir_hcv_ns3_4a_protease_inhibition
+  title: Boceprevir inhibits hepatitis C virus NS3/4A serine protease and viral replication
+  description: Boceprevir (SCH 503034) inhibits the hepatitis C virus NS3/4A serine
+    protease catalytic activity, blocking viral polyprotein processing and HCV RNA
+    replicon replication.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: boceprevir
+    label: boceprevir
+    node_type: COMPOUND
+    grounding: CHEBI:68621
+  - node_id: hcv_ns3_4a_protease
+    label: hepatitis C virus NS3/4A serine protease
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Hepatitis C virus NS3/4A serine protease complex; kept label-only
+      with HCV genotype 1b reference polyprotein (UniProtKB:P26662) protein_examples.
+    protein_examples:
+    - uniprot_id: UniProtKB:P26662
+      protein_label: Genome polyprotein
+      taxon_id: NCBITaxon:11108
+      taxon_label: Hepatitis C virus genotype 1b (isolate BK)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Reference HCV genotype 1b polyprotein encoding the nonstructural NS3 serine
+        protease and NS4A cofactor inhibited by boceprevir (SCH 503034) in enzyme
+        and replicon assays (PMID:18201776; PMID:20004570; genotype 1b reference isolate
+        BK context).
+  - node_id: ns3_4a_serine_protease_activity
+    label: HCV NS3/4A serine protease catalytic activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Nonstructural polyprotein cleavage activity measured in purified
+      NS3/4A enzyme assays.
+  - node_id: hcv_replicon_rna_replication
+    label: hepatitis C virus polyprotein processing and RNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: NS3/4A-dependent viral RNA replication measured in HCV replicon
+      cells.
+  edges:
+  - subject: boceprevir
+    predicate: inhibits
+    object: ns3_4a_serine_protease_activity
+    description: Boceprevir inhibits hepatitis C virus NS3/4A serine protease catalytic
+      activity.
+    evidence:
+    - reference: PMID:18201776
+      notes: Purified enzyme assays and resistance selection characterized SCH 503034
+        (boceprevir) inhibition of HCV NS3/4A protease.
+    - reference: PMID:20004570
+      notes: Structure-activity and enzyme-inhibition assays measured boceprevir-series
+        potency against HCV NS3 protease.
+  - subject: hcv_ns3_4a_protease
+    predicate: enables
+    object: ns3_4a_serine_protease_activity
+    description: The HCV NS3/4A protease complex catalyzes viral serine-protease cleavage.
+    evidence:
+    - reference: PMID:18201776
+      notes: NS3 active-site-proximal substitutions (V36, T54, R155, A156, V170) altered
+        boceprevir protease susceptibility.
+  - subject: ns3_4a_serine_protease_activity
+    predicate: supports
+    object: hcv_replicon_rna_replication
+    description: NS3/4A protease activity is required for HCV replicon RNA replication.
+    evidence:
+    - reference: PMID:18201776
+      notes: Cell-based HCV replicon assays connected NS3/4A protease inhibition by
+        boceprevir to suppression of viral RNA replication.

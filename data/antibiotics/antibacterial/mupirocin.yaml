@@ -407,3 +407,80 @@ curation_history:
     on the PRIMARY_LITERATURE isoleucyl-tRNA synthetase-tRNA(Ile) complex molecular
     target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph mupirocin_ilers_isoleucyl_trna_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:10446055).
+  llm_assisted: true
+causal_graphs:
+- graph_id: mupirocin_ilers_isoleucyl_trna_inhibition
+  title: Mupirocin binds the IleRS-tRNA(Ile) complex to block isoleucyl-tRNA synthesis
+  description: Mupirocin binds the Rossmann-fold catalytic site of the Staphylococcus
+    aureus isoleucyl-tRNA synthetase (IleRS)-tRNA(Ile) complex, preventing isoleucyl-tRNA
+    charging and inhibiting bacterial protein synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: mupirocin
+    label: mupirocin
+    node_type: COMPOUND
+    grounding: CHEBI:7025
+  - node_id: ilers_trna_complex
+    label: isoleucyl-tRNA synthetase-tRNA(Ile) complex
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial IleRS-tRNA(Ile) aminoacylation complex; kept label-only
+      with Staphylococcus aureus IleS (UniProtKB:P41972) protein_examples.
+    gene_symbols:
+    - ileS
+    protein_examples:
+    - uniprot_id: UniProtKB:P41972
+      protein_label: Isoleucine--tRNA ligase
+      gene_symbol: ileS
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Staphylococcus aureus isoleucyl-tRNA synthetase catalytic component crystallized
+        with tRNA(Ile) and mupirocin at the Rossmann-fold active site (PMID:10446055,
+        PDB 1QU2).
+  - node_id: mupirocin_bound_ilers_active_site
+    label: mupirocin-bound IleRS Rossmann-fold catalytic site
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Antibiotic-occupied synthetic active site resolved in the 2.2-angstrom
+      S. aureus IleRS-tRNA(Ile) cocrystal.
+  - node_id: isoleucyl_trna_aminoacylation
+    label: bacterial isoleucyl-tRNA aminoacylation and protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Isoleucine charging of tRNA(Ile) required for bacterial translation.
+  edges:
+  - subject: mupirocin
+    predicate: binds
+    object: mupirocin_bound_ilers_active_site
+    description: Mupirocin binds the Rossmann-fold synthetic active site in the Staphylococcus
+      aureus IleRS-tRNA(Ile) complex.
+    evidence:
+    - reference: PMID:10446055
+      notes: A 2.2-angstrom crystal structure directly resolved mupirocin bound in
+        the S. aureus IleRS-tRNA(Ile) complex.
+  - subject: ilers_trna_complex
+    predicate: participates in
+    object: mupirocin_bound_ilers_active_site
+    description: The IleRS-tRNA(Ile) complex forms the catalytic pocket occupied by
+      mupirocin.
+    evidence:
+    - reference: PMID:10446055
+      notes: The ternary S. aureus IleRS-tRNA(Ile)-mupirocin crystal structure defined
+        the active-site drug contacts.
+  - subject: mupirocin_bound_ilers_active_site
+    predicate: inhibits
+    object: isoleucyl_trna_aminoacylation
+    description: Active-site occupancy by mupirocin blocks isoleucyl-tRNA synthetase
+      catalysis and bacterial protein synthesis.
+    evidence:
+    - reference: PMID:10446055
+      notes: Binding of mupirocin across the IleRS catalytic site prevents productive
+        aminoacylation.

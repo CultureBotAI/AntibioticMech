@@ -104,3 +104,87 @@ curation_history:
     example on the PRIMARY_LITERATURE HIV-1 integrase catalytic activities molecular
     target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph integric_acid_hiv1_integrase_catalytic_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:10335400, PMID:10698443).
+  llm_assisted: true
+causal_graphs:
+- graph_id: integric_acid_hiv1_integrase_catalytic_inhibition
+  title: Integric acid inhibits HIV-1 integrase 3'-end processing and strand-transfer
+    catalysis
+  description: Integric acid inhibits the catalytic 3'-end processing, strand-transfer,
+    and disintegration activities of HIV-1 integrase across purified enzyme, stable-complex,
+    and pre-integration-complex assays.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: integric_acid
+    label: integric acid
+    node_type: COMPOUND
+    grounding: CHEBI:66081
+  - node_id: hiv1_integrase
+    label: HIV-1 integrase
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: HIV-1 integrase enzyme; kept label-only with HIV-1 HXB2 Gag-Pol
+      polyprotein (UniProtKB:P04585) protein_examples.
+    gene_symbols:
+    - gag-pol
+    protein_examples:
+    - uniprot_id: UniProtKB:P04585
+      protein_label: Gag-Pol polyprotein
+      gene_symbol: gag-pol
+      taxon_id: NCBITaxon:11706
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
+        HXB2)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose 3'-end processing,
+        strand-transfer, and disintegration activities are inhibited by integric acid
+        (PMID:10335400; PMID:10698443; HXB2 reference isolate context).
+  - node_id: integrase_3prime_and_strand_transfer_catalysis
+    label: HIV-1 integrase 3'-end processing and strand-transfer reactions
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Catalytic steps assayed with full-length and core HIV-1 integrase
+      and pre-integration complexes.
+  - node_id: retroviral_dna_integration
+    label: HIV-1 viral DNA integration reaction
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Integrase-mediated viral DNA integration into target DNA measured
+      in pre-integration complex assays.
+  edges:
+  - subject: integric_acid
+    predicate: inhibits
+    object: integrase_3prime_and_strand_transfer_catalysis
+    description: Integric acid inhibits HIV-1 integrase 3'-end processing, strand-transfer,
+      and disintegration catalysis.
+    evidence:
+    - reference: PMID:10335400
+      notes: Biochemical assays showed low-micromolar inhibition of HIV-1 integrase
+        3'-end processing, strand transfer, disintegration, and pre-integration complexes
+        by integric acid.
+    - reference: PMID:10698443
+      notes: Structure-activity studies of integric acid analogues confirmed inhibition
+        of HIV-1 integrase 3'-processing and strand transfer.
+  - subject: hiv1_integrase
+    predicate: enables
+    object: integrase_3prime_and_strand_transfer_catalysis
+    description: HIV-1 integrase catalyzes the 3'-end processing and strand-transfer
+      reactions.
+    evidence:
+    - reference: PMID:10335400
+      notes: Both full-length HIV-1 integrase and the catalytic core domain catalyzed
+        the reactions inhibited by integric acid.
+  - subject: integrase_3prime_and_strand_transfer_catalysis
+    predicate: supports
+    object: retroviral_dna_integration
+    description: 3'-end processing and strand transfer drive HIV-1 pre-integration
+      complex DNA integration.
+    evidence:
+    - reference: PMID:10335400
+      notes: Integric acid blocked viral DNA integration catalyzed by assembled HIV-1
+        complexes and pre-integration complexes.

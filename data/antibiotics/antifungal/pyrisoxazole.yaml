@@ -165,3 +165,82 @@ curation_history:
     UniProtKB protein example on the PRIMARY_LITERATURE fungal CYP51 sterol 14-alpha-demethylase
     molecular target.
   llm_assisted: true
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph pyrisoxazole_cyp51_ergosterol_pathway_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:32714305).
+  llm_assisted: true
+causal_graphs:
+- graph_id: pyrisoxazole_cyp51_ergosterol_pathway_inhibition
+  title: Pyrisoxazole inhibits fungal CYP51-dependent ergosterol biosynthesis
+  description: Pyrisoxazole acts as a sterol 14-alpha-demethylase (CYP51) inhibitor
+    in Botrytis cinerea, where CYP51 mutations and overexpression govern resistance
+    and demethylase inhibition blocks fungal ergosterol biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pyrisoxazole
+    label: pyrisoxazole
+    node_type: COMPOUND
+    grounding: CHEBI:83823
+  - node_id: fungal_cyp51
+    label: fungal CYP51 sterol 14-alpha-demethylase
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal sterol 14-alpha-demethylase (CYP51); kept label-only with
+      Botrytis cinerea CYP51 (UniProtKB:A0A7G4P320) protein_examples.
+    gene_symbols:
+    - cyp51
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A7G4P320
+      protein_label: Sterol 14-alpha-demethylase
+      gene_symbol: cyp51
+      taxon_id: NCBITaxon:40559
+      taxon_label: Botrytis cinerea
+      entry_status: UNREVIEWED
+      retrieved_on: '2026-10-17'
+      role: Botrytis cinerea ergosterol-biosynthesis CYP51 enzyme assayed for stereoselective
+        binding and inhibition by pyrisoxazole isomers (PMID:32714305; species-level
+        reference sequence context).
+  - node_id: sterol_14_alpha_demethylation
+    label: CYP51-dependent sterol 14-alpha-demethylation
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ergosterol-pathway demethylation step associated with pyrisoxazole
+      susceptibility, DMI cross-resistance, and CYP51 mutations.
+  - node_id: fungal_ergosterol_biosynthesis
+    label: fungal ergosterol biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Sterol biosynthesis pathway required for Botrytis cinerea mycelial
+      growth.
+  edges:
+  - subject: pyrisoxazole
+    predicate: inhibits
+    object: sterol_14_alpha_demethylation
+    description: Pyrisoxazole inhibits CYP51-mediated sterol 14-alpha-demethylation
+      in Botrytis cinerea.
+    evidence:
+    - reference: PMID:32714305
+      notes: Susceptibility testing, DMI-specific cross-resistance, CYP51 sequencing,
+        and expression analyses in Botrytis cinerea established CYP51-mediated demethylation
+        as the target pathway.
+  - subject: fungal_cyp51
+    predicate: enables
+    object: sterol_14_alpha_demethylation
+    description: Fungal CYP51 catalyzes the sterol 14-alpha-demethylation step and
+      carries resistance-conferring substitutions in selected mutants.
+    evidence:
+    - reference: PMID:32714305
+      notes: Resistant Botrytis cinerea mutants carried CYP51 point mutations and
+        elevated CYP51 expression.
+  - subject: sterol_14_alpha_demethylation
+    predicate: supports
+    object: fungal_ergosterol_biosynthesis
+    description: Sterol 14-alpha-demethylation is required for fungal ergosterol biosynthesis
+      and hyphal growth.
+    evidence:
+    - reference: PMID:32714305
+      notes: The study characterized pyrisoxazole as a sterol 14-alpha-demethylase
+        inhibitor blocking fungal ergosterol biosynthesis.

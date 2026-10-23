@@ -135,3 +135,70 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-23T02:15:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph cethromycin_50s_exit_tunnel_translation_inhibition
+    (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:12623020,
+    PMID:15380262).
+  llm_assisted: true
+causal_graphs:
+- graph_id: cethromycin_50s_exit_tunnel_translation_inhibition
+  title: Cethromycin binds the bacterial 50S nascent-peptide exit tunnel to inhibit
+    translation
+  description: Cethromycin (ABT-773) binds with high affinity in the nascent-peptide
+    exit tunnel of the bacterial 50S ribosomal subunit and inhibits bacterial protein
+    synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cethromycin
+    label: cethromycin
+    node_type: COMPOUND
+    grounding: CHEBI:29506
+  - node_id: bacterial_50s_exit_tunnel
+    label: 50S ribosomal subunit nascent-peptide exit tunnel
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Nascent-peptide exit tunnel of the bacterial 50S large ribosomal
+      subunit.
+  - node_id: cethromycin_bound_50s_exit_tunnel
+    label: cethromycin-occupied 50S nascent-peptide exit tunnel
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Cocrystal-resolved ABT-773 complex in the Deinococcus radiodurans
+      50S exit tunnel and slowly dissociating H. influenzae ribosome complex.
+  - node_id: bacterial_translation
+    label: bacterial protein synthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ribosomal polypeptide elongation blocked by exit-tunnel occlusion.
+  edges:
+  - subject: cethromycin
+    predicate: binds
+    object: cethromycin_bound_50s_exit_tunnel
+    description: Cethromycin binds tightly in the nascent-peptide exit tunnel of the
+      bacterial 50S ribosomal subunit.
+    evidence:
+    - reference: PMID:12623020
+      notes: An X-ray crystal structure of the Deinococcus radiodurans 50S subunit
+        directly localized ABT-773 (cethromycin) in the nascent-peptide exit tunnel.
+    - reference: PMID:15380262
+      notes: Ribosome-binding assays in Haemophilus influenzae measured tight, slowly
+        dissociating cethromycin binding.
+  - subject: bacterial_50s_exit_tunnel
+    predicate: participates in
+    object: cethromycin_bound_50s_exit_tunnel
+    description: 23S rRNA nucleotides of the 50S exit tunnel form the ketolide binding
+      pocket.
+    evidence:
+    - reference: PMID:12623020
+      notes: The D. radiodurans 50S-ABT-773 cocrystal mapped specific 23S rRNA contacts
+        in the exit tunnel.
+  - subject: cethromycin_bound_50s_exit_tunnel
+    predicate: inhibits
+    object: bacterial_translation
+    description: Exit-tunnel occupancy by cethromycin inhibits bacterial protein synthesis.
+    evidence:
+    - reference: PMID:15380262
+      notes: Cell-free translation and whole-cell assays in H. influenzae confirmed
+        potent inhibition of bacterial protein synthesis by cethromycin.
