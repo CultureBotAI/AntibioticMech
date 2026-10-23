@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from collections import deque
 from copy import deepcopy
 from dataclasses import dataclass
 from pathlib import Path
@@ -70,6 +71,24 @@ EXISTING_GRAPH_KEYS = {
     "path",
     "curation_status",
     "graph_ids",
+}
+PLAN_ROOT_KEYS = {
+    "schema_version",
+    "task",
+    "curation_action",
+    "retrieved_on",
+    "scope_note",
+    "existing_causal_graphs",
+    "records",
+    "held_records",
+}
+PLANNED_RECORD_KEYS = {
+    "identifier",
+    "label",
+    "path",
+    "cohort",
+    "changes",
+    "causal_graphs",
 }
 HELD_RECORD_KEYS = {
     "identifier",
@@ -403,6 +422,118 @@ def validate_causal_graph_spec(
     if not (connected_types & OUTCOME_NODE_TYPES):
         raise ValueError(f"{context} ({graph_id}): missing connected outcome node")
 
+    adj: dict[str, set[str]] = {nid: set() for nid in seen_node_ids}
+    rev: dict[str, set[str]] = {nid: set() for nid in seen_node_ids}
+    undir: dict[str, set[str]] = {nid: set() for nid in seen_node_ids}
+    in_deg: dict[str, int] = {nid: 0 for nid in seen_node_ids}
+    out_deg: dict[str, int] = {nid: 0 for nid in seen_node_ids}
+    for e in norm_edges:
+        u, v = e["subject"], e["object"]
+        adj[u].add(v)
+        rev[v].add(u)
+        undir[u].add(v)
+        undir[v].add(u)
+        in_deg[v] += 1
+        out_deg[u] += 1
+
+    # 1. Weakly connected single component
+    start_node = next(iter(seen_node_ids))
+    q_undir: deque[str] = deque([start_node])
+    vis_undir: set[str] = {start_node}
+    while q_undir:
+        cur = q_undir.popleft()
+        for nxt in undir[cur]:
+            if nxt not in vis_undir:
+                vis_undir.add(nxt)
+                q_undir.append(nxt)
+    if len(vis_undir) != len(seen_node_ids):
+        raise ValueError(
+            f"{context} ({graph_id}): graph has multiple disconnected components"
+        )
+
+    # 2. DAG acyclicity (Kahn's topological sort)
+    in_copy = dict(in_deg)
+    q_topo: deque[str] = deque([nid for nid, d in in_copy.items() if d == 0])
+    topo_count = 0
+    while q_topo:
+        cur = q_topo.popleft()
+        topo_count += 1
+        for nxt in adj[cur]:
+            in_copy[nxt] -= 1
+            if in_copy[nxt] == 0:
+                q_topo.append(nxt)
+    if topo_count != len(seen_node_ids):
+        raise ValueError(
+            f"{context} ({graph_id}): directed cycle detected in causal graph"
+        )
+
+    # 3. Compound source check and directed reachability to outcomes
+    compound_nodes = [
+        nid for nid, ntype in node_types_by_id.items() if ntype == "COMPOUND"
+    ]
+    for cnid in compound_nodes:
+        if in_deg[cnid] != 0 or out_deg[cnid] == 0:
+            raise ValueError(
+                f"{context} ({graph_id}): COMPOUND node {cnid!r} must have "
+                f"in_degree=0 and out_degree>=1 (got in={in_deg[cnid]}, out={out_deg[cnid]})"
+            )
+
+    sinks = [nid for nid, d in out_deg.items() if d == 0]
+    for snid in sinks:
+        if node_types_by_id[snid] not in OUTCOME_NODE_TYPES:
+            raise ValueError(
+                f"{context} ({graph_id}): terminal sink node {snid!r} "
+                f"(node_type={node_types_by_id[snid]!r}) must be an outcome node "
+                f"({sorted(OUTCOME_NODE_TYPES)})"
+            )
+
+    q_comp: deque[str] = deque(compound_nodes)
+    from_comp: set[str] = set(compound_nodes)
+    while q_comp:
+        cur = q_comp.popleft()
+        for nxt in adj[cur]:
+            if nxt not in from_comp:
+                from_comp.add(nxt)
+                q_comp.append(nxt)
+
+    target_nodes = [
+        nid for nid, ntype in node_types_by_id.items() if ntype in TARGET_NODE_TYPES
+    ]
+    q_targ: deque[str] = deque(target_nodes)
+    from_targ: set[str] = set(target_nodes)
+    while q_targ:
+        cur = q_targ.popleft()
+        for nxt in adj[cur]:
+            if nxt not in from_targ:
+                from_targ.add(nxt)
+                q_targ.append(nxt)
+
+    for snid in sinks:
+        if snid not in from_comp:
+            raise ValueError(
+                f"{context} ({graph_id}): terminal outcome {snid!r} is not reachable "
+                "via a directed path from the COMPOUND node"
+            )
+        if snid not in from_targ:
+            raise ValueError(
+                f"{context} ({graph_id}): terminal outcome {snid!r} is not reachable "
+                "via a directed path from any target node"
+            )
+
+    q_rev: deque[str] = deque(sinks)
+    reaches_sink: set[str] = set(sinks)
+    while q_rev:
+        cur = q_rev.popleft()
+        for prv in rev[cur]:
+            if prv not in reaches_sink:
+                reaches_sink.add(prv)
+                q_rev.append(prv)
+    if len(reaches_sink) != len(seen_node_ids):
+        dead_ends = sorted(seen_node_ids - reaches_sink)
+        raise ValueError(
+            f"{context} ({graph_id}): nodes do not reach any terminal outcome: {dead_ends}"
+        )
+
     normalized: dict[str, Any] = {
         "graph_id": graph_id,
         "title": title,
@@ -495,6 +626,11 @@ def validate_planned_causal_graph_entry(
     """Validate one planned record entry in curation/causal_graphs.yaml."""
     if not isinstance(entry, dict):
         raise ValueError(f"{plan_path}: record entry must be a mapping")
+    extra_keys = set(entry) - PLANNED_RECORD_KEYS
+    if extra_keys:
+        raise ValueError(
+            f"{plan_path}: unexpected planned record keys {sorted(extra_keys)}"
+        )
     identifier = str(entry.get("identifier") or "").strip()
     label = str(entry.get("label") or "").strip()
     rel_path = str(entry.get("path") or "").strip()
@@ -540,6 +676,11 @@ def load_causal_graphs_plan(path: Path = DEFAULT_PLAN_PATH) -> dict[str, Any]:
     raw = _load_yaml_path(path)
     if not isinstance(raw, dict):
         raise ValueError(f"{path}: plan root must be a mapping")
+    extra_root_keys = set(raw) - PLAN_ROOT_KEYS
+    if extra_root_keys:
+        raise ValueError(
+            f"{path}: unexpected plan root keys {sorted(extra_root_keys)}"
+        )
 
     existing = raw.get("existing_causal_graphs")
     if not isinstance(existing, list) or not existing:
@@ -611,38 +752,25 @@ def apply_planned_causal_graphs_to_record_data(
         )
 
     existing_graphs = [deepcopy(g) for g in (updated.get("causal_graphs") or [])]
-    by_gid: dict[str, int] = {
-        str(g.get("graph_id") or ""): idx for idx, g in enumerate(existing_graphs)
-    }
-
-    graphs_added = 0
-    nodes_added = 0
-    edges_added = 0
-    changed = False
-
-    for raw_graph in plan_entry.get("causal_graphs") or []:
-        norm_graph = validate_causal_graph_spec(
-            raw_graph, compound_id=identifier, context=f"{identifier} planned causal_graphs"
+    planned_graphs = [
+        validate_causal_graph_spec(
+            raw_graph,
+            compound_id=identifier,
+            context=f"{identifier} planned causal_graphs",
         )
-        gid = norm_graph["graph_id"]
-        if gid in by_gid:
-            idx = by_gid[gid]
-            if existing_graphs[idx] != norm_graph:
-                existing_graphs[idx] = norm_graph
-                changed = True
-                graphs_added += 1
-                nodes_added += len(norm_graph["nodes"])
-                edges_added += len(norm_graph["edges"])
-        else:
-            by_gid[gid] = len(existing_graphs)
-            existing_graphs.append(norm_graph)
-            changed = True
-            graphs_added += 1
-            nodes_added += len(norm_graph["nodes"])
-            edges_added += len(norm_graph["edges"])
+        for raw_graph in (plan_entry.get("causal_graphs") or [])
+    ]
 
+    changed = existing_graphs != planned_graphs
     if changed:
-        updated["causal_graphs"] = existing_graphs
+        updated["causal_graphs"] = planned_graphs
+        graphs_added = len(planned_graphs)
+        nodes_added = sum(len(g["nodes"]) for g in planned_graphs)
+        edges_added = sum(len(g["edges"]) for g in planned_graphs)
+    else:
+        graphs_added = 0
+        nodes_added = 0
+        edges_added = 0
 
     return updated, graphs_added, nodes_added, edges_added, changed
 
@@ -690,6 +818,13 @@ def verify_reviewed_causal_graphs_accounting(
                 ex = existing_by_id[identifier]
                 if ex["label"] != label or ex["path"] != rel_path or ex["curation_status"] != status:
                     raise ValueError(f"{rel_path}: existing_causal_graphs metadata mismatch for {identifier}")
+                actual_gids = [str(g.get("graph_id") or "") for g in graphs]
+                expected_gids = [str(gid) for gid in (ex.get("graph_ids") or [])]
+                if actual_gids != expected_gids:
+                    raise ValueError(
+                        f"{rel_path}: existing_causal_graphs graph_ids mismatch for {identifier}: "
+                        f"expected {expected_gids}, got {actual_gids}"
+                    )
                 seen_existing.add(identifier)
                 if status == "REVIEWED":
                     reviewed_existing_graphs += 1
@@ -699,6 +834,37 @@ def verify_reviewed_causal_graphs_accounting(
                 cur = curated_by_id[identifier]
                 if cur["label"] != label or cur["path"] != rel_path:
                     raise ValueError(f"{rel_path}: curated causal_graphs metadata mismatch for {identifier}")
+                planned_graphs = [
+                    validate_causal_graph_spec(
+                        g, compound_id=identifier, context=f"{rel_path} ({identifier})"
+                    )
+                    for g in (cur.get("causal_graphs") or [])
+                ]
+                if graphs != planned_graphs:
+                    raise ValueError(
+                        f"{rel_path}: live causal_graphs in {identifier} do not match "
+                        "curation/causal_graphs.yaml"
+                    )
+                if cur.get("cohort") == "protein_target_with_examples":
+                    mt_examples = {
+                        pe["uniprot_id"]: pe
+                        for mt in (doc.get("molecular_targets") or [])
+                        if mt.get("source") == "PRIMARY_LITERATURE"
+                        for pe in (mt.get("protein_examples") or [])
+                    }
+                    cg_examples = {
+                        pe["uniprot_id"]: pe
+                        for g in graphs
+                        for n in (g.get("nodes") or [])
+                        if n.get("node_type") == "GENE_OR_PROTEIN"
+                        for pe in (n.get("protein_examples") or [])
+                    }
+                    if cg_examples != mt_examples:
+                        raise ValueError(
+                            f"{rel_path}: GENE_OR_PROTEIN causal node protein_examples "
+                            f"do not match PRIMARY_LITERATURE molecular_targets "
+                            f"protein_examples for {identifier}"
+                        )
                 seen_curated.add(identifier)
                 if status != "REVIEWED":
                     raise ValueError(

@@ -14,6 +14,7 @@ from antibioticmech.activity_collections import load_record
 from antibioticmech.causal_graphs_curation import (
     DEFAULT_PLAN_PATH,
     DEFAULT_RECEIPT_PATH,
+    apply_causal_graphs_plan,
     apply_planned_causal_graphs_to_record_data,
     load_causal_graphs_plan,
     validate_causal_edge_spec,
@@ -21,6 +22,7 @@ from antibioticmech.causal_graphs_curation import (
     validate_causal_node_spec,
     validate_existing_graph_entry,
     validate_held_record_entry,
+    validate_planned_causal_graph_entry,
     verify_reviewed_causal_graphs_accounting,
 )
 from scripts.score_causal_graph_quality import score_record
@@ -78,9 +80,9 @@ def test_plan_and_transition_summary_counts():
     plan = load_causal_graphs_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
     assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 36
-    assert sum(d["graphs_added"] for d in receipt["record_deltas"]) == 36
-    assert sum(d["nodes_added"] for d in receipt["record_deltas"]) == 145
-    assert sum(d["edges_added"] for d in receipt["record_deltas"]) == 110
+    assert sum(d["graphs_added"] for d in receipt["record_deltas"]) == 37
+    assert sum(d["nodes_added"] for d in receipt["record_deltas"]) == 148
+    assert sum(d["edges_added"] for d in receipt["record_deltas"]) == 112
     assert len(plan["existing_causal_graphs"]) == 16
     assert len(plan["held_records"]) == 39
 
@@ -226,6 +228,131 @@ def test_strict_causal_graph_spec_validation():
     )
     assert norm_graph["graph_id"] == "fosfomycin_mura_inhibition"
 
+    with pytest.raises(ValueError, match="duplicate node_id"):
+        validate_causal_graph_spec(
+            {
+                **valid_graph,
+                "nodes": [*valid_graph["nodes"], valid_graph["nodes"][0]],
+            },
+            compound_id="CHEBI:28915",
+            context="test",
+        )
+
+    with pytest.raises(ValueError, match="disconnected component"):
+        validate_causal_graph_spec(
+            {
+                **valid_graph,
+                "nodes": [
+                    *valid_graph["nodes"],
+                    {
+                        "node_id": "extra_target",
+                        "label": "extra target",
+                        "node_type": "CHEMICAL",
+                        "grounding_status": "REVIEWED_LABEL_ONLY",
+                        "grounding_notes": "Disconnected node.",
+                    },
+                    {
+                        "node_id": "extra_state",
+                        "label": "extra state",
+                        "node_type": "STATE",
+                        "grounding_status": "REVIEWED_LABEL_ONLY",
+                        "grounding_notes": "Disconnected state.",
+                    },
+                ],
+                "edges": [
+                    *valid_graph["edges"],
+                    {
+                        "subject": "extra_target",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "extra_state",
+                        "description": "Disconnected edge.",
+                        "evidence": [{"reference": "PMID:7833980", "snippet": "Disconnected."}],
+                    },
+                ],
+            },
+            compound_id="CHEBI:28915",
+            context="test",
+        )
+
+    with pytest.raises(ValueError, match="directed cycle detected"):
+        validate_causal_graph_spec(
+            {
+                **valid_graph,
+                "edges": [
+                    *valid_graph["edges"],
+                    {
+                        "subject": "bacterial_cell_lysis",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "mura",
+                        "description": "Feedback cycle.",
+                        "evidence": [{"reference": "PMID:7833980", "snippet": "Cycle."}],
+                    },
+                ],
+            },
+            compound_id="CHEBI:28915",
+            context="test",
+        )
+
+    with pytest.raises(ValueError, match="not reachable via a directed path"):
+        validate_causal_graph_spec(
+            {
+                **valid_graph,
+                "nodes": [
+                    *valid_graph["nodes"],
+                    {
+                        "node_id": "extra_state",
+                        "label": "extra state",
+                        "node_type": "STATE",
+                        "grounding_status": "REVIEWED_LABEL_ONLY",
+                        "grounding_notes": "Unreachable terminal state.",
+                    },
+                ],
+                "edges": [
+                    valid_edge,
+                    {
+                        "subject": "mura",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "bacterial_cell_lysis",
+                        "description": "Direct path to sink.",
+                        "evidence": [{"reference": "PMID:7833980", "snippet": "Direct."}],
+                    },
+                    {
+                        "subject": "peptidoglycan_biosynthesis",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "bacterial_cell_lysis",
+                        "description": "Weakly connects peptidoglycan_biosynthesis.",
+                        "evidence": [{"reference": "PMID:7833980", "snippet": "Connected."}],
+                    },
+                    {
+                        "subject": "peptidoglycan_biosynthesis",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "extra_state",
+                        "description": "Unreachable terminal sink.",
+                        "evidence": [{"reference": "PMID:7833980", "snippet": "Unreachable."}],
+                    },
+                ],
+            },
+            compound_id="CHEBI:28915",
+            context="test",
+        )
+
+    with pytest.raises(ValueError, match="unexpected planned record key"):
+        validate_planned_causal_graph_entry(
+            {
+                "identifier": "CHEBI:28915",
+                "label": "fosfomycin",
+                "path": "data/antibiotics/antibacterial/fosfomycin.yaml",
+                "cohort": "protein_target_with_examples",
+                "causal_graphs": [valid_graph],
+                "unexpected_key": True,
+            }
+        )
+
     assert (
         validate_existing_graph_entry(
             {
@@ -247,12 +374,40 @@ def test_strict_causal_graph_spec_validation():
                 "path": "data/antibiotics/antibacterial/d-cycloserine.yaml",
                 "blocker_category": "uniprot_protein_example_held",
                 "target_summary": "Alr and Ddl held in uniprot_protein_examples.yaml.",
-                "references": ["PMID:10637613"],
+                "references": ["PMID:4555420"],
                 "reason": "Held pending multi-enzyme UniProt target decomposition.",
             }
         )
         == "CHEBI:40009"
     )
+
+
+def test_apply_causal_graphs_plan_dry_run_does_not_mutate(pre_causal_graphs_root, tmp_path):
+    delta = load_transition()["record_deltas"][0]
+    before_bytes = (pre_causal_graphs_root / delta["path"]).read_bytes()
+    rec_path = tmp_path / delta["path"]
+    rec_path.parent.mkdir(parents=True, exist_ok=True)
+    rec_path.write_bytes(before_bytes)
+
+    plan_doc = yaml.safe_load(DEFAULT_PLAN_PATH.read_bytes())
+    plan_doc["records"] = [plan_doc["records"][0]]
+    plan_file = tmp_path / "plan.yaml"
+    plan_file.write_text(yaml.safe_dump(plan_doc, sort_keys=False), encoding="utf-8")
+
+    receipt_out = tmp_path / "receipt.json"
+    results = apply_causal_graphs_plan(
+        root=tmp_path,
+        plan_path=plan_file,
+        curator="test",
+        timestamp="2026-10-23T09:00:00Z",
+        apply=False,
+        receipt_path=receipt_out,
+    )
+    assert len(results) == 1
+    assert results[0].changed is True
+    assert results[0].graphs_added == 1
+    assert rec_path.read_bytes() == before_bytes
+    assert not receipt_out.exists()
 
 
 @pytest.mark.parametrize("index", range(36))

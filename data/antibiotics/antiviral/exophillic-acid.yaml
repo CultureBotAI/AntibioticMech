@@ -134,19 +134,17 @@ curation_history:
 - timestamp: '2026-10-23T02:15:00Z'
   curator: antigravity
   action: CURATED_CAUSAL_GRAPHS
-  changes: Added evidence-backed MECHANISTIC causal graph exophillic_acid_hiv1_integrase_and_ntcp_entry_inhibition
-    (5 nodes, 4 edges) covering HIV-1 integrase strand-transfer inhibition (PMID:15015729)
-    and host NTCP-mediated HBV/HDV entry blockade (PMID:35458494).
+  changes: Added 2 evidence-backed MECHANISTIC causal graphs (exophillic_acid_hiv1_integrase_inhibition
+    and exophillic_acid_ntcp_hbv_hdv_entry_inhibition; 8 nodes, 6 edges) covering
+    HIV-1 integrase strand-transfer inhibition (PMID:15015729) and host NTCP-mediated
+    HBV/HDV entry blockade (PMID:35458494).
   llm_assisted: true
 causal_graphs:
-- graph_id: exophillic_acid_hiv1_integrase_and_ntcp_entry_inhibition
-  title: Exophillic acid inhibits HIV-1 integrase strand transfer and blocks NTCP-mediated
-    HBV/HDV entry
-  description: 'Exophillic acid exhibits two compound-specific antiviral mechanisms
-    in distinct viral systems: it inhibits HIV-1 integrase strand-transfer catalysis
-    in vitro and interacts with the human hepatocyte receptor sodium taurocholate
-    cotransporting polypeptide (NTCP) to block preS1-mediated attachment and entry
-    of hepatitis B and hepatitis D viruses.'
+- graph_id: exophillic_acid_hiv1_integrase_inhibition
+  title: Exophillic acid inhibits HIV-1 integrase strand-transfer catalysis
+  description: Exophillic acid inhibits the catalytic strand-transfer reaction of
+    HIV-1 integrase in vitro with an IC50 of 68 micromolar, blocking integrase-mediated
+    viral DNA strand transfer.
   scope_status: MECHANISTIC
   nodes:
   - node_id: exophillic_acid
@@ -154,7 +152,7 @@ causal_graphs:
     node_type: COMPOUND
     grounding: CHEBI:232062
   - node_id: hiv1_integrase
-    label: HIV-1 integrase strand-transfer activity
+    label: HIV-1 integrase
     node_type: GENE_OR_PROTEIN
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: HIV-1 integrase enzyme; kept label-only with HIV-1 HXB2 Gag-Pol
@@ -174,11 +172,55 @@ causal_graphs:
         activity is inhibited by exophillic acid in vitro (PMID:15015729; HXB2 reference
         isolate context).
   - node_id: hiv1_integrase_strand_transfer
-    label: HIV-1 integrase strand-transfer reaction
-    node_type: BIOLOGICAL_PROCESS
+    label: HIV-1 integrase strand-transfer catalysis
+    node_type: MOLECULAR_FUNCTION
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: In-vitro HIV-1 integrase strand-transfer catalysis inhibited
       with an IC50 of 68 micromolar.
+  - node_id: retroviral_dna_strand_transfer_integration
+    label: HIV-1 viral DNA strand-transfer integration
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Integrase-catalyzed viral DNA strand transfer into target DNA
+      assayed in vitro.
+  edges:
+  - subject: exophillic_acid
+    predicate: inhibits
+    object: hiv1_integrase_strand_transfer
+    description: Exophillic acid inhibits the strand-transfer reaction catalyzed by
+      HIV-1 integrase in vitro.
+    evidence:
+    - reference: PMID:15015729
+      notes: In-vitro HIV-1 integrase strand-transfer assays measured inhibition by
+        exophillic acid with an IC50 of 68 micromolar.
+  - subject: hiv1_integrase
+    predicate: enables
+    object: hiv1_integrase_strand_transfer
+    description: HIV-1 integrase catalyzes the viral DNA strand-transfer reaction.
+    evidence:
+    - reference: PMID:15015729
+      notes: Purified HIV-1 integrase strand-transfer activity was assayed during
+        isolation and characterization of exophillic acid.
+  - subject: hiv1_integrase_strand_transfer
+    predicate: supports
+    object: retroviral_dna_strand_transfer_integration
+    description: Integrase strand-transfer catalysis mediates insertion of viral DNA
+      into target DNA.
+    evidence:
+    - reference: PMID:15015729
+      notes: The in-vitro strand-transfer assay directly measured integrase-catalyzed
+        DNA joining inhibited by exophillic acid.
+- graph_id: exophillic_acid_ntcp_hbv_hdv_entry_inhibition
+  title: Exophillic acid blocks host NTCP-mediated HBV and HDV viral entry
+  description: Exophillic acid interacts with the human hepatocyte receptor sodium
+    taurocholate cotransporting polypeptide (NTCP), inhibiting its viral preS1-receptor
+    function and blocking attachment and entry of hepatitis B and hepatitis D viruses.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: exophillic_acid
+    label: exophillic acid
+    node_type: COMPOUND
+    grounding: CHEBI:232062
   - node_id: host_ntcp_receptor
     label: sodium taurocholate cotransporting polypeptide (NTCP)
     node_type: GENE_OR_PROTEIN
@@ -198,6 +240,12 @@ causal_graphs:
       role: Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor
         bound by exophillic acid to block HBV and HDV preS1-mediated viral attachment
         (PMID:35458494).
+  - node_id: ntcp_pres1_receptor_binding
+    label: NTCP viral preS1 receptor binding and bile-acid cotransport
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Host NTCP bile-acid uptake and viral preS1 envelope-binding receptor
+      activity on human hepatocytes.
   - node_id: hbv_hdv_pres1_viral_entry
     label: NTCP-dependent HBV and HDV preS1 attachment and hepatocyte entry
     node_type: BIOLOGICAL_PROCESS
@@ -207,35 +255,27 @@ causal_graphs:
   edges:
   - subject: exophillic_acid
     predicate: inhibits
-    object: hiv1_integrase_strand_transfer
-    description: Exophillic acid inhibits the strand-transfer reaction catalyzed by
-      HIV-1 integrase in vitro.
-    evidence:
-    - reference: PMID:15015729
-      notes: In-vitro HIV-1 integrase strand-transfer assays measured inhibition by
-        exophillic acid with an IC50 of 68 micromolar.
-  - subject: hiv1_integrase
-    predicate: enables
-    object: hiv1_integrase_strand_transfer
-    description: HIV-1 integrase catalyzes the viral DNA strand-transfer reaction.
-    evidence:
-    - reference: PMID:15015729
-      notes: Purified HIV-1 integrase strand-transfer activity was assayed during
-        isolation and characterization of exophillic acid.
-  - subject: exophillic_acid
-    predicate: inhibits
-    object: host_ntcp_receptor
-    description: Exophillic acid interacts with the host receptor NTCP and inhibits
-      its bile-acid transport and viral-receptor function.
+    object: ntcp_pres1_receptor_binding
+    description: Exophillic acid interacts with host NTCP and inhibits its bile-acid
+      cotransport and viral preS1-binding function.
     evidence:
     - reference: PMID:35458494
       notes: Compound-NTCP interaction, bile-acid uptake, and preS1-probe binding
         assays established host NTCP engagement by exophillic acid.
   - subject: host_ntcp_receptor
+    predicate: enables
+    object: ntcp_pres1_receptor_binding
+    description: Human hepatocyte NTCP mediates bile-acid uptake and high-affinity
+      viral preS1 binding.
+    evidence:
+    - reference: PMID:35458494
+      notes: Receptor binding and bile-acid transport assays evaluated NTCP activity
+        in the presence of exophillic acid.
+  - subject: ntcp_pres1_receptor_binding
     predicate: supports
     object: hbv_hdv_pres1_viral_entry
-    description: Host hepatocyte NTCP mediates preS1-dependent attachment and entry
-      of HBV and HDV.
+    description: NTCP preS1-receptor engagement mediates HBV and HDV attachment and
+      entry into human hepatocytes.
     evidence:
     - reference: PMID:35458494
       notes: Primary human hepatocyte infection and preS1 attachment assays demonstrated

@@ -10,7 +10,7 @@
       "path": "data/antibiotics/antibacterial/althiomycin.yaml",
       "cohort": "non_protein_direct_or_measured_target",
       "before_sha256": "ddf3e901ea11204b5e50988c2eea55539a81c0fe2eb57f4d176bbd748735c0f4",
-      "after_sha256": "673765ef6ac4c84495362bdbc40ba90965135646b7b7e608f9fd48f882af4455",
+      "after_sha256": "0253303c62de1d8e14eb5bb0600924de86a8917ca1baa9448d7454494d2a8994",
       "unchanged_fields_sha256": "cde367e1ec0cc1b8e238bce6d762b01a34aaa82c825cfe2adfd139a65a1fdeec",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -33,18 +33,18 @@
               "grounding": "CHEBI:157683"
             },
             {
+              "node_id": "bacterial_50s_peptidyl_transferase_center",
+              "label": "bacterial 50S ribosomal subunit peptidyl-transferase center",
+              "node_type": "CELL_STRUCTURE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Peptidyl-transferase center of the bacterial 50S ribosomal subunit assayed via the puromycin reaction in Escherichia coli B."
+            },
+            {
               "node_id": "ribosomal_peptidyl_transferase_reaction",
               "label": "bacterial ribosomal peptidyl-transferase reaction",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Peptide-bond formation assayed via the puromycin reaction in Escherichia coli B extracts."
-            },
-            {
-              "node_id": "peptidyl_transfer_blockade",
-              "label": "althiomycin-inhibited ribosomal peptide-bond formation",
-              "node_type": "STATE",
-              "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Selective blockade of the ribosomal puromycin reaction without impairment of aminoacyl-tRNA charging or ribosomal binding."
+              "grounding_notes": "Peptide-bond formation assayed via the puromycin reaction in Escherichia coli B extracts without impairment of aminoacyl-tRNA charging or binding."
             },
             {
               "node_id": "bacterial_protein_synthesis",
@@ -68,22 +68,22 @@
               ]
             },
             {
-              "subject": "ribosomal_peptidyl_transferase_reaction",
-              "predicate": "participates in",
-              "object": "peptidyl_transfer_blockade",
-              "description": "Inhibition of the peptidyl-transferase reaction arrests peptide-bond formation on the ribosome.",
+              "subject": "bacterial_50s_peptidyl_transferase_center",
+              "predicate": "enables",
+              "object": "ribosomal_peptidyl_transferase_reaction",
+              "description": "The 50S peptidyl-transferase center catalyzes ribosomal peptide-bond formation in the puromycin reaction.",
               "evidence": [
                 {
                   "reference": "PMID:4917791",
-                  "notes": "The puromycin reaction assay localized althiomycin action to the peptide-bond-forming step."
+                  "notes": "The puromycin reaction assay localized althiomycin action to the ribosomal peptide-bond-forming step."
                 }
               ]
             },
             {
-              "subject": "peptidyl_transfer_blockade",
-              "predicate": "inhibits",
+              "subject": "ribosomal_peptidyl_transferase_reaction",
+              "predicate": "supports",
               "object": "bacterial_protein_synthesis",
-              "description": "Blockade of the peptidyl-transferase step inhibits intact-cell and cell-free bacterial protein synthesis.",
+              "description": "Ribosomal peptidyl-transferase catalysis drives intact-cell and cell-free bacterial protein synthesis.",
               "evidence": [
                 {
                   "reference": "PMID:4917791",
@@ -1793,7 +1793,7 @@
       "path": "data/antibiotics/antifungal/aculeacin-a.yaml",
       "cohort": "non_protein_direct_or_measured_target",
       "before_sha256": "1317d6273e9579eca86304a66e4d42da183b7d84131671710731c92293f07b15",
-      "after_sha256": "5e57f53ad464b10b3133cce9613c749c0337bc082f07ca2c12678bd09942e433",
+      "after_sha256": "ce022630043d613aefff529a3945dac15dd85216a24dbc32d8c712e4cac05acd",
       "unchanged_fields_sha256": "8d49583185590709441e036e36ded787b4afc69919d84de8355cf6bf96228621",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -1831,7 +1831,7 @@
             },
             {
               "node_id": "fungal_cell_wall_glucan_integrity",
-              "label": "fungal cell-wall beta-1,3-glucan biosynthesis",
+              "label": "fungal beta-1,3-glucan cell wall",
               "node_type": "CELL_STRUCTURE",
               "grounding_status": "REVIEWED_LABEL_ONLY",
               "grounding_notes": "Structural glucan layer of the yeast cell wall."
@@ -2783,20 +2783,20 @@
       "path": "data/antibiotics/antiviral/exophillic-acid.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "c4eb2a751c10ce78dbc302df7104597f86d003f8352af01a8a3d75afc33f649b",
-      "after_sha256": "07066394d9cf851b0d4133f6f2da0818b095afcde96c70f9c898f680f153dda6",
+      "after_sha256": "154d7928c36884befbe7eea01cd93c60383f9167a77ca112a3f5eca8b1315b6a",
       "unchanged_fields_sha256": "4aff5b10daf9548b12448cdf2ffaef788ab0777d593516376e4989f55bdec655",
-      "graphs_added": 1,
-      "nodes_added": 5,
-      "edges_added": 4,
+      "graphs_added": 2,
+      "nodes_added": 8,
+      "edges_added": 6,
       "history_events_added": 1,
       "curation_history_before_len": 5,
       "curation_history_after_len": 6,
       "before_causal_graphs": null,
       "after_causal_graphs": [
         {
-          "graph_id": "exophillic_acid_hiv1_integrase_and_ntcp_entry_inhibition",
-          "title": "Exophillic acid inhibits HIV-1 integrase strand transfer and blocks NTCP-mediated HBV/HDV entry",
-          "description": "Exophillic acid exhibits two compound-specific antiviral mechanisms in distinct viral systems: it inhibits HIV-1 integrase strand-transfer catalysis in vitro and interacts with the human hepatocyte receptor sodium taurocholate cotransporting polypeptide (NTCP) to block preS1-mediated attachment and entry of hepatitis B and hepatitis D viruses.",
+          "graph_id": "exophillic_acid_hiv1_integrase_inhibition",
+          "title": "Exophillic acid inhibits HIV-1 integrase strand-transfer catalysis",
+          "description": "Exophillic acid inhibits the catalytic strand-transfer reaction of HIV-1 integrase in vitro with an IC50 of 68 micromolar, blocking integrase-mediated viral DNA strand transfer.",
           "scope_status": "MECHANISTIC",
           "nodes": [
             {
@@ -2807,7 +2807,7 @@
             },
             {
               "node_id": "hiv1_integrase",
-              "label": "HIV-1 integrase strand-transfer activity",
+              "label": "HIV-1 integrase",
               "node_type": "GENE_OR_PROTEIN",
               "grounding_status": "REVIEWED_LABEL_ONLY",
               "grounding_notes": "HIV-1 integrase enzyme; kept label-only with HIV-1 HXB2 Gag-Pol polyprotein (UniProtKB:P04585) protein_examples.",
@@ -2829,39 +2829,17 @@
             },
             {
               "node_id": "hiv1_integrase_strand_transfer",
-              "label": "HIV-1 integrase strand-transfer reaction",
-              "node_type": "BIOLOGICAL_PROCESS",
+              "label": "HIV-1 integrase strand-transfer catalysis",
+              "node_type": "MOLECULAR_FUNCTION",
               "grounding_status": "REVIEWED_LABEL_ONLY",
               "grounding_notes": "In-vitro HIV-1 integrase strand-transfer catalysis inhibited with an IC50 of 68 micromolar."
             },
             {
-              "node_id": "host_ntcp_receptor",
-              "label": "sodium taurocholate cotransporting polypeptide (NTCP)",
-              "node_type": "GENE_OR_PROTEIN",
-              "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Human hepatocyte sodium/bile acid cotransporter NTCP receptor; kept label-only with Homo sapiens SLC10A1 (UniProtKB:Q14973) protein_examples.",
-              "gene_symbols": [
-                "SLC10A1"
-              ],
-              "protein_examples": [
-                {
-                  "uniprot_id": "UniProtKB:Q14973",
-                  "protein_label": "Sodium/bile acid cotransporter",
-                  "gene_symbol": "SLC10A1",
-                  "taxon_id": "NCBITaxon:9606",
-                  "taxon_label": "Homo sapiens",
-                  "entry_status": "REVIEWED",
-                  "retrieved_on": "2026-10-17",
-                  "role": "Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor bound by exophillic acid to block HBV and HDV preS1-mediated viral attachment (PMID:35458494)."
-                }
-              ]
-            },
-            {
-              "node_id": "hbv_hdv_pres1_viral_entry",
-              "label": "NTCP-dependent HBV and HDV preS1 attachment and hepatocyte entry",
+              "node_id": "retroviral_dna_strand_transfer_integration",
+              "label": "HIV-1 viral DNA strand-transfer integration",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "PreS1-mediated viral attachment and entry of hepatitis B virus and hepatitis D virus into human hepatocytes."
+              "grounding_notes": "Integrase-catalyzed viral DNA strand transfer into target DNA assayed in vitro."
             }
           ],
           "edges": [
@@ -2890,10 +2868,74 @@
               ]
             },
             {
+              "subject": "hiv1_integrase_strand_transfer",
+              "predicate": "supports",
+              "object": "retroviral_dna_strand_transfer_integration",
+              "description": "Integrase strand-transfer catalysis mediates insertion of viral DNA into target DNA.",
+              "evidence": [
+                {
+                  "reference": "PMID:15015729",
+                  "notes": "The in-vitro strand-transfer assay directly measured integrase-catalyzed DNA joining inhibited by exophillic acid."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "graph_id": "exophillic_acid_ntcp_hbv_hdv_entry_inhibition",
+          "title": "Exophillic acid blocks host NTCP-mediated HBV and HDV viral entry",
+          "description": "Exophillic acid interacts with the human hepatocyte receptor sodium taurocholate cotransporting polypeptide (NTCP), inhibiting its viral preS1-receptor function and blocking attachment and entry of hepatitis B and hepatitis D viruses.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "exophillic_acid",
+              "label": "exophillic acid",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:232062"
+            },
+            {
+              "node_id": "host_ntcp_receptor",
+              "label": "sodium taurocholate cotransporting polypeptide (NTCP)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Human hepatocyte sodium/bile acid cotransporter NTCP receptor; kept label-only with Homo sapiens SLC10A1 (UniProtKB:Q14973) protein_examples.",
+              "gene_symbols": [
+                "SLC10A1"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:Q14973",
+                  "protein_label": "Sodium/bile acid cotransporter",
+                  "gene_symbol": "SLC10A1",
+                  "taxon_id": "NCBITaxon:9606",
+                  "taxon_label": "Homo sapiens",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor bound by exophillic acid to block HBV and HDV preS1-mediated viral attachment (PMID:35458494)."
+                }
+              ]
+            },
+            {
+              "node_id": "ntcp_pres1_receptor_binding",
+              "label": "NTCP viral preS1 receptor binding and bile-acid cotransport",
+              "node_type": "MOLECULAR_FUNCTION",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Host NTCP bile-acid uptake and viral preS1 envelope-binding receptor activity on human hepatocytes."
+            },
+            {
+              "node_id": "hbv_hdv_pres1_viral_entry",
+              "label": "NTCP-dependent HBV and HDV preS1 attachment and hepatocyte entry",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "PreS1-mediated viral attachment and entry of hepatitis B virus and hepatitis D virus into human hepatocytes."
+            }
+          ],
+          "edges": [
+            {
               "subject": "exophillic_acid",
               "predicate": "inhibits",
-              "object": "host_ntcp_receptor",
-              "description": "Exophillic acid interacts with the host receptor NTCP and inhibits its bile-acid transport and viral-receptor function.",
+              "object": "ntcp_pres1_receptor_binding",
+              "description": "Exophillic acid interacts with host NTCP and inhibits its bile-acid cotransport and viral preS1-binding function.",
               "evidence": [
                 {
                   "reference": "PMID:35458494",
@@ -2903,9 +2945,21 @@
             },
             {
               "subject": "host_ntcp_receptor",
+              "predicate": "enables",
+              "object": "ntcp_pres1_receptor_binding",
+              "description": "Human hepatocyte NTCP mediates bile-acid uptake and high-affinity viral preS1 binding.",
+              "evidence": [
+                {
+                  "reference": "PMID:35458494",
+                  "notes": "Receptor binding and bile-acid transport assays evaluated NTCP activity in the presence of exophillic acid."
+                }
+              ]
+            },
+            {
+              "subject": "ntcp_pres1_receptor_binding",
               "predicate": "supports",
               "object": "hbv_hdv_pres1_viral_entry",
-              "description": "Host hepatocyte NTCP mediates preS1-dependent attachment and entry of HBV and HDV.",
+              "description": "NTCP preS1-receptor engagement mediates HBV and HDV attachment and entry into human hepatocytes.",
               "evidence": [
                 {
                   "reference": "PMID:35458494",
@@ -2920,7 +2974,7 @@
         "timestamp": "2026-10-23T02:15:00Z",
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
-        "changes": "Added evidence-backed MECHANISTIC causal graph exophillic_acid_hiv1_integrase_and_ntcp_entry_inhibition (5 nodes, 4 edges) covering HIV-1 integrase strand-transfer inhibition (PMID:15015729) and host NTCP-mediated HBV/HDV entry blockade (PMID:35458494).",
+        "changes": "Added 2 evidence-backed MECHANISTIC causal graphs (exophillic_acid_hiv1_integrase_inhibition and exophillic_acid_ntcp_hbv_hdv_entry_inhibition; 8 nodes, 6 edges) covering HIV-1 integrase strand-transfer inhibition (PMID:15015729) and host NTCP-mediated HBV/HDV entry blockade (PMID:35458494).",
         "llm_assisted": true
       }
     },
@@ -3164,7 +3218,7 @@
       "path": "data/antibiotics/antiviral/integric-acid.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "eadfd2f658aff8718aea61b617d46a1c2100e7c2ca2bb4aa61a1be8bd69430e3",
-      "after_sha256": "4faf325f54c9fc3a751f455413d73eb445c478ca0c6f2588a6ed54616a319ad6",
+      "after_sha256": "7f81c74e0bacd0671903bacfbb66b6735baccf5b75addee1eff067b7af620be3",
       "unchanged_fields_sha256": "efdfbd16013a40f87436d394b4ccb39fdb7d39718414d0f3a6843b4d5d3a0ca3",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -3188,7 +3242,7 @@
             },
             {
               "node_id": "hiv1_integrase",
-              "label": "HIV-1 integrase catalytic activities",
+              "label": "HIV-1 integrase",
               "node_type": "GENE_OR_PROTEIN",
               "grounding_status": "REVIEWED_LABEL_ONLY",
               "grounding_notes": "HIV-1 integrase enzyme; kept label-only with HIV-1 HXB2 Gag-Pol polyprotein (UniProtKB:P04585) protein_examples.",

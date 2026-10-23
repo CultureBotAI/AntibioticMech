@@ -74,8 +74,8 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
 
     accounting = verify_corpus_protein_examples_accounting(records)
     assert accounting == {
-        "causal_graphs_total": 52,
-        "causal_graphs_with_protein_nodes": 32,
+        "causal_graphs_total": 53,
+        "causal_graphs_with_protein_nodes": 33,
         "causal_graphs_held": 20,
         "gene_or_protein_nodes": 35,
         "primary_literature_targets_total": 85,

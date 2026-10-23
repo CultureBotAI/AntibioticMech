@@ -398,7 +398,7 @@ def pre_uniprot_protein_examples_root(tmp_path_factory, pre_causal_graphs_root):
 def _causal_graphs_transition(root):
     payload = (root / "curation/causal_graphs_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "71620f1aed8e864ee590cbba391f803d21e9fefd6bb1893d41e07ec4a467f08a"
+        "aab610f2069ec015ab6f2cf8b52a7cb2a036a6f3e5d36018c47442d3c722635c"
     )
     transition = json.loads(payload)
     assert len(transition["record_deltas"]) == 36

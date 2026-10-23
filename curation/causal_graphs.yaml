@@ -123,18 +123,18 @@ records:
       label: althiomycin
       node_type: COMPOUND
       grounding: CHEBI:157683
+    - node_id: bacterial_50s_peptidyl_transferase_center
+      label: bacterial 50S ribosomal subunit peptidyl-transferase center
+      node_type: CELL_STRUCTURE
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Peptidyl-transferase center of the bacterial 50S ribosomal subunit assayed via the
+        puromycin reaction in Escherichia coli B.
     - node_id: ribosomal_peptidyl_transferase_reaction
       label: bacterial ribosomal peptidyl-transferase reaction
       node_type: BIOLOGICAL_PROCESS
       grounding_status: REVIEWED_LABEL_ONLY
       grounding_notes: Peptide-bond formation assayed via the puromycin reaction in Escherichia coli B
-        extracts.
-    - node_id: peptidyl_transfer_blockade
-      label: althiomycin-inhibited ribosomal peptide-bond formation
-      node_type: STATE
-      grounding_status: REVIEWED_LABEL_ONLY
-      grounding_notes: Selective blockade of the ribosomal puromycin reaction without impairment of aminoacyl-tRNA
-        charging or ribosomal binding.
+        extracts without impairment of aminoacyl-tRNA charging or binding.
     - node_id: bacterial_protein_synthesis
       label: bacterial protein synthesis
       node_type: BIOLOGICAL_PROCESS
@@ -150,18 +150,19 @@ records:
       - reference: PMID:4917791
         notes: Cell-free Escherichia coli B assays showed that althiomycin inhibits the puromycin reaction
           without inhibiting aminoacyl-tRNA synthesis or ribosome binding.
-    - subject: ribosomal_peptidyl_transferase_reaction
-      predicate: participates in
-      object: peptidyl_transfer_blockade
-      description: Inhibition of the peptidyl-transferase reaction arrests peptide-bond formation on the
-        ribosome.
+    - subject: bacterial_50s_peptidyl_transferase_center
+      predicate: enables
+      object: ribosomal_peptidyl_transferase_reaction
+      description: The 50S peptidyl-transferase center catalyzes ribosomal peptide-bond formation in the
+        puromycin reaction.
       evidence:
       - reference: PMID:4917791
-        notes: The puromycin reaction assay localized althiomycin action to the peptide-bond-forming step.
-    - subject: peptidyl_transfer_blockade
-      predicate: inhibits
+        notes: The puromycin reaction assay localized althiomycin action to the ribosomal peptide-bond-forming
+          step.
+    - subject: ribosomal_peptidyl_transferase_reaction
+      predicate: supports
       object: bacterial_protein_synthesis
-      description: Blockade of the peptidyl-transferase step inhibits intact-cell and cell-free bacterial
+      description: Ribosomal peptidyl-transferase catalysis drives intact-cell and cell-free bacterial
         protein synthesis.
       evidence:
       - reference: PMID:4917791
@@ -1270,7 +1271,7 @@ records:
       grounding_notes: Enzymatic synthesis of structural fungal beta-1,3-glucan measured in S. cerevisiae
         and C. albicans.
     - node_id: fungal_cell_wall_glucan_integrity
-      label: fungal cell-wall beta-1,3-glucan biosynthesis
+      label: fungal beta-1,3-glucan cell wall
       node_type: CELL_STRUCTURE
       grounding_status: REVIEWED_LABEL_ONLY
       grounding_notes: Structural glucan layer of the yeast cell wall.
@@ -1878,16 +1879,14 @@ records:
   label: exophillic acid
   path: data/antibiotics/antiviral/exophillic-acid.yaml
   cohort: protein_target_with_examples
-  changes: Added evidence-backed MECHANISTIC causal graph exophillic_acid_hiv1_integrase_and_ntcp_entry_inhibition
-    (5 nodes, 4 edges) covering HIV-1 integrase strand-transfer inhibition (PMID:15015729) and host NTCP-mediated
-    HBV/HDV entry blockade (PMID:35458494).
+  changes: Added 2 evidence-backed MECHANISTIC causal graphs (exophillic_acid_hiv1_integrase_inhibition
+    and exophillic_acid_ntcp_hbv_hdv_entry_inhibition; 8 nodes, 6 edges) covering HIV-1 integrase strand-transfer
+    inhibition (PMID:15015729) and host NTCP-mediated HBV/HDV entry blockade (PMID:35458494).
   causal_graphs:
-  - graph_id: exophillic_acid_hiv1_integrase_and_ntcp_entry_inhibition
-    title: Exophillic acid inhibits HIV-1 integrase strand transfer and blocks NTCP-mediated HBV/HDV entry
-    description: 'Exophillic acid exhibits two compound-specific antiviral mechanisms in distinct viral
-      systems: it inhibits HIV-1 integrase strand-transfer catalysis in vitro and interacts with the human
-      hepatocyte receptor sodium taurocholate cotransporting polypeptide (NTCP) to block preS1-mediated
-      attachment and entry of hepatitis B and hepatitis D viruses.'
+  - graph_id: exophillic_acid_hiv1_integrase_inhibition
+    title: Exophillic acid inhibits HIV-1 integrase strand-transfer catalysis
+    description: Exophillic acid inhibits the catalytic strand-transfer reaction of HIV-1 integrase in
+      vitro with an IC50 of 68 micromolar, blocking integrase-mediated viral DNA strand transfer.
     scope_status: MECHANISTIC
     nodes:
     - node_id: exophillic_acid
@@ -1895,7 +1894,7 @@ records:
       node_type: COMPOUND
       grounding: CHEBI:232062
     - node_id: hiv1_integrase
-      label: HIV-1 integrase strand-transfer activity
+      label: HIV-1 integrase
       node_type: GENE_OR_PROTEIN
       grounding_status: REVIEWED_LABEL_ONLY
       grounding_notes: HIV-1 integrase enzyme; kept label-only with HIV-1 HXB2 Gag-Pol polyprotein (UniProtKB:P04585)
@@ -1913,35 +1912,16 @@ records:
         role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose strand-transfer activity is
           inhibited by exophillic acid in vitro (PMID:15015729; HXB2 reference isolate context).
     - node_id: hiv1_integrase_strand_transfer
-      label: HIV-1 integrase strand-transfer reaction
-      node_type: BIOLOGICAL_PROCESS
+      label: HIV-1 integrase strand-transfer catalysis
+      node_type: MOLECULAR_FUNCTION
       grounding_status: REVIEWED_LABEL_ONLY
       grounding_notes: In-vitro HIV-1 integrase strand-transfer catalysis inhibited with an IC50 of 68
         micromolar.
-    - node_id: host_ntcp_receptor
-      label: sodium taurocholate cotransporting polypeptide (NTCP)
-      node_type: GENE_OR_PROTEIN
-      grounding_status: REVIEWED_LABEL_ONLY
-      grounding_notes: Human hepatocyte sodium/bile acid cotransporter NTCP receptor; kept label-only
-        with Homo sapiens SLC10A1 (UniProtKB:Q14973) protein_examples.
-      gene_symbols:
-      - SLC10A1
-      protein_examples:
-      - uniprot_id: UniProtKB:Q14973
-        protein_label: Sodium/bile acid cotransporter
-        gene_symbol: SLC10A1
-        taxon_id: NCBITaxon:9606
-        taxon_label: Homo sapiens
-        entry_status: REVIEWED
-        retrieved_on: '2026-10-17'
-        role: Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor bound by exophillic
-          acid to block HBV and HDV preS1-mediated viral attachment (PMID:35458494).
-    - node_id: hbv_hdv_pres1_viral_entry
-      label: NTCP-dependent HBV and HDV preS1 attachment and hepatocyte entry
+    - node_id: retroviral_dna_strand_transfer_integration
+      label: HIV-1 viral DNA strand-transfer integration
       node_type: BIOLOGICAL_PROCESS
       grounding_status: REVIEWED_LABEL_ONLY
-      grounding_notes: PreS1-mediated viral attachment and entry of hepatitis B virus and hepatitis D
-        virus into human hepatocytes.
+      grounding_notes: Integrase-catalyzed viral DNA strand transfer into target DNA assayed in vitro.
     edges:
     - subject: exophillic_acid
       predicate: inhibits
@@ -1960,19 +1940,78 @@ records:
       - reference: PMID:15015729
         notes: Purified HIV-1 integrase strand-transfer activity was assayed during isolation and characterization
           of exophillic acid.
+    - subject: hiv1_integrase_strand_transfer
+      predicate: supports
+      object: retroviral_dna_strand_transfer_integration
+      description: Integrase strand-transfer catalysis mediates insertion of viral DNA into target DNA.
+      evidence:
+      - reference: PMID:15015729
+        notes: The in-vitro strand-transfer assay directly measured integrase-catalyzed DNA joining inhibited
+          by exophillic acid.
+  - graph_id: exophillic_acid_ntcp_hbv_hdv_entry_inhibition
+    title: Exophillic acid blocks host NTCP-mediated HBV and HDV viral entry
+    description: Exophillic acid interacts with the human hepatocyte receptor sodium taurocholate cotransporting
+      polypeptide (NTCP), inhibiting its viral preS1-receptor function and blocking attachment and entry
+      of hepatitis B and hepatitis D viruses.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: exophillic_acid
+      label: exophillic acid
+      node_type: COMPOUND
+      grounding: CHEBI:232062
+    - node_id: host_ntcp_receptor
+      label: sodium taurocholate cotransporting polypeptide (NTCP)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Human hepatocyte sodium/bile acid cotransporter NTCP receptor; kept label-only
+        with Homo sapiens SLC10A1 (UniProtKB:Q14973) protein_examples.
+      gene_symbols:
+      - SLC10A1
+      protein_examples:
+      - uniprot_id: UniProtKB:Q14973
+        protein_label: Sodium/bile acid cotransporter
+        gene_symbol: SLC10A1
+        taxon_id: NCBITaxon:9606
+        taxon_label: Homo sapiens
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-17'
+        role: Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor bound by exophillic
+          acid to block HBV and HDV preS1-mediated viral attachment (PMID:35458494).
+    - node_id: ntcp_pres1_receptor_binding
+      label: NTCP viral preS1 receptor binding and bile-acid cotransport
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Host NTCP bile-acid uptake and viral preS1 envelope-binding receptor activity on
+        human hepatocytes.
+    - node_id: hbv_hdv_pres1_viral_entry
+      label: NTCP-dependent HBV and HDV preS1 attachment and hepatocyte entry
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: PreS1-mediated viral attachment and entry of hepatitis B virus and hepatitis D
+        virus into human hepatocytes.
+    edges:
     - subject: exophillic_acid
       predicate: inhibits
-      object: host_ntcp_receptor
-      description: Exophillic acid interacts with the host receptor NTCP and inhibits its bile-acid transport
-        and viral-receptor function.
+      object: ntcp_pres1_receptor_binding
+      description: Exophillic acid interacts with host NTCP and inhibits its bile-acid cotransport and
+        viral preS1-binding function.
       evidence:
       - reference: PMID:35458494
         notes: Compound-NTCP interaction, bile-acid uptake, and preS1-probe binding assays established
           host NTCP engagement by exophillic acid.
     - subject: host_ntcp_receptor
+      predicate: enables
+      object: ntcp_pres1_receptor_binding
+      description: Human hepatocyte NTCP mediates bile-acid uptake and high-affinity viral preS1 binding.
+      evidence:
+      - reference: PMID:35458494
+        notes: Receptor binding and bile-acid transport assays evaluated NTCP activity in the presence
+          of exophillic acid.
+    - subject: ntcp_pres1_receptor_binding
       predicate: supports
       object: hbv_hdv_pres1_viral_entry
-      description: Host hepatocyte NTCP mediates preS1-dependent attachment and entry of HBV and HDV.
+      description: NTCP preS1-receptor engagement mediates HBV and HDV attachment and entry into human
+        hepatocytes.
       evidence:
       - reference: PMID:35458494
         notes: Primary human hepatocyte infection and preS1 attachment assays demonstrated inhibition
@@ -2152,7 +2191,7 @@ records:
       node_type: COMPOUND
       grounding: CHEBI:66081
     - node_id: hiv1_integrase
-      label: HIV-1 integrase catalytic activities
+      label: HIV-1 integrase
       node_type: GENE_OR_PROTEIN
       grounding_status: REVIEWED_LABEL_ONLY
       grounding_notes: HIV-1 integrase enzyme; kept label-only with HIV-1 HXB2 Gag-Pol polyprotein (UniProtKB:P04585)
@@ -2800,9 +2839,9 @@ held_records:
   - PMID:4555420
   reason: 'Held from causal_graphs curation because the proximal protein/complex/ribosomal target (alanine
     racemase (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Held in alignment with curation/pathway_links.yaml:
-    PMID:4973690 assayed E. coli strain W (ATCC 9637) D-alanine--D-alanine ligase, whereas DdlA/DdlB isozyme
-    resolution in E. coli K-12 is not established by the 1968 study.)'
+    without a single verified experimental-strain UniProtKB accession (Held because PMID:4555420 assayed
+    Escherichia coli strain W (ATCC 9637) alanine racemase, whereas Alr/DadX alanine racemase isozyme and
+    strain-specific sequence resolution in E. coli K-12 are not established by the 1972 study.)'
 - identifier: CHEBI:65485
   label: dihydrobetulinic acid
   path: data/antibiotics/antiprotozoal/dihydrobetulinic-acid.yaml
