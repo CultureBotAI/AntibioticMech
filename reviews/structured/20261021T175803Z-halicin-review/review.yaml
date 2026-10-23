@@ -1,0 +1,627 @@
+schema_version: 1.0.0
+review_id: 20261021T175803Z-halicin-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Halicin: exact structure, antibacterial activity and host JNK assay supported'
+started_at: '2026-10-21T17:38:05Z'
+finished_at: '2026-10-21T17:58:03Z'
+reviewer:
+  identity: Codex review002 subagent
+  kind: agent
+  independence: independent
+  independence_basis: Reviewer did not author the native record. The entire record
+    and maintained source were read, independent chemistry calculated, asserted chemical
+    groundings checked and exact-compound primary literature assessed with explicit
+    access boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: 'The exact halicin structure and seven synonyms agree with current chemical
+  authorities and original compound-specific figures. Primary evidence supports antibacterial
+  activity and the stated JNK inhibition value of 0.7 micromolar in a biochemical
+  assay. These are separate biological contexts: the native definition does not assert
+  that host JNK mediates bacterial killing. No corrective finding is established.
+  Access to the underlying Reaxys registration and some original supplementary data
+  remains limited. Scientific assessment retains the stated evidence limits; full
+  verification is blocked by the shared native-library failure.'
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/halicin.yaml
+    sha256: 2e3dd85437d923d152d6524c8919c33ce375fb543adc83b8a5af7d71b1aefce2
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+targets:
+- target_id: CHEBI:146227
+  path: data/antibiotics/antibacterial/halicin.yaml
+  label: halicin
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI/ARO source extraction and class mapping
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position 520; complete exact native record. All thirteen initial
+    hashes were preserved and reverified. The actual ChEBI owner was confirmed; no
+    additional maintained owner was needed.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:146227
+checks:
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/halicin.yaml
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/halicin.yaml --out /private/tmp/am-review-session/520-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python
+    /private/tmp/am-review-session/111-chemistry-check.py 520
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: authority-chemistry
+  name: Independent exact authority comparison
+  status: passed
+  required: false
+  summary: All six native, ChEBI and PubChem encodings reproduce the full key, formula
+    and charge.
+  target_ids:
+  - CHEBI:146227
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/520-authority-check.py
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: structured-catalog
+  name: Structured adapter before mechanism follow-up
+  status: passed
+  required: false
+  summary: The live iModulonDB dataset catalog was read before web follow-up. Its
+    listed organisms do not cover the native mammalian JNK context; no matching dataset
+    search applies.
+  target_ids:
+  - CHEBI:146227
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets
+  exit_code: 0
+  expected_exit_code: 0
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:146227
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/halicin.yaml
+  locator: Entire YAML, including definition, all seven synonyms, five parents, one
+    activity role, both exact xrefs, document link, source concept and four history
+    events.
+  accessed_at: '2026-10-21T17:52:13Z'
+  support: supports
+  summary: The EXACT, SEEDED ChEBI record denotes neutral C5H3N5O2S3, NQQBNZBOOHHVQP-UHFFFAOYSA-N.
+    The definition states host JNK inhibition and antibacterial properties without
+    making JNK an antibacterial molecular target. No quantitative antibacterial observation,
+    molecular-target object, resistance route, producer, clinical assertion, dataset
+    or causal graph is present. The source concept mint is provenance, not an alternative
+    chemical identity.
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv:2698; 520-raw-rows.json; conf/sources.yaml;
+    scripts/extract_source_inventory.py:176; scripts/seed_from_sources.py:783
+  locator: Complete exact ChEBI row and applicable extraction, definition, synonym,
+    parent, role, structure and identity-emission logic.
+  accessed_at: '2026-10-21T17:52:13Z'
+  support: supports
+  summary: The record faithfully reproduces the adopted ChEBI row. Five publication
+    leads are retained in the inventory but deliberately not presented as blanket
+    record evidence. The role-to-class configuration selects ANTIBACTERIAL from CHEBI33282.
+    The kinase role is host mechanism context outside the antibacterial filing role
+    set, so its absence from activity_roles is not a dropped antibacterial role. No
+    applicable ARO, FDA, PubChem-enrichment or producer row supplied this seed.
+  snapshot_sha256: f140489fe8a8541022f949f13a5e0f46d44b3fd29b5d18f957d41e33a03b8a59
+- evidence_id: authority
+  kind: authority
+  reference: CHEBI:146227; pubchem.compound:11837140; cas:40045-50-9; https://www.ebi.ac.uk/chebi/CHEBI:146227
+  locator: Complete current ChEBI record, PubChem exact-key and CAS property responses;
+    independent parsing of six native/authority encodings.
+  accessed_at: '2026-10-21T17:52:13Z'
+  support: supports
+  summary: Current ChEBI repeats the exact graph, seven synonyms, charge, formula
+    and masses. PubChem resolves the exact key and CAS to CID11837140 with matching
+    chemistry. All six encodings reproduce the full key and neutral formula; there
+    are no stereocentres or counterions. Original 2009 Figure1B and 2020 Figure2H
+    independently depict the same constitution. Average-mass precision differs between
+    providers without an identity conflict.
+  snapshot_sha256: 38615a809451d823afe6ce6227e5c4a58d9df77a40de004edfbe572298604ac0
+- evidence_id: classes
+  kind: authority
+  reference: CHEBI:16385; CHEBI:35716; CHEBI:38099; CHEBI:38418; CHEBI:50994; CHEBI:33282
+  locator: All five current parent labels/definitions and outgoing relations, plus
+    the antibacterial role definition.
+  accessed_at: '2026-10-21T17:48:16Z'
+  support: supports
+  summary: The parents denote organic sulfides, carbon-bound nitro compounds, thiadiazoles,
+    1,3-thiazoles and primary amino compounds. Each is broader than and structurally
+    compatible with halicin. The antibacterial role denotes killing or slowing bacterial
+    growth and is independently supported by the 2020 experiments. Current ChEBI also
+    explicitly records the JNK inhibitor role.
+  snapshot_sha256: d180ccc15807af952b78648868643ecd5e08df5ae13237bdf52ac1c890951375
+- evidence_id: registry
+  kind: database
+  reference: reaxys:1139980; wikipedia.en:Halicin; https://en.wikipedia.org/wiki/C-Jun_N-terminal_kinases
+  locator: ChEBI registry attribution, bounded public registry-number search, and
+    both native linked pages inspected for identity and destination.
+  accessed_at: '2026-10-21T17:48:16Z'
+  support: partial
+  summary: ChEBI attributes Reaxys1139980 to halicin; the underlying proprietary registry
+    entry was not independently inspected. The Halicin document link resolves to the
+    correct substance, with the same CAS and full key, while the inline kinase link
+    resolves to JNK context. These document links are not exact chemical xrefs or
+    primary proof of clinical status. The unrelated PMID with the same digits as the
+    Reaxys number is not a relevant match.
+  snapshot_sha256: d180ccc15807af952b78648868643ecd5e08df5ae13237bdf52ac1c890951375
+- evidence_id: adopted
+  kind: database
+  reference: PMID:19271755; PMID:24838066; PMID:25423094; PMID:26491845; PMID:32084340
+  locator: All five complete indexed abstracts and metadata read; deeper original-paper
+    scopes specified separately.
+  accessed_at: '2026-10-21T17:48:17Z'
+  support: supports
+  summary: 19271755 is the 2009 JNK medicinal-chemistry study. 24838066 studies mechanically
+    injured human astrocytes and JNK-inhibitor pretreatment, not bacteria. 25423094
+    studies rat-heart ischemia/reperfusion and reports context-dependent adverse mitochondrial
+    effects of SU3327; it is not a general protective-effect claim. 26491845 studies
+    CCl4-exposed mouse liver, JNK activation and mitochondrial phosphoproteins. 32084340
+    reports antibacterial discovery, assays and mouse infection models. None of the
+    three host injury studies proves antibacterial JNK causality or a bacterial producer.
+  snapshot_sha256: 8016b95ad207ae42a6d86c99eea6cab9559524d10df85ef68fe2176c3506f4d4
+- evidence_id: jnk2009
+  kind: primary_source
+  reference: PMID:19271755; DOI:10.1021/jm801503n; https://pmc.ncbi.nlm.nih.gov/articles/PMC2667321/
+  locator: Abstract, Introduction, complete Results/Discussion/Conclusion, Tables1–5,
+    general methods, exact compound9 synthesis/characterization and all biological/docking
+    methods read. Figures1–2 independently viewed. Unrelated analogue synthesis entries
+    and supplemental raw data not comprehensively assessed.
+  accessed_at: '2026-10-21T17:48:47Z'
+  support: supports
+  summary: 'Compound9 is the native halicin constitution. Table4 and Figure2A report
+    IC50 0.7 micromolar in a JNK1-mediated ATF2 phosphorylation assay: JNK 35 ng/mL,
+    ATF2 400 nM, ATP 200 micromolar, pH7.5, one hour at room temperature. The separate
+    DELFIA pepJIP1-displacement IC50 is 239 nM, and the HeLa c-Jun phosphorylation
+    EC50 is 6.23 micromolar. Neither is a dissociation constant. Figure1C/D is docking
+    at the JIP site, not a halicin-bound crystal structure. The biochemical result
+    supports the native numeric definition, with host kinase scope retained.'
+  snapshot_sha256: 6796cdb8778ebe427c57b970b035499f6bc3a9f43a1de7b6d7300fd97061e3f5
+- evidence_id: antibacterial2020
+  kind: primary_source
+  reference: PMID:32084340; DOI:10.1016/j.cell.2020.01.021; https://pmc.ncbi.nlm.nih.gov/articles/PMC8349178/
+  locator: Complete original main text and STAR Methods read; Figures2 and4 independently
+    viewed. Figure3/5 captions and results read, but their raw panels and supplemental
+    datasets not independently reprocessed.
+  accessed_at: '2026-10-21T17:48:47Z'
+  support: supports
+  summary: The study explicitly renames SU3327 as halicin and Figure2H matches the
+    native graph. Figure2I and text report E.coli BW25113 MIC2 micrograms/mL, with
+    LB growth assays at 37 degrees C, two-fold dilution, 100-microlitre wells and
+    endpoint OD600 when controls reach stationary phase, generally 12–18 hours. Separate
+    CFU assays show killing in LB and nutrient-free PBS. Mechanistic evidence combines
+    pH-dependent potency, DiSC3(5) fluorescence, tetracycline antagonism, kanamycin
+    potentiation and transcriptomic responses. It supports a proposed dissipation
+    of the delta-pH component; iron binding is a suggested explanation, not directly
+    demonstrated affinity. These are not host JNK assays. Failure to select resistance
+    under the tested 30-day liquid/seven-day agar protocols is not proof resistance
+    cannot occur. Mouse infection efficacy is not clinical approval.
+  snapshot_sha256: f5edd8a3ac6a59eba4f19b22f0ea3966103ea7949405c713da236b315f709757
+- evidence_id: correction
+  kind: primary_source
+  reference: PMID:32302574; DOI:10.1016/j.cell.2020.04.001; https://bioinformatica-iib.github.io/quimioinformatica/practicos/TP05/material/Stokes%282020%29.pdf
+  locator: Publisher correction reproduced on PDF page31, printed page475, read completely
+    and visually checked. Corrected figure pages not comprehensively reviewed.
+  accessed_at: '2026-10-21T17:50:20Z'
+  support: supports
+  summary: The correction sets FigureS3A halicin concentrations to 20 and 40 micrograms/mL,
+    corrects H37Rv and nfsA spelling, updates prediction-rank/table details and credits
+    an earlier unpublished PubChem tuberculosis screen. Its structure correction concerns
+    another ZINC compound, not halicin. Visual inspection confirms microgram units
+    despite PDF text extraction rendering them as mg. These corrections do not contradict
+    the native broad antibacterial definition or the independent 2009 JNK value.
+  snapshot_sha256: 1a5db1ac7d05e535cfa1db8243ec28e1ab4312f514b1b147949d2fa969b20df1
+- evidence_id: hostcontexts
+  kind: primary_source
+  reference: PMID:25423094; DOI:10.1371/journal.pone.0113526; PMID:26491845; DOI:10.1016/j.redox.2015.09.040
+  locator: Complete abstracts, plus selected original SU3327-focused Methods/Results/Discussion
+    paragraphs; no claim of complete host-study review or independent raw-image analysis.
+  accessed_at: '2026-10-21T17:48:32Z'
+  support: context_only
+  summary: The heart study examines 10 micromolar SU3327 in perfused rat hearts and
+    discusses JNK/p38 signaling, mitochondrial respiratory changes and adverse recovery.
+    The liver study uses SU3327 as a JNK-pathway intervention and associates reduced
+    JNK activation with altered mitochondrial phosphorylation and liver injury. These
+    context-dependent host effects neither refute the biochemical 0.7-micromolar assay
+    nor establish direct binding of halicin to each downstream mitochondrial protein.
+    No host phenotypes are transferred to bacterial target fields.
+  snapshot_sha256: 3b631092985bc9bff6bf3cd40e2cb6c5d6ad78907dfa4b07b5d4ace7b75e567c
+- evidence_id: laterlead
+  kind: primary_source
+  reference: PMID:41308844; DOI:10.1016/j.ijantimicag.2025.107679
+  locator: Complete indexed original abstract and publicly available publisher summary;
+    full experimental article not obtained.
+  accessed_at: '2026-10-21T17:49:46Z'
+  support: partial
+  summary: This later study reports menaquinone/respiratory-chain effects and nitroreductase-associated
+    DNA damage in E.coli ATCC25922. It is a lead for future mechanistic curation,
+    not a fully audited direct-binding or kinetic claim in this review. Its experimental
+    scope should be reconciled with the 2020 study before an exclusive or universal
+    mechanism is asserted. No such exclusive mechanism is present in the native record.
+  snapshot_sha256: ef1b4d985e6cd426db7c861751444369046af01d8a7950f5dcdefc22f37bfdd0
+- evidence_id: search
+  kind: search
+  reference: 520-local-hits.txt; 520-adapter.json; 520-imodulondb-datasets.txt; 520-fetch-results.json
+    through 520-fetch5-results.json
+  locator: Preserved hidden- and ignored-inclusive local search; structured catalog
+    before web research; all adopted PMID retrieval and bounded exact-authority, JNK-assay
+    and linked-correction searches.
+  accessed_at: '2026-10-21T17:52:13Z'
+  support: context_only
+  summary: The complete record and source row were read. The structured catalog has
+    no human or rodent dataset for the native JNK claim, so no applicable organism-specific
+    search was substituted. That lack of coverage is not negative biological evidence.
+    Bacterial transcriptomic observations were encountered later in the primary paper
+    and are not automatically iModulon membership or direct target evidence. No exhaustive
+    absence of additional mechanisms is claimed.
+  search_scope: 2026-10-21; ignored- and hidden-inclusive exact label, CHEBI146227,
+    slug and key search; official ChEBI/PubChem; all five adopted PMIDs, exact SU3327
+    IC50 and linked correction retrieval.
+  snapshot_sha256: 53f161874dfb0a1c309e2c7f2fcef6e8054a9db9d68108ea284b2966db1210b4
+- evidence_id: checks
+  kind: validation
+  reference: 520-focused-results.json; 520-authority-chemistry.json; 520-inspect.json
+  locator: Actual focused schema, strict and optional chemistry executions; independent
+    authority comparison; all thirteen original hashes rechecked.
+  accessed_at: '2026-10-21T17:52:13Z'
+  support: supports
+  summary: All focused validators and independent authority checks exit 0. These deterministic
+    results support self-consistency and provenance; the scientific conclusions additionally
+    depend on the inspected original figures, assays and source scopes.
+  snapshot_sha256: 48cd5c0796cddbe239eaf5e9c7d89bef521dcc5ddb844a789291cda15450aa1b
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral halicin and synonyms
+  outcome: supported
+  summary: Current authorities, CAS resolution and two primary structure figures agree
+    with the native neutral graph and SU3327 naming. The structure is one exact compound,
+    without a salt, mixture or stereochemical ambiguity.
+  target_ids:
+  - CHEBI:146227
+  evidence_ids:
+  - authority
+  - jnk2009
+  - antibacterial2020
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, role and filing class
+  outcome: supported
+  summary: All five parents are strictly broader compatible chemical classes. CHEBI33282
+    is preserved and primary experiments support antibacterial activity. Host JNK
+    inhibition does not replace the antibacterial role or establish a bacterial target.
+  target_ids:
+  - CHEBI:146227
+  evidence_ids:
+  - classes
+  - owners
+  - antibacterial2020
+- assessment_id: mechanism
+  area: evidence
+  topic: Numeric JNK definition and antibacterial mechanism boundary
+  outcome: supported
+  summary: The 0.7-micromolar value is directly supported for compound9 in the original
+    biochemical assay. It is distinct from peptide displacement, cell-based potency,
+    docking and the bacterial membrane-energy experiments. No wrong target promotion
+    is asserted in the native definition.
+  target_ids:
+  - CHEBI:146227
+  evidence_ids:
+  - jnk2009
+  - antibacterial2020
+  - hostcontexts
+- assessment_id: xrefs
+  area: grounding
+  topic: Registry and document references
+  outcome: unknown
+  summary: CAS and both document destinations are corroborated. Reaxys1139980 is faithfully
+    attributed by ChEBI, but the underlying registry graph was not inspected through
+    a free authoritative route. No mismatch is established.
+  target_ids:
+  - CHEBI:146227
+  evidence_ids:
+  - authority
+  - registry
+- assessment_id: evidence
+  area: evidence
+  topic: All adopted leads and correction
+  outcome: supported
+  summary: All five adopted citations resolve and were read at the stated depth. Host
+    injury studies remain host context. The linked 2020 correction was independently
+    read and its microgram units visually confirmed; no correction changes the native
+    identity or broad activity claim.
+  target_ids:
+  - CHEBI:146227
+  evidence_ids:
+  - adopted
+  - jnk2009
+  - antibacterial2020
+  - correction
+  - hostcontexts
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained ownership and generated status
+  outcome: supported
+  summary: All thirteen original captured inputs remain unchanged and actual ChEBI
+    ownership was confirmed before assessment. The four source history events and
+    stable source concept are compatible with SEEDED status.
+  target_ids:
+  - CHEBI:146227
+  evidence_ids:
+  - owners
+  - native
+  - checks
+- assessment_id: completeness
+  area: completeness
+  topic: Optional activity and mechanism enrichment
+  outcome: supported
+  summary: The absent target, MIC and causal-graph objects are optional and are not
+    defects. Future enrichment should use strain-specific primary experiments, preserve
+    indirect versus direct mechanism evidence and consult the later original article
+    before claiming a unique route.
+  target_ids:
+  - CHEBI:146227
+  evidence_ids:
+  - antibacterial2020
+  - laterlead
+  - search
+findings: []
+actions:
+- action_id: A1
+  description: If mechanism or activity is enriched, retain the verified assay and
+    material boundaries.
+  finding_ids: []
+  target_ids:
+  - CHEBI:146227
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/halicin.yaml
+    role: Optional curator-owned additions through the validated writer
+  acceptance_checks:
+  - Cite the 2009 original for JNK1 biochemical inhibition and retain 0.7 micromolar
+    as IC50, not Kd, cellular potency or a bacterial target measurement.
+  - For antibacterial observations, preserve strain, medium, concentration, endpoint
+    and assay method. Apply the 2020 correction, especially microgram units and H37Rv/nfsA
+    names, before extracting supplementary experiments.
+  - Keep iron binding as a proposed explanation in the 2020 study. Inspect the complete
+    later 2025 primary paper before adding its specific menaquinone, Complex I or
+    DNA claims, and do not equate expression changes with direct binding.
+  - Resolve Reaxys registration through an accessible authoritative entry if a future
+    curation decision depends on that exact registry graph. Do not alter the corroborated
+    chemistry solely because direct registry access is unavailable.
+limitations:
+- The entire native record and maintained ChEBI row were assessed. All five adopted
+  complete abstracts were read. The 2009 read scope includes Results/Discussion/Conclusion,
+  all five tables and compound9 plus biological methods; unrelated analogue synthesis
+  entries and supplemental raw data were not comprehensively reviewed.
+- The 2020 main text and STAR Methods were read in full, with Figures2/4 visually
+  inspected. Original quantitative supplemental tables and all raw figure panels were
+  not independently reprocessed. The correction narrative on printed page475 was fully
+  read and viewed; its remaining corrected figure pages were not comprehensively reviewed.
+- The 2014 heart and 2015 liver studies were read at complete-abstract and selected
+  SU3327-focused paragraph depth. The 2014 astrocyte paper was assessed at complete
+  indexed abstract depth only. These papers are host context, not exact antibacterial
+  mechanism proof.
+- The underlying Reaxys1139980 record was not directly inspected. Current ChEBI reproduces
+  that registration, and no positive mismatch was found. CAS and exact chemistry are
+  independently corroborated.
+- The 2025 mechanism paper was assessed at complete original abstract and public publisher-summary
+  depth, without the full experimental article. The review does not claim exhaustive
+  mechanism, resistance, toxicity or clinical coverage.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- All fetch manifests preserve actual source URLs, UTC retrieval times, response sizes
+  and hashes. The initial 2009/2020 EuropePMC XML requests returned HTTP500; ordinary
+  free PMC HTML and author/public reprint routes subsequently succeeded. Downloaded
+  PDFs are not claimed read beyond the stated sections.
+- The native inline HTML link is preserved source formatting. It resolves to relevant
+  JNK context and is not treated as primary evidence or a separate scientific error.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
