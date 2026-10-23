@@ -1,0 +1,890 @@
+# Review of ceftolozane
+
+- Review: 20261021T122244Z-ceftolozane-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T12:02:21Z
+- Finished UTC: 2026-10-21T12:22:44Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The ceftolozane molecular graph, stereochemistry, formula and inspected exact chemical references agree. One major identity finding concerns Zerbaxa, the ceftolozane–tazobactam product imported as an exact synonym of the single compound. The existing source-scoped synonym exclusion can correct it. Original monocompound studies support antibacterial activity and PBP inhibition. CMY-136 has direct ceftolozane hydrolysis evidence; CAM-1 remains a faithfully attributed database assertion with combination-phenotype scope. All 15 adopted PMID leads were resolved and dispositioned. No native record was changed.
+
+## Scope And Provenance
+
+Entire exact SEEDED ceftolozane record: definition, six synonyms, three parents, one role, five chemical xrefs, three documents, two resistance assertions, source concepts and four history events. All 15 adopted compound, parent and determinant PMID leads were inspected.
+
+Selection: Queue 263; original 13 input captures retained, with four actual ARO and qualification owners appended, giving 17 unchanged hashes.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:134719 | data/antibiotics/antibacterial/ceftolozane.yaml | generated | ceftolozane |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented schema validation | passed | True | CHEBI:134719 | Exit 0; no issues found. |
+| Documented strict validation | passed | True | CHEBI:134719 | Exit 0; zero ERROR rows. |
+| Supplemental exact chemistry comparison | passed | False | CHEBI:134719 | Exit 0; native and three independent authority representations agree. |
+| Structured dataset discovery before protein web follow-up | passed | False | CHEBI:134719 | Exit 0. |
+| Structured exact determinant search | passed | False | CHEBI:134719 | Exit 0; zero genes and zero components. |
+| Structured exact determinant search | passed | False | CHEBI:134719 | Exit 0; zero genes and zero components. |
+| Supplemental source and preserved-hash reconciliation | passed | False | CHEBI:134719 | Exit 0; 17 input hashes, two adopted edges and all 15 literature dispositions checked. This is not a native corpus validator. |
+| Authoritative full QC | failed | True | CHEBI:134719 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:134719 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:134719 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:134719 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:134719 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:134719 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:134719 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:134719 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:134719 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact molecular identity
+
+identity: supported. Targets: CHEBI:134719.
+
+Native chemistry and inspected exact chemical xrefs agree; formulations remain distinct.
+
+### Combination product imported as exact synonym
+
+identity: concern. Targets: CHEBI:134719.
+
+Zerbaxa denotes a two-drug product and must be excluded from exact ceftolozane synonyms.
+
+### Parents and antibacterial role
+
+grounding: supported. Targets: CHEBI:134719.
+
+Structural parents fit and independent original monocompound studies support antibacterial activity.
+
+### Two imported inactivation assertions
+
+evidence: unknown. Targets: CHEBI:134719.
+
+CMY-136 has direct ceftolozane hydrolysis evidence. CAM-1 has an experimentally supported combination phenotype, while its exact ceftolozane hydrolysis remains unverified. Preserve honest database attribution.
+
+### Patents and Wikipedia
+
+provenance: supported. Targets: CHEBI:134719.
+
+All three document links were inspected at stated depth; salt and combination context does not turn document links into exact chemical xrefs.
+
+### Optional mechanism enrichment
+
+completeness: supported. Targets: CHEBI:134719.
+
+Exact PBP and activity studies are available for enrichment. The absence of optional targets, MICs, clinical records, producers or causal graphs is not a defect in this SEEDED record.
+
+### Maintained owners and history
+
+provenance: supported. Targets: CHEBI:134719.
+
+Source concepts, two resistance rows and four history events are coherent; 17 input hashes are preserved.
+
+### Focused native validity
+
+schema: supported. Targets: CHEBI:134719.
+
+Documented schema and strict checks pass.
+
+## Findings
+
+### F1: Zerbaxa is incorrectly asserted as an exact synonym of ceftolozane
+
+major / open / confirmed; issue key: CHEBI-134719-zerbaxa-combination-exact-synonym.
+
+Native synonyms[5] imports Zerbaxa from ARO:3003927 as EXACT_SYNONYM. The official product contains ceftolozane sulfate and tazobactam sodium, whereas this record denotes one ceftolozane structure. Exact aliasing conflates a combination with one component and can transfer combination activity or clinical claims incorrectly.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Add Zerbaxa to the existing conf/sources.yaml synonym_exclusions entry for ARO:3003927 and reproduce the record through normal seeding. Preserve genuine ceftolozane names, chemical identity and resistance-source attribution. If product information is added later, represent the combination and its ingredients explicitly rather than restoring an exact synonym.
+
+- Zerbaxa is absent from generated exact ceftolozane synonyms and remains correctly identifiable as a combination product.
+- The ceftolozane graph, key, formula, stereochemistry and unrelated native claims remain unchanged.
+- Run documented schema, strict, seed-canary and full-corpus gates after separately authorized curation.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/ceftolozane.yaml; Entire native YAML and four history events | supports | The record is SEEDED and EXACT. Its two resistance entries explicitly identify CARD database assertions. There is no native molecular target, MIC observation, clinical-product assertion, producer or causal graph. Missing optional enrichment is not itself a demonstrated defect. |
+| chemistry | CHEBI:134719; PubChem:53234134; ChEMBL:CHEMBL2103872; 263-chemistry.py/.json; current ChEBI molfile, PubChem and ChEMBL snapshots | supports | Native SMILES and InChI and all three current authority structures reproduce JHFNIHVVXRKLEF-DCZLAGFPSA-N, C23H30N12O8S2, net charge 0, two R core centers and the Z oxime. Average mass 666.703 and exact mass 666.17509792 agree with native precision. ChEMBL places the dissociable carboxyl proton differently but yields the same Standard InChI; this does not establish a distinct compound. |
+| grounding | CHEBI:134719; CHEBI:23066; CHEBI:38099; CHEBI:33281; ARO:0000032; CAS:689293-68-3; Reaxys:24720344; 263-chebi.html/.txt/.mol; 263-parent38099.json; 263-aro-stanzas.txt; reused 254 ChEBI cephalosporin and antimicrobial-role authority snapshots | supports | The cephalosporin and thiadiazole parents fit the graph, and original exact-compound activity supports the antimicrobial role and antibacterial classification. Current direct ChEBI and independent chemical authorities corroborate the identity and CAS link. Reaxys is a corroborated authority link, without independent registry inspection. The OLS lookup for CHEBI:134719 returned 404, but the direct current ChEBI page and molfile resolved; the identifier is not treated as absent. |
+| brand | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f; NDA206829; 263-label.json, effective 2026-05-12: openFDA identity, Description and Microbiology; native synonyms[5] | refutes | The official ZERBAXA label identifies two active ingredients: ceftolozane sulfate and tazobactam sodium. The 1.5 g vial supplies 1 g ceftolozane equivalent plus 0.5 g tazobactam equivalent. Thus Zerbaxa is a combination-product name, not an exact synonym for the native single ceftolozane structure. The sulfate material and excipients are additional formulation boundaries. The label assigns PBP inhibition to ceftolozane and beta-lactamase inhibition to tazobactam; product clinical outcomes cannot be attributed to either ingredient alone. |
+| documents | patent:US2017233408; patent:WO2016028670; wikipedia.en:Ceftolozane; 263-patent-us.html/.txt and 263-patent-wo.html/.txt identity/background passages; 263-wiki.html/.txt redirect and identity panel | context_only | Both patents resolve to salt-form inventions for ceftolozane; their broad salts, compositions and combination claims are document context rather than proof that every claimed material equals the native zwitterion. The abbreviated US identifier resolves to US20170233408A1. Wikipedia Ceftolozane redirects to Ceftolozane/tazobactam and therefore requires the same combination boundary. Its document placement is not an exact-structure assertion. |
+| adapter | iModulonDB:p_aeruginosa/precise364; iModulonDB:e_coli/precise1k; 263-imodulondb-datasets.txt; 263-imodulondb-CAM-1.txt; 263-imodulondb-CMY-136.txt | context_only | Structured dataset discovery and exact CAM-1 and CMY-136 searches preceded protein web follow-up. Both searches returned no gene or component hit, so no summarize call applied. Reference-strain catalog coverage does not establish absence of acquired resistance determinants or absence of function. |
+| pbp | PMID:20547785; DOI:10.1128/AAC.00296-10; Canonical ASM publisher web text: complete main methods/results, Tables 1–2 and discussion; 263-extra-core.json abstract | supports | CXA-101 was tested alone against P. aeruginosa PAO1. Competitive Bocillin labeling of membrane PBPs yielded PBP3 IC50 0.02 ±0.007 micrograms/mL and inhibition of other essential PBPs. MIC was 0.5 micrograms/mL; time-kill and microscopy support bactericidal activity and septation disruption in this strain. These are competition-assay and cellular endpoints, not an equilibrium binding constant or a ligand-bound crystal structure. A taxon-scoped PBP target could be added as optional primary enrichment. |
+| activity | PMID:17145788; DOI:10.1128/AAC.00860-06; PMID:18701284; DOI:10.1016/j.bmcl.2008.07.085; ASM original 2007 complete main methods/results/discussion and Tables 1–3; 263-extra-core.json complete 2008 SAR abstract | supports | The 2007 study tested Astellas FR264205 using free-acid-equivalent amounts, without tazobactam. Agar dilution used 10^4 CFU per spot, 18–20 hours at 35 degrees C and a visible-growth endpoint. Its 193-isolate Japanese P. aeruginosa panel had MIC range 0.25–4 micrograms/mL; mouse infection models provided separate in vivo evidence. Particular enzyme, efflux and OprD comparisons remain strain-specific rather than universal resistance predictions. The 2008 SAR abstract identifies FR264205 as compound 15; its full body was not inspected. |
+| cam | PMID:30789204; DOI:10.1093/jac/dkz066; OUP web main methods and publisher-indexed Results/Discussion, Tables 1–2; 263-core.json complete abstract | partial | A complete blaCAM-1 region cloned into E. coli TOP10 increased ceftolozane/tazobactam Etest MIC to &gt;256/4, versus 0.25/4 for the vector control. The clinical P. aeruginosa isolates also carried intrinsic PDC-35 and OXA-488. Crude-lysate Table 2 measures other beta-lactams but contains no ceftolozane substrate. This supports the determinant-associated combination phenotype without directly measuring ceftolozane hydrolysis in that table. The native entry faithfully preserves the CARD assertion; this boundary is not proof that CAM-1 cannot hydrolyze ceftolozane. |
+| cmy | PMID:30788955; DOI:10.1021/acsinfecdis.8b00240; https://hal.science/hal-02119851/document; 263-cmy-hal-document/.txt: phenotype and biochemical Results, Tables 1–3, Discussion and experimental procedures; Table 2 header/row images; 263-cmy-si-real.pdf Table S1 | supports | The CMY-136 Y221H study includes direct ceftolozane-alone hydrolysis despite a combination-focused abstract and MIC row. Purified-enzyme Table 2 gives CMY-136 Km 1587 micromolar, kcat 13.27 per second and efficiency 8.4 per millimolar per second, versus CMY-2 values 200, 0.69 and 3.5. Initial-rate UV assays used phosphate buffer pH 7.0, with ceftolozane measured at 259 nm. E. coli TOP10 susceptibility comparisons concern ceftolozane plus tazobactam and cannot be relabeled as single-drug MICs. The exact hydrolysis experiment supports the native inactivation mechanism; modeling of loop flexibility remains explanatory rather than direct ligand binding. |
+| leads | All 15 adopted ChEBI/ARO compound, class and determinant PMID leads; 263-core.json; complete 263-abstracts.txt; 263-lead-dispositions.json | partial | All 15 bibliographic records resolved; 13 complete abstracts were inspected, and PMID:15673804 and PMID:6810737 supplied metadata without abstracts. Nine ChEBI compound leads cover combination susceptibility, clinical cases, healthy-volunteer pharmacokinetics, synergy and reviews. The ARO compound case PMID:27522066 also used other antimicrobials. Parent reviews supply class context. These leads were not promoted to single-compound clinical or mechanistic evidence. Both determinant papers received additional original-source inspection. |
+| owners | conf/sources.yaml; data/raw/aro_antibiotics.tsv; scripts/seed_from_sources.py; data/raw/aro_resistance_edges.tsv; 263-source-audit.json; 263-aro_antibiotics.json; 263-aro_resistance_edges.json; seeder synonym_exclusions loop lines 1533–1544 | supports | The adopted ARO:3003927 source supplies Zerbaxa, and the seeder imports it as EXACT_SYNONYM. Existing conf/sources.yaml synonym_exclusions is keyed by source concept and filters only named source synonyms. Adding Zerbaxa under ARO:3003927 is the existing maintained correction path. Both resistance entries match their adopted inventory rows. All 17 captured hashes remain unchanged. |
+| validation | Focused documented checks and supplemental diagnostics; 263-strict.tsv; 263-chemistry.json; 263-source-audit.json | supports | Schema and strict checks exited 0; supplemental chemistry and reconciliation also passed. RDKit 2026.03.5 came from the existing 019 interpreter, executed against 027. These checks do not substitute for shared full-corpus QC, term, reference or history validation. |
+
+## Limits And Additional Notes
+
+- The CAM-1 exact-ceftolozane hydrolysis endpoint remains unverified: its inspected specific-activity table tests other substrates, while its susceptibility table uses ceftolozane/tazobactam. That limited endpoint does not refute the attributed database assertion.
+- The CMY-136 author manuscript, rather than publisher PDF, supplied full biochemical results. Its ceftolozane kinetic table and column header were visually checked. Combination MIC values were not adopted into the native record; modeled conformational explanations were not promoted to direct ligand-bound structural evidence.
+- Two adopted class leads supplied no abstracts. Several combination clinical or review leads were assessed at complete-abstract depth; this review does not independently validate every clinical claim in their full bodies.
+- Canonical ASM web text supplied the PBP and early activity originals; attempted local PMC downloads were challenge pages or failures, not usable snapshots. OUP access was intermittent, but its publisher-indexed methods, Results and tables were read. Local search/read notes identify this access boundary.
+- OLS returned 404 for the compound, while direct ChEBI succeeded. Some publisher and EuropePMC requests returned 403 or 500; the CMY author manuscript and SI succeeded through public repositories. Reaxys was authority-link corroboration only. No absence inference follows from access failures.
+- Focused native and supplemental checks do not replace shared full-corpus QC, term, reference or history gates. No native record or source data was modified.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- Initial captures were preserved; all 17 input hashes were reverified unchanged. The 15-lead dispositions and two-edge reconciliation are retained as separate scratch JSON artifacts.
+- Fetch URLs, times, hashes and failures are recorded in 263-fetch-results.json through 263-fetch5-results.json and the later CMY HAL/SI fetch manifests. The author-page Python certificate failure was recovered using system curl; HAL returned a genuine 43-page PDF.
+- Literal commands run from /private/tmp/antibioticmech-record-reviews-027. Public structured adapters preceded protein web follow-up. No paid research or native curation was performed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T122244Z-ceftolozane-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of ceftolozane
+started_at: '2026-10-21T12:02:21Z'
+finished_at: '2026-10-21T12:22:44Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring this generated
+    record; original captures preserved and actual owner inputs appended before detailed
+    judgment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: needs_curation
+native_verdict: 'Needs curation: exclude the combination brand Zerbaxa from exact
+  ceftolozane synonyms'
+scientific_review: true
+summary: The ceftolozane molecular graph, stereochemistry, formula and inspected exact
+  chemical references agree. One major identity finding concerns Zerbaxa, the ceftolozane–tazobactam
+  product imported as an exact synonym of the single compound. The existing source-scoped
+  synonym exclusion can correct it. Original monocompound studies support antibacterial
+  activity and PBP inhibition. CMY-136 has direct ceftolozane hydrolysis evidence;
+  CAM-1 remains a faithfully attributed database assertion with combination-phenotype
+  scope. All 15 adopted PMID leads were resolved and dispositioned. No native record
+  was changed.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ceftolozane.yaml
+    sha256: 18654f1d8800e940b1fdf29fc83b90d501cacae430e8878163eee3270c4dd668
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: data/raw/aro_antibiotics.tsv
+    sha256: d62b642ebad8f678480b1c7ad2c6202b76a232d246705fdd6d292046a91e9801
+    role: context
+  - path: data/raw/aro_resistance_edges.tsv
+    sha256: 5ba15ad08023b89647f964693871fe50e437cfca6654aadcb629d1512f1852df
+    role: context
+  - path: scripts/card_evidence_reviews.py
+    sha256: f9ec8aff30066bf04b9c2757af7d6f5d179d045e57b9f3b352bbed0b851f50a8
+    role: context
+  - path: curation/card_evidence_reviews.json
+    sha256: 584f3e32ce0122eb2315fe09bbe22e058539bef184ad2d75756a6f3016bf2687
+    role: context
+scope:
+  description: 'Entire exact SEEDED ceftolozane record: definition, six synonyms,
+    three parents, one role, five chemical xrefs, three documents, two resistance
+    assertions, source concepts and four history events. All 15 adopted compound,
+    parent and determinant PMID leads were inspected.'
+  selection: Queue 263; original 13 input captures retained, with four actual ARO
+    and qualification owners appended, giving 17 unchanged hashes.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:134719
+targets:
+- target_id: CHEBI:134719
+  path: data/antibiotics/antibacterial/ceftolozane.yaml
+  label: ceftolozane
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Actual adopted ARO resistance or maintained qualification owner
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_resistance_edges.tsv
+    role: Actual adopted ARO resistance or maintained qualification owner
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/card_evidence_reviews.py
+    role: Actual adopted ARO resistance or maintained qualification owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Actual adopted ARO resistance or maintained qualification owner
+checks:
+- check_id: schema
+  name: Documented schema validation
+  status: passed
+  required: true
+  summary: Exit 0; no issues found.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ceftolozane.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented strict validation
+  status: passed
+  required: true
+  summary: Exit 0; zero ERROR rows.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ceftolozane.yaml --out /private/tmp/am-review-session/263-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Supplemental exact chemistry comparison
+  status: passed
+  required: false
+  summary: Exit 0; native and three independent authority representations agree.
+  target_ids:
+  - CHEBI:134719
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/263-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: adapter-datasets
+  name: Structured dataset discovery before protein web follow-up
+  status: passed
+  required: false
+  summary: Exit 0.
+  target_ids:
+  - CHEBI:134719
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 datasets > /private/tmp/am-review-session/263-imodulondb-datasets.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-cam-1
+  name: Structured exact determinant search
+  status: passed
+  required: false
+  summary: Exit 0; zero genes and zero components.
+  target_ids:
+  - CHEBI:134719
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism p_aeruginosa --dataset precise364 --query
+    CAM-1 > /private/tmp/am-review-session/263-imodulondb-CAM-1.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: adapter-cmy-136
+  name: Structured exact determinant search
+  status: passed
+  required: false
+  summary: Exit 0; zero genes and zero components.
+  target_ids:
+  - CHEBI:134719
+  command: env PYTHONDONTWRITEBYTECODE=1 /Users/marcin/Documents/VIMSS/ontology/KG-Hub/KG-Microbe/culturebotai-claw/.venv/bin/kg-microbe-sources
+    imodulondb --timeout 15 search --organism e_coli --dataset precise1k --query CMY-136
+    > /private/tmp/am-review-session/263-imodulondb-CMY-136.txt
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - adapter
+- check_id: source-reconciliation
+  name: Supplemental source and preserved-hash reconciliation
+  status: passed
+  required: false
+  summary: Exit 0; 17 input hashes, two adopted edges and all 15 literature dispositions
+    checked. This is not a native corpus validator.
+  target_ids:
+  - CHEBI:134719
+  command: .venv/bin/python /private/tmp/am-review-session/263-ledger.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - owners
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:134719
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ceftolozane.yaml
+  locator: Entire native YAML and four history events
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: The record is SEEDED and EXACT. Its two resistance entries explicitly identify
+    CARD database assertions. There is no native molecular target, MIC observation,
+    clinical-product assertion, producer or causal graph. Missing optional enrichment
+    is not itself a demonstrated defect.
+- evidence_id: chemistry
+  kind: validation
+  reference: CHEBI:134719; PubChem:53234134; ChEMBL:CHEMBL2103872
+  locator: 263-chemistry.py/.json; current ChEBI molfile, PubChem and ChEMBL snapshots
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: Native SMILES and InChI and all three current authority structures reproduce
+    JHFNIHVVXRKLEF-DCZLAGFPSA-N, C23H30N12O8S2, net charge 0, two R core centers and
+    the Z oxime. Average mass 666.703 and exact mass 666.17509792 agree with native
+    precision. ChEMBL places the dissociable carboxyl proton differently but yields
+    the same Standard InChI; this does not establish a distinct compound.
+  snapshot_sha256: 8c6a0ab8221993c9698c5c293bf69cb3eeed9235f55e7cae8a7a9a8fe500f940
+- evidence_id: grounding
+  kind: authority
+  reference: CHEBI:134719; CHEBI:23066; CHEBI:38099; CHEBI:33281; ARO:0000032; CAS:689293-68-3;
+    Reaxys:24720344
+  locator: 263-chebi.html/.txt/.mol; 263-parent38099.json; 263-aro-stanzas.txt; reused
+    254 ChEBI cephalosporin and antimicrobial-role authority snapshots
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: The cephalosporin and thiadiazole parents fit the graph, and original exact-compound
+    activity supports the antimicrobial role and antibacterial classification. Current
+    direct ChEBI and independent chemical authorities corroborate the identity and
+    CAS link. Reaxys is a corroborated authority link, without independent registry
+    inspection. The OLS lookup for CHEBI:134719 returned 404, but the direct current
+    ChEBI page and molfile resolved; the identifier is not treated as absent.
+  snapshot_sha256: d2f027df5cb51a8bf934865952d8427987f99d94e1363907a28171d3d883576b
+- evidence_id: brand
+  kind: authority
+  reference: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f;
+    NDA206829
+  locator: '263-label.json, effective 2026-05-12: openFDA identity, Description and
+    Microbiology; native synonyms[5]'
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: refutes
+  summary: 'The official ZERBAXA label identifies two active ingredients: ceftolozane
+    sulfate and tazobactam sodium. The 1.5 g vial supplies 1 g ceftolozane equivalent
+    plus 0.5 g tazobactam equivalent. Thus Zerbaxa is a combination-product name,
+    not an exact synonym for the native single ceftolozane structure. The sulfate
+    material and excipients are additional formulation boundaries. The label assigns
+    PBP inhibition to ceftolozane and beta-lactamase inhibition to tazobactam; product
+    clinical outcomes cannot be attributed to either ingredient alone.'
+  snapshot_sha256: 4bef789c7009ec84c04d2b8264813af0d60075b331b755a370d05a94c3130e9a
+- evidence_id: documents
+  kind: authority
+  reference: patent:US2017233408; patent:WO2016028670; wikipedia.en:Ceftolozane
+  locator: 263-patent-us.html/.txt and 263-patent-wo.html/.txt identity/background
+    passages; 263-wiki.html/.txt redirect and identity panel
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: context_only
+  summary: Both patents resolve to salt-form inventions for ceftolozane; their broad
+    salts, compositions and combination claims are document context rather than proof
+    that every claimed material equals the native zwitterion. The abbreviated US identifier
+    resolves to US20170233408A1. Wikipedia Ceftolozane redirects to Ceftolozane/tazobactam
+    and therefore requires the same combination boundary. Its document placement is
+    not an exact-structure assertion.
+  snapshot_sha256: c02acc516520186d1f835fc007d37676eb4d08a8cecbc63990d75c5a5acfed3c
+- evidence_id: adapter
+  kind: search
+  reference: iModulonDB:p_aeruginosa/precise364; iModulonDB:e_coli/precise1k
+  locator: 263-imodulondb-datasets.txt; 263-imodulondb-CAM-1.txt; 263-imodulondb-CMY-136.txt
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: context_only
+  summary: Structured dataset discovery and exact CAM-1 and CMY-136 searches preceded
+    protein web follow-up. Both searches returned no gene or component hit, so no
+    summarize call applied. Reference-strain catalog coverage does not establish absence
+    of acquired resistance determinants or absence of function.
+  snapshot_sha256: 0a89081acee6d1eddb2955364d109d117b958316e3bec1d48d622901a704c659
+  search_scope: Dataset discovery followed by CAM-1 in p_aeruginosa/precise364 and
+    CMY-136 in e_coli/precise1k, before protein web follow-up.
+- evidence_id: pbp
+  kind: primary_source
+  reference: PMID:20547785; DOI:10.1128/AAC.00296-10
+  locator: 'Canonical ASM publisher web text: complete main methods/results, Tables
+    1–2 and discussion; 263-extra-core.json abstract'
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: CXA-101 was tested alone against P. aeruginosa PAO1. Competitive Bocillin
+    labeling of membrane PBPs yielded PBP3 IC50 0.02 ±0.007 micrograms/mL and inhibition
+    of other essential PBPs. MIC was 0.5 micrograms/mL; time-kill and microscopy support
+    bactericidal activity and septation disruption in this strain. These are competition-assay
+    and cellular endpoints, not an equilibrium binding constant or a ligand-bound
+    crystal structure. A taxon-scoped PBP target could be added as optional primary
+    enrichment.
+  snapshot_sha256: 0a3e8651aef756709257382aaa2d1bed4f8c3f982d43c253981e4b8b8dc9ac4d
+- evidence_id: activity
+  kind: primary_source
+  reference: PMID:17145788; DOI:10.1128/AAC.00860-06; PMID:18701284; DOI:10.1016/j.bmcl.2008.07.085
+  locator: ASM original 2007 complete main methods/results/discussion and Tables 1–3;
+    263-extra-core.json complete 2008 SAR abstract
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: The 2007 study tested Astellas FR264205 using free-acid-equivalent amounts,
+    without tazobactam. Agar dilution used 10^4 CFU per spot, 18–20 hours at 35 degrees
+    C and a visible-growth endpoint. Its 193-isolate Japanese P. aeruginosa panel
+    had MIC range 0.25–4 micrograms/mL; mouse infection models provided separate in
+    vivo evidence. Particular enzyme, efflux and OprD comparisons remain strain-specific
+    rather than universal resistance predictions. The 2008 SAR abstract identifies
+    FR264205 as compound 15; its full body was not inspected.
+  snapshot_sha256: 0a3e8651aef756709257382aaa2d1bed4f8c3f982d43c253981e4b8b8dc9ac4d
+- evidence_id: cam
+  kind: primary_source
+  reference: PMID:30789204; DOI:10.1093/jac/dkz066
+  locator: OUP web main methods and publisher-indexed Results/Discussion, Tables 1–2;
+    263-core.json complete abstract
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: partial
+  summary: A complete blaCAM-1 region cloned into E. coli TOP10 increased ceftolozane/tazobactam
+    Etest MIC to >256/4, versus 0.25/4 for the vector control. The clinical P. aeruginosa
+    isolates also carried intrinsic PDC-35 and OXA-488. Crude-lysate Table 2 measures
+    other beta-lactams but contains no ceftolozane substrate. This supports the determinant-associated
+    combination phenotype without directly measuring ceftolozane hydrolysis in that
+    table. The native entry faithfully preserves the CARD assertion; this boundary
+    is not proof that CAM-1 cannot hydrolyze ceftolozane.
+  snapshot_sha256: 91d39fbe0adcf7d2592de0c59b6097a23b65ace8fa639eb7f0262437bcb2d7b2
+- evidence_id: cmy
+  kind: primary_source
+  reference: PMID:30788955; DOI:10.1021/acsinfecdis.8b00240; https://hal.science/hal-02119851/document
+  locator: '263-cmy-hal-document/.txt: phenotype and biochemical Results, Tables 1–3,
+    Discussion and experimental procedures; Table 2 header/row images; 263-cmy-si-real.pdf
+    Table S1'
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: The CMY-136 Y221H study includes direct ceftolozane-alone hydrolysis despite
+    a combination-focused abstract and MIC row. Purified-enzyme Table 2 gives CMY-136
+    Km 1587 micromolar, kcat 13.27 per second and efficiency 8.4 per millimolar per
+    second, versus CMY-2 values 200, 0.69 and 3.5. Initial-rate UV assays used phosphate
+    buffer pH 7.0, with ceftolozane measured at 259 nm. E. coli TOP10 susceptibility
+    comparisons concern ceftolozane plus tazobactam and cannot be relabeled as single-drug
+    MICs. The exact hydrolysis experiment supports the native inactivation mechanism;
+    modeling of loop flexibility remains explanatory rather than direct ligand binding.
+  snapshot_sha256: bee9edc5c8f255b7c2971afd7622f0b57a9dfc1b9c937d7310605a826573ff4a
+- evidence_id: leads
+  kind: database
+  reference: All 15 adopted ChEBI/ARO compound, class and determinant PMID leads
+  locator: 263-core.json; complete 263-abstracts.txt; 263-lead-dispositions.json
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: partial
+  summary: All 15 bibliographic records resolved; 13 complete abstracts were inspected,
+    and PMID:15673804 and PMID:6810737 supplied metadata without abstracts. Nine ChEBI
+    compound leads cover combination susceptibility, clinical cases, healthy-volunteer
+    pharmacokinetics, synergy and reviews. The ARO compound case PMID:27522066 also
+    used other antimicrobials. Parent reviews supply class context. These leads were
+    not promoted to single-compound clinical or mechanistic evidence. Both determinant
+    papers received additional original-source inspection.
+  snapshot_sha256: 8c4b702a4fb19e3f921b23bcbda55fdc8be4499a0edf52ee68272e89c80610dd
+- evidence_id: owners
+  kind: record_content
+  reference: conf/sources.yaml; data/raw/aro_antibiotics.tsv; scripts/seed_from_sources.py;
+    data/raw/aro_resistance_edges.tsv
+  locator: 263-source-audit.json; 263-aro_antibiotics.json; 263-aro_resistance_edges.json;
+    seeder synonym_exclusions loop lines 1533–1544
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: The adopted ARO:3003927 source supplies Zerbaxa, and the seeder imports
+    it as EXACT_SYNONYM. Existing conf/sources.yaml synonym_exclusions is keyed by
+    source concept and filters only named source synonyms. Adding Zerbaxa under ARO:3003927
+    is the existing maintained correction path. Both resistance entries match their
+    adopted inventory rows. All 17 captured hashes remain unchanged.
+  snapshot_sha256: d3833d081ef17488a34ff45f18a423e5feb9cff57a63882804ba9b8540ae3b84
+- evidence_id: validation
+  kind: validation
+  reference: Focused documented checks and supplemental diagnostics
+  locator: 263-strict.tsv; 263-chemistry.json; 263-source-audit.json
+  accessed_at: '2026-10-21T12:17:08Z'
+  support: supports
+  summary: Schema and strict checks exited 0; supplemental chemistry and reconciliation
+    also passed. RDKit 2026.03.5 came from the existing 019 interpreter, executed
+    against 027. These checks do not substitute for shared full-corpus QC, term, reference
+    or history validation.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact molecular identity
+  outcome: supported
+  summary: Native chemistry and inspected exact chemical xrefs agree; formulations
+    remain distinct.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - chemistry
+  - grounding
+- assessment_id: synonym
+  area: identity
+  topic: Combination product imported as exact synonym
+  outcome: concern
+  summary: Zerbaxa denotes a two-drug product and must be excluded from exact ceftolozane
+    synonyms.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - brand
+  - owners
+- assessment_id: grounding
+  area: grounding
+  topic: Parents and antibacterial role
+  outcome: supported
+  summary: Structural parents fit and independent original monocompound studies support
+    antibacterial activity.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - grounding
+  - activity
+  - pbp
+- assessment_id: resistance
+  area: evidence
+  topic: Two imported inactivation assertions
+  outcome: unknown
+  summary: CMY-136 has direct ceftolozane hydrolysis evidence. CAM-1 has an experimentally
+    supported combination phenotype, while its exact ceftolozane hydrolysis remains
+    unverified. Preserve honest database attribution.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - cam
+  - cmy
+  - owners
+- assessment_id: documents
+  area: provenance
+  topic: Patents and Wikipedia
+  outcome: supported
+  summary: All three document links were inspected at stated depth; salt and combination
+    context does not turn document links into exact chemical xrefs.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - documents
+- assessment_id: completeness
+  area: completeness
+  topic: Optional mechanism enrichment
+  outcome: supported
+  summary: Exact PBP and activity studies are available for enrichment. The absence
+    of optional targets, MICs, clinical records, producers or causal graphs is not
+    a defect in this SEEDED record.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - record
+  - pbp
+  - activity
+  - leads
+- assessment_id: provenance
+  area: provenance
+  topic: Maintained owners and history
+  outcome: supported
+  summary: Source concepts, two resistance rows and four history events are coherent;
+    17 input hashes are preserved.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - record
+  - owners
+- assessment_id: schema
+  area: schema
+  topic: Focused native validity
+  outcome: supported
+  summary: Documented schema and strict checks pass.
+  target_ids:
+  - CHEBI:134719
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: CHEBI-134719-zerbaxa-combination-exact-synonym
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Zerbaxa is incorrectly asserted as an exact synonym of ceftolozane
+  description: Native synonyms[5] imports Zerbaxa from ARO:3003927 as EXACT_SYNONYM.
+    The official product contains ceftolozane sulfate and tazobactam sodium, whereas
+    this record denotes one ceftolozane structure. Exact aliasing conflates a combination
+    with one component and can transfer combination activity or clinical claims incorrectly.
+  target_ids:
+  - CHEBI:134719
+  field_paths:
+  - synonyms[5]
+  evidence_ids:
+  - brand
+  - owners
+  - chemistry
+  rule_id: '.claude/skills/curate-yaml-record/references/review-checklist.md: Exact
+    identity, aliases and material scope'
+  native_severity: 'Major: a different multi-ingredient material is asserted as an
+    exact chemical synonym'
+  normalization_reason: This is an explicit exact-identity assertion, not merely a
+    contextual drug or document link. The underlying ceftolozane graph remains correct.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-specific synonym_exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted source of the incorrect exact synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Applies the configured synonym exclusion during generation
+actions:
+- action_id: A1
+  description: Add Zerbaxa to the existing conf/sources.yaml synonym_exclusions entry
+    for ARO:3003927 and reproduce the record through normal seeding. Preserve genuine
+    ceftolozane names, chemical identity and resistance-source attribution. If product
+    information is added later, represent the combination and its ingredients explicitly
+    rather than restoring an exact synonym.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:134719
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: conf/sources.yaml
+    role: Maintained source-specific synonym_exclusions
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/aro_antibiotics.tsv
+    role: Adopted source of the incorrect exact synonym
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Applies the configured synonym exclusion during generation
+  ownership_note: The existing exclusion is scoped to one source concept; no new override
+    schema or hand edit of generated YAML is needed.
+  generator: just seed; just seed-canary CHEBI:134719
+  acceptance_checks:
+  - Zerbaxa is absent from generated exact ceftolozane synonyms and remains correctly
+    identifiable as a combination product.
+  - The ceftolozane graph, key, formula, stereochemistry and unrelated native claims
+    remain unchanged.
+  - Run documented schema, strict, seed-canary and full-corpus gates after separately
+    authorized curation.
+limitations:
+- 'The CAM-1 exact-ceftolozane hydrolysis endpoint remains unverified: its inspected
+  specific-activity table tests other substrates, while its susceptibility table uses
+  ceftolozane/tazobactam. That limited endpoint does not refute the attributed database
+  assertion.'
+- The CMY-136 author manuscript, rather than publisher PDF, supplied full biochemical
+  results. Its ceftolozane kinetic table and column header were visually checked.
+  Combination MIC values were not adopted into the native record; modeled conformational
+  explanations were not promoted to direct ligand-bound structural evidence.
+- Two adopted class leads supplied no abstracts. Several combination clinical or review
+  leads were assessed at complete-abstract depth; this review does not independently
+  validate every clinical claim in their full bodies.
+- Canonical ASM web text supplied the PBP and early activity originals; attempted
+  local PMC downloads were challenge pages or failures, not usable snapshots. OUP
+  access was intermittent, but its publisher-indexed methods, Results and tables were
+  read. Local search/read notes identify this access boundary.
+- OLS returned 404 for the compound, while direct ChEBI succeeded. Some publisher
+  and EuropePMC requests returned 403 or 500; the CMY author manuscript and SI succeeded
+  through public repositories. Reaxys was authority-link corroboration only. No absence
+  inference follows from access failures.
+- Focused native and supplemental checks do not replace shared full-corpus QC, term,
+  reference or history gates. No native record or source data was modified.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- Initial captures were preserved; all 17 input hashes were reverified unchanged.
+  The 15-lead dispositions and two-edge reconciliation are retained as separate scratch
+  JSON artifacts.
+- Fetch URLs, times, hashes and failures are recorded in 263-fetch-results.json through
+  263-fetch5-results.json and the later CMY HAL/SI fetch manifests. The author-page
+  Python certificate failure was recovered using system curl; HAL returned a genuine
+  43-page PDF.
+- Literal commands run from /private/tmp/antibioticmech-record-reviews-027. Public
+  structured adapters preceded protein web follow-up. No paid research or native curation
+  was performed.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f
+- https://doi.org/10.1128/AAC.00296-10
+- https://doi.org/10.1128/AAC.00860-06
+- https://doi.org/10.1093/jac/dkz066
+- https://hal.science/hal-02119851/document
+- https://pubchem.ncbi.nlm.nih.gov/compound/53234134
+tags:
+- record-review
+- ceftolozane
+- combination-synonym
+- exact-form
+```
