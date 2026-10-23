@@ -1,0 +1,930 @@
+schema_version: 1.0.0
+review_id: 20261021T131225Z-ciclopirox-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: 'Ciclopirox: coherent parent identity and FDA provenance with bounded primary
+  assay evidence'
+started_at: '2026-10-21T12:48:52Z'
+finished_at: '2026-10-21T13:12:25Z'
+reviewer:
+  identity: Codex dodecanediol_sources subagent with independent root chemical and
+    FDA audit
+  kind: agent
+  independence: independent
+  independence_basis: Neither reviewer authored the native record. The subagent read
+    the entire native record, maintained source rows and original literature; root
+    independently reconciled current molecular encodings and every FDA assertion.
+    Actual shared evidence and focused command results are retained with hashes and
+    explicit reading-depth boundaries.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+scientific_review: true
+summary: No substantive native correction identified. The parent chemical identity
+  and public structural groundings agree, and all 32 FDA assertions reconcile with
+  current official product data. Original free-parent bacterial experiments support
+  the antibacterial role; inherited fungal comparator citations are relevant within
+  their own scope. Direct bacterial target assignment, some formulation-specific definition
+  details and legacy registry verification remain limited. Scientific assessment retains
+  the stated evidence limits; full verification is blocked by the shared native-library
+  failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/ciclopirox.yaml
+    sha256: 9b77aba57969f8de2e529c917cb4529a7454b6c2f7cf461150f3ceb16ec692dc
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: data/raw/fda_clinical_status.tsv
+    sha256: a6952f85426afa53c5704c588681a078e599ce245bf18f7c9dd390d70e7bb16c
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_fda_clinical_status.py
+    sha256: f30f385ea6d530dc1749e3d805dbcdbc8715fbc476abc510bf144ea13964e171
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+  - path: CLAUDE.md
+    sha256: 36fb92f8919481cfbf3f17ddde4a1e244c81f76c64396dbbac910c4815fb9f16
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: 370ace6db64e85be6c645f9fe45c2a2135a82f309af59f5352cd30f1245ef6df
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 1c6056581d45a5b902f6c66ffaa20fc05c73ca473a4ffd57745be269fe3e89cf
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: justfile
+    sha256: 5e59c2be29bcd058aee058fb2763f63102ea77817b016802d5a3b3ae2938f4b6
+    role: context
+targets:
+- target_id: CHEBI:453011
+  path: data/antibiotics/antibacterial/ciclopirox.yaml
+  label: ciclopirox
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_role_names.tsv
+    role: ChEBI activity role names
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/fda_clinical_status.tsv
+    role: FDA product and GSRS exact structure assertions
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_fda_clinical_status.py
+    role: FDA product ingestion and exact identity gate
+scope:
+  description: Entire exact native record, all asserted groundings, source provenance
+    and adopted citation scope, with bounded primary activity and mechanism follow-up.
+  selection: Queue position300; original13 input hashes and two root-appended FDA
+    owner hashes preserved, with eight additional review-context inputs checked.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:453011
+  exclusions:
+  - target: Ciclopirox olamine, other derivatives, combination treatments and formulated
+      products as isolated-parent assays
+    reason: Their material identity, concentration basis and experimental endpoints
+      do not automatically transfer to the parent compound.
+checks:
+- check_id: chemistry
+  name: Focused chemistry verification
+  status: passed
+  required: false
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:453011
+  command: /private/tmp/antibioticmech-record-reviews-019/.venv/bin/python /private/tmp/am-review-session/focus021-root.py
+    300 (cwd /private/tmp/antibioticmech-record-reviews-030)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: schema
+  name: Focused schema verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/ciclopirox.yaml (cwd /private/tmp/antibioticmech-record-reviews-030)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: strict
+  name: Focused strict verification
+  status: passed
+  required: true
+  summary: Actual focused execution exited 0.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/ciclopirox.yaml --out /private/tmp/am-review-session/300-strict.tsv
+    (cwd /private/tmp/antibioticmech-record-reviews-030)
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - gates
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:453011
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: native
+  kind: record_content
+  reference: data/antibiotics/antibacterial/ciclopirox.yaml
+  locator: Entire 756-line native YAML, including all 32 clinical assertions and all
+    six history events
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: supports
+  summary: Read the complete definition, three synonyms, all broader parents and roles,
+    chemical fields, each registry/drug/document reference, source concept, EXACT
+    grounding, SEEDED status, APPROVED clinical status and all product assertions.
+    No molecular target, quantitative activity_spectrum, resistance determinant, producer,
+    causal graph or dataset assertion is populated.
+  snapshot_sha256: 9fedbbcdd75f690ba247a9350102ef265f4ba2dcd209f597d027f251d18fb967
+- evidence_id: owners
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv; data/raw/fda_clinical_status.tsv;
+    scripts/extract_source_inventory.py; scripts/extract_fda_clinical_status.py; scripts/seed_from_sources.py
+  locator: Exact ChEBI row 2964; all 32 FDA rows; imported field owners
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: supports
+  summary: The exact source rows reproduce the retained identity, roles, chemical/document
+    references and clinical data. ChEBI extraction and seeding own imported fields;
+    FDA extraction owns regulatory product grounding. The maintained decision and
+    curator tables were checked for this target. All13 original hashes and two root-appended
+    FDA owner hashes remain unchanged and all 23 expanded input hashes were rechecked.
+  snapshot_sha256: 9fedbbcdd75f690ba247a9350102ef265f4ba2dcd209f597d027f251d18fb967
+- evidence_id: rubric
+  kind: record_content
+  reference: .claude/skills/review-yaml-record/SKILL.md; .claude/skills/curate-yaml-record/references/review-checklist.md;
+    docs/record-review-profile.md
+  locator: Whole-record exact-identity, claim-scope and optional-completeness rubric
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: supports
+  summary: A valid deterministic record is not automatically scientifically reviewed.
+    Optional mechanisms, activity objects and source refinements are assessed for
+    evidence and usefulness without treating their absence as a mandatory schema defect.
+- evidence_id: chebi
+  kind: authority
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/453011/
+  locator: 'Current official compound record: complete names, definition, structures,
+    parents, roles and references'
+  accessed_at: '2026-10-21T12:55:41Z'
+  support: supports
+  summary: CHEBI:453011 identifies neutral ciclopirox with formula C12H17NO2 and key
+    SCKYRAXSEDYPSA-UHFFFAOYSA-N. The current source agrees with the native systematic
+    naming and three broader chemical parents. Its copied Beilstein and LINCS identifiers
+    are not independent verification of those databases.
+  snapshot_sha256: 65ea98f65c32100196b52dc499679d4d99a7699b3d94101dd45b3ec1cf175a51
+- evidence_id: terms
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms
+  locator: 300-term-23445.json, 38183, 87130, 33282 and 86327; every native parent
+    and role
+  accessed_at: '2026-10-21T13:05:15.580676Z'
+  support: supports
+  summary: 'All retained identifiers resolve: cyclic hydroxamic acid, pyridone, hydroxypyridone
+    antifungal drug, antibacterial agent and antifungal drug. The chemical classes
+    fit the graph; the pharmacological classes describe uses or active-moiety activity
+    rather than exact structural synonyms.'
+  snapshot_sha256: d618f8c917f4c84b43cda601bd2c5bb33a5f73312be2aa14e891e3c44fe77f4d
+- evidence_id: chemistry
+  kind: validation
+  reference: Independent RDKit molecular comparison and source-mint calculation
+  locator: 300-chemistry.json; target 300 in 030-root-xref-chemistry.json
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: supports
+  summary: Both native encodings yield the full stored key, C12H17NO2, charge zero,
+    one component, no tetrahedral stereocentres, average mass 207.273 and exact mass
+    207.125928784. Current ChEBI, KEGG, DrugCentral and GSRS structures also yield
+    the full same key. The source mint antibioticmech:chebi-fa92a2416a recomputes
+    correctly. Root ran the existing batch 019 RDKit interpreter against batch 030
+    cwd.
+  snapshot_sha256: 6f4b7a985fb51bdaae6477546fa2df4372525ce25d4660083bbec75c6f271627
+- evidence_id: xref-chemistry
+  kind: validation
+  reference: Current official molecular encodings
+  locator: 030-root-xref-chemistry.json, target 300 only
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: supports
+  summary: The independent comparison confirms full molecular agreement for current
+    ChEBI SMILES/InChI, KEGG D03488 molfile, DrugCentral 636 molfile and GSRS 19W019ZDRJ.
+    Results for adjacent targets in this shared file are not transferred to this record.
+  snapshot_sha256: 41beeaa684cb1707db817380a64f45b24fec5c5660f7f56136eaf1ae7c776626
+- evidence_id: kegg
+  kind: database
+  reference: https://rest.kegg.jp/get/D03488
+  locator: Complete D03488 entry and accompanying molfile
+  accessed_at: '2026-10-21T12:55:42Z'
+  support: supports
+  summary: The entry identifies ciclopirox, CAS 29342-05-0, C12H17NO2 and the expected
+    topical antifungal classifications. Its molfile matches the complete native structure.
+    Its drug-class text is database context rather than an original bacterial target
+    experiment.
+  snapshot_sha256: 810be2602b54f212568ec07088e410b7ffcbf3eb59c3d05836d17a979b8a0cfa
+- evidence_id: drugcentral
+  kind: database
+  reference: https://www.drugcentral.org/drug/636/molfile
+  locator: DrugCentral 636 exported molecular structure
+  accessed_at: '2026-10-21T12:55:41Z'
+  support: supports
+  summary: The exact asserted DrugCentral structure independently generates the native
+    full InChIKey and neutral parent composition. No host-target or predicted activity
+    annotation is imported as an antibacterial mechanism.
+  snapshot_sha256: 40d24090af337c2002585273aad7c2de5a761b3d9b3d29f960659938be3c0ea4
+- evidence_id: drugbank
+  kind: database
+  reference: https://go.drugbank.com/drugs/DB01188
+  locator: Public page Structure and Resolves to sections; browser snapshot
+  accessed_at: '2026-10-21T13:08:58Z'
+  support: supports
+  summary: The public structure section gives the native complete key and equivalent
+    SMILES CC1=CC(=O)N(O)C(=C1)C1CCCCC1. Formula, CAS 29342-05-0, ChEBI 453011 and
+    UNII 19W019ZDRJ agree. Direct HTTP retrieval returned 403, while the public browser
+    reader exposed these fields. Olamine product prose and a host ATP1A1 entry are
+    not transferred as bacterial mechanism evidence.
+  snapshot_sha256: d5059825347f53ac30123e85cb4f5bee4b373adae9dec7e1fb43e5aa1ace26a0
+- evidence_id: gsrs
+  kind: authority
+  reference: https://gsrs.ncats.nih.gov/api/v1/substances/19W019ZDRJ
+  locator: Current version 38, UNII 19W019ZDRJ; native historical version 36
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: supports
+  summary: Current GSRS identifies the same neutral parent structure and formula.
+    The record accurately preserves the historical GSRS version 36 used at ingestion;
+    a later source version is not itself an error in historical provenance.
+  snapshot_sha256: 38b86b2cff189b83e5ce4b8fd3ffdf64e8e1b80db06b480c4152fe3fdcf551ab
+- evidence_id: fda
+  kind: authority
+  reference: https://api.fda.gov/drug/drugsfda.json
+  locator: All 32 exact application/product pairs; 300-fda-audit.json and 300-fda-*.json;
+    URL/hash receipts in 030-root-fetch-results.json
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: supports
+  summary: Every retained application, product number, drug name, sponsor, CICLOPIROX
+    ingredient, marketing status, original AP approval date and marketed flag agrees
+    with its live official record. The clinical status APPROVED is consistent with
+    these product assertions. Regulatory ingredient matching to the parent does not
+    establish that every physical formulation contains isolated neutral ciclopirox,
+    nor does it supply a single-agent antibacterial efficacy endpoint.
+  snapshot_sha256: baa3ca7d4743800c828ff80b2d436c1a260041a9fdb71b2397b5b0d10e914e59
+- evidence_id: patent
+  kind: primary_source
+  reference: https://patents.google.com/patent/US3883545/en
+  locator: 'US3883545: Example 6a, Example 12 and claim 5'
+  accessed_at: '2026-10-21T12:55:44Z'
+  support: supports
+  summary: Example 6a isolates 1-hydroxy-4-methyl-6-cyclohexyl-2-pyridone, with melting
+    point 144 C and elemental analysis. Example 12 distinguishes an intermediate hydrochloride
+    from the final free hydroxypyridone. Claim 5 names the exact parent. The document
+    supports synthetic identity; other substituted examples and qualitative treatment
+    assertions do not supply a strain-resolved parent MIC.
+  snapshot_sha256: e71b3c058b882fab40ad85d632851030fb6a39a8fd01b5bc7df0ea3d7392fe96
+- evidence_id: document
+  kind: database
+  reference: https://en.wikipedia.org/wiki/Ciclopirox
+  locator: Resolved document topic and infobox
+  accessed_at: '2026-10-21T13:05:15.213281Z'
+  support: context_only
+  summary: The document link resolves to the intended ciclopirox topic. It is a topic
+    reference, not independent primary support for each mechanism, clinical formulation
+    or numerical assay claim.
+  snapshot_sha256: e0f977cded4351e8305a24bcb1a070122919dc3e1aa2dd68e198e345f60642d2
+- evidence_id: legacy
+  kind: database
+  reference: https://lincs.hms.harvard.edu/_static/db/prod-20200624/small_molecules.sdf
+  locator: Official HMS archive snapshot dated 2020-06-24; 300-hms-audit.json
+  accessed_at: '2026-10-21T13:07:42.794348Z'
+  support: context_only
+  summary: The 639-record HMS snapshot contains 458 populated LINCS identifiers but
+    no match for LSM-5307, ciclopirox, the native key prefix or CAS. This limited
+    collection does not establish an incorrect identifier or absence from LINCS overall.
+    Direct LINCS portal/resolver retrieval failed certificate verification. Beilstein
+    1533423 was not independently accessible; both legacy groundings remain unresolved.
+  snapshot_sha256: 07d0f372f351425b90c0d264e4b68e05cb57d8ec75d6c5beba4d77d2a3b3a33e
+- evidence_id: adopted-index
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16854048%20OR%20EXT_ID%3A17253868&format=json&resultType=core&pageSize=100
+  locator: Both adopted PMIDs and complete original abstracts
+  accessed_at: '2026-10-21T12:55:42Z'
+  support: context_only
+  summary: PMID:17253868 resolves to the 2007 chrysotrione paper, DOI 10.1021/np060512c.
+    PMID:16854048 resolves to the 2006 AN2690 discovery paper, DOI 10.1021/jm0603724.
+    Abstracts focus on the new compounds, so citation relevance was assessed from
+    original comparator passages rather than inferred from the titles.
+  snapshot_sha256: a90bf7d353755b9c09632f07b80667b022d26f3d19075a16ae84fbc90c7ba9a4
+- evidence_id: adopted-chrysotrione
+  kind: primary_source
+  reference: https://doi.org/10.1021/np060512c
+  locator: Original pp137-139; Table 1 on p138 visually inspected; methods pp138-139;
+    archived CiteSeer PDF URL in 300-final-fetch.json
+  accessed_at: '2026-10-21T13:07:42.794830Z'
+  support: supports
+  summary: Ciclopirox from A/S Rosco is the positive control against Fusarium verticillioides
+    PAT VEG 18 F. Table 1 reports a 25 mm inhibition diameter at 50 micrograms on
+    a 6 mm disk. This is an agar diffusion endpoint, not an MIC. The article does
+    not provide the comparator catalog, independent salt analysis or complete local
+    incubation details. Hygrophorus chrysodon produces the newly isolated chrysotriones,
+    not the purchased ciclopirox comparator.
+  snapshot_sha256: 8eda1fb4bbfd16d55db69802ae9b21d480264379367a0809256d18b634f7919c
+- evidence_id: adopted-an2690
+  kind: primary_source
+  reference: https://doi.org/10.1021/jm0603724
+  locator: Original p4448 comparator paragraph and Table 1 heading, as publicly reproduced;
+    publisher SI pS10
+  accessed_at: '2026-10-21T13:08:58Z'
+  support: partial
+  summary: The original paper expressly uses ciclopirox as the reference in fungal
+    MIC comparisons with benzoxaboroles. The reproduced table lost its reliable column
+    layout, so no individual comparator values are assigned from that rendering. Supplier,
+    catalog and salt scope for ciclopirox remain unresolved. The study is relevant
+    antifungal comparator evidence; AN2690 synthesis, structure-activity relations
+    and later target discoveries do not transfer to ciclopirox.
+  snapshot_sha256: d5059825347f53ac30123e85cb4f5bee4b373adae9dec7e1fb43e5aa1ace26a0
+- evidence_id: an2690-si
+  kind: primary_source
+  reference: https://ndownloader.figshare.com/files/4774183
+  locator: Official ACS supporting information jm0603724_si_001.pdf; pS10 MIC methods
+  accessed_at: '2026-10-21T13:08:29.517567Z'
+  support: partial
+  summary: The inspected assay section specifies twofold dilutions, DMSO at no more
+    than 5%, 35 C incubation for 24-168 h, and an MIC endpoint of over 90% growth
+    reduction. Yeast and filamentous fungal inocula are separately specified. The
+    supplement mainly characterizes the newly synthesized benzoxaboroles and does
+    not resolve the ciclopirox comparator preparation or furnish a bacterial assay.
+  snapshot_sha256: b7ee0f7e6d567b083c800e0eb674c0a531d462c66bf31e19c86bbf837e62b6ec
+- evidence_id: primary-bacteria
+  kind: primary_source
+  reference: https://doi.org/10.1371/journal.pone.0069646
+  locator: PMID:23936064; Results first paragraph, MIC methods and Table 1; full original
+    XML
+  accessed_at: '2026-10-21T13:00:38Z'
+  support: supports
+  summary: The authors explicitly state that all experiments used ciclopirox without
+    ethanolamine salt; the methods identify AK Scientific material. Triplicate CLSI
+    microbroth dilution measured no visible growth. Thirty nonclonal E. coli clinical
+    isolates had MICs 5-15 micrograms/mL despite differing resistance to other antibiotics.
+    The other clinical panels show K. pneumoniae 5-15, A. baumannii 5-7 and P. aeruginosa
+    10 to greater than 30 micrograms/mL. These measured panels support antibacterial
+    activity, not universal susceptibility or a clinical breakpoint.
+  snapshot_sha256: 9ebf533c87ed29ad757bb65f411e9d739b81635eeb8ff1d9bcc0ad879cde5e9a
+- evidence_id: primary-gale
+  kind: primary_source
+  reference: https://doi.org/10.1371/journal.pone.0069646
+  locator: GalE overexpression Results; purified enzyme Methods and Figure 5; Figure
+    5 visually inspected
+  accessed_at: '2026-10-21T13:05:15.052478Z'
+  support: supports
+  summary: galE overexpression rescues growth of the tested E. coli background, but
+    purified GalE was not inhibited at ciclopirox concentrations up to 500 micromolar
+    in the UDP-galactose-to-UDP-glucose coupled assay. The reverse reaction was not
+    tested. Results and Methods disagree on substrate concentration, so no uniquely
+    resolved kinetic regime is asserted. This is functional rescue plus a bounded
+    negative biochemical test, not direct binding or validated inhibition of GalE.
+  snapshot_sha256: 402a56a9a236d5e567509216b09e9b5e291e6448f54a4df3612a9c56f789b5e3
+- evidence_id: primary-phenotypes
+  kind: primary_source
+  reference: https://doi.org/10.1371/journal.pone.0069646
+  locator: Iron supplementation, LPS analysis and time-kill Results; Figure 2 visually
+    inspected
+  accessed_at: '2026-10-21T13:05:15.196360Z'
+  support: supports
+  summary: Iron supplementation rescues growth under tested conditions, and treated
+    E. coli show altered LPS patterns. These observations motivate mechanistic models
+    without proving one exclusive initiating target. Figure 2 shows concentration-dependent
+    growth inhibition and killing; it does not establish universal bactericidal action.
+    One Results sentence prints an mg/mL MIC inconsistent with the figure and adjacent
+    microgram/mL methods; the review does not propagate that apparent unit error.
+  snapshot_sha256: 8044478c1ef215c19a53b12bb860e97ef02d857c9473735910b21488914e84bc
+- evidence_id: primary-table
+  kind: primary_source
+  reference: https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0069646.t001
+  locator: Original 2013 Table 1 image, visually inspected
+  accessed_at: '2026-10-21T13:05:15.156783Z'
+  support: supports
+  summary: The exact table confirms strain-specific concentrations and the greater-than
+    qualifier for incompletely inhibited P. aeruginosa. Antibiotic comparator resistance
+    profiles do not establish resistance to ciclopirox or identify its target.
+  snapshot_sha256: e7ef6fb61ddf09d73f1268190e7e8c079635dfd6c1d1b885ecc6d735004ed26b
+- evidence_id: primary-sugar-iron
+  kind: primary_source
+  reference: https://doi.org/10.1371/journal.pone.0210547
+  locator: PMID:30633761; full 2019 original text, Methods, Results, Discussion and
+    figure captions
+  accessed_at: '2026-10-21T13:00:38Z'
+  support: supports
+  summary: The study uses named Santa Cruz ciclopirox in DMSO, with fine-increment
+    broth MIC measurements, E. coli BW25113 deletion strains and separate siderophore/swarming
+    assays. The 21 specifically susceptible deletion mutants are not direct targets
+    or resistant alleles. The Arnow assay detects catechol siderophores and cannot
+    separate intact enterobactin from breakdown products. Swarming varies by strain
+    and concentration; the authors do not establish an exclusive mechanism. The earlier
+    clinical-panel results are cited context, not a newly repeated panel.
+  snapshot_sha256: 75d97325c26cc240d646b9af4a9ccd0b92973d63c27fe0cc2388cf571697432e
+- evidence_id: material-comparators
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28EXT_ID%3A12895182%20OR%20EXT_ID%3A9372359%20OR%20EXT_ID%3A1840158%20OR%20EXT_ID%3A2870809%20OR%20EXT_ID%3A23936064%29%20AND%20SRC%3AMED&format=json&resultType=core&pageSize=100
+  locator: Complete original abstracts for PMID:12895182, 9372359, 1840158 and 2870809
+  accessed_at: '2026-10-21T13:00:38Z'
+  support: context_only
+  summary: The 2003 microbial panel, 1997 UVB erythema comparison, 1991 anti-inflammatory
+    experiments and candidosis trial explicitly concern ciclopirox olamine or its
+    formulations. They provide relevant active-moiety/use context, but their quantitative
+    results, host enzyme hypotheses and formulated efficacy are not assigned to isolated
+    parent material. Free-parent anti-inflammatory activity and the full breadth of
+    the definition were not independently resolved by these abstracts.
+  snapshot_sha256: 552b878d6859f65ca1ac1f5b4ec62b6e27c574fa9e27bf0cc1a30e83a07def72
+- evidence_id: adapter
+  kind: database
+  reference: iModulonDB structured adapter
+  locator: 297-adapter-catalog.json and 300-adapter-galE.json, run before open protein
+    follow-up
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: context_only
+  summary: The structured search resolves galE to e_coli/precise1k/b0759 with one
+    gene match and zero component matches. This identifies expression-database context
+    only; it does not establish a drug target. The native record has no gene or pathway
+    assertion requiring transcriptional grounding.
+  snapshot_sha256: 52926558403b145122f607666319d98fb0a41361c498828afe74fc64060373b2
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive local and bounded free public literature search
+  locator: 300-local-hits.txt; 300-focused-local-search.json; source retrieval manifests
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: context_only
+  summary: Initial repository-wide search included hidden and ignored files. The focused
+    curation/conf search found no target-specific override, with ignored files included.
+    Existing ciclopirox research/audit artifacts were discovery context only; their
+    2019 lead was independently read in the original paper. The review does not claim
+    an exhaustive search of all published mechanisms or all historical literature.
+  snapshot_sha256: 10cdfcaa3f2af95c4372c26d0f82b12c707e5af9b93de96deb540afe2f8fec4b
+  search_scope: 2026-10-21; exact ciclopirox/CHEBI:453011, full key, registry identifiers
+    and both adopted PMIDs; hidden/ignored-inclusive local searches plus bounded free
+    official, publisher and archive retrievals. Limits and failed routes are recorded
+    in the cited manifests.
+- evidence_id: gates
+  kind: validation
+  reference: Actual focused validation commands
+  locator: 300-focused-results.json and companion schema/strict logs
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: supports
+  summary: Root executed focused chemistry, native schema validation and strict validation
+    against this exact unchanged record; all exited zero. Existing passes were inspected
+    and retained rather than rerun without a new change.
+  snapshot_sha256: fe406d9dd460961dace8b82c2fbf41cb2675cd1f0e07ed923dd38cde3264d134
+- evidence_id: access
+  kind: search
+  reference: Free official, publisher and archive retrieval attempts
+  locator: 030-root-fetch-results.json; 030-followup-results.json; 300-extra-fetch.json;
+    300-final-fetch.json; 300-jm-followup-fetch.json
+  accessed_at: '2026-10-21T13:11:52Z'
+  support: context_only
+  summary: Publisher full-text access for the AN2690 paper returned 403; original
+    comparator prose was read through a public reproduction and the official ACS supplement
+    was recovered. The chrysotrione original PDF was recovered from an archived CiteSeer
+    copy. The NIST CAS query returned Registry Number Not Found rather than a corroborating
+    identity entry. LINCS certificate failures and the limited HMS archive search
+    leave its exact mapping unresolved. No paid or contact route was used.
+  snapshot_sha256: c6ef7be6b26f2c990ab83d1772395714627d5b8ceec083394e865c2b9a7946b8
+  search_scope: 2026-10-21; exact ciclopirox/CHEBI:453011, full key, registry identifiers
+    and both adopted PMIDs; hidden/ignored-inclusive local searches plus bounded free
+    official, publisher and archive retrievals. Limits and failed routes are recorded
+    in the cited manifests.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact neutral parent, names, structure, formula and masses
+  outcome: supported
+  summary: The complete native chemical representation is coherent and matches the
+    current independent structural sources. The compound is distinct from the separate
+    ethanolamine salt record.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - native
+  - chebi
+  - chemistry
+  - xref-chemistry
+  - gsrs
+  - patent
+- assessment_id: chemical-grounding
+  area: grounding
+  topic: Public structural and registry cross-references
+  outcome: supported
+  summary: ChEBI, KEGG, DrugCentral, DrugBank and GSRS agree on the full parent structure;
+    CAS is corroborated by these sources. Three broader chemical parents are correctly
+    typed and do not substitute for exact identity.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - chebi
+  - kegg
+  - drugcentral
+  - drugbank
+  - gsrs
+  - terms
+  - xref-chemistry
+- assessment_id: legacy-grounding
+  area: grounding
+  topic: Beilstein and LINCS exact mapping
+  outcome: unknown
+  summary: Beilstein was not independently accessed. LSM-5307 was not verified from
+    the limited HMS archive or failed direct portal routes; source repetition alone
+    does not resolve it. No contrary exact identity was located.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - legacy
+  - access
+- assessment_id: clinical
+  area: evidence
+  topic: FDA approval assertions, product identity and historical provenance
+  outcome: supported
+  summary: All 32 product assertions reconcile with official current records and the
+    historical GSRS grounding is structurally concordant. Product-level regulatory
+    facts support APPROVED status without implying antibacterial clinical efficacy
+    or uniform isolated-parent formulation.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - fda
+  - gsrs
+  - owners
+  - native
+- assessment_id: antibacterial
+  area: evidence
+  topic: Antibacterial class and role
+  outcome: supported
+  summary: The explicit free-parent 2013 material and organism-resolved assays establish
+    antibacterial activity. Neither measured susceptibility to this compound nor resistance
+    to other drugs is generalized beyond the tested isolates and conditions.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - primary-bacteria
+  - primary-table
+  - terms
+- assessment_id: antifungal
+  area: evidence
+  topic: Antifungal role and both adopted citation dispositions
+  outcome: supported
+  summary: Both adopted papers use ciclopirox as an antifungal comparator, and official
+    product data support topical antifungal use. The mushroom study is not a producer
+    assertion and the AN2690 study is not a ciclopirox mechanism paper. Exact comparator
+    preparation and some method details remain bounded.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - adopted-index
+  - adopted-chrysotrione
+  - adopted-an2690
+  - an2690-si
+  - fda
+- assessment_id: definition-scope
+  area: evidence
+  topic: Broad-spectrum and anti-inflammatory definition wording
+  outcome: unknown
+  summary: The broad qualitative definition is inherited from ChEBI. Direct free-parent
+    bacterial evidence and antifungal comparator evidence support the principal roles.
+    Several additional broad-spectrum and anti-inflammatory originals explicitly test
+    olamine or formulations, so their detailed endpoints are not independently assigned
+    to the isolated parent. The copied typographical errors do not create a molecular-identity
+    error.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - chebi
+  - primary-bacteria
+  - adopted-chrysotrione
+  - material-comparators
+- assessment_id: mechanism
+  area: completeness
+  topic: Optional mechanism, molecular targets and causal graph
+  outcome: unknown
+  summary: Useful mechanistic observations are available for optional enrichment,
+    but GalE rescue, iron rescue, LPS changes, deletion susceptibility and siderophore
+    signals do not establish a single directly inhibited bacterial protein. The tested
+    negative GalE result and source-method inconsistencies must remain explicit. Absence
+    of these optional fields is not a schema defect.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - primary-gale
+  - primary-phenotypes
+  - primary-sugar-iron
+  - adapter
+  - rubric
+- assessment_id: activity
+  area: completeness
+  topic: Optional quantitative activity_spectrum
+  outcome: unknown
+  summary: The 2013 primary table provides a suitable strain-resolved follow-up lead.
+    Any enrichment must preserve supplier/form, organism or isolate, medium, endpoint,
+    concentration units and qualifiers. Disk zones, fungal MICs, parent bacterial
+    MICs, olamine assays and product efficacy must remain separate.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - primary-bacteria
+  - primary-table
+  - adopted-chrysotrione
+  - an2690-si
+  - material-comparators
+- assessment_id: unpopulated-domains
+  area: scope
+  topic: Resistance, natural producer and dataset assertions
+  outcome: not_applicable
+  summary: No such native assertions are populated. Synthetic identity is supported
+    by the patent; purchased fungal comparator material is not natural-product isolation
+    evidence. Deletion susceptibility and database gene membership do not warrant
+    new resistance or target claims by themselves.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - native
+  - patent
+  - adopted-chrysotrione
+  - primary-sugar-iron
+  - adapter
+- assessment_id: provenance
+  area: provenance
+  topic: Generated owners, scientific status and all history
+  outcome: supported
+  summary: The raw ChEBI and FDA inputs explain the generated record. SEEDED is consistent
+    with reseeding history and is not silently promoted by this review. Future source
+    corrections belong to their maintained owners, while optional primary evidence
+    belongs to curator-owned native objects.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - owners
+  - native
+  - gsrs
+  - rubric
+- assessment_id: schema
+  area: schema
+  topic: Focused deterministic validation
+  outcome: supported
+  summary: Native schema, strict checks and molecular consistency pass. These checks
+    do not replace the claim-specific scientific assessment.
+  target_ids:
+  - CHEBI:453011
+  evidence_ids:
+  - gates
+  - chemistry
+findings: []
+actions:
+- action_id: A1
+  description: Optionally curate exact-parent original activity and mechanistic observations
+    without converting functional phenotypes into direct targets.
+  finding_ids: []
+  target_ids:
+  - CHEBI:453011
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/ciclopirox.yaml
+    role: Curator-owned evidence, activity_spectrum and mechanism objects through
+      the validated writer
+  acceptance_checks:
+  - Use PMID:23936064 original free-parent assays with complete strain, material,
+    method, unit and endpoint qualifiers.
+  - Preserve the negative purified-GalE result, tested reaction direction and unresolved
+    source-method discrepancies.
+  - Keep olamine, formulations, combination treatments and AN2690 results separate.
+  - After separately authorized curation, run schema, strict, reference, source/history
+    and applicable QC gates.
+- action_id: A2
+  description: Resolve legacy registry access and exact comparator material only if
+    those annotations are later enriched or changed.
+  finding_ids: []
+  target_ids:
+  - CHEBI:453011
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Imported chemical reference owner; source extraction or maintained override
+      owns any future correction
+  acceptance_checks:
+  - Verify LSM-5307 and Beilstein 1533423 against their own accessible exact record
+    before claiming independent confirmation or removal.
+  - Recover an authoritative readable AN2690 comparator table and reagent specification
+    before transferring numerical antifungal observations.
+  - Treat spelling cleanup of the imported definition as optional editorial maintenance.
+limitations:
+- Beilstein was inaccessible and LINCS LSM-5307 remains unresolved after direct-route
+  failures and a bounded official HMS archive search. No incorrect-identifier finding
+  is inferred from limited access.
+- The 2006 original comparator prose was read in a public reproduction, whose table
+  layout is unsuitable for exact numerical extraction; official SI pS10 was inspected.
+  The 2007 original full PDF and Table 1 were inspected, but comparator catalog/salt
+  details and full local incubation information were not supplied.
+- The 2013 original text, Table 1 and Figures 2 and 5 were inspected. Its internal
+  substrate-concentration and unit inconsistencies constrain precision; no unsupported
+  kinetic or universal bactericidal conclusion is drawn.
+- The 2019 full text and figure captions were inspected; individual supplementary
+  mutant rows were not exhaustively adjudicated. No per-allele resistance annotation
+  or numeric export from those supplements is proposed.
+- Additional anti-inflammatory, clinical and broad-spectrum comparators were inspected
+  at original-abstract depth and explicitly concern olamine or formulations. This
+  does not independently establish every property of isolated parent material.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record, source table, clinical assertion, status or history was altered.
+- Native focused checks used the batch 030 environment; root molecular checks used
+  the existing batch 019 RDKit interpreter against batch 030 cwd.
+- All optional links, tags and notes were selected for ciclopirox and checked against
+  this exact target. Historical local research files informed discovery only; the
+  supporting primary text was independently inspected.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:453011
+- https://doi.org/10.1371/journal.pone.0069646
+- https://doi.org/10.1371/journal.pone.0210547
+tags:
+- ciclopirox
+- exact-chemical-identity
+- primary-assay-scope
