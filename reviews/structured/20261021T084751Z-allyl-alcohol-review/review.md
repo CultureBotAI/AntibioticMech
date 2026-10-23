@@ -1,0 +1,829 @@
+# Review of allyl alcohol
+
+- Review: 20261021T084751Z-allyl-alcohol-review
+- Repository: CultureBotAI/AntibioticMech
+- Started UTC: 2026-10-21T08:36:51Z
+- Finished UTC: 2026-10-21T08:47:51Z
+- Reviewer: Codex agent validation_plan (independent)
+- Completion: partial
+- Verdict: blocked
+- Scientific review: true
+
+## Summary
+
+Allyl alcohol is a well-defined neutral achiral C3H6O compound. Native chemistry and accessible exact mappings agree. Its adopted citations concern animal toxicity; independent microbial studies offer bounded growth, oxidative-stress and activation-related resistance evidence. One informational finding identifies optional enrichment with that evidence without treating ADH activation or host toxicity as proof of a direct antibacterial target. Scientific assessment retains the stated evidence limits; full verification is blocked by the shared native-library failure.
+
+## Scope And Provenance
+
+Whole exact record, both adopted PMID leads, current ChEBI term/parents/roles, accessible exact cross-references, primary microbial growth and activation/resistance studies, and garlic-processing versus biosynthesis scope.
+
+Selection: Path-ordered queue index 087; exactly one record.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base baf3b3203d748d098686e166cdb2a6138f47eb59.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| CHEBI:16605 | data/antibiotics/antibacterial/allyl-alcohol.yaml | generated | allyl alcohol |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Documented per-record LinkML validation | passed | True | CHEBI:16605 | Exit 0; No issues found. |
+| Documented closed-schema validation | passed | True | CHEBI:16605 | Exit 0; one file, zero ERROR rows. |
+| Native encodings, masses and deterministic source mint | passed | False | CHEBI:16605 | Exit 0; native consistency plus PubChem and KEGG exact graph agreement. |
+| Current ChEBI term and source assertions | passed | False | CHEBI:16605 | Exit 0; exact term, two parents, both role links, synonyms, encodings and xref strings agree. |
+| Native structured-source applicability before web research | not_applicable | False | CHEBI:16605 | No native gene, protein, regulator, pathway, locus, stress-response assertion or expression dataset exists. Chemical activity roles and plant occurrence alone are not adapter candidates. |
+| Authoritative full QC | failed | True | CHEBI:16605 | Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack library cannot load. Pathway links, lint, documentation, provenance, source queue and curator structure gates passed before collection. This failure does not itself establish a scientific defect in the target. |
+| Generated corpus reproduction | passed | True | CHEBI:16605 | 2939 expected and present; zero missing, unexpected, drifted fields or lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic retained. |
+| Native review-readiness inventory | passed | False | CHEBI:16605 | 2859 native unsigned readiness rows written; this status queue does not determine structured-review coverage. |
+| Supplementary test suite with two unavailable modules excluded | passed | False | CHEBI:16605 | 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy native library were explicitly excluded; this does not replace full QC. |
+| Full closed-schema validation | passed | True | CHEBI:16605 | 2939 files, zero ERROR rows. |
+| Chemical map consistency | failed | False | CHEBI:16605 | Exited 1 on the same pinned SciPy native library import failure. |
+| Generated site consistency | passed | False | CHEBI:16605 | 2939 compound pages and seven class pages current. |
+| Corpus statistics | passed | False | CHEBI:16605 | Corpus report completed successfully. |
+| Full-corpus history/evidence/reference invariants | passed | True | CHEBI:16605 | 23 full-corpus integrity tests passed, including seed history, evidence placement and internal references. |
+
+## Scientific And Domain Assessments
+
+### Exact allyl alcohol
+
+identity: supported. Targets: CHEBI:16605.
+
+All native chemical fields agree; accessible authority structures independently support the neutral achiral parent.
+
+### Parents, activity roles and filing
+
+grounding: supported. Targets: CHEBI:16605.
+
+Chemical parents fit, both fungal and bacterial roles are preserved, and original activity reports support their broad scope.
+
+### External references
+
+consistency: unknown. Targets: CHEBI:16605.
+
+Accessible mappings agree. MetaCyc account gate and proprietary Reaxys prevent complete direct external verification; this is a limitation rather than proof of mismatch.
+
+### Activation versus lethal target
+
+evidence: unknown. Targets: CHEBI:16605.
+
+Specific primary microbial evidence can enrich the record, preserving ADH activation, downstream redox phenotype and condition-dependent resistance separately.
+
+### Garlic occurrence and processing
+
+scope: supported. Targets: CHEBI:16605.
+
+Observed processed-garlic occurrence fits the broad definition. Heating/trituration and precursor conversion do not establish a structured natural producer claim.
+
+### Owner and history
+
+ownership: supported. Targets: CHEBI:16605.
+
+ChEBI maintained owner, source mint and four history events agree; all 13 original hashes remain unchanged.
+
+### Clinical, datasets and causal graph
+
+representation: not_applicable. Targets: CHEBI:16605.
+
+No native such assertions need repair; optional emptiness is not a finding.
+
+### Native focused validation
+
+schema: supported. Targets: CHEBI:16605.
+
+Both documented focused validators pass.
+
+## Findings
+
+### F1: Microbial primary evidence can clarify activity and metabolic activation
+
+informational / open / confirmed; issue key: chebi-16605-allyl-alcohol-primary-microbial-evidence.
+
+The existing identity and broad roles are supported, but the two adopted citation leads concern animal toxicity. Inspected microbial experiments provide specific growth/redox and activation-related resistance evidence suitable for bounded curation.
+
+## Recommended Actions And Acceptance Checks
+
+### A1
+
+Curate exact microbial evidence with parent/metabolite, assay and strain context kept explicit.
+
+- Keep allyl alcohol distinct from acrolein, sulfur-containing garlic constituents and crude/heated extracts. Cite purified-parent exposures separately.
+- Represent ADH as metabolic activation machinery where supported; do not convert resistance-associated enzyme changes or downstream redox phenotypes into direct-binding target claims.
+- Preserve yeast strain/construct, preculture, medium, exposure and endpoint. Plate-growth resistance at 10 mM is not an MIC; retrieve full methods before adopting abstract-only bacterial or Candida-utilis MIC values.
+- Resolve the 2005 Candida numerical inconsistencies before encoding an exact MIC; preserve unresolved source disagreement in discussions.
+- Do not transfer zebrafish/rat toxicity or mRNA overexpression results to bacterial susceptibility. Processed-garlic occurrence is not sufficient biosynthesis proof for producer_organisms.
+- Use the validated writer and curation history, then require schema, strict, term/reference/history and full native scientific gates before sign-off.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/antibiotics/antibacterial/allyl-alcohol.yaml; Entire YAML | supports | Read identity, complete definition and eight synonyms, two chemical parents, fungicide and antibacterial roles, structure, six compound xrefs, Wikipedia document link, source mint and four history events. No native target, primary evidence, quantitative activity or producer is asserted. |
+| inventory | data/raw/chebi_antimicrobials.tsv; Exact CHEBI:16605 row; 087-local-hits.txt | supports | ChEBI owns generated identity/chemistry/roles and two adopted PMID leads. Maintained inputs were hashed before judgment and ignored-inclusive owner search was performed. |
+| chebi | https://www.ebi.ac.uk/chebi/CHEBI:16605; 087-ols.json; 087-chebi.html | supports | Current non-obsolete identity and native encodings agree. Synonyms denote prop-2-en-1-ol. Current source preserves both roles; the awkward phrase It is has been is a source typo that does not change identity. The historical herbicide wording does not assert current clinical or regulatory approval. |
+| ontology | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI_16605/parents; 087-parents.json; native role links on ChEBI | supports | Primary allylic alcohol CHEBI:134394 and propenol CHEBI:26300 are strictly broader and fit the graph. Fungicide CHEBI:24127 and antibacterial agent CHEBI:33282 are retained; antibacterial filing does not erase fungal activity. |
+| kegg-pubchem | KEGG:C02001; PubChem:7858; 087-kegg.txt; 087-kegg.mol; 087-pubchem.json | supports | KEGG MOL and PubChem resolved by native key agree with C=CCO and XXROGKLTLUQVRX-UHFFFAOYSA-N; CAS107-18-6 is corroborated. No salt, stereoisomer or active metabolite is collapsed into allyl alcohol. |
+| ppdb | https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/2698.htm; 087-ppdb.html, chemical identity and description | supports | Exact structure/key/formula and CAS agree. PPDB describes an obsolete herbicide for grass and weed seeds, supporting the historical use statement. It does not establish a microbial molecular target. |
+| hmdb | https://www.hmdb.ca/metabolites/HMDB0031652; Public HMDB text exposed in web reader; chemical descriptors | supports | HMDB accession names allyl alcohol and displays OCC=C, the native InChI/key, formula and CAS. Direct local XML/HTML requests failed HTTP403, so no local primary-body snapshot is claimed. |
+| metacyc | https://biocyc.org/compound?orgid=META&amp;id=ALLYL-ALCOHOL; 087-metacyc.html | unknown | HTTP200 returned Create Account instead of the compound entry. Exact external identity remains unverified; the current ChEBI mapping string and HMDB external descriptor corroborate the accession but do not replace inspection of its structure. |
+| adopted-leads | PMID:18383315; PMID:24594943; 087-core.json, both complete indexed abstracts read | context_only | PMID18383315 DOI10.1002/bdrb.20152 is a male-rat endocrine-screening study. PMID24594943 DOI10.1371/journal.pone.0090619 tests zebrafish metabolic activation. Neither is a direct antibacterial experiment. |
+| host-primary | PMID:24594943; 087-primary2014.xml, Results and Discussion | context_only | Zebrafish adh8a overexpression increases allyl alcohol toxicity and decreases detected parent compound, but acrolein itself was not detected. This supports bounded host activation context, not direct microbial target inhibition. Abstract/body quantitative discrepancies are not propagated because no host numerical annotation is proposed. |
+| garlic-primary | DOI:10.1111/j.1365-2621.2005.tb11452.x; Publisher abstract, Journal of Food Science70 M305–M309 | supports | Authors isolate allyl alcohol from heated garlic by HPLC/GC-MS and compare pure compound with processed garlic/alliin. Pure compound inhibits C.utilis ATCC42416 at 0.002% v/v, while reported bacterial MICs are much higher(4–7%). This supports qualitative fungal/bacterial activity and processed-garlic occurrence; missing full assay methods prevent importing those values as complete ActivityObservations. |
+| candida-primary | PMID:16207909; DOI:10.1099/mic.0.28095-0; public PMC Methods and Results passages exposed by web reader | supports | Separate allyl-alcohol treatment of C.albicans produces growth inhibition and redox changes; microscopy/flow assays monitor NAD(P)H, glutathione and ROS. These are cellular phenotypes, not direct binding proof. Numerical results contain inconsistencies, including a 1 mM parenthetical 29µg/mL and MIC 0.1 mM alongside stronger-exposure growth descriptions, so no unqualified numerical observation is proposed. |
+| yeast-primary | PMID:23200945; DOI:10.1016/j.cbi.2012.11.010; primary Results, Table2, Figure5 caption and Discussion exposed by web reader | supports | S.cerevisiae transformants with slower ADH variants grow better on YPD plus 10 mM allyl alcohol, while growth requiring fermentation trends oppositely. Plates were followed at 30°C for 3 days after SC-Leu preculture; different preculture conditions change some phenotypes. This supports activation-related resistance and its context. ADH is an activating enzyme; these experiments do not prove it is the direct lethal target or supply MICs. |
+| bacterial-lead | DOI:10.1128/AEM.62.9.3499-3501.1996; Publisher abstract, Properties of Allyl Alcohol-Resistant Mutants of Clostridium butyricum Grown on Glycerol | supports | C.butyricum E5 resistant mutants retain 1,3-propanediol production. Authors attribute resistance to altered reductive properties rather than loss of 1,3-propanediol dehydrogenase. Full methods were not inspected; this is a bounded bacterial follow-up lead, not a generalized resistance mechanism or exact MIC. |
+| chemistry | RDKit calculations and source mint; 087-chemistry.py; 087-chemistry.json | supports | Native encodings, C3H6O, neutral charge, masses, absence of stereocentres and deterministic mint agree; PubChem and KEGG compare successfully. |
+| source-check | Current ChEBI assertions; 087-source-check.py; 087-source-check.json | supports | Non-obsolete exact term, both parents, retained role links, synonyms, native chemistry and original xref strings match. |
+| validation | just validate; just validate-strict; Actual focused native executions in batch009; 087-strict.tsv | supports | Both documented checks exited 0; strict scanned one file with zero ERROR rows. |
+| search | Ignored-inclusive owner and bounded public scientific search; 087-local-hits.txt; exact allyl-alcohol identity, antibacterial, yeast, ADH and acrolein searches | context_only | Both adopted leads were resolved; original microbial literature was separated from animal toxicity, garlic mixtures and compound derivatives. No exhaustive absence claim is made. |
+
+## Limits And Additional Notes
+
+- MetaCyc returned an account page; Reaxys605307 was not independently resolved. CAS107-18-6 was corroborated across accessible chemical authorities, not independently checked against the CAS registry.
+- Both adopted PMID abstracts were read, and the zebrafish primary Results/Discussion were inspected locally. Primary Candida and yeast Methods/Results passages were inspected through the public web reader; their local EuropePMC XML fetches failed HTTP500, so no local full-text snapshot is falsely claimed.
+- The attempted Candida CiteSeer PDF failed HTTP404; Wiley direct full text and HMDB local XML/HTML failed HTTP403. Publisher abstract and indexed HMDB descriptor text were successfully inspected, but full bacterial/yeast selectivity-study methods were not obtained.
+- Primary Candida numeric notation is inconsistent and the 2013 yeast effects depend on growth conditions; no complete numerical activity row or universal microbial target is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an invalid Mach-O section on this platform; the same version also failed under Python 3.10 and in the fresh batch-002 environment. No dependency versions were changed. The supplementary test suite, closed-schema, reproduction and corpus-integrity checks do not replace full QC.
+- No native record edits were made; all 13 captured input hashes rechecked unchanged.
+- The current native record has no ADH or stress-response claim; these terms emerged during literature review and were not native structured-adapter candidates before web research.
+- Bundle completion is partial because full repository QC is unavailable on this runtime; the selected record was read and assessed in full. A saved review does not promote native scientific status.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T084751Z-allyl-alcohol-review
+kind: record
+repository: CultureBotAI/AntibioticMech
+title: Review of allyl alcohol
+started_at: '2026-10-21T08:36:51Z'
+finished_at: '2026-10-21T08:47:51Z'
+reviewer:
+  identity: Codex agent validation_plan
+  kind: agent
+  independence: independent
+  independence_basis: Read-only review by an agent uninvolved in authoring the generated
+    record; exact target and maintained input hashes captured before assessment.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: partial
+verdict: blocked
+native_verdict: Identity and source roles supported; minor primary microbial evidence
+  enrichment with metabolic-activation scope
+scientific_review: true
+summary: Allyl alcohol is a well-defined neutral achiral C3H6O compound. Native chemistry
+  and accessible exact mappings agree. Its adopted citations concern animal toxicity;
+  independent microbial studies offer bounded growth, oxidative-stress and activation-related
+  resistance evidence. One informational finding identifies optional enrichment with
+  that evidence without treating ADH activation or host toxicity as proof of a direct
+  antibacterial target. Scientific assessment retains the stated evidence limits;
+  full verification is blocked by the shared native-library failure.
+source:
+  git_revision: baf3b3203d748d098686e166cdb2a6138f47eb59
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: 5e2e1f975f8aa64f92a06c134c98c750c968fd78f02620a73c9cb611ac018ed8
+    role: context
+  - path: conf/sources.yaml
+    sha256: 4a2dcd7a3a88953b6cb35b51a48ed77b626c3af2cbb542b0d38ba10540ed7df9
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: 224cbb7261add427184b2762a29c2ff3e85c85e0a06cf22b144545346487247b
+    role: context
+  - path: curation/decisions.tsv
+    sha256: a5834b44307b0449b0df9362c551b7fcd707f3ae51f73d429d37d51f5a169d61
+    role: context
+  - path: data/antibiotics/antibacterial/allyl-alcohol.yaml
+    sha256: 0cfa7ac6bedf901e2573b6c8e7f00a54a9eb4150b24135edd7bbf67695a9fcd1
+    role: target
+  - path: data/raw/MANIFEST.yaml
+    sha256: 25f0d80c0bf26da7741a1514a5e1759dde484ab054f0f56df7938bdda8383a91
+    role: context
+  - path: data/raw/chebi_antimicrobials.tsv
+    sha256: 4c33e56c3c342be657309f720f5b5cb9cad1fae13bec202ef99e449503c32004
+    role: context
+  - path: data/raw/chebi_role_names.tsv
+    sha256: 5c476c0aacd7c98d7241d2343a6fc41ee9eb9338077404c5b011a04bf40c6ac5
+    role: context
+  - path: docs/CURATION.md
+    sha256: a364598a9c2bdaf9e0e71895d5b7a2fd61d3e726e0ed0da12bd895cc4c30e98c
+    role: context
+  - path: docs/HARMONIZATION.md
+    sha256: fb8b58abca016ca5a7d856fcc6f1ec2deb210e0927394a480853830b39e1f060
+    role: context
+  - path: scripts/extract_source_inventory.py
+    sha256: bb1606fd07cd8187640b5200a21ec090bb06683397d691e87ddd6884ea768860
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: be66eca74d22a3daa9ac6ff73d437c6c56e8d85b97f6877fdf3de77e2ab64680
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: Whole exact record, both adopted PMID leads, current ChEBI term/parents/roles,
+    accessible exact cross-references, primary microbial growth and activation/resistance
+    studies, and garlic-processing versus biosynthesis scope.
+  selection: Path-ordered queue index 087; exactly one record.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - CHEBI:16605
+targets:
+- target_id: CHEBI:16605
+  path: data/antibiotics/antibacterial/allyl-alcohol.yaml
+  label: allyl alcohol
+  record_class: AntibioticRecord
+  kind: generated
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/raw/chebi_antimicrobials.tsv
+    role: Adopted identity, structure, roles and citation leads
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/extract_source_inventory.py
+    role: ChEBI source extraction
+  - repository: CultureBotAI/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Generated field owner
+  - repository: CultureBotAI/AntibioticMech
+    path: curation/decisions.tsv
+    role: Grounding or exclusion override
+checks:
+- check_id: schema
+  name: Documented per-record LinkML validation
+  status: passed
+  required: true
+  summary: Exit 0; No issues found.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate
+    data/antibiotics/antibacterial/allyl-alcohol.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: strict
+  name: Documented closed-schema validation
+  status: passed
+  required: true
+  summary: Exit 0; one file, zero ERROR rows.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-strict
+    data/antibiotics/antibacterial/allyl-alcohol.yaml --out /private/tmp/am-review-session/087-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - validation
+- check_id: chemistry
+  name: Native encodings, masses and deterministic source mint
+  status: passed
+  required: false
+  summary: Exit 0; native consistency plus PubChem and KEGG exact graph agreement.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/087-chemistry.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - chemistry
+- check_id: source-check
+  name: Current ChEBI term and source assertions
+  status: passed
+  required: false
+  summary: Exit 0; exact term, two parents, both role links, synonyms, encodings and
+    xref strings agree.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache uv run python
+    /private/tmp/am-review-session/087-source-check.py
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - source-check
+- check_id: imodulondb
+  name: Native structured-source applicability before web research
+  status: not_applicable
+  required: false
+  summary: No native gene, protein, regulator, pathway, locus, stress-response assertion
+    or expression dataset exists. Chemical activity roles and plant occurrence alone
+    are not adapter candidates.
+  target_ids:
+  - CHEBI:16605
+- check_id: shared-qc
+  name: Authoritative full QC
+  status: failed
+  required: true
+  summary: 'Exited 2 at pytest collection: pinned SciPy 1.15.3 native Mach-O _spropack
+    library cannot load. Pathway links, lint, documentation, provenance, source queue
+    and curator structure gates passed before collection. This failure does not itself
+    establish a scientific defect in the target.'
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just qc
+  exit_code: 2
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-verify-corpus
+  name: Generated corpus reproduction
+  status: passed
+  required: true
+  summary: 2939 expected and present; zero missing, unexpected, drifted fields or
+    lockfile discrepancies. Unrelated iclaprim source-crossref refusal diagnostic
+    retained.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just verify-corpus
+    --summary
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-review-queue
+  name: Native review-readiness inventory
+  status: passed
+  required: false
+  summary: 2859 native unsigned readiness rows written; this status queue does not
+    determine structured-review coverage.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just review-queue
+    --limit 0 --tsv /private/tmp/am-review-session/native-queue.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-tests-platform-partial
+  name: Supplementary test suite with two unavailable modules excluded
+  status: passed
+  required: false
+  summary: 9455 passed and 248 skipped. Two modules requiring the unavailable SciPy
+    native library were explicitly excluded; this does not replace full QC.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q -ra --ignore=tests/test_chemical_embedding.py --ignore=tests/test_chemical_map_site.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-validate-all
+  name: Full closed-schema validation
+  status: passed
+  required: true
+  summary: 2939 files, zero ERROR rows.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just validate-all
+    --quiet --workers 2 --out /private/tmp/am-review-session/corpus-validation.tsv
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-chemical-map-check
+  name: Chemical map consistency
+  status: failed
+  required: false
+  summary: Exited 1 on the same pinned SciPy native library import failure.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just chemical-map-check
+  exit_code: 1
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-render-check
+  name: Generated site consistency
+  status: passed
+  required: false
+  summary: 2939 compound pages and seven class pages current.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just render-check
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-report
+  name: Corpus statistics
+  status: passed
+  required: false
+  summary: Corpus report completed successfully.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just report
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+- check_id: shared-corpus-integrity
+  name: Full-corpus history/evidence/reference invariants
+  status: passed
+  required: true
+  summary: 23 full-corpus integrity tests passed, including seed history, evidence
+    placement and internal references.
+  target_ids:
+  - CHEBI:16605
+  command: env UV_NO_SYNC=1 UV_CACHE_DIR=/private/tmp/am-review-uv-cache just test
+    -q tests/test_corpus_integrity.py
+  exit_code: 0
+  scope_note: Shared execution in /private/tmp/antibioticmech-record-reviews-20261021
+    on base baf3b3203d748d098686e166cdb2a6138f47eb59. Corpus and gate inputs are unchanged
+    in this isolated worktree; the check applies to this target within all 2939 records.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/allyl-alcohol.yaml
+  locator: Entire YAML
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Read identity, complete definition and eight synonyms, two chemical parents,
+    fungicide and antibacterial roles, structure, six compound xrefs, Wikipedia document
+    link, source mint and four history events. No native target, primary evidence,
+    quantitative activity or producer is asserted.
+- evidence_id: inventory
+  kind: record_content
+  reference: data/raw/chebi_antimicrobials.tsv
+  locator: Exact CHEBI:16605 row; 087-local-hits.txt
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: ChEBI owns generated identity/chemistry/roles and two adopted PMID leads.
+    Maintained inputs were hashed before judgment and ignored-inclusive owner search
+    was performed.
+- evidence_id: chebi
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/CHEBI:16605
+  locator: 087-ols.json; 087-chebi.html
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Current non-obsolete identity and native encodings agree. Synonyms denote
+    prop-2-en-1-ol. Current source preserves both roles; the awkward phrase It is
+    has been is a source typo that does not change identity. The historical herbicide
+    wording does not assert current clinical or regulatory approval.
+  snapshot_sha256: 2f81158b135369bf1ffb306ec4476b29784adfbd6a932265813eb51206045f09
+- evidence_id: ontology
+  kind: database
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI_16605/parents
+  locator: 087-parents.json; native role links on ChEBI
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Primary allylic alcohol CHEBI:134394 and propenol CHEBI:26300 are strictly
+    broader and fit the graph. Fungicide CHEBI:24127 and antibacterial agent CHEBI:33282
+    are retained; antibacterial filing does not erase fungal activity.
+  snapshot_sha256: a7efd9f7e5b3471788a87cc2e76788c38afa77f3b283ce7a4ce95a0b3c7f95a8
+- evidence_id: kegg-pubchem
+  kind: database
+  reference: KEGG:C02001; PubChem:7858
+  locator: 087-kegg.txt; 087-kegg.mol; 087-pubchem.json
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: KEGG MOL and PubChem resolved by native key agree with C=CCO and XXROGKLTLUQVRX-UHFFFAOYSA-N;
+    CAS107-18-6 is corroborated. No salt, stereoisomer or active metabolite is collapsed
+    into allyl alcohol.
+  snapshot_sha256: 729acf7f4e9bd5673888460d0f240fdf9827d396ef40d03f4e412a20a26ea870
+- evidence_id: ppdb
+  kind: database
+  reference: https://sitem.herts.ac.uk/aeru/ppdb/en/Reports/2698.htm
+  locator: 087-ppdb.html, chemical identity and description
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Exact structure/key/formula and CAS agree. PPDB describes an obsolete herbicide
+    for grass and weed seeds, supporting the historical use statement. It does not
+    establish a microbial molecular target.
+  snapshot_sha256: 90af1277faa162214c5a0ce4ba9052298091c473fe32e9abbddaa6f811c9f923
+- evidence_id: hmdb
+  kind: database
+  reference: https://www.hmdb.ca/metabolites/HMDB0031652
+  locator: Public HMDB text exposed in web reader; chemical descriptors
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: HMDB accession names allyl alcohol and displays OCC=C, the native InChI/key,
+    formula and CAS. Direct local XML/HTML requests failed HTTP403, so no local primary-body
+    snapshot is claimed.
+- evidence_id: metacyc
+  kind: database
+  reference: https://biocyc.org/compound?orgid=META&id=ALLYL-ALCOHOL
+  locator: 087-metacyc.html
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: unknown
+  summary: HTTP200 returned Create Account instead of the compound entry. Exact external
+    identity remains unverified; the current ChEBI mapping string and HMDB external
+    descriptor corroborate the accession but do not replace inspection of its structure.
+  snapshot_sha256: f14da65987911a85a9690dd922111c9327284a84f735ba2e46f2d1f25e899497
+- evidence_id: adopted-leads
+  kind: database
+  reference: PMID:18383315; PMID:24594943
+  locator: 087-core.json, both complete indexed abstracts read
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: context_only
+  summary: PMID18383315 DOI10.1002/bdrb.20152 is a male-rat endocrine-screening study.
+    PMID24594943 DOI10.1371/journal.pone.0090619 tests zebrafish metabolic activation.
+    Neither is a direct antibacterial experiment.
+  snapshot_sha256: 87a8b72f74bdf9e9ed992431f401e5d84f84f32f552e6bc1fe2e062d33febf48
+- evidence_id: host-primary
+  kind: primary_source
+  reference: PMID:24594943
+  locator: 087-primary2014.xml, Results and Discussion
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: context_only
+  summary: Zebrafish adh8a overexpression increases allyl alcohol toxicity and decreases
+    detected parent compound, but acrolein itself was not detected. This supports
+    bounded host activation context, not direct microbial target inhibition. Abstract/body
+    quantitative discrepancies are not propagated because no host numerical annotation
+    is proposed.
+  snapshot_sha256: feadb6dc584d4cf9878770e0692c2cfa2f7bc375da5cc5aa0d9fbbf392f3b32f
+- evidence_id: garlic-primary
+  kind: primary_source
+  reference: DOI:10.1111/j.1365-2621.2005.tb11452.x
+  locator: Publisher abstract, Journal of Food Science70 M305–M309
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Authors isolate allyl alcohol from heated garlic by HPLC/GC-MS and compare
+    pure compound with processed garlic/alliin. Pure compound inhibits C.utilis ATCC42416
+    at 0.002% v/v, while reported bacterial MICs are much higher(4–7%). This supports
+    qualitative fungal/bacterial activity and processed-garlic occurrence; missing
+    full assay methods prevent importing those values as complete ActivityObservations.
+- evidence_id: candida-primary
+  kind: primary_source
+  reference: PMID:16207909
+  locator: DOI:10.1099/mic.0.28095-0; public PMC Methods and Results passages exposed
+    by web reader
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Separate allyl-alcohol treatment of C.albicans produces growth inhibition
+    and redox changes; microscopy/flow assays monitor NAD(P)H, glutathione and ROS.
+    These are cellular phenotypes, not direct binding proof. Numerical results contain
+    inconsistencies, including a 1 mM parenthetical 29µg/mL and MIC 0.1 mM alongside
+    stronger-exposure growth descriptions, so no unqualified numerical observation
+    is proposed.
+- evidence_id: yeast-primary
+  kind: primary_source
+  reference: PMID:23200945
+  locator: DOI:10.1016/j.cbi.2012.11.010; primary Results, Table2, Figure5 caption
+    and Discussion exposed by web reader
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: S.cerevisiae transformants with slower ADH variants grow better on YPD
+    plus 10 mM allyl alcohol, while growth requiring fermentation trends oppositely.
+    Plates were followed at 30°C for 3 days after SC-Leu preculture; different preculture
+    conditions change some phenotypes. This supports activation-related resistance
+    and its context. ADH is an activating enzyme; these experiments do not prove it
+    is the direct lethal target or supply MICs.
+- evidence_id: bacterial-lead
+  kind: primary_source
+  reference: DOI:10.1128/AEM.62.9.3499-3501.1996
+  locator: Publisher abstract, Properties of Allyl Alcohol-Resistant Mutants of Clostridium
+    butyricum Grown on Glycerol
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: C.butyricum E5 resistant mutants retain 1,3-propanediol production. Authors
+    attribute resistance to altered reductive properties rather than loss of 1,3-propanediol
+    dehydrogenase. Full methods were not inspected; this is a bounded bacterial follow-up
+    lead, not a generalized resistance mechanism or exact MIC.
+- evidence_id: chemistry
+  kind: validation
+  reference: RDKit calculations and source mint
+  locator: 087-chemistry.py; 087-chemistry.json
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Native encodings, C3H6O, neutral charge, masses, absence of stereocentres
+    and deterministic mint agree; PubChem and KEGG compare successfully.
+  snapshot_sha256: 1d38c9085c52a49b5c999ebafb2239a2355a652e44526649ae6c40e3daa132cf
+- evidence_id: source-check
+  kind: validation
+  reference: Current ChEBI assertions
+  locator: 087-source-check.py; 087-source-check.json
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Non-obsolete exact term, both parents, retained role links, synonyms, native
+    chemistry and original xref strings match.
+  snapshot_sha256: 8bf7268cde9d6609813ae0266967824eb12c29e9e07b0b44f7d58e69148528f9
+- evidence_id: validation
+  kind: validation
+  reference: just validate; just validate-strict
+  locator: Actual focused native executions in batch009; 087-strict.tsv
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: supports
+  summary: Both documented checks exited 0; strict scanned one file with zero ERROR
+    rows.
+- evidence_id: search
+  kind: search
+  reference: Ignored-inclusive owner and bounded public scientific search
+  locator: 087-local-hits.txt; exact allyl-alcohol identity, antibacterial, yeast,
+    ADH and acrolein searches
+  accessed_at: '2026-10-21T08:39:45Z'
+  support: context_only
+  summary: Both adopted leads were resolved; original microbial literature was separated
+    from animal toxicity, garlic mixtures and compound derivatives. No exhaustive
+    absence claim is made.
+  search_scope: prepare.py 87 used rg --no-ignore --hidden excluding only .git/.venv
+    before judgment. Public queries used exact label/identifier, both adopted PMID
+    leads, primary yeast/candidal studies and the C.butyricum resistant-mutant paper.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: Exact allyl alcohol
+  outcome: supported
+  summary: All native chemical fields agree; accessible authority structures independently
+    support the neutral achiral parent.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - chebi
+  - kegg-pubchem
+  - ppdb
+  - hmdb
+  - chemistry
+- assessment_id: grounding
+  area: grounding
+  topic: Parents, activity roles and filing
+  outcome: supported
+  summary: Chemical parents fit, both fungal and bacterial roles are preserved, and
+    original activity reports support their broad scope.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - ontology
+  - garlic-primary
+  - candida-primary
+- assessment_id: xrefs
+  area: consistency
+  topic: External references
+  outcome: unknown
+  summary: Accessible mappings agree. MetaCyc account gate and proprietary Reaxys
+    prevent complete direct external verification; this is a limitation rather than
+    proof of mismatch.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - kegg-pubchem
+  - ppdb
+  - hmdb
+  - metacyc
+- assessment_id: mechanism
+  area: evidence
+  topic: Activation versus lethal target
+  outcome: unknown
+  summary: Specific primary microbial evidence can enrich the record, preserving ADH
+    activation, downstream redox phenotype and condition-dependent resistance separately.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - yeast-primary
+  - candida-primary
+  - bacterial-lead
+  - host-primary
+- assessment_id: producer
+  area: scope
+  topic: Garlic occurrence and processing
+  outcome: supported
+  summary: Observed processed-garlic occurrence fits the broad definition. Heating/trituration
+    and precursor conversion do not establish a structured natural producer claim.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - record
+  - garlic-primary
+- assessment_id: audit
+  area: ownership
+  topic: Owner and history
+  outcome: supported
+  summary: ChEBI maintained owner, source mint and four history events agree; all
+    13 original hashes remain unchanged.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - record
+  - inventory
+  - chemistry
+- assessment_id: optional
+  area: representation
+  topic: Clinical, datasets and causal graph
+  outcome: not_applicable
+  summary: No native such assertions need repair; optional emptiness is not a finding.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - record
+- assessment_id: schema
+  area: schema
+  topic: Native focused validation
+  outcome: supported
+  summary: Both documented focused validators pass.
+  target_ids:
+  - CHEBI:16605
+  evidence_ids:
+  - validation
+findings:
+- finding_id: F1
+  issue_key: chebi-16605-allyl-alcohol-primary-microbial-evidence
+  category: completeness
+  severity: informational
+  status: open
+  certainty: confirmed
+  title: Microbial primary evidence can clarify activity and metabolic activation
+  description: The existing identity and broad roles are supported, but the two adopted
+    citation leads concern animal toxicity. Inspected microbial experiments provide
+    specific growth/redox and activation-related resistance evidence suitable for
+    bounded curation.
+  target_ids:
+  - CHEBI:16605
+  field_paths:
+  - evidence
+  - activity_spectrum
+  - mode_of_action_notes
+  - resistance_mechanisms
+  - discussions
+  evidence_ids:
+  - record
+  - adopted-leads
+  - garlic-primary
+  - candida-primary
+  - yeast-primary
+  rule_id: 'review-checklist: Activity, Mechanism, Resistance and Evidence standard'
+  native_severity: informational optional primary-evidence enrichment
+  normalization_reason: Native identity and roles are supported, no mechanism is falsely
+    asserted, and no required field is missing; this is optional scoped enrichment.
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/allyl-alcohol.yaml
+    role: Curator-owned evidence, activity_spectrum, mode_of_action_notes, resistance_mechanisms
+      and discussions through validated writer/history
+actions:
+- action_id: A1
+  description: Curate exact microbial evidence with parent/metabolite, assay and strain
+    context kept explicit.
+  finding_ids:
+  - F1
+  target_ids:
+  - CHEBI:16605
+  owner_paths:
+  - repository: CultureBotAI/AntibioticMech
+    path: data/antibiotics/antibacterial/allyl-alcohol.yaml
+    role: Curator-owned evidence, activity_spectrum, mode_of_action_notes, resistance_mechanisms
+      and discussions through validated writer/history
+  acceptance_checks:
+  - Keep allyl alcohol distinct from acrolein, sulfur-containing garlic constituents
+    and crude/heated extracts. Cite purified-parent exposures separately.
+  - Represent ADH as metabolic activation machinery where supported; do not convert
+    resistance-associated enzyme changes or downstream redox phenotypes into direct-binding
+    target claims.
+  - Preserve yeast strain/construct, preculture, medium, exposure and endpoint. Plate-growth
+    resistance at 10 mM is not an MIC; retrieve full methods before adopting abstract-only
+    bacterial or Candida-utilis MIC values.
+  - Resolve the 2005 Candida numerical inconsistencies before encoding an exact MIC;
+    preserve unresolved source disagreement in discussions.
+  - Do not transfer zebrafish/rat toxicity or mRNA overexpression results to bacterial
+    susceptibility. Processed-garlic occurrence is not sufficient biosynthesis proof
+    for producer_organisms.
+  - Use the validated writer and curation history, then require schema, strict, term/reference/history
+    and full native scientific gates before sign-off.
+limitations:
+- MetaCyc returned an account page; Reaxys605307 was not independently resolved. CAS107-18-6
+  was corroborated across accessible chemical authorities, not independently checked
+  against the CAS registry.
+- Both adopted PMID abstracts were read, and the zebrafish primary Results/Discussion
+  were inspected locally. Primary Candida and yeast Methods/Results passages were
+  inspected through the public web reader; their local EuropePMC XML fetches failed
+  HTTP500, so no local full-text snapshot is falsely claimed.
+- The attempted Candida CiteSeer PDF failed HTTP404; Wiley direct full text and HMDB
+  local XML/HTML failed HTTP403. Publisher abstract and indexed HMDB descriptor text
+  were successfully inspected, but full bacterial/yeast selectivity-study methods
+  were not obtained.
+- Primary Candida numeric notation is inconsistent and the 2013 yeast effects depend
+  on growth conditions; no complete numerical activity row or universal microbial
+  target is inferred.
+- Authoritative just qc failed during collection because pinned SciPy 1.15.3 has an
+  invalid Mach-O section on this platform; the same version also failed under Python
+  3.10 and in the fresh batch-002 environment. No dependency versions were changed.
+  The supplementary test suite, closed-schema, reproduction and corpus-integrity checks
+  do not replace full QC.
+notes:
+- No native record edits were made; all 13 captured input hashes rechecked unchanged.
+- The current native record has no ADH or stress-response claim; these terms emerged
+  during literature review and were not native structured-adapter candidates before
+  web research.
+- Bundle completion is partial because full repository QC is unavailable on this runtime;
+  the selected record was read and assessed in full. A saved review does not promote
+  native scientific status.
+links:
+- https://www.ebi.ac.uk/chebi/CHEBI:16605
+- https://doi.org/10.1111/j.1365-2621.2005.tb11452.x
+- https://doi.org/10.1099/mic.0.28095-0
+- https://doi.org/10.1016/j.cbi.2012.11.010
+- https://doi.org/10.1371/journal.pone.0090619
+tags:
+- record-review
+- allyl-alcohol
+- metabolic-activation
+- primary-evidence
+```
