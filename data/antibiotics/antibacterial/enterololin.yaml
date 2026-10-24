@@ -1,0 +1,49 @@
+identifier: antibioticmech:curator-cb71d1e3b5
+label: enterololin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A pyrazolyl-pyrimidinamine antibacterial agent that inhibits outer-membrane
+  lipoprotein trafficking via the LolCDE complex in Enterobacteriaceae.
+definition_source: DOI:10.1038/s41564-025-02142-0
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCOc1cc(F)c(Cn2nc(-c3ncc(OC)c(Nc4ccncc4)n3)c(C)c2OC)c(F)c1
+  standard_inchi: InChI=1S/C24H24F2N6O3/c1-5-35-16-10-18(25)17(19(26)11-16)13-32-24(34-4)14(2)21(31-32)23-28-12-20(33-3)22(30-23)29-15-6-8-27-9-7-15/h6-12H,5,13H2,1-4H3,(H,27,28,29,30)
+  standard_inchi_key: LMRCQVHTZUUHFN-UHFFFAOYSA-N
+  molecular_formula: C24H24F2N6O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/71611179
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 482.491
+  monoisotopic_mass: 482.1878
+xrefs:
+- pubchem.compound:71611179
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41564-025-02142-0#enterololin
+  source_label: enterololin
+  minted_identifier: antibioticmech:curator-cb71d1e3b5
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41564-025-02142-0
+    snippet: Here we screened 10,747 bioactive small molecules for antibacterial activity
+      against AIEC and discovered enterololin, an antibacterial compound with targeted
+      activity against Enterobacteriaceae species. Molecular substructure- and deep
+      learning-guided mechanism-of-action investigations revealed that enterololin
+      perturbs lipoprotein trafficking through a mechanism involving the LolCDE complex,
+      laboratory-evolved resistant mutants predominantly mapped to lolC and lolE,
+      with an in vitro frequency of resistance of ~10-8 to 10-7.
+    notes: Reported by Catacutan et al. 2025 (Nat Microbiol 10:2827-2841; PMID:41044363)
+      as a narrow-spectrum Enterobacteriaceae-selective antibacterial targeting the
+      LolCDE lipoprotein transport complex (resistance mutations in lolC and lolE),
+      active against adherent-invasive Escherichia coli (MIC ~2-4 ug/mL, and potentiated
+      across multidrug-resistant Enterobacteriaceae with SPR741).
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

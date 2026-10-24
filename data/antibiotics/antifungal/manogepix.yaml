@@ -1,0 +1,61 @@
+identifier: antibioticmech:curator-4a1156c964
+label: manogepix
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An isoxazolylpyridinamine antifungal agent (active moiety of the prodrug
+  fosmanogepix) that inhibits fungal inositol acyltransferase Gwt1 and blocks glycosylphosphatidylinositol-anchored
+  mannoprotein maturation.
+definition_source: DOI:10.1128/aac.01723-25
+synonyms:
+- synonym_text: APX001A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: E1210
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: MGX
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: Nc1ncccc1-c1cc(Cc2ccc(COc3ccccn3)cc2)no1
+  standard_inchi: InChI=1S/C21H18N4O2/c22-21-18(4-3-11-24-21)19-13-17(25-27-19)12-15-6-8-16(9-7-15)14-26-20-5-1-2-10-23-20/h1-11,13H,12,14H2,(H2,22,24)
+  standard_inchi_key: WSEKTEUGRLFBSE-UHFFFAOYSA-N
+  molecular_formula: C21H18N4O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/16719049
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 358.401
+  monoisotopic_mass: 358.143
+xrefs:
+- pubchem.compound:16719049
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.01723-25#manogepix
+  source_label: manogepix
+  minted_identifier: antibioticmech:curator-4a1156c964
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/aac.01723-25
+    snippet: Fosmanogepix is a novel broad-spectrum antifungal agent currently in
+      phase 3 clinical trials. Its active moiety, manogepix (MGX), inhibits the fungal
+      enzyme Gwt1, a conserved glycosylphosphatidylinositol-anchored wall transfer
+      protein essential for fungal cell wall integrity. MGX displayed uniform potent
+      in vitro activity, with minimal effective concentration (MEC) values ranging
+      from <=0.008 to 0.03 ug/mL (modal MEC, <=0.008 ug/mL; MEC50, <=0.008 ug/mL;
+      MEC90, 0.015 ug/mL) for E. africanum.
+    notes: Reported by Maphanga et al. 2026 (Antimicrob Agents Chemother; PMID:42206792)
+      and Pfaller et al. 2023 (Antimicrob Agents Chemother 67:e0084923; DOI:10.1128/aac.00849-23)
+      as the active antifungal moiety (APX001A, E1210) of fosmanogepix targeting fungal
+      glycosylphosphatidylinositol-anchored wall transfer protein 1 (Gwt1), with MEC50/MEC90
+      <=0.008/0.015 ug/mL against dimorphic fungi and MIC50/MIC90 0.008/0.06 mg/L
+      across Candida species.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

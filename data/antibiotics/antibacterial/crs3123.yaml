@@ -1,0 +1,55 @@
+identifier: antibioticmech:curator-1fe7431c15
+label: CRS3123
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A (4R)-6,8-dibromochroman-4-ylamino-linked thieno[3,2-b]pyridin-7-one
+  derivative (REP3123) that selectively inhibits bacterial type 1 methionyl-tRNA synthetase
+  (MetRS) in Clostridioides difficile and Gram-positive cocci.
+definition_source: DOI:10.1038/s41598-025-29583-1
+synonyms:
+- synonym_text: REP3123
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: REP-3123
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=c1cc(NCCCN[C@@H]2CCOc3c(Br)cc(Br)cc32)[nH]c2ccsc12
+  standard_inchi: InChI=1S/C19H19Br2N3O2S/c20-11-8-12-14(2-6-26-18(12)13(21)9-11)22-4-1-5-23-17-10-16(25)19-15(24-17)3-7-27-19/h3,7-10,14,22H,1-2,4-6H2,(H2,23,24,25)/t14-/m1/s1
+  standard_inchi_key: NNTYBKTXMKBRFA-CQSZACIVSA-N
+  molecular_formula: C19H19Br2N3O2S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/16744283
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 513.255
+  monoisotopic_mass: 510.9565
+xrefs:
+- pubchem.compound:16744283
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41598-025-29583-1#crs3123
+  source_label: CRS3123
+  minted_identifier: antibioticmech:curator-1fe7431c15
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41598-025-29583-1
+    snippet: Both exhibited potent antibacterial activity in the nanomolar range against
+      multiple Enterococcus species, including vancomycin-resistant and vancomycin-sensitive
+      E. faecium, E. faecalis, E. hirae, and E. durans. CRS3123 displayed exceptional
+      potency, with MIC values of < 0.007 ug/mL for most strains.
+    notes: Reported by Abdelmegeed et al. 2025 (Sci Rep 15:44061; PMID:41413129) and
+      Lomeli et al. 2019 (Antimicrob Agents Chemother 63:e01395-19; PMID:31685472;
+      DOI:10.1128/aac.01395-19) as a narrow-spectrum diaryldiamine inhibitor (REP3123)
+      of bacterial type 1 methionyl-tRNA synthetase (MetRS), exhibiting MIC90 = 1
+      ug/mL against Clostridioides difficile and MIC < 0.007 ug/mL against vancomycin-resistant
+      Enterococcus faecium and Enterococcus faecalis.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

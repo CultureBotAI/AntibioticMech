@@ -1,0 +1,53 @@
+identifier: antibioticmech:curator-88af230f5d
+label: quabodepistat
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 3,4-dihydroquinolin-2(1H)-one (3,4-dihydrocarbostyril) antitubercular
+  agent that inhibits mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-oxidase
+  (DprE1) and cell wall arabinogalactan synthesis.
+definition_source: DOI:10.1128/aac.00338-22
+synonyms:
+- synonym_text: OPC-167832
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1CCc2c(OC[C@]3(O)CCN(c4c(F)cc(Cl)cc4F)C[C@H]3O)ccc(F)c2N1
+  standard_inchi: InChI=1S/C21H20ClF3N2O4/c22-11-7-14(24)20(15(25)8-11)27-6-5-21(30,17(28)9-27)10-31-16-3-2-13(23)19-12(16)1-4-18(29)26-19/h2-3,7-8,17,28,30H,1,4-6,9-10H2,(H,26,29)/t17-,21-/m1/s1
+  standard_inchi_key: XZISSTDXPBUCJA-DYESRHJHSA-N
+  molecular_formula: C21H20ClF3N2O4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/118904282
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 456.848
+  monoisotopic_mass: 456.1064
+xrefs:
+- pubchem.compound:118904282
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.00338-22#quabodepistat
+  source_label: quabodepistat
+  minted_identifier: antibioticmech:curator-88af230f5d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/aac.00338-22
+    snippet: OPC-167832 (quabodepistat) is a newly synthesized 3,4-dihydrocarbostyril
+      derivative targeting decaprenylphosphoryl-beta-D-ribose 2'-oxidase (DprE1).
+      The MICs of OPC-167832 for M. tuberculosis laboratory and clinical isolates
+      ranged from 0.00024 to 0.001 ug/mL, and its 50% inhibitory concentration (IC50)
+      against recombinant M. tuberculosis DprE1 was 0.258 uM.
+    notes: Reported by Hariguchi et al. 2022 (Antimicrob Agents Chemother 66:e0033822;
+      PMID:35699441) and Hariguchi et al. 2020 (Antimicrob Agents Chemother 64:e02020-19;
+      DOI:10.1128/aac.02020-19) as a noncovalent 3,4-dihydrocarbostyril inhibitor
+      (OPC-167832) of Mycobacterium tuberculosis decaprenylphosphoryl-beta-D-ribose
+      2'-oxidase (DprE1, IC50 = 0.258 uM) with MICs of 0.00024-0.001 ug/mL across
+      drug-susceptible and multidrug-resistant M. tuberculosis isolates.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

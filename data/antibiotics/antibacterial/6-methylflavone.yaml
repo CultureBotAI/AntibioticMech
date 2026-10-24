@@ -1,0 +1,51 @@
+identifier: CHEBI:228412
+label: 6-methylflavone
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 6-methyl-2-phenyl-4H-chromen-4-one synthetic flavone with selective
+  antimycobacterial activity against Mycobacterium abscessus via disruption of mycobacterial
+  membrane energetics.
+definition_source: DOI:10.1128/spectrum.03588-25
+synonyms:
+- synonym_text: 6-MF
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1ccc2oc(-c3ccccc3)cc(=O)c2c1
+  standard_inchi: InChI=1S/C16H12O2/c1-11-7-8-15-13(9-11)14(17)10-16(18-15)12-5-3-2-4-6-12/h2-10H,1H3
+  standard_inchi_key: NOQJBXPAMJLUSS-UHFFFAOYSA-N
+  molecular_formula: C16H12O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/689013
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 236.27
+  monoisotopic_mass: 236.0837
+xrefs:
+- pubchem.compound:689013
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/spectrum.03588-25#6-methylflavone
+  source_label: 6-methylflavone
+  minted_identifier: antibioticmech:curator-769f36dd34
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/spectrum.03588-25
+    snippet: Among the compounds tested, 6-methylflavone (6-MF) was identified as
+      a selective inhibitor of mycobacterial growth. 6-MF showed consistent activity
+      against multiple clinical isolates of M. abscessus with minimum inhibitory concentration
+      (MIC) values of 8-16 ug/mL and was also effective against intracellular mycobacteria
+      without cytotoxicity.
+    notes: Reported by Oh et al. 2026 (Microbiol Spectr; PMID:42007697) as a selective
+      antimycobacterial flavone that disrupts mycobacterial membrane potential and
+      respiratory energetics, inhibiting clinical Mycobacterium abscessus isolates
+      at MIC 8-16 ug/mL and reducing pulmonary bacterial burden in vivo.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

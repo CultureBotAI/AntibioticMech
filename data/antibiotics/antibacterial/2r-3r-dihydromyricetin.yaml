@@ -1,0 +1,56 @@
+identifier: CHEBI:28429
+label: (2R,3R)-dihydromyricetin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A (2R,3R)-3,3',4',5,5',7-hexahydroxyflavanone (ampelopsin) natural product
+  with direct antibacterial and antibiofilm activity against Gram-positive and Gram-negative
+  bacterial pathogens.
+definition_source: DOI:10.1177/15353141261501298
+synonyms:
+- synonym_text: dihydromyricetin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: ampelopsin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: (+)-dihydromyricetin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1c2c(O)cc(O)cc2O[C@H](c2cc(O)c(O)c(O)c2)[C@H]1O
+  standard_inchi: InChI=1S/C15H12O8/c16-6-3-7(17)11-10(4-6)23-15(14(22)13(11)21)5-1-8(18)12(20)9(19)2-5/h1-4,14-20,22H/t14-,15+/m0/s1
+  standard_inchi_key: KJXSIXMJHKAJOD-LSDHHAIUSA-N
+  molecular_formula: C15H12O8
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/161557
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 320.253
+  monoisotopic_mass: 320.0532
+xrefs:
+- pubchem.compound:161557
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1177/15353141261501298#dihydromyricetin
+  source_label: (2R,3R)-dihydromyricetin
+  minted_identifier: antibioticmech:curator-99cf0ecc2c
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1177/15353141261501298
+    snippet: DMY exhibited significant antibacterial activity against GBS2, with a
+      minimum inhibitory concentration and minimum bactericidal concentration of 0.5
+      mg/mL. Crystal violet staining and confocal laser scanning microscopy analyses
+      demonstrated that DMY effectively inhibited and disrupted biofilm formation.
+    notes: Reported by Ma et al. 2026 (Foodborne Pathog Dis; PMID:42908502) as a natural
+      dihydroflavonol (ampelopsin) with direct antibacterial and antibiofilm activity
+      against Streptococcus agalactiae (MIC = 0.5 mg/mL, MBC = 0.5 mg/mL) and synergy
+      with beta-lactams, ciprofloxacin, and vancomycin.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

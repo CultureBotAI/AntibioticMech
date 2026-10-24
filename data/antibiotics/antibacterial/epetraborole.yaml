@@ -1,0 +1,58 @@
+identifier: antibioticmech:curator-1ac99609a8
+label: epetraborole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 3-aminomethylbenzoxaborole antibacterial agent that inhibits bacterial
+  leucyl-tRNA synthetase (LeuRS) by forming a covalent adduct with the terminal adenosine
+  of tRNA(Leu) in the editing site.
+definition_source: DOI:10.1128/aac.01029-23
+synonyms:
+- synonym_text: AN3365
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GSK2251052
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GSK-2251052
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: NC[C@H]1OB(O)c2c(OCCCO)cccc21
+  standard_inchi: InChI=1S/C11H16BNO4/c13-7-10-8-3-1-4-9(16-6-2-5-14)11(8)12(15)17-10/h1,3-4,10,14-15H,2,5-7,13H2/t10-/m1/s1
+  standard_inchi_key: FXQIIDINBDJDKL-SNVBAGLBSA-N
+  molecular_formula: C11H16BNO4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/46836890
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 237.064
+  monoisotopic_mass: 237.1172
+xrefs:
+- pubchem.compound:46836890
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.01029-23#epetraborole
+  source_label: epetraborole
+  minted_identifier: antibioticmech:curator-1ac99609a8
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/aac.01029-23
+    snippet: Epetraborole is a boron-containing leucyl-tRNA synthetase (LeuRS) inhibitor
+      under clinical development for treatment-refractory Mycobacterium avium complex
+      (MAC) lung disease. Epetraborole inhibited 99.3% of M. avium complex isolates
+      at <=4 ug/mL (MIC50/90, 1/2 ug/mL) and 100.0% of M. abscessus isolates at <=0.5
+      ug/mL (MIC50/90, 0.12/0.25 ug/mL).
+    notes: Reported by Castanheira et al. 2023 (Antimicrob Agents Chemother 67:e0102923;
+      PMID:37937988) as a benzoxaborole inhibitor (AN3365, GSK2251052) of bacterial
+      leucyl-tRNA synthetase (LeuRS) via oxaborole-assisted tRNA(Leu) trapping in
+      the editing domain, with MIC50/MIC90 of 1/2 ug/mL against Mycobacterium avium
+      complex and 0.12/0.25 ug/mL against Mycobacterium abscessus.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

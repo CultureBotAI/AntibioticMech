@@ -1,0 +1,56 @@
+identifier: antibioticmech:curator-17023fe654
+label: telacebec
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An imidazo[1,2-a]pyridine-3-carboxamide antimycobacterial agent (Q203)
+  that inhibits the QcrB subunit of the respiratory cytochrome bc1:aa3 complex and
+  depletes mycobacterial ATP.
+definition_source: DOI:10.1038/nm.3262
+synonyms:
+- synonym_text: Q203
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: Q-203
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCc1nc2ccc(Cl)cn2c1C(=O)NCc1ccc(N2CCC(c3ccc(OC(F)(F)F)cc3)CC2)cc1
+  standard_inchi: InChI=1S/C29H28ClF3N4O2/c1-2-25-27(37-18-22(30)7-12-26(37)35-25)28(38)34-17-19-3-8-23(9-4-19)36-15-13-21(14-16-36)20-5-10-24(11-6-20)39-29(31,32)33/h3-12,18,21H,2,13-17H2,1H3,(H,34,38)
+  standard_inchi_key: OJICYBSWSZGRFB-UHFFFAOYSA-N
+  molecular_formula: C29H28ClF3N4O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/68234908
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 557.016
+  monoisotopic_mass: 556.1853
+xrefs:
+- pubchem.compound:68234908
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/nm.3262#telacebec
+  source_label: telacebec
+  minted_identifier: antibioticmech:curator-17023fe654
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/nm.3262
+    snippet: Here, we report on a promising class of imidazopyridine amide (IPA) compounds
+      that block Mycobacterium tuberculosis growth by targeting the respiratory cytochrome
+      bc1 complex. The optimized IPA compound Q203 inhibited the growth of MDR and
+      XDR M. tuberculosis clinical isolates in culture broth medium in the low nanomolar
+      range and was efficacious in a mouse model of tuberculosis at a dose less than
+      1 mg per kg body weight.
+    notes: Reported by Pethe et al. 2013 (Nat Med 19:1157-1160; PMID:23913123) as
+      an imidazo[1,2-a]pyridine-3-carboxamide (Q203) targeting the QcrB subunit of
+      the mycobacterial respiratory cytochrome bc1:aa3 complex, with MIC50 = 2.7 nM
+      (~1.5 ng/mL) against Mycobacterium tuberculosis H37Rv in broth and MIC50 = 0.28
+      nM inside macrophages.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

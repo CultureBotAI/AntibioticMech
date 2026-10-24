@@ -1,0 +1,50 @@
+identifier: CHEBI:188153
+label: oteseconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A tetrazole antifungal agent that selectively coordinates the heme iron
+  of fungal lanosterol 14-alpha-demethylase (CYP51) to block ergosterol biosynthesis.
+definition_source: DOI:10.1128/aac.00778-22
+synonyms:
+- synonym_text: VT-1161
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O[C@@](Cn1cnnn1)(c1ccc(F)cc1F)C(F)(F)c1ccc(-c2ccc(OCC(F)(F)F)cc2)cn1
+  standard_inchi: InChI=1S/C23H16F7N5O2/c24-16-4-7-18(19(25)9-16)21(36,11-35-13-32-33-34-35)23(29,30)20-8-3-15(10-31-20)14-1-5-17(6-2-14)37-12-22(26,27)28/h1-10,13,36H,11-12H2/t21-/m0/s1
+  standard_inchi_key: IDUYJRXRDSPPRC-NRFANRHFSA-N
+  molecular_formula: C23H16F7N5O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/77050711
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 527.4
+  monoisotopic_mass: 527.1192
+xrefs:
+- pubchem.compound:77050711
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.00778-22#oteseconazole
+  source_label: oteseconazole
+  minted_identifier: antibioticmech:curator-fa06b7d4d5
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/aac.00778-22
+    snippet: Oteseconazole (VT-1161) is a novel fungal CYP51 inhibitor specifically
+      designed to selectively target the fungal enzyme over human cytochrome P450
+      enzymes. Against C. glabrata clinical isolates, VT-1161 MICs ranged from <=0.015
+      to 2 ug/mL (MIC50, 0.06 ug/mL; MIC90, 0.5 ug/mL), and against C. krusei isolates,
+      VT-1161 MICs ranged from 0.03 to 0.5 ug/mL (MIC50, 0.12 ug/mL; MIC90, 0.25 ug/mL).
+    notes: Reported by Nishimoto et al. 2022 (Antimicrob Agents Chemother 66:e0077822;
+      PMID:35969069) as a selective tetrazole inhibitor (VT-1161) of fungal lanosterol
+      14-alpha-demethylase (CYP51), with MIC50/MIC90 of 0.06/0.5 ug/mL against Candida
+      glabrata and 0.12/0.25 ug/mL against Candida krusei clinical isolates.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:49:49Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
