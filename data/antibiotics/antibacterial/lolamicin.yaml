@@ -45,3 +45,73 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Gram-negative LolCDE lipoprotein
+    outer-membrane transport complex backed by DOI:10.1038/s41586-024-07502-0.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0ADC3 (LolC), UniProtKB:P75957 (LolD), and UniProtKB:P75958
+    (LolE) Escherichia coli K-12 protein examples to the PRIMARY_LITERATURE molecular
+    target (DOI:10.1038/s41586-024-07502-0).
+  llm_assisted: true
+molecular_targets:
+- target_label: Gram-negative LolCDE lipoprotein outer-membrane transport complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  experimental_context: Resistance mutation mapping in lolC and lolE, lipoprotein
+    trafficking inhibition, and structural binding-site modeling on the Escherichia
+    coli LolCDE ABC transporter (DOI:10.1038/s41586-024-07502-0).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2024-06
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1038/s41586-024-07502-0
+    snippet: The resultant compound—lolamicin—is selectively active against a panel
+      of more than 130 multidrug-resistant clinical isolates, has efficacy in multiple
+      mouse models of acute pneumonia and septicaemia infection, and spares the gut
+      microbiome in mice, preventing secondary infection with Clostridioides difficile.
+    notes: Munoz et al. 2024 (Nature 630:429-436; PMID:38811738) established that
+      lolamicin selectively inhibits outer-membrane lipoprotein trafficking via the
+      LolCDE ABC transporter complex (LolC UniProtKB:P0ADC3, LolD UniProtKB:P75957,
+      LolE UniProtKB:P75958 in Escherichia coli K-12), with resistance mutations clustering
+      in the LolC/LolE transmembrane interface.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ADC3
+    protein_label: Lipoprotein-releasing system transmembrane protein LolC
+    gene_symbol: lolC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Inner-membrane transmembrane subunit LolC (b1116) of the Escherichia coli
+      K-12 LolCDE lipoprotein-releasing ABC transporter complex, a primary locus of
+      lolamicin resistance mutations and binding (DOI:10.1038/s41586-024-07502-0;
+      PMID:38811738).
+  - uniprot_id: UniProtKB:P75957
+    protein_label: Lipoprotein-releasing system ATP-binding protein LolD
+    gene_symbol: lolD
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Catalytic ATP-binding subunit LolD (b1117) of the Escherichia coli K-12
+      LolCDE lipoprotein-releasing ABC transporter complex inhibited by lolamicin
+      (DOI:10.1038/s41586-024-07502-0; PMID:38811738).
+  - uniprot_id: UniProtKB:P75958
+    protein_label: Lipoprotein-releasing system transmembrane protein LolE
+    gene_symbol: lolE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Inner-membrane transmembrane subunit LolE (b1118) of the Escherichia coli
+      K-12 LolCDE lipoprotein-releasing ABC transporter complex, which forms the lipoprotein-binding
+      cavity targeted by lolamicin and harbors resistance substitutions (DOI:10.1038/s41586-024-07502-0;
+      PMID:38811738).

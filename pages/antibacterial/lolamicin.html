@@ -91,6 +91,40 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 </div>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>Gram-negative LolCDE lipoprotein outer-membrane transport complex <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Resistance mutation mapping in lolC and lolE, lipoprotein trafficking inhibition, and structural binding-site modeling on the Escherichia coli LolCDE ABC transporter (DOI:10.1038/s41586-024-07502-0). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2024-06 (retrieved 2026-10-24).</p>
+<p><em>Escherichia coli (strain K12)</em> <code class="curie">NCBITaxon:83333</code></p><div class="table-scroll" role="region" aria-label="Gram-negative LolCDE lipoprotein outer-membrane transport complex organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Lipoprotein-releasing system transmembrane protein LolC <a href="https://www.uniprot.org/uniprotkb/P0ADC3"><code class="curie">UniProtKB:P0ADC3</code></a><br><span class="meta">Inner-membrane transmembrane subunit LolC (b1116) of the Escherichia coli K-12 LolCDE lipoprotein-releasing ABC transporter complex, a primary locus of lolamicin resistance mutations and binding (DOI:10.1038/s41586-024-07502-0; PMID:38811738).</span></td>
+    <td>lolC</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>Lipoprotein-releasing system ATP-binding protein LolD <a href="https://www.uniprot.org/uniprotkb/P75957"><code class="curie">UniProtKB:P75957</code></a><br><span class="meta">Catalytic ATP-binding subunit LolD (b1117) of the Escherichia coli K-12 LolCDE lipoprotein-releasing ABC transporter complex inhibited by lolamicin (DOI:10.1038/s41586-024-07502-0; PMID:38811738).</span></td>
+    <td>lolD</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>Lipoprotein-releasing system transmembrane protein LolE <a href="https://www.uniprot.org/uniprotkb/P75958"><code class="curie">UniProtKB:P75958</code></a><br><span class="meta">Inner-membrane transmembrane subunit LolE (b1118) of the Escherichia coli K-12 LolCDE lipoprotein-releasing ABC transporter complex, which forms the lipoprotein-binding cavity targeted by lolamicin and harbors resistance substitutions (DOI:10.1038/s41586-024-07502-0; PMID:38811738).</span></td>
+    <td>lolE</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1038/s41586-024-07502-0">DOI:10.1038/s41586-024-07502-0</a></span> — "The resultant compound—lolamicin—is selectively active against a panel of more than 130 multidrug-resistant clinical isolates, has efficacy in multiple mouse models of acute pneumonia and septicaemia infection, and spares the gut microbiome in mice, preventing secondary infection with Clostridioides difficile." <span class="meta">(Munoz et al. 2024 (Nature 630:429-436; PMID:38811738) established that lolamicin selectively inhibits outer-membrane lipoprotein trafficking via the LolCDE ABC transporter complex (LolC UniProtKB:P0ADC3, LolD UniProtKB:P75957, LolE UniProtKB:P75958 in Escherichia coli K-12), with resistance mutations clustering in the LolC/LolE transmembrane interface.)</span></li>
+</ul>
+
 
 
 
@@ -107,6 +141,16 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">PROPOSED_FROM_CURATOR_INVENTORY</span>
     <span class="meta">2026-10-24 · seed_from_sources</span>
     <p>Proposed from curation/curator_antibiotics.tsv</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_MOLECULAR_TARGETS</span>
+    <span class="meta">2026-10-24 · antigravity · LLM-assisted</span>
+    <p>Added PRIMARY_LITERATURE molecular_target for Gram-negative LolCDE lipoprotein outer-membrane transport complex backed by DOI:10.1038/s41586-024-07502-0.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-24 · antigravity · LLM-assisted</span>
+    <p>Added reviewed UniProtKB:P0ADC3 (LolC), UniProtKB:P75957 (LolD), and UniProtKB:P75958 (LolE) Escherichia coli K-12 protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41586-024-07502-0).</p>
   </li>
 </ol>
 
@@ -128,7 +172,7 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>8ddb4f4d3b0f</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>6444c9d96f57</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

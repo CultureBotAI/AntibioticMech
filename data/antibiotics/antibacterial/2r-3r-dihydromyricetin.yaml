@@ -60,8 +60,36 @@ curation_history:
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=MEMBRANE_DISRUPTION
     (MICROBIAL_TARGET) with primary-literature provenance.
   llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Streptococcus agalactiae
+    cell envelope and biofilm matrix backed by DOI:10.1177/15353141261501298.
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Disrupts bacterial cell envelope integrity and biofilm
   matrix formation in Streptococcus agalactiae (DOI:10.1177/15353141261501298).'
+molecular_targets:
+- target_label: Streptococcus agalactiae cell envelope and biofilm matrix
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_id: NCBITaxon:1311
+  taxon_label: Streptococcus agalactiae
+  strain: GBS2
+  experimental_context: Bactericidal (MIC = MBC = 0.5 mg/mL) and confocal/crystal-violet
+    antibiofilm assays against Streptococcus agalactiae isolate GBS2 (DOI:10.1177/15353141261501298).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-03
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1177/15353141261501298
+    snippet: DMY exhibited significant antibacterial activity against GBS2, with a
+      minimum inhibitory concentration and minimum bactericidal concentration of 0.5
+      mg/mL. Crystal violet staining and confocal laser scanning microscopy analyses
+      demonstrated that DMY effectively inhibited and disrupted biofilm formation.
+    notes: Ma et al. 2026 (Foodborne Pathog Dis; PMID:42908502) demonstrated direct
+      bactericidal cell-envelope disruption and biofilm matrix eradication by (2R,3R)-dihydromyricetin
+      in Streptococcus agalactiae GBS2.

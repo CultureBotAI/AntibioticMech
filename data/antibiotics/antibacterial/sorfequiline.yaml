@@ -52,3 +52,63 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial F1FO-ATP synthase
+    c and epsilon subunits backed by DOI:10.1128/aac.02404-19.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WPS1 (Mycobacterium tuberculosis H37Rv AtpE,
+    Rv1305) and UniProtKB:P9WPV1 (AtpC, Rv1311) protein examples to the PRIMARY_LITERATURE
+    molecular target (DOI:10.1128/aac.02404-19).
+  llm_assisted: true
+molecular_targets:
+- target_label: mycobacterial F1FO-ATP synthase c and epsilon subunits
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Biochemical ATP synthesis inhibition and resistance mutation
+    profiling across F1FO-ATP synthase subunit c (atpE) and epsilon chain (atpC) in
+    Mycobacterium tuberculosis (DOI:10.1128/aac.02404-19; DOI:10.1128/aac.01191-19).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2020-03
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1128/aac.02404-19
+    snippet: TBAJ-876, a clinical development candidate of this series, shows attractive
+      in vitro antitubercular activity and efficacy in a murine tuberculosis model.
+      TBAJ-876 displayed submicromolar in vitro activity against reference strains
+      representing the three subspecies of M. abscessus and against a collection of
+      clinical isolates.
+    notes: Sarathy et al. 2020 (Antimicrob Agents Chemother 64:e02404-19; PMID:31964791)
+      and Sarathy et al. 2019 (Antimicrob Agents Chemother 63:e01191-19; PMID:31358589;
+      DOI:10.1128/aac.01191-19) show that sorfequiline (TBAJ-876) inhibits Mycobacterium
+      tuberculosis H37Rv F1FO-ATP synthase via dual interaction with subunit c (AtpE,
+      Rv1305, UniProtKB:P9WPS1) and the epsilon subunit (AtpC, Rv1311, UniProtKB:P9WPV1).
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WPS1
+    protein_label: ATP synthase subunit c
+    gene_symbol: atpE
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: FO rotor ring c-subunit (AtpE, Rv1305) of Mycobacterium tuberculosis H37Rv
+      F1FO-ATP synthase bound by the diarylquinoline sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19;
+      DOI:10.1128/aac.01191-19).
+  - uniprot_id: UniProtKB:P9WPV1
+    protein_label: ATP synthase epsilon chain
+    gene_symbol: atpC
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: F1 central-stalk epsilon subunit (AtpC, Rv1311) of Mycobacterium tuberculosis
+      H37Rv F1FO-ATP synthase that forms part of the dual c/epsilon diarylquinoline
+      binding interface targeted by sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19;
+      DOI:10.1128/aac.01191-19).

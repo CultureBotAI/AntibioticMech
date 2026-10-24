@@ -59,3 +59,54 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal GPI-anchor inositol
+    acyltransferase Gwt1 backed by DOI:10.1128/aac.01723-25.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:Q873N2 (Candida albicans SC5314 GWT1) protein
+    example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.01723-25).
+  llm_assisted: true
+molecular_targets:
+- target_label: fungal GPI-anchor inositol acyltransferase Gwt1
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:237561
+  taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+  experimental_context: Inhibition of fungal GPI-anchored wall transfer protein 1
+    (Gwt1) inositol acyltransferase activity and cell wall mannoprotein maturation
+    in Candida albicans and dimorphic fungi (DOI:10.1128/aac.01723-25; PMID:21670182).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-02
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1128/aac.01723-25
+    snippet: Fosmanogepix is a novel broad-spectrum antifungal agent currently in
+      phase 3 clinical trials. Its active moiety, manogepix (MGX), inhibits the fungal
+      enzyme Gwt1, a conserved glycosylphosphatidylinositol-anchored wall transfer
+      protein essential for fungal cell wall integrity. MGX displayed uniform potent
+      in vitro activity, with minimal effective concentration (MEC) values ranging
+      from <=0.008 to 0.03 ug/mL (modal MEC, <=0.008 ug/mL; MEC50, <=0.008 ug/mL;
+      MEC90, 0.015 ug/mL) for E. africanum.
+    notes: Maphanga et al. 2026 (Antimicrob Agents Chemother; PMID:42206792) and Watanabe
+      et al. 2011 (Antimicrob Agents Chemother 55:3616-3623; PMID:21670182) establish
+      that manogepix (E1210, APX001A) directly inhibits fungal GPI inositol acyltransferase
+      Gwt1 (Candida albicans SC5314 GWT1, UniProtKB:Q873N2), blocking inositol acylation
+      and GPI-anchored mannoprotein localization.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q873N2
+    protein_label: GPI-anchored wall transfer protein 1
+    gene_symbol: GWT1
+    taxon_id: NCBITaxon:237561
+    taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Candida albicans SC5314 GPI-anchor inositol acyltransferase Gwt1 (C7_00150W_A)
+      directly inhibited by manogepix (E1210, APX001A), blocking inositol acylation
+      of glucosaminyl-phosphatidylinositol and cell-wall mannoprotein localization
+      (PMID:21670182; DOI:10.1128/aac.01723-25).

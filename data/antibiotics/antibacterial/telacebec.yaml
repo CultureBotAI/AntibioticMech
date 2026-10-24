@@ -54,3 +54,51 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial cytochrome
+    bc1 complex QcrB subunit backed by DOI:10.1038/nm.3262.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WP37 (Mycobacterium tuberculosis H37Rv QcrB,
+    Rv2196) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/nm.3262).
+  llm_assisted: true
+molecular_targets:
+- target_label: mycobacterial cytochrome bc1 complex QcrB subunit
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Whole-genome sequencing of spontaneous resistant mutants in
+    Mycobacterium tuberculosis H37Rv (QcrB Thr313Ala) and rapid intracellular ATP
+    depletion assays (DOI:10.1038/nm.3262).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-08
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1038/nm.3262
+    snippet: Here, we report on a promising class of imidazopyridine amide (IPA) compounds
+      that block Mycobacterium tuberculosis growth by targeting the respiratory cytochrome
+      bc1 complex. The optimized IPA compound Q203 inhibited the growth of MDR and
+      XDR M. tuberculosis clinical isolates in culture broth medium in the low nanomolar
+      range and was efficacious in a mouse model of tuberculosis at a dose less than
+      1 mg per kg body weight.
+    notes: Pethe et al. 2013 (Nat Med 19:1157-1160; PMID:23913123) identified the
+      QcrB cytochrome b subunit (Rv2196, UniProtKB:P9WP37) of the Mycobacterium tuberculosis
+      H37Rv cytochrome bc1:aa3 complex as the target of telacebec (Q203) via resistance
+      mutation Thr313Ala and ATP depletion.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WP37
+    protein_label: Cytochrome b-c1 complex cytochrome b subunit
+    gene_symbol: qcrB
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Respiratory cytochrome bc1 complex cytochrome b subunit QcrB (Rv2196) targeted
+      by telacebec (Q203) in Mycobacterium tuberculosis H37Rv, where the Thr313Ala
+      substitution confers high-level resistance (DOI:10.1038/nm.3262; PMID:23913123).

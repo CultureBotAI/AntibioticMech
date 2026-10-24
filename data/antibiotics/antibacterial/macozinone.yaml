@@ -56,3 +56,51 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
+    2'-epimerase (DprE1) backed by DOI:10.1002/emmm.201303575.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
+    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1002/emmm.201303575).
+  llm_assisted: true
+molecular_targets:
+- target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: 1.9-angstrom X-ray crystal structure of Mycobacterium tuberculosis
+    DprE1 covalently modified at Cys387 by PBTZ169 (PDB:4NCR) and biochemical enzyme
+    inhibition (DOI:10.1002/emmm.201303575).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-03
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1002/emmm.201303575
+    snippet: Here, we synthesized a new series of piperazine-containing benzothiazinones
+      (PBTZ) and show that, like BTZ043, the preclinical candidate PBTZ169 binds covalently
+      to DprE1. The crystal structure of the DprE1-PBTZ169 complex reveals formation
+      of a semimercaptal adduct with Cys387 in the active site and explains the irreversible
+      inactivation of the enzyme.
+    notes: Makarov et al. 2014 (EMBO Mol Med 6:372-383; PMID:24500695) solved the
+      1.9-angstrom X-ray co-crystal structure (PDB:4NCR) of Mycobacterium tuberculosis
+      H37Rv DprE1 (Rv3790, UniProtKB:P9WJF1) covalently adducted at active-site Cys387
+      by macozinone (PBTZ169).
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WJF1
+    protein_label: Decaprenylphosphoryl-beta-D-ribose oxidase
+    gene_symbol: dprE1
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790)
+      whose active-site Cys387 forms an irreversible covalent semimercaptal adduct
+      with bioreduced macozinone (PBTZ169) in the 1.9-angstrom crystal structure PDB:4NCR
+      (DOI:10.1002/emmm.201303575; PMID:24500695).

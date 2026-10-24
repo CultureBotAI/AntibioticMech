@@ -51,3 +51,49 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
+    2'-oxidase (DprE1) backed by DOI:10.1128/aac.00338-22.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
+    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.00338-22).
+  llm_assisted: true
+molecular_targets:
+- target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-oxidase (DprE1)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Direct biochemical inhibition of recombinant Mycobacterium
+    tuberculosis DprE1 (IC50 = 0.258 uM) and whole-genome sequencing of resistant
+    mutants mapping to rv3790 (DOI:10.1128/aac.00338-22).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-06
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1128/aac.00338-22
+    snippet: OPC-167832 (quabodepistat) is a newly synthesized 3,4-dihydrocarbostyril
+      derivative targeting decaprenylphosphoryl-beta-D-ribose 2'-oxidase (DprE1).
+      The MICs of OPC-167832 for M. tuberculosis laboratory and clinical isolates
+      ranged from 0.00024 to 0.001 ug/mL, and its 50% inhibitory concentration (IC50)
+      against recombinant M. tuberculosis DprE1 was 0.258 uM.
+    notes: Hariguchi et al. 2022 (Antimicrob Agents Chemother 66:e0033822; PMID:35699441)
+      demonstrated direct noncovalent inhibition of recombinant Mycobacterium tuberculosis
+      H37Rv DprE1 (Rv3790, UniProtKB:P9WJF1, IC50 = 0.258 uM) by quabodepistat (OPC-167832).
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WJF1
+    protein_label: Decaprenylphosphoryl-beta-D-ribose oxidase
+    gene_symbol: dprE1
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Recombinant Mycobacterium tuberculosis H37Rv decaprenylphosphoryl-beta-D-ribose
+      2'-oxidase DprE1 (Rv3790) noncovalently inhibited by quabodepistat (OPC-167832,
+      IC50 = 0.258 uM; DOI:10.1128/aac.00338-22; PMID:35699441).

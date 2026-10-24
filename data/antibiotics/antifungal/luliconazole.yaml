@@ -53,8 +53,38 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION
     (MICROBIAL_TARGET) with primary-literature provenance.
   llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal lanosterol 14-alpha-demethylase
+    (CYP51 / Erg11) backed by DOI:10.1007/s10156-004-0327-1.
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Inhibits fungal sterol 14-alpha-demethylase (CYP51),
   blocking ergosterol biosynthesis in dermatophytes and Candida species (DOI:10.1007/s10156-004-0327-1).'
+molecular_targets:
+- target_label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:5551
+  taxon_label: Trichophyton rubrum
+  experimental_context: In vitro antifungal susceptibility across Trichophyton dermatophytes
+    (MIC <=0.004-0.008 ug/mL) and Candida species (MIC 0.125-4 ug/mL) via sterol 14-alpha-demethylase
+    inhibition (DOI:10.1007/s10156-004-0327-1).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2004-08
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1007/s10156-004-0327-1
+    snippet: Luliconazole inhibited growth of all filamentous fungi except zygomycetes
+      at low concentrations (MIC, < or =0.004-0.125 microg/ml), with dermatophytes
+      being most susceptible (MIC, < or =0.004-0.008 microg/ml). yeastlike fungi were
+      also susceptible to luliconazole (MIC, 0.125-4 microg/ml).
+    notes: Uchida et al. 2004 (J Infect Chemother 10:216-219; PMID:15365862) characterized
+      the potent antifungal activity of luliconazole (NND-502) against Trichophyton
+      dermatophytes and Candida species; held from reviewed UniProtKB accession assignment
+      because Trichophyton rubrum CYP51 (UniProtKB:F2SHH3) is an unreviewed TrEMBL
+      entry.

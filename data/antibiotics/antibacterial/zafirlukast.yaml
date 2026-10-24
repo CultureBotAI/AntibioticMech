@@ -59,8 +59,78 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET) with primary-literature provenance.
   llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added 2 PRIMARY_LITERATURE molecular_targets (mycobacterial Lsr2 from PMID:23650171
+    and staphylococcal LtaS from DOI:10.3390/antibiotics15090914).
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WIP7 (Mycobacterium tuberculosis H37Rv Lsr2,
+    Rv3597c) protein example to the mycobacterial Lsr2 PRIMARY_LITERATURE molecular
+    target (PMID:23650171).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Inhibits staphylococcal lipoteichoic acid synthase
   (LtaS) in Gram-positive bacteria including MRSA (DOI:10.3390/antibiotics15090914).'
+molecular_targets:
+- target_label: mycobacterial nucleoid-associated protein Lsr2
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Direct inhibition of Mycobacterium tuberculosis Lsr2-DNA complexation
+    and transcriptional repression in vitro and in whole mycobacterial cells (PMID:23650171;
+    DOI:10.1128/AAC.02407-12).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-08
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: PMID:23650171
+    snippet: Here, we show that the asthma drug zafirlukast inhibits the complexation
+      between the nucleoid-associated protein Lsr2 and DNA, resulting in dysregulation
+      of transcription and severely impeding the growth of M. tuberculosis.
+    notes: Pinault et al. 2013 (Antimicrob Agents Chemother 57:3949-3953; DOI:10.1128/AAC.02407-12)
+      demonstrated that zafirlukast directly binds and inhibits Mycobacterium tuberculosis
+      H37Rv nucleoid-associated protein Lsr2 (Rv3597c, UniProtKB:P9WIP7), blocking
+      Lsr2-DNA complexation.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WIP7
+    protein_label: Nucleoid-associated protein Lsr2
+    gene_symbol: lsr2
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation
+      with DNA and transcriptional regulatory activity are directly inhibited by zafirlukast
+      in Mycobacterium tuberculosis H37Rv (PMID:23650171).
+- target_label: staphylococcal lipoteichoic acid synthase (LtaS)
+  target_type: PROTEIN
+  target_relation: MEASURED_TARGET_ASSOCIATION
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Whole-genome resistance mutation mapping and antibiotic synergy
+    assays in Staphylococcus aureus including MRSA (DOI:10.3390/antibiotics15090914).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-09
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.3390/antibiotics15090914
+    snippet: Zafirlukast showed modest direct-acting antimicrobial activity (0.5-32
+      ug/mL) against a panel of Gram-positive bacteria, including MRSA. It was also
+      found that Zafirlukast synergised with a number of existing antibiotics. Mutational
+      analysis suggested the target of Zafirlukast in Staphylococci is LtaS (Lipoteichoic
+      acid synthase).
+    notes: Siegwart et al. 2026 (Antibiotics 15:914; PMID:42792065) identified lipoteichoic
+      acid synthase (LtaS) as the staphylococcal target of zafirlukast by resistance
+      mutation analysis in Staphylococcus aureus; held from single-strain UniProtKB
+      accession assignment because S. aureus LtaS is split across strain-specific
+      Swiss-Prot entries (e.g. NCTC 8325 UniProtKB:Q2G093, MW2 UniProtKB:Q7A1I3, MRSA252
+      UniProtKB:Q6GIU0).

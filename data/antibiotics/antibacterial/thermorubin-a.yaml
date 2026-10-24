@@ -59,9 +59,42 @@ curation_history:
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET) with primary-literature provenance.
   llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial 70S ribosome intersubunit
+    bridge B2a backed by DOI:10.1093/nar/gkac1189.
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Binds bacterial 70S ribosomal intersubunit bridge
   B2a (16S rRNA h44 / 23S rRNA H69) and arrests translation elongation and termination
   (DOI:10.1093/nar/gkac1189; DOI:10.1016/j.jmb.2011.12.055).'
+molecular_targets:
+- target_label: bacterial 70S ribosome intersubunit bridge B2a (16S rRNA helix 44
+    / 23S rRNA helix 69)
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:300852
+  taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+  experimental_context: X-ray crystal structure of Thermus thermophilus 70S ribosome
+    bound to thermorubin at intersubunit bridge B2a (PDB:4V8A) and ribosome profiling/toeprinting
+    of elongation and termination arrest in Escherichia coli (DOI:10.1093/nar/gkac1189;
+    PMID:22240456).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2023-01
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1093/nar/gkac1189
+    snippet: Thermorubin (THR) is an aromatic anthracenopyranone antibiotic active
+      against both Gram-positive and Gram-negative bacteria. It is known to bind to
+      the 70S ribosome at the intersubunit bridge B2a and was thought to inhibit factor-dependent
+      initiation of translation and obstruct the accommodation of tRNAs into the A
+      site. Here, we show that thermorubin causes ribosomes to stall in vivo and in
+      vitro at internal and termination codons.
+    notes: Paranjpe et al. 2023 (Nucleic Acids Res 51:449-467; PMID:36546783) and
+      Bulkley et al. 2012 (J Mol Biol 416:571-578; PMID:22240456; PDB:4V8A) show that
+      thermorubin binds the 16S rRNA h44 / 23S rRNA H69 interface of intersubunit
+      bridge B2a, inducing C1914 flipping and arresting elongation and termination.

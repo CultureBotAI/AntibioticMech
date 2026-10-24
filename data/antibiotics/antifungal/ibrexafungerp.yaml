@@ -53,3 +53,36 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal 1,3-beta-D-glucan
+    synthase (Fks1 / Fks2) backed by DOI:10.1093/mmy/myac049.
+  llm_assisted: true
+molecular_targets:
+- target_label: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:5476
+  taxon_label: Candida albicans
+  experimental_context: In vitro 1,3-beta-D-glucan synthase inhibition and antifungal
+    susceptibility across Candida albicans and Candida glabrata isolates including
+    FKS-mutant strains (DOI:10.1093/mmy/myac049).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-07
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1093/mmy/myac049
+    snippet: Ibrexafungerp is a first-in-class oral triterpenoid glucan synthase inhibitor.
+      Ibrexafungerp showed potent in vitro activity against Candida albicans (n =
+      166; MIC50/90, 0.06/0.25 mg/L), Candida parapsilosis (n = 123; MIC50/90, 0.5/1
+      mg/L), Candida glabrata (n = 68; MIC50/90, 0.25/1 mg/L), Candida tropicalis
+      (n = 45; MIC50/90, 0.25/1 mg/L), and Candida krusei (n = 15; MIC50/90, 0.5/1
+      mg/L), including fluconazole- and echinocandin-resistant isolates.
+    notes: Mesquida et al. 2022 (Med Mycol 60:myac049; PMID:35816437) evaluated the
+      1,3-beta-D-glucan synthase inhibitor ibrexafungerp (SCY-078) against Candida
+      albicans and Candida glabrata clinical isolates including fks1/fks2 mutants;
+      held from reviewed UniProtKB accession assignment because Candida albicans SC5314
+      Gsc1/Fks1 (UniProtKB:A0A1D8PCT0 / O13428) and Candida glabrata CBS 138 Fks1/Fks2
+      (UniProtKB:Q6FKT2 / Q6FNB2) are unreviewed TrEMBL entries.

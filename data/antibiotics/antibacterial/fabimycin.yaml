@@ -45,3 +45,48 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial enoyl-acyl carrier
+    protein reductase (FabI) backed by DOI:10.1021/acscentsci.2c00598.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI, b1288) protein
+    example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/acscentsci.2c00598).
+  llm_assisted: true
+molecular_targets:
+- target_label: bacterial enoyl-acyl carrier protein reductase (FabI)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  experimental_context: Direct biochemical inhibition of purified Escherichia coli
+    FabI, ternary FabI-NAD+-fabimycin X-ray crystal structure, and target-mutation
+    profiling (DOI:10.1021/acscentsci.2c00598).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-08
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1021/acscentsci.2c00598
+    snippet: This compound, which we have named fabimycin, displays impressive activity
+      against >200 clinical isolates of E. coli, K. pneumoniae, and A. baumannii,
+      does not kill commensal bacteria indiscriminately, and demonstrates efficacy
+      in multiple mouse models of infection caused by Gram-negative bacteria.
+    notes: Parker et al. 2022 (ACS Cent Sci 8:1145-1158; PMID:36035943) demonstrated
+      direct inhibition and co-crystal binding of fabimycin to Escherichia coli K-12
+      enoyl-[acyl-carrier-protein] reductase FabI (b1288, UniProtKB:P0AEK4).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AEK4
+    protein_label: Enoyl-[acyl-carrier-protein] reductase [NADH] FabI
+    gene_symbol: fabI
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Escherichia coli K-12 enoyl-[acyl-carrier-protein] reductase FabI (b1288)
+      directly inhibited by fabimycin in biochemical and co-crystal structural studies
+      (DOI:10.1021/acscentsci.2c00598; PMID:36035943).
