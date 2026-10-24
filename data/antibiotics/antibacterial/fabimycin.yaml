@@ -10,17 +10,17 @@ definition_source: DOI:10.1021/acscentsci.2c00598
 activity_roles:
 - CHEBI:33282
 chemical_structure:
-  smiles: Cc1c(CN(C)C(=O)/C=C/c2cnc3c(c2)CC[C@H](N)C(=O)N3)oc2ccccc12.Cl
-  standard_inchi: InChI=1S/C23H24N4O3.ClH/c1-14-17-5-3-4-6-19(17)30-20(14)13-27(2)21(28)10-7-15-11-16-8-9-18(24)23(29)26-22(16)25-12-15;/h3-7,10-12,18H,8-9,13,24H2,1-2H3,(H,25,26,29);1H/b10-7+;/t18-;/m0./s1
-  standard_inchi_key: FCJIJHAQWMWXOH-CVODZKDNSA-N
-  molecular_formula: C23H25ClN4O3
-  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/156500279
+  smiles: Cc1c(CN(C)C(=O)/C=C/c2cnc3c(c2)CC[C@H](N)C(=O)N3)oc2ccccc12
+  standard_inchi: InChI=1S/C23H24N4O3/c1-14-17-5-3-4-6-19(17)30-20(14)13-27(2)21(28)10-7-15-11-16-8-9-18(24)23(29)26-22(16)25-12-15/h3-7,10-12,18H,8-9,13,24H2,1-2H3,(H,25,26,29)/b10-7+/t18-/m0/s1
+  standard_inchi_key: ZWQNEFFHBSGFHV-HKMNZKMDSA-N
+  molecular_formula: C23H24N4O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/134159600
   retrieved_on: '2026-10-23'
   charge: 0
-  average_mass: 440.931
-  monoisotopic_mass: 440.1615
+  average_mass: 404.47
+  monoisotopic_mass: 404.1848
 xrefs:
-- pubchem.compound:156500279
+- pubchem.compound:134159600
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1021/acscentsci.2c00598#fabimycin
@@ -41,7 +41,7 @@ source_concepts:
       MIC 2 ug/mL against K. pneumoniae ATCC 43816 in DOI:10.1021/acsinfecdis.3c00391).
   source_version: '2026-10-23'
 curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
+- timestamp: '2026-10-24T02:43:50Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
