@@ -1049,6 +1049,19 @@ def apply_causal_graphs_plan(
         )
 
     if apply and receipt_path is not None and only_identifiers is None and receipt_records:
+        existing_by_id: dict[str, dict[str, Any]] = {}
+        if receipt_path.exists():
+            existing_payload = json.loads(receipt_path.read_text(encoding="utf-8"))
+            for item in existing_payload.get("record_deltas") or []:
+                if isinstance(item, dict) and item.get("identifier"):
+                    existing_by_id[str(item["identifier"])] = item
+        for item in receipt_records:
+            existing_by_id[str(item["identifier"])] = item
+        ordered_deltas = [
+            existing_by_id[str(entry["identifier"])]
+            for entry in plan["records"]
+            if str(entry["identifier"]) in existing_by_id
+        ]
         rel_plan = (
             plan_path.relative_to(root).as_posix()
             if plan_path.is_relative_to(root)
@@ -1058,8 +1071,8 @@ def apply_causal_graphs_plan(
             "schema_version": 1,
             "task": str(plan.get("task") or "causal_graphs_curation"),
             "plan_path": rel_plan,
-            "record_count": len(receipt_records),
-            "record_deltas": receipt_records,
+            "record_count": len(ordered_deltas),
+            "record_deltas": ordered_deltas,
         }
         receipt_path.parent.mkdir(parents=True, exist_ok=True)
         receipt_path.write_text(

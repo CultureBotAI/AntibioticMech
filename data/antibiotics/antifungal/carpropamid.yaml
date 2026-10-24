@@ -120,3 +120,84 @@ curation_history:
     UniProtKB protein example on the PRIMARY_LITERATURE fungal scytalone dehydratase
     molecular target.
   llm_assisted: true
+- timestamp: '2026-10-24T04:31:02Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph carpropamid_scytalone_dehydratase_melanin_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:9665698).
+  llm_assisted: true
+causal_graphs:
+- graph_id: carpropamid_scytalone_dehydratase_melanin_inhibition
+  title: Carpropamid binds fungal scytalone dehydratase to inhibit 1,8-dihydroxynaphthalene
+    melanin biosynthesis
+  description: Carpropamid binds tightly inside the narrow hydrophobic active-site
+    cavity of Pyricularia oryzae scytalone dehydratase (SDH1), displaces the catalytic
+    water molecules required for dehydration of scytalone and vermelone, and blocks
+    fungal 1,8-dihydroxynaphthalene melanin biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: carpropamid
+    label: carpropamid
+    node_type: COMPOUND
+    grounding: CHEBI:3434
+  - node_id: scytalone_dehydratase
+    label: fungal scytalone dehydratase (SDH1)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal scytalone dehydratase enzyme; kept label-only with Pyricularia
+      oryzae strain 70-15 SDH1 (UniProtKB:P56221) protein_examples.
+    gene_symbols:
+    - SDH1
+    protein_examples:
+    - uniprot_id: UniProtKB:P56221
+      protein_label: Scytalone dehydratase
+      gene_symbol: SDH1
+      taxon_id: NCBITaxon:242507
+      taxon_label: Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with
+        carpropamid bound in the hydrophobic active-site cavity (PMID:9665698, PDB
+        2STD).
+  - node_id: carpropamid_bound_sdh1_active_site
+    label: carpropamid-bound scytalone dehydratase active-site complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 2.1-angstrom cocrystal state (PDB:2STD) with carpropamid occupying
+      the hydrophobic active-site cavity and displacing catalytic water molecules.
+  - node_id: fungal_dhn_melanin_biosynthesis
+    label: scytalone dehydration and fungal 1,8-dihydroxynaphthalene melanin biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Scytalone dehydratase-catalyzed dehydration steps required for
+      fungal melanin biosynthesis and rice-blast appressorial pathogenicity.
+  edges:
+  - subject: carpropamid
+    predicate: binds
+    object: carpropamid_bound_sdh1_active_site
+    description: Carpropamid binds tightly inside the hydrophobic active-site cavity
+      of fungal scytalone dehydratase.
+    evidence:
+    - reference: PMID:9665698
+      notes: A 2.1-angstrom X-ray crystal structure of Magnaporthe grisea (Pyricularia
+        oryzae) scytalone dehydratase complexed with carpropamid (PDB:2STD) resolved
+        tight active-site binding.
+  - subject: scytalone_dehydratase
+    predicate: participates in
+    object: carpropamid_bound_sdh1_active_site
+    description: Scytalone dehydratase active-site residues form the tight hydrophobic
+      cavity and hydrogen-bonding network coordinating carpropamid.
+    evidence:
+    - reference: PMID:9665698
+      notes: The 2.1-angstrom cocrystal mapped aromatic, hydrophobic, and water-displacement
+        interactions in the scytalone dehydratase active site.
+  - subject: carpropamid_bound_sdh1_active_site
+    predicate: inhibits
+    object: fungal_dhn_melanin_biosynthesis
+    description: Active-site occupancy by carpropamid blocks scytalone dehydratase
+      catalysis and inhibits fungal melanin biosynthesis.
+    evidence:
+    - reference: PMID:9665698
+      notes: Structural and biochemical analyses established potent scytalone dehydratase
+        inhibition that blocks melanin biosynthesis in the rice-blast pathogen.

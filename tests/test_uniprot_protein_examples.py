@@ -63,21 +63,22 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
                     assert normalized.get("gene_symbol") or normalized["uniprot_id"] in {
                         "UniProtKB:P26662",
                         "UniProtKB:P26664",
+                        "UniProtKB:P12823",
                     }, (
                         f"{path}: expected gene_symbol on {normalized['uniprot_id']}"
                     )
                     assert normalized.get("role"), (
                         f"{path}: expected role on {normalized['uniprot_id']}"
                     )
-    assert causal_graph_records == 52
-    assert gene_or_protein_nodes == 35
+    assert causal_graph_records == 59
+    assert gene_or_protein_nodes == 42
 
     accounting = verify_corpus_protein_examples_accounting(records)
     assert accounting == {
-        "causal_graphs_total": 53,
-        "causal_graphs_with_protein_nodes": 33,
+        "causal_graphs_total": 60,
+        "causal_graphs_with_protein_nodes": 40,
         "causal_graphs_held": 20,
-        "gene_or_protein_nodes": 35,
+        "gene_or_protein_nodes": 42,
         "primary_literature_targets_total": 95,
         "primary_literature_targets_populated": 39,
         "primary_literature_targets_held": 56,

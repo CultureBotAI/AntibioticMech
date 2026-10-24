@@ -174,3 +174,83 @@ curation_history:
     UniProtKB protein example on the PRIMARY_LITERATURE dengue virus NS5 mRNA 2'-O-methyltransferase
     domain molecular target.
   llm_assisted: true
+- timestamp: '2026-10-24T04:31:03Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:15152003).
+  llm_assisted: true
+causal_graphs:
+- graph_id: ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition
+  title: Ribavirin 5'-triphosphate binds the dengue virus NS5 methyltransferase GTP
+    site to inhibit viral mRNA capping
+  description: Ribavirin 5'-triphosphate (RTP) binds the N-terminal GTP-binding pocket
+    of the dengue virus NS5 mRNA 2'-O-methyltransferase domain, competes with GTP
+    binding, and inhibits viral mRNA cap 2'-O-methylation.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ribavirin_5_triphosphate
+    label: ribavirin 5'-triphosphate
+    node_type: COMPOUND
+    grounding: CHEBI:45578
+  - node_id: dengue_ns5_mrna_2o_methyltransferase
+    label: dengue virus NS5 mRNA 2'-O-methyltransferase domain
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Dengue virus NS5 N-terminal mRNA 2'-O-methyltransferase domain;
+      kept label-only with Dengue virus type 2 strain PR159-S1 genome polyprotein
+      (UniProtKB:P12823) protein_examples.
+    protein_examples:
+    - uniprot_id: UniProtKB:P12823
+      protein_label: Genome polyprotein
+      taxon_id: NCBITaxon:11066
+      taxon_label: Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA
+        2'-O-methyltransferase domain crystallized in a 2.6-angstrom ternary complex
+        with ribavirin 5'-triphosphate at the GTP-binding site (PMID:15152003, PDB
+        1R6A).
+  - node_id: rtp_bound_ns5_mtase_gtp_pocket
+    label: ribavirin 5'-triphosphate-bound dengue NS5 methyltransferase GTP-site complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 2.6-angstrom ternary cocrystal state (PDB:1R6A) with RTP occupying
+      the N-terminal GTP-binding site of dengue virus NS5 methyltransferase alongside
+      S-adenosyl-L-homocysteine.
+  - node_id: flavivirus_mrna_cap_2o_methylation
+    label: dengue virus NS5-catalyzed mRNA cap 2'-O-methylation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Viral mRNA cap binding and 2'-O-methyltransferase activity assayed
+      in vitro.
+  edges:
+  - subject: ribavirin_5_triphosphate
+    predicate: binds
+    object: rtp_bound_ns5_mtase_gtp_pocket
+    description: Ribavirin 5'-triphosphate binds the GTP-binding site of the dengue
+      virus NS5 mRNA 2'-O-methyltransferase domain.
+    evidence:
+    - reference: PMID:15152003
+      notes: A 2.6-angstrom ternary crystal structure (PDB:1R6A) directly resolved
+        ribavirin 5'-triphosphate bound at the GTP-binding site of dengue virus NS5
+        methyltransferase.
+  - subject: dengue_ns5_mrna_2o_methyltransferase
+    predicate: participates in
+    object: rtp_bound_ns5_mtase_gtp_pocket
+    description: The dengue virus NS5 N-terminal GTP-binding pocket coordinates the
+      pseudobase and triphosphate moiety of ribavirin 5'-triphosphate.
+    evidence:
+    - reference: PMID:15152003
+      notes: Structural and competition-binding analyses mapped the NS5 residues forming
+        the GTP/RTP binding pocket.
+  - subject: rtp_bound_ns5_mtase_gtp_pocket
+    predicate: inhibits
+    object: flavivirus_mrna_cap_2o_methylation
+    description: Competitive occupancy of the NS5 GTP pocket by ribavirin 5'-triphosphate
+      inhibits dengue virus mRNA cap 2'-O-methylation.
+    evidence:
+    - reference: PMID:15152003
+      notes: Biochemical methyltransferase and GTP-competition assays demonstrated
+        that ribavirin 5'-triphosphate inhibits dengue virus NS5 mRNA 2'-O-methylation.

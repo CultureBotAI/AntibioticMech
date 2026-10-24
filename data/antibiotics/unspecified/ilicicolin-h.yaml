@@ -142,3 +142,90 @@ curation_history:
     / COB (P00163) UniProtKB protein example on the PRIMARY_LITERATURE cytochrome
     bc1 complex Qn site molecular target.
   llm_assisted: true
+- timestamp: '2026-10-24T04:31:03Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph ilicicolin_h_cytochrome_bc1_qn_site_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:14670947, PMID:18022381).
+  llm_assisted: true
+causal_graphs:
+- graph_id: ilicicolin_h_cytochrome_bc1_qn_site_inhibition
+  title: Ilicicolin H binds the mitochondrial cytochrome bc1 complex Qn site to block
+    ubiquinone reduction
+  description: Ilicicolin H binds stoichiometrically at the center N (Qn / Qi) ubiquinone-reduction
+    pocket of mitochondrial cytochrome b (COB) within complex III, blocks heme bH-to-ubiquinone
+    electron transfer, and inhibits fungal mitochondrial respiration.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ilicicolin_h
+    label: ilicicolin H
+    node_type: COMPOUND
+    grounding: CHEBI:77772
+  - node_id: mitochondrial_cytochrome_b_qn_site
+    label: cytochrome bc1 complex Qn site (cytochrome b)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Mitochondrial complex III cytochrome b catalytic subunit forming
+      the Qn (Qi) pocket; kept label-only with Saccharomyces cerevisiae S288c COB
+      (UniProtKB:P00163) protein_examples.
+    gene_symbols:
+    - COB
+    protein_examples:
+    - uniprot_id: UniProtKB:P00163
+      protein_label: Cytochrome b
+      gene_symbol: COB
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Mitochondrial cytochrome b catalytic subunit forming the Qn (Qi) ubiquinone-reduction
+        pocket stoichiometrically bound and inhibited at nanomolar potency by ilicicolin
+        H in S. cerevisiae (PMID:14670947; PMID:18022381; S288c reference strain context).
+  - node_id: ilicicolin_h_bound_qn_pocket
+    label: ilicicolin H-bound cytochrome b Qn ubiquinone-reduction pocket
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Stoichiometric complex III center N (Qn) inhibitor-bound state
+      defined by spectral shifts and single-residue COB resistance mutations.
+  - node_id: cytochrome_bc1_electron_transfer_and_respiration
+    label: mitochondrial complex III ubiquinone reduction and respiratory electron
+      transport
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Heme bH oxidation and ubiquinone reduction in the mitochondrial
+      bc1 Q cycle.
+  edges:
+  - subject: ilicicolin_h
+    predicate: binds
+    object: ilicicolin_h_bound_qn_pocket
+    description: Ilicicolin H binds stoichiometrically to the center N (Qn) pocket
+      of mitochondrial cytochrome b.
+    evidence:
+    - reference: PMID:14670947
+      notes: Spectral and kinetic analyses in yeast cytochrome bc1 complex established
+        stoichiometric binding of ilicicolin H at center N with an IC50 of 3-5 nM.
+    - reference: PMID:18022381
+      notes: Site-directed and random mutagenesis of Saccharomyces cerevisiae cytochrome
+        b mapped ilicicolin H binding and resistance determinants in the Qn pocket.
+  - subject: mitochondrial_cytochrome_b_qn_site
+    predicate: participates in
+    object: ilicicolin_h_bound_qn_pocket
+    description: Mitochondrial cytochrome b (COB) center N residues form the ubiquinone-reduction
+      pocket occupied by ilicicolin H.
+    evidence:
+    - reference: PMID:18022381
+      notes: Single amino-acid substitutions in yeast cytochrome b center N conferred
+        strong resistance to ilicicolin H.
+  - subject: ilicicolin_h_bound_qn_pocket
+    predicate: inhibits
+    object: cytochrome_bc1_electron_transfer_and_respiration
+    description: Qn-site blockade by ilicicolin H inhibits electron transfer through
+      cytochrome bc1 and arrests fungal respiratory growth.
+    evidence:
+    - reference: PMID:14670947
+      notes: Biochemical complex III assays demonstrated potent inhibition of cytochrome
+        bc1 electron transfer at center N by ilicicolin H.
+    - reference: PMID:18022381
+      notes: Yeast respiratory-growth and enzyme-inhibition assays linked Qn-pocket
+        binding to potent antifungal respiratory blockade.

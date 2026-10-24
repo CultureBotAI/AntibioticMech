@@ -37,11 +37,11 @@ def load_transition() -> dict:
 def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
     accounting = verify_reviewed_causal_graphs_accounting(records)
     assert accounting == {
-        "total_causal_graph_records": 52,
+        "total_causal_graph_records": 59,
         "reviewed_total": 90,
         "reviewed_existing_graphs": 15,
-        "reviewed_curated_graphs": 36,
-        "reviewed_held": 39,
+        "reviewed_curated_graphs": 43,
+        "reviewed_held": 32,
         "seeded_existing_graphs": 1,
     }
 
@@ -73,35 +73,45 @@ def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
                         assert ev.get("snippet") or ev.get("notes"), (
                             f"{path}: expected snippet or notes on edge citation {ref}"
                         )
-    assert scored_curated == 36
+    assert scored_curated == 43
 
-    plan_with_stale_uid = copy.deepcopy(plan)
-    carpropamid_held = next(
-        item for item in plan_with_stale_uid["held_records"] if item["identifier"] == "CHEBI:3434"
-    )
-    carpropamid_held["reason"] = carpropamid_held["reason"].replace(
-        "UniProtKB:P56221", "UniProtKB:P15993"
-    )
+    records_with_stale_uid = [
+        (
+            path,
+            {
+                **doc,
+                "molecular_targets": [
+                    {
+                        **doc["molecular_targets"][0],
+                        "protein_examples": [{"uniprot_id": "UniProtKB:P15993"}],
+                    }
+                ],
+            }
+            if doc.get("identifier") == "CHEBI:156219"
+            else doc,
+        )
+        for path, doc in records
+    ]
     with pytest.raises(ValueError, match="held_records reason UniProtKB accessions"):
-        verify_reviewed_causal_graphs_accounting(records, plan=plan_with_stale_uid)
+        verify_reviewed_causal_graphs_accounting(records_with_stale_uid, plan=plan)
 
 
 def test_plan_and_transition_summary_counts():
     plan = load_causal_graphs_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
-    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 36
-    assert sum(d["graphs_added"] for d in receipt["record_deltas"]) == 37
-    assert sum(d["nodes_added"] for d in receipt["record_deltas"]) == 148
-    assert sum(d["edges_added"] for d in receipt["record_deltas"]) == 112
+    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 43
+    assert sum(d["graphs_added"] for d in receipt["record_deltas"]) == 44
+    assert sum(d["nodes_added"] for d in receipt["record_deltas"]) == 176
+    assert sum(d["edges_added"] for d in receipt["record_deltas"]) == 133
     assert len(plan["existing_causal_graphs"]) == 16
-    assert len(plan["held_records"]) == 39
+    assert len(plan["held_records"]) == 32
 
     cohort_counts: dict[str, int] = {}
     for entry in plan["records"]:
         cohort = entry["cohort"]
         cohort_counts[cohort] = cohort_counts.get(cohort, 0) + 1
     assert cohort_counts == {
-        "protein_target_with_examples": 19,
+        "protein_target_with_examples": 26,
         "non_protein_direct_or_measured_target": 17,
     }
 
@@ -442,7 +452,7 @@ def test_apply_causal_graphs_plan_dry_run_does_not_mutate(pre_causal_graphs_root
     assert not receipt_out.exists()
 
 
-@pytest.mark.parametrize("index", range(36))
+@pytest.mark.parametrize("index", range(43))
 def test_exact_scoped_transition_and_idempotence(
     pre_stage5_remediation_root, pre_causal_graphs_root, index
 ):
