@@ -306,3 +306,83 @@ curation_history:
     (A5KE01) UniProtKB protein example on the PRIMARY_LITERATURE adenosine deaminase
     molecular target.
   llm_assisted: true
+- timestamp: '2026-10-24T04:31:03Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph pentostatin_adenosine_deaminase_purine_salvage_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:18602399).
+  llm_assisted: true
+causal_graphs:
+- graph_id: pentostatin_adenosine_deaminase_purine_salvage_inhibition
+  title: Pentostatin binds the catalytic site of adenosine deaminase to block purine
+    salvage
+  description: Pentostatin (2'-deoxycoformycin) binds as a tetrahedral transition-state
+    mimic at the catalytic zinc center of Plasmodium vivax adenosine deaminase (ADA),
+    inhibits deamination of adenosine and 2'-deoxyadenosine, and blocks parasite purine-salvage
+    metabolism.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pentostatin
+    label: pentostatin
+    node_type: COMPOUND
+    grounding: CHEBI:27834
+  - node_id: adenosine_deaminase
+    label: adenosine deaminase
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Purine-salvage adenosine deaminase enzyme; kept label-only with
+      Plasmodium vivax Salvador I ADA (UniProtKB:A5KE01) cocrystal protein_examples.
+    gene_symbols:
+    - PVX_111245
+    protein_examples:
+    - uniprot_id: UniProtKB:A5KE01
+      protein_label: Adenosine deaminase
+      gene_symbol: PVX_111245
+      taxon_id: NCBITaxon:126793
+      taxon_label: Plasmodium vivax (strain Salvador I)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Parasite purine-salvage adenosine deaminase resolved in cocrystal complex
+        with pentostatin (2'-deoxycoformycin) at the catalytic site (PMID:18602399,
+        PDB 2PGG; Salvador I reference strain context).
+  - node_id: pentostatin_bound_ada_catalytic_site
+    label: pentostatin-bound adenosine deaminase transition-state-analog complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: X-ray cocrystal state (PDB:2PGG) with picomolar inhibitor 2'-deoxycoformycin
+      coordinated at the Plasmodium vivax ADA catalytic site.
+  - node_id: adenosine_deamination_and_purine_salvage
+    label: adenosine deamination and purine-salvage metabolism
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Enzymatic conversion of adenosine/2'-deoxyadenosine and downstream
+      purine salvage.
+  edges:
+  - subject: pentostatin
+    predicate: binds
+    object: pentostatin_bound_ada_catalytic_site
+    description: Pentostatin binds with picomolar affinity at the catalytic site of
+      Plasmodium vivax adenosine deaminase.
+    evidence:
+    - reference: PMID:18602399
+      notes: The Plasmodium vivax adenosine deaminase cocrystal with 2'-deoxycoformycin
+        (pentostatin, PDB:2PGG) defined high-affinity active-site recognition.
+  - subject: adenosine_deaminase
+    predicate: participates in
+    object: pentostatin_bound_ada_catalytic_site
+    description: Adenosine deaminase catalytic residues and active-site structural
+      elements coordinate pentostatin as a transition-state analog.
+    evidence:
+    - reference: PMID:18602399
+      notes: Structural comparison of apo, substrate-bound, and pentostatin-bound
+        P. vivax ADA defined the catalytic-site contacts and conformational closure.
+  - subject: pentostatin_bound_ada_catalytic_site
+    predicate: inhibits
+    object: adenosine_deamination_and_purine_salvage
+    description: Transition-state mimicry by pentostatin potently inhibits adenosine
+      deaminase catalysis and blocks purine salvage.
+    evidence:
+    - reference: PMID:18602399
+      notes: Kinetic and crystallographic characterization established picomolar inhibition
+        of purine-salvage adenosine deaminase by pentostatin.

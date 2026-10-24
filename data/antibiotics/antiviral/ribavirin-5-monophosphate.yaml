@@ -130,3 +130,85 @@ curation_history:
     protein example on the PRIMARY_LITERATURE inosine monophosphate dehydrogenase
     (IMPDH) molecular target.
   llm_assisted: true
+- timestamp: '2026-10-24T04:31:03Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph ribavirin_5_mp_impdh_guanosine_nucleotide_depletion
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:12235158).
+  llm_assisted: true
+causal_graphs:
+- graph_id: ribavirin_5_mp_impdh_guanosine_nucleotide_depletion
+  title: Ribavirin 5'-monophosphate binds the IMPDH substrate site to inhibit GMP
+    and GTP biosynthesis
+  description: Ribavirin 5'-monophosphate (RMP) mimics inosine 5'-monophosphate in
+    the substrate pocket of inosine-5'-monophosphate dehydrogenase (IMPDH), competitively
+    inhibits IMP oxidation to XMP, and depletes intracellular guanosine nucleotide
+    pools required for nucleic-acid synthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: ribavirin_5_monophosphate
+    label: ribavirin 5'-monophosphate
+    node_type: COMPOUND
+    grounding: CHEBI:45490
+  - node_id: imp_dehydrogenase
+    label: inosine monophosphate dehydrogenase (IMPDH)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Inosine-5'-monophosphate dehydrogenase enzyme; kept label-only
+      with Tritrichomonas foetus IMPDH (UniProtKB:P50097) cocrystal protein_examples.
+    gene_symbols:
+    - IMPDH
+    protein_examples:
+    - uniprot_id: UniProtKB:P50097
+      protein_label: Inosine-5'-monophosphate dehydrogenase
+      gene_symbol: IMPDH
+      taxon_id: NCBITaxon:56690
+      taxon_label: Tritrichomonas foetus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: Protozoan IMP dehydrogenase catalytic subunit resolved in high-resolution
+        cocrystals bound to ribavirin 5'-monophosphate at the substrate site (PMID:12235158,
+        PDB 1ME8/1MEI).
+  - node_id: rmp_bound_impdh_substrate_site
+    label: ribavirin 5'-monophosphate-bound IMPDH substrate-site complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: High-resolution X-ray cocrystal state (PDB:1ME8/1MEI) showing
+      RMP bound in the IMP substrate pocket with its carboxamide group mimicking the
+      purine ring.
+  - node_id: imp_to_xmp_guanosine_nucleotide_synthesis
+    label: IMP-to-XMP oxidation and de novo guanosine nucleotide biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Rate-limiting NAD+-dependent conversion of IMP to XMP in de novo
+      GMP/GTP biosynthesis.
+  edges:
+  - subject: ribavirin_5_monophosphate
+    predicate: binds
+    object: rmp_bound_impdh_substrate_site
+    description: Ribavirin 5'-monophosphate binds the IMP substrate pocket of inosine-5'-monophosphate
+      dehydrogenase.
+    evidence:
+    - reference: PMID:12235158
+      notes: High-resolution X-ray crystal structures (PDB:1ME8 and 1MEI) resolved
+        ribavirin 5'-monophosphate bound in the substrate site of Tritrichomonas foetus
+        IMPDH.
+  - subject: imp_dehydrogenase
+    predicate: participates in
+    object: rmp_bound_impdh_substrate_site
+    description: IMPDH active-site loop and substrate-binding residues coordinate
+      ribavirin 5'-monophosphate as an IMP mimic.
+    evidence:
+    - reference: PMID:12235158
+      notes: The cocrystals mapped hydrogen-bonding and phosphate-anchor interactions
+        between IMPDH and ribavirin 5'-monophosphate.
+  - subject: rmp_bound_impdh_substrate_site
+    predicate: inhibits
+    object: imp_to_xmp_guanosine_nucleotide_synthesis
+    description: Substrate-site occupancy by ribavirin 5'-monophosphate competitively
+      blocks IMP oxidation to XMP and depletes guanosine nucleotide biosynthesis.
+    evidence:
+    - reference: PMID:12235158
+      notes: Structural and mechanistic analyses explained how substrate-pocket mimicry
+        by RMP blocks IMPDH catalysis and guanosine nucleotide synthesis.

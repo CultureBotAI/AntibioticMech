@@ -49,3 +49,14 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ENERGY_METABOLISM_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Disrupts mycobacterial membrane potential and respiratory
+  energetics in Mycobacterium abscessus (DOI:10.1128/spectrum.03588-25).'

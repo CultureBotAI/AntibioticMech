@@ -127,3 +127,94 @@ curation_history:
     1ab UniProtKB protein examples on the PRIMARY_LITERATURE coronavirus 3C-like protease
     (3CLpro) molecular target.
   llm_assisted: true
+- timestamp: '2026-10-24T04:31:03Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph cinanserin_coronavirus_3clpro_replication_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary
+    literature (PMID:15890949).
+  llm_assisted: true
+causal_graphs:
+- graph_id: cinanserin_coronavirus_3clpro_replication_inhibition
+  title: Cinanserin binds and inhibits coronavirus 3C-like protease to suppress viral
+    RNA replication
+  description: Cinanserin directly binds the 3C-like protease (3CLpro) of Severe acute
+    respiratory syndrome coronavirus (SARS-CoV) and Human coronavirus 229E (HCoV-229E),
+    inhibits 3CLpro proteolytic catalysis, and suppresses coronavirus RNA replication
+    and infectious viral yield in tissue culture.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: cinanserin
+    label: cinanserin
+    node_type: COMPOUND
+    grounding: CHEBI:145999
+  - node_id: coronavirus_3clpro
+    label: coronavirus 3C-like protease (3CLpro)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Coronavirus 3C-like main protease (3CLpro); kept label-only with
+      SARS-CoV (UniProtKB:P0C6X7) and HCoV-229E (UniProtKB:P0C6X1) replicase polyprotein
+      1ab protein_examples.
+    gene_symbols:
+    - rep
+    protein_examples:
+    - uniprot_id: UniProtKB:P0C6X7
+      protein_label: Replicase polyprotein 1ab
+      gene_symbol: rep
+      taxon_id: NCBITaxon:694009
+      taxon_label: Severe acute respiratory syndrome coronavirus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: SARS-CoV replicase polyprotein 1ab encoding the 3C-like protease (3CLpro)
+        directly bound and inhibited by cinanserin in surface plasmon resonance, catalytic,
+        and infectious-virus tissue-culture assays (PMID:15890949).
+    - uniprot_id: UniProtKB:P0C6X1
+      protein_label: Replicase polyprotein 1ab
+      gene_symbol: rep
+      taxon_id: NCBITaxon:11137
+      taxon_label: Human coronavirus 229E
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-17'
+      role: HCoV-229E replicase polyprotein 1ab encoding the 3C-like protease (3CLpro)
+        directly bound and inhibited by cinanserin in surface plasmon resonance, catalytic,
+        replicon, and tissue-culture assays (PMID:15890949).
+  - node_id: cinanserin_bound_3clpro_complex
+    label: cinanserin-bound coronavirus 3CLpro catalytic pocket
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Direct inhibitor-protease complex quantified by surface plasmon
+      resonance and catalytic inhibition assays (IC50 ~5 micromolar).
+  - node_id: coronavirus_3clpro_cleavage_and_replication
+    label: 3CLpro-mediated replicase processing and coronavirus RNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Coronavirus replicase polyprotein processing and viral RNA replication
+      assayed in replicon and live-virus tissue culture.
+  edges:
+  - subject: cinanserin
+    predicate: binds
+    object: cinanserin_bound_3clpro_complex
+    description: Cinanserin binds purified SARS-CoV and HCoV-229E 3C-like proteases
+      with micromolar affinity.
+    evidence:
+    - reference: PMID:15890949
+      notes: Surface plasmon resonance and docking studies demonstrated direct binding
+        of cinanserin to recombinant SARS-CoV and HCoV-229E 3CLpro.
+  - subject: coronavirus_3clpro
+    predicate: participates in
+    object: cinanserin_bound_3clpro_complex
+    description: Coronavirus 3CLpro catalytic-pocket residues coordinate cinanserin
+      in the inhibited protease complex.
+    evidence:
+    - reference: PMID:15890949
+      notes: Recombinant SARS-CoV and HCoV-229E 3CLpro enzymes bound cinanserin and
+        exhibited catalytic inhibition with IC50 values of ~5 micromolar.
+  - subject: cinanserin_bound_3clpro_complex
+    predicate: inhibits
+    object: coronavirus_3clpro_cleavage_and_replication
+    description: Cinanserin binding inhibits 3CLpro catalytic activity and reduces
+      coronavirus RNA replication and infectious titers by up to 4 logs.
+    evidence:
+    - reference: PMID:15890949
+      notes: Tissue-culture replicon and infectious SARS-CoV / HCoV-229E assays showed
+        strong suppression of viral RNA replication upon 3CLpro inhibition by cinanserin.

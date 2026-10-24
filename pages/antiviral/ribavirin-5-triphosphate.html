@@ -146,6 +146,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Ribavirin 5&#39;-triphosphate binds the dengue virus NS5 methyltransferase GTP site to inhibit viral mRNA capping <span class="pill">MECHANISTIC</span></h3>
+<p>Ribavirin 5&#39;-triphosphate (RTP) binds the N-terminal GTP-binding pocket of the dengue virus NS5 mRNA 2&#39;-O-methyltransferase domain, competes with GTP binding, and inhibits viral mRNA cap 2&#39;-O-methylation.</p><div class="table-scroll" role="region" aria-label="Nodes: ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">ribavirin_5_triphosphate</code></td>
+    <td>ribavirin 5&#39;-triphosphate</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antiviral/ribavirin-5-triphosphate.html"><code class="curie">CHEBI:45578</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dengue_ns5_mrna_2o_methyltransferase</code></td>
+    <td>dengue virus NS5 mRNA 2&#39;-O-methyltransferase domain<br><span class="meta">Examples: Genome polyprotein <a href="https://www.uniprot.org/uniprotkb/P12823"><code class="curie">UniProtKB:P12823</code></a>, <em>Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_11066"><code class="curie">NCBITaxon:11066</code></a> <span class="pill">REVIEWED</span> — Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA 2&#39;-O-methyltransferase domain crystallized in a 2.6-angstrom ternary complex with ribavirin 5&#39;-triphosphate at the GTP-binding site (PMID:15152003, PDB 1R6A).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rtp_bound_ns5_mtase_gtp_pocket</code></td>
+    <td>ribavirin 5&#39;-triphosphate-bound dengue NS5 methyltransferase GTP-site complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">flavivirus_mrna_cap_2o_methylation</code></td>
+    <td>dengue virus NS5-catalyzed mRNA cap 2&#39;-O-methylation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition" tabindex="0">
+<table>
+  <caption>Edges — ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">ribavirin_5_triphosphate</code></td>
+    <td>binds</td>
+    <td><code class="curie">rtp_bound_ns5_mtase_gtp_pocket</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15152003">PMID:15152003</a></span> <span class="meta">(A 2.6-angstrom ternary crystal structure (PDB:1R6A) directly resolved ribavirin 5&#39;-triphosphate bound at the GTP-binding site of dengue virus NS5 methyltransferase.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dengue_ns5_mrna_2o_methyltransferase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">rtp_bound_ns5_mtase_gtp_pocket</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15152003">PMID:15152003</a></span> <span class="meta">(Structural and competition-binding analyses mapped the NS5 residues forming the GTP/RTP binding pocket.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rtp_bound_ns5_mtase_gtp_pocket</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">flavivirus_mrna_cap_2o_methylation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/15152003">PMID:15152003</a></span> <span class="meta">(Biochemical methyltransferase and GTP-competition assays demonstrated that ribavirin 5&#39;-triphosphate inhibits dengue virus NS5 mRNA 2&#39;-O-methylation.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 <h2>Discussions</h2>
 <p class="meta">Open questions, knowledge gaps and curation todos attached to this
@@ -192,6 +262,11 @@ compound.</p>
     <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
     <p>Added curated Dengue virus type 2 PR159-S1 genome polyprotein (P12823) UniProtKB protein example on the PRIMARY_LITERATURE dengue virus NS5 mRNA 2&#39;-O-methyltransferase domain molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-24 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:15152003).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -212,7 +287,7 @@ compound.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>ebe205d0330a</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>8ddb4f4d3b0f</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

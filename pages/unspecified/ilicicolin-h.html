@@ -169,6 +169,78 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Ilicicolin H binds the mitochondrial cytochrome bc1 complex Qn site to block ubiquinone reduction <span class="pill">MECHANISTIC</span></h3>
+<p>Ilicicolin H binds stoichiometrically at the center N (Qn / Qi) ubiquinone-reduction pocket of mitochondrial cytochrome b (COB) within complex III, blocks heme bH-to-ubiquinone electron transfer, and inhibits fungal mitochondrial respiration.</p><div class="table-scroll" role="region" aria-label="Nodes: ilicicolin_h_cytochrome_bc1_qn_site_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — ilicicolin_h_cytochrome_bc1_qn_site_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">ilicicolin_h</code></td>
+    <td>ilicicolin H</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../unspecified/ilicicolin-h.html"><code class="curie">CHEBI:77772</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">mitochondrial_cytochrome_b_qn_site</code></td>
+    <td>cytochrome bc1 complex Qn site (cytochrome b)<br><span class="meta">Examples: Cytochrome b (COB) <a href="https://www.uniprot.org/uniprotkb/P00163"><code class="curie">UniProtKB:P00163</code></a>, <em>Saccharomyces cerevisiae (strain ATCC 204508 / S288c)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_559292"><code class="curie">NCBITaxon:559292</code></a> <span class="pill">REVIEWED</span> — Mitochondrial cytochrome b catalytic subunit forming the Qn (Qi) ubiquinone-reduction pocket stoichiometrically bound and inhibited at nanomolar potency by ilicicolin H in S. cerevisiae (PMID:14670947; PMID:18022381; S288c reference strain context).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ilicicolin_h_bound_qn_pocket</code></td>
+    <td>ilicicolin H-bound cytochrome b Qn ubiquinone-reduction pocket</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">cytochrome_bc1_electron_transfer_and_respiration</code></td>
+    <td>mitochondrial complex III ubiquinone reduction and respiratory electron transport</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: ilicicolin_h_cytochrome_bc1_qn_site_inhibition" tabindex="0">
+<table>
+  <caption>Edges — ilicicolin_h_cytochrome_bc1_qn_site_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">ilicicolin_h</code></td>
+    <td>binds</td>
+    <td><code class="curie">ilicicolin_h_bound_qn_pocket</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/14670947">PMID:14670947</a></span> <span class="meta">(Spectral and kinetic analyses in yeast cytochrome bc1 complex established stoichiometric binding of ilicicolin H at center N with an IC50 of 3-5 nM.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18022381">PMID:18022381</a></span> <span class="meta">(Site-directed and random mutagenesis of Saccharomyces cerevisiae cytochrome b mapped ilicicolin H binding and resistance determinants in the Qn pocket.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">mitochondrial_cytochrome_b_qn_site</code></td>
+    <td>participates in</td>
+    <td><code class="curie">ilicicolin_h_bound_qn_pocket</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18022381">PMID:18022381</a></span> <span class="meta">(Single amino-acid substitutions in yeast cytochrome b center N conferred strong resistance to ilicicolin H.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ilicicolin_h_bound_qn_pocket</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">cytochrome_bc1_electron_transfer_and_respiration</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/14670947">PMID:14670947</a></span> <span class="meta">(Biochemical complex III assays demonstrated potent inhibition of cytochrome bc1 electron transfer at center N by ilicicolin H.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/18022381">PMID:18022381</a></span> <span class="meta">(Yeast respiratory-growth and enzyme-inhibition assays linked Qn-pocket binding to potent antifungal respiratory blockade.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -221,6 +293,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-10-23 · antigravity · LLM-assisted</span>
     <p>Added curated Saccharomyces cerevisiae S288c mitochondrial cytochrome b / COB (P00163) UniProtKB protein example on the PRIMARY_LITERATURE cytochrome bc1 complex Qn site molecular target.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-24 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph ilicicolin_h_cytochrome_bc1_qn_site_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:14670947, PMID:18022381).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -241,7 +318,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>ebe205d0330a</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>8ddb4f4d3b0f</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

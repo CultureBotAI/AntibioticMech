@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "causal_graphs_curation",
   "plan_path": "curation/causal_graphs.yaml",
-  "record_count": 36,
+  "record_count": 43,
   "record_deltas": [
     {
       "identifier": "CHEBI:157683",
@@ -1988,6 +1988,119 @@
       }
     },
     {
+      "identifier": "CHEBI:3434",
+      "label": "carpropamid",
+      "path": "data/antibiotics/antifungal/carpropamid.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "bbfaf2561c52d3f71d3414d599c42a42d5b94aed19d09cc56870ca01d49efdd5",
+      "after_sha256": "0407d586fd29edde1fd273a6e9295b3052c3a38df84c0e9862f6c475c9d66767",
+      "unchanged_fields_sha256": "79c5a235838e93d58ab67448d42d54791114fb1410226d5e860f6fb1b9c87db9",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "carpropamid_scytalone_dehydratase_melanin_inhibition",
+          "title": "Carpropamid binds fungal scytalone dehydratase to inhibit 1,8-dihydroxynaphthalene melanin biosynthesis",
+          "description": "Carpropamid binds tightly inside the narrow hydrophobic active-site cavity of Pyricularia oryzae scytalone dehydratase (SDH1), displaces the catalytic water molecules required for dehydration of scytalone and vermelone, and blocks fungal 1,8-dihydroxynaphthalene melanin biosynthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "carpropamid",
+              "label": "carpropamid",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:3434"
+            },
+            {
+              "node_id": "scytalone_dehydratase",
+              "label": "fungal scytalone dehydratase (SDH1)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Fungal scytalone dehydratase enzyme; kept label-only with Pyricularia oryzae strain 70-15 SDH1 (UniProtKB:P56221) protein_examples.",
+              "gene_symbols": [
+                "SDH1"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P56221",
+                  "protein_label": "Scytalone dehydratase",
+                  "gene_symbol": "SDH1",
+                  "taxon_id": "NCBITaxon:242507",
+                  "taxon_label": "Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with carpropamid bound in the hydrophobic active-site cavity (PMID:9665698, PDB 2STD)."
+                }
+              ]
+            },
+            {
+              "node_id": "carpropamid_bound_sdh1_active_site",
+              "label": "carpropamid-bound scytalone dehydratase active-site complex",
+              "node_type": "STATE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "2.1-angstrom cocrystal state (PDB:2STD) with carpropamid occupying the hydrophobic active-site cavity and displacing catalytic water molecules."
+            },
+            {
+              "node_id": "fungal_dhn_melanin_biosynthesis",
+              "label": "scytalone dehydration and fungal 1,8-dihydroxynaphthalene melanin biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Scytalone dehydratase-catalyzed dehydration steps required for fungal melanin biosynthesis and rice-blast appressorial pathogenicity."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "carpropamid",
+              "predicate": "binds",
+              "object": "carpropamid_bound_sdh1_active_site",
+              "description": "Carpropamid binds tightly inside the hydrophobic active-site cavity of fungal scytalone dehydratase.",
+              "evidence": [
+                {
+                  "reference": "PMID:9665698",
+                  "notes": "A 2.1-angstrom X-ray crystal structure of Magnaporthe grisea (Pyricularia oryzae) scytalone dehydratase complexed with carpropamid (PDB:2STD) resolved tight active-site binding."
+                }
+              ]
+            },
+            {
+              "subject": "scytalone_dehydratase",
+              "predicate": "participates in",
+              "object": "carpropamid_bound_sdh1_active_site",
+              "description": "Scytalone dehydratase active-site residues form the tight hydrophobic cavity and hydrogen-bonding network coordinating carpropamid.",
+              "evidence": [
+                {
+                  "reference": "PMID:9665698",
+                  "notes": "The 2.1-angstrom cocrystal mapped aromatic, hydrophobic, and water-displacement interactions in the scytalone dehydratase active site."
+                }
+              ]
+            },
+            {
+              "subject": "carpropamid_bound_sdh1_active_site",
+              "predicate": "inhibits",
+              "object": "fungal_dhn_melanin_biosynthesis",
+              "description": "Active-site occupancy by carpropamid blocks scytalone dehydratase catalysis and inhibits fungal melanin biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "PMID:9665698",
+                  "notes": "Structural and biochemical analyses established potent scytalone dehydratase inhibition that blocks melanin biosynthesis in the rice-blast pathogen."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-24T04:31:02Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph carpropamid_scytalone_dehydratase_melanin_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:9665698).",
+        "llm_assisted": true
+      }
+    },
+    {
       "identifier": "CHEBI:27641",
       "label": "cycloheximide",
       "path": "data/antibiotics/antifungal/cycloheximide.yaml",
@@ -2778,6 +2891,129 @@
       }
     },
     {
+      "identifier": "CHEBI:145999",
+      "label": "cinanserin",
+      "path": "data/antibiotics/antiviral/cinanserin.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "1e727d33cb84b8c34d8300f9350cf9292c8904eccb48ac76aab25c8ac3890ee7",
+      "after_sha256": "207b4af6326e1acece1906454b38f90ac56f6e0ee2838c66ba2e91f5481b41a5",
+      "unchanged_fields_sha256": "c1366044728a7415e1ee2a2e5fc1d3aefe401c8f14848dc1ed23af19a5d916b9",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "cinanserin_coronavirus_3clpro_replication_inhibition",
+          "title": "Cinanserin binds and inhibits coronavirus 3C-like protease to suppress viral RNA replication",
+          "description": "Cinanserin directly binds the 3C-like protease (3CLpro) of Severe acute respiratory syndrome coronavirus (SARS-CoV) and Human coronavirus 229E (HCoV-229E), inhibits 3CLpro proteolytic catalysis, and suppresses coronavirus RNA replication and infectious viral yield in tissue culture.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "cinanserin",
+              "label": "cinanserin",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:145999"
+            },
+            {
+              "node_id": "coronavirus_3clpro",
+              "label": "coronavirus 3C-like protease (3CLpro)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Coronavirus 3C-like main protease (3CLpro); kept label-only with SARS-CoV (UniProtKB:P0C6X7) and HCoV-229E (UniProtKB:P0C6X1) replicase polyprotein 1ab protein_examples.",
+              "gene_symbols": [
+                "rep"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P0C6X7",
+                  "protein_label": "Replicase polyprotein 1ab",
+                  "gene_symbol": "rep",
+                  "taxon_id": "NCBITaxon:694009",
+                  "taxon_label": "Severe acute respiratory syndrome coronavirus",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "SARS-CoV replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound and inhibited by cinanserin in surface plasmon resonance, catalytic, and infectious-virus tissue-culture assays (PMID:15890949)."
+                },
+                {
+                  "uniprot_id": "UniProtKB:P0C6X1",
+                  "protein_label": "Replicase polyprotein 1ab",
+                  "gene_symbol": "rep",
+                  "taxon_id": "NCBITaxon:11137",
+                  "taxon_label": "Human coronavirus 229E",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "HCoV-229E replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly bound and inhibited by cinanserin in surface plasmon resonance, catalytic, replicon, and tissue-culture assays (PMID:15890949)."
+                }
+              ]
+            },
+            {
+              "node_id": "cinanserin_bound_3clpro_complex",
+              "label": "cinanserin-bound coronavirus 3CLpro catalytic pocket",
+              "node_type": "STATE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Direct inhibitor-protease complex quantified by surface plasmon resonance and catalytic inhibition assays (IC50 ~5 micromolar)."
+            },
+            {
+              "node_id": "coronavirus_3clpro_cleavage_and_replication",
+              "label": "3CLpro-mediated replicase processing and coronavirus RNA replication",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Coronavirus replicase polyprotein processing and viral RNA replication assayed in replicon and live-virus tissue culture."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "cinanserin",
+              "predicate": "binds",
+              "object": "cinanserin_bound_3clpro_complex",
+              "description": "Cinanserin binds purified SARS-CoV and HCoV-229E 3C-like proteases with micromolar affinity.",
+              "evidence": [
+                {
+                  "reference": "PMID:15890949",
+                  "notes": "Surface plasmon resonance and docking studies demonstrated direct binding of cinanserin to recombinant SARS-CoV and HCoV-229E 3CLpro."
+                }
+              ]
+            },
+            {
+              "subject": "coronavirus_3clpro",
+              "predicate": "participates in",
+              "object": "cinanserin_bound_3clpro_complex",
+              "description": "Coronavirus 3CLpro catalytic-pocket residues coordinate cinanserin in the inhibited protease complex.",
+              "evidence": [
+                {
+                  "reference": "PMID:15890949",
+                  "notes": "Recombinant SARS-CoV and HCoV-229E 3CLpro enzymes bound cinanserin and exhibited catalytic inhibition with IC50 values of ~5 micromolar."
+                }
+              ]
+            },
+            {
+              "subject": "cinanserin_bound_3clpro_complex",
+              "predicate": "inhibits",
+              "object": "coronavirus_3clpro_cleavage_and_replication",
+              "description": "Cinanserin binding inhibits 3CLpro catalytic activity and reduces coronavirus RNA replication and infectious titers by up to 4 logs.",
+              "evidence": [
+                {
+                  "reference": "PMID:15890949",
+                  "notes": "Tissue-culture replicon and infectious SARS-CoV / HCoV-229E assays showed strong suppression of viral RNA replication upon 3CLpro inhibition by cinanserin."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-24T04:31:03Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph cinanserin_coronavirus_3clpro_replication_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:15890949).",
+        "llm_assisted": true
+      }
+    },
+    {
       "identifier": "CHEBI:232062",
       "label": "exophillic acid",
       "path": "data/antibiotics/antiviral/exophillic-acid.yaml",
@@ -3556,6 +3792,228 @@
       }
     },
     {
+      "identifier": "CHEBI:45490",
+      "label": "ribavirin 5'-monophosphate",
+      "path": "data/antibiotics/antiviral/ribavirin-5-monophosphate.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "711bef2f94aa03838356f892942eff9fdce3897b38f71fb19caf81c97a66208b",
+      "after_sha256": "285159625da44538f8df8db443f943946dbd1b02936c9cf44c39ad675a465021",
+      "unchanged_fields_sha256": "ef8c63e8ae80d62bbc53b716d7054392d09aa812d2f70eca6cbac37f55cdb41c",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "ribavirin_5_mp_impdh_guanosine_nucleotide_depletion",
+          "title": "Ribavirin 5'-monophosphate binds the IMPDH substrate site to inhibit GMP and GTP biosynthesis",
+          "description": "Ribavirin 5'-monophosphate (RMP) mimics inosine 5'-monophosphate in the substrate pocket of inosine-5'-monophosphate dehydrogenase (IMPDH), competitively inhibits IMP oxidation to XMP, and depletes intracellular guanosine nucleotide pools required for nucleic-acid synthesis.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "ribavirin_5_monophosphate",
+              "label": "ribavirin 5'-monophosphate",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:45490"
+            },
+            {
+              "node_id": "imp_dehydrogenase",
+              "label": "inosine monophosphate dehydrogenase (IMPDH)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Inosine-5'-monophosphate dehydrogenase enzyme; kept label-only with Tritrichomonas foetus IMPDH (UniProtKB:P50097) cocrystal protein_examples.",
+              "gene_symbols": [
+                "IMPDH"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P50097",
+                  "protein_label": "Inosine-5'-monophosphate dehydrogenase",
+                  "gene_symbol": "IMPDH",
+                  "taxon_id": "NCBITaxon:56690",
+                  "taxon_label": "Tritrichomonas foetus",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Protozoan IMP dehydrogenase catalytic subunit resolved in high-resolution cocrystals bound to ribavirin 5'-monophosphate at the substrate site (PMID:12235158, PDB 1ME8/1MEI)."
+                }
+              ]
+            },
+            {
+              "node_id": "rmp_bound_impdh_substrate_site",
+              "label": "ribavirin 5'-monophosphate-bound IMPDH substrate-site complex",
+              "node_type": "STATE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "High-resolution X-ray cocrystal state (PDB:1ME8/1MEI) showing RMP bound in the IMP substrate pocket with its carboxamide group mimicking the purine ring."
+            },
+            {
+              "node_id": "imp_to_xmp_guanosine_nucleotide_synthesis",
+              "label": "IMP-to-XMP oxidation and de novo guanosine nucleotide biosynthesis",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Rate-limiting NAD+-dependent conversion of IMP to XMP in de novo GMP/GTP biosynthesis."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "ribavirin_5_monophosphate",
+              "predicate": "binds",
+              "object": "rmp_bound_impdh_substrate_site",
+              "description": "Ribavirin 5'-monophosphate binds the IMP substrate pocket of inosine-5'-monophosphate dehydrogenase.",
+              "evidence": [
+                {
+                  "reference": "PMID:12235158",
+                  "notes": "High-resolution X-ray crystal structures (PDB:1ME8 and 1MEI) resolved ribavirin 5'-monophosphate bound in the substrate site of Tritrichomonas foetus IMPDH."
+                }
+              ]
+            },
+            {
+              "subject": "imp_dehydrogenase",
+              "predicate": "participates in",
+              "object": "rmp_bound_impdh_substrate_site",
+              "description": "IMPDH active-site loop and substrate-binding residues coordinate ribavirin 5'-monophosphate as an IMP mimic.",
+              "evidence": [
+                {
+                  "reference": "PMID:12235158",
+                  "notes": "The cocrystals mapped hydrogen-bonding and phosphate-anchor interactions between IMPDH and ribavirin 5'-monophosphate."
+                }
+              ]
+            },
+            {
+              "subject": "rmp_bound_impdh_substrate_site",
+              "predicate": "inhibits",
+              "object": "imp_to_xmp_guanosine_nucleotide_synthesis",
+              "description": "Substrate-site occupancy by ribavirin 5'-monophosphate competitively blocks IMP oxidation to XMP and depletes guanosine nucleotide biosynthesis.",
+              "evidence": [
+                {
+                  "reference": "PMID:12235158",
+                  "notes": "Structural and mechanistic analyses explained how substrate-pocket mimicry by RMP blocks IMPDH catalysis and guanosine nucleotide synthesis."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-24T04:31:03Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph ribavirin_5_mp_impdh_guanosine_nucleotide_depletion (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:12235158).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45578",
+      "label": "ribavirin 5'-triphosphate",
+      "path": "data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "6a77c211e3417f1babc65f187ab6ab46561b73da27dcdbb33dcbc853ed8d3ca0",
+      "after_sha256": "542c1c340a644fb6c09a524cb4802713fffa420144c66a9a0cb2178cd97f506f",
+      "unchanged_fields_sha256": "0a24d1e78931ef47e31ddf7225d5d244fb54c40d5b67d5b01d4b6f691e3d7276",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition",
+          "title": "Ribavirin 5'-triphosphate binds the dengue virus NS5 methyltransferase GTP site to inhibit viral mRNA capping",
+          "description": "Ribavirin 5'-triphosphate (RTP) binds the N-terminal GTP-binding pocket of the dengue virus NS5 mRNA 2'-O-methyltransferase domain, competes with GTP binding, and inhibits viral mRNA cap 2'-O-methylation.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "ribavirin_5_triphosphate",
+              "label": "ribavirin 5'-triphosphate",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:45578"
+            },
+            {
+              "node_id": "dengue_ns5_mrna_2o_methyltransferase",
+              "label": "dengue virus NS5 mRNA 2'-O-methyltransferase domain",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Dengue virus NS5 N-terminal mRNA 2'-O-methyltransferase domain; kept label-only with Dengue virus type 2 strain PR159-S1 genome polyprotein (UniProtKB:P12823) protein_examples.",
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P12823",
+                  "protein_label": "Genome polyprotein",
+                  "taxon_id": "NCBITaxon:11066",
+                  "taxon_label": "Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA 2'-O-methyltransferase domain crystallized in a 2.6-angstrom ternary complex with ribavirin 5'-triphosphate at the GTP-binding site (PMID:15152003, PDB 1R6A)."
+                }
+              ]
+            },
+            {
+              "node_id": "rtp_bound_ns5_mtase_gtp_pocket",
+              "label": "ribavirin 5'-triphosphate-bound dengue NS5 methyltransferase GTP-site complex",
+              "node_type": "STATE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "2.6-angstrom ternary cocrystal state (PDB:1R6A) with RTP occupying the N-terminal GTP-binding site of dengue virus NS5 methyltransferase alongside S-adenosyl-L-homocysteine."
+            },
+            {
+              "node_id": "flavivirus_mrna_cap_2o_methylation",
+              "label": "dengue virus NS5-catalyzed mRNA cap 2'-O-methylation",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Viral mRNA cap binding and 2'-O-methyltransferase activity assayed in vitro."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "ribavirin_5_triphosphate",
+              "predicate": "binds",
+              "object": "rtp_bound_ns5_mtase_gtp_pocket",
+              "description": "Ribavirin 5'-triphosphate binds the GTP-binding site of the dengue virus NS5 mRNA 2'-O-methyltransferase domain.",
+              "evidence": [
+                {
+                  "reference": "PMID:15152003",
+                  "notes": "A 2.6-angstrom ternary crystal structure (PDB:1R6A) directly resolved ribavirin 5'-triphosphate bound at the GTP-binding site of dengue virus NS5 methyltransferase."
+                }
+              ]
+            },
+            {
+              "subject": "dengue_ns5_mrna_2o_methyltransferase",
+              "predicate": "participates in",
+              "object": "rtp_bound_ns5_mtase_gtp_pocket",
+              "description": "The dengue virus NS5 N-terminal GTP-binding pocket coordinates the pseudobase and triphosphate moiety of ribavirin 5'-triphosphate.",
+              "evidence": [
+                {
+                  "reference": "PMID:15152003",
+                  "notes": "Structural and competition-binding analyses mapped the NS5 residues forming the GTP/RTP binding pocket."
+                }
+              ]
+            },
+            {
+              "subject": "rtp_bound_ns5_mtase_gtp_pocket",
+              "predicate": "inhibits",
+              "object": "flavivirus_mrna_cap_2o_methylation",
+              "description": "Competitive occupancy of the NS5 GTP pocket by ribavirin 5'-triphosphate inhibits dengue virus mRNA cap 2'-O-methylation.",
+              "evidence": [
+                {
+                  "reference": "PMID:15152003",
+                  "notes": "Biochemical methyltransferase and GTP-competition assays demonstrated that ribavirin 5'-triphosphate inhibits dengue virus NS5 mRNA 2'-O-methylation."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-24T04:31:03Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph ribavirin_5_tp_dengue_ns5_mtase_capping_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:15152003).",
+        "llm_assisted": true
+      }
+    },
+    {
       "identifier": "CHEBI:68606",
       "label": "rilpivirine",
       "path": "data/antibiotics/antiviral/rilpivirine.yaml",
@@ -3885,6 +4343,127 @@
       }
     },
     {
+      "identifier": "CHEBI:77772",
+      "label": "ilicicolin H",
+      "path": "data/antibiotics/unspecified/ilicicolin-h.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "a7f0ced67eff6f5b0c9c353ab02441a2cae2450efb621c4a3b32506bb7379093",
+      "after_sha256": "803a6982fb669457418b3fce6b651ad99a7a5180b5a007c7ab61ee5d41ea212e",
+      "unchanged_fields_sha256": "c870512bee5a6ba138d2a717defe44477bf994d09ed5e8d8bd7739d4f99bad80",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "ilicicolin_h_cytochrome_bc1_qn_site_inhibition",
+          "title": "Ilicicolin H binds the mitochondrial cytochrome bc1 complex Qn site to block ubiquinone reduction",
+          "description": "Ilicicolin H binds stoichiometrically at the center N (Qn / Qi) ubiquinone-reduction pocket of mitochondrial cytochrome b (COB) within complex III, blocks heme bH-to-ubiquinone electron transfer, and inhibits fungal mitochondrial respiration.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "ilicicolin_h",
+              "label": "ilicicolin H",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:77772"
+            },
+            {
+              "node_id": "mitochondrial_cytochrome_b_qn_site",
+              "label": "cytochrome bc1 complex Qn site (cytochrome b)",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Mitochondrial complex III cytochrome b catalytic subunit forming the Qn (Qi) pocket; kept label-only with Saccharomyces cerevisiae S288c COB (UniProtKB:P00163) protein_examples.",
+              "gene_symbols": [
+                "COB"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:P00163",
+                  "protein_label": "Cytochrome b",
+                  "gene_symbol": "COB",
+                  "taxon_id": "NCBITaxon:559292",
+                  "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Mitochondrial cytochrome b catalytic subunit forming the Qn (Qi) ubiquinone-reduction pocket stoichiometrically bound and inhibited at nanomolar potency by ilicicolin H in S. cerevisiae (PMID:14670947; PMID:18022381; S288c reference strain context)."
+                }
+              ]
+            },
+            {
+              "node_id": "ilicicolin_h_bound_qn_pocket",
+              "label": "ilicicolin H-bound cytochrome b Qn ubiquinone-reduction pocket",
+              "node_type": "STATE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Stoichiometric complex III center N (Qn) inhibitor-bound state defined by spectral shifts and single-residue COB resistance mutations."
+            },
+            {
+              "node_id": "cytochrome_bc1_electron_transfer_and_respiration",
+              "label": "mitochondrial complex III ubiquinone reduction and respiratory electron transport",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Heme bH oxidation and ubiquinone reduction in the mitochondrial bc1 Q cycle."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "ilicicolin_h",
+              "predicate": "binds",
+              "object": "ilicicolin_h_bound_qn_pocket",
+              "description": "Ilicicolin H binds stoichiometrically to the center N (Qn) pocket of mitochondrial cytochrome b.",
+              "evidence": [
+                {
+                  "reference": "PMID:14670947",
+                  "notes": "Spectral and kinetic analyses in yeast cytochrome bc1 complex established stoichiometric binding of ilicicolin H at center N with an IC50 of 3-5 nM."
+                },
+                {
+                  "reference": "PMID:18022381",
+                  "notes": "Site-directed and random mutagenesis of Saccharomyces cerevisiae cytochrome b mapped ilicicolin H binding and resistance determinants in the Qn pocket."
+                }
+              ]
+            },
+            {
+              "subject": "mitochondrial_cytochrome_b_qn_site",
+              "predicate": "participates in",
+              "object": "ilicicolin_h_bound_qn_pocket",
+              "description": "Mitochondrial cytochrome b (COB) center N residues form the ubiquinone-reduction pocket occupied by ilicicolin H.",
+              "evidence": [
+                {
+                  "reference": "PMID:18022381",
+                  "notes": "Single amino-acid substitutions in yeast cytochrome b center N conferred strong resistance to ilicicolin H."
+                }
+              ]
+            },
+            {
+              "subject": "ilicicolin_h_bound_qn_pocket",
+              "predicate": "inhibits",
+              "object": "cytochrome_bc1_electron_transfer_and_respiration",
+              "description": "Qn-site blockade by ilicicolin H inhibits electron transfer through cytochrome bc1 and arrests fungal respiratory growth.",
+              "evidence": [
+                {
+                  "reference": "PMID:14670947",
+                  "notes": "Biochemical complex III assays demonstrated potent inhibition of cytochrome bc1 electron transfer at center N by ilicicolin H."
+                },
+                {
+                  "reference": "PMID:18022381",
+                  "notes": "Yeast respiratory-growth and enzyme-inhibition assays linked Qn-pocket binding to potent antifungal respiratory blockade."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-24T04:31:03Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph ilicicolin_h_cytochrome_bc1_qn_site_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:14670947, PMID:18022381).",
+        "llm_assisted": true
+      }
+    },
+    {
       "identifier": "CHEBI:44504",
       "label": "nogalamycin",
       "path": "data/antibiotics/unspecified/nogalamycin.yaml",
@@ -3979,6 +4558,255 @@
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
         "changes": "Added evidence-backed MECHANISTIC causal graph nogalamycin_dna_intercalation_helix_distortion (4 nodes, 3 edges) for the non-protein primary-literature target (PMID:1991116).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:27834",
+      "label": "pentostatin",
+      "path": "data/antibiotics/unspecified/pentostatin.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "c9632a2f14460411cd078f47c02c58838e6833ff7488cd496b9b9150355e208e",
+      "after_sha256": "79ce12d1cc60e2751d822a05d5f5d28dfd8fa534c3be3df0949b3669b94efa3e",
+      "unchanged_fields_sha256": "e1052f8b6ede349cddbfb1f93f6a3f3fa963b57f2240061561a808846774315b",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "pentostatin_adenosine_deaminase_purine_salvage_inhibition",
+          "title": "Pentostatin binds the catalytic site of adenosine deaminase to block purine salvage",
+          "description": "Pentostatin (2'-deoxycoformycin) binds as a tetrahedral transition-state mimic at the catalytic zinc center of Plasmodium vivax adenosine deaminase (ADA), inhibits deamination of adenosine and 2'-deoxyadenosine, and blocks parasite purine-salvage metabolism.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "pentostatin",
+              "label": "pentostatin",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:27834"
+            },
+            {
+              "node_id": "adenosine_deaminase",
+              "label": "adenosine deaminase",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Purine-salvage adenosine deaminase enzyme; kept label-only with Plasmodium vivax Salvador I ADA (UniProtKB:A5KE01) cocrystal protein_examples.",
+              "gene_symbols": [
+                "PVX_111245"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:A5KE01",
+                  "protein_label": "Adenosine deaminase",
+                  "gene_symbol": "PVX_111245",
+                  "taxon_id": "NCBITaxon:126793",
+                  "taxon_label": "Plasmodium vivax (strain Salvador I)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Parasite purine-salvage adenosine deaminase resolved in cocrystal complex with pentostatin (2'-deoxycoformycin) at the catalytic site (PMID:18602399, PDB 2PGG; Salvador I reference strain context)."
+                }
+              ]
+            },
+            {
+              "node_id": "pentostatin_bound_ada_catalytic_site",
+              "label": "pentostatin-bound adenosine deaminase transition-state-analog complex",
+              "node_type": "STATE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "X-ray cocrystal state (PDB:2PGG) with picomolar inhibitor 2'-deoxycoformycin coordinated at the Plasmodium vivax ADA catalytic site."
+            },
+            {
+              "node_id": "adenosine_deamination_and_purine_salvage",
+              "label": "adenosine deamination and purine-salvage metabolism",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Enzymatic conversion of adenosine/2'-deoxyadenosine and downstream purine salvage."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "pentostatin",
+              "predicate": "binds",
+              "object": "pentostatin_bound_ada_catalytic_site",
+              "description": "Pentostatin binds with picomolar affinity at the catalytic site of Plasmodium vivax adenosine deaminase.",
+              "evidence": [
+                {
+                  "reference": "PMID:18602399",
+                  "notes": "The Plasmodium vivax adenosine deaminase cocrystal with 2'-deoxycoformycin (pentostatin, PDB:2PGG) defined high-affinity active-site recognition."
+                }
+              ]
+            },
+            {
+              "subject": "adenosine_deaminase",
+              "predicate": "participates in",
+              "object": "pentostatin_bound_ada_catalytic_site",
+              "description": "Adenosine deaminase catalytic residues and active-site structural elements coordinate pentostatin as a transition-state analog.",
+              "evidence": [
+                {
+                  "reference": "PMID:18602399",
+                  "notes": "Structural comparison of apo, substrate-bound, and pentostatin-bound P. vivax ADA defined the catalytic-site contacts and conformational closure."
+                }
+              ]
+            },
+            {
+              "subject": "pentostatin_bound_ada_catalytic_site",
+              "predicate": "inhibits",
+              "object": "adenosine_deamination_and_purine_salvage",
+              "description": "Transition-state mimicry by pentostatin potently inhibits adenosine deaminase catalysis and blocks purine salvage.",
+              "evidence": [
+                {
+                  "reference": "PMID:18602399",
+                  "notes": "Kinetic and crystallographic characterization established picomolar inhibition of purine-salvage adenosine deaminase by pentostatin."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-24T04:31:03Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph pentostatin_adenosine_deaminase_purine_salvage_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:18602399).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:45773",
+      "label": "streptolydigin",
+      "path": "data/antibiotics/unspecified/streptolydigin.yaml",
+      "cohort": "protein_target_with_examples",
+      "before_sha256": "376cd3ff2b445b64d3003b725e497f7058a1870cd3825e507bbbbc912f181635",
+      "after_sha256": "9e85c5e89e255c66bb2974214f153f7f9cb3aa930c77a5c4fca7acb9090e0109",
+      "unchanged_fields_sha256": "2b942cae8a010f0ef5a1b1faa1bcd4f5e2edadba103391f18085b5770fbe9ee9",
+      "graphs_added": 1,
+      "nodes_added": 4,
+      "edges_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "before_causal_graphs": null,
+      "after_causal_graphs": [
+        {
+          "graph_id": "streptolydigin_rnap_bridge_helix_trigger_loop_inhibition",
+          "title": "Streptolydigin traps the bacterial RNA polymerase bridge helix and trigger loop to block transcription elongation",
+          "description": "Streptolydigin binds bacterial DNA-directed RNA polymerase adjacent to the bridge helix and trigger loop (~20 angstroms from the catalytic Mg2+ center), traps these mobile beta/beta' elements in an inactive conformation, and inhibits nucleotide addition during transcription elongation.",
+          "scope_status": "MECHANISTIC",
+          "nodes": [
+            {
+              "node_id": "streptolydigin",
+              "label": "streptolydigin",
+              "node_type": "COMPOUND",
+              "grounding": "CHEBI:45773"
+            },
+            {
+              "node_id": "bacterial_rnap_bridge_helix_trigger_loop",
+              "label": "bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site",
+              "node_type": "GENE_OR_PROTEIN",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Bacterial multi-subunit DNA-directed RNA polymerase beta/beta' bridge-helix and trigger-loop pocket; kept label-only with Thermus thermophilus HB8 RpoB (UniProtKB:Q8RQE9) and RpoC (UniProtKB:Q8RQE8) protein_examples.",
+              "gene_symbols": [
+                "rpoB",
+                "rpoC"
+              ],
+              "protein_examples": [
+                {
+                  "uniprot_id": "UniProtKB:Q8RQE9",
+                  "protein_label": "DNA-directed RNA polymerase subunit beta",
+                  "gene_symbol": "rpoB",
+                  "taxon_id": "NCBITaxon:300852",
+                  "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Core RNA polymerase beta subunit contributing the Stl1/Stl2 streptolydigin-binding pocket adjacent to the active center in Thermus thermophilus RNAP cocrystals (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR)."
+                },
+                {
+                  "uniprot_id": "UniProtKB:Q8RQE8",
+                  "protein_label": "DNA-directed RNA polymerase subunit beta'",
+                  "gene_symbol": "rpoC",
+                  "taxon_id": "NCBITaxon:300852",
+                  "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+                  "entry_status": "REVIEWED",
+                  "retrieved_on": "2026-10-17",
+                  "role": "Core RNA polymerase beta' subunit whose bridge helix and trigger loop are trapped in an inactive preinsertion conformation by streptolydigin in Thermus thermophilus RNAP cocrystals (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR)."
+                }
+              ]
+            },
+            {
+              "node_id": "streptolydigin_trapped_rnap_conformation",
+              "label": "streptolydigin-stabilized inactive RNA polymerase bridge-helix/trigger-loop conformation",
+              "node_type": "STATE",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "2.4- to 3.0-angstrom cocrystal state (PDB:2A68/1ZYR) locking the straight-bridge-helix and open-trigger-loop conformation."
+            },
+            {
+              "node_id": "rnap_transcription_elongation_catalysis",
+              "label": "bacterial RNA polymerase nucleotide-addition cycle and transcription elongation",
+              "node_type": "BIOLOGICAL_PROCESS",
+              "grounding_status": "REVIEWED_LABEL_ONLY",
+              "grounding_notes": "Phosphodiester bond formation and translocation steps of bacterial transcription elongation."
+            }
+          ],
+          "edges": [
+            {
+              "subject": "streptolydigin",
+              "predicate": "binds",
+              "object": "streptolydigin_trapped_rnap_conformation",
+              "description": "Streptolydigin binds bacterial RNA polymerase alongside the bridge helix and trigger loop and traps an inactive enzyme conformation.",
+              "evidence": [
+                {
+                  "reference": "PMID:16122422",
+                  "notes": "A 2.4-angstrom Thermus thermophilus RNA polymerase-streptolydigin cocrystal (PDB:2A68) resolved drug binding adjacent to the bridge helix and trigger loop."
+                },
+                {
+                  "reference": "PMID:16167380",
+                  "notes": "A 3.0-angstrom T. thermophilus holoenzyme-streptolydigin crystal structure (PDB:1ZYR) and mutational analysis mapped the streptolydigin pocket and conformational trapping."
+                }
+              ]
+            },
+            {
+              "subject": "bacterial_rnap_bridge_helix_trigger_loop",
+              "predicate": "participates in",
+              "object": "streptolydigin_trapped_rnap_conformation",
+              "description": "The RpoB and RpoC subunits form the streptolydigin pocket spanning the STL1/STL2 regions, bridge helix, and trigger loop.",
+              "evidence": [
+                {
+                  "reference": "PMID:16122422",
+                  "notes": "The crystal structure defined direct contacts between streptolydigin and conserved beta (RpoB) and beta' (RpoC) residues."
+                },
+                {
+                  "reference": "PMID:16167380",
+                  "notes": "Substitutions across the RpoB/RpoC bridge-helix and trigger-loop interface altered streptolydigin sensitivity."
+                }
+              ]
+            },
+            {
+              "subject": "streptolydigin_trapped_rnap_conformation",
+              "predicate": "inhibits",
+              "object": "rnap_transcription_elongation_catalysis",
+              "description": "Conformational locking of the bridge helix and trigger loop by streptolydigin inhibits bacterial transcription initiation and elongation catalysis.",
+              "evidence": [
+                {
+                  "reference": "PMID:16122422",
+                  "notes": "Structural and biochemical assays showed that trapping the bridge-helix/trigger-loop conformation blocks RNA polymerase catalytic cycling."
+                },
+                {
+                  "reference": "PMID:16167380",
+                  "notes": "In-vitro transcription assays demonstrated allosteric inhibition of the RNA polymerase nucleotide-addition cycle by streptolydigin."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-24T04:42:46Z",
+        "curator": "antigravity",
+        "action": "CURATED_CAUSAL_GRAPHS",
+        "changes": "Added evidence-backed MECHANISTIC causal graph streptolydigin_rnap_bridge_helix_trigger_loop_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples and primary literature (PMID:16122422, PMID:16167380).",
         "llm_assisted": true
       }
     }
