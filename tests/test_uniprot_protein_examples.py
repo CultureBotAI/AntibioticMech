@@ -79,20 +79,20 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
         "causal_graphs_with_protein_nodes": 40,
         "causal_graphs_held": 20,
         "gene_or_protein_nodes": 42,
-        "primary_literature_targets_total": 95,
-        "primary_literature_targets_populated": 39,
-        "primary_literature_targets_held": 56,
+        "primary_literature_targets_total": 113,
+        "primary_literature_targets_populated": 50,
+        "primary_literature_targets_held": 63,
     }
 
 
 def test_plan_and_transition_summary_counts():
     plan = load_uniprot_examples_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
-    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 37
+    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 48
     assert sum(d["causal_nodes_updated"] for d in receipt["record_deltas"]) == 15
-    assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 29
-    assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 62
-    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 76
+    assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 40
+    assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 78
+    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 83
 
 
 def test_strict_protein_example_and_held_target_validation():
@@ -260,9 +260,13 @@ def test_non_protein_causal_node_and_target_reject_protein_examples():
         )
 
 
-@pytest.mark.parametrize("index", range(37))
+@pytest.mark.parametrize("index", range(48))
 def test_exact_scoped_transition_and_idempotence(
-    pre_causal_graphs_root, pre_uniprot_protein_examples_root, index
+    tmp_path,
+    restore_pre_uniprot_protein_examples,
+    pre_causal_graphs_root,
+    pre_uniprot_protein_examples_root,
+    index,
 ):
     plan = load_uniprot_examples_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
@@ -272,6 +276,12 @@ def test_exact_scoped_transition_and_idempotence(
 
     live_path = pre_causal_graphs_root / delta["path"]
     historical_path = pre_uniprot_protein_examples_root / delta["path"]
+    if not historical_path.exists():
+        historical_path = restore_pre_uniprot_protein_examples(
+            pre_causal_graphs_root,
+            delta["path"],
+            tmp_path / Path(delta["path"]).name,
+        )
     assert hashlib.sha256(live_path.read_bytes()).hexdigest() == delta["after_sha256"]
     assert hashlib.sha256(historical_path.read_bytes()).hexdigest() == delta["before_sha256"]
 

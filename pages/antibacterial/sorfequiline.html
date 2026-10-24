@@ -94,6 +94,34 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 </div>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>mycobacterial F1FO-ATP synthase c and epsilon subunits <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta">Biochemical ATP synthesis inhibition and resistance mutation profiling across F1FO-ATP synthase subunit c (atpE) and epsilon chain (atpC) in Mycobacterium tuberculosis (DOI:10.1128/aac.02404-19; DOI:10.1128/aac.01191-19). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2020-03 (retrieved 2026-10-24).</p>
+<p><em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <code class="curie">NCBITaxon:83332</code></p><div class="table-scroll" role="region" aria-label="mycobacterial F1FO-ATP synthase c and epsilon subunits organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>ATP synthase subunit c <a href="https://www.uniprot.org/uniprotkb/P9WPS1"><code class="curie">UniProtKB:P9WPS1</code></a><br><span class="meta">FO rotor ring c-subunit (AtpE, Rv1305) of Mycobacterium tuberculosis H37Rv F1FO-ATP synthase bound by the diarylquinoline sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19; DOI:10.1128/aac.01191-19).</span></td>
+    <td>atpE</td>
+    <td><em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>ATP synthase epsilon chain <a href="https://www.uniprot.org/uniprotkb/P9WPV1"><code class="curie">UniProtKB:P9WPV1</code></a><br><span class="meta">F1 central-stalk epsilon subunit (AtpC, Rv1311) of Mycobacterium tuberculosis H37Rv F1FO-ATP synthase that forms part of the dual c/epsilon diarylquinoline binding interface targeted by sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19; DOI:10.1128/aac.01191-19).</span></td>
+    <td>atpC</td>
+    <td><em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.02404-19">DOI:10.1128/aac.02404-19</a></span> — "TBAJ-876, a clinical development candidate of this series, shows attractive in vitro antitubercular activity and efficacy in a murine tuberculosis model. TBAJ-876 displayed submicromolar in vitro activity against reference strains representing the three subspecies of M. abscessus and against a collection of clinical isolates." <span class="meta">(Sarathy et al. 2020 (Antimicrob Agents Chemother 64:e02404-19; PMID:31964791) and Sarathy et al. 2019 (Antimicrob Agents Chemother 63:e01191-19; PMID:31358589; DOI:10.1128/aac.01191-19) show that sorfequiline (TBAJ-876) inhibits Mycobacterium tuberculosis H37Rv F1FO-ATP synthase via dual interaction with subunit c (AtpE, Rv1305, UniProtKB:P9WPS1) and the epsilon subunit (AtpC, Rv1311, UniProtKB:P9WPV1).)</span></li>
+</ul>
+
 
 
 
@@ -110,6 +138,16 @@ the product: this is what shows ChEBI and CARD are describing the same structure
     <span class="pill">PROPOSED_FROM_CURATOR_INVENTORY</span>
     <span class="meta">2026-10-24 · seed_from_sources</span>
     <p>Proposed from curation/curator_antibiotics.tsv</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_MOLECULAR_TARGETS</span>
+    <span class="meta">2026-10-24 · antigravity · LLM-assisted</span>
+    <p>Added PRIMARY_LITERATURE molecular_target for mycobacterial F1FO-ATP synthase c and epsilon subunits backed by DOI:10.1128/aac.02404-19.</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-10-24 · antigravity · LLM-assisted</span>
+    <p>Added reviewed UniProtKB:P9WPS1 (Mycobacterium tuberculosis H37Rv AtpE, Rv1305) and UniProtKB:P9WPV1 (AtpC, Rv1311) protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.02404-19).</p>
   </li>
 </ol>
 
@@ -131,7 +169,7 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>8ddb4f4d3b0f</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>6444c9d96f57</code>, 2992 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

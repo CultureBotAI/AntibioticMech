@@ -54,3 +54,52 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial leucyl-tRNA
+    synthetase (LeuRS) backed by DOI:10.1038/s41591-024-02829-7.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WFV1 (Mycobacterium tuberculosis H37Rv LeuS,
+    Rv0041) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41591-024-02829-7).
+  llm_assisted: true
+molecular_targets:
+- target_label: mycobacterial leucyl-tRNA synthetase (LeuRS)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Oxaborole-assisted tRNA(Leu) trapping in the editing active
+    site of Mycobacterium tuberculosis LeuRS (PDB:5AGR) and whole-cell antitubercular
+    activity (DOI:10.1038/s41591-024-02829-7; PMID:28379699).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2024-03
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1038/s41591-024-02829-7
+    snippet: Ganfeborole (GSK3036656) is a first-in-class benzoxaborole inhibiting
+      Mycobacterium tuberculosis leucyl-tRNA synthetase. Ganfeborole exhibits potent
+      in vitro activity against M. tuberculosis H37Rv (MIC = 0.08 uM; ~0.024 ug/mL)
+      and demonstrated bactericidal early bactericidal activity in patients with rifampicin-susceptible
+      pulmonary tuberculosis at oral doses of 10-30 mg once daily.
+    notes: Diacon et al. 2024 (Nat Med 30:896-904; PMID:38365949) and Li et al. 2017
+      (J Med Chem 60:8011-8026; PMID:28379699; PDB:5AGR) establish that ganfeborole
+      (GSK3036656) inhibits Mycobacterium tuberculosis H37Rv leucyl-tRNA synthetase
+      (LeuS, Rv0041, UniProtKB:P9WFV1, IC50 = 0.20 uM) by forming a covalent adduct
+      with the 3'-terminal adenosine of tRNA(Leu) in the editing site.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WFV1
+    protein_label: Leucine--tRNA ligase
+    gene_symbol: leuS
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Mycobacterium tuberculosis H37Rv leucyl-tRNA synthetase (LeuS, Rv0041) whose
+      CP1 editing domain traps the 3'-terminal adenosine of tRNA(Leu) in a covalent
+      spiro-oxaborole adduct with ganfeborole (GSK3036656, IC50 = 0.20 uM, PDB:5AGR;
+      DOI:10.1038/s41591-024-02829-7; PMID:28379699).

@@ -276,10 +276,10 @@ def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_exam
 def _uniprot_protein_examples_transition(root):
     payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "b4e7536197af42399c3ac8918f99814a1c78eb5f0361b95d4a8a498c94d15f27"
+        "ebf6d3a2fbd9c9a201af6530cdf8917b561e123afb49e1c63e812dd157d3b8ad"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 37
+    assert len(transition["record_deltas"]) == 48
     return transition
 
 
@@ -391,7 +391,8 @@ def pre_uniprot_protein_examples_root(tmp_path_factory, pre_causal_graphs_root):
         else:
             (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
     for delta in transition["record_deltas"]:
-        _restore_pre_uniprot_protein_examples(source, delta["path"], root / delta["path"])
+        if delta["path"] in historical_paths:
+            _restore_pre_uniprot_protein_examples(source, delta["path"], root / delta["path"])
     return root
 
 
@@ -449,6 +450,13 @@ def pre_stage5_remediation_root(tmp_path_factory):
     stage5_held_keys = {
         ("molecular_targets", "CHEBI:3732", "PMID:34935599"),
         ("molecular_targets", "CHEBI:600103", "PMID:40455071"),
+        ("molecular_targets", "CHEBI:10100", "DOI:10.3390/antibiotics15090914"),
+        ("molecular_targets", "CHEBI:34825", "DOI:10.1007/s10156-004-0327-1"),
+        ("molecular_targets", "CHEBI:48480", "DOI:10.1093/nar/gkac1189"),
+        ("molecular_targets", "CHEBI:28429", "DOI:10.1177/15353141261501298"),
+        ("molecular_targets", "CHEBI:228412", "DOI:10.1128/spectrum.03588-25"),
+        ("molecular_targets", "antibioticmech:curator-fd1c955758", "DOI:10.1093/mmy/myac049"),
+        ("molecular_targets", "antibioticmech:curator-18f8e84826", "DOI:10.1128/aac.00307-23"),
     }
     promoted_existing_ids = {
         "CHEBI:3732",

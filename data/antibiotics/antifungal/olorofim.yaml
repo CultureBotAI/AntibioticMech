@@ -50,3 +50,38 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Aspergillus fumigatus mitochondrial
+    dihydroorotate dehydrogenase (DHODH / PyrE) backed by DOI:10.1128/aac.00307-23.
+  llm_assisted: true
+molecular_targets:
+- target_label: Aspergillus fumigatus mitochondrial dihydroorotate dehydrogenase (DHODH
+    / PyrE)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:330879
+  taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100
+    / Af293)
+  experimental_context: Direct biochemical inhibition of recombinant Aspergillus fumigatus
+    mitochondrial dihydroorotate dehydrogenase (IC50 = 44 nM) and susceptibility testing
+    across 1,031 clinical A. fumigatus isolates (DOI:10.1128/aac.00307-23; PMID:27791100).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2023-06
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1128/aac.00307-23
+    snippet: Olorofim is a first-in-class orotomide antifungal agent that acts via
+      inhibition of the pyrimidine biosynthesis enzyme dihydroorotate dehydrogenase
+      (DHODH). Olorofim showed potent in vitro activity against A. fumigatus (n =
+      1,031; MIC50/90, 0.03/0.06 mg/L; 100% WT), including itraconazole-non-wild-type
+      (NWT; n = 98; MIC50/90, 0.03/0.06 mg/L) and voriconazole-NWT (n = 55; MIC50/90,
+      0.03/0.06 mg/L) isolates.
+    notes: Pfaller et al. 2023 (Antimicrob Agents Chemother 67:e0030723; PMID:37338411)
+      and Oliver et al. 2016 (Proc Natl Acad Sci U S A 113:12809-12814; PMID:27791100)
+      established that olorofim (F901318) selectively inhibits Aspergillus fumigatus
+      mitochondrial dihydroorotate dehydrogenase (DHODH / PyrE, AFUA_2G11060, IC50
+      = 44 nM); held from reviewed UniProtKB accession assignment because A. fumigatus
+      Af293 PyrE (UniProtKB:Q4W9Z2) is an unreviewed TrEMBL entry.

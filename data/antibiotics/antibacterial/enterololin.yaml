@@ -47,3 +47,61 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Enterobacteriaceae LolCDE
+    lipoprotein transport complex backed by DOI:10.1038/s41564-025-02142-0.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0ADC3 (LolC) and UniProtKB:P75958 (LolE) Escherichia
+    coli K-12 protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41564-025-02142-0).
+  llm_assisted: true
+molecular_targets:
+- target_label: Enterobacteriaceae LolCDE lipoprotein transport complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  experimental_context: Laboratory evolution of resistant mutants mapping to lolC
+    and lolE and lipoprotein trafficking perturbation assays in Escherichia coli (DOI:10.1038/s41564-025-02142-0).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2025-10
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1038/s41564-025-02142-0
+    snippet: Here we screened 10,747 bioactive small molecules for antibacterial activity
+      against AIEC and discovered enterololin, an antibacterial compound with targeted
+      activity against Enterobacteriaceae species. Molecular substructure- and deep
+      learning-guided mechanism-of-action investigations revealed that enterololin
+      perturbs lipoprotein trafficking through a mechanism involving the LolCDE complex,
+      laboratory-evolved resistant mutants predominantly mapped to lolC and lolE,
+      with an in vitro frequency of resistance of ~10-8 to 10-7.
+    notes: Catacutan et al. 2025 (Nat Microbiol 10:2827-2841; PMID:41044363) showed
+      that enterololin inhibits Enterobacteriaceae lipoprotein trafficking through
+      the LolCDE complex, with resistance mutations mapping to transmembrane subunits
+      lolC (UniProtKB:P0ADC3) and lolE (UniProtKB:P75958).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ADC3
+    protein_label: Lipoprotein-releasing system transmembrane protein LolC
+    gene_symbol: lolC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Transmembrane subunit LolC (b1116) of the Escherichia coli LolCDE lipoprotein
+      transport complex to which laboratory-evolved enterololin resistance mutations
+      predominantly mapped (DOI:10.1038/s41564-025-02142-0; PMID:41044363).
+  - uniprot_id: UniProtKB:P75958
+    protein_label: Lipoprotein-releasing system transmembrane protein LolE
+    gene_symbol: lolE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-24'
+    role: Transmembrane subunit LolE (b1118) of the Escherichia coli LolCDE lipoprotein
+      transport complex to which laboratory-evolved enterololin resistance mutations
+      predominantly mapped (DOI:10.1038/s41564-025-02142-0; PMID:41044363).

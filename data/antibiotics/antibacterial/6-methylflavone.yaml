@@ -55,8 +55,38 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ENERGY_METABOLISM_INHIBITION
     (MICROBIAL_TARGET) with primary-literature provenance.
   llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Mycobacterium abscessus membrane
+    potential and respiratory energetics backed by DOI:10.1128/spectrum.03588-25.
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ENERGY_METABOLISM_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Disrupts mycobacterial membrane potential and respiratory
   energetics in Mycobacterium abscessus (DOI:10.1128/spectrum.03588-25).'
+molecular_targets:
+- target_label: Mycobacterium abscessus membrane potential and respiratory energetics
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:36809
+  taxon_label: Mycobacterium abscessus
+  experimental_context: Whole-cell antimycobacterial susceptibility (MIC 8-16 ug/mL
+    across clinical Mycobacterium abscessus isolates) and membrane bioenergetics assays
+    (DOI:10.1128/spectrum.03588-25).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-02
+  source_retrieved_on: '2026-10-24'
+  evidence:
+  - reference: DOI:10.1128/spectrum.03588-25
+    snippet: Among the compounds tested, 6-methylflavone (6-MF) was identified as
+      a selective inhibitor of mycobacterial growth. 6-MF showed consistent activity
+      against multiple clinical isolates of M. abscessus with minimum inhibitory concentration
+      (MIC) values of 8-16 ug/mL and was also effective against intracellular mycobacteria
+      without cytotoxicity.
+    notes: Oh et al. 2026 (Microbiol Spectr; PMID:42007697) identified 6-methylflavone
+      as a selective inhibitor of Mycobacterium abscessus growth (MIC 8-16 ug/mL)
+      acting on mycobacterial membrane potential and respiratory energetics without
+      assigning a single purified protein binding target.
