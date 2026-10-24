@@ -1,0 +1,55 @@
+identifier: CHEBI:10100
+label: zafirlukast
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An indole-based sulfonylcarbamate (leukotriene receptor antagonist) with
+  direct anti-Gram-positive and antimycobacterial activity mediated by inhibition
+  of staphylococcal lipoteichoic acid synthase (LtaS) and mycobacterial Lsr2.
+definition_source: DOI:10.3390/antibiotics15090914
+synonyms:
+- synonym_text: ICI 204219
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: ICI-204219
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc(C(=O)NS(=O)(=O)c2ccccc2C)ccc1Cc1cn(C)c2ccc(NC(=O)OC3CCCC3)cc12
+  standard_inchi: InChI=1S/C31H33N3O6S/c1-20-8-4-7-11-29(20)41(37,38)33-30(35)22-13-12-21(28(17-22)39-3)16-23-19-34(2)27-15-14-24(18-26(23)27)32-31(36)40-25-9-5-6-10-25/h4,7-8,11-15,17-19,25H,5-6,9-10,16H2,1-3H3,(H,32,36)(H,33,35)
+  standard_inchi_key: YEEZWCHGZNKEEK-UHFFFAOYSA-N
+  molecular_formula: C31H33N3O6S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/5717
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 575.687
+  monoisotopic_mass: 575.209
+xrefs:
+- pubchem.compound:5717
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/antibiotics15090914#zafirlukast
+  source_label: zafirlukast
+  minted_identifier: antibioticmech:curator-1bcc363e8e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/antibiotics15090914
+    snippet: Zafirlukast showed modest direct-acting antimicrobial activity (0.5-32
+      ug/mL) against a panel of Gram-positive bacteria, including MRSA. It was also
+      found that Zafirlukast synergised with a number of existing antibiotics. Mutational
+      analysis suggested the target of Zafirlukast in Staphylococci is LtaS (Lipoteichoic
+      acid synthase).
+    notes: Reported by Siegwart et al. 2026 (Antibiotics 15:914; PMID:42792065) to
+      exhibit direct antibacterial activity (MIC 0.5-32 ug/mL) against Gram-positive
+      bacteria including methicillin-resistant Staphylococcus aureus (MRSA) via inhibition
+      of lipoteichoic acid synthase (LtaS), in addition to antimycobacterial activity
+      targeting nucleoid-associated protein Lsr2.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

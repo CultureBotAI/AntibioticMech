@@ -1,0 +1,47 @@
+identifier: antibioticmech:curator-1db8575797
+label: lolamicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 3,4-diaryl-1H-pyrazole antibacterial that selectively inhibits the LolCDE
+  lipoprotein transport complex in pathogenic Gram-negative Enterobacterales while
+  sparing gut commensals.
+definition_source: DOI:10.1038/s41586-024-07502-0
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1cc(-c2cn[nH]c2-c2cccc(OCc3cccc(C#N)c3)c2)cc(C)n1
+  standard_inchi: InChI=1S/C24H20N4O/c1-16-9-21(10-17(2)27-16)23-14-26-28-24(23)20-7-4-8-22(12-20)29-15-19-6-3-5-18(11-19)13-25/h3-12,14H,15H2,1-2H3,(H,26,28)
+  standard_inchi_key: CIXIQLLJOWEAKU-UHFFFAOYSA-N
+  molecular_formula: C24H20N4O
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/168894634
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 380.451
+  monoisotopic_mass: 380.1637
+xrefs:
+- pubchem.compound:168894634
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41586-024-07502-0#lolamicin
+  source_label: lolamicin
+  minted_identifier: antibioticmech:curator-1db8575797
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41586-024-07502-0
+    snippet: The resultant compound—lolamicin—is selectively active against a panel
+      of more than 130 multidrug-resistant clinical isolates, has efficacy in multiple
+      mouse models of acute pneumonia and septicaemia infection, and spares the gut
+      microbiome in mice, preventing secondary infection with Clostridioides difficile.
+    notes: Reported by Munoz et al. 2024 (Nature 630:429-436; PMID:38811738) as a
+      Gram-negative-specific inhibitor of the LolCDE outer-membrane lipoprotein transport
+      complex that spares commensal gut bacteria, with MIC 1-2 ug/mL against Escherichia
+      coli and Klebsiella pneumoniae clinical isolates (MIC50/MIC90 1/2 mg/L for E.
+      coli and 1/4 mg/L for K. pneumoniae in DOI:10.1128/aac.01701-25).
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

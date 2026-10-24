@@ -1,0 +1,52 @@
+identifier: antibioticmech:curator-18f8e84826
+label: olorofim
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A first-in-class orotomide antifungal agent that selectively inhibits
+  fungal mitochondrial dihydroorotate dehydrogenase (DHODH) in de novo pyrimidine
+  biosynthesis.
+definition_source: DOI:10.1128/aac.00307-23
+synonyms:
+- synonym_text: F901318
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: Cc1cc(-c2ccccc2)c(C(=O)C(=O)Nc2ccc(N3CCN(c4ncc(F)cn4)CC3)cc2)n1C
+  standard_inchi: InChI=1S/C28H27FN6O2/c1-19-16-24(20-6-4-3-5-7-20)25(33(19)2)26(36)27(37)32-22-8-10-23(11-9-22)34-12-14-35(15-13-34)28-30-17-21(29)18-31-28/h3-11,16-18H,12-15H2,1-2H3,(H,32,37)
+  standard_inchi_key: SUFPWYYDCOKDLL-UHFFFAOYSA-N
+  molecular_formula: C28H27FN6O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/91885568
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 498.562
+  monoisotopic_mass: 498.218
+xrefs:
+- pubchem.compound:91885568
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.00307-23#olorofim
+  source_label: olorofim
+  minted_identifier: antibioticmech:curator-18f8e84826
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/aac.00307-23
+    snippet: Olorofim is a first-in-class orotomide antifungal agent that acts via
+      inhibition of the pyrimidine biosynthesis enzyme dihydroorotate dehydrogenase
+      (DHODH). Olorofim showed potent in vitro activity against A. fumigatus (n =
+      1,031; MIC50/90, 0.03/0.06 mg/L; 100% WT), including itraconazole-non-wild-type
+      (NWT; n = 98; MIC50/90, 0.03/0.06 mg/L) and voriconazole-NWT (n = 55; MIC50/90,
+      0.03/0.06 mg/L) isolates.
+    notes: Reported by Pfaller et al. 2023 (Antimicrob Agents Chemother 67:e0030723;
+      PMID:37338411) as a first-in-class orotomide pyrrole-2-yl-2-oxoacetamide antifungal
+      (F901318) that inhibits fungal dihydroorotate dehydrogenase (DHODH), showing
+      MIC50/MIC90 of 0.03/0.06 mg/L across 1,031 clinical Aspergillus fumigatus isolates.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

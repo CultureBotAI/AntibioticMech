@@ -1,0 +1,54 @@
+identifier: antibioticmech:curator-d3ab9579ab
+label: ridinilazole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A symmetrical 2,2'-bis(pyridin-4-yl)-1H,1'H-5,5'-bibenzimidazole narrow-spectrum
+  antibacterial agent active against Clostridioides difficile.
+definition_source: DOI:10.1093/jac/dkae149
+synonyms:
+- synonym_text: SMT19969
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: SMT-19969
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: c1cc(-c2nc3ccc(-c4ccc5nc(-c6ccncc6)[nH]c5c4)cc3[nH]2)ccn1
+  standard_inchi: InChI=1S/C24H16N6/c1-3-19-21(29-23(27-19)15-5-9-25-10-6-15)13-17(1)18-2-4-20-22(14-18)30-24(28-20)16-7-11-26-12-8-16/h1-14H,(H,27,29)(H,28,30)
+  standard_inchi_key: UHQFBTAJFNVZIV-UHFFFAOYSA-N
+  molecular_formula: C24H16N6
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/16659285
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 388.434
+  monoisotopic_mass: 388.1436
+xrefs:
+- pubchem.compound:16659285
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1093/jac/dkae149#ridinilazole
+  source_label: ridinilazole
+  minted_identifier: antibioticmech:curator-d3ab9579ab
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1093/jac/dkae149
+    snippet: Ridinilazole (RDZ) is a narrow-spectrum bis-benzimidazole antibacterial
+      agent developed for the treatment of Clostridioides difficile infection (CDI).
+      Across all 304 baseline C. difficile isolates collected in the Phase 3 Ri-CoDIFy
+      trials, ridinilazole demonstrated potent in vitro activity with an MIC50 of
+      0.125 mg/L, an MIC90 of 0.25 mg/L, and an MIC range of 0.03 to 0.5 mg/L.
+    notes: Reported by Basseres et al. 2024 (J Antimicrob Chemother 79:1906-1914;
+      PMID:38775229) as a narrow-spectrum symmetrical bis-benzimidazole antibacterial
+      (SMT19969) that binds the DNA minor groove and impairs bacterial septum formation,
+      with MIC50/MIC90 of 0.125/0.25 mg/L across 304 Phase 3 Clostridioides difficile
+      clinical isolates.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

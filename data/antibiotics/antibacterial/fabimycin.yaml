@@ -1,0 +1,47 @@
+identifier: antibioticmech:curator-47d32d7a07
+label: fabimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A pyrido[2,3-b]azepinone-linked tetrahydro-1,8-naphthyridine antibacterial
+  that accumulates in Gram-negative bacteria and inhibits the fatty acid biosynthesis
+  enzyme enoyl-acyl carrier protein reductase (FabI).
+definition_source: DOI:10.1021/acscentsci.2c00598
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1c(CN(C)C(=O)/C=C/c2cnc3c(c2)CC[C@H](N)C(=O)N3)oc2ccccc12.Cl
+  standard_inchi: InChI=1S/C23H24N4O3.ClH/c1-14-17-5-3-4-6-19(17)30-20(14)13-27(2)21(28)10-7-15-11-16-8-9-18(24)23(29)26-22(16)25-12-15;/h3-7,10-12,18H,8-9,13,24H2,1-2H3,(H,25,26,29);1H/b10-7+;/t18-;/m0./s1
+  standard_inchi_key: FCJIJHAQWMWXOH-CVODZKDNSA-N
+  molecular_formula: C23H25ClN4O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/156500279
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 440.931
+  monoisotopic_mass: 440.1615
+xrefs:
+- pubchem.compound:156500279
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acscentsci.2c00598#fabimycin
+  source_label: fabimycin
+  minted_identifier: antibioticmech:curator-47d32d7a07
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acscentsci.2c00598
+    snippet: This compound, which we have named fabimycin, displays impressive activity
+      against >200 clinical isolates of E. coli, K. pneumoniae, and A. baumannii,
+      does not kill commensal bacteria indiscriminately, and demonstrates efficacy
+      in multiple mouse models of infection caused by Gram-negative bacteria.
+    notes: Reported by Parker et al. 2022 (ACS Cent Sci 8:1145-1158; PMID:36035943)
+      as an eNTRy-rule-optimized primary-amine-bearing enoyl-ACP reductase (FabI)
+      inhibitor active against >200 clinical isolates of Escherichia coli, Klebsiella
+      pneumoniae, and Acinetobacter baumannii (typical MICs 1-4 ug/mL; confirmed at
+      MIC 2 ug/mL against K. pneumoniae ATCC 43816 in DOI:10.1021/acsinfecdis.3c00391).
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,51 @@
+identifier: antibioticmech:curator-0f0bc2f555
+label: ibezapolstat
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 7-(2-morpholin-4-ylethyl)-N2-(3,4-dichlorobenzyl)guanine antibacterial
+  that inhibits bacterial DNA polymerase IIIC (PolC) in Clostridioides difficile and
+  other Firmicutes.
+definition_source: DOI:10.1128/aac.00332-24
+synonyms:
+- synonym_text: ACX-362E
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=c1[nH]c(NCc2ccc(Cl)c(Cl)c2)nc2ncn(CCN3CCOCC3)c12
+  standard_inchi: InChI=1S/C18H20Cl2N6O2/c19-13-2-1-12(9-14(13)20)10-21-18-23-16-15(17(27)24-18)26(11-22-16)4-3-25-5-7-28-8-6-25/h1-2,9,11H,3-8,10H2,(H2,21,23,24,27)
+  standard_inchi_key: DEGSGBKTODESHH-UHFFFAOYSA-N
+  molecular_formula: C18H20Cl2N6O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/136022209
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 423.304
+  monoisotopic_mass: 422.1025
+xrefs:
+- pubchem.compound:136022209
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.00332-24#ibezapolstat
+  source_label: ibezapolstat
+  minted_identifier: antibioticmech:curator-0f0bc2f555
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/aac.00332-24
+    snippet: Ibezapolstat is a novel DNA polymerase IIIC inhibitor structural class
+      under clinical development for the treatment of Clostridioides difficile infection
+      (CDI). In the 28 RT027 strains, the MIC50, MIC90, and geometric mean MIC values
+      were 2.0, 4.0, and 2.1 ug/mL for ibezapolstat.
+    notes: Reported by Murray et al. 2024 (Antimicrob Agents Chemother 68:e0033224;
+      PMID:38717162) as a dichlorobenzyl-substituted guanine analogue (ACX-362E) that
+      selectively inhibits low-G+C Gram-positive bacterial DNA polymerase IIIC (PolC),
+      with MIC50 = 2.0 ug/mL and MIC90 = 4.0 ug/mL against clinical Clostridioides
+      difficile isolates.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

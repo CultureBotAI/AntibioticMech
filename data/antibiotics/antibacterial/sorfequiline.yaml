@@ -1,0 +1,54 @@
+identifier: antibioticmech:curator-0106724e5f
+label: sorfequiline
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 3,5-dialkoxypyridine diarylquinoline antimycobacterial agent (TBAJ-876)
+  that inhibits mycobacterial F1FO-ATP synthase by binding both the c-ring and epsilon
+  subunit.
+definition_source: DOI:10.1128/aac.02404-19
+synonyms:
+- synonym_text: TBAJ-876
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1cc([C@](O)(CCN(C)C)[C@@H](c2cc3cc(Br)ccc3nc2OC)c2cc(OC)nc(OC)c2OC)cc(OC)n1
+  standard_inchi: InChI=1S/C31H37BrN4O7/c1-36(2)12-11-31(37,19-15-24(38-3)34-25(16-19)39-4)27(21-17-26(40-5)35-30(43-8)28(21)41-6)22-14-18-13-20(32)9-10-23(18)33-29(22)42-7/h9-10,13-17,27,37H,11-12H2,1-8H3/t27-,31-/m1/s1
+  standard_inchi_key: HHDDKDPLFXIPBX-DLFZDVPBSA-N
+  molecular_formula: C31H37BrN4O7
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/155510360
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 657.562
+  monoisotopic_mass: 656.1846
+xrefs:
+- pubchem.compound:155510360
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/aac.02404-19#sorfequiline
+  source_label: sorfequiline
+  minted_identifier: antibioticmech:curator-0106724e5f
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/aac.02404-19
+    snippet: TBAJ-876, a clinical development candidate of this series, shows attractive
+      in vitro antitubercular activity and efficacy in a murine tuberculosis model.
+      TBAJ-876 displayed submicromolar in vitro activity against reference strains
+      representing the three subspecies of M. abscessus and against a collection of
+      clinical isolates.
+    notes: Reported by Sarathy et al. 2020 (Antimicrob Agents Chemother 64:e02404-19;
+      PMID:31964791) and Sarathy et al. 2019 (Antimicrob Agents Chemother 63:e01191-19;
+      PMID:31358589; DOI:10.1128/aac.01191-19) as a next-generation 3,5-dialkoxypyridine
+      diarylquinoline (TBAJ-876, INN sorfequiline) targeting the c and epsilon subunits
+      of mycobacterial F1FO-ATP synthase, with MIC50 = 0.004 uM against Mycobacterium
+      tuberculosis H37Rv and submicromolar MICs (0.15-0.6 uM) across Mycobacterium
+      abscessus isolates.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

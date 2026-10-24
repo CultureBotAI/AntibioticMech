@@ -1,0 +1,55 @@
+identifier: antibioticmech:curator-ea7a857ee7
+label: afabicin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An O-phosphonooxymethyl prodrug of afabicin desphosphono (AFN-1252) that
+  selectively inhibits staphylococcal enoyl-acyl carrier protein reductase (FabI)
+  in bacterial type II fatty acid biosynthesis.
+definition_source: DOI:10.1093/jac/dkae155
+synonyms:
+- synonym_text: Debio 1450
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: Debio-1450
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: Cc1c(CN(C)C(=O)/C=C/c2cnc3c(c2)CCC(=O)N3COP(=O)(O)O)oc2ccccc12
+  standard_inchi: InChI=1S/C23H24N3O7P/c1-15-18-5-3-4-6-19(18)33-20(15)13-25(2)21(27)9-7-16-11-17-8-10-22(28)26(23(17)24-12-16)14-32-34(29,30)31/h3-7,9,11-12H,8,10,13-14H2,1-2H3,(H2,29,30,31)/b9-7+
+  standard_inchi_key: HFYMDQMXVPJNTH-VQHVLOKHSA-N
+  molecular_formula: C23H24N3O7P
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/72696796
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 485.433
+  monoisotopic_mass: 485.1352
+xrefs:
+- pubchem.compound:72696796
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1093/jac/dkae155#afabicin
+  source_label: afabicin
+  minted_identifier: antibioticmech:curator-ea7a857ee7
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1093/jac/dkae155
+    snippet: Afabicin, the prodrug of afabicin desphosphono, is a novel antibiotic
+      targeting the bacterial type II fatty acid synthesis (FASII) pathway (FabI inhibitor)
+      with potent activity against staphylococci. Afabicin desphosphono showed potent
+      in vitro activity against all 210 clinical isolates of staphylococci (MIC50
+      <= 0.008 mg/L; MIC90 = 0.015 mg/L), regardless of species and methicillin resistance
+      status.
+    notes: Reported by Valour et al. 2024 (J Antimicrob Chemother 79:1857-1869; PMID:38814612)
+      as the O-phosphonooxymethyl prodrug (Debio 1450) of afabicin desphosphono (AFN-1252,
+      Debio 1452), targeting staphylococcal enoyl-ACP reductase FabI with MIC50 <=
+      0.008 mg/L and MIC90 = 0.015 mg/L across 210 clinical Staphylococcus isolates.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

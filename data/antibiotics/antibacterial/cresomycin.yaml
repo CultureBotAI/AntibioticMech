@@ -1,0 +1,54 @@
+identifier: antibioticmech:curator-38d4b5a16d
+label: cresomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A synthetic bridged macrobicyclic oxepanoprolinamide antibiotic preorganized
+  for binding to the bacterial 50S ribosomal peptidyl transferase center and active
+  against multidrug-resistant Gram-positive and Gram-negative bacteria.
+definition_source: DOI:10.1126/science.adk8013
+synonyms:
+- synonym_text: CRM
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)C[C@@H]1CCO[C@@H]2[C@H](CN[C@@H]2C(=O)N[C@H]2[C@H]3O[C@H](SCC/C=C\[C@H]2C)[C@H](O)[C@@H](O)[C@H]3O)C1
+  standard_inchi: InChI=1S/C25H42N2O6S/c1-13(2)10-15-7-8-32-22-16(11-15)12-26-18(22)24(31)27-17-14(3)6-4-5-9-34-25-21(30)19(28)20(29)23(17)33-25/h4,6,13-23,25-26,28-30H,5,7-12H2,1-3H3,(H,27,31)/b6-4-/t14-,15+,16+,17-,18+,19+,20-,21-,22-,23-,25-/m1/s1
+  standard_inchi_key: GMONVEGLHZWYNO-JBYNEVPESA-N
+  molecular_formula: C25H42N2O6S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/169247206
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 498.686
+  monoisotopic_mass: 498.2764
+xrefs:
+- pubchem.compound:169247206
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1126/science.adk8013#cresomycin
+  source_label: cresomycin
+  minted_identifier: antibioticmech:curator-38d4b5a16d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1126/science.adk8013
+    snippet: On the basis of structural analyses of bacterial ribosomes bound to diverse
+      antibiotics, we designed a conformationally restricted molecule, which we name
+      cresomycin (CRM), that adopts the exact conformation required for ribosomal
+      binding. CRM exhibits potent in vitro and in vivo efficacy against both Gram-positive
+      and Gram-negative bacteria, including multidrug-resistant strains of Staphylococcus
+      aureus, Escherichia coli, and Pseudomonas aeruginosa.
+    notes: Reported by Wu et al. 2024 (Science 383:721-726; PMID:38359125) as a conformationally
+      preorganized bridged macrobicyclic oxepanoprolinamide antibiotic targeting the
+      bacterial 50S ribosomal subunit peptidyl transferase center, exhibiting MICs
+      of <=0.06-0.25 ug/mL against multidrug-resistant Staphylococcus aureus (including
+      cfr- and erm-positive strains), 1-2 ug/mL against Escherichia coli, and in vivo
+      murine septicemia and thigh-infection efficacy.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,56 @@
+identifier: antibioticmech:curator-172bfdd938
+label: ganfeborole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 4-chloro-3-aminomethylbenzoxaborole antitubercular agent that selectively
+  inhibits Mycobacterium tuberculosis leucyl-tRNA synthetase (LeuRS).
+definition_source: DOI:10.1038/s41591-024-02829-7
+synonyms:
+- synonym_text: GSK3036656
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GSK-3036656
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GSK656
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: NC[C@H]1OB(O)c2c(OCCO)ccc(Cl)c21
+  standard_inchi: InChI=1S/C10H13BClNO4/c12-6-1-2-7(16-4-3-14)10-9(6)8(5-13)17-11(10)15/h1-2,8,14-15H,3-5,13H2/t8-/m1/s1
+  standard_inchi_key: DJUOWOXTPXUHDQ-MRVPVSSYSA-N
+  molecular_formula: C10H13BClNO4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/133080621
+  retrieved_on: '2026-10-23'
+  charge: 0
+  average_mass: 257.482
+  monoisotopic_mass: 257.0626
+xrefs:
+- pubchem.compound:133080621
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41591-024-02829-7#ganfeborole
+  source_label: ganfeborole
+  minted_identifier: antibioticmech:curator-172bfdd938
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41591-024-02829-7
+    snippet: Ganfeborole (GSK3036656) is a first-in-class benzoxaborole inhibiting
+      Mycobacterium tuberculosis leucyl-tRNA synthetase. Ganfeborole exhibits potent
+      in vitro activity against M. tuberculosis H37Rv (MIC = 0.08 uM; ~0.024 ug/mL)
+      and demonstrated bactericidal early bactericidal activity in patients with rifampicin-susceptible
+      pulmonary tuberculosis at oral doses of 10-30 mg once daily.
+    notes: Reported by Diacon et al. 2024 (Nat Med 30:896-904; PMID:38365949) as a
+      4-chlorobenzoxaborole inhibitor (GSK3036656, GSK656) of Mycobacterium tuberculosis
+      leucyl-tRNA synthetase (LeuRS), with an M. tuberculosis H37Rv MIC of 0.08 uM
+      (~0.024 ug/mL) and clinical bactericidal efficacy in Phase 2a tuberculosis patients.
+  source_version: '2026-10-23'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
