@@ -1,0 +1,53 @@
+identifier: CHEBI:198310
+label: negamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A natural pseudodipeptide hydrazide antibiotic ([2-[(3R,5R)-3,6-diamino-5-hydroxyhexanoyl]-1-methylhydrazinyl]acetic
+  acid) that binds helix 34 of the bacterial 30S ribosomal subunit to impair translocation
+  and induce miscoding.
+definition_source: DOI:10.1073/pnas.1414401111
+synonyms:
+- synonym_text: (+)-negamycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CN(CC(=O)O)NC(=O)C[C@H](N)C[C@@H](O)CN
+  standard_inchi: InChI=1S/C9H20N4O4/c1-13(5-9(16)17)12-8(15)3-6(11)2-7(14)4-10/h6-7,14H,2-5,10-11H2,1H3,(H,12,15)(H,16,17)/t6-,7-/m1/s1
+  standard_inchi_key: IKHFJPZQZVMLRH-RNFRBKRXSA-N
+  molecular_formula: C9H20N4O4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/11118411
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 248.283
+  monoisotopic_mass: 248.1485
+xrefs:
+- pubchem.compound:11118411
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1073/pnas.1414401111#negamycin
+  source_label: negamycin
+  minted_identifier: antibioticmech:curator-d9386dbf24
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1073/pnas.1414401111
+    snippet: Olivier et al. determined the crystal structure of negamycin bound to
+      the Escherichia coli 70S ribosome, showed that negamycin binds helix 34 of the
+      30S ribosomal subunit head domain to induce translational stalling and miscoding
+      (translation IC50 = 1.8 uM), and reported an MIC of 32 ug/mL against E. coli
+      ATCC 25922 and single-rrn strain SQ110 that increased 16- to 32-fold upon 16S
+      rRNA U1052G or U1060A mutation.
+    notes: Reported by Olivier et al. 2014 (Proc Natl Acad Sci U S A 111:16274-16279;
+      PMID:25349415) and Polikanov et al. 2014 (Mol Cell 56:541-550; DOI:10.1016/j.molcel.2014.09.021)
+      as a Streptomyces pseudodipeptide hydrazide antibiotic targeting 16S rRNA helix
+      34 in the 30S ribosomal decoding center. PubChem CID 11118411 and ChEBI CHEBI:198310
+      supply the standard InChI, InChIKey, formula, and isomeric SMILES for negamycin.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

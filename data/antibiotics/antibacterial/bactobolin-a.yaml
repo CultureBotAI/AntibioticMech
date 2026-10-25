@@ -1,0 +1,57 @@
+identifier: CHEBI:138579
+label: bactobolin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A Burkholderia thailandensis dichloromethyl bicyclic lactone-alanine hybrid
+  antibiotic that binds the bacterial ribosome at the P-site tRNA/23S rRNA/ribosomal
+  protein uL2 interface and inhibits translation termination.
+definition_source: DOI:10.1128/mBio.00499-12
+synonyms:
+- synonym_text: bactobolin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: NSC-325014
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H](N)C(=O)N[C@@H]1[C@H]2C(=C(O)C[C@@H](O)[C@@H]2O)C(=O)O[C@]1(C)C(Cl)Cl
+  standard_inchi: InChI=1S/C14H20Cl2N2O6/c1-4(17)11(22)18-10-8-7(5(19)3-6(20)9(8)21)12(23)24-14(10,2)13(15)16/h4,6,8-10,13,19-21H,3,17H2,1-2H3,(H,18,22)/t4-,6+,8-,9-,10+,14-/m0/s1
+  standard_inchi_key: RBCHRRIVFAIGFI-RGBMRXMBSA-N
+  molecular_formula: C14H20Cl2N2O6
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/54676871
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 383.228
+  monoisotopic_mass: 382.0698
+xrefs:
+- pubchem.compound:54676871
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/mBio.00499-12#bactobolin-a
+  source_label: bactobolin A
+  minted_identifier: antibioticmech:curator-64cabf0b1a
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/mBio.00499-12
+    snippet: Chandler et al. identified quorum-sensing-controlled bactobolin A as
+      the broad-spectrum antibiotic secreted by Burkholderia thailandensis, reported
+      an MIC of 0.31 ug/mL against Bacillus subtilis 168, and demonstrated that resistance
+      mutations map to the conserved uL2 (RplB) ribosomal protein (E236A or E236Q,
+      increasing the B. subtilis MIC to 4.2 to 5.0 ug/mL).
+    notes: Reported by Chandler et al. 2012 (mBio 3:e00499-12; PMID:23269829) and
+      Amunts et al. 2015 (J Mol Biol 427:753-755; DOI:10.1016/j.jmb.2014.12.018) as
+      a Burkholderia thailandensis polyketide-peptide hybrid antibiotic that binds
+      a unique site on the 50S ribosomal subunit coordinated by ribosomal protein
+      uL2 and 23S rRNA together with P-site tRNA. PubChem CID 54676871 and ChEBI CHEBI:138579
+      supply the standard InChI, InChIKey, formula, and isomeric SMILES for bactobolin
+      A.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

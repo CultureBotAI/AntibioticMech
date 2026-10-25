@@ -1,0 +1,58 @@
+identifier: antibioticmech:curator-f56d459cee
+label: sutezolid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A thiomorpholinyl oxazolidinone antimycobacterial agent (PNU-100480) that
+  binds the 23S rRNA peptidyl transferase center of the mycobacterial 50S ribosomal
+  subunit and inhibits bacterial translation.
+definition_source: DOI:10.1128/AAC.01182-08
+synonyms:
+- synonym_text: PNU-100480
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: U-100480
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: PF-02341272
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(=O)NC[C@H]1CN(c2ccc(N3CCSCC3)c(F)c2)C(=O)O1
+  standard_inchi: InChI=1S/C16H20FN3O3S/c1-11(21)18-9-13-10-20(16(22)23-13)12-2-3-15(14(17)8-12)19-4-6-24-7-5-19/h2-3,8,13H,4-7,9-10H2,1H3,(H,18,21)/t13-/m0/s1
+  standard_inchi_key: FNDDDNOJWPQCBZ-ZDUSSCGKSA-N
+  molecular_formula: C16H20FN3O3S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/465951
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 353.419
+  monoisotopic_mass: 353.1209
+xrefs:
+- pubchem.compound:465951
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.01182-08#sutezolid
+  source_label: sutezolid
+  minted_identifier: antibioticmech:curator-f56d459cee
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.01182-08
+    snippet: Williams et al. evaluated the thiomorpholinyl oxazolidinone PNU-100480
+      (sutezolid) against Mycobacterium tuberculosis H37Rv, reporting an MIC of 0.25
+      ug/mL (twofold lower than linezolid) and markedly superior sterilizing bactericidal
+      activity in a murine tuberculosis model both alone and in combination with first-line
+      antitubercular drugs.
+    notes: Reported by Williams et al. 2009 (Antimicrob Agents Chemother 53:1314-1319;
+      PMID:19075057) and Barbachyn et al. 1996 (J Med Chem 39:680-685; DOI:10.1021/jm950956y)
+      as a thiomorpholinyl oxazolidinone antitubercular agent (PNU-100480, U-100480)
+      that inhibits mycobacterial 50S ribosomal protein synthesis. PubChem CID 465951
+      supplies the standard InChI, InChIKey, formula, and isomeric SMILES for sutezolid.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

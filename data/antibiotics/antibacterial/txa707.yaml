@@ -1,0 +1,52 @@
+identifier: antibioticmech:curator-3fca4e69a7
+label: TXA707
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 2,6-difluoro-3-{[6-(trifluoromethyl)[1,3]thiazolo[5,4-b]pyridin-2-yl]methoxy}benzamide
+  antibacterial agent (active moiety of TXA709) that targets staphylococcal cell division
+  protein FtsZ.
+definition_source: DOI:10.1128/AAC.00708-15
+synonyms:
+- synonym_text: TXA-707
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: NC(=O)c1c(F)ccc(OCc2nc3cc(C(F)(F)F)cnc3s2)c1F
+  standard_inchi: InChI=1S/C15H8F5N3O2S/c16-7-1-2-9(12(17)11(7)13(21)24)25-5-10-23-8-3-6(15(18,19)20)4-22-14(8)26-10/h1-4H,5H2,(H2,21,24)
+  standard_inchi_key: ZVALMTAWSBJQSN-UHFFFAOYSA-N
+  molecular_formula: C15H8F5N3O2S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/90135655
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 389.305
+  monoisotopic_mass: 389.0257
+xrefs:
+- pubchem.compound:90135655
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.00708-15#txa707
+  source_label: TXA707
+  minted_identifier: antibioticmech:curator-3fca4e69a7
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.00708-15
+    snippet: Kaul et al. designed the metabolic-stability-optimized FtsZ-targeting
+      benzamide TXA707 by replacing the Cl atom of PC190723 with a CF3 group and reported
+      bactericidal activity against methicillin-resistant, vancomycin-intermediate,
+      and linezolid-resistant Staphylococcus aureus clinical isolates with MIC values
+      of 0.5 to 2 ug/mL.
+    notes: Reported by Kaul et al. 2015 (Antimicrob Agents Chemother 59:4845-4855;
+      PMID:26033730) and Kaul et al. 2017 (Antimicrob Agents Chemother 61:e00863-17;
+      DOI:10.1128/AAC.00863-17) as the active FtsZ-targeting 2,6-difluorobenzamide
+      antibacterial moiety of the prodrug TXA709. PubChem CID 90135655 supplies the
+      standard InChI, InChIKey, formula, and SMILES for TXA707.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,53 @@
+identifier: antibioticmech:curator-20568fed2e
+label: BTZ043
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 2-[(2S)-2-methyl-1,4-dioxa-8-azaspiro[4.5]decan-8-yl]-8-nitro-6-(trifluoromethyl)-4H-1,3-benzothiazin-4-one
+  antitubercular agent that covalently inactivates mycobacterial decaprenylphosphoryl-beta-D-ribose
+  2'-oxidase (DprE1).
+definition_source: DOI:10.1126/science.1171583
+synonyms:
+- synonym_text: BTZ-043
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H]1COC2(CCN(c3nc(=O)c4cc(C(F)(F)F)cc([N+](=O)[O-])c4s3)CC2)O1
+  standard_inchi: InChI=1S/C17H16F3N3O5S/c1-9-8-27-16(28-9)2-4-22(5-3-16)15-21-14(24)11-6-10(17(18,19)20)7-12(23(25)26)13(11)29-15/h6-7,9H,2-5,8H2,1H3/t9-/m0/s1
+  standard_inchi_key: GTUIRORNXIOHQR-VIFPVBQESA-N
+  molecular_formula: C17H16F3N3O5S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/42609849
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 431.392
+  monoisotopic_mass: 431.0763
+xrefs:
+- pubchem.compound:42609849
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1126/science.1171583#btz043
+  source_label: BTZ043
+  minted_identifier: antibioticmech:curator-20568fed2e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1126/science.1171583
+    snippet: Makarov et al. discovered 1,3-benzothiazin-4-ones and identified the
+      S-enantiomer BTZ043, reporting an MIC of 1 ng/mL (2.3 nM) against Mycobacterium
+      tuberculosis H37Rv and 4 ng/mL against Mycobacterium smegmatis, covalent inhibition
+      of decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1), and bactericidal
+      efficacy across multidrug- and extensively drug-resistant M. tuberculosis clinical
+      isolates.
+    notes: Reported by Makarov et al. 2009 (Science 324:801-804; PMID:19299584) as
+      the first-in-class 8-nitro-6-(trifluoromethyl)-1,3-benzothiazin-4-one antitubercular
+      agent (BTZ-043) that undergoes nitroreduction and forms a covalent semimercaptal
+      adduct with Cys387 of mycobacterial DprE1. PubChem CID 42609849 supplies the
+      standard InChI, InChIKey, formula, and isomeric SMILES for BTZ043.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

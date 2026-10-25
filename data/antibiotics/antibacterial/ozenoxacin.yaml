@@ -1,0 +1,56 @@
+identifier: CHEBI:136050
+label: ozenoxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A nonfluorinated 1-cyclopropyl-8-methyl-7-[5-methyl-6-(methylamino)pyridin-3-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic
+  acid quinolone antibacterial that inhibits bacterial DNA gyrase and topoisomerase
+  IV.
+definition_source: DOI:10.1128/AAC.01509-13
+synonyms:
+- synonym_text: T-3912
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GF-001001-00
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CNc1ncc(-c2ccc3c(=O)c(C(=O)O)cn(C4CC4)c3c2C)cc1C
+  standard_inchi: InChI=1S/C21H21N3O3/c1-11-8-13(9-23-20(11)22-3)15-6-7-16-18(12(15)2)24(14-4-5-14)10-17(19(16)25)21(26)27/h6-10,14H,4-5H2,1-3H3,(H,22,23)(H,26,27)
+  standard_inchi_key: XPIJWUTXQAGSLK-UHFFFAOYSA-N
+  molecular_formula: C21H21N3O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/9863827
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 363.417
+  monoisotopic_mass: 363.1583
+xrefs:
+- pubchem.compound:9863827
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.01509-13#ozenoxacin
+  source_label: ozenoxacin
+  minted_identifier: antibioticmech:curator-e58120938c
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.01509-13
+    snippet: Tato et al. evaluated the nonfluorinated quinolone ozenoxacin (T-3912)
+      against 1,031 Gram-positive clinical isolates from skin and soft tissue infections
+      and reported MIC50 and MIC90 values of 0.002 and 0.004 ug/mL for methicillin-susceptible
+      Staphylococcus aureus, 0.004 and 0.12 ug/mL for methicillin-resistant S. aureus,
+      and 0.015 and 0.03 ug/mL for Streptococcus pyogenes.
+    notes: Reported by Tato et al. 2014 (Antimicrob Agents Chemother 58:3579-3581;
+      PMID:24687498) and Yamakawa et al. 2002 (Antimicrob Agents Chemother 46:1229-1234;
+      DOI:10.1128/AAC.46.5.1229-1234.2002) as a nonfluorinated pyridone quinolone
+      antibacterial (T-3912) that dually inhibits DNA gyrase and topoisomerase IV.
+      PubChem CID 9863827 and ChEBI CHEBI:136050 supply the standard InChI, InChIKey,
+      formula, and SMILES for ozenoxacin.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

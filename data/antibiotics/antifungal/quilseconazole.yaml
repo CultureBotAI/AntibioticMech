@@ -1,0 +1,56 @@
+identifier: antibioticmech:curator-217ed2935e
+label: quilseconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 1-tetrazole antifungal agent (VT-1129) that selectively coordinates
+  the heme iron of fungal sterol 14-alpha-demethylase (CYP51) to inhibit ergosterol
+  biosynthesis in Cryptococcus and Candida species.
+definition_source: DOI:10.1128/AAC.02770-15
+synonyms:
+- synonym_text: VT-1129
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: VT1129
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: O[C@@](Cn1cnnn1)(c1ccc(F)cc1F)C(F)(F)c1ccc(-c2ccc(OC(F)(F)F)cc2)cn1
+  standard_inchi: InChI=1S/C22H14F7N5O2/c23-15-4-7-17(18(24)9-15)20(35,11-34-12-31-32-33-34)21(25,26)19-8-3-14(10-30-19)13-1-5-16(6-2-13)36-22(27,28)29/h1-10,12,35H,11H2/t20-/m0/s1
+  standard_inchi_key: NCEHACHJIXJSPD-FQEVSTJZSA-N
+  molecular_formula: C22H14F7N5O2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/91886002
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 513.373
+  monoisotopic_mass: 513.1036
+xrefs:
+- pubchem.compound:91886002
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.02770-15#quilseconazole
+  source_label: quilseconazole
+  minted_identifier: antibioticmech:curator-217ed2935e
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/AAC.02770-15
+    snippet: Lockhart et al. evaluated the fungal-CYP51-specific tetrazole inhibitor
+      VT-1129 (quilseconazole) against 180 Cryptococcus neoformans and 251 Cryptococcus
+      gattii clinical isolates and reported MIC50 and MIC90 values of 0.015 and 0.06
+      ug/mL against C. neoformans and 0.06 and 0.25 ug/mL against C. gattii, including
+      fluconazole-resistant strains.
+    notes: Reported by Lockhart et al. 2016 (Antimicrob Agents Chemother 60:2528-2531;
+      PMID:26787697) and Warrilow et al. 2016 (Antimicrob Agents Chemother 60:4530-4538;
+      DOI:10.1128/AAC.00349-16) as a selective 1-tetrazole antifungal agent (VT-1129)
+      that tightly binds Cryptococcus neoformans and Cryptococcus gattii sterol 14-alpha-demethylase
+      (CYP51, Kd = 11 to 14 nM). PubChem CID 91886002 supplies the standard InChI,
+      InChIKey, formula, and isomeric SMILES for quilseconazole.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,57 @@
+identifier: antibioticmech:curator-daae3d88a3
+label: sanfetrinem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A tricyclic beta-lactam (trinem) antibacterial agent (GV104326) that acrylates
+  bacterial penicillin-binding proteins and L,D-transpeptidases to inhibit peptidoglycan
+  cross-linking.
+definition_source: DOI:10.1128/AAC.40.9.2142
+synonyms:
+- synonym_text: GV104326
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: GV-104326
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CO[C@H]1CCC[C@H]2C1=C(C(=O)O)N1C(=O)[C@H]([C@@H](C)O)[C@@H]21
+  standard_inchi: InChI=1S/C14H19NO5/c1-6(16)9-11-7-4-3-5-8(20-2)10(7)12(14(18)19)15(11)13(9)17/h6-9,11,16H,3-5H2,1-2H3,(H,18,19)/t6-,7+,8+,9-,11-/m1/s1
+  standard_inchi_key: ICFDDEJRXZSWTA-KJFVXYAMSA-N
+  molecular_formula: C14H19NO5
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/71452
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 281.308
+  monoisotopic_mass: 281.1263
+xrefs:
+- pubchem.compound:71452
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.40.9.2142#sanfetrinem
+  source_label: sanfetrinem
+  minted_identifier: antibioticmech:curator-daae3d88a3
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.40.9.2142
+    snippet: Singh et al. tested the tricyclic beta-lactam (trinem) sanfetrinem (GV104326)
+      against 287 Gram-positive organisms and reported MIC90 values of <=0.03 to 0.06
+      ug/mL for Streptococcus pyogenes, Streptococcus agalactiae, and penicillin-susceptible
+      Streptococcus pneumoniae, 0.125 ug/mL for methicillin-susceptible Staphylococcus
+      aureus, and 1 ug/mL for ampicillin-susceptible Enterococcus faecalis.
+    notes: Reported by Singh et al. 1996 (Antimicrob Agents Chemother 40:2142-2146;
+      PMID:8878596) and Di Modugno et al. 1994 (Antimicrob Agents Chemother 38:2362-2368;
+      DOI:10.1128/AAC.38.10.2362) as a broad-spectrum tricyclic carbapenem/trinem
+      beta-lactam antibiotic (GV104326) with high stability to beta-lactamases and
+      potent activity against Gram-positive, Gram-negative, anaerobic, and mycobacterial
+      pathogens. PubChem CID 71452 supplies the standard InChI, InChIKey, formula,
+      and isomeric SMILES for sanfetrinem.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

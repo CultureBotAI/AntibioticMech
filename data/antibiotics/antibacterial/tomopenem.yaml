@@ -1,0 +1,59 @@
+identifier: antibioticmech:curator-e14f58e6dc
+label: tomopenem
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A parenteral 1-beta-methylcarbapenem beta-lactam antibiotic (CS-023, RO4908463)
+  bearing a guanidinylacetylamino-pyrrolidinylthio side chain that inhibits bacterial
+  penicillin-binding proteins including MRSA PBP2a.
+definition_source: DOI:10.1128/AAC.49.8.3239-3250.2005
+synonyms:
+- synonym_text: CS-023
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: RO4908463
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: RO-4908463
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@H](O)[C@H]1C(=O)N2C(C(=O)O)=C(S[C@H]3C[C@@H](C(=O)N4CC[C@H](NC(=O)CNC(=N)N)C4)N(C)C3)[C@H](C)[C@H]12
+  standard_inchi: InChI=1S/C23H35N7O6S/c1-10-17-16(11(2)31)21(34)30(17)18(22(35)36)19(10)37-13-6-14(28(3)9-13)20(33)29-5-4-12(8-29)27-15(32)7-26-23(24)25/h10-14,16-17,31H,4-9H2,1-3H3,(H,27,32)(H,35,36)(H4,24,25,26)/t10-,11-,12+,13+,14+,16-,17-/m1/s1
+  standard_inchi_key: KEDAXBWZURNCHS-GPODMPQUSA-N
+  molecular_formula: C23H35N7O6S
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/9809656
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 537.643
+  monoisotopic_mass: 537.237
+xrefs:
+- pubchem.compound:9809656
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.49.8.3239-3250.2005#tomopenem
+  source_label: tomopenem
+  minted_identifier: antibioticmech:curator-e14f58e6dc
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.49.8.3239-3250.2005
+    snippet: Koga et al. evaluated the novel parenteral 1-beta-methylcarbapenem CS-023
+      (RO4908463, tomopenem) against Gram-positive and Gram-negative clinical isolates
+      and reported MIC90 values of 4 ug/mL against methicillin-resistant Staphylococcus
+      aureus, 0.25 ug/mL against penicillin-resistant Streptococcus pneumoniae, <=0.06
+      ug/mL against Escherichia coli and Klebsiella pneumoniae, and 2 ug/mL against
+      Pseudomonas aeruginosa.
+    notes: Reported by Koga et al. 2005 (Antimicrob Agents Chemother 49:3239-3250;
+      PMID:16048932) as a 2-guanidinylacetylamino-pyrrolidinylthio 1-beta-methylcarbapenem
+      antibiotic (CS-023, RO4908463) that binds penicillin-binding proteins including
+      PBP2a of MRSA and PBPs of Pseudomonas aeruginosa. PubChem CID 9809656 supplies
+      the standard InChI, InChIKey, formula, and isomeric SMILES for tomopenem.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

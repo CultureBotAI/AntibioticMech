@@ -1,0 +1,56 @@
+identifier: CHEBI:135622
+label: besifloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An 8-chloro-7-[(3R)-3-aminoazepan-1-yl]-1-cyclopropyl-6-fluoro-4-oxo-1,4-dihydroquinoline-3-carboxylic
+  acid fluoroquinolone antibacterial that inhibits bacterial DNA gyrase and topoisomerase
+  IV.
+definition_source: DOI:10.1128/AAC.00418-09
+synonyms:
+- synonym_text: BOL-303224-A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: (+)-besifloxacin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: N[C@@H]1CCCCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2Cl)C1
+  standard_inchi: InChI=1S/C19H21ClFN3O3/c20-15-16-12(18(25)13(19(26)27)9-24(16)11-4-5-11)7-14(21)17(15)23-6-2-1-3-10(22)8-23/h7,9-11H,1-6,8,22H2,(H,26,27)/t10-/m1/s1
+  standard_inchi_key: QFFGVLORLPOAEC-SNVBAGLBSA-N
+  molecular_formula: C19H21ClFN3O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/10178705
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 393.846
+  monoisotopic_mass: 393.1255
+xrefs:
+- pubchem.compound:10178705
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.00418-09#besifloxacin
+  source_label: besifloxacin
+  minted_identifier: antibioticmech:curator-a9ada35ecc
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.00418-09
+    snippet: Haas et al. evaluated the in vitro antibacterial activity of the novel
+      8-chloro-fluoroquinolone besifloxacin against 2,690 ocular clinical isolates
+      and reported MIC90 values of 0.06 ug/mL against methicillin-susceptible Staphylococcus
+      aureus, 1 ug/mL against methicillin-resistant Staphylococcus aureus, 0.06 ug/mL
+      against Streptococcus pneumoniae, and 0.03 ug/mL against Haemophilus influenzae.
+    notes: Reported by Haas et al. 2009 (Antimicrob Agents Chemother 53:3552-3560;
+      PMID:19528285) and Cambau et al. 2009 (J Antimicrob Chemother 63:443-450; DOI:10.1093/jac/dkn528)
+      as an 8-chloro-fluoroquinolone antibacterial (BOL-303224-A) with balanced inhibition
+      of bacterial DNA gyrase and topoisomerase IV. PubChem CID 10178705 and ChEBI
+      CHEBI:135622 supply the standard InChI, InChIKey, formula, and isomeric SMILES
+      for besifloxacin.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:16:48Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
