@@ -120,3 +120,86 @@ curation_history:
     protein example to the class D OXA beta-lactamases PRIMARY_LITERATURE molecular
     target (PMID:25406838).
   llm_assisted: true
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph avibactam_class_d_oxa_beta_lactamase_carbamylation
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6XEC0)
+    and primary literature (PMID:25406838).
+  llm_assisted: true
+causal_graphs:
+- graph_id: avibactam_class_d_oxa_beta_lactamase_carbamylation
+  title: Avibactam covalently carbamylates class D OXA beta-lactamases to inhibit
+    beta-lactam hydrolysis
+  description: Avibactam binds the active site of class D OXA beta-lactamases (including
+    OXA-10 and OXA-48) and forms a reversible covalent carbamyl-enzyme adduct that
+    inhibits beta-lactamase catalytic hydrolysis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: avibactam
+    label: avibactam
+    node_type: COMPOUND
+    grounding: CHEBI:85984
+  - node_id: class_d_oxa_beta_lactamase
+    label: class D OXA beta-lactamases
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Class D OXA-family serine beta-lactamases; kept label-only with
+      Klebsiella pneumoniae OXA-48 (UniProtKB:Q6XEC0) cocrystal protein_examples.
+    gene_symbols:
+    - OXA-48
+    protein_examples:
+    - uniprot_id: UniProtKB:Q6XEC0
+      protein_label: Beta-lactamase OXA-48
+      gene_symbol: OXA-48
+      taxon_id: NCBITaxon:573
+      taxon_label: Klebsiella pneumoniae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from
+        Klebsiella pneumoniae covalently carbamylated at active-site Ser70 by avibactam
+        in the PMID:25406838 X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation
+        kinetic assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA)
+        cocrystallized in the same study is an unreviewed TrEMBL entry and is not
+        added as a reviewed example.
+  - node_id: carbamylated_oxa_active_site_adduct
+    label: reversibly carbamylated class D OXA beta-lactamase active-site complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Covalent avibactam-carbamylated active-site state resolved in
+      OXA-10 and OXA-48 crystal structures (PDB:4S2K/4S2N/4WMC; PMID:25406838).
+  - node_id: oxa_beta_lactam_hydrolysis
+    label: class D OXA beta-lactamase catalytic activity
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Serine beta-lactamase-mediated beta-lactam antibiotic hydrolysis
+      assayed across OXA-2, OXA-10, OXA-24, and OXA-48.
+  edges:
+  - subject: avibactam
+    predicate: binds
+    object: carbamylated_oxa_active_site_adduct
+    description: Avibactam binds the catalytic serine of class D OXA beta-lactamases
+      to form a reversible covalent carbamyl-enzyme adduct.
+    evidence:
+    - reference: PMID:25406838
+      notes: X-ray crystal structures of avibactam bound to OXA-10 and OXA-48 (1.4-2.1
+        angstrom, PDB:4S2K/4S2N/4WMC) resolved the covalent carbamylated active-site
+        adduct.
+  - subject: class_d_oxa_beta_lactamase
+    predicate: participates in
+    object: carbamylated_oxa_active_site_adduct
+    description: Class D OXA beta-lactamase catalytic residues coordinate avibactam
+      in the carbamylated active-site complex.
+    evidence:
+    - reference: PMID:25406838
+      notes: Structural analysis mapped the OXA-10 and OXA-48 active-site interactions
+        stabilizing the avibactam carbamyl linkage.
+  - subject: carbamylated_oxa_active_site_adduct
+    predicate: inhibits
+    object: oxa_beta_lactam_hydrolysis
+    description: Covalent active-site carbamylation by avibactam inhibits class D
+      OXA beta-lactamase catalysis.
+    evidence:
+    - reference: PMID:25406838
+      notes: Enzyme-kinetic acylation and deacylation measurements across OXA-2, OXA-10,
+        OXA-24, and OXA-48 demonstrated inhibition of class D beta-lactamase activity.

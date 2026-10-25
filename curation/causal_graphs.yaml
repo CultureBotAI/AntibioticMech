@@ -3,10 +3,10 @@ task: causal_graphs_curation
 curation_action: CURATED_CAUSAL_GRAPHS
 retrieved_on: '2026-10-23'
 scope_note: 'Curated primary-literature MECHANISTIC causal_graphs across all eligible REVIEWED AntibioticMech
-  records: 26 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
-  and 17 Cohort B records with direct-binding or measured-association non-protein PRIMARY_LITERATURE molecular_targets,
-  plus explicit accounting of all 16 pre-existing corpus causal_graphs (5 REVIEWED + 11 SEEDED) and all
-  38 held REVIEWED records.'
+  records: 30 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
+  and 18 Cohort B records with direct-binding or measured-association non-protein PRIMARY_LITERATURE molecular_targets,
+  plus explicit accounting of all 16 pre-existing corpus causal_graphs (15 REVIEWED + 1 SEEDED) and all
+  33 held REVIEWED records.'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -127,8 +127,8 @@ records:
       label: bacterial 50S ribosomal subunit peptidyl-transferase center
       node_type: CELL_STRUCTURE
       grounding_status: REVIEWED_LABEL_ONLY
-      grounding_notes: Peptidyl-transferase center of the bacterial 50S ribosomal subunit assayed via the
-        puromycin reaction in Escherichia coli B.
+      grounding_notes: Peptidyl-transferase center of the bacterial 50S ribosomal subunit assayed via
+        the puromycin reaction in Escherichia coli B.
     - node_id: ribosomal_peptidyl_transferase_reaction
       label: bacterial ribosomal peptidyl-transferase reaction
       node_type: BIOLOGICAL_PROCESS
@@ -2009,8 +2009,8 @@ records:
       label: 3CLpro-mediated replicase processing and coronavirus RNA replication
       node_type: BIOLOGICAL_PROCESS
       grounding_status: REVIEWED_LABEL_ONLY
-      grounding_notes: Coronavirus replicase polyprotein processing and viral RNA replication assayed in
-        replicon and live-virus tissue culture.
+      grounding_notes: Coronavirus replicase polyprotein processing and viral RNA replication assayed
+        in replicon and live-virus tissue culture.
     edges:
     - subject: cinanserin
       predicate: binds
@@ -3235,31 +3235,397 @@ records:
       - reference: PMID:16167380
         notes: In-vitro transcription assays demonstrated allosteric inhibition of the RNA polymerase
           nucleotide-addition cycle by streptolydigin.
-held_records:
 - identifier: CHEBI:85984
   label: avibactam
   path: data/antibiotics/antibacterial/avibactam.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: class D OXA beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - PMID:25406838
-  reason: Held from causal_graphs curation at Stage 2 because the proximal protein target (class D OXA
-    beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)) jointly characterizes covalent inhibition across
-    Klebsiella pneumoniae OXA-48 (PDB:4S2K/4S2N/4WMC, curated on molecular_targets as reviewed UniProtKB:Q6XEC0
-    in Cycle 2 Stage 3) and Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, unreviewed TrEMBL Q8RLA6_ACIBA
-    lacking a reviewed Swiss-Prot entry).
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph avibactam_class_d_oxa_beta_lactamase_carbamylation
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6XEC0) and primary literature
+    (PMID:25406838).
+  causal_graphs:
+  - graph_id: avibactam_class_d_oxa_beta_lactamase_carbamylation
+    title: Avibactam covalently carbamylates class D OXA beta-lactamases to inhibit beta-lactam hydrolysis
+    description: Avibactam binds the active site of class D OXA beta-lactamases (including OXA-10 and
+      OXA-48) and forms a reversible covalent carbamyl-enzyme adduct that inhibits beta-lactamase catalytic
+      hydrolysis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: avibactam
+      label: avibactam
+      node_type: COMPOUND
+      grounding: CHEBI:85984
+    - node_id: class_d_oxa_beta_lactamase
+      label: class D OXA beta-lactamases
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Class D OXA-family serine beta-lactamases; kept label-only with Klebsiella pneumoniae
+        OXA-48 (UniProtKB:Q6XEC0) cocrystal protein_examples.
+      gene_symbols:
+      - OXA-48
+      protein_examples:
+      - uniprot_id: UniProtKB:Q6XEC0
+        protein_label: Beta-lactamase OXA-48
+        gene_symbol: OXA-48
+        taxon_id: NCBITaxon:573
+        taxon_label: Klebsiella pneumoniae
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-25'
+        role: Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella pneumoniae
+          covalently carbamylated at active-site Ser70 by avibactam in the PMID:25406838 X-ray crystal
+          structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation kinetic assays; Acinetobacter
+          baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA) cocrystallized in the same study is an unreviewed
+          TrEMBL entry and is not added as a reviewed example.
+    - node_id: carbamylated_oxa_active_site_adduct
+      label: reversibly carbamylated class D OXA beta-lactamase active-site complex
+      node_type: STATE
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Covalent avibactam-carbamylated active-site state resolved in OXA-10 and OXA-48
+        crystal structures (PDB:4S2K/4S2N/4WMC; PMID:25406838).
+    - node_id: oxa_beta_lactam_hydrolysis
+      label: class D OXA beta-lactamase catalytic activity
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Serine beta-lactamase-mediated beta-lactam antibiotic hydrolysis assayed across
+        OXA-2, OXA-10, OXA-24, and OXA-48.
+    edges:
+    - subject: avibactam
+      predicate: binds
+      object: carbamylated_oxa_active_site_adduct
+      description: Avibactam binds the catalytic serine of class D OXA beta-lactamases to form a reversible
+        covalent carbamyl-enzyme adduct.
+      evidence:
+      - reference: PMID:25406838
+        notes: X-ray crystal structures of avibactam bound to OXA-10 and OXA-48 (1.4-2.1 angstrom, PDB:4S2K/4S2N/4WMC)
+          resolved the covalent carbamylated active-site adduct.
+    - subject: class_d_oxa_beta_lactamase
+      predicate: participates in
+      object: carbamylated_oxa_active_site_adduct
+      description: Class D OXA beta-lactamase catalytic residues coordinate avibactam in the carbamylated
+        active-site complex.
+      evidence:
+      - reference: PMID:25406838
+        notes: Structural analysis mapped the OXA-10 and OXA-48 active-site interactions stabilizing the
+          avibactam carbamyl linkage.
+    - subject: carbamylated_oxa_active_site_adduct
+      predicate: inhibits
+      object: oxa_beta_lactam_hydrolysis
+      description: Covalent active-site carbamylation by avibactam inhibits class D OXA beta-lactamase
+        catalysis.
+      evidence:
+      - reference: PMID:25406838
+        notes: Enzyme-kinetic acylation and deacylation measurements across OXA-2, OXA-10, OXA-24, and
+          OXA-48 demonstrated inhibition of class D beta-lactamase activity.
 - identifier: CHEBI:144087
   label: bromodeoxytopsentin
   path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: pyruvate kinase (PROTEIN, MEASURED_TARGET_ASSOCIATION)
-  references:
-  - PMID:22030393
-  reason: Held from causal_graphs curation at Stage 2 because the proximal protein target (pyruvate kinase
-    (PROTEIN, MEASURED_TARGET_ASSOCIATION), curated on molecular_targets with Staphylococcus aureus strain
-    MRSA252 pyruvate kinase UniProtKB:Q6G8M9 in Cycle 2 Stage 3) was evaluated in PMID:22030393 for enzymatic
-    inhibition (IC50 = 60 nM, Ki = 34 nM) alongside human pyruvate kinase isoforms without an explicit
-    downstream cellular mechanism chain in the cited record.
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6G8M9) and primary literature
+    (PMID:22030393).
+  causal_graphs:
+  - graph_id: bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition
+    title: Bromodeoxytopsentin inhibits Staphylococcus aureus pyruvate kinase to suppress bacterial growth
+    description: Bromodeoxytopsentin potently and selectively inhibits Staphylococcus aureus (MRSA) pyruvate
+      kinase over human orthologs and suppresses Gram-positive bacterial growth.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: bromodeoxytopsentin
+      label: bromodeoxytopsentin
+      node_type: COMPOUND
+      grounding: CHEBI:144087
+    - node_id: staphylococcal_pyruvate_kinase
+      label: MRSA pyruvate kinase
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Staphylococcus aureus pyruvate kinase (Pyk); kept label-only with MRSA252 pyruvate
+        kinase (UniProtKB:Q6G8M9) protein_examples.
+      gene_symbols:
+      - pyk
+      protein_examples:
+      - uniprot_id: UniProtKB:Q6G8M9
+        protein_label: Pyruvate kinase
+        gene_symbol: pyk
+        taxon_id: NCBITaxon:282458
+        taxon_label: Staphylococcus aureus (strain MRSA252)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-25'
+        role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and
+          inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393
+          enzymatic assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole
+          analog IS130 to the dimer interface of this MRSA252 enzyme.
+    - node_id: pyruvate_kinase_catalysis
+      label: staphylococcal pyruvate kinase catalytic activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: ATP-generating glycolytic pyruvate kinase catalysis assayed on purified MRSA Pyk
+        enzyme.
+    - node_id: staphylococcal_glycolytic_growth
+      label: Staphylococcus aureus bacterial growth
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Pyruvate-kinase-dependent antibacterial growth inhibition measured in MSSA and
+        MRSA strains.
+    edges:
+    - subject: bromodeoxytopsentin
+      predicate: inhibits
+      object: pyruvate_kinase_catalysis
+      description: Bromodeoxytopsentin potently inhibits MRSA pyruvate kinase enzymatic catalysis.
+      evidence:
+      - reference: PMID:22030393
+        notes: Biochemical enzyme assays demonstrated nanomolar inhibition of MRSA pyruvate kinase by
+          bromodeoxytopsentin with high selectivity over human pyruvate kinase isoforms.
+    - subject: staphylococcal_pyruvate_kinase
+      predicate: enables
+      object: pyruvate_kinase_catalysis
+      description: Staphylococcus aureus Pyk catalyzes the terminal glycolytic phosphotransfer step.
+      evidence:
+      - reference: PMID:22030393
+        notes: Purified MRSA pyruvate kinase enzyme catalyzed the reaction targeted by marine bisindole
+          alkaloids.
+    - subject: pyruvate_kinase_catalysis
+      predicate: supports
+      object: staphylococcal_glycolytic_growth
+      description: Pyruvate kinase catalytic activity supports Staphylococcus aureus growth.
+      evidence:
+      - reference: PMID:22030393
+        notes: Inhibition of MRSA pyruvate kinase by bisindole alkaloids correlated with antibacterial
+          activity against S. aureus.
+- identifier: CHEBI:48480
+  label: thermorubin A
+  path: data/antibiotics/antibacterial/thermorubin-a.yaml
+  cohort: non_protein_direct_or_measured_target
+  changes: Added evidence-backed MECHANISTIC causal graph thermorubin_a_70s_bridge_b2a_elongation_termination_arrest
+    (4 nodes, 3 edges) from primary literature (DOI:10.1093/nar/gkac1189, PMID:22240456).
+  causal_graphs:
+  - graph_id: thermorubin_a_70s_bridge_b2a_elongation_termination_arrest
+    title: Thermorubin A rearranges 70S ribosome intersubunit bridge B2a to block A-site tRNA accommodation
+      and release-factor termination
+    description: Thermorubin A binds intersubunit bridge B2a at the junction of 16S rRNA helix 44 and
+      23S rRNA helix 69 in the bacterial 70S ribosome, induces flipping of bases C1914 and A1916 that
+      sterically clash with A-site tRNA and class-I release factors, and arrests translation elongation
+      and termination.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: thermorubin_a
+      label: thermorubin A
+      node_type: COMPOUND
+      grounding: CHEBI:48480
+    - node_id: ribosomal_intersubunit_bridge_b2a
+      label: bacterial 70S ribosome intersubunit bridge B2a (16S rRNA helix 44 / 23S rRNA helix 69)
+      node_type: CELL_STRUCTURE
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Conserved rRNA intersubunit bridge B2a formed by 16S rRNA helix 44 and 23S rRNA
+        helix 69 at the ribosomal decoding center.
+    - node_id: rearranged_bridge_b2a_c1914_a1916_state
+      label: thermorubin-bound bridge B2a state with flipped 23S rRNA bases C1914 and A1916
+      node_type: STATE
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: X-ray crystal state (PDB:4V8A) showing thermorubin A bound at bridge B2a with 23S
+        rRNA helix 69 bases C1914 and A1916 flipped into the ribosomal A site.
+    - node_id: bacterial_translation_elongation_and_termination
+      label: bacterial A-site aminoacyl-tRNA accommodation and release-factor-mediated translation termination
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Ribosomal A-site tRNA accommodation and stop-codon release-factor hydrolysis assayed
+        in vitro and in vivo.
+    edges:
+    - subject: thermorubin_a
+      predicate: binds
+      object: rearranged_bridge_b2a_c1914_a1916_state
+      description: Thermorubin A binds intersubunit bridge B2a of the 70S ribosome and induces flipping
+        of 23S rRNA bases C1914 and A1916.
+      evidence:
+      - reference: PMID:22240456
+        notes: The 70S-thermorubin crystal structure (PDB:4V8A) resolved thermorubin A bound at bridge
+          B2a between 16S rRNA helix 44 and 23S rRNA helix 69.
+      - reference: DOI:10.1093/nar/gkac1189
+        notes: Structural and mechanistic analysis showed that thermorubin binding rearranges bridge B2a
+          nucleotides C1914 and A1916 into conformations that clash with A-site ligands.
+    - subject: ribosomal_intersubunit_bridge_b2a
+      predicate: participates in
+      object: rearranged_bridge_b2a_c1914_a1916_state
+      description: 16S rRNA helix 44 and 23S rRNA helix 69 at bridge B2a form the binding pocket rearranged
+        by thermorubin A.
+      evidence:
+      - reference: PMID:22240456
+        notes: Crystallographic analysis mapped the rRNA contacts at bridge B2a coordinating thermorubin
+          A.
+    - subject: rearranged_bridge_b2a_c1914_a1916_state
+      predicate: inhibits
+      object: bacterial_translation_elongation_and_termination
+      description: Thermorubin-induced flipping of C1914 and A1916 sterically hinders A-site aminoacyl-tRNA
+        accommodation and release-factor-mediated peptide release, arresting ribosomes at internal and
+        stop codons.
+      evidence:
+      - reference: DOI:10.1093/nar/gkac1189
+        notes: Toeprinting, single-molecule FRET, and release-factor assays demonstrated that thermorubin
+          blocks A-site tRNA accommodation and translation termination.
+- identifier: CHEBI:10100
+  label: zafirlukast
+  path: data/antibiotics/antibacterial/zafirlukast.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph zafirlukast_mycobacterial_lsr2_dna_complex_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P9WIP7) and primary literature
+    (PMID:23650171).
+  causal_graphs:
+  - graph_id: zafirlukast_mycobacterial_lsr2_dna_complex_inhibition
+    title: Zafirlukast inhibits Mycobacterium tuberculosis Lsr2 DNA binding and compaction to arrest mycobacterial
+      growth
+    description: Zafirlukast binds the Mycobacterium tuberculosis nucleoid-associated protein Lsr2, blocks
+      Lsr2-DNA complexation and DNA bridging/compaction, dysregulates Lsr2-controlled transcription, and
+      inhibits mycobacterial growth.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: zafirlukast
+      label: zafirlukast
+      node_type: COMPOUND
+      grounding: CHEBI:10100
+    - node_id: mycobacterial_lsr2_protein
+      label: mycobacterial nucleoid-associated protein Lsr2
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Mycobacterial nucleoid-associated global transcriptional regulator Lsr2; kept label-only
+        with Mycobacterium tuberculosis H37Rv Lsr2 (UniProtKB:P9WIP7) protein_examples.
+      gene_symbols:
+      - lsr2
+      protein_examples:
+      - uniprot_id: UniProtKB:P9WIP7
+        protein_label: Nucleoid-associated protein Lsr2
+        gene_symbol: lsr2
+        taxon_id: NCBITaxon:83332
+        taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-24'
+        role: Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation with DNA and
+          transcriptional regulatory activity are directly inhibited by zafirlukast in Mycobacterium tuberculosis
+          H37Rv (PMID:23650171).
+    - node_id: lsr2_dna_bridging_and_compaction
+      label: Lsr2-DNA complexation and nucleoid compaction activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Lsr2 DNA binding and DNA compaction activity assayed with purified M. tuberculosis
+        Lsr2.
+    - node_id: mycobacterial_transcription_and_growth
+      label: Lsr2-regulated mycobacterial transcription and cell growth
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Lsr2-dependent transcriptional regulation and growth in Mycobacterium tuberculosis
+        and Mycobacterium smegmatis.
+    edges:
+    - subject: zafirlukast
+      predicate: inhibits
+      object: lsr2_dna_bridging_and_compaction
+      description: Zafirlukast directly inhibits Mycobacterium tuberculosis Lsr2 DNA binding and DNA compaction.
+      evidence:
+      - reference: PMID:23650171
+        notes: Biochemical gel-shift and DNA-binding assays showed that zafirlukast blocks complexation
+          between purified M. tuberculosis Lsr2 and DNA.
+    - subject: mycobacterial_lsr2_protein
+      predicate: enables
+      object: lsr2_dna_bridging_and_compaction
+      description: Mycobacterial Lsr2 binds and compacts AT-rich DNA regions across the chromosome.
+      evidence:
+      - reference: PMID:23650171
+        notes: Purified M. tuberculosis Lsr2 protein mediated the DNA-binding and compaction activity
+          targeted by zafirlukast.
+    - subject: lsr2_dna_bridging_and_compaction
+      predicate: supports
+      object: mycobacterial_transcription_and_growth
+      description: Lsr2-DNA organization maintains global transcriptional regulation and is essential
+        for mycobacterial growth.
+      evidence:
+      - reference: PMID:23650171
+        notes: Zafirlukast-mediated disruption of Lsr2 function dysregulated hundreds of Lsr2-target genes
+          and inhibited mycobacterial growth.
+- identifier: CHEBI:188153
+  label: oteseconazole
+  path: data/antibiotics/antifungal/oteseconazole.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph oteseconazole_fungal_cyp51_ergosterol_depletion
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P10613, UniProtKB:P50859)
+    and primary literature (DOI:10.1128/aac.00778-22, PMID:25056938).
+  causal_graphs:
+  - graph_id: oteseconazole_fungal_cyp51_ergosterol_depletion
+    title: Oteseconazole coordinates the heme iron of fungal CYP51 (Erg11) to block ergosterol biosynthesis
+    description: Oteseconazole (VT-1161) binds the active-site heme iron of fungal lanosterol 14-alpha-demethylase
+      (CYP51 / Erg11) via its 1-tetrazole ring, inhibits 14-alpha-demethylation of sterol precursors,
+      and depletes membrane ergosterol in Candida species.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: oteseconazole
+      label: oteseconazole
+      node_type: COMPOUND
+      grounding: CHEBI:188153
+    - node_id: fungal_cyp51_erg11
+      label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Fungal cytochrome P450 lanosterol 14-alpha-demethylase (CYP51 / Erg11); kept label-only
+        with Candida albicans (UniProtKB:P10613) and Nakaseomyces glabratus (UniProtKB:P50859) protein_examples.
+      gene_symbols:
+      - ERG11
+      protein_examples:
+      - uniprot_id: UniProtKB:P10613
+        protein_label: Lanosterol 14-alpha demethylase
+        gene_symbol: ERG11
+        taxon_id: NCBITaxon:237561
+        taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-24'
+        role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida albicans whose heme iron
+          is selectively coordinated by the tetrazole ring of oteseconazole (VT-1161, Kd <= 39 nM; PMID:25056938;
+          DOI:10.1128/aac.00778-22).
+      - uniprot_id: UniProtKB:P50859
+        protein_label: Lanosterol 14-alpha demethylase
+        gene_symbol: ERG11
+        taxon_id: NCBITaxon:284593
+        taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65
+          / CBS 138)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-24'
+        role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata, the primary
+          clinical target species evaluated in DOI:10.1128/aac.00778-22 (MIC50 = 0.06 ug/mL, MIC90 = 0.5
+          ug/mL; PMID:35969069).
+    - node_id: lanosterol_14alpha_demethylation
+      label: CYP51-catalyzed sterol 14-alpha-demethylation
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Heme-dependent oxidative 14-alpha-demethylation of lanosterol / eburicol in fungal
+        sterol synthesis.
+    - node_id: fungal_ergosterol_biosynthesis
+      label: ergosterol biosynthetic process
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006696
+    edges:
+    - subject: oteseconazole
+      predicate: inhibits
+      object: lanosterol_14alpha_demethylation
+      description: Oteseconazole coordinates the active-site heme iron of fungal CYP51 and inhibits sterol
+        14-alpha-demethylation.
+      evidence:
+      - reference: PMID:25056938
+        notes: Type II spectral binding and sterol-biosynthesis assays showed tight binding of VT-1161
+          (oteseconazole) to Candida albicans CYP51 and complete blockade of ergosterol synthesis.
+      - reference: DOI:10.1128/aac.00778-22
+        notes: Antifungal susceptibility and Erg11 amino-acid substitution profiling in Candida glabrata
+          confirmed CYP51 target engagement by oteseconazole.
+    - subject: fungal_cyp51_erg11
+      predicate: enables
+      object: lanosterol_14alpha_demethylation
+      description: Fungal CYP51 (Erg11) catalyzes the rate-limiting 14-alpha-demethylation step in sterol
+        biosynthesis.
+      evidence:
+      - reference: PMID:25056938
+        notes: Purified Candida albicans CYP51 catalyzed the sterol demethylation step inhibited by VT-1161.
+    - subject: lanosterol_14alpha_demethylation
+      predicate: supports
+      object: fungal_ergosterol_biosynthesis
+      description: CYP51-mediated 14-alpha-demethylation drives fungal membrane ergosterol biosynthesis.
+      evidence:
+      - reference: PMID:25056938
+        notes: Inhibition of CYP51 by VT-1161 depleted cellular ergosterol and accumulated 14-alpha-methylated
+          sterols in Candida albicans.
+held_records:
 - identifier: CHEBI:172922
   label: ethylzingerone
   path: data/antibiotics/antibacterial/ethylzingerone.yaml
@@ -3401,11 +3767,11 @@ held_records:
   target_summary: alanine racemase (PROTEIN, MEASURED_TARGET_ASSOCIATION)
   references:
   - PMID:4555420
-  reason: 'Held from causal_graphs curation because the proximal protein/complex/ribosomal target (alanine
+  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (alanine
     racemase (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml
     without a single verified experimental-strain UniProtKB accession (Held because PMID:4555420 assayed
-    Escherichia coli strain W (ATCC 9637) alanine racemase, whereas Alr/DadX alanine racemase isozyme and
-    strain-specific sequence resolution in E. coli K-12 are not established by the 1972 study.)'
+    Escherichia coli strain W (ATCC 9637) alanine racemase, whereas Alr/DadX alanine racemase isozyme
+    and strain-specific sequence resolution in E. coli K-12 are not established by the 1972 study.)
 - identifier: CHEBI:65485
   label: dihydrobetulinic acid
   path: data/antibiotics/antiprotozoal/dihydrobetulinic-acid.yaml
@@ -3444,8 +3810,8 @@ held_records:
     in curation/uniprot_protein_examples.yaml without a single verified experimental-strain UniProtKB
     accession (Held because PMID:22151792 characterizes photoaffinity crosslinking and resistance mutations
     across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical clade B/C isolates) without a single
-    isolate-resolved cocrystal accession, and tests/test_bevirimat_taxonomy.py asserts field-by-field identity
-    on live molecular_targets against research/2026-10-14-bevirimat-curation.json.)
+    isolate-resolved cocrystal accession, and tests/test_bevirimat_taxonomy.py asserts field-by-field
+    identity on live molecular_targets against research/2026-10-14-bevirimat-curation.json.)
 - identifier: CHEBI:172943
   label: bictegravir
   path: data/antibiotics/antiviral/bictegravir.yaml
@@ -3657,33 +4023,6 @@ held_records:
     supports only a coarse or downstream affected component/process (Mycobacterium abscessus membrane
     potential and respiratory energetics (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)) without a
     molecularly resolved proximal target-engagement step.
-- identifier: CHEBI:48480
-  label: thermorubin A
-  path: data/antibiotics/antibacterial/thermorubin-a.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial 70S ribosome intersubunit bridge B2a (16S rRNA helix 44 / 23S rRNA helix 69)
-    (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1093/nar/gkac1189
-  reason: Held from causal_graphs curation because the proximal ribosomal target (bacterial 70S ribosome
-    intersubunit bridge B2a (16S rRNA helix 44 / 23S rRNA helix 69) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET))
-    is held in curation/uniprot_protein_examples.yaml as an rRNA intersubunit bridge B2a rearrangement
-    site (PDB:8EIU) and was promoted from PROPOSED to REVIEWED in Cycle 2 Stage 5 outside the Stage 2
-    causal_graphs curation cohort.
-- identifier: CHEBI:10100
-  label: zafirlukast
-  path: data/antibiotics/antibacterial/zafirlukast.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: mycobacterial nucleoid-associated protein Lsr2 (PROTEIN, DIRECT_BINDING_TARGET); staphylococcal
-    lipoteichoic acid synthase (LtaS) (PROTEIN, MEASURED_TARGET_ASSOCIATION)
-  references:
-  - PMID:23650171
-  - DOI:10.3390/antibiotics15090914
-  reason: Held from causal_graphs curation because the record was promoted from PROPOSED to REVIEWED in
-    Cycle 2 Stage 5 after Stage 2 causal_graphs curation, and although Mycobacterium tuberculosis H37Rv
-    Lsr2 is curated with UniProtKB:P9WIP7 on molecular_targets (PMID:23650171), the second primary-literature
-    target (staphylococcal lipoteichoic acid synthase LtaS, DOI:10.3390/antibiotics15090914) is held in
-    curation/uniprot_protein_examples.yaml without a verified experimental-strain accession.
 - identifier: CHEBI:34825
   label: luliconazole
   path: data/antibiotics/antifungal/luliconazole.yaml
@@ -3695,14 +4034,3 @@ held_records:
     (CYP51 / Erg11) (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml
     without a single verified experimental-strain UniProtKB accession in DOI:10.1007/s10156-004-0327-1
     and was promoted from PROPOSED to REVIEWED in Cycle 2 Stage 5.
-- identifier: CHEBI:188153
-  label: oteseconazole
-  path: data/antibiotics/antifungal/oteseconazole.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/aac.00778-22
-  reason: Held from causal_graphs curation because the record was promoted from PROPOSED to REVIEWED in
-    Cycle 2 Stage 5 outside the Stage 2 causal_graphs curation cohort; its fungal CYP51 / Erg11 target
-    (DOI:10.1128/aac.00778-22) is curated on molecular_targets with Candida albicans UniProtKB:P10613
-    and Nakaseomyces glabratus UniProtKB:P50859.

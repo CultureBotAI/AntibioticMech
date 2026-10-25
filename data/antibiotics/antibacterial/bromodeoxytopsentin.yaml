@@ -107,3 +107,85 @@ curation_history:
   changes: Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776)
     protein example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).
   llm_assisted: true
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6G8M9)
+    and primary literature (PMID:22030393).
+  llm_assisted: true
+causal_graphs:
+- graph_id: bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition
+  title: Bromodeoxytopsentin inhibits Staphylococcus aureus pyruvate kinase to suppress
+    bacterial growth
+  description: Bromodeoxytopsentin potently and selectively inhibits Staphylococcus
+    aureus (MRSA) pyruvate kinase over human orthologs and suppresses Gram-positive
+    bacterial growth.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bromodeoxytopsentin
+    label: bromodeoxytopsentin
+    node_type: COMPOUND
+    grounding: CHEBI:144087
+  - node_id: staphylococcal_pyruvate_kinase
+    label: MRSA pyruvate kinase
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Staphylococcus aureus pyruvate kinase (Pyk); kept label-only
+      with MRSA252 pyruvate kinase (UniProtKB:Q6G8M9) protein_examples.
+    gene_symbols:
+    - pyk
+    protein_examples:
+    - uniprot_id: UniProtKB:Q6G8M9
+      protein_label: Pyruvate kinase
+      gene_symbol: pyk
+      taxon_id: NCBITaxon:282458
+      taxon_label: Staphylococcus aureus (strain MRSA252)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned,
+        purified, and inhibited by bromodeoxytopsentin with nanomolar potency (IC50
+        = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic assays; the cocrystal
+        structure in the same study (PDB:3T07) bound the synthetic bis-indole analog
+        IS130 to the dimer interface of this MRSA252 enzyme.
+  - node_id: pyruvate_kinase_catalysis
+    label: staphylococcal pyruvate kinase catalytic activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: ATP-generating glycolytic pyruvate kinase catalysis assayed on
+      purified MRSA Pyk enzyme.
+  - node_id: staphylococcal_glycolytic_growth
+    label: Staphylococcus aureus bacterial growth
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Pyruvate-kinase-dependent antibacterial growth inhibition measured
+      in MSSA and MRSA strains.
+  edges:
+  - subject: bromodeoxytopsentin
+    predicate: inhibits
+    object: pyruvate_kinase_catalysis
+    description: Bromodeoxytopsentin potently inhibits MRSA pyruvate kinase enzymatic
+      catalysis.
+    evidence:
+    - reference: PMID:22030393
+      notes: Biochemical enzyme assays demonstrated nanomolar inhibition of MRSA pyruvate
+        kinase by bromodeoxytopsentin with high selectivity over human pyruvate kinase
+        isoforms.
+  - subject: staphylococcal_pyruvate_kinase
+    predicate: enables
+    object: pyruvate_kinase_catalysis
+    description: Staphylococcus aureus Pyk catalyzes the terminal glycolytic phosphotransfer
+      step.
+    evidence:
+    - reference: PMID:22030393
+      notes: Purified MRSA pyruvate kinase enzyme catalyzed the reaction targeted
+        by marine bisindole alkaloids.
+  - subject: pyruvate_kinase_catalysis
+    predicate: supports
+    object: staphylococcal_glycolytic_growth
+    description: Pyruvate kinase catalytic activity supports Staphylococcus aureus
+      growth.
+    evidence:
+    - reference: PMID:22030393
+      notes: Inhibition of MRSA pyruvate kinase by bisindole alkaloids correlated
+        with antibacterial activity against S. aureus.

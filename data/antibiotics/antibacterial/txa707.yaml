@@ -50,3 +50,15 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: Hydrophobic-side-chain benzamide FtsZ inhibitor that binds the
+  interdomain cleft of Staphylococcus aureus FtsZ and disrupts bacterial cell division
+  (PMID:28199205).

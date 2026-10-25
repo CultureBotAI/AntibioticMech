@@ -49,3 +49,15 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: Quinolonyl-oxazolidinone hybrid antibiotic that primarily inhibits
+  bacterial protein synthesis at the 50S ribosomal subunit and secondarily inhibits
+  DNA synthesis in Clostridioides difficile (PMID:24798276).

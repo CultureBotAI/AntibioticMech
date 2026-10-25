@@ -145,6 +145,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Avibactam covalently carbamylates class D OXA beta-lactamases to inhibit beta-lactam hydrolysis <span class="pill">MECHANISTIC</span></h3>
+<p>Avibactam binds the active site of class D OXA beta-lactamases (including OXA-10 and OXA-48) and forms a reversible covalent carbamyl-enzyme adduct that inhibits beta-lactamase catalytic hydrolysis.</p><div class="table-scroll" role="region" aria-label="Nodes: avibactam_class_d_oxa_beta_lactamase_carbamylation" tabindex="0">
+<table>
+  <caption>Nodes — avibactam_class_d_oxa_beta_lactamase_carbamylation</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">avibactam</code></td>
+    <td>avibactam</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/avibactam.html"><code class="curie">CHEBI:85984</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">class_d_oxa_beta_lactamase</code></td>
+    <td>class D OXA beta-lactamases<br><span class="meta">Examples: Beta-lactamase OXA-48 (OXA-48) <a href="https://www.uniprot.org/uniprotkb/Q6XEC0"><code class="curie">UniProtKB:Q6XEC0</code></a>, <em>Klebsiella pneumoniae</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_573"><code class="curie">NCBITaxon:573</code></a> <span class="pill">REVIEWED</span> — Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella pneumoniae covalently carbamylated at active-site Ser70 by avibactam in the PMID:25406838 X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation kinetic assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA) cocrystallized in the same study is an unreviewed TrEMBL entry and is not added as a reviewed example.</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td>reversibly carbamylated class D OXA beta-lactamase active-site complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">oxa_beta_lactam_hydrolysis</code></td>
+    <td>class D OXA beta-lactamase catalytic activity</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: avibactam_class_d_oxa_beta_lactamase_carbamylation" tabindex="0">
+<table>
+  <caption>Edges — avibactam_class_d_oxa_beta_lactamase_carbamylation</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">avibactam</code></td>
+    <td>binds</td>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(X-ray crystal structures of avibactam bound to OXA-10 and OXA-48 (1.4-2.1 angstrom, PDB:4S2K/4S2N/4WMC) resolved the covalent carbamylated active-site adduct.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">class_d_oxa_beta_lactamase</code></td>
+    <td>participates in</td>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(Structural analysis mapped the OXA-10 and OXA-48 active-site interactions stabilizing the avibactam carbamyl linkage.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">carbamylated_oxa_active_site_adduct</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">oxa_beta_lactam_hydrolysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25406838">PMID:25406838</a></span> <span class="meta">(Enzyme-kinetic acylation and deacylation measurements across OXA-2, OXA-10, OXA-24, and OXA-48 demonstrated inhibition of class D beta-lactamase activity.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -186,6 +256,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
     <p>Added reviewed UniProtKB:Q6XEC0 (Klebsiella pneumoniae OXA-48, blaOXA-48) protein example to the class D OXA beta-lactamases PRIMARY_LITERATURE molecular target (PMID:25406838).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph avibactam_class_d_oxa_beta_lactamase_carbamylation (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6XEC0) and primary literature (PMID:25406838).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -206,7 +281,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f412338c2b86</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>43f551a08620</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>
