@@ -58,9 +58,60 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial trehalose monomycolate
+    exporter MmpL3 backed by DOI:10.1128/AAC.05708-11.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WJV5 (Mycobacterium tuberculosis H37Rv mmpL3,
+    Rv0206c) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.05708-11).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Adamantyl-ethylenediamine inhibitor that targets the mycobacterial
   trehalose monomycolate transporter MmpL3 and blocks mycolic-acid incorporation into
-  the cell envelope (PMID:22354996).
+  the cell envelope (DOI:10.1128/AAC.05708-11; PMID:22252828).
+molecular_targets:
+- target_label: mycobacterial trehalose monomycolate exporter MmpL3
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Radiolabeled mycolic-acid lipid profiling showing intracellular
+    trehalose monomycolate accumulation and whole-genome sequencing of SQ109-resistant
+    Mycobacterium tuberculosis H37Rv mutants mapping to mmpL3 (Rv0206c) (DOI:10.1128/AAC.05708-11;
+    PMID:22252828).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-04
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1128/AAC.05708-11
+    snippet: Tahlan et al. demonstrated that the 1,2-ethylenediamine antitubercular
+      clinical candidate SQ109 inhibits Mycobacterium tuberculosis H37Rv growth at
+      an MIC of 0.39 to 0.78 ug/mL (1.2 to 2.4 uM) and blocks trehalose monomycolate
+      export by targeting the inner-membrane transporter MmpL3 (Rv0206c), causing
+      trehalose monomycolate accumulation and loss of trehalose dimycolate and cell
+      wall mycolates.
+    notes: Tahlan et al. 2012 (Antimicrob Agents Chemother 56:1797-1809; PMID:22252828)
+      identified the inner-membrane RND transporter MmpL3 (Rv0206c, UniProtKB:P9WJV5)
+      in Mycobacterium tuberculosis H37Rv as the molecular target of SQ109, where
+      resistance substitutions (including Q40R, L567P, and A700T) in MmpL3 confer
+      cross-resistance and block trehalose monomycolate export.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WJV5
+    protein_label: Trehalose monomycolate exporter MmpL3
+    gene_symbol: mmpL3
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Inner-membrane RND trehalose monomycolate transporter MmpL3 (Rv0206c) of
+      Mycobacterium tuberculosis H37Rv targeted by SQ109, blocking trehalose monomycolate
+      export to the mycomembrane and harboring resistance mutations (Q40R, L567P,
+      A700T) selected by SQ109 analogs (DOI:10.1128/AAC.05708-11; PMID:22252828).

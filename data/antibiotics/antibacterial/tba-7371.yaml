@@ -60,9 +60,60 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
+    2'-epimerase (DprE1) backed by DOI:10.1021/jm401382v.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1,
+    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/jm401382v).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 1,4-Azaindole non-covalent inhibitor of mycobacterial decaprenylphosphoryl-beta-D-ribose
   2'-epimerase (DprE1) that blocks cell-wall arabinogalactan and lipoarabinomannan
-  biosynthesis (PMID:28654291).
+  biosynthesis (DOI:10.1021/jm401382v; PMID:24215368).
+molecular_targets:
+- target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Biochemical inhibition of purified Mycobacterium tuberculosis
+    DprE1 (IC50 = 10 nM), Tyr314His resistance mutation mapping in M. tuberculosis
+    rv3790 (dprE1), and whole-cell antitubercular activity (DOI:10.1021/jm401382v;
+    PMID:24215368).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2013-12
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1021/jm401382v
+    snippet: Shirude et al. identified 1,4-azaindole noncovalent inhibitors of Mycobacterium
+      tuberculosis decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1) and reported
+      that compound 8 (TBA-7371, AZ-7371) inhibited M. tuberculosis DprE1 with an
+      IC50 of 10 nM, inhibited M. tuberculosis H37Rv growth with an MIC of 1.56 uM
+      (0.55 ug/mL), and reduced bacterial load in acute and chronic murine tuberculosis
+      infection models.
+    notes: Shirude et al. 2013 (J Med Chem 56:9701-9708; PMID:24215368) and Shirude
+      et al. 2014 (ACS Med Chem Lett 5:792-796; PMID:24957839; DOI:10.1021/ml500134b)
+      established that TBA-7371 (compound 8, AZ-7371) noncovalently inhibits Mycobacterium
+      tuberculosis H37Rv DprE1 (Rv3790, UniProtKB:P9WJF1, IC50 = 10 nM) without requiring
+      Cys387 covalent reactivity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WJF1
+    protein_label: Decaprenylphosphoryl-beta-D-ribose oxidase
+    gene_symbol: dprE1
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium
+      tuberculosis H37Rv noncovalently inhibited by the 1,4-azaindole TBA-7371 (IC50
+      = 10 nM), with resistance mapping to Tyr314His in rv3790 (DOI:10.1021/jm401382v;
+      PMID:24215368).

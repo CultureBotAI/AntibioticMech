@@ -42,7 +42,7 @@ source_concepts:
       an MIC of 0.31 ug/mL against Bacillus subtilis 168, and demonstrated that resistance
       mutations map to the conserved uL2 (RplB) ribosomal protein (E236A or E236Q,
       increasing the B. subtilis MIC to 4.2 to 5.0 ug/mL).
-    notes: Reported by Chandler et al. 2012 (mBio 3:e00499-12; PMID:23269829) and
+    notes: Reported by Chandler et al. 2012 (mBio 3:e00499-12; PMID:23249812) and
       Amunts et al. 2015 (J Mol Biol 427:753-755; DOI:10.1016/j.jmb.2014.12.018) as
       a Burkholderia thailandensis polyketide-peptide hybrid antibiotic that binds
       a unique site on the 50S ribosomal subunit coordinated by ribosomal protein
@@ -61,9 +61,74 @@ curation_history:
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for 50S ribosomal subunit protein
+    uL2 (RplB) backed by DOI:10.1128/mBio.00499-12.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P42919 (Bacillus subtilis 168 rplB, BSU01130)
+    and UniProtKB:P60405 (Thermus thermophilus HB8 rplB, TTHA1676) protein examples
+    to the PRIMARY_LITERATURE molecular target (DOI:10.1128/mBio.00499-12).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Dichlorinated polyketide-peptide natural product that binds
   a distinct site on the bacterial 50S/30S ribosomal interface coordinating 16S rRNA
-  helix 18, 23S rRNA, P-site tRNA, and ribosomal protein uL2 (PMID:25533963).
+  helix 18, 23S rRNA, P-site tRNA, and ribosomal protein uL2 (DOI:10.1128/mBio.00499-12;
+  PMID:23249812; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+molecular_targets:
+- target_label: 50S ribosomal subunit protein uL2 (RplB)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis (strain 168)
+  experimental_context: Selection and ectopic expression of spontaneous bactobolin
+    A-resistant Bacillus subtilis 168 mutants mapping to rplB (50S ribosomal protein
+    uL2 Glu236Ala and Glu236Gln) and 70S ribosome crystal structure (PDB:4WT8) showing
+    direct contact with uL2 Glu236 (DOI:10.1128/mBio.00499-12; PMID:23249812; DOI:10.1016/j.jmb.2014.12.018).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-12
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1128/mBio.00499-12
+    snippet: Chandler et al. identified quorum-sensing-controlled bactobolin A as
+      the broad-spectrum antibiotic secreted by Burkholderia thailandensis, reported
+      an MIC of 0.31 ug/mL against Bacillus subtilis 168, and demonstrated that resistance
+      mutations map to the conserved uL2 (RplB) ribosomal protein (E236A or E236Q,
+      increasing the B. subtilis MIC to 4.2 to 5.0 ug/mL).
+    notes: Chandler et al. 2012 (mBio 3:e00499-12; PMID:23249812) showed that substitutions
+      at Glu236 of Bacillus subtilis 168 50S ribosomal protein uL2 (RplB, UniProtKB:P42919)
+      confer specific resistance to bactobolin A without cross-resistance to chloramphenicol,
+      clindamycin, linezolid, or erythromycin; Amunts et al. 2015 (J Mol Biol 427:753-755;
+      PMID:25562208; DOI:10.1016/j.jmb.2014.12.018; PDB:4WT8) resolved bactobolin
+      A bound to the Thermus thermophilus HB8 70S ribosome in direct contact with
+      uL2 (UniProtKB:P60405) and P-site tRNA CCA.
+  protein_examples:
+  - uniprot_id: UniProtKB:P42919
+    protein_label: Large ribosomal subunit protein uL2
+    gene_symbol: rplB
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis (strain 168)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB, BSU01130)
+      in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln substitutions
+      confer specific resistance to bactobolin A (MIC shift from 0.31 to 4.2-5.0 ug/mL;
+      DOI:10.1128/mBio.00499-12; PMID:23249812).
+  - uniprot_id: UniProtKB:P60405
+    protein_label: Large ribosomal subunit protein uL2
+    gene_symbol: rplB
+    taxon_id: NCBITaxon:300852
+    taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB,
+      TTHA1676) that directly coordinates bactobolin A via its conserved Glu236 loop
+      at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure
+      (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).

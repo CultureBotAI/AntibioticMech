@@ -41,7 +41,7 @@ source_concepts:
       against 209 clinical Staphylococcus aureus isolates (111 MSSA and 98 MRSA) and
       reported an MIC range of 0.06 to 1.0 mg/L with uniform MIC50 and MIC90 values
       of 0.25 mg/L, plus in vivo efficacy in murine systemic S. aureus infections.
-    notes: Reported by Park et al. 2007 (J Antimicrob Chemother 60:568-574; PMID:17606483)
+    notes: Reported by Park et al. 2007 (J Antimicrob Chemother 60:568-574; PMID:17606482)
       and Bogdanovich et al. 2007 (Antimicrob Agents Chemother 51:4191-4196; DOI:10.1128/AAC.00501-07)
       as a selective 2-pyridone inhibitor (CG400549) of staphylococcal enoyl-acyl
       carrier protein reductase (FabI). PubChem CID 11844916 supplies the standard
@@ -58,9 +58,41 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_MEMBRANE_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for staphylococcal enoyl-acyl
+    carrier protein reductase (FabI) backed by DOI:10.1093/jac/dkm236.
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Pyridone FabI inhibitor (CG400549) that selectively inhibits
   staphylococcal enoyl-acyl carrier protein reductase (FabI) in the type II fatty-acid
-  synthesis (FAS-II) pathway (PMID:22585226).
+  synthesis (FAS-II) pathway (DOI:10.1093/jac/dkm236; PMID:17606482).
+molecular_targets:
+- target_label: staphylococcal enoyl-acyl carrier protein reductase (FabI)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Selection of single-step CG400549-resistant Staphylococcus
+    aureus mutants mapping to FabI Phe204Leu, fabI overexpression MIC shift assays,
+    and clinical isolate susceptibility testing across 209 MSSA and MRSA isolates
+    (DOI:10.1093/jac/dkm236; PMID:17606482).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2007-09
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1093/jac/dkm236
+    snippet: Park et al. evaluated the 2-pyridone FabI inhibitor CG400549 (nilofabicin)
+      against 209 clinical Staphylococcus aureus isolates (111 MSSA and 98 MRSA) and
+      reported an MIC range of 0.06 to 1.0 mg/L with uniform MIC50 and MIC90 values
+      of 0.25 mg/L, plus in vivo efficacy in murine systemic S. aureus infections.
+    notes: Park et al. 2007 (J Antimicrob Chemother 60:568-574; PMID:17606482) established
+      that CG400549 (nilofabicin) selectively targets Staphylococcus aureus enoyl-acyl
+      carrier protein reductase FabI (confirmed by fabI overexpression and the Phe204Leu
+      resistance substitution); held from reviewed UniProtKB accession assignment
+      because the clinical isolate panel does not pin a single reviewed Swiss-Prot
+      S. aureus strain proteome between NCTC 8325 (UniProtKB:Q2FZQ3) and MRSA252 (UniProtKB:Q6GI75).

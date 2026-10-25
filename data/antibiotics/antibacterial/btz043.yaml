@@ -57,9 +57,62 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
+    2'-epimerase (DprE1) backed by DOI:10.1126/science.1171583.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1,
+    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1126/science.1171583).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Benzothiazinone nitro-suicide inhibitor that undergoes DprE1-mediated
   nitroreduction and covalently modifies Cys387 of mycobacterial decaprenylphosphoryl-beta-D-ribose
-  2'-epimerase (DprE1), blocking cell-wall arabinan synthesis (PMID:19299584).
+  2'-epimerase (DprE1), blocking cell-wall arabinan synthesis (DOI:10.1126/science.1171583;
+  PMID:19299584).
+molecular_targets:
+- target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Whole-genome sequencing of spontaneous BTZ043-resistant Mycobacterium
+    tuberculosis and M. smegmatis mutants mapping to DprE1 (Rv3790) Cys387 and covalent
+    enzyme inactivation of cell-wall decaprenylphosphoryl-D-arabinose biosynthesis
+    (DOI:10.1126/science.1171583; PMID:19299584).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2009-05
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1126/science.1171583
+    snippet: Makarov et al. discovered 1,3-benzothiazin-4-ones and identified the
+      S-enantiomer BTZ043, reporting an MIC of 1 ng/mL (2.3 nM) against Mycobacterium
+      tuberculosis H37Rv and 4 ng/mL against Mycobacterium smegmatis, covalent inhibition
+      of decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1), and bactericidal
+      efficacy across multidrug- and extensively drug-resistant M. tuberculosis clinical
+      isolates.
+    notes: Makarov et al. 2009 (Science 324:801-804; PMID:19299584) demonstrated that
+      BTZ043 targets Mycobacterium tuberculosis H37Rv DprE1 (Rv3790, UniProtKB:P9WJF1),
+      where FAD-dependent nitroreduction of BTZ043 to a nitroso intermediate forms
+      a covalent adduct with Cys387 and Cys387Ser/Gly substitutions confer >2,500-fold
+      resistance.
+  protein_examples:
+  - uniprot_id: UniProtKB:P9WJF1
+    protein_label: Decaprenylphosphoryl-beta-D-ribose oxidase
+    gene_symbol: dprE1
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790)
+      of Mycobacterium tuberculosis H37Rv that reduces the nitro group of BTZ043 to
+      a nitroso intermediate and forms a covalent semimercaptal adduct at Cys387,
+      where Cys387Ser/Gly substitutions confer high-level resistance (DOI:10.1126/science.1171583;
+      PMID:19299584).

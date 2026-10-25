@@ -42,7 +42,7 @@ source_concepts:
       = 0.23 uM; CYP51B IC50 = 0.22 uM) and reported an MIC50 of 0.032 ug/mL and MIC90
       of 0.064 ug/mL across 96 clinical A. fumigatus isolates.
     notes: Reported by Colley et al. 2017 (Antimicrob Agents Chemother 61:e02280-16;
-      PMID:28264849) and Rudramurthy et al. 2019 (J Antimicrob Chemother 74:2943-2951;
+      PMID:28223388) and Rudramurthy et al. 2019 (J Antimicrob Chemother 74:2943-2951;
       DOI:10.1093/jac/dkz280) as a lung-retention-optimized triazole antifungal (PC945)
       targeting fungal lanosterol 14-alpha-demethylase (CYP51A/CYP51B) across Aspergillus
       and Candida species. PubChem CID 121383526 supplies the standard InChI, InChIKey,
@@ -59,9 +59,73 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Aspergillus fumigatus sterol
+    14-alpha-demethylase (CYP51A / CYP51B) backed by DOI:10.1128/AAC.02280-16.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:Q4WNT5 (Aspergillus fumigatus Af293 cyp51A, AFUA_4G06890)
+    and UniProtKB:E9QY26 (Aspergillus fumigatus Af293 cyp51B, AFUA_7G03740) protein
+    examples to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.02280-16).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Inhaled triazole antifungal (PC945) that inhibits fungal cytochrome
   P450 sterol 14alpha-demethylase (CYP51A/CYP51B) and blocks ergosterol biosynthesis
-  in Aspergillus fumigatus (PMID:28137810).
+  in Aspergillus fumigatus (DOI:10.1128/AAC.02280-16; PMID:28223388).
+molecular_targets:
+- target_label: Aspergillus fumigatus sterol 14-alpha-demethylase (CYP51A / CYP51B)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:330879
+  taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100
+    / Af293)
+  experimental_context: Cell-free biochemical inhibition of recombinant Aspergillus
+    fumigatus CYP51A (IC50 = 0.23 uM) and CYP51B (IC50 = 0.22 uM), type II heme binding
+    spectra, and cellular [14C]acetate sterol-biosynthesis inhibition (IC50 = 0.0042
+    ug/mL) in A. fumigatus Af293 (DOI:10.1128/AAC.02280-16; PMID:28223388).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2017-05
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1128/AAC.02280-16
+    snippet: Colley et al. characterized PC945 (opelconazole) as a novel inhaled triazole
+      inhibitor of Aspergillus fumigatus sterol 14-alpha-demethylase (CYP51A IC50
+      = 0.23 uM; CYP51B IC50 = 0.22 uM) and reported an MIC50 of 0.032 ug/mL and MIC90
+      of 0.064 ug/mL across 96 clinical A. fumigatus isolates.
+    notes: Colley et al. 2017 (Antimicrob Agents Chemother 61:e02280-16; PMID:28223388)
+      demonstrated tight-binding inhibition of both Aspergillus fumigatus Af293 sterol
+      14-alpha-demethylase paralogs CYP51A (cyp51A, AFUA_4G06890, UniProtKB:Q4WNT5,
+      IC50 = 0.23 uM) and CYP51B (cyp51B, AFUA_7G03740, UniProtKB:E9QY26, IC50 = 0.22
+      uM) and ergosterol depletion in A. fumigatus Af293.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q4WNT5
+    protein_label: Sterol 14-alpha demethylase cyp51A
+    gene_symbol: cyp51A
+    taxon_id: NCBITaxon:330879
+    taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100
+      / Af293)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51A
+      (cyp51A, AFUA_4G06890) directly inhibited by opelconazole (PC945) in cell-free
+      CYP51A enzyme assays (IC50 = 0.23 uM) and type II heme-iron binding spectra
+      (DOI:10.1128/AAC.02280-16; PMID:28223388).
+  - uniprot_id: UniProtKB:E9QY26
+    protein_label: Sterol 14-alpha demethylase cyp51B
+    gene_symbol: cyp51B
+    taxon_id: NCBITaxon:330879
+    taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100
+      / Af293)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51B
+      (cyp51B, AFUA_7G03740) directly inhibited by opelconazole (PC945) in cell-free
+      CYP51B enzyme assays (IC50 = 0.22 uM) and type II heme-iron binding spectra
+      (DOI:10.1128/AAC.02280-16; PMID:28223388).

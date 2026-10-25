@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 50,
+  "record_count": 57,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -2642,6 +2642,361 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776) protein example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-20568fed2e",
+      "label": "BTZ043",
+      "path": "data/antibiotics/antibacterial/btz043.yaml",
+      "before_sha256": "29f1250396e479493105be36819a52fa460c7dc0c239b49a8a5377d3d7bbff44",
+      "after_sha256": "5097de0d72e18aaeac5eb438fe25aa00834fc66460e720ee6116b36991540214",
+      "unchanged_fields_sha256": "4474a7636e645bd4063150101fd65a5b3b593b0c9435eca2e556b2f80bfdaf74",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P9WJF1",
+              "protein_label": "Decaprenylphosphoryl-beta-D-ribose oxidase",
+              "gene_symbol": "dprE1",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium tuberculosis H37Rv that reduces the nitro group of BTZ043 to a nitroso intermediate and forms a covalent semimercaptal adduct at Cys387, where Cys387Ser/Gly substitutions confer high-level resistance (DOI:10.1126/science.1171583; PMID:19299584)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T22:03:25Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1, Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1126/science.1171583).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-fe28654fcf",
+      "label": "TBA-7371",
+      "path": "data/antibiotics/antibacterial/tba-7371.yaml",
+      "before_sha256": "9f0dca93713a55970307ce831c06871ee0215f91fecbc2b408602319740cd3b9",
+      "after_sha256": "cfeaaf86dfe8f6928e8e263fd4fff75572ead5c216588812525dbf715598b823",
+      "unchanged_fields_sha256": "7476e5ac887326424de4574df7b522b82ac050eefa0ce098e3b2db165bf6dbf5",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P9WJF1",
+              "protein_label": "Decaprenylphosphoryl-beta-D-ribose oxidase",
+              "gene_symbol": "dprE1",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium tuberculosis H37Rv noncovalently inhibited by the 1,4-azaindole TBA-7371 (IC50 = 10 nM), with resistance mapping to Tyr314His in rv3790 (DOI:10.1021/jm401382v; PMID:24215368)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T22:03:25Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1, Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/jm401382v).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-b1cfeb9243",
+      "label": "SQ109",
+      "path": "data/antibiotics/antibacterial/sq109.yaml",
+      "before_sha256": "e350f83af756e5656ebfd5d50751488fad5e25aaf099009590787878c54ca2dd",
+      "after_sha256": "71d749e2e43a6e69a63bfd78cb8ab1fbf9b18e1c5e146d4eb9bbac0ed665111b",
+      "unchanged_fields_sha256": "15f6c9b3d48bbc44e8469741ced7cbc7373e22204d9d4229aca40da9149f7459",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "mycobacterial trehalose monomycolate exporter MmpL3",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P9WJV5",
+              "protein_label": "Trehalose monomycolate exporter MmpL3",
+              "gene_symbol": "mmpL3",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Inner-membrane RND trehalose monomycolate transporter MmpL3 (Rv0206c) of Mycobacterium tuberculosis H37Rv targeted by SQ109, blocking trehalose monomycolate export to the mycomembrane and harboring resistance mutations (Q40R, L567P, A700T) selected by SQ109 analogs (DOI:10.1128/AAC.05708-11; PMID:22252828)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T22:03:25Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:P9WJV5 (Mycobacterium tuberculosis H37Rv mmpL3, Rv0206c) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.05708-11).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-df25925bde",
+      "label": "PC190723",
+      "path": "data/antibiotics/antibacterial/pc190723.yaml",
+      "before_sha256": "b77125c4131943e440f2552285c48037d4b179f62e196b10d64c05c76b46e56d",
+      "after_sha256": "2f340796ed4eb6c53d9c5a272669265034896e635ccedfb0e3b0b6e7cfa44970",
+      "unchanged_fields_sha256": "7fef920f5eb894e5c7baba55406bd23e931f163e5a22419234c185fde6bd1df0",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial cell division protein FtsZ",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0A031",
+              "protein_label": "Cell division protein FtsZ",
+              "gene_symbol": "ftsZ",
+              "taxon_id": "NCBITaxon:1280",
+              "taxon_label": "Staphylococcus aureus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Staphylococcus aureus cell division GTPase FtsZ whose GTPase activity is inhibited by PC190723 (IC50 = 55 ng/mL) and whose interdomain cleft binds PC190723 in the cocrystal structure (PDB:4DXD) and harbors resistance mutations (G193D, G196C/S/A, N263K; DOI:10.1126/science.1159961; PMID:18801997; PMID:22440737)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P17865",
+              "protein_label": "Cell division protein FtsZ",
+              "gene_symbol": "ftsZ",
+              "taxon_id": "NCBITaxon:224308",
+              "taxon_label": "Bacillus subtilis (strain 168)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Bacillus subtilis strain 168 cell division protein FtsZ (BSU15290) shown by GFP-FtsZ fluorescence microscopy in DOI:10.1126/science.1159961 (PMID:18801997) to mislocalize into discrete foci and fail to constrict the cytokinetic Z-ring upon PC190723 exposure."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T22:03:25Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:P17865 (Bacillus subtilis 168 ftsZ) protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1126/science.1159961).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-3fca4e69a7",
+      "label": "TXA707",
+      "path": "data/antibiotics/antibacterial/txa707.yaml",
+      "before_sha256": "1be4f208c9ee8a19d9c0050a5e04d5dbf2e64dfb60f484480e9cebcfeb7f830f",
+      "after_sha256": "9de3c9d8a43b0405d4fd03ec829035614d48cfbfdb9ba321f927b62cfd537aa0",
+      "unchanged_fields_sha256": "794b3a636cd70a021eba7a38294e9959e7a600754ac0312e75a2ec28fee927f7",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "staphylococcal cell division protein FtsZ",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0A031",
+              "protein_label": "Cell division protein FtsZ",
+              "gene_symbol": "ftsZ",
+              "taxon_id": "NCBITaxon:1280",
+              "taxon_label": "Staphylococcus aureus",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Staphylococcus aureus cell division protein FtsZ targeted by TXA707, where TXA707 stimulates FtsZ polymerization, disrupts septum formation, and selects resistance substitutions at Gly196 and Gly193 in the interdomain binding pocket (DOI:10.1128/AAC.00708-15; PMID:26033735)."
+            },
+            {
+              "uniprot_id": "UniProtKB:Q2FZ89",
+              "protein_label": "Cell division protein FtsZ",
+              "gene_symbol": "ftsZ",
+              "taxon_id": "NCBITaxon:93061",
+              "taxon_label": "Staphylococcus aureus (strain NCTC 8325 / PS 47)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Staphylococcus aureus strain NCTC 8325 cell division protein FtsZ (SAOUHSC_01150) cocrystallized in complex with TXA707 in the interdomain binding cleft (PDB:5XDT; PMID:28621933; DOI:10.1128/AAC.00708-15)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T22:03:25Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:Q2FZ89 (Staphylococcus aureus NCTC 8325 ftsZ, SAOUHSC_01150) protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.00708-15).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:138579",
+      "label": "bactobolin A",
+      "path": "data/antibiotics/antibacterial/bactobolin-a.yaml",
+      "before_sha256": "607bed0e76c2d7a30f39c3a728941b63a1a360f142544f2c6b001146bc070aef",
+      "after_sha256": "86a32ce90e7f8ed11d24802c24dd50644b232abc88593588e1b9e0cad5bc43ce",
+      "unchanged_fields_sha256": "758619360e51e04d0e6c13d68e7181c7846fea3fadf4ccead8554b3dab1eb026",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "50S ribosomal subunit protein uL2 (RplB)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P42919",
+              "protein_label": "Large ribosomal subunit protein uL2",
+              "gene_symbol": "rplB",
+              "taxon_id": "NCBITaxon:224308",
+              "taxon_label": "Bacillus subtilis (strain 168)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB, BSU01130) in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln substitutions confer specific resistance to bactobolin A (MIC shift from 0.31 to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12; PMID:23249812)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P60405",
+              "protein_label": "Large ribosomal subunit protein uL2",
+              "gene_symbol": "rplB",
+              "taxon_id": "NCBITaxon:300852",
+              "taxon_label": "Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB, TTHA1676) that directly coordinates bactobolin A via its conserved Glu236 loop at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T22:03:25Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:P42919 (Bacillus subtilis 168 rplB, BSU01130) and UniProtKB:P60405 (Thermus thermophilus HB8 rplB, TTHA1676) protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1128/mBio.00499-12).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-d86a1a3d8b",
+      "label": "opelconazole",
+      "path": "data/antibiotics/antifungal/opelconazole.yaml",
+      "before_sha256": "4b05ac2755eb3eda93e413d30f92c9f07d59751ebd1b5a58ea7be319d3c5c4b7",
+      "after_sha256": "cd74d3946eca29f41eb3fa1145fa3258c77d68c41612988ec5549d3cdcef218d",
+      "unchanged_fields_sha256": "fc883a914556bd86242ba9fb8488c7204b93a35ed013ccf432df89dc67cfa155",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "Aspergillus fumigatus sterol 14-alpha-demethylase (CYP51A / CYP51B)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q4WNT5",
+              "protein_label": "Sterol 14-alpha demethylase cyp51A",
+              "gene_symbol": "cyp51A",
+              "taxon_id": "NCBITaxon:330879",
+              "taxon_label": "Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51A (cyp51A, AFUA_4G06890) directly inhibited by opelconazole (PC945) in cell-free CYP51A enzyme assays (IC50 = 0.23 uM) and type II heme-iron binding spectra (DOI:10.1128/AAC.02280-16; PMID:28223388)."
+            },
+            {
+              "uniprot_id": "UniProtKB:E9QY26",
+              "protein_label": "Sterol 14-alpha demethylase cyp51B",
+              "gene_symbol": "cyp51B",
+              "taxon_id": "NCBITaxon:330879",
+              "taxon_label": "Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51B (cyp51B, AFUA_7G03740) directly inhibited by opelconazole (PC945) in cell-free CYP51B enzyme assays (IC50 = 0.22 uM) and type II heme-iron binding spectra (DOI:10.1128/AAC.02280-16; PMID:28223388)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T22:03:25Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:Q4WNT5 (Aspergillus fumigatus Af293 cyp51A, AFUA_4G06890) and UniProtKB:E9QY26 (Aspergillus fumigatus Af293 cyp51B, AFUA_7G03740) protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.02280-16).",
         "llm_assisted": true
       }
     }

@@ -1323,6 +1323,198 @@ records:
         inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393
         enzymatic assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole
         analog IS130 to the dimer interface of this MRSA252 enzyme.
+- identifier: antibioticmech:curator-20568fed2e
+  label: BTZ043
+  path: data/antibiotics/antibacterial/btz043.yaml
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1, Rv3790) protein example
+    to the PRIMARY_LITERATURE molecular target (DOI:10.1126/science.1171583).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
+    target_reference: DOI:10.1126/science.1171583
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WJF1
+      protein_label: Decaprenylphosphoryl-beta-D-ribose oxidase
+      gene_symbol: dprE1
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium
+        tuberculosis H37Rv that reduces the nitro group of BTZ043 to a nitroso intermediate and forms
+        a covalent semimercaptal adduct at Cys387, where Cys387Ser/Gly substitutions confer high-level
+        resistance (DOI:10.1126/science.1171583; PMID:19299584).
+- identifier: antibioticmech:curator-fe28654fcf
+  label: TBA-7371
+  path: data/antibiotics/antibacterial/tba-7371.yaml
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1, Rv3790) protein example
+    to the PRIMARY_LITERATURE molecular target (DOI:10.1021/jm401382v).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
+    target_reference: DOI:10.1021/jm401382v
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WJF1
+      protein_label: Decaprenylphosphoryl-beta-D-ribose oxidase
+      gene_symbol: dprE1
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium tuberculosis
+        H37Rv noncovalently inhibited by the 1,4-azaindole TBA-7371 (IC50 = 10 nM), with resistance mapping
+        to Tyr314His in rv3790 (DOI:10.1021/jm401382v; PMID:24215368).
+- identifier: antibioticmech:curator-b1cfeb9243
+  label: SQ109
+  path: data/antibiotics/antibacterial/sq109.yaml
+  changes: Added reviewed UniProtKB:P9WJV5 (Mycobacterium tuberculosis H37Rv mmpL3, Rv0206c) protein example
+    to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.05708-11).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: mycobacterial trehalose monomycolate exporter MmpL3
+    target_reference: DOI:10.1128/AAC.05708-11
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WJV5
+      protein_label: Trehalose monomycolate exporter MmpL3
+      gene_symbol: mmpL3
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Inner-membrane RND trehalose monomycolate transporter MmpL3 (Rv0206c) of Mycobacterium tuberculosis
+        H37Rv targeted by SQ109, blocking trehalose monomycolate export to the mycomembrane and harboring
+        resistance mutations (Q40R, L567P, A700T) selected by SQ109 analogs (DOI:10.1128/AAC.05708-11;
+        PMID:22252828).
+- identifier: antibioticmech:curator-df25925bde
+  label: PC190723
+  path: data/antibiotics/antibacterial/pc190723.yaml
+  changes: Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:P17865 (Bacillus
+    subtilis 168 ftsZ) protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1126/science.1159961).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: bacterial cell division protein FtsZ
+    target_reference: DOI:10.1126/science.1159961
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A031
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Staphylococcus aureus cell division GTPase FtsZ whose GTPase activity is inhibited by PC190723
+        (IC50 = 55 ng/mL) and whose interdomain cleft binds PC190723 in the cocrystal structure (PDB:4DXD)
+        and harbors resistance mutations (G193D, G196C/S/A, N263K; DOI:10.1126/science.1159961; PMID:18801997;
+        PMID:22440737).
+    - uniprot_id: UniProtKB:P17865
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Bacillus subtilis strain 168 cell division protein FtsZ (BSU15290) shown by GFP-FtsZ fluorescence
+        microscopy in DOI:10.1126/science.1159961 (PMID:18801997) to mislocalize into discrete foci and
+        fail to constrict the cytokinetic Z-ring upon PC190723 exposure.
+- identifier: antibioticmech:curator-3fca4e69a7
+  label: TXA707
+  path: data/antibiotics/antibacterial/txa707.yaml
+  changes: Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:Q2FZ89 (Staphylococcus
+    aureus NCTC 8325 ftsZ, SAOUHSC_01150) protein examples to the PRIMARY_LITERATURE molecular target
+    (DOI:10.1128/AAC.00708-15).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: staphylococcal cell division protein FtsZ
+    target_reference: DOI:10.1128/AAC.00708-15
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A031
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:1280
+      taxon_label: Staphylococcus aureus
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Staphylococcus aureus cell division protein FtsZ targeted by TXA707, where TXA707 stimulates
+        FtsZ polymerization, disrupts septum formation, and selects resistance substitutions at Gly196
+        and Gly193 in the interdomain binding pocket (DOI:10.1128/AAC.00708-15; PMID:26033735).
+    - uniprot_id: UniProtKB:Q2FZ89
+      protein_label: Cell division protein FtsZ
+      gene_symbol: ftsZ
+      taxon_id: NCBITaxon:93061
+      taxon_label: Staphylococcus aureus (strain NCTC 8325 / PS 47)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Staphylococcus aureus strain NCTC 8325 cell division protein FtsZ (SAOUHSC_01150) cocrystallized
+        in complex with TXA707 in the interdomain binding cleft (PDB:5XDT; PMID:28621933; DOI:10.1128/AAC.00708-15).
+- identifier: CHEBI:138579
+  label: bactobolin A
+  path: data/antibiotics/antibacterial/bactobolin-a.yaml
+  changes: Added reviewed UniProtKB:P42919 (Bacillus subtilis 168 rplB, BSU01130) and UniProtKB:P60405
+    (Thermus thermophilus HB8 rplB, TTHA1676) protein examples to the PRIMARY_LITERATURE molecular target
+    (DOI:10.1128/mBio.00499-12).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: 50S ribosomal subunit protein uL2 (RplB)
+    target_reference: DOI:10.1128/mBio.00499-12
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P42919
+      protein_label: Large ribosomal subunit protein uL2
+      gene_symbol: rplB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB, BSU01130) in which spontaneous
+        and ectopically expressed Glu236Ala and Glu236Gln substitutions confer specific resistance to
+        bactobolin A (MIC shift from 0.31 to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12; PMID:23249812).
+    - uniprot_id: UniProtKB:P60405
+      protein_label: Large ribosomal subunit protein uL2
+      gene_symbol: rplB
+      taxon_id: NCBITaxon:300852
+      taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB, TTHA1676) that directly
+        coordinates bactobolin A via its conserved Glu236 loop at the P-site tRNA/23S rRNA interface in
+        the 70S ribosome cocrystal structure (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+- identifier: antibioticmech:curator-d86a1a3d8b
+  label: opelconazole
+  path: data/antibiotics/antifungal/opelconazole.yaml
+  changes: Added reviewed UniProtKB:Q4WNT5 (Aspergillus fumigatus Af293 cyp51A, AFUA_4G06890) and UniProtKB:E9QY26
+    (Aspergillus fumigatus Af293 cyp51B, AFUA_7G03740) protein examples to the PRIMARY_LITERATURE molecular
+    target (DOI:10.1128/AAC.02280-16).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: Aspergillus fumigatus sterol 14-alpha-demethylase (CYP51A / CYP51B)
+    target_reference: DOI:10.1128/AAC.02280-16
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q4WNT5
+      protein_label: Sterol 14-alpha demethylase cyp51A
+      gene_symbol: cyp51A
+      taxon_id: NCBITaxon:330879
+      taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51A (cyp51A, AFUA_4G06890)
+        directly inhibited by opelconazole (PC945) in cell-free CYP51A enzyme assays (IC50 = 0.23 uM)
+        and type II heme-iron binding spectra (DOI:10.1128/AAC.02280-16; PMID:28223388).
+    - uniprot_id: UniProtKB:E9QY26
+      protein_label: Sterol 14-alpha demethylase cyp51B
+      gene_symbol: cyp51B
+      taxon_id: NCBITaxon:330879
+      taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51B (cyp51B, AFUA_7G03740)
+        directly inhibited by opelconazole (PC945) in cell-free CYP51B enzyme assays (IC50 = 0.22 uM)
+        and type II heme-iron binding spectra (DOI:10.1128/AAC.02280-16; PMID:28223388).
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -2070,3 +2262,37 @@ held_targets:
   reason: Held because the Aspergillus fumigatus Af293 mitochondrial dihydroorotate dehydrogenase PyrE
     (AFUA_2G11060, UniProtKB:Q4W9Z2) directly inhibited by olorofim (F901318, IC50 = 44 nM; DOI:10.1128/aac.00307-23;
     PMID:27791100) is an unreviewed TrEMBL entry with no reviewed Swiss-Prot accession.
+- identifier: antibioticmech:curator-494fdc6ed8
+  label: nilofabicin
+  path: data/antibiotics/antibacterial/nilofabicin.yaml
+  scope: molecular_targets
+  target_label: staphylococcal enoyl-acyl carrier protein reductase (FabI)
+  target_type: PROTEIN
+  target_reference: DOI:10.1093/jac/dkm236
+  reason: Held because DOI:10.1093/jac/dkm236 (PMID:17606482) evaluated clinical Staphylococcus aureus
+    isolates and selected FabI Phe204Leu resistance mutants without pinning a single reviewed Swiss-Prot
+    S. aureus strain proteome accession between NCTC 8325 (UniProtKB:Q2FZQ3) and MRSA252 (UniProtKB:Q6GI75),
+    and the published CG400549 cocrystal (PDB:4CV2, PMID:24564362) used heterologous Escherichia coli
+    FabI (UniProtKB:P0AEK4).
+- identifier: CHEBI:198310
+  label: negamycin
+  path: data/antibiotics/antibacterial/negamycin.yaml
+  scope: molecular_targets
+  target_label: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: DOI:10.1073/pnas.1414401111
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal subunit head domain
+    (16S rRNA helix 34); DOI:10.1073/pnas.1414401111; PMID:25368144; PDB:4W2I) where the primary mechanism
+    acts on 16S rRNA helix 34 and the A-site tRNA anticodon stem-loop without a primary target protein
+    accession.
+- identifier: antibioticmech:curator-7e608b0982
+  label: amicoumacin A
+  path: data/antibiotics/antibacterial/amicoumacin-a.yaml
+  scope: molecular_targets
+  target_label: bacterial 30S ribosomal subunit E-site mRNA channel (16S rRNA helix 24)
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: DOI:10.1016/j.molcel.2014.09.020
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal subunit E-site mRNA
+    channel (16S rRNA helix 24); DOI:10.1016/j.molcel.2014.09.020; PMID:25306919; PDB:4W2F) where the
+    primary mechanism acts on conserved 16S rRNA nucleotides in helix 24 / helix 23 and the E-site mRNA
+    backbone without a primary target protein accession.

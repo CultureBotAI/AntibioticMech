@@ -39,8 +39,8 @@ source_concepts:
       bactericidal activity against methicillin-resistant, vancomycin-intermediate,
       and linezolid-resistant Staphylococcus aureus clinical isolates with MIC values
       of 0.5 to 2 ug/mL.
-    notes: Reported by Kaul et al. 2015 (Antimicrob Agents Chemother 59:4845-4855;
-      PMID:26033730) and Kaul et al. 2017 (Antimicrob Agents Chemother 61:e00863-17;
+    notes: Reported by Kaul et al. 2015 (Antimicrob Agents Chemother 59:4835-4844;
+      PMID:26033735) and Kaul et al. 2017 (Antimicrob Agents Chemother 61:e00863-17;
       DOI:10.1128/AAC.00863-17) as the active FtsZ-targeting 2,6-difluorobenzamide
       antibacterial moiety of the prodrug TXA709. PubChem CID 90135655 supplies the
       standard InChI, InChIKey, formula, and SMILES for TXA707.
@@ -56,9 +56,69 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for staphylococcal cell division
+    protein FtsZ backed by DOI:10.1128/AAC.00708-15.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:Q2FZ89
+    (Staphylococcus aureus NCTC 8325 ftsZ, SAOUHSC_01150) protein examples to the
+    PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.00708-15).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Hydrophobic-side-chain benzamide FtsZ inhibitor that binds the
   interdomain cleft of Staphylococcus aureus FtsZ and disrupts bacterial cell division
-  (PMID:28199205).
+  (DOI:10.1128/AAC.00708-15; PMID:26033735).
+molecular_targets:
+- target_label: staphylococcal cell division protein FtsZ
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Staphylococcus aureus FtsZ polymerization and septum-formation
+    disruption assays and FtsZ resistance mutation characterization (G196S and G193D)
+    across MRSA, VISA, and VRSA isolates (DOI:10.1128/AAC.00708-15; PMID:26033735).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2015-08
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1128/AAC.00708-15
+    snippet: Kaul et al. designed the metabolic-stability-optimized FtsZ-targeting
+      benzamide TXA707 by replacing the Cl atom of PC190723 with a CF3 group and reported
+      bactericidal activity against methicillin-resistant, vancomycin-intermediate,
+      and linezolid-resistant Staphylococcus aureus clinical isolates with MIC values
+      of 0.5 to 2 ug/mL.
+    notes: Kaul et al. 2015 (Antimicrob Agents Chemother 59:4835-4844; PMID:26033735)
+      and Fujita et al. 2017 (ACS Infect Dis 3:851-862; PMID:28621933; PDB:5XDT) established
+      that TXA707 binds the interdomain binding pocket of Staphylococcus aureus FtsZ
+      (UniProtKB:P0A031 / S. aureus NCTC 8325 UniProtKB:Q2FZ89), promoting aberrant
+      FtsZ polymerization and blocking cytokinesis.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A031
+    protein_label: Cell division protein FtsZ
+    gene_symbol: ftsZ
+    taxon_id: NCBITaxon:1280
+    taxon_label: Staphylococcus aureus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Staphylococcus aureus cell division protein FtsZ targeted by TXA707, where
+      TXA707 stimulates FtsZ polymerization, disrupts septum formation, and selects
+      resistance substitutions at Gly196 and Gly193 in the interdomain binding pocket
+      (DOI:10.1128/AAC.00708-15; PMID:26033735).
+  - uniprot_id: UniProtKB:Q2FZ89
+    protein_label: Cell division protein FtsZ
+    gene_symbol: ftsZ
+    taxon_id: NCBITaxon:93061
+    taxon_label: Staphylococcus aureus (strain NCTC 8325 / PS 47)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Staphylococcus aureus strain NCTC 8325 cell division protein FtsZ (SAOUHSC_01150)
+      cocrystallized in complex with TXA707 in the interdomain binding cleft (PDB:5XDT;
+      PMID:28621933; DOI:10.1128/AAC.00708-15).
