@@ -430,11 +430,25 @@ document_xrefs:
 - wikipedia.en:Ampicillin
 structural_observations:
 - structure_id: PDB:1H8S
-  relevance: UNREVIEWED
-  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  method: X_RAY_DIFFRACTION
+  relevance: ANTIBODY_COMPLEX
+  target_label: Anti-ampicillin single-chain Fv antibody fragment aL2
+  taxon_id: NCBITaxon:10090
+  taxon_label: Mus musculus
+  ligand_component: pdb-ccd:AIC
+  ligand_matches_record: true
+  evidence_status: PRIMARY_EVIDENCE
   source: CHEBI
   source_version: '2026-08-30'
   retrieved_on: '2026-08-30'
+  evidence:
+  - reference: PMID:11397088
+    snippet: Monoclonal single-chain Fv antibody fragments (scFvs) binding to the
+      beta-lactam antibiotic ampicillin (Amp) were isolated from a murine immunoglobulin
+      phage display library generated from mice immunized with an Amp-BSA conjugate.
+    notes: X-ray crystal structure (PDB:1H8S; DOI:10.1006/jmbi.2001.4663) of murine
+      anti-ampicillin single-chain Fv antibody fragment aL2 (NCBITaxon:10090) bound
+      to ampicillin (pdb-ccd:AIC).
 source_concepts:
 - source: ARO
   source_id: ARO:3000637
@@ -845,4 +859,12 @@ curation_history:
   action: STRUCTURED_ACTIVITY_BIOSAMPLE_ACCESSIONS
   changes: Structured BioSample accessions on 21 activity_spectrum observation(s)
     where evidence notes already named exactly one accession.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_STRUCTURAL_OBSERVATION
+  changes: Curated ChEBI-seeded structural_observations entry PDB:1H8S from UNREVIEWED
+    (PRIMARY_EVIDENCE_NEEDED) to ANTIBODY_COMPLEX (PRIMARY_EVIDENCE) for murine anti-ampicillin
+    single-chain Fv antibody fragment aL2 bound to ampicillin (pdb-ccd:AIC, X-ray,
+    PMID:11397088, DOI:10.1006/jmbi.2001.4663) (#1256).
   llm_assisted: true

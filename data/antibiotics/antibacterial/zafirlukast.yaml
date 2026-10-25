@@ -1,7 +1,7 @@
 identifier: CHEBI:10100
 label: zafirlukast
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An indole-based sulfonylcarbamate (leukotriene receptor antagonist) with
   direct anti-Gram-positive and antimycobacterial activity mediated by inhibition
@@ -48,30 +48,6 @@ source_concepts:
       of lipoteichoic acid synthase (LtaS), in addition to antimycobacterial activity
       targeting nucleoid-associated protein Lsr2.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T04:34:55Z'
-  curator: curate_mechanism
-  action: CURATED_MODE_OF_ACTION
-  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION
-    (MICROBIAL_TARGET) with primary-literature provenance.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added 2 PRIMARY_LITERATURE molecular_targets (mycobacterial Lsr2 from PMID:23650171
-    and staphylococcal LtaS from DOI:10.3390/antibiotics15090914).
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P9WIP7 (Mycobacterium tuberculosis H37Rv Lsr2,
-    Rv3597c) protein example to the mycobacterial Lsr2 PRIMARY_LITERATURE molecular
-    target (PMID:23650171).
-  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -134,3 +110,35 @@ molecular_targets:
       accession assignment because S. aureus LtaS is split across strain-specific
       Swiss-Prot entries (e.g. NCTC 8325 UniProtKB:Q2G093, MW2 UniProtKB:Q7A1I3, MRSA252
       UniProtKB:Q6GIU0).
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added 2 PRIMARY_LITERATURE molecular_targets (mycobacterial Lsr2 from PMID:23650171
+    and staphylococcal LtaS from DOI:10.3390/antibiotics15090914).
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WIP7 (Mycobacterium tuberculosis H37Rv Lsr2,
+    Rv3597c) protein example to the mycobacterial Lsr2 PRIMARY_LITERATURE molecular
+    target (PMID:23650171).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true

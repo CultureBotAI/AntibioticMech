@@ -1,7 +1,7 @@
 identifier: CHEBI:228412
 label: 6-methylflavone
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 6-methyl-2-phenyl-4H-chromen-4-one synthetic flavone with selective
   antimycobacterial activity against Mycobacterium abscessus via disruption of mycobacterial
@@ -44,23 +44,6 @@ source_concepts:
       respiratory energetics, inhibiting clinical Mycobacterium abscessus isolates
       at MIC 8-16 ug/mL and reducing pulmonary bacterial burden in vivo.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T04:34:55Z'
-  curator: curate_mechanism
-  action: CURATED_MODE_OF_ACTION
-  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ENERGY_METABOLISM_INHIBITION
-    (MICROBIAL_TARGET) with primary-literature provenance.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for Mycobacterium abscessus membrane
-    potential and respiratory energetics backed by DOI:10.1128/spectrum.03588-25.
-  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ENERGY_METABOLISM_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -90,3 +73,28 @@ molecular_targets:
       as a selective inhibitor of Mycobacterium abscessus growth (MIC 8-16 ug/mL)
       acting on mycobacterial membrane potential and respiratory energetics without
       assigning a single purified protein binding target.
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ENERGY_METABOLISM_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Mycobacterium abscessus membrane
+    potential and respiratory energetics backed by DOI:10.1128/spectrum.03588-25.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true

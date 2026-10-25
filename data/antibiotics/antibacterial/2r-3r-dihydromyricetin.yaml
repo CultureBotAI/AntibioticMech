@@ -1,7 +1,7 @@
 identifier: CHEBI:28429
 label: (2R,3R)-dihydromyricetin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A (2R,3R)-3,3',4',5,5',7-hexahydroxyflavanone (ampelopsin) natural product
   with direct antibacterial and antibiofilm activity against Gram-positive and Gram-negative
@@ -49,23 +49,6 @@ source_concepts:
       against Streptococcus agalactiae (MIC = 0.5 mg/mL, MBC = 0.5 mg/mL) and synergy
       with beta-lactams, ciprofloxacin, and vancomycin.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T04:34:55Z'
-  curator: curate_mechanism
-  action: CURATED_MODE_OF_ACTION
-  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=MEMBRANE_DISRUPTION
-    (MICROBIAL_TARGET) with primary-literature provenance.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for Streptococcus agalactiae
-    cell envelope and biofilm matrix backed by DOI:10.1177/15353141261501298.
-  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -93,3 +76,28 @@ molecular_targets:
     notes: Ma et al. 2026 (Foodborne Pathog Dis; PMID:42908502) demonstrated direct
       bactericidal cell-envelope disruption and biofilm matrix eradication by (2R,3R)-dihydromyricetin
       in Streptococcus agalactiae GBS2.
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=MEMBRANE_DISRUPTION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Streptococcus agalactiae
+    cell envelope and biofilm matrix backed by DOI:10.1177/15353141261501298.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true

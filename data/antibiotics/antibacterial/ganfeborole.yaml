@@ -49,23 +49,6 @@ source_concepts:
       leucyl-tRNA synthetase (LeuRS), with an M. tuberculosis H37Rv MIC of 0.08 uM
       (~0.024 ug/mL) and clinical bactericidal efficacy in Phase 2a tuberculosis patients.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial leucyl-tRNA
-    synthetase (LeuRS) backed by DOI:10.1038/s41591-024-02829-7.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P9WFV1 (Mycobacterium tuberculosis H37Rv LeuS,
-    Rv0041) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41591-024-02829-7).
-  llm_assisted: true
 molecular_targets:
 - target_label: mycobacterial leucyl-tRNA synthetase (LeuRS)
   target_type: PROTEIN
@@ -103,3 +86,36 @@ molecular_targets:
       CP1 editing domain traps the 3'-terminal adenosine of tRNA(Leu) in a covalent
       spiro-oxaborole adduct with ganfeborole (GSK3036656, IC50 = 0.20 uM, PDB:5AGR;
       DOI:10.1038/s41591-024-02829-7; PMID:28379699).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic 3-aminomethyl-4-chlorobenzoxaborole antitubercular
+  agent (GSK3036656) that inhibits Mycobacterium tuberculosis leucyl-tRNA synthetase
+  (LeuRS, Rv0041; GO:0004823) by trapping the 3''-terminus of tRNA(Leu) in the editing
+  active site via oxaborole adduct formation, blocking bacterial protein synthesis
+  (DOI:10.1038/s41591-024-02829-7).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial leucyl-tRNA
+    synthetase (LeuRS) backed by DOI:10.1038/s41591-024-02829-7.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WFV1 (Mycobacterium tuberculosis H37Rv LeuS,
+    Rv0041) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41591-024-02829-7).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1038/s41591-024-02829-7); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

@@ -45,11 +45,28 @@ drug_xrefs:
 - drugbank:DB01631
 structural_observations:
 - structure_id: PDB:1CLY
-  relevance: UNREVIEWED
-  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  method: X_RAY_DIFFRACTION
+  resolution_angstroms: 2.5
+  relevance: NOT_RELEVANT
+  target_label: Chimeric anti-tumor monoclonal antibody BR96 Fab fragment
+  ligand_component: pdb-ccd:MNO
+  ligand_matches_record: false
+  conformational_note: Covalently attached 8-(methoxycarbonyl)octyl (nonoate methyl
+    ester) aglycone linker of the synthetic Lewis Y tetrasaccharide antigen derivative
+    (nLey), not free methyl nonanoate or an antifungal target.
+  evidence_status: PRIMARY_EVIDENCE
   source: CHEBI
   source_version: '2026-08-30'
   retrieved_on: '2026-08-30'
+  evidence:
+  - reference: PMID:7664109
+    snippet: The crystal structure of the chimeric Fab' fragment of the monoclonal
+      antibody BR96 in complex with the nonoate methyl ester derivative of Lewis Y
+      tetrasaccharide (nLey) has been determined at 2.5 A resolution.
+    notes: 2.50 A X-ray crystal structure (PDB:1CLY; DOI:10.1038/nsb0695-466) of chimeric
+      anti-tumor monoclonal antibody BR96 Fab' bound to the synthetic Lewis Y tetrasaccharide
+      nonoate methyl ester derivative (nLey), where the aglycone linker moiety is
+      annotated in the PDB Chemical Component Dictionary as pdb-ccd:MNO.
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:44499
@@ -79,3 +96,12 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_STRUCTURAL_OBSERVATION
+  changes: 'Curated ChEBI-seeded structural_observations entry PDB:1CLY from UNREVIEWED
+    (PRIMARY_EVIDENCE_NEEDED) to NOT_RELEVANT (PRIMARY_EVIDENCE): pdb-ccd:MNO is the
+    covalently attached nonoate methyl ester aglycone linker of synthetic Lewis Y
+    tetrasaccharide (nLey) bound to anti-tumor antibody BR96 Fab'' (2.5 A X-ray, PMID:7664109,
+    DOI:10.1038/nsb0695-466), not free methyl nonanoate (#1256).'
+  llm_assisted: true

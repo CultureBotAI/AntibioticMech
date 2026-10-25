@@ -51,23 +51,6 @@ source_concepts:
       2'-epimerase (DprE1) and inhibits M. tuberculosis H37Rv growth at MIC <= 0.19
       ng/mL (0.4 nM).
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
-    2'-epimerase (DprE1) backed by DOI:10.1002/emmm.201303575.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
-    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1002/emmm.201303575).
-  llm_assisted: true
 molecular_targets:
 - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
   target_type: PROTEIN
@@ -104,3 +87,35 @@ molecular_targets:
       whose active-site Cys387 forms an irreversible covalent semimercaptal adduct
       with bioreduced macozinone (PBTZ169) in the 1.9-angstrom crystal structure PDB:4NCR
       (DOI:10.1002/emmm.201303575; PMID:24500695).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic piperazinobenzothiazinone (PBTZ169) antitubercular
+  prodrug that covalently inhibits Mycobacterium tuberculosis decaprenylphosphoryl-beta-D-ribose
+  2''-epimerase (DprE1, Rv3790; GO:0052637), blocking decaprenylphosphoryl-beta-D-arabinofuranose
+  (DPA) formation and mycobacterial cell-wall arabinogalactan biosynthesis (DOI:10.1002/emmm.201303575).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
+    2'-epimerase (DprE1) backed by DOI:10.1002/emmm.201303575.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
+    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1002/emmm.201303575).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1002/emmm.201303575); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

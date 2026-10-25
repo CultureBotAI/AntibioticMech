@@ -46,23 +46,6 @@ source_concepts:
       2'-oxidase (DprE1, IC50 = 0.258 uM) with MICs of 0.00024-0.001 ug/mL across
       drug-susceptible and multidrug-resistant M. tuberculosis isolates.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
-    2'-oxidase (DprE1) backed by DOI:10.1128/aac.00338-22.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
-    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.00338-22).
-  llm_assisted: true
 molecular_targets:
 - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-oxidase (DprE1)
   target_type: PROTEIN
@@ -97,3 +80,35 @@ molecular_targets:
     role: Recombinant Mycobacterium tuberculosis H37Rv decaprenylphosphoryl-beta-D-ribose
       2'-oxidase DprE1 (Rv3790) noncovalently inhibited by quabodepistat (OPC-167832,
       IC50 = 0.258 uM; DOI:10.1128/aac.00338-22; PMID:35699441).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic 3,4-dihydrocarbostyril derivative (OPC-167832)
+  that noncovalently inhibits Mycobacterium tuberculosis decaprenylphosphoryl-beta-D-ribose
+  2''-epimerase (DprE1, Rv3790; GO:0052637), blocking mycobacterial cell-wall arabinogalactan
+  biosynthesis (DOI:10.1128/aac.00338-22).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial decaprenylphosphoryl-beta-D-ribose
+    2'-oxidase (DprE1) backed by DOI:10.1128/aac.00338-22.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
+    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.00338-22).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1128/aac.00338-22); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

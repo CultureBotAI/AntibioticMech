@@ -42,23 +42,6 @@ source_concepts:
       active against adherent-invasive Escherichia coli (MIC ~2-4 ug/mL, and potentiated
       across multidrug-resistant Enterobacteriaceae with SPR741).
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for Enterobacteriaceae LolCDE
-    lipoprotein transport complex backed by DOI:10.1038/s41564-025-02142-0.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P0ADC3 (LolC) and UniProtKB:P75958 (LolE) Escherichia
-    coli K-12 protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41564-025-02142-0).
-  llm_assisted: true
 molecular_targets:
 - target_label: Enterobacteriaceae LolCDE lipoprotein transport complex
   target_type: PROTEIN_COMPLEX
@@ -105,3 +88,35 @@ molecular_targets:
     role: Transmembrane subunit LolE (b1118) of the Escherichia coli LolCDE lipoprotein
       transport complex to which laboratory-evolved enterololin resistance mutations
       predominantly mapped (DOI:10.1038/s41564-025-02142-0; PMID:41044363).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic benzothiazole outer-membrane lipoprotein
+  transport inhibitor that selectively inhibits the LolCDE ABC transporter complex
+  in Enterobacteriaceae, blocking outer-membrane lipoprotein trafficking while sparing
+  commensal gut anaerobes (DOI:10.1038/s41564-025-02142-0).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Enterobacteriaceae LolCDE
+    lipoprotein transport complex backed by DOI:10.1038/s41564-025-02142-0.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0ADC3 (LolC) and UniProtKB:P75958 (LolE) Escherichia
+    coli K-12 protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41564-025-02142-0).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_MEMBRANE_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1038/s41564-025-02142-0); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

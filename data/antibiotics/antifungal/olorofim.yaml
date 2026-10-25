@@ -45,17 +45,6 @@ source_concepts:
       (F901318) that inhibits fungal dihydroorotate dehydrogenase (DHODH), showing
       MIC50/MIC90 of 0.03/0.06 mg/L across 1,031 clinical Aspergillus fumigatus isolates.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for Aspergillus fumigatus mitochondrial
-    dihydroorotate dehydrogenase (DHODH / PyrE) backed by DOI:10.1128/aac.00307-23.
-  llm_assisted: true
 molecular_targets:
 - target_label: Aspergillus fumigatus mitochondrial dihydroorotate dehydrogenase (DHODH
     / PyrE)
@@ -85,3 +74,29 @@ molecular_targets:
       mitochondrial dihydroorotate dehydrogenase (DHODH / PyrE, AFUA_2G11060, IC50
       = 44 nM); held from reviewed UniProtKB accession assignment because A. fumigatus
       Af293 PyrE (UniProtKB:Q4W9Z2) is an unreviewed TrEMBL entry.
+biosynthesis_origin: SYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic orotomide (F901318) mould-active antifungal
+  that selectively inhibits fungal mitochondrial dihydroorotate dehydrogenase (DHODH,
+  PyrE; GO:0004152), blocking de novo pyrimidine nucleotide biosynthesis required
+  for fungal DNA, RNA, and cell-wall precursor synthesis (DOI:10.1128/aac.00307-23).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for Aspergillus fumigatus mitochondrial
+    dihydroorotate dehydrogenase (DHODH / PyrE) backed by DOI:10.1128/aac.00307-23.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1128/aac.00307-23); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

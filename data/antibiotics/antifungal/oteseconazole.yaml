@@ -1,7 +1,7 @@
 identifier: CHEBI:188153
 label: oteseconazole
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A tetrazole antifungal agent that selectively coordinates the heme iron
   of fungal lanosterol 14-alpha-demethylase (CYP51) to block ergosterol biosynthesis.
@@ -43,30 +43,6 @@ source_concepts:
       14-alpha-demethylase (CYP51), with MIC50/MIC90 of 0.06/0.5 ug/mL against Candida
       glabrata and 0.12/0.25 ug/mL against Candida krusei clinical isolates.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:49:49Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T04:34:55Z'
-  curator: curate_mechanism
-  action: CURATED_MODE_OF_ACTION
-  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION
-    (MICROBIAL_TARGET) with primary-literature provenance.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for fungal lanosterol 14-alpha-demethylase
-    (CYP51 / Erg11) backed by DOI:10.1128/aac.00778-22.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P10613 (Candida albicans SC5314 ERG11) and UniProtKB:P50859
-    (Candida glabrata CBS 138 ERG11) protein examples to the fungal CYP51 PRIMARY_LITERATURE
-    molecular target (DOI:10.1128/aac.00778-22).
-  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -119,3 +95,35 @@ molecular_targets:
     role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata,
       the primary clinical target species evaluated in DOI:10.1128/aac.00778-22 (MIC50
       = 0.06 ug/mL, MIC90 = 0.5 ug/mL; PMID:35969069).
+curation_history:
+- timestamp: '2026-10-24T00:49:49Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal lanosterol 14-alpha-demethylase
+    (CYP51 / Erg11) backed by DOI:10.1128/aac.00778-22.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P10613 (Candida albicans SC5314 ERG11) and UniProtKB:P50859
+    (Candida glabrata CBS 138 ERG11) protein examples to the fungal CYP51 PRIMARY_LITERATURE
+    molecular target (DOI:10.1128/aac.00778-22).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true
