@@ -44,11 +44,26 @@ drug_xrefs:
 - drugbank:DB04014
 structural_observations:
 - structure_id: PDB:1Q3W
-  relevance: UNREVIEWED
-  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  method: X_RAY_DIFFRACTION
+  resolution_angstroms: 2.3
+  relevance: HOST_PROTEIN_COMPLEX
+  target_label: Glycogen synthase kinase-3 beta (GSK-3beta)
+  taxon_id: NCBITaxon:9606
+  taxon_label: Homo sapiens
+  ligand_component: pdb-ccd:A1P
+  ligand_matches_record: true
+  evidence_status: PRIMARY_EVIDENCE
   source: CHEBI
   source_version: '2026-08-30'
   retrieved_on: '2026-08-30'
+  evidence:
+  - reference: PMID:14529625
+    snippet: We have determined the crystal structures of human GSK-3beta in complex
+      with staurosporine, indirubin-3'-monoxime, and alsterpaullone, three potent
+      inhibitors from different chemical families.
+    notes: 2.30 A X-ray crystal structure (PDB:1Q3W; DOI:10.1016/j.jmb.2003.08.031)
+      of human glycogen synthase kinase-3 beta (GSK-3beta, NCBITaxon:9606) in complex
+      with alsterpaullone (pdb-ccd:A1P).
 source_concepts:
 - source: CHEBI
   source_id: CHEBI:138488
@@ -78,3 +93,11 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_STRUCTURAL_OBSERVATION
+  changes: Curated ChEBI-seeded structural_observations entry PDB:1Q3W from UNREVIEWED
+    (PRIMARY_EVIDENCE_NEEDED) to HOST_PROTEIN_COMPLEX (PRIMARY_EVIDENCE) for human
+    GSK-3beta complexed with alsterpaullone (pdb-ccd:A1P, 2.3 A X-ray, PMID:14529625,
+    DOI:10.1016/j.jmb.2003.08.031) (#1256).
+  llm_assisted: true

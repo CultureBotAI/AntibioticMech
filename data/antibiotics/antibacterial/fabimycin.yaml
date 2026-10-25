@@ -40,23 +40,6 @@ source_concepts:
       pneumoniae, and Acinetobacter baumannii (typical MICs 1-4 ug/mL; confirmed at
       MIC 2 ug/mL against K. pneumoniae ATCC 43816 in DOI:10.1021/acsinfecdis.3c00391).
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T02:43:50Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for bacterial enoyl-acyl carrier
-    protein reductase (FabI) backed by DOI:10.1021/acscentsci.2c00598.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI, b1288) protein
-    example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/acscentsci.2c00598).
-  llm_assisted: true
 molecular_targets:
 - target_label: bacterial enoyl-acyl carrier protein reductase (FabI)
   target_type: PROTEIN
@@ -90,3 +73,36 @@ molecular_targets:
     role: Escherichia coli K-12 enoyl-[acyl-carrier-protein] reductase FabI (b1288)
       directly inhibited by fabimycin in biochemical and co-crystal structural studies
       (DOI:10.1021/acscentsci.2c00598; PMID:36035943).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic pyridone-based Gram-negative antibiotic
+  generated via accumulation-optimized design from Debio-1452 that directly inhibits
+  bacterial enoyl-ACP reductase FabI (GO:0004318) in the bacterial type II fatty acid
+  biosynthesis (FAS-II) pathway required for membrane phospholipid and lipid A biosynthesis
+  (DOI:10.1021/acscentsci.2c00598).'
+curation_history:
+- timestamp: '2026-10-24T02:43:50Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial enoyl-acyl carrier
+    protein reductase (FabI) backed by DOI:10.1021/acscentsci.2c00598.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI, b1288) protein
+    example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/acscentsci.2c00598).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_MEMBRANE_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1021/acscentsci.2c00598); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

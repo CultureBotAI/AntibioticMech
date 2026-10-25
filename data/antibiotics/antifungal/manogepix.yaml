@@ -54,23 +54,6 @@ source_concepts:
       <=0.008/0.015 ug/mL against dimorphic fungi and MIC50/MIC90 0.008/0.06 mg/L
       across Candida species.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for fungal GPI-anchor inositol
-    acyltransferase Gwt1 backed by DOI:10.1128/aac.01723-25.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:Q873N2 (Candida albicans SC5314 GWT1) protein
-    example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.01723-25).
-  llm_assisted: true
 molecular_targets:
 - target_label: fungal GPI-anchor inositol acyltransferase Gwt1
   target_type: PROTEIN
@@ -110,3 +93,35 @@ molecular_targets:
       directly inhibited by manogepix (E1210, APX001A), blocking inositol acylation
       of glucosaminyl-phosphatidylinositol and cell-wall mannoprotein localization
       (PMID:21670182; DOI:10.1128/aac.01723-25).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic active moiety (APX001A / E1210) of the prodrug
+  fosmanogepix that inhibits fungal glycosylphosphatidylinositol (GPI)-anchored wall
+  transfer protein 1 (Gwt1, inositol acyltransferase; GO:0000136), blocking GPI-anchor
+  maturation and localization of mannoproteins to the fungal cell wall (DOI:10.1128/aac.01723-25).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal GPI-anchor inositol
+    acyltransferase Gwt1 backed by DOI:10.1128/aac.01723-25.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:Q873N2 (Candida albicans SC5314 GWT1) protein
+    example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.01723-25).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1128/aac.01723-25); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

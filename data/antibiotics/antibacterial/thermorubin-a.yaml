@@ -1,7 +1,7 @@
 identifier: CHEBI:48480
 label: thermorubin A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A tetracyclic anthracenopyranone natural-product antibiotic from Thermoactinomyces
   antibioticus that binds bacterial 70S ribosomal intersubunit bridge B2a and arrests
@@ -48,23 +48,6 @@ source_concepts:
       Resolves the structureless ChEBI parent CHEBI:48516 (thermorubin) via the specific
       defined structure CHEBI:48480 (thermorubin A).
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T04:34:54Z'
-  curator: curate_mechanism
-  action: CURATED_MODE_OF_ACTION
-  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION
-    (MICROBIAL_TARGET) with primary-literature provenance.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for bacterial 70S ribosome intersubunit
-    bridge B2a backed by DOI:10.1093/nar/gkac1189.
-  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -98,3 +81,28 @@ molecular_targets:
       Bulkley et al. 2012 (J Mol Biol 416:571-578; PMID:22240456; PDB:4V8A) show that
       thermorubin binds the 16S rRNA h44 / 23S rRNA H69 interface of intersubunit
       bridge B2a, inducing C1914 flipping and arresting elongation and termination.
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:54Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial 70S ribosome intersubunit
+    bridge B2a backed by DOI:10.1093/nar/gkac1189.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true

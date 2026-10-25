@@ -1,0 +1,845 @@
+schema_version: 1.0.0
+review_id: 20261025T105500Z-cycle2-stage5-remediated-records-review
+kind: batch
+repository: culturebotai/AntibioticMech
+title: 'Cycle 2 Stage 5 post-remediation review of 20 remediated AntibioticRecord
+  files (Issues #1272, #1273, #1256)'
+started_at: '2026-10-25T10:40:00Z'
+finished_at: '2026-10-25T10:55:00Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  independence: self_review
+  independence_basis: Cycle 2 Stage 5 post-remediation verification review of the
+    20 remediated records prior to independent adversarial PR review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+native_verdict: PASS
+scientific_review: true
+summary: 'Post-remediation batch review of the 20 AntibioticRecord YAML files updated
+  in Cycle 2 Stage 5 to resolve all 3 open Stage 4 findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  (Issue #1272, 6 records), proposed-minted-records-with-primary-targets-missing-mode-of-action
+  (Issue #1273, 11 records including fabimycin from companion single-record review
+  20261025T081800Z-fabimycin-record-review), and unreviewed-seeded-pdb-structural-observations
+  (Issue #1256, 3 records). Verified that all 6 Group 1 EXACT ChEBI records ((2R,3R)-dihydromyricetin,
+  6-methylflavone, thermorubin A, zafirlukast, luliconazole, oteseconazole) are promoted
+  to curation_status: REVIEWED; that all 11 Group 2 PROPOSED/MINTED records (enterololin,
+  fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec,
+  ibrexafungerp, manogepix, olorofim) carry curator-settled biosynthesis_origin, mode_of_action,
+  mode_of_action_target_scope: MICROBIAL_TARGET, and CURATOR mode_of_action_notes;
+  and that all 3 Group 3 SEEDED records (alsterpaullone PDB:1Q3W, ampicillin PDB:1H8S,
+  methyl nonanoate PDB:1CLY) carry curator-reviewed structural_observations with evidence_status:
+  PRIMARY_EVIDENCE and non-UNREVIEWED relevance that survive seed_from_sources.py
+  reproduction.'
+source:
+  git_revision: 7f7b25d43a2056b0269569b64b732f865634b072
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-category/SKILL.md
+    sha256: 4c438f137570d6c75a208422f04c0ad21873f5ee467f230a43ec8ed9709d2178
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+    role: context
+  - path: curation/curator_antibiotics.tsv
+    sha256: f80ff3dfefa91bef572dcebfaea8f6a962b640118b462ec1849049f436706706
+    role: context
+  - path: curation/record_review_queue.tsv
+    sha256: 0a6aeb874e8de10b8fe51f96a7ff8a0afbce9be014a4dd64194d7cf857a82302
+    role: context
+  - path: curation/uniprot_protein_examples.yaml
+    sha256: e7ff122baf66ddfcf56fe6f09e46d106c3366cc0c6e4aa7e7373f6f99cadcb73
+    role: context
+  - path: data/antibiotics/antibacterial/2r-3r-dihydromyricetin.yaml
+    sha256: 1a16ca65674a4de663d69a023bb3770e04dcbc3bb32765123eba550254e4a577
+    role: target
+  - path: data/antibiotics/antibacterial/6-methylflavone.yaml
+    sha256: c8ad8b9c68cdf740b4b031374b2ef056706a69e1cc80a2fea1eca2a7bbebcd80
+    role: target
+  - path: data/antibiotics/antibacterial/ampicillin.yaml
+    sha256: a81edcae1aa1011c6f6770cefd93498c9257f3a00b8b720a1fd33f3d6572eebc
+    role: target
+  - path: data/antibiotics/antibacterial/enterololin.yaml
+    sha256: 5228bc8de2eafe772921a8e94c393383718d6ef607a61448e52be1d561ed1092
+    role: target
+  - path: data/antibiotics/antibacterial/fabimycin.yaml
+    sha256: 07902283067b7235efb335ca2ea4c727a7a3ca6aafe3eedde4b45fea3ce10101
+    role: target
+  - path: data/antibiotics/antibacterial/ganfeborole.yaml
+    sha256: d3053d31ddbed8bc462888290c1fcfc99c80d74b3859416b26eb838d0d2d0924
+    role: target
+  - path: data/antibiotics/antibacterial/lolamicin.yaml
+    sha256: 79895dcd29e447fc743ed62e66f6f0be67e75f1443b8b15577257132ccc140d4
+    role: target
+  - path: data/antibiotics/antibacterial/macozinone.yaml
+    sha256: 76c0d0cc2d8c1ba93eeafed82811a21a29f3628821d7bf2c5115aa2e76873029
+    role: target
+  - path: data/antibiotics/antibacterial/quabodepistat.yaml
+    sha256: 04fb197ca4af69136e9d0ccbe6a699c96076e77a04429d9be27f0e7be356a7c8
+    role: target
+  - path: data/antibiotics/antibacterial/sorfequiline.yaml
+    sha256: ed2385224630e7f30e9032b9dbd3dcf106651c784e851d6d10852f421d2029c8
+    role: target
+  - path: data/antibiotics/antibacterial/telacebec.yaml
+    sha256: 0d258e0dd4922467766ccd5b343d0d674bd5aa2b8d4a0c43582b986ea232070b
+    role: target
+  - path: data/antibiotics/antibacterial/thermorubin-a.yaml
+    sha256: c4f3fc8b91987cc01681cb3223ef9b9801c50cb621afadad0f372ff19d0d5bc3
+    role: target
+  - path: data/antibiotics/antibacterial/zafirlukast.yaml
+    sha256: cc86220a658933f9d96874e33fb76f49d9aed86b29bf4b869c7ccfaa1ea943f9
+    role: target
+  - path: data/antibiotics/antifungal/ibrexafungerp.yaml
+    sha256: 06eeb7a7de2e0257ea75968427f6144bdace0e3a679058fe08188c884f6d13f1
+    role: target
+  - path: data/antibiotics/antifungal/luliconazole.yaml
+    sha256: 6b4a5b32f956d8058737f74bfdc23664a0b811f1400e140da8d2d52c7991c208
+    role: target
+  - path: data/antibiotics/antifungal/manogepix.yaml
+    sha256: fe1f87e87ee26735c8a59c5dc6d7bc10480a7ea2e3babfb85b18a0b839386c57
+    role: target
+  - path: data/antibiotics/antifungal/methyl-nonanoate.yaml
+    sha256: 9c5748ababde2f6b725535efd436f5284a0ff83b0f72745bc6d2c2555d131913
+    role: target
+  - path: data/antibiotics/antifungal/olorofim.yaml
+    sha256: 44cdb635698ac17d70764ff957ff4eee33cae4de6c14a7d0e5bd9444f58826fd
+    role: target
+  - path: data/antibiotics/antifungal/oteseconazole.yaml
+    sha256: b9f9ccb3db4b233334046830a3cf6da155a1bda71e2bb0eeab099d5a1753714c
+    role: target
+  - path: data/antibiotics/antiviral/alsterpaullone.yaml
+    sha256: 1d2b1ca7cd4511ccae854f8ff5a05363241d38333f17d2f04498d32bce93c1c5
+    role: target
+  - path: scripts/curation_worklist.py
+    sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
+    role: context
+  - path: scripts/seed_from_sources.py
+    sha256: 53cf79eb1417ff7758a94f2d18ac1ce47b0f8c91c8961023363cf37698d4a056
+    role: context
+  - path: scripts/validate_strict.py
+    sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+    role: context
+  - path: scripts/verify_corpus.py
+    sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+    role: context
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+    role: context
+scope:
+  description: 'Complete post-remediation review of all 20 AntibioticRecord YAML files
+    modified in Cycle 2 Stage 5 across resolved finding groups 1-3 (Issues #1272,
+    #1273, #1256).'
+  selection: 'All 20 records in Cycle 2 Stage 5 resolved finding groups (Issues #1272,
+    #1273, #1256).'
+  coverage: full
+  population_size: 20
+  reviewed_target_ids:
+  - CHEBI:28429
+  - CHEBI:228412
+  - CHEBI:48480
+  - CHEBI:10100
+  - CHEBI:34825
+  - CHEBI:188153
+  - antibioticmech:curator-cb71d1e3b5
+  - antibioticmech:curator-47d32d7a07
+  - antibioticmech:curator-172bfdd938
+  - antibioticmech:curator-1db8575797
+  - antibioticmech:curator-607ce000f8
+  - antibioticmech:curator-88af230f5d
+  - antibioticmech:curator-0106724e5f
+  - antibioticmech:curator-17023fe654
+  - antibioticmech:curator-fd1c955758
+  - antibioticmech:curator-4a1156c964
+  - antibioticmech:curator-18f8e84826
+  - CHEBI:138488
+  - CHEBI:28971
+  - CHEBI:44499
+targets:
+- target_id: CHEBI:28429
+  path: data/antibiotics/antibacterial/2r-3r-dihydromyricetin.yaml
+  label: (2R,3R)-dihydromyricetin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/2r-3r-dihydromyricetin.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:228412
+  path: data/antibiotics/antibacterial/6-methylflavone.yaml
+  label: 6-methylflavone
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/6-methylflavone.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:48480
+  path: data/antibiotics/antibacterial/thermorubin-a.yaml
+  label: thermorubin A
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/thermorubin-a.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:10100
+  path: data/antibiotics/antibacterial/zafirlukast.yaml
+  label: zafirlukast
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/zafirlukast.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:34825
+  path: data/antibiotics/antifungal/luliconazole.yaml
+  label: luliconazole
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/luliconazole.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:188153
+  path: data/antibiotics/antifungal/oteseconazole.yaml
+  label: oteseconazole
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/oteseconazole.yaml
+    role: Curator-maintained REVIEWED record slots (curation_status, biosynthesis_origin,
+      mode_of_action, mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-cb71d1e3b5
+  path: data/antibiotics/antibacterial/enterololin.yaml
+  label: enterololin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/enterololin.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-47d32d7a07
+  path: data/antibiotics/antibacterial/fabimycin.yaml
+  label: fabimycin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/fabimycin.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-172bfdd938
+  path: data/antibiotics/antibacterial/ganfeborole.yaml
+  label: ganfeborole
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/ganfeborole.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-1db8575797
+  path: data/antibiotics/antibacterial/lolamicin.yaml
+  label: lolamicin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/lolamicin.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-607ce000f8
+  path: data/antibiotics/antibacterial/macozinone.yaml
+  label: macozinone
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/macozinone.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-88af230f5d
+  path: data/antibiotics/antibacterial/quabodepistat.yaml
+  label: quabodepistat
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/quabodepistat.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-0106724e5f
+  path: data/antibiotics/antibacterial/sorfequiline.yaml
+  label: sorfequiline
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sorfequiline.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-17023fe654
+  path: data/antibiotics/antibacterial/telacebec.yaml
+  label: telacebec
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/telacebec.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-fd1c955758
+  path: data/antibiotics/antifungal/ibrexafungerp.yaml
+  label: ibrexafungerp
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/ibrexafungerp.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-4a1156c964
+  path: data/antibiotics/antifungal/manogepix.yaml
+  label: manogepix
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/manogepix.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: antibioticmech:curator-18f8e84826
+  path: data/antibiotics/antifungal/olorofim.yaml
+  label: olorofim
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/olorofim.yaml
+    role: Curator-maintained PROPOSED/MINTED record slots (biosynthesis_origin, mode_of_action,
+      mode_of_action_target_scope, mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:138488
+  path: data/antibiotics/antiviral/alsterpaullone.yaml
+  label: alsterpaullone
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antiviral/alsterpaullone.yaml
+    role: Curator-reviewed PDB structural_observations on SEEDED record preserved
+      across seed_from_sources.py runs
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:28971
+  path: data/antibiotics/antibacterial/ampicillin.yaml
+  label: ampicillin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/ampicillin.yaml
+    role: Curator-reviewed PDB structural_observations on SEEDED record preserved
+      across seed_from_sources.py runs
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+- target_id: CHEBI:44499
+  path: data/antibiotics/antifungal/methyl-nonanoate.yaml
+  label: methyl nonanoate
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/methyl-nonanoate.yaml
+    role: Curator-reviewed PDB structural_observations on SEEDED record preserved
+      across seed_from_sources.py runs
+  - repository: culturebotai/AntibioticMech
+    path: scripts/seed_from_sources.py
+    role: Source-owned projection and curator-owned slot preservation on re-seed
+checks:
+- check_id: strict-schema-remediated-records
+  name: Closed-schema and OAK ontology-label validation
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py --quiet --workers 2
+  exit_code: 0
+  summary: All 2,992 corpus records, including the 20 remediated records, pass closed
+    LinkML schema validation and OAK label correspondence with 0 errors.
+  target_ids:
+  - CHEBI:28429
+  - CHEBI:228412
+  - CHEBI:48480
+  - CHEBI:10100
+  - CHEBI:34825
+  - CHEBI:188153
+  - antibioticmech:curator-cb71d1e3b5
+  - antibioticmech:curator-47d32d7a07
+  - antibioticmech:curator-172bfdd938
+  - antibioticmech:curator-1db8575797
+  - antibioticmech:curator-607ce000f8
+  - antibioticmech:curator-88af230f5d
+  - antibioticmech:curator-0106724e5f
+  - antibioticmech:curator-17023fe654
+  - antibioticmech:curator-fd1c955758
+  - antibioticmech:curator-4a1156c964
+  - antibioticmech:curator-18f8e84826
+  - CHEBI:138488
+  - CHEBI:28971
+  - CHEBI:44499
+  evidence_ids:
+  - validate-strict-pass
+  - remediated-records-content
+- check_id: corpus-reproduction-remediated-records
+  name: Full corpus seed reproduction check
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py
+  exit_code: 0
+  summary: All 2,992 records reproduce byte-for-byte from data/raw/ plus curator inputs
+    with 0 missing, 0 unexpected, and 0 drifted fields.
+  target_ids:
+  - CHEBI:28429
+  - CHEBI:228412
+  - CHEBI:48480
+  - CHEBI:10100
+  - CHEBI:34825
+  - CHEBI:188153
+  - antibioticmech:curator-cb71d1e3b5
+  - antibioticmech:curator-47d32d7a07
+  - antibioticmech:curator-172bfdd938
+  - antibioticmech:curator-1db8575797
+  - antibioticmech:curator-607ce000f8
+  - antibioticmech:curator-88af230f5d
+  - antibioticmech:curator-0106724e5f
+  - antibioticmech:curator-17023fe654
+  - antibioticmech:curator-fd1c955758
+  - antibioticmech:curator-4a1156c964
+  - antibioticmech:curator-18f8e84826
+  - CHEBI:138488
+  - CHEBI:28971
+  - CHEBI:44499
+  evidence_ids:
+  - verify-corpus-pass
+  - remediated-records-content
+- check_id: structural-observations-and-docs-pytest
+  name: Structural observations and documentation sync test suite
+  status: passed
+  required: true
+  command: .venv/bin/python -m pytest -q tests/test_docs.py tests/test_structural_observations.py
+  exit_code: 0
+  summary: All 24 tests in test_docs.py (15/15) and test_structural_observations.py
+    (9/9) pass with exit code 0.
+  target_ids:
+  - CHEBI:28429
+  - CHEBI:228412
+  - CHEBI:48480
+  - CHEBI:10100
+  - CHEBI:34825
+  - CHEBI:188153
+  - antibioticmech:curator-cb71d1e3b5
+  - antibioticmech:curator-47d32d7a07
+  - antibioticmech:curator-172bfdd938
+  - antibioticmech:curator-1db8575797
+  - antibioticmech:curator-607ce000f8
+  - antibioticmech:curator-88af230f5d
+  - antibioticmech:curator-0106724e5f
+  - antibioticmech:curator-17023fe654
+  - antibioticmech:curator-fd1c955758
+  - antibioticmech:curator-4a1156c964
+  - antibioticmech:curator-18f8e84826
+  - CHEBI:138488
+  - CHEBI:28971
+  - CHEBI:44499
+  evidence_ids:
+  - remediated-records-content
+evidence:
+- evidence_id: remediated-records-content
+  kind: record_content
+  reference: curation/record_review_queue.tsv
+  locator: 20 remediated YAML records and refreshed review-readiness worklist (2,896
+    items)
+  accessed_at: '2026-10-25T10:50:00Z'
+  support: supports
+  snapshot_sha256: 0a6aeb874e8de10b8fe51f96a7ff8a0afbce9be014a4dd64194d7cf857a82302
+  summary: 'All 20 records were updated through record_curation_event and write_validated_antibiotic:
+    6 PROPOSED/EXACT records promoted to REVIEWED (raising corpus REVIEWED count from
+    90 to 96 and reducing review-readiness queue from 2,902 to 2,896); 11 PROPOSED/MINTED
+    records populated with biosynthesis_origin, mode_of_action, mode_of_action_target_scope:
+    MICROBIAL_TARGET, and CURATOR mode_of_action_notes; and 3 SEEDED records curated
+    with primary PDB structural_observations (clearing the structure-unreviewed queue
+    to 0).'
+- evidence_id: validate-strict-pass
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: 2992 files scanned, 0 files with ERROR, 0 total ERROR rows
+  accessed_at: '2026-10-25T10:48:00Z'
+  support: supports
+  snapshot_sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  summary: Closed-mode LinkML validation and OAK ontology label verification pass
+    across all 2,992 records.
+- evidence_id: verify-corpus-pass
+  kind: validation
+  reference: scripts/verify_corpus.py
+  locator: 'records expected: 2992, on disk: 2992, missing: 0, unexpected: 0, drifted
+    fields: 0'
+  accessed_at: '2026-10-25T10:48:00Z'
+  support: supports
+  snapshot_sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+  summary: Every curator-owned edit on the 20 remediated records (including the 3
+    curated structural_observations on SEEDED records) survives seed_from_sources.py
+    reproduction without drift.
+- evidence_id: primary-literature-sources
+  kind: primary_source
+  reference: DOI:10.1177/15353141261501298, DOI:10.1128/spectrum.03588-25, PMID:36546783,
+    PMID:22240456, PMID:23650171, PMID:15365862, PMID:35969069, PMID:25056938, DOI:10.1038/s41564-025-02142-0,
+    PMID:36035943, PMID:38355799, PMID:38811738, PMID:24473200, PMID:35502920, PMID:32041715,
+    PMID:23913124, PMID:35790076, PMID:40105302, PMID:37039660, PMID:14529625, PMID:11397088,
+    PMID:7664109
+  locator: Primary experimental mechanism and crystal-structure studies cited across
+    the 20 remediated records
+  accessed_at: '2026-10-25T10:50:00Z'
+  support: supports
+  summary: Primary studies support REVIEWED promotion on the 6 Group 1 EXACT ChEBI
+    records, top-level mode_of_action and SYNTHETIC/SEMISYNTHETIC biosynthesis_origin
+    on the 11 Group 2 PROPOSED/MINTED records, and relevance classification on PDB:1Q3W
+    (alsterpaullone-human GSK-3beta HOST_PROTEIN_COMPLEX, PMID:14529625), PDB:1H8S
+    (ampicillin-murine anti-ampicillin scFv aL2 ANTIBODY_COMPLEX, PMID:11397088),
+    and PDB:1CLY (methyl nonanoate NOT_RELEVANT covalently attached nLey aglycone
+    linker in BR96 Fab' complex, PMID:7664109).
+assessments:
+- assessment_id: group1-proposed-exact-promoted-to-reviewed
+  area: completeness
+  topic: Promotion of 6 PROPOSED/EXACT records with complete mechanism and target
+    curation to REVIEWED
+  outcome: supported
+  summary: 'All 6 Group 1 records (CHEBI:28429, CHEBI:228412, CHEBI:48480, CHEBI:10100,
+    CHEBI:34825, CHEBI:188153) carry exact single-molecule ChEBI structures, curated
+    biosynthesis_origin, curator-settled mode_of_action (MICROBIAL_TARGET), and source:
+    PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets, and
+    are now promoted to curation_status: REVIEWED with PROMOTED_TO_REVIEWED events.'
+  target_ids:
+  - CHEBI:28429
+  - CHEBI:228412
+  - CHEBI:48480
+  - CHEBI:10100
+  - CHEBI:34825
+  - CHEBI:188153
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+- assessment_id: group2-proposed-minted-moa-and-biosynthesis-origin
+  area: completeness
+  topic: Population of biosynthesis_origin and mode_of_action on 11 PROPOSED/MINTED
+    records with curated PRIMARY_LITERATURE targets
+  outcome: supported
+  summary: 'All 11 Group 2 records (enterololin, fabimycin, ganfeborole, lolamicin,
+    macozinone, quabodepistat, sorfequiline, telacebec, ibrexafungerp, manogepix,
+    olorofim) now carry curated biosynthesis_origin (SYNTHETIC on 10 records, SEMISYNTHETIC
+    on ibrexafungerp), mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET,
+    and CURATOR mode_of_action_notes aligned with their curated PRIMARY_LITERATURE
+    molecular_targets.'
+  target_ids:
+  - antibioticmech:curator-cb71d1e3b5
+  - antibioticmech:curator-47d32d7a07
+  - antibioticmech:curator-172bfdd938
+  - antibioticmech:curator-1db8575797
+  - antibioticmech:curator-607ce000f8
+  - antibioticmech:curator-88af230f5d
+  - antibioticmech:curator-0106724e5f
+  - antibioticmech:curator-17023fe654
+  - antibioticmech:curator-fd1c955758
+  - antibioticmech:curator-4a1156c964
+  - antibioticmech:curator-18f8e84826
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+- assessment_id: group3-seeded-pdb-structural-observations-curated
+  area: evidence
+  topic: Primary-literature curation of 3 ChEBI-seeded PDB structural_observations
+  outcome: supported
+  summary: 'All 3 Group 3 SEEDED records (CHEBI:138488 alsterpaullone PDB:1Q3W relevance:
+    HOST_PROTEIN_COMPLEX PMID:14529625; CHEBI:28971 ampicillin PDB:1H8S relevance:
+    ANTIBODY_COMPLEX PMID:11397088; CHEBI:44499 methyl nonanoate PDB:1CLY relevance:
+    NOT_RELEVANT PMID:7664109) now carry evidence_status: PRIMARY_EVIDENCE, verified
+    target labels and NCBITaxon IDs, and CURATED_STRUCTURAL_OBSERVATION events that
+    survive seed_from_sources.py.'
+  target_ids:
+  - CHEBI:138488
+  - CHEBI:28971
+  - CHEBI:44499
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+findings:
+- finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  issue_key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  category: completeness
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Promoted 6 PROPOSED/EXACT ChEBI records with complete primary mechanism curation
+    to REVIEWED
+  description: Promoted CHEBI:28429 ((2R,3R)-dihydromyricetin), CHEBI:228412 (6-methylflavone),
+    CHEBI:48480 (thermorubin A), CHEBI:10100 (zafirlukast), CHEBI:34825 (luliconazole),
+    and CHEBI:188153 (oteseconazole) from PROPOSED to REVIEWED via record_curation_event
+    (PROMOTED_TO_REVIEWED) and write_validated_antibiotic.
+  target_ids:
+  - CHEBI:28429
+  - CHEBI:228412
+  - CHEBI:48480
+  - CHEBI:10100
+  - CHEBI:34825
+  - CHEBI:188153
+  field_paths:
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/2r-3r-dihydromyricetin.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/6-methylflavone.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/thermorubin-a.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/zafirlukast.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/luliconazole.yaml
+    role: Curator-owned curation_status and curation_history
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/oteseconazole.yaml
+    role: Curator-owned curation_status and curation_history
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (Issue #1272): promoted all 6 PROPOSED/EXACT
+    records with complete primary mechanism and target curation to REVIEWED.'
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1272
+- finding_id: proposed-minted-records-with-primary-targets-missing-mode-of-action
+  issue_key: proposed-minted-records-with-primary-targets-missing-mode-of-action
+  category: completeness
+  severity: major
+  status: resolved
+  certainty: confirmed
+  title: Populated biosynthesis_origin and mode_of_action on 11 PROPOSED/MINTED records
+    with curated PRIMARY_LITERATURE targets
+  description: 'Populated biosynthesis_origin, mode_of_action, mode_of_action_target_scope:
+    MICROBIAL_TARGET, and CURATOR mode_of_action_notes via record_curation_event and
+    write_validated_antibiotic across all 11 Group 2 PROPOSED/MINTED records (enterololin,
+    fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec,
+    ibrexafungerp, manogepix, olorofim).'
+  target_ids:
+  - antibioticmech:curator-cb71d1e3b5
+  - antibioticmech:curator-47d32d7a07
+  - antibioticmech:curator-172bfdd938
+  - antibioticmech:curator-1db8575797
+  - antibioticmech:curator-607ce000f8
+  - antibioticmech:curator-88af230f5d
+  - antibioticmech:curator-0106724e5f
+  - antibioticmech:curator-17023fe654
+  - antibioticmech:curator-fd1c955758
+  - antibioticmech:curator-4a1156c964
+  - antibioticmech:curator-18f8e84826
+  field_paths:
+  - biosynthesis_origin
+  - mode_of_action
+  - mode_of_action_target_scope
+  - mode_of_action_notes
+  - curation_history
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/enterololin.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/fabimycin.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/ganfeborole.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/lolamicin.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/macozinone.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/quabodepistat.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sorfequiline.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/telacebec.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/ibrexafungerp.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/manogepix.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/olorofim.yaml
+    role: Curator-owned biosynthesis_origin and mode_of_action slots
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (Issue #1273): populated biosynthesis_origin,
+    mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes
+    on all 11 records.'
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: proposed-minted-records-with-primary-targets-missing-mode-of-action
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T081800Z-fabimycin-record-review
+    finding_id: fabimycin-missing-mode-of-action-and-biosynthesis-origin
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1273
+- finding_id: unreviewed-seeded-pdb-structural-observations
+  issue_key: unreviewed-seeded-pdb-structural-observations
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: Curated 3 ChEBI-seeded UNREVIEWED PDB structural_observations with primary
+    literature evidence
+  description: 'Curated PDB:1Q3W on alsterpaullone (CHEBI:138488, relevance: HOST_PROTEIN_COMPLEX,
+    PMID:14529625), PDB:1H8S on ampicillin (CHEBI:28971, relevance: ANTIBODY_COMPLEX,
+    PMID:11397088), and PDB:1CLY on methyl nonanoate (CHEBI:44499, relevance: NOT_RELEVANT,
+    PMID:7664109) with evidence_status: PRIMARY_EVIDENCE via record_curation_event
+    (CURATED_STRUCTURAL_OBSERVATION) and write_validated_antibiotic.'
+  target_ids:
+  - CHEBI:138488
+  - CHEBI:28971
+  - CHEBI:44499
+  field_paths:
+  - structural_observations
+  - curation_history
+  evidence_ids:
+  - remediated-records-content
+  - primary-literature-sources
+  - validate-strict-pass
+  - verify-corpus-pass
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antiviral/alsterpaullone.yaml
+    role: Curator-reviewed structural_observations on SEEDED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/ampicillin.yaml
+    role: Curator-reviewed structural_observations on SEEDED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/methyl-nonanoate.yaml
+    role: Curator-reviewed structural_observations on SEEDED record
+  disposition_reason: 'Resolved in Cycle 2 Stage 5 (Issue #1256): curated all 3 structural_observations
+    with primary PDB complex evidence and verified preservation across seed_from_sources.py.'
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: unreviewed-seeded-pdb-structural-observations
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261023T160534Z-frozen-inventory-cohort-review
+    finding_id: unreviewed-seeded-pdb-structural-observations
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1256
+actions: []
+limitations:
+- 'The 11 Group 2 records retain curation_status: PROPOSED and grounding_status: MINTED
+  until upstream single-molecule ChEBI identifiers are assigned, per structure_completeness_audit
+  policy.'
+- 'The 3 Group 3 records retain curation_status: SEEDED because curating an off-target
+  or incidental PDB complex does not by itself constitute full record-level antimicrobial
+  mechanism review.'
+notes:
+- Original Cycle 2 Stage 4 review bundles (20261025T081800Z-fabimycin-record-review
+  and 20261025T082000Z-cycle2-frozen-inventory-cohort-review) are preserved byte-for-byte.
+related_reviews:
+- repository: culturebotai/AntibioticMech
+  review_id: 20261025T081800Z-fabimycin-record-review
+  relationship: Predecessor Cycle 2 Stage 4 single-record review of fabimycin (antibioticmech:curator-47d32d7a07)
+- repository: culturebotai/AntibioticMech
+  review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+  relationship: Predecessor Cycle 2 Stage 4 full-inventory cohort review identifying
+    the 3 resolved finding groups
+tags:
+- batch-review
+- cycle-02
+- stage-05
+- remediation-verification

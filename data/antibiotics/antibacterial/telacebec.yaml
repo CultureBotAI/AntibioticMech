@@ -49,23 +49,6 @@ source_concepts:
       (~1.5 ng/mL) against Mycobacterium tuberculosis H37Rv in broth and MIC50 = 0.28
       nM inside macrophages.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial cytochrome
-    bc1 complex QcrB subunit backed by DOI:10.1038/nm.3262.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P9WP37 (Mycobacterium tuberculosis H37Rv QcrB,
-    Rv2196) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/nm.3262).
-  llm_assisted: true
 molecular_targets:
 - target_label: mycobacterial cytochrome bc1 complex QcrB subunit
   target_type: PROTEIN_COMPLEX
@@ -102,3 +85,35 @@ molecular_targets:
     role: Respiratory cytochrome bc1 complex cytochrome b subunit QcrB (Rv2196) targeted
       by telacebec (Q203) in Mycobacterium tuberculosis H37Rv, where the Thr313Ala
       substitution confers high-level resistance (DOI:10.1038/nm.3262; PMID:23913123).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic imidazopyridine amide antitubercular agent
+  (Q203) that targets the cytochrome b subunit QcrB (Rv2196) of the mycobacterial
+  respiratory cytochrome bc1:aa3 supercomplex, blocking oxidative phosphorylation
+  and depleting ATP in Mycobacterium tuberculosis (DOI:10.1038/nm.3262).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial cytochrome
+    bc1 complex QcrB subunit backed by DOI:10.1038/nm.3262.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WP37 (Mycobacterium tuberculosis H37Rv QcrB,
+    Rv2196) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/nm.3262).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=ENERGY_METABOLISM_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1038/nm.3262); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

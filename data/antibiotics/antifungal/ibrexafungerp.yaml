@@ -48,17 +48,6 @@ source_concepts:
       inhibitor (SCY-078, MK-3118) with MIC50/MIC90 of 0.06/0.25 mg/L against Candida
       albicans and 0.25/1 mg/L against Candida glabrata bloodstream isolates.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for fungal 1,3-beta-D-glucan
-    synthase (Fks1 / Fks2) backed by DOI:10.1093/mmy/myac049.
-  llm_assisted: true
 molecular_targets:
 - target_label: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2)
   target_type: PROTEIN_COMPLEX
@@ -86,3 +75,29 @@ molecular_targets:
       held from reviewed UniProtKB accession assignment because Candida albicans SC5314
       Gsc1/Fks1 (UniProtKB:A0A1D8PCT0 / O13428) and Candida glabrata CBS 138 Fks1/Fks2
       (UniProtKB:Q6FKT2 / Q6FNB2) are unreviewed TrEMBL entries.
+biosynthesis_origin: SEMISYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Semisynthetic triterpenoid (enfumafungin derivative,
+  SCY-078) antifungal that noncompetitively inhibits fungal 1,3-beta-D-glucan synthase
+  (Fks1/Fks2; GO:0003843) at a binding site distinct from but partially overlapping
+  that of echinocandins, disrupting fungal cell-wall beta-1,3-D-glucan synthesis (DOI:10.1093/mmy/myac049).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal 1,3-beta-D-glucan
+    synthase (Fks1 / Fks2) backed by DOI:10.1093/mmy/myac049.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SEMISYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1093/mmy/myac049); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true

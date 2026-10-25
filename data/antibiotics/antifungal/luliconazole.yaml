@@ -1,7 +1,7 @@
 identifier: CHEBI:34825
 label: luliconazole
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An optically active (2E)-2-[(4R)-4-(2,4-dichlorophenyl)-1,3-dithiolan-2-ylidene]-2-(1H-imidazol-1-yl)acetonitrile
   antifungal agent that inhibits fungal sterol 14-alpha-demethylase (CYP51).
@@ -42,23 +42,6 @@ source_concepts:
       (NND-502) inhibiting fungal lanosterol 14-alpha-demethylase, with MICs of <=0.004-0.008
       ug/mL against Trichophyton dermatophytes and 0.125-4 ug/mL against Candida species.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T04:34:55Z'
-  curator: curate_mechanism
-  action: CURATED_MODE_OF_ACTION
-  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION
-    (MICROBIAL_TARGET) with primary-literature provenance.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for fungal lanosterol 14-alpha-demethylase
-    (CYP51 / Erg11) backed by DOI:10.1007/s10156-004-0327-1.
-  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -88,3 +71,28 @@ molecular_targets:
       dermatophytes and Candida species; held from reviewed UniProtKB accession assignment
       because Trichophyton rubrum CYP51 (UniProtKB:F2SHH3) is an unreviewed TrEMBL
       entry.
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T04:34:55Z'
+  curator: curate_mechanism
+  action: CURATED_MODE_OF_ACTION
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION
+    (MICROBIAL_TARGET) with primary-literature provenance.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for fungal lanosterol 14-alpha-demethylase
+    (CYP51 / Erg11) backed by DOI:10.1007/s10156-004-0327-1.
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: PROMOTED_TO_REVIEWED
+  changes: Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT
+    ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin
+    and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
+    (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
+  llm_assisted: true

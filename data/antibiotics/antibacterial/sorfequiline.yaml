@@ -47,24 +47,6 @@ source_concepts:
       tuberculosis H37Rv and submicromolar MICs (0.15-0.6 uM) across Mycobacterium
       abscessus isolates.
   source_version: '2026-10-23'
-curation_history:
-- timestamp: '2026-10-24T00:51:44Z'
-  curator: seed_from_sources
-  action: PROPOSED_FROM_CURATOR_INVENTORY
-  changes: Proposed from curation/curator_antibiotics.tsv
-- timestamp: '2026-10-24T07:30:00Z'
-  curator: antigravity
-  action: CURATED_MOLECULAR_TARGETS
-  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial F1FO-ATP synthase
-    c and epsilon subunits backed by DOI:10.1128/aac.02404-19.
-  llm_assisted: true
-- timestamp: '2026-10-24T07:35:00Z'
-  curator: antigravity
-  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
-  changes: Added reviewed UniProtKB:P9WPS1 (Mycobacterium tuberculosis H37Rv AtpE,
-    Rv1305) and UniProtKB:P9WPV1 (AtpC, Rv1311) protein examples to the PRIMARY_LITERATURE
-    molecular target (DOI:10.1128/aac.02404-19).
-  llm_assisted: true
 molecular_targets:
 - target_label: mycobacterial F1FO-ATP synthase c and epsilon subunits
   target_type: PROTEIN_COMPLEX
@@ -112,3 +94,36 @@ molecular_targets:
       H37Rv F1FO-ATP synthase that forms part of the dual c/epsilon diarylquinoline
       binding interface targeted by sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19;
       DOI:10.1128/aac.01191-19).
+biosynthesis_origin: SYNTHETIC
+mode_of_action: ENERGY_METABOLISM_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic second-generation diarylquinoline antitubercular
+  agent (TBAJ-876) that inhibits the proton-transporting F1Fo ATP synthase complex
+  (AtpE c-subunit, Rv1305; GO:0045259) in Mycobacterium tuberculosis, depleting bacterial
+  ATP (DOI:10.1128/aac.02404-19).'
+curation_history:
+- timestamp: '2026-10-24T00:51:44Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-24T07:30:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for mycobacterial F1FO-ATP synthase
+    c and epsilon subunits backed by DOI:10.1128/aac.02404-19.
+  llm_assisted: true
+- timestamp: '2026-10-24T07:35:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P9WPS1 (Mycobacterium tuberculosis H37Rv AtpE,
+    Rv1305) and UniProtKB:P9WPV1 (AtpC, Rv1311) protein examples to the PRIMARY_LITERATURE
+    molecular target (DOI:10.1128/aac.02404-19).
+  llm_assisted: true
+- timestamp: '2026-10-25T10:33:00Z'
+  curator: curate-yaml-record
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Populated biosynthesis_origin=SYNTHETIC, mode_of_action=ENERGY_METABOLISM_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    from primary literature (DOI:10.1128/aac.02404-19); retained curation_status=PROPOSED
+    while grounding_status=MINTED awaits upstream ChEBI accession (#1273).
+  llm_assisted: true
