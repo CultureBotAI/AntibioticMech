@@ -119,3 +119,16 @@
        ....                                                                     [100%]
        4 passed in 30.14s
        ```
+
+9. **Causal Graphs Held-Records Accounting & Historical Corpus Fixture Chain Verification (`curation/causal_graphs.yaml`, `curation/cycle2_stage5_review_remediation_transition.json`, `tests/conftest.py`, `tests/test_causal_graphs_curation.py`, `tests/test_uniprot_protein_examples.py`, and Historical Resistance/CARD/Salmonella Checkpoints)**
+   - Updated [`curation/causal_graphs.yaml`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/causal_graphs.yaml) (`scope_note` `32` -> `38` held `REVIEWED` records; added 6 `held_records` entries for `CHEBI:28429`, `CHEBI:228412`, `CHEBI:48480`, `CHEBI:10100`, `CHEBI:34825`, and `CHEBI:188153`) and [`tests/test_causal_graphs_curation.py`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/tests/test_causal_graphs_curation.py) (`reviewed_total: 96`, `reviewed_held: 38`).
+   - Added [`curation/cycle2_stage5_review_remediation_transition.json`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/cycle2_stage5_review_remediation_transition.json) and updated `pre_stage5_remediation_root` in [`tests/conftest.py`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/tests/conftest.py) to restore all 20 Cycle 2 Stage 5 remediated records (and `curation/causal_graphs.yaml`) to their exact pre-Stage-5 SHA-256 digests without modifying the Cycle 1 `curation/stage5_review_remediation_transition.json` artifact.
+   - Causal Graphs & Historical Resistance/CARD/Salmonella Suites (`task-13121`, `BypassSandbox: false`):
+     - Command: `.venv/bin/python -m pytest -q tests/test_causal_graphs_curation.py tests/test_salmonella_qualification_checkpoint.py tests/test_card_parent_references.py tests/test_aph_mph_primary.py tests/test_card_qualified_current.py tests/test_curator_resistance_fields.py tests/test_qnr_identity_context.py tests/test_qnr_unresolved.py tests/test_resistance_progress.py tests/test_sal_reference_context.py tests/test_salmonella_evidence_scope.py`
+     - Passed all 11 suites (`0 failed`).
+   - UniProt Protein Examples Suite (`task-13136`, `BypassSandbox: false`):
+     - Command: `.venv/bin/python -m pytest -q tests/test_uniprot_protein_examples.py`
+     - Exit Code: `0` (`60 passed, 1 warning in 74.15s (0:01:14)`).
+   - Ruff Linter Check (`BypassSandbox: false`):
+     - Command: `.venv/bin/ruff check --no-cache tests/conftest.py tests/test_causal_graphs_curation.py`
+     - Exit Code: `0` (`All checks passed!`).

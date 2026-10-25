@@ -442,6 +442,9 @@ def pre_stage5_remediation_root(tmp_path_factory):
     transition = json.loads(
         (REPO_ROOT / "curation/stage5_review_remediation_transition.json").read_bytes()
     )
+    cycle2_transition = json.loads(
+        (REPO_ROOT / "curation/cycle2_stage5_review_remediation_transition.json").read_bytes()
+    )
     root = tmp_path_factory.mktemp("pre-stage5-remediation")
     shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
@@ -470,6 +473,14 @@ def pre_stage5_remediation_root(tmp_path_factory):
         "CHEBI:119573",
         "CHEBI:63613",
     }
+    cycle2_stage5_held_ids = {
+        "CHEBI:28429",
+        "CHEBI:228412",
+        "CHEBI:48480",
+        "CHEBI:10100",
+        "CHEBI:34825",
+        "CHEBI:188153",
+    }
     for path in (REPO_ROOT / "curation").iterdir():
         if path.name == "uniprot_protein_examples.yaml":
             loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
@@ -488,6 +499,16 @@ def pre_stage5_remediation_root(tmp_path_factory):
         elif path.name == "causal_graphs.yaml":
             loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
             cg_data = yaml.load(path.read_text(encoding="utf-8"), Loader=loader)
+            cg_data["scope_note"] = cg_data["scope_note"].replace(
+                "and all 38 held REVIEWED records.",
+                "and all 32 held REVIEWED records.",
+            )
+            cg_data["held_records"] = [
+                h
+                for h in (cg_data.get("held_records") or [])
+                if h.get("identifier") not in cycle2_stage5_held_ids
+            ]
+            assert len(cg_data["held_records"]) == 32
             for item in cg_data.get("existing_causal_graphs") or []:
                 if item.get("identifier") in promoted_existing_ids:
                     item["curation_status"] = "SEEDED"
@@ -497,9 +518,29 @@ def pre_stage5_remediation_root(tmp_path_factory):
             )
         else:
             (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
+    for entry in cycle2_transition["records"]:
+        rel_path = entry["path"]
+        rec = load_record(root / rel_path)
+        assert rec["identifier"] == entry["identifier"]
+        assert rec["curation_history"][-1]["action"] in {
+            "PROMOTED_TO_REVIEWED",
+            "CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN",
+            "CURATED_STRUCTURAL_OBSERVATION",
+        }
+        rec["curation_history"] = rec["curation_history"][: entry["previous_curation_history_len"]]
+        for k, v in entry["previous_fields"].items():
+            if v is None:
+                rec.pop(k, None)
+            else:
+                rec[k] = v
+        ordered_rec = {k: rec[k] for k in entry["previous_key_order"] if k in rec}
+        write_validated_antibiotic(ordered_rec, root / rel_path)
+        assert (
+            hashlib.sha256((root / rel_path).read_bytes()).hexdigest() == entry["before_sha256"]
+        )
     for entry in transition["records"]:
         rel_path = entry["path"]
-        rec = load_record(REPO_ROOT / rel_path)
+        rec = load_record(root / rel_path)
         assert rec["identifier"] == entry["identifier"]
         assert rec["curation_history"][-1]["action"] == "RESOLVED_REVIEW_FINDINGS"
         rec["curation_history"] = rec["curation_history"][: entry["previous_curation_history_len"]]

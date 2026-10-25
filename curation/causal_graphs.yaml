@@ -6,7 +6,7 @@ scope_note: 'Curated primary-literature MECHANISTIC causal_graphs across all eli
   records: 26 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
   and 17 Cohort B records with direct-binding or measured-association non-protein PRIMARY_LITERATURE molecular_targets,
   plus explicit accounting of all 16 pre-existing corpus causal_graphs (5 REVIEWED + 11 SEEDED) and all
-  32 held REVIEWED records.'
+  38 held REVIEWED records.'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -3634,3 +3634,75 @@ held_records:
     preacylation cocrystal (PDB:4FH2) required an engineered catalytic-site mutant (S70C with an artificial
     C70-K73 sulfenamide bond) of Klebsiella pneumoniae SHV-1 (UniProtKB:P0AD64) to trap intact sulbactam,
     and the record explicitly warns against extrapolating this mutant construct to wild-type enzyme.)
+- identifier: CHEBI:28429
+  label: (2R,3R)-dihydromyricetin
+  path: data/antibiotics/antibacterial/2r-3r-dihydromyricetin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: Streptococcus agalactiae cell envelope and biofilm matrix (MEMBRANE, ATTACKED_COMPONENT)
+  references:
+  - DOI:10.1177/15353141261501298
+  reason: Held from causal_graphs curation because the cited primary literature (DOI:10.1177/15353141261501298)
+    supports only a coarse or downstream affected component/process (Streptococcus agalactiae cell envelope
+    and biofilm matrix (MEMBRANE, ATTACKED_COMPONENT)) without a molecularly resolved proximal target-engagement
+    step.
+- identifier: CHEBI:228412
+  label: 6-methylflavone
+  path: data/antibiotics/antibacterial/6-methylflavone.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: Mycobacterium abscessus membrane potential and respiratory energetics (BIOLOGICAL_PROCESS,
+    DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1128/spectrum.03588-25
+  reason: Held from causal_graphs curation because the cited primary literature (DOI:10.1128/spectrum.03588-25)
+    supports only a coarse or downstream affected component/process (Mycobacterium abscessus membrane
+    potential and respiratory energetics (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)) without a
+    molecularly resolved proximal target-engagement step.
+- identifier: CHEBI:48480
+  label: thermorubin A
+  path: data/antibiotics/antibacterial/thermorubin-a.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial 70S ribosome intersubunit bridge B2a (16S rRNA helix 44 / 23S rRNA helix 69)
+    (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1093/nar/gkac1189
+  reason: Held from causal_graphs curation because the proximal ribosomal target (bacterial 70S ribosome
+    intersubunit bridge B2a (16S rRNA helix 44 / 23S rRNA helix 69) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET))
+    is held in curation/uniprot_protein_examples.yaml as an rRNA intersubunit bridge B2a rearrangement
+    site (PDB:8EIU) and was promoted from PROPOSED to REVIEWED in Cycle 2 Stage 5 outside the Stage 2
+    causal_graphs curation cohort.
+- identifier: CHEBI:10100
+  label: zafirlukast
+  path: data/antibiotics/antibacterial/zafirlukast.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: mycobacterial nucleoid-associated protein Lsr2 (PROTEIN, DIRECT_BINDING_TARGET); staphylococcal
+    lipoteichoic acid synthase (LtaS) (PROTEIN, MEASURED_TARGET_ASSOCIATION)
+  references:
+  - PMID:23650717
+  - DOI:10.3390/antibiotics15090914
+  reason: Held from causal_graphs curation because the record was promoted from PROPOSED to REVIEWED in
+    Cycle 2 Stage 5 after Stage 2 causal_graphs curation, and although Mycobacterium tuberculosis H37Rv
+    Lsr2 is curated with UniProtKB:P9WIP7 on molecular_targets (PMID:23650717), the second primary-literature
+    target (staphylococcal lipoteichoic acid synthase LtaS, DOI:10.3390/antibiotics15090914) is held in
+    curation/uniprot_protein_examples.yaml without a verified experimental-strain accession.
+- identifier: CHEBI:34825
+  label: luliconazole
+  path: data/antibiotics/antifungal/luliconazole.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) (PROTEIN, MEASURED_TARGET_ASSOCIATION)
+  references:
+  - DOI:10.1007/s10156-004-0327-1
+  reason: Held from causal_graphs curation because the proximal protein target (fungal lanosterol 14-alpha-demethylase
+    (CYP51 / Erg11) (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml
+    without a single verified experimental-strain UniProtKB accession in DOI:10.1007/s10156-004-0327-1
+    and was promoted from PROPOSED to REVIEWED in Cycle 2 Stage 5.
+- identifier: CHEBI:188153
+  label: oteseconazole
+  path: data/antibiotics/antifungal/oteseconazole.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/aac.00778-22
+  reason: Held from causal_graphs curation because the record was promoted from PROPOSED to REVIEWED in
+    Cycle 2 Stage 5 outside the Stage 2 causal_graphs curation cohort; its fungal CYP51 / Erg11 target
+    (DOI:10.1128/aac.00778-22) is curated on molecular_targets with Candida albicans UniProtKB:P10613
+    and Nakaseomyces glabratus UniProtKB:P50859.
