@@ -1,0 +1,255 @@
+schema_version: 1.0.0
+review_id: 20261025T081800Z-fabimycin-record-review
+kind: record
+repository: culturebotai/AntibioticMech
+title: Single-record review of fabimycin (antibioticmech:curator-47d32d7a07)
+started_at: '2026-10-25T07:56:00Z'
+finished_at: '2026-10-25T08:18:00Z'
+reviewer:
+  identity: Antigravity
+  kind: agent
+  independence: self_review
+  independence_basis: Cycle 2 Stage 4 workflow record-review pass executed by the
+    repository curation agent prior to independent adversarial PR review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: NEEDS_CURATION
+scientific_review: true
+summary: 'Whole-record review of PROPOSED/MINTED record antibioticmech:curator-47d32d7a07
+  (fabimycin, data/antibiotics/antibacterial/fabimycin.yaml) verified exact single-molecule
+  chemical structure (C23H24N4O3, InChIKey ZWQNEFFHBSGFHV-HKMNZKMDSA-N, PubChem CID
+  134159600), antibacterial filing, CURATOR discovery evidence (Parker et al. 2022,
+  DOI:10.1021/acscentsci.2c00598; PMID:36035943), PRIMARY_LITERATURE molecular_targets
+  entry for bacterial enoyl-acyl carrier protein reductase (FabI) in Escherichia coli
+  K-12 (NCBITaxon:83333), and reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI,
+  b1288) protein_examples curated in Cycle 2 Stage 3. One open coherence finding requires
+  Cycle 2 Stage 5 grouped remediation: despite having a curated PRIMARY_LITERATURE
+  FabI molecular target and definition describing fatty acid biosynthesis inhibition,
+  the record lacks biosynthesis_origin (SYNTHETIC), mode_of_action (LIPID_SYNTHESIS_INHIBITION),
+  mode_of_action_target_scope (MICROBIAL_TARGET), and CURATOR mode_of_action_notes.'
+source:
+  git_revision: bfc2881eb4543729f96eade32084c147fa07acdb
+  state: working_tree
+  inputs:
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    role: context
+    sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
+  - path: curation/curator_antibiotics.tsv
+    role: context
+    sha256: f80ff3dfefa91bef572dcebfaea8f6a962b640118b462ec1849049f436706706
+  - path: curation/uniprot_protein_examples.yaml
+    role: context
+    sha256: e7ff122baf66ddfcf56fe6f09e46d106c3366cc0c6e4aa7e7373f6f99cadcb73
+  - path: data/antibiotics/antibacterial/fabimycin.yaml
+    role: target
+    sha256: ed44fe77bd27b368052b8853d5e6913616b6a6d21044e4fbd5706df654430ad3
+  - path: docs/CURATION.md
+    role: context
+    sha256: 3a060b8518ea0bdace3ca7efe6e7749c4216a7f486192994f9be82d55c301f29
+  - path: docs/record-reviews.md
+    role: context
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+  - path: scripts/curation_worklist.py
+    role: context
+    sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
+  - path: scripts/seed_from_sources.py
+    role: context
+    sha256: 53cf79eb1417ff7758a94f2d18ac1ce47b0f8c91c8961023363cf37698d4a056
+  - path: scripts/validate_strict.py
+    role: context
+    sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  - path: scripts/verify_corpus.py
+    role: context
+    sha256: 7d881f9b4e17b02d7f3ec3eb48404ad0a41a0cefa915edc9a442f755b834df78
+  - path: src/antibioticmech/schema/antibioticmech.yaml
+    role: context
+    sha256: de62be2dd2dd55f141a0c14ff666eaa00efc6f3b431d651d0196ebcfddfbb301
+scope:
+  description: Complete single-record review of data/antibiotics/antibacterial/fabimycin.yaml
+    (antibioticmech:curator-47d32d7a07) across chemical identity, grounding, filing,
+    source_concepts, molecular_targets, protein_examples, and missing top-level mechanism
+    classification slots (biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
+    mode_of_action_notes).
+  selection: 'Selected antibioticmech:curator-47d32d7a07 (fabimycin) as the representative
+    record from the 11 PROPOSED/MINTED literature-seeded records that received PRIMARY_LITERATURE
+    molecular_targets and reviewed UniProtKB protein_examples in Cycle 2 Stage 3 (PR
+    #1266) while still lacking top-level mode_of_action and biosynthesis_origin slots.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - antibioticmech:curator-47d32d7a07
+targets:
+- target_id: antibioticmech:curator-47d32d7a07
+  path: data/antibiotics/antibacterial/fabimycin.yaml
+  label: fabimycin
+  record_class: AntibioticRecord
+  kind: maintained
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/fabimycin.yaml
+    role: Curator-maintained slots (biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
+      mode_of_action_notes, molecular_targets)
+  - repository: culturebotai/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Seeded CURATOR source_concepts, definition, and PubChem structure provenance
+checks:
+- check_id: strict-schema-fabimycin
+  name: Closed-schema and ontology-grounding validation
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/validate_strict.py --quiet --workers 2
+  exit_code: 0
+  summary: antibioticmech:curator-47d32d7a07 passes closed LinkML schema validation
+    and OAK ontology label correspondence (CHEBI:33282, NCBITaxon:83333) with 0 errors.
+  target_ids:
+  - antibioticmech:curator-47d32d7a07
+  evidence_ids:
+  - fabimycin-record
+  - strict-validation-suite
+- check_id: verify-corpus-fabimycin
+  name: Corpus integrity and CURATOR provenance verification
+  status: passed
+  required: true
+  command: .venv/bin/python scripts/verify_corpus.py
+  exit_code: 0
+  summary: antibioticmech:curator-47d32d7a07 passes verify_corpus.py with 0 errors;
+    seeded fields match curation/curator_antibiotics.tsv.
+  target_ids:
+  - antibioticmech:curator-47d32d7a07
+  evidence_ids:
+  - fabimycin-record
+  - strict-validation-suite
+evidence:
+- evidence_id: fabimycin-record
+  kind: record_content
+  reference: data/antibiotics/antibacterial/fabimycin.yaml
+  locator: lines 1-92
+  accessed_at: '2026-10-25T08:18:00Z'
+  support: supports
+  snapshot_sha256: ed44fe77bd27b368052b8853d5e6913616b6a6d21044e4fbd5706df654430ad3
+  summary: antibioticmech:curator-47d32d7a07 carries exact C23H24N4O3 structure (InChIKey
+    ZWQNEFFHBSGFHV-HKMNZKMDSA-N, PubChem CID 134159600), CURATOR source_concepts citing
+    DOI:10.1021/acscentsci.2c00598, PRIMARY_LITERATURE molecular_targets entry for
+    bacterial enoyl-acyl carrier protein reductase (FabI) in Escherichia coli (strain
+    K12) (NCBITaxon:83333) with reviewed UniProtKB:P0AEK4 protein_examples (lines
+    60-92), and omits biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
+    and mode_of_action_notes.
+- evidence_id: parker-2022-fabimycin
+  kind: primary_source
+  reference: DOI:10.1021/acscentsci.2c00598
+  locator: Parker et al. 2022 ACS Cent Sci 8(8):1145-1158; PMID:36035943
+  accessed_at: '2026-10-25T08:18:00Z'
+  support: supports
+  summary: Reports rational eNTRy-rule synthesis of fabimycin from Debio-1452, direct
+    biochemical inhibition and ternary FabI-NAD+-fabimycin crystal structure with
+    Escherichia coli FabI (b1288, UniProtKB:P0AEK4), fatty acid biosynthesis (FAS-II)
+    inhibition, and antibacterial activity against >200 clinical isolates of E. coli,
+    K. pneumoniae, and A. baumannii.
+- evidence_id: strict-validation-suite
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: validate_strict.py and verify_corpus.py
+  accessed_at: '2026-10-25T08:18:00Z'
+  support: supports
+  snapshot_sha256: d70e6739c881260927dfc99abea16e56be0f34f353f9f95353a43da76e8e7217
+  summary: Confirms zero schema or ontology-label errors on fabimycin.yaml and verifies
+    that biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and mode_of_action_notes
+    are curator-owned slots outside SEEDED_FIELDS.
+assessments:
+- assessment_id: fabimycin-identity-target-and-uniprot-grounding
+  area: evidence
+  topic: Chemical structure, CURATOR discovery evidence, FabI target, and UniProtKB:P0AEK4
+    grounding
+  outcome: supported
+  summary: Single-molecule chemical_structure (PubChem CID 134159600), antibacterial
+    filing, CURATOR discovery evidence, PRIMARY_LITERATURE bacterial FabI target,
+    and reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI) protein_examples are
+    accurately grounded in DOI:10.1021/acscentsci.2c00598 (PMID:36035943).
+  target_ids:
+  - antibioticmech:curator-47d32d7a07
+  evidence_ids:
+  - fabimycin-record
+  - parker-2022-fabimycin
+- assessment_id: fabimycin-top-level-moa-and-origin-completeness
+  area: completeness
+  topic: Top-level mode_of_action and biosynthesis_origin alignment with curated FabI
+    target
+  outcome: concern
+  summary: 'fabimycin.yaml has a curated PRIMARY_LITERATURE FabI target and a definition
+    stating fatty acid biosynthesis enzyme FabI inhibition, but still lacks top-level
+    biosynthesis_origin: SYNTHETIC, mode_of_action: LIPID_SYNTHESIS_INHIBITION, mode_of_action_target_scope:
+    MICROBIAL_TARGET, and CURATOR mode_of_action_notes.'
+  target_ids:
+  - antibioticmech:curator-47d32d7a07
+  evidence_ids:
+  - fabimycin-record
+  - parker-2022-fabimycin
+  - strict-validation-suite
+findings:
+- finding_id: fabimycin-missing-mode-of-action-and-biosynthesis-origin
+  issue_key: proposed-minted-records-with-primary-targets-missing-mode-of-action
+  category: completeness
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Fabimycin has a curated PRIMARY_LITERATURE FabI target but lacks top-level
+    mode_of_action and biosynthesis_origin
+  description: 'In data/antibiotics/antibacterial/fabimycin.yaml (antibioticmech:curator-47d32d7a07),
+    Cycle 2 Stage 3 curated a source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE)
+    molecular_targets entry for bacterial enoyl-acyl carrier protein reductase (FabI)
+    and reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI) protein_examples backed
+    by DOI:10.1021/acscentsci.2c00598 (PMID:36035943), but top-level biosynthesis_origin
+    (SYNTHETIC), mode_of_action (LIPID_SYNTHESIS_INHIBITION), mode_of_action_target_scope
+    (MICROBIAL_TARGET), and mode_of_action_notes (CURATOR: ...) remain unpopulated.'
+  target_ids:
+  - antibioticmech:curator-47d32d7a07
+  field_paths:
+  - biosynthesis_origin
+  - mode_of_action
+  - mode_of_action_target_scope
+  - mode_of_action_notes
+  evidence_ids:
+  - fabimycin-record
+  - parker-2022-fabimycin
+  - strict-validation-suite
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/fabimycin.yaml
+    role: Curator-owned biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
+      and mode_of_action_notes slots
+actions:
+- action_id: curate-fabimycin-moa-and-biosynthesis-origin
+  description: 'Populate biosynthesis_origin: SYNTHETIC, mode_of_action: LIPID_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope: MICROBIAL_TARGET, and CURATOR mode_of_action_notes
+    citing DOI:10.1021/acscentsci.2c00598 (PMID:36035943) on data/antibiotics/antibacterial/fabimycin.yaml
+    via write_validated.py during Cycle 2 Stage 5 grouped remediation.'
+  finding_ids:
+  - fabimycin-missing-mode-of-action-and-biosynthesis-origin
+  target_ids:
+  - antibioticmech:curator-47d32d7a07
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/fabimycin.yaml
+    role: Curator-owned biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
+      and mode_of_action_notes slots
+  acceptance_checks:
+  - biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and mode_of_action_notes
+    are populated on antibioticmech:curator-47d32d7a07 and survive seed_from_sources.py
+    --apply --only antibioticmech:curator-47d32d7a07.
+  - scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
+limitations:
+- Stage 4 is a read-only review stage; no scientific YAML records were modified in
+  this commit sequence.
+- 'fabimycin (antibioticmech:curator-47d32d7a07) remains curation_status: PROPOSED
+  and grounding_status: MINTED until an upstream single-molecule ChEBI identifier
+  is assigned, per structure_completeness_audit policy.'
+notes:
+- Fabimycin is also included in the companion Cycle 2 Stage 4 full-inventory cohort
+  review (2,992 records) under the 11-record open finding proposed-minted-records-with-primary-targets-missing-mode-of-action.
+tags:
+- record-review
+- fabimycin
+- antibacterial
+- cycle-02
+- stage-04
