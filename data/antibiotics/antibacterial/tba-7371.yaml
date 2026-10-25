@@ -1,0 +1,56 @@
+identifier: antibioticmech:curator-fe28654fcf
+label: TBA-7371
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 1,4-azaindole (N-(2-hydroxyethyl)-1-[(6-methoxy-5-methylpyrimidin-4-yl)methyl]-6-methyl-1H-pyrrolo[3,2-b]pyridine-3-carboxamide)
+  antitubercular agent that noncovalently inhibits mycobacterial decaprenylphosphoryl-beta-D-ribose
+  2'-oxidase (DprE1).
+definition_source: DOI:10.1021/jm401382v
+synonyms:
+- synonym_text: AZ-7371
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: TBA7371
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: COc1ncnc(Cn2cc(C(=O)NCCO)c3ncc(C)cc32)c1C
+  standard_inchi: InChI=1S/C18H21N5O3/c1-11-6-15-16(20-7-11)13(17(25)19-4-5-24)8-23(15)9-14-12(2)18(26-3)22-10-21-14/h6-8,10,24H,4-5,9H2,1-3H3,(H,19,25)
+  standard_inchi_key: VDRYGTNDKXIPSK-UHFFFAOYSA-N
+  molecular_formula: C18H21N5O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/72792692
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 355.398
+  monoisotopic_mass: 355.1644
+xrefs:
+- pubchem.compound:72792692
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/jm401382v#tba-7371
+  source_label: TBA-7371
+  minted_identifier: antibioticmech:curator-fe28654fcf
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/jm401382v
+    snippet: Shirude et al. identified 1,4-azaindole noncovalent inhibitors of Mycobacterium
+      tuberculosis decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1) and reported
+      that compound 8 (TBA-7371, AZ-7371) inhibited M. tuberculosis DprE1 with an
+      IC50 of 10 nM, inhibited M. tuberculosis H37Rv growth with an MIC of 1.56 uM
+      (0.55 ug/mL), and reduced bacterial load in acute and chronic murine tuberculosis
+      infection models.
+    notes: Reported by Shirude et al. 2013 (J Med Chem 56:9701-9708; PMID:24215368)
+      and Shirude et al. 2014 (ACS Med Chem Lett 5:792-796; PMID:24957839; DOI:10.1021/ml500134b)
+      as a clinical-stage 1,4-azaindole noncovalent DprE1 inhibitor (TBA-7371, AZ-7371).
+      PubChem CID 72792692 supplies the standard InChI, InChIKey, formula, and SMILES
+      for TBA-7371.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

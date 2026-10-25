@@ -1,0 +1,55 @@
+identifier: CHEBI:94700
+label: pazufloxacin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A (3S)-10-(1-aminocyclopropyl)-9-fluoro-3-methyl-7-oxo-2,3-dihydro-7H-[1,4]oxazino[2,3,4-ij]quinoline-6-carboxylic
+  acid fluoroquinolone antibacterial that inhibits bacterial DNA gyrase and topoisomerase
+  IV.
+definition_source: DOI:10.1128/AAC.37.3.384
+synonyms:
+- synonym_text: T-3761
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: (-)-pazufloxacin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H]1COc2c(C3(N)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+  standard_inchi: InChI=1S/C16H15FN2O4/c1-7-6-23-14-11(16(18)2-3-16)10(17)4-8-12(14)19(7)5-9(13(8)20)15(21)22/h4-5,7H,2-3,6,18H2,1H3,(H,21,22)/t7-/m0/s1
+  standard_inchi_key: XAGMUUZPGZWTRP-ZETCQYMHSA-N
+  molecular_formula: C16H15FN2O4
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/65957
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 318.304
+  monoisotopic_mass: 318.1016
+xrefs:
+- pubchem.compound:65957
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.37.3.384#pazufloxacin
+  source_label: pazufloxacin
+  minted_identifier: antibioticmech:curator-70c19b9d1f
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.37.3.384
+    snippet: Fukuoka et al. evaluated the in vitro and in vivo antibacterial activities
+      of T-3761 (pazufloxacin) and reported MIC90 values of 0.39 ug/mL against methicillin-susceptible
+      Staphylococcus aureus, 0.025 to 0.39 ug/mL against Enterobacteriaceae species,
+      and 0.78 ug/mL against Pseudomonas aeruginosa, along with inhibition of Escherichia
+      coli DNA gyrase supercoiling.
+    notes: Reported by Fukuoka et al. 1993 (Antimicrob Agents Chemother 37:384-392;
+      PMID:8384811) and Muratani et al. 1992 (Antimicrob Agents Chemother 36:2293-2303;
+      DOI:10.1128/AAC.36.10.2293) as a 10-(1-aminocyclopropyl) oxazine-ring-fused
+      fluoroquinolone antibacterial (T-3761). PubChem CID 65957 and ChEBI CHEBI:94700
+      supply the standard InChI, InChIKey, formula, and isomeric SMILES for pazufloxacin.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

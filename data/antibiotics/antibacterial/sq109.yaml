@@ -1,0 +1,54 @@
+identifier: antibioticmech:curator-b1cfeb9243
+label: SQ109
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An N-geranyl-N'-(adamantan-2-yl)ethane-1,2-diamine antimycobacterial agent
+  that inhibits the mycobacterial trehalose monomycolate transporter MmpL3 and dissipates
+  the transmembrane proton motive force.
+definition_source: DOI:10.1128/AAC.05708-11
+synonyms:
+- synonym_text: SQ-109
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CCC/C(C)=C/CNCCNC1C2CC3CC(C2)CC1C3
+  standard_inchi: InChI=1S/C22H38N2/c1-16(2)5-4-6-17(3)7-8-23-9-10-24-22-20-12-18-11-19(14-20)15-21(22)13-18/h5,7,18-24H,4,6,8-15H2,1-3H3/b17-7+
+  standard_inchi_key: JFIBVDBTCDTBRH-REZTVBANSA-N
+  molecular_formula: C22H38N2
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/5274428
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 330.56
+  monoisotopic_mass: 330.3035
+xrefs:
+- pubchem.compound:5274428
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.05708-11#sq109
+  source_label: SQ109
+  minted_identifier: antibioticmech:curator-b1cfeb9243
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1128/AAC.05708-11
+    snippet: Tahlan et al. demonstrated that the 1,2-ethylenediamine antitubercular
+      clinical candidate SQ109 inhibits Mycobacterium tuberculosis H37Rv growth at
+      an MIC of 0.39 to 0.78 ug/mL (1.2 to 2.4 uM) and blocks trehalose monomycolate
+      export by targeting the inner-membrane transporter MmpL3 (Rv0206c), causing
+      trehalose monomycolate accumulation and loss of trehalose dimycolate and cell
+      wall mycolates.
+    notes: Reported by Tahlan et al. 2012 (Antimicrob Agents Chemother 56:1797-1809;
+      PMID:22252828) and Protopopova et al. 2005 (J Antimicrob Chemother 56:968-974;
+      DOI:10.1093/jac/dki319) as an N-geranyl-N'-(2-adamantyl)ethane-1,2-diamine antimycobacterial
+      agent targeting MmpL3 and proton-motive-force bioenergetics. PubChem CID 5274428
+      supplies the neutral parent standard InChI, InChIKey, formula, and isomeric
+      SMILES for SQ109.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

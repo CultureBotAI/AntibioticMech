@@ -1,0 +1,51 @@
+identifier: antibioticmech:curator-975acd7c4d
+label: cadazolid
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A hybrid oxazolidinone-fluoroquinolone antibacterial agent (ACT-179811)
+  that inhibits Clostridioides difficile protein synthesis at the 50S ribosomal subunit
+  and DNA synthesis via DNA gyrase.
+definition_source: DOI:10.1093/jac/dkt411
+synonyms:
+- synonym_text: ACT-179811
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(O)c1cn(C2CC2)c2cc(N3CCC(O)(COc4ccc(N5C[C@H](CO)OC5=O)cc4F)CC3)c(F)cc2c1=O
+  standard_inchi: InChI=1S/C29H29F2N3O8/c30-21-10-19-23(33(16-1-2-16)13-20(26(19)36)27(37)38)11-24(21)32-7-5-29(40,6-8-32)15-41-25-4-3-17(9-22(25)31)34-12-18(14-35)42-28(34)39/h3-4,9-11,13,16,18,35,40H,1-2,5-8,12,14-15H2,(H,37,38)/t18-/m1/s1
+  standard_inchi_key: XWFCFMXQTBGXQW-GOSISDBHSA-N
+  molecular_formula: C29H29F2N3O8
+  structure_source: https://doi.org/10.1093/jac/dkt411
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 585.56
+  monoisotopic_mass: 585.1923
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1093/jac/dkt411#cadazolid
+  source_label: cadazolid
+  minted_identifier: antibioticmech:curator-975acd7c4d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1093/jac/dkt411
+    snippet: Locher et al. characterized cadazolid (ACT-179811) against Clostridioides
+      difficile strains including fluoroquinolone- and linezolid-resistant isolates,
+      reporting an MIC50 of 0.125 mg/L and MIC90 of 0.25 mg/L, potent inhibition of
+      C. difficile protein synthesis (IC50 0.08 to 0.31 mg/L), and inhibition of toxin
+      and spore formation.
+    notes: Reported by Locher et al. 2014 (J Antimicrob Chemother 69:719-726; PMID:24176982)
+      and Baldoni et al. 2014 (Antimicrob Agents Chemother 58:901-908; DOI:10.1128/AAC.01789-13)
+      as a hybrid oxazolidinone-fluoroquinolone antibacterial (ACT-179811, CAS 1025097-10-2)
+      that primarily inhibits bacterial translation and weakly inhibits DNA gyrase
+      in Clostridioides difficile. The IUPAC structure from DOI:10.1093/jac/dkt411
+      was normalized with RDKit to derive the standard InChI and InChIKey.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

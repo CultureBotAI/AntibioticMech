@@ -1,0 +1,53 @@
+identifier: antibioticmech:curator-7e608b0982
+label: amicoumacin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A Bacillus-derived 3,4-dihydroisocoumarin-pseudopeptide antibiotic that
+  binds the 30S ribosomal subunit E-site to tether mRNA to 16S rRNA and inhibit bacterial
+  translation translocation.
+definition_source: DOI:10.1016/j.molcel.2014.09.020
+synonyms:
+- synonym_text: AMI
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)C[C@H](NC(=O)[C@@H](O)[C@@H](O)[C@@H](N)CC(N)=O)[C@@H]1Cc2cccc(O)c2C(=O)O1
+  standard_inchi: InChI=1S/C20H29N3O7/c1-9(2)6-12(23-19(28)18(27)17(26)11(21)8-15(22)25)14-7-10-4-3-5-13(24)16(10)20(29)30-14/h3-5,9,11-12,14,17-18,24,26-27H,6-8,21H2,1-2H3,(H2,22,25)(H,23,28)/t11-,12-,14-,17-,18-/m0/s1
+  standard_inchi_key: DCPWYLSPIAHJFU-YKRRISCLSA-N
+  molecular_formula: C20H29N3O7
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/25223631
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 423.466
+  monoisotopic_mass: 423.2006
+xrefs:
+- pubchem.compound:25223631
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.molcel.2014.09.020#amicoumacin-a
+  source_label: amicoumacin A
+  minted_identifier: antibioticmech:curator-7e608b0982
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2014.09.020
+    snippet: Polikanov et al. solved the 2.4 A crystal structure of amicoumacin A
+      bound to the Thermus thermophilus 70S ribosome, showing that amicoumacin A bridges
+      16S rRNA bases in the E-site of the 30S subunit and the mRNA backbone to block
+      translocation, and demonstrated that 16S rRNA mutations C795U, A794G, or G693A
+      increase the Escherichia coli Delta-tolC MIC from 0.5-1 ug/mL to 4-8 ug/mL.
+    notes: Reported by Polikanov et al. 2014 (Mol Cell 56:531-540; PMID:25306920)
+      and Lama et al. 2012 (Antimicrob Agents Chemother 56:2802-2807; DOI:10.1128/AAC.00147-12)
+      as a Bacillus dihydroisocoumarin natural-product antibiotic (MIC 0.25-0.78 ug/mL
+      against methicillin-resistant Staphylococcus aureus) that stabilizes mRNA in
+      the 30S ribosomal E-site. PubChem CID 25223631 supplies the standard InChI,
+      InChIKey, formula, and isomeric SMILES for amicoumacin A.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

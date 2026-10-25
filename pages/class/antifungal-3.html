@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antifungal — AntibioticMech</title>
+<meta name="description" content="Individual chemical structures with antimicrobial activity, harmonized from ChEBI and CARD/ARO and grounded in chemistry and mechanism ontologies.">
+<link rel="stylesheet" href="../style.css">
+<script src="../theme-toggle.js"></script>
+</head>
+<body>
+<div class="wrap wide">
+<header class="site">
+  <a class="brand" href="../index.html">AntibioticMech</a>
+  <nav>
+    <a href="../index.html">Overview</a>
+    <a href="../browse.html">Browse</a>
+    <a href="../map.html">Map</a>
+    <a href="../chemical-map.html">Chemical map</a>
+    <a href="../sequence-map.html">Sequence map (pLM)</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">Schema</a>
+    <a href="https://github.com/CultureBotAI/AntibioticMech">Source</a>
+    <a href="https://culturebotai.github.io/mechs/">All Mech projects</a>
+  </nav>
+</header>
+<main>
+<h1>Antifungal</h1>
+<p class="lede">602 compound records. Antifungal agents, drugs and agrochemical fungicides.</p>
+
+<div class="page-with-sidebar">
+  <aside class="facet-sidebar" aria-label="Class filters">
+    <form id="class-filter-form" class="facet-form" role="search">
+      <div class="facet-group">
+        <label class="facet-title" for="q">Filter antifungal records</label>
+        <input class="searchbox" id="q" type="search" data-index="antifungal.json" data-total="602" placeholder="Filter all 602 records…" aria-label="Filter records">
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-grounding">Grounding status</label>
+        <select id="filter-grounding">
+          <option value="">All grounding statuses</option>
+          <option value="EXACT">EXACT</option>
+          <option value="UNGROUNDED">UNGROUNDED</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-status">Curation status</label>
+        <select id="filter-status">
+          <option value="">All workflow statuses</option>
+          <option value="REVIEWED">REVIEWED</option>
+          <option value="SEEDED">SEEDED</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-source">Source</label>
+        <select id="filter-source">
+          <option value="">All sources</option>
+          <option value="ChEBI">ChEBI</option>
+          <option value="ARO">ARO</option>
+        </select>
+      </div>
+      <div class="facet-group">
+        <label class="facet-title" for="filter-sort">Sort by</label>
+        <select id="filter-sort">
+          <option value="name-asc">Compound name (A–Z)</option>
+          <option value="name-desc">Compound name (Z–A)</option>
+          <option value="structural">Structural class (A–Z)</option>
+          <option value="status">Curation status (REVIEWED first)</option>
+          <option value="grounding">Grounding status (EXACT first)</option>
+        </select>
+      </div>
+      <button type="reset" id="filter-reset">Reset filters</button>
+    </form>
+  </aside>
+
+  <div class="results-main">
+    <p class="meta" id="count" aria-live="polite"></p>
+<div class="table-scroll" role="region" aria-label="Antifungal compounds" tabindex="0">
+    <table id="tbl">
+      <caption>Antifungal compounds</caption>
+      <thead><tr><th scope="col">Compound</th><th scope="col">Structural class</th><th scope="col">Grounding</th><th scope="col">Curation</th><th scope="col">Sources</th></tr></thead>
+      <tbody>
+      <tr data-identifiers="CHEBI:132905 cas:481-34-5 knapsack:C00020065 reaxys:2048004 LHYHMMRYTDARSZ-BYNSBNAKSA-N CHEBI:132905">
+        <td><a href="../antifungal/α-cadinol.html">α-cadinol</a></td>
+        <td class="meta"></td>
+        <td><span class="pill">EXACT</span></td>
+        <td><span class="pill plain">SEEDED</span></td>
+        <td class="meta">CHEBI</td>
+      </tr>
+      <tr data-identifiers="CHEBI:16363 cas:481-06-1 kegg.compound:C02206 knapsack:C00003364 lincs.smallmolecule:LSM-6627 lipidmaps:LMPR0103190001 metacyc.compound:ALPHA-SANTONIN reaxys:89489 XJHDMGJURBVLLE-BOCCBSBMSA-N CHEBI:16363">
+        <td><a href="../antifungal/α-santonin.html">α-santonin</a></td>
+        <td class="meta"></td>
+        <td><span class="pill">EXACT</span></td>
+        <td><span class="pill plain">SEEDED</span></td>
+        <td class="meta">CHEBI</td>
+      </tr>
+      </tbody>
+    </table>
+
+</div>
+    <nav class="pager" aria-label="Pages">
+<a href="antifungal.html">1</a> <a href="antifungal-2.html">2</a> <span class="pill plain" aria-current="page">3</span>     </nav>
+    <p class="meta">Showing 2 of 602. The filter searches all
+    602, not just this page.</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById('class-filter-form');
+  var box = document.getElementById('q'), out = document.getElementById('count');
+  var fGround = document.getElementById('filter-grounding');
+  var fStatus = document.getElementById('filter-status');
+  var fSource = document.getElementById('filter-source');
+  var fSort = document.getElementById('filter-sort');
+  var body = document.querySelector('#tbl tbody');
+  var original = body.innerHTML;
+  var index = null, pending = null;
+  var slugDir = "antifungal";
+
+  function esc(t) {
+    return String(t).replace(/[&<>"]/g, function (c) {
+      return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c];
+    });
+  }
+  // Rows are rebuilt from the index rather than hidden in place, because the
+  // page only holds its own slice of a class that can run to 900+ records.
+  function draw(rows) {
+    body.innerHTML = rows.map(function (r) {
+      var warn = (r[3] !== 'EXACT') ? ' warn' : '';
+      var plain = (r[4] === 'SEEDED') ? ' plain' : '';
+      return '<tr><td><a href="../' + slugDir + '/' + esc(r[1]) + '.html">' + esc(r[0]) +
+             '</a></td><td class="meta">' + esc(r[2]) +
+             '</td><td><span class="pill' + warn + '">' + esc(r[3]) +
+             '</span></td><td><span class="pill' + plain + '">' + esc(r[4]) +
+             '</span></td><td class="meta">' + esc(r[5]) + '</td></tr>';
+    }).join('');
+  }
+  function sortRows(rows) {
+    var mode = fSort ? fSort.value : 'name-asc';
+    return rows.slice().sort(function (a, b) {
+      if (mode === 'name-desc') return String(b[0]).localeCompare(String(a[0]));
+      if (mode === 'structural') return String(a[2]).localeCompare(String(b[2])) || String(a[0]).localeCompare(String(b[0]));
+      if (mode === 'status') {
+        var sa = a[4] === 'REVIEWED' ? 0 : 1, sb = b[4] === 'REVIEWED' ? 0 : 1;
+        return (sa - sb) || String(a[0]).localeCompare(String(b[0]));
+      }
+      if (mode === 'grounding') {
+        var ga = a[3] === 'EXACT' ? 0 : 1, gb = b[3] === 'EXACT' ? 0 : 1;
+        return (ga - gb) || String(a[0]).localeCompare(String(b[0]));
+      }
+      return String(a[0]).localeCompare(String(b[0]));
+    });
+  }
+  function apply() {
+    pending = null;
+    var raw = box.value.trim().toLowerCase();
+    var gVal = fGround ? fGround.value : '';
+    var sVal = fStatus ? fStatus.value : '';
+    var srcVal = fSource ? fSource.value : '';
+    var sortVal = fSort ? fSort.value : 'name-asc';
+    if (window.history && window.history.replaceState) {
+      var url = new URL(window.location.href);
+      if (raw) url.searchParams.set('q', box.value.trim()); else url.searchParams.delete('q');
+      if (gVal) url.searchParams.set('grounding', gVal); else url.searchParams.delete('grounding');
+      if (sVal) url.searchParams.set('status', sVal); else url.searchParams.delete('status');
+      if (srcVal) url.searchParams.set('source', srcVal); else url.searchParams.delete('source');
+      if (sortVal && sortVal !== 'name-asc') url.searchParams.set('sort', sortVal); else url.searchParams.delete('sort');
+      window.history.replaceState(null, '', url);
+    }
+    if (!raw && !gVal && !sVal && !srcVal && sortVal === 'name-asc') { body.innerHTML = original; out.textContent = ''; return; }
+    var slugged = raw.replace(/[^a-z0-9]+/g, '-');
+    var hits = sortRows(index.filter(function (r) {
+      if (gVal && r[3] !== gVal) return false;
+      if (sVal && r[4] !== sVal) return false;
+      if (srcVal && r[5].indexOf(srcVal) === -1) return false;
+      if (raw) {
+        var k = (r[0] + ' ' + r[1] + ' ' + r[2] + ' ' + r[5] + ' ' + (r[6] || '')).toLowerCase();
+        if (k.indexOf(raw) === -1 && k.indexOf(slugged) === -1) return false;
+      }
+      return true;
+    }));
+    draw(hits.slice(0, 500));
+    out.textContent = hits.length + ' of ' + box.getAttribute('data-total') +
+      ' match' + (hits.length > 500 ? ' (first 500 shown)' : '');
+  }
+  // When the page already holds every record there is nothing to fetch, and
+  // fetching would make filtering depend on a network round trip that can fail.
+  var rendered = body.querySelectorAll('tr').length;
+  if (rendered >= parseInt(box.getAttribute('data-total'), 10)) {
+    index = [].slice.call(body.querySelectorAll('tr')).map(function (tr) {
+      var td = tr.querySelectorAll('td'), a = tr.querySelector('a');
+      return [td[0].textContent, a ? a.getAttribute('href').replace(/.*\/|\.html$/g, '') : '',
+              td[1].textContent, td[2].textContent, td[3].textContent, td[4].textContent, tr.getAttribute('data-identifiers') || ''];
+    });
+  }
+
+  function triggerFilter() {
+    if (index === null) {
+      // Fetched once, on the first keystroke — a reader who only browses never
+      // pays for it.
+      out.textContent = 'loading…';
+      fetch(box.getAttribute('data-index')).then(function (r) { return r.json(); })
+        .then(function (data) { index = data; apply(); })
+        .catch(function () { out.textContent = 'filter unavailable'; });
+      return;
+    }
+    if (pending === null) { pending = requestAnimationFrame(apply); }
+  }
+
+  box.addEventListener('input', triggerFilter);
+  if (form) {
+    form.addEventListener('submit', function (e) { e.preventDefault(); triggerFilter(); });
+    form.addEventListener('change', triggerFilter);
+    form.addEventListener('reset', function () { setTimeout(triggerFilter, 0); });
+  }
+  if (window.location && window.location.search) {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('q')) box.value = params.get('q');
+    if (params.get('grounding') && fGround) fGround.value = params.get('grounding');
+    if (params.get('status') && fStatus) fStatus.value = params.get('status');
+    if (params.get('source') && fSource) fSource.value = params.get('source');
+    if (params.get('sort') && fSort) fSort.value = params.get('sort');
+    if (params.get('q') || params.get('grounding') || params.get('status') || params.get('source') || params.get('sort')) {
+      triggerFilter();
+    }
+  }
+})();
+</script>
+</main>
+<footer class="site">
+  <p>
+    Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f412338c2b86</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+  </p>
+  <p>
+    <strong>Workflow status does not establish human review.</strong>
+    Identity, structure and cross-references come from ChEBI and CARD's own data;
+    the mechanism layer — <code>molecular_targets</code>, <code>mode_of_action</code>,
+    <code>causal_graphs</code> — is curated incrementally. Treat any record marked
+    <span class="pill plain">SEEDED</span> as a starting point, not a fully
+    reviewed claim. <a href="../index.html">Current workflow counts</a>.
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/CultureMech/">CultureMech</a> · <a href="https://culturebotai.github.io/MediaIngredientMech/">MediaIngredientMech</a> · <a href="https://culturebotai.github.io/CommunityMech/">CommunityMech</a> · <a href="https://culturebotai.github.io/TraitMech/">TraitMech</a> · <a href="https://culturebotai.github.io/proteintraitsmech/">ProteinTraitsMech</a> · <span class="self">AntibioticMech</span> · <a href="https://culturebotai.github.io/CellStructureMech/">CellStructureMech</a></p>
+  <p class="fam">
+    <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
+    <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a>
+  </p>
+  <p class="fam"><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+identifier: antibioticmech:curator-d86a1a3d8b
+label: opelconazole
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A long-acting inhaled triazole antifungal agent (PC945) that inhibits
+  fungal lanosterol 14-alpha-demethylase (CYP51A/CYP51B) and blocks ergosterol biosynthesis
+  in Aspergillus and Candida species.
+definition_source: DOI:10.1128/AAC.02280-16
+synonyms:
+- synonym_text: PC945
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: PC-945
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: Cc1cc(N2CCN(c3ccc(C(=O)Nc4ccc(F)cc4)cc3)CC2)ccc1OC[C@@H]1CO[C@@](Cn2cncn2)(c2ccc(F)cc2F)C1
+  standard_inchi: InChI=1S/C38H37F3N6O3/c1-26-18-33(46-16-14-45(15-17-46)32-9-2-28(3-10-32)37(48)44-31-7-4-29(39)5-8-31)11-13-36(26)49-21-27-20-38(50-22-27,23-47-25-42-24-43-47)34-12-6-30(40)19-35(34)41/h2-13,18-19,24-25,27H,14-17,20-23H2,1H3,(H,44,48)/t27-,38+/m1/s1
+  standard_inchi_key: OSAMZQJKSCAOHA-CWRQMEKBSA-N
+  molecular_formula: C38H37F3N6O3
+  structure_source: https://pubchem.ncbi.nlm.nih.gov/compound/121383526
+  retrieved_on: '2026-10-25'
+  charge: 0
+  average_mass: 682.747
+  monoisotopic_mass: 682.2879
+xrefs:
+- pubchem.compound:121383526
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1128/AAC.02280-16#opelconazole
+  source_label: opelconazole
+  minted_identifier: antibioticmech:curator-d86a1a3d8b
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1128/AAC.02280-16
+    snippet: Colley et al. characterized PC945 (opelconazole) as a novel inhaled triazole
+      inhibitor of Aspergillus fumigatus sterol 14-alpha-demethylase (CYP51A IC50
+      = 0.23 uM; CYP51B IC50 = 0.22 uM) and reported an MIC50 of 0.032 ug/mL and MIC90
+      of 0.064 ug/mL across 96 clinical A. fumigatus isolates.
+    notes: Reported by Colley et al. 2017 (Antimicrob Agents Chemother 61:e02280-16;
+      PMID:28264849) and Rudramurthy et al. 2019 (J Antimicrob Chemother 74:2943-2951;
+      DOI:10.1093/jac/dkz280) as a lung-retention-optimized triazole antifungal (PC945)
+      targeting fungal lanosterol 14-alpha-demethylase (CYP51A/CYP51B) across Aspergillus
+      and Candida species. PubChem CID 121383526 supplies the standard InChI, InChIKey,
+      formula, and isomeric SMILES for opelconazole.
+  source_version: '2026-10-25'
+curation_history:
+- timestamp: '2026-10-25T16:18:33Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
