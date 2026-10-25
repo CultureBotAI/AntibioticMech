@@ -39,7 +39,7 @@ source_concepts:
       16S rRNA bases in the E-site of the 30S subunit and the mRNA backbone to block
       translocation, and demonstrated that 16S rRNA mutations C795U, A794G, or G693A
       increase the Escherichia coli Delta-tolC MIC from 0.5-1 ug/mL to 4-8 ug/mL.
-    notes: Reported by Polikanov et al. 2014 (Mol Cell 56:531-540; PMID:25306920)
+    notes: Reported by Polikanov et al. 2014 (Mol Cell 56:531-540; PMID:25306919)
       and Lama et al. 2012 (Antimicrob Agents Chemother 56:2802-2807; DOI:10.1128/AAC.00147-12)
       as a Bacillus dihydroisocoumarin natural-product antibiotic (MIC 0.25-0.78 ug/mL
       against methicillin-resistant Staphylococcus aureus) that stabilizes mRNA in
@@ -57,9 +57,42 @@ curation_history:
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial 30S ribosomal subunit
+    E-site mRNA channel (16S rRNA helix 24) backed by DOI:10.1016/j.molcel.2014.09.020.
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Dihydroisocoumarin natural product that binds the mRNA channel
   in the head/platform cleft of the bacterial 30S ribosomal subunit and stabilizes
-  mRNA on the ribosome to inhibit translocation (PMID:25132177).
+  mRNA on the ribosome to inhibit translocation (DOI:10.1016/j.molcel.2014.09.020;
+  PMID:25306919).
+molecular_targets:
+- target_label: bacterial 30S ribosomal subunit E-site mRNA channel (16S rRNA helix
+    24)
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:300852
+  taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+  experimental_context: 2.4-angstrom X-ray crystal structure of amicoumacin A bound
+    to the Thermus thermophilus HB8 70S ribosome with mRNA and tRNAs (PDB:4W2F) and
+    16S rRNA helix 24 / helix 23 resistance mutations (C795U, A794G, G693A) in Escherichia
+    coli (DOI:10.1016/j.molcel.2014.09.020; PMID:25306919).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-11
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1016/j.molcel.2014.09.020
+    snippet: Polikanov et al. solved the 2.4 A crystal structure of amicoumacin A
+      bound to the Thermus thermophilus 70S ribosome, showing that amicoumacin A bridges
+      16S rRNA bases in the E-site of the 30S subunit and the mRNA backbone to block
+      translocation, and demonstrated that 16S rRNA mutations C795U, A794G, or G693A
+      increase the Escherichia coli Delta-tolC MIC from 0.5-1 ug/mL to 4-8 ug/mL.
+    notes: Polikanov et al. 2014 (Mol Cell 56:531-540; PMID:25306919; PDB:4W2F) established
+      that amicoumacin A simultaneously contacts conserved 16S rRNA nucleotides (U788,
+      A794, C795 in helix 24 and G693 in helix 23) and the E-site mRNA phosphate-ribose
+      backbone in the 30S ribosomal subunit without a primary target protein contact.

@@ -57,9 +57,71 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-25T21:55:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added PRIMARY_LITERATURE molecular_target for bacterial cell division protein
+    FtsZ backed by DOI:10.1126/science.1159961.
+  llm_assisted: true
+- timestamp: '2026-10-25T22:03:25Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:P17865
+    (Bacillus subtilis 168 ftsZ) protein examples to the PRIMARY_LITERATURE molecular
+    target (DOI:10.1126/science.1159961).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 2,6-Difluorobenzamide cell-division inhibitor that binds the
   interdomain cleft of bacterial FtsZ, stabilizes FtsZ polymer assembly, and blocks
-  cytokinetic Z-ring constriction (PMID:18802006).
+  cytokinetic Z-ring constriction (DOI:10.1126/science.1159961; PMID:18801997).
+molecular_targets:
+- target_label: bacterial cell division protein FtsZ
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Concentration-dependent inhibition of Staphylococcus aureus
+    FtsZ GTPase activity (IC50 = 55 ng/mL), FtsZ resistance mutation mapping (including
+    G193D, G196C/S/A, and N263K), and Z-ring mislocalization in Bacillus subtilis
+    168 (DOI:10.1126/science.1159961; PMID:18801997).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2008-09
+  source_retrieved_on: '2026-10-25'
+  evidence:
+  - reference: DOI:10.1126/science.1159961
+    snippet: Haydon et al. reported that the difluorobenzamide derivative PC190723
+      inhibited cell division FtsZ GTPase activity in a concentration-dependent manner
+      (IC50 = 55 ng/mL), exhibited potent bactericidal activity against all tested
+      Staphylococcus strains including methicillin- and multidrug-resistant Staphylococcus
+      aureus at MICs of 0.5 to 1.0 ug/mL, and cured mice in a lethal S. aureus septicemia
+      model.
+    notes: Haydon et al. 2008 (Science 321:1673-1675; PMID:18801997) established that
+      PC190723 binds the interdomain cleft between the C-terminal domain and helix
+      H7 of bacterial FtsZ in Staphylococcus aureus (UniProtKB:P0A031; cocrystallized
+      in PDB:4DXD, PMID:22440737) and Bacillus subtilis 168 (UniProtKB:P17865).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A031
+    protein_label: Cell division protein FtsZ
+    gene_symbol: ftsZ
+    taxon_id: NCBITaxon:1280
+    taxon_label: Staphylococcus aureus
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Staphylococcus aureus cell division GTPase FtsZ whose GTPase activity is
+      inhibited by PC190723 (IC50 = 55 ng/mL) and whose interdomain cleft binds PC190723
+      in the cocrystal structure (PDB:4DXD) and harbors resistance mutations (G193D,
+      G196C/S/A, N263K; DOI:10.1126/science.1159961; PMID:18801997; PMID:22440737).
+  - uniprot_id: UniProtKB:P17865
+    protein_label: Cell division protein FtsZ
+    gene_symbol: ftsZ
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis (strain 168)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Bacillus subtilis strain 168 cell division protein FtsZ (BSU15290) shown
+      by GFP-FtsZ fluorescence microscopy in DOI:10.1126/science.1159961 (PMID:18801997)
+      to mislocalize into discrete foci and fail to constrict the cytokinetic Z-ring
+      upon PC190723 exposure.
