@@ -168,8 +168,14 @@ source:
   - path: .claude/skills/review-yaml-record/SKILL.md
     sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
     role: context
+  - path: curation/causal_graphs.yaml
+    sha256: 957eff8e39444c430ff20fd0ccc93333136ddb7c2bf331454050f8f7955a51b6
+    role: context
   - path: curation/curator_antibiotics.tsv
     sha256: f80ff3dfefa91bef572dcebfaea8f6a962b640118b462ec1849049f436706706
+    role: context
+  - path: curation/cycle2_stage5_review_remediation_transition.json
+    sha256: 6b929ba5ffe8498be90fc197add3bab8e9a950f58fd0cbec313475bb71bf735c
     role: context
   - path: curation/record_review_queue.tsv
     sha256: 0a6aeb874e8de10b8fe51f96a7ff8a0afbce9be014a4dd64194d7cf857a82302
