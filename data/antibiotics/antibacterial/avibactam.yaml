@@ -56,6 +56,20 @@ molecular_targets:
   evidence:
   - reference: PMID:25406838
     notes: Primary avibactam-bound OXA-24/OXA-48 structural and kinetic study (DOI:10.1021/cb500703p).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q6XEC0
+    protein_label: Beta-lactamase OXA-48
+    gene_symbol: OXA-48
+    taxon_id: NCBITaxon:573
+    taxon_label: Klebsiella pneumoniae
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella
+      pneumoniae covalently carbamylated at active-site Ser70 by avibactam in the
+      PMID:25406838 X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation
+      kinetic assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA)
+      cocrystallized in the same study is an unreviewed TrEMBL entry and is not added
+      as a reviewed example.
 xrefs:
 - cas:1192500-31-4
 - reaxys:22542284
@@ -99,3 +113,10 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-10-25T05:54:07Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:Q6XEC0 (Klebsiella pneumoniae OXA-48, blaOXA-48)
+    protein example to the class D OXA beta-lactamases PRIMARY_LITERATURE molecular
+    target (PMID:25406838).
+  llm_assisted: true

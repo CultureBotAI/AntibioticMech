@@ -1278,6 +1278,51 @@ records:
       role: Candida albicans SC5314 GPI-anchor inositol acyltransferase Gwt1 (C7_00150W_A) directly inhibited
         by manogepix (E1210, APX001A), blocking inositol acylation of glucosaminyl-phosphatidylinositol
         and cell-wall mannoprotein localization (PMID:21670182; DOI:10.1128/aac.01723-25).
+- identifier: CHEBI:85984
+  label: avibactam
+  path: data/antibiotics/antibacterial/avibactam.yaml
+  changes: Added reviewed UniProtKB:Q6XEC0 (Klebsiella pneumoniae OXA-48, blaOXA-48) protein example to
+    the class D OXA beta-lactamases PRIMARY_LITERATURE molecular target (PMID:25406838).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: class D OXA beta-lactamases
+    target_reference: PMID:25406838
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q6XEC0
+      protein_label: Beta-lactamase OXA-48
+      gene_symbol: OXA-48
+      taxon_id: NCBITaxon:573
+      taxon_label: Klebsiella pneumoniae
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella pneumoniae
+        covalently carbamylated at active-site Ser70 by avibactam in the PMID:25406838 X-ray crystal structures
+        (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation kinetic assays; Acinetobacter baumannii
+        OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA) cocrystallized in the same study is an unreviewed TrEMBL
+        entry and is not added as a reviewed example.
+- identifier: CHEBI:144087
+  label: bromodeoxytopsentin
+  path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
+  changes: Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776) protein example
+    to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: pyruvate kinase
+    target_reference: PMID:22030393
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q6G8M9
+      protein_label: Pyruvate kinase
+      gene_symbol: pyk
+      taxon_id: NCBITaxon:282458
+      taxon_label: Staphylococcus aureus (strain MRSA252)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and inhibited
+        by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic
+        assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole analog
+        IS130 to the dimer interface of this MRSA252 enzyme.
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -1429,27 +1474,6 @@ held_targets:
   target_reference: PMID:4917791
   reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial ribosomal peptidyl-transferase
     reaction); protein_examples are restricted to protein-containing target types.'
-- identifier: CHEBI:85984
-  label: avibactam
-  path: data/antibiotics/antibacterial/avibactam.yaml
-  scope: molecular_targets
-  target_label: class D OXA beta-lactamases
-  target_type: PROTEIN
-  target_reference: PMID:25406838
-  reason: Held because PMID:25406838 jointly characterizes covalent inhibition across two distinct bacterial
-    species—Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, mapped to unreviewed TrEMBL UniProtKB:Q8RLA6)
-    and Klebsiella pneumoniae OXA-48 (PDB:4S2K/4S2N/4WMC, UniProtKB:Q6XEC0)—and OXA-24/OXA-40 lacks a
-    reviewed Swiss-Prot entry.
-- identifier: CHEBI:144087
-  label: bromodeoxytopsentin
-  path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
-  scope: molecular_targets
-  target_label: pyruvate kinase
-  target_type: PROTEIN
-  target_reference: PMID:22030393
-  reason: Held because PMID:22030393 evaluates marine bisindole inhibition against MRSA pyruvate kinase
-    alongside human pyruvate kinase isoforms without establishing a strain-specific cocrystal accession
-    for the exact compound.
 - identifier: CHEBI:29506
   label: cethromycin
   path: data/antibiotics/antibacterial/cethromycin.yaml
@@ -1759,7 +1783,8 @@ held_targets:
   target_reference: PMID:22151792
   reason: Held because PMID:22151792 characterizes photoaffinity crosslinking and resistance mutations
     across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical clade B/C isolates) without a single
-    isolate-resolved cocrystal accession.
+    isolate-resolved cocrystal accession, and tests/test_bevirimat_taxonomy.py asserts field-by-field identity
+    on live molecular_targets against research/2026-10-14-bevirimat-curation.json.
 - identifier: CHEBI:172943
   label: bictegravir
   path: data/antibiotics/antiviral/bictegravir.yaml

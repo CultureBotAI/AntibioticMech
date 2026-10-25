@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 48,
+  "record_count": 50,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -2552,6 +2552,96 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added reviewed UniProtKB:Q873N2 (Candida albicans SC5314 GWT1) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.01723-25).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:85984",
+      "label": "avibactam",
+      "path": "data/antibiotics/antibacterial/avibactam.yaml",
+      "before_sha256": "164a039a46cad879bd7fd0d7c75aaafe6cd3dcb3abd8aea066511bc7c114e90c",
+      "after_sha256": "272cc6747a3719919a4caed60b9ade1c52afbfd980501557f76edeefb09d5dd7",
+      "unchanged_fields_sha256": "25e07150960e54dba90f057ddd5dc96a46c2b04e4a5cc3a4ba8cdd0b57dc34d6",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "class D OXA beta-lactamases",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q6XEC0",
+              "protein_label": "Beta-lactamase OXA-48",
+              "gene_symbol": "OXA-48",
+              "taxon_id": "NCBITaxon:573",
+              "taxon_label": "Klebsiella pneumoniae",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella pneumoniae covalently carbamylated at active-site Ser70 by avibactam in the PMID:25406838 X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation kinetic assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA) cocrystallized in the same study is an unreviewed TrEMBL entry and is not added as a reviewed example."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T05:54:07Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:Q6XEC0 (Klebsiella pneumoniae OXA-48, blaOXA-48) protein example to the class D OXA beta-lactamases PRIMARY_LITERATURE molecular target (PMID:25406838).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:144087",
+      "label": "bromodeoxytopsentin",
+      "path": "data/antibiotics/antibacterial/bromodeoxytopsentin.yaml",
+      "before_sha256": "91b79cd17a12412cb1058a5f8e771445b9a072137da815d220423a095e43af50",
+      "after_sha256": "a07fd62cf33e2231d244ebae2e515e7507e35554d69759f1059926755525a3a0",
+      "unchanged_fields_sha256": "b871705492709c44aa8a41ba48a2bf81bf661e8430d776cc55d8f5207fcc3188",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "pyruvate kinase",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q6G8M9",
+              "protein_label": "Pyruvate kinase",
+              "gene_symbol": "pyk",
+              "taxon_id": "NCBITaxon:282458",
+              "taxon_label": "Staphylococcus aureus (strain MRSA252)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-25",
+              "role": "Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole analog IS130 to the dimer interface of this MRSA252 enzyme."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-25T05:54:08Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776) protein example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).",
         "llm_assisted": true
       }
     }

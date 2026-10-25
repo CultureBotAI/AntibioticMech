@@ -54,6 +54,19 @@ molecular_targets:
   evidence:
   - reference: PMID:22030393
     notes: Primary MRSA pyruvate-kinase inhibition and antibacterial study (DOI:10.1074/jbc.M111.289033).
+  protein_examples:
+  - uniprot_id: UniProtKB:Q6G8M9
+    protein_label: Pyruvate kinase
+    gene_symbol: pyk
+    taxon_id: NCBITaxon:282458
+    taxon_label: Staphylococcus aureus (strain MRSA252)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-25'
+    role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned,
+      purified, and inhibited by bromodeoxytopsentin with nanomolar potency (IC50
+      = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic assays; the cocrystal structure
+      in the same study (PDB:3T07) bound the synthetic bis-indole analog IS130 to
+      the dimer interface of this MRSA252 enzyme.
 xrefs:
 - cas:180633-55-0
 - knapsack:C00026966
@@ -87,4 +100,10 @@ curation_history:
   changes: Verified exact ChEBI identity, structure, role, and antibacterial class;
     added energy-metabolism inhibition and a measured MRSA pyruvate-kinase association
     without transferring the related-compound cocrystal claim.
+  llm_assisted: true
+- timestamp: '2026-10-25T05:54:08Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776)
+    protein example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).
   llm_assisted: true

@@ -276,10 +276,10 @@ def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_exam
 def _uniprot_protein_examples_transition(root):
     payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "ebf6d3a2fbd9c9a201af6530cdf8917b561e123afb49e1c63e812dd157d3b8ad"
+        "60cf9cca9408d5c66456bbc358fbdf0dda5962cd4cd8096690795a85524cbe35"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 48
+    assert len(transition["record_deltas"]) == 50
     return transition
 
 
@@ -480,7 +480,7 @@ def pre_stage5_remediation_root(tmp_path_factory):
                 if (h.get("scope"), h.get("identifier"), h.get("target_reference"))
                 not in stage5_held_keys
             ]
-            assert len(plan_data["held_targets"]) == 74
+            assert len(plan_data["held_targets"]) == 72
             (root / "curation" / path.name).write_text(
                 yaml.dump(plan_data, sort_keys=False, allow_unicode=True, width=100),
                 encoding="utf-8",
@@ -544,7 +544,7 @@ def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
                 for h in (plan_data.get("held_targets") or [])
                 if not (h.get("scope") == "causal_graphs" and h.get("identifier") in cohort_b_ids)
             ]
-            assert len(plan_data["held_targets"]) == 57
+            assert len(plan_data["held_targets"]) == 55
             (root / "curation" / path.name).write_text(
                 yaml.dump(plan_data, sort_keys=False, allow_unicode=True, width=100),
                 encoding="utf-8",
