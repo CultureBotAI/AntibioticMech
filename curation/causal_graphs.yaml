@@ -3243,12 +3243,11 @@ held_records:
   target_summary: class D OXA beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)
   references:
   - PMID:25406838
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (class
-    D OXA beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)) is held in curation/uniprot_protein_examples.yaml
-    without a single verified experimental-strain UniProtKB accession (Held because PMID:25406838 jointly
-    characterizes covalent inhibition across two distinct bacterial species—Acinetobacter baumannii OXA-24/OXA-40
-    (PDB:4WM9, mapped to unreviewed TrEMBL UniProtKB:Q8RLA6) and Klebsiella pneumoniae OXA-48 (PDB:4S2K/4S2N/4WMC,
-    UniProtKB:Q6XEC0)—and OXA-24/OXA-40 lacks a reviewed Swiss-Prot entry.)
+  reason: Held from causal_graphs curation at Stage 2 because the proximal protein target (class D OXA
+    beta-lactamases (PROTEIN, DIRECT_BINDING_TARGET)) jointly characterizes covalent inhibition across
+    Klebsiella pneumoniae OXA-48 (PDB:4S2K/4S2N/4WMC, curated on molecular_targets as reviewed UniProtKB:Q6XEC0
+    in Cycle 2 Stage 3) and Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, unreviewed TrEMBL Q8RLA6_ACIBA
+    lacking a reviewed Swiss-Prot entry).
 - identifier: CHEBI:144087
   label: bromodeoxytopsentin
   path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
@@ -3256,11 +3255,11 @@ held_records:
   target_summary: pyruvate kinase (PROTEIN, MEASURED_TARGET_ASSOCIATION)
   references:
   - PMID:22030393
-  reason: Held from causal_graphs curation because the proximal protein/complex/ribosomal target (pyruvate
-    kinase (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml without
-    a single verified experimental-strain UniProtKB accession (Held because PMID:22030393 evaluates marine
-    bisindole inhibition against MRSA pyruvate kinase alongside human pyruvate kinase isoforms without
-    establishing a strain-specific cocrystal accession for the exact compound.)
+  reason: Held from causal_graphs curation at Stage 2 because the proximal protein target (pyruvate kinase
+    (PROTEIN, MEASURED_TARGET_ASSOCIATION), curated on molecular_targets with Staphylococcus aureus strain
+    MRSA252 pyruvate kinase UniProtKB:Q6G8M9 in Cycle 2 Stage 3) was evaluated in PMID:22030393 for enzymatic
+    inhibition (IC50 = 60 nM, Ki = 34 nM) alongside human pyruvate kinase isoforms without an explicit
+    downstream cellular mechanism chain in the cited record.
 - identifier: CHEBI:172922
   label: ethylzingerone
   path: data/antibiotics/antibacterial/ethylzingerone.yaml
@@ -3445,7 +3444,8 @@ held_records:
     in curation/uniprot_protein_examples.yaml without a single verified experimental-strain UniProtKB
     accession (Held because PMID:22151792 characterizes photoaffinity crosslinking and resistance mutations
     across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical clade B/C isolates) without a single
-    isolate-resolved cocrystal accession.)
+    isolate-resolved cocrystal accession, and tests/test_bevirimat_taxonomy.py asserts field-by-field identity
+    on live molecular_targets against research/2026-10-14-bevirimat-curation.json.)
 - identifier: CHEBI:172943
   label: bictegravir
   path: data/antibiotics/antiviral/bictegravir.yaml
