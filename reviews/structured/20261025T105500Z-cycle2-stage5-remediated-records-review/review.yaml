@@ -552,9 +552,9 @@ evidence:
   kind: primary_source
   reference: DOI:10.1177/15353141261501298, DOI:10.1128/spectrum.03588-25, PMID:36546783,
     PMID:22240456, PMID:23650171, PMID:15365862, PMID:35969069, PMID:25056938, DOI:10.1038/s41564-025-02142-0,
-    PMID:36035943, PMID:38355799, PMID:38811738, PMID:24473200, PMID:35502920, PMID:32041715,
-    PMID:23913124, PMID:35790076, PMID:40105302, PMID:37039660, PMID:14529625, PMID:11397088,
-    PMID:7664109
+    PMID:41044363, PMID:36035943, PMID:38365949, PMID:28379699, PMID:38811738, PMID:24500695,
+    PMID:35699441, PMID:31964791, PMID:31358589, PMID:23913123, PMID:35816437, PMID:42206792,
+    PMID:21670182, PMID:37338411, PMID:27791100, PMID:14529625, PMID:11397088, PMID:7664109
   locator: Primary experimental mechanism and crystal-structure studies cited across
     the 20 remediated records
   accessed_at: '2026-10-25T10:50:00Z'
@@ -625,8 +625,9 @@ assessments:
     HOST_PROTEIN_COMPLEX PMID:14529625; CHEBI:28971 ampicillin PDB:1H8S relevance:
     ANTIBODY_COMPLEX PMID:11397088; CHEBI:44499 methyl nonanoate PDB:1CLY relevance:
     NOT_RELEVANT PMID:7664109) now carry evidence_status: PRIMARY_EVIDENCE, verified
-    target labels and NCBITaxon IDs, and CURATED_STRUCTURAL_OBSERVATION events that
-    survive seed_from_sources.py.'
+    target labels (with NCBITaxon IDs on PDB:1Q3W and PDB:1H8S, and ligand_matches_record:
+    false on the chimeric BR96 Fab'' nLey complex PDB:1CLY), and CURATED_STRUCTURAL_OBSERVATION
+    events that survive seed_from_sources.py.'
   target_ids:
   - CHEBI:138488
   - CHEBI:28971

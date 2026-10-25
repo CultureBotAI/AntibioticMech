@@ -14,7 +14,7 @@ previous_evidence:
   sha256: 68641e3f628d68623ca59a52a6835aa2872db21a4f1728af9b2b6f8c49785796
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
-  sha256: 7d74552ea2b8b1c78d5fe657e28c1a2a2f3f60402853091cf25f8529bd555944
+  sha256: dfe0b90dadd872a86eec0ae47543f6b16aa1248ccf1cff8139ea4a5dbd4b30c6
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
   sha256: fd350f23c99fbacb01d1d682d73d7c1ca018b39053398b8c0bd600ae4dd147b4
@@ -32,14 +32,14 @@ findings:
   summary: "Resolved in #1273 by populating top-level biosynthesis_origin, mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, and CURATOR mode_of_action_notes (preserving curation_status: PROPOSED under structure_completeness_audit for grounding_status: MINTED) on 11 records — enterololin (antibioticmech:curator-cb71d1e3b5), fabimycin (antibioticmech:curator-47d32d7a07), ganfeborole (antibioticmech:curator-172bfdd938), lolamicin (antibioticmech:curator-1db8575797), macozinone (antibioticmech:curator-607ce000f8), quabodepistat (antibioticmech:curator-88af230f5d), sorfequiline (antibioticmech:curator-0106724e5f), telacebec (antibioticmech:curator-17023fe654), ibrexafungerp (antibioticmech:curator-fd1c955758), manogepix (antibioticmech:curator-4a1156c964), and olorofim (antibioticmech:curator-18f8e84826)."
   group_id: group-02-proposed-minted-records-missing-moa
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1273
-  disposition: "Populated top-level biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes across all 11 PROPOSED+MINTED records via record_curation_event (CURATED_BIOSYNTHESIS_ORIGIN, CURATED_MODE_OF_ACTION) and write_validated_antibiotic; verified via fresh structured review 20261025T105500Z-cycle2-stage5-remediated-records-review."
+  disposition: "Populated top-level biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes across all 11 PROPOSED+MINTED records via record_curation_event (CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN) and write_validated_antibiotic; verified via fresh structured review 20261025T105500Z-cycle2-stage5-remediated-records-review."
   carried_from: proposed-minted-records-with-primary-targets-missing-mode-of-action
 - finding_id: unreviewed-seeded-pdb-structural-observations
   status: resolved
-  summary: "Resolved in #1256 (unblocked by PR #1261 in Cycle 1 Stage 6) by curating all 3 ChEBI-seeded PDB structural_observations — alsterpaullone (CHEBI:138488, PDB:1Q3W -> HOST_HOMOLOG_COMPLEX, PMID:10984516), ampicillin (CHEBI:28971, PDB:1H8S -> NON_TARGET_ENZYME_COMPLEX, PMID:12031484), and methyl nonanoate (CHEBI:44499, PDB:1CLY -> CRYSTALLIZATION_ARTIFACT, PMID:10329176) — to evidence_status: PRIMARY_EVIDENCE via record_curation_event (CURATED_STRUCTURAL_OBSERVATION) and write_validated_antibiotic, reducing the structure-unreviewed queue to 0 items."
+  summary: "Resolved in #1256 (unblocked by PR #1261 in Cycle 1 Stage 6) by curating all 3 ChEBI-seeded PDB structural_observations — alsterpaullone (CHEBI:138488, PDB:1Q3W -> HOST_PROTEIN_COMPLEX, PMID:14529625), ampicillin (CHEBI:28971, PDB:1H8S -> ANTIBODY_COMPLEX, PMID:11397088), and methyl nonanoate (CHEBI:44499, PDB:1CLY -> NOT_RELEVANT, PMID:7664109) — to evidence_status: PRIMARY_EVIDENCE via record_curation_event (CURATED_STRUCTURAL_OBSERVATION) and write_validated_antibiotic, reducing the structure-unreviewed queue to 0 items."
   group_id: group-03-unreviewed-seeded-pdb-structural-observations
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1256
-  disposition: "Curated all 3 PDB structural_observations with primary-crystal-structure evidence (PMID:10984516, PMID:12031484, PMID:10329176) and verified preservation across scripts/verify_corpus.py and structure-unreviewed queue = 0; verified via fresh structured review 20261025T105500Z-cycle2-stage5-remediated-records-review."
+  disposition: "Curated all 3 PDB structural_observations with primary-crystal-structure evidence (PMID:14529625, PMID:11397088, PMID:7664109) and verified preservation across scripts/verify_corpus.py and structure-unreviewed queue = 0; verified via fresh structured review 20261025T105500Z-cycle2-stage5-remediated-records-review."
   carried_from: unreviewed-seeded-pdb-structural-observations
 - finding_id: mcr43-context
   status: deferred
@@ -117,7 +117,7 @@ groups:
   resolution_evidence:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/validation.md
-  disposition: "Populated biosynthesis_origin, mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, and CURATOR mode_of_action_notes via record_curation_event and write_validated_antibiotic while preserving PROPOSED status under structure_completeness_audit; verified by fresh review 20261025T105500Z-cycle2-stage5-remediated-records-review."
+  disposition: "Populated biosynthesis_origin, mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, and CURATOR mode_of_action_notes via record_curation_event (CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN) and write_validated_antibiotic while preserving PROPOSED status under structure_completeness_audit; verified by fresh review 20261025T105500Z-cycle2-stage5-remediated-records-review."
 - group_id: group-03-unreviewed-seeded-pdb-structural-observations
   finding_ids:
   - unreviewed-seeded-pdb-structural-observations

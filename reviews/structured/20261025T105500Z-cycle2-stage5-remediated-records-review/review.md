@@ -71,7 +71,7 @@ All 11 Group 2 records (enterololin, fabimycin, ganfeborole, lolamicin, macozino
 
 evidence: supported. Targets: CHEBI:138488, CHEBI:28971, CHEBI:44499.
 
-All 3 Group 3 SEEDED records (CHEBI:138488 alsterpaullone PDB:1Q3W relevance: HOST_PROTEIN_COMPLEX PMID:14529625; CHEBI:28971 ampicillin PDB:1H8S relevance: ANTIBODY_COMPLEX PMID:11397088; CHEBI:44499 methyl nonanoate PDB:1CLY relevance: NOT_RELEVANT PMID:7664109) now carry evidence_status: PRIMARY_EVIDENCE, verified target labels and NCBITaxon IDs, and CURATED_STRUCTURAL_OBSERVATION events that survive seed_from_sources.py.
+All 3 Group 3 SEEDED records (CHEBI:138488 alsterpaullone PDB:1Q3W relevance: HOST_PROTEIN_COMPLEX PMID:14529625; CHEBI:28971 ampicillin PDB:1H8S relevance: ANTIBODY_COMPLEX PMID:11397088; CHEBI:44499 methyl nonanoate PDB:1CLY relevance: NOT_RELEVANT PMID:7664109) now carry evidence_status: PRIMARY_EVIDENCE, verified target labels (with NCBITaxon IDs on PDB:1Q3W and PDB:1H8S, and ligand_matches_record: false on the chimeric BR96 Fab' nLey complex PDB:1CLY), and CURATED_STRUCTURAL_OBSERVATION events that survive seed_from_sources.py.
 
 ## Findings
 
@@ -111,7 +111,7 @@ Disposition: Resolved in Cycle 2 Stage 5 (Issue #1256): curated all 3 structural
 | remediated-records-content | curation/record_review_queue.tsv; 20 remediated YAML records and refreshed review-readiness worklist (2,896 items) | supports | All 20 records were updated through record_curation_event and write_validated_antibiotic: 6 PROPOSED/EXACT records promoted to REVIEWED (raising corpus REVIEWED count from 90 to 96 and reducing review-readiness queue from 2,902 to 2,896); 11 PROPOSED/MINTED records populated with biosynthesis_origin, mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, and CURATOR mode_of_action_notes; and 3 SEEDED records curated with primary PDB structural_observations (clearing the structure-unreviewed queue to 0). |
 | validate-strict-pass | scripts/validate_strict.py; 2992 files scanned, 0 files with ERROR, 0 total ERROR rows | supports | Closed-mode LinkML validation and OAK ontology label verification pass across all 2,992 records. |
 | verify-corpus-pass | scripts/verify_corpus.py; records expected: 2992, on disk: 2992, missing: 0, unexpected: 0, drifted fields: 0 | supports | Every curator-owned edit on the 20 remediated records (including the 3 curated structural_observations on SEEDED records) survives seed_from_sources.py reproduction without drift. |
-| primary-literature-sources | DOI:10.1177/15353141261501298, DOI:10.1128/spectrum.03588-25, PMID:36546783, PMID:22240456, PMID:23650171, PMID:15365862, PMID:35969069, PMID:25056938, DOI:10.1038/s41564-025-02142-0, PMID:36035943, PMID:38355799, PMID:38811738, PMID:24473200, PMID:35502920, PMID:32041715, PMID:23913124, PMID:35790076, PMID:40105302, PMID:37039660, PMID:14529625, PMID:11397088, PMID:7664109; Primary experimental mechanism and crystal-structure studies cited across the 20 remediated records | supports | Primary studies support REVIEWED promotion on the 6 Group 1 EXACT ChEBI records, top-level mode_of_action and SYNTHETIC/SEMISYNTHETIC biosynthesis_origin on the 11 Group 2 PROPOSED/MINTED records, and relevance classification on PDB:1Q3W (alsterpaullone-human GSK-3beta HOST_PROTEIN_COMPLEX, PMID:14529625), PDB:1H8S (ampicillin-murine anti-ampicillin scFv aL2 ANTIBODY_COMPLEX, PMID:11397088), and PDB:1CLY (methyl nonanoate NOT_RELEVANT covalently attached nLey aglycone linker in BR96 Fab' complex, PMID:7664109). |
+| primary-literature-sources | DOI:10.1177/15353141261501298, DOI:10.1128/spectrum.03588-25, PMID:36546783, PMID:22240456, PMID:23650171, PMID:15365862, PMID:35969069, PMID:25056938, DOI:10.1038/s41564-025-02142-0, PMID:41044363, PMID:36035943, PMID:38365949, PMID:28379699, PMID:38811738, PMID:24500695, PMID:35699441, PMID:31964791, PMID:31358589, PMID:23913123, PMID:35816437, PMID:42206792, PMID:21670182, PMID:37338411, PMID:27791100, PMID:14529625, PMID:11397088, PMID:7664109; Primary experimental mechanism and crystal-structure studies cited across the 20 remediated records | supports | Primary studies support REVIEWED promotion on the 6 Group 1 EXACT ChEBI records, top-level mode_of_action and SYNTHETIC/SEMISYNTHETIC biosynthesis_origin on the 11 Group 2 PROPOSED/MINTED records, and relevance classification on PDB:1Q3W (alsterpaullone-human GSK-3beta HOST_PROTEIN_COMPLEX, PMID:14529625), PDB:1H8S (ampicillin-murine anti-ampicillin scFv aL2 ANTIBODY_COMPLEX, PMID:11397088), and PDB:1CLY (methyl nonanoate NOT_RELEVANT covalently attached nLey aglycone linker in BR96 Fab' complex, PMID:7664109). |
 
 ## Limits And Additional Notes
 
@@ -678,9 +678,9 @@ evidence:
   kind: primary_source
   reference: DOI:10.1177/15353141261501298, DOI:10.1128/spectrum.03588-25, PMID:36546783,
     PMID:22240456, PMID:23650171, PMID:15365862, PMID:35969069, PMID:25056938, DOI:10.1038/s41564-025-02142-0,
-    PMID:36035943, PMID:38355799, PMID:38811738, PMID:24473200, PMID:35502920, PMID:32041715,
-    PMID:23913124, PMID:35790076, PMID:40105302, PMID:37039660, PMID:14529625, PMID:11397088,
-    PMID:7664109
+    PMID:41044363, PMID:36035943, PMID:38365949, PMID:28379699, PMID:38811738, PMID:24500695,
+    PMID:35699441, PMID:31964791, PMID:31358589, PMID:23913123, PMID:35816437, PMID:42206792,
+    PMID:21670182, PMID:37338411, PMID:27791100, PMID:14529625, PMID:11397088, PMID:7664109
   locator: Primary experimental mechanism and crystal-structure studies cited across
     the 20 remediated records
   accessed_at: '2026-10-25T10:50:00Z'
@@ -751,8 +751,9 @@ assessments:
     HOST_PROTEIN_COMPLEX PMID:14529625; CHEBI:28971 ampicillin PDB:1H8S relevance:
     ANTIBODY_COMPLEX PMID:11397088; CHEBI:44499 methyl nonanoate PDB:1CLY relevance:
     NOT_RELEVANT PMID:7664109) now carry evidence_status: PRIMARY_EVIDENCE, verified
-    target labels and NCBITaxon IDs, and CURATED_STRUCTURAL_OBSERVATION events that
-    survive seed_from_sources.py.'
+    target labels (with NCBITaxon IDs on PDB:1Q3W and PDB:1H8S, and ligand_matches_record:
+    false on the chimeric BR96 Fab'' nLey complex PDB:1CLY), and CURATED_STRUCTURAL_OBSERVATION
+    events that survive seed_from_sources.py.'
   target_ids:
   - CHEBI:138488
   - CHEBI:28971
