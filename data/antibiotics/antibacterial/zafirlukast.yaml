@@ -142,3 +142,83 @@ curation_history:
     and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
     (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
   llm_assisted: true
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph zafirlukast_mycobacterial_lsr2_dna_complex_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P9WIP7)
+    and primary literature (PMID:23650171).
+  llm_assisted: true
+causal_graphs:
+- graph_id: zafirlukast_mycobacterial_lsr2_dna_complex_inhibition
+  title: Zafirlukast inhibits Mycobacterium tuberculosis Lsr2 DNA binding and compaction
+    to arrest mycobacterial growth
+  description: Zafirlukast binds the Mycobacterium tuberculosis nucleoid-associated
+    protein Lsr2, blocks Lsr2-DNA complexation and DNA bridging/compaction, dysregulates
+    Lsr2-controlled transcription, and inhibits mycobacterial growth.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: zafirlukast
+    label: zafirlukast
+    node_type: COMPOUND
+    grounding: CHEBI:10100
+  - node_id: mycobacterial_lsr2_protein
+    label: mycobacterial nucleoid-associated protein Lsr2
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Mycobacterial nucleoid-associated global transcriptional regulator
+      Lsr2; kept label-only with Mycobacterium tuberculosis H37Rv Lsr2 (UniProtKB:P9WIP7)
+      protein_examples.
+    gene_symbols:
+    - lsr2
+    protein_examples:
+    - uniprot_id: UniProtKB:P9WIP7
+      protein_label: Nucleoid-associated protein Lsr2
+      gene_symbol: lsr2
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-24'
+      role: Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation
+        with DNA and transcriptional regulatory activity are directly inhibited by
+        zafirlukast in Mycobacterium tuberculosis H37Rv (PMID:23650171).
+  - node_id: lsr2_dna_bridging_and_compaction
+    label: Lsr2-DNA complexation and nucleoid compaction activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Lsr2 DNA binding and DNA compaction activity assayed with purified
+      M. tuberculosis Lsr2.
+  - node_id: mycobacterial_transcription_and_growth
+    label: Lsr2-regulated mycobacterial transcription and cell growth
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Lsr2-dependent transcriptional regulation and growth in Mycobacterium
+      tuberculosis and Mycobacterium smegmatis.
+  edges:
+  - subject: zafirlukast
+    predicate: inhibits
+    object: lsr2_dna_bridging_and_compaction
+    description: Zafirlukast directly inhibits Mycobacterium tuberculosis Lsr2 DNA
+      binding and DNA compaction.
+    evidence:
+    - reference: PMID:23650171
+      notes: Biochemical gel-shift and DNA-binding assays showed that zafirlukast
+        blocks complexation between purified M. tuberculosis Lsr2 and DNA.
+  - subject: mycobacterial_lsr2_protein
+    predicate: enables
+    object: lsr2_dna_bridging_and_compaction
+    description: Mycobacterial Lsr2 binds and compacts AT-rich DNA regions across
+      the chromosome.
+    evidence:
+    - reference: PMID:23650171
+      notes: Purified M. tuberculosis Lsr2 protein mediated the DNA-binding and compaction
+        activity targeted by zafirlukast.
+  - subject: lsr2_dna_bridging_and_compaction
+    predicate: supports
+    object: mycobacterial_transcription_and_growth
+    description: Lsr2-DNA organization maintains global transcriptional regulation
+      and is essential for mycobacterial growth.
+    evidence:
+    - reference: PMID:23650171
+      notes: Zafirlukast-mediated disruption of Lsr2 function dysregulated hundreds
+        of Lsr2-target genes and inhibited mycobacterial growth.

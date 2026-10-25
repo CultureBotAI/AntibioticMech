@@ -131,6 +131,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Zafirlukast inhibits Mycobacterium tuberculosis Lsr2 DNA binding and compaction to arrest mycobacterial growth <span class="pill">MECHANISTIC</span></h3>
+<p>Zafirlukast binds the Mycobacterium tuberculosis nucleoid-associated protein Lsr2, blocks Lsr2-DNA complexation and DNA bridging/compaction, dysregulates Lsr2-controlled transcription, and inhibits mycobacterial growth.</p><div class="table-scroll" role="region" aria-label="Nodes: zafirlukast_mycobacterial_lsr2_dna_complex_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — zafirlukast_mycobacterial_lsr2_dna_complex_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">zafirlukast</code></td>
+    <td>zafirlukast</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/zafirlukast.html"><code class="curie">CHEBI:10100</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">mycobacterial_lsr2_protein</code></td>
+    <td>mycobacterial nucleoid-associated protein Lsr2<br><span class="meta">Examples: Nucleoid-associated protein Lsr2 (lsr2) <a href="https://www.uniprot.org/uniprotkb/P9WIP7"><code class="curie">UniProtKB:P9WIP7</code></a>, <em>Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83332"><code class="curie">NCBITaxon:83332</code></a> <span class="pill">REVIEWED</span> — Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation with DNA and transcriptional regulatory activity are directly inhibited by zafirlukast in Mycobacterium tuberculosis H37Rv (PMID:23650171).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">lsr2_dna_bridging_and_compaction</code></td>
+    <td>Lsr2-DNA complexation and nucleoid compaction activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">mycobacterial_transcription_and_growth</code></td>
+    <td>Lsr2-regulated mycobacterial transcription and cell growth</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: zafirlukast_mycobacterial_lsr2_dna_complex_inhibition" tabindex="0">
+<table>
+  <caption>Edges — zafirlukast_mycobacterial_lsr2_dna_complex_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">zafirlukast</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">lsr2_dna_bridging_and_compaction</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23650171">PMID:23650171</a></span> <span class="meta">(Biochemical gel-shift and DNA-binding assays showed that zafirlukast blocks complexation between purified M. tuberculosis Lsr2 and DNA.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">mycobacterial_lsr2_protein</code></td>
+    <td>enables</td>
+    <td><code class="curie">lsr2_dna_bridging_and_compaction</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23650171">PMID:23650171</a></span> <span class="meta">(Purified M. tuberculosis Lsr2 protein mediated the DNA-binding and compaction activity targeted by zafirlukast.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">lsr2_dna_bridging_and_compaction</code></td>
+    <td>supports</td>
+    <td><code class="curie">mycobacterial_transcription_and_growth</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/23650171">PMID:23650171</a></span> <span class="meta">(Zafirlukast-mediated disruption of Lsr2 function dysregulated hundreds of Lsr2-target genes and inhibited mycobacterial growth.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -162,6 +232,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-25 · curate-yaml-record · LLM-assisted</span>
     <p>Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph zafirlukast_mycobacterial_lsr2_dna_complex_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P9WIP7) and primary literature (PMID:23650171).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -182,7 +257,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f412338c2b86</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>43f551a08620</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

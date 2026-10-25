@@ -324,9 +324,9 @@ def restore_pre_uniprot_protein_examples():
 
 
 @pytest.fixture(scope="session")
-def pre_uniprot_protein_examples_root(tmp_path_factory, pre_causal_graphs_root):
+def pre_uniprot_protein_examples_root(tmp_path_factory, pre_cycle2_stage5_remediation_root):
     """Restore only the 30 curated UniProt protein-example record deltas in isolation."""
-    source = pre_causal_graphs_root
+    source = pre_cycle2_stage5_remediation_root
     transition = _uniprot_protein_examples_transition(source)
     historical_manifest = json.loads(
         (source / "research/2026-10-15-card-reference-reconciled.json").read_bytes()
@@ -399,10 +399,10 @@ def pre_uniprot_protein_examples_root(tmp_path_factory, pre_causal_graphs_root):
 def _causal_graphs_transition(root):
     payload = (root / "curation/causal_graphs_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "5cd564ffd4810d40f5ca8f2ae55ff94c7195ffa0295f102674ee37b7c2990cc9"
+        "98638ced7076fac7596f9184ab740e20fe7a5e33f7c5a2384a1e9dd944c0bbf0"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 43
+    assert len(transition["record_deltas"]) == 48
     return transition
 
 
@@ -442,9 +442,6 @@ def pre_stage5_remediation_root(tmp_path_factory):
     transition = json.loads(
         (REPO_ROOT / "curation/stage5_review_remediation_transition.json").read_bytes()
     )
-    cycle2_transition = json.loads(
-        (REPO_ROOT / "curation/cycle2_stage5_review_remediation_transition.json").read_bytes()
-    )
     root = tmp_path_factory.mktemp("pre-stage5-remediation")
     shutil.copytree(CORPUS_DIR, root / "data/antibiotics")
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts"):
@@ -473,14 +470,6 @@ def pre_stage5_remediation_root(tmp_path_factory):
         "CHEBI:119573",
         "CHEBI:63613",
     }
-    cycle2_stage5_held_ids = {
-        "CHEBI:28429",
-        "CHEBI:228412",
-        "CHEBI:48480",
-        "CHEBI:10100",
-        "CHEBI:34825",
-        "CHEBI:188153",
-    }
     for path in (REPO_ROOT / "curation").iterdir():
         if path.name == "uniprot_protein_examples.yaml":
             loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
@@ -491,7 +480,7 @@ def pre_stage5_remediation_root(tmp_path_factory):
                 if (h.get("scope"), h.get("identifier"), h.get("target_reference"))
                 not in stage5_held_keys
             ]
-            assert len(plan_data["held_targets"]) == 72
+            assert len(plan_data["held_targets"]) == 73
             (root / "curation" / path.name).write_text(
                 yaml.dump(plan_data, sort_keys=False, allow_unicode=True, width=100),
                 encoding="utf-8",
@@ -499,16 +488,6 @@ def pre_stage5_remediation_root(tmp_path_factory):
         elif path.name == "causal_graphs.yaml":
             loader = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
             cg_data = yaml.load(path.read_text(encoding="utf-8"), Loader=loader)
-            cg_data["scope_note"] = cg_data["scope_note"].replace(
-                "and all 38 held REVIEWED records.",
-                "and all 32 held REVIEWED records.",
-            )
-            cg_data["held_records"] = [
-                h
-                for h in (cg_data.get("held_records") or [])
-                if h.get("identifier") not in cycle2_stage5_held_ids
-            ]
-            assert len(cg_data["held_records"]) == 32
             for item in cg_data.get("existing_causal_graphs") or []:
                 if item.get("identifier") in promoted_existing_ids:
                     item["curation_status"] = "SEEDED"
@@ -518,26 +497,6 @@ def pre_stage5_remediation_root(tmp_path_factory):
             )
         else:
             (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
-    for entry in cycle2_transition["records"]:
-        rel_path = entry["path"]
-        rec = load_record(root / rel_path)
-        assert rec["identifier"] == entry["identifier"]
-        assert rec["curation_history"][-1]["action"] in {
-            "PROMOTED_TO_REVIEWED",
-            "CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN",
-            "CURATED_STRUCTURAL_OBSERVATION",
-        }
-        rec["curation_history"] = rec["curation_history"][: entry["previous_curation_history_len"]]
-        for k, v in entry["previous_fields"].items():
-            if v is None:
-                rec.pop(k, None)
-            else:
-                rec[k] = v
-        ordered_rec = {k: rec[k] for k in entry["previous_key_order"] if k in rec}
-        write_validated_antibiotic(ordered_rec, root / rel_path)
-        assert (
-            hashlib.sha256((root / rel_path).read_bytes()).hexdigest() == entry["before_sha256"]
-        )
     for entry in transition["records"]:
         rel_path = entry["path"]
         rec = load_record(root / rel_path)
@@ -561,7 +520,7 @@ def pre_stage5_remediation_root(tmp_path_factory):
 
 @pytest.fixture(scope="session")
 def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
-    """Restore only the 36 curated causal_graphs record deltas and held_targets additions in isolation."""
+    """Restore only the 48 curated causal_graphs record deltas and held_targets additions in isolation."""
     import yaml
 
     source = pre_stage5_remediation_root
@@ -594,5 +553,41 @@ def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
             (root / "curation" / path.name).symlink_to(path, target_is_directory=path.is_dir())
     for delta in transition["record_deltas"]:
         _restore_pre_causal_graphs(source, delta["path"], root / delta["path"])
+    return root
+
+
+@pytest.fixture(scope="session")
+def pre_cycle2_stage5_remediation_root(tmp_path_factory, pre_causal_graphs_root):
+    """Restore the 20 Cycle 2 Stage 5 review-remediated records in isolation."""
+    from antibioticmech.validation.write_validated import write_validated_antibiotic
+
+    source = pre_causal_graphs_root
+    cycle2_transition = json.loads(
+        (source / "curation/cycle2_stage5_review_remediation_transition.json").read_bytes()
+    )
+    root = tmp_path_factory.mktemp("pre-cycle2-stage5-remediation")
+    shutil.copytree(source / "data/antibiotics", root / "data/antibiotics")
+    for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts", "curation"):
+        (root / relative).symlink_to(source / relative, target_is_directory=True)
+    for entry in cycle2_transition["records"]:
+        rel_path = entry["path"]
+        rec = load_record(root / rel_path)
+        assert rec["identifier"] == entry["identifier"]
+        assert rec["curation_history"][-1]["action"] in {
+            "PROMOTED_TO_REVIEWED",
+            "CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN",
+            "CURATED_STRUCTURAL_OBSERVATION",
+        }
+        rec["curation_history"] = rec["curation_history"][: entry["previous_curation_history_len"]]
+        for k, v in entry["previous_fields"].items():
+            if v is None:
+                rec.pop(k, None)
+            else:
+                rec[k] = v
+        ordered_rec = {k: rec[k] for k in entry["previous_key_order"] if k in rec}
+        write_validated_antibiotic(ordered_rec, root / rel_path)
+        assert (
+            hashlib.sha256((root / rel_path).read_bytes()).hexdigest() == entry["before_sha256"]
+        )
     return root
 

@@ -70,15 +70,15 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
                     assert normalized.get("role"), (
                         f"{path}: expected role on {normalized['uniprot_id']}"
                     )
-    assert causal_graph_records == 59
-    assert gene_or_protein_nodes == 42
+    assert causal_graph_records == 64
+    assert gene_or_protein_nodes == 46
 
     accounting = verify_corpus_protein_examples_accounting(records)
     assert accounting == {
-        "causal_graphs_total": 60,
-        "causal_graphs_with_protein_nodes": 40,
-        "causal_graphs_held": 20,
-        "gene_or_protein_nodes": 42,
+        "causal_graphs_total": 65,
+        "causal_graphs_with_protein_nodes": 44,
+        "causal_graphs_held": 21,
+        "gene_or_protein_nodes": 46,
         "primary_literature_targets_total": 113,
         "primary_literature_targets_populated": 52,
         "primary_literature_targets_held": 61,
@@ -92,7 +92,7 @@ def test_plan_and_transition_summary_counts():
     assert sum(d["causal_nodes_updated"] for d in receipt["record_deltas"]) == 15
     assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 42
     assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 80
-    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 81
+    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 82
 
 
 def test_strict_protein_example_and_held_target_validation():
@@ -264,7 +264,7 @@ def test_non_protein_causal_node_and_target_reject_protein_examples():
 def test_exact_scoped_transition_and_idempotence(
     tmp_path,
     restore_pre_uniprot_protein_examples,
-    pre_causal_graphs_root,
+    pre_cycle2_stage5_remediation_root,
     pre_uniprot_protein_examples_root,
     index,
 ):
@@ -274,11 +274,11 @@ def test_exact_scoped_transition_and_idempotence(
     plan_entry = plan["records"][index]
     assert delta["identifier"] == plan_entry["identifier"]
 
-    live_path = pre_causal_graphs_root / delta["path"]
+    live_path = pre_cycle2_stage5_remediation_root / delta["path"]
     historical_path = pre_uniprot_protein_examples_root / delta["path"]
     if not historical_path.exists():
         historical_path = restore_pre_uniprot_protein_examples(
-            pre_causal_graphs_root,
+            pre_cycle2_stage5_remediation_root,
             delta["path"],
             tmp_path / Path(delta["path"]).name,
         )

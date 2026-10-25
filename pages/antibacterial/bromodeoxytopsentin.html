@@ -131,6 +131,76 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Bromodeoxytopsentin inhibits Staphylococcus aureus pyruvate kinase to suppress bacterial growth <span class="pill">MECHANISTIC</span></h3>
+<p>Bromodeoxytopsentin potently and selectively inhibits Staphylococcus aureus (MRSA) pyruvate kinase over human orthologs and suppresses Gram-positive bacterial growth.</p><div class="table-scroll" role="region" aria-label="Nodes: bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">bromodeoxytopsentin</code></td>
+    <td>bromodeoxytopsentin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/bromodeoxytopsentin.html"><code class="curie">CHEBI:144087</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">staphylococcal_pyruvate_kinase</code></td>
+    <td>MRSA pyruvate kinase<br><span class="meta">Examples: Pyruvate kinase (pyk) <a href="https://www.uniprot.org/uniprotkb/Q6G8M9"><code class="curie">UniProtKB:Q6G8M9</code></a>, <em>Staphylococcus aureus (strain MRSA252)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_282458"><code class="curie">NCBITaxon:282458</code></a> <span class="pill">REVIEWED</span> — Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole analog IS130 to the dimer interface of this MRSA252 enzyme.</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td>staphylococcal pyruvate kinase catalytic activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">staphylococcal_glycolytic_growth</code></td>
+    <td>Staphylococcus aureus bacterial growth</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition" tabindex="0">
+<table>
+  <caption>Edges — bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">bromodeoxytopsentin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Biochemical enzyme assays demonstrated nanomolar inhibition of MRSA pyruvate kinase by bromodeoxytopsentin with high selectivity over human pyruvate kinase isoforms.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">staphylococcal_pyruvate_kinase</code></td>
+    <td>enables</td>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Purified MRSA pyruvate kinase enzyme catalyzed the reaction targeted by marine bisindole alkaloids.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">pyruvate_kinase_catalysis</code></td>
+    <td>supports</td>
+    <td><code class="curie">staphylococcal_glycolytic_growth</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/22030393">PMID:22030393</a></span> <span class="meta">(Inhibition of MRSA pyruvate kinase by bisindole alkaloids correlated with antibacterial activity against S. aureus.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -167,6 +237,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
     <p>Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776) protein example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph bromodeoxytopsentin_mrsa_pyruvate_kinase_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q6G8M9) and primary literature (PMID:22030393).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -187,7 +262,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f412338c2b86</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>43f551a08620</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

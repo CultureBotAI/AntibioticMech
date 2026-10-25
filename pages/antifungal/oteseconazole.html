@@ -131,6 +131,77 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Oteseconazole coordinates the heme iron of fungal CYP51 (Erg11) to block ergosterol biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Oteseconazole (VT-1161) binds the active-site heme iron of fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) via its 1-tetrazole ring, inhibits 14-alpha-demethylation of sterol precursors, and depletes membrane ergosterol in Candida species.</p><div class="table-scroll" role="region" aria-label="Nodes: oteseconazole_fungal_cyp51_ergosterol_depletion" tabindex="0">
+<table>
+  <caption>Nodes — oteseconazole_fungal_cyp51_ergosterol_depletion</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">oteseconazole</code></td>
+    <td>oteseconazole</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/oteseconazole.html"><code class="curie">CHEBI:188153</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_cyp51_erg11</code></td>
+    <td>fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)<br><span class="meta">Examples: Lanosterol 14-alpha demethylase (ERG11) <a href="https://www.uniprot.org/uniprotkb/P10613"><code class="curie">UniProtKB:P10613</code></a>, <em>Candida albicans (strain SC5314 / ATCC MYA-2876)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a> <span class="pill">REVIEWED</span> — Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida albicans whose heme iron is selectively coordinated by the tetrazole ring of oteseconazole (VT-1161, Kd &lt;= 39 nM; PMID:25056938; DOI:10.1128/aac.00778-22).; Lanosterol 14-alpha demethylase (ERG11) <a href="https://www.uniprot.org/uniprotkb/P50859"><code class="curie">UniProtKB:P50859</code></a>, <em>Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_284593"><code class="curie">NCBITaxon:284593</code></a> <span class="pill">REVIEWED</span> — Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata, the primary clinical target species evaluated in DOI:10.1128/aac.00778-22 (MIC50 = 0.06 ug/mL, MIC90 = 0.5 ug/mL; PMID:35969069).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">lanosterol_14alpha_demethylation</code></td>
+    <td>CYP51-catalyzed sterol 14-alpha-demethylation</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_ergosterol_biosynthesis</code></td>
+    <td>ergosterol biosynthetic process</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><a href="https://amigo.geneontology.org/amigo/term/GO:0006696">GO:0006696</a></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: oteseconazole_fungal_cyp51_ergosterol_depletion" tabindex="0">
+<table>
+  <caption>Edges — oteseconazole_fungal_cyp51_ergosterol_depletion</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">oteseconazole</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">lanosterol_14alpha_demethylation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25056938">PMID:25056938</a></span> <span class="meta">(Type II spectral binding and sterol-biosynthesis assays showed tight binding of VT-1161 (oteseconazole) to Candida albicans CYP51 and complete blockade of ergosterol synthesis.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/aac.00778-22">DOI:10.1128/aac.00778-22</a></span> <span class="meta">(Antifungal susceptibility and Erg11 amino-acid substitution profiling in Candida glabrata confirmed CYP51 target engagement by oteseconazole.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_cyp51_erg11</code></td>
+    <td>enables</td>
+    <td><code class="curie">lanosterol_14alpha_demethylation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25056938">PMID:25056938</a></span> <span class="meta">(Purified Candida albicans CYP51 catalyzed the sterol demethylation step inhibited by VT-1161.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">lanosterol_14alpha_demethylation</code></td>
+    <td>supports</td>
+    <td><code class="curie">fungal_ergosterol_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/25056938">PMID:25056938</a></span> <span class="meta">(Inhibition of CYP51 by VT-1161 depleted cellular ergosterol and accumulated 14-alpha-methylated sterols in Candida albicans.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -162,6 +233,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-25 · curate-yaml-record · LLM-assisted</span>
     <p>Promoted curation_status from PROPOSED to REVIEWED after verifying EXACT ChEBI chemical grounding, complete chemical_structure, settled biosynthesis_origin and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-25 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph oteseconazole_fungal_cyp51_ergosterol_depletion (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P10613, UniProtKB:P50859) and primary literature (DOI:10.1128/aac.00778-22, PMID:25056938).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -182,7 +258,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>f412338c2b86</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>43f551a08620</code>, 3012 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

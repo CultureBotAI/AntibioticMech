@@ -1319,10 +1319,10 @@ records:
       taxon_label: Staphylococcus aureus (strain MRSA252)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and inhibited
-        by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic
-        assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole analog
-        IS130 to the dimer interface of this MRSA252 enzyme.
+      role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified, and
+        inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM) in the PMID:22030393
+        enzymatic assays; the cocrystal structure in the same study (PDB:3T07) bound the synthetic bis-indole
+        analog IS130 to the dimer interface of this MRSA252 enzyme.
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -1465,6 +1465,13 @@ held_targets:
   graph_id: nogalamycin_dna_intercalation_helix_distortion
   reason: Causal graph nogalamycin_dna_intercalation_helix_distortion contains only non-protein node types
     (BIOLOGICAL_PROCESS, CHEMICAL, COMPOUND, STATE) and has no GENE_OR_PROTEIN nodes.
+- identifier: CHEBI:48480
+  label: thermorubin A
+  path: data/antibiotics/antibacterial/thermorubin-a.yaml
+  scope: causal_graphs
+  graph_id: thermorubin_a_70s_bridge_b2a_elongation_termination_arrest
+  reason: Causal graph thermorubin_a_70s_bridge_b2a_elongation_termination_arrest contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:157683
   label: althiomycin
   path: data/antibiotics/antibacterial/althiomycin.yaml
@@ -1783,8 +1790,8 @@ held_targets:
   target_reference: PMID:22151792
   reason: Held because PMID:22151792 characterizes photoaffinity crosslinking and resistance mutations
     across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical clade B/C isolates) without a single
-    isolate-resolved cocrystal accession, and tests/test_bevirimat_taxonomy.py asserts field-by-field identity
-    on live molecular_targets against research/2026-10-14-bevirimat-curation.json.
+    isolate-resolved cocrystal accession, and tests/test_bevirimat_taxonomy.py asserts field-by-field
+    identity on live molecular_targets against research/2026-10-14-bevirimat-curation.json.
 - identifier: CHEBI:172943
   label: bictegravir
   path: data/antibiotics/antiviral/bictegravir.yaml

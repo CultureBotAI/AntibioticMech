@@ -3,7 +3,7 @@ label: sanfetrinem
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
 grounding_status: MINTED
-definition: A tricyclic beta-lactam (trinem) antibacterial agent (GV104326) that acrylates
+definition: A tricyclic beta-lactam (trinem) antibacterial agent (GV104326) that acylates
   bacterial penicillin-binding proteins and L,D-transpeptidases to inhibit peptidoglycan
   cross-linking.
 definition_source: DOI:10.1128/AAC.40.9.2142
@@ -55,3 +55,16 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
+    mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes;
+    corrected 'acrylates' typo to 'acylates' in definition.
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: Tricyclic beta-lactam (trinem, GV104326) that covalently acylates
+  bacterial penicillin-binding proteins (PBPs) to inhibit peptidoglycan cell-wall
+  cross-linking (PMID:8540693).

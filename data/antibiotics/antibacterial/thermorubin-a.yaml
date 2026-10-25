@@ -106,3 +106,78 @@ curation_history:
     and mode_of_action with CURATOR mode_of_action_notes, PRIMARY_LITERATURE molecular_targets
     (PRIMARY_EVIDENCE), and audited UniProtKB protein_examples (#1272).
   llm_assisted: true
+- timestamp: '2026-10-25T18:10:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph thermorubin_a_70s_bridge_b2a_elongation_termination_arrest
+    (4 nodes, 3 edges) from primary literature (DOI:10.1093/nar/gkac1189, PMID:22240456).
+  llm_assisted: true
+causal_graphs:
+- graph_id: thermorubin_a_70s_bridge_b2a_elongation_termination_arrest
+  title: Thermorubin A rearranges 70S ribosome intersubunit bridge B2a to block A-site
+    tRNA accommodation and release-factor termination
+  description: Thermorubin A binds intersubunit bridge B2a at the junction of 16S
+    rRNA helix 44 and 23S rRNA helix 69 in the bacterial 70S ribosome, induces flipping
+    of bases C1914 and A1916 that sterically clash with A-site tRNA and class-I release
+    factors, and arrests translation elongation and termination.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: thermorubin_a
+    label: thermorubin A
+    node_type: COMPOUND
+    grounding: CHEBI:48480
+  - node_id: ribosomal_intersubunit_bridge_b2a
+    label: bacterial 70S ribosome intersubunit bridge B2a (16S rRNA helix 44 / 23S
+      rRNA helix 69)
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Conserved rRNA intersubunit bridge B2a formed by 16S rRNA helix
+      44 and 23S rRNA helix 69 at the ribosomal decoding center.
+  - node_id: rearranged_bridge_b2a_c1914_a1916_state
+    label: thermorubin-bound bridge B2a state with flipped 23S rRNA bases C1914 and
+      A1916
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: X-ray crystal state (PDB:4V8A) showing thermorubin A bound at
+      bridge B2a with 23S rRNA helix 69 bases C1914 and A1916 flipped into the ribosomal
+      A site.
+  - node_id: bacterial_translation_elongation_and_termination
+    label: bacterial A-site aminoacyl-tRNA accommodation and release-factor-mediated
+      translation termination
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ribosomal A-site tRNA accommodation and stop-codon release-factor
+      hydrolysis assayed in vitro and in vivo.
+  edges:
+  - subject: thermorubin_a
+    predicate: binds
+    object: rearranged_bridge_b2a_c1914_a1916_state
+    description: Thermorubin A binds intersubunit bridge B2a of the 70S ribosome and
+      induces flipping of 23S rRNA bases C1914 and A1916.
+    evidence:
+    - reference: PMID:22240456
+      notes: The 70S-thermorubin crystal structure (PDB:4V8A) resolved thermorubin
+        A bound at bridge B2a between 16S rRNA helix 44 and 23S rRNA helix 69.
+    - reference: DOI:10.1093/nar/gkac1189
+      notes: Structural and mechanistic analysis showed that thermorubin binding rearranges
+        bridge B2a nucleotides C1914 and A1916 into conformations that clash with
+        A-site ligands.
+  - subject: ribosomal_intersubunit_bridge_b2a
+    predicate: participates in
+    object: rearranged_bridge_b2a_c1914_a1916_state
+    description: 16S rRNA helix 44 and 23S rRNA helix 69 at bridge B2a form the binding
+      pocket rearranged by thermorubin A.
+    evidence:
+    - reference: PMID:22240456
+      notes: Crystallographic analysis mapped the rRNA contacts at bridge B2a coordinating
+        thermorubin A.
+  - subject: rearranged_bridge_b2a_c1914_a1916_state
+    predicate: inhibits
+    object: bacterial_translation_elongation_and_termination
+    description: Thermorubin-induced flipping of C1914 and A1916 sterically hinders
+      A-site aminoacyl-tRNA accommodation and release-factor-mediated peptide release,
+      arresting ribosomes at internal and stop codons.
+    evidence:
+    - reference: DOI:10.1093/nar/gkac1189
+      notes: Toeprinting, single-molecule FRET, and release-factor assays demonstrated
+        that thermorubin blocks A-site tRNA accommodation and translation termination.
