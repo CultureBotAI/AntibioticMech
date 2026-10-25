@@ -3044,7 +3044,7 @@ All 90 REVIEWED records carry EXACT ChEBI grounding, complete single-molecule ch
 
 completeness: concern. Targets: CHEBI:28429, CHEBI:228412, antibioticmech:curator-cb71d1e3b5, antibioticmech:curator-47d32d7a07, antibioticmech:curator-172bfdd938, antibioticmech:curator-1db8575797, antibioticmech:curator-607ce000f8, antibioticmech:curator-88af230f5d, antibioticmech:curator-0106724e5f, antibioticmech:curator-17023fe654, CHEBI:48480, CHEBI:10100, antibioticmech:curator-fd1c955758, CHEBI:34825, antibioticmech:curator-4a1156c964, antibioticmech:curator-18f8e84826, CHEBI:188153.
 
-17 PROPOSED records now carry curated PRIMARY_LITERATURE molecular_targets (and reviewed UniProtKB protein_examples on all 12 admissible protein targets): 6 EXACT ChEBI records ((2R,3R)-dihydromyricetin, 6-methylflavone, thermorubin A, zafirlukast, luliconazole, oteseconazole) already have complete biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and mode_of_action_notes and are ready for promotion to curation_status: REVIEWED, whereas 11 MINTED records (enterololin, fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec, ibrexafungerp, manogepix, olorofim) still lack biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes.
+17 PROPOSED records now carry curated PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples on all 11 admissible protein/complex-targeted records — 2 of the 3 protein-targeted PROPOSED/EXACT records and 9 of the 11 PROPOSED/MINTED records, while luliconazole CYP51, zafirlukast LtaS, ibrexafungerp Fks1, and olorofim DHODH are documented holds in curation/uniprot_protein_examples.yaml): 6 EXACT ChEBI records ((2R,3R)-dihydromyricetin, 6-methylflavone, thermorubin A, zafirlukast, luliconazole, oteseconazole) already have complete biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and mode_of_action_notes and are ready for promotion to curation_status: REVIEWED, whereas 11 MINTED records (enterololin, fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec, ibrexafungerp, manogepix, olorofim) still lack biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes.
 
 ### Unblocked remediation readiness of the 3 SEEDED records with UNREVIEWED PDB structural_observations
 
@@ -3058,13 +3058,13 @@ Following Cycle 1 Stage 6 PR #1261 (which updated seed_from_sources.py to preser
 
 major / open / confirmed; issue key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion.
 
-Six EXACT ChEBI records seeded via curation/curator_antibiotics.tsv — (2R,3R)-dihydromyricetin (CHEBI:28429, PMID:26430563), 6-methylflavone (CHEBI:228412, PMID:37896608), thermorubin A (CHEBI:48480, PMID:22959483), zafirlukast (CHEBI:10100, DOI:10.1128/AAC.02407-12), luliconazole (CHEBI:34825, PMID:15616310), and oteseconazole (CHEBI:188153, PMID:25032536) — possess exact single-molecule chemical_structure, curated biosynthesis_origin, curated mode_of_action with mode_of_action_target_scope: MICROBIAL_TARGET and CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed UniProtKB protein_examples on all 4 protein-targeted records), yet retain curation_status: PROPOSED from initial seeding.
+Six EXACT ChEBI records seeded via curation/curator_antibiotics.tsv — (2R,3R)-dihydromyricetin (CHEBI:28429, DOI:10.1177/15353141261501298 / PMID:42908502), 6-methylflavone (CHEBI:228412, DOI:10.1128/spectrum.03588-25 / PMID:42007697), thermorubin A (CHEBI:48480, DOI:10.1093/nar/gkac1189 / PMID:36546783; DOI:10.1016/j.jmb.2011.12.055 / PMID:22240456), zafirlukast (CHEBI:10100, DOI:10.3390/antibiotics15090914 / PMID:42792065; DOI:10.1128/AAC.02407-12 / PMID:23650171), luliconazole (CHEBI:34825, DOI:10.1007/s10156-004-0327-1 / PMID:15365862), and oteseconazole (CHEBI:188153, DOI:10.1128/aac.00778-22 / PMID:35969069; PMID:25056938) — possess exact single-molecule chemical_structure, curated biosynthesis_origin, curated mode_of_action with mode_of_action_target_scope: MICROBIAL_TARGET and CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed UniProtKB protein_examples on 2 of the 3 protein-targeted records — zafirlukast Lsr2 UniProtKB:P9WIP7 and oteseconazole ERG11 UniProtKB:P10613/P50859 — while luliconazole CYP51 UniProtKB:F2SHH3 and zafirlukast LtaS are documented holds in curation/uniprot_protein_examples.yaml, and the remaining 3 records target MEMBRANE, BIOLOGICAL_PROCESS, and RIBOSOMAL_SUBUNIT), yet retain curation_status: PROPOSED from initial seeding.
 
 ### proposed-minted-records-with-primary-targets-missing-mode-of-action: Eleven PROPOSED MINTED records have curated PRIMARY_LITERATURE molecular_targets but lack top-level mode_of_action and biosynthesis_origin
 
 major / open / confirmed; issue key: proposed-minted-records-with-primary-targets-missing-mode-of-action.
 
-Eleven PROPOSED/MINTED records that received curated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets and UniProtKB protein_examples in Cycle 2 Stage 3 (PR #1266) — enterololin (antibioticmech:curator-cb71d1e3b5, DOI:10.1038/s41564-024-01725-1), fabimycin (antibioticmech:curator-47d32d7a07, DOI:10.1021/acscentsci.2c00598), ganfeborole (antibioticmech:curator-172bfdd938, DOI:10.1038/s41591-024-02829-x), lolamicin (antibioticmech:curator-1db8575797, DOI:10.1038/s41586-024-07502-0), macozinone (antibioticmech:curator-607ce000f8, DOI:10.1002/EMMM.201303287), quabodepistat (antibioticmech:curator-88af230f5d, DOI:10.1128/AAC.00916-17), sorfequiline (antibioticmech:curator-0106724e5f, DOI:10.1128/AAC.00143-19), telacebec (antibioticmech:curator-17023fe654, DOI:10.1038/NM.3262), ibrexafungerp (antibioticmech:curator-fd1c955758, DOI:10.1128/AAC.01144-13), manogepix (antibioticmech:curator-4a1156c964, DOI:10.1128/AAC.00637-11), and olorofim (antibioticmech:curator-18f8e84826, DOI:10.1073/PNAS.1610626113) — still lack top-level biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes.
+Eleven PROPOSED/MINTED records that received curated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets (and reviewed UniProtKB protein_examples on 9 of them, with ibrexafungerp and olorofim documented holds in curation/uniprot_protein_examples.yaml) in Cycle 2 Stage 3 (PR #1266) — enterololin (antibioticmech:curator-cb71d1e3b5, DOI:10.1038/s41564-025-02142-0), fabimycin (antibioticmech:curator-47d32d7a07, DOI:10.1021/acscentsci.2c00598), ganfeborole (antibioticmech:curator-172bfdd938, DOI:10.1038/s41591-024-02829-7), lolamicin (antibioticmech:curator-1db8575797, DOI:10.1038/s41586-024-07502-0), macozinone (antibioticmech:curator-607ce000f8, DOI:10.1002/emmm.201303575), quabodepistat (antibioticmech:curator-88af230f5d, DOI:10.1128/aac.00338-22), sorfequiline (antibioticmech:curator-0106724e5f, DOI:10.1128/aac.02404-19), telacebec (antibioticmech:curator-17023fe654, DOI:10.1038/nm.3262), ibrexafungerp (antibioticmech:curator-fd1c955758, DOI:10.1093/mmy/myac049), manogepix (antibioticmech:curator-4a1156c964, DOI:10.1128/aac.01723-25), and olorofim (antibioticmech:curator-18f8e84826, DOI:10.1128/aac.00307-23) — still lack top-level biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and CURATOR mode_of_action_notes.
 
 ### unreviewed-seeded-pdb-structural-observations: Three SEEDED records carry ChEBI-seeded PDB structural_observations with relevance: UNREVIEWED (unblocked for Stage 5 curation by PR #1261)
 
@@ -3116,7 +3116,7 @@ Disposition: Primary papers PMID:12193619 and PMID:12951344 remain under publish
 
 informational / deferred / confirmed; issue key: reviewed-records-awaiting-causal-graphs.
 
-After Cycle 2 Stage 2 curated primary-literature causal_graphs on 7 additional REVIEWED records (PR #1265), 32 of the 90 REVIEWED records have verified primary-literature mode_of_action and molecular_targets but do not yet have curated causal_graphs; additionally, ofloxacin (antibioticmech:aro-2eea3233f3) has a primary-literature causal graph (PMID:2849927) and PRIMARY_LITERATURE target but remains SEEDED/MINTED because racemic CHEBI:7731 lacks a 2D molfile in ChEBI v249.
+After Cycle 2 Stage 2 curated primary-literature causal_graphs on 7 additional REVIEWED records (PR #1265), 32 of the 90 REVIEWED records have verified primary-literature mode_of_action and molecular_targets but do not yet have curated causal_graphs; additionally, ofloxacin (antibioticmech:aro-2eea3233f3) has a primary-literature causal graph (PMID:2849927, with reviewed UniProtKB protein_examples P0AES4/P0AES6 on dna_gyrase) and CARD_ARO molecular_targets but remains SEEDED/MINTED because racemic CHEBI:7731 lacks a 2D molfile in ChEBI v249.
 
 Disposition: Curating new multi-step primary-literature causal_graphs across 32 additional REVIEWED compounds and resolving upstream ChEBI structure availability for racemic CHEBI:7731 are multi-cycle corpus expansion tasks tracked in Issue #1257 outside bounded Stage 5 coherence remediation.
 
@@ -3173,7 +3173,7 @@ Curate primary PDB paper evidence, macromolecular target labels, and exact relev
 | corpus-verification-suite | scripts/verify_corpus.py; Full-corpus seeder and citation integrity check | supports | Verified 2,992 records (2,819 SEEDED, 90 REVIEWED, 83 PROPOSED; 2,697 EXACT, 295 MINTED) with 0 errors; confirmed that curation_status, biosynthesis_origin, mode_of_action, mode_of_action_target_scope, mode_of_action_notes, and structural_observations are preserved across reseeding. |
 | structure-audit | docs/HARMONIZATION.md; Structure completeness and REVIEWED gate specification | supports | Confirmed 90/90 REVIEWED records have grounding_status: EXACT and full chemical_structure; 6/83 PROPOSED records have EXACT ChEBI grounding with complete primary mechanism curation and are eligible for REVIEWED promotion, whereas 55/83 PROPOSED records have MINTED grounding and must remain PROPOSED. |
 | worklist-queues | scripts/curation_worklist.py; Queue census across all 2,992 records | supports | Confirmed that Cycle 1 Stage 5 resolved rifampicin-moa-scope-leftover (moa-settled-scope-review=0), seeded-causal-graphs-missing-primary-targets, and seeded-causal-graphs-unsettled-moa-and-targets (causal-graph-review=0), while structure-unreviewed=3 is now unblocked by Cycle 1 Stage 6 PR #1261. |
-| proposed-primary-target-cohort-evidence | curation/uniprot_protein_examples.yaml; 17 PROPOSED records curated in Cycle 2 Stage 1 and Cycle 2 Stage 3 | supports | 6 PROPOSED/EXACT records ((2R,3R)-dihydromyricetin CHEBI:28429, 6-methylflavone CHEBI:228412, thermorubin A CHEBI:48480, zafirlukast CHEBI:10100, luliconazole CHEBI:34825, oteseconazole CHEBI:188153) have complete chemical_structure, biosynthesis_origin, mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (with UniProtKB protein_examples on the 4 protein-targeted records), but remain curation_status: PROPOSED. Meanwhile, 11 PROPOSED/MINTED records (enterololin, fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec, ibrexafungerp, manogepix, olorofim) have PRIMARY_LITERATURE molecular_targets (and UniProtKB protein_examples on 8 of them) from Cycle 2 Stage 3 PR #1266, but still lack biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and mode_of_action_notes. |
+| proposed-primary-target-cohort-evidence | curation/uniprot_protein_examples.yaml; 17 PROPOSED records curated in Cycle 2 Stage 1 and Cycle 2 Stage 3 | supports | 6 PROPOSED/EXACT records ((2R,3R)-dihydromyricetin CHEBI:28429, 6-methylflavone CHEBI:228412, thermorubin A CHEBI:48480, zafirlukast CHEBI:10100, luliconazole CHEBI:34825, oteseconazole CHEBI:188153) have complete chemical_structure, biosynthesis_origin, mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples on 2 of the 3 protein-targeted records — zafirlukast Lsr2 UniProtKB:P9WIP7 and oteseconazole ERG11 UniProtKB:P10613/P50859 — while luliconazole CYP51 UniProtKB:F2SHH3 and zafirlukast LtaS are documented holds in curation/uniprot_protein_examples.yaml, and the remaining 3 records target MEMBRANE, BIOLOGICAL_PROCESS, and RIBOSOMAL_SUBUNIT), but remain curation_status: PROPOSED. Meanwhile, 11 PROPOSED/MINTED records (enterololin, fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec, ibrexafungerp, manogepix, olorofim) have PRIMARY_LITERATURE molecular_targets (and reviewed UniProtKB protein_examples on 9 of them, with ibrexafungerp and olorofim documented holds in curation/uniprot_protein_examples.yaml) from Cycle 2 Stage 3 PR #1266, but still lack biosynthesis_origin, mode_of_action, mode_of_action_target_scope, and mode_of_action_notes. |
 | unreviewed-pdb-evidence | scripts/seed_from_sources.py; structural_observations preservation logic and alsterpaullone.yaml, ampicillin.yaml, methyl-nonanoate.yaml | supports | Cycle 1 Stage 6 (PR #1261) updated seed_from_sources.py to preserve curator-reviewed structural_observations entries across reseeding when relevance is not UNREVIEWED. CHEBI:138488 (alsterpaullone, PDB:1Q3W), CHEBI:28971 (ampicillin, PDB:1H8S), and CHEBI:44499 (methyl nonanoate, PDB:1CLY) still carry relevance: UNREVIEWED and evidence_status: PRIMARY_EVIDENCE_NEEDED and are now actionable in Stage 5. |
 | card-evidence-reviews-plan | curation/card_evidence_reviews.json; Source-owned CARD qualification notes for Issues #1140-#1144 | supports | Documents upstream CARD literature-alignment qualifications and publisher access holds for MCR-4.3 (CHEBI:59064, CHEBI:59673; Issue #1140), eatAv (CHEBI:8269; Issue #1141), MexJK-OpmH (CHEBI:42355, CHEBI:27902, CHEBI:164200, antibioticmech:aro-1fe0873afd; Issue #1142), msrC (CHEBI:42355, CHEBI:8732; Issue #1143), and vancomycin ddl (CHEBI:28001; Issue #1144). |
 | causal-graphs-plan | curation/causal_graphs.yaml; 59 records with curated primary-literature causal_graphs and 20 explicit holds | supports | 58 REVIEWED records plus SEEDED/MINTED ofloxacin (antibioticmech:aro-2eea3233f3) now carry primary-literature causal_graphs (up from 51 REVIEWED records in Cycle 1 after 7 REVIEWED records gained causal_graphs in Cycle 2 Stage 2 PR #1265), leaving 32 REVIEWED records awaiting causal_graphs. |
@@ -54285,13 +54285,18 @@ evidence:
     CHEBI:228412, thermorubin A CHEBI:48480, zafirlukast CHEBI:10100, luliconazole
     CHEBI:34825, oteseconazole CHEBI:188153) have complete chemical_structure, biosynthesis_origin,
     mode_of_action, mode_of_action_target_scope: MICROBIAL_TARGET, CURATOR mode_of_action_notes,
-    and PRIMARY_LITERATURE molecular_targets (with UniProtKB protein_examples on the
-    4 protein-targeted records), but remain curation_status: PROPOSED. Meanwhile,
-    11 PROPOSED/MINTED records (enterololin, fabimycin, ganfeborole, lolamicin, macozinone,
-    quabodepistat, sorfequiline, telacebec, ibrexafungerp, manogepix, olorofim) have
-    PRIMARY_LITERATURE molecular_targets (and UniProtKB protein_examples on 8 of them)
-    from Cycle 2 Stage 3 PR #1266, but still lack biosynthesis_origin, mode_of_action,
-    mode_of_action_target_scope, and mode_of_action_notes.'
+    and PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples
+    on 2 of the 3 protein-targeted records — zafirlukast Lsr2 UniProtKB:P9WIP7 and
+    oteseconazole ERG11 UniProtKB:P10613/P50859 — while luliconazole CYP51 UniProtKB:F2SHH3
+    and zafirlukast LtaS are documented holds in curation/uniprot_protein_examples.yaml,
+    and the remaining 3 records target MEMBRANE, BIOLOGICAL_PROCESS, and RIBOSOMAL_SUBUNIT),
+    but remain curation_status: PROPOSED. Meanwhile, 11 PROPOSED/MINTED records (enterololin,
+    fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec,
+    ibrexafungerp, manogepix, olorofim) have PRIMARY_LITERATURE molecular_targets
+    (and reviewed UniProtKB protein_examples on 9 of them, with ibrexafungerp and
+    olorofim documented holds in curation/uniprot_protein_examples.yaml) from Cycle
+    2 Stage 3 PR #1266, but still lack biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
+    and mode_of_action_notes.'
 - evidence_id: unreviewed-pdb-evidence
   kind: record_content
   reference: scripts/seed_from_sources.py
@@ -57463,14 +57468,17 @@ assessments:
     PRIMARY_LITERATURE molecular_targets
   outcome: concern
   summary: '17 PROPOSED records now carry curated PRIMARY_LITERATURE molecular_targets
-    (and reviewed UniProtKB protein_examples on all 12 admissible protein targets):
-    6 EXACT ChEBI records ((2R,3R)-dihydromyricetin, 6-methylflavone, thermorubin
-    A, zafirlukast, luliconazole, oteseconazole) already have complete biosynthesis_origin,
-    mode_of_action, mode_of_action_target_scope, and mode_of_action_notes and are
-    ready for promotion to curation_status: REVIEWED, whereas 11 MINTED records (enterololin,
-    fabimycin, ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec,
-    ibrexafungerp, manogepix, olorofim) still lack biosynthesis_origin, mode_of_action,
-    mode_of_action_target_scope, and CURATOR mode_of_action_notes.'
+    (with reviewed UniProtKB protein_examples on all 11 admissible protein/complex-targeted
+    records — 2 of the 3 protein-targeted PROPOSED/EXACT records and 9 of the 11 PROPOSED/MINTED
+    records, while luliconazole CYP51, zafirlukast LtaS, ibrexafungerp Fks1, and olorofim
+    DHODH are documented holds in curation/uniprot_protein_examples.yaml): 6 EXACT
+    ChEBI records ((2R,3R)-dihydromyricetin, 6-methylflavone, thermorubin A, zafirlukast,
+    luliconazole, oteseconazole) already have complete biosynthesis_origin, mode_of_action,
+    mode_of_action_target_scope, and mode_of_action_notes and are ready for promotion
+    to curation_status: REVIEWED, whereas 11 MINTED records (enterololin, fabimycin,
+    ganfeborole, lolamicin, macozinone, quabodepistat, sorfequiline, telacebec, ibrexafungerp,
+    manogepix, olorofim) still lack biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
+    and CURATOR mode_of_action_notes.'
   target_ids:
   - CHEBI:28429
   - CHEBI:228412
@@ -57520,15 +57528,21 @@ findings:
   title: 'Six PROPOSED EXACT ChEBI records have complete primary-literature mechanism
     and target curation but remain curation_status: PROPOSED'
   description: 'Six EXACT ChEBI records seeded via curation/curator_antibiotics.tsv
-    — (2R,3R)-dihydromyricetin (CHEBI:28429, PMID:26430563), 6-methylflavone (CHEBI:228412,
-    PMID:37896608), thermorubin A (CHEBI:48480, PMID:22959483), zafirlukast (CHEBI:10100,
-    DOI:10.1128/AAC.02407-12), luliconazole (CHEBI:34825, PMID:15616310), and oteseconazole
-    (CHEBI:188153, PMID:25032536) — possess exact single-molecule chemical_structure,
-    curated biosynthesis_origin, curated mode_of_action with mode_of_action_target_scope:
+    — (2R,3R)-dihydromyricetin (CHEBI:28429, DOI:10.1177/15353141261501298 / PMID:42908502),
+    6-methylflavone (CHEBI:228412, DOI:10.1128/spectrum.03588-25 / PMID:42007697),
+    thermorubin A (CHEBI:48480, DOI:10.1093/nar/gkac1189 / PMID:36546783; DOI:10.1016/j.jmb.2011.12.055
+    / PMID:22240456), zafirlukast (CHEBI:10100, DOI:10.3390/antibiotics15090914 /
+    PMID:42792065; DOI:10.1128/AAC.02407-12 / PMID:23650171), luliconazole (CHEBI:34825,
+    DOI:10.1007/s10156-004-0327-1 / PMID:15365862), and oteseconazole (CHEBI:188153,
+    DOI:10.1128/aac.00778-22 / PMID:35969069; PMID:25056938) — possess exact single-molecule
+    chemical_structure, curated biosynthesis_origin, curated mode_of_action with mode_of_action_target_scope:
     MICROBIAL_TARGET and CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE
     (evidence_status: PRIMARY_EVIDENCE) molecular_targets (with reviewed UniProtKB
-    protein_examples on all 4 protein-targeted records), yet retain curation_status:
-    PROPOSED from initial seeding.'
+    protein_examples on 2 of the 3 protein-targeted records — zafirlukast Lsr2 UniProtKB:P9WIP7
+    and oteseconazole ERG11 UniProtKB:P10613/P50859 — while luliconazole CYP51 UniProtKB:F2SHH3
+    and zafirlukast LtaS are documented holds in curation/uniprot_protein_examples.yaml,
+    and the remaining 3 records target MEMBRANE, BIOLOGICAL_PROCESS, and RIBOSOMAL_SUBUNIT),
+    yet retain curation_status: PROPOSED from initial seeding.'
   target_ids:
   - CHEBI:28429
   - CHEBI:228412
@@ -57577,19 +57591,20 @@ findings:
   title: Eleven PROPOSED MINTED records have curated PRIMARY_LITERATURE molecular_targets
     but lack top-level mode_of_action and biosynthesis_origin
   description: 'Eleven PROPOSED/MINTED records that received curated source: PRIMARY_LITERATURE
-    (evidence_status: PRIMARY_EVIDENCE) molecular_targets and UniProtKB protein_examples
-    in Cycle 2 Stage 3 (PR #1266) — enterololin (antibioticmech:curator-cb71d1e3b5,
-    DOI:10.1038/s41564-024-01725-1), fabimycin (antibioticmech:curator-47d32d7a07,
-    DOI:10.1021/acscentsci.2c00598), ganfeborole (antibioticmech:curator-172bfdd938,
-    DOI:10.1038/s41591-024-02829-x), lolamicin (antibioticmech:curator-1db8575797,
-    DOI:10.1038/s41586-024-07502-0), macozinone (antibioticmech:curator-607ce000f8,
-    DOI:10.1002/EMMM.201303287), quabodepistat (antibioticmech:curator-88af230f5d,
-    DOI:10.1128/AAC.00916-17), sorfequiline (antibioticmech:curator-0106724e5f, DOI:10.1128/AAC.00143-19),
-    telacebec (antibioticmech:curator-17023fe654, DOI:10.1038/NM.3262), ibrexafungerp
-    (antibioticmech:curator-fd1c955758, DOI:10.1128/AAC.01144-13), manogepix (antibioticmech:curator-4a1156c964,
-    DOI:10.1128/AAC.00637-11), and olorofim (antibioticmech:curator-18f8e84826, DOI:10.1073/PNAS.1610626113)
-    — still lack top-level biosynthesis_origin, mode_of_action, mode_of_action_target_scope,
-    and CURATOR mode_of_action_notes.'
+    (evidence_status: PRIMARY_EVIDENCE) molecular_targets (and reviewed UniProtKB
+    protein_examples on 9 of them, with ibrexafungerp and olorofim documented holds
+    in curation/uniprot_protein_examples.yaml) in Cycle 2 Stage 3 (PR #1266) — enterololin
+    (antibioticmech:curator-cb71d1e3b5, DOI:10.1038/s41564-025-02142-0), fabimycin
+    (antibioticmech:curator-47d32d7a07, DOI:10.1021/acscentsci.2c00598), ganfeborole
+    (antibioticmech:curator-172bfdd938, DOI:10.1038/s41591-024-02829-7), lolamicin
+    (antibioticmech:curator-1db8575797, DOI:10.1038/s41586-024-07502-0), macozinone
+    (antibioticmech:curator-607ce000f8, DOI:10.1002/emmm.201303575), quabodepistat
+    (antibioticmech:curator-88af230f5d, DOI:10.1128/aac.00338-22), sorfequiline (antibioticmech:curator-0106724e5f,
+    DOI:10.1128/aac.02404-19), telacebec (antibioticmech:curator-17023fe654, DOI:10.1038/nm.3262),
+    ibrexafungerp (antibioticmech:curator-fd1c955758, DOI:10.1093/mmy/myac049), manogepix
+    (antibioticmech:curator-4a1156c964, DOI:10.1128/aac.01723-25), and olorofim (antibioticmech:curator-18f8e84826,
+    DOI:10.1128/aac.00307-23) — still lack top-level biosynthesis_origin, mode_of_action,
+    mode_of_action_target_scope, and CURATOR mode_of_action_notes.'
   target_ids:
   - antibioticmech:curator-cb71d1e3b5
   - antibioticmech:curator-47d32d7a07
@@ -57688,7 +57703,7 @@ findings:
   - worklist-queues
   owner_paths:
   - repository: culturebotai/AntibioticMech
-    path: data/antibiotics/antiprotozoal/alsterpaullone.yaml
+    path: data/antibiotics/antiviral/alsterpaullone.yaml
     role: Curator-reviewed structural_observations entries preserved across reseeding
   - repository: culturebotai/AntibioticMech
     path: data/antibiotics/antibacterial/ampicillin.yaml
@@ -57885,8 +57900,9 @@ findings:
     7 additional REVIEWED records (PR #1265), 32 of the 90 REVIEWED records have verified
     primary-literature mode_of_action and molecular_targets but do not yet have curated
     causal_graphs; additionally, ofloxacin (antibioticmech:aro-2eea3233f3) has a primary-literature
-    causal graph (PMID:2849927) and PRIMARY_LITERATURE target but remains SEEDED/MINTED
-    because racemic CHEBI:7731 lacks a 2D molfile in ChEBI v249.'
+    causal graph (PMID:2849927, with reviewed UniProtKB protein_examples P0AES4/P0AES6
+    on dna_gyrase) and CARD_ARO molecular_targets but remains SEEDED/MINTED because
+    racemic CHEBI:7731 lacks a 2D molfile in ChEBI v249.'
   disposition_reason: 'Curating new multi-step primary-literature causal_graphs across
     32 additional REVIEWED compounds and resolving upstream ChEBI structure availability
     for racemic CHEBI:7731 are multi-cycle corpus expansion tasks tracked in Issue
@@ -58436,7 +58452,7 @@ actions:
   - CHEBI:44499
   owner_paths:
   - repository: culturebotai/AntibioticMech
-    path: data/antibiotics/antiprotozoal/alsterpaullone.yaml
+    path: data/antibiotics/antiviral/alsterpaullone.yaml
     role: Curator-reviewed structural_observations entries preserved across reseeding
   - repository: culturebotai/AntibioticMech
     path: data/antibiotics/antibacterial/ampicillin.yaml
