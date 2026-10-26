@@ -1,0 +1,844 @@
+schema_version: 1.0.0
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 4
+revision: 1
+source_revision: 2cc3ea13020683af56460711fbff425aa2dad456
+structured_reviews:
+- review_id: 20261026T003500Z-negamycin-record-review
+  kind: record
+  skill: .claude/skills/review-yaml-record/SKILL.md
+  path: reviews/structured/20261026T003500Z-negamycin-record-review/review.yaml
+  markdown_path: reviews/structured/20261026T003500Z-negamycin-record-review/review.md
+  population_size: 1
+  reviewed_count: 1
+  verdict: needs_curation
+- review_id: 20261026T003600Z-cycle3-frozen-inventory-cohort-review
+  kind: category
+  skill: .claude/skills/review-yaml-category/SKILL.md
+  path: reviews/structured/20261026T003600Z-cycle3-frozen-inventory-cohort-review/review.yaml
+  markdown_path: reviews/structured/20261026T003600Z-cycle3-frozen-inventory-cohort-review/review.md
+  population_size: 3012
+  reviewed_count: 3012
+  verdict: needs_curation
+findings:
+- finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  issue_key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  category: completeness
+  severity: major
+  status: open
+  certainty: confirmed
+  title: 'Two PROPOSED EXACT ChEBI records have complete primary-literature mechanism
+    and target curation but remain curation_status: PROPOSED'
+  description: 'Two EXACT ChEBI records seeded in Cycle 3 Stage 1 and curated in Cycle
+    3 Stage 2 — bactobolin A (CHEBI:138579, DOI:10.1073/pnas.1419328112 / PMID:25733897)
+    and negamycin (CHEBI:198310, DOI:10.1073/pnas.1414401111 / PMID:25368144; DOI:10.1016/j.molcel.2014.09.021
+    / PMID:25306922) — possess exact single-molecule chemical_structure, curated biosynthesis_origin
+    (NATURAL_PRODUCT), curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION) with
+    mode_of_action_target_scope: MICROBIAL_TARGET and CURATOR mode_of_action_notes,
+    source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets,
+    and documented RIBOSOMAL_SUBUNIT holds in curation/uniprot_protein_examples.yaml,
+    yet retain curation_status: PROPOSED.'
+  target_ids: &id001
+  - CHEBI:138579
+  - CHEBI:198310
+  field_paths:
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - proposed-primary-target-cohort-evidence
+  - structure-audit
+  - corpus-verification-suite
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/bactobolin-a.yaml
+    role: Curator-owned curation_status slot on EXACT record with complete primary
+      mechanism curation
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/negamycin.yaml
+    role: Curator-owned curation_status slot on EXACT record with complete primary
+      mechanism curation
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261026T003500Z-negamycin-record-review
+    finding_id: negamycin-awaiting-reviewed-promotion
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+- finding_id: proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
+  issue_key: proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
+  category: completeness
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Three PROPOSED EXACT fluoroquinolone records have curated mode_of_action
+    and primary target citations but lack structured PRIMARY_LITERATURE molecular_targets
+    and REVIEWED promotion
+  description: 'Three PROPOSED antibacterial fluoroquinolone records with grounding_status:
+    EXACT and complete single-molecule chemical_structure — besifloxacin (CHEBI:135622,
+    Cambau et al. 2009 DOI:10.1093/jac/dkn528 / PMID:19451292; DOI:10.1128/AAC.00418-09
+    / PMID:19506065), ozenoxacin (CHEBI:136050, Yamakawa et al. 2002 DOI:10.1128/AAC.46.5.1229-1234.2002
+    / PMID:11959549; Lopez et al. 2014 PMID:24752267), and pazufloxacin (CHEBI:94700,
+    DOI:10.1128/AAC.37.3.384 / PMID:8460909; PMID:11959571) — already carry curated
+    biosynthesis_origin: SYNTHETIC, mode_of_action: DNA_REPLICATION_INHIBITION (MICROBIAL_TARGET),
+    and CURATOR mode_of_action_notes describing dual inhibition of bacterial DNA gyrase
+    (GyrA/GyrB) and topoisomerase IV (ParC/ParE), but lack structured source: PRIMARY_LITERATURE
+    molecular_targets (and reviewed UniProtKB protein_examples) and remain curation_status:
+    PROPOSED.'
+  target_ids: &id002
+  - CHEBI:135622
+  - CHEBI:136050
+  - CHEBI:94700
+  field_paths:
+  - molecular_targets
+  - curation_status
+  - curation_history
+  evidence_ids:
+  - proposed-primary-target-cohort-evidence
+  - structure-audit
+  - corpus-verification-suite
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/besifloxacin.yaml
+    role: Curator-owned molecular_targets and curation_status slots on EXACT record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/ozenoxacin.yaml
+    role: Curator-owned molecular_targets and curation_status slots on EXACT record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/pazufloxacin.yaml
+    role: Curator-owned molecular_targets and curation_status slots on EXACT record
+- finding_id: proposed-minted-records-with-moa-missing-primary-targets
+  issue_key: proposed-minted-records-with-moa-missing-primary-targets
+  category: completeness
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Seven PROPOSED MINTED records have curated mode_of_action and primary target
+    citations but lack structured PRIMARY_LITERATURE molecular_targets
+  description: Seven PROPOSED/MINTED records with exact single-molecule chemical_structure,
+    curated biosynthesis_origin, curated mode_of_action (MICROBIAL_TARGET), and CURATOR
+    mode_of_action_notes — cadazolid (antibioticmech:curator-975acd7c4d, Locher et
+    al. 2014 DOI:10.1128/AAC.02158-13 / PMID:24366740), radezolid (antibioticmech:curator-a739fc0555,
+    Lawrence et al. 2008 DOI:10.1128/AAC.01990-08 / PMID:19332677), sutezolid (antibioticmech:curator-f56d459cee,
+    Williams et al. 2009 DOI:10.1128/AAC.00059-07 / PMID:18056279), sanfetrinem (antibioticmech:curator-daae3d88a3,
+    Di Modugno et al. 1994 DOI:10.1128/AAC.38.10.2362 / PMID:7840571), tomopenem (antibioticmech:curator-e14f58e6dc,
+    Koga et al. 2008 DOI:10.1128/AAC.00105-08 / PMID:18519725), albaconazole (antibioticmech:curator-6bdee75cea,
+    Bartroli et al. 1998 DOI:10.1021/jm9707277 / PMID:9602591), and quilseconazole
+    (antibioticmech:curator-217ed2935e, Warrilow et al. 2017 DOI:10.1128/AAC.02116-16
+    / PMID:27919896) — cite primary target studies in mode_of_action_notes/source_concepts
+    but lack structured PRIMARY_LITERATURE molecular_targets (and UniProtKB protein_examples
+    / held_targets accounting).
+  target_ids: &id003
+  - antibioticmech:curator-975acd7c4d
+  - antibioticmech:curator-a739fc0555
+  - antibioticmech:curator-daae3d88a3
+  - antibioticmech:curator-f56d459cee
+  - antibioticmech:curator-e14f58e6dc
+  - antibioticmech:curator-6bdee75cea
+  - antibioticmech:curator-217ed2935e
+  field_paths:
+  - molecular_targets
+  - curation_history
+  evidence_ids:
+  - proposed-primary-target-cohort-evidence
+  - corpus-verification-suite
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/cadazolid.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/radezolid.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sanfetrinem.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sutezolid.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/tomopenem.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/albaconazole.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/quilseconazole.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+- finding_id: mcr43-context
+  issue_key: card-aro-3004695-mcr43-contrasting-functional-contexts
+  category: evidence
+  severity: minor
+  status: deferred
+  certainty: confirmed
+  title: Contrasting functional contexts and component-specific grounding for MCR-4.3
+    remain unresolved
+  description: CARD ARO:3004695 (MCR-4.3) on colistin A (CHEBI:59064) and colistin
+    B (CHEBI:59673) carries source-owned qualifications via curation/card_evidence_reviews.json,
+    but purified component-specific experimental testing and primary supplement reconciliation
+    remain unresolved.
+  disposition_reason: Source-owned qualification notes are already projected via curation/card_evidence_reviews.json;
+    component-specific experimental grounding requires external primary experimental
+    data not available in local cached sources.
+  target_ids:
+  - CHEBI:59064
+  - CHEBI:59673
+  field_paths:
+  - resistance_mechanisms
+  evidence_ids:
+  - card-evidence-reviews-plan
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-owned CARD qualification overlay
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: mcr43-context
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1140
+- finding_id: eatav-compound
+  issue_key: card-aro-3003761-eatav-pleuromutilin-derivative-mismatch
+  category: scope
+  severity: minor
+  status: deferred
+  certainty: confirmed
+  title: Tested pleuromutilin derivative (tiamulin) in eatAv study does not ground
+    parent pleuromutilin
+  description: CARD ARO:3003761 (eatAv) on pleuromutilin (CHEBI:8269) cites PMID:23751969,
+    which tested tiamulin rather than parent pleuromutilin; source-owned qualification
+    is projected via curation/card_evidence_reviews.json.
+  disposition_reason: Derivative-versus-parent qualification note is already projected
+    via curation/card_evidence_reviews.json; exact parent pleuromutilin experimental
+    testing is absent from the cited primary study.
+  target_ids:
+  - CHEBI:8269
+  field_paths:
+  - resistance_mechanisms
+  evidence_ids:
+  - card-evidence-reviews-plan
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-owned CARD qualification overlay
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: eatav-compound
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1141
+- finding_id: msrc-evidence
+  issue_key: card-aro-3002819-msrc-association-vs-causality
+  category: evidence
+  severity: minor
+  status: deferred
+  certainty: confirmed
+  title: Early msrC association study does not establish exclusive causality or target-protection
+    mechanism
+  description: CARD ARO:3002819 (msrC) on erythromycin A (CHEBI:42355) and quinupristin
+    (CHEBI:8732) cites PMID:11120975, which reports susceptibility shifts without
+    proving exclusive target-protection causality.
+  disposition_reason: Awaits later primary mechanistic evidence curation and native
+    gene-field representation on source-owned ResistanceMechanismEntry items.
+  target_ids:
+  - CHEBI:42355
+  - CHEBI:8732
+  field_paths:
+  - resistance_mechanisms
+  evidence_ids:
+  - card-evidence-reviews-plan
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-owned CARD qualification overlay
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: msrc-evidence
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1143
+- finding_id: ddl-scope
+  issue_key: card-aro-3003970-vancomycin-ddl-paywall-hold
+  category: evidence
+  severity: minor
+  status: deferred
+  certainty: confirmed
+  title: Generic D-Ala-D-Ala ligase reference on vancomycin leaves tested alteration
+    unresolved
+  description: CARD ARO:3003970 (D-Ala-D-Ala ligase) on vancomycin (CHEBI:28001) cites
+    PMID:11266628 (abstract-only access; full text under publisher HTTP 403 hold)
+    and review PMID:16323117.
+  disposition_reason: Full-text primary results for PMID:11266628 remain unavailable
+    under publisher HTTP 403 access hold; experimental allele identity cannot be inferred
+    from abstract or review text.
+  target_ids:
+  - CHEBI:28001
+  field_paths:
+  - resistance_mechanisms
+  evidence_ids:
+  - card-evidence-reviews-plan
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-owned CARD qualification overlay
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: ddl-scope
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1144
+- finding_id: mexjk-role-conflict
+  issue_key: card-aro-3003694-mexjk-opmh-component-role-reversal
+  category: consistency
+  severity: minor
+  status: deferred
+  certainty: confirmed
+  title: Upstream CARD aro.owl reverses MexJ and MexK component roles in MexJK-OpmH
+    relative to MexJK-OprM
+  description: Upstream aro.owl assigns opposite inner-membrane versus periplasmic-adaptor
+    restrictions for MexJ (ARO:3003692) and MexK (ARO:3003693) in MexJK-OpmH (ARO:3003694)
+    relative to MexJK-OprM (ARO:3000802), affecting complex provenance on erythromycin
+    A (CHEBI:42355), tetracycline (CHEBI:27902), triclosan (CHEBI:164200), and acriflavine
+    (antibioticmech:aro-1fe0873afd).
+  disposition_reason: Primary papers PMID:12193619 and PMID:12951344 remain under
+    publisher HTTP 403 hold, and generated AntibioticRecord files do not store subcomponent
+    role restrictions; preserved without guessing which upstream CARD restriction
+    is correct.
+  target_ids:
+  - CHEBI:42355
+  - CHEBI:27902
+  - CHEBI:164200
+  - antibioticmech:aro-1fe0873afd
+  field_paths:
+  - resistance_mechanisms
+  evidence_ids:
+  - card-evidence-reviews-plan
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: curation/card_evidence_reviews.json
+    role: Source-owned CARD qualification overlay
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: mexjk-role-conflict
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1142
+- finding_id: reviewed-records-awaiting-causal-graphs
+  issue_key: reviewed-records-awaiting-causal-graphs
+  category: completeness
+  severity: informational
+  status: deferred
+  certainty: confirmed
+  title: 33 REVIEWED records await primary-literature causal_graphs and ofloxacin
+    is blocked by structureless CHEBI:7731
+  description: After Cycle 3 Stage 2 curated primary-literature causal_graphs on 13
+    additional REVIEWED records, 63 of the 96 REVIEWED records now carry causal_graphs
+    while 33 of the 96 REVIEWED records have verified primary-literature mode_of_action
+    and molecular_targets but do not yet have curated causal_graphs; additionally,
+    ofloxacin (antibioticmech:aro-2eea3233f3) has a primary-literature causal graph
+    (PMID:2849927, with reviewed UniProtKB protein_examples P0AES4/P0AES6 on dna_gyrase)
+    and CARD_ARO molecular_targets but remains SEEDED/MINTED because racemic CHEBI:7731
+    lacks a 2D molfile in ChEBI v249.
+  disposition_reason: 'Curating new multi-step primary-literature causal_graphs across
+    33 additional REVIEWED compounds and resolving upstream ChEBI structure availability
+    for racemic CHEBI:7731 are multi-cycle corpus expansion tasks tracked in Issue
+    #1257 outside bounded Stage 5 coherence remediation.'
+  target_ids:
+  - CHEBI:28429
+  - CHEBI:228412
+  - CHEBI:172922
+  - CHEBI:156451
+  - CHEBI:17351
+  - CHEBI:16196
+  - CHEBI:131850
+  - CHEBI:171658
+  - CHEBI:156219
+  - CHEBI:78661
+  - CHEBI:77693
+  - CHEBI:34825
+  - CHEBI:45081
+  - CHEBI:77942
+  - CHEBI:40009
+  - CHEBI:65485
+  - CHEBI:4781
+  - CHEBI:65484
+  - CHEBI:172943
+  - CHEBI:135632
+  - CHEBI:82977
+  - CHEBI:85182
+  - CHEBI:76010
+  - CHEBI:132967
+  - CHEBI:134722
+  - CHEBI:85188
+  - CHEBI:134184
+  - CHEBI:127780
+  - CHEBI:82960
+  - CHEBI:147346
+  - CHEBI:82809
+  - CHEBI:134107
+  - CHEBI:9321
+  - antibioticmech:aro-2eea3233f3
+  field_paths:
+  - causal_graphs
+  evidence_ids:
+  - causal-graphs-plan
+  - structure-audit
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: curation/causal_graphs.yaml
+    role: Primary-literature causal_graphs plan and holds
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: reviewed-records-awaiting-causal-graphs
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1257
+- finding_id: proposed-antibacterial-records-awaiting-grounding-and-mechanism
+  issue_key: proposed-antibacterial-records-awaiting-grounding-and-mechanism
+  category: completeness
+  severity: informational
+  status: deferred
+  certainty: confirmed
+  title: 66 PROPOSED literature-seeded records await primary mechanism curation and
+    structure registration
+  description: 66 of the 97 PROPOSED records across data/antibiotics/ (22 EXACT ChEBI,
+    44 MINTED without exact ChEBI structure) have CURATOR discovery literature citations
+    and verified single-molecule structures (on 64/66), but do not yet have curated
+    mode_of_action, PRIMARY_LITERATURE molecular_targets, or causal_graphs.
+  disposition_reason: 'Requires compound-by-compound primary mechanism literature
+    retrieval and upstream ChEBI structure registration across future dedicated curation
+    cycles (tracked in Issue #1258).'
+  target_ids:
+  - CHEBI:44909
+  - antibioticmech:curator-9412b5ca77
+  - antibioticmech:curator-f8f4ef7fbd
+  - antibioticmech:curator-8edc5e6516
+  - CHEBI:2873
+  - CHEBI:109543
+  - CHEBI:16433
+  - antibioticmech:curator-9e16033cea
+  - CHEBI:16112
+  - antibioticmech:curator-d33759f162
+  - antibioticmech:curator-452d38df8e
+  - antibioticmech:curator-38d4b5a16d
+  - antibioticmech:curator-1fe7431c15
+  - CHEBI:4356
+  - antibioticmech:curator-a420576237
+  - antibioticmech:curator-5044557327
+  - antibioticmech:curator-cad9f0650f
+  - antibioticmech:curator-ec9bb92e4a
+  - antibioticmech:curator-105c804e50
+  - antibioticmech:curator-64248d3cdf
+  - antibioticmech:curator-fe3e606e42
+  - antibioticmech:curator-34020091be
+  - antibioticmech:curator-1ac99609a8
+  - CHEBI:17620
+  - antibioticmech:curator-68713b9d28
+  - CHEBI:30778
+  - antibioticmech:curator-a1214aecf9
+  - antibioticmech:curator-b453af7884
+  - antibioticmech:curator-0f0bc2f555
+  - antibioticmech:curator-9a2e3114cb
+  - antibioticmech:curator-fb7e3bd3f5
+  - antibioticmech:curator-ff4802fa87
+  - antibioticmech:curator-4c05f0ba47
+  - antibioticmech:curator-e8d0b1491b
+  - antibioticmech:curator-811a417697
+  - antibioticmech:curator-4b720a8dc7
+  - antibioticmech:curator-64f422f0ff
+  - antibioticmech:curator-0f96f23968
+  - antibioticmech:curator-35c6404d6e
+  - CHEBI:136785
+  - CHEBI:189496
+  - antibioticmech:curator-d604421a09
+  - antibioticmech:curator-a485dcd8d3
+  - antibioticmech:curator-8e9e4cae3e
+  - antibioticmech:curator-ee3df8bfee
+  - CHEBI:32374
+  - CHEBI:7915
+  - antibioticmech:curator-fe92479d4c
+  - CHEBI:27684
+  - CHEBI:32076
+  - CHEBI:17521
+  - antibioticmech:curator-d3ab9579ab
+  - CHEBI:50371
+  - antibioticmech:curator-59edbdc708
+  - antibioticmech:curator-1a87ac78a7
+  - antibioticmech:curator-19908a5b89
+  - CHEBI:68329
+  - CHEBI:28177
+  - CHEBI:94557
+  - antibioticmech:curator-c44fe436b2
+  - antibioticmech:curator-c59ef1b1f4
+  - CHEBI:30816
+  - CHEBI:180720
+  - antibioticmech:curator-96ae7dffd3
+  - antibioticmech:curator-c27816fecf
+  - CHEBI:46557
+  field_paths:
+  - mode_of_action
+  - molecular_targets
+  - chemical_structure
+  evidence_ids:
+  - corpus-verification-suite
+  - structure-audit
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: curation/curator_antibiotics.tsv
+    role: Literature-proposed compound inventory
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: proposed-antibacterial-records-awaiting-grounding-and-mechanism
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1258
+- finding_id: minted-aro-records-without-exact-chebi-structure
+  issue_key: minted-aro-records-without-exact-chebi-structure
+  category: grounding
+  severity: informational
+  status: deferred
+  certainty: confirmed
+  title: 240 SEEDED MINTED records lack an exact single-molecule ChEBI chemical_structure
+  description: '240 SEEDED records carry minted antibioticmech:aro-* identifiers and
+    grounding_status: MINTED because upstream CARD ARO terms or ChEBI v249 entries
+    represent antibiotic classes, multi-component mixtures, polymers, or structureless
+    entries.'
+  disposition_reason: 'REVIEWED promotion is intentionally gated by structure_completeness_audit
+    until exact single-molecule ChEBI structures or complex-mixture policy support
+    is available (tracked in Issue #1259).'
+  target_ids:
+  - antibioticmech:aro-ab7143cd24
+  - antibioticmech:aro-3b4e0b6d96
+  - antibioticmech:aro-e4e652725f
+  - antibioticmech:aro-e83eaf8a8a
+  - antibioticmech:aro-34c0642a61
+  - antibioticmech:aro-b0e6c47827
+  - antibioticmech:aro-59d21b914e
+  - antibioticmech:aro-de2f58b0cc
+  - antibioticmech:aro-d03e1e5b82
+  - antibioticmech:aro-0cf530b2c3
+  - antibioticmech:aro-5086cca2e7
+  - antibioticmech:aro-e3f7a82f17
+  - antibioticmech:aro-9aee56c696
+  - antibioticmech:aro-bf7dc59121
+  - antibioticmech:aro-148ae939a4
+  - antibioticmech:aro-d2b8d66d15
+  - antibioticmech:aro-fb45bd17a5
+  - antibioticmech:aro-736d7660a3
+  - antibioticmech:aro-ae576e4688
+  - antibioticmech:aro-7abbaadfab
+  - antibioticmech:aro-e9c8697a8e
+  - antibioticmech:aro-34500a4f2b
+  - antibioticmech:aro-e05426a76f
+  - antibioticmech:aro-1504589de3
+  - antibioticmech:aro-3cfb065f35
+  - antibioticmech:aro-63094b52cf
+  - antibioticmech:aro-07e4fbc49d
+  - antibioticmech:aro-36682fe25f
+  - antibioticmech:aro-cd72e61879
+  - antibioticmech:aro-27630f7c54
+  - antibioticmech:aro-340d45af79
+  - antibioticmech:aro-c73757ed91
+  - antibioticmech:aro-ac9a833c42
+  - antibioticmech:aro-94c19a1c3c
+  - antibioticmech:aro-da12e2d9fe
+  - antibioticmech:aro-ec60046a85
+  - antibioticmech:aro-72f1180eb7
+  - antibioticmech:aro-5c527c4696
+  - antibioticmech:aro-eeb30db614
+  - antibioticmech:aro-819aa3adea
+  - antibioticmech:aro-6feb53f4d2
+  - antibioticmech:aro-cc357c3b89
+  - antibioticmech:aro-e0bba9e7d3
+  - antibioticmech:aro-df383601e2
+  - antibioticmech:aro-86221775c0
+  - antibioticmech:aro-e44e701df2
+  - antibioticmech:aro-ca0e85f42a
+  - antibioticmech:aro-e523675af2
+  - antibioticmech:aro-c10ed01875
+  - antibioticmech:aro-0f5084fe9f
+  - antibioticmech:aro-e45d4c195a
+  - antibioticmech:aro-93dd2d4732
+  - antibioticmech:aro-cb28770ae8
+  - antibioticmech:aro-eb42322815
+  - antibioticmech:aro-edae5f55a0
+  - antibioticmech:aro-6e963f402b
+  - antibioticmech:aro-e9b96b6d23
+  - antibioticmech:aro-2c3e119979
+  - antibioticmech:aro-48bb80f5a5
+  - antibioticmech:aro-7a113ada2c
+  - antibioticmech:aro-6a4094ddb2
+  - antibioticmech:aro-68a16c2153
+  - antibioticmech:aro-d075cb1991
+  - antibioticmech:aro-1cc6dbd596
+  - antibioticmech:aro-43392693fd
+  - antibioticmech:aro-5d5ecfee72
+  - antibioticmech:aro-9fd72752cb
+  - antibioticmech:aro-bd55fbe0ca
+  - antibioticmech:aro-d623ec0929
+  - antibioticmech:aro-2d35d60097
+  - antibioticmech:aro-985189abb0
+  - antibioticmech:aro-fdb0f4de1c
+  - antibioticmech:aro-251ff28ef6
+  - antibioticmech:aro-a1068a1a74
+  - antibioticmech:aro-98a9bd6ff9
+  - antibioticmech:aro-53ea9afd3e
+  - antibioticmech:aro-4406f1da89
+  - antibioticmech:aro-f3aad264a4
+  - antibioticmech:aro-365d0d8bfd
+  - antibioticmech:aro-35e3f4294f
+  - antibioticmech:aro-39c9b140ad
+  - antibioticmech:aro-b3c99ef3d8
+  - antibioticmech:aro-865dbced81
+  - antibioticmech:aro-d39089d50d
+  - antibioticmech:aro-d4b630f1d7
+  - antibioticmech:aro-940323dd61
+  - antibioticmech:aro-19df9f1f8a
+  - antibioticmech:aro-18bdab079e
+  - antibioticmech:aro-274dd73c04
+  - antibioticmech:aro-7c0cf8c565
+  - antibioticmech:aro-c18438bef6
+  - antibioticmech:aro-4fcd06e09d
+  - antibioticmech:aro-a22b27492c
+  - antibioticmech:aro-17e5b16969
+  - antibioticmech:aro-0c3c5e785d
+  - antibioticmech:aro-63b276648e
+  - antibioticmech:aro-1286e26ebd
+  - antibioticmech:aro-9047378d43
+  - antibioticmech:aro-7d06ad4acd
+  - antibioticmech:aro-808cc3b683
+  - antibioticmech:aro-6407ce57f1
+  - antibioticmech:aro-714bb3cd2d
+  - antibioticmech:aro-b380d64ee1
+  - antibioticmech:aro-b2e68d25c8
+  - antibioticmech:aro-d384fdc29d
+  - antibioticmech:aro-f2b46f8b0e
+  - antibioticmech:aro-bf39ac682c
+  - antibioticmech:aro-edfe06b075
+  - antibioticmech:aro-0734abf918
+  - antibioticmech:aro-1204fa50d9
+  - antibioticmech:aro-4a4590abba
+  - antibioticmech:aro-12bdf3352c
+  - antibioticmech:aro-a23579298c
+  - antibioticmech:aro-e690d68430
+  - antibioticmech:aro-828c8da980
+  - antibioticmech:aro-6d3a6e6b69
+  - antibioticmech:aro-c1dea01a87
+  - antibioticmech:aro-3116ad4253
+  - antibioticmech:aro-f538304a82
+  - antibioticmech:aro-8b2f0e38fa
+  - antibioticmech:aro-45efa31311
+  - antibioticmech:aro-2b2f71621c
+  - antibioticmech:aro-1d2367825f
+  - antibioticmech:aro-ca1f16372a
+  - antibioticmech:aro-65024a8863
+  - antibioticmech:aro-41b2842f38
+  - antibioticmech:aro-f8f4257b4b
+  - antibioticmech:aro-9abc576b69
+  - antibioticmech:aro-00a588048a
+  - antibioticmech:aro-b6c9cc2b59
+  - antibioticmech:aro-59524d78a3
+  - antibioticmech:aro-e57b52c636
+  - antibioticmech:aro-b18912d1c6
+  - antibioticmech:aro-77a152a10f
+  - antibioticmech:aro-832bfb6c2e
+  - antibioticmech:aro-40a2a87cc8
+  - antibioticmech:aro-4e94f7ae64
+  - antibioticmech:aro-980580724e
+  - antibioticmech:aro-597d65f4ac
+  - antibioticmech:aro-4b92bbd5fb
+  - antibioticmech:aro-026683b3b8
+  - antibioticmech:aro-d058164b57
+  - antibioticmech:aro-0a1c492c45
+  - antibioticmech:aro-c1c0e2fcb2
+  - antibioticmech:aro-0a013bd963
+  - antibioticmech:aro-7c2372afa7
+  - antibioticmech:aro-d56d37db11
+  - antibioticmech:aro-43b735a15d
+  - antibioticmech:aro-d473074d4a
+  - antibioticmech:aro-f198f10971
+  - antibioticmech:aro-515166b9c7
+  - antibioticmech:aro-6fbc93a42c
+  - antibioticmech:aro-2eea3233f3
+  - antibioticmech:aro-ea6589413a
+  - antibioticmech:aro-d5fecb3190
+  - antibioticmech:aro-f4906250fc
+  - antibioticmech:aro-8218cfc5a1
+  - antibioticmech:aro-2ea67cad76
+  - antibioticmech:aro-0aefa62f74
+  - antibioticmech:aro-1c565a1a6c
+  - antibioticmech:aro-2e5f698558
+  - antibioticmech:aro-3cd51688ea
+  - antibioticmech:aro-a78f888bde
+  - antibioticmech:aro-b4caf30bd7
+  - antibioticmech:aro-0ae735fe08
+  - antibioticmech:aro-e1509d505b
+  - antibioticmech:aro-7086196093
+  - antibioticmech:aro-e129595baa
+  - antibioticmech:aro-b0cdef0f20
+  - antibioticmech:aro-554b15fa7b
+  - antibioticmech:aro-180f92bec8
+  - antibioticmech:aro-d6a7012e5e
+  - antibioticmech:aro-b4f5ca6a06
+  - antibioticmech:aro-a324312fa2
+  - antibioticmech:aro-36b1a29715
+  - antibioticmech:aro-dfad12d850
+  - antibioticmech:aro-c8e528eadd
+  - antibioticmech:aro-ba8c8dd0ec
+  - antibioticmech:aro-96ac9a7072
+  - antibioticmech:aro-df2f0e08b4
+  - antibioticmech:aro-74aa00cff4
+  - antibioticmech:aro-ab6394287c
+  - antibioticmech:aro-605696c899
+  - antibioticmech:aro-bb69bd597e
+  - antibioticmech:aro-d02a324bed
+  - antibioticmech:aro-07fd9f4191
+  - antibioticmech:aro-6235078efd
+  - antibioticmech:aro-556deb5a30
+  - antibioticmech:aro-cf6aac5f15
+  - antibioticmech:aro-26cedd2720
+  - antibioticmech:aro-a39572002e
+  - antibioticmech:aro-b7537957c3
+  - antibioticmech:aro-b2857d2845
+  - antibioticmech:aro-f9eb09229d
+  - antibioticmech:aro-f9ecce9898
+  - antibioticmech:aro-b8680d8080
+  - antibioticmech:aro-ae741f3893
+  - antibioticmech:aro-a1f2f7e07d
+  - antibioticmech:aro-4b163fa344
+  - antibioticmech:aro-6bb73d1eab
+  - antibioticmech:aro-67d13cef91
+  - antibioticmech:aro-7f38f83f7d
+  - antibioticmech:aro-a71ef91d49
+  - antibioticmech:aro-8013b9b55a
+  - antibioticmech:aro-28273ec780
+  - antibioticmech:aro-4bf8cc8c16
+  - antibioticmech:aro-4c6e0c1ff0
+  - antibioticmech:aro-b855439125
+  - antibioticmech:aro-be005cca98
+  - antibioticmech:aro-1a019a94dc
+  - antibioticmech:aro-1c243155df
+  - antibioticmech:aro-3e4204a292
+  - antibioticmech:aro-890fe891a5
+  - antibioticmech:aro-96ff58856f
+  - antibioticmech:aro-e52262d6b8
+  - antibioticmech:aro-6536d0e3bb
+  - antibioticmech:aro-ddcacf705e
+  - antibioticmech:aro-88dda0e2d9
+  - antibioticmech:aro-2a1d8b8631
+  - antibioticmech:aro-df43621fb3
+  - antibioticmech:aro-9612379da5
+  - antibioticmech:aro-f75c158ac2
+  - antibioticmech:aro-88c211f0f6
+  - antibioticmech:aro-53b7643d5c
+  - antibioticmech:aro-dfdbce9a83
+  - antibioticmech:aro-e05d19b916
+  - antibioticmech:aro-e63825b7e1
+  - antibioticmech:aro-5fd4e54f15
+  - antibioticmech:aro-4655b07df9
+  - antibioticmech:aro-adaab5b65b
+  - antibioticmech:aro-11ab0a98bf
+  - antibioticmech:aro-14f45eb5b3
+  - antibioticmech:aro-b799d457ed
+  - antibioticmech:aro-1224dc3554
+  - antibioticmech:aro-2c567f176b
+  - antibioticmech:aro-a441fc6b50
+  - antibioticmech:aro-d53850fc72
+  - antibioticmech:aro-1fe0873afd
+  - antibioticmech:aro-13aab8b73c
+  - antibioticmech:aro-2e3b34cc67
+  field_paths:
+  - grounding_status
+  - chemical_structure
+  evidence_ids:
+  - structure-audit
+  - corpus-verification-suite
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: docs/HARMONIZATION.md
+    role: Structure completeness and REVIEWED gate specification
+  previous_occurrences:
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261025T082000Z-cycle2-frozen-inventory-cohort-review
+    finding_id: minted-aro-records-without-exact-chebi-structure
+  external_issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/1259
+actions:
+- action_id: promote-proposed-exact-records-with-primary-targets-to-reviewed
+  description: 'Promote the 2 PROPOSED EXACT ChEBI records that already have complete
+    single-molecule chemical_structure, biosynthesis_origin, mode_of_action, mode_of_action_target_scope:
+    MICROBIAL_TARGET, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE
+    molecular_targets (bactobolin A CHEBI:138579, negamycin CHEBI:198310) from curation_status:
+    PROPOSED to REVIEWED via record_curation_event and write_validated_antibiotic
+    during Cycle 3 Stage 5 grouped remediation.'
+  finding_ids:
+  - proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  target_ids: *id001
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/bactobolin-a.yaml
+    role: Curator-owned curation_status slot on EXACT record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/negamycin.yaml
+    role: Curator-owned curation_status slot on EXACT record
+  acceptance_checks:
+  - 'Both CHEBI:138579 and CHEBI:198310 carry curation_status: REVIEWED and survive
+    seed_from_sources.py --apply.'
+  - scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
+- action_id: curate-primary-targets-and-promote-proposed-exact-quinolones
+  description: 'Populate structured source: PRIMARY_LITERATURE molecular_targets (bacterial
+    DNA gyrase and topoisomerase IV with reviewed Swiss-Prot UniProtKB protein_examples)
+    and promote CHEBI:135622 (besifloxacin), CHEBI:136050 (ozenoxacin), and CHEBI:94700
+    (pazufloxacin) from curation_status: PROPOSED to REVIEWED via record_curation_event
+    and write_validated_antibiotic during Cycle 3 Stage 5 grouped remediation.'
+  finding_ids:
+  - proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
+  target_ids: *id002
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/besifloxacin.yaml
+    role: Curator-owned molecular_targets and curation_status slots on EXACT record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/ozenoxacin.yaml
+    role: Curator-owned molecular_targets and curation_status slots on EXACT record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/pazufloxacin.yaml
+    role: Curator-owned molecular_targets and curation_status slots on EXACT record
+  acceptance_checks:
+  - 'CHEBI:135622, CHEBI:136050, and CHEBI:94700 carry PRIMARY_LITERATURE molecular_targets
+    with reviewed UniProtKB protein_examples and curation_status: REVIEWED.'
+  - scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
+- action_id: curate-primary-targets-on-proposed-minted-moa-records
+  description: 'Populate structured source: PRIMARY_LITERATURE molecular_targets and
+    corresponding UniProtKB protein_examples / held_targets accounting on the 7 PROPOSED/MINTED
+    records that already have curated mode_of_action (cadazolid, radezolid, sutezolid,
+    sanfetrinem, tomopenem, albaconazole, quilseconazole) via record_curation_event
+    and write_validated_antibiotic during Cycle 3 Stage 5 grouped remediation.'
+  finding_ids:
+  - proposed-minted-records-with-moa-missing-primary-targets
+  target_ids: *id003
+  owner_paths:
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/cadazolid.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/radezolid.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sanfetrinem.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/sutezolid.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antibacterial/tomopenem.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/albaconazole.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  - repository: culturebotai/AntibioticMech
+    path: data/antibiotics/antifungal/quilseconazole.yaml
+    role: Curator-owned molecular_targets slot on PROPOSED/MINTED record
+  acceptance_checks:
+  - 'All 7 records carry PRIMARY_LITERATURE molecular_targets and complete UniProtKB
+    protein_examples / held_targets accounting while preserving curation_status: PROPOSED.'
+  - scripts/validate_strict.py and scripts/verify_corpus.py pass with 0 errors.
