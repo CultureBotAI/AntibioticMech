@@ -1,0 +1,197 @@
+schema_version: 1.0.0
+repository_key: antibioticmech
+github_repository: CultureBotAI/AntibioticMech
+run_id: mech-goal-sequence-20261019
+cycle: 3
+stage: 4
+revision: 1
+outcome: completed
+summary: Completed Cycle 3 Stage 4 full-inventory review of all 3,012 AntibioticRecord
+  YAML files at commit 2cc3ea13020683af56460711fbff425aa2dad456 using .claude/skills/review-yaml-record/SKILL.md
+  (20261026T003500Z-negamycin-record-review) and .claude/skills/review-yaml-category/SKILL.md
+  (20261026T003600Z-cycle3-frozen-inventory-cohort-review). Persisted both validated
+  native structured review bundles under reviews/structured/ and recorded 11 stable
+  findings (3 open findings across 12 records for Cycle 3 Stage 5 grouped remediation
+  and 8 deferred findings carried forward with explicit dispositions), reconciling
+  all 8 carried-forward finding IDs from Cycle 2 Stage 5.
+source_revision: 2cc3ea13020683af56460711fbff425aa2dad456
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000002/stage-05/revision-0001/evidence.yaml
+  sha256: 1a5b6e95826902c22b6c13f68866d59295a9092590acef86b91f294e13327269
+artifacts:
+- kind: review_report
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_report.md
+  sha256: fbb79a711b06bf19b2d15f20d50feb054a519420960b809521c9756456999b90
+- kind: review_findings
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-04/revision-0001/review_findings.yaml
+  sha256: 3bb30eddc77543d6a2f7e437b4177cffba0e73d7192e0d15c0f6f3f6c40fe6d2
+findings:
+- finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  status: open
+  summary: 'Two PROPOSED EXACT ChEBI records have complete primary-literature mechanism
+    and target curation but remain curation_status: PROPOSED (2 target(s): CHEBI:138579,
+    CHEBI:198310). Two EXACT ChEBI records seeded in Cycle 3 Stage 1 — bactobolin
+    A (CHEBI:138579, Chandler et al. 2012 DOI:10.1128/mBio.00499-12 / PMID:23249812;
+    Amunts et al. 2015 DOI:10.1016/j.jmb.2014.12.018 / PMID:25562208) and negamycin
+    (CHEBI:198310, DOI:10.1073/pnas.1414401111 / PMID:25368144; DOI:10.1016/j.molcel.2014.09.021
+    / PMID:25306922) — possess exact single-molecule chemical_structure, curated biosynthesis_origin
+    (NATURAL_PRODUCT), curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION) with
+    mode_of_action_target_scope: MICROBIAL_TARGET and CURATOR mode_of_action_notes,
+    source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets,
+    and complete UniProtKB accounting (bactobolin A carries reviewed UniProtKB:P42919
+    and UniProtKB:P60405 protein_examples on 50S ribosomal subunit protein uL2 / RplB,
+    while negamycin carries a documented RIBOSOMAL_SUBUNIT hold in curation/uniprot_protein_examples.yaml),
+    yet retain curation_status: PROPOSED.'
+  carried_from: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+- finding_id: proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
+  status: open
+  summary: 'Three PROPOSED EXACT fluoroquinolone records have curated mode_of_action
+    and primary target citations but lack structured PRIMARY_LITERATURE molecular_targets
+    and REVIEWED promotion (3 target(s): CHEBI:135622, CHEBI:136050, CHEBI:94700).
+    Three PROPOSED antibacterial fluoroquinolone records with grounding_status: EXACT
+    and complete single-molecule chemical_structure — besifloxacin (CHEBI:135622,
+    Cambau et al. 2009 DOI:10.1093/jac/dkn528 / PMID:19451292; DOI:10.1128/AAC.00418-09
+    / PMID:19506065), ozenoxacin (CHEBI:136050, Tato et al. 2014 DOI:10.1128/AAC.01509-13
+    / PMID:24080666; Yamakawa et al. 2002 DOI:10.1128/AAC.46.5.1229-1234.2002 / PMID:11959549;
+    Lopez et al. 2014 PMID:24752267), and pazufloxacin (CHEBI:94700, DOI:10.1128/AAC.37.3.384
+    / PMID:8460909; PMID:11959571) — already carry curated biosynthesis_origin: SYNTHETIC,
+    mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION (MICROBIAL_TARGET), and CURATOR
+    mode_of_action_notes describing dual inhibition of bacterial DNA gyrase (GyrA/GyrB)
+    and topoisomerase IV (ParC/ParE), but lack structured source: PRIMARY_LITERATURE
+    molecular_targets (and reviewed UniProtKB protein_examples) and remain curation_status:
+    PROPOSED.'
+- finding_id: proposed-minted-records-with-moa-missing-primary-targets
+  status: open
+  summary: 'Seven PROPOSED MINTED records have curated mode_of_action and primary
+    target citations but lack structured PRIMARY_LITERATURE molecular_targets (7 target(s):
+    antibioticmech:curator-975acd7c4d, antibioticmech:curator-a739fc0555, antibioticmech:curator-daae3d88a3,
+    antibioticmech:curator-f56d459cee, antibioticmech:curator-e14f58e6dc, antibioticmech:curator-6bdee75cea...).
+    Seven PROPOSED/MINTED records with exact single-molecule chemical_structure, curated
+    biosynthesis_origin, curated mode_of_action (MICROBIAL_TARGET), and CURATOR mode_of_action_notes
+    — cadazolid (antibioticmech:curator-975acd7c4d, Locher et al. 2014 DOI:10.1093/jac/dkt411
+    / PMID:24128668; Baldoni et al. 2014 DOI:10.1128/AAC.01789-13; PMID:24798276),
+    radezolid (antibioticmech:curator-a739fc0555, Locke et al. 2009 DOI:10.1128/AAC.00962-09
+    / PMID:19752277; Skripkin et al. 2008 DOI:10.1128/AAC.01193-07; PMID:22508309),
+    sutezolid (antibioticmech:curator-f56d459cee, Williams et al. 2009 DOI:10.1128/AAC.01182-08
+    / PMID:19075058; Barbachyn et al. 1996 DOI:10.1021/jm950956y; PMID:19687246),
+    sanfetrinem (antibioticmech:curator-daae3d88a3, Singh et al. 1996 DOI:10.1128/AAC.40.9.2142
+    / PMID:8878596; Di Modugno et al. 1994 DOI:10.1128/AAC.38.10.2362; PMID:8540693),
+    tomopenem (antibioticmech:curator-e14f58e6dc, Koga et al. 2005 DOI:10.1128/AAC.49.8.3239-3250.2005
+    / PMID:16048932; PMID:18070969), albaconazole (antibioticmech:curator-6bdee75cea,
+    Carrillo & Guarro 2001 DOI:10.1128/AAC.45.7.2151-2153.2001 / PMID:11408242; Ramos
+    et al. 1999 DOI:10.1128/AAC.43.12.2992; PMID:11061504), and quilseconazole (antibioticmech:curator-217ed2935e,
+    Lockhart et al. 2016 DOI:10.1128/AAC.02770-15 / PMID:26787697; Warrilow et al.
+    2016 DOI:10.1128/AAC.00349-16; PMID:27161862) — cite primary target studies in
+    mode_of_action_notes/source_concepts but lack structured PRIMARY_LITERATURE molecular_targets
+    (and UniProtKB protein_examples / held_targets accounting).'
+- finding_id: mcr43-context
+  status: deferred
+  summary: 'Contrasting functional contexts and component-specific grounding for MCR-4.3
+    remain unresolved (2 target(s): CHEBI:59064, CHEBI:59673). CARD ARO:3004695 (MCR-4.3)
+    on colistin A (CHEBI:59064) and colistin B (CHEBI:59673) carries source-owned
+    qualifications via curation/card_evidence_reviews.json, but purified component-specific
+    experimental testing and primary supplement reconciliation remain unresolved.'
+  disposition: Source-owned qualification notes are already projected via curation/card_evidence_reviews.json;
+    component-specific experimental grounding requires external primary experimental
+    data not available in local cached sources.
+  carried_from: mcr43-context
+- finding_id: eatav-compound
+  status: deferred
+  summary: 'Tested pleuromutilin derivative (tiamulin) in eatAv study does not ground
+    parent pleuromutilin (1 target(s): CHEBI:8269). CARD ARO:3003761 (eatAv) on pleuromutilin
+    (CHEBI:8269) cites PMID:23751969, which tested tiamulin rather than parent pleuromutilin;
+    source-owned qualification is projected via curation/card_evidence_reviews.json.'
+  disposition: Derivative-versus-parent qualification note is already projected via
+    curation/card_evidence_reviews.json; exact parent pleuromutilin experimental testing
+    is absent from the cited primary study.
+  carried_from: eatav-compound
+- finding_id: msrc-evidence
+  status: deferred
+  summary: 'Early msrC association study does not establish exclusive causality or
+    target-protection mechanism (2 target(s): CHEBI:42355, CHEBI:8732). CARD ARO:3002819
+    (msrC) on erythromycin A (CHEBI:42355) and quinupristin (CHEBI:8732) cites PMID:11120975,
+    which reports susceptibility shifts without proving exclusive target-protection
+    causality.'
+  disposition: Awaits later primary mechanistic evidence curation and native gene-field
+    representation on source-owned ResistanceMechanismEntry items.
+  carried_from: msrc-evidence
+- finding_id: ddl-scope
+  status: deferred
+  summary: 'Generic D-Ala-D-Ala ligase reference on vancomycin leaves tested alteration
+    unresolved (1 target(s): CHEBI:28001). CARD ARO:3003970 (D-Ala-D-Ala ligase) on
+    vancomycin (CHEBI:28001) cites PMID:11266628 (abstract-only access; full text
+    under publisher HTTP 403 hold) and review PMID:16323117.'
+  disposition: Full-text primary results for PMID:11266628 remain unavailable under
+    publisher HTTP 403 access hold; experimental allele identity cannot be inferred
+    from abstract or review text.
+  carried_from: ddl-scope
+- finding_id: mexjk-role-conflict
+  status: deferred
+  summary: 'Upstream CARD aro.owl reverses MexJ and MexK component roles in MexJK-OpmH
+    relative to MexJK-OprM (4 target(s): CHEBI:42355, CHEBI:27902, CHEBI:164200, antibioticmech:aro-1fe0873afd).
+    Upstream aro.owl assigns opposite inner-membrane versus periplasmic-adaptor restrictions
+    for MexJ (ARO:3003692) and MexK (ARO:3003693) in MexJK-OpmH (ARO:3003694) relative
+    to MexJK-OprM (ARO:3000802), affecting complex provenance on erythromycin A (CHEBI:42355),
+    tetracycline (CHEBI:27902), triclosan (CHEBI:164200), and acriflavine (antibioticmech:aro-1fe0873afd).'
+  disposition: Primary papers PMID:12193619 and PMID:12951344 remain under publisher
+    HTTP 403 hold, and generated AntibioticRecord files do not store subcomponent
+    role restrictions; preserved without guessing which upstream CARD restriction
+    is correct.
+  carried_from: mexjk-role-conflict
+- finding_id: reviewed-records-awaiting-causal-graphs
+  status: deferred
+  summary: '33 REVIEWED records await primary-literature causal_graphs and ofloxacin
+    is blocked by structureless CHEBI:7731 (34 target(s): CHEBI:28429, CHEBI:228412,
+    CHEBI:172922, CHEBI:156451, CHEBI:17351, CHEBI:16196...). After Cycle 3 Stage
+    2 curated primary-literature causal_graphs on 13 additional REVIEWED records,
+    63 of the 96 REVIEWED records now carry causal_graphs while 33 of the 96 REVIEWED
+    records have verified primary-literature mode_of_action and molecular_targets
+    but do not yet have curated causal_graphs; additionally, ofloxacin (antibioticmech:aro-2eea3233f3)
+    has a primary-literature causal graph (PMID:2849927, with reviewed UniProtKB protein_examples
+    P0AES4/P0AES6 on dna_gyrase) and CARD_ARO molecular_targets but remains SEEDED/MINTED
+    because racemic CHEBI:7731 lacks a 2D molfile in ChEBI v249.'
+  disposition: 'Curating new multi-step primary-literature causal_graphs across 33
+    additional REVIEWED compounds and resolving upstream ChEBI structure availability
+    for racemic CHEBI:7731 are multi-cycle corpus expansion tasks tracked in Issue
+    #1257 outside bounded Stage 5 coherence remediation.'
+  carried_from: reviewed-records-awaiting-causal-graphs
+- finding_id: proposed-antibacterial-records-awaiting-grounding-and-mechanism
+  status: deferred
+  summary: '66 PROPOSED literature-seeded records await primary mechanism curation
+    and structure registration (66 target(s): CHEBI:44909, antibioticmech:curator-9412b5ca77,
+    antibioticmech:curator-f8f4ef7fbd, antibioticmech:curator-8edc5e6516, CHEBI:2873,
+    CHEBI:109543...). 66 of the 97 PROPOSED records across data/antibiotics/ (22 EXACT
+    ChEBI, 44 MINTED without exact ChEBI structure) have CURATOR discovery literature
+    citations and verified single-molecule structures (on 64/66), but do not yet have
+    curated mode_of_action, PRIMARY_LITERATURE molecular_targets, or causal_graphs.'
+  disposition: 'Requires compound-by-compound primary mechanism literature retrieval
+    and upstream ChEBI structure registration across future dedicated curation cycles
+    (tracked in Issue #1258).'
+  carried_from: proposed-antibacterial-records-awaiting-grounding-and-mechanism
+- finding_id: minted-aro-records-without-exact-chebi-structure
+  status: deferred
+  summary: '240 SEEDED MINTED records lack an exact single-molecule ChEBI chemical_structure
+    (240 target(s): antibioticmech:aro-ab7143cd24, antibioticmech:aro-3b4e0b6d96,
+    antibioticmech:aro-e4e652725f, antibioticmech:aro-e83eaf8a8a, antibioticmech:aro-34c0642a61,
+    antibioticmech:aro-b0e6c47827...). 240 SEEDED records carry minted antibioticmech:aro-*
+    identifiers and grounding_status: MINTED because upstream CARD ARO terms or ChEBI
+    v249 entries represent antibiotic classes, multi-component mixtures, polymers,
+    or structureless entries.'
+  disposition: 'REVIEWED promotion is intentionally gated by structure_completeness_audit
+    until exact single-molecule ChEBI structures or complex-mixture policy support
+    is available (tracked in Issue #1259).'
+  carried_from: minted-aro-records-without-exact-chebi-structure
+groups: []
+carry_forward_ids:
+- proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+- proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
+- proposed-minted-records-with-moa-missing-primary-targets
+- mcr43-context
+- eatav-compound
+- msrc-evidence
+- ddl-scope
+- mexjk-role-conflict
+- reviewed-records-awaiting-causal-graphs
+- proposed-antibacterial-records-awaiting-grounding-and-mechanism
+- minted-aro-records-without-exact-chebi-structure
+infra_tasks: []
