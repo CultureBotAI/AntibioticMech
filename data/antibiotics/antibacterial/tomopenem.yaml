@@ -63,9 +63,40 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=CELL_WALL_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for bacterial penicillin-binding
+    proteins (including MRSA PBP2a and Pseudomonas aeruginosa PBPs) (PROTEIN, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1128/AAC.49.8.3239-3250.2005 (PMID:16048932; issue #1286).'
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 1beta-Methylcarbapenem (CS-023) that acylates bacterial penicillin-binding
   proteins (including high affinity for MRSA PBP2a) and inhibits peptidoglycan cell-wall
   biosynthesis (PMID:18070969).
+molecular_targets:
+- target_label: bacterial penicillin-binding proteins (including MRSA PBP2a and Pseudomonas
+    aeruginosa PBPs)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: High-affinity acylation of essential bacterial penicillin-binding
+    proteins, including PBP2a (mecA) in methicillin-resistant Staphylococcus aureus
+    and PBPs in Pseudomonas aeruginosa, by CS-023 / tomopenem (Koga et al. 2005, DOI:10.1128/AAC.49.8.3239-3250.2005,
+    PMID:16048932).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2005-08
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.49.8.3239-3250.2005
+    snippet: Koga et al. reported that CS-023 (R-115685, tomopenem) exhibited potent
+      antibacterial activity against methicillin-resistant Staphylococcus aureus and
+      Pseudomonas aeruginosa through high-affinity binding to bacterial penicillin-binding
+      proteins, including PBP2a in MRSA.
+    notes: Koga et al. 2005 (PMID:16048932) and Koga et al. 2008 (PMID:18070969) demonstrated
+      high-affinity binding of CS-023 (tomopenem) to MRSA PBP2a and P. aeruginosa
+      PBPs, inhibiting bacterial peptidoglycan cross-linking.

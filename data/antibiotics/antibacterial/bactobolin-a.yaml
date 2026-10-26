@@ -1,7 +1,7 @@
 identifier: CHEBI:138579
 label: bactobolin A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A Burkholderia thailandensis dichloromethyl bicyclic lactone-alanine hybrid
   antibiotic that binds the bacterial ribosome at the P-site tRNA/23S rRNA/ribosomal
@@ -73,6 +73,14 @@ curation_history:
   changes: Added reviewed UniProtKB:P42919 (Bacillus subtilis 168 rplB, BSU01130)
     and UniProtKB:P60405 (Thermus thermophilus HB8 rplB, TTHA1676) protein examples
     to the PRIMARY_LITERATURE molecular target (DOI:10.1128/mBio.00499-12).
+  llm_assisted: true
+- timestamp: '2026-10-26T07:10:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted curation_status from PROPOSED to REVIEWED after verifying exact
+    ChEBI:138579 identity, definition, antimicrobial_class, mechanisms_of_action,
+    and primary-literature molecular_targets with reviewed UniProtKB:P42919 and UniProtKB:P60405
+    protein_examples (issue #1284).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION

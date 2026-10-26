@@ -60,9 +60,57 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for fungal lanosterol
+    14-alpha-demethylase (CYP51 / Erg11) (PROTEIN, DIRECT_BINDING_TARGET) backed by
+    DOI:10.1128/AAC.02770-15 (PMID:26787699; issue #1286).'
+  llm_assisted: true
+- timestamp: '2026-10-26T07:05:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Candida albicans SC5314 Erg11 (UniProtKB:P10613) protein_examples
+    to the primary-literature fungal lanosterol 14-alpha-demethylase target (DOI:10.1128/AAC.02770-15;
+    PMID:26787699; PMID:27161862).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 1-Tetrazole antifungal (VT-1129) that selectively coordinates
   the active-site heme iron of fungal lanosterol 14alpha-demethylase (CYP51) and inhibits
   ergosterol biosynthesis in Cryptococcus species (PMID:27161862).
+molecular_targets:
+- target_label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  experimental_context: Selective 1-tetrazole coordination of fungal cytochrome P450
+    sterol 14-alpha-demethylase (CYP51 / Erg11) heme iron by VT-1129 / quilseconazole
+    (Lockhart et al. 2016, DOI:10.1128/AAC.02770-15, PMID:26787699; Warrilow et al.
+    2016, PMID:27161862).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2016-04
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.02770-15
+    snippet: VT-1129 is a novel oral fungal-specific CYP51 inhibitor that potently
+      inhibits Cryptococcus neoformans and Cryptococcus gattii sterol 14-alpha-demethylase
+      while exhibiting minimal activity against human cytochrome P450 enzymes.
+    notes: Lockhart et al. 2016 (PMID:26787699) and Warrilow et al. 2016 (PMID:27161862)
+      demonstrated tight type II binding of VT-1129 (quilseconazole) to fungal CYP51
+      (Kd 11-14 nM) and potent inhibition of fungal sterol 14-alpha-demethylase activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P10613
+    protein_label: Lanosterol 14-alpha demethylase
+    gene_symbol: ERG11
+    taxon_id: NCBITaxon:237561
+    taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) directly bound with
+      nanomolar affinity by the 1-tetrazole inhibitor VT-1129 / quilseconazole (DOI:10.1128/AAC.02770-15;
+      PMID:26787699; PMID:27161862; Cryptococcus neoformans CYP51 Q9UVX5 is unreviewed
+      TrEMBL).

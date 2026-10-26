@@ -1,7 +1,7 @@
 identifier: CHEBI:94700
 label: pazufloxacin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A (3S)-10-(1-aminocyclopropyl)-9-fluoro-3-methyl-7-oxo-2,3-dihydro-7H-[1,4]oxazino[2,3,4-ij]quinoline-6-carboxylic
   acid fluoroquinolone antibacterial that inhibits bacterial DNA gyrase and topoisomerase
@@ -59,8 +59,89 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=NUCLEIC_ACID_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for bacterial DNA gyrase
+    and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.37.3.384
+    (PMID:8384811; issue #1285).'
+  llm_assisted: true
+- timestamp: '2026-10-26T07:05:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Escherichia coli K-12 GyrA, GyrB, ParC, and ParE (UniProtKB:P0AES4,
+    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples to the
+    primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.37.3.384;
+    PMID:8384811).
+  llm_assisted: true
+- timestamp: '2026-10-26T07:10:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted curation_status from PROPOSED to REVIEWED after curating primary-literature
+    molecular_targets and reviewed UniProtKB protein_examples and verifying exact
+    ChEBI:94700 identity (issue #1285).'
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 1-Aminocyclopropyl fluoroquinolone that inhibits bacterial DNA
   gyrase and topoisomerase IV to block bacterial DNA replication (PMID:11959571).
+molecular_targets:
+- target_label: bacterial DNA gyrase and topoisomerase IV
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified bacterial DNA gyrase DNA supercoiling inhibition
+    and topoisomerase IV assays with T-3761 / pazufloxacin (Fukuoka et al. 1993, DOI:10.1128/AAC.37.3.384,
+    PMID:8384811).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1993-03
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.37.3.384
+    snippet: Fukuoka et al. reported that T-3761 (pazufloxacin) showed potent broad-spectrum
+      antibacterial activity against Gram-negative and Gram-positive bacteria and
+      inhibited bacterial DNA gyrase supercoiling activity.
+    notes: Fukuoka et al. 1993 (PMID:8384811) measured direct inhibition of bacterial
+      DNA gyrase supercoiling activity and rapid bactericidal action by T-3761 (pazufloxacin).
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling
+      activity is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384;
+      PMID:8384811).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme
+      inhibited by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384;
+      PMID:8384811).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone T-3761
+      / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8384811).
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme
+      co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8384811).

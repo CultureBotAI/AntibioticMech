@@ -55,9 +55,40 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for bacterial 50S ribosomal
+    subunit peptidyl-transferase center (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1093/jac/dkt411 (PMID:24176982; issue #1286).'
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Quinolonyl-oxazolidinone hybrid antibiotic that primarily inhibits
   bacterial protein synthesis at the 50S ribosomal subunit and secondarily inhibits
   DNA synthesis in Clostridioides difficile (PMID:24798276).
+molecular_targets:
+- target_label: bacterial 50S ribosomal subunit peptidyl-transferase center
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1496
+  taxon_label: Clostridioides difficile
+  experimental_context: Clostridioides difficile macromolecular biosynthesis and cell-free
+    coupled transcription-translation inhibition assays demonstrating primary 50S
+    ribosomal protein-synthesis inhibition (IC50 0.08-0.31 ug/mL) and secondary weak
+    DNA synthesis inhibition (Locher et al. 2014, DOI:10.1093/jac/dkt411, PMID:24176982).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-03
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1093/jac/dkt411
+    snippet: Cadazolid is a novel quinoxolidinone antibiotic that potently inhibits
+      Clostridium difficile protein synthesis, including in linezolid-resistant strains,
+      and prevents toxin A/B and spore formation while also weakly inhibiting DNA
+      synthesis.
+    notes: Locher et al. 2014 (PMID:24176982) demonstrated by macromolecular labeling
+      and cell-free translation assays in C. difficile that cadazolid acts primarily
+      by inhibiting bacterial ribosomal protein synthesis (IC50 0.08-0.31 ug/mL),
+      with >60-fold weaker secondary inhibition of DNA synthesis.

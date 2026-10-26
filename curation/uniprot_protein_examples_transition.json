@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 57,
+  "record_count": 62,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -2997,6 +2997,311 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added reviewed UniProtKB:Q4WNT5 (Aspergillus fumigatus Af293 cyp51A, AFUA_4G06890) and UniProtKB:E9QY26 (Aspergillus fumigatus Af293 cyp51B, AFUA_7G03740) protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.02280-16).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:135622",
+      "label": "besifloxacin",
+      "path": "data/antibiotics/antibacterial/besifloxacin.yaml",
+      "before_sha256": "a56ef937e4e3a675209d730e691c1292022323e30e6ce5d2d08cc36f1aeb486d",
+      "after_sha256": "525245393531a2ec927d8af968d61f22e9f71aef9d27cb26159b857a49ee5bfc",
+      "unchanged_fields_sha256": "f89b9ea87e844212f3c65e324da8f42be3176665f0403570663bf5dbcda28e78",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P72525",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:170187",
+              "taxon_label": "Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Streptococcus pneumoniae topoisomerase IV ParC catalytic subunit inhibited with balanced potency alongside DNA gyrase by besifloxacin in purified enzyme and step-wise mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19129275)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Bacterial DNA gyrase GyrA catalytic subunit inhibited in purified Escherichia coli supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19129275)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified Escherichia coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19129275)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-26T07:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and Escherichia coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples to the primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1093/jac/dkn528; PMID:19129275).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:136050",
+      "label": "ozenoxacin",
+      "path": "data/antibiotics/antibacterial/ozenoxacin.yaml",
+      "before_sha256": "e7bc7898e38a8086a33f5507ed07671438a8a7bce6ac937bcf23cb1f88edc521",
+      "after_sha256": "c8da44cf83fc9f57ffaebc19a653a08c51fd2dab89889c12bf9dd561cc192a90",
+      "unchanged_fields_sha256": "17e82e315a282aedd47e4ff75e3d4898a782b6240b2dcfce0d1412e64ed79348",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA gyrase and topoisomerase IV",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P72525",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:170187",
+              "taxon_label": "Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Streptococcus pneumoniae topoisomerase IV ParC subunit targeted by the nonfluorinated quinolone T-3912 / ozenoxacin across wild-type and QRDR-mutant strains (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Bacterial DNA gyrase GyrA catalytic subunit targeted by T-3912 / ozenoxacin in Gram-positive and Gram-negative topoisomerase inhibition assays (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Bacterial topoisomerase IV ParC catalytic subunit targeted by T-3912 / ozenoxacin alongside DNA gyrase (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-26T07:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and Escherichia coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples to the primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:94700",
+      "label": "pazufloxacin",
+      "path": "data/antibiotics/antibacterial/pazufloxacin.yaml",
+      "before_sha256": "4a649de94d24cfc8f781003d00367669704ed03747aad8f7490bb72be8da52aa",
+      "after_sha256": "6e9357a1cad06edc58b97f818a14d0f04749fc33e41b51ccba20cc41e854c3d7",
+      "unchanged_fields_sha256": "bf753ee587bd4a38a7ef0e2a7c83de5b2c59c1a85ed692f11cc8d3daa361d7e0",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 4,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA gyrase and topoisomerase IV",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling activity is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8384811)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme inhibited by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384; PMID:8384811)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8384811)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P20083",
+              "protein_label": "DNA topoisomerase 4 subunit B",
+              "gene_symbol": "parE",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8384811)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-26T07:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 GyrA, GyrB, ParC, and ParE (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples to the primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.37.3.384; PMID:8384811).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-6bdee75cea",
+      "label": "albaconazole",
+      "path": "data/antibiotics/antifungal/albaconazole.yaml",
+      "before_sha256": "d2755aed73b0d1e6a7f445aeccb714586df10255a58f752f4d6d4dc353d4998b",
+      "after_sha256": "39d231ad8cd74b4feb6ffce5c97dbb1028c1df16e9b46b305698d46d9ef00adc",
+      "unchanged_fields_sha256": "f2c60c1fa7b79170c451b31b4a8ded0279b718d75da544217fe4633887ab0a68",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P10613",
+              "protein_label": "Lanosterol 14-alpha demethylase",
+              "gene_symbol": "ERG11",
+              "taxon_id": "NCBITaxon:237561",
+              "taxon_label": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Fungal cytochrome P450 lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida albicans inhibited by the triazole antifungal UR-9825 / albaconazole (DOI:10.1128/AAC.45.7.2151-2153.2001; PMID:11408242; PMID:10223958)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P50859",
+              "protein_label": "Lanosterol 14-alpha demethylase",
+              "gene_symbol": "ERG11",
+              "taxon_id": "NCBITaxon:284593",
+              "taxon_label": "Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 / NRRL Y-65 / CBS 138)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata targeted by broad-spectrum triazole UR-9825 / albaconazole (DOI:10.1128/AAC.45.7.2151-2153.2001; PMID:10223958)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-26T07:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Candida albicans SC5314 and Candida glabrata CBS 138 Erg11 (UniProtKB:P10613, UniProtKB:P50859) protein_examples to the primary-literature fungal lanosterol 14-alpha-demethylase target (DOI:10.1128/AAC.45.7.2151-2153.2001; PMID:11408242).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-217ed2935e",
+      "label": "quilseconazole",
+      "path": "data/antibiotics/antifungal/quilseconazole.yaml",
+      "before_sha256": "198aaf781a00d5f42d30842118217be7cba476cbeaac06c3339749493a5021a3",
+      "after_sha256": "ffc407cbc8ea339ff449c5687a5a91e7ca8031810ea4c18dc44b48065c98477c",
+      "unchanged_fields_sha256": "588786eaa4ccdb22d85ec77b49d116414f407969da923ccd105af8c2d8ed3d78",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P10613",
+              "protein_label": "Lanosterol 14-alpha demethylase",
+              "gene_symbol": "ERG11",
+              "taxon_id": "NCBITaxon:237561",
+              "taxon_label": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-26",
+              "role": "Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) directly bound with nanomolar affinity by the 1-tetrazole inhibitor VT-1129 / quilseconazole (DOI:10.1128/AAC.02770-15; PMID:26787699; PMID:27161862; Cryptococcus neoformans CYP51 Q9UVX5 is unreviewed TrEMBL)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-26T07:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Candida albicans SC5314 Erg11 (UniProtKB:P10613) protein_examples to the primary-literature fungal lanosterol 14-alpha-demethylase target (DOI:10.1128/AAC.02770-15; PMID:26787699; PMID:27161862).",
         "llm_assisted": true
       }
     }
