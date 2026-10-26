@@ -54662,14 +54662,17 @@ findings:
   certainty: confirmed
   title: 'Two PROPOSED EXACT ChEBI records have complete primary-literature mechanism
     and target curation but remain curation_status: PROPOSED'
-  description: 'Two EXACT ChEBI records seeded in Cycle 3 Stage 1 and curated in Cycle
-    3 Stage 2 — bactobolin A (CHEBI:138579, DOI:10.1073/pnas.1419328112 / PMID:25733897)
-    and negamycin (CHEBI:198310, DOI:10.1073/pnas.1414401111 / PMID:25368144; DOI:10.1016/j.molcel.2014.09.021
+  description: 'Two EXACT ChEBI records seeded in Cycle 3 Stage 1 — bactobolin A (CHEBI:138579,
+    Chandler et al. 2012 DOI:10.1128/mBio.00499-12 / PMID:23249812; Amunts et al.
+    2015 DOI:10.1016/j.jmb.2014.12.018 / PMID:25562208) and negamycin (CHEBI:198310,
+    DOI:10.1073/pnas.1414401111 / PMID:25368144; DOI:10.1016/j.molcel.2014.09.021
     / PMID:25306922) — possess exact single-molecule chemical_structure, curated biosynthesis_origin
     (NATURAL_PRODUCT), curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION) with
     mode_of_action_target_scope: MICROBIAL_TARGET and CURATOR mode_of_action_notes,
     source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets,
-    and documented RIBOSOMAL_SUBUNIT holds in curation/uniprot_protein_examples.yaml,
+    and complete UniProtKB accounting (bactobolin A carries reviewed UniProtKB:P42919
+    and UniProtKB:P60405 protein_examples on 50S ribosomal subunit protein uL2 / RplB,
+    while negamycin carries a documented RIBOSOMAL_SUBUNIT hold in curation/uniprot_protein_examples.yaml),
     yet retain curation_status: PROPOSED.'
   target_ids:
   - CHEBI:138579
@@ -54709,12 +54712,13 @@ findings:
   description: 'Three PROPOSED antibacterial fluoroquinolone records with grounding_status:
     EXACT and complete single-molecule chemical_structure — besifloxacin (CHEBI:135622,
     Cambau et al. 2009 DOI:10.1093/jac/dkn528 / PMID:19451292; DOI:10.1128/AAC.00418-09
-    / PMID:19506065), ozenoxacin (CHEBI:136050, Yamakawa et al. 2002 DOI:10.1128/AAC.46.5.1229-1234.2002
-    / PMID:11959549; Lopez et al. 2014 PMID:24752267), and pazufloxacin (CHEBI:94700,
-    DOI:10.1128/AAC.37.3.384 / PMID:8460909; PMID:11959571) — already carry curated
-    biosynthesis_origin: SYNTHETIC, mode_of_action: DNA_REPLICATION_INHIBITION (MICROBIAL_TARGET),
-    and CURATOR mode_of_action_notes describing dual inhibition of bacterial DNA gyrase
-    (GyrA/GyrB) and topoisomerase IV (ParC/ParE), but lack structured source: PRIMARY_LITERATURE
+    / PMID:19506065), ozenoxacin (CHEBI:136050, Tato et al. 2014 DOI:10.1128/AAC.01509-13
+    / PMID:24080666; Yamakawa et al. 2002 DOI:10.1128/AAC.46.5.1229-1234.2002 / PMID:11959549;
+    Lopez et al. 2014 PMID:24752267), and pazufloxacin (CHEBI:94700, DOI:10.1128/AAC.37.3.384
+    / PMID:8460909; PMID:11959571) — already carry curated biosynthesis_origin: SYNTHETIC,
+    mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION (MICROBIAL_TARGET), and CURATOR
+    mode_of_action_notes describing dual inhibition of bacterial DNA gyrase (GyrA/GyrB)
+    and topoisomerase IV (ParC/ParE), but lack structured source: PRIMARY_LITERATURE
     molecular_targets (and reviewed UniProtKB protein_examples) and remain curation_status:
     PROPOSED.'
   target_ids:
@@ -54750,15 +54754,21 @@ findings:
   description: Seven PROPOSED/MINTED records with exact single-molecule chemical_structure,
     curated biosynthesis_origin, curated mode_of_action (MICROBIAL_TARGET), and CURATOR
     mode_of_action_notes — cadazolid (antibioticmech:curator-975acd7c4d, Locher et
-    al. 2014 DOI:10.1128/AAC.02158-13 / PMID:24366740), radezolid (antibioticmech:curator-a739fc0555,
-    Lawrence et al. 2008 DOI:10.1128/AAC.01990-08 / PMID:19332677), sutezolid (antibioticmech:curator-f56d459cee,
-    Williams et al. 2009 DOI:10.1128/AAC.00059-07 / PMID:18056279), sanfetrinem (antibioticmech:curator-daae3d88a3,
-    Di Modugno et al. 1994 DOI:10.1128/AAC.38.10.2362 / PMID:7840571), tomopenem (antibioticmech:curator-e14f58e6dc,
-    Koga et al. 2008 DOI:10.1128/AAC.00105-08 / PMID:18519725), albaconazole (antibioticmech:curator-6bdee75cea,
-    Bartroli et al. 1998 DOI:10.1021/jm9707277 / PMID:9602591), and quilseconazole
-    (antibioticmech:curator-217ed2935e, Warrilow et al. 2017 DOI:10.1128/AAC.02116-16
-    / PMID:27919896) — cite primary target studies in mode_of_action_notes/source_concepts
-    but lack structured PRIMARY_LITERATURE molecular_targets (and UniProtKB protein_examples
+    al. 2014 DOI:10.1093/jac/dkt411 / PMID:24128668; Baldoni et al. 2014 DOI:10.1128/AAC.01789-13;
+    PMID:24798276), radezolid (antibioticmech:curator-a739fc0555, Locke et al. 2009
+    DOI:10.1128/AAC.00962-09 / PMID:19752277; Skripkin et al. 2008 DOI:10.1128/AAC.01193-07;
+    PMID:22508309), sutezolid (antibioticmech:curator-f56d459cee, Williams et al.
+    2009 DOI:10.1128/AAC.01182-08 / PMID:19075058; Barbachyn et al. 1996 DOI:10.1021/jm950956y;
+    PMID:19687246), sanfetrinem (antibioticmech:curator-daae3d88a3, Singh et al. 1996
+    DOI:10.1128/AAC.40.9.2142 / PMID:8878596; Di Modugno et al. 1994 DOI:10.1128/AAC.38.10.2362;
+    PMID:8540693), tomopenem (antibioticmech:curator-e14f58e6dc, Koga et al. 2005
+    DOI:10.1128/AAC.49.8.3239-3250.2005 / PMID:16048932; PMID:18070969), albaconazole
+    (antibioticmech:curator-6bdee75cea, Carrillo & Guarro 2001 DOI:10.1128/AAC.45.7.2151-2153.2001
+    / PMID:11408242; Ramos et al. 1999 DOI:10.1128/AAC.43.12.2992; PMID:11061504),
+    and quilseconazole (antibioticmech:curator-217ed2935e, Lockhart et al. 2016 DOI:10.1128/AAC.02770-15
+    / PMID:26787697; Warrilow et al. 2016 DOI:10.1128/AAC.00349-16; PMID:27161862)
+    — cite primary target studies in mode_of_action_notes/source_concepts but lack
+    structured PRIMARY_LITERATURE molecular_targets (and UniProtKB protein_examples
     / held_targets accounting).
   target_ids:
   - antibioticmech:curator-975acd7c4d
