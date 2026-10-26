@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/new_history_record.py
+  slug: session-history-sidecars
+session:
+  id: 2026-10-14T195439Z-claude-code-b242c7
+  timestamp: '2026-10-14T19:54:39Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-5-5
+    agent_tool: claude-code
+links:
+  issues:
+  - https://github.com/CultureBotAI/AntibioticMech/issues/205
+events:
+- type: CREATE
+  outcome: changed
+  summary: Port the session-history sidecar layer from CellStructureMech
+  details: 'Ported the session-history sidecar layer from CellStructureMech (origin/main 6c33c1c7):
+    scripts/new_history_record.py, validate_history.py and validate_history_links.py, tests/test_new_history_record.py,
+    history/README.md, the new-history and validate-history recipes, a "history records" step
+    in scripts/run_qc.py, and the CLAUDE.md instruction. run_qc.py is where CellStructureMech
+    checks validity; its verify-merge-integrity.yaml has no history step and is claw-vendored.
+    Unchanged: the vendored src/antibioticmech/schema/history.yaml (sha256 b01b06f1..., identical
+    to claw at the pinned canon ref) and the inline curation_history code. Adapted: package,
+    schema path and repository URL; record examples to data/antibiotics/<class-dir>/<slug>.yaml;
+    CellStructureMech issue numbers qualified; README routing for generated records and this
+    repository''s review contract; "history records" pinned in the QC-list test. Deliberate
+    divergences: slugs stay verbatim, because 85 PATHS.tsv slugs carry Greek letters and claw''s
+    sanitiser would file punicalagin, α-punicalagin and β-punicalagin in one directory; the
+    default actor name claude-code is refused when --actor-type, --agent-tool or a non-Claude
+    --model contradicts it (125 CellStructureMech and 74 HabitatMech records are named claude-code
+    while agent_tool or model names something else); the gate also validates .yml files and
+    rejects a file holding no record (empty, or an empty list), which linkml-validate alone
+    passes with exit 0; validate-history takes *args so tests/test_docs.py can see it, and
+    refuses a second path. Validated with just qc (lint, the full pytest suite, the new history
+    step) and with deliberately invalid sidecars in a temporary copy (placeholder details,
+    bad enum, missing events, bad timestamp, bare issue link, unknown field, empty file, empty
+    list, an invalid .yml), each of which the gate rejected. Left undone: no advisory presence
+    check (CellStructureMech has none) and the skills do not mention the layer yet.'

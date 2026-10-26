@@ -34,6 +34,8 @@ just worklist          # the curation backlog, ranked
 just source-queue      # the ranked data-source queue and what is unverified in it
 just render            # regenerate the committed site under pages/
 just docs-stats        # refresh the generated README statistics block
+just new-history ...   # scaffold a session-history record (history/README.md)
+just validate-history  # validate history/ against the vendored schema
 ```
 
 `just qc` is authoritative and CI runs the same runner.
@@ -93,6 +95,20 @@ refused, because it would delete records the run never built.
 **Treat extractor drift as evidence to inspect.** `data/raw/MANIFEST.yaml`
 records the sha256 of every upstream file and every emitted inventory.
 `just provenance-check` after any change to `data/raw/`.
+
+## Session history
+
+**Every curation change also gets a repository-level history record**:
+`just new-history --kind record --slug <slug> --target-root data/antibiotics/<class-dir> ...`
+(see [history/README.md](history/README.md)). One record per hand-curated target
+or per coherent bulk change; records are append-only. It complements, and does
+not replace, the `CurationEvent` a record mutation appends. Pass `--actor-name`,
+`--model` and `--agent-tool` for the harness and model that actually ran, so the
+three agree. `just validate-history` runs in `just qc`: presence is advisory,
+but a record that exists must be schema-valid.
+
+**Do not edit `src/antibioticmech/schema/history.yaml` here.** It is vendored
+byte-identically from culturebotai-claw and checked by the vendored-sync workflow.
 
 ## Skills
 
