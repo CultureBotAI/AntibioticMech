@@ -3,10 +3,11 @@
 ## Executed Validation Gates and Command Provenance
 
 1. **Native Writer Remediation and Transition Manifest Generation**
-   - Curated `PRIMARY_LITERATURE` `molecular_targets`, updated [`curation/uniprot_protein_examples.yaml`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/uniprot_protein_examples.yaml) (`records=62`, `held_targets=90`) and [`curation/uniprot_protein_examples_transition.json`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/uniprot_protein_examples_transition.json) (`sha256=3b7457cbdf4d869bc571684757448e36841bcaa4801b662e43a9d127de5cb581`), promoted 5 `EXACT` ChEBI records (`bactobolin-a`, `negamycin`, `besifloxacin`, `ozenoxacin`, `pazufloxacin`) from `curation_status: PROPOSED` to `REVIEWED` via `record_curation_event` and `write_validated_antibiotic`, updated [`curation/causal_graphs.yaml`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/causal_graphs.yaml) (`held_records` `count=38`), and recorded [`curation/cycle3_stage5_review_remediation_transition.json`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/cycle3_stage5_review_remediation_transition.json) (`sha256=78c7094b73414e48a537d8fb177eb675d6a9a394de0a38f6f1a79ddb032f1f7b`) (`task-16575`, `BypassSandbox: true`, exit code `0`):
+   - Curated `PRIMARY_LITERATURE` `molecular_targets`, updated [`curation/uniprot_protein_examples.yaml`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/uniprot_protein_examples.yaml) (`records=61`, `held_targets=91`) and [`curation/uniprot_protein_examples_transition.json`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/uniprot_protein_examples_transition.json) (`sha256=22d8abac0a2b22bb81df1f2800bc085dd00906ff53fb4962cf11d1d930ada3dd`), promoted 5 `EXACT` ChEBI records (`bactobolin-a`, `negamycin`, `besifloxacin`, `ozenoxacin`, `pazufloxacin`) from `curation_status: PROPOSED` to `REVIEWED` via `record_curation_event` and `write_validated_antibiotic`, updated [`curation/causal_graphs.yaml`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/causal_graphs.yaml) (`held_records` `count=38`), and recorded [`curation/cycle3_stage5_review_remediation_transition.json`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/curation/cycle3_stage5_review_remediation_transition.json) (`sha256=f257cd9621feabd4b715e6fff37a47361d6e387e80a388ff8311d2b8c2fc8a35`) (`task-16927`, `BypassSandbox: true`, exit code `0`):
      ```text
-     Applied UniProt examples plan: records=62, held_targets=90, transition_sha256=3b7457cbdf4d869bc571684757448e36841bcaa4801b662e43a9d127de5cb581
-     Promoted 5 records to REVIEWED; wrote curation/cycle3_stage5_review_remediation_transition.json (sha256=78c7094b73414e48a537d8fb177eb675d6a9a394de0a38f6f1a79ddb032f1f7b)
+     Restored 15 files from origin/main
+     Applied UniProt examples plan: records=61, held_targets=91, transition_sha256=22d8abac0a2b22bb81df1f2800bc085dd00906ff53fb4962cf11d1d930ada3dd
+     Promoted 5 records to REVIEWED; wrote curation/cycle3_stage5_review_remediation_transition.json (sha256=f257cd9621feabd4b715e6fff37a47361d6e387e80a388ff8311d2b8c2fc8a35)
      ```
 
 2. **Closed LinkML Schema and OAK Ontology Label Validation ([`scripts/validate_strict.py`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/scripts/validate_strict.py))**
@@ -63,7 +64,7 @@
      - Literal Output: `chemical map is current: 3012 records, trustworthiness@10=0.9725, neighbor-overlap@10=0.5030`
 
 6. **README Statistics and Static Site Pages Synchronization ([`scripts/check_docs.py`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/scripts/check_docs.py), [`scripts/render_pages.py`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/scripts/render_pages.py), [`NEXT_TASKS.md`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/NEXT_TASKS.md))**
-   - Updated [`NEXT_TASKS.md`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/NEXT_TASKS.md) (`459` records with target or resistance evidence; `99` literature-seeded compounds).
+   - Updated [`NEXT_TASKS.md`](file:///Users/marcin/Documents/VIMSS/ontology/Mechs/AntibioticMech/NEXT_TASKS.md) (`459` records with target or resistance evidence; `64` of `3,012` records carry a `PRIMARY_LITERATURE` `MolecularTarget` (`53` with reviewed `UniProtKB` `protein_examples` across `51` records); `99` literature-seeded compounds).
    - Refresh Run (`task-16598`, `BypassSandbox: true`, after `task-16597` with `BypassSandbox: false` failed with `PermissionError: [Errno 1] Operation not permitted: 'README.md'`):
      - Command: `.venv/bin/python scripts/check_docs.py --write && .venv/bin/python scripts/render_pages.py`
      - Exit Code: `0`
@@ -109,9 +110,9 @@
        ```
 
 8. **Pytest and Ruff Validation Suites**
-   - UniProt Protein Examples & Causal Graphs Suites (`task-16588`, `BypassSandbox: false`):
-     - Command: `.venv/bin/python -m pytest -q tests/test_uniprot_protein_examples.py tests/test_causal_graphs_curation.py`
-     - Exit Code: `0` (`128 passed, 1 warning in 76.34s (0:01:16)`).
+   - Embeddings, UniProt Protein Examples & Causal Graphs Suites (`task-16964`, `BypassSandbox: false`):
+     - Command: `.venv/bin/python -m pytest -q tests/test_embeddings.py tests/test_uniprot_protein_examples.py tests/test_causal_graphs_curation.py`
+     - Exit Code: `0` (`141 passed, 1 warning in 427.94s (0:07:07)`).
    - Documentation, Embeddings, and Review-Readiness Queue Suites (`task-16614`, `BypassSandbox: false`):
      - Command: `.venv/bin/python -m pytest -q tests/test_docs.py tests/test_embeddings.py tests/test_review_readiness_queue.py`
      - Exit Code: `0` (`37 passed, 1 warning in 478.18s (0:07:58)`).

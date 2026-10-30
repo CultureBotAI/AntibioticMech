@@ -4321,7 +4321,7 @@ held_records:
   label: bactobolin A
   path: data/antibiotics/antibacterial/bactobolin-a.yaml
   blocker_category: uniprot_protein_example_held
-  target_summary: 50S ribosomal subunit protein uL2 (RplB) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+  target_summary: 50S ribosomal subunit protein uL2 (RplB) (PROTEIN, DIRECT_BINDING_TARGET)
   references:
   - DOI:10.1128/mBio.00499-12
   reason: Held from causal_graphs curation because the 50S ribosomal subunit protein
@@ -4332,14 +4332,14 @@ held_records:
   label: negamycin
   path: data/antibiotics/antibacterial/negamycin.yaml
   blocker_category: uniprot_protein_example_held
-  target_summary: 30S ribosomal subunit decoding center (16S rRNA helix 34) (RIBOSOMAL_SUBUNIT,
-    DIRECT_BINDING_TARGET)
+  target_summary: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
+    (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
   references:
   - DOI:10.1073/pnas.1414401111
-  reason: Held from causal_graphs curation because the proximal ribosomal target (30S
-    ribosomal subunit decoding center (16S rRNA helix 34) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET))
+  reason: Held from causal_graphs curation because the proximal ribosomal target (bacterial
+    30S ribosomal subunit head domain (16S rRNA helix 34) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET))
     is held in curation/uniprot_protein_examples.yaml without a single polypeptide
-    UniProtKB accession in DOI:10.1073/pnas.1414401111 (PMID:25075001; PDB:4W2I) and
+    UniProtKB accession in DOI:10.1073/pnas.1414401111 (PMID:25368144; PDB:4W2I) and
     was promoted from PROPOSED to REVIEWED in Cycle 3 Stage 5.
 - identifier: CHEBI:135622
   label: besifloxacin
@@ -4351,7 +4351,7 @@ held_records:
   - DOI:10.1093/jac/dkn528
   reason: Held from causal_graphs curation because the dual bacterial DNA gyrase and
     topoisomerase IV target (UniProtKB:P0AES4, UniProtKB:P0AFI2, UniProtKB:P72525)
-    in DOI:10.1093/jac/dkn528 (PMID:19129275) was curated and promoted from PROPOSED
+    in DOI:10.1093/jac/dkn528 (PMID:19451292) was curated and promoted from PROPOSED
     to REVIEWED in Cycle 3 Stage 5 outside the frozen 48-record causal_graphs_transition.json
     cohort.
 - identifier: CHEBI:136050
@@ -4375,6 +4375,6 @@ held_records:
   - DOI:10.1128/AAC.37.3.384
   reason: Held from causal_graphs curation because the bacterial DNA gyrase and topoisomerase
     IV target (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083)
-    in DOI:10.1128/AAC.37.3.384 (PMID:8384811) was curated and promoted from PROPOSED
-    to REVIEWED in Cycle 3 Stage 5 outside the frozen 48-record causal_graphs_transition.json
+    in DOI:10.1128/AAC.37.3.384 (PMID:8460909; PMID:11959571) was curated and promoted
+    from PROPOSED to REVIEWED in Cycle 3 Stage 5 outside the frozen 48-record causal_graphs_transition.json
     cohort.

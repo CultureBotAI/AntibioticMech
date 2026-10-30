@@ -276,10 +276,10 @@ def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_exam
 def _uniprot_protein_examples_transition(root):
     payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "3b7457cbdf4d869bc571684757448e36841bcaa4801b662e43a9d127de5cb581"
+        "22d8abac0a2b22bb81df1f2800bc085dd00906ff53fb4962cf11d1d930ada3dd"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 62
+    assert len(transition["record_deltas"]) == 61
     return transition
 
 
@@ -465,6 +465,7 @@ def pre_stage5_remediation_root(tmp_path_factory):
         ("molecular_targets", "antibioticmech:curator-f56d459cee", "DOI:10.1128/AAC.01182-08"),
         ("molecular_targets", "antibioticmech:curator-daae3d88a3", "DOI:10.1128/AAC.40.9.2142"),
         ("molecular_targets", "antibioticmech:curator-e14f58e6dc", "DOI:10.1128/AAC.49.8.3239-3250.2005"),
+        ("molecular_targets", "antibioticmech:curator-217ed2935e", "DOI:10.1128/AAC.02770-15"),
     }
     promoted_existing_ids = {
         "CHEBI:3732",

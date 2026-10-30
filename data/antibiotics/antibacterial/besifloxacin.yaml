@@ -65,7 +65,7 @@ curation_history:
   action: CURATED_MOLECULAR_TARGETS
   changes: 'Added primary-literature molecular_targets entry for bacterial DNA gyrase
     (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-    backed by DOI:10.1093/jac/dkn528 (PMID:19129275; issue #1285).'
+    backed by DOI:10.1093/jac/dkn528 (PMID:19451292; issue #1285).'
   llm_assisted: true
 - timestamp: '2026-10-26T07:05:00Z'
   curator: antigravity
@@ -73,7 +73,7 @@ curation_history:
   changes: Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and
     Escherichia coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples
     to the primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1093/jac/dkn528;
-    PMID:19129275).
+    PMID:19451292).
   llm_assisted: true
 - timestamp: '2026-10-26T07:10:00Z'
   curator: antigravity
@@ -96,7 +96,7 @@ molecular_targets:
   taxon_label: Bacteria
   experimental_context: Purified Streptococcus pneumoniae and Escherichia coli DNA
     gyrase supercoiling and topoisomerase IV decatenation inhibition assays and step-wise
-    QRDR mutant selection (Cambau et al. 2009, DOI:10.1093/jac/dkn528, PMID:19129275).
+    QRDR mutant selection (Cambau et al. 2009, DOI:10.1093/jac/dkn528, PMID:19451292).
   evidence_status: PRIMARY_EVIDENCE
   source: PRIMARY_LITERATURE
   source_version: 2009-03
@@ -106,7 +106,7 @@ molecular_targets:
     snippet: Besifloxacin is a novel chiral fluoroquinolone with potent activity against
       Gram-positive and Gram-negative ocular pathogens through balanced inhibition
       of bacterial DNA gyrase and topoisomerase IV.
-    notes: Cambau et al. 2009 (PMID:19129275) measured purified S. pneumoniae and
+    notes: Cambau et al. 2009 (PMID:19451292) measured purified S. pneumoniae and
       E. coli DNA gyrase supercoiling and topoisomerase IV decatenation inhibition
       and step-wise QRDR mutant selection, establishing dual GyrA/GyrB and ParC/ParE
       target engagement.
@@ -120,7 +120,7 @@ molecular_targets:
     retrieved_on: '2026-10-26'
     role: Streptococcus pneumoniae topoisomerase IV ParC catalytic subunit inhibited
       with balanced potency alongside DNA gyrase by besifloxacin in purified enzyme
-      and step-wise mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19129275).
+      and step-wise mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19451292).
   - uniprot_id: UniProtKB:P0AES4
     protein_label: DNA gyrase subunit A
     gene_symbol: gyrA
@@ -129,7 +129,7 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-10-26'
     role: Bacterial DNA gyrase GyrA catalytic subunit inhibited in purified Escherichia
-      coli supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19129275).
+      coli supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).
   - uniprot_id: UniProtKB:P0AFI2
     protein_label: DNA topoisomerase 4 subunit A
     gene_symbol: parC
@@ -139,4 +139,4 @@ molecular_targets:
     retrieved_on: '2026-10-26'
     role: Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified
       Escherichia coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528;
-      PMID:19129275).
+      PMID:19451292).

@@ -14,10 +14,10 @@ previous_evidence:
   sha256: 670fcf660d254e033e5b00260469341fc429eb5701811648422be7ae60f9bfa7
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
-  sha256: 8096c0996e3df298be985717287e6db79fb8523fa4de049a7af5e7c98fe89c43
+  sha256: c47b9dc4064efea98c234c719985fdb299a5fc33259bcdf7c2fc686106917a13
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
-  sha256: 1bcd274c8445cdf7a2d54c091973bfdd6f1346da4e669d01937fc4e5156e1c4b
+  sha256: 985e877f448b06531e0c8eb89506f3be50bfe969a2bb1d8052fb1330cc47400a
   kind: validation
 findings:
 - finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
@@ -36,10 +36,10 @@ findings:
   carried_from: proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
 - finding_id: proposed-minted-records-with-moa-missing-primary-targets
   status: resolved
-  summary: "Resolved in #1286 by curating PRIMARY_LITERATURE molecular_targets (and reviewed UniProtKB protein_examples on PROTEIN targets) while preserving curation_status: PROPOSED under structure_completeness_audit for grounding_status: MINTED on 7 records — cadazolid (antibioticmech:curator-975acd7c4d), radezolid (antibioticmech:curator-a739fc0555), sutezolid (antibioticmech:curator-f56d459cee), sanfetrinem (antibioticmech:curator-daae3d88a3), tomopenem (antibioticmech:curator-e14f58e6dc), albaconazole (antibioticmech:curator-6bdee75cea), and quilseconazole (antibioticmech:curator-217ed2935e)."
+  summary: "Resolved in #1286 by curating PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples on albaconazole and held_targets on the remaining 6 targets) while preserving curation_status: PROPOSED under structure_completeness_audit for grounding_status: MINTED on 7 records — cadazolid (antibioticmech:curator-975acd7c4d), radezolid (antibioticmech:curator-a739fc0555), sutezolid (antibioticmech:curator-f56d459cee), sanfetrinem (antibioticmech:curator-daae3d88a3), tomopenem (antibioticmech:curator-e14f58e6dc), albaconazole (antibioticmech:curator-6bdee75cea), and quilseconazole (antibioticmech:curator-217ed2935e)."
   group_id: group-03-proposed-minted-records-missing-primary-targets
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1286
-  disposition: "Populated PRIMARY_LITERATURE molecular_targets and reviewed UniProtKB protein_examples across all 7 PROPOSED+MINTED records via apply_uniprot_examples_plan, record_curation_event (CURATED_PRIMARY_MOLECULAR_TARGETS), and write_validated_antibiotic; verified via fresh structured review 20261026T071500Z-cycle3-stage5-remediated-records-review."
+  disposition: "Populated PRIMARY_LITERATURE molecular_targets across all 7 PROPOSED+MINTED records (with reviewed UniProtKB protein_examples on albaconazole and held_targets on the remaining 6 targets) via apply_uniprot_examples_plan, record_curation_event (CURATED_PRIMARY_MOLECULAR_TARGETS), and write_validated_antibiotic; verified via fresh structured review 20261026T071500Z-cycle3-stage5-remediated-records-review."
   carried_from: proposed-minted-records-with-moa-missing-primary-targets
 - finding_id: mcr43-context
   status: deferred
@@ -127,7 +127,7 @@ groups:
   resolution_evidence:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/validation.md
-  disposition: "Populated PRIMARY_LITERATURE molecular_targets (and reviewed UniProtKB protein_examples on PROTEIN targets) via apply_uniprot_examples_plan, record_curation_event (CURATED_PRIMARY_MOLECULAR_TARGETS), and write_validated_antibiotic while preserving PROPOSED status under structure_completeness_audit; verified by fresh review 20261026T071500Z-cycle3-stage5-remediated-records-review."
+  disposition: "Populated PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples on albaconazole and held_targets on the remaining 6 targets) via apply_uniprot_examples_plan, record_curation_event (CURATED_PRIMARY_MOLECULAR_TARGETS), and write_validated_antibiotic while preserving PROPOSED status under structure_completeness_audit; verified by fresh review 20261026T071500Z-cycle3-stage5-remediated-records-review."
 - group_id: group-04-mcr43-context
   finding_ids:
   - mcr43-context

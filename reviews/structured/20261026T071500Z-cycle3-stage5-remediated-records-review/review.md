@@ -11,7 +11,7 @@
 
 ## Summary
 
-Post-remediation batch review of the 12 AntibioticRecord YAML files updated in Cycle 3 Stage 5 to resolve all 3 open Stage 4 record and category review findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1284, 2 records: bactobolin A CHEBI:138579, negamycin CHEBI:198310), proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion (Issue #1285, 3 records: besifloxacin CHEBI:135622 including companion single-record review 20261026T052000Z-besifloxacin-record-review, ozenoxacin CHEBI:136050, pazufloxacin CHEBI:94700), and proposed-minted-records-with-moa-missing-primary-targets (Issue #1286, 7 records: cadazolid antibioticmech:curator-975acd7c4d, radezolid antibioticmech:curator-a739fc0555, sutezolid antibioticmech:curator-f56d459cee, sanfetrinem antibioticmech:curator-daae3d88a3, tomopenem antibioticmech:curator-e14f58e6dc, albaconazole antibioticmech:curator-6bdee75cea, quilseconazole antibioticmech:curator-217ed2935e). Verified that all 5 Group 1 and Group 2 EXACT ChEBI records (bactobolin A, negamycin, besifloxacin, ozenoxacin, pazufloxacin) carry complete primary-literature mode_of_action and molecular_targets and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 96 to 101), and that all 7 Group 3 PROPOSED/MINTED records carry curated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets aligned with their top-level mode_of_action while preserving curation_status: PROPOSED under structure_completeness_audit.
+Post-remediation batch review of the 12 AntibioticRecord YAML files updated in Cycle 3 Stage 5 to resolve all 3 open Stage 4 record and category review findings: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1284, 2 records: bactobolin A CHEBI:138579, negamycin CHEBI:198310 including companion single-record review 20261026T003500Z-negamycin-record-review), proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion (Issue #1285, 3 records: besifloxacin CHEBI:135622, ozenoxacin CHEBI:136050, pazufloxacin CHEBI:94700), and proposed-minted-records-with-moa-missing-primary-targets (Issue #1286, 7 records: cadazolid antibioticmech:curator-975acd7c4d, radezolid antibioticmech:curator-a739fc0555, sutezolid antibioticmech:curator-f56d459cee, sanfetrinem antibioticmech:curator-daae3d88a3, tomopenem antibioticmech:curator-e14f58e6dc, albaconazole antibioticmech:curator-6bdee75cea, quilseconazole antibioticmech:curator-217ed2935e). Verified that all 5 Group 1 and Group 2 EXACT ChEBI records (bactobolin A, negamycin, besifloxacin, ozenoxacin, pazufloxacin) carry complete primary-literature mode_of_action and molecular_targets and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from 96 to 101), and that all 7 Group 3 PROPOSED/MINTED records carry curated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets aligned with their top-level mode_of_action while preserving curation_status: PROPOSED under structure_completeness_audit.
 
 ## Scope And Provenance
 
@@ -19,7 +19,7 @@ Complete post-remediation review of all 12 AntibioticRecord YAML files modified 
 
 Selection: All 12 records in Cycle 3 Stage 5 resolved finding groups (Issues #1284, #1285, #1286).
 Coverage: full; 12 reviewed / 12 in the declared population.
-Source: working_tree at Git base dba9a8a6efb9d6f5ea4b7c0df1e959f36b7f365c.
+Source: working_tree at Git base e8beeb9097baa104a6c9abece25054625da639ff.
 Working-tree hashes do not imply those bytes were committed.
 
 | Target | Path / selector | Kind | Label |
@@ -57,13 +57,13 @@ Both Group 1 records (CHEBI:138579 bactobolin A, CHEBI:198310 negamycin) carry e
 
 completeness: supported. Targets: CHEBI:135622, CHEBI:136050, CHEBI:94700.
 
-All 3 Group 2 EXACT ChEBI quinolone records (CHEBI:135622 besifloxacin, CHEBI:136050 ozenoxacin, CHEBI:94700 pazufloxacin) now carry source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA gyrase and DNA topoisomerase IV molecular_targets (with reviewed S. pneumoniae / S. aureus / E. coli UniProtKB protein_examples on besifloxacin and ozenoxacin and documented held rationales on pazufloxacin) and are promoted to curation_status: REVIEWED with PROMOTED_TO_REVIEWED events.
+All 3 Group 2 EXACT ChEBI quinolone records (CHEBI:135622 besifloxacin, CHEBI:136050 ozenoxacin, CHEBI:94700 pazufloxacin) now carry source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA gyrase and DNA topoisomerase IV molecular_targets with reviewed S. pneumoniae, S. aureus, and E. coli UniProtKB protein_examples across all 3 records, and are promoted to curation_status: REVIEWED with PROMOTED_TO_REVIEWED events.
 
 ### Population of PRIMARY_LITERATURE molecular_targets on 7 PROPOSED/MINTED records with curated mode_of_action
 
 completeness: supported. Targets: antibioticmech:curator-975acd7c4d, antibioticmech:curator-a739fc0555, antibioticmech:curator-f56d459cee, antibioticmech:curator-daae3d88a3, antibioticmech:curator-e14f58e6dc, antibioticmech:curator-6bdee75cea, antibioticmech:curator-217ed2935e.
 
-All 7 Group 3 PROPOSED/MINTED records (cadazolid, radezolid, sutezolid, sanfetrinem, tomopenem, albaconazole, quilseconazole) now carry curated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets aligned with their top-level mode_of_action (plus reviewed C. albicans / C. neoformans ERG11 UniProtKB protein_examples on albaconazole and quilseconazole and documented held rationales in curation/uniprot_protein_examples.yaml), while retaining curation_status: PROPOSED under structure_completeness_audit.
+All 7 Group 3 PROPOSED/MINTED records (cadazolid, radezolid, sutezolid, sanfetrinem, tomopenem, albaconazole, quilseconazole) now carry curated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets aligned with their top-level mode_of_action (plus reviewed C. albicans ERG11 UniProtKB protein_examples on albaconazole and documented held_targets rationales on quilseconazole and the 5 other Group 3 records in curation/uniprot_protein_examples.yaml), while retaining curation_status: PROPOSED under structure_completeness_audit.
 
 ## Findings
 
@@ -79,7 +79,7 @@ Disposition: Resolved in Cycle 3 Stage 5 (Issue #1284): promoted both PROPOSED/E
 
 major / resolved / confirmed; issue key: proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion.
 
-Populated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA gyrase and DNA topoisomerase IV molecular_targets (with reviewed UniProtKB protein_examples via apply_uniprot_examples_plan on besifloxacin and ozenoxacin) and promoted CHEBI:135622 (besifloxacin), CHEBI:136050 (ozenoxacin), and CHEBI:94700 (pazufloxacin) from PROPOSED to REVIEWED via record_curation_event (PROMOTED_TO_REVIEWED) and write_validated_antibiotic.
+Populated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) DNA gyrase and DNA topoisomerase IV molecular_targets (with reviewed UniProtKB protein_examples via apply_uniprot_examples_plan across besifloxacin, ozenoxacin, and pazufloxacin) and promoted CHEBI:135622 (besifloxacin), CHEBI:136050 (ozenoxacin), and CHEBI:94700 (pazufloxacin) from PROPOSED to REVIEWED via record_curation_event (PROMOTED_TO_REVIEWED) and write_validated_antibiotic.
 
 Disposition: Resolved in Cycle 3 Stage 5 (Issue #1285): populated PRIMARY_LITERATURE molecular_targets and promoted all 3 EXACT ChEBI quinolone records to REVIEWED.
 
@@ -87,7 +87,7 @@ Disposition: Resolved in Cycle 3 Stage 5 (Issue #1285): populated PRIMARY_LITERA
 
 major / resolved / confirmed; issue key: proposed-minted-records-with-moa-missing-primary-targets.
 
-Populated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets via record_curation_event and write_validated_antibiotic across all 7 Group 3 PROPOSED/MINTED records (cadazolid, radezolid, sutezolid, sanfetrinem, tomopenem, albaconazole, quilseconazole), plus reviewed ERG11 UniProtKB protein_examples via apply_uniprot_examples_plan on albaconazole and quilseconazole.
+Populated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets via record_curation_event and write_validated_antibiotic across all 7 Group 3 PROPOSED/MINTED records (cadazolid, radezolid, sutezolid, sanfetrinem, tomopenem, albaconazole, quilseconazole), plus reviewed ERG11 UniProtKB protein_examples via apply_uniprot_examples_plan on albaconazole and documented held_targets rationales on quilseconazole and the 5 other Group 3 records.
 
 Disposition: Resolved in Cycle 3 Stage 5 (Issue #1286): populated PRIMARY_LITERATURE molecular_targets on all 7 PROPOSED/MINTED records.
 
@@ -103,12 +103,12 @@ Disposition: Resolved in Cycle 3 Stage 5 (Issue #1286): populated PRIMARY_LITERA
 | remediated-records-content | curation/record_review_queue.tsv; 12 remediated YAML records and refreshed review-readiness worklist (2,911 items) | supports | All 12 records were updated through native validated writers (write_validated_antibiotic, apply_uniprot_examples_plan, record_curation_event): 2 Group 1 PROPOSED/EXACT records (bactobolin A, negamycin) promoted to REVIEWED; 3 Group 2 PROPOSED/EXACT quinolones (besifloxacin, ozenoxacin, pazufloxacin) populated with PRIMARY_LITERATURE molecular_targets and promoted to REVIEWED (raising corpus REVIEWED count from 96 to 101 and reducing the review-readiness queue from 2,916 to 2,911); and 7 Group 3 PROPOSED/MINTED records (cadazolid, radezolid, sutezolid, sanfetrinem, tomopenem, albaconazole, quilseconazole) populated with PRIMARY_LITERATURE molecular_targets. |
 | validate-strict-pass | scripts/validate_strict.py; 3012 files scanned, 0 files with ERROR, 0 total ERROR rows | supports | Closed-mode LinkML validation and OAK ontology label verification pass across all 3,012 records. |
 | verify-corpus-pass | scripts/verify_corpus.py; records expected: 3012, on disk: 3012, missing: 0, unexpected: 0, drifted fields: 0 | supports | Every curator-owned edit on the 12 remediated records survives seed_from_sources.py reproduction without drift. |
-| primary-literature-sources | PMID:25537637, PMID:25056386, PMID:26823548, PMID:20022949, PMID:17908946, PMID:9145860, PMID:24891463, PMID:23229484, PMID:22354970, PMID:19029336, PMID:24343095, PMID:8750976, PMID:16940086, PMID:15531591, PMID:10952599, PMID:29378715; Primary experimental mechanism and target studies cited across the 12 remediated records | supports | Primary studies support REVIEWED promotion on the 2 Group 1 EXACT ChEBI records (bactobolin A PMID:25537637, negamycin PMID:25056386/PMID:26823548), PRIMARY_LITERATURE DNA gyrase and topoisomerase IV molecular_targets and REVIEWED promotion on the 3 Group 2 EXACT ChEBI quinolones (besifloxacin PMID:20022949, ozenoxacin PMID:17908946, pazufloxacin PMID:9145860), and PRIMARY_LITERATURE molecular_targets on the 7 Group 3 PROPOSED/MINTED records (cadazolid PMID:24891463, radezolid PMID:23229484/PMID:22354970, sutezolid PMID:19029336/PMID:24343095, sanfetrinem PMID:8750976, tomopenem PMID:16940086/PMID:15531591, albaconazole PMID:10952599, quilseconazole PMID:29378715). |
+| primary-literature-sources | PMID:23249812, PMID:25562208, PMID:25368144, PMID:25306922, PMID:19451292, PMID:19506065, PMID:11959549, PMID:24080666, PMID:8460909, PMID:11959571, PMID:24128668, PMID:19752277, PMID:18663023, PMID:19075058, PMID:8878596, PMID:7840571, PMID:16048932, PMID:18070969, PMID:11408242, PMID:10582896, PMID:26787697, PMID:27161862; Primary experimental mechanism and target studies cited across the 12 remediated records | supports | Primary studies support REVIEWED promotion on the 2 Group 1 EXACT ChEBI records (bactobolin A PMID:23249812/PMID:25562208, negamycin PMID:25368144/PMID:25306922), PRIMARY_LITERATURE DNA gyrase and topoisomerase IV molecular_targets and REVIEWED promotion on the 3 Group 2 EXACT ChEBI quinolones (besifloxacin PMID:19451292/PMID:19506065, ozenoxacin PMID:11959549/PMID:24080666, pazufloxacin PMID:8460909/PMID:11959571), and PRIMARY_LITERATURE molecular_targets on the 7 Group 3 PROPOSED/MINTED records (cadazolid PMID:24128668, radezolid PMID:19752277, sutezolid PMID:18663023/PMID:19075058, sanfetrinem PMID:8878596/PMID:7840571, tomopenem PMID:16048932/PMID:18070969, albaconazole PMID:11408242/PMID:10582896, quilseconazole PMID:26787697/PMID:27161862). |
 
 ## Limits And Additional Notes
 
 - The 7 Group 3 records retain curation_status: PROPOSED and grounding_status: MINTED until upstream single-molecule ChEBI identifiers are assigned, per structure_completeness_audit policy.
-- Original Cycle 3 Stage 4 review bundles (20261026T052000Z-besifloxacin-record-review and 20261026T053000Z-cycle3-stage4-corpus-category-review) are preserved byte-for-byte.
+- Original Cycle 3 Stage 4 review bundles (20261026T003500Z-negamycin-record-review and 20261026T003600Z-cycle3-frozen-inventory-cohort-review) are preserved byte-for-byte.
 
 ## Complete Structured Record
 
@@ -137,9 +137,9 @@ scientific_review: true
 summary: 'Post-remediation batch review of the 12 AntibioticRecord YAML files updated
   in Cycle 3 Stage 5 to resolve all 3 open Stage 4 record and category review findings:
   proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion (Issue #1284,
-  2 records: bactobolin A CHEBI:138579, negamycin CHEBI:198310), proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
-  (Issue #1285, 3 records: besifloxacin CHEBI:135622 including companion single-record
-  review 20261026T052000Z-besifloxacin-record-review, ozenoxacin CHEBI:136050, pazufloxacin
+  2 records: bactobolin A CHEBI:138579, negamycin CHEBI:198310 including companion
+  single-record review 20261026T003500Z-negamycin-record-review), proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
+  (Issue #1285, 3 records: besifloxacin CHEBI:135622, ozenoxacin CHEBI:136050, pazufloxacin
   CHEBI:94700), and proposed-minted-records-with-moa-missing-primary-targets (Issue
   #1286, 7 records: cadazolid antibioticmech:curator-975acd7c4d, radezolid antibioticmech:curator-a739fc0555,
   sutezolid antibioticmech:curator-f56d459cee, sanfetrinem antibioticmech:curator-daae3d88a3,
@@ -153,7 +153,7 @@ summary: 'Post-remediation batch review of the 12 AntibioticRecord YAML files up
   with their top-level mode_of_action while preserving curation_status: PROPOSED under
   structure_completeness_audit.'
 source:
-  git_revision: dba9a8a6efb9d6f5ea4b7c0df1e959f36b7f365c
+  git_revision: e8beeb9097baa104a6c9abece25054625da639ff
   state: working_tree
   inputs:
   - path: .claude/skills/review-yaml-category/SKILL.md
@@ -163,58 +163,58 @@ source:
     sha256: be89e87e5de1e3ee1b45b4070ddbdc7419921d434c69efa3c41aa16fbfd54649
     role: context
   - path: curation/causal_graphs.yaml
-    sha256: f39ef8870a914af6d1ef66e09eb384afa25681bceeffeb8f4bb0f51cc493b59f
+    sha256: e11d66db669d30454c36ea8076fed494e24bf29cb1390476108f361c18b7a71d
     role: context
   - path: curation/curator_antibiotics.tsv
     sha256: 5a7a6d3c2994644de73400a599908ed5f3a9aa93a952fe678a1887f248cbe9c7
     role: context
   - path: curation/cycle3_stage5_review_remediation_transition.json
-    sha256: 78c7094b73414e48a537d8fb177eb675d6a9a394de0a38f6f1a79ddb032f1f7b
+    sha256: f257cd9621feabd4b715e6fff37a47361d6e387e80a388ff8311d2b8c2fc8a35
     role: context
   - path: curation/record_review_queue.tsv
     sha256: 8fff653e693fbbddcfabc35bda3f35a9fcc34d8723a3dbaa0356a4444854d87a
     role: context
   - path: curation/uniprot_protein_examples.yaml
-    sha256: 0a18bc62158ae4a821483753bb52e7f6f70d237edb99a04207b45b1e5bdaabc4
+    sha256: fbf9ed715319e30a54f58319184753816ba854c2bd4bb8a5b12b125278647323
     role: context
   - path: curation/uniprot_protein_examples_transition.json
-    sha256: 3b7457cbdf4d869bc571684757448e36841bcaa4801b662e43a9d127de5cb581
+    sha256: 22d8abac0a2b22bb81df1f2800bc085dd00906ff53fb4962cf11d1d930ada3dd
     role: context
   - path: data/antibiotics/antibacterial/bactobolin-a.yaml
-    sha256: 01ea20cd69623514d8c1ae775926ca0c76ba18392fc8ec4f237de339068adf85
+    sha256: a2987fdcfc1f53fe88d6a346b9495bdbfd2116f59e4f1ca6a1a92fca7771653e
     role: target
   - path: data/antibiotics/antibacterial/besifloxacin.yaml
-    sha256: 7042f7637489431c2ee966b9338140f7428cc261b907da767e6ea825ca503561
+    sha256: 45dcb6be1b9fb9e9971f5514da101a0f399c7ee75a6ec97af220f191f8242920
     role: target
   - path: data/antibiotics/antibacterial/cadazolid.yaml
-    sha256: 7e318e1a6722f9c4c73e031061efdee6a6695cd21db97a7ee27f882a11328c32
+    sha256: b849f7085d8108e28dffee4b39f7a512d66061a9151fae58aa58afa3ddb0f025
     role: target
   - path: data/antibiotics/antibacterial/negamycin.yaml
-    sha256: de5a7fec54992c8753f2ac6f71335b918064d0b868493280f6d16dfd15ab5729
+    sha256: 70d4867db1fffb1b2653f15be0ed8db4d46e0ff82d42d13613bc9b36b9338f93
     role: target
   - path: data/antibiotics/antibacterial/ozenoxacin.yaml
     sha256: 2b1c0225a639107adf5a1448a3092fe6a3f49a1df9ecac9ebe6a88caeac4359e
     role: target
   - path: data/antibiotics/antibacterial/pazufloxacin.yaml
-    sha256: 0125066321324d246f9dbd148a8a16c1393ddc1d14a5e9ec54c8958158f5a645
+    sha256: 787576578bb35055b90b4319d582218599c63e86f2e2b9ccd01a90b0d8fa56da
     role: target
   - path: data/antibiotics/antibacterial/radezolid.yaml
-    sha256: 862bdf684ccaf07699c90c4cbc920ab27f3390c73ed5cb95c279e5d816a5bcae
+    sha256: eda0b73c9afb05addd53adb447d827dd16454d03a2b68f74168ab3b1489699af
     role: target
   - path: data/antibiotics/antibacterial/sanfetrinem.yaml
     sha256: 136ed5d11e92a5d4b470e61199e5c743d4d7d0e4a7aeb899f39f671b3f5839e0
     role: target
   - path: data/antibiotics/antibacterial/sutezolid.yaml
-    sha256: 2df1ab2eb04ad8a2f1a15fe1ab689236cffbbcb383f30a5481026cf7e273c9bf
+    sha256: e45cdff363a44ed6930c659d051834b3021384acfba963070904f499e503e55d
     role: target
   - path: data/antibiotics/antibacterial/tomopenem.yaml
     sha256: 4c7379b2fc7bca21c374d89a771bfe7aff1b1659044dfbaf7cc4d48d33f3e781
     role: target
   - path: data/antibiotics/antifungal/albaconazole.yaml
-    sha256: 39d231ad8cd74b4feb6ffce5c97dbb1028c1df16e9b46b305698d46d9ef00adc
+    sha256: 111b26069867bf3d8338510b47ec9997372a2a8a15473e18b3efd85931c72460
     role: target
   - path: data/antibiotics/antifungal/quilseconazole.yaml
-    sha256: ffc407cbc8ea339ff449c5687a5a91e7ca8031810ea4c18dc44b48065c98477c
+    sha256: cf5a5faaa474f41277e3e0e93a7d089e5733e3aaa16bd2c0237295eda619cdbe
     role: target
   - path: scripts/curation_worklist.py
     sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
@@ -520,21 +520,23 @@ evidence:
     reproduction without drift.
 - evidence_id: primary-literature-sources
   kind: primary_source
-  reference: PMID:25537637, PMID:25056386, PMID:26823548, PMID:20022949, PMID:17908946,
-    PMID:9145860, PMID:24891463, PMID:23229484, PMID:22354970, PMID:19029336, PMID:24343095,
-    PMID:8750976, PMID:16940086, PMID:15531591, PMID:10952599, PMID:29378715
+  reference: PMID:23249812, PMID:25562208, PMID:25368144, PMID:25306922, PMID:19451292,
+    PMID:19506065, PMID:11959549, PMID:24080666, PMID:8460909, PMID:11959571, PMID:24128668,
+    PMID:19752277, PMID:18663023, PMID:19075058, PMID:8878596, PMID:7840571, PMID:16048932,
+    PMID:18070969, PMID:11408242, PMID:10582896, PMID:26787697, PMID:27161862
   locator: Primary experimental mechanism and target studies cited across the 12 remediated
     records
   accessed_at: '2026-10-26T07:10:00Z'
   support: supports
   summary: Primary studies support REVIEWED promotion on the 2 Group 1 EXACT ChEBI
-    records (bactobolin A PMID:25537637, negamycin PMID:25056386/PMID:26823548), PRIMARY_LITERATURE
-    DNA gyrase and topoisomerase IV molecular_targets and REVIEWED promotion on the
-    3 Group 2 EXACT ChEBI quinolones (besifloxacin PMID:20022949, ozenoxacin PMID:17908946,
-    pazufloxacin PMID:9145860), and PRIMARY_LITERATURE molecular_targets on the 7
-    Group 3 PROPOSED/MINTED records (cadazolid PMID:24891463, radezolid PMID:23229484/PMID:22354970,
-    sutezolid PMID:19029336/PMID:24343095, sanfetrinem PMID:8750976, tomopenem PMID:16940086/PMID:15531591,
-    albaconazole PMID:10952599, quilseconazole PMID:29378715).
+    records (bactobolin A PMID:23249812/PMID:25562208, negamycin PMID:25368144/PMID:25306922),
+    PRIMARY_LITERATURE DNA gyrase and topoisomerase IV molecular_targets and REVIEWED
+    promotion on the 3 Group 2 EXACT ChEBI quinolones (besifloxacin PMID:19451292/PMID:19506065,
+    ozenoxacin PMID:11959549/PMID:24080666, pazufloxacin PMID:8460909/PMID:11959571),
+    and PRIMARY_LITERATURE molecular_targets on the 7 Group 3 PROPOSED/MINTED records
+    (cadazolid PMID:24128668, radezolid PMID:19752277, sutezolid PMID:18663023/PMID:19075058,
+    sanfetrinem PMID:8878596/PMID:7840571, tomopenem PMID:16048932/PMID:18070969,
+    albaconazole PMID:11408242/PMID:10582896, quilseconazole PMID:26787697/PMID:27161862).
 assessments:
 - assessment_id: group1-proposed-exact-promoted-to-reviewed
   area: completeness
@@ -562,9 +564,9 @@ assessments:
   summary: 'All 3 Group 2 EXACT ChEBI quinolone records (CHEBI:135622 besifloxacin,
     CHEBI:136050 ozenoxacin, CHEBI:94700 pazufloxacin) now carry source: PRIMARY_LITERATURE
     (evidence_status: PRIMARY_EVIDENCE) DNA gyrase and DNA topoisomerase IV molecular_targets
-    (with reviewed S. pneumoniae / S. aureus / E. coli UniProtKB protein_examples
-    on besifloxacin and ozenoxacin and documented held rationales on pazufloxacin)
-    and are promoted to curation_status: REVIEWED with PROMOTED_TO_REVIEWED events.'
+    with reviewed S. pneumoniae, S. aureus, and E. coli UniProtKB protein_examples
+    across all 3 records, and are promoted to curation_status: REVIEWED with PROMOTED_TO_REVIEWED
+    events.'
   target_ids:
   - CHEBI:135622
   - CHEBI:136050
@@ -582,10 +584,10 @@ assessments:
   summary: 'All 7 Group 3 PROPOSED/MINTED records (cadazolid, radezolid, sutezolid,
     sanfetrinem, tomopenem, albaconazole, quilseconazole) now carry curated source:
     PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) molecular_targets aligned
-    with their top-level mode_of_action (plus reviewed C. albicans / C. neoformans
-    ERG11 UniProtKB protein_examples on albaconazole and quilseconazole and documented
-    held rationales in curation/uniprot_protein_examples.yaml), while retaining curation_status:
-    PROPOSED under structure_completeness_audit.'
+    with their top-level mode_of_action (plus reviewed C. albicans ERG11 UniProtKB
+    protein_examples on albaconazole and documented held_targets rationales on quilseconazole
+    and the 5 other Group 3 records in curation/uniprot_protein_examples.yaml), while
+    retaining curation_status: PROPOSED under structure_completeness_audit.'
   target_ids:
   - antibioticmech:curator-975acd7c4d
   - antibioticmech:curator-a739fc0555
@@ -632,8 +634,11 @@ findings:
     records with complete primary mechanism and target curation to REVIEWED.'
   previous_occurrences:
   - repository: culturebotai/AntibioticMech
-    review_id: 20261026T053000Z-cycle3-stage4-corpus-category-review
+    review_id: 20261026T003600Z-cycle3-frozen-inventory-cohort-review
     finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
+  - repository: culturebotai/AntibioticMech
+    review_id: 20261026T003500Z-negamycin-record-review
+    finding_id: negamycin-awaiting-reviewed-promotion
   external_issues:
   - https://github.com/CultureBotAI/AntibioticMech/issues/1284
 - finding_id: proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
@@ -646,10 +651,10 @@ findings:
     quinolones to REVIEWED
   description: 'Populated source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE)
     DNA gyrase and DNA topoisomerase IV molecular_targets (with reviewed UniProtKB
-    protein_examples via apply_uniprot_examples_plan on besifloxacin and ozenoxacin)
-    and promoted CHEBI:135622 (besifloxacin), CHEBI:136050 (ozenoxacin), and CHEBI:94700
-    (pazufloxacin) from PROPOSED to REVIEWED via record_curation_event (PROMOTED_TO_REVIEWED)
-    and write_validated_antibiotic.'
+    protein_examples via apply_uniprot_examples_plan across besifloxacin, ozenoxacin,
+    and pazufloxacin) and promoted CHEBI:135622 (besifloxacin), CHEBI:136050 (ozenoxacin),
+    and CHEBI:94700 (pazufloxacin) from PROPOSED to REVIEWED via record_curation_event
+    (PROMOTED_TO_REVIEWED) and write_validated_antibiotic.'
   target_ids:
   - CHEBI:135622
   - CHEBI:136050
@@ -677,11 +682,8 @@ findings:
     molecular_targets and promoted all 3 EXACT ChEBI quinolone records to REVIEWED.'
   previous_occurrences:
   - repository: culturebotai/AntibioticMech
-    review_id: 20261026T053000Z-cycle3-stage4-corpus-category-review
+    review_id: 20261026T003600Z-cycle3-frozen-inventory-cohort-review
     finding_id: proposed-exact-quinolones-with-moa-missing-primary-targets-and-reviewed-promotion
-  - repository: culturebotai/AntibioticMech
-    review_id: 20261026T052000Z-besifloxacin-record-review
-    finding_id: besifloxacin-missing-primary-literature-molecular-targets
   external_issues:
   - https://github.com/CultureBotAI/AntibioticMech/issues/1285
 - finding_id: proposed-minted-records-with-moa-missing-primary-targets
@@ -696,7 +698,8 @@ findings:
     molecular_targets via record_curation_event and write_validated_antibiotic across
     all 7 Group 3 PROPOSED/MINTED records (cadazolid, radezolid, sutezolid, sanfetrinem,
     tomopenem, albaconazole, quilseconazole), plus reviewed ERG11 UniProtKB protein_examples
-    via apply_uniprot_examples_plan on albaconazole and quilseconazole.'
+    via apply_uniprot_examples_plan on albaconazole and documented held_targets rationales
+    on quilseconazole and the 5 other Group 3 records.'
   target_ids:
   - antibioticmech:curator-975acd7c4d
   - antibioticmech:curator-a739fc0555
@@ -739,7 +742,7 @@ findings:
     molecular_targets on all 7 PROPOSED/MINTED records.'
   previous_occurrences:
   - repository: culturebotai/AntibioticMech
-    review_id: 20261026T053000Z-cycle3-stage4-corpus-category-review
+    review_id: 20261026T003600Z-cycle3-frozen-inventory-cohort-review
     finding_id: proposed-minted-records-with-moa-missing-primary-targets
   external_issues:
   - https://github.com/CultureBotAI/AntibioticMech/issues/1286
@@ -749,14 +752,14 @@ limitations:
   until upstream single-molecule ChEBI identifiers are assigned, per structure_completeness_audit
   policy.'
 notes:
-- Original Cycle 3 Stage 4 review bundles (20261026T052000Z-besifloxacin-record-review
-  and 20261026T053000Z-cycle3-stage4-corpus-category-review) are preserved byte-for-byte.
+- Original Cycle 3 Stage 4 review bundles (20261026T003500Z-negamycin-record-review
+  and 20261026T003600Z-cycle3-frozen-inventory-cohort-review) are preserved byte-for-byte.
 related_reviews:
 - repository: culturebotai/AntibioticMech
-  review_id: 20261026T052000Z-besifloxacin-record-review
-  relationship: Predecessor Cycle 3 Stage 4 single-record review of besifloxacin (CHEBI:135622)
+  review_id: 20261026T003500Z-negamycin-record-review
+  relationship: Predecessor Cycle 3 Stage 4 single-record review of negamycin (CHEBI:198310)
 - repository: culturebotai/AntibioticMech
-  review_id: 20261026T053000Z-cycle3-stage4-corpus-category-review
+  review_id: 20261026T003600Z-cycle3-frozen-inventory-cohort-review
   relationship: Predecessor Cycle 3 Stage 4 full-inventory cohort review identifying
     the 3 resolved finding groups
 tags:

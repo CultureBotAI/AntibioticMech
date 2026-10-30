@@ -64,7 +64,7 @@ curation_history:
   action: CURATED_MOLECULAR_TARGETS
   changes: 'Added primary-literature molecular_targets entry for bacterial DNA gyrase
     and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.37.3.384
-    (PMID:8384811; issue #1285).'
+    (PMID:8460909, PMID:11959571; issue #1285).'
   llm_assisted: true
 - timestamp: '2026-10-26T07:05:00Z'
   curator: antigravity
@@ -72,7 +72,7 @@ curation_history:
   changes: Added reviewed Escherichia coli K-12 GyrA, GyrB, ParC, and ParE (UniProtKB:P0AES4,
     UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples to the
     primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.37.3.384;
-    PMID:8384811).
+    PMID:8460909; PMID:11959571).
   llm_assisted: true
 - timestamp: '2026-10-26T07:10:00Z'
   curator: antigravity
@@ -93,8 +93,8 @@ molecular_targets:
   taxon_id: NCBITaxon:2
   taxon_label: Bacteria
   experimental_context: Purified bacterial DNA gyrase DNA supercoiling inhibition
-    and topoisomerase IV assays with T-3761 / pazufloxacin (Fukuoka et al. 1993, DOI:10.1128/AAC.37.3.384,
-    PMID:8384811).
+    and topoisomerase IV decatenation assays with T-3761 / pazufloxacin (Fukuoka et
+    al. 1993, DOI:10.1128/AAC.37.3.384, PMID:8460909; Mitsuyama et al. 2002, PMID:11959571).
   evidence_status: PRIMARY_EVIDENCE
   source: PRIMARY_LITERATURE
   source_version: 1993-03
@@ -104,8 +104,10 @@ molecular_targets:
     snippet: Fukuoka et al. reported that T-3761 (pazufloxacin) showed potent broad-spectrum
       antibacterial activity against Gram-negative and Gram-positive bacteria and
       inhibited bacterial DNA gyrase supercoiling activity.
-    notes: Fukuoka et al. 1993 (PMID:8384811) measured direct inhibition of bacterial
-      DNA gyrase supercoiling activity and rapid bactericidal action by T-3761 (pazufloxacin).
+    notes: Fukuoka et al. 1993 (PMID:8460909) measured direct inhibition of Escherichia
+      coli DNA gyrase supercoiling activity by T-3761 (pazufloxacin), and Mitsuyama
+      et al. 2002 (PMID:11959571) established dual inhibition of bacterial DNA gyrase
+      and topoisomerase IV.
   protein_examples:
   - uniprot_id: UniProtKB:P0AES4
     protein_label: DNA gyrase subunit A
@@ -116,7 +118,7 @@ molecular_targets:
     retrieved_on: '2026-10-26'
     role: Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling
       activity is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384;
-      PMID:8384811).
+      PMID:8460909; PMID:11959571).
   - uniprot_id: UniProtKB:P0AES6
     protein_label: DNA gyrase subunit B
     gene_symbol: gyrB
@@ -126,7 +128,7 @@ molecular_targets:
     retrieved_on: '2026-10-26'
     role: Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme
       inhibited by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384;
-      PMID:8384811).
+      PMID:8460909; PMID:11959571).
   - uniprot_id: UniProtKB:P0AFI2
     protein_label: DNA topoisomerase 4 subunit A
     gene_symbol: parC
@@ -135,7 +137,7 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-10-26'
     role: Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone T-3761
-      / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8384811).
+      / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).
   - uniprot_id: UniProtKB:P20083
     protein_label: DNA topoisomerase 4 subunit B
     gene_symbol: parE
@@ -144,4 +146,5 @@ molecular_targets:
     entry_status: REVIEWED
     retrieved_on: '2026-10-26'
     role: Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme
-      co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8384811).
+      co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909;
+      PMID:11959571).

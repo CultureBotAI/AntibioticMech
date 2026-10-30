@@ -64,7 +64,7 @@ curation_history:
   action: CURATED_MOLECULAR_TARGETS
   changes: 'Added primary-literature molecular_targets entry for bacterial 50S ribosomal
     subunit peptidyl-transferase center (23S rRNA domain V) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
-    backed by DOI:10.1128/AAC.00962-09 (PMID:19995922; issue #1286).'
+    backed by DOI:10.1128/AAC.00962-09 (PMID:19752277; issue #1286).'
   llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
@@ -81,18 +81,19 @@ molecular_targets:
   taxon_label: Bacteria
   experimental_context: Biaryl oxazolidinone RX-1741 (radezolid) binding to the bacterial
     50S ribosomal subunit 23S rRNA peptidyl-transferase center and translation inhibition
-    in Staphylococcus aureus and linezolid-resistant strains (Lemaire et al. 2010,
-    DOI:10.1128/AAC.00962-09, PMID:19995922).
+    in Staphylococcus aureus and linezolid-resistant strains (Locke et al. 2009, DOI:10.1128/AAC.00962-09,
+    PMID:19752277; Skripkin et al. 2008, DOI:10.1128/AAC.01193-07, PMID:18663023).
   evidence_status: PRIMARY_EVIDENCE
   source: PRIMARY_LITERATURE
-  source_version: 2010-03
+  source_version: 2009-12
   source_retrieved_on: '2026-10-26'
   evidence:
   - reference: DOI:10.1128/AAC.00962-09
     snippet: Radezolid (RX-1741) is a novel biaryl oxazolidinone that inhibits bacterial
-      protein synthesis by binding to the 50S ribosomal subunit and shows 4- to 8-fold
-      lower MICs than linezolid against Staphylococcus aureus and intracellular bacteria.
-    notes: Lemaire et al. 2010 (PMID:19995922) and Skripkin et al. 2008 (PMID:18663023)
-      established that radezolid binds the bacterial 50S ribosomal subunit 23S rRNA
-      peptidyl-transferase center with additional biaryl contacts that retain activity
-      against cfr- and uL3/uL4-mutant ribosomes.
+      protein synthesis by binding to the 50S ribosomal subunit and retains potent
+      activity against Staphylococcus aureus strains carrying 23S rRNA mutations or
+      the cfr methyltransferase gene.
+    notes: Locke et al. 2009 (PMID:19752277) and Skripkin et al. 2008 (DOI:10.1128/AAC.01193-07,
+      PMID:18663023) established that radezolid binds the bacterial 50S ribosomal
+      subunit 23S rRNA peptidyl-transferase center with additional biaryl contacts
+      that retain activity against cfr- and uL3/uL4-mutant ribosomes.
