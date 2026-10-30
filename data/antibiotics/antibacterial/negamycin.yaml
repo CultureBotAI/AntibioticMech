@@ -1,7 +1,7 @@
 identifier: CHEBI:198310
 label: negamycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A natural pseudodipeptide hydrazide antibiotic ([2-[(3R,5R)-3,6-diamino-5-hydroxyhexanoyl]-1-methylhydrazinyl]acetic
   acid) that binds helix 34 of the bacterial 30S ribosomal subunit to impair translocation
@@ -62,6 +62,14 @@ curation_history:
   action: CURATED_MOLECULAR_TARGETS
   changes: Added PRIMARY_LITERATURE molecular_target for bacterial 30S ribosomal subunit
     head domain (16S rRNA helix 34) backed by DOI:10.1073/pnas.1414401111.
+  llm_assisted: true
+- timestamp: '2026-10-26T07:10:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted curation_status from PROPOSED to REVIEWED after verifying exact
+    ChEBI:198310 identity, definition, antimicrobial_class, mode_of_action, and primary-literature
+    bacterial 30S ribosomal subunit head domain (16S rRNA helix 34) molecular_targets
+    (issue #1284).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION

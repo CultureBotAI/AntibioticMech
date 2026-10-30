@@ -79,20 +79,20 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
         "causal_graphs_with_protein_nodes": 44,
         "causal_graphs_held": 21,
         "gene_or_protein_nodes": 46,
-        "primary_literature_targets_total": 123,
-        "primary_literature_targets_populated": 59,
-        "primary_literature_targets_held": 64,
+        "primary_literature_targets_total": 133,
+        "primary_literature_targets_populated": 63,
+        "primary_literature_targets_held": 70,
     }
 
 
 def test_plan_and_transition_summary_counts():
     plan = load_uniprot_examples_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
-    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 57
+    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 61
     assert sum(d["causal_nodes_updated"] for d in receipt["record_deltas"]) == 15
-    assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 49
-    assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 91
-    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 85
+    assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 53
+    assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 103
+    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 91
 
 
 def test_strict_protein_example_and_held_target_validation():
@@ -260,7 +260,7 @@ def test_non_protein_causal_node_and_target_reject_protein_examples():
         )
 
 
-@pytest.mark.parametrize("index", range(57))
+@pytest.mark.parametrize("index", range(61))
 def test_exact_scoped_transition_and_idempotence(
     tmp_path,
     restore_pre_uniprot_protein_examples,

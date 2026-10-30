@@ -62,9 +62,41 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=PROTEIN_SYNTHESIS_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for mycobacterial 50S
+    ribosomal subunit peptidyl-transferase center (23S rRNA) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1128/AAC.01182-08 (PMID:19075058; issue #1286).'
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Thiomorpholinyl oxazolidinone (PNU-100480) that binds the 23S
   rRNA peptidyl-transferase center of the mycobacterial 50S ribosomal subunit and
   inhibits protein synthesis (PMID:19687246).
+molecular_targets:
+- target_label: mycobacterial 50S ribosomal subunit peptidyl-transferase center (23S
+    rRNA)
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:1773
+  taxon_label: Mycobacterium tuberculosis
+  experimental_context: Thiomorpholinyl oxazolidinone PNU-100480 (sutezolid) binding
+    to the mycobacterial 50S ribosomal subunit 23S rRNA peptidyl-transferase center
+    and inhibition of Mycobacterium tuberculosis protein synthesis (Williams et al.
+    2009, DOI:10.1128/AAC.01182-08, PMID:19075058).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2009-04
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.01182-08
+    snippet: Williams et al. reported that PNU-100480 (sutezolid), an oxazolidinone
+      bacterial protein synthesis inhibitor targeting the 50S ribosomal subunit, had
+      MICs <= 0.5 ug/mL against Mycobacterium tuberculosis and showed superior sterilizing
+      activity to linezolid in a murine tuberculosis model.
+    notes: Williams et al. 2009 (PMID:19075058) characterized PNU-100480 (sutezolid)
+      and its sulfoxide metabolite PNU-101603 as 50S ribosomal subunit translation
+      inhibitors active against drug-susceptible and multidrug-resistant Mycobacterium
+      tuberculosis.

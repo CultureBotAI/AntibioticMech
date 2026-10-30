@@ -58,9 +58,69 @@ curation_history:
   changes: Curated biosynthesis_origin=SYNTHETIC, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION,
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for fungal lanosterol
+    14-alpha-demethylase (CYP51 / Erg11) (PROTEIN, DIRECT_BINDING_TARGET) backed by
+    DOI:10.1128/AAC.45.7.2151-2153.2001 (PMID:11408242, PMID:10582896; issue #1286).'
+  llm_assisted: true
+- timestamp: '2026-10-26T07:05:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Candida albicans SC5314 and Candida glabrata CBS 138 Erg11
+    (UniProtKB:P10613, UniProtKB:P50859) protein_examples to the primary-literature
+    fungal lanosterol 14-alpha-demethylase target (DOI:10.1128/AAC.45.7.2151-2153.2001;
+    PMID:11408242; PMID:10582896).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Quinazolinone-triazole antifungal (UR-9825) that inhibits fungal
   cytochrome P450 lanosterol 14alpha-demethylase (CYP51 / Erg11) and blocks ergosterol
   biosynthesis (PMID:11061504).
+molecular_targets:
+- target_label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  experimental_context: Triazole inhibition of fungal cytochrome P450 lanosterol 14-alpha-demethylase
+    (CYP51 / Erg11) blocking ergosterol biosynthesis in Candida, Cryptococcus, and
+    Scedosporium species (Ramos et al. 1999, DOI:10.1128/AAC.43.12.2992, PMID:10582896;
+    Carrillo and Guarro 2001, DOI:10.1128/AAC.45.7.2151-2153.2001, PMID:11408242).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-07
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.45.7.2151-2153.2001
+    snippet: UR-9825 (albaconazole) is a new triazole antifungal agent with potent
+      broad-spectrum activity against Candida, Cryptococcus, and filamentous fungi
+      through inhibition of fungal ergosterol biosynthesis at lanosterol 14-alpha-demethylase
+      (CYP51).
+    notes: Carrillo and Guarro 2001 (PMID:11408242) and Ramos et al. 1999 (DOI:10.1128/AAC.43.12.2992,
+      PMID:10582896) established UR-9825 (albaconazole) as a potent triazole inhibitor
+      of fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11).
+  protein_examples:
+  - uniprot_id: UniProtKB:P10613
+    protein_label: Lanosterol 14-alpha demethylase
+    gene_symbol: ERG11
+    taxon_id: NCBITaxon:237561
+    taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Fungal cytochrome P450 lanosterol 14-alpha-demethylase (CYP51 / Erg11) in
+      Candida albicans inhibited by the triazole antifungal UR-9825 / albaconazole
+      (DOI:10.1128/AAC.45.7.2151-2153.2001; PMID:11408242; PMID:10582896).
+  - uniprot_id: UniProtKB:P50859
+    protein_label: Lanosterol 14-alpha demethylase
+    gene_symbol: ERG11
+    taxon_id: NCBITaxon:284593
+    taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC
+      0622 / NRRL Y-65 / CBS 138)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-26'
+    role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata
+      targeted by broad-spectrum triazole UR-9825 / albaconazole (DOI:10.1128/AAC.45.7.2151-2153.2001;
+      PMID:11408242; PMID:10582896).

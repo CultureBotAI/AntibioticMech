@@ -62,9 +62,40 @@ curation_history:
     mode_of_action_target_scope=MICROBIAL_TARGET, and primary-literature-backed mode_of_action_notes;
     corrected 'acrylates' typo to 'acylates' in definition.
   llm_assisted: true
+- timestamp: '2026-10-26T07:00:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Added primary-literature molecular_targets entry for bacterial penicillin-binding
+    proteins (PBPs) (PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.40.9.2142
+    (PMID:8878596; issue #1286).'
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: Tricyclic beta-lactam (trinem, GV104326) that covalently acylates
   bacterial penicillin-binding proteins (PBPs) to inhibit peptidoglycan cell-wall
   cross-linking (PMID:8540693).
+molecular_targets:
+- target_label: bacterial penicillin-binding proteins (PBPs)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Acylation of essential bacterial penicillin-binding proteins
+    (PBPs) to inhibit peptidoglycan transpeptidation by the tricyclic beta-lactam
+    (trinem) GV104326 / sanfetrinem (Singh et al. 1996, DOI:10.1128/AAC.40.9.2142,
+    PMID:8878596).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1996-09
+  source_retrieved_on: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1128/AAC.40.9.2142
+    snippet: Singh et al. reported that the tricyclic beta-lactam (trinem) sanfetrinem
+      (GV104326) exhibited potent broad-spectrum bactericidal activity against Gram-positive,
+      Gram-negative, and anaerobic bacteria by inhibiting bacterial penicillin-binding
+      proteins and cell wall synthesis.
+    notes: Singh et al. 1996 (PMID:8878596) and Di Modugno et al. 1994 (DOI:10.1128/AAC.38.10.2362,
+      PMID:7840571) established that GV104326 (sanfetrinem) binds essential bacterial
+      PBPs across Gram-positive and Gram-negative pathogens and resists hydrolysis
+      by common beta-lactamases.
