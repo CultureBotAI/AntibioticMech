@@ -112,6 +112,78 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Negamycin binds 16S rRNA helix 34 and the A-site tRNA anticodon arm to induce miscoding and block translocation <span class="pill">MECHANISTIC</span></h3>
+<p>Negamycin binds the head domain of the bacterial 30S ribosomal subunit at 16S rRNA helix 34, contacts the sugar-phosphate backbone of the A-site aminoacyl-tRNA anticodon stem-loop, stabilizes near-cognate tRNA occupancy, and impairs mRNA-tRNA translocation and translational fidelity.</p><div class="table-scroll" role="region" aria-label="Nodes: negamycin_30s_helix_34_miscoding_and_stalling" tabindex="0">
+<table>
+  <caption>Nodes — negamycin_30s_helix_34_miscoding_and_stalling</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">negamycin</code></td>
+    <td>negamycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/negamycin.html"><code class="curie">CHEBI:198310</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_30s_helix_34_pocket</code></td>
+    <td>bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)</td>
+    <td class="meta">CELL_STRUCTURE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">negamycin_bound_helix34_asite_trna_complex</code></td>
+    <td>negamycin-bridged 16S rRNA helix 34 and A-site tRNA anticodon complex</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_translation_fidelity_and_translocation</code></td>
+    <td>faithful bacterial A-site decoding and mRNA-tRNA translocation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: negamycin_30s_helix_34_miscoding_and_stalling" tabindex="0">
+<table>
+  <caption>Edges — negamycin_30s_helix_34_miscoding_and_stalling</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">negamycin</code></td>
+    <td>binds</td>
+    <td><code class="curie">negamycin_bound_helix34_asite_trna_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1073/pnas.1414401111">DOI:10.1073/pnas.1414401111</a></span> <span class="meta">(The Escherichia coli 70S-negamycin crystal structure (PDB:4W2I; PMID:25368144) resolved negamycin bound at 16S rRNA helix 34 bridging the A-site tRNA anticodon arm.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.molcel.2014.09.021">DOI:10.1016/j.molcel.2014.09.021</a></span> <span class="meta">(The Thermus thermophilus 70S-negamycin crystal structure (PDB:4UJC; PMID:25306922) confirmed specific coordination of negamycin at 16S rRNA helix 34.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_30s_helix_34_pocket</code></td>
+    <td>participates in</td>
+    <td><code class="curie">negamycin_bound_helix34_asite_trna_complex</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1073/pnas.1414401111">DOI:10.1073/pnas.1414401111</a></span> <span class="meta">(Crystallographic and mutational analyses in E. coli rrn operon strains showed that 16S rRNA helix 34 mutations confer negamycin resistance.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">negamycin_bound_helix34_asite_trna_complex</code></td>
+    <td>disrupts</td>
+    <td><code class="curie">bacterial_translation_fidelity_and_translocation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1073/pnas.1414401111">DOI:10.1073/pnas.1414401111</a></span> <span class="meta">(Single-molecule FRET and biochemical translation assays demonstrated that negamycin prolongs near-cognate tRNA residency, induces miscoding, and impedes translocation.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.molcel.2014.09.021">DOI:10.1016/j.molcel.2014.09.021</a></span> <span class="meta">(Mechanistic and structural analyses confirmed that negamycin-tRNA interactions at helix 34 drive miscoding and inhibit ribosome progression.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -138,6 +210,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-26 · antigravity · LLM-assisted</span>
     <p>Promoted curation_status from PROPOSED to REVIEWED after verifying exact ChEBI:198310 identity, definition, antimicrobial_class, mode_of_action, and primary-literature bacterial 30S ribosomal subunit head domain (16S rRNA helix 34) molecular_targets (issue #1284).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-31 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph negamycin_30s_helix_34_miscoding_and_stalling (4 nodes, 3 edges) for the non-protein primary-literature target (DOI:10.1073/pnas.1414401111, DOI:10.1016/j.molcel.2014.09.021).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -158,7 +235,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>9b2517f3adee</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>b0ffd96d3658</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

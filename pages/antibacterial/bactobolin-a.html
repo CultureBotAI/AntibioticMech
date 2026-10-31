@@ -131,6 +131,78 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Bactobolin A binds 50S ribosomal subunit protein uL2 (RplB) at the P-site tRNA interface to inhibit bacterial translation <span class="pill">MECHANISTIC</span></h3>
+<p>Bactobolin A binds a conserved pocket on the bacterial 50S ribosomal subunit formed by ribosomal protein uL2 (RplB, centered on Glu236), 23S rRNA, and the CCA end of P-site tRNA, displacing the P-site tRNA 3&#39;-CCA away from the peptidyl transferase center and impairing peptidyl transfer and translation termination.</p><div class="table-scroll" role="region" aria-label="Nodes: bactobolin_a_ul2_50s_translation_termination_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — bactobolin_a_ul2_50s_translation_termination_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">bactobolin_a</code></td>
+    <td>bactobolin A</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/bactobolin-a.html"><code class="curie">CHEBI:138579</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_protein_ul2</code></td>
+    <td>50S ribosomal subunit protein uL2 (RplB)<br><span class="meta">Examples: Large ribosomal subunit protein uL2 (rplB) <a href="https://www.uniprot.org/uniprotkb/P42919"><code class="curie">UniProtKB:P42919</code></a>, <em>Bacillus subtilis (strain 168)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_224308"><code class="curie">NCBITaxon:224308</code></a> <span class="pill">REVIEWED</span> — Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB, BSU01130) in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln substitutions confer specific resistance to bactobolin A (MIC shift from 0.31 to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12; PMID:23249812).; Large ribosomal subunit protein uL2 (rplB) <a href="https://www.uniprot.org/uniprotkb/P60405"><code class="curie">UniProtKB:P60405</code></a>, <em>Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_300852"><code class="curie">NCBITaxon:300852</code></a> <span class="pill">REVIEWED</span> — Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB, TTHA1676) that directly coordinates bactobolin A via its conserved Glu236 loop at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bactobolin_bound_ul2_p_site_trna_state</code></td>
+    <td>bactobolin A-bound uL2/P-site tRNA 50S complex with displaced P-site CCA end</td>
+    <td class="meta">STATE</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_peptidyl_transfer_and_termination</code></td>
+    <td>bacterial ribosomal peptidyl transfer and translation termination</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: bactobolin_a_ul2_50s_translation_termination_inhibition" tabindex="0">
+<table>
+  <caption>Edges — bactobolin_a_ul2_50s_translation_termination_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">bactobolin_a</code></td>
+    <td>binds</td>
+    <td><code class="curie">bactobolin_bound_ul2_p_site_trna_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.jmb.2014.12.018">DOI:10.1016/j.jmb.2014.12.018</a></span> <span class="meta">(The 3.0-angstrom Thermus thermophilus 70S-tRNA-bactobolin A crystal structure (PDB:4WT8; PMID:25562208) resolved bactobolin A bound in a unique 50S pocket contacting uL2 Glu236 and P-site tRNA.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/mBio.00499-12">DOI:10.1128/mBio.00499-12</a></span> <span class="meta">(Spontaneous and engineered Bacillus subtilis rplB (uL2) Glu236Ala and Glu236Gln mutations conferred specific resistance to bactobolin A (PMID:23249812).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ribosomal_protein_ul2</code></td>
+    <td>participates in</td>
+    <td><code class="curie">bactobolin_bound_ul2_p_site_trna_state</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.jmb.2014.12.018">DOI:10.1016/j.jmb.2014.12.018</a></span> <span class="meta">(Crystallographic contacts in PDB:4WT8 showed direct coordination between the uL2 Glu236 loop and bactobolin A.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/mBio.00499-12">DOI:10.1128/mBio.00499-12</a></span> <span class="meta">(Substitution of uL2 Glu236 in Bacillus subtilis 168 abolished susceptibility to bactobolin A without cross-resistance to PTC-targeting antibiotics.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bactobolin_bound_ul2_p_site_trna_state</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">bacterial_peptidyl_transfer_and_termination</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.jmb.2014.12.018">DOI:10.1016/j.jmb.2014.12.018</a></span> <span class="meta">(Structural analysis of PDB:4WT8 demonstrated that bactobolin A induces a conformational shift of P-site tRNA CCA76 away from the peptidyl transferase center, blocking peptide bond formation and termination hydrolysis.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -162,6 +234,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-26 · antigravity · LLM-assisted</span>
     <p>Promoted curation_status from PROPOSED to REVIEWED after verifying exact ChEBI:138579 identity, definition, antimicrobial_class, mode_of_action, and primary-literature molecular_targets with reviewed UniProtKB:P42919 and UniProtKB:P60405 protein_examples (issue #1284).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-31 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph bactobolin_a_ul2_50s_translation_termination_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P42919, UniProtKB:P60405) and primary literature (DOI:10.1128/mBio.00499-12, DOI:10.1016/j.jmb.2014.12.018).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -182,7 +259,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>9b2517f3adee</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>b0ffd96d3658</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

@@ -70,15 +70,15 @@ def test_every_causal_graph_gene_or_protein_node_has_valid_protein_examples(reco
                     assert normalized.get("role"), (
                         f"{path}: expected role on {normalized['uniprot_id']}"
                     )
-    assert causal_graph_records == 64
-    assert gene_or_protein_nodes == 46
+    assert causal_graph_records == 69
+    assert gene_or_protein_nodes == 50
 
     accounting = verify_corpus_protein_examples_accounting(records)
     assert accounting == {
-        "causal_graphs_total": 65,
-        "causal_graphs_with_protein_nodes": 44,
-        "causal_graphs_held": 21,
-        "gene_or_protein_nodes": 46,
+        "causal_graphs_total": 70,
+        "causal_graphs_with_protein_nodes": 48,
+        "causal_graphs_held": 22,
+        "gene_or_protein_nodes": 50,
         "primary_literature_targets_total": 133,
         "primary_literature_targets_populated": 63,
         "primary_literature_targets_held": 70,
@@ -92,7 +92,7 @@ def test_plan_and_transition_summary_counts():
     assert sum(d["causal_nodes_updated"] for d in receipt["record_deltas"]) == 15
     assert sum(d["molecular_targets_updated"] for d in receipt["record_deltas"]) == 53
     assert sum(d["protein_examples_added"] for d in receipt["record_deltas"]) == 103
-    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 91
+    assert isinstance(plan.get("held_targets"), list) and len(plan["held_targets"]) == 92
 
 
 def test_strict_protein_example_and_held_target_validation():

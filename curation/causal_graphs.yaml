@@ -3,11 +3,11 @@ task: causal_graphs_curation
 curation_action: CURATED_CAUSAL_GRAPHS
 retrieved_on: '2026-10-23'
 scope_note: 'Curated primary-literature MECHANISTIC causal_graphs across all eligible
-  REVIEWED AntibioticMech records: 30 Cohort A records with resolved UniProtKB protein_examples
-  on PRIMARY_LITERATURE molecular_targets and 18 Cohort B records with direct-binding
+  REVIEWED AntibioticMech records: 34 Cohort A records with resolved UniProtKB protein_examples
+  on PRIMARY_LITERATURE molecular_targets and 19 Cohort B records with direct-binding
   or measured-association non-protein PRIMARY_LITERATURE molecular_targets, plus explicit
   accounting of all 16 pre-existing corpus causal_graphs (15 REVIEWED + 1 SEEDED)
-  and all 38 held REVIEWED records.'
+  and all 33 held REVIEWED records.'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -3866,6 +3866,522 @@ records:
       - reference: PMID:25056938
         notes: Inhibition of CYP51 by VT-1161 depleted cellular ergosterol and accumulated
           14-alpha-methylated sterols in Candida albicans.
+- identifier: CHEBI:138579
+  label: bactobolin A
+  path: data/antibiotics/antibacterial/bactobolin-a.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph bactobolin_a_ul2_50s_translation_termination_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P42919,
+    UniProtKB:P60405) and primary literature (DOI:10.1128/mBio.00499-12, DOI:10.1016/j.jmb.2014.12.018).
+  causal_graphs:
+  - graph_id: bactobolin_a_ul2_50s_translation_termination_inhibition
+    title: Bactobolin A binds 50S ribosomal subunit protein uL2 (RplB) at the P-site
+      tRNA interface to inhibit bacterial translation
+    description: Bactobolin A binds a conserved pocket on the bacterial 50S ribosomal
+      subunit formed by ribosomal protein uL2 (RplB, centered on Glu236), 23S rRNA,
+      and the CCA end of P-site tRNA, displacing the P-site tRNA 3'-CCA away from
+      the peptidyl transferase center and impairing peptidyl transfer and translation
+      termination.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: bactobolin_a
+      label: bactobolin A
+      node_type: COMPOUND
+      grounding: CHEBI:138579
+    - node_id: ribosomal_protein_ul2
+      label: 50S ribosomal subunit protein uL2 (RplB)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial 50S large ribosomal subunit protein uL2 (RplB); kept
+        label-only with Bacillus subtilis 168 (UniProtKB:P42919) and Thermus thermophilus
+        HB8 (UniProtKB:P60405) protein_examples.
+      gene_symbols:
+      - rplB
+      protein_examples:
+      - uniprot_id: UniProtKB:P42919
+        protein_label: Large ribosomal subunit protein uL2
+        gene_symbol: rplB
+        taxon_id: NCBITaxon:224308
+        taxon_label: Bacillus subtilis (strain 168)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-25'
+        role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB,
+          BSU01130) in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln
+          substitutions confer specific resistance to bactobolin A (MIC shift from
+          0.31 to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12; PMID:23249812).
+      - uniprot_id: UniProtKB:P60405
+        protein_label: Large ribosomal subunit protein uL2
+        gene_symbol: rplB
+        taxon_id: NCBITaxon:300852
+        taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-25'
+        role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB,
+          TTHA1676) that directly coordinates bactobolin A via its conserved Glu236
+          loop at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal
+          structure (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+    - node_id: bactobolin_bound_ul2_p_site_trna_state
+      label: bactobolin A-bound uL2/P-site tRNA 50S complex with displaced P-site
+        CCA end
+      node_type: STATE
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: 70S ribosome crystal state (PDB:4WT8) showing bactobolin A
+        coordinated by uL2 Glu236 and 23S rRNA with the 3'-CCA end of P-site tRNA
+        shifted away from the peptidyl transferase center.
+    - node_id: bacterial_peptidyl_transfer_and_termination
+      label: bacterial ribosomal peptidyl transfer and translation termination
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: P-site tRNA-dependent peptidyl transfer and release-factor-mediated
+        translation termination inhibited upon bactobolin A binding.
+    edges:
+    - subject: bactobolin_a
+      predicate: binds
+      object: bactobolin_bound_ul2_p_site_trna_state
+      description: Bactobolin A binds the 50S ribosomal subunit at the interface of
+        ribosomal protein uL2, 23S rRNA, and P-site tRNA.
+      evidence:
+      - reference: DOI:10.1016/j.jmb.2014.12.018
+        notes: The 3.0-angstrom Thermus thermophilus 70S-tRNA-bactobolin A crystal
+          structure (PDB:4WT8; PMID:25562208) resolved bactobolin A bound in a unique
+          50S pocket contacting uL2 Glu236 and P-site tRNA.
+      - reference: DOI:10.1128/mBio.00499-12
+        notes: Spontaneous and engineered Bacillus subtilis rplB (uL2) Glu236Ala and
+          Glu236Gln mutations conferred specific resistance to bactobolin A (PMID:23249812).
+    - subject: ribosomal_protein_ul2
+      predicate: participates in
+      object: bactobolin_bound_ul2_p_site_trna_state
+      description: The conserved Glu236 region of 50S ribosomal protein uL2 directly
+        coordinates bactobolin A at the P-site tRNA interface.
+      evidence:
+      - reference: DOI:10.1016/j.jmb.2014.12.018
+        notes: Crystallographic contacts in PDB:4WT8 showed direct coordination between
+          the uL2 Glu236 loop and bactobolin A.
+      - reference: DOI:10.1128/mBio.00499-12
+        notes: Substitution of uL2 Glu236 in Bacillus subtilis 168 abolished susceptibility
+          to bactobolin A without cross-resistance to PTC-targeting antibiotics.
+    - subject: bactobolin_bound_ul2_p_site_trna_state
+      predicate: inhibits
+      object: bacterial_peptidyl_transfer_and_termination
+      description: Bactobolin A-induced displacement of the P-site tRNA 3'-CCA end
+        from the peptidyl transferase center inhibits peptidyl transfer and translation
+        termination.
+      evidence:
+      - reference: DOI:10.1016/j.jmb.2014.12.018
+        notes: Structural analysis of PDB:4WT8 demonstrated that bactobolin A induces
+          a conformational shift of P-site tRNA CCA76 away from the peptidyl transferase
+          center, blocking peptide bond formation and termination hydrolysis.
+- identifier: CHEBI:198310
+  label: negamycin
+  path: data/antibiotics/antibacterial/negamycin.yaml
+  cohort: non_protein_direct_or_measured_target
+  changes: Added evidence-backed MECHANISTIC causal graph negamycin_30s_helix_34_miscoding_and_stalling
+    (4 nodes, 3 edges) for the non-protein primary-literature target (DOI:10.1073/pnas.1414401111,
+    DOI:10.1016/j.molcel.2014.09.021).
+  causal_graphs:
+  - graph_id: negamycin_30s_helix_34_miscoding_and_stalling
+    title: Negamycin binds 16S rRNA helix 34 and the A-site tRNA anticodon arm to
+      induce miscoding and block translocation
+    description: Negamycin binds the head domain of the bacterial 30S ribosomal subunit
+      at 16S rRNA helix 34, contacts the sugar-phosphate backbone of the A-site aminoacyl-tRNA
+      anticodon stem-loop, stabilizes near-cognate tRNA occupancy, and impairs mRNA-tRNA
+      translocation and translational fidelity.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: negamycin
+      label: negamycin
+      node_type: COMPOUND
+      grounding: CHEBI:198310
+    - node_id: ribosomal_30s_helix_34_pocket
+      label: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
+      node_type: CELL_STRUCTURE
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: 16S rRNA helix 34 in the head domain of the bacterial 30S ribosomal
+        subunit adjacent to the A-site tRNA anticodon stem-loop.
+    - node_id: negamycin_bound_helix34_asite_trna_complex
+      label: negamycin-bridged 16S rRNA helix 34 and A-site tRNA anticodon complex
+      node_type: STATE
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: 70S ribosome crystal structures (PDB:4W2I, PDB:4UJC) showing
+        negamycin bridging 16S rRNA helix 34 and the A-site tRNA anticodon arm.
+    - node_id: bacterial_translation_fidelity_and_translocation
+      label: faithful bacterial A-site decoding and mRNA-tRNA translocation
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Ribosomal decoding fidelity and EF-G-catalyzed translocation
+        assayed by single-molecule FRET and in vitro translation.
+    edges:
+    - subject: negamycin
+      predicate: binds
+      object: negamycin_bound_helix34_asite_trna_complex
+      description: Negamycin binds 16S rRNA helix 34 in the 30S head domain and directly
+        contacts the A-site tRNA anticodon stem-loop.
+      evidence:
+      - reference: DOI:10.1073/pnas.1414401111
+        notes: The Escherichia coli 70S-negamycin crystal structure (PDB:4W2I;
+          PMID:25368144) resolved negamycin bound at 16S rRNA helix 34 bridging the
+          A-site tRNA anticodon arm.
+      - reference: DOI:10.1016/j.molcel.2014.09.021
+        notes: The Thermus thermophilus 70S-negamycin crystal structure (PDB:4UJC;
+          PMID:25306922) confirmed specific coordination of negamycin at 16S rRNA
+          helix 34.
+    - subject: ribosomal_30s_helix_34_pocket
+      predicate: participates in
+      object: negamycin_bound_helix34_asite_trna_complex
+      description: 16S rRNA helix 34 nucleotides in the 30S subunit head domain form
+        the ribosomal binding site for negamycin.
+      evidence:
+      - reference: DOI:10.1073/pnas.1414401111
+        notes: Crystallographic and mutational analyses in E. coli rrn operon strains
+          showed that 16S rRNA helix 34 mutations confer negamycin resistance.
+    - subject: negamycin_bound_helix34_asite_trna_complex
+      predicate: disrupts
+      object: bacterial_translation_fidelity_and_translocation
+      description: Negamycin stabilization of A-site tRNA at helix 34 promotes near-cognate
+        miscoding and inhibits mRNA-tRNA translocation.
+      evidence:
+      - reference: DOI:10.1073/pnas.1414401111
+        notes: Single-molecule FRET and biochemical translation assays demonstrated
+          that negamycin prolongs near-cognate tRNA residency, induces miscoding,
+          and impedes translocation.
+      - reference: DOI:10.1016/j.molcel.2014.09.021
+        notes: Mechanistic and structural analyses confirmed that negamycin-tRNA interactions
+          at helix 34 drive miscoding and inhibit ribosome progression.
+- identifier: CHEBI:135622
+  label: besifloxacin
+  path: data/antibiotics/antibacterial/besifloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph besifloxacin_dual_gyrase_topoisomerase_iv_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P72525,
+    UniProtKB:P0AES4, UniProtKB:P0AFI2) and primary literature (DOI:10.1093/jac/dkn528,
+    DOI:10.1128/AAC.00418-09).
+  causal_graphs:
+  - graph_id: besifloxacin_dual_gyrase_topoisomerase_iv_inhibition
+    title: Besifloxacin inhibits bacterial DNA gyrase and topoisomerase IV with balanced
+      dual-target potency to block DNA replication
+    description: Besifloxacin (BOL-303224-A), an 8-chloro-fluoroquinolone, potently
+      and equipotently inhibits both bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling
+      and topoisomerase IV (ParC/ParE) decatenation in Gram-positive and Gram-negative
+      pathogens, blocking bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: besifloxacin
+      label: besifloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:135622
+    - node_id: bacterial_type_ii_topoisomerases_gyra_parc
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial type II topoisomerases DNA gyrase and topoisomerase
+        IV; kept label-only with Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525)
+        and Escherichia coli K-12 GyrA (UniProtKB:P0AES4) and ParC (UniProtKB:P0AFI2)
+        protein_examples.
+      gene_symbols:
+      - gyrA
+      - parC
+      protein_examples:
+      - uniprot_id: UniProtKB:P72525
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:170187
+        taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Streptococcus pneumoniae topoisomerase IV ParC catalytic subunit inhibited
+          with balanced potency alongside DNA gyrase by besifloxacin in purified enzyme
+          and step-wise mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19451292).
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Bacterial DNA gyrase GyrA catalytic subunit inhibited in purified Escherichia
+          coli supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified
+          Escherichia coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528;
+          PMID:19451292).
+    - node_id: gyrase_supercoiling_and_topo_iv_decatenation
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: ATP-dependent DNA supercoiling by DNA gyrase and daughter-chromosome
+        decatenation by topoisomerase IV assayed with purified S. pneumoniae and E.
+        coli enzymes.
+    - node_id: bacterial_dna_replication_and_chromosome_segregation
+      label: bacterial DNA replication and chromosome segregation
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA synthesis and chromosome partitioning arrested
+        by dual type II topoisomerase inhibition.
+    edges:
+    - subject: besifloxacin
+      predicate: inhibits
+      object: gyrase_supercoiling_and_topo_iv_decatenation
+      description: Besifloxacin potently inhibits both DNA gyrase DNA supercoiling
+        and topoisomerase IV decatenation with balanced dual-target activity.
+      evidence:
+      - reference: DOI:10.1093/jac/dkn528
+        notes: Purified enzyme assays in Streptococcus pneumoniae and Escherichia
+          coli demonstrated balanced IC50 inhibition of DNA gyrase supercoiling and
+          topoisomerase IV decatenation by besifloxacin (PMID:19451292).
+      - reference: DOI:10.1128/AAC.00418-09
+        notes: Broad-spectrum susceptibility profiling across 2,690 clinical isolates
+          confirmed potent besifloxacin activity against fluoroquinolone-resistant
+          staphylococci and streptococci (PMID:19506065).
+    - subject: bacterial_type_ii_topoisomerases_gyra_parc
+      predicate: enables
+      object: gyrase_supercoiling_and_topo_iv_decatenation
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+        catalyze negative DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1093/jac/dkn528
+        notes: Purified S. pneumoniae and E. coli DNA gyrase and topoisomerase IV
+          enzymes catalyzed the supercoiling and decatenation reactions inhibited
+          by besifloxacin.
+    - subject: gyrase_supercoiling_and_topo_iv_decatenation
+      predicate: supports
+      object: bacterial_dna_replication_and_chromosome_segregation
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are essential
+        for bacterial DNA replication and chromosome segregation.
+      evidence:
+      - reference: DOI:10.1093/jac/dkn528
+        notes: Dual inhibition of DNA gyrase and topoisomerase IV by besifloxacin
+          produced rapid bactericidal activity and required concurrent mutations in
+          both gyrA and parC for high-level resistance.
+- identifier: CHEBI:136050
+  label: ozenoxacin
+  path: data/antibiotics/antibacterial/ozenoxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph ozenoxacin_dual_gyrase_topoisomerase_iv_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P72525,
+    UniProtKB:P0AES4, UniProtKB:P0AFI2) and primary literature (DOI:10.1128/AAC.46.5.1229-1234.2002,
+    DOI:10.1128/AAC.01509-13).
+  causal_graphs:
+  - graph_id: ozenoxacin_dual_gyrase_topoisomerase_iv_inhibition
+    title: Ozenoxacin dually inhibits bacterial DNA gyrase and topoisomerase IV to
+      block bacterial DNA replication
+    description: Ozenoxacin (T-3912), a nonfluorinated quinolone, dually inhibits
+      bacterial DNA gyrase (GyrA/GyrB) supercoiling and topoisomerase IV (ParC/ParE)
+      decatenation across Gram-positive and Gram-negative bacteria, retaining potent
+      bactericidal activity against QRDR-mutant strains.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: ozenoxacin
+      label: ozenoxacin
+      node_type: COMPOUND
+      grounding: CHEBI:136050
+    - node_id: bacterial_type_ii_topoisomerases_gyra_parc
+      label: bacterial DNA gyrase and topoisomerase IV
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase and topoisomerase IV complexes; kept label-only
+        with Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and Escherichia
+        coli K-12 GyrA (UniProtKB:P0AES4) and ParC (UniProtKB:P0AFI2) protein_examples.
+      gene_symbols:
+      - gyrA
+      - parC
+      protein_examples:
+      - uniprot_id: UniProtKB:P72525
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:170187
+        taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Streptococcus pneumoniae topoisomerase IV ParC subunit targeted by the
+          nonfluorinated quinolone T-3912 / ozenoxacin across wild-type and QRDR-mutant
+          strains (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Bacterial DNA gyrase GyrA catalytic subunit targeted by T-3912 / ozenoxacin
+          in Gram-positive and Gram-negative topoisomerase inhibition assays (DOI:10.1128/AAC.46.5.1229-1234.2002;
+          PMID:11959549).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Bacterial topoisomerase IV ParC catalytic subunit targeted by T-3912
+          / ozenoxacin alongside DNA gyrase (DOI:10.1128/AAC.46.5.1229-1234.2002;
+          PMID:11959549).
+    - node_id: gyrase_and_topo_iv_catalytic_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Type II topoisomerase supercoiling and decatenation catalytic
+        activities inhibited by T-3912 / ozenoxacin.
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: ozenoxacin
+      predicate: inhibits
+      object: gyrase_and_topo_iv_catalytic_activity
+      description: Ozenoxacin (T-3912) dually inhibits bacterial DNA gyrase supercoiling
+        and topoisomerase IV decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.46.5.1229-1234.2002
+        notes: Topoisomerase inhibition and QRDR-mutant susceptibility assays demonstrated
+          potent dual inhibition of DNA gyrase and topoisomerase IV by T-3912 (PMID:11959549).
+      - reference: DOI:10.1128/AAC.01509-13
+        notes: Comparative susceptibility and mutant-prevention studies confirmed
+          potent ozenoxacin activity across gyrA and grlA/parC mutant staphylococci
+          and streptococci (PMID:24080666).
+    - subject: bacterial_type_ii_topoisomerases_gyra_parc
+      predicate: enables
+      object: gyrase_and_topo_iv_catalytic_activity
+      description: Bacterial DNA gyrase and topoisomerase IV catalyze DNA supercoiling
+        and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.46.5.1229-1234.2002
+        notes: Enzymatic and genetic target analyses established GyrA and ParC as
+          the catalytic topoisomerase subunits inhibited by T-3912.
+    - subject: gyrase_and_topo_iv_catalytic_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: Type II topoisomerase supercoiling and decatenation activities
+        are required for bacterial DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.46.5.1229-1234.2002
+        notes: Dual inhibition of DNA gyrase and topoisomerase IV by T-3912 arrested
+          bacterial replication and growth across Gram-positive and Gram-negative
+          pathogens.
+- identifier: CHEBI:94700
+  label: pazufloxacin
+  path: data/antibiotics/antibacterial/pazufloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4,
+    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.37.3.384,
+    DOI:10.1128/AAC.36.10.2293).
+  causal_graphs:
+  - graph_id: pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition
+    title: Pazufloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest
+      DNA replication
+    description: Pazufloxacin (T-3761), an aminocyclopropyl fluoroquinolone, inhibits
+      bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE)
+      activity, blocking bacterial DNA replication and inducing rapid bactericidal
+      killing.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: pazufloxacin
+      label: pazufloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:94700
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase and topoisomerase IV
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+        holoenzymes; kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4),
+        GyrB (UniProtKB:P0AES6), ParC (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083)
+        protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling
+          activity is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384;
+          PMID:8460909; PMID:11959571).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme
+          inhibited by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384;
+          PMID:8460909; PMID:11959571).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone
+          T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-26'
+        role: Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme
+          co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909;
+          PMID:11959571).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_activity
+      label: DNA gyrase supercoiling and topoisomerase IV catalytic activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified E. coli DNA gyrase supercoiling and type II topoisomerase
+        catalytic activity inhibited by T-3761 / pazufloxacin.
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: pazufloxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_activity
+      description: Pazufloxacin (T-3761) potently inhibits Escherichia coli DNA gyrase
+        supercoiling and bacterial topoisomerase IV activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.37.3.384
+        notes: Purified Escherichia coli DNA gyrase supercoiling assays demonstrated
+          direct nanomolar-to-submicromolar inhibition by T-3761 (pazufloxacin) correlating
+          with MICs (PMID:8460909).
+      - reference: DOI:10.1128/AAC.36.10.2293
+        notes: Preclinical antibacterial and bactericidal evaluation established rapid
+          replication arrest across Gram-negative and Gram-positive bacteria by T-3761
+          (PMID:1332594).
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+        catalyze negative DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.37.3.384
+        notes: Purified E. coli DNA gyrase holoenzyme catalyzed the plasmid DNA supercoiling
+          reaction assayed with T-3761.
+    - subject: dna_gyrase_supercoiling_and_topo_iv_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV catalysis are required
+        for bacterial DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.37.3.384
+        notes: Inhibition of DNA gyrase supercoiling by T-3761 blocked bacterial DNA
+          synthesis and cell division.
 held_records:
 - identifier: CHEBI:172922
   label: ethylzingerone
@@ -4317,64 +4833,3 @@ held_records:
     is held in curation/uniprot_protein_examples.yaml without a single verified experimental-strain
     UniProtKB accession in DOI:10.1007/s10156-004-0327-1 and was promoted from PROPOSED
     to REVIEWED in Cycle 2 Stage 5.
-- identifier: CHEBI:138579
-  label: bactobolin A
-  path: data/antibiotics/antibacterial/bactobolin-a.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: 50S ribosomal subunit protein uL2 (RplB) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/mBio.00499-12
-  reason: Held from causal_graphs curation because the 50S ribosomal subunit protein
-    uL2 (RplB) target (UniProtKB:P42919, UniProtKB:P60405) in DOI:10.1128/mBio.00499-12
-    (PMID:23249812; PDB:4WT8) was promoted from PROPOSED to REVIEWED in Cycle 3 Stage
-    5 outside the frozen 48-record causal_graphs_transition.json cohort.
-- identifier: CHEBI:198310
-  label: negamycin
-  path: data/antibiotics/antibacterial/negamycin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
-    (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1073/pnas.1414401111
-  reason: Held from causal_graphs curation because the proximal ribosomal target (bacterial
-    30S ribosomal subunit head domain (16S rRNA helix 34) (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET))
-    is held in curation/uniprot_protein_examples.yaml without a single polypeptide
-    UniProtKB accession in DOI:10.1073/pnas.1414401111 (PMID:25368144; PDB:4W2I) and
-    was promoted from PROPOSED to REVIEWED in Cycle 3 Stage 5.
-- identifier: CHEBI:135622
-  label: besifloxacin
-  path: data/antibiotics/antibacterial/besifloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
-    (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1093/jac/dkn528
-  reason: Held from causal_graphs curation because the dual bacterial DNA gyrase and
-    topoisomerase IV target (UniProtKB:P0AES4, UniProtKB:P0AFI2, UniProtKB:P72525)
-    in DOI:10.1093/jac/dkn528 (PMID:19451292) was curated and promoted from PROPOSED
-    to REVIEWED in Cycle 3 Stage 5 outside the frozen 48-record causal_graphs_transition.json
-    cohort.
-- identifier: CHEBI:136050
-  label: ozenoxacin
-  path: data/antibiotics/antibacterial/ozenoxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.46.5.1229-1234.2002
-  reason: Held from causal_graphs curation because the dual bacterial DNA gyrase and
-    topoisomerase IV target (UniProtKB:P0AES4, UniProtKB:P0AFI2, UniProtKB:P72525)
-    in DOI:10.1128/AAC.46.5.1229-1234.2002 (PMID:11959549) was curated and promoted
-    from PROPOSED to REVIEWED in Cycle 3 Stage 5 outside the frozen 48-record causal_graphs_transition.json
-    cohort.
-- identifier: CHEBI:94700
-  label: pazufloxacin
-  path: data/antibiotics/antibacterial/pazufloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.37.3.384
-  reason: Held from causal_graphs curation because the bacterial DNA gyrase and topoisomerase
-    IV target (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083)
-    in DOI:10.1128/AAC.37.3.384 (PMID:8460909; PMID:11959571) was curated and promoted
-    from PROPOSED to REVIEWED in Cycle 3 Stage 5 outside the frozen 48-record causal_graphs_transition.json
-    cohort.

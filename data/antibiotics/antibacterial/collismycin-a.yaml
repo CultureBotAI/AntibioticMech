@@ -75,3 +75,17 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-31T16:25:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=OTHER, mode_of_action_target_scope=HOST_SHARED_TARGET,
+    and primary-literature-backed mode_of_action_notes.
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: OTHER
+mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: 4-Methoxy-5-(methylthio)-2,2''-bipyridine-6-carbaldehyde
+  oxime natural product (SF2738A) from Streptomyces sp. CS40 that chelates Fe(II)
+  and Fe(III) ions to deplete bioavailable iron pools in bacteria and fungi (Shindo
+  et al. 1994, DOI:10.7164/antibiotics.47.1072; Garcia et al. 2012, DOI:10.1016/j.chembiol.2012.01.014,
+  PMID:22444595).'
