@@ -1,0 +1,68 @@
+identifier: antibioticmech:curator-dfad24556c
+label: ohmyungsamycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 12-amino-acid nonribosomal cyclic depsipeptide antibiotic from marine
+  Streptomyces sp. SNJ042 with potent antimycobacterial activity against Mycobacterium
+  tuberculosis and Mycobacterium avium.
+definition_source: DOI:10.3390/biom9110672
+synonyms:
+- synonym_text: OMS-A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@H]1[C@@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)O1)C(C)C)[C@@H](C2=CC=CC=C2)O)C(C)C)CC3=CNC4=C3C(=CC=C4)OC)C)C(C)C)C)C(C)C)CC(C)C)C)C(C)C)[C@@H](C)O)C)NC(=O)[C@H](C(C)C)NC(=O)[C@H](C(C)C)NC
+  standard_inchi: InChI=1S/C75H119N13O16/c1-36(2)33-49-64(91)80-57(41(11)12)72(99)87(22)61(43(15)16)74(101)86(21)50(34-47-35-77-48-31-28-32-51(103-24)52(47)48)65(92)78-54(38(5)6)68(95)84-60(63(90)46-29-26-25-27-30-46)69(96)82-58(42(13)14)75(102)104-45(18)59(83-67(94)55(39(7)8)79-66(93)53(76-19)37(3)4)73(100)88(23)62(44(17)89)70(97)81-56(40(9)10)71(98)85(49)20/h25-32,35-45,49-50,53-63,76-77,89-90H,33-34H2,1-24H3,(H,78,92)(H,79,93)(H,80,91)(H,81,97)(H,82,96)(H,83,94)(H,84,95)/t44-,45-,49+,50+,53+,54+,55+,56+,57+,58+,59+,60+,61+,62+,63-/m1/s1
+  standard_inchi_key: LPGQEQIUSHQVNJ-FNWLGHLBSA-N
+  molecular_formula: C75H119N13O16
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002293/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1458.852
+  monoisotopic_mass: 1457.8898
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/biom9110672#ohmyungsamycin-a
+  source_label: ohmyungsamycin A
+  minted_identifier: antibioticmech:curator-dfad24556c
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/biom9110672
+    snippet: Kim et al. characterized the nonribosomal peptide synthetase gene cluster
+      (ohm) for the cyclic depsipeptides ohmyungsamycins A and B in marine Streptomyces
+      sp. SNJ042, with ohmyungsamycin A exhibiting potent antimycobacterial activity
+      against Mycobacterium tuberculosis (MIC = 57 nM) and Mycobacterium avium.
+    notes: Reported by Kim et al. 2019 (Biomolecules 9:672; PMID:31683718) and Um
+      et al. 2013 (J Org Chem 78:12321-12329; DOI:10.1021/jo401974g) as a 12-mer cyclic
+      depsipeptide antibiotic from marine Streptomyces sp. SNJ042 with nanomolar antitubercular
+      and antibacterial activity. MIBiG 4.0.1 entry BGC0002293 supplies the stereo-complete
+      SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1931
+  taxon_label: Streptomyces sp.
+  biosynthetic_gene_cluster: BGC0002293
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'ohmyungsamycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.3390/biom9110672
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

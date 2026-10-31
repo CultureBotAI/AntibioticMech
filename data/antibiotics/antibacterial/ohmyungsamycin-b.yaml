@@ -1,0 +1,66 @@
+identifier: antibioticmech:curator-5d382bb4aa
+label: ohmyungsamycin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 12-amino-acid nonribosomal cyclic depsipeptide antibiotic congener from
+  marine Streptomyces sp. SNJ042 with antibacterial and antimycobacterial activity.
+definition_source: DOI:10.3390/biom9110672
+synonyms:
+- synonym_text: OMS-B
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@H]1[C@@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N([C@H](C(=O)N([C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)N[C@H](C(=O)O1)C(C)C)[C@@H](C2=CC=CC=C2)O)C(C)C)CC3=CNC4=C3C(=CC=C4)OC)C)C(C)C)C)C(C)C)CC(C)C)C)C(C)C)[C@@H](C)O)C)NC(=O)[C@H](C(C)C)NC(=O)[C@H](C(C)C)N(C)C
+  standard_inchi: InChI=1S/C76H121N13O16/c1-37(2)34-50-65(92)80-57(41(9)10)73(100)88(23)62(44(15)16)75(102)87(22)51(35-48-36-77-49-32-29-33-52(104-25)53(48)49)66(93)78-54(38(3)4)68(95)84-60(64(91)47-30-27-26-28-31-47)69(96)82-58(42(11)12)76(103)105-46(18)59(83-67(94)55(39(5)6)79-70(97)61(43(13)14)85(19)20)74(101)89(24)63(45(17)90)71(98)81-56(40(7)8)72(99)86(50)21/h26-33,36-46,50-51,54-64,77,90-91H,34-35H2,1-25H3,(H,78,93)(H,79,97)(H,80,92)(H,81,98)(H,82,96)(H,83,94)(H,84,95)/t45-,46-,50+,51+,54+,55+,56+,57+,58+,59+,60+,61+,62+,63+,64-/m1/s1
+  standard_inchi_key: ZPVRUILMJQYFOY-RBUFGWINSA-N
+  molecular_formula: C76H121N13O16
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002293/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1472.879
+  monoisotopic_mass: 1471.9054
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/biom9110672#ohmyungsamycin-b
+  source_label: ohmyungsamycin B
+  minted_identifier: antibioticmech:curator-5d382bb4aa
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/biom9110672
+    snippet: Kim et al. elucidated the biosynthetic pathway for ohmyungsamycin B alongside
+      ohmyungsamycin A in Streptomyces sp. SNJ042; ohmyungsamycin B is a N,N-dimethylvaline-bearing
+      cyclic depsipeptide congener with antibacterial and antimycobacterial activity
+      against Bacillus subtilis, Proteus vulgaris, and Mycobacterium tuberculosis.
+    notes: Reported by Kim et al. 2019 (Biomolecules 9:672; PMID:31683718) and Um
+      et al. 2013 (J Org Chem 78:12321-12329; DOI:10.1021/jo401974g) as a 12-mer cyclic
+      depsipeptide antibiotic congener from Streptomyces sp. SNJ042. MIBiG 4.0.1 entry
+      BGC0002293 supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1931
+  taxon_label: Streptomyces sp.
+  biosynthetic_gene_cluster: BGC0002293
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'ohmyungsamycin B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.3390/biom9110672
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

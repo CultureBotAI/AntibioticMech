@@ -1,0 +1,63 @@
+identifier: antibioticmech:curator-f4f3a20ab3
+label: pyreudione B
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A C11-acyl pyrrolidine-2,4-dione (tetramic acid) natural product from
+  Pseudomonas fluorescens with amoebicidal antiprotozoal activity.
+definition_source: DOI:10.1002/anie.201603312
+activity_roles:
+- CHEBI:35717
+chemical_structure:
+  smiles: O/C(CCCCCCCCC)=C(C(N1[C@@]2([H])CCC1)=O)/C2=O
+  standard_inchi: InChI=1S/C17H27NO3/c1-2-3-4-5-6-7-8-11-14(19)15-16(20)13-10-9-12-18(13)17(15)21/h13,19H,2-12H2,1H3/b15-14-/t13-/m0/s1
+  standard_inchi_key: IEOJIRDILUIJKB-YCPJBFQXSA-N
+  molecular_formula: C17H27NO3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002075/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 293.407
+  monoisotopic_mass: 293.1991
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.201603312#pyreudione-b
+  source_label: pyreudione B
+  minted_identifier: antibioticmech:curator-f4f3a20ab3
+  role_terms:
+  - CHEBI:35717
+  evidence:
+  - reference: DOI:10.1002/anie.201603312
+    snippet: Klapper et al. characterized pyreudione B as a C11-acyl pyrrolidine-2,4-dione
+      alkaloid from Pseudomonas fluorescens HKI0770 that exhibits potent amoebicidal
+      activity against Dictyostelium discoideum.
+    notes: Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27294787)
+      as an amoebicidal pyrrolidine-2,4-dione alkaloid biosynthesized by the pyu PKS-NRPS
+      hybrid enzyme in Pseudomonas fluorescens HKI0770. MIBiG 4.0.1 entry BGC0002075
+      supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  biosynthetic_gene_cluster: BGC0002075
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'pyreudione B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1002/anie.201603312
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

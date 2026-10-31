@@ -1,0 +1,91 @@
+identifier: antibioticmech:curator-6e5bb86c6e
+label: xiamycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A pentacyclic carbazole-sesquiterpene (indolosesquiterpene) natural product
+  from Streptomyces species with antibacterial and anti-HIV activity.
+definition_source: DOI:10.1016/j.bmcl.2010.09.010
+synonyms:
+- synonym_text: xiamycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@@]12CCC3=C(C=C4C(NC5=C4C=CC=C5)=C3)[C@@]1(C)CC[C@H](O)[C@@]2(C)C(O)=O'
+  standard_inchi: InChI=1S/C23H25NO3/c1-22-10-9-20(25)23(2,21(26)27)19(22)8-7-13-11-18-15(12-16(13)22)14-5-3-4-6-17(14)24-18/h3-6,11-12,19-20,24-25H,7-10H2,1-2H3,(H,26,27)/t19-,20+,22-,23+/m1/s1
+  standard_inchi_key: XUTJPVCJXVRRLB-SKWRMQMOSA-N
+  molecular_formula: C23H25NO3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000665/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 363.457
+  monoisotopic_mass: 363.1834
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.bmcl.2010.09.010#xiamycin-a
+  source_label: xiamycin A
+  minted_identifier: antibioticmech:curator-6e5bb86c6e
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:22587
+  evidence:
+  - reference: DOI:10.1016/j.bmcl.2010.09.010
+    snippet: Ding et al. isolated the pentacyclic indolosesquiterpene xiamycin A from
+      mangrove-derived Streptomyces sp. GT2002/1503 (HKI0576) and reported selective
+      anti-HIV-1 activity (blocking R5-tropic HIV-1 entry) and moderate antibacterial
+      activity against Bacillus subtilis, Staphylococcus aureus, and methicillin-resistant
+      Staphylococcus aureus.
+    notes: Reported by Ding et al. 2010 (Bioorg Med Chem Lett 20:6685-6687; PMID:20880706)
+      and Xu et al. 2012 (J Am Chem Soc 134:8625-8632; DOI:10.1021/ja301735a) as a
+      pentacyclic indolosesquiterpene antibiotic from Streptomyces sp. HKI0576 and
+      Streptomyces sp. SCSIO 02999. MIBiG 4.0.1 entries BGC0000665 and BGC0000666
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:995841
+  taxon_label: Streptomyces sp.
+  strain: HKI0576
+  biosynthetic_gene_cluster: BGC0000665
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'xiamycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1016/j.bmcl.2010.09.010
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+- taxon_id: NCBITaxon:1194094
+  taxon_label: Streptomyces sp.
+  strain: SCSIO 02999
+  biosynthetic_gene_cluster: BGC0000666
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'xiamycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22591327
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-31T10:56:34Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

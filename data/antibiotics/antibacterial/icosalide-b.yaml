@@ -1,0 +1,60 @@
+identifier: antibioticmech:curator-f031366fa5
+label: icosalide B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 20-membered cyclic lipodepsipeptide antibiotic from Burkholderia gladioli
+  with antibacterial activity against Gram-positive entomopathogenic bacteria.
+definition_source: DOI:10.1021/acschembio.8b00600
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCC[C@H](CC(N[C@@H](C(N[C@@H](C(O[C@H](CCCCC)CC1=O)=O)CC(C)C)=O)CO)=O)OC([C@H](CO)NC([C@@H](CC(C)C)N1)=O)=O
+  standard_inchi: InChI=1S/C34H60N4O10/c1-7-9-11-13-23-17-29(41)35-25(15-21(3)4)31(43)38-28(20-40)34(46)48-24(14-12-10-8-2)18-30(42)36-27(19-39)32(44)37-26(16-22(5)6)33(45)47-23/h21-28,39-40H,7-20H2,1-6H3,(H,35,41)(H,36,42)(H,37,44)(H,38,43)/t23-,24-,25-,26-,27-,28+/m1/s1
+  standard_inchi_key: HZQBTVDHJQJQOP-PYFBZWTESA-N
+  molecular_formula: C34H60N4O10
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001833/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 684.872
+  monoisotopic_mass: 684.4309
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acschembio.8b00600#icosalide-b
+  source_label: icosalide B
+  minted_identifier: antibioticmech:curator-f031366fa5
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acschembio.8b00600
+    snippet: Dose et al. identified Burkholderia gladioli as the bacterial symbiont
+      producing the 20-membered depsipeptide antibiotics icosalide A1 and icosalide
+      B, which exhibit antibacterial activity against entomopathogenic bacteria including
+      Paenibacillus larvae and Bacillus thuringiensis.
+    notes: Reported by Dose et al. 2018 (ACS Chem Biol 13:2414-2420; PMID:30085650)
+      as a two-chain 20-membered lipocyclodepsipeptide antibiotic biosynthesized by
+      the nonribosomal peptide synthetase IcoA in Burkholderia gladioli. MIBiG 4.0.1
+      entry BGC0001833 supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:28095
+  taxon_label: Burkholderia gladioli
+  biosynthetic_gene_cluster: BGC0001833
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'icosalide B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1021/acschembio.8b00600
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

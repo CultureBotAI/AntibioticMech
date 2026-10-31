@@ -1,0 +1,74 @@
+identifier: antibioticmech:curator-f930ec8d19
+label: collismycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 2,2'-bipyridyl aldoxime natural-product antibiotic (SF2738A) from Streptomyces
+  sp. CS40 with iron-chelating antibacterial and antifungal activity.
+definition_source: DOI:10.1016/j.chembiol.2012.01.014
+synonyms:
+- synonym_text: SF2738A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: SF-2738A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COC1=C(/C(=C\N=O)/NC(=C1)C2=CC=CC=N2)SC
+  standard_inchi: InChI=1S/C13H13N3O2S/c1-18-12-7-10(9-5-3-4-6-14-9)16-11(8-15-17)13(12)19-2/h3-8,16H,1-2H3/b11-8+
+  standard_inchi_key: FXPSZLHFJDHOMI-DHZHZOJOSA-N
+  molecular_formula: C13H13N3O2S
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000973/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 275.333
+  monoisotopic_mass: 275.0728
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.chembiol.2012.01.014#collismycin-a
+  source_label: collismycin A
+  minted_identifier: antibioticmech:curator-f930ec8d19
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2012.01.014
+    snippet: Garcia et al. characterized the biosynthetic gene cluster (clm) for the
+      2,2'-bipyridyl antibiotic collismycin A in Streptomyces sp. CS40, which exhibits
+      iron-chelating antibacterial and antifungal activity against Gram-positive and
+      Gram-negative bacteria and fungi.
+    notes: Reported by Garcia et al. 2012 (Chem Biol 19:399-408; PMID:22444595) and
+      Shindo et al. 1994 (J Antibiot 47:1072-1074; DOI:10.7164/antibiotics.47.1072)
+      as a 4-methoxy-5-(methylthio)-2,2'-bipyridine-6-carbaldehyde oxime antibiotic
+      (SF2738A) from Streptomyces sp. CS40 with antibacterial and antifungal activity.
+      MIBiG 4.0.1 entry BGC0000973 supplies the stereo-complete SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1068630
+  taxon_label: Streptomyces sp.
+  strain: CS40
+  biosynthetic_gene_cluster: BGC0000973
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'collismycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2012.01.014
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

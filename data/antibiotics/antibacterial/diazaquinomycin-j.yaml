@@ -1,0 +1,65 @@
+identifier: antibioticmech:curator-04e5dccb23
+label: diazaquinomycin J
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 1,8-diazaanthraquinone alkaloid antibiotic congener from Micromonospora
+  sp. B006 with selective antitubercular activity against Mycobacterium tuberculosis.
+definition_source: DOI:10.1021/acs.jnatprod.8b00394
+synonyms:
+- synonym_text: DAQ J
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1=CC(=O)NC2=C1C(=O)C3=C(C2=O)NC(=O)C=C3CCCCCCCC(C)C
+  standard_inchi: InChI=1S/C23H28N2O4/c1-13(2)9-7-5-4-6-8-10-15-12-17(27)25-21-19(15)22(28)18-14(3)11-16(26)24-20(18)23(21)29/h11-13H,4-10H2,1-3H3,(H,24,26)(H,25,27)
+  standard_inchi_key: KFKOTHCXRDTJMM-UHFFFAOYSA-N
+  molecular_formula: C23H28N2O4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001848/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 396.487
+  monoisotopic_mass: 396.2049
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jnatprod.8b00394#diazaquinomycin-j
+  source_label: diazaquinomycin J
+  minted_identifier: antibioticmech:curator-04e5dccb23
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jnatprod.8b00394
+    snippet: Mullowney et al. isolated diazaquinomycin J alongside diazaquinomycin
+      H from Micromonospora sp. B006 and demonstrated selective in vitro antitubercular
+      activity against Mycobacterium tuberculosis H37Rv.
+    notes: Reported by Mullowney et al. 2018 (J Nat Prod 81:2280-2287; PMID:30256108)
+      as an alkyl-substituted 1,8-diazaanthraquinone antibiotic from Micromonospora
+      sp. B006 with selective activity against Mycobacterium tuberculosis. MIBiG 4.0.1
+      entry BGC0001848 supplies the SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2201999
+  taxon_label: Micromonospora sp.
+  strain: B006
+  biosynthetic_gene_cluster: BGC0001848
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'diazaquinomycin J' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: DOI:10.1021/acs.jnatprod.8b00394
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

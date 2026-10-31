@@ -1,0 +1,65 @@
+identifier: antibioticmech:curator-2ca20421a2
+label: homopamamycin-677A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A homologous 677 Da 16-membered macrodiolide polyketide antibiotic from
+  Streptomyces alboniger with anti-Gram-positive and antimycobacterial activity.
+definition_source: DOI:10.1186/s12934-023-02231-x
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H]([C@H]1O[C@H](CC1)C[C@@H](N(C)C)CCC)[C@H]2[C@H](C)[C@H]3O[C@@H]([C@H](C(O[C@H]([C@H](C)[C@H]4O[C@H](CC4)[C@@H](C(O2)=O)CC)CCCC)=O)CC)CC3
+  standard_inchi: InChI=1S/C40H71NO7/c1-10-15-17-32-25(6)33-20-22-37(45-33)31(14-5)40(43)48-38(26(7)34-21-23-36(46-34)30(13-4)39(42)47-32)29(12-3)35-19-18-28(44-35)24-27(16-11-2)41(8)9/h25-38H,10-24H2,1-9H3/t25-,26+,27-,28+,29+,30+,31-,32-,33-,34-,35-,36+,37+,38+/m0/s1
+  standard_inchi_key: UCQOPNHLHHOEQC-FDRVLTGSSA-N
+  molecular_formula: C40H71NO7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001150/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 678.008
+  monoisotopic_mass: 677.5231
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1186/s12934-023-02231-x#homopamamycin-677a
+  source_label: homopamamycin-677A
+  minted_identifier: antibioticmech:curator-2ca20421a2
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1186/s12934-023-02231-x
+    snippet: Glaser et al. characterized the biosynthetically extended 677 Da macrodiolide
+      antibiotic homopamamycin-677A produced by the Streptomyces alboniger pam gene
+      cluster.
+    notes: Reported by Glaser et al. 2023 (Microb Cell Fact 22:182; PMID:37705018)
+      as a 677 Da homologous 16-membered macrodiolide antibiotic produced by the Streptomyces
+      alboniger pam biosynthetic gene cluster. MIBiG 4.0.1 entry BGC0001150 supplies
+      the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:132473
+  taxon_label: Streptomyces alboniger
+  biosynthetic_gene_cluster: BGC0001150
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'homopamamycin-677A' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: DOI:10.1186/s12934-023-02231-x
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

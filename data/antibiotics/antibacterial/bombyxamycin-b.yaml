@@ -1,0 +1,64 @@
+identifier: antibioticmech:curator-9019cb9b50
+label: bombyxamycin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 26-membered polyene macrolactam polyketide antibiotic from Streptomyces
+  sp. SD53 with potent antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1021/acs.orglett.9b00384
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@H]1/C=C\C=C\C=C/C=C\C=C\C(=O)/C=C2\O[C@](C)(/C=C/C=C\C=C/C(=O)NC1)[C@@H](O)[C@@H]2O
+  standard_inchi: InChI=1S/C27H31NO5/c1-21-15-11-7-5-3-4-6-8-12-16-22(29)19-23-25(31)26(32)27(2,33-23)18-14-10-9-13-17-24(30)28-20-21/h3-19,21,25-26,31-32H,20H2,1-2H3,(H,28,30)/b4-3-,7-5+,8-6-,10-9-,15-11-,16-12+,17-13-,18-14+,23-19-/t21-,25-,26+,27-/m1/s1
+  standard_inchi_key: WMJODBDPGQNYNL-TVIYGZMDSA-N
+  molecular_formula: C27H31NO5
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002376/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 449.547
+  monoisotopic_mass: 449.2202
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.orglett.9b00384#bombyxamycin-b
+  source_label: bombyxamycin B
+  minted_identifier: antibioticmech:curator-9019cb9b50
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.orglett.9b00384
+    snippet: Shin et al. isolated the 26-membered macrocyclic lactam antibiotic bombyxamycin
+      B from a silkworm-gut-associated Streptomyces sp. SD53 and reported potent antibacterial
+      activity against Bacillus subtilis, Staphylococcus aureus, and Enterococcus
+      faecalis (MIC 0.5-2 ug/mL).
+    notes: Reported by Shin et al. 2019 (Org Lett 21:1804-1808; PMID:30817155) as
+      a polyene 26-membered macrolactam polyketide antibiotic from insect-associated
+      Streptomyces sp. SD53 with anti-Gram-positive antibacterial activity. MIBiG
+      4.0.1 entry BGC0002376 supplies the stereo-complete SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1931
+  taxon_label: Streptomyces sp.
+  biosynthetic_gene_cluster: BGC0002376
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'bombyxamycin B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1021/acs.orglett.9b00384
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

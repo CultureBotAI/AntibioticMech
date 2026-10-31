@@ -1,0 +1,61 @@
+identifier: antibioticmech:curator-bf615843db
+label: sandarazol F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: An oxazole-polyketide-peptide hybrid antibiotic congener (sandarazol F)
+  from the myxobacterium Sandaracinus sp. MSr10575.
+definition_source: DOI:10.1002/anie.202014671
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)=CC(=O)CC/C=C/CC(=O)N[C@H](CN(C)C)C(=O)N[C@H](C(=O)N1C(=O)C(C)=C(O)[C@@H]1CC(C)C)C(C)C
+  standard_inchi: InChI=1S/C30H48N4O6/c1-18(2)15-22(35)13-11-10-12-14-25(36)31-23(17-33(8)9)28(38)32-26(20(5)6)30(40)34-24(16-19(3)4)27(37)21(7)29(34)39/h10,12,15,19-20,23-24,26,37H,11,13-14,16-17H2,1-9H3,(H,31,36)(H,32,38)/b12-10+/t23-,24+,26+/m1/s1
+  standard_inchi_key: FRWGWNOXEVMHFJ-NROGLJKMSA-N
+  molecular_formula: C30H48N4O6
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002114/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 560.736
+  monoisotopic_mass: 560.3574
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.202014671#sandarazol-f
+  source_label: sandarazol F
+  minted_identifier: antibioticmech:curator-bf615843db
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/anie.202014671
+    snippet: Panter et al. isolated sandarazol F from Sandaracinus sp. MSr10575 as
+      part of the sandarazol family of antimicrobial oxazole-polyketide-peptide hybrids.
+    notes: Reported by Panter et al. 2021 (Angew Chem Int Ed 60:5595-5602; PMID:33290612)
+      as an oxazole-polyketide-peptide hybrid antibiotic congener from Sandaracinus
+      sp. MSr10575. MIBiG 4.0.1 entry BGC0002114 supplies the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2024858
+  taxon_label: Sandaracinus sp.
+  strain: MSr10575
+  biosynthetic_gene_cluster: BGC0002114
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'sandarazol F' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1002/anie.202014671
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T10:59:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
