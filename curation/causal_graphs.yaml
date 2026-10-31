@@ -4018,12 +4018,13 @@ records:
         contacts the A-site tRNA anticodon stem-loop.
       evidence:
       - reference: DOI:10.1073/pnas.1414401111
-        notes: The Thermus thermophilus 70S-negamycin crystal structure (PDB:4W2I;
+        notes: The Escherichia coli 70S-negamycin crystal structure (PDB:4W2I;
           PMID:25368144) resolved negamycin bound at 16S rRNA helix 34 bridging the
           A-site tRNA anticodon arm.
       - reference: DOI:10.1016/j.molcel.2014.09.021
-        notes: The Escherichia coli 70S-negamycin crystal structure (PDB:4UJC; PMID:25308770)
-          confirmed specific coordination of negamycin at 16S rRNA helix 34.
+        notes: The Thermus thermophilus 70S-negamycin crystal structure (PDB:4UJC;
+          PMID:25306922) confirmed specific coordination of negamycin at 16S rRNA
+          helix 34.
     - subject: ribosomal_30s_helix_34_pocket
       predicate: participates in
       object: negamycin_bound_helix34_asite_trna_complex
@@ -4134,8 +4135,9 @@ records:
           coli demonstrated balanced IC50 inhibition of DNA gyrase supercoiling and
           topoisomerase IV decatenation by besifloxacin (PMID:19451292).
       - reference: DOI:10.1128/AAC.00418-09
-        notes: Susceptibility profiling across defined GyrA and ParC QRDR mutants
-          confirmed dual-target engagement by besifloxacin (PMID:19687243).
+        notes: Broad-spectrum susceptibility profiling across 2,690 clinical isolates
+          confirmed potent besifloxacin activity against fluoroquinolone-resistant
+          staphylococci and streptococci (PMID:19506065).
     - subject: bacterial_type_ii_topoisomerases_gyra_parc
       predicate: enables
       object: gyrase_supercoiling_and_topo_iv_decatenation
@@ -4242,7 +4244,7 @@ records:
       - reference: DOI:10.1128/AAC.01509-13
         notes: Comparative susceptibility and mutant-prevention studies confirmed
           potent ozenoxacin activity across gyrA and grlA/parC mutant staphylococci
-          and streptococci (PMID:24080657).
+          and streptococci (PMID:24080666).
     - subject: bacterial_type_ii_topoisomerases_gyra_parc
       predicate: enables
       object: gyrase_and_topo_iv_catalytic_activity
@@ -4357,11 +4359,11 @@ records:
       - reference: DOI:10.1128/AAC.37.3.384
         notes: Purified Escherichia coli DNA gyrase supercoiling assays demonstrated
           direct nanomolar-to-submicromolar inhibition by T-3761 (pazufloxacin) correlating
-          with MICs (PMID:8383945).
+          with MICs (PMID:8460909).
       - reference: DOI:10.1128/AAC.36.10.2293
         notes: Preclinical antibacterial and bactericidal evaluation established rapid
           replication arrest across Gram-negative and Gram-positive bacteria by T-3761
-          (PMID:1332645).
+          (PMID:1332594).
     - subject: bacterial_dna_gyrase_and_topoisomerase_iv
       predicate: enables
       object: dna_gyrase_supercoiling_and_topo_iv_activity
