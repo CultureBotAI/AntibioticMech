@@ -81,6 +81,14 @@ curation_history:
     molecular_targets and reviewed UniProtKB protein_examples and verifying exact
     ChEBI:94700 identity (issue #1285).'
   llm_assisted: true
+- timestamp: '2026-10-31T16:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4,
+    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.37.3.384,
+    DOI:10.1128/AAC.36.10.2293).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -148,3 +156,112 @@ molecular_targets:
     role: Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme
       co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909;
       PMID:11959571).
+causal_graphs:
+- graph_id: pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition
+  title: Pazufloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest
+    DNA replication
+  description: Pazufloxacin (T-3761), an aminocyclopropyl fluoroquinolone, inhibits
+    bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE)
+    activity, blocking bacterial DNA replication and inducing rapid bactericidal killing.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: pazufloxacin
+    label: pazufloxacin
+    node_type: COMPOUND
+    grounding: CHEBI:94700
+  - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+    label: bacterial DNA gyrase and topoisomerase IV
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      holoenzymes; kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4),
+      GyrB (UniProtKB:P0AES6), ParC (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083)
+      protein_examples.
+    gene_symbols:
+    - gyrA
+    - gyrB
+    - parC
+    - parE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling
+        activity is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384;
+        PMID:8460909; PMID:11959571).
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme
+        inhibited by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384;
+        PMID:8460909; PMID:11959571).
+    - uniprot_id: UniProtKB:P0AFI2
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone
+        T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).
+    - uniprot_id: UniProtKB:P20083
+      protein_label: DNA topoisomerase 4 subunit B
+      gene_symbol: parE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme
+        co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909;
+        PMID:11959571).
+  - node_id: dna_gyrase_supercoiling_and_topo_iv_activity
+    label: DNA gyrase supercoiling and topoisomerase IV catalytic activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Purified E. coli DNA gyrase supercoiling and type II topoisomerase
+      catalytic activity inhibited by T-3761 / pazufloxacin.
+  - node_id: bacterial_dna_replication
+    label: bacterial DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: pazufloxacin
+    predicate: inhibits
+    object: dna_gyrase_supercoiling_and_topo_iv_activity
+    description: Pazufloxacin (T-3761) potently inhibits Escherichia coli DNA gyrase
+      supercoiling and bacterial topoisomerase IV activity.
+    evidence:
+    - reference: DOI:10.1128/AAC.37.3.384
+      notes: Purified Escherichia coli DNA gyrase supercoiling assays demonstrated
+        direct nanomolar-to-submicromolar inhibition by T-3761 (pazufloxacin) correlating
+        with MICs (PMID:8383945).
+    - reference: DOI:10.1128/AAC.36.10.2293
+      notes: Preclinical antibacterial and bactericidal evaluation established rapid
+        replication arrest across Gram-negative and Gram-positive bacteria by T-3761
+        (PMID:1332645).
+  - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+    predicate: enables
+    object: dna_gyrase_supercoiling_and_topo_iv_activity
+    description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      catalyze negative DNA supercoiling and chromosome decatenation.
+    evidence:
+    - reference: DOI:10.1128/AAC.37.3.384
+      notes: Purified E. coli DNA gyrase holoenzyme catalyzed the plasmid DNA supercoiling
+        reaction assayed with T-3761.
+  - subject: dna_gyrase_supercoiling_and_topo_iv_activity
+    predicate: supports
+    object: bacterial_dna_replication
+    description: DNA gyrase supercoiling and topoisomerase IV catalysis are required
+      for bacterial DNA replication.
+    evidence:
+    - reference: DOI:10.1128/AAC.37.3.384
+      notes: Inhibition of DNA gyrase supercoiling by T-3761 blocked bacterial DNA
+        synthesis and cell division.

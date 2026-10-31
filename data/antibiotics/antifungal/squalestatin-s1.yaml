@@ -70,3 +70,19 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-10-31T16:25:00Z'
+  curator: antigravity
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=ERGOSTEROL_PATHWAY_INHIBITION,
+    mode_of_action_target_scope=HOST_SHARED_TARGET, and primary-literature-backed
+    mode_of_action_notes.
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
+mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Fungal 2,8-dioxabicyclo[3.2.1]octane-3,4,5-tricarboxylic
+  acid polyketide (zaragozic acid A) from Phoma sp. MF5453 that acts as a picomolar
+  competitive inhibitor of squalene synthase, blocking farnesyl diphosphate condensation
+  to squalene in fungal ergosterol and eukaryotic sterol biosynthesis (Dawson et al.
+  1992, DOI:10.7164/antibiotics.45.639; Bonsch et al. 2016, DOI:10.1039/c6cc02130a,
+  PMID:27121269).'

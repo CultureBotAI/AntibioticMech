@@ -399,10 +399,10 @@ def pre_uniprot_protein_examples_root(tmp_path_factory, pre_cycle2_stage5_remedi
 def _causal_graphs_transition(root):
     payload = (root / "curation/causal_graphs_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "98638ced7076fac7596f9184ab740e20fe7a5e33f7c5a2384a1e9dd944c0bbf0"
+        "5d4930bcdeae58ab6caa44205c9842bfae63fad2c12ee63723ce004fc5c67b79"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 48
+    assert len(transition["record_deltas"]) == 53
     return transition
 
 
@@ -489,7 +489,7 @@ def pre_stage5_remediation_root(tmp_path_factory):
                 if (h.get("scope"), h.get("identifier"), h.get("target_reference"))
                 not in stage5_held_keys
             ]
-            assert len(plan_data["held_targets"]) == 73
+            assert len(plan_data["held_targets"]) == 74
             (root / "curation" / path.name).write_text(
                 yaml.dump(plan_data, sort_keys=False, allow_unicode=True, width=100),
                 encoding="utf-8",
@@ -524,26 +524,12 @@ def pre_stage5_remediation_root(tmp_path_factory):
         if "previous_daptomycin_target4_source" in entry:
             rec["molecular_targets"][4]["source"] = entry["previous_daptomycin_target4_source"]
         write_validated_antibiotic(rec, root / rel_path)
-    cycle3_stage5_transition = json.loads(
-        (REPO_ROOT / "curation/cycle3_stage5_review_remediation_transition.json").read_bytes()
-    )
-    for delta in cycle3_stage5_transition["promoted_record_deltas"]:
-        rel_path = delta["path"]
-        rec = load_record(root / rel_path)
-        assert rec["identifier"] == delta["identifier"]
-        assert rec["curation_status"] == delta["after_curation_status"] == "REVIEWED"
-        assert rec["curation_history"].pop() == delta["added_history_event"]
-        rec["curation_status"] = delta["before_curation_status"]
-        write_validated_antibiotic(rec, root / rel_path)
-        assert (
-            hashlib.sha256((root / rel_path).read_bytes()).hexdigest() == delta["before_sha256"]
-        )
     return root
 
 
 @pytest.fixture(scope="session")
 def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
-    """Restore only the 48 curated causal_graphs record deltas and held_targets additions in isolation."""
+    """Restore only the 53 curated causal_graphs record deltas and held_targets additions in isolation."""
     import yaml
 
     source = pre_stage5_remediation_root
@@ -581,10 +567,13 @@ def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
 
 @pytest.fixture(scope="session")
 def pre_cycle2_stage5_remediation_root(tmp_path_factory, pre_causal_graphs_root):
-    """Restore the 20 Cycle 2 Stage 5 review-remediated records in isolation."""
+    """Restore the Cycle 3 Stage 5 and Cycle 2 Stage 5 review-remediated records in isolation."""
     from antibioticmech.validation.write_validated import write_validated_antibiotic
 
     source = pre_causal_graphs_root
+    cycle3_stage5_transition = json.loads(
+        (source / "curation/cycle3_stage5_review_remediation_transition.json").read_bytes()
+    )
     cycle2_transition = json.loads(
         (source / "curation/cycle2_stage5_review_remediation_transition.json").read_bytes()
     )
@@ -592,6 +581,17 @@ def pre_cycle2_stage5_remediation_root(tmp_path_factory, pre_causal_graphs_root)
     shutil.copytree(source / "data/antibiotics", root / "data/antibiotics")
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts", "curation"):
         (root / relative).symlink_to(source / relative, target_is_directory=True)
+    for delta in cycle3_stage5_transition["promoted_record_deltas"]:
+        rel_path = delta["path"]
+        rec = load_record(root / rel_path)
+        assert rec["identifier"] == delta["identifier"]
+        assert rec["curation_status"] == delta["after_curation_status"] == "REVIEWED"
+        assert rec["curation_history"].pop() == delta["added_history_event"]
+        rec["curation_status"] = delta["before_curation_status"]
+        write_validated_antibiotic(rec, root / rel_path)
+        assert (
+            hashlib.sha256((root / rel_path).read_bytes()).hexdigest() == delta["before_sha256"]
+        )
     for entry in cycle2_transition["records"]:
         rel_path = entry["path"]
         rec = load_record(root / rel_path)

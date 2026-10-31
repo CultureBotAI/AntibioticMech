@@ -137,6 +137,77 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Besifloxacin inhibits bacterial DNA gyrase and topoisomerase IV with balanced dual-target potency to block DNA replication <span class="pill">MECHANISTIC</span></h3>
+<p>Besifloxacin (BOL-303224-A), an 8-chloro-fluoroquinolone, potently and equipotently inhibits both bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) decatenation in Gram-positive and Gram-negative pathogens, blocking bacterial DNA replication.</p><div class="table-scroll" role="region" aria-label="Nodes: besifloxacin_dual_gyrase_topoisomerase_iv_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — besifloxacin_dual_gyrase_topoisomerase_iv_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">besifloxacin</code></td>
+    <td>besifloxacin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/besifloxacin.html"><code class="curie">CHEBI:135622</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_type_ii_topoisomerases_gyra_parc</code></td>
+    <td>bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)<br><span class="meta">Examples: DNA topoisomerase 4 subunit A (parC) <a href="https://www.uniprot.org/uniprotkb/P72525"><code class="curie">UniProtKB:P72525</code></a>, <em>Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_170187"><code class="curie">NCBITaxon:170187</code></a> <span class="pill">REVIEWED</span> — Streptococcus pneumoniae topoisomerase IV ParC catalytic subunit inhibited with balanced potency alongside DNA gyrase by besifloxacin in purified enzyme and step-wise mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19451292).; DNA gyrase subunit A (gyrA) <a href="https://www.uniprot.org/uniprotkb/P0AES4"><code class="curie">UniProtKB:P0AES4</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Bacterial DNA gyrase GyrA catalytic subunit inhibited in purified Escherichia coli supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).; DNA topoisomerase 4 subunit A (parC) <a href="https://www.uniprot.org/uniprotkb/P0AFI2"><code class="curie">UniProtKB:P0AFI2</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified Escherichia coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrase_supercoiling_and_topo_iv_decatenation</code></td>
+    <td>DNA gyrase supercoiling and topoisomerase IV decatenation activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_replication_and_chromosome_segregation</code></td>
+    <td>bacterial DNA replication and chromosome segregation</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: besifloxacin_dual_gyrase_topoisomerase_iv_inhibition" tabindex="0">
+<table>
+  <caption>Edges — besifloxacin_dual_gyrase_topoisomerase_iv_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">besifloxacin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">gyrase_supercoiling_and_topo_iv_decatenation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1093/jac/dkn528">DOI:10.1093/jac/dkn528</a></span> <span class="meta">(Purified enzyme assays in Streptococcus pneumoniae and Escherichia coli demonstrated balanced IC50 inhibition of DNA gyrase supercoiling and topoisomerase IV decatenation by besifloxacin (PMID:19451292).)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.00418-09">DOI:10.1128/AAC.00418-09</a></span> <span class="meta">(Susceptibility profiling across defined GyrA and ParC QRDR mutants confirmed dual-target engagement by besifloxacin (PMID:19687243).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_type_ii_topoisomerases_gyra_parc</code></td>
+    <td>enables</td>
+    <td><code class="curie">gyrase_supercoiling_and_topo_iv_decatenation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1093/jac/dkn528">DOI:10.1093/jac/dkn528</a></span> <span class="meta">(Purified S. pneumoniae and E. coli DNA gyrase and topoisomerase IV enzymes catalyzed the supercoiling and decatenation reactions inhibited by besifloxacin.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">gyrase_supercoiling_and_topo_iv_decatenation</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_dna_replication_and_chromosome_segregation</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1093/jac/dkn528">DOI:10.1093/jac/dkn528</a></span> <span class="meta">(Dual inhibition of DNA gyrase and topoisomerase IV by besifloxacin produced rapid bactericidal activity and required concurrent mutations in both gyrA and parC for high-level resistance.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -168,6 +239,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-26 · antigravity · LLM-assisted</span>
     <p>Promoted curation_status from PROPOSED to REVIEWED after curating primary-literature molecular_targets and reviewed UniProtKB protein_examples and verifying exact ChEBI:135622 identity (issue #1285).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-31 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph besifloxacin_dual_gyrase_topoisomerase_iv_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P72525, UniProtKB:P0AES4, UniProtKB:P0AFI2) and primary literature (DOI:10.1093/jac/dkn528, DOI:10.1128/AAC.00418-09).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -188,7 +264,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>9b2517f3adee</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>b0ffd96d3658</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

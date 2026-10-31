@@ -82,6 +82,14 @@ curation_history:
     molecular_targets and reviewed UniProtKB protein_examples and verifying exact
     ChEBI:135622 identity (issue #1285).'
   llm_assisted: true
+- timestamp: '2026-10-31T16:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph besifloxacin_dual_gyrase_topoisomerase_iv_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P72525,
+    UniProtKB:P0AES4, UniProtKB:P0AFI2) and primary literature (DOI:10.1093/jac/dkn528,
+    DOI:10.1128/AAC.00418-09).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -140,3 +148,104 @@ molecular_targets:
     role: Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified
       Escherichia coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528;
       PMID:19451292).
+causal_graphs:
+- graph_id: besifloxacin_dual_gyrase_topoisomerase_iv_inhibition
+  title: Besifloxacin inhibits bacterial DNA gyrase and topoisomerase IV with balanced
+    dual-target potency to block DNA replication
+  description: Besifloxacin (BOL-303224-A), an 8-chloro-fluoroquinolone, potently
+    and equipotently inhibits both bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling
+    and topoisomerase IV (ParC/ParE) decatenation in Gram-positive and Gram-negative
+    pathogens, blocking bacterial DNA replication.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: besifloxacin
+    label: besifloxacin
+    node_type: COMPOUND
+    grounding: CHEBI:135622
+  - node_id: bacterial_type_ii_topoisomerases_gyra_parc
+    label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial type II topoisomerases DNA gyrase and topoisomerase
+      IV; kept label-only with Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525)
+      and Escherichia coli K-12 GyrA (UniProtKB:P0AES4) and ParC (UniProtKB:P0AFI2)
+      protein_examples.
+    gene_symbols:
+    - gyrA
+    - parC
+    protein_examples:
+    - uniprot_id: UniProtKB:P72525
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:170187
+      taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Streptococcus pneumoniae topoisomerase IV ParC catalytic subunit inhibited
+        with balanced potency alongside DNA gyrase by besifloxacin in purified enzyme
+        and step-wise mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19451292).
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Bacterial DNA gyrase GyrA catalytic subunit inhibited in purified Escherichia
+        coli supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).
+    - uniprot_id: UniProtKB:P0AFI2
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      role: Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified
+        Escherichia coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528;
+        PMID:19451292).
+  - node_id: gyrase_supercoiling_and_topo_iv_decatenation
+    label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: ATP-dependent DNA supercoiling by DNA gyrase and daughter-chromosome
+      decatenation by topoisomerase IV assayed with purified S. pneumoniae and E.
+      coli enzymes.
+  - node_id: bacterial_dna_replication_and_chromosome_segregation
+    label: bacterial DNA replication and chromosome segregation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial DNA synthesis and chromosome partitioning arrested
+      by dual type II topoisomerase inhibition.
+  edges:
+  - subject: besifloxacin
+    predicate: inhibits
+    object: gyrase_supercoiling_and_topo_iv_decatenation
+    description: Besifloxacin potently inhibits both DNA gyrase DNA supercoiling and
+      topoisomerase IV decatenation with balanced dual-target activity.
+    evidence:
+    - reference: DOI:10.1093/jac/dkn528
+      notes: Purified enzyme assays in Streptococcus pneumoniae and Escherichia coli
+        demonstrated balanced IC50 inhibition of DNA gyrase supercoiling and topoisomerase
+        IV decatenation by besifloxacin (PMID:19451292).
+    - reference: DOI:10.1128/AAC.00418-09
+      notes: Susceptibility profiling across defined GyrA and ParC QRDR mutants confirmed
+        dual-target engagement by besifloxacin (PMID:19687243).
+  - subject: bacterial_type_ii_topoisomerases_gyra_parc
+    predicate: enables
+    object: gyrase_supercoiling_and_topo_iv_decatenation
+    description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      catalyze negative DNA supercoiling and chromosome decatenation.
+    evidence:
+    - reference: DOI:10.1093/jac/dkn528
+      notes: Purified S. pneumoniae and E. coli DNA gyrase and topoisomerase IV enzymes
+        catalyzed the supercoiling and decatenation reactions inhibited by besifloxacin.
+  - subject: gyrase_supercoiling_and_topo_iv_decatenation
+    predicate: supports
+    object: bacterial_dna_replication_and_chromosome_segregation
+    description: DNA gyrase supercoiling and topoisomerase IV decatenation are essential
+      for bacterial DNA replication and chromosome segregation.
+    evidence:
+    - reference: DOI:10.1093/jac/dkn528
+      notes: Dual inhibition of DNA gyrase and topoisomerase IV by besifloxacin produced
+        rapid bactericidal activity and required concurrent mutations in both gyrA
+        and parC for high-level resistance.
