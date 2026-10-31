@@ -1,0 +1,69 @@
+identifier: CHEBI:199753
+label: diazaquinomycin H
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 1,8-diazaanthraquinone alkaloid antibiotic from Micromonospora sp. B006
+  with selective antitubercular activity against Mycobacterium tuberculosis.
+definition_source: DOI:10.1021/acs.jnatprod.8b00394
+synonyms:
+- synonym_text: DAQ H
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1=CC(=O)NC2=C1C(=O)C3=C(C2=O)NC(=O)C=C3CCCCCCC(C)C
+  standard_inchi: InChI=1S/C22H26N2O4/c1-12(2)8-6-4-5-7-9-14-11-16(26)24-20-18(14)21(27)17-13(3)10-15(25)23-19(17)22(20)28/h10-12H,4-9H2,1-3H3,(H,23,25)(H,24,26)
+  standard_inchi_key: ZMMKQTMMGUIIJM-UHFFFAOYSA-N
+  molecular_formula: C22H26N2O4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001848/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 382.46
+  monoisotopic_mass: 382.1893
+xrefs:
+- pubchem.compound:134815171
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jnatprod.8b00394#diazaquinomycin-h
+  source_label: diazaquinomycin H
+  minted_identifier: antibioticmech:curator-8bf1154898
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jnatprod.8b00394
+    snippet: Mullowney et al. isolated diazaquinomycins H and J from freshwater-sediment-derived
+      Micromonospora sp. B006 and reported selective antitubercular activity against
+      Mycobacterium tuberculosis H37Rv alongside characterization of the daq biosynthetic
+      gene cluster.
+    notes: Reported by Mullowney et al. 2018 (J Nat Prod 81:2280-2287; PMID:30256108)
+      as a 1,8-diazaanthraquinone antibiotic from Micromonospora sp. B006 with selective
+      antimycobacterial activity against Mycobacterium tuberculosis. MIBiG 4.0.1 entry
+      BGC0001848, ChEBI CHEBI:199753, and PubChem CID 134815171 supply the SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2201999
+  taxon_label: Micromonospora sp.
+  strain: B006
+  biosynthetic_gene_cluster: BGC0001848
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'diazaquinomycin H' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: DOI:10.1021/acs.jnatprod.8b00394
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

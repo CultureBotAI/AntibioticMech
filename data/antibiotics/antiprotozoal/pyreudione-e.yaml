@@ -1,0 +1,67 @@
+identifier: CHEBI:219761
+label: pyreudione E
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An unbranched C8-acyl indolizidine-dione (pipecolic-acid-derived tetramic
+  acid) natural product from Pseudomonas fluorescens with amoebicidal antiprotozoal
+  activity.
+definition_source: DOI:10.1016/j.chembiol.2018.02.013
+activity_roles:
+- CHEBI:35717
+chemical_structure:
+  smiles: CCCCCCC/C(O)=C1\C(=O)[C@@H]2CCCCN2C1=O
+  standard_inchi: InChI=1S/C16H25NO3/c1-2-3-4-5-6-10-13(18)14-15(19)12-9-7-8-11-17(12)16(14)20/h12,18H,2-11H2,1H3/b14-13-/t12-/m0/s1
+  standard_inchi_key: IPNWRFDCQUHSRD-JOLOJFPGSA-N
+  molecular_formula: C16H25NO3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002075/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 279.38
+  monoisotopic_mass: 279.1834
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.chembiol.2018.02.013#pyreudione-e
+  source_label: pyreudione E
+  minted_identifier: antibioticmech:curator-c1a9e881e3
+  role_terms:
+  - CHEBI:35717
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2018.02.013
+    snippet: Klapper et al. identified the unbranched C8-acyl indolizidine-dione (pipecolic-acid-derived
+      tetramic acid) congener pyreudione E from the Pseudomonas fluorescens pyu biosynthetic
+      pathway and demonstrated its role in the amoebicidal defense cocktail against
+      predatory amoebae.
+    notes: 'Reported by Klapper et al. 2018 (Cell Chem Biol 25:659-665; PMID:29576533)
+      as an amoebicidal unbranched C8-acyl indolizidine-dione (pipecolic-acid-derived
+      tetramic acid) congener produced by the pyu PKS-NRPS synthetase in Pseudomonas
+      fluorescens. MIBiG 4.0.1 entry BGC0002075 and ChEBI CHEBI:219761 supply the
+      stereo-complete SMILES, Standard InChI, and InChIKey (note: PubChem CID 139591489
+      represents the keto tautomer AWMXYRYUWFPVEX-GOSISDBHSA-N).'
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  biosynthetic_gene_cluster: BGC0002075
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'pyreudione E' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2018.02.013
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

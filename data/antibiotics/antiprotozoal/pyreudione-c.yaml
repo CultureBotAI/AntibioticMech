@@ -1,0 +1,67 @@
+identifier: CHEBI:219389
+label: pyreudione C
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A monounsaturated bicyclic C11-acyl pyrrolizidine-dione (proline-derived
+  tetramic acid) natural product from Pseudomonas fluorescens with amoebicidal antiprotozoal
+  activity.
+definition_source: DOI:10.1002/anie.201603312
+activity_roles:
+- CHEBI:35717
+chemical_structure:
+  smiles: CCCCCCC/C=C/C(=C/1\C(=O)[C@@H]2CCCN2C1=O)/O
+  standard_inchi: InChI=1S/C17H25NO3/c1-2-3-4-5-6-7-8-11-14(19)15-16(20)13-10-9-12-18(13)17(15)21/h8,11,13,19H,2-7,9-10,12H2,1H3/b11-8+,15-14-/t13-/m0/s1
+  standard_inchi_key: QPGUMJSECSFGCC-GKVFCNOFSA-N
+  molecular_formula: C17H25NO3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002075/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 291.391
+  monoisotopic_mass: 291.1834
+xrefs:
+- pubchem.compound:139591488
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.201603312#pyreudione-c
+  source_label: pyreudione C
+  minted_identifier: antibioticmech:curator-f41b5056ce
+  role_terms:
+  - CHEBI:35717
+  evidence:
+  - reference: DOI:10.1002/anie.201603312
+    snippet: Klapper et al. isolated the unsaturated C11-acyl pyrrolidine-2,4-dione
+      congener pyreudione C from Pseudomonas fluorescens HKI0770 and demonstrated
+      amoebicidal activity against Dictyostelium discoideum.
+    notes: Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27294787)
+      as an amoebicidal monounsaturated bicyclic acyl-pyrrolizidine-dione alkaloid
+      from Pseudomonas fluorescens HKI0770. MIBiG 4.0.1 entry BGC0002075, ChEBI CHEBI:219389,
+      and PubChem CID 139591488 supply the stereo-complete SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  biosynthetic_gene_cluster: BGC0002075
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'pyreudione C' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1002/anie.201603312
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

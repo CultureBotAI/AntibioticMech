@@ -1,0 +1,73 @@
+identifier: antibioticmech:curator-43acd9a231
+label: 2,3,4,5-tetrabromopyrrole
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A perbrominated pyrrole natural product from marine Pseudoalteromonas
+  species with antibacterial activity.
+definition_source: DOI:10.1007/BF00394363
+synonyms:
+- synonym_text: tetrabromopyrrole
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1(=C(NC(=C1Br)Br)Br)Br
+  standard_inchi: InChI=1S/C4HBr4N/c5-1-2(6)4(8)9-3(1)7/h9H
+  standard_inchi_key: MIIWISWSCMVZHG-UHFFFAOYSA-N
+  molecular_formula: C4HBr4N
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001463/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 382.675
+  monoisotopic_mass: 378.6842
+xrefs:
+- pubchem.compound:4605890
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1007/BF00394363#2-3-4-5-tetrabromopyrrole
+  source_label: 2,3,4,5-tetrabromopyrrole
+  minted_identifier: antibioticmech:curator-43acd9a231
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1007/BF00394363
+    snippet: Andersen et al. isolated 2,3,4,5-tetrabromopyrrole from a marine Chromobacterium
+      sp. (subsequently reclassified in Pseudoalteromonas) and demonstrated antibacterial
+      activity against Staphylococcus aureus, Escherichia coli, Pseudomonas aeruginosa,
+      and Candida albicans.
+    notes: Reported by Andersen et al. 1974 (Mar Biol 27:281-285; DOI:10.1007/BF00394363)
+      as an antibacterial and autotoxic marine bacterial bromopyrrole, with biosynthesis
+      via the bmp gene cluster in Pseudoalteromonas characterized by Agarwal et al.
+      2014 (Nat Chem Biol 10:640-647; DOI:10.1038/nchembio.1564) and El Gamal et al.
+      2016 (J Am Chem Soc 138:13167-13170; DOI:10.1021/jacs.6b08518). MIBiG 4.0.1
+      entry BGC0001463 and PubChem CID 4605890 supply the SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:43662
+  taxon_label: Pseudoalteromonas piscicida
+  biosynthetic_gene_cluster: BGC0001463
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound '2,3,4,5-tetrabromopyrrole' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: DOI:10.1073/pnas.1519695113
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,68 @@
+identifier: CHEBI:219230
+label: pamamycin-621A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 16-membered macrodiolide polyketide antibiotic (621 Da congener) from
+  Streptomyces alboniger with anti-Gram-positive and antimycobacterial activity.
+definition_source: DOI:10.1021/ol902290v
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCC[C@H]1[C@@H]([C@@H]2CC[C@@H](O2)[C@@H](C(=O)O[C@H]([C@@H]([C@@H]3CC[C@@H](O3)[C@H](C(=O)O1)C)C)[C@H](C)[C@H]4CC[C@H](O4)C[C@@H](CCC)N(C)C)C)C
+  standard_inchi: InChI=1S/C36H63NO7/c1-10-12-26(37(8)9)20-27-14-15-30(40-27)22(4)34-23(5)31-17-19-32(42-31)24(6)35(38)43-28(13-11-2)21(3)29-16-18-33(41-29)25(7)36(39)44-34/h21-34H,10-20H2,1-9H3/t21-,22+,23+,24+,25-,26+,27-,28-,29-,30+,31-,32+,33+,34-/m0/s1
+  standard_inchi_key: MMFMMXXZYTWNGM-ZZSWZHNPSA-N
+  molecular_formula: C36H63NO7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001150/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 621.9
+  monoisotopic_mass: 621.4605
+xrefs:
+- pubchem.compound:10508137
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/ol902290v#pamamycin-621a
+  source_label: pamamycin-621A
+  minted_identifier: antibioticmech:curator-75b31ba66d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/ol902290v
+    snippet: 2-Demethylenepamamycin-621A (pamamycin-621A) was isolated from Streptomyces
+      alboniger as a 16-membered macrodiolide polyketide antibiotic that inhibits
+      the growth of Gram-positive bacteria and mycobacteria and stimulates aerial
+      mycelium formation.
+    notes: Reported by Kang et al. 2009 (Org Lett 11:5590-5593; PMID:19908882) and
+      Rebets et al. 2015 (J Am Chem Soc 137:12031-12037; DOI:10.1021/jacs.5b05606)
+      as a 16-membered macrodiolide ionophore antibiotic from Streptomyces alboniger.
+      MIBiG 4.0.1 entry BGC0001150, ChEBI CHEBI:219230, and PubChem CID 10508137 supply
+      the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:132473
+  taxon_label: Streptomyces alboniger
+  biosynthetic_gene_cluster: BGC0001150
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'pamamycin-621A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1021/ol902290v
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

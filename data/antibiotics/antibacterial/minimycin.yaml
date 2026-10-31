@@ -1,0 +1,71 @@
+identifier: CHEBI:224130
+label: minimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 5-beta-D-ribofuranosyl-1,3-oxazine-2,4-dione C-nucleoside antibiotic
+  (oxazinomycin) from Streptomyces hygroscopicus with antibacterial activity against
+  Gram-positive and Gram-negative bacteria.
+definition_source: DOI:10.1016/j.isci.2019.11.037
+synonyms:
+- synonym_text: oxazinomycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=C(C(=O)NC(=O)O1)[C@H]2[C@@H]([C@@H]([C@H](O2)CO)O)O
+  standard_inchi: InChI=1S/C9H11NO7/c11-1-4-5(12)6(13)7(17-4)3-2-16-9(15)10-8(3)14/h2,4-7,11-13H,1H2,(H,10,14,15)/t4-,5-,6-,7+/m1/s1
+  standard_inchi_key: REFHNSOTFKKRAI-GBNDHIKLSA-N
+  molecular_formula: C9H11NO7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002295/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 245.187
+  monoisotopic_mass: 245.0536
+xrefs:
+- pubchem.compound:161746
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.isci.2019.11.037#minimycin
+  source_label: minimycin
+  minted_identifier: antibioticmech:curator-f775747a7d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.isci.2019.11.037
+    snippet: Kong et al. identified the five-gene biosynthetic cluster (min) for the
+      C-nucleoside antibiotic minimycin (oxazinomycin) in Streptomyces hygroscopicus
+      JCM 4712, which inhibits both Gram-positive and Gram-negative bacteria including
+      Staphylococcus aureus and Escherichia coli.
+    notes: Reported by Kong et al. 2019 (iScience 22:430-440; PMID:31816530) and Kusakabe
+      et al. 1972 (J Antibiot 25:44-47; DOI:10.7164/antibiotics.25.44) as a 5-beta-D-ribofuranosyl-1,3-oxazine-2,4-dione
+      C-nucleoside antibiotic from Streptomyces hygroscopicus. MIBiG 4.0.1 entry BGC0002295,
+      ChEBI CHEBI:224130, and PubChem CID 161746 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1912
+  taxon_label: Streptomyces hygroscopicus
+  biosynthetic_gene_cluster: BGC0002295
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'minimycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1016/j.isci.2019.11.037
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

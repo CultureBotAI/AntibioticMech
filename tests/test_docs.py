@@ -160,8 +160,8 @@ NUMERIC_CLAIMS = [
     ("curation/source_queue.tsv", "maps {} of them", "mapped_roles"),
     # Producer figures. Both halves are derivable, so the tripwire accepts them
     # swapped; only this table checks a number against ITS OWN claim (#230).
-    ("docs/CURATION.md", "23 of the {} seeded assertions", "mibig_producer_items"),
-    ("docs/CURATION.md", "{} of the 65 seeded assertions", "cluster_inherited"),
+    ("docs/CURATION.md", "46 of the {} seeded assertions", "mibig_producer_items"),
+    ("docs/CURATION.md", "{} of the 96 seeded assertions", "cluster_inherited"),
     # The adoption record. Its shape carries no corpus noun, so the tripwire
     # cannot see it at all and only this table can (#230).
     ("curation/source_queue.tsv", "of which it publishes {}", "mibig_producer_items"),

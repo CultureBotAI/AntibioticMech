@@ -361,5 +361,5 @@ def test_every_committed_producer_record_names_its_organism_in_the_document():
         for producer in producers:
             if producer["taxon_label"] not in document:
                 missing.append((record["identifier"], producer["taxon_label"]))
-    assert seen == 62, seen
+    assert seen == 92, seen
     assert missing == [], missing[:10]

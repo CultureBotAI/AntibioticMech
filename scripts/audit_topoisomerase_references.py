@@ -30,7 +30,7 @@ SOURCE_QUEUE_BEFORE_HOLOMYCIN_SHA256 = (
     "32ff6b625b7787e8935d6f1ec7195d2ba61fda714a664ee1b54049ebc2bd9fdb"
 )
 SOURCE_QUEUE_MIBIG_DELTA = (
-    "the seeder's structure gate matches 67, of which it publishes 65:",
+    "the seeder's structure gate matches 98, of which it publishes 96:",
     "the seeder's structure gate matches the same 66, of which it publishes 64:",
 )
 

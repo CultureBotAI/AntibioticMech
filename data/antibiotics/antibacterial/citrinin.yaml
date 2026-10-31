@@ -1,0 +1,73 @@
+identifier: antibioticmech:curator-5a14bbc4b3
+label: citrinin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A fungal dihydroisocoumarin/benzopyran polyketide antibiotic and mycotoxin
+  from Monascus ruber and Penicillium citrinum with antibacterial activity against
+  Gram-positive bacteria.
+definition_source: DOI:10.1039/c5sc04027b
+synonyms:
+- synonym_text: (-)-citrinin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: antimycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@H]1OC=C2C(O)=C(C(O)=O)C(=O)C(C)=C2[C@H]1C
+  standard_inchi: InChI=1S/C13H14O5/c1-5-7(3)18-4-8-9(5)6(2)11(14)10(12(8)15)13(16)17/h4-5,7,15H,1-3H3,(H,16,17)/t5-,7-/m0/s1
+  standard_inchi_key: CQIUKKVOEOPUDV-FSPLSTOPSA-N
+  molecular_formula: C13H14O5
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001338/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 250.25
+  monoisotopic_mass: 250.0841
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1039/c5sc04027b#citrinin
+  source_label: citrinin
+  minted_identifier: antibioticmech:curator-5a14bbc4b3
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1039/c5sc04027b
+    snippet: He and Cox reconstituted the full biosynthetic pathway of the fungal
+      polyketide antibiotic and mycotoxin citrinin from Monascus ruber, which exhibits
+      classic antibacterial activity against Gram-positive bacteria including Staphylococcus
+      aureus and Bacillus subtilis.
+    notes: 'Reported by He and Cox 2016 (Chem Sci 7:2119-2127; PMID:29899939) as a
+      benzopyran polyketide antibiotic and mycotoxin biosynthesized by Monascus ruber
+      and Penicillium citrinum with antibacterial activity against Gram-positive bacteria.
+      MIBiG 4.0.1 entry BGC0001338 supplies the stereo-complete SMILES, Standard InChI,
+      and InChIKey CQIUKKVOEOPUDV-FSPLSTOPSA-N (note: ChEBI CHEBI:48707 and PubChem
+      CID 54680783 encode the (3R,4S) enantiomer CQIUKKVOEOPUDV-IYSWYEEDSA-N and are
+      omitted from xrefs to preserve exact InChIKey identity).'
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:89489
+  taxon_label: Monascus ruber
+  biosynthetic_gene_cluster: BGC0001338
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'citrinin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1039/c5sc04027b
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

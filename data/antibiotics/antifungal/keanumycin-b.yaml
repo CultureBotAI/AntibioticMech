@@ -1,0 +1,65 @@
+identifier: antibioticmech:curator-f9df994364
+label: keanumycin B
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 9-amino-acid chlorinated nonribosomal cyclic lipodepsipeptide congener
+  from Pseudomonas sp. QS1027 with potent antifungal and amoebicidal antiprotozoal
+  activity.
+definition_source: DOI:10.1021/jacs.2c11107
+activity_roles:
+- CHEBI:35718
+- CHEBI:35717
+chemical_structure:
+  smiles: '[H][C@@]1(NC(=O)[C@@H](CCN)NC(=O)[C@@H](CCO)NC(=O)CNC(=O)[C@H](CCN)NC(=O)[C@@H](COC(=O)[C@]([H])(NC(=O)[C@H](NC(=O)\C(NC1=O)=C\C)[C@@H](O)C(O)=O)[C@@H](O)CCl)NC(=O)C[C@@H](O)CCCCCCCCCCCCC)[C@@H](C)O'
+  standard_inchi: InChI=1S/C49H84ClN11O18/c1-4-6-7-8-9-10-11-12-13-14-15-16-28(64)23-35(66)55-33-26-79-49(78)38(34(65)24-50)60-47(75)39(40(68)48(76)77)61-42(70)29(5-2)56-46(74)37(27(3)63)59-44(72)31(18-21-52)58-43(71)32(19-22-62)54-36(67)25-53-41(69)30(17-20-51)57-45(33)73/h5,27-28,30-34,37-40,62-65,68H,4,6-26,51-52H2,1-3H3,(H,53,69)(H,54,67)(H,55,66)(H,56,74)(H,57,73)(H,58,71)(H,59,72)(H,60,75)(H,61,70)(H,76,77)/b29-5-/t27-,28+,30+,31-,32-,33-,34+,37-,38-,39-,40-/m1/s1
+  standard_inchi_key: OXIZCSDNJBDETD-AIONVLLNSA-N
+  molecular_formula: C49H84ClN11O18
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002765/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1150.723
+  monoisotopic_mass: 1149.5684
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/jacs.2c11107#keanumycin-b
+  source_label: keanumycin B
+  minted_identifier: antibioticmech:curator-f9df994364
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:35717
+  evidence:
+  - reference: DOI:10.1021/jacs.2c11107
+    snippet: Gotze et al. isolated keanumycin B as the deoxy-acyl congener of keanumycin
+      A from Pseudomonas sp. QS1027 and demonstrated strong antifungal activity against
+      Candida albicans and Botrytis cinerea alongside potent amoebicidal activity
+      against Dictyostelium discoideum.
+    notes: Reported by Gotze et al. 2023 (J Am Chem Soc 145:2342-2353; PMID:36649592)
+      as a chlorinated cyclic lipodepsipeptide congener from Pseudomonas sp. QS1027
+      with potent antifungal and amoebicidal activity. MIBiG 4.0.1 entry BGC0002765
+      supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2056244
+  taxon_label: Pseudomonas sp.
+  strain: QS1027
+  biosynthetic_gene_cluster: BGC0002765
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  reviewed: true
+  note: MIBiG active entry; compound 'Keanumycin B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1021/jacs.2c11107
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,65 @@
+identifier: CHEBI:221686
+label: jessenipeptin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 19-amino-acid nonribosomal cyclic lipodepsipeptide antibiotic from Pseudomonas
+  sp. QS1027 with antibacterial activity against methicillin-resistant Staphylococcus
+  aureus.
+definition_source: DOI:10.1073/pnas.1721790115
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCCC[C@H](CC(=O)N/C(=C\C)/C(=O)N1CCC[C@@H]1C(=O)N[C@H]([C@H](C)CC)C(=O)N[C@H](C(C)C)C(=O)N[C@H](C)C(=O)N[C@H](C)C(=O)N[C@@H](C)C(=O)N[C@H](C(C)C)C(=O)N[C@H](CO)C(=O)N[C@H](C)C(=O)N[C@H](C(C)C)C(=O)N[C@H](C)C(=O)N[C@H](CC(C)C)C(=O)N/C(=C\C)/C(=O)N[C@@H]2[C@H](OC(=O)[C@@H](NC(=O)[C@H](NC(=O)[C@@H](NC(=O)[C@@H](NC2=O)C)CCN)CO)CC3=CC=CC=C3)C)O
+  standard_inchi: InChI=1S/C91H148N20O24/c1-21-25-26-27-31-35-58(114)42-67(115)99-60(24-4)90(133)111-39-32-36-66(111)84(127)109-71(49(13)22-2)88(131)108-69(47(9)10)86(129)96-51(15)74(117)93-50(14)73(116)94-54(18)77(120)107-70(48(11)12)87(130)105-64(43-112)82(125)95-55(19)78(121)106-68(46(7)8)85(128)97-53(17)76(119)102-62(40-45(5)6)81(124)100-59(23-3)79(122)110-72-56(20)135-91(134)63(41-57-33-29-28-30-34-57)103-83(126)65(44-113)104-80(123)61(37-38-92)101-75(118)52(16)98-89(72)132/h23-24,28-30,33-34,45-56,58,61-66,68-72,112-114H,21-22,25-27,31-32,35-44,92H2,1-20H3,(H,93,117)(H,94,116)(H,95,125)(H,96,129)(H,97,128)(H,98,132)(H,99,115)(H,100,124)(H,101,118)(H,102,119)(H,103,126)(H,104,123)(H,105,130)(H,106,121)(H,107,120)(H,108,131)(H,109,127)(H,110,122)/b59-23-,60-24-/t49-,50-,51-,52+,53-,54+,55-,56-,58-,61+,62-,63+,64-,65-,66-,68-,69-,70-,71-,72-/m1/s1
+  standard_inchi_key: RCRYELMDBHQIMX-JRGFPVMHSA-N
+  molecular_formula: C91H148N20O24
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001629/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1906.301
+  monoisotopic_mass: 1905.0975
+xrefs:
+- pubchem.compound:145720625
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1073/pnas.1721790115#jessenipeptin
+  source_label: jessenipeptin
+  minted_identifier: antibioticmech:curator-dd8510ab40
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1073/pnas.1721790115
+    snippet: Arp et al. discovered the cyclic lipodepsipeptide antibiotic jessenipeptin
+      from Pseudomonas sp. QS1027 and reported potent anti-Gram-positive antibacterial
+      activity, including against methicillin-resistant Staphylococcus aureus (MRSA,
+      MIC = 4 ug/mL), that synergizes with mupirocin.
+    notes: Reported by Arp et al. 2018 (Proc Natl Acad Sci U S A 115:3758-3763; PMID:29581294)
+      as a 19-residue nonribosomal cyclic lipodepsipeptide antibiotic from Pseudomonas
+      sp. QS1027 with potent activity against Staphylococcus aureus and Bacillus subtilis.
+      MIBiG 4.0.1 entry BGC0001629, ChEBI CHEBI:221686, and PubChem CID 145720625
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2056244
+  taxon_label: Pseudomonas sp.
+  strain: QS1027
+  biosynthetic_gene_cluster: BGC0001629
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'jessenipeptin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1073/pnas.1721790115
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

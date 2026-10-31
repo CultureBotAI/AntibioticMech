@@ -1,0 +1,69 @@
+identifier: CHEBI:207881
+label: sulfadixiamycin C
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A symmetrical C-SO2-C-linked indolosesquiterpene dimer from the Streptomyces
+  xiamycin biosynthetic pathway with antibacterial activity.
+definition_source: DOI:10.1002/anie.201506541
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@]12CC[C@@H]([C@@]([C@@H]1CCC3=CC4=C(C=C23)C5=C(N4)C=CC(=C5)S(=O)(=O)C6=C7C(=CC8=C6CC[C@@H]9[C@@]8(CC[C@@H]([C@@]9(C)C(=O)O)O)C)C1=CC=CC=C1N7)(C)C(=O)O)O
+  standard_inchi: InChI=1S/C46H48N2O8S/c1-43-17-15-37(49)45(3,41(51)52)35(43)13-9-23-19-34-28(21-30(23)43)27-20-24(10-12-33(27)47-34)57(55,56)40-26-11-14-36-44(2,18-16-38(50)46(36,4)42(53)54)31(26)22-29-25-7-5-6-8-32(25)48-39(29)40/h5-8,10,12,19-22,35-38,47-50H,9,11,13-18H2,1-4H3,(H,51,52)(H,53,54)/t35-,36-,37+,38+,43-,44-,45+,46+/m1/s1
+  standard_inchi_key: JUHALZHBXHSBMH-LPHIXDDYSA-N
+  molecular_formula: C46H48N2O8S
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000665/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 788.963
+  monoisotopic_mass: 788.3131
+xrefs:
+- pubchem.compound:148126797
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.201506541#sulfadixiamycin-c
+  source_label: sulfadixiamycin C
+  minted_identifier: antibioticmech:curator-da0de07782
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/anie.201506541
+    snippet: Baunach et al. characterized sulfadixiamycin C as a symmetrical sulfone-bridged
+      xiamycin dimer from the Streptomyces sp. HKI0576 xia gene cluster exhibiting
+      antibacterial activity against Bacillus subtilis, Staphylococcus aureus, and
+      Mycobacterium vaccae.
+    notes: Reported by Baunach et al. 2015 (Angew Chem Int Ed 54:9042-9045; PMID:26079580)
+      as a sulfonyl-bridged indolosesquiterpene dimer from the Streptomyces sp. HKI0576
+      xia pathway with antibacterial activity against Gram-positive and mycobacterial
+      strains. MIBiG 4.0.1 entry BGC0000665, ChEBI CHEBI:207881, and PubChem CID 148126797
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:995841
+  taxon_label: Streptomyces sp.
+  strain: HKI0576
+  biosynthetic_gene_cluster: BGC0000665
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'sulfadixiamycin C' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: DOI:10.1002/anie.201506541
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-10-31T13:02:02Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
