@@ -71,6 +71,13 @@ curation_history:
     bacterial 30S ribosomal subunit head domain (16S rRNA helix 34) molecular_targets
     (issue #1284).'
   llm_assisted: true
+- timestamp: '2026-10-31T16:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph negamycin_30s_helix_34_miscoding_and_stalling
+    (4 nodes, 3 edges) for the non-protein primary-literature target (DOI:10.1073/pnas.1414401111,
+    DOI:10.1016/j.molcel.2014.09.021).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -104,3 +111,71 @@ molecular_targets:
       PDB:4W2I) and Polikanov et al. 2014 (Mol Cell 56:541-550; PMID:25306922; DOI:10.1016/j.molcel.2014.09.021)
       demonstrated that negamycin binds 16S rRNA helix 34 and the A-site tRNA anticodon
       stem-loop in the 30S ribosomal subunit head domain.
+causal_graphs:
+- graph_id: negamycin_30s_helix_34_miscoding_and_stalling
+  title: Negamycin binds 16S rRNA helix 34 and the A-site tRNA anticodon arm to induce
+    miscoding and block translocation
+  description: Negamycin binds the head domain of the bacterial 30S ribosomal subunit
+    at 16S rRNA helix 34, contacts the sugar-phosphate backbone of the A-site aminoacyl-tRNA
+    anticodon stem-loop, stabilizes near-cognate tRNA occupancy, and impairs mRNA-tRNA
+    translocation and translational fidelity.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: negamycin
+    label: negamycin
+    node_type: COMPOUND
+    grounding: CHEBI:198310
+  - node_id: ribosomal_30s_helix_34_pocket
+    label: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
+    node_type: CELL_STRUCTURE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 16S rRNA helix 34 in the head domain of the bacterial 30S ribosomal
+      subunit adjacent to the A-site tRNA anticodon stem-loop.
+  - node_id: negamycin_bound_helix34_asite_trna_complex
+    label: negamycin-bridged 16S rRNA helix 34 and A-site tRNA anticodon complex
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 70S ribosome crystal structures (PDB:4W2I, PDB:4UJC) showing
+      negamycin bridging 16S rRNA helix 34 and the A-site tRNA anticodon arm.
+  - node_id: bacterial_translation_fidelity_and_translocation
+    label: faithful bacterial A-site decoding and mRNA-tRNA translocation
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Ribosomal decoding fidelity and EF-G-catalyzed translocation
+      assayed by single-molecule FRET and in vitro translation.
+  edges:
+  - subject: negamycin
+    predicate: binds
+    object: negamycin_bound_helix34_asite_trna_complex
+    description: Negamycin binds 16S rRNA helix 34 in the 30S head domain and directly
+      contacts the A-site tRNA anticodon stem-loop.
+    evidence:
+    - reference: DOI:10.1073/pnas.1414401111
+      notes: The Escherichia coli 70S-negamycin crystal structure (PDB:4W2I; PMID:25368144)
+        resolved negamycin bound at 16S rRNA helix 34 bridging the A-site tRNA anticodon
+        arm.
+    - reference: DOI:10.1016/j.molcel.2014.09.021
+      notes: The Thermus thermophilus 70S-negamycin crystal structure (PDB:4UJC; PMID:25306922)
+        confirmed specific coordination of negamycin at 16S rRNA helix 34.
+  - subject: ribosomal_30s_helix_34_pocket
+    predicate: participates in
+    object: negamycin_bound_helix34_asite_trna_complex
+    description: 16S rRNA helix 34 nucleotides in the 30S subunit head domain form
+      the ribosomal binding site for negamycin.
+    evidence:
+    - reference: DOI:10.1073/pnas.1414401111
+      notes: Crystallographic and mutational analyses in E. coli rrn operon strains
+        showed that 16S rRNA helix 34 mutations confer negamycin resistance.
+  - subject: negamycin_bound_helix34_asite_trna_complex
+    predicate: disrupts
+    object: bacterial_translation_fidelity_and_translocation
+    description: Negamycin stabilization of A-site tRNA at helix 34 promotes near-cognate
+      miscoding and inhibits mRNA-tRNA translocation.
+    evidence:
+    - reference: DOI:10.1073/pnas.1414401111
+      notes: Single-molecule FRET and biochemical translation assays demonstrated
+        that negamycin prolongs near-cognate tRNA residency, induces miscoding, and
+        impedes translocation.
+    - reference: DOI:10.1016/j.molcel.2014.09.021
+      notes: Mechanistic and structural analyses confirmed that negamycin-tRNA interactions
+        at helix 34 drive miscoding and inhibit ribosome progression.

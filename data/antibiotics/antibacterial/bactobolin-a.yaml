@@ -82,6 +82,13 @@ curation_history:
     molecular_targets with reviewed UniProtKB:P42919 and UniProtKB:P60405 protein_examples
     (issue #1284).'
   llm_assisted: true
+- timestamp: '2026-10-31T16:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph bactobolin_a_ul2_50s_translation_termination_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P42919,
+    UniProtKB:P60405) and primary literature (DOI:10.1128/mBio.00499-12, DOI:10.1016/j.jmb.2014.12.018).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -140,3 +147,99 @@ molecular_targets:
       TTHA1676) that directly coordinates bactobolin A via its conserved Glu236 loop
       at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure
       (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+causal_graphs:
+- graph_id: bactobolin_a_ul2_50s_translation_termination_inhibition
+  title: Bactobolin A binds 50S ribosomal subunit protein uL2 (RplB) at the P-site
+    tRNA interface to inhibit bacterial translation
+  description: Bactobolin A binds a conserved pocket on the bacterial 50S ribosomal
+    subunit formed by ribosomal protein uL2 (RplB, centered on Glu236), 23S rRNA,
+    and the CCA end of P-site tRNA, displacing the P-site tRNA 3'-CCA away from the
+    peptidyl transferase center and impairing peptidyl transfer and translation termination.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: bactobolin_a
+    label: bactobolin A
+    node_type: COMPOUND
+    grounding: CHEBI:138579
+  - node_id: ribosomal_protein_ul2
+    label: 50S ribosomal subunit protein uL2 (RplB)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial 50S large ribosomal subunit protein uL2 (RplB); kept
+      label-only with Bacillus subtilis 168 (UniProtKB:P42919) and Thermus thermophilus
+      HB8 (UniProtKB:P60405) protein_examples.
+    gene_symbols:
+    - rplB
+    protein_examples:
+    - uniprot_id: UniProtKB:P42919
+      protein_label: Large ribosomal subunit protein uL2
+      gene_symbol: rplB
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB,
+        BSU01130) in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln
+        substitutions confer specific resistance to bactobolin A (MIC shift from 0.31
+        to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12; PMID:23249812).
+    - uniprot_id: UniProtKB:P60405
+      protein_label: Large ribosomal subunit protein uL2
+      gene_symbol: rplB
+      taxon_id: NCBITaxon:300852
+      taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-25'
+      role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB,
+        TTHA1676) that directly coordinates bactobolin A via its conserved Glu236
+        loop at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure
+        (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+  - node_id: bactobolin_bound_ul2_p_site_trna_state
+    label: bactobolin A-bound uL2/P-site tRNA 50S complex with displaced P-site CCA
+      end
+    node_type: STATE
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: 70S ribosome crystal state (PDB:4WT8) showing bactobolin A coordinated
+      by uL2 Glu236 and 23S rRNA with the 3'-CCA end of P-site tRNA shifted away from
+      the peptidyl transferase center.
+  - node_id: bacterial_peptidyl_transfer_and_termination
+    label: bacterial ribosomal peptidyl transfer and translation termination
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: P-site tRNA-dependent peptidyl transfer and release-factor-mediated
+      translation termination inhibited upon bactobolin A binding.
+  edges:
+  - subject: bactobolin_a
+    predicate: binds
+    object: bactobolin_bound_ul2_p_site_trna_state
+    description: Bactobolin A binds the 50S ribosomal subunit at the interface of
+      ribosomal protein uL2, 23S rRNA, and P-site tRNA.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2014.12.018
+      notes: The 3.0-angstrom Thermus thermophilus 70S-tRNA-bactobolin A crystal structure
+        (PDB:4WT8; PMID:25562208) resolved bactobolin A bound in a unique 50S pocket
+        contacting uL2 Glu236 and P-site tRNA.
+    - reference: DOI:10.1128/mBio.00499-12
+      notes: Spontaneous and engineered Bacillus subtilis rplB (uL2) Glu236Ala and
+        Glu236Gln mutations conferred specific resistance to bactobolin A (PMID:23249812).
+  - subject: ribosomal_protein_ul2
+    predicate: participates in
+    object: bactobolin_bound_ul2_p_site_trna_state
+    description: The conserved Glu236 region of 50S ribosomal protein uL2 directly
+      coordinates bactobolin A at the P-site tRNA interface.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2014.12.018
+      notes: Crystallographic contacts in PDB:4WT8 showed direct coordination between
+        the uL2 Glu236 loop and bactobolin A.
+    - reference: DOI:10.1128/mBio.00499-12
+      notes: Substitution of uL2 Glu236 in Bacillus subtilis 168 abolished susceptibility
+        to bactobolin A without cross-resistance to PTC-targeting antibiotics.
+  - subject: bactobolin_bound_ul2_p_site_trna_state
+    predicate: inhibits
+    object: bacterial_peptidyl_transfer_and_termination
+    description: Bactobolin A-induced displacement of the P-site tRNA 3'-CCA end from
+      the peptidyl transferase center inhibits peptidyl transfer and translation termination.
+    evidence:
+    - reference: DOI:10.1016/j.jmb.2014.12.018
+      notes: Structural analysis of PDB:4WT8 demonstrated that bactobolin A induces
+        a conformational shift of P-site tRNA CCA76 away from the peptidyl transferase
+        center, blocking peptide bond formation and termination hydrolysis.

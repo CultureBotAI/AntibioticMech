@@ -143,6 +143,77 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Pazufloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest DNA replication <span class="pill">MECHANISTIC</span></h3>
+<p>Pazufloxacin (T-3761), an aminocyclopropyl fluoroquinolone, inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) activity, blocking bacterial DNA replication and inducing rapid bactericidal killing.</p><div class="table-scroll" role="region" aria-label="Nodes: pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">pazufloxacin</code></td>
+    <td>pazufloxacin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/pazufloxacin.html"><code class="curie">CHEBI:94700</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_gyrase_and_topoisomerase_iv</code></td>
+    <td>bacterial DNA gyrase and topoisomerase IV<br><span class="meta">Examples: DNA gyrase subunit A (gyrA) <a href="https://www.uniprot.org/uniprotkb/P0AES4"><code class="curie">UniProtKB:P0AES4</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling activity is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).; DNA gyrase subunit B (gyrB) <a href="https://www.uniprot.org/uniprotkb/P0AES6"><code class="curie">UniProtKB:P0AES6</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme inhibited by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).; DNA topoisomerase 4 subunit A (parC) <a href="https://www.uniprot.org/uniprotkb/P0AFI2"><code class="curie">UniProtKB:P0AFI2</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).; DNA topoisomerase 4 subunit B (parE) <a href="https://www.uniprot.org/uniprotkb/P20083"><code class="curie">UniProtKB:P20083</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_activity</code></td>
+    <td>DNA gyrase supercoiling and topoisomerase IV catalytic activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_replication</code></td>
+    <td>bacterial DNA replication</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><a href="https://amigo.geneontology.org/amigo/term/GO:0006260">GO:0006260</a></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition" tabindex="0">
+<table>
+  <caption>Edges — pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">pazufloxacin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.37.3.384">DOI:10.1128/AAC.37.3.384</a></span> <span class="meta">(Purified Escherichia coli DNA gyrase supercoiling assays demonstrated direct nanomolar-to-submicromolar inhibition by T-3761 (pazufloxacin) correlating with MICs (PMID:8460909).)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.36.10.2293">DOI:10.1128/AAC.36.10.2293</a></span> <span class="meta">(Preclinical antibacterial and bactericidal evaluation established rapid replication arrest across Gram-negative and Gram-positive bacteria by T-3761 (PMID:1332594).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_gyrase_and_topoisomerase_iv</code></td>
+    <td>enables</td>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.37.3.384">DOI:10.1128/AAC.37.3.384</a></span> <span class="meta">(Purified E. coli DNA gyrase holoenzyme catalyzed the plasmid DNA supercoiling reaction assayed with T-3761.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_dna_replication</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.37.3.384">DOI:10.1128/AAC.37.3.384</a></span> <span class="meta">(Inhibition of DNA gyrase supercoiling by T-3761 blocked bacterial DNA synthesis and cell division.)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -174,6 +245,11 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-10-26 · antigravity · LLM-assisted</span>
     <p>Promoted curation_status from PROPOSED to REVIEWED after curating primary-literature molecular_targets and reviewed UniProtKB protein_examples and verifying exact ChEBI:94700 identity (issue #1285).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-10-31 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph pazufloxacin_gyrase_topoisomerase_iv_supercoiling_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.37.3.384, DOI:10.1128/AAC.36.10.2293).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -194,7 +270,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>9b2517f3adee</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>b0ffd96d3658</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>
