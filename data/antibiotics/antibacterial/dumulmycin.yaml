@@ -35,7 +35,7 @@ source_concepts:
       cyclopentenone ring, from river-sediment-derived Streptomyces sp. DM28 and reported
       antibacterial activity against Bacillus subtilis, Kocuria rhizophila, and Staphylococcus
       aureus alongside antitubercular activity against Mycobacterium tuberculosis.
-    notes: Reported by An et al. 2021 (Org Lett 23:7396-7400; PMID:34519507) as a
+    notes: Reported by An et al. 2021 (Org Lett 23:7396-7400; PMID:34388000) as a
       bicyclic 19-membered macrolide polyketide fused with an internal cyclopentenone
       ring from Streptomyces sp. DM28 with antibacterial activity against Gram-positive
       bacteria and Mycobacterium tuberculosis. MIBiG 4.0.1 entry BGC0002385, ChEBI
@@ -72,5 +72,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

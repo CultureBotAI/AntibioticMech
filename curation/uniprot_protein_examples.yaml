@@ -2,20 +2,19 @@ schema_version: 1
 task: uniprot_protein_examples_curation
 curation_action: CURATED_UNIPROT_PROTEIN_EXAMPLES
 retrieved_on: '2026-10-17'
-scope_note: 'Curated UniProtKB ProteinExample entries for GENE_OR_PROTEIN causal-graph
-  nodes and source: PRIMARY_LITERATURE protein/complex/viral molecular_targets where
-  an exact experimental or explicitly scoped reference-strain UniProt accession, gene
-  symbol, NCBI Taxon ID, and entry status are verified. Seeded CARD_ARO and BINDINGDB
-  molecular_targets are never modified here; non-protein targets and records with
-  unresolved strain/paralog/genotype ambiguity or frozen checkpoint pins are recorded
-  in held_targets.'
+scope_note: 'Curated UniProtKB ProteinExample entries for GENE_OR_PROTEIN causal-graph nodes
+  and source: PRIMARY_LITERATURE protein/complex/viral molecular_targets where an exact experimental
+  or explicitly scoped reference-strain UniProt accession, gene symbol, NCBI Taxon ID, and entry
+  status are verified. Seeded CARD_ARO and BINDINGDB molecular_targets are never modified here;
+  non-protein targets and records with unresolved strain/paralog/genotype ambiguity or frozen
+  checkpoint pins are recorded in held_targets.'
 records:
 - identifier: CHEBI:100241
   label: ciprofloxacin
   path: data/antibiotics/antibacterial/ciprofloxacin.yaml
-  changes: Added curated E. coli K-12 reference-strain UniProtKB protein examples
-    for DNA gyrase (GyrA P0AES4, GyrB P0AES6) and topoisomerase IV (ParC P0AFI2, ParE
-    P20083) on the ciprofloxacin_topoisomerase_poisoning causal graph nodes.
+  changes: Added curated E. coli K-12 reference-strain UniProtKB protein examples for DNA gyrase
+    (GyrA P0AES4, GyrB P0AES6) and topoisomerase IV (ParC P0AFI2, ParE P20083) on the ciprofloxacin_topoisomerase_poisoning
+    causal graph nodes.
   causal_node_examples:
   - graph_id: ciprofloxacin_topoisomerase_poisoning
     node_id: dna_gyrase
@@ -28,9 +27,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Catalytic DNA cleavage-religation subunit A of the heterotetrameric A2B2
-        DNA gyrase complex stabilized as a ternary cleavage complex by ciprofloxacin
-        in E. coli (PMID:9159526); K-12 reference proteome context.
+      role: Catalytic DNA cleavage-religation subunit A of the heterotetrameric A2B2 DNA gyrase
+        complex stabilized as a ternary cleavage complex by ciprofloxacin in E. coli (PMID:9159526);
+        K-12 reference proteome context.
     - uniprot_id: UniProtKB:P0AES6
       protein_label: DNA gyrase subunit B
       gene_symbol: gyrB
@@ -38,8 +37,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: ATPase subunit B of the heterotetrameric A2B2 DNA gyrase complex targeted
-        by ciprofloxacin in E. coli (PMID:9159526); K-12 reference proteome context.
+      role: ATPase subunit B of the heterotetrameric A2B2 DNA gyrase complex targeted by ciprofloxacin
+        in E. coli (PMID:9159526); K-12 reference proteome context.
   - graph_id: ciprofloxacin_topoisomerase_poisoning
     node_id: topoisomerase_iv
     node_label: bacterial topoisomerase IV
@@ -51,9 +50,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Catalytic DNA breakage-reunion subunit ParC of the heterotetrameric ParC2ParE2
-        topoisomerase IV secondary fluoroquinolone target in E. coli (PMID:9159526);
-        K-12 reference proteome context.
+      role: Catalytic DNA breakage-reunion subunit ParC of the heterotetrameric ParC2ParE2 topoisomerase
+        IV secondary fluoroquinolone target in E. coli (PMID:9159526); K-12 reference proteome
+        context.
     - uniprot_id: UniProtKB:P20083
       protein_label: DNA topoisomerase 4 subunit B
       gene_symbol: parE
@@ -61,15 +60,13 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: ATPase subunit ParE of the heterotetrameric ParC2ParE2 topoisomerase IV
-        secondary fluoroquinolone target in E. coli (PMID:9159526); K-12 reference
-        proteome context.
+      role: ATPase subunit ParE of the heterotetrameric ParC2ParE2 topoisomerase IV secondary
+        fluoroquinolone target in E. coli (PMID:9159526); K-12 reference proteome context.
 - identifier: CHEBI:63598
   label: levofloxacin
   path: data/antibiotics/antibacterial/levofloxacin.yaml
-  changes: Added curated S. pneumoniae TIGR4 ParC (P72525) and E. coli K-12 ParC/ParE
-    (P0AFI2, P20083) UniProtKB protein examples on the levofloxacin topoisomerase_iv
-    causal graph node.
+  changes: Added curated S. pneumoniae TIGR4 ParC (P72525) and E. coli K-12 ParC/ParE (P0AFI2,
+    P20083) UniProtKB protein examples on the levofloxacin topoisomerase_iv causal graph node.
   causal_node_examples:
   - graph_id: levofloxacin_topoisomerase_iv_poisoning
     node_id: topoisomerase_iv
@@ -82,9 +79,9 @@ records:
       taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Catalytic ParC subunit of S. pneumoniae topoisomerase IV complexed with
-        DNA and levofloxacin in the ternary cleavage-complex crystal structure (PMID:19332681;
-        TIGR4 reference strain context).
+      role: Catalytic ParC subunit of S. pneumoniae topoisomerase IV complexed with DNA and
+        levofloxacin in the ternary cleavage-complex crystal structure (PMID:19332681; TIGR4
+        reference strain context).
     - uniprot_id: UniProtKB:P0AFI2
       protein_label: DNA topoisomerase 4 subunit A
       gene_symbol: parC
@@ -92,8 +89,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference Gram-negative bacterial topoisomerase IV ParC subunit corresponding
-        to ARO:3000735 node grounding (E. coli K-12 reference proteome context).
+      role: Reference Gram-negative bacterial topoisomerase IV ParC subunit corresponding to
+        ARO:3000735 node grounding (E. coli K-12 reference proteome context).
     - uniprot_id: UniProtKB:P20083
       protein_label: DNA topoisomerase 4 subunit B
       gene_symbol: parE
@@ -101,14 +98,13 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference Gram-negative bacterial topoisomerase IV ParE subunit corresponding
-        to ARO:3000735 node grounding (E. coli K-12 reference proteome context).
+      role: Reference Gram-negative bacterial topoisomerase IV ParE subunit corresponding to
+        ARO:3000735 node grounding (E. coli K-12 reference proteome context).
 - identifier: CHEBI:100147
   label: nalidixic acid
   path: data/antibiotics/antibacterial/nalidixic-acid.yaml
-  changes: Added curated E. coli K-12 DNA gyrase subunit A (P0AES4) and subunit B
-    (P0AES6) UniProtKB protein examples on the nalidixic_acid_gyrase_cleavage_complex
-    dna_gyrase causal graph node.
+  changes: Added curated E. coli K-12 DNA gyrase subunit A (P0AES4) and subunit B (P0AES6) UniProtKB
+    protein examples on the nalidixic_acid_gyrase_cleavage_complex dna_gyrase causal graph node.
   causal_node_examples:
   - graph_id: nalidixic_acid_gyrase_cleavage_complex
     node_id: dna_gyrase
@@ -121,9 +117,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: GyrA subunit (formerly nalA gene product) of E. coli DNA gyrase that forms
-        the nalidixic acid-stabilized DNA cleavage complex and controls supercoiling
-        sensitivity (PMID:303505; PMID:217495; K-12 reference proteome context).
+      role: GyrA subunit (formerly nalA gene product) of E. coli DNA gyrase that forms the nalidixic
+        acid-stabilized DNA cleavage complex and controls supercoiling sensitivity (PMID:303505;
+        PMID:217495; K-12 reference proteome context).
     - uniprot_id: UniProtKB:P0AES6
       protein_label: DNA gyrase subunit B
       gene_symbol: gyrB
@@ -131,14 +127,13 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: ATPase GyrB subunit partnering with GyrA in the E. coli DNA gyrase holoenzyme
-        inhibited by nalidixic acid (PMID:303505; PMID:217495; K-12 reference proteome
-        context).
+      role: ATPase GyrB subunit partnering with GyrA in the E. coli DNA gyrase holoenzyme inhibited
+        by nalidixic acid (PMID:303505; PMID:217495; K-12 reference proteome context).
 - identifier: CHEBI:100246
   label: norfloxacin
   path: data/antibiotics/antibacterial/norfloxacin.yaml
-  changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4)
-    and subunit B (P0AES6) UniProtKB protein examples on the norfloxacin_dna_gyrase_supercoiling_inhibition
+  changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4) and subunit
+    B (P0AES6) UniProtKB protein examples on the norfloxacin_dna_gyrase_supercoiling_inhibition
     dna_gyrase causal graph node.
   causal_node_examples:
   - graph_id: norfloxacin_dna_gyrase_supercoiling_inhibition
@@ -152,9 +147,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node
-        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
-        luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry).
+      role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node grounding
+        (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA
+        gyrase without a strain-specific reviewed Swiss-Prot entry).
     - uniprot_id: UniProtKB:P0AES6
       protein_label: DNA gyrase subunit B
       gene_symbol: gyrB
@@ -162,14 +157,14 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node
-        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
-        luteus DNA gyrase).
+      role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node grounding
+        (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA
+        gyrase).
 - identifier: antibioticmech:aro-2eea3233f3
   label: ofloxacin
   path: data/antibiotics/antibacterial/ofloxacin.yaml
-  changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4)
-    and subunit B (P0AES6) UniProtKB protein examples on the ofloxacin_dna_gyrase_supercoiling_inhibition
+  changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4) and subunit
+    B (P0AES6) UniProtKB protein examples on the ofloxacin_dna_gyrase_supercoiling_inhibition
     dna_gyrase causal graph node.
   causal_node_examples:
   - graph_id: ofloxacin_dna_gyrase_supercoiling_inhibition
@@ -183,9 +178,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node
-        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
-        luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry).
+      role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node grounding
+        (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA
+        gyrase without a strain-specific reviewed Swiss-Prot entry).
     - uniprot_id: UniProtKB:P0AES6
       protein_label: DNA gyrase subunit B
       gene_symbol: gyrB
@@ -193,14 +188,14 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node
-        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
-        luteus DNA gyrase).
+      role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node grounding
+        (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA
+        gyrase).
 - identifier: CHEBI:50199
   label: pefloxacin
   path: data/antibiotics/antibacterial/pefloxacin.yaml
-  changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4)
-    and subunit B (P0AES6) UniProtKB protein examples on the pefloxacin_dna_gyrase_supercoiling_inhibition
+  changes: Added curated E. coli K-12 reference-strain DNA gyrase subunit A (P0AES4) and subunit
+    B (P0AES6) UniProtKB protein examples on the pefloxacin_dna_gyrase_supercoiling_inhibition
     dna_gyrase causal graph node.
   causal_node_examples:
   - graph_id: pefloxacin_dna_gyrase_supercoiling_inhibition
@@ -214,9 +209,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node
-        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
-        luteus DNA gyrase without a strain-specific reviewed Swiss-Prot entry).
+      role: Reference-strain bacterial DNA gyrase subunit A for the ARO:3000733 node grounding
+        (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA
+        gyrase without a strain-specific reviewed Swiss-Prot entry).
     - uniprot_id: UniProtKB:P0AES6
       protein_label: DNA gyrase subunit B
       gene_symbol: gyrB
@@ -224,15 +219,15 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node
-        grounding (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus
-        luteus DNA gyrase).
+      role: Reference-strain bacterial DNA gyrase subunit B for the ARO:3000733 node grounding
+        (E. coli K-12 reference context; PMID:3010848 assayed purified Micrococcus luteus DNA
+        gyrase).
 - identifier: CHEBI:28368
   label: novobiocin
   path: data/antibiotics/antibacterial/novobiocin.yaml
-  changes: Added curated E. coli K-12 GyrB (P0AES6) UniProtKB protein examples on
-    the novobiocin_gyrb_atpase_inhibition gyrb causal graph node and the PRIMARY_LITERATURE
-    DNA gyrase B 24-kDa fragment molecular target.
+  changes: Added curated E. coli K-12 GyrB (P0AES6) UniProtKB protein examples on the novobiocin_gyrb_atpase_inhibition
+    gyrb causal graph node and the PRIMARY_LITERATURE DNA gyrase B 24-kDa fragment molecular
+    target.
   causal_node_examples:
   - graph_id: novobiocin_gyrb_atpase_inhibition
     node_id: gyrb
@@ -245,8 +240,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: ATP-binding GyrB subunit whose N-terminal 24-kDa domain binds novobiocin
-        at the ATPase site (PMID:8386298; PMID:12044152; E. coli K-12 reference context).
+      role: ATP-binding GyrB subunit whose N-terminal 24-kDa domain binds novobiocin at the
+        ATPase site (PMID:8386298; PMID:12044152; E. coli K-12 reference context).
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: DNA gyrase B 24-kDa fragment
@@ -259,15 +254,14 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Full-length E. coli K-12 GyrB precursor of the 24-kDa N-terminal ATP-binding
-        fragment crystallized with novobiocin (PMID:12044152; PDB 1KIJ).
+      role: Full-length E. coli K-12 GyrB precursor of the 24-kDa N-terminal ATP-binding fragment
+        crystallized with novobiocin (PMID:12044152; PDB 1KIJ).
 - identifier: CHEBI:17076
   label: streptomycin
   path: data/antibiotics/antibacterial/streptomycin.yaml
-  changes: Added curated T. thermophilus HB8 (Q5SHN3) and E. coli K-12 (P0A7S3) ribosomal
-    protein uS12 (rpsL) UniProtKB protein examples on the streptomycin_30s_decoding_site_misreading
-    causal graph node and the PRIMARY_LITERATURE 30S ribosomal decoding center molecular
-    target.
+  changes: Added curated T. thermophilus HB8 (Q5SHN3) and E. coli K-12 (P0A7S3) ribosomal protein
+    uS12 (rpsL) UniProtKB protein examples on the streptomycin_30s_decoding_site_misreading
+    causal graph node and the PRIMARY_LITERATURE 30S ribosomal decoding center molecular target.
   causal_node_examples:
   - graph_id: streptomycin_30s_decoding_site_misreading
     node_id: ribosomal_protein_s12
@@ -280,9 +274,9 @@ records:
       taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: 30S ribosomal protein uS12 (S12) directly contacted by streptomycin at
-        the decoding center in Thermus thermophilus 30S crystal structures (PMID:10984042,
-        PDB 1FJG; PMID:23322043, PDB 4DR3; HB8 reference strain context).
+      role: 30S ribosomal protein uS12 (S12) directly contacted by streptomycin at the decoding
+        center in Thermus thermophilus 30S crystal structures (PMID:10984042, PDB 1FJG; PMID:23322043,
+        PDB 4DR3; HB8 reference strain context).
     - uniprot_id: UniProtKB:P0A7S3
       protein_label: Small ribosomal subunit protein uS12
       gene_symbol: rpsL
@@ -290,9 +284,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: 30S ribosomal protein uS12 (S12) whose rpsL mutations govern streptomycin
-        binding and translational misreading in E. coli (PMID:353564; K-12 reference
-        strain context).
+      role: 30S ribosomal protein uS12 (S12) whose rpsL mutations govern streptomycin binding
+        and translational misreading in E. coli (PMID:353564; K-12 reference strain context).
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: 30S ribosomal decoding center
@@ -305,15 +298,14 @@ records:
       taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Protein component (uS12/RpsL) of the 30S decoding-center binding pocket
-        alongside 16S rRNA helices h18, h27, and h44 in the streptomycin-30S crystal
-        structure (PMID:23322043, PDB 4DR3; HB8 reference strain context).
+      role: Protein component (uS12/RpsL) of the 30S decoding-center binding pocket alongside
+        16S rRNA helices h18, h27, and h44 in the streptomycin-30S crystal structure (PMID:23322043,
+        PDB 4DR3; HB8 reference strain context).
 - identifier: CHEBI:164200
   label: triclosan
   path: data/antibiotics/antibacterial/triclosan.yaml
-  changes: Added curated E. coli K-12 FabI (P0AEK4) UniProtKB protein examples on
-    the triclosan_fabi_fatty_acid_synthesis_inhibition fabi causal graph node and
-    the PRIMARY_LITERATURE FabI molecular target.
+  changes: Added curated E. coli K-12 FabI (P0AEK4) UniProtKB protein examples on the triclosan_fabi_fatty_acid_synthesis_inhibition
+    fabi causal graph node and the PRIMARY_LITERATURE FabI molecular target.
   causal_node_examples:
   - graph_id: triclosan_fabi_fatty_acid_synthesis_inhibition
     node_id: fabi
@@ -326,9 +318,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Type II fatty-acid synthesis enoyl-ACP reductase that forms the noncovalent
-        FabI-NAD+-triclosan ternary complex in E. coli (PMID:9675027; PMID:10220315,
-        PDB 1QSG; PMID:21094257; K-12 reference strain context).
+      role: Type II fatty-acid synthesis enoyl-ACP reductase that forms the noncovalent FabI-NAD+-triclosan
+        ternary complex in E. coli (PMID:9675027; PMID:10220315, PDB 1QSG; PMID:21094257; K-12
+        reference strain context).
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: enoyl-acyl carrier protein reductase (FabI)
@@ -346,9 +338,9 @@ records:
 - identifier: CHEBI:45924
   label: trimethoprim
   path: data/antibiotics/antibacterial/trimethoprim.yaml
-  changes: Added curated S. aureus (P0A017) and E. coli K-12 (P0ABQ4) dihydrofolate
-    reductase (folA) UniProtKB protein examples on the trimethoprim_folate_pathway_inhibition
-    bacterial_dhfr causal graph node.
+  changes: Added curated S. aureus (P0A017) and E. coli K-12 (P0ABQ4) dihydrofolate reductase
+    (folA) UniProtKB protein examples on the trimethoprim_folate_pathway_inhibition bacterial_dhfr
+    causal graph node.
   causal_node_examples:
   - graph_id: trimethoprim_folate_pathway_inhibition
     node_id: bacterial_dhfr
@@ -361,8 +353,8 @@ records:
       taxon_label: Staphylococcus aureus
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Chromosomal trimethoprim-sensitive dihydrofolate reductase (dfrB/folA)
-        directly inhibited by trimethoprim in S. aureus (PMID:14623005).
+      role: Chromosomal trimethoprim-sensitive dihydrofolate reductase (dfrB/folA) directly
+        inhibited by trimethoprim in S. aureus (PMID:14623005).
     - uniprot_id: UniProtKB:P0ABQ4
       protein_label: Dihydrofolate reductase
       gene_symbol: folA
@@ -370,16 +362,15 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Bacterial dihydrofolate reductase forming cooperative ternary complexes
-        with NADPH and trimethoprim in E. coli (PMID:1985419; K-12 reference strain
-        context).
+      role: Bacterial dihydrofolate reductase forming cooperative ternary complexes with NADPH
+        and trimethoprim in E. coli (PMID:1985419; K-12 reference strain context).
 - identifier: CHEBI:4877
   label: ethambutol
   path: data/antibiotics/antimycobacterial/ethambutol.yaml
-  changes: Added curated M. tuberculosis H37Rv EmbA (P9WNL9), EmbB (P9WNL7), and EmbC
-    (P9WNL5) UniProtKB protein examples on the ethambutol_emb_arabinan_inhibition
-    causal graph nodes and the PRIMARY_LITERATURE EmbA-EmbB / EmbC-EmbC arabinosyltransferase
-    complexes molecular target.
+  changes: Added curated M. tuberculosis H37Rv EmbA (P9WNL9), EmbB (P9WNL7), and EmbC (P9WNL5)
+    UniProtKB protein examples on the ethambutol_emb_arabinan_inhibition causal graph nodes
+    and the PRIMARY_LITERATURE EmbA-EmbB / EmbC-EmbC arabinosyltransferase complexes molecular
+    target.
   causal_node_examples:
   - graph_id: ethambutol_emb_arabinan_inhibition
     node_id: embab_complex
@@ -392,9 +383,9 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: EmbA subunit of the heterodimeric EmbA-EmbB-AcpM2 arabinosyltransferase
-        complex bound by ethambutol in cryo-EM structures (PMID:32327601, PDB 7BVF;
-        H37Rv reference strain context).
+      role: EmbA subunit of the heterodimeric EmbA-EmbB-AcpM2 arabinosyltransferase complex
+        bound by ethambutol in cryo-EM structures (PMID:32327601, PDB 7BVF; H37Rv reference
+        strain context).
     - uniprot_id: UniProtKB:P9WNL7
       protein_label: Arabinosyltransferase B
       gene_symbol: embB
@@ -402,9 +393,9 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Catalytic EmbB subunit harboring the conserved ethambutol-binding active-site
-        pocket within the EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv
-        reference strain context).
+      role: Catalytic EmbB subunit harboring the conserved ethambutol-binding active-site pocket
+        within the EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv reference strain
+        context).
   - graph_id: ethambutol_emb_arabinan_inhibition
     node_id: embc_complex
     node_label: mycobacterial EmbC arabinosyltransferase complex
@@ -416,9 +407,9 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Catalytic EmbC subunit of the homodimeric EmbC2-AcpM2 lipoarabinomannan
-        arabinosyltransferase complex bound by ethambutol at its active site (PMID:32327601;
-        H37Rv reference strain context).
+      role: Catalytic EmbC subunit of the homodimeric EmbC2-AcpM2 lipoarabinomannan arabinosyltransferase
+        complex bound by ethambutol at its active site (PMID:32327601; H37Rv reference strain
+        context).
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: EmbA-EmbB and EmbC-EmbC arabinosyltransferase complexes
@@ -431,8 +422,8 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: EmbA subunit of the M. tuberculosis EmbA-EmbB-AcpM2 complex resolved with
-        ethambutol by cryo-EM (PMID:32327601, PDB 7BVF; H37Rv reference strain context).
+      role: EmbA subunit of the M. tuberculosis EmbA-EmbB-AcpM2 complex resolved with ethambutol
+        by cryo-EM (PMID:32327601, PDB 7BVF; H37Rv reference strain context).
     - uniprot_id: UniProtKB:P9WNL7
       protein_label: Arabinosyltransferase B
       gene_symbol: embB
@@ -440,9 +431,9 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Catalytic EmbB subunit containing the direct ethambutol-binding pocket
-        in the M. tuberculosis EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv
-        reference strain context).
+      role: Catalytic EmbB subunit containing the direct ethambutol-binding pocket in the M.
+        tuberculosis EmbA-EmbB-AcpM2 complex (PMID:32327601, PDB 7BVF; H37Rv reference strain
+        context).
     - uniprot_id: UniProtKB:P9WNL5
       protein_label: Arabinosyltransferase C
       gene_symbol: embC
@@ -450,15 +441,15 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Catalytic EmbC subunit of the homodimeric EmbC-EmbC arabinosyltransferase
-        complex directly bound by ethambutol (PMID:32327601; H37Rv reference strain
-        context; M. smegmatis EmbC2 complex also resolved in the same study).
+      role: Catalytic EmbC subunit of the homodimeric EmbC-EmbC arabinosyltransferase complex
+        directly bound by ethambutol (PMID:32327601; H37Rv reference strain context; M. smegmatis
+        EmbC2 complex also resolved in the same study).
 - identifier: CHEBI:119573
   label: delavirdine
   path: data/antibiotics/antiviral/delavirdine.yaml
-  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
-    example on the delavirdine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase
-    causal graph node.
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on
+    the delavirdine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase causal
+    graph node.
   causal_node_examples:
   - graph_id: delavirdine_hiv1_reverse_transcriptase_inhibition
     node_id: hiv1_reverse_transcriptase
@@ -468,19 +459,18 @@ records:
       protein_label: Gag-Pol polyprotein
       gene_symbol: gag-pol
       taxon_id: NCBITaxon:11706
-      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
-        HXB2)
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
-        bound at the non-nucleoside inhibitor pocket by delavirdine (U-90152) (PMID:1726658;
-        PMID:10602683, PDB 1KLM; HXB2 reference isolate context).
+      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer bound
+        at the non-nucleoside inhibitor pocket by delavirdine (U-90152) (PMID:1726658; PMID:10602683,
+        PDB 1KLM; HXB2 reference isolate context).
 - identifier: CHEBI:63613
   label: nevirapine
   path: data/antibiotics/antiviral/nevirapine.yaml
-  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
-    example on the nevirapine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase
-    causal graph node.
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on
+    the nevirapine_hiv1_reverse_transcriptase_inhibition hiv1_reverse_transcriptase causal graph
+    node.
   causal_node_examples:
   - graph_id: nevirapine_hiv1_reverse_transcriptase_inhibition
     node_id: hiv1_reverse_transcriptase
@@ -490,19 +480,18 @@ records:
       protein_label: Gag-Pol polyprotein
       gene_symbol: gag-pol
       taxon_id: NCBITaxon:11706
-      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
-        HXB2)
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
-        noncompetitively bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970;
-        PMID:7540824, PDB 1VRT; HXB2 reference isolate context).
+      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer noncompetitively
+        bound at the NNRTI pocket by nevirapine (BI-RG-587) (PMID:1700970; PMID:7540824, PDB
+        1VRT; HXB2 reference isolate context).
 - identifier: CHEBI:68590
   label: fidaxomicin
   path: data/antibiotics/antibacterial/fidaxomicin.yaml
-  changes: Added curated Clostridioides difficile strain 630 RpoB (Q18CF4) and RpoC
-    (Q18CF3) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA polymerase
-    molecular target.
+  changes: Added curated Clostridioides difficile strain 630 RpoB (Q18CF4) and RpoC (Q18CF3)
+    UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA polymerase molecular
+    target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: bacterial RNA polymerase
@@ -515,9 +504,9 @@ records:
       taxon_label: Clostridioides difficile (strain 630)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: RNA polymerase beta subunit forming part of the fidaxomicin-binding clamp
-        cleft in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain
-        630 reference proteome context).
+      role: RNA polymerase beta subunit forming part of the fidaxomicin-binding clamp cleft
+        in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain 630 reference proteome
+        context).
     - uniprot_id: UniProtKB:Q18CF3
       protein_label: DNA-directed RNA polymerase subunit beta'
       gene_symbol: rpoC
@@ -526,14 +515,13 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: RNA polymerase beta' subunit contributing the lineage-specific fidaxomicin-sensitizing
-        residue in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain
-        630 reference proteome context).
+        residue in the C. difficile cryo-EM complex (PMID:35388215, PDB 7L7B; strain 630 reference
+        proteome context).
 - identifier: CHEBI:443725
   label: fosmidomycin
   path: data/antibiotics/antibacterial/fosmidomycin.yaml
-  changes: Added curated E. coli K-12 DXR (P45568) UniProtKB protein example on the
-    PRIMARY_LITERATURE 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR) molecular
-    target.
+  changes: Added curated E. coli K-12 DXR (P45568) UniProtKB protein example on the PRIMARY_LITERATURE
+    1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR) molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: 1-deoxy-D-xylulose 5-phosphate reductoisomerase (DXR)
@@ -546,15 +534,13 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Non-mevalonate isoprenoid pathway enzyme crystallized in a ternary complex
-        with NADPH and fosmidomycin in E. coli (PMID:17554164; K-12 reference strain
-        context).
+      role: Non-mevalonate isoprenoid pathway enzyme crystallized in a ternary complex with
+        NADPH and fosmidomycin in E. coli (PMID:17554164; K-12 reference strain context).
 - identifier: CHEBI:29013
   label: fusidic acid
   path: data/antibiotics/antibacterial/fusidic-acid.yaml
-  changes: Added curated Thermus thermophilus HB8 elongation factor G (P13551) UniProtKB
-    protein example on the PRIMARY_LITERATURE elongation factor G (EF-G) molecular
-    target.
+  changes: Added curated Thermus thermophilus HB8 elongation factor G (P13551) UniProtKB protein
+    example on the PRIMARY_LITERATURE elongation factor G (EF-G) molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: elongation factor G (EF-G)
@@ -568,14 +554,13 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: Ribosomal translocation GTPase EF-G whose fusidic acid-resistant and hypersensitive
-        mutant crystal structures define the interdomain conformational trapping mechanism
-        (PMID:15843024; T. thermophilus HB8 reference strain context).
+        mutant crystal structures define the interdomain conformational trapping mechanism (PMID:15843024;
+        T. thermophilus HB8 reference strain context).
 - identifier: CHEBI:7025
   label: mupirocin
   path: data/antibiotics/antibacterial/mupirocin.yaml
-  changes: Added curated Staphylococcus aureus IleS (P41972) UniProtKB protein example
-    on the PRIMARY_LITERATURE isoleucyl-tRNA synthetase-tRNA(Ile) complex molecular
-    target.
+  changes: Added curated Staphylococcus aureus IleS (P41972) UniProtKB protein example on the
+    PRIMARY_LITERATURE isoleucyl-tRNA synthetase-tRNA(Ile) complex molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: isoleucyl-tRNA synthetase-tRNA(Ile) complex
@@ -589,14 +574,12 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: Staphylococcus aureus isoleucyl-tRNA synthetase catalytic component crystallized
-        with tRNA(Ile) and mupirocin at the Rossmann-fold active site (PMID:10446055,
-        PDB 1QU2).
+        with tRNA(Ile) and mupirocin at the Rossmann-fold active site (PMID:10446055, PDB 1QU2).
 - identifier: CHEBI:27641
   label: cycloheximide
   path: data/antibiotics/antifungal/cycloheximide.yaml
-  changes: Added curated Saccharomyces cerevisiae S288c 60S ribosomal protein uL15
-    / RPL28 (P02406) UniProtKB protein example on the PRIMARY_LITERATURE eukaryotic
-    80S ribosome molecular target.
+  changes: Added curated Saccharomyces cerevisiae S288c 60S ribosomal protein uL15 / RPL28 (P02406)
+    UniProtKB protein example on the PRIMARY_LITERATURE eukaryotic 80S ribosome molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: eukaryotic 80S ribosome
@@ -609,15 +592,15 @@ records:
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: 60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines
-        the cycloheximide binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor
-        crystal structure (PMID:25209664, PDB 4U3U; S288c reference strain context).
+      role: 60S ribosomal E-site protein uL15 (RPL28; historical CYH2/L29) that lines the cycloheximide
+        binding pocket with 25S rRNA in the S. cerevisiae 80S ribosome-inhibitor crystal structure
+        (PMID:25209664, PDB 4U3U; S288c reference strain context).
 - identifier: CHEBI:28285
   label: oligomycin A
   path: data/antibiotics/antifungal/oligomycin-a.yaml
-  changes: Added curated Saccharomyces cerevisiae S288c mitochondrial ATP synthase
-    subunit 9 / OLI1 (P61829) UniProtKB protein example on the PRIMARY_LITERATURE
-    mitochondrial F_O ATP synthase c-ring molecular target.
+  changes: Added curated Saccharomyces cerevisiae S288c mitochondrial ATP synthase subunit 9
+    / OLI1 (P61829) UniProtKB protein example on the PRIMARY_LITERATURE mitochondrial F_O ATP
+    synthase c-ring molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: mitochondrial F_O ATP synthase c-ring
@@ -630,15 +613,15 @@ records:
       taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Proton-translocating F_O c-ring subunit (Subunit 9 / Atp9) bound at the
-        essential carboxyl-protonation face in the S. cerevisiae c10-ring oligomycin
-        crystal structure (PMID:22869738, PDB 4F4S; S288c reference strain context).
+      role: Proton-translocating F_O c-ring subunit (Subunit 9 / Atp9) bound at the essential
+        carboxyl-protonation face in the S. cerevisiae c10-ring oligomycin crystal structure
+        (PMID:22869738, PDB 4F4S; S288c reference strain context).
 - identifier: CHEBI:83823
   label: pyrisoxazole
   path: data/antibiotics/antifungal/pyrisoxazole.yaml
-  changes: Added curated Botrytis cinerea CYP51 sterol 14-alpha-demethylase (A0A7G4P320)
-    UniProtKB protein example on the PRIMARY_LITERATURE fungal CYP51 sterol 14-alpha-demethylase
-    molecular target.
+  changes: Added curated Botrytis cinerea CYP51 sterol 14-alpha-demethylase (A0A7G4P320) UniProtKB
+    protein example on the PRIMARY_LITERATURE fungal CYP51 sterol 14-alpha-demethylase molecular
+    target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: fungal CYP51 sterol 14-alpha-demethylase
@@ -652,14 +635,14 @@ records:
       entry_status: UNREVIEWED
       retrieved_on: '2026-10-17'
       role: Botrytis cinerea ergosterol-biosynthesis CYP51 enzyme assayed for stereoselective
-        binding and inhibition by pyrisoxazole isomers (PMID:32714305; species-level
-        reference sequence context).
+        binding and inhibition by pyrisoxazole isomers (PMID:32714305; species-level reference
+        sequence context).
 - identifier: CHEBI:28077
   label: rifampicin
   path: data/antibiotics/antimycobacterial/rifampicin.yaml
-  changes: Added curated Thermus aquaticus RpoB (Q9KWU6) and M. tuberculosis H37Rv
-    RpoB (P9WGY9) UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA
-    polymerase beta-subunit channel molecular target.
+  changes: Added curated Thermus aquaticus RpoB (Q9KWU6) and M. tuberculosis H37Rv RpoB (P9WGY9)
+    UniProtKB protein examples on the PRIMARY_LITERATURE bacterial RNA polymerase beta-subunit
+    channel molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: bacterial RNA polymerase beta-subunit channel
@@ -673,8 +656,7 @@ records:
       entry_status: UNREVIEWED
       retrieved_on: '2026-10-17'
       role: Thermus aquaticus core RNA polymerase beta subunit directly bound by rifampicin
-        within the DNA/RNA exit channel in the cocrystal structure (PMID:11290327,
-        PDB 1I6V).
+        within the DNA/RNA exit channel in the cocrystal structure (PMID:11290327, PDB 1I6V).
     - uniprot_id: UniProtKB:P9WGY9
       protein_label: DNA-directed RNA polymerase subunit beta
       gene_symbol: rpoB
@@ -682,15 +664,14 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Primary antimycobacterial target RpoB subunit in M. tuberculosis whose
-        conserved rifampicin-resistance cluster maps to the PMID:11290327 beta-subunit
-        binding pocket (H37Rv reference strain context).
+      role: Primary antimycobacterial target RpoB subunit in M. tuberculosis whose conserved
+        rifampicin-resistance cluster maps to the PMID:11290327 beta-subunit binding pocket
+        (H37Rv reference strain context).
 - identifier: CHEBI:68621
   label: boceprevir
   path: data/antibiotics/antiviral/boceprevir.yaml
-  changes: Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB
-    protein example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease
-    molecular target.
+  changes: Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB protein
+    example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: hepatitis C virus NS3/4A serine protease
@@ -702,16 +683,15 @@ records:
       taxon_label: Hepatitis C virus genotype 1b (isolate BK)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference HCV genotype 1b polyprotein encoding the nonstructural NS3 serine
-        protease and NS4A cofactor inhibited by boceprevir (SCH 503034) in enzyme
-        and replicon assays (PMID:18201776; PMID:20004570; genotype 1b reference isolate
-        BK context).
+      role: Reference HCV genotype 1b polyprotein encoding the nonstructural NS3 serine protease
+        and NS4A cofactor inhibited by boceprevir (SCH 503034) in enzyme and replicon assays
+        (PMID:18201776; PMID:20004570; genotype 1b reference isolate BK context).
 - identifier: CHEBI:232062
   label: exophillic acid
   path: data/antibiotics/antiviral/exophillic-acid.yaml
   changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) and human host SLC10A1/NTCP
-    (Q14973) UniProtKB protein examples on the two PRIMARY_LITERATURE molecular targets
-    of exophillic acid.
+    (Q14973) UniProtKB protein examples on the two PRIMARY_LITERATURE molecular targets of exophillic
+    acid.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: HIV-1 integrase strand-transfer activity
@@ -721,13 +701,11 @@ records:
       protein_label: Gag-Pol polyprotein
       gene_symbol: gag-pol
       taxon_id: NCBITaxon:11706
-      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
-        HXB2)
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose strand-transfer
-        activity is inhibited by exophillic acid in vitro (PMID:15015729; HXB2 reference
-        isolate context).
+      role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose strand-transfer activity
+        is inhibited by exophillic acid in vitro (PMID:15015729; HXB2 reference isolate context).
   - source: PRIMARY_LITERATURE
     target_label: sodium taurocholate cotransporting polypeptide (NTCP)
     target_reference: PMID:35458494
@@ -739,15 +717,14 @@ records:
       taxon_label: Homo sapiens
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor
-        bound by exophillic acid to block HBV and HDV preS1-mediated viral attachment
-        (PMID:35458494).
+      role: Human hepatocyte sodium/bile acid cotransporter (NTCP) host entry receptor bound
+        by exophillic acid to block HBV and HDV preS1-mediated viral attachment (PMID:35458494).
 - identifier: CHEBI:170009
   label: favipiravir-RTP
   path: data/antibiotics/antiviral/favipiravir-rtp.yaml
-  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein
-    example on the PRIMARY_LITERATURE SARS-CoV-2 RNA-dependent RNA polymerase catalytic
-    site molecular target.
+  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example
+    on the PRIMARY_LITERATURE SARS-CoV-2 RNA-dependent RNA polymerase catalytic site molecular
+    target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: SARS-CoV-2 RNA-dependent RNA polymerase catalytic site
@@ -760,15 +737,13 @@ records:
       taxon_label: Severe acute respiratory syndrome coronavirus 2
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp12 RNA-dependent
-        RNA polymerase catalytic subunit resolved with favipiravir-RTP by cryo-EM
-        (PMID:33526596, PDB 7CTT).
+      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp12 RNA-dependent RNA polymerase
+        catalytic subunit resolved with favipiravir-RTP by cryo-EM (PMID:33526596, PDB 7CTT).
 - identifier: CHEBI:167176
   label: GRL-0617
   path: data/antibiotics/antiviral/grl-0617.yaml
-  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein
-    example on the PRIMARY_LITERATURE SARS-CoV-2 papain-like protease (PLpro) molecular
-    target.
+  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example
+    on the PRIMARY_LITERATURE SARS-CoV-2 papain-like protease (PLpro) molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: SARS-CoV-2 papain-like protease (PLpro)
@@ -781,14 +756,13 @@ records:
       taxon_label: Severe acute respiratory syndrome coronavirus 2
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp3 papain-like protease
-        (PLpro) domain crystallized in complex with GRL-0617 (PMID:32895623, PDB 7CJM).
+      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp3 papain-like protease (PLpro)
+        domain crystallized in complex with GRL-0617 (PMID:32895623, PDB 7CJM).
 - identifier: CHEBI:66081
   label: integric acid
   path: data/antibiotics/antiviral/integric-acid.yaml
-  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
-    example on the PRIMARY_LITERATURE HIV-1 integrase catalytic activities molecular
-    target.
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on
+    the PRIMARY_LITERATURE HIV-1 integrase catalytic activities molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: HIV-1 integrase catalytic activities
@@ -798,19 +772,17 @@ records:
       protein_label: Gag-Pol polyprotein
       gene_symbol: gag-pol
       taxon_id: NCBITaxon:11706
-      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
-        HXB2)
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose 3'-end processing,
-        strand-transfer, and disintegration activities are inhibited by integric acid
-        (PMID:10335400; PMID:10698443; HXB2 reference isolate context).
+      role: HIV-1 Gag-Pol precursor encoding the integrase enzyme whose 3'-end processing, strand-transfer,
+        and disintegration activities are inhibited by integric acid (PMID:10335400; PMID:10698443;
+        HXB2 reference isolate context).
 - identifier: CHEBI:173104
   label: narlaprevir
   path: data/antibiotics/antiviral/narlaprevir.yaml
-  changes: Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB
-    protein example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease
-    molecular target.
+  changes: Added curated HCV genotype 1b isolate BK genome polyprotein (P26662) UniProtKB protein
+    example on the PRIMARY_LITERATURE hepatitis C virus NS3/4A serine protease molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: hepatitis C virus NS3/4A serine protease
@@ -822,15 +794,14 @@ records:
       taxon_label: Hepatitis C virus genotype 1b (isolate BK)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference HCV genotype 1b polyprotein encoding the NS3/4A serine protease
-        inhibited by narlaprevir (SCH 900518) during discovery and potency optimization
-        (PMID:24900178; genotype 1b reference isolate BK context).
+      role: Reference HCV genotype 1b polyprotein encoding the NS3/4A serine protease inhibited
+        by narlaprevir (SCH 900518) during discovery and potency optimization (PMID:24900178;
+        genotype 1b reference isolate BK context).
 - identifier: CHEBI:170007
   label: nirmatrelvir
   path: data/antibiotics/antiviral/nirmatrelvir.yaml
-  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein
-    example on the PRIMARY_LITERATURE SARS-CoV-2 main protease (Mpro; 3CLpro) molecular
-    target.
+  changes: Added curated SARS-CoV-2 replicase polyprotein 1ab (P0DTD1) UniProtKB protein example
+    on the PRIMARY_LITERATURE SARS-CoV-2 main protease (Mpro; 3CLpro) molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: SARS-CoV-2 main protease (Mpro; 3CLpro)
@@ -843,14 +814,14 @@ records:
       taxon_label: Severe acute respiratory syndrome coronavirus 2
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp5 3C-like main protease
-        (Mpro/3CLpro) crystallized with PF-07321332 (nirmatrelvir) and assayed across
-        lineage variants (PMID:34687004, PDB 7RF7; PMID:35182772).
+      role: SARS-CoV-2 replicase polyprotein 1ab encoding the nsp5 3C-like main protease (Mpro/3CLpro)
+        crystallized with PF-07321332 (nirmatrelvir) and assayed across lineage variants (PMID:34687004,
+        PDB 7RF7; PMID:35182772).
 - identifier: CHEBI:68606
   label: rilpivirine
   path: data/antibiotics/antiviral/rilpivirine.yaml
-  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein
-    example on the PRIMARY_LITERATURE HIV-1 reverse transcriptase molecular target.
+  changes: Added curated HIV-1 HXB2 Gag-Pol polyprotein (P04585) UniProtKB protein example on
+    the PRIMARY_LITERATURE HIV-1 reverse transcriptase molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: HIV-1 reverse transcriptase
@@ -860,19 +831,18 @@ records:
       protein_label: Gag-Pol polyprotein
       gene_symbol: gag-pol
       taxon_id: NCBITaxon:11706
-      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate
-        HXB2)
+      taxon_label: Human immunodeficiency virus type 1 group M subtype B (isolate HXB2)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer
-        crystallized in complex with rilpivirine (TMC278) in wild-type and K103N mutant
-        forms (PMID:20438081, PDB 2ZD1 / 3MEE; HXB2 reference isolate context).
+      role: HIV-1 Gag-Pol precursor encoding the p66/p51 reverse transcriptase heterodimer crystallized
+        in complex with rilpivirine (TMC278) in wild-type and K103N mutant forms (PMID:20438081,
+        PDB 2ZD1 / 3MEE; HXB2 reference isolate context).
 - identifier: CHEBI:136047
   label: vaniprevir
   path: data/antibiotics/antiviral/vaniprevir.yaml
-  changes: Added curated HCV genotype 1a isolate H (P26664) and genotype 1b isolate
-    BK (P26662) genome polyprotein UniProtKB protein examples on the PRIMARY_LITERATURE
-    hepatitis C virus NS3/4A protease molecular target.
+  changes: Added curated HCV genotype 1a isolate H (P26664) and genotype 1b isolate BK (P26662)
+    genome polyprotein UniProtKB protein examples on the PRIMARY_LITERATURE hepatitis C virus
+    NS3/4A protease molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: hepatitis C virus NS3/4A protease
@@ -884,24 +854,23 @@ records:
       taxon_label: Hepatitis C virus genotype 1a (isolate H)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference HCV genotype 1a polyprotein encoding the NS3/4A protease inhibited
-        at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1a
-        reference isolate H context).
+      role: Reference HCV genotype 1a polyprotein encoding the NS3/4A protease inhibited at
+        subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1a reference isolate
+        H context).
     - uniprot_id: UniProtKB:P26662
       protein_label: Genome polyprotein
       taxon_id: NCBITaxon:11108
       taxon_label: Hepatitis C virus genotype 1b (isolate BK)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Reference HCV genotype 1b polyprotein encoding the NS3/4A protease inhibited
-        at subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1b
-        reference isolate BK context).
+      role: Reference HCV genotype 1b polyprotein encoding the NS3/4A protease inhibited at
+        subnanomolar potency by vaniprevir (MK-7009) (PMID:19841155; genotype 1b reference isolate
+        BK context).
 - identifier: CHEBI:3434
   label: carpropamid
   path: data/antibiotics/antifungal/carpropamid.yaml
-  changes: Added curated Pyricularia oryzae 70-15 scytalone dehydratase SDH1 (P56221)
-    UniProtKB protein example on the PRIMARY_LITERATURE fungal scytalone dehydratase
-    molecular target.
+  changes: Added curated Pyricularia oryzae 70-15 scytalone dehydratase SDH1 (P56221) UniProtKB
+    protein example on the PRIMARY_LITERATURE fungal scytalone dehydratase molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: fungal scytalone dehydratase
@@ -914,15 +883,14 @@ records:
       taxon_label: Pyricularia oryzae (strain 70-15 / ATCC MYA-4617 / FGSC 8958)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with
-        carpropamid bound in the hydrophobic active-site cavity (PMID:9665698, PDB
-        2STD).
+      role: Scytalone dehydratase catalytic monomer resolved at 2.1 angstroms with carpropamid
+        bound in the hydrophobic active-site cavity (PMID:9665698, PDB 2STD).
 - identifier: CHEBI:145999
   label: cinanserin
   path: data/antibiotics/antiviral/cinanserin.yaml
-  changes: Added curated SARS-CoV (P0C6X7) and HCoV-229E (P0C6X1) replicase polyprotein
-    1ab UniProtKB protein examples on the PRIMARY_LITERATURE coronavirus 3C-like protease
-    (3CLpro) molecular target.
+  changes: Added curated SARS-CoV (P0C6X7) and HCoV-229E (P0C6X1) replicase polyprotein 1ab
+    UniProtKB protein examples on the PRIMARY_LITERATURE coronavirus 3C-like protease (3CLpro)
+    molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: coronavirus 3C-like protease (3CLpro)
@@ -935,9 +903,9 @@ records:
       taxon_label: Severe acute respiratory syndrome coronavirus
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: SARS-CoV replicase polyprotein 1ab encoding the 3C-like protease (3CLpro)
-        directly bound and inhibited by cinanserin in surface plasmon resonance, catalytic,
-        and infectious-virus tissue-culture assays (PMID:15890949).
+      role: SARS-CoV replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly
+        bound and inhibited by cinanserin in surface plasmon resonance, catalytic, and infectious-virus
+        tissue-culture assays (PMID:15890949).
     - uniprot_id: UniProtKB:P0C6X1
       protein_label: Replicase polyprotein 1ab
       gene_symbol: rep
@@ -945,15 +913,15 @@ records:
       taxon_label: Human coronavirus 229E
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: HCoV-229E replicase polyprotein 1ab encoding the 3C-like protease (3CLpro)
-        directly bound and inhibited by cinanserin in surface plasmon resonance, catalytic,
-        replicon, and tissue-culture assays (PMID:15890949).
+      role: HCoV-229E replicase polyprotein 1ab encoding the 3C-like protease (3CLpro) directly
+        bound and inhibited by cinanserin in surface plasmon resonance, catalytic, replicon,
+        and tissue-culture assays (PMID:15890949).
 - identifier: CHEBI:45490
   label: ribavirin 5'-monophosphate
   path: data/antibiotics/antiviral/ribavirin-5-monophosphate.yaml
-  changes: Added curated Tritrichomonas foetus IMP dehydrogenase (P50097) UniProtKB
-    protein example on the PRIMARY_LITERATURE inosine monophosphate dehydrogenase
-    (IMPDH) molecular target.
+  changes: Added curated Tritrichomonas foetus IMP dehydrogenase (P50097) UniProtKB protein
+    example on the PRIMARY_LITERATURE inosine monophosphate dehydrogenase (IMPDH) molecular
+    target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: inosine monophosphate dehydrogenase (IMPDH)
@@ -966,15 +934,14 @@ records:
       taxon_label: Tritrichomonas foetus
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Protozoan IMP dehydrogenase catalytic subunit resolved in high-resolution
-        cocrystals bound to ribavirin 5'-monophosphate at the substrate site (PMID:12235158,
-        PDB 1ME8/1MEI).
+      role: Protozoan IMP dehydrogenase catalytic subunit resolved in high-resolution cocrystals
+        bound to ribavirin 5'-monophosphate at the substrate site (PMID:12235158, PDB 1ME8/1MEI).
 - identifier: CHEBI:45578
   label: ribavirin 5'-triphosphate
   path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
-  changes: Added curated Dengue virus type 2 PR159-S1 genome polyprotein (P12823)
-    UniProtKB protein example on the PRIMARY_LITERATURE dengue virus NS5 mRNA 2'-O-methyltransferase
-    domain molecular target.
+  changes: Added curated Dengue virus type 2 PR159-S1 genome polyprotein (P12823) UniProtKB
+    protein example on the PRIMARY_LITERATURE dengue virus NS5 mRNA 2'-O-methyltransferase domain
+    molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: dengue virus NS5 mRNA 2'-O-methyltransferase domain
@@ -986,16 +953,15 @@ records:
       taxon_label: Dengue virus type 2 (strain Puerto Rico/PR159-S1/1969)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA
-        2'-O-methyltransferase domain crystallized in a 2.6-angstrom ternary complex
-        with ribavirin 5'-triphosphate at the GTP-binding site (PMID:15152003, PDB
-        1R6A).
+      role: Dengue virus type 2 genome polyprotein encoding the NS5 N-terminal mRNA 2'-O-methyltransferase
+        domain crystallized in a 2.6-angstrom ternary complex with ribavirin 5'-triphosphate
+        at the GTP-binding site (PMID:15152003, PDB 1R6A).
 - identifier: CHEBI:77772
   label: ilicicolin H
   path: data/antibiotics/unspecified/ilicicolin-h.yaml
-  changes: Added curated Saccharomyces cerevisiae S288c mitochondrial cytochrome b
-    / COB (P00163) UniProtKB protein example on the PRIMARY_LITERATURE cytochrome
-    bc1 complex Qn site molecular target.
+  changes: Added curated Saccharomyces cerevisiae S288c mitochondrial cytochrome b / COB (P00163)
+    UniProtKB protein example on the PRIMARY_LITERATURE cytochrome bc1 complex Qn site molecular
+    target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: cytochrome bc1 complex Qn site
@@ -1009,14 +975,13 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: Mitochondrial cytochrome b catalytic subunit forming the Qn (Qi) ubiquinone-reduction
-        pocket stoichiometrically bound and inhibited at nanomolar potency by ilicicolin
-        H in S. cerevisiae (PMID:14670947; PMID:18022381; S288c reference strain context).
+        pocket stoichiometrically bound and inhibited at nanomolar potency by ilicicolin H in
+        S. cerevisiae (PMID:14670947; PMID:18022381; S288c reference strain context).
 - identifier: CHEBI:27834
   label: pentostatin
   path: data/antibiotics/unspecified/pentostatin.yaml
-  changes: Added curated Plasmodium vivax Salvador I adenosine deaminase PVX_111245
-    (A5KE01) UniProtKB protein example on the PRIMARY_LITERATURE adenosine deaminase
-    molecular target.
+  changes: Added curated Plasmodium vivax Salvador I adenosine deaminase PVX_111245 (A5KE01)
+    UniProtKB protein example on the PRIMARY_LITERATURE adenosine deaminase molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
     target_label: adenosine deaminase
@@ -1029,19 +994,18 @@ records:
       taxon_label: Plasmodium vivax (strain Salvador I)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Parasite purine-salvage adenosine deaminase resolved in cocrystal complex
-        with pentostatin (2'-deoxycoformycin) at the catalytic site (PMID:18602399,
-        PDB 2PGG; Salvador I reference strain context).
+      role: Parasite purine-salvage adenosine deaminase resolved in cocrystal complex with pentostatin
+        (2'-deoxycoformycin) at the catalytic site (PMID:18602399, PDB 2PGG; Salvador I reference
+        strain context).
 - identifier: CHEBI:45773
   label: streptolydigin
   path: data/antibiotics/unspecified/streptolydigin.yaml
-  changes: Added curated Thermus thermophilus HB8 RNA polymerase beta (Q8RQE9) and
-    beta' (Q8RQE8) subunit UniProtKB protein examples on the PRIMARY_LITERATURE bacterial
-    DNA-directed RNA polymerase bridge-helix/trigger-loop site molecular target.
+  changes: Added curated Thermus thermophilus HB8 RNA polymerase beta (Q8RQE9) and beta' (Q8RQE8)
+    subunit UniProtKB protein examples on the PRIMARY_LITERATURE bacterial DNA-directed RNA
+    polymerase bridge-helix/trigger-loop site molecular target.
   molecular_target_examples:
   - source: PRIMARY_LITERATURE
-    target_label: bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop
-      site
+    target_label: bacterial DNA-directed RNA polymerase bridge-helix/trigger-loop site
     target_reference: PMID:16122422
     protein_examples:
     - uniprot_id: UniProtKB:Q8RQE9
@@ -1052,8 +1016,8 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
       role: Core RNA polymerase beta subunit contributing the Stl1/Stl2 streptolydigin-binding
-        pocket adjacent to the active center in Thermus thermophilus RNAP cocrystals
-        (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR).
+        pocket adjacent to the active center in Thermus thermophilus RNAP cocrystals (PMID:16122422,
+        PDB 2A68; PMID:16167380, PDB 1ZYR).
     - uniprot_id: UniProtKB:Q8RQE8
       protein_label: DNA-directed RNA polymerase subunit beta'
       gene_symbol: rpoC
@@ -1061,16 +1025,14 @@ records:
       taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
       entry_status: REVIEWED
       retrieved_on: '2026-10-17'
-      role: Core RNA polymerase beta' subunit whose bridge helix and trigger loop
-        are trapped in an inactive preinsertion conformation by streptolydigin in
-        Thermus thermophilus RNAP cocrystals (PMID:16122422, PDB 2A68; PMID:16167380,
-        PDB 1ZYR).
+      role: Core RNA polymerase beta' subunit whose bridge helix and trigger loop are trapped
+        in an inactive preinsertion conformation by streptolydigin in Thermus thermophilus RNAP
+        cocrystals (PMID:16122422, PDB 2A68; PMID:16167380, PDB 1ZYR).
 - identifier: CHEBI:10100
   label: zafirlukast
   path: data/antibiotics/antibacterial/zafirlukast.yaml
-  changes: Added reviewed UniProtKB:P9WIP7 (Mycobacterium tuberculosis H37Rv Lsr2,
-    Rv3597c) protein example to the mycobacterial Lsr2 PRIMARY_LITERATURE molecular
-    target (PMID:23650171).
+  changes: Added reviewed UniProtKB:P9WIP7 (Mycobacterium tuberculosis H37Rv Lsr2, Rv3597c)
+    protein example to the mycobacterial Lsr2 PRIMARY_LITERATURE molecular target (PMID:23650171).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial nucleoid-associated protein Lsr2
@@ -1084,9 +1046,9 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation
-        with DNA and transcriptional regulatory activity are directly inhibited by
-        zafirlukast in Mycobacterium tuberculosis H37Rv (PMID:23650171).
+      role: Mycobacterial nucleoid-associated protein Lsr2 (Rv3597c) whose complexation with
+        DNA and transcriptional regulatory activity are directly inhibited by zafirlukast in
+        Mycobacterium tuberculosis H37Rv (PMID:23650171).
 - identifier: CHEBI:188153
   label: oteseconazole
   path: data/antibiotics/antifungal/oteseconazole.yaml
@@ -1106,25 +1068,25 @@ records:
       taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida albicans
-        whose heme iron is selectively coordinated by the tetrazole ring of oteseconazole
-        (VT-1161, Kd <= 39 nM; PMID:25056938; DOI:10.1128/aac.00778-22).
+      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida albicans whose
+        heme iron is selectively coordinated by the tetrazole ring of oteseconazole (VT-1161,
+        Kd <= 39 nM; PMID:25056938; DOI:10.1128/aac.00778-22).
     - uniprot_id: UniProtKB:P50859
       protein_label: Lanosterol 14-alpha demethylase
       gene_symbol: ERG11
       taxon_id: NCBITaxon:284593
-      taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC
-        0622 / NRRL Y-65 / CBS 138)
+      taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 /
+        NRRL Y-65 / CBS 138)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata,
-        the primary clinical target species evaluated in DOI:10.1128/aac.00778-22
-        (MIC50 = 0.06 ug/mL, MIC90 = 0.5 ug/mL; PMID:35969069).
+      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata, the
+        primary clinical target species evaluated in DOI:10.1128/aac.00778-22 (MIC50 = 0.06
+        ug/mL, MIC90 = 0.5 ug/mL; PMID:35969069).
 - identifier: antibioticmech:curator-607ce000f8
   label: macozinone
   path: data/antibiotics/antibacterial/macozinone.yaml
-  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
-    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1002/emmm.201303575).
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1, Rv3790)
+    protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1002/emmm.201303575).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
@@ -1138,15 +1100,15 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790)
-        whose active-site Cys387 forms an irreversible covalent semimercaptal adduct
-        with bioreduced macozinone (PBTZ169) in the 1.9-angstrom crystal structure
-        PDB:4NCR (DOI:10.1002/emmm.201303575; PMID:24500695).
+      role: FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) whose
+        active-site Cys387 forms an irreversible covalent semimercaptal adduct with bioreduced
+        macozinone (PBTZ169) in the 1.9-angstrom crystal structure PDB:4NCR (DOI:10.1002/emmm.201303575;
+        PMID:24500695).
 - identifier: antibioticmech:curator-88af230f5d
   label: quabodepistat
   path: data/antibiotics/antibacterial/quabodepistat.yaml
-  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1,
-    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.00338-22).
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv DprE1, Rv3790)
+    protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.00338-22).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-oxidase (DprE1)
@@ -1161,13 +1123,13 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
       role: Recombinant Mycobacterium tuberculosis H37Rv decaprenylphosphoryl-beta-D-ribose
-        2'-oxidase DprE1 (Rv3790) noncovalently inhibited by quabodepistat (OPC-167832,
-        IC50 = 0.258 uM; DOI:10.1128/aac.00338-22; PMID:35699441).
+        2'-oxidase DprE1 (Rv3790) noncovalently inhibited by quabodepistat (OPC-167832, IC50
+        = 0.258 uM; DOI:10.1128/aac.00338-22; PMID:35699441).
 - identifier: antibioticmech:curator-17023fe654
   label: telacebec
   path: data/antibiotics/antibacterial/telacebec.yaml
-  changes: Added reviewed UniProtKB:P9WP37 (Mycobacterium tuberculosis H37Rv QcrB,
-    Rv2196) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/nm.3262).
+  changes: Added reviewed UniProtKB:P9WP37 (Mycobacterium tuberculosis H37Rv QcrB, Rv2196) protein
+    example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/nm.3262).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial cytochrome bc1 complex QcrB subunit
@@ -1181,16 +1143,15 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Respiratory cytochrome bc1 complex cytochrome b subunit QcrB (Rv2196)
-        targeted by telacebec (Q203) in Mycobacterium tuberculosis H37Rv, where the
-        Thr313Ala substitution confers high-level resistance (DOI:10.1038/nm.3262;
-        PMID:23913123).
+      role: Respiratory cytochrome bc1 complex cytochrome b subunit QcrB (Rv2196) targeted by
+        telacebec (Q203) in Mycobacterium tuberculosis H37Rv, where the Thr313Ala substitution
+        confers high-level resistance (DOI:10.1038/nm.3262; PMID:23913123).
 - identifier: antibioticmech:curator-0106724e5f
   label: sorfequiline
   path: data/antibiotics/antibacterial/sorfequiline.yaml
-  changes: Added reviewed UniProtKB:P9WPS1 (Mycobacterium tuberculosis H37Rv AtpE,
-    Rv1305) and UniProtKB:P9WPV1 (AtpC, Rv1311) protein examples to the PRIMARY_LITERATURE
-    molecular target (DOI:10.1128/aac.02404-19).
+  changes: Added reviewed UniProtKB:P9WPS1 (Mycobacterium tuberculosis H37Rv AtpE, Rv1305) and
+    UniProtKB:P9WPV1 (AtpC, Rv1311) protein examples to the PRIMARY_LITERATURE molecular target
+    (DOI:10.1128/aac.02404-19).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial F1FO-ATP synthase c and epsilon subunits
@@ -1204,8 +1165,8 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: FO rotor ring c-subunit (AtpE, Rv1305) of Mycobacterium tuberculosis H37Rv
-        F1FO-ATP synthase bound by the diarylquinoline sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19;
+      role: FO rotor ring c-subunit (AtpE, Rv1305) of Mycobacterium tuberculosis H37Rv F1FO-ATP
+        synthase bound by the diarylquinoline sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19;
         DOI:10.1128/aac.01191-19).
     - uniprot_id: UniProtKB:P9WPV1
       protein_label: ATP synthase epsilon chain
@@ -1214,15 +1175,14 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: F1 central-stalk epsilon subunit (AtpC, Rv1311) of Mycobacterium tuberculosis
-        H37Rv F1FO-ATP synthase that forms part of the dual c/epsilon diarylquinoline
-        binding interface targeted by sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19;
-        DOI:10.1128/aac.01191-19).
+      role: F1 central-stalk epsilon subunit (AtpC, Rv1311) of Mycobacterium tuberculosis H37Rv
+        F1FO-ATP synthase that forms part of the dual c/epsilon diarylquinoline binding interface
+        targeted by sorfequiline (TBAJ-876; DOI:10.1128/aac.02404-19; DOI:10.1128/aac.01191-19).
 - identifier: antibioticmech:curator-172bfdd938
   label: ganfeborole
   path: data/antibiotics/antibacterial/ganfeborole.yaml
-  changes: Added reviewed UniProtKB:P9WFV1 (Mycobacterium tuberculosis H37Rv LeuS,
-    Rv0041) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41591-024-02829-7).
+  changes: Added reviewed UniProtKB:P9WFV1 (Mycobacterium tuberculosis H37Rv LeuS, Rv0041) protein
+    example to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41591-024-02829-7).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial leucyl-tRNA synthetase (LeuRS)
@@ -1236,15 +1196,15 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Mycobacterium tuberculosis H37Rv leucyl-tRNA synthetase (LeuS, Rv0041)
-        whose CP1 editing domain traps the 3'-terminal adenosine of tRNA(Leu) in a
-        covalent spiro-oxaborole adduct with ganfeborole (GSK3036656, IC50 = 0.20
-        uM, PDB:5AGR; DOI:10.1038/s41591-024-02829-7; PMID:28379699).
+      role: Mycobacterium tuberculosis H37Rv leucyl-tRNA synthetase (LeuS, Rv0041) whose CP1
+        editing domain traps the 3'-terminal adenosine of tRNA(Leu) in a covalent spiro-oxaborole
+        adduct with ganfeborole (GSK3036656, IC50 = 0.20 uM, PDB:5AGR; DOI:10.1038/s41591-024-02829-7;
+        PMID:28379699).
 - identifier: antibioticmech:curator-47d32d7a07
   label: fabimycin
   path: data/antibiotics/antibacterial/fabimycin.yaml
-  changes: Added reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI, b1288) protein
-    example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/acscentsci.2c00598).
+  changes: Added reviewed UniProtKB:P0AEK4 (Escherichia coli K-12 FabI, b1288) protein example
+    to the PRIMARY_LITERATURE molecular target (DOI:10.1021/acscentsci.2c00598).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: bacterial enoyl-acyl carrier protein reductase (FabI)
@@ -1258,15 +1218,15 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Escherichia coli K-12 enoyl-[acyl-carrier-protein] reductase FabI (b1288)
-        directly inhibited by fabimycin in biochemical and co-crystal structural studies
-        (DOI:10.1021/acscentsci.2c00598; PMID:36035943).
+      role: Escherichia coli K-12 enoyl-[acyl-carrier-protein] reductase FabI (b1288) directly
+        inhibited by fabimycin in biochemical and co-crystal structural studies (DOI:10.1021/acscentsci.2c00598;
+        PMID:36035943).
 - identifier: antibioticmech:curator-1db8575797
   label: lolamicin
   path: data/antibiotics/antibacterial/lolamicin.yaml
   changes: Added reviewed UniProtKB:P0ADC3 (LolC), UniProtKB:P75957 (LolD), and UniProtKB:P75958
-    (LolE) Escherichia coli K-12 protein examples to the PRIMARY_LITERATURE molecular
-    target (DOI:10.1038/s41586-024-07502-0).
+    (LolE) Escherichia coli K-12 protein examples to the PRIMARY_LITERATURE molecular target
+    (DOI:10.1038/s41586-024-07502-0).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: Gram-negative LolCDE lipoprotein outer-membrane transport complex
@@ -1280,10 +1240,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Inner-membrane transmembrane subunit LolC (b1116) of the Escherichia coli
-        K-12 LolCDE lipoprotein-releasing ABC transporter complex, a primary locus
-        of lolamicin resistance mutations and binding (DOI:10.1038/s41586-024-07502-0;
-        PMID:38811738).
+      role: Inner-membrane transmembrane subunit LolC (b1116) of the Escherichia coli K-12 LolCDE
+        lipoprotein-releasing ABC transporter complex, a primary locus of lolamicin resistance
+        mutations and binding (DOI:10.1038/s41586-024-07502-0; PMID:38811738).
     - uniprot_id: UniProtKB:P75957
       protein_label: Lipoprotein-releasing system ATP-binding protein LolD
       gene_symbol: lolD
@@ -1291,9 +1250,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Catalytic ATP-binding subunit LolD (b1117) of the Escherichia coli K-12
-        LolCDE lipoprotein-releasing ABC transporter complex inhibited by lolamicin
-        (DOI:10.1038/s41586-024-07502-0; PMID:38811738).
+      role: Catalytic ATP-binding subunit LolD (b1117) of the Escherichia coli K-12 LolCDE lipoprotein-releasing
+        ABC transporter complex inhibited by lolamicin (DOI:10.1038/s41586-024-07502-0; PMID:38811738).
     - uniprot_id: UniProtKB:P75958
       protein_label: Lipoprotein-releasing system transmembrane protein LolE
       gene_symbol: lolE
@@ -1301,15 +1259,15 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Inner-membrane transmembrane subunit LolE (b1118) of the Escherichia coli
-        K-12 LolCDE lipoprotein-releasing ABC transporter complex, which forms the
-        lipoprotein-binding cavity targeted by lolamicin and harbors resistance substitutions
-        (DOI:10.1038/s41586-024-07502-0; PMID:38811738).
+      role: Inner-membrane transmembrane subunit LolE (b1118) of the Escherichia coli K-12 LolCDE
+        lipoprotein-releasing ABC transporter complex, which forms the lipoprotein-binding cavity
+        targeted by lolamicin and harbors resistance substitutions (DOI:10.1038/s41586-024-07502-0;
+        PMID:38811738).
 - identifier: antibioticmech:curator-cb71d1e3b5
   label: enterololin
   path: data/antibiotics/antibacterial/enterololin.yaml
-  changes: Added reviewed UniProtKB:P0ADC3 (LolC) and UniProtKB:P75958 (LolE) Escherichia
-    coli K-12 protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41564-025-02142-0).
+  changes: Added reviewed UniProtKB:P0ADC3 (LolC) and UniProtKB:P75958 (LolE) Escherichia coli
+    K-12 protein examples to the PRIMARY_LITERATURE molecular target (DOI:10.1038/s41564-025-02142-0).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: Enterobacteriaceae LolCDE lipoprotein transport complex
@@ -1323,9 +1281,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Transmembrane subunit LolC (b1116) of the Escherichia coli LolCDE lipoprotein
-        transport complex to which laboratory-evolved enterololin resistance mutations
-        predominantly mapped (DOI:10.1038/s41564-025-02142-0; PMID:41044363).
+      role: Transmembrane subunit LolC (b1116) of the Escherichia coli LolCDE lipoprotein transport
+        complex to which laboratory-evolved enterololin resistance mutations predominantly mapped
+        (DOI:10.1038/s41564-025-02142-0; PMID:41044363).
     - uniprot_id: UniProtKB:P75958
       protein_label: Lipoprotein-releasing system transmembrane protein LolE
       gene_symbol: lolE
@@ -1333,14 +1291,14 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Transmembrane subunit LolE (b1118) of the Escherichia coli LolCDE lipoprotein
-        transport complex to which laboratory-evolved enterololin resistance mutations
-        predominantly mapped (DOI:10.1038/s41564-025-02142-0; PMID:41044363).
+      role: Transmembrane subunit LolE (b1118) of the Escherichia coli LolCDE lipoprotein transport
+        complex to which laboratory-evolved enterololin resistance mutations predominantly mapped
+        (DOI:10.1038/s41564-025-02142-0; PMID:41044363).
 - identifier: antibioticmech:curator-4a1156c964
   label: manogepix
   path: data/antibiotics/antifungal/manogepix.yaml
-  changes: Added reviewed UniProtKB:Q873N2 (Candida albicans SC5314 GWT1) protein
-    example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.01723-25).
+  changes: Added reviewed UniProtKB:Q873N2 (Candida albicans SC5314 GWT1) protein example to
+    the PRIMARY_LITERATURE molecular target (DOI:10.1128/aac.01723-25).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: fungal GPI-anchor inositol acyltransferase Gwt1
@@ -1354,16 +1312,14 @@ records:
       taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
       entry_status: REVIEWED
       retrieved_on: '2026-10-24'
-      role: Candida albicans SC5314 GPI-anchor inositol acyltransferase Gwt1 (C7_00150W_A)
-        directly inhibited by manogepix (E1210, APX001A), blocking inositol acylation
-        of glucosaminyl-phosphatidylinositol and cell-wall mannoprotein localization
-        (PMID:21670182; DOI:10.1128/aac.01723-25).
+      role: Candida albicans SC5314 GPI-anchor inositol acyltransferase Gwt1 (C7_00150W_A) directly
+        inhibited by manogepix (E1210, APX001A), blocking inositol acylation of glucosaminyl-phosphatidylinositol
+        and cell-wall mannoprotein localization (PMID:21670182; DOI:10.1128/aac.01723-25).
 - identifier: CHEBI:85984
   label: avibactam
   path: data/antibiotics/antibacterial/avibactam.yaml
-  changes: Added reviewed UniProtKB:Q6XEC0 (Klebsiella pneumoniae OXA-48, blaOXA-48)
-    protein example to the class D OXA beta-lactamases PRIMARY_LITERATURE molecular
-    target (PMID:25406838).
+  changes: Added reviewed UniProtKB:Q6XEC0 (Klebsiella pneumoniae OXA-48, blaOXA-48) protein
+    example to the class D OXA beta-lactamases PRIMARY_LITERATURE molecular target (PMID:25406838).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: class D OXA beta-lactamases
@@ -1377,17 +1333,16 @@ records:
       taxon_label: Klebsiella pneumoniae
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from
-        Klebsiella pneumoniae covalently carbamylated at active-site Ser70 by avibactam
-        in the PMID:25406838 X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation
-        kinetic assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA)
-        cocrystallized in the same study is an unreviewed TrEMBL entry and is not
-        added as a reviewed example.
+      role: Class D carbapenem-hydrolyzing beta-lactamase OXA-48 (blaOXA-48) from Klebsiella
+        pneumoniae covalently carbamylated at active-site Ser70 by avibactam in the PMID:25406838
+        X-ray crystal structures (PDB:4S2K, 4S2N, 4WMC) and carbamylation/decarbamylation kinetic
+        assays; Acinetobacter baumannii OXA-24/OXA-40 (PDB:4WM9, Q8RLA6_ACIBA) cocrystallized
+        in the same study is an unreviewed TrEMBL entry and is not added as a reviewed example.
 - identifier: CHEBI:144087
   label: bromodeoxytopsentin
   path: data/antibiotics/antibacterial/bromodeoxytopsentin.yaml
-  changes: Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776)
-    protein example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).
+  changes: Added reviewed UniProtKB:Q6G8M9 (Staphylococcus aureus MRSA252 pyk, SAR1776) protein
+    example to the pyruvate kinase PRIMARY_LITERATURE molecular target (PMID:22030393).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: pyruvate kinase
@@ -1401,16 +1356,15 @@ records:
       taxon_label: Staphylococcus aureus (strain MRSA252)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned,
-        purified, and inhibited by bromodeoxytopsentin with nanomolar potency (IC50
-        = 60 nM, Ki = 34 nM) in the PMID:22030393 enzymatic assays; the cocrystal
-        structure in the same study (PDB:3T07) bound the synthetic bis-indole analog
-        IS130 to the dimer interface of this MRSA252 enzyme.
+      role: Staphylococcus aureus strain MRSA252 pyruvate kinase (pyk, SAR1776) cloned, purified,
+        and inhibited by bromodeoxytopsentin with nanomolar potency (IC50 = 60 nM, Ki = 34 nM)
+        in the PMID:22030393 enzymatic assays; the cocrystal structure in the same study (PDB:3T07)
+        bound the synthetic bis-indole analog IS130 to the dimer interface of this MRSA252 enzyme.
 - identifier: antibioticmech:curator-20568fed2e
   label: BTZ043
   path: data/antibiotics/antibacterial/btz043.yaml
-  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1,
-    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1126/science.1171583).
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1, Rv3790)
+    protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1126/science.1171583).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
@@ -1424,16 +1378,15 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790)
-        of Mycobacterium tuberculosis H37Rv that reduces the nitro group of BTZ043
-        to a nitroso intermediate and forms a covalent semimercaptal adduct at Cys387,
-        where Cys387Ser/Gly substitutions confer high-level resistance (DOI:10.1126/science.1171583;
-        PMID:19299584).
+      role: FAD-dependent decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium
+        tuberculosis H37Rv that reduces the nitro group of BTZ043 to a nitroso intermediate
+        and forms a covalent semimercaptal adduct at Cys387, where Cys387Ser/Gly substitutions
+        confer high-level resistance (DOI:10.1126/science.1171583; PMID:19299584).
 - identifier: antibioticmech:curator-fe28654fcf
   label: TBA-7371
   path: data/antibiotics/antibacterial/tba-7371.yaml
-  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1,
-    Rv3790) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/jm401382v).
+  changes: Added reviewed UniProtKB:P9WJF1 (Mycobacterium tuberculosis H37Rv dprE1, Rv3790)
+    protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1021/jm401382v).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial decaprenylphosphoryl-beta-D-ribose 2'-epimerase (DprE1)
@@ -1447,15 +1400,14 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium
-        tuberculosis H37Rv noncovalently inhibited by the 1,4-azaindole TBA-7371 (IC50
-        = 10 nM), with resistance mapping to Tyr314His in rv3790 (DOI:10.1021/jm401382v;
-        PMID:24215368).
+      role: Decaprenylphosphoryl-beta-D-ribose 2'-oxidase DprE1 (Rv3790) of Mycobacterium tuberculosis
+        H37Rv noncovalently inhibited by the 1,4-azaindole TBA-7371 (IC50 = 10 nM), with resistance
+        mapping to Tyr314His in rv3790 (DOI:10.1021/jm401382v; PMID:24215368).
 - identifier: antibioticmech:curator-b1cfeb9243
   label: SQ109
   path: data/antibiotics/antibacterial/sq109.yaml
-  changes: Added reviewed UniProtKB:P9WJV5 (Mycobacterium tuberculosis H37Rv mmpL3,
-    Rv0206c) protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.05708-11).
+  changes: Added reviewed UniProtKB:P9WJV5 (Mycobacterium tuberculosis H37Rv mmpL3, Rv0206c)
+    protein example to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.05708-11).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: mycobacterial trehalose monomycolate exporter MmpL3
@@ -1469,17 +1421,16 @@ records:
       taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Inner-membrane RND trehalose monomycolate transporter MmpL3 (Rv0206c)
-        of Mycobacterium tuberculosis H37Rv targeted by SQ109, blocking trehalose
-        monomycolate export to the mycomembrane and harboring resistance mutations
-        (Q40R, L567P, A700T) selected by SQ109 analogs (DOI:10.1128/AAC.05708-11;
-        PMID:22252828).
+      role: Inner-membrane RND trehalose monomycolate transporter MmpL3 (Rv0206c) of Mycobacterium
+        tuberculosis H37Rv targeted by SQ109, blocking trehalose monomycolate export to the
+        mycomembrane and harboring resistance mutations (Q40R, L567P, A700T) selected by SQ109
+        analogs (DOI:10.1128/AAC.05708-11; PMID:22252828).
 - identifier: antibioticmech:curator-df25925bde
   label: PC190723
   path: data/antibiotics/antibacterial/pc190723.yaml
   changes: Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:P17865
-    (Bacillus subtilis 168 ftsZ) protein examples to the PRIMARY_LITERATURE molecular
-    target (DOI:10.1126/science.1159961).
+    (Bacillus subtilis 168 ftsZ) protein examples to the PRIMARY_LITERATURE molecular target
+    (DOI:10.1126/science.1159961).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: bacterial cell division protein FtsZ
@@ -1493,10 +1444,10 @@ records:
       taxon_label: Staphylococcus aureus
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Staphylococcus aureus cell division GTPase FtsZ whose GTPase activity
-        is inhibited by PC190723 (IC50 = 55 ng/mL) and whose interdomain cleft binds
-        PC190723 in the cocrystal structure (PDB:4DXD) and harbors resistance mutations
-        (G193D, G196C/S/A, N263K; DOI:10.1126/science.1159961; PMID:18801997; PMID:22440737).
+      role: Staphylococcus aureus cell division GTPase FtsZ whose GTPase activity is inhibited
+        by PC190723 (IC50 = 55 ng/mL) and whose interdomain cleft binds PC190723 in the cocrystal
+        structure (PDB:4DXD) and harbors resistance mutations (G193D, G196C/S/A, N263K; DOI:10.1126/science.1159961;
+        PMID:18801997; PMID:22440737).
     - uniprot_id: UniProtKB:P17865
       protein_label: Cell division protein FtsZ
       gene_symbol: ftsZ
@@ -1504,16 +1455,15 @@ records:
       taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Bacillus subtilis strain 168 cell division protein FtsZ (BSU15290) shown
-        by GFP-FtsZ fluorescence microscopy in DOI:10.1126/science.1159961 (PMID:18801997)
-        to mislocalize into discrete foci and fail to constrict the cytokinetic Z-ring
-        upon PC190723 exposure.
+      role: Bacillus subtilis strain 168 cell division protein FtsZ (BSU15290) shown by GFP-FtsZ
+        fluorescence microscopy in DOI:10.1126/science.1159961 (PMID:18801997) to mislocalize
+        into discrete foci and fail to constrict the cytokinetic Z-ring upon PC190723 exposure.
 - identifier: antibioticmech:curator-3fca4e69a7
   label: TXA707
   path: data/antibiotics/antibacterial/txa707.yaml
   changes: Added reviewed UniProtKB:P0A031 (Staphylococcus aureus ftsZ) and UniProtKB:Q2FZ89
-    (Staphylococcus aureus NCTC 8325 ftsZ, SAOUHSC_01150) protein examples to the
-    PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.00708-15).
+    (Staphylococcus aureus NCTC 8325 ftsZ, SAOUHSC_01150) protein examples to the PRIMARY_LITERATURE
+    molecular target (DOI:10.1128/AAC.00708-15).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: staphylococcal cell division protein FtsZ
@@ -1527,10 +1477,9 @@ records:
       taxon_label: Staphylococcus aureus
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Staphylococcus aureus cell division protein FtsZ targeted by TXA707, where
-        TXA707 stimulates FtsZ polymerization, disrupts septum formation, and selects
-        resistance substitutions at Gly196 and Gly193 in the interdomain binding pocket
-        (DOI:10.1128/AAC.00708-15; PMID:26033735).
+      role: Staphylococcus aureus cell division protein FtsZ targeted by TXA707, where TXA707
+        stimulates FtsZ polymerization, disrupts septum formation, and selects resistance substitutions
+        at Gly196 and Gly193 in the interdomain binding pocket (DOI:10.1128/AAC.00708-15; PMID:26033735).
     - uniprot_id: UniProtKB:Q2FZ89
       protein_label: Cell division protein FtsZ
       gene_symbol: ftsZ
@@ -1539,14 +1488,14 @@ records:
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
       role: Staphylococcus aureus strain NCTC 8325 cell division protein FtsZ (SAOUHSC_01150)
-        cocrystallized in complex with TXA707 in the interdomain binding cleft (PDB:5XDT;
-        PMID:28621933; DOI:10.1128/AAC.00708-15).
+        cocrystallized in complex with TXA707 in the interdomain binding cleft (PDB:5XDT; PMID:28621933;
+        DOI:10.1128/AAC.00708-15).
 - identifier: CHEBI:138579
   label: bactobolin A
   path: data/antibiotics/antibacterial/bactobolin-a.yaml
-  changes: Added reviewed UniProtKB:P42919 (Bacillus subtilis 168 rplB, BSU01130)
-    and UniProtKB:P60405 (Thermus thermophilus HB8 rplB, TTHA1676) protein examples
-    to the PRIMARY_LITERATURE molecular target (DOI:10.1128/mBio.00499-12).
+  changes: Added reviewed UniProtKB:P42919 (Bacillus subtilis 168 rplB, BSU01130) and UniProtKB:P60405
+    (Thermus thermophilus HB8 rplB, TTHA1676) protein examples to the PRIMARY_LITERATURE molecular
+    target (DOI:10.1128/mBio.00499-12).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: 50S ribosomal subunit protein uL2 (RplB)
@@ -1560,10 +1509,10 @@ records:
       taxon_label: Bacillus subtilis (strain 168)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB,
-        BSU01130) in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln
-        substitutions confer specific resistance to bactobolin A (MIC shift from 0.31
-        to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12; PMID:23249812).
+      role: Bacillus subtilis strain 168 50S ribosomal subunit protein uL2 (rplB, BSU01130)
+        in which spontaneous and ectopically expressed Glu236Ala and Glu236Gln substitutions
+        confer specific resistance to bactobolin A (MIC shift from 0.31 to 4.2-5.0 ug/mL; DOI:10.1128/mBio.00499-12;
+        PMID:23249812).
     - uniprot_id: UniProtKB:P60405
       protein_label: Large ribosomal subunit protein uL2
       gene_symbol: rplB
@@ -1571,16 +1520,16 @@ records:
       taxon_label: Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB,
-        TTHA1676) that directly coordinates bactobolin A via its conserved Glu236
-        loop at the P-site tRNA/23S rRNA interface in the 70S ribosome cocrystal structure
-        (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018; PMID:25562208).
+      role: Thermus thermophilus strain HB8 50S ribosomal subunit protein uL2 (rplB, TTHA1676)
+        that directly coordinates bactobolin A via its conserved Glu236 loop at the P-site tRNA/23S
+        rRNA interface in the 70S ribosome cocrystal structure (PDB:4WT8; DOI:10.1016/j.jmb.2014.12.018;
+        PMID:25562208).
 - identifier: antibioticmech:curator-d86a1a3d8b
   label: opelconazole
   path: data/antibiotics/antifungal/opelconazole.yaml
   changes: Added reviewed UniProtKB:Q4WNT5 (Aspergillus fumigatus Af293 cyp51A, AFUA_4G06890)
-    and UniProtKB:E9QY26 (Aspergillus fumigatus Af293 cyp51B, AFUA_7G03740) protein
-    examples to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.02280-16).
+    and UniProtKB:E9QY26 (Aspergillus fumigatus Af293 cyp51B, AFUA_7G03740) protein examples
+    to the PRIMARY_LITERATURE molecular target (DOI:10.1128/AAC.02280-16).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: Aspergillus fumigatus sterol 14-alpha-demethylase (CYP51A / CYP51B)
@@ -1591,33 +1540,30 @@ records:
       protein_label: Sterol 14-alpha demethylase cyp51A
       gene_symbol: cyp51A
       taxon_id: NCBITaxon:330879
-      taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC
-        A1100 / Af293)
+      taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog
-        CYP51A (cyp51A, AFUA_4G06890) directly inhibited by opelconazole (PC945) in
-        cell-free CYP51A enzyme assays (IC50 = 0.23 uM) and type II heme-iron binding
-        spectra (DOI:10.1128/AAC.02280-16; PMID:28223388).
+      role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51A (cyp51A,
+        AFUA_4G06890) directly inhibited by opelconazole (PC945) in cell-free CYP51A enzyme
+        assays (IC50 = 0.23 uM) and type II heme-iron binding spectra (DOI:10.1128/AAC.02280-16;
+        PMID:28223388).
     - uniprot_id: UniProtKB:E9QY26
       protein_label: Sterol 14-alpha demethylase cyp51B
       gene_symbol: cyp51B
       taxon_id: NCBITaxon:330879
-      taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC
-        A1100 / Af293)
+      taxon_label: Aspergillus fumigatus (strain ATCC MYA-4609 / CBS 101355 / FGSC A1100 / Af293)
       entry_status: REVIEWED
       retrieved_on: '2026-10-25'
-      role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog
-        CYP51B (cyp51B, AFUA_7G03740) directly inhibited by opelconazole (PC945) in
-        cell-free CYP51B enzyme assays (IC50 = 0.22 uM) and type II heme-iron binding
-        spectra (DOI:10.1128/AAC.02280-16; PMID:28223388).
+      role: Aspergillus fumigatus strain Af293 sterol 14-alpha-demethylase paralog CYP51B (cyp51B,
+        AFUA_7G03740) directly inhibited by opelconazole (PC945) in cell-free CYP51B enzyme
+        assays (IC50 = 0.22 uM) and type II heme-iron binding spectra (DOI:10.1128/AAC.02280-16;
+        PMID:28223388).
 - identifier: CHEBI:135622
   label: besifloxacin
   path: data/antibiotics/antibacterial/besifloxacin.yaml
-  changes: Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and
-    Escherichia coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples
-    to the primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1093/jac/dkn528;
-    PMID:19451292).
+  changes: Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and Escherichia
+    coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples to the primary-literature
+    DNA gyrase and topoisomerase IV target (DOI:10.1093/jac/dkn528; PMID:19451292).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
@@ -1631,9 +1577,9 @@ records:
       taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Streptococcus pneumoniae topoisomerase IV ParC catalytic subunit inhibited
-        with balanced potency alongside DNA gyrase by besifloxacin in purified enzyme
-        and step-wise mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19451292).
+      role: Streptococcus pneumoniae topoisomerase IV ParC catalytic subunit inhibited with
+        balanced potency alongside DNA gyrase by besifloxacin in purified enzyme and step-wise
+        mutant-selection assays (DOI:10.1093/jac/dkn528; PMID:19451292).
     - uniprot_id: UniProtKB:P0AES4
       protein_label: DNA gyrase subunit A
       gene_symbol: gyrA
@@ -1641,8 +1587,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Bacterial DNA gyrase GyrA catalytic subunit inhibited in purified Escherichia
-        coli supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).
+      role: Bacterial DNA gyrase GyrA catalytic subunit inhibited in purified Escherichia coli
+        supercoiling assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).
     - uniprot_id: UniProtKB:P0AFI2
       protein_label: DNA topoisomerase 4 subunit A
       gene_symbol: parC
@@ -1650,16 +1596,14 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified
-        Escherichia coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528;
-        PMID:19451292).
+      role: Bacterial topoisomerase IV ParC catalytic subunit inhibited in purified Escherichia
+        coli decatenation assays by besifloxacin (DOI:10.1093/jac/dkn528; PMID:19451292).
 - identifier: CHEBI:136050
   label: ozenoxacin
   path: data/antibiotics/antibacterial/ozenoxacin.yaml
-  changes: Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and
-    Escherichia coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples
-    to the primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.46.5.1229-1234.2002;
-    PMID:11959549).
+  changes: Added reviewed Streptococcus pneumoniae TIGR4 ParC (UniProtKB:P72525) and Escherichia
+    coli K-12 GyrA/ParC (UniProtKB:P0AES4, UniProtKB:P0AFI2) protein_examples to the primary-literature
+    DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: bacterial DNA gyrase and topoisomerase IV
@@ -1673,9 +1617,9 @@ records:
       taxon_label: Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Streptococcus pneumoniae topoisomerase IV ParC subunit targeted by the
-        nonfluorinated quinolone T-3912 / ozenoxacin across wild-type and QRDR-mutant
-        strains (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
+      role: Streptococcus pneumoniae topoisomerase IV ParC subunit targeted by the nonfluorinated
+        quinolone T-3912 / ozenoxacin across wild-type and QRDR-mutant strains (DOI:10.1128/AAC.46.5.1229-1234.2002;
+        PMID:11959549).
     - uniprot_id: UniProtKB:P0AES4
       protein_label: DNA gyrase subunit A
       gene_symbol: gyrA
@@ -1683,8 +1627,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Bacterial DNA gyrase GyrA catalytic subunit targeted by T-3912 / ozenoxacin
-        in Gram-positive and Gram-negative topoisomerase inhibition assays (DOI:10.1128/AAC.46.5.1229-1234.2002;
+      role: Bacterial DNA gyrase GyrA catalytic subunit targeted by T-3912 / ozenoxacin in Gram-positive
+        and Gram-negative topoisomerase inhibition assays (DOI:10.1128/AAC.46.5.1229-1234.2002;
         PMID:11959549).
     - uniprot_id: UniProtKB:P0AFI2
       protein_label: DNA topoisomerase 4 subunit A
@@ -1693,15 +1637,14 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Bacterial topoisomerase IV ParC catalytic subunit targeted by T-3912 /
-        ozenoxacin alongside DNA gyrase (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
+      role: Bacterial topoisomerase IV ParC catalytic subunit targeted by T-3912 / ozenoxacin
+        alongside DNA gyrase (DOI:10.1128/AAC.46.5.1229-1234.2002; PMID:11959549).
 - identifier: CHEBI:94700
   label: pazufloxacin
   path: data/antibiotics/antibacterial/pazufloxacin.yaml
   changes: Added reviewed Escherichia coli K-12 GyrA, GyrB, ParC, and ParE (UniProtKB:P0AES4,
-    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples to the
-    primary-literature DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.37.3.384;
-    PMID:8460909; PMID:11959571).
+    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples to the primary-literature
+    DNA gyrase and topoisomerase IV target (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: bacterial DNA gyrase and topoisomerase IV
@@ -1715,9 +1658,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling
-        activity is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384;
-        PMID:8460909; PMID:11959571).
+      role: Escherichia coli DNA gyrase GyrA catalytic subunit whose DNA supercoiling activity
+        is directly inhibited by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909;
+        PMID:11959571).
     - uniprot_id: UniProtKB:P0AES6
       protein_label: DNA gyrase subunit B
       gene_symbol: gyrB
@@ -1725,9 +1668,9 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme
-        inhibited by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384;
-        PMID:8460909; PMID:11959571).
+      role: Escherichia coli DNA gyrase GyrB ATPase subunit forming the A2B2 holoenzyme inhibited
+        by T-3761 / pazufloxacin in supercoiling assays (DOI:10.1128/AAC.37.3.384; PMID:8460909;
+        PMID:11959571).
     - uniprot_id: UniProtKB:P0AFI2
       protein_label: DNA topoisomerase 4 subunit A
       gene_symbol: parC
@@ -1735,8 +1678,8 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone
-        T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).
+      role: Bacterial topoisomerase IV ParC subunit co-targeted by fluoroquinolone T-3761 /
+        pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).
     - uniprot_id: UniProtKB:P20083
       protein_label: DNA topoisomerase 4 subunit B
       gene_symbol: parE
@@ -1744,16 +1687,14 @@ records:
       taxon_label: Escherichia coli (strain K12)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme
-        co-targeted by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909;
-        PMID:11959571).
+      role: Bacterial topoisomerase IV ParE subunit forming the ParC2ParE2 holoenzyme co-targeted
+        by T-3761 / pazufloxacin (DOI:10.1128/AAC.37.3.384; PMID:8460909; PMID:11959571).
 - identifier: antibioticmech:curator-6bdee75cea
   label: albaconazole
   path: data/antibiotics/antifungal/albaconazole.yaml
-  changes: Added reviewed Candida albicans SC5314 and Candida glabrata CBS 138 Erg11
-    (UniProtKB:P10613, UniProtKB:P50859) protein_examples to the primary-literature
-    fungal lanosterol 14-alpha-demethylase target (DOI:10.1128/AAC.45.7.2151-2153.2001;
-    PMID:11408242; PMID:10582896).
+  changes: Added reviewed Candida albicans SC5314 and Candida glabrata CBS 138 Erg11 (UniProtKB:P10613,
+    UniProtKB:P50859) protein_examples to the primary-literature fungal lanosterol 14-alpha-demethylase
+    target (DOI:10.1128/AAC.45.7.2151-2153.2001; PMID:11408242; PMID:10582896).
   causal_node_examples: []
   molecular_target_examples:
   - target_label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
@@ -1767,189 +1708,224 @@ records:
       taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Fungal cytochrome P450 lanosterol 14-alpha-demethylase (CYP51 / Erg11)
-        in Candida albicans inhibited by the triazole antifungal UR-9825 / albaconazole
-        (DOI:10.1128/AAC.45.7.2151-2153.2001; PMID:11408242; PMID:10582896).
+      role: Fungal cytochrome P450 lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida
+        albicans inhibited by the triazole antifungal UR-9825 / albaconazole (DOI:10.1128/AAC.45.7.2151-2153.2001;
+        PMID:11408242; PMID:10582896).
     - uniprot_id: UniProtKB:P50859
       protein_label: Lanosterol 14-alpha demethylase
       gene_symbol: ERG11
       taxon_id: NCBITaxon:284593
-      taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC
-        0622 / NRRL Y-65 / CBS 138)
+      taxon_label: Candida glabrata (strain ATCC 2001 / BCRC 20586 / JCM 3761 / NBRC 0622 /
+        NRRL Y-65 / CBS 138)
       entry_status: REVIEWED
       retrieved_on: '2026-10-26'
-      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata
-        targeted by broad-spectrum triazole UR-9825 / albaconazole (DOI:10.1128/AAC.45.7.2151-2153.2001;
+      role: Fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11) in Candida glabrata targeted
+        by broad-spectrum triazole UR-9825 / albaconazole (DOI:10.1128/AAC.45.7.2151-2153.2001;
         PMID:11408242; PMID:10582896).
+- identifier: CHEBI:220211
+  label: squalestatin S1
+  path: data/antibiotics/antifungal/squalestatin-s1.yaml
+  changes: Added reviewed Candida albicans, Candida albicans SC5314, and Saccharomyces cerevisiae
+    S288c squalene synthase Erg9 (UniProtKB:P78589, UniProtKB:A0A1D8PI71, UniProtKB:P29704)
+    protein_examples to the primary-literature fungal squalene synthase target (DOI:10.7164/antibiotics.45.639;
+    PMID:1624366; DOI:10.1073/pnas.90.1.80; PMID:8419946).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: fungal squalene synthase (Erg9)
+    target_reference: DOI:10.7164/antibiotics.45.639
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P78589
+      protein_label: Squalene synthase ERG9
+      gene_symbol: ERG9
+      taxon_id: NCBITaxon:5476
+      taxon_label: Candida albicans
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-31'
+      role: Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21) directly inhibited by squalestatin
+        S1 in Candida albicans enzyme assays (IC50 = 5 ng/mL; DOI:10.7164/antibiotics.45.639;
+        PMID:1624366).
+    - uniprot_id: UniProtKB:A0A1D8PI71
+      protein_label: Squalene synthase ERG9
+      gene_symbol: ERG9
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-31'
+      role: Reference-proteome Candida albicans SC5314 squalene synthase (Erg9, EC 2.5.1.21)
+        corresponding to the C. albicans enzyme inhibited by squalestatin S1 (DOI:10.7164/antibiotics.45.639;
+        PMID:1624366; DOI:10.1073/pnas.90.1.80; PMID:8419946).
+    - uniprot_id: UniProtKB:P29704
+      protein_label: Squalene synthase ERG9
+      gene_symbol: ERG9
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-31'
+      role: Reference-proteome Saccharomyces cerevisiae S288c squalene synthase (Erg9, EC 2.5.1.21)
+        inhibited by zaragozic acid A / squalestatin S1 in fungal ergosterol biosynthesis assays
+        (DOI:10.1073/pnas.90.1.80; PMID:8419946).
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
   path: data/antibiotics/antibacterial/chloramphenicol.yaml
   scope: causal_graphs
   graph_id: chloramphenicol_50s_peptidyl_transferase_inhibition
-  reason: Causal graph chloramphenicol_50s_peptidyl_transferase_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, COMPOUND, RNA, STATE) and has
-    no GENE_OR_PROTEIN nodes.
+  reason: Causal graph chloramphenicol_50s_peptidyl_transferase_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, COMPOUND, RNA, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:3732
   label: clarithromycin
   path: data/antibiotics/antibacterial/clarithromycin.yaml
   scope: causal_graphs
   graph_id: clarithromycin_50s_exit_tunnel_inhibition
-  reason: Causal graph clarithromycin_50s_exit_tunnel_inhibition contains only non-protein
-    node types (BIOLOGICAL_PROCESS, COMPOUND, RNA, STATE) and has no GENE_OR_PROTEIN
-    nodes.
+  reason: Causal graph clarithromycin_50s_exit_tunnel_inhibition contains only non-protein node
+    types (BIOLOGICAL_PROCESS, COMPOUND, RNA, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:600103
   label: daptomycin
   path: data/antibiotics/antibacterial/daptomycin.yaml
   scope: causal_graphs
   graph_id: daptomycin_phosphatidylglycerol_membrane_depolarization
-  reason: Causal graph daptomycin_phosphatidylglycerol_membrane_depolarization contains
-    only non-protein node types (CELL_STRUCTURE, CHEMICAL, COMPOUND, QUALITY, STATE,
-    TRANSPORT_PROCESS) and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph daptomycin_phosphatidylglycerol_membrane_depolarization contains only
+    non-protein node types (CELL_STRUCTURE, CHEMICAL, COMPOUND, QUALITY, STATE, TRANSPORT_PROCESS)
+    and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:157683
   label: althiomycin
   path: data/antibiotics/antibacterial/althiomycin.yaml
   scope: causal_graphs
   graph_id: althiomycin_50s_peptidyl_transferase_inhibition
-  reason: Causal graph althiomycin_50s_peptidyl_transferase_inhibition contains only
-    non-protein node types (BIOLOGICAL_PROCESS, COMPOUND, STATE) and has no GENE_OR_PROTEIN
-    nodes.
+  reason: Causal graph althiomycin_50s_peptidyl_transferase_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, COMPOUND, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:29506
   label: cethromycin
   path: data/antibiotics/antibacterial/cethromycin.yaml
   scope: causal_graphs
   graph_id: cethromycin_50s_exit_tunnel_translation_inhibition
-  reason: Causal graph cethromycin_50s_exit_tunnel_translation_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph cethromycin_50s_exit_tunnel_translation_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:4309
   label: dalfopristin
   path: data/antibiotics/antibacterial/dalfopristin.yaml
   scope: causal_graphs
   graph_id: dalfopristin_50s_ptc_rrna_rearrangement_inhibition
-  reason: Causal graph dalfopristin_50s_ptc_rrna_rearrangement_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph dalfopristin_50s_ptc_rrna_rearrangement_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:63607
   label: linezolid
   path: data/antibiotics/antibacterial/linezolid.yaml
   scope: causal_graphs
   graph_id: linezolid_50s_ptc_a_site_trna_positioning_inhibition
-  reason: Causal graph linezolid_50s_ptc_a_site_trna_positioning_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph linezolid_50s_ptc_a_site_trna_positioning_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:82699
   label: oritavancin
   path: data/antibiotics/antibacterial/oritavancin.yaml
   scope: causal_graphs
   graph_id: oritavancin_peptidoglycan_stem_bridge_cell_wall_inhibition
-  reason: Causal graph oritavancin_peptidoglycan_stem_bridge_cell_wall_inhibition
-    contains only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND,
-    STATE) and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph oritavancin_peptidoglycan_stem_bridge_cell_wall_inhibition contains only
+    non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no
+    GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:7934
   label: paromomycin
   path: data/antibiotics/antibacterial/paromomycin.yaml
   scope: causal_graphs
   graph_id: paromomycin_16s_rrna_decoding_site_stabilization
-  reason: Causal graph paromomycin_16s_rrna_decoding_site_stabilization contains only
-    non-protein node types (COMPOUND, QUALITY, RNA, STATE) and has no GENE_OR_PROTEIN
-    nodes.
+  reason: Causal graph paromomycin_16s_rrna_decoding_site_stabilization contains only non-protein
+    node types (COMPOUND, QUALITY, RNA, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:9215
   label: spectinomycin
   path: data/antibiotics/antibacterial/spectinomycin.yaml
   scope: causal_graphs
   graph_id: spectinomycin_30s_head_swivel_translocation_inhibition
-  reason: Causal graph spectinomycin_30s_head_swivel_translocation_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph spectinomycin_30s_head_swivel_translocation_inhibition contains only
+    non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no
+    GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:84192
   label: teixobactin
   path: data/antibiotics/antibacterial/teixobactin.yaml
   scope: causal_graphs
   graph_id: teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition
-  reason: Causal graph teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CHEMICAL, COMPOUND, STATE) and
-    has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph teixobactin_lipid_ii_lipid_iii_cell_wall_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CHEMICAL, COMPOUND, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:32209
   label: tetracenomycin X
   path: data/antibiotics/antibacterial/tetracenomycin-x.yaml
   scope: causal_graphs
   graph_id: tetracenomycin_x_50s_exit_tunnel_translation_inhibition
-  reason: Causal graph tetracenomycin_x_50s_exit_tunnel_translation_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph tetracenomycin_x_50s_exit_tunnel_translation_inhibition contains only
+    non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no
+    GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:27902
   label: tetracycline
   path: data/antibiotics/antibacterial/tetracycline.yaml
   scope: causal_graphs
   graph_id: tetracycline_30s_a_site_trna_delivery_inhibition
-  reason: Causal graph tetracycline_30s_a_site_trna_delivery_inhibition contains only
-    non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and
-    has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph tetracycline_30s_a_site_trna_delivery_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:29693
   label: thiostrepton
   path: data/antibiotics/antibacterial/thiostrepton.yaml
   scope: causal_graphs
   graph_id: thiostrepton_70s_gac_elongation_factor_inhibition
-  reason: Causal graph thiostrepton_70s_gac_elongation_factor_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph thiostrepton_70s_gac_elongation_factor_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:2450
   label: aculeacin A
   path: data/antibiotics/antifungal/aculeacin-a.yaml
   scope: causal_graphs
   graph_id: aculeacin_a_beta_1_3_glucan_synthase_inhibition
-  reason: Causal graph aculeacin_a_beta_1_3_glucan_synthase_inhibition contains only
-    non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND) and has
-    no GENE_OR_PROTEIN nodes.
+  reason: Causal graph aculeacin_a_beta_1_3_glucan_synthase_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:15353
   label: blasticidin S
   path: data/antibiotics/antifungal/blasticidin-s.yaml
   scope: causal_graphs
   graph_id: blasticidin_s_70s_p_site_trna_termination_inhibition
-  reason: Causal graph blasticidin_s_70s_p_site_trna_termination_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph blasticidin_s_70s_p_site_trna_termination_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:81419
   label: kasugamycin
   path: data/antibiotics/antifungal/kasugamycin.yaml
   scope: causal_graphs
   graph_id: kasugamycin_30s_mrna_channel_initiation_inhibition
-  reason: Causal graph kasugamycin_30s_mrna_channel_initiation_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE)
-    and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph kasugamycin_30s_mrna_channel_initiation_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:7488
   label: natamycin
   path: data/antibiotics/antifungal/natamycin.yaml
   scope: causal_graphs
   graph_id: natamycin_ergosterol_complex_fungal_growth_inhibition
-  reason: Causal graph natamycin_ergosterol_complex_fungal_growth_inhibition contains
-    only non-protein node types (BIOLOGICAL_PROCESS, CHEMICAL, COMPOUND, STATE) and
-    has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph natamycin_ergosterol_complex_fungal_growth_inhibition contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CHEMICAL, COMPOUND, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:141991
   label: cinnamycin
   path: data/antibiotics/unspecified/cinnamycin.yaml
   scope: causal_graphs
   graph_id: cinnamycin_phosphatidylethanolamine_bilayer_disruption
-  reason: Causal graph cinnamycin_phosphatidylethanolamine_bilayer_disruption contains
-    only non-protein node types (CELL_STRUCTURE, COMPOUND, QUALITY, STATE) and has
-    no GENE_OR_PROTEIN nodes.
+  reason: Causal graph cinnamycin_phosphatidylethanolamine_bilayer_disruption contains only
+    non-protein node types (CELL_STRUCTURE, COMPOUND, QUALITY, STATE) and has no GENE_OR_PROTEIN
+    nodes.
 - identifier: CHEBI:44504
   label: nogalamycin
   path: data/antibiotics/unspecified/nogalamycin.yaml
   scope: causal_graphs
   graph_id: nogalamycin_dna_intercalation_helix_distortion
-  reason: Causal graph nogalamycin_dna_intercalation_helix_distortion contains only
-    non-protein node types (BIOLOGICAL_PROCESS, CHEMICAL, COMPOUND, STATE) and has
-    no GENE_OR_PROTEIN nodes.
+  reason: Causal graph nogalamycin_dna_intercalation_helix_distortion contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CHEMICAL, COMPOUND, STATE) and has no GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:48480
   label: thermorubin A
   path: data/antibiotics/antibacterial/thermorubin-a.yaml
   scope: causal_graphs
   graph_id: thermorubin_a_70s_bridge_b2a_elongation_termination_arrest
-  reason: Causal graph thermorubin_a_70s_bridge_b2a_elongation_termination_arrest
-    contains only non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND,
-    STATE) and has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph thermorubin_a_70s_bridge_b2a_elongation_termination_arrest contains only
+    non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no
+    GENE_OR_PROTEIN nodes.
 - identifier: CHEBI:157683
   label: althiomycin
   path: data/antibiotics/antibacterial/althiomycin.yaml
@@ -1957,9 +1933,9 @@ held_targets:
   target_label: bacterial ribosomal peptidyl-transferase reaction
   target_type: BIOLOGICAL_PROCESS
   target_reference: PMID:4917791
-  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial
-    ribosomal peptidyl-transferase reaction); protein_examples are restricted to protein-containing
-    target types.'
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial ribosomal
+    peptidyl-transferase reaction); protein_examples are restricted to protein-containing target
+    types.'
 - identifier: CHEBI:29506
   label: cethromycin
   path: data/antibiotics/antibacterial/cethromycin.yaml
@@ -1968,8 +1944,8 @@ held_targets:
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:12623020
   reason: Ribosomal subunit / rRNA binding-pocket target (50S ribosomal subunit nascent-peptide
-    exit tunnel; PMID:12623020) where the primary mechanism acts on rRNA or whole-subunit
-    conformation without a single primary target protein accession in the cited study.
+    exit tunnel; PMID:12623020) where the primary mechanism acts on rRNA or whole-subunit conformation
+    without a single primary target protein accession in the cited study.
 - identifier: CHEBI:17698
   label: chloramphenicol
   path: data/antibiotics/antibacterial/chloramphenicol.yaml
@@ -1978,8 +1954,8 @@ held_targets:
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:20876128
   reason: Ribosomal subunit / rRNA binding-pocket target (50S ribosomal peptidyl-transferase
-    center; PMID:20876128) where the primary mechanism acts on rRNA or whole-subunit
-    conformation without a single primary target protein accession in the cited study.
+    center; PMID:20876128) where the primary mechanism acts on rRNA or whole-subunit conformation
+    without a single primary target protein accession in the cited study.
 - identifier: CHEBI:4309
   label: dalfopristin
   path: data/antibiotics/antibacterial/dalfopristin.yaml
@@ -1988,8 +1964,8 @@ held_targets:
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:15059283
   reason: Ribosomal subunit / rRNA binding-pocket target (50S ribosomal peptidyl-transferase
-    center; PMID:15059283) where the primary mechanism acts on rRNA or whole-subunit
-    conformation without a single primary target protein accession in the cited study.
+    center; PMID:15059283) where the primary mechanism acts on rRNA or whole-subunit conformation
+    without a single primary target protein accession in the cited study.
 - identifier: CHEBI:172922
   label: ethylzingerone
   path: data/antibiotics/antibacterial/ethylzingerone.yaml
@@ -1997,9 +1973,9 @@ held_targets:
   target_label: intracellular oxidation and associated bacterial stress responses
   target_type: BIOLOGICAL_PROCESS
   target_reference: PMID:32737133
-  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: intracellular
-    oxidation and associated bacterial stress responses); protein_examples are restricted
-    to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: intracellular oxidation
+    and associated bacterial stress responses); protein_examples are restricted to protein-containing
+    target types.'
 - identifier: CHEBI:156451
   label: holomycin
   path: data/antibiotics/antibacterial/holomycin.yaml
@@ -2007,9 +1983,9 @@ held_targets:
   target_label: bacterial RNA synthesis and transcription elongation
   target_type: BIOLOGICAL_PROCESS
   target_reference: PMID:11158751
-  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial
-    RNA synthesis and transcription elongation); protein_examples are restricted to
-    protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: bacterial RNA synthesis
+    and transcription elongation); protein_examples are restricted to protein-containing target
+    types.'
 - identifier: CHEBI:63607
   label: linezolid
   path: data/antibiotics/antibacterial/linezolid.yaml
@@ -2027,8 +2003,8 @@ held_targets:
   target_label: bacterial cytoplasmic membrane
   target_type: MEMBRANE
   target_reference: PMID:93615
-  reason: 'Non-protein molecular target (target_type=MEMBRANE: bacterial cytoplasmic
-    membrane); protein_examples are restricted to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: bacterial cytoplasmic membrane);
+    protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:16196
   label: oleic acid
   path: data/antibiotics/antibacterial/oleic-acid.yaml
@@ -2036,9 +2012,8 @@ held_targets:
   target_label: group A streptococcal cytoplasmic membrane
   target_type: MEMBRANE
   target_reference: PMID:393631
-  reason: 'Non-protein molecular target (target_type=MEMBRANE: group A streptococcal
-    cytoplasmic membrane); protein_examples are restricted to protein-containing target
-    types.'
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: group A streptococcal cytoplasmic
+    membrane); protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:82699
   label: oritavancin
   path: data/antibiotics/antibacterial/oritavancin.yaml
@@ -2046,9 +2021,9 @@ held_targets:
   target_label: peptidoglycan D-Ala-D-Ala termini and pentaglycyl bridges
   target_type: CELL_WALL_COMPONENT
   target_reference: PMID:18258256
-  reason: 'Non-protein molecular target (target_type=CELL_WALL_COMPONENT: peptidoglycan
-    D-Ala-D-Ala termini and pentaglycyl bridges); protein_examples are restricted
-    to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=CELL_WALL_COMPONENT: peptidoglycan D-Ala-D-Ala
+    termini and pentaglycyl bridges); protein_examples are restricted to protein-containing
+    target types.'
 - identifier: CHEBI:7934
   label: paromomycin
   path: data/antibiotics/antibacterial/paromomycin.yaml
@@ -2056,9 +2031,8 @@ held_targets:
   target_label: 16S-rRNA decoding A-site oligonucleotide
   target_type: NUCLEIC_ACID
   target_reference: PMID:11587639
-  reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: 16S-rRNA decoding
-    A-site oligonucleotide); protein_examples are restricted to protein-containing
-    target types.'
+  reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: 16S-rRNA decoding A-site
+    oligonucleotide); protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:131850
   label: PR-39
   path: data/antibiotics/antibacterial/pr-39.yaml
@@ -2066,8 +2040,8 @@ held_targets:
   target_label: bacterial cytoplasmic membrane
   target_type: MEMBRANE
   target_reference: PMID:24755622
-  reason: 'Non-protein molecular target (target_type=MEMBRANE: bacterial cytoplasmic
-    membrane); protein_examples are restricted to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: bacterial cytoplasmic membrane);
+    protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:131850
   label: PR-39
   path: data/antibiotics/antibacterial/pr-39.yaml
@@ -2075,9 +2049,9 @@ held_targets:
   target_label: SbmA peptide transporter
   target_type: PROTEIN
   target_reference: PMID:18519732
-  reason: Held because SbmA (UniProtKB:P0A940) is the inner-membrane uptake transporter
-    required for PR-39 internalization rather than the lethal intracellular effector
-    target, and scripts/resistance_checkpoint_records.py references this record.
+  reason: Held because SbmA (UniProtKB:P0A940) is the inner-membrane uptake transporter required
+    for PR-39 internalization rather than the lethal intracellular effector target, and scripts/resistance_checkpoint_records.py
+    references this record.
 - identifier: CHEBI:171658
   label: promysalin
   path: data/antibiotics/antibacterial/promysalin.yaml
@@ -2085,10 +2059,10 @@ held_targets:
   target_label: succinate dehydrogenase
   target_type: PROTEIN
   target_reference: PMID:29300464
-  reason: Held because the Pseudomonas aeruginosa PAO1 succinate dehydrogenase complex
-    subunits (sdhA UniProtKB:Q9I3D5, sdhB UniProtKB:Q9I3D4, sdhC UniProtKB:Q9I3D7,
-    sdhD UniProtKB:Q9I3D6) identified by affinity-based protein profiling in PMID:29300464
-    are all unreviewed TrEMBL entries with no reviewed Swiss-Prot accession.
+  reason: Held because the Pseudomonas aeruginosa PAO1 succinate dehydrogenase complex subunits
+    (sdhA UniProtKB:Q9I3D5, sdhB UniProtKB:Q9I3D4, sdhC UniProtKB:Q9I3D7, sdhD UniProtKB:Q9I3D6)
+    identified by affinity-based protein profiling in PMID:29300464 are all unreviewed TrEMBL
+    entries with no reviewed Swiss-Prot accession.
 - identifier: CHEBI:171658
   label: promysalin
   path: data/antibiotics/antibacterial/promysalin.yaml
@@ -2096,8 +2070,8 @@ held_targets:
   target_label: Gram-positive bacterial cell membrane
   target_type: MEMBRANE
   target_reference: PMID:28821717
-  reason: 'Non-protein molecular target (target_type=MEMBRANE: Gram-positive bacterial
-    cell membrane); protein_examples are restricted to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: Gram-positive bacterial cell
+    membrane); protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:9215
   label: spectinomycin
   path: data/antibiotics/antibacterial/spectinomycin.yaml
@@ -2105,9 +2079,9 @@ held_targets:
   target_label: 30S ribosomal head domain
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:17696316
-  reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal head domain;
-    PMID:17696316) where the primary mechanism acts on rRNA or whole-subunit conformation
-    without a single primary target protein accession in the cited study.
+  reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal head domain; PMID:17696316)
+    where the primary mechanism acts on rRNA or whole-subunit conformation without a single
+    primary target protein accession in the cited study.
 - identifier: CHEBI:84192
   label: teixobactin
   path: data/antibiotics/antibacterial/teixobactin.yaml
@@ -2115,9 +2089,9 @@ held_targets:
   target_label: conserved pyrophosphate-sugar motif of lipid II and lipid III
   target_type: CELL_WALL_COMPONENT
   target_reference: PMID:25561178
-  reason: 'Non-protein molecular target (target_type=CELL_WALL_COMPONENT: conserved
-    pyrophosphate-sugar motif of lipid II and lipid III); protein_examples are restricted
-    to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=CELL_WALL_COMPONENT: conserved pyrophosphate-sugar
+    motif of lipid II and lipid III); protein_examples are restricted to protein-containing
+    target types.'
 - identifier: CHEBI:32209
   label: tetracenomycin X
   path: data/antibiotics/antibacterial/tetracenomycin-x.yaml
@@ -2125,10 +2099,9 @@ held_targets:
   target_label: polypeptide exit tunnel of the bacterial 50S ribosomal subunit
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:32601485
-  reason: Ribosomal subunit / rRNA binding-pocket target (polypeptide exit tunnel
-    of the bacterial 50S ribosomal subunit; PMID:32601485) where the primary mechanism
-    acts on rRNA or whole-subunit conformation without a single primary target protein
-    accession in the cited study.
+  reason: Ribosomal subunit / rRNA binding-pocket target (polypeptide exit tunnel of the bacterial
+    50S ribosomal subunit; PMID:32601485) where the primary mechanism acts on rRNA or whole-subunit
+    conformation without a single primary target protein accession in the cited study.
 - identifier: CHEBI:27902
   label: tetracycline
   path: data/antibiotics/antibacterial/tetracycline.yaml
@@ -2137,8 +2110,8 @@ held_targets:
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:11163189
   reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal subunit; PMID:11163189)
-    where the primary mechanism acts on rRNA or whole-subunit conformation without
-    a single primary target protein accession in the cited study.
+    where the primary mechanism acts on rRNA or whole-subunit conformation without a single
+    primary target protein accession in the cited study.
 - identifier: CHEBI:29693
   label: thiostrepton
   path: data/antibiotics/antibacterial/thiostrepton.yaml
@@ -2146,9 +2119,9 @@ held_targets:
   target_label: 70S ribosome GTPase-associated center
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:21908407
-  reason: Ribosomal subunit / rRNA binding-pocket target (70S ribosome GTPase-associated
-    center; PMID:21908407) where the primary mechanism acts on rRNA or whole-subunit
-    conformation without a single primary target protein accession in the cited study.
+  reason: Ribosomal subunit / rRNA binding-pocket target (70S ribosome GTPase-associated center;
+    PMID:21908407) where the primary mechanism acts on rRNA or whole-subunit conformation without
+    a single primary target protein accession in the cited study.
 - identifier: CHEBI:2450
   label: aculeacin A
   path: data/antibiotics/antifungal/aculeacin-a.yaml
@@ -2156,9 +2129,8 @@ held_targets:
   target_label: beta-1,3-glucan synthase reaction
   target_type: BIOLOGICAL_PROCESS
   target_reference: PMID:324960
-  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: beta-1,3-glucan
-    synthase reaction); protein_examples are restricted to protein-containing target
-    types.'
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: beta-1,3-glucan synthase
+    reaction); protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:156219
   label: ascochlorin
   path: data/antibiotics/antifungal/ascochlorin.yaml
@@ -2166,10 +2138,10 @@ held_targets:
   target_label: cytochrome bc1 complex Qi and Qo ubiquinone sites
   target_type: PROTEIN_COMPLEX
   target_reference: PMID:20025846
-  reason: Held because the PMID:20025846 dual-site Qi/Qo cocrystals (PDB:3H1I/3H1J)
-    were determined using purified Gallus gallus (chicken heart) mitochondrial complex
-    III (UniProtKB:P18946 plus unreviewed TrEMBL subunits D0VX26–D0VX32) as a vertebrate
-    structural surrogate rather than a fungal target complex.
+  reason: Held because the PMID:20025846 dual-site Qi/Qo cocrystals (PDB:3H1I/3H1J) were determined
+    using purified Gallus gallus (chicken heart) mitochondrial complex III (UniProtKB:P18946
+    plus unreviewed TrEMBL subunits D0VX26–D0VX32) as a vertebrate structural surrogate rather
+    than a fungal target complex.
 - identifier: CHEBI:15353
   label: blasticidin S
   path: data/antibiotics/antifungal/blasticidin-s.yaml
@@ -2177,9 +2149,9 @@ held_targets:
   target_label: 70S ribosome P-site tRNA complex
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:23824292
-  reason: Ribosomal subunit / rRNA binding-pocket target (70S ribosome P-site tRNA
-    complex; PMID:23824292) where the primary mechanism acts on rRNA or whole-subunit
-    conformation without a single primary target protein accession in the cited study.
+  reason: Ribosomal subunit / rRNA binding-pocket target (70S ribosome P-site tRNA complex;
+    PMID:23824292) where the primary mechanism acts on rRNA or whole-subunit conformation without
+    a single primary target protein accession in the cited study.
 - identifier: CHEBI:78661
   label: borrelidin
   path: data/antibiotics/antifungal/borrelidin.yaml
@@ -2197,9 +2169,9 @@ held_targets:
   target_label: mitochondrial superoxide generation and fungal oxidative-stress response
   target_type: BIOLOGICAL_PROCESS
   target_reference: PMID:20202201
-  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: mitochondrial
-    superoxide generation and fungal oxidative-stress response); protein_examples
-    are restricted to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: mitochondrial superoxide
+    generation and fungal oxidative-stress response); protein_examples are restricted to protein-containing
+    target types.'
 - identifier: CHEBI:81419
   label: kasugamycin
   path: data/antibiotics/antifungal/kasugamycin.yaml
@@ -2207,9 +2179,9 @@ held_targets:
   target_label: 30S ribosomal subunit mRNA channel
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:16998486
-  reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal subunit mRNA
-    channel; PMID:16998486) where the primary mechanism acts on rRNA or whole-subunit
-    conformation without a single primary target protein accession in the cited study.
+  reason: Ribosomal subunit / rRNA binding-pocket target (30S ribosomal subunit mRNA channel;
+    PMID:16998486) where the primary mechanism acts on rRNA or whole-subunit conformation without
+    a single primary target protein accession in the cited study.
 - identifier: CHEBI:7488
   label: natamycin
   path: data/antibiotics/antifungal/natamycin.yaml
@@ -2217,9 +2189,8 @@ held_targets:
   target_label: ergosterol in the fungal plasma membrane
   target_type: MEMBRANE
   target_reference: PMID:18165687
-  reason: 'Non-protein molecular target (target_type=MEMBRANE: ergosterol in the fungal
-    plasma membrane); protein_examples are restricted to protein-containing target
-    types.'
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: ergosterol in the fungal plasma
+    membrane); protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:45081
   label: pentamidine
   path: data/antibiotics/antifungal/pentamidine.yaml
@@ -2227,8 +2198,8 @@ held_targets:
   target_label: mitochondrial translation
   target_type: BIOLOGICAL_PROCESS
   target_reference: PMID:10917591
-  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: mitochondrial
-    translation); protein_examples are restricted to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: mitochondrial translation);
+    protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:77942
   label: tavaborole
   path: data/antibiotics/antifungal/tavaborole.yaml
@@ -2236,10 +2207,9 @@ held_targets:
   target_label: cytoplasmic leucyl-tRNA synthetase-tRNA(Leu) editing complex
   target_type: PROTEIN_COMPLEX
   target_reference: PMID:17588934
-  reason: Held because tests/test_tavaborole_references.py pins the live tavaborole.yaml
-    SHA-256 and curation_history length directly against ROOT, and the record note
-    explicitly leaves the exact cytoplasmic vs mitochondrial LeuRS accession unresolved
-    from abstract-only curation.
+  reason: Held because tests/test_tavaborole_references.py pins the live tavaborole.yaml SHA-256
+    and curation_history length directly against ROOT, and the record note explicitly leaves
+    the exact cytoplasmic vs mitochondrial LeuRS accession unresolved from abstract-only curation.
 - identifier: CHEBI:40009
   label: D-cycloserine
   path: data/antibiotics/antimycobacterial/d-cycloserine.yaml
@@ -2247,9 +2217,9 @@ held_targets:
   target_label: alanine racemase
   target_type: PROTEIN
   target_reference: PMID:4555420
-  reason: Held because PMID:4555420 assayed Escherichia coli strain W (ATCC 9637)
-    alanine racemase, whereas Alr/DadX alanine racemase isozyme and strain-specific
-    sequence resolution in E. coli K-12 are not established by the 1972 study.
+  reason: Held because PMID:4555420 assayed Escherichia coli strain W (ATCC 9637) alanine racemase,
+    whereas Alr/DadX alanine racemase isozyme and strain-specific sequence resolution in E.
+    coli K-12 are not established by the 1972 study.
 - identifier: CHEBI:65485
   label: dihydrobetulinic acid
   path: data/antibiotics/antiprotozoal/dihydrobetulinic-acid.yaml
@@ -2257,10 +2227,10 @@ held_targets:
   target_label: DNA topoisomerases I and II
   target_type: PROTEIN
   target_reference: PMID:12765337
-  reason: Held because PMID:12765337 bundles two distinct enzyme classes (Leishmania
-    donovani DNA topoisomerase I and type II topoisomerase) into one target entry,
-    and the corresponding L. donovani sequences (UniProtKB:A0A3Q8IHS4, UniProtKB:O97149,
-    UniProtKB:Q9XZN0) are unreviewed TrEMBL entries.
+  reason: Held because PMID:12765337 bundles two distinct enzyme classes (Leishmania donovani
+    DNA topoisomerase I and type II topoisomerase) into one target entry, and the corresponding
+    L. donovani sequences (UniProtKB:A0A3Q8IHS4, UniProtKB:O97149, UniProtKB:Q9XZN0) are unreviewed
+    TrEMBL entries.
 - identifier: CHEBI:4781
   label: emetine
   path: data/antibiotics/antiprotozoal/emetine.yaml
@@ -2268,11 +2238,10 @@ held_targets:
   target_label: eukaryotic 80S ribosome small-subunit E site
   target_type: PROTEIN_COMPLEX
   target_reference: PMID:24913268
-  reason: Held because the PMID:24913268 3.2-angstrom cryo-EM structure (PDB:3J7A)
-    shows emetine binding the 18S rRNA E-site pocket (base-stacking with G973-A974
-    and U1191) of the Plasmodium falciparum 40S subunit, where the P. falciparum 3D7
-    ribosomal proteins are predominantly unreviewed TrEMBL entries and the primary
-    contact is rRNA.
+  reason: Held because the PMID:24913268 3.2-angstrom cryo-EM structure (PDB:3J7A) shows emetine
+    binding the 18S rRNA E-site pocket (base-stacking with G973-A974 and U1191) of the Plasmodium
+    falciparum 40S subunit, where the P. falciparum 3D7 ribosomal proteins are predominantly
+    unreviewed TrEMBL entries and the primary contact is rRNA.
 - identifier: CHEBI:65484
   label: bevirimat
   path: data/antibiotics/antiviral/bevirimat.yaml
@@ -2280,11 +2249,10 @@ held_targets:
   target_label: HIV-1 Gag CA-SP1 cleavage-site region in immature particles
   target_type: VIRAL_PROTEIN
   target_reference: PMID:22151792
-  reason: Held because PMID:22151792 characterizes photoaffinity crosslinking and
-    resistance mutations across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical
-    clade B/C isolates) without a single isolate-resolved cocrystal accession, and
-    tests/test_bevirimat_taxonomy.py asserts field-by-field identity on live molecular_targets
-    against research/2026-10-14-bevirimat-curation.json.
+  reason: Held because PMID:22151792 characterizes photoaffinity crosslinking and resistance
+    mutations across immature HIV-1 Gag CA-SP1 assemblies (NL4-3 and clinical clade B/C isolates)
+    without a single isolate-resolved cocrystal accession, and tests/test_bevirimat_taxonomy.py
+    asserts field-by-field identity on live molecular_targets against research/2026-10-14-bevirimat-curation.json.
 - identifier: CHEBI:172943
   label: bictegravir
   path: data/antibiotics/antiviral/bictegravir.yaml
@@ -2292,9 +2260,8 @@ held_targets:
   target_label: HIV-1 integrase strand-transfer activity
   target_type: VIRAL_PROTEIN
   target_reference: PMID:27645238
-  reason: Held because tests/test_antiviral_taxa.py asserts field-by-field identity
-    on the live bictegravir.yaml record for all fields outside resistance_mechanisms
-    and curation_history.
+  reason: Held because tests/test_antiviral_taxa.py asserts field-by-field identity on the live
+    bictegravir.yaml record for all fields outside resistance_mechanisms and curation_history.
 - identifier: CHEBI:135632
   label: camostat
   path: data/antibiotics/antiviral/camostat.yaml
@@ -2330,9 +2297,9 @@ held_targets:
   target_label: HIV-1 integrase strand-transfer activity
   target_type: VIRAL_PROTEIN
   target_reference: PMID:22205735
-  reason: 'Held in alignment with tests/test_antiviral_taxa.py: PMID:21968597 assayed
-    recombinant HIV-1 NL4-3 vectors rather than HXB2, so HXB2 reference protein grounding
-    is not asserted without full-text construct verification.'
+  reason: 'Held in alignment with tests/test_antiviral_taxa.py: PMID:21968597 assayed recombinant
+    HIV-1 NL4-3 vectors rather than HXB2, so HXB2 reference protein grounding is not asserted
+    without full-text construct verification.'
 - identifier: CHEBI:132967
   label: elbasvir
   path: data/antibiotics/antiviral/elbasvir.yaml
@@ -2349,10 +2316,10 @@ held_targets:
   target_label: influenza virus RNA-dependent RNA polymerase (via T-705RTP)
   target_type: VIRAL_PROTEIN
   target_reference: PMID:23917318
-  reason: Held because favipiravir (CHEBI:134722) is the unphosphorylated prodrug
-    that requires host intracellular phosphoribosylation and phosphorylation to active
-    favipiravir-RTP (CHEBI:170009), and PMID:23917318 assays heterotrimeric PB1-PB2-PA
-    influenza A polymerase without a strain-specific cocrystal of the parent prodrug.
+  reason: Held because favipiravir (CHEBI:134722) is the unphosphorylated prodrug that requires
+    host intracellular phosphoribosylation and phosphorylation to active favipiravir-RTP (CHEBI:170009),
+    and PMID:23917318 assays heterotrimeric PB1-PB2-PA influenza A polymerase without a strain-specific
+    cocrystal of the parent prodrug.
 - identifier: CHEBI:85188
   label: paritaprevir
   path: data/antibiotics/antiviral/paritaprevir.yaml
@@ -2369,10 +2336,10 @@ held_targets:
   target_label: eukaryotic translation initiation factor 4A (eIF4A) family
   target_type: PROTEIN
   target_reference: PMID:16337595
-  reason: Held because PMID:16337595 characterizes pateamine A across multiple mammalian
-    paralogs (EIF4A1 UniProtKB:P60842, EIF4A2 UniProtKB:Q14240, and NMD factor EIF4A3
-    UniProtKB:P38919) as an isoform-spanning family target without a single compound-bound
-    crystal structure in the cited study.
+  reason: Held because PMID:16337595 characterizes pateamine A across multiple mammalian paralogs
+    (EIF4A1 UniProtKB:P60842, EIF4A2 UniProtKB:Q14240, and NMD factor EIF4A3 UniProtKB:P38919)
+    as an isoform-spanning family target without a single compound-bound crystal structure in
+    the cited study.
 - identifier: CHEBI:127780
   label: phosphonoformic acid
   path: data/antibiotics/antiviral/phosphonoformic-acid.yaml
@@ -2380,10 +2347,9 @@ held_targets:
   target_label: viral family-B DNA polymerase active site
   target_type: VIRAL_PROTEIN
   target_reference: PMID:21566148
-  reason: Held because PMID:21566148 (PDB:3KD5) crystallized the bacteriophage RB69
-    chimeric family-B gp43 DNA polymerase (UniProtKB:Q38087) engineered with six human
-    cytomegalovirus UL54 residues as a surrogate model rather than an authentic herpesvirus
-    DNA polymerase.
+  reason: Held because PMID:21566148 (PDB:3KD5) crystallized the bacteriophage RB69 chimeric
+    family-B gp43 DNA polymerase (UniProtKB:Q38087) engineered with six human cytomegalovirus
+    UL54 residues as a surrogate model rather than an authentic herpesvirus DNA polymerase.
 - identifier: CHEBI:82960
   label: raltegravir
   path: data/antibiotics/antiviral/raltegravir.yaml
@@ -2391,8 +2357,8 @@ held_targets:
   target_label: retroviral integrase-DNA intasome active site
   target_type: VIRAL_PROTEIN
   target_reference: PMID:21030679
-  reason: Held because PMID:20118912 crystallized prototype foamy virus (PFV) intasome
-    as a structural model rather than HIV-1 integrase directly.
+  reason: Held because PMID:20118912 crystallized prototype foamy virus (PFV) intasome as a
+    structural model rather than HIV-1 integrase directly.
 - identifier: CHEBI:45578
   label: ribavirin 5'-triphosphate
   path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
@@ -2401,8 +2367,8 @@ held_targets:
   target_type: VIRAL_PROTEIN
   target_reference: PMID:11833782
   reason: Held because PMID:11833782 measures biochemical unwinding kinetics on recombinant
-    HCV NS3 helicase without specifying an exact genotype/isolate cocrystal sequence
-    among the multiple reviewed HCV polyprotein accessions.
+    HCV NS3 helicase without specifying an exact genotype/isolate cocrystal sequence among the
+    multiple reviewed HCV polyprotein accessions.
 - identifier: CHEBI:45578
   label: ribavirin 5'-triphosphate
   path: data/antibiotics/antiviral/ribavirin-5-triphosphate.yaml
@@ -2411,8 +2377,8 @@ held_targets:
   target_type: VIRAL_PROTEIN
   target_reference: PMID:12606760
   reason: Held because PMID:12606760 compares ribavirin nucleotides in initiation/elongation
-    kinetics against recombinant HCV NS5B polymerase without a compound-bound crystal
-    structure or single reference isolate assignment.
+    kinetics against recombinant HCV NS5B polymerase without a compound-bound crystal structure
+    or single reference isolate assignment.
 - identifier: CHEBI:147346
   label: SG85
   path: data/antibiotics/antiviral/sg85.yaml
@@ -2420,9 +2386,9 @@ held_targets:
   target_label: picornavirus 3C protease
   target_type: VIRAL_PROTEIN
   target_reference: PMID:23388726
-  reason: Held because the Human enterovirus D68 genome polyprotein (UniProtKB:A1E4A3)
-    resolved in the PMID:23388726 crystal structures (PDB:3ZV9, 3ZVA, 3ZVB) is an
-    unreviewed TrEMBL entry with no reviewed Swiss-Prot accession.
+  reason: Held because the Human enterovirus D68 genome polyprotein (UniProtKB:A1E4A3) resolved
+    in the PMID:23388726 crystal structures (PDB:3ZV9, 3ZVA, 3ZVB) is an unreviewed TrEMBL entry
+    with no reviewed Swiss-Prot accession.
 - identifier: CHEBI:82809
   label: agrocin 84
   path: data/antibiotics/unspecified/agrocin-84.yaml
@@ -2430,10 +2396,10 @@ held_targets:
   target_label: leucyl-tRNA synthetase–tRNA(Leu) complex
   target_type: PROTEIN_COMPLEX
   target_reference: PMID:23361008
-  reason: Held because agrocin 84 (CHEBI:82809) is a Trojan-horse prodrug whose active
-    warhead TM84 (not intact agrocin 84) inhibits Agrobacterium tumefaciens LeuRS
-    (UniProtKB:Q8U9X3, unreviewed TrEMBL), and the PMID:23361008 cocrystal (PDB:3ZJV)
-    uses heterologous Escherichia coli LeuRS (UniProtKB:P07813) bound to TM84.
+  reason: Held because agrocin 84 (CHEBI:82809) is a Trojan-horse prodrug whose active warhead
+    TM84 (not intact agrocin 84) inhibits Agrobacterium tumefaciens LeuRS (UniProtKB:Q8U9X3,
+    unreviewed TrEMBL), and the PMID:23361008 cocrystal (PDB:3ZJV) uses heterologous Escherichia
+    coli LeuRS (UniProtKB:P07813) bound to TM84.
 - identifier: CHEBI:134107
   label: CHIR-090
   path: data/antibiotics/unspecified/chir-090.yaml
@@ -2441,10 +2407,10 @@ held_targets:
   target_label: UDP-3-O-acyl-N-acetylglucosamine deacetylase (LpxC)
   target_type: PROTEIN
   target_reference: PMID:21171638
-  reason: Held because the Yersinia enterocolitica LpxC enzyme (UniProtKB:A1JJJ9)
-    resolved in the PMID:21171638 cocrystal (PDB:3NZK) is an unreviewed TrEMBL entry,
-    and the kinetic assays span multiple Gram-negative species (E. coli, P. aeruginosa,
-    A. aeolicus, R. leguminosarum) without a single reviewed cocrystal accession.
+  reason: Held because the Yersinia enterocolitica LpxC enzyme (UniProtKB:A1JJJ9) resolved in
+    the PMID:21171638 cocrystal (PDB:3NZK) is an unreviewed TrEMBL entry, and the kinetic assays
+    span multiple Gram-negative species (E. coli, P. aeruginosa, A. aeolicus, R. leguminosarum)
+    without a single reviewed cocrystal accession.
 - identifier: CHEBI:141991
   label: cinnamycin
   path: data/antibiotics/unspecified/cinnamycin.yaml
@@ -2461,8 +2427,8 @@ held_targets:
   target_label: double-stranded DNA
   target_type: NUCLEIC_ACID
   target_reference: PMID:1991116
-  reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: double-stranded
-    DNA); protein_examples are restricted to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: double-stranded DNA); protein_examples
+    are restricted to protein-containing target types.'
 - identifier: CHEBI:9321
   label: sulbactam
   path: data/antibiotics/unspecified/sulbactam.yaml
@@ -2470,11 +2436,10 @@ held_targets:
   target_label: engineered S70C SHV-1 beta-lactamase
   target_type: PROTEIN
   target_reference: PMID:22974281
-  reason: Held because the PMID:22974281 preacylation cocrystal (PDB:4FH2) required
-    an engineered catalytic-site mutant (S70C with an artificial C70-K73 sulfenamide
-    bond) of Klebsiella pneumoniae SHV-1 (UniProtKB:P0AD64) to trap intact sulbactam,
-    and the record explicitly warns against extrapolating this mutant construct to
-    wild-type enzyme.
+  reason: Held because the PMID:22974281 preacylation cocrystal (PDB:4FH2) required an engineered
+    catalytic-site mutant (S70C with an artificial C70-K73 sulfenamide bond) of Klebsiella pneumoniae
+    SHV-1 (UniProtKB:P0AD64) to trap intact sulbactam, and the record explicitly warns against
+    extrapolating this mutant construct to wild-type enzyme.
 - identifier: CHEBI:3732
   label: clarithromycin
   path: data/antibiotics/antibacterial/clarithromycin.yaml
@@ -2482,10 +2447,10 @@ held_targets:
   target_label: bacterial 50S ribosomal subunit nascent-peptide exit tunnel
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: PMID:34935599
-  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 50S ribosomal
-    subunit nascent-peptide exit tunnel; PMID:34935599) where the primary mechanism
-    acts on 23S rRNA nucleotide A2058 in the nascent-peptide exit tunnel without a
-    single primary target protein accession in the cited study.
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 50S ribosomal subunit nascent-peptide
+    exit tunnel; PMID:34935599) where the primary mechanism acts on 23S rRNA nucleotide A2058
+    in the nascent-peptide exit tunnel without a single primary target protein accession in
+    the cited study.
 - identifier: CHEBI:600103
   label: daptomycin
   path: data/antibiotics/antibacterial/daptomycin.yaml
@@ -2493,9 +2458,8 @@ held_targets:
   target_label: phosphatidylglycerol-rich bacterial membrane
   target_type: MEMBRANE
   target_reference: PMID:40455071
-  reason: 'Non-protein molecular target (target_type=MEMBRANE: phosphatidylglycerol-rich
-    bacterial membrane); protein_examples are restricted to protein-containing target
-    types.'
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: phosphatidylglycerol-rich bacterial
+    membrane); protein_examples are restricted to protein-containing target types.'
 - identifier: CHEBI:10100
   label: zafirlukast
   path: data/antibiotics/antibacterial/zafirlukast.yaml
@@ -2503,11 +2467,10 @@ held_targets:
   target_label: staphylococcal lipoteichoic acid synthase (LtaS)
   target_type: PROTEIN
   target_reference: DOI:10.3390/antibiotics15090914
-  reason: Held because DOI:10.3390/antibiotics15090914 (PMID:42792065) mapped LtaS
-    resistance mutations across Staphylococcus aureus clinical/MRSA isolates without
-    pinning a single reviewed Swiss-Prot S. aureus strain proteome accession among
-    the distinct strain-level entries (e.g. NCTC 8325 UniProtKB:Q2G093, MW2 UniProtKB:Q7A1I3,
-    MRSA252 UniProtKB:Q6GIU0).
+  reason: Held because DOI:10.3390/antibiotics15090914 (PMID:42792065) mapped LtaS resistance
+    mutations across Staphylococcus aureus clinical/MRSA isolates without pinning a single reviewed
+    Swiss-Prot S. aureus strain proteome accession among the distinct strain-level entries (e.g.
+    NCTC 8325 UniProtKB:Q2G093, MW2 UniProtKB:Q7A1I3, MRSA252 UniProtKB:Q6GIU0).
 - identifier: CHEBI:34825
   label: luliconazole
   path: data/antibiotics/antifungal/luliconazole.yaml
@@ -2515,22 +2478,22 @@ held_targets:
   target_label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
   target_type: PROTEIN
   target_reference: DOI:10.1007/s10156-004-0327-1
-  reason: Held because DOI:10.1007/s10156-004-0327-1 (PMID:15365862) characterizes
-    whole-cell antifungal susceptibility across Trichophyton dermatophytes and Candida
-    species, and the primary dermatophyte target Trichophyton rubrum CYP51 (UniProtKB:F2SHH3)
-    is an unreviewed TrEMBL entry with no reviewed Swiss-Prot accession.
+  reason: Held because DOI:10.1007/s10156-004-0327-1 (PMID:15365862) characterizes whole-cell
+    antifungal susceptibility across Trichophyton dermatophytes and Candida species, and the
+    primary dermatophyte target Trichophyton rubrum CYP51 (UniProtKB:F2SHH3) is an unreviewed
+    TrEMBL entry with no reviewed Swiss-Prot accession.
 - identifier: CHEBI:48480
   label: thermorubin A
   path: data/antibiotics/antibacterial/thermorubin-a.yaml
   scope: molecular_targets
-  target_label: bacterial 70S ribosome intersubunit bridge B2a (16S rRNA helix 44
-    / 23S rRNA helix 69)
+  target_label: bacterial 70S ribosome intersubunit bridge B2a (16S rRNA helix 44 / 23S rRNA
+    helix 69)
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: DOI:10.1093/nar/gkac1189
   reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 70S ribosome intersubunit
-    bridge B2a (16S rRNA helix 44 / 23S rRNA helix 69); DOI:10.1093/nar/gkac1189)
-    where the primary mechanism acts on 16S/23S rRNA at bridge B2a (PDB:4V8A) without
-    a single primary target protein accession in the cited study.
+    bridge B2a (16S rRNA helix 44 / 23S rRNA helix 69); DOI:10.1093/nar/gkac1189) where the
+    primary mechanism acts on 16S/23S rRNA at bridge B2a (PDB:4V8A) without a single primary
+    target protein accession in the cited study.
 - identifier: CHEBI:28429
   label: (2R,3R)-dihydromyricetin
   path: data/antibiotics/antibacterial/2r-3r-dihydromyricetin.yaml
@@ -2538,9 +2501,9 @@ held_targets:
   target_label: Streptococcus agalactiae cell envelope and biofilm matrix
   target_type: MEMBRANE
   target_reference: DOI:10.1177/15353141261501298
-  reason: 'Non-protein molecular target (target_type=MEMBRANE: Streptococcus agalactiae
-    cell envelope and biofilm matrix); protein_examples are restricted to protein-containing
-    target types.'
+  reason: 'Non-protein molecular target (target_type=MEMBRANE: Streptococcus agalactiae cell
+    envelope and biofilm matrix); protein_examples are restricted to protein-containing target
+    types.'
 - identifier: CHEBI:228412
   label: 6-methylflavone
   path: data/antibiotics/antibacterial/6-methylflavone.yaml
@@ -2548,9 +2511,9 @@ held_targets:
   target_label: Mycobacterium abscessus membrane potential and respiratory energetics
   target_type: BIOLOGICAL_PROCESS
   target_reference: DOI:10.1128/spectrum.03588-25
-  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: Mycobacterium
-    abscessus membrane potential and respiratory energetics); protein_examples are
-    restricted to protein-containing target types.'
+  reason: 'Non-protein molecular target (target_type=BIOLOGICAL_PROCESS: Mycobacterium abscessus
+    membrane potential and respiratory energetics); protein_examples are restricted to protein-containing
+    target types.'
 - identifier: antibioticmech:curator-fd1c955758
   label: ibrexafungerp
   path: data/antibiotics/antifungal/ibrexafungerp.yaml
@@ -2558,22 +2521,21 @@ held_targets:
   target_label: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2)
   target_type: PROTEIN_COMPLEX
   target_reference: DOI:10.1093/mmy/myac049
-  reason: Held because the Candida albicans SC5314 (UniProtKB:A0A1D8PCT0 / O13428)
-    and Candida glabrata CBS 138 (UniProtKB:Q6FKT2 / Q6FNB2) 1,3-beta-glucan synthase
-    catalytic subunits Fks1/Fks2 in the target Candida species of DOI:10.1093/mmy/myac049
-    (PMID:35816437) are unreviewed TrEMBL entries with no reviewed Swiss-Prot accession.
+  reason: Held because the Candida albicans SC5314 (UniProtKB:A0A1D8PCT0 / O13428) and Candida
+    glabrata CBS 138 (UniProtKB:Q6FKT2 / Q6FNB2) 1,3-beta-glucan synthase catalytic subunits
+    Fks1/Fks2 in the target Candida species of DOI:10.1093/mmy/myac049 (PMID:35816437) are unreviewed
+    TrEMBL entries with no reviewed Swiss-Prot accession.
 - identifier: antibioticmech:curator-18f8e84826
   label: olorofim
   path: data/antibiotics/antifungal/olorofim.yaml
   scope: molecular_targets
-  target_label: Aspergillus fumigatus mitochondrial dihydroorotate dehydrogenase (DHODH
-    / PyrE)
+  target_label: Aspergillus fumigatus mitochondrial dihydroorotate dehydrogenase (DHODH / PyrE)
   target_type: PROTEIN
   target_reference: DOI:10.1128/aac.00307-23
-  reason: Held because the Aspergillus fumigatus Af293 mitochondrial dihydroorotate
-    dehydrogenase PyrE (AFUA_2G11060, UniProtKB:Q4W9Z2) directly inhibited by olorofim
-    (F901318, IC50 = 44 nM; DOI:10.1128/aac.00307-23; PMID:27791100) is an unreviewed
-    TrEMBL entry with no reviewed Swiss-Prot accession.
+  reason: Held because the Aspergillus fumigatus Af293 mitochondrial dihydroorotate dehydrogenase
+    PyrE (AFUA_2G11060, UniProtKB:Q4W9Z2) directly inhibited by olorofim (F901318, IC50 = 44
+    nM; DOI:10.1128/aac.00307-23; PMID:27791100) is an unreviewed TrEMBL entry with no reviewed
+    Swiss-Prot accession.
 - identifier: antibioticmech:curator-494fdc6ed8
   label: nilofabicin
   path: data/antibiotics/antibacterial/nilofabicin.yaml
@@ -2582,10 +2544,10 @@ held_targets:
   target_type: PROTEIN
   target_reference: DOI:10.1093/jac/dkm236
   reason: Held because DOI:10.1093/jac/dkm236 (PMID:17606482) evaluated clinical Staphylococcus
-    aureus isolates and selected FabI Phe204Leu resistance mutants without pinning
-    a single reviewed Swiss-Prot S. aureus strain proteome accession between NCTC
-    8325 (UniProtKB:Q2FZQ3) and MRSA252 (UniProtKB:Q6GI75), and the published CG400549
-    cocrystal (PDB:4CV2, PMID:24564362) used heterologous Escherichia coli FabI (UniProtKB:P0AEK4).
+    aureus isolates and selected FabI Phe204Leu resistance mutants without pinning a single
+    reviewed Swiss-Prot S. aureus strain proteome accession between NCTC 8325 (UniProtKB:Q2FZQ3)
+    and MRSA252 (UniProtKB:Q6GI75), and the published CG400549 cocrystal (PDB:4CV2, PMID:24564362)
+    used heterologous Escherichia coli FabI (UniProtKB:P0AEK4).
 - identifier: CHEBI:198310
   label: negamycin
   path: data/antibiotics/antibacterial/negamycin.yaml
@@ -2593,23 +2555,21 @@ held_targets:
   target_label: bacterial 30S ribosomal subunit head domain (16S rRNA helix 34)
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: DOI:10.1073/pnas.1414401111
-  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal
-    subunit head domain (16S rRNA helix 34); DOI:10.1073/pnas.1414401111; PMID:25368144;
-    PDB:4W2I) where the primary mechanism acts on 16S rRNA helix 34 and the A-site
-    tRNA anticodon stem-loop without a primary target protein accession.
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal subunit head
+    domain (16S rRNA helix 34); DOI:10.1073/pnas.1414401111; PMID:25368144; PDB:4W2I) where
+    the primary mechanism acts on 16S rRNA helix 34 and the A-site tRNA anticodon stem-loop
+    without a primary target protein accession.
 - identifier: antibioticmech:curator-7e608b0982
   label: amicoumacin A
   path: data/antibiotics/antibacterial/amicoumacin-a.yaml
   scope: molecular_targets
-  target_label: bacterial 30S ribosomal subunit E-site mRNA channel (16S rRNA helix
-    24)
+  target_label: bacterial 30S ribosomal subunit E-site mRNA channel (16S rRNA helix 24)
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: DOI:10.1016/j.molcel.2014.09.020
-  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal
-    subunit E-site mRNA channel (16S rRNA helix 24); DOI:10.1016/j.molcel.2014.09.020;
-    PMID:25306919; PDB:4W2F) where the primary mechanism acts on conserved 16S rRNA
-    nucleotides in helix 24 / helix 23 and the E-site mRNA backbone without a primary
-    target protein accession.
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal subunit E-site
+    mRNA channel (16S rRNA helix 24); DOI:10.1016/j.molcel.2014.09.020; PMID:25306919; PDB:4W2F)
+    where the primary mechanism acts on conserved 16S rRNA nucleotides in helix 24 / helix 23
+    and the E-site mRNA backbone without a primary target protein accession.
 - identifier: antibioticmech:curator-975acd7c4d
   label: cadazolid
   path: data/antibiotics/antibacterial/cadazolid.yaml
@@ -2617,33 +2577,32 @@ held_targets:
   target_label: bacterial 50S ribosomal subunit peptidyl-transferase center
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: DOI:10.1093/jac/dkt411
-  reason: Held because bacterial 50S ribosomal subunit peptidyl-transferase center
-    is a multi-rRNA/multi-protein ribonucleoprotein particle (23S rRNA domain V peptidyl-transferase
-    center) rather than a single polypeptide target in DOI:10.1093/jac/dkt411 (PMID:24128668).
+  reason: Held because bacterial 50S ribosomal subunit peptidyl-transferase center is a multi-rRNA/multi-protein
+    ribonucleoprotein particle (23S rRNA domain V peptidyl-transferase center) rather than a
+    single polypeptide target in DOI:10.1093/jac/dkt411 (PMID:24128668).
 - identifier: antibioticmech:curator-a739fc0555
   label: radezolid
   path: data/antibiotics/antibacterial/radezolid.yaml
   scope: molecular_targets
-  target_label: bacterial 50S ribosomal subunit peptidyl-transferase center (23S rRNA
-    domain V)
+  target_label: bacterial 50S ribosomal subunit peptidyl-transferase center (23S rRNA domain
+    V)
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: DOI:10.1128/AAC.00962-09
-  reason: Held because bacterial 50S ribosomal subunit peptidyl-transferase center
-    (23S rRNA domain V) is a multi-rRNA/multi-protein ribonucleoprotein particle whose
-    primary oxazolidinone contact is 23S rRNA rather than a single polypeptide target
-    (DOI:10.1128/AAC.00962-09; PMID:19752277; PMID:18663023).
+  reason: Held because bacterial 50S ribosomal subunit peptidyl-transferase center (23S rRNA
+    domain V) is a multi-rRNA/multi-protein ribonucleoprotein particle whose primary oxazolidinone
+    contact is 23S rRNA rather than a single polypeptide target (DOI:10.1128/AAC.00962-09; PMID:19752277;
+    PMID:18663023).
 - identifier: antibioticmech:curator-f56d459cee
   label: sutezolid
   path: data/antibiotics/antibacterial/sutezolid.yaml
   scope: molecular_targets
-  target_label: mycobacterial 50S ribosomal subunit peptidyl-transferase center (23S
-    rRNA)
+  target_label: mycobacterial 50S ribosomal subunit peptidyl-transferase center (23S rRNA)
   target_type: RIBOSOMAL_SUBUNIT
   target_reference: DOI:10.1128/AAC.01182-08
-  reason: Held because mycobacterial 50S ribosomal subunit peptidyl-transferase center
-    (23S rRNA) is a multi-rRNA/multi-protein ribonucleoprotein particle whose primary
-    oxazolidinone binding site is 23S rRNA rather than a single polypeptide target
-    (DOI:10.1128/AAC.01182-08; PMID:19075058).
+  reason: Held because mycobacterial 50S ribosomal subunit peptidyl-transferase center (23S
+    rRNA) is a multi-rRNA/multi-protein ribonucleoprotein particle whose primary oxazolidinone
+    binding site is 23S rRNA rather than a single polypeptide target (DOI:10.1128/AAC.01182-08;
+    PMID:19075058).
 - identifier: antibioticmech:curator-daae3d88a3
   label: sanfetrinem
   path: data/antibiotics/antibacterial/sanfetrinem.yaml
@@ -2651,11 +2610,10 @@ held_targets:
   target_label: bacterial penicillin-binding proteins (PBPs)
   target_type: PROTEIN
   target_reference: DOI:10.1128/AAC.40.9.2142
-  reason: Held because DOI:10.1128/AAC.40.9.2142 (PMID:8878596) and Di Modugno et
-    al. 1994 (DOI:10.1128/AAC.38.10.2362; PMID:7840571) characterize multi-paralog
-    penicillin-binding protein (PBP1a, PBP1b, PBP2, PBP3) acylation across multiple
-    Gram-positive and Gram-negative species without a single primary cocrystal or
-    single-paralog UniProtKB accession.
+  reason: Held because DOI:10.1128/AAC.40.9.2142 (PMID:8878596) and Di Modugno et al. 1994 (DOI:10.1128/AAC.38.10.2362;
+    PMID:7840571) characterize multi-paralog penicillin-binding protein (PBP1a, PBP1b, PBP2,
+    PBP3) acylation across multiple Gram-positive and Gram-negative species without a single
+    primary cocrystal or single-paralog UniProtKB accession.
 - identifier: antibioticmech:curator-e14f58e6dc
   label: tomopenem
   path: data/antibiotics/antibacterial/tomopenem.yaml
@@ -2664,11 +2622,10 @@ held_targets:
     aeruginosa PBPs)
   target_type: PROTEIN
   target_reference: DOI:10.1128/AAC.49.8.3239-3250.2005
-  reason: Held because DOI:10.1128/AAC.49.8.3239-3250.2005 (PMID:16048932) and Koga
-    et al. 2008 (PMID:18070969) assay multi-paralog PBP binding across clinical methicillin-resistant
-    Staphylococcus aureus (PBP2a/mecA and PBP1-PBP4) and Pseudomonas aeruginosa (PBP1a,
-    PBP1b, PBP2, PBP3) isolates without pinning a single reviewed Swiss-Prot strain
-    proteome accession.
+  reason: Held because DOI:10.1128/AAC.49.8.3239-3250.2005 (PMID:16048932) and Koga et al. 2008
+    (PMID:18070969) assay multi-paralog PBP binding across clinical methicillin-resistant Staphylococcus
+    aureus (PBP2a/mecA and PBP1-PBP4) and Pseudomonas aeruginosa (PBP1a, PBP1b, PBP2, PBP3)
+    isolates without pinning a single reviewed Swiss-Prot strain proteome accession.
 - identifier: antibioticmech:curator-217ed2935e
   label: quilseconazole
   path: data/antibiotics/antifungal/quilseconazole.yaml
@@ -2676,16 +2633,24 @@ held_targets:
   target_label: fungal lanosterol 14-alpha-demethylase (CYP51 / Erg11)
   target_type: PROTEIN
   target_reference: DOI:10.1128/AAC.02770-15
-  reason: Held because DOI:10.1128/AAC.02770-15 (PMID:26787697) and Warrilow et al.
-    2016 (DOI:10.1128/AAC.00349-16; PMID:27161862) assay Cryptococcus neoformans and
-    Cryptococcus gattii sterol 14-alpha-demethylase (CYP51 / Erg11), where C. neoformans
-    CYP51 (UniProtKB:Q9UVX5) is unreviewed TrEMBL and no reviewed Swiss-Prot Cryptococcus
-    CYP51 accession is available.
+  reason: Held because DOI:10.1128/AAC.02770-15 (PMID:26787697) and Warrilow et al. 2016 (DOI:10.1128/AAC.00349-16;
+    PMID:27161862) assay Cryptococcus neoformans and Cryptococcus gattii sterol 14-alpha-demethylase
+    (CYP51 / Erg11), where C. neoformans CYP51 (UniProtKB:Q9UVX5) is unreviewed TrEMBL and no
+    reviewed Swiss-Prot Cryptococcus CYP51 accession is available.
 - identifier: CHEBI:198310
   label: negamycin
   path: data/antibiotics/antibacterial/negamycin.yaml
   scope: causal_graphs
   graph_id: negamycin_30s_helix_34_miscoding_and_stalling
-  reason: Causal graph negamycin_30s_helix_34_miscoding_and_stalling contains only
-    non-protein node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and
-    has no GENE_OR_PROTEIN nodes.
+  reason: Causal graph negamycin_30s_helix_34_miscoding_and_stalling contains only non-protein
+    node types (BIOLOGICAL_PROCESS, CELL_STRUCTURE, COMPOUND, STATE) and has no GENE_OR_PROTEIN
+    nodes.
+- identifier: antibioticmech:curator-f930ec8d19
+  label: collismycin A
+  path: data/antibiotics/antibacterial/collismycin-a.yaml
+  scope: molecular_targets
+  target_label: intracellular labile iron (Fe2+/Fe3+) cofactor pool
+  target_type: OTHER
+  target_reference: DOI:10.1016/j.chembiol.2012.01.014
+  reason: 'Non-protein molecular target (target_type=OTHER: intracellular labile iron (Fe2+/Fe3+)
+    cofactor pool); protein_examples are restricted to protein-containing target types.'

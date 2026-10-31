@@ -32,7 +32,7 @@ source_concepts:
       pam gene cluster, which exhibits antibacterial activity against Gram-positive
       bacteria (Staphylococcus aureus, Bacillus subtilis) and mycobacteria.
     notes: Reported by Natsume et al. 1995 (J Antibiot 48:1159-1164; DOI:10.7164/antibiotics.48.1159)
-      and Glaser et al. 2023 (Microb Cell Fact 22:182; PMID:37705018) as a 663 Da
+      and Glaser et al. 2023 (Microb Cell Fact 22:182; PMID:37964282) as a 663 Da
       16-membered macrodiolide polyketide antibiotic from the Streptomyces alboniger
       pam biosynthetic pathway. MIBiG 4.0.1 entry BGC0001150 supplies the stereo-complete
       SMILES, Standard InChI, and InChIKey.
@@ -69,5 +69,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

@@ -34,7 +34,7 @@ source_concepts:
       A from Pseudomonas sp. QS1027 and demonstrated strong antifungal activity against
       Candida albicans and Botrytis cinerea alongside potent amoebicidal activity
       against Dictyostelium discoideum.
-    notes: Reported by Gotze et al. 2023 (J Am Chem Soc 145:2342-2353; PMID:36649592)
+    notes: Reported by Gotze et al. 2023 (J Am Chem Soc 145:2342-2353; PMID:36669196)
       as a chlorinated cyclic lipodepsipeptide congener from Pseudomonas sp. QS1027
       with potent antifungal and amoebicidal activity. MIBiG 4.0.1 entry BGC0002765
       supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
@@ -68,5 +68,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

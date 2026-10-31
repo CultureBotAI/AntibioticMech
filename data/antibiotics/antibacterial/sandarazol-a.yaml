@@ -34,7 +34,7 @@ source_concepts:
       sandarazols A-G from the myxobacterium Sandaracinus sp. MSr10575 and reported
       potent antibacterial activity against Gram-positive bacteria including Staphylococcus
       aureus, Bacillus subtilis, and Mycobacterium smegmatis.
-    notes: Reported by Panter et al. 2021 (Angew Chem Int Ed 60:5595-5602; PMID:33290612)
+    notes: Reported by Panter et al. 2021 (Angew Chem Int Ed 60:5595-5602; PMID:33534143)
       as an alpha,beta-epoxy-ketone tetramic-acid (pyrrol-2-one) polyketide-peptide
       hybrid antibiotic from Sandaracinus sp. MSr10575 with potent anti-Gram-positive
       and antimycobacterial activity. MIBiG 4.0.1 entry BGC0002114, ChEBI CHEBI:221929,
@@ -71,5 +71,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

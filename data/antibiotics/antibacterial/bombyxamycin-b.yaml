@@ -33,7 +33,7 @@ source_concepts:
       B from a silkworm-gut-associated Streptomyces sp. SD53 and reported potent antibacterial
       activity against Bacillus subtilis, Staphylococcus aureus, and Enterococcus
       faecalis (MIC 0.5-2 ug/mL).
-    notes: Reported by Shin et al. 2019 (Org Lett 21:1804-1808; PMID:30817155) as
+    notes: Reported by Shin et al. 2019 (Org Lett 21:1804-1808; PMID:30801193) as
       a polyene 26-membered macrolactam polyketide antibiotic from insect-associated
       Streptomyces sp. SD53 with anti-Gram-positive antibacterial activity. MIBiG
       4.0.1 entry BGC0002376, ChEBI CHEBI:209586, and PubChem CID 146683175 supply
@@ -69,5 +69,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

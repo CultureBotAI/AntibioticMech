@@ -33,7 +33,7 @@ source_concepts:
       neoformans (MIC = 1 ug/mL) and Candida albicans (MIC = 8 ug/mL), with no antibacterial
       activity against Staphylococcus aureus, Bacillus subtilis, Escherichia coli,
       or Pseudomonas aeruginosa up to 64 ug/mL.
-    notes: Reported by Sun et al. 2023 (ACS Chem Biol 18:1926-1934; PMID:37556791)
+    notes: Reported by Sun et al. 2023 (ACS Chem Biol 18:1926-1934; PMID:37498707)
       as a 16-membered plecomacrolide (bafilomycin-like) polyketide macrolide glycoside
       from Nocardia terpenica AUSMDU00012715 with selective antifungal activity against
       Cryptococcus neoformans and Candida albicans. MIBiG 4.0.1 entry BGC0002816 supplies
@@ -67,5 +67,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

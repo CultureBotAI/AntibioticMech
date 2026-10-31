@@ -34,7 +34,7 @@ source_concepts:
       of the 16-membered macrodiolide antibiotic pamamycin-649B from Streptomyces
       alboniger, confirming its antibacterial activity against Gram-positive bacteria
       (Bacillus subtilis) and mycobacteria.
-    notes: Reported by Renner et al. 2011 (Chem Eur J 17:9497-9504; PMID:21735494)
+    notes: Reported by Renner et al. 2011 (Chem Eur J 17:9497-9504; PMID:22012748)
       and Natsume et al. 1995 (J Antibiot 48:1159-1164; DOI:10.7164/antibiotics.48.1159)
       as a 649 Da 16-membered macrodiolide polyketide antibiotic from Streptomyces
       alboniger. MIBiG 4.0.1 entry BGC0001150, ChEBI CHEBI:198952, and PubChem CID
@@ -72,5 +72,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
