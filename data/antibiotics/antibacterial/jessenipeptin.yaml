@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-dd8510ab40
+identifier: CHEBI:221686
 label: jessenipeptin
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A 19-amino-acid nonribosomal cyclic lipodepsipeptide antibiotic from Pseudomonas
   sp. QS1027 with antibacterial activity against methicillin-resistant Staphylococcus
   aureus.
@@ -19,6 +19,8 @@ chemical_structure:
   charge: 0
   average_mass: 1906.301
   monoisotopic_mass: 1905.0975
+xrefs:
+- pubchem.compound:145720625
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1073/pnas.1721790115#jessenipeptin
@@ -35,8 +37,8 @@ source_concepts:
     notes: Reported by Arp et al. 2018 (Proc Natl Acad Sci U S A 115:3758-3763; PMID:29581294)
       as a 19-residue nonribosomal cyclic lipodepsipeptide antibiotic from Pseudomonas
       sp. QS1027 with potent activity against Staphylococcus aureus and Bacillus subtilis.
-      MIBiG 4.0.1 entry BGC0001629 supplies the stereo-complete SMILES, Standard InChI,
-      and InChIKey.
+      MIBiG 4.0.1 entry BGC0001629, ChEBI CHEBI:221686, and PubChem CID 145720625
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:2056244
@@ -57,7 +59,7 @@ producer_organisms:
       to the compound. It supports that the entry exists; it is NOT established as
       evidence for this specific producer/compound link.
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

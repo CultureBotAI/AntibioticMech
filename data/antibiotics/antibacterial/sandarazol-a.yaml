@@ -1,9 +1,9 @@
-identifier: antibioticmech:curator-c56fef27da
+identifier: CHEBI:221929
 label: sandarazol A
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
-definition: An alpha,beta-epoxy-ketone oxazole-polyketide-peptide hybrid antibiotic
+grounding_status: EXACT
+definition: An alpha,beta-epoxy-ketone tetramic-acid polyketide-peptide hybrid antibiotic
   from the myxobacterium Sandaracinus sp. MSr10575 with anti-Gram-positive and antimycobacterial
   activity.
 definition_source: DOI:10.1002/anie.202014671
@@ -19,6 +19,8 @@ chemical_structure:
   charge: 0
   average_mass: 574.719
   monoisotopic_mass: 574.3366
+xrefs:
+- pubchem.compound:169492395
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1002/anie.202014671#sandarazol-a
@@ -33,10 +35,11 @@ source_concepts:
       potent antibacterial activity against Gram-positive bacteria including Staphylococcus
       aureus, Bacillus subtilis, and Mycobacterium smegmatis.
     notes: Reported by Panter et al. 2021 (Angew Chem Int Ed 60:5595-5602; PMID:33290612)
-      as an alpha,beta-epoxy-ketone oxazole-polyketide-peptide hybrid antibiotic from
-      Sandaracinus sp. MSr10575 with potent anti-Gram-positive and antimycobacterial
-      activity. MIBiG 4.0.1 entry BGC0002114 supplies the stereo-complete SMILES,
-      Standard InChI, and InChIKey.
+      as an alpha,beta-epoxy-ketone tetramic-acid (pyrrol-2-one) polyketide-peptide
+      hybrid antibiotic from Sandaracinus sp. MSr10575 with potent anti-Gram-positive
+      and antimycobacterial activity. MIBiG 4.0.1 entry BGC0002114, ChEBI CHEBI:221929,
+      and PubChem CID 169492395 supply the stereo-complete SMILES, Standard InChI,
+      and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:2024858
@@ -59,7 +62,7 @@ producer_organisms:
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

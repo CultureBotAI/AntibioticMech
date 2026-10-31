@@ -18,6 +18,8 @@ chemical_structure:
   charge: 0
   average_mass: 684.872
   monoisotopic_mass: 684.4309
+xrefs:
+- pubchem.compound:163186155
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1021/acschembio.8b00600#icosalide-b
@@ -31,10 +33,13 @@ source_concepts:
       producing the 20-membered depsipeptide antibiotics icosalide A1 and icosalide
       B, which exhibit antibacterial activity against entomopathogenic bacteria including
       Paenibacillus larvae and Bacillus thuringiensis.
-    notes: Reported by Dose et al. 2018 (ACS Chem Biol 13:2414-2420; PMID:30085650)
+    notes: 'Reported by Dose et al. 2018 (ACS Chem Biol 13:2414-2420; PMID:30085650)
       as a two-chain 20-membered lipocyclodepsipeptide antibiotic biosynthesized by
       the nonribosomal peptide synthetase IcoA in Burkholderia gladioli. MIBiG 4.0.1
-      entry BGC0001833 supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
+      entry BGC0001833 and PubChem CID 163186155 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey (note: ChEBI CHEBI:225982 leaves the two beta-hydroxyacid
+      stereocenters unspecified with InChIKey HZQBTVDHJQJQOP-AVTNHXHSSA-N and is omitted
+      from xrefs).'
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:28095
@@ -54,7 +59,7 @@ producer_organisms:
       to the compound. It supports that the entry exists; it is NOT established as
       evidence for this specific producer/compound link.
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,10 +1,11 @@
-identifier: antibioticmech:curator-c1a9e881e3
+identifier: CHEBI:219761
 label: pyreudione E
 antimicrobial_class: ANTIPROTOZOAL
 curation_status: PROPOSED
-grounding_status: MINTED
-definition: A branched-chain acyl-pyrrolidine-2,4-dione (tetramic acid) natural product
-  from Pseudomonas fluorescens with amoebicidal antiprotozoal activity.
+grounding_status: EXACT
+definition: An unbranched C8-acyl indolizidine-dione (pipecolic-acid-derived tetramic
+  acid) natural product from Pseudomonas fluorescens with amoebicidal antiprotozoal
+  activity.
 definition_source: DOI:10.1016/j.chembiol.2018.02.013
 activity_roles:
 - CHEBI:35717
@@ -27,13 +28,16 @@ source_concepts:
   - CHEBI:35717
   evidence:
   - reference: DOI:10.1016/j.chembiol.2018.02.013
-    snippet: Klapper et al. identified the branched-acyl pyrrolidine-2,4-dione congener
-      pyreudione E from the Pseudomonas fluorescens pyu biosynthetic pathway and demonstrated
-      its role in the amoebicidal defense cocktail against predatory amoebae.
-    notes: Reported by Klapper et al. 2018 (Cell Chem Biol 25:659-665; PMID:29576533)
-      as an amoebicidal acyl-pyrrolidine-2,4-dione congener produced by the pyu PKS-NRPS
-      synthetase in Pseudomonas fluorescens. MIBiG 4.0.1 entry BGC0002075 supplies
-      the stereo-complete SMILES, Standard InChI, and InChIKey.
+    snippet: Klapper et al. identified the unbranched C8-acyl indolizidine-dione (pipecolic-acid-derived
+      tetramic acid) congener pyreudione E from the Pseudomonas fluorescens pyu biosynthetic
+      pathway and demonstrated its role in the amoebicidal defense cocktail against
+      predatory amoebae.
+    notes: 'Reported by Klapper et al. 2018 (Cell Chem Biol 25:659-665; PMID:29576533)
+      as an amoebicidal unbranched C8-acyl indolizidine-dione (pipecolic-acid-derived
+      tetramic acid) congener produced by the pyu PKS-NRPS synthetase in Pseudomonas
+      fluorescens. MIBiG 4.0.1 entry BGC0002075 and ChEBI CHEBI:219761 supply the
+      stereo-complete SMILES, Standard InChI, and InChIKey (note: PubChem CID 139591489
+      represents the keto tautomer AWMXYRYUWFPVEX-GOSISDBHSA-N).'
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:294
@@ -57,7 +61,7 @@ producer_organisms:
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

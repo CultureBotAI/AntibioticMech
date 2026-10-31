@@ -1,13 +1,12 @@
 identifier: antibioticmech:curator-1a87511d60
 label: terpenomycin
-antimicrobial_class: ANTIBACTERIAL
+antimicrobial_class: ANTIFUNGAL
 curation_status: PROPOSED
 grounding_status: MINTED
-definition: A 36-membered macrocyclic polyketide lactone antibiotic from Nocardia
-  terpenica with antibacterial and antifungal activity.
+definition: A 16-membered plecomacrolide polyketide glycoside from Nocardia terpenica
+  with selective antifungal activity against Cryptococcus neoformans and Candida albicans.
 definition_source: DOI:10.1021/acschembio.3c00311
 activity_roles:
-- CHEBI:33282
 - CHEBI:35718
 chemical_structure:
   smiles: O=C(/C(OC)=C/C(C)=C/[C@H]([C@@H](O)[C@H](C)C1)C)O[C@@H]([C@H](/C=C/C=C1\C)OC)[C@H]([C@H]([C@@H]([C@](O)(O[C@@H]2/C=C/C=C/C=C/C=C/C=C/[C@H]([C@H](COC)O)C)C[C@H]([C@@H]2C)O[C@@H]3O[C@@H]([C@H]([C@@H](C3)O)O)C)C)O)C
@@ -25,18 +24,20 @@ source_concepts:
   source_label: terpenomycin
   minted_identifier: antibioticmech:curator-1a87511d60
   role_terms:
-  - CHEBI:33282
   - CHEBI:35718
   evidence:
   - reference: DOI:10.1021/acschembio.3c00311
-    snippet: Sun et al. discovered the 36-membered polyketide macrolide antibiotic
-      terpenomycin from clinical Nocardia terpenica AUSMDU00012715 and reported potent
-      antibacterial activity against Staphylococcus aureus and Bacillus subtilis alongside
-      antifungal activity against Candida albicans and Cryptococcus neoformans.
+    snippet: Sun et al. discovered the 16-membered plecomacrolide (bafilomycin-type
+      polyketide macrolide) glycoside terpenomycin from clinical Nocardia terpenica
+      AUSMDU00012715 and reported potent antifungal activity against Cryptococcus
+      neoformans (MIC = 1 ug/mL) and Candida albicans (MIC = 8 ug/mL), with no antibacterial
+      activity against Staphylococcus aureus, Bacillus subtilis, Escherichia coli,
+      or Pseudomonas aeruginosa up to 64 ug/mL.
     notes: Reported by Sun et al. 2023 (ACS Chem Biol 18:1926-1934; PMID:37556791)
-      as a 36-membered macrocyclic polyketide lactone antibiotic from Nocardia terpenica
-      AUSMDU00012715 with antibacterial and antifungal activity. MIBiG 4.0.1 entry
-      BGC0002816 supplies the stereo-complete SMILES, Standard InChI, and InChIKey.
+      as a 16-membered plecomacrolide (bafilomycin-like) polyketide macrolide glycoside
+      from Nocardia terpenica AUSMDU00012715 with selective antifungal activity against
+      Cryptococcus neoformans and Candida albicans. MIBiG 4.0.1 entry BGC0002816 supplies
+      the stereo-complete SMILES, Standard InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:455432
@@ -57,7 +58,7 @@ producer_organisms:
       to the compound. It supports that the entry exists; it is NOT established as
       evidence for this specific producer/compound link.
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

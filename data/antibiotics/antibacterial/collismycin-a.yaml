@@ -26,6 +26,8 @@ chemical_structure:
   charge: 0
   average_mass: 275.333
   monoisotopic_mass: 275.0728
+xrefs:
+- pubchem.compound:5492094
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1016/j.chembiol.2012.01.014#collismycin-a
@@ -40,12 +42,13 @@ source_concepts:
       2,2'-bipyridyl antibiotic collismycin A in Streptomyces sp. CS40, which exhibits
       iron-chelating antibacterial and antifungal activity against Gram-positive and
       Gram-negative bacteria and fungi.
-    notes: Reported by Garcia et al. 2012 (Chem Biol 19:399-408; PMID:22444595) and
+    notes: 'Reported by Garcia et al. 2012 (Chem Biol 19:399-408; PMID:22444595) and
       Shindo et al. 1994 (J Antibiot 47:1072-1074; DOI:10.7164/antibiotics.47.1072)
-      as a 4-methoxy-5-(methylthio)-2,2'-bipyridine-6-carbaldehyde oxime antibiotic
+      as a 4-methoxy-5-(methylthio)-2,2''-bipyridine-6-carbaldehyde oxime antibiotic
       (SF2738A) from Streptomyces sp. CS40 with antibacterial and antifungal activity.
-      MIBiG 4.0.1 entry BGC0000973 supplies the stereo-complete SMILES, Standard InChI,
-      and InChIKey.
+      MIBiG 4.0.1 entry BGC0000973 and PubChem CID 5492094 supply the stereo-complete
+      SMILES, Standard InChI, and InChIKey (note: ChEBI CHEBI:221051 carries a different
+      formula/InChIKey NQGMIPUYCWIEAW-OVCLIPMQSA-N and is therefore not cross-referenced).'
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:1068630
@@ -68,7 +71,7 @@ producer_organisms:
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

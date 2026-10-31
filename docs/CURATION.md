@@ -208,7 +208,7 @@ citation or a characterized MIBiG BGC accession. Two distinctions carry weight:
   which the experiment followed. Nor are those compounds necessarily congeners:
   one MIBiG entry lists a tripeptide precursor, an intermediate and a finished
   penicillin under a single enzymatic-assay grading. `link_evidence_scope` records which case a claim is in, and
-  53 of the 104 seeded assertions are the weaker one. Read it before trusting
+  46 of the 96 seeded assertions are the weaker one. Read it before trusting
   `link_evidence` about a particular molecule.
 - *How the link was established matters, and is separate from who reviewed it.*
   `link_evidence` carries the source's own grading of the compound-to-producer

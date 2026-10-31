@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-d4a61b55fd
+identifier: CHEBI:198952
 label: pamamycin-649B
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A 16-membered macrodiolide polyketide antibiotic (649 Da B-congener) from
   Streptomyces alboniger with antibacterial activity against Gram-positive bacteria
   and mycobacteria.
@@ -19,6 +19,8 @@ chemical_structure:
   charge: 0
   average_mass: 649.954
   monoisotopic_mass: 649.4918
+xrefs:
+- pubchem.compound:15694393
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1002/chem.201102093#pamamycin-649b
@@ -30,12 +32,13 @@ source_concepts:
   - reference: DOI:10.1002/chem.201102093
     snippet: Renner et al. completed the total synthesis and stereochemical assignment
       of the 16-membered macrodiolide antibiotic pamamycin-649B from Streptomyces
-      alboniger, confirming its antimicrobial activity against Gram-positive bacteria
-      and fungi.
+      alboniger, confirming its antibacterial activity against Gram-positive bacteria
+      (Bacillus subtilis) and mycobacteria.
     notes: Reported by Renner et al. 2011 (Chem Eur J 17:9497-9504; PMID:21735494)
+      and Natsume et al. 1995 (J Antibiot 48:1159-1164; DOI:10.7164/antibiotics.48.1159)
       as a 649 Da 16-membered macrodiolide polyketide antibiotic from Streptomyces
-      alboniger. MIBiG 4.0.1 entry BGC0001150 supplies the stereo-complete SMILES,
-      Standard InChI, and InChIKey.
+      alboniger. MIBiG 4.0.1 entry BGC0001150, ChEBI CHEBI:198952, and PubChem CID
+      15694393 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:132473
@@ -60,7 +63,7 @@ producer_organisms:
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

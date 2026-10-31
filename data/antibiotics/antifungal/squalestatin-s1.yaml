@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-a879e21f55
+identifier: CHEBI:220211
 label: squalestatin S1
 antimicrobial_class: ANTIFUNGAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A fungal 2,8-dioxabicyclo[3.2.1]octane tricarboxylic acid polyketide (zaragozic
   acid A) from Phoma sp. MF5453 that inhibits squalene synthase and exhibits broad-spectrum
   antifungal activity.
@@ -23,6 +23,8 @@ chemical_structure:
   charge: 0
   average_mass: 674.74
   monoisotopic_mass: 674.2938
+xrefs:
+- pubchem.compound:139586329
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1039/c6cc02130a#squalestatin-s1
@@ -40,8 +42,8 @@ source_concepts:
       and Dawson et al. 1992 (J Antibiot 45:639-647; DOI:10.7164/antibiotics.45.639)
       as a 2,8-dioxabicyclo[3.2.1]octane-3,4,5-tricarboxylic acid fungal polyketide
       (zaragozic acid A) that potently inhibits fungal squalene synthase and ergosterol
-      biosynthesis. MIBiG 4.0.1 entry BGC0001339 supplies the stereo-complete SMILES,
-      Standard InChI, and InChIKey.
+      biosynthesis. MIBiG 4.0.1 entry BGC0001339, ChEBI CHEBI:220211, and PubChem
+      CID 139586329 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:1828523
@@ -64,7 +66,7 @@ producer_organisms:
       to the compound. It supports that the entry exists; it is NOT established as
       evidence for this specific producer/compound link.
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

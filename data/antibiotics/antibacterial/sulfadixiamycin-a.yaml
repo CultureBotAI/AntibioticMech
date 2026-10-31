@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-e3d39cf00c
+identifier: CHEBI:211061
 label: sulfadixiamycin A
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: An atropisomeric sulfonyl-bridged indolosesquiterpene dimer from the Streptomyces
   xiamycin biosynthetic pathway with antibacterial activity against mycobacteria and
   Gram-positive pathogens.
@@ -19,6 +19,8 @@ chemical_structure:
   charge: 0
   average_mass: 788.963
   monoisotopic_mass: 788.3131
+xrefs:
+- pubchem.compound:156580494
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1002/anie.201506541#sulfadixiamycin-a
@@ -36,8 +38,9 @@ source_concepts:
     notes: Reported by Baunach et al. 2015 (Angew Chem Int Ed 54:9042-9045; PMID:26079580)
       as a diaryl-sulfone-bridged xiamycin dimer produced via the Streptomyces sp.
       HKI0576 xia biosynthetic pathway with potent antibacterial activity against
-      Gram-positive bacteria and mycobacteria. MIBiG 4.0.1 entry BGC0000665 supplies
-      the stereo-complete SMILES, Standard InChI, and InChIKey.
+      Gram-positive bacteria and mycobacteria. MIBiG 4.0.1 entry BGC0000665, ChEBI
+      CHEBI:211061, and PubChem CID 156580494 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:995841
@@ -63,7 +66,7 @@ producer_organisms:
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

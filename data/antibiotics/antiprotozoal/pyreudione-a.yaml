@@ -3,8 +3,8 @@ label: pyreudione A
 antimicrobial_class: ANTIPROTOZOAL
 curation_status: PROPOSED
 grounding_status: MINTED
-definition: An acyl-pyrrolidine-2,4-dione (tetramic acid) natural product from Pseudomonas
-  fluorescens with amoebicidal antiprotozoal activity.
+definition: A bicyclic C9-acyl pyrrolizidine-dione (proline-derived tetramic acid)
+  natural product from Pseudomonas fluorescens with amoebicidal antiprotozoal activity.
 definition_source: DOI:10.1002/anie.201603312
 activity_roles:
 - CHEBI:35717
@@ -31,11 +31,13 @@ source_concepts:
       A-D from Pseudomonas fluorescens HKI0770 and demonstrated potent amoebicidal
       (antiprotozoal) activity that protects the bacterium from predation by Dictyostelium
       discoideum and other social amoebae.
-    notes: Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27294787)
-      as a nonribosomal-peptide-polyketide hybrid N-methylpyrrolidine-2,4-dione (tetramic
-      acid) alkaloid from Pseudomonas fluorescens HKI0770 with amoebicidal antiprotozoal
-      activity. MIBiG 4.0.1 entry BGC0002075 supplies the stereo-complete SMILES,
-      Standard InChI, and InChIKey.
+    notes: 'Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27294787)
+      as a nonribosomal-peptide-polyketide hybrid bicyclic pyrrolizidine-dione (proline-derived
+      tetramic acid) alkaloid from Pseudomonas fluorescens HKI0770 with amoebicidal
+      antiprotozoal activity. MIBiG 4.0.1 entry BGC0002075 supplies the stereo-complete
+      enol-tautomer SMILES, Standard InChI, and InChIKey DYKFVBYZRCAGFI-IBPBOOLHSA-N
+      (note: ChEBI CHEBI:219377 and PubChem CID 139590273 represent the keto tautomer
+      JZPKLLDQFZFZST-VIFPVBQESA-N).'
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:294
@@ -59,7 +61,7 @@ producer_organisms:
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

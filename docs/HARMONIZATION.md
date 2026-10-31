@@ -306,8 +306,8 @@ the judgement to a curator.
 ## Producer organisms
 
 `producer_organisms` remains one of the corpus's emptiest axes. Of the
-corpus's 3,050, only 100 records carry a producer at all:
-97 records carry one from the MIBiG import, and three
+corpus's 3,042, only 92 records carry a producer at all:
+89 records carry one from the MIBiG import, and three
 come from primary-literature curation. The MIBiG share is admitted on MIBiG's own per-locus link evidence —
 heterologous expression, knock-out studies, enzymatic assays, gene expression
 correlated with production — rather than on its changelog reviewer field, which

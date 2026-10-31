@@ -3,8 +3,9 @@ label: pyreudione D
 antimicrobial_class: ANTIPROTOZOAL
 curation_status: PROPOSED
 grounding_status: MINTED
-definition: A C13-acyl pyrrolidine-2,4-dione (tetramic acid) natural product from
-  Pseudomonas fluorescens with amoebicidal antiprotozoal activity.
+definition: A monounsaturated bicyclic C13-acyl pyrrolizidine-dione (proline-derived
+  tetramic acid) natural product from Pseudomonas fluorescens with amoebicidal antiprotozoal
+  activity.
 definition_source: DOI:10.1002/anie.201603312
 activity_roles:
 - CHEBI:35717
@@ -30,10 +31,11 @@ source_concepts:
     snippet: Klapper et al. isolated the C13-acyl pyrrolidine-2,4-dione congener pyreudione
       D from Pseudomonas fluorescens HKI0770 and demonstrated amoebicidal activity
       against Dictyostelium discoideum.
-    notes: Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27294787)
-      as an amoebicidal C13-acyl pyrrolidine-2,4-dione alkaloid from Pseudomonas fluorescens
-      HKI0770. MIBiG 4.0.1 entry BGC0002075 supplies the stereo-complete SMILES, Standard
-      InChI, and InChIKey.
+    notes: 'Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27294787)
+      as an amoebicidal C13-acyl bicyclic pyrrolizidine-dione alkaloid from Pseudomonas
+      fluorescens HKI0770. MIBiG 4.0.1 entry BGC0002075 supplies the stereo-complete
+      enol-tautomer SMILES, Standard InChI, and InChIKey YIAIGJHLHUVSCX-GVPMYBDDSA-N
+      (note: ChEBI CHEBI:219394 and PubChem CID 139591490 represent the keto tautomer).'
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:294
@@ -57,7 +59,7 @@ producer_organisms:
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv

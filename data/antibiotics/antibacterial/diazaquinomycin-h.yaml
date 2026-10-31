@@ -1,8 +1,8 @@
-identifier: antibioticmech:curator-8bf1154898
+identifier: CHEBI:199753
 label: diazaquinomycin H
 antimicrobial_class: ANTIBACTERIAL
 curation_status: PROPOSED
-grounding_status: MINTED
+grounding_status: EXACT
 definition: A 1,8-diazaanthraquinone alkaloid antibiotic from Micromonospora sp. B006
   with selective antitubercular activity against Mycobacterium tuberculosis.
 definition_source: DOI:10.1021/acs.jnatprod.8b00394
@@ -22,6 +22,8 @@ chemical_structure:
   charge: 0
   average_mass: 382.46
   monoisotopic_mass: 382.1893
+xrefs:
+- pubchem.compound:134815171
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1021/acs.jnatprod.8b00394#diazaquinomycin-h
@@ -38,7 +40,8 @@ source_concepts:
     notes: Reported by Mullowney et al. 2018 (J Nat Prod 81:2280-2287; PMID:30256108)
       as a 1,8-diazaanthraquinone antibiotic from Micromonospora sp. B006 with selective
       antimycobacterial activity against Mycobacterium tuberculosis. MIBiG 4.0.1 entry
-      BGC0001848 supplies the SMILES, Standard InChI, and InChIKey.
+      BGC0001848, ChEBI CHEBI:199753, and PubChem CID 134815171 supply the SMILES,
+      Standard InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:2201999
@@ -60,7 +63,7 @@ producer_organisms:
       to the compound. It supports that the entry exists; it is NOT established as
       evidence for this specific producer/compound link.
 curation_history:
-- timestamp: '2026-10-31T10:59:39Z'
+- timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
