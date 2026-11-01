@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 61,
+  "record_count": 62,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -3257,6 +3257,71 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added reviewed Candida albicans SC5314 and Candida glabrata CBS 138 Erg11 (UniProtKB:P10613, UniProtKB:P50859) protein_examples to the primary-literature fungal lanosterol 14-alpha-demethylase target (DOI:10.1128/AAC.45.7.2151-2153.2001; PMID:11408242; PMID:10582896).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:220211",
+      "label": "squalestatin S1",
+      "path": "data/antibiotics/antifungal/squalestatin-s1.yaml",
+      "before_sha256": "13a10040a247595e502478850bb028b129809bd1bd72c8f528a2c94286290a26",
+      "after_sha256": "afee896944bfaba2ec4f799e5365ac27ad8880c1d4bc47829c5c30f8f4b38186",
+      "unchanged_fields_sha256": "1fffc25cace6de4e51b103ffa4d5abbe77513eb3bc74d9bac53e08e3ce688e28",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 3,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "fungal squalene synthase (Erg9)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P78589",
+              "protein_label": "Squalene synthase ERG9",
+              "gene_symbol": "ERG9",
+              "taxon_id": "NCBITaxon:5476",
+              "taxon_label": "Candida albicans",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-31",
+              "role": "Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21) directly inhibited by squalestatin S1 in Candida albicans enzyme assays (IC50 = 5 ng/mL; DOI:10.7164/antibiotics.45.639; PMID:1624366)."
+            },
+            {
+              "uniprot_id": "UniProtKB:A0A1D8PI71",
+              "protein_label": "Squalene synthase ERG9",
+              "gene_symbol": "ERG9",
+              "taxon_id": "NCBITaxon:237561",
+              "taxon_label": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-31",
+              "role": "Reference-proteome Candida albicans SC5314 squalene synthase (Erg9, EC 2.5.1.21) corresponding to the C. albicans enzyme inhibited by squalestatin S1 (DOI:10.7164/antibiotics.45.639; PMID:1624366; DOI:10.1073/pnas.90.1.80; PMID:8419946)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P29704",
+              "protein_label": "Squalene synthase ERG9",
+              "gene_symbol": "ERG9",
+              "taxon_id": "NCBITaxon:559292",
+              "taxon_label": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-10-31",
+              "role": "Reference-proteome Saccharomyces cerevisiae S288c squalene synthase (Erg9, EC 2.5.1.21) inhibited by zaragozic acid A / squalestatin S1 in fungal ergosterol biosynthesis assays (DOI:10.1073/pnas.90.1.80; PMID:8419946)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-10-31T23:05:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Candida albicans, Candida albicans SC5314, and Saccharomyces cerevisiae S288c squalene synthase Erg9 (UniProtKB:P78589, UniProtKB:A0A1D8PI71, UniProtKB:P29704) protein_examples to the primary-literature fungal squalene synthase target (DOI:10.7164/antibiotics.45.639; PMID:1624366; DOI:10.1073/pnas.90.1.80; PMID:8419946).",
         "llm_assisted": true
       }
     }

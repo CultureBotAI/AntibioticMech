@@ -33,7 +33,7 @@ source_concepts:
     snippet: Klapper et al. isolated the unsaturated C11-acyl pyrrolidine-2,4-dione
       congener pyreudione C from Pseudomonas fluorescens HKI0770 and demonstrated
       amoebicidal activity against Dictyostelium discoideum.
-    notes: Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27294787)
+    notes: Reported by Klapper et al. 2016 (Angew Chem Int Ed 55:8944-8949; PMID:27278774)
       as an amoebicidal monounsaturated bicyclic acyl-pyrrolizidine-dione alkaloid
       from Pseudomonas fluorescens HKI0770. MIBiG 4.0.1 entry BGC0002075, ChEBI CHEBI:219389,
       and PubChem CID 139591488 supply the stereo-complete SMILES, Standard InChI,
@@ -70,5 +70,12 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized bibliographic metadata and parenthetical PubMed identifier
+    in source_concepts evidence notes to match the verified PubMed record for the
+    primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

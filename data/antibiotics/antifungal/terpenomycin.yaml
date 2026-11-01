@@ -3,8 +3,8 @@ label: terpenomycin
 antimicrobial_class: ANTIFUNGAL
 curation_status: PROPOSED
 grounding_status: MINTED
-definition: A 16-membered plecomacrolide polyketide glycoside from Nocardia terpenica
-  with selective antifungal activity against Cryptococcus neoformans and Candida albicans.
+definition: A glycosylated polyene macrolide polyketide from Nocardia terpenica with
+  antifungal activity.
 definition_source: DOI:10.1021/acschembio.3c00311
 activity_roles:
 - CHEBI:35718
@@ -27,17 +27,14 @@ source_concepts:
   - CHEBI:35718
   evidence:
   - reference: DOI:10.1021/acschembio.3c00311
-    snippet: Sun et al. discovered the 16-membered plecomacrolide (bafilomycin-type
-      polyketide macrolide) glycoside terpenomycin from clinical Nocardia terpenica
-      AUSMDU00012715 and reported potent antifungal activity against Cryptococcus
-      neoformans (MIC = 1 ug/mL) and Candida albicans (MIC = 8 ug/mL), with no antibacterial
-      activity against Staphylococcus aureus, Bacillus subtilis, Escherichia coli,
-      or Pseudomonas aeruginosa up to 64 ug/mL.
-    notes: Reported by Sun et al. 2023 (ACS Chem Biol 18:1926-1934; PMID:37556791)
-      as a 16-membered plecomacrolide (bafilomycin-like) polyketide macrolide glycoside
-      from Nocardia terpenica AUSMDU00012715 with selective antifungal activity against
-      Cryptococcus neoformans and Candida albicans. MIBiG 4.0.1 entry BGC0002816 supplies
-      the stereo-complete SMILES, Standard InChI, and InChIKey.
+    snippet: Herisse et al. discovered the glycosylated polyene macrolide terpenomycin
+      from clinical Nocardia terpenica IFM 0406 and reported antifungal activity against
+      Sporobolomyces salmonicolor and Penicillium notatum alongside potent cytotoxicity.
+    notes: Reported by Herisse et al. 2023 (ACS Chem Biol 18:1872-1879; PMID:37552599)
+      as a glycosylated polyene macrolide polyketide from Nocardia terpenica IFM 0406
+      with antifungal activity against Sporobolomyces salmonicolor and Penicillium
+      notatum. MIBiG 4.0.1 entry BGC0002816 supplies the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:455432
@@ -67,5 +64,12 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized bibliographic metadata and parenthetical PubMed identifier
+    in source_concepts evidence notes to match the verified PubMed record for the
+    primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

@@ -37,7 +37,7 @@ source_concepts:
       Micromonospora sp. B006 and reported selective antitubercular activity against
       Mycobacterium tuberculosis H37Rv alongside characterization of the daq biosynthetic
       gene cluster.
-    notes: Reported by Mullowney et al. 2018 (J Nat Prod 81:2280-2287; PMID:30256108)
+    notes: Reported by Mullowney et al. 2018 (J Nat Prod 81:2280-2287; PMID:30110167)
       as a 1,8-diazaanthraquinone antibiotic from Micromonospora sp. B006 with selective
       antimycobacterial activity against Mycobacterium tuberculosis. MIBiG 4.0.1 entry
       BGC0001848, ChEBI CHEBI:199753, and PubChem CID 134815171 supply the SMILES,
@@ -72,5 +72,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

@@ -32,7 +32,7 @@ source_concepts:
       tetramic acid) congener pyreudione E from the Pseudomonas fluorescens pyu biosynthetic
       pathway and demonstrated its role in the amoebicidal defense cocktail against
       predatory amoebae.
-    notes: 'Reported by Klapper et al. 2018 (Cell Chem Biol 25:659-665; PMID:29576533)
+    notes: 'Reported by Klapper et al. 2018 (Cell Chem Biol 25:659-665; PMID:29606578)
       as an amoebicidal unbranched C8-acyl indolizidine-dione (pipecolic-acid-derived
       tetramic acid) congener produced by the pyu PKS-NRPS synthetase in Pseudomonas
       fluorescens. MIBiG 4.0.1 entry BGC0002075 and ChEBI CHEBI:219761 supply the
@@ -70,5 +70,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

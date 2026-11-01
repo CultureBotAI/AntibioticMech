@@ -38,7 +38,7 @@ source_concepts:
       S1 (zaragozic acid A) in Phoma sp. MF5453, a picomolar competitive inhibitor
       of squalene synthase with potent broad-spectrum antifungal activity against
       Candida, Cryptococcus, and Aspergillus species.
-    notes: Reported by Bonsch et al. 2016 (Chem Commun 52:6777-6780; PMID:27121269)
+    notes: Reported by Bonsch et al. 2016 (Chem Commun 52:6777-6780; PMID:27032439)
       and Dawson et al. 1992 (J Antibiot 45:639-647; DOI:10.7164/antibiotics.45.639)
       as a 2,8-dioxabicyclo[3.2.1]octane-3,4,5-tricarboxylic acid fungal polyketide
       (zaragozic acid A) that potently inhibits fungal squalene synthase and ergosterol
@@ -77,6 +77,22 @@ curation_history:
     mode_of_action_target_scope=HOST_SHARED_TARGET, and primary-literature-backed
     mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular target for fungal squalene synthase
+    (Erg9; GO:0051996; DOI:10.7164/antibiotics.45.639, PMID:1624366; DOI:10.1073/pnas.90.1.80,
+    PMID:8419946) and synchronized parenthetical PMID:27032439 for DOI:10.1039/c6cc02130a.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:05:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Candida albicans, Candida albicans SC5314, and Saccharomyces
+    cerevisiae S288c squalene synthase Erg9 (UniProtKB:P78589, UniProtKB:A0A1D8PI71,
+    UniProtKB:P29704) protein_examples to the primary-literature fungal squalene synthase
+    target (DOI:10.7164/antibiotics.45.639; PMID:1624366; DOI:10.1073/pnas.90.1.80;
+    PMID:8419946).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: HOST_SHARED_TARGET
@@ -85,4 +101,59 @@ mode_of_action_notes: 'CURATOR: Fungal 2,8-dioxabicyclo[3.2.1]octane-3,4,5-trica
   competitive inhibitor of squalene synthase, blocking farnesyl diphosphate condensation
   to squalene in fungal ergosterol and eukaryotic sterol biosynthesis (Dawson et al.
   1992, DOI:10.7164/antibiotics.45.639; Bonsch et al. 2016, DOI:10.1039/c6cc02130a,
-  PMID:27121269).'
+  PMID:27032439).'
+molecular_targets:
+- target_id: GO:0051996
+  target_label: fungal squalene synthase (Erg9)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: Fungal (Candida albicans and Saccharomyces cerevisiae) microsomal
+    squalene synthase (Erg9, EC 2.5.1.21) inhibition assays (Candida albicans microsomal
+    squalene synthase IC50 = 5 ng/mL; DOI:10.7164/antibiotics.45.639; PMID:1624366;
+    DOI:10.1073/pnas.90.1.80; PMID:8419946).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1992-05
+  source_retrieved_on: '2026-10-31'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.45.639
+    notes: Dawson et al. 1992 (J Antibiot 45:639-647; PMID:1624366) characterized
+      squalestatin S1 as a potent competitive inhibitor of Candida albicans microsomal
+      squalene synthase (IC50 = 5 ng/mL) and fungal sterol biosynthesis with broad-spectrum
+      antifungal activity.
+  - reference: DOI:10.1073/pnas.90.1.80
+    notes: Bergstrom et al. 1993 (Proc Natl Acad Sci U S A 90:80-84; PMID:8419946)
+      demonstrated that zaragozic acid A (squalestatin S1) is a picomolar competitive
+      inhibitor of fungal and mammalian squalene synthase (Erg9) that mimics the presqualene
+      pyrophosphate reaction intermediate.
+  protein_examples:
+  - uniprot_id: UniProtKB:P78589
+    protein_label: Squalene synthase ERG9
+    gene_symbol: ERG9
+    taxon_id: NCBITaxon:5476
+    taxon_label: Candida albicans
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21) directly inhibited
+      by squalestatin S1 in Candida albicans enzyme assays (IC50 = 5 ng/mL; DOI:10.7164/antibiotics.45.639;
+      PMID:1624366).
+  - uniprot_id: UniProtKB:A0A1D8PI71
+    protein_label: Squalene synthase ERG9
+    gene_symbol: ERG9
+    taxon_id: NCBITaxon:237561
+    taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reference-proteome Candida albicans SC5314 squalene synthase (Erg9, EC 2.5.1.21)
+      corresponding to the C. albicans enzyme inhibited by squalestatin S1 (DOI:10.7164/antibiotics.45.639;
+      PMID:1624366; DOI:10.1073/pnas.90.1.80; PMID:8419946).
+  - uniprot_id: UniProtKB:P29704
+    protein_label: Squalene synthase ERG9
+    gene_symbol: ERG9
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-10-31'
+    role: Reference-proteome Saccharomyces cerevisiae S288c squalene synthase (Erg9,
+      EC 2.5.1.21) inhibited by zaragozic acid A / squalestatin S1 in fungal ergosterol
+      biosynthesis assays (DOI:10.1073/pnas.90.1.80; PMID:8419946).

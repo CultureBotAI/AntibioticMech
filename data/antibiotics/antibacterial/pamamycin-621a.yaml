@@ -33,7 +33,7 @@ source_concepts:
       alboniger as a 16-membered macrodiolide polyketide antibiotic that inhibits
       the growth of Gram-positive bacteria and mycobacteria and stimulates aerial
       mycelium formation.
-    notes: Reported by Kang et al. 2009 (Org Lett 11:5590-5593; PMID:19908882) and
+    notes: Reported by Ren and Wu 2009 (Org Lett 11:5638-5641; PMID:19924823) and
       Rebets et al. 2015 (J Am Chem Soc 137:12031-12037; DOI:10.1021/jacs.5b05606)
       as a 16-membered macrodiolide ionophore antibiotic from Streptomyces alboniger.
       MIBiG 4.0.1 entry BGC0001150, ChEBI CHEBI:219230, and PubChem CID 10508137 supply
@@ -71,5 +71,12 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized bibliographic metadata and parenthetical PubMed identifier
+    in source_concepts evidence notes to match the verified PubMed record for the
+    primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

@@ -34,7 +34,7 @@ source_concepts:
       (LD50 in the nanomolar range against Dictyostelium discoideum) and antifungal
       activity against Botrytis cinerea and human pathogenic Candida albicans (MIC
       = 0.8-1.6 ug/mL).
-    notes: Reported by Gotze et al. 2023 (J Am Chem Soc 145:2342-2353; PMID:36649592)
+    notes: Reported by Gotze et al. 2023 (J Am Chem Soc 145:2342-2353; PMID:36669196)
       as a 9-residue chlorinated cyclic lipodepsipeptide from Pseudomonas sp. QS1027
       with potent antifungal activity against Candida albicans and Botrytis cinerea
       and amoebicidal activity against Dictyostelium discoideum. MIBiG 4.0.1 entry
@@ -69,5 +69,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

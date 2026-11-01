@@ -81,6 +81,13 @@ curation_history:
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT, mode_of_action=OTHER, mode_of_action_target_scope=HOST_SHARED_TARGET,
     and primary-literature-backed mode_of_action_notes.
   llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular target for intracellular labile iron
+    (Fe2+/Fe3+) cofactor pool chelation (DOI:10.1016/j.chembiol.2012.01.014, PMID:22444595;
+    DOI:10.1038/srep38751, PMID:27941932).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: OTHER
 mode_of_action_target_scope: HOST_SHARED_TARGET
@@ -89,3 +96,26 @@ mode_of_action_notes: 'CURATOR: 4-Methoxy-5-(methylthio)-2,2''-bipyridine-6-carb
   and Fe(III) ions to deplete bioavailable iron pools in bacteria and fungi (Shindo
   et al. 1994, DOI:10.7164/antibiotics.47.1072; Garcia et al. 2012, DOI:10.1016/j.chembiol.2012.01.014,
   PMID:22444595).'
+molecular_targets:
+- target_label: intracellular labile iron (Fe2+/Fe3+) cofactor pool
+  target_type: OTHER
+  target_relation: ATTACKED_COMPONENT
+  experimental_context: Spectrophotometric Fe(II)/Fe(III) coordination stoichiometry
+    (2:1 ligand-to-iron complexation) and metal-ion supplementation reversal assays
+    demonstrating intracellular iron chelation and depletion of iron-dependent cofactor
+    pools (DOI:10.1016/j.chembiol.2012.01.014; PMID:22444595; DOI:10.1038/srep38751;
+    PMID:27941932).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-03
+  source_retrieved_on: '2026-10-31'
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2012.01.014
+    notes: Garcia et al. 2012 (Chem Biol 19:399-408; PMID:22444595) characterized
+      the Streptomyces sp. CS40 clm biosynthetic cluster for collismycin A (SF2738A)
+      and its 2,2'-bipyridyl-aldoxime metal-chelating pharmacophore.
+  - reference: DOI:10.1038/srep38751
+    notes: Kawatani et al. 2016 (Sci Rep 6:38751; PMID:27941932) demonstrated that
+      collismycin A forms stable 2:1 complexes with Fe(II) and Fe(III) ions via its
+      bipyridyl and oxime nitrogens and acts as an intracellular iron chelator whose
+      biological activity is selectively abolished by exogenous iron ions.

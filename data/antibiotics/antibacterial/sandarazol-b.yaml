@@ -32,7 +32,7 @@ source_concepts:
     snippet: Panter et al. isolated sandarazol B from Sandaracinus sp. MSr10575 and
       reported antibacterial activity against Bacillus subtilis, Staphylococcus aureus,
       and Mycobacterium smegmatis.
-    notes: Reported by Panter et al. 2021 (Angew Chem Int Ed 60:5595-5602; PMID:33290612)
+    notes: Reported by Panter et al. 2021 (Angew Chem Int Ed 60:5595-5602; PMID:33534143)
       as a dihydro-congener of sandarazol A (epoxy-ketone tetramic-acid polyketide-peptide
       hybrid) from Sandaracinus sp. MSr10575 with anti-Gram-positive and antimycobacterial
       activity. MIBiG 4.0.1 entry BGC0002114, ChEBI CHEBI:221935, and PubChem CID
@@ -68,5 +68,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

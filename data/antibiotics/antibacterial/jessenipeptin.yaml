@@ -34,7 +34,7 @@ source_concepts:
       from Pseudomonas sp. QS1027 and reported potent anti-Gram-positive antibacterial
       activity, including against methicillin-resistant Staphylococcus aureus (MRSA,
       MIC = 4 ug/mL), that synergizes with mupirocin.
-    notes: Reported by Arp et al. 2018 (Proc Natl Acad Sci U S A 115:3758-3763; PMID:29581294)
+    notes: Reported by Arp et al. 2018 (Proc Natl Acad Sci U S A 115:3758-3763; PMID:29592954)
       as a 19-residue nonribosomal cyclic lipodepsipeptide antibiotic from Pseudomonas
       sp. QS1027 with potent activity against Staphylococcus aureus and Bacillus subtilis.
       MIBiG 4.0.1 entry BGC0001629, ChEBI CHEBI:221686, and PubChem CID 145720625
@@ -68,5 +68,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

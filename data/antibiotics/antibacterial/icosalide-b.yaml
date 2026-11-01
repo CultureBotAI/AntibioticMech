@@ -33,7 +33,7 @@ source_concepts:
       producing the 20-membered depsipeptide antibiotics icosalide A1 and icosalide
       B, which exhibit antibacterial activity against entomopathogenic bacteria including
       Paenibacillus larvae and Bacillus thuringiensis.
-    notes: 'Reported by Dose et al. 2018 (ACS Chem Biol 13:2414-2420; PMID:30085650)
+    notes: 'Reported by Dose et al. 2018 (ACS Chem Biol 13:2414-2420; PMID:30160099)
       as a two-chain 20-membered lipocyclodepsipeptide antibiotic biosynthesized by
       the nonribosomal peptide synthetase IcoA in Burkholderia gladioli. MIBiG 4.0.1
       entry BGC0001833 and PubChem CID 163186155 supply the stereo-complete SMILES,
@@ -68,5 +68,11 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
+  llm_assisted: true
+- timestamp: '2026-10-31T23:02:00Z'
+  curator: antigravity
+  action: CORRECTED_EVIDENCE_CITATION
+  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
+    notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
