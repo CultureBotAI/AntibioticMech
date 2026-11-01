@@ -25,7 +25,7 @@ prose below are the reasoning, the queue is the list.
   resistance measurements. See
   `research/2026-10-12-tetracenomycin-context.json` and #1085 for the source-owned
   repair hold.
-- **Curate the next mechanism graphs.** 64 of 3,042 records carry a
+- **Curate the next mechanism graphs.** 69 of 3,042 records carry a
   `causal_graph`; that number is the point of the repository. Start with the 461
   records that already have target or resistance evidence to build on —
   `just worklist --queue mechanism` ranks them by how much evidence is waiting.

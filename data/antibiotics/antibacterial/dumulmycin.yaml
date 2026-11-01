@@ -30,17 +30,19 @@ source_concepts:
   - CHEBI:33282
   evidence:
   - reference: DOI:10.1021/acs.orglett.1c02589
-    snippet: An et al. isolated the bicyclic 19-membered macrolide polyketide antibiotic
-      dumulmycin, containing a 19-membered macrocyclic lactone fused with an internal
-      cyclopentenone ring, from river-sediment-derived Streptomyces sp. DM28 and reported
-      antibacterial activity against Bacillus subtilis, Kocuria rhizophila, and Staphylococcus
-      aureus alongside antitubercular activity against Mycobacterium tuberculosis.
-    notes: Reported by An et al. 2021 (Org Lett 23:7396-7400; PMID:34388000) as a
-      bicyclic 19-membered macrolide polyketide fused with an internal cyclopentenone
-      ring from Streptomyces sp. DM28 with antibacterial activity against Gram-positive
-      bacteria and Mycobacterium tuberculosis. MIBiG 4.0.1 entry BGC0002385, ChEBI
-      CHEBI:218721, and PubChem CID 156583119 supply the stereo-complete SMILES, Standard
-      InChI, and InChIKey.
+    snippet: An et al. and Liu et al. characterized the bicyclic 19-membered macrolide
+      polyketide antibiotic dumulmycin, containing a 19-membered macrocyclic lactone
+      fused with an internal cyclopentenone ring, from Streptomyces sp. DM28 and Streptomyces
+      sp. B59 and reported antibacterial activity against Bacillus subtilis, Kocuria
+      rhizophila, and Staphylococcus aureus alongside antitubercular activity against
+      Mycobacterium tuberculosis.
+    notes: Reported by An et al. 2021 (Org Lett 23:3359-3363; DOI:10.1021/acs.orglett.1c00847;
+      PMID:33885319) and Liu et al. 2021 (Org Lett 23:6916-6920; DOI:10.1021/acs.orglett.1c02589;
+      PMID:34432439) as a bicyclic 19-membered macrolide polyketide fused with an
+      internal cyclopentenone ring from Streptomyces sp. DM28 and Streptomyces sp.
+      B59 with antibacterial activity against Gram-positive bacteria and Mycobacterium
+      tuberculosis. MIBiG 4.0.1 entry BGC0002385, ChEBI CHEBI:218721, and PubChem
+      CID 156583119 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:1931
@@ -76,7 +78,8 @@ curation_history:
 - timestamp: '2026-10-31T23:02:00Z'
   curator: antigravity
   action: CORRECTED_EVIDENCE_CITATION
-  changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
-    notes to match the verified PubMed record for the primary DOI reference.
+  changes: Synchronized isolation (An et al. 2021, DOI:10.1021/acs.orglett.1c00847,
+    PMID:33885319) and total-synthesis/structure-revision (Liu et al. 2021, DOI:10.1021/acs.orglett.1c02589,
+    PMID:34432439) citations and PubMed identifiers in source_concepts evidence.
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT

@@ -38,7 +38,7 @@ source_concepts:
       S1 (zaragozic acid A) in Phoma sp. MF5453, a picomolar competitive inhibitor
       of squalene synthase with potent broad-spectrum antifungal activity against
       Candida, Cryptococcus, and Aspergillus species.
-    notes: Reported by Bonsch et al. 2016 (Chem Commun 52:6777-6780; PMID:27056201)
+    notes: Reported by Bonsch et al. 2016 (Chem Commun 52:6777-6780; PMID:27032439)
       and Dawson et al. 1992 (J Antibiot 45:639-647; DOI:10.7164/antibiotics.45.639)
       as a 2,8-dioxabicyclo[3.2.1]octane-3,4,5-tricarboxylic acid fungal polyketide
       (zaragozic acid A) that potently inhibits fungal squalene synthase and ergosterol
@@ -81,8 +81,8 @@ curation_history:
   curator: antigravity
   action: CURATED_MOLECULAR_TARGETS
   changes: Added primary-literature molecular target for fungal squalene synthase
-    (Erg9; DOI:10.7164/antibiotics.45.639, PMID:1624366; DOI:10.1073/pnas.90.1.80,
-    PMID:8419946) and synchronized parenthetical PMID:27056201 for DOI:10.1039/c6cc02130a.
+    (Erg9; GO:0051996; DOI:10.7164/antibiotics.45.639, PMID:1624366; DOI:10.1073/pnas.90.1.80,
+    PMID:8419946) and synchronized parenthetical PMID:27032439 for DOI:10.1039/c6cc02130a.
   llm_assisted: true
 - timestamp: '2026-10-31T23:05:00Z'
   curator: antigravity
@@ -101,9 +101,10 @@ mode_of_action_notes: 'CURATOR: Fungal 2,8-dioxabicyclo[3.2.1]octane-3,4,5-trica
   competitive inhibitor of squalene synthase, blocking farnesyl diphosphate condensation
   to squalene in fungal ergosterol and eukaryotic sterol biosynthesis (Dawson et al.
   1992, DOI:10.7164/antibiotics.45.639; Bonsch et al. 2016, DOI:10.1039/c6cc02130a,
-  PMID:27056201).'
+  PMID:27032439).'
 molecular_targets:
-- target_label: fungal squalene synthase (Erg9)
+- target_id: GO:0051996
+  target_label: fungal squalene synthase (Erg9)
   target_type: PROTEIN
   target_relation: DIRECT_BINDING_TARGET
   experimental_context: Fungal (Candida albicans and Saccharomyces cerevisiae) microsomal
