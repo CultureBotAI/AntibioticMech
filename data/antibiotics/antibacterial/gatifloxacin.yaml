@@ -545,6 +545,13 @@ curation_history:
     DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue
     #1308).'
   llm_assisted: true
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph gatifloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4,
+    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  llm_assisted: true
 definition: A monocarboxylic acid that is 4-oxo-1,4-dihydroquinoline-3-carboxylic
   acid which is substituted on the nitrogen by a cyclopropyl group and at positions
   6, 7, and 8 by fluoro, 3-methylpiperazin-1-yl, and methoxy groups, respectively.
@@ -570,3 +577,111 @@ activity_membership_collections:
   membership_count: 293
   measurement_count: 293
   unlinked_subject_count: 151
+causal_graphs:
+- graph_id: gatifloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+  title: Gatifloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest
+    bacterial DNA replication
+  description: Gatifloxacin, a synthetic 8-methoxyfluoroquinolone antibiotic, inhibits
+    bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE)
+    chromosome decatenation, arresting bacterial DNA replication.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: gatifloxacin
+    label: gatifloxacin
+    node_type: COMPOUND
+    grounding: CHEBI:5280
+  - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+    label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      holoenzymes; kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4),
+      GyrB (UniProtKB:P0AES6), ParC (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083)
+      protein_examples.
+    gene_symbols:
+    - gyrA
+    - gyrB
+    - parC
+    - parE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-03'
+      role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified
+        DNA supercoiling and QRDR mutant susceptibility assays by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+        PMID:11709337).
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-03'
+      role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme
+        inhibited by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - uniprot_id: UniProtKB:P0AFI2
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-03'
+      role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in
+        purified decatenation and QRDR mutant susceptibility assays by gatifloxacin
+        (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - uniprot_id: UniProtKB:P20083
+      protein_label: DNA topoisomerase 4 subunit B
+      gene_symbol: parE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-03'
+      role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2
+        holoenzyme inhibited by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+        PMID:11709337).
+  - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase
+      IV decatenation catalytic activities inhibited by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  - node_id: bacterial_dna_replication
+    label: bacterial DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: gatifloxacin
+    predicate: inhibits
+    object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    description: Gatifloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase
+      IV decatenation activity.
+    evidence:
+    - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+      notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities
+        of gatifloxacin against purified bacterial DNA gyrase supercoiling and topoisomerase
+        IV decatenation and correlated enzyme inhibition with MIC shifts across defined
+        GyrA and ParC QRDR mutants.
+  - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+    predicate: enables
+    object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      catalyze negative DNA supercoiling and chromosome decatenation.
+    evidence:
+    - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+      notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed
+        the DNA supercoiling and decatenation reactions assayed with gatifloxacin
+        (PMID:11709337).
+  - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    predicate: supports
+    object: bacterial_dna_replication
+    description: DNA gyrase supercoiling and topoisomerase IV decatenation are required
+      for bacterial DNA replication.
+    evidence:
+    - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+      notes: Inhibition of DNA gyrase and topoisomerase IV by gatifloxacin arrested
+        bacterial replication and growth, with GyrA and ParC QRDR mutations shifting
+        whole-cell susceptibility (PMID:11709337).

@@ -155,7 +155,106 @@ curation_history:
     (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.1093/nar/gkz782, PMID:31535140) from
     PROPOSED to REVIEWED (issue #1307).'
   llm_assisted: true
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph minimycin_utp_incorporation_rnap_transcription_arrest
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2,
+    UniProtKB:P0A8T7) and primary literature (DOI:10.1093/nar/gkz782, DOI:10.1016/j.isci.2019.11.037).
+  llm_assisted: true
 definition: A 5-beta-D-ribofuranosyl-1,3-oxazine-2,4-dione C-nucleoside antibiotic
   (oxazinomycin) from Streptomyces hygroscopicus with antibacterial activity against
   Gram-positive and Gram-negative bacteria.
 definition_source: DOI:10.1016/j.isci.2019.11.037
+causal_graphs:
+- graph_id: minimycin_utp_incorporation_rnap_transcription_arrest
+  title: Minimycin (via its 5'-triphosphate metabolite) incorporates into nascent
+    RNA and arrests bacterial DNA-directed RNA polymerase elongation
+  description: The C-nucleoside antibiotic minimycin (oxazinomycin) is phosphorylated
+    intracellularly to its active 5'-triphosphate metabolite, which is incorporated
+    by bacterial DNA-directed RNA polymerase (RpoB/RpoC) into nascent RNA in place
+    of UTP and arrests transcription elongation at polythymidine tracts.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: minimycin
+    label: minimycin
+    node_type: COMPOUND
+    grounding: CHEBI:224130
+  - node_id: bacterial_dna_directed_rna_polymerase
+    label: bacterial DNA-directed RNA polymerase complex
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Multisubunit bacterial DNA-directed RNA polymerase catalytic
+      core (RpoB/RpoC); kept label-only with Escherichia coli K-12 RpoB (UniProtKB:P0A8V2)
+      and RpoC (UniProtKB:P0A8T7) protein_examples.
+    gene_symbols:
+    - rpoB
+    - rpoC
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A8V2
+      protein_label: DNA-directed RNA polymerase subunit beta
+      gene_symbol: rpoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-03'
+      role: Catalytic beta subunit (RpoB) of purified Escherichia coli K-12 DNA-directed
+        RNA polymerase whose transcription elongation is arrested upon incorporation
+        of oxazinomycin (minimycin) 5'-triphosphate into nascent RNA (DOI:10.1093/nar/gkz782;
+        PMID:31535140).
+    - uniprot_id: UniProtKB:P0A8T7
+      protein_label: DNA-directed RNA polymerase subunit beta'
+      gene_symbol: rpoC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-03'
+      role: Catalytic beta' subunit (RpoC) forming the active-center cleft of purified
+        Escherichia coli K-12 DNA-directed RNA polymerase assayed with oxazinomycin
+        (minimycin) 5'-triphosphate (DOI:10.1093/nar/gkz782; PMID:31535140).
+  - node_id: rnap_nascent_rna_elongation_activity
+    label: RNA polymerase nascent RNA nucleotide incorporation and elongation
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: UTP substrate incorporation and processive transcript elongation
+      across template DNA polythymidine sequences by purified E. coli RNA polymerase.
+  - node_id: bacterial_dna_templated_transcription
+    label: bacterial DNA-templated transcription
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial RNA synthesis arrested by oxazinomycin (minimycin)
+      5'-triphosphate incorporation at polythymidine tracts.
+  edges:
+  - subject: minimycin
+    predicate: inhibits
+    object: rnap_nascent_rna_elongation_activity
+    description: Minimycin (via its intracellularly generated 5'-triphosphate metabolite)
+      incorporates into nascent RNA in place of UTP and arrests RNA polymerase elongation
+      at polythymidine tracts.
+    evidence:
+    - reference: DOI:10.1093/nar/gkz782
+      notes: Prajapati et al. 2019 (PMID:31535140) showed that oxazinomycin (minimycin)
+        5'-triphosphate is incorporated by purified Escherichia coli RNA polymerase
+        in place of UTP and arrests transcription elongation at polythymidine sequences.
+    - reference: DOI:10.1016/j.isci.2019.11.037
+      notes: Kong et al. 2019 (PMID:31816530) characterized minimycin (oxazinomycin)
+        antibacterial activity and self-resistance determinants in Streptomyces hygroscopicus.
+  - subject: bacterial_dna_directed_rna_polymerase
+    predicate: enables
+    object: rnap_nascent_rna_elongation_activity
+    description: Bacterial DNA-directed RNA polymerase (RpoB/RpoC) catalyzes ribonucleotide
+      incorporation and nascent transcript elongation.
+    evidence:
+    - reference: DOI:10.1093/nar/gkz782
+      notes: Purified Escherichia coli DNA-directed RNA polymerase catalyzed ribonucleotide
+        addition and elongation in the single-nucleotide incorporation and transcription
+        arrest assays (PMID:31535140).
+  - subject: rnap_nascent_rna_elongation_activity
+    predicate: supports
+    object: bacterial_dna_templated_transcription
+    description: Processive RNA polymerase nucleotide incorporation and elongation
+      drive bacterial DNA-templated transcription.
+    evidence:
+    - reference: DOI:10.1093/nar/gkz782
+      notes: Elongation arrest at polythymidine sequences upon oxazinomycin 5'-triphosphate
+        incorporation blocked full-length RNA transcript synthesis (PMID:31535140).

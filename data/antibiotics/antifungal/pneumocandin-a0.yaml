@@ -68,3 +68,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_WALL_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Schmatz et al. 1992 (PMID:1490879) and
+    Chen et al. 2013 (PMID:23688303).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Echinocandin-class 10,12-dimethylmyristoyl cyclic
+  lipohexapeptide (L-671,329) from Glarea lozoyensis that noncompetitively inhibits
+  fungal 1,3-beta-D-glucan synthase, blocking fungal cell wall beta-glucan biosynthesis
+  (Schmatz et al. 1992, DOI:10.7164/antibiotics.45.1886, PMID:1490879; Chen et al.
+  2013, DOI:10.1186/1471-2164-14-339, PMID:23688303).'

@@ -72,3 +72,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_MEMBRANE_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Dong et al. 2018 (PMID:29915173) and Zheng
+    et al. 2021 (PMID:33314918).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Thiocarboxylic acid diterpenoid-aminobenzoate congener
+  of platensimycin from Streptomyces platensis SB12026 that potently inhibits bacterial
+  beta-ketoacyl-ACP synthase II (FabF) in type II fatty acid biosynthesis (Dong et
+  al. 2018, DOI:10.1038/s41467-018-04747-y, PMID:29915173; Zheng et al. 2021, DOI:10.1021/acschembio.0c00773,
+  PMID:33314918).'

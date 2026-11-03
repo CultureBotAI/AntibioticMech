@@ -68,3 +68,19 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_MEMBRANE_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Mandala et al. 1998 (PMID:9614099) and
+    Karki et al. 2010 (PMID:20662933).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: 14-Membered macrolide polyketide (galbonolide A) from
+  Micromonospora sp. and Streptomyces galbus that potently inhibits fungal inositol
+  phosphoceramide (IPC) synthase (IC50 = 70 pM against Cryptococcus neoformans IPC
+  synthase), blocking essential fungal sphingolipid biosynthesis (Mandala et al. 1998,
+  DOI:10.1074/jbc.273.24.14942, PMID:9614099; Karki et al. 2010, DOI:10.1111/j.1574-6968.2010.02048.x,
+  PMID:20662933).'

@@ -103,6 +103,14 @@ curation_history:
     PMID:1624366; DOI:10.1073/pnas.90.1.80, PMID:8419946) from PROPOSED to REVIEWED
     (issue #1306).'
   llm_assisted: true
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P78589,
+    UniProtKB:A0A1D8PI71, UniProtKB:P29704) and primary literature (DOI:10.7164/antibiotics.45.639,
+    DOI:10.1073/pnas.90.1.80).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION
 mode_of_action_target_scope: HOST_SHARED_TARGET
@@ -167,3 +175,107 @@ molecular_targets:
     role: Reference-proteome Saccharomyces cerevisiae S288c squalene synthase (Erg9,
       EC 2.5.1.21) inhibited by zaragozic acid A / squalestatin S1 in fungal ergosterol
       biosynthesis assays (DOI:10.1073/pnas.90.1.80; PMID:8419946).
+causal_graphs:
+- graph_id: squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition
+  title: Squalestatin S1 competitively inhibits fungal squalene synthase (Erg9) to
+    block ergosterol biosynthesis
+  description: Squalestatin S1 (zaragozic acid A) acts as a picomolar competitive
+    inhibitor of fungal microsomal squalene synthase (Erg9) by mimicking the presqualene
+    pyrophosphate reaction intermediate, blocking reductive condensation of farnesyl
+    diphosphate to squalene and depleting fungal ergosterol biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: squalestatin_s1
+    label: squalestatin S1
+    node_type: COMPOUND
+    grounding: CHEBI:220211
+  - node_id: fungal_squalene_synthase_erg9
+    label: fungal squalene synthase (Erg9)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21); kept
+      label-only with Candida albicans (UniProtKB:P78589), Candida albicans SC5314
+      (UniProtKB:A0A1D8PI71), and Saccharomyces cerevisiae S288c (UniProtKB:P29704)
+      protein_examples.
+    gene_symbols:
+    - ERG9
+    protein_examples:
+    - uniprot_id: UniProtKB:P78589
+      protein_label: Squalene synthase ERG9
+      gene_symbol: ERG9
+      taxon_id: NCBITaxon:5476
+      taxon_label: Candida albicans
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-31'
+      role: Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21) directly inhibited
+        by squalestatin S1 in Candida albicans enzyme assays (IC50 = 5 ng/mL; DOI:10.7164/antibiotics.45.639;
+        PMID:1624366).
+    - uniprot_id: UniProtKB:A0A1D8PI71
+      protein_label: Squalene synthase ERG9
+      gene_symbol: ERG9
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-31'
+      role: Reference-proteome Candida albicans SC5314 squalene synthase (Erg9, EC
+        2.5.1.21) corresponding to the C. albicans enzyme inhibited by squalestatin
+        S1 (DOI:10.7164/antibiotics.45.639; PMID:1624366; DOI:10.1073/pnas.90.1.80;
+        PMID:8419946).
+    - uniprot_id: UniProtKB:P29704
+      protein_label: Squalene synthase ERG9
+      gene_symbol: ERG9
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-31'
+      role: Reference-proteome Saccharomyces cerevisiae S288c squalene synthase (Erg9,
+        EC 2.5.1.21) inhibited by zaragozic acid A / squalestatin S1 in fungal ergosterol
+        biosynthesis assays (DOI:10.1073/pnas.90.1.80; PMID:8419946).
+  - node_id: squalene_synthase_fpp_condensation_activity
+    label: Erg9-catalyzed farnesyl diphosphate condensation to squalene
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Reductive head-to-head condensation of two farnesyl diphosphate
+      molecules via presqualene pyrophosphate to squalene catalyzed by fungal squalene
+      synthase (Erg9).
+  - node_id: fungal_ergosterol_biosynthesis
+    label: ergosterol biosynthetic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006696
+  edges:
+  - subject: squalestatin_s1
+    predicate: inhibits
+    object: squalene_synthase_fpp_condensation_activity
+    description: Squalestatin S1 competitively inhibits fungal squalene synthase (Erg9)
+      by mimicking the presqualene pyrophosphate intermediate.
+    evidence:
+    - reference: DOI:10.7164/antibiotics.45.639
+      notes: Dawson et al. 1992 (PMID:1624366) demonstrated potent competitive inhibition
+        of Candida albicans microsomal squalene synthase by squalestatin S1 (IC50
+        = 5 ng/mL).
+    - reference: DOI:10.1073/pnas.90.1.80
+      notes: Bergstrom et al. 1993 (PMID:8419946) showed that zaragozic acid A (squalestatin
+        S1) is a picomolar competitive inhibitor of fungal squalene synthase (Erg9)
+        acting as a presqualene pyrophosphate mimic.
+  - subject: fungal_squalene_synthase_erg9
+    predicate: enables
+    object: squalene_synthase_fpp_condensation_activity
+    description: Fungal squalene synthase (Erg9) catalyzes the reductive condensation
+      of farnesyl diphosphate to squalene.
+    evidence:
+    - reference: DOI:10.7164/antibiotics.45.639
+      notes: Candida albicans microsomal squalene synthase catalyzed conversion of
+        radiolabeled farnesyl diphosphate to squalene in vitro (PMID:1624366).
+    - reference: DOI:10.1073/pnas.90.1.80
+      notes: Fungal Erg9 squalene synthase catalyzed the committed first step of sterol
+        synthesis from farnesyl diphosphate (PMID:8419946).
+  - subject: squalene_synthase_fpp_condensation_activity
+    predicate: supports
+    object: fungal_ergosterol_biosynthesis
+    description: Squalene synthase (Erg9) catalysis commits farnesyl diphosphate to
+      fungal ergosterol biosynthesis.
+    evidence:
+    - reference: DOI:10.7164/antibiotics.45.639
+      notes: Inhibition of squalene synthase by squalestatin S1 blocked cellular sterol
+        synthesis and caused fungicidal activity in Candida and Aspergillus species
+        (PMID:1624366).
