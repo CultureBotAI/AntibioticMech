@@ -1,16 +1,7 @@
 identifier: CHEBI:224130
 label: minimycin
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
-grounding_status: EXACT
-definition: A 5-beta-D-ribofuranosyl-1,3-oxazine-2,4-dione C-nucleoside antibiotic
-  (oxazinomycin) from Streptomyces hygroscopicus with antibacterial activity against
-  Gram-positive and Gram-negative bacteria.
-definition_source: DOI:10.1016/j.isci.2019.11.037
-synonyms:
-- synonym_text: oxazinomycin
-  synonym_type: EXACT_SYNONYM
-  source: curator
 activity_roles:
 - CHEBI:33282
 chemical_structure:
@@ -25,6 +16,10 @@ chemical_structure:
   monoisotopic_mass: 245.0536
 xrefs:
 - pubchem.compound:161746
+synonyms:
+- synonym_text: oxazinomycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1016/j.isci.2019.11.037#minimycin
@@ -44,6 +39,8 @@ source_concepts:
       ChEBI CHEBI:224130, and PubChem CID 161746 supply the stereo-complete SMILES,
       Standard InChI, and InChIKey.
   source_version: 4.0.1
+grounding_status: EXACT
+biosynthesis_origin: NATURAL_PRODUCT
 producer_organisms:
 - taxon_id: NCBITaxon:1912
   taxon_label: Streptomyces hygroscopicus
@@ -64,6 +61,65 @@ producer_organisms:
       spectrometry, X-ray, total synthesis). It establishes what the molecule is.
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: C-nucleoside natural-product antibiotic (oxazinomycin)
+  whose intracellularly phosphorylated 5''-triphosphate metabolite incorporates into
+  nascent RNA in place of UTP and arrests bacterial and eukaryotic DNA-directed RNA
+  polymerase transcription elongation at polythymidine sequences (Prajapati et al.
+  2019, DOI:10.1093/nar/gkz782, PMID:31535140; Kong et al. 2019, DOI:10.1016/j.isci.2019.11.037,
+  PMID:31816530).'
+molecular_targets:
+- target_id: GO:0000428
+  target_label: DNA-directed RNA polymerase complex
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli (strain K12)
+  experimental_context: In vitro transcription elongation and nascent RNA incorporation
+    assays with purified Escherichia coli DNA-directed RNA polymerase and oxazinomycin
+    (minimycin) 5'-triphosphate (Prajapati et al. 2019, DOI:10.1093/nar/gkz782, PMID:31535140;
+    Kong et al. 2019, DOI:10.1016/j.isci.2019.11.037, PMID:31816530).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2019-11
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.1093/nar/gkz782
+    snippet: Prajapati et al. demonstrated that the 5'-triphosphate of the C-nucleoside
+      antibiotic oxazinomycin (minimycin) is incorporated into nascent RNA by Escherichia
+      coli RNA polymerase in place of UTP and arrests transcription elongation at
+      polythymidine tracts.
+    notes: Prajapati et al. 2019 (Nucleic Acids Res 47:10296-10312; PMID:31535140)
+      established that oxazinomycin (minimycin) 5'-triphosphate serves as a substrate
+      for purified Escherichia coli DNA-directed RNA polymerase and blocks transcription
+      elongation.
+  - reference: DOI:10.1016/j.isci.2019.11.037
+    notes: Kong et al. 2019 (iScience 22:430-440; PMID:31816530) elucidated the min
+      biosynthetic gene cluster and MinT/MinC self-resistance determinants for minimycin
+      (oxazinomycin) in Streptomyces hygroscopicus.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8V2
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Catalytic beta subunit (RpoB) of purified Escherichia coli K-12 DNA-directed
+      RNA polymerase whose transcription elongation is arrested upon incorporation
+      of oxazinomycin (minimycin) 5'-triphosphate into nascent RNA (DOI:10.1093/nar/gkz782;
+      PMID:31535140).
+  - uniprot_id: UniProtKB:P0A8T7
+    protein_label: DNA-directed RNA polymerase subunit beta'
+    gene_symbol: rpoC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Catalytic beta' subunit (RpoC) forming the active-center cleft of purified
+      Escherichia coli K-12 DNA-directed RNA polymerase assayed with oxazinomycin
+      (minimycin) 5'-triphosphate (DOI:10.1093/nar/gkz782; PMID:31535140).
 curation_history:
 - timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
@@ -75,4 +131,31 @@ curation_history:
   changes: Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental
     biosynthetic gene cluster producer provenance.
   llm_assisted: true
-biosynthesis_origin: NATURAL_PRODUCT
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    HOST_SHARED_TARGET), and primary-literature molecular_targets entry for DNA-directed
+    RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed
+    by DOI:10.1093/nar/gkz782 (PMID:31535140) and DOI:10.1016/j.isci.2019.11.037 (PMID:31816530;
+    issue #1307).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:25:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature
+    DNA-directed RNA polymerase complex target on minimycin (DOI:10.1093/nar/gkz782).
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:224130) with complete 4/4 chemical_structure,
+    curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, HOST_SHARED_TARGET),
+    and primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.1093/nar/gkz782, PMID:31535140) from
+    PROPOSED to REVIEWED (issue #1307).'
+  llm_assisted: true
+definition: A 5-beta-D-ribofuranosyl-1,3-oxazine-2,4-dione C-nucleoside antibiotic
+  (oxazinomycin) from Streptomyces hygroscopicus with antibacterial activity against
+  Gram-positive and Gram-negative bacteria.
+definition_source: DOI:10.1016/j.isci.2019.11.037

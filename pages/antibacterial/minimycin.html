@@ -36,7 +36,7 @@
   <code class="curie">CHEBI:224130</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_224130">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill">PROPOSED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A 5-beta-D-ribofuranosyl-1,3-oxazine-2,4-dione C-nucleoside antibiotic (oxazinomycin) from Streptomyces hygroscopicus with antibacterial activity against Gram-positive and Gram-negative bacteria.  <span class="meta">— DOI:10.1016/j.isci.2019.11.037</span></p>
@@ -94,7 +94,39 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 </div>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>DNA-directed RNA polymerase complex <span class="pill plain">PROTEIN_COMPLEX</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta"><code class="curie">GO:0000428</code></p><p class="meta">In vitro transcription elongation and nascent RNA incorporation assays with purified Escherichia coli DNA-directed RNA polymerase and oxazinomycin (minimycin) 5&#39;-triphosphate (Prajapati et al. 2019, DOI:10.1093/nar/gkz782, PMID:31535140; Kong et al. 2019, DOI:10.1016/j.isci.2019.11.037, PMID:31816530). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2019-11 (retrieved 2026-11-03).</p>
+<p><em>Escherichia coli (strain K12)</em> <code class="curie">NCBITaxon:83333</code></p><div class="table-scroll" role="region" aria-label="DNA-directed RNA polymerase complex organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>DNA-directed RNA polymerase subunit beta <a href="https://www.uniprot.org/uniprotkb/P0A8V2"><code class="curie">UniProtKB:P0A8V2</code></a><br><span class="meta">Catalytic beta subunit (RpoB) of purified Escherichia coli K-12 DNA-directed RNA polymerase whose transcription elongation is arrested upon incorporation of oxazinomycin (minimycin) 5&#39;-triphosphate into nascent RNA (DOI:10.1093/nar/gkz782; PMID:31535140).</span></td>
+    <td>rpoB</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+  <tr>
+    <td>DNA-directed RNA polymerase subunit beta&#39; <a href="https://www.uniprot.org/uniprotkb/P0A8T7"><code class="curie">UniProtKB:P0A8T7</code></a><br><span class="meta">Catalytic beta&#39; subunit (RpoC) forming the active-center cleft of purified Escherichia coli K-12 DNA-directed RNA polymerase assayed with oxazinomycin (minimycin) 5&#39;-triphosphate (DOI:10.1093/nar/gkz782; PMID:31535140).</span></td>
+    <td>rpoC</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
 
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1093/nar/gkz782">DOI:10.1093/nar/gkz782</a></span> — "Prajapati et al. demonstrated that the 5&#39;-triphosphate of the C-nucleoside antibiotic oxazinomycin (minimycin) is incorporated into nascent RNA by Escherichia coli RNA polymerase in place of UTP and arrests transcription elongation at polythymidine tracts." <span class="meta">(Prajapati et al. 2019 (Nucleic Acids Res 47:10296-10312; PMID:31535140) established that oxazinomycin (minimycin) 5&#39;-triphosphate serves as a substrate for purified Escherichia coli DNA-directed RNA polymerase and blocks transcription elongation.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.isci.2019.11.037">DOI:10.1016/j.isci.2019.11.037</a></span> <span class="meta">(Kong et al. 2019 (iScience 22:430-440; PMID:31816530) elucidated the min biosynthetic gene cluster and MinT/MinC self-resistance determinants for minimycin (oxazinomycin) in Streptomyces hygroscopicus.)</span></li>
+</ul>
+
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>NUCLEIC_ACID_SYNTHESIS_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— CURATOR: C-nucleoside natural-product antibiotic (oxazinomycin) whose intracellularly phosphorylated 5&#39;-triphosphate metabolite incorporates into nascent RNA in place of UTP and arrests bacterial and eukaryotic DNA-directed RNA polymerase transcription elongation at polythymidine sequences (Prajapati et al. 2019, DOI:10.1093/nar/gkz782, PMID:31535140; Kong et al. 2019, DOI:10.1016/j.isci.2019.11.037, PMID:31816530).</span></dd></dl>
 
 
 
@@ -144,6 +176,21 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-10-31 · antigravity · LLM-assisted</span>
     <p>Curated biosynthesis_origin=NATURAL_PRODUCT from MIBiG 4.0.1 experimental biosynthetic gene cluster producer provenance.</p>
   </li>
+  <li>
+    <span class="pill">CURATED_MOLECULAR_TARGETS</span>
+    <span class="meta">2026-11-03 · antigravity · LLM-assisted</span>
+    <p>Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, HOST_SHARED_TARGET), and primary-literature molecular_targets entry for DNA-directed RNA polymerase complex (GO:0000428, PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1093/nar/gkz782 (PMID:31535140) and DOI:10.1016/j.isci.2019.11.037 (PMID:31816530; issue #1307).</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-11-03 · antigravity · LLM-assisted</span>
+    <p>Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature DNA-directed RNA polymerase complex target on minimycin (DOI:10.1093/nar/gkz782).</p>
+  </li>
+  <li>
+    <span class="pill">PROMOTED_TO_REVIEWED</span>
+    <span class="meta">2026-11-03 · antigravity · LLM-assisted</span>
+    <p>Promoted exact ChEBI record (CHEBI:224130) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, HOST_SHARED_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.1093/nar/gkz782, PMID:31535140) from PROPOSED to REVIEWED (issue #1307).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -164,7 +211,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>be4c99c04878</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>52ba2523b58f</code>, 3042 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

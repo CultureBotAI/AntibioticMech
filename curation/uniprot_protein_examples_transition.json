@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 62,
+  "record_count": 67,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -3322,6 +3322,361 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added reviewed Candida albicans, Candida albicans SC5314, and Saccharomyces cerevisiae S288c squalene synthase Erg9 (UniProtKB:P78589, UniProtKB:A0A1D8PI71, UniProtKB:P29704) protein_examples to the primary-literature fungal squalene synthase target (DOI:10.7164/antibiotics.45.639; PMID:1624366; DOI:10.1073/pnas.90.1.80; PMID:8419946).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:224130",
+      "label": "minimycin",
+      "path": "data/antibiotics/antibacterial/minimycin.yaml",
+      "before_sha256": "0dbc1be04a178740d692bf2631b94d3c2c9ef89c28bdddf0c76f01ddaf3af65e",
+      "after_sha256": "2e3f8c228557c1e7f8804893073fe8154a15f52b4ff3383bfba4931c4f5fc456",
+      "unchanged_fields_sha256": "2f8212677743a8536484eb6abcd95f926010112c9c2c0c54e9bdd8766301aa20",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "DNA-directed RNA polymerase complex",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0A8V2",
+              "protein_label": "DNA-directed RNA polymerase subunit beta",
+              "gene_symbol": "rpoB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Catalytic beta subunit (RpoB) of purified Escherichia coli K-12 DNA-directed RNA polymerase whose transcription elongation is arrested upon incorporation of oxazinomycin (minimycin) 5'-triphosphate into nascent RNA (DOI:10.1093/nar/gkz782; PMID:31535140)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0A8T7",
+              "protein_label": "DNA-directed RNA polymerase subunit beta'",
+              "gene_symbol": "rpoC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Catalytic beta' subunit (RpoC) forming the active-center cleft of purified Escherichia coli K-12 DNA-directed RNA polymerase assayed with oxazinomycin (minimycin) 5'-triphosphate (DOI:10.1093/nar/gkz782; PMID:31535140)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-03T14:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature DNA-directed RNA polymerase complex target on minimycin (DOI:10.1093/nar/gkz782).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:157175",
+      "label": "enoxacin",
+      "path": "data/antibiotics/antibacterial/enoxacin.yaml",
+      "before_sha256": "a2b5159a07237c691b39bd75d46fdc3d46b37ebac4fed9f0f294a4aa528fe5d0",
+      "after_sha256": "1f73ad9d0eafea505a06c434c40be0eb76ef1a1b2943561eeca113f3e59237e3",
+      "unchanged_fields_sha256": "314bcf0b25728efe23bfe1ed5bbe88fb0a2face4f1fc8b5782c2e406fd19b9b8",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 4,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling and QRDR mutant susceptibility assays by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation and QRDR mutant susceptibility assays by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P20083",
+              "protein_label": "DNA topoisomerase 4 subunit B",
+              "gene_symbol": "parE",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-03T14:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083) to the primary-literature DNA gyrase and topoisomerase IV target on enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:31810",
+      "label": "fleroxacin",
+      "path": "data/antibiotics/antibacterial/fleroxacin.yaml",
+      "before_sha256": "a9032eb622139bf9128df244a8fe38c1e54a485b5d481e92ca4f7f2510e93d56",
+      "after_sha256": "eb866cc00d46af6ff8fef0df3e9f57d37aedc64ed782a8dc769e2f9235a58bc5",
+      "unchanged_fields_sha256": "ba726bda30d6d0fa18d5639efbfde6331061ff9deaae47d9f827c76daad263bd",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 4,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 2,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling and QRDR mutant susceptibility assays by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation and QRDR mutant susceptibility assays by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P20083",
+              "protein_label": "DNA topoisomerase 4 subunit B",
+              "gene_symbol": "parE",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-03T14:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083) to the primary-literature DNA gyrase and topoisomerase IV target on fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:5280",
+      "label": "gatifloxacin",
+      "path": "data/antibiotics/antibacterial/gatifloxacin.yaml",
+      "before_sha256": "765478a23028c50027a73a39717746450cde73522310fa0e564fee2ea8808f7a",
+      "after_sha256": "d9ab0303d81c9920fb52120b1376f5689764c005f072e6900e7afc89cd607edd",
+      "unchanged_fields_sha256": "242bb661673e19ca77d593977b2a9a82741aff0b870aeae3f6ee03e636827d9d",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 4,
+      "history_events_added": 1,
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling and QRDR mutant susceptibility assays by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation and QRDR mutant susceptibility assays by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P20083",
+              "protein_label": "DNA topoisomerase 4 subunit B",
+              "gene_symbol": "parE",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-03T14:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083) to the primary-literature DNA gyrase and topoisomerase IV target on gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9763",
+      "label": "trovafloxacin",
+      "path": "data/antibiotics/antibacterial/trovafloxacin.yaml",
+      "before_sha256": "4171699afa802af0df162989b7827cbeed16085bad34eae5998c3e965efe4074",
+      "after_sha256": "157d4949e4d5dc0bac946527058e88997baeec3f9697e3c63c7852495063174b",
+      "unchanged_fields_sha256": "8f85efccff05ae2b86b179e9e7f8fa44661466439219abbb37fba44300e6697e",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 4,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AES4",
+              "protein_label": "DNA gyrase subunit A",
+              "gene_symbol": "gyrA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling and QRDR mutant susceptibility assays by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AES6",
+              "protein_label": "DNA gyrase subunit B",
+              "gene_symbol": "gyrB",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P0AFI2",
+              "protein_label": "DNA topoisomerase 4 subunit A",
+              "gene_symbol": "parC",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation and QRDR mutant susceptibility assays by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P20083",
+              "protein_label": "DNA topoisomerase 4 subunit B",
+              "gene_symbol": "parE",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-03",
+              "role": "Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-03T14:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083) to the primary-literature DNA gyrase and topoisomerase IV target on trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).",
         "llm_assisted": true
       }
     }

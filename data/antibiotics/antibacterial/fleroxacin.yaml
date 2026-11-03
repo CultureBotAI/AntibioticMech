@@ -1,37 +1,11 @@
 identifier: CHEBI:31810
 label: fleroxacin
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
-grounding_status: EXACT
-definition: A fluoroquinolone antibiotic that is 4-oxo-1,4-dihydroquinoline which
-  is substituted at positions 1, 3, 6, 7 and 8 by 2-fluoroethyl, carboxy, fluoro,
-  4-methylpiperazin-1-yl and fluoro groups, respectively. It is active against many
-  Gram-positive and Gram-negative bacteria.
-definition_source: ChEBI
-synonyms:
-- synonym_text: 6,8-difluoro-1-(2-fluoroethyl)-7-(4-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
-    acid
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: 6,8-difluoro-1-(2-fluoroethyl)-1,4-dihydro-7-(4-methyl-1-piperazinyl)-4-oxo-3-quinolinecarboxylic
-    acid-
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: fleroxacine
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: fleroxacino
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: fleroxacinum
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: Megalocin
-  synonym_type: EXACT_SYNONYM
-  source: aro
-- synonym_text: Quinodis
-  synonym_type: EXACT_SYNONYM
-  source: aro
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
 parent_compounds:
 - CHEBI:25384
 - CHEBI:26513
@@ -39,17 +13,6 @@ parent_compounds:
 - CHEBI:46845
 - CHEBI:87211
 - ARO:0000001
-activity_roles:
-- CHEBI:33281
-- CHEBI:36047
-structural_class: fluoroquinolone antibiotic
-structural_class_id: ARO:0000001
-mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
-  (ATP-hydrolysing)] inhibitor), CHEBI:53559 (topoisomerase IV inhibitor). ChEBI asserts
-  the role on the compound. The role names a target specific to the microbe or virus
-  — see mode_of_action_target_scope. Not a curator's mechanistic review.
-mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: CN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(CCF)c3c2F)CC1
   standard_inchi: InChI=1S/C17H18F3N3O3/c1-21-4-6-22(7-5-21)15-12(19)8-10-14(13(15)20)23(3-2-18)9-11(16(10)24)17(25)26/h8-9H,2-7H2,1H3,(H,25,26)
@@ -74,6 +37,30 @@ drug_xrefs:
 document_xrefs:
 - patent:US4398029
 - wikipedia.en:Fleroxacin
+synonyms:
+- synonym_text: 6,8-difluoro-1-(2-fluoroethyl)-7-(4-methylpiperazin-1-yl)-4-oxo-1,4-dihydroquinoline-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: 6,8-difluoro-1-(2-fluoroethyl)-1,4-dihydro-7-(4-methyl-1-piperazinyl)-4-oxo-3-quinolinecarboxylic
+    acid-
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fleroxacine
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fleroxacino
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: fleroxacinum
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Megalocin
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: Quinodis
+  synonym_type: EXACT_SYNONYM
+  source: aro
 source_concepts:
 - source: ARO
   source_id: ARO:3004013
@@ -91,6 +78,14 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+grounding_status: EXACT
+biosynthesis_origin: SYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic trifluorinated fluoroquinolone antibiotic
+  that inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase
+  IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001,
+  DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).'
 molecular_targets:
 - target_id: ARO:3000733
   target_label: fluoroquinolone sensitive gyrA
@@ -121,6 +116,68 @@ molecular_targets:
   - reference: ARO:3003261
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004013 (fleroxacin); database
       assertion, not a primary citation.
+- target_label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase
+    IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility
+    profiling of fleroxacin alongside comparator fluoroquinolones (Takei et al. 2001,
+    DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-12
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+    snippet: Takei et al. determined the inhibitory activities (IC50s) of fleroxacin
+      and 15 other quinolones against purified bacterial DNA gyrase supercoiling and
+      topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts
+      across defined GyrA and ParC QRDR mutants.
+    notes: Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337)
+      measured direct inhibition of bacterial DNA gyrase and topoisomerase IV by fleroxacin
+      and established target-mutation resistance shifts across GyrA and ParC QRDR
+      variants.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified
+      DNA supercoiling and QRDR mutant susceptibility assays by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited
+      by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified
+      decatenation and QRDR mutant susceptibility assays by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2
+      holoenzyme inhibited by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -142,3 +199,34 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1308).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:25:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083)
+    to the primary-literature DNA gyrase and topoisomerase IV target on fleroxacin
+    (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI fluoroquinolone record (CHEBI:31810) with complete
+    4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083;
+    DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue
+    #1308).'
+  llm_assisted: true
+definition: A fluoroquinolone antibiotic that is 4-oxo-1,4-dihydroquinoline which
+  is substituted at positions 1, 3, 6, 7 and 8 by 2-fluoroethyl, carboxy, fluoro,
+  4-methylpiperazin-1-yl and fluoro groups, respectively. It is active against many
+  Gram-positive and Gram-negative bacteria.
+definition_source: ChEBI
+structural_class_id: ARO:0000001

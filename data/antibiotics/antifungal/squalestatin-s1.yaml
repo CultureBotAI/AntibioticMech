@@ -1,7 +1,7 @@
 identifier: CHEBI:220211
 label: squalestatin S1
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A fungal 2,8-dioxabicyclo[3.2.1]octane tricarboxylic acid polyketide (zaragozic
   acid A) from Phoma sp. MF5453 that inhibits squalene synthase and exhibits broad-spectrum
@@ -92,6 +92,15 @@ curation_history:
     UniProtKB:P29704) protein_examples to the primary-literature fungal squalene synthase
     target (DOI:10.7164/antibiotics.45.639; PMID:1624366; DOI:10.1073/pnas.90.1.80;
     PMID:8419946).
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:220211) with complete 4/4 chemical_structure,
+    curator-verified mode_of_action (STEROL_BIOSYNTHESIS_INHIBITION, HOST_SHARED_TARGET),
+    and primary-literature molecular_targets entry for squalene synthase (FDFT1 /
+    Erg9, UniProtKB:P37268; DOI:10.7164/antibiotics.45.639, PMID:1624365; DOI:10.1073/pnas.92.11.4972,
+    PMID:7761434) from PROPOSED to REVIEWED (issue #1306).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: ERGOSTEROL_PATHWAY_INHIBITION

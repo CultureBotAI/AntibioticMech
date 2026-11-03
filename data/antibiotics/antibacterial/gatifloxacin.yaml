@@ -1,15 +1,43 @@
 identifier: CHEBI:5280
 label: gatifloxacin
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
-grounding_status: EXACT
-definition: A monocarboxylic acid that is 4-oxo-1,4-dihydroquinoline-3-carboxylic
-  acid which is substituted on the nitrogen by a cyclopropyl group and at positions
-  6, 7, and 8 by fluoro, 3-methylpiperazin-1-yl, and methoxy groups, respectively.
-  Gatifloxacin is an antibiotic of the fourth-generation fluoroquinolone family, that
-  like other members of that family, inhibits the bacterial topoisomerase type-II
-  enzymes.
-definition_source: ChEBI
+activity_roles:
+- CHEBI:33281
+structural_class: fluoroquinolone antibiotic
+parent_compounds:
+- CHEBI:23765
+- CHEBI:26512
+- CHEBI:37143
+- CHEBI:46848
+- CHEBI:86324
+- ARO:0000001
+chemical_structure:
+  smiles: COc1c(N2CCNC(C)C2)c(F)cc2c(=O)c(C(=O)O)cn(C3CC3)c12
+  standard_inchi: InChI=1S/C19H22FN3O4/c1-10-8-22(6-5-21-10)16-14(20)7-12-15(18(16)27-2)23(11-3-4-11)9-13(17(12)24)19(25)26/h7,9-11,21H,3-6,8H2,1-2H3,(H,25,26)
+  standard_inchi_key: XUBOMFCQGDBHNK-UHFFFAOYSA-N
+  molecular_formula: C19H22FN3O4
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 375.4
+  monoisotopic_mass: 375.15943
+xrefs:
+- ARO:3000659
+- cas:112811-59-3
+- gmelin:2281206
+- kegg.compound:C07661
+- lincs.smallmolecule:LSM-5139
+- reaxys:7445861
+- chembl:CHEMBL31
+- pubchem.compound:5379
+drug_xrefs:
+- drugbank:DB01044
+- drugcentral:1280
+- kegg.drug:D08011
+document_xrefs:
+- patent:EP230295
+- patent:US4980470
+- wikipedia.en:Gatifloxacin
 synonyms:
 - synonym_text: gatifloxacine
   synonym_type: INN
@@ -41,49 +69,6 @@ synonyms:
 - synonym_text: Tequin
   synonym_type: EXACT_SYNONYM
   source: aro
-parent_compounds:
-- CHEBI:23765
-- CHEBI:26512
-- CHEBI:37143
-- CHEBI:46848
-- CHEBI:86324
-- ARO:0000001
-activity_roles:
-- CHEBI:33281
-structural_class: fluoroquinolone antibiotic
-structural_class_id: ARO:0000001
-mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50750 (EC 5.99.1.3 [DNA topoisomerase
-  (ATP-hydrolysing)] inhibitor). ChEBI asserts the role on the compound. The target
-  it names is one the host has too, so the mechanism is true but is not evidence of
-  selectivity — see mode_of_action_target_scope. Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
-chemical_structure:
-  smiles: COc1c(N2CCNC(C)C2)c(F)cc2c(=O)c(C(=O)O)cn(C3CC3)c12
-  standard_inchi: InChI=1S/C19H22FN3O4/c1-10-8-22(6-5-21-10)16-14(20)7-12-15(18(16)27-2)23(11-3-4-11)9-13(17(12)24)19(25)26/h7,9-11,21H,3-6,8H2,1-2H3,(H,25,26)
-  standard_inchi_key: XUBOMFCQGDBHNK-UHFFFAOYSA-N
-  molecular_formula: C19H22FN3O4
-  structure_source: ChEBI
-  charge: 0
-  average_mass: 375.4
-  monoisotopic_mass: 375.15943
-xrefs:
-- ARO:3000659
-- cas:112811-59-3
-- gmelin:2281206
-- kegg.compound:C07661
-- lincs.smallmolecule:LSM-5139
-- reaxys:7445861
-- chembl:CHEMBL31
-- pubchem.compound:5379
-drug_xrefs:
-- drugbank:DB01044
-- drugcentral:1280
-- kegg.drug:D08011
-document_xrefs:
-- patent:EP230295
-- patent:US4980470
-- wikipedia.en:Gatifloxacin
 source_concepts:
 - source: ARO
   source_id: ARO:3000659
@@ -99,6 +84,239 @@ source_concepts:
   role_terms:
   - CHEBI:33281
   source_version: '2026-08-30'
+grounding_status: EXACT
+biosynthesis_origin: SYNTHETIC
+activity_spectrum:
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960
+  measurement_count: 1
+  isolate_count: 1
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:447fda76072c1a14
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:447fda76072c1a14; drug_code=GFX; row_count=1;
+      isolate_count=1; source=CLIRES2020; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
+      phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960
+  measurement_count: 3
+  isolate_count: 3
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:d49fa8e9b6577913
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:d49fa8e9b6577913; drug_code=GFX; row_count=3;
+      isolate_count=3; source=CLIRES2020; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
+      phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960
+  measurement_count: 1
+  isolate_count: 1
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:d5d2cc62a132fefe
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:d5d2cc62a132fefe; drug_code=GFX; row_count=1;
+      isolate_count=1; source=CLIRES2023; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
+      phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; KMVALIDATION2025; not specified
+  measurement_count: 3
+  isolate_count: 3
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:17481243e52fa112
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:17481243e52fa112; drug_code=GFX; row_count=3;
+      isolate_count=3; source=KMVALIDATION2025; method_1=not specified; phenotype=R;
+      quality=MEDIUM.'
+  activity: RESISTANT
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; KMVALIDATION2025; not specified
+  measurement_count: 44
+  isolate_count: 44
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:bfd1e18ea94d24de
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:bfd1e18ea94d24de; drug_code=GFX; row_count=44;
+      isolate_count=44; source=KMVALIDATION2025; method_1=not specified; phenotype=S;
+      quality=MEDIUM.'
+  activity: SUSCEPTIBLE
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
+    2.0 mg/L
+  measurement_count: 9
+  isolate_count: 9
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:a66b6d4182b2add9
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:a66b6d4182b2add9; drug_code=GFX; row_count=9;
+      isolate_count=9; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
+      method_3=7H10; method_cc=2.0; phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
+    2.0 mg/L
+  measurement_count: 126
+  isolate_count: 126
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:a60d04a20f7be5f0
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:a60d04a20f7be5f0; drug_code=GFX; row_count=126;
+      isolate_count=126; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
+      method_3=7H10; method_cc=2.0; phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration
+    2.0 mg/L
+  measurement_count: 3
+  isolate_count: 3
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:5feb7ba01f95142a
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:5feb7ba01f95142a; drug_code=GFX; row_count=3;
+      isolate_count=3; source=WHO2019; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
+      method_cc=2.0; phenotype=R; quality=MEDIUM.'
+  activity: RESISTANT
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration
+    2.0 mg/L
+  measurement_count: 34
+  isolate_count: 34
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:b8c832ee3accf2a0
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:b8c832ee3accf2a0; drug_code=GFX; row_count=34;
+      isolate_count=34; source=WHO2019; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
+      method_cc=2.0; phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
+- taxon_label: Mycobacterium tuberculosis complex
+  assay: CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration
+    WHO mg/L
+  measurement_count: 69
+  isolate_count: 69
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_observation_id: dst_measurements:0600668ff179a303
+  evidence:
+  - reference: DOI:10.5281/zenodo.15680920
+    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
+      activity_group_id=dst_measurements:0600668ff179a303; drug_code=GFX; row_count=69;
+      isolate_count=69; source=WHO2019; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
+      method_cc=WHO; phenotype=S; quality=MEDIUM.'
+  activity: SUSCEPTIBLE
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic 8-methoxyfluoroquinolone antibiotic that
+  dually inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase
+  IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001,
+  DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).'
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO explicitly describes ligand binding to gyrase subunit
+    A.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000659 (gatifloxacin); database
+      assertion, not a primary citation.
+- target_label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase
+    IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility
+    profiling of gatifloxacin alongside comparator fluoroquinolones (Takei et al.
+    2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-12
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+    snippet: Takei et al. determined the inhibitory activities (IC50s) of gatifloxacin
+      and 15 other quinolones against purified bacterial DNA gyrase supercoiling and
+      topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts
+      across defined GyrA and ParC QRDR mutants.
+    notes: Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337)
+      measured direct dual inhibition of bacterial DNA gyrase and topoisomerase IV
+      by gatifloxacin and established target-mutation resistance shifts across GyrA
+      and ParC QRDR variants.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified
+      DNA supercoiling and QRDR mutant susceptibility assays by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited
+      by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified
+      decatenation and QRDR mutant susceptibility assays by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2
+      holoenzyme inhibited by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_PROTECTION
   aro_id: ARO:3000419
@@ -266,185 +484,6 @@ resistance_mechanisms:
   - reference: ARO:3003995
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000659 (gatifloxacin);
       database assertion, not a primary citation.
-molecular_targets:
-- target_id: ARO:3000733
-  target_label: fluoroquinolone sensitive gyrA
-  target_type: PROTEIN
-  target_relation: DIRECT_BINDING_TARGET
-  experimental_context: CARD/ARO database assertion; target organism, strain, and
-    assay are not specified. ARO explicitly describes ligand binding to gyrase subunit
-    A.
-  evidence_status: PRIMARY_EVIDENCE_NEEDED
-  source: CARD_ARO
-  source_version: '2026-08-30'
-  source_retrieved_on: '2026-08-30'
-  evidence:
-  - reference: ARO:3000733
-    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000659 (gatifloxacin); database
-      assertion, not a primary citation.
-activity_spectrum:
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960
-  measurement_count: 1
-  isolate_count: 1
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:447fda76072c1a14
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:447fda76072c1a14; drug_code=GFX; row_count=1;
-      isolate_count=1; source=CLIRES2020; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
-      phenotype=R; quality=MEDIUM.'
-  activity: RESISTANT
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; CLIRES2020; liquid media; MGIT; MGIT960
-  measurement_count: 3
-  isolate_count: 3
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:d49fa8e9b6577913
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:d49fa8e9b6577913; drug_code=GFX; row_count=3;
-      isolate_count=3; source=CLIRES2020; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
-      phenotype=S; quality=MEDIUM.'
-  activity: SUSCEPTIBLE
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; CLIRES2023; liquid media; MGIT; MGIT960
-  measurement_count: 1
-  isolate_count: 1
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:d5d2cc62a132fefe
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:d5d2cc62a132fefe; drug_code=GFX; row_count=1;
-      isolate_count=1; source=CLIRES2023; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
-      phenotype=S; quality=MEDIUM.'
-  activity: SUSCEPTIBLE
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; KMVALIDATION2025; not specified
-  measurement_count: 3
-  isolate_count: 3
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:17481243e52fa112
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:17481243e52fa112; drug_code=GFX; row_count=3;
-      isolate_count=3; source=KMVALIDATION2025; method_1=not specified; phenotype=R;
-      quality=MEDIUM.'
-  activity: RESISTANT
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; KMVALIDATION2025; not specified
-  measurement_count: 44
-  isolate_count: 44
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:bfd1e18ea94d24de
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:bfd1e18ea94d24de; drug_code=GFX; row_count=44;
-      isolate_count=44; source=KMVALIDATION2025; method_1=not specified; phenotype=S;
-      quality=MEDIUM.'
-  activity: SUSCEPTIBLE
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
-    2.0 mg/L
-  measurement_count: 9
-  isolate_count: 9
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:a66b6d4182b2add9
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:a66b6d4182b2add9; drug_code=GFX; row_count=9;
-      isolate_count=9; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
-      method_3=7H10; method_cc=2.0; phenotype=R; quality=MEDIUM.'
-  activity: RESISTANT
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; SEQTREAT2020; solid media; middlebrook; 7H10; critical concentration
-    2.0 mg/L
-  measurement_count: 126
-  isolate_count: 126
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:a60d04a20f7be5f0
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:a60d04a20f7be5f0; drug_code=GFX; row_count=126;
-      isolate_count=126; source=SEQTREAT2020; method_1=solid media; method_2=middlebrook;
-      method_3=7H10; method_cc=2.0; phenotype=S; quality=MEDIUM.'
-  activity: SUSCEPTIBLE
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration
-    2.0 mg/L
-  measurement_count: 3
-  isolate_count: 3
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:5feb7ba01f95142a
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:5feb7ba01f95142a; drug_code=GFX; row_count=3;
-      isolate_count=3; source=WHO2019; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
-      method_cc=2.0; phenotype=R; quality=MEDIUM.'
-  activity: RESISTANT
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration
-    2.0 mg/L
-  measurement_count: 34
-  isolate_count: 34
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:b8c832ee3accf2a0
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:b8c832ee3accf2a0; drug_code=GFX; row_count=34;
-      isolate_count=34; source=WHO2019; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
-      method_cc=2.0; phenotype=S; quality=MEDIUM.'
-  activity: SUSCEPTIBLE
-- taxon_label: Mycobacterium tuberculosis complex
-  assay: CRyPTIC DST; WHO2019; liquid media; MGIT; MGIT960; critical concentration
-    WHO mg/L
-  measurement_count: 69
-  isolate_count: 69
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_observation_id: dst_measurements:0600668ff179a303
-  evidence:
-  - reference: DOI:10.5281/zenodo.15680920
-    notes: 'Compact CRyPTIC 3.4.0 grouped activity row: source_table=DST_MEASUREMENTS;
-      activity_group_id=dst_measurements:0600668ff179a303; drug_code=GFX; row_count=69;
-      isolate_count=69; source=WHO2019; method_1=liquid media; method_2=MGIT; method_3=MGIT960;
-      method_cc=WHO; phenotype=S; quality=MEDIUM.'
-  activity: SUSCEPTIBLE
-activity_membership_collections:
-- format: antibioticmech-activity-memberships-v1
-  path: membership-9c04e181212b9a3259e6973b7e175d2bb3836a1e5489f7ee4dcee1b68b2e976e.json.gz
-  sha256: 9c04e181212b9a3259e6973b7e175d2bb3836a1e5489f7ee4dcee1b68b2e976e
-  byte_size: 5114
-  uncompressed_byte_size: 55036
-  source: CRYPTIC
-  source_version: 3.4.0
-  source_reference: https://zenodo.org/records/15680920
-  source_retrieved_on: '2026-10-05'
-  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
-  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
-  subject_count: 293
-  observation_count: 10
-  membership_count: 293
-  measurement_count: 293
-  unlinked_subject_count: 151
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -481,3 +520,53 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1308).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:25:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083)
+    to the primary-literature DNA gyrase and topoisomerase IV target on gatifloxacin
+    (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI fluoroquinolone record (CHEBI:5280) with complete
+    4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083;
+    DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue
+    #1308).'
+  llm_assisted: true
+definition: A monocarboxylic acid that is 4-oxo-1,4-dihydroquinoline-3-carboxylic
+  acid which is substituted on the nitrogen by a cyclopropyl group and at positions
+  6, 7, and 8 by fluoro, 3-methylpiperazin-1-yl, and methoxy groups, respectively.
+  Gatifloxacin is an antibiotic of the fourth-generation fluoroquinolone family, that
+  like other members of that family, inhibits the bacterial topoisomerase type-II
+  enzymes.
+definition_source: ChEBI
+structural_class_id: ARO:0000001
+activity_membership_collections:
+- format: antibioticmech-activity-memberships-v1
+  path: membership-9c04e181212b9a3259e6973b7e175d2bb3836a1e5489f7ee4dcee1b68b2e976e.json.gz
+  sha256: 9c04e181212b9a3259e6973b7e175d2bb3836a1e5489f7ee4dcee1b68b2e976e
+  byte_size: 5114
+  uncompressed_byte_size: 55036
+  source: CRYPTIC
+  source_version: 3.4.0
+  source_reference: https://zenodo.org/records/15680920
+  source_retrieved_on: '2026-10-05'
+  source_snapshot_sha256: b4ca79ecef0937fa0a3c304b82dcc0b45f49bd5ce404a4e6009181f4cdf62bb2
+  activity_inventory_sha256: fa2fe5e5258328f10f9fe5724e4b74f354a98f5355bac68108ab28ffb17c7987
+  subject_count: 293
+  observation_count: 10
+  membership_count: 293
+  measurement_count: 293
+  unlinked_subject_count: 151

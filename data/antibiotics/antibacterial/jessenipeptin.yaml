@@ -1,12 +1,7 @@
 identifier: CHEBI:221686
 label: jessenipeptin
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
-grounding_status: EXACT
-definition: A 19-amino-acid nonribosomal cyclic lipodepsipeptide antibiotic from Pseudomonas
-  sp. QS1027 with antibacterial activity against methicillin-resistant Staphylococcus
-  aureus.
-definition_source: DOI:10.1073/pnas.1721790115
 activity_roles:
 - CHEBI:33282
 chemical_structure:
@@ -40,6 +35,8 @@ source_concepts:
       MIBiG 4.0.1 entry BGC0001629, ChEBI CHEBI:221686, and PubChem CID 145720625
       supply the stereo-complete SMILES, Standard InChI, and InChIKey.
   source_version: 4.0.1
+grounding_status: EXACT
+biosynthesis_origin: NATURAL_PRODUCT
 producer_organisms:
 - taxon_id: NCBITaxon:2056244
   taxon_label: Pseudomonas sp.
@@ -58,6 +55,37 @@ producer_organisms:
     notes: MIBiG's first legacy reference for the entry, inherited rather than attached
       to the compound. It supports that the entry exists; it is NOT established as
       evidence for this specific producer/compound link.
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: 19-Residue cyclic lipodepsipeptide antibiotic of the
+  pore-forming tolaasin/sessilin family from Pseudomonas sp. QS1027 that disrupts
+  Gram-positive bacterial cell-envelope integrity and acts synergistically with co-secreted
+  mupirocin against methicillin-resistant Staphylococcus aureus (Arp et al. 2018,
+  DOI:10.1073/pnas.1721790115, PMID:29592954).'
+molecular_targets:
+- target_label: Gram-positive bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Gram-positive bacterial susceptibility, Bacillus subtilis
+    and methicillin-resistant Staphylococcus aureus (MRSA) growth inhibition, and
+    synergistic checkerboard assays of the cyclic lipodepsipeptide jessenipeptin with
+    mupirocin (Arp et al. 2018, DOI:10.1073/pnas.1721790115, PMID:29592954).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2018-04
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.1073/pnas.1721790115
+    snippet: Arp et al. isolated the 19-amino-acid cyclic lipodepsipeptide jessenipeptin
+      from Pseudomonas sp. QS1027 and demonstrated potent Gram-positive antibacterial
+      activity and synergistic activity with mupirocin against methicillin-resistant
+      Staphylococcus aureus.
+    notes: Arp et al. 2018 (Proc Natl Acad Sci U S A 115:3758-3763; PMID:29592954)
+      characterized jessenipeptin as an amphiphilic cyclic lipodepsipeptide of the
+      membrane-disrupting tolaasin/sessilin family that targets Gram-positive bacteria
+      including MRSA and synergizes with mupirocin.
 curation_history:
 - timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
@@ -75,4 +103,23 @@ curation_history:
   changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
     notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
-biosynthesis_origin: NATURAL_PRODUCT
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (MEMBRANE_DISRUPTION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for Gram-positive
+    bacterial cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT) backed by DOI:10.1073/pnas.1721790115
+    (PMID:29592954; issue #1307).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:221686) with complete 4/4 chemical_structure,
+    curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1073/pnas.1721790115, PMID:29592954) from PROPOSED to
+    REVIEWED (issue #1307).'
+  llm_assisted: true
+definition: A 19-amino-acid nonribosomal cyclic lipodepsipeptide antibiotic from Pseudomonas
+  sp. QS1027 with antibacterial activity against methicillin-resistant Staphylococcus
+  aureus.
+definition_source: DOI:10.1073/pnas.1721790115

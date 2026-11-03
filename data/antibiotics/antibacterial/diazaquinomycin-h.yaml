@@ -1,15 +1,7 @@
 identifier: CHEBI:199753
 label: diazaquinomycin H
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
-grounding_status: EXACT
-definition: A 1,8-diazaanthraquinone alkaloid antibiotic from Micromonospora sp. B006
-  with selective antitubercular activity against Mycobacterium tuberculosis.
-definition_source: DOI:10.1021/acs.jnatprod.8b00394
-synonyms:
-- synonym_text: DAQ H
-  synonym_type: EXACT_SYNONYM
-  source: curator
 activity_roles:
 - CHEBI:33282
 chemical_structure:
@@ -24,6 +16,10 @@ chemical_structure:
   monoisotopic_mass: 382.1893
 xrefs:
 - pubchem.compound:134815171
+synonyms:
+- synonym_text: DAQ H
+  synonym_type: EXACT_SYNONYM
+  source: curator
 source_concepts:
 - source: CURATOR
   source_id: DOI:10.1021/acs.jnatprod.8b00394#diazaquinomycin-h
@@ -43,6 +39,8 @@ source_concepts:
       BGC0001848, ChEBI CHEBI:199753, and PubChem CID 134815171 supply the SMILES,
       Standard InChI, and InChIKey.
   source_version: 4.0.1
+grounding_status: EXACT
+biosynthesis_origin: NATURAL_PRODUCT
 producer_organisms:
 - taxon_id: NCBITaxon:2201999
   taxon_label: Micromonospora sp.
@@ -62,6 +60,42 @@ producer_organisms:
     notes: MIBiG's first legacy reference for the entry, inherited rather than attached
       to the compound. It supports that the entry exists; it is NOT established as
       evidence for this specific producer/compound link.
+mode_of_action: FOLATE_PATHWAY_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: 1,8-Diazaanthraquinone natural-product antibiotic
+  of the antifolate/thymidylate-synthase-inhibitor diazaquinomycin family from marine-derived
+  Streptomyces sp. F001 and Micromonospora sp. B006 that selectively inhibits Mycobacterium
+  tuberculosis H37Rv growth and replication (MIC = 0.04 ug/mL; Mullowney et al. 2015,
+  DOI:10.1021/acsinfecdis.5b00005, PMID:25893226; Braesel et al. 2018, DOI:10.1021/acs.jnatprod.8b00394,
+  PMID:30110167).'
+molecular_targets:
+- target_label: mycobacterial folate-dependent thymidylate biosynthesis and replication
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:83332
+  taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+  experimental_context: Whole-cell Mycobacterium tuberculosis H37Rv growth-inhibition
+    and drug-resistant panel profiling of diazaquinomycin H (MABA MIC90 = 0.04 ug/mL;
+    LORA MIC90 = 0.07 ug/mL; Mullowney et al. 2015, DOI:10.1021/acsinfecdis.5b00005,
+    PMID:25893226; Braesel et al. 2018, DOI:10.1021/acs.jnatprod.8b00394, PMID:30110167).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2015-04
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.1021/acsinfecdis.5b00005
+    snippet: Mullowney et al. isolated the 1,8-diazaanthraquinone antibiotics diazaquinomycins
+      H and J from Streptomyces sp. F001 and demonstrated potent, selective antitubercular
+      activity against replicating and nonreplicating Mycobacterium tuberculosis H37Rv
+      (MIC = 0.04 and 0.07 ug/mL) and monoresistant M. tuberculosis strains.
+    notes: Mullowney et al. 2015 (ACS Infect Dis 1:168-174; PMID:25893226) isolated
+      diazaquinomycin H and demonstrated nanomolar-to-submicromolar selective growth
+      inhibition of Mycobacterium tuberculosis H37Rv (MABA MIC = 0.04 ug/mL) within
+      the antifolate/thymidylate-synthase-inhibitor diazaquinomycin scaffold class.
+  - reference: DOI:10.1021/acs.jnatprod.8b00394
+    notes: Braesel et al. 2018 (J Nat Prod 81:2280-2287; PMID:30110167) identified
+      the daq biosynthetic gene cluster for diazaquinomycins H and J in Micromonospora
+      sp. B006 and confirmed their selective antitubercular activity.
 curation_history:
 - timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
@@ -79,4 +113,23 @@ curation_history:
   changes: Synchronized parenthetical PubMed identifier in source_concepts evidence
     notes to match the verified PubMed record for the primary DOI reference.
   llm_assisted: true
-biosynthesis_origin: NATURAL_PRODUCT
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (FOLATE_PATHWAY_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for mycobacterial
+    folate-dependent thymidylate biosynthesis and replication (BIOLOGICAL_PROCESS,
+    DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1021/acsinfecdis.5b00005 (PMID:25893226)
+    and DOI:10.1021/acs.jnatprod.8b00394 (PMID:30110167; issue #1307).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:199753) with complete 4/4 chemical_structure,
+    curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1021/acsinfecdis.5b00005, PMID:25893226; DOI:10.1021/acs.jnatprod.8b00394,
+    PMID:30110167) from PROPOSED to REVIEWED (issue #1307).'
+  llm_assisted: true
+definition: A 1,8-diazaanthraquinone alkaloid antibiotic from Micromonospora sp. B006
+  with selective antitubercular activity against Mycobacterium tuberculosis.
+definition_source: DOI:10.1021/acs.jnatprod.8b00394

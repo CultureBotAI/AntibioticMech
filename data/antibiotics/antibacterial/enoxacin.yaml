@@ -1,14 +1,46 @@
 identifier: CHEBI:157175
 label: enoxacin
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
-grounding_status: EXACT
-definition: A 1,8-naphthyridine derivative that is 1,4-dihydro-1,8-naphthyridine with
-  an ethyl group at the 1 position, a carboxy group at the 3-position, an oxo sustituent
-  at the 4-position, a fluoro substituent at the 5-position and a piperazin-1-yl group
-  at the 7 position. An antibacterial, it is used in the treatment of urinary-tract
-  infections and gonorrhoea.
-definition_source: ChEBI
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
+parent_compounds:
+- CHEBI:25384
+- CHEBI:33709
+- CHEBI:46848
+- CHEBI:73537
+- CHEBI:86324
+- CHEBI:87211
+- ARO:0000001
+chemical_structure:
+  smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNCC3)nc21
+  standard_inchi: InChI=1S/C15H17FN4O3/c1-2-19-8-10(15(22)23)12(21)9-7-11(16)14(18-13(9)19)20-5-3-17-4-6-20/h7-8,17H,2-6H2,1H3,(H,22,23)
+  standard_inchi_key: IDYZIJYBMGIQMJ-UHFFFAOYSA-N
+  molecular_formula: C15H17FN4O3
+  structure_source: ChEBI
+  charge: 0
+  average_mass: 320.324
+  monoisotopic_mass: 320.12847
+xrefs:
+- ARO:0000023
+- cas:74011-58-8
+- kegg.compound:C06979
+- lincs.smallmolecule:LSM-5848
+- reaxys:3628995
+- vsdb:1896
+- chembl:CHEMBL826
+- pubchem.compound:3229
+drug_xrefs:
+- drugbank:DB00467
+- drugcentral:1013
+- kegg.drug:D00310
+document_xrefs:
+- patent:EP9425
+- patent:US4352803
+- patent:US4359578
+- wikipedia.en:Enoxacin
 synonyms:
 - synonym_text: enoxacine
   synonym_type: INN
@@ -43,52 +75,6 @@ synonyms:
 - synonym_text: Penetrex
   synonym_type: EXACT_SYNONYM
   source: aro
-parent_compounds:
-- CHEBI:25384
-- CHEBI:33709
-- CHEBI:46848
-- CHEBI:73537
-- CHEBI:86324
-- CHEBI:87211
-- ARO:0000001
-activity_roles:
-- CHEBI:33281
-- CHEBI:36047
-structural_class: fluoroquinolone antibiotic
-structural_class_id: ARO:0000001
-mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:59517 (DNA synthesis inhibitor).
-  ChEBI asserts the role on the compound. The target it names is one the host has
-  too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
-chemical_structure:
-  smiles: CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNCC3)nc21
-  standard_inchi: InChI=1S/C15H17FN4O3/c1-2-19-8-10(15(22)23)12(21)9-7-11(16)14(18-13(9)19)20-5-3-17-4-6-20/h7-8,17H,2-6H2,1H3,(H,22,23)
-  standard_inchi_key: IDYZIJYBMGIQMJ-UHFFFAOYSA-N
-  molecular_formula: C15H17FN4O3
-  structure_source: ChEBI
-  charge: 0
-  average_mass: 320.324
-  monoisotopic_mass: 320.12847
-xrefs:
-- ARO:0000023
-- cas:74011-58-8
-- kegg.compound:C06979
-- lincs.smallmolecule:LSM-5848
-- reaxys:3628995
-- vsdb:1896
-- chembl:CHEMBL826
-- pubchem.compound:3229
-drug_xrefs:
-- drugbank:DB00467
-- drugcentral:1013
-- kegg.drug:D00310
-document_xrefs:
-- patent:EP9425
-- patent:US4352803
-- patent:US4359578
-- wikipedia.en:Enoxacin
 source_concepts:
 - source: ARO
   source_id: ARO:0000023
@@ -106,6 +92,136 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+grounding_status: EXACT
+biosynthesis_origin: SYNTHETIC
+clinical_status_assertions:
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 019616
+  application_type: NDA
+  product_number: '004'
+  sponsor_name: SANOFI AVENTIS US
+  drug_name: PENETREX
+  ingredient_name: ENOXACIN
+  substance_id: UNII:325OGW249P
+  approval_date: '1991-12-31'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '36'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019616
+- status: APPROVED
+  jurisdiction: US-FDA
+  application_number: 019616
+  application_type: NDA
+  product_number: '005'
+  sponsor_name: SANOFI AVENTIS US
+  drug_name: PENETREX
+  ingredient_name: ENOXACIN
+  substance_id: UNII:325OGW249P
+  approval_date: '1991-12-31'
+  submission_status: AP
+  marketing_status: Discontinued
+  currently_marketed: false
+  source: DRUGS_AT_FDA
+  source_version: '2026-08-28'
+  source_retrieved_on: '2026-08-31'
+  identity_source: FDA_GSRS
+  identity_source_version: '2026-08-31'
+  identity_retrieved_on: '2026-08-31'
+  identity_record_version: '36'
+  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019616
+clinical_status: APPROVED
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic 1,8-naphthyridine fluoroquinolone antibiotic
+  that inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase
+  IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001,
+  DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).'
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO explicitly describes ligand binding to gyrase subunit
+    A.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000023 (enoxacin); database
+      assertion, not a primary citation.
+- target_label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase
+    IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility
+    profiling of enoxacin alongside comparator fluoroquinolones (Takei et al. 2001,
+    DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-12
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+    snippet: Takei et al. determined the inhibitory activities (IC50s) of enoxacin
+      and 15 other quinolones against purified bacterial DNA gyrase supercoiling and
+      topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts
+      across defined GyrA and ParC QRDR mutants.
+    notes: Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337)
+      measured direct inhibition of bacterial DNA gyrase and topoisomerase IV by enoxacin
+      and established target-mutation resistance shifts across GyrA and ParC QRDR
+      variants.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified
+      DNA supercoiling and QRDR mutant susceptibility assays by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited
+      by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified
+      decatenation and QRDR mutant susceptibility assays by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2
+      holoenzyme inhibited by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_EFFLUX
   aro_id: ARO:3001216
@@ -273,66 +389,6 @@ resistance_mechanisms:
   - reference: ARO:3004667
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:0000023 (enoxacin);
       database assertion, not a primary citation.
-molecular_targets:
-- target_id: ARO:3000733
-  target_label: fluoroquinolone sensitive gyrA
-  target_type: PROTEIN
-  target_relation: DIRECT_BINDING_TARGET
-  experimental_context: CARD/ARO database assertion; target organism, strain, and
-    assay are not specified. ARO explicitly describes ligand binding to gyrase subunit
-    A.
-  evidence_status: PRIMARY_EVIDENCE_NEEDED
-  source: CARD_ARO
-  source_version: '2026-08-30'
-  source_retrieved_on: '2026-08-30'
-  evidence:
-  - reference: ARO:3000733
-    notes: CARD/ARO asserts targeted_by_antibiotic ARO:0000023 (enoxacin); database
-      assertion, not a primary citation.
-clinical_status: APPROVED
-clinical_status_assertions:
-- status: APPROVED
-  jurisdiction: US-FDA
-  application_number: 019616
-  application_type: NDA
-  product_number: '004'
-  sponsor_name: SANOFI AVENTIS US
-  drug_name: PENETREX
-  ingredient_name: ENOXACIN
-  substance_id: UNII:325OGW249P
-  approval_date: '1991-12-31'
-  submission_status: AP
-  marketing_status: Discontinued
-  currently_marketed: false
-  source: DRUGS_AT_FDA
-  source_version: '2026-08-28'
-  source_retrieved_on: '2026-08-31'
-  identity_source: FDA_GSRS
-  identity_source_version: '2026-08-31'
-  identity_retrieved_on: '2026-08-31'
-  identity_record_version: '36'
-  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019616
-- status: APPROVED
-  jurisdiction: US-FDA
-  application_number: 019616
-  application_type: NDA
-  product_number: '005'
-  sponsor_name: SANOFI AVENTIS US
-  drug_name: PENETREX
-  ingredient_name: ENOXACIN
-  substance_id: UNII:325OGW249P
-  approval_date: '1991-12-31'
-  submission_status: AP
-  marketing_status: Discontinued
-  currently_marketed: false
-  source: DRUGS_AT_FDA
-  source_version: '2026-08-28'
-  source_retrieved_on: '2026-08-31'
-  identity_source: FDA_GSRS
-  identity_source_version: '2026-08-31'
-  identity_retrieved_on: '2026-08-31'
-  identity_record_version: '36'
-  reference: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=019616
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -367,3 +423,34 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1308).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:25:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083)
+    to the primary-literature DNA gyrase and topoisomerase IV target on enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI fluoroquinolone record (CHEBI:157175) with complete
+    4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083;
+    DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue
+    #1308).'
+  llm_assisted: true
+definition: A 1,8-naphthyridine derivative that is 1,4-dihydro-1,8-naphthyridine with
+  an ethyl group at the 1 position, a carboxy group at the 3-position, an oxo sustituent
+  at the 4-position, a fluoro substituent at the 5-position and a piperazin-1-yl group
+  at the 7 position. An antibacterial, it is used in the treatment of urinary-tract
+  infections and gonorrhoea.
+definition_source: ChEBI
+structural_class_id: ARO:0000001

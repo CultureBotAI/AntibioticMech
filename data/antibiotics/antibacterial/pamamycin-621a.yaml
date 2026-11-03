@@ -1,11 +1,7 @@
 identifier: CHEBI:219230
 label: pamamycin-621A
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
-grounding_status: EXACT
-definition: A 16-membered macrodiolide polyketide antibiotic (621 Da congener) from
-  Streptomyces alboniger with anti-Gram-positive and antimycobacterial activity.
-definition_source: DOI:10.1021/ol902290v
 activity_roles:
 - CHEBI:33282
 chemical_structure:
@@ -39,6 +35,8 @@ source_concepts:
       MIBiG 4.0.1 entry BGC0001150, ChEBI CHEBI:219230, and PubChem CID 10508137 supply
       the stereo-complete SMILES, Standard InChI, and InChIKey.
   source_version: 4.0.1
+grounding_status: EXACT
+biosynthesis_origin: NATURAL_PRODUCT
 producer_organisms:
 - taxon_id: NCBITaxon:132473
   taxon_label: Streptomyces alboniger
@@ -61,6 +59,40 @@ producer_organisms:
       spectrometry, X-ray, total synthesis). It establishes what the molecule is.
       It is NOT evidence that this organism produces it; MIBiG attaches no reference
       to the producer link at all.'
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: 16-Membered macrodiolide cation-ionophore antibiotic
+  from Streptomyces alboniger that mediates transmembrane alkali-metal cation transport
+  and disrupts Gram-positive bacterial and mycobacterial cytoplasmic membrane ion
+  gradients (Natsume et al. 1995, DOI:10.7164/antibiotics.48.1159, PMID:7490225; Ren
+  and Wu 2009, DOI:10.1021/ol902290v, PMID:19924823).'
+molecular_targets:
+- target_label: bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Gram-positive bacterial susceptibility and macrodiolide cation-ionophore
+    membrane-transport structure-activity characterization of pamamycin congeners
+    including pamamycin-621A (Natsume et al. 1995, DOI:10.7164/antibiotics.48.1159,
+    PMID:7490225; Ren and Wu 2009, DOI:10.1021/ol902290v, PMID:19924823).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1995-10
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.48.1159
+    snippet: Natsume et al. characterized the structure-activity relationships of
+      pamamycin macrodiolide homologues from Streptomyces alboniger, showing that
+      the dimethylamino-substituted 16-membered macrodiolide ionophore scaffold mediates
+      antimicrobial activity against Gram-positive bacteria.
+    notes: Natsume et al. 1995 (J Antibiot 48:1159-1166; PMID:7490225) established
+      the cation-ionophore and membrane-depolarizing structure-activity relationships
+      of pamamycin macrodiolide antibiotics against Gram-positive bacteria.
+  - reference: DOI:10.1021/ol902290v
+    notes: Ren and Wu 2009 (Org Lett 11:5638-5641; PMID:19924823) completed the total
+      synthesis and stereochemical verification of the 16-membered macrodiolide antibiotic
+      pamamycin-621A.
 curation_history:
 - timestamp: '2026-10-31T13:02:02Z'
   curator: seed_from_sources
@@ -79,4 +111,22 @@ curation_history:
     in source_concepts evidence notes to match the verified PubMed record for the
     primary DOI reference.
   llm_assisted: true
-biosynthesis_origin: NATURAL_PRODUCT
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (MEMBRANE_DISRUPTION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT) backed by DOI:10.7164/antibiotics.48.1159
+    (PMID:7490225) and DOI:10.1021/ol902290v (PMID:19924823; issue #1307).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:219230) with complete 4/4 chemical_structure,
+    curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.7164/antibiotics.48.1159, PMID:7490225; DOI:10.1021/ol902290v,
+    PMID:19924823) from PROPOSED to REVIEWED (issue #1307).'
+  llm_assisted: true
+definition: A 16-membered macrodiolide polyketide antibiotic (621 Da congener) from
+  Streptomyces alboniger with anti-Gram-positive and antimycobacterial activity.
+definition_source: DOI:10.1021/ol902290v

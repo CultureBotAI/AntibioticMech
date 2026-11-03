@@ -276,10 +276,10 @@ def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_exam
 def _uniprot_protein_examples_transition(root):
     payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "d55b0ec85d94e0715699d08c7bb98b2beb369917a6c5bcd75e1a1df9f6d6f08d"
+        "f63656d5e53d66fd1744ad696e0f396df47dcb657bcd3fa85386708df9c81888"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 62
+    assert len(transition["record_deltas"]) == 67
     return transition
 
 
@@ -467,6 +467,11 @@ def pre_stage5_remediation_root(tmp_path_factory):
         ("molecular_targets", "antibioticmech:curator-e14f58e6dc", "DOI:10.1128/AAC.49.8.3239-3250.2005"),
         ("molecular_targets", "antibioticmech:curator-217ed2935e", "DOI:10.1128/AAC.02770-15"),
         ("molecular_targets", "antibioticmech:curator-f930ec8d19", "DOI:10.1016/j.chembiol.2012.01.014"),
+        ("molecular_targets", "CHEBI:199753", "DOI:10.1021/acsinfecdis.5b00005"),
+        ("molecular_targets", "CHEBI:225769", "DOI:10.1021/acsinfecdis.5b00005"),
+        ("molecular_targets", "CHEBI:221686", "DOI:10.1073/pnas.1721790115"),
+        ("molecular_targets", "CHEBI:219230", "DOI:10.7164/antibiotics.48.1159"),
+        ("molecular_targets", "CHEBI:198952", "DOI:10.7164/antibiotics.48.1159"),
     }
     promoted_existing_ids = {
         "CHEBI:3732",
@@ -568,10 +573,13 @@ def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
 
 @pytest.fixture(scope="session")
 def pre_cycle2_stage5_remediation_root(tmp_path_factory, pre_causal_graphs_root):
-    """Restore the Cycle 3 Stage 5 and Cycle 2 Stage 5 review-remediated records in isolation."""
+    """Restore Cycle 4/3/2 Stage 5 review-remediated records in isolation."""
     from antibioticmech.validation.write_validated import write_validated_antibiotic
 
     source = pre_causal_graphs_root
+    cycle4_stage5_transition = json.loads(
+        (source / "curation/cycle4_stage5_review_remediation_transition.json").read_bytes()
+    )
     cycle3_stage5_transition = json.loads(
         (source / "curation/cycle3_stage5_review_remediation_transition.json").read_bytes()
     )
@@ -582,6 +590,17 @@ def pre_cycle2_stage5_remediation_root(tmp_path_factory, pre_causal_graphs_root)
     shutil.copytree(source / "data/antibiotics", root / "data/antibiotics")
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts", "curation"):
         (root / relative).symlink_to(source / relative, target_is_directory=True)
+    for delta in cycle4_stage5_transition["promoted_record_deltas"]:
+        rel_path = delta["path"]
+        rec = load_record(root / rel_path)
+        assert rec["identifier"] == delta["identifier"]
+        assert rec["curation_status"] == delta["after_curation_status"] == "REVIEWED"
+        assert rec["curation_history"].pop() == delta["added_history_event"]
+        rec["curation_status"] = delta["before_curation_status"]
+        write_validated_antibiotic(rec, root / rel_path)
+        assert (
+            hashlib.sha256((root / rel_path).read_bytes()).hexdigest() == delta["before_sha256"]
+        )
     for delta in cycle3_stage5_transition["promoted_record_deltas"]:
         rel_path = delta["path"]
         rec = load_record(root / rel_path)
