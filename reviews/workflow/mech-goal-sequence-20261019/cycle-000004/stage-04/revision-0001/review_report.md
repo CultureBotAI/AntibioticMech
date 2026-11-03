@@ -18,8 +18,8 @@ All **3,042** `AntibioticRecord` YAML files under `data/antibiotics/` at commit 
 | `SEEDED` / `REVIEWED` / `PROPOSED` | 2,819 / 101 / 122 |
 | `EXACT` / `MINTED` grounding | 2,721 / 321 (`240` `SEEDED` `antibioticmech:aro-*` + `81` `PROPOSED` `antibioticmech:curator-*`) |
 | Records with `chemical_structure` / without `chemical_structure` | 2,800 / 242 |
-| Records with `causal_graphs` | 69 (`68` `REVIEWED` + `1` `SEEDED`/`MINTED` ofloxacin; `70` graphs; `50/50` `GENE_OR_PROTEIN` nodes carry `94` reviewed `UniProtKB` `protein_examples` + `22` non-protein graphs held) |
-| Records with `PRIMARY_LITERATURE` `molecular_targets` | 125 (`101` `REVIEWED` + `28` `PROPOSED` total across `135` target entries: `64` targets carry `119` reviewed `UniProtKB` `protein_examples`, `71` non-protein/complex targets explicitly held in `curation/uniprot_protein_examples.yaml`, `0` unaccounted) |
+| Records with `causal_graphs` | 69 (`68` `REVIEWED` + `1` `SEEDED`/`MINTED` ofloxacin; `70` graphs; `50/50` `GENE_OR_PROTEIN` nodes carry `75` reviewed `UniProtKB` `protein_examples` + `22` non-protein graphs held) |
+| Records with `PRIMARY_LITERATURE` `molecular_targets` | 129 (`101` `REVIEWED` + `28` `PROPOSED` total across `135` target entries: `64` targets carry `99` reviewed `UniProtKB` `protein_examples`, `71` non-protein/complex targets explicitly held in `curation/uniprot_protein_examples.yaml`, `0` unaccounted) |
 | `scripts/validate_strict.py --quiet --workers 4` | `0` errors across `3,042` files |
 | `scripts/verify_corpus.py --summary` | `0` errors across `3,042` files (`101/101` `REVIEWED` have `EXACT` grounding + `chemical_structure`) |
 

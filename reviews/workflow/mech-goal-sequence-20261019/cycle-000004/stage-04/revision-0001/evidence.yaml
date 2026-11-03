@@ -21,10 +21,10 @@ previous_evidence:
 artifacts:
 - kind: review_report
   path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_report.md
-  sha256: 8b2dc2f43edaf55033b040dfb4be071f5da031ac091376cf88f7b6630021c7a8
+  sha256: 230961f391c62ca319588b4453c37ca4215919ae1de32fc17d0e5d2821b790a0
 - kind: review_findings
   path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_findings.yaml
-  sha256: 9254c281a6f43cab7420bcead5415e0c0619f59d7372c995154be2cc4a17df07
+  sha256: 13aeda56a4c410be774e1bbaaf3c8edd74cae9716b8b8dd5c965edc8d8a052c1
 findings:
 - finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
   status: open
@@ -55,16 +55,16 @@ findings:
     family; jessenipeptin (CHEBI:221686, Arp et al. 2018 DOI:10.1073/pnas.1721790115
     / PMID:29592954), a cyclic lipodepsipeptide acting on the Gram-positive bacterial
     cell envelope; minimycin / oxazinomycin (CHEBI:224130, Kong et al. 2019 DOI:10.1016/j.isci.2019.11.037
-    / PMID:31816530; Kusakabe et al. 1972 DOI:10.7164/antibiotics.25.44 / PMID:4555729),
-    a C-nucleoside antimetabolite inhibiting bacterial nucleic acid / pyrimidine biosynthesis;
-    and the macrodiolide ionophores pamamycin-621A (CHEBI:219230, Ren & Wu 2009 DOI:10.1021/ol902290v
-    / PMID:19924823; Rebets et al. 2015 DOI:10.1021/jacs.5b05606 / PMID:26331569)
-    and pamamycin-649B (CHEBI:198952, Renner et al. 2011 DOI:10.1002/chem.201102093;
-    Natsume et al. 1995 DOI:10.7164/antibiotics.48.1159 / PMID:7490226), which act
-    as bacterial membrane cation ionophores — carry biosynthesis_origin: NATURAL_PRODUCT
-    but lack curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes,
-    structured PRIMARY_LITERATURE molecular_targets (with UniProtKB protein_examples
-    or held_targets accounting), and promotion to REVIEWED.'
+    / PMID:31816530; Kusakabe et al. 1972 DOI:10.7164/antibiotics.25.44), a C-nucleoside
+    antimetabolite inhibiting bacterial nucleic acid / pyrimidine biosynthesis; and
+    the macrodiolide ionophores pamamycin-621A (CHEBI:219230, Ren & Wu 2009 DOI:10.1021/ol902290v
+    / PMID:19924823; Rebets et al. 2015 DOI:10.1021/jacs.5b05606) and pamamycin-649B
+    (CHEBI:198952, Renner et al. 2011 DOI:10.1002/chem.201102093; Natsume et al. 1995
+    DOI:10.7164/antibiotics.48.1159), which act as bacterial membrane cation ionophores
+    — carry biosynthesis_origin: NATURAL_PRODUCT but lack curated mode_of_action,
+    mode_of_action_target_scope, CURATOR mode_of_action_notes, structured PRIMARY_LITERATURE
+    molecular_targets (with UniProtKB protein_examples or held_targets accounting),
+    and promotion to REVIEWED.'
 - finding_id: seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion
   status: open
   summary: 'Four SEEDED EXACT fluoroquinolone records carry only CARD_ARO database
@@ -140,11 +140,11 @@ findings:
   summary: '33 REVIEWED records await primary-literature causal_graphs and ofloxacin
     is blocked by structureless CHEBI:7731 (34 target(s): CHEBI:28429, CHEBI:228412,
     CHEBI:172922, CHEBI:156451, CHEBI:17351, CHEBI:16196...). After Cycle 4 Stage
-    2 curated primary-literature causal_graphs on 5 additional REVIEWED records (dalfopristin,
-    lefamulin, plazomicin, clofazimine, macozinone), 68 of the 101 REVIEWED records
-    now carry causal_graphs while 33 of the 101 REVIEWED records have verified primary-literature
-    mode_of_action and molecular_targets but do not yet have curated causal_graphs;
-    additionally, ofloxacin (antibioticmech:aro-2eea3233f3) has a primary-literature
+    2 curated primary-literature causal_graphs on 5 additional REVIEWED records (bactobolin
+    A, negamycin, besifloxacin, ozenoxacin, pazufloxacin), 68 of the 101 REVIEWED
+    records now carry causal_graphs while 33 of the 101 REVIEWED records have verified
+    primary-literature mode_of_action and molecular_targets but do not yet have curated
+    causal_graphs; additionally, ofloxacin (antibioticmech:aro-2eea3233f3) has a primary-literature
     causal graph (PMID:2849927, with reviewed UniProtKB protein_examples P0AES4/P0AES6
     on dna_gyrase) and CARD_ARO molecular_targets but remains SEEDED/MINTED because
     racemic CHEBI:7731 lacks a 2D molfile in ChEBI v249.'

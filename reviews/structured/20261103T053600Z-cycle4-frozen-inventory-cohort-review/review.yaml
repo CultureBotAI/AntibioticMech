@@ -29,16 +29,17 @@ summary: 'Full-inventory cohort review of all 3,042 AntibioticRecord YAML files 
   curation and/or ChEBI grounding; 2,819 SEEDED baseline records). Verified 0 closed-schema
   or OAK label errors across all 3,042 records, 0 duplicate chemical structures, and
   100% UniProtKB protein_examples coverage across all 50 GENE_OR_PROTEIN causal-graph
-  nodes (94 reviewed UniProtKB accessions across 48 graphs; 22 non-protein causal
-  graphs held) and all 64 protein-direct PRIMARY_LITERATURE molecular targets (119
-  reviewed UniProtKB accessions; 71 non-protein/complex targets explicitly held in
-  curation/uniprot_protein_examples.yaml). Identified 11 stable findings: 3 open findings
-  across 11 records for Cycle 4 Stage 5 grouped remediation (1 PROPOSED/EXACT record
-  [CHEBI:220211 squalestatin S1] ready for REVIEWED promotion; 6 PROPOSED/EXACT Cycle
-  4 Stage 1 natural products needing primary mechanism/target curation + REVIEWED
-  promotion; and 4 SEEDED/EXACT fluoroquinolones with CARD_ARO targets needing primary-literature
-  target curation + REVIEWED promotion) and 8 deferred findings carried forward from
-  Cycle 3 Stage 5.'
+  nodes (75 reviewed UniProtKB accessions across 48 graphs; 22 non-protein causal
+  graphs held) and all 64 protein-direct PRIMARY_LITERATURE molecular targets across
+  129 records (99 reviewed UniProtKB accessions; 71 non-protein/complex targets explicitly
+  held in curation/uniprot_protein_examples.yaml across 135 total PRIMARY_LITERATURE
+  target entries). Identified 11 stable findings: 3 open findings across 11 records
+  for Cycle 4 Stage 5 grouped remediation (1 PROPOSED/EXACT record [CHEBI:220211 squalestatin
+  S1] ready for REVIEWED promotion; 6 PROPOSED/EXACT Cycle 4 Stage 1 natural products
+  needing primary mechanism/target curation + REVIEWED promotion; and 4 SEEDED/EXACT
+  fluoroquinolones with CARD_ARO targets needing primary-literature target curation
+  + REVIEWED promotion) and 8 deferred findings carried forward from Cycle 3 Stage
+  5.'
 source:
   git_revision: fd66617286f55b8f9bf6802bf44d24bcee32959c
   state: working_tree
@@ -9238,8 +9239,8 @@ scope:
   selection: Exhaustive census of all 3,042 AntibioticRecord YAML files in the repository
     following Cycle 4 Stages 1-3 (compound expansion to 3,042 records, causal graph
     expansion to 69 records / 70 graphs / 50 GENE_OR_PROTEIN nodes, and UniProtKB
-    protein_examples expansion to 94 node examples + 119 molecular-target examples
-    with 0 unaccounted targets).
+    protein_examples expansion to 75 node examples + 99 molecular-target examples
+    across 135 PRIMARY_LITERATURE targets on 129 records with 0 unaccounted targets).
   coverage: full
   population_size: 3042
   reviewed_target_ids:
@@ -48843,10 +48844,11 @@ checks:
   required: true
   command: .venv/bin/python scripts/record_review.py check --require-reviews
   exit_code: 0
-  summary: 100% of GENE_OR_PROTEIN causal-graph nodes (50/50 across 48 graphs; 94
+  summary: '100% of GENE_OR_PROTEIN causal-graph nodes (50/50 across 48 graphs; 75
     examples; 22 non-protein graphs held) and 100% of PRIMARY_LITERATURE molecular_targets
-    (64 protein-direct targets with 119 examples + 71 non-protein/complex targets
-    held in curation/uniprot_protein_examples.yaml) are accounted with 0 gaps.
+    (135 targets across 129 records: 64 protein-direct targets with 99 examples +
+    71 non-protein/complex targets held in curation/uniprot_protein_examples.yaml)
+    are accounted with 0 gaps.'
   target_ids:
   - CHEBI:228133
   - CHEBI:69532
@@ -51933,7 +51935,7 @@ evidence:
 - evidence_id: proposed-primary-target-cohort-evidence
   kind: record_content
   reference: curation/uniprot_protein_examples.yaml
-  locator: UniProtKB protein_examples and held_targets accounting across 125 records
+  locator: UniProtKB protein_examples and held_targets accounting across 129 records
     with PRIMARY_LITERATURE targets
   accessed_at: '2026-11-03T05:36:00Z'
   support: supports
@@ -55247,16 +55249,16 @@ findings:
     diazaquinomycin family; jessenipeptin (CHEBI:221686, Arp et al. 2018 DOI:10.1073/pnas.1721790115
     / PMID:29592954), a cyclic lipodepsipeptide acting on the Gram-positive bacterial
     cell envelope; minimycin / oxazinomycin (CHEBI:224130, Kong et al. 2019 DOI:10.1016/j.isci.2019.11.037
-    / PMID:31816530; Kusakabe et al. 1972 DOI:10.7164/antibiotics.25.44 / PMID:4555729),
-    a C-nucleoside antimetabolite inhibiting bacterial nucleic acid / pyrimidine biosynthesis;
-    and the macrodiolide ionophores pamamycin-621A (CHEBI:219230, Ren & Wu 2009 DOI:10.1021/ol902290v
-    / PMID:19924823; Rebets et al. 2015 DOI:10.1021/jacs.5b05606 / PMID:26331569)
-    and pamamycin-649B (CHEBI:198952, Renner et al. 2011 DOI:10.1002/chem.201102093;
-    Natsume et al. 1995 DOI:10.7164/antibiotics.48.1159 / PMID:7490226), which act
-    as bacterial membrane cation ionophores — carry biosynthesis_origin: NATURAL_PRODUCT
-    but lack curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes,
-    structured PRIMARY_LITERATURE molecular_targets (with UniProtKB protein_examples
-    or held_targets accounting), and promotion to REVIEWED.'
+    / PMID:31816530; Kusakabe et al. 1972 DOI:10.7164/antibiotics.25.44), a C-nucleoside
+    antimetabolite inhibiting bacterial nucleic acid / pyrimidine biosynthesis; and
+    the macrodiolide ionophores pamamycin-621A (CHEBI:219230, Ren & Wu 2009 DOI:10.1021/ol902290v
+    / PMID:19924823; Rebets et al. 2015 DOI:10.1021/jacs.5b05606) and pamamycin-649B
+    (CHEBI:198952, Renner et al. 2011 DOI:10.1002/chem.201102093; Natsume et al. 1995
+    DOI:10.7164/antibiotics.48.1159), which act as bacterial membrane cation ionophores
+    — carry biosynthesis_origin: NATURAL_PRODUCT but lack curated mode_of_action,
+    mode_of_action_target_scope, CURATOR mode_of_action_notes, structured PRIMARY_LITERATURE
+    molecular_targets (with UniProtKB protein_examples or held_targets accounting),
+    and promotion to REVIEWED.'
   target_ids:
   - CHEBI:199753
   - CHEBI:225769
@@ -55520,13 +55522,14 @@ findings:
   title: 33 REVIEWED records await primary-literature causal_graphs and ofloxacin
     is blocked by structureless CHEBI:7731
   description: After Cycle 4 Stage 2 curated primary-literature causal_graphs on 5
-    additional REVIEWED records (dalfopristin, lefamulin, plazomicin, clofazimine,
-    macozinone), 68 of the 101 REVIEWED records now carry causal_graphs while 33 of
-    the 101 REVIEWED records have verified primary-literature mode_of_action and molecular_targets
-    but do not yet have curated causal_graphs; additionally, ofloxacin (antibioticmech:aro-2eea3233f3)
-    has a primary-literature causal graph (PMID:2849927, with reviewed UniProtKB protein_examples
-    P0AES4/P0AES6 on dna_gyrase) and CARD_ARO molecular_targets but remains SEEDED/MINTED
-    because racemic CHEBI:7731 lacks a 2D molfile in ChEBI v249.
+    additional REVIEWED records (bactobolin A, negamycin, besifloxacin, ozenoxacin,
+    pazufloxacin), 68 of the 101 REVIEWED records now carry causal_graphs while 33
+    of the 101 REVIEWED records have verified primary-literature mode_of_action and
+    molecular_targets but do not yet have curated causal_graphs; additionally, ofloxacin
+    (antibioticmech:aro-2eea3233f3) has a primary-literature causal graph (PMID:2849927,
+    with reviewed UniProtKB protein_examples P0AES4/P0AES6 on dna_gyrase) and CARD_ARO
+    molecular_targets but remains SEEDED/MINTED because racemic CHEBI:7731 lacks a
+    2D molfile in ChEBI v249.
   disposition_reason: 'Curating new multi-step primary-literature causal_graphs across
     33 additional REVIEWED compounds and resolving upstream ChEBI structure availability
     for racemic CHEBI:7731 are multi-cycle corpus expansion tasks tracked in Issue
