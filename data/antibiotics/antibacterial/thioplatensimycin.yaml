@@ -1,0 +1,74 @@
+identifier: antibioticmech:curator-2dc46eb39e
+label: thioplatensimycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A thiocarboxylic acid diterpenoid-aminobenzoate antibiotic congener of
+  platensimycin from Streptomyces platensis that inhibits bacterial beta-ketoacyl-ACP
+  synthase II (FabF) with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1038/s41467-018-04747-y
+synonyms:
+- synonym_text: thioPTM
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12C[C@@]3(O[C@]1(C[C@]4(C=CC([C@@](CCC(NC5=C(C=CC(C(S)=O)=C5O)O)=O)([C@]34[H])C)=O)C2)C)[H]'
+  standard_inchi: InChI=1S/C24H27NO6S/c1-22(7-6-17(28)25-18-14(26)4-3-13(19(18)29)21(30)32)16(27)5-8-24-10-12-9-15(20(22)24)31-23(12,2)11-24/h3-5,8,12,15,20,26,29H,6-7,9-11H2,1-2H3,(H,25,28)(H,30,32)/t12-,15+,20+,22-,23+,24+/m1/s1
+  standard_inchi_key: ZQYLQHFOXSDSHJ-OFBLZTNGSA-N
+  molecular_formula: C24H27NO6S
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001140/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 457.548
+  monoisotopic_mass: 457.1559
+xrefs:
+- pubchem.compound:132528337
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41467-018-04747-y#thioplatensimycin
+  source_label: thioplatensimycin
+  minted_identifier: antibioticmech:curator-2dc46eb39e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41467-018-04747-y
+    snippet: Dong et al. discovered the thiocarboxylic acid antibiotic thioplatensimycin
+      from Streptomyces platensis SB12026 and demonstrated that it acts as a potent
+      inhibitor of bacterial beta-ketoacyl-ACP synthase II (FabF) with strong antibacterial
+      activity against Staphylococcus aureus.
+    notes: 'Reported by Dong et al. 2018 (Nat Commun 9:2362; PMID:29915173; DOI:10.1038/s41467-018-04747-y)
+      and Zheng et al. 2021 (ACS Chem Biol 16:96-101; PMID:33314918; DOI:10.1021/acschembio.0c00773)
+      as the natural thiocarboxylic acid congener of platensimycin from Streptomyces
+      platensis. MIBiG 4.0.1 entry BGC0001140 and PubChem CID 132528337 supply the
+      stereo-complete SMILES, Standard InChI, and InChIKey ZQYLQHFOXSDSHJ-OFBLZTNGSA-N
+      (note: ChEBI CHEBI:212325 Thioplatensimycin lacks an exact InChIKey match in
+      OLS4 and is omitted from xrefs).'
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:58346
+  taxon_label: Streptomyces platensis
+  biosynthetic_gene_cluster: BGC0001140
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'thioplatensimycin' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:29915173
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

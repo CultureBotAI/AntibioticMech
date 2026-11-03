@@ -1,0 +1,65 @@
+identifier: CHEBI:206244
+label: pyralomicin 1a
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A dichlorinated benzopyranopyrrole (chromeno[2,3-b]pyrrol-4-one) N-pseudoglycoside
+  antibiotic bearing a C7-cyclitol moiety from Nonomuraea spiralis with antibacterial
+  activity.
+definition_source: DOI:10.7164/antibiotics.49.651
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CO[C@H]1[C@H](O)[C@@H](O)[C@@H](C=C1CO)N1C(Cl)=CC2=C1OC1=C(C(O)=C(Cl)C=C1C)C2=O
+  standard_inchi: InChI=1S/C20H19Cl2NO7/c1-7-3-10(21)15(26)13-14(25)9-5-12(22)23(20(9)30-18(7)13)11-4-8(6-24)19(29-2)17(28)16(11)27/h3-5,11,16-17,19,24,26-28H,6H2,1-2H3/t11-,16+,17-,19-/m1/s1
+  standard_inchi_key: JPPZZIRKTBZEAJ-JLBIYAHBSA-N
+  molecular_formula: C20H19Cl2NO7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001038/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 456.278
+  monoisotopic_mass: 455.0539
+xrefs:
+- pubchem.compound:3072006
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7164/antibiotics.49.651#pyralomicin-1a
+  source_label: pyralomicin 1a
+  minted_identifier: antibioticmech:curator-9e2f75aded
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.7164/antibiotics.49.651
+    snippet: Kawamura et al. isolated the novel benzopyranopyrrole antibiotic pyralomicin
+      1a from Microtetraspora spiralis MI178-34F18 and demonstrated antimicrobial
+      activity against bacteria including Micrococcus luteus and Escherichia coli.
+    notes: Reported by Kawamura et al. 1996 (J Antibiot 49:651-656; PMID:8784427;
+      DOI:10.7164/antibiotics.49.651), Kawamura et al. 1996 (J Antibiot 49:657-660;
+      PMID:8784425; DOI:10.7164/antibiotics.49.657), and Flatt et al. 2013 (J Nat
+      Prod 76:939-946; PMID:23607523; DOI:10.1021/np400159a) as a dichlorinated chromeno[2,3-b]pyrrol-4-one
+      N-pseudoglycoside bearing a C7-cyclitol moiety from Nonomuraea (Microtetraspora)
+      spiralis. MIBiG 4.0.1 entry BGC0001038, ChEBI CHEBI:206244, and PubChem CID
+      3072006 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:46182
+  taxon_label: Nonomuraea spiralis
+  biosynthetic_gene_cluster: BGC0001038
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'pyralomicin 1a' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23607523
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

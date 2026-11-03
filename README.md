@@ -59,18 +59,18 @@ class-level ChEBI term and an ARO molecule ended up in the same place.
 
 | Class | Records | SEEDED | PROPOSED | REVIEWED | With target or resistance evidence |
 |---|---:|---:|---:|---:|---:|
-| ANTIBACTERIAL *(incl. subclasses)* | 1207 | 1047 | 101 | 59 | 327 |
+| ANTIBACTERIAL *(incl. subclasses)* | 1225 | 1047 | 119 | 59 | 327 |
 | &nbsp;&nbsp;↳ ANTIMYCOBACTERIAL *(subclass of ANTIBACTERIAL)* | 78 | 75 | 0 | 3 | 16 |
-| ANTIFUNGAL | 606 | 581 | 9 | 16 | 85 |
-| ANTIPROTOZOAL | 253 | 246 | 5 | 2 | 5 |
+| ANTIFUNGAL | 609 | 581 | 12 | 16 | 85 |
+| ANTIPROTOZOAL | 254 | 246 | 6 | 2 | 5 |
 | ANTIVIRAL | 473 | 446 | 0 | 27 | 34 |
 | BIOCIDE | 31 | 31 | 0 | 0 | 3 |
 | ANTIMICROBIAL_UNSPECIFIED | 472 | 464 | 0 | 8 | 13 |
-| **TOTAL** | **3042** | **2815** | **115** | **112** | **467** |
+| **TOTAL** | **3064** | **2815** | **137** | **112** | **467** |
 
 A row marked *(subclass of X)* is already counted in X's own row — mycobacteria are bacteria, and filing is exclusive, so a compound filed ANTIMYCOBACTERIAL is not filed ANTIBACTERIAL as well. TOTAL counts each record once, so the Records column does not sum to it.
 
-Identity: **2721** records (89%) are grounded in a ChEBI term; **321** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
+Identity: **2740** records (89%) are grounded in a ChEBI term; **324** keep a minted `antibioticmech:` CURIE because no ChEBI entry with a structure covers them.
 
 Corroboration: **281** records carry source concepts from both ChEBI and CARD/ARO; **2341** come from ChEBI alone and **287** from CARD alone.
 
@@ -103,7 +103,7 @@ so seeding, validation, rendering and the whole test suite run offline.
 
 The generated site includes a
 **[Chemical structure map](https://culturebotai.github.io/AntibioticMech/pages/chemical-map.html)**
-covering all 3,042 records. Its coordinates and nearest neighbors use only the
+covering all 3,064 records. Its coordinates and nearest neighbors use only the
 exact stored chemical structure:
 
 ```text

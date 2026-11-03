@@ -1,0 +1,70 @@
+identifier: CHEBI:198520
+label: pneumocandin A0
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An echinocandin-class cyclic lipohexapeptide from Glarea lozoyensis that
+  inhibits fungal 1,3-beta-D-glucan synthase with potent antifungal activity against
+  Candida species and Pneumocystis.
+definition_source: DOI:10.7164/antibiotics.45.1886
+synonyms:
+- synonym_text: L-671,329
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: '[H][C@@]12C[C@@H](O)CN1C(=O)[C@@]([H])(NC(=O)[C@@H](C[C@@H](O)[C@@H](O)NC(=O)[C@]1([H])[C@@H](O)[C@@H](C)CN1C(=O)[C@@]([H])(NC(=O)[C@@]([H])(NC2=O)[C@H](O)[C@@H](O)C1=CC=C(O)C=C1)[C@H](O)CC(N)=O)NC(=O)CCCCCCCC[C@@H](C)C[C@@H](C)CC)[C@@H](C)O'
+  standard_inchi: InChI=1S/C51H82N8O17/c1-6-25(2)19-26(3)13-11-9-7-8-10-12-14-37(66)53-32-21-35(64)47(72)57-49(74)41-42(67)27(4)23-59(41)51(76)39(34(63)22-36(52)65)55-48(73)40(44(69)43(68)29-15-17-30(61)18-16-29)56-46(71)33-20-31(62)24-58(33)50(75)38(28(5)60)54-45(32)70/h15-18,25-28,31-35,38-44,47,60-64,67-69,72H,6-14,19-24H2,1-5H3,(H2,52,65)(H,53,66)(H,54,70)(H,55,73)(H,56,71)(H,57,74)/t25-,26+,27-,28+,31+,32+,33-,34+,35+,38-,39-,40-,41-,42-,43-,44-,47+/m0/s1
+  standard_inchi_key: DFQUSLQYURJBIT-GNDCHVOXSA-N
+  molecular_formula: C51H82N8O17
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001035/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1079.256
+  monoisotopic_mass: 1078.5798
+xrefs:
+- pubchem.compound:139583400
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7164/antibiotics.45.1886#pneumocandin-a0
+  source_label: pneumocandin A0
+  minted_identifier: antibioticmech:curator-adaf7c7236
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.7164/antibiotics.45.1886
+    snippet: Schmatz et al. characterized pneumocandin A0 (L-671,329), an echinocandin-like
+      cyclic lipohexapeptide from Zalerion arboricola (Glarea lozoyensis) that inhibits
+      fungal 1,3-beta-D-glucan synthesis and displays potent antifungal activity against
+      pathogenic Candida species and Pneumocystis carinii.
+    notes: Reported by Schmatz et al. 1992 (J Antibiot 45:1886-1891; PMID:1490879;
+      DOI:10.7164/antibiotics.45.1886) and Chen et al. 2013 (BMC Genomics 14:339;
+      PMID:23688303; DOI:10.1186/1471-2164-14-339) as a 10,12-dimethylmyristoyl echinocandin-class
+      cyclic lipohexapeptide antifungal produced by Glarea lozoyensis. MIBiG 4.0.1
+      entry BGC0001035, ChEBI CHEBI:198520, and PubChem CID 139583400 supply the stereo-complete
+      SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1116229
+  taxon_label: Glarea lozoyensis
+  strain: ATCC 20868
+  biosynthetic_gene_cluster: BGC0001035
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'pneumocandin A0' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23688303
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

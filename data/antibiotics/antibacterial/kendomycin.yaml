@@ -1,0 +1,72 @@
+identifier: CHEBI:191052
+label: kendomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A carbocyclic quinone-methide ansa-polyketide antibiotic (TAN-2162) from
+  Streptomyces violaceoruber with antibacterial activity against methicillin-resistant
+  Staphylococcus aureus.
+definition_source: DOI:10.1371/journal.pone.0146165
+synonyms:
+- synonym_text: TAN-2162
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: (-)-kendomycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]12CC[C@H](C)\C=C(C)\C[C@@H](C)C[C@H](C)[C@]3(O)OC4=C(C)C(=O)C(O)=C(C4=C3)[C@]([H])(O1)[C@H](C)[C@@H](O)[C@H]2C'
+  standard_inchi: InChI=1S/C29H42O6/c1-14-8-9-22-18(5)24(30)19(6)28(34-22)23-21-13-29(33,17(4)12-16(3)11-15(2)10-14)35-27(21)20(7)25(31)26(23)32/h10,13-14,16-19,22,24,28,30,32-33H,8-9,11-12H2,1-7H3/b15-10+/t14-,16+,17-,18-,19+,22+,24-,28+,29+/m0/s1
+  standard_inchi_key: HKLDUJXJTQJSEJ-OLXNOMCWSA-N
+  molecular_formula: C29H42O6
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001066/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 486.649
+  monoisotopic_mass: 486.2981
+xrefs:
+- pubchem.compound:5472093
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1371/journal.pone.0146165#kendomycin
+  source_label: kendomycin
+  minted_identifier: antibioticmech:curator-56dd414c66
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0146165
+    snippet: Elnakady et al. investigated the antibacterial mechanism of the macrocyclic
+      polyketide kendomycin against methicillin-resistant Staphylococcus aureus (MRSA)
+      strain COL, reporting bacteriostatic growth inhibition with an MIC of 5 ug/mL
+      alongside activity against Gram-positive and Gram-negative bacteria.
+    notes: Reported by Elnakady et al. 2016 (PLoS One 11:e0146165; PMID:26795276;
+      DOI:10.1371/journal.pone.0146165) and Wenzel et al. 2008 (ChemBioChem 9:2711-2721;
+      PMID:18972512; DOI:10.1002/cbic.200800456) as an all-carbon macrocyclic quinone-methide
+      ansa-polyketide antibiotic from Streptomyces violaceoruber 3844-33C with anti-MRSA
+      antibacterial activity. MIBiG 4.0.1 entry BGC0001066, ChEBI CHEBI:191052, and
+      PubChem CID 5472093 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1935
+  taxon_label: Streptomyces violaceoruber
+  biosynthetic_gene_cluster: BGC0001066
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'kendomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:18972512
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

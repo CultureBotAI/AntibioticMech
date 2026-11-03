@@ -1,0 +1,68 @@
+identifier: CHEBI:219845
+label: taromycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A dichlorinated nonribosomal cyclic lipotridecadepsipeptide antibiotic
+  from marine Saccharomonospora sp. CNQ-490 with calcium-dependent antibacterial activity
+  against methicillin-resistant Staphylococcus aureus and vancomycin-resistant Enterococcus
+  faecium.
+definition_source: DOI:10.1073/pnas.1319584111
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(N[C@H](C(N[C@@H](C(N[C@@H](CC(O)=O)C(N[C@H](C(NCC(N[C@H](C(N[C@@H](CC(O)=O)C(N[C@H](C)C(N[C@H](C(NCC(N[C@@H](C(N[C@H](C(N[C@H]1CC(C2=CC=C(Cl)C=C2N)=O)=O)[C@H](C)CC(O)=O)=O)C)=O)=O)CC(O)=O)=O)=O)=O)CCCN)=O)=O)[C@@H](C)OC1=O)=O)=O)CC(N)=O)=O)CC3=CNC4=C3C=CC(Cl)=C4)/C=C/C=C/CCC
+  standard_inchi: InChI=1S/C70H91Cl2N17O25/c1-6-7-8-9-10-13-51(92)82-43(20-35-28-76-42-22-37(72)14-16-38(35)42)65(108)84-44(24-50(75)91)66(109)86-47(27-57(101)102)67(110)89-59-34(5)114-70(113)48(23-49(90)39-17-15-36(71)21-40(39)74)87-69(112)58(31(2)19-54(95)96)88-61(104)32(3)79-52(93)29-77-62(105)45(25-55(97)98)83-60(103)33(4)80-64(107)46(26-56(99)100)85-63(106)41(12-11-18-73)81-53(94)30-78-68(59)111/h8-10,13-17,21-22,28,31-34,41,43-48,58-59,76H,6-7,11-12,18-20,23-27,29-30,73-74H2,1-5H3,(H2,75,91)(H,77,105)(H,78,111)(H,79,93)(H,80,107)(H,81,94)(H,82,92)(H,83,103)(H,84,108)(H,85,106)(H,86,109)(H,87,112)(H,88,104)(H,89,110)(H,95,96)(H,97,98)(H,99,100)(H,101,102)/b9-8+,13-10+/t31-,32-,33-,34-,41+,43+,44-,45+,46+,47+,48+,58+,59+/m1/s1
+  standard_inchi_key: SDWVVLSMGFBQOZ-WLQCZBCJSA-N
+  molecular_formula: C70H91Cl2N17O25
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000439/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1641.498
+  monoisotopic_mass: 1639.5749
+xrefs:
+- pubchem.compound:102225321
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1073/pnas.1319584111#taromycin-a
+  source_label: taromycin A
+  minted_identifier: antibioticmech:curator-2fbb8ed6d1
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1073/pnas.1319584111
+    snippet: Yamanaka et al. activated the silent tar nonribosomal peptide synthetase
+      gene cluster from marine Saccharomonospora sp. CNQ-490 in Streptomyces coelicolor
+      to produce the dichlorinated lipopeptide antibiotic taromycin A, which exhibits
+      calcium-dependent antibacterial activity against methicillin-resistant Staphylococcus
+      aureus and daptomycin-resistant Enterococcus faecium.
+    notes: Reported by Yamanaka et al. 2014 (Proc Natl Acad Sci U S A 111:1957-1962;
+      PMID:24449899; DOI:10.1073/pnas.1319584111) and Reynolds et al. 2018 (J Antibiot
+      71:333-338; PMID:29184121; DOI:10.1038/ja.2017.146) as a daptomycin-family dichlorinated
+      cyclic lipotridecadepsipeptide antibiotic from marine Saccharomonospora sp.
+      CNQ-490. MIBiG 4.0.1 entry BGC0000439, ChEBI CHEBI:219845, and PubChem CID 102225321
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:687388
+  taxon_label: Saccharomonospora sp.
+  strain: CNQ490
+  biosynthetic_gene_cluster: BGC0000439
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'taromycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:24449899
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,72 @@
+identifier: antibioticmech:curator-de88acbd62
+label: alnumycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A benzoisochromanequinone polyketide antibiotic bearing a 4-hydroxymethyl-5-hydroxy-1,3-dioxane
+  moiety from Streptomyces sp. CM020 with antibacterial and antibiofilm activity.
+definition_source: DOI:10.3390/antibiotics12071116
+synonyms:
+- synonym_text: alnumycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: OC1=C2C(C=C(C)O[C@@H]2CCC)=CC3=C1C(C([C@]4([H])O[C@@H](CO)[C@H](O)CO4)=CC3=O)=O
+  standard_inchi: InChI=1S/C22H24O8/c1-3-4-16-18-11(5-10(2)29-16)6-12-14(24)7-13(20(26)19(12)21(18)27)22-28-9-15(25)17(8-23)30-22/h5-7,15-17,22-23,25,27H,3-4,8-9H2,1-2H3/t15-,16-,17+,22+/m1/s1
+  standard_inchi_key: DRXHQLTVRTWTGH-FSNCLGKMSA-N
+  molecular_formula: C22H24O8
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000195/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 416.426
+  monoisotopic_mass: 416.1471
+xrefs:
+- pubchem.compound:102450433
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/antibiotics12071116#alnumycin-a
+  source_label: alnumycin A
+  minted_identifier: antibioticmech:curator-de88acbd62
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/antibiotics12071116
+    snippet: Sagurna et al. demonstrated that the benzoisochromanequinone polyketide
+      alnumycin A exhibits marked planktonic antibacterial and biofilm-eradicating
+      activity against Staphylococcus aureus and Escherichia coli.
+    notes: 'Reported by Sagurna et al. 2023 (Antibiotics 12:1116; PMID:37508212; DOI:10.3390/antibiotics12071116),
+      Oja et al. 2015 (Antimicrob Agents Chemother 59:6046-6052; PMID:26195520; DOI:10.1128/aac.00991-15),
+      and Oja et al. 2008 (Chem Biol 15:1046-1057; PMID:18940666; DOI:10.1016/j.chembiol.2008.07.022)
+      as a 1,3-dioxane-bearing benzoisochromanequinone polyketide antibiotic from
+      Streptomyces sp. CM020. MIBiG 4.0.1 entry BGC0000195 and PubChem CID 102450433
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey DRXHQLTVRTWTGH-FSNCLGKMSA-N
+      (note: ChEBI CHEBI:220973 Alnumycin carries diastereomeric InChIKey DRXHQLTVRTWTGH-DBHNTLKXSA-N
+      and is omitted from xrefs).'
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:569580
+  taxon_label: Streptomyces sp.
+  strain: CM020
+  biosynthetic_gene_cluster: BGC0000195
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'alnumycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:18940666
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
