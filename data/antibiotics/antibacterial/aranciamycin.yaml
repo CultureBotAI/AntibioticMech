@@ -1,0 +1,65 @@
+identifier: CHEBI:213360
+label: aranciamycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A glycosylated anthracycline-type aromatic polyketide antibiotic from
+  Streptomyces echinatus with antimycobacterial and anti-Gram-positive antibacterial
+  activity.
+definition_source: DOI:10.1021/acs.jnatprod.5b00095
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CO[C@@H]1[C@H](O)[C@@H](O)[C@H](C)O[C@H]1O[C@H]1[C@H](OC)[C@](C)(O)C(=O)C2=CC3=C(C(O)=C12)C(=O)C1=C(C=CC=C1O)C3=O
+  standard_inchi: InChI=1S/C27H28O12/c1-9-17(29)21(33)23(36-3)26(38-9)39-22-16-12(24(34)27(2,35)25(22)37-4)8-11-15(20(16)32)19(31)14-10(18(11)30)6-5-7-13(14)28/h5-9,17,21-23,25-26,28-29,32-33,35H,1-4H3/t9-,17-,21+,22+,23+,25-,26-,27+/m0/s1
+  standard_inchi_key: PGCZNTNNZCKKFG-LJUYJRHKSA-N
+  molecular_formula: C27H28O12
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000197/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 544.509
+  monoisotopic_mass: 544.1581
+xrefs:
+- pubchem.compound:15177995
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.jnatprod.5b00095#aranciamycin
+  source_label: aranciamycin
+  minted_identifier: antibioticmech:curator-b0b828b28d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acs.jnatprod.5b00095
+    snippet: Khalil et al. isolated aranciamycin and related anthracycline-type aromatic
+      polyketides from an Australian marine-sediment-derived Streptomyces sp. CMB-M0232
+      and reported antimycobacterial activity against Mycobacterium bovis BCG alongside
+      anti-Gram-positive antibacterial activity against Bacillus subtilis.
+    notes: Reported by Khalil et al. 2015 (J Nat Prod 78:949-956; PMID:25789410; DOI:10.1021/acs.jnatprod.5b00095)
+      and Luzhetskyy et al. 2007 (ChemBioChem 8:599-602; PMID:17357167; DOI:10.1002/cbic.200600529)
+      as a 2-O-methyl-L-rhamnopyranosyl anthraquinone aromatic polyketide antibiotic
+      from Streptomyces echinatus and Streptomyces sp. CMB-M0232. MIBiG 4.0.1 entry
+      BGC0000197, ChEBI CHEBI:213360, and PubChem CID 15177995 supply the stereo-complete
+      SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:67293
+  taxon_label: Streptomyces echinatus
+  biosynthetic_gene_cluster: BGC0000197
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'aranciamycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:17357167
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

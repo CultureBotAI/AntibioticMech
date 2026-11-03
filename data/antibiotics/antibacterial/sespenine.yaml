@@ -1,0 +1,69 @@
+identifier: CHEBI:202491
+label: sespenine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A pentacyclic indolosesquiterpene alkaloid from mangrove endophyte Streptomyces
+  sp. HKI0595 with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1039/c1ob05283g
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@]12CC[C@@H]([C@@]([C@@H]1CC[C@@]34[C@@H]2CC(=O)[C@@H](C3)NC5=CC=CC=C45)(C)C(=O)O)O
+  standard_inchi: InChI=1S/C23H29NO4/c1-21-9-8-19(26)22(2,20(27)28)17(21)7-10-23-12-15(16(25)11-18(21)23)24-14-6-4-3-5-13(14)23/h3-6,15,17-19,24,26H,7-12H2,1-2H3,(H,27,28)/t15-,17-,18-,19+,21+,22+,23-/m1/s1
+  standard_inchi_key: UESFHRIHCVPQCD-IVIJAOBASA-N
+  molecular_formula: C23H29NO4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000665/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 383.488
+  monoisotopic_mass: 383.2097
+xrefs:
+- pubchem.compound:129822920
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1039/c1ob05283g#sespenine
+  source_label: sespenine
+  minted_identifier: antibioticmech:curator-a0e74ded0c
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1039/c1ob05283g
+    snippet: Ding et al. isolated the rearranged pentacyclic indolosesquiterpene alkaloid
+      sespenine from the mangrove endophyte Streptomyces sp. HKI0595 and reported
+      antibacterial activity in agar diffusion assays against methicillin-resistant
+      Staphylococcus aureus and vancomycin-resistant Enterococcus faecalis.
+    notes: Reported by Ding et al. 2011 (Org Biomol Chem 9:4029-4031; PMID:21528153;
+      DOI:10.1039/c1ob05283g) as a pentacyclic indolosesquiterpene alkaloid with a
+      spiro-indoline-benzoxazine scaffold from Streptomyces sp. HKI0595 with anti-Gram-positive
+      antibacterial activity. MIBiG 4.0.1 entry BGC0000665, ChEBI CHEBI:202491, and
+      PubChem CID 129822920 supply the stereo-complete SMILES, Standard InChI, and
+      InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:995841
+  taxon_label: Streptomyces sp.
+  strain: HKI0576
+  biosynthetic_gene_cluster: BGC0000665
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'sespenine' joined by exact Standard InChIKey.
+  evidence:
+  - reference: DOI:10.1039/c1ob05283g
+    notes: 'MIBiG attaches this reference to the compound, as support for its STRUCTURE:
+      every compound-level method in the release is structure elucidation (NMR, mass
+      spectrometry, X-ray, total synthesis). It establishes what the molecule is.
+      It is NOT evidence that this organism produces it; MIBiG attaches no reference
+      to the producer link at all.'
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

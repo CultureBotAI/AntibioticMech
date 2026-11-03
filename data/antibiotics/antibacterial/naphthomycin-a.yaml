@@ -1,0 +1,66 @@
+identifier: CHEBI:197824
+label: naphthomycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A chlorinated 29-membered naphthalenic ansamacrolactam polyketide antibiotic
+  from Streptomyces species with antibacterial activity against methicillin-resistant
+  Staphylococcus aureus.
+definition_source: DOI:10.3389/fmicb.2024.1353511
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H]1\C=C\C=C/C=C(C)\C(=O)NC2=C(Cl)C(=O)C3=C(C=C(C)C(O)=C3C(=O)\C(C)=C\[C@H](C)[C@@H](O)[C@@H](C)\C=C\[C@@H](O)C\C=C(C)\C(=O)C[C@@H]1O)C2=O
+  standard_inchi: InChI=1S/C40H46ClNO9/c1-20-11-9-8-10-12-23(4)40(51)42-34-33(41)39(50)31-28(38(34)49)18-26(7)37(48)32(31)36(47)25(6)17-24(5)35(46)22(3)14-16-27(43)15-13-21(2)30(45)19-29(20)44/h8-14,16-18,20,22,24,27,29,35,43-44,46,48H,15,19H2,1-7H3,(H,42,51)/b10-8-,11-9+,16-14+,21-13+,23-12-,25-17+/t20-,22-,24-,27-,29-,35-/m0/s1
+  standard_inchi_key: AXEGRHYJHHPVDH-UMKVKWLOSA-N
+  molecular_formula: C40H46ClNO9
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000106/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 720.259
+  monoisotopic_mass: 719.2861
+xrefs:
+- pubchem.compound:10101379
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3389/fmicb.2024.1353511#naphthomycin-a
+  source_label: naphthomycin A
+  minted_identifier: antibioticmech:curator-19b0695ca0
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3389/fmicb.2024.1353511
+    snippet: Kaewkla et al. isolated naphthomycin A as the major antibacterial metabolite
+      of Streptomyces naphthomycinicus TML10 and demonstrated anti-MRSA antibacterial
+      activity against methicillin-resistant Staphylococcus aureus.
+    notes: Reported by Kaewkla et al. 2024 (Front Microbiol 15:1353511; PMID:38694805;
+      DOI:10.3389/fmicb.2024.1353511) and Wu et al. 2011 (Mol BioSyst 7:2459-2469;
+      PMID:21614382; DOI:10.1039/c1mb05036b) as a chlorinated 29-membered naphthalenic
+      ansamacrolactam polyketide antibiotic from Streptomyces species with antibacterial
+      activity against Gram-positive bacteria including MRSA. MIBiG 4.0.1 entry BGC0000106,
+      ChEBI CHEBI:197824, and PubChem CID 10101379 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:876169
+  taxon_label: Streptomyces sp.
+  strain: CS
+  biosynthetic_gene_cluster: BGC0000106
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'naphthomycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:21614382
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

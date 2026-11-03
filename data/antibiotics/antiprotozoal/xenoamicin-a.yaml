@@ -1,0 +1,65 @@
+identifier: CHEBI:219419
+label: xenoamicin A
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An N-butanoyl nonribosomal tridecadepsipeptide from entomopathogenic Xenorhabdus
+  species with antiprotozoal activity against Plasmodium falciparum.
+definition_source: DOI:10.1002/chem.201302481
+activity_roles:
+- CHEBI:35717
+chemical_structure:
+  smiles: O=C(N[C@H](C(N[C@H](C(C)C)C(N[C@@H](C(C)C)C(N[C@H](C)C(NCCC1=O)=O)=O)=O)=O)C(C)C)[C@@H]([C@H](OC([C@@H](NC([C@@H]2N1CCC2)=O)C(C)C)=O)C)NC([C@H]([C@H](C)CC)NC([C@@H](CC(C)C)NC([C@H](C(C)C)NC([C@@H](C)NC([C@H]3N(C(CCC)=O)CCC3)=O)=O)=O)=O)=O
+  standard_inchi: InChI=1S/C64H109N13O15/c1-19-23-44(78)76-28-21-24-42(76)56(83)66-39(17)54(81)69-47(33(7)8)59(86)68-41(30-31(3)4)55(82)74-51(37(15)20-2)62(89)75-52-40(18)92-64(91)50(36(13)14)73-57(84)43-25-22-29-77(43)45(79)26-27-65-53(80)38(16)67-58(85)46(32(5)6)70-60(87)48(34(9)10)71-61(88)49(35(11)12)72-63(52)90/h31-43,46-52H,19-30H2,1-18H3,(H,65,80)(H,66,83)(H,67,85)(H,68,86)(H,69,81)(H,70,87)(H,71,88)(H,72,90)(H,73,84)(H,74,82)(H,75,89)/t37-,38-,39-,40-,41-,42+,43-,46+,47+,48-,49+,50+,51+,52-/m1/s1
+  standard_inchi_key: JQWFRQJTZVLPIQ-HSIBCVILSA-N
+  molecular_formula: C64H109N13O15
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000464/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1300.652
+  monoisotopic_mass: 1299.8166
+xrefs:
+- pubchem.compound:145720556
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/chem.201302481#xenoamicin-a
+  source_label: xenoamicin A
+  minted_identifier: antibioticmech:curator-fe3b086389
+  role_terms:
+  - CHEBI:35717
+  evidence:
+  - reference: DOI:10.1002/chem.201302481
+    snippet: Zhou et al. elucidated the structure and biosynthesis of the N-acylated
+      tridecadepsipeptide xenoamicin A from entomopathogenic Xenorhabdus species and
+      demonstrated antiprotozoal activity against Plasmodium falciparum and Trypanosoma
+      brucei rhodesiense.
+    notes: Reported by Zhou et al. 2013 (Chem Eur J 19:16772-16779; PMID:24203528;
+      DOI:10.1002/chem.201302481) as a 13-amino-acid N-butanoyl cyclic lipodepsipeptide
+      from Xenorhabdus doucetiae DSM 17909 and Xenorhabdus mauleonii DSM 17908 with
+      antiprotozoal activity. MIBiG 4.0.1 entry BGC0000464, ChEBI CHEBI:219419, and
+      PubChem CID 145720556 supply the stereo-complete SMILES, Standard InChI, and
+      InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:351671
+  taxon_label: Xenorhabdus doucetiae
+  biosynthetic_gene_cluster: BGC0000464
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'xenoamicin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:24203528
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

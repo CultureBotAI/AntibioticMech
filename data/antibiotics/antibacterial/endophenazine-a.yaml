@@ -1,0 +1,73 @@
+identifier: CHEBI:218214
+label: endophenazine A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 9-dimethylallyl-substituted phenazine-1-carboxylic acid antibiotic from
+  Streptomyces anulatus with antibacterial and antifungal activity.
+definition_source: DOI:10.7164/antibiotics.55.794
+synonyms:
+- synonym_text: 9-dimethylallylphenazine-1-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: CC(C)=CCC1=CC=CC2=NC3=CC=CC(C(O)=O)=C3N=C12
+  standard_inchi: InChI=1S/C18H16N2O2/c1-11(2)9-10-12-5-3-7-14-16(12)20-17-13(18(21)22)6-4-8-15(17)19-14/h3-9H,10H2,1-2H3,(H,21,22)
+  standard_inchi_key: WLQXISHGKXGNFV-UHFFFAOYSA-N
+  molecular_formula: C18H16N2O2
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001080/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 292.338
+  monoisotopic_mass: 292.1212
+xrefs:
+- pubchem.compound:10039975
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7164/antibiotics.55.794#endophenazine-a
+  source_label: endophenazine A
+  minted_identifier: antibioticmech:curator-4311ee5917
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.7164/antibiotics.55.794
+    snippet: Gebhardt et al. isolated the prenylated phenazine antibiotic endophenazine
+      A from endosymbiotic Streptomyces anulatus strains and reported antimicrobial
+      activity against Gram-positive bacteria and filamentous fungi.
+    notes: Reported by Gebhardt et al. 2002 (J Antibiot 55:794-800; PMID:12458768;
+      DOI:10.7164/antibiotics.55.794), Taechowisan et al. 2024 (Pak J Biol Sci 27:469-478;
+      PMID:39415555; DOI:10.3923/pjbs.2024.469.478), and Saleh et al. 2012 (Beilstein
+      J Org Chem 8:501-513; PMID:22509222; DOI:10.3762/bjoc.8.57) as 9-(3-methylbut-2-en-1-yl)phenazine-1-carboxylic
+      acid from Streptomyces anulatus and Streptomyces prasinus with antibacterial
+      activity against Gram-positive bacteria including MRSA (MIC = 8-32 ug/mL) and
+      antifungal activity. MIBiG 4.0.1 entry BGC0001080, ChEBI CHEBI:218214, and PubChem
+      CID 10039975 supply the SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1892
+  taxon_label: Streptomyces anulatus
+  biosynthetic_gene_cluster: BGC0001080
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'endophenazine A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:22509222
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

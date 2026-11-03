@@ -1,0 +1,87 @@
+identifier: CHEBI:70619
+label: pentabromopseudilin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A pentabrominated 2-(2-hydroxyphenyl)pyrrole marine antibiotic from Pseudoalteromonas
+  species that acts as a membrane protonophore with potent nanomolar antibacterial
+  activity against Staphylococcus aureus.
+definition_source: DOI:10.1021/acschembio.3c00773
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C1=C(C=C(C(=C1C2=C(C(=C(N2)Br)Br)Br)O)Br)Br
+  standard_inchi: InChI=1S/C10H4Br5NO/c11-3-1-4(9(17)5(12)2-3)8-6(13)7(14)10(15)16-8/h1-2,16-17H
+  standard_inchi_key: LXMNWKJHYOZUQL-UHFFFAOYSA-N
+  molecular_formula: C10H4Br5NO
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000890/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 553.668
+  monoisotopic_mass: 548.621
+xrefs:
+- pubchem.compound:324093
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acschembio.3c00773#pentabromopseudilin
+  source_label: pentabromopseudilin
+  minted_identifier: antibioticmech:curator-e7dc18fc5c
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/acschembio.3c00773
+    snippet: Castro-Falcon et al. demonstrated that the marine bacterial bromopyrrole
+      antibiotic pentabromopseudilin inhibits Staphylococcus aureus growth with an
+      EC50 of 10 nM by acting as a potent membrane protonophore that collapses the
+      bacterial proton motive force.
+    notes: Reported by Castro-Falcon et al. 2024 (ACS Chem Biol 19:743-752; PMID:38377384;
+      DOI:10.1021/acschembio.3c00773) and Agarwal et al. 2014 (Nat Chem Biol 10:640-647;
+      PMID:24974229; DOI:10.1038/nchembio.1564) as a pentabrominated 2-(2-hydroxyphenyl)pyrrole
+      marine antibiotic biosynthesized by the bmp gene cluster in Pseudoalteromonas
+      species. MIBiG 4.0.1 entry BGC0000890, ChEBI CHEBI:70619, and PubChem CID 324093
+      supply the SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1315281
+  taxon_label: Pseudoalteromonas phenolica
+  strain: O-BC30
+  biosynthetic_gene_cluster: BGC0000890
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'pentabromopseudilin' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:24974229
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+- taxon_id: NCBITaxon:1353533
+  taxon_label: Pseudoalteromonas luteoviolacea
+  strain: 2ta16
+  biosynthetic_gene_cluster: BGC0000891
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'pentabromopseudilin' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:24974229
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

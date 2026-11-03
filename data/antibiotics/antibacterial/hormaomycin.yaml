@@ -1,0 +1,66 @@
+identifier: CHEBI:219469
+label: hormaomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A chlorinated nitrocyclopropyl-containing nonribosomal cyclic depsipeptide
+  from Streptomyces griseoflavus with narrow-spectrum antibacterial activity against
+  coryneform actinomycetes.
+definition_source: DOI:10.1016/j.chembiol.2010.12.018
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H](C)[C@@H](C(N1C[C@@H](/C=C\C)C[C@H]1C2=O)=O)NC([C@H]([C@@H](C3=CC=CC=C3)C)NC([C@H](NC([C@H]([C@H](C)C4=CC=CC=C4)NC([C@@H]([C@@H](C)O2)NC([C@H](C[C@H]5[C@H]([N+]([O-])=O)C5)NC(C6=CC=C(Cl)N6O)=O)=O)=O)=O)C[C@H]7[C@H]([N+]([O-])=O)C7)=O)=O
+  standard_inchi: InChI=1S/C55H69ClN10O14/c1-7-15-32-22-42-55(74)80-31(6)47(62-49(68)37(23-35-25-40(35)65(76)77)57-50(69)39-20-21-43(56)64(39)75)53(72)61-45(29(4)33-16-11-9-12-17-33)51(70)58-38(24-36-26-41(36)66(78)79)48(67)60-46(30(5)34-18-13-10-14-19-34)52(71)59-44(28(3)8-2)54(73)63(42)27-32/h7,9-21,28-32,35-38,40-42,44-47,75H,8,22-27H2,1-6H3,(H,57,69)(H,58,70)(H,59,71)(H,60,67)(H,61,72)(H,62,68)/b15-7-/t28-,29+,30+,31+,32-,35+,36+,37-,38+,40+,41+,42-,44-,45-,46-,47+/m0/s1
+  standard_inchi_key: YOUXQVRIWHZWQN-DKPCRMJRSA-N
+  molecular_formula: C55H69ClN10O14
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000374/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1129.666
+  monoisotopic_mass: 1128.4683
+xrefs:
+- pubchem.compound:11251803
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.chembiol.2010.12.018#hormaomycin
+  source_label: hormaomycin
+  minted_identifier: antibioticmech:curator-6161e83daa
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2010.12.018
+    snippet: Hofer et al. cloned and characterized the biosynthetic gene cluster for
+      the depsipeptide hormaomycin in Streptomyces griseoflavus W-384, noting its
+      potent narrow-spectrum antibacterial activity against coryneform actinomycetes
+      and bacterial signaling activity.
+    notes: Reported by Hofer et al. 2011 (Chem Biol 18:381-391; PMID:21439483; DOI:10.1016/j.chembiol.2010.12.018)
+      and Bae et al. 2015 (Mar Drugs 13:5187-5200; PMID:26287218; DOI:10.3390/md13085187)
+      as a chlorinated 3-(2-nitrocyclopropyl)alanine-containing cyclic depsipeptide
+      antibiotic from Streptomyces griseoflavus W-384. MIBiG 4.0.1 entry BGC0000374,
+      ChEBI CHEBI:219469, and PubChem CID 11251803 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:35619
+  taxon_label: Streptomyces griseoflavus
+  biosynthetic_gene_cluster: BGC0000374
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'hormaomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:21439483
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

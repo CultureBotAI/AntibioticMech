@@ -1,0 +1,69 @@
+identifier: CHEBI:29671
+label: resistomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A pentacyclic discoid benzo[cd]pyrenequinone aromatic polyketide antibiotic
+  (heliomycin) from Streptomyces resistomycificus with antibacterial activity against
+  Gram-positive bacteria.
+definition_source: DOI:10.3923/pjbs.2025.749.764
+synonyms:
+- synonym_text: heliomycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1=CC(=C2C3=C4C(=CC(=C13)O)C(C(=O)C5=C(C=C(C(=C45)C2=O)O)O)(C)C)O
+  standard_inchi: InChI=1S/C22H16O6/c1-7-4-9(23)15-18-13(7)10(24)5-8-14(18)19-16(20(15)27)11(25)6-12(26)17(19)21(28)22(8,2)3/h4-6,23-26H,1-3H3
+  standard_inchi_key: ABLACSIRCKEUOB-UHFFFAOYSA-N
+  molecular_formula: C22H16O6
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000264/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 376.364
+  monoisotopic_mass: 376.0947
+xrefs:
+- pubchem.compound:5282060
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3923/pjbs.2025.749.764#resistomycin
+  source_label: resistomycin
+  minted_identifier: antibioticmech:curator-4665dad618
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3923/pjbs.2025.749.764
+    snippet: Taechowisan et al. purified resistomycin (heliomycin) from endophytic
+      Streptomyces kunmingensis BH111 and demonstrated antibacterial activity against
+      Gram-positive bacteria with MIC values of 16-32 ug/mL and MBC values of 32-64
+      ug/mL.
+    notes: Reported by Taechowisan et al. 2025 (Pak J Biol Sci 28:749-764; PMID:41618676;
+      DOI:10.3923/pjbs.2025.749.764) and Jakobi & Hertweck 2004 (J Am Chem Soc 126:2298-2299;
+      PMID:14982421; DOI:10.1021/ja0390698) as a pentacyclic discoid benzo[cd]pyrenequinone
+      aromatic polyketide antibiotic from Streptomyces resistomycificus and Streptomyces
+      kunmingensis. MIBiG 4.0.1 entry BGC0000264, ChEBI CHEBI:29671, and PubChem CID
+      5282060 supply the SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:67356
+  taxon_label: Streptomyces resistomycificus
+  biosynthetic_gene_cluster: BGC0000264
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'resistomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:14982421
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

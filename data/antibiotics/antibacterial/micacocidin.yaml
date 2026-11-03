@@ -1,0 +1,69 @@
+identifier: CHEBI:198957
+label: micacocidin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A salicylate-derived thiazoline- and thiazolidine-containing polyketide-nonribosomal
+  peptide antibiotic from Ralstonia solanacearum and Pseudomonas sp. No. 57-250 with
+  potent antimycoplasma antibacterial activity.
+definition_source: DOI:10.1039/c3ob41839a
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: OC1=C(C2=N[C@]([C@@]3([H])SC[C@]([C@@H](O)C(C)(C)C4=N[C@](C(O)=O)(C)CS4)([H])N3C)([H])CS2)C(CCCCC)=CC=C1
+  standard_inchi: InChI=1S/C27H39N3O4S3/c1-6-7-8-10-16-11-9-12-19(31)20(16)22-28-17(13-35-22)23-30(5)18(14-36-23)21(32)26(2,3)24-29-27(4,15-37-24)25(33)34/h9,11-12,17-18,21,23,31-32H,6-8,10,13-15H2,1-5H3,(H,33,34)/t17-,18+,21-,23-,27-/m1/s1
+  standard_inchi_key: GGWOUCUSNYVHOC-QJKBBIFYSA-N
+  molecular_formula: C27H39N3O4S3
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001014/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 565.827
+  monoisotopic_mass: 565.2103
+xrefs:
+- pubchem.compound:135415284
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1039/c3ob41839a#micacocidin
+  source_label: micacocidin
+  minted_identifier: antibioticmech:curator-5e74b1f2fc
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1039/c3ob41839a
+    snippet: Kreutzer et al. heterologously expressed and engineered the Ralstonia
+      solanacearum mic PKS-NRPS gene cluster to produce the thiazoline- and thiazolidine-containing
+      antibiotic micacocidin, which exhibits potent antimycoplasma activity against
+      Mycoplasma pneumoniae.
+    notes: Reported by Kreutzer et al. 2014 (Org Biomol Chem 12:113-120; PMID:24202877;
+      DOI:10.1039/c3ob41839a) and Kreutzer et al. 2011 (Appl Environ Microbiol 77:6117-6124;
+      PMID:21724891; DOI:10.1128/aem.05198-11) as a pentacyclic 6-pentylsalicylate-derived
+      thiazoline/thiazolidine polyketide-peptide antibiotic from Pseudomonas sp. No.
+      57-250 and Ralstonia solanacearum GMI1000. MIBiG 4.0.1 entry BGC0001014, ChEBI
+      CHEBI:198957, and PubChem CID 135415284 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:267608
+  taxon_label: Ralstonia solanacearum
+  strain: GMI1000
+  biosynthetic_gene_cluster: BGC0001014
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'micacocidin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:21724891
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-03T20:46:12Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
