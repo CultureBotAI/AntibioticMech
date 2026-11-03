@@ -276,7 +276,10 @@ def test_exact_scoped_transition_and_idempotence(
 
     live_path = pre_cycle2_stage5_remediation_root / delta["path"]
     historical_path = pre_uniprot_protein_examples_root / delta["path"]
-    if not historical_path.exists():
+    if (
+        not historical_path.exists()
+        or hashlib.sha256(historical_path.read_bytes()).hexdigest() != delta["before_sha256"]
+    ):
         historical_path = restore_pre_uniprot_protein_examples(
             pre_cycle2_stage5_remediation_root,
             delta["path"],

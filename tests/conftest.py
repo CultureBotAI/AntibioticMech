@@ -313,7 +313,12 @@ def _restore_pre_uniprot_protein_examples(root, relative_path, output):
         assert target.pop("protein_examples") == change["after_protein_examples"]
         if change["before_protein_examples"] is not None:
             target["protein_examples"] = copy.deepcopy(change["before_protein_examples"])
-    write_validated_antibiotic(historical, output)
+    membership_artifacts = {
+        c["path"]: (source.parent / c["path"]).read_bytes()
+        for c in (historical.get("activity_membership_collections") or [])
+        if (source.parent / c["path"]).is_file()
+    } or None
+    write_validated_antibiotic(historical, output, membership_artifacts=membership_artifacts)
     assert hashlib.sha256(output.read_bytes()).hexdigest() == delta["before_sha256"]
     return output
 
@@ -393,6 +398,34 @@ def pre_uniprot_protein_examples_root(tmp_path_factory, pre_cycle2_stage5_remedi
     for delta in transition["record_deltas"]:
         if delta["path"] in historical_paths:
             _restore_pre_uniprot_protein_examples(source, delta["path"], root / delta["path"])
+    import copy
+
+    from antibioticmech.validation.write_validated import write_validated_antibiotic
+
+    cycle4_stage5_transition = json.loads(
+        (source / "curation/cycle4_stage5_review_remediation_transition.json").read_bytes()
+    )
+    for delta in cycle4_stage5_transition["molecular_targets_deltas"]:
+        if delta["path"] in historical_paths:
+            target_path = root / delta["path"]
+            assert hashlib.sha256(target_path.read_bytes()).hexdigest() == delta["after_sha256"]
+            historical = load_record(target_path)
+            assert historical["identifier"] == delta["identifier"]
+            assert historical["curation_history"].pop() == delta["added_history_event"]
+            for field_name, before_val in delta["before_fields"].items():
+                if before_val is None:
+                    historical.pop(field_name, None)
+                else:
+                    historical[field_name] = copy.deepcopy(before_val)
+            if delta["before_molecular_targets"] is None:
+                historical.pop("molecular_targets", None)
+            else:
+                historical["molecular_targets"] = copy.deepcopy(delta["before_molecular_targets"])
+            ordered_historical = {
+                k: historical[k] for k in delta["previous_key_order"] if k in historical
+            }
+            write_validated_antibiotic(ordered_historical, target_path)
+            assert hashlib.sha256(target_path.read_bytes()).hexdigest() == delta["before_sha256"]
     return root
 
 
