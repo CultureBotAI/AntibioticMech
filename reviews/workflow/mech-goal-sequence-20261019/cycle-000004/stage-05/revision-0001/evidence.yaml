@@ -14,10 +14,10 @@ previous_evidence:
   sha256: 63a8f4d386e04cf8d17e231f2125a6979e5fd0322e6cf451769afc60f3eb43f6
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
-  sha256: b273db45c302d532c37a1ee46d48618c2e1ff1d6f003ddf7d248b02b68432035
+  sha256: fd68623f1676623f906dc9856047eac6a44b0ad79ef5a73e0286cb09ee3876e0
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
-  sha256: 7ebf9cde7b8beb43c69932e419b3db26984c137f4206f0539479a87d26fadb27
+  sha256: 74071c55d0a67ed3e4a20b55dadae9ec3fa3c55e8da11292aa6189f9873febea
   kind: validation
 findings:
 - finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
@@ -29,14 +29,14 @@ findings:
   carried_from: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
 - finding_id: cycle4-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
   status: resolved
-  summary: "Resolved in #1307 by curating mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (with reviewed E. coli pyrE/pyrF UniProtKB protein_examples on minimycin and documented held_targets rationales on the other 5 records) and promoting all 6 Cycle 4 Stage 1 PROPOSED+EXACT natural products \u2014 diazaquinomycin H (CHEBI:199753), diazaquinomycin J (CHEBI:225769), jessenipeptin (CHEBI:221686), minimycin (CHEBI:224130), pamamycin-621A (CHEBI:219230), and pamamycin-649B (CHEBI:198952) \u2014 to curation_status: REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic."
+  summary: "Resolved in #1307 by curating mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (with reviewed E. coli rpoB/rpoC UniProtKB protein_examples UniProtKB:P0A8V2 and UniProtKB:P0A8T7 on minimycin's GO:0000428 DNA-directed RNA polymerase complex target and documented held_targets rationales on the other 5 records) and promoting all 6 Cycle 4 Stage 1 PROPOSED+EXACT natural products \u2014 diazaquinomycin H (CHEBI:199753), diazaquinomycin J (CHEBI:225769), jessenipeptin (CHEBI:221686), minimycin (CHEBI:224130), pamamycin-621A (CHEBI:219230), and pamamycin-649B (CHEBI:198952) \u2014 to curation_status: REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic."
   group_id: group-02-cycle4-stage1-natural-products-mechanism-and-targets
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1307
   disposition: Curated mode_of_action and PRIMARY_LITERATURE molecular_targets across all 6 Cycle 4 Stage 1 EXACT natural products and promoted them to REVIEWED; verified via fresh structured review 20261103T145500Z-cycle4-stage5-remediated-records-review.
   carried_from: cycle4-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
 - finding_id: seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion
   status: resolved
-  summary: "Resolved in #1308 by curating biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (GO:0009330 DNA topoisomerase type II complex) with 16 reviewed Swiss-Prot UniProtKB protein_examples and promoting 4 SEEDED+EXACT ChEBI fluoroquinolones \u2014 enoxacin (CHEBI:157175), fleroxacin (CHEBI:31810), gatifloxacin (CHEBI:5280), and trovafloxacin (CHEBI:9763) \u2014 to curation_status: REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic."
+  summary: "Resolved in #1308 by curating biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (PROTEIN_COMPLEX bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE), DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria; DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337) with 16 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083 on each record) and promoting 4 SEEDED+EXACT ChEBI fluoroquinolones \u2014 enoxacin (CHEBI:157175), fleroxacin (CHEBI:31810), gatifloxacin (CHEBI:5280), and trovafloxacin (CHEBI:9763) \u2014 to curation_status: REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic."
   group_id: group-03-seeded-exact-fluoroquinolones-primary-targets
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1308
   disposition: 'Curated PRIMARY_LITERATURE molecular_targets and reviewed UniProtKB protein_examples on all 4 EXACT fluoroquinolone records and promoted them to REVIEWED (raising total REVIEWED count from 101 to 112 together with #1306 and #1307); verified via fresh structured review 20261103T145500Z-cycle4-stage5-remediated-records-review.'
@@ -127,7 +127,7 @@ groups:
   resolution_evidence:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-05/revision-0001/validation.md
-  disposition: Curated PRIMARY_LITERATURE molecular_targets (GO:0009330) with reviewed UniProtKB protein_examples and promoted all 4 records to REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic; verified by fresh review 20261103T145500Z-cycle4-stage5-remediated-records-review.
+  disposition: Curated PRIMARY_LITERATURE molecular_targets (PROTEIN_COMPLEX bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE), DIRECT_BINDING_TARGET) with reviewed E. coli K-12 UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and promoted all 4 records to REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic; verified by fresh review 20261103T145500Z-cycle4-stage5-remediated-records-review.
 - group_id: group-04-mcr43-context
   finding_ids:
   - mcr43-context

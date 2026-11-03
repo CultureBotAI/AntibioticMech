@@ -6,7 +6,7 @@ scope_note: 'Curated primary-literature MECHANISTIC causal_graphs across all eli
   records: 34 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
   and 19 Cohort B records with direct-binding or measured-association non-protein PRIMARY_LITERATURE molecular_targets,
   plus explicit accounting of all 16 pre-existing corpus causal_graphs (15 REVIEWED + 1 SEEDED) and all
-  33 held REVIEWED records.'
+  44 held REVIEWED records.'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -4521,13 +4521,13 @@ held_records:
   label: squalestatin S1
   path: data/antibiotics/antifungal/squalestatin-s1.yaml
   blocker_category: uniprot_protein_example_held
-  target_summary: fungal squalene synthase (ERG9 / FDFT1) (PROTEIN, DIRECT_BINDING_TARGET)
+  target_summary: fungal squalene synthase (Erg9) (PROTEIN, DIRECT_BINDING_TARGET)
   references:
   - DOI:10.7164/antibiotics.45.639
-  - DOI:10.1073/pnas.92.11.4972
+  - DOI:10.1073/pnas.90.1.80
   reason: 'Held from causal_graphs curation in Stage 5 because squalestatin S1 (CHEBI:220211) was newly
-    promoted from PROPOSED to REVIEWED in Issue #1306 with fungal squalene synthase ERG9 (UniProtKB:P29704,
-    UniProtKB:P78589, UniProtKB:A0A1D8PI71) protein_examples from DOI:10.7164/antibiotics.45.639 and DOI:10.1073/pnas.92.11.4972,
+    promoted from PROPOSED to REVIEWED in Issue #1306 with fungal squalene synthase (Erg9) (UniProtKB:P78589,
+    UniProtKB:A0A1D8PI71, UniProtKB:P29704) protein_examples from DOI:10.7164/antibiotics.45.639 and DOI:10.1073/pnas.90.1.80,
     and awaits dedicated Stage 2 add-causal-graph curation.'
 - identifier: CHEBI:199753
   label: diazaquinomycin H
