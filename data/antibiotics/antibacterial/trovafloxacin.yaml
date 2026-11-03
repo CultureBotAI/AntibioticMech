@@ -1,33 +1,11 @@
 identifier: CHEBI:9763
 label: trovafloxacin
+curation_status: REVIEWED
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
-grounding_status: EXACT
-definition: A 1,8-naphthyridine derivative that is 4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
-  acid bearing additional 2,4-difluorophenyl, fluoro and 6-amino-3-azabicyclo[3.1.0]hex-3-yl
-  substituents at positions 1, 6 and 7 respectively. A broad-spectrum antibiotic that
-  was withdrawn from the market due to risk of liver failure.
-definition_source: ChEBI
-synonyms:
-- synonym_text: trovafloxacine
-  synonym_type: INN
-  source: chebi
-- synonym_text: trovafloxacino
-  synonym_type: INN
-  source: chebi
-- synonym_text: trovafloxacinum
-  synonym_type: INN
-  source: chebi
-- synonym_text: 7-[(1R,5S,6s)-6-amino-3-azabicyclo[3.1.0]hex-3-yl]-1-(2,4-difluorophenyl)-6-fluoro-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
-    acid
-  synonym_type: EXACT_SYNONYM
-  source: chebi
-- synonym_text: Trovan
-  synonym_type: EXACT_SYNONYM
-  source: aro
-- synonym_text: alatrofloxacin
-  synonym_type: EXACT_SYNONYM
-  source: aro
+activity_roles:
+- CHEBI:33281
+- CHEBI:36047
+structural_class: fluoroquinolone antibiotic
 parent_compounds:
 - CHEBI:25384
 - CHEBI:33709
@@ -39,17 +17,6 @@ parent_compounds:
 - CHEBI:86324
 - CHEBI:87211
 - ARO:0000001
-activity_roles:
-- CHEBI:33281
-- CHEBI:36047
-structural_class: fluoroquinolone antibiotic
-structural_class_id: ARO:0000001
-mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:53559 (topoisomerase IV inhibitor),
-  CHEBI:59517 (DNA synthesis inhibitor). ChEBI asserts the role on the compound. The
-  role names a target specific to the microbe or virus — see mode_of_action_target_scope.
-  Not a curator's mechanistic review.
-mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: '[H][C@@]12CN(c3nc4c(cc3F)c(=O)c(C(=O)O)cn4-c3ccc(F)cc3F)C[C@]1([H])[C@H]2N'
   standard_inchi: InChI=1S/C20H15F3N4O3/c21-8-1-2-15(13(22)3-8)27-7-12(20(29)30)17(28)9-4-14(23)19(25-18(9)27)26-5-10-11(6-26)16(10)24/h1-4,7,10-11,16H,5-6,24H2,(H,29,30)/t10-,11+,16+
@@ -73,6 +40,26 @@ drug_xrefs:
 - kegg.drug:D08654
 document_xrefs:
 - wikipedia.en:Trovafloxacin
+synonyms:
+- synonym_text: trovafloxacine
+  synonym_type: INN
+  source: chebi
+- synonym_text: trovafloxacino
+  synonym_type: INN
+  source: chebi
+- synonym_text: trovafloxacinum
+  synonym_type: INN
+  source: chebi
+- synonym_text: 7-[(1R,5S,6s)-6-amino-3-azabicyclo[3.1.0]hex-3-yl]-1-(2,4-difluorophenyl)-6-fluoro-4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+    acid
+  synonym_type: EXACT_SYNONYM
+  source: chebi
+- synonym_text: Trovan
+  synonym_type: EXACT_SYNONYM
+  source: aro
+- synonym_text: alatrofloxacin
+  synonym_type: EXACT_SYNONYM
+  source: aro
 source_concepts:
 - source: ARO
   source_id: ARO:3000664
@@ -90,6 +77,93 @@ source_concepts:
   - CHEBI:33281
   - CHEBI:36047
   source_version: '2026-08-30'
+grounding_status: EXACT
+biosynthesis_origin: SYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic fluoronaphthyridone antibiotic that dually
+  inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV
+  (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001,
+  DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).'
+molecular_targets:
+- target_id: ARO:3000733
+  target_label: fluoroquinolone sensitive gyrA
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  experimental_context: CARD/ARO database assertion; target organism, strain, and
+    assay are not specified. ARO explicitly describes ligand binding to gyrase subunit
+    A.
+  evidence_status: PRIMARY_EVIDENCE_NEEDED
+  source: CARD_ARO
+  source_version: '2026-08-30'
+  source_retrieved_on: '2026-08-30'
+  evidence:
+  - reference: ARO:3000733
+    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000664 (trovafloxacin); database
+      assertion, not a primary citation.
+- target_label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase
+    IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility
+    profiling of trovafloxacin alongside comparator fluoroquinolones (Takei et al.
+    2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-12
+  source_retrieved_on: '2026-11-03'
+  evidence:
+  - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+    snippet: Takei et al. determined the inhibitory activities (IC50s) of trovafloxacin
+      and 15 other quinolones against purified bacterial DNA gyrase supercoiling and
+      topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts
+      across defined GyrA and ParC QRDR mutants.
+    notes: Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337)
+      measured direct dual inhibition of bacterial DNA gyrase and topoisomerase IV
+      by trovafloxacin and established target-mutation resistance shifts across GyrA
+      and ParC QRDR variants.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified
+      DNA supercoiling and QRDR mutant susceptibility assays by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited
+      by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified
+      decatenation and QRDR mutant susceptibility assays by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-03'
+    role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2
+      holoenzyme inhibited by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
 resistance_mechanisms:
 - mechanism_type: ANTIBIOTIC_TARGET_ALTERATION
   aro_id: ARO:3003294
@@ -243,22 +317,6 @@ resistance_mechanisms:
   - reference: ARO:3003818
     notes: CARD/ARO asserts confers_resistance_to_antibiotic ARO:3000664 (trovafloxacin);
       database assertion, not a primary citation.
-molecular_targets:
-- target_id: ARO:3000733
-  target_label: fluoroquinolone sensitive gyrA
-  target_type: PROTEIN
-  target_relation: DIRECT_BINDING_TARGET
-  experimental_context: CARD/ARO database assertion; target organism, strain, and
-    assay are not specified. ARO explicitly describes ligand binding to gyrase subunit
-    A.
-  evidence_status: PRIMARY_EVIDENCE_NEEDED
-  source: CARD_ARO
-  source_version: '2026-08-30'
-  source_retrieved_on: '2026-08-30'
-  evidence:
-  - reference: ARO:3000733
-    notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000664 (trovafloxacin); database
-      assertion, not a primary citation.
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -285,3 +343,34 @@ curation_history:
   action: RESEEDED_FROM_SOURCES
   changes: 'Re-seeded; changed: resistance_mechanisms (CARD). Upstream retrieval date
     2026-08-30, unchanged.'
+- timestamp: '2026-11-03T14:20:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1308).'
+  llm_assisted: true
+- timestamp: '2026-11-03T14:25:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083)
+    to the primary-literature DNA gyrase and topoisomerase IV target on trovafloxacin
+    (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  llm_assisted: true
+- timestamp: '2026-11-03T14:30:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI fluoroquinolone record (CHEBI:9763) with complete
+    4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083;
+    DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue
+    #1308).'
+  llm_assisted: true
+definition: A 1,8-naphthyridine derivative that is 4-oxo-1,4-dihydro-1,8-naphthyridine-3-carboxylic
+  acid bearing additional 2,4-difluorophenyl, fluoro and 6-amino-3-azabicyclo[3.1.0]hex-3-yl
+  substituents at positions 1, 6 and 7 respectively. A broad-spectrum antibiotic that
+  was withdrawn from the market due to risk of liver failure.
+definition_source: ChEBI
+structural_class_id: ARO:0000001

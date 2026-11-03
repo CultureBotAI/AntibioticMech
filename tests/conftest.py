@@ -276,10 +276,10 @@ def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_exam
 def _uniprot_protein_examples_transition(root):
     payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "d55b0ec85d94e0715699d08c7bb98b2beb369917a6c5bcd75e1a1df9f6d6f08d"
+        "55243bb2c76d62d502dbb316770ecad3a23b38e8220c7eec7d2ffe10b10c2921"
     )
     transition = json.loads(payload)
-    assert len(transition["record_deltas"]) == 62
+    assert len(transition["record_deltas"]) == 67
     return transition
 
 
@@ -313,7 +313,12 @@ def _restore_pre_uniprot_protein_examples(root, relative_path, output):
         assert target.pop("protein_examples") == change["after_protein_examples"]
         if change["before_protein_examples"] is not None:
             target["protein_examples"] = copy.deepcopy(change["before_protein_examples"])
-    write_validated_antibiotic(historical, output)
+    membership_artifacts = {
+        c["path"]: (source.parent / c["path"]).read_bytes()
+        for c in (historical.get("activity_membership_collections") or [])
+        if (source.parent / c["path"]).is_file()
+    } or None
+    write_validated_antibiotic(historical, output, membership_artifacts=membership_artifacts)
     assert hashlib.sha256(output.read_bytes()).hexdigest() == delta["before_sha256"]
     return output
 
@@ -393,6 +398,34 @@ def pre_uniprot_protein_examples_root(tmp_path_factory, pre_cycle2_stage5_remedi
     for delta in transition["record_deltas"]:
         if delta["path"] in historical_paths:
             _restore_pre_uniprot_protein_examples(source, delta["path"], root / delta["path"])
+    import copy
+
+    from antibioticmech.validation.write_validated import write_validated_antibiotic
+
+    cycle4_stage5_transition = json.loads(
+        (source / "curation/cycle4_stage5_review_remediation_transition.json").read_bytes()
+    )
+    for delta in cycle4_stage5_transition["molecular_targets_deltas"]:
+        if delta["path"] in historical_paths:
+            target_path = root / delta["path"]
+            assert hashlib.sha256(target_path.read_bytes()).hexdigest() == delta["after_sha256"]
+            historical = load_record(target_path)
+            assert historical["identifier"] == delta["identifier"]
+            assert historical["curation_history"].pop() == delta["added_history_event"]
+            for field_name, before_val in delta["before_fields"].items():
+                if before_val is None:
+                    historical.pop(field_name, None)
+                else:
+                    historical[field_name] = copy.deepcopy(before_val)
+            if delta["before_molecular_targets"] is None:
+                historical.pop("molecular_targets", None)
+            else:
+                historical["molecular_targets"] = copy.deepcopy(delta["before_molecular_targets"])
+            ordered_historical = {
+                k: historical[k] for k in delta["previous_key_order"] if k in historical
+            }
+            write_validated_antibiotic(ordered_historical, target_path)
+            assert hashlib.sha256(target_path.read_bytes()).hexdigest() == delta["before_sha256"]
     return root
 
 
@@ -467,6 +500,11 @@ def pre_stage5_remediation_root(tmp_path_factory):
         ("molecular_targets", "antibioticmech:curator-e14f58e6dc", "DOI:10.1128/AAC.49.8.3239-3250.2005"),
         ("molecular_targets", "antibioticmech:curator-217ed2935e", "DOI:10.1128/AAC.02770-15"),
         ("molecular_targets", "antibioticmech:curator-f930ec8d19", "DOI:10.1016/j.chembiol.2012.01.014"),
+        ("molecular_targets", "CHEBI:199753", "DOI:10.1021/acsinfecdis.5b00005"),
+        ("molecular_targets", "CHEBI:225769", "DOI:10.1021/acsinfecdis.5b00005"),
+        ("molecular_targets", "CHEBI:221686", "DOI:10.1073/pnas.1721790115"),
+        ("molecular_targets", "CHEBI:219230", "DOI:10.7164/antibiotics.48.1159"),
+        ("molecular_targets", "CHEBI:198952", "DOI:10.7164/antibiotics.48.1159"),
     }
     promoted_existing_ids = {
         "CHEBI:3732",
@@ -568,10 +606,13 @@ def pre_causal_graphs_root(tmp_path_factory, pre_stage5_remediation_root):
 
 @pytest.fixture(scope="session")
 def pre_cycle2_stage5_remediation_root(tmp_path_factory, pre_causal_graphs_root):
-    """Restore the Cycle 3 Stage 5 and Cycle 2 Stage 5 review-remediated records in isolation."""
+    """Restore Cycle 4/3/2 Stage 5 review-remediated records in isolation."""
     from antibioticmech.validation.write_validated import write_validated_antibiotic
 
     source = pre_causal_graphs_root
+    cycle4_stage5_transition = json.loads(
+        (source / "curation/cycle4_stage5_review_remediation_transition.json").read_bytes()
+    )
     cycle3_stage5_transition = json.loads(
         (source / "curation/cycle3_stage5_review_remediation_transition.json").read_bytes()
     )
@@ -582,6 +623,17 @@ def pre_cycle2_stage5_remediation_root(tmp_path_factory, pre_causal_graphs_root)
     shutil.copytree(source / "data/antibiotics", root / "data/antibiotics")
     for relative in ("data/raw", "research", "reports", "tests", "conf", "scripts", "curation"):
         (root / relative).symlink_to(source / relative, target_is_directory=True)
+    for delta in cycle4_stage5_transition["promoted_record_deltas"]:
+        rel_path = delta["path"]
+        rec = load_record(root / rel_path)
+        assert rec["identifier"] == delta["identifier"]
+        assert rec["curation_status"] == delta["after_curation_status"] == "REVIEWED"
+        assert rec["curation_history"].pop() == delta["added_history_event"]
+        rec["curation_status"] = delta["before_curation_status"]
+        write_validated_antibiotic(rec, root / rel_path)
+        assert (
+            hashlib.sha256((root / rel_path).read_bytes()).hexdigest() == delta["before_sha256"]
+        )
     for delta in cycle3_stage5_transition["promoted_record_deltas"]:
         rel_path = delta["path"]
         rec = load_record(root / rel_path)
