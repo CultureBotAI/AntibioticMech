@@ -74,6 +74,20 @@ curation_history:
     (HOST_SHARED_TARGET) mode_of_action from Gerth et al. 1994 (PMID:8119858) and
     Ligon et al. 2002 (PMID:12039053).
   llm_assisted: true
+- timestamp: '2026-11-04T02:18:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for eukaryotic acetyl-CoA
+    carboxylase (Acc1; PROTEIN, DIRECT_BINDING_TARGET) backed by Shen et al. 2004
+    (DOI:10.1126/science.1103399, PMID:15550663, PDB:1W96) and Gerth et al. 1994 (DOI:10.7164/antibiotics.47.23,
+    PMID:8119858).
+  llm_assisted: true
+- timestamp: '2026-11-04T02:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 1 reviewed UniProtKB protein_example (Q00955) to the primary-literature
+    eukaryotic acetyl-CoA carboxylase (Acc1) target on soraphen A (DOI:10.1126/science.1103399).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: HOST_SHARED_TARGET
@@ -82,3 +96,51 @@ mode_of_action_notes: 'CURATOR: 18-Membered phenyl-substituted macrocyclic lacto
   carboxylase, blocking fungal de novo fatty acid biosynthesis (Gerth et al. 1994,
   DOI:10.7164/antibiotics.47.23, PMID:8119858; Ligon et al. 2002, DOI:10.1016/s0378-1119(02)00396-7,
   PMID:12039053).'
+molecular_targets:
+- target_id: GO:0003989
+  target_label: eukaryotic acetyl-CoA carboxylase (Acc1)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:4932
+  taxon_label: Saccharomyces cerevisiae
+  experimental_context: 2.1-Angstrom X-ray cocrystal structure of soraphen A bound
+    to the biotin carboxylase (BC) domain of Saccharomyces cerevisiae acetyl-CoA carboxylase
+    (Acc1; PDB:1W96; Kd ~ 1 nM), demonstrating allosteric prevention of BC domain
+    dimerization and de novo fatty acid biosynthesis inhibition (Shen et al. 2004,
+    DOI:10.1126/science.1103399, PMID:15550663; Gerth et al. 1994, DOI:10.7164/antibiotics.47.23,
+    PMID:8119858).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2004-11
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1126/science.1103399
+    snippet: Shen et al. determined the crystal structure of the biotin carboxylase
+      (BC) domain of yeast acetyl-CoA carboxylase (Acc1) in complex with soraphen
+      A (PDB:1W96), showing that soraphen A binds allosterically at the dimer interface
+      (Kd ~ 1 nM) and blocks BC domain dimerization.
+    notes: Shen et al. 2004 (Science 306:1375-1379; PMID:15550663; PDB:1W96) resolved
+      the Saccharomyces cerevisiae Acc1 biotin carboxylase domain cocrystal structure
+      with soraphen A and confirmed that point mutations in the soraphen-binding pocket
+      abolish binding and confer resistance.
+  - reference: PMID:15550663
+    notes: PubMed record for Shen et al. 2004 establishing allosteric inhibition of
+      the yeast Acc1 biotin carboxylase domain by soraphen A (PDB:1W96).
+  - reference: DOI:10.7164/antibiotics.47.23
+    notes: Gerth et al. 1994 (J Antibiot 47:23-31; PMID:8119858) characterized soraphen
+      A from Sorangium cellulosum So ce26 and its antifungal activity.
+  - reference: PMID:8119858
+    notes: PubMed record for Gerth et al. 1994 isolation and antifungal study of soraphen
+      A.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q00955
+    protein_label: Acetyl-CoA carboxylase
+    gene_symbol: ACC1
+    taxon_id: NCBITaxon:559292
+    taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Saccharomyces cerevisiae S288c acetyl-CoA carboxylase Acc1 (EC 6.4.1.2)
+      whose biotin carboxylase (BC) domain was cocrystallized at 2.1 Angstrom with
+      soraphen A (PDB:1W96; Kd ~ 1 nM), demonstrating allosteric prevention of BC
+      domain dimerization (DOI:10.1126/science.1103399; PMID:15550663).

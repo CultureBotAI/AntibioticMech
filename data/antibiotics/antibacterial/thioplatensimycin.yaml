@@ -79,6 +79,20 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Dong et al. 2018 (PMID:29915173) and Zheng
     et al. 2021 (PMID:33314918).
   llm_assisted: true
+- timestamp: '2026-11-04T02:18:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial beta-ketoacyl-ACP
+    synthase II (FabF; PROTEIN, DIRECT_BINDING_TARGET) backed by Dong et al. 2018
+    (DOI:10.1038/s41467-018-04747-y, PMID:29915173) and Su et al. 2021 (DOI:10.1021/acschembio.0c00773,
+    PMID:33314918).
+  llm_assisted: true
+- timestamp: '2026-11-04T02:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (Q7A6F8, P0AAI5) to the primary-literature
+    bacterial beta-ketoacyl-ACP synthase II (FabF) target on thioplatensimycin (DOI:10.1038/s41467-018-04747-y).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -87,3 +101,58 @@ mode_of_action_notes: 'CURATOR: Thiocarboxylic acid diterpenoid-aminobenzoate co
   beta-ketoacyl-ACP synthase II (FabF) in type II fatty acid biosynthesis (Dong et
   al. 2018, DOI:10.1038/s41467-018-04747-y, PMID:29915173; Zheng et al. 2021, DOI:10.1021/acschembio.0c00773,
   PMID:33314918).'
+molecular_targets:
+- target_id: GO:0004315
+  target_label: bacterial beta-ketoacyl-ACP synthase II (FabF)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Selective inhibition of bacterial type II fatty acid synthase
+    condensing enzyme beta-ketoacyl-ACP synthase II (FabF) in Staphylococcus aureus
+    and Escherichia coli by binding the malonyl-ACP binding site of the acyl-enzyme
+    intermediate (Dong et al. 2018, DOI:10.1038/s41467-018-04747-y, PMID:29915173;
+    Su et al. 2021, DOI:10.1021/acschembio.0c00773, PMID:33314918).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2018-06
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1038/s41467-018-04747-y
+    snippet: Dong et al. BIOS-guided genome mining and pathway engineering yielded
+      thioplatensimycin, a natural thia-analogue of platensimycin with potent antibacterial
+      activity against Staphylococcus aureus via FabF inhibition.
+    notes: Dong et al. 2018 (Nat Commun 9:2362; PMID:29915173) characterized thioplatensimycin
+      biosynthesis and its potent antibacterial activity against methicillin-resistant
+      Staphylococcus aureus via inhibition of bacterial beta-ketoacyl-ACP synthase
+      II (FabF).
+  - reference: PMID:29915173
+    notes: PubMed record for Dong et al. 2018 on thioplatensimycin discovery and FabF
+      target inhibition.
+  - reference: DOI:10.1021/acschembio.0c00773
+    notes: Su et al. 2021 (ACS Chem Biol 16:402-411; PMID:33314918) characterized
+      bacterial FabF active-site interactions with thioplatensimycin and platensimycin.
+  - reference: PMID:33314918
+    notes: PubMed record for Su et al. 2021 on FabF inhibition by thioplatensimycin.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q7A6F8
+    protein_label: 3-oxoacyl-[acyl-carrier-protein] synthase 2
+    gene_symbol: fabF
+    taxon_id: NCBITaxon:158879
+    taxon_label: Staphylococcus aureus (strain N315)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Reviewed reference Staphylococcus aureus N315 beta-ketoacyl-ACP synthase
+      II (FabF, EC 2.3.1.179) representing the Gram-positive bacterial FASII condensing
+      enzyme inhibited by thioplatensimycin (DOI:10.1038/s41467-018-04747-y; PMID:29915173;
+      DOI:10.1021/acschembio.0c00773; PMID:33314918).
+  - uniprot_id: UniProtKB:P0AAI5
+    protein_label: 3-oxoacyl-[acyl-carrier-protein] synthase 2
+    gene_symbol: fabF
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Escherichia coli K-12 beta-ketoacyl-ACP synthase II (FabF, EC 2.3.1.179)
+      inhibited in the acyl-enzyme intermediate state by thioplatensimycin (DOI:10.1038/s41467-018-04747-y;
+      PMID:29915173; DOI:10.1021/acschembio.0c00773; PMID:33314918).
