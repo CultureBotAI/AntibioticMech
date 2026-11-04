@@ -3,10 +3,10 @@ task: causal_graphs_curation
 curation_action: CURATED_CAUSAL_GRAPHS
 retrieved_on: '2026-10-23'
 scope_note: 'Curated primary-literature MECHANISTIC causal_graphs across all eligible REVIEWED AntibioticMech
-  records: 34 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
+  records: 40 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
   and 19 Cohort B records with direct-binding or measured-association non-protein PRIMARY_LITERATURE molecular_targets,
   plus explicit accounting of all 16 pre-existing corpus causal_graphs (15 REVIEWED + 1 SEEDED) and all
-  44 held REVIEWED records.'
+  38 held REVIEWED records.'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -4108,6 +4108,639 @@ records:
       - reference: DOI:10.1128/AAC.37.3.384
         notes: Inhibition of DNA gyrase supercoiling by T-3761 blocked bacterial DNA synthesis and cell
           division.
+- identifier: CHEBI:220211
+  label: squalestatin S1
+  path: data/antibiotics/antifungal/squalestatin-s1.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P78589, UniProtKB:A0A1D8PI71,
+    UniProtKB:P29704) and primary literature (DOI:10.7164/antibiotics.45.639, DOI:10.1073/pnas.90.1.80).
+  causal_graphs:
+  - graph_id: squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition
+    title: Squalestatin S1 competitively inhibits fungal squalene synthase (Erg9) to block ergosterol
+      biosynthesis
+    description: Squalestatin S1 (zaragozic acid A) acts as a picomolar competitive inhibitor of fungal
+      microsomal squalene synthase (Erg9) by mimicking the presqualene pyrophosphate reaction intermediate,
+      blocking reductive condensation of farnesyl diphosphate to squalene and depleting fungal ergosterol
+      biosynthesis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: squalestatin_s1
+      label: squalestatin S1
+      node_type: COMPOUND
+      grounding: CHEBI:220211
+    - node_id: fungal_squalene_synthase_erg9
+      label: fungal squalene synthase (Erg9)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21); kept label-only with Candida
+        albicans (UniProtKB:P78589), Candida albicans SC5314 (UniProtKB:A0A1D8PI71), and Saccharomyces
+        cerevisiae S288c (UniProtKB:P29704) protein_examples.
+      gene_symbols:
+      - ERG9
+      protein_examples:
+      - uniprot_id: UniProtKB:P78589
+        protein_label: Squalene synthase ERG9
+        gene_symbol: ERG9
+        taxon_id: NCBITaxon:5476
+        taxon_label: Candida albicans
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-31'
+        role: Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21) directly inhibited by squalestatin
+          S1 in Candida albicans enzyme assays (IC50 = 5 ng/mL; DOI:10.7164/antibiotics.45.639; PMID:1624366).
+      - uniprot_id: UniProtKB:A0A1D8PI71
+        protein_label: Squalene synthase ERG9
+        gene_symbol: ERG9
+        taxon_id: NCBITaxon:237561
+        taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-31'
+        role: Reference-proteome Candida albicans SC5314 squalene synthase (Erg9, EC 2.5.1.21) corresponding
+          to the C. albicans enzyme inhibited by squalestatin S1 (DOI:10.7164/antibiotics.45.639; PMID:1624366;
+          DOI:10.1073/pnas.90.1.80; PMID:8419946).
+      - uniprot_id: UniProtKB:P29704
+        protein_label: Squalene synthase ERG9
+        gene_symbol: ERG9
+        taxon_id: NCBITaxon:559292
+        taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        entry_status: REVIEWED
+        retrieved_on: '2026-10-31'
+        role: Reference-proteome Saccharomyces cerevisiae S288c squalene synthase (Erg9, EC 2.5.1.21)
+          inhibited by zaragozic acid A / squalestatin S1 in fungal ergosterol biosynthesis assays (DOI:10.1073/pnas.90.1.80;
+          PMID:8419946).
+    - node_id: squalene_synthase_fpp_condensation_activity
+      label: Erg9-catalyzed farnesyl diphosphate condensation to squalene
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Reductive head-to-head condensation of two farnesyl diphosphate molecules via presqualene
+        pyrophosphate to squalene catalyzed by fungal squalene synthase (Erg9).
+    - node_id: fungal_ergosterol_biosynthesis
+      label: ergosterol biosynthetic process
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006696
+    edges:
+    - subject: squalestatin_s1
+      predicate: inhibits
+      object: squalene_synthase_fpp_condensation_activity
+      description: Squalestatin S1 competitively inhibits fungal squalene synthase (Erg9) by mimicking
+        the presqualene pyrophosphate intermediate.
+      evidence:
+      - reference: DOI:10.7164/antibiotics.45.639
+        notes: Dawson et al. 1992 (PMID:1624366) demonstrated potent competitive inhibition of Candida
+          albicans microsomal squalene synthase by squalestatin S1 (IC50 = 5 ng/mL).
+      - reference: DOI:10.1073/pnas.90.1.80
+        notes: Bergstrom et al. 1993 (PMID:8419946) showed that zaragozic acid A (squalestatin S1) is
+          a picomolar competitive inhibitor of fungal squalene synthase (Erg9) acting as a presqualene
+          pyrophosphate mimic.
+    - subject: fungal_squalene_synthase_erg9
+      predicate: enables
+      object: squalene_synthase_fpp_condensation_activity
+      description: Fungal squalene synthase (Erg9) catalyzes the reductive condensation of farnesyl diphosphate
+        to squalene.
+      evidence:
+      - reference: DOI:10.7164/antibiotics.45.639
+        notes: Candida albicans microsomal squalene synthase catalyzed conversion of radiolabeled farnesyl
+          diphosphate to squalene in vitro (PMID:1624366).
+      - reference: DOI:10.1073/pnas.90.1.80
+        notes: Fungal Erg9 squalene synthase catalyzed the committed first step of sterol synthesis from
+          farnesyl diphosphate (PMID:8419946).
+    - subject: squalene_synthase_fpp_condensation_activity
+      predicate: supports
+      object: fungal_ergosterol_biosynthesis
+      description: Squalene synthase (Erg9) catalysis commits farnesyl diphosphate to fungal ergosterol
+        biosynthesis.
+      evidence:
+      - reference: DOI:10.7164/antibiotics.45.639
+        notes: Inhibition of squalene synthase by squalestatin S1 blocked cellular sterol synthesis and
+          caused fungicidal activity in Candida and Aspergillus species (PMID:1624366).
+- identifier: CHEBI:224130
+  label: minimycin
+  path: data/antibiotics/antibacterial/minimycin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph minimycin_utp_incorporation_rnap_transcription_arrest
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7)
+    and primary literature (DOI:10.1093/nar/gkz782, DOI:10.1016/j.isci.2019.11.037).
+  causal_graphs:
+  - graph_id: minimycin_utp_incorporation_rnap_transcription_arrest
+    title: Minimycin (via its 5'-triphosphate metabolite) incorporates into nascent RNA and arrests bacterial
+      DNA-directed RNA polymerase elongation
+    description: The C-nucleoside antibiotic minimycin (oxazinomycin) is phosphorylated intracellularly
+      to its active 5'-triphosphate metabolite, which is incorporated by bacterial DNA-directed RNA polymerase
+      (RpoB/RpoC) into nascent RNA in place of UTP and arrests transcription elongation at polythymidine
+      tracts.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: minimycin
+      label: minimycin
+      node_type: COMPOUND
+      grounding: CHEBI:224130
+    - node_id: bacterial_dna_directed_rna_polymerase
+      label: bacterial DNA-directed RNA polymerase complex
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Multisubunit bacterial DNA-directed RNA polymerase catalytic core (RpoB/RpoC);
+        kept label-only with Escherichia coli K-12 RpoB (UniProtKB:P0A8V2) and RpoC (UniProtKB:P0A8T7)
+        protein_examples.
+      gene_symbols:
+      - rpoB
+      - rpoC
+      protein_examples:
+      - uniprot_id: UniProtKB:P0A8V2
+        protein_label: DNA-directed RNA polymerase subunit beta
+        gene_symbol: rpoB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Catalytic beta subunit (RpoB) of purified Escherichia coli K-12 DNA-directed RNA polymerase
+          whose transcription elongation is arrested upon incorporation of oxazinomycin (minimycin) 5'-triphosphate
+          into nascent RNA (DOI:10.1093/nar/gkz782; PMID:31535140).
+      - uniprot_id: UniProtKB:P0A8T7
+        protein_label: DNA-directed RNA polymerase subunit beta'
+        gene_symbol: rpoC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Catalytic beta' subunit (RpoC) forming the active-center cleft of purified Escherichia coli
+          K-12 DNA-directed RNA polymerase assayed with oxazinomycin (minimycin) 5'-triphosphate (DOI:10.1093/nar/gkz782;
+          PMID:31535140).
+    - node_id: rnap_nascent_rna_elongation_activity
+      label: RNA polymerase nascent RNA nucleotide incorporation and elongation
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: UTP substrate incorporation and processive transcript elongation across template
+        DNA polythymidine sequences by purified E. coli RNA polymerase.
+    - node_id: bacterial_dna_templated_transcription
+      label: bacterial DNA-templated transcription
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial RNA synthesis arrested by oxazinomycin (minimycin) 5'-triphosphate incorporation
+        at polythymidine tracts.
+    edges:
+    - subject: minimycin
+      predicate: inhibits
+      object: rnap_nascent_rna_elongation_activity
+      description: Minimycin (via its intracellularly generated 5'-triphosphate metabolite) incorporates
+        into nascent RNA in place of UTP and arrests RNA polymerase elongation at polythymidine tracts.
+      evidence:
+      - reference: DOI:10.1093/nar/gkz782
+        notes: Prajapati et al. 2019 (PMID:31535140) showed that oxazinomycin (minimycin) 5'-triphosphate
+          is incorporated by purified Escherichia coli RNA polymerase in place of UTP and arrests transcription
+          elongation at polythymidine sequences.
+      - reference: DOI:10.1016/j.isci.2019.11.037
+        notes: Kong et al. 2019 (PMID:31816530) characterized minimycin (oxazinomycin) antibacterial activity
+          and self-resistance determinants in Streptomyces hygroscopicus.
+    - subject: bacterial_dna_directed_rna_polymerase
+      predicate: enables
+      object: rnap_nascent_rna_elongation_activity
+      description: Bacterial DNA-directed RNA polymerase (RpoB/RpoC) catalyzes ribonucleotide incorporation
+        and nascent transcript elongation.
+      evidence:
+      - reference: DOI:10.1093/nar/gkz782
+        notes: Purified Escherichia coli DNA-directed RNA polymerase catalyzed ribonucleotide addition
+          and elongation in the single-nucleotide incorporation and transcription arrest assays (PMID:31535140).
+    - subject: rnap_nascent_rna_elongation_activity
+      predicate: supports
+      object: bacterial_dna_templated_transcription
+      description: Processive RNA polymerase nucleotide incorporation and elongation drive bacterial DNA-templated
+        transcription.
+      evidence:
+      - reference: DOI:10.1093/nar/gkz782
+        notes: Elongation arrest at polythymidine sequences upon oxazinomycin 5'-triphosphate incorporation
+          blocked full-length RNA transcript synthesis (PMID:31535140).
+- identifier: CHEBI:157175
+  label: enoxacin
+  path: data/antibiotics/antibacterial/enoxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph enoxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: enoxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Enoxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Enoxacin, a synthetic 1,8-naphthyridine fluoroquinolone antibiotic, inhibits bacterial
+      DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation,
+      arresting bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: enoxacin
+      label: enoxacin
+      node_type: COMPOUND
+      grounding: CHEBI:157175
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by enoxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by enoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: enoxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Enoxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of enoxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with enoxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by enoxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:31810
+  label: fleroxacin
+  path: data/antibiotics/antibacterial/fleroxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph fleroxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: fleroxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Fleroxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Fleroxacin, a synthetic trifluorinated fluoroquinolone antibiotic, inhibits bacterial
+      DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation,
+      arresting bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: fleroxacin
+      label: fleroxacin
+      node_type: COMPOUND
+      grounding: CHEBI:31810
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by fleroxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by fleroxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: fleroxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Fleroxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of fleroxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with fleroxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by fleroxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:5280
+  label: gatifloxacin
+  path: data/antibiotics/antibacterial/gatifloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph gatifloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: gatifloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Gatifloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Gatifloxacin, a synthetic 8-methoxyfluoroquinolone antibiotic, inhibits bacterial DNA
+      gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation, arresting
+      bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: gatifloxacin
+      label: gatifloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:5280
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by gatifloxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by gatifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: gatifloxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Gatifloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of gatifloxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with gatifloxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by gatifloxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:9763
+  label: trovafloxacin
+  path: data/antibiotics/antibacterial/trovafloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph trovafloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: trovafloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Trovafloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Trovafloxacin, a synthetic fluoronaphthyridone antibiotic, inhibits bacterial DNA gyrase
+      (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation, arresting
+      bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: trovafloxacin
+      label: trovafloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:9763
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by trovafloxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-03'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: trovafloxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Trovafloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of trovafloxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with trovafloxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by trovafloxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
 held_records:
 - identifier: CHEBI:172922
   label: ethylzingerone
@@ -4517,18 +5150,6 @@ held_records:
     (CYP51 / Erg11) (PROTEIN, MEASURED_TARGET_ASSOCIATION)) is held in curation/uniprot_protein_examples.yaml
     without a single verified experimental-strain UniProtKB accession in DOI:10.1007/s10156-004-0327-1
     and was promoted from PROPOSED to REVIEWED in Cycle 2 Stage 5.
-- identifier: CHEBI:220211
-  label: squalestatin S1
-  path: data/antibiotics/antifungal/squalestatin-s1.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: fungal squalene synthase (Erg9) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.7164/antibiotics.45.639
-  - DOI:10.1073/pnas.90.1.80
-  reason: 'Held from causal_graphs curation in Stage 5 because squalestatin S1 (CHEBI:220211) was newly
-    promoted from PROPOSED to REVIEWED in Issue #1306 with fungal squalene synthase (Erg9) (UniProtKB:P78589,
-    UniProtKB:A0A1D8PI71, UniProtKB:P29704) protein_examples from DOI:10.7164/antibiotics.45.639 and DOI:10.1073/pnas.90.1.80,
-    and awaits dedicated Stage 2 add-causal-graph curation.'
 - identifier: CHEBI:199753
   label: diazaquinomycin H
   path: data/antibiotics/antibacterial/diazaquinomycin-h.yaml
@@ -4562,22 +5183,10 @@ held_records:
   target_summary: Gram-positive bacterial cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT)
   references:
   - DOI:10.1073/pnas.1721790115
-  reason: 'Held from causal_graphs curation because jessenipeptin (CHEBI:221686) was newly promoted from
-    PROPOSED to REVIEWED in Issue #1307 with a non-protein membrane target (Gram-positive bacterial cytoplasmic
-    membrane (MEMBRANE, ATTACKED_COMPONENT); DOI:10.1073/pnas.1721790115) and awaits dedicated Stage 2
-    add-causal-graph curation.'
-- identifier: CHEBI:224130
-  label: minimycin
-  path: data/antibiotics/antibacterial/minimycin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: DNA-directed RNA polymerase complex (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1093/nar/gkz782
-  - DOI:10.1016/j.isci.2019.11.037
-  reason: 'Held from causal_graphs curation in Stage 5 because minimycin (CHEBI:224130) was newly promoted
-    from PROPOSED to REVIEWED in Issue #1307 with Escherichia coli DNA-directed RNA polymerase complex
-    (UniProtKB:P0A8V2, UniProtKB:P0A8T7) protein_examples from DOI:10.1093/nar/gkz782 and awaits dedicated
-    Stage 2 add-causal-graph curation.'
+  reason: Held from causal_graphs curation because the cited primary literature (DOI:10.1073/pnas.1721790115)
+    supports only a coarse or downstream affected component/process (Gram-positive bacterial cytoplasmic
+    membrane (MEMBRANE, ATTACKED_COMPONENT)) without a molecularly resolved proximal target-engagement
+    step.
 - identifier: CHEBI:219230
   label: pamamycin-621A
   path: data/antibiotics/antibacterial/pamamycin-621a.yaml
@@ -4600,51 +5209,3 @@ held_records:
   reason: Held from causal_graphs curation because the cited primary literature (DOI:10.7164/antibiotics.48.1159;
     DOI:10.1002/chem.201102093) supports a coarse membrane ionophore target (bacterial cytoplasmic membrane
     (MEMBRANE, ATTACKED_COMPONENT)) for pamamycin-649B.
-- identifier: CHEBI:157175
-  label: enoxacin
-  path: data/antibiotics/antibacterial/enoxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX,
-    DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  reason: 'Held from causal_graphs curation in Stage 5 because enoxacin (CHEBI:157175) was newly promoted
-    from SEEDED to REVIEWED in Issue #1308 with Escherichia coli DNA gyrase and topoisomerase IV (UniProtKB:P0AES4,
-    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples from DOI:10.1128/AAC.45.12.3544-3547.2001
-    and awaits dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:31810
-  label: fleroxacin
-  path: data/antibiotics/antibacterial/fleroxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX,
-    DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  reason: 'Held from causal_graphs curation in Stage 5 because fleroxacin (CHEBI:31810) was newly promoted
-    from SEEDED to REVIEWED in Issue #1308 with Escherichia coli DNA gyrase and topoisomerase IV (UniProtKB:P0AES4,
-    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples from DOI:10.1128/AAC.45.12.3544-3547.2001
-    and awaits dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:5280
-  label: gatifloxacin
-  path: data/antibiotics/antibacterial/gatifloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX,
-    DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  reason: 'Held from causal_graphs curation in Stage 5 because gatifloxacin (CHEBI:5280) was newly promoted
-    from SEEDED to REVIEWED in Issue #1308 with Escherichia coli DNA gyrase and topoisomerase IV (UniProtKB:P0AES4,
-    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples from DOI:10.1128/AAC.45.12.3544-3547.2001
-    and awaits dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:9763
-  label: trovafloxacin
-  path: data/antibiotics/antibacterial/trovafloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX,
-    DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  reason: 'Held from causal_graphs curation in Stage 5 because trovafloxacin (CHEBI:9763) was newly promoted
-    from SEEDED to REVIEWED in Issue #1308 with Escherichia coli DNA gyrase and topoisomerase IV (UniProtKB:P0AES4,
-    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) protein_examples from DOI:10.1128/AAC.45.12.3544-3547.2001
-    and awaits dedicated Stage 2 add-causal-graph curation.'

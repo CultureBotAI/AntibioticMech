@@ -85,3 +85,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and MEMBRANE_DISRUPTION (MICROBIAL_TARGET)
+    mode_of_action from Castro-Falcon et al. 2024 (PMID:38377384) and Agarwal et al.
+    2014 (PMID:24974229).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Pentabrominated 2-(2-hydroxyphenyl)pyrrole marine
+  antibiotic from Pseudoalteromonas species that acts as a potent membrane protonophore
+  (EC50 = 10 nM against Staphylococcus aureus), collapsing the bacterial proton motive
+  force (Castro-Falcon et al. 2024, DOI:10.1021/acschembio.3c00773, PMID:38377384;
+  Agarwal et al. 2014, DOI:10.1038/nchembio.1564, PMID:24974229).'

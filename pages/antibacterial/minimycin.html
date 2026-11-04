@@ -160,6 +160,77 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Minimycin (via its 5&#39;-triphosphate metabolite) incorporates into nascent RNA and arrests bacterial DNA-directed RNA polymerase elongation <span class="pill">MECHANISTIC</span></h3>
+<p>The C-nucleoside antibiotic minimycin (oxazinomycin) is phosphorylated intracellularly to its active 5&#39;-triphosphate metabolite, which is incorporated by bacterial DNA-directed RNA polymerase (RpoB/RpoC) into nascent RNA in place of UTP and arrests transcription elongation at polythymidine tracts.</p><div class="table-scroll" role="region" aria-label="Nodes: minimycin_utp_incorporation_rnap_transcription_arrest" tabindex="0">
+<table>
+  <caption>Nodes — minimycin_utp_incorporation_rnap_transcription_arrest</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">minimycin</code></td>
+    <td>minimycin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/minimycin.html"><code class="curie">CHEBI:224130</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_directed_rna_polymerase</code></td>
+    <td>bacterial DNA-directed RNA polymerase complex<br><span class="meta">Examples: DNA-directed RNA polymerase subunit beta (rpoB) <a href="https://www.uniprot.org/uniprotkb/P0A8V2"><code class="curie">UniProtKB:P0A8V2</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Catalytic beta subunit (RpoB) of purified Escherichia coli K-12 DNA-directed RNA polymerase whose transcription elongation is arrested upon incorporation of oxazinomycin (minimycin) 5&#39;-triphosphate into nascent RNA (DOI:10.1093/nar/gkz782; PMID:31535140).; DNA-directed RNA polymerase subunit beta&#39; (rpoC) <a href="https://www.uniprot.org/uniprotkb/P0A8T7"><code class="curie">UniProtKB:P0A8T7</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Catalytic beta&#39; subunit (RpoC) forming the active-center cleft of purified Escherichia coli K-12 DNA-directed RNA polymerase assayed with oxazinomycin (minimycin) 5&#39;-triphosphate (DOI:10.1093/nar/gkz782; PMID:31535140).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rnap_nascent_rna_elongation_activity</code></td>
+    <td>RNA polymerase nascent RNA nucleotide incorporation and elongation</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_templated_transcription</code></td>
+    <td>bacterial DNA-templated transcription</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: minimycin_utp_incorporation_rnap_transcription_arrest" tabindex="0">
+<table>
+  <caption>Edges — minimycin_utp_incorporation_rnap_transcription_arrest</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">minimycin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">rnap_nascent_rna_elongation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1093/nar/gkz782">DOI:10.1093/nar/gkz782</a></span> <span class="meta">(Prajapati et al. 2019 (PMID:31535140) showed that oxazinomycin (minimycin) 5&#39;-triphosphate is incorporated by purified Escherichia coli RNA polymerase in place of UTP and arrests transcription elongation at polythymidine sequences.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.isci.2019.11.037">DOI:10.1016/j.isci.2019.11.037</a></span> <span class="meta">(Kong et al. 2019 (PMID:31816530) characterized minimycin (oxazinomycin) antibacterial activity and self-resistance determinants in Streptomyces hygroscopicus.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_directed_rna_polymerase</code></td>
+    <td>enables</td>
+    <td><code class="curie">rnap_nascent_rna_elongation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1093/nar/gkz782">DOI:10.1093/nar/gkz782</a></span> <span class="meta">(Purified Escherichia coli DNA-directed RNA polymerase catalyzed ribonucleotide addition and elongation in the single-nucleotide incorporation and transcription arrest assays (PMID:31535140).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rnap_nascent_rna_elongation_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_dna_templated_transcription</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1093/nar/gkz782">DOI:10.1093/nar/gkz782</a></span> <span class="meta">(Elongation arrest at polythymidine sequences upon oxazinomycin 5&#39;-triphosphate incorporation blocked full-length RNA transcript synthesis (PMID:31535140).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -191,6 +262,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-11-03 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI record (CHEBI:224130) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, HOST_SHARED_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.1093/nar/gkz782, PMID:31535140) from PROPOSED to REVIEWED (issue #1307).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-03 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph minimycin_utp_incorporation_rnap_transcription_arrest (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7) and primary literature (DOI:10.1093/nar/gkz782, DOI:10.1016/j.isci.2019.11.037).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -211,7 +287,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>4b0d60f76d5d</code>, 3064 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>edf08de77ecf</code>, 3064 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

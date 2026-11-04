@@ -67,3 +67,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_MEMBRANE_SYNTHESIS_INHIBITION
+    (HOST_SHARED_TARGET) mode_of_action from Gerth et al. 1994 (PMID:8119858) and
+    Ligon et al. 2002 (PMID:12039053).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: 18-Membered phenyl-substituted macrocyclic lactone
+  polyketide from Sorangium cellulosum So ce26 that inhibits eukaryotic acetyl-CoA
+  carboxylase, blocking fungal de novo fatty acid biosynthesis (Gerth et al. 1994,
+  DOI:10.7164/antibiotics.47.23, PMID:8119858; Ligon et al. 2002, DOI:10.1016/s0378-1119(02)00396-7,
+  PMID:12039053).'

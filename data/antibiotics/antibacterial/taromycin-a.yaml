@@ -66,3 +66,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-03T23:20:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and MEMBRANE_DISRUPTION (MICROBIAL_TARGET)
+    mode_of_action from Yamanaka et al. 2014 (PMID:24449899) and Reynolds et al. 2018
+    (PMID:29184121).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Daptomycin-family dichlorinated cyclic lipotridecadepsipeptide
+  from marine Saccharomonospora sp. CNQ-490 that exerts calcium-dependent antibacterial
+  activity against Gram-positive bacteria by disrupting the bacterial cytoplasmic
+  membrane (Yamanaka et al. 2014, DOI:10.1073/pnas.1319584111, PMID:24449899; Reynolds
+  et al. 2018, DOI:10.1038/ja.2017.146, PMID:29184121).'

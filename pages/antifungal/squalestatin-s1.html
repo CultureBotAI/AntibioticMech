@@ -166,6 +166,78 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Squalestatin S1 competitively inhibits fungal squalene synthase (Erg9) to block ergosterol biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Squalestatin S1 (zaragozic acid A) acts as a picomolar competitive inhibitor of fungal microsomal squalene synthase (Erg9) by mimicking the presqualene pyrophosphate reaction intermediate, blocking reductive condensation of farnesyl diphosphate to squalene and depleting fungal ergosterol biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">squalestatin_s1</code></td>
+    <td>squalestatin S1</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/squalestatin-s1.html"><code class="curie">CHEBI:220211</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_squalene_synthase_erg9</code></td>
+    <td>fungal squalene synthase (Erg9)<br><span class="meta">Examples: Squalene synthase ERG9 (ERG9) <a href="https://www.uniprot.org/uniprotkb/P78589"><code class="curie">UniProtKB:P78589</code></a>, <em>Candida albicans</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_5476"><code class="curie">NCBITaxon:5476</code></a> <span class="pill">REVIEWED</span> — Fungal microsomal squalene synthase (Erg9, EC 2.5.1.21) directly inhibited by squalestatin S1 in Candida albicans enzyme assays (IC50 = 5 ng/mL; DOI:10.7164/antibiotics.45.639; PMID:1624366).; Squalene synthase ERG9 (ERG9) <a href="https://www.uniprot.org/uniprotkb/A0A1D8PI71"><code class="curie">UniProtKB:A0A1D8PI71</code></a>, <em>Candida albicans (strain SC5314 / ATCC MYA-2876)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a> <span class="pill">REVIEWED</span> — Reference-proteome Candida albicans SC5314 squalene synthase (Erg9, EC 2.5.1.21) corresponding to the C. albicans enzyme inhibited by squalestatin S1 (DOI:10.7164/antibiotics.45.639; PMID:1624366; DOI:10.1073/pnas.90.1.80; PMID:8419946).; Squalene synthase ERG9 (ERG9) <a href="https://www.uniprot.org/uniprotkb/P29704"><code class="curie">UniProtKB:P29704</code></a>, <em>Saccharomyces cerevisiae (strain ATCC 204508 / S288c)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_559292"><code class="curie">NCBITaxon:559292</code></a> <span class="pill">REVIEWED</span> — Reference-proteome Saccharomyces cerevisiae S288c squalene synthase (Erg9, EC 2.5.1.21) inhibited by zaragozic acid A / squalestatin S1 in fungal ergosterol biosynthesis assays (DOI:10.1073/pnas.90.1.80; PMID:8419946).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">squalene_synthase_fpp_condensation_activity</code></td>
+    <td>Erg9-catalyzed farnesyl diphosphate condensation to squalene</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_ergosterol_biosynthesis</code></td>
+    <td>ergosterol biosynthetic process</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><a href="https://amigo.geneontology.org/amigo/term/GO:0006696">GO:0006696</a></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition" tabindex="0">
+<table>
+  <caption>Edges — squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">squalestatin_s1</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">squalene_synthase_fpp_condensation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.45.639">DOI:10.7164/antibiotics.45.639</a></span> <span class="meta">(Dawson et al. 1992 (PMID:1624366) demonstrated potent competitive inhibition of Candida albicans microsomal squalene synthase by squalestatin S1 (IC50 = 5 ng/mL).)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1073/pnas.90.1.80">DOI:10.1073/pnas.90.1.80</a></span> <span class="meta">(Bergstrom et al. 1993 (PMID:8419946) showed that zaragozic acid A (squalestatin S1) is a picomolar competitive inhibitor of fungal squalene synthase (Erg9) acting as a presqualene pyrophosphate mimic.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_squalene_synthase_erg9</code></td>
+    <td>enables</td>
+    <td><code class="curie">squalene_synthase_fpp_condensation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.45.639">DOI:10.7164/antibiotics.45.639</a></span> <span class="meta">(Candida albicans microsomal squalene synthase catalyzed conversion of radiolabeled farnesyl diphosphate to squalene in vitro (PMID:1624366).)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1073/pnas.90.1.80">DOI:10.1073/pnas.90.1.80</a></span> <span class="meta">(Fungal Erg9 squalene synthase catalyzed the committed first step of sterol synthesis from farnesyl diphosphate (PMID:8419946).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">squalene_synthase_fpp_condensation_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">fungal_ergosterol_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.45.639">DOI:10.7164/antibiotics.45.639</a></span> <span class="meta">(Inhibition of squalene synthase by squalestatin S1 blocked cellular sterol synthesis and caused fungicidal activity in Candida and Aspergillus species (PMID:1624366).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -197,6 +269,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-11-03 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI record (CHEBI:220211) with complete 4/4 chemical_structure, curator-verified mode_of_action (ERGOSTEROL_PATHWAY_INHIBITION, HOST_SHARED_TARGET), and primary-literature molecular_targets entry for fungal squalene synthase (Erg9; GO:0051996; UniProtKB:P78589, UniProtKB:A0A1D8PI71, UniProtKB:P29704; DOI:10.7164/antibiotics.45.639, PMID:1624366; DOI:10.1073/pnas.90.1.80, PMID:8419946) from PROPOSED to REVIEWED (issue #1306).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-03 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph squalestatin_s1_erg9_squalene_synthase_ergosterol_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P78589, UniProtKB:A0A1D8PI71, UniProtKB:P29704) and primary literature (DOI:10.7164/antibiotics.45.639, DOI:10.1073/pnas.90.1.80).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -217,7 +294,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>4b0d60f76d5d</code>, 3064 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>edf08de77ecf</code>, 3064 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>
