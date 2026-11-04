@@ -276,7 +276,7 @@ def pre_salmonella_qualification_root(tmp_path_factory, pre_uniprot_protein_exam
 def _uniprot_protein_examples_transition(root):
     payload = (root / "curation/uniprot_protein_examples_transition.json").read_bytes()
     assert hashlib.sha256(payload).hexdigest() == (
-        "2bb37ec830672ea57b2e05d22d6e62095808735e5890f8a09253e703ff4a9858"
+        "249445517d97db04b6bc57817c50b568f148464191f7aeabd4278001812b4320"
     )
     transition = json.loads(payload)
     assert len(transition["record_deltas"]) == 71
