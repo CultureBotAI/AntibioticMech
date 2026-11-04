@@ -9284,7 +9284,7 @@ source:
     sha256: 05ab5a89b592e53c5d031249a12d1c6266c023ab545779c821e641cf3eb34f10
   - path: reviews/structured/20261104T152500Z-rustmicin-record-review/review.yaml
     role: context
-    sha256: 1e9ae35e8b9ae5adb7ab22ba6cabda120409ca3d44206c2ceece8db2b99eb886
+    sha256: 1df844e2c4163de42e17932add94f26bee82c6420f05662274354327e33c33fb
   - path: scripts/curation_worklist.py
     role: context
     sha256: 692fdcc39a0c8135c89b483a19ab0a428bfac3d851ff67a6a1ceac80225a2430
@@ -55620,20 +55620,25 @@ findings:
     A0, rustmicin, soraphen A) have complete primary-literature mechanism and target
     curation but remain curation_status: PROPOSED'
   description: 'Five PROPOSED/EXACT records seeded in Cycle 5 Stage 1 and enriched
-    in Cycle 5 Stages 2-3 — pentabromopseudilin (CHEBI:70619, CELL_MEMBRANE_DISRUPTION,
-    GO:0005886 bacterial cytoplasmic membrane, DOI:10.1021/acschembio.3c00773 / PMID:38377384),
-    taromycin A (CHEBI:219845, CELL_MEMBRANE_DISRUPTION, GO:0005886 Gram-positive
-    bacterial cytoplasmic membrane, DOI:10.1073/pnas.1319584111 / PMID:24449899; DOI:10.1038/ja.2017.146
-    / PMID:29184121), pneumocandin A0 (CHEBI:198520, GLUCAN_SYNTHESIS_INHIBITION,
-    GO:0000148 fungal 1,3-beta-D-glucan synthase Fks1/Fks2 with reviewed UniProtKB:P38631
-    and UniProtKB:P40989, DOI:10.7164/antibiotics.45.1886 / PMID:1490879; DOI:10.1073/pnas.91.26.12907
-    / PMID:7809096), rustmicin (CHEBI:206910, LIPID_BIOSYNTHESIS_INHIBITION, GO:0052645
-    fungal inositol phosphorylceramide synthase Aur1/Ipc1 with reviewed UniProtKB:P36107
-    and UniProtKB:O13332, DOI:10.1074/jbc.273.24.14942 / PMID:9614099; DOI:10.7164/antibiotics.51.837
-    / PMID:9820234), and soraphen A (CHEBI:9200, LIPID_BIOSYNTHESIS_INHIBITION, GO:0003989
-    eukaryotic acetyl-CoA carboxylase Acc1 with reviewed UniProtKB:Q00955, DOI:10.1126/science.1103399
-    / PMID:15550663; DOI:10.7164/antibiotics.47.23 / PMID:8119858) — carry exact ChEBI
-    grounding, complete single-molecule chemical_structure, curated mode_of_action,
+    in Cycle 5 Stages 2-3 — pentabromopseudilin (CHEBI:70619, MEMBRANE_DISRUPTION,
+    GO:0005886 bacterial cytoplasmic membrane, Castro-Falcon et al. 2024 DOI:10.1021/acschembio.3c00773
+    / PMID:38377384; Agarwal et al. 2014 DOI:10.1038/nchembio.1564 / PMID:24974229),
+    taromycin A (CHEBI:219845, MEMBRANE_DISRUPTION, GO:0005886 Gram-positive bacterial
+    cytoplasmic membrane, Yamanaka et al. 2014 DOI:10.1073/pnas.1319584111 / PMID:24449899;
+    Reynolds et al. 2018 DOI:10.1038/ja.2017.146 / PMID:29184121), pneumocandin A0
+    (CHEBI:198520, CELL_WALL_SYNTHESIS_INHIBITION, GO:0000148 fungal 1,3-beta-D-glucan
+    synthase Fks1/Fks2 with reviewed UniProtKB:P38631 and UniProtKB:P40989, Schmatz
+    et al. 1992 DOI:10.7164/antibiotics.45.1886 / PMID:1490879; Chen et al. 2013 DOI:10.1186/1471-2164-14-339
+    / PMID:23688303; Douglas et al. 1994 DOI:10.1073/pnas.91.26.12907 / PMID:7809096),
+    rustmicin (CHEBI:206910, CELL_MEMBRANE_SYNTHESIS_INHIBITION, GO:0052645 fungal
+    inositol phosphorylceramide synthase Aur1/Ipc1 with reviewed UniProtKB:P36107
+    and UniProtKB:O13332, Mandala et al. 1998 DOI:10.1074/jbc.273.24.14942 / PMID:9614099;
+    Karki et al. 2010 DOI:10.1111/j.1574-6968.2010.02048.x / PMID:20662933), and soraphen
+    A (CHEBI:9200, CELL_MEMBRANE_SYNTHESIS_INHIBITION, GO:0003989 eukaryotic acetyl-CoA
+    carboxylase Acc1 with reviewed UniProtKB:Q00955, Shen et al. 2004 DOI:10.1126/science.1103399
+    / PMID:15550663; Gerth et al. 1994 DOI:10.7164/antibiotics.47.23 / PMID:8119858;
+    Ligon et al. 2002 DOI:10.1016/s0378-1119(02)00396-7 / PMID:12039053) — carry exact
+    ChEBI grounding, complete single-molecule chemical_structure, curated mode_of_action,
     and PRIMARY_LITERATURE molecular_targets with complete UniProtKB accounting, yet
     retain curation_status: PROPOSED.'
   target_ids:
@@ -55688,25 +55693,26 @@ findings:
     molecular_targets, and REVIEWED promotion
   description: 'Five PROPOSED antibacterial natural-product records seeded with grounding_status:
     EXACT and complete single-molecule chemical_structure in Cycle 5 Stage 1 — naphthomycin
-    A (CHEBI:197824, Balerna et al. 1969 DOI:10.1007/BF00409644 / PMID:4979424; Wu
-    et al. 2011 DOI:10.1039/c1MB05031j / PMID:21559546), an ansamycin naphthoquinone
-    fatty-acid synthase / sulfhydryl-enzyme inhibitor; resistomycin (CHEBI:29671,
-    Haupt et al. 1975 DOI:10.1002/jobm.19750150603 / PMID:812286; Jakobi & Hertweck
-    2004 DOI:10.1021/ja0390698 / PMID:14982454), a pentacyclic polyketide inhibiting
-    bacterial RNA polymerase / transcription; micacocidin (CHEBI:198957, Kobayashi
-    et al. 1998 DOI:10.7164/antibiotics.51.323 / PMID:9589068; Kreutzer et al. 2011
-    DOI:10.1021/ja2052122 / PMID:21861459), a Zn2+/Fe3+/Cu2+-chelating thiazoline-containing
-    siderophore/metallophore antibiotic potent against Mycoplasma pneumoniae; kendomycin
-    (CHEBI:191052, Bode et al. 2000 DOI:10.7164/antibiotics.53.1282 / PMID:11213290;
-    Wenzel et al. 2008 DOI:10.1016/j.chembiol.2007.11.013 / PMID:18291314), a polyketide
-    ansamycin quinone methide that covalently modifies bacterial ClpP / FtsZ / proteasome
-    and cell-division machinery; and endophenazine A (CHEBI:218214, Gebhardt et al.
-    2002 DOI:10.7164/antibiotics.55.794 / PMID:12458768; Saleh et al. 2012 DOI:10.1128/AEM.00338-12
-    / PMID:22389368), aprenylated phenazine redox-cycling antibacterial compound —
-    carry biosynthesis_origin: NATURAL_PRODUCT but lack curated mode_of_action, mode_of_action_target_scope,
-    CURATOR mode_of_action_notes, structured PRIMARY_LITERATURE molecular_targets
-    (with UniProtKB protein_examples or held_targets accounting), and promotion to
-    REVIEWED.'
+    A (CHEBI:197824, Kaewkla et al. 2024 DOI:10.3389/fmicb.2024.1353511 / PMID:38694805;
+    Wu et al. 2011 DOI:10.1039/c1mb05036b / PMID:21614382), a chlorinated 29-membered
+    naphthalenic ansamacrolactam polyketide antibiotic from Streptomyces species;
+    resistomycin (CHEBI:29671, Taechowisan et al. 2025 DOI:10.3923/pjbs.2025.749.764
+    / PMID:41618676; Jakobi & Hertweck 2004 DOI:10.1021/ja0390698 / PMID:14982421),
+    a pentacyclic discoid benzo[cd]pyrenequinone aromatic polyketide antibiotic (heliomycin)
+    from Streptomyces resistomycificus; micacocidin (CHEBI:198957, Kreutzer et al.
+    2014 DOI:10.1039/c3ob41839a / PMID:24202877; Kreutzer et al. 2011 DOI:10.1128/aem.05198-11
+    / PMID:21724891), a salicylate-derived thiazoline- and thiazolidine-containing
+    polyketide-nonribosomal peptide antibiotic potent against Mycoplasma pneumoniae;
+    kendomycin (CHEBI:191052, Elnakady et al. 2016 DOI:10.1371/journal.pone.0146165
+    / PMID:26795276; Wenzel et al. 2008 DOI:10.1002/cbic.200800456 / PMID:18972512),
+    a carbocyclic quinone-methide ansa-polyketide antibiotic (TAN-2162) from Streptomyces
+    violaceoruber; and endophenazine A (CHEBI:218214, Gebhardt et al. 2002 DOI:10.7164/antibiotics.55.794
+    / PMID:12458768; Taechowisan et al. 2024 DOI:10.3923/pjbs.2024.469.478 / PMID:39415555;
+    Saleh et al. 2012 DOI:10.3762/bjoc.8.57 / PMID:22509222), a prenylated phenazine-1-carboxylic
+    acid antibiotic from Streptomyces anulatus — carry biosynthesis_origin: NATURAL_PRODUCT
+    but lack curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes,
+    structured PRIMARY_LITERATURE molecular_targets (with UniProtKB protein_examples
+    or held_targets accounting), and promotion to REVIEWED.'
   target_ids:
   - CHEBI:218214
   - CHEBI:191052

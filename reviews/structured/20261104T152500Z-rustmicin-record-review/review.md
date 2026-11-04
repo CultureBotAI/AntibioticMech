@@ -11,7 +11,7 @@
 
 ## Summary
 
-Whole-record review of PROPOSED/EXACT record CHEBI:206910 (rustmicin, data/antibiotics/antifungal/rustmicin.yaml) verified exact single-molecule chemical structure (C21H34O6, InChIKey WZROUGNDADCPAJ-VOCSLKHZSA-N, PubChem CID 10063700), antifungal filing (CHEBI:35718), CURATOR discovery and biosynthetic evidence (Mandala et al. 1998 DOI:10.1074/jbc.273.24.14942 / PMID:9614099; Harris et al. 1998 DOI:10.7164/antibiotics.51.837 / PMID:9820234; Kim et al. 2014 DOI:10.1016/j.chembiol.2013.11.014 / PMID:24361047), MIBiG 4.0.1 BGC0000065 producer provenance in Micromonospora echinospora (NCBITaxon:1877), biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (LIPID_BIOSYNTHESIS_INHIBITION, MICROBIAL_TARGET), and the PRIMARY_LITERATURE molecular_targets entry for fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) carrying 2 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P36107 in Saccharomyces cerevisiae S288c NCBITaxon:559292 and UniProtKB:O13332 in Candida albicans SC5314 NCBITaxon:237561). One open coherence finding requires Cycle 5 Stage 5 grouped remediation: despite having grounding_status: EXACT, complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB protein_examples, curation_status remains PROPOSED.
+Whole-record review of PROPOSED/EXACT record CHEBI:206910 (rustmicin, data/antibiotics/antifungal/rustmicin.yaml) verified exact single-molecule chemical structure (C21H32O6, InChIKey WOFFENQLRMDHKE-VHWRYTFUSA-N, PubChem CID 10091177), antifungal filing (CHEBI:35718), CURATOR discovery and biosynthetic evidence (Mandala et al. 1998 DOI:10.1074/jbc.273.24.14942 / PMID:9614099; Karki et al. 2010 DOI:10.1111/j.1574-6968.2010.02048.x / PMID:20662933), MIBiG 4.0.1 BGC0000065 producer provenance in Streptomyces galbus (NCBITaxon:33898), biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and the PRIMARY_LITERATURE molecular_targets entry for fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) carrying 2 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P36107 in Saccharomyces cerevisiae S288c NCBITaxon:559292 and UniProtKB:O13332 in Candida albicans SC5314 NCBITaxon:237561). One open coherence finding requires Cycle 5 Stage 5 grouped remediation: despite having grounding_status: EXACT, complete chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB protein_examples, curation_status remains PROPOSED.
 
 ## Scope And Provenance
 
@@ -30,7 +30,7 @@ Working-tree hashes do not imply those bytes were committed.
 
 | Check | Status | Required | Targets | Result |
 | --- | --- | --- | --- | --- |
-| Closed-schema and ontology-grounding validation | passed | True | CHEBI:206910 | CHEBI:206910 passes closed LinkML schema validation and OAK ontology label correspondence (CHEBI:206910, CHEBI:35718, GO:0052645, NCBITaxon:1877, NCBITaxon:4751, NCBITaxon:559292, NCBITaxon:237561) with 0 errors. |
+| Closed-schema and ontology-grounding validation | passed | True | CHEBI:206910 | CHEBI:206910 passes closed LinkML schema validation and OAK ontology label correspondence (CHEBI:206910, CHEBI:35718, GO:0052645, NCBITaxon:33898, NCBITaxon:4751, NCBITaxon:559292, NCBITaxon:237561) with 0 errors. |
 | Corpus integrity and CURATOR provenance verification | passed | True | CHEBI:206910 | CHEBI:206910 passes verify_corpus.py with 0 errors; seeded fields match curation/curator_antibiotics.tsv and MIBiG 4.0.1 BGC0000065. |
 
 ## Scientific And Domain Assessments
@@ -39,7 +39,7 @@ Working-tree hashes do not imply those bytes were committed.
 
 evidence: supported. Targets: CHEBI:206910.
 
-Exact CHEBI:206910 identity, C21H34O6 chemical_structure, NATURAL_PRODUCT biosynthesis_origin, LIPID_BIOSYNTHESIS_INHIBITION mode_of_action (MICROBIAL_TARGET), and PRIMARY_LITERATURE fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) target with reviewed UniProtKB:P36107 and UniProtKB:O13332 protein_examples are accurately grounded in DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.7164/antibiotics.51.837 (PMID:9820234).
+Exact CHEBI:206910 identity, C21H32O6 chemical_structure, NATURAL_PRODUCT biosynthesis_origin, CELL_MEMBRANE_SYNTHESIS_INHIBITION mode_of_action (MICROBIAL_TARGET), and PRIMARY_LITERATURE fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) target with reviewed UniProtKB:P36107 and UniProtKB:O13332 protein_examples are accurately grounded in DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.1111/j.1574-6968.2010.02048.x (PMID:20662933).
 
 ### Eligibility of CHEBI:206910 for promotion from PROPOSED to REVIEWED
 
@@ -53,7 +53,7 @@ rustmicin.yaml satisfies every REVIEWED gate requirement (grounding_status: EXAC
 
 major / open / confirmed; issue key: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion.
 
-In data/antibiotics/antifungal/rustmicin.yaml (CHEBI:206910), Cycle 5 Stage 1 seeded the exact ChEBI compound, Cycle 5 Stage 2 curated biosynthesis_origin: NATURAL_PRODUCT and mode_of_action: LIPID_BIOSYNTHESIS_INHIBITION (MICROBIAL_TARGET) with CURATOR mode_of_action_notes, and Cycle 5 Stage 3 curated a PRIMARY_LITERATURE molecular_targets entry for fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) with 2 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332) backed by DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.7164/antibiotics.51.837 (PMID:9820234), yet curation_status remains PROPOSED.
+In data/antibiotics/antifungal/rustmicin.yaml (CHEBI:206910), Cycle 5 Stage 1 seeded the exact ChEBI compound, Cycle 5 Stage 2 curated biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION (MICROBIAL_TARGET) with CURATOR mode_of_action_notes, and a PRIMARY_LITERATURE molecular_targets entry for fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645), and Cycle 5 Stage 3 curated 2 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332) backed by DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.1111/j.1574-6968.2010.02048.x (PMID:20662933), yet curation_status remains PROPOSED.
 
 ## Recommended Actions And Acceptance Checks
 
@@ -71,8 +71,8 @@ Promote CHEBI:206910 (rustmicin) from curation_status: PROPOSED to REVIEWED via 
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| rustmicin-record | data/antibiotics/antifungal/rustmicin.yaml; lines 1-145 | supports | CHEBI:206910 carries exact C21H34O6 structure (InChIKey WZROUGNDADCPAJ-VOCSLKHZSA-N, PubChem CID 10063700), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: LIPID_BIOSYNTHESIS_INHIBITION (MICROBIAL_TARGET), and PRIMARY_LITERATURE molecular_targets[0] for fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) with 2 reviewed UniProtKB protein_examples (P36107, O13332), while retaining curation_status: PROPOSED. |
-| mandala-1998-harris-1998-rustmicin | DOI:10.1074/jbc.273.24.14942; Mandala et al. 1998 J Biol Chem 273:14942-14949 (PMID:9614099); Harris et al. 1998 J Antibiot 51:837-844 (DOI:10.7164/antibiotics.51.837; PMID:9820234) | supports | Establishes rustmicin (galbonolide A) as a subnanomolar inhibitor of fungal inositol phosphorylceramide (IPC) synthase (Aur1 / Ipc1; C. neoformans IC50 = 70 pM, C. albicans IC50 = 4.3 nM, S. cerevisiae IC50 = 5.5 nM) that blocks fungal sphingolipid biosynthesis. |
+| rustmicin-record | data/antibiotics/antifungal/rustmicin.yaml; lines 1-150 | supports | CHEBI:206910 carries exact C21H32O6 structure (InChIKey WOFFENQLRMDHKE-VHWRYTFUSA-N, PubChem CID 10091177), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION (MICROBIAL_TARGET), and PRIMARY_LITERATURE molecular_targets[0] for fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) with 2 reviewed UniProtKB protein_examples (P36107, O13332), while retaining curation_status: PROPOSED. |
+| mandala-1998-karki-2010-rustmicin | DOI:10.1074/jbc.273.24.14942; Mandala et al. 1998 J Biol Chem 273:14942-14949 (PMID:9614099); Karki et al. 2010 FEMS Microbiol Lett 310:69-75 (DOI:10.1111/j.1574-6968.2010.02048.x; PMID:20662933) | supports | Establishes rustmicin (galbonolide A) from Streptomyces galbus as a subnanomolar inhibitor of fungal inositol phosphorylceramide (IPC) synthase (Aur1 / Ipc1; C. neoformans IC50 = 70 pM, C. albicans IC50 = 4.3 nM, S. cerevisiae IC50 = 5.5 nM) that blocks fungal sphingolipid biosynthesis. |
 | strict-validation-suite | scripts/validate_strict.py; validate_strict.py and verify_corpus.py | supports | Confirms zero schema or ontology-label errors on rustmicin.yaml and verifies that CHEBI:206910 meets all REVIEWED gate requirements. |
 
 ## Limits And Additional Notes
@@ -104,20 +104,19 @@ verdict: needs_curation
 native_verdict: NEEDS_CURATION
 scientific_review: true
 summary: 'Whole-record review of PROPOSED/EXACT record CHEBI:206910 (rustmicin, data/antibiotics/antifungal/rustmicin.yaml)
-  verified exact single-molecule chemical structure (C21H34O6, InChIKey WZROUGNDADCPAJ-VOCSLKHZSA-N,
-  PubChem CID 10063700), antifungal filing (CHEBI:35718), CURATOR discovery and biosynthetic
-  evidence (Mandala et al. 1998 DOI:10.1074/jbc.273.24.14942 / PMID:9614099; Harris
-  et al. 1998 DOI:10.7164/antibiotics.51.837 / PMID:9820234; Kim et al. 2014 DOI:10.1016/j.chembiol.2013.11.014
-  / PMID:24361047), MIBiG 4.0.1 BGC0000065 producer provenance in Micromonospora echinospora
-  (NCBITaxon:1877), biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (LIPID_BIOSYNTHESIS_INHIBITION,
-  MICROBIAL_TARGET), and the PRIMARY_LITERATURE molecular_targets entry for fungal
-  inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) carrying 2 reviewed
-  Swiss-Prot UniProtKB protein_examples (UniProtKB:P36107 in Saccharomyces cerevisiae
-  S288c NCBITaxon:559292 and UniProtKB:O13332 in Candida albicans SC5314 NCBITaxon:237561).
-  One open coherence finding requires Cycle 5 Stage 5 grouped remediation: despite
-  having grounding_status: EXACT, complete chemical_structure, curated mode_of_action,
-  and PRIMARY_LITERATURE molecular_targets with reviewed UniProtKB protein_examples,
-  curation_status remains PROPOSED.'
+  verified exact single-molecule chemical structure (C21H32O6, InChIKey WOFFENQLRMDHKE-VHWRYTFUSA-N,
+  PubChem CID 10091177), antifungal filing (CHEBI:35718), CURATOR discovery and biosynthetic
+  evidence (Mandala et al. 1998 DOI:10.1074/jbc.273.24.14942 / PMID:9614099; Karki
+  et al. 2010 DOI:10.1111/j.1574-6968.2010.02048.x / PMID:20662933), MIBiG 4.0.1 BGC0000065
+  producer provenance in Streptomyces galbus (NCBITaxon:33898), biosynthesis_origin
+  (NATURAL_PRODUCT), mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, MICROBIAL_TARGET),
+  and the PRIMARY_LITERATURE molecular_targets entry for fungal inositol phosphorylceramide
+  synthase (Aur1 / Ipc1; GO:0052645) carrying 2 reviewed Swiss-Prot UniProtKB protein_examples
+  (UniProtKB:P36107 in Saccharomyces cerevisiae S288c NCBITaxon:559292 and UniProtKB:O13332
+  in Candida albicans SC5314 NCBITaxon:237561). One open coherence finding requires
+  Cycle 5 Stage 5 grouped remediation: despite having grounding_status: EXACT, complete
+  chemical_structure, curated mode_of_action, and PRIMARY_LITERATURE molecular_targets
+  with reviewed UniProtKB protein_examples, curation_status remains PROPOSED.'
 source:
   git_revision: 47746980c7f56e7d9a37ebb7eb4d475d3a7ea6e5
   state: working_tree
@@ -190,7 +189,7 @@ checks:
   command: .venv/bin/python scripts/validate_strict.py --quiet --workers 4 --out /tmp/instance_validation_failures.tsv
   exit_code: 0
   summary: CHEBI:206910 passes closed LinkML schema validation and OAK ontology label
-    correspondence (CHEBI:206910, CHEBI:35718, GO:0052645, NCBITaxon:1877, NCBITaxon:4751,
+    correspondence (CHEBI:206910, CHEBI:35718, GO:0052645, NCBITaxon:33898, NCBITaxon:4751,
     NCBITaxon:559292, NCBITaxon:237561) with 0 errors.
   target_ids:
   - CHEBI:206910
@@ -214,26 +213,27 @@ evidence:
 - evidence_id: rustmicin-record
   kind: record_content
   reference: data/antibiotics/antifungal/rustmicin.yaml
-  locator: lines 1-145
+  locator: lines 1-150
   accessed_at: '2026-11-04T15:25:00Z'
   support: supports
   snapshot_sha256: 986994d61a86698834710ab547e4ee8c2a50335c4555fd3e37eebdedd801e8bd
-  summary: 'CHEBI:206910 carries exact C21H34O6 structure (InChIKey WZROUGNDADCPAJ-VOCSLKHZSA-N,
-    PubChem CID 10063700), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: LIPID_BIOSYNTHESIS_INHIBITION
+  summary: 'CHEBI:206910 carries exact C21H32O6 structure (InChIKey WOFFENQLRMDHKE-VHWRYTFUSA-N,
+    PubChem CID 10091177), biosynthesis_origin: NATURAL_PRODUCT, mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET), and PRIMARY_LITERATURE molecular_targets[0] for fungal inositol
     phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645) with 2 reviewed UniProtKB
     protein_examples (P36107, O13332), while retaining curation_status: PROPOSED.'
-- evidence_id: mandala-1998-harris-1998-rustmicin
+- evidence_id: mandala-1998-karki-2010-rustmicin
   kind: primary_source
   reference: DOI:10.1074/jbc.273.24.14942
-  locator: Mandala et al. 1998 J Biol Chem 273:14942-14949 (PMID:9614099); Harris
-    et al. 1998 J Antibiot 51:837-844 (DOI:10.7164/antibiotics.51.837; PMID:9820234)
+  locator: Mandala et al. 1998 J Biol Chem 273:14942-14949 (PMID:9614099); Karki et
+    al. 2010 FEMS Microbiol Lett 310:69-75 (DOI:10.1111/j.1574-6968.2010.02048.x;
+    PMID:20662933)
   accessed_at: '2026-11-04T15:25:00Z'
   support: supports
-  summary: Establishes rustmicin (galbonolide A) as a subnanomolar inhibitor of fungal
-    inositol phosphorylceramide (IPC) synthase (Aur1 / Ipc1; C. neoformans IC50 =
-    70 pM, C. albicans IC50 = 4.3 nM, S. cerevisiae IC50 = 5.5 nM) that blocks fungal
-    sphingolipid biosynthesis.
+  summary: Establishes rustmicin (galbonolide A) from Streptomyces galbus as a subnanomolar
+    inhibitor of fungal inositol phosphorylceramide (IPC) synthase (Aur1 / Ipc1; C.
+    neoformans IC50 = 70 pM, C. albicans IC50 = 4.3 nM, S. cerevisiae IC50 = 5.5 nM)
+    that blocks fungal sphingolipid biosynthesis.
 - evidence_id: strict-validation-suite
   kind: validation
   reference: scripts/validate_strict.py
@@ -249,17 +249,17 @@ assessments:
   topic: Exact ChEBI structure, mode_of_action, Aur1/Ipc1 IPC synthase target, and
     reviewed UniProtKB protein_examples
   outcome: supported
-  summary: Exact CHEBI:206910 identity, C21H34O6 chemical_structure, NATURAL_PRODUCT
-    biosynthesis_origin, LIPID_BIOSYNTHESIS_INHIBITION mode_of_action (MICROBIAL_TARGET),
+  summary: Exact CHEBI:206910 identity, C21H32O6 chemical_structure, NATURAL_PRODUCT
+    biosynthesis_origin, CELL_MEMBRANE_SYNTHESIS_INHIBITION mode_of_action (MICROBIAL_TARGET),
     and PRIMARY_LITERATURE fungal inositol phosphorylceramide synthase (Aur1 / Ipc1;
     GO:0052645) target with reviewed UniProtKB:P36107 and UniProtKB:O13332 protein_examples
-    are accurately grounded in DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.7164/antibiotics.51.837
-    (PMID:9820234).
+    are accurately grounded in DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.1111/j.1574-6968.2010.02048.x
+    (PMID:20662933).
   target_ids:
   - CHEBI:206910
   evidence_ids:
   - rustmicin-record
-  - mandala-1998-harris-1998-rustmicin
+  - mandala-1998-karki-2010-rustmicin
 - assessment_id: rustmicin-curation-status-gate-alignment
   area: completeness
   topic: Eligibility of CHEBI:206910 for promotion from PROPOSED to REVIEWED
@@ -272,7 +272,7 @@ assessments:
   - CHEBI:206910
   evidence_ids:
   - rustmicin-record
-  - mandala-1998-harris-1998-rustmicin
+  - mandala-1998-karki-2010-rustmicin
   - strict-validation-suite
 findings:
 - finding_id: rustmicin-awaiting-reviewed-promotion
@@ -285,12 +285,12 @@ findings:
     mechanism/target curation but remains curation_status: PROPOSED'
   description: 'In data/antibiotics/antifungal/rustmicin.yaml (CHEBI:206910), Cycle
     5 Stage 1 seeded the exact ChEBI compound, Cycle 5 Stage 2 curated biosynthesis_origin:
-    NATURAL_PRODUCT and mode_of_action: LIPID_BIOSYNTHESIS_INHIBITION (MICROBIAL_TARGET)
-    with CURATOR mode_of_action_notes, and Cycle 5 Stage 3 curated a PRIMARY_LITERATURE
-    molecular_targets entry for fungal inositol phosphorylceramide synthase (Aur1
-    / Ipc1; GO:0052645) with 2 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P36107,
-    UniProtKB:O13332) backed by DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.7164/antibiotics.51.837
-    (PMID:9820234), yet curation_status remains PROPOSED.'
+    NATURAL_PRODUCT, mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION (MICROBIAL_TARGET)
+    with CURATOR mode_of_action_notes, and a PRIMARY_LITERATURE molecular_targets
+    entry for fungal inositol phosphorylceramide synthase (Aur1 / Ipc1; GO:0052645),
+    and Cycle 5 Stage 3 curated 2 reviewed Swiss-Prot UniProtKB protein_examples (UniProtKB:P36107,
+    UniProtKB:O13332) backed by DOI:10.1074/jbc.273.24.14942 (PMID:9614099) and DOI:10.1111/j.1574-6968.2010.02048.x
+    (PMID:20662933), yet curation_status remains PROPOSED.'
   target_ids:
   - CHEBI:206910
   field_paths:
@@ -298,7 +298,7 @@ findings:
   - curation_history
   evidence_ids:
   - rustmicin-record
-  - mandala-1998-harris-1998-rustmicin
+  - mandala-1998-karki-2010-rustmicin
   - strict-validation-suite
   owner_paths:
   - repository: culturebotai/AntibioticMech
