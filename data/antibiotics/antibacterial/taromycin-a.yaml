@@ -73,6 +73,14 @@ curation_history:
     mode_of_action from Yamanaka et al. 2014 (PMID:24449899) and Reynolds et al. 2018
     (PMID:29184121).
   llm_assisted: true
+- timestamp: '2026-11-04T02:18:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for Gram-positive bacterial
+    cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT) backed by Yamanaka et al.
+    2014 (DOI:10.1073/pnas.1319584111, PMID:24449899) and Reynolds et al. 2018 (DOI:10.1038/ja.2017.146,
+    PMID:29184121).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -81,3 +89,37 @@ mode_of_action_notes: 'CURATOR: Daptomycin-family dichlorinated cyclic lipotride
   activity against Gram-positive bacteria by disrupting the bacterial cytoplasmic
   membrane (Yamanaka et al. 2014, DOI:10.1073/pnas.1319584111, PMID:24449899; Reynolds
   et al. 2018, DOI:10.1038/ja.2017.146, PMID:29184121).'
+molecular_targets:
+- target_id: GO:0005886
+  target_label: Gram-positive bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Ca2+-dependent antibacterial susceptibility and membrane-depolarization
+    assays of the daptomycin-family chlorinated cyclic lipodepsipeptide taromycin
+    A against methicillin-resistant Staphylococcus aureus and daptomycin-resistant
+    Enterococcus faecium (Yamanaka et al. 2014, DOI:10.1073/pnas.1319584111, PMID:24449899;
+    Reynolds et al. 2018, DOI:10.1038/ja.2017.146, PMID:29184121).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-01
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1073/pnas.1319584111
+    snippet: Yamanaka et al. expressed the silent tar biosynthetic gene cluster from
+      Saccharomonospora sp. CNQ-490 to isolate taromycin A, a chlorinated daptomycin-family
+      lipopeptide with Ca2+-dependent antibacterial activity against MRSA and daptomycin-resistant
+      Enterococcus.
+    notes: Yamanaka et al. 2014 (Proc Natl Acad Sci U S A 111:1957-1962; PMID:24449899)
+      characterized taromycin A as a Ca2+-dependent cyclic lipodepsipeptide of the
+      daptomycin family targeting the Gram-positive bacterial cytoplasmic membrane.
+  - reference: PMID:24449899
+    notes: PubMed record for Yamanaka et al. 2014 discovery and Ca2+-dependent antibacterial
+      characterization of taromycin A.
+  - reference: DOI:10.1038/ja.2017.146
+    notes: Reynolds et al. 2018 (J Antibiot 71:333-338; PMID:29184121) further characterized
+      taromycin lipopeptide congeners and Ca2+-dependent Gram-positive membrane-directed
+      antibacterial activity.
+  - reference: PMID:29184121
+    notes: PubMed record for Reynolds et al. 2018 on taromycin lipopeptide activity.

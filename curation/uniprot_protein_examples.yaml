@@ -1938,6 +1938,123 @@ records:
       retrieved_on: '2026-11-03'
       role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
         by trovafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+- identifier: CHEBI:206910
+  label: rustmicin
+  path: data/antibiotics/antifungal/rustmicin.yaml
+  changes: Added 2 reviewed UniProtKB protein_examples (P36107, O13332) to the primary-literature
+    fungal inositol phosphorylceramide synthase (Aur1 / Ipc1) target on rustmicin (DOI:10.1074/jbc.273.24.14942).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: fungal inositol phosphorylceramide synthase (Aur1 / Ipc1)
+    target_reference: DOI:10.1074/jbc.273.24.14942
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P36107
+      protein_label: Inositol phosphorylceramide synthase catalytic subunit AUR1
+      gene_symbol: AUR1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Reference-proteome Saccharomyces cerevisiae S288c inositol phosphorylceramide synthase
+        catalytic subunit Aur1 (IPC1, EC 2.7.8.27) directly inhibited by rustmicin in fungal IPC
+        synthase assays (DOI:10.1074/jbc.273.24.14942; PMID:9614099).
+    - uniprot_id: UniProtKB:O13332
+      protein_label: Inositol phosphorylceramide synthase
+      gene_symbol: AUR1
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Reference-proteome Candida albicans SC5314 inositol phosphorylceramide synthase Aur1
+        (EC 2.7.8.27) directly inhibited by rustmicin in fungal sphingolipid biosynthesis assays
+        (DOI:10.1074/jbc.273.24.14942; PMID:9614099).
+- identifier: CHEBI:9200
+  label: soraphen A
+  path: data/antibiotics/antifungal/soraphen-a.yaml
+  changes: Added 1 reviewed UniProtKB protein_example (Q00955) to the primary-literature
+    eukaryotic acetyl-CoA carboxylase (Acc1) target on soraphen A (DOI:10.1126/science.1103399).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: eukaryotic acetyl-CoA carboxylase (Acc1)
+    target_reference: DOI:10.1126/science.1103399
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q00955
+      protein_label: Acetyl-CoA carboxylase
+      gene_symbol: ACC1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Saccharomyces cerevisiae S288c acetyl-CoA carboxylase Acc1 (EC 6.4.1.2) whose biotin
+        carboxylase (BC) domain was cocrystallized at 2.1 Angstrom with soraphen A (PDB:1W96; Kd ~
+        1 nM), demonstrating allosteric prevention of BC domain dimerization (DOI:10.1126/science.1103399;
+        PMID:15550663).
+- identifier: CHEBI:198520
+  label: pneumocandin A0
+  path: data/antibiotics/antifungal/pneumocandin-a0.yaml
+  changes: Added 2 reviewed UniProtKB protein_examples (P38631, P40989) to the primary-literature
+    fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2) target on pneumocandin A0 (DOI:10.7164/antibiotics.45.1886).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2)
+    target_reference: DOI:10.7164/antibiotics.45.1886
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P38631
+      protein_label: 1,3-beta-glucan synthase component FKS1
+      gene_symbol: FKS1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Primary catalytic subunit Fks1 (ETG1, EC 2.4.1.34) of the Saccharomyces cerevisiae
+        S288c 1,3-beta-D-glucan synthase complex inhibited by pneumocandin A0 (L-671,329) and other
+        echinocandins (DOI:10.7164/antibiotics.45.1886; PMID:1490879; DOI:10.1073/pnas.91.26.12907;
+        PMID:7809096).
+    - uniprot_id: UniProtKB:P40989
+      protein_label: 1,3-beta-glucan synthase component GSC2
+      gene_symbol: GSC2
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Alternative catalytic subunit Gsc2 (Fks2, EC 2.4.1.34) of the Saccharomyces cerevisiae
+        S288c 1,3-beta-D-glucan synthase complex inhibited by pneumocandin A0 (DOI:10.7164/antibiotics.45.1886;
+        PMID:1490879; DOI:10.1073/pnas.91.26.12907; PMID:7809096).
+- identifier: antibioticmech:curator-2dc46eb39e
+  label: thioplatensimycin
+  path: data/antibiotics/antibacterial/thioplatensimycin.yaml
+  changes: Added 2 reviewed UniProtKB protein_examples (Q7A6F8, P0AAI5) to the primary-literature
+    bacterial beta-ketoacyl-ACP synthase II (FabF) target on thioplatensimycin (DOI:10.1038/s41467-018-04747-y).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: bacterial beta-ketoacyl-ACP synthase II (FabF)
+    target_reference: DOI:10.1038/s41467-018-04747-y
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q7A6F8
+      protein_label: 3-oxoacyl-[acyl-carrier-protein] synthase 2
+      gene_symbol: fabF
+      taxon_id: NCBITaxon:158879
+      taxon_label: Staphylococcus aureus (strain N315)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Reviewed reference Staphylococcus aureus N315 beta-ketoacyl-ACP synthase II (FabF, EC
+        2.3.1.179) representing the Gram-positive bacterial FASII condensing enzyme inhibited by
+        thioplatensimycin (DOI:10.1038/s41467-018-04747-y; PMID:29915173; DOI:10.1021/acschembio.0c00773;
+        PMID:33314918).
+    - uniprot_id: UniProtKB:P0AAI5
+      protein_label: 3-oxoacyl-[acyl-carrier-protein] synthase 2
+      gene_symbol: fabF
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Escherichia coli K-12 beta-ketoacyl-ACP synthase II (FabF, EC 2.3.1.179) inhibited in
+        the acyl-enzyme intermediate state by thioplatensimycin (DOI:10.1038/s41467-018-04747-y;
+        PMID:29915173; DOI:10.1021/acschembio.0c00773; PMID:33314918).
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -2848,3 +2965,23 @@ held_targets:
   reason: Held because the primary-literature target in DOI:10.7164/antibiotics.48.1159 (PMID:7490225)
     is a non-protein bacterial membrane ion-gradient component (target_type=MEMBRANE) disrupted by the
     macrodiolide cation ionophore pamamycin-649B.
+- identifier: CHEBI:70619
+  path: data/antibiotics/antibacterial/pentabromopseudilin.yaml
+  label: pentabromopseudilin
+  scope: molecular_targets
+  target_label: bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_reference: DOI:10.1021/acschembio.3c00773
+  reason: Held because the primary-literature target in DOI:10.1021/acschembio.3c00773 (PMID:38377384)
+    is a non-protein bacterial membrane phospholipid bilayer component (target_type=MEMBRANE) depolarized
+    and disrupted by pentabromopseudilin in Staphylococcus aureus.
+- identifier: CHEBI:219845
+  path: data/antibiotics/antibacterial/taromycin-a.yaml
+  label: taromycin A
+  scope: molecular_targets
+  target_label: Gram-positive bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_reference: DOI:10.1073/pnas.1319584111
+  reason: Held because the primary-literature target in DOI:10.1073/pnas.1319584111 (PMID:24449899)
+    is a non-protein Gram-positive bacterial cytoplasmic membrane component (target_type=MEMBRANE)
+    depolarized by the Ca2+-dependent daptomycin-family cyclic lipodepsipeptide taromycin A.

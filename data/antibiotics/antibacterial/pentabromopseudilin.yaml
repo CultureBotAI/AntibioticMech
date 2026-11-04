@@ -92,6 +92,13 @@ curation_history:
     mode_of_action from Castro-Falcon et al. 2024 (PMID:38377384) and Agarwal et al.
     2014 (PMID:24974229).
   llm_assisted: true
+- timestamp: '2026-11-04T02:18:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial cytoplasmic
+    membrane (MEMBRANE, ATTACKED_COMPONENT) backed by DOI:10.1021/acschembio.3c00773
+    (PMID:38377384).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -100,3 +107,30 @@ mode_of_action_notes: 'CURATOR: Pentabrominated 2-(2-hydroxyphenyl)pyrrole marin
   (EC50 = 10 nM against Staphylococcus aureus), collapsing the bacterial proton motive
   force (Castro-Falcon et al. 2024, DOI:10.1021/acschembio.3c00773, PMID:38377384;
   Agarwal et al. 2014, DOI:10.1038/nchembio.1564, PMID:24974229).'
+molecular_targets:
+- target_id: GO:0005886
+  target_label: bacterial cytoplasmic membrane
+  target_type: MEMBRANE
+  target_relation: ATTACKED_COMPONENT
+  taxon_id: NCBITaxon:1280
+  taxon_label: Staphylococcus aureus
+  experimental_context: Whole-cell bacterial cytological profiling, membrane depolarization,
+    and phospholipid bilayer disruption assays in methicillin-resistant Staphylococcus
+    aureus and Gram-negative outer-membrane-permeabilized bacteria (2024, DOI:10.1021/acschembio.3c00773,
+    PMID:38377384).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2024-02
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1021/acschembio.3c00773
+    snippet: Mechanistic profiling of pentabromopseudilin in Staphylococcus aureus
+      demonstrated rapid cytoplasmic membrane depolarization and disruption of bacterial
+      membrane phospholipid homeostasis.
+    notes: ACS Chem Biol 2024 (DOI:10.1021/acschembio.3c00773; PMID:38377384) established
+      that pentabromopseudilin acts on Gram-positive bacteria (Staphylococcus aureus)
+      via cytoplasmic membrane depolarization and phospholipid bilayer disruption,
+      distinct from its eukaryotic myosin ATPase inhibition.
+  - reference: PMID:38377384
+    notes: PubMed record for DOI:10.1021/acschembio.3c00773 on pentabromopseudilin
+      bacterial membrane disruption.
