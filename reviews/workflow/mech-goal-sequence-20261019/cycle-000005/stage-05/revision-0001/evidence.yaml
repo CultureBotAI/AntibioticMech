@@ -14,22 +14,22 @@ previous_evidence:
   sha256: 1585d6fe6a1220b1ffc208bda31737c4a1f42032546ea172c9d5368f77f07e96
 artifacts:
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
-  sha256: aae2f828bb296eb49985977fe516d4604960a861fe4c134158ea906909c9114c
+  sha256: 973a48cb9b2857a92cb147cb1ba4536a4e158eec421e639962f2b752a6374db5
   kind: issue_map
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/validation.md
-  sha256: cf4bfc6b7654c1454d876c01e2578c04ae1b8c051dd397bf615481c608e31f5e
+  sha256: bd99475a5e1dff00709ce3dd15204865dbe4c5fa678bcb598ad42146255ad509
   kind: validation
 findings:
 - finding_id: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
   status: resolved
-  summary: "Resolved in #1320 by promoting 5 PROPOSED+EXACT ChEBI records with complete primary-literature mode_of_action and molecular_targets \u2014 pentabromopseudilin (CHEBI:70619), taromycin A (CHEBI:219845), pneumocandin A0 (CHEBI:198520), rustmicin (CHEBI:206910), and soraphen A (CHEBI:9200) \u2014 to curation_status: REVIEWED via record_curation_event (PROMOTED_TO_REVIEWED) and write_validated_antibiotic."
+  summary: "Resolved in #1320 by promoting 5 PROPOSED+EXACT ChEBI records with complete primary-literature mode_of_action and molecular_targets \u2014 pentabromopseudilin (CHEBI:70619, OTHER_MECHANISM; GO:0016459 myosin complex), taromycin A (CHEBI:219845, CELL_MEMBRANE_DISRUPTION; GO:0005886 plasma membrane), pneumocandin A0 (CHEBI:198520, CELL_WALL_INHIBITION; GO:0000148 1,3-beta-D-glucan synthase complex), rustmicin (CHEBI:206910, LIPID_SYNTHESIS_INHIBITION; GO:0046658 anchored component of plasma membrane), and soraphen A (CHEBI:9200, LIPID_SYNTHESIS_INHIBITION; GO:0003989 acetyl-CoA carboxylase activity) \u2014 to curation_status: REVIEWED via record_curation_event (PROMOTED_TO_REVIEWED) and write_validated_antibiotic."
   group_id: group-01-proposed-exact-records-reviewed-promotion
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1320
   disposition: Promoted pentabromopseudilin (CHEBI:70619), taromycin A (CHEBI:219845), pneumocandin A0 (CHEBI:198520), rustmicin (CHEBI:206910), and soraphen A (CHEBI:9200) to REVIEWED via native writers; verified via fresh structured review 20261105T004500Z-cycle5-stage5-remediated-records-review.
   carried_from: proposed-exact-records-with-primary-targets-awaiting-reviewed-promotion
 - finding_id: cycle5-stage1-proposed-exact-natural-products-missing-mechanism-and-targets
   status: resolved
-  summary: "Resolved in #1321 by curating mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on naphthomycin A's GO:0004314 FabB/FabF target [UniProtKB:P0A953, UniProtKB:P0AAI5], resistomycin's GO:0000428 DNA-directed RNA polymerase complex target [UniProtKB:P0A8V2, UniProtKB:P0A8T7], and endophenazine A's GO:0003899 DNA-directed 5'-3' RNA polymerase activity target [UniProtKB:P0A8V2], plus documented held_targets rationales on micacocidin and kendomycin) and promoting all 5 Cycle 5 Stage 1 PROPOSED+EXACT natural products \u2014 naphthomycin A (CHEBI:197824), resistomycin (CHEBI:29671), micacocidin (CHEBI:198957), kendomycin (CHEBI:191052), and endophenazine A (CHEBI:218214) \u2014 to curation_status: REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic."
+  summary: "Resolved in #1321 by curating mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes, and PRIMARY_LITERATURE molecular_targets (with reviewed Swiss-Prot UniProtKB protein_examples on naphthomycin A's GO:0004314 FabB/FabF target [UniProtKB:P0A953, UniProtKB:P0AAI5] and resistomycin's GO:0000428 DNA-directed RNA polymerase complex target [UniProtKB:P0A8V2, UniProtKB:P0A8T7; PMID:21822979], plus documented held_targets rationales on micacocidin, kendomycin [PMID:26795276], and endophenazine A) and promoting all 5 Cycle 5 Stage 1 PROPOSED+EXACT natural products \u2014 naphthomycin A (CHEBI:197824), resistomycin (CHEBI:29671), micacocidin (CHEBI:198957), kendomycin (CHEBI:191052), and endophenazine A (CHEBI:218214) \u2014 to curation_status: REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic."
   group_id: group-02-cycle5-stage1-natural-products-mechanism-and-targets
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1321
   disposition: Curated mode_of_action and PRIMARY_LITERATURE molecular_targets across all 5 Cycle 5 Stage 1 EXACT natural products and promoted them to REVIEWED; verified via fresh structured review 20261105T004500Z-cycle5-stage5-remediated-records-review.
@@ -78,7 +78,7 @@ findings:
   carried_from: mexjk-role-conflict
 - finding_id: reviewed-records-awaiting-causal-graphs
   status: deferred
-  summary: 59 held REVIEWED records await primary-literature causal_graphs and ofloxacin is blocked by structureless CHEBI:7731.
+  summary: 53 held REVIEWED records await primary-literature causal_graphs and ofloxacin is blocked by structureless CHEBI:7731.
   group_id: group-09-reviewed-records-awaiting-causal-graphs
   issue_url: https://github.com/CultureBotAI/AntibioticMech/issues/1257
   disposition: 'Curating new multi-step primary-literature causal_graphs across held REVIEWED compounds and resolving upstream ChEBI structure availability for racemic CHEBI:7731 are multi-cycle corpus expansion tasks tracked in Issue #1257 outside bounded Stage 5 coherence remediation.'
@@ -117,7 +117,7 @@ groups:
   resolution_evidence:
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/issue_map.md
   - reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/validation.md
-  disposition: Curated mode_of_action and PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples on naphthomycin-a, resistomycin, and endophenazine-a and held_targets on micacocidin and kendomycin) and promoted all 5 records to REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic; verified by fresh review 20261105T004500Z-cycle5-stage5-remediated-records-review.
+  disposition: Curated mode_of_action and PRIMARY_LITERATURE molecular_targets (with reviewed UniProtKB protein_examples on naphthomycin-a and resistomycin and held_targets on micacocidin, kendomycin, and endophenazine-a) and promoted all 5 records to REVIEWED via apply_uniprot_examples_plan, record_curation_event, and write_validated_antibiotic; verified by fresh review 20261105T004500Z-cycle5-stage5-remediated-records-review.
 - group_id: group-03-seeded-exact-quinolones-primary-targets
   finding_ids:
   - seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion
