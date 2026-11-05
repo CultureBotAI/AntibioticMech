@@ -19,7 +19,7 @@ Complete post-remediation review of all 15 AntibioticRecord YAML files modified 
 
 Selection: All 15 records in Cycle 5 Stage 5 resolved finding groups (Issues #1320, #1321, #1322).
 Coverage: full; 15 reviewed / 15 in the declared population.
-Source: working_tree at Git base 5ff2167a5818b4a029cb1fd59d592f766272f138.
+Source: working_tree at Git base bc39eed026559647f7bea8543ea5baaf6f21e687.
 Working-tree hashes do not imply those bytes were committed.
 
 | Target | Path / selector | Kind | Label |
@@ -66,7 +66,7 @@ All 5 Cycle 5 Stage 1 EXACT natural-product records (naphthomycin A CHEBI:197824
 
 completeness: supported. Targets: CHEBI:3716, CHEBI:5543, CHEBI:63611, CHEBI:9212, CHEBI:116278.
 
-All 5 Group 3 EXACT quinolone and fluoroquinolone records (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, and lomefloxacin CHEBI:116278) now carry biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase and topoisomerase IV (GO:0003916) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria) with 4 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples per record (UniProtKB:P0AES4 gyrA, UniProtKB:P0AES6 gyrB, UniProtKB:P0AFI2 parC, UniProtKB:P20083 parE; 20 total across the 5 records, citing DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin), and are promoted from SEEDED to REVIEWED.
+All 5 Group 3 EXACT quinolone and fluoroquinolone records (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, and lomefloxacin CHEBI:116278) now carry biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria) with 4 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples per record (UniProtKB:P0AES4 gyrA, UniProtKB:P0AES6 gyrB, UniProtKB:P0AFI2 parC, UniProtKB:P20083 parE; 20 total across the 5 records, citing DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin), and are promoted from SEEDED to REVIEWED.
 
 ## Findings
 
@@ -90,7 +90,7 @@ Disposition: Resolved in Cycle 5 Stage 5 (Issue #1321): curated mode_of_action a
 
 major / resolved / confirmed; issue key: seeded-exact-fluoroquinolones-with-card-only-targets-awaiting-primary-literature-promotion.
 
-Curated biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase and topoisomerase IV (GO:0003916) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria; DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083 on each record) across cinoxacin (CHEBI:3716), Grepafloxacin (CHEBI:5543), moxifloxacin (CHEBI:63611), sparfloxacin (CHEBI:9212), and lomefloxacin (CHEBI:116278) via apply_uniprot_examples_plan, and promoted all 5 records from SEEDED to REVIEWED via record_curation_event and write_validated_antibiotic.
+Curated biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria; DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083 on each record) across cinoxacin (CHEBI:3716), Grepafloxacin (CHEBI:5543), moxifloxacin (CHEBI:63611), sparfloxacin (CHEBI:9212), and lomefloxacin (CHEBI:116278) via apply_uniprot_examples_plan, and promoted all 5 records from SEEDED to REVIEWED via record_curation_event and write_validated_antibiotic.
 
 Disposition: Resolved in Cycle 5 Stage 5 (Issue #1322): populated PRIMARY_LITERATURE molecular_targets and reviewed UniProtKB protein_examples and promoted all 5 EXACT ChEBI quinolones and fluoroquinolones to REVIEWED.
 
@@ -103,10 +103,10 @@ Disposition: Resolved in Cycle 5 Stage 5 (Issue #1322): populated PRIMARY_LITERA
 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
-| remediated-records-content | curation/record_review_queue.tsv; 15 remediated YAML records and refreshed review-readiness worklist (2,937 items) | supports | All 15 records were updated through native validated writers (write_validated_antibiotic, apply_uniprot_examples_plan, record_curation_event): 5 Group 1 PROPOSED/EXACT records (pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845, pneumocandin A0 CHEBI:198520, rustmicin CHEBI:206910, soraphen A CHEBI:9200) promoted to REVIEWED; 5 Group 2 Cycle 5 Stage 1 PROPOSED/EXACT natural products (naphthomycin A CHEBI:197824, resistomycin CHEBI:29671, micacocidin CHEBI:198957, kendomycin CHEBI:191052, endophenazine A CHEBI:218214) populated with curated mode_of_action and PRIMARY_LITERATURE molecular_targets (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS, documented in curation/uniprot_protein_examples.yaml held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT quinolones/fluoroquinolones (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, lomefloxacin CHEBI:116278) populated with biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (GO:0003916 bacterial DNA gyrase and topoisomerase IV) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples and promoted to REVIEWED (raising corpus REVIEWED count from 112 to 127 and reducing the review-readiness queue from 2,952 to 2,937). |
+| remediated-records-content | curation/record_review_queue.tsv; 15 remediated YAML records and refreshed review-readiness worklist (2,937 items) | supports | All 15 records were updated through native validated writers (write_validated_antibiotic, apply_uniprot_examples_plan, record_curation_event): 5 Group 1 PROPOSED/EXACT records (pentabromopseudilin CHEBI:70619, taromycin A CHEBI:219845, pneumocandin A0 CHEBI:198520, rustmicin CHEBI:206910, soraphen A CHEBI:9200) promoted to REVIEWED; 5 Group 2 Cycle 5 Stage 1 PROPOSED/EXACT natural products (naphthomycin A CHEBI:197824, resistomycin CHEBI:29671, micacocidin CHEBI:198957, kendomycin CHEBI:191052, endophenazine A CHEBI:218214) populated with curated mode_of_action and PRIMARY_LITERATURE molecular_targets (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS, documented in curation/uniprot_protein_examples.yaml held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT quinolones/fluoroquinolones (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, lomefloxacin CHEBI:116278) populated with biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples and promoted to REVIEWED (raising corpus REVIEWED count from 112 to 127 and reducing the review-readiness queue from 2,952 to 2,937). |
 | validate-strict-pass | scripts/validate_strict.py; 3064 files scanned, 0 files with ERROR, 0 total ERROR rows | supports | Closed-mode LinkML validation and OAK ontology label verification pass across all 3,064 records. |
 | verify-corpus-pass | scripts/verify_corpus.py; records expected: 3064, on disk: 3064, missing: 0, unexpected: 0, drifted fields: 0 | supports | Every curator-owned edit on the 15 remediated records survives seed_from_sources.py reproduction without drift. |
-| primary-literature-sources | PMID:38377384, PMID:24449899, PMID:1490879, PMID:7809096, PMID:9614099, PMID:15550663, PMID:8119858, PMID:3997669, PMID:4978971, PMID:1106088, PMID:12033902, PMID:9589068, PMID:26795276, PMID:10805582, PMID:12458770, PMID:19270122, PMID:11709337, PMID:2158274; Primary experimental mechanism and target studies cited across the 15 remediated records | supports | Primary studies support REVIEWED promotion on the 5 Group 1 records (pentabromopseudilin DOI:10.1021/acschembio.3c00773 / PMID:38377384, taromycin A DOI:10.1073/pnas.1319584111 / PMID:24449899, pneumocandin A0 DOI:10.7164/antibiotics.45.1886 / PMID:1490879 and DOI:10.1073/pnas.91.26.12907 / PMID:7809096, rustmicin DOI:10.1074/jbc.273.24.14942 / PMID:9614099, soraphen A DOI:10.1126/science.1103399 / PMID:15550663 and DOI:10.7164/antibiotics.47.23 / PMID:8119858), mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED promotion on the 5 Cycle 5 Stage 1 natural products (naphthomycin A DOI:10.7164/antibiotics.38.230 / PMID:3997669 and DOI:10.1007/BF00409749 / PMID:4978971, resistomycin DOI:10.1002/jobm.19750150603 / PMID:1106088 and DOI:10.1021/ja026369d / PMID:12033902, micacocidin DOI:10.7164/antibiotics.51.323 / PMID:9589068 and DOI:10.7164/antibiotics.51.328, kendomycin DOI:10.1371/journal.pone.0146165 / PMID:26795276 and DOI:10.7164/antibiotics.53.199 / PMID:10805582, endophenazine A DOI:10.7164/antibiotics.55.802 / PMID:12458770 and DOI:10.1128/AEM.02738-08 / PMID:19270122), and PRIMARY_LITERATURE bacterial DNA gyrase and topoisomerase IV (GO:0003916) molecular_targets with reviewed E. coli K-12 UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and REVIEWED promotion on the 5 EXACT quinolones/fluoroquinolones (cinoxacin, Grepafloxacin, moxifloxacin, sparfloxacin, and lomefloxacin; DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin). |
+| primary-literature-sources | PMID:38377384, PMID:24449899, PMID:1490879, PMID:7809096, PMID:9614099, PMID:15550663, PMID:8119858, PMID:3997669, PMID:4978971, PMID:1106088, PMID:12033902, PMID:9589068, PMID:26795276, PMID:10805582, PMID:12458770, PMID:19270122, PMID:11709337, PMID:2158274; Primary experimental mechanism and target studies cited across the 15 remediated records | supports | Primary studies support REVIEWED promotion on the 5 Group 1 records (pentabromopseudilin DOI:10.1021/acschembio.3c00773 / PMID:38377384, taromycin A DOI:10.1073/pnas.1319584111 / PMID:24449899, pneumocandin A0 DOI:10.7164/antibiotics.45.1886 / PMID:1490879 and DOI:10.1073/pnas.91.26.12907 / PMID:7809096, rustmicin DOI:10.1074/jbc.273.24.14942 / PMID:9614099, soraphen A DOI:10.1126/science.1103399 / PMID:15550663 and DOI:10.7164/antibiotics.47.23 / PMID:8119858), mode_of_action, PRIMARY_LITERATURE molecular_targets, and REVIEWED promotion on the 5 Cycle 5 Stage 1 natural products (naphthomycin A DOI:10.7164/antibiotics.38.230 / PMID:3997669 and DOI:10.1007/BF00409749 / PMID:4978971, resistomycin DOI:10.1002/jobm.19750150603 / PMID:1106088 and DOI:10.1021/ja026369d / PMID:12033902, micacocidin DOI:10.7164/antibiotics.51.323 / PMID:9589068 and DOI:10.7164/antibiotics.51.328, kendomycin DOI:10.1371/journal.pone.0146165 / PMID:26795276 and DOI:10.7164/antibiotics.53.199 / PMID:10805582, endophenazine A DOI:10.7164/antibiotics.55.802 / PMID:12458770 and DOI:10.1128/AEM.02738-08 / PMID:19270122), and PRIMARY_LITERATURE bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) molecular_targets with reviewed E. coli K-12 UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and REVIEWED promotion on the 5 EXACT quinolones/fluoroquinolones (cinoxacin, Grepafloxacin, moxifloxacin, sparfloxacin, and lomefloxacin; DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin). |
 
 ## Limits And Additional Notes
 
@@ -158,7 +158,7 @@ summary: 'Post-remediation batch review of the 15 AntibioticRecord YAML files up
   and are promoted to curation_status: REVIEWED (raising corpus REVIEWED count from
   112 to 127 and reducing the review-readiness worklist from 2,952 to 2,937).'
 source:
-  git_revision: 5ff2167a5818b4a029cb1fd59d592f766272f138
+  git_revision: bc39eed026559647f7bea8543ea5baaf6f21e687
   state: working_tree
   inputs:
   - path: .claude/skills/review-yaml-category/SKILL.md
@@ -567,10 +567,11 @@ evidence:
     held_targets) and promoted to REVIEWED; and 5 Group 3 SEEDED/EXACT quinolones/fluoroquinolones
     (cinoxacin CHEBI:3716, Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin
     CHEBI:9212, lomefloxacin CHEBI:116278) populated with biosynthesis_origin: SYNTHETIC,
-    MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (GO:0003916
-    bacterial DNA gyrase and topoisomerase IV) with 20 reviewed E. coli K-12 Swiss-Prot
-    UniProtKB protein_examples and promoted to REVIEWED (raising corpus REVIEWED count
-    from 112 to 127 and reducing the review-readiness queue from 2,952 to 2,937).'
+    MICROBIAL_TARGET mode_of_action, and PRIMARY_LITERATURE molecular_targets (bacterial
+    DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)) with 20 reviewed E. coli
+    K-12 Swiss-Prot UniProtKB protein_examples and promoted to REVIEWED (raising corpus
+    REVIEWED count from 112 to 127 and reducing the review-readiness queue from 2,952
+    to 2,937).'
 - evidence_id: validate-strict-pass
   kind: validation
   reference: scripts/validate_strict.py
@@ -612,11 +613,11 @@ evidence:
     / PMID:9589068 and DOI:10.7164/antibiotics.51.328, kendomycin DOI:10.1371/journal.pone.0146165
     / PMID:26795276 and DOI:10.7164/antibiotics.53.199 / PMID:10805582, endophenazine
     A DOI:10.7164/antibiotics.55.802 / PMID:12458770 and DOI:10.1128/AEM.02738-08
-    / PMID:19270122), and PRIMARY_LITERATURE bacterial DNA gyrase and topoisomerase
-    IV (GO:0003916) molecular_targets with reviewed E. coli K-12 UniProtKB protein_examples
-    (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and REVIEWED
-    promotion on the 5 EXACT quinolones/fluoroquinolones (cinoxacin, Grepafloxacin,
-    moxifloxacin, sparfloxacin, and lomefloxacin; DOI:10.1128/AAC.45.12.3544-3547.2001
+    / PMID:19270122), and PRIMARY_LITERATURE bacterial DNA gyrase (GyrA/GyrB) and
+    topoisomerase IV (ParC/ParE) molecular_targets with reviewed E. coli K-12 UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083)
+    and REVIEWED promotion on the 5 EXACT quinolones/fluoroquinolones (cinoxacin,
+    Grepafloxacin, moxifloxacin, sparfloxacin, and lomefloxacin; DOI:10.1128/AAC.45.12.3544-3547.2001
     / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin).
 assessments:
 - assessment_id: group1-five-proposed-exact-records-promoted-to-reviewed
@@ -679,8 +680,8 @@ assessments:
     Grepafloxacin CHEBI:5543, moxifloxacin CHEBI:63611, sparfloxacin CHEBI:9212, and
     lomefloxacin CHEBI:116278) now carry biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET
     mode_of_action_target_scope, CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE
-    (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase and topoisomerase IV
-    (GO:0003916) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2
+    (evidence_status: PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase
+    IV (ParC/ParE) molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2
     Bacteria) with 4 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples per
     record (UniProtKB:P0AES4 gyrA, UniProtKB:P0AES6 gyrB, UniProtKB:P0AFI2 parC, UniProtKB:P20083
     parE; 20 total across the 5 records, citing DOI:10.1128/AAC.45.12.3544-3547.2001
@@ -820,15 +821,15 @@ findings:
     and promoted 5 EXACT quinolones and fluoroquinolones to REVIEWED
   description: 'Curated biosynthesis_origin: SYNTHETIC, MICROBIAL_TARGET mode_of_action_target_scope,
     CURATOR mode_of_action_notes, and source: PRIMARY_LITERATURE (evidence_status:
-    PRIMARY_EVIDENCE) bacterial DNA gyrase and topoisomerase IV (GO:0003916) molecular_targets
-    (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria; DOI:10.1128/AAC.45.12.3544-3547.2001
-    / PMID:11709337, plus DOI:10.1128/AAC.34.1.8 / PMID:2158274 on cinoxacin) with
-    20 reviewed E. coli K-12 Swiss-Prot UniProtKB protein_examples (UniProtKB:P0AES4,
-    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083 on each record) across cinoxacin
-    (CHEBI:3716), Grepafloxacin (CHEBI:5543), moxifloxacin (CHEBI:63611), sparfloxacin
-    (CHEBI:9212), and lomefloxacin (CHEBI:116278) via apply_uniprot_examples_plan,
-    and promoted all 5 records from SEEDED to REVIEWED via record_curation_event and
-    write_validated_antibiotic.'
+    PRIMARY_EVIDENCE) bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+    molecular_targets (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET, NCBITaxon:2 Bacteria;
+    DOI:10.1128/AAC.45.12.3544-3547.2001 / PMID:11709337, plus DOI:10.1128/AAC.34.1.8
+    / PMID:2158274 on cinoxacin) with 20 reviewed E. coli K-12 Swiss-Prot UniProtKB
+    protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083
+    on each record) across cinoxacin (CHEBI:3716), Grepafloxacin (CHEBI:5543), moxifloxacin
+    (CHEBI:63611), sparfloxacin (CHEBI:9212), and lomefloxacin (CHEBI:116278) via
+    apply_uniprot_examples_plan, and promoted all 5 records from SEEDED to REVIEWED
+    via record_curation_event and write_validated_antibiotic.'
   target_ids:
   - CHEBI:3716
   - CHEBI:5543
