@@ -1,0 +1,67 @@
+identifier: CHEBI:199965
+label: obafluorin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 2,3-dihydroxybenzoyl-derived beta-lactone nonribosomal peptide antibiotic
+  from Pseudomonas fluorescens that covalently inhibits bacterial threonyl-tRNA synthetase.
+definition_source: DOI:10.1038/nchembio.2374
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: OC1=C(O)C(=CC=C1)C(=O)N[C@H]1[C@@H](CC2=CC=C(C=C2)N(=O)=O)OC1=O
+  standard_inchi: InChI=1S/C17H14N2O7/c20-12-3-1-2-11(15(12)21)16(22)18-14-13(26-17(14)23)8-9-4-6-10(7-5-9)19(24)25/h1-7,13-14,20-21H,8H2,(H,18,22)/t13-,14+/m1/s1
+  standard_inchi_key: AINNQKIVZOTQBB-KGLIPLIRSA-N
+  molecular_formula: C17H14N2O7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001437/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 358.306
+  monoisotopic_mass: 358.0801
+xrefs:
+- pubchem.compound:146354
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/nchembio.2374#obafluorin
+  source_label: obafluorin
+  minted_identifier: antibioticmech:curator-81f7a3a21d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/nchembio.2374
+    snippet: Schaffer et al. elucidated the nonribosomal peptide synthetase assembly
+      line in Pseudomonas fluorescens ATCC 39502 that catalyzes beta-lactone ring
+      formation to release the antibiotic obafluorin, a covalent inhibitor of bacterial
+      threonyl-tRNA synthetase.
+    notes: Reported by Schaffer et al. 2017 (Nat Chem Biol 13:737-744; PMID:28504677;
+      DOI:10.1038/nchembio.2374), Scott et al. 2017 (Nat Chem Biol 13:850-857; PMID:28553948;
+      DOI:10.1038/nchembio.2386), and Wells et al. 1984 (J Antibiot 37:802-803; PMID:6480501;
+      DOI:10.7164/antibiotics.37.802) as a 2,3-dihydroxybenzoyl-derived beta-lactone
+      antibiotic from Pseudomonas fluorescens ATCC 39502 that covalently inhibits
+      bacterial threonyl-tRNA synthetase (ThrRS). MIBiG 4.0.1 entry BGC0001437, ChEBI
+      CHEBI:199965, and PubChem CID 146354 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:294
+  taxon_label: Pseudomonas fluorescens
+  biosynthetic_gene_cluster: BGC0001437
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'obafluorin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:28504677
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

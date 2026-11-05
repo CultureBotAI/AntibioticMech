@@ -1,0 +1,65 @@
+identifier: CHEBI:208049
+label: nocardiopsistin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An isopropyl-substituted tetracyclic angucyclinone aromatic polyketide
+  antibiotic from marine sponge-derived Nocardiopsis sp. HB-J378 with anti-MRSA antibacterial
+  activity.
+definition_source: DOI:10.1016/j.synbio.2018.10.008
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC(C)C1=CC(=O)C2=C3C(=O)C4=C(C(O)=CC=C4)C(=O)C3=C(O)C=C2C1=O
+  standard_inchi: InChI=1S/C21H14O6/c1-8(2)10-6-13(23)15-11(19(10)25)7-14(24)17-18(15)20(26)9-4-3-5-12(22)16(9)21(17)27/h3-8,22,24H,1-2H3
+  standard_inchi_key: VICNIIRXDNRZGY-UHFFFAOYSA-N
+  molecular_formula: C21H14O6
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002504/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 362.337
+  monoisotopic_mass: 362.079
+xrefs:
+- pubchem.compound:156581646
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.synbio.2018.10.008#nocardiopsistin-a
+  source_label: nocardiopsistin A
+  minted_identifier: antibioticmech:curator-c37cd2aa9b
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.synbio.2018.10.008
+    snippet: Xu et al. isolated the aromatic type II polyketide angucyclinone nocardiopsistin
+      A from marine sponge-derived Nocardiopsis sp. HB-J378 and demonstrated anti-MRSA
+      antibacterial activity against methicillin-resistant Staphylococcus aureus with
+      an MIC of 12.5 ug/mL.
+    notes: Reported by Xu et al. 2018 (Synth Syst Biotechnol 3:246-251; PMID:30417139;
+      DOI:10.1016/j.synbio.2018.10.008) as an isopropyl-substituted tetracyclic angucyclinone
+      antibiotic from deep-sea sponge-associated Nocardiopsis sp. HB-J378 with antibacterial
+      activity against MRSA. MIBiG 4.0.1 entry BGC0002504, ChEBI CHEBI:208049, and
+      PubChem CID 156581646 supply the SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:310350
+  taxon_label: Nocardiopsis sp.
+  biosynthetic_gene_cluster: BGC0002504
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'nocardiopsistin A' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:30417139
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

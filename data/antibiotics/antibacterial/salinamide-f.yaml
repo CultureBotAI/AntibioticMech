@@ -1,0 +1,71 @@
+identifier: antibioticmech:curator-72119c525e
+label: salinamide F
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A diol-containing bicyclic depsipeptide antibiotic from marine Streptomyces
+  sp. CNB-091 that inhibits bacterial RNA polymerase with antibacterial activity.
+definition_source: DOI:10.1002/anie.201508576
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C(N[C@](C(N[C@](C1=CC=C(O[C@H](C)[C@@](O)(CO)/C=C/C2=O)C=C1)([H])C(N([C@H](C(N[C@]3([H])[C@@H](C)O)=O)CC4=CC=CC=C4)C)=O)=O)([H])[C@H](CC)C)[C@H]([C@@H](C)OC([C@H](COC(CN2)=O)NC3=O)=O)NC([C@@H]([C@@H](C(C)C)O)C)=O
+  standard_inchi: InChI=1S/C51H71N7O16/c1-10-27(4)39-46(66)57-42-33-16-18-34(19-17-33)74-31(8)51(71,25-59)21-20-37(61)52-23-38(62)72-24-35(50(70)73-30(7)41(48(68)54-39)56-44(64)28(5)43(63)26(2)3)53-47(67)40(29(6)60)55-45(65)36(58(9)49(42)69)22-32-14-12-11-13-15-32/h11-21,26-31,35-36,39-43,59-60,63,71H,10,22-25H2,1-9H3,(H,52,61)(H,53,67)(H,54,68)(H,55,65)(H,56,64)(H,57,66)/b21-20+/t27-,28+,29+,30+,31+,35-,36-,39+,40+,41-,42-,43+,51-/m0/s1
+  standard_inchi_key: QDRISVFLDJIQNB-UMPSVNBLSA-N
+  molecular_formula: C51H71N7O16
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001230/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1038.162
+  monoisotopic_mass: 1037.4957
+xrefs:
+- pubchem.compound:90206850
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.201508576#salinamide-f
+  source_label: salinamide F
+  minted_identifier: antibioticmech:curator-72119c525e
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/anie.201508576
+    snippet: Ray et al. characterized the salinamide biosynthetic gene cluster in
+      marine Streptomyces sp. CNB-091 producing the diol bicyclic depsipeptide congener
+      salinamide F, which inhibits bacterial RNA polymerase and growth of Enterococcus
+      faecalis, Staphylococcus aureus, and Neisseria gonorrhoeae.
+    notes: 'Reported by Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755;
+      DOI:10.1002/anie.201508576) and Hassan et al. 2015 (J Nat Prod 78:96-100; PMID:25607994;
+      DOI:10.1021/np500887p) as a diol bicyclic depsipeptide antibiotic from marine
+      Streptomyces sp. CNB-091 that inhibits Escherichia coli and Staphylococcus aureus
+      RNA polymerase and exhibits antibacterial activity (MIC 12.5-25 ug/mL against
+      Enterococcus faecalis, Staphylococcus aureus, and Neisseria gonorrhoeae). MIBiG
+      4.0.1 entry BGC0001230 and PubChem CID 90206850 supply the stereo-complete SMILES,
+      Standard InChI, and InChIKey QDRISVFLDJIQNB-UMPSVNBLSA-N (note: ChEBI CHEBI:222899
+      Salinamide F carries diastereomeric InChIKey QDRISVFLDJIQNB-CHKOLDIQSA-N and
+      is omitted from xrefs).'
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1169156
+  taxon_label: Streptomyces sp.
+  strain: CNB091
+  biosynthetic_gene_cluster: BGC0001230
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'salinamide F' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:26553755
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

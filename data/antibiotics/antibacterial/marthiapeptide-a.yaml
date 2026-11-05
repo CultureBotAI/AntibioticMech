@@ -1,0 +1,66 @@
+identifier: CHEBI:198916
+label: marthiapeptide A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A macrocyclic tristhiazole-thiazoline peptide antibiotic from deep-sea
+  Marinactinospora thermotolerans SCSIO 00652 with antibacterial activity against
+  Gram-positive bacteria.
+definition_source: DOI:10.1021/np300554f
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@@]12CSC(=N1)C1=CSC(=N1)C1=CSC(=N1)C1=CSC(=N1)[C@@H](C)NC(=O)[C@@]([H])(NC(=O)[C@@H](CC1=CC=CC=C1)NC2=O)[C@@H](C)CC'
+  standard_inchi: InChI=1S/C30H31N7O3S4/c1-4-15(2)23-26(40)31-16(3)27-34-20(12-41-27)29-36-22(14-43-29)30-35-21(13-44-30)28-33-19(11-42-28)25(39)32-18(24(38)37-23)10-17-8-6-5-7-9-17/h5-9,12-16,18-19,23H,4,10-11H2,1-3H3,(H,31,40)(H,32,39)(H,37,38)/t15-,16+,18+,19-,23-/m0/s1
+  standard_inchi_key: BTQRWSUKDHTMKD-DUKGZVIDSA-N
+  molecular_formula: C30H31N7O3S4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001469/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 665.892
+  monoisotopic_mass: 665.1371
+xrefs:
+- pubchem.compound:71459810
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/np300554f#marthiapeptide-a
+  source_label: marthiapeptide A
+  minted_identifier: antibioticmech:curator-4f1474c5a1
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/np300554f
+    snippet: Zhou et al. isolated the sequential tristhiazole-thiazoline macrocyclic
+      peptide marthiapeptide A from deep-sea-derived Marinactinospora thermotolerans
+      SCSIO 00652 and demonstrated antibacterial activity against a panel of Gram-positive
+      bacteria with MIC values of 2.0-8.0 ug/mL.
+    notes: Reported by Zhou et al. 2012 (J Nat Prod 75:1717-1722; PMID:23215246; DOI:10.1021/np300554f)
+      as a cyclic tristhiazole-thiazoline peptide antibiotic from Marinactinospora
+      thermotolerans SCSIO 00652 active against Micrococcus luteus, Staphylococcus
+      aureus, Bacillus subtilis, and Bacillus thuringiensis (MIC 2.0-8.0 ug/mL). MIBiG
+      4.0.1 entry BGC0001469, ChEBI CHEBI:198916, and PubChem CID 71459810 supply
+      the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1736290
+  taxon_label: Brevibacillus sp.
+  strain: Leaf182
+  biosynthetic_gene_cluster: BGC0001469
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'marthiapeptide A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23215246
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

@@ -1,0 +1,67 @@
+identifier: CHEBI:203004
+label: pyrrocidine B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 13-membered para-cyclophane- and cis-decahydrofluorene-containing saturated
+  gamma-lactam antibiotic congener from Acremonium zeae with anti-Gram-positive antibacterial
+  and antifungal activity.
+definition_source: DOI:10.1021/jacs.1c00098
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: C[C@@H]1C[C@@H]([C@H]2[C@@H]3[C@@H]4[C@H]([C@@H](C=C([C@@H]4[C@@]2(C1)C)C)C=C)C(=O)[C@@H]5C[C@](CC6=CC=C(O3)C=C6)(NC5=O)O)C
+  standard_inchi: InChI=1S/C31H39NO4/c1-6-20-12-18(4)25-24-23(20)27(33)22-15-31(35,32-29(22)34)14-19-7-9-21(10-8-19)36-28(24)26-17(3)11-16(2)13-30(25,26)5/h6-10,12,16-17,20,22-26,28,35H,1,11,13-15H2,2-5H3,(H,32,34)/t16-,17+,20-,22+,23+,24-,25+,26+,28+,30+,31-/m1/s1
+  standard_inchi_key: OCUONUXNKYDHKY-PZBKSWHFSA-N
+  molecular_formula: C31H39NO4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002239/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 489.656
+  monoisotopic_mass: 489.2879
+xrefs:
+- pubchem.compound:10929061
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/jacs.1c00098#pyrrocidine-b
+  source_label: pyrrocidine B
+  minted_identifier: antibioticmech:curator-e34c226f13
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1021/jacs.1c00098
+    snippet: Ohashi et al. reconstituted the biosynthetic gene cluster of the para-cyclophane
+      decahydrofluorene gamma-lactam antibiotic pyrrocidine B from Acremonium zeae,
+      which exhibits anti-Gram-positive antibacterial and antifungal activity.
+    notes: Reported by Ohashi et al. 2021 (J Am Chem Soc 143:5601-5605; PMID:33834778;
+      DOI:10.1021/jacs.1c00098), He et al. 2002 (Tetrahedron Lett 43:1633-1636; DOI:10.1016/S0040-4039(02)00099-0),
+      and Wicklow et al. 2005 (Mycol Res 109:610-618; PMID:15913063; DOI:10.1016/j.mycres.2005.01.002)
+      as the saturated gamma-lactam congener of pyrrocidine A from Acremonium zeae
+      (Sarocladium zeae) with anti-Gram-positive antibacterial and antifungal activity.
+      MIBiG 4.0.1 entry BGC0002239, ChEBI CHEBI:203004, and PubChem CID 10929061 supply
+      the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2046025
+  taxon_label: Acremonium sp.
+  biosynthetic_gene_cluster: BGC0002239
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'pyrrocidine B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:33834778
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
