@@ -1,0 +1,1265 @@
+{
+  "schema_version": 1,
+  "task": "cycle5_stage5_resolve_review_findings",
+  "cycle": 5,
+  "stage": 5,
+  "issues": [
+    "#1320",
+    "#1321",
+    "#1322"
+  ],
+  "molecular_targets_deltas": [
+    {
+      "identifier": "CHEBI:197824",
+      "label": "naphthomycin A",
+      "path": "data/antibiotics/antibacterial/naphthomycin-a.yaml",
+      "issue": "#1321",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "cc1173cc0593f5d3ae96a57d270d13ca219c54f69393e61b1b9162d4b5c7bc1c",
+      "after_sha256": "0aa45bd23e2c97c0a3460e9d5b6a0500cc65c768e34b79fc720fc8b1c025efb2",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Ansamycin antibiotic from Streptomyces collinus that inhibits bacterial nucleic acid synthesis and acts as a sulfhydryl-reactive vitamin K antagonist in Gram-positive bacteria; cysteine and other sulfhydryl compounds reverse growth inhibition by nucleophilic Michael addition to the naphthoquinone chromophore (Balerna et al. 1969, DOI:10.1007/BF00409749, PMID:4978971; Okabe et al. 1985, DOI:10.7164/antibiotics.38.230, PMID:3997669)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial nucleic acid biosynthesis",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Gram-positive bacterial growth-inhibition reversal by vitamin K and sulfhydryl compounds (cysteine, glutathione) and nucleic acid synthesis inhibition assays in Bacillus megaterium and mouse leukemia L5178Y cells (Balerna et al. 1969, DOI:10.1007/BF00409749, PMID:4978971; Okabe et al. 1985, DOI:10.7164/antibiotics.38.230, PMID:3997669).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "1985-02",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.7164/antibiotics.38.230",
+              "snippet": "Okabe et al. demonstrated that naphthomycin A inhibits nucleic acid synthesis and that sulfhydryl compounds such as cysteine and dithiothreitol reverse its biological activity via nucleophilic addition to the naphthoquinone moiety.",
+              "notes": "Okabe et al. 1985 (J Antibiot 38:230-235; PMID:3997669) established that naphthomycin A inhibits nucleic acid synthesis and is inactivated by sulfhydryl-group nucleophilic addition to its naphthoquinone chromophore."
+            },
+            {
+              "reference": "DOI:10.1007/BF00409749",
+              "notes": "Balerna et al. 1969 (Arch Mikrobiol 65:303-317; PMID:4978971) isolated naphthomycin from Streptomyces collinus and characterized its Gram-positive antibacterial activity and competitive antagonism by vitamin K and cysteine."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial nucleic acid biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.7164/antibiotics.38.230 (PMID:3997669) and DOI:10.1007/BF00409749 (PMID:4978971; issue #1321).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:29671",
+      "label": "resistomycin",
+      "path": "data/antibiotics/antibacterial/resistomycin.yaml",
+      "issue": "#1321",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "3b80da9c9f811b613b6687f1a6fd084ba37e699b941324761fed46764ac5e63f",
+      "after_sha256": "f7b86b752aeeceb6359e527ea446c32f1cc83a425a8aba70cf02792602ffb05a",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Pentacyclic quinone polyketide antibiotic from Streptomyces resistomycificus that complexes divalent cations (Mg2+) required by bacterial DNA-dependent RNA polymerase and DNA polymerase, inhibiting bacterial RNA and DNA biosynthesis (Haupt et al. 1975, DOI:10.1002/jobm.19750150603, PMID:1106088; Jakobi et al. 2002, DOI:10.1021/ja026369d, PMID:12033902)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial DNA-dependent RNA and DNA biosynthesis",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Macromolecular precursor incorporation and purified bacterial RNA and DNA polymerase divalent-cation (Mg2+) complexation assays in Bacillus subtilis and Escherichia coli (Haupt et al. 1975, DOI:10.1002/jobm.19750150603, PMID:1106088; Jakobi et al. 2002, DOI:10.1021/ja026369d, PMID:12033902).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "1975-06",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.1002/jobm.19750150603",
+              "snippet": "Haupt et al. demonstrated that resistomycin inhibits bacterial RNA and DNA synthesis in Bacillus subtilis and cell-free polymerase systems by interacting with Mg2+ ions required for RNA and DNA polymerase activity.",
+              "notes": "Haupt et al. 1975 (Z Allg Mikrobiol 15:415-424; PMID:1106088) established that resistomycin blocks bacterial RNA and DNA synthesis via Mg2+-dependent inhibition of RNA and DNA polymerase reactions."
+            },
+            {
+              "reference": "DOI:10.1021/ja026369d",
+              "notes": "Jakobi et al. 2002 (J Am Chem Soc 124:6319-6325; PMID:12033902) characterized the discoid polyketide structure and biosynthesis of resistomycin in Streptomyces resistomycificus."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial DNA-dependent RNA and DNA biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1002/jobm.19750150603 (PMID:1106088) and DOI:10.1021/ja026369d (PMID:12033902; issue #1321).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:198957",
+      "label": "micacocidin",
+      "path": "data/antibiotics/antibacterial/micacocidin.yaml",
+      "issue": "#1321",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "ceca30ee538fabb906fb5c21ab198223b1a79cb80f1f2db11785fc6e2904a7eb",
+      "after_sha256": "653ddd721a0e902b2b0179cce2bd79ba38d27376cc6d62f1a3538113e855d805",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "PROTEIN_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Thiazoline-containing siderophore-like polyketide-nonribosomal peptide antibiotic from Ralstonia/Pseudomonas sp. that chelates divalent transition-metal cations (Zn2+, Cu2+, Fe3+) and inhibits bacterial protein biosynthesis and transition-metal homeostasis, with potent antimycoplasmal activity (Kobayashi et al. 1998, DOI:10.7164/antibiotics.51.323, PMID:9589068; Ino et al. 1998, DOI:10.7164/antibiotics.51.328)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial protein biosynthesis and transition-metal homeostasis",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Antimycoplasmal susceptibility and metal-complexation (Zn2+, Cu2+, Fe3+) bioactivity profiling of micacocidin from Pseudomonas sp. No. 57-250 (Kobayashi et al. 1998, DOI:10.7164/antibiotics.51.323, PMID:9589068; Ino et al. 1998, DOI:10.7164/antibiotics.51.328).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "1998-03",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.7164/antibiotics.51.323",
+              "snippet": "Kobayashi et al. isolated micacocidin from Pseudomonas sp. No. 57-250 as a metal-chelating thiazoline antibiotic exhibiting potent and selective antibacterial activity against pathogenic Mycoplasma species.",
+              "notes": "Kobayashi et al. 1998 (J Antibiot 51:323-327; PMID:9589068) discovered micacocidin from Pseudomonas sp. No. 57-250 and characterized its potent antimycoplasmal activity and Zn2+/Cu2+/Fe3+ complexation."
+            },
+            {
+              "reference": "DOI:10.7164/antibiotics.51.328",
+              "notes": "Ino et al. 1998 (J Antibiot 51:328-332) determined the planar and X-ray crystal structure of micacocidin as a thiazoline-containing pentadentate metal-chelating antibiotic."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial protein biosynthesis and transition-metal homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.7164/antibiotics.51.323 (PMID:9589068) and DOI:10.7164/antibiotics.51.328 (issue #1321).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:191052",
+      "label": "kendomycin",
+      "path": "data/antibiotics/antibacterial/kendomycin.yaml",
+      "issue": "#1321",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "8f40972e28d1d671f3381b8206c9a10a8436bbadb4bf8b641b15e2cbf205d711",
+      "after_sha256": "fd1eb4f663685081f80e57cf2d0ba4a74f1d8a7a4752971f73ba5946f9dad9a1",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "CELL_WALL_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Ansa-macrocyclic quinone methide polyketide antibiotic from Streptomyces violaceoruber that perturbs bacterial cell-division septation, peptidoglycan/cell-wall homeostasis, and covalent protein/amino-acid adducts via its electrophilic para-quinone methide pharmacophore in Gram-positive bacteria including MRSA (Funabashi et al. 2000, DOI:10.7164/antibiotics.53.199, PMID:10805582; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26799212)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial cell division and cell-wall homeostasis",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Proteomic, physiological, and ultrastructural profiling of methicillin-resistant Staphylococcus aureus (MRSA) treated with kendomycin, demonstrating aberrant septum formation and cell-division/cell-wall stress alongside Gram-positive antibacterial susceptibility (Funabashi et al. 2000, DOI:10.7164/antibiotics.53.199, PMID:10805582; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26799212).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2016-01",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.1371/journal.pone.0146165",
+              "snippet": "Elnakady et al. investigated the antibacterial mechanism of kendomycin in methicillin-resistant Staphylococcus aureus (MRSA), showing disruption of septum formation, cell division, and amino-acid/protein homeostasis.",
+              "notes": "Elnakady et al. 2016 (PLoS One 11:e0146165; PMID:26799212) characterized the antibacterial mode of action of kendomycin in MRSA, demonstrating cell-division septation defects and polypharmacological proteome perturbation."
+            },
+            {
+              "reference": "DOI:10.7164/antibiotics.53.199",
+              "notes": "Funabashi et al. 2000 (J Antibiot 53:199-201; PMID:10805582) isolated kendomycin (TAN-2162) from Streptomyces violaceoruber and reported its potent antibacterial activity against Gram-positive and Gram-negative bacteria."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial cell division and cell-wall homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1371/journal.pone.0146165 (PMID:26799212) and DOI:10.7164/antibiotics.53.199 (PMID:10805582; issue #1321).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:218214",
+      "label": "endophenazine A",
+      "path": "data/antibiotics/antibacterial/endophenazine-a.yaml",
+      "issue": "#1321",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "505097aff831381bd992813341f7267fccec5c36c4a01d65d244b8480ed21ac9",
+      "after_sha256": "6fc3d0f05fe760c8fa9923ed62c4b3031a030753882fa05cbb4e7a375d5e5717",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "OXIDATIVE_DAMAGE",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Dimethylallyl-substituted phenazine-1-carboxylic acid antibiotic from Streptomyces anulatus and Kitasatospora sp. whose redox-active phenazine chromophore mediates intracellular electron-transport uncoupling and reactive oxygen species (ROS) generation in Gram-positive bacteria and phytopathogenic fungi (Gebhardt et al. 2002, DOI:10.7164/antibiotics.55.802, PMID:12458770; Saleh et al. 2009, DOI:10.1128/AEM.02738-08, PMID:19270122)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial redox homeostasis and respiratory electron transport",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Gram-positive antibacterial susceptibility and phenazine redox-active secondary-metabolite characterization of endophenazine A from Streptomyces anulatus and Kitasatospora sp. (Gebhardt et al. 2002, DOI:10.7164/antibiotics.55.802, PMID:12458770; Saleh et al. 2009, DOI:10.1128/AEM.02738-08, PMID:19270122).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2002-09",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.7164/antibiotics.55.802",
+              "snippet": "Gebhardt et al. isolated the prenylated phenazine antibiotic endophenazine A from Streptomyces anulatus and demonstrated antibacterial activity against Gram-positive bacteria alongside herbicidal and redox-active phenazine properties.",
+              "notes": "Gebhardt et al. 2002 (J Antibiot 55:802-809; PMID:12458770) isolated endophenazine A from Streptomyces anulatus and characterized its Gram-positive antibacterial activity."
+            },
+            {
+              "reference": "DOI:10.1128/AEM.02738-08",
+              "notes": "Saleh et al. 2009 (Appl Environ Microbiol 75:2882-2890; PMID:19270122) identified the eppA/ppzP phenazine biosynthesis gene cluster directing endophenazine A production in Streptomyces anulatus 9663."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (OXIDATIVE_DAMAGE, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial redox homeostasis and respiratory electron transport (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.7164/antibiotics.55.802 (PMID:12458770) and DOI:10.1128/AEM.02738-08 (PMID:19270122; issue #1321).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:3716",
+      "label": "cinoxacin",
+      "path": "data/antibiotics/antibacterial/cinoxacin.yaml",
+      "issue": "#1322",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "94f901a5989c09619754c2018edfcb4a39adaab5a2d90546086a779fa80801ad",
+      "after_sha256": "c3bfaa9f91601f5477f55c3af1ffc54f8eba7a0301039194a73fc7003f8f08aa",
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic first-generation cinnoline-3-carboxylic acid quinolone-class antibacterial that inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Gootz et al. 1990, DOI:10.1128/AAC.34.1.8, PMID:2158274; Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3004010 (cinoxacin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "ARO:3003261",
+          "target_label": "fluoroquinolone sensitive gyrB",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. GyrB is asserted as the fluoroquinolone-sensitive subunit.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3003261",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3004010 (cinoxacin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3004010 (cinoxacin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "ARO:3003261",
+          "target_label": "fluoroquinolone sensitive gyrB",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. GyrB is asserted as the fluoroquinolone-sensitive subunit.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3003261",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3004010 (cinoxacin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility profiling of cinoxacin and comparator quinolones (Gootz et al. 1990, DOI:10.1128/AAC.34.1.8, PMID:2158274; Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2001-12",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.45.12.3544-3547.2001",
+              "snippet": "Takei et al. determined the inhibitory activities (IC50s) of quinolones against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.",
+              "notes": "Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337) characterized bacterial DNA gyrase and topoisomerase IV inhibition and GyrA/ParC QRDR resistance shifts across quinolone antibacterials."
+            },
+            {
+              "reference": "DOI:10.1128/AAC.34.1.8",
+              "notes": "Gootz et al. 1990 (Antimicrob Agents Chemother 34:8-12; PMID:2158274) measured direct inhibition of purified Escherichia coli DNA gyrase supercoiling and DNA synthesis by cinoxacin and comparator quinolones."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337) and DOI:10.1128/AAC.34.1.8 (PMID:2158274; issue #1322).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "molecular_targets",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:5543",
+      "label": "Grepafloxacin",
+      "path": "data/antibiotics/antibacterial/grepafloxacin.yaml",
+      "issue": "#1322",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "c236186276c3aad7566ec2e06273b92d785fa3143ac2c52c8757f779de6728ee",
+      "after_sha256": "8fb0ad755d339d4661ebd865c8e257603852b3ae9347ae94c16d05eb746674f9",
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic C-5-methylated fluoroquinolone antibiotic that dually inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000665 (grepafloxacin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000665 (grepafloxacin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility profiling of grepafloxacin alongside comparator fluoroquinolones (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2001-12",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.45.12.3544-3547.2001",
+              "snippet": "Takei et al. determined the inhibitory activities (IC50s) of grepafloxacin and 15 other quinolones against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.",
+              "notes": "Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337) measured direct dual inhibition of bacterial DNA gyrase and topoisomerase IV by grepafloxacin and established target-mutation resistance shifts across GyrA and ParC QRDR variants."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1322).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:63611",
+      "label": "moxifloxacin",
+      "path": "data/antibiotics/antibacterial/moxifloxacin.yaml",
+      "issue": "#1322",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "db2ec4cc6bf2a13c37d68241a41effc938db28dee1b3ebf851fd3b03e633374e",
+      "after_sha256": "9e03543ddb8206f47c1b9a07ce6abafee0693b8f3e9a11349242e28fe2dfd2f3",
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic 8-methoxy fluoroquinolone antibiotic that dually inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) decatenation, stabilizing ternary cleavage complexes and arresting bacterial DNA replication (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:0000074 (moxifloxacin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:0000074 (moxifloxacin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility profiling of moxifloxacin alongside comparator fluoroquinolones (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2001-12",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.45.12.3544-3547.2001",
+              "snippet": "Takei et al. determined the inhibitory activities (IC50s) of moxifloxacin and 15 other quinolones against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.",
+              "notes": "Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337) measured direct dual inhibition of bacterial DNA gyrase and topoisomerase IV by moxifloxacin and established target-mutation resistance shifts across GyrA and ParC QRDR variants."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1322).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "activity_spectrum",
+        "activity_membership_collections",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:9212",
+      "label": "sparfloxacin",
+      "path": "data/antibiotics/antibacterial/sparfloxacin.yaml",
+      "issue": "#1322",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "2958a99484601e1b1415583c0e9b0c9e256f898d23a3a47138b0ce2b5d39d3e7",
+      "after_sha256": "9aec9fee05811e113c7ec7b93ee2fad05402daf481a89f9d2343f06bcacc5522",
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic C-5-amino-6,8-difluoroquinolone antibiotic that dually inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000666 (sparfloxacin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000666 (sparfloxacin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility profiling of sparfloxacin alongside comparator fluoroquinolones (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2001-12",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.45.12.3544-3547.2001",
+              "snippet": "Takei et al. determined the inhibitory activities (IC50s) of sparfloxacin and 15 other quinolones against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.",
+              "notes": "Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337) measured direct dual inhibition of bacterial DNA gyrase and topoisomerase IV by sparfloxacin and established target-mutation resistance shifts across GyrA and ParC QRDR variants."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1322).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:116278",
+      "label": "lomefloxacin",
+      "path": "data/antibiotics/antimycobacterial/lomefloxacin.yaml",
+      "issue": "#1322",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "768da834c0810a301bafa219a0a0f1c257737de2993a2e15cbba7ef12fe85c39",
+      "after_sha256": "aec1bb03f933a31b98b144226a3c8fcd77d7e821d5d4b4260c536fff5eb1b274",
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "NUCLEIC_ACID_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic 6,8-difluoroquinolone antibiotic that dually inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000660 (lomefloxacin); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000733",
+          "target_label": "fluoroquinolone sensitive gyrA",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. ARO explicitly describes ligand binding to gyrase subunit A.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000733",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000660 (lomefloxacin); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_label": "bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)",
+          "target_type": "PROTEIN_COMPLEX",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility profiling of lomefloxacin alongside comparator fluoroquinolones (Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2001-12",
+          "source_retrieved_on": "2026-11-04",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.45.12.3544-3547.2001",
+              "snippet": "Takei et al. determined the inhibitory activities (IC50s) of lomefloxacin and 15 other quinolones against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.",
+              "notes": "Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337) measured direct dual inhibition of bacterial DNA gyrase and topoisomerase IV by lomefloxacin and established target-mutation resistance shifts across GyrA and ParC QRDR variants."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:10:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337; issue #1322).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "curation_history"
+      ]
+    }
+  ],
+  "promoted_record_deltas": [
+    {
+      "identifier": "CHEBI:70619",
+      "label": "pentabromopseudilin",
+      "path": "data/antibiotics/antibacterial/pentabromopseudilin.yaml",
+      "issue": "#1320",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "7762c7553222844f5e07c913bd2a492a2101eded973374f927f203284a65ef4e",
+      "after_sha256": "444a9eab4a2699968303b831c89496ba760afcbbbe45ea6a15f8c87a12810d56",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:70619) with complete 4/4 chemical_structure, curated mode_of_action (MEMBRANE_DISRUPTION, HOST_SHARED_TARGET), and primary-literature molecular_targets (DOI:10.1021/acschembio.3c00773, PMID:38377384; DOI:10.1038/nsmb.1597, PMID:19377481) from PROPOSED to REVIEWED (issue #1320).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:219845",
+      "label": "taromycin A",
+      "path": "data/antibiotics/antibacterial/taromycin-a.yaml",
+      "issue": "#1320",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "6c4bd226f3df57b84ef5b518f68fda132f90ab38b7853eb90a0831f8138c4423",
+      "after_sha256": "865476793118b88e22b3698810ef5361d5398ec31b6da98cdd24e24d305cc8ef",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:219845) with complete 4/4 chemical_structure, curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1073/pnas.1319584111, PMID:24449899; DOI:10.1021/acschembio.8b00509, PMID:29969236) from PROPOSED to REVIEWED (issue #1320).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:198520",
+      "label": "pneumocandin A0",
+      "path": "data/antibiotics/antifungal/pneumocandin-a0.yaml",
+      "issue": "#1320",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "ac25915279d5d35aa51e87997ab9a5de8f2eeee8b7a8396852b8de0c54f080bc",
+      "after_sha256": "7955d6b30e3c450e1a09d652f7b8f57e9ffb2f6672caee02132e9ba98ed2e085",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:198520) with complete 4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P38631, UniProtKB:P40989; DOI:10.7164/antibiotics.45.1886, PMID:1490879; DOI:10.1073/pnas.91.26.12907, PMID:7809096) from PROPOSED to REVIEWED (issue #1320).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:206910",
+      "label": "rustmicin",
+      "path": "data/antibiotics/antifungal/rustmicin.yaml",
+      "issue": "#1320",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "986994d61a86698834710ab547e4ee8c2a50335c4555fd3e37eebdedd801e8bd",
+      "after_sha256": "2ff4f769cad48bdb7253a49e5ac09bcba1d635eb43bcb90387616bf37a4eb5a4",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:206910) with complete 4/4 chemical_structure, curated mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332; DOI:10.1074/jbc.273.24.14942, PMID:9614099; DOI:10.7164/antibiotics.51.805, PMID:9820256) from PROPOSED to REVIEWED (issue #1320).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9200",
+      "label": "soraphen A",
+      "path": "data/antibiotics/antifungal/soraphen-a.yaml",
+      "issue": "#1320",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "882569c864abe4365a6aecc670b8889dc9660930a0f1165700d8fbe7705bc204",
+      "after_sha256": "df1b6e02ca9495a92719433e752ebfd26649190d738e47ec309bc8836fd78469",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:9200) with complete 4/4 chemical_structure, curated mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, HOST_SHARED_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:Q00955; DOI:10.1126/science.1103399, PMID:15550663; DOI:10.1007/BF00315800, PMID:7882429) from PROPOSED to REVIEWED (issue #1320).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:197824",
+      "label": "naphthomycin A",
+      "path": "data/antibiotics/antibacterial/naphthomycin-a.yaml",
+      "issue": "#1321",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "0aa45bd23e2c97c0a3460e9d5b6a0500cc65c768e34b79fc720fc8b1c025efb2",
+      "after_sha256": "9ce2da1f7b19ad2461b112d2c64357475ef954ba1709514fdcbecf43635e67a5",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:197824) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.7164/antibiotics.38.230, PMID:3997669; DOI:10.1007/BF00409749, PMID:4978971) from PROPOSED to REVIEWED (issue #1321).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:29671",
+      "label": "resistomycin",
+      "path": "data/antibiotics/antibacterial/resistomycin.yaml",
+      "issue": "#1321",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "f7b86b752aeeceb6359e527ea446c32f1cc83a425a8aba70cf02792602ffb05a",
+      "after_sha256": "ffbb79dbee50ee33c2a607f5ee4d913600152c9094288ca6a22c36770dd42ead",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:29671) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1002/jobm.19750150603, PMID:1106088; DOI:10.1021/ja026369d, PMID:12033902) from SEEDED to REVIEWED (issue #1321).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:198957",
+      "label": "micacocidin",
+      "path": "data/antibiotics/antibacterial/micacocidin.yaml",
+      "issue": "#1321",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "653ddd721a0e902b2b0179cce2bd79ba38d27376cc6d62f1a3538113e855d805",
+      "after_sha256": "0ae791e034071b7b03224703dbccb6e64b51d296873fb68df544709d8d56def9",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:198957) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.7164/antibiotics.51.323, PMID:9589068; DOI:10.7164/antibiotics.51.328) from PROPOSED to REVIEWED (issue #1321).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:191052",
+      "label": "kendomycin",
+      "path": "data/antibiotics/antibacterial/kendomycin.yaml",
+      "issue": "#1321",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "fd1eb4f663685081f80e57cf2d0ba4a74f1d8a7a4752971f73ba5946f9dad9a1",
+      "after_sha256": "a412bdf0e36ffa46321f2e93a731051d30b7d9be6aea5c5d56ab42a36fbd5fba",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:191052) with complete 4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1371/journal.pone.0146165, PMID:26799212; DOI:10.7164/antibiotics.53.199, PMID:10805582) from PROPOSED to REVIEWED (issue #1321).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:218214",
+      "label": "endophenazine A",
+      "path": "data/antibiotics/antibacterial/endophenazine-a.yaml",
+      "issue": "#1321",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "6fc3d0f05fe760c8fa9923ed62c4b3031a030753882fa05cbb4e7a375d5e5717",
+      "after_sha256": "a8da1829a29ba6ffa3712a8016dd59b45c03c2b97156de455d28d1f3bf9444f5",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:218214) with complete 4/4 chemical_structure, curated mode_of_action (OXIDATIVE_DAMAGE, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.7164/antibiotics.55.802, PMID:12458770; DOI:10.1128/AEM.02738-08, PMID:19270122) from PROPOSED to REVIEWED (issue #1321).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:3716",
+      "label": "cinoxacin",
+      "path": "data/antibiotics/antibacterial/cinoxacin.yaml",
+      "issue": "#1322",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "a20842cd9d9c664a22eabb3cc87e1f1cdd4f1fc65a31081cc8ec9ae9badcd3b8",
+      "after_sha256": "fb8767b0c6513de1781f5c0285d09651a8771e1f5dc7b28cf79a2a1c1367262e",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI quinolone record (CHEBI:3716) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083; DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337; DOI:10.1128/AAC.34.1.8, PMID:2158274) from SEEDED to REVIEWED (issue #1322).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:5543",
+      "label": "Grepafloxacin",
+      "path": "data/antibiotics/antibacterial/grepafloxacin.yaml",
+      "issue": "#1322",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "aac7f7673348270ea1e74ae16a6b1a4b804f9df28c1d523befab77cb90cabf0e",
+      "after_sha256": "cd89f5ff4f26ea1138f4de0a8062a8c0ac94f205726746569f668bbf4c734f3d",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI fluoroquinolone record (CHEBI:5543) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083; DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue #1322).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:63611",
+      "label": "moxifloxacin",
+      "path": "data/antibiotics/antibacterial/moxifloxacin.yaml",
+      "issue": "#1322",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "f49cbec52b0235fbfaeee0ab7740b9ff6c52a49d48f785deeeab6480b73d465c",
+      "after_sha256": "8aa3d4ea17d1ba14aade07ff09bbf513348b7a9962387543c4e4143f6b4f7bbe",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI fluoroquinolone record (CHEBI:63611) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083; DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue #1322).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9212",
+      "label": "sparfloxacin",
+      "path": "data/antibiotics/antibacterial/sparfloxacin.yaml",
+      "issue": "#1322",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "90bd627c26b1862788e14bf44fc9d9e9f21fe4368e880a2b09262c2c3e7b4a0c",
+      "after_sha256": "90b5240f8e85616e841941b714e95c44ea719875175739ad838c7493b100d892",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 10,
+      "curation_history_after_len": 11,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI fluoroquinolone record (CHEBI:9212) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083; DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue #1322).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:116278",
+      "label": "lomefloxacin",
+      "path": "data/antibiotics/antimycobacterial/lomefloxacin.yaml",
+      "issue": "#1322",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "51c657a99553ff382156bc2ade8677c87d1951a96a21c3c09ab21a9c5bd0188f",
+      "after_sha256": "8e69ef26d0c69e0a796af949885d6aeb55bda5e2dc2a609ab7aa431fbe708548",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "added_history_event": {
+        "timestamp": "2026-11-04T23:20:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI fluoroquinolone record (CHEBI:116278) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083; DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue #1322).",
+        "llm_assisted": true
+      }
+    }
+  ]
+}

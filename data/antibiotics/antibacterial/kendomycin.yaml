@@ -1,7 +1,7 @@
 identifier: CHEBI:191052
 label: kendomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A carbocyclic quinone-methide ansa-polyketide antibiotic (TAN-2162) from
   Streptomyces violaceoruber with antibacterial activity against methicillin-resistant
@@ -76,4 +76,57 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Elnakady et al. 2016 (PMID:26795276)
     and Wenzel et al. 2008 (PMID:18972512).
   llm_assisted: true
+- timestamp: '2026-11-04T23:10:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    cell division and cell-wall homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+    backed by DOI:10.1371/journal.pone.0146165 (PMID:26799212) and DOI:10.7164/antibiotics.53.199
+    (PMID:10805582; issue #1321).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:191052) with complete 4/4 chemical_structure,
+    curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and
+    primary-literature molecular_targets (DOI:10.1371/journal.pone.0146165, PMID:26799212;
+    DOI:10.7164/antibiotics.53.199, PMID:10805582) from PROPOSED to REVIEWED (issue
+    #1321).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Ansa-macrocyclic quinone methide polyketide antibiotic
+  from Streptomyces violaceoruber that perturbs bacterial cell-division septation,
+  peptidoglycan/cell-wall homeostasis, and covalent protein/amino-acid adducts via
+  its electrophilic para-quinone methide pharmacophore in Gram-positive bacteria including
+  MRSA (Funabashi et al. 2000, DOI:10.7164/antibiotics.53.199, PMID:10805582; Elnakady
+  et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26799212).'
+molecular_targets:
+- target_label: bacterial cell division and cell-wall homeostasis
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Proteomic, physiological, and ultrastructural profiling of
+    methicillin-resistant Staphylococcus aureus (MRSA) treated with kendomycin, demonstrating
+    aberrant septum formation and cell-division/cell-wall stress alongside Gram-positive
+    antibacterial susceptibility (Funabashi et al. 2000, DOI:10.7164/antibiotics.53.199,
+    PMID:10805582; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26799212).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2016-01
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1371/journal.pone.0146165
+    snippet: Elnakady et al. investigated the antibacterial mechanism of kendomycin
+      in methicillin-resistant Staphylococcus aureus (MRSA), showing disruption of
+      septum formation, cell division, and amino-acid/protein homeostasis.
+    notes: Elnakady et al. 2016 (PLoS One 11:e0146165; PMID:26799212) characterized
+      the antibacterial mode of action of kendomycin in MRSA, demonstrating cell-division
+      septation defects and polypharmacological proteome perturbation.
+  - reference: DOI:10.7164/antibiotics.53.199
+    notes: Funabashi et al. 2000 (J Antibiot 53:199-201; PMID:10805582) isolated kendomycin
+      (TAN-2162) from Streptomyces violaceoruber and reported its potent antibacterial
+      activity against Gram-positive and Gram-negative bacteria.

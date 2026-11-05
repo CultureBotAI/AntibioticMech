@@ -1,7 +1,7 @@
 identifier: CHEBI:198957
 label: micacocidin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A salicylate-derived thiazoline- and thiazolidine-containing polyketide-nonribosomal
   peptide antibiotic from Ralstonia solanacearum and Pseudomonas sp. No. 57-250 with
@@ -73,4 +73,54 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Kreutzer et al. 2014 (PMID:24202877)
     and Kreutzer et al. 2011 (PMID:21724891).
   llm_assisted: true
+- timestamp: '2026-11-04T23:10:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    protein biosynthesis and transition-metal homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+    backed by DOI:10.7164/antibiotics.51.323 (PMID:9589068) and DOI:10.7164/antibiotics.51.328
+    (issue #1321).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:198957) with complete 4/4 chemical_structure,
+    curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.7164/antibiotics.51.323, PMID:9589068; DOI:10.7164/antibiotics.51.328)
+    from PROPOSED to REVIEWED (issue #1321).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Thiazoline-containing siderophore-like polyketide-nonribosomal
+  peptide antibiotic from Ralstonia/Pseudomonas sp. that chelates divalent transition-metal
+  cations (Zn2+, Cu2+, Fe3+) and inhibits bacterial protein biosynthesis and transition-metal
+  homeostasis, with potent antimycoplasmal activity (Kobayashi et al. 1998, DOI:10.7164/antibiotics.51.323,
+  PMID:9589068; Ino et al. 1998, DOI:10.7164/antibiotics.51.328).'
+molecular_targets:
+- target_label: bacterial protein biosynthesis and transition-metal homeostasis
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Antimycoplasmal susceptibility and metal-complexation (Zn2+,
+    Cu2+, Fe3+) bioactivity profiling of micacocidin from Pseudomonas sp. No. 57-250
+    (Kobayashi et al. 1998, DOI:10.7164/antibiotics.51.323, PMID:9589068; Ino et al.
+    1998, DOI:10.7164/antibiotics.51.328).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1998-03
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.51.323
+    snippet: Kobayashi et al. isolated micacocidin from Pseudomonas sp. No. 57-250
+      as a metal-chelating thiazoline antibiotic exhibiting potent and selective antibacterial
+      activity against pathogenic Mycoplasma species.
+    notes: Kobayashi et al. 1998 (J Antibiot 51:323-327; PMID:9589068) discovered
+      micacocidin from Pseudomonas sp. No. 57-250 and characterized its potent antimycoplasmal
+      activity and Zn2+/Cu2+/Fe3+ complexation.
+  - reference: DOI:10.7164/antibiotics.51.328
+    notes: Ino et al. 1998 (J Antibiot 51:328-332) determined the planar and X-ray
+      crystal structure of micacocidin as a thiazoline-containing pentadentate metal-chelating
+      antibiotic.

@@ -1,7 +1,7 @@
 identifier: CHEBI:206910
 label: rustmicin
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 14-membered macrolide polyketide (galbonolide A) from Streptomyces galbus
   and Micromonospora species that inhibits fungal inositol phosphoceramide synthase
@@ -88,6 +88,16 @@ curation_history:
   changes: Added 2 reviewed UniProtKB protein_examples (P36107, O13332) to the primary-literature
     fungal inositol phosphorylceramide synthase (Aur1 / Ipc1) target on rustmicin
     (DOI:10.1074/jbc.273.24.14942).
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:206910) with complete 4/4 chemical_structure,
+    curated mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, MICROBIAL_TARGET),
+    and primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:P36107, UniProtKB:O13332; DOI:10.1074/jbc.273.24.14942, PMID:9614099;
+    DOI:10.7164/antibiotics.51.805, PMID:9820256) from PROPOSED to REVIEWED (issue
+    #1320).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION

@@ -1,7 +1,7 @@
 identifier: CHEBI:9200
 label: soraphen A
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An 18-membered phenyl-substituted macrocyclic lactone polyketide from
   Sorangium cellulosum that inhibits eukaryotic acetyl-CoA carboxylase with potent
@@ -87,6 +87,15 @@ curation_history:
   action: CURATED_UNIPROT_PROTEIN_EXAMPLES
   changes: Added 1 reviewed UniProtKB protein_example (Q00955) to the primary-literature
     eukaryotic acetyl-CoA carboxylase (Acc1) target on soraphen A (DOI:10.1126/science.1103399).
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:9200) with complete 4/4 chemical_structure,
+    curated mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, HOST_SHARED_TARGET),
+    and primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:Q00955; DOI:10.1126/science.1103399, PMID:15550663; DOI:10.1007/BF00315800,
+    PMID:7882429) from PROPOSED to REVIEWED (issue #1320).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION

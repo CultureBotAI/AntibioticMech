@@ -1,7 +1,7 @@
 identifier: CHEBI:219845
 label: taromycin A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A dichlorinated nonribosomal cyclic lipotridecadepsipeptide antibiotic
   from marine Saccharomonospora sp. CNQ-490 with calcium-dependent antibacterial activity
@@ -80,6 +80,14 @@ curation_history:
     cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT) backed by Yamanaka et al.
     2014 (DOI:10.1073/pnas.1319584111, PMID:24449899) and Reynolds et al. 2018 (DOI:10.1038/ja.2017.146,
     PMID:29184121).
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:219845) with complete 4/4 chemical_structure,
+    curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1073/pnas.1319584111, PMID:24449899; DOI:10.1021/acschembio.8b00509,
+    PMID:29969236) from PROPOSED to REVIEWED (issue #1320).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION

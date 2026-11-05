@@ -1,7 +1,7 @@
 identifier: CHEBI:3716
 label: cinoxacin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A member of the class of cinnolines that is 6,7-methylenedioxycinnolin-4(1H)-one
   bearing an ethyl group at position 1 and a carboxylic acid group at position 3.
@@ -116,6 +116,71 @@ molecular_targets:
   - reference: ARO:3003261
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3004010 (cinoxacin); database
       assertion, not a primary citation.
+- target_label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase
+    IV decatenation IC50 inhibition assays and GyrA/ParC QRDR mutant-panel susceptibility
+    profiling of cinoxacin and comparator quinolones (Gootz et al. 1990, DOI:10.1128/AAC.34.1.8,
+    PMID:2158274; Takei et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2001-12
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+    snippet: Takei et al. determined the inhibitory activities (IC50s) of quinolones
+      against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+      and correlated enzyme inhibition with MIC shifts across defined GyrA and ParC
+      QRDR mutants.
+    notes: Takei et al. 2001 (Antimicrob Agents Chemother 45:3544-3547; PMID:11709337)
+      characterized bacterial DNA gyrase and topoisomerase IV inhibition and GyrA/ParC
+      QRDR resistance shifts across quinolone antibacterials.
+  - reference: DOI:10.1128/AAC.34.1.8
+    notes: Gootz et al. 1990 (Antimicrob Agents Chemother 34:8-12; PMID:2158274) measured
+      direct inhibition of purified Escherichia coli DNA gyrase supercoiling and DNA
+      synthesis by cinoxacin and comparator quinolones.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AES4
+    protein_label: DNA gyrase subunit A
+    gene_symbol: gyrA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified
+      DNA supercoiling and QRDR mutant susceptibility assays by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P0AES6
+    protein_label: DNA gyrase subunit B
+    gene_symbol: gyrB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited
+      by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+  - uniprot_id: UniProtKB:P0AFI2
+    protein_label: DNA topoisomerase 4 subunit A
+    gene_symbol: parC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified
+      decatenation and QRDR mutant susceptibility assays by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+      PMID:11709337).
+  - uniprot_id: UniProtKB:P20083
+    protein_label: DNA topoisomerase 4 subunit B
+    gene_symbol: parE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-04'
+    role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2
+      holoenzyme inhibited by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -231,3 +296,37 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-11-04T23:10:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (SYNTHETIC), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337) and DOI:10.1128/AAC.34.1.8
+    (PMID:2158274; issue #1322).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:15:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 4 reviewed UniProtKB protein_examples (P0AES4, P0AES6, P0AFI2, P20083)
+    to the primary-literature DNA gyrase and topoisomerase IV target on cinoxacin
+    (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI quinolone record (CHEBI:3716) with complete 4/4 chemical_structure,
+    curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET),
+    and primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083; DOI:10.1128/AAC.45.12.3544-3547.2001,
+    PMID:11709337; DOI:10.1128/AAC.34.1.8, PMID:2158274) from SEEDED to REVIEWED (issue
+    #1322).'
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic first-generation cinnoline-3-carboxylic
+  acid quinolone-class antibacterial that inhibits bacterial DNA gyrase (GyrA/GyrB)
+  DNA supercoiling and topoisomerase IV (ParC/ParE) decatenation, arresting bacterial
+  DNA replication (Gootz et al. 1990, DOI:10.1128/AAC.34.1.8, PMID:2158274; Takei
+  et al. 2001, DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).'
