@@ -71,6 +71,13 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin and MEMBRANE_DISRUPTION (MICROBIAL_TARGET)
     mode_of_action from Li et al. 2018 (PMID:30115920).
   llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for Gram-negative bacterial
+    outer membrane lipopolysaccharide (CHEBI:16412, MEMBRANE, DIRECT_BINDING_TARGET)
+    backed by Li et al. 2018 (DOI:10.1038/s41467-018-05781-6, PMID:30115920).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -78,3 +85,29 @@ mode_of_action_notes: 'CURATOR: Cationic cyclic lipotridecadepsipeptide antibiot
   from Brevibacillus laterosporus that binds lipopolysaccharide (LPS) and disrupts
   the Gram-negative bacterial outer and cytoplasmic membranes (Li et al. 2018, DOI:10.1038/s41467-018-05781-6,
   PMID:30115920).'
+molecular_targets:
+- target_id: CHEBI:16412
+  target_label: Gram-negative bacterial outer membrane lipopolysaccharide
+  target_type: MEMBRANE
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Isothermal titration calorimetry, exogenous lipopolysaccharide
+    (LPS) antagonism, and membrane-permeabilization assays demonstrating high-affinity
+    binding of the cationic cyclic lipodepsipeptide laterocidine to Gram-negative
+    bacterial LPS (Li et al. 2018, DOI:10.1038/s41467-018-05781-6, PMID:30115920).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2018-08
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1038/s41467-018-05781-6
+    snippet: Li et al. demonstrated that laterocidine binds Gram-negative bacterial
+      lipopolysaccharide (LPS) with high affinity and exerts bactericidal activity
+      against multidrug-resistant Gram-negative pathogens including colistin-resistant
+      Escherichia coli.
+    notes: Li et al. 2018 (Nat Commun 9:3273; PMID:30115920) established direct binding
+      of laterocidine to Gram-negative outer membrane lipopolysaccharide (LPS).
+  - reference: PMID:30115920
+    notes: PubMed record for Li et al. 2018 on laterocidine discovery and LPS-binding
+      mechanism.

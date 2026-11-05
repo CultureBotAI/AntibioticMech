@@ -39,8 +39,8 @@ source_concepts:
       macrolide antibiotic nargenicin A1, which exhibits potent antibacterial activity
       against multidrug-resistant Staphylococcus aureus.
     notes: Reported by Pidot et al. 2019 (Angew Chem Int Ed Engl 58:3996-4001; PMID:30677204;
-      DOI:10.1002/anie.201900290), Painter et al. 2015 (Chem Biol 22:1362-1373; PMID:26478223;
-      DOI:10.1016/j.chembiol.2015.09.008), and Celmer et al. 1980 (J Am Chem Soc 102:4203-4209;
+      DOI:10.1002/anie.201900290), Painter et al. 2015 (Chem Biol 22:1362-1373; PMID:26456734;
+      DOI:10.1016/j.chembiol.2015.08.015), and Celmer et al. 1980 (J Am Chem Soc 102:4203-4209;
       DOI:10.1021/ja00532a040) as an oxa-bridged cis-decalin macrolide pyrrole-2-carboxylate
       antibiotic from Nocardia species that inhibits bacterial replicative DNA polymerase
       DnaE1 with potent bactericidal activity against Staphylococcus aureus. MIBiG
@@ -57,7 +57,22 @@ curation_history:
   action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
   changes: Curated NATURAL_PRODUCT biosynthesis_origin and NUCLEIC_ACID_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET) mode_of_action from Pidot et al. 2019 (PMID:30677204) and Painter
-    et al. 2015 (PMID:26478223).
+    et al. 2015 (PMID:26456734).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial replicative
+    DNA polymerase III alpha subunit (DnaE; GO:0003887, PROTEIN, DIRECT_BINDING_TARGET)
+    backed by Painter et al. 2015 (DOI:10.1016/j.chembiol.2015.08.015, PMID:26456734)
+    and Pidot et al. 2019 (DOI:10.1002/anie.201900290, PMID:30677204).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 1 reviewed UniProtKB protein_example (P10443) to the primary-literature
+    bacterial replicative DNA polymerase III alpha subunit (DnaE) target on nargenicin
+    A1 (DOI:10.1016/j.chembiol.2015.08.015).
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
@@ -65,5 +80,52 @@ mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Oxa-bridged octahydronaphthalene pyrrole-2-carboxylate
   macrolide antibiotic from Nocardia argentinensis that inhibits bacterial replicative
   DNA polymerase III alpha subunit DnaE1 and blocks bacterial DNA replication (Pidot
-  et al. 2019, DOI:10.1002/anie.201900290, PMID:30677204; Painter et al. 2015, DOI:10.1016/j.chembiol.2015.09.008,
-  PMID:26478223).'
+  et al. 2019, DOI:10.1002/anie.201900290, PMID:30677204; Painter et al. 2015, DOI:10.1016/j.chembiol.2015.08.015,
+  PMID:26456734).'
+molecular_targets:
+- target_id: GO:0003887
+  target_label: bacterial replicative DNA polymerase III alpha subunit (DnaE)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Spontaneous resistance selection in Staphylococcus aureus
+    mapping to dnaE, biochemical DNA polymerase III alpha subunit inhibition assays,
+    and ternary crystal structure of Escherichia coli DNA polymerase III alpha subunit
+    (DnaE) bound to nargenicin A1 and primer-template DNA (PDB:4ZWR) (Painter et al.
+    2015, DOI:10.1016/j.chembiol.2015.08.015, PMID:26456734; Pidot et al. 2019, DOI:10.1002/anie.201900290,
+    PMID:30677204).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2015-10
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2015.08.015
+    snippet: Painter et al. identified the replicative DNA polymerase III alpha subunit
+      DnaE as the antibacterial target of nargenicin in Staphylococcus aureus and
+      Escherichia coli and solved the ternary crystal structure of E. coli DnaE bound
+      to nargenicin and DNA.
+    notes: Painter et al. 2015 (Chem Biol 22:1362-1373; PMID:26456734; PDB:4ZWR) established
+      bacterial DNA polymerase III alpha subunit (DnaE) as the direct binding target
+      of nargenicin A1.
+  - reference: PMID:26456734
+    notes: PubMed record for Painter et al. 2015 elucidating DnaE as the antibacterial
+      target of nargenicin A1.
+  - reference: DOI:10.1002/anie.201900290
+    notes: Pidot et al. 2019 (Angew Chem Int Ed Engl 58:3996-4001; PMID:30677204)
+      characterized the Nocardia arthritidis nargenicin A1 biosynthetic gene cluster
+      and DnaE1-targeting anti-staphylococcal activity.
+  - reference: PMID:30677204
+    notes: PubMed record for Pidot et al. 2019 on nargenicin A1 biosynthesis and anti-MRSA
+      activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P10443
+    protein_label: DNA polymerase III subunit alpha
+    gene_symbol: dnaE
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Replicative DNA polymerase III alpha catalytic subunit DnaE of Escherichia
+      coli K-12 cocrystallized in a ternary complex with primer-template DNA and nargenicin
+      A1 (PDB:4ZWR; DOI:10.1016/j.chembiol.2015.08.015; PMID:26456734).

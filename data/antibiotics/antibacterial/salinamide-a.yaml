@@ -36,7 +36,7 @@ source_concepts:
       polymerase and exhibits antibacterial activity against Gram-positive and Gram-negative
       bacteria.
     notes: Reported by Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755;
-      DOI:10.1002/anie.201508576), Degen et al. 2014 (eLife 3:e02451; PMID:24843026;
+      DOI:10.1002/anie.201508576), Degen et al. 2014 (eLife 3:e02451; PMID:24843001;
       DOI:10.7554/eLife.02451), and Moore et al. 1999 (J Org Chem 64:1145-1150; PMID:11674169;
       DOI:10.1021/jo981406+) as an epoxide-containing bicyclic depsipeptide antibiotic
       from marine Streptomyces sp. CNB-091 that binds the bridge-helix cap of bacterial
@@ -73,7 +73,22 @@ curation_history:
   action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
   changes: Curated NATURAL_PRODUCT biosynthesis_origin and NUCLEIC_ACID_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET) mode_of_action from Ray et al. 2016 (PMID:26553755) and Degen
-    et al. 2014 (PMID:24843026).
+    et al. 2014 (PMID:24843001).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial DNA-directed
+    RNA polymerase bridge-helix cap (RpoB / RpoC; GO:0000428, PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by Degen et al. 2014 (DOI:10.7554/eLife.02451, PMID:24843001) and Ray et
+    al. 2016 (DOI:10.1002/anie.201508576, PMID:26553755).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature
+    bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC) target on
+    salinamide A (DOI:10.7554/eLife.02451).
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
@@ -81,4 +96,62 @@ mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Epoxide-containing bicyclic depsipeptide antibiotic
   from marine Streptomyces sp. CNB-091 that binds the bridge-helix cap of bacterial
   RNA polymerase and inhibits bacterial transcription (Ray et al. 2016, DOI:10.1002/anie.201508576,
-  PMID:26553755; Degen et al. 2014, DOI:10.7554/eLife.02451, PMID:24843026).'
+  PMID:26553755; Degen et al. 2014, DOI:10.7554/eLife.02451, PMID:24843001).'
+molecular_targets:
+- target_id: GO:0000428
+  target_label: bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: In vitro transcription inhibition assays, spontaneous resistance
+    mapping to rpoB and rpoC, and X-ray crystal structure of Escherichia coli DNA-directed
+    RNA polymerase holoenzyme bound to salinamide A at the bridge-helix cap (PDB:4MEX)
+    allosterically blocking nucleotide addition (Degen et al. 2014, DOI:10.7554/eLife.02451,
+    PMID:24843001; Ray et al. 2016, DOI:10.1002/anie.201508576, PMID:26553755).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2014-05
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.7554/eLife.02451
+    snippet: Degen et al. demonstrated that salinamide A inhibits bacterial RNA polymerase
+      in vitro and in vivo without cross-resistance to rifampin and determined the
+      crystal structure of Escherichia coli RNA polymerase bound to salinamide A at
+      the bridge-helix cap (PDB:4MEX).
+    notes: Degen et al. 2014 (eLife 3:e02451; PMID:24843001; PDB:4MEX) mapped the
+      salinamide A binding site to the RpoB/RpoC bridge-helix cap of Escherichia coli
+      DNA-directed RNA polymerase.
+  - reference: PMID:24843001
+    notes: PubMed record for Degen et al. 2014 on transcription inhibition and crystal
+      structure of E. coli RNA polymerase with salinamide A.
+  - reference: DOI:10.1002/anie.201508576
+    notes: Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755) characterized
+      biosynthesis of the salinamide A bicyclic depsipeptide core in Streptomyces
+      sp. CNB-091.
+  - reference: PMID:26553755
+    notes: PubMed record for Ray et al. 2016 on salinamide A biosynthesis and antibacterial
+      activity.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8V2
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB) forming
+      part of the bridge-helix cap binding site in the salinamide A cocrystal structure
+      (PDB:4MEX) and harboring resistance substitutions (DOI:10.7554/eLife.02451;
+      PMID:24843001).
+  - uniprot_id: UniProtKB:P0A8T7
+    protein_label: DNA-directed RNA polymerase subunit beta'
+    gene_symbol: rpoC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta' subunit (RpoC) whose
+      bridge-helix hinge and F-loop directly contact salinamide A in the cocrystal
+      structure (PDB:4MEX) to prevent active-center nucleotide addition (DOI:10.7554/eLife.02451;
+      PMID:24843001).

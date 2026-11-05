@@ -79,6 +79,14 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Ho et al. 2021 (PMID:33918939) and Muller
     et al. 2012 (PMID:22518842).
   llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial peptidoglycan
+    precursor lipid II (CHEBI:61384, CELL_WALL_COMPONENT, DIRECT_BINDING_TARGET) backed
+    by Muller et al. 2012 (DOI:10.1074/jbc.M112.369504, PMID:22518842) and Ho et al.
+    2021 (DOI:10.3390/md19040209, PMID:33918939).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -87,3 +95,36 @@ mode_of_action_notes: 'CURATOR: Calcium-dependent cyclic octadepsipeptide lipope
   precursor lipid II and inhibits Gram-positive bacterial cell-wall peptidoglycan
   biosynthesis (Ho et al. 2021, DOI:10.3390/md19040209, PMID:33918939; Muller et al.
   2012, DOI:10.1074/jbc.M112.369504, PMID:22518842).'
+molecular_targets:
+- target_id: CHEBI:61384
+  target_label: bacterial peptidoglycan precursor lipid II
+  target_type: CELL_WALL_COMPONENT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Ca2+-dependent isothermal titration calorimetry, thin-layer
+    chromatography, and in vitro peptidoglycan biosynthesis assays demonstrating 1:2
+    molar complexation of empedopeptin with undecaprenyl-pyrophosphoryl cell-wall
+    precursors, preferentially lipid II (Muller et al. 2012, DOI:10.1074/jbc.M112.369504,
+    PMID:22518842; Ho et al. 2021, DOI:10.3390/md19040209, PMID:33918939).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-06
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1074/jbc.M112.369504
+    snippet: Muller et al. demonstrated that the cyclic lipodepsipeptide antibiotic
+      empedopeptin blocks Gram-positive cell-wall biosynthesis by forming a Ca2+-dependent
+      complex with the pyrophosphate-sugar moiety of lipid II.
+    notes: Muller et al. 2012 (J Biol Chem 287:20270-20280; PMID:22518842) established
+      direct Ca2+-dependent binding of empedopeptin to peptidoglycan precursor lipid
+      II.
+  - reference: PMID:22518842
+    notes: PubMed record for Muller et al. 2012 on the lipid II-complexing mechanism
+      of action of empedopeptin.
+  - reference: DOI:10.3390/md19040209
+    notes: Ho et al. 2021 (Mar Drugs 19:209; PMID:33918939) characterized the empedopeptin
+      biosynthetic gene cluster and Ca2+-dependent anti-Gram-positive antibacterial
+      activity in Massilia sp. YMA4.
+  - reference: PMID:33918939
+    notes: PubMed record for Ho et al. 2021 on empedopeptin biosynthesis and activity.
