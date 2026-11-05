@@ -420,6 +420,13 @@ curation_history:
     DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue
     #1322).'
   llm_assisted: true
+- timestamp: '2026-11-05T09:12:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph sparfloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4,
+    UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -427,3 +434,111 @@ mode_of_action_notes: 'CURATOR: Synthetic C-5-amino-6,8-difluoroquinolone antibi
   that dually inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase
   IV (ParC/ParE) decatenation, arresting bacterial DNA replication (Takei et al. 2001,
   DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337).'
+causal_graphs:
+- graph_id: sparfloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+  title: Sparfloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest
+    bacterial DNA replication
+  description: Sparfloxacin, a synthetic 5-amino-6,8-difluoroquinolone antibacterial,
+    inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV
+    (ParC/ParE) chromosome decatenation, arresting bacterial DNA replication.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: sparfloxacin
+    label: sparfloxacin
+    node_type: COMPOUND
+    grounding: CHEBI:9212
+  - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+    label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      holoenzymes; kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4),
+      GyrB (UniProtKB:P0AES6), ParC (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083)
+      protein_examples.
+    gene_symbols:
+    - gyrA
+    - gyrB
+    - parC
+    - parE
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AES4
+      protein_label: DNA gyrase subunit A
+      gene_symbol: gyrA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified
+        DNA supercoiling and QRDR mutant susceptibility assays by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+        PMID:11709337).
+    - uniprot_id: UniProtKB:P0AES6
+      protein_label: DNA gyrase subunit B
+      gene_symbol: gyrB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme
+        inhibited by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - uniprot_id: UniProtKB:P0AFI2
+      protein_label: DNA topoisomerase 4 subunit A
+      gene_symbol: parC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in
+        purified decatenation and QRDR mutant susceptibility assays by sparfloxacin
+        (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - uniprot_id: UniProtKB:P20083
+      protein_label: DNA topoisomerase 4 subunit B
+      gene_symbol: parE
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2
+        holoenzyme inhibited by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+        PMID:11709337).
+  - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase
+      IV decatenation catalytic activities inhibited by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  - node_id: bacterial_dna_replication
+    label: bacterial DNA replication
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0006260
+  edges:
+  - subject: sparfloxacin
+    predicate: inhibits
+    object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    description: Sparfloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase
+      IV decatenation activity.
+    evidence:
+    - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+      notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities
+        of sparfloxacin against purified bacterial DNA gyrase supercoiling and topoisomerase
+        IV decatenation and correlated enzyme inhibition with MIC shifts across defined
+        GyrA and ParC QRDR mutants.
+  - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+    predicate: enables
+    object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      catalyze negative DNA supercoiling and chromosome decatenation.
+    evidence:
+    - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+      notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed
+        the DNA supercoiling and decatenation reactions assayed with sparfloxacin
+        (PMID:11709337).
+  - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+    predicate: supports
+    object: bacterial_dna_replication
+    description: DNA gyrase supercoiling and topoisomerase IV decatenation are required
+      for bacterial DNA replication.
+    evidence:
+    - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+      notes: Inhibition of DNA gyrase and topoisomerase IV by sparfloxacin arrested
+        bacterial replication and growth, with GyrA and ParC QRDR mutations shifting
+        whole-cell susceptibility (PMID:11709337).

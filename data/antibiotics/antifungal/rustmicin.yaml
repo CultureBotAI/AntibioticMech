@@ -98,6 +98,13 @@ curation_history:
     (UniProtKB:P36107, UniProtKB:O13332; DOI:10.1074/jbc.273.24.14942, PMID:9614099)
     from PROPOSED to REVIEWED (issue #1320).'
   llm_assisted: true
+- timestamp: '2026-11-05T09:12:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph rustmicin_aur1_ipc_synthase_sphingolipid_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P36107,
+    UniProtKB:O13332) and primary literature (DOI:10.1074/jbc.273.24.14942).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -157,3 +164,90 @@ molecular_targets:
     role: Reference-proteome Candida albicans SC5314 inositol phosphorylceramide synthase
       Aur1 (EC 2.7.8.27) directly inhibited by rustmicin in fungal sphingolipid biosynthesis
       assays (DOI:10.1074/jbc.273.24.14942; PMID:9614099).
+causal_graphs:
+- graph_id: rustmicin_aur1_ipc_synthase_sphingolipid_inhibition
+  title: Rustmicin inhibits fungal inositol phosphorylceramide synthase (Aur1/Ipc1)
+    to block sphingolipid biosynthesis
+  description: Rustmicin (galbonolide A), a 14-membered macrolide antifungal, potently
+    inhibits fungal inositol phosphorylceramide (IPC) synthase encoded by AUR1/IPC1
+    at subnanomolar concentrations, blocking phosphoinositol transfer from phosphatidylinositol
+    to phytoceramide and depleting fungal sphingolipids.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: rustmicin
+    label: rustmicin
+    node_type: COMPOUND
+    grounding: CHEBI:206910
+  - node_id: fungal_ipc_synthase_aur1
+    label: fungal inositol phosphorylceramide synthase (Aur1 / Ipc1)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal inositol phosphorylceramide synthase catalytic subunit
+      (Aur1/Ipc1, EC 2.7.8.27); kept label-only with Saccharomyces cerevisiae S288c
+      Aur1 (UniProtKB:P36107) and Candida albicans SC5314 Aur1 (UniProtKB:O13332)
+      protein_examples.
+    gene_symbols:
+    - AUR1
+    protein_examples:
+    - uniprot_id: UniProtKB:P36107
+      protein_label: Inositol phosphorylceramide synthase catalytic subunit AUR1
+      gene_symbol: AUR1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Reference-proteome Saccharomyces cerevisiae S288c inositol phosphorylceramide
+        synthase catalytic subunit Aur1 (IPC1, EC 2.7.8.27) directly inhibited by
+        rustmicin in fungal IPC synthase assays (DOI:10.1074/jbc.273.24.14942; PMID:9614099).
+    - uniprot_id: UniProtKB:O13332
+      protein_label: Inositol phosphorylceramide synthase
+      gene_symbol: AUR1
+      taxon_id: NCBITaxon:237561
+      taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Reference-proteome Candida albicans SC5314 inositol phosphorylceramide
+        synthase Aur1 (EC 2.7.8.27) directly inhibited by rustmicin in fungal sphingolipid
+        biosynthesis assays (DOI:10.1074/jbc.273.24.14942; PMID:9614099).
+  - node_id: ipc_synthase_phosphoinositol_transfer_activity
+    label: Aur1/Ipc1-catalyzed inositol phosphorylceramide synthesis activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Transfer of phosphoinositol from phosphatidylinositol to ceramide
+      to form inositol phosphorylceramide (IPC) catalyzed by fungal Aur1/Ipc1 and
+      inhibited by rustmicin (DOI:10.1074/jbc.273.24.14942).
+  - node_id: fungal_sphingolipid_biosynthesis
+    label: fungal inositol phosphorylceramide sphingolipid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal sphingolipid biosynthesis dependent on inositol phosphorylceramide
+      (IPC) formation and blocked by rustmicin (DOI:10.1074/jbc.273.24.14942).
+  edges:
+  - subject: rustmicin
+    predicate: inhibits
+    object: ipc_synthase_phosphoinositol_transfer_activity
+    description: Rustmicin potently inhibits fungal inositol phosphorylceramide (IPC)
+      synthase (Aur1/Ipc1) activity at subnanomolar concentrations.
+    evidence:
+    - reference: DOI:10.1074/jbc.273.24.14942
+      notes: Mandala et al. 1998 (PMID:9614099) demonstrated that rustmicin inhibits
+        fungal inositol phosphorylceramide synthase in Saccharomyces cerevisiae, Candida
+        albicans (IC50 = 0.4 nM), and Cryptococcus neoformans (IC50 = 0.07 nM).
+  - subject: fungal_ipc_synthase_aur1
+    predicate: enables
+    object: ipc_synthase_phosphoinositol_transfer_activity
+    description: Fungal inositol phosphorylceramide synthase (Aur1/Ipc1) catalyzes
+      transfer of phosphoinositol from phosphatidylinositol to phytoceramide.
+    evidence:
+    - reference: DOI:10.1074/jbc.273.24.14942
+      notes: Microsomal membranes from S. cerevisiae, C. albicans, and C. neoformans
+        expressing AUR1/IPC1 catalyzed IPC formation in vitro (PMID:9614099).
+  - subject: ipc_synthase_phosphoinositol_transfer_activity
+    predicate: supports
+    object: fungal_sphingolipid_biosynthesis
+    description: Inositol phosphorylceramide synthase activity commits ceramide to
+      fungal sphingolipid biosynthesis.
+    evidence:
+    - reference: DOI:10.1074/jbc.273.24.14942
+      notes: Inhibition of IPC synthase by rustmicin blocked cellular sphingolipid
+        synthesis, caused ceramide accumulation, and arrested fungal growth (PMID:9614099).

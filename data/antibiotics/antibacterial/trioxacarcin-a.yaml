@@ -75,3 +75,17 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and NUCLEIC_ACID_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Hou et al. 2018 (PMID:30151879) and Maskey
+    et al. 2004 (PMID:15745112).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Spiro-epoxide anthraquinone-gamma-pyrone diglycoside
+  polyketide antibiotic from Streptomyces bottropensis DO-45 that intercalates duplex
+  DNA and covalently alkylates guanosine residues (Hou et al. 2018, DOI:10.1002/anie.201806729,
+  PMID:30151879; Maskey et al. 2004, DOI:10.1038/ja.2004.100, PMID:15745112).'

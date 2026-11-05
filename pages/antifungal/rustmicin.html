@@ -160,6 +160,76 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Rustmicin inhibits fungal inositol phosphorylceramide synthase (Aur1/Ipc1) to block sphingolipid biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Rustmicin (galbonolide A), a 14-membered macrolide antifungal, potently inhibits fungal inositol phosphorylceramide (IPC) synthase encoded by AUR1/IPC1 at subnanomolar concentrations, blocking phosphoinositol transfer from phosphatidylinositol to phytoceramide and depleting fungal sphingolipids.</p><div class="table-scroll" role="region" aria-label="Nodes: rustmicin_aur1_ipc_synthase_sphingolipid_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — rustmicin_aur1_ipc_synthase_sphingolipid_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">rustmicin</code></td>
+    <td>rustmicin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/rustmicin.html"><code class="curie">CHEBI:206910</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_ipc_synthase_aur1</code></td>
+    <td>fungal inositol phosphorylceramide synthase (Aur1 / Ipc1)<br><span class="meta">Examples: Inositol phosphorylceramide synthase catalytic subunit AUR1 (AUR1) <a href="https://www.uniprot.org/uniprotkb/P36107"><code class="curie">UniProtKB:P36107</code></a>, <em>Saccharomyces cerevisiae (strain ATCC 204508 / S288c)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_559292"><code class="curie">NCBITaxon:559292</code></a> <span class="pill">REVIEWED</span> — Reference-proteome Saccharomyces cerevisiae S288c inositol phosphorylceramide synthase catalytic subunit Aur1 (IPC1, EC 2.7.8.27) directly inhibited by rustmicin in fungal IPC synthase assays (DOI:10.1074/jbc.273.24.14942; PMID:9614099).; Inositol phosphorylceramide synthase (AUR1) <a href="https://www.uniprot.org/uniprotkb/O13332"><code class="curie">UniProtKB:O13332</code></a>, <em>Candida albicans (strain SC5314 / ATCC MYA-2876)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_237561"><code class="curie">NCBITaxon:237561</code></a> <span class="pill">REVIEWED</span> — Reference-proteome Candida albicans SC5314 inositol phosphorylceramide synthase Aur1 (EC 2.7.8.27) directly inhibited by rustmicin in fungal sphingolipid biosynthesis assays (DOI:10.1074/jbc.273.24.14942; PMID:9614099).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">ipc_synthase_phosphoinositol_transfer_activity</code></td>
+    <td>Aur1/Ipc1-catalyzed inositol phosphorylceramide synthesis activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_sphingolipid_biosynthesis</code></td>
+    <td>fungal inositol phosphorylceramide sphingolipid biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: rustmicin_aur1_ipc_synthase_sphingolipid_inhibition" tabindex="0">
+<table>
+  <caption>Edges — rustmicin_aur1_ipc_synthase_sphingolipid_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">rustmicin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">ipc_synthase_phosphoinositol_transfer_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1074/jbc.273.24.14942">DOI:10.1074/jbc.273.24.14942</a></span> <span class="meta">(Mandala et al. 1998 (PMID:9614099) demonstrated that rustmicin inhibits fungal inositol phosphorylceramide synthase in Saccharomyces cerevisiae, Candida albicans (IC50 = 0.4 nM), and Cryptococcus neoformans (IC50 = 0.07 nM).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_ipc_synthase_aur1</code></td>
+    <td>enables</td>
+    <td><code class="curie">ipc_synthase_phosphoinositol_transfer_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1074/jbc.273.24.14942">DOI:10.1074/jbc.273.24.14942</a></span> <span class="meta">(Microsomal membranes from S. cerevisiae, C. albicans, and C. neoformans expressing AUR1/IPC1 catalyzed IPC formation in vitro (PMID:9614099).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">ipc_synthase_phosphoinositol_transfer_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">fungal_sphingolipid_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1074/jbc.273.24.14942">DOI:10.1074/jbc.273.24.14942</a></span> <span class="meta">(Inhibition of IPC synthase by rustmicin blocked cellular sphingolipid synthesis, caused ceramide accumulation, and arrested fungal growth (PMID:9614099).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -191,6 +261,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-11-04 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI record (CHEBI:206910) with complete 4/4 chemical_structure, curated mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332; DOI:10.1074/jbc.273.24.14942, PMID:9614099) from PROPOSED to REVIEWED (issue #1320).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-05 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph rustmicin_aur1_ipc_synthase_sphingolipid_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332) and primary literature (DOI:10.1074/jbc.273.24.14942).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -211,7 +286,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>8fdf36f6d2fe</code>, 3086 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>13f86fecf11a</code>, 3086 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

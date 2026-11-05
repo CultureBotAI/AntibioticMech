@@ -37,11 +37,11 @@ def load_transition() -> dict:
 def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
     accounting = verify_reviewed_causal_graphs_accounting(records)
     assert accounting == {
-        "total_causal_graph_records": 75,
+        "total_causal_graph_records": 83,
         "reviewed_total": 127,
         "reviewed_existing_graphs": 15,
-        "reviewed_curated_graphs": 59,
-        "reviewed_held": 53,
+        "reviewed_curated_graphs": 67,
+        "reviewed_held": 45,
         "seeded_existing_graphs": 1,
     }
 
@@ -73,7 +73,7 @@ def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
                         assert ev.get("snippet") or ev.get("notes"), (
                             f"{path}: expected snippet or notes on edge citation {ref}"
                         )
-    assert scored_curated == 59
+    assert scored_curated == 67
 
     records_with_stale_uid = [
         (
@@ -99,19 +99,19 @@ def test_reviewed_causal_graphs_accounting_and_quality_scores(records):
 def test_plan_and_transition_summary_counts():
     plan = load_causal_graphs_plan(DEFAULT_PLAN_PATH)
     receipt = load_transition()
-    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 59
-    assert sum(d["graphs_added"] for d in receipt["record_deltas"]) == 60
-    assert sum(d["nodes_added"] for d in receipt["record_deltas"]) == 240
-    assert sum(d["edges_added"] for d in receipt["record_deltas"]) == 181
+    assert len(plan["records"]) == receipt["record_count"] == len(receipt["record_deltas"]) == 67
+    assert sum(d["graphs_added"] for d in receipt["record_deltas"]) == 68
+    assert sum(d["nodes_added"] for d in receipt["record_deltas"]) == 272
+    assert sum(d["edges_added"] for d in receipt["record_deltas"]) == 205
     assert len(plan["existing_causal_graphs"]) == 16
-    assert len(plan["held_records"]) == 53
+    assert len(plan["held_records"]) == 45
 
     cohort_counts: dict[str, int] = {}
     for entry in plan["records"]:
         cohort = entry["cohort"]
         cohort_counts[cohort] = cohort_counts.get(cohort, 0) + 1
     assert cohort_counts == {
-        "protein_target_with_examples": 40,
+        "protein_target_with_examples": 48,
         "non_protein_direct_or_measured_target": 19,
     }
 
@@ -452,7 +452,7 @@ def test_apply_causal_graphs_plan_dry_run_does_not_mutate(pre_causal_graphs_root
     assert not receipt_out.exists()
 
 
-@pytest.mark.parametrize("index", range(59))
+@pytest.mark.parametrize("index", range(67))
 def test_exact_scoped_transition_and_idempotence(
     pre_stage5_remediation_root, pre_causal_graphs_root, index
 ):

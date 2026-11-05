@@ -156,6 +156,77 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Soraphen A binds the eukaryotic acetyl-CoA carboxylase (Acc1) biotin carboxylase domain to block oligomerization and fungal fatty acid biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Soraphen A, a myxobacterial 18-membered polyketide macrolide antifungal, binds with nanomolar affinity to the allosteric pocket of the fungal acetyl-CoA carboxylase (Acc1) biotin carboxylase (BC) domain, disrupting BC domain dimerization, inhibiting acetyl-CoA carboxylation to malonyl-CoA, and arresting fungal de novo fatty acid biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">soraphen_a</code></td>
+    <td>soraphen A</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antifungal/soraphen-a.html"><code class="curie">CHEBI:9200</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">eukaryotic_acetyl_coa_carboxylase_acc1</code></td>
+    <td>eukaryotic acetyl-CoA carboxylase (Acc1)<br><span class="meta">Examples: Acetyl-CoA carboxylase (ACC1) <a href="https://www.uniprot.org/uniprotkb/Q00955"><code class="curie">UniProtKB:Q00955</code></a>, <em>Saccharomyces cerevisiae (strain ATCC 204508 / S288c)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_559292"><code class="curie">NCBITaxon:559292</code></a> <span class="pill">REVIEWED</span> — Saccharomyces cerevisiae S288c acetyl-CoA carboxylase Acc1 (EC 6.4.1.2) whose biotin carboxylase (BC) domain was cocrystallized at 2.1 Angstrom with soraphen A (PDB:1W96; Kd ~ 1 nM), demonstrating allosteric prevention of BC domain dimerization (DOI:10.1126/science.1103399; PMID:15550663).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">acc1_biotin_carboxylase_dimerization_and_carboxylation_activity</code></td>
+    <td>Acc1 biotin carboxylase domain dimerization and acetyl-CoA carboxylation activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">fungal_de_novo_fatty_acid_biosynthesis</code></td>
+    <td>fungal de novo fatty acid biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition" tabindex="0">
+<table>
+  <caption>Edges — soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">soraphen_a</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">acc1_biotin_carboxylase_dimerization_and_carboxylation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1126/science.1103399">DOI:10.1126/science.1103399</a></span> <span class="meta">(Shen et al. 2004 (PMID:15550663) solved the 2.1-angstrom crystal structure of the Saccharomyces cerevisiae Acc1 biotin carboxylase domain in complex with soraphen A (PDB:1W96; Kd ~ 1 nM) and showed allosteric disruption of BC domain dimerization.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.47.23">DOI:10.7164/antibiotics.47.23</a></span> <span class="meta">(Gerth et al. 1994 (PMID:8119858) demonstrated that soraphen A specifically inhibits eukaryotic acetyl-CoA carboxylase.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">eukaryotic_acetyl_coa_carboxylase_acc1</code></td>
+    <td>enables</td>
+    <td><code class="curie">acc1_biotin_carboxylase_dimerization_and_carboxylation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1126/science.1103399">DOI:10.1126/science.1103399</a></span> <span class="meta">(Dimerization of the Saccharomyces cerevisiae Acc1 biotin carboxylase domain is required for catalytic acetyl-CoA carboxylation activity, and mutations in the soraphen A binding site abolish sensitivity (PMID:15550663).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">acc1_biotin_carboxylase_dimerization_and_carboxylation_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">fungal_de_novo_fatty_acid_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.47.23">DOI:10.7164/antibiotics.47.23</a></span> <span class="meta">(Inhibition of eukaryotic acetyl-CoA carboxylase by soraphen A blocked de novo fatty acid biosynthesis and arrested fungal growth (PMID:8119858).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -187,6 +258,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-11-04 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI record (CHEBI:9200) with complete 4/4 chemical_structure, curated mode_of_action (CELL_MEMBRANE_SYNTHESIS_INHIBITION, HOST_SHARED_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:Q00955; DOI:10.1126/science.1103399, PMID:15550663; DOI:10.7164/antibiotics.47.23, PMID:8119858) from PROPOSED to REVIEWED (issue #1320).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-05 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q00955) and primary literature (DOI:10.1126/science.1103399, DOI:10.7164/antibiotics.47.23).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -207,7 +283,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>8fdf36f6d2fe</code>, 3086 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>13f86fecf11a</code>, 3086 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

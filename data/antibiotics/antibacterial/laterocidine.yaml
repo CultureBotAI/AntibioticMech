@@ -65,3 +65,16 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and MEMBRANE_DISRUPTION (MICROBIAL_TARGET)
+    mode_of_action from Li et al. 2018 (PMID:30115920).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Cationic cyclic lipotridecadepsipeptide antibiotic
+  from Brevibacillus laterosporus that binds lipopolysaccharide (LPS) and disrupts
+  the Gram-negative bacterial outer and cytoplasmic membranes (Li et al. 2018, DOI:10.1038/s41467-018-05781-6,
+  PMID:30115920).'

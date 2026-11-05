@@ -97,6 +97,13 @@ curation_history:
     (UniProtKB:Q00955; DOI:10.1126/science.1103399, PMID:15550663; DOI:10.7164/antibiotics.47.23,
     PMID:8119858) from PROPOSED to REVIEWED (issue #1320).'
   llm_assisted: true
+- timestamp: '2026-11-05T09:12:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q00955)
+    and primary literature (DOI:10.1126/science.1103399, DOI:10.7164/antibiotics.47.23).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: CELL_MEMBRANE_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: HOST_SHARED_TARGET
@@ -153,3 +160,89 @@ molecular_targets:
       whose biotin carboxylase (BC) domain was cocrystallized at 2.1 Angstrom with
       soraphen A (PDB:1W96; Kd ~ 1 nM), demonstrating allosteric prevention of BC
       domain dimerization (DOI:10.1126/science.1103399; PMID:15550663).
+causal_graphs:
+- graph_id: soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition
+  title: Soraphen A binds the eukaryotic acetyl-CoA carboxylase (Acc1) biotin carboxylase
+    domain to block oligomerization and fungal fatty acid biosynthesis
+  description: Soraphen A, a myxobacterial 18-membered polyketide macrolide antifungal,
+    binds with nanomolar affinity to the allosteric pocket of the fungal acetyl-CoA
+    carboxylase (Acc1) biotin carboxylase (BC) domain, disrupting BC domain dimerization,
+    inhibiting acetyl-CoA carboxylation to malonyl-CoA, and arresting fungal de novo
+    fatty acid biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: soraphen_a
+    label: soraphen A
+    node_type: COMPOUND
+    grounding: CHEBI:9200
+  - node_id: eukaryotic_acetyl_coa_carboxylase_acc1
+    label: eukaryotic acetyl-CoA carboxylase (Acc1)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal/eukaryotic acetyl-CoA carboxylase (Acc1, EC 6.4.1.2);
+      kept label-only with Saccharomyces cerevisiae S288c Acc1 (UniProtKB:Q00955)
+      protein_example.
+    gene_symbols:
+    - ACC1
+    protein_examples:
+    - uniprot_id: UniProtKB:Q00955
+      protein_label: Acetyl-CoA carboxylase
+      gene_symbol: ACC1
+      taxon_id: NCBITaxon:559292
+      taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      role: Saccharomyces cerevisiae S288c acetyl-CoA carboxylase Acc1 (EC 6.4.1.2)
+        whose biotin carboxylase (BC) domain was cocrystallized at 2.1 Angstrom with
+        soraphen A (PDB:1W96; Kd ~ 1 nM), demonstrating allosteric prevention of BC
+        domain dimerization (DOI:10.1126/science.1103399; PMID:15550663).
+  - node_id: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+    label: Acc1 biotin carboxylase domain dimerization and acetyl-CoA carboxylation
+      activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Biotin carboxylase (BC) domain dimerization and ATP-dependent
+      carboxylation of acetyl-CoA to malonyl-CoA catalyzed by fungal acetyl-CoA carboxylase
+      (Acc1) and allosterically inhibited by soraphen A (DOI:10.1126/science.1103399;
+      DOI:10.7164/antibiotics.47.23).
+  - node_id: fungal_de_novo_fatty_acid_biosynthesis
+    label: fungal de novo fatty acid biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Fungal de novo fatty acid biosynthesis dependent on malonyl-CoA
+      formation by Acc1 and blocked by soraphen A (DOI:10.1126/science.1103399; DOI:10.7164/antibiotics.47.23).
+  edges:
+  - subject: soraphen_a
+    predicate: inhibits
+    object: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+    description: Soraphen A binds the allosteric pocket of the Acc1 biotin carboxylase
+      domain and blocks BC dimerization and catalytic activity.
+    evidence:
+    - reference: DOI:10.1126/science.1103399
+      notes: Shen et al. 2004 (PMID:15550663) solved the 2.1-angstrom crystal structure
+        of the Saccharomyces cerevisiae Acc1 biotin carboxylase domain in complex
+        with soraphen A (PDB:1W96; Kd ~ 1 nM) and showed allosteric disruption of
+        BC domain dimerization.
+    - reference: DOI:10.7164/antibiotics.47.23
+      notes: Gerth et al. 1994 (PMID:8119858) demonstrated that soraphen A specifically
+        inhibits eukaryotic acetyl-CoA carboxylase.
+  - subject: eukaryotic_acetyl_coa_carboxylase_acc1
+    predicate: enables
+    object: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+    description: Eukaryotic acetyl-CoA carboxylase (Acc1) catalyzes biotin-dependent
+      carboxylation of acetyl-CoA to malonyl-CoA via its dimeric biotin carboxylase
+      domain.
+    evidence:
+    - reference: DOI:10.1126/science.1103399
+      notes: Dimerization of the Saccharomyces cerevisiae Acc1 biotin carboxylase
+        domain is required for catalytic acetyl-CoA carboxylation activity, and mutations
+        in the soraphen A binding site abolish sensitivity (PMID:15550663).
+  - subject: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+    predicate: supports
+    object: fungal_de_novo_fatty_acid_biosynthesis
+    description: Acc1-catalyzed carboxylation of acetyl-CoA to malonyl-CoA is the
+      committed step supporting fungal de novo fatty acid biosynthesis.
+    evidence:
+    - reference: DOI:10.7164/antibiotics.47.23
+      notes: Inhibition of eukaryotic acetyl-CoA carboxylase by soraphen A blocked
+        de novo fatty acid biosynthesis and arrested fungal growth (PMID:8119858).
