@@ -1,7 +1,7 @@
 identifier: CHEBI:219296
 label: laterocidine
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A cationic nonribosomal cyclic lipotridecadepsipeptide antibiotic from
   Brevibacillus laterosporus that binds lipopolysaccharide with bactericidal activity
@@ -77,6 +77,14 @@ curation_history:
   changes: Added primary-literature molecular_targets entry for Gram-negative bacterial
     outer membrane lipopolysaccharide (CHEBI:16412, MEMBRANE, DIRECT_BINDING_TARGET)
     backed by Li et al. 2018 (DOI:10.1038/s41467-018-05781-6, PMID:30115920).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:219296) with complete 4/4 chemical_structure,
+    curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1038/s41467-018-05781-6, PMID:30115920) from PROPOSED
+    to REVIEWED (issue #1333).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION

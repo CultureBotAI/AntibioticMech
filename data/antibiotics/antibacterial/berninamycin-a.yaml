@@ -1,7 +1,7 @@
 identifier: CHEBI:199044
 label: berninamycin A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 35-membered pyridyl-polyazole macrocyclic thiopeptide antibiotic from
   Streptomyces bernensis and Streptomyces sp. SCSIO 11878 that inhibits 50S ribosomal
@@ -80,6 +80,14 @@ curation_history:
     subunit (GO:0015934, RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by Reusser
     1969 (DOI:10.1021/bi00836a026, PMID:4897214) and De et al. 2021 (DOI:10.1039/d1ob01759d,
     PMID:34617948).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:199044) with complete 4/4 chemical_structure,
+    curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1021/bi00836a026, PMID:4897214; DOI:10.1039/d1ob01759d,
+    PMID:34617948) from PROPOSED to REVIEWED (issue #1333).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION

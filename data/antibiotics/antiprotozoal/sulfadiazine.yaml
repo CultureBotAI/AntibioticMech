@@ -1,7 +1,7 @@
 identifier: CHEBI:9328
 label: sulfadiazine
 antimicrobial_class: ANTIPROTOZOAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A sulfonamide consisting of pyrimidine with a 4-aminobenzenesulfonamido
   group at the 2-position.
@@ -56,10 +56,12 @@ activity_roles:
 structural_class: sulfonamide antibiotic
 structural_class_id: ARO:3000282
 mode_of_action: FOLATE_PATHWAY_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate
-  synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target
-  specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's
-  mechanistic review.
+mode_of_action_notes: 'CURATOR: Synthetic para-aminobenzenesulfonamide antimicrobial
+  (sulfadiazine) that acts as a competitive structural analog of para-aminobenzoic
+  acid (PABA) at the active site of bacterial dihydropteroate synthase (FolP / DHPS,
+  EC 2.5.1.15), forming dead-end pterin-sulfa adducts and blocking de novo dihydropteroate
+  and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195,
+  PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).'
 mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: Nc1ccc(S(=O)(=O)Nc2ncccn2)cc1
@@ -161,6 +163,47 @@ molecular_targets:
   - reference: ARO:3000744
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000324 (sulfadiazine); database
       assertion, not a primary citation.
+- target_id: GO:0004156
+  target_label: bacterial dihydropteroate synthase (FolP / DHPS)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified Escherichia coli dihydropteroate synthase (FolP /
+    DHPS) cell-free enzyme inhibition (I50) and PABA competitive kinetics alongside
+    structural and biochemical characterization of pterin-sulfonamide dead-end adduct
+    formation in bacterial DHPS for sulfadiazine and comparator sulfonamides (Roland
+    et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641,
+    PMID:22383845).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-03
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1128/AAC.15.2.195
+    snippet: Roland et al. quantified the cell-free inhibition (I50) of purified Escherichia
+      coli dihydropteroate synthase by 27 sulfonamides and correlated competitive
+      DHPS enzyme inhibition with whole-cell antibacterial MICs.
+    notes: Roland et al. 1979 (Antimicrob Agents Chemother 15:195-197; PMID:378102)
+      measured direct inhibition of purified Escherichia coli dihydropteroate synthase
+      (FolP / DHPS) by sulfadiazine and comparator sulfonamides.
+  - reference: DOI:10.1126/science.1214641
+    notes: Yun et al. 2012 (Science 335:1110-1114; PMID:22383845) resolved the structural
+      and catalytic mechanism of sulfonamide binding at the PABA site of bacterial
+      dihydropteroate synthase (DHPS / FolP), demonstrating pterin-sulfa adduct catalysis
+      and sulfonamide-resistance loop mutations.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0AC13
+    protein_label: Dihydropteroate synthase
+    gene_symbol: folP
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively
+      inhibited at the para-aminobenzoic acid (PABA) active site by sulfadiazine in
+      purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195,
+      PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).
 clinical_status: APPROVED
 clinical_status_assertions:
 - status: APPROVED
@@ -276,3 +319,30 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-11-05T21:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action_notes
+    (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets
+    entry for bacterial dihydropteroate synthase (FolP / DHPS) (GO:0004156, PROTEIN,
+    DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.15.2.195 (PMID:378102) and DOI:10.1126/science.1214641
+    (PMID:22383845; issue #1335).'
+  llm_assisted: true
+- timestamp: '2026-11-05T21:30:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example
+    (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase
+    target on sulfadiazine (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
+    PMID:22383845).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI sulfonamide record (CHEBI:9328) with complete 4/4
+    chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET),
+    and primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
+    PMID:22383845) from SEEDED to REVIEWED (issue #1335).'
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC

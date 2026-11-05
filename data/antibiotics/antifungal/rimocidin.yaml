@@ -1,7 +1,7 @@
 identifier: CHEBI:80106
 label: rimocidin
 antimicrobial_class: ANTIFUNGAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A mycosamine-glycosylated 28-membered tetraene macrolide polyketide from
   Streptomyces rimosus with broad-spectrum antifungal activity.
@@ -79,6 +79,14 @@ curation_history:
   changes: Added primary-literature molecular_targets entry for fungal membrane ergosterol
     (CHEBI:16933, MEMBRANE, DIRECT_BINDING_TARGET) backed by Seco et al. 2004 (DOI:10.1016/j.chembiol.2004.02.017,
     PMID:15031268) and Liao et al. 2020 (DOI:10.1007/s00253-020-10955-8, PMID:33057790).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:80106) with complete 4/4 chemical_structure,
+    curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1016/j.chembiol.2004.02.017, PMID:15031268; DOI:10.1007/s00253-020-10955-8,
+    PMID:33057790) from PROPOSED to REVIEWED (issue #1333).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION

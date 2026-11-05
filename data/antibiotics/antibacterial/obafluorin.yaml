@@ -1,7 +1,7 @@
 identifier: CHEBI:199965
 label: obafluorin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 2,3-dihydroxybenzoyl-derived beta-lactone nonribosomal peptide antibiotic
   from Pseudomonas fluorescens that covalently inhibits bacterial threonyl-tRNA synthetase.
@@ -87,6 +87,15 @@ curation_history:
   action: CURATED_UNIPROT_PROTEIN_EXAMPLES
   changes: Added 1 reviewed UniProtKB protein_example (P0A8M3) to the primary-literature
     bacterial threonyl-tRNA synthetase (ThrRS / ThrS) target on obafluorin (DOI:10.1038/nchembio.2374).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:199965) with complete 4/4 chemical_structure,
+    curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8M3;
+    DOI:10.1038/nchembio.2374, PMID:28504677; DOI:10.1021/acschembio.9b00590, PMID:31675206)
+    from PROPOSED to REVIEWED (issue #1333).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
