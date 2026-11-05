@@ -72,3 +72,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and CELL_WALL_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Ho et al. 2021 (PMID:33918939) and Muller
+    et al. 2012 (PMID:22518842).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Calcium-dependent cyclic octadepsipeptide lipopeptide
+  antibiotic from Empedobacter haloabium ATCC 31962 that forms a complex with peptidoglycan
+  precursor lipid II and inhibits Gram-positive bacterial cell-wall peptidoglycan
+  biosynthesis (Ho et al. 2021, DOI:10.3390/md19040209, PMID:33918939; Muller et al.
+  2012, DOI:10.1074/jbc.M112.369504, PMID:22518842).'

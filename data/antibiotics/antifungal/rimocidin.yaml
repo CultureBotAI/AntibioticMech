@@ -67,3 +67,16 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and MEMBRANE_DISRUPTION (MICROBIAL_TARGET)
+    mode_of_action from Liao et al. 2020 (PMID:33057790) and Seco et al. 2004 (PMID:15555992).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Mycosamine-glycosylated 28-membered tetraene polyene
+  macrolide antifungal from Streptomyces rimosus that binds ergosterol and disrupts
+  fungal cell membranes (Liao et al. 2020, DOI:10.1007/s00253-020-10955-8, PMID:33057790;
+  Seco et al. 2004, DOI:10.1016/j.chembiol.2004.08.017, PMID:15555992).'

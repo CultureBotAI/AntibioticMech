@@ -68,3 +68,17 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and NUCLEIC_ACID_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Ray et al. 2016 (PMID:26553755) and Degen
+    et al. 2014 (PMID:24843026).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Epoxide-containing bicyclic depsipeptide antibiotic
+  from marine Streptomyces sp. CNB-091 that binds the bridge-helix cap of bacterial
+  RNA polymerase and inhibits bacterial transcription (Ray et al. 2016, DOI:10.1002/anie.201508576,
+  PMID:26553755; Degen et al. 2014, DOI:10.7554/eLife.02451, PMID:24843026).'

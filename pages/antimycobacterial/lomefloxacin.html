@@ -401,6 +401,76 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Lomefloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication <span class="pill">MECHANISTIC</span></h3>
+<p>Lomefloxacin, a synthetic 6,8-difluoroquinolone antibacterial, inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation, arresting bacterial DNA replication.</p><div class="table-scroll" role="region" aria-label="Nodes: lomefloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — lomefloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">lomefloxacin</code></td>
+    <td>lomefloxacin</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antimycobacterial/lomefloxacin.html"><code class="curie">CHEBI:116278</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_gyrase_and_topoisomerase_iv</code></td>
+    <td>bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)<br><span class="meta">Examples: DNA gyrase subunit A (gyrA) <a href="https://www.uniprot.org/uniprotkb/P0AES4"><code class="curie">UniProtKB:P0AES4</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling and QRDR mutant susceptibility assays by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).; DNA gyrase subunit B (gyrB) <a href="https://www.uniprot.org/uniprotkb/P0AES6"><code class="curie">UniProtKB:P0AES6</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).; DNA topoisomerase 4 subunit A (parC) <a href="https://www.uniprot.org/uniprotkb/P0AFI2"><code class="curie">UniProtKB:P0AFI2</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation and QRDR mutant susceptibility assays by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).; DNA topoisomerase 4 subunit B (parE) <a href="https://www.uniprot.org/uniprotkb/P20083"><code class="curie">UniProtKB:P20083</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_decatenation_activity</code></td>
+    <td>DNA gyrase supercoiling and topoisomerase IV decatenation activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_replication</code></td>
+    <td>bacterial DNA replication</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><a href="https://amigo.geneontology.org/amigo/term/GO:0006260">GO:0006260</a></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: lomefloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition" tabindex="0">
+<table>
+  <caption>Edges — lomefloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">lomefloxacin</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_decatenation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.45.12.3544-3547.2001">DOI:10.1128/AAC.45.12.3544-3547.2001</a></span> <span class="meta">(Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of lomefloxacin against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_gyrase_and_topoisomerase_iv</code></td>
+    <td>enables</td>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_decatenation_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.45.12.3544-3547.2001">DOI:10.1128/AAC.45.12.3544-3547.2001</a></span> <span class="meta">(Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling and decatenation reactions assayed with lomefloxacin (PMID:11709337).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dna_gyrase_supercoiling_and_topo_iv_decatenation_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_dna_replication</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.45.12.3544-3547.2001">DOI:10.1128/AAC.45.12.3544-3547.2001</a></span> <span class="meta">(Inhibition of DNA gyrase and topoisomerase IV by lomefloxacin arrested bacterial replication and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -452,6 +522,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-11-04 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI fluoroquinolone record (CHEBI:116278) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083; DOI:10.1128/AAC.45.12.3544-3547.2001, PMID:11709337) from SEEDED to REVIEWED (issue #1322).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-05 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph lomefloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -472,7 +547,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>8fdf36f6d2fe</code>, 3086 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>13f86fecf11a</code>, 3086 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

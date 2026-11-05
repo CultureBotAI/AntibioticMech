@@ -65,3 +65,17 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-05T09:15:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Schaffer et al. 2017 (PMID:28504677) and
+    Scott et al. 2017 (PMID:28553948).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Beta-lactone aminoacyl antibiotic from Pseudomonas
+  fluorescens ATCC 39502 that covalently inhibits bacterial threonyl-tRNA synthetase
+  (ThrRS) and blocks bacterial translation (Schaffer et al. 2017, DOI:10.1038/nchembio.2374,
+  PMID:28504677; Scott et al. 2017, DOI:10.1038/nchembio.2386, PMID:28553948).'

@@ -3,10 +3,10 @@ task: causal_graphs_curation
 curation_action: CURATED_CAUSAL_GRAPHS
 retrieved_on: '2026-10-23'
 scope_note: 'Curated primary-literature MECHANISTIC causal_graphs across all eligible REVIEWED AntibioticMech
-  records: 40 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
+  records: 48 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
   and 19 Cohort B records with direct-binding or measured-association non-protein PRIMARY_LITERATURE molecular_targets,
   plus explicit accounting of all 16 pre-existing corpus causal_graphs (15 REVIEWED + 1 SEEDED) and all
-  38 held REVIEWED records.'
+  45 held REVIEWED records.'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -4741,6 +4741,828 @@ records:
       - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
         notes: Inhibition of DNA gyrase and topoisomerase IV by trovafloxacin arrested bacterial replication
           and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:198520
+  label: pneumocandin A0
+  path: data/antibiotics/antifungal/pneumocandin-a0.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph pneumocandin_a0_fks1_fks2_beta_1_3_glucan_synthase_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P38631, UniProtKB:P40989)
+    and primary literature (DOI:10.7164/antibiotics.45.1886, DOI:10.1073/pnas.91.26.12907).
+  causal_graphs:
+  - graph_id: pneumocandin_a0_fks1_fks2_beta_1_3_glucan_synthase_inhibition
+    title: Pneumocandin A0 noncompetitively inhibits fungal 1,3-beta-D-glucan synthase (Fks1/Fks2) to
+      disrupt cell-wall glucan biosynthesis
+    description: Pneumocandin A0, an acyl-homotyrosine echinocandin lipopeptide antifungal, noncompetitively
+      inhibits the fungal 1,3-beta-D-glucan synthase complex (Fks1/Fks2 catalytic subunits), blocking
+      UDP-glucose polymerization into structural cell-wall 1,3-beta-D-glucan.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: pneumocandin_a0
+      label: pneumocandin A0
+      node_type: COMPOUND
+      grounding: CHEBI:198520
+    - node_id: fungal_1_3_beta_d_glucan_synthase_fks1_fks2
+      label: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Fungal 1,3-beta-D-glucan synthase catalytic complex (Fks1/Fks2, EC 2.4.1.34); kept
+        label-only with Saccharomyces cerevisiae S288c Fks1 (UniProtKB:P38631) and Fks2/Gsc2 (UniProtKB:P40989)
+        protein_examples.
+      gene_symbols:
+      - FKS1
+      - GSC2
+      protein_examples:
+      - uniprot_id: UniProtKB:P38631
+        protein_label: 1,3-beta-glucan synthase component FKS1
+        gene_symbol: FKS1
+        taxon_id: NCBITaxon:559292
+        taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Primary catalytic subunit Fks1 (ETG1, EC 2.4.1.34) of the Saccharomyces cerevisiae S288c
+          1,3-beta-D-glucan synthase complex inhibited by pneumocandin A0 (L-671,329) and other echinocandins
+          (DOI:10.7164/antibiotics.45.1886; PMID:1490879; DOI:10.1073/pnas.91.26.12907; PMID:7809096).
+      - uniprot_id: UniProtKB:P40989
+        protein_label: 1,3-beta-glucan synthase component GSC2
+        gene_symbol: GSC2
+        taxon_id: NCBITaxon:559292
+        taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Alternative catalytic subunit Gsc2 (Fks2, EC 2.4.1.34) of the Saccharomyces cerevisiae S288c
+          1,3-beta-D-glucan synthase complex inhibited by pneumocandin A0 (DOI:10.7164/antibiotics.45.1886;
+          PMID:1490879; DOI:10.1073/pnas.91.26.12907; PMID:7809096).
+    - node_id: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+      label: Fks1/Fks2-catalyzed UDP-glucose polymerization into 1,3-beta-D-glucan
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Polymerization of UDP-glucose into linear 1,3-beta-D-glucan catalyzed by fungal
+        1,3-beta-D-glucan synthase (Fks1/Fks2) and noncompetitively inhibited by pneumocandin A0 (DOI:10.7164/antibiotics.45.1886;
+        DOI:10.1073/pnas.91.26.12907).
+    - node_id: fungal_cell_wall_1_3_beta_d_glucan_biosynthesis
+      label: fungal cell-wall 1,3-beta-D-glucan biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Synthesis and assembly of structural 1,3-beta-D-glucan in the fungal cell wall
+        disrupted by pneumocandin A0 inhibition of 1,3-beta-D-glucan synthase (DOI:10.7164/antibiotics.45.1886;
+        DOI:10.1073/pnas.91.26.12907).
+    edges:
+    - subject: pneumocandin_a0
+      predicate: inhibits
+      object: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+      description: Pneumocandin A0 noncompetitively inhibits fungal 1,3-beta-D-glucan synthase (Fks1/Fks2)
+        catalytic activity.
+      evidence:
+      - reference: DOI:10.7164/antibiotics.45.1886
+        notes: Schmatz et al. 1992 (PMID:1490879) demonstrated that pneumocandin A0 potently inhibits
+          Candida albicans membrane 1,3-beta-D-glucan synthase activity.
+      - reference: DOI:10.1073/pnas.91.26.12907
+        notes: Douglas et al. 1994 (PMID:7809096) cloned Saccharomyces cerevisiae FKS1 and showed that
+          fks1 mutations confer echinocandin/pneumocandin resistance both in whole cells and in purified
+          1,3-beta-D-glucan synthase assays.
+    - subject: fungal_1_3_beta_d_glucan_synthase_fks1_fks2
+      predicate: enables
+      object: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+      description: Fungal 1,3-beta-D-glucan synthase catalytic subunits (Fks1/Fks2) catalyze UDP-glucose
+        polymerization into 1,3-beta-D-glucan.
+      evidence:
+      - reference: DOI:10.1073/pnas.91.26.12907
+        notes: Saccharomyces cerevisiae Fks1 (and homologous Fks2/Gsc2) forms the catalytic subunit of
+          the membrane-bound 1,3-beta-D-glucan synthase complex (PMID:7809096).
+    - subject: beta_1_3_d_glucan_synthase_udp_glucose_polymerization_activity
+      predicate: supports
+      object: fungal_cell_wall_1_3_beta_d_glucan_biosynthesis
+      description: 1,3-beta-D-glucan synthase activity drives fungal cell-wall 1,3-beta-D-glucan biosynthesis
+        and cell-wall integrity.
+      evidence:
+      - reference: DOI:10.7164/antibiotics.45.1886
+        notes: Inhibition of 1,3-beta-D-glucan synthase by pneumocandin A0 blocked fungal cell-wall glucan
+          synthesis and caused fungicidal activity against Candida species and Pneumocystis carinii (PMID:1490879).
+- identifier: CHEBI:206910
+  label: rustmicin
+  path: data/antibiotics/antifungal/rustmicin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph rustmicin_aur1_ipc_synthase_sphingolipid_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332)
+    and primary literature (DOI:10.1074/jbc.273.24.14942).
+  causal_graphs:
+  - graph_id: rustmicin_aur1_ipc_synthase_sphingolipid_inhibition
+    title: Rustmicin inhibits fungal inositol phosphorylceramide synthase (Aur1/Ipc1) to block sphingolipid
+      biosynthesis
+    description: Rustmicin (galbonolide A), a 14-membered macrolide antifungal, potently inhibits fungal
+      inositol phosphorylceramide (IPC) synthase encoded by AUR1/IPC1 at subnanomolar concentrations,
+      blocking phosphoinositol transfer from phosphatidylinositol to phytoceramide and depleting fungal
+      sphingolipids.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: rustmicin
+      label: rustmicin
+      node_type: COMPOUND
+      grounding: CHEBI:206910
+    - node_id: fungal_ipc_synthase_aur1
+      label: fungal inositol phosphorylceramide synthase (Aur1 / Ipc1)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Fungal inositol phosphorylceramide synthase catalytic subunit (Aur1/Ipc1, EC 2.7.8.27);
+        kept label-only with Saccharomyces cerevisiae S288c Aur1 (UniProtKB:P36107) and Candida albicans
+        SC5314 Aur1 (UniProtKB:O13332) protein_examples.
+      gene_symbols:
+      - AUR1
+      protein_examples:
+      - uniprot_id: UniProtKB:P36107
+        protein_label: Inositol phosphorylceramide synthase catalytic subunit AUR1
+        gene_symbol: AUR1
+        taxon_id: NCBITaxon:559292
+        taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Reference-proteome Saccharomyces cerevisiae S288c inositol phosphorylceramide synthase catalytic
+          subunit Aur1 (IPC1, EC 2.7.8.27) directly inhibited by rustmicin in fungal IPC synthase assays
+          (DOI:10.1074/jbc.273.24.14942; PMID:9614099).
+      - uniprot_id: UniProtKB:O13332
+        protein_label: Inositol phosphorylceramide synthase
+        gene_symbol: AUR1
+        taxon_id: NCBITaxon:237561
+        taxon_label: Candida albicans (strain SC5314 / ATCC MYA-2876)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Reference-proteome Candida albicans SC5314 inositol phosphorylceramide synthase Aur1 (EC
+          2.7.8.27) directly inhibited by rustmicin in fungal sphingolipid biosynthesis assays (DOI:10.1074/jbc.273.24.14942;
+          PMID:9614099).
+    - node_id: ipc_synthase_phosphoinositol_transfer_activity
+      label: Aur1/Ipc1-catalyzed inositol phosphorylceramide synthesis activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Transfer of phosphoinositol from phosphatidylinositol to ceramide to form inositol
+        phosphorylceramide (IPC) catalyzed by fungal Aur1/Ipc1 and inhibited by rustmicin (DOI:10.1074/jbc.273.24.14942).
+    - node_id: fungal_sphingolipid_biosynthesis
+      label: fungal inositol phosphorylceramide sphingolipid biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Fungal sphingolipid biosynthesis dependent on inositol phosphorylceramide (IPC)
+        formation and blocked by rustmicin (DOI:10.1074/jbc.273.24.14942).
+    edges:
+    - subject: rustmicin
+      predicate: inhibits
+      object: ipc_synthase_phosphoinositol_transfer_activity
+      description: Rustmicin potently inhibits fungal inositol phosphorylceramide (IPC) synthase (Aur1/Ipc1)
+        activity at subnanomolar concentrations.
+      evidence:
+      - reference: DOI:10.1074/jbc.273.24.14942
+        notes: Mandala et al. 1998 (PMID:9614099) demonstrated that rustmicin inhibits fungal inositol
+          phosphorylceramide synthase in Saccharomyces cerevisiae, Candida albicans (IC50 = 0.4 nM), and
+          Cryptococcus neoformans (IC50 = 0.07 nM).
+    - subject: fungal_ipc_synthase_aur1
+      predicate: enables
+      object: ipc_synthase_phosphoinositol_transfer_activity
+      description: Fungal inositol phosphorylceramide synthase (Aur1/Ipc1) catalyzes transfer of phosphoinositol
+        from phosphatidylinositol to phytoceramide.
+      evidence:
+      - reference: DOI:10.1074/jbc.273.24.14942
+        notes: Microsomal membranes from S. cerevisiae, C. albicans, and C. neoformans expressing AUR1/IPC1
+          catalyzed IPC formation in vitro (PMID:9614099).
+    - subject: ipc_synthase_phosphoinositol_transfer_activity
+      predicate: supports
+      object: fungal_sphingolipid_biosynthesis
+      description: Inositol phosphorylceramide synthase activity commits ceramide to fungal sphingolipid
+        biosynthesis.
+      evidence:
+      - reference: DOI:10.1074/jbc.273.24.14942
+        notes: Inhibition of IPC synthase by rustmicin blocked cellular sphingolipid synthesis, caused
+          ceramide accumulation, and arrested fungal growth (PMID:9614099).
+- identifier: CHEBI:9200
+  label: soraphen A
+  path: data/antibiotics/antifungal/soraphen-a.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:Q00955) and primary literature
+    (DOI:10.1126/science.1103399, DOI:10.7164/antibiotics.47.23).
+  causal_graphs:
+  - graph_id: soraphen_a_acc1_bc_domain_dimerization_fatty_acid_inhibition
+    title: Soraphen A binds the eukaryotic acetyl-CoA carboxylase (Acc1) biotin carboxylase domain to
+      block oligomerization and fungal fatty acid biosynthesis
+    description: Soraphen A, a myxobacterial 18-membered polyketide macrolide antifungal, binds with nanomolar
+      affinity to the allosteric pocket of the fungal acetyl-CoA carboxylase (Acc1) biotin carboxylase
+      (BC) domain, disrupting BC domain dimerization, inhibiting acetyl-CoA carboxylation to malonyl-CoA,
+      and arresting fungal de novo fatty acid biosynthesis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: soraphen_a
+      label: soraphen A
+      node_type: COMPOUND
+      grounding: CHEBI:9200
+    - node_id: eukaryotic_acetyl_coa_carboxylase_acc1
+      label: eukaryotic acetyl-CoA carboxylase (Acc1)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Fungal/eukaryotic acetyl-CoA carboxylase (Acc1, EC 6.4.1.2); kept label-only with
+        Saccharomyces cerevisiae S288c Acc1 (UniProtKB:Q00955) protein_example.
+      gene_symbols:
+      - ACC1
+      protein_examples:
+      - uniprot_id: UniProtKB:Q00955
+        protein_label: Acetyl-CoA carboxylase
+        gene_symbol: ACC1
+        taxon_id: NCBITaxon:559292
+        taxon_label: Saccharomyces cerevisiae (strain ATCC 204508 / S288c)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Saccharomyces cerevisiae S288c acetyl-CoA carboxylase Acc1 (EC 6.4.1.2) whose biotin carboxylase
+          (BC) domain was cocrystallized at 2.1 Angstrom with soraphen A (PDB:1W96; Kd ~ 1 nM), demonstrating
+          allosteric prevention of BC domain dimerization (DOI:10.1126/science.1103399; PMID:15550663).
+    - node_id: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+      label: Acc1 biotin carboxylase domain dimerization and acetyl-CoA carboxylation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Biotin carboxylase (BC) domain dimerization and ATP-dependent carboxylation of
+        acetyl-CoA to malonyl-CoA catalyzed by fungal acetyl-CoA carboxylase (Acc1) and allosterically
+        inhibited by soraphen A (DOI:10.1126/science.1103399; DOI:10.7164/antibiotics.47.23).
+    - node_id: fungal_de_novo_fatty_acid_biosynthesis
+      label: fungal de novo fatty acid biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Fungal de novo fatty acid biosynthesis dependent on malonyl-CoA formation by Acc1
+        and blocked by soraphen A (DOI:10.1126/science.1103399; DOI:10.7164/antibiotics.47.23).
+    edges:
+    - subject: soraphen_a
+      predicate: inhibits
+      object: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+      description: Soraphen A binds the allosteric pocket of the Acc1 biotin carboxylase domain and blocks
+        BC dimerization and catalytic activity.
+      evidence:
+      - reference: DOI:10.1126/science.1103399
+        notes: Shen et al. 2004 (PMID:15550663) solved the 1.8-angstrom crystal structure of the Saccharomyces
+          cerevisiae Acc1 biotin carboxylase domain in complex with soraphen A (PDB:1W96; Kd ~ 1 nM) and
+          showed allosteric disruption of BC domain dimerization.
+      - reference: DOI:10.7164/antibiotics.47.23
+        notes: Gerth et al. 1994 (PMID:8119858) demonstrated that soraphen A specifically inhibits eukaryotic
+          acetyl-CoA carboxylase.
+    - subject: eukaryotic_acetyl_coa_carboxylase_acc1
+      predicate: enables
+      object: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+      description: Eukaryotic acetyl-CoA carboxylase (Acc1) catalyzes biotin-dependent carboxylation of
+        acetyl-CoA to malonyl-CoA via its dimeric biotin carboxylase domain.
+      evidence:
+      - reference: DOI:10.1126/science.1103399
+        notes: Dimerization of the Saccharomyces cerevisiae Acc1 biotin carboxylase domain is required
+          for catalytic acetyl-CoA carboxylation activity, and mutations in the soraphen A binding site
+          abolish sensitivity (PMID:15550663).
+    - subject: acc1_biotin_carboxylase_dimerization_and_carboxylation_activity
+      predicate: supports
+      object: fungal_de_novo_fatty_acid_biosynthesis
+      description: Acc1-catalyzed carboxylation of acetyl-CoA to malonyl-CoA is the committed step supporting
+        fungal de novo fatty acid biosynthesis.
+      evidence:
+      - reference: DOI:10.7164/antibiotics.47.23
+        notes: Inhibition of eukaryotic acetyl-CoA carboxylase by soraphen A blocked de novo fatty acid
+          biosynthesis and arrested fungal growth (PMID:8119858).
+- identifier: CHEBI:3716
+  label: cinoxacin
+  path: data/antibiotics/antibacterial/cinoxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph cinoxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001,
+    DOI:10.1128/AAC.34.1.8).
+  causal_graphs:
+  - graph_id: cinoxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Cinoxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Cinoxacin, a synthetic cinnoline (1,2-diazanaphthalene) quinolone-class antibacterial,
+      inhibits bacterial DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome
+      decatenation, arresting bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: cinoxacin
+      label: cinoxacin
+      node_type: COMPOUND
+      grounding: CHEBI:3716
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by cinoxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by cinoxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: cinoxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Cinoxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of cinoxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+      - reference: DOI:10.1128/AAC.34.1.8
+        notes: Walton and Elwell 1990 (PMID:2158274) demonstrated in vitro inhibition of purified Escherichia
+          coli DNA gyrase supercoiling activity by cinoxacin.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with cinoxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by cinoxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:5543
+  label: Grepafloxacin
+  path: data/antibiotics/antibacterial/grepafloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph grepafloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: grepafloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Grepafloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Grepafloxacin, a synthetic 5-methylfluoroquinolone antibacterial, inhibits bacterial
+      DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation,
+      arresting bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: grepafloxacin
+      label: Grepafloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:5543
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by Grepafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by Grepafloxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by Grepafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by Grepafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by Grepafloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: grepafloxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Grepafloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of Grepafloxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with Grepafloxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by Grepafloxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:63611
+  label: moxifloxacin
+  path: data/antibiotics/antibacterial/moxifloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph moxifloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: moxifloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Moxifloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Moxifloxacin, a synthetic 8-methoxyfluoroquinolone antibacterial, inhibits bacterial
+      DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation,
+      arresting bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: moxifloxacin
+      label: moxifloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:63611
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by moxifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by moxifloxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by moxifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by moxifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by moxifloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: moxifloxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Moxifloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of moxifloxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with moxifloxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by moxifloxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:9212
+  label: sparfloxacin
+  path: data/antibiotics/antibacterial/sparfloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph sparfloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: sparfloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Sparfloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Sparfloxacin, a synthetic 5-amino-6,8-difluoroquinolone antibacterial, inhibits bacterial
+      DNA gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation,
+      arresting bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: sparfloxacin
+      label: sparfloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:9212
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by sparfloxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by sparfloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: sparfloxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Sparfloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of sparfloxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with sparfloxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by sparfloxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:116278
+  label: lomefloxacin
+  path: data/antibiotics/antimycobacterial/lomefloxacin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph lomefloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6,
+    UniProtKB:P0AFI2, UniProtKB:P20083) and primary literature (DOI:10.1128/AAC.45.12.3544-3547.2001).
+  causal_graphs:
+  - graph_id: lomefloxacin_gyrase_topoisomerase_iv_supercoiling_decatenation_inhibition
+    title: Lomefloxacin inhibits bacterial DNA gyrase and topoisomerase IV to arrest bacterial DNA replication
+    description: Lomefloxacin, a synthetic 6,8-difluoroquinolone antibacterial, inhibits bacterial DNA
+      gyrase (GyrA/GyrB) DNA supercoiling and topoisomerase IV (ParC/ParE) chromosome decatenation, arresting
+      bacterial DNA replication.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: lomefloxacin
+      label: lomefloxacin
+      node_type: COMPOUND
+      grounding: CHEBI:116278
+    - node_id: bacterial_dna_gyrase_and_topoisomerase_iv
+      label: bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) holoenzymes;
+        kept label-only with Escherichia coli K-12 GyrA (UniProtKB:P0AES4), GyrB (UniProtKB:P0AES6), ParC
+        (UniProtKB:P0AFI2), and ParE (UniProtKB:P20083) protein_examples.
+      gene_symbols:
+      - gyrA
+      - gyrB
+      - parC
+      - parE
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AES4
+        protein_label: DNA gyrase subunit A
+        gene_symbol: gyrA
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase catalytic GyrA subunit inhibited in purified DNA supercoiling
+          and QRDR mutant susceptibility assays by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P0AES6
+        protein_label: DNA gyrase subunit B
+        gene_symbol: gyrB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli DNA gyrase ATPase GyrB subunit of the A2B2 holoenzyme inhibited by lomefloxacin
+          (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+      - uniprot_id: UniProtKB:P0AFI2
+        protein_label: DNA topoisomerase 4 subunit A
+        gene_symbol: parC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV catalytic ParC subunit inhibited in purified decatenation
+          and QRDR mutant susceptibility assays by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001;
+          PMID:11709337).
+      - uniprot_id: UniProtKB:P20083
+        protein_label: DNA topoisomerase 4 subunit B
+        gene_symbol: parE
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-04'
+        role: Escherichia coli topoisomerase IV ATPase ParE subunit of the ParC2ParE2 holoenzyme inhibited
+          by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001; PMID:11709337).
+    - node_id: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      label: DNA gyrase supercoiling and topoisomerase IV decatenation activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Purified bacterial DNA gyrase DNA supercoiling and topoisomerase IV decatenation
+        catalytic activities inhibited by lomefloxacin (DOI:10.1128/AAC.45.12.3544-3547.2001).
+    - node_id: bacterial_dna_replication
+      label: bacterial DNA replication
+      node_type: BIOLOGICAL_PROCESS
+      grounding: GO:0006260
+    edges:
+    - subject: lomefloxacin
+      predicate: inhibits
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Lomefloxacin inhibits bacterial DNA gyrase supercoiling and topoisomerase IV decatenation
+        activity.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Takei et al. 2001 (PMID:11709337) determined the IC50 inhibitory activities of lomefloxacin
+          against purified bacterial DNA gyrase supercoiling and topoisomerase IV decatenation and correlated
+          enzyme inhibition with MIC shifts across defined GyrA and ParC QRDR mutants.
+    - subject: bacterial_dna_gyrase_and_topoisomerase_iv
+      predicate: enables
+      object: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      description: Bacterial DNA gyrase (GyrA/GyrB) and topoisomerase IV (ParC/ParE) catalyze negative
+        DNA supercoiling and chromosome decatenation.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Purified bacterial DNA gyrase and topoisomerase IV holoenzymes catalyzed the DNA supercoiling
+          and decatenation reactions assayed with lomefloxacin (PMID:11709337).
+    - subject: dna_gyrase_supercoiling_and_topo_iv_decatenation_activity
+      predicate: supports
+      object: bacterial_dna_replication
+      description: DNA gyrase supercoiling and topoisomerase IV decatenation are required for bacterial
+        DNA replication.
+      evidence:
+      - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
+        notes: Inhibition of DNA gyrase and topoisomerase IV by lomefloxacin arrested bacterial replication
+          and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
 held_records:
 - identifier: CHEBI:172922
   label: ethylzingerone
@@ -5231,42 +6053,6 @@ held_records:
   reason: 'Primary-literature target in DOI:10.1073/pnas.1319584111 (PMID:24449899) is a non-protein Gram-positive
     bacterial cytoplasmic membrane component (target_type=MEMBRANE, ATTACKED_COMPONENT) depolarized by
     Ca2+-dependent taromycin A; newly promoted in Cycle 5 Stage 5 (issue #1320).'
-- identifier: CHEBI:198520
-  label: pneumocandin A0
-  path: data/antibiotics/antifungal/pneumocandin-a0.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.7164/antibiotics.45.1886
-  - DOI:10.1073/pnas.91.26.12907
-  reason: 'Primary-literature fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2) target carries curated reference
-    UniProtKB protein_examples (UniProtKB:P38631, UniProtKB:P40989) backed by DOI:10.7164/antibiotics.45.1886
-    (PMID:1490879) and DOI:10.1073/pnas.91.26.12907 (PMID:7809096); newly promoted from PROPOSED to REVIEWED
-    in Cycle 5 Stage 5 (issue #1320) and held pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:206910
-  label: rustmicin
-  path: data/antibiotics/antifungal/rustmicin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: fungal inositol phosphorylceramide synthase (Aur1 / Ipc1) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1074/jbc.273.24.14942
-  - PMID:9614099
-  reason: 'Primary-literature fungal inositol phosphorylceramide synthase (Aur1 / Ipc1) target carries
-    curated reference UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332) backed by DOI:10.1074/jbc.273.24.14942
-    (PMID:9614099); newly promoted from PROPOSED to REVIEWED in Cycle 5 Stage 5 (issue #1320) and held
-    pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:9200
-  label: soraphen A
-  path: data/antibiotics/antifungal/soraphen-a.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: eukaryotic acetyl-CoA carboxylase (Acc1) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1126/science.1103399
-  - DOI:10.7164/antibiotics.47.23
-  reason: 'Primary-literature eukaryotic acetyl-CoA carboxylase (Acc1) target carries curated reference
-    UniProtKB protein_examples (UniProtKB:Q00955) backed by DOI:10.1126/science.1103399 (PMID:15550663)
-    and DOI:10.7164/antibiotics.47.23 (PMID:8119858); newly promoted from PROPOSED to REVIEWED in Cycle
-    5 Stage 5 (issue #1320) and held pending dedicated Stage 2 add-causal-graph curation.'
 - identifier: CHEBI:197824
   label: naphthomycin A
   path: data/antibiotics/antibacterial/naphthomycin-a.yaml
@@ -5294,7 +6080,8 @@ held_records:
   label: micacocidin
   path: data/antibiotics/antibacterial/micacocidin.yaml
   blocker_category: downstream_or_coarse_target_only
-  target_summary: bacterial protein biosynthesis and transition-metal homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  target_summary: bacterial protein biosynthesis and transition-metal homeostasis (BIOLOGICAL_PROCESS,
+    DOWNSTREAM_AFFECTED_PROCESS)
   references:
   - DOI:10.7164/antibiotics.51.323
   - DOI:10.7164/antibiotics.51.328
@@ -5317,75 +6104,11 @@ held_records:
   label: endophenazine A
   path: data/antibiotics/antibacterial/endophenazine-a.yaml
   blocker_category: downstream_or_coarse_target_only
-  target_summary: bacterial redox homeostasis and respiratory electron transport (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  target_summary: bacterial redox homeostasis and respiratory electron transport (BIOLOGICAL_PROCESS,
+    DOWNSTREAM_AFFECTED_PROCESS)
   references:
   - DOI:10.7164/antibiotics.55.802
   - PMID:12458770
   reason: 'Primary-literature target in DOI:10.7164/antibiotics.55.802 (PMID:12458770) is a downstream
     biological process (target_type=BIOLOGICAL_PROCESS: bacterial redox homeostasis and respiratory electron
     transport) mediated by redox-active phenazine cycling without a single resolved protein target.'
-- identifier: CHEBI:3716
-  label: cinoxacin
-  path: data/antibiotics/antibacterial/cinoxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  - PMID:11709337
-  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
-    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
-    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
-    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
-    curation.'
-- identifier: CHEBI:5543
-  label: Grepafloxacin
-  path: data/antibiotics/antibacterial/grepafloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  - PMID:11709337
-  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
-    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
-    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
-    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
-    curation.'
-- identifier: CHEBI:63611
-  label: moxifloxacin
-  path: data/antibiotics/antibacterial/moxifloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  - PMID:11709337
-  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
-    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
-    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
-    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
-    curation.'
-- identifier: CHEBI:9212
-  label: sparfloxacin
-  path: data/antibiotics/antibacterial/sparfloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  - PMID:11709337
-  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
-    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
-    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
-    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
-    curation.'
-- identifier: CHEBI:116278
-  label: lomefloxacin
-  path: data/antibiotics/antimycobacterial/lomefloxacin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.45.12.3544-3547.2001
-  - PMID:11709337
-  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
-    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
-    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
-    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
-    curation.'
