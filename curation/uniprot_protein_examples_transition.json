@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 81,
+  "record_count": 86,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -4517,6 +4517,231 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature bacterial DNA-directed RNA polymerase (RpoB / RpoC) target on salinamide F (DOI:10.1038/ja.2014.122).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:63845",
+      "label": "sulfacetamide",
+      "path": "data/antibiotics/antibacterial/sulfacetamide.yaml",
+      "before_sha256": "bccb8acc04e7230e811eba226be31a4e709daf3bd7d91dd8a11207ac6e544ceb",
+      "after_sha256": "127e55d65250abce35be229fdac6526fca43115774061714c9db3e71b9fd3121",
+      "unchanged_fields_sha256": "6d9b2ee039c85660f8b9328ca9a188fdcf2921533886f1635e5eb583d4d182d1",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-05",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfacetamide in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfacetamide (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:102265",
+      "label": "sulfamethazine",
+      "path": "data/antibiotics/antibacterial/sulfamethazine.yaml",
+      "before_sha256": "480e80da08024b1fb67c1eda61cfed8466666252b0f6ca220842d9101091b779",
+      "after_sha256": "8cee2b69248e3b79a41f88d2f977055d9a9ceee2b2cad6be12601bae7260a82a",
+      "unchanged_fields_sha256": "dfcce0ae5a64138234ad3b19c2a65035e78ab4d142d27b47e393a8aa100e9960",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-05",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfamethazine in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfamethazine (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9331",
+      "label": "sulfamethizole",
+      "path": "data/antibiotics/antibacterial/sulfamethizole.yaml",
+      "before_sha256": "0cc3430c88bbe744dad121b355f2ff8df5e99b0e9913e46143416fe15c287b45",
+      "after_sha256": "6019f56a94b28c85182da03f68fca512678d87213cbf0a14260f2c7124a687cf",
+      "unchanged_fields_sha256": "1c518b5389dd2a24550eb5f12ac98daf92a083d492e50664c62d537cec6a0a3a",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-05",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfamethizole in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfamethizole (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9332",
+      "label": "sulfamethoxazole",
+      "path": "data/antibiotics/antibacterial/sulfamethoxazole.yaml",
+      "before_sha256": "68f6005f72f78b2be362bc6700d0a6c904a6eead793729d98bf13dc3313dffcc",
+      "after_sha256": "89bf23e4108ad877725949854353ee8e6d6744d6f0411e5731f0750bc841adb9",
+      "unchanged_fields_sha256": "90f7543eb583c380882d6e4db91b46a14fb4d38d75d5c6ebaf8e1893f042192d",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-05",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfamethoxazole in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfamethoxazole (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9328",
+      "label": "sulfadiazine",
+      "path": "data/antibiotics/antiprotozoal/sulfadiazine.yaml",
+      "before_sha256": "f77ce3019c188993fe98beb9464e211883cb16562db39b84dfaee1bd778d6aa9",
+      "after_sha256": "b0c109bcd814622cd9e945a4454c9e598ecaa104ec3dc4afb3897fe2cc6e4bd2",
+      "unchanged_fields_sha256": "b4121f7ebd28aebf8d4d2a751a6f3793b05d8b7a6393ff1c8aee043089cf4617",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-05",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfadiazine in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfadiazine (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
         "llm_assisted": true
       }
     }

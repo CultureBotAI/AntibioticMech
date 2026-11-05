@@ -1,0 +1,1326 @@
+{
+  "schema_version": 1,
+  "task": "cycle6_stage5_resolve_review_findings",
+  "cycle": 6,
+  "stage": 5,
+  "issues": [
+    "#1333",
+    "#1334",
+    "#1335"
+  ],
+  "molecular_targets_deltas": [
+    {
+      "identifier": "CHEBI:225841",
+      "label": "kendomycin B",
+      "path": "data/antibiotics/antibacterial/kendomycin-b.yaml",
+      "issue": "#1334",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "afc16c3fdb3d5c38a8ecb9f862850e0ec1dfae92b1aaf43421d08cff7a8c4aec",
+      "after_sha256": "867ece4c975493c07917e4bf5d8794f602c5bc1fe18a81a7c429830ce5644f6b",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "CELL_WALL_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Ansa-macrocyclic quinone methide polyketide antibiotic from Streptomyces sp. that perturbs bacterial cell-division septation and peptidoglycan/cell-wall homeostasis via its electrophilic para-quinone methide pharmacophore in Gram-positive bacteria and Mycobacteria (Suciati et al. 2022, DOI:10.1038/s41429-021-00493-4, PMID:34966190; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26795276)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial cell division and cell-wall homeostasis",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Antimycobacterial and Gram-positive antibacterial susceptibility profiling of kendomycin B alongside kendomycin A and quinone-methide cell-division/cell-wall perturbation studies in Staphylococcus aureus (Suciati et al. 2022, DOI:10.1038/s41429-021-00493-4, PMID:34966190; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26795276).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2022-04",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1038/s41429-021-00493-4",
+              "snippet": "Suciati et al. isolated kendomycin B from Streptomyces sp. and demonstrated potent antibacterial activity against Gram-positive bacteria and Mycobacteria alongside kendomycin A.",
+              "notes": "Suciati et al. 2022 (J Antibiot 75:229-236; PMID:34966190) isolated kendomycin B from marine-derived Streptomyces sp. and characterized its Gram-positive antibacterial and antimycobacterial potency."
+            },
+            {
+              "reference": "DOI:10.1371/journal.pone.0146165",
+              "notes": "Elnakady et al. 2016 (PLoS One 11:e0146165; PMID:26795276) established that the ansa-quinone methide kendomycin scaffold disrupts bacterial septum formation, cell division, and cell-wall homeostasis in Staphylococcus aureus."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET) and primary-literature molecular_targets entry for bacterial cell division and cell-wall homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1038/s41429-021-00493-4 (PMID:34966190) and DOI:10.1371/journal.pone.0146165 (PMID:26795276; issue #1334).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:201881",
+      "label": "marinopyrrole C",
+      "path": "data/antibiotics/antibacterial/marinopyrrole-c.yaml",
+      "issue": "#1334",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "776362f434f07ab855697f2019e653d23193dd752b2ebb9f0e0aa582dcfda7fd",
+      "after_sha256": "43fea9ba04289ddc12991f3d0b844491ccd85c790d0b18384cd424326c8093c5",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "MEMBRANE_DISRUPTION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Marine Streptomyces CNQ-418 pentahalogenated 1,3'-bipyrrole antibiotic that acts as a protonophore uncoupler, dissipating the bacterial cytoplasmic membrane proton-motive force and depolarizing Gram-positive bacterial membranes including MRSA (Hughes et al. 2010, DOI:10.1021/NP900834G, PMID:20175538; Suzanne et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial membrane proton-motive force and bioenergetics",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Antimicrobial susceptibility profiling against methicillin-resistant Staphylococcus aureus (MRSA, MIC90 = 0.16 ug/mL) and salicylanilide/bipyrrole protonophore membrane-uncoupling characterization (Hughes et al. 2010, DOI:10.1021/NP900834G, PMID:20175538; Suzanne et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2010-07",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1021/NP900834G",
+              "snippet": "Hughes et al. isolated marinopyrrole C from marine Streptomyces strain CNQ-418 and demonstrated potent antibacterial activity against methicillin-resistant Staphylococcus aureus (MIC90 = 0.16 ug/mL).",
+              "notes": "Hughes et al. 2010 (J Nat Prod 73:1214-1218; PMID:20175538) isolated marinopyrrole C from marine Streptomyces sp. CNQ-418 and determined its anti-MRSA activity (MIC90 = 0.16 ug/mL)."
+            },
+            {
+              "reference": "DOI:10.3390/antibiotics12101520",
+              "notes": "Suzanne et al. 2023 (Antibiotics 12:1520; PMID:37887221) characterized the protonophore membrane-depolarizing and proton-motive-force uncoupling antibacterial mechanism of halogenated marinopyrroles and pyrrolomycins in Gram-positive bacteria."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET) and primary-literature molecular_targets entry for bacterial membrane proton-motive force and bioenergetics (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1021/NP900834G (PMID:20175538) and DOI:10.3390/antibiotics12101520 (PMID:37887221; issue #1334).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:206310",
+      "label": "marinopyrrole D",
+      "path": "data/antibiotics/antibacterial/marinopyrrole-d.yaml",
+      "issue": "#1334",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "d7107af3860e3338eb3e9beac7ba505e098f61bb4b5d4f2f6ea627fbd946ddbb",
+      "after_sha256": "a7a0e2f2988e4dd7646f4bb37d0cdc25f8b1ec74b089ff8129ad9262859601e4",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "MEMBRANE_DISRUPTION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Marine Streptomyces CNQ-418 pentahalogenated 1,3'-bipyrrole antibiotic that acts as a protonophore uncoupler, dissipating the bacterial cytoplasmic membrane proton-motive force and depolarizing Gram-positive bacterial membranes including MRSA (Hughes et al. 2010, DOI:10.1021/NP900834G, PMID:20175538; Suzanne et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial membrane proton-motive force and bioenergetics",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Antimicrobial susceptibility profiling against methicillin-resistant Staphylococcus aureus (MRSA, MIC90 = 0.78 ug/mL) and salicylanilide/bipyrrole protonophore membrane-uncoupling characterization (Hughes et al. 2010, DOI:10.1021/NP900834G, PMID:20175538; Suzanne et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2010-07",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1021/NP900834G",
+              "snippet": "Hughes et al. isolated marinopyrrole D from marine Streptomyces strain CNQ-418 and demonstrated potent antibacterial activity against methicillin-resistant Staphylococcus aureus (MIC90 = 0.78 ug/mL).",
+              "notes": "Hughes et al. 2010 (J Nat Prod 73:1214-1218; PMID:20175538) isolated marinopyrrole D from marine Streptomyces sp. CNQ-418 and determined its anti-MRSA activity (MIC90 = 0.78 ug/mL)."
+            },
+            {
+              "reference": "DOI:10.3390/antibiotics12101520",
+              "notes": "Suzanne et al. 2023 (Antibiotics 12:1520; PMID:37887221) characterized the protonophore membrane-depolarizing and proton-motive-force uncoupling antibacterial mechanism of halogenated marinopyrroles and pyrrolomycins in Gram-positive bacteria."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET) and primary-literature molecular_targets entry for bacterial membrane proton-motive force and bioenergetics (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1021/NP900834G (PMID:20175538) and DOI:10.3390/antibiotics12101520 (PMID:37887221; issue #1334).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:199931",
+      "label": "marinopyrrole E",
+      "path": "data/antibiotics/antibacterial/marinopyrrole-e.yaml",
+      "issue": "#1334",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "9d2313a6e2ab4775183c2d0f6c252bd43741900d2772ef1deee66b108a0d19c0",
+      "after_sha256": "1dc2bac8f9ae554f6dc68acd5ffc3e6e5e08e9180b35090e2c805362e59f2e2c",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "MEMBRANE_DISRUPTION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Marine Streptomyces CNQ-418 pentahalogenated (monobrominated, tetrachlorinated) 1,3'-bipyrrole antibiotic that acts as a protonophore uncoupler, dissipating the bacterial cytoplasmic membrane proton-motive force and depolarizing Gram-positive bacterial membranes including MRSA (Hughes et al. 2010, DOI:10.1021/NP900834G, PMID:20175538; Suzanne et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "bacterial membrane proton-motive force and bioenergetics",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Antimicrobial susceptibility profiling against methicillin-resistant Staphylococcus aureus (MRSA, MIC90 = 3.1 ug/mL) and salicylanilide/bipyrrole protonophore membrane-uncoupling characterization (Hughes et al. 2010, DOI:10.1021/NP900834G, PMID:20175538; Suzanne et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2010-07",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1021/NP900834G",
+              "snippet": "Hughes et al. isolated the monobrominated congener marinopyrrole E from marine Streptomyces strain CNQ-418 and demonstrated antibacterial activity against methicillin-resistant Staphylococcus aureus (MIC90 = 3.1 ug/mL).",
+              "notes": "Hughes et al. 2010 (J Nat Prod 73:1214-1218; PMID:20175538) isolated marinopyrrole E from marine Streptomyces sp. CNQ-418 and determined its anti-MRSA activity (MIC90 = 3.1 ug/mL)."
+            },
+            {
+              "reference": "DOI:10.3390/antibiotics12101520",
+              "notes": "Suzanne et al. 2023 (Antibiotics 12:1520; PMID:37887221) characterized the protonophore membrane-depolarizing and proton-motive-force uncoupling antibacterial mechanism of halogenated marinopyrroles and pyrrolomycins in Gram-positive bacteria."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET) and primary-literature molecular_targets entry for bacterial membrane proton-motive force and bioenergetics (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1021/NP900834G (PMID:20175538) and DOI:10.3390/antibiotics12101520 (PMID:37887221; issue #1334).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:223870",
+      "label": "amipurimycin",
+      "path": "data/antibiotics/antifungal/amipurimycin.yaml",
+      "issue": "#1334",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "fa044cbaf0a8f19540de69e3e6a69f2ee33fa99497815d17d6dda1fc328b8d73",
+      "after_sha256": "4235f733ff7608f07d790907ca3979ba0a7707d7bea393029315b78d8a76cece",
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "before_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": null,
+        "mode_of_action_target_scope": null,
+        "mode_of_action_notes": null
+      },
+      "after_fields": {
+        "biosynthesis_origin": "NATURAL_PRODUCT",
+        "mode_of_action": "CELL_WALL_SYNTHESIS_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Peptidyl nucleoside antifungal antibiotic from Streptomyces novoguineensis that belongs to the miharamycin/nikkomycin/polyoxin peptidyl-nucleoside class and inhibits fungal cell-wall chitin biosynthesis and hyphal morphogenesis in phytopathogenic fungi such as Pyricularia oryzae (Iwasa et al. 1977, DOI:10.7164/antibiotics.30.11, PMID:557042; Chen et al. 2019, DOI:10.1021/acschembio.8b01076, PMID:30698415)."
+      },
+      "before_molecular_targets": null,
+      "after_molecular_targets": [
+        {
+          "target_label": "fungal cell-wall chitin biosynthesis",
+          "target_type": "BIOLOGICAL_PROCESS",
+          "target_relation": "DOWNSTREAM_AFFECTED_PROCESS",
+          "taxon_id": "NCBITaxon:4751",
+          "taxon_label": "Fungi",
+          "experimental_context": "Antifungal susceptibility and hyphal growth-inhibition assays against Pyricularia oryzae (Magnaporthe oryzae), Cochliobolus miyabeanus, and Alternaria kikuchiana alongside peptidyl-nucleoside biosynthesis and structure-activity characterization (Iwasa et al. 1977, DOI:10.7164/antibiotics.30.11, PMID:557042; Chen et al. 2019, DOI:10.1021/acschembio.8b01076, PMID:30698415).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2019-02",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.7164/antibiotics.30.11",
+              "snippet": "Iwasa et al. isolated the peptidyl nucleoside antibiotic amipurimycin from Streptomyces novoguineensis sp. nov. and demonstrated potent curative and protective antifungal activity against Pyricularia oryzae (rice blast) and phytopathogenic fungi.",
+              "notes": "Iwasa et al. 1977 (J Antibiot 30:1-10; PMID:557042) discovered amipurimycin from Streptomyces novoguineensis T-36496 and characterized its antifungal spectrum against Pyricularia oryzae, Cochliobolus miyabeanus, and Alternaria kikuchiana."
+            },
+            {
+              "reference": "DOI:10.1021/acschembio.8b01076",
+              "notes": "Chen et al. 2019 (ACS Chem Biol 14:150-155; PMID:30698415) established the revised cis-cyclopentane stereostructure and biosynthetic pathway of the peptidyl nucleoside antifungal amipurimycin."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET) and primary-literature molecular_targets entry for fungal cell-wall chitin biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.7164/antibiotics.30.11 (PMID:557042) and DOI:10.1021/acschembio.8b01076 (PMID:30698415; issue #1334).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "activity_roles",
+        "chemical_structure",
+        "xrefs",
+        "source_concepts",
+        "producer_organisms",
+        "curation_history",
+        "biosynthesis_origin"
+      ]
+    },
+    {
+      "identifier": "CHEBI:63845",
+      "label": "sulfacetamide",
+      "path": "data/antibiotics/antibacterial/sulfacetamide.yaml",
+      "issue": "#1335",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "cc371a3aaddff12da886ae7f4cce523a684b0a9c991e8a67ef446996d219c4d9",
+      "after_sha256": "bccb8acc04e7230e811eba226be31a4e709daf3bd7d91dd8a11207ac6e544ceb",
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic review."
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic para-aminobenzenesulfonamide antimicrobial (sulfacetamide) that acts as a competitive structural analog of para-aminobenzoic acid (PABA) at the active site of bacterial dihydropteroate synthase (FolP / DHPS, EC 2.5.1.15), forming dead-end pterin-sulfa adducts and blocking de novo dihydropteroate and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000683 (sulfacetamide); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000683 (sulfacetamide); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0004156",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified Escherichia coli dihydropteroate synthase (FolP / DHPS) cell-free enzyme inhibition (I50) and PABA competitive kinetics alongside structural and biochemical characterization of pterin-sulfonamide dead-end adduct formation in bacterial DHPS for sulfacetamide and comparator sulfonamides (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2012-03",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.15.2.195",
+              "snippet": "Roland et al. quantified the cell-free inhibition (I50) of purified Escherichia coli dihydropteroate synthase by 27 sulfonamides and correlated competitive DHPS enzyme inhibition with whole-cell antibacterial MICs.",
+              "notes": "Roland et al. 1979 (Antimicrob Agents Chemother 15:195-197; PMID:378102) measured direct inhibition of purified Escherichia coli dihydropteroate synthase (FolP / DHPS) by sulfacetamide and comparator sulfonamides."
+            },
+            {
+              "reference": "DOI:10.1126/science.1214641",
+              "notes": "Yun et al. 2012 (Science 335:1110-1114; PMID:22383845) resolved the structural and catalytic mechanism of sulfonamide binding at the PABA site of bacterial dihydropteroate synthase (DHPS / FolP), demonstrating pterin-sulfa adduct catalysis and sulfonamide-resistance loop mutations."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action_notes (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial dihydropteroate synthase (FolP / DHPS) (GO:0004156, PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.15.2.195 (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845; issue #1335).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "mode_of_action",
+        "mode_of_action_notes",
+        "mode_of_action_target_scope",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:102265",
+      "label": "sulfamethazine",
+      "path": "data/antibiotics/antibacterial/sulfamethazine.yaml",
+      "issue": "#1335",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "ed857740a40d13816752246e18eb094767b8646ac4063eb86b360505a94dd84a",
+      "after_sha256": "480e80da08024b1fb67c1eda61cfed8466666252b0f6ca220842d9101091b779",
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic review."
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic para-aminobenzenesulfonamide antimicrobial (sulfamethazine) that acts as a competitive structural analog of para-aminobenzoic acid (PABA) at the active site of bacterial dihydropteroate synthase (FolP / DHPS, EC 2.5.1.15), forming dead-end pterin-sulfa adducts and blocking de novo dihydropteroate and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000325 (sulfadimidine); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000325 (sulfadimidine); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0004156",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified Escherichia coli dihydropteroate synthase (FolP / DHPS) cell-free enzyme inhibition (I50) and PABA competitive kinetics alongside structural and biochemical characterization of pterin-sulfonamide dead-end adduct formation in bacterial DHPS for sulfamethazine and comparator sulfonamides (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2012-03",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.15.2.195",
+              "snippet": "Roland et al. quantified the cell-free inhibition (I50) of purified Escherichia coli dihydropteroate synthase by 27 sulfonamides and correlated competitive DHPS enzyme inhibition with whole-cell antibacterial MICs.",
+              "notes": "Roland et al. 1979 (Antimicrob Agents Chemother 15:195-197; PMID:378102) measured direct inhibition of purified Escherichia coli dihydropteroate synthase (FolP / DHPS) by sulfamethazine and comparator sulfonamides."
+            },
+            {
+              "reference": "DOI:10.1126/science.1214641",
+              "notes": "Yun et al. 2012 (Science 335:1110-1114; PMID:22383845) resolved the structural and catalytic mechanism of sulfonamide binding at the PABA site of bacterial dihydropteroate synthase (DHPS / FolP), demonstrating pterin-sulfa adduct catalysis and sulfonamide-resistance loop mutations."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action_notes (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial dihydropteroate synthase (FolP / DHPS) (GO:0004156, PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.15.2.195 (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845; issue #1335).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "mode_of_action",
+        "mode_of_action_notes",
+        "mode_of_action_target_scope",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:9331",
+      "label": "sulfamethizole",
+      "path": "data/antibiotics/antibacterial/sulfamethizole.yaml",
+      "issue": "#1335",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "084ddeefef0062f71204a7f3146d8f6de74004cdf5d5289cdccc9e189017040f",
+      "after_sha256": "0cc3430c88bbe744dad121b355f2ff8df5e99b0e9913e46143416fe15c287b45",
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic review."
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic para-aminobenzenesulfonamide antimicrobial (sulfamethizole) that acts as a competitive structural analog of para-aminobenzoic acid (PABA) at the active site of bacterial dihydropteroate synthase (FolP / DHPS, EC 2.5.1.15), forming dead-end pterin-sulfa adducts and blocking de novo dihydropteroate and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000699 (sulfamethizole); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000699 (sulfamethizole); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0004156",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified Escherichia coli dihydropteroate synthase (FolP / DHPS) cell-free enzyme inhibition (I50) and PABA competitive kinetics alongside structural and biochemical characterization of pterin-sulfonamide dead-end adduct formation in bacterial DHPS for sulfamethizole and comparator sulfonamides (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2012-03",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.15.2.195",
+              "snippet": "Roland et al. quantified the cell-free inhibition (I50) of purified Escherichia coli dihydropteroate synthase by 27 sulfonamides and correlated competitive DHPS enzyme inhibition with whole-cell antibacterial MICs.",
+              "notes": "Roland et al. 1979 (Antimicrob Agents Chemother 15:195-197; PMID:378102) measured direct inhibition of purified Escherichia coli dihydropteroate synthase (FolP / DHPS) by sulfamethizole and comparator sulfonamides."
+            },
+            {
+              "reference": "DOI:10.1126/science.1214641",
+              "notes": "Yun et al. 2012 (Science 335:1110-1114; PMID:22383845) resolved the structural and catalytic mechanism of sulfonamide binding at the PABA site of bacterial dihydropteroate synthase (DHPS / FolP), demonstrating pterin-sulfa adduct catalysis and sulfonamide-resistance loop mutations."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action_notes (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial dihydropteroate synthase (FolP / DHPS) (GO:0004156, PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.15.2.195 (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845; issue #1335).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "mode_of_action",
+        "mode_of_action_notes",
+        "mode_of_action_target_scope",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:9332",
+      "label": "sulfamethoxazole",
+      "path": "data/antibiotics/antibacterial/sulfamethoxazole.yaml",
+      "issue": "#1335",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "651e9736049a794b1b283ca1f3cf6e8bfe157240f8bc96bf37380233e178190d",
+      "after_sha256": "68f6005f72f78b2be362bc6700d0a6c904a6eead793729d98bf13dc3313dffcc",
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic review."
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic para-aminobenzenesulfonamide antimicrobial (sulfamethoxazole) that acts as a competitive structural analog of para-aminobenzoic acid (PABA) at the active site of bacterial dihydropteroate synthase (FolP / DHPS, EC 2.5.1.15), forming dead-end pterin-sulfa adducts and blocking de novo dihydropteroate and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000329 (sulfamethoxazole); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000329 (sulfamethoxazole); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0004156",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified Escherichia coli dihydropteroate synthase (FolP / DHPS) cell-free enzyme inhibition (I50) and PABA competitive kinetics alongside structural and biochemical characterization of pterin-sulfonamide dead-end adduct formation in bacterial DHPS for sulfamethoxazole and comparator sulfonamides (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2012-03",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.15.2.195",
+              "snippet": "Roland et al. quantified the cell-free inhibition (I50) of purified Escherichia coli dihydropteroate synthase by 27 sulfonamides and correlated competitive DHPS enzyme inhibition with whole-cell antibacterial MICs.",
+              "notes": "Roland et al. 1979 (Antimicrob Agents Chemother 15:195-197; PMID:378102) measured direct inhibition of purified Escherichia coli dihydropteroate synthase (FolP / DHPS) by sulfamethoxazole and comparator sulfonamides."
+            },
+            {
+              "reference": "DOI:10.1126/science.1214641",
+              "notes": "Yun et al. 2012 (Science 335:1110-1114; PMID:22383845) resolved the structural and catalytic mechanism of sulfonamide binding at the PABA site of bacterial dihydropteroate synthase (DHPS / FolP), demonstrating pterin-sulfa adduct catalysis and sulfonamide-resistance loop mutations."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action_notes (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial dihydropteroate synthase (FolP / DHPS) (GO:0004156, PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.15.2.195 (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845; issue #1335).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "mode_of_action",
+        "mode_of_action_notes",
+        "mode_of_action_target_scope",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ]
+    },
+    {
+      "identifier": "CHEBI:9328",
+      "label": "sulfadiazine",
+      "path": "data/antibiotics/antiprotozoal/sulfadiazine.yaml",
+      "issue": "#1335",
+      "action": "CURATED_MOLECULAR_TARGETS",
+      "before_sha256": "24d65b6cee76bb0c106ea1c75482a54745c0ba8509a33d63a9c7e5400bdc4e98",
+      "after_sha256": "f77ce3019c188993fe98beb9464e211883cb16562db39b84dfaee1bd778d6aa9",
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "before_fields": {
+        "biosynthesis_origin": null,
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "Assigned from ChEBI role CHEBI:50502 (EC 2.5.1.15 (dihydropteroate synthase) inhibitor). ChEBI asserts the role on the compound. The role names a target specific to the microbe or virus — see mode_of_action_target_scope. Not a curator's mechanistic review."
+      },
+      "after_fields": {
+        "biosynthesis_origin": "SYNTHETIC",
+        "mode_of_action": "FOLATE_PATHWAY_INHIBITION",
+        "mode_of_action_target_scope": "MICROBIAL_TARGET",
+        "mode_of_action_notes": "CURATOR: Synthetic para-aminobenzenesulfonamide antimicrobial (sulfadiazine) that acts as a competitive structural analog of para-aminobenzoic acid (PABA) at the active site of bacterial dihydropteroate synthase (FolP / DHPS, EC 2.5.1.15), forming dead-end pterin-sulfa adducts and blocking de novo dihydropteroate and tetrahydrofolate biosynthesis (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845)."
+      },
+      "before_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000324 (sulfadiazine); database assertion, not a primary citation."
+            }
+          ]
+        }
+      ],
+      "after_molecular_targets": [
+        {
+          "target_id": "ARO:3000744",
+          "target_label": "antibiotic sensitive dihydropteroate synthase",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "experimental_context": "CARD/ARO database assertion; target organism, strain, and assay are not specified. Dihydropteroate synthase is asserted as the inhibited enzyme.",
+          "evidence_status": "PRIMARY_EVIDENCE_NEEDED",
+          "source": "CARD_ARO",
+          "source_version": "2026-08-30",
+          "source_retrieved_on": "2026-08-30",
+          "evidence": [
+            {
+              "reference": "ARO:3000744",
+              "notes": "CARD/ARO asserts targeted_by_antibiotic ARO:3000324 (sulfadiazine); database assertion, not a primary citation."
+            }
+          ]
+        },
+        {
+          "target_id": "GO:0004156",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "target_type": "PROTEIN",
+          "target_relation": "DIRECT_BINDING_TARGET",
+          "taxon_id": "NCBITaxon:2",
+          "taxon_label": "Bacteria",
+          "experimental_context": "Purified Escherichia coli dihydropteroate synthase (FolP / DHPS) cell-free enzyme inhibition (I50) and PABA competitive kinetics alongside structural and biochemical characterization of pterin-sulfonamide dead-end adduct formation in bacterial DHPS for sulfadiazine and comparator sulfonamides (Roland et al. 1979, DOI:10.1128/AAC.15.2.195, PMID:378102; Yun et al. 2012, DOI:10.1126/science.1214641, PMID:22383845).",
+          "evidence_status": "PRIMARY_EVIDENCE",
+          "source": "PRIMARY_LITERATURE",
+          "source_version": "2012-03",
+          "source_retrieved_on": "2026-11-05",
+          "evidence": [
+            {
+              "reference": "DOI:10.1128/AAC.15.2.195",
+              "snippet": "Roland et al. quantified the cell-free inhibition (I50) of purified Escherichia coli dihydropteroate synthase by 27 sulfonamides and correlated competitive DHPS enzyme inhibition with whole-cell antibacterial MICs.",
+              "notes": "Roland et al. 1979 (Antimicrob Agents Chemother 15:195-197; PMID:378102) measured direct inhibition of purified Escherichia coli dihydropteroate synthase (FolP / DHPS) by sulfadiazine and comparator sulfonamides."
+            },
+            {
+              "reference": "DOI:10.1126/science.1214641",
+              "notes": "Yun et al. 2012 (Science 335:1110-1114; PMID:22383845) resolved the structural and catalytic mechanism of sulfonamide binding at the PABA site of bacterial dihydropteroate synthase (DHPS / FolP), demonstrating pterin-sulfa adduct catalysis and sulfonamide-resistance loop mutations."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:25:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_MOLECULAR_TARGETS",
+        "changes": "Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action_notes (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial dihydropteroate synthase (FolP / DHPS) (GO:0004156, PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1128/AAC.15.2.195 (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845; issue #1335).",
+        "llm_assisted": true
+      },
+      "previous_key_order": [
+        "identifier",
+        "label",
+        "antimicrobial_class",
+        "curation_status",
+        "grounding_status",
+        "definition",
+        "definition_source",
+        "synonyms",
+        "parent_compounds",
+        "activity_roles",
+        "structural_class",
+        "structural_class_id",
+        "mode_of_action",
+        "mode_of_action_notes",
+        "mode_of_action_target_scope",
+        "chemical_structure",
+        "xrefs",
+        "drug_xrefs",
+        "document_xrefs",
+        "source_concepts",
+        "resistance_mechanisms",
+        "molecular_targets",
+        "clinical_status",
+        "clinical_status_assertions",
+        "curation_history"
+      ]
+    }
+  ],
+  "promoted_record_deltas": [
+    {
+      "identifier": "CHEBI:199044",
+      "label": "berninamycin A",
+      "path": "data/antibiotics/antibacterial/berninamycin-a.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "0e48d98c89d86a42cb9bd4531306470eade8cfb7b12f3f3c7f741cf97ed7c41b",
+      "after_sha256": "7baaf46088351967e0ee09d2c890c3ee7cb61b88b1a682974e3da8bb7c03a855",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:199044) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1021/bi00836a026, PMID:4897214; DOI:10.1039/d1ob01759d, PMID:34617948) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:205987",
+      "label": "berninamycin B",
+      "path": "data/antibiotics/antibacterial/berninamycin-b.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "315c2e2ae7ef0b341a2e068672bf1a7f6630169a2979bd487d1636ec67709aea",
+      "after_sha256": "6bb97c2db26dcb4fa9dcefaa78dc3938f6c8fa45f8950c8fbc7dbb8898cc8f04",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:205987) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1039/d1ob01759d, PMID:34617948; DOI:10.1021/ja00417a047, PMID:1244374) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:222785",
+      "label": "empedopeptin",
+      "path": "data/antibiotics/antibacterial/empedopeptin.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "cf724d90054da4a7857b8907f377d548e3e8826d4388beef5571ee21ccd9fa67",
+      "after_sha256": "92a42b462ef9a409f2a49db6ebd73cb71bece3b2ba7652d5924cb56742e66a86",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:222785) with complete 4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1074/jbc.M112.369504, PMID:22518842; DOI:10.3390/md19040209, PMID:33918939) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:219296",
+      "label": "laterocidine",
+      "path": "data/antibiotics/antibacterial/laterocidine.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "c21006423c386d1a4dcf1594b334f7b5c2c6344e737c5ba1439cebc54c2eb8a2",
+      "after_sha256": "f11cf57ac604dd0dcfdd32b3075c9004320f5bc05410fdc6d624e07031620b32",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:219296) with complete 4/4 chemical_structure, curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1038/s41467-018-05781-6, PMID:30115920) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:199965",
+      "label": "obafluorin",
+      "path": "data/antibiotics/antibacterial/obafluorin.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "c995b3e61db54db4b21467babc3ededc95d61e761417ac26460779ed982b4a6b",
+      "after_sha256": "cac1385f684a63e63477ab5112f1cd90df21f431b39ca0aee7067a912b850d3e",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:199965) with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8M3; DOI:10.1038/nchembio.2374, PMID:28504677; DOI:10.1021/acschembio.9b00590, PMID:31675206) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:227666",
+      "label": "salinamide A",
+      "path": "data/antibiotics/antibacterial/salinamide-a.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "7f235bb310ae5d8a7fa9d2a41d676cc6a4ee8fb9bdf32394c00324aa247e1412",
+      "after_sha256": "93389abc0c2df30718c6fceab9e94ef01dde0c7c0193a16323c67300be388fbc",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:227666) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.7554/eLife.02451, PMID:24843001; DOI:10.1002/anie.201508576, PMID:26553755) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:200517",
+      "label": "salinamide B",
+      "path": "data/antibiotics/antibacterial/salinamide-b.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "513fbeb45675e6ee0a633aeac9fed1decf43f4760b23706a2a334a6f17da1cd0",
+      "after_sha256": "5c8f4e389c28974b597053e97428e35ce9c640d16583f147f9fb16a20ec4258d",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 4,
+      "curation_history_after_len": 5,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:200517) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.7554/eLife.02451, PMID:24843001; DOI:10.1002/anie.201508576, PMID:26553755) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:80106",
+      "label": "rimocidin",
+      "path": "data/antibiotics/antifungal/rimocidin.yaml",
+      "issue": "#1333",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "8e87e45a353cbddeca8b0f9ed3fd8f09f7055877cc9b4a58dcf81c0cfa8cf0ef",
+      "after_sha256": "6dbd3a758c057b292554758ee33f6d9d6f3606402970d87636decc7316b100c8",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:80106) with complete 4/4 chemical_structure, curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1016/j.chembiol.2004.02.017, PMID:15031268; DOI:10.1007/s00253-020-10955-8, PMID:33057790) from PROPOSED to REVIEWED (issue #1333).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:225841",
+      "label": "kendomycin B",
+      "path": "data/antibiotics/antibacterial/kendomycin-b.yaml",
+      "issue": "#1334",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "867ece4c975493c07917e4bf5d8794f602c5bc1fe18a81a7c429830ce5644f6b",
+      "after_sha256": "949a33aad6e71a7f45fcc74f82b4cfdb05bb93f225fc9f2ae92e47c66b6a1f98",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:225841) with complete 4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1038/s41429-021-00493-4, PMID:34966190; DOI:10.1371/journal.pone.0146165, PMID:26795276) from PROPOSED to REVIEWED (issue #1334).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:201881",
+      "label": "marinopyrrole C",
+      "path": "data/antibiotics/antibacterial/marinopyrrole-c.yaml",
+      "issue": "#1334",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "43fea9ba04289ddc12991f3d0b844491ccd85c790d0b18384cd424326c8093c5",
+      "after_sha256": "d2ecd5e69c6ce931cdd68988117813d0560dd2d83e0d20aeaf401dcef8dea0f4",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:201881) with complete 4/4 chemical_structure, curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1021/NP900834G, PMID:20175538; DOI:10.3390/antibiotics12101520, PMID:37887221) from PROPOSED to REVIEWED (issue #1334).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:206310",
+      "label": "marinopyrrole D",
+      "path": "data/antibiotics/antibacterial/marinopyrrole-d.yaml",
+      "issue": "#1334",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "a7a0e2f2988e4dd7646f4bb37d0cdc25f8b1ec74b089ff8129ad9262859601e4",
+      "after_sha256": "1ba6dedb2eab17f8d94c0e58ae3a8d97eeb471127061749108364bcafb48818b",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:206310) with complete 4/4 chemical_structure, curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1021/NP900834G, PMID:20175538; DOI:10.3390/antibiotics12101520, PMID:37887221) from PROPOSED to REVIEWED (issue #1334).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:199931",
+      "label": "marinopyrrole E",
+      "path": "data/antibiotics/antibacterial/marinopyrrole-e.yaml",
+      "issue": "#1334",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "1dc2bac8f9ae554f6dc68acd5ffc3e6e5e08e9180b35090e2c805362e59f2e2c",
+      "after_sha256": "32202e478fa1a62f3693c0d8d7d6889a487c51656793927f4cdcc9b486a533b1",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:199931) with complete 4/4 chemical_structure, curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1021/NP900834G, PMID:20175538; DOI:10.3390/antibiotics12101520, PMID:37887221) from PROPOSED to REVIEWED (issue #1334).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:223870",
+      "label": "amipurimycin",
+      "path": "data/antibiotics/antifungal/amipurimycin.yaml",
+      "issue": "#1334",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "4235f733ff7608f07d790907ca3979ba0a7707d7bea393029315b78d8a76cece",
+      "after_sha256": "ab7e691717e82ed339dc4dc2bb6093f60f024368160868bc2e9f3bc89952ad7b",
+      "before_curation_status": "PROPOSED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 3,
+      "curation_history_after_len": 4,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI record (CHEBI:223870) with complete 4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.7164/antibiotics.30.11, PMID:557042; DOI:10.1021/acschembio.8b01076, PMID:30698415) from PROPOSED to REVIEWED (issue #1334).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:63845",
+      "label": "sulfacetamide",
+      "path": "data/antibiotics/antibacterial/sulfacetamide.yaml",
+      "issue": "#1335",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "127e55d65250abce35be229fdac6526fca43115774061714c9db3e71b9fd3121",
+      "after_sha256": "83c5e34cb849868861944beeb068e1d9b88da67b6236dab80af23ee05c57ad02",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI sulfonamide record (CHEBI:63845) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845) from SEEDED to REVIEWED (issue #1335).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:102265",
+      "label": "sulfamethazine",
+      "path": "data/antibiotics/antibacterial/sulfamethazine.yaml",
+      "issue": "#1335",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "8cee2b69248e3b79a41f88d2f977055d9a9ceee2b2cad6be12601bae7260a82a",
+      "after_sha256": "e61475e6987567a41015bfb2123cbd1b473454233fdb283870db179a15c4c782",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI sulfonamide record (CHEBI:102265) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845) from SEEDED to REVIEWED (issue #1335).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9331",
+      "label": "sulfamethizole",
+      "path": "data/antibiotics/antibacterial/sulfamethizole.yaml",
+      "issue": "#1335",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "6019f56a94b28c85182da03f68fca512678d87213cbf0a14260f2c7124a687cf",
+      "after_sha256": "656ffa02ba647cb9130a8beb110cfb64de530b20f12afa32f918abeac4476abb",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI sulfonamide record (CHEBI:9331) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845) from SEEDED to REVIEWED (issue #1335).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9332",
+      "label": "sulfamethoxazole",
+      "path": "data/antibiotics/antibacterial/sulfamethoxazole.yaml",
+      "issue": "#1335",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "89bf23e4108ad877725949854353ee8e6d6744d6f0411e5731f0750bc841adb9",
+      "after_sha256": "03d20558eed3fcdee4f9d225dca7d29f4c0707ccc64e8da7234ed9693228c091",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI sulfonamide record (CHEBI:9332) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845) from SEEDED to REVIEWED (issue #1335).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9328",
+      "label": "sulfadiazine",
+      "path": "data/antibiotics/antiprotozoal/sulfadiazine.yaml",
+      "issue": "#1335",
+      "action": "PROMOTED_TO_REVIEWED",
+      "before_sha256": "b0c109bcd814622cd9e945a4454c9e598ecaa104ec3dc4afb3897fe2cc6e4bd2",
+      "after_sha256": "09189b3b5e33f9dfaa81eb8a38b90daaaadd5d23e37c60ab7bd9bff491e5c53e",
+      "before_curation_status": "SEEDED",
+      "after_curation_status": "REVIEWED",
+      "curation_history_before_len": 9,
+      "curation_history_after_len": 10,
+      "added_history_event": {
+        "timestamp": "2026-11-05T21:35:00Z",
+        "curator": "antigravity",
+        "action": "PROMOTED_TO_REVIEWED",
+        "changes": "Promoted exact ChEBI sulfonamide record (CHEBI:9328) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845) from SEEDED to REVIEWED (issue #1335).",
+        "llm_assisted": true
+      }
+    }
+  ]
+}

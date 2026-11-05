@@ -1,7 +1,7 @@
 identifier: CHEBI:225841
 label: kendomycin B
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A carbocyclic quinone-methide ansa-polyketide antibiotic from marine Verrucosispora
   sp. SCSIO 07399 with potent antibacterial activity against Gram-positive bacteria.
@@ -70,4 +70,55 @@ curation_history:
   action: CURATED_BIOSYNTHESIS_ORIGIN
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Konen et al. 2016 (PMID:27126179).
   llm_assisted: true
+- timestamp: '2026-11-05T21:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET)
+    and primary-literature molecular_targets entry for bacterial cell division and
+    cell-wall homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed
+    by DOI:10.1038/s41429-021-00493-4 (PMID:34966190) and DOI:10.1371/journal.pone.0146165
+    (PMID:26795276; issue #1334).'
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:225841) with complete 4/4 chemical_structure,
+    curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and
+    primary-literature molecular_targets (DOI:10.1038/s41429-021-00493-4, PMID:34966190;
+    DOI:10.1371/journal.pone.0146165, PMID:26795276) from PROPOSED to REVIEWED (issue
+    #1334).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: CELL_WALL_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Ansa-macrocyclic quinone methide polyketide antibiotic
+  from Streptomyces sp. that perturbs bacterial cell-division septation and peptidoglycan/cell-wall
+  homeostasis via its electrophilic para-quinone methide pharmacophore in Gram-positive
+  bacteria and Mycobacteria (Suciati et al. 2022, DOI:10.1038/s41429-021-00493-4,
+  PMID:34966190; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26795276).'
+molecular_targets:
+- target_label: bacterial cell division and cell-wall homeostasis
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Antimycobacterial and Gram-positive antibacterial susceptibility
+    profiling of kendomycin B alongside kendomycin A and quinone-methide cell-division/cell-wall
+    perturbation studies in Staphylococcus aureus (Suciati et al. 2022, DOI:10.1038/s41429-021-00493-4,
+    PMID:34966190; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26795276).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2022-04
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1038/s41429-021-00493-4
+    snippet: Suciati et al. isolated kendomycin B from Streptomyces sp. and demonstrated
+      potent antibacterial activity against Gram-positive bacteria and Mycobacteria
+      alongside kendomycin A.
+    notes: Suciati et al. 2022 (J Antibiot 75:229-236; PMID:34966190) isolated kendomycin
+      B from marine-derived Streptomyces sp. and characterized its Gram-positive antibacterial
+      and antimycobacterial potency.
+  - reference: DOI:10.1371/journal.pone.0146165
+    notes: Elnakady et al. 2016 (PLoS One 11:e0146165; PMID:26795276) established
+      that the ansa-quinone methide kendomycin scaffold disrupts bacterial septum
+      formation, cell division, and cell-wall homeostasis in Staphylococcus aureus.

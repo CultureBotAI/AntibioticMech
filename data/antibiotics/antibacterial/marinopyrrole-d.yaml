@@ -1,7 +1,7 @@
 identifier: CHEBI:206310
 label: marinopyrrole D
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A pentachlorinated bis-salicyloyl 1,3'-bipyrrole marine antibiotic regioisomer
   from Streptomyces sp. CNQ-418 with potent antibacterial activity against methicillin-resistant
@@ -70,4 +70,53 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Hughes et al. 2010 (PMID:20405892)
     and Yamanaka et al. 2012 (PMID:22800473).
   llm_assisted: true
+- timestamp: '2026-11-05T21:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET) and primary-literature
+    molecular_targets entry for bacterial membrane proton-motive force and bioenergetics
+    (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1021/NP900834G
+    (PMID:20175538) and DOI:10.3390/antibiotics12101520 (PMID:37887221; issue #1334).'
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:206310) with complete 4/4 chemical_structure,
+    curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1021/NP900834G, PMID:20175538; DOI:10.3390/antibiotics12101520,
+    PMID:37887221) from PROPOSED to REVIEWED (issue #1334).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: MEMBRANE_DISRUPTION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Marine Streptomyces CNQ-418 pentahalogenated 1,3''-bipyrrole
+  antibiotic that acts as a protonophore uncoupler, dissipating the bacterial cytoplasmic
+  membrane proton-motive force and depolarizing Gram-positive bacterial membranes
+  including MRSA (Hughes et al. 2010, DOI:10.1021/NP900834G, PMID:20175538; Suzanne
+  et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221).'
+molecular_targets:
+- target_label: bacterial membrane proton-motive force and bioenergetics
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Antimicrobial susceptibility profiling against methicillin-resistant
+    Staphylococcus aureus (MRSA, MIC90 = 0.78 ug/mL) and salicylanilide/bipyrrole
+    protonophore membrane-uncoupling characterization (Hughes et al. 2010, DOI:10.1021/NP900834G,
+    PMID:20175538; Suzanne et al. 2023, DOI:10.3390/antibiotics12101520, PMID:37887221).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2010-07
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1021/NP900834G
+    snippet: Hughes et al. isolated marinopyrrole D from marine Streptomyces strain
+      CNQ-418 and demonstrated potent antibacterial activity against methicillin-resistant
+      Staphylococcus aureus (MIC90 = 0.78 ug/mL).
+    notes: Hughes et al. 2010 (J Nat Prod 73:1214-1218; PMID:20175538) isolated marinopyrrole
+      D from marine Streptomyces sp. CNQ-418 and determined its anti-MRSA activity
+      (MIC90 = 0.78 ug/mL).
+  - reference: DOI:10.3390/antibiotics12101520
+    notes: Suzanne et al. 2023 (Antibiotics 12:1520; PMID:37887221) characterized
+      the protonophore membrane-depolarizing and proton-motive-force uncoupling antibacterial
+      mechanism of halogenated marinopyrroles and pyrrolomycins in Gram-positive bacteria.

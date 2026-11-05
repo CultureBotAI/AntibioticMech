@@ -1,7 +1,7 @@
 identifier: CHEBI:200517
 label: salinamide B
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A chlorohydrin-containing bicyclic depsipeptide antibiotic congener from
   marine Streptomyces sp. CNB-091 that inhibits bacterial RNA polymerase with antibacterial
@@ -88,6 +88,15 @@ curation_history:
   changes: Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature
     bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC) target on
     salinamide B (DOI:10.7554/eLife.02451).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:200517) with complete 4/4 chemical_structure,
+    curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET),
+    and primary-literature molecular_targets with reviewed UniProtKB protein_examples
+    (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.7554/eLife.02451, PMID:24843001; DOI:10.1002/anie.201508576,
+    PMID:26553755) from PROPOSED to REVIEWED (issue #1333).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION

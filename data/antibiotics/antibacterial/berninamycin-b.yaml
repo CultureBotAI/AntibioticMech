@@ -1,7 +1,7 @@
 identifier: CHEBI:205987
 label: berninamycin B
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 35-membered pyridyl-polyazole macrocyclic thiopeptide antibiotic congener
   from Streptomyces bernensis bearing an L-valine residue in place of beta-hydroxyvaline,
@@ -80,6 +80,14 @@ curation_history:
     subunit (GO:0015934, RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by De et
     al. 2021 (DOI:10.1039/d1ob01759d, PMID:34617948) and Liesch et al. 1976 (DOI:10.1021/ja00417a047,
     PMID:1244374).
+  llm_assisted: true
+- timestamp: '2026-11-05T21:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:205987) with complete 4/4 chemical_structure,
+    curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1039/d1ob01759d, PMID:34617948; DOI:10.1021/ja00417a047,
+    PMID:1244374) from PROPOSED to REVIEWED (issue #1333).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
