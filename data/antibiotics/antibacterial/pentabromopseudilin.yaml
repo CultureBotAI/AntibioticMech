@@ -1,7 +1,7 @@
 identifier: CHEBI:70619
 label: pentabromopseudilin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A pentabrominated 2-(2-hydroxyphenyl)pyrrole marine antibiotic from Pseudoalteromonas
   species that acts as a membrane protonophore with potent nanomolar antibacterial
@@ -98,6 +98,14 @@ curation_history:
   changes: Added primary-literature molecular_targets entry for bacterial cytoplasmic
     membrane (MEMBRANE, ATTACKED_COMPONENT) backed by DOI:10.1021/acschembio.3c00773
     (PMID:38377384).
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:70619) with complete 4/4 chemical_structure,
+    curated mode_of_action (MEMBRANE_DISRUPTION, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.1021/acschembio.3c00773, PMID:38377384) from PROPOSED
+    to REVIEWED (issue #1320).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION

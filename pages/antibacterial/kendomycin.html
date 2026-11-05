@@ -36,7 +36,7 @@
   <code class="curie">CHEBI:191052</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_191052">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill">PROPOSED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>A carbocyclic quinone-methide ansa-polyketide antibiotic (TAN-2162) from Streptomyces violaceoruber with antibacterial activity against methicillin-resistant Staphylococcus aureus.  <span class="meta">— DOI:10.1371/journal.pone.0146165</span></p>
@@ -94,7 +94,20 @@ the product: this is what shows ChEBI and CARD are describing the same structure
 
 </div>
 
+<h2>Molecular targets</h2>
+<p class="meta">The molecular entity or process this compound acts on. Each target
+carries evidence — this is a mechanistic claim, not a classification.</p>
+<h3>bacterial cell division and cell-wall homeostasis <span class="pill plain">BIOLOGICAL_PROCESS</span> <span class="pill">DOWNSTREAM_AFFECTED_PROCESS</span></h3>
+<p class="meta">Proteomic, physiological, and ultrastructural profiling of methicillin-resistant Staphylococcus aureus (MRSA) treated with kendomycin, demonstrating aberrant septum formation and cell-division/cell-wall stress alongside Gram-positive antibacterial susceptibility (Funabashi et al. 2000, DOI:10.7164/antibiotics.53.199, PMID:10805582; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26795276). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2016-01 (retrieved 2026-11-04).</p>
+<p><em>Bacteria</em> <code class="curie">NCBITaxon:2</code></p><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1371/journal.pone.0146165">DOI:10.1371/journal.pone.0146165</a></span> — "Elnakady et al. investigated the antibacterial mechanism of kendomycin in methicillin-resistant Staphylococcus aureus (MRSA), showing disruption of septum formation, cell division, and amino-acid/protein homeostasis." <span class="meta">(Elnakady et al. 2016 (PLoS One 11:e0146165; PMID:26795276) characterized the antibacterial mode of action of kendomycin in MRSA, demonstrating cell-division septation defects and polypharmacological proteome perturbation.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.7164/antibiotics.53.199">DOI:10.7164/antibiotics.53.199</a></span> <span class="meta">(Funabashi et al. 2000 (J Antibiot 53:199-201; PMID:10805582) isolated kendomycin (TAN-2162) from Streptomyces violaceoruber and reported its potent antibacterial activity against Gram-positive and Gram-negative bacteria.)</span></li>
+</ul>
 
+
+<h2>Mechanism summary</h2>
+<dl class="fields">
+<dt>Mode of action</dt><dd>CELL_WALL_SYNTHESIS_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Ansa-macrocyclic quinone methide polyketide antibiotic from Streptomyces violaceoruber that perturbs bacterial cell-division septation, peptidoglycan/cell-wall homeostasis, and covalent protein/amino-acid adducts via its electrophilic para-quinone methide pharmacophore in Gram-positive bacteria including MRSA (Funabashi et al. 2000, DOI:10.7164/antibiotics.53.199, PMID:10805582; Elnakady et al. 2016, DOI:10.1371/journal.pone.0146165, PMID:26795276).</span></dd></dl>
 
 
 
@@ -144,6 +157,16 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-11-03 · antibioticmech-causal-graphs-curator · LLM-assisted</span>
     <p>Curated NATURAL_PRODUCT biosynthesis_origin from Elnakady et al. 2016 (PMID:26795276) and Wenzel et al. 2008 (PMID:18972512).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_MOLECULAR_TARGETS</span>
+    <span class="meta">2026-11-04 · antigravity · LLM-assisted</span>
+    <p>Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial cell division and cell-wall homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1371/journal.pone.0146165 (PMID:26795276) and DOI:10.7164/antibiotics.53.199 (PMID:10805582; issue #1321).</p>
+  </li>
+  <li>
+    <span class="pill">PROMOTED_TO_REVIEWED</span>
+    <span class="meta">2026-11-04 · antigravity · LLM-assisted</span>
+    <p>Promoted exact ChEBI record (CHEBI:191052) with complete 4/4 chemical_structure, curated mode_of_action (CELL_WALL_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1371/journal.pone.0146165, PMID:26795276; DOI:10.7164/antibiotics.53.199, PMID:10805582) from PROPOSED to REVIEWED (issue #1321).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -164,7 +187,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>6c2a5f8e3f3f</code>, 3064 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>ff00e72573b7</code>, 3064 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

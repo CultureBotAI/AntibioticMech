@@ -5209,3 +5209,183 @@ held_records:
   reason: Held from causal_graphs curation because the cited primary literature (DOI:10.7164/antibiotics.48.1159;
     DOI:10.1002/chem.201102093) supports a coarse membrane ionophore target (bacterial cytoplasmic membrane
     (MEMBRANE, ATTACKED_COMPONENT)) for pamamycin-649B.
+- identifier: CHEBI:70619
+  label: pentabromopseudilin
+  path: data/antibiotics/antibacterial/pentabromopseudilin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT)
+  references:
+  - DOI:10.1021/acschembio.3c00773
+  - PMID:38377384
+  reason: 'Primary-literature target in DOI:10.1021/acschembio.3c00773 (PMID:38377384) is a non-protein
+    bacterial cytoplasmic membrane component (target_type=MEMBRANE, ATTACKED_COMPONENT) disrupted by pentabromopseudilin
+    in Staphylococcus aureus; newly promoted in Cycle 5 Stage 5 (issue #1320).'
+- identifier: CHEBI:219845
+  label: taromycin A
+  path: data/antibiotics/antibacterial/taromycin-a.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: Gram-positive bacterial cytoplasmic membrane (MEMBRANE, ATTACKED_COMPONENT)
+  references:
+  - DOI:10.1073/pnas.1319584111
+  - PMID:24449899
+  reason: 'Primary-literature target in DOI:10.1073/pnas.1319584111 (PMID:24449899) is a non-protein Gram-positive
+    bacterial cytoplasmic membrane component (target_type=MEMBRANE, ATTACKED_COMPONENT) depolarized by
+    Ca2+-dependent taromycin A; newly promoted in Cycle 5 Stage 5 (issue #1320).'
+- identifier: CHEBI:198520
+  label: pneumocandin A0
+  path: data/antibiotics/antifungal/pneumocandin-a0.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2) (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.7164/antibiotics.45.1886
+  - DOI:10.1073/pnas.91.26.12907
+  reason: 'Primary-literature fungal 1,3-beta-D-glucan synthase (Fks1 / Fks2) target carries curated reference
+    UniProtKB protein_examples (UniProtKB:P38631, UniProtKB:P40989) backed by DOI:10.7164/antibiotics.45.1886
+    (PMID:1490879) and DOI:10.1073/pnas.91.26.12907 (PMID:7809096); newly promoted from PROPOSED to REVIEWED
+    in Cycle 5 Stage 5 (issue #1320) and held pending dedicated Stage 2 add-causal-graph curation.'
+- identifier: CHEBI:206910
+  label: rustmicin
+  path: data/antibiotics/antifungal/rustmicin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: fungal inositol phosphorylceramide synthase (Aur1 / Ipc1) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1074/jbc.273.24.14942
+  - PMID:9614099
+  reason: 'Primary-literature fungal inositol phosphorylceramide synthase (Aur1 / Ipc1) target carries
+    curated reference UniProtKB protein_examples (UniProtKB:P36107, UniProtKB:O13332) backed by DOI:10.1074/jbc.273.24.14942
+    (PMID:9614099); newly promoted from PROPOSED to REVIEWED in Cycle 5 Stage 5 (issue #1320) and held
+    pending dedicated Stage 2 add-causal-graph curation.'
+- identifier: CHEBI:9200
+  label: soraphen A
+  path: data/antibiotics/antifungal/soraphen-a.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: eukaryotic acetyl-CoA carboxylase (Acc1) (PROTEIN, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1126/science.1103399
+  - DOI:10.7164/antibiotics.47.23
+  reason: 'Primary-literature eukaryotic acetyl-CoA carboxylase (Acc1) target carries curated reference
+    UniProtKB protein_examples (UniProtKB:Q00955) backed by DOI:10.1126/science.1103399 (PMID:15550663)
+    and DOI:10.7164/antibiotics.47.23 (PMID:8119858); newly promoted from PROPOSED to REVIEWED in Cycle
+    5 Stage 5 (issue #1320) and held pending dedicated Stage 2 add-causal-graph curation.'
+- identifier: CHEBI:197824
+  label: naphthomycin A
+  path: data/antibiotics/antibacterial/naphthomycin-a.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial nucleic acid biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.7164/antibiotics.38.230
+  - DOI:10.1007/BF00409749
+  reason: 'Primary-literature target in DOI:10.7164/antibiotics.38.230 (PMID:3997669) and DOI:10.1007/BF00409749
+    (PMID:4978971) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: bacterial nucleic
+    acid biosynthesis) inhibited via sulfhydryl-reactive naphthoquinone modification without a single
+    resolved bacterial protein target.'
+- identifier: CHEBI:29671
+  label: resistomycin
+  path: data/antibiotics/antibacterial/resistomycin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial DNA-dependent RNA and DNA biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1002/jobm.19750150603
+  - PMID:1106088
+  reason: 'Primary-literature target in DOI:10.1002/jobm.19750150603 (PMID:1106088) is a downstream biological
+    process (target_type=BIOLOGICAL_PROCESS: bacterial DNA-dependent RNA and DNA biosynthesis) inhibited
+    via Mg2+ chelation without a single sequence-specific protein target.'
+- identifier: CHEBI:198957
+  label: micacocidin
+  path: data/antibiotics/antibacterial/micacocidin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial protein biosynthesis and transition-metal homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.7164/antibiotics.51.323
+  - DOI:10.7164/antibiotics.51.328
+  reason: 'Primary-literature target in DOI:10.7164/antibiotics.51.323 (PMID:9589068) and DOI:10.7164/antibiotics.51.328
+    is a coarse biological process (target_type=BIOLOGICAL_PROCESS: bacterial protein biosynthesis and
+    transition-metal homeostasis) without a single protein target accession.'
+- identifier: CHEBI:191052
+  label: kendomycin
+  path: data/antibiotics/antibacterial/kendomycin.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial cell division and cell-wall homeostasis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.1371/journal.pone.0146165
+  - DOI:10.7164/antibiotics.53.199
+  reason: 'Primary-literature target in DOI:10.1371/journal.pone.0146165 (PMID:26795276) and DOI:10.7164/antibiotics.53.199
+    (PMID:10805582) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: bacterial cell
+    division and cell-wall homeostasis) reflecting polypharmacological quinone-methide perturbation without
+    a single validated primary protein target.'
+- identifier: CHEBI:218214
+  label: endophenazine A
+  path: data/antibiotics/antibacterial/endophenazine-a.yaml
+  blocker_category: downstream_or_coarse_target_only
+  target_summary: bacterial redox homeostasis and respiratory electron transport (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+  references:
+  - DOI:10.7164/antibiotics.55.802
+  - PMID:12458770
+  reason: 'Primary-literature target in DOI:10.7164/antibiotics.55.802 (PMID:12458770) is a downstream
+    biological process (target_type=BIOLOGICAL_PROCESS: bacterial redox homeostasis and respiratory electron
+    transport) mediated by redox-active phenazine cycling without a single resolved protein target.'
+- identifier: CHEBI:3716
+  label: cinoxacin
+  path: data/antibiotics/antibacterial/cinoxacin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.45.12.3544-3547.2001
+  - PMID:11709337
+  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
+    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
+    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
+    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
+    curation.'
+- identifier: CHEBI:5543
+  label: Grepafloxacin
+  path: data/antibiotics/antibacterial/grepafloxacin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.45.12.3544-3547.2001
+  - PMID:11709337
+  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
+    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
+    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
+    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
+    curation.'
+- identifier: CHEBI:63611
+  label: moxifloxacin
+  path: data/antibiotics/antibacterial/moxifloxacin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.45.12.3544-3547.2001
+  - PMID:11709337
+  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
+    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
+    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
+    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
+    curation.'
+- identifier: CHEBI:9212
+  label: sparfloxacin
+  path: data/antibiotics/antibacterial/sparfloxacin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.45.12.3544-3547.2001
+  - PMID:11709337
+  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
+    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
+    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
+    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
+    curation.'
+- identifier: CHEBI:116278
+  label: lomefloxacin
+  path: data/antibiotics/antimycobacterial/lomefloxacin.yaml
+  blocker_category: uniprot_protein_example_held
+  target_summary: bacterial DNA gyrase and topoisomerase IV (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+  references:
+  - DOI:10.1128/AAC.45.12.3544-3547.2001
+  - PMID:11709337
+  reason: 'Primary-literature bacterial DNA gyrase and topoisomerase IV target carries curated Escherichia
+    coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AES4, UniProtKB:P0AES6, UniProtKB:P0AFI2,
+    UniProtKB:P20083) backed by DOI:10.1128/AAC.45.12.3544-3547.2001 (PMID:11709337); newly promoted from
+    SEEDED to REVIEWED in Cycle 5 Stage 5 (issue #1322) and held pending dedicated Stage 2 add-causal-graph
+    curation.'

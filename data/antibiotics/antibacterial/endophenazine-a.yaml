@@ -1,7 +1,7 @@
 identifier: CHEBI:218214
 label: endophenazine A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A 9-dimethylallyl-substituted phenazine-1-carboxylic acid antibiotic from
   Streptomyces anulatus with antibacterial and antifungal activity.
@@ -77,4 +77,55 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Gebhardt et al. 2002 (PMID:12458768)
     and Saleh et al. 2012 (PMID:22509222).
   llm_assisted: true
+- timestamp: '2026-11-04T23:10:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (OXIDATIVE_DAMAGE,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    redox homeostasis and respiratory electron transport (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+    backed by DOI:10.7164/antibiotics.55.802 (PMID:12458770) and DOI:10.1128/AEM.02738-08
+    (PMID:19270122; issue #1321).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:218214) with complete 4/4 chemical_structure,
+    curated mode_of_action (OXIDATIVE_DAMAGE, MICROBIAL_TARGET), and primary-literature
+    molecular_targets (DOI:10.7164/antibiotics.55.802, PMID:12458770; DOI:10.1128/AEM.02738-08,
+    PMID:19270122) from PROPOSED to REVIEWED (issue #1321).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: OXIDATIVE_DAMAGE
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Dimethylallyl-substituted phenazine-1-carboxylic acid
+  antibiotic from Streptomyces anulatus and Kitasatospora sp. whose redox-active phenazine
+  chromophore mediates intracellular electron-transport uncoupling and reactive oxygen
+  species (ROS) generation in Gram-positive bacteria and phytopathogenic fungi (Gebhardt
+  et al. 2002, DOI:10.7164/antibiotics.55.802, PMID:12458770; Saleh et al. 2009, DOI:10.1128/AEM.02738-08,
+  PMID:19270122).'
+molecular_targets:
+- target_label: bacterial redox homeostasis and respiratory electron transport
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Gram-positive antibacterial susceptibility and phenazine redox-active
+    secondary-metabolite characterization of endophenazine A from Streptomyces anulatus
+    and Kitasatospora sp. (Gebhardt et al. 2002, DOI:10.7164/antibiotics.55.802, PMID:12458770;
+    Saleh et al. 2009, DOI:10.1128/AEM.02738-08, PMID:19270122).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2002-09
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.55.802
+    snippet: Gebhardt et al. isolated the prenylated phenazine antibiotic endophenazine
+      A from Streptomyces anulatus and demonstrated antibacterial activity against
+      Gram-positive bacteria alongside herbicidal and redox-active phenazine properties.
+    notes: Gebhardt et al. 2002 (J Antibiot 55:802-809; PMID:12458770) isolated endophenazine
+      A from Streptomyces anulatus and characterized its Gram-positive antibacterial
+      activity.
+  - reference: DOI:10.1128/AEM.02738-08
+    notes: Saleh et al. 2009 (Appl Environ Microbiol 75:2882-2890; PMID:19270122)
+      identified the eppA/ppzP phenazine biosynthesis gene cluster directing endophenazine
+      A production in Streptomyces anulatus 9663.

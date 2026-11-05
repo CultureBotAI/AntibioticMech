@@ -1,7 +1,7 @@
 identifier: CHEBI:197824
 label: naphthomycin A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A chlorinated 29-membered naphthalenic ansamacrolactam polyketide antibiotic
   from Streptomyces species with antibacterial activity against methicillin-resistant
@@ -70,4 +70,56 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Kaewkla et al. 2024 (PMID:38694805)
     and Wu et al. 2011 (PMID:21614382).
   llm_assisted: true
+- timestamp: '2026-11-04T23:10:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    nucleic acid biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed
+    by DOI:10.7164/antibiotics.38.230 (PMID:3997669) and DOI:10.1007/BF00409749 (PMID:4978971;
+    issue #1321).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:197824) with complete 4/4 chemical_structure,
+    curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET),
+    and primary-literature molecular_targets (DOI:10.7164/antibiotics.38.230, PMID:3997669;
+    DOI:10.1007/BF00409749, PMID:4978971) from PROPOSED to REVIEWED (issue #1321).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Ansamycin antibiotic from Streptomyces collinus that
+  inhibits bacterial nucleic acid synthesis and acts as a sulfhydryl-reactive vitamin
+  K antagonist in Gram-positive bacteria; cysteine and other sulfhydryl compounds
+  reverse growth inhibition by nucleophilic Michael addition to the naphthoquinone
+  chromophore (Balerna et al. 1969, DOI:10.1007/BF00409749, PMID:4978971; Okabe et
+  al. 1985, DOI:10.7164/antibiotics.38.230, PMID:3997669).'
+molecular_targets:
+- target_label: bacterial nucleic acid biosynthesis
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Gram-positive bacterial growth-inhibition reversal by vitamin
+    K and sulfhydryl compounds (cysteine, glutathione) and nucleic acid synthesis
+    inhibition assays in Bacillus megaterium and mouse leukemia L5178Y cells (Balerna
+    et al. 1969, DOI:10.1007/BF00409749, PMID:4978971; Okabe et al. 1985, DOI:10.7164/antibiotics.38.230,
+    PMID:3997669).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1985-02
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.7164/antibiotics.38.230
+    snippet: Okabe et al. demonstrated that naphthomycin A inhibits nucleic acid synthesis
+      and that sulfhydryl compounds such as cysteine and dithiothreitol reverse its
+      biological activity via nucleophilic addition to the naphthoquinone moiety.
+    notes: Okabe et al. 1985 (J Antibiot 38:230-235; PMID:3997669) established that
+      naphthomycin A inhibits nucleic acid synthesis and is inactivated by sulfhydryl-group
+      nucleophilic addition to its naphthoquinone chromophore.
+  - reference: DOI:10.1007/BF00409749
+    notes: Balerna et al. 1969 (Arch Mikrobiol 65:303-317; PMID:4978971) isolated
+      naphthomycin from Streptomyces collinus and characterized its Gram-positive
+      antibacterial activity and competitive antagonism by vitamin K and cysteine.

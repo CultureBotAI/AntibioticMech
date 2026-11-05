@@ -1,7 +1,7 @@
 identifier: CHEBI:29671
 label: resistomycin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A pentacyclic discoid benzo[cd]pyrenequinone aromatic polyketide antibiotic
   (heliomycin) from Streptomyces resistomycificus with antibacterial activity against
@@ -73,4 +73,54 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Taechowisan et al. 2025
     (PMID:41618676) and Jakobi & Hertweck 2004 (PMID:14982421).
   llm_assisted: true
+- timestamp: '2026-11-04T23:10:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (NATURAL_PRODUCT), mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    DNA-dependent RNA and DNA biosynthesis (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS)
+    backed by DOI:10.1002/jobm.19750150603 (PMID:1106088) and DOI:10.1021/ja026369d
+    (PMID:12033902; issue #1321).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI record (CHEBI:29671) with complete 4/4 chemical_structure,
+    curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET),
+    and primary-literature molecular_targets (DOI:10.1002/jobm.19750150603, PMID:1106088;
+    DOI:10.1021/ja026369d, PMID:12033902) from PROPOSED to REVIEWED (issue #1321).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Pentacyclic quinone polyketide antibiotic from Streptomyces
+  resistomycificus that complexes divalent cations (Mg2+) required by bacterial DNA-dependent
+  RNA polymerase and DNA polymerase, inhibiting bacterial RNA and DNA biosynthesis
+  (Haupt et al. 1975, DOI:10.1002/jobm.19750150603, PMID:1106088; Jakobi et al. 2002,
+  DOI:10.1021/ja026369d, PMID:12033902).'
+molecular_targets:
+- target_label: bacterial DNA-dependent RNA and DNA biosynthesis
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Macromolecular precursor incorporation and purified bacterial
+    RNA and DNA polymerase divalent-cation (Mg2+) complexation assays in Bacillus
+    subtilis and Escherichia coli (Haupt et al. 1975, DOI:10.1002/jobm.19750150603,
+    PMID:1106088; Jakobi et al. 2002, DOI:10.1021/ja026369d, PMID:12033902).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1975-06
+  source_retrieved_on: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1002/jobm.19750150603
+    snippet: Haupt et al. demonstrated that resistomycin inhibits bacterial RNA and
+      DNA synthesis in Bacillus subtilis and cell-free polymerase systems by interacting
+      with Mg2+ ions required for RNA and DNA polymerase activity.
+    notes: Haupt et al. 1975 (Z Allg Mikrobiol 15:415-424; PMID:1106088) established
+      that resistomycin blocks bacterial RNA and DNA synthesis via Mg2+-dependent
+      inhibition of RNA and DNA polymerase reactions.
+  - reference: DOI:10.1021/ja026369d
+    notes: Jakobi et al. 2002 (J Am Chem Soc 124:6319-6325; PMID:12033902) characterized
+      the discoid polyketide structure and biosynthesis of resistomycin in Streptomyces
+      resistomycificus.
