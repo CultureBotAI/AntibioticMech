@@ -73,6 +73,14 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from De et al. 2021 (PMID:34617948) and Liesch
     et al. 1976 (PMID:1244374).
   llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial 50S ribosomal
+    subunit (GO:0015934, RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by De et
+    al. 2021 (DOI:10.1039/d1ob01759d, PMID:34617948) and Liesch et al. 1976 (DOI:10.1021/ja00417a047,
+    PMID:1244374).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -80,3 +88,35 @@ mode_of_action_notes: 'CURATOR: L-valine macrocyclic thiopeptide congener of ber
   A from Streptomyces bernensis that inhibits 50S ribosomal protein synthesis in Gram-positive
   bacteria (De et al. 2021, DOI:10.1039/d1ob01759d, PMID:34617948; Liesch et al. 1976,
   DOI:10.1021/ja00417a047, PMID:1244374).'
+molecular_targets:
+- target_id: GO:0015934
+  target_label: bacterial 50S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Heterologous biosynthesis and anti-Gram-positive antibacterial
+    susceptibility assays of the L-valine macrocyclic thiopeptide congener berninamycin
+    B targeting the bacterial 50S ribosomal subunit (De et al. 2021, DOI:10.1039/d1ob01759d,
+    PMID:34617948; Liesch et al. 1976, DOI:10.1021/ja00417a047, PMID:1244374).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2021-10
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1039/d1ob01759d
+    snippet: De et al. isolated the macrocyclic thiopeptide congener berninamycin
+      B and demonstrated potent antibacterial activity against Staphylococcus aureus,
+      Bacillus subtilis, and Micrococcus luteus.
+    notes: De et al. 2021 (Org Biomol Chem 19:8940-8946; PMID:34617948) characterized
+      biosynthesis and anti-Gram-positive activity of the 50S ribosome-targeting thiopeptide
+      berninamycin B.
+  - reference: PMID:34617948
+    notes: PubMed record for De et al. 2021 on berninamycin B biosynthesis and antibacterial
+      activity.
+  - reference: DOI:10.1021/ja00417a047
+    notes: Liesch et al. 1976 (J Am Chem Soc 98:299-300; PMID:1244374) elucidated
+      the structure of berninamycin B as the L-valine congener of berninamycin A.
+  - reference: PMID:1244374
+    notes: PubMed record for Liesch et al. 1976 on berninamycin A and B structure
+      elucidation.

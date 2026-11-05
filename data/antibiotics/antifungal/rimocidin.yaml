@@ -38,7 +38,7 @@ source_concepts:
       activity against fungal pathogens.
     notes: Reported by Liao et al. 2020 (Appl Microbiol Biotechnol 104:9745-9754;
       PMID:33057790; DOI:10.1007/s00253-020-10955-8) and Seco et al. 2004 (Chem Biol
-      11:1463-1474; PMID:15555992; DOI:10.1016/j.chembiol.2004.08.017) as a mycosamine-glycosylated
+      11:357-366; PMID:15031268; DOI:10.1016/j.chembiol.2004.02.017) as a mycosamine-glycosylated
       28-membered tetraene polyketide macrolide from Streptomyces rimosus and Streptomyces
       diastaticus with broad-spectrum antifungal activity. MIBiG 4.0.1 entry BGC0002106,
       ChEBI CHEBI:80106, and PubChem CID 6440843 supply the stereo-complete SMILES,
@@ -71,7 +71,14 @@ curation_history:
   curator: antibioticmech-causal-graphs-curator
   action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
   changes: Curated NATURAL_PRODUCT biosynthesis_origin and MEMBRANE_DISRUPTION (MICROBIAL_TARGET)
-    mode_of_action from Liao et al. 2020 (PMID:33057790) and Seco et al. 2004 (PMID:15555992).
+    mode_of_action from Liao et al. 2020 (PMID:33057790) and Seco et al. 2004 (PMID:15031268).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for fungal membrane ergosterol
+    (CHEBI:16933, MEMBRANE, DIRECT_BINDING_TARGET) backed by Seco et al. 2004 (DOI:10.1016/j.chembiol.2004.02.017,
+    PMID:15031268) and Liao et al. 2020 (DOI:10.1007/s00253-020-10955-8, PMID:33057790).
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: MEMBRANE_DISRUPTION
@@ -79,4 +86,37 @@ mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Mycosamine-glycosylated 28-membered tetraene polyene
   macrolide antifungal from Streptomyces rimosus that binds ergosterol and disrupts
   fungal cell membranes (Liao et al. 2020, DOI:10.1007/s00253-020-10955-8, PMID:33057790;
-  Seco et al. 2004, DOI:10.1016/j.chembiol.2004.08.017, PMID:15555992).'
+  Seco et al. 2004, DOI:10.1016/j.chembiol.2004.02.017, PMID:15031268).'
+molecular_targets:
+- target_id: CHEBI:16933
+  target_label: fungal membrane ergosterol
+  target_type: MEMBRANE
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:4751
+  taxon_label: Fungi
+  experimental_context: Biosynthetic and antifungal characterization of the 28-membered
+    tetraene polyene macrolide rimocidin targeting ergosterol in fungal cell membranes
+    (Seco et al. 2004, DOI:10.1016/j.chembiol.2004.02.017, PMID:15031268; Liao et
+    al. 2020, DOI:10.1007/s00253-020-10955-8, PMID:33057790).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2004-03
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2004.02.017
+    snippet: Seco et al. characterized the biosynthetic gene cluster of the tetraene
+      polyene macrolide antifungal rimocidin in Streptomyces diastaticus var. 108,
+      which exerts antifungal activity via interaction with fungal membrane ergosterol.
+    notes: Seco et al. 2004 (Chem Biol 11:357-366; PMID:15031268) characterized the
+      tetraene polyene macrolide rimocidin and its ergosterol-directed antifungal
+      activity.
+  - reference: PMID:15031268
+    notes: PubMed record for Seco et al. 2004 on rimocidin biosynthesis and antifungal
+      activity.
+  - reference: DOI:10.1007/s00253-020-10955-8
+    notes: Liao et al. 2020 (Appl Microbiol Biotechnol 104:9745-9754; PMID:33057790)
+      characterized regulation and antifungal activity of rimocidin in Streptomyces
+      rimosus M527.
+  - reference: PMID:33057790
+    notes: PubMed record for Liao et al. 2020 on rimocidin production and antifungal
+      activity.

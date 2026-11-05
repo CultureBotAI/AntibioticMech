@@ -34,8 +34,8 @@ source_concepts:
       salinamide F, which inhibits bacterial RNA polymerase and growth of Enterococcus
       faecalis, Staphylococcus aureus, and Neisseria gonorrhoeae.
     notes: 'Reported by Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755;
-      DOI:10.1002/anie.201508576) and Hassan et al. 2015 (J Nat Prod 78:96-100; PMID:25607994;
-      DOI:10.1021/np500887p) as a diol bicyclic depsipeptide antibiotic from marine
+      DOI:10.1002/anie.201508576) and Hassan et al. 2015 (J Antibiot 68:206-209; PMID:25227504;
+      DOI:10.1038/ja.2014.122) as a diol bicyclic depsipeptide antibiotic from marine
       Streptomyces sp. CNB-091 that inhibits Escherichia coli and Staphylococcus aureus
       RNA polymerase and exhibits antibacterial activity (MIC 12.5-25 ug/mL against
       Enterococcus faecalis, Staphylococcus aureus, and Neisseria gonorrhoeae). MIBiG
@@ -74,7 +74,21 @@ curation_history:
   action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
   changes: Curated NATURAL_PRODUCT biosynthesis_origin and NUCLEIC_ACID_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET) mode_of_action from Ray et al. 2016 (PMID:26553755) and Hassan
-    et al. 2015 (PMID:25607994).
+    et al. 2015 (PMID:25227504).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial DNA-directed
+    RNA polymerase (RpoB / RpoC; GO:0000428, PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by Hassan et al. 2015 (DOI:10.1038/ja.2014.122, PMID:25227504) and Ray
+    et al. 2016 (DOI:10.1002/anie.201508576, PMID:26553755).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:20:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (P0A8V2, P0A8T7) to the primary-literature
+    bacterial DNA-directed RNA polymerase (RpoB / RpoC) target on salinamide F (DOI:10.1038/ja.2014.122).
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
@@ -82,4 +96,58 @@ mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Diol bicyclic depsipeptide antibiotic from marine
   Streptomyces sp. CNB-091 that inhibits Escherichia coli and Staphylococcus aureus
   RNA polymerase (Ray et al. 2016, DOI:10.1002/anie.201508576, PMID:26553755; Hassan
-  et al. 2015, DOI:10.1021/np500887p, PMID:25607994).'
+  et al. 2015, DOI:10.1038/ja.2014.122, PMID:25227504).'
+molecular_targets:
+- target_id: GO:0000428
+  target_label: bacterial DNA-directed RNA polymerase (RpoB / RpoC)
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: In vitro transcription inhibition assays with purified Escherichia
+    coli and Staphylococcus aureus DNA-directed RNA polymerase (IC50 = 2 uM and 4
+    uM) and antibacterial susceptibility assays demonstrating rifampicin-independent
+    RNAP inhibition by salinamide F (Hassan et al. 2015, DOI:10.1038/ja.2014.122,
+    PMID:25227504; Ray et al. 2016, DOI:10.1002/anie.201508576, PMID:26553755).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2015-03
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1038/ja.2014.122
+    snippet: Hassan et al. isolated the diol bicyclic depsipeptide salinamide F from
+      marine Streptomyces sp. CNB-091 and demonstrated potent inhibition of Escherichia
+      coli and Staphylococcus aureus RNA polymerase (IC50 = 2 uM and 4 uM) without
+      cross-resistance to rifampicin-resistant RNAP.
+    notes: Hassan et al. 2015 (J Antibiot 68:206-209; PMID:25227504) demonstrated
+      direct inhibition of purified Escherichia coli and Staphylococcus aureus DNA-directed
+      RNA polymerase by salinamide F.
+  - reference: PMID:25227504
+    notes: PubMed record for Hassan et al. 2015 on salinamide F isolation and bacterial
+      RNA polymerase inhibition.
+  - reference: DOI:10.1002/anie.201508576
+    notes: Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755) characterized
+      the salinamide biosynthetic gene cluster in Streptomyces sp. CNB-091.
+  - reference: PMID:26553755
+    notes: PubMed record for Ray et al. 2016 on salinamide biosynthesis.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0A8V2
+    protein_label: DNA-directed RNA polymerase subunit beta
+    gene_symbol: rpoB
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB) inhibited
+      in purified E. coli RNAP transcription assays by salinamide F (IC50 = 2 uM;
+      DOI:10.1038/ja.2014.122; PMID:25227504).
+  - uniprot_id: UniProtKB:P0A8T7
+    protein_label: DNA-directed RNA polymerase subunit beta'
+    gene_symbol: rpoC
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-05'
+    role: Escherichia coli K-12 DNA-directed RNA polymerase beta' subunit (RpoC) forming
+      the active-center bridge-helix region inhibited in purified E. coli RNAP transcription
+      assays by salinamide F (IC50 = 2 uM; DOI:10.1038/ja.2014.122; PMID:25227504).

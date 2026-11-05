@@ -41,13 +41,16 @@ source_concepts:
       a spiro-epoxide-containing aromatic polyketide antibiotic with potent antibacterial
       and antimalarial activity.
     notes: Reported by Hou et al. 2018 (Angew Chem Int Ed Engl 57:13475-13479; PMID:30151879;
-      DOI:10.1002/anie.201806729), Tomita et al. 1981 (J Antibiot 34:1519-1524; PMID:7333965;
-      DOI:10.7164/antibiotics.34.1519), and Maskey et al. 2004 (J Antibiot 57:771-779;
-      PMID:15745112; DOI:10.1038/ja.2004.100) as a diglycosylated diepoxide anthraquinone-gamma-pyrone
-      polyketide antibiotic from Streptomyces bottropensis DO-45 that alkylates DNA
-      guanosine residues and exhibits potent anti-Gram-positive antibacterial and
-      antiplasmodial activity. MIBiG 4.0.1 entry BGC0002141 and PubChem CID 49799758
-      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+      DOI:10.1002/anie.201806729), Tomita et al. 1981 (J Antibiot 34:1519-1524; PMID:7323528;
+      DOI:10.7164/antibiotics.34.1519), Tamaoki et al. 1981 (J Antibiot 34:1525-1530;
+      PMID:7323529; DOI:10.7164/antibiotics.34.1525), Maskey et al. 2004 (J Antibiot
+      57:771-779; DOI:10.7164/antibiotics.57.771), and Pfoh et al. 2008 (Nucleic Acids
+      Res 36:3508-3514; PMID:18443398; DOI:10.1093/nar/gkn245) as a diglycosylated
+      diepoxide anthraquinone-gamma-pyrone polyketide antibiotic from Streptomyces
+      bottropensis DO-45 that alkylates DNA guanosine residues and exhibits potent
+      anti-Gram-positive antibacterial and antiplasmodial activity. MIBiG 4.0.1 entry
+      BGC0002141 and PubChem CID 49799758 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
   source_version: 4.0.1
 producer_organisms:
 - taxon_id: NCBITaxon:42235
@@ -79,13 +82,70 @@ curation_history:
   curator: antibioticmech-causal-graphs-curator
   action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
   changes: Curated NATURAL_PRODUCT biosynthesis_origin and NUCLEIC_ACID_SYNTHESIS_INHIBITION
-    (MICROBIAL_TARGET) mode_of_action from Hou et al. 2018 (PMID:30151879) and Maskey
-    et al. 2004 (PMID:15745112).
+    (MICROBIAL_TARGET) mode_of_action from Hou et al. 2018 (PMID:30151879), Pfoh et
+    al. 2008 (PMID:18443398), and Tomita et al. 1981 (PMID:7323528).
+  llm_assisted: true
+- timestamp: '2026-11-05T12:15:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial duplex DNA
+    (CHEBI:16991, NUCLEIC_ACID, DIRECT_BINDING_TARGET) backed by Pfoh et al. 2008
+    (DOI:10.1093/nar/gkn245, PMID:18443398), Tamaoki et al. 1981 (DOI:10.7164/antibiotics.34.1525,
+    PMID:7323529), Tomita et al. 1981 (DOI:10.7164/antibiotics.34.1519, PMID:7323528),
+    and Hou et al. 2018 (DOI:10.1002/anie.201806729, PMID:30151879).
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
 mode_of_action_notes: 'CURATOR: Spiro-epoxide anthraquinone-gamma-pyrone diglycoside
   polyketide antibiotic from Streptomyces bottropensis DO-45 that intercalates duplex
-  DNA and covalently alkylates guanosine residues (Hou et al. 2018, DOI:10.1002/anie.201806729,
-  PMID:30151879; Maskey et al. 2004, DOI:10.1038/ja.2004.100, PMID:15745112).'
+  DNA and covalently alkylates guanosine residues to inhibit bacterial nucleic acid
+  synthesis (Hou et al. 2018, DOI:10.1002/anie.201806729, PMID:30151879; Pfoh et al.
+  2008, DOI:10.1093/nar/gkn245, PMID:18443398; Tomita et al. 1981, DOI:10.7164/antibiotics.34.1519,
+  PMID:7323528).'
+molecular_targets:
+- target_id: CHEBI:16991
+  target_label: bacterial duplex DNA
+  target_type: NUCLEIC_ACID
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Macromolecular DNA synthesis inhibition in Bacillus subtilis
+    and X-ray crystal structure of trioxacarcin A intercalated into duplex DNA and
+    covalently alkylating N7 of guanosine via its spiro-epoxide warhead (PDB:3C2J)
+    (Pfoh et al. 2008, DOI:10.1093/nar/gkn245, PMID:18443398; Tamaoki et al. 1981,
+    DOI:10.7164/antibiotics.34.1525, PMID:7323529; Tomita et al. 1981, DOI:10.7164/antibiotics.34.1519,
+    PMID:7323528; Hou et al. 2018, DOI:10.1002/anie.201806729, PMID:30151879).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2008-06
+  source_retrieved_on: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1093/nar/gkn245
+    snippet: Pfoh et al. solved the 1.78 Angstrom crystal structure of trioxacarcin
+      A covalently bound to duplex DNA (PDB:3C2J), demonstrating intercalation and
+      nucleophilic opening of the spiro-epoxide by N7 of guanine.
+    notes: Pfoh et al. 2008 (Nucleic Acids Res 36:3508-3514; PMID:18443398; PDB:3C2J)
+      established covalent N7-guanine alkylation of duplex DNA by trioxacarcin A.
+  - reference: PMID:18443398
+    notes: PubMed record for Pfoh et al. 2008 on the crystal structure of trioxacarcin
+      A covalently bound to duplex DNA.
+  - reference: DOI:10.7164/antibiotics.34.1525
+    notes: Tamaoki et al. 1981 (J Antibiot 34:1525-1530; PMID:7323529) demonstrated
+      selective inhibition of DNA synthesis by trioxacarcin A in Bacillus subtilis.
+  - reference: PMID:7323529
+    notes: PubMed record for Tamaoki et al. 1981 on trioxacarcin A biological activities
+      and selective DNA synthesis inhibition in Bacillus subtilis.
+  - reference: DOI:10.7164/antibiotics.34.1519
+    notes: Tomita et al. 1981 (J Antibiot 34:1519-1524; PMID:7323528) reported the
+      taxonomy, fermentation, isolation, and anti-Gram-positive antibacterial activity
+      of trioxacarcins.
+  - reference: PMID:7323528
+    notes: PubMed record for Tomita et al. 1981 on trioxacarcin isolation and antibacterial
+      activity.
+  - reference: DOI:10.1002/anie.201806729
+    notes: Hou et al. 2018 (Angew Chem Int Ed Engl 57:13475-13479; PMID:30151879)
+      characterized the trioxacarcin A biosynthetic pathway in Streptomyces bottropensis
+      DO-45.
+  - reference: PMID:30151879
+    notes: PubMed record for Hou et al. 2018 on trioxacarcin A biosynthesis.
