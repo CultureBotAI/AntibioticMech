@@ -1,0 +1,70 @@
+identifier: CHEBI:221339
+label: warkmycin CS1
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A tetraglycosylated carbamoyl-bearing angucycline antibiotic from Streptomyces
+  sp. CS057 with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1038/ja.2013.74
+synonyms:
+- synonym_text: deacetylwarkmycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O[C@H](C(C)=C1)[C@@]2(O)[C@]([C@@]1([H])O[C@H](C[C@@H](OC)[C@@H]3O)O[C@H]3C)(O)C4=C(C(C(C(O)=C5[C@@H](C[C@@H](O[C@H]6C[C@]([C@H](O[C@@H]7O[C@@H]([C@H](CC7)OC(N)=O)C)[C@@H](C)O6)(C)O)[C@@H]8O)O[C@@H]8C)=C(C=C5)C4=O)=O)[C@H](O)[C@@H]2OC(C)=O
+  standard_inchi: InChI=1S/C48H65NO22/c1-17-13-29(70-31-15-27(62-8)36(51)20(4)65-31)47(60)35-34(41(56)44(67-22(6)50)48(47,61)42(17)57)40(55)33-24(39(35)54)10-9-23(38(33)53)26-14-28(37(52)19(3)63-26)68-32-16-46(7,59)43(21(5)66-32)71-30-12-11-25(18(2)64-30)69-45(49)58/h9-10,13,18-21,25-32,36-37,41-44,51-53,56-57,59-61H,11-12,14-16H2,1-8H3,(H2,49,58)/t18-,19-,20+,21-,25+,26-,27-,28-,29+,30+,31-,32+,36-,37-,41+,42-,43-,44+,46+,47-,48+/m1/s1
+  standard_inchi_key: BVFQLQJRBYDONH-DDEJJMJQSA-N
+  molecular_formula: C48H65NO22
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001438/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1008.033
+  monoisotopic_mass: 1007.3998
+xrefs:
+- pubchem.compound:145720592
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/ja.2013.74#warkmycin-cs1
+  source_label: warkmycin CS1
+  minted_identifier: antibioticmech:curator-dce758fe1b
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/ja.2013.74
+    snippet: Helaly et al. and Brana et al. characterized the glycosylated angucycline
+      antibiotics warkmycin CS1 and warkmycin CS2 from Streptomyces strains Acta 2930
+      and CS057, demonstrating growth inhibition against Gram-positive bacteria including
+      Staphylococcus aureus and Micrococcus luteus.
+    notes: Reported by Helaly et al. 2013 (J Antibiot 66:669-674; PMID:23860362; DOI:10.1038/ja.2013.74)
+      and Brana et al. 2017 (J Nat Prod 80:569-573; PMID:28199105; DOI:10.1021/acs.jnatprod.6b01107)
+      as a tetraglycosylated carbamoyl-bearing angucycline antibiotic from Streptomyces
+      sp. CS057 and Streptomyces sp. Acta 2930 with antibacterial activity against
+      Gram-positive bacteria. MIBiG 4.0.1 entry BGC0001438, ChEBI CHEBI:221339, and
+      PubChem CID 145720592 supply the stereo-complete SMILES, Standard InChI, and
+      InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1982764
+  taxon_label: Streptomyces sp.
+  strain: CS057
+  biosynthetic_gene_cluster: BGC0001438
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'warkmycin CS1' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:23860362
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

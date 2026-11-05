@@ -1,0 +1,70 @@
+identifier: CHEBI:227666
+label: salinamide A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An epoxide-containing bicyclic depsipeptide antibiotic from marine Streptomyces
+  sp. CNB-091 that binds the bridge-helix cap of bacterial RNA polymerase and exhibits
+  antibacterial activity.
+definition_source: DOI:10.1002/anie.201508576
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: '[H][C@]1(NC(=O)[C@@H](CC2=CC=CC=C2)N(C)C(=O)[C@@H]2NC(=O)[C@@H](NC(=O)[C@H](NC(=O)[C@@H](C)[C@@H](O)C(C)C)[C@H](C)OC(=O)[C@@H](COC(=O)CNC(=O)\C=C\[C@@]3(CO3)[C@H](C)OC3=CC=C2C=C3)NC1=O)[C@H](C)CC)[C@H](C)O'
+  standard_inchi: InChI=1S/C51H69N7O15/c1-10-27(4)39-46(65)57-42-33-16-18-34(19-17-33)73-31(8)51(25-71-51)21-20-37(60)52-23-38(61)70-24-35(50(69)72-30(7)41(48(67)54-39)56-44(63)28(5)43(62)26(2)3)53-47(66)40(29(6)59)55-45(64)36(58(9)49(42)68)22-32-14-12-11-13-15-32/h11-21,26-31,35-36,39-43,59,62H,10,22-25H2,1-9H3,(H,52,60)(H,53,66)(H,54,67)(H,55,64)(H,56,63)(H,57,65)/b21-20+/t27-,28+,29+,30+,31+,35-,36-,39+,40+,41-,42-,43+,51-/m1/s1
+  standard_inchi_key: UIHLRTKYJPYYEU-OBBNVNRZSA-N
+  molecular_formula: C51H69N7O15
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0001230/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1020.147
+  monoisotopic_mass: 1019.4852
+xrefs:
+- pubchem.compound:10102536
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.201508576#salinamide-a
+  source_label: salinamide A
+  minted_identifier: antibioticmech:curator-6f7445e2b8
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1002/anie.201508576
+    snippet: Ray et al. characterized the nonribosomal peptide synthetase Sln9 that
+      installs the acylglycine basket handle of the bicyclic depsipeptide antibiotic
+      salinamide A in marine Streptomyces sp. CNB-091, which inhibits bacterial RNA
+      polymerase and exhibits antibacterial activity against Gram-positive and Gram-negative
+      bacteria.
+    notes: Reported by Ray et al. 2016 (Angew Chem Int Ed Engl 55:364-367; PMID:26553755;
+      DOI:10.1002/anie.201508576), Degen et al. 2014 (eLife 3:e02451; PMID:24843026;
+      DOI:10.7554/eLife.02451), and Moore et al. 1999 (J Org Chem 64:1145-1150; PMID:11674169;
+      DOI:10.1021/jo981406+) as an epoxide-containing bicyclic depsipeptide antibiotic
+      from marine Streptomyces sp. CNB-091 that binds the bridge-helix cap of bacterial
+      RNA polymerase. MIBiG 4.0.1 entry BGC0001230, ChEBI CHEBI:227666, and PubChem
+      CID 10102536 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1169156
+  taxon_label: Streptomyces sp.
+  strain: CNB091
+  biosynthetic_gene_cluster: BGC0001230
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'salinamide A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:26553755
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:30:39Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

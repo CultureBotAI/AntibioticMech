@@ -1,0 +1,66 @@
+identifier: CHEBI:223870
+label: amipurimycin
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 2-aminopurine C9-sugar peptidyl nucleoside antibiotic bearing a cis-2-aminocyclopentanecarboxylic
+  acid moiety from Streptomyces novoguineensis with potent antifungal activity against
+  Pyricularia oryzae.
+definition_source: DOI:10.1021/acs.orglett.9b00840
+activity_roles:
+- CHEBI:35718
+chemical_structure:
+  smiles: C1C[C@H]([C@H](C1)N)C(=O)N[C@H]([C@H]2C[C@]([C@@H]([C@@H](O2)N3C=NC4=CN=C(N=C43)N)O)([C@H](CO)O)O)C(=O)O
+  standard_inchi: InChI=1S/C20H29N7O8/c21-9-3-1-2-8(9)16(31)25-13(18(32)33)11-4-20(34,12(29)6-28)14(30)17(35-11)27-7-24-10-5-23-19(22)26-15(10)27/h5,7-9,11-14,17,28-30,34H,1-4,6,21H2,(H,25,31)(H,32,33)(H2,22,23,26)/t8-,9+,11-,12+,13-,14-,17-,20-/m1/s1
+  standard_inchi_key: BHAUQSKSOITMND-KVKUBTPSSA-N
+  molecular_formula: C20H29N7O8
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002054/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 495.493
+  monoisotopic_mass: 495.2078
+xrefs:
+- pubchem.compound:139589160
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/acs.orglett.9b00840#amipurimycin
+  source_label: amipurimycin
+  minted_identifier: antibioticmech:curator-3858d175be
+  role_terms:
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.1021/acs.orglett.9b00840
+    snippet: Kang et al. identified and experimentally confirmed the biosynthetic
+      gene cluster of the C9-sugar peptidyl nucleoside antifungal antibiotic amipurimycin
+      in Streptomyces novoguineensis, which exhibits potent antifungal activity against
+      the rice blast pathogen Pyricularia oryzae.
+    notes: Reported by Kang et al. 2019 (Org Lett 21:3148-3152; PMID:30990701; DOI:10.1021/acs.orglett.9b00840)
+      and Harada et al. 1977 (J Antibiot 30:11-16; PMID:838626; DOI:10.7164/antibiotics.30.11)
+      as a 2-aminopurine C9-pyranose peptidyl nucleoside antifungal antibiotic bearing
+      a cis-2-aminocyclopentanecarboxylic acid moiety from Streptomyces novoguineensis.
+      MIBiG 4.0.1 entry BGC0002054, ChEBI CHEBI:223870, and PubChem CID 139589160
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:2586640
+  taxon_label: Streptomyces novoguineensis
+  biosynthetic_gene_cluster: BGC0002054
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'amipurimycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:30990701
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

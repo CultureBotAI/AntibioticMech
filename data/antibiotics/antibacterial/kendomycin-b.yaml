@@ -1,0 +1,67 @@
+identifier: CHEBI:225841
+label: kendomycin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A carbocyclic quinone-methide ansa-polyketide antibiotic from marine Verrucosispora
+  sp. SCSIO 07399 with potent antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.3390/md19120673
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@H]\1CC[C@@H]2[C@@H]([C@@H]([C@H]([C@@H](O2)C3=C(C(=O)C=C4C3=C[C@@](O4)([C@H](C[C@@H](C/C(=C1)/C)C)C)O)O)C)C)C
+  standard_inchi: InChI=1S/C29H42O5/c1-15-8-9-24-20(6)19(5)21(7)28(33-24)26-22-14-29(32,34-25(22)13-23(30)27(26)31)18(4)12-17(3)11-16(2)10-15/h10,13-15,17-21,24,28,31-32H,8-9,11-12H2,1-7H3/b16-10+/t15-,17+,18-,19-,20+,21+,24+,28+,29+/m0/s1
+  standard_inchi_key: KWKITCKAXYJDML-RPSOVOHRSA-N
+  molecular_formula: C29H42O5
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002671/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 470.65
+  monoisotopic_mass: 470.3032
+xrefs:
+- pubchem.compound:145721314
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/md19120673#kendomycin-b
+  source_label: kendomycin B
+  minted_identifier: antibioticmech:curator-29b36150d8
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/md19120673
+    snippet: Chen et al. identified and heterologously expressed the type I/type III
+      PKS hybrid biosynthetic gene cluster for kendomycin B from marine Verrucosispora
+      sp. SCSIO 07399, a carbocyclic quinone-methide ansa-polyketide with potent antibacterial
+      activity against Gram-positive bacteria.
+    notes: Reported by Chen et al. 2021 (Mar Drugs 19:673; PMID:34940672; DOI:10.3390/md19120673)
+      and Zhang et al. 2019 (Org Lett 21:2039-2043; PMID:30843714; DOI:10.1021/acs.orglett.9b00323)
+      as an all-carbon macrocyclic quinone-methide ansa-polyketide antibiotic from
+      marine Verrucosispora sp. SCSIO 07399 with potent anti-Gram-positive antibacterial
+      activity against Staphylococcus aureus, Bacillus subtilis, Bacillus thuringiensis,
+      and Enterococcus faecalis (MIC 0.5-8 ug/mL). MIBiG 4.0.1 entry BGC0002671, ChEBI
+      CHEBI:225841, and PubChem CID 145721314 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1871626
+  taxon_label: Verrucosispora sp.
+  biosynthetic_gene_cluster: BGC0002671
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'kendomycin B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:34940672
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

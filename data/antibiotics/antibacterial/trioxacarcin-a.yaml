@@ -1,0 +1,77 @@
+identifier: antibioticmech:curator-cb51e1cae2
+label: trioxacarcin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A diglycosylated spiro-epoxide anthraquinone-gamma-pyrone aromatic polyketide
+  antibiotic from Streptomyces bottropensis DO-45 that alkylates duplex DNA with potent
+  antibacterial and antimalarial activity.
+definition_source: DOI:10.1002/anie.201806729
+synonyms:
+- synonym_text: DC-45-A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:38068
+chemical_structure:
+  smiles: C[C@H]1[C@H]([C@](C[C@@H](O1)O[C@H]2C[C@@H](C(=O)C3=C(C4=C(C=C(C5=C4O[C@@]6([C@@H]7[C@H]5O[C@]([C@]68CO8)(O7)C(OC)OC)O[C@H]9C[C@H]([C@]([C@@H](O9)C)(C(=O)C)O)O)C)C(=C23)OC)O)O)(C)O)OC(=O)C
+  standard_inchi: InChI=1S/C42H52O20/c1-15-10-20-27(31(48)29-28(32(20)51-7)22(11-21(45)30(29)47)58-25-13-38(6,49)35(16(2)55-25)57-19(5)44)33-26(15)34-36-41(60-33,39(14-54-39)42(61-34,62-36)37(52-8)53-9)59-24-12-23(46)40(50,17(3)43)18(4)56-24/h10,16,18,21-25,34-37,45-46,48-50H,11-14H2,1-9H3/t16-,18-,21-,22-,23+,24-,25-,34-,35+,36-,38+,39-,40+,41+,42-/m0/s1
+  standard_inchi_key: VVCYZYSLUSSELI-NVJOEFDOSA-N
+  molecular_formula: C42H52O20
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002141/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 876.858
+  monoisotopic_mass: 876.3052
+xrefs:
+- pubchem.compound:49799758
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1002/anie.201806729#trioxacarcin-a
+  source_label: trioxacarcin A
+  minted_identifier: antibioticmech:curator-cb51e1cae2
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:38068
+  evidence:
+  - reference: DOI:10.1002/anie.201806729
+    snippet: Hou et al. characterized the anthraquinone-gamma-pyrone synthase TxnO9
+      in the biosynthetic pathway of trioxacarcin A in Streptomyces bottropensis DO-45,
+      a spiro-epoxide-containing aromatic polyketide antibiotic with potent antibacterial
+      and antimalarial activity.
+    notes: Reported by Hou et al. 2018 (Angew Chem Int Ed Engl 57:13475-13479; PMID:30151879;
+      DOI:10.1002/anie.201806729), Tomita et al. 1981 (J Antibiot 34:1519-1524; PMID:7333965;
+      DOI:10.7164/antibiotics.34.1519), and Maskey et al. 2004 (J Antibiot 57:771-779;
+      PMID:15745112; DOI:10.1038/ja.2004.100) as a diglycosylated diepoxide anthraquinone-gamma-pyrone
+      polyketide antibiotic from Streptomyces bottropensis DO-45 that alkylates DNA
+      guanosine residues and exhibits potent anti-Gram-positive antibacterial and
+      antiplasmodial activity. MIBiG 4.0.1 entry BGC0002141 and PubChem CID 49799758
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:42235
+  taxon_label: Streptomyces bottropensis
+  strain: DO-45
+  biosynthetic_gene_cluster: BGC0002141
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'trioxacarcin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:30151879
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

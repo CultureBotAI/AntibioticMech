@@ -1,0 +1,68 @@
+identifier: CHEBI:199044
+label: berninamycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 35-membered pyridyl-polyazole macrocyclic thiopeptide antibiotic from
+  Streptomyces bernensis and Streptomyces sp. SCSIO 11878 that inhibits 50S ribosomal
+  protein synthesis in Gram-positive bacteria.
+definition_source: DOI:10.1039/d1ob01759d
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C/C=C\1/C2=NC(=C(O2)C)C(=O)NC(=C)C(=O)N[C@H](C(=O)NC(=C)C3=NC(=C(O3)C)C(=O)NC(=C)C(=O)NC(=C)C4=NC(=CO4)C5=C(C=CC(=N5)C(=O)NC(=C)C(=O)NC(=C)C(=O)N)C6=NC(=CS6)C(=O)N[C@H](C(=O)N1)[C@@H](C)O)C(C)(C)O
+  standard_inchi: InChI=1S/C51H51N15O15S/c1-13-28-49-65-34(26(10)81-49)45(76)56-21(5)40(71)66-36(51(11,12)78)46(77)58-23(7)48-64-33(25(9)80-48)44(75)55-20(4)39(70)57-22(6)47-61-30(16-79-47)35-27(50-62-31(17-82-50)42(73)63-32(24(8)67)43(74)60-28)14-15-29(59-35)41(72)54-19(3)38(69)53-18(2)37(52)68/h13-17,24,32,36,67,78H,2-7H2,1,8-12H3,(H2,52,68)(H,53,69)(H,54,72)(H,55,75)(H,56,76)(H,57,70)(H,58,77)(H,60,74)(H,63,73)(H,66,71)/b28-13-/t24-,32+,36-/m1/s1
+  standard_inchi_key: CAFFHXXVDGAVPH-DKFXDEMXSA-N
+  molecular_formula: C51H51N15O15S
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002363/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1146.126
+  monoisotopic_mass: 1145.341
+xrefs:
+- pubchem.compound:91617669
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1039/d1ob01759d#berninamycin-a
+  source_label: berninamycin A
+  minted_identifier: antibioticmech:curator-fffb4abf40
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1039/d1ob01759d
+    snippet: De et al. heterologously expressed the berninamycin biosynthetic gene
+      cluster from marine Streptomyces sp. SCSIO 11878 to produce the macrocyclic
+      thiopeptide antibiotic berninamycin A and confirmed its potent antibacterial
+      activity against Gram-positive bacteria including Staphylococcus aureus, Bacillus
+      subtilis, and Micrococcus luteus.
+    notes: Reported by De et al. 2021 (Org Biomol Chem 19:8940-8946; PMID:34617948;
+      DOI:10.1039/d1ob01759d) and Reusser 1969 (Biochemistry 8:3303-3308; PMID:4897214;
+      DOI:10.1021/bi00836a026) as a 35-membered trisubstituted-pyridine-containing
+      macrocyclic thiopeptide antibiotic from Streptomyces bernensis and Streptomyces
+      sp. SCSIO 11878 that inhibits bacterial protein synthesis at the 50S ribosomal
+      subunit. MIBiG 4.0.1 entry BGC0002363, ChEBI CHEBI:199044, and PubChem CID 91617669
+      supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1931
+  taxon_label: Streptomyces sp.
+  biosynthetic_gene_cluster: BGC0002363
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '3'
+  source_quality: questionable
+  link_evidence:
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'berninamycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:34617948
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

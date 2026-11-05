@@ -1,0 +1,67 @@
+identifier: CHEBI:219296
+label: laterocidine
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A cationic nonribosomal cyclic lipotridecadepsipeptide antibiotic from
+  Brevibacillus laterosporus that binds lipopolysaccharide with bactericidal activity
+  against multidrug-resistant Gram-negative bacteria.
+definition_source: DOI:10.1038/s41467-018-05781-6
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H](C)[C@@H]1NC(=O)[C@@H](NC(=O)[C@H](CC2=C[NH]C3=CC=CC=C23)NC(=O)[C@@H](CCCN)NC(=O)CNC(=O)[C@H](CCCN)NC(=O)[C@@H](CCCN)NC(=O)[C@@H](CC2=C[NH]C3=CC=CC=C23)NC(=O)[C@@H](CC2=CC=C(O)C=C2)NC(=O)[C@@H](CO)NC(=O)CCCCCC(C)C)[C@@H](C)OC(=O)CNC(=O)CNC(=O)[C@H](CC(N)=O)NC1=O
+  standard_inchi: InChI=1S/C78H113N19O18/c1-6-44(4)67-77(113)95-60(36-62(82)100)70(106)86-39-64(102)85-41-66(104)115-45(5)68(78(114)96-67)97-75(111)59(35-48-38-84-53-21-13-11-19-51(48)53)93-71(107)55(23-15-31-80)88-65(103)40-87-69(105)54(22-14-30-79)90-72(108)56(24-16-32-81)91-74(110)58(34-47-37-83-52-20-12-10-18-50(47)52)94-73(109)57(33-46-26-28-49(99)29-27-46)92-76(112)61(42-98)89-63(101)25-9-7-8-17-43(2)3/h10-13,18-21,26-29,37-38,43-45,54-61,67-68,83-84,98-99H,6-9,14-17,22-25,30-36,39-42,79-81H2,1-5H3,(H2,82,100)(H,85,102)(H,86,106)(H,87,105)(H,88,103)(H,89,101)(H,90,108)(H,91,110)(H,92,112)(H,93,107)(H,94,109)(H,95,113)(H,96,114)(H,97,111)/t44-,45+,54-,55+,56+,57+,58+,59-,60-,61+,67-,68-/m0/s1
+  standard_inchi_key: MIUUXMLKAKRFMK-PCBFYWCHSA-N
+  molecular_formula: C78H113N19O18
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002432/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1604.877
+  monoisotopic_mass: 1603.8511
+xrefs:
+- pubchem.compound:146684560
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41467-018-05781-6#laterocidine
+  source_label: laterocidine
+  minted_identifier: antibioticmech:curator-39cd7be327
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41467-018-05781-6
+    snippet: Li et al. discovered the cationic nonribosomal lipopeptide laterocidine
+      from Brevibacillus laterosporus LMG 15441 via global genome mining and demonstrated
+      bactericidal activity against antibiotic-resistant Gram-negative pathogens including
+      Pseudomonas aeruginosa and colistin-resistant Escherichia coli.
+    notes: Reported by Li et al. 2018 (Nat Commun 9:3273; PMID:30115920; DOI:10.1038/s41467-018-05781-6)
+      as a 7-methyloctanoyl cationic cyclic lipotridecadepsipeptide antibiotic from
+      Brevibacillus laterosporus LMG 15441 that binds lipopolysaccharide and exhibits
+      potent bactericidal activity against Escherichia coli, Pseudomonas aeruginosa,
+      Klebsiella pneumoniae, and Acinetobacter baumannii (MIC 1-8 ug/mL). MIBiG 4.0.1
+      entry BGC0002432, ChEBI CHEBI:219296, and PubChem CID 146684560 supply the stereo-complete
+      SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1042163
+  taxon_label: Brevibacillus laterosporus
+  strain: LMG 15441
+  biosynthetic_gene_cluster: BGC0002432
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'laterocidine' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:30115920
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

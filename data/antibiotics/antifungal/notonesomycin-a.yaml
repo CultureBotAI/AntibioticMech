@@ -1,0 +1,68 @@
+identifier: CHEBI:222510
+label: notonesomycin A
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A sulfated 32-membered glycosylated polyketide macrolactone from Streptomyces
+  aminophilus subsp. notonesogenes and Streptomyces sp. A793 with antifungal and antibacterial
+  activity.
+definition_source: DOI:10.1186/s12934-020-01328-x
+activity_roles:
+- CHEBI:35718
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H]([C@@H](C)[C@@H]([C@@H](C)[C@@H]([C@@H](C)[C@@H]1[C@H]([C@@H]2[C@H](O2)[C@@H](CCC[C@@H](C[C@H](C[C@@H]3C[C@@H]([C@H]([C@](O3)([C@H]([C@H]([C@@H](CCCC[C@H](C[C@H](C/C=C/C(=O)O1)O)O)C)O)O)O)O)OS(=O)(=O)O)OC(=O)CC(=O)O)O)O)C)O)O)O[C@@H]4C[C@H]([C@H]([C@@H](O4)C)OC)OC(=O)C5=CC(=C(C=C5)NC)O[C@@H]6CC[C@@H]([C@H](O6)C)O
+  standard_inchi: InChI=1S/C68H111NO30S/c1-11-49(93-57-31-51(63(89-10)39(8)91-57)95-67(84)40-22-23-46(69-9)50(26-40)94-56-25-24-47(73)38(7)90-56)34(3)59(80)35(4)60(81)36(5)61-37(6)62-64(97-62)48(74)20-14-18-43(72)28-44(92-55(78)32-53(75)76)29-45-30-52(99-100(86,87)88)65(82)68(85,98-45)66(83)58(79)33(2)16-12-13-17-41(70)27-42(71)19-15-21-54(77)96-61/h15,21-23,26,33-39,41-45,47-49,51-52,56-66,69-74,79-83,85H,11-14,16-20,24-25,27-32H2,1-10H3,(H,75,76)(H,86,87,88)/b21-15+/t33-,34-,35-,36-,37-,38-,39+,41-,42+,43+,44-,45-,47+,48-,49-,51-,52+,56-,57-,58+,59+,60+,61-,62-,63+,64-,65-,66+,68+/m1/s1
+  standard_inchi_key: HVHQPPAFOWCAJP-LPYYGHOJSA-N
+  molecular_formula: C68H111NO30S
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0002541/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1454.68
+  monoisotopic_mass: 1453.6912
+xrefs:
+- pubchem.compound:139589015
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1186/s12934-020-01328-x#notonesomycin-a
+  source_label: notonesomycin A
+  minted_identifier: antibioticmech:curator-729c9f16de
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1186/s12934-020-01328-x
+    snippet: Goh et al. identified the biosynthetic gene cluster of the 32-membered
+      glycosylated macrolactone notonesomycin A in Streptomyces sp. A793 and demonstrated
+      antifungal activity against Aspergillus fumigatus and Candida albicans alongside
+      antibacterial activity against Staphylococcus aureus.
+    notes: Reported by Goh et al. 2020 (Microb Cell Fact 19:71; PMID:32192516; DOI:10.1186/s12934-020-01328-x)
+      and Sasaki et al. 1986 (J Antibiot 39:502-509; PMID:3710912; DOI:10.7164/antibiotics.39.502)
+      as a sulfated 32-membered glycosylated polyketide macrolactone from Streptomyces
+      aminophilus subsp. notonesogenes and Streptomyces sp. A793 with antifungal and
+      anti-Gram-positive antibacterial activity. MIBiG 4.0.1 entry BGC0002541, ChEBI
+      CHEBI:222510, and PubChem CID 139589015 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1931
+  taxon_label: Streptomyces sp.
+  biosynthetic_gene_cluster: BGC0002541
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '2'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'notonesomycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:32192516
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-05T05:31:19Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

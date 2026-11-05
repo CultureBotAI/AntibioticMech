@@ -264,7 +264,7 @@ entries:
   goal_evidence:
     path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/evidence.yaml
     sha256: 111df9e767079af9d658f00bcacdfc330fb0aaa35c67658bd34ce78153bc4797
-  receipt_sha256: ab93bf80dcde2213b64ca59315232ce9c8171fc4f7f56380a710f4155c32b1c1
+  receipt_sha256: d990bdf9e6c6945a65300659dead659258ddaf625ebe575cc3d55b380ee1342e
   stage: 5
   verification:
     checks:
@@ -280,5 +280,26 @@ entries:
     pr_number: 1323
     status: merged
     verified_at: '2026-11-05T03:11:20.998842+00:00'
+- cycle: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-06/revision-0001/evidence.yaml
+    sha256: 0e2742b662aacf7bf6754f0aa3b6f9b58de9bd84b862a0ba16971883ef8093cb
+  receipt_sha256: 30e62396b333fcf79447b167ba87480c6ba000298e9a6d8957193d606eb4d6fe
+  stage: 6
+  verification:
+    checks:
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 7f569dbffec59f0635712762d60d52dc397828a5
+    merge_commit_sha: 0f6da73dac1d7f60274638a7bfea6f1b440c223a
+    merged_at: '2026-11-05T04:39:47Z'
+    pr_number: 1325
+    status: merged
+    verified_at: '2026-11-05T04:49:35.121848+00:00'
+
 
 
