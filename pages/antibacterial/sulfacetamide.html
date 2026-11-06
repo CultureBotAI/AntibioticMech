@@ -238,6 +238,77 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 </details>
 
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Sulfacetamide competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de novo folate biosynthesis <span class="pill">MECHANISTIC</span></h3>
+<p>Sulfacetamide (N-[(4-aminophenyl)sulfonyl]acetamide), a synthetic sulfonamide antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.</p><div class="table-scroll" role="region" aria-label="Nodes: sulfacetamide_dhps_paba_competitive_folate_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — sulfacetamide_dhps_paba_competitive_folate_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">sulfacetamide</code></td>
+    <td>sulfacetamide</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/sulfacetamide.html"><code class="curie">CHEBI:63845</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dihydropteroate_synthase_folp</code></td>
+    <td>bacterial dihydropteroate synthase (DHPS)<br><span class="meta">Examples: Dihydropteroate synthase (folP) <a href="https://www.uniprot.org/uniprotkb/P0AC13"><code class="curie">UniProtKB:P0AC13</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfacetamide in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">dhps_paba_condensation_and_pterin_adduct_diversion</code></td>
+    <td>DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_de_novo_folate_biosynthesis</code></td>
+    <td>bacterial de novo folate biosynthesis</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: sulfacetamide_dhps_paba_competitive_folate_inhibition" tabindex="0">
+<table>
+  <caption>Edges — sulfacetamide_dhps_paba_competitive_folate_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">sulfacetamide</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">dhps_paba_condensation_and_pterin_adduct_diversion</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.15.2.195">DOI:10.1128/AAC.15.2.195</a></span> <span class="meta">(Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfacetamide and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct.)</span></li>
+  <li><span class="meta"><a href="https://doi.org/10.1126/science.1214641">DOI:10.1126/science.1214641</a></span> <span class="meta">(Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dihydropteroate_synthase_folp</code></td>
+    <td>enables</td>
+    <td><code class="curie">dhps_paba_condensation_and_pterin_adduct_diversion</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.15.2.195">DOI:10.1128/AAC.15.2.195</a></span> <span class="meta">(Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfacetamide (PMID:378102).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">dhps_paba_condensation_and_pterin_adduct_diversion</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_de_novo_folate_biosynthesis</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1128/AAC.15.2.195">DOI:10.1128/AAC.15.2.195</a></span> <span class="meta">(Competitive inhibition of DHPS and DHPPP depletion by sulfacetamide block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -284,6 +355,11 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
     <span class="meta">2026-11-05 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI sulfonamide record (CHEBI:63845) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845) from SEEDED to REVIEWED (issue #1335).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-06 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph sulfacetamide_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -304,7 +380,7 @@ with ARO grounding where reported. Grouped by reported mechanism type.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>cbb8d5503c56</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>e00c4250472e</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

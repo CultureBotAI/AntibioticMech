@@ -77,3 +77,17 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and PROTEIN_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action from Inamori et al. 1990 (PMID:2177682) and
+    Maruyama et al. 2012 (PMID:22820420).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Streptothricin N-glycoside antibiotic congener bearing
+  two L-beta-lysine residues from Streptomyces rochei and Streptomyces lavendulae
+  that inhibits bacterial protein synthesis (Inamori et al. 1990, DOI:10.1248/cpb.38.2296,
+  PMID:2177682; Maruyama et al. 2012, DOI:10.1038/nchembio.1040, PMID:22820420).'

@@ -2,11 +2,16 @@ schema_version: 1
 task: causal_graphs_curation
 curation_action: CURATED_CAUSAL_GRAPHS
 retrieved_on: '2026-10-23'
-scope_note: 'Curated primary-literature MECHANISTIC causal_graphs across all eligible REVIEWED AntibioticMech
-  records: 48 Cohort A records with resolved UniProtKB protein_examples on PRIMARY_LITERATURE molecular_targets
-  and 19 Cohort B records with direct-binding or measured-association non-protein PRIMARY_LITERATURE molecular_targets,
-  plus explicit accounting of all 16 pre-existing corpus causal_graphs (15 REVIEWED + 1 SEEDED) and all
-  45 held REVIEWED records.'
+scope_note: 'Accounting-complete causal_graphs curation for all 145 REVIEWED AntibioticMech records. Every
+  REVIEWED record is accounted for in exactly one of: existing_causal_graphs (15 pre-existing REVIEWED
+  graphs; total corpus pre-existing graphs = 16 including SEEDED daptomycin), records (56 Cohort A records
+  with curated UniProtKB protein_examples on their proximal protein/complex target plus 19 Cohort B records
+  with a direct or measured non-protein molecular target), or held_records (55 held REVIEWED records:
+  19 whose proximal protein/complex/ribosomal target is held in curation/uniprot_protein_examples.yaml
+  without a single verified experimental-strain UniProtKB accession and 36 whose cited primary literature
+  supports only a coarse or downstream affected component/process without a molecularly resolved proximal
+  step, or that were promoted to REVIEWED in Stage 5 with non-protein targets pending Stage 3 uniprot_protein_examples
+  held_targets synchronization).'
 existing_causal_graphs:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -5563,6 +5568,706 @@ records:
       - reference: DOI:10.1128/AAC.45.12.3544-3547.2001
         notes: Inhibition of DNA gyrase and topoisomerase IV by lomefloxacin arrested bacterial replication
           and growth, with GyrA and ParC QRDR mutations shifting whole-cell susceptibility (PMID:11709337).
+- identifier: CHEBI:199965
+  label: obafluorin
+  path: data/antibiotics/antibacterial/obafluorin.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph obafluorin_thrs_threonyl_trna_synthetase_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8M3) and primary literature
+    (DOI:10.1038/nchembio.2374, DOI:10.7164/antibiotics.37.802).
+  causal_graphs:
+  - graph_id: obafluorin_thrs_threonyl_trna_synthetase_inhibition
+    title: Obafluorin inhibits bacterial threonyl-tRNA synthetase (ThrRS) to block bacterial protein synthesis
+    description: Obafluorin, a pseudomonal beta-lactone antibacterial natural product, targets and inhibits
+      bacterial threonyl-tRNA synthetase (ThrRS / ThrS), blocking L-threonyl-tRNA(Thr) aminoacylation
+      and arresting bacterial translation.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: obafluorin
+      label: obafluorin
+      node_type: COMPOUND
+      grounding: CHEBI:199965
+    - node_id: bacterial_threonyl_trna_synthetase_thrs
+      label: bacterial threonyl-tRNA synthetase (ThrRS)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial threonyl-tRNA synthetase (ThrRS / ThrS, EC 6.1.1.3); kept label-only
+        with Escherichia coli K-12 ThrS (UniProtKB:P0A8M3) protein_example.
+      gene_symbols:
+      - thrS
+      protein_examples:
+      - uniprot_id: UniProtKB:P0A8M3
+        protein_label: Threonine--tRNA ligase
+        gene_symbol: thrS
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 threonyl-tRNA synthetase (ThrRS / ThrS, EC 6.1.1.3) whose catalytic
+          active-site nucleophile is covalently acylated by the strained beta-lactone warhead of obafluorin
+          (DOI:10.1038/nchembio.2374; PMID:28504677; DOI:10.1021/acschembio.9b00590; PMID:31675206).
+    - node_id: threonyl_trna_aminoacylation_activity
+      label: threonyl-tRNA aminoacylation catalytic activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: ATP-dependent L-threonine charging of tRNA(Thr) catalyzed by bacterial threonyl-tRNA
+        synthetase (ThrRS) and inhibited by obafluorin (DOI:10.1038/nchembio.2374).
+    - node_id: bacterial_translation_and_protein_biosynthesis
+      label: bacterial translation and protein biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial ribosomal protein biosynthesis dependent on charged L-threonyl-tRNA(Thr)
+        and arrested upon ThrRS inhibition by obafluorin (DOI:10.1038/nchembio.2374).
+    edges:
+    - subject: obafluorin
+      predicate: inhibits
+      object: threonyl_trna_aminoacylation_activity
+      description: Obafluorin inhibits bacterial threonyl-tRNA synthetase (ThrRS) catalytic activity.
+      evidence:
+      - reference: DOI:10.1038/nchembio.2374
+        notes: Schaffer et al. 2017 (PMID:28504677) identified bacterial threonyl-tRNA synthetase (ThrRS)
+          as the molecular target of the beta-lactone antibiotic obafluorin alongside its self-resistance
+          ThrRS homolog ObaO.
+      - reference: DOI:10.7164/antibiotics.37.802
+        notes: Wells et al. 1984 (PMID:6432765) reported the discovery and antibacterial activity of the
+          beta-lactone antibiotic obafluorin from Pseudomonas fluorescens.
+    - subject: bacterial_threonyl_trna_synthetase_thrs
+      predicate: enables
+      object: threonyl_trna_aminoacylation_activity
+      description: Bacterial threonyl-tRNA synthetase (ThrRS / ThrS) catalyzes the aminoacylation of tRNA(Thr)
+        with L-threonine.
+      evidence:
+      - reference: DOI:10.1038/nchembio.2374
+        notes: Escherichia coli ThrRS (ThrS) catalyzes threonyl-tRNA aminoacylation and is complemented
+          by the self-resistance homolog ObaO under obafluorin exposure (PMID:28504677).
+    - subject: threonyl_trna_aminoacylation_activity
+      predicate: supports
+      object: bacterial_translation_and_protein_biosynthesis
+      description: Threonyl-tRNA aminoacylation supplies charged tRNA(Thr) required for bacterial protein
+        synthesis.
+      evidence:
+      - reference: DOI:10.1038/nchembio.2374
+        notes: Inhibition of bacterial ThrRS by obafluorin blocks protein synthesis and bacterial growth
+          unless rescued by the ThrRS immunity determinant ObaO (PMID:28504677).
+- identifier: CHEBI:227666
+  label: salinamide A
+  path: data/antibiotics/antibacterial/salinamide-a.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph salinamide_a_rnap_bridge_helix_cap_hinge_transcription_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7)
+    and primary literature (DOI:10.7554/eLife.02451).
+  causal_graphs:
+  - graph_id: salinamide_a_rnap_bridge_helix_cap_hinge_transcription_inhibition
+    title: Salinamide A binds the bacterial RNA polymerase bridge-helix cap/hinge pocket to inhibit nucleotide
+      addition and transcription
+    description: Salinamide A, a marine streptomycete bicyclic depsipeptide antibiotic, binds the bacterial
+      DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge site, allosterically preventing bridge-helix
+      N-terminal hinge unbending required for nucleotide addition and arresting bacterial transcription.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: salinamide_a
+      label: salinamide A
+      node_type: COMPOUND
+      grounding: CHEBI:227666
+    - node_id: bacterial_rna_polymerase_bridge_helix_hinge
+      label: bacterial DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge pocket
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA-directed RNA polymerase beta (RpoB) and beta' (RpoC) subunits forming
+        the salinamide-binding bridge-helix cap/hinge pocket; kept label-only with Escherichia coli K-12
+        RpoB (UniProtKB:P0A8V2) and RpoC (UniProtKB:P0A8T7) protein_examples.
+      gene_symbols:
+      - rpoB
+      - rpoC
+      protein_examples:
+      - uniprot_id: UniProtKB:P0A8V2
+        protein_label: DNA-directed RNA polymerase subunit beta
+        gene_symbol: rpoB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB) forming part of the
+          bridge-helix cap binding site in the salinamide A cocrystal structure (PDB:4MEX) and harboring
+          resistance substitutions (DOI:10.7554/eLife.02451; PMID:24843001).
+      - uniprot_id: UniProtKB:P0A8T7
+        protein_label: DNA-directed RNA polymerase subunit beta'
+        gene_symbol: rpoC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 DNA-directed RNA polymerase beta' subunit (RpoC) whose bridge-helix
+          hinge and F-loop directly contact salinamide A in the cocrystal structure (PDB:4MEX) to prevent
+          active-center nucleotide addition (DOI:10.7554/eLife.02451; PMID:24843001).
+    - node_id: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      label: RNA polymerase bridge-helix hinge conformational cycling and nucleotide addition activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Conformational unbending of the RNA polymerase bridge-helix N-terminal hinge that
+        couples nucleotide addition in transcription initiation and elongation, allosterically blocked
+        by salinamide A (DOI:10.7554/eLife.02451, PDB:4MEX).
+    - node_id: bacterial_dna_templated_transcription
+      label: bacterial DNA-templated transcription
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial RNA synthesis during transcription initiation and elongation inhibited
+        by salinamide A (DOI:10.7554/eLife.02451).
+    edges:
+    - subject: salinamide_a
+      predicate: inhibits
+      object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      description: Salinamide A binds the bacterial RNA polymerase bridge-helix cap/hinge site and allosterically
+        inhibits nucleotide addition.
+      evidence:
+      - reference: DOI:10.7554/eLife.02451
+        notes: Degen et al. 2014 (PMID:24843001; PDB:4MEX) solved the crystal structure of Escherichia
+          coli RNA polymerase holoenzyme bound to salinamide A and showed that binding at the bridge-helix
+          cap/hinge pocket prevents bridge-helix N-terminal hinge unbending required for nucleotide addition.
+    - subject: bacterial_rna_polymerase_bridge_helix_hinge
+      predicate: enables
+      object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      description: The bacterial RNA polymerase RpoB and RpoC subunits form the bridge-helix cap/hinge
+        region that mediates catalytic nucleotide addition.
+      evidence:
+      - reference: DOI:10.7554/eLife.02451
+        notes: Saturation mutagenesis of E. coli rpoB and rpoC and X-ray crystallography (PDB:4MEX) mapped
+          the salinamide A pocket to RpoB and RpoC residues flanking the bridge-helix N-terminal hinge
+          (PMID:24843001).
+    - subject: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      predicate: supports
+      object: bacterial_dna_templated_transcription
+      description: Bridge-helix hinge cycling and nucleotide addition drive bacterial transcription initiation
+        and elongation.
+      evidence:
+      - reference: DOI:10.7554/eLife.02451
+        notes: Allosteric arrest of bridge-helix hinge unbending by salinamide A inhibits transcription
+          initiation and elongation without cross-resistance to rifampicin, fidaxomicin, CBR703, or streptolydigin
+          (PMID:24843001).
+- identifier: CHEBI:200517
+  label: salinamide B
+  path: data/antibiotics/antibacterial/salinamide-b.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7)
+    and primary literature (DOI:10.7554/eLife.02451).
+  causal_graphs:
+  - graph_id: salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition
+    title: Salinamide B binds the bacterial RNA polymerase bridge-helix cap/hinge pocket to inhibit nucleotide
+      addition and transcription
+    description: Salinamide B, a chlorinated bicyclic depsipeptide antibiotic from marine Streptomyces
+      sp. CNB-091, binds the bacterial DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge
+      pocket (PDB:4MEY), allosterically blocking bridge-helix N-terminal hinge unbending required for
+      nucleotide addition and arresting bacterial transcription.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: salinamide_b
+      label: salinamide B
+      node_type: COMPOUND
+      grounding: CHEBI:200517
+    - node_id: bacterial_rna_polymerase_bridge_helix_hinge
+      label: bacterial DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge pocket
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial DNA-directed RNA polymerase beta (RpoB) and beta' (RpoC) subunits forming
+        the salinamide-binding bridge-helix cap/hinge pocket; kept label-only with Escherichia coli K-12
+        RpoB (UniProtKB:P0A8V2) and RpoC (UniProtKB:P0A8T7) protein_examples.
+      gene_symbols:
+      - rpoB
+      - rpoC
+      protein_examples:
+      - uniprot_id: UniProtKB:P0A8V2
+        protein_label: DNA-directed RNA polymerase subunit beta
+        gene_symbol: rpoB
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB) forming part of the
+          bridge-helix cap binding site in the salinamide B-bromobenzoate cocrystal structure (PDB:4MEY)
+          and harboring resistance substitutions (DOI:10.7554/eLife.02451; PMID:24843001).
+      - uniprot_id: UniProtKB:P0A8T7
+        protein_label: DNA-directed RNA polymerase subunit beta'
+        gene_symbol: rpoC
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 DNA-directed RNA polymerase beta' subunit (RpoC) whose bridge-helix
+          hinge and F-loop directly contact salinamide B in the cocrystal structure (PDB:4MEY) to prevent
+          active-center nucleotide addition (DOI:10.7554/eLife.02451; PMID:24843001).
+    - node_id: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      label: RNA polymerase bridge-helix hinge conformational cycling and nucleotide addition activity
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Conformational unbending of the RNA polymerase bridge-helix N-terminal hinge that
+        couples nucleotide addition in transcription initiation and elongation, allosterically blocked
+        by salinamide B (DOI:10.7554/eLife.02451, PDB:4MEY).
+    - node_id: bacterial_dna_templated_transcription
+      label: bacterial DNA-templated transcription
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial RNA synthesis during transcription initiation and elongation inhibited
+        by salinamide B (DOI:10.7554/eLife.02451).
+    edges:
+    - subject: salinamide_b
+      predicate: inhibits
+      object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      description: Salinamide B binds the bacterial RNA polymerase bridge-helix cap/hinge site and allosterically
+        inhibits nucleotide addition.
+      evidence:
+      - reference: DOI:10.7554/eLife.02451
+        notes: Degen et al. 2014 (PMID:24843001; PDB:4MEY) solved the crystal structure of Escherichia
+          coli RNA polymerase holoenzyme bound to salinamide B-Br and demonstrated allosteric inhibition
+          of bridge-helix N-terminal hinge unbending and nucleotide addition.
+    - subject: bacterial_rna_polymerase_bridge_helix_hinge
+      predicate: enables
+      object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      description: The bacterial RNA polymerase RpoB and RpoC subunits form the bridge-helix cap/hinge
+        region that mediates catalytic nucleotide addition.
+      evidence:
+      - reference: DOI:10.7554/eLife.02451
+        notes: X-ray crystallography (PDB:4MEY) and rpoB/rpoC mutagenesis defined the salinamide B binding
+          pocket at the RpoB/RpoC bridge-helix cap/hinge interface (PMID:24843001).
+    - subject: rnap_bridge_helix_hinge_nucleotide_addition_activity
+      predicate: supports
+      object: bacterial_dna_templated_transcription
+      description: Bridge-helix hinge cycling and nucleotide addition drive bacterial transcription initiation
+        and elongation.
+      evidence:
+      - reference: DOI:10.7554/eLife.02451
+        notes: Inhibition of nucleotide addition at the bridge-helix hinge by salinamide B blocks bacterial
+          transcription and growth (PMID:24843001).
+- identifier: CHEBI:63845
+  label: sulfacetamide
+  path: data/antibiotics/antibacterial/sulfacetamide.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph sulfacetamide_dhps_paba_competitive_folate_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature
+    (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).
+  causal_graphs:
+  - graph_id: sulfacetamide_dhps_paba_competitive_folate_inhibition
+    title: Sulfacetamide competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de
+      novo folate biosynthesis
+    description: Sulfacetamide (N-[(4-aminophenyl)sulfonyl]acetamide), a synthetic sulfonamide antimicrobial,
+      acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate synthase (DHPS
+      / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate
+      (DHPPP) and blocking de novo folate biosynthesis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: sulfacetamide
+      label: sulfacetamide
+      node_type: COMPOUND
+      grounding: CHEBI:63845
+    - node_id: bacterial_dihydropteroate_synthase_folp
+      label: bacterial dihydropteroate synthase (DHPS)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only
+        with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.
+      gene_symbols:
+      - folP
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AC13
+        protein_label: Dihydropteroate synthase
+        gene_symbol: folP
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at
+          the para-aminobenzoic acid (PABA) active site by sulfacetamide in purified enzyme kinetics and
+          pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
+          PMID:22383845).
+    - node_id: dhps_paba_condensation_and_pterin_adduct_diversion
+      label: DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS
+        (FolP), competitively inhibited and diverted into a dead-end pterin-sulfacetamide adduct (DOI:10.1128/AAC.15.2.195;
+        DOI:10.1126/science.1214641).
+    - node_id: bacterial_de_novo_folate_biosynthesis
+      label: bacterial de novo folate biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested
+        by sulfacetamide inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641).
+    edges:
+    - subject: sulfacetamide
+      predicate: inhibits
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Sulfacetamide competitively inhibits pABA utilization at bacterial dihydropteroate
+        synthase (DHPS) and forms an alternate pterin-sulfa adduct.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase
+          inhibition by sulfacetamide and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide
+          adduct.
+      - reference: DOI:10.1126/science.1214641
+        notes: Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding
+          and pterin-sulfa conjugate formation at the bacterial DHPS pABA site.
+    - subject: bacterial_dihydropteroate_synthase_folp
+      predicate: enables
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with
+        para-aminobenzoate (pABA) at its active site.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate
+          reaction with sulfacetamide (PMID:378102).
+    - subject: dhps_paba_condensation_and_pterin_adduct_diversion
+      predicate: supports
+      object: bacterial_de_novo_folate_biosynthesis
+      description: DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo
+        folate biosynthesis.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Competitive inhibition of DHPS and DHPPP depletion by sulfacetamide block de novo dihydropteroate
+          and folate synthesis required for microbial growth (PMID:378102).
+- identifier: CHEBI:102265
+  label: sulfamethazine
+  path: data/antibiotics/antibacterial/sulfamethazine.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph sulfamethazine_dhps_paba_competitive_folate_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature
+    (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).
+  causal_graphs:
+  - graph_id: sulfamethazine_dhps_paba_competitive_folate_inhibition
+    title: Sulfamethazine competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de
+      novo folate biosynthesis
+    description: Sulfamethazine (4-amino-N-(4,6-dimethylpyrimidin-2-yl)benzenesulfonamide), a synthetic
+      sulfonamide antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate
+      synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin
+      pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: sulfamethazine
+      label: sulfamethazine
+      node_type: COMPOUND
+      grounding: CHEBI:102265
+    - node_id: bacterial_dihydropteroate_synthase_folp
+      label: bacterial dihydropteroate synthase (DHPS)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only
+        with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.
+      gene_symbols:
+      - folP
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AC13
+        protein_label: Dihydropteroate synthase
+        gene_symbol: folP
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at
+          the para-aminobenzoic acid (PABA) active site by sulfamethazine in purified enzyme kinetics
+          and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
+          PMID:22383845).
+    - node_id: dhps_paba_condensation_and_pterin_adduct_diversion
+      label: DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS
+        (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethazine adduct (DOI:10.1128/AAC.15.2.195;
+        DOI:10.1126/science.1214641).
+    - node_id: bacterial_de_novo_folate_biosynthesis
+      label: bacterial de novo folate biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested
+        by sulfamethazine inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641).
+    edges:
+    - subject: sulfamethazine
+      predicate: inhibits
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Sulfamethazine competitively inhibits pABA utilization at bacterial dihydropteroate
+        synthase (DHPS) and forms an alternate pterin-sulfa adduct.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase
+          inhibition by sulfamethazine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide
+          adduct.
+      - reference: DOI:10.1126/science.1214641
+        notes: Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding
+          and pterin-sulfa conjugate formation at the bacterial DHPS pABA site.
+    - subject: bacterial_dihydropteroate_synthase_folp
+      predicate: enables
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with
+        para-aminobenzoate (pABA) at its active site.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate
+          reaction with sulfamethazine (PMID:378102).
+    - subject: dhps_paba_condensation_and_pterin_adduct_diversion
+      predicate: supports
+      object: bacterial_de_novo_folate_biosynthesis
+      description: DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo
+        folate biosynthesis.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Competitive inhibition of DHPS and DHPPP depletion by sulfamethazine block de novo dihydropteroate
+          and folate synthesis required for microbial growth (PMID:378102).
+- identifier: CHEBI:9331
+  label: sulfamethizole
+  path: data/antibiotics/antibacterial/sulfamethizole.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph sulfamethizole_dhps_paba_competitive_folate_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature
+    (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).
+  causal_graphs:
+  - graph_id: sulfamethizole_dhps_paba_competitive_folate_inhibition
+    title: Sulfamethizole competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de
+      novo folate biosynthesis
+    description: Sulfamethizole (4-amino-N-(5-methyl-1,3,4-thiadiazol-2-yl)benzenesulfonamide), a synthetic
+      sulfonamide antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate
+      synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin
+      pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: sulfamethizole
+      label: sulfamethizole
+      node_type: COMPOUND
+      grounding: CHEBI:9331
+    - node_id: bacterial_dihydropteroate_synthase_folp
+      label: bacterial dihydropteroate synthase (DHPS)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only
+        with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.
+      gene_symbols:
+      - folP
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AC13
+        protein_label: Dihydropteroate synthase
+        gene_symbol: folP
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at
+          the para-aminobenzoic acid (PABA) active site by sulfamethizole in purified enzyme kinetics
+          and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
+          PMID:22383845).
+    - node_id: dhps_paba_condensation_and_pterin_adduct_diversion
+      label: DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS
+        (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethizole adduct (DOI:10.1128/AAC.15.2.195;
+        DOI:10.1126/science.1214641).
+    - node_id: bacterial_de_novo_folate_biosynthesis
+      label: bacterial de novo folate biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested
+        by sulfamethizole inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641).
+    edges:
+    - subject: sulfamethizole
+      predicate: inhibits
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Sulfamethizole competitively inhibits pABA utilization at bacterial dihydropteroate
+        synthase (DHPS) and forms an alternate pterin-sulfa adduct.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase
+          inhibition by sulfamethizole and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide
+          adduct.
+      - reference: DOI:10.1126/science.1214641
+        notes: Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding
+          and pterin-sulfa conjugate formation at the bacterial DHPS pABA site.
+    - subject: bacterial_dihydropteroate_synthase_folp
+      predicate: enables
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with
+        para-aminobenzoate (pABA) at its active site.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate
+          reaction with sulfamethizole (PMID:378102).
+    - subject: dhps_paba_condensation_and_pterin_adduct_diversion
+      predicate: supports
+      object: bacterial_de_novo_folate_biosynthesis
+      description: DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo
+        folate biosynthesis.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Competitive inhibition of DHPS and DHPPP depletion by sulfamethizole block de novo dihydropteroate
+          and folate synthesis required for microbial growth (PMID:378102).
+- identifier: CHEBI:9332
+  label: sulfamethoxazole
+  path: data/antibiotics/antibacterial/sulfamethoxazole.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph sulfamethoxazole_dhps_paba_competitive_folate_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature
+    (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).
+  causal_graphs:
+  - graph_id: sulfamethoxazole_dhps_paba_competitive_folate_inhibition
+    title: Sulfamethoxazole competitively inhibits bacterial dihydropteroate synthase (DHPS) to block
+      de novo folate biosynthesis
+    description: Sulfamethoxazole (4-amino-N-(5-methylisoxazol-3-yl)benzenesulfonamide), a synthetic sulfonamide
+      antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate
+      synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin
+      pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: sulfamethoxazole
+      label: sulfamethoxazole
+      node_type: COMPOUND
+      grounding: CHEBI:9332
+    - node_id: bacterial_dihydropteroate_synthase_folp
+      label: bacterial dihydropteroate synthase (DHPS)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only
+        with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.
+      gene_symbols:
+      - folP
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AC13
+        protein_label: Dihydropteroate synthase
+        gene_symbol: folP
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at
+          the para-aminobenzoic acid (PABA) active site by sulfamethoxazole in purified enzyme kinetics
+          and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
+          PMID:22383845).
+    - node_id: dhps_paba_condensation_and_pterin_adduct_diversion
+      label: DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS
+        (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethoxazole adduct (DOI:10.1128/AAC.15.2.195;
+        DOI:10.1126/science.1214641).
+    - node_id: bacterial_de_novo_folate_biosynthesis
+      label: bacterial de novo folate biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested
+        by sulfamethoxazole inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641).
+    edges:
+    - subject: sulfamethoxazole
+      predicate: inhibits
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Sulfamethoxazole competitively inhibits pABA utilization at bacterial dihydropteroate
+        synthase (DHPS) and forms an alternate pterin-sulfa adduct.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase
+          inhibition by sulfamethoxazole and demonstrated its incorporation with DHPPP into a dead-end
+          pterin-sulfonamide adduct.
+      - reference: DOI:10.1126/science.1214641
+        notes: Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding
+          and pterin-sulfa conjugate formation at the bacterial DHPS pABA site.
+    - subject: bacterial_dihydropteroate_synthase_folp
+      predicate: enables
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with
+        para-aminobenzoate (pABA) at its active site.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate
+          reaction with sulfamethoxazole (PMID:378102).
+    - subject: dhps_paba_condensation_and_pterin_adduct_diversion
+      predicate: supports
+      object: bacterial_de_novo_folate_biosynthesis
+      description: DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo
+        folate biosynthesis.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Competitive inhibition of DHPS and DHPPP depletion by sulfamethoxazole block de novo dihydropteroate
+          and folate synthesis required for microbial growth (PMID:378102).
+- identifier: CHEBI:9328
+  label: sulfadiazine
+  path: data/antibiotics/antiprotozoal/sulfadiazine.yaml
+  cohort: protein_target_with_examples
+  changes: Added evidence-backed MECHANISTIC causal graph sulfadiazine_dhps_paba_competitive_folate_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature
+    (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).
+  causal_graphs:
+  - graph_id: sulfadiazine_dhps_paba_competitive_folate_inhibition
+    title: Sulfadiazine competitively inhibits bacterial dihydropteroate synthase (DHPS) to block de novo
+      folate biosynthesis
+    description: Sulfadiazine (4-amino-N-(pyrimidin-2-yl)benzenesulfonamide), a synthetic sulfonamide
+      antimicrobial, acts as a para-aminobenzoate (pABA) competitive substrate analog at dihydropteroate
+      synthase (DHPS / FolP), forming a dead-end pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin
+      pyrophosphate (DHPPP) and blocking de novo folate biosynthesis.
+    scope_status: MECHANISTIC
+    nodes:
+    - node_id: sulfadiazine
+      label: sulfadiazine
+      node_type: COMPOUND
+      grounding: CHEBI:9328
+    - node_id: bacterial_dihydropteroate_synthase_folp
+      label: bacterial dihydropteroate synthase (DHPS)
+      node_type: GENE_OR_PROTEIN
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15); kept label-only
+        with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.
+      gene_symbols:
+      - folP
+      protein_examples:
+      - uniprot_id: UniProtKB:P0AC13
+        protein_label: Dihydropteroate synthase
+        gene_symbol: folP
+        taxon_id: NCBITaxon:83333
+        taxon_label: Escherichia coli (strain K12)
+        entry_status: REVIEWED
+        retrieved_on: '2026-11-05'
+        role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at
+          the para-aminobenzoic acid (PABA) active site by sulfadiazine in purified enzyme kinetics and
+          pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
+          PMID:22383845).
+    - node_id: dhps_paba_condensation_and_pterin_adduct_diversion
+      label: DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation
+      node_type: MOLECULAR_FUNCTION
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS
+        (FolP), competitively inhibited and diverted into a dead-end pterin-sulfadiazine adduct (DOI:10.1128/AAC.15.2.195;
+        DOI:10.1126/science.1214641).
+    - node_id: bacterial_de_novo_folate_biosynthesis
+      label: bacterial de novo folate biosynthesis
+      node_type: BIOLOGICAL_PROCESS
+      grounding_status: REVIEWED_LABEL_ONLY
+      grounding_notes: Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested
+        by sulfadiazine inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641).
+    edges:
+    - subject: sulfadiazine
+      predicate: inhibits
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Sulfadiazine competitively inhibits pABA utilization at bacterial dihydropteroate synthase
+        (DHPS) and forms an alternate pterin-sulfa adduct.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase
+          inhibition by sulfadiazine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide
+          adduct.
+      - reference: DOI:10.1126/science.1214641
+        notes: Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding
+          and pterin-sulfa conjugate formation at the bacterial DHPS pABA site.
+    - subject: bacterial_dihydropteroate_synthase_folp
+      predicate: enables
+      object: dhps_paba_condensation_and_pterin_adduct_diversion
+      description: Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with
+        para-aminobenzoate (pABA) at its active site.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate
+          reaction with sulfadiazine (PMID:378102).
+    - subject: dhps_paba_condensation_and_pterin_adduct_diversion
+      predicate: supports
+      object: bacterial_de_novo_folate_biosynthesis
+      description: DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo
+        folate biosynthesis.
+      evidence:
+      - reference: DOI:10.1128/AAC.15.2.195
+        notes: Competitive inhibition of DHPS and DHPPP depletion by sulfadiazine block de novo dihydropteroate
+          and folate synthesis required for microbial growth (PMID:378102).
 held_records:
 - identifier: CHEBI:172922
   label: ethylzingerone
@@ -6123,9 +6828,10 @@ held_records:
   - DOI:10.1039/d1ob01759d
   - PMID:34617948
   reason: 'Primary-literature target in DOI:10.1021/bi00836a026 (PMID:4897214) and DOI:10.1039/d1ob01759d
-    (PMID:34617948) is a non-protein ribosomal subunit target (target_type=RIBOSOMAL_SUBUNIT: bacterial
-    50S ribosomal subunit) bound by berninamycin A; newly promoted from PROPOSED to REVIEWED in Cycle
-    6 Stage 5 (issue #1333) and held pending dedicated Stage 2 add-causal-graph curation.'
+    (PMID:34617948) is the bacterial 50S ribosomal subunit 23S rRNA / L11 GTPase-associated center (target_type=RIBOSOMAL_SUBUNIT,
+    DIRECT_BINDING_TARGET), a non-protein ribosomal target without GENE_OR_PROTEIN nodes; held in held_records
+    after Cycle 6 Stage 5 REVIEWED promotion (issue #1333) because 0-protein-node causal_graphs require
+    Stage 3 held_targets registration in curation/uniprot_protein_examples.yaml.'
 - identifier: CHEBI:205987
   label: berninamycin B
   path: data/antibiotics/antibacterial/berninamycin-b.yaml
@@ -6137,9 +6843,10 @@ held_records:
   - DOI:10.1021/ja00417a047
   - PMID:1244374
   reason: 'Primary-literature target in DOI:10.1039/d1ob01759d (PMID:34617948) and DOI:10.1021/ja00417a047
-    (PMID:1244374) is a non-protein ribosomal subunit target (target_type=RIBOSOMAL_SUBUNIT: bacterial
-    50S ribosomal subunit) bound by berninamycin B; newly promoted from PROPOSED to REVIEWED in Cycle
-    6 Stage 5 (issue #1333) and held pending dedicated Stage 2 add-causal-graph curation.'
+    (PMID:1244374) is the bacterial 50S ribosomal subunit 23S rRNA / L11 GTPase-associated center (target_type=RIBOSOMAL_SUBUNIT,
+    DIRECT_BINDING_TARGET), a non-protein ribosomal target without GENE_OR_PROTEIN nodes; held in held_records
+    after Cycle 6 Stage 5 REVIEWED promotion (issue #1333) because 0-protein-node causal_graphs require
+    Stage 3 held_targets registration in curation/uniprot_protein_examples.yaml.'
 - identifier: CHEBI:222785
   label: empedopeptin
   path: data/antibiotics/antibacterial/empedopeptin.yaml
@@ -6151,9 +6858,11 @@ held_records:
   - DOI:10.3390/md19040209
   - PMID:33918939
   reason: 'Primary-literature target in DOI:10.1074/jbc.M112.369504 (PMID:22518842) and DOI:10.3390/md19040209
-    (PMID:33918939) is a non-protein peptidoglycan lipid precursor (target_type=CELL_WALL_COMPONENT: bacterial
-    peptidoglycan precursor lipid II) complexed by Ca2+-dependent empedopeptin; newly promoted from PROPOSED
-    to REVIEWED in Cycle 6 Stage 5 (issue #1333) and held pending dedicated Stage 2 add-causal-graph curation.'
+    (PMID:33918939) is Ca2+-complexed cell wall peptidoglycan precursors (lipid II, undecaprenyl-pyrophosphate,
+    and teichoic acid intermediates; target_type=CELL_WALL_COMPONENT, DIRECT_BINDING_TARGET), a non-protein
+    cell-envelope target without GENE_OR_PROTEIN nodes; held in held_records after Cycle 6 Stage 5 REVIEWED
+    promotion (issue #1333) because 0-protein-node causal_graphs require Stage 3 held_targets registration
+    in curation/uniprot_protein_examples.yaml.'
 - identifier: CHEBI:219296
   label: laterocidine
   path: data/antibiotics/antibacterial/laterocidine.yaml
@@ -6162,56 +6871,11 @@ held_records:
   references:
   - DOI:10.1038/s41467-018-05781-6
   - PMID:30115920
-  reason: 'Primary-literature target in DOI:10.1038/s41467-018-05781-6 (PMID:30115920) is a non-protein
-    glycolipid membrane component (target_type=MEMBRANE: Gram-negative bacterial outer membrane lipopolysaccharide)
-    bound by laterocidine; newly promoted from PROPOSED to REVIEWED in Cycle 6 Stage 5 (issue #1333) and
-    held pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:199965
-  label: obafluorin
-  path: data/antibiotics/antibacterial/obafluorin.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial threonyl-tRNA synthetase (ThrRS / ThrS) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1038/nchembio.2374
-  - PMID:28504677
-  - DOI:10.1021/acschembio.9b00590
-  - PMID:31675206
-  reason: 'Primary-literature bacterial threonyl-tRNA synthetase (ThrRS / ThrS) target carries curated
-    Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0A8M3) backed by DOI:10.1038/nchembio.2374
-    (PMID:28504677) and DOI:10.1021/acschembio.9b00590 (PMID:31675206); newly promoted from PROPOSED to
-    REVIEWED in Cycle 6 Stage 5 (issue #1333) and held pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:227666
-  label: salinamide A
-  path: data/antibiotics/antibacterial/salinamide-a.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC) (PROTEIN_COMPLEX,
-    DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.7554/eLife.02451
-  - PMID:24843001
-  - DOI:10.1002/anie.201508576
-  - PMID:26553755
-  reason: 'Primary-literature bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC) target
-    carries curated Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7)
-    backed by DOI:10.7554/eLife.02451 (PMID:24843001) and DOI:10.1002/anie.201508576 (PMID:26553755);
-    newly promoted from PROPOSED to REVIEWED in Cycle 6 Stage 5 (issue #1333) and held pending dedicated
-    Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:200517
-  label: salinamide B
-  path: data/antibiotics/antibacterial/salinamide-b.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC) (PROTEIN_COMPLEX,
-    DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.7554/eLife.02451
-  - PMID:24843001
-  - DOI:10.1002/anie.201508576
-  - PMID:26553755
-  reason: 'Primary-literature bacterial DNA-directed RNA polymerase bridge-helix cap (RpoB / RpoC) target
-    carries curated Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7)
-    backed by DOI:10.7554/eLife.02451 (PMID:24843001) and DOI:10.1002/anie.201508576 (PMID:26553755);
-    newly promoted from PROPOSED to REVIEWED in Cycle 6 Stage 5 (issue #1333) and held pending dedicated
-    Stage 2 add-causal-graph curation.'
+  reason: 'Primary-literature target in DOI:10.1038/s41467-018-05781-6 (PMID:30115920) is Gram-negative
+    bacterial outer membrane lipopolysaccharide (LPS; target_type=MEMBRANE, DIRECT_BINDING_TARGET), a
+    non-protein glycolipid membrane target without GENE_OR_PROTEIN nodes; held in held_records after Cycle
+    6 Stage 5 REVIEWED promotion (issue #1333) because 0-protein-node causal_graphs require Stage 3 held_targets
+    registration in curation/uniprot_protein_examples.yaml.'
 - identifier: CHEBI:80106
   label: rimocidin
   path: data/antibiotics/antifungal/rimocidin.yaml
@@ -6223,9 +6887,10 @@ held_records:
   - DOI:10.1007/s00253-020-10955-8
   - PMID:33057790
   reason: 'Primary-literature target in DOI:10.1016/j.chembiol.2004.02.017 (PMID:15031268) and DOI:10.1007/s00253-020-10955-8
-    (PMID:33057790) is a non-protein fungal sterol membrane component (target_type=MEMBRANE: fungal membrane
-    ergosterol) bound by polyene macrolide rimocidin; newly promoted from PROPOSED to REVIEWED in Cycle
-    6 Stage 5 (issue #1333) and held pending dedicated Stage 2 add-causal-graph curation.'
+    (PMID:33057790) is fungal plasma membrane ergosterol (target_type=MEMBRANE, DIRECT_BINDING_TARGET),
+    a non-protein sterol membrane target without GENE_OR_PROTEIN nodes; held in held_records after Cycle
+    6 Stage 5 REVIEWED promotion (issue #1333) because 0-protein-node causal_graphs require Stage 3 held_targets
+    registration in curation/uniprot_protein_examples.yaml.'
 - identifier: CHEBI:225841
   label: kendomycin B
   path: data/antibiotics/antibacterial/kendomycin-b.yaml
@@ -6295,73 +6960,3 @@ held_records:
   reason: 'Primary-literature target in DOI:10.7164/antibiotics.30.11 (PMID:557042) and DOI:10.1021/acschembio.8b01076
     (PMID:30698415) is a downstream biological process (target_type=BIOLOGICAL_PROCESS: fungal cell-wall
     chitin biosynthesis) in Pyricularia oryzae without a single resolved Swiss-Prot protein target.'
-- identifier: CHEBI:63845
-  label: sulfacetamide
-  path: data/antibiotics/antibacterial/sulfacetamide.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.15.2.195
-  - PMID:378102
-  - DOI:10.1126/science.1214641
-  - PMID:22383845
-  reason: 'Primary-literature bacterial dihydropteroate synthase (FolP / DHPS) target carries curated
-    Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AC13) backed by DOI:10.1128/AAC.15.2.195
-    (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845); newly promoted from SEEDED to REVIEWED
-    in Cycle 6 Stage 5 (issue #1335) and held pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:102265
-  label: sulfamethazine
-  path: data/antibiotics/antibacterial/sulfamethazine.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.15.2.195
-  - PMID:378102
-  - DOI:10.1126/science.1214641
-  - PMID:22383845
-  reason: 'Primary-literature bacterial dihydropteroate synthase (FolP / DHPS) target carries curated
-    Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AC13) backed by DOI:10.1128/AAC.15.2.195
-    (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845); newly promoted from SEEDED to REVIEWED
-    in Cycle 6 Stage 5 (issue #1335) and held pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:9331
-  label: sulfamethizole
-  path: data/antibiotics/antibacterial/sulfamethizole.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.15.2.195
-  - PMID:378102
-  - DOI:10.1126/science.1214641
-  - PMID:22383845
-  reason: 'Primary-literature bacterial dihydropteroate synthase (FolP / DHPS) target carries curated
-    Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AC13) backed by DOI:10.1128/AAC.15.2.195
-    (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845); newly promoted from SEEDED to REVIEWED
-    in Cycle 6 Stage 5 (issue #1335) and held pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:9332
-  label: sulfamethoxazole
-  path: data/antibiotics/antibacterial/sulfamethoxazole.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.15.2.195
-  - PMID:378102
-  - DOI:10.1126/science.1214641
-  - PMID:22383845
-  reason: 'Primary-literature bacterial dihydropteroate synthase (FolP / DHPS) target carries curated
-    Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AC13) backed by DOI:10.1128/AAC.15.2.195
-    (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845); newly promoted from SEEDED to REVIEWED
-    in Cycle 6 Stage 5 (issue #1335) and held pending dedicated Stage 2 add-causal-graph curation.'
-- identifier: CHEBI:9328
-  label: sulfadiazine
-  path: data/antibiotics/antiprotozoal/sulfadiazine.yaml
-  blocker_category: uniprot_protein_example_held
-  target_summary: bacterial dihydropteroate synthase (FolP / DHPS) (PROTEIN, DIRECT_BINDING_TARGET)
-  references:
-  - DOI:10.1128/AAC.15.2.195
-  - PMID:378102
-  - DOI:10.1126/science.1214641
-  - PMID:22383845
-  reason: 'Primary-literature bacterial dihydropteroate synthase (FolP / DHPS) target carries curated
-    Escherichia coli K-12 reference UniProtKB protein_examples (UniProtKB:P0AC13) backed by DOI:10.1128/AAC.15.2.195
-    (PMID:378102) and DOI:10.1126/science.1214641 (PMID:22383845); newly promoted from SEEDED to REVIEWED
-    in Cycle 6 Stage 5 (issue #1335) and held pending dedicated Stage 2 add-causal-graph curation.'

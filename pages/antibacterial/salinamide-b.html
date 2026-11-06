@@ -159,6 +159,76 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 
 </div>
 
+<h2>Causal graphs</h2>
+<p class="meta">Evidence-backed mechanism graphs: how the compound reaches its
+target, what the target does, and how the effect propagates to growth inhibition
+or death.</p>
+<h3>Salinamide B binds the bacterial RNA polymerase bridge-helix cap/hinge pocket to inhibit nucleotide addition and transcription <span class="pill">MECHANISTIC</span></h3>
+<p>Salinamide B, a chlorinated bicyclic depsipeptide antibiotic from marine Streptomyces sp. CNB-091, binds the bacterial DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge pocket (PDB:4MEY), allosterically blocking bridge-helix N-terminal hinge unbending required for nucleotide addition and arresting bacterial transcription.</p><div class="table-scroll" role="region" aria-label="Nodes: salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition" tabindex="0">
+<table>
+  <caption>Nodes — salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition</caption>
+  <thead><tr><th scope="col">Node</th><th scope="col">Label</th><th scope="col">Type</th><th scope="col">Grounding</th></tr></thead>
+  <tr>
+    <td><code class="curie">salinamide_b</code></td>
+    <td>salinamide B</td>
+    <td class="meta">COMPOUND</td>
+    <td> <a href="../antibacterial/salinamide-b.html"><code class="curie">CHEBI:200517</code></a></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_rna_polymerase_bridge_helix_hinge</code></td>
+    <td>bacterial DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge pocket<br><span class="meta">Examples: DNA-directed RNA polymerase subunit beta (rpoB) <a href="https://www.uniprot.org/uniprotkb/P0A8V2"><code class="curie">UniProtKB:P0A8V2</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB) forming part of the bridge-helix cap binding site in the salinamide B-bromobenzoate cocrystal structure (PDB:4MEY) and harboring resistance substitutions (DOI:10.7554/eLife.02451; PMID:24843001).; DNA-directed RNA polymerase subunit beta&#39; (rpoC) <a href="https://www.uniprot.org/uniprotkb/P0A8T7"><code class="curie">UniProtKB:P0A8T7</code></a>, <em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a> <span class="pill">REVIEWED</span> — Escherichia coli K-12 DNA-directed RNA polymerase beta&#39; subunit (RpoC) whose bridge-helix hinge and F-loop directly contact salinamide B in the cocrystal structure (PDB:4MEY) to prevent active-center nucleotide addition (DOI:10.7554/eLife.02451; PMID:24843001).</span></td>
+    <td class="meta">GENE_OR_PROTEIN</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">rnap_bridge_helix_hinge_nucleotide_addition_activity</code></td>
+    <td>RNA polymerase bridge-helix hinge conformational cycling and nucleotide addition activity</td>
+    <td class="meta">MOLECULAR_FUNCTION</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_dna_templated_transcription</code></td>
+    <td>bacterial DNA-templated transcription</td>
+    <td class="meta">BIOLOGICAL_PROCESS</td>
+    <td><span class="pill warn">REVIEWED_LABEL_ONLY</span></td>
+  </tr>
+</table>
+
+</div>
+<div class="table-scroll" role="region" aria-label="Edges: salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition" tabindex="0">
+<table>
+  <caption>Edges — salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition</caption>
+  <thead><tr><th scope="col">Subject</th><th scope="col">Predicate</th><th scope="col">Object</th><th scope="col">Evidence</th></tr></thead>
+  <tr>
+    <td><code class="curie">salinamide_b</code></td>
+    <td>inhibits</td>
+    <td><code class="curie">rnap_bridge_helix_hinge_nucleotide_addition_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7554/eLife.02451">DOI:10.7554/eLife.02451</a></span> <span class="meta">(Degen et al. 2014 (PMID:24843001; PDB:4MEY) solved the crystal structure of Escherichia coli RNA polymerase holoenzyme bound to salinamide B-Br and demonstrated allosteric inhibition of bridge-helix N-terminal hinge unbending and nucleotide addition.)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">bacterial_rna_polymerase_bridge_helix_hinge</code></td>
+    <td>enables</td>
+    <td><code class="curie">rnap_bridge_helix_hinge_nucleotide_addition_activity</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7554/eLife.02451">DOI:10.7554/eLife.02451</a></span> <span class="meta">(X-ray crystallography (PDB:4MEY) and rpoB/rpoC mutagenesis defined the salinamide B binding pocket at the RpoB/RpoC bridge-helix cap/hinge interface (PMID:24843001).)</span></li>
+</ul>
+</td>
+  </tr>
+  <tr>
+    <td><code class="curie">rnap_bridge_helix_hinge_nucleotide_addition_activity</code></td>
+    <td>supports</td>
+    <td><code class="curie">bacterial_dna_templated_transcription</code></td>
+    <td><ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.7554/eLife.02451">DOI:10.7554/eLife.02451</a></span> <span class="meta">(Inhibition of nucleotide addition at the bridge-helix hinge by salinamide B blocks bacterial transcription and growth (PMID:24843001).)</span></li>
+</ul>
+</td>
+  </tr>
+</table>
+
+</div>
 
 
 
@@ -190,6 +260,11 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
     <span class="meta">2026-11-05 · antigravity · LLM-assisted</span>
     <p>Promoted exact ChEBI record (CHEBI:200517) with complete 4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.7554/eLife.02451, PMID:24843001; DOI:10.1002/anie.201508576, PMID:26553755) from PROPOSED to REVIEWED (issue #1333).</p>
   </li>
+  <li>
+    <span class="pill">CURATED_CAUSAL_GRAPHS</span>
+    <span class="meta">2026-11-06 · antigravity · LLM-assisted</span>
+    <p>Added evidence-backed MECHANISTIC causal graph salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2, UniProtKB:P0A8T7) and primary literature (DOI:10.7554/eLife.02451).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -210,7 +285,7 @@ intermediate, a precursor and a finished antibiotic side by side.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>cbb8d5503c56</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>e00c4250472e</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

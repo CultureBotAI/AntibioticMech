@@ -66,3 +66,10 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin from Drautz et al. 1985 (DOI:10.7164/antibiotics.38.1291,
+    PMID:3840789) and Ramos et al. 2008 (DOI:10.1099/mic.0.2007/014035-0, PMID:18310024).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
