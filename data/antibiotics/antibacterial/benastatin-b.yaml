@@ -1,0 +1,68 @@
+identifier: CHEBI:200324
+label: benastatin B
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A 5,6-dihydro pentacyclic benzo[a]naphthacenequinone aromatic polyketide
+  from Streptomyces sp. with potent antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.1038/s41429-024-00727-1
+synonyms:
+- synonym_text: Benastatin B
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CCCCCC1=C(C(O)=O)C(O)=C2C(CCC3=C(O)C4=C(C=C23)C(C)(C)C2=CC(O)=CC(O)=C2C4=O)=C1
+  standard_inchi: InChI=1S/C30H30O7/c1-4-5-6-7-14-10-15-8-9-17-18(22(15)27(34)23(14)29(36)37)13-20-25(26(17)33)28(35)24-19(30(20,2)3)11-16(31)12-21(24)32/h10-13,31-34H,4-9H2,1-3H3,(H,36,37)
+  standard_inchi_key: FUKMCLKFEWEFSC-UHFFFAOYSA-N
+  molecular_formula: C30H30O7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000204/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 502.563
+  monoisotopic_mass: 502.1992
+xrefs:
+- pubchem.compound:126409
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1038/s41429-024-00727-1#benastatin-b
+  source_label: benastatin B
+  minted_identifier: antibioticmech:curator-8b0dedb93d
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1038/s41429-024-00727-1
+    snippet: Benastatin B (2) isolated from Streptomyces showed potent antibacterial
+      activity against Micrococcus luteus with an MIC value of 3.9 uM and inhibited
+      Gram-positive bacterial growth.
+    notes: MIBiG 4.0.1 entry BGC0000204 (Streptomyces sp. A2991200); Kawahara et al.
+      2024 (DOI:10.1038/s41429-024-00727-1, PMID:38664572) and Xu et al. 2009 (DOI:10.1016/j.jbiotec.2008.10.013,
+      PMID:19047004) report the type II PKS biosynthesis and Gram-positive antibacterial
+      MIC of benastatin B. ChEBI CHEBI:200324 and PubChem CID 126409 supply the SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:431672
+  taxon_label: Streptomyces sp.
+  strain: A2991200
+  biosynthetic_gene_cluster: BGC0000204
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'benastatin B' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:19047004
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

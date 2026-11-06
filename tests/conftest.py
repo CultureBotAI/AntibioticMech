@@ -388,7 +388,7 @@ def pre_uniprot_protein_examples_root(tmp_path_factory, pre_cycle2_stage5_remedi
                 writer.writerows(curator_rows)
         elif path.name == "source_queue.tsv":
             restored = path.read_text(encoding="utf-8").replace(
-                "the seeder's structure gate matches 144, of which it publishes 141: three",
+                "the seeder's structure gate matches 164, of which it publishes 159: five",
                 "the seeder's structure gate matches the same 66, of which it publishes 64: two",
                 1,
             )
