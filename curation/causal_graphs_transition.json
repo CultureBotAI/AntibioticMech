@@ -7989,7 +7989,7 @@
       "path": "data/antibiotics/antibacterial/obafluorin.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "cac1385f684a63e63477ab5112f1cd90df21f431b39ca0aee7067a912b850d3e",
-      "after_sha256": "d5171e76bb55f9f53afa332ef957ac6387b0e43124d71976253dd80e2221ddbf",
+      "after_sha256": "9ac97d9bfec377c9f8f25f99b6ec665a77f3bd4818e62cc43f4e9682801fc605",
       "unchanged_fields_sha256": "ffa2b1d0322e1b9717cb748fc2ec88c8aec743358aeb6c780fba86ef158d5253",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -8038,14 +8038,14 @@
               "label": "threonyl-tRNA aminoacylation catalytic activity",
               "node_type": "MOLECULAR_FUNCTION",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "ATP-dependent L-threonine charging of tRNA(Thr) catalyzed by bacterial threonyl-tRNA synthetase (ThrRS) and inhibited by obafluorin (DOI:10.1038/nmicrobiol.2017.104)."
+              "grounding_notes": "ATP-dependent L-threonine charging of tRNA(Thr) catalyzed by bacterial threonyl-tRNA synthetase (ThrRS) and inhibited by obafluorin (DOI:10.1038/nchembio.2374)."
             },
             {
               "node_id": "bacterial_translation_and_protein_biosynthesis",
               "label": "bacterial translation and protein biosynthesis",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Bacterial ribosomal protein biosynthesis dependent on charged L-threonyl-tRNA(Thr) and arrested upon ThrRS inhibition by obafluorin (DOI:10.1038/nmicrobiol.2017.104)."
+              "grounding_notes": "Bacterial ribosomal protein biosynthesis dependent on charged L-threonyl-tRNA(Thr) and arrested upon ThrRS inhibition by obafluorin (DOI:10.1038/nchembio.2374)."
             }
           ],
           "edges": [
@@ -8056,12 +8056,12 @@
               "description": "Obafluorin inhibits bacterial threonyl-tRNA synthetase (ThrRS) catalytic activity.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1038/nmicrobiol.2017.104",
-                  "notes": "Schaffer et al. 2017 (PMID:28650475) identified bacterial threonyl-tRNA synthetase (ThrRS) as the molecular target of the beta-lactone antibiotic obafluorin alongside its self-resistance ThrRS homolog ObaO."
+                  "reference": "DOI:10.1038/nchembio.2374",
+                  "notes": "Schaffer et al. 2017 (PMID:28504677) identified bacterial threonyl-tRNA synthetase (ThrRS) as the molecular target of the beta-lactone antibiotic obafluorin alongside its self-resistance ThrRS homolog ObaO."
                 },
                 {
                   "reference": "DOI:10.7164/antibiotics.37.802",
-                  "notes": "Wells et al. 1984 (PMID:6432772) reported the discovery and antibacterial activity of the beta-lactone antibiotic obafluorin from Pseudomonas fluorescens."
+                  "notes": "Wells et al. 1984 (PMID:6432765) reported the discovery and antibacterial activity of the beta-lactone antibiotic obafluorin from Pseudomonas fluorescens."
                 }
               ]
             },
@@ -8072,8 +8072,8 @@
               "description": "Bacterial threonyl-tRNA synthetase (ThrRS / ThrS) catalyzes the aminoacylation of tRNA(Thr) with L-threonine.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1038/nmicrobiol.2017.104",
-                  "notes": "Escherichia coli ThrRS (ThrS) catalyzes threonyl-tRNA aminoacylation and is complemented by the self-resistance homolog ObaO under obafluorin exposure (PMID:28650475)."
+                  "reference": "DOI:10.1038/nchembio.2374",
+                  "notes": "Escherichia coli ThrRS (ThrS) catalyzes threonyl-tRNA aminoacylation and is complemented by the self-resistance homolog ObaO under obafluorin exposure (PMID:28504677)."
                 }
               ]
             },
@@ -8084,8 +8084,8 @@
               "description": "Threonyl-tRNA aminoacylation supplies charged tRNA(Thr) required for bacterial protein synthesis.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1038/nmicrobiol.2017.104",
-                  "notes": "Inhibition of bacterial ThrRS by obafluorin blocks protein synthesis and bacterial growth unless rescued by the ThrRS immunity determinant ObaO (PMID:28650475)."
+                  "reference": "DOI:10.1038/nchembio.2374",
+                  "notes": "Inhibition of bacterial ThrRS by obafluorin blocks protein synthesis and bacterial growth unless rescued by the ThrRS immunity determinant ObaO (PMID:28504677)."
                 }
               ]
             }
@@ -8096,7 +8096,7 @@
         "timestamp": "2026-11-06T06:00:00Z",
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
-        "changes": "Added evidence-backed MECHANISTIC causal graph obafluorin_thrs_threonyl_trna_synthetase_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8M3) and primary literature (DOI:10.1038/nmicrobiol.2017.104, DOI:10.7164/antibiotics.37.802).",
+        "changes": "Added evidence-backed MECHANISTIC causal graph obafluorin_thrs_threonyl_trna_synthetase_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8M3) and primary literature (DOI:10.1038/nchembio.2374, DOI:10.7164/antibiotics.37.802).",
         "llm_assisted": true
       }
     },
@@ -8354,7 +8354,7 @@
       "path": "data/antibiotics/antibacterial/sulfacetamide.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "83c5e34cb849868861944beeb068e1d9b88da67b6236dab80af23ee05c57ad02",
-      "after_sha256": "563b81ea0066e02b2865f728d811b25181d6ba35f88d443fdbd24400f06727ad",
+      "after_sha256": "02cbb0b9f4fcd109957fde6bf39ef9f997456f9836bde320eb8929d7a1d152d1",
       "unchanged_fields_sha256": "fca70b20efe55d207dba95ff3efa9f96be713712dfde58f35911fa564efa744f",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -8403,14 +8403,14 @@
               "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
               "node_type": "MOLECULAR_FUNCTION",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfacetamide adduct (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfacetamide adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             },
             {
               "node_id": "bacterial_de_novo_folate_biosynthesis",
               "label": "bacterial de novo folate biosynthesis",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfacetamide inhibition of DHPS (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfacetamide inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             }
           ],
           "edges": [
@@ -8421,12 +8421,12 @@
               "description": "Sulfacetamide competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Roland et al. 1979 (PMID:365529) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfacetamide and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfacetamide and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
                 },
                 {
-                  "reference": "DOI:10.1126/science.1355616",
-                  "notes": "Yun et al. 2012 (PMID:22499943) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
                 }
               ]
             },
@@ -8437,8 +8437,8 @@
               "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfacetamide (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfacetamide (PMID:378102)."
                 }
               ]
             },
@@ -8449,8 +8449,8 @@
               "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfacetamide block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfacetamide block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
                 }
               ]
             }
@@ -8461,7 +8461,7 @@
         "timestamp": "2026-11-06T06:00:00Z",
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
-        "changes": "Added evidence-backed MECHANISTIC causal graph sulfacetamide_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1074/jbc.272.1.59, DOI:10.1126/science.1355616).",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfacetamide_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
         "llm_assisted": true
       }
     },
@@ -8471,7 +8471,7 @@
       "path": "data/antibiotics/antibacterial/sulfamethazine.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "e61475e6987567a41015bfb2123cbd1b473454233fdb283870db179a15c4c782",
-      "after_sha256": "57e5da89ec5ea497be1cecc483faf0e2590f4f54c039ebd373c73b9352d91e0a",
+      "after_sha256": "f2a6094311aea1aa69fffa7733b63565b1ddd74a50e2f68fe2f7ee2f7a32b5c9",
       "unchanged_fields_sha256": "bb1425392a590bf5c0cb13bc75ee8b60a4653c414e098e2f49ef087735a908bd",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -8520,14 +8520,14 @@
               "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
               "node_type": "MOLECULAR_FUNCTION",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethazine adduct (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethazine adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             },
             {
               "node_id": "bacterial_de_novo_folate_biosynthesis",
               "label": "bacterial de novo folate biosynthesis",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfamethazine inhibition of DHPS (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfamethazine inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             }
           ],
           "edges": [
@@ -8538,12 +8538,12 @@
               "description": "Sulfamethazine competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Roland et al. 1979 (PMID:365529) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfamethazine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfamethazine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
                 },
                 {
-                  "reference": "DOI:10.1126/science.1355616",
-                  "notes": "Yun et al. 2012 (PMID:22499943) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
                 }
               ]
             },
@@ -8554,8 +8554,8 @@
               "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfamethazine (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfamethazine (PMID:378102)."
                 }
               ]
             },
@@ -8566,8 +8566,8 @@
               "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfamethazine block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfamethazine block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
                 }
               ]
             }
@@ -8578,7 +8578,7 @@
         "timestamp": "2026-11-06T06:00:00Z",
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
-        "changes": "Added evidence-backed MECHANISTIC causal graph sulfamethazine_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1074/jbc.272.1.59, DOI:10.1126/science.1355616).",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfamethazine_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
         "llm_assisted": true
       }
     },
@@ -8588,7 +8588,7 @@
       "path": "data/antibiotics/antibacterial/sulfamethizole.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "656ffa02ba647cb9130a8beb110cfb64de530b20f12afa32f918abeac4476abb",
-      "after_sha256": "0935e9a3642bb2d27c06ff407eb91525db48771dcb5a7af8b7426ec84b43e2e5",
+      "after_sha256": "fd3270cdd4aa93beb681d7ee9e42d80b02b7e88e6a2eb2fcf360c5bc2a05b252",
       "unchanged_fields_sha256": "20e2472bc7b9b035174610f23e876d4c99451239cf68115a9c9b5a7967312d48",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -8637,14 +8637,14 @@
               "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
               "node_type": "MOLECULAR_FUNCTION",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethizole adduct (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethizole adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             },
             {
               "node_id": "bacterial_de_novo_folate_biosynthesis",
               "label": "bacterial de novo folate biosynthesis",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfamethizole inhibition of DHPS (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfamethizole inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             }
           ],
           "edges": [
@@ -8655,12 +8655,12 @@
               "description": "Sulfamethizole competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Roland et al. 1979 (PMID:365529) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfamethizole and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfamethizole and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
                 },
                 {
-                  "reference": "DOI:10.1126/science.1355616",
-                  "notes": "Yun et al. 2012 (PMID:22499943) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
                 }
               ]
             },
@@ -8671,8 +8671,8 @@
               "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfamethizole (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfamethizole (PMID:378102)."
                 }
               ]
             },
@@ -8683,8 +8683,8 @@
               "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfamethizole block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfamethizole block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
                 }
               ]
             }
@@ -8695,7 +8695,7 @@
         "timestamp": "2026-11-06T06:00:00Z",
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
-        "changes": "Added evidence-backed MECHANISTIC causal graph sulfamethizole_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1074/jbc.272.1.59, DOI:10.1126/science.1355616).",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfamethizole_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
         "llm_assisted": true
       }
     },
@@ -8705,7 +8705,7 @@
       "path": "data/antibiotics/antibacterial/sulfamethoxazole.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "03d20558eed3fcdee4f9d225dca7d29f4c0707ccc64e8da7234ed9693228c091",
-      "after_sha256": "100832b2af2549734eec206fcc945339eff893507a022c37a2a448f7dc089998",
+      "after_sha256": "0248f5fadf52b8bebbe1d977003f946a3ba2f0b967e208c80c3fbb7b1770230f",
       "unchanged_fields_sha256": "6055ce6f4e709a185178783e773a02833484d264ef1d846bb479838dc7dd91bc",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -8754,14 +8754,14 @@
               "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
               "node_type": "MOLECULAR_FUNCTION",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethoxazole adduct (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfamethoxazole adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             },
             {
               "node_id": "bacterial_de_novo_folate_biosynthesis",
               "label": "bacterial de novo folate biosynthesis",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfamethoxazole inhibition of DHPS (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfamethoxazole inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             }
           ],
           "edges": [
@@ -8772,12 +8772,12 @@
               "description": "Sulfamethoxazole competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Roland et al. 1979 (PMID:365529) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfamethoxazole and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfamethoxazole and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
                 },
                 {
-                  "reference": "DOI:10.1126/science.1355616",
-                  "notes": "Yun et al. 2012 (PMID:22499943) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
                 }
               ]
             },
@@ -8788,8 +8788,8 @@
               "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfamethoxazole (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfamethoxazole (PMID:378102)."
                 }
               ]
             },
@@ -8800,8 +8800,8 @@
               "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfamethoxazole block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfamethoxazole block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
                 }
               ]
             }
@@ -8812,7 +8812,7 @@
         "timestamp": "2026-11-06T06:00:00Z",
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
-        "changes": "Added evidence-backed MECHANISTIC causal graph sulfamethoxazole_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1074/jbc.272.1.59, DOI:10.1126/science.1355616).",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfamethoxazole_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
         "llm_assisted": true
       }
     },
@@ -8822,7 +8822,7 @@
       "path": "data/antibiotics/antiprotozoal/sulfadiazine.yaml",
       "cohort": "protein_target_with_examples",
       "before_sha256": "09189b3b5e33f9dfaa81eb8a38b90daaaadd5d23e37c60ab7bd9bff491e5c53e",
-      "after_sha256": "f5fa38310fe036aa52a9024cc4326e33e38e2dd51d526aebb8cd16b85db6af5c",
+      "after_sha256": "5f27319bf86b980fc683421d19b4e7cc55c5afc4699488fef4015380035d03fe",
       "unchanged_fields_sha256": "dd745740f0799573486748d514e93be509b57faceb27332e6e21b30dd662318d",
       "graphs_added": 1,
       "nodes_added": 4,
@@ -8871,14 +8871,14 @@
               "label": "DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation",
               "node_type": "MOLECULAR_FUNCTION",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfadiazine adduct (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end pterin-sulfadiazine adduct (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             },
             {
               "node_id": "bacterial_de_novo_folate_biosynthesis",
               "label": "bacterial de novo folate biosynthesis",
               "node_type": "BIOLOGICAL_PROCESS",
               "grounding_status": "REVIEWED_LABEL_ONLY",
-              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfadiazine inhibition of DHPS (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616)."
+              "grounding_notes": "Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis pathway arrested by sulfadiazine inhibition of DHPS (DOI:10.1128/AAC.15.2.195; DOI:10.1126/science.1214641)."
             }
           ],
           "edges": [
@@ -8889,12 +8889,12 @@
               "description": "Sulfadiazine competitively inhibits pABA utilization at bacterial dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Roland et al. 1979 (PMID:365529) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfadiazine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Roland et al. 1979 (PMID:378102) quantified purified Escherichia coli dihydropteroate synthase inhibition by sulfadiazine and demonstrated its incorporation with DHPPP into a dead-end pterin-sulfonamide adduct."
                 },
                 {
-                  "reference": "DOI:10.1126/science.1355616",
-                  "notes": "Yun et al. 2012 (PMID:22499943) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
+                  "reference": "DOI:10.1126/science.1214641",
+                  "notes": "Yun et al. 2012 (PMID:22383845) resolved the structural mechanism of sulfonamide binding and pterin-sulfa conjugate formation at the bacterial DHPS pABA site."
                 }
               ]
             },
@@ -8905,8 +8905,8 @@
               "description": "Bacterial dihydropteroate synthase (FolP) catalyzes the condensation of DHPPP with para-aminobenzoate (pABA) at its active site.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfadiazine (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and alternate substrate reaction with sulfadiazine (PMID:378102)."
                 }
               ]
             },
@@ -8917,8 +8917,8 @@
               "description": "DHPS-catalyzed dihydropteroate formation is an essential step in bacterial de novo folate biosynthesis.",
               "evidence": [
                 {
-                  "reference": "DOI:10.1074/jbc.272.1.59",
-                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfadiazine block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:365529)."
+                  "reference": "DOI:10.1128/AAC.15.2.195",
+                  "notes": "Competitive inhibition of DHPS and DHPPP depletion by sulfadiazine block de novo dihydropteroate and folate synthesis required for microbial growth (PMID:378102)."
                 }
               ]
             }
@@ -8929,7 +8929,7 @@
         "timestamp": "2026-11-06T06:00:00Z",
         "curator": "antigravity",
         "action": "CURATED_CAUSAL_GRAPHS",
-        "changes": "Added evidence-backed MECHANISTIC causal graph sulfadiazine_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1074/jbc.272.1.59, DOI:10.1126/science.1355616).",
+        "changes": "Added evidence-backed MECHANISTIC causal graph sulfadiazine_dhps_paba_competitive_folate_inhibition (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13) and primary literature (DOI:10.1128/AAC.15.2.195, DOI:10.1126/science.1214641).",
         "llm_assisted": true
       }
     }

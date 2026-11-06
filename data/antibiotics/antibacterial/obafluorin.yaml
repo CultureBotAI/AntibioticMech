@@ -102,7 +102,7 @@ curation_history:
   action: CURATED_CAUSAL_GRAPHS
   changes: Added evidence-backed MECHANISTIC causal graph obafluorin_thrs_threonyl_trna_synthetase_inhibition
     (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8M3)
-    and primary literature (DOI:10.1038/nmicrobiol.2017.104, DOI:10.7164/antibiotics.37.802).
+    and primary literature (DOI:10.1038/nchembio.2374, DOI:10.7164/antibiotics.37.802).
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
@@ -197,13 +197,13 @@ causal_graphs:
     node_type: MOLECULAR_FUNCTION
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: ATP-dependent L-threonine charging of tRNA(Thr) catalyzed by
-      bacterial threonyl-tRNA synthetase (ThrRS) and inhibited by obafluorin (DOI:10.1038/nmicrobiol.2017.104).
+      bacterial threonyl-tRNA synthetase (ThrRS) and inhibited by obafluorin (DOI:10.1038/nchembio.2374).
   - node_id: bacterial_translation_and_protein_biosynthesis
     label: bacterial translation and protein biosynthesis
     node_type: BIOLOGICAL_PROCESS
     grounding_status: REVIEWED_LABEL_ONLY
     grounding_notes: Bacterial ribosomal protein biosynthesis dependent on charged
-      L-threonyl-tRNA(Thr) and arrested upon ThrRS inhibition by obafluorin (DOI:10.1038/nmicrobiol.2017.104).
+      L-threonyl-tRNA(Thr) and arrested upon ThrRS inhibition by obafluorin (DOI:10.1038/nchembio.2374).
   edges:
   - subject: obafluorin
     predicate: inhibits
@@ -211,12 +211,12 @@ causal_graphs:
     description: Obafluorin inhibits bacterial threonyl-tRNA synthetase (ThrRS) catalytic
       activity.
     evidence:
-    - reference: DOI:10.1038/nmicrobiol.2017.104
-      notes: Schaffer et al. 2017 (PMID:28650475) identified bacterial threonyl-tRNA
+    - reference: DOI:10.1038/nchembio.2374
+      notes: Schaffer et al. 2017 (PMID:28504677) identified bacterial threonyl-tRNA
         synthetase (ThrRS) as the molecular target of the beta-lactone antibiotic
         obafluorin alongside its self-resistance ThrRS homolog ObaO.
     - reference: DOI:10.7164/antibiotics.37.802
-      notes: Wells et al. 1984 (PMID:6432772) reported the discovery and antibacterial
+      notes: Wells et al. 1984 (PMID:6432765) reported the discovery and antibacterial
         activity of the beta-lactone antibiotic obafluorin from Pseudomonas fluorescens.
   - subject: bacterial_threonyl_trna_synthetase_thrs
     predicate: enables
@@ -224,17 +224,17 @@ causal_graphs:
     description: Bacterial threonyl-tRNA synthetase (ThrRS / ThrS) catalyzes the aminoacylation
       of tRNA(Thr) with L-threonine.
     evidence:
-    - reference: DOI:10.1038/nmicrobiol.2017.104
+    - reference: DOI:10.1038/nchembio.2374
       notes: Escherichia coli ThrRS (ThrS) catalyzes threonyl-tRNA aminoacylation
         and is complemented by the self-resistance homolog ObaO under obafluorin exposure
-        (PMID:28650475).
+        (PMID:28504677).
   - subject: threonyl_trna_aminoacylation_activity
     predicate: supports
     object: bacterial_translation_and_protein_biosynthesis
     description: Threonyl-tRNA aminoacylation supplies charged tRNA(Thr) required
       for bacterial protein synthesis.
     evidence:
-    - reference: DOI:10.1038/nmicrobiol.2017.104
+    - reference: DOI:10.1038/nchembio.2374
       notes: Inhibition of bacterial ThrRS by obafluorin blocks protein synthesis
         and bacterial growth unless rescued by the ThrRS immunity determinant ObaO
-        (PMID:28650475).
+        (PMID:28504677).
