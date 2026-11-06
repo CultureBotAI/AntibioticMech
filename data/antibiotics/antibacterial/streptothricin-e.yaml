@@ -84,6 +84,14 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Inamori et al. 1990 (PMID:2177682) and
     Maruyama et al. 2012 (PMID:22820420).
   llm_assisted: true
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial 30S ribosomal
+    subunit (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by Inamori et al. 1990
+    (DOI:10.1248/cpb.38.2296, PMID:2177682) and Maruyama et al. 2012 (DOI:10.1038/nchembio.1040,
+    PMID:22820420).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -91,3 +99,36 @@ mode_of_action_notes: 'CURATOR: Streptothricin N-glycoside antibiotic congener b
   two L-beta-lysine residues from Streptomyces rochei and Streptomyces lavendulae
   that inhibits bacterial protein synthesis (Inamori et al. 1990, DOI:10.1248/cpb.38.2296,
   PMID:2177682; Maruyama et al. 2012, DOI:10.1038/nchembio.1040, PMID:22820420).'
+molecular_targets:
+- target_label: bacterial 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Binding to 16S rRNA of the bacterial 30S ribosomal subunit
+    by the streptothricin N-glycoside core bearing a di-L-beta-lysine chain, inhibiting
+    prokaryotic translation translocation and inducing miscoding (Inamori et al. 1990,
+    DOI:10.1248/cpb.38.2296, PMID:2177682; Maruyama et al. 2012, DOI:10.1038/nchembio.1040,
+    PMID:22820420).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 1990-08
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1248/cpb.38.2296
+    snippet: Streptothricin E (racemomycin-C), the streptothricin antibiotic congener
+      containing two L-beta-lysine residues produced by Streptomyces rochei NBRC 12908
+      and Streptomyces lavendulae, exhibits broad-spectrum antibacterial and antifungal
+      activity by inhibiting bacterial protein synthesis.
+    notes: Inamori et al. 1990 (Chem Pharm Bull 38:2296-2298; PMID:2177682) characterized
+      the antimicrobial activity and prokaryotic translation inhibition of streptothricin
+      E (racemomycin-C).
+  - reference: PMID:2177682
+    notes: PubMed record for Inamori et al. 1990 on streptothricin E (racemomycin-C)
+      antimicrobial activity.
+  - reference: DOI:10.1038/nchembio.1040
+    notes: Maruyama et al. 2012 (Nat Chem Biol 8:791-797; PMID:22820420) elucidated
+      the Streptomyces rochei NBRC 12908 streptothricin biosynthetic machinery and
+      beta-lysine chain assembly.
+  - reference: PMID:22820420
+    notes: PubMed record for Maruyama et al. 2012 on streptothricin biosynthesis.

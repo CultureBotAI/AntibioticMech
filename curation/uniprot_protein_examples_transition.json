@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 86,
+  "record_count": 89,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -4742,6 +4742,161 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfadiazine (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-1fe7431c15",
+      "label": "CRS3123",
+      "path": "data/antibiotics/antibacterial/crs3123.yaml",
+      "before_sha256": "30d9c75fca5c5f334643a7dc37799b05a4445edaf55b9b0c6bee77cf298eba53",
+      "after_sha256": "80ef1d4c18bb0d2f0a25c4026cae0e48baa93caa515f1bc5398a7920ddba636b",
+      "unchanged_fields_sha256": "2c394e22b27a95fb9198d42bb0875a64f740745131445802256e20143c6de374",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial type 1 methionyl-tRNA synthetase (MetRS / MetG)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:Q181D9",
+              "protein_label": "Methionine--tRNA ligase",
+              "gene_symbol": "metG",
+              "taxon_id": "NCBITaxon:272563",
+              "taxon_label": "Clostridioides difficile (strain 630)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-06",
+              "role": "Clostridioides difficile 630 type 1 methionyl-tRNA synthetase (MetRS1 / MetG, EC 6.1.1.10) selectively inhibited by CRS3123 (REP3123, Ki = 0.020 nM) to arrest bacterial translation, toxin production, and sporulation (DOI:10.1038/s41598-025-29583-1; PMID:41413129; DOI:10.1128/aac.01395-19; PMID:31685472; DOI:10.1093/jac/dkp041; PMID:19258353; DOI:10.1093/jac/dkp042; PMID:19251726)."
+            },
+            {
+              "uniprot_id": "UniProtKB:Q837B3",
+              "protein_label": "Methionine--tRNA ligase",
+              "gene_symbol": "metG",
+              "taxon_id": "NCBITaxon:226185",
+              "taxon_label": "Enterococcus faecalis (strain ATCC 700802 / V583)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-06",
+              "role": "Enterococcus faecalis V583 type 1 methionyl-tRNA synthetase (MetRS1 / MetG, EC 6.1.1.10) representing the enterococcal MetRS target inhibited at nanomolar concentrations by CRS3123 (DOI:10.1038/s41598-025-29583-1; PMID:41413129)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-06T08:45:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 2 reviewed UniProtKB protein_examples (Q181D9, Q837B3) to the primary-literature bacterial type 1 methionyl-tRNA synthetase (MetRS / MetG) target on CRS3123 (DOI:10.1038/s41598-025-29583-1).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-1ac99609a8",
+      "label": "epetraborole",
+      "path": "data/antibiotics/antibacterial/epetraborole.yaml",
+      "before_sha256": "fe60f1d5c085a334e8711d7a114125f346c6b79f2578a53ea0e6c025b40c60e8",
+      "after_sha256": "d498669db41828c91cae79da5d88c7ac6fdcc6e48c26208fdd260f246a77fcd8",
+      "unchanged_fields_sha256": "80a0d201a5a49b9397f7530148059f65a5e006e0622d8ebb4b9908394c107791",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 2,
+      "history_events_added": 1,
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial leucyl-tRNA synthetase (LeuRS / LeuS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P07813",
+              "protein_label": "Leucine--tRNA ligase",
+              "gene_symbol": "leuS",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-06",
+              "role": "Escherichia coli K-12 leucyl-tRNA synthetase (LeuRS / LeuS, EC 6.1.1.4) whose CP1 editing domain forms a covalent oxaborole adduct with the 3'-terminal adenosine of tRNA(Leu) in the presence of epetraborole (AN3365 / GSK2251052, IC50 = 0.31 uM; DOI:10.1128/AAC.02058-12; PMID:23295920; DOI:10.1128/aac.01029-23; PMID:37937988)."
+            },
+            {
+              "uniprot_id": "UniProtKB:P9WFV1",
+              "protein_label": "Leucine--tRNA ligase",
+              "gene_symbol": "leuS",
+              "taxon_id": "NCBITaxon:83332",
+              "taxon_label": "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-06",
+              "role": "Reviewed reference mycobacterial leucyl-tRNA synthetase (LeuRS / LeuS, Rv0041, EC 6.1.1.4) representing the conserved mycobacterial LeuRS editing-site target inhibited by epetraborole in Mycobacterium avium complex and Mycobacterium abscessus (DOI:10.1128/aac.01029-23; PMID:37937988)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-06T08:45:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 2 reviewed UniProtKB protein_examples (P07813, P9WFV1) to the primary-literature bacterial leucyl-tRNA synthetase (LeuRS / LeuS) target on epetraborole (DOI:10.1128/aac.01029-23).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "antibioticmech:curator-0f0bc2f555",
+      "label": "ibezapolstat",
+      "path": "data/antibiotics/antibacterial/ibezapolstat.yaml",
+      "before_sha256": "a801f7b5156f557f79e2f9dfb3c8613906bf907e0f6e387c23e1f25b069a1d8c",
+      "after_sha256": "b73d4a0a98265fa87dd4fa1be578b59c5d8f88000b2d4e6aaf62cbd20113f71a",
+      "unchanged_fields_sha256": "352480783e458cfdee3fcf9a158fd857436d3ab992cb3151e790da64f47ca5f7",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 2,
+      "curation_history_after_len": 3,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 0,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "Gram-positive bacterial replicative DNA polymerase IIIC (PolC)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P13267",
+              "protein_label": "DNA polymerase III PolC-type",
+              "gene_symbol": "polC",
+              "taxon_id": "NCBITaxon:224308",
+              "taxon_label": "Bacillus subtilis (strain 168)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-06",
+              "role": "Reviewed reference Firmicutes replicative DNA polymerase IIIC (PolC, EC 2.7.7.7) of Bacillus subtilis 168 representing the conserved low-G+C Gram-positive PolC enzyme family selectively inhibited by N2-substituted guanine analogues such as ibezapolstat (ACX-362E) while Clostridioides difficile 630 PolC (UniProtKB:Q18BG8) remains unreviewed in TrEMBL (DOI:10.1128/aac.00332-24; PMID:38717162; DOI:10.1016/j.bmc.2019.06.017; PMID:31255476; DOI:10.1128/AAC.01363-18; PMID:30531557)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-06T08:45:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added 1 reviewed UniProtKB protein_example (P13267) to the primary-literature Gram-positive bacterial replicative DNA polymerase IIIC (PolC) target on ibezapolstat (DOI:10.1128/aac.00332-24).",
         "llm_assisted": true
       }
     }

@@ -56,3 +56,86 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Curated SYNTHETIC biosynthesis_origin, PROTEIN_SYNTHESIS_INHIBITION (MICROBIAL_TARGET)
+    mode_of_action, and primary-literature molecular_targets entry for bacterial leucyl-tRNA
+    synthetase (LeuRS / LeuS) backed by Castanheira et al. 2023 (DOI:10.1128/aac.01029-23,
+    PMID:37937988) and Hernandez et al. 2013 (DOI:10.1128/AAC.02058-12, PMID:23295920).
+  llm_assisted: true
+- timestamp: '2026-11-06T08:45:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (P07813, P9WFV1) to the primary-literature
+    bacterial leucyl-tRNA synthetase (LeuRS / LeuS) target on epetraborole (DOI:10.1128/aac.01029-23).
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic 3-aminomethylbenzoxaborole antibacterial
+  agent (AN3365, GSK2251052) that inhibits bacterial leucyl-tRNA synthetase (LeuRS
+  / LeuS) by forming a covalent spiro-oxaborole adduct with the 3''-terminal adenosine
+  of tRNA(Leu) in the CP1 editing active site (Castanheira et al. 2023, DOI:10.1128/aac.01029-23,
+  PMID:37937988; Hernandez et al. 2013, DOI:10.1128/AAC.02058-12, PMID:23295920).'
+molecular_targets:
+- target_label: bacterial leucyl-tRNA synthetase (LeuRS / LeuS)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Oxaborole-assisted tRNA(Leu) trapping in the CP1 editing domain
+    of bacterial leucyl-tRNA synthetase (LeuRS / LeuS, IC50 = 0.31 uM against Escherichia
+    coli LeuRS) and potent whole-cell antimycobacterial and Gram-negative antibacterial
+    activity (Castanheira et al. 2023, DOI:10.1128/aac.01029-23, PMID:37937988; Hernandez
+    et al. 2013, DOI:10.1128/AAC.02058-12, PMID:23295920).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2023-11
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1128/aac.01029-23
+    snippet: Epetraborole is a boron-containing leucyl-tRNA synthetase (LeuRS) inhibitor
+      under clinical development for treatment-refractory Mycobacterium avium complex
+      (MAC) lung disease. Epetraborole inhibited 99.3% of M. avium complex isolates
+      at <=4 ug/mL (MIC50/90, 1/2 ug/mL) and 100.0% of M. abscessus isolates at <=0.5
+      ug/mL (MIC50/90, 0.12/0.25 ug/mL).
+    notes: Castanheira et al. 2023 (Antimicrob Agents Chemother 67:e0102923; PMID:37937988)
+      characterized the antimycobacterial potency of the bacterial leucyl-tRNA synthetase
+      (LeuRS) inhibitor epetraborole against Mycobacterium avium complex and Mycobacterium
+      abscessus clinical isolates.
+  - reference: PMID:37937988
+    notes: PubMed record for Castanheira et al. 2023 on epetraborole LeuRS inhibition
+      in nontuberculous mycobacteria.
+  - reference: DOI:10.1128/AAC.02058-12
+    notes: Hernandez et al. 2013 (Antimicrob Agents Chemother 57:1394-1403; PMID:23295920)
+      discovered AN3365 (GSK2251052 / epetraborole) and demonstrated direct oxaborole-tRNA(Leu)
+      adduct inhibition of Escherichia coli leucyl-tRNA synthetase (LeuS, IC50 = 0.31
+      uM) and editing-domain resistance mutations.
+  - reference: PMID:23295920
+    notes: PubMed record for Hernandez et al. 2013 on discovery and LeuRS mechanism
+      of AN3365 (epetraborole).
+  protein_examples:
+  - uniprot_id: UniProtKB:P07813
+    protein_label: Leucine--tRNA ligase
+    gene_symbol: leuS
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-06'
+    role: Escherichia coli K-12 leucyl-tRNA synthetase (LeuRS / LeuS, EC 6.1.1.4)
+      whose CP1 editing domain forms a covalent oxaborole adduct with the 3'-terminal
+      adenosine of tRNA(Leu) in the presence of epetraborole (AN3365 / GSK2251052,
+      IC50 = 0.31 uM; DOI:10.1128/AAC.02058-12; PMID:23295920; DOI:10.1128/aac.01029-23;
+      PMID:37937988).
+  - uniprot_id: UniProtKB:P9WFV1
+    protein_label: Leucine--tRNA ligase
+    gene_symbol: leuS
+    taxon_id: NCBITaxon:83332
+    taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-06'
+    role: Reviewed reference mycobacterial leucyl-tRNA synthetase (LeuRS / LeuS, Rv0041,
+      EC 6.1.1.4) representing the conserved mycobacterial LeuRS editing-site target
+      inhibited by epetraborole in Mycobacterium avium complex and Mycobacterium abscessus
+      (DOI:10.1128/aac.01029-23; PMID:37937988).

@@ -80,6 +80,14 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Maruyama et al. 2012 (PMID:22820420) and
     Inamori et al. 1990 (PMID:2177682).
   llm_assisted: true
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial 30S ribosomal
+    subunit (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by Maruyama et al. 2012
+    (DOI:10.1038/nchembio.1040, PMID:22820420) and Inamori et al. 1990 (DOI:10.1248/cpb.38.2296,
+    PMID:2177682).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -87,3 +95,37 @@ mode_of_action_notes: 'CURATOR: Streptothricin N-glycoside antibiotic congener b
   four L-beta-lysine residues from Streptomyces rochei that inhibits prokaryotic translation
   (Maruyama et al. 2012, DOI:10.1038/nchembio.1040, PMID:22820420; Inamori et al.
   1990, DOI:10.1248/cpb.38.2296, PMID:2177682).'
+molecular_targets:
+- target_label: bacterial 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Binding to 16S rRNA of the bacterial 30S ribosomal subunit
+    by the streptothricin N-glycoside core bearing a tetra-L-beta-lysine chain, inhibiting
+    prokaryotic translation translocation and inducing miscoding (Maruyama et al.
+    2012, DOI:10.1038/nchembio.1040, PMID:22820420; Inamori et al. 1990, DOI:10.1248/cpb.38.2296,
+    PMID:2177682).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-09
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1038/nchembio.1040
+    snippet: Streptothricin C (racemomycin-D), the streptothricin antibiotic congener
+      containing four L-beta-lysine residues produced by Streptomyces rochei NBRC
+      12908, is a broad-spectrum bactericidal aminoglycoside-like antibiotic that
+      inhibits prokaryotic translation.
+    notes: Maruyama et al. 2012 (Nat Chem Biol 8:791-797; PMID:22820420) characterized
+      the biosynthesis and potent prokaryotic translation-inhibiting antibacterial
+      activity of streptothricin C (racemomycin-D).
+  - reference: PMID:22820420
+    notes: PubMed record for Maruyama et al. 2012 on streptothricin C biosynthesis
+      and antibacterial activity.
+  - reference: DOI:10.1248/cpb.38.2296
+    notes: Inamori et al. 1990 (Chem Pharm Bull 38:2296-2298; PMID:2177682) compared
+      the antimicrobial activities of streptothricin congeners differing in beta-lysine
+      chain length.
+  - reference: PMID:2177682
+    notes: PubMed record for Inamori et al. 1990 on antimicrobial activities of streptothricin
+      congeners.
