@@ -67,3 +67,18 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_MODE_OF_ACTION_AND_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin and OTHER (HOST_SHARED_TARGET)
+    mode_of_action from Czesny et al. 2009 (PMID:19651911) and Schorn et al. 2014
+    (PMID:24168704).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: OTHER
+mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Actinomycete-derived alpha'',beta''-epoxyketone tetrapeptide
+  proteasome inhibitor from Goodfellowiella coeruleoviolacea that inhibits the Plasmodium
+  falciparum 20S proteasome at nanomolar concentrations (10-100 nM), killing asexual
+  blood stages and stage V gametocytes (Czesny et al. 2009, DOI:10.1128/aac.00088-09,
+  PMID:19651911; Schorn et al. 2014, DOI:10.1021/cb400699p, PMID:24168704).'

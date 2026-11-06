@@ -98,6 +98,13 @@ curation_history:
     (UniProtKB:P0A8V2, UniProtKB:P0A8T7; DOI:10.7554/eLife.02451, PMID:24843001; DOI:10.1002/anie.201508576,
     PMID:26553755) from PROPOSED to REVIEWED (issue #1333).'
   llm_assisted: true
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0A8V2,
+    UniProtKB:P0A8T7) and primary literature (DOI:10.7554/eLife.02451).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -163,3 +170,98 @@ molecular_targets:
       bridge-helix hinge and F-loop directly contact salinamide B in the cocrystal
       structure (PDB:4MEY) to prevent active-center nucleotide addition (DOI:10.7554/eLife.02451;
       PMID:24843001).
+causal_graphs:
+- graph_id: salinamide_b_rnap_bridge_helix_cap_hinge_transcription_inhibition
+  title: Salinamide B binds the bacterial RNA polymerase bridge-helix cap/hinge pocket
+    to inhibit nucleotide addition and transcription
+  description: Salinamide B, a chlorinated bicyclic depsipeptide antibiotic from marine
+    Streptomyces sp. CNB-091, binds the bacterial DNA-directed RNA polymerase (RpoB/RpoC)
+    bridge-helix cap/hinge pocket (PDB:4MEY), allosterically blocking bridge-helix
+    N-terminal hinge unbending required for nucleotide addition and arresting bacterial
+    transcription.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: salinamide_b
+    label: salinamide B
+    node_type: COMPOUND
+    grounding: CHEBI:200517
+  - node_id: bacterial_rna_polymerase_bridge_helix_hinge
+    label: bacterial DNA-directed RNA polymerase (RpoB/RpoC) bridge-helix cap/hinge
+      pocket
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial DNA-directed RNA polymerase beta (RpoB) and beta' (RpoC)
+      subunits forming the salinamide-binding bridge-helix cap/hinge pocket; kept
+      label-only with Escherichia coli K-12 RpoB (UniProtKB:P0A8V2) and RpoC (UniProtKB:P0A8T7)
+      protein_examples.
+    gene_symbols:
+    - rpoB
+    - rpoC
+    protein_examples:
+    - uniprot_id: UniProtKB:P0A8V2
+      protein_label: DNA-directed RNA polymerase subunit beta
+      gene_symbol: rpoB
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-05'
+      role: Escherichia coli K-12 DNA-directed RNA polymerase beta subunit (RpoB)
+        forming part of the bridge-helix cap binding site in the salinamide B-bromobenzoate
+        cocrystal structure (PDB:4MEY) and harboring resistance substitutions (DOI:10.7554/eLife.02451;
+        PMID:24843001).
+    - uniprot_id: UniProtKB:P0A8T7
+      protein_label: DNA-directed RNA polymerase subunit beta'
+      gene_symbol: rpoC
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-05'
+      role: Escherichia coli K-12 DNA-directed RNA polymerase beta' subunit (RpoC)
+        whose bridge-helix hinge and F-loop directly contact salinamide B in the cocrystal
+        structure (PDB:4MEY) to prevent active-center nucleotide addition (DOI:10.7554/eLife.02451;
+        PMID:24843001).
+  - node_id: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    label: RNA polymerase bridge-helix hinge conformational cycling and nucleotide
+      addition activity
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Conformational unbending of the RNA polymerase bridge-helix N-terminal
+      hinge that couples nucleotide addition in transcription initiation and elongation,
+      allosterically blocked by salinamide B (DOI:10.7554/eLife.02451, PDB:4MEY).
+  - node_id: bacterial_dna_templated_transcription
+    label: bacterial DNA-templated transcription
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial RNA synthesis during transcription initiation and elongation
+      inhibited by salinamide B (DOI:10.7554/eLife.02451).
+  edges:
+  - subject: salinamide_b
+    predicate: inhibits
+    object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    description: Salinamide B binds the bacterial RNA polymerase bridge-helix cap/hinge
+      site and allosterically inhibits nucleotide addition.
+    evidence:
+    - reference: DOI:10.7554/eLife.02451
+      notes: Degen et al. 2014 (PMID:24843001; PDB:4MEY) solved the crystal structure
+        of Escherichia coli RNA polymerase holoenzyme bound to salinamide B-Br and
+        demonstrated allosteric inhibition of bridge-helix N-terminal hinge unbending
+        and nucleotide addition.
+  - subject: bacterial_rna_polymerase_bridge_helix_hinge
+    predicate: enables
+    object: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    description: The bacterial RNA polymerase RpoB and RpoC subunits form the bridge-helix
+      cap/hinge region that mediates catalytic nucleotide addition.
+    evidence:
+    - reference: DOI:10.7554/eLife.02451
+      notes: X-ray crystallography (PDB:4MEY) and rpoB/rpoC mutagenesis defined the
+        salinamide B binding pocket at the RpoB/RpoC bridge-helix cap/hinge interface
+        (PMID:24843001).
+  - subject: rnap_bridge_helix_hinge_nucleotide_addition_activity
+    predicate: supports
+    object: bacterial_dna_templated_transcription
+    description: Bridge-helix hinge cycling and nucleotide addition drive bacterial
+      transcription initiation and elongation.
+    evidence:
+    - reference: DOI:10.7554/eLife.02451
+      notes: Inhibition of nucleotide addition at the bridge-helix hinge by salinamide
+        B blocks bacterial transcription and growth (PMID:24843001).

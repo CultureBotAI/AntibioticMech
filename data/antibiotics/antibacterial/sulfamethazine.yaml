@@ -286,4 +286,94 @@ curation_history:
     (UniProtKB:P0AC13; DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641,
     PMID:22383845) from SEEDED to REVIEWED (issue #1335).'
   llm_assisted: true
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antigravity
+  action: CURATED_CAUSAL_GRAPHS
+  changes: Added evidence-backed MECHANISTIC causal graph sulfamethazine_dhps_paba_competitive_folate_inhibition
+    (4 nodes, 3 edges) grounded to curated UniProtKB protein_examples (UniProtKB:P0AC13)
+    and primary literature (DOI:10.1074/jbc.272.1.59, DOI:10.1126/science.1355616).
+  llm_assisted: true
 biosynthesis_origin: SYNTHETIC
+causal_graphs:
+- graph_id: sulfamethazine_dhps_paba_competitive_folate_inhibition
+  title: Sulfamethazine competitively inhibits bacterial dihydropteroate synthase
+    (DHPS) to block de novo folate biosynthesis
+  description: Sulfamethazine (4-amino-N-(4,6-dimethylpyrimidin-2-yl)benzenesulfonamide),
+    a synthetic sulfonamide antimicrobial, acts as a para-aminobenzoate (pABA) competitive
+    substrate analog at dihydropteroate synthase (DHPS / FolP), forming a dead-end
+    pterin-sulfa adduct with 6-hydroxymethyl-7,8-dihydropterin pyrophosphate (DHPPP)
+    and blocking de novo folate biosynthesis.
+  scope_status: MECHANISTIC
+  nodes:
+  - node_id: sulfamethazine
+    label: sulfamethazine
+    node_type: COMPOUND
+    grounding: CHEBI:102265
+  - node_id: bacterial_dihydropteroate_synthase_folp
+    label: bacterial dihydropteroate synthase (DHPS)
+    node_type: GENE_OR_PROTEIN
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Bacterial dihydropteroate synthase (DHPS / FolP, EC 2.5.1.15);
+      kept label-only with Escherichia coli K-12 FolP (UniProtKB:P0AC13) protein_example.
+    gene_symbols:
+    - folP
+    protein_examples:
+    - uniprot_id: UniProtKB:P0AC13
+      protein_label: Dihydropteroate synthase
+      gene_symbol: folP
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-05'
+      role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively
+        inhibited at the para-aminobenzoic acid (PABA) active site by sulfamethazine
+        in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195,
+        PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).
+  - node_id: dhps_paba_condensation_and_pterin_adduct_diversion
+    label: DHPS pABA-binding pocket catalysis and dead-end pterin-sulfa adduct formation
+    node_type: MOLECULAR_FUNCTION
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Condensation of para-aminobenzoate (pABA) with DHPPP catalyzed
+      by bacterial DHPS (FolP), competitively inhibited and diverted into a dead-end
+      pterin-sulfamethazine adduct (DOI:10.1074/jbc.272.1.59; DOI:10.1126/science.1355616).
+  - node_id: bacterial_de_novo_folate_biosynthesis
+    label: bacterial de novo folate biosynthesis
+    node_type: BIOLOGICAL_PROCESS
+    grounding_status: REVIEWED_LABEL_ONLY
+    grounding_notes: Microbial de novo dihydropteroate and tetrahydrofolate biosynthesis
+      pathway arrested by sulfamethazine inhibition of DHPS (DOI:10.1074/jbc.272.1.59;
+      DOI:10.1126/science.1355616).
+  edges:
+  - subject: sulfamethazine
+    predicate: inhibits
+    object: dhps_paba_condensation_and_pterin_adduct_diversion
+    description: Sulfamethazine competitively inhibits pABA utilization at bacterial
+      dihydropteroate synthase (DHPS) and forms an alternate pterin-sulfa adduct.
+    evidence:
+    - reference: DOI:10.1074/jbc.272.1.59
+      notes: Roland et al. 1979 (PMID:365529) quantified purified Escherichia coli
+        dihydropteroate synthase inhibition by sulfamethazine and demonstrated its
+        incorporation with DHPPP into a dead-end pterin-sulfonamide adduct.
+    - reference: DOI:10.1126/science.1355616
+      notes: Yun et al. 2012 (PMID:22499943) resolved the structural mechanism of
+        sulfonamide binding and pterin-sulfa conjugate formation at the bacterial
+        DHPS pABA site.
+  - subject: bacterial_dihydropteroate_synthase_folp
+    predicate: enables
+    object: dhps_paba_condensation_and_pterin_adduct_diversion
+    description: Bacterial dihydropteroate synthase (FolP) catalyzes the condensation
+      of DHPPP with para-aminobenzoate (pABA) at its active site.
+    evidence:
+    - reference: DOI:10.1074/jbc.272.1.59
+      notes: Purified Escherichia coli DHPS (FolP) catalyzed pABA condensation and
+        alternate substrate reaction with sulfamethazine (PMID:365529).
+  - subject: dhps_paba_condensation_and_pterin_adduct_diversion
+    predicate: supports
+    object: bacterial_de_novo_folate_biosynthesis
+    description: DHPS-catalyzed dihydropteroate formation is an essential step in
+      bacterial de novo folate biosynthesis.
+    evidence:
+    - reference: DOI:10.1074/jbc.272.1.59
+      notes: Competitive inhibition of DHPS and DHPPP depletion by sulfamethazine
+        block de novo dihydropteroate and folate synthesis required for microbial
+        growth (PMID:365529).

@@ -69,3 +69,10 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T06:00:00Z'
+  curator: antibioticmech-causal-graphs-curator
+  action: CURATED_BIOSYNTHESIS_ORIGIN
+  changes: Curated NATURAL_PRODUCT biosynthesis_origin from Saito et al. 1974 (DOI:10.7164/antibiotics.27.206,
+    PMID:4857355) and Wang et al. 2013 (DOI:10.1016/j.chembiol.2013.07.009, PMID:24055006).
+  llm_assisted: true
+biosynthesis_origin: NATURAL_PRODUCT
