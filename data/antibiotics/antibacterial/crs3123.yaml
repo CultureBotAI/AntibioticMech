@@ -60,7 +60,8 @@ curation_history:
     mode_of_action, and primary-literature molecular_targets entry for bacterial type
     1 methionyl-tRNA synthetase (MetRS / MetG) backed by Abdelmegeed et al. 2025 (DOI:10.1038/s41598-025-29583-1,
     PMID:41413129), Lomeli et al. 2019 (DOI:10.1128/aac.01395-19, PMID:31685472),
-    and Ochsner et al. 2009 (DOI:10.1093/jac/dkp042, PMID:19246509).
+    Critchley et al. 2009 (DOI:10.1093/jac/dkp041, PMID:19258353), and Ochsner et
+    al. 2009 (DOI:10.1093/jac/dkp042, PMID:19251726).
   llm_assisted: true
 - timestamp: '2026-11-06T08:45:00Z'
   curator: antigravity
@@ -75,8 +76,9 @@ mode_of_action_notes: 'CURATOR: Synthetic diaryldiamine antibacterial (REP3123) 
   selectively inhibits bacterial type 1 methionyl-tRNA synthetase (MetRS1 / MetG),
   arresting protein synthesis, toxin production, and sporulation in Clostridioides
   difficile and Gram-positive cocci (Abdelmegeed et al. 2025, DOI:10.1038/s41598-025-29583-1,
-  PMID:41413129; Lomeli et al. 2019, DOI:10.1128/aac.01395-19, PMID:31685472; Ochsner
-  et al. 2009, DOI:10.1093/jac/dkp042, PMID:19246509).'
+  PMID:41413129; Lomeli et al. 2019, DOI:10.1128/aac.01395-19, PMID:31685472; Critchley
+  et al. 2009, DOI:10.1093/jac/dkp041, PMID:19258353; Ochsner et al. 2009, DOI:10.1093/jac/dkp042,
+  PMID:19251726).'
 molecular_targets:
 - target_label: bacterial type 1 methionyl-tRNA synthetase (MetRS / MetG)
   target_type: PROTEIN
@@ -88,7 +90,8 @@ molecular_targets:
     difficile MetRS) and potent whole-cell antibacterial activity against Clostridioides
     difficile and vancomycin-resistant Enterococcus species (Abdelmegeed et al. 2025,
     DOI:10.1038/s41598-025-29583-1, PMID:41413129; Lomeli et al. 2019, DOI:10.1128/aac.01395-19,
-    PMID:31685472; Ochsner et al. 2009, DOI:10.1093/jac/dkp042, PMID:19246509).
+    PMID:31685472; Critchley et al. 2009, DOI:10.1093/jac/dkp041, PMID:19258353; Ochsner
+    et al. 2009, DOI:10.1093/jac/dkp042, PMID:19251726).
   evidence_status: PRIMARY_EVIDENCE
   source: PRIMARY_LITERATURE
   source_version: 2025-11
@@ -113,13 +116,20 @@ molecular_targets:
   - reference: PMID:31685472
     notes: PubMed record for Lomeli et al. 2019 on CRS3123 activity against Clostridioides
       difficile.
-  - reference: DOI:10.1093/jac/dkp042
-    notes: Ochsner et al. 2009 (J Antimicrob Chemother 63:964-971; PMID:19246509)
+  - reference: DOI:10.1093/jac/dkp041
+    notes: Critchley et al. 2009 (J Antimicrob Chemother 63:954-963; PMID:19258353)
       established Ki = 0.020 nM inhibition of purified Clostridioides difficile type
       1 methionyl-tRNA synthetase (MetRS) by REP3123 (CRS3123).
-  - reference: PMID:19246509
-    notes: PubMed record for Ochsner et al. 2009 characterizing REP3123 (CRS3123)
-      inhibition of C. difficile MetRS.
+  - reference: PMID:19258353
+    notes: PubMed record for Critchley et al. 2009 characterizing REP3123 (CRS3123)
+      inhibition of purified C. difficile MetRS.
+  - reference: DOI:10.1093/jac/dkp042
+    notes: Ochsner et al. 2009 (J Antimicrob Chemother 63:964-971; PMID:19251726)
+      demonstrated that MetRS inhibition by REP3123 (CRS3123) suppresses de novo protein
+      synthesis, toxin production, and sporulation in Clostridioides difficile.
+  - reference: PMID:19251726
+    notes: PubMed record for Ochsner et al. 2009 on REP3123 (CRS3123) inhibition of
+      C. difficile protein synthesis, toxin production, and sporulation.
   protein_examples:
   - uniprot_id: UniProtKB:Q181D9
     protein_label: Methionine--tRNA ligase
@@ -131,8 +141,8 @@ molecular_targets:
     role: Clostridioides difficile 630 type 1 methionyl-tRNA synthetase (MetRS1 /
       MetG, EC 6.1.1.10) selectively inhibited by CRS3123 (REP3123, Ki = 0.020 nM)
       to arrest bacterial translation, toxin production, and sporulation (DOI:10.1038/s41598-025-29583-1;
-      PMID:41413129; DOI:10.1128/aac.01395-19; PMID:31685472; DOI:10.1093/jac/dkp042;
-      PMID:19246509).
+      PMID:41413129; DOI:10.1128/aac.01395-19; PMID:31685472; DOI:10.1093/jac/dkp041;
+      PMID:19258353; DOI:10.1093/jac/dkp042; PMID:19251726).
   - uniprot_id: UniProtKB:Q837B3
     protein_label: Methionine--tRNA ligase
     gene_symbol: metG

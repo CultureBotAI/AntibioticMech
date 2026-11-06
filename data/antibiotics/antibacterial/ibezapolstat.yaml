@@ -55,8 +55,9 @@ curation_history:
   changes: Curated SYNTHETIC biosynthesis_origin, NUCLEIC_ACID_SYNTHESIS_INHIBITION
     (MICROBIAL_TARGET) mode_of_action, and primary-literature molecular_targets entry
     for Gram-positive bacterial replicative DNA polymerase IIIC (PolC; GO:0003887)
-    backed by Murray et al. 2024 (DOI:10.1128/aac.00332-24, PMID:38717162) and Xu
-    et al. 2019 (DOI:10.1128/AAC.01918-18, PMID:30559132).
+    backed by Murray et al. 2024 (DOI:10.1128/aac.00332-24, PMID:38717162), Xu et
+    al. 2019 (DOI:10.1016/j.bmc.2019.06.017, PMID:31255476), and van Eijk et al. 2019
+    (DOI:10.1128/AAC.01363-18, PMID:30531557).
   llm_assisted: true
 - timestamp: '2026-11-06T08:45:00Z'
   curator: antigravity
@@ -72,8 +73,8 @@ mode_of_action_notes: 'CURATOR: Synthetic N2-(3,4-dichlorobenzyl)-7-(2-morpholin
   antibacterial (ACX-362E) that selectively inhibits low-G+C Gram-positive bacterial
   replicative DNA polymerase IIIC (PolC) by pairing with template dCMP and trapping
   the enzyme-DNA complex in Clostridioides difficile and other Firmicutes (Murray
-  et al. 2024, DOI:10.1128/aac.00332-24, PMID:38717162; Xu et al. 2019, DOI:10.1128/AAC.01918-18,
-  PMID:30559132).'
+  et al. 2024, DOI:10.1128/aac.00332-24, PMID:38717162; Xu et al. 2019, DOI:10.1016/j.bmc.2019.06.017,
+  PMID:31255476; van Eijk et al. 2019, DOI:10.1128/AAC.01363-18, PMID:30531557).'
 molecular_targets:
 - target_id: GO:0003887
   target_label: Gram-positive bacterial replicative DNA polymerase IIIC (PolC)
@@ -85,7 +86,8 @@ molecular_targets:
     difficile and Firmicutes replicative DNA polymerase IIIC (PolC, Ki = 0.325 uM)
     via dGTP-competitive base pairing with template cytosine and potent whole-cell
     anti-Clostridioides difficile activity (Murray et al. 2024, DOI:10.1128/aac.00332-24,
-    PMID:38717162; Xu et al. 2019, DOI:10.1128/AAC.01918-18, PMID:30559132).
+    PMID:38717162; Xu et al. 2019, DOI:10.1016/j.bmc.2019.06.017, PMID:31255476; van
+    Eijk et al. 2019, DOI:10.1128/AAC.01363-18, PMID:30531557).
   evidence_status: PRIMARY_EVIDENCE
   source: PRIMARY_LITERATURE
   source_version: 2024-06
@@ -102,13 +104,20 @@ molecular_targets:
   - reference: PMID:38717162
     notes: PubMed record for Murray et al. 2024 on ibezapolstat DNA polymerase IIIC
       inhibition in Clostridioides difficile.
-  - reference: DOI:10.1128/AAC.01918-18
-    notes: Xu et al. 2019 (Antimicrob Agents Chemother 63:e01918-18; PMID:30559132)
-      characterized the biochemical inhibition of purified Clostridioides difficile
+  - reference: DOI:10.1016/j.bmc.2019.06.017
+    notes: Xu et al. 2019 (Bioorg Med Chem 27:3209-3217; PMID:31255476) described
+      the discovery and medicinal chemistry of ACX-362E (ibezapolstat) as a selective
+      inhibitor of low-G+C Gram-positive replicative DNA polymerase IIIC (PolC).
+  - reference: PMID:31255476
+    notes: PubMed record for Xu et al. 2019 on discovery and development of DNA polymerase
+      IIIC inhibitor ACX-362E (ibezapolstat).
+  - reference: DOI:10.1128/AAC.01363-18
+    notes: van Eijk et al. 2019 (Antimicrob Agents Chemother 63:e01363-18; PMID:30531557)
+      demonstrated direct competitive inhibition of purified Clostridioides difficile
       DNA polymerase IIIC (PolC, Ki = 0.325 uM) by ACX-362E (ibezapolstat).
-  - reference: PMID:30559132
-    notes: PubMed record for Xu et al. 2019 on biochemical inhibition of C. difficile
-      PolC by ACX-362E (ibezapolstat).
+  - reference: PMID:30531557
+    notes: PubMed record for van Eijk et al. 2019 on biochemical inhibition of C.
+      difficile PolC by ACX-362E (ibezapolstat).
   protein_examples:
   - uniprot_id: UniProtKB:P13267
     protein_label: DNA polymerase III PolC-type
@@ -121,5 +130,5 @@ molecular_targets:
       2.7.7.7) of Bacillus subtilis 168 representing the conserved low-G+C Gram-positive
       PolC enzyme family selectively inhibited by N2-substituted guanine analogues
       such as ibezapolstat (ACX-362E) while Clostridioides difficile 630 PolC (UniProtKB:Q18BG8)
-      remains unreviewed in TrEMBL (DOI:10.1128/aac.00332-24; PMID:38717162; DOI:10.1128/AAC.01918-18;
-      PMID:30559132).
+      remains unreviewed in TrEMBL (DOI:10.1128/aac.00332-24; PMID:38717162; DOI:10.1016/j.bmc.2019.06.017;
+      PMID:31255476; DOI:10.1128/AAC.01363-18; PMID:30531557).
