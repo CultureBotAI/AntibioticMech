@@ -49,3 +49,77 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Curated SYNTHETIC biosynthesis_origin, NUCLEIC_ACID_SYNTHESIS_INHIBITION
+    (MICROBIAL_TARGET) mode_of_action, and primary-literature molecular_targets entry
+    for Gram-positive bacterial replicative DNA polymerase IIIC (PolC; GO:0003887)
+    backed by Murray et al. 2024 (DOI:10.1128/aac.00332-24, PMID:38717162) and Xu
+    et al. 2019 (DOI:10.1128/AAC.01918-18, PMID:30559132).
+  llm_assisted: true
+- timestamp: '2026-11-06T08:45:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 1 reviewed UniProtKB protein_example (P13267) to the primary-literature
+    Gram-positive bacterial replicative DNA polymerase IIIC (PolC) target on ibezapolstat
+    (DOI:10.1128/aac.00332-24).
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic N2-(3,4-dichlorobenzyl)-7-(2-morpholin-4-ylethyl)guanine
+  antibacterial (ACX-362E) that selectively inhibits low-G+C Gram-positive bacterial
+  replicative DNA polymerase IIIC (PolC) by pairing with template dCMP and trapping
+  the enzyme-DNA complex in Clostridioides difficile and other Firmicutes (Murray
+  et al. 2024, DOI:10.1128/aac.00332-24, PMID:38717162; Xu et al. 2019, DOI:10.1128/AAC.01918-18,
+  PMID:30559132).'
+molecular_targets:
+- target_id: GO:0003887
+  target_label: Gram-positive bacterial replicative DNA polymerase IIIC (PolC)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Selective active-site inhibition of purified Clostridioides
+    difficile and Firmicutes replicative DNA polymerase IIIC (PolC, Ki = 0.325 uM)
+    via dGTP-competitive base pairing with template cytosine and potent whole-cell
+    anti-Clostridioides difficile activity (Murray et al. 2024, DOI:10.1128/aac.00332-24,
+    PMID:38717162; Xu et al. 2019, DOI:10.1128/AAC.01918-18, PMID:30559132).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2024-06
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1128/aac.00332-24
+    snippet: Ibezapolstat is a novel DNA polymerase IIIC inhibitor structural class
+      under clinical development for the treatment of Clostridioides difficile infection
+      (CDI). In the 28 RT027 strains, the MIC50, MIC90, and geometric mean MIC values
+      were 2.0, 4.0, and 2.1 ug/mL for ibezapolstat.
+    notes: Murray et al. 2024 (Antimicrob Agents Chemother 68:e0033224; PMID:38717162)
+      characterized the in vitro susceptibility of clinical Clostridioides difficile
+      isolates to the DNA polymerase IIIC (PolC) inhibitor ibezapolstat (ACX-362E).
+  - reference: PMID:38717162
+    notes: PubMed record for Murray et al. 2024 on ibezapolstat DNA polymerase IIIC
+      inhibition in Clostridioides difficile.
+  - reference: DOI:10.1128/AAC.01918-18
+    notes: Xu et al. 2019 (Antimicrob Agents Chemother 63:e01918-18; PMID:30559132)
+      characterized the biochemical inhibition of purified Clostridioides difficile
+      DNA polymerase IIIC (PolC, Ki = 0.325 uM) by ACX-362E (ibezapolstat).
+  - reference: PMID:30559132
+    notes: PubMed record for Xu et al. 2019 on biochemical inhibition of C. difficile
+      PolC by ACX-362E (ibezapolstat).
+  protein_examples:
+  - uniprot_id: UniProtKB:P13267
+    protein_label: DNA polymerase III PolC-type
+    gene_symbol: polC
+    taxon_id: NCBITaxon:224308
+    taxon_label: Bacillus subtilis (strain 168)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-06'
+    role: Reviewed reference Firmicutes replicative DNA polymerase IIIC (PolC, EC
+      2.7.7.7) of Bacillus subtilis 168 representing the conserved low-G+C Gram-positive
+      PolC enzyme family selectively inhibited by N2-substituted guanine analogues
+      such as ibezapolstat (ACX-362E) while Clostridioides difficile 630 PolC (UniProtKB:Q18BG8)
+      remains unreviewed in TrEMBL (DOI:10.1128/aac.00332-24; PMID:38717162; DOI:10.1128/AAC.01918-18;
+      PMID:30559132).

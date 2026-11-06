@@ -79,6 +79,13 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Liu et al. 2005 (PMID:15797213) and Ohtsuki
     & Ishida 1975 (PMID:123897).
   llm_assisted: true
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for bacterial duplex DNA
+    (CHEBI:16991, NUCLEIC_ACID, DIRECT_BINDING_TARGET) backed by Liu et al. 2005 (DOI:10.1016/j.chembiol.2004.12.013,
+    PMID:15797213) and Ohtsuki & Ishida 1975 (DOI:10.7164/antibiotics.28.229, PMID:123897).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION
 mode_of_action_target_scope: MICROBIAL_TARGET
@@ -87,3 +94,39 @@ mode_of_action_notes: 'CURATOR: Nine-membered bicyclo[7.3.0]dodecadiyne enediyne
   DNA synthesis and cell division in Gram-positive bacteria such as Sarcina lutea
   and Staphylococcus aureus (Liu et al. 2005, DOI:10.1016/j.chembiol.2004.12.013,
   PMID:15797213; Ohtsuki & Ishida 1975, DOI:10.7164/antibiotics.28.229, PMID:123897).'
+molecular_targets:
+- target_id: CHEBI:16991
+  target_label: bacterial duplex DNA
+  target_type: NUCLEIC_ACID
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Thiol-triggered Bergman cycloaromatization of the nine-membered
+    enediyne chromophore to a 2,6-dehydro-p-indacene diradical that abstracts hydrogen
+    atoms from deoxyribose in the minor groove of bacterial duplex DNA, causing single-
+    and double-strand DNA cleavage and inhibiting DNA synthesis in Sarcina lutea (Micrococcus
+    luteus) and Staphylococcus aureus (Liu et al. 2005, DOI:10.1016/j.chembiol.2004.12.013,
+    PMID:15797213; Ohtsuki & Ishida 1975, DOI:10.7164/antibiotics.28.229, PMID:123897).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2005-03
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2004.12.013
+    snippet: The chromophore of the antitumor antibiotic neocarzinostatin (NCS), produced
+      by Streptomyces carzinostaticus, consists of an extremely labile nine-membered
+      enediyne core that cleaves DNA and inhibits growth of Gram-positive bacteria
+      such as Sarcina lutea and Staphylococcus aureus.
+    notes: Liu et al. 2005 (Chem Biol 12:293-302; PMID:15797213) characterized the
+      Streptomyces carzinostaticus neocarzinostatin enediyne chromophore and its potent
+      DNA-cleaving antibacterial activity.
+  - reference: PMID:15797213
+    notes: PubMed record for Liu et al. 2005 on neocarzinostatin enediyne chromophore
+      biosynthesis and DNA cleavage.
+  - reference: DOI:10.7164/antibiotics.28.229
+    notes: Ohtsuki & Ishida 1975 (J Antibiot 28:229-236; PMID:123897) demonstrated
+      that neocarzinostatin induces bacterial DNA strand scission and inhibits DNA
+      synthesis in Sarcina lutea.
+  - reference: PMID:123897
+    notes: PubMed record for Ohtsuki & Ishida 1975 on the mechanism of bacterial DNA
+      degradation by neocarzinostatin.

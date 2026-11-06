@@ -74,6 +74,14 @@ curation_history:
     mode_of_action from Czesny et al. 2009 (PMID:19651911) and Schorn et al. 2014
     (PMID:24168704).
   llm_assisted: true
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Added primary-literature molecular_targets entry for Plasmodium falciparum
+    20S proteasome catalytic beta subunits (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
+    backed by Czesny et al. 2009 (DOI:10.1128/aac.00088-09, PMID:19651911) and Schorn
+    et al. 2014 (DOI:10.1021/cb400699p, PMID:24168704).
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: OTHER
 mode_of_action_target_scope: HOST_SHARED_TARGET
@@ -82,3 +90,36 @@ mode_of_action_notes: 'CURATOR: Actinomycete-derived alpha'',beta''-epoxyketone 
   falciparum 20S proteasome at nanomolar concentrations (10-100 nM), killing asexual
   blood stages and stage V gametocytes (Czesny et al. 2009, DOI:10.1128/aac.00088-09,
   PMID:19651911; Schorn et al. 2014, DOI:10.1021/cb400699p, PMID:24168704).'
+molecular_targets:
+- target_label: Plasmodium falciparum 20S proteasome catalytic beta subunits
+  target_type: PROTEIN_COMPLEX
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:5833
+  taxon_label: Plasmodium falciparum
+  experimental_context: Covalent morpholino-adduct inactivation of the N-terminal
+    catalytic threonine residues of the Plasmodium falciparum 20S proteasome core
+    particle at nanomolar concentrations (10-100 nM), killing asexual blood stages
+    and stage V gametocytes (Czesny et al. 2009, DOI:10.1128/aac.00088-09, PMID:19651911;
+    Schorn et al. 2014, DOI:10.1021/cb400699p, PMID:24168704).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2009-10
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1128/aac.00088-09
+    snippet: Nanomolar concentrations of the actinomycete-derived epoxyketone proteasome
+      inhibitor epoxomicin (10-100 nM) effectively kill all intraerythrocytic asexual
+      and sexual stage V gametocyte stages of Plasmodium falciparum and block oocyst
+      production in the mosquito midgut.
+    notes: Czesny et al. 2009 (Antimicrob Agents Chemother 53:4080-4085; PMID:19651911)
+      established potent nanomolar antiplasmodial and gametocytocidal activity of
+      epoxomicin via inhibition of the Plasmodium falciparum 20S proteasome.
+  - reference: PMID:19651911
+    notes: PubMed record for Czesny et al. 2009 on epoxomicin inhibition of the Plasmodium
+      falciparum proteasome.
+  - reference: DOI:10.1021/cb400699p
+    notes: Schorn et al. 2014 (ACS Chem Biol 9:301-309; PMID:24168704) characterized
+      the Goodfellowiella coeruleoviolacea epoxomicin biosynthetic gene cluster and
+      alpha',beta'-epoxyketone proteasome warhead.
+  - reference: PMID:24168704
+    notes: PubMed record for Schorn et al. 2014 on epoxomicin biosynthesis.

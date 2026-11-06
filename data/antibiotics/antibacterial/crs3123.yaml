@@ -53,3 +53,93 @@ curation_history:
   curator: seed_from_sources
   action: PROPOSED_FROM_CURATOR_INVENTORY
   changes: Proposed from curation/curator_antibiotics.tsv
+- timestamp: '2026-11-06T08:40:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: Curated SYNTHETIC biosynthesis_origin, PROTEIN_SYNTHESIS_INHIBITION (MICROBIAL_TARGET)
+    mode_of_action, and primary-literature molecular_targets entry for bacterial type
+    1 methionyl-tRNA synthetase (MetRS / MetG) backed by Abdelmegeed et al. 2025 (DOI:10.1038/s41598-025-29583-1,
+    PMID:41413129), Lomeli et al. 2019 (DOI:10.1128/aac.01395-19, PMID:31685472),
+    and Ochsner et al. 2009 (DOI:10.1093/jac/dkp042, PMID:19246509).
+  llm_assisted: true
+- timestamp: '2026-11-06T08:45:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added 2 reviewed UniProtKB protein_examples (Q181D9, Q837B3) to the primary-literature
+    bacterial type 1 methionyl-tRNA synthetase (MetRS / MetG) target on CRS3123 (DOI:10.1038/s41598-025-29583-1).
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_target_scope: MICROBIAL_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic diaryldiamine antibacterial (REP3123) that
+  selectively inhibits bacterial type 1 methionyl-tRNA synthetase (MetRS1 / MetG),
+  arresting protein synthesis, toxin production, and sporulation in Clostridioides
+  difficile and Gram-positive cocci (Abdelmegeed et al. 2025, DOI:10.1038/s41598-025-29583-1,
+  PMID:41413129; Lomeli et al. 2019, DOI:10.1128/aac.01395-19, PMID:31685472; Ochsner
+  et al. 2009, DOI:10.1093/jac/dkp042, PMID:19246509).'
+molecular_targets:
+- target_label: bacterial type 1 methionyl-tRNA synthetase (MetRS / MetG)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Selective competitive inhibition of Gram-positive bacterial
+    type 1 methionyl-tRNA synthetase (MetRS1, Ki = 0.020 nM against Clostridioides
+    difficile MetRS) and potent whole-cell antibacterial activity against Clostridioides
+    difficile and vancomycin-resistant Enterococcus species (Abdelmegeed et al. 2025,
+    DOI:10.1038/s41598-025-29583-1, PMID:41413129; Lomeli et al. 2019, DOI:10.1128/aac.01395-19,
+    PMID:31685472; Ochsner et al. 2009, DOI:10.1093/jac/dkp042, PMID:19246509).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2025-11
+  source_retrieved_on: '2026-11-06'
+  evidence:
+  - reference: DOI:10.1038/s41598-025-29583-1
+    snippet: Both exhibited potent antibacterial activity in the nanomolar range against
+      multiple Enterococcus species, including vancomycin-resistant and vancomycin-sensitive
+      E. faecium, E. faecalis, E. hirae, and E. durans. CRS3123 displayed exceptional
+      potency, with MIC values of < 0.007 ug/mL for most strains.
+    notes: Abdelmegeed et al. 2025 (Sci Rep 15:44061; PMID:41413129) demonstrated
+      potent nanomolar antibacterial activity of the bacterial type 1 methionyl-tRNA
+      synthetase (MetRS) inhibitor CRS3123 against Enterococcus faecalis, Enterococcus
+      faecium, and Clostridioides difficile.
+  - reference: PMID:41413129
+    notes: PubMed record for Abdelmegeed et al. 2025 on CRS3123 MetRS inhibition in
+      Enterococcus and Clostridioides difficile.
+  - reference: DOI:10.1128/aac.01395-19
+    notes: Lomeli et al. 2019 (Antimicrob Agents Chemother 63:e01395-19; PMID:31685472)
+      characterized CRS3123 (REP3123) activity against Clostridioides difficile type
+      1 methionyl-tRNA synthetase.
+  - reference: PMID:31685472
+    notes: PubMed record for Lomeli et al. 2019 on CRS3123 activity against Clostridioides
+      difficile.
+  - reference: DOI:10.1093/jac/dkp042
+    notes: Ochsner et al. 2009 (J Antimicrob Chemother 63:964-971; PMID:19246509)
+      established Ki = 0.020 nM inhibition of purified Clostridioides difficile type
+      1 methionyl-tRNA synthetase (MetRS) by REP3123 (CRS3123).
+  - reference: PMID:19246509
+    notes: PubMed record for Ochsner et al. 2009 characterizing REP3123 (CRS3123)
+      inhibition of C. difficile MetRS.
+  protein_examples:
+  - uniprot_id: UniProtKB:Q181D9
+    protein_label: Methionine--tRNA ligase
+    gene_symbol: metG
+    taxon_id: NCBITaxon:272563
+    taxon_label: Clostridioides difficile (strain 630)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-06'
+    role: Clostridioides difficile 630 type 1 methionyl-tRNA synthetase (MetRS1 /
+      MetG, EC 6.1.1.10) selectively inhibited by CRS3123 (REP3123, Ki = 0.020 nM)
+      to arrest bacterial translation, toxin production, and sporulation (DOI:10.1038/s41598-025-29583-1;
+      PMID:41413129; DOI:10.1128/aac.01395-19; PMID:31685472; DOI:10.1093/jac/dkp042;
+      PMID:19246509).
+  - uniprot_id: UniProtKB:Q837B3
+    protein_label: Methionine--tRNA ligase
+    gene_symbol: metG
+    taxon_id: NCBITaxon:226185
+    taxon_label: Enterococcus faecalis (strain ATCC 700802 / V583)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-06'
+    role: Enterococcus faecalis V583 type 1 methionyl-tRNA synthetase (MetRS1 / MetG,
+      EC 6.1.1.10) representing the enterococcal MetRS target inhibited at nanomolar
+      concentrations by CRS3123 (DOI:10.1038/s41598-025-29583-1; PMID:41413129).

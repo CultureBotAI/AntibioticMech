@@ -2534,6 +2534,93 @@ records:
       role: Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the
         para-aminobenzoic acid (PABA) active site by sulfadiazine in purified enzyme kinetics and pterin-sulfa
         adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).
+- identifier: antibioticmech:curator-1fe7431c15
+  label: CRS3123
+  path: data/antibiotics/antibacterial/crs3123.yaml
+  changes: Added 2 reviewed UniProtKB protein_examples (Q181D9, Q837B3) to the primary-literature bacterial
+    type 1 methionyl-tRNA synthetase (MetRS / MetG) target on CRS3123 (DOI:10.1038/s41598-025-29583-1).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: bacterial type 1 methionyl-tRNA synthetase (MetRS / MetG)
+    target_reference: DOI:10.1038/s41598-025-29583-1
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:Q181D9
+      protein_label: Methionine--tRNA ligase
+      gene_symbol: metG
+      taxon_id: NCBITaxon:272563
+      taxon_label: Clostridioides difficile (strain 630)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-06'
+      role: Clostridioides difficile 630 type 1 methionyl-tRNA synthetase (MetRS1 / MetG, EC 6.1.1.10)
+        selectively inhibited by CRS3123 (REP3123, Ki = 0.020 nM) to arrest bacterial translation, toxin
+        production, and sporulation (DOI:10.1038/s41598-025-29583-1; PMID:41413129; DOI:10.1128/aac.01395-19;
+        PMID:31685472; DOI:10.1093/jac/dkp042; PMID:19246509).
+    - uniprot_id: UniProtKB:Q837B3
+      protein_label: Methionine--tRNA ligase
+      gene_symbol: metG
+      taxon_id: NCBITaxon:226185
+      taxon_label: Enterococcus faecalis (strain ATCC 700802 / V583)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-06'
+      role: Enterococcus faecalis V583 type 1 methionyl-tRNA synthetase (MetRS1 / MetG, EC 6.1.1.10) representing
+        the enterococcal MetRS target inhibited at nanomolar concentrations by CRS3123 (DOI:10.1038/s41598-025-29583-1;
+        PMID:41413129).
+- identifier: antibioticmech:curator-1ac99609a8
+  label: epetraborole
+  path: data/antibiotics/antibacterial/epetraborole.yaml
+  changes: Added 2 reviewed UniProtKB protein_examples (P07813, P9WFV1) to the primary-literature bacterial
+    leucyl-tRNA synthetase (LeuRS / LeuS) target on epetraborole (DOI:10.1128/aac.01029-23).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: bacterial leucyl-tRNA synthetase (LeuRS / LeuS)
+    target_reference: DOI:10.1128/aac.01029-23
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P07813
+      protein_label: Leucine--tRNA ligase
+      gene_symbol: leuS
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli (strain K12)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-06'
+      role: Escherichia coli K-12 leucyl-tRNA synthetase (LeuRS / LeuS, EC 6.1.1.4) whose CP1 editing
+        domain forms a covalent oxaborole adduct with the 3'-terminal adenosine of tRNA(Leu) in the presence
+        of epetraborole (AN3365 / GSK2251052, IC50 = 0.31 uM; DOI:10.1128/AAC.02058-12; PMID:23295922;
+        DOI:10.1128/aac.01029-23; PMID:37937988).
+    - uniprot_id: UniProtKB:P9WFV1
+      protein_label: Leucine--tRNA ligase
+      gene_symbol: leuS
+      taxon_id: NCBITaxon:83332
+      taxon_label: Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-06'
+      role: Reviewed reference mycobacterial leucyl-tRNA synthetase (LeuRS / LeuS, Rv0041, EC 6.1.1.4)
+        representing the conserved mycobacterial LeuRS editing-site target inhibited by epetraborole in
+        Mycobacterium avium complex and Mycobacterium abscessus (DOI:10.1128/aac.01029-23; PMID:37937988).
+- identifier: antibioticmech:curator-0f0bc2f555
+  label: ibezapolstat
+  path: data/antibiotics/antibacterial/ibezapolstat.yaml
+  changes: Added 1 reviewed UniProtKB protein_example (P13267) to the primary-literature Gram-positive
+    bacterial replicative DNA polymerase IIIC (PolC) target on ibezapolstat (DOI:10.1128/aac.00332-24).
+  causal_node_examples: []
+  molecular_target_examples:
+  - target_label: Gram-positive bacterial replicative DNA polymerase IIIC (PolC)
+    target_reference: DOI:10.1128/aac.00332-24
+    source: PRIMARY_LITERATURE
+    protein_examples:
+    - uniprot_id: UniProtKB:P13267
+      protein_label: DNA polymerase III PolC-type
+      gene_symbol: polC
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis (strain 168)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-06'
+      role: Reviewed reference Firmicutes replicative DNA polymerase IIIC (PolC, EC 2.7.7.7) of Bacillus
+        subtilis 168 representing the conserved low-G+C Gram-positive PolC enzyme family selectively inhibited
+        by N2-substituted guanine analogues such as ibezapolstat (ACX-362E) while Clostridioides difficile
+        630 PolC (UniProtKB:Q18BG8) remains unreviewed in TrEMBL (DOI:10.1128/aac.00332-24; PMID:38717162;
+        DOI:10.1128/AAC.01918-18; PMID:30559132).
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol
@@ -3632,3 +3719,43 @@ held_targets:
     DOI:10.1021/acschembio.8b01076 (PMID:30698415) is a downstream biological process (target_type=BIOLOGICAL_PROCESS:
     fungal cell-wall chitin biosynthesis) in Pyricularia oryzae without a single resolved Swiss-Prot protein
     accession.'
+- identifier: CHEBI:29655
+  path: data/antibiotics/antibacterial/neocarzinostatin.yaml
+  label: neocarzinostatin
+  scope: molecular_targets
+  target_label: bacterial duplex DNA
+  target_type: NUCLEIC_ACID
+  target_reference: DOI:10.1016/j.chembiol.2004.12.013
+  reason: 'Non-protein molecular target (target_type=NUCLEIC_ACID: bacterial duplex DNA; DOI:10.1016/j.chembiol.2004.12.013;
+    PMID:15797213; DOI:10.7164/antibiotics.28.229; PMID:123897) cleaved via thiol-activated Bergman diradical
+    hydrogen abstraction; protein_examples are restricted to PROTEIN and PROTEIN_COMPLEX targets.'
+- identifier: CHEBI:42265
+  path: data/antibiotics/antiprotozoal/epoxomicin.yaml
+  label: epoxomicin
+  scope: molecular_targets
+  target_label: Plasmodium falciparum 20S proteasome catalytic beta subunits
+  target_type: PROTEIN_COMPLEX
+  target_reference: DOI:10.1128/aac.00088-09
+  reason: Held because the Plasmodium falciparum 3D7 20S proteasome catalytic beta subunits (PF3D7_1011400
+    beta5 UniProtKB:Q8IJ66 and PF3D7_1328100 beta2 UniProtKB:C6KSV7) targeted by epoxomicin in DOI:10.1128/aac.00088-09
+    (PMID:19651911) are unreviewed TrEMBL entries rather than reviewed Swiss-Prot records.
+- identifier: CHEBI:67576
+  path: data/antibiotics/antibacterial/streptothricin-e.yaml
+  label: streptothricin E
+  scope: molecular_targets
+  target_label: bacterial 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: DOI:10.1248/cpb.38.2296
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal subunit; DOI:10.1248/cpb.38.2296;
+    PMID:2177682; DOI:10.1038/nchembio.1040; PMID:22820420) where streptothricin E binds 16S rRNA on the
+    30S ribosomal subunit without a single primary polypeptide target accession.
+- identifier: antibioticmech:curator-e663013755
+  path: data/antibiotics/antibacterial/streptothricin-c.yaml
+  label: streptothricin C
+  scope: molecular_targets
+  target_label: bacterial 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_reference: DOI:10.1038/nchembio.1040
+  reason: Ribosomal subunit / rRNA binding-pocket target (bacterial 30S ribosomal subunit; DOI:10.1038/nchembio.1040;
+    PMID:22820420; DOI:10.1248/cpb.38.2296; PMID:2177682) where streptothricin C binds 16S rRNA on the
+    30S ribosomal subunit without a single primary polypeptide target accession.
