@@ -1,0 +1,68 @@
+identifier: antibioticmech:curator-01d20a774a
+label: hormaomycin A6
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A chlorinated nitrocyclopropyl-containing nonribosomal cyclic depsipeptide
+  antibiotic congener from Streptomyces griseoflavus with antibacterial activity against
+  coryneform actinobacteria.
+definition_source: DOI:10.1016/j.chembiol.2013.04.018
+synonyms:
+- synonym_text: hormaomycin A_6
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H](C)[C@@H](C(N1C[C@@H](/C=C\C)C[C@H]1C2=O)=O)NC([C@H]([C@@H](C3=CC=CC=C3)C)NC([C@H](NC([C@H]([C@H](C)C4=CC=CC=C4)NC([C@@H]([C@@H](C)O2)NC([C@H](C[C@H]5[C@H]([N+]([O-])=O)C5)NC(C6=CC=C(Cl)N6OCC(OCC)=O)=O)=O)=O)=O)C[C@H]7[C@H]([N+]([O-])=O)C7)=O)=O
+  standard_inchi: InChI=1S/C59H75ClN10O16/c1-8-17-35-24-45-59(79)86-34(7)51(66-53(73)40(25-38-27-43(38)69(80)81)61-54(74)42-22-23-46(60)68(42)85-30-47(71)84-10-3)57(77)65-49(32(5)36-18-13-11-14-19-36)55(75)62-41(26-39-28-44(39)70(82)83)52(72)64-50(33(6)37-20-15-12-16-21-37)56(76)63-48(31(4)9-2)58(78)67(45)29-35/h8,11-23,31-35,38-41,43-45,48-51H,9-10,24-30H2,1-7H3,(H,61,74)(H,62,75)(H,63,76)(H,64,72)(H,65,77)(H,66,73)/b17-8-/t31-,32+,33+,34+,35-,38+,39+,40-,41+,43+,44+,45-,48-,49-,50-,51+/m0/s1
+  standard_inchi_key: KDJDXIAMVYNANV-HOONNCOMSA-N
+  molecular_formula: C59H75ClN10O16
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000374/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1215.756
+  monoisotopic_mass: 1214.5051
+xrefs:
+- pubchem.compound:163192097
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.chembiol.2013.04.018#hormaomycin-a6
+  source_label: hormaomycin A6
+  minted_identifier: antibioticmech:curator-01d20a774a
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2013.04.018
+    snippet: Hormaomycin A6 is a depsipeptide antibiotic congener produced by the
+      hormaomycin NRPS biosynthetic pathway in Streptomyces griseoflavus with narrow-spectrum
+      antibacterial activity against coryneform actinobacteria.
+    notes: MIBiG 4.0.1 entry BGC0000374 (Streptomyces griseoflavus); Cai et al. 2013
+      (DOI:10.1016/j.chembiol.2013.04.018, PMID:23790494) and Hofer et al. 2011 (DOI:10.1016/j.chembiol.2010.12.018,
+      PMID:21439483) characterize the NRPS biosynthesis and antibacterial activity
+      of hormaomycin A6. PubChem CID 163192097 supplies the stereo-complete SMILES,
+      Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:35619
+  taxon_label: Streptomyces griseoflavus
+  biosynthetic_gene_cluster: BGC0000374
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'hormaomycin A6' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:21439483
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

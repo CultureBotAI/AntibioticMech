@@ -1,0 +1,70 @@
+identifier: antibioticmech:curator-bd79c24607
+label: rabelomycin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A benz[a]anthraquinone angucyclinone antibiotic from Streptomyces olivaceus
+  with antibacterial activity against Gram-positive bacteria.
+definition_source: DOI:10.7164/antibiotics.23.437
+synonyms:
+- synonym_text: (-)-rabelomycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@]1(O)CC(=O)C2=C3C(=O)C4=C(C(O)=CC=C4)C(=O)C3=C(O)C=C2C1
+  standard_inchi: InChI=1S/C19H14O6/c1-19(25)6-8-5-11(21)15-16(13(8)12(22)7-19)17(23)9-3-2-4-10(20)14(9)18(15)24/h2-5,20-21,25H,6-7H2,1H3/t19-/m0/s1
+  standard_inchi_key: JJOLHRYZQSDLSA-IBGZPJMESA-N
+  molecular_formula: C19H14O6
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000223/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 338.315
+  monoisotopic_mass: 338.079
+xrefs:
+- pubchem.compound:9819207
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7164/antibiotics.23.437#rabelomycin
+  source_label: rabelomycin
+  minted_identifier: antibioticmech:curator-bd79c24607
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.7164/antibiotics.23.437
+    snippet: Rabelomycin is a benz[a]anthraquinone angucyclinone antibiotic isolated
+      from Streptomyces olivaceus ATCC 21549 that inhibits Gram-positive bacteria
+      including Staphylococcus aureus (MIC 6.3 ug/mL), Bacillus subtilis, and Streptococcus
+      pyogenes.
+    notes: MIBiG 4.0.1 entry BGC0000223 (uncultured bacterium BAC AB649/1850); Liu
+      et al. 1970 (DOI:10.7164/antibiotics.23.437, PMID:5459625) and Feng et al. 2010
+      (DOI:10.1021/ja104550p, PMID:20690632) establish the structure, antibacterial
+      MICs, and type II PKS biosynthesis of rabelomycin. PubChem CID 9819207 supplies
+      the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:161235
+  taxon_label: Streptomyces sp.
+  strain: PGA64
+  biosynthetic_gene_cluster: BGC0000262
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - HETEROLOGOUS_EXPRESSION
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'rabelomycin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:12654660
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

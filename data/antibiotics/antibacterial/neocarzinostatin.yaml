@@ -1,0 +1,74 @@
+identifier: CHEBI:29655
+label: neocarzinostatin
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A nine-membered bicyclo[7.3.0]dodecadiyne enediyne chromophore antibiotic
+  from Streptomyces carzinostaticus with potent DNA-cleaving antibacterial activity
+  against Gram-positive bacteria.
+definition_source: DOI:10.1016/j.chembiol.2004.12.013
+synonyms:
+- synonym_text: neocarzinostatin chromophore
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: NCS-chrom
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: C[C@@H]1[C@@H]([C@@H]([C@H]([C@H](O1)O[C@H]\2[C@@H](C=C3/C2=C\C#C[C@@H]4[C@@](O4)(C#C3)[C@H]5COC(=O)O5)OC(=O)C6=C(C=CC7=C(C=C(C=C76)OC)C)O)NC)O)O
+  standard_inchi: InChI=1S/C35H33NO12/c1-16-12-19(42-4)14-22-20(16)8-9-23(37)27(22)32(40)45-24-13-18-10-11-35(26-15-43-34(41)46-26)25(48-35)7-5-6-21(18)31(24)47-33-28(36-3)30(39)29(38)17(2)44-33/h6,8-9,12-14,17,24-26,28-31,33,36-39H,15H2,1-4H3/b21-6+/t17-,24-,25-,26-,28-,29+,30-,31-,33-,35+/m1/s1
+  standard_inchi_key: QZGIWPZCWHMVQL-UIYAJPBUSA-N
+  molecular_formula: C35H33NO12
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000112/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 659.644
+  monoisotopic_mass: 659.2003
+xrefs:
+- pubchem.compound:447545
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.chembiol.2004.12.013#neocarzinostatin
+  source_label: neocarzinostatin
+  minted_identifier: antibioticmech:curator-e5ae76d507
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2004.12.013
+    snippet: The chromophore of the antitumor antibiotic neocarzinostatin (NCS), produced
+      by Streptomyces carzinostaticus, consists of an extremely labile nine-membered
+      enediyne core that cleaves DNA and inhibits growth of Gram-positive bacteria
+      such as Sarcina lutea and Staphylococcus aureus.
+    notes: MIBiG 4.0.1 entry BGC0000112 (Streptomyces carzinostaticus subsp. neocarzinostaticus);
+      Liu et al. 2005 (DOI:10.1016/j.chembiol.2004.12.013, PMID:15797213) and Ohtsuki
+      & Ishida 1975 (DOI:10.7164/antibiotics.28.229, PMID:123897) characterize the
+      enediyne chromophore biosynthesis and potent bactericidal DNA-cleaving activity
+      against Sarcina lutea and Gram-positive bacteria. ChEBI CHEBI:29655 and PubChem
+      CID 447545 supply the stereo-complete SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:167636
+  taxon_label: Streptomyces carzinostaticus subsp. neocarzinostaticus
+  biosynthetic_gene_cluster: BGC0000112
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - GENE_EXPRESSION_CORRELATED_WITH_PRODUCTION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'neocarzinostatin' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:15797213
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:50:15Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

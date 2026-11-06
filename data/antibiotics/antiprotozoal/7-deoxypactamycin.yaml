@@ -1,0 +1,74 @@
+identifier: CHEBI:198890
+label: 7-deoxypactamycin
+antimicrobial_class: ANTIPROTOZOAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: An aminocyclopentitol antibiotic congener of pactamycin from Streptomyces
+  pactum with nanomolar antimalarial activity against Plasmodium falciparum and antibacterial
+  activity.
+definition_source: DOI:10.1016/j.chembiol.2011.01.016
+synonyms:
+- synonym_text: 7-deoxy-pactamycin
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:38068
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@]1(NC(=O)N(C)C)[C@@H](N)[C@H](NC2=CC(=CC=C2)C(C)=O)[C@](O)(COC(=O)C2=C(O)C=CC=C2C)[C@]1(C)O
+  standard_inchi: InChI=1S/C28H38N4O7/c1-7-27(31-25(36)32(5)6)22(29)23(30-19-12-9-11-18(14-19)17(3)33)28(38,26(27,4)37)15-39-24(35)21-16(2)10-8-13-20(21)34/h8-14,22-23,30,34,37-38H,7,15,29H2,1-6H3,(H,31,36)/t22-,23-,26+,27-,28+/m0/s1
+  standard_inchi_key: ZDHIGMAZJWYGPX-YONDKBSQSA-N
+  molecular_formula: C28H38N4O7
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000119/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 542.633
+  monoisotopic_mass: 542.274
+xrefs:
+- pubchem.compound:3064514
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.chembiol.2011.01.016#7-deoxypactamycin
+  source_label: 7-deoxypactamycin
+  minted_identifier: antibioticmech:curator-6fe780bcce
+  role_terms:
+  - CHEBI:38068
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2011.01.016
+    snippet: 7-Deoxypactamycin, an engineered pactamycin analog produced by inactivation
+      of the cytochrome P450 gene ptmY in Streptomyces pactum ATCC 27456, exhibited
+      potent antimalarial activity against Plasmodium falciparum strains D6 and Dd2
+      (IC50 ~8-15 nM) as well as antibacterial activity with reduced mammalian cytotoxicity.
+    notes: MIBiG 4.0.1 entry BGC0000119 (Streptomyces pactum); Lu et al. 2011 (DOI:10.1016/j.chembiol.2011.01.016,
+      PMID:21513878), Kudo et al. 2007 (DOI:10.1038/ja.2007.63, PMID:17827660), and
+      Masaki et al. 2026 (DOI:10.1038/s41429-026-00934-y, PMID:42265342) establish
+      biosynthesis and nanomolar antiplasmodial and antibacterial activity. ChEBI
+      CHEBI:198890 and PubChem CID 3064514 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:68249
+  taxon_label: Streptomyces pactum
+  biosynthetic_gene_cluster: BGC0000119
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound '7-deoxypactamycin' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:17827660
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

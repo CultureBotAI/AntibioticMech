@@ -1,0 +1,68 @@
+identifier: antibioticmech:curator-3d2edc9549
+label: hormaomycin A1
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A nonribosomal cyclic depsipeptide antibiotic congener from Streptomyces
+  griseoflavus with narrow-spectrum antibacterial activity against coryneform actinobacteria.
+definition_source: DOI:10.1016/j.chembiol.2013.04.018
+synonyms:
+- synonym_text: hormaomycin A_1
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC[C@H](C)[C@@H](C(N1C[C@@H](/C=C\C)C[C@H]1C2=O)=O)NC([C@H]([C@@H](C3=CC=CC=C3)C)NC([C@H](NC([C@H]([C@H](C)C4=CC=CC=C4)NC([C@@H]([C@@H](C)O2)NC([C@H](C[C@H]5[C@H]([N+]([O-])=O)C5)NC(C6=CC=CN6O)=O)=O)=O)=O)C[C@H]7[C@H]([N+]([O-])=O)C7)=O)=O
+  standard_inchi: InChI=1S/C55H70N10O14/c1-7-16-33-23-43-55(73)79-32(6)47(61-49(67)38(24-36-26-41(36)64(75)76)56-50(68)40-21-15-22-63(40)74)53(71)60-45(30(4)34-17-11-9-12-18-34)51(69)57-39(25-37-27-42(37)65(77)78)48(66)59-46(31(5)35-19-13-10-14-20-35)52(70)58-44(29(3)8-2)54(72)62(43)28-33/h7,9-22,29-33,36-39,41-47,74H,8,23-28H2,1-6H3,(H,56,68)(H,57,69)(H,58,70)(H,59,66)(H,60,71)(H,61,67)/b16-7-/t29-,30+,31+,32+,33-,36+,37+,38-,39+,41+,42+,43-,44-,45-,46-,47+/m0/s1
+  standard_inchi_key: LMZKBENCPGVRBB-JWHGVWHJSA-N
+  molecular_formula: C55H70N10O14
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000374/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 1095.221
+  monoisotopic_mass: 1094.5073
+xrefs:
+- pubchem.compound:163191918
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1016/j.chembiol.2013.04.018#hormaomycin-a1
+  source_label: hormaomycin A1
+  minted_identifier: antibioticmech:curator-3d2edc9549
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2013.04.018
+    snippet: Hormaomycin and its lipopeptide congeners hormaomycins A1-A6 produced
+      by Streptomyces griseoflavus W-384 are potent narrow-spectrum depsipeptide antibiotics
+      active against coryneform bacteria (Arthrobacter crystallopoietes and Corynebacterium)
+      and malaria parasites.
+    notes: MIBiG 4.0.1 entry BGC0000374 (Streptomyces griseoflavus); Cai et al. 2013
+      (DOI:10.1016/j.chembiol.2013.04.018, PMID:23790494) and Hofer et al. 2011 (DOI:10.1016/j.chembiol.2010.12.018,
+      PMID:21439483) characterize the NRPS biosynthesis and narrow-spectrum antibacterial
+      activity of hormaomycin A1. PubChem CID 163191918 supplies the stereo-complete
+      SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:35619
+  taxon_label: Streptomyces griseoflavus
+  biosynthetic_gene_cluster: BGC0000374
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'hormaomycin A1' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:21439483
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

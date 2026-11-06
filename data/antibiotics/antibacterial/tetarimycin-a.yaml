@@ -1,0 +1,51 @@
+identifier: CHEBI:204430
+label: tetarimycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A tetracyclic fluorenone-type aromatic polyketide antibiotic from an environmental
+  DNA-derived type II PKS cluster with potent antibacterial activity against methicillin-resistant
+  Staphylococcus aureus.
+definition_source: DOI:10.1021/ja3093828
+synonyms:
+- synonym_text: Tetarimycin A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: CC1=CC(O)=CC2=C1C(=O)C1=C(C2=O)C(C)(C)C2=CC(O)=CC(O)=C2C1=O
+  standard_inchi: InChI=1S/C21H16O6/c1-8-4-9(22)5-11-14(8)19(26)16-17(18(11)25)21(2,3)12-6-10(23)7-13(24)15(12)20(16)27/h4-7,22-24H,1-3H3
+  standard_inchi_key: XQMPGQHPYUKJDG-UHFFFAOYSA-N
+  molecular_formula: C21H16O6
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000274/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 364.353
+  monoisotopic_mass: 364.0947
+xrefs:
+- pubchem.compound:71507685
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/ja3093828#tetarimycin-a
+  source_label: tetarimycin A
+  minted_identifier: antibioticmech:curator-47ed424ac4
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.1021/ja3093828
+    snippet: Tetarimycin A, a tetracyclic methicillin-resistant Staphylococcus aureus
+      (MRSA)-active antibiotic discovered by SARP-guided activation of a silent environmental
+      DNA-derived type II PKS gene cluster in Streptomyces albus, exhibits potent
+      antibacterial activity against MRSA (MIC 0.3-1 ug/mL), Bacillus subtilis, and
+      Enterococcus faecalis.
+    notes: MIBiG 4.0.1 entry BGC0000274 (uncultured bacterium); Kallifidas et al.
+      2012 (DOI:10.1021/ja3093828, PMID:23157252) report discovery, structure elucidation,
+      and potent anti-MRSA activity of tetarimycin A. ChEBI CHEBI:204430 and PubChem
+      CID 71507685 supply the SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

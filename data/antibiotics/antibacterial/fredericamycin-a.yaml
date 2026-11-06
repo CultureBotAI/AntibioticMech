@@ -1,0 +1,71 @@
+identifier: antibioticmech:curator-d867155b54
+label: fredericamycin A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A hexacyclic spiro-naphthoquinone-isoquinolone polyketide antibiotic from
+  Streptomyces griseus with Gram-positive antibacterial and antifungal activity.
+definition_source: DOI:10.7164/antibiotics.34.1402
+synonyms:
+- synonym_text: NSC-305263
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+- CHEBI:35718
+chemical_structure:
+  smiles: COC1=CC(=O)C2=C(C(O)=C3C(=O)[C@]4(CCC5=CC6=C(C(=O)NC(\C=C\C=C\C)=C6)C(O)=C45)C(=O)C3=C2O)C1=O
+  standard_inchi: InChI=1S/C30H21NO9/c1-3-4-5-6-14-10-13-9-12-7-8-30(22(12)26(36)17(13)29(39)31-14)27(37)20-21(28(30)38)25(35)19-18(24(20)34)15(32)11-16(40-2)23(19)33/h3-6,9-11,34-36H,7-8H2,1-2H3,(H,31,39)/b4-3+,6-5+/t30-/m0/s1
+  standard_inchi_key: BZONSJUONOFNNP-MHSJTTIKSA-N
+  molecular_formula: C30H21NO9
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000224/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 539.496
+  monoisotopic_mass: 539.1216
+xrefs:
+- pubchem.compound:9937086
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.7164/antibiotics.34.1402#fredericamycin-a
+  source_label: fredericamycin A
+  minted_identifier: antibioticmech:curator-d867155b54
+  role_terms:
+  - CHEBI:33282
+  - CHEBI:35718
+  evidence:
+  - reference: DOI:10.7164/antibiotics.34.1402
+    snippet: Fredericamycin A (FCRC-A48), isolated from Streptomyces griseus FCRC-48,
+      exhibited in vitro antibacterial activity against Gram-positive bacteria (Staphylococcus
+      aureus, Bacillus subtilis, Sarcina lutea) and antifungal activity against dermatophytes
+      and yeasts.
+    notes: MIBiG 4.0.1 entry BGC0000224 (Streptomyces griseus); Warnick-Pickle et
+      al. 1981 (DOI:10.7164/antibiotics.34.1402, PMID:7319903) and Wendt-Pienkowski
+      et al. 2005 (DOI:10.1021/ja054376u, PMID:16305230) establish the antibacterial
+      and antifungal activity and spiro-pentadecane PKS gene cluster of fredericamycin
+      A. PubChem CID 9937086 supplies the stereo-complete SMILES, Standard InChI,
+      and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:1911
+  taxon_label: Streptomyces griseus
+  biosynthetic_gene_cluster: BGC0000224
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '4'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound 'fredericamycin A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:16305230
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

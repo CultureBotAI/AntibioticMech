@@ -1,0 +1,73 @@
+identifier: antibioticmech:curator-ca46012cd9
+label: K1115A
+antimicrobial_class: ANTIBACTERIAL
+curation_status: PROPOSED
+grounding_status: MINTED
+definition: A 3,8-dihydroxy-1-propylanthraquinone-2-carboxylic acid polyketide from
+  the alnumycin biosynthetic pathway of Streptomyces sp. with antibacterial activity
+  against Gram-positive bacteria.
+definition_source: DOI:10.3390/antibiotics12071116
+synonyms:
+- synonym_text: K1115 A
+  synonym_type: EXACT_SYNONYM
+  source: curator
+- synonym_text: 3,8-dihydroxy-1-propylanthraquinone-2-carboxylic acid
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:33282
+chemical_structure:
+  smiles: O=C1C2=C(C=C(O)C(C(O)=O)=C2CCC)C(C3=CC=CC(O)=C31)=O
+  standard_inchi: InChI=1S/C18H14O6/c1-2-4-8-13-10(7-12(20)15(8)18(23)24)16(21)9-5-3-6-11(19)14(9)17(13)22/h3,5-7,19-20H,2,4H2,1H3,(H,23,24)
+  standard_inchi_key: FNFBCXUSCQLQFP-UHFFFAOYSA-N
+  molecular_formula: C18H14O6
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000195/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 326.304
+  monoisotopic_mass: 326.079
+xrefs:
+- pubchem.compound:10336479
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.3390/antibiotics12071116#k1115a
+  source_label: K1115A
+  minted_identifier: antibioticmech:curator-ca46012cd9
+  role_terms:
+  - CHEBI:33282
+  evidence:
+  - reference: DOI:10.3390/antibiotics12071116
+    snippet: For alnumycin and the shunt product K1115A originating from the alnumycin
+      biosynthetic gene cluster of Streptomyces, antibacterial activity was demonstrated
+      against Gram-positive bacteria including Bacillus subtilis and Staphylococcus
+      aureus.
+    notes: MIBiG 4.0.1 entry BGC0000195 (Streptomyces sp. CM020); Sagurna et al. 2023
+      (DOI:10.3390/antibiotics12071116, PMID:37508212) and Oja et al. 2008 (DOI:10.1016/j.chembiol.2008.07.022,
+      PMID:18940666) characterize K1115A from the alnumycin pathway and its antibacterial
+      activity. PubChem CID 10336479 supplies the SMILES, Standard InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:569580
+  taxon_label: Streptomyces sp.
+  strain: CM020
+  biosynthetic_gene_cluster: BGC0000195
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - ENZYMATIC_ASSAYS
+  - HETEROLOGOUS_EXPRESSION
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: CLUSTER_INHERITED
+  note: MIBiG active entry; compound 'K1115A' joined by exact Standard InChIKey.
+  evidence:
+  - reference: PMID:18940666
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv

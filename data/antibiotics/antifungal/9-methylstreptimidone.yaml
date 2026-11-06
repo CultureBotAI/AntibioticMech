@@ -1,0 +1,71 @@
+identifier: CHEBI:215258
+label: 9-methylstreptimidone
+antimicrobial_class: ANTIFUNGAL
+curation_status: PROPOSED
+grounding_status: EXACT
+definition: A glutarimide-containing polyketide antibiotic from Streptomyces himastatinicus
+  with antifungal and antiviral activity.
+definition_source: DOI:10.1021/ol400224n
+synonyms:
+- synonym_text: (2R,5S,6E)-9-methylstreptimidone
+  synonym_type: EXACT_SYNONYM
+  source: curator
+activity_roles:
+- CHEBI:35718
+- CHEBI:22587
+chemical_structure:
+  smiles: '[H][C@@](O)(CC1CC(=O)NC(=O)C1)CC(=O)[C@@]([H])(C)\C=C(/C)\C=C/C'
+  standard_inchi: InChI=1S/C17H25NO4/c1-4-5-11(2)6-12(3)15(20)10-14(19)7-13-8-16(21)18-17(22)9-13/h4-6,12-14,19H,7-10H2,1-3H3,(H,18,21,22)/b5-4-,11-6+/t12-,14+/m0/s1
+  standard_inchi_key: ATUBIBZJAGAIBW-WGEALTPQSA-N
+  molecular_formula: C17H25NO4
+  structure_source: https://mibig.secondarymetabolites.org/repository/BGC0000171/index.html
+  retrieved_on: '2026-08-30'
+  charge: 0
+  average_mass: 307.39
+  monoisotopic_mass: 307.1784
+xrefs:
+- pubchem.compound:16727453
+source_concepts:
+- source: CURATOR
+  source_id: DOI:10.1021/ol400224n#9-methylstreptimidone
+  source_label: 9-methylstreptimidone
+  minted_identifier: antibioticmech:curator-dafbfa2b11
+  role_terms:
+  - CHEBI:35718
+  - CHEBI:22587
+  evidence:
+  - reference: DOI:10.1021/ol400224n
+    snippet: 9-Methylstreptimidone is an antifungal and antiviral glutarimide polyketide
+      antibiotic produced by Streptomyces himastatinicus ATCC 53653 and other Streptomyces
+      species that inhibits fungal and yeast growth.
+    notes: MIBiG 4.0.1 entry BGC0000171 (Streptomyces himastatinicus ATCC 53653);
+      Wang et al. 2013 (DOI:10.1021/ol400224n, PMID:23438151) and Song et al. 2025
+      (DOI:10.1016/j.pestbp.2025.106683, PMID:41162067) characterize the modular polyketide
+      biosynthesis and potent antifungal activity of 9-methylstreptimidone. ChEBI
+      CHEBI:215258 and PubChem CID 16727453 supply the stereo-complete SMILES, Standard
+      InChI, and InChIKey.
+  source_version: 4.0.1
+producer_organisms:
+- taxon_id: NCBITaxon:457427
+  taxon_label: Streptomyces himastatinicus
+  strain: ATCC 53653
+  biosynthetic_gene_cluster: BGC0000171
+  source: MIBIG
+  source_version: 4.0.1
+  source_record_version: '5'
+  source_quality: questionable
+  link_evidence:
+  - KNOCK_OUT_STUDIES
+  link_evidence_scope: COMPOUND_SPECIFIC
+  note: MIBiG active entry; compound '9-methylstreptimidone' joined by exact Standard
+    InChIKey.
+  evidence:
+  - reference: PMID:23438151
+    notes: MIBiG's first legacy reference for the entry, inherited rather than attached
+      to the compound. It supports that the entry exists; it is NOT established as
+      evidence for this specific producer/compound link.
+curation_history:
+- timestamp: '2026-11-06T02:51:46Z'
+  curator: seed_from_sources
+  action: PROPOSED_FROM_CURATOR_INVENTORY
+  changes: Proposed from curation/curator_antibiotics.tsv
