@@ -45,7 +45,7 @@ summary: 'Full-inventory cohort review of all 3,105 AntibioticRecord YAML files 
   curation + REVIEWED promotion) and 8 deferred findings carried forward from Cycle
   6 Stage 5.'
 source:
-  git_revision: 9d3d0205b298bbb5ef04218fb8245ccb4e471ca7
+  git_revision: c00a5618e3d988c2c29798f58600168322818a77
   state: working_tree
   inputs:
   - path: .claude/skills/review-yaml-category/SKILL.md
@@ -56433,22 +56433,24 @@ findings:
     molecular_targets, and REVIEWED promotion
   description: 'Five PROPOSED natural-product records seeded with grounding_status:
     EXACT and complete single-molecule chemical_structure in Cycle 7 Stage 1 — benastatin
-    A (CHEBI:226154) and benastatin B (CHEBI:200324, Aoyagi et al. 1992 DOI:10.7164/antibiotics.45.1385
-    / PMID:1429223; Xu et al. 2007 DOI:10.1128/JB.00682-07 / PMID:17675384), pentacyclic
-    benzo[a]naphthacenequinone type II polyketide antibiotics from Streptomyces sp.
-    A2991200; tetarimycin A (CHEBI:204430, Kallifidas et al. 2012 DOI:10.1021/ja307317c
-    / PMID:23057685), a tetracyclic fluorene-scaffold type II polyketide antibiotic
-    with potent anti-MRSA activity; 9-methylstreptimidone (CHEBI:215258, Saito et
-    al. 1974 DOI:10.7164/antibiotics.27.206 / PMID:4857359; Wang et al. 2013 DOI:10.1016/j.chembiol.2013.01.013
-    / PMID:23521794), a glutarimide polyketide antifungal antibiotic from Streptomyces
-    sp. that inhibits eukaryotic protein synthesis; and 7-deoxypactamycin (CHEBI:198890,
-    Lu et al. 2011 DOI:10.1021/np200426v / PMID:21823615; Ito et al. 2009 DOI:10.1002/cbic.200900339
-    / PMID:19670201), an aminocyclopentitol antibiotic congener of pactamycin from
-    Streptomyces pactum that binds the 30S ribosomal subunit and inhibits protein
-    synthesis — carry biosynthesis_origin: NATURAL_PRODUCT but lack curated mode_of_action,
-    mode_of_action_target_scope, CURATOR mode_of_action_notes, structured PRIMARY_LITERATURE
-    molecular_targets (with UniProtKB protein_examples or held_targets accounting),
-    and promotion to REVIEWED.'
+    A (CHEBI:226154) and benastatin B (CHEBI:200324, Kawahara et al. 2024 DOI:10.1038/s41429-024-00727-1
+    / PMID:38664572; Xu et al. 2009 DOI:10.1016/j.jbiotec.2008.10.013 / PMID:19047004;
+    MIBiG BGC0000203), pentacyclic benzo[a]naphthacenequinone type II polyketide antibiotics
+    from Streptomyces sp. A2991200; tetarimycin A (CHEBI:204430, Kallifidas et al.
+    2012 DOI:10.1021/ja3093828 / PMID:23157252; MIBiG BGC0000274), a tetracyclic fluorene-scaffold
+    type II polyketide antibiotic with potent anti-MRSA activity; 9-methylstreptimidone
+    (CHEBI:215258, Wang et al. 2013 DOI:10.1021/ol400224n / PMID:23438151; Song et
+    al. 2025 DOI:10.1016/j.pestbp.2025.106683 / PMID:41162067; MIBiG BGC0000171),
+    a glutarimide polyketide antifungal antibiotic from Streptomyces himastatinicus
+    ATCC 53653 that inhibits eukaryotic protein synthesis; and 7-deoxypactamycin (CHEBI:198890,
+    Lu et al. 2011 DOI:10.1016/j.chembiol.2011.01.016 / PMID:21513878; Kudo et al.
+    2007 DOI:10.1038/ja.2007.63 / PMID:17827660; Masaki et al. 2026 DOI:10.1038/s41429-026-00934-y
+    / PMID:42265342; MIBiG BGC0000711), an aminocyclopentitol antibiotic congener
+    of pactamycin from Streptomyces pactum that binds the 30S ribosomal subunit and
+    inhibits protein synthesis — carry biosynthesis_origin: NATURAL_PRODUCT but lack
+    curated mode_of_action, mode_of_action_target_scope, CURATOR mode_of_action_notes,
+    structured PRIMARY_LITERATURE molecular_targets (with UniProtKB protein_examples
+    or held_targets accounting), and promotion to REVIEWED.'
   target_ids:
   - CHEBI:226154
   - CHEBI:200324
@@ -56484,7 +56486,7 @@ findings:
     role: Curator-owned mechanism, molecular_targets, and curation_status slots on
       EXACT record
   - repository: CultureBotAI/AntibioticMech
-    path: data/antibiotics/antibacterial/7-deoxypactamycin.yaml
+    path: data/antibiotics/antiprotozoal/7-deoxypactamycin.yaml
     role: Curator-owned mechanism, molecular_targets, and curation_status slots on
       EXACT record
 - finding_id: seeded-exact-folate-inhibitors-with-card-only-targets-awaiting-primary-literature-promotion
@@ -56504,12 +56506,13 @@ findings:
     synthase) and two 2,4-diaminopyrimidine dihydrofolate reductase (DHFR / FolA)
     inhibitors (brodimoprim CHEBI:131726 and tetroxoprim CHEBI:135420) carrying only
     source: CARD_ARO (evidence_status: PRIMARY_EVIDENCE_NEEDED) molecular_targets
-    (ARO:3000743 antibiotic sensitive dihydrofolate reductase) — lack biosynthesis_origin:
-    SYNTHETIC, curated mode_of_action: FOLATE_PATHWAY_INHIBITION (with MICROBIAL_TARGET)
-    and CURATOR mode_of_action_notes, lack structured source: PRIMARY_LITERATURE molecular_targets
-    (GO:0004156 dihydropteroate synthase activity or GO:0004146 dihydrofolate reductase
-    activity) with reviewed Swiss-Prot UniProtKB protein_examples, and remain curation_status:
-    SEEDED.'
+    (ARO:3000745 antibiotic sensitive dihydrofolate reductase) — lack biosynthesis_origin:
+    SYNTHETIC, curator-reviewed mode_of_action (FOLATE_PATHWAY_INHIBITION with MICROBIAL_TARGET;
+    brodimoprim carries ChEBI-seeded FOLATE_PATHWAY_INHIBITION / HOST_SHARED_TARGET
+    while the other 5 lack mode_of_action) and CURATOR mode_of_action_notes, lack
+    structured source: PRIMARY_LITERATURE molecular_targets (GO:0004156 dihydropteroate
+    synthase activity or GO:0004146 dihydrofolate reductase activity) with reviewed
+    Swiss-Prot UniProtKB protein_examples, and remain curation_status: SEEDED.'
   target_ids:
   - CHEBI:9329
   - CHEBI:9334
@@ -57283,7 +57286,7 @@ actions:
     role: Curator-owned mechanism, molecular_targets, and curation_status slots on
       EXACT record
   - repository: CultureBotAI/AntibioticMech
-    path: data/antibiotics/antibacterial/7-deoxypactamycin.yaml
+    path: data/antibiotics/antiprotozoal/7-deoxypactamycin.yaml
     role: Curator-owned mechanism, molecular_targets, and curation_status slots on
       EXACT record
   acceptance_checks:
