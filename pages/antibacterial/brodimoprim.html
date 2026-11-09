@@ -36,13 +36,10 @@
   <code class="curie">CHEBI:131726</code>
 <span class="sep">·</span><a href="http://purl.obolibrary.org/obo/CHEBI_131726">resolve</a>  <span class="sep">·</span><a href="../class/antibacterial.html">ANTIBACTERIAL</a>
   <span class="sep">·</span><span class="pill">EXACT</span>
-  <span class="pill plain">SEEDED</span>
+  <span class="pill">REVIEWED</span>
 </p>
 
 <p>An aminopyrimidine that is 2,4-diaminopyrimidine in which the hydrogen at position 5 has been replaced by a 4-bromo-3,5-dimethoxybenzyl group.  <span class="meta">— ChEBI</span></p>
-<div class="note warn"><p>Machine-generated and unreviewed. Identity, structure and
-cross-references come straight from ChEBI's and CARD's own data; no curator has
-signed off on this record yet.</p></div>
 
 <h2>Classification</h2>
 <p><a href="http://purl.obolibrary.org/obo/ARO_3000171">diaminopyrimidine antibiotic</a><code class="curie">ARO:3000171</code></p>
@@ -137,10 +134,30 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
   <li><span class="meta"><a href="https://purl.obolibrary.org/obo/ARO_3000745">ARO:3000745</a></span> <span class="meta">(CARD/ARO asserts targeted_by_antibiotic ARO:3000269 (brodimoprim); database assertion, not a primary citation.)</span></li>
 </ul>
 
+<h3>bacterial dihydrofolate reductase (FolA / DHFR) <span class="pill plain">PROTEIN</span> <span class="pill">DIRECT_BINDING_TARGET</span></h3>
+<p class="meta"><code class="curie">GO:0004146</code></p><p class="meta">Purified Escherichia coli dihydrofolate reductase (FolA / DHFR) enzyme inhibition (IC50 / Ki) and antibacterial susceptibility assays for brodimoprim and comparator 2,4-diaminopyrimidine DHFR inhibitors (Then &amp; Keller 1979, PMID:391962; Baccanari et al. 1982, PMID:6752145; Hawser et al. 2006, DOI:10.1016/j.bcp.2005.10.052, PMID:16359642). Evidence status: PRIMARY_EVIDENCE. Source: PRIMARY_LITERATURE 2006-03 (retrieved 2026-11-08).</p>
+<p><em>Bacteria</em> <code class="curie">NCBITaxon:2</code></p><div class="table-scroll" role="region" aria-label="bacterial dihydrofolate reductase (FolA / DHFR) organism-specific examples" tabindex="0">
+<table>
+  <caption>Organism-specific examples</caption>
+  <thead><tr><th scope="col">Protein</th><th scope="col">Gene</th><th scope="col">Organism</th><th scope="col">Entry</th></tr></thead>
+  <tr>
+    <td>Dihydrofolate reductase <a href="https://www.uniprot.org/uniprotkb/P0ABQ4"><code class="curie">UniProtKB:P0ABQ4</code></a><br><span class="meta">Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively inhibited at the dihydrofolate binding site by brodimoprim in purified enzyme and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962).</span></td>
+    <td>folA</td>
+    <td><em>Escherichia coli (strain K12)</em> <a href="http://purl.obolibrary.org/obo/NCBITaxon_83333"><code class="curie">NCBITaxon:83333</code></a></td>
+    <td><span class="pill">REVIEWED</span></td>
+  </tr>
+</table>
+
+</div>
+<ul class="plain evidence">
+  <li><span class="meta"><a href="https://doi.org/10.1016/j.bcp.2005.10.052">DOI:10.1016/j.bcp.2005.10.052</a></span> — "2,4-Diaminopyrimidine antibacterials including trimethoprim, brodimoprim, and tetroxoprim selectively inhibit bacterial dihydrofolate reductase (DHFR / FolA) over mammalian DHFR." <span class="meta">(Hawser et al. 2006 (Biochem Pharmacol 71:941-948; PMID:16359642) characterized the selective inhibition of bacterial dihydrofolate reductase (FolA / DHFR) by brodimoprim and comparator diaminopyrimidines.)</span></li>
+  <li><span class="meta"><a href="https://pubmed.ncbi.nlm.nih.gov/391962">PMID:391962</a></span> <span class="meta">(Then &amp; Keller 1979 (Arzneimittelforschung 29:1917-1920; PMID:391962) and Baccanari et al. 1982 (PMID:6752145) quantified inhibition of purified Escherichia coli dihydrofolate reductase (FolA) by 2,4-diaminopyrimidine antibacterials.)</span></li>
+</ul>
+
 
 <h2>Mechanism summary</h2>
 <dl class="fields">
-<dt>Mode of action</dt><dd>FOLATE_PATHWAY_INHIBITION <span class="pill plain">host shared target</span> <span class="meta">— Assigned from ChEBI role CHEBI:50683 (EC 1.5.1.3 (dihydrofolate reductase) inhibitor). ChEBI asserts the role on the compound. The target it names is one the host has too, so the mechanism is true but is not evidence of selectivity — see mode_of_action_target_scope. Not a curator&#39;s mechanistic review.</span></dd></dl>
+<dt>Mode of action</dt><dd>FOLATE_PATHWAY_INHIBITION <span class="pill plain">microbial target</span> <span class="meta">— CURATOR: Synthetic 2,4-diaminopyrimidine antimicrobial (brodimoprim) that selectively inhibits bacterial dihydrofolate reductase (FolA / DHFR, EC 1.5.1.3), blocking reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and arresting folate-dependent thymidylate and purine biosynthesis (Then &amp; Keller 1979, PMID:391962; Baccanari et al. 1982, PMID:6752145; Hawser et al. 2006, DOI:10.1016/j.bcp.2005.10.052, PMID:16359642).</span></dd></dl>
 
 
 
@@ -177,6 +194,21 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
     <span class="meta">2026-09-10 · seed_from_sources</span>
     <p>Re-seeded from updated data/raw/ inventories</p>
   </li>
+  <li>
+    <span class="pill">CURATED_MOLECULAR_TARGETS</span>
+    <span class="meta">2026-11-08 · antigravity · LLM-assisted</span>
+    <p>Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial dihydrofolate reductase (FolA / DHFR) (GO:0004146, PROTEIN, DIRECT_BINDING_TARGET) backed by DOI:10.1016/j.bcp.2005.10.052 (PMID:16359642) and PMID:391962 (issue #1347).</p>
+  </li>
+  <li>
+    <span class="pill">CURATED_UNIPROT_PROTEIN_EXAMPLES</span>
+    <span class="meta">2026-11-08 · antigravity · LLM-assisted</span>
+    <p>Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0ABQ4, folA) to the primary-literature bacterial dihydrofolate reductase target on brodimoprim (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962).</p>
+  </li>
+  <li>
+    <span class="pill">PROMOTED_TO_REVIEWED</span>
+    <span class="meta">2026-11-08 · antigravity · LLM-assisted</span>
+    <p>Promoted exact ChEBI 2,4-diaminopyrimidine record (CHEBI:131726) with complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION, MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB protein_examples (UniProtKB:P0ABQ4; DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962) from SEEDED to REVIEWED (issue #1347).</p>
+  </li>
 </ol>
 
 <h2>Provenance</h2>
@@ -197,7 +229,7 @@ carries evidence — this is a mechanistic claim, not a classification.</p>
 <footer class="site">
   <p>
     Generated from <a href="https://www.ebi.ac.uk/chebi/">ChEBI</a> and
-    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>224369a9340b</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
+    <a href="https://card.mcmaster.ca/">CARD/ARO</a> on 2026-08-30 (corpus digest <code>03fdb6772528</code>, 3105 records). <a href="../browse-index.json" download="antibioticmech-browse-index.json">Download index (JSON)</a> · <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/src/antibioticmech/schema/antibioticmech.yaml">LinkML schema</a>. Project-authored data: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-DATA">CC BY 4.0</a>; code: <a href="https://github.com/CultureBotAI/AntibioticMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>. Upstream terms and attribution apply.
   </p>
   <p>
     <strong>Workflow status does not establish human review.</strong>

@@ -1,7 +1,7 @@
 identifier: CHEBI:198890
 label: 7-deoxypactamycin
 antimicrobial_class: ANTIPROTOZOAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An aminocyclopentitol antibiotic congener of pactamycin from Streptomyces
   pactum with nanomolar antimalarial activity against Plasmodium falciparum and antibacterial
@@ -78,4 +78,58 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Lu et al. 2011 (DOI:10.1016/j.chembiol.2011.01.016,
     PMID:21513878) and Kudo et al. 2007 (DOI:10.1038/ja.2007.63, PMID:17827660).
   llm_assisted: true
+- timestamp: '2026-11-08T23:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION, MICROBIAL_TARGET)
+    and primary-literature molecular_targets entry for bacterial 30S ribosomal subunit
+    (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by DOI:10.1016/j.chembiol.2011.01.016
+    (PMID:21513878) and DOI:10.1038/ja.2007.63 (PMID:17827660; issue #1346).'
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI aminocyclopentitol antibiotic record (CHEBI:198890)
+    with complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1016/j.chembiol.2011.01.016,
+    PMID:21513878; DOI:10.1038/ja.2007.63, PMID:17827660) from PROPOSED to REVIEWED
+    (issue #1346).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
+mode_of_action_notes: 'CURATOR: Aminocyclopentitol antibiotic congener of pactamycin
+  generated in Streptomyces pactum (wild-type congener and ΔptmU4 / ΔpctN biosynthetic
+  mutants) that binds the small (30S/40S) ribosomal subunit E-site cleft to inhibit
+  ribosomal translocation and protein synthesis with antibacterial and antiprotozoal
+  activity (Lu et al. 2011, DOI:10.1016/j.chembiol.2011.01.016, PMID:21513878; Kudo
+  et al. 2007, DOI:10.1038/ja.2007.63, PMID:17827660; Masaki et al. 2026, DOI:10.1038/s41429-026-00934-y,
+  PMID:42265342).'
+mode_of_action_target_scope: MICROBIAL_TARGET
+molecular_targets:
+- target_label: bacterial 30S ribosomal subunit
+  target_type: RIBOSOMAL_SUBUNIT
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Engineered biosynthesis, structural elucidation, and antibacterial/antiprotozoal
+    bioactivity comparison of 7-deoxypactamycin and pactamycin congeners targeting
+    the ribosomal small subunit translation machinery (Lu et al. 2011, DOI:10.1016/j.chembiol.2011.01.016,
+    PMID:21513878; Kudo et al. 2007, DOI:10.1038/ja.2007.63, PMID:17827660; Masaki
+    et al. 2026, DOI:10.1038/s41429-026-00934-y, PMID:42265342).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2026-05
+  source_retrieved_on: '2026-11-08'
+  evidence:
+  - reference: DOI:10.1016/j.chembiol.2011.01.016
+    snippet: 7-Deoxypactamycin exhibited superior antibacterial and antimalarial activity
+      compared with pactamycin while retaining the aminocyclopentitol ribosome-targeting
+      pharmacophore.
+    notes: Lu et al. 2011 (Chem Biol 18:425-431; PMID:21513878) generated 7-deoxypactamycin
+      in Streptomyces pactum and demonstrated antibacterial activity against Staphylococcus
+      aureus, Bacillus subtilis, Escherichia coli, and Pseudomonas aeruginosa as well
+      as antimalarial activity against Plasmodium falciparum.
+  - reference: DOI:10.1038/ja.2007.63
+    notes: Kudo et al. 2007 (J Antibiot 60:492-503; PMID:17827660) characterized the
+      pactamycin biosynthetic gene cluster and 7-deoxypactamycin intermediate in Streptomyces
+      pactum.

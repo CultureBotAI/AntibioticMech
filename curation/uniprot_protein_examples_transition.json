@@ -2,7 +2,7 @@
   "schema_version": 1,
   "task": "uniprot_protein_examples_curation",
   "plan_path": "curation/uniprot_protein_examples.yaml",
-  "record_count": 89,
+  "record_count": 95,
   "record_deltas": [
     {
       "identifier": "CHEBI:100241",
@@ -4897,6 +4897,276 @@
         "curator": "antigravity",
         "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
         "changes": "Added 1 reviewed UniProtKB protein_example (P13267) to the primary-literature Gram-positive bacterial replicative DNA polymerase IIIC (PolC) target on ibezapolstat (DOI:10.1128/aac.00332-24).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9329",
+      "label": "sulfadoxine",
+      "path": "data/antibiotics/antibacterial/sulfadoxine.yaml",
+      "before_sha256": "14eb4977175e05c1b0721d2535bbbfc8fefd4d0dda778c4c77c8a0bf1de732a4",
+      "after_sha256": "4f750b3d3cfa4a7ccd6faac4c1aff901d73f617ebc9bdef93fa14515e1c86f20",
+      "unchanged_fields_sha256": "1d3e923e216e4b1e9a6b7d3e357338c2b20d7743d7413e23d323b6c558192d5f",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-08",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfadoxine in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-08T23:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfadoxine (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:9334",
+      "label": "sulfasalazine",
+      "path": "data/antibiotics/antibacterial/sulfasalazine.yaml",
+      "before_sha256": "111d1391e19f514f91d8fe82dd11081808079739748a4a98f094a1e76f6cfad6",
+      "after_sha256": "cd9d8e383deb1fc34e97f520e34890c24e16284acc96172451a96930cbaa8751",
+      "unchanged_fields_sha256": "9afb56f8496f18b4b82ac5a55492d1fdae8c0d1efbea233daa5dc33af182a7ed",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 7,
+      "curation_history_after_len": 8,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-08",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfasalazine in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-08T23:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfasalazine (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:102484",
+      "label": "sulfisoxazole",
+      "path": "data/antibiotics/antibacterial/sulfisoxazole.yaml",
+      "before_sha256": "88d82fe6e5ee64713f4f03a7ee313e18db216187347a840a1df9fe96fb4c74f7",
+      "after_sha256": "cc5ee204ecd5c246344ff9ce02a1c2bea7fb9a1ad3fde3ceb69944160e5abbd2",
+      "unchanged_fields_sha256": "fa8d830ab2668313eaa01783520d079a2b3c687199a5a116ab9197f861fc62c7",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-08",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by sulfisoxazole in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-08T23:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on sulfisoxazole (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:4325",
+      "label": "dapsone",
+      "path": "data/antibiotics/antimycobacterial/dapsone.yaml",
+      "before_sha256": "b5378c8711d3d8b0cf24f1af9de7f984a3a2e41377bdef1af86b54e3f415e95f",
+      "after_sha256": "d6695238d728c7a0f4391f11acaa4b1321036df809934101c72a8940ebe00440",
+      "unchanged_fields_sha256": "24c27098e980145627bae69223fd4c4ba3e33de09106ce34893c0e9f29600b7e",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 8,
+      "curation_history_after_len": 9,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydropteroate synthase (FolP / DHPS)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0AC13",
+              "protein_label": "Dihydropteroate synthase",
+              "gene_symbol": "folP",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-08",
+              "role": "Escherichia coli K-12 dihydropteroate synthase (FolP / DHPS) competitively inhibited at the para-aminobenzoic acid (PABA) active site by dapsone in purified enzyme kinetics and pterin-sulfa adduct studies (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-08T23:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0AC13, folP) to the primary-literature bacterial dihydropteroate synthase target on dapsone (DOI:10.1128/AAC.15.2.195, PMID:378102; DOI:10.1126/science.1214641, PMID:22383845).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:131726",
+      "label": "brodimoprim",
+      "path": "data/antibiotics/antibacterial/brodimoprim.yaml",
+      "before_sha256": "8b32dd524cdfcac46bb123bb6e03f7f4a01c17c943a07a9e025c5c6da46b6b84",
+      "after_sha256": "eddf416f283268d8b2544e5b36b770f4eb195ac8c891751826f829ffa70b8d35",
+      "unchanged_fields_sha256": "64cb6e3738f130a357c684ab1c1f7660e8a08e918c534b4990a874dd429e2803",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 6,
+      "curation_history_after_len": 7,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydrofolate reductase (FolA / DHFR)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0ABQ4",
+              "protein_label": "Dihydrofolate reductase",
+              "gene_symbol": "folA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-08",
+              "role": "Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively inhibited at the dihydrofolate binding site by brodimoprim in purified enzyme and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-08T23:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0ABQ4, folA) to the primary-literature bacterial dihydrofolate reductase target on brodimoprim (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962).",
+        "llm_assisted": true
+      }
+    },
+    {
+      "identifier": "CHEBI:135420",
+      "label": "tetroxoprim",
+      "path": "data/antibiotics/antibacterial/tetroxoprim.yaml",
+      "before_sha256": "7d86c1ecba990bba12472c0cc83381eab57ef4838805a051328e9c3d56e63653",
+      "after_sha256": "b44937b2a1ef65e705b750654e8f1f8145f24f97766f377d2a6da9e7084e2e1b",
+      "unchanged_fields_sha256": "905748b12076bff1b8c89bceb76b351c2352cf5471bf32f586b7fcd38fcbeb86",
+      "causal_nodes_updated": 0,
+      "molecular_targets_updated": 1,
+      "protein_examples_added": 1,
+      "history_events_added": 1,
+      "curation_history_before_len": 5,
+      "curation_history_after_len": 6,
+      "causal_node_deltas": [],
+      "molecular_target_deltas": [
+        {
+          "index": 1,
+          "source": "PRIMARY_LITERATURE",
+          "target_label": "bacterial dihydrofolate reductase (FolA / DHFR)",
+          "changed_fields": [
+            "protein_examples"
+          ],
+          "before_protein_examples": null,
+          "after_protein_examples": [
+            {
+              "uniprot_id": "UniProtKB:P0ABQ4",
+              "protein_label": "Dihydrofolate reductase",
+              "gene_symbol": "folA",
+              "taxon_id": "NCBITaxon:83333",
+              "taxon_label": "Escherichia coli (strain K12)",
+              "entry_status": "REVIEWED",
+              "retrieved_on": "2026-11-08",
+              "role": "Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively inhibited at the dihydrofolate binding site by tetroxoprim in purified enzyme and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962)."
+            }
+          ]
+        }
+      ],
+      "added_history_event": {
+        "timestamp": "2026-11-08T23:30:00Z",
+        "curator": "antigravity",
+        "action": "CURATED_UNIPROT_PROTEIN_EXAMPLES",
+        "changes": "Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example (UniProtKB:P0ABQ4, folA) to the primary-literature bacterial dihydrofolate reductase target on tetroxoprim (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962).",
         "llm_assisted": true
       }
     }

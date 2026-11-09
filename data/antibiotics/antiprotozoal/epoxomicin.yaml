@@ -1,7 +1,7 @@
 identifier: CHEBI:42265
 label: epoxomicin
 antimicrobial_class: ANTIPROTOZOAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An alpha',beta'-epoxyketone tetrapeptide proteasome inhibitor from Goodfellowiella
   coeruleoviolacea with potent nanomolar antimalarial and gametocytocidal activity
@@ -81,6 +81,14 @@ curation_history:
     20S proteasome catalytic beta subunits (PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
     backed by Czesny et al. 2009 (DOI:10.1128/aac.00088-09, PMID:19651911) and Schorn
     et al. 2014 (DOI:10.1021/cb400699p, PMID:24168704).
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI alpha'',beta''-epoxyketone peptide record (CHEBI:42265)
+    with complete 4/4 chemical_structure, curated mode_of_action (OTHER, HOST_SHARED_TARGET),
+    and primary-literature molecular_targets (DOI:10.1128/aac.00088-09, PMID:19651911;
+    DOI:10.1021/cb400699p, PMID:24168704) from PROPOSED to REVIEWED (issue #1345).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: OTHER

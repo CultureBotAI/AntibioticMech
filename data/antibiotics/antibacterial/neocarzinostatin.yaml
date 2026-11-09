@@ -1,7 +1,7 @@
 identifier: CHEBI:29655
 label: neocarzinostatin
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A nine-membered bicyclo[7.3.0]dodecadiyne enediyne chromophore antibiotic
   from Streptomyces carzinostaticus with potent DNA-cleaving antibacterial activity
@@ -85,6 +85,15 @@ curation_history:
   changes: Added primary-literature molecular_targets entry for bacterial duplex DNA
     (CHEBI:16991, NUCLEIC_ACID, DIRECT_BINDING_TARGET) backed by Liu et al. 2005 (DOI:10.1016/j.chembiol.2004.12.013,
     PMID:15797213) and Ohtsuki & Ishida 1975 (DOI:10.7164/antibiotics.28.229, PMID:123897).
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI enediyne chromophore record (CHEBI:29655) with complete
+    4/4 chemical_structure, curated mode_of_action (NUCLEIC_ACID_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1016/j.chembiol.2004.12.013,
+    PMID:15797213; DOI:10.7164/antibiotics.28.229, PMID:123897) from PROPOSED to REVIEWED
+    (issue #1345).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: NUCLEIC_ACID_SYNTHESIS_INHIBITION

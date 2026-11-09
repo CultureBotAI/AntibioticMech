@@ -1,7 +1,7 @@
 identifier: CHEBI:204430
 label: tetarimycin A
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A tetracyclic fluorenone-type aromatic polyketide antibiotic from an environmental
   DNA-derived type II PKS cluster with potent antibacterial activity against methicillin-resistant
@@ -55,4 +55,50 @@ curation_history:
   changes: Curated NATURAL_PRODUCT biosynthesis_origin from Kallifidas et al. 2012
     (DOI:10.1021/ja3093828, PMID:23157252).
   llm_assisted: true
+- timestamp: '2026-11-08T23:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated mode_of_action (OTHER, MICROBIAL_TARGET) and primary-literature
+    molecular_targets entry for Gram-positive bacterial cellular growth and viability
+    (BIOLOGICAL_PROCESS, DOWNSTREAM_AFFECTED_PROCESS) backed by DOI:10.1021/ja3093828
+    (PMID:23157252; issue #1346).'
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI tetracyclic polyketide record (CHEBI:204430) with
+    complete 4/4 chemical_structure, curated mode_of_action (OTHER, MICROBIAL_TARGET),
+    and primary-literature molecular_targets (DOI:10.1021/ja3093828, PMID:23157252)
+    from PROPOSED to REVIEWED (issue #1346).'
+  llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
+mode_of_action: OTHER
+mode_of_action_notes: 'CURATOR: Tetracyclic aromatic type II polyketide antibiotic
+  identified by heterologous expression of an environmental DNA (eDNA) gene cluster
+  in Streptomyces albus that potently inhibits Gram-positive bacteria including methicillin-resistant
+  Staphylococcus aureus (MRSA, MIC 0.3-1 ug/mL), Bacillus subtilis, and Enterococcus
+  faecalis (Kallifidas et al. 2012, DOI:10.1021/ja3093828, PMID:23157252).'
+mode_of_action_target_scope: MICROBIAL_TARGET
+molecular_targets:
+- target_label: Gram-positive bacterial cellular growth and viability
+  target_type: BIOLOGICAL_PROCESS
+  target_relation: DOWNSTREAM_AFFECTED_PROCESS
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Whole-cell broth microdilution antibacterial assays against
+    methicillin-resistant Staphylococcus aureus (MRSA, MIC 0.3-1 ug/mL), Bacillus
+    subtilis, and Enterococcus faecalis following heterologous activation of the environmental
+    DNA tam gene cluster in Streptomyces albus (Kallifidas et al. 2012, DOI:10.1021/ja3093828,
+    PMID:23157252).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2012-11
+  source_retrieved_on: '2026-11-08'
+  evidence:
+  - reference: DOI:10.1021/ja3093828
+    snippet: Tetarimycin A displayed potent antibacterial activity against Gram-positive
+      bacteria including methicillin-resistant Staphylococcus aureus (MRSA).
+    notes: Kallifidas et al. 2012 (J Am Chem Soc 134:19552-19555; PMID:23157252) discovered
+      tetarimycin A via eDNA gene cluster activation and established potent whole-cell
+      antibacterial activity against MRSA (MIC 0.3-1 ug/mL), Bacillus subtilis, and
+      Enterococcus faecalis without an isolated single protein target.

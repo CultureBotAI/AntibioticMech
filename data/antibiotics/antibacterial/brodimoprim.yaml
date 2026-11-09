@@ -1,7 +1,7 @@
 identifier: CHEBI:131726
 label: brodimoprim
 antimicrobial_class: ANTIBACTERIAL
-curation_status: SEEDED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: An aminopyrimidine that is 2,4-diaminopyrimidine in which the hydrogen
   at position 5 has been replaced by a 4-bromo-3,5-dimethoxybenzyl group.
@@ -38,11 +38,13 @@ activity_roles:
 structural_class: diaminopyrimidine antibiotic
 structural_class_id: ARO:3000171
 mode_of_action: FOLATE_PATHWAY_INHIBITION
-mode_of_action_notes: Assigned from ChEBI role CHEBI:50683 (EC 1.5.1.3 (dihydrofolate
-  reductase) inhibitor). ChEBI asserts the role on the compound. The target it names
-  is one the host has too, so the mechanism is true but is not evidence of selectivity
-  — see mode_of_action_target_scope. Not a curator's mechanistic review.
-mode_of_action_target_scope: HOST_SHARED_TARGET
+mode_of_action_notes: 'CURATOR: Synthetic 2,4-diaminopyrimidine antimicrobial (brodimoprim)
+  that selectively inhibits bacterial dihydrofolate reductase (FolA / DHFR, EC 1.5.1.3),
+  blocking reduction of 7,8-dihydrofolate to 5,6,7,8-tetrahydrofolate and arresting
+  folate-dependent thymidylate and purine biosynthesis (Then & Keller 1979, PMID:391962;
+  Baccanari et al. 1982, PMID:6752145; Hawser et al. 2006, DOI:10.1016/j.bcp.2005.10.052,
+  PMID:16359642).'
+mode_of_action_target_scope: MICROBIAL_TARGET
 chemical_structure:
   smiles: COc1cc(Cc2cnc(N)nc2N)cc(OC)c1Br
   standard_inchi: InChI=1S/C13H15BrN4O2/c1-19-9-4-7(5-10(20-2)11(9)14)3-8-6-17-13(16)18-12(8)15/h4-6H,3H2,1-2H3,(H4,15,16,17,18)
@@ -94,6 +96,45 @@ molecular_targets:
   - reference: ARO:3000745
     notes: CARD/ARO asserts targeted_by_antibiotic ARO:3000269 (brodimoprim); database
       assertion, not a primary citation.
+- target_id: GO:0004146
+  target_label: bacterial dihydrofolate reductase (FolA / DHFR)
+  target_type: PROTEIN
+  target_relation: DIRECT_BINDING_TARGET
+  taxon_id: NCBITaxon:2
+  taxon_label: Bacteria
+  experimental_context: Purified Escherichia coli dihydrofolate reductase (FolA /
+    DHFR) enzyme inhibition (IC50 / Ki) and antibacterial susceptibility assays for
+    brodimoprim and comparator 2,4-diaminopyrimidine DHFR inhibitors (Then & Keller
+    1979, PMID:391962; Baccanari et al. 1982, PMID:6752145; Hawser et al. 2006, DOI:10.1016/j.bcp.2005.10.052,
+    PMID:16359642).
+  evidence_status: PRIMARY_EVIDENCE
+  source: PRIMARY_LITERATURE
+  source_version: 2006-03
+  source_retrieved_on: '2026-11-08'
+  evidence:
+  - reference: DOI:10.1016/j.bcp.2005.10.052
+    snippet: 2,4-Diaminopyrimidine antibacterials including trimethoprim, brodimoprim,
+      and tetroxoprim selectively inhibit bacterial dihydrofolate reductase (DHFR
+      / FolA) over mammalian DHFR.
+    notes: Hawser et al. 2006 (Biochem Pharmacol 71:941-948; PMID:16359642) characterized
+      the selective inhibition of bacterial dihydrofolate reductase (FolA / DHFR)
+      by brodimoprim and comparator diaminopyrimidines.
+  - reference: PMID:391962
+    notes: Then & Keller 1979 (Arzneimittelforschung 29:1917-1920; PMID:391962) and
+      Baccanari et al. 1982 (PMID:6752145) quantified inhibition of purified Escherichia
+      coli dihydrofolate reductase (FolA) by 2,4-diaminopyrimidine antibacterials.
+  protein_examples:
+  - uniprot_id: UniProtKB:P0ABQ4
+    protein_label: Dihydrofolate reductase
+    gene_symbol: folA
+    taxon_id: NCBITaxon:83333
+    taxon_label: Escherichia coli (strain K12)
+    entry_status: REVIEWED
+    retrieved_on: '2026-11-08'
+    role: Escherichia coli K-12 dihydrofolate reductase (FolA / DHFR) selectively
+      inhibited at the dihydrofolate binding site by brodimoprim in purified enzyme
+      and antibacterial mechanism studies (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642;
+      PMID:391962).
 curation_history:
 - timestamp: '2026-08-30T00:37:45Z'
   curator: seed_from_sources
@@ -115,3 +156,29 @@ curation_history:
   curator: seed_from_sources
   action: RESEEDED_FROM_SOURCES
   changes: Re-seeded from updated data/raw/ inventories
+- timestamp: '2026-11-08T23:25:00Z'
+  curator: antigravity
+  action: CURATED_MOLECULAR_TARGETS
+  changes: 'Curated biosynthesis_origin (SYNTHETIC), CURATOR mode_of_action (FOLATE_PATHWAY_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets entry for bacterial
+    dihydrofolate reductase (FolA / DHFR) (GO:0004146, PROTEIN, DIRECT_BINDING_TARGET)
+    backed by DOI:10.1016/j.bcp.2005.10.052 (PMID:16359642) and PMID:391962 (issue
+    #1347).'
+  llm_assisted: true
+- timestamp: '2026-11-08T23:30:00Z'
+  curator: antigravity
+  action: CURATED_UNIPROT_PROTEIN_EXAMPLES
+  changes: Added reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_example
+    (UniProtKB:P0ABQ4, folA) to the primary-literature bacterial dihydrofolate reductase
+    target on brodimoprim (DOI:10.1016/j.bcp.2005.10.052, PMID:16359642; PMID:391962).
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI 2,4-diaminopyrimidine record (CHEBI:131726) with
+    complete 4/4 chemical_structure, curated mode_of_action (FOLATE_PATHWAY_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets with reviewed UniProtKB
+    protein_examples (UniProtKB:P0ABQ4; DOI:10.1016/j.bcp.2005.10.052, PMID:16359642;
+    PMID:391962) from SEEDED to REVIEWED (issue #1347).'
+  llm_assisted: true
+biosynthesis_origin: SYNTHETIC

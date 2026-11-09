@@ -1,7 +1,7 @@
 identifier: CHEBI:67576
 label: streptothricin E
 antimicrobial_class: ANTIBACTERIAL
-curation_status: PROPOSED
+curation_status: REVIEWED
 grounding_status: EXACT
 definition: A streptothricin N-glycoside antibiotic congener bearing a di-beta-lysine
   peptide chain from Streptomyces rochei and Streptomyces lavendulae with broad-spectrum
@@ -91,6 +91,15 @@ curation_history:
     subunit (RIBOSOMAL_SUBUNIT, DIRECT_BINDING_TARGET) backed by Inamori et al. 1990
     (DOI:10.1248/cpb.38.2296, PMID:2177682) and Maruyama et al. 2012 (DOI:10.1038/nchembio.1040,
     PMID:22820420).
+  llm_assisted: true
+- timestamp: '2026-11-08T23:35:00Z'
+  curator: antigravity
+  action: PROMOTED_TO_REVIEWED
+  changes: 'Promoted exact ChEBI streptothricin congener record (CHEBI:67576) with
+    complete 4/4 chemical_structure, curated mode_of_action (PROTEIN_SYNTHESIS_INHIBITION,
+    MICROBIAL_TARGET), and primary-literature molecular_targets (DOI:10.1248/cpb.38.2296,
+    PMID:2177682; DOI:10.1038/nchembio.1040, PMID:22820420) from PROPOSED to REVIEWED
+    (issue #1345).'
   llm_assisted: true
 biosynthesis_origin: NATURAL_PRODUCT
 mode_of_action: PROTEIN_SYNTHESIS_INHIBITION
