@@ -2761,7 +2761,8 @@ records:
     complex target on andrimid (DOI:10.1074/jbc.m402989200, PMID:15066985; DOI:10.1021/ja063194c, PMID:16866529).
   causal_node_examples: []
   molecular_target_examples:
-  - target_label: bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA / AccD)
+  - target_id: GO:0009317
+    target_label: bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA / AccD)
     target_reference: DOI:10.1074/jbc.m402989200
     source: PRIMARY_LITERATURE
     protein_examples:
@@ -2792,10 +2793,11 @@ records:
   path: data/antibiotics/antibacterial/ecf-transporter-inhibitor-18.yaml
   changes: Added 2 reviewed Enterococcus faecalis V583 Swiss-Prot UniProtKB protein_examples (UniProtKB:Q839D5,
     ecfA1; UniProtKB:Q839D4, ecfA2) to the primary-literature bacterial energy-coupling factor (ECF) vitamin
-    transporter complex target on ECF transporter inhibitor 18 (DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838).
+    transporter complex target on ECF transporter inhibitor 18 (DOI:10.1021/acs.jmedchem.5c02721).
   causal_node_examples: []
   molecular_target_examples:
-  - target_label: bacterial energy-coupling factor (ECF) vitamin transporter complex (EcfA1 / EcfA2 / EcfT)
+  - target_id: GO:1990196
+    target_label: bacterial energy-coupling factor (ECF) vitamin transporter complex (EcfA1 / EcfA2 / EcfT)
     target_reference: DOI:10.1021/acs.jmedchem.5c02721
     source: PRIMARY_LITERATURE
     protein_examples:
@@ -2808,7 +2810,7 @@ records:
       retrieved_on: '2026-11-09'
       role: Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding subunit EcfA1
         (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module inhibited by compound 18 (IC50
-        = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838).
+        = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721).
     - uniprot_id: UniProtKB:Q839D4
       protein_label: Energy-coupling factor transporter ATP-binding protein EcfA2
       gene_symbol: ecfA2
@@ -2818,7 +2820,7 @@ records:
       retrieved_on: '2026-11-09'
       role: Enterococcus faecalis V583 energy-coupling factor (ECF) transporter ATP-binding subunit EcfA2
         (EC 7.6.2.15) of the conserved Firmicutes ECF vitamin-uptake module inhibited by compound 18 (IC50
-        = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721, PMID:42249838).
+        = 4 uM; MIC 1-9 ug/mL; DOI:10.1021/acs.jmedchem.5c02721).
 held_targets:
 - identifier: CHEBI:17698
   label: chloramphenicol

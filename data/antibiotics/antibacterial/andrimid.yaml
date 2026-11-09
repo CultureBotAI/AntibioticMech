@@ -75,15 +75,15 @@ curation_history:
     (MICROBIAL_TARGET) mode_of_action from Freiberg et al. 2004 (DOI:10.1074/jbc.m402989200,
     PMID:15066985) and Jin et al. 2006 (DOI:10.1021/ja063194c, PMID:16866529).
   llm_assisted: true
-- timestamp: '2026-11-09T09:03:41Z'
+- timestamp: '2026-11-09T10:08:04Z'
   curator: antigravity
   action: CURATED_MOLECULAR_TARGETS
   changes: Added primary-literature molecular_targets entry for bacterial acetyl-CoA
-    carboxylase carboxyltransferase complex (AccA / AccD; PROTEIN_COMPLEX, DIRECT_BINDING_TARGET)
-    backed by Freiberg et al. 2004 (DOI:10.1074/jbc.m402989200, PMID:15066985) and
-    Jin et al. 2006 (DOI:10.1021/ja063194c, PMID:16866529).
+    carboxylase carboxyltransferase complex (AccA / AccD; GO:0009317, PROTEIN_COMPLEX,
+    DIRECT_BINDING_TARGET) backed by Freiberg et al. 2004 (DOI:10.1074/jbc.m402989200,
+    PMID:15066985) and Jin et al. 2006 (DOI:10.1021/ja063194c, PMID:16866529).
   llm_assisted: true
-- timestamp: '2026-11-09T09:03:43Z'
+- timestamp: '2026-11-09T10:08:53Z'
   curator: antigravity
   action: CURATED_UNIPROT_PROTEIN_EXAMPLES
   changes: Added 2 reviewed Escherichia coli K-12 Swiss-Prot UniProtKB protein_examples
@@ -101,7 +101,8 @@ mode_of_action_notes: 'CURATOR: Octatrienoyl-beta-phenylalanyl-valyl-methylpyrro
   and bacterial fatty acid / membrane lipid biosynthesis (Freiberg et al. 2004, DOI:10.1074/jbc.m402989200,
   PMID:15066985; Jin et al. 2006, DOI:10.1021/ja063194c, PMID:16866529).'
 molecular_targets:
-- target_label: bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA
+- target_id: GO:0009317
+  target_label: bacterial acetyl-CoA carboxylase carboxyltransferase complex (AccA
     / AccD)
   target_type: PROTEIN_COMPLEX
   target_relation: DIRECT_BINDING_TARGET
